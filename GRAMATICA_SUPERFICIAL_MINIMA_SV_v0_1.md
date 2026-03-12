@@ -545,7 +545,7 @@ La gramática prohíbe de raíz las siguientes construcciones. No son advertenci
 
 ## 8. Ejemplo mínimo de superficie
 
-```sv
+```svp
 -- Declaración de codominio y semántica
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 
