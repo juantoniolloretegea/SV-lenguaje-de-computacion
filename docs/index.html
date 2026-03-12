@@ -1,315 +1,227 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SVP Playground — Sistema Vectorial SV</title>
-<style>
-  :root {
-    --bg: #ffffff;
-    --surface: #f6f8fb;
-    --surface-strong: #eef3ff;
-    --border: #d8e1f0;
-    --text: #111827;
-    --text-dim: #4b5563;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
-    --accent-soft: #dbeafe;
-    --green: #15803d;
-    --red: #b91c1c;
-    --mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SVP Playground — Sistema Vectorial SV</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --surface: #f6f8fb;
+      --surface-strong: #eef3ff;
+      --border: #d8e1f0;
+      --text: #111827;
+      --text-dim: #475569;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --accent-soft: #dbeafe;
+      --green: #15803d;
+      --green-soft: #dcfce7;
+      --red: #b91c1c;
+      --red-soft: #fee2e2;
+      --mono: "JetBrains Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+    }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
 
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-  }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 32px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface);
+      flex-wrap: wrap;
+    }
+    .brand { display: flex; align-items: center; gap: 14px; }
+    .logo {
+      width: 46px; height: 46px; border-radius: 12px;
+      background: var(--accent); color: white; display: grid; place-items: center;
+      font-weight: 700; letter-spacing: 0.03em;
+    }
+    .brand h1 { font-size: 1.1rem; font-weight: 700; }
+    .brand h1 span { color: var(--text-dim); font-weight: 500; }
 
-  header {
-    padding: 20px 32px;
-    border-bottom: 1px solid var(--border);
-    background: var(--surface-strong);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 12px;
-  }
+    nav { display: flex; gap: 22px; flex-wrap: wrap; }
+    nav a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { color: var(--accent-hover); text-decoration: underline; }
 
-  .logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+    main {
+      flex: 1;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 0;
+    }
 
-  .logo-icon {
-    width: 40px;
-    height: 40px;
-    background: var(--accent);
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 14px;
-    color: #ffffff;
-  }
+    .panel {
+      display: flex;
+      flex-direction: column;
+      min-height: 0;
+      border-right: 1px solid var(--border);
+    }
+    .panel:last-child { border-right: none; }
 
-  .logo h1 {
-    font-size: 18px;
-    font-weight: 700;
-    color: var(--text);
-  }
+    .panel-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--surface-strong);
+      border-bottom: 1px solid var(--border);
+      min-height: 56px;
+    }
+    .label { display: flex; align-items: center; gap: 10px; font-weight: 600; color: var(--text-dim); }
+    .dot { width: 10px; height: 10px; border-radius: 999px; }
+    .dot.input { background: var(--accent); }
+    .dot.output { background: var(--green); }
+    .dot.error { background: var(--red); }
 
-  .logo h1 span {
-    color: var(--text-dim);
-    font-weight: 500;
-  }
+    #editor, #output {
+      flex: 1;
+      width: 100%;
+      min-height: 0;
+      border: none;
+      outline: none;
+      resize: none;
+      padding: 20px;
+      font-family: var(--mono);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      background: #ffffff;
+      color: var(--text);
+      overflow: auto;
+      white-space: pre-wrap;
+    }
 
-  .header-links {
-    display: flex;
-    gap: 18px;
-    font-size: 14px;
-    flex-wrap: wrap;
-  }
+    #editor::placeholder { color: #94a3b8; }
 
-  .header-links a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-  }
+    .success-output {
+      background: #f8fafc;
+      color: var(--text);
+    }
+    .error-output {
+      background: var(--red-soft);
+      color: var(--red);
+    }
 
-  .header-links a:hover {
-    color: var(--accent-hover);
-    text-decoration: underline;
-  }
+    .toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 12px 20px;
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      flex-wrap: wrap;
+    }
+    .status {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--text-dim);
+      min-height: 24px;
+    }
+    .spinner {
+      width: 16px; height: 16px;
+      border: 2px solid #cbd5e1;
+      border-top: 2px solid var(--accent);
+      border-radius: 999px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
 
-  main {
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: 0;
-  }
+    button {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 18px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.15s ease;
+      font-size: 0.98rem;
+    }
+    .btn-secondary {
+      background: #ffffff;
+      color: var(--text);
+    }
+    .btn-secondary:hover { background: #f8fafc; }
 
-  @media (max-width: 900px) {
-    main { grid-template-columns: 1fr; }
-    .panel:first-child { border-right: none; border-bottom: 1px solid var(--border); }
-  }
+    #example-btn {
+      background: #ffffff;
+      color: var(--text);
+    }
+    #example-btn:hover { background: #f8fafc; }
 
-  .panel {
-    display: flex;
-    flex-direction: column;
-    min-height: 0;
-  }
+    #run-btn {
+      background: var(--accent);
+      color: white;
+      border-color: transparent;
+    }
+    #run-btn:hover:not(:disabled) { background: var(--accent-hover); }
+    #run-btn:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
+    }
 
-  .panel:first-child {
-    border-right: 1px solid var(--border);
-  }
+    footer {
+      text-align: center;
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      color: var(--text-dim);
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
 
-  .panel-header {
-    padding: 12px 20px;
-    border-bottom: 1px solid var(--border);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--text-dim);
-    background: var(--surface);
-  }
-
-  .panel-header .label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .dot {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: var(--accent);
-  }
-
-  .dot.output { background: var(--green); }
-  .dot.error { background: var(--red); }
-
-  textarea {
-    flex: 1;
-    background: #ffffff;
-    color: var(--text);
-    border: none;
-    padding: 20px;
-    font-family: var(--mono);
-    font-size: 14px;
-    line-height: 1.6;
-    resize: none;
-    outline: none;
-    tab-size: 2;
-    min-height: 400px;
-  }
-
-  textarea::placeholder {
-    color: var(--text-dim);
-    opacity: 0.7;
-  }
-
-  #output {
-    flex: 1;
-    background: #ffffff;
-    color: var(--text);
-    padding: 20px;
-    font-family: var(--mono);
-    font-size: 13px;
-    line-height: 1.6;
-    overflow: auto;
-    white-space: pre-wrap;
-    min-height: 400px;
-  }
-
-  #output.error-output {
-    color: var(--red);
-  }
-
-  #output.success-output {
-    color: var(--text);
-  }
-
-  .toolbar {
-    padding: 12px 20px;
-    border-top: 1px solid var(--border);
-    background: var(--surface);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-  }
-
-  button {
-    background: var(--accent);
-    color: #ffffff;
-    border: none;
-    padding: 9px 22px;
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.15s ease;
-  }
-
-  button:hover:not(:disabled) {
-    background: var(--accent-hover);
-  }
-
-  button:disabled {
-    opacity: 0.45;
-    cursor: not-allowed;
-  }
-
-  .btn-secondary {
-    background: #ffffff;
-    color: var(--text);
-    border: 1px solid var(--border);
-  }
-
-  .btn-secondary:hover:not(:disabled) {
-    background: var(--accent-soft);
-  }
-
-  .status {
-    font-size: 12px;
-    color: var(--text-dim);
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-
-  .status .spinner {
-    width: 14px;
-    height: 14px;
-    border: 2px solid var(--border);
-    border-top-color: var(--accent);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-  }
-
-  @keyframes spin {
-    to { transform: rotate(360deg); }
-  }
-
-  footer {
-    padding: 16px 32px;
-    border-top: 1px solid var(--border);
-    font-size: 12px;
-    color: var(--text-dim);
-    text-align: center;
-    background: var(--surface-strong);
-  }
-
-  footer a {
-    color: var(--accent);
-    text-decoration: none;
-  }
-</style>
+    @media (max-width: 900px) {
+      main { grid-template-columns: 1fr; }
+      .panel { border-right: none; border-bottom: 1px solid var(--border); }
+      .panel:last-child { border-bottom: none; }
+    }
+  </style>
 </head>
 <body>
-
 <header>
-  <div class="logo">
-    <div class="logo-icon">SVP</div>
+  <div class="brand">
+    <div class="logo">SVP</div>
     <h1>SVP Playground <span>— Sistema Vectorial SV</span></h1>
   </div>
-  <div class="header-links">
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion" target="_blank">Repositorio</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md" target="_blank">Gramática v0.1</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_2.md" target="_blank">IR v0.2</a>
-    <a href="https://github.com/juantoniolloretegea/SV-matematica-semantica" target="_blank">Doctrina</a>
-  </div>
+  <nav>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion" target="_blank" rel="noopener noreferrer">Repositorio</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md" target="_blank" rel="noopener noreferrer">Gramática v0.1</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_2.md" target="_blank" rel="noopener noreferrer">IR v0.2</a>
+    <a href="https://github.com/juantoniolloretegea/SV-matematica-semantica" target="_blank" rel="noopener noreferrer">Doctrina</a>
+  </nav>
 </header>
 
 <main>
   <div class="panel">
     <div class="panel-header">
-      <div class="label"><div class="dot"></div> Código .svp</div>
-      <button class="btn-secondary" onclick="loadExample()" title="Cargar ejemplo">Ejemplo</button>
+      <div class="label"><div class="dot input"></div><span>Código .svp</span></div>
+      <button id="example-btn" class="btn-secondary" onclick="loadExample()">Ejemplo</button>
     </div>
-    <textarea id="editor" placeholder="Escriba aquí su código .svp..." spellcheck="false">-- Ejemplo mínimo: célula SV con b=3
-
-codomain K3 = { APTO, NO_APTO, INDETERMINADO };
-
-output_semantics Klin {
-  APTO -> "Clasificación fuerte favorable";
-  NO_APTO -> "Clasificación fuerte desfavorable";
-  INDETERMINADO -> "Sin clasificación fuerte";
-}
-
-cellspec C1 {
-  b: 3;
-  codomain: K3;
-  semantics: Klin;
-  role: Base;
-}
-
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
-}
-
-let E1 = evaluate(S1);
-</textarea>
+    <textarea id="editor" spellcheck="false" placeholder="Escriba aquí su código .svp ..."></textarea>
   </div>
 
   <div class="panel">
     <div class="panel-header">
-      <div class="label"><div class="dot output" id="output-dot"></div> <span id="output-label">IR v0.2 — JSON canónico</span></div>
+      <div class="label"><div class="dot output" id="output-dot"></div><span id="output-label">IR v0.2 — JSON canónico</span></div>
     </div>
-    <div id="output">Pulse «Parsear» para compilar su código .svp a IR v0.2.</div>
+    <pre id="output">Pulse «Parsear» para compilar su código .svp a IR v0.2.</pre>
   </div>
 </main>
 
@@ -318,15 +230,15 @@ let E1 = evaluate(S1);
     <div class="spinner" id="spinner" style="display:none"></div>
     <span id="status-text">Cargando Pyodide...</span>
   </div>
-  <div style="display:flex;gap:8px;">
-    <button class="btn-secondary" onclick="clearAll()">Limpiar</button>
-    <button id="run-btn" onclick="runParser()" disabled>Parsear</button>
+  <div style="display:flex; gap:8px;">
+    <button class="btn-secondary" type="button" onclick="clearAll()">Limpiar</button>
+    <button id="run-btn" type="button" onclick="runParser()" disabled>Parsear</button>
   </div>
 </div>
 
 <footer>
   Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal)<br>
-  Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0
+  Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0
 </footer>
 
 <script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
@@ -347,27 +259,65 @@ const PY_FILES = [
 let pyodide = null;
 let ready = false;
 
-async function init() {
-  const statusText = document.getElementById('status-text');
+function setStatus(message, spinning = false) {
   const spinner = document.getElementById('spinner');
+  const statusText = document.getElementById('status-text');
+  spinner.style.display = spinning ? 'block' : 'none';
+  statusText.textContent = message;
+}
+
+function renderSuccess(irJson) {
+  const output = document.getElementById('output');
+  const outputDot = document.getElementById('output-dot');
+  const outputLabel = document.getElementById('output-label');
+  output.textContent = irJson;
+  output.className = 'success-output';
+  outputDot.className = 'dot output';
+  outputLabel.textContent = 'IR v0.2 — JSON canónico ✓';
+}
+
+function renderFailure(errorObj) {
+  const output = document.getElementById('output');
+  const outputDot = document.getElementById('output-dot');
+  const outputLabel = document.getElementById('output-label');
+
+  const lines = [];
+  const code = errorObj && errorObj.code ? errorObj.code : 'INTERNAL';
+  const name = errorObj && errorObj.name ? errorObj.name : null;
+  const detail = errorObj && errorObj.detail ? errorObj.detail : null;
+  const message = errorObj && errorObj.message ? errorObj.message : 'Error desconocido';
+  const line = errorObj && errorObj.line != null ? errorObj.line : null;
+  const column = errorObj && errorObj.column != null ? errorObj.column : null;
+
+  lines.push(code + (name ? ' (' + name + ')' : ''));
+  lines.push(detail || message);
+  if (line !== null || column !== null) {
+    lines.push('línea ' + (line ?? '?') + ' · columna ' + (column ?? '?'));
+  }
+
+  output.textContent = lines.join('\n');
+  output.className = 'error-output';
+  outputDot.className = 'dot error';
+  outputLabel.textContent = 'Error';
+}
+
+async function init() {
   const runBtn = document.getElementById('run-btn');
-
-  spinner.style.display = 'block';
-  statusText.textContent = 'Cargando Pyodide...';
-
   try {
+    setStatus('Cargando Pyodide...', true);
     pyodide = await loadPyodide();
-    statusText.textContent = 'Descargando parser desde el repositorio...';
 
-    const fetches = PY_FILES.map(async (fname) => {
-      const resp = await fetch(REPO_BASE + fname);
-      if (!resp.ok) throw new Error(`No se pudo descargar ${fname}: ${resp.status}`);
+    setStatus('Descargando parser desde el repositorio...', true);
+    for (const fname of PY_FILES) {
+      const resp = await fetch(REPO_BASE + fname, { cache: 'no-store' });
+      if (!resp.ok) {
+        throw new Error('No se pudo descargar ' + fname + ': ' + resp.status);
+      }
       const text = await resp.text();
       pyodide.FS.writeFile('/home/pyodide/' + fname, text);
-    });
-    await Promise.all(fetches);
+    }
 
-    pyodide.runPython(`
+    await pyodide.runPythonAsync(`
 import sys
 if '/home/pyodide' not in sys.path:
     sys.path.insert(0, '/home/pyodide')
@@ -375,142 +325,70 @@ if '/home/pyodide' not in sys.path:
 
     ready = true;
     runBtn.disabled = false;
-    spinner.style.display = 'none';
-    statusText.textContent = 'Parser cargado — listo para compilar';
-
+    setStatus('Parser cargado — listo para compilar', false);
   } catch (e) {
-    spinner.style.display = 'none';
-    statusText.textContent = 'Error al cargar: ' + e.message;
+    console.error(e);
+    ready = false;
+    runBtn.disabled = true;
+    setStatus('Error al cargar: ' + (e && e.message ? e.message : String(e)), false);
   }
-}
-
-function setSuccess(irJson) {
-  const output = document.getElementById('output');
-  const outputDot = document.getElementById('output-dot');
-  const outputLabel = document.getElementById('output-label');
-  const statusText = document.getElementById('status-text');
-
-  output.textContent = irJson;
-  output.className = 'success-output';
-  outputDot.className = 'dot output';
-  outputLabel.textContent = 'IR v0.2 — JSON canónico ✓';
-  statusText.textContent = 'Parseo correcto — IR generada';
-}
-
-function setFailure(errorObj, fallbackMessage = 'Error interno del playground') {
-  const output = document.getElementById('output');
-  const outputDot = document.getElementById('output-dot');
-  const outputLabel = document.getElementById('output-label');
-  const statusText = document.getElementById('status-text');
-
-  let message = fallbackMessage;
-
-  if (errorObj && typeof errorObj === 'object') {
-    const lines = [];
-
-    const code = typeof errorObj.code === 'string' && errorObj.code.trim()
-      ? errorObj.code.trim()
-      : null;
-    const name = typeof errorObj.name === 'string' && errorObj.name.trim()
-      ? errorObj.name.trim()
-      : null;
-    const detail = typeof errorObj.detail === 'string' && errorObj.detail.trim()
-      ? errorObj.detail.trim()
-      : null;
-    const rawMessage = typeof errorObj.message === 'string' && errorObj.message.trim()
-      ? errorObj.message.trim()
-      : null;
-
-    if (code && name) {
-      lines.push(`${code} (${name})`);
-    } else if (code) {
-      lines.push(code);
-    } else if (name) {
-      lines.push(name);
-    }
-
-    const preferredText = detail || rawMessage;
-    if (preferredText) {
-      lines.push(preferredText);
-    }
-
-    if (errorObj.line != null || errorObj.column != null) {
-      const line = errorObj.line ?? '?';
-      const column = errorObj.column ?? '?';
-      lines.push(`línea ${line} · columna ${column}`);
-    }
-
-    if (lines.length > 0) {
-      message = lines.join('
-');
-    }
-  } else if (typeof errorObj === 'string' && errorObj.trim()) {
-    message = errorObj.trim();
-  }
-
-  output.textContent = message;
-  output.className = 'error-output';
-  outputDot.className = 'dot error';
-  outputLabel.textContent = 'Error de parseo / validación';
-  statusText.textContent = 'Error detectado';
 }
 
 async function runParser() {
-  if (!ready) return;
+  if (!ready || !pyodide) return;
 
   const code = document.getElementById('editor').value;
-  const statusText = document.getElementById('status-text');
-  statusText.textContent = 'Parseando...';
+  if (!code.trim()) {
+    renderFailure({ code: 'EMPTY', message: 'No hay código .svp para parsear.' });
+    setStatus('Editor vacío', false);
+    return;
+  }
 
   try {
+    setStatus('Parseando...', true);
     pyodide.globals.set('PLAYGROUND_SOURCE', code);
     pyodide.globals.set('PLAYGROUND_FILENAME', 'playground.svp');
 
-    const envelopeText = await pyodide.runPythonAsync(`
+    const envelopeJson = await pyodide.runPythonAsync(`
 from svp_playground_api import compile_for_playground
 compile_for_playground(PLAYGROUND_SOURCE, PLAYGROUND_FILENAME)
 `);
 
-    if (typeof envelopeText !== 'string') {
-      setFailure('Respuesta no textual del playground');
-      return;
-    }
-
     let envelope = null;
     try {
-      envelope = JSON.parse(envelopeText);
-    } catch (e) {
-      setFailure('La respuesta del playground no es JSON válido');
-      return;
+      envelope = JSON.parse(envelopeJson);
+    } catch (parseErr) {
+      throw new Error('Respuesta no válida del playground: ' + String(envelopeJson));
     }
 
-    if (!envelope || typeof envelope.ok !== 'boolean') {
-      setFailure('Envelope inválido del playground');
-      return;
-    }
-
-    if (envelope.ok === true) {
-      setSuccess(envelope.ir_json ?? '');
+    if (envelope && envelope.ok === true) {
+      renderSuccess(envelope.ir_json || '');
+      setStatus('Parseo correcto — IR generada', false);
+    } else if (envelope && envelope.ok === false) {
+      renderFailure(envelope.error || { code: 'INTERNAL', message: 'Error desconocido' });
+      setStatus('Error detectado', false);
     } else {
-      setFailure(envelope.error, 'Error de parseo / validación');
+      throw new Error('Envelope inesperado del playground');
     }
-
   } catch (e) {
-    setFailure(`Error interno del playground: ${e.message}`);
+    console.error(e);
+    renderFailure({ code: 'INTERNAL', message: e && e.message ? e.message : String(e) });
+    setStatus('Error interno', false);
   }
 }
 
 function clearAll() {
   document.getElementById('editor').value = '';
   document.getElementById('output').textContent = 'Pulse «Parsear» para compilar su código .svp a IR v0.2.';
-  document.getElementById('output').className = '';
+  document.getElementById('output').className = 'success-output';
   document.getElementById('output-dot').className = 'dot output';
   document.getElementById('output-label').textContent = 'IR v0.2 — JSON canónico';
-  document.getElementById('status-text').textContent = ready ? 'Parser cargado — listo para compilar' : 'Cargando Pyodide...';
+  setStatus(ready ? 'Parser cargado — listo para compilar' : 'Cargando Pyodide...', false);
 }
 
 function loadExample() {
-  document.getElementById('editor').value = `-- Ejemplo: dos células + compuerta + supervisión meta
+  document.getElementById('editor').value = `-- cell_basic.svp — Célula simple b=3, n=9
+-- Test de conformidad: declaración mínima + evaluación
 
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 
@@ -527,70 +405,15 @@ cellspec C1 {
   role: Base;
 }
 
-cellspec C2 {
-  b: 3;
-  codomain: K3;
-  semantics: Klin;
-  role: Base;
-}
-
 cellstate S1 {
   spec: C1;
   vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
-cellstate S2 {
-  spec: C2;
-  vector: [Zero, Zero, Zero, One, Zero, Zero, Zero, One, Zero];
+let E1 = evaluate(S1);`;
 }
 
-admissibility_table T1 {
-  input_codomains: [K3, K3];
-  output_codomain: K3;
-  table: {
-    (APTO, APTO) -> APTO;
-    (APTO, NO_APTO) -> NO_APTO;
-    (APTO, INDETERMINADO) -> INDETERMINADO;
-    (NO_APTO, APTO) -> NO_APTO;
-    (NO_APTO, NO_APTO) -> NO_APTO;
-    (NO_APTO, INDETERMINADO) -> NO_APTO;
-    (INDETERMINADO, APTO) -> INDETERMINADO;
-    (INDETERMINADO, NO_APTO) -> NO_APTO;
-    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
-  }
-}
-
-let E1 = evaluate(S1);
-let E2 = evaluate(S2);
-let G1 = gate([E1, E2], using: T1);
-
-cellspec Meta {
-  b: 3;
-  codomain: K3;
-  semantics: Klin;
-  role: Supervisor;
-}
-
-cellstate SMeta {
-  spec: Meta;
-  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
-}
-
-let EMeta = evaluate(SMeta);
-let SV1 = supervise(EMeta, target: ComposedTarget(G1));
-
-res_spec RS1 {
-  context: ContextoClinico;
-  mechanism: RevisionExperto;
-  mapping: MapeoResolucion;
-}
-
-let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
-let valor_resuelto = RR1.resolved_to;
-`;
-}
-
-document.getElementById('editor').addEventListener('keydown', function(e) {
+document.getElementById('editor').addEventListener('keydown', function (e) {
   if (e.key === 'Tab') {
     e.preventDefault();
     const start = this.selectionStart;
@@ -604,7 +427,9 @@ document.getElementById('editor').addEventListener('keydown', function(e) {
   }
 });
 
-init();
+window.addEventListener('load', () => {
+  init();
+});
 </script>
 </body>
 </html>
