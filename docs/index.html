@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SVP Playground — Sistema Vectorial SV</title>
+<style>
+  :root {
+    --bg: #0f1117;
+    --surface: #1a1d27;
+    --border: #2a2d3a;
+    --text: #e4e4e7;
+    --text-dim: #8b8d98;
+    --accent: #6c9eff;
+    --accent-hover: #8bb4ff;
+    --green: #4ade80;
+    --red: #f87171;
+    --yellow: #fbbf24;
+    --mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 20px 32px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .logo-icon {
+    width: 36px;
+    height: 36px;
+    background: var(--accent);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--bg);
+  }
+
+  .logo h1 {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .logo h1 span {
+    color: var(--text-dim);
+    font-weight: 400;
+  }
+
+  .header-links {
+    display: flex;
+    gap: 16px;
+    font-size: 13px;
+  }
+
+  .header-links a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition: color 0.15s;
+  }
+
+  .header-links a:hover {
+    color: var(--accent);
+  }
+
+  main {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+  }
+
+  .panel {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+
+  .panel:first-child {
+    border-right: 1px solid var(--border);
+  }
+
+  .panel-header {
+    padding: 12px 20px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-dim);
+    background: var(--surface);
+  }
+
+  .panel-header .label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .dot.output { background: var(--green); }
+  .dot.error { background: var(--red); }
+
+  textarea {
+    flex: 1;
+    background: var(--bg);
+    color: var(--text);
+    border: none;
+    padding: 20px;
+    font-family: var(--mono);
+    font-size: 14px;
+    line-height: 1.6;
+    resize: none;
+    outline: none;
+    tab-size: 2;
+    min-height: 400px;
+  }
+
+  textarea::placeholder {
+    color: var(--text-dim);
+    opacity: 0.5;
+  }
+
+  #output {
+    flex: 1;
+    background: var(--bg);
+    color: var(--text);
+    padding: 20px;
+    font-family: var(--mono);
+    font-size: 13px;
+    line-height: 1.6;
+    overflow: auto;
+    white-space: pre-wrap;
+    min-height: 400px;
+  }
+
+  #output.error-output {
+    color: var(--red);
+  }
+
+  #output.success-output {
+    color: var(--green);
+  }
+
+  .toolbar {
+    padding: 12px 20px;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+  }
+
+  button {
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    padding: 8px 24px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  button:hover:not(:disabled) {
+    background: var(--accent-hover);
+  }
+
+  button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+
+  .btn-secondary {
+    background: var(--border);
+    color: var(--text);
+  }
+
+  .btn-secondary:hover:not(:disabled) {
+    background: #3a3d4a;
+  }
+
+  .status {
+    font-size: 12px;
+    color: var(--text-dim);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .status .spinner {
+    width: 14px;
+    height: 14px;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  footer {
+    padding: 16px 32px;
+    border-top: 1px solid var(--border);
+    font-size: 12px;
+    color: var(--text-dim);
+    text-align: center;
+  }
+
+  footer a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">
+    <div class="logo-icon">SVP</div>
+    <h1>SVP Playground <span>— Sistema Vectorial SV</span></h1>
+  </div>
+  <div class="header-links">
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion" target="_blank">Repositorio</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md" target="_blank">Gramática v0.1</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_2.md" target="_blank">IR v0.2</a>
+    <a href="https://github.com/juantoniolloretegea/SV-matematica-semantica" target="_blank">Doctrina</a>
+  </div>
+</header>
+
+<main>
+  <div class="panel">
+    <div class="panel-header">
+      <div class="label"><div class="dot"></div> Código .svp</div>
+      <button class="btn-secondary" onclick="loadExample()" title="Cargar ejemplo">Ejemplo</button>
+    </div>
+    <textarea id="editor" placeholder="Escriba aquí su código .svp..." spellcheck="false">-- Ejemplo mínimo: célula SV con b=3
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "Clasificación fuerte favorable";
+  NO_APTO -> "Clasificación fuerte desfavorable";
+  INDETERMINADO -> "Sin clasificación fuerte";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+let E1 = evaluate(S1);
+</textarea>
+  </div>
+
+  <div class="panel">
+    <div class="panel-header">
+      <div class="label"><div class="dot output" id="output-dot"></div> <span id="output-label">IR v0.2 — JSON canónico</span></div>
+    </div>
+    <div id="output">Pulse «Parsear» para compilar su código .svp a IR v0.2.</div>
+  </div>
+</main>
+
+<div class="toolbar">
+  <div class="status" id="status">
+    <div class="spinner" id="spinner" style="display:none"></div>
+    <span id="status-text">Cargando Pyodide...</span>
+  </div>
+  <div style="display:flex;gap:8px;">
+    <button class="btn-secondary" onclick="clearAll()">Limpiar</button>
+    <button id="run-btn" onclick="runParser()" disabled>Parsear</button>
+  </div>
+</div>
+
+<footer>
+  Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal)<br>
+  Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0
+</footer>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
+<script>
+const REPO_BASE = 'https://raw.githubusercontent.com/juantoniolloretegea/SV-lenguaje-de-computacion/main/src/';
+const PY_FILES = [
+  'svp_errors.py',
+  'svp_ast.py',
+  'svp_lexer.py',
+  'svp_parser.py',
+  'svp_validator.py',
+  'svp_ir.py',
+  'svp_serialize.py',
+  'svp_main.py',
+];
+
+let pyodide = null;
+let ready = false;
+
+async function init() {
+  const statusText = document.getElementById('status-text');
+  const spinner = document.getElementById('spinner');
+  const runBtn = document.getElementById('run-btn');
+
+  spinner.style.display = 'block';
+  statusText.textContent = 'Cargando Pyodide...';
+
+  try {
+    pyodide = await loadPyodide();
+    statusText.textContent = 'Descargando parser desde el repositorio...';
+
+    // Fetch all Python files from the repo
+    const fetches = PY_FILES.map(async (fname) => {
+      const resp = await fetch(REPO_BASE + fname);
+      if (!resp.ok) throw new Error(`No se pudo descargar ${fname}: ${resp.status}`);
+      const text = await resp.text();
+      pyodide.FS.writeFile('/home/pyodide/' + fname, text);
+    });
+    await Promise.all(fetches);
+
+    // Add the directory to sys.path
+    pyodide.runPython(`
+import sys
+if '/home/pyodide' not in sys.path:
+    sys.path.insert(0, '/home/pyodide')
+`);
+
+    ready = true;
+    runBtn.disabled = false;
+    spinner.style.display = 'none';
+    statusText.textContent = 'Parser cargado — listo para compilar';
+
+  } catch (e) {
+    spinner.style.display = 'none';
+    statusText.textContent = 'Error al cargar: ' + e.message;
+  }
+}
+
+async function runParser() {
+  if (!ready) return;
+
+  const code = document.getElementById('editor').value;
+  const output = document.getElementById('output');
+  const outputDot = document.getElementById('output-dot');
+  const outputLabel = document.getElementById('output-label');
+  const statusText = document.getElementById('status-text');
+
+  statusText.textContent = 'Parseando...';
+
+  try {
+    // Write the .svp source to Pyodide filesystem
+    pyodide.FS.writeFile('/home/pyodide/input.svp', code);
+
+    const result = pyodide.runPython(`
+import hashlib
+from svp_lexer import tokenize
+from svp_parser import Parser
+from svp_validator import Validator
+from svp_ir import Lowering
+from svp_serialize import serialize
+from svp_errors import SVPError
+
+try:
+    with open('/home/pyodide/input.svp', 'r') as f:
+        source = f.read()
+
+    source_hash = hashlib.sha256(source.encode('utf-8')).hexdigest()
+    tokens = tokenize(source, 'playground.svp')
+    parser = Parser(tokens, 'playground.svp')
+    program = parser.parse()
+
+    validator = Validator(program)
+    validator.validate()
+
+    lowering = Lowering(program, source_sha256=source_hash)
+    ir = lowering.lower()
+
+    result = serialize(ir)
+    'OK:' + result
+
+except SVPError as e:
+    'ERR:' + str(e)
+except Exception as e:
+    'ERR:Error interno: ' + str(e)
+`);
+
+    if (result.startsWith('OK:')) {
+      output.textContent = result.slice(3);
+      output.className = 'success-output';
+      outputDot.className = 'dot output';
+      outputLabel.textContent = 'IR v0.2 — JSON canónico ✓';
+      statusText.textContent = 'Parseo correcto — IR generada';
+    } else {
+      output.textContent = result.slice(4);
+      output.className = 'error-output';
+      outputDot.className = 'dot error';
+      outputLabel.textContent = 'Error de parseo / validación';
+      statusText.textContent = 'Error detectado';
+    }
+
+  } catch (e) {
+    output.textContent = 'Error interno del playground: ' + e.message;
+    output.className = 'error-output';
+    outputDot.className = 'dot error';
+    outputLabel.textContent = 'Error';
+    statusText.textContent = 'Error interno';
+  }
+}
+
+function clearAll() {
+  document.getElementById('editor').value = '';
+  document.getElementById('output').textContent = 'Pulse «Parsear» para compilar su código .svp a IR v0.2.';
+  document.getElementById('output').className = '';
+  document.getElementById('output-dot').className = 'dot output';
+  document.getElementById('output-label').textContent = 'IR v0.2 — JSON canónico';
+}
+
+function loadExample() {
+  document.getElementById('editor').value = `-- Ejemplo: dos células + compuerta + supervisión meta
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "Clasificación fuerte favorable";
+  NO_APTO -> "Clasificación fuerte desfavorable";
+  INDETERMINADO -> "Sin clasificación fuerte";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellspec C2 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+cellstate S2 {
+  spec: C2;
+  vector: [Zero, Zero, Zero, One, Zero, Zero, Zero, One, Zero];
+}
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+let E1 = evaluate(S1);
+let E2 = evaluate(S2);
+let G1 = gate([E1, E2], using: T1);
+
+-- Meta-célula supervisora
+cellspec Meta {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Supervisor;
+}
+
+cellstate SMeta {
+  spec: Meta;
+  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let EMeta = evaluate(SMeta);
+let SV1 = supervise(EMeta, target: ComposedTarget(G1));
+
+-- Resolución de U con trazabilidad
+res_spec RS1 {
+  context: ContextoClinico;
+  mechanism: RevisionExperto;
+  mapping: MapeoResolucion;
+}
+
+let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
+let valor_resuelto = RR1.resolved_to;
+`;
+}
+
+// Handle Tab key in editor
+document.getElementById('editor').addEventListener('keydown', function(e) {
+  if (e.key === 'Tab') {
+    e.preventDefault();
+    const start = this.selectionStart;
+    const end = this.selectionEnd;
+    this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
+    this.selectionStart = this.selectionEnd = start + 2;
+  }
+  // Ctrl+Enter to run
+  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+    e.preventDefault();
+    runParser();
+  }
+});
+
+// Initialize
+init();
+</script>
+</body>
+</html>
