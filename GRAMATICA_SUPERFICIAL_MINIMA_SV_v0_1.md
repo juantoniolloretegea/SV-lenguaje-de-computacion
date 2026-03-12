@@ -39,7 +39,7 @@ La gramática no puede contradecir ninguno de estos documentos. En caso de discr
 
 ### Cadena de compilación
 
-```
+```text
 Archivo .svp → Parser/lowering de referencia → IR canónica v0.2 (JSON canónico) → Backend Rust + Backend Python (referencia) → WASM (futuro)
 ```
 
@@ -73,7 +73,7 @@ Los invariantes constitutivos 8 (inmutabilidad del polígono/frame) y 9 (trayect
 
 ### 2.7. Derivación automática de `n` desde `b`
 
-La célula se declara con `b` y el compilador deriva `n = b²`. La superficie no permite escribir `n` directamente, lo que hace imposible la incoherencia `n ≠ b²`. La precondición `b ≥ 3` se verifica en lowering.
+La célula se declara con `b` y el compilador deriva `n = b²`. La superficie no permite escribir `n` directamente, lo que hace imposible la incoherencia `n ≠ b²`. La precondición `b ≥ 3` se verifica en lowering (error E si se viola).
 
 ---
 
@@ -268,7 +268,7 @@ resspec_decl               ::= "res_spec" identifier "{"
 ```
 
 Precondiciones verificadas en lowering para `cellspec`:
-- `b ≥ 3`.
+- `b ≥ 3` (error si se viola).
 - `n` se deriva automáticamente como `b²`. El usuario no escribe `n`.
 
 ### 5.3. Nivel 1 — Estado
@@ -307,7 +307,7 @@ Precondiciones verificadas en lowering para `cellstate`:
 
 Precondiciones verificadas en lowering para `graph`:
 - El campo `relation` debe apuntar a un identificador de `SemanticRelation` declarado. Sin relación semántica previa, no hay composición (invariante constitutivo 6).
-- El grafo no puede contener ciclos.
+- El grafo no puede contener ciclos (Bloque D.5 de la Frontera).
 
 ### 5.4. Composición — Relaciones y patrones
 
@@ -330,8 +330,6 @@ Estas declaraciones son nominales y austeras. No cierran más semántica que la 
 ### 5.5. Nivel 3 — Evolución
 
 ```ebnf
-event_state_literal        ::= "(" identifier "," tri_literal ")" ;
-
 horizon_decl               ::= "horizon" identifier "{"
                                "architecture" ":" identifier ";"
                                "events" ":" list<identifier> ";"
@@ -346,6 +344,8 @@ frame_decl                 ::= "frame" identifier "{"
                                "supervision" ":" list<identifier> ";"
                                "criticalities" ":" list<identifier> ";"
                                "}" ;
+
+event_state_literal        ::= "(" identifier "," tri_literal ")" ;
 
 transitiondata_decl        ::= "transition_data" identifier "{"
                                "horizon_ref" ":" identifier ";"
@@ -451,7 +451,7 @@ Restricciones semánticas verificadas en lowering:
 - **`gate`:** todos los identificadores de la lista deben ser `EvalResult`. No se aceptan otros tipos. La tabla referida por `using` debe ser un `AdmissibilityTable` declarado.
 - **`resolve`:** devuelve un `ResolutionRecord`. El valor ternario resuelto se obtiene por proyección explícita: `let v = RR1.resolved_to;`. No devuelve un par implícito ni un tipo compuesto anónimo.
 - **`query`:** el constructor de `QueryContext` debe ser explícito (una de las cinco variantes). No se acepta un identificador opaco como contexto.
-- **`supervise`:** el primer argumento debe ser un `EvalResult` válido cuya `source_state.spec.role` sea `Supervisor`. El `target` debe ser un constructor explícito de `Supervisable` (`CellTarget`, `ComposedTarget` o `SystemTarget`). No se acepta un identificador opaco.
+- **`supervise`:** el primer argumento debe ser un `EvalResult` válido y su `source_state.spec.role` debe ser `Supervisor`. El `target` debe ser un constructor explícito de `Supervisable` (`CellTarget`, `ComposedTarget` o `SystemTarget`). No se aceptan identificadores opacos.
 - **`compose`:** las listas de `relations` y `patterns` deben contener identificadores de `SemanticRelation` y `Pattern` declarados previamente. No se acepta `compose` sin relaciones ni patrones.
 - **`projection`:** permite acceder a campos de objetos de resultado. Es la única forma de extraer valores internos (como `ResolutionRecord.resolved_to`).
 
@@ -482,7 +482,7 @@ Cada forma superficial baja a exactamente un objeto o una operación de la IR v0
 | `pattern` | Entrada de patrón para `Comp` |
 | `horizon` | `Horizon` (N3) |
 | `frame` | `Frame` (N3), inmutable por tipo |
-| `transition_data` | `TransitionData` (N3), con `horizon_ref`, `events` e `induced_parameters` |
+| `transition_data` | `TransitionData` (N3), con `horizon_ref`, `events` tipados e `induced_parameters` |
 | `trajectory` | `Trajectory` (N3), append-only por tipo |
 | `domain` | `Domain` (N4) |
 | `agent` | `Agent` (N4) |
@@ -581,7 +581,7 @@ connector Phi1 {
     APTO -> Zero;
     NO_APTO -> One;
     INDETERMINADO -> U;
-  };
+  }
 }
 
 -- Estado de la célula
@@ -622,7 +622,7 @@ admissibility_table T1 {
     (INDETERMINADO, APTO) -> INDETERMINADO;
     (INDETERMINADO, NO_APTO) -> NO_APTO;
     (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
-  };
+  }
 }
 
 let G1 = gate([E1, E2], using: T1);
@@ -668,7 +668,7 @@ Sí. No existe producción gramatical para: coerción implícita de U, composici
 
 ### 9.3. ¿El lowering es unívoco?
 
-Sí. Cada forma superficial baja a exactamente un objeto o una operación IR. Los tres puntos que presentaban ambigüedad potencial han sido cerrados: `resolve` devuelve `ResolutionRecord` (con proyección explícita para el valor), `gate` solo acepta `EvalResult`, y `supervise` exige constructor explícito de `Supervisable` con metaevaluación válida.
+Sí. Cada forma superficial baja a exactamente un objeto o una operación IR. Los tres puntos que presentaban ambigüedad potencial han sido cerrados: `resolve` devuelve `ResolutionRecord` (con proyección explícita para el valor), `gate` solo acepta `EvalResult`, y `supervise` exige constructor explícito de `Supervisable`.
 
 ### 9.4. ¿La gramática cierra más de lo debido?
 
