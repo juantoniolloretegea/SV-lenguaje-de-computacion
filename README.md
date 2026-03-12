@@ -28,13 +28,43 @@ Un lenguaje propio convierte estas exigencias en **errores de compilación**, no
 
 ---
 
+### Documentos normativos y técnicos vigentes
+
+Estos son los tres documentos que definen el lenguaje en su estado actual. Los tres están publicados en la raíz del repositorio y forman una cadena de subordinación descendente:
+
+| Documento | Archivo | Función |
+|-----------|---------|---------|
+| **Frontera normativa v0** | [`FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`](FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md) | Establece qué debe conocer, ejecutar, verificar y prohibir el lenguaje. Cuatro bloques: núcleo ejecutor (A), capa formal tipada (B), interfaz analítica (C), zona prohibida (D). |
+| **IR canónica v0.2** | [`IR_CANONICA_BIENFORMACION_SV_v0_2.md`](IR_CANONICA_BIENFORMACION_SV_v0_2.md) | Representación intermedia normalizada, serializable y auditable. Cinco niveles ontológicos (N0–N4), juicios de bienformación, 39 errores no silenciables, lowering disciplinado. |
+| **Gramática superficial mínima v0.1** | [`GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`](GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md) | Superficie declarativa del DSL canónico. Declaraciones nominales, seis operadores con lowering unívoco a la IR, enumeraciones cerradas, prohibiciones sintácticas. |
+
+La cadena de compilación que estos documentos definen es:
+
+```
+Archivo .svp → Parser → IR canónica v0.2 (JSON) → Backend Rust + Backend Python (referencia) → WASM (futuro)
+```
+
+Los tres documentos están subordinados a los *Fundamentos algebraico-semánticos del Sistema Vectorial SV* (Release 3), que residen en el repositorio padre [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica). En caso de discrepancia, prevalecen los *Fundamentos*.
+
+### Extensión de archivo
+
+Los programas escritos en el lenguaje SV usan la extensión **`.svp`** (Sistema Vectorial Poligonal). El nombre remite a la imagen poligonal cerrada, invariante constitutivo del Sistema Vectorial SV: la interfaz de inteligibilidad compartida entre ser humano y máquina.
+
+La IR serializada se emite en formato **JSON** canónico (UTF-8, claves ordenadas, salida determinista).
+
+---
+
 ### Estructura del repositorio
 
 ```
 SV-lenguaje-de-computacion/
 │
-├── README.md                ← Este archivo
-├── LICENSE                  ← CC BY-NC-ND 4.0
+├── README.md                                      ← Este archivo
+├── LICENSE                                        ← CC BY-NC-ND 4.0
+│
+├── FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md           ← Frontera normativa del lenguaje
+├── IR_CANONICA_BIENFORMACION_SV_v0_2.md           ← IR canónica y sistema de bienformación
+├── GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md        ← Gramática superficial mínima
 │
 ├── spec/                    ← Especificación formal del lenguaje
 │   └── README.md
@@ -64,11 +94,13 @@ SV-lenguaje-de-computacion/
 
 | Fase | Objetivo | Estado |
 |------|----------|--------|
-| **I** | Especificación formal: tipos, álgebra, restricciones, auditoría | En curso |
-| **II** | DSL canónica mínima: cell, classify, gamma, compose, query, frame | Pendiente |
-| **III** | Transpilador a Rust (+ Python referencia + WASM) | Pendiente |
-| **IV** | Suite de conformidad cruzada | Pendiente |
-| **V** | Extensión gradual: dominios, consulta avanzada, trayectorias | Pendiente |
+| **I** | Especificación formal: frontera normativa, tipos, álgebra, restricciones, auditoría | Cerrada (Frontera normativa v0) |
+| **II** | Representación intermedia canónica: niveles ontológicos, bienformación, errores, lowering | Cerrada (IR canónica v0.2) |
+| **III** | Gramática superficial mínima: DSL declarativa con lowering unívoco a la IR | Cerrada (Gramática v0.1) |
+| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | Pendiente |
+| **V** | Backend Rust + backend Python de referencia | Pendiente |
+| **VI** | Compilación a WASM | Pendiente |
+| **VII** | Extensión gradual: dominios, consulta avanzada, azúcar derivado | Pendiente |
 
 ---
 
@@ -83,35 +115,42 @@ SV-lenguaje-de-computacion/
 7. Los operadores lícitos son los de ℱ_SV.
 8. El polígono es inmutable una vez evaluado.
 9. La trayectoria es append-only.
-10. Cero estadística, cero probabilidad opaca.
+10. Cero estadística, cero minería de datos, cero probabilidad opaca.
 11. Todo es auditable.
 12. La IA no es soberana. El humano diseña, el sistema ejecuta.
 
 ---
 
-### Tipos primitivos previstos
+### Tipos nucleares del lenguaje
 
 | Tipo | Significado |
-|------|------------|
+|------|-------------|
 | `Tri` | Estado ternario: {Zero, One, U} |
-| `Cell(n, b)` | Célula SV con restricción n = b² |
-| `Vector(n)` | Vector ternario de longitud n |
-| `Class` | Resultado de clasificación: {Apto, NoApto, Indeterminado} |
+| `CellSpec` | Especificación de célula SV con restricción n = b², b ≥ 3 |
+| `CoupledSpec` | Célula acoplable con posiciones puente declaradas |
+| `Codomain` | Codominio tipado de salida |
 | `Connector` | Conector tipado φ : K → Σ |
-| `Gate` | Tabla de admisibilidad 𝒯 |
-| `Frame` | Evaluación completa inmutable |
-| `Event` | Factor ν (exógeno/endógeno) |
-| `Trajectory` | Secuencia append-only de frames |
+| `AdmissibilityTable` | Tabla de admisibilidad 𝒯 para compuerta |
+| `EvalResult` | Resultado de evaluación (conteos, clasificación, criticidad) |
+| `ResolutionRecord` | Registro de resolución de U con contexto y mecanismo |
+| `Frame` | Evaluación completa inmutable, indexada por posición ordinal |
+| `Trajectory` | Secuencia append-only de entradas (frames y datos de transición) |
+| `CompositionGraph` | Grafo DAG de células con aristas enriquecidas |
+
+La nomenclatura completa, con desambiguación de colisiones del corpus, se encuentra en la Frontera normativa v0 (§3) y en la Gramática superficial mínima v0.1 (§4).
 
 ---
 
 ### Errores de compilación (no de ejecución)
 
-- Declarar una célula con n que no sea cuadrado perfecto
-- Componer arquitecturas con relación semántica no declarada
-- Definir un conector cuyo codominio no sea ternario
-- Cerrar un sistema con U relevante sin política explícita de resolución
-- Degradar U a entero, booleano o nulidad
+- Declarar una célula con b < 3.
+- Componer arquitecturas sin relación semántica declarada.
+- Invocar `gate` sin tabla de admisibilidad nombrada.
+- Invocar `query` sin constructor explícito de contexto.
+- Invocar `resolve` sin contexto de evidencia ni mecanismo de revisión.
+- Definir un conector cuyo codominio no sea ternario.
+- Degradar U a entero, booleano o nulidad.
+- Construir literales de resultado (`EvalResult`, `GateResult`, etc.) en lugar de obtenerlos por operador.
 
 ---
 
