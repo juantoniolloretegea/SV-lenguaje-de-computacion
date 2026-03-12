@@ -6,17 +6,19 @@
 <title>SVP Playground — Sistema Vectorial SV</title>
 <style>
   :root {
-    --bg: #0f1117;
-    --surface: #1a1d27;
-    --border: #2a2d3a;
-    --text: #e4e4e7;
-    --text-dim: #8b8d98;
-    --accent: #6c9eff;
-    --accent-hover: #8bb4ff;
-    --green: #4ade80;
-    --red: #f87171;
-    --yellow: #fbbf24;
+    --bg: #f7f9fc;
+    --surface: #ffffff;
+    --surface-soft: #eef4ff;
+    --border: #d6deeb;
+    --text: #0f172a;
+    --text-dim: #475569;
+    --accent: #2563eb;
+    --accent-hover: #1d4ed8;
+    --green: #15803d;
+    --red: #b91c1c;
+    --yellow: #b45309;
     --mono: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+    --shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -38,6 +40,10 @@
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 12px;
+    background: var(--surface);
+    box-shadow: var(--shadow);
+    position: relative;
+    z-index: 1;
   }
 
   .logo {
@@ -47,38 +53,40 @@
   }
 
   .logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     background: var(--accent);
-    border-radius: 8px;
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: 700;
     font-size: 14px;
-    color: var(--bg);
+    color: #ffffff;
   }
 
   .logo h1 {
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 700;
   }
 
   .logo h1 span {
     color: var(--text-dim);
-    font-weight: 400;
+    font-weight: 500;
   }
 
   .header-links {
     display: flex;
-    gap: 16px;
-    font-size: 13px;
+    gap: 18px;
+    font-size: 14px;
+    flex-wrap: wrap;
   }
 
   .header-links a {
     color: var(--text-dim);
     text-decoration: none;
-    transition: color 0.15s;
+    transition: color 0.15s ease;
+    font-weight: 500;
   }
 
   .header-links a:hover {
@@ -90,6 +98,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 0;
+    min-height: 0;
   }
 
   @media (max-width: 900px) {
@@ -100,6 +109,7 @@
     display: flex;
     flex-direction: column;
     min-height: 0;
+    background: var(--surface);
   }
 
   .panel:first-child {
@@ -113,9 +123,9 @@
     align-items: center;
     justify-content: space-between;
     font-size: 13px;
-    font-weight: 500;
+    font-weight: 600;
     color: var(--text-dim);
-    background: var(--surface);
+    background: var(--surface-soft);
   }
 
   .panel-header .label {
@@ -136,13 +146,13 @@
 
   textarea {
     flex: 1;
-    background: var(--bg);
+    background: #ffffff;
     color: var(--text);
     border: none;
     padding: 20px;
     font-family: var(--mono);
     font-size: 14px;
-    line-height: 1.6;
+    line-height: 1.65;
     resize: none;
     outline: none;
     tab-size: 2;
@@ -151,12 +161,12 @@
 
   textarea::placeholder {
     color: var(--text-dim);
-    opacity: 0.5;
+    opacity: 0.6;
   }
 
   #output {
     flex: 1;
-    background: var(--bg);
+    background: #ffffff;
     color: var(--text);
     padding: 20px;
     font-family: var(--mono);
@@ -187,32 +197,36 @@
 
   button {
     background: var(--accent);
-    color: var(--bg);
+    color: #ffffff;
     border: none;
-    padding: 8px 24px;
-    border-radius: 6px;
+    padding: 9px 24px;
+    border-radius: 8px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
-    transition: background 0.15s;
+    transition: background 0.15s ease, transform 0.05s ease;
   }
 
   button:hover:not(:disabled) {
     background: var(--accent-hover);
   }
 
+  button:active:not(:disabled) {
+    transform: translateY(1px);
+  }
+
   button:disabled {
-    opacity: 0.4;
+    opacity: 0.45;
     cursor: not-allowed;
   }
 
   .btn-secondary {
-    background: var(--border);
+    background: #e2e8f0;
     color: var(--text);
   }
 
   .btn-secondary:hover:not(:disabled) {
-    background: #3a3d4a;
+    background: #cbd5e1;
   }
 
   .status {
@@ -226,7 +240,7 @@
   .status .spinner {
     width: 14px;
     height: 14px;
-    border: 2px solid var(--border);
+    border: 2px solid #cbd5e1;
     border-top-color: var(--accent);
     border-radius: 50%;
     animation: spin 0.8s linear infinite;
@@ -242,6 +256,7 @@
     font-size: 12px;
     color: var(--text-dim);
     text-align: center;
+    background: var(--surface);
   }
 
   footer a {
@@ -332,11 +347,35 @@ const PY_FILES = [
   'svp_validator.py',
   'svp_ir.py',
   'svp_serialize.py',
-  'svp_main.py',
+  'svp_playground_api.py'
 ];
 
 let pyodide = null;
 let ready = false;
+
+function setOutputState(kind, text, statusMessage) {
+  const output = document.getElementById('output');
+  const outputDot = document.getElementById('output-dot');
+  const outputLabel = document.getElementById('output-label');
+  const statusText = document.getElementById('status-text');
+
+  output.textContent = text;
+  statusText.textContent = statusMessage;
+
+  if (kind === 'success') {
+    output.className = 'success-output';
+    outputDot.className = 'dot output';
+    outputLabel.textContent = 'IR v0.2 — JSON canónico ✓';
+  } else if (kind === 'error') {
+    output.className = 'error-output';
+    outputDot.className = 'dot error';
+    outputLabel.textContent = 'Error de parseo / validación';
+  } else {
+    output.className = '';
+    outputDot.className = 'dot output';
+    outputLabel.textContent = 'IR v0.2 — JSON canónico';
+  }
+}
 
 async function init() {
   const statusText = document.getElementById('status-text');
@@ -350,16 +389,14 @@ async function init() {
     pyodide = await loadPyodide();
     statusText.textContent = 'Descargando parser desde el repositorio...';
 
-    // Fetch all Python files from the repo
     const fetches = PY_FILES.map(async (fname) => {
-      const resp = await fetch(REPO_BASE + fname);
+      const resp = await fetch(REPO_BASE + fname, { cache: 'no-store' });
       if (!resp.ok) throw new Error(`No se pudo descargar ${fname}: ${resp.status}`);
       const text = await resp.text();
       pyodide.FS.writeFile('/home/pyodide/' + fname, text);
     });
     await Promise.all(fetches);
 
-    // Add the directory to sys.path
     pyodide.runPython(`
 import sys
 if '/home/pyodide' not in sys.path:
@@ -370,10 +407,10 @@ if '/home/pyodide' not in sys.path:
     runBtn.disabled = false;
     spinner.style.display = 'none';
     statusText.textContent = 'Parser cargado — listo para compilar';
-
   } catch (e) {
     spinner.style.display = 'none';
     statusText.textContent = 'Error al cargar: ' + e.message;
+    setOutputState('error', 'Error interno del playground: ' + e.message, 'Error al cargar');
   }
 }
 
@@ -381,79 +418,52 @@ async function runParser() {
   if (!ready) return;
 
   const code = document.getElementById('editor').value;
-  const output = document.getElementById('output');
-  const outputDot = document.getElementById('output-dot');
-  const outputLabel = document.getElementById('output-label');
   const statusText = document.getElementById('status-text');
-
   statusText.textContent = 'Parseando...';
 
   try {
-    // Write the .svp source to Pyodide filesystem
-    pyodide.FS.writeFile('/home/pyodide/input.svp', code);
+    pyodide.globals.set('svp_source_code', code);
 
-    const result = pyodide.runPython(`
-import hashlib
-from svp_lexer import tokenize
-from svp_parser import Parser
-from svp_validator import Validator
-from svp_ir import Lowering
-from svp_serialize import serialize
-from svp_errors import SVPError
-
-try:
-    with open('/home/pyodide/input.svp', 'r') as f:
-        source = f.read()
-
-    source_hash = hashlib.sha256(source.encode('utf-8')).hexdigest()
-    tokens = tokenize(source, 'playground.svp')
-    parser = Parser(tokens, 'playground.svp')
-    program = parser.parse()
-
-    validator = Validator(program)
-    validator.validate()
-
-    lowering = Lowering(program, source_sha256=source_hash)
-    ir = lowering.lower()
-
-    result = serialize(ir)
-    'OK:' + result
-
-except SVPError as e:
-    'ERR:' + str(e)
-except Exception as e:
-    'ERR:Error interno: ' + str(e)
+    const envelopeJson = await pyodide.runPythonAsync(`
+from svp_playground_api import compile_for_playground
+compile_for_playground(svp_source_code, 'playground.svp')
 `);
 
-    if (result.startsWith('OK:')) {
-      output.textContent = result.slice(3);
-      output.className = 'success-output';
-      outputDot.className = 'dot output';
-      outputLabel.textContent = 'IR v0.2 — JSON canónico ✓';
-      statusText.textContent = 'Parseo correcto — IR generada';
-    } else {
-      output.textContent = result.slice(4);
-      output.className = 'error-output';
-      outputDot.className = 'dot error';
-      outputLabel.textContent = 'Error de parseo / validación';
-      statusText.textContent = 'Error detectado';
+    let envelope;
+    try {
+      envelope = JSON.parse(envelopeJson);
+    } catch (parseErr) {
+      throw new Error('La API del playground no devolvió un JSON válido');
     }
 
+    if (!envelope || typeof envelope.ok !== 'boolean') {
+      throw new Error('La API del playground devolvió un envelope inválido');
+    }
+
+    if (envelope.ok) {
+      const payload = typeof envelope.ir_json === 'string'
+        ? envelope.ir_json
+        : JSON.stringify(envelope.ir_json ?? {}, null, 2);
+      setOutputState('success', payload, 'Parseo correcto — IR generada');
+    } else {
+      const err = envelope.error || {};
+      const parts = [];
+      if (err.code) parts.push(err.code);
+      if (err.message) parts.push(err.message);
+      if (err.line != null || err.column != null) {
+        parts.push(`línea ${err.line ?? '?'} · columna ${err.column ?? '?'}`);
+      }
+      const text = parts.length ? parts.join('\n') : 'Error desconocido';
+      setOutputState('error', text, 'Error detectado');
+    }
   } catch (e) {
-    output.textContent = 'Error interno del playground: ' + e.message;
-    output.className = 'error-output';
-    outputDot.className = 'dot error';
-    outputLabel.textContent = 'Error';
-    statusText.textContent = 'Error interno';
+    setOutputState('error', 'Error interno del playground: ' + e.message, 'Error interno');
   }
 }
 
 function clearAll() {
   document.getElementById('editor').value = '';
-  document.getElementById('output').textContent = 'Pulse «Parsear» para compilar su código .svp a IR v0.2.';
-  document.getElementById('output').className = '';
-  document.getElementById('output-dot').className = 'dot output';
-  document.getElementById('output-label').textContent = 'IR v0.2 — JSON canónico';
+  setOutputState('neutral', 'Pulse «Parsear» para compilar su código .svp a IR v0.2.', 'Parser cargado — listo para compilar');
 }
 
 function loadExample() {
@@ -511,7 +521,6 @@ let E1 = evaluate(S1);
 let E2 = evaluate(S2);
 let G1 = gate([E1, E2], using: T1);
 
--- Meta-célula supervisora
 cellspec Meta {
   b: 3;
   codomain: K3;
@@ -526,36 +535,17 @@ cellstate SMeta {
 
 let EMeta = evaluate(SMeta);
 let SV1 = supervise(EMeta, target: ComposedTarget(G1));
-
--- Resolución de U con trazabilidad
-res_spec RS1 {
-  context: ContextoClinico;
-  mechanism: RevisionExperto;
-  mapping: MapeoResolucion;
-}
-
-let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
-let valor_resuelto = RR1.resolved_to;
 `;
+  setOutputState('neutral', 'Pulse «Parsear» para compilar su código .svp a IR v0.2.', 'Ejemplo cargado — listo para compilar');
 }
 
-// Handle Tab key in editor
-document.getElementById('editor').addEventListener('keydown', function(e) {
-  if (e.key === 'Tab') {
-    e.preventDefault();
-    const start = this.selectionStart;
-    const end = this.selectionEnd;
-    this.value = this.value.substring(0, start) + '  ' + this.value.substring(end);
-    this.selectionStart = this.selectionEnd = start + 2;
-  }
-  // Ctrl+Enter to run
-  if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) {
+document.getElementById('editor').addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
     e.preventDefault();
     runParser();
   }
 });
 
-// Initialize
 init();
 </script>
 </body>
