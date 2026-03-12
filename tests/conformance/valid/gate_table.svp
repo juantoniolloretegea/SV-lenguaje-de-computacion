@@ -1,0 +1,53 @@
+-- gate_table.svp — Compuerta con tabla explícita de admisibilidad
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellspec C2 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+cellstate S2 {
+  spec: C2;
+  vector: [Zero, Zero, Zero, One, Zero, Zero, Zero, One, Zero];
+}
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+let E1 = evaluate(S1);
+let E2 = evaluate(S2);
+let G1 = gate([E1, E2], using: T1);

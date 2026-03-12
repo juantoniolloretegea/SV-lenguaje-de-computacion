@@ -1,0 +1,16 @@
+-- bad_b_value.svp — b=2 debe fallar (b >= 3)
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+cellspec C_bad {
+  b: 2;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}

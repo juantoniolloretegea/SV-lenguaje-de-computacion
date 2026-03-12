@@ -1,0 +1,21 @@
+-- supervise_wrong_role.svp — supervise con célula Base debe fallar
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec CBase {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate SBase {
+  spec: CBase;
+  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let EBase = evaluate(SBase);
+
+-- Esto debe fallar: EBase proviene de una célula con rol Base, no Supervisor
+let SV_bad = supervise(EBase, target: CellTarget(EBase));

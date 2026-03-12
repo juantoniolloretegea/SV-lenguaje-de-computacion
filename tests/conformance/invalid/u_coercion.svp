@@ -1,0 +1,6 @@
+-- u_coercion.svp — null como Tri debe fallar
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+cellstate S1 { spec: C1; vector: [Zero, null, U, Zero, Zero, One, U, Zero, One]; }

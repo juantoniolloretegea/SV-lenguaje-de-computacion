@@ -1,0 +1,4 @@
+-- max_keyword.svp — uso de max debe fallar (no disponible en v0.1)
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+let X = max(E1, E2);

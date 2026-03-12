@@ -1,0 +1,60 @@
+-- supervise_targets.svp — Supervisión meta con constructores explícitos
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+cellspec CBase {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellspec CMeta {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Supervisor;
+}
+
+cellstate SBase {
+  spec: CBase;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+cellstate SMeta {
+  spec: CMeta;
+  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+let EBase = evaluate(SBase);
+let EMeta = evaluate(SMeta);
+
+-- Supervisar una célula individual
+let SV1 = supervise(EMeta, target: CellTarget(EBase));
+
+-- Supervisar un resultado compuesto
+let EBase2 = evaluate(SBase);
+let G1 = gate([EBase, EBase2], using: T1);
+let SV2 = supervise(EMeta, target: ComposedTarget(G1));

@@ -1,0 +1,18 @@
+-- resolve_projection.svp — resolve + proyección explícita de value
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+res_spec RS1 {
+  context: ContextoClinico;
+  mechanism: RevisionExperto;
+  mapping: MapeoResolucion;
+}
+
+let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
+let valor_resuelto = RR1.resolved_to;
