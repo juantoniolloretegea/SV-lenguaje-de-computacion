@@ -8,7 +8,7 @@ Lenguaje núcleo semántico del Sistema Vectorial SV: pequeño, tipado, auditabl
 
 ### Qué es este proyecto
 
-Este repositorio contiene la especificación, la gramática y la implementación del lenguaje de computación propio del Sistema Vectorial SV. Su propósito no es competir con lenguajes generalistas, sino preservar de forma nativa lo que otros lenguajes solo preservan por disciplina externa.
+Este repositorio contiene la especificación, la gramática, la implementación y las herramientas públicas del lenguaje de computación propio del Sistema Vectorial SV. Su propósito no es competir con lenguajes generalistas, sino preservar de forma nativa lo que otros lenguajes solo preservan por disciplina externa.
 
 ### Por qué un lenguaje propio
 
@@ -25,6 +25,13 @@ Un lenguaje propio convierte estas exigencias en **errores de compilación**, no
 ### Principio rector
 
 > El SV no necesita un lenguaje propio para existir, pero sí puede justificar un lenguaje propio cuando éste preserve de forma nativa lo que otros lenguajes solo preservan por disciplina externa.
+
+---
+
+### Puerta de entrada
+
+> [!NOTE]
+> Para orientarse en el corpus desde una vista unificada —con contexto doctrinal, jerarquía documental y acceso directo a sus piezas principales— consulte el repositorio padre [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica), del que este proyecto depende doctrinalmente.
 
 ---
 
@@ -54,6 +61,26 @@ La IR serializada se emite en formato **JSON** canónico (UTF-8, claves ordenada
 
 ---
 
+### SVP Playground
+
+Pruebe el lenguaje directamente en el navegador:
+
+**SVP Playground**  
+https://juantoniolloretegea.github.io/SV-lenguaje-de-computacion/
+
+El playground permite escribir código **`.svp`**, parsearlo y obtener la **IR canónica v0.2 en JSON** o el error correspondiente, sin instalación local.
+
+Características actuales:
+
+- usa el parser/lowering de referencia del repositorio;
+- se sirve desde **GitHub Pages**;
+- vive en **`docs/index.html`**;
+- carga en vivo los módulos Python del parser desde **`src/`**;
+- parsea, valida y serializa;
+- **no** ejecuta todavía el backend.
+
+---
+
 ### Estructura del repositorio
 
 ```
@@ -69,22 +96,22 @@ SV-lenguaje-de-computacion/
 ├── spec/                    ← Especificación formal del lenguaje
 │   └── README.md
 │
-├── grammar/                 ← Gramática y parser
+├── grammar/                 ← Gramática y notas de parsing
 │   └── README.md
 │
-├── src/                     ← Código del transpilador
+├── src/                     ← Parser/lowering de referencia (Python)
 │   └── README.md
 │
-├── stdlib/                  ← Biblioteca estándar (cell, gamma, compose...)
+├── stdlib/                  ← Biblioteca estándar futura (cell, gamma, compose...)
 │   └── README.md
 │
-├── examples/                ← Programas de ejemplo
+├── examples/                ← Programas de ejemplo `.svp`
 │   └── README.md
 │
-├── tests/                   ← Suite de conformidad
+├── tests/                   ← Suite de conformidad DSL → IR
 │   └── README.md
 │
-└── docs/                    ← Documentación del lenguaje
+└── docs/                    ← Documentación y SVP Playground (`index.html`)
     └── README.md
 ```
 
@@ -97,7 +124,7 @@ SV-lenguaje-de-computacion/
 | **I** | Especificación formal: frontera normativa, tipos, álgebra, restricciones, auditoría | Cerrada (Frontera normativa v0) |
 | **II** | Representación intermedia canónica: niveles ontológicos, bienformación, errores, lowering | Cerrada (IR canónica v0.2) |
 | **III** | Gramática superficial mínima: DSL declarativa con lowering unívoco a la IR | Cerrada (Gramática v0.1) |
-| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 10 tests (6 válidos + 4 inválidos) |
+| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 10 tests (6 válidos + 4 inválidos), SVP Playground |
 | **V** | Backend Rust + backend Python de referencia | Pendiente |
 | **VI** | Compilación a WASM | Pendiente |
 | **VII** | Extensión gradual: dominios, consulta avanzada, azúcar derivado | Pendiente |
@@ -178,5 +205,5 @@ La doctrina reside en SV-matematica-semantica. Este repositorio implementa esa d
 
 ---
 
-*Lenguaje de computación del Sistema Vectorial SV.*
+*Lenguaje de computación del Sistema Vectorial SV.*  
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
