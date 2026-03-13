@@ -1,0 +1,234 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "CBase",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Supervisor",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "CMeta",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "spec": "CBase",
+        "vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "SBase",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "spec": "CMeta",
+        "vector": [
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero"
+        ]
+      },
+      "level": "N1",
+      "name": "SMeta",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "input_codomains": [
+          "K3",
+          "K3"
+        ],
+        "output_codomain": "K3",
+        "table": [
+          {
+            "inputs": [
+              "APTO",
+              "APTO"
+            ],
+            "output": "APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "INDETERMINADO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "APTO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          }
+        ]
+      },
+      "level": "N0",
+      "name": "T1",
+      "type": "AdmissibilityTable"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "state": "SBase"
+      },
+      "name": "EBase",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "state": "SMeta"
+      },
+      "name": "EMeta",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "meta_eval": "EMeta",
+        "target": {
+          "ref": "EBase",
+          "variant": "CellTarget"
+        }
+      },
+      "name": "SV1",
+      "result_type": "SupervisionResult",
+      "type": "supervise"
+    },
+    {
+      "inputs": {
+        "state": "SBase"
+      },
+      "name": "EBase2",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "eval_results": [
+          "EBase",
+          "EBase2"
+        ],
+        "table": "T1"
+      },
+      "name": "G1",
+      "result_type": "GateResult",
+      "type": "gate"
+    },
+    {
+      "inputs": {
+        "meta_eval": "EMeta",
+        "target": {
+          "ref": "G1",
+          "variant": "ComposedTarget"
+        }
+      },
+      "name": "SV2",
+      "result_type": "SupervisionResult",
+      "type": "supervise"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "supervise_targets.svp",
+  "source_sha256": "fdd5ae5f827c8544fb26e020ce8f5aab1c431854ab6a3204d4b9fc1c93a14c03"
+}
