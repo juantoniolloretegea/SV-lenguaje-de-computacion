@@ -1,0 +1,88 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "events": [
+          "CambioProfilaxis",
+          "NuevoCultivo"
+        ]
+      },
+      "level": "N3",
+      "name": "H1",
+      "type": "Horizon"
+    },
+    {
+      "fields": {
+        "events": [
+          {
+            "event_type": "CambioProfilaxis",
+            "state": "One"
+          },
+          {
+            "event_type": "NuevoCultivo",
+            "state": "Zero"
+          }
+        ],
+        "horizon_ref": "H1",
+        "induced_parameters": [
+          {
+            "cell_ref": "C1",
+            "position": 3,
+            "value": "One"
+          },
+          {
+            "cell_ref": "C1",
+            "position": 7,
+            "value": "Zero"
+          }
+        ]
+      },
+      "level": "N3",
+      "name": "TD1",
+      "type": "TransitionData"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "transition_data_events.svp",
+  "source_sha256": "4e99a15de36611c79984142f767813aaab7054b105bcf08a63fd286143d583b2"
+}
