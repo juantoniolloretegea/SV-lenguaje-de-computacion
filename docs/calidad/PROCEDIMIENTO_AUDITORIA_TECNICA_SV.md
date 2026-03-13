@@ -138,8 +138,6 @@ Se consideran fuentes válidas de evidencia, según el caso:
 - suite de tests y resultados observables;
 - ZIP operativo verificado;
 - documentación publicada;
-- capturas o PDF de confirmación cuando la propagación online o el acceso raw no permitan verificación suficiente.
-
 No se considerarán prueba bastante por sí solos:
 
 - nombres de archivo;
@@ -189,7 +187,6 @@ Toda redacción pública derivada de auditoría deberá ser:
 - sobria;
 - técnica;
 - revisable por terceros;
-- y ajena a cocina interna o nomenclaturas privadas.
 
 ## 14. Vigencia
 
