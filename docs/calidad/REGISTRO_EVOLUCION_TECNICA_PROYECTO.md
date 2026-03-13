@@ -112,6 +112,7 @@ Se recomienda usar una o varias de estas etiquetas:
 |---|---|---:|---|---|---|---|
 | RETP-2026-001 | 13/03/2026 | 19:08:39 | CIERRE_PARCHE | PARCHE 2E-B / Fase IV | Se impone la alternancia constitutiva de `Trajectory`, se adapta la línea SEC-0 afectada, se añaden casos positivo y negativo de conformidad y se actualiza la suite a 17/17. | cerrado |
 | RETP-2026-002 | 13/03/2026 | 20:12:56 | DECISION_ARQUITECTONICA | Gobierno técnico / Fase IV | Se fija la jerarquía operativa del proyecto, el control dual ligero/duro y la prioridad de sanear la concordancia IR ↔ catálogo de errores ↔ validator ↔ runner ↔ documentación pública antes de abrir nuevos frentes funcionales o backend Rust. | cerrado |
+| RETP-2026-003 | 13/03/2026 | 23:40:35 | CAMBIO_DOCUMENTACION_PUBLICA | Microauditoría de concordancia / Fase IV | Se sinceran la cobertura declarada del validator, la descripción pública de emisión/cobertura de errores y la sincronización dual del registro técnico `.md`/`.csv`, sin abrir todavía un frente funcional sobre N4/Uso. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -145,6 +146,22 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad.
 - **Objeción adversarial considerada:** riesgo de burocratización y de creación de una segunda capa doctrinal paralela.
 - **Decisión:** adoptar una capa operativa subordinada, ligera durante la marcha y dura sólo en puntos de control.
+- **Estado:** cerrado
+
+### RETP-2026-003
+
+- **Fecha:** 13/03/2026
+- **Hora (Europe/Madrid):** 23:40:35
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Microauditoría de concordancia / Fase IV
+- **Resumen del cambio:** Se ajusta la documentación pública para distinguir entre validación implementada y concordancia fuerte total; se explicita la diferencia entre catálogo, emisión observable y cobertura de suite; y se sincroniza el registro dual `.md`/`.csv`.
+- **Motivo o argumento:** La microauditoría ha constatado que el frontend está estable, pero la documentación pública sobreatribuía cobertura del validator y no reflejaba con precisión el estado observable del contrato diagnóstico ni la asimetría entre registro en prosa y registro tabular.
+- **Base doctrinal o técnica invocada:** IR canónica v0.2; decisión C1C de regularización por Vía B; procedimiento de auditoría técnica del proyecto; suite y código fuente observables del frontend.
+- **Artefactos afectados:** `src/svp_validator.py`; `src/README.md`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** microauditoría cerrada de concordancia; contraste directo entre código fuente, suite observable y documentación pública; actualización sincronizada de los dos registros técnicos.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad.
+- **Objeción adversarial considerada:** riesgo de convertir una microauditoría en pseudoavance sin corrección funcional real y riesgo de petrificar provisionalmente la ausencia de validación fuerte en N4/Uso.
+- **Decisión:** sincerar primero el estado público verificable y reservar para bloque posterior, separado y adversarial, cualquier cierre funcional sobre N4/Uso o convergencia fuerte total.
 - **Estado:** cerrado
 
 ## 13. Regla de estilo
