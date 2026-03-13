@@ -137,6 +137,38 @@
     {
       "fields": {
         "architecture": "Arch1",
+        "events": [
+          "CambioProfilaxis"
+        ]
+      },
+      "level": "N3",
+      "name": "H1",
+      "type": "Horizon"
+    },
+    {
+      "fields": {
+        "events": [
+          {
+            "event_type": "CambioProfilaxis",
+            "state": "One"
+          }
+        ],
+        "horizon_ref": "H1",
+        "induced_parameters": [
+          {
+            "cell_ref": "C1",
+            "position": 3,
+            "value": "One"
+          }
+        ]
+      },
+      "level": "N3",
+      "name": "TD1",
+      "type": "TransitionData"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
         "cell_states": [
           "S1"
         ],
@@ -178,7 +210,8 @@
       "fields": {
         "entries": [
           {
-            "frame": "F1"
+            "frame": "F1",
+            "transition": "TD1"
           },
           {
             "frame": "F2"
@@ -391,5 +424,5 @@
   ],
   "serializer_version": "0.1.0",
   "source_file": "query_context_all_variants.svp",
-  "source_sha256": "23f681961bcadba57f5a99031f52c2803de9e58b80319e5bc8cdded724b084a5"
+  "source_sha256": "e94e7b9d8cd1518fddb170fc241644cbd079a971d967ec75e9060f5529bc0600"
 }
