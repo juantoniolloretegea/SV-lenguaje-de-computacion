@@ -20,7 +20,7 @@ python tests/run_conformance.py
 python tests/run_cli_smoke.py
 ```
 
-## Casos válidos (7)
+## Casos válidos (8)
 
 | Archivo | Qué verifica |
 |---------|-------------|
@@ -31,8 +31,9 @@ python tests/run_cli_smoke.py
 | `compose_basic.svp` | Composición con relación semántica y patrón declarados |
 | `transition_data_events.svp` | TransitionData con sucesos tipados (`event_state_literal`) e `induced_parameters` |
 | `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
+| `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
 
-## Casos inválidos (8)
+## Casos inválidos (9)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
@@ -43,17 +44,17 @@ python tests/run_cli_smoke.py
 | `projection_undeclared_source.svp` | proyección `resolved_to` sobre fuente no declarada | E006 |
 | `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
 | `supervise_wrong_role.svp` | supervise con célula de rol Base (debe ser Supervisor) | E211 |
+| `trajectory_alternance_violation.svp` | `Trajectory` con entrada no final sin `transition` | E304 |
 | `u_coercion.svp` | `null` como literal ternario (coerción de U prohibida) | E001 |
 
 ## Qué no comprueba todavía
 
 - Cobertura exhaustiva de los 39 errores E001–E507
-- Invariantes de alternancia en trayectorias
 - Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
 
 ## Resultado actual
 
-15 de 15 tests de conformidad pasan.
+17 de 17 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
