@@ -149,7 +149,7 @@ Se recomienda usar una o varias de estas etiquetas:
 
 ## 13. Regla de estilo
 
-Este registro debe mantenerse con lenguaje formal, sobrio, técnico y revisable por terceros. Las entradas deben describir hechos, fundamento, evidencia, impacto y estado..
+Este registro debe mantenerse con lenguaje formal, sobrio, técnico y revisable por terceros. Las entradas deben describir hechos, fundamento, evidencia, impacto y estado.
 
 ## 14. Vigencia
 
