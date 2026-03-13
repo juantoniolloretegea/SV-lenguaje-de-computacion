@@ -1,0 +1,46 @@
+-- trajectory_alternance_violation.svp — trayectoria con alternancia inválida
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+horizon H1 {
+  architecture: Arch1;
+  events: [CambioProfilaxis];
+}
+
+transition_data TD1 {
+  horizon_ref: H1;
+  events: [(CambioProfilaxis, One)];
+  induced_parameters: [(C1, 3, One)];
+}
+
+frame F1 {
+  index: 1;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F2 {
+  index: 2;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+trajectory TR_bad {
+  entries: [entry(frame: F1), entry(frame: F2)];
+}
