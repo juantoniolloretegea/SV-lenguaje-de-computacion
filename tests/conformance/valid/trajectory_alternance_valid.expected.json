@@ -1,0 +1,145 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "spec": "C1",
+        "vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "S1",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "events": [
+          "CambioProfilaxis"
+        ]
+      },
+      "level": "N3",
+      "name": "H1",
+      "type": "Horizon"
+    },
+    {
+      "fields": {
+        "events": [
+          {
+            "event_type": "CambioProfilaxis",
+            "state": "One"
+          }
+        ],
+        "horizon_ref": "H1",
+        "induced_parameters": [
+          {
+            "cell_ref": "C1",
+            "position": 3,
+            "value": "One"
+          }
+        ]
+      },
+      "level": "N3",
+      "name": "TD1",
+      "type": "TransitionData"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "cell_states": [
+          "S1"
+        ],
+        "criticalities": [],
+        "eval_results": [],
+        "gate_results": [],
+        "index": 1,
+        "supervision": []
+      },
+      "level": "N3",
+      "name": "F1",
+      "type": "Frame"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "cell_states": [
+          "S1"
+        ],
+        "criticalities": [],
+        "eval_results": [],
+        "gate_results": [],
+        "index": 2,
+        "supervision": []
+      },
+      "level": "N3",
+      "name": "F2",
+      "type": "Frame"
+    },
+    {
+      "fields": {
+        "entries": [
+          {
+            "frame": "F1",
+            "transition": "TD1"
+          },
+          {
+            "frame": "F2"
+          }
+        ]
+      },
+      "level": "N3",
+      "name": "TR1",
+      "type": "Trajectory"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "trajectory_alternance_valid.svp",
+  "source_sha256": "04acc994c5943058cc5a8f77bd7981427ea7fbcfdad9bdc3d67be321c35a6d14"
+}
