@@ -1,0 +1,6 @@
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+cellspec CMeta { b: 3; codomain: K3; semantics: Klin; role: Supervisor; }
+cellstate SMeta { spec: CMeta; vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; }
+let EMeta = evaluate(SMeta);
+let SV1 = supervise(EMeta, target: CellTarget(E999));
