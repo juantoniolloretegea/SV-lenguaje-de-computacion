@@ -29,6 +29,7 @@ EXPECTED_INVALID_CODES = {
     "projection_undeclared_source.svp": "E006",
     "supervise_undeclared_target.svp": "E006",
     "supervise_wrong_role.svp": "E211",
+    "trajectory_alternance_violation.svp": "E304",
     "u_coercion.svp": "E001",
 }
 
