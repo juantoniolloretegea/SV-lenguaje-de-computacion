@@ -48,7 +48,7 @@ Estos son los tres documentos que definen el lenguaje en su estado actual. Los t
 | Documento | Archivo | Función |
 |-----------|---------|---------|
 | **Frontera normativa v0** | [`FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`](FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md) | Establece qué debe conocer, ejecutar, verificar y prohibir el lenguaje. Cuatro bloques: núcleo ejecutor (A), capa formal tipada (B), interfaz analítica (C), zona prohibida (D). |
-| **IR canónica v0.2** | [`IR_CANONICA_BIENFORMACION_SV_v0_2.md`](IR_CANONICA_BIENFORMACION_SV_v0_2.md) | Representación intermedia normalizada, serializable y auditable. Cinco niveles ontológicos (N0–N4), juicios de bienformación, 39 errores no silenciables, lowering disciplinado. |
+| **IR canónica v0.2** | [`IR_CANONICA_BIENFORMACION_SV_v0_2.md`](IR_CANONICA_BIENFORMACION_SV_v0_2.md) | Representación intermedia normalizada, serializable y auditable. Cinco niveles ontológicos (N0–N4), juicios de bienformación, catálogo normativo de errores y lowering disciplinado. |
 | **Gramática superficial mínima v0.1** | [`GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`](GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md) | Superficie declarativa del DSL canónico. Declaraciones nominales, seis operadores con lowering unívoco a la IR, enumeraciones cerradas, prohibiciones sintácticas. |
 
 La cadena de compilación que estos documentos definen es:
@@ -98,7 +98,10 @@ SV-lenguaje-de-computacion/
 │   └── README.md
 │
 └── docs/                    ← Documentación del lenguaje y SVP Playground
-    └── index.html
+    ├── index.html
+    ├── README.md
+    ├── calidad/               ← Auditoría, trazabilidad y decisiones de gobierno técnico
+    └── referencia/            ← Catálogos y referencia humana del lenguaje
 ```
 
 ---
@@ -110,7 +113,7 @@ SV-lenguaje-de-computacion/
 | **I** | Especificación formal: frontera normativa, tipos, álgebra, restricciones, auditoría | Cerrada (Frontera normativa v0) |
 | **II** | Representación intermedia canónica: niveles ontológicos, bienformación, errores, lowering | Cerrada (IR canónica v0.2) |
 | **III** | Gramática superficial mínima: DSL declarativa con lowering unívoco a la IR | Cerrada (Gramática v0.1) |
-| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 15 tests (7 válidos + 8 inválidos) y SVP Playground |
+| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 17 tests (8 válidos + 9 inválidos) y SVP Playground |
 | **V** | Backend Rust + backend Python de referencia | Pendiente |
 | **VI** | Compilación a WASM | Pendiente |
 | **VII** | Extensión gradual: dominios, consulta avanzada, azúcar derivado | Pendiente |
