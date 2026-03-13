@@ -11,7 +11,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E101, E102,
-                         E104, E105, E202, E211, E303)
+                         E104, E105, E202, E211, E303, E304)
 
 
 class Validator:
@@ -65,6 +65,8 @@ class Validator:
             self._validate_graph(node)
         elif isinstance(node, TransitionDataDecl):
             self._validate_transition_data(node)
+        elif isinstance(node, TrajectoryDecl):
+            self._validate_trajectory(node)
         elif isinstance(node, GateCmd):
             self._validate_gate(node)
         elif isinstance(node, EvalCmd):
@@ -157,6 +159,20 @@ class Validator:
 
     def _validate_transition_data(self, node: TransitionDataDecl):
         self._require_ref(node.horizon_ref, node.loc, "HorizonDecl")
+
+    def _validate_trajectory(self, node: TrajectoryDecl):
+        if len(node.entries) == 0:
+            raise SVPError(E304, node.loc.line, node.loc.col,
+                           "Trajectory.entries no puede estar vacío")
+
+        last_index = len(node.entries) - 1
+        for idx, entry in enumerate(node.entries):
+            if idx < last_index and entry.transition is None:
+                raise SVPError(E304, node.loc.line, node.loc.col,
+                               f"La entrada {idx + 1} de '{node.name}' no es la última y debe llevar transition")
+            if idx == last_index and entry.transition is not None:
+                raise SVPError(E304, node.loc.line, node.loc.col,
+                               f"La última entrada de '{node.name}' no puede llevar transition")
 
     def _validate_gate(self, node: GateCmd):
         self._require_ref(node.using, node.loc, "AdmissibilityTableDecl")
