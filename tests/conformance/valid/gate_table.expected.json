@@ -1,0 +1,202 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C2",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "spec": "C1",
+        "vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "S1",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "spec": "C2",
+        "vector": [
+          "Zero",
+          "Zero",
+          "Zero",
+          "One",
+          "Zero",
+          "Zero",
+          "Zero",
+          "One",
+          "Zero"
+        ]
+      },
+      "level": "N1",
+      "name": "S2",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "input_codomains": [
+          "K3",
+          "K3"
+        ],
+        "output_codomain": "K3",
+        "table": [
+          {
+            "inputs": [
+              "APTO",
+              "APTO"
+            ],
+            "output": "APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "INDETERMINADO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "APTO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          }
+        ]
+      },
+      "level": "N0",
+      "name": "T1",
+      "type": "AdmissibilityTable"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "state": "S1"
+      },
+      "name": "E1",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "state": "S2"
+      },
+      "name": "E2",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "eval_results": [
+          "E1",
+          "E2"
+        ],
+        "table": "T1"
+      },
+      "name": "G1",
+      "result_type": "GateResult",
+      "type": "gate"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "gate_table.svp",
+  "source_sha256": "2930f0684014d0736cc0a0a8ff050e779c114a51825488afd4144aa2fdd8304c"
+}
