@@ -1,0 +1,395 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "spec": "C1",
+        "vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "S1",
+      "type": "CellState"
+    },
+    {
+      "fields": {
+        "input_codomains": [
+          "K3",
+          "K3"
+        ],
+        "output_codomain": "K3",
+        "table": [
+          {
+            "inputs": [
+              "APTO",
+              "APTO"
+            ],
+            "output": "APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "APTO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "NO_APTO",
+              "INDETERMINADO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "APTO"
+            ],
+            "output": "INDETERMINADO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "NO_APTO"
+            ],
+            "output": "NO_APTO"
+          },
+          {
+            "inputs": [
+              "INDETERMINADO",
+              "INDETERMINADO"
+            ],
+            "output": "INDETERMINADO"
+          }
+        ]
+      },
+      "level": "N0",
+      "name": "T1",
+      "type": "AdmissibilityTable"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "cell_states": [
+          "S1"
+        ],
+        "criticalities": [],
+        "eval_results": [
+          "E1"
+        ],
+        "gate_results": [
+          "G1"
+        ],
+        "index": 1,
+        "supervision": []
+      },
+      "level": "N3",
+      "name": "F1",
+      "type": "Frame"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "cell_states": [
+          "S1"
+        ],
+        "criticalities": [],
+        "eval_results": [
+          "E1"
+        ],
+        "gate_results": [
+          "G1"
+        ],
+        "index": 2,
+        "supervision": []
+      },
+      "level": "N3",
+      "name": "F2",
+      "type": "Frame"
+    },
+    {
+      "fields": {
+        "entries": [
+          {
+            "frame": "F1"
+          },
+          {
+            "frame": "F2"
+          }
+        ]
+      },
+      "level": "N3",
+      "name": "TR1",
+      "type": "Trajectory"
+    },
+    {
+      "fields": {
+        "admissibility_specs": [
+          "Adm1"
+        ],
+        "capture_specs": [
+          "Cap1"
+        ],
+        "closure_criterion": "CCrit1",
+        "exogeneity_mask": "Exo1",
+        "horizon": "H1",
+        "interface": "I1",
+        "parameters": [
+          "P1"
+        ],
+        "silent_u": "SU1",
+        "ternarizers": [
+          "Ter1"
+        ],
+        "transduction_policy": "TP1",
+        "u_policy": "UP1"
+      },
+      "level": "N4",
+      "name": "D1",
+      "type": "Domain"
+    },
+    {
+      "fields": {
+        "architecture": "Arch1",
+        "domain": "D1",
+        "query_engine": "QE1"
+      },
+      "level": "N4",
+      "name": "AG1",
+      "type": "Agent"
+    },
+    {
+      "fields": {
+        "query_type": "PointEvaluation",
+        "restrictions": [
+          "R1"
+        ],
+        "scope": "Cell"
+      },
+      "level": "N4",
+      "name": "QSPoint",
+      "type": "QuerySpec"
+    },
+    {
+      "fields": {
+        "query_type": "TrajectoryState",
+        "restrictions": [
+          "R1"
+        ],
+        "scope": "Trajectory"
+      },
+      "level": "N4",
+      "name": "QSTraj",
+      "type": "QuerySpec"
+    },
+    {
+      "fields": {
+        "query_type": "FrameComparison",
+        "restrictions": [
+          "R1"
+        ],
+        "scope": "Pair"
+      },
+      "level": "N4",
+      "name": "QSFrameCmp",
+      "type": "QuerySpec"
+    },
+    {
+      "fields": {
+        "query_type": "GlobalCriticality",
+        "restrictions": [
+          "R1"
+        ],
+        "scope": "Architecture"
+      },
+      "level": "N4",
+      "name": "QSArch",
+      "type": "QuerySpec"
+    },
+    {
+      "fields": {
+        "query_type": "CoverageState",
+        "restrictions": [
+          "R1"
+        ],
+        "scope": "Architecture"
+      },
+      "level": "N4",
+      "name": "QSCov",
+      "type": "QuerySpec"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "state": "S1"
+      },
+      "name": "E1",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    },
+    {
+      "inputs": {
+        "eval_results": [
+          "E1",
+          "E1"
+        ],
+        "table": "T1"
+      },
+      "name": "G1",
+      "result_type": "GateResult",
+      "type": "gate"
+    },
+    {
+      "inputs": {
+        "by": "AG1",
+        "context": {
+          "ref": "F1",
+          "variant": "PointEval"
+        },
+        "spec": "QSPoint"
+      },
+      "name": "Q1",
+      "result_type": "QueryResult",
+      "type": "query"
+    },
+    {
+      "inputs": {
+        "by": "AG1",
+        "context": {
+          "ref": "TR1",
+          "variant": "TrajectoryView"
+        },
+        "spec": "QSTraj"
+      },
+      "name": "Q2",
+      "result_type": "QueryResult",
+      "type": "query"
+    },
+    {
+      "inputs": {
+        "by": "AG1",
+        "context": {
+          "refs": [
+            "F1",
+            "F2"
+          ],
+          "variant": "FrameComparison"
+        },
+        "spec": "QSFrameCmp"
+      },
+      "name": "Q3",
+      "result_type": "QueryResult",
+      "type": "query"
+    },
+    {
+      "inputs": {
+        "by": "AG1",
+        "context": {
+          "architecture": "Arch1",
+          "cells": [
+            "C1"
+          ],
+          "evals": [
+            "E1"
+          ],
+          "gates": [
+            "G1"
+          ],
+          "variant": "ArchitectureView"
+        },
+        "spec": "QSArch"
+      },
+      "name": "Q4",
+      "result_type": "QueryResult",
+      "type": "query"
+    },
+    {
+      "inputs": {
+        "by": "AG1",
+        "context": {
+          "refs": [
+            "D1",
+            "I1",
+            "SU1"
+          ],
+          "variant": "CoverageReport"
+        },
+        "spec": "QSCov"
+      },
+      "name": "Q5",
+      "result_type": "QueryResult",
+      "type": "query"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "query_context_all_variants.svp",
+  "source_sha256": "23f681961bcadba57f5a99031f52c2803de9e58b80319e5bc8cdded724b084a5"
+}
