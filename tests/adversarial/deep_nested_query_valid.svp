@@ -54,6 +54,23 @@ frame F2 {
   criticalities: [];
 }
 
+horizon H_SEC0 {
+  architecture: Arch_SEC0;
+  events: [CambioProfilaxis, NuevoCultivo];
+}
+
+transition_data TD_SEC0_12 {
+  horizon_ref: H_SEC0;
+  events: [(CambioProfilaxis, One)];
+  induced_parameters: [(C1, 3, One)];
+}
+
+transition_data TD_SEC0_23 {
+  horizon_ref: H_SEC0;
+  events: [(NuevoCultivo, Zero)];
+  induced_parameters: [(C1, 7, Zero)];
+}
+
 frame F3 {
   index: 3;
   architecture: Arch_SEC0;
@@ -65,7 +82,7 @@ frame F3 {
 }
 
 trajectory TR_SEC0 {
-  entries: [entry(frame: F1), entry(frame: F2), entry(frame: F3)];
+  entries: [entry(frame: F1, transition: TD_SEC0_12), entry(frame: F2, transition: TD_SEC0_23), entry(frame: F3)];
 }
 
 domain D_SEC0 {
