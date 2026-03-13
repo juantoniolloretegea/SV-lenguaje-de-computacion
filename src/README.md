@@ -2,7 +2,7 @@
 
 ## Qué hace
 
-Toma un archivo `.svp` escrito en la Gramática superficial mínima v0.1, lo parsea, valida la bienformación conforme a la IR canónica v0.2 y produce la representación IR serializada en JSON canónico.
+Toma un archivo `.svp` escrito en la Gramática superficial mínima v0.1, lo parsea, aplica la validación implementada vigente —subordinada a la IR canónica v0.2— y produce la representación IR serializada en JSON canónico.
 
 ## Qué no hace
 
@@ -23,7 +23,7 @@ python svp_main.py archivo.svp -o archivo.ir.json  # salida a archivo
 | `svp_ast.py` | Definiciones del AST (un nodo por declaración/comando) |
 | `svp_lexer.py` | Tokenizador de archivos `.svp` |
 | `svp_parser.py` | Parser de descenso recursivo (EBNF → AST) |
-| `svp_validator.py` | Verificación de bienformación (juicios J0.1–J5.2) |
+| `svp_validator.py` | Verificación implementada de bienformación; la concordancia fuerte total con J0.1–J5.2 sigue pendiente |
 | `svp_ir.py` | Objetos IR v0.2 + lowering (AST → IR) |
 | `svp_serialize.py` | Serialización IR → JSON canónico |
 | `svp_main.py` | CLI (archivo.svp → archivo.ir.json) |
@@ -31,6 +31,8 @@ python svp_main.py archivo.svp -o archivo.ir.json  # salida a archivo
 ## Alcance
 
 Implementa exactamente las 22 declaraciones y los 7 comandos de la Gramática superficial mínima v0.1. Cero azúcar. Cero extensiones. Cero funcionalidad más allá de lo especificado.
+
+La cobertura diagnóstica actual no equivale todavía a la totalidad de los juicios J0.1–J5.2 ni cierra completamente la capa N4/Uso. La convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue siendo deuda futura del proyecto.
 
 ## JSON canónico de salida
 
