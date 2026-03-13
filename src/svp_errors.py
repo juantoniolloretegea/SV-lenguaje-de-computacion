@@ -1,7 +1,12 @@
 """
-svp_errors.py — Catálogo centralizado de errores del lenguaje SV
+svp_errors.py — Catálogo implementativo vigente de errores del lenguaje SV
 
-Todos los errores E001–E507 definidos en la IR canónica v0.2.
+Este archivo recoge el catálogo efectivo utilizado por el frontend de referencia
+(parser/lowering, validator y runner) en el estado actual del proyecto.
+No debe interpretarse como sustitución de la IR canónica v0.2.
+Su regularización documental se rige por la decisión C-1.C y mantiene abierta
+la convergencia futura con la norma superior.
+
 Cada error lleva código, nombre canónico, mensaje base, nivel y fase de emisión.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
