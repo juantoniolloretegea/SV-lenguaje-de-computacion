@@ -110,7 +110,7 @@ SV-lenguaje-de-computacion/
 | **I** | Especificación formal: frontera normativa, tipos, álgebra, restricciones, auditoría | Cerrada (Frontera normativa v0) |
 | **II** | Representación intermedia canónica: niveles ontológicos, bienformación, errores, lowering | Cerrada (IR canónica v0.2) |
 | **III** | Gramática superficial mínima: DSL declarativa con lowering unívoco a la IR | Cerrada (Gramática v0.1) |
-| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 13 tests (6 válidos + 7 inválidos) y SVP Playground |
+| **IV** | Parser/lowering de referencia y suite de conformidad DSL → IR | En curso — parser Python, JSON canónico, 14 tests (6 válidos + 8 inválidos) y SVP Playground |
 | **V** | Backend Rust + backend Python de referencia | Pendiente |
 | **VI** | Compilación a WASM | Pendiente |
 | **VII** | Extensión gradual: dominios, consulta avanzada, azúcar derivado | Pendiente |
