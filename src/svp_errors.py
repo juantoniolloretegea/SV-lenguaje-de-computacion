@@ -151,6 +151,10 @@ E210 = SVPErrorDef("E210", "MaxMinForbidden",
     "max/min no están disponibles en la superficie v0.1",
     ErrorLevel.LAYER2, ErrorPhase.PARSE)
 
+E211 = SVPErrorDef("E211", "SuperviseMetaNotSupervisor",
+    "El primer argumento de supervise debe provenir de una célula con rol Supervisor",
+    ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
+
 # ── Capa 3 — Evolución ───────────────────────────────────────────────
 
 E301 = SVPErrorDef("E301", "FrameMutationForbidden",
@@ -199,7 +203,7 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 ERRORS = {e.code: e for e in [
     E001, E002, E003, E004, E005, E006, E007, E008, E009, E010,
     E101, E102, E103, E104, E105, E106, E111,
-    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210,
+    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211,
     E301, E302, E303, E304,
     E401, E402, E403,
     E501, E507,
