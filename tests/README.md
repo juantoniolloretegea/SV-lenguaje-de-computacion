@@ -49,7 +49,8 @@ python tests/run_cli_smoke.py
 
 ## Qué no comprueba todavía
 
-- Cobertura exhaustiva de los 39 errores E001–E507
+- Cobertura exhaustiva del catálogo implementativo vigente
+- Convergencia exhaustiva entre catálogo implementativo vigente e IR v0.2
 - Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
 
 ## Resultado actual
