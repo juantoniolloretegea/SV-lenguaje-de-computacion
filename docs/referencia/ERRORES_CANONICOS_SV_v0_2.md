@@ -83,24 +83,47 @@ Mientras siga vigente la regularización por Vía B:
 | E501 | `SerializationNonDeterministic` | Serialización/conformidad | `lower` | divergente respecto de IR v0.2 | La serialización JSON no es determinista |
 | E507 | `UCoercionDetected` | Serialización/conformidad | `validate` | divergente respecto de IR v0.2 | Coerción implícita de U detectada (prohibición constitutiva) |
 
-## 7. Códigos actualmente activos en validator y/o runner
+## 7. Emisión observable y cobertura explícita de suite
 
-Los códigos actualmente activos en el comportamiento observable del frontend de referencia y/o de la suite incluyen, al menos:
+Para evitar sobreatribución de cobertura, se distinguen aquí tres planos distintos del estado actual del frontend de referencia.
+
+### 7.1. Códigos con emisión directa observable en el código fuente
+
+Constan con sitio de emisión directo observable en el frontend actual, al menos, los siguientes códigos:
+
+- `E001`
+- `E002`
+- `E004`
+- `E005`
+- `E006`
+- `E010`
+- `E101`
+- `E103`
+- `E105`
+- `E202`
+- `E204`
+- `E205`
+- `E210`
+- `E211`
+- `E304`
+
+### 7.2. Códigos cubiertos explícitamente por la suite de conformidad observable
+
+La suite de conformidad vigente cubre de forma explícita, al menos, los siguientes códigos esperados en casos inválidos:
 
 - `E001`
 - `E002`
 - `E006`
-- `E101`
-- `E102`
 - `E103`
-- `E104`
-- `E105`
-- `E202`
 - `E210`
 - `E211`
-- `E303`
 - `E304`
-- `E507`
+
+### 7.3. Nota de cautela sobre catálogo, emisión y cobertura
+
+La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola, que exista hoy un sitio de emisión directo observable ni que esté cubierto por la suite.
+
+En particular, `E507` permanece catalogado como prohibición constitutiva, pero el caso adversarial `u_coercion.svp` hoy se manifiesta observacionalmente con `E001` en la suite vigente.
 
 ## 8. Regla de continuidad
 
