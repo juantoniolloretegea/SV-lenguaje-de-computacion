@@ -1,0 +1,97 @@
+-- deep_nested_query_valid.svp — estructura moderadamente profunda con query
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+let E1 = evaluate(S1);
+let G1 = gate([E1, E1], using: T1);
+
+frame F1 {
+  index: 1;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F2 {
+  index: 2;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F3 {
+  index: 3;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+trajectory TR_SEC0 {
+  entries: [entry(frame: F1), entry(frame: F2), entry(frame: F3)];
+}
+
+domain D_SEC0 {
+  parameters: [P_SEC0];
+  interface: I_SEC0;
+  horizon: H_SEC0;
+  capture_specs: [Cap_SEC0];
+  admissibility_specs: [Adm_SEC0];
+  ternarizers: [Ter_SEC0];
+  exogeneity_mask: Exo_SEC0;
+  silent_u: SU_SEC0;
+  transduction_policy: TP_SEC0;
+  u_policy: UP_SEC0;
+  closure_criterion: CCrit_SEC0;
+}
+
+agent AG_SEC0 {
+  architecture: Arch_SEC0;
+  domain: D_SEC0;
+  query_engine: QE_SEC0;
+}
+
+query_spec QS_SEC0 {
+  query_type: TrajectoryState;
+  scope: Trajectory;
+  restrictions: [R_SEC0];
+}
+
+let Q_SEC0 = query(QS_SEC0, by: AG_SEC0, in: TrajectoryView(TR_SEC0));
