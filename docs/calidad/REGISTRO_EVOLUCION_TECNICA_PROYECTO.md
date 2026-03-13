@@ -31,7 +31,7 @@ No deben registrarse:
 - correcciones cosméticas sin impacto de contrato;
 - pasos mecánicos intermedios de subida a GitHub;
 - reintentos materiales que no cambien el estado del proyecto;
-- notas internas de cocina o debate no publicable.
+- no deben registrarse anotaciones sin relevancia técnica, documental o de control.
 
 ## 5. Regla temporal
 
