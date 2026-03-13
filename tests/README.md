@@ -2,7 +2,11 @@
 
 ## Qué comprueba
 
-Verifica mecánicamente que la cadena `.svp` → parser → validación → IR v0.2 → JSON canónico funciona correctamente. Para cada caso válido, comprueba que se produce JSON con los campos obligatorios. Para cada caso inválido, comprueba que falla con el código exacto esperado del catálogo.
+Verifica mecánicamente que la cadena `.svp` → parser → validación → IR v0.2 → JSON canónico funciona correctamente.
+
+Para cada caso válido, comprueba que se produce JSON con los campos obligatorios y que coincide bit a bit, en forma canónica, con su `.expected.json` correspondiente.
+
+Para cada caso inválido, comprueba que falla con el código exacto esperado del catálogo.
 
 ## Ejecución
 
@@ -19,7 +23,7 @@ python tests/run_conformance.py
 | `resolve_projection.svp` | Resolución de U con ResolutionRecord + proyección `resolved_to` |
 | `supervise_targets.svp` | Supervisión meta con CellTarget y ComposedTarget, rol Supervisor |
 | `compose_basic.svp` | Composición con relación semántica y patrón declarados |
-| `transition_data_events.svp` | TransitionData con sucesos tipados (event_state_literal) e induced_parameters |
+| `transition_data_events.svp` | TransitionData con sucesos tipados (`event_state_literal`) e `induced_parameters` |
 
 ## Casos inválidos (7)
 
@@ -35,7 +39,6 @@ python tests/run_conformance.py
 
 ## Qué no comprueba todavía
 
-- Comparación bit a bit con expected JSON (pendiente de generar `.expected.json` para cada caso válido)
 - Cobertura exhaustiva de los 39 errores E001–E507
 - Ciclos en grafos de composición
 - Invariantes de alternancia en trayectorias
