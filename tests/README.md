@@ -31,13 +31,14 @@ python tests/run_cli_smoke.py
 | `compose_basic.svp` | Composición con relación semántica y patrón declarados |
 | `transition_data_events.svp` | TransitionData con sucesos tipados (`event_state_literal`) e `induced_parameters` |
 
-## Casos inválidos (7)
+## Casos inválidos (8)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
 | `bad_b_value.svp` | b=2 (debe ser ≥ 3) | E002 |
-| `max_keyword.svp` | Uso de `max` (no disponible en v0.1) | E210 |
+| `compose_cycle_graph.svp` | ciclo en grafo de composición declarado | E103 |
 | `gate_undeclared_input.svp` | `gate` con una entrada no declarada | E006 |
+| `max_keyword.svp` | Uso de `max` (no disponible en v0.1) | E210 |
 | `projection_undeclared_source.svp` | proyección `resolved_to` sobre fuente no declarada | E006 |
 | `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
 | `supervise_wrong_role.svp` | supervise con célula de rol Base (debe ser Supervisor) | E211 |
@@ -46,17 +47,17 @@ python tests/run_cli_smoke.py
 ## Qué no comprueba todavía
 
 - Cobertura exhaustiva de los 39 errores E001–E507
-- Ciclos en grafos de composición
 - Invariantes de alternancia en trayectorias
 - QueryContext con las cinco variantes
 - Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
 
 ## Resultado actual
 
-13 de 13 tests de conformidad pasan.
+14 de 14 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
 ---
-*Lenguaje de computación del Sistema Vectorial SV.*
+
+*Lenguaje de computación del Sistema Vectorial SV.*  
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
