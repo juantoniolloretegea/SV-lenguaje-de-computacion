@@ -1,0 +1,74 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "Clasificación fuerte favorable",
+          "INDETERMINADO": "Sin clasificación fuerte",
+          "NO_APTO": "Clasificación fuerte desfavorable"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "spec": "C1",
+        "vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "S1",
+      "type": "CellState"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "state": "S1"
+      },
+      "name": "E1",
+      "result_type": "EvalResult",
+      "type": "evaluate"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "cell_basic.svp",
+  "source_sha256": "6b9106283251318fa57bf3cb8e1fda32eebefe518e160ed882d7368f8c591463"
+}
