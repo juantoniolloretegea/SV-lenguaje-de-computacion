@@ -20,7 +20,7 @@ python tests/run_conformance.py
 python tests/run_cli_smoke.py
 ```
 
-## Casos válidos (6)
+## Casos válidos (7)
 
 | Archivo | Qué verifica |
 |---------|-------------|
@@ -30,6 +30,7 @@ python tests/run_cli_smoke.py
 | `supervise_targets.svp` | Supervisión meta con CellTarget y ComposedTarget, rol Supervisor |
 | `compose_basic.svp` | Composición con relación semántica y patrón declarados |
 | `transition_data_events.svp` | TransitionData con sucesos tipados (`event_state_literal`) e `induced_parameters` |
+| `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
 
 ## Casos inválidos (8)
 
@@ -48,12 +49,11 @@ python tests/run_cli_smoke.py
 
 - Cobertura exhaustiva de los 39 errores E001–E507
 - Invariantes de alternancia en trayectorias
-- QueryContext con las cinco variantes
 - Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
 
 ## Resultado actual
 
-14 de 14 tests de conformidad pasan.
+15 de 15 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
