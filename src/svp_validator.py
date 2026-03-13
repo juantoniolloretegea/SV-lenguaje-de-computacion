@@ -11,7 +11,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E101, E102,
-                         E104, E105, E202, E303)
+                         E104, E105, E202, E211, E303)
 
 
 class Validator:
@@ -75,6 +75,8 @@ class Validator:
             self._validate_supervise(node)
         elif isinstance(node, ComposeCmd):
             self._validate_compose(node)
+        elif isinstance(node, ProjectionCmd):
+            self._validate_projection(node)
         elif isinstance(node, CodomainDecl):
             self._validate_codomain(node)
 
@@ -159,7 +161,8 @@ class Validator:
     def _validate_gate(self, node: GateCmd):
         self._require_ref(node.using, node.loc, "AdmissibilityTableDecl")
         for inp in node.inputs:
-            if inp in self.symbol_types and self.symbol_types[inp] != "EvalCmd":
+            self._require_ref(inp, node.loc)
+            if self.symbol_types[inp] != "EvalCmd":
                 raise SVPError(E202, node.loc.line, node.loc.col,
                                f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
 
@@ -171,7 +174,9 @@ class Validator:
 
     def _validate_supervise(self, node: SuperviseCmd):
         self._require_ref(node.meta_eval, node.loc)
-        # Watson's hardening: meta_eval must come from a cell with role Supervisor
+        target_ref = getattr(node.target, "ref", None)
+        if target_ref is not None:
+            self._require_ref(target_ref, node.loc)
         meta_node = self.symbols.get(node.meta_eval)
         if meta_node and isinstance(meta_node, EvalCmd):
             state_node = self.symbols.get(meta_node.input_ref)
@@ -179,10 +184,12 @@ class Validator:
                 spec_node = self.symbols.get(state_node.spec)
                 if spec_node and isinstance(spec_node, CellSpecDecl):
                     if spec_node.role != "Supervisor":
-                        from svp_errors import E205
-                        raise SVPError(E205, node.loc.line, node.loc.col,
+                        raise SVPError(E211, node.loc.line, node.loc.col,
                                        f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, "
                                        f"pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
+
+    def _validate_projection(self, node: ProjectionCmd):
+        self._require_ref(node.source, node.loc)
 
     def _validate_compose(self, node: ComposeCmd):
         self._require_ref(node.graph, node.loc, "GraphDecl")
