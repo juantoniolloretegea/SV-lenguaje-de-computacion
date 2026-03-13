@@ -8,10 +8,16 @@ Para cada caso válido, comprueba que se produce JSON con los campos obligatorio
 
 Para cada caso inválido, comprueba que falla con el código exacto esperado del catálogo.
 
+Además, incluye una batería mínima de **smoke tests de CLI** para verificar el contrato externo de la implementación de referencia:
+- ejecución válida por `stdout`
+- ejecución válida con `-o` y creación de archivo
+- ejecución inválida con `rc=1` y prefijo `ERROR:` en `stderr`
+
 ## Ejecución
 
 ```bash
 python tests/run_conformance.py
+python tests/run_cli_smoke.py
 ```
 
 ## Casos válidos (6)
@@ -43,12 +49,14 @@ python tests/run_conformance.py
 - Ciclos en grafos de composición
 - Invariantes de alternancia en trayectorias
 - QueryContext con las cinco variantes
+- Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
 
 ## Resultado actual
 
-13 de 13 tests pasan.
+13 de 13 tests de conformidad pasan.
+
+La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
 ---
-
 *Lenguaje de computación del Sistema Vectorial SV.*
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
