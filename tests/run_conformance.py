@@ -9,14 +9,25 @@ Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
 """
 
+import json
 import os
 import sys
-import json
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
-from svp_main import process_file
 from svp_errors import SVPError
+from svp_main import process_file
+
+
+EXPECTED_INVALID_CODES = {
+    "bad_b_value.svp": "E002",
+    "gate_undeclared_input.svp": "E006",
+    "max_keyword.svp": "E210",
+    "projection_undeclared_source.svp": "E006",
+    "supervise_undeclared_target.svp": "E006",
+    "supervise_wrong_role.svp": "E211",
+    "u_coercion.svp": "E001",
+}
 
 
 def run_tests():
@@ -37,7 +48,6 @@ def run_tests():
             path = os.path.join(valid_dir, fname)
             try:
                 result = process_file(path)
-                # Verificar que es JSON válido
                 doc = json.loads(result)
                 assert "ir_version" in doc
                 assert "grammar_version" in doc
@@ -53,33 +63,42 @@ def run_tests():
                 failed += 1
 
     # ── Casos inválidos ───────────────────────────────────────────────
-    print("\n═══ Casos inválidos (deben fallar) ═══")
+    print("\n═══ Casos inválidos (deben fallar con código exacto) ═══")
     if os.path.isdir(invalid_dir):
         for fname in sorted(os.listdir(invalid_dir)):
             if not fname.endswith(".svp"):
                 continue
             path = os.path.join(invalid_dir, fname)
+            expected_code = EXPECTED_INVALID_CODES.get(fname)
             try:
-                result = process_file(path)
-                # Si llega aquí, no falló — es un error del test
+                process_file(path)
                 print(f"  ✗ {fname}: debería haber fallado pero produjo JSON")
                 errors.append((fname, "No falló"))
                 failed += 1
             except SVPError as e:
-                print(f"  ✓ {fname}: {e.error_def.code} ({e.error_def.name})")
-                passed += 1
+                actual_code = e.error_def.code
+                if expected_code is None:
+                    print(f"  ✗ {fname}: no tiene código esperado declarado y falló con {actual_code}")
+                    errors.append((fname, f"Sin código esperado declarado: {actual_code}"))
+                    failed += 1
+                elif actual_code != expected_code:
+                    print(f"  ✗ {fname}: código esperado {expected_code}, obtenido {actual_code}")
+                    errors.append((fname, f"Esperado {expected_code}, obtenido {actual_code}"))
+                    failed += 1
+                else:
+                    print(f"  ✓ {fname}: {actual_code} ({e.error_def.name})")
+                    passed += 1
             except Exception as e:
-                # Otro error inesperado
                 print(f"  ? {fname}: error inesperado — {e}")
                 errors.append((fname, str(e)))
                 failed += 1
 
     # ── Resumen ───────────────────────────────────────────────────────
-    print(f"\n═══ Resumen ═══")
+    print("\n═══ Resumen ═══")
     print(f"  Pasados: {passed}")
     print(f"  Fallidos: {failed}")
     if errors:
-        print(f"\n  Errores:")
+        print("\n  Errores:")
         for name, msg in errors:
             print(f"    {name}: {msg}")
 
