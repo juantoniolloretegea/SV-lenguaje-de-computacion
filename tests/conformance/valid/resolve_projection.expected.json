@@ -1,0 +1,64 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "context": "ContextoClinico",
+        "mapping": "MapeoResolucion",
+        "mechanism": "RevisionExperto"
+      },
+      "level": "N0",
+      "name": "RS1",
+      "type": "ResSpec"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "context": "Ctx1",
+        "mechanism": "M1",
+        "with_spec": "RS1"
+      },
+      "name": "RR1",
+      "result_type": "ResolutionRecord",
+      "type": "resolve"
+    },
+    {
+      "inputs": {
+        "field": "resolved_to",
+        "source": "RR1"
+      },
+      "name": "valor_resuelto",
+      "result_type": "Projected",
+      "type": "projection"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "resolve_projection.svp",
+  "source_sha256": "e38d78d382a80808f8732c555603d683e8ca56a6a37f3d10a5b46a842ed0299c"
+}
