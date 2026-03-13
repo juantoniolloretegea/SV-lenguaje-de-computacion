@@ -1,0 +1,139 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "APTO",
+          "NO_APTO",
+          "INDETERMINADO"
+        ]
+      },
+      "level": "N0",
+      "name": "K3",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "APTO": "ok",
+          "INDETERMINADO": "u",
+          "NO_APTO": "no"
+        }
+      },
+      "level": "N0",
+      "name": "Klin",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C1",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K3",
+        "n": 9,
+        "role": "Base",
+        "semantics": "Klin"
+      },
+      "level": "N0",
+      "name": "C2",
+      "type": "CellSpec"
+    },
+    {
+      "fields": {
+        "bridges": [
+          3
+        ],
+        "cell": "C1"
+      },
+      "level": "N0",
+      "name": "CC1",
+      "type": "CoupledSpec"
+    },
+    {
+      "fields": {
+        "mapping": {
+          "APTO": "Zero",
+          "INDETERMINADO": "U",
+          "NO_APTO": "One"
+        },
+        "source_codomain": "K3",
+        "target_position": 3
+      },
+      "level": "N0",
+      "name": "Phi1",
+      "type": "Connector"
+    },
+    {
+      "fields": {
+        "constraints": [
+          "ProfilaxisRiesgo"
+        ],
+        "kind": "DeclaredRelation"
+      },
+      "level": "N0",
+      "name": "R_serie",
+      "type": "SemanticRelation"
+    },
+    {
+      "fields": {
+        "arity": 2,
+        "kind": "DeclaredPattern"
+      },
+      "level": "N0",
+      "name": "P_serie",
+      "type": "Pattern"
+    },
+    {
+      "fields": {
+        "edges": [
+          {
+            "connector": "Phi1",
+            "position": 3,
+            "source": "CC1",
+            "target": "C2"
+          }
+        ],
+        "nodes": [
+          "CC1",
+          "C2"
+        ],
+        "regime": "Simple",
+        "relation": "R_serie"
+      },
+      "level": "N1",
+      "name": "G1",
+      "type": "CompositionGraph"
+    }
+  ],
+  "operations": [
+    {
+      "inputs": {
+        "graph": "G1",
+        "patterns": [
+          "P_serie"
+        ],
+        "relations": [
+          "R_serie"
+        ]
+      },
+      "name": "A1",
+      "result_type": "Architecture",
+      "type": "compose"
+    }
+  ],
+  "serializer_version": "0.1.0",
+  "source_file": "compose_basic.svp",
+  "source_sha256": "95b783220da208a02e212dddbe3bd3a7b8f3c10887acca5c19865ba1c9b0d698"
+}
