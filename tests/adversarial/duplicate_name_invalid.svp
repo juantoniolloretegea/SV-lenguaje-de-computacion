@@ -1,0 +1,23 @@
+-- duplicate_name_invalid.svp — colisión nominal limpia para SEC-0B
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+cellspec DUPLICATE_CELL {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellspec DUPLICATE_CELL {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
