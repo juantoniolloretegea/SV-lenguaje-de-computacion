@@ -1,13 +1,12 @@
 #!/usr/bin/env python3
+"""run_conformance.py — Ejecutor de la suite de conformidad DSL → IR
 
-"""
-run_conformance.py — Ejecutor de la suite de conformidad DSL → IR
+Para cada caso válido:
+parsea, valida, baja y compara el JSON canónico producido con su
+`.expected.json` correspondiente.
 
-Para cada caso válido: parsea, valida, baja y compara el JSON canónico
-producido con su `.expected.json` correspondiente.
-
-Para cada caso inválido: parsea y comprueba que falla con el código exacto
-esperado.
+Para cada caso inválido:
+parsea y comprueba que falla con el código exacto esperado.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
@@ -24,6 +23,7 @@ from svp_main import process_file
 
 EXPECTED_INVALID_CODES = {
     "bad_b_value.svp": "E002",
+    "compose_cycle_graph.svp": "E103",
     "gate_undeclared_input.svp": "E006",
     "max_keyword.svp": "E210",
     "projection_undeclared_source.svp": "E006",
@@ -44,16 +44,16 @@ def expected_json_path(valid_dir: str, fname: str) -> str:
     return os.path.join(valid_dir, f"{stem}.expected.json")
 
 
-
 def run_tests():
     base = os.path.dirname(os.path.abspath(__file__))
     valid_dir = os.path.join(base, "conformance", "valid")
     invalid_dir = os.path.join(base, "conformance", "invalid")
+
     passed = 0
     failed = 0
     errors = []
 
-    # ── Casos válidos ─────────────────────────────────────────────────
+    # ── Casos válidos ──────────────────────────────────────────────────
     print("═══ Casos válidos ═══")
     if os.path.isdir(valid_dir):
         for fname in sorted(os.listdir(valid_dir)):
@@ -71,6 +71,7 @@ def run_tests():
 
                 result = process_file(path)
                 doc = json.loads(result)
+
                 assert "ir_version" in doc
                 assert "grammar_version" in doc
                 assert "source_sha256" in doc
@@ -89,12 +90,13 @@ def run_tests():
 
                 print(f" ✓ {fname}")
                 passed += 1
+
             except Exception as e:
                 print(f" ✗ {fname}: {e}")
                 errors.append((fname, str(e)))
                 failed += 1
 
-    # ── Casos inválidos ───────────────────────────────────────────────
+    # ── Casos inválidos ────────────────────────────────────────────────
     print("\n═══ Casos inválidos (deben fallar con código exacto) ═══")
     if os.path.isdir(invalid_dir):
         for fname in sorted(os.listdir(invalid_dir)):
@@ -103,13 +105,16 @@ def run_tests():
 
             path = os.path.join(invalid_dir, fname)
             expected_code = EXPECTED_INVALID_CODES.get(fname)
+
             try:
                 process_file(path)
                 print(f" ✗ {fname}: debería haber fallado pero produjo JSON")
                 errors.append((fname, "No falló"))
                 failed += 1
+
             except SVPError as e:
                 actual_code = e.error_def.code
+
                 if expected_code is None:
                     print(
                         f" ✗ {fname}: no tiene código esperado declarado y falló con {actual_code}"
@@ -118,21 +123,26 @@ def run_tests():
                         (fname, f"Sin código esperado declarado: {actual_code}")
                     )
                     failed += 1
+
                 elif actual_code != expected_code:
                     print(
                         f" ✗ {fname}: código esperado {expected_code}, obtenido {actual_code}"
                     )
-                    errors.append((fname, f"Esperado {expected_code}, obtenido {actual_code}"))
+                    errors.append(
+                        (fname, f"Esperado {expected_code}, obtenido {actual_code}")
+                    )
                     failed += 1
+
                 else:
                     print(f" ✓ {fname}: {actual_code} ({e.error_def.name})")
                     passed += 1
+
             except Exception as e:
                 print(f" ? {fname}: error inesperado — {e}")
                 errors.append((fname, str(e)))
                 failed += 1
 
-    # ── Resumen ───────────────────────────────────────────────────────
+    # ── Resumen ────────────────────────────────────────────────────────
     print("\n═══ Resumen ═══")
     print(f" Pasados: {passed}")
     print(f" Fallidos: {failed}")
