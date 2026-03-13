@@ -657,7 +657,7 @@ class Parser:
             self._advance(); self._expect(TT.LPAREN)
             r = self._expect_id(); self._expect(TT.RPAREN)
             return QCTrajectoryView(ref=r)
-        elif t.type == TT.KW_FRAME_COMPARISON:
+        elif t.type in (TT.KW_FRAME_COMPARISON, TT.KW_FRAME_COMPARISON_TYPE):
             self._advance(); self._expect(TT.LPAREN)
             r1 = self._expect_id(); self._expect(TT.COMMA)
             r2 = self._expect_id(); self._expect(TT.RPAREN)
