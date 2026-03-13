@@ -1,4 +1,3 @@
-
 -- query_context_all_variants.svp — cobertura de las cinco variantes de QueryContext
 
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
@@ -35,6 +34,17 @@ admissibility_table T1 {
 let E1 = evaluate(S1);
 let G1 = gate([E1, E1], using: T1);
 
+horizon H1 {
+  architecture: Arch1;
+  events: [CambioProfilaxis];
+}
+
+transition_data TD1 {
+  horizon_ref: H1;
+  events: [(CambioProfilaxis, One)];
+  induced_parameters: [(C1, 3, One)];
+}
+
 frame F1 {
   index: 1;
   architecture: Arch1;
@@ -56,7 +66,7 @@ frame F2 {
 }
 
 trajectory TR1 {
-  entries: [entry(frame: F1), entry(frame: F2)];
+  entries: [entry(frame: F1, transition: TD1), entry(frame: F2)];
 }
 
 domain D1 {
