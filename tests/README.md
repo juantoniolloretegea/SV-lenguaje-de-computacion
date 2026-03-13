@@ -43,7 +43,7 @@ python tests/run_conformance.py
 
 ## Resultado actual
 
-10 de 10 tests pasan.
+13 de 13 tests pasan.
 
 ---
 
