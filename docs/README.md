@@ -9,9 +9,9 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`
 - `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
+- `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
 
 **Contenido pendiente:**
 - Guía de inicio rápido
 - Referencia de tipos y operadores
-- Manual de errores de compilación
 - Guía de migración desde Python/Rust
