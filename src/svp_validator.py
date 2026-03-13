@@ -1,8 +1,10 @@
 """
-svp_validator.py — Verificación de bienformación del AST
+svp_validator.py — Verificación implementada de bienformación del AST
 
-Comprueba los juicios de bienformación J0.1–J5.2 de la IR v0.2
-sobre el AST producido por el parser. No ejecuta nada: solo valida.
+Aplica la cobertura implementada y explícita de validación sobre el AST
+producido por el parser, subordinada a la IR canónica v0.2.
+No equivale todavía, por sí sola, a la totalidad de los juicios J0.1–J5.2
+ni cierra completamente la capa N4/Uso. No ejecuta nada: solo valida.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
