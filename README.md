@@ -74,9 +74,48 @@ Esta pieza no redefine la U del sistema. La proyecta técnicamente al lenguaje S
 2. el repositorio doctrinal `SV-matematica-semantica`;
 3. la frontera normativa, la IR y la gramática del lenguaje.
 
+### Sistema de rutas del proyecto
+
+A efectos del desarrollo del lenguaje, el proyecto distingue tres rutas de trabajo:
+
+#### Ruta A
+Ruta de maduración formal y doctrinal.
+
+Se reserva para familias o frentes que requieren:
+- desarrollo algebraico-semántico;
+- cierre estructural de alcance general;
+- articulación teórica más rica;
+- o consolidación normativa que no debe abrirse desde la implementación por inercia.
+
+Ruta A no equivale a ejecución inmediata, sino a trabajo de formalización y maduración.
+
+#### Ruta B
+Ruta de operativa segura de bajo riesgo estructural.
+
+Se reserva para:
+- validación fuerte;
+- tests;
+- microparches;
+- documentación técnica;
+- reconciliación con IR;
+- y cierres locales delimitados sobre familias ya suficientemente determinadas o próximas a ello.
+
+Ruta B no redefine el sistema: lo estabiliza, lo verifica y lo blinda.
+
+#### Beta
+Ruta de proposición, vigilancia y laboratorio subordinado.
+
+Se reserva para:
+- hipótesis;
+- materiales de frontera;
+- exploraciones no canónicas;
+- y desarrollos aún no adoptados.
+
+Beta no autoriza por sí sola cambios de IR, semántica, gramática ni despliegue implementativo. Su función es conservar bajo observación disciplinada aquello que todavía no ha madurado a Ruta A ni puede bajar con seguridad a Ruta B.
+
 ### Carpeta `beta/`
 
-La carpeta [`beta/`](beta/) reúne materiales de proposición, vigilancia y laboratorio relacionados con el desarrollo del lenguaje de computación del Sistema Vectorial SV.
+La carpeta [`beta/`](beta/) es la sede material de la ruta Beta dentro de este repositorio.
 
 Su función no es sustituir al núcleo doctrinal del proyecto ni autorizar por sí sola cambios de IR, semántica, gramática o implementación.
 
@@ -104,6 +143,7 @@ Los programas escritos en el lenguaje SV usan la extensión **`.svp`** (Sistema 
 - Gramática superficial mínima v0.1: activa.
 - Catálogo de errores concordado con la implementación: activo.
 - Derivación técnica subordinada de la U: activa.
+- Triada de rutas del proyecto declarada: Ruta A, Ruta B y Beta.
 - Carpeta `beta/` activada con plano de proposiciones y plano de laboratorio experimental alojados bajo control jerárquico.
 - Backend soberano en Rust: objetivo fijado, no cerrado.
 
