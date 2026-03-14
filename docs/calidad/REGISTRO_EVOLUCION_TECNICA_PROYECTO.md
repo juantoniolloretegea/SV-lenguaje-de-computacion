@@ -113,6 +113,7 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-001 | 13/03/2026 | 19:08:39 | CIERRE_PARCHE | PARCHE 2E-B / Fase IV | Se impone la alternancia constitutiva de `Trajectory`, se adapta la línea SEC-0 afectada, se añaden casos positivo y negativo de conformidad y se actualiza la suite a 17/17. | cerrado |
 | RETP-2026-002 | 13/03/2026 | 20:12:56 | DECISION_ARQUITECTONICA | Gobierno técnico / Fase IV | Se fija la jerarquía operativa del proyecto, el control dual ligero/duro y la prioridad de sanear la concordancia IR ↔ catálogo de errores ↔ validator ↔ runner ↔ documentación pública antes de abrir nuevos frentes funcionales o backend Rust. | cerrado |
 | RETP-2026-003 | 13/03/2026 | 23:40:35 | CAMBIO_DOCUMENTACION_PUBLICA | Microauditoría de concordancia / Fase IV | Se sinceran la cobertura declarada del validator, la descripción pública de emisión/cobertura de errores y la sincronización dual del registro técnico `.md`/`.csv`, sin abrir todavía un frente funcional sobre N4/Uso. | cerrado |
+| RETP-2026-004 | 14/03/2026 | 18:36:25 | CAMBIO_DOCUMENTACION_PUBLICA | Beta / espejo doctrinal controlado / Fase IV | Se activa el espejo controlado entre `especificaciones/` y `beta/`, se alojan la matriz operativa y la publicación de frontera 0-1 en sus rutas diferenciadas y se actualizan los índices públicos del repositorio doctrinal y del repositorio del lenguaje sin alterar la jerarquía normativa. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -171,3 +172,20 @@ Este registro debe mantenerse con lenguaje formal, sobrio, técnico y revisable 
 ## 14. Vigencia
 
 Este registro permanecerá vigente mientras el proyecto requiera trazabilidad técnica ligera y controlada de su evolución, sin perjuicio de futuras versiones más estructuradas si la complejidad del sistema lo exigiera.
+
+### RETP-2026-004
+
+- **Fecha:** 14/03/2026
+- **Hora (Europe/Madrid):** 18:36:25
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Beta / espejo doctrinal controlado / Fase IV
+- **Resumen del cambio:** Se activa el espejo controlado entre `especificaciones/` y `beta/`; se incorpora la matriz operativa al plano doctrinal `especificaciones/proposiciones/`; se aloja la publicación de frontera 0-1 en `especificaciones/laboratorio/` y `beta/Lab.SV/`; y se actualizan los README públicos e índices internos de ambos repositorios.
+- **Motivo o argumento:** Era necesario incrustar en ambos repositorios dos publicaciones estratégicas de alta sensibilidad metodológica sin confundir rango doctrinal, sin contaminar la IR ni la semántica canónica y dejando explícita la vigilancia diferenciada de `beta/`.
+- **Base doctrinal o técnica invocada:** repositorio doctrinal `SV-matematica-semantica`; especificación transversal subordinada sobre la U; matriz operativa del Clasificador C0–C5; publicación `Desde la terna (0, 1, U) hasta la nueva frontera (0, 1, U, 0-1)`; protocolo ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.
+- **Artefactos afectados:** `SV-matematica-semantica/README.md`; `SV-matematica-semantica/especificaciones/README.md`; `SV-matematica-semantica/especificaciones/proposiciones/matriz_operativa_completa_clasificador_sv.md`; `SV-matematica-semantica/especificaciones/laboratorio/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`; `SV-lenguaje-de-computacion/README.md`; `SV-lenguaje-de-computacion/beta/README.md`; `SV-lenguaje-de-computacion/beta/Lab.SV/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`.
+- **Evidencia:** subida secuencial validada por PDFs de confirmación; auditoría de ingestión de ZIP frescos de ambos repositorios; verificación de jerarquía sin `beta/` en el repositorio doctrinal y con `Lab.SV` como hija de `beta/` en el repositorio del lenguaje.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
+- **Objeción adversarial considerada:** riesgo de que el espejo físico eleve indebidamente el rango doctrinal de piezas experimentales o de que `beta/` contamine el repositorio doctrinal.
+- **Decisión:** mantener diferenciación estructural estricta: `especificaciones/{nucleo,proposiciones,laboratorio}` en el repositorio doctrinal y `beta/{C1_proposiciones,Lab.SV}` en el repositorio del lenguaje, con subordinación expresa en los README públicos.
+- **Estado:** cerrado
+
