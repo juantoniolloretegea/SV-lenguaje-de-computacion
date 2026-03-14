@@ -1,13 +1,5 @@
-
 # BETA
 ## Matriz operativa completa de familias, operativa admisible y Clasificador C0–C5 en el Sistema Vectorial SV
-
-**Autor:** Juan Antonio Lloret Egea  
-**ORCID:** [0000-0002-6634-3351](https://orcid.org/0000-0002-6634-3351)  
-**ISSN:** 2695-6411  
-**Licencia:** CC BY-NC-ND 4.0  
-**Institución:** Instituto tecnológico virtual de la Inteligencia Artificial para el español ™ (ITVIA)  
-**Lugar y fecha:** Madrid, 14/03/2026  
 
 Naturaleza: proposición de trabajo
 Ubicación prevista: Beta / C1_proposiciones
@@ -54,7 +46,48 @@ Por tanto:
 
 ---
 
-## 4. Escala del Clasificador
+## 4. Declaración operativa de rutas del proyecto
+
+A efectos de esta matriz, el proyecto distingue tres rutas de trabajo:
+
+### Ruta A
+Ruta de maduración formal y doctrinal.
+
+Se reserva para familias o frentes que requieren:
+- desarrollo algebraico-semántico;
+- cierre estructural de alcance general;
+- articulación teórica más rica;
+- o consolidación normativa que no debe abrirse desde la implementación por inercia.
+
+Ruta A no equivale a ejecución inmediata, sino a trabajo de formalización y maduración.
+
+### Ruta B
+Ruta de operativa segura de bajo riesgo estructural.
+
+Se reserva para:
+- validación fuerte;
+- tests;
+- microparches;
+- documentación técnica;
+- reconciliación con IR;
+- y cierres locales delimitados sobre familias ya suficientemente determinadas o próximas a ello.
+
+Ruta B no redefine el sistema: lo estabiliza, lo verifica y lo blinda.
+
+### Beta
+Ruta de proposición, vigilancia y laboratorio subordinado.
+
+Se reserva para:
+- hipótesis;
+- materiales de frontera;
+- exploraciones no canónicas;
+- y desarrollos aún no adoptados.
+
+Beta no autoriza por sí sola cambios de IR, semántica, gramática ni despliegue implementativo. Su función es conservar bajo observación disciplinada aquello que todavía no ha madurado a Ruta A ni puede bajar con seguridad a Ruta B.
+
+---
+
+## 5. Escala del Clasificador
 
 C0: familia suficientemente determinada en el nivel actual  
 C1: incertidumbre baja  
@@ -65,7 +98,7 @@ C5: todavía no procede decidir si es familia autónoma o proyección impropia
 
 ---
 
-## 5. Matriz operativa completa
+## 6. Matriz operativa completa
 
 Familia | Clasificador | Qué consta | Qué no consta | Operativa admisible | Ubicación recomendada
 --- | --- | --- | --- | --- | ---
@@ -82,7 +115,7 @@ Metadiagnóstico | C0–C1 | Catálogo, validator y registros | Falta reconcilia
 
 ---
 
-## 6. Regla maestra
+## 7. Regla maestra
 
 C0–C1 → puede bajar con seguridad a Ruta B  
 C2 → solo cierres locales delimitados  
@@ -91,6 +124,6 @@ C5 → no procede implementación
 
 ---
 
-## 7. Estado
+## 8. Estado
 
 Estado actual: proposición de trabajo abierta a evaluación adversarial y posible promoción futura a Ruta A.
