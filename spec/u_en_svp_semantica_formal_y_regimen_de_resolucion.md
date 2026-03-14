@@ -2,7 +2,7 @@
 
 **Derivación técnica subordinada del Sistema Vectorial SV**  
 **Subordinado a la publicación canónica:** *Origen doctrinal, definición y alcance de la U en el Sistema Vectorial SV*  
-**URL canónica:** https://www.itvia.online/pub/origen-doctrinal-definicion-y-alcance-de-la-u-en-el-sistema-vectorial-sv/release/1?readingCollection=4ebab177
+**URL canónica:** https://www.itvia.online/pub/origen-doctrinal-definicion-y-alcance-de-la-u-en-el-sistema-vectorial-sv/release/1
 
 ## 1. Naturaleza de este archivo
 
