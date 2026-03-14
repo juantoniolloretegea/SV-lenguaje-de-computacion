@@ -1,50 +1,62 @@
-# Beta del lenguaje de computación del Sistema Vectorial SV
+# Beta
 
-Esta carpeta reúne materiales de **proposición**, **vigilancia** y **laboratorio** relacionados con el desarrollo del lenguaje de computación del Sistema Vectorial SV.
+La carpeta `beta/` es un espacio subordinado de proposición, vigilancia y laboratorio del proyecto `SV-lenguaje-de-computacion`.
 
-Su función no es sustituir al núcleo doctrinal del proyecto ni autorizar por sí sola cambios de IR, semántica, gramática o implementación.
+Su función es conservar, bajo control doctrinal y operativo estricto, materiales que todavía no pertenecen a la IR canónica, a la gramática superficial mínima ni al frontend estable del lenguaje.
 
-## Regla de lectura
+## Relación con las rutas del proyecto
 
-Todo archivo alojado en `beta/` debe leerse como **subordinado** a la autoridad doctrinal superior del ecosistema SV, por este orden:
+A efectos del proyecto, se distinguen tres rutas de trabajo:
 
-1. La publicación canónica de `itvia.online`.
-2. El repositorio `SV-matematica-semantica`.
-3. La IR canónica, la gramática superficial mínima y la frontera normativa ya cerrada.
-4. El presente repositorio `SV-lenguaje-de-computacion`.
-5. Los materiales alojados en `beta/`.
+### Ruta A
+Ruta de maduración formal y doctrinal.
 
-Ningún archivo de esta carpeta puede interpretarse como reforma tácita del núcleo doctrinal ni como autorización automática de despliegue implementativo.
+Se reserva para familias o frentes que requieren:
+- desarrollo algebraico-semántico;
+- cierre estructural de alcance general;
+- articulación teórica más rica;
+- o consolidación normativa que no debe abrirse desde la implementación por inercia.
 
-## Estructura actual
+Ruta A no equivale a ejecución inmediata, sino a trabajo de formalización y maduración.
 
-En el estado actual, `beta/` se organiza en dos planos internos:
+### Ruta B
+Ruta de operativa segura de bajo riesgo estructural.
 
-- `C1_proposiciones/` → proposiciones de trabajo y matrices operativas de alcance metodológico.
-- `Lab.SV/` → materiales experimentales o de frontera alojados expresamente sin adopción automática de rango canónico.
+Se reserva para:
+- validación fuerte;
+- tests;
+- microparches;
+- documentación técnica;
+- reconciliación con IR;
+- y cierres locales delimitados sobre familias ya suficientemente determinadas o próximas a ello.
 
-## Proposiciones activas
+Ruta B no redefine el sistema: lo estabiliza, lo verifica y lo blinda.
 
-Actualmente consta en `C1_proposiciones/`:
+### Beta
+Ruta de proposición, vigilancia y laboratorio subordinado.
 
-- `matriz_operativa_completa_clasificador_sv.md`
+Se reserva para:
+- hipótesis;
+- materiales de frontera;
+- exploraciones no canónicas;
+- y desarrollos aún no adoptados.
 
-Esta pieza tiene naturaleza de proposición de trabajo. Su función es clasificatoria, orientadora y metodológica. No modifica por sí sola la doctrina, la IR ni la gramática superficial vigentes.
+Beta no autoriza por sí sola cambios de IR, semántica, gramática ni despliegue implementativo. Su función es conservar bajo observación disciplinada aquello que todavía no ha madurado a Ruta A ni puede bajar con seguridad a Ruta B.
 
-## Laboratorio activo
+## Estructura interna de la carpeta
 
-Actualmente consta en `Lab.SV/`:
+### `C1_proposiciones/`
+Contiene textos proposicionales ya suficientemente delimitados para evaluación metodológica, pero todavía subordinados y no canónicos.
 
-- `desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`
+### `Lab.SV/`
+Contiene materiales experimentales de frontera, laboratorio y observación controlada, sin fuerza normativa propia.
 
-Esta pieza se aloja como texto experimental subordinado. Su presencia en el repositorio no implica adopción automática de sus hipótesis como parte del núcleo doctrinal ni autorización de despliegue implementativo inmediato.
+## Regla de subordinación
 
-## Relación con el repositorio doctrinal
+Nada de lo alojado en `beta/` modifica por sí solo:
+- la doctrina;
+- la IR canónica;
+- la gramática superficial mínima;
+- ni la arquitectura estable del frontend.
 
-La existencia de piezas en espejo entre `beta/` y `SV-matematica-semantica` no altera la jerarquía del sistema.
-
-La prioridad doctrinal corresponde al repositorio `SV-matematica-semantica` y, por encima de él, a la publicación canónica de `itvia.online`.
-
-## Estado
-
-Carpeta Beta activada con plano de proposiciones de trabajo y plano de laboratorio experimental alojados bajo control jerárquico.
+Toda promoción desde `beta/` hacia Ruta A o Ruta B exige revisión expresa y aprobación del Almirante.
