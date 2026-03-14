@@ -74,6 +74,25 @@ Esta pieza no redefine la U del sistema. La proyecta técnicamente al lenguaje S
 2. el repositorio doctrinal `SV-matematica-semantica`;
 3. la frontera normativa, la IR y la gramática del lenguaje.
 
+### Carpeta `beta/`
+
+La carpeta [`beta/`](beta/) reúne materiales de proposición, vigilancia y laboratorio relacionados con el desarrollo del lenguaje de computación del Sistema Vectorial SV.
+
+Su función no es sustituir al núcleo doctrinal del proyecto ni autorizar por sí sola cambios de IR, semántica, gramática o implementación.
+
+En el estado actual, `beta/` se organiza en dos planos internos:
+
+- [`beta/C1_proposiciones/`](beta/C1_proposiciones/) → proposiciones de trabajo y matrices operativas de alcance metodológico.
+- [`beta/Lab.SV/`](beta/Lab.SV/) → materiales experimentales o de frontera alojados expresamente sin adopción automática de rango canónico.
+
+Actualmente constan en `beta/` las siguientes piezas activas:
+
+- [`beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md`](beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md)
+- [`beta/Lab.SV/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`](beta/Lab.SV/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md)
+- [`beta/README.md`](beta/README.md)
+
+La existencia de piezas en espejo entre `beta/` y `SV-matematica-semantica` no altera la jerarquía del sistema. La prioridad doctrinal corresponde al repositorio `SV-matematica-semantica` y, por encima de él, a la publicación canónica de `itvia.online`.
+
 ### Extensión de archivo
 
 Los programas escritos en el lenguaje SV usan la extensión **`.svp`** (Sistema Vectorial Poligonal). El nombre remite a la imagen poligonal cerrada, invariante constitutivo del Sistema Vectorial SV.
@@ -85,6 +104,7 @@ Los programas escritos en el lenguaje SV usan la extensión **`.svp`** (Sistema 
 - Gramática superficial mínima v0.1: activa.
 - Catálogo de errores concordado con la implementación: activo.
 - Derivación técnica subordinada de la U: activa.
+- Carpeta `beta/` activada con plano de proposiciones y plano de laboratorio experimental alojados bajo control jerárquico.
 - Backend soberano en Rust: objetivo fijado, no cerrado.
 
 ### Regla de jerarquía
