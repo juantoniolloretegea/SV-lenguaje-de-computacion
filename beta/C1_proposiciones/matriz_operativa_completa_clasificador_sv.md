@@ -7,7 +7,6 @@
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
 **Institución:** Instituto tecnológico virtual de la Inteligencia Artificial para el español ™ (ITVIA)  
-**Versión publicada:** v1.0.0 — Release 3  
 **Lugar y fecha:** Madrid, 14/03/2026  
 
 Naturaleza: proposición de trabajo
