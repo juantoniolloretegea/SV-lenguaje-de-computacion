@@ -15,7 +15,7 @@ Lenguaje núcleo semántico del Sistema Vectorial SV: pequeño, tipado, auditabl
 > No ejecuta todavía el backend: **parsea, valida y serializa**.
 >
 > **Acceso directo:**  
-> https://juantoniolloretea.github.io/SV-lenguaje-de-computacion/
+> https://juantoniolloretegea.github.io/SV-lenguaje-de-computacion/
 
 ---
 
