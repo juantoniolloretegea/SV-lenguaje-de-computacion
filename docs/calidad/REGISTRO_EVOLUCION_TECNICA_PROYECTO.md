@@ -114,6 +114,7 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-002 | 13/03/2026 | 20:12:56 | DECISION_ARQUITECTONICA | Gobierno técnico / Fase IV | Se fija la jerarquía operativa del proyecto, el control dual ligero/duro y la prioridad de sanear la concordancia IR ↔ catálogo de errores ↔ validator ↔ runner ↔ documentación pública antes de abrir nuevos frentes funcionales o backend Rust. | cerrado |
 | RETP-2026-003 | 13/03/2026 | 23:40:35 | CAMBIO_DOCUMENTACION_PUBLICA | Microauditoría de concordancia / Fase IV | Se sinceran la cobertura declarada del validator, la descripción pública de emisión/cobertura de errores y la sincronización dual del registro técnico `.md`/`.csv`, sin abrir todavía un frente funcional sobre N4/Uso. | cerrado |
 | RETP-2026-004 | 14/03/2026 | 18:36:25 | CAMBIO_DOCUMENTACION_PUBLICA | Beta / espejo doctrinal controlado / Fase IV | Se activa el espejo controlado entre `especificaciones/` y `beta/`, se alojan la matriz operativa y la publicación de frontera 0-1 en sus rutas diferenciadas y se actualizan los índices públicos del repositorio doctrinal y del repositorio del lenguaje sin alterar la jerarquía normativa. | cerrado |
+| RETP-2026-005 | 14/03/2026 | 21:10:21 | CIERRE_PARCHE | MICROPARCHE B / declaración operativa de rutas / Fase IV | Se registra el cierre del microparche B en el repositorio del lenguaje: declaración explícita de Ruta A / Ruta B / Beta en la matriz operativa, en `beta/README.md` y en `README.md`, con precisión expresa de que la triada no obliga a sincronía conceptual completa con el repositorio doctrinal. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -189,3 +190,18 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Decisión:** mantener diferenciación estructural estricta: `especificaciones/{nucleo,proposiciones,laboratorio}` en el repositorio doctrinal y `beta/{C1_proposiciones,Lab.SV}` en el repositorio del lenguaje, con subordinación expresa en los README públicos.
 - **Estado:** cerrado
 
+### RETP-2026-005
+
+- **Fecha:** 14/03/2026
+- **Hora (Europe/Madrid):** 21:10:21
+- **Tipo de hito:** CIERRE_PARCHE
+- **Frente/Fase:** MICROPARCHE B / declaración operativa de rutas / Fase IV
+- **Resumen del cambio:** Se registra como cierre autónomo del repositorio del lenguaje la declaración operativa de Ruta A, Ruta B y Beta en `beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md`, `beta/README.md` y `README.md`, junto con la precisión pública de que esa triada no obliga a identidad funcional ni a sincronía conceptual completa con `SV-matematica-semantica`.
+- **Motivo o argumento:** El microparche B constaba ya materialmente en los documentos públicos del repositorio del lenguaje, pero faltaba su trazabilidad explícita en el registro técnico propio gobernado por `docs/calidad/`.
+- **Base doctrinal o técnica invocada:** jerarquía entre repositorios fijada en `README.md`; regla de subordinación de `beta/`; distinción entre espejo material e identidad funcional; protocolo ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.
+- **Artefactos afectados:** `README.md`; `beta/README.md`; `beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** ingestión de ZIP fresco del repositorio del lenguaje; contraste directo con el ZIP fresco del repositorio doctrinal; verificación de presencia material de la triada de rutas en los tres documentos públicos; actualización sincronizada del registro dual `.md`/`.csv`.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
+- **Objeción adversarial considerada:** riesgo de registrar de forma redundante un cambio ya absorbido por el hito RETP-2026-004 o de deslizar por registro una equivalencia funcional impropia entre Beta del repositorio doctrinal y Beta del repositorio del lenguaje.
+- **Decisión:** registrar el microparche B como cierre propio del repositorio del lenguaje y dejar expresamente fijado que la coincidencia material de la triada no impone sincronía conceptual completa entre repositorios de distinta misión.
+- **Estado:** cerrado
