@@ -59,4 +59,4 @@ Nada de lo alojado en `beta/` modifica por sí solo:
 - la gramática superficial mínima;
 - ni la arquitectura estable del frontend.
 
-Toda promoción desde `beta/` hacia Ruta A o Ruta B exige revisión expresa y aprobación del Almirante.
+Toda promoción desde `beta/` hacia Ruta A o Ruta B exige revisión expresa y aprobación del responsable y director del proyecto.
