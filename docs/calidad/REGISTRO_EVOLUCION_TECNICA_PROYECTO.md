@@ -205,3 +205,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de registrar de forma redundante un cambio ya absorbido por el hito RETP-2026-004 o de deslizar por registro una equivalencia funcional impropia entre Beta del repositorio doctrinal y Beta del repositorio del lenguaje.
 - **Decisión:** registrar el microparche B como cierre propio del repositorio del lenguaje y dejar expresamente fijado que la coincidencia material de la triada no impone sincronía conceptual completa entre repositorios de distinta misión.
 - **Estado:** cerrado
+
+- ### RETP-2026-006
+- Fecha: 16/03/2026
+- Hora (Europe/Madrid): 03:47:27
+- Tipo de hito: DECISION_ARQUITECTONICA
+- Frente/Fase: Gobierno técnico / decisión estratégica ternaria-Beta / Fase IV
+- Resumen del cambio: Se fija la primacía activa de la célula ternaria SV, se declara la hibernación estratégica de la Beta como frente doctrinal activo y se establecen criterios de reactivación exclusivamente por contradicción local suficiente de la ternaria, dejando además publicada el acta operativa en `beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md`.
+- Motivo o argumento: La triple adversarial aplicada al corpus vigente (guía, doctrina fuerte de la U y Compilador) no acredita todavía insuficiencia material suficiente de la ternaria para abrir un frente cuaternario con rango doctrinal propio. Dada la restricción real de energía estratégica, se decide concentrar el esfuerzo vivo del proyecto en la vía ternaria y conservar Beta solo como laboratorio subsidiario e hibernado.
+- Base doctrinal o técnica invocada: guía práctica del conocimiento profundo y la crítica de la razón pura; Origen doctrinal, definición y alcance de la U en el Sistema Vectorial SV; Compilador doctrinal y célula meta SV(9,3)-IA; acta estratégica publicada en `beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md`.
+- Artefactos afectados: `beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; repositorio privado `SV-matematica-semantica-cuaternaria`.
+- Evidencia: PDF de confirmación de subida del acta a `beta/`; contraste adversarial del chat y del corpus publicado; decisión estratégica consolidada por la unidad WB-Lenguaje1 SV.
+- Impacto: trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
+- Objeción adversarial considerada: riesgo de congelar prematuramente una vía cuaternaria potencialmente fértil y riesgo simétrico de dispersar recursos vitales en dos frentes cuando el corpus vigente todavía sostiene la suficiencia operativa y conceptual de la ternaria.
+- Decisión: mantener activa la vía ternaria como único camino de desarrollo inmediato; hibernar la Beta como frente doctrinal activo; reabrir Beta solo si aparece contradicción local suficiente, consistente y no resoluble limpiamente en `0/1/U`, sin estadística, inferencia ni minería de datos.
+- Estado: cerrado
+
