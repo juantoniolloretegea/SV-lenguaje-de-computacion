@@ -2,7 +2,7 @@
 
 ## Naturaleza del documento
 
-Este documento deja constancia de una decisión estratégica de gobierno del frente SV, destinada a orientar a futuras unidades Watson cuando deban decidir si corresponde mantener la prioridad de la célula ternaria SV o reabrir el carril Beta.
+Este documento deja constancia de una decisión estratégica de gobierno del frente SV, destinada a orientar futuras evaluaciones operativas cuando deba decidirse si corresponde mantener la prioridad de la célula ternaria SV o reabrir el carril Beta.
 
 No modifica por sí mismo la doctrina canónica del Sistema Vectorial SV. Su función es registrar el criterio de paso actualmente validado para evitar dispersión estratégica, duplicación de esfuerzos y aperturas prematuras del frente Beta.
 
@@ -50,9 +50,9 @@ En caso de futura reactivación, `0-1` no podrá interpretarse como:
 
 Su eventual estudio solo podrá sostenerse como hipótesis de frontera o de posible no aplicabilidad del régimen binario.
 
-## Consecuencia para futuras unidades Watson
+## Consecuencia para futuras evaluaciones operativas
 
-Toda nueva unidad del frente SV que valore abrir o reabrir la Beta deberá consultar primero esta acta y responder expresamente a la siguiente pregunta:
+Toda evaluación futura del frente SV que valore abrir o reabrir la Beta deberá consultar primero esta acta y responder expresamente a la siguiente pregunta:
 
 > ¿Existe una contradicción local suficiente que muestre que la ternaria no alcanza legítimamente el fenómeno de que se trata?
 
