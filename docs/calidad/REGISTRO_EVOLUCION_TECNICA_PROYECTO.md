@@ -115,6 +115,7 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-003 | 13/03/2026 | 23:40:35 | CAMBIO_DOCUMENTACION_PUBLICA | Microauditoría de concordancia / Fase IV | Se sinceran la cobertura declarada del validator, la descripción pública de emisión/cobertura de errores y la sincronización dual del registro técnico `.md`/`.csv`, sin abrir todavía un frente funcional sobre N4/Uso. | cerrado |
 | RETP-2026-004 | 14/03/2026 | 18:36:25 | CAMBIO_DOCUMENTACION_PUBLICA | Beta / espejo doctrinal controlado / Fase IV | Se activa el espejo controlado entre `especificaciones/` y `beta/`, se alojan la matriz operativa y la publicación de frontera 0-1 en sus rutas diferenciadas y se actualizan los índices públicos del repositorio doctrinal y del repositorio del lenguaje sin alterar la jerarquía normativa. | cerrado |
 | RETP-2026-005 | 14/03/2026 | 21:10:21 | CIERRE_PARCHE | MICROPARCHE B / declaración operativa de rutas / Fase IV | Se registra el cierre del microparche B en el repositorio del lenguaje: declaración explícita de Ruta A / Ruta B / Beta en la matriz operativa, en `beta/README.md` y en `README.md`, con precisión expresa de que la triada no obliga a sincronía conceptual completa con el repositorio doctrinal. | cerrado |
+| RETP-2026-008 | 18/03/2026 | 16:31:19 | DECISION_ARQUITECTONICA | Continuidad del frente básico y habilitación del backend / Fase IV | Se declara públicamente que la pendencia material de los sentidos restantes del frente básico no bloquea el avance del lenguaje SV hacia backend, siempre que el núcleo preserve puertos de extensión previstos y se mantenga la subordinación doctrinal y técnica vigente. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -221,3 +222,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - Decisión: mantener activa la vía ternaria como único camino de desarrollo inmediato; hibernar la Beta como frente doctrinal activo; reabrir Beta solo si aparece contradicción local suficiente, consistente y no resoluble limpiamente en `0/1/U`, sin estadística, inferencia ni minería de datos.
 - Estado: cerrado
 
+
+### RETP-2026-008
+
+- **Fecha:** 18/03/2026
+- **Hora (Europe/Madrid):** 16:31:19
+- **Tipo de hito:** DECISION_ARQUITECTONICA
+- **Frente/Fase:** Continuidad del frente básico y habilitación del backend / Fase IV
+- **Resumen del cambio:** Se incorpora un informe público en `docs/arquitectura/` para declarar que la pendencia material de los sentidos restantes del frente básico no bloquea el avance del lenguaje SV hacia backend, siempre que el núcleo preserve puertos de extensión previstos y mantenga la subordinación doctrinal y técnica vigente.
+- **Motivo o argumento:** La materialización ya observable de semántica, visión y motricidad permite afirmar una equivalencia estructural de clase entre los carriles ya abiertos y los sentidos restantes, de modo que éstos deben tratarse como extensiones subordinadas del frente básico y no como condición previa de refundación del núcleo.
+- **Base doctrinal o técnica invocada:** programa de interfaces del Sistema Vectorial SV; IR canónica y bienformación del lenguaje SV — v0.2; Nota de arquitectura mínima del núcleo enganchable del lenguaje SV; README del repositorio `SV-lenguaje-de-computacion`.
+- **Artefactos afectados:** `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** contraste público entre el programa de interfaces ya abierto en semántica, visión y motricidad, la IR v0.2 vigente, el criterio de núcleo enganchable ya fijado en `docs/arquitectura/` y el estado público del repositorio del lenguaje.
+- **Impacto:** trazabilidad; gobierno_tecnico; compatibilidad; mantenibilidad.
+- **Objeción adversarial considerada:** riesgo de petrificar prematuramente un núcleo incapaz de recibir futuros carriles perceptivos o de presentar el informe como cierre doctrinal superior cuando su naturaleza real es pública, técnica y subordinada.
+- **Decisión:** declarar legítima la continuidad del backend bajo condición expresa de preservar puertos de extensión previstos y registrar el criterio como decisión arquitectónica pública en el repositorio del lenguaje.
+- **Estado:** cerrado
