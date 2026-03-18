@@ -238,3 +238,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de petrificar prematuramente un núcleo incapaz de recibir futuros carriles perceptivos o de presentar el informe como cierre doctrinal superior cuando su naturaleza real es pública, técnica y subordinada.
 - **Decisión:** declarar legítima la continuidad del backend bajo condición expresa de preservar puertos de extensión previstos y registrar el criterio como decisión arquitectónica pública en el repositorio del lenguaje.
 - **Estado:** cerrado
+
+
+### RETP-2026-009
+
+- **Fecha:** 18/03/2026
+- **Hora (Europe/Madrid):** 22:30:09
+- **Tipo de hito:** DECISION_GOBIERNO_TECNICO
+- **Frente/Fase:** Auditoría de repos frescos / fijación de sedes del ecosistema SV / Fase IV
+- **Resumen del cambio:** Se fija `SV-matematica-semantica` como sede superior doctrinal y normativa del ecosistema y `SV-lenguaje-de-computacion` como sede central operativa y técnica, quedando además el pliego reconocido como ley interna de lectura y coherencia para la fase actual.
+- **Motivo o argumento:** La auditoría directa de ambos repositorios muestra que la sede doctrinal ha alcanzado estabilidad suficiente de fase, mientras la fricción real del trabajo, la calidad, la validación y la deuda técnica se concentran en el repositorio del lenguaje, que resulta más apto como centro de gobierno operativo.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; auditoría cerrada de `SV-matematica-semantica`; auditoría cerrada de `SV-lenguaje-de-computacion`; jerarquía documental ya fijada; regla de no corrección silenciosa entre niveles.
+- **Artefactos afectados:** `docs/calidad/ACTA_DE_FIJACION_DE_SEDES_Y_GOBIERNO_TECNICO_DEL_ECOSISTEMA_SV_2026_03_18.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `SV-matematica-semantica/documentos/registros/NOTA_DE_REMISION_SOBRE_SEDE_DOCTRINAL_Y_SEDE_OPERATIVA_DEL_ECOSISTEMA_SV_2026_03_18.md`.
+- **Evidencia:** ingestión de ZIP frescos de ambos repositorios; verificación directa de jerarquía, estructura, suite y documentos de calidad; cierre adversarial de Fases 1, 2 y 3 del cruce entre sedes.
+- **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; coherencia_ecosistema.
+- **Objeción adversarial considerada:** riesgo de convertir la sede operativa en autoridad doctrinal de facto o, en el extremo opuesto, de seguir tratando la sede doctrinal como taller técnico diario y contaminar su estabilidad de fase.
+- **Decisión:** mantener arriba la sede doctrinal y abajo la sede operativa, impedir la reapertura ordinaria de esta distribución y permitir solo tres supuestos de reconsideración: revisión del pliego obligada por la realidad del sistema, requerimiento muy complejo del lenguaje o acumulación de elementos parciales con fuerza suficiente de reconsideración.
+- **Estado:** cerrado
