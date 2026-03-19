@@ -33,12 +33,14 @@ python tests/run_cli_smoke.py
 | `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
 | `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
 
-## Casos inválidos (15)
+## Casos inválidos (17)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
 | `admissibility_table_incompleta.svp` | tabla de admisibilidad que no cubre el producto cartesiano completo | E009 |
 | `bad_b_value.svp` | b=2 (debe ser ≥ 3) | E002 |
+| `bridge_position_fuera_de_rango.svp` | posición puente fuera de rango en `coupledspec` | E105 |
+| `cellstate_vector_length_mismatch.svp` | `cellstate` con vector de longitud distinta de b² | E101 |
 | `compose_cycle_graph.svp` | ciclo en grafo de composición declarado | E103 |
 | `conector_mapping_incompleto.svp` | conector con `mapping` incompleto respecto del codominio fuente | E007 |
 | `conector_target_no_ternario.svp` | conector cuyo destino de `mapping` no es literal ternario | E008 |
@@ -61,7 +63,7 @@ python tests/run_cli_smoke.py
 
 ## Resultado actual
 
-23 de 23 tests de conformidad pasan.
+25 de 25 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
