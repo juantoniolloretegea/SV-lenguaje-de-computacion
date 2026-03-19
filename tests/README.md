@@ -33,7 +33,7 @@ python tests/run_cli_smoke.py
 | `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
 | `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
 
-## Casos inválidos (17)
+## Casos inválidos (20)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
@@ -45,11 +45,14 @@ python tests/run_cli_smoke.py
 | `conector_mapping_incompleto.svp` | conector con `mapping` incompleto respecto del codominio fuente | E007 |
 | `conector_target_no_ternario.svp` | conector cuyo destino de `mapping` no es literal ternario | E008 |
 | `duplicate_identifier.svp` | redeclaración de identificador en el mismo ámbito | E005 |
+| `gate_input_no_evalresult.svp` | `gate` con un `CellState` donde se esperaba `EvalResult` | E202 |
 | `gate_undeclared_input.svp` | `gate` con una entrada no declarada | E006 |
 | `invalid_role_literal.svp` | rol no reconocido en `cellspec` | E010 |
 | `invalid_tri_literal.svp` | literal ternario no reconocido en vector de `cellstate` | E001 |
 | `max_keyword.svp` | Uso de `max` (no disponible en v0.1) | E210 |
 | `projection_undeclared_source.svp` | proyección `resolved_to` sobre fuente no declarada | E006 |
+| `query_context_opaco.svp` | `query` sin constructor explícito de `QueryContext` | E204 |
+| `supervise_target_opaco.svp` | `supervise` sin constructor explícito de `Supervisable` | E205 |
 | `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
 | `supervise_wrong_role.svp` | supervise con célula de rol Base (debe ser Supervisor) | E211 |
 | `trajectory_alternance_violation.svp` | `Trajectory` con entrada no final sin `transition` | E304 |
@@ -63,7 +66,7 @@ python tests/run_cli_smoke.py
 
 ## Resultado actual
 
-25 de 25 tests de conformidad pasan.
+28 de 28 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
