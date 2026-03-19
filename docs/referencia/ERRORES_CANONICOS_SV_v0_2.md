@@ -81,7 +81,7 @@ Mientras siga vigente la regularización por Vía B:
 | E402 | `AgentMissingDomain` | Uso | `validate` | divergente respecto de IR v0.2 | Agent declarado sin dominio |
 | E403 | `QuerySpecInvalid` | Uso | `validate` | divergente respecto de IR v0.2 | QuerySpec con tipo o alcance no reconocido |
 | E501 | `SerializationNonDeterministic` | Serialización/conformidad | `lower` | divergente respecto de IR v0.2 | La serialización JSON no es determinista |
-| E507 | `UCoercionDetected` | Serialización/conformidad | `validate` | divergente respecto de IR v0.2 | Coerción implícita de U detectada (prohibición constitutiva) |
+| E507 | `UCoercionDetected` | Serialización/conformidad | `parse` | divergente respecto de IR v0.2 | Coerción implícita de U detectada (prohibición constitutiva) |
 
 ## 7. Emisión observable y cobertura explícita de suite
 
@@ -106,6 +106,7 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E210`
 - `E211`
 - `E304`
+- `E507`
 
 ### 7.2. Códigos cubiertos explícitamente por la suite de conformidad observable
 
@@ -118,12 +119,13 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E210`
 - `E211`
 - `E304`
+- `E507`
 
 ### 7.3. Nota de cautela sobre catálogo, emisión y cobertura
 
 La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola, que exista hoy un sitio de emisión directo observable ni que esté cubierto por la suite.
 
-En particular, `E507` permanece catalogado como prohibición constitutiva, pero el caso adversarial `u_coercion.svp` hoy se manifiesta observacionalmente con `E001` en la suite vigente.
+En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observacionalmente con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
 
 ## 8. Regla de continuidad
 
