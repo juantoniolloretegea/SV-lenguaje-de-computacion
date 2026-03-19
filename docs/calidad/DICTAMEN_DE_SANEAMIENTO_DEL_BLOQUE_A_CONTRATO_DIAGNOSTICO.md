@@ -134,12 +134,11 @@ La salida correcta no es abrir más frentes ni rehacer doctrina, sino:
 
 ## 7. Próximo paso técnico recomendado
 
-El siguiente paso dentro del Bloque A debe ser una **segunda pasada por familias**, al menos en este orden:
+El siguiente paso dentro del Bloque A debe continuar **por familias y sin abrir todavía Bloque B**, pero con el orden ya actualizado al estado materializado del repositorio:
 
-1. `E001–E010` — capa de definición  
-2. `E101–E111` — capa de estado  
-3. `E201–E211` — capa de resultado  
-4. `E301–E304` — capa de evolución  
-5. `E401–E507` — capa de uso / serialización / conformidad
+1. `E101–E111` — capa de estado  
+2. `E201–E211` — capa de resultado  
+3. `E301–E304` — capa de evolución  
+4. `E401–E507` — capa de uso / serialización / conformidad
 
-Sin abrir todavía Bloque B.
+La familia `E001–E010` queda ya suficientemente barrida para la fase actual: se ha recuperado cobertura explícita observable en `E001`, `E005`, `E006`, `E007`, `E008`, `E009` y `E010`; se ha extraído el subcaso de coerción implícita de `U` hacia `E507`; y la deuda viva de alcanzabilidad superficial queda concentrada en `E003` y `E004`.
