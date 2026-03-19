@@ -118,6 +118,7 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-008 | 18/03/2026 | 16:31:19 | DECISION_ARQUITECTONICA | Continuidad del frente básico y habilitación del backend / Fase IV | Se declara públicamente que la pendencia material de los sentidos restantes del frente básico no bloquea el avance del lenguaje SV hacia backend, siempre que el núcleo preserve puertos de extensión previstos y se mantenga la subordinación doctrinal y técnica vigente. | cerrado |
 
 | RETP-2026-018 | 19/03/2026 | 13:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sincronización pública de suite y catálogo / Fase IV | Se sincronizan la documentación pública del catálogo y de la suite con el estado ya materializado de E007, E008, E009 y E507. | cerrado |
+| RETP-2026-020 | 19/03/2026 | 14:05:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sinceramiento de cobertura explícita de E001 / Fase IV | Se retira E001 de la lista de códigos cubiertos explícitamente por la suite y se documenta que conserva emisión observable sin caso adversarial explícito propio tras la extracción local hacia E507. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -422,3 +423,18 @@ Impacto: `coherencia_diagnostica`; `trazabilidad`; `cobertura_de_suite`; `manten
 Objeción adversarial considerada: riesgo de presentar una ampliación de cobertura como si fuera saneamiento funcional nuevo. El paquete no altera la semántica implementativa del frontend; hace explícita y verificable en la suite una parte más del contrato diagnóstico ya existente.
 Decisión: ampliar de forma controlada la cobertura observable del Bloque A sobre `E005` y `E010`, mantener `E004` como deuda documentada de alcanzabilidad superficial y reservar para bloque posterior cualquier descompresión adicional de `E001`.
 Estado: cerrado
+
+Fecha: 19/03/2026
+Hora (Europe/Madrid): 14:05:00
+Tipo de hito: CAMBIO_DOCUMENTACION_PUBLICA
+Frente/Fase: Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / sinceramiento de cobertura explícita de E001 / Fase IV
+Resumen del cambio: Se corrige `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md` para retirar `E001` de la lista de códigos cubiertos explícitamente por la suite y se deja documentado que, tras la extracción observacional de `u_coercion.svp` hacia `E507`, `E001` conserva sitio de emisión observable pero carece hoy de caso adversarial explícito propio en la suite.
+Motivo o argumento: La ampliación previa de cobertura explícita sobre `E005` y `E010` dejó una sobreatribución residual en la documentación pública: `tests/run_conformance.py` ya no declara ningún caso inválido con código esperado `E001`, mientras que el catálogo público seguía listándolo como cubierto por la suite.
+Base doctrinal o técnica invocada: pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; catálogo implementativo vigente; criterio de sinceramiento público del estado observable; suite observable del frontend de referencia.
+Artefactos afectados: `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+Evidencia: contraste directo entre `tests/run_conformance.py` y la sección de cobertura explícita de `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`, con ausencia observable de casos inválidos que esperen `E001` y persistencia de `E001` en el listado público de cobertura.
+Impacto: `coherencia_diagnostica`; `trazabilidad`; `mantenibilidad`; `descubrilidad`.
+Objeción adversarial considerada: riesgo de registrar como hito separado una mera corrección de redacción. En este caso sí procede porque la sobreatribución afecta al contrato diagnóstico público y altera la lectura verificable de la cobertura observable de la suite.
+Decisión: sincerar la documentación pública del catálogo retirando `E001` de la cobertura explícita de suite, mantener `E001` como código con emisión observable directa y reservar para bloque posterior cualquier reintroducción de cobertura explícita mediante un adversarial propio.
+Estado: cerrado
+
