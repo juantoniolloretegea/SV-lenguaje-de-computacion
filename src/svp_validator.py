@@ -12,8 +12,8 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 
 from typing import Dict, Set
 from svp_ast import *
-from svp_errors import (SVPError, E002, E004, E005, E006, E101, E102,
-                         E104, E105, E202, E211, E303, E304)
+from svp_errors import (SVPError, E002, E004, E005, E006, E007, E008, E009,
+                         E101, E102, E104, E105, E202, E211, E303, E304)
 
 
 class Validator:
@@ -63,6 +63,8 @@ class Validator:
             self._validate_coupledstate(node)
         elif isinstance(node, ConnectorDecl):
             self._validate_connector(node)
+        elif isinstance(node, AdmissibilityTableDecl):
+            self._validate_admissibility_table(node)
         elif isinstance(node, GraphDecl):
             self._validate_graph(node)
         elif isinstance(node, TransitionDataDecl):
@@ -126,6 +128,66 @@ class Validator:
 
     def _validate_connector(self, node: ConnectorDecl):
         self._require_ref(node.source_codomain, node.loc, "CodomainDecl")
+        codomain = self.symbols[node.source_codomain]
+        expected_values = set(codomain.values)
+        seen_keys = []
+
+        for key, target in node.mapping:
+            seen_keys.append(key)
+            if target not in {"Zero", "One", "U"}:
+                raise SVPError(E008, node.loc.line, node.loc.col,
+                               f"El destino {target!r} no es literal ternario en el conector {node.name!r}")
+
+        seen_set = set(seen_keys)
+        missing = expected_values - seen_set
+        extras = seen_set - expected_values
+        duplicates = sorted({key for key in seen_keys if seen_keys.count(key) > 1})
+        if missing or extras or duplicates:
+            detail_parts = []
+            if missing:
+                detail_parts.append("faltan " + ", ".join(sorted(missing)))
+            if extras:
+                detail_parts.append("sobran " + ", ".join(sorted(extras)))
+            if duplicates:
+                detail_parts.append("duplicados " + ", ".join(duplicates))
+            detail = "; ".join(detail_parts)
+            raise SVPError(E007, node.loc.line, node.loc.col,
+                           f"Conector {node.name!r} con mapping inválido: {detail}")
+
+    def _validate_admissibility_table(self, node: AdmissibilityTableDecl):
+        for cod_name in node.input_codomains:
+            self._require_ref(cod_name, node.loc, "CodomainDecl")
+        self._require_ref(node.output_codomain, node.loc, "CodomainDecl")
+
+        expected_inputs = []
+        for cod_name in node.input_codomains:
+            cod = self.symbols[cod_name]
+            expected_inputs.append(list(cod.values))
+
+        expected_combinations = {()}
+        for values in expected_inputs:
+            expected_combinations = {prefix + (value,) for prefix in expected_combinations for value in values}
+
+        seen_rows = []
+        for keys, output in node.table:
+            seen_rows.append(keys)
+
+        seen_set = set(seen_rows)
+        missing = expected_combinations - seen_set
+        extras = {row for row in seen_set if row not in expected_combinations}
+        duplicates = sorted({row for row in seen_rows if seen_rows.count(row) > 1})
+
+        if missing or extras or duplicates:
+            detail_parts = []
+            if missing:
+                detail_parts.append("faltan " + ", ".join(str(row) for row in sorted(missing)))
+            if extras:
+                detail_parts.append("sobran " + ", ".join(str(row) for row in sorted(extras)))
+            if duplicates:
+                detail_parts.append("duplicadas " + ", ".join(str(row) for row in duplicates))
+            detail = "; ".join(detail_parts)
+            raise SVPError(E009, node.loc.line, node.loc.col,
+                           f"Tabla {node.name!r} incompleta o inconsistente: {detail}")
 
     def _validate_codomain(self, node: CodomainDecl):
         if len(node.values) == 0:
