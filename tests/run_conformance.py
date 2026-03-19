@@ -30,6 +30,7 @@ EXPECTED_INVALID_CODES = {
     "compose_cycle_graph.svp": "E103",
     "gate_undeclared_input.svp": "E006",
     "invalid_role_literal.svp": "E010",
+    "invalid_tri_literal.svp": "E001",
     "max_keyword.svp": "E210",
     "projection_undeclared_source.svp": "E006",
     "supervise_undeclared_target.svp": "E006",
