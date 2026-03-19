@@ -1,0 +1,10 @@
+-- conector_target_no_ternario.svp — Debe fallar con E008
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+connector Phi1 {
+  source_codomain: K3;
+  target_position: 3;
+  mapping: { APTO -> Zero; NO_APTO -> One; INDETERMINADO -> APTO; }
+}
