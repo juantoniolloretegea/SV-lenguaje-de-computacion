@@ -15,7 +15,7 @@ Registrar cambios relevantes del desarrollo técnico que alteren el estado gober
 Debe registrarse un hito cuando cambie de forma relevante alguno de estos planos:
 
 - apertura o cierre de parche;
-- creación de ZIP operativo;
+- creación de paquete de trabajo con efecto estructural;
 - cambio en validator, runner, catálogo de errores o suite;
 - cambio en documentación pública de estado;
 - cambio en especificación operativa ya cerrada;
@@ -29,7 +29,7 @@ No deben registrarse:
 
 - microcambios sin efecto estructural;
 - correcciones cosméticas sin impacto de contrato;
-- pasos mecánicos intermedios de subida a GitHub;
+- pasos mecánicos intermedios de publicación;
 - reintentos materiales que no cambien el estado del proyecto;
 - no deben registrarse anotaciones sin relevancia técnica, documental o de control.
 
@@ -129,7 +129,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Motivo o argumento:** La alternancia de `Trajectory` constaba en la IR, pero no estaba impuesta todavía por el validator.
 - **Base doctrinal o técnica invocada:** IR canónica v0.2; gramática superficial mínima v0.1; baseline SEC-0.
 - **Artefactos afectados:** validator; runner de conformidad; casos de test; documentación de tests.
-- **Evidencia:** ZIP operativo del parche; resultados internos verificados; evidencias publicadas de actualización de archivos.
+- **Evidencia:** verificación directa del parche; resultados internos comprobados; evidencias públicas de actualización de archivos.
 - **Impacto:** adecuacion_funcional; trazabilidad; gobierno_tecnico.
 - **Objeción adversarial considerada:** riesgo de reducir el parche a maquillaje de tests y riesgo de romper la línea adversarial previa.
 - **Decisión:** cerrar el hueco mediante enforcement mínimo real y cobertura explícita de suite.
@@ -183,7 +183,7 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Frente/Fase:** Beta / espejo doctrinal controlado / Fase IV
 - **Resumen del cambio:** Se activa el espejo controlado entre `especificaciones/` y `beta/`; se incorpora la matriz operativa al plano doctrinal `especificaciones/proposiciones/`; se aloja la publicación de frontera 0-1 en `especificaciones/laboratorio/` y `beta/Lab.SV/`; y se actualizan los README públicos e índices internos de ambos repositorios.
 - **Motivo o argumento:** Era necesario incrustar en ambos repositorios dos publicaciones estratégicas de alta sensibilidad metodológica sin confundir rango doctrinal, sin contaminar la IR ni la semántica canónica y dejando explícita la vigilancia diferenciada de `beta/`.
-- **Base doctrinal o técnica invocada:** repositorio doctrinal `SV-matematica-semantica`; especificación transversal subordinada sobre la U; matriz operativa del Clasificador C0–C5; publicación `Desde la terna (0, 1, U) hasta la nueva frontera (0, 1, U, 0-1)`; protocolo ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.
+- **Base doctrinal o técnica invocada:** repositorio doctrinal `SV-matematica-semantica`; especificación transversal subordinada sobre la U; matriz operativa del Clasificador C0–C5; publicación `Desde la terna (0, 1, U) hasta la nueva frontera (0, 1, U, 0-1)`; criterio interno de trazabilidad secuencial.
 - **Artefactos afectados:** `SV-matematica-semantica/README.md`; `SV-matematica-semantica/especificaciones/README.md`; `SV-matematica-semantica/especificaciones/proposiciones/matriz_operativa_completa_clasificador_sv.md`; `SV-matematica-semantica/especificaciones/laboratorio/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`; `SV-lenguaje-de-computacion/README.md`; `SV-lenguaje-de-computacion/beta/README.md`; `SV-lenguaje-de-computacion/beta/Lab.SV/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md`.
 - **Evidencia:** subida secuencial validada por PDFs de confirmación; auditoría de ingestión de ZIP frescos de ambos repositorios; verificación de jerarquía sin `beta/` en el repositorio doctrinal y con `Lab.SV` como hija de `beta/` en el repositorio del lenguaje.
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
@@ -199,7 +199,7 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Frente/Fase:** MICROPARCHE B / declaración operativa de rutas / Fase IV
 - **Resumen del cambio:** Se registra como cierre autónomo del repositorio del lenguaje la declaración operativa de Ruta A, Ruta B y Beta en `beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md`, `beta/README.md` y `README.md`, junto con la precisión pública de que esa triada no obliga a identidad funcional ni a sincronía conceptual completa con `SV-matematica-semantica`.
 - **Motivo o argumento:** El microparche B constaba ya materialmente en los documentos públicos del repositorio del lenguaje, pero faltaba su trazabilidad explícita en el registro técnico propio gobernado por `docs/calidad/`.
-- **Base doctrinal o técnica invocada:** jerarquía entre repositorios fijada en `README.md`; regla de subordinación de `beta/`; distinción entre espejo material e identidad funcional; protocolo ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.
+- **Base doctrinal o técnica invocada:** jerarquía entre repositorios fijada en `README.md`; regla de subordinación de `beta/`; distinción entre espejo material e identidad funcional; criterio interno de trazabilidad secuencial.
 - **Artefactos afectados:** `README.md`; `beta/README.md`; `beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 - **Evidencia:** ingestión de ZIP fresco del repositorio del lenguaje; contraste directo con el ZIP fresco del repositorio doctrinal; verificación de presencia material de la triada de rutas en los tres documentos públicos; actualización sincronizada del registro dual `.md`/`.csv`.
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
@@ -216,7 +216,7 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - Motivo o argumento: La triple adversarial aplicada al corpus vigente (guía, doctrina fuerte de la U y Compilador) no acredita todavía insuficiencia material suficiente de la ternaria para abrir un frente cuaternario con rango doctrinal propio. Dada la restricción real de energía estratégica, se decide concentrar el esfuerzo vivo del proyecto en la vía ternaria y conservar Beta solo como laboratorio subsidiario e hibernado.
 - Base doctrinal o técnica invocada: guía práctica del conocimiento profundo y la crítica de la razón pura; Origen doctrinal, definición y alcance de la U en el Sistema Vectorial SV; Compilador doctrinal y célula meta SV(9,3)-IA; acta estratégica publicada en `beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md`.
 - Artefactos afectados: `beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; repositorio privado `SV-matematica-semantica-cuaternaria`.
-- Evidencia: PDF de confirmación de subida del acta a `beta/`; contraste adversarial del chat y del corpus publicado; decisión estratégica consolidada por la unidad WB-Lenguaje1 SV.
+- Evidencia: evidencia de publicación del acta en `beta/`; contraste adversarial del corpus publicado; decisión estratégica consolidada en acta y registro.
 - Impacto: trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.
 - Objeción adversarial considerada: riesgo de congelar prematuramente una vía cuaternaria potencialmente fértil y riesgo simétrico de dispersar recursos vitales en dos frentes cuando el corpus vigente todavía sostiene la suficiencia operativa y conceptual de la ternaria.
 - Decisión: mantener activa la vía ternaria como único camino de desarrollo inmediato; hibernar la Beta como frente doctrinal activo; reabrir Beta solo si aparece contradicción local suficiente, consistente y no resoluble limpiamente en `0/1/U`, sin estadística, inferencia ni minería de datos.
@@ -322,3 +322,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial:** riesgo de abrir una microauditoría sin cerrar nada o de duplicar análisis ya realizados sin una matriz única de contraste.
 - **Decisión:** abrir la microauditoría solo para producir matriz, clasificación y tratamiento recomendado del contrato diagnóstico vigente.
 - **Estado:** abierto
+
+### RETP-2026-014
+
+- **Fecha:** 19/03/2026
+- **Hora (Europe/Madrid):** 10:07:25
+- **Tipo de hito:** DECISION_GOBIERNO_TECNICO
+- **Frente/Fase:** Gobierno operativo del lenguaje / normalización de redacción pública / ampliación de Wishlist IRQ / Fase IV
+- **Resumen del cambio:** Se amplía la Wishlist IRQ del ecosistema SV con las entradas `WIRQ-2026-002` a `WIRQ-2026-006` y se normaliza la redacción pública de los documentos afectados para excluir referencias operativas internas.
+- **Motivo o argumento:** Era necesario incorporar nuevas líneas de deseo estratégico del responsable del proyecto sin desplazar el Bloque A — Contrato diagnóstico y, al mismo tiempo, depurar la documentación pública para excluir referencias privadas o procedimentales impropias de un registro público.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; Wishlist IRQ del ecosistema SV; registro técnico vivo del frente final del lenguaje; criterio de bloques cerrables; regla de subordinación entre ruta activa, Wishlist y gobierno técnico.
+- **Artefactos afectados:** `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`; `docs/gobierno/README.md`; `docs/calidad/ACTA_DE_NORMALIZACION_DE_REDACCION_PUBLICA_Y_AMPLIACION_DE_WISHLIST_IRQ_2026_03_19.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura directa del estado público del repositorio operativo; reevaluación adversarial de las IRQ nuevas; revisión de redacción pública y compilación única de artefactos documentales.
+- **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; control_de_presion_creativa; descubrilidad.
+- **Objeción adversarial considerada:** riesgo de mezclar mecánica interna con documentación pública y riesgo simétrico de absorber nuevas líneas de deseo sin un cauce público sobrio y revisable.
+- **Decisión:** incorporar las nuevas entradas a la Wishlist IRQ con prioridad diferenciada, mantener su subordinación a la ruta activa del Bloque A y dejar normalizada la redacción pública de los documentos afectados.
+- **Estado:** cerrado
