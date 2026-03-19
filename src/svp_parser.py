@@ -558,7 +558,7 @@ class Parser:
         qt_map = {
             TT.KW_POINT_EVALUATION: "PointEvaluation",
             TT.KW_TRAJECTORY_STATE: "TrajectoryState",
-            TT.KW_FRAME_COMPARISON_TYPE: "FrameComparison",
+            TT.KW_FRAME_COMPARISON: "FrameComparison",
             TT.KW_COVERAGE_STATE: "CoverageState",
             TT.KW_PENDING_U: "PendingU",
             TT.KW_GLOBAL_CRITICALITY: "GlobalCriticality",
@@ -667,7 +667,7 @@ class Parser:
             self._advance(); self._expect(TT.LPAREN)
             r = self._expect_id(); self._expect(TT.RPAREN)
             return QCTrajectoryView(ref=r)
-        elif t.type in (TT.KW_FRAME_COMPARISON, TT.KW_FRAME_COMPARISON_TYPE):
+        elif t.type == TT.KW_FRAME_COMPARISON:
             self._advance(); self._expect(TT.LPAREN)
             r1 = self._expect_id(); self._expect(TT.COMMA)
             r2 = self._expect_id(); self._expect(TT.RPAREN)
