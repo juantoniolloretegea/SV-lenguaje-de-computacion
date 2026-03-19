@@ -1,0 +1,4 @@
+-- duplicate_identifier.svp — redeclaración en el mismo ámbito
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+codomain K3 = { SI, NO, TAL_VEZ };
