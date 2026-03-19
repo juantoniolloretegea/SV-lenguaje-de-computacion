@@ -30,3 +30,12 @@ Este registro concentra únicamente la deuda viva relevante para el frente final
 ## 3. Regla
 
 Toda nueva deuda viva relevante deberá incorporarse aquí si afecta al cierre del frente, y deberá desaparecer de este registro solo por cierre acreditado o traslado formalmente justificado.
+
+
+### DFL-004 — Distinción entre frame histórico, reapertura y consulta presente
+
+- **Descripción:** persiste como deuda viva del frente la necesidad de demostrar concordancia fuerte entre el último frame históricamente acreditado, la reapertura legítima a `U`, la cobertura/admisibilidad vigente y la forma en que la consulta expresa el estado actual sin sobreatribuir cierre.
+- **Riesgo:** confusión entre historial acreditado y estado presente; persistencia ilegítima de cierres fuertes; degradación insuficientemente gobernada a `U`; ambigüedad pública de la consulta.
+- **Estado:** abierta y gobernada.
+- **Prioridad:** alta.
+
