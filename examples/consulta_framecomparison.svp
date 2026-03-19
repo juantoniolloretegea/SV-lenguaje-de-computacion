@@ -1,0 +1,74 @@
+-- consulta_framecomparison.svp — ejemplo canónico mínimo de QueryContext FrameComparison
+-- Nota de estatuto: este ejemplo demuestra la corrección léxica y superficial de FrameComparison.
+-- En el estado actual del compilador, los campos opacos de Domain que aparecen abajo se aceptan sin
+-- verificación semántica exhaustiva. Esa limitación está documentada como deuda viva del frente N4/Uso.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+let E1 = evaluate(S1);
+
+frame F1 {
+  index: 1;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F2 {
+  index: 2;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+horizon H1 {
+  architecture: Arch1;
+  events: [CambioProfilaxis];
+}
+
+domain D1 {
+  parameters: [P1];
+  interface: I1;
+  horizon: H1;
+  capture_specs: [Cap1];
+  admissibility_specs: [Adm1];
+  ternarizers: [Ter1];
+  exogeneity_mask: Exo1;
+  silent_u: SU1;
+  transduction_policy: TP1;
+  u_policy: UP1;
+  closure_criterion: CCrit1;
+}
+
+agent AG1 {
+  architecture: Arch1;
+  domain: D1;
+  query_engine: QE1;
+}
+
+query_spec QSFrameCmp {
+  query_type: FrameComparison;
+  scope: Pair;
+  restrictions: [R1];
+}
+
+let Q1 = query(QSFrameCmp, by: AG1, in: FrameComparison(F1, F2));
