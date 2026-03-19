@@ -289,3 +289,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de abrir demasiado pronto un frente de bindings concretos y riesgo simétrico de no dejar sembrada a tiempo la política de compatibilidad y adopción del lenguaje.
 - **Decisión:** activar ya la política y el protocolo, mantener abierta la línea en lista de deseos IRQ con IRQ-2 y abrir un tramo específico del manual SVP, dejando las implementaciones concretas por lenguaje para fases posteriores gobernadas por evidencia.
 - **Estado:** cerrado
+
+
+### RETP-2026-012
+
+- **Fecha:** 19/03/2026
+- **Hora (Europe/Madrid):** 06:39:08
+- **Tipo de hito:** APERTURA_FASE
+- **Frente/Fase:** Frente final del lenguaje SV / cierre operativo del lenguaje / Fase IV
+- **Resumen del cambio:** Se abre formalmente el frente final del lenguaje SV, se fijan hoja de ruta, criterios de cierre, registro de deuda viva y tablero de bloques cerrables bajo gobierno técnico del repositorio operativo.
+- **Motivo o argumento:** Una vez fijados pliego, sedes, publicación base, wishlist IRQ, política de compatibilidad y constructor del manual, el trabajo vivo del ecosistema queda concentrado en el cierre técnico del lenguaje y exige un marco operativo explícito.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; frontera normativa del lenguaje SV v0; IR canónica v0.2; nota de arquitectura mínima del núcleo enganchable; informe de continuidad del frente básico y habilitación del backend.
+- **Artefactos afectados:** `docs/arquitectura/ACTA_DE_APERTURA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV_2026_03_19.md`; `docs/arquitectura/HOJA_DE_RUTA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`; `docs/arquitectura/CRITERIOS_DE_CIERRE_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`; `docs/arquitectura/README.md`; `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`; `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/README.md`.
+- **Evidencia:** cierre previo de auditoría de repos frescos, fijación de sedes del ecosistema, publicación del pliego y consolidación del gobierno operativo de fase.
+- **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; coherencia_ecosistema; preparacion_backend.
+- **Objeción adversarial considerada:** riesgo de abrir un nuevo frente nominal sin reducir deuda real o de desplazar prematuramente el esfuerzo al backend soberano sin cerrar antes el núcleo semántico-diagnóstico.
+- **Decisión:** abrir el frente exclusivamente para sanear y cerrar mejor el lenguaje vigente, prohibiendo que esta apertura se use como excusa para reabrir doctrina, multiplicar interfaces o adelantar backend sin ABI mínimo fijado.
+- **Estado:** abierto
