@@ -532,3 +532,30 @@ Objeción adversarial considerada: riesgo de mezclar ejemplos públicos con sond
 Decisión: cerrar primero un bloque corto de verificabilidad externa mínima y dejar para la siguiente ronda el contraste fino `E102 / E104 / E106 / E111`, ya sobre una superficie pública más limpia y mejor defendible frente a revisión externa.
 
 Estado: cerrado
+
+
+| RETP-2026-026 | 19/03/2026 | 19:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / contraste fino E102 E104 E106 E111 / Fase IV | Se ejecuta el contraste fino público de E102 E104 E106 y E111 mediante sondas adversariales documentadas y sincronización de matriz dictamen y registro. | cerrado |
+
+Fecha: 19/03/2026
+Hora: 19:20:00
+Tipo de hito: CAMBIO_DOCUMENTACION_PUBLICA
+Frente/Fase: Frente final del lenguaje SV / Bloque A — contrato diagnóstico / contraste fino E102 E104 E106 E111 / Fase IV
+RETP-2026-026 — Contraste fino documentado de E102 E104 E106 y E111 antes de pasar a E201–E211
+
+Resumen del cambio: Se amplía la carpeta pública `tests/adversarial/documentados/` con cuatro piezas de contraste fino sobre `E102`, `E104`, `E106` y `E111`, y se sincronizan la matriz canónica, el dictamen del Bloque A y el registro dual para reflejar el resultado de ese contraste sin abrir todavía cambios semánticos del frontend.
+
+Motivo o argumento: Tras el cierre de verificabilidad externa mínima y el repo fresco ya estabilizado, el siguiente cuello de botella no estaba en más ejemplos ni en más microcierres de suite, sino en sincerar el subtramo residual `E102 / E104 / E106 / E111` antes de abandonar la familia `E101–E111`.
+
+Base doctrinal o técnica: Pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; matriz diagnóstica canónica; criterio de contraste fino por subtramos; repo fresco del frontend de referencia; capa pública de sondas adversariales documentadas.
+
+Artefactos afectados: `tests/adversarial/documentados/README.md`; `tests/adversarial/documentados/e102_output_semantics_ausente_contraste.svp`; `tests/adversarial/documentados/e104_codominio_de_conector_invalido_contraste.svp`; `tests/adversarial/documentados/e106_relacion_semantica_ausente_contraste.svp`; `tests/adversarial/documentados/e111_codominio_sin_orden_total_contraste.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+Evidencia: contraste directo sobre repo fresco y lectura comparada entre IR v0.2 catálogo público efectivo implementación validator y superficie adversarial documentada.
+
+Impacto: coherencia_diagnostica; trazabilidad; verificabilidad_externa; redaccion_publica; mantenibilidad.
+
+Objeción adversarial considerada: riesgo de presentar como cierre funcional lo que en realidad es un sinceramiento documental. No procede sobreatribuir: el bloque no afirma convergencia semántica nueva, sino que deja documentado con mayor precisión qué cae hoy en `E006` o `E008`, qué mantiene coincidencia formal y qué sigue sin sonda superficial propia.
+
+Decisión: dar por ejecutado el contraste fino de `E102 / E104 / E106 / E111`, cerrar la familia `E101–E111` para la fase actual en términos de contraste y trasladar el siguiente barrido legítimo a `E201–E211`.
+
+Estado: cerrado
