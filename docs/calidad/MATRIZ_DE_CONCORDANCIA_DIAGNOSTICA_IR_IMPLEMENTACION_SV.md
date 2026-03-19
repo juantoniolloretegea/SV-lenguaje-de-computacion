@@ -138,4 +138,8 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.
 4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.
 5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
-6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`; el siguiente barrido legítimo del Bloque A pasa a la familia `E101–E111`.
+6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`.
+7. El contraste fino documentado de `E102 / E104 / E106 / E111` ya está ejecutado en la capa pública de sondas adversariales documentadas.
+8. `E102` y `E104` mantienen, tras ese contraste, su condición de divergencias con mismo identificador y significado distinto.
+9. `E106` y `E111` mantienen su condición de coincidencias ancla, pero siguen sin cobertura explícita de suite en la superficie v0.1.
+10. El siguiente barrido legítimo del Bloque A pasa a la familia `E201–E211`.
