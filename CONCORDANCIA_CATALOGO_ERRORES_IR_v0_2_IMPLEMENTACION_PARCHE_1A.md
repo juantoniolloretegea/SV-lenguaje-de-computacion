@@ -1,5 +1,9 @@
 # CONCORDANCIA_CATALOGO_ERRORES_IR_v0_2_IMPLEMENTACION_PARCHE_1A.md
 
+## Documento histórico no vigente
+
+Este archivo se conserva únicamente como puente de trazabilidad histórica. No debe usarse como fotografía suficiente del estado técnico vigente del frontend de referencia.
+
 ## 1. Naturaleza actual del documento
 
 Este documento conserva valor histórico de trazabilidad respecto del estado del catálogo de errores en el cierre de PARCHE 1A.
