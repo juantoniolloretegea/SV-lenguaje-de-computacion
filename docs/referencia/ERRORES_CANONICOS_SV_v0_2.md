@@ -159,3 +159,10 @@ Si el catálogo implementativo cambia, este documento deberá actualizarse en el
 ## 9. Vigencia
 
 Este documento permanece vigente mientras el frontend de referencia mantenga un catálogo implementativo efectivo no plenamente reconciliado con la IR v0.2.
+
+
+## Cobertura explícita añadida
+
+- `E202` se cubre explícitamente en suite mediante `gate_input_no_evalresult.svp`.
+- `E204` se cubre explícitamente en suite mediante `query_context_opaco.svp`.
+- `E205` se cubre explícitamente en suite mediante `supervise_target_opaco.svp`.
