@@ -106,8 +106,12 @@ La salida correcta no es abrir más frentes ni rehacer doctrina, sino:
 
 El siguiente paso dentro del Bloque A debe continuar **por familias** y con el orden ya actualizado al estado materializado del repositorio:
 
-1. `E201–E211` — capa de resultado
-2. `E301–E304` — capa de evolución
-3. `E401–E507` — capa de uso / serialización / conformidad
+1. `E301–E304` — capa de evolución
+2. `E401–E507` — capa de uso / serialización / conformidad
 
 La familia `E001–E010` queda ya suficientemente barrida para la fase actual y la familia `E101–E111` queda ya contrastada finamente en sus cuatro puntos residuales de mayor interés (`E102 / E104 / E106 / E111`). El siguiente barrido legítimo del Bloque A pasa, por tanto, a `E201–E211`.
+
+
+## 8. Nota de avance sobre la familia E201–E211
+
+Tras el primer barrido de la familia `E201–E211`, `E202`, `E204` y `E205` pasan a tener cobertura explícita de suite. `E210` y `E211` ya la tenían. Quedan como subtramos residuales `E201`, `E203`, `E206`, `E207`, `E208` y `E209`, cuyo contraste fino queda diferido por depender hoy de formas superficiales no directamente expuestas o no emitidas de modo específico en la gramática v0.1.
