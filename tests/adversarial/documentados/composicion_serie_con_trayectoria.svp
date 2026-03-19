@@ -1,0 +1,138 @@
+-- composicion_serie_con_trayectoria.svp
+-- Sonda documentada de N3: trayectoria con dos frames y alternancia correcta.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics SemK3 {
+  APTO -> "Favorable";
+  NO_APTO -> "Desfavorable";
+  INDETERMINADO -> "Indeterminado";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3;
+  role: Base;
+}
+
+cellspec C2 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3;
+  role: Base;
+}
+
+coupledspec CC1 {
+  cell: C1;
+  bridges: [9];
+}
+
+coupledspec CC2 {
+  cell: C2;
+  bridges: [1];
+}
+
+connector Phi_1_2 {
+  source_codomain: K3;
+  target_position: 1;
+  mapping: {
+    APTO -> Zero;
+    NO_APTO -> One;
+    INDETERMINADO -> U;
+  }
+}
+
+admissibility_table T_serie {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+semantic_relation R_serie {
+  kind: DeclaredRelation;
+}
+
+graph G_serie {
+  nodes: [CC1, CC2];
+  edges: [edge(source: CC1, target: CC2, position: 1, connector: Phi_1_2)];
+  relation: R_serie;
+  regime: Simple;
+}
+
+horizon H1 {
+  architecture: G_serie;
+  events: [EvParametroExogeno];
+}
+
+coupledstate CS1_f0 {
+  spec: CC1;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, One, One, One];
+  updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, One, One, One];
+}
+
+coupledstate CS2_f0 {
+  spec: CC2;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+  updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let E1_f0 = evaluate(CS1_f0);
+let E2_f0 = evaluate(CS2_f0);
+let G_f0 = gate([E1_f0, E2_f0], using: T_serie);
+
+frame F0 {
+  index: 0;
+  architecture: G_serie;
+  cell_states: [CS1_f0, CS2_f0];
+  eval_results: [E1_f0, E2_f0];
+  gate_results: [G_f0];
+  supervision: [];
+  criticalities: [];
+}
+
+transition_data TD1 {
+  horizon_ref: H1;
+  events: [(EvParametroExogeno, One)];
+  induced_parameters: [(CC1, 7, One)];
+}
+
+coupledstate CS1_f1 {
+  spec: CC1;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, One, One, One];
+  updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, One, One, One];
+}
+
+coupledstate CS2_f1 {
+  spec: CC2;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+  updated_vector: [One, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let E1_f1 = evaluate(CS1_f1);
+let E2_f1 = evaluate(CS2_f1);
+let G_f1 = gate([E1_f1, E2_f1], using: T_serie);
+
+frame F1 {
+  index: 1;
+  architecture: G_serie;
+  cell_states: [CS1_f1, CS2_f1];
+  eval_results: [E1_f1, E2_f1];
+  gate_results: [G_f1];
+  supervision: [];
+  criticalities: [];
+}
+
+trajectory T_completa {
+  entries: [entry(frame: F0, transition: TD1), entry(frame: F1)];
+}
