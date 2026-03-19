@@ -478,3 +478,30 @@ Objeción adversarial considerada: riesgo de considerar este bloque como simple 
 Decisión: cerrar la limpieza fina de los artefactos canónicos del Bloque A antes de abrir la familia E101–E111 y dejar así el barrido E001–E010 en un estado documental plenamente estable para la fase actual.
 
 Estado: cerrado
+
+
+| RETP-2026-024 | 19/03/2026 | 17:35:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E101 E111 con cobertura explícita E101 E105 / Fase IV | Se amplía la suite observable con dos adversariales mínimos para E101 y E105 y se sincronizan tests, catálogo y matriz diagnóstica con esa cobertura explícita inicial de la familia E101–E111. | cerrado |
+
+Fecha: 19/03/2026
+Hora: 17:35:00
+Tipo de hito: CAMBIO_RUNNER
+Frente/Fase: Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E101 E111 con cobertura explícita E101 E105 / Fase IV
+RETP-2026-024 — Apertura controlada de la familia E101–E111 con cierres locales E101 y E105
+
+Resumen del cambio: Se añaden los casos adversariales `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp`, se actualizan `tests/run_conformance.py` y `tests/README.md`, y se sincronizan el catálogo público y la matriz diagnóstica para hacer explícita la cobertura observable de `E101` y `E105`.
+
+Motivo o argumento: La matriz canónica vigente sitúa a `E101` y `E105` como códigos con emisión directa observable pero todavía sin cobertura explícita de suite. Eran, por tanto, los dos cierres locales de menor radio de impacto para abrir legítimamente la familia `E101–E111`.
+
+Base doctrinal o técnica: Pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; matriz diagnóstica canónica; catálogo implementativo vigente; suite observable del frontend de referencia; criterio de bloques cerrables.
+
+Artefactos afectados: `tests/run_conformance.py`; `tests/README.md`; `tests/conformance/invalid/cellstate_vector_length_mismatch.svp`; `tests/conformance/invalid/bridge_position_fuera_de_rango.svp`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+Evidencia: preparación del paquete técnico sobre estado fresco ya sincronizado; verificación local de la suite con incorporación de dos adversariales mínimos y actualización congruente de la documentación pública afectada.
+
+Impacto: coherencia_diagnostica; trazabilidad; cobertura_de_suite; mantenibilidad.
+
+Objeción adversarial considerada: riesgo de presentar como apertura de familia una refundición más amplia de la capa de estado. No procede: el bloque se limita a dos cierres locales ya emitibles y de bajo radio, dejando sin tocar por ahora los subtramos `E102`, `E104`, `E106` y el grupo `E107–E111`.
+
+Decisión: abrir la familia `E101–E111` por sus dos casos ya directamente emitibles y más baratos de verificar, mantener el resto del subtramo bajo auditoría y reservar para la siguiente ronda el contraste fino `E102 / E104 / E106 / E111`.
+
+Estado: cerrado
