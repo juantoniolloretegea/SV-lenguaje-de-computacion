@@ -17,7 +17,7 @@ De la auditoría cerrada sobre `SV-matematica-semantica` y `SV-lenguaje-de-compu
 1. `SV-matematica-semantica` ejerce ya de forma material como sede superior doctrinal y normativa del ecosistema, al concentrar fundamentos, serie compositiva, piezas transversales de mayor rango, programa de interfaces y trazabilidad doctrinal.
 2. `SV-lenguaje-de-computacion` concentra el trabajo técnico vivo del ecosistema, incluyendo frontera normativa del lenguaje, gramática, IR, arquitectura, calidad, validator, serializer, CLI, playground, suite y objetivo de backend soberano.
 3. La tensión principal del ecosistema se localiza hoy en el frente técnico del lenguaje, no en la sede doctrinal.
-4. El pliego de condiciones del Sistema Vectorial SV ha quedado ya fijado como ley interna del ecosistema: el marco que descarga al responsable humano de supervisión continua, permite a las unidades Watson construir de forma autónoma y obliga a mantener una sola línea de lógica y coherencia.
+4. El pliego de condiciones del Sistema Vectorial SV ha quedado ya fijado como ley interna del ecosistema: el marco que descarga al responsable humano de supervisión continua, permite a los agentes encargados construir de forma autónoma y obliga a mantener una sola línea de lógica y coherencia.
 
 ## 3. Decisiones
 
