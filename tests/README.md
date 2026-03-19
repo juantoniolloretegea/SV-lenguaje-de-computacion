@@ -45,7 +45,7 @@ python tests/run_cli_smoke.py
 | `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
 | `supervise_wrong_role.svp` | supervise con célula de rol Base (debe ser Supervisor) | E211 |
 | `trajectory_alternance_violation.svp` | `Trajectory` con entrada no final sin `transition` | E304 |
-| `u_coercion.svp` | `null` como literal ternario (coerción de U prohibida) | E001 |
+| `u_coercion.svp` | `null` como literal ternario (coerción de U prohibida) | E507 |
 
 ## Qué no comprueba todavía
 
