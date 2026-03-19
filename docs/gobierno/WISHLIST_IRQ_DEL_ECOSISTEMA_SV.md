@@ -10,9 +10,9 @@ Su misión es **preservar el aire creativo con control**.
 
 Toda idea nueva que no pertenezca de forma obvia a la ruta activa deberá pasar por este Wishlist antes de transformarse en tarea, parche, fase o frente.
 
-## 3. Relación con la unidad Beta
+## 3. Relación con la unidad encargada
 
-La unidad Beta de turno será la encargada de evaluar cada entrada del Wishlist. Antes de asignar prioridad, deberá:
+La unidad encargada será la responsable de valorar cada entrada del Wishlist. Antes de asignar prioridad, deberá:
 
 1. mirar el CSV disponible del registro técnico y de calidad;
 2. comprobar si la idea ya está absorbida, registrada, cerrada o rechazada;
@@ -34,11 +34,11 @@ La unidad Beta de turno será la encargada de evaluar cada entrada del Wishlist.
 
 - ID
 - Fecha
-- Unidad que eleva
+- Agente encargado o origen de la propuesta
 - Deseo o idea
 - Motivo
 - CSV consultado
-- Evaluación Beta
+- Evaluación técnica
 - IRQ asignado
 - Ruta resultante (`activa`, `beta`, `aparcado`, `rechazado`)
 - Decisión
