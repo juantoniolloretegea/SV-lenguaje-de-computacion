@@ -119,6 +119,8 @@ Se recomienda usar una o varias de estas etiquetas:
 
 | RETP-2026-018 | 19/03/2026 | 13:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sincronización pública de suite y catálogo / Fase IV | Se sincronizan la documentación pública del catálogo y de la suite con el estado ya materializado de E007, E008, E009 y E507. | cerrado |
 | RETP-2026-020 | 19/03/2026 | 14:05:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sinceramiento de cobertura explícita de E001 / Fase IV | Se retira E001 de la lista de códigos cubiertos explícitamente por la suite y se documenta que conserva emisión observable sin caso adversarial explícito propio tras la extracción local hacia E507. | cerrado |
+| RETP-2026-021 | 19/03/2026 | 14:25:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / reintroducción de cobertura explícita de E001 / Fase IV | Se añade el caso adversarial invalid_tri_literal.svp y se sincronizan tests/run_conformance.py y docs/referencia/ERRORES_CANONICOS_SV_v0_2.md para reintroducir cobertura explícita observable de E001 sin revertir la extracción del subcaso u_coercion.svp hacia E507. | cerrado |
+| RETP-2026-022 | 19/03/2026 | 14:50:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sincronización de matriz y dictamen tras barrido E001 E010 / Fase IV | Se sincronizan la matriz diagnóstica canónica y el dictamen del Bloque A con el estado materializado del repositorio fresco tras los saneamientos y ampliaciones de cobertura de la familia E001 E010. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -452,3 +454,20 @@ Impacto: coherencia_diagnostica; trazabilidad; cobertura_de_suite; mantenibilida
 Objeción adversarial considerada: riesgo de reabrir la bolsa diagnóstica de E001 de forma indiscriminada. El paquete no deshace el saneamiento E001/E507; sólo reintroduce una cobertura explícita y limpia para el subcaso residual de literal ternario no reconocido.
 Decisión: ampliar de forma controlada la cobertura observable de E001 mediante un adversarial mínimo específico y mantener separada cualquier depuración posterior de otros errores sintácticos todavía absorbidos por E001.
 Estado: cerrado
+
+
+## RETP-2026-022 — Sincronización de matriz y dictamen tras barrido E001 E010
+
+- **Fecha:** 19/03/2026  
+- **Hora:** 14:50:00  
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA  
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / sincronización de matriz y dictamen tras barrido E001 E010 / Fase IV  
+- **Resumen del cambio:** Se actualizan `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`, su CSV dual y `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md` para reflejar el estado real alcanzado por la familia `E001–E010` en el repositorio fresco.  
+- **Motivo o argumento:** Tras los saneamientos locales y la ampliación progresiva de cobertura explícita de suite, la matriz canónica y el dictamen seguían describiendo un estado previo en `E005`, `E007`, `E008`, `E009`, `E010` y `E507`, y seguían presentando `E001–E010` como siguiente familia pendiente pese a que ese barrido ya se ha materializado.  
+- **Base doctrinal o técnica:** Pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; criterio de bloques cerrables; matriz diagnóstica canónica; dictamen de saneamiento del Bloque A; suite observable del frontend de referencia; repositorio fresco auditado.  
+- **Artefactos afectados:** `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.  
+- **Evidencia:** auditoría directa sobre ZIP fresco del repositorio operativo; ejecución local de la suite con 23 de 23 casos superados; contraste directo entre `tests/run_conformance.py`, `tests/README.md`, `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`, matriz diagnóstica y dictamen del Bloque A.  
+- **Impacto:** coherencia_diagnostica; trazabilidad; descubrilidad; mantenibilidad.  
+- **Objeción adversarial considerada:** riesgo de registrar como hito separado una mera actualización narrativa. Procede porque la matriz y el dictamen son artefactos canónicos de gobierno técnico del Bloque A y estaban describiendo un estado ya superado por el repositorio fresco.  
+- **Decisión:** sincronizar matriz y dictamen con el estado real alcanzado por la familia `E001–E010`, declarar ese barrido suficientemente maduro para la fase actual y desplazar el siguiente frente técnico razonado a la familia `E101–E111`.  
+- **Estado:** cerrado
