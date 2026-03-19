@@ -23,6 +23,8 @@ from svp_main import process_file
 
 EXPECTED_INVALID_CODES = {
     "admissibility_table_incompleta.svp": "E009",
+    "bridge_position_fuera_de_rango.svp": "E105",
+    "cellstate_vector_length_mismatch.svp": "E101",
     "bad_b_value.svp": "E002",
     "conector_mapping_incompleto.svp": "E007",
     "conector_target_no_ternario.svp": "E008",
