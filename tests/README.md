@@ -33,7 +33,7 @@ python tests/run_cli_smoke.py
 | `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
 | `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
 
-## Casos inválidos (14)
+## Casos inválidos (15)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
@@ -45,6 +45,7 @@ python tests/run_cli_smoke.py
 | `duplicate_identifier.svp` | redeclaración de identificador en el mismo ámbito | E005 |
 | `gate_undeclared_input.svp` | `gate` con una entrada no declarada | E006 |
 | `invalid_role_literal.svp` | rol no reconocido en `cellspec` | E010 |
+| `invalid_tri_literal.svp` | literal ternario no reconocido en vector de `cellstate` | E001 |
 | `max_keyword.svp` | Uso de `max` (no disponible en v0.1) | E210 |
 | `projection_undeclared_source.svp` | proyección `resolved_to` sobre fuente no declarada | E006 |
 | `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
@@ -60,7 +61,7 @@ python tests/run_cli_smoke.py
 
 ## Resultado actual
 
-22 de 22 tests de conformidad pasan.
+23 de 23 tests de conformidad pasan.
 
 La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
 
