@@ -33,7 +33,7 @@ EXPECTED_INVALID_CODES = {
     "supervise_undeclared_target.svp": "E006",
     "supervise_wrong_role.svp": "E211",
     "trajectory_alternance_violation.svp": "E304",
-    "u_coercion.svp": "E001",
+    "u_coercion.svp": "E507",
 }
 
 
