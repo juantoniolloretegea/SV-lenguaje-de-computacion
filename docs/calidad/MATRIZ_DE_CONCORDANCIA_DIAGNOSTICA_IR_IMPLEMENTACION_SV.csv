@@ -1,0 +1,8 @@
+ID_IR,Nombre_IR,ID_Catalogo_Publico,Nombre_Catalogo_Publico,ID_Implementacion,Nombre_Implementacion,Emision_Observable,Cobertura_Suite,Situacion,Tratamiento_Recomendado,Observaciones
+E001,InvalidTriCoercion,E001,InvalidTriCoercion,,,,,por_auditar,,
+E002,InvalidCellSize,E002,InvalidCellSize,,,,,por_auditar,,
+E101,EmptyCodomain,E101,EmptyCodomain,,,,,por_auditar,,
+E201,CompositionWithoutSemanticRelation,E201,CompositionWithoutSemanticRelation,,,,,por_auditar,,
+E301,UnsafeUResolution,E301,UnsafeUResolution,,,,,por_auditar,,
+E401,FrameMutationAttempt,E401,FrameMutationAttempt,,,,,por_auditar,,
+E501,OpaqueJustification,E501,OpaqueJustification,,,,,por_auditar,,
