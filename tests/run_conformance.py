@@ -22,7 +22,10 @@ from svp_errors import SVPError
 from svp_main import process_file
 
 EXPECTED_INVALID_CODES = {
+    "admissibility_table_incompleta.svp": "E009",
     "bad_b_value.svp": "E002",
+    "conector_mapping_incompleto.svp": "E007",
+    "conector_target_no_ternario.svp": "E008",
     "compose_cycle_graph.svp": "E103",
     "gate_undeclared_input.svp": "E006",
     "max_keyword.svp": "E210",
