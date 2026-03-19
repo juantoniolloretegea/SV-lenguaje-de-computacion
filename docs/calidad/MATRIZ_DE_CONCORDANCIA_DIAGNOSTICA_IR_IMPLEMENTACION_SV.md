@@ -12,7 +12,8 @@ Esta matriz sirve para registrar, en una sola superficie auditable, el estado de
 
 ## Criterio de lectura
 
-Cada fila deberá corresponder a una unidad diagnóstica concreta.  
+Cada fila deberá corresponder a una unidad diagnóstica concreta.
+
 La clasificación mínima de situación será:
 
 - `coincide`
@@ -22,10 +23,11 @@ La clasificación mínima de situación será:
 - `regularizado_provisionalmente`
 - `no_acreditado`
 
+No se rellenarán celdas por inferencia blanda. Toda clasificación deberá apoyarse en lectura directa del artefacto correspondiente o en evidencia observable de suite o emisión.
+
 ## Regla de uso
 
-No se rellenarán celdas por inferencia blanda.  
-Toda clasificación deberá apoyarse en lectura directa del artefacto correspondiente o en evidencia observable de suite/emisión.
+Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni la implementación. Su función es **hacer visible la fractura diagnóstica** y ordenar el saneamiento en los términos fijados por el frente final del lenguaje SV.
 
 ## Campos de la matriz
 
@@ -41,15 +43,13 @@ Toda clasificación deberá apoyarse en lectura directa del artefacto correspond
 - `Tratamiento_Recomendado`
 - `Observaciones`
 
-# Matriz de concordancia diagnóstica IR ↔ implementación del lenguaje SV
-
-**Estado:** primera pasada cumplimentada  
+**Estado:** salida técnica sincronizada  
 **Fecha de trabajo:** 19/03/2026  
 **Base de contraste:** repo fresco del lenguaje + IR v0.2 + catálogo público efectivo + implementación + validator + suite
 
 ## 1. Resultado global
 
-La microauditoría cerrada del Bloque A arroja, en esta primera pasada, el siguiente balance:
+La microauditoría cerrada del Bloque A arroja, en esta salida técnica, el siguiente balance:
 
 - **IR v0.2:** 38 códigos
 - **Catálogo implementativo efectivo / contrato público actual:** 37 códigos
@@ -58,26 +58,16 @@ La microauditoría cerrada del Bloque A arroja, en esta primera pasada, el sigui
 - **Solo IR:** 14
 - **Solo implementación:** 13
 
-El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la **desalineación semántica estructural** entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
+El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la desalineación semántica estructural entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
 
-## 2. Criterio de clasificación aplicado
-
-Las filas de la matriz se clasifican así:
-
-- `coincide`: mismo código y mismo significado entre IR y contrato efectivo.
-- `mismo_id_significado_distinto`: mismo código formal, pero nombre o semántica divergente.
-- `solo_ir`: codificado en la IR v0.2 y ausente del contrato efectivo actual.
-- `solo_implementacion`: vigente en el contrato efectivo actual y ausente de la IR.
-
-## 3. Coincidencias plenas
+## 2. Coincidencias plenas
 
 |Código|IR|Contrato efectivo|Emisión|Suite|Tratamiento|
 |---|---|---|---|---|---|
 |E106|MissingSemanticRelation|MissingSemanticRelation|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
 |E111|UnorderedCodomain|UnorderedCodomain|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
 
-
-## 4. Mismo ID / significado distinto
+## 3. Mismo ID / significado distinto
 
 |Código|IR|Contrato efectivo|Emisión|Suite|Tratamiento|
 |---|---|---|---|---|---|
@@ -102,10 +92,9 @@ Las filas de la matriz se clasifican así:
 |E402|NonAppendOnlyTrajectory|AgentMissingDomain|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E403|UndeclaredHorizonEvent|QuerySpecInvalid|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E501|OpaqueJustification|SerializationNonDeterministic|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E507|QueryContextMismatch|UCoercionDetected|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
+|E507|QueryContextMismatch|UCoercionDetected|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 
-
-## 5. Presentes solo en IR
+## 4. Presentes solo en IR
 
 |Código|IR|Contrato efectivo|Emisión|Suite|Tratamiento|
 |---|---|---|---|---|---|
@@ -124,8 +113,7 @@ Las filas de la matriz se clasifican así:
 |E505|IllegalCompClosure|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E506|AutomatedDesignDelegation|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 
-
-## 6. Presentes solo en implementación
+## 5. Presentes solo en implementación
 
 |Código|IR|Contrato efectivo|Emisión|Suite|Tratamiento|
 |---|---|---|---|---|---|
@@ -143,18 +131,11 @@ Las filas de la matriz se clasifican así:
 |E210|—|MaxMinForbidden|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E211|—|SuperviseMetaNotSupervisor|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 
+## 6. Observaciones operativas
 
-## 7. Observaciones operativas
-
-1. **Los únicos dos códigos plenamente convergentes** son `E106` y `E111`.  
-2. El grupo crítico es el de **22 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.  
-3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.  
-4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.  
+1. **Los únicos dos códigos plenamente convergentes** son `E106` y `E111`.
+2. El grupo crítico es el de **22 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.
+3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.
+4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.
 5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
 6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`; el siguiente barrido legítimo del Bloque A pasa a la familia `E101–E111`.
-
-## 8. Regla de uso
-
-Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni la implementación.  
-Su función es **hacer visible la fractura diagnóstica** y ordenar el saneamiento en los términos fijados por el frente final del lenguaje SV.
-
