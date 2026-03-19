@@ -1,0 +1,16 @@
+-- ================================================================
+-- e102_output_semantics_ausente_contraste.svp
+-- Propósito: sonda documentada del contraste fino sobre E102.
+-- La IR v0.2 asocia E102 a MissingOutputSemantics.
+-- En la superficie actual del frontend, la ausencia de semantics
+-- declarada en CellSpec cae en E006 por referencia no declarada.
+-- ================================================================
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3Ausente;
+  role: Base;
+}
