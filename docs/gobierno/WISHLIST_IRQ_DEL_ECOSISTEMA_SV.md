@@ -74,3 +74,4 @@ Cuando una entrada tenga valor estratégico de adopción o ecosistema, podrá da
 - `WIRQ-2026-004` — interfaz declarativa en lenguaje natural para programación asistida del SV, con previsualización de resultado y aceptación explícita del desarrollador.
 - `WIRQ-2026-005` — shell y entorno interactivo del lenguaje SV orientado al desarrollador, con ayuda contextual solo bajo demanda explícita.
 - `WIRQ-2026-006` — capacidad de trabajo sincronizado local/remoto del ecosistema de desarrollo SV, diferida hasta madurez funcional e infraestructural suficiente.
+- `WIRQ-2026-007` — generación de agentes especializados por el lenguaje SV a partir de patrones expertos, con configuración precargada, base informativa actualizable y remisión estructural al repositorio `SVperitus`.
