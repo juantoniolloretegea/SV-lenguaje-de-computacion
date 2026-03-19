@@ -1,0 +1,18 @@
+-- admissibility_table_incompleta.svp — Debe fallar con E009
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
