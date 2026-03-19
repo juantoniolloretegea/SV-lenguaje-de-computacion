@@ -1,0 +1,12 @@
+ID_TRAMO,Titulo,Objeto,Dependencias,Criterio_Cierre,Estado,Observaciones
+SVP-MAN-00,Estatuto del lenguaje,Definir qué es SVP y qué no es,Pliego; Frontera; IR,Texto base + límites + posición jerárquica,pendiente,
+SVP-MAN-01,Léxico mínimo y convenciones,Superficie declarativa y disciplina nominal,Gramática v0.1,Ejemplos mínimos + contraejemplos,pendiente,
+SVP-MAN-02,Niveles N0-N4,Explicar la estratificación de la IR,IR v0.2,Mapa completo + ejemplo guiado,pendiente,
+SVP-MAN-03,Célula evaluación y clasificación,Explicar CellSpec CellState y evaluate,IR v0.2; Frontera,Ejemplos válidos e inválidos,pendiente,
+SVP-MAN-04,Composición y supervisión,Explicar gate supervise compose,IR v0.2; composicion,Ejemplos mínimos + límites,pendiente,
+SVP-MAN-05,Resolución y régimen de la U,Explicar resolve Context Mechanism,Spec de la U; IR,Ejemplos de resolución y reapertura,pendiente,
+SVP-MAN-06,Frame trayectoria y transición,Explicar evolución N3,IR v0.2; Documento III,Ejemplos append-only + error,pendiente,
+SVP-MAN-07,Consulta y uso,Explicar query y N4/Uso,IR v0.2; docs/arquitectura,Consulta reconstruible,pendiente,
+SVP-MAN-08,Diagnósticos y zona prohibida,Explicar errores y límites,C1C; ERRORES_CANONICOS,Mapa diagnóstico + ejemplos,pendiente,
+SVP-MAN-09,CLI Playground serialización backend,Explicar artefactos vivos,README; OBJETIVO_RUST_0,Panorama operativo + límites,pendiente,
+SVP-MAN-10,Compatibilidad interlenguajes y adopcion,Explicar APIs enganches wrappers FFI runtime y puentes de adopcion,Politica y protocolo de compatibilidad; IR v0.2; frontera normativa,Ficha por lenguaje + criterios de activacion + limites de fase,pendiente,
