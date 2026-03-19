@@ -1,0 +1,112 @@
+-- agente_con_consulta_y_dominio.svp
+-- Sonda documentada de N4. Su función es exponer de forma legible la densidad de campos
+-- opacos en Domain y la cadena minima Domain / Agent / QuerySpec / query.
+--
+-- Línea de base declarada para futuras auditorías:
+--   • Dependencias tipadas sí declaradas en este programa: CS_param1, AS_param1, Tau_param1, H1, G1.
+--   • Campos opacos dejados deliberadamente sin declaración: MascaraExog_G1, USilenciosa_G1,
+--     PolTransduccion_G1, PolU_G1, CriterioCierre_G1 y MotorConsulta_A1.
+-- Esta mezcla es intencional: la sonda no ilustra uso canónico, sino una frontera actual de validación.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics SemK3 {
+  APTO -> "Favorable";
+  NO_APTO -> "Desfavorable";
+  INDETERMINADO -> "Indeterminado";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3;
+  role: Base;
+}
+
+coupledspec CC1 {
+  cell: C1;
+  bridges: [5];
+}
+
+capture_spec CS_param1 {
+  parameter_id: 1;
+  observation_domain: DomObs_param1;
+  observation_space: ObsEsp_param1;
+  failure_symbol: Bottom;
+  mapping: MapCaptura_param1;
+}
+
+admissibility_spec AS_param1 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm_param1;
+}
+
+ternarizer Tau_param1 {
+  observation_space: ObsEsp_param1;
+  partition_zero: Zona_0;
+  partition_one: Zona_1;
+  partition_u: Zona_U;
+  mapping: MapTernario_param1;
+}
+
+semantic_relation R_base {
+  kind: DeclaredRelation;
+}
+
+graph G1 {
+  nodes: [CC1];
+  edges: [];
+  relation: R_base;
+  regime: Simple;
+}
+
+horizon H1 {
+  architecture: G1;
+  events: [EvExogeno_1];
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let E1 = evaluate(S1);
+
+frame F_consulta {
+  index: 0;
+  architecture: G1;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+domain D1 {
+  parameters: [Param_1];
+  interface: Interfaz_G1;
+  horizon: H1;
+  capture_specs: [CS_param1];
+  admissibility_specs: [AS_param1];
+  ternarizers: [Tau_param1];
+  exogeneity_mask: MascaraExog_G1;
+  silent_u: USilenciosa_G1;
+  transduction_policy: PolTransduccion_G1;
+  u_policy: PolU_G1;
+  closure_criterion: CriterioCierre_G1;
+}
+
+agent A1 {
+  architecture: G1;
+  domain: D1;
+  query_engine: MotorConsulta_A1;
+}
+
+query_spec QS_estado {
+  query_type: PointEvaluation;
+  scope: Cell;
+  restrictions: [];
+}
+
+let R_consulta = query(QS_estado, by: A1, in: PointEval(F_consulta));
