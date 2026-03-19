@@ -371,3 +371,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Decisión:** clasificar `WIRQ-2026-007` como `IRQ-4`, con ruta `aparcado`, y reabrirla solo cuando exista mayor madurez del núcleo del lenguaje y delimitación formal del cruce con `SVperitus`.
 - **Estado:** cerrado
 
+
+
+### RETP-2026-017
+
+- **Fecha:** 19/03/2026
+- **Hora (Europe/Madrid):** 13:00:59
+- **Tipo de hito:** SANEAMIENTO_TECNICO
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / saneamiento local E001 E507 / Fase IV
+- **Resumen del cambio:** Se descomprime parcialmente la sobrecarga diagnóstica de `E001` al hacer que el caso adversarial de coerción implícita de `U` mediante `null` o `None` emita `E507`, con actualización sincronizada de parser, catálogo implementativo, suite y documentación pública asociada.
+- **Motivo o argumento:** Tras el saneamiento local de `E007 E008 E009`, el siguiente subtramo legítimo del Bloque A era reducir la bolsa genérica de `E001` sin abrir todavía una refundición completa del parser. El caso `u_coercion.svp` ofrecía un cierre local real, verificable y de bajo radio de impacto.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; IR canónica de bienformación v0.2; Bloque A — Contrato diagnóstico; catálogo implementativo vigente; criterio de saneamiento mínimo por bloque cerrable.
+- **Artefactos afectados:** `src/svp_errors.py`; `src/svp_parser.py`; `tests/run_conformance.py`; `tests/README.md`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** verificación local del caso adversarial `u_coercion.svp` con emisión `E507` y ejecución completa de la suite de conformidad en el estado preparado para el paquete.
+- **Impacto:** `coherencia_diagnostica`; `trazabilidad`; `mantenibilidad`; `cobertura_de_suite`.
+- **Objeción adversarial considerada:** riesgo de presentar este ajuste como resolución total de la sobrecarga de `E001`. El parche no clausura todo `E001`; solo extrae de su bolsa genérica el subcaso de coerción implícita de `U`, dejando para bloque posterior el resto de errores sintácticos aún absorbidos por ese código.
+- **Decisión:** materializar el saneamiento local `E001/E507` como bloque técnico autónomo y mantener pendiente una futura depuración más amplia del parse diagnóstico.
+- **Estado:** cerrado
