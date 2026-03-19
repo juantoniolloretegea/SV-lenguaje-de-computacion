@@ -117,6 +117,8 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-005 | 14/03/2026 | 21:10:21 | CIERRE_PARCHE | MICROPARCHE B / declaración operativa de rutas / Fase IV | Se registra el cierre del microparche B en el repositorio del lenguaje: declaración explícita de Ruta A / Ruta B / Beta en la matriz operativa, en `beta/README.md` y en `README.md`, con precisión expresa de que la triada no obliga a sincronía conceptual completa con el repositorio doctrinal. | cerrado |
 | RETP-2026-008 | 18/03/2026 | 16:31:19 | DECISION_ARQUITECTONICA | Continuidad del frente básico y habilitación del backend / Fase IV | Se declara públicamente que la pendencia material de los sentidos restantes del frente básico no bloquea el avance del lenguaje SV hacia backend, siempre que el núcleo preserve puertos de extensión previstos y se mantenga la subordinación doctrinal y técnica vigente. | cerrado |
 
+| RETP-2026-018 | 19/03/2026 | 13:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sincronización pública de suite y catálogo / Fase IV | Se sincronizan la documentación pública del catálogo y de la suite con el estado ya materializado de E007, E008, E009 y E507. | cerrado |
+
 ## 12. Entradas detalladas
 
 ### RETP-2026-001
@@ -388,3 +390,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de presentar este ajuste como resolución total de la sobrecarga de `E001`. El parche no clausura todo `E001`; solo extrae de su bolsa genérica el subcaso de coerción implícita de `U`, dejando para bloque posterior el resto de errores sintácticos aún absorbidos por ese código.
 - **Decisión:** materializar el saneamiento local `E001/E507` como bloque técnico autónomo y mantener pendiente una futura depuración más amplia del parse diagnóstico.
 - **Estado:** cerrado
+
+
+## RETP-2026-018
+
+**Fecha:** 19/03/2026  
+**Hora (Europe/Madrid):** 13:20:00  
+**Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA  
+**Frente/Fase:** Frente final del lenguaje SV / Bloque A — contrato diagnóstico / sincronización pública de suite y catálogo / Fase IV  
+**Resumen del cambio:** Se sincronizan `tests/README.md` y `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md` con el estado ya materializado del saneamiento local `E007 E008 E009` y `E001/E507`, actualizando conteos, casos inválidos, emisión observable y cobertura explícita de suite.  
+**Motivo o argumento:** Tras los saneamientos locales ya materializados, la documentación pública seguía reflejando un estado anterior de la suite y del catálogo observable, con infradeclaración de `E007`, `E008` y `E009` y con conteo desfasado en `tests/README.md`.  
+**Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; criterio de sincronización pública en el mismo bloque que altere el contrato observable; documentación pública vigente del catálogo y de la suite.  
+**Artefactos afectados:** `tests/README.md`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.  
+**Evidencia:** revisión directa del estado público ya materializado de `src/svp_validator.py`, `tests/run_conformance.py` y de los casos inválidos añadidos; contraste de la documentación pública con ese estado observable.  
+**Impacto:** coherencia_diagnostica; trazabilidad; descubrilidad; mantenibilidad.  
+**Objeción adversarial considerada:** riesgo de registrar como nuevo avance funcional lo que en realidad es una sincronización documental posterior. Este hito no declara saneamiento técnico adicional; solo corrige la documentación pública para que no sobreatribuya ni infradeclare el estado observable vigente.  
+**Decisión:** actualizar la documentación pública de suite y catálogo en bloque mínimo separado, sin reabrir todavía una depuración más amplia del parse diagnóstico ni adelantar nuevos frentes funcionales.  
+**Estado:** cerrado
