@@ -438,3 +438,17 @@ Objeción adversarial considerada: riesgo de registrar como hito separado una me
 Decisión: sincerar la documentación pública del catálogo retirando `E001` de la cobertura explícita de suite, mantener `E001` como código con emisión observable directa y reservar para bloque posterior cualquier reintroducción de cobertura explícita mediante un adversarial propio.
 Estado: cerrado
 
+
+Fecha: 19/03/2026
+Hora (Europe/Madrid): 14:25:00
+Tipo de hito: CAMBIO_RUNNER
+Frente/Fase: Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / reintroducción de cobertura explícita de E001 / Fase IV
+Resumen del cambio: Se añade el caso adversarial invalid_tri_literal.svp, se actualiza tests/run_conformance.py y se sincronizan tests/README.md y docs/referencia/ERRORES_CANONICOS_SV_v0_2.md para reintroducir cobertura explícita observable de E001 sin revertir la extracción del subcaso u_coercion.svp hacia E507.
+Motivo o argumento: Tras el sinceramiento previo del catálogo público, E001 había quedado como código con emisión observable directa pero sin adversarial propio en la suite. La superficie actual sí permite construir un caso mínimo y limpio de literal ternario no reconocido, por lo que procede cerrar ese hueco verificable.
+Base doctrinal o técnica invocada: pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; catálogo implementativo vigente; suite observable del frontend de referencia; criterio de bloques cerrables.
+Artefactos afectados: tests/run_conformance.py; tests/README.md; tests/conformance/invalid/invalid_tri_literal.svp; docs/referencia/ERRORES_CANONICOS_SV_v0_2.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.
+Evidencia: verificación local del nuevo caso adversarial con emisión E001 y ejecución completa de la suite de conformidad en el estado preparado para el paquete.
+Impacto: coherencia_diagnostica; trazabilidad; cobertura_de_suite; mantenibilidad.
+Objeción adversarial considerada: riesgo de reabrir la bolsa diagnóstica de E001 de forma indiscriminada. El paquete no deshace el saneamiento E001/E507; sólo reintroduce una cobertura explícita y limpia para el subcaso residual de literal ternario no reconocido.
+Decisión: ampliar de forma controlada la cobertura observable de E001 mediante un adversarial mínimo específico y mantener separada cualquier depuración posterior de otros errores sintácticos todavía absorbidos por E001.
+Estado: cerrado
