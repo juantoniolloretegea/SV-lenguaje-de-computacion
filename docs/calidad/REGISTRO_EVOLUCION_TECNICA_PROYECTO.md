@@ -559,3 +559,30 @@ Objeción adversarial considerada: riesgo de presentar como cierre funcional lo 
 Decisión: dar por ejecutado el contraste fino de `E102 / E104 / E106 / E111`, cerrar la familia `E101–E111` para la fase actual en términos de contraste y trasladar el siguiente barrido legítimo a `E201–E211`.
 
 Estado: cerrado
+
+
+| RETP-2026-027 | 19/03/2026 | 20:10:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E201 E211 con cobertura explícita E202 E204 E205 / Fase IV | Se amplía la suite observable con tres adversariales mínimos para E202 E204 y E205 y se sincronizan tests catálogo matriz dictamen y registro con esa cobertura explícita inicial de la familia E201–E211. | cerrado |
+
+Fecha: 19/03/2026
+Hora: 20:10:00
+Tipo de hito: CAMBIO_RUNNER
+Frente/Fase: Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E201 E211 con cobertura explícita E202 E204 E205 / Fase IV
+RETP-2026-027 — Apertura controlada de la familia E201–E211 con cierres locales E202 E204 y E205
+
+Resumen del cambio: Se añaden los casos adversariales `gate_input_no_evalresult.svp`, `query_context_opaco.svp` y `supervise_target_opaco.svp`, se actualizan `tests/run_conformance.py` y `tests/README.md`, y se sincronizan el catálogo público, la matriz diagnóstica, el dictamen del Bloque A y el registro técnico para hacer explícita la cobertura observable de `E202`, `E204` y `E205`.
+
+Motivo o argumento: Dentro de la familia `E201–E211`, `E202`, `E204` y `E205` eran los subcasos de menor radio y emisión más directa en la superficie publicada. `E210` y `E211` ya estaban cubiertos, mientras que `E201`, `E203`, `E206`, `E207`, `E208` y `E209` quedan todavía condicionados por huecos de alcanzabilidad superficial o por emisiones no específicas del parser v0.1.
+
+Base doctrinal o técnica: Pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; matriz diagnóstica canónica; catálogo implementativo vigente; suite observable del frontend de referencia; criterio de bloques cerrables por familias.
+
+Artefactos afectados: `tests/run_conformance.py`; `tests/README.md`; `tests/conformance/invalid/gate_input_no_evalresult.svp`; `tests/conformance/invalid/query_context_opaco.svp`; `tests/conformance/invalid/supervise_target_opaco.svp`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+Evidencia: preparación del paquete técnico sobre repo fresco tras el cierre de `RETP-2026-026`; verificación local de la suite con incorporación de tres adversariales mínimos y actualización congruente de la documentación pública afectada.
+
+Impacto: coherencia_diagnostica; trazabilidad; cobertura_de_suite; mantenibilidad.
+
+Objeción adversarial considerada: riesgo de presentar como apertura de familia un cierre total que todavía no existe. No procede: el bloque se limita a tres emisiones directas y deja explícitamente como residuales `E201`, `E203`, `E206`, `E207`, `E208` y `E209`.
+
+Decisión: abrir la familia `E201–E211` por sus tres casos ya directamente emitibles y más baratos de verificar, mantener el resto del subtramo bajo contraste fino documentado y reservar para la siguiente ronda la apertura de `E301–E304`.
+
+Estado: cerrado
