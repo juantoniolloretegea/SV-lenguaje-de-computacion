@@ -95,7 +95,6 @@ class TT(Enum):
     # Keywords — query types
     KW_POINT_EVALUATION = auto()
     KW_TRAJECTORY_STATE = auto()
-    KW_FRAME_COMPARISON_TYPE = auto()
     KW_COVERAGE_STATE = auto()
     KW_PENDING_U = auto()
     KW_GLOBAL_CRITICALITY = auto()
@@ -194,7 +193,6 @@ KEYWORDS = {
     "CoverageReport": TT.KW_COVERAGE_REPORT,
     "PointEvaluation": TT.KW_POINT_EVALUATION,
     "TrajectoryState": TT.KW_TRAJECTORY_STATE,
-    "FrameComparison": TT.KW_FRAME_COMPARISON_TYPE,
     "CoverageState": TT.KW_COVERAGE_STATE,
     "PendingU": TT.KW_PENDING_U,
     "GlobalCriticality": TT.KW_GLOBAL_CRITICALITY,
