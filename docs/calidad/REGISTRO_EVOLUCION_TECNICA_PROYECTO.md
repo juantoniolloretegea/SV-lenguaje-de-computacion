@@ -306,3 +306,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de abrir un nuevo frente nominal sin reducir deuda real o de desplazar prematuramente el esfuerzo al backend soberano sin cerrar antes el núcleo semántico-diagnóstico.
 - **Decisión:** abrir el frente exclusivamente para sanear y cerrar mejor el lenguaje vigente, prohibiendo que esta apertura se use como excusa para reabrir doctrina, multiplicar interfaces o adelantar backend sin ABI mínimo fijado.
 - **Estado:** abierto
+
+## RETP-2026-013 — Apertura de microauditoría del Bloque A — Contrato diagnóstico
+
+- **Fecha:** 19/03/2026
+- **Hora Europe/Madrid:** 07:20:00
+- **Tipo de hito:** APERTURA_BLOQUE
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / Fase IV
+- **Resumen del cambio:** Se abre la microauditoría cerrada del Bloque A y se crean matriz de concordancia diagnóstica, guía de lectura y plantilla de dictamen de saneamiento.
+- **Motivo/argumento:** La deuda viva principal del frente final sigue concentrándose en la concordancia entre IR, catálogo público, implementación efectiva, validator y suite.
+- **Base doctrinal/técnica:** pliego de condiciones del Sistema Vectorial SV; Frontera normativa del lenguaje SV v0; IR canónica v0.2; hoja de ruta del frente final del lenguaje SV.
+- **Artefactos afectados:** `docs/calidad/ACTA_DE_APERTURA_DE_MICROAUDITORIA_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO_2026_03_19.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; registros técnicos `.md/.csv`.
+- **Evidencia:** paquete operativo de apertura del Bloque A.
+- **Impacto:** `gobierno_tecnico`; `trazabilidad`; `coherencia_diagnostica`; `mantenibilidad`.
+- **Objeción adversarial:** riesgo de abrir una microauditoría sin cerrar nada o de duplicar análisis ya realizados sin una matriz única de contraste.
+- **Decisión:** abrir la microauditoría solo para producir matriz, clasificación y tratamiento recomendado del contrato diagnóstico vigente.
+- **Estado:** abierto
