@@ -1,0 +1,19 @@
+-- ================================================================
+-- e104_codominio_de_conector_invalido_contraste.svp
+-- Propósito: sonda documentada del contraste fino sobre E104.
+-- La IR v0.2 asocia E104 a InvalidConnectorCodomain.
+-- En la superficie actual del frontend, el subcaso visible de destino
+-- no ternario en el mapping del conector cae en E008.
+-- ================================================================
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+connector Phi_contraste {
+  source_codomain: K3;
+  target_position: 1;
+  mapping: {
+    APTO -> Zero;
+    NO_APTO -> One;
+    INDETERMINADO -> Maybe;
+  }
+}
