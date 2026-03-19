@@ -24,6 +24,17 @@ Constan **14 códigos** definidos en la IR v0.2 y ausentes del contrato implemen
 ### 2.4. Errores presentes solo en implementación
 Constan **13 códigos** presentes en el contrato efectivo del frontend y ausentes de la IR v0.2.
 
+## 2.5. Contraste fino de la familia E101–E111
+
+La salida vigente incorpora ya el contraste fino público de `E102`, `E104`, `E106` y `E111` mediante sondas documentadas de verificabilidad externa.
+
+Ese contraste deja fijado lo siguiente:
+
+- `E102` mantiene divergencia: el subcaso superficial visible de `OutputSemantics` ausente cae hoy en `E006`.
+- `E104` mantiene divergencia: el subcaso superficial visible de codominio de conector inválido cae hoy en `E008`.
+- `E106` mantiene coincidencia formal entre IR y contrato efectivo, pero la ausencia de `relation` declarada cae hoy en `E006` en la superficie actual.
+- `E111` mantiene coincidencia formal entre IR y contrato efectivo, pero no dispone todavía de sonda superficial propia en v0.1 porque el lowering que exige orden total explícito no está expuesto en la gramática publicada.
+
 ## 3. Regularización provisional vigente
 
 Sigue vigente la regularización por **Vía B** ya documentada en `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`.
@@ -95,9 +106,8 @@ La salida correcta no es abrir más frentes ni rehacer doctrina, sino:
 
 El siguiente paso dentro del Bloque A debe continuar **por familias** y con el orden ya actualizado al estado materializado del repositorio:
 
-1. `E101–E111` — capa de estado
-2. `E201–E211` — capa de resultado
-3. `E301–E304` — capa de evolución
-4. `E401–E507` — capa de uso / serialización / conformidad
+1. `E201–E211` — capa de resultado
+2. `E301–E304` — capa de evolución
+3. `E401–E507` — capa de uso / serialización / conformidad
 
-La familia `E001–E010` queda ya suficientemente barrida para la fase actual: se ha recuperado cobertura explícita observable en `E001`, `E005`, `E006`, `E007`, `E008`, `E009` y `E010`; se ha extraído el subcaso de coerción implícita de `U` hacia `E507`; y la deuda viva de alcanzabilidad superficial queda concentrada en `E003` y `E004`.
+La familia `E001–E010` queda ya suficientemente barrida para la fase actual y la familia `E101–E111` queda ya contrastada finamente en sus cuatro puntos residuales de mayor interés (`E102 / E104 / E106 / E111`). El siguiente barrido legítimo del Bloque A pasa, por tanto, a `E201–E211`.
