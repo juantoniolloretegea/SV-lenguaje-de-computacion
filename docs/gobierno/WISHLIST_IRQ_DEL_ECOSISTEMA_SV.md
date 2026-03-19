@@ -69,3 +69,8 @@ Cuando una entrada tenga valor estratégico de adopción o ecosistema, podrá da
 
 - `WIRQ-2026-000` — inicialización del mecanismo.
 - `WIRQ-2026-001` — compatibilidad interlenguajes del Lenguaje SV con prioridad inicial en Python, Rust, C, C++, Kotlin y vigilancia de legado empresarial como Cobol.
+- `WIRQ-2026-002` — patrón clínico experto para SV: imagen de las células implicadas, diagnóstico del sistema SV y recomendación de actuación al experto humano bajo soberanía profesional.
+- `WIRQ-2026-003` — capa de sinceridad SV sobre bases de datos empresariales como alternativa gobernada a capas de IA opacas, inestables o poco auditables para dirección y decisión.
+- `WIRQ-2026-004` — interfaz declarativa en lenguaje natural para programación asistida del SV, con previsualización de resultado y aceptación explícita del desarrollador.
+- `WIRQ-2026-005` — shell y entorno interactivo del lenguaje SV orientado al desarrollador, con ayuda contextual solo bajo demanda explícita.
+- `WIRQ-2026-006` — capacidad de trabajo sincronizado local/remoto del ecosistema de desarrollo SV, diferida hasta madurez funcional e infraestructural suficiente.
