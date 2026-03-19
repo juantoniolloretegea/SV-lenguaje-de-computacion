@@ -96,6 +96,9 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E004`
 - `E005`
 - `E006`
+- `E007`
+- `E008`
+- `E009`
 - `E010`
 - `E101`
 - `E103`
@@ -115,6 +118,9 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E001`
 - `E002`
 - `E006`
+- `E007`
+- `E008`
+- `E009`
 - `E103`
 - `E210`
 - `E211`
@@ -126,6 +132,8 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola, que exista hoy un sitio de emisión directo observable ni que esté cubierto por la suite.
 
 En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observacionalmente con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
+
+De forma análoga, los casos adversariales `conector_mapping_incompleto.svp`, `conector_target_no_ternario.svp` y `admissibility_table_incompleta.svp` dejan ya constancia observable de emisión para `E007`, `E008` y `E009`, respectivamente, y pasan a formar parte de la cobertura explícita de la suite de conformidad.
 
 ## 8. Regla de continuidad
 
