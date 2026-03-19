@@ -131,12 +131,12 @@ Las filas de la matriz se clasifican así:
 |---|---|---|---|---|---|
 |E003|—|NSquaredViolation|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E004|—|EmptyCodomain|si_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E005|—|DuplicateIdentifier|si_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E005|—|DuplicateIdentifier|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E006|—|UndeclaredReference|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E007|—|InvalidConnectorMapping|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E008|—|ConnectorTargetNotTri|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E009|—|TableInputMismatch|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E010|—|InvalidRole|si_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E007|—|InvalidConnectorMapping|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E008|—|ConnectorTargetNotTri|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E009|—|TableInputMismatch|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E010|—|InvalidRole|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E207|—|ResolveMissingMechanism|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E208|—|ComposeMissingRelations|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E209|—|ComposeMissingPatterns|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
@@ -150,7 +150,8 @@ Las filas de la matriz se clasifican así:
 2. El grupo crítico es el de **22 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.  
 3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.  
 4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.  
-5. `E507` merece tratamiento específico: el catálogo público lo presenta como `UCoercionDetected`, pero el caso adversarial observable hoy se manifiesta como `E001`.
+5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
+6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`; el siguiente barrido legítimo del Bloque A pasa a la familia `E101–E111`.
 
 ## 8. Regla de uso
 
