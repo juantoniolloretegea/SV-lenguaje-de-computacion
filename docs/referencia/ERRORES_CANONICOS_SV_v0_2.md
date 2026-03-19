@@ -115,7 +115,6 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 
 La suite de conformidad vigente cubre de forma explícita, al menos, los siguientes códigos esperados en casos inválidos:
 
-- `E001`
 - `E002`
 - `E005`
 - `E006`
@@ -138,6 +137,8 @@ En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observac
 De forma análoga, los casos adversariales `conector_mapping_incompleto.svp`, `conector_target_no_ternario.svp` y `admissibility_table_incompleta.svp` dejan ya constancia observable de emisión para `E007`, `E008` y `E009`, respectivamente, y pasan a formar parte de la cobertura explícita de la suite de conformidad.
 
 Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden además cobertura explícita y observable para `E005` y `E010`, sin alterar el comportamiento implementativo del frontend.
+
+Tras la extracción observacional del subcaso `u_coercion.svp` hacia `E507`, el código `E001` mantiene sitio de emisión directo observable en el parser, pero ya no dispone hoy de un caso adversarial explícito propio en la suite de conformidad.
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 
