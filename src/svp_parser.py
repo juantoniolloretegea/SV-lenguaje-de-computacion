@@ -67,6 +67,13 @@ class Parser:
             return t.value
         raise SVPError(E001, t.line, t.col, "Se esperaba Zero, One o U")
 
+    def _expect_id_or_tri(self) -> str:
+        t = self._cur()
+        if t.type in (TT.IDENTIFIER, TT.ZERO, TT.ONE, TT.U_LIT):
+            self._advance()
+            return t.value
+        raise SVPError(E001, t.line, t.col, "Se esperaba identificador o literal ternario")
+
     def _match(self, tt: TT) -> Optional[Token]:
         if self._cur().type == tt:
             return self._advance()
@@ -226,7 +233,7 @@ class Parser:
         while not self._peek(TT.RBRACE):
             k = self._expect_id()
             self._expect(TT.ARROW)
-            v = self._expect_tri()
+            v = self._expect_id_or_tri()
             self._expect(TT.SEMICOLON)
             mapping.append((k, v))
         self._expect(TT.RBRACE)
