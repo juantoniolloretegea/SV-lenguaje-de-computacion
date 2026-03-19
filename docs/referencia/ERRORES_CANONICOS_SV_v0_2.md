@@ -123,7 +123,9 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E008`
 - `E009`
 - `E010`
+- `E101`
 - `E103`
+- `E105`
 - `E210`
 - `E211`
 - `E304`
@@ -138,6 +140,8 @@ En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observac
 De forma análoga, los casos adversariales `conector_mapping_incompleto.svp`, `conector_target_no_ternario.svp` y `admissibility_table_incompleta.svp` dejan ya constancia observable de emisión para `E007`, `E008` y `E009`, respectivamente, y pasan a formar parte de la cobertura explícita de la suite de conformidad.
 
 Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden además cobertura explícita y observable para `E005` y `E010`, sin alterar el comportamiento implementativo del frontend.
+
+Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp` añaden ahora cobertura explícita observable para `E101` y `E105`, respectivamente, sin introducir semántica nueva en el validator.
 
 El caso adversarial `invalid_tri_literal.svp` aporta ahora cobertura explícita observable para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
 
