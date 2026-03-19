@@ -562,6 +562,7 @@ Estado: cerrado
 
 
 | RETP-2026-027 | 19/03/2026 | 20:10:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E201 E211 con cobertura explícita E202 E204 E205 / Fase IV | Se amplía la suite observable con tres adversariales mínimos para E202 E204 y E205 y se sincronizan tests catálogo matriz dictamen y registro con esa cobertura explícita inicial de la familia E201–E211. | cerrado |
+| RETP-2026-028 | 19/03/2026 | 23:10:34 | SORPRESA_TECNICA | Frente final del lenguaje SV / gobernanza de coherencia entre frame histórico, reapertura y consulta presente / Fase IV | Se registra una nota técnica de calidad para gobernar la tensión entre trayectoria histórica, retorno legítimo a `U`, cobertura/admisibilidad vigente y consulta presente, sin reabrir doctrina ni elevar aún el asunto a paper público. | cerrado |
 
 Fecha: 19/03/2026
 Hora: 20:10:00
@@ -586,3 +587,20 @@ Objeción adversarial considerada: riesgo de presentar como apertura de familia 
 Decisión: abrir la familia `E201–E211` por sus tres casos ya directamente emitibles y más baratos de verificar, mantener el resto del subtramo bajo contraste fino documentado y reservar para la siguiente ronda la apertura de `E301–E304`.
 
 Estado: cerrado
+
+### RETP-2026-028
+
+- **Fecha:** 19/03/2026
+- **Hora (Europe/Madrid):** 23:10:34
+- **Tipo de hito:** SORPRESA_TECNICA
+- **Frente/Fase:** Frente final del lenguaje SV / gobernanza de coherencia entre frame histórico, reapertura y consulta presente / Fase IV
+- **Resumen del cambio:** Se registra una nota técnica de calidad para gobernar una tensión relevante entre el último frame históricamente acreditado, la reapertura legítima a `U`, la cobertura/admisibilidad vigente y la forma en que la consulta presente expresa el estado actual.
+- **Motivo o argumento:** El frente final del lenguaje exige cierre honesto entre IR, validator, runner, capa de consulta y documentación pública. La tensión detectada no tiene estatuto de wishlist ni de papel doctrinal nuevo, pero sí de riesgo gobernable del frente.
+- **Base doctrinal o técnica invocada:** sede doctrinal principal sobre horizonte, transducción, consulta y `U`; `docs/arquitectura/ACTA_DE_APERTURA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV_2026_03_19.md`; `spec/IR_CANONICA_BIENFORMACION_SV_v0_2.md`; `spec/u_en_svp_semantica_formal_y_regimen_de_resolucion.md`.
+- **Artefactos afectados:** `docs/calidad/NOTA_TECNICA_SOBRE_FRAME_HISTORICO_REAPERTURA_Y_CONSULTA_PRESENTE_2026_03_19.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`.
+- **Evidencia:** lectura adversarial comparada del repositorio doctrinal principal y del repositorio del lenguaje, con contraste expreso entre trayectoria, `U`, transducción y consulta.
+- **Impacto:** trazabilidad; gobierno_tecnico; fiabilidad; mantenibilidad.
+- **Objeción adversarial considerada:** riesgo de duplicar doctrina ya existente y de sobreactuar como crisis basal un problema ya parcialmente previsto por la sede doctrinal superior.
+- **Decisión:** registrar la tensión como nota técnica subordinada de calidad, abrir deuda viva específica y reservar cualquier eventual publicación doctrinal nueva para un momento posterior y solo si la bajada operativa acreditara insuficiencia real del marco vigente.
+- **Estado:** cerrado
+
