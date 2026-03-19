@@ -1,53 +1,11 @@
 # Dictamen de saneamiento del Bloque A — Contrato diagnóstico del lenguaje SV
 
-**Estado:** plantilla de trabajo
-
-## 1. Objeto
-
-Este dictamen recogerá la salida final de la microauditoría del Bloque A.
-
-## 2. Resultado de la matriz
-
-### 2.1. Coincidencias
-_Pendiente de cumplimentación._
-
-### 2.2. Divergencias por mismo identificador y significado distinto
-_Pendiente de cumplimentación._
-
-### 2.3. Errores presentes solo en IR
-_Pendiente de cumplimentación._
-
-### 2.4. Errores presentes solo en implementación
-_Pendiente de cumplimentación._
-
-## 3. Regularizaciones provisionales vigentes
-_Pendiente de cumplimentación._
-
-## 4. Tratamientos recomendados
-
-### 4.1. Mantener como deuda gobernada
-_Pendiente de cumplimentación._
-
-### 4.2. Reconciliar semánticamente
-_Pendiente de cumplimentación._
-
-### 4.3. Documentar mejor
-_Pendiente de cumplimentación._
-
-### 4.4. Preparar migración posterior
-_Pendiente de cumplimentación._
-
-## 5. Conclusión adversarial
-_Pendiente de cumplimentación._
-
-# Dictamen de saneamiento del Bloque A — Contrato diagnóstico del lenguaje SV
-
-**Estado:** primera salida técnica  
+**Estado:** salida técnica sincronizada  
 **Fecha:** 19/03/2026
 
 ## 1. Objeto
 
-Este dictamen recoge la primera salida de la microauditoría del Bloque A y fija tratamiento recomendado por grupos para el contrato diagnóstico vigente del frontend de referencia.
+Este dictamen recoge la salida técnica vigente de la microauditoría del Bloque A y fija tratamiento recomendado por grupos para el contrato diagnóstico observable del frontend de referencia.
 
 ## 2. Resultado de la matriz
 
@@ -72,7 +30,7 @@ Sigue vigente la regularización por **Vía B** ya documentada en `docs/calidad/
 
 Eso implica:
 
-- la **IR v0.2 conserva autoridad normativa superior**;
+- la **IR v0.2** conserva autoridad normativa superior;
 - el **catálogo público efectivo** describe el contrato diagnóstico realmente utilizado hoy por el frontend;
 - y toda convergencia futura deberá tratarse como acto formal separado, no como absorción silenciosa.
 
@@ -91,9 +49,10 @@ Debe regularizarse documentalmente de inmediato el grupo de:
 
 - `mismo_id_significado_distinto`
 
-porque constituye la zona de mayor riesgo de confusión para lectores, testers y futuras unidades Watson.
+porque constituye la zona de mayor riesgo de confusión para lectores, testers y futuras revisiones técnicas.
 
 La regularización mínima exigible es:
+
 - visibilidad de la divergencia;
 - no sobreatribución de concordancia por compartir identificador;
 - y remisión expresa a la Vía B cuando proceda.
@@ -134,11 +93,11 @@ La salida correcta no es abrir más frentes ni rehacer doctrina, sino:
 
 ## 7. Próximo paso técnico recomendado
 
-El siguiente paso dentro del Bloque A debe continuar **por familias y sin abrir todavía Bloque B**, pero con el orden ya actualizado al estado materializado del repositorio:
+El siguiente paso dentro del Bloque A debe continuar **por familias** y con el orden ya actualizado al estado materializado del repositorio:
 
-1. `E101–E111` — capa de estado  
-2. `E201–E211` — capa de resultado  
-3. `E301–E304` — capa de evolución  
+1. `E101–E111` — capa de estado
+2. `E201–E211` — capa de resultado
+3. `E301–E304` — capa de evolución
 4. `E401–E507` — capa de uso / serialización / conformidad
 
 La familia `E001–E010` queda ya suficientemente barrida para la fase actual: se ha recuperado cobertura explícita observable en `E001`, `E005`, `E006`, `E007`, `E008`, `E009` y `E010`; se ha extraído el subcaso de coerción implícita de `U` hacia `E507`; y la deuda viva de alcanzabilidad superficial queda concentrada en `E003` y `E004`.
