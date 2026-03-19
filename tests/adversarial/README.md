@@ -37,3 +37,8 @@ El runner SEC-0B sólo comprueba:
 - que el caso inválido falle limpiamente con `E005`.
 
 No mide rendimiento, no hace fuzzing y no sustituye la suite oficial de conformidad.
+
+
+## Sondas documentadas
+
+La subcarpeta `documentados/` reúne piezas públicas de contraste técnico inspiradas en lecturas adversariales externas. No forman parte de la suite principal de conformidad ni deben leerse como ejemplos canónicos de iniciación. Su función es mostrar, de forma legible, qué zonas del lenguaje ya son verificables y qué zonas siguen tensionando huecos de validación o de representación superficial.
