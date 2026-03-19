@@ -255,3 +255,37 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de convertir la sede operativa en autoridad doctrinal de facto o, en el extremo opuesto, de seguir tratando la sede doctrinal como taller técnico diario y contaminar su estabilidad de fase.
 - **Decisión:** mantener arriba la sede doctrinal y abajo la sede operativa, impedir la reapertura ordinaria de esta distribución y permitir solo tres supuestos de reconsideración: revisión del pliego obligada por la realidad del sistema, requerimiento muy complejo del lenguaje o acumulación de elementos parciales con fuerza suficiente de reconsideración.
 - **Estado:** cerrado
+
+
+### RETP-2026-010
+
+- **Fecha:** 18/03/2026
+- **Hora (Europe/Madrid):** 23:45:11
+- **Tipo de hito:** DECISION_GOBIERNO_TECNICO
+- **Frente/Fase:** Gobierno operativo del lenguaje / materialización dual del pliego / constructor del manual SVP / Wishlist IRQ / Fase IV
+- **Resumen del cambio:** Se materializa el pliego en doble sede interna, se crea el constructor del manual del lenguaje SVP con extensión `.svp` y se crea el Wishlist IRQ del ecosistema SV como mecanismo de recogida, aparcamiento y priorización controlada de deseos e ideas.
+- **Motivo o argumento:** Era necesario evitar dependencia exclusiva de la URL canónica pública del pliego y, al mismo tiempo, ordenar dos frentes operativos del repositorio del lenguaje: la construcción progresiva del manual y la gestión disciplinada de la presión creativa lateral.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; fijación de sedes del ecosistema; frontera normativa del lenguaje SV; IR canónica v0.2; regla de segregación entre ruta activa y Beta.
+- **Artefactos afectados:** `README.md`; `docs/README.md`; `docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md`; `docs/gobierno/README.md`; `docs/gobierno/MANIFIESTO_PLIEGO_Y_ASSETS.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`; `docs/manual_svp/README.md`; `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`; `docs/manual_svp/PLANTILLA_DE_TRAMO_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/PLANTILLA_DE_TRAMO_DEL_MANUAL_DEL_LENGUAJE_SVP.svp`; `docs/calidad/ACTA_DE_MATERIALIZACION_DEL_PLIEGO_Y_GOBIERNO_OPERATIVO_DEL_LENGUAJE_SV_2026_03_18.md`.
+- **Evidencia:** construcción deliberada del paquete dual de repositorios; incorporación completa de assets del pliego; creación del constructor del manual; creación del Wishlist IRQ con CSV propio.
+- **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; autonomia_unidades; control_de_presion_creativa.
+- **Objeción adversarial considerada:** riesgo de multiplicar documentos sin eje rector o de abrir un circuito de ideas laterales que compita con la ruta activa del lenguaje.
+- **Decisión:** mantener el pliego como ley interna visible en ambas sedes, usar el constructor del manual como máquina de cierre progresivo del manual SVP y canalizar toda idea lateral por el Wishlist IRQ antes de convertirla en tarea o frente real.
+- **Estado:** cerrado
+
+
+### RETP-2026-011
+
+- **Fecha:** 18/03/2026
+- **Hora (Europe/Madrid):** 23:58:40
+- **Tipo de hito:** DECISION_GOBIERNO_TECNICO
+- **Frente/Fase:** Gobierno operativo del lenguaje / compatibilidad interlenguajes / lista de deseos IRQ / Fase IV
+- **Resumen del cambio:** Se activa la política y protocolo de compatibilidad interlenguajes del Lenguaje SV, se incorpora la entrada `WIRQ-2026-001` como primer deseo sustantivo de la lista de deseos IRQ y se amplía el constructor del manual SVP con un tramo específico de compatibilidad y adopción.
+- **Motivo o argumento:** Era necesario dejar ya ordenada la futura compatibilidad del lenguaje con Python, Rust, C, C++, Kotlin y la vigilancia de legado como Cobol para evitar deuda estructural y lluvia de ideas no gobernada.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; frontera normativa del lenguaje SV; IR canónica v0.2; constructor del manual SVP; lista de deseos IRQ del ecosistema SV.
+- **Artefactos afectados:** `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`; `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`; `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`; `docs/manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`; `docs/calidad/ACTA_DE_ACTIVACION_DE_POLITICA_DE_COMPATIBILIDAD_INTERLENGUAJES_Y_REGISTRO_CERO_DE_LISTA_DE_DESEOS_IRQ_2026_03_18.md`.
+- **Evidencia:** construcción deliberada del bloque de compatibilidad; registro del deseo sustantivo inicial; ampliación del constructor del manual.
+- **Impacto:** gobierno_tecnico; trazabilidad; adopcion_ecosistema; mantenibilidad; control_de_presion_creativa.
+- **Objeción adversarial considerada:** riesgo de abrir demasiado pronto un frente de bindings concretos y riesgo simétrico de no dejar sembrada a tiempo la política de compatibilidad y adopción del lenguaje.
+- **Decisión:** activar ya la política y el protocolo, mantener abierta la línea en lista de deseos IRQ con IRQ-2 y abrir un tramo específico del manual SVP, dejando las implementaciones concretas por lenguaje para fases posteriores gobernadas por evidencia.
+- **Estado:** cerrado
