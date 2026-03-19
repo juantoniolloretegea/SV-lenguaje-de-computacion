@@ -407,3 +407,18 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 **Objeción adversarial considerada:** riesgo de registrar como nuevo avance funcional lo que en realidad es una sincronización documental posterior. Este hito no declara saneamiento técnico adicional; solo corrige la documentación pública para que no sobreatribuya ni infradeclare el estado observable vigente.  
 **Decisión:** actualizar la documentación pública de suite y catálogo en bloque mínimo separado, sin reabrir todavía una depuración más amplia del parse diagnóstico ni adelantar nuevos frentes funcionales.  
 **Estado:** cerrado
+
+
+Fecha: 19/03/2026
+Hora (Europe/Madrid): 13:40:00
+Tipo de hito: CAMBIO_RUNNER
+Frente/Fase: Frente final del lenguaje SV / Bloque A — Contrato diagnóstico / ampliación de cobertura explícita E005 E010 / Fase IV
+Resumen del cambio: Se amplía la suite de conformidad observable con los casos adversariales `duplicate_identifier.svp` e `invalid_role_literal.svp`, se actualiza `tests/run_conformance.py` y se sincronizan `tests/README.md` y `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md` con la nueva cobertura explícita de `E005` y `E010`.
+Motivo o argumento: Tras los saneamientos locales previos, el siguiente cierre legítimo dentro de la familia E001–E010 era aumentar la cobertura explícita de códigos ya emitibles y de bajo riesgo, sin abrir todavía una refundición más amplia del parse diagnóstico.
+Base doctrinal o técnica invocada: pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; catálogo implementativo vigente; criterio de bloques cerrables; suite observable del frontend de referencia.
+Artefactos afectados: `tests/run_conformance.py`; `tests/README.md`; `tests/conformance/invalid/duplicate_identifier.svp`; `tests/conformance/invalid/invalid_role_literal.svp`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+Evidencia: verificación local de la suite con 22 de 22 casos de conformidad superados y comprobación directa de que los dos nuevos adversariales manifiestan `E005` y `E010`, respectivamente.
+Impacto: `coherencia_diagnostica`; `trazabilidad`; `cobertura_de_suite`; `mantenibilidad`.
+Objeción adversarial considerada: riesgo de presentar una ampliación de cobertura como si fuera saneamiento funcional nuevo. El paquete no altera la semántica implementativa del frontend; hace explícita y verificable en la suite una parte más del contrato diagnóstico ya existente.
+Decisión: ampliar de forma controlada la cobertura observable del Bloque A sobre `E005` y `E010`, mantener `E004` como deuda documentada de alcanzabilidad superficial y reservar para bloque posterior cualquier descompresión adicional de `E001`.
+Estado: cerrado
