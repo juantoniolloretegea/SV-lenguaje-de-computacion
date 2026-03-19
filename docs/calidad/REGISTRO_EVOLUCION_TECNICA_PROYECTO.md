@@ -505,3 +505,30 @@ Objeción adversarial considerada: riesgo de presentar como apertura de familia 
 Decisión: abrir la familia `E101–E111` por sus dos casos ya directamente emitibles y más baratos de verificar, mantener el resto del subtramo bajo auditoría y reservar para la siguiente ronda el contraste fino `E102 / E104 / E106 / E111`.
 
 Estado: cerrado
+
+
+| RETP-2026-025 | 19/03/2026 | 18:20:00 | VERIFICABILIDAD_EXTERNA | Frente final del lenguaje SV / verificabilidad externa mínima / FrameComparison ejemplos y señalización histórica / Fase IV | Se refuerza la verificabilidad externa del repositorio mediante la normalización léxica de `FrameComparison`, la publicación de ejemplos canónicos mínimos y la creación de una carpeta pública de sondas adversariales documentadas. | cerrado |
+
+Fecha: 19/03/2026
+Hora: 18:20:00
+Tipo de hito: VERIFICABILIDAD_EXTERNA
+Frente/Fase: Frente final del lenguaje SV / verificabilidad externa mínima / FrameComparison ejemplos y señalización histórica / Fase IV
+RETP-2026-025 — Cierre de verificabilidad externa mínima antes del contraste fino de E101–E111
+
+Resumen del cambio: Se elimina la duplicidad silenciosa de clave en el lexer para `FrameComparison`, se ajusta el parser para aceptar el mismo literal superficial como constructor de `QueryContext` y como `query_type`, se publican dos ejemplos canónicos mínimos en `examples/` y se añade una pequeña capa pública de sondas adversariales documentadas en `tests/adversarial/documentados/`. Además, se refuerza la señalización histórica del documento de concordancia parcial de raíz.
+
+Motivo o argumento: La lectura adversarial externa había detectado un riesgo de verificabilidad pública: una redundancia léxica objetivamente anómala en `FrameComparison`, ausencia de programas `.svp` en `examples/` y un documento histórico en raíz con nombre potencialmente sobreatributivo. Antes de seguir ampliando el barrido técnico de familias, convenía cerrar este bloque corto de credibilidad externa.
+
+Base doctrinal o técnica: Pliego de condiciones del Sistema Vectorial SV; Bloque A — Contrato diagnóstico; criterio de verificabilidad externa mínima; suite pública vigente; análisis adversarial externo contrastado con repo fresco.
+
+Artefactos afectados: `src/svp_lexer.py`; `src/svp_parser.py`; `README.md`; `src/README.md`; `examples/README.md`; `examples/celula_basica_con_evaluacion.svp`; `examples/consulta_framecomparison.svp`; `tests/adversarial/README.md`; `tests/adversarial/documentados/README.md`; `tests/adversarial/documentados/celula_aislada_con_resolucion_u.svp`; `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp`; `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`; `CONCORDANCIA_CATALOGO_ERRORES_IR_v0_2_IMPLEMENTACION_PARCHE_1A.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+Evidencia: contraste directo sobre repo fresco; verificación local de la suite de conformidad tras la normalización de `FrameComparison`; y lectura comparada entre materiales públicos canónicos y adversariales.
+
+Impacto: verificabilidad_externa; trazabilidad; descubrilidad; redaccion_publica; mantenibilidad.
+
+Objeción adversarial considerada: riesgo de mezclar ejemplos públicos con sondas adversariales y de publicar materiales híbridos que no fueran ni ejemplos canónicos ni piezas de contraste confesadas. Se evita con dos carriles separados: `examples/` para ejemplos mínimos y `tests/adversarial/documentados/` para sondas públicas de tensión técnica.
+
+Decisión: cerrar primero un bloque corto de verificabilidad externa mínima y dejar para la siguiente ronda el contraste fino `E102 / E104 / E106 / E111`, ya sobre una superficie pública más limpia y mejor defendible frente a revisión externa.
+
+Estado: cerrado
