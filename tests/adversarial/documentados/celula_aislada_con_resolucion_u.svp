@@ -1,0 +1,35 @@
+-- celula_aislada_con_resolucion_u.svp
+-- Sonda documentada de referencias opacas en res_spec y resolve.
+-- Está diseñada para mostrar con claridad la cadena N0 / N1 / N2 / resolve / proyección.
+-- Los identificadores contextuales se dejan opacos a propósito para observar si el frontend
+-- exige o no una declaración previa en esta zona del lenguaje.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics SemK3 {
+  APTO -> "Clasificación fuerte favorable";
+  NO_APTO -> "Clasificación fuerte desfavorable";
+  INDETERMINADO -> "Sin clasificación fuerte";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3;
+  role: Base;
+}
+
+res_spec RS_experto {
+  context: ContextoExpertoDeclarado;
+  mechanism: MecanismoExpertoDeclarado;
+  mapping: MapeoExpertoDeclarado;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, Zero, Zero, Zero, One, One, U, U, U];
+}
+
+let E1 = evaluate(S1);
+let RR1 = resolve(U, with: RS_experto, context: CtxExperto, mechanism: MecExperto);
+let valor_resuelto = RR1.resolved_to;
