@@ -16,21 +16,23 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - Referencia de tipos y operadores
 - Guía de migración desde Python/Rust
 
-
 ## Gobierno y manual de fase
 
-- `gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
-- `gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
-- `manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
-- `manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
+La **sede doctrinal superior** del ecosistema SV permanece en [`SV-matematica-semantica`](https://github.com/juantoniolloretegea/SV-matematica-semantica). En consecuencia, la versión pública consolidada del pliego y de la base mínima auxiliar del manual SVP puede consultarse allí:
 
-**Nota de fase:** el pliego canónico y sus assets gráficos residen en la sede doctrinal superior `SV-matematica-semantica`. Este repositorio conserva su remisión operativa y no afirma ya una copia material local del pliego ni de sus figuras.
+- [Pliego de condiciones del Sistema Vectorial SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/main/docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md)
+- [Bloque de gobierno doctrinal de fase](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/gobierno)
+- [Base mínima auxiliar del manual SVP](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/manual_svp)
+
+En este repositorio operativo permanecen como piezas locales de trabajo y de enlace:
+
+- `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
+- `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
 
 ## Gobierno operativo adicional de fase
 
 - `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
 - `docs/manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
-
 
 ## Frente operativo final del lenguaje SV
 
