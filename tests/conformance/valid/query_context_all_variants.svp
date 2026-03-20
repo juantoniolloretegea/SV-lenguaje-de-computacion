@@ -10,6 +10,28 @@ cellspec C1 {
   role: Base;
 }
 
+capture_spec Cap1 {
+  parameter_id: 1;
+  observation_domain: DominioObs1;
+  observation_space: ObsEsp1;
+  failure_symbol: Bottom;
+  mapping: MapCaptura1;
+}
+
+admissibility_spec Adm1 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm1;
+}
+
+ternarizer Ter1 {
+  observation_space: ObsEsp1;
+  partition_zero: Zona0;
+  partition_one: Zona1;
+  partition_u: ZonaU;
+  mapping: MapTer1;
+}
+
 cellstate S1 {
   spec: C1;
   vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
