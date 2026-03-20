@@ -1,0 +1,93 @@
+-- query_context_type_mismatch.svp — query spec incoherente con el QueryContext ejecutado
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+capture_spec Cap1 {
+  parameter_id: 1;
+  observation_domain: DominioObs1;
+  observation_space: ObsEsp1;
+  failure_symbol: Bottom;
+  mapping: MapCap1;
+}
+
+admissibility_spec Adm1 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm1;
+}
+
+ternarizer Ter1 {
+  observation_space: ObsEsp1;
+  partition_zero: Zona0;
+  partition_one: Zona1;
+  partition_u: ZonaU;
+  mapping: MapTer1;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+let E1 = evaluate(S1);
+
+frame F1 {
+  index: 1;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F2 {
+  index: 2;
+  architecture: Arch1;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+horizon H1 {
+  architecture: Arch1;
+  events: [Ev1];
+}
+
+domain D1 {
+  parameters: [P1];
+  interface: I1;
+  horizon: H1;
+  capture_specs: [Cap1];
+  admissibility_specs: [Adm1];
+  ternarizers: [Ter1];
+  exogeneity_mask: Exo1;
+  silent_u: SU1;
+  transduction_policy: TP1;
+  u_policy: UP1;
+  closure_criterion: CC1;
+}
+
+agent AG1 {
+  architecture: Arch1;
+  domain: D1;
+  query_engine: QE1;
+}
+
+query_spec QSPoint {
+  query_type: PointEvaluation;
+  scope: Cell;
+  restrictions: [];
+}
+
+let Q_bad = query(QSPoint, by: AG1, in: FrameComparison(F1, F2));
