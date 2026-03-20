@@ -180,16 +180,16 @@ E304 = SVPErrorDef("E304", "TrajectoryAlternanceViolation",
 
 # ── Capa 4 — Uso ─────────────────────────────────────────────────────
 
-E401 = SVPErrorDef("E401", "DomainMissingHorizon",
-    "Domain declarado sin horizonte de sucesos",
+E401 = SVPErrorDef("E401", "DomainPortContractViolation",
+    "Domain incumple el contrato mínimo de enganche declarado",
     ErrorLevel.LAYER4, ErrorPhase.VALIDATE)
 
-E402 = SVPErrorDef("E402", "AgentMissingDomain",
-    "Agent declarado sin dominio",
+E402 = SVPErrorDef("E402", "AgentDomainContractViolation",
+    "Agent incompatible con el Domain o con la arquitectura declarada",
     ErrorLevel.LAYER4, ErrorPhase.VALIDATE)
 
-E403 = SVPErrorDef("E403", "QuerySpecInvalid",
-    "QuerySpec con tipo o alcance no reconocido",
+E403 = SVPErrorDef("E403", "QueryContractViolation",
+    "QuerySpec o QueryContext incompatibles con el contrato de uso",
     ErrorLevel.LAYER4, ErrorPhase.VALIDATE)
 
 # ── Capa 5 — Serialización / Conformidad ─────────────────────────────
