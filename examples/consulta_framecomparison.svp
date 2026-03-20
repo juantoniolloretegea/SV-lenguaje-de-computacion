@@ -1,7 +1,6 @@
 -- consulta_framecomparison.svp — ejemplo canónico mínimo de QueryContext FrameComparison
--- Nota de estatuto: este ejemplo demuestra la corrección léxica y superficial de FrameComparison.
--- En el estado actual del compilador, los campos opacos de Domain que aparecen abajo se aceptan sin
--- verificación semántica exhaustiva. Esa limitación está documentada como deuda viva del frente N4/Uso.
+-- Nota de estatuto: este ejemplo demuestra la corrección léxica, superficial y de enganche mínimo
+-- para una consulta de comparación de frames apoyada en Domain / Agent / QuerySpec.
 
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
@@ -11,6 +10,28 @@ cellspec C1 {
   codomain: K3;
   semantics: Klin;
   role: Base;
+}
+
+capture_spec Cap1 {
+  parameter_id: 1;
+  observation_domain: DominioObs1;
+  observation_space: ObsEsp1;
+  failure_symbol: Bottom;
+  mapping: MapCaptura1;
+}
+
+admissibility_spec Adm1 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm1;
+}
+
+ternarizer Ter1 {
+  observation_space: ObsEsp1;
+  partition_zero: Zona0;
+  partition_one: Zona1;
+  partition_u: ZonaU;
+  mapping: MapTer1;
 }
 
 cellstate S1 {
