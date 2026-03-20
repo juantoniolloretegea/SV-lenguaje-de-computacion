@@ -40,6 +40,40 @@
     },
     {
       "fields": {
+        "failure_symbol": "Bottom",
+        "mapping": "MapCaptura1",
+        "observation_domain": "DominioObs1",
+        "observation_space": "ObsEsp1",
+        "parameter_id": 1
+      },
+      "level": "N0",
+      "name": "Cap1",
+      "type": "CaptureSpec"
+    },
+    {
+      "fields": {
+        "parameter_id": 1,
+        "rule": "ReglaAdm1",
+        "states": "{Ok, Degraded, Failed, U}"
+      },
+      "level": "N0",
+      "name": "Adm1",
+      "type": "AdmissibilitySpec"
+    },
+    {
+      "fields": {
+        "mapping": "MapTer1",
+        "observation_space": "ObsEsp1",
+        "partition_one": "Zona1",
+        "partition_u": "ZonaU",
+        "partition_zero": "Zona0"
+      },
+      "level": "N0",
+      "name": "Ter1",
+      "type": "Ternarizer"
+    },
+    {
+      "fields": {
         "spec": "C1",
         "vector": [
           "Zero",
@@ -424,5 +458,5 @@
   ],
   "serializer_version": "0.1.0",
   "source_file": "query_context_all_variants.svp",
-  "source_sha256": "e94e7b9d8cd1518fddb170fc241644cbd079a971d967ec75e9060f5529bc0600"
+  "source_sha256": "1e91f4d9c1c7039acfbb07880bb5b66e9ede2fe4ca2d652dccc22b3f388e28a4"
 }
