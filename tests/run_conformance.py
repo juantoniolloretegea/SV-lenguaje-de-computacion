@@ -42,6 +42,9 @@ EXPECTED_INVALID_CODES = {
     "supervise_wrong_role.svp": "E211",
     "trajectory_alternance_violation.svp": "E304",
     "u_coercion.svp": "E507",
+    "domain_chain_mismatch.svp": "E401",
+    "agent_architecture_mismatch.svp": "E402",
+    "query_context_type_mismatch.svp": "E403",
 }
 
 
