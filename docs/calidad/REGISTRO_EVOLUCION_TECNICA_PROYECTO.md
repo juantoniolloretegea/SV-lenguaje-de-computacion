@@ -655,3 +655,23 @@ Estado: cerrado
 - **Objeción adversarial considerada:** riesgo de convertir un saneamiento documental en reapertura funcional encubierta o en maquillaje de cierre. No procede: el lote no toca `src/`, no altera la suite y se limita a sincerar el estado real ya materializado.
 - **Decisión:** regularizar solo la capa documental y registral, dejar explícita la deuda residual de la familia `E301–E304` y reservar cualquier apertura funcional posterior para un bloque independiente y justificado.
 - **Estado:** cerrado
+
+| RETP-2026-032 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que `E304` sí es observable y cubierto, mientras `E301`, `E302` y `E303` no comparten todavía esa misma emitibilidad pública efectiva. | cerrado |
+
+
+### RETP-2026-032
+
+- **Fecha:** 20/03/2026
+- **Hora (Europe/Madrid):** 17:12:51
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de `E301–E304` / Fase IV
+- **Resumen del cambio:** Se sincronizan `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md` y el registro técnico con la microauditoría E para dejar explícito en la superficie pública que `E304` sí es observable y cubierto, mientras `E301`, `E302` y `E303` no comparten todavía esa misma emitibilidad pública efectiva.
+- **Motivo o argumento:** Tras `RETP-2026-031`, la capa interna ya había quedado saneada, pero la referencia pública seguía pudiendo inducir una lectura homogénea de la familia `E301–E304`. La microauditoría E mostró que `E304` sí está materializado, que `E301` y `E302` dependen hoy de invariantes de tipo sin operación superficial publicada, y que `E303` permanece sin emisión autónoma acreditada.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; `GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`; `IR_CANONICA_BIENFORMACION_SV_v0_2.md`; `src/svp_parser.py`; `src/svp_validator.py`; `src/svp_errors.py`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; repo fresco auditado.
+- **Artefactos afectados:** `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura con zoom corto de gramática, parser, validator y catálogo; contraste de casos sintéticos mínimos sobre `TransitionData` que muestran caída de ausencia de `horizon_ref` en parseo y de referencia ausente o de tipo incorrecto en `E006`; verificación local posterior de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** trazabilidad; redaccion_publica; coherencia_diagnostica; mantenibilidad; verificabilidad_externa.
+- **Objeción adversarial considerada:** riesgo de rebajar ilegítimamente el catálogo implementativo o de contradecir el pliego al reinterpretar desde abajo la familia `E301–E304`. No procede: el lote no modifica parser, validator, IR ni gramática; solo regulariza la lectura pública de la emitibilidad ya constatada por evidencia directa.
+- **Decisión:** sincerar la superficie pública de referencia para que el catálogo no sugiera una homogeneidad falsa dentro de `E301–E304`, mantener `E304` como único cierre plenamente observable de la familia en la superficie actual y reservar cualquier eventual apertura funcional posterior para un bloque independiente y justificado.
+- **Estado:** cerrado
+
