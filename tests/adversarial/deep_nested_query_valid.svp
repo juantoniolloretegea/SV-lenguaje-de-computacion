@@ -15,6 +15,28 @@ cellstate S1 {
   vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
+capture_spec Cap_SEC0 {
+  parameter_id: 1;
+  observation_domain: DominioObs_SEC0;
+  observation_space: ObsEsp_SEC0;
+  failure_symbol: Bottom;
+  mapping: MapCaptura_SEC0;
+}
+
+admissibility_spec Adm_SEC0 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm_SEC0;
+}
+
+ternarizer Ter_SEC0 {
+  observation_space: ObsEsp_SEC0;
+  partition_zero: Zona0_SEC0;
+  partition_one: Zona1_SEC0;
+  partition_u: ZonaU_SEC0;
+  mapping: MapTer_SEC0;
+}
+
 admissibility_table T1 {
   input_codomains: [K3, K3];
   output_codomain: K3;
