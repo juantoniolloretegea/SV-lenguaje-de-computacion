@@ -265,15 +265,15 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Fecha:** 18/03/2026
 - **Hora (Europe/Madrid):** 23:45:11
 - **Tipo de hito:** DECISION_GOBIERNO_TECNICO
-- **Frente/Fase:** Gobierno operativo del lenguaje / materialización dual del pliego / constructor del manual SVP / Wishlist IRQ / Fase IV
-- **Resumen del cambio:** Se materializa el pliego en doble sede interna, se crea el constructor del manual del lenguaje SVP con extensión `.svp` y se crea el Wishlist IRQ del ecosistema SV como mecanismo de recogida, aparcamiento y priorización controlada de deseos e ideas.
-- **Motivo o argumento:** Era necesario evitar dependencia exclusiva de la URL canónica pública del pliego y, al mismo tiempo, ordenar dos frentes operativos del repositorio del lenguaje: la construcción progresiva del manual y la gestión disciplinada de la presión creativa lateral.
+- **Frente/Fase:** Gobierno operativo del lenguaje / pliego doctrinal enlazado / manual SVP local / Wishlist IRQ / Fase IV
+- **Resumen del cambio:** Se fijan el bloque local de gobierno operativo, el constructor del manual del lenguaje SVP con extensión `.svp` y el Wishlist IRQ del ecosistema SV, manteniendo la consulta pública consolidada del pliego en la sede doctrinal superior.
+- **Motivo o argumento:** Era necesario ordenar dos frentes operativos del repositorio del lenguaje —la construcción progresiva del manual y la gestión disciplinada de la presión creativa lateral— sin desplazar la sede doctrinal superior ni duplicar innecesariamente el pliego y su bloque gráfico.
 - **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; fijación de sedes del ecosistema; frontera normativa del lenguaje SV; IR canónica v0.2; regla de segregación entre ruta activa y Beta.
-- **Artefactos afectados:** `README.md`; `docs/README.md`; `docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md`; `docs/gobierno/README.md`; `docs/gobierno/MANIFIESTO_PLIEGO_Y_ASSETS.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`; `docs/manual_svp/README.md`; `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`; `docs/manual_svp/PLANTILLA_DE_TRAMO_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/PLANTILLA_DE_TRAMO_DEL_MANUAL_DEL_LENGUAJE_SVP.svp`; `docs/calidad/ACTA_DE_MATERIALIZACION_DEL_PLIEGO_Y_GOBIERNO_OPERATIVO_DEL_LENGUAJE_SV_2026_03_18.md`.
-- **Evidencia:** construcción deliberada del paquete dual de repositorios; incorporación completa de assets del pliego; creación del constructor del manual; creación del Wishlist IRQ con CSV propio.
+- **Artefactos afectados:** `docs/README.md`; `docs/gobierno/README.md`; `docs/gobierno/MANIFIESTO_PLIEGO_Y_ASSETS.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`; `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`; `docs/manual_svp/README.md`; `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`; `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`.
+- **Evidencia:** árbol real del repositorio operativo; existencia local del bloque de gobierno y del bloque manual SVP; remisión documental expresa del pliego a la sede doctrinal superior.
 - **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; autonomia_unidades; control_de_presion_creativa.
 - **Objeción adversarial considerada:** riesgo de multiplicar documentos sin eje rector o de abrir un circuito de ideas laterales que compita con la ruta activa del lenguaje.
-- **Decisión:** mantener el pliego como ley interna visible en ambas sedes, usar el constructor del manual como máquina de cierre progresivo del manual SVP y canalizar toda idea lateral por el Wishlist IRQ antes de convertirla en tarea o frente real.
+- **Decisión:** mantener el pliego como referencia pública en la sede doctrinal superior, usar el constructor del manual como máquina de cierre progresivo del manual SVP y canalizar toda idea lateral por el Wishlist IRQ antes de convertirla en tarea o frente real.
 - **Estado:** cerrado
 
 
@@ -604,3 +604,20 @@ Estado: cerrado
 - **Decisión:** registrar la tensión como nota técnica subordinada de calidad, abrir deuda viva específica y reservar cualquier eventual publicación doctrinal nueva para un momento posterior y solo si la bajada operativa acreditara insuficiencia real del marco vigente.
 - **Estado:** cerrado
 
+
+
+### RETP-2026-029
+
+- **Fecha:** 20/03/2026
+- **Hora (Europe/Madrid):** 11:45:22
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Saneamiento de concordancia del bloque pliego-manual / Fase IV
+- **Resumen del cambio:** Se regularizan el bloque `docs/README.md`, la carpeta `docs/gobierno/`, la carpeta `docs/manual_svp/` y el registro técnico para que la documentación pública del repositorio operativo refleje exactamente el árbol real: pliego y bloque gráfico en sede doctrinal superior, manual SVP de trabajo en sede operativa local.
+- **Motivo o argumento:** La microauditoría adversarial del repositorio operativo constató discordancias entre varias afirmaciones documentales y la presencia material real de artefactos. Era necesario sincerar el bloque sin reabrir sedes ni multiplicar copias del pliego.
+- **Base doctrinal o técnica invocada:** fijación de sedes del ecosistema SV; pliego de condiciones del Sistema Vectorial SV; protocolo interno ZIP → GitHub → Verificación → Registro → Cierre; árbol real del repositorio operativo contrastado sobre repo fresco.
+- **Artefactos afectados:** `docs/README.md`; `docs/gobierno/README.md`; `docs/gobierno/MANIFIESTO_PLIEGO_Y_ASSETS.md`; `docs/manual_svp/README.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/calidad/ACTA_DE_SANEAMIENTO_DE_CONCORDANCIA_DEL_BLOQUE_PLIEGO_MANUAL_RETP_2026_010_2026_03_20.md`.
+- **Evidencia:** lectura completa del repo fresco `SV-lenguaje-de-computacion-main`; contraste del árbol real con README, manifiesto, registro y bloque manual; verificación de que el manual SVP permanece local en `docs/manual_svp/` y de que el pliego canónico se consulta en `SV-matematica-semantica`.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; fiabilidad.
+- **Objeción adversarial considerada:** riesgo de presentar como carencia la ausencia de una copia local del pliego o de arrastrar una remisión ya obsoleta del manual SVP a la sede doctrinal.
+- **Decisión:** reescribir el bloque documental y registral para formular de modo positivo y exacto la distribución vigente: pliego en sede doctrinal superior, manual SVP en sede operativa local.
+- **Estado:** cerrado
