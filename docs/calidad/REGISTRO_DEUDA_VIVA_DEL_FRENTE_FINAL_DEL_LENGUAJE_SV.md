@@ -20,12 +20,12 @@ Este registro concentra únicamente la deuda viva relevante para el frente final
 - **Estado:** abierta.
 - **Prioridad:** media-alta.
 
-### DFL-003 — ABI semántico-diagnóstico aún no fijado expresamente
+### DFL-003 — ABI semántico-diagnóstico materializado, pero todavía no agotado
 
-- **Descripción:** el núcleo semántico-diagnóstico que deberá preservarse hacia backend todavía no está materializado como pieza de cierre autónoma.
-- **Riesgo:** abrir backend sin contrato mínimo congelado.
-- **Estado:** abierta.
-- **Prioridad:** media-alta.
+- **Descripción:** el contrato mínimo de enganche y ABI semántico-diagnóstico ya queda materializado en una pieza autónoma de arquitectura y en una primera capa de validación fuerte sobre `Domain`, `Agent`, `QuerySpec` y `query`.
+- **Riesgo:** confundir esta materialización mínima con cierre total de N4/Uso o con interpretación ejecutiva plena de todos los campos opacos de `Domain`.
+- **Estado:** acotada y gobernada.
+- **Prioridad:** media.
 
 ## 3. Regla
 
@@ -39,3 +39,11 @@ Toda nueva deuda viva relevante deberá incorporarse aquí si afecta al cierre d
 - **Estado:** abierta y gobernada.
 - **Prioridad:** alta.
 
+
+
+### DFL-005 — Campos opacos de Domain todavía no interpretados por runtime
+
+- **Descripción:** aunque el contrato mínimo de enganche ya dispone de validación formal inicial, el frontend no ejecuta todavía una semántica material completa de `interface`, `exogeneity_mask`, `silent_u`, `transduction_policy`, `u_policy`, `closure_criterion` ni `query_engine`.
+- **Riesgo:** sobreatribuir al núcleo capacidades perceptivas o de cierre que hoy solo están gobernadas como contrato de forma.
+- **Estado:** abierta y reconocida.
+- **Prioridad:** media.
