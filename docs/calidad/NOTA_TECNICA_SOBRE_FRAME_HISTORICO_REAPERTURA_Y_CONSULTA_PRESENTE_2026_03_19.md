@@ -53,7 +53,7 @@ La presente nota se apoya, al menos, en las siguientes piezas:
 
 - `docs/arquitectura/ACTA_DE_APERTURA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV_2026_03_19.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
-- `spec/IR_CANONICA_BIENFORMACION_SV_v0_2.md`
+- `IR_CANONICA_BIENFORMACION_SV_v0_2.md`
 - `spec/u_en_svp_semantica_formal_y_regimen_de_resolucion.md`
 - artefactos vigentes de validator, runner, catálogo y consulta pública del repositorio del lenguaje.
 
