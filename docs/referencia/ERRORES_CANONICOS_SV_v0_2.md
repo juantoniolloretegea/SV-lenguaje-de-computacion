@@ -155,6 +155,16 @@ El caso adversarial `invalid_tri_literal.svp` aporta ahora cobertura explícita 
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 
+### 7.4. Estado fino de la emitibilidad pública de `E301–E304`
+
+Tras la microauditoría E y el contraste directo con gramática, parser, validator y suite, la familia `E301–E304` no debe leerse hoy como un bloque homogéneo de emitibilidad pública ya materializada.
+
+- `E304` sí dispone de **emisión observable directa** en `src/svp_validator.py` y de **cobertura explícita** en la suite de conformidad vigente.
+- `E301` y `E302` permanecen hoy como **invariantes de tipo** (`Frame` inmutable y `Trajectory` append-only) cuya violación no cuenta todavía con una operación superficial publicada que las dispare como error autónomo en v0.1.
+- `E303` permanece en catálogo, pero **no dispone aún de emisión autónoma acreditada** en la superficie pública vigente: la ausencia de `horizon_ref` cae hoy en error de parseo, y las referencias ausentes o de tipo incorrecto se canalizan observacionalmente por `E006`.
+
+En consecuencia, la tabla general del catálogo no debe interpretarse como si `E301`, `E302`, `E303` y `E304` compartieran ya el mismo nivel de emitibilidad pública efectiva. El catálogo conserva esos códigos por trazabilidad implementativa, pero la emitibilidad observable acreditada de la familia queda hoy cerrada de forma plena solo para `E304`.
+
 ## 8. Regla de continuidad
 
 Si el catálogo implementativo cambia, este documento deberá actualizarse en el mismo bloque de trabajo que altere:
