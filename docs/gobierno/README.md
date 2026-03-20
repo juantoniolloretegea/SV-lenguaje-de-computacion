@@ -4,16 +4,21 @@ Esta carpeta reúne los documentos rectores de fase del repositorio operativo de
 
 ## Contenido
 
-- `PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md`
-- `WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
-- `POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
-- `WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`
-- `figuras/` con portada y figuras 01–16
 - `MANIFIESTO_PLIEGO_Y_ASSETS.md`
+- `POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
+- `WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
+- `WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`
+
+## Remisión doctrinal
+
+La versión pública consolidada del pliego y de su bloque gráfico se consulta en la sede doctrinal superior:
+
+- [Pliego de condiciones del Sistema Vectorial SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/main/docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md)
+- [Bloque de gobierno doctrinal de fase](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/gobierno)
 
 ## Regla de lectura
 
-Aquí reside el **reflejo operativo obligatorio** del pliego canónico. Toda orden de trabajo, evaluación de deuda, apertura de tarea o decisión técnica deberá leerse desde esta carpeta bajo subordinación al pliego y a la sede doctrinal superior.
+Esta carpeta funciona como **bloque de gobierno operativo subordinado**. Desde aquí se gobiernan la fase activa del lenguaje, la compatibilidad interlenguajes y la canalización disciplinada de deseos e ideas del ecosistema, bajo subordinación al pliego y a la sede doctrinal superior.
 
 ## Nota de fase
 
