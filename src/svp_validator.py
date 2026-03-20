@@ -13,7 +13,8 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E008, E009,
-                         E101, E102, E104, E105, E202, E211, E303, E304)
+                         E101, E102, E104, E105, E202, E211, E303, E304,
+                         E401, E402, E403)
 
 
 class Validator:
@@ -65,18 +66,36 @@ class Validator:
             self._validate_connector(node)
         elif isinstance(node, AdmissibilityTableDecl):
             self._validate_admissibility_table(node)
+        elif isinstance(node, CaptureSpecDecl):
+            self._validate_capture_spec(node)
+        elif isinstance(node, AdmissibilitySpecDecl):
+            self._validate_admissibility_spec(node)
+        elif isinstance(node, TernarizerDecl):
+            self._validate_ternarizer(node)
         elif isinstance(node, GraphDecl):
             self._validate_graph(node)
+        elif isinstance(node, HorizonDecl):
+            self._validate_horizon(node)
+        elif isinstance(node, FrameDecl):
+            self._validate_frame(node)
         elif isinstance(node, TransitionDataDecl):
             self._validate_transition_data(node)
         elif isinstance(node, TrajectoryDecl):
             self._validate_trajectory(node)
+        elif isinstance(node, DomainDecl):
+            self._validate_domain(node)
+        elif isinstance(node, AgentDecl):
+            self._validate_agent(node)
+        elif isinstance(node, QuerySpecDecl):
+            self._validate_query_spec(node)
         elif isinstance(node, GateCmd):
             self._validate_gate(node)
         elif isinstance(node, EvalCmd):
             self._validate_eval(node)
         elif isinstance(node, ResolveCmd):
             self._validate_resolve(node)
+        elif isinstance(node, QueryCmd):
+            self._validate_query(node)
         elif isinstance(node, SuperviseCmd):
             self._validate_supervise(node)
         elif isinstance(node, ComposeCmd):
@@ -189,6 +208,38 @@ class Validator:
             raise SVPError(E009, node.loc.line, node.loc.col,
                            f"Tabla {node.name!r} incompleta o inconsistente: {detail}")
 
+    def _validate_capture_spec(self, node: CaptureSpecDecl):
+        if node.parameter_id <= 0:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"CaptureSpec {node.name!r} con parameter_id no positivo")
+        if not node.observation_space:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"CaptureSpec {node.name!r} sin observation_space")
+        if node.failure_symbol != "Bottom":
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"CaptureSpec {node.name!r} debe declarar failure_symbol = Bottom")
+
+    def _validate_admissibility_spec(self, node: AdmissibilitySpecDecl):
+        if node.parameter_id <= 0:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"AdmissibilitySpec {node.name!r} con parameter_id no positivo")
+        normalized = "".join(node.states.split())
+        if normalized != "{Ok,Degraded,Failed,U}":
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"AdmissibilitySpec {node.name!r} debe declarar states = {{Ok, Degraded, Failed, U}}")
+        if not node.rule:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"AdmissibilitySpec {node.name!r} sin rule")
+
+    def _validate_ternarizer(self, node: TernarizerDecl):
+        if not node.observation_space:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Ternarizer {node.name!r} sin observation_space")
+        partitions = [node.partition_zero, node.partition_one, node.partition_u]
+        if any(not part for part in partitions):
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Ternarizer {node.name!r} con particiones incompletas")
+
     def _validate_codomain(self, node: CodomainDecl):
         if len(node.values) == 0:
             raise SVPError(E004, node.loc.line, node.loc.col)
@@ -221,6 +272,24 @@ class Validator:
         for v in node.nodes:
             dfs(v)
 
+    def _validate_horizon(self, node: HorizonDecl):
+        if not node.architecture:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Horizon {node.name!r} sin architecture")
+        if len(node.events) == 0:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Horizon {node.name!r} sin events")
+
+    def _validate_frame(self, node: FrameDecl):
+        for ref in node.cell_states:
+            self._require_ref(ref, node.loc, "CellStateDecl")
+        for ref in node.eval_results:
+            self._require_ref(ref, node.loc, "EvalCmd")
+        for ref in node.gate_results:
+            self._require_ref(ref, node.loc, "GateCmd")
+        for ref in node.supervision:
+            self._require_ref(ref, node.loc, "SuperviseCmd")
+
     def _validate_transition_data(self, node: TransitionDataDecl):
         self._require_ref(node.horizon_ref, node.loc, "HorizonDecl")
 
@@ -231,12 +300,86 @@ class Validator:
 
         last_index = len(node.entries) - 1
         for idx, entry in enumerate(node.entries):
+            self._require_ref(entry.frame, node.loc, "FrameDecl")
             if idx < last_index and entry.transition is None:
                 raise SVPError(E304, node.loc.line, node.loc.col,
                                f"La entrada {idx + 1} de '{node.name}' no es la última y debe llevar transition")
             if idx == last_index and entry.transition is not None:
                 raise SVPError(E304, node.loc.line, node.loc.col,
                                f"La última entrada de '{node.name}' no puede llevar transition")
+            if entry.transition is not None:
+                self._require_ref(entry.transition, node.loc, "TransitionDataDecl")
+
+    def _validate_domain(self, node: DomainDecl):
+        if node.horizon not in self.symbols or self.symbol_types[node.horizon] != "HorizonDecl":
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Domain {node.name!r} referencia un horizon no declarado o de tipo incorrecto: {node.horizon!r}")
+        if not node.capture_specs or not node.admissibility_specs or not node.ternarizers:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Domain {node.name!r} debe declarar capture_specs, admissibility_specs y ternarizers no vacíos")
+
+        capture_nodes = []
+        for ref in node.capture_specs:
+            if ref not in self.symbols or self.symbol_types[ref] != "CaptureSpecDecl":
+                raise SVPError(E401, node.loc.line, node.loc.col,
+                               f"Domain {node.name!r} referencia CaptureSpec no declarado o de tipo incorrecto: {ref!r}")
+            capture_nodes.append(self.symbols[ref])
+
+        admissibility_nodes = []
+        for ref in node.admissibility_specs:
+            if ref not in self.symbols or self.symbol_types[ref] != "AdmissibilitySpecDecl":
+                raise SVPError(E401, node.loc.line, node.loc.col,
+                               f"Domain {node.name!r} referencia AdmissibilitySpec no declarado o de tipo incorrecto: {ref!r}")
+            admissibility_nodes.append(self.symbols[ref])
+
+        ternarizer_nodes = []
+        for ref in node.ternarizers:
+            if ref not in self.symbols or self.symbol_types[ref] != "TernarizerDecl":
+                raise SVPError(E401, node.loc.line, node.loc.col,
+                               f"Domain {node.name!r} referencia Ternarizer no declarado o de tipo incorrecto: {ref!r}")
+            ternarizer_nodes.append(self.symbols[ref])
+
+        capture_param_ids = {n.parameter_id for n in capture_nodes}
+        admissibility_param_ids = {n.parameter_id for n in admissibility_nodes}
+        if capture_param_ids != admissibility_param_ids:
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Domain {node.name!r} no conserva la misma familia de parameter_id entre capture_specs y admissibility_specs")
+
+        ternarizer_spaces = {n.observation_space for n in ternarizer_nodes}
+        capture_spaces = {n.observation_space for n in capture_nodes}
+        if not capture_spaces.issubset(ternarizer_spaces):
+            raise SVPError(E401, node.loc.line, node.loc.col,
+                           f"Domain {node.name!r} declara CaptureSpec cuyo observation_space no queda cubierto por los ternarizers")
+
+    def _validate_agent(self, node: AgentDecl):
+        if node.domain not in self.symbols or self.symbol_types[node.domain] != "DomainDecl":
+            raise SVPError(E402, node.loc.line, node.loc.col,
+                           f"Agent {node.name!r} referencia un Domain no declarado o de tipo incorrecto: {node.domain!r}")
+
+        domain = self.symbols[node.domain]
+        horizon = self.symbols.get(domain.horizon)
+        if horizon is None or not isinstance(horizon, HorizonDecl):
+            raise SVPError(E402, node.loc.line, node.loc.col,
+                           f"Agent {node.name!r} no puede vincularse a un Domain con horizon inválido")
+        if node.architecture != horizon.architecture:
+            raise SVPError(E402, node.loc.line, node.loc.col,
+                           f"Agent {node.name!r} declara architecture {node.architecture!r}, pero su Domain opera sobre {horizon.architecture!r}")
+
+    def _validate_query_spec(self, node: QuerySpecDecl):
+        allowed = {
+            "PointEvaluation": "Cell",
+            "TrajectoryState": "Trajectory",
+            "FrameComparison": "Pair",
+            "GlobalCriticality": "Architecture",
+            "CoverageState": "Architecture",
+        }
+        expected_scope = allowed.get(node.query_type)
+        if expected_scope is None:
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           f"query_type no reconocido: {node.query_type!r}")
+        if node.scope != expected_scope:
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           f"scope {node.scope!r} incompatible con query_type {node.query_type!r}; se esperaba {expected_scope!r}")
 
     def _validate_gate(self, node: GateCmd):
         self._require_ref(node.using, node.loc, "AdmissibilityTableDecl")
@@ -251,6 +394,53 @@ class Validator:
 
     def _validate_resolve(self, node: ResolveCmd):
         self._require_ref(node.with_spec, node.loc, "ResSpecDecl")
+
+    def _validate_query(self, node: QueryCmd):
+        if node.spec not in self.symbols or self.symbol_types[node.spec] != "QuerySpecDecl":
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           f"query usa QuerySpec no declarado o de tipo incorrecto: {node.spec!r}")
+        if node.by not in self.symbols or self.symbol_types[node.by] != "AgentDecl":
+            raise SVPError(E402, node.loc.line, node.loc.col,
+                           f"query usa Agent no declarado o de tipo incorrecto: {node.by!r}")
+
+        spec = self.symbols[node.spec]
+        agent = self.symbols[node.by]
+        expected_type = spec.query_type
+
+        if isinstance(node.context, QCPointEval):
+            self._require_ref(node.context.ref, node.loc, "FrameDecl")
+            actual_type = "PointEvaluation"
+        elif isinstance(node.context, QCTrajectoryView):
+            self._require_ref(node.context.ref, node.loc, "TrajectoryDecl")
+            actual_type = "TrajectoryState"
+        elif isinstance(node.context, QCFrameComparison):
+            self._require_ref(node.context.ref1, node.loc, "FrameDecl")
+            self._require_ref(node.context.ref2, node.loc, "FrameDecl")
+            actual_type = "FrameComparison"
+        elif isinstance(node.context, QCArchitectureView):
+            actual_type = "GlobalCriticality"
+            if node.context.arch != agent.architecture:
+                raise SVPError(E403, node.loc.line, node.loc.col,
+                               f"ArchitectureView declara {node.context.arch!r}, pero el Agent consulta sobre {agent.architecture!r}")
+            for ref in node.context.cells:
+                self._require_ref(ref, node.loc, "CellSpecDecl")
+            for ref in node.context.evals:
+                self._require_ref(ref, node.loc, "EvalCmd")
+            for ref in node.context.gates:
+                self._require_ref(ref, node.loc, "GateCmd")
+        elif isinstance(node.context, QCCoverageReport):
+            actual_type = "CoverageState"
+            self._require_ref(node.context.ref1, node.loc, "DomainDecl")
+            if node.context.ref1 != agent.domain:
+                raise SVPError(E403, node.loc.line, node.loc.col,
+                               f"CoverageReport usa Domain {node.context.ref1!r}, pero el Agent consulta sobre {agent.domain!r}")
+        else:
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           "query con QueryContext no reconocido")
+
+        if expected_type != actual_type:
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           f"QuerySpec {spec.name!r} declara {expected_type!r}, pero el QueryContext ejecutado corresponde a {actual_type!r}")
 
     def _validate_supervise(self, node: SuperviseCmd):
         self._require_ref(node.meta_eval, node.loc)
