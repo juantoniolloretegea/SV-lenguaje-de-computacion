@@ -621,3 +621,20 @@ Estado: cerrado
 - **Objeción adversarial considerada:** riesgo de presentar como carencia la ausencia de una copia local del pliego o de arrastrar una remisión ya obsoleta del manual SVP a la sede doctrinal.
 - **Decisión:** reescribir el bloque documental y registral para formular de modo positivo y exacto la distribución vigente: pliego en sede doctrinal superior, manual SVP en sede operativa local.
 - **Estado:** cerrado
+
+
+### RETP-2026-030
+
+- **Fecha:** 20/03/2026
+- **Hora (Europe/Madrid):** 15:20:00
+- **Tipo de hito:** CAMBIO_FUNCIONAL_GOBERNADO
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque E — ABI semántico-diagnóstico y endurecimiento inicial de N4/Uso / Fase IV
+- **Resumen del cambio:** Se materializa un contrato autónomo de enganche de interfaces futuras y se endurece la validación mínima de `Domain`, `Agent`, `QuerySpec` y `query`, sincronizando suite, ejemplos, catálogo público, matriz diagnóstica y registro de deuda viva.
+- **Motivo o argumento:** La pregunta de continuidad del backend exigía pasar de una mera nota arquitectónica a un contrato operativo verificable. El repositorio ya contenía la forma IR del enganche futuro, pero faltaba volverla contrato diagnóstico observable.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`; `IR_CANONICA_BIENFORMACION_SV_v0_2.md`; `docs/arquitectura/CRITERIOS_DE_CIERRE_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`; repo fresco auditado.
+- **Artefactos afectados:** `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`; `src/svp_validator.py`; `src/svp_errors.py`; `tests/run_conformance.py`; `tests/conformance/valid/query_context_all_variants.svp`; `tests/conformance/valid/query_context_all_variants.expected.json`; `tests/conformance/invalid/domain_chain_mismatch.svp`; `tests/conformance/invalid/agent_architecture_mismatch.svp`; `tests/conformance/invalid/query_context_type_mismatch.svp`; `tests/adversarial/deep_nested_query_valid.svp`; `examples/consulta_framecomparison.svp`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** repo fresco + lectura cruzada con pliego + ejecución local de la suite de conformidad, smoke CLI y SEC-0 tras el endurecimiento inicial de N4/Uso.
+- **Impacto:** trazabilidad; gobierno_tecnico; fiabilidad; mantenibilidad; enganchabilidad_futura.
+- **Objeción adversarial considerada:** riesgo de sobreatribuir cierre total del frente N4/Uso o de convertir el ABI mínimo en doctrina material exhaustiva sobre futuras interfaces.
+- **Decisión:** fijar únicamente la cadena mínima de enganche y su validación observable; dejar reconocida la deuda residual sobre campos opacos y reservar para rondas posteriores cualquier semántica material adicional.
+- **Estado:** cerrado
