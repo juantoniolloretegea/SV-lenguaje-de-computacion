@@ -19,10 +19,12 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 
 ## Gobierno y manual de fase
 
-- `gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md`
 - `gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
+- `gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
 - `manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
+- `manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
 
+**Nota de fase:** el pliego canónico y sus assets gráficos residen en la sede doctrinal superior `SV-matematica-semantica`. Este repositorio conserva su remisión operativa y no afirma ya una copia material local del pliego ni de sus figuras.
 
 ## Gobierno operativo adicional de fase
 
