@@ -18,20 +18,25 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 
 ## Gobierno y manual de fase
 
-La **sede doctrinal superior** del ecosistema SV permanece en [`SV-matematica-semantica`](https://github.com/juantoniolloretegea/SV-matematica-semantica). En consecuencia, la versión pública consolidada del pliego y de la base mínima auxiliar del manual SVP puede consultarse allí:
+La **sede doctrinal superior** del ecosistema SV permanece en [`SV-matematica-semantica`](https://github.com/juantoniolloretegea/SV-matematica-semantica). La versión pública consolidada del pliego puede consultarse allí:
 
 - [Pliego de condiciones del Sistema Vectorial SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/main/docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md)
 - [Bloque de gobierno doctrinal de fase](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/gobierno)
-- [Base mínima auxiliar del manual SVP](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/manual_svp)
 
-En este repositorio operativo permanecen como piezas locales de trabajo y de enlace:
+El **manual SVP de trabajo** de este repositorio permanece en la sede operativa local:
+
+- `docs/manual_svp/README.md`
+- `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
+- `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`
+
+En este repositorio operativo permanecen además como piezas locales de gobierno y enlace:
 
 - `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
-- `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
+- `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`
+- `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
 
 ## Gobierno operativo adicional de fase
 
-- `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
 - `docs/manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
 
 ## Frente operativo final del lenguaje SV
