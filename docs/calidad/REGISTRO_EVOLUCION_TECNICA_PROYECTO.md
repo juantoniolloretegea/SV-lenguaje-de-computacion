@@ -638,3 +638,20 @@ Estado: cerrado
 - **Objeción adversarial considerada:** riesgo de sobreatribuir cierre total del frente N4/Uso o de convertir el ABI mínimo en doctrina material exhaustiva sobre futuras interfaces.
 - **Decisión:** fijar únicamente la cadena mínima de enganche y su validación observable; dejar reconocida la deuda residual sobre campos opacos y reservar para rondas posteriores cualquier semántica material adicional.
 - **Estado:** cerrado
+
+
+### RETP-2026-031
+
+- **Fecha:** 20/03/2026
+- **Hora (Europe/Madrid):** 16:51:49
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-027 y RETP-2026-030 / Fase IV
+- **Resumen del cambio:** Se sanean el dictamen del Bloque A y el registro técnico para eliminar la contradicción interna sobre el siguiente paso, fijar el estado real de `E201–E211`, `E301–E304` y `E401–E403`, y dejar explícito que `E303` no dispone todavía de emisión específica autónoma acreditada.
+- **Motivo o argumento:** Tras la materialización de `RETP-2026-027` y `RETP-2026-030`, persistía una incoherencia documental en el dictamen del Bloque A: el texto mezclaba la apertura ya realizada de `E201–E211`, el endurecimiento ya materializado de `E401–E403` y una promesa implícita demasiado fuerte sobre `E301–E304`. Era necesario sanear la secuencia sin reabrir funcionalidad.
+- **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; criterio de bloques cerrables; prioridad de concordancia fuerte entre IR, catálogo, validator, runner y documentación pública; repo fresco auditado; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`.
+- **Artefactos afectados:** `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura dura y adversarial del repo fresco; contraste cruzado entre dictamen, catálogo, deuda viva y registro técnico; verificación local de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; fiabilidad.
+- **Objeción adversarial considerada:** riesgo de convertir un saneamiento documental en reapertura funcional encubierta o en maquillaje de cierre. No procede: el lote no toca `src/`, no altera la suite y se limita a sincerar el estado real ya materializado.
+- **Decisión:** regularizar solo la capa documental y registral, dejar explícita la deuda residual de la familia `E301–E304` y reservar cualquier apertura funcional posterior para un bloque independiente y justificado.
+- **Estado:** cerrado
