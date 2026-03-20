@@ -77,9 +77,9 @@ Mientras siga vigente la regularización por Vía B:
 | E302 | `TrajectoryMutationForbidden` | Evolución | `validate` | divergente respecto de IR v0.2 | No se permite modificar, eliminar ni reordenar entradas de una Trajectory (append-only por tipo) |
 | E303 | `TransitionDataMissingHorizon` | Evolución | `validate` | divergente respecto de IR v0.2 | TransitionData declarado sin referencia a Horizon |
 | E304 | `TrajectoryAlternanceViolation` | Evolución | `validate` | divergente respecto de IR v0.2 | La secuencia de entradas de Trajectory no respeta las invariantes de alternancia |
-| E401 | `DomainMissingHorizon` | Uso | `validate` | divergente respecto de IR v0.2 | Domain declarado sin horizonte de sucesos |
-| E402 | `AgentMissingDomain` | Uso | `validate` | divergente respecto de IR v0.2 | Agent declarado sin dominio |
-| E403 | `QuerySpecInvalid` | Uso | `validate` | divergente respecto de IR v0.2 | QuerySpec con tipo o alcance no reconocido |
+| E401 | `DomainPortContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Domain incumple el contrato mínimo de enganche declarado |
+| E402 | `AgentDomainContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Agent incompatible con el Domain o con la arquitectura declarada |
+| E403 | `QueryContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | QuerySpec o QueryContext incompatibles con el contrato de uso |
 | E501 | `SerializationNonDeterministic` | Serialización/conformidad | `lower` | divergente respecto de IR v0.2 | La serialización JSON no es determinista |
 | E507 | `UCoercionDetected` | Serialización/conformidad | `parse` | divergente respecto de IR v0.2 | Coerción implícita de U detectada (prohibición constitutiva) |
 
@@ -109,6 +109,9 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E210`
 - `E211`
 - `E304`
+- `E401`
+- `E402`
+- `E403`
 - `E507`
 
 ### 7.2. Códigos cubiertos explícitamente por la suite de conformidad observable
@@ -129,6 +132,9 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E210`
 - `E211`
 - `E304`
+- `E401`
+- `E402`
+- `E403`
 - `E507`
 
 ### 7.3. Nota de cautela sobre catálogo, emisión y cobertura
@@ -138,6 +144,8 @@ La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola,
 En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observacionalmente con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
 
 De forma análoga, los casos adversariales `conector_mapping_incompleto.svp`, `conector_target_no_ternario.svp` y `admissibility_table_incompleta.svp` dejan ya constancia observable de emisión para `E007`, `E008` y `E009`, respectivamente, y pasan a formar parte de la cobertura explícita de la suite de conformidad.
+
+Asimismo, `domain_chain_mismatch.svp`, `agent_architecture_mismatch.svp` y `query_context_type_mismatch.svp` convierten en emisión observable y cobertura explícita los códigos `E401`, `E402` y `E403`, fijando un primer cierre verificable del contrato mínimo de enganche en N4/Uso sin sobreatribuir todavía interpretación ejecutiva plena a todos los campos opacos de `Domain`.
 
 Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden además cobertura explícita y observable para `E005` y `E010`, sin alterar el comportamiento implementativo del frontend.
 
