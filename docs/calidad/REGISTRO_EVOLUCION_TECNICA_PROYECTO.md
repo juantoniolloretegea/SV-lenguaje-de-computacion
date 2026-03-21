@@ -132,16 +132,16 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-019 | 19/03/2026 | 13:40:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — Contrato diagnostico / ampliacion de cobertura explicita E005 E010 / Fase IV | Se amplía la suite observable con duplicate_identifier.svp e invalid_role_literal.svp y se sincronizan run_conformance README y catálogo público con la nueva cobertura de E005 y E010. | cerrado |
 | RETP-2026-020 | 19/03/2026 | 14:05:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnostico / sinceramiento de cobertura explicita de E001 / Fase IV | Se retira E001 de la lista de codigos cubiertos explicitamente por la suite y se documenta que conserva emision observable sin caso adversarial explicito propio tras la extraccion local hacia E507. | cerrado |
 | RETP-2026-021 | 19/03/2026 | 14:25:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — Contrato diagnostico / reintroduccion de cobertura explicita de E001 / Fase IV | Se añade invalid_tri_literal.svp y se sincronizan suite y catalogo publico para devolver a E001 una cobertura explicita limpia y observable. | cerrado |
-| RETP-2026-023 | 19/03/2026 | 17:10:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnostico / normalizacion fina de dictamen y matriz / Fase IV | Se normalizan dictamen matriz y redaccion publica residual del Bloque A. | cerrado |
-| RETP-2026-024 | 19/03/2026 | 17:35:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnostico / apertura de familia E101 E111 con cobertura explicita E101 E105 / Fase IV | Se amplía la suite observable con dos adversariales mínimos para E101 y E105 y se sincronizan tests catálogo y matriz diagnóstica con esa cobertura explícita inicial de la familia E101 E111. | cerrado |
-| RETP-2026-025 | 19/03/2026 | 18:20:00 | VERIFICABILIDAD_EXTERNA | Frente final del lenguaje SV / verificabilidad externa minima / FrameComparison ejemplos y senalizacion historica / Fase IV | Se refuerza la verificabilidad externa del repositorio con normalizacion de FrameComparison ejemplos canonicos minimos y sondas adversariales documentadas. | cerrado |
-| RETP-2026-026 | 19/03/2026 | 19:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnostico / contraste fino E102 E104 E106 E111 / Fase IV | Se ejecuta el contraste fino publico de E102 E104 E106 y E111 mediante sondas adversariales documentadas y sincronizacion de matriz dictamen y registro. | cerrado |
-| RETP-2026-027 | 19/03/2026 | 20:10:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E201 E211 con cobertura explícita E202 E204 E205 / Fase IV | Se amplía la suite observable con tres adversariales mínimos para E202 E204 y E205 y se sincronizan tests catálogo matriz dictamen y registro con esa cobertura explícita inicial de la familia E201–E211. | cerrado |
-| RETP-2026-028 | 19/03/2026 | 23:10:34 | SORPRESA_TECNICA | Frente final del lenguaje SV / gobernanza de coherencia entre frame histórico reapertura y consulta presente / Fase IV | Se registra una nota técnica de calidad para gobernar la tensión entre trayectoria histórica retorno legítimo a U cobertura y admisibilidad vigentes y consulta presente sin reabrir doctrina ni elevar aún el asunto a paper público. | cerrado |
-| RETP-2026-029 | 20/03/2026 | 11:45:22 | CAMBIO_DOCUMENTACION_PUBLICA | Saneamiento de concordancia del bloque pliego-manual / Fase IV | Se regularizan docs/README.md / docs/gobierno/ / docs/manual_svp/ y el registro técnico para que la documentación pública del repositorio operativo refleje exactamente el árbol real: pliego y bloque gráfico en sede doctrinal superior / manual SVP de trabajo en sede operativa local. | cerrado |
-| RETP-2026-030 | 20/03/2026 | 15:20:00 | CAMBIO_FUNCIONAL_GOBERNADO | Frente final del lenguaje SV / Bloque E — ABI semántico-diagnóstico y endurecimiento inicial de N4/Uso / Fase IV | Se materializa un contrato autónomo de enganche de interfaces futuras y se endurece la validación mínima de `Domain` `Agent` `QuerySpec` y `query`, sincronizando suite ejemplos catálogo público matriz diagnóstica y registro de deuda viva. | cerrado |
-| RETP-2026-031 | 20/03/2026 | 16:51:49 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-027 y RETP-2026-030 / Fase IV | Se sanean el dictamen del Bloque A y el registro técnico para eliminar la contradicción sobre el siguiente paso, fijar el estado real de E201–E211, E301–E304 y E401–E403, y dejar explícito que E303 no dispone aún de emisión específica autónoma acreditada. | cerrado |
-| RETP-2026-032 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que E304 sí es observable y cubierto, mientras E301, E302 y E303 no comparten todavía esa misma emitibilidad pública efectiva. | cerrado |
+| RETP-2026-022 | 19/03/2026 | 17:10:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnostico / normalizacion fina de dictamen y matriz / Fase IV | Se normalizan dictamen matriz y redaccion publica residual del Bloque A. | cerrado |
+| RETP-2026-023 | 19/03/2026 | 17:35:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnostico / apertura de familia E101 E111 con cobertura explicita E101 E105 / Fase IV | Se amplía la suite observable con dos adversariales mínimos para E101 y E105 y se sincronizan tests catálogo y matriz diagnóstica con esa cobertura explícita inicial de la familia E101 E111. | cerrado |
+| RETP-2026-024 | 19/03/2026 | 18:20:00 | VERIFICABILIDAD_EXTERNA | Frente final del lenguaje SV / verificabilidad externa minima / FrameComparison ejemplos y senalizacion historica / Fase IV | Se refuerza la verificabilidad externa del repositorio con normalizacion de FrameComparison ejemplos canonicos minimos y sondas adversariales documentadas. | cerrado |
+| RETP-2026-025 | 19/03/2026 | 19:20:00 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — contrato diagnostico / contraste fino E102 E104 E106 E111 / Fase IV | Se ejecuta el contraste fino publico de E102 E104 E106 y E111 mediante sondas adversariales documentadas y sincronizacion de matriz dictamen y registro. | cerrado |
+| RETP-2026-026 | 19/03/2026 | 20:10:00 | CAMBIO_RUNNER | Frente final del lenguaje SV / Bloque A — contrato diagnóstico / apertura de familia E201 E211 con cobertura explícita E202 E204 E205 / Fase IV | Se amplía la suite observable con tres adversariales mínimos para E202 E204 y E205 y se sincronizan tests catálogo matriz dictamen y registro con esa cobertura explícita inicial de la familia E201–E211. | cerrado |
+| RETP-2026-027 | 19/03/2026 | 23:10:34 | SORPRESA_TECNICA | Frente final del lenguaje SV / gobernanza de coherencia entre frame histórico reapertura y consulta presente / Fase IV | Se registra una nota técnica de calidad para gobernar la tensión entre trayectoria histórica retorno legítimo a U cobertura y admisibilidad vigentes y consulta presente sin reabrir doctrina ni elevar aún el asunto a paper público. | cerrado |
+| RETP-2026-028 | 20/03/2026 | 11:45:22 | CAMBIO_DOCUMENTACION_PUBLICA | Saneamiento de concordancia del bloque pliego-manual / Fase IV | Se regularizan docs/README.md / docs/gobierno/ / docs/manual_svp/ y el registro técnico para que la documentación pública del repositorio operativo refleje exactamente el árbol real: pliego y bloque gráfico en sede doctrinal superior / manual SVP de trabajo en sede operativa local. | cerrado |
+| RETP-2026-029 | 20/03/2026 | 15:20:00 | CAMBIO_FUNCIONAL_GOBERNADO | Frente final del lenguaje SV / Bloque E — ABI semántico-diagnóstico y endurecimiento inicial de N4/Uso / Fase IV | Se materializa un contrato autónomo de enganche de interfaces futuras y se endurece la validación mínima de `Domain` `Agent` `QuerySpec` y `query`, sincronizando suite ejemplos catálogo público matriz diagnóstica y registro de deuda viva. | cerrado |
+| RETP-2026-030 | 20/03/2026 | 16:51:49 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-026 y RETP-2026-029 / Fase IV | Se sanean el dictamen del Bloque A y el registro técnico para eliminar la contradicción sobre el siguiente paso, fijar el estado real de E201–E211, E301–E304 y E401–E403, y dejar explícito que E303 no dispone aún de emisión específica autónoma acreditada. | cerrado |
+| RETP-2026-031 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que E304 sí es observable y cubierto, mientras E301, E302 y E303 no comparten todavía esa misma emitibilidad pública efectiva. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -497,7 +497,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** ampliar de forma controlada la cobertura observable de E001 mediante un adversarial minimo especifico y mantener separada cualquier depuracion posterior de otros errores sintacticos absorbidos por E001.
 - **Estado:** cerrado
 
-### RETP-2026-023
+### RETP-2026-022
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 17:10:00
@@ -513,7 +513,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** cerrar la limpieza fina de los artefactos canonicos del Bloque A antes de abrir E101 E111.
 - **Estado:** cerrado
 
-### RETP-2026-024
+### RETP-2026-023
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 17:35:00
@@ -529,7 +529,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** abrir la familia E101 E111 por E101 y E105 y reservar para la siguiente ronda el contraste fino E102 / E104 / E106 / E111.
 - **Estado:** cerrado
 
-### RETP-2026-025
+### RETP-2026-024
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 18:20:00
@@ -545,7 +545,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** cerrar primero un bloque corto de verificabilidad externa minima con dos carriles publicos separados y dejar para la siguiente ronda el contraste fino E102 / E104 / E106 / E111.
 - **Estado:** cerrado
 
-### RETP-2026-026
+### RETP-2026-025
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 19:20:00
@@ -561,7 +561,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** dar por ejecutado el contraste fino de E102 / E104 / E106 / E111 y trasladar el siguiente barrido legitimo a E201–E211.
 - **Estado:** cerrado
 
-### RETP-2026-027
+### RETP-2026-026
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 20:10:00
@@ -571,13 +571,13 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Motivo o argumento:** Dentro de la familia E201–E211 / E202 / E204 y E205 eran los subcasos de menor radio y emisión más directa en la superficie publicada.
 - **Base doctrinal o técnica invocada:** Pliego de condiciones del Sistema Vectorial SV / Bloque A — Contrato diagnóstico / matriz diagnóstica canónica / catálogo implementativo vigente / suite observable del frontend.
 - **Artefactos afectados:** tests/run_conformance.py / tests/README.md / gate_input_no_evalresult.svp / query_context_opaco.svp / supervise_target_opaco.svp / docs/referencia/ERRORES_CANONICOS_SV_v0_2.md / matriz / dictamen / registro.
-- **Evidencia:** paquete técnico sobre repo fresco tras RETP-2026-026 / verificación local de suite con tres adversariales mínimos.
+- **Evidencia:** paquete técnico sobre repo fresco tras RETP-2026-025 / verificación local de suite con tres adversariales mínimos.
 - **Impacto:** coherencia_diagnostica / trazabilidad / cobertura_de_suite / mantenibilidad.
 - **Objeción adversarial considerada:** riesgo de sobreatribuir cierre total de la familia E201–E211.
 - **Decisión:** abrir la familia por sus tres casos directamente emitibles y reservar el resto residual para contraste fino posterior.
 - **Estado:** cerrado
 
-### RETP-2026-028
+### RETP-2026-027
 
 - **Fecha:** 19/03/2026
 - **Hora (Europe/Madrid):** 23:10:34
@@ -593,7 +593,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** registrar la tensión como nota técnica subordinada de calidad abrir deuda viva específica y reservar cualquier eventual publicación doctrinal nueva para un momento posterior solo si la bajada operativa acreditara insuficiencia real del marco vigente.
 - **Estado:** cerrado
 
-### RETP-2026-029
+### RETP-2026-028
 
 - **Fecha:** 20/03/2026
 - **Hora (Europe/Madrid):** 11:45:22
@@ -609,7 +609,7 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** reescribir el bloque documental y registral para formular de modo positivo y exacto la distribución vigente: pliego en sede doctrinal superior / manual SVP en sede operativa local.
 - **Estado:** cerrado
 
-### RETP-2026-030
+### RETP-2026-029
 
 - **Fecha:** 20/03/2026
 - **Hora (Europe/Madrid):** 15:20:00
@@ -625,14 +625,14 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** fijar únicamente la cadena mínima de enganche y su validación observable; dejar reconocida la deuda residual sobre campos opacos y reservar para rondas posteriores cualquier semántica material adicional.
 - **Estado:** cerrado
 
-### RETP-2026-031
+### RETP-2026-030
 
 - **Fecha:** 20/03/2026
 - **Hora (Europe/Madrid):** 16:51:49
 - **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
-- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-027 y RETP-2026-030 / Fase IV
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-026 y RETP-2026-029 / Fase IV
 - **Resumen del cambio:** Se sanean el dictamen del Bloque A y el registro técnico para eliminar la contradicción sobre el siguiente paso, fijar el estado real de E201–E211, E301–E304 y E401–E403, y dejar explícito que E303 no dispone aún de emisión específica autónoma acreditada.
-- **Motivo o argumento:** Tras la materialización de RETP-2026-027 y RETP-2026-030 persistía una incoherencia documental interna sobre la secuencia real del Bloque A. Era necesario sanearla sin reabrir funcionalidad.
+- **Motivo o argumento:** Tras la materialización de RETP-2026-026 y RETP-2026-029 persistía una incoherencia documental interna sobre la secuencia real del Bloque A. Era necesario sanearla sin reabrir funcionalidad.
 - **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; criterio de bloques cerrables; prioridad de concordancia fuerte entre IR, catálogo, validator, runner y documentación pública; repo fresco auditado.
 - **Artefactos afectados:** docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.
 - **Evidencia:** lectura dura y adversarial del repo fresco; contraste cruzado entre dictamen, catálogo, deuda viva y registro técnico; verificación local de tests/run_conformance.py, tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.
@@ -641,14 +641,14 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** regularizar solo la capa documental y registral, dejar explícita la deuda residual de la familia E301–E304 y reservar cualquier apertura funcional posterior para un bloque independiente y justificado.
 - **Estado:** cerrado
 
-### RETP-2026-032
+### RETP-2026-031
 
 - **Fecha:** 20/03/2026
 - **Hora (Europe/Madrid):** 17:12:51
 - **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
 - **Frente/Fase:** Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV
 - **Resumen del cambio:** Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que E304 sí es observable y cubierto, mientras E301, E302 y E303 no comparten todavía esa misma emitibilidad pública efectiva.
-- **Motivo o argumento:** Tras RETP-2026-031 la capa interna ya había quedado saneada, pero la referencia pública seguía pudiendo inducir una lectura homogénea de la familia E301–E304. La microauditoría E mostró que E304 sí está materializado, que E301 y E302 dependen hoy de invariantes de tipo sin operación superficial publicada, y que E303 permanece sin emisión autónoma acreditada.
+- **Motivo o argumento:** Tras RETP-2026-030 la capa interna ya había quedado saneada, pero la referencia pública seguía pudiendo inducir una lectura homogénea de la familia E301–E304. La microauditoría E mostró que E304 sí está materializado, que E301 y E302 dependen hoy de invariantes de tipo sin operación superficial publicada, y que E303 permanece sin emisión autónoma acreditada.
 - **Base doctrinal o técnica invocada:** pliego de condiciones del Sistema Vectorial SV; GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md; IR_CANONICA_BIENFORMACION_SV_v0_2.md; src/svp_parser.py; src/svp_validator.py; src/svp_errors.py; docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md; docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md; repo fresco auditado.
 - **Artefactos afectados:** docs/referencia/ERRORES_CANONICOS_SV_v0_2.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.
 - **Evidencia:** lectura con zoom corto de gramática, parser, validator y catálogo; contraste de casos sintéticos mínimos sobre TransitionData que muestran caída de ausencia de horizon_ref en parseo y de referencia ausente o de tipo incorrecto en E006; verificación local posterior de tests/run_conformance.py, tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.
