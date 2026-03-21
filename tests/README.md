@@ -33,7 +33,7 @@ python tests/run_cli_smoke.py
 | `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
 | `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
 
-## Casos inválidos (20)
+## Casos inválidos (23)
 
 | Archivo | Qué debe rechazar | Error esperado |
 |---------|-------------------|----------------|
@@ -66,9 +66,9 @@ python tests/run_cli_smoke.py
 
 ## Resultado actual
 
-28 de 28 tests de conformidad pasan.
+31 de 31 casos de conformidad pasan.
 
-La batería de smoke tests CLI se limita a tres comprobaciones de contrato externo y no sustituye la suite principal de conformidad.
+Además, la batería de smoke tests CLI aporta 3 comprobaciones mínimas de contrato externo y la batería SEC-0 añade 3 comprobaciones de humo adicionales. Estas sondas complementarias no sustituyen la suite principal de conformidad, pero sí forman parte del estado observable actual del repositorio.
 
 ---
 
