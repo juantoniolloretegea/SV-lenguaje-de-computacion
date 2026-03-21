@@ -1,55 +1,76 @@
-# src/ — Parser/lowering de referencia del lenguaje SV
+# SV-lenguaje-de-computacion
 
-## Qué hace
+Repositorio operativo y técnico del lenguaje de computación del Sistema Vectorial SV.
+
+Este repositorio alberga la especificación operativa activa, la implementación de referencia del frontend, la documentación técnica de fase, la suite observable y el gobierno técnico subordinado del lenguaje. No sustituye a la sede doctrinal superior del ecosistema SV, que permanece en `SV-matematica-semantica`.
+
+## Estado actual
+
+- **IR canónica vigente:** `IR_CANONICA_BIENFORMACION_SV_v0_2.md`
+- **Gramática superficial vigente:** `GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`
+- **Frontera normativa vigente:** `FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`
+- **Frontend de referencia activo:** parser + validator + lowering + serialización JSON canónica
+- **Contrato de enganche mínimo:** `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- **Estado de cierre:** la convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue parcialmente abierta; la capa `N4/Uso` no debe leerse todavía como cierre total.
+
+## Qué hace hoy el frontend de referencia
 
 Toma un archivo `.svp` escrito en la Gramática superficial mínima v0.1, lo parsea, aplica la validación implementada vigente —subordinada a la IR canónica v0.2— y produce la representación IR serializada en JSON canónico.
 
 ## Qué no hace
 
-No ejecuta programas. No calcula evaluaciones (conteos, T(n), clasificación). No resuelve U materialmente. No ejecuta compuertas como semántica aplicada. No produce salidas de backend. Solo parsea, valida, baja y serializa.
+No ejecuta programas. No calcula evaluaciones materiales (`T(n)`, clasificación o conteos). No resuelve `U`. No implementa todavía backend soberano. No sustituye a la semántica doctrinal del sistema.
 
-## Uso
+## Uso rápido desde la raíz del repositorio
 
 ```bash
-python svp_main.py archivo.svp                    # salida a stdout
-python svp_main.py archivo.svp -o archivo.ir.json  # salida a archivo
+python src/svp_main.py examples/consulta_framecomparison.svp
+python src/svp_main.py examples/consulta_framecomparison.svp -o salida.ir.json
 ```
 
-## Módulos
+## Verificación mínima observable
 
-| Archivo | Función |
-|---------|---------|
-| `svp_errors.py` | Catálogo centralizado de errores E001–E507 |
-| `svp_ast.py` | Definiciones del AST (un nodo por declaración/comando) |
-| `svp_lexer.py` | Tokenizador de archivos `.svp` |
-| `svp_parser.py` | Parser de descenso recursivo (EBNF → AST) |
-| `svp_validator.py` | Verificación implementada de bienformación; la concordancia fuerte total con J0.1–J5.2 sigue pendiente |
-| `svp_ir.py` | Objetos IR v0.2 + lowering (AST → IR) |
-| `svp_serialize.py` | Serialización IR → JSON canónico |
-| `svp_main.py` | CLI (archivo.svp → archivo.ir.json) |
+```bash
+python tests/run_conformance.py
+python tests/run_sec0_smoke.py
+python tests/run_cli_smoke.py
+```
+
+## Estructura mínima orientativa
+
+| Ruta | Función |
+|---|---|
+| `src/` | Implementación de referencia del frontend (`lexer`, `parser`, `validator`, `IR`, `serializer`, `CLI`) |
+| `tests/` | Suite observable de conformidad, smoke y adversariales |
+| `examples/` | Ejemplos mínimos de uso superficial |
+| `docs/referencia/` | Catálogo público, referencia y piezas de lectura técnica |
+| `docs/arquitectura/` | Actas, hoja de ruta y contrato mínimo de enganche |
+| `docs/calidad/` | Registro técnico, deuda viva, matrices y control de calidad |
+| `docs/manual_svp/` | Manual operativo local del lenguaje SVP |
+| `beta/` | Régimen Beta subordinado y expresamente no normativo |
+
+## Documentos de entrada recomendada
+
+- `docs/README.md`
+- `src/README.md`
+- `docs/arquitectura/HOJA_DE_RUTA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
+- `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
+- `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
 
 ## Nota de verificabilidad superficial
 
 El literal superficial `FrameComparison` se usa hoy tanto como constructor de `QueryContext` como para `query_type` homónimo. El parser de referencia acepta ambos usos bajo un mismo literal superficial y el lexer evita ya la duplicidad silenciosa de clave que podía oscurecer esa lectura en revisiones externas.
 
-## Alcance
-
-Implementa exactamente las 22 declaraciones y los 7 comandos de la Gramática superficial mínima v0.1. Cero azúcar. Cero extensiones. Cero funcionalidad más allá de lo especificado.
-
-La cobertura diagnóstica actual no equivale todavía a la totalidad de los juicios J0.1–J5.2 ni cierra completamente la capa N4/Uso. La convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue siendo deuda futura del proyecto.
-
-## JSON canónico de salida
-
-- Codificación: UTF-8
-- Claves: ordenadas alfabéticamente
-- Salida: determinista, reproducible entre ejecuciones
-- Campos de cabecera: `ir_version`, `grammar_version`, `serializer_version`, `source_file`, `source_sha256`
-
 ## Subordinación
 
-Gramática superficial mínima v0.1 → IR canónica v0.2 → Frontera normativa v0 → Fundamentos (R3).
+Sede doctrinal superior → `SV-matematica-semantica`  
+Especificación operativa + implementación de referencia + gobierno técnico → `SV-lenguaje-de-computacion`
+
+La cadena de lectura correcta sigue siendo:
+
+**Gramática superficial mínima v0.1 → IR canónica v0.2 → Frontera normativa v0 → implementación observable → suite y documentación pública**.
 
 ---
 
-*Lenguaje de computación del Sistema Vectorial SV.*
+*Lenguaje de computación del Sistema Vectorial SV.*  
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
