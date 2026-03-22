@@ -1,0 +1,6 @@
+ID,Área,Deuda viva,Aceptación actual,Riesgo futuro,Hito de revisión,Prohibición actual
+D-01,IR,No representa aún familias de propiedades preservadas,Aceptada,Necesidad de refactor posterior si se cierra mal,H2,No implementar invariancia ahora
+D-02,Validator,"No modela aún persistencia, umbral o transición como nociones propias",Aceptada,Supuestos falsos sobre continuidad,H2,No anticipar reglas semánticas no cerradas
+D-03,Runner,"No distingue todavía enlaces, equivalencias parciales o no equivalencia",Aceptada,Ejecución semánticamente demasiado pobre,H3,No introducir comportamientos aparentes sin cierre suficiente
+D-04,Backend,No está preparado aún para clases locales de régimen,Aceptada,Bloqueo estructural en crecimiento futuro,H3,No rediseñar el backend por especulación
+D-05,Arquitectura global,No existe aún ABI semántico para invariancia local o clases de régimen,Aceptada,Riesgo de cristalización temprana,H3,No fijar ABI prematuro
