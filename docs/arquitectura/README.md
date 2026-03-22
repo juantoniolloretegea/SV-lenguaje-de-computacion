@@ -9,5 +9,6 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `ACTA_DE_APERTURA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV_2026_03_19.md`
 - `HOJA_DE_RUTA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `CRITERIOS_DE_CIERRE_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
+- `MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 
 La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repositorio.
