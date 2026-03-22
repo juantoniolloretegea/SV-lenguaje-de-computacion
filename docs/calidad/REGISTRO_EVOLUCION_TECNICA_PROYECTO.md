@@ -712,3 +712,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de sobreactuar el marco de resiliencia y los hitos como si autorizaran una implementación inmediata de semántica futura, o de presentar este saneamiento como cierre de `FFL-E`. No procede: el lote solo coordina la lectura pública y registral del estado vigente, sin tocar IR, gramática, validator, runner ni backend.
 - **Decisión:** hacer inevitable para futuras unidades Watson la lectura del marco de resiliencia y del control por hitos dentro de la cadena de README y restablecer la coordinación formal entre el registro `.md` y el CSV maestro.
 - **Estado:** cerrado
+
+
+### RETP-2026-035
+
+- **Fecha:** 22/03/2026
+- **Hora (Europe/Madrid):** NO_CONSTA
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Frente final del lenguaje SV / Bloque M — alineación de `docs/index.html` con el estado pre-backend / Fase IV
+- **Resumen del cambio:** Se alinea `docs/index.html` con el estado real pre-backend del lenguaje: la puerta pública del playground hace ya visibles la arquitectura mínima del núcleo enganchable, el contrato de enganche y ABI semántico-diagnóstico, el marco de estabilidad y resiliencia, y el bloque activo de calidad, vigilancia e hitos.
+- **Motivo o argumento:** La auditoría del repo fresco confirmó que la cadena principal de README había quedado coordinada tras el Bloque L, pero persistía una asimetría residual en la superficie pública de entrada: `docs/index.html` seguía enlazando solo a repositorio, gramática, IR y doctrina, y no dejaba visible el nuevo marco rector pre-backend para lectores o futuras unidades que entrasen por esa puerta.
+- **Base doctrinal o técnica invocada:** `docs/index.html`; `README.md`; `docs/README.md`; `docs/arquitectura/README.md`; `docs/calidad/README.md`; `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`; `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`; `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `docs/index.html`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura íntegra del repo fresco con foco reforzado en README, actas, registros y puerta pública operativa; contraste de descubribilidad entre `docs/index.html`, arquitectura y calidad; verificación local posterior de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** trazabilidad; descubribilidad_publica; continuidad_operativa; resiliencia_prebackend; gobierno_tecnico.
+- **Objeción adversarial considerada:** riesgo doble: por un lado considerar `docs/index.html` como pieza secundaria y dejarla desalineada respecto del estado real del lenguaje; por otro lado sobreactuar la nueva visibilidad como si implicara cierre total de `FFL-E` o apertura automática del backend. No procede ninguno de los dos extremos.
+- **Decisión:** cerrar la asimetría residual de la puerta pública del playground para que cualquier unidad o lector externo encuentre desde `docs/index.html` el núcleo documental mínimo pre-backend, sin modificar gramática, IR, validator, runner ni el estatuto prudente del frente.
+- **Estado:** cerrado
