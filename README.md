@@ -11,6 +11,9 @@ Este repositorio alberga la especificación operativa activa, la implementación
 - **Frontera normativa vigente:** `FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`
 - **Frontend de referencia activo:** parser + validator + lowering + serialización JSON canónica
 - **Contrato de enganche mínimo:** `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- **Arquitectura mínima del núcleo enganchable:** `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
+- **Marco de estabilidad, resiliencia y horizontes:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
+- **Control activo de calidad y hitos:** `docs/calidad/README.md`
 - **Estado de cierre:** la convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue parcialmente abierta; la capa `N4/Uso` no debe leerse todavía como cierre total.
 
 ## Qué hace hoy el frontend de referencia
@@ -44,16 +47,17 @@ python tests/run_cli_smoke.py
 | `tests/` | Suite observable de conformidad, smoke y adversariales |
 | `examples/` | Ejemplos mínimos de uso superficial |
 | `docs/referencia/` | Catálogo público, referencia y piezas de lectura técnica |
-| `docs/arquitectura/` | Actas, hoja de ruta y contrato mínimo de enganche |
-| `docs/calidad/` | Registro técnico, deuda viva, matrices y control de calidad |
+| `docs/arquitectura/` | Actas, hoja de ruta, contrato mínimo de enganche, arquitectura mínima y marco de resiliencia |
+| `docs/calidad/` | Registro técnico, deuda viva, vigilancia UCBC, control por hitos y calidad activa |
 | `docs/manual_svp/` | Manual operativo local del lenguaje SVP |
 | `beta/` | Régimen Beta subordinado y expresamente no normativo |
 
 ## Documentos de entrada recomendada
 
 - `docs/README.md`
-- `src/README.md`
-- `docs/arquitectura/HOJA_DE_RUTA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
+- `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
+- `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/calidad/README.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
 
