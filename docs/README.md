@@ -10,6 +10,10 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`
 - `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
+- `docs/arquitectura/README.md`
+- `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
+- `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
 
 **Contenido pendiente:**
 - Guía de inicio rápido
@@ -48,18 +52,12 @@ Documentos rectores inmediatos de este frente:
 - `docs/arquitectura/ACTA_DE_APERTURA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV_2026_03_19.md`
 - `docs/arquitectura/HOJA_DE_RUTA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/arquitectura/CRITERIOS_DE_CIERRE_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
+- `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
+- `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
 
-## Bloque activo de resiliencia del Lenguaje SV
-
-Para asegurar que el Lenguaje SV avance por hitos sin cierre prematuro de gramática, IR, validator, runner o backend, este repositorio incorpora además el siguiente bloque coordinado:
-
-- `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
-- `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
-- `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
-- `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
-
-Este bloque define horizontes de arquitectura, control por hitos y deuda viva del frente operativo del lenguaje.
-
 La sede doctrinal superior permanece en `SV-matematica-semantica`; este repositorio actúa como sede central operativa y técnica.
+
+La existencia de un **ABI semántico-diagnóstico mínimo** ya fijado y de una **arquitectura mínima enganchable** no debe leerse todavía como cierre total del frente ni como apertura automática del backend soberano.
