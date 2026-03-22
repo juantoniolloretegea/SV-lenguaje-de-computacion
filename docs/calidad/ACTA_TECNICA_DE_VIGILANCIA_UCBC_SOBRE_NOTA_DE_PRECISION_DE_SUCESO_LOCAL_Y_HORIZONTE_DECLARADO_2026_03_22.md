@@ -8,7 +8,7 @@
 
 ## 1. Objeto
 
-Dejar constancia técnica de que la pieza pública subordinada **Suceso local, suceso envolvente y reevaluación situacional en horizonte declarado en el Sistema Vectorial SV** debe entrar en la superficie de vigilancia UCBC del repositorio operativo `SV-lenguaje-de-computacion`, sin convertir por ello su publicación e integración material en revisión obligatoria de IR, en deuda viva nueva ni en parche funcional del frente N4/Uso.
+Dejar constancia técnica de que la pieza pública subordinada **Suceso local, suceso envolvente y reevaluación situacional en horizonte declarado en el Sistema Vectorial SV** queda incorporada a la superficie de vigilancia UCBC del repositorio operativo `SV-lenguaje-de-computacion`, sin convertir por ello su publicación e integración material en revisión obligatoria de IR, en deuda viva nueva ni en parche funcional del frente N4/Uso.
 
 ## 2. Hechos constatados
 
