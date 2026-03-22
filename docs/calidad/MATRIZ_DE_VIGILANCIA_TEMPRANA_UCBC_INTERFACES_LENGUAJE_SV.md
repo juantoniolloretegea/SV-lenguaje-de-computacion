@@ -27,7 +27,7 @@ La situación mínima de cada fila será una de estas:
 ## Estado
 
 **Estado:** apertura técnica de vigilancia coordinada  
-**Fecha de trabajo:** 21/03/2026  
+**Fecha de trabajo:** 22/03/2026  
 **Base de contraste:** publicaciones visibles del Programa de interfaces + repo fresco de `SV-lenguaje-de-computacion` + repo fresco de `SV-matematica-semantica`
 
 |Frente_o_Publicacion|Estado_de_Fase|Hecho_Publico_Constatado|Plano_del_Lenguaje_Potencialmente_Afectado|Riesgo_Principal|Situacion|Tratamiento_Recomendado|Observaciones|
@@ -42,3 +42,4 @@ La situación mínima de cada fila será una de estas:
 |Células especializadas|proyectado|Se perfila como laboratorio controlado de expresión estructural del lenguaje aplicado sobre carriles ya publicados|examples / QuerySpec / QueryContext / legibilidad pública|convertir el laboratorio en presión funcional o normativa sobre N4/Uso|vigilancia_expresion_controlada|permitir solo como laboratorio no normativo y no invasivo|debe poder eliminarse sin dejar rastro normativo en el lenguaje|
 |NLP (frente proyectado / activación pendiente)|proyectado|Se perfila una posible cadena auditada de ruido, admisibilidad del canal y reexpresión fiel|QuerySpec / QueryContext / referencias a canal|convertir ruido lingüístico en semántica rival o exigir reforma prematura|vigilancia_puertos|esperar activación y primer dictamen de W-NLP1 SV|sin deuda viva nueva hasta contradicción acreditada|
 |UCBC (horizonte coordinador)|proyectado|Se identifica necesidad futura de coordinación transversal de frentes hacia el lenguaje|gobierno técnico / contratos / registros|mezclar coordinación con especificación operativa|vigilancia_puertos|mantener como función coordinadora y no normativa|colofón futuro, no cambio actual de IR|
+|Nota de precisión sobre suceso local y horizonte declarado|publicado e integrado de forma provisional|Consta pieza pública subordinada que distingue suceso local suceso envolvente reevaluación situacional y competencia declarada de horizonte sin alterar por sí sola el lenguaje|QueryContext / Domain / horizonte declarado / consulta|absolutizar clausura local o introducir exterioridad correctora sin competencia|vigilancia_u_honesta|mantener vigilancia focal sin deuda nueva|refuerza límites metodológicos compatibles con el ABI mínimo y exige saneamiento editorial en la sede doctrinal|
