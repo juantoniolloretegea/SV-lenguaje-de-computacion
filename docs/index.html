@@ -59,6 +59,51 @@
     }
     nav a:hover { color: var(--accent-hover); text-decoration: underline; }
 
+
+    .reference-strip {
+      border-top: 1px solid var(--border);
+      background: var(--surface);
+      padding: 20px 24px 24px;
+    }
+    .reference-strip h2 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+    .reference-strip p {
+      color: var(--text-dim);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+    .reference-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .reference-card {
+      display: block;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px 16px;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .reference-card:hover {
+      border-color: var(--accent);
+      background: var(--accent-soft);
+    }
+    .reference-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+    }
+    .reference-card span {
+      display: block;
+      color: var(--text-dim);
+      line-height: 1.45;
+      font-size: 0.95rem;
+    }
+
     main {
       flex: 1;
       display: grid;
@@ -191,6 +236,10 @@
       main { grid-template-columns: 1fr; }
       .panel { border-right: none; border-bottom: 1px solid var(--border); }
       .panel:last-child { border-bottom: none; }
+      .reference-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .reference-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -204,6 +253,8 @@
     <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion" target="_blank" rel="noopener noreferrer">Repositorio</a>
     <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md" target="_blank" rel="noopener noreferrer">Gramática v0.1</a>
     <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_2.md" target="_blank" rel="noopener noreferrer">IR v0.2</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/arquitectura/README.md" target="_blank" rel="noopener noreferrer">Arquitectura</a>
+    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/README.md" target="_blank" rel="noopener noreferrer">Calidad</a>
     <a href="https://github.com/juantoniolloretegea/SV-matematica-semantica" target="_blank" rel="noopener noreferrer">Doctrina</a>
   </nav>
 </header>
@@ -235,6 +286,29 @@
     <button id="run-btn" type="button" onclick="runParser()" disabled>Parsear</button>
   </div>
 </div>
+
+<section class="reference-strip">
+  <h2>Lectura mínima pre-backend</h2>
+  <p>Además del playground, esta puerta pública debe hacer visible el núcleo enganchable, el ABI semántico-diagnóstico mínimo, el marco de resiliencia y el control activo de calidad e hitos del Lenguaje SV.</p>
+  <div class="reference-grid">
+    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">
+      <strong>Arquitectura mínima</strong>
+      <span>Núcleo enganchable, puertos previstos y criterio de no rigidización prematura.</span>
+    </a>
+    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md" target="_blank" rel="noopener noreferrer">
+      <strong>Contrato de enganche y ABI</strong>
+      <span>Cadena mínima preservable hacia backend e interfaces futuras sin sobrelectura funcional.</span>
+    </a>
+    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">
+      <strong>Resiliencia y horizontes</strong>
+      <span>Criterios de cautela para que el lenguaje y su backend no queden endurecidos antes de tiempo.</span>
+    </a>
+    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/README.md" target="_blank" rel="noopener noreferrer">
+      <strong>Calidad, vigilancia e hitos</strong>
+      <span>Registro maestro, deuda viva, vigilancia UCBC y control activo por hitos del frente operativo.</span>
+    </a>
+  </div>
+</section>
 
 <footer>
   Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal)<br>
