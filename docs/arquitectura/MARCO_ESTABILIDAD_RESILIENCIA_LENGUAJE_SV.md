@@ -1,6 +1,6 @@
 # Marco de estabilidad, resiliencia y horizontes del Lenguaje SV
 
-**Destinatario:** unidades Watson dedicadas al desarrollo del Lenguaje SV  
+**Destinatario:** agentes dedicados al desarrollo del Lenguaje SV  
 **Ámbito:** repositorio del Lenguaje de Programación del Sistema Vectorial SV  
 **Fecha:** 22 de marzo de 2026  
 **Estatuto:** documento rector normativo-operativo de cautela de arquitectura
@@ -11,11 +11,11 @@
 
 Este documento existe para proteger al Lenguaje SV de dos riesgos simétricos:
 
-1. **Cierre prematuro**: fijar gramática, IR, validator, runner o backend de manera que el sistema no pueda hospedar desarrollos semánticos y matemáticos ya previsibles.
-2. **Implementación precipitada**: traducir de forma temprana al lenguaje desarrollos doctrinales que todavía no están cerrados como semántica operativa.
+1. **Cierre prematuro**: fijar gramática, IR, validator, runner o backend de manera que el sistema no pueda hospedar desarrollos semánticos y matemáticos ya plausibles.
+2. **Implementación precipitada**: traducir de forma temprana al lenguaje desarrollos semánticos y matemáticos que todavía no están cerrados como semántica operativa.
 
 La función de este texto no es ordenar implementaciones inmediatas.  
-Su función es **dar a las unidades de lenguaje un marco de resiliencia** que les permita avanzar hoy sin hipotecar el mañana.
+Su función es **dar al desarrollo del lenguaje un marco de resiliencia** que permita avanzar hoy sin hipotecar el mañana.
 
 ---
 
@@ -39,13 +39,13 @@ Esta regla se aplica a:
 
 ## 2. Por qué se hace este documento
 
-El desarrollo del SV ha mostrado ya que el sistema necesita seguir creciendo en paralelo en dos frentes:
+El desarrollo del SV necesita seguir avanzando en paralelo en dos frentes:
 
 - **frente semántico-matemático**;
 - **frente de lenguaje de programación**.
 
 Si el segundo avanza sin horizonte, quedará estrecho y habrá que rehacerlo.  
-Si el segundo intenta anticiparlo todo, se rigidizará antes de tiempo y convertirá cautelas doctrinales en implementaciones prematuras.
+Si el segundo intenta anticiparlo todo, se rigidizará antes de tiempo y convertirá cautelas semánticas en implementaciones prematuras.
 
 Este documento se crea para evitar ambas cosas.
 
@@ -87,7 +87,7 @@ El Lenguaje SV debe poder hospedar, cuando proceda y solo cuando proceda, al men
 
 ## 4. Regla de gobierno por hitos
 
-Las unidades de lenguaje no deben evolucionar por documentos aislados ni por entusiasmo de desarrollo, sino por **hitos asegurables**.
+El desarrollo del lenguaje no debe evolucionar por entusiasmo de implementación, sino por **hitos asegurables**.
 
 ### Hito 1 — Base segura
 
@@ -123,7 +123,7 @@ No se permite:
 ### Hito 3 — Preparación de integración futura
 
 Objetivo:
-- dejar listo el terreno para futuras integraciones doctrinales, manteniendo aún separación de niveles.
+- dejar listo el terreno para futuras integraciones semánticas, manteniendo aún separación de niveles.
 
 Se asegura:
 - IR capaz de admitir extensiones localizadas;
@@ -139,7 +139,7 @@ No se permite:
 
 ## 5. Criterios de parada obligatoria
 
-Toda unidad Watson de lenguaje deberá detenerse y auditar antes de pasar de un hito a otro si ocurre cualquiera de estas situaciones:
+Toda línea de desarrollo del lenguaje deberá detenerse y auditar antes de pasar de un hito a otro si ocurre cualquiera de estas situaciones:
 
 1. necesidad de ampliar el sentido de una construcción IR ya fijada;
 2. tentación de introducir nuevas categorías sintácticas para hospedar semántica todavía abierta;
@@ -169,12 +169,12 @@ Ninguno de estos documentos autoriza por sí mismo cambios de gramática, IR, va
 
 ## 8. Cierre
 
-Este documento no entrega una hoja de ruta de implementación por temas doctrinales.  
+Este documento no entrega una hoja de ruta de implementación por temas concretos.  
 Entrega algo más importante: **un marco de resiliencia**.
 
-Las unidades de lenguaje deben usarlo para saber:
+Debe usarse para saber:
 
-- hasta dónde pueden llegar ahora;
-- dónde deben detenerse;
-- qué no deben cerrar;
+- hasta dónde puede llegarse ahora;
+- dónde hay que detenerse;
+- qué no debe cerrarse;
 - y cómo seguir avanzando sin hipotecar el sistema.
