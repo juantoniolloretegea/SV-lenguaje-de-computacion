@@ -51,4 +51,15 @@ Documentos rectores inmediatos de este frente:
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
 
+## Bloque activo de resiliencia del Lenguaje SV
+
+Para asegurar que el Lenguaje SV avance por hitos sin cierre prematuro de gramática, IR, validator, runner o backend, este repositorio incorpora además el siguiente bloque coordinado:
+
+- `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
+- `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
+- `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
+- `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
+
+Este bloque define horizontes de arquitectura, control por hitos y deuda viva del frente operativo del lenguaje.
+
 La sede doctrinal superior permanece en `SV-matematica-semantica`; este repositorio actúa como sede central operativa y técnica.
