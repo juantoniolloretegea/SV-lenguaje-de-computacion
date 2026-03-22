@@ -1,9 +1,10 @@
-# Acta técnica de vigilancia UCBC sobre interfaces publicadas y alerta temprana al lenguaje SV — RETP-2026-032
+# Acta técnica de vigilancia UCBC sobre interfaces publicadas y alerta temprana al lenguaje SV
 
 **Fecha:** 21/03/2026  
 **Naturaleza:** acta operativa subordinada de vigilancia temprana  
 **Frente:** UCBC provisional / coordinación entre Programa de interfaces y `SV-lenguaje-de-computacion`  
-**Estado:** apertura de vigilancia sin deuda nueva ni reforma inmediata
+**Estado:** apertura de vigilancia sin deuda nueva ni reforma inmediata  
+**Registro técnico asociado:** véase `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` como fuente maestra de numeración RETP
 
 ## 1. Objeto
 
@@ -49,6 +50,10 @@ Se fija la siguiente lectura válida para el repositorio operativo del lenguaje:
 3. **no** se ordena parche funcional sobre `validator`, `runner` o `runtime`;
 4. **sí** se abre una vigilancia técnica coordinada de puertos y contratos de entrada, con especial atención a `CaptureSpec`, `AdmissibilitySpec`, `Domain`, `QuerySpec` y `QueryContext`;
 5. **sí** se reconoce como frente proyectado legítimo, pero todavía no normativo, un laboratorio controlado de `células especializadas` que permita expresar carriles ya publicados en código SV sin convertir esa expresión en presión inmediata sobre N4/Uso.
+
+## 5. Criterio registral
+
+La presente acta queda subordinada al `REGISTRO_EVOLUCION_TECNICA_PROYECTO` como única fuente maestra de numeración RETP. La existencia de esta acta no fija por sí sola un identificador registral autónomo fuera del CSV y del registro maestro en `.md`.
 
 ## 5. Artefactos documentales de este lote
 
