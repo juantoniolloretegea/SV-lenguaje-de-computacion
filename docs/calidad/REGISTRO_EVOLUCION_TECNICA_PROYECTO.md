@@ -657,6 +657,22 @@ Se recomienda usar una o varias de estas etiquetas:
 - **Decisión:** sincerar la superficie pública de referencia para que el catálogo no sugiera una homogeneidad falsa dentro de E301–E304, mantener E304 como único cierre plenamente observable de la familia en la superficie actual y reservar cualquier eventual apertura funcional posterior para un bloque independiente y justificado.
 - **Estado:** cerrado
 
+### RETP-2026-032
+
+- **Fecha:** 22/03/2026
+- **Hora (Europe/Madrid):** NO_CONSTA
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** UCBC provisional / regularización integral de numeración subordinada y vigilancia focal sobre suceso local / Fase IV
+- **Resumen del cambio:** Se regulariza el bloque UCBC para subordinar la numeración RETP al CSV maestro, se desincrustan identificadores registrales de las actas UCBC y se incorpora la nota pública sobre suceso local y horizonte declarado a la matriz de vigilancia temprana sin abrir deuda viva nueva.
+- **Motivo o argumento:** El CSV maestro termina en RETP-2026-031 y por tanto no procede arrastrar una numeración incrustada en un acta como si gobernara el registro; era necesario corregir ahora la divergencia para evitar recaídas futuras y dejar toda la trazabilidad subordinada al registro maestro.
+- **Base doctrinal o técnica invocada:** CSV maestro del registro técnico; pliego de condiciones del Sistema Vectorial SV; criterio de vigilancia UCBC subordinada; HTML fresco de la pieza publicada; repos frescos auditados.
+- **Artefactos afectados:** docs/calidad/ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_INTERFACES_Y_ALERTA_TEMPRANA_AL_LENGUAJE_SV_2026_03_21.md; docs/calidad/ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_NOTA_DE_PRECISION_DE_SUCESO_LOCAL_Y_HORIZONTE_DECLARADO_2026_03_22.md; docs/calidad/MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md; docs/calidad/MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv
+- **Evidencia:** contraste adversarial entre CSV maestro, acta UCBC del 21/03/2026 y lote de vigilancia focal del 22/03/2026; verificación de que el CSV termina en 031 y de que la nueva regularización restablece una única autoridad de numeración.
+- **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; fiabilidad; disciplina_registral
+- **Objeción adversarial considerada:** riesgo de conservar una pseudo-continuidad cómoda entre el número incrustado en un acta y el siguiente lote, perpetuando así una fuente doble de verdad. No procede: el CSV manda y los documentos quedan subordinados a él.
+- **Decisión:** regularizar de forma total el bloque UCBC: el registro maestro reasume la numeración RETP, las actas quedan sin numeración incrustada y la nueva vigilancia focal entra como parte del mismo hito registral 032.
+- **Estado:** cerrado
+
 ## 13. Regla de estilo
 
 Este registro debe mantenerse con lenguaje formal, sobrio, técnico y revisable por terceros. Las entradas deben describir hechos, fundamento, evidencia, impacto y estado.
