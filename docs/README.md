@@ -6,6 +6,7 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 
 **Disponible:**
 - `docs/calidad/PROCEDIMIENTO_AUDITORIA_TECNICA_SV.md`
+- `docs/calidad/README.md`
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`
 - `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
@@ -13,6 +14,7 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/arquitectura/README.md`
 - `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
 - `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
 
 **Contenido pendiente:**
@@ -54,10 +56,15 @@ Documentos rectores inmediatos de este frente:
 - `docs/arquitectura/CRITERIOS_DE_CIERRE_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
 - `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
+- `docs/calidad/README.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
+- `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
+- `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
+- `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
 
 La sede doctrinal superior permanece en `SV-matematica-semantica`; este repositorio actúa como sede central operativa y técnica.
 
-La existencia de un **ABI semántico-diagnóstico mínimo** ya fijado y de una **arquitectura mínima enganchable** no debe leerse todavía como cierre total del frente ni como apertura automática del backend soberano.
+La existencia de un **ABI semántico-diagnóstico mínimo** ya fijado y de una **arquitectura mínima enganchable** no debe leerse todavía como cierre total del frente ni como apertura automática del backend soberano. El **marco de estabilidad, resiliencia y horizontes** introduce además cautelas expresas para avanzar por hitos sin hipotecar el desarrollo futuro del lenguaje.
