@@ -745,3 +745,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de sobreatribuir la verificación de `H1` como si implicara cierre total del frente o apertura automática de hitos posteriores/backend, y riesgo simétrico de negar `H1` por la sola persistencia de deuda residual. No procede ninguno de los dos extremos.
 - **Decisión:** declarar auditado `H1 — Base segura` como hito materialmente verificado, propagar esa lectura a la superficie pública mínima y mantener intacta la prudencia sobre `H2`, `H3`, `FFL-A` a `FFL-E` y backend soberano.
 - **Estado:** cerrado
+
+### RETP-2026-037
+
+- **Fecha:** 23/03/2026
+- **Hora (Europe/Madrid):** 16:59:50
+- **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_CALIDAD
+- **Frente/Fase:** Frente H2-pre y control adicional de lectura fresca / Fase IV
+- **Resumen del cambio:** Se formaliza `H2-pre` como dictamen auditado de no bloqueo, se institucionaliza el barrido secuencial de actividad y latencia del repo y se crea un sistema de partes de trabajo por agente con taxonomía explícita de lectura del repo fresco.
+- **Motivo o argumento:** La evaluación adversarial mostró que la nueva capa de seguridad es útil para reducir memoria espuria, inferencia no declarada y lectura parcial, siempre que no se apoye en fechas brutas del ZIP y que no infle innecesariamente el registro maestro. También se consideró necesario dejar asentado `H2-pre` sin sobreactuarlo como `H2` logrado.
+- **Base doctrinal o técnica invocada:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`; `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `docs/README.md`; `docs/calidad/README.md`; `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`; `docs/calidad/ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`; `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`; `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`; `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura completa del repo fresco con foco en hitos, deuda viva, marco de resiliencia, cadena de README y registros de calidad; adversarial sobre utilidad y coste del control adicional; verificación local de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** gobierno_tecnico; trazabilidad_de_agente; control_de_calidad; resiliencia_operativa; continuidad_segura.
+- **Objeción adversarial considerada:** riesgo de convertir el nuevo control en burocracia anárquica, o de basarlo en fechas del ZIP como si fueran prueba suficiente de actividad real. No procede ninguno de los dos extremos: se adopta un control cíclico, sobrio y orientado a actividad, latencia y justificabilidad, no a cronología bruta del ZIP.
+- **Decisión:** formalizar `H2-pre` como no bloqueo auditado, mantener `H2` en `Pendiente`, crear registros específicos de barridos y partes por agente, y conservar el registro maestro como capa de síntesis, no como bitácora exhaustiva.
+- **Estado:** cerrado
