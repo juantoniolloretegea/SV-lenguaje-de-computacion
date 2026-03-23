@@ -1,0 +1,5 @@
+query_spec Q1 {
+  query_type: PendingU;
+  scope: Trajectory;
+  restrictions: [];
+}

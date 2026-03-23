@@ -90,16 +90,16 @@ E101 = SVPErrorDef("E101", "VectorLengthMismatch",
     "La longitud del vector no coincide con b² de la CellSpec referenciada",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
-E102 = SVPErrorDef("E102", "SpecNotFound",
-    "La CellSpec o CoupledSpec referenciada no existe",
+E102 = SVPErrorDef("E102", "MissingOutputSemantics",
+    "La CellSpec referencia una OutputSemantics no declarada o de tipo incorrecto",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
 E103 = SVPErrorDef("E103", "GraphCycleDetected",
     "El grafo de composición contiene ciclos (prohibido)",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
-E104 = SVPErrorDef("E104", "GraphMissingRelation",
-    "El grafo de composición no tiene relación semántica declarada",
+E104 = SVPErrorDef("E104", "InvalidConnectorCodomain",
+    "El conector declara un destino fuera del alfabeto ternario permitido",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
 E105 = SVPErrorDef("E105", "BridgePositionOutOfRange",

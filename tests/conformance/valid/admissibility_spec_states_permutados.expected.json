@@ -1,0 +1,20 @@
+{
+  "grammar_version": "0.1",
+  "ir_version": "0.2",
+  "objects": [
+    {
+      "fields": {
+        "parameter_id": 1,
+        "rule": "ReglaPermutada",
+        "states": "{Failed, Ok, U, Degraded}"
+      },
+      "level": "N0",
+      "name": "AS1",
+      "type": "AdmissibilitySpec"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "admissibility_spec_states_permutados.svp",
+  "source_sha256": "dae7bc1c1878e308107b4e09e9c7144edd55c6222dd62f4080ed36bee974c106"
+}

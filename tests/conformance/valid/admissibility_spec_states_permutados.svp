@@ -1,0 +1,5 @@
+admissibility_spec AS1 {
+  parameter_id: 1;
+  states: {Failed, Ok, U, Degraded};
+  rule: ReglaPermutada;
+}

@@ -1,0 +1,5 @@
+transition_data T1 {
+  horizon_ref: H_ausente;
+  events: [];
+  induced_parameters: [];
+}
