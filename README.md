@@ -14,6 +14,7 @@ Este repositorio alberga la especificación operativa activa, la implementación
 - **Arquitectura mínima del núcleo enganchable:** `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
 - **Marco de estabilidad, resiliencia y horizontes:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - **Control activo de calidad y hitos:** `docs/calidad/README.md`
+- **Hito actual auditado:** `H1 — Base segura` verificado como base material suficiente del frente vigente, sin apertura automática de `H2`/`H3` ni cierre total de `FFL-A` a `FFL-E`; véase `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`.
 - **Estado de cierre:** la convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue parcialmente abierta; la capa `N4/Uso` no debe leerse todavía como cierre total.
 
 ## Qué hace hoy el frontend de referencia
@@ -58,6 +59,7 @@ python tests/run_cli_smoke.py
 - `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
 - `docs/calidad/README.md`
+- `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
 
