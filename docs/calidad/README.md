@@ -28,6 +28,7 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
 - `ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
+- `ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
 
 ### Barridos secuenciales de actividad y latencia del repo
 
@@ -76,3 +77,5 @@ Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de ho
 La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda viva del frente final ni la deuda viva de hitos posteriores; su función es dejar constancia de que la base actual del lenguaje ya resulta suficientemente segura para seguir avanzando sin reabrir gramática, IR o validator por entusiasmo.
 
 La microauditoría `H2-pre` tampoco verifica `H2`; solo deja asentado que el estado actual no muestra un estrechamiento ilegítimo del espacio estructural futuro de ese hito.
+
+La autorización restringida de apertura de `H2` se apoya en esa ausencia de bloqueo y en la base segura ya acreditada por `H1`, pero no convierte `H2` en hito verificado: `Q-04` y `Q-05` permanecen en `Pendiente` hasta futura verificación positiva.
