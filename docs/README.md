@@ -12,6 +12,7 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
 - `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
+- `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
 - `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
 - `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
@@ -67,6 +68,7 @@ Documentos rectores inmediatos de este frente:
 - `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
 - `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
+- `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
 - `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
 - `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
@@ -80,5 +82,7 @@ La sede doctrinal superior permanece en `SV-matematica-semantica`; este reposito
 La existencia de un **ABI semántico-diagnóstico mínimo** ya fijado y de una **arquitectura mínima enganchable** no debe leerse todavía como cierre total del frente ni como apertura automática del backend soberano. El **marco de estabilidad, resiliencia y horizontes** introduce además cautelas expresas para avanzar por hitos sin hipotecar el desarrollo futuro del lenguaje.
 
 La verificación auditada de `H1 — Base segura` debe leerse como una constatación material del estado mínimo suficiente del frente vigente, no como cierre total del frente final ni como apertura automática de `H2`, `H3` o del backend soberano.
+
+La autorización restringida de apertura de `H2` debe leerse como paso de gobierno técnico posterior a `H2-pre`: permite abrir `H2` solo como frente arquitectónico-auditor de trabajo, sin verificación positiva todavía del hito, sin semántica fuerte implementada y sin promoción automática al backend soberano.
 
 La trazabilidad de agente y el control de lectura fresca pasan además a quedar institucionalizados en `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md` y `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`. Su función es reducir inferencia, memoria espuria y lectura parcial en futuros relevos, sin convertir el registro maestro en una bitácora excesivamente burocrática.
