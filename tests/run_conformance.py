@@ -27,7 +27,7 @@ EXPECTED_INVALID_CODES = {
     "cellstate_vector_length_mismatch.svp": "E101",
     "bad_b_value.svp": "E002",
     "conector_mapping_incompleto.svp": "E007",
-    "conector_target_no_ternario.svp": "E008",
+    "conector_target_no_ternario.svp": "E104",
     "duplicate_identifier.svp": "E005",
     "compose_cycle_graph.svp": "E103",
     "gate_input_no_evalresult.svp": "E202",
@@ -45,6 +45,11 @@ EXPECTED_INVALID_CODES = {
     "domain_chain_mismatch.svp": "E401",
     "agent_architecture_mismatch.svp": "E402",
     "query_context_type_mismatch.svp": "E403",
+    "output_semantics_no_declarada.svp": "E102",
+    "compose_relations_vacias.svp": "E208",
+    "compose_patterns_vacios.svp": "E209",
+    "pending_u_reconocido_no_habilitado.svp": "E403",
+    "transition_data_horizon_no_declarado.svp": "E303",
 }
 
 
