@@ -10,6 +10,7 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`
 - `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`
 - `docs/calidad/C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
+- `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
 - `docs/arquitectura/README.md`
 - `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`
@@ -61,6 +62,7 @@ Documentos rectores inmediatos de este frente:
 - `docs/calidad/README.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
 - `docs/calidad/TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
+- `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
 - `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
 - `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
@@ -68,3 +70,5 @@ Documentos rectores inmediatos de este frente:
 La sede doctrinal superior permanece en `SV-matematica-semantica`; este repositorio actúa como sede central operativa y técnica.
 
 La existencia de un **ABI semántico-diagnóstico mínimo** ya fijado y de una **arquitectura mínima enganchable** no debe leerse todavía como cierre total del frente ni como apertura automática del backend soberano. El **marco de estabilidad, resiliencia y horizontes** introduce además cautelas expresas para avanzar por hitos sin hipotecar el desarrollo futuro del lenguaje.
+
+La verificación auditada de `H1 — Base segura` debe leerse como una constatación material del estado mínimo suficiente del frente vigente, no como cierre total del frente final ni como apertura automática de `H2`, `H3` o del backend soberano.
