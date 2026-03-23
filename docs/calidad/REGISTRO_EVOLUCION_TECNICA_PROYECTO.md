@@ -677,6 +677,25 @@ Se recomienda usar una o varias de estas etiquetas:
 
 Este registro debe mantenerse con lenguaje formal, sobrio, técnico y revisable por terceros. Las entradas deben describir hechos, fundamento, evidencia, impacto y estado.
 
+| RETP-2026-039 | 23/03/2026 | NO_CONSTA | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS | Consolidación auditada de H2 restringido / Fase IV | Se consolida la serie H2.1–H2.3 y se deja asentado que H2 restringido queda respaldado por auditoría mínima suficiente, sin verificarse todavía como hito positivo. |
+
+
+## RETP-2026-039 — Consolidación auditada de H2 restringido
+
+- **Fecha:** 23/03/2026
+- **Hora (Europe/Madrid):** NO_CONSTA
+- **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS
+- **Frente/Fase:** H2 restringido / Fase IV
+- **Resumen del cambio:** Se consolida en un único punto de control la serie auditada H2.1–H2.3, dejando asentado que la apertura restringida de H2 ya no descansa solo en un dictamen de no-bloqueo, sino también en auditoría mínima suficiente de elasticidad de la IR, no-rigidez del validator y no-hipoteca del plano ejecutable.
+- **Motivo o argumento:** Tras las microauditorías H2.1, H2.2 y H2.3, la base material de H2 restringido quedó suficientemente respaldada para consolidación registral, sin que ello equivalga a verificación positiva de H2 ni apertura de H3 o backend.
+- **Base doctrinal o técnica invocada:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`; `IR_CANONICA_BIENFORMACION_SV_v0_2.md`; `src/svp_validator.py`; `src/svp_main.py`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`; `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `docs/calidad/README.md`; `docs/calidad/ACTA_TECNICA_DE_CONSOLIDACION_AUDITADA_DE_H2_RESTRINGIDO_2026_03_23.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** microauditorías H2.1, H2.2 y H2.3; lectura fresca real del repo; `tests/run_conformance.py` 31/31; `tests/run_cli_smoke.py` 3/3; `tests/run_sec0_smoke.py` 3/3.
+- **Impacto:** `gobierno_tecnico`; `control_de_hitos`; `continuidad_operativa`; `resiliencia_prebackend`.
+- **Objeción adversarial considerada:** Riesgo de presentar la superación de H2.1–H2.3 como si implicara H2 verificado, o de mantener H2 como mera hipótesis negativa de no-bloqueo pese a haber pasado ya la auditoría mínima suficiente. No procede ninguno de los dos extremos: la decisión correcta es consolidar H2 restringido sin verificar positivamente el hito.
+- **Decisión:** consolidar registralmente la serie H2 restringido, mantener `Q-04` y `Q-05` en `Pendiente`, y rebajar la gravedad estructural inmediata de `D-01`, `D-02` y `D-03` sin cerrarlas.
+- **Estado:** cerrado
+
 ## 14. Vigencia
 
 Este registro permanecerá vigente mientras el proyecto requiera trazabilidad técnica ligera y controlada de su evolución, sin perjuicio de futuras versiones más estructuradas si la complejidad del sistema lo exigiera.
