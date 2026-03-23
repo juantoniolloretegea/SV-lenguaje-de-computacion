@@ -12,7 +12,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 
 from typing import Dict, Set
 from svp_ast import *
-from svp_errors import (SVPError, E002, E004, E005, E006, E007, E008, E009,
+from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
                          E101, E102, E104, E105, E202, E211, E303, E304,
                          E401, E402, E403)
 
@@ -112,8 +112,13 @@ class Validator:
         if node.b < 3:
             raise SVPError(E002, node.loc.line, node.loc.col,
                            f"b = {node.b}, debe ser >= 3")
-        self._require_ref(node.codomain, node.loc)
-        self._require_ref(node.semantics, node.loc)
+        self._require_ref(node.codomain, node.loc, "CodomainDecl")
+        if node.semantics not in self.symbols:
+            raise SVPError(E102, node.loc.line, node.loc.col,
+                           f"CellSpec {node.name!r} referencia una OutputSemantics no declarada: {node.semantics!r}")
+        if self.symbol_types[node.semantics] != "OutputSemanticsDecl":
+            raise SVPError(E102, node.loc.line, node.loc.col,
+                           f"CellSpec {node.name!r} referencia {node.semantics!r}, pero no es OutputSemantics")
 
     def _validate_coupledspec(self, node: CoupledSpecDecl):
         self._require_ref(node.cell, node.loc, "CellSpecDecl")
@@ -154,8 +159,8 @@ class Validator:
         for key, target in node.mapping:
             seen_keys.append(key)
             if target not in {"Zero", "One", "U"}:
-                raise SVPError(E008, node.loc.line, node.loc.col,
-                               f"El destino {target!r} no es literal ternario en el conector {node.name!r}")
+                raise SVPError(E104, node.loc.line, node.loc.col,
+                               f"El destino {target!r} queda fuera del alfabeto ternario permitido en el conector {node.name!r}")
 
         seen_set = set(seen_keys)
         missing = expected_values - seen_set
@@ -223,10 +228,12 @@ class Validator:
         if node.parameter_id <= 0:
             raise SVPError(E401, node.loc.line, node.loc.col,
                            f"AdmissibilitySpec {node.name!r} con parameter_id no positivo")
-        normalized = "".join(node.states.split())
-        if normalized != "{Ok,Degraded,Failed,U}":
+        states_raw = node.states.strip()
+        states_items = [part.strip() for part in states_raw.strip("{}").split(",") if part.strip()]
+        expected_states = {"Ok", "Degraded", "Failed", "U"}
+        if len(states_items) != 4 or set(states_items) != expected_states:
             raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"AdmissibilitySpec {node.name!r} debe declarar states = {{Ok, Degraded, Failed, U}}")
+                           f"AdmissibilitySpec {node.name!r} debe declarar exactamente los estados {{Ok, Degraded, Failed, U}}")
         if not node.rule:
             raise SVPError(E401, node.loc.line, node.loc.col,
                            f"AdmissibilitySpec {node.name!r} sin rule")
@@ -291,7 +298,12 @@ class Validator:
             self._require_ref(ref, node.loc, "SuperviseCmd")
 
     def _validate_transition_data(self, node: TransitionDataDecl):
-        self._require_ref(node.horizon_ref, node.loc, "HorizonDecl")
+        if node.horizon_ref not in self.symbols:
+            raise SVPError(E303, node.loc.line, node.loc.col,
+                           f"TransitionData {node.name!r} referencia un Horizon no declarado: {node.horizon_ref!r}")
+        if self.symbol_types[node.horizon_ref] != "HorizonDecl":
+            raise SVPError(E303, node.loc.line, node.loc.col,
+                           f"TransitionData {node.name!r} referencia {node.horizon_ref!r}, pero no es Horizon")
 
     def _validate_trajectory(self, node: TrajectoryDecl):
         if len(node.entries) == 0:
@@ -366,6 +378,9 @@ class Validator:
                            f"Agent {node.name!r} declara architecture {node.architecture!r}, pero su Domain opera sobre {horizon.architecture!r}")
 
     def _validate_query_spec(self, node: QuerySpecDecl):
+        if node.query_type == "PendingU":
+            raise SVPError(E403, node.loc.line, node.loc.col,
+                           "query_type 'PendingU' está reconocido por la gramática, pero no está habilitado en v0.1")
         allowed = {
             "PointEvaluation": "Cell",
             "TrajectoryState": "Trajectory",
