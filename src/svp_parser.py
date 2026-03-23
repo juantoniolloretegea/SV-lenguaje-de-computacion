@@ -736,9 +736,15 @@ class Parser:
         self._expect(TT.COMMA)
         self._kw_field(TT.KW_RELATIONS)
         rels = self._parse_id_list()
+        if not rels:
+            raise SVPError(E208, loc.line, loc.col,
+                           "compose requiere al menos una relación declarada")
         self._expect(TT.COMMA)
         self._kw_field(TT.KW_PATTERNS)
         pats = self._parse_id_list()
+        if not pats:
+            raise SVPError(E209, loc.line, loc.col,
+                           "compose requiere al menos un patrón declarado")
         self._expect(TT.RPAREN)
         self._expect(TT.SEMICOLON)
         return ComposeCmd(name=name, graph=graph, relations=rels, patterns=pats, loc=loc)
