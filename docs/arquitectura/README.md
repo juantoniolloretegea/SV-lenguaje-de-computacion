@@ -24,3 +24,7 @@ Estas piezas deben leerse de forma acumulativa y subordinada:
 6. informe de continuidad del frente básico y habilitación prudente del backend.
 
 La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repositorio.
+
+## Estado de hito actualmente acreditado
+
+La arquitectura vigente permite sostener ya, en régimen auditado y subordinado, `H1 — Base segura`, siempre sin convertir esa verificación en cierre total del frente ni en habilitación automática de `H2`, `H3` o del backend. La formalización de esa verificación se registra en `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`.
