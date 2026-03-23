@@ -729,3 +729,19 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo doble: por un lado considerar `docs/index.html` como pieza secundaria y dejarla desalineada respecto del estado real del lenguaje; por otro lado sobreactuar la nueva visibilidad como si implicara cierre total de `FFL-E` o apertura automática del backend. No procede ninguno de los dos extremos.
 - **Decisión:** cerrar la asimetría residual de la puerta pública del playground para que cualquier unidad o lector externo encuentre desde `docs/index.html` el núcleo documental mínimo pre-backend, sin modificar gramática, IR, validator, runner ni el estatuto prudente del frente.
 - **Estado:** cerrado
+
+### RETP-2026-036
+
+- **Fecha:** 23/03/2026
+- **Hora (Europe/Madrid):** NO_CONSTA
+- **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS
+- **Frente/Fase:** Frente H1 — formalización auditada del primer hito del Lenguaje SV / Fase IV
+- **Resumen del cambio:** Se formaliza en un solo lote la verificación auditada de `H1 — Base segura`, se actualiza el registro de calidad de hitos y se propaga su lectura mínima a la cadena de README y a `docs/index.html`, dejando explícito que H1 no cierra el frente final ni abre automáticamente `H2`, `H3` o backend.
+- **Motivo o argumento:** La auditoría seria del primer hito mostró que ya existen materialmente gramática mínima estable, IR no incompatible con relaciones y acumulaciones futuras y validator no temporalista; faltaba consolidar ese estado como acto de gobierno técnico legible, resistente al relevo y menos dependiente de microparches dispersos.
+- **Base doctrinal o técnica invocada:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`; `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`; `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`; `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`; `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `README.md`; `docs/README.md`; `docs/arquitectura/README.md`; `docs/calidad/README.md`; `docs/index.html`; `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura completa del repo fresco con foco en README, arquitectura, calidad, hitos y parser/validator; contraste adversarial de que la persistencia de deuda viva residual no impide por sí sola H1; verificación local posterior de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** gobierno_tecnico; continuidad_operativa; descubribilidad_publica; resiliencia_prebackend; control_de_hitos.
+- **Objeción adversarial considerada:** riesgo de sobreatribuir la verificación de `H1` como si implicara cierre total del frente o apertura automática de hitos posteriores/backend, y riesgo simétrico de negar `H1` por la sola persistencia de deuda residual. No procede ninguno de los dos extremos.
+- **Decisión:** declarar auditado `H1 — Base segura` como hito materialmente verificado, propagar esa lectura a la superficie pública mínima y mantener intacta la prudencia sobre `H2`, `H3`, `FFL-A` a `FFL-E` y backend soberano.
+- **Estado:** cerrado
