@@ -1,0 +1,8 @@
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: SemK3Ausente;
+  role: Base;
+}
