@@ -1,6 +1,6 @@
 # Calidad del frente operativo
 
-Esta carpeta reúne instrumentos activos de control, verificación y deuda viva del Lenguaje SV.
+Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, barridos secuenciales y trazabilidad de trabajo por agente del Lenguaje SV.
 
 ## Instrumentos activos
 
@@ -27,8 +27,52 @@ Esta carpeta reúne instrumentos activos de control, verificación y deuda viva 
 - `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
 - `ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
+- `ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
 
-Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de horizontes, verificación por hitos y deuda viva del frente operativo del lenguaje. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
+### Barridos secuenciales de actividad y latencia del repo
 
+- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
+- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`
+- `ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`
+
+### Partes de trabajo por agente
+
+- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
+- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`
+
+## Regla de uso para lectura fresca
+
+Los registros de barrido y de partes por agente introducen una taxonomía obligatoria de lectura del repo fresco:
+
+- `INFERIDA`
+- `DE_MEMORIA`
+- `PARCIAL`
+- `AJUSTADA_AL_OBJETO`
+- `100_REAL`
+
+### Regla operativa
+
+- Las afirmaciones globales sobre el estado del repositorio y cualquier propuesta estructural, registral o de fase deben apoyarse en lectura `100_REAL` del repo fresco.
+- La lectura `AJUSTADA_AL_OBJETO` solo puede legitimar actuaciones locales y explícitamente delimitadas.
+- Las lecturas `INFERIDA` o `DE_MEMORIA` no bastan para introducir cambios estructurales ni para declarar estados globales del árbol.
+
+## Regla de identificación de agente
+
+Cuando deba identificarse una unidad de trabajo, se usará siempre la forma **Agente X**, donde **X** es el nombre operativo completo de la unidad activada.
+
+## Regla de barrido secuencial
+
+Cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes, deberá ejecutarse un barrido secuencial del repo fresco. Ese barrido no debe basarse en la fecha de creación o de modificación del ZIP extraído como señal bruta suficiente. Debe valorar:
+
+1. actividad estructural del fichero;
+2. uso funcional efectivo;
+3. latencia legítima o sospechosa;
+4. necesidad o no de análisis adicional.
+
+## Nota de prudencia
+
+Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de horizontes, verificación por hitos, barridos secuenciales y partes de trabajo por agente. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
 
 La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda viva del frente final ni la deuda viva de hitos posteriores; su función es dejar constancia de que la base actual del lenguaje ya resulta suficientemente segura para seguir avanzando sin reabrir gramática, IR o validator por entusiasmo.
+
+La microauditoría `H2-pre` tampoco verifica `H2`; solo deja asentado que el estado actual no muestra un estrechamiento ilegítimo del espacio estructural futuro de ese hito.
