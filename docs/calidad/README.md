@@ -26,5 +26,9 @@ Esta carpeta reúne instrumentos activos de control, verificación y deuda viva 
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
 - `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
+- `ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 
 Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de horizontes, verificación por hitos y deuda viva del frente operativo del lenguaje. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
+
+
+La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda viva del frente final ni la deuda viva de hitos posteriores; su función es dejar constancia de que la base actual del lenguaje ya resulta suficientemente segura para seguir avanzando sin reabrir gramática, IR o validator por entusiasmo.
