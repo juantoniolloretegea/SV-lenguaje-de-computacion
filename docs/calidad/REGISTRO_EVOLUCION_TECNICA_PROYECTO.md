@@ -761,3 +761,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Objeción adversarial considerada:** riesgo de convertir el nuevo control en burocracia anárquica, o de basarlo en fechas del ZIP como si fueran prueba suficiente de actividad real. No procede ninguno de los dos extremos: se adopta un control cíclico, sobrio y orientado a actividad, latencia y justificabilidad, no a cronología bruta del ZIP.
 - **Decisión:** formalizar `H2-pre` como no bloqueo auditado, mantener `H2` en `Pendiente`, crear registros específicos de barridos y partes por agente, y conservar el registro maestro como capa de síntesis, no como bitácora exhaustiva.
 - **Estado:** cerrado
+
+### RETP-2026-038
+
+- **Fecha:** 23/03/2026
+- **Hora (Europe/Madrid):** 17:45:05
+- **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS
+- **Frente/Fase:** Frente H2-A — autorización restringida de apertura de H2 / Fase IV
+- **Resumen del cambio:** Se formaliza la autorización restringida de apertura de `H2` como frente arquitectónico-auditor de trabajo, se actualiza el registro de hitos sin verificar todavía `H2`, y se deja trazabilidad adicional del paso mediante barrido secuencial y parte por agente.
+- **Motivo o argumento:** Tras `H1` verificado y `H2-pre` formalizado como no bloqueo, la adversarial mostró que ya existe base positiva suficiente para abrir `H2` en régimen restringido. Faltaba convertir esa situación material en un acto explícito de gobierno técnico, sin confundirla con `H2` logrado ni con apertura automática del backend.
+- **Base doctrinal o técnica invocada:** `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`; `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`; `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`; `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`; `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `README.md`; `docs/README.md`; `docs/arquitectura/README.md`; `docs/calidad/README.md`; `docs/index.html`; `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`; `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`; `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura completa del repo fresco con foco en arquitectura, README, calidad, hitos, barridos y partes por agente; adversarial específica sobre la autorización de `H2`; verificación local de `tests/run_conformance.py`, `tests/run_cli_smoke.py` y `tests/run_sec0_smoke.py` sin regresión.
+- **Impacto:** gobierno_tecnico; control_de_hitos; continuidad_operativa; trazabilidad_de_agente; resiliencia_prebackend.
+- **Objeción adversarial considerada:** riesgo de sobreactuar `H2-pre` como si ya implicara `H2` verificado, o de negar toda apertura de `H2` por la sola permanencia de `Q-04`, `Q-05`, `D-01` y `D-02` en estado pendiente o de deuda viva. No procede ninguno de los dos extremos: la decisión correcta es una autorización restringida y explícitamente limitada.
+- **Decisión:** autorizar la apertura restringida de `H2` como frente arquitectónico-auditor de trabajo, mantener `Q-04` y `Q-05` en `Pendiente`, y dejar asentado que esta autorización no abre automáticamente `H3` ni el backend soberano.
+- **Estado:** cerrado
+
