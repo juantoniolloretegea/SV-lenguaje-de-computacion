@@ -29,6 +29,7 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
 - `ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
+- `ACTA_TECNICA_DE_CONSOLIDACION_AUDITADA_DE_H2_RESTRINGIDO_2026_03_23.md`
 
 ### Barridos secuenciales de actividad y latencia del repo
 
@@ -79,3 +80,14 @@ La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda
 La microauditoría `H2-pre` tampoco verifica `H2`; solo deja asentado que el estado actual no muestra un estrechamiento ilegítimo del espacio estructural futuro de ese hito.
 
 La autorización restringida de apertura de `H2` se apoya en esa ausencia de bloqueo y en la base segura ya acreditada por `H1`, pero no convierte `H2` en hito verificado: `Q-04` y `Q-05` permanecen en `Pendiente` hasta futura verificación positiva.
+
+
+## Nota de consolidación de H2 restringido
+
+La serie mínima de suficiencia estructural de **H2 restringido** queda ya consolidada por lectura auditada de sus tres subfrentes:
+
+- `H2.1` — elasticidad de la IR para alojar futuras familias de propiedades preservadas;
+- `H2.2` — no-rigidez del `validator` ante patrones de transición no uniformes;
+- `H2.3` — suficiencia del plano ejecutable actual para no hipotecar evoluciones futuras.
+
+Esta consolidación **no** verifica `H2` como hito. Su función es otra: dejar asentado que la apertura restringida de `H2` ya no descansa solo en un dictamen de no-bloqueo, sino también en una auditoría positiva mínima de suficiencia estructural.
