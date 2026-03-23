@@ -16,6 +16,7 @@ Este repositorio alberga la especificación operativa activa, la implementación
 - **Control activo de calidad y hitos:** `docs/calidad/README.md`
 - **Trazabilidad adicional de lectura fresca, barridos secuenciales y partes por agente:** `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md` y `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - **Hito actual auditado:** `H1 — Base segura` verificado como base material suficiente del frente vigente, sin apertura automática de `H2`/`H3` ni cierre total de `FFL-A` a `FFL-E`; véase `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`.
+- **Apertura vigente de fase:** `H2` autorizado en régimen restringido como frente arquitectónico-auditor de trabajo, sin verificación positiva todavía de `H2`, sin implementación fuerte y sin apertura automática del backend; véase `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`.
 - **Estado de cierre:** la convergencia fuerte entre IR, catálogo, validator, suite y documentación pública sigue parcialmente abierta; la capa `N4/Uso` no debe leerse todavía como cierre total.
 
 ## Qué hace hoy el frontend de referencia
@@ -62,6 +63,7 @@ python tests/run_cli_smoke.py
 - `docs/calidad/README.md`
 - `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
+- `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
 - `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
 - `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
