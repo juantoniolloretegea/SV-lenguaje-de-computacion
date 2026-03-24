@@ -1,7 +1,13 @@
 # Dictamen de saneamiento del Bloque A — Contrato diagnóstico del lenguaje SV
 
-**Estado:** salida técnica sincronizada  
-**Fecha:** 19/03/2026
+**Estado:** salida técnica sincronizada con nota posterior de resincronización visible  
+**Fecha base:** 19/03/2026  
+**Actualización posterior:** 24/03/2026
+
+
+## Nota de lectura posterior
+
+Las referencias específicas a `E102`, `E104`, `E208`, `E209` y `E303` contenidas en este documento deben leerse conforme a la **nota posterior de sincronización visible** incorporada al final. Esa nota no reabre la doctrina ni el validator: corrige la descripción documental del estado ya observable del repo fresco.
 
 ## 1. Objeto
 
@@ -157,3 +163,17 @@ Por ello, el siguiente paso legítimo tras este dictamen no es prometer cierre h
 
 1. contraste fino puramente documental de `E301–E304`, o
 2. ajuste funcional mínimo específicamente justificado.
+
+
+## 10. Nota posterior de sincronización visible (24/03/2026)
+
+La lectura fresca del repo real, contrastada contra `src/svp_errors.py`, `tests/run_conformance.py` y los casos inválidos vigentes, obliga a dejar constancia de la siguiente resincronización documental:
+
+- `E102` consta ya con **emisión observable** y **cobertura explícita** mediante `output_semantics_no_declarada.svp`.
+- `E104` consta ya con **emisión observable** y **cobertura explícita** mediante `conector_target_no_ternario.svp`.
+- `E208` y `E209` constan ya con **emisión observable** y **cobertura explícita** mediante `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
+- `E303` consta ya con **emisión observable** y **cobertura explícita** mediante `transition_data_horizon_no_declarado.svp`.
+
+En consecuencia, quedan **materialmente superadas** las formulaciones anteriores de este dictamen que hacían caer hoy a `E102` en `E006`, a `E104` en `E008` o que negaban acreditación autónoma a `E303`.
+
+La actualización correcta no consiste en reescribir silenciosamente la historia del Bloque A, sino en **anotar explícitamente** que el estado documental vigente debe leerse ya con esta sincronización visible.
