@@ -1,69 +1,37 @@
-# ESPEJO DOCTRINAL DE COLECCIONES PARA EL LENGUAJE SV
+# Espejo doctrinal de colecciones del Lenguaje SV
 
-## Estatuto
+## 1. Naturaleza
 
-Este artefacto tiene estatuto **derivado, selectivo y no soberano**.
+Este espejo tiene carácter derivado y operativo.
 
-Su función es ofrecer al repo del Lenguaje SV un panorama controlado de las colecciones públicas del ecosistema cuando una pieza doctrinal o editorial pueda afectar a:
+No sustituye a la sede doctrinal superior ni duplica doctrina. Su función es reflejar, de forma sobria y trazable, qué colecciones o frentes doctrinales públicos deben ser contemplados por el Lenguaje SV por razones de arquitectura, vigilancia semántica, hitos o deuda futura.
 
-- cautelas de arquitectura;
-- horizonte semántico futuro;
-- semántica diagnóstica;
-- hitos;
-- deuda viva;
-- o compatibilidad del cierre técnico del frente final.
+## 2. Regla de uso
 
-Este espejo **no produce doctrina**, **no duplica teoría** y **no autoriza implementación automática**.
+Una entrada en este espejo:
 
-## Regla de relación con otros artefactos del repo del lenguaje
+- no autoriza implementación automática;
+- no corrige la jerarquía doctrinal;
+- no sustituye a la `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`;
+- y no crea deuda viva por sí sola.
 
-Este espejo:
+Su función es registrar visibilidad, relación con el Lenguaje SV, relevancia y eventual necesidad de revisión.
 
-- no sustituye la matriz de horizontes;
-- no sustituye el registro de calidad por hitos;
-- no sustituye la deuda viva;
-- y no sustituye la wishlist IRQ del ecosistema.
+## 3. Regla de interpretación
 
-Su función es **alimentarlos selectivamente** cuando proceda.
+- `bandera_relevancia_lenguaje` mide relevancia estructural.
+- `irq_lenguaje` mide necesidad operativa de revisión.
+- una bandera alta no implica interrupción alta;
+- y una IRQ alta no equivale a superioridad doctrinal.
 
-## Regla canónica de comparación
+## 4. Estado inicial
 
-Cuando se valore una publicación o documento desde el Lenguaje SV, la base canónica de referencia será, por defecto, el **texto público vigente**. Sólo se desplazará esa base si:
+Este espejo se crea con entradas mínimas de colección para:
 
-1. existe una base de trabajo declarada para una nueva release; o
-2. se ha constatado identidad material exacta entre el texto publicado y el manuscrito de GitHub.
+- bloque algebraico y de composición;
+- familia VII de sucesos, horizontes y cambio estructural;
+- programa de interfaces.
 
-## Bandera BL
+## 5. Criterio de prudencia
 
-La bandera BL expresa la **relevancia estructural** de una pieza para el Lenguaje SV.
-
-Valores previstos:
-
-- `BL0_sin_relevancia_actual`
-- `BL1_contexto_general`
-- `BL2_vigilancia_semantica`
-- `BL3_cautela_de_arquitectura`
-- `BL4_horizonte_estructural_futuro`
-- `BL5_relevancia_directa_para_hitos`
-
-## IRQ
-
-La IRQ expresa la **exigencia operativa de revisión** antes de continuar con el tablero del lenguaje.
-
-Valores previstos:
-
-- `IRQ0_sin_interrupcion`
-- `IRQ1_revision_en_proximo_control`
-- `IRQ2_revision_obligada_antes_de_cierre_de_hito`
-- `IRQ3_bloqueo_hasta_revision_explicita`
-
-## Regla dura sobre BL e IRQ
-
-- BL alta no implica IRQ alta.
-- IRQ alta no equivale a superioridad doctrinal.
-- Ninguna BL o IRQ autoriza implementación automática.
-- La UCBC propone y fundamenta; no impone silenciosamente.
-
-## Estado del arte en este punto
-
-Este documento abre sólo la **infraestructura mínima** del espejo. La población efectiva de entradas y su propagación a hitos, deuda viva o matrices quedan deferidas a pases posteriores.
+El Lenguaje SV no debe cerrarse como si el sistema se agotara en la osamenta algebraica ya fijada. Tampoco debe implementar prematuramente los frentes emergentes. Este espejo sirve para sostener ese equilibrio.
