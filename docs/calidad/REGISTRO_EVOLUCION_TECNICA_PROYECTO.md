@@ -813,3 +813,18 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Decisión:** cerrar registralmente el parche correctivo del frontend como lote terminado y dejar separado cualquier frente posterior de regularización técnica limitada.
 - **Estado:** cerrado
 
+### RETP-2026-041
+
+- **Fecha:** 24/03/2026
+- **Hora (Europe/Madrid):** 21:42:51
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA_Y_CONCORDANCIA_DIAGNOSTICA
+- **Frente/Fase:** Frente final del lenguaje SV / Microparche documental rebasado del contrato diagnóstico visible / Fase IV
+- **Resumen del cambio:** Se resincroniza la documentación viva del contrato diagnóstico observable para reflejar la emitibilidad y cobertura explícita ya acreditadas de `E102`, `E104`, `E208`, `E209` y `E303`, corrigiendo además los nombres implementativos stale de `E102` y `E104` en catálogo y matriz.
+- **Motivo o argumento:** La lectura adversarial del repo fresco mostró que el árbol ya acredita materialmente esos cinco códigos por suite y validator, mientras varios documentos vivos seguían describiendo un estado anterior o arrastraban nombres implementativos ya no vigentes.
+- **Base doctrinal o técnica invocada:** `src/svp_errors.py`; `tests/run_conformance.py`; `tests/conformance/invalid/output_semantics_no_declarada.svp`; `tests/conformance/invalid/conector_target_no_ternario.svp`; `tests/conformance/invalid/compose_relations_vacias.svp`; `tests/conformance/invalid/compose_patterns_vacios.svp`; `tests/conformance/invalid/transition_data_horizon_no_declarado.svp`; repo fresco auditado con suite en verde.
+- **Artefactos afectados:** `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`; `docs/calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`; `docs/calidad/DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`; `docs/calidad/ACTA_TECNICA_DE_SINCRONIZACION_DOCUMENTAL_DEL_CONTRATO_DIAGNOSTICO_VISIBLE_2026_03_24.md`; `docs/calidad/README.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura `100_REAL` del repo fresco con contraste corto sobre `src/svp_errors.py`, `tests/run_conformance.py`, los casos inválidos afectados y la documentación viva; ejecución local posterior de `tests/run_conformance.py` **37/37**, `tests/run_cli_smoke.py` **3/3** y `tests/run_sec0_smoke.py` **3/3** sin regresión.
+- **Impacto:** coherencia_diagnostica; sincronizacion_documental; trazabilidad; control_de_calidad.
+- **Objeción adversarial considerada:** riesgo de sobreactuar este lote como si implicara convergencia semántica plena con la IR v0.2 o reescritura silenciosa de historia cerrada. No procede: el lote se limita a resincronizar documentación viva y a añadir nota posterior explícita en el dictamen.
+- **Decisión:** abrir y cerrar como lote separado un microparche documental rebasado que sincronice el contrato diagnóstico visible sin tocar código ni mezclar otros frentes.
+- **Estado:** cerrado
