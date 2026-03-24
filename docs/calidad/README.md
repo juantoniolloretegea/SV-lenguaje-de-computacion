@@ -22,6 +22,14 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md`
 - `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.csv`
 
+
+### Gobierno semántico ante frentes doctrinales abiertos
+
+- `ACTA_TECNICA_DE_CONSOLIDACION_DE_LA_FAMILIA_VII_Y_ALERTA_DE_GOBIERNO_SEMANTICO_PARA_EL_LENGUAJE_SV_2026_03_24.md`
+- `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`
+- `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`
+- `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
+
 ### Resiliencia, horizontes y control por hitos
 
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
@@ -92,3 +100,8 @@ La serie mínima de suficiencia estructural de **H2 restringido** queda ya conso
 - `H2.3` — suficiencia del plano ejecutable actual para no hipotecar evoluciones futuras.
 
 Esta consolidación **no** verifica `H2` como hito. Su función es otra: dejar asentado que la apertura restringida de `H2` ya no descansa solo en un dictamen de no-bloqueo, sino también en una auditoría positiva mínima de suficiencia estructural.
+
+
+## Nota adicional sobre diferenciación estructural
+
+La consolidación doctrinal de la familia VII obliga a no tratar todos los soportes del sistema con igual rigidez. El Lenguaje SV debe distinguir entre estructura ósea ya consolidada, soportes funcionales de formalización y zonas de articulación con frentes emergentes, evitando la igualación de dureza que cerraría prematuramente el espacio semántico futuro.
