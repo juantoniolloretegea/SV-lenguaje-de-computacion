@@ -43,8 +43,8 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 - `Tratamiento_Recomendado`
 - `Observaciones`
 
-**Estado:** salida técnica sincronizada  
-**Fecha de trabajo:** 19/03/2026  
+**Estado:** salida técnica resincronizada  
+**Fecha de trabajo:** 24/03/2026  
 **Base de contraste:** repo fresco del lenguaje + IR v0.2 + catálogo público efectivo + implementación + validator + suite
 
 ## 1. Resultado global
@@ -74,9 +74,9 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E001|InvalidTriCoercion|InvalidTriValue|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E002|InvalidCellSize|InvalidBValue|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E101|EmptyCodomain|VectorLengthMismatch|si_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E102|MissingOutputSemantics|SpecNotFound|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
+|E102|MissingOutputSemantics|MissingOutputSemantics|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E103|IllegalBridgePosition|GraphCycleDetected|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E104|InvalidConnectorCodomain|GraphMissingRelation|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
+|E104|InvalidConnectorCodomain|InvalidConnectorCodomain|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E105|IncompleteAdmissibilityTable|BridgePositionOutOfRange|si_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E201|VectorLengthMismatch|LiteralResultForbidden|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E202|IllegalBridgeUpdate|GateInputNotEvalResult|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
@@ -86,7 +86,7 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E206|EdgeConnectorMismatch|ResolveMissingContext|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E301|InconsistentCounts|FrameMutationForbidden|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E302|WrongThreshold|TrajectoryMutationForbidden|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E303|ClassificationPrecedenceViolation|TransitionDataMissingHorizon|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
+|E303|ClassificationPrecedenceViolation|TransitionDataMissingHorizon|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E304|NonDeterministicGate|TrajectoryAlternanceViolation|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E401|FrameMutationAttempt|DomainPortContractViolation|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E402|NonAppendOnlyTrajectory|AgentDomainContractViolation|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
@@ -126,8 +126,8 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E009|—|TableInputMismatch|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E010|—|InvalidRole|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E207|—|ResolveMissingMechanism|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E208|—|ComposeMissingRelations|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E209|—|ComposeMissingPatterns|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E208|—|ComposeMissingRelations|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E209|—|ComposeMissingPatterns|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E210|—|MaxMinForbidden|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E211|—|SuperviseMetaNotSupervisor|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 
@@ -139,7 +139,7 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.
 5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
 6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`.
-7. El contraste fino documentado de `E102 / E104 / E106 / E111` ya está ejecutado en la capa pública de sondas adversariales documentadas.
-8. `E102` y `E104` mantienen, tras ese contraste, su condición de divergencias con mismo identificador y significado distinto.
-9. `E106` y `E111` mantienen su condición de coincidencias ancla, pero siguen sin cobertura explícita de suite en la superficie v0.1.
-10. El siguiente barrido legítimo del Bloque A pasa a la familia `E201–E211`.
+7. El contraste fino documentado de `E102 / E104 / E106 / E111` ya no desemboca observacionalmente en `E006` o `E008` para `E102` y `E104`: ambos constan hoy con emisión observable y cobertura explícita propia.
+8. `E106` y `E111` mantienen su condición de coincidencias ancla, pero siguen sin cobertura explícita de suite en la superficie v0.1.
+9. Dentro de la familia `E201–E211`, `E208` y `E209` pasan ya a emisión observable y cobertura explícita por los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
+10. La familia `E301–E304` deja ya acreditada emisión observable y cobertura explícita para `E303` y `E304`; `E301` y `E302` permanecen como invariantes de tipo sin cierre superficial equivalente.
