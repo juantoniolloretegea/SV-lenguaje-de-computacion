@@ -56,9 +56,9 @@ Mientras siga vigente la regularización por Vía B:
 | E009 | `TableInputMismatch` | Definición | `validate` | no consta en IR v0.2 | Las entradas de la tabla de admisibilidad no cubren el producto cartesiano de los codominios |
 | E010 | `InvalidRole` | Definición | `parse` | no consta en IR v0.2 | Rol no reconocido: se esperaba Base, Supervisor o Composite |
 | E101 | `VectorLengthMismatch` | Estado | `validate` | divergente respecto de IR v0.2 | La longitud del vector no coincide con b² de la CellSpec referenciada |
-| E102 | `SpecNotFound` | Estado | `validate` | divergente respecto de IR v0.2 | La CellSpec o CoupledSpec referenciada no existe |
+| E102 | `MissingOutputSemantics` | Estado | `validate` | divergente respecto de IR v0.2 | La CellSpec referencia una OutputSemantics no declarada o de tipo incorrecto |
 | E103 | `GraphCycleDetected` | Estado | `validate` | divergente respecto de IR v0.2 | El grafo de composición contiene ciclos (prohibido) |
-| E104 | `GraphMissingRelation` | Estado | `validate` | divergente respecto de IR v0.2 | El grafo de composición no tiene relación semántica declarada |
+| E104 | `InvalidConnectorCodomain` | Estado | `validate` | divergente respecto de IR v0.2 | El conector declara un destino fuera del alfabeto ternario permitido |
 | E105 | `BridgePositionOutOfRange` | Estado | `validate` | divergente respecto de IR v0.2 | Posición puente fuera del rango [1, n] de la célula |
 | E106 | `MissingSemanticRelation` | Estado | `validate` | coincidente con IR v0.2 | Composición sin relación semántica previa declarada |
 | E111 | `UnorderedCodomain` | Estado | `validate` | coincidente con IR v0.2 | Codominio usado en compuerta sin orden documentado |
@@ -101,13 +101,18 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E009`
 - `E010`
 - `E101`
+- `E102`
 - `E103`
+- `E104`
 - `E105`
 - `E202`
 - `E204`
 - `E205`
+- `E208`
+- `E209`
 - `E210`
 - `E211`
+- `E303`
 - `E304`
 - `E401`
 - `E402`
@@ -127,10 +132,15 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E009`
 - `E010`
 - `E101`
+- `E102`
 - `E103`
+- `E104`
 - `E105`
+- `E208`
+- `E209`
 - `E210`
 - `E211`
+- `E303`
 - `E304`
 - `E401`
 - `E402`
@@ -152,6 +162,12 @@ Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden ademá
 Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp` añaden ahora cobertura explícita observable para `E101` y `E105`, respectivamente, sin introducir semántica nueva en el validator.
 
 El caso adversarial `invalid_tri_literal.svp` aporta ahora cobertura explícita observable para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
+
+Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan ya emisión observable y cobertura explícita para `E102` y `E104`, respectivamente, y obligan a corregir las antiguas lecturas que los absorbían en `E006` o `E008`.
+
+Los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp` fijan ya emisión observable y cobertura explícita para `E208` y `E209`, dejando atrás su anterior estatuto de deuda sin adversarial explícito.
+
+El caso `transition_data_horizon_no_declarado.svp` fija ya emisión observable y cobertura explícita para `E303`, de modo que deja de ser correcto presentarlo como código sin acreditación autónoma en la superficie pública vigente.
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 
