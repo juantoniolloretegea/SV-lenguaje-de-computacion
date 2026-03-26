@@ -84,17 +84,18 @@ En este punto, el espejo queda ya poblado con entradas mínimas de colección pa
 
 - bloque algebraico y de composición;
 - familia VII de sucesos, horizontes y cambio estructural;
-- programa de interfaces del Sistema Vectorial SV.
+- programa de interfaces del Sistema Vectorial SV;
+- colección **Células especializadas del Sistema Vectorial SV**.
 
 ## Estado del arte en este punto
 
-Este documento ya no contiene sólo la infraestructura mínima. La población sigue siendo inicial y de nivel colección, pero queda abierta la vigilancia conceptual absoluta sobre frentes doctrinales ya consolidados.
+Este documento ya no contiene sólo la infraestructura mínima. La población sigue siendo inicial y de nivel colección, pero queda abierta la vigilancia conceptual absoluta sobre frentes doctrinales ya consolidados. La colección de **Células especializadas del Sistema Vectorial SV** entra ya como colección pública visible, con pieza marco publicada y con efecto de orientación de frente y cautela de implementación.
 
 ## Regla adicional de continuidad
 
 Cuando una sede editorial nueva quede preparada pero todavía no exista como colección pública visible y poblada, su tratamiento desde el Lenguaje SV no debe hacerse mediante población automática del espejo CSV, sino mediante acta de continuidad y vigilancia explícita.
 
-Esto vale, en este punto, para la colección **Células especializadas del Sistema Vectorial SV**: consta ya como sede editorial preparada, pero no debe confundirse todavía con colección pública absorbida.
+Esta regla conserva validez general para futuras sedes editoriales. Ya no rige, en cambio, para la colección **Células especializadas del Sistema Vectorial SV**, que en este punto consta ya como colección pública visible con pieza marco publicada y debe tratarse como entrada activa del espejo.
 
 ## Nota de continuidad tras la familia VII
 
