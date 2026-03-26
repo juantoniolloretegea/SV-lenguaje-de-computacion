@@ -32,6 +32,7 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
+- `NOTA_HOJA_DE_RUTA_CELULA_VERIFICACION_GENERACION_MATEMATICA_SV_2026_03_26.md`
 
 ### Resiliencia, horizontes y control por hitos
 
@@ -111,6 +112,8 @@ La consolidación doctrinal de la familia VII obliga a no tratar todos los sopor
 
 ## Nota adicional sobre continuidad prebackend
 
-La sede editorial preparada para **Células especializadas del Sistema Vectorial SV** no debe tratarse todavía como colección pública absorbida por el espejo doctrinal de colecciones. Su estatuto actual es de continuidad preparada, no de población pública consolidada.
+La colección pública **Células especializadas del Sistema Vectorial SV** ya existe y su pieza marco ya cuenta con `release_1`; por tanto, debe tratarse ya como colección pública visible absorbida por el espejo doctrinal de colecciones.
+
+Su efecto actual sobre el Lenguaje SV sigue siendo de **vigilancia estructural y cautela de implementación**: no autoriza implementación automática, no adelanta `NLP`, no desplaza la deuda viva semántica vigente y no legitima abrir una célula específica sin pasar antes por el perfil funcional mínimo del documento marco.
 
 A partir de la documentación de gobierno del 26/03/2026, el siguiente frente correcto tras el sellado técnico mínimo deja de ser una secuencia rígida de interfaces pendientes y pasa a ser la **pieza marco** de células especializadas, dejando `NLP` después y manteniendo `oído` y `tacto` como frentes pendientes reordenables.
