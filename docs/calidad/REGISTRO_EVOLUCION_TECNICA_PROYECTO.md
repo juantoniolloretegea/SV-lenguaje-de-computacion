@@ -143,6 +143,8 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-030 | 20/03/2026 | 16:51:49 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-026 y RETP-2026-029 / Fase IV | Se sanean el dictamen del Bloque A y el registro técnico para eliminar la contradicción sobre el siguiente paso, fijar el estado real de E201–E211, E301–E304 y E401–E403, y dejar explícito que E303 no dispone aún de emisión específica autónoma acreditada. | cerrado |
 | RETP-2026-031 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que E304 sí es observable y cubierto, mientras E301, E302 y E303 no comparten todavía esa misma emitibilidad pública efectiva. | cerrado |
 
+| RETP-2026-042 | 26/03/2026 | 09:40:00 | DECISION_GOBIERNO_TECNICO | Lenguaje SV / sellado técnico mínimo prebackend y reordenación de continuidad tras la familia VII / Fase IV | Se crea el bloque mínimo de gobierno para cerrar provisionalmente PC-HNA, registrar nueva deuda viva semántica y complementar el rumbo prebackend, fijando además que el siguiente frente correcto será la pieza marco de células especializadas y no NLP. | cerrado |
+
 ## 12. Entradas detalladas
 
 ### RETP-2026-000
@@ -827,4 +829,20 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Impacto:** coherencia_diagnostica; sincronizacion_documental; trazabilidad; control_de_calidad.
 - **Objeción adversarial considerada:** riesgo de sobreactuar este lote como si implicara convergencia semántica plena con la IR v0.2 o reescritura silenciosa de historia cerrada. No procede: el lote se limita a resincronizar documentación viva y a añadir nota posterior explícita en el dictamen.
 - **Decisión:** abrir y cerrar como lote separado un microparche documental rebasado que sincronice el contrato diagnóstico visible sin tocar código ni mezclar otros frentes.
+- **Estado:** cerrado
+
+### RETP-2026-042
+
+- **Fecha:** 26/03/2026
+- **Hora (Europe/Madrid):** 09:40:00
+- **Tipo de hito:** DECISION_GOBIERNO_TECNICO
+- **Frente/Fase:** Lenguaje SV / sellado técnico mínimo prebackend y reordenación de continuidad tras la familia VII / Fase IV
+- **Resumen del cambio:** Se crea el bloque mínimo de gobierno para cerrar provisionalmente `PC-HNA`, registrar nueva deuda viva semántica y complementar el rumbo prebackend, fijando además que el siguiente frente correcto será la pieza marco de células especializadas y no `NLP`.
+- **Motivo o argumento:** La doble auditoría externa y la consolidación de la familia VII muestran que el riesgo ya no está en el bloque congelado previamente saneado, sino en avanzar hacia frentes de alta presión semántica sin sellar antes el fundamento mínimo del lenguaje ni corregir expresamente el orden de continuidad.
+- **Base doctrinal o técnica invocada:** repos frescos de `SV-lenguaje-de-computacion` y `SV-matematica-semantica`; documentación de calidad vigente; doble auditoría externa absorbida por la coordinación técnica; familia VII consolidada hasta su pieza más reciente.
+- **Artefactos afectados:** `docs/calidad/ACTA_TECNICA_DE_CIERRE_PROVISIONAL_DE_PC_HNA_Y_CONDICIONES_DE_REAPERTURA_2026_03_26.md`; `docs/calidad/ACTA_TECNICA_COMPLEMENTARIA_DE_CONTINUIDAD_TRAS_LA_FAMILIA_VII_Y_REORDENACION_DEL_RUMBO_PREBACKEND_2026_03_26.md`; `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`; `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`; `docs/calidad/ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`; `docs/calidad/README.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`.
+- **Evidencia:** lectura `100_REAL` de repos frescos; triple contraste con auditorías externas; verificación de coherencia interna entre actas, deuda viva, matriz de horizontes, espejo doctrinal y `README` de calidad.
+- **Impacto:** gobierno_tecnico; trazabilidad; continuidad_operativa; resiliencia_prebackend; cautela_semantica.
+- **Objeción adversarial considerada:** riesgo de retrasar innecesariamente el proyecto con teoría total prematura, o de reordenar la continuidad por intuición sin dejar rastro explícito. No procede ninguno de los dos extremos: se fija un sellado técnico mínimo y una corrección de secuencia limitada, documentada y no implementativa.
+- **Decisión:** cerrar provisionalmente `PC-HNA`, abrir deuda viva semántica mínima y complementar el rumbo prebackend para que la siguiente pieza lógica sea la publicación marco de células especializadas.
 - **Estado:** cerrado
