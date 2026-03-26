@@ -90,4 +90,12 @@ En este punto, el espejo queda ya poblado con entradas mínimas de colección pa
 
 Este documento ya no contiene sólo la infraestructura mínima. La población sigue siendo inicial y de nivel colección, pero queda abierta la vigilancia conceptual absoluta sobre frentes doctrinales ya consolidados.
 
-En particular, la familia VII debe leerse ya como integrada materialmente hasta la pieza dedicada a equivalencia parcial, preservación e invariancia local entre regímenes. Ese hecho incrementa la relevancia de vigilancia semántica del frente, pero no modifica por sí solo la prohibición de implementación automática en el Lenguaje SV.
+## Regla adicional de continuidad
+
+Cuando una sede editorial nueva quede preparada pero todavía no exista como colección pública visible y poblada, su tratamiento desde el Lenguaje SV no debe hacerse mediante población automática del espejo CSV, sino mediante acta de continuidad y vigilancia explícita.
+
+Esto vale, en este punto, para la colección **Células especializadas del Sistema Vectorial SV**: consta ya como sede editorial preparada, pero no debe confundirse todavía con colección pública absorbida.
+
+## Nota de continuidad tras la familia VII
+
+La consolidación de la familia VII y la doble auditoría externa absorbida por la coordinación técnica obligan a una corrección de secuencia: tras el sellado técnico mínimo del Lenguaje SV, el siguiente frente lógico pasa a ser la **pieza marco** de células especializadas. `NLP` queda después de esa pieza marco. `oído` y `tacto` permanecen como frentes pendientes legítimos, pero ya no operan como guardias de paso duros.
