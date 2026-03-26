@@ -89,3 +89,5 @@ En este punto, el espejo queda ya poblado con entradas mínimas de colección pa
 ## Estado del arte en este punto
 
 Este documento ya no contiene sólo la infraestructura mínima. La población sigue siendo inicial y de nivel colección, pero queda abierta la vigilancia conceptual absoluta sobre frentes doctrinales ya consolidados.
+
+En particular, la familia VII debe leerse ya como integrada materialmente hasta la pieza dedicada a equivalencia parcial, preservación e invariancia local entre regímenes. Ese hecho incrementa la relevancia de vigilancia semántica del frente, pero no modifica por sí solo la prohibición de implementación automática en el Lenguaje SV.
