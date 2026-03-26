@@ -144,6 +144,7 @@ Se recomienda usar una o varias de estas etiquetas:
 | RETP-2026-031 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | Se sincronizan el catálogo público y el registro técnico con la microauditoría E para dejar explícito que E304 sí es observable y cubierto, mientras E301, E302 y E303 no comparten todavía esa misma emitibilidad pública efectiva. | cerrado |
 
 | RETP-2026-042 | 26/03/2026 | 09:40:00 | DECISION_GOBIERNO_TECNICO | Lenguaje SV / sellado técnico mínimo prebackend y reordenación de continuidad tras la familia VII / Fase IV | Se crea el bloque mínimo de gobierno para cerrar provisionalmente PC-HNA, registrar nueva deuda viva semántica y complementar el rumbo prebackend, fijando además que el siguiente frente correcto será la pieza marco de células especializadas y no NLP. | cerrado |
+| RETP-2026-043 | 26/03/2026 | 17:57:47 | CAMBIO_DOCUMENTACION_PUBLICA | Lenguaje SV / sincronización del espejo doctrinal de células especializadas y alta registral de nota de hoja de ruta / Fase IV | Se sincronizan README y espejo doctrinal del repo técnico con la publicación pública ya activa de la colección Células especializadas del Sistema Vectorial SV, se corrige EDCL-004 con la URL específica de `release_1` y se registra formalmente la nota de hoja de ruta sobre la célula de verificación formal y generación matemática. | cerrado |
 
 ## 12. Entradas detalladas
 
@@ -845,4 +846,21 @@ Este registro permanecerá vigente mientras el proyecto requiera trazabilidad t�
 - **Impacto:** gobierno_tecnico; trazabilidad; continuidad_operativa; resiliencia_prebackend; cautela_semantica.
 - **Objeción adversarial considerada:** riesgo de retrasar innecesariamente el proyecto con teoría total prematura, o de reordenar la continuidad por intuición sin dejar rastro explícito. No procede ninguno de los dos extremos: se fija un sellado técnico mínimo y una corrección de secuencia limitada, documentada y no implementativa.
 - **Decisión:** cerrar provisionalmente `PC-HNA`, abrir deuda viva semántica mínima y complementar el rumbo prebackend para que la siguiente pieza lógica sea la publicación marco de células especializadas.
+- **Estado:** cerrado
+
+
+### RETP-2026-043
+
+- **Fecha:** 26/03/2026
+- **Hora (Europe/Madrid):** 17:57:47
+- **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA
+- **Frente/Fase:** Lenguaje SV / sincronización del espejo doctrinal de células especializadas y alta registral de nota de hoja de ruta / Fase IV
+- **Resumen del cambio:** Se sincronizan README y espejo doctrinal del repo técnico con la publicación pública ya activa de la colección *Células especializadas del Sistema Vectorial SV*, se corrige `EDCL-004` con la URL específica de `release_1` y se registra formalmente la nota de hoja de ruta sobre la célula de verificación formal y generación matemática.
+- **Motivo o argumento:** Tras el cierre del Lote A en la sede doctrinal, el repo técnico mantenía una narrativa stale de continuidad preparada para la colección celular y afirmaba ya en `EDCL-004` una alta registral de la nota que todavía no constaba en el registro maestro.
+- **Base doctrinal o técnica invocada:** repo fresco de `SV-lenguaje-de-computacion`; repo fresco de `SV-matematica-semantica` ya saneado en su sede ASCII; nota de hoja de ruta ya presente en `docs/calidad`; espejo doctrinal y `README` de calidad vigentes.
+- **Artefactos afectados:** `docs/calidad/README.md`; `docs/calidad/ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`; `docs/calidad/ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Evidencia:** lectura `100_REAL` de repos frescos; contraste entre `README` de calidad, espejo doctrinal y `EDCL-004`; verificación de que la nota ya existía materialmente sin alta efectiva en el registro maestro; contraste con la sede doctrinal ASCII ya saneada.
+- **Impacto:** `trazabilidad`; `sincronizacion_documental`; `gobierno_tecnico`; `continuidad_operativa`.
+- **Objeción adversarial considerada:** riesgo de sobreactuar la publicación de la colección celular como autorización automática para abrir células específicas o para adelantar implementación. No procede: el lote se limita a sincronizar estado público y registro técnico, manteniendo la cautela de implementación y la subordinación a `D-07`, `D-08` y al perfil funcional mínimo.
+- **Decisión:** cerrar como lote registral y documental separado la absorción técnica de la colección pública de células especializadas y dejar formalmente asentada la nota de hoja de ruta ya existente.
 - **Estado:** cerrado
