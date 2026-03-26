@@ -27,7 +27,8 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 ### Gobierno semántico ante frentes doctrinales abiertos
 
 - `ACTA_TECNICA_DE_CONSOLIDACION_DE_LA_FAMILIA_VII_Y_ALERTA_DE_GOBIERNO_SEMANTICO_PARA_EL_LENGUAJE_SV_2026_03_24.md`
-- `ACTA_TECNICA_DE_INTEGRACION_DE_VII6_Y_REORDENACION_DEL_TABLERO_DE_INTERFACES_2026_03_25.md`
+- `ACTA_TECNICA_DE_CIERRE_PROVISIONAL_DE_PC_HNA_Y_CONDICIONES_DE_REAPERTURA_2026_03_26.md`
+- `ACTA_TECNICA_COMPLEMENTARIA_DE_CONTINUIDAD_TRAS_LA_FAMILIA_VII_Y_REORDENACION_DEL_RUMBO_PREBACKEND_2026_03_26.md`
 - `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
@@ -107,3 +108,9 @@ Esta consolidación **no** verifica `H2` como hito. Su función es otra: dejar a
 ## Nota adicional sobre diferenciación estructural
 
 La consolidación doctrinal de la familia VII obliga a no tratar todos los soportes del sistema con igual rigidez. El Lenguaje SV debe distinguir entre estructura ósea ya consolidada, soportes funcionales de formalización y zonas de articulación con frentes emergentes, evitando la igualación de dureza que cerraría prematuramente el espacio semántico futuro.
+
+## Nota adicional sobre continuidad prebackend
+
+La sede editorial preparada para **Células especializadas del Sistema Vectorial SV** no debe tratarse todavía como colección pública absorbida por el espejo doctrinal de colecciones. Su estatuto actual es de continuidad preparada, no de población pública consolidada.
+
+A partir de la documentación de gobierno del 26/03/2026, el siguiente frente correcto tras el sellado técnico mínimo deja de ser una secuencia rígida de interfaces pendientes y pasa a ser la **pieza marco** de células especializadas, dejando `NLP` después y manteniendo `oído` y `tacto` como frentes pendientes reordenables.
