@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Manifiesto de consolidación del agente de seguridad",
+  "type": "object",
+  "required": [
+    "agent_id",
+    "current_phase",
+    "primary_goals",
+    "secondary_goals",
+    "guardrails",
+    "debts_raised"
+  ],
+  "properties": {
+    "agent_id": {
+      "type": "string"
+    },
+    "current_phase": {
+      "type": "string"
+    },
+    "primary_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "secondary_goals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "guardrails": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "debts_raised": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}
