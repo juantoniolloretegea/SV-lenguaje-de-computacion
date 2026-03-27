@@ -19,27 +19,13 @@
     "La geometría en R3 es auxiliar y no soberana."
   ],
   "current_assets": [
-    {
-      "page": "monitor.html",
-      "role": "polígono principal y lectura breve por SUCESO"
-    },
-    {
-      "page": "sucesos.html",
-      "role": "cadena de SUCESOS y ejemplos reales de esta fase"
-    },
-    {
-      "page": "ia.html",
-      "role": "consulta trazable y ramas de simulación REAL/SIM"
-    },
-    {
-      "page": "r3.html",
-      "role": "lectura geométrica auxiliar y corrección de encuadre"
-    },
-    {
-      "page": "evidencia.html",
-      "role": "síntesis, fuentes, deudas elevadas y alineación de objetivos"
-    }
-  ],
+  { "page": "aplicaciones/agente_seguridad/index.html", "role": "portal consolidado del agente especializado en seguridad" },
+  { "page": "aplicaciones/agente_seguridad/evidencia.html", "role": "síntesis, fuentes, deudas elevadas y alineación de objetivos" },
+  { "page": "aplicaciones/agente_seguridad/r3.html", "role": "lectura geométrica auxiliar y corrección de encuadre" },
+  { "page": "aplicaciones/monitor_seguridad/index.html", "role": "polígono principal y lectura breve por SUCESO" },
+  { "page": "aplicaciones/monitor_seguridad/sucesos.html", "role": "cadena de SUCESOS y ejemplos reales de esta fase" },
+  { "page": "aplicaciones/monitor_seguridad_ia/index.html", "role": "consulta trazable y ramas de simulación REAL/SIM" }
+],
   "debts_raised": [
     "Petición formal de estudio de cadencia observacional intra-SUCESO para una futura release 3.",
     "Petición formal de estudio de trayectoria espacial enlazada de la serie de SUCESOS con estatuto subordinado.",
