@@ -1,46 +1,48 @@
 {
-  "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "title": "Manifiesto de consolidación del agente de seguridad",
-  "type": "object",
-  "required": [
-    "agent_id",
-    "current_phase",
-    "primary_goals",
-    "secondary_goals",
-    "guardrails",
-    "debts_raised"
+  "agent_id": "seguridad_estructural",
+  "current_phase": "S3 — seguridad-diseno-monitor-dual",
+  "primary_goals": [
+    "Custodiar el diseño de células especializadas con polígonos reales como interfaz principal.",
+    "Separar con nitidez plano de diseño y plano de uso.",
+    "Mantener consulta trazable, primacía humana y conservación legítima de U.",
+    "Operar por SUCESOS en horizonte declarado, con tiempo sólo como herramienta auxiliar."
   ],
-  "properties": {
-    "agent_id": {
-      "type": "string"
+  "secondary_goals": [
+    "Ofrecer herramientas auxiliares R3 y analítica discreta subordinadas al dictamen estructural.",
+    "Preparar navegación estable por subpáginas para evitar saturación y mejorar trazabilidad.",
+    "Mantener espejos delgados y paridad repo–manuscrito–artefacto."
+  ],
+  "guardrails": [
+    "La célula especializada no crea matemática ni semántica nueva.",
+    "La IA es herramienta subordinada al álgebra, a la doctrina y al humano.",
+    "La historia real es append-only; las simulaciones viven en ramas separadas.",
+    "La geometría en R3 es auxiliar y no soberana."
+  ],
+  "current_assets": [
+    {
+      "page": "monitor.html",
+      "role": "polígono principal y lectura breve por SUCESO"
     },
-    "current_phase": {
-      "type": "string"
+    {
+      "page": "sucesos.html",
+      "role": "cadena de SUCESOS y ejemplos reales de esta fase"
     },
-    "primary_goals": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    {
+      "page": "ia.html",
+      "role": "consulta trazable y ramas de simulación REAL/SIM"
     },
-    "secondary_goals": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    {
+      "page": "r3.html",
+      "role": "lectura geométrica auxiliar y corrección de encuadre"
     },
-    "guardrails": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
-    },
-    "debts_raised": {
-      "type": "array",
-      "items": {
-        "type": "string"
-      }
+    {
+      "page": "evidencia.html",
+      "role": "síntesis, fuentes, deudas elevadas y alineación de objetivos"
     }
-  },
-  "additionalProperties": true
+  ],
+  "debts_raised": [
+    "Petición formal de estudio de cadencia observacional intra-SUCESO para una futura release 3.",
+    "Petición formal de estudio de trayectoria espacial enlazada de la serie de SUCESOS con estatuto subordinado.",
+    "Petición formal de estudio de herramientas discretas avanzadas sólo si el carril semántico-matemático superior las soporta expresamente."
+  ]
 }
