@@ -2,6 +2,23 @@
 
 Repositorio operativo y técnico del lenguaje de computación del Sistema Vectorial SV.
 
+## Ecosistema SV — ubicación de esta sede
+
+**Función de la sede:** especificación operativa, implementación observable y gobierno técnico subordinado del lenguaje de computación del Sistema Vectorial SV.
+
+**Distribución vigente de sedes**
+- **Doctrina, jerarquía y puerta general del ecosistema:** `SV-matematica-semantica`
+- **Lenguaje, contrato técnico y sede operativa del manual SVP:** `SV-lenguaje-de-computacion`
+- **Origen observacional, datasets e intrusión:** `SVcustos-dataset`
+- **Agentes especializados, fases, artefactos y aplicaciones de uso:** `SVperitus-dataset`
+
+**Regla de no sustitución**  
+Este repositorio no altera ni sustituye la autoridad doctrinal superior. Su función es técnica y operativa, subordinada al corpus canónico.
+
+> **Remisión**
+> Para una vista general del ecosistema SV y de la distribución entre sedes, consulte la puerta de entrada del ecosistema en `SV-matematica-semantica/docs/index.html`.
+
+
 Este repositorio alberga la especificación operativa activa, la implementación de referencia del frontend, la documentación técnica de fase, la suite observable y el gobierno técnico subordinado del lenguaje. No sustituye a la sede doctrinal superior del ecosistema SV, que permanece en `SV-matematica-semantica`.
 
 ## Estado actual
