@@ -21,6 +21,32 @@ Este repositorio no altera ni sustituye la autoridad doctrinal superior. Su func
 
 Este repositorio alberga la especificación operativa activa, la implementación de referencia del frontend, la documentación técnica de fase, la suite observable y el gobierno técnico subordinado del lenguaje. No sustituye a la sede doctrinal superior del ecosistema SV, que permanece en `SV-matematica-semantica`.
 
+
+## Previsión estructural sobre agentes especializados e IA
+
+Se constata ya, por maduración del ecosistema SV, la necesidad futura de una **capa de consulta y simulación trazable por agente especializado**, subordinada a la doctrina, al álgebra y al agente humano.
+
+Esta previsión **no** introduce todavía:
+- sintaxis nueva;
+- gramática nueva;
+- niveles IR nuevos;
+- backend soberano nuevo;
+- ni clausura automática de `U`.
+
+Su función, en esta fase, es únicamente **reservar contrato, límites y condiciones de compatibilidad futura** para evitar una reingeniería tardía del lenguaje.
+
+### Condiciones mínimas ya fijadas para esa futura capa
+
+- separación estricta entre `REAL` y `SIM`;
+- historia `append-only`, sin reescritura retrospectiva de la trayectoria real;
+- primacía del **SUCESO** y del horizonte declarado frente al tiempo desnudo;
+- respuesta trazable con justificación y metadatos de reconstrucción;
+- prohibición de cierre automático de `U` por inferencia opaca, extrapolación continua o automatismo no legitimado;
+- subordinación final al álgebra, a la doctrina y al agente humano.
+
+> **Documento de trabajo asociado**
+> `docs/arquitectura/NOTA_TECNICA_DE_PREVISION_DE_CAPA_IA_TRAZABLE_POR_AGENTE_ESPECIALIZADO.md`
+
 ## Estado actual
 
 - **IR canónica vigente:** `IR_CANONICA_BIENFORMACION_SV_v0_2.md`
@@ -42,7 +68,7 @@ Toma un archivo `.svp` escrito en la Gramática superficial mínima v0.1, lo par
 
 ## Qué no hace
 
-No ejecuta programas. No calcula evaluaciones materiales (`T(n)`, clasificación o conteos). No resuelve `U`. No implementa todavía backend soberano. No sustituye a la semántica doctrinal del sistema.
+No ejecuta programas. No calcula evaluaciones materiales (`T(n)`, clasificación o conteos). No resuelve `U`. No implementa todavía backend soberano. No sustituye a la semántica doctrinal del sistema. No incorpora aún la futura capa de interlocución IA por agente especializado.
 
 ## Uso rápido desde la raíz del repositorio
 
@@ -77,6 +103,7 @@ python tests/run_cli_smoke.py
 - `docs/README.md`
 - `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - `docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
+- `docs/arquitectura/NOTA_TECNICA_DE_PREVISION_DE_CAPA_IA_TRAZABLE_POR_AGENTE_ESPECIALIZADO.md`
 - `docs/calidad/README.md`
 - `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
