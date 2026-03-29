@@ -18,7 +18,7 @@ Se institucionalizan dos instrumentos nuevos:
 ## Regla de periodicidad
 
 - Barrido secuencial obligatorio cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes.
-- El barrido no se apoyará en la fecha bruta del ZIP extraído como criterio suficiente de actividad o inactividad.
+- El barrido no se apoyará en la fecha bruta del paquete comprimido aportado como criterio suficiente de actividad o inactividad.
 - El registro maestro podrá consolidar ciclos cuando proceda, para no inflar innecesariamente la traza principal.
 
 ## Regla de base de verificación

@@ -8,7 +8,7 @@
 
 ## 1. Objeto
 
-La presente acta deja fijado, tras auditoría directa de repositorios frescos del ecosistema SV, el reparto estable entre sede superior doctrinal y sede central operativa, así como la regla de estabilidad que impide reabrir ordinariamente esta cuestión en la fase actual.
+La presente acta deja fijado, tras auditoría directa de repositorios verificados del ecosistema SV, el reparto estable entre sede superior doctrinal y sede central operativa, así como la regla de estabilidad que impide reabrir ordinariamente esta cuestión en la fase actual.
 
 ## 2. Base observada
 

@@ -40,12 +40,12 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 | RETP-2026-029 | 20/03/2026 | 15:20:00 | CAMBIO_FUNCIONAL_GOBERNADO | Frente final del lenguaje SV / Bloque E — ABI semántico-diagnóstico y endurecimiento inicial de N4/Uso / Fase IV | cerrado |
 | RETP-2026-030 | 20/03/2026 | 16:51:49 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización dura post RETP-2026-026 y RETP-2026-029 / Fase IV | cerrado |
 | RETP-2026-031 | 20/03/2026 | 17:12:51 | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque A — regularización pública de la emitibilidad real de E301–E304 / Fase IV | cerrado |
-| RETP-2026-032 | 22/03/2026 | NO_CONSTA | CAMBIO_DOCUMENTACION_PUBLICA | coordinación transversal provisional / regularización integral de numeración subordinada y vigilancia focal sobre suceso local / Fase IV | cerrado |
+| RETP-2026-032 | 22/03/2026 | NO_CONSTA | CAMBIO_DOCUMENTACION_PUBLICA | UCBC provisional / regularización integral de numeración subordinada y vigilancia focal sobre suceso local / Fase IV | cerrado |
 | RETP-2026-033 | 22/03/2026 | NO_CONSTA | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque K — blindaje documental pre-backend del ABI mínimo / Fase IV | cerrado |
 | RETP-2026-034 | 22/03/2026 | NO_CONSTA | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque L — coordinación documental y registral de resiliencia e hitos / Fase IV | cerrado |
 | RETP-2026-035 | 22/03/2026 | NO_CONSTA | CAMBIO_DOCUMENTACION_PUBLICA | Frente final del lenguaje SV / Bloque M — alineación de docs/index.html con el estado pre-backend / Fase IV | cerrado |
 | RETP-2026-036 | 23/03/2026 | NO_CONSTA | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS | Frente H1 — formalización auditada del primer hito del Lenguaje SV / Fase IV | cerrado |
-| RETP-2026-037 | 23/03/2026 | 16:59:50 | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_CALIDAD | Frente H2-pre y control adicional de verificación documental / Fase IV | cerrado |
+| RETP-2026-037 | 23/03/2026 | 16:59:50 | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_CALIDAD | Frente H2-pre y control adicional de base de verificación / Fase IV | cerrado |
 | RETP-2026-038 | 23/03/2026 | 17:45:05 | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS | Frente H2-A — autorización restringida de apertura de H2 / Fase IV | cerrado |
 | RETP-2026-039 | 23/03/2026 | NO_CONSTA | CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS | H2 restringido / Fase IV | cerrado |
 | RETP-2026-040 | 23/03/2026 | 20:02:35 | CAMBIO_RUNNER | Frente final del lenguaje SV / Parche correctivo funcional acotado del frontend / Fase IV | cerrado |
@@ -53,7 +53,6 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 | RETP-2026-042 | 26/03/2026 | 13:26:00 | DECISION_GOBIERNO_TECNICO | Lenguaje SV / sellado técnico mínimo prebackend y reordenación de continuidad tras la familia VII / Fase IV | cerrado |
 | RETP-2026-043 | 26/03/2026 | 17:57:47 | CAMBIO_DOCUMENTACION_PUBLICA | Lenguaje SV / sincronización del espejo doctrinal de células especializadas y alta registral de nota de hoja de ruta / Fase IV | cerrado |
 | RETP-2026-044 | 26/03/2026 | NO_CONSTA | SANEAMIENTO_REGISTRAL_Y_ASENTAMIENTO_FINAL_DE_CICLO | Lenguaje SV / asentamiento final del ciclo UCBC12 y apertura trazable del piloto de seguridad estructural / Fase IV | cerrado |
-| RETP-2026-045 | 29/03/2026 | 09:09:15 | SANEAMIENTO_DE_LENGUAJE_PUBLICO_Y_COORDINACION_INTERNA | Lenguaje SV / saneamiento del lenguaje público en docs/calidad y completitud de la coordinación con SVperitus / Fase IV | cerrado |
 
 ## Entradas detalladas
 
@@ -124,9 +123,9 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA  
 - **Resumen del cambio:** Se activa el espejo controlado entre especificaciones/ y beta/ / se alojan la matriz operativa y la publicación de frontera 0-1 en sus rutas diferenciadas y se actualizan los índices públicos del repositorio doctrinal y del repositorio del lenguaje sin alterar la jerarquía normativa.  
 - **Motivo / argumento:** Era necesario incrustar en ambos repositorios dos publicaciones estratégicas de alta sensibilidad metodológica sin confundir rango doctrinal / sin contaminar la IR ni la semántica canónica y dejando explícita la vigilancia diferenciada de beta/.  
-- **Base doctrinal / técnica:** repositorio doctrinal SV-matematica-semantica; especificación transversal subordinada sobre la U; matriz operativa del Clasificador C0–C5; publicación Desde la terna (0 / 1 / U) hasta la nueva frontera (0 / 1 / U / 0-1); criterio interno de trazabilidad secuencial.  
+- **Base doctrinal / técnica:** repositorio doctrinal SV-matematica-semantica; especificación transversal subordinada sobre la U; matriz operativa del Clasificador C0–C5; publicación Desde la terna (0 / 1 / U) hasta la nueva frontera (0 / 1 / U / 0-1); criterio de trazabilidad secuencial.  
 - **Artefactos afectados:** SV-matematica-semantica/README.md; SV-matematica-semantica/especificaciones/README.md; SV-matematica-semantica/especificaciones/proposiciones/matriz_operativa_completa_clasificador_sv.md; SV-matematica-semantica/especificaciones/laboratorio/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md; SV-lenguaje-de-computacion/README.md; SV-lenguaje-de-computacion/beta/README.md; SV-lenguaje-de-computacion/beta/Lab.SV/desde_la_terna_0_1_u_hasta_la_nueva_frontera_0_1_u_0_1.md.  
-- **Evidencia:** publicación secuencial validada por evidencia de confirmación; auditoría de ingestión de ZIP verificados de ambos repositorios; verificación de jerarquía sin beta/ en el repositorio doctrinal y con Lab.SV como hija de beta/ en el repositorio del lenguaje.  
+- **Evidencia:** publicación secuencial validada por evidencia de confirmación; auditoría de ingestión de paquetes comprimidos verificados de ambos repositorios; verificación de jerarquía sin beta/ en el repositorio doctrinal y con Lab.SV como hija de beta/ en el repositorio del lenguaje.  
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad  
 - **Objeción adversarial:** riesgo de que el espejo físico eleve indebidamente el rango doctrinal de piezas experimentales o de que beta/ contamine el repositorio doctrinal.  
 - **Decisión:** mantener diferenciación estructural estricta: especificaciones/{nucleo /proposiciones /laboratorio} en el repositorio doctrinal y beta/{C1_proposiciones /Lab.SV} en el repositorio del lenguaje / con subordinación expresa en los README públicos.  
@@ -139,9 +138,9 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Tipo de hito:** CIERRE_PARCHE  
 - **Resumen del cambio:** Se registra el cierre del microparche B en el repositorio del lenguaje: declaración explícita de Ruta A / Ruta B / Beta en la matriz operativa / en beta/README.md y en README.md / con precisión expresa de que la triada no obliga a sincronía conceptual completa con el repositorio doctrinal.  
 - **Motivo / argumento:** El microparche B constaba ya materialmente en los documentos públicos del repositorio del lenguaje / pero faltaba su trazabilidad explícita en el registro técnico propio gobernado por docs/calidad/.  
-- **Base doctrinal / técnica:** jerarquía entre repositorios fijada en README.md; regla de subordinación de beta/; distinción entre espejo material e identidad funcional; criterio interno de trazabilidad secuencial.  
+- **Base doctrinal / técnica:** jerarquía entre repositorios fijada en README.md; regla de subordinación de beta/; distinción entre espejo material e identidad funcional; criterio de trazabilidad secuencial.  
 - **Artefactos afectados:** README.md; beta/README.md; beta/C1_proposiciones/matriz_operativa_completa_clasificador_sv.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
-- **Evidencia:** ingestión de ZIP verificado del repositorio del lenguaje; contraste directo con el ZIP verificado del repositorio doctrinal; verificación de presencia material de la triada de rutas en los tres documentos públicos; actualización sincronizada del registro dual .md/.csv.  
+- **Evidencia:** ingestión de paquete comprimido verificado del repositorio del lenguaje; contraste directo con el paquete comprimido verificado del repositorio doctrinal; verificación de presencia material de la triada de rutas en los tres documentos públicos; actualización sincronizada del registro dual .md/.csv.  
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; compatibilidad.  
 - **Objeción adversarial:** riesgo de registrar de forma redundante un cambio ya absorbido por el hito RETP-2026-004 o de deslizar por registro una equivalencia funcional impropia entre Beta del repositorio doctrinal y Beta del repositorio del lenguaje.  
 - **Decisión:** registrar el microparche B como cierre propio del repositorio del lenguaje y dejar expresamente fijado que la coincidencia material de la triada no impone sincronía conceptual completa entre repositorios de distinta misión.  
@@ -169,7 +168,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Tipo de hito:** DECISION_ARQUITECTONICA  
 - **Resumen del cambio:** Se fija en el registro técnico que toda unidad encargada que concluya motivadamente que procede abrir la Ruta Beta deberá elevar antes un informe al núcleo de coordinación Beta / que valorará si autoriza o no el salto.  
 - **Motivo / argumento:** La hibernación estratégica de Beta exige una compuerta de control adicional para evitar reaperturas por fatiga / presión / anticipación o confusión entre complejidad local y contradicción material suficiente de la ternaria.  
-- **Base doctrinal / técnica:** beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md; primacía activa de la ternaria; criterio de contradicción local suficiente; criterio interno de relevo.  
+- **Base doctrinal / técnica:** beta/ACTA_DECISION_TERNARIA_Y_HIBERNACION_BETA.md; primacía activa de la ternaria; criterio de contradicción local suficiente; criterio de continuidad operativa.  
 - **Artefactos afectados:** docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
 - **Evidencia:** instrucción expresa del responsable del proyecto; decisión estratégica previa de hibernación Beta; auditoría operativa de coherencia entre Beta y MICROPARCHE C.1.  
 - **Impacto:** trazabilidad; gobierno_tecnico; control_de_escalado; mantenibilidad.  
@@ -201,7 +200,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Motivo / argumento:** La auditoría directa de ambos repositorios muestra que la sede doctrinal ha alcanzado estabilidad suficiente de fase / mientras la fricción real del trabajo / la calidad / la validación y la deuda técnica se concentran en el repositorio del lenguaje / que resulta más apto como centro de gobierno operativo.  
 - **Base doctrinal / técnica:** pliego de condiciones del Sistema Vectorial SV; auditoría cerrada de SV-matematica-semantica; auditoría cerrada de SV-lenguaje-de-computacion; jerarquía documental ya fijada; regla de no corrección silenciosa entre niveles.  
 - **Artefactos afectados:** docs/calidad/ACTA_DE_FIJACION_DE_SEDES_Y_GOBIERNO_TECNICO_DEL_ECOSISTEMA_SV_2026_03_18.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv; SV-matematica-semantica/documentos/registros/NOTA_DE_REMISION_SOBRE_SEDE_DOCTRINAL_Y_SEDE_OPERATIVA_DEL_ECOSISTEMA_SV_2026_03_18.md.  
-- **Evidencia:** ingestión de ZIP verificados de ambos repositorios; verificación directa de jerarquía / estructura / suite y documentos de calidad; cierre adversarial de Fases 1 / 2 y 3 del cruce entre sedes.  
+- **Evidencia:** ingestión de paquetes comprimidos verificados de ambos repositorios; verificación directa de jerarquía / estructura / suite y documentos de calidad; cierre adversarial de Fases 1 / 2 y 3 del cruce entre sedes.  
 - **Impacto:** gobierno_tecnico; trazabilidad; mantenibilidad; coherencia_ecosistema.  
 - **Objeción adversarial:** riesgo de convertir la sede operativa en autoridad doctrinal de facto o / en el extremo opuesto / de seguir tratando la sede doctrinal como taller técnico diario y contaminar su estabilidad de fase.  
 - **Decisión:** mantener arriba la sede doctrinal y abajo la sede operativa / impedir la reapertura ordinaria de esta distribución y permitir solo tres supuestos de reconsideración: revisión del pliego obligada por la realidad del sistema / requerimiento muy complejo del lenguaje o acumulación de elementos parciales con fuerza suficiente de reconsideración.  
@@ -537,19 +536,19 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Decisión:** sincerar la superficie pública de referencia para que el catálogo no sugiera una homogeneidad falsa dentro de E301–E304, mantener E304 como único cierre plenamente observable de la familia en la superficie actual y reservar cualquier eventual apertura funcional posterior para un bloque independiente y justificado.  
 - **Estado:** cerrado
 
-### RETP-2026-032 — coordinación transversal provisional / regularización integral de numeración subordinada y vigilancia focal sobre suceso local / Fase IV
+### RETP-2026-032 — UCBC provisional / regularización integral de numeración subordinada y vigilancia focal sobre suceso local / Fase IV
 
 - **Fecha:** 22/03/2026  
 - **Hora (Europe/Madrid):** NO_CONSTA  
 - **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA  
-- **Resumen del cambio:** Se regulariza el bloque de coordinación transversal para subordinar la numeración RETP al CSV maestro, se desincrustan identificadores registrales de las actas de coordinación transversal y se incorpora la nota pública sobre suceso local y horizonte declarado a la matriz de vigilancia temprana sin abrir deuda viva nueva.  
+- **Resumen del cambio:** Se regulariza el bloque UCBC para subordinar la numeración RETP al CSV maestro, se desincrustan identificadores registrales de las actas UCBC y se incorpora la nota pública sobre suceso local y horizonte declarado a la matriz de vigilancia temprana sin abrir deuda viva nueva.  
 - **Motivo / argumento:** El CSV maestro termina en RETP-2026-031 y por tanto no procede arrastrar una numeración incrustada en un acta como si gobernara el registro; era necesario corregir ahora la divergencia para evitar recaídas futuras y dejar toda la trazabilidad subordinada al registro maestro.  
-- **Base doctrinal / técnica:** CSV maestro del registro técnico; pliego de condiciones del Sistema Vectorial SV; criterio de vigilancia coordinada subordinada; HTML verificado de la pieza publicada; árboles de repositorio verificados auditados.  
+- **Base doctrinal / técnica:** CSV maestro del registro técnico; pliego de condiciones del Sistema Vectorial SV; criterio de vigilancia UCBC subordinada; HTML verificado de la pieza publicada; árboles de repositorio verificados auditados.  
 - **Artefactos afectados:** docs/calidad/ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_INTERFACES_Y_ALERTA_TEMPRANA_AL_LENGUAJE_SV_2026_03_21.md; docs/calidad/ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_NOTA_DE_PRECISION_DE_SUCESO_LOCAL_Y_HORIZONTE_DECLARADO_2026_03_22.md; docs/calidad/MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md; docs/calidad/MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv  
-- **Evidencia:** contraste adversarial entre CSV maestro, acta de vigilancia coordinada del 21/03/2026 y lote de vigilancia focal del 22/03/2026; verificación de que el CSV termina en 031 y de que la nueva regularización restablece una única autoridad de numeración.  
+- **Evidencia:** contraste adversarial entre CSV maestro, acta UCBC del 21/03/2026 y lote de vigilancia focal del 22/03/2026; verificación de que el CSV termina en 031 y de que la nueva regularización restablece una única autoridad de numeración.  
 - **Impacto:** trazabilidad; gobierno_tecnico; mantenibilidad; fiabilidad; disciplina_registral  
 - **Objeción adversarial:** riesgo de conservar una pseudo-continuidad cómoda entre el número incrustado en un acta y el siguiente lote, perpetuando así una fuente doble de verdad. No procede: el CSV manda y los documentos quedan subordinados a él.  
-- **Decisión:** regularizar de forma total el bloque de coordinación transversal: el registro maestro reasume la numeración RETP, las actas quedan sin numeración incrustada y la nueva vigilancia focal entra como parte del mismo hito registral 032.  
+- **Decisión:** regularizar de forma total el bloque UCBC: el registro maestro reasume la numeración RETP, las actas quedan sin numeración incrustada y la nueva vigilancia focal entra como parte del mismo hito registral 032.  
 - **Estado:** cerrado
 
 ### RETP-2026-033 — Frente final del lenguaje SV / Bloque K — blindaje documental pre-backend del ABI mínimo / Fase IV
@@ -573,13 +572,13 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Hora (Europe/Madrid):** NO_CONSTA  
 - **Tipo de hito:** CAMBIO_DOCUMENTACION_PUBLICA  
 - **Resumen del cambio:** Se integra explícitamente el marco de estabilidad, resiliencia y horizontes, junto con los instrumentos de control por hitos, en la cadena de README y en el registro maestro; además se sanea la forma del registro .md para que vuelva a ser una fuente de lectura humana coordinada con el CSV.  
-- **Motivo / argumento:** La lectura íntegra del árbol del repositorio verificado mostró que el núcleo técnico estaba estable, pero todavía persistía una vulnerabilidad de relevo documental: el marco de resiliencia y los CSV de hitos existían, aunque no quedaban suficientemente descubiertos en la cadena principal de lectura, y el registro .md había quedado contaminado al final por una línea CSV cruda de RETP-2026-033.  
+- **Motivo / argumento:** La lectura íntegra del árbol del repositorio verificado mostró que el núcleo técnico estaba estable, pero todavía persistía una vulnerabilidad de continuidad operativa documental: el marco de resiliencia y los CSV de hitos existían, aunque no quedaban suficientemente descubiertos en la cadena principal de lectura, y el registro .md había quedado contaminado al final por una línea CSV cruda de RETP-2026-033.  
 - **Base doctrinal / técnica:** README.md; docs/README.md; docs/arquitectura/README.md; docs/calidad/README.md; docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md; docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; árbol del repositorio verificado auditado con suite en verde.  
 - **Artefactos afectados:** README.md; docs/README.md; docs/arquitectura/README.md; docs/calidad/README.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
 - **Evidencia:** lectura completa del árbol con foco reforzado en README, actas y registros; contraste interno entre arquitectura, calidad y control por hitos; verificación local posterior de tests/run_conformance.py, tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.  
 - **Impacto:** trazabilidad; descubribilidad_publica; continuidad_operativa; resiliencia_prebackend; gobierno_tecnico.  
 - **Objeción adversarial:** riesgo de sobreactuar el marco de resiliencia y los hitos como si autorizaran una implementación inmediata de semántica futura, o de presentar este saneamiento como cierre de FFL-E. No procede: el lote solo coordina la lectura pública y registral del estado vigente, sin tocar IR, gramática, validator, runner ni backend.  
-- **Decisión:** hacer inevitable para futuras unidades de trabajo la lectura del marco de resiliencia y del control por hitos dentro de la cadena de README y restablecer la coordinación formal entre el registro .md y el CSV maestro.  
+- **Decisión:** hacer inevitable para futuras unidades Watson la lectura del marco de resiliencia y del control por hitos dentro de la cadena de README y restablecer la coordinación formal entre el registro .md y el CSV maestro.  
 - **Estado:** cerrado
 
 ### RETP-2026-035 — Frente final del lenguaje SV / Bloque M — alineación de docs/index.html con el estado pre-backend / Fase IV
@@ -603,7 +602,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Hora (Europe/Madrid):** NO_CONSTA  
 - **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_HITOS  
 - **Resumen del cambio:** Se formaliza en un solo lote la verificación auditada de H1 — Base segura, se actualiza el registro de calidad de hitos y se propaga su lectura mínima a la cadena de README y a docs/index.html, dejando explícito que H1 no cierra el frente final ni abre automáticamente H2, H3 o backend.  
-- **Motivo / argumento:** La auditoría seria del primer hito mostró que ya existen materialmente gramática mínima estable, IR no incompatible con relaciones y acumulaciones futuras y validator no temporalista; faltaba consolidar ese estado como acto de gobierno técnico legible, resistente al relevo y menos dependiente de microparches dispersos.  
+- **Motivo / argumento:** La auditoría seria del primer hito mostró que ya existen materialmente gramática mínima estable, IR no incompatible con relaciones y acumulaciones futuras y validator no temporalista; faltaba consolidar ese estado como acto de gobierno técnico legible, resistente a la continuidad operativa y menos dependiente de microparches dispersos.  
 - **Base doctrinal / técnica:** docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md; docs/arquitectura/CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md; docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md; docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv; docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv; árbol del repositorio verificado auditado con suite en verde.  
 - **Artefactos afectados:** README.md; docs/README.md; docs/arquitectura/README.md; docs/calidad/README.md; docs/index.html; docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
 - **Evidencia:** lectura completa del árbol del repositorio verificado con foco en README, arquitectura, calidad, hitos y parser/validator; contraste adversarial de que la persistencia de deuda viva residual no impide por sí sola H1; verificación local posterior de tests/run_conformance.py, tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.  
@@ -612,12 +611,12 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Decisión:** declarar auditado H1 — Base segura como hito materialmente verificado, propagar esa lectura a la superficie pública mínima y mantener intacta la prudencia sobre H2, H3, FFL-A a FFL-E y backend soberano.  
 - **Estado:** cerrado
 
-### RETP-2026-037 — Frente H2-pre y control adicional de verificación documental / Fase IV
+### RETP-2026-037 — Frente H2-pre y control adicional de base de verificación / Fase IV
 
 - **Fecha:** 23/03/2026  
 - **Hora (Europe/Madrid):** 16:59:50  
 - **Tipo de hito:** CAMBIO_GOBIERNO_TECNICO_Y_CONTROL_DE_CALIDAD  
-- **Resumen del cambio:** Se formaliza H2-pre como dictamen auditado de no bloqueo, se institucionaliza el barrido secuencial de actividad y latencia del repo y se crea un sistema de partes de trabajo por agente con taxonomía explícita de base de verificación.  
+- **Resumen del cambio:** Se formaliza H2-pre como dictamen auditado de no bloqueo, se institucionaliza el barrido secuencial de actividad y latencia del repo y se crea un sistema de partes de trabajo por agente con taxonomía explícita de lectura del árbol del repositorio verificado.  
 - **Motivo / argumento:** La evaluación adversarial mostró que la nueva capa de seguridad es útil para reducir memoria espuria, inferencia no declarada y lectura parcial, siempre que no se apoye en fechas brutas del ZIP y que no infle innecesariamente el registro maestro. También se consideró necesario dejar asentado H2-pre sin sobreactuarlo como H2 logrado.  
 - **Base doctrinal / técnica:** docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv; docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv; árbol del repositorio verificado auditado con suite en verde.  
 - **Artefactos afectados:** docs/README.md; docs/calidad/README.md; docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md; docs/calidad/ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md; docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv; docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md; docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
@@ -651,7 +650,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Motivo / argumento:** Tras las microauditorías H2.1, H2.2 y H2.3, la base material de H2 restringido quedó suficientemente respaldada para consolidación registral, sin que ello equivalga a verificación positiva de H2 ni apertura de H3 o backend.  
 - **Base doctrinal / técnica:** docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md; IR_CANONICA_BIENFORMACION_SV_v0_2.md; src/svp_validator.py; src/svp_main.py; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv; docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv; árbol del repositorio verificado auditado con suite en verde.  
 - **Artefactos afectados:** docs/calidad/README.md; docs/calidad/ACTA_TECNICA_DE_CONSOLIDACION_AUDITADA_DE_H2_RESTRINGIDO_2026_03_23.md; docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv; docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv.  
-- **Evidencia:** microauditorías H2.1 H2.2 y H2.3 con verificación documental real del repo y verificación posterior de tests/run_conformance.py tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.  
+- **Evidencia:** microauditorías H2.1 H2.2 y H2.3 con base de verificación real del repo y verificación posterior de tests/run_conformance.py tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.  
 - **Impacto:** gobierno_tecnico; control_de_hitos; continuidad_operativa; resiliencia_prebackend.  
 - **Objeción adversarial:** Riesgo de presentar la superación de H2.1–H2.3 como si implicara H2 verificado, o de mantener H2 como mera hipótesis negativa de no-bloqueo pese a haber pasado ya la auditoría mínima suficiente. No procede ninguno de los dos extremos.  
 - **Decisión:** Consolidar registralmente H2 restringido como fase respaldada por auditoría mínima suficiente, manteniendo Q-04 y Q-05 en Pendiente y sin abrir H3 ni backend.  
@@ -663,7 +662,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Hora (Europe/Madrid):** 20:02:35  
 - **Tipo de hito:** CAMBIO_RUNNER  
 - **Resumen del cambio:** Se cierra y registra el lote correctivo del frontend que recupera especificidad diagnóstica visible, impone no-vaciedad en compose, elimina el falso positivo por orden textual en AdmissibilitySpec y corrige el diagnóstico de PendingU.  
-- **Motivo / argumento:** El parche ya quedó aplicado y auditado sobre el árbol del repositorio verificado real, pero faltaba completar el paso de registro y cierre exigido por el circuito ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.  
+- **Motivo / argumento:** El parche ya quedó aplicado y auditado sobre el árbol del repositorio verificado, pero faltaba completar el paso de registro y cierre exigido por el circuito ZIP → GITHUB → VERIFICACIÓN → REGISTRO → CIERRE.  
 - **Base doctrinal / técnica:** pliego de condiciones del Sistema Vectorial SV; procedimiento de auditoría técnica; mandato operativo de no mezclar este lote con regularización amplia del catálogo; árbol del repositorio verificado auditado tras verificación de cierre.  
 - **Artefactos afectados:** src/svp_errors.py; src/svp_parser.py; src/svp_validator.py; tests/run_conformance.py; tests/conformance/invalid/output_semantics_no_declarada.svp; tests/conformance/invalid/compose_relations_vacias.svp; tests/conformance/invalid/compose_patterns_vacios.svp; tests/conformance/invalid/pending_u_reconocido_no_habilitado.svp; tests/conformance/invalid/transition_data_horizon_no_declarado.svp; tests/conformance/valid/admissibility_spec_states_permutados.svp; tests/conformance/valid/admissibility_spec_states_permutados.expected.json; docs/calidad/ACTA_TECNICA_DE_CIERRE_AUDITADO_DEL_PARCHE_CORRECTIVO_DEL_FRONTEND_2026_03_23.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv; docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv; docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv; docs/calidad/README.md.  
 - **Evidencia:** verificacion posterior del árbol del repositorio verificado con confirmacion material de los archivos tocados y ejecucion local de tests/run_conformance.py 37/37 tests/run_cli_smoke.py 3/3 y tests/run_sec0_smoke.py 3/3 sin regresion.  
@@ -726,24 +725,8 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Motivo / argumento:** Tras la urgencia ética y registral del ciclo UCBC12 permanecían tres asimetrías materiales: el README doctrinal de la sede celular seguía declarando que la carpeta contenía sólo README.md, el README de calidad no listaba todavía el Acta ya publicada y el registro técnico en prosa había quedado sustituido por la nota de hoja de ruta, perdiendo su función de lectura humana coordinada.  
 - **Base doctrinal / técnica:** árbol del repositorio verificado de SV-lenguaje-de-computacion; evidencia documental verificable de la sede doctrinal celular ya publicada en GitHub; Acta técnica final ya publicada; microauditoría de apertura del piloto de seguridad estructural ya materialmente presente en la sede doctrinal; criterio de no bloqueo de la deuda IR relativo a la compuerta entre prohibición y protección.  
 - **Artefactos afectados:** documentos/celulas_especializadas_sv/README.md en SV-matematica-semantica; docs/calidad/README.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv; docs/calidad/ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md.  
-- **Evidencia:** lectura VERIFICACION_INTEGRAL del árbol del repositorio verificado de Lenguaje SV; verificación acotada de la sede doctrinal celular mediante evidencia documental verificable verificable; triple contraste adversarial entre README, registro técnico, Acta publicada y microauditoría del piloto.  
+- **Evidencia:** lectura VERIFICACION_INTEGRAL del árbol del repositorio verificado de Lenguaje SV; lectura ajustada al objeto de la sede doctrinal celular mediante evidencia documental verificable; triple contraste adversarial entre README, registro técnico, Acta publicada y microauditoría del piloto.  
 - **Impacto:** trazabilidad; saneamiento_registral; continuidad_operativa; gobierno_tecnico; cautela_semantica; preservacion_editorial.  
 - **Objeción adversarial:** Riesgo de prolongar la unidad UCBC12 con una zona gris entre publicación ética, apertura del piloto y registro maestro, o de convertir la deuda IR futura en bloqueo inmediato del sistema. No procede ninguno de los dos extremos: el lote sólo asienta, sincroniza y deja explícita la continuidad no bloqueante.  
-- **Decisión:** Cerrar el asentamiento final del ciclo UCBC12 antes del relevo, dejando el Acta absorbida como límite superior, la sede celular actualizada y el registro técnico nuevamente legible y coordinado con el CSV maestro.  
-- **Estado:** cerrado
-
-
-### RETP-2026-045 — Lenguaje SV / saneamiento del lenguaje público en docs/calidad y completitud de la coordinación con SVperitus / Fase IV
-
-- **Fecha:** 29/03/2026  
-- **Hora (Europe/Madrid):** 09:09:15  
-- **Tipo de hito:** SANEAMIENTO_DE_LENGUAJE_PUBLICO_Y_COORDINACION_INTERNA  
-- **Resumen del cambio:** Se regulariza el lenguaje público de la sede de calidad del lenguaje, sustituyendo formulaciones internas por expresiones aptas para terceros y completando la indexación interna de las piezas de coordinación ya abiertas con SVperitus.  
-- **Motivo / argumento:** La revisión adversarial del bloque de calidad mostró cocina interna residual en la taxonomía de verificación, en los registros históricos y en varias actas públicas, además de ausencia de indexación de las piezas nuevas de coordinación entre sedes.  
-- **Base doctrinal / técnica:** bloque `docs/calidad/` vigente; piezas de coordinación entre `SV-lenguaje-de-computacion` y `SVperitus`; criterio de trazabilidad pública sobria.  
-- **Artefactos afectados:** README, registros maestros, registros de barrido, registros de partes por agente, actas y matrices afectadas del bloque de calidad.  
-- **Evidencia:** verificación integral del bloque de calidad con contraste textual y validación posterior de consistencia CSV en las piezas afectadas.  
-- **Impacto:** trazabilidad; lenguaje_publico; coordinacion_entre_sedes; control_de_calidad.  
-- **Objeción adversarial:** riesgo de alterar el contenido registral histórico al sanear únicamente la forma pública. No procede reescribir hechos ni secuencias; el saneamiento se limita a nomenclatura de verificación, formulación pública e indexación interna.  
-- **Decisión:** regularizar el lenguaje público de `docs/calidad/` y dejar explícita la coordinación interna con `SVperitus` sin reabrir doctrina, IR, validator, runner ni backend.  
+- **Decisión:** Cerrar el asentamiento final del ciclo UCBC12 antes de la continuidad operativa, dejando el Acta absorbida como límite superior, la sede celular actualizada y el registro técnico nuevamente legible y coordinado con el CSV maestro.  
 - **Estado:** cerrado

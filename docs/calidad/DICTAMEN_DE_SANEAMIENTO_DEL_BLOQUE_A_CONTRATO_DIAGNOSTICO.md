@@ -167,7 +167,7 @@ Por ello, el siguiente paso legítimo tras este dictamen no es prometer cierre h
 
 ## 10. Nota posterior de sincronización visible (24/03/2026)
 
-La verificación documental del repo real, contrastada contra `src/svp_errors.py`, `tests/run_conformance.py` y los casos inválidos vigentes, obliga a dejar constancia de la siguiente resincronización documental:
+La base de verificación del repo real, contrastada contra `src/svp_errors.py`, `tests/run_conformance.py` y los casos inválidos vigentes, obliga a dejar constancia de la siguiente resincronización documental:
 
 - `E102` consta ya con **emisión observable** y **cobertura explícita** mediante `output_semantics_no_declarada.svp`.
 - `E104` consta ya con **emisión observable** y **cobertura explícita** mediante `conector_target_no_ternario.svp`.

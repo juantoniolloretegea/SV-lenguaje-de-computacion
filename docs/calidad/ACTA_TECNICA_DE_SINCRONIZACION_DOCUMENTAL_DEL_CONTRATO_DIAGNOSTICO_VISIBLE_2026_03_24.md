@@ -33,7 +33,7 @@ Además, el contraste directo con `src/svp_errors.py` obliga a corregir en la do
 
 ## 4. Decisión
 
-Procede un microparche **estrictamente documental** y **rebasado sobre el árbol del repositorio verificado actual** para sincronizar:
+Procede un microparche **estrictamente documental** y **rebasado sobre el árbol del repositorio verificado** para sincronizar:
 
 1. el catálogo público efectivo;
 2. la matriz de concordancia diagnóstica;

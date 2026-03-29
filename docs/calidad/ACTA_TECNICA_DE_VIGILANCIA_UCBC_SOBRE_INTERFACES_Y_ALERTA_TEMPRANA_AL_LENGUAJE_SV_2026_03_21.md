@@ -21,7 +21,7 @@ Constan públicamente, al menos, los siguientes frentes ya publicados dentro del
 - `Primera forma legítima del frente de corpus observacional tipado del Sistema Vectorial SV`
 - `Modelo formal de admisibilidad olfativa e indeterminación intermodal en el Sistema Vectorial SV`
 
-Consta además, en el árbol real del repositorio doctrinal fresco `SV-matematica-semantica`, que los carriles `observacional` y `olfato` ya están integrados materialmente en `documentos/programa_interfaces_sv/`, con manuscrito, figuras, laboratorio y meta asociados.
+Consta además, en el árbol real del repositorio doctrinal verificado `SV-matematica-semantica`, que los carriles `observacional` y `olfato` ya están integrados materialmente en `documentos/programa_interfaces_sv/`, con manuscrito, figuras, laboratorio y meta asociados.
 
 El frente `W-NLP1 SV` debe tratarse, en el estado actual, como frente proyectado y pendiente de activación efectiva, no como frente ya integrado en el ecosistema operativo del lenguaje.
 

@@ -6,7 +6,7 @@ Este registro documenta barridos secuenciales del árbol del repositorio verific
 
 ## Regla metodológica
 
-Los barridos no deben tomar como prueba suficiente la fecha de creación o la fecha de modificación del ZIP extraído. Deben valorar, con lectura real del árbol, si la quietud de un fichero:
+Los barridos no deben tomar como prueba suficiente la fecha de creación o la fecha de modificación del paquete comprimido aportado. Deben valorar, con lectura real del árbol, si la quietud de un fichero:
 
 - es normal y legítima;
 - es latencia propia de una pieza canónica o reservada para una fase futura;
