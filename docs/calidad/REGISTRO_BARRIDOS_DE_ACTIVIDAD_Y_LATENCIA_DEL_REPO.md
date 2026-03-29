@@ -2,7 +2,7 @@
 
 ## Finalidad
 
-Este registro documenta barridos secuenciales del repo fresco orientados a valorar actividad estructural, uso funcional, latencia legítima o sospechosa y necesidad de análisis adicional.
+Este registro documenta barridos secuenciales del árbol del repositorio verificado orientados a valorar actividad estructural, uso funcional, latencia legítima o sospechosa y necesidad de análisis adicional.
 
 ## Regla metodológica
 

@@ -17,7 +17,7 @@ Dejar constancia de la microauditoría H2-pre orientada a una sola pregunta: si 
 - `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
 - `docs/calidad/DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
 - `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
-- repo fresco auditado con verificación local de suite
+- árbol del repositorio verificado auditado con verificación local de suite
 
 ## Dictamen
 
@@ -27,7 +27,7 @@ Esto no equivale a verificar `H2` como hito logrado. Significa únicamente que:
 
 - `H1` permanece firme;
 - `H2` sigue en `Pendiente`;
-- la arquitectura presente no muestra, en el estado fresco auditado, un bloqueo estructural que obligue a rehacer el sistema antes de poder trabajar ese siguiente hito.
+- la arquitectura presente no muestra, en el estado verificado, un bloqueo estructural que obligue a rehacer el sistema antes de poder trabajar ese siguiente hito.
 
 ## Fundamentación resumida
 

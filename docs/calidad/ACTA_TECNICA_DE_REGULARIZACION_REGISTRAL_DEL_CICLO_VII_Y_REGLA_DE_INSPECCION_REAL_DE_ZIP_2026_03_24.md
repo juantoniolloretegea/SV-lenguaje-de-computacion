@@ -11,20 +11,20 @@ Regularizar la trazabilidad registral del ciclo documental y de gobierno semánt
 
 ## 2. Hechos constatados
 
-1. El repo fresco real contiene ya los documentos de consolidación doctrinal y de vigilancia conceptual de la familia VII:
+1. El árbol del repositorio verificado real contiene ya los documentos de consolidación doctrinal y de vigilancia conceptual de la familia VII:
    - `ACTA_TECNICA_DE_CONSOLIDACION_DE_LA_FAMILIA_VII_Y_ALERTA_DE_GOBIERNO_SEMANTICO_PARA_EL_LENGUAJE_SV_2026_03_24.md`
    - `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`
    - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`
    - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
-2. El repo fresco real incorpora también la cautela `H-10` en `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
-3. El árbol vigente no había absorbido todavía en sus registros la pieza externa `PTA-2026-004`, a pesar de que ésta aporta una regla operativa correctora material sobre la inspección real de ZIP y la prevalencia del contenido interno del objeto sobre su nombre externo o sobre la memoria del agente.
+2. El árbol del repositorio verificado real incorpora también la cautela `H-10` en `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
+3. El árbol vigente no había absorbido todavía en sus registros la pieza externa `PTA-2026-004`, a pesar de que ésta aporta una regla operativa correctora material sobre la inspección real de ZIP y la prevalencia del contenido interno del objeto sobre su nombre externo o sobre la reconstrucción no verificada.
 4. La suite sigue sana en este árbol real: `run_conformance.py` 37/37, `run_cli_smoke.py` 3/3 y `run_sec0_smoke.py` 3/3.
 
 ## 3. Regla fijada
 
 Queda fijado, de forma expresa y reutilizable por futuros relevos, lo siguiente:
 
-> En todo ZIP entregado como evidencia operativa, prevalece el contenido interno del objeto sobre su nombre externo, su ruta de descarga o la memoria conversacional del agente. No procede declarar su naturaleza ni su alcance sin inspección real del contenido.
+> En todo ZIP entregado como evidencia operativa, prevalece el contenido interno del objeto sobre su nombre externo, su ruta de descarga o la reconstrucción conversacional no verificada del agente. No procede declarar su naturaleza ni su alcance sin inspección real del contenido.
 
 ## 4. Alcance del lote
 

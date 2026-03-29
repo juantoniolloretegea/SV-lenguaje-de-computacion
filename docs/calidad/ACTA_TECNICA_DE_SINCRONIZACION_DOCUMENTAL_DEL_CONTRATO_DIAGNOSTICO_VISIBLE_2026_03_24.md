@@ -5,7 +5,7 @@
 
 ## 1. Objeto
 
-Esta acta deja constancia del microparche documental destinado a resincronizar la documentación viva del contrato diagnóstico observable del frontend de referencia con el estado real del repo fresco.
+Esta acta deja constancia del microparche documental destinado a resincronizar la documentación viva del contrato diagnóstico observable del frontend de referencia con el estado real del árbol del repositorio verificado.
 
 ## 2. Alcance
 
@@ -21,7 +21,7 @@ El lote afecta únicamente a documentación pública y de calidad:
 
 ## 3. Evidencia material de resincronización
 
-La lectura adversarial del repo fresco acredita hoy, de forma observable y con cobertura explícita de suite, al menos los siguientes subcasos:
+La lectura adversarial del árbol del repositorio verificado acredita hoy, de forma observable y con cobertura explícita de suite, al menos los siguientes subcasos:
 
 - `E102` mediante `output_semantics_no_declarada.svp`;
 - `E104` mediante `conector_target_no_ternario.svp`;
@@ -33,7 +33,7 @@ Además, el contraste directo con `src/svp_errors.py` obliga a corregir en la do
 
 ## 4. Decisión
 
-Procede un microparche **estrictamente documental** y **rebasado sobre el repo fresco actual** para sincronizar:
+Procede un microparche **estrictamente documental** y **rebasado sobre el árbol del repositorio verificado actual** para sincronizar:
 
 1. el catálogo público efectivo;
 2. la matriz de concordancia diagnóstica;
@@ -52,4 +52,4 @@ Quedan expresamente fuera de este lote:
 
 ## 6. Criterio adversarial
 
-La resincronización no crea doctrina nueva ni cambia el comportamiento del compilador. Su función es impedir que la documentación viva siga describiendo como ausente una emitibilidad que el repo fresco ya acredita materialmente.
+La resincronización no crea doctrina nueva ni cambia el comportamiento del compilador. Su función es impedir que la documentación viva siga describiendo como ausente una emitibilidad que el árbol del repositorio verificado ya acredita materialmente.

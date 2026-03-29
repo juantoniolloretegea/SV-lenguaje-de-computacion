@@ -17,7 +17,7 @@ El objeto exacto del lote ha sido restaurar corrección visible y precisión dia
 
 ## 2. Base técnica considerada
 
-La decisión se apoya en lectura fresca real del repositorio operativo y, en particular, en:
+La decisión se apoya en verificación documental real del repositorio operativo y, en particular, en:
 
 - `src/svp_errors.py`
 - `src/svp_parser.py`
@@ -37,7 +37,7 @@ La decisión se apoya en lectura fresca real del repositorio operativo y, en par
 
 ## 3. Verificación material del cierre
 
-En el estado auditado tras subida y contraste del repo fresco real, la base ejecutable queda así:
+En el estado auditado tras subida y contraste del árbol del repositorio verificado real, la base ejecutable queda así:
 
 - `tests/run_conformance.py` → **37/37**
 - `tests/run_cli_smoke.py` → **3/3**

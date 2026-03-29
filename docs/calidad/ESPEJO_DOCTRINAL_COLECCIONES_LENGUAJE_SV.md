@@ -62,7 +62,7 @@ Valores previstos:
 - BL alta no implica IRQ alta.
 - IRQ alta no equivale a superioridad doctrinal.
 - Ninguna BL o IRQ autoriza implementación automática.
-- La UCBC propone y fundamenta; no impone silenciosamente.
+- La coordinación transversal propone y fundamenta; no impone silenciosamente.
 
 
 

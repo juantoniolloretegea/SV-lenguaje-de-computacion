@@ -8,7 +8,7 @@
 
 ## 1. Objeto
 
-Dejar constancia técnica de que el repositorio operativo `SV-lenguaje-de-computacion`, en su estado fresco auditado, satisface materialmente las condiciones de `H1 — Base segura` definidas en `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`, sin convertir esa verificación en cierre total del frente final, en agotamiento de `N4/Uso` ni en apertura automática de `H2`, `H3` o del backend soberano.
+Dejar constancia técnica de que el repositorio operativo `SV-lenguaje-de-computacion`, en su estado verificado, satisface materialmente las condiciones de `H1 — Base segura` definidas en `docs/arquitectura/MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`, sin convertir esa verificación en cierre total del frente final, en agotamiento de `N4/Uso` ni en apertura automática de `H2`, `H3` o del backend soberano.
 
 ## 2. Hechos constatados
 
@@ -24,7 +24,7 @@ Consta en el árbol real del repositorio, al menos, lo siguiente:
 - informe de continuidad del frente básico y habilitación prudente del backend publicado en `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`;
 - matriz de horizontes y control por hitos publicada en `docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv` y `docs/calidad/REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`.
 
-Consta además, mediante verificación local del repo fresco auditado, que la base ejecutable observable permanece íntegra:
+Consta además, mediante verificación local del árbol del repositorio verificado auditado, que la base ejecutable observable permanece íntegra:
 
 - `tests/run_conformance.py`: `31/31`;
 - `tests/run_cli_smoke.py`: `3/3`;
@@ -54,7 +54,7 @@ No se acredita en el `validator` vigente una presuposición de tiempo fuerte, li
 
 Se fija la siguiente lectura válida para el repositorio operativo del lenguaje:
 
-1. **sí** queda verificado `H1 — Base segura` como hito materialmente alcanzado en el estado fresco auditado del repo;
+1. **sí** queda verificado `H1 — Base segura` como hito materialmente alcanzado en el estado verificado del repo;
 2. **no** se declara por ello cerrado el frente final `FFL-A` a `FFL-E`;
 3. **no** se elimina por ello la deuda viva residual del frente ni la deuda viva de hitos posteriores;
 4. **no** se autoriza por ello apertura automática de `H2`, `H3` o del backend soberano;

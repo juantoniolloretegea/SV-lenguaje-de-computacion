@@ -2,7 +2,7 @@
 
 ## Hecho constatado
 
-Se constata, por lectura material de repos frescos y de la sede doctrinal correspondiente, la integración pública de la pieza:
+Se constata, por lectura material de árboles de repositorio verificados y de la sede doctrinal correspondiente, la integración pública de la pieza:
 
 **Equivalencia parcial, preservación e invariancia local entre regímenes en el Sistema Vectorial SV**.
 

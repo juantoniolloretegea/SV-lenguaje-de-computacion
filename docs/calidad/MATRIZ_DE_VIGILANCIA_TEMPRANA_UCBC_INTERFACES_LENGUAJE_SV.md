@@ -1,4 +1,4 @@
-# Matriz de vigilancia temprana UCBC — interfaces publicadas y proyectadas ↔ lenguaje SV
+# Matriz de vigilancia temprana coordinada — interfaces publicadas y proyectadas ↔ lenguaje SV
 
 ## Finalidad
 
@@ -28,7 +28,7 @@ La situación mínima de cada fila será una de estas:
 
 **Estado:** apertura técnica de vigilancia coordinada  
 **Fecha de trabajo:** 22/03/2026  
-**Base de contraste:** publicaciones visibles del Programa de interfaces + repo fresco de `SV-lenguaje-de-computacion` + repo fresco de `SV-matematica-semantica`
+**Base de contraste:** publicaciones visibles del Programa de interfaces + árbol del repositorio verificado de `SV-lenguaje-de-computacion` + árbol del repositorio verificado de `SV-matematica-semantica`
 
 |Frente_o_Publicacion|Estado_de_Fase|Hecho_Publico_Constatado|Plano_del_Lenguaje_Potencialmente_Afectado|Riesgo_Principal|Situacion|Tratamiento_Recomendado|Observaciones|
 |---|---|---|---|---|---|---|---|
@@ -41,5 +41,5 @@ La situación mínima de cada fila será una de estas:
 |Tacto|proyectado|Se perfila como carril posterior con potencial tensión entre contacto, frontera y exposición|CaptureSpec / Domain / exposición|confundir tactilidad con ontología nueva o con cierre motor impropio|vigilancia_puertos|esperar manuscrito y delimitación negativa fuerte|sin efecto inmediato sobre IR actual|
 |Células especializadas|proyectado|Se perfila como laboratorio controlado de expresión estructural del lenguaje aplicado sobre carriles ya publicados|examples / QuerySpec / QueryContext / legibilidad pública|convertir el laboratorio en presión funcional o normativa sobre N4/Uso|vigilancia_expresion_controlada|permitir solo como laboratorio no normativo y no invasivo|debe poder eliminarse sin dejar rastro normativo en el lenguaje|
 |NLP (frente proyectado / activación pendiente)|proyectado|Se perfila una posible cadena auditada de ruido, admisibilidad del canal y reexpresión fiel|QuerySpec / QueryContext / referencias a canal|convertir ruido lingüístico en semántica rival o exigir reforma prematura|vigilancia_puertos|esperar activación y primer dictamen de W-NLP1 SV|sin deuda viva nueva hasta contradicción acreditada|
-|UCBC (horizonte coordinador)|proyectado|Se identifica necesidad futura de coordinación transversal de frentes hacia el lenguaje|gobierno técnico / contratos / registros|mezclar coordinación con especificación operativa|vigilancia_puertos|mantener como función coordinadora y no normativa|colofón futuro, no cambio actual de IR|
+|coordinación transversal (horizonte coordinador)|proyectado|Se identifica necesidad futura de coordinación transversal de frentes hacia el lenguaje|gobierno técnico / contratos / registros|mezclar coordinación con especificación operativa|vigilancia_puertos|mantener como función coordinadora y no normativa|colofón futuro, no cambio actual de IR|
 |Nota de precisión sobre suceso local y horizonte declarado|publicado e integrado|Consta pieza pública subordinada que distingue suceso local suceso envolvente reevaluación situacional y competencia declarada de horizonte sin alterar por sí sola el lenguaje|QueryContext / Domain / horizonte declarado / consulta|absolutizar clausura local o introducir exterioridad correctora sin competencia|vigilancia_u_honesta|mantener vigilancia focal sin deuda nueva|refuerza límites metodológicos compatibles con el ABI mínimo y ya queda absorbida material y públicamente en la sede doctrinal|

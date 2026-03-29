@@ -142,7 +142,7 @@ La presente decisión será aplicable, por analogía metodológica, a otros proy
 - documentación pública;
 - y gobernanza técnica del desarrollo.
 
-La brújula seguirá siendo siempre el repositorio y su jerarquía, no la memoria conversacional ni la improvisación de una unidad concreta.
+La brújula seguirá siendo siempre el repositorio y su jerarquía, no la reconstrucción conversacional no verificada ni la improvisación de una unidad concreta.
 
 ## 12. Criterio de cierre de esta decisión
 

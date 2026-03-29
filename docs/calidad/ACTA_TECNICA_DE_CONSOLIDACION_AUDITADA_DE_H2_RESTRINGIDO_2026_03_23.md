@@ -12,7 +12,7 @@ No se declara por este acto que **H2** haya quedado verificado como hito. Se dec
 
 ## 2. Base técnica considerada
 
-La consolidación se apoya en la lectura fresca real del repositorio operativo y, en particular, en:
+La consolidación se apoya en la verificación documental real del repositorio operativo y, en particular, en:
 
 - `IR_CANONICA_BIENFORMACION_SV_v0_2.md`
 - `src/svp_ir.py`

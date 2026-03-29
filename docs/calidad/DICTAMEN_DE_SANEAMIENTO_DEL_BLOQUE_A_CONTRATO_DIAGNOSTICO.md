@@ -7,7 +7,7 @@
 
 ## Nota de lectura posterior
 
-Las referencias específicas a `E102`, `E104`, `E208`, `E209` y `E303` contenidas en este documento deben leerse conforme a la **nota posterior de sincronización visible** incorporada al final. Esa nota no reabre la doctrina ni el validator: corrige la descripción documental del estado ya observable del repo fresco.
+Las referencias específicas a `E102`, `E104`, `E208`, `E209` y `E303` contenidas en este documento deben leerse conforme a la **nota posterior de sincronización visible** incorporada al final. Esa nota no reabre la doctrina ni el validator: corrige la descripción documental del estado ya observable del árbol del repositorio verificado.
 
 ## 1. Objeto
 
@@ -167,7 +167,7 @@ Por ello, el siguiente paso legítimo tras este dictamen no es prometer cierre h
 
 ## 10. Nota posterior de sincronización visible (24/03/2026)
 
-La lectura fresca del repo real, contrastada contra `src/svp_errors.py`, `tests/run_conformance.py` y los casos inválidos vigentes, obliga a dejar constancia de la siguiente resincronización documental:
+La verificación documental del repo real, contrastada contra `src/svp_errors.py`, `tests/run_conformance.py` y los casos inválidos vigentes, obliga a dejar constancia de la siguiente resincronización documental:
 
 - `E102` consta ya con **emisión observable** y **cobertura explícita** mediante `output_semantics_no_declarada.svp`.
 - `E104` consta ya con **emisión observable** y **cobertura explícita** mediante `conector_target_no_ternario.svp`.

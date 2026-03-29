@@ -6,7 +6,7 @@ Regularizar la concordancia entre el árbol real de `SV-lenguaje-de-computacion`
 
 ## 2. Hecho constatado
 
-Sobre repo fresco del repositorio operativo constan localmente:
+Sobre árbol del repositorio verificado del repositorio operativo constan localmente:
 
 - `docs/gobierno/MANIFIESTO_PLIEGO_Y_ASSETS.md`
 - `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`

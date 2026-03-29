@@ -45,7 +45,7 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 
 **Estado:** salida técnica resincronizada  
 **Fecha de trabajo:** 24/03/2026  
-**Base de contraste:** repo fresco del lenguaje + IR v0.2 + catálogo público efectivo + implementación + validator + suite
+**Base de contraste:** árbol del repositorio verificado del lenguaje + IR v0.2 + catálogo público efectivo + implementación + validator + suite
 
 ## 1. Resultado global
 

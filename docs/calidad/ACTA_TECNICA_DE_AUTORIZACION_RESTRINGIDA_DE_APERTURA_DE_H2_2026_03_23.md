@@ -9,7 +9,7 @@
 
 ## 1. Objeto
 
-Dejar constancia técnica de que el repositorio operativo `SV-lenguaje-de-computacion`, en su estado fresco auditado tras `H1` verificado y `H2-pre` formalizado como no bloqueo, dispone ya de base positiva suficiente para **autorizar la apertura restringida de `H2`** como frente arquitectónico-auditor de trabajo.
+Dejar constancia técnica de que el repositorio operativo `SV-lenguaje-de-computacion`, en su estado verificado tras `H1` verificado y `H2-pre` formalizado como no bloqueo, dispone ya de base positiva suficiente para **autorizar la apertura restringida de `H2`** como frente arquitectónico-auditor de trabajo.
 
 Esta autorización no equivale a verificar `H2` como hito alcanzado, no abre por sí sola el backend soberano y no autoriza implementaciones fuertes de invariancia, persistencia, umbral, transición ni clases formales de régimen.
 
@@ -24,7 +24,7 @@ Consta en el árbol real del repositorio, al menos, lo siguiente:
 - la arquitectura mínima del núcleo enganchable está publicada en `docs/arquitectura/NOTA_DE_ARQUITECTURA_MINIMA_DEL_NUCLEO_ENGANCHABLE_DEL_LENGUAJE_SV.md`;
 - la matriz de horizontes y el registro de hitos mantienen `Q-04` y `Q-05` en `Pendiente`, pero con evidencia ya registrada de no bloqueo estructural.
 
-Consta además, mediante verificación local del repo fresco auditado, que la base ejecutable observable permanece íntegra:
+Consta además, mediante verificación local del árbol del repositorio verificado auditado, que la base ejecutable observable permanece íntegra:
 
 - `tests/run_conformance.py`: `31/31`;
 - `tests/run_cli_smoke.py`: `3/3`;
@@ -32,7 +32,7 @@ Consta además, mediante verificación local del repo fresco auditado, que la ba
 
 ## 3. Juicio técnico
 
-Sobre la base del estado fresco auditado, se estima concurrente la siguiente secuencia:
+Sobre la base del estado verificado, se estima concurrente la siguiente secuencia:
 
 1. `H1` ya verifica una base material mínima segura del lenguaje.
 2. `H2-pre` ya ha descartado la existencia de un estrechamiento ilegítimo del espacio estructural futuro de `H2`.

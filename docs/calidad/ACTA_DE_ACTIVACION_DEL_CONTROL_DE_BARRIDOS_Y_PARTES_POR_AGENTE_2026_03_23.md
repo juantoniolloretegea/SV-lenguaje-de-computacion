@@ -6,7 +6,7 @@
 
 ## Objeto
 
-Activar un control de calidad adicional orientado a reducir memoria espuria, inferencia no declarada, lectura parcial del repo fresco y acumulación innecesaria de microregistros dispersos.
+Activar un control de calidad adicional orientado a reducir memoria espuria, inferencia no declarada, lectura parcial del árbol del repositorio verificado y acumulación innecesaria de microregistros dispersos.
 
 ## Decisión
 
@@ -21,17 +21,17 @@ Se institucionalizan dos instrumentos nuevos:
 - El barrido no se apoyará en la fecha bruta del ZIP extraído como criterio suficiente de actividad o inactividad.
 - El registro maestro podrá consolidar ciclos cuando proceda, para no inflar innecesariamente la traza principal.
 
-## Regla de lectura fresca
+## Regla de base de verificación
 
 Toda actuación deberá declararse según uno de estos valores:
 
 - `INFERIDA`
-- `DE_MEMORIA`
+- `MEMORIA_REFERENCIAL`
 - `PARCIAL`
-- `AJUSTADA_AL_OBJETO`
-- `100_REAL`
+- `VERIFICACION_ACOTADA`
+- `VERIFICACION_INTEGRAL`
 
-Las decisiones globales de fase, arquitectura, registro o continuidad del repo exigirán lectura `100_REAL` del repo fresco.
+Las decisiones globales de fase, arquitectura, registro o continuidad del repo exigirán lectura `VERIFICACION_INTEGRAL` del árbol del repositorio verificado.
 
 ## Observación
 

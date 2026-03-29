@@ -16,7 +16,7 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `ACTA_TECNICA_DE_CIERRE_AUDITADO_DEL_PARCHE_CORRECTIVO_DEL_FRONTEND_2026_03_23.md`
 - `ACTA_TECNICA_DE_SINCRONIZACION_DOCUMENTAL_DEL_CONTRATO_DIAGNOSTICO_VISIBLE_2026_03_24.md`
 
-### Vigilancia UCBC e integración de alertas tempranas
+### Vigilancia temprana e integración de alertas
 
 - `ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_INTERFACES_Y_ALERTA_TEMPRANA_AL_LENGUAJE_SV_2026_03_21.md`
 - `ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_NOTA_DE_PRECISION_DE_SUCESO_LOCAL_Y_HORIZONTE_DECLARADO_2026_03_22.md`
@@ -34,6 +34,12 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
 - `NOTA_HOJA_DE_RUTA_CELULA_VERIFICACION_GENERACION_MATEMATICA_SV_2026_03_26.md`
 - `ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md`
+
+### Coordinación entre sedes aplicadas y sede logística
+
+- `ACTA_TECNICA_DE_ACOPLAMIENTO_MINIMO_DEL_CONTROL_DE_CALIDAD_DE_SVPERITUS_A_LA_SEDE_LOGISTICA_DEL_LENGUAJE_SV_2026_03_28.md`
+- `NOTA_DE_COORDINACION_ENTRE_LA_SEDE_LOGISTICA_DEL_LENGUAJE_SV_Y_EL_CONTROL_MINIMO_DE_CALIDAD_DE_SVPERITUS_2026_03_28.md`
+- `REGISTRO_DE_COORDINACION_ENTRE_SEDES_APLICADAS_Y_SEDE_LOGISTICA_DEL_LENGUAJE_SV.csv`
 
 ### Resiliencia, horizontes y control por hitos
 
@@ -56,21 +62,21 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`
 
-## Regla de uso para lectura fresca
+## Regla de uso para la base de verificación
 
-Los registros de barrido y de partes por agente introducen una taxonomía obligatoria de lectura del repo fresco:
+Los registros de barrido y de partes por agente introducen una taxonomía obligatoria de base de verificación:
 
 - `INFERIDA`
-- `DE_MEMORIA`
+- `MEMORIA_REFERENCIAL`
 - `PARCIAL`
-- `AJUSTADA_AL_OBJETO`
-- `100_REAL`
+- `VERIFICACION_ACOTADA`
+- `VERIFICACION_INTEGRAL`
 
 ### Regla operativa
 
-- Las afirmaciones globales sobre el estado del repositorio y cualquier propuesta estructural, registral o de fase deben apoyarse en lectura `100_REAL` del repo fresco.
-- La lectura `AJUSTADA_AL_OBJETO` solo puede legitimar actuaciones locales y explícitamente delimitadas.
-- Las lecturas `INFERIDA` o `DE_MEMORIA` no bastan para introducir cambios estructurales ni para declarar estados globales del árbol.
+- Las afirmaciones globales sobre el estado del repositorio y cualquier propuesta estructural, registral o de fase deben apoyarse en lectura `VERIFICACION_INTEGRAL` del árbol del repositorio verificado.
+- La base `VERIFICACION_ACOTADA` solo puede legitimar actuaciones locales y explícitamente delimitadas.
+- Las bases `INFERIDA` o `MEMORIA_REFERENCIAL` no bastan para introducir cambios estructurales ni para declarar estados globales del árbol.
 
 ## Regla de identificación de agente
 
@@ -78,7 +84,7 @@ Cuando deba identificarse una unidad de trabajo, se usará siempre la forma **Ag
 
 ## Regla de barrido secuencial
 
-Cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes, deberá ejecutarse un barrido secuencial del repo fresco. Ese barrido no debe basarse en la fecha de creación o de modificación del ZIP extraído como señal bruta suficiente. Debe valorar:
+Cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes, deberá ejecutarse un barrido secuencial del árbol del repositorio verificado. Ese barrido no debe basarse en la fecha de creación o de modificación del ZIP extraído como señal bruta suficiente. Debe valorar:
 
 1. actividad estructural del fichero;
 2. uso funcional efectivo;
@@ -87,7 +93,7 @@ Cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes, debe
 
 ## Nota de prudencia
 
-Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de horizontes, verificación por hitos, barridos secuenciales y partes de trabajo por agente. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
+Este bloque combina registro maestro, deuda viva, vigilancia coordinada, control de horizontes, verificación por hitos, barridos secuenciales y partes de trabajo por agente. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
 
 La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda viva del frente final ni la deuda viva de hitos posteriores; su función es dejar constancia de que la base actual del lenguaje ya resulta suficientemente segura para seguir avanzando sin reabrir gramática, IR o validator por entusiasmo.
 
