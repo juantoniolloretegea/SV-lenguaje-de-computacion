@@ -578,7 +578,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Evidencia:** lectura completa del árbol con foco reforzado en README, actas y registros; contraste interno entre arquitectura, calidad y control por hitos; verificación local posterior de tests/run_conformance.py, tests/run_cli_smoke.py y tests/run_sec0_smoke.py sin regresión.  
 - **Impacto:** trazabilidad; descubribilidad_publica; continuidad_operativa; resiliencia_prebackend; gobierno_tecnico.  
 - **Objeción adversarial:** riesgo de sobreactuar el marco de resiliencia y los hitos como si autorizaran una implementación inmediata de semántica futura, o de presentar este saneamiento como cierre de FFL-E. No procede: el lote solo coordina la lectura pública y registral del estado vigente, sin tocar IR, gramática, validator, runner ni backend.  
-- **Decisión:** hacer inevitable para futuras unidades Watson la lectura del marco de resiliencia y del control por hitos dentro de la cadena de README y restablecer la coordinación formal entre el registro .md y el CSV maestro.  
+- **Decisión:** hacer inevitable para futuras unidades identificadas la lectura del marco de resiliencia y del control por hitos dentro de la cadena de README y restablecer la coordinación formal entre el registro .md y el CSV maestro.  
 - **Estado:** cerrado
 
 ### RETP-2026-035 — Frente final del lenguaje SV / Bloque M — alineación de docs/index.html con el estado pre-backend / Fase IV

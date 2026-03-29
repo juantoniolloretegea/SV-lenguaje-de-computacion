@@ -19,9 +19,9 @@ Este registro deja constancia mínima, verificable y comparativa del trabajo rea
 ## Regla de no repetición derivada de la continuidad operativa asociada a WBeta SV-UCBC8
 
 1. Todo archivo `.zip` subido por el responsable del proyecto debe inspeccionarse realmente por dentro antes de emitir juicio, aunque no se diga expresamente, presumiendo de entrada que puede tratarse de un repositorio verificado o de un parche material relevante.
-2. En caso de tensión entre nombre externo del archivo, contenido interno real del ZIP, clon local, PDF, árbol del repositorio verificado o memoria conversacional, **manda el contenido material verificable más reciente**, no la memoria del agente.
+2. En caso de tensión entre nombre externo del archivo, contenido interno real del ZIP, clon local, PDF, árbol del repositorio verificado o una reconstrucción no verificada, **manda el contenido material verificable más reciente**, no una memoria referencial no verificable.
 3. Ningún agente debe tratar como “crear” un archivo cuya existencia real en el árbol del repositorio verificado no haya verificado antes con lectura suficiente del árbol.
-4. La lectura `VERIFICACION_INTEGRAL` obliga a revisar el objeto material subido, no sólo a reconstruir el estado por continuidad del chat.
+4. La lectura `VERIFICACION_INTEGRAL` obliga a revisar el objeto material subido, no sólo a reconstruir el estado por continuidad documental operativa.
 5. Cuando un agente cometa una inferencia indebida o un error de lectura material, debe dejar constancia explícita para prevenir repetición por agentes posteriores.
 
 ## Tabla maestra
@@ -88,7 +88,7 @@ Este registro deja constancia mínima, verificable y comparativa del trabajo rea
 - **Actuaciones desde el último control secuencial:** Desde el último control secuencial se cerró el primer paquete doctrinal VII en publicaciones y registros; se abrió una capa de gobierno semántico para el Lenguaje SV y se detectaron errores operativos del agente relativos a ZIP, verificación material y precisión del protocolo GitHub.  
 - **Actuaciones ejecutadas:** Lectura real de árboles de repositorio verificados; auditoría y adversarial de releases VII; implantación de capa de gobierno semántico en docs/calidad; regularización de registros; identificación explícita de errores del agente; fijación de reglas de no repetición para futuras continuidades operativas.  
 - **Artefactos leídos:** docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md; docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv; docs/calidad/README.md; docs/calidad/ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md; docs/calidad/ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv; docs/calidad/MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv; árboles de repositorio verificados doctrinales y del lenguaje; HTML y CSV verificados y descargados de GitHub.  
-- **Resultado:** Procede dejar trazabilidad explícita de errores de inferencia y de lectura material para impedir su repetición por agentes posteriores. Queda fijada la regla de inspección real de todo ZIP y de prevalencia del contenido interno del objeto sobre su nombre externo o sobre la memoria del agente.  
+- **Resultado:** Procede dejar trazabilidad explícita de errores de inferencia y de lectura material para impedir su repetición por agentes posteriores. Queda fijada la regla de inspección real de todo ZIP y de prevalencia del contenido interno del objeto sobre su nombre externo o sobre una memoria referencial no verificable.  
 - **Observaciones:** Este parte cierra el ciclo operativo de WBeta SV-UCBC8 y deja instrucción preventiva directa para la continuidad operativa.
 
 ### PTA-2026-005 — Agente WBeta SV-UCBC9
