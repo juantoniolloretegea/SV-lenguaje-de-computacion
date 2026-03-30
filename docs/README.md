@@ -13,6 +13,7 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
 - `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
+- `docs/calidad/ACTA_TECNICA_DE_ALERTA_DE_GOBIERNO_SOBRE_COLECCION_I_CUSTODIA_ESTRUCTURAL_Y_FRENTE_NLP_2026_03_30.md`
 - `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
 - `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
 - `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md`
@@ -86,3 +87,5 @@ La verificación auditada de `H1 — Base segura` debe leerse como una constatac
 La autorización restringida de apertura de `H2` debe leerse como paso de gobierno técnico posterior a `H2-pre`: permite abrir `H2` solo como frente arquitectónico-auditor de trabajo, sin verificación positiva todavía del hito, sin semántica fuerte implementada y sin promoción automática al backend soberano.
 
 La trazabilidad de agente y el control de lectura fresca pasan además a quedar institucionalizados en `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md` y `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`. Su función es reducir inferencia, memoria espuria y lectura parcial en futuros relevos, sin convertir el registro maestro en una bitácora excesivamente burocrática.
+
+La aparición pública de la **Colección I** del programa de gobierno determinista y la continuidad inmediata hacia `NLP` no alteran todavía el estado de fase del lenguaje, pero sí elevan la necesidad de vigilancia formal sobre `N4/Uso`, IR, gramática, validator, runner y backend bajo custodia estructural visible.

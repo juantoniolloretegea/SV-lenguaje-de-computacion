@@ -65,6 +65,10 @@ Esto significa, en esta fase, dos cosas:
 
 La relación correcta no es de sometimiento del lenguaje a la célula de seguridad, sino de **convivencia obligatoria bajo vigilancia estructural visible**.
 
+Desde la publicación visible de la **Release 2** del Documento 1 de la **Colección I** del programa de gobierno determinista, el lenguaje debe añadir una cautela nueva: el frente `NLP` deja de ser sólo una proyección abstracta y pasa a ser una continuidad doctrinal y aplicada ya visible.
+
+Esta cautela nueva no impone todavía obligación de implementación. Sí impone, desde ahora, vigilancia formal sobre `N4/Uso`, IR, gramática, validator, runner y backend para que ninguna evolución futura de la célula `NLP` o de su capa IA trazable fuerce matemática, semántica o cierres de `U` por la puerta de atrás.
+
 ## Estado actual
 
 - **IR canónica vigente:** `IR_CANONICA_BIENFORMACION_SV_v0_2.md`

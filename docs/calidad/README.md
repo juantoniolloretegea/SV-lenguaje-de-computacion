@@ -34,6 +34,7 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
 - `NOTA_HOJA_DE_RUTA_CELULA_VERIFICACION_GENERACION_MATEMATICA_SV_2026_03_26.md`
 - `ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md`
+- `ACTA_TECNICA_DE_ALERTA_DE_GOBIERNO_SOBRE_COLECCION_I_CUSTODIA_ESTRUCTURAL_Y_FRENTE_NLP_2026_03_30.md`
 
 ### Resiliencia, horizontes y control por hitos
 
@@ -118,6 +119,8 @@ La colección pública **Células especializadas del Sistema Vectorial SV** ya e
 Su efecto actual sobre el Lenguaje SV sigue siendo de **vigilancia estructural y cautela de implementación**: no autoriza implementación automática, no adelanta `NLP`, no desplaza la deuda viva semántica vigente y no legitima abrir una célula específica sin pasar antes por el perfil funcional mínimo del documento marco.
 
 A partir de la documentación de gobierno del 26/03/2026, el siguiente frente correcto tras el sellado técnico mínimo deja de ser una secuencia rígida de interfaces pendientes y pasa a ser la **pieza marco** de células especializadas, dejando `NLP` después y manteniendo `oído` y `tacto` como frentes pendientes reordenables.
+
+Tras la publicación visible del Documento 1 de la **Colección I** en la sede doctrinal superior, `NLP` deja de ser sólo un nombre de continuidad remota y pasa a comparecer como frente de vigilancia formal para el Lenguaje SV. Esa nueva presión no altera por sí sola la apertura vigente de hitos ni autoriza implementación inmediata, pero sí exige mantener expresamente a la vista la custodia estructural ya publicada y la cautela sobre `N4/Uso`, IR, gramática, validator, runner y backend.
 
 ## Nota adicional sobre límite superior y piloto de seguridad
 

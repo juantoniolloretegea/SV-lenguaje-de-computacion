@@ -86,16 +86,19 @@ En este punto, el espejo queda ya poblado con entradas mínimas de colección pa
 - familia VII de sucesos, horizontes y cambio estructural;
 - programa de interfaces del Sistema Vectorial SV;
 - colección **Células especializadas del Sistema Vectorial SV**.
+- **Colección I** del programa de gobierno determinista, con Documento 1 ya visible y continuidad inmediata hacia la célula `NLP`.
 
 ## Estado del arte en este punto
 
 Este documento ya no contiene sólo la infraestructura mínima. La población sigue siendo inicial y de nivel colección, pero queda abierta la vigilancia conceptual absoluta sobre frentes doctrinales ya consolidados. La colección de **Células especializadas del Sistema Vectorial SV** entra ya como colección pública visible, con pieza marco publicada y con efecto de orientación de frente y cautela de implementación.
+Desde el 30/03/2026 entra además en vigilancia la **Colección I** del programa de gobierno determinista, no como autorización implementativa inmediata, sino como frente de relevancia directa para hitos, consulta `N4/Uso`, custodia estructural y futura célula `NLP`.
 
 ## Regla adicional de continuidad
 
 Cuando una sede editorial nueva quede preparada pero todavía no exista como colección pública visible y poblada, su tratamiento desde el Lenguaje SV no debe hacerse mediante población automática del espejo CSV, sino mediante acta de continuidad y vigilancia explícita.
 
 Esta regla conserva validez general para futuras sedes editoriales. Ya no rige, en cambio, para la colección **Células especializadas del Sistema Vectorial SV**, que en este punto consta ya como colección pública visible con pieza marco publicada y debe tratarse como entrada activa del espejo.
+La **Colección I** no desplaza esa regla de prudencia: su Documento 1 ya es entrada activa del espejo, pero los Documentos 2 y 3 siguen siendo continuidad vigilada y no resultado absorbido.
 
 ## Nota de continuidad tras la familia VII
 
