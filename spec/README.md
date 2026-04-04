@@ -1,5 +1,18 @@
 # Especificación formal del lenguaje
 
+**Fecha y Versión: V.1 del conjunto**  
+**Fecha:** 4 de abril de 2026  
+**Versión del conjunto:** V.1 del conjunto  
+**Autor del corpus:** Juan Antonio Lloret Egea  
+**ORCID:** 0000-0002-6634-3351  
+**Institución:** ITVIA — IA eñ™  
+**ISSN:** 2695-6411  
+**Licencia:** CC BY-NC-ND 4.0  
+**Titularidad y autoría:** © Juan Antonio Lloret Egea, 2026. Este conjunto se distribuye con atribución explícita de autoría y bajo la licencia indicada, sin autorización para apropiación de la paternidad intelectual del Sistema Vectorial SV.  
+
+---
+
+
 Esta carpeta reúne piezas de especificación formal del lenguaje de computación del Sistema Vectorial SV.
 
 Su función no es sustituir a **Fundamentos algebraico-semánticos del Sistema Vectorial SV** ni a la serie **Álgebra de composición intercelular del Sistema Vectorial SV**, sino traducir la doctrina canónica al plano técnico del lenguaje, preservando su semántica y sus restricciones de implementación.

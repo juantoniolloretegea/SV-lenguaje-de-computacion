@@ -1,5 +1,18 @@
 # src/ — Parser/lowering de referencia del lenguaje SV
 
+**Fecha y Versión: V.1 del conjunto**  
+**Fecha:** 4 de abril de 2026  
+**Versión del conjunto:** V.1 del conjunto  
+**Autor del corpus:** Juan Antonio Lloret Egea  
+**ORCID:** 0000-0002-6634-3351  
+**Institución:** ITVIA — IA eñ™  
+**ISSN:** 2695-6411  
+**Licencia:** CC BY-NC-ND 4.0  
+**Titularidad y autoría:** © Juan Antonio Lloret Egea, 2026. Este conjunto se distribuye con atribución explícita de autoría y bajo la licencia indicada, sin autorización para apropiación de la paternidad intelectual del Sistema Vectorial SV.  
+
+---
+
+
 ## Qué hace
 
 Toma un archivo `.svp` escrito en la Gramática superficial mínima v0.1, lo parsea, aplica la validación implementada vigente —subordinada a la IR canónica v0.2— y produce la representación IR serializada en JSON canónico.
