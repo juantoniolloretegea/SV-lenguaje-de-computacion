@@ -92,3 +92,10 @@ El lote 10 incorpora el documento SVcustos n=36, cuya URL y DOI fueron aportados
 Fecha de aplicación: 2026-06-24.
 
 El lote 11 incorpora tres antecedentes genealógicos: ¿Futuro de la electrónica: lógica ternaria?; Los 7 mandamientos de la IA; y Framework basado en imágenes parametrizadas sobre ResNet para identificar intrusiones en smartwatches u otros dispositivos afines. El CSV pasa de 91 a 94 filas.
+
+
+## V.1 — Criterio de inclusión de publicaciones SV con DOI
+
+Fecha de aplicación: 2026-06-24.
+
+Se fija el criterio formal de inclusión: publicación propia del Sistema Vectorial SV o antecedente técnico directo expresamente vinculado a una línea SV, DOI verificable y función material dentro del sistema. El CSV queda en 92 filas.

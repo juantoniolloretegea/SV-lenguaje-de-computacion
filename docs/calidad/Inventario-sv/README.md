@@ -10,9 +10,20 @@ Año: 2026
 
 ## Función de esta colección
 
-Esta colección conserva el inventario, la trazabilidad y las relaciones editoriales de las publicaciones del Sistema Vectorial SV. Su finalidad es identificar cada publicación canónica, su DOI de citación preferente, su localización editorial o técnica, su colección principal, sus colecciones relacionadas, el dominio SV que trabaja, la función material que cumple dentro del sistema, sus relaciones editoriales y su estado editorial.
+Esta colección conserva el inventario, la trazabilidad y las relaciones editoriales de las publicaciones del Sistema Vectorial SV. Su finalidad es identificar cada publicación canónica del SV, su DOI de citación preferente, su localización editorial o técnica, su colección principal, sus colecciones relacionadas, el dominio trabajado, la función material que cumple dentro del sistema, sus relaciones editoriales y su estado.
 
-El inventario no sustituye a las publicaciones ni las reduce a sinopsis. Cada registro fija una referencia editorial situada: qué publicación es, dónde debe citarse, qué dominio trabaja, qué aporta al Sistema Vectorial SV, con qué publicaciones se relaciona y si actúa como publicación vigente, espejo, depósito técnico, release, pieza histórica o referencia sincronizada.
+El inventario no sustituye a las publicaciones ni las reduce a sinopsis. Cada registro fija una referencia editorial situada: qué publicación es, dónde debe citarse, qué dominio trabaja, qué aporta al Sistema Vectorial SV, con qué publicaciones se relaciona y cuál es su situación editorial.
+
+## Criterio de inclusión
+
+Entran en este inventario las publicaciones que cumplen simultáneamente estas condiciones:
+
+1. publicación propia del Sistema Vectorial SV o antecedente técnico directo expresamente vinculado a una línea SV;
+2. DOI verificable o DOI de citación preferente ya asignado;
+3. función material dentro del Sistema Vectorial SV;
+4. relación editorial o técnica constatable con el corpus SV.
+
+No forman parte de este inventario las publicaciones docentes generales, los textos introductorios de inteligencia artificial sin especificidad SV, los materiales de programación o Big Data, las guías de reingeniería editorial, las tablas de seguimiento editorial ni los documentos internos sin DOI público propio.
 
 ## Criterio de orden
 
@@ -20,7 +31,7 @@ La tabla se ordena cronológicamente de forma descendente. Las publicaciones má
 
 ## Regla de registro
 
-Una publicación canónica equivale a una fila. Si la misma publicación aparece en PubPub, GitHub, Zenodo o HCommons, no se crea otra fila salvo que exista una versión materialmente distinta. Los espejos o depósitos técnicos se consignan en las columnas de enlaces, estado editorial y observaciones de custodia.
+Una publicación canónica equivale a una fila. Si la misma publicación aparece en PubPub, GitHub, Zenodo, HCommons u otro repositorio, no se crea otra fila salvo que exista una versión materialmente distinta, una traducción con DOI propio, una release sustantiva o un depósito autónomo que deba tratarse como publicación diferenciada.
 
 ## Archivos principales
 
@@ -30,10 +41,9 @@ Una publicación canónica equivale a una fila. Si la misma publicación aparece
 - `data/inventario_publicaciones_sv.schema.json`: esquema de columnas y tipos de registro.
 - `docs/criterios_de_registro.md`: normas de inclusión, actualización y control de duplicados.
 - `releases/README.md`: pauta de releases y sincronización con PubPub.
-- `assets/README.md`: notas sobre logos e imágenes asociadas.
+- `assets/README.md`: notas sobre signos gráficos e imágenes asociadas.
 
 ## Estado de arranque
 
 Versión inicial: V.1  
-Fecha de arranque: 2026-06-24  
 Criterio de actualización: toda nueva publicación canónica se incorpora como nueva fila al comienzo de la tabla, con conservación de DOI, fuente verificada, colección principal, relaciones editoriales y estado.

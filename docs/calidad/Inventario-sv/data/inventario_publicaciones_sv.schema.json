@@ -63,5 +63,6 @@
     "observaciones_de_custodia": {
       "type": "string"
     }
-  }
+  },
+  "description": "Esquema del inventario de publicaciones propias del Sistema Vectorial SV o antecedentes técnicos directos con DOI verificable."
 }
