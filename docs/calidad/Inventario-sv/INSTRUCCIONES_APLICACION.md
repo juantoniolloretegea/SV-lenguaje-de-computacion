@@ -5,6 +5,7 @@ Subir el contenido de esta carpeta dentro de:
 SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/
 
 Archivos que sustituyen o actualizan:
+
 - README.md
 - inventario_trazabilidad_relaciones_editoriales_sv_V1.md
 - inventario_publicaciones_sv.md
@@ -14,10 +15,12 @@ Archivos que sustituyen o actualizan:
 - releases/README.md
 
 Mensaje de commit sugerido:
-Inventario SV: fija criterio de inclusion de publicaciones con DOI
+
+Inventario SV: estabiliza redaccion relacional
 
 Control posterior:
+
 1. GitHub Desktop debe mostrar modificaciones en los archivos indicados.
-2. Confirmar que `data/inventario_publicaciones_sv.csv` contiene 92 filas.
-3. Confirmar que el criterio de inclusión queda limitado a publicaciones propias del SV o antecedentes técnicos directos con DOI verificable.
-4. Confirmar que los candidatos pendientes no se incorporan hasta verificar DOI y función material dentro del SV.
+2. `data/inventario_publicaciones_sv.csv` debe conservar 92 filas.
+3. La redacción debe quedar ajustada al criterio de publicaciones propias del SV con DOI verificable y función material dentro del sistema.
+4. Los candidatos de `data/pendientes_verificacion.csv` no se incorporan hasta verificar DOI y función material dentro del SV.
