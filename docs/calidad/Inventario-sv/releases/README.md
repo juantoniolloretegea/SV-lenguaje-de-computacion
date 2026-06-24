@@ -4,10 +4,6 @@
 
 La versión V.1 fija la estructura del inventario, la publicación matriz en Markdown, el CSV de mantenimiento, el esquema de columnas y los criterios de registro.
 
-## V.1 — Incorporación de publicaciones verificadas
-
-La tabla incorpora publicaciones propias del Sistema Vectorial SV con DOI verificable, función material dentro del sistema, relación editorial o técnica constatable y estado editorial declarado. La incorporación se ordena cronológicamente de forma descendente.
-
 ## V.1 — Criterio de inclusión
 
 El inventario queda limitado a publicaciones propias del Sistema Vectorial SV o antecedentes técnicos directos expresamente vinculados a una línea SV, siempre con DOI verificable y función material dentro del sistema.
