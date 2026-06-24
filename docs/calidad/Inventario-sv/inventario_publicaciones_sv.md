@@ -14,10 +14,6 @@ Esta publicación fija la primera versión operativa del inventario de publicaci
 
 La publicación V.1 no reemplaza a la colección homónima de PubPub ni a los depósitos técnicos. Actúa como fuente Markdown versionable en GitHub, preparada para copia editorial posterior en PubPub y para sincronización con el archivo CSV situado en `data/inventario_publicaciones_sv.csv`.
 
-## Criterio de inclusión
-
-El inventario incorpora publicaciones propias del Sistema Vectorial SV o antecedentes técnicos directos expresamente vinculados a una línea SV, siempre que dispongan de DOI verificable y función material dentro del sistema. No incorpora publicaciones docentes generales, textos introductorios de inteligencia artificial sin especificidad SV, materiales de programación o Big Data, guías de reingeniería editorial, tablas de seguimiento editorial ni documentos internos sin DOI público propio.
-
 ## Criterio de lectura
 
 La tabla se ordena de forma cronológica descendente. Cada publicación canónica ocupa una fila. Los espejos editoriales o técnicos se consignan en columnas específicas y no generan una fila nueva salvo que exista una versión materialmente distinta, una release con modificación sustantiva, una traducción con DOI propio o un depósito autónomo que deba tratarse como publicación diferenciada.
