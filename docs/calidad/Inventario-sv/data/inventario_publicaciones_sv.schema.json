@@ -2,52 +2,78 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "title": "Inventario de publicaciones del Sistema Vectorial SV",
   "type": "object",
-  "properties": {
-    "Fecha": {
-      "type": "string"
-    },
-    "Título canónico": {
-      "type": "string"
-    },
-    "DOI de citación preferente": {
-      "type": "string"
-    },
-    "Enlace principal": {
-      "type": "string"
-    },
-    "Enlaces secundarios / espejos": {
-      "type": "string"
-    },
-    "Colección principal": {
-      "type": "string"
-    },
-    "DOI colección principal": {
-      "type": "string"
-    },
-    "Colecciones relacionadas": {
-      "type": "string"
-    },
-    "Dominio SV": {
-      "type": "string"
-    },
-    "Función dentro del SV": {
-      "type": "string"
-    },
-    "Relación con otras publicaciones": {
-      "type": "string"
-    },
-    "Estado editorial": {
-      "type": "string"
-    },
-    "Observación de trazabilidad": {
-      "type": "string"
-    }
-  },
   "required": [
-    "Fecha",
-    "Título canónico",
-    "DOI de citación preferente",
-    "Enlace principal"
+    "fecha_publicacion",
+    "titulo_canonico",
+    "titulo_breve",
+    "doi_citacion_preferente",
+    "enlace_principal",
+    "enlaces_espejo",
+    "coleccion_principal",
+    "colecciones_relacionadas",
+    "dominio_sv",
+    "funcion_dentro_del_sv",
+    "relacion_con_otras_publicaciones",
+    "estado_editorial",
+    "fuente_verificada",
+    "observaciones_de_custodia"
   ],
-  "additionalProperties": false
+  "properties": {
+    "fecha_publicacion": {
+      "type": "string",
+      "description": "Fecha de publicación o depósito en formato AAAA-MM-DD cuando sea verificable."
+    },
+    "titulo_canonico": {
+      "type": "string",
+      "description": "Título completo de la publicación canónica."
+    },
+    "titulo_breve": {
+      "type": "string",
+      "description": "Forma abreviada para búsqueda y referencia interna."
+    },
+    "doi_citacion_preferente": {
+      "type": "string",
+      "description": "DOI que debe usarse para citar la publicación."
+    },
+    "enlace_principal": {
+      "type": "string",
+      "description": "Enlace público principal, preferentemente DOI resoluble."
+    },
+    "enlaces_espejo": {
+      "type": "string",
+      "description": "Enlaces secundarios o depósitos técnicos separados por punto y coma."
+    },
+    "coleccion_principal": {
+      "type": "string",
+      "description": "Colección principal en la que debe leerse la publicación."
+    },
+    "colecciones_relacionadas": {
+      "type": "string",
+      "description": "Colecciones relacionadas o sincronizadas."
+    },
+    "dominio_sv": {
+      "type": "string",
+      "description": "Dominio o familia del SV trabajada por la publicación."
+    },
+    "funcion_dentro_del_sv": {
+      "type": "string",
+      "description": "Explicación material de la función que cumple la publicación dentro del Sistema Vectorial SV."
+    },
+    "relacion_con_otras_publicaciones": {
+      "type": "string",
+      "description": "Dependencias, continuidad, releases, puentes o sincronizaciones."
+    },
+    "estado_editorial": {
+      "type": "string",
+      "description": "Vigente, espejada, depósito técnico, release, histórica, pendiente de sincronización, etc."
+    },
+    "fuente_verificada": {
+      "type": "string",
+      "description": "Fuente material del registro: PubPub/ITVIA, GitHub, Zenodo, HCommons, DOI, confirmación del autor."
+    },
+    "observaciones_de_custodia": {
+      "type": "string",
+      "description": "Nota breve de control cuando haya riesgo de duplicidad, versión antigua, espejo o ambigüedad."
+    }
+  }
 }

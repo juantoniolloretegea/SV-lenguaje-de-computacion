@@ -2,24 +2,24 @@
 
 ## 1. Unidad de registro
 
-Cada fila representa una publicación canónica. Una publicación no se duplica por estar en PubPub, GitHub, Zenodo o HCommons. Los espejos y depósitos técnicos se registran en la misma fila, salvo que exista una versión materialmente distinta.
+Una publicación canónica equivale a una fila. La presencia de la misma publicación en PubPub, GitHub, Zenodo o HCommons no crea por sí misma registros adicionales.
 
 ## 2. DOI de citación preferente
 
-El DOI de citación preferente es el que debe usar un lector externo para citar la publicación. Si existen varios DOI por razones editoriales o de preservación, el registro debe distinguir DOI principal, DOI de colección y DOI o enlace de depósito.
+El DOI de citación preferente se consigna en la columna correspondiente. Si existen varios DOI posibles, se prioriza el DOI que actúe como referencia editorial pública de la publicación vigente. Los demás enlaces se consignan como espejos o depósitos técnicos.
 
-## 3. Colecciones
+## 3. Orden cronológico
 
-La columna «Colección principal» identifica el contexto editorial preferente. La columna «Colecciones relacionadas» recoge sincronizaciones materiales con otras colecciones. El inventario no se divide en tablas por colección.
+La tabla se ordena de forma cronológica descendente. Las publicaciones más recientes se incorporan al comienzo.
 
-## 4. Función dentro del SV
+## 4. Estado editorial
 
-La función dentro del SV debe explicar qué hace la publicación en el sistema: fijar un fundamento, formular un operador, desarrollar un transductor, abrir un dominio, cerrar una colección, ejecutar un retorno, validar un laboratorio, reorganizar una magnitud física, conservar una distinción crítica o preparar una release posterior.
+El estado editorial debe distinguir, como mínimo, entre publicación vigente, espejo, depósito técnico, release, publicación histórica, pendiente de sincronización y referencia relacionada.
 
-## 5. Estado editorial
+## 5. Función dentro del SV
 
-Estados recomendados: vigente, release vigente, histórica, sustituida, espejada, depósito técnico, pendiente de sincronización, retirada, referencia relacionada, cierre de colección.
+La columna de función no debe ser sinopsis ni frase promocional. Debe explicar qué hace la publicación dentro del Sistema Vectorial SV: qué dominio trabaja, qué fija, qué operador o criterio formula, qué continuidad asegura, qué relación establece o qué cierre material produce.
 
-## 6. Actualización
+## 6. Control de duplicados
 
-Las nuevas publicaciones se añaden arriba. El cambio material exige nueva release del inventario. Las correcciones menores pueden indicarse en la observación de trazabilidad.
+Si dos registros parecen duplicados, se conserva una sola fila salvo que exista diferencia material de versión, release, idioma, DOI, depósito autónomo o función editorial.
