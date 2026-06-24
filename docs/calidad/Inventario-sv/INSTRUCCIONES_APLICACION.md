@@ -1,4 +1,4 @@
-# Instrucciones de aplicación — Paso 4 / Lote 3
+# Instrucciones de aplicación — Paso 5 / Lote 4
 
 Subir el contenido de esta carpeta dentro de:
 
@@ -12,11 +12,10 @@ Archivos que sustituyen o actualizan:
 - releases/README.md
 
 Mensaje de commit sugerido:
-Inventario SV: incorpora lote 3 de fundamentos y metrología
+Inventario SV: incorpora lote 4 químico-material y sucesos
 
 Control posterior:
 1. Abrir `inventario_publicaciones_sv.md` en GitHub.
 2. Confirmar que la tabla renderiza.
-3. Confirmar que el CSV conserva 44 filas totales.
-4. Revisar la fila de Teoría del TODO y de la NADA porque conserva fecha provisional `2026-05-00` hasta verificación exacta.
-5. Revisar la fila de Imperfección preformal si se desea armonizar fecha 2026-05-11 / 2026-05-21.
+3. Confirmar que el CSV conserva 53 filas totales.
+4. Revisar si las colecciones como tales deben tener fila propia en un lote posterior o si deben mantenerse sólo como columnas de pertenencia.
