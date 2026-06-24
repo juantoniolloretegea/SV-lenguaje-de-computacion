@@ -1,10 +1,23 @@
 # Releases del inventario SV
 
-## V.1
+## V.1 — Lote 1
 
-Fecha de arranque: 2026-06-24.
+Fecha de incorporación: 2026-06-24.
 
-La versión V.1 fija la estructura del inventario, la publicación matriz en Markdown, el CSV de mantenimiento, el esquema de columnas y los criterios de registro.
+El lote 1 incorpora un primer tramo de publicaciones recientes verificadas en PubPub/ITVIA y relacionadas con `SV-matematica-semantica/documentos/adendas/matematica-fisica-factual-contemporanea-sv`.
+
+Registros incorporados:
+- publicación matriz del inventario;
+- orientación universal y geográfica;
+- contraste de precisión etaria solar SV–NASA;
+- Trilogía Cosmológica I, II y III;
+- SV-399 Ruta 3;
+- dominio térmico K_Θ y Adenda K_Θ⁺;
+- Línea del Umbral SV;
+- Vida y clausura de observables realizados;
+- Raigal;
+- Autogobierno topológico;
+- Potencial de un suceso.
 
 ## Regla de nueva release
 

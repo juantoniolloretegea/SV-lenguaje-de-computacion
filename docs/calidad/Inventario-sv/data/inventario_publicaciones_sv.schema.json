@@ -24,56 +24,44 @@
       "description": "Fecha de publicación o depósito en formato AAAA-MM-DD cuando sea verificable."
     },
     "titulo_canonico": {
-      "type": "string",
-      "description": "Título completo de la publicación canónica."
+      "type": "string"
     },
     "titulo_breve": {
-      "type": "string",
-      "description": "Forma abreviada para búsqueda y referencia interna."
+      "type": "string"
     },
     "doi_citacion_preferente": {
-      "type": "string",
-      "description": "DOI que debe usarse para citar la publicación."
+      "type": "string"
     },
     "enlace_principal": {
-      "type": "string",
-      "description": "Enlace público principal, preferentemente DOI resoluble."
+      "type": "string"
     },
     "enlaces_espejo": {
-      "type": "string",
-      "description": "Enlaces secundarios o depósitos técnicos separados por punto y coma."
+      "type": "string"
     },
     "coleccion_principal": {
-      "type": "string",
-      "description": "Colección principal en la que debe leerse la publicación."
+      "type": "string"
     },
     "colecciones_relacionadas": {
-      "type": "string",
-      "description": "Colecciones relacionadas o sincronizadas."
+      "type": "string"
     },
     "dominio_sv": {
-      "type": "string",
-      "description": "Dominio o familia del SV trabajada por la publicación."
+      "type": "string"
     },
     "funcion_dentro_del_sv": {
       "type": "string",
-      "description": "Explicación material de la función que cumple la publicación dentro del Sistema Vectorial SV."
+      "description": "Explicación material de la función que cumple la publicación dentro del Sistema Vectorial SV; no debe ser sinopsis débil ni frase promocional."
     },
     "relacion_con_otras_publicaciones": {
-      "type": "string",
-      "description": "Dependencias, continuidad, releases, puentes o sincronizaciones."
+      "type": "string"
     },
     "estado_editorial": {
-      "type": "string",
-      "description": "Vigente, espejada, depósito técnico, release, histórica, pendiente de sincronización, etc."
+      "type": "string"
     },
     "fuente_verificada": {
-      "type": "string",
-      "description": "Fuente material del registro: PubPub/ITVIA, GitHub, Zenodo, HCommons, DOI, confirmación del autor."
+      "type": "string"
     },
     "observaciones_de_custodia": {
-      "type": "string",
-      "description": "Nota breve de control cuando haya riesgo de duplicidad, versión antigua, espejo o ambigüedad."
+      "type": "string"
     }
   }
 }
