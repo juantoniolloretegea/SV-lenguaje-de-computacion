@@ -71,3 +71,10 @@ El lote 7 incorpora ocho registros del plano de protección humana, seguridad es
 Fecha de aplicación: 2026-06-24.
 
 Este lote corrige la incidencia de repetición del paquete anterior. Incorpora cuatro registros nuevos y verificados: Transiciones estructurales y trayectorias de la U; Análisis del comportamiento geométrico del polígono SV; La guía práctica del conocimiento profundo y la crítica de la razón pura; y De SVcustos a SVperitus: Células SV en Par n=36+9=45. El CSV pasa de 80 a 84 filas.
+
+
+## V.1 — Lote 9
+
+Fecha de aplicación: 2026-06-24.
+
+El lote 9 incorpora seis registros de la serie SVcustos–SVperitus: documento base n=9, extensión n=16, extensión n=25, extensión n=49, IMMUNO-1 y Compilador doctrinal/célula meta SV(9,3)-IA. El CSV pasa de 84 a 90 filas.
