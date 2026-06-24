@@ -43,3 +43,10 @@ El lote 3 incorpora publicaciones de fundamentos, metrología y articulación f�
 Fecha de aplicación: 2026-06-24.
 
 El lote 4 incorpora publicaciones químico-materiales y matemáticas nucleares pendientes: Análisis preliminar de elementos químicos, materiales y aleaciones; Medición, reconstrucción e incertidumbre estructural; Nuevas matemáticas del Sistema Vectorial SV y Física factual como conjunto iniciador; Conjunto matemático unificado del cambio factual; y cinco publicaciones de la serie Sucesos, horizontes y cambio estructural: VII.0, VII.1, VII.2, VII.3 y Suceso local/suceso envolvente.
+
+
+## V.1 — Lote 5 corregido
+
+Fecha de aplicación: 2026-06-24.
+
+Este lote corrige la incidencia de entrega anterior y genera un paquete nuevo, con nombre y contenido diferenciados. Incorpora publicaciones del plano de álgebra intercelular, lenguaje natural, agentes especializados, células especializadas, interfaz visual y pliego de condiciones: Carta Magna de agentes, Estatuto del universo de sucesos de agentes, Agente NLP, Transductor lingüístico H_NLP, Células especializadas, Pliego de condiciones, Interfaz visual estructurada, Álgebra intercelular I, V y VI.

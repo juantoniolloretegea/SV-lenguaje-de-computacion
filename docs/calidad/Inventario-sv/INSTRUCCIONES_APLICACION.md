@@ -1,4 +1,6 @@
-# Instrucciones de aplicación — Paso 5 / Lote 4
+# Instrucciones de aplicación — Lote 5 corregido
+
+Este paquete corrige la incidencia de la entrega anterior: no reutiliza el nombre del lote 4 y contiene registros nuevos reales.
 
 Subir el contenido de esta carpeta dentro de:
 
@@ -12,10 +14,10 @@ Archivos que sustituyen o actualizan:
 - releases/README.md
 
 Mensaje de commit sugerido:
-Inventario SV: incorpora lote 4 químico-material y sucesos
+Inventario SV: incorpora lote 5 de álgebra y agentes
 
 Control posterior:
-1. Abrir `inventario_publicaciones_sv.md` en GitHub.
-2. Confirmar que la tabla renderiza.
-3. Confirmar que el CSV conserva 53 filas totales.
-4. Revisar si las colecciones como tales deben tener fila propia en un lote posterior o si deben mantenerse sólo como columnas de pertenencia.
+1. GitHub Desktop debe mostrar modificaciones en los cinco archivos indicados.
+2. Confirmar que `data/inventario_publicaciones_sv.csv` contiene 63 filas totales.
+3. Confirmar que aparecen las filas de Transductor lingüístico, Agente NLP, Carta Magna, Estatuto de agentes, Células especializadas, Pliego de condiciones, Interfaz visual, Álgebra I, Álgebra V y Álgebra VI.
+4. No tocar README.md ni archivos de estructura.
