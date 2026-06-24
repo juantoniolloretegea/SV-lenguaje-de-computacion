@@ -12,11 +12,12 @@ No forman parte del inventario las publicaciones docentes generales, los textos 
 
 ## V.1 — Estabilización relacional
 
-La redacción relacional queda ajustada al mismo criterio de inclusión: publicaciones SV con DOI verificable, antecedentes técnicos directos admisibles y relaciones editoriales o técnicas constatables. El CSV conserva 92 filas.
-
+La redacción relacional queda ajustada al mismo criterio de inclusión: publicaciones SV con DOI verificable, antecedentes técnicos directos admisibles y relaciones editoriales o técnicas constatables.
 
 ## V.1 — Incorporación de publicaciones SV con DOI verificado
 
-Fecha de aplicación: 2026-06-24.
+Se incorporan las publicaciones SV pendientes con DOI verificado y función material dentro del sistema. El archivo de pendientes queda sin registros activos.
 
-Se incorporan cinco publicaciones propias del Sistema Vectorial SV con DOI verificado: Convergencia ternaria y célula NLP; Equivalencia parcial entre regímenes; VII.5 — Enlace entre acumulaciones; VII.4 — Respuesta estructural y transición; y Desde la terna hasta la frontera 0-1. El CSV pasa de 92 a 97 filas.
+## V.1 — Cierre editorial
+
+El inventario V.1 queda preparado para revisión editorial en PubPub. El CSV conserva 97 registros y mantiene el criterio de publicación SV, DOI verificable, función material y relación constatable con el corpus.

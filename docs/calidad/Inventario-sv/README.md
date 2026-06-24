@@ -43,7 +43,8 @@ Una publicación canónica equivale a una fila. Si la misma publicación aparece
 - `releases/README.md`: pauta de releases y sincronización con PubPub.
 - `assets/README.md`: notas sobre signos gráficos e imágenes asociadas.
 
-## Estado de arranque
+## Estado de cierre V.1
 
-Versión inicial: V.1  
+Versión: V.1  
+Registros: 97  
 Criterio de actualización: toda nueva publicación canónica se incorpora como nueva fila al comienzo de la tabla, con conservación de DOI, fuente verificada, colección principal, relaciones editoriales y estado.
