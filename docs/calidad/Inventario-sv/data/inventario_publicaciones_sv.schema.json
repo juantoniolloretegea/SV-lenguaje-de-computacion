@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Inventario de publicaciones del Sistema Vectorial SV",
+  "type": "object",
+  "properties": {
+    "Fecha": {
+      "type": "string"
+    },
+    "Título canónico": {
+      "type": "string"
+    },
+    "DOI de citación preferente": {
+      "type": "string"
+    },
+    "Enlace principal": {
+      "type": "string"
+    },
+    "Enlaces secundarios / espejos": {
+      "type": "string"
+    },
+    "Colección principal": {
+      "type": "string"
+    },
+    "DOI colección principal": {
+      "type": "string"
+    },
+    "Colecciones relacionadas": {
+      "type": "string"
+    },
+    "Dominio SV": {
+      "type": "string"
+    },
+    "Función dentro del SV": {
+      "type": "string"
+    },
+    "Relación con otras publicaciones": {
+      "type": "string"
+    },
+    "Estado editorial": {
+      "type": "string"
+    },
+    "Observación de trazabilidad": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "Fecha",
+    "Título canónico",
+    "DOI de citación preferente",
+    "Enlace principal"
+  ],
+  "additionalProperties": false
+}
