@@ -14,24 +14,13 @@ Esta colección conserva el inventario, la trazabilidad y las relaciones editori
 
 El inventario no sustituye a las publicaciones ni las reduce a sinopsis. Cada registro fija una referencia editorial situada: qué publicación es, dónde debe citarse, qué dominio trabaja, qué aporta al Sistema Vectorial SV, con qué publicaciones se relaciona y cuál es su situación editorial.
 
-## Criterio de inclusión
-
-Entran en este inventario las publicaciones que cumplen simultáneamente estas condiciones:
-
-1. publicación propia del Sistema Vectorial SV o antecedente técnico directo expresamente vinculado a una línea SV;
-2. DOI verificable o DOI de citación preferente ya asignado;
-3. función material dentro del Sistema Vectorial SV;
-4. relación editorial o técnica constatable con el corpus SV.
-
-No forman parte de este inventario las publicaciones docentes generales, los textos introductorios de inteligencia artificial sin especificidad SV, los materiales de programación o Big Data, las guías de reingeniería editorial, las tablas de seguimiento editorial ni los documentos internos sin DOI público propio.
-
 ## Criterio de orden
 
 La tabla se ordena cronológicamente de forma descendente. Las publicaciones más recientes aparecen en primer lugar. La pertenencia a colecciones se declara en columnas específicas; no determina el orden principal.
 
 ## Regla de registro
 
-Una publicación canónica equivale a una fila. Si la misma publicación aparece en PubPub, GitHub, Zenodo, HCommons u otro repositorio, no se crea otra fila salvo que exista una versión materialmente distinta, una traducción con DOI propio, una release sustantiva o un depósito autónomo que deba tratarse como publicación diferenciada.
+Una publicación equivale a una fila. Si la misma publicación aparece en PubPub, GitHub, Zenodo, HCommons u otro repositorio, no se crea otra fila salvo que exista una versión materialmente distinta, una traducción con DOI propio, una release sustantiva o un depósito autónomo que deba tratarse como publicación diferenciada.
 
 ## Archivos principales
 
