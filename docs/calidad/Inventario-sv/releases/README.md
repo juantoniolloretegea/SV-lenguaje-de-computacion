@@ -50,3 +50,10 @@ El lote 4 incorpora publicaciones químico-materiales y matemáticas nucleares p
 Fecha de aplicación: 2026-06-24.
 
 Este lote corrige la incidencia de entrega anterior y genera un paquete nuevo, con nombre y contenido diferenciados. Incorpora publicaciones del plano de álgebra intercelular, lenguaje natural, agentes especializados, células especializadas, interfaz visual y pliego de condiciones: Carta Magna de agentes, Estatuto del universo de sucesos de agentes, Agente NLP, Transductor lingüístico H_NLP, Células especializadas, Pliego de condiciones, Interfaz visual estructurada, Álgebra intercelular I, V y VI.
+
+
+## V.1 — Lote 6
+
+Fecha de aplicación: 2026-06-24.
+
+El lote 6 incorpora nueve registros: Álgebra de composición intercelular II, III y IV; Fundamentos, exigencias y arquitectura general de los agentes especializados; ITI V.1 de agente especializado; Presunción estructural y protopersonalidad; Presunción estructural del agente; Definición de la afinidad; y Definición del equilibrio del Agente Especializado. El CSV pasa a 72 filas totales.
