@@ -85,3 +85,10 @@ El lote 9 incorpora seis registros de la serie SVcustos–SVperitus: documento b
 Fecha de aplicación: 2026-06-24.
 
 El lote 10 incorpora el documento SVcustos n=36, cuya URL y DOI fueron aportados por el autor y verificados materialmente. Corrige el pendiente del lote 9 y completa la secuencia principal SVcustos n=9 → n=16 → n=25 → n=36 → células en par n=36+9 → n=49 → IMMUNO-1 → compilador. El CSV pasa de 90 a 91 filas.
+
+
+## V.1 — Lote 11
+
+Fecha de aplicación: 2026-06-24.
+
+El lote 11 incorpora tres antecedentes genealógicos: ¿Futuro de la electrónica: lógica ternaria?; Los 7 mandamientos de la IA; y Framework basado en imágenes parametrizadas sobre ResNet para identificar intrusiones en smartwatches u otros dispositivos afines. El CSV pasa de 91 a 94 filas.

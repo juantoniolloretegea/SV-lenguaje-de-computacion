@@ -1,4 +1,4 @@
-# Instrucciones de aplicación — Lote 10
+# Instrucciones de aplicación — Lote 11
 
 Subir el contenido de esta carpeta dentro de:
 
@@ -12,10 +12,10 @@ Archivos que sustituyen o actualizan:
 - releases/README.md
 
 Mensaje de commit sugerido:
-Inventario SV: incorpora lote 10 SVcustos n36
+Inventario SV: incorpora lote 11 de genealogía histórica
 
 Control posterior:
 1. GitHub Desktop debe mostrar modificaciones en los cinco archivos indicados.
-2. Confirmar que `data/inventario_publicaciones_sv.csv` contiene 91 filas totales.
-3. Confirmar que aparece la fila `SVcustos n=36` con DOI `https://doi.org/10.21428/39829d0b.541d2648`.
+2. Confirmar que `data/inventario_publicaciones_sv.csv` contiene 94 filas totales.
+3. Confirmar que aparecen las filas de Lógica ternaria 2019, Los 7 mandamientos de la IA y Framework ResNet de intrusiones.
 4. No tocar README.md ni archivos de estructura.
