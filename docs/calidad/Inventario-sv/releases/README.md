@@ -57,3 +57,10 @@ Este lote corrige la incidencia de entrega anterior y genera un paquete nuevo, c
 Fecha de aplicación: 2026-06-24.
 
 El lote 6 incorpora nueve registros: Álgebra de composición intercelular II, III y IV; Fundamentos, exigencias y arquitectura general de los agentes especializados; ITI V.1 de agente especializado; Presunción estructural y protopersonalidad; Presunción estructural del agente; Definición de la afinidad; y Definición del equilibrio del Agente Especializado. El CSV pasa a 72 filas totales.
+
+
+## V.1 — Lote 7
+
+Fecha de aplicación: 2026-06-24.
+
+El lote 7 incorpora ocho registros del plano de protección humana, seguridad estructural, interfaces y corpus observacional: Inteligencia compositiva acotada; Simetría estructural de la protección humana; Estatuto protegido del sujeto; Célula especializada de seguridad estructural; Modelo formal de admisibilidad olfativa; Primera forma legítima del corpus observacional tipado; Movilidad estructural; y Semántica auditada. El CSV pasa a 80 filas totales.
