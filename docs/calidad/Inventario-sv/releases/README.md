@@ -64,3 +64,10 @@ El lote 6 incorpora nueve registros: Álgebra de composición intercelular II, I
 Fecha de aplicación: 2026-06-24.
 
 El lote 7 incorpora ocho registros del plano de protección humana, seguridad estructural, interfaces y corpus observacional: Inteligencia compositiva acotada; Simetría estructural de la protección humana; Estatuto protegido del sujeto; Célula especializada de seguridad estructural; Modelo formal de admisibilidad olfativa; Primera forma legítima del corpus observacional tipado; Movilidad estructural; y Semántica auditada. El CSV pasa a 80 filas totales.
+
+
+## V.1 — Lote 8 corregido
+
+Fecha de aplicación: 2026-06-24.
+
+Este lote corrige la incidencia de repetición del paquete anterior. Incorpora cuatro registros nuevos y verificados: Transiciones estructurales y trayectorias de la U; Análisis del comportamiento geométrico del polígono SV; La guía práctica del conocimiento profundo y la crítica de la razón pura; y De SVcustos a SVperitus: Células SV en Par n=36+9=45. El CSV pasa de 80 a 84 filas.
