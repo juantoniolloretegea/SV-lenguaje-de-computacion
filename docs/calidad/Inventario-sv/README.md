@@ -8,32 +8,16 @@ Institución: Instituto Tecnológico Virtual de la Inteligencia Artificial para 
 Licencia: CC BY-NC-ND 4.0  
 Año: 2026  
 
-## Función de esta colección
+## Objeto
 
-Esta colección conserva el inventario, la trazabilidad y las relaciones editoriales de las publicaciones del Sistema Vectorial SV. Su finalidad es identificar cada publicación canónica del SV, su DOI de citación preferente, su localización editorial o técnica, su colección principal, sus colecciones relacionadas, el dominio trabajado, la función material que cumple dentro del sistema, sus relaciones editoriales y su estado.
+Este directorio conserva la publicación matriz V.1 del inventario de publicaciones del Sistema Vectorial SV y su tabla en formato CSV.
 
-El inventario no sustituye a las publicaciones ni las reduce a sinopsis. Cada registro fija una referencia editorial situada: qué publicación es, dónde debe citarse, qué dominio trabaja, qué aporta al Sistema Vectorial SV, con qué publicaciones se relaciona y cuál es su situación editorial.
+## Archivos
 
-## Criterio de orden
+- `inventario_trazabilidad_relaciones_editoriales_sv_V1.md`
+- `inventario_publicaciones_sv.md`
+- `datos/inventario_publicaciones_sv.csv`
 
-La tabla se ordena cronológicamente de forma descendente. Las publicaciones más recientes aparecen en primer lugar. La pertenencia a colecciones se declara en columnas específicas; no determina el orden principal.
+## Criterio de inclusión
 
-## Regla de registro
-
-Una publicación equivale a una fila. Si la misma publicación aparece en PubPub, GitHub, Zenodo, HCommons u otro repositorio, no se crea otra fila salvo que exista una versión materialmente distinta, una traducción con DOI propio, una release sustantiva o un depósito autónomo que deba tratarse como publicación diferenciada.
-
-## Archivos principales
-
-- `inventario_trazabilidad_relaciones_editoriales_sv_V1.md`: publicación matriz V.1 en Markdown, preparada para GitHub y para copia posterior en PubPub.
-- `inventario_publicaciones_sv.md`: tabla operativa del inventario, con la misma estructura de columnas que el CSV.
-- `data/inventario_publicaciones_sv.csv`: tabla editable y reutilizable.
-- `data/inventario_publicaciones_sv.schema.json`: esquema de columnas y tipos de registro.
-- `docs/criterios_de_registro.md`: normas de inclusión, actualización y control de duplicados.
-- `releases/README.md`: pauta de releases y sincronización con PubPub.
-- `assets/README.md`: notas sobre signos gráficos e imágenes asociadas.
-
-## Estado de cierre V.1
-
-Versión: V.1  
-Registros: 97  
-Criterio de actualización: toda nueva publicación canónica se incorpora como nueva fila al comienzo de la tabla, con conservación de DOI, fuente verificada, colección principal, relaciones editoriales y estado.
+El inventario incorpora publicaciones propias del Sistema Vectorial SV o antecedentes técnicos directos expresamente vinculados a una línea SV, siempre que dispongan de DOI verificable y función material dentro del sistema. No incorpora colecciones, publicaciones docentes generales, textos introductorios de inteligencia artificial sin especificidad SV, materiales de programación o Big Data, guías de reingeniería editorial, tablas de seguimiento editorial ni documentos internos sin DOI público propio.
