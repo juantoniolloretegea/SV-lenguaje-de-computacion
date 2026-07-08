@@ -1,116 +1,4685 @@
-# Inventario, trazabilidad y relaciones editoriales de las publicaciones del Sistema Vectorial SV — V.1
+---
+article:
+  doi: 10.21428/39829d0b.638de503
+  elocation-id: inventario-trazabilidad-y-relaciones-editoriales-de-las-publicaciones-del-sistema-vectorial-sv-v1
+author:
+- Juan Antonio Lloret Egea
+bibliography: /tmp/tmp-201IAAX6CCo8yG.json
+copyright:
+  link: "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  text: Creative Commons Attribution-NonCommercial-NoDerivatives 4.0
+    International License
+  type: CC-BY-NC-ND
+csl: /app/dist/server/server/utils/citations/citeStyles/apa-7th-edition.csl
+date:
+  day: 24
+  month: 06
+  year: 2026
+journal:
+  publisher-name: IA eñ™ --- La Biblia de la IA™ · ISSN 2695-6411 ·
+    Instituto Tecnológico Virtual de la Inteligencia Artificial para el
+    Español (ITVIA).
+  title: Instituto Tecnológico Virtual de la Inteligencia Artificial
+    para el Español®
+link-citations: true
+title: Inventario, trazabilidad y relaciones editoriales de las
+  publicaciones del Sistema Vectorial SV --- V.1
+uri: "https://www.itvia.online/pub/inventario-trazabilidad-y-relaciones-editoriales-de-las-publicaciones-del-sistema-vectorial-sv-v1"
+---
 
-DOI de la colección: [https://doi.org/10.21428/39829d0b.d3a012ba](https://doi.org/10.21428/39829d0b.d3a012ba)  
-ISSN: 2695-6411  
-Autor: Juan Antonio Lloret Egea  
-ORCID: 0000-0002-6634-3351  
-Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA)  
-Licencia: CC BY-NC-ND 4.0  
-Año: 2026  
++----------------------+----------------------+----------------------+
+| ![]                  | ![]                  | ![]                  |
+| (https://assets.pubp | (https://assets.pubp | (https://assets.pubp |
+| ub.org/c39829d0b-6cf | ub.org/c39829d0b-6cf | ub.org/c39829d0b-6cf |
+| 2-4c57-8562-04aa6606 | 2-4c57-8562-04aa6606 | 2-4c57-8562-04aa6606 |
+| 8f1d/p638de503-c62b- | 8f1d/p638de503-c62b- | 8f1d/p638de503-c62b- |
+| 43c7-ae6b-b975756297 | 43c7-ae6b-b975756297 | 43c7-ae6b-b975756297 |
+| 86/u8d2bc69d-73c6-46 | 86/u8d2bc69d-73c6-46 | 86/u8d2bc69d-73c6-46 |
+| 69-a7e7-fb07fdba4171 | 69-a7e7-fb07fdba4171 | 69-a7e7-fb07fdba4171 |
+| /image-0178233432751 | /image-1178233433611 | /image-7178233434544 |
+| 0.png){#nznct4mxm8a} | 4.png){#nupfnipel7o} | 4.png){#n0gyjsuzqn5} |
++======================+======================+======================+
++----------------------+----------------------+----------------------+
 
-## Objeto
+------------------------------------------------------------------------
 
-Esta publicación conserva el inventario, la trazabilidad y las relaciones editoriales de las publicaciones del Sistema Vectorial SV. Cada registro identifica una publicación individual, su fecha, su DOI, el dominio SV en el que opera y la función que cumple dentro del sistema.
+DOI de la colección: <https://doi.org/10.21428/39829d0b.d3a012ba> \|
+ISSN: 2695-6411 \| Instituto Tecnológico Virtual de la Inteligencia
+Artificial para el Español™ (ITVIA) \| Licencia: CC BY-NC-ND 4.0.
+Madrid, 24 / 06/2028
 
+------------------------------------------------------------------------
 
-## Tabla matriz del inventario
+## **Objeto**
 
-| N.º | Fecha | Título | DOI | Dominio SV | Función dentro del SV |
-| --- | --- | --- | --- | --- | --- |
-| 97 | 22/06/2026 | Orientación universal y geográfica, potencial del suceso e interfaz de dominio desde el Universo y los seres biológicos: humanoide | https://doi.org/10.21428/39829d0b.5e15cabb | Orientación, potencial del suceso, interfaz de dominio, seres biológicos y humanoide | Formula la orientación como tránsito formal entre dominio, interfaz, potencial del suceso, trayectoria, residual y retorno. Sitúa al humanoide como soporte técnico orientable, no como origen de la cadena, y vincula Universo, seres biológicos y humano bajo condiciones de dominio declarado y transducción orientativa. |
-| 96 | 18/06/2026 | Contraste de precisión etaria solar SV–NASA: NASA redondea; el Sistema Vectorial SV formaliza | https://doi.org/10.21428/39829d0b.22c326bf | Contraste etario solar, retorno externo, dominio cosmofísico y formalización SV frente a redondeo externo | Contrasta el redondeo divulgativo externo sobre el tránsito solar con la formalización SV basada en dominio, origen, retorno externo y precisión etaria. Funciona como publicación de lectura pública y técnica sobre la diferencia entre dato externo redondeado y formalización SV. |
-| 95 | 16/06/2026 | Radio, frontera y densidad del universo observable — Trilogía Cosmológica, Parte III | https://doi.org/10.21428/39829d0b.0430adc0 | Cosmometría SV, constante cosmológica, radio comóvil, frontera, densidad, materia oscura no sustancial y energía oscura como curvatura ciclo-distancial | Desarrolla la tercera parte cosmológica: radio, frontera, densidad del universo observable, lectura no sustancial de materia oscura y energía oscura como curvatura ciclo-distancial. Integra retornos de Parte I y Parte II y conserva la separación entre dominio observable, frontera y Totalidad. |
-| 94 | 15/06/2026 | Recta-Ómicron (Lanzadera) — Trilogía Cosmológica, Parte II | https://doi.org/10.21428/39829d0b.db21f00e | Cosmometría situada, brazo fronterizo etario, Lanzadera Ómicron y frontera del universo observable retornado | Determina el brazo fronterizo etario del universo observable retornado desde la Tierra mediante la cadena de Lanzadera Ómicron. Su función es separar acceso, frontera, radio auxiliar y retorno situado, sin confundir observador, origen y frontera cosmológica. |
-| 93 | 15/06/2026 | Determinación del radio, la superficie y el volumen del Universo — Trilogía Cosmológica, Parte I | https://doi.org/10.21428/39829d0b.101f1d12 | Cosmometría SV, radio estructural, superficie, volumen, constante cosmológica y retorno metrológico | Fija la primera parte de la Trilogía Cosmológica mediante el cálculo del radio estructural, superficie y volumen del universo observable bajo retorno metrológico y separación expresa del radio comóvil externo. Actúa como base de cálculo para las partes II y III. |
-| 92 | 11/06/2026 | Directed determination of the chemical element SV-399 — Actinium (Ac) + 3 Oganesson (Og) + Tungsten/Wolfram (W): Spain and Portugal as priority prospecting targets | https://doi.org/10.21428/39829d0b.11d9224e | Química factual, ciencia de materiales, SV-399_Ψ, restricción regional-metalogenética y admisibilidad geológica previa | Ordena la búsqueda dirigida de SV-399_Ψ mediante restricción regional, geológico-mineralógica y analítica previa al ensayo material. Sitúa España y Portugal como núcleo técnico de partida, sin declarar hallazgo ni reconocimiento ordinario de elemento químico. |
-| 91 | 09/06/2026 | Determinación dirigida del elemento químico SV-399. — Actinio (Ac) + 3 Oganesón (Og) + Tungsteno/Wolframio (W) | https://doi.org/10.21428/39829d0b.5211d837 | Química factual, ciencia de materiales, SV-399_Ψ, microfronteras actínico-refractarias y determinación dirigida del elemento químico | Formula la determinación matriz de SV-399_Ψ a partir de Actinio (Ac) + 3 Oganesón (Og) + Tungsteno/Wolframio (W), mediante rutas convergentes de aislamiento residual y localización ultraminoritaria en microfronteras actínico-refractarias. Su función dentro del SV es fijar el objetivo material y analítico de la línea SV-399, sin declarar hallazgo empírico ni reconocimiento ordinario de elemento químico. |
-| 90 | 06/06/2026 | Tabla periódica estructural extendida del dominio térmico K_theta: materiales por encima de 4500 °C | https://doi.org/10.21428/39829d0b.5fd2b270 | Química factual, materiales extremos, dominio térmico estructural K_Θ y elementos SV extendidos | Articula el dominio térmico estructural K_Θ con elementos principales, controles adyacentes y materiales por encima de 4500 °C. Su función es construir un dominio de contraste térmico estructural, con rango, controles y máximo declarado, sin confundir estructura SV con síntesis material. |
-| 89 | 06/06/2026 | Adenda I. Extensión del dominio térmico K_Θ⁺ más allá de SV-443: crecimiento transductivo, frontera formal y contraste ultra-refractario | https://doi.org/10.21428/39829d0b.c5e1621c | Dominio térmico K_Θ⁺, frontera formal, contraste ultra-refractario y ciencia de materiales SV | Extiende de forma subordinada el dominio térmico K_Θ más allá de SV-443 mediante umbrales térmicos, residuales, casos negativos y contraste ultra-refractario, sin proclamar síntesis ni materiales realizados. |
-| 88 | 04/06/2026 | Línea del Umbral SV, circulación de retorno del dominio-universo y átomo formal de ascendencia no agotada | https://doi.org/10.21428/39829d0b.30dfd78b | Línea del Umbral, igualdad polar, circulación de retorno, dominio-universo y persistencia | Fija la lectura de la Línea del Umbral SV como referencia de igualdad polar, circulación de retorno, persistencia y lectura atómica del dominio-universo. Permite distinguir origen, umbral, intensidad, potencial, retorno y frontera sin reducir el dominio a geometría externa. |
-| 87 | 03/06/2026 | Vida y clausura de los observables realizados: cuerpos, especies, estrellas y frontera sutural del universo observable como dominio físico realizado | https://doi.org/10.21428/39829d0b.9c15d6fe | Observables realizados, vida formal de instancia, biología, especies, estrellas, frontera sutural y retorno | Formula una teoría de la vida formal y clausura de observables realizados: toda instancia exige dominio, frontera, identidad, soporte, traza, residual y retorno. Distingue vida biológica de vida formal de instancia y evita identificar frontera sutural con TODO/NADA, materia oscura sustancial o límite del espacio. |
-| 86 | 01/06/2026 | Raigal, apertura de imperfección y horizonte de retorno de los observables - (Del arraigo preproyectivo a la vida formal transducible de cuerpos, especies, estrellas y dominios-universo) | https://doi.org/10.21428/39829d0b.bfd86036 | Raigal, apertura de imperfección, observables, dominios, horizonte de retorno y proyección interdominio | Define el raigal como matriz de arraigo y retorno entre dominios. Ordena proyecciones hacia termodinámica, electromagnetismo, cosmología, física-química, biología y matemáticas SV sin sustituir los transductores concretos de cada dominio. |
-| 85 | 31/05/2026 | Vida y clausura de los universos y sus observables - Humanos, especies, estrellas y dominios recursivos bajo circularidad no agotada y lectura armónica por Fourier | https://doi.org/10.21428/39829d0b.b53ebe0a | Clausura de observables, vida formal, dominios recursivos y lectura armónica | Formula una lectura de la vida y clausura de observables como continuidad entre humanos, especies, estrellas y dominios recursivos, bajo circularidad no agotada y lectura armónica. Su función en el SV es situar la persistencia y clausura de observables sin convertir la vida, la especie o el dominio en entidades aisladas de su retorno y de su trazabilidad. |
-| 84 | 30/05/2026 | Autogobierno topológico y comunicación estructural de observables en el Universo físico realizado | https://doi.org/10.21428/39829d0b.8431307a | Autogobierno, comunicación estructural, potencial local, comparador global y dominio realizado | Distingue el plano local del potencial, donde P_D(e) permite leer separación polar, diferencia entre sucesos, residual, traza y retorno, del plano global Φ(τ), que formaliza el comparador con realimentación del dominio realizado bajo ε−0, convergencia gobernada y conservación de U. |
-| 83 | 29/05/2026 | Potencial de un suceso: comunicación estructural en el Universo físico realizado, equipotencialidad, diferencia polar y métrica | https://doi.org/10.21428/39829d0b.f0cbabc2 | Potencial del suceso, equipotencialidad, diferencia polar, métrica, transducción por dominios y comunicación estructural | Formula el potencial de un suceso como magnitud estructural de separación polar dentro de un dominio. Distingue origen formal, equilibrio realizado, potencial local, intensidad, diferencia entre sucesos, identidad, traza, métrica tipada, transducción por dominios y comunicación estructural. |
-| 82 | 27/05/2026 | El origen material ordinario del Universo observable y la relación entre física contemporánea y el SV en el tránsito por dominios: errores de plano, contraste entre aparatos y continuidad H–He de la materia ordinaria | https://doi.org/10.21428/39829d0b.90fce13d | Cosmología material, hidrógeno, helio, materia ordinaria y tránsito por dominios | Establece la continuidad H–He de la materia ordinaria como problema de tránsito entre dominios físicos, cosmológicos, químicos y biológicos. Su función en el SV es impedir que el hidrógeno, el helio, la materia ordinaria o la tabla periódica comparezcan como datos aislados sin declaración de dominio, frontera, residual y retorno. |
-| 81 | 25/05/2026 | La materia oscura no existe como sustancia: demostración formal de nulidad sustancial, densidad gravitatoria efectiva de sutura y contraste físico escalable | https://doi.org/10.21428/39829d0b.7b41835f | Cosmología física, materia oscura, densidad gravitatoria efectiva y sutura | Formula la tesis de que la llamada materia oscura no designa una sustancia oculta, sino una identificación defectuosa del retorno gravitatorio de la capacidad estructural del dominio físico realizado. Su función en el SV es distinguir sustancia, retorno gravitatorio, densidad efectiva, sutura y contraste físico escalable. |
-| 80 | 22/05/2026 | Campo y energía, génesis de la masa y definición física de la gravedad: gravitación universal, constante cosmológica y dominio observable | https://doi.org/10.21428/39829d0b.41afec0f | Gravedad, masa, energía, campo, constante cosmológica y dominio observable | Reordena campo, energía, masa, gravedad, constante gravitacional y constante cosmológica mediante dominio, unidad, residual y retorno físico. Su función en el SV es impedir que G, Λ, masa o gravedad operen como magnitudes aisladas sin transducción, frontera y contraste. |
-| 79 | 21/05/2026 | Imperfección preformal y espacio: ε−0, primera distinguibilidad y dominio estructural completo de separación factual recorrible | https://doi.org/10.21428/39829d0b.9c57c046 | Fundamentos preformales, primera distinguibilidad, dominio de separación factual recorrible y constitución del espacio | Fija ε−0 como condición preformal anterior a la primera distinguibilidad, formula la frontera de primera distinguibilidad y el dominio de separación factual recorrible. Su función dentro del SV es impedir que espacio, dominio, separación o física constituida se tomen como supuestos iniciales sin declarar la cadena de admisibilidad que los hace legibles. |
-| 78 | 19/05/2026 | Distancia absoluta y relativa entre observables del Universo | https://doi.org/10.21428/39829d0b.c394e160 | Métrica de observables, totalidad, horizonte, señal física y retorno luminoso | Formula una teoría de distancia absoluta y relativa entre observables, distinguiendo totalidad, horizonte y señal física. Su función en el SV es separar magnitud externa, observable declarado, origen formal, distancia relativa, residual y retorno metrológico. |
-| 77 | 16/05/2026 | Proyecciones biológicas de la fibra | https://doi.org/10.21428/39829d0b.1ab33893 | Biología, célula, mutación, enfermedad, cáncer, evolución y muerte física | Formaliza lo biológico como observable fuerte del SV, con transducción, célula, mutación, enfermedad, cáncer, evolución, muerte física y diagnóstico acotado. Su función es situar la biología como dominio material formalizable, no como analogía orgánica. |
-| 76 | 15/05/2026 | El agujero negro como cierre interno sin resto exterior formulable | https://doi.org/10.21428/39829d0b.b757ccc4 | Cosmología física, horizonte, clausura interna y no transmisibilidad | Formula el agujero negro como cierre interno sin resto exterior formulable bajo dominio SV, con horizonte, no transmisibilidad y conservación de la restricción de lectura. Su función es impedir que el horizonte se trate como simple objeto externo o como metáfora sin dominio. |
-| 75 | 14/05/2026 | Edades relativas del universo observable y de sus objetos físicos | https://doi.org/10.21428/39829d0b.b56ed853 | Edad física de observables cosmológicos, dominio, frontera, métrica y retorno | Establece que la totalidad absoluta no tiene edad física, mientras sus observables sí pueden recibir edad bajo dominio, frontera, métrica y retorno. Su función es impedir la atribución indiferenciada de edad al todo y fijar la edad como propiedad de observables declarados. |
-| 74 | 10/05/2026 | Catálogo de Pares Estructurales SV (CPS-SV): enlace, aleación y compatibilidad posicional desde los 118 elementos base hasta los 443 candidatos del dominio extendido | https://doi.org/10.21428/39829d0b.a56b9cd7 | Química factual, pares estructurales, enlace, aleación y compatibilidad posicional | Clasifica pares estructurales, enlaces, aleaciones y compatibilidades desde los 118 elementos base hacia el dominio extendido. Su función es fijar reglas de compatibilidad material sin confundir admisibilidad estructural con predicción física no declarada. |
-| 73 | 08/05/2026 | Análisis preliminar de elementos químicos, materiales y aleaciones de nueva generación para usos médicos y científicos: Tabla periódica de los 325 elementos nuevos del SV, familias tipológicas, generación prequímica, criterios de transición y propiedades estructurales | https://doi.org/10.17613/8ryyb-g9h48 | Química factual, tabla periódica estructural extendida, familias tipológicas, generación prequímica y propiedades estructurales | Extiende el dominio de la tabla periódica estructural hacia el plano generativo completo: familias tipológicas, selección de configuraciones prequímicas y transición hacia los 443 elementos del catálogo. Su función dentro del SV es constituir un dominio de búsqueda operatoria para candidatos químicos y materiales, sin presentar las magnitudes estructurales SV como mediciones empíricas. |
-| 72 | 07/05/2026 | Interacción, intercomposición y transmisión factual entre campos en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.293e914a | Interacción entre campos, intercomposición, transmisión factual, distancia factual fibrosa y célula SV(36,6) | Articula interacción, intercomposición y transmisión factual entre campos como operaciones propias distintas, sin mezcla libre, simetría conmutativa por defecto ni probabilidad fundante. Su función es fijar condiciones de paso entre campos conservando célula, trayectoria, frontera, distancia factual, residual y dictamen. |
-| 71 | 05/05/2026 | Génesis del hidrógeno y teoría de la persistencia energética estructural: masa, frontera, residual e identidad física bajo compatibilidad operatoria universal | https://doi.org/10.17613/qq4q9-sd847 | Hidrógeno, masa, frontera, persistencia energética estructural e identidad física | Fija el hidrógeno como caso propio de persistencia estructural bajo masa, frontera, residual, identidad física y compatibilidad operatoria. Su función es conectar continuidad material, régimen H–He y tránsito entre dominios cosmológicos, químicos y biológicos. |
-| 70 | 05/05/2026 | Fórmula de Campo Unificado 𝓕𝓐 = d𝓐 + 𝓐∧𝓐 con 𝓐 = ω ⊕ A | https://doi.org/10.17613/gxfv3-qjj64 | Campo unificado, conexión, curvatura, frontera Einstein-Bohr y correlación angular | Formula una doble proyección SV que vincula campo unificado, conexión, curvatura, electromagnetismo, correlación angular y clausura ternaria. Su función es proporcionar una matriz de proyección física que impide tratar los campos como dominios aislados. |
-| 69 | 00/05/2026 | Teoría del TODO y de la NADA en el Sistema Vectorial SV: refundación factual sobre el corpus del suceso, distancia factual fibrosa, célula configuracional K₃ⁿ, frontera común (μ, λ) = (0,0) y verificador ternario fuerte | https://doi.org/10.17613/k3q1d-fjj45 | TODO, NADA, frontera común, célula K₃ⁿ, distancia factual fibrosa y verificador ternario fuerte | Formula la relación entre TODO y NADA como estructura factual con frontera común, célula configuracional, distancia factual fibrosa y verificador ternario fuerte. Su función es fijar el plano de cierre y admisibilidad que permite evaluar absorción, nulidad, frontera, no cierre y conservación de U en múltiples dominios del SV. |
-| 68 | 26/04/2026 | Teoría general de sucesos generadores y de los protocampos unificados en el Sistema Vectorial SV | https://doi.org/10.17613/177nb-v2465 | Sucesos generadores, protocampos, gravedad, electricidad y magnetismo | Ordena gravedad, electricidad y magnetismo bajo sucesos generadores y protocampos unificados. Su función es impedir una yuxtaposición de sectores físicos sin articulación SV de generación, frontera, residual y falsación. |
-| 67 | 24/04/2026 | Teoría general factual de la luz en el Sistema Vectorial SV | https://doi.org/10.17613/1z7c0-mqb40 | Luz factual, activación, energía, campo, gravedad y electromagnetismo | Formula una teoría factual de la luz mediante proyecciones, activación, energía, campo, gravedad, Maxwell y falsación. Su función es impedir que la luz entre como dualidad importada o sustancia aislada fuera de dominio SV. |
-| 66 | 23/04/2026 | Fuerza, trabajo, calor, entalpía, temperatura, principios y fundamentos de la termodinámica y la correlación entre ellos en el SV | https://doi.org/10.17613/ptw68-d1r57 | Termodinámica factual, fuerza, trabajo, calor, entalpía, temperatura y balance | Fija la fórmula factual de termodinámica SV y correlaciona magnitudes físicas bajo dominio, balance, residual y retorno. Su función es impedir que fuerza, trabajo, calor, entalpía o temperatura entren como vocabulario físico suelto. |
-| 65 | 22/04/2026 | Entropía factual e irreversibilidad estructural en el Sistema Vectorial SV | https://doi.org/10.17613/vh6ak-6em43 | Entropía factual, dispersión acumulada, irreversibilidad y transporte estructural | Define H_SV como entropía del SV y formaliza dispersión acumulada, no decrecimiento y conservación asimétrica sin tiempo como primitiva ni probabilidad fundante. Su función es fijar irreversibilidad como transporte estructural y no como estadística externa. |
-| 64 | 22/04/2026 | De Bell a Tsirelson sin formalismo de Hilbert: desarrollo determinista no local del Sistema Vectorial SV | https://doi.org/10.17613/1666c-c5g66 | Correlación angular, Bell, Tsirelson y frontera cuántica | Absorbe CHSH y Tsirelson como regímenes de un mismo correlador angular SV sin Hilbert ni probabilidad fundante. Su función es situar la correlación cuántica bajo dominio angular y lectura determinista no local. |
-| 63 | 20/04/2026 | Reducción estructural absoluta de Maxwell en el Sistema Vectorial SV y ecuación única de la física factual electromagnética | https://doi.org/10.17613/kep1t-57539 | Electromagnetismo factual, Maxwell, frontera, balance y ecuación única | Reduce el régimen electromagnético a una ecuación factual única que reordena Gauss, Faraday, Ampère-Maxwell, relaciones constitutivas, frontera, balance y onda. Su función es impedir la importación directa de Maxwell sin dominio SV. |
-| 62 | 20/04/2026 | Fundamentos operatorios absolutos del electromagnetismo factual en el Sistema Vectorial SV | https://doi.org/10.17613/w1kb2-m6k81 | Electromagnetismo factual, derivada, flujo, divergencia, rotor, integrales, jacobianos, frontera y reconfiguración | Fija los fundamentos operatorios absolutos del electromagnetismo factual antes de su reducción estructural por Maxwell y antes de su tratamiento modal por Fourier factual. Su función es ofrecer el nivel operatorio que permite hablar de derivada, flujo, divergencia, rotor, frontera y reconfiguración sin importar sin control el formalismo electromagnético clásico. |
-| 61 | 19/04/2026 | Simetría estructural de la protección humana en el Sistema Vectorial SV: garantías del Agente Especializado frente a suplantación, antropomorfización y corrupción de fundamentos | https://doi.org/10.21428/39829d0b.c6a6c9d4 | Protección humana, identidad del agente, no suplantación, integridad de fundamentos y garantías negativas | Formaliza garantías estructurales para que el Agente Especializado no suplante al humano, no sea antropomorfizado de forma engañosa y no sea corrompido de fundamentosmente. Su función es establecer una simetría de protección: preservar al humano frente a degradación por soporte técnico y preservar al agente frente a diseños que quebranten su suelo matemático y lógico. |
-| 60 | 19/04/2026 | Inteligencia compositiva acotada del Agente Especializado del SV | https://doi.org/10.21428/39829d0b.3998a917 | Inteligencia compositiva acotada, resultante vectorial, CIC-AE(25,5), capacidades de primer orden y primacía humana | Formaliza la inteligencia compositiva acotada del Agente Especializado como operador de segundo orden sobre catorce capacidades de primer orden, gobernado por célula CIC-AE(25,5), umbral T=19 e invariantes IC-1 a IC-6. Su función es declarar el circuito compositivo del agente sin convertir sus capacidades en autonomía ontológica ni en sustitución del humano experto. |
-| 59 | 18/04/2026 | Estatuto protegido del sujeto, integración humano–soporte y daño acoplado en el SV | https://doi.org/10.21428/39829d0b.588ca7d1 | Estatuto protegido del sujeto, integración humano–soporte, daño acoplado y taxonomía conservadora | Formaliza una taxonomía conservadora para configuraciones en las que apariencia local, soporte artificial, integración funcional humano–soporte y daño acoplado no coinciden de forma trivial. Su función es impedir cierres ilegítimos cuando una vida humana o un daño acoplado pueden quedar comprometidos bajo soporte técnico, interfaz o incorporación operativa. |
-| 58 | 18/04/2026 | Definición del equilibrio de un Agente Especializado del Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.cbeef36c | Equilibrio, preservación, custodia, contención, amenaza estructural e integridad del agente | Define el equilibrio del Agente Especializado como capacidad derivada, subordinada y no ontológica de preservación, custodia y contención ante amenaza estructural. Su función es cerrar la bisagra entre afinidad, presunción estructural, protopersonalidad, primacía humana e invariantes constitutivos, sin reconocer potestad ofensiva al agente. |
-| 57 | 18/04/2026 | Definición de la afinidad de un Agente Especializado: unificada desde la presunción estructural del agente, la protopersonalidad y el dominio de inmunología | https://doi.org/10.21428/39829d0b.93cc293c | Afinidad, presunción estructural, protopersonalidad, dominio de inmunología y consejo estructural | Define la afinidad del agente especializado como criterio estructural de contraste entre historial formal, dominio material y diseño interno, usando el caso director de inmunología. Su función es orientar el crecimiento disciplinado del agente sin sustituir al experto humano ni cerrar U como dictamen. |
-| 56 | 17/04/2026 | Presunción estructural, protopersonalidad e invariantes constitutivos en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.6f598ec8 | Presunción estructural, dominio preternario, protopersonalidad, conciencia estructural, invariantes constitutivos y cierre duro | Formaliza el principio general de presunción estructural y la protopersonalidad emergente del agente especializado desde el dominio preternario Ω_pre, junto con seis invariantes constitutivos de cierre duro. Su función es impedir semántica espuria, tiempo rector, estadística fundante, inferencia opaca, heurística no declarada y vulneración de la primacía humana. |
-| 55 | 16/04/2026 | Presunción estructural del agente en el Sistema Vectorial SV: instanciación del dominio preternario como capa de autogobierno anticipatorio | https://doi.org/10.21428/39829d0b.d821076b | Presunción del agente, Ω_pre, proto-U, compuerta de proto-activación y autogobierno anticipatorio | Instancia el dominio preternario Ω_pre en el agente especializado como capa de autogobierno anticipatorio anterior al suceso, anterior a U y anterior al dictamen. Su función es permitir al agente ralentizar clausura, solicitar base adicional y marcar tensión estructural sin producir suceso ni modificar trayectoria. |
-| 54 | 16/04/2026 | Del origen preternario del Sistema Vectorial SV a la entidad soberana del campo: derivación nativa de α_i y β_i, proyección ternaria inducida, absorción basal exacta, unificación fuerte de gravitación, electricidad y magnetismo, y apertura a clases factuales emergentes | https://doi.org/10.21428/39829d0b.aa5a0291 | Origen preternario, α_i, β_i, proyección ternaria inducida, absorción basal y entidad del campo | Formaliza el paso desde Ω_pre hacia la entidad factual del campo, derivando nativamente α_i y β_i y situando la cadena Ω_pre→Ξ_SV→B_F→U_F→χ_α. Su función es fijar el recorrido preternario que permite hablar de campo sin apoyarlo en una geometría externa ni en una física ya constituida. |
-| 53 | 16/04/2026 | Del contenido físico factual del suceso a las clases factuales emergentes: programa de transmutación factual en el Sistema SV | https://doi.org/10.21428/39829d0b.b37864ef | Transmutación factual, clases factuales emergentes, masa, campo y U | Formula un programa de transmutación factual en el que la masa no es el único destino fuerte de una concentración factual: el operador T_SV abre salidas estructuralmente distintas —m₀, χ_α y U— sin tiempo rector ni probabilidad fundante. Su función es abrir la clasificación de clases factuales emergentes a partir del contenido físico factual del suceso. |
-| 52 | 16/04/2026 | Del contenido físico factual del suceso a la entidad soberana del campo en el Sistema Vectorial SV: absorción basal exacta, unificación fuerte de gravitación, electricidad y magnetismo, y apertura a clases factuales emergentes | https://doi.org/10.21428/39829d0b.25bd99ae | Contenido físico factual del suceso, entidad del campo, absorción basal y unificación fuerte | Legitima U_F como entidad factual del campo y sitúa gravitación, electricidad y magnetismo como proyecciones necesarias por doble vía convergente. Su función dentro del SV es impedir que la unificación de campos se reduzca a compresión de ecuaciones clásicas o a plantilla formal sin génesis factual. |
-| 51 | 16/04/2026 | Absorción de E₀=m₀c² como sector basal de reposo en el Sistema Vectorial SV: estructura factual ampliada, compatibilidad modal, balance con residual y criterio conservador de clausura | https://doi.org/10.21428/39829d0b.116e839d | Energía de reposo, masa, sector basal, compatibilidad modal y residual | Absorbe la equivalencia de reposo como sector basal dentro de una estructura factual ampliada, con trayectoria, frontera, residual y criterio conservador. Su función es situar E₀=m₀c² sin negarla ni importarla sin control de dominio. |
-| 50 | 15/04/2026 | Correlación, restricción de clausura y no clausura posicional en dominios cuánticos contemporáneos: una relectura desde el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.2bad40a0 | Dominios cuánticos, correlación estructural, co-clausurabilidad y U | Formaliza acoplamiento, compatibilidad, cierre restringido y no clausura posicional sin convertir la indeterminación en probabilidad. Su función es proteger la U honesta en dominios cuánticos y separar correlación de cierre indebido. |
-| 49 | 13/04/2026 | INSTRUCCIÓN TÉCNICA DE IMPLEMENTACIÓN ESPECÍFICA DE AGENTE ESPECIALIZADO EN EL SISTEMA VECTORIAL SV (ITI V.1) | https://doi.org/10.21428/39829d0b.759972a0 | Identidad algebraica del agente, cadena de ternarización, trayectoria append-only, convergencia determinista y banco de sucesos | Constituye formalmente el agente especializado en el SV: fija su identidad algebraica, cadena de entrada, ternarización, asignación posicional, trayectoria append-only, convergencia, perfil de despliegue, bancos de sucesos, informes e invariantes no configurables. Su función es delimitar lo constitutivo del agente frente a lo que gobierna dinámicamente la Carta Magna. |
-| 48 | 13/04/2026 | Carta Magna de autogobierno de agentes especializados en el SV (V.1) | https://doi.org/10.21428/39829d0b.60a70b65 | Agentes especializados, gobierno operativo, transición conversacional, memoria, sucesos, convergencia y perfil de despliegue | Fija el régimen operativo del agente especializado dentro del SV. Su función es gobernar transición conversacional, memoria, banco de sucesos, convergencia, perfil de despliegue e informes bajo invariantes algebraicos no modificables y primacía humana permanente. |
-| 47 | 12/04/2026 | Fundamentos, exigencias y arquitectura general de los agentes especializados en el Sistema Vectorial SV: formulación transversal desde el caso director del Agente Especializado en Inmunología | https://doi.org/10.21428/39829d0b.183e10f3 | Arquitectura general de agentes, entorno abierto, custodia algebraica, separación de planos y primacía humana | Fija el plano transversal de diseño, exigencias y arquitectura general de los agentes especializados: núcleo interno, interacción externa, acoplamiento custodial, preservación de U y primacía humana. Su función es proporcionar el suelo común sobre el que cada agente puede operar sin adquirir autoridad semántica externa ni opacidad. |
-| 46 | 12/04/2026 | Estatuto del universo de sucesos, admisibilidad suficiente y composición tipada de agentes especializados en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.d4ede27f | Universo de sucesos de agente, admisibilidad suficiente, composición tipada y preservación de U | Fija el universo de sucesos de un agente SV por agente y fase, establece admisibilidad suficiente mediante T(n)=⌊7n/9⌋ y parámetros críticos de entrada, y define composición tipada entre sucesos y agentes con preservación de U y primacía humana. |
-| 45 | 11/04/2026 | Medición, reconstrucción e incertidumbre estructural en la física contemporánea sin probabilidad ni tiempo soberano: un marco analítico basado en sucesos y trayectorias con laboratorios ejecutables | https://doi.org/10.21428/39829d0b.755ad0eb | Medición, reconstrucción, incertidumbre estructural, sucesos, trayectorias, residuales y laboratorios ejecutables | Presenta un marco analítico operativo para tratar medición, reconstrucción e incertidumbre estructural sin probabilidad ni tiempo como primitivas. Su función en el SV es ofrecer una capa de análisis para situaciones con reconstrucción incompleta, residuales persistentes, lecturas discrepantes o clausura no justificada. |
-| 44 | 11/04/2026 | Fourier factual y ecuación de onda electromagnética en el Sistema Vectorial SV: desarrollo cíclico, transformada modal y propagación sobre ciclo y trayectoria poligonal | https://doi.org/10.21428/39829d0b.0954ba30 | Transformada modal factual, electromagnetismo, ciclo y trayectoria poligonal | Formula la transformada modal factual y la propagación sobre ciclo y trayectoria poligonal. Su función es tratar periodicidad, modo, onda y propagación sin introducir tiempo como primitiva ni sustituir el dominio factual por análisis armónico externo. |
-| 43 | 09/04/2026 | Primitivos metrológicos del Sistema Vectorial SV: instanciaciones contingentes de las constantes fundacionales del Sistema Internacional, justificación algebraica y tabla de equivalencias factuales | https://doi.org/10.21428/39829d0b.c8ec692e | Metrología SV, UE_MFC, UFE, UFM, UFC, UFT, UFCE y equivalencias factuales | Declara los seis primitivos metrológicos físicamente necesarios del SV como instanciaciones contingentes compatibles con las constantes exactas del SI 2019. Su función es permitir retorno metrológico, contraste físico y conversión SI↔SV sin convertir la metrología externa en fundamento del sistema. |
-| 42 | 08/04/2026 | Conjunto matemático unificado del cambio factual, ciclos, medición factual y trayectorias poligonales de activación en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.2b3c9808 | Cambio factual, ciclos, medición factual, trayectorias poligonales de activación, directriz y acumulación | Unifica el cuerpo matemático nuclear del cambio factual en cinco planos: orden, directriz, detonación, ciclos, medición factual y trayectorias poligonales de activación. Su función es convertir el cambio, la recurrencia, la medición subordinada y la trayectoria en dominios formalmente tratables dentro del SV. |
-| 41 | 06/04/2026 | Nuevas matemáticas del Sistema Vectorial SV y Física factual como conjunto iniciador | https://doi.org/10.21428/39829d0b.67195860 | Cálculo del suceso, geometría factual, física factual, Maxwell, gravedad, Higgs y frontera cuántica | Fija el programa de nuevas matemáticas del SV como respuesta a las exigencias de la física factual: operadores propios de cambio, acumulación, sensibilidad, residualidad, clausura y proyección hacia el lenguaje de computación. Su función es abrir el plano matemático que permite al SV operar con voz propia sin importar tiempo, probabilidad ni cierre espurio de U. |
-| 40 | 31/03/2026 | Agente Especializado en Lenguaje Natural para el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.d3119ec5 | Lenguaje natural, agente especializado, laboratorios reproducibles, custodia estructural y gobierno conversacional sin estadística | Formaliza un agente NLP del SV en español piloto, con etapas, laboratorios reproducibles, custodia estructural, compuerta conservadora y gobierno conversacional sin estadística. Su función es transformar el transductor lingüístico y la célula NLP en una arquitectura aplicada verificable. |
-| 39 | 30/03/2026 | El transductor lingüístico — morfismo de dominio — y el horizonte H_NLP del Sistema Vectorial SV: construcción formal del mapeo entre actos comunicativos, textura de indeterminación y evaluación ternaria | https://doi.org/10.21428/39829d0b.6c9cbb28 | Lenguaje natural, morfismo de dominio, célula ternaria mínima, H_NLP y evaluación ternaria | Formaliza el transductor lingüístico y el horizonte H_NLP del SV sobre una célula mínima de nueve posiciones. Su función es mapear actos comunicativos a evaluación ternaria, distinguir no-aplica y U honesta, verificar gobernabilidad previa y preparar la célula NLP completa. |
-| 38 | 30/03/2026 | Convergencia ternaria y gobierno determinista de trayectorias en el Sistema Vectorial SV: tipología de la indeterminación, HNA como teorema y fundamentos de la célula NLP | https://doi.org/10.21428/39829d0b.802bed57 | Convergencia ternaria, clasificación de la indeterminación, HNA, ΔN, ventana activa, fork y célula NLP | Formaliza la convergencia ternaria en el SV: clasifica la indeterminación mediante ΓH, fija HNA como teorema del corpus, deriva ΔN como profundidad posicional de cierre, define una ventana activa acotada por la estructura de posiciones abiertas y formaliza el fork como bifurcación sin borrado. Su función dentro del SV es proporcionar la base algebraica inmediata de la célula NLP y del transductor lingüístico posterior. |
-| 37 | 26/03/2026 | Células especializadas del Sistema Vectorial SV: estatuto, perfil funcional mínimo y familias iniciales | https://doi.org/10.21428/39829d0b.b0cbdbaa | Células especializadas, perfil funcional mínimo, familias de dominio e interfaz | Define qué es una célula especializada en el Sistema Vectorial SV, fija su perfil funcional mínimo, distingue familias de dominio e interfaz y establece su anclaje formal y técnico con soporte verificable. |
-| 36 | 26/03/2026 | Célula especializada de seguridad estructural para la custodia del diseño, el DSL y los laboratorios del Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.c4c26cd8 | Célula de custodia, diseño, DSL, laboratorios, trazabilidad ternaria y auditoría geométrica | Formaliza una célula especializada orientada a custodiar el diseño del SV, su DSL, sus laboratorios y su cadena visible de implementación. Su función es proteger coherencia documento–repositorio–laboratorio, prohibir semántica implícita y preservar U legítima mediante arquitectura celular pareada y compuertas conservadoras. |
-| 35 | 25/03/2026 | VII.5 — Enlace formal entre acumulaciones sucesivas en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.55f0e22d | Acumulaciones sucesivas, dato de enlace Λ, herencia estructural, memoria, reinicialización y enlace fuerte | Formaliza cuándo dos acumulaciones sucesivas pueden quedar enlazadas en el SV mediante un dato de enlace tipado Λ=(JΛ,ΘΛ,ΠΛ). Distingue separación completa, enlace débil, reinicialización pura, reinicialización con memoria y enlace fuerte. Su función dentro del SV es fijar cuándo existe herencia estructural trazable entre acumulaciones sin presumir continuidad ni imponer ruptura total por defecto. |
-| 34 | 25/03/2026 | VII.4 — Respuesta estructural, umbral, transición de régimen y preparación de células especializadas en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.300a3099 | Respuesta estructural, persistencia de transporte, umbral de ruptura, transición controlada y células especializadas | Fija la respuesta estructural del sistema ante un suceso de horizonte, disciplina el tránsito legítimo entre regímenes e introduce persistencia de transporte, umbral de ruptura y transición controlada. Su función dentro del SV es completar la familia VII tras cadenas y acumulación, dejando preparada la formalización posterior de células especializadas sin convertirla en implementación inmediata. |
-| 33 | 25/03/2026 | VII.3 — Cadenas, acumulación y regímenes de paso entre sucesos admisibles en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.6326ca96 | Sucesos admisibles, cadenas, acumulación y regímenes de paso | Desarrolla la lectura de cadenas, acumulación y regímenes de paso entre sucesos admisibles. Su función dentro del SV es precisar cómo una sucesión de modificaciones no se reduce a secuencia cronológica, sino que exige horizonte, admisibilidad, acumulación y régimen de tránsito. |
-| 32 | 25/03/2026 | Equivalencia parcial, preservación e invariancia local entre regímenes en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.9d3f0a9d | Equivalencia parcial, preservación local, transporte, invariancia y comparabilidad entre regímenes | Formaliza cuándo dos regímenes del Sistema Vectorial SV pueden compararse o declararse parcialmente equivalentes sin identidad global. Introduce propiedad relevante, preservación bajo transporte e invariancia local, y fija una tríada de resultados: no equivalencia, comparabilidad y equivalencia parcial. Su función dentro del SV es impedir tanto la equivalencia por semejanza narrativa como la incomparabilidad cuando existe base formal localizada. |
-| 31 | 23/03/2026 | VII.2 — Precedencia, compatibilidad y afectación entre sucesos admisibles en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.1f58d8a2 | Sucesos admisibles, precedencia, compatibilidad, afectación y condición necesaria | Formula una gramática relacional mínima entre sucesos admisibles: cuándo dos sucesos son comparables, cuándo uno afecta al otro y cuándo uno es condición necesaria del otro sobre el espacio ternario. Su función es evitar que la relación entre sucesos se cierre por mera contigüidad o por inferencia no declarada. |
-| 30 | 22/03/2026 | Teoría rigurosa del suceso admisible en el Sistema Vectorial SV. Doc VII.1 | https://doi.org/10.21428/39829d0b.1608c18c | Suceso admisible, horizonte declarado, tipado y modificación efectiva | Tipa el suceso admisible para que la modificación efectiva no dependa del mero transcurso, sino de comparecencia en horizonte declarado. Su función es impedir que la noción de suceso quede en prosa formal sin reglas de admisibilidad y trazabilidad. |
-| 29 | 22/03/2026 | Suceso local, suceso envolvente y reevaluación situacional en horizonte declarado en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.09daf43b | Suceso local, suceso envolvente, reevaluación situacional y horizonte declarado | Distingue suceso local, suceso envolvente y reevaluación situacional para explicar modificación efectiva sin tiempo fuerte. Su función es conservar la diferencia entre escala local, envolvente y reevaluación sin reabrir la semántica ni forzar cambios inmediatos en el lenguaje SV. |
-| 28 | 22/03/2026 | Documento VII.0 — Hacia una geometría eventivo-espacial sin tiempo propio: horizonte declarado, sucesos y reevaluación situacional en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.89e77c19 | Suceso admisible, horizonte declarado, reevaluación situacional y estructura eventivo-espacial | Abre la lectura eventivo-espacial del SV sin tiempo propio: el cambio no nace del transcurso, sino del suceso admisible en horizonte declarado. Su función es fijar el desplazamiento desde cambio por tiempo hacia cambio por suceso, horizonte y reevaluación. |
-| 27 | 21/03/2026 | Modelo formal de admisibilidad olfativa e indeterminación intermodal en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.51507a08 | Olfato, admisibilidad sensorial, indeterminación intermodal, captura, U y cierre ternario | Propone un modelo inicial de admisibilidad olfativa que distingue olfato ortonasal, retronasal y mezcla intermodal mediante comparecencia, captura, admisibilidad y cierre. Su función es abrir una interfaz primaria sensorial sin reducir olor, gusto, chemesthesis, textura o memoria a una clausura simplificada. |
-| 26 | 20/03/2026 | Primera forma legítima del frente de corpus observacional tipado del Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.d8304be4 | Artefacto externo, observación tipada, garantía, compuerta conservadora y objeto semántico consultable | Fija una forma legítima, estrecha y subordinada, para tratar artefactos externos complejos sin invadir la ontología primaria del SV. Su función es articular un par heterogéneo de observación y garantía mediante compuerta jerárquica conservadora, de modo que la entrega final solo comparezca cuando sea compatible con {0,1,U} o inadmisibilidad. |
-| 25 | 18/03/2026 | Pliego de condiciones del Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.bbcac925 | Condiciones de arquitectura, dependencias, garantías y límites de uso del Sistema Vectorial SV | Ordena condiciones, bloques funcionales, dependencias y límites de uso del SV como marco de trabajo. Su función es evitar mezclas de plano entre fundamentos, álgebra, agentes, interfaces y aplicaciones, preservando el control de trazabilidad y el rango de cada documento. |
-| 24 | 17/03/2026 | Semántica auditada en el Sistema Vectorial SV: formalización estructural basada en sucesos, transducción ternaria y clausura trazable | https://doi.org/10.21428/39829d0b.f471b07c | Semántica auditada, sucesos, captura, admisibilidad, transducción ternaria, consulta trazable y U | Formaliza una capa semántica auditada como interfaz entre dominio, representación ternaria, consulta formal y clausura estructural. Su función es establecer condiciones de entrada legítima, conservación honesta de la indeterminación y devolución trazable sin estadística, minería de datos, inferencia ni aprendizaje opaco. |
-| 23 | 17/03/2026 | Movilidad estructural y legitimidad de exposición en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.ff671563 | Movilidad estructural, legitimidad de exposición, trayectoria interna, frontera y predicado verificable | Formula una condición de frontera para decidir cuándo una trayectoria interna legítimamente constituida puede exponerse externamente sin violar invariantes del SV. Su función es fijar un requisito mínimo de legitimidad de exposición, no una teoría de acción ni un modelo de ejecución física. |
-| 22 | 17/03/2026 | Formalización de una interfaz visual estructurada en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.b96fee32 | Interfaz visual, configuración visible acotada, cadena algebraica de entrada y legitimidad estructural | Formaliza una interfaz visual estructurada para el SV. Su función es fijar la cadena mínima por la cual una configuración visible acotada puede adquirir legitimidad algebraica dentro del sistema, sin proponer una teoría opaca de la percepción. |
-| 21 | 16/03/2026 | Transiciones estructurales y trayectorias de la U en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.10e10f96 | U, trayectoria estructural, dinámica celular, indeterminación honesta y evolución discreta | Formaliza la trayectoria estructural de U como evolución celular sin alterar la terna propia. Su función dentro del SV es permitir lectura dinámica de la indeterminación honesta, distinguiendo tránsito estructural de probabilidad, mezcla o cierre instantáneo. |
-| 20 | 16/03/2026 | Análisis del comportamiento geométrico del polígono del Sistema Vectorial SV: del plano cartesiano a una carta espacial afín auxiliar como vía de razonamiento para situaciones complejas | https://doi.org/10.21428/39829d0b.ed3fec53 | Representación polar, carta auxiliar en ℝ³, U elevada, métricas discretas e invariantes geométricos | Propone una carta auxiliar en ℝ³ que separa geométricamente U del plano de determinación sin alterar la semántica ternaria. Su función es proporcionar métricas discretas para analizar configuraciones complejas de indeterminación, con criterios de falsación y estabilidad. |
-| 19 | 14/03/2026 | Origen de fundamentos, definición y alcance de la U en el Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.f433065f | U, no determinación actual, indeterminación honesta, condiciones de uso y trazabilidad | Fija el origen, definición, alcance estructural y condiciones de uso legítimo de U como signo propio de no determinación actual. Su función es impedir que U se lea como probabilidad, error, mezcla, indecisión o refugio retórico, y consolidar su uso transversal en matemáticas, lenguaje de computación y agentes. |
-| 18 | 14/03/2026 | Desde la terna (0, 1, U) hasta la nueva frontera (0, 1, U, 0-1) | https://doi.org/10.21428/39829d0b.8d2afb11 | Terna {0,1,U}, genealogía de la U, frontera 0-1, no pertenencia al régimen binario y prudencia de adopción | Sitúa históricamente el tercer valor y precisa la singularidad de U dentro del SV como no determinación actual. Abre además la hipótesis de una frontera 0-1 como posible no pertenencia al régimen binario aplicable, sin alterar la terna propia. Su función dentro del SV es delimitar con precisión la diferencia entre U como problema de cierre epistémico y 0-1 como cuestión de frontera de régimen todavía no incorporada al núcleo. |
-| 17 | 11/03/2026 | Álgebra de composición intercelular — V. Invariantes, agentes especializados y operador de consulta del sistema | https://doi.org/10.21428/39829d0b.82f5fca3 | Invariantes, agentes especializados, operador de consulta, justificación, criticidad y U | Formaliza cómo el SV se especializa por dominios y agentes sin perder invariantes e introduce el operador de consulta como mecanismo trazable para obtener respuestas, justificación, control de criticidad y conservación de U. |
-| 16 | 11/03/2026 | Álgebra de composición intercelular del marco SV — VI. Análisis discreto, representaciones y herramientas de secuencias del sistema | https://doi.org/10.21428/39829d0b.aea6660b | Análisis discreto, diferencia finita, funciones generatrices, transformada Z, grafo de composición y codificaciones | Desarrolla herramientas matemáticas propias del SV en el dominio discreto: diferencia finita, taxonomía asintótica, funciones generatrices del espacio combinatorio, transformada Z de secuencias propias, álgebra lineal del grafo de composición y codificaciones. |
-| 15 | 11/03/2026 | Álgebra de composición intercelular del marco SV — IV. Transducción al alfabeto ternario e interfaz paramétrica del sistema | https://doi.org/10.21428/39829d0b.5c31d534 | Transducción a Σ={0,1,U}, dominio observacional tipado, sensor, admisibilidad, ternarización e interfaz paramétrica | Formaliza cómo una magnitud del mundo entra legítimamente en el SV mediante captura, admisibilidad, transducción a {0,1,U}, interfaz paramétrica y U silenciosa. Su función es cerrar el eslabón que los documentos I-III presuponen: la conversión auditable del mundo exterior en valores ternarios tratables por célula, frame y trayectoria. |
-| 14 | 11/03/2026 | Álgebra de composición intercelular del marco SV — III. Horizonte de sucesos y reevaluación discreta | https://doi.org/10.21428/39829d0b.bb86c65d | Horizonte de sucesos, frame propio, dato de transición, operador inducido, trayectoria y criticidad | Formaliza la reevaluación discreta de una arquitectura compositiva cuando comparecen sucesos declarados en su horizonte propio. Su función es separar suceso y tiempo, organizar trayectorias append-only y expresar el cambio de criticidad entre frames sin introducir tiempo como primitiva. |
-| 13 | 11/03/2026 | Álgebra de composición intercelular del marco SV — II. Gramática general de composición | https://doi.org/10.21428/39829d0b.71aa1aa4 | Gramática tipada de composición, relación semántica previa, patrones compositivos y escala de madurez formal | Eleva la composición intercelular desde el patrón de transmisión en serie hacia una gramática tipada de patrones compositivos. Su función es exigir relación semántica previa antes de elegir mecanismo algebraico, distinguir relación, patrón, operador y constructor, y fijar condiciones de validez para composición multinivel. |
-| 12 | 10/03/2026 | Álgebra de composición intercelular del marco SV — I. Transmisión en serie por parámetro puente | https://doi.org/10.21428/39829d0b.399c03b0 | Composición intercelular, parámetro puente, grafo dirigido, determinismo y trazabilidad | Formaliza el primer patrón compositivo concreto del marco SV: la transmisión en serie por parámetro puente, con célula acoplable, grafo dirigido y composición trazable. Su función es abrir la teoría de composición intercelular desde un patrón material de cierre alto. |
-| 11 | 09/03/2026 | Fundamentos algebraico-semánticos del Sistema Vectorial SV | https://doi.org/10.21428/39829d0b.b0cf9a13 | Gramática algebraica ternaria, célula exacta, representación polar, indeterminación y composición tipada | Fija la gramática algebraico-semántica ternaria del SV y transforma parámetros explícitos en células e imágenes polares auditables. Su función es dar base formal al uso de la terna {0,1,U}, la composición tipada, la representación polar y la preservación del juicio humano frente a opacidad computacional. |
-| 10 | 07/03/2026 | La guía práctica del conocimiento profundo y la crítica de la razón pura | https://doi.org/10.21428/39829d0b.a2c17dcf | SVcustos, SVperitus, fundamentos algebraicos, CNN, plano clínico, RGPD, humanoides y adopción por fases | Actúa como guía fundacional-contextual del proyecto SVcustos+SVperitus, articulando fundamentos algebraicos, plano clínico, uso de CNN, garantías jurídicas y adopción por fases. Su función dentro del inventario es conservar el origen programático de la línea de agentes y células aplicadas, sin elevarla a fundamento matemático nuclear del SV. |
-| 9 | 07/03/2026 | Compilador de fundamentos y célula meta SV(9,3)-IA | https://doi.org/10.21428/39829d0b.3d7a0dce | Compilador de serie, célula meta SV(9,3)-IA, composición interdominio, cadena de responsabilidad y cierre algebraico | Cierra la serie SVcustos–SVperitus mediante un compilador que integra los documentos anteriores, formaliza la célula meta SV(9,3)-IA y articula composición interdominio, humanoides, cíborg, cadena de responsabilidad y revisión de principios de gobernanza de IA. Su función en el inventario es conservar el cierre algebraico y editorial de la serie. |
-| 8 | 05/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: IMMUNO-1 — Profilaxis infecciosa y vacunación · Célula SV(25,5) | https://doi.org/10.21428/39829d0b.272c2f67 | Inmunología, profilaxis infecciosa, vacunación, neoplasias hematológicas, célula SV(25,5), motor normativo y polígono polar | Instancia SVperitus en el dominio de profilaxis infecciosa y vacunación en adultos con neoplasias hematológicas e inmunosupresión. Su función es demostrar el tránsito desde la gramática ternaria de seguridad SVcustos hacia un agente experto aplicado, con célula SV(25,5), motor normativo, repositorio técnico y demo ejecutable. |
-| 7 | 04/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: n = 25 ➔ n = 36 | https://doi.org/10.21428/39829d0b.541d2648 | SVcustos, n=36, tercera extensión paramétrica, 6 capas de 6, integridad del sistema, autenticación e identidad, comunicaciones y evasión | Extiende SVcustos desde n=25 a n=36, reorganizando el sistema en seis capas de seis parámetros e incorporando once parámetros nuevos que cubren autenticación, identidad, comunicaciones activas, evasión forense y cobertura avanzada del ciclo de amenaza. Su función es cerrar la tercera extensión paramétrica del sistema antes de las células en par y de la extensión n=49, conservando la regla estricta de clasificación con umbral n₁≥28. |
-| 6 | 04/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: Células SV en Par: n = 36 + 9 = 45 | https://doi.org/10.21428/39829d0b.3ddc5ece | Células SV en par, SV(36,6), SV(9,3), composición ternaria y frontera de 36+9 parámetros | Introduce las células SV en par mediante combinación de SV(36,6) y SV(9,3), con regla ternaria algebraica SV(par)=max(SV36,SV9), tabla de composición y frontera práctica de 36+9 parámetros. Su función es abrir un régimen compositivo para entornos críticos y médicos sin confundir agregación de células con nuevo fundamento algebraico. |
-| 5 | 04/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus. De n = 36 a n = 49: extensión para entornos gestionados y médicos | https://doi.org/10.21428/39829d0b.345e290d | SVcustos, n=49, capa MDM, entornos gestionados, entornos médicos, umbral T(n) y cumplimiento normativo | Extiende SVcustos a n=49=7² parámetros, reorganizados en siete capas temáticas y orientados a entornos gestionados, corporativos y médicos. Su función es fijar la frontera de despliegue donde la célula SV(49,7) resulta preferente frente al par SV(36,6)+SV(9,3), bajo trazabilidad y cumplimiento normativo externo. |
-| 4 | 03/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: n = 16 ➔ n = 25 | https://doi.org/10.21428/39829d0b.89714232 | SVcustos, n=25, dataset sintético, polígono polar, ResNet34, regla de clasificación y segunda extensión paramétrica | Extiende SVcustos desde n=16 a n=25, reorganizando la célula en cinco capas de cinco parámetros y ampliando los vectores de amenaza. Su función es consolidar la segunda extensión paramétrica del sistema, con dataset sintético, generación de polígonos polares y clasificación por ResNet34 bajo regla estricta. |
-| 3 | 03/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: agentes especializados. De n = 9 ➔ n = 16: primera extensión del espacio paramétrico | https://doi.org/10.21428/39829d0b.5beeba7c | SVcustos, n=16, primera extensión paramétrica, regla T(n), imagen polar y ResNet34 | Extiende el nivel base de n=9 a n=16, incorpora siete parámetros nuevos, formaliza la regla general de umbral T(n)=⌊7n/9⌋ y enlaza el dataset público sintético. Su función es estabilizar la primera extensión paramétrica auditable de SVcustos. |
-| 2 | 02/03/2026 | De SVcustos, el marco de intrusión, hasta SVperitus: agentes especializados | https://doi.org/10.21428/39829d0b.798b68e2 | SVcustos, nivel base, n=9, vector ternario, polígono polar, clasificación de intrusión y topologías de despliegue | Define el nivel base de SVcustos con n=9 parámetros ternarios, restricción n=b², transformación polar, familias de dispositivos, topologías de despliegue y clasificación en intrusión, indeterminado o normal. Su función es fijar el origen operativo de la serie SVcustos–SVperitus. |
-| 1 | 24/07/2021 | Framework basado en imágenes parametrizadas sobre ResNet para identificar intrusiones en smartwatches u otros dispositivos afines | https://doi.org/10.21428/39829d0b.981b7276 | Documento técnico antecedente de SVcustos: vector ternario, imagen poligonal polar y clasificación de intrusión | Conserva el antecedente técnico directo de SVcustos: codificación de parámetros ternarios, representación poligonal polar y clasificación mediante arquitectura residual. Su inclusión se limita a su relación material con la serie SVcustos-SVperitus y no habilita la incorporación de publicaciones generales de inteligencia artificial, docencia o programación. |
+Esta publicación conserva el inventario, la trazabilidad y las
+relaciones editoriales de las publicaciones del Sistema Vectorial SV.
+Cada registro identifica una publicación individual, su fecha, su DOI,
+el dominio SV en el que opera y la función que cumple dentro del
+sistema.
+
+## **Tabla matriz del inventario**
+
++---+------+-------------------+---+------------------+------------------------+
+| * | *    | **Título**        | * | **Dominio SV**   | **Función dentro del   |
+| * | *Fec |                   | * |                  | SV**                   |
+| N | ha** |                   | D |                  |                        |
+| . |      |                   | O |                  |                        |
+| º |      |                   | I |                  |                        |
+| * |      |                   | * |                  |                        |
+| * |      |                   | * |                  |                        |
++===+======+===================+===+==================+========================+
+| 1 | 06   | Núcleo de ε-Atlas | < | Núcleo de        | Desciende la cadena de |
+| 0 | /07/ | y contraste de    | h | cadena, descenso | proporcionalidad un    |
+| 4 | 2026 | precisión de masa | t | de cadena,       | peldaño por debajo de  |
+|   |      | y densidad: NASA  | t | ventana orbital  | ε-Atlas y determina su |
+|   |      | redondea; el      | p | Tierra-Luna/Tier | predecesor de cadena,  |
+|   |      | Sistema Vectorial | s | ra-Sol,          | el núcleo de ε-Atlas,  |
+|   |      | SV formaliza      | : | recomposición,   | por inversión de la    |
+|   |      |                   | / | contraste de     | ventana orbital        |
+|   |      |                   | / | precisión de     | inferior               |
+|   |      |                   | d | masa y densidad, | Tierra-Luna/Tierra-Sol |
+|   |      |                   | o | redondeo         | y no de la Constante   |
+|   |      |                   | i | externo,         | Descartes. Declara su  |
+|   |      |                   | . | publicación      | masa y su radio como   |
+|   |      |                   | o | adscrita         | determinación formal   |
+|   |      |                   | r |                  | por cadena, contrasta  |
+|   |      |                   | g |                  | la forma M = (4π/3)R³ρ |
+|   |      |                   | / |                  | sobre dieciocho        |
+|   |      |                   | 1 |                  | cuerpos del Sistema    |
+|   |      |                   | 0 |                  | Solar con datos de JPL |
+|   |      |                   | . |                  | y NASA, y recoge una   |
+|   |      |                   | 2 |                  | corrección de las      |
+|   |      |                   | 1 |                  | entradas de contraste  |
+|   |      |                   | 4 |                  | lunar de su            |
+|   |      |                   | 2 |                  | publicación de         |
+|   |      |                   | 8 |                  | adscripción.           |
+|   |      |                   | / |                  | Publicación hija de la |
+|   |      |                   | 3 |                  | Fórmula universal de   |
+|   |      |                   | 9 |                  | la masa.               |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 06   | Fórmula universal | < | Forma universal  | Fija la masa de un     |
+| 0 | /07/ | de la masa y      | h | de la masa,      | dominio esférico como  |
+| 3 | 2026 | proporcionalidad  | t | densidad de      | M = (4π/3)R³ρ y la     |
+|   |      | por herencia-desc | t | dominio, cadena  | proyecta por una       |
+|   |      | endencia: radio,  | p | de               | cadena de              |
+|   |      | densidad de       | s | proporcionalidad | proporcionalidad que   |
+|   |      | dominio, ε-Atlas, | : | por herencia-des | enlaza ε-Atlas con el  |
+|   |      | Universo Versal y | / | cendencia,       | Universo Versal y el   |
+|   |      | Universo Capital  | / | ε-Atlas,         | Universo Capital,      |
+|   |      |                   | d | Universo Versal, | mediante constantes    |
+|   |      |                   | o | Universo         | derivadas de una       |
+|   |      |                   | i | Capital,         | escalera orbital       |
+|   |      |                   | . | escalera         | anidada. Distingue     |
+|   |      |                   | o | orbital,         | tres regímenes de      |
+|   |      |                   | r | constantes de    | determinación          |
+|   |      |                   | g | escala,          | —contraste de          |
+|   |      |                   | / | regímenes de     | consistencia, anclaje  |
+|   |      |                   | 1 | determinación    | cosmológico y          |
+|   |      |                   | 0 |                  | determinación por      |
+|   |      |                   | . |                  | cadena— y declara las  |
+|   |      |                   | 2 |                  | masas envolventes como |
+|   |      |                   | 1 |                  | determinación formal   |
+|   |      |                   | 4 |                  | por cadena, no como    |
+|   |      |                   | 2 |                  | medición instrumental  |
+|   |      |                   | 8 |                  | externa.               |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 02   | NASA redondea; el | < | Clausura         | Clausura la Trilogía   |
+| 0 | /07/ | Sistema Vectorial | h | humanoide,       | Exocósmica en el       |
+| 2 | 2026 | SV formaliza —    | t | sujeto de        | sujeto que lee.        |
+|   |      | Trilogía          | t | tránsito, doble  | Formaliza el humanoide |
+|   |      | Exocósmica, Parte | p | cara y doble     | Watson como sujeto de  |
+|   |      | III (λ):          | s | terreno, Recta   | tránsito, de doble     |
+|   |      | humanoide         | : | Atlas,           | cara y doble terreno,  |
+|   |      |                   | / | autogobierno     | que recibe la cadena   |
+|   |      |                   | / | topológico,      | cerrada, la Recta      |
+|   |      |                   | d | medida del       | Atlas, el autogobierno |
+|   |      |                   | o | potencial, terna | topológico y el        |
+|   |      |                   | i | {0,1,U}, traza   | sistema de medida del  |
+|   |      |                   | . | auditable,       | potencial. Su núcleo   |
+|   |      |                   | o | operador de      | operativo es la        |
+|   |      |                   | r | cierre           | transducción entre la  |
+|   |      |                   | g |                  | terna {0,1,U}, frame,  |
+|   |      |                   | / |                  | suceso y traza         |
+|   |      |                   | 1 |                  | auditable, con         |
+|   |      |                   | 0 |                  | subordinación humana,  |
+|   |      |                   | . |                  | U como no clausura     |
+|   |      |                   | 2 |                  | honesta y operador de  |
+|   |      |                   | 1 |                  | cierre Δ_hum^SV.       |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 30   | NASA redondea; el | < | Cierre           | Cierra                 |
+| 0 | /06/ | Sistema Vectorial | h | estructural de   | estructuralmente la    |
+| 1 | 2026 | SV formaliza —    | t | cadena,          | cadena exocósmica.     |
+|   |      | Trilogía          | t | constante        | Recibe R_ε, R_V, R_C,  |
+|   |      | Exocósmica, Parte | p | longitudinal de  | la Constante ñ y la    |
+|   |      | III (μ)           | s | cadena, retorno  | terna de escala sin    |
+|   |      |                   | : | directo y por    | recálculo; compone la  |
+|   |      |                   | / | tramos,          | constante longitudinal |
+|   |      |                   | / | residuales, no i | de cadena; demuestra   |
+|   |      |                   | d | ntercambiabilida | el retorno directo y   |
+|   |      |                   | o | d, no arrastre   | por tramos del         |
+|   |      |                   | i | dinámico,        | Universo Capital al    |
+|   |      |                   | . | Teorema de       | dominio observable;    |
+|   |      |                   | o | Unicidad Capital | distingue residuales;  |
+|   |      |                   | r |                  | y fija los controles   |
+|   |      |                   | g |                  | de no                  |
+|   |      |                   | / |                  | intercambiabilidad, no |
+|   |      |                   | 1 |                  | arrastre dinámico y el |
+|   |      |                   | 0 |                  | Teorema de Unicidad    |
+|   |      |                   | . |                  | Capital.               |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 30   | NASA redondea; el | < | Tránsito         | Formula el tránsito    |
+| 0 | /06/ | Sistema Vectorial | h | Versal→Capital,  | desde el Universo      |
+| 0 | 2026 | SV formaliza —    | t | Nodo Central     | Versal hacia el        |
+|   |      | Trilogía          | t | Capital, Sistema | Universo Capital.      |
+|   |      | Exocósmica, Parte | p | ñ, Constante ñ,  | Desarrolla el          |
+|   |      | II (λ)            | s | radio-superficie | pre-Capital, el        |
+|   |      |                   | : | -volumen del     | proto-Capital, el Nodo |
+|   |      |                   | / | Capital, herenci | Central Capital, el    |
+|   |      |                   | / | a-descendencia   | Sistema ñ y la         |
+|   |      |                   | d | exocósmica,      | Constante ñ; determina |
+|   |      |                   | o | colateralidad,   | el radio, la longitud, |
+|   |      |                   | i | co-descendencia  | la superficie y el     |
+|   |      |                   | . |                  | volumen capitales; y   |
+|   |      |                   | o |                  | establece la           |
+|   |      |                   | r |                  | herencia-descendencia  |
+|   |      |                   | g |                  | exocósmica, la         |
+|   |      |                   | / |                  | colateralidad, la      |
+|   |      |                   | 1 |                  | co-descendencia y la   |
+|   |      |                   | 0 |                  | relación Capital →     |
+|   |      |                   | . |                  | Versal → ε-Atlas.      |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 30   | NASA redondea; el | < | Orbitalidad de   | Desarrolla la          |
+| 9 | /06/ | Sistema Vectorial | h | ε-Atlas,         | orbitalidad de         |
+|   | 2026 | SV formaliza —    | t | Constante        | ε-Atlas. Recibe el     |
+|   |      | Trilogía          | t | Descartes,       | radio exocósmico,      |
+|   |      | Exocósmica, Parte | p | Transductor      | aplica la Constante    |
+|   |      | II (μ)            | s | SV16-Pi, radio-s | Descartes y el         |
+|   |      |                   | : | uperficie-volume | Transductor SV16-Pi, y |
+|   |      |                   | / | n del Universo   | determina el radio, la |
+|   |      |                   | / | Versal, órbita   | superficie, el volumen |
+|   |      |                   | d | suprasistémica,  | y la órbita            |
+|   |      |                   | o | retornos         | suprasistémica del     |
+|   |      |                   | i | metrológicos     | Universo Versal. Fija  |
+|   |      |                   | . |                  | el sistema exocósmico  |
+|   |      |                   | o |                  | de primer orden y sus  |
+|   |      |                   | r |                  | retornos metrológicos, |
+|   |      |                   | g |                  | sin anticipar el       |
+|   |      |                   | / |                  | cierre capital         |
+|   |      |                   | 1 |                  | reservado a λ.         |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 26   | NASA redondea; el | < | Lectura          | Abre la Trilogía       |
+| 8 | /06/ | Sistema Vectorial | h | exocósmica,      | Exocósmica desde el    |
+|   | 2026 | SV formaliza —    | t | Patrón Ómicron,  | dominio-universo       |
+|   |      | Trilogía          | t | ε-Atlas, radio   | físico realizado.      |
+|   |      | Exocósmica, Parte | p | estructural      | Formaliza el tránsito  |
+|   |      | I                 | s | exocósmico,      | de Ωobs hacia ε-Atlas, |
+|   |      |                   | : | frontera etaria, | introduce el Patrón    |
+|   |      |                   | / | nodo versal,     | Ómicron y fija el      |
+|   |      |                   | / | Universo Versal, | radio estructural      |
+|   |      |                   | d | órbita           | exocósmico, la         |
+|   |      |                   | o | suprasistémica,  | frontera etaria, el    |
+|   |      |                   | i | pivotación axial | nodo versal, el        |
+|   |      |                   | . |                  | Universo Versal de     |
+|   |      |                   | o |                  | primer orden, la       |
+|   |      |                   | r |                  | órbita suprasistémica  |
+|   |      |                   | g |                  | y la pivotación axial  |
+|   |      |                   | / |                  | del dominio-universo   |
+|   |      |                   | 1 |                  | que habitamos.         |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 22   | Orientación       | < | Orientación,     | Formula la orientación |
+| 7 | /06/ | universal y       | h | potencial del    | como tránsito formal   |
+|   | 2026 | geográfica,       | t | suceso, interfaz | entre dominio,         |
+|   |      | potencial del     | t | de dominio,      | interfaz, potencial    |
+|   |      | suceso e interfaz | p | seres biológicos | del suceso,            |
+|   |      | de dominio desde  | s | y humanoide      | trayectoria, residual  |
+|   |      | el Universo y los | : |                  | y retorno. Sitúa al    |
+|   |      | seres biológicos: | / |                  | humanoide como soporte |
+|   |      | humanoide         | / |                  | técnico orientable, no |
+|   |      |                   | d |                  | como origen de la      |
+|   |      |                   | o |                  | cadena, y vincula      |
+|   |      |                   | i |                  | Universo, seres        |
+|   |      |                   | . |                  | biológicos y humano    |
+|   |      |                   | o |                  | bajo condiciones de    |
+|   |      |                   | r |                  | dominio declarado y    |
+|   |      |                   | g |                  | transducción           |
+|   |      |                   | / |                  | orientativa.           |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 18   | Contraste de      | < | Contraste etario | Contrasta el redondeo  |
+| 6 | /06/ | precisión etaria  | h | solar, retorno   | divulgativo externo    |
+|   | 2026 | solar SV--NASA:   | t | externo, dominio | sobre el tránsito      |
+|   |      | NASA redondea; el | t | cosmofísico y    | solar con la           |
+|   |      | Sistema Vectorial | p | formalización SV | formalización SV       |
+|   |      | SV formaliza      | s | frente a         | basada en dominio,     |
+|   |      |                   | : | redondeo externo | origen, retorno        |
+|   |      |                   | / |                  | externo y precisión    |
+|   |      |                   | / |                  | etaria. Funciona como  |
+|   |      |                   | d |                  | publicación de lectura |
+|   |      |                   | o |                  | pública y técnica      |
+|   |      |                   | i |                  | sobre la diferencia    |
+|   |      |                   | . |                  | entre dato externo     |
+|   |      |                   | o |                  | redondeado y           |
+|   |      |                   | r |                  | formalización SV.      |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 16   | Radio, frontera y | < | Cosmometría SV,  | Desarrolla la tercera  |
+| 5 | /06/ | densidad del      | h | constante        | parte cosmológica:     |
+|   | 2026 | universo          | t | cosmológica,     | radio, frontera,       |
+|   |      | observable ---    | t | radio comóvil,   | densidad del universo  |
+|   |      | Trilogía          | p | frontera,        | observable, lectura no |
+|   |      | Cosmológica,      | s | densidad,        | sustancial de materia  |
+|   |      | Parte III         | : | materia oscura   | oscura y energía       |
+|   |      |                   | / | no sustancial y  | oscura como curvatura  |
+|   |      |                   | / | energía oscura   | ciclo-distancial.      |
+|   |      |                   | d | como curvatura   | Integra retornos de    |
+|   |      |                   | o | ciclo-distancial | Parte I y Parte II y   |
+|   |      |                   | i |                  | conserva la separación |
+|   |      |                   | . |                  | entre dominio          |
+|   |      |                   | o |                  | observable, frontera y |
+|   |      |                   | r |                  | Totalidad.             |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 15   | Recta-Ómicron     | < | Cosmometría      | Determina el brazo     |
+| 4 | /06/ | (Lanzadera) ---   | h | situada, brazo   | fronterizo etario del  |
+|   | 2026 | Trilogía          | t | fronterizo       | universo observable    |
+|   |      | Cosmológica,      | t | etario,          | retornado desde la     |
+|   |      | Parte II          | p | Lanzadera        | Tierra mediante la     |
+|   |      |                   | s | Ómicron y        | cadena de Lanzadera    |
+|   |      |                   | : | frontera del     | Ómicron. Su función es |
+|   |      |                   | / | universo         | separar acceso,        |
+|   |      |                   | / | observable       | frontera, radio        |
+|   |      |                   | d | retornado        | auxiliar y retorno     |
+|   |      |                   | o |                  | situado, sin confundir |
+|   |      |                   | i |                  | observador, origen y   |
+|   |      |                   | . |                  | frontera cosmológica.  |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 15   | Determinación del | < | Cosmometría SV,  | Fija la primera parte  |
+| 3 | /06/ | radio, la         | h | radio            | de la Trilogía         |
+|   | 2026 | superficie y el   | t | estructural,     | Cosmológica mediante   |
+|   |      | volumen del       | t | superficie,      | el cálculo del radio   |
+|   |      | Universo ---      | p | volumen,         | estructural,           |
+|   |      | Trilogía          | s | constante        | superficie y volumen   |
+|   |      | Cosmológica,      | : | cosmológica y    | del universo           |
+|   |      | Parte I           | / | retorno          | observable bajo        |
+|   |      |                   | / | metrológico      | retorno metrológico y  |
+|   |      |                   | d |                  | separación expresa del |
+|   |      |                   | o |                  | radio comóvil externo. |
+|   |      |                   | i |                  | Actúa como base de     |
+|   |      |                   | . |                  | cálculo para las       |
+|   |      |                   | o |                  | partes II y III.       |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 11   | Directed          | < | Química factual, | Ordena la búsqueda     |
+| 2 | /06/ | determination of  | h | ciencia de       | dirigida de SV-399_Ψ   |
+|   | 2026 | the chemical      | t | materiales,      | mediante restricción   |
+|   |      | element SV-399    | t | SV-399_Ψ,        | regional,              |
+|   |      | --- Actinium      | p | restricción      | geológico-mineralógica |
+|   |      | (Ac) + 3          | s | regiona          | y analítica previa al  |
+|   |      | Oganesson (Og) +  | : | l-metalogenética | ensayo material. Sitúa |
+|   |      | Tungsten/Wolfram  | / | y admisibilidad  | España y Portugal como |
+|   |      | (W): Spain and    | / | geológica previa | núcleo técnico de      |
+|   |      | Portugal as       | d |                  | partida, sin declarar  |
+|   |      | priority          | o |                  | hallazgo ni            |
+|   |      | prospecting       | i |                  | reconocimiento         |
+|   |      | targets           | . |                  | ordinario de elemento  |
+|   |      |                   | o |                  | químico.               |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 09   | Determinación     | < | Química factual, | Formula la             |
+| 1 | /06/ | dirigida del      | h | ciencia de       | determinación matriz   |
+|   | 2026 | elemento químico  | t | materiales,      | de SV-399_Ψ a partir   |
+|   |      | SV-399. ---       | t | SV-399_Ψ,        | de Actinio (Ac) + 3    |
+|   |      | Actinio (Ac) + 3  | p | microfronteras   | Oganesón (Og) +        |
+|   |      | Oganesón (Og) +   | s | actín            | Tungsteno/Wolframio    |
+|   |      | Tu                | : | ico-refractarias | (W), mediante rutas    |
+|   |      | ngsteno/Wolframio | / | y determinación  | convergentes de        |
+|   |      | (W)               | / | dirigida del     | aislamiento residual y |
+|   |      |                   | d | elemento químico | localización           |
+|   |      |                   | o |                  | ultraminoritaria en    |
+|   |      |                   | i |                  | microfronteras         |
+|   |      |                   | . |                  | actínico-refractarias. |
+|   |      |                   | o |                  | Su función dentro del  |
+|   |      |                   | r |                  | SV es fijar el         |
+|   |      |                   | g |                  | objetivo material y    |
+|   |      |                   | / |                  | analítico de la línea  |
+|   |      |                   | 1 |                  | SV-399, sin declarar   |
+|   |      |                   | 0 |                  | hallazgo empírico ni   |
+|   |      |                   | . |                  | reconocimiento         |
+|   |      |                   | 2 |                  | ordinario de elemento  |
+|   |      |                   | 1 |                  | químico.               |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 06   | Tabla periódica   | < | Química factual, | Articula el dominio    |
+| 0 | /06/ | estructural       | h | materiales       | térmico estructural    |
+|   | 2026 | extendida del     | t | extremos,        | K_Θ con elementos      |
+|   |      | dominio térmico   | t | dominio térmico  | principales, controles |
+|   |      | K_theta:          | p | estructural K_Θ  | adyacentes y           |
+|   |      | materiales por    | s | y elementos SV   | materiales por encima  |
+|   |      | encima de 4500 °C | : | extendidos       | de 4500 °C. Su función |
+|   |      |                   | / |                  | es construir un        |
+|   |      |                   | / |                  | dominio de contraste   |
+|   |      |                   | d |                  | térmico estructural,   |
+|   |      |                   | o |                  | con rango, controles y |
+|   |      |                   | i |                  | máximo declarado, sin  |
+|   |      |                   | . |                  | confundir estructura   |
+|   |      |                   | o |                  | SV con síntesis        |
+|   |      |                   | r |                  | material.              |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 06   | Adenda I.         | < | Dominio térmico  | Extiende de forma      |
+| 9 | /06/ | Extensión del     | h | K_Θ⁺, frontera   | subordinada el dominio |
+|   | 2026 | dominio térmico   | t | formal,          | térmico K_Θ más allá   |
+|   |      | K_Θ⁺ más allá de  | t | contraste        | de SV-443 mediante     |
+|   |      | SV-443:           | p | u                | umbrales térmicos,     |
+|   |      | crecimiento       | s | ltra-refractario | residuales, casos      |
+|   |      | transductivo,     | : | y ciencia de     | negativos y contraste  |
+|   |      | frontera formal y | / | materiales SV    | ultra-refractario, sin |
+|   |      | contraste         | / |                  | proclamar síntesis ni  |
+|   |      | ultra-refractario | d |                  | materiales realizados. |
+|   |      |                   | o |                  |                        |
+|   |      |                   | i |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 04   | Línea del Umbral  | < | Línea del        | Fija la lectura de la  |
+| 8 | /06/ | SV, circulación   | h | Umbral, igualdad | Línea del Umbral SV    |
+|   | 2026 | de retorno del    | t | polar,           | como referencia de     |
+|   |      | dominio-universo  | t | circulación de   | igualdad polar,        |
+|   |      | y átomo formal de | p | retorno,         | circulación de         |
+|   |      | ascendencia no    | s | dominio-universo | retorno, persistencia  |
+|   |      | agotada           | : | y persistencia   | y lectura atómica del  |
+|   |      |                   | / |                  | dominio-universo.      |
+|   |      |                   | / |                  | Permite distinguir     |
+|   |      |                   | d |                  | origen, umbral,        |
+|   |      |                   | o |                  | intensidad, potencial, |
+|   |      |                   | i |                  | retorno y frontera sin |
+|   |      |                   | . |                  | reducir el dominio a   |
+|   |      |                   | o |                  | geometría externa.     |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 03   | Vida y clausura   | < | Observables      | Formula una teoría de  |
+| 7 | /06/ | de los            | h | realizados, vida | la vida formal y       |
+|   | 2026 | observables       | t | formal de        | clausura de            |
+|   |      | realizados:       | t | instancia,       | observables            |
+|   |      | cuerpos,          | p | biología,        | realizados: toda       |
+|   |      | especies,         | s | especies,        | instancia exige        |
+|   |      | estrellas y       | : | estrellas,       | dominio, frontera,     |
+|   |      | frontera sutural  | / | frontera sutural | identidad, soporte,    |
+|   |      | del universo      | / | y retorno        | traza, residual y      |
+|   |      | observable como   | d |                  | retorno. Distingue     |
+|   |      | dominio físico    | o |                  | vida biológica de vida |
+|   |      | realizado         | i |                  | formal de instancia y  |
+|   |      |                   | . |                  | evita identificar      |
+|   |      |                   | o |                  | frontera sutural con   |
+|   |      |                   | r |                  | TODO/NADA, materia     |
+|   |      |                   | g |                  | oscura sustancial o    |
+|   |      |                   | / |                  | límite del espacio.    |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 01   | Raigal, apertura  | < | Raigal, apertura | Define el raigal como  |
+| 6 | /06/ | de imperfección y | h | de imperfección, | matriz de arraigo y    |
+|   | 2026 | horizonte de      | t | observables,     | retorno entre          |
+|   |      | retorno de los    | t | dominios,        | dominios. Ordena       |
+|   |      | observables -     | p | horizonte de     | proyecciones hacia     |
+|   |      | (Del arraigo      | s | retorno y        | termodinámica,         |
+|   |      | preproyectivo a   | : | proyección       | electromagnetismo,     |
+|   |      | la vida formal    | / | interdominio     | cosmología,            |
+|   |      | transducible de   | / |                  | física-química,        |
+|   |      | cuerpos,          | d |                  | biología y matemáticas |
+|   |      | especies,         | o |                  | SV sin sustituir los   |
+|   |      | estrellas y       | i |                  | transductores          |
+|   |      | d                 | . |                  | concretos de cada      |
+|   |      | ominios-universo) | o |                  | dominio.               |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 31   | Vida y clausura   | < | Clausura de      | Formula una lectura de |
+| 5 | /05/ | de los universos  | h | observables,     | la vida y clausura de  |
+|   | 2026 | y sus             | t | vida formal,     | observables como       |
+|   |      | observables -     | t | dominios         | continuidad entre      |
+|   |      | Humanos,          | p | recursivos y     | humanos, especies,     |
+|   |      | especies,         | s | lectura armónica | estrellas y dominios   |
+|   |      | estrellas y       | : |                  | recursivos, bajo       |
+|   |      | dominios          | / |                  | circularidad no        |
+|   |      | recursivos bajo   | / |                  | agotada y lectura      |
+|   |      | circularidad no   | d |                  | armónica. Su función   |
+|   |      | agotada y lectura | o |                  | en el SV es situar la  |
+|   |      | armónica por      | i |                  | persistencia y         |
+|   |      | Fourier           | . |                  | clausura de            |
+|   |      |                   | o |                  | observables sin        |
+|   |      |                   | r |                  | convertir la vida, la  |
+|   |      |                   | g |                  | especie o el dominio   |
+|   |      |                   | / |                  | en entidades aisladas  |
+|   |      |                   | 1 |                  | de su retorno y de su  |
+|   |      |                   | 0 |                  | trazabilidad.          |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 30   | Autogobierno      | < | Autogobierno,    | Distingue el plano     |
+| 4 | /05/ | topológico y      | h | comunicación     | local del potencial,   |
+|   | 2026 | comunicación      | t | estructural,     | donde P_D(e) permite   |
+|   |      | estructural de    | t | potencial local, | leer separación polar, |
+|   |      | observables en el | p | comparador       | diferencia entre       |
+|   |      | Universo físico   | s | global y dominio | sucesos, residual,     |
+|   |      | realizado         | : | realizado        | traza y retorno, del   |
+|   |      |                   | / |                  | plano global Φ(τ), que |
+|   |      |                   | / |                  | formaliza el           |
+|   |      |                   | d |                  | comparador con         |
+|   |      |                   | o |                  | realimentación del     |
+|   |      |                   | i |                  | dominio realizado bajo |
+|   |      |                   | . |                  | ε−0, convergencia      |
+|   |      |                   | o |                  | gobernada y            |
+|   |      |                   | r |                  | conservación de U.     |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 29   | Potencial de un   | < | Potencial del    | Formula el potencial   |
+| 3 | /05/ | suceso:           | h | suceso,          | de un suceso como      |
+|   | 2026 | comunicación      | t | eq               | magnitud estructural   |
+|   |      | estructural en el | t | uipotencialidad, | de separación polar    |
+|   |      | Universo físico   | p | diferencia       | dentro de un dominio.  |
+|   |      | realizado,        | s | polar, métrica,  | Distingue origen       |
+|   |      | e                 | : | transducción por | formal, equilibrio     |
+|   |      | quipotencialidad, | / | dominios y       | realizado, potencial   |
+|   |      | diferencia polar  | / | comunicación     | local, intensidad,     |
+|   |      | y métrica         | d | estructural      | diferencia entre       |
+|   |      |                   | o |                  | sucesos, identidad,    |
+|   |      |                   | i |                  | traza, métrica tipada, |
+|   |      |                   | . |                  | transducción por       |
+|   |      |                   | o |                  | dominios y             |
+|   |      |                   | r |                  | comunicación           |
+|   |      |                   | g |                  | estructural.           |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 27   | El origen         | < | Cosmología       | Establece la           |
+| 2 | /05/ | material          | h | material,        | continuidad H--He de   |
+|   | 2026 | ordinario del     | t | hidrógeno,       | la materia ordinaria   |
+|   |      | Universo          | t | helio, materia   | como problema de       |
+|   |      | observable y la   | p | ordinaria y      | tránsito entre         |
+|   |      | relación entre    | s | tránsito por     | dominios físicos,      |
+|   |      | física            | : | dominios         | cosmológicos, químicos |
+|   |      | contemporánea y   | / |                  | y biológicos. Su       |
+|   |      | el SV en el       | / |                  | función en el SV es    |
+|   |      | tránsito por      | d |                  | impedir que el         |
+|   |      | dominios: errores | o |                  | hidrógeno, el helio,   |
+|   |      | de plano,         | i |                  | la materia ordinaria o |
+|   |      | contraste entre   | . |                  | la tabla periódica     |
+|   |      | aparatos y        | o |                  | comparezcan como datos |
+|   |      | continuidad H--He | r |                  | aislados sin           |
+|   |      | de la materia     | g |                  | declaración de         |
+|   |      | ordinaria         | / |                  | dominio, frontera,     |
+|   |      |                   | 1 |                  | residual y retorno.    |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 25   | La materia oscura | < | Cosmología       | Formula la tesis de    |
+| 1 | /05/ | no existe como    | h | física, materia  | que la llamada materia |
+|   | 2026 | sustancia:        | t | oscura, densidad | oscura no designa una  |
+|   |      | demostración      | t | gravitatoria     | sustancia oculta, sino |
+|   |      | formal de nulidad | p | efectiva y       | una identificación     |
+|   |      | sustancial,       | s | sutura           | defectuosa del retorno |
+|   |      | densidad          | : |                  | gravitatorio de la     |
+|   |      | gravitatoria      | / |                  | capacidad estructural  |
+|   |      | efectiva de       | / |                  | del dominio físico     |
+|   |      | sutura y          | d |                  | realizado. Su función  |
+|   |      | contraste físico  | o |                  | en el SV es distinguir |
+|   |      | escalable         | i |                  | sustancia, retorno     |
+|   |      |                   | . |                  | gravitatorio, densidad |
+|   |      |                   | o |                  | efectiva, sutura y     |
+|   |      |                   | r |                  | contraste físico       |
+|   |      |                   | g |                  | escalable.             |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 22   | Campo y energía,  | < | Gravedad, masa,  | Reordena campo,        |
+| 0 | /05/ | génesis de la     | h | energía, campo,  | energía, masa,         |
+|   | 2026 | masa y definición | t | constante        | gravedad, constante    |
+|   |      | física de la      | t | cosmológica y    | gravitacional y        |
+|   |      | gravedad:         | p | dominio          | constante cosmológica  |
+|   |      | gravitación       | s | observable       | mediante dominio,      |
+|   |      | universal,        | : |                  | unidad, residual y     |
+|   |      | constante         | / |                  | retorno físico. Su     |
+|   |      | cosmológica y     | / |                  | función en el SV es    |
+|   |      | dominio           | d |                  | impedir que G, Λ, masa |
+|   |      | observable        | o |                  | o gravedad operen como |
+|   |      |                   | i |                  | magnitudes aisladas    |
+|   |      |                   | . |                  | sin transducción,      |
+|   |      |                   | o |                  | frontera y contraste.  |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 21   | Imperfección      | < | Fundamentos      | Fija ε−0 como          |
+| 9 | /05/ | preformal y       | h | preformales,     | condición preformal    |
+|   | 2026 | espacio: ε−0,     | t | primera          | anterior a la primera  |
+|   |      | primera           | t | d                | distinguibilidad,      |
+|   |      | distinguibilidad  | p | istinguibilidad, | formula la frontera de |
+|   |      | y dominio         | s | dominio de       | primera                |
+|   |      | estructural       | : | separación       | distinguibilidad y el  |
+|   |      | completo de       | / | factual          | dominio de separación  |
+|   |      | separación        | / | recorrible y     | factual recorrible. Su |
+|   |      | factual           | d | constitución del | función dentro del SV  |
+|   |      | recorrible        | o | espacio          | es impedir que         |
+|   |      |                   | i |                  | espacio, dominio,      |
+|   |      |                   | . |                  | separación o física    |
+|   |      |                   | o |                  | constituida se tomen   |
+|   |      |                   | r |                  | como supuestos         |
+|   |      |                   | g |                  | iniciales sin declarar |
+|   |      |                   | / |                  | la cadena de           |
+|   |      |                   | 1 |                  | admisibilidad que los  |
+|   |      |                   | 0 |                  | hace legibles.         |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 19   | Distancia         | < | Métrica de       | Formula una teoría de  |
+| 8 | /05/ | absoluta y        | h | observables,     | distancia absoluta y   |
+|   | 2026 | relativa entre    | t | totalidad,       | relativa entre         |
+|   |      | observables del   | t | horizonte, señal | observables,           |
+|   |      | Universo          | p | física y retorno | distinguiendo          |
+|   |      |                   | s | luminoso         | totalidad, horizonte y |
+|   |      |                   | : |                  | señal física. Su       |
+|   |      |                   | / |                  | función en el SV es    |
+|   |      |                   | / |                  | separar magnitud       |
+|   |      |                   | d |                  | externa, observable    |
+|   |      |                   | o |                  | declarado, origen      |
+|   |      |                   | i |                  | formal, distancia      |
+|   |      |                   | . |                  | relativa, residual y   |
+|   |      |                   | o |                  | retorno metrológico.   |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 16   | Proyecciones      | < | Biología,        | Formaliza lo biológico |
+| 7 | /05/ | biológicas de la  | h | célula,          | como observable fuerte |
+|   | 2026 | fibra             | t | mutación,        | del SV, con            |
+|   |      |                   | t | enfermedad,      | transducción, célula,  |
+|   |      |                   | p | cáncer,          | mutación, enfermedad,  |
+|   |      |                   | s | evolución y      | cáncer, evolución,     |
+|   |      |                   | : | muerte física    | muerte física y        |
+|   |      |                   | / |                  | diagnóstico acotado.   |
+|   |      |                   | / |                  | Su función es situar   |
+|   |      |                   | d |                  | la biología como       |
+|   |      |                   | o |                  | dominio material       |
+|   |      |                   | i |                  | formalizable, no como  |
+|   |      |                   | . |                  | analogía orgánica.     |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 15   | El agujero negro  | < | Cosmología       | Formula el agujero     |
+| 6 | /05/ | como cierre       | h | física,          | negro como cierre      |
+|   | 2026 | interno sin resto | t | horizonte,       | interno sin resto      |
+|   |      | exterior          | t | clausura interna | exterior formulable    |
+|   |      | formulable        | p | y no             | bajo dominio SV, con   |
+|   |      |                   | s | transmisibilidad | horizonte, no          |
+|   |      |                   | : |                  | transmisibilidad y     |
+|   |      |                   | / |                  | conservación de la     |
+|   |      |                   | / |                  | restricción de         |
+|   |      |                   | d |                  | lectura. Su función es |
+|   |      |                   | o |                  | impedir que el         |
+|   |      |                   | i |                  | horizonte se trate     |
+|   |      |                   | . |                  | como simple objeto     |
+|   |      |                   | o |                  | externo o como         |
+|   |      |                   | r |                  | metáfora sin dominio.  |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 14   | Edades relativas  | < | Edad física de   | Establece que la       |
+| 5 | /05/ | del universo      | h | observables      | totalidad absoluta no  |
+|   | 2026 | observable y de   | t | cosmológicos,    | tiene edad física,     |
+|   |      | sus objetos       | t | dominio,         | mientras sus           |
+|   |      | físicos           | p | frontera,        | observables sí pueden  |
+|   |      |                   | s | métrica y        | recibir edad bajo      |
+|   |      |                   | : | retorno          | dominio, frontera,     |
+|   |      |                   | / |                  | métrica y retorno. Su  |
+|   |      |                   | / |                  | función es impedir la  |
+|   |      |                   | d |                  | atribución             |
+|   |      |                   | o |                  | indiferenciada de edad |
+|   |      |                   | i |                  | al todo y fijar la     |
+|   |      |                   | . |                  | edad como propiedad de |
+|   |      |                   | o |                  | observables            |
+|   |      |                   | r |                  | declarados.            |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 10   | Catálogo de Pares | < | Química factual, | Clasifica pares        |
+| 4 | /05/ | Estructurales SV  | h | pares            | estructurales,         |
+|   | 2026 | (CPS-SV): enlace, | t | estructurales,   | enlaces, aleaciones y  |
+|   |      | aleación y        | t | enlace, aleación | compatibilidades desde |
+|   |      | compatibilidad    | p | y compatibilidad | los 118 elementos base |
+|   |      | posicional desde  | s | posicional       | hacia el dominio       |
+|   |      | los 118 elementos | : |                  | extendido. Su función  |
+|   |      | base hasta los    | / |                  | es fijar reglas de     |
+|   |      | 443 candidatos    | / |                  | compatibilidad         |
+|   |      | del dominio       | d |                  | material sin confundir |
+|   |      | extendido         | o |                  | admisibilidad          |
+|   |      |                   | i |                  | estructural con        |
+|   |      |                   | . |                  | predicción física no   |
+|   |      |                   | o |                  | declarada.             |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 08   | Análisis          | < | Química factual, | Extiende el dominio de |
+| 3 | /05/ | preliminar de     | h | tabla periódica  | la tabla periódica     |
+|   | 2026 | elementos         | t | estructural      | estructural hacia el   |
+|   |      | químicos,         | t | extendida,       | plano generativo       |
+|   |      | materiales y      | p | familias         | completo: familias     |
+|   |      | aleaciones de     | s | tipológicas,     | tipológicas, selección |
+|   |      | nueva generación  | : | generación       | de configuraciones     |
+|   |      | para usos médicos | / | prequímica y     | prequímicas y          |
+|   |      | y científicos:    | / | propiedades      | transición hacia los   |
+|   |      | Tabla periódica   | d | estructurales    | 443 elementos del      |
+|   |      | de los 325        | o |                  | catálogo. Su función   |
+|   |      | elementos nuevos  | i |                  | dentro del SV es       |
+|   |      | del SV, familias  | . |                  | constituir un dominio  |
+|   |      | tipológicas,      | o |                  | de búsqueda operatoria |
+|   |      | generación        | r |                  | para candidatos        |
+|   |      | prequímica,       | g |                  | químicos y materiales, |
+|   |      | criterios de      | / |                  | sin presentar las      |
+|   |      | transición y      | 1 |                  | magnitudes             |
+|   |      | propiedades       | 0 |                  | estructurales SV como  |
+|   |      | estructurales     | . |                  | mediciones empíricas.  |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | y |                  |                        |
+|   |      |                   | y |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | h |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 07   | Interacción,      | < | Interacción      | Articula interacción,  |
+| 2 | /05/ | intercomposición  | h | entre campos,    | intercomposición y     |
+|   | 2026 | y transmisión     | t | i                | transmisión factual    |
+|   |      | factual entre     | t | ntercomposición, | entre campos como      |
+|   |      | campos en el      | p | transmisión      | operaciones propias    |
+|   |      | Sistema Vectorial | s | factual,         | distintas, sin mezcla  |
+|   |      | SV                | : | distancia        | libre, simetría        |
+|   |      |                   | / | factual fibrosa  | conmutativa por        |
+|   |      |                   | / | y célula         | defecto ni             |
+|   |      |                   | d | SV(36,6)         | probabilidad fundante. |
+|   |      |                   | o |                  | Su función es fijar    |
+|   |      |                   | i |                  | condiciones de paso    |
+|   |      |                   | . |                  | entre campos           |
+|   |      |                   | o |                  | conservando célula,    |
+|   |      |                   | r |                  | trayectoria, frontera, |
+|   |      |                   | g |                  | distancia factual,     |
+|   |      |                   | / |                  | residual y dictamen.   |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 05   | Génesis del       | < | Hidrógeno, masa, | Fija el hidrógeno como |
+| 1 | /05/ | hidrógeno y       | h | frontera,        | caso propio de         |
+|   | 2026 | teoría de la      | t | persistencia     | persistencia           |
+|   |      | persistencia      | t | energética       | estructural bajo masa, |
+|   |      | energética        | p | estructural e    | frontera, residual,    |
+|   |      | estructural:      | s | identidad física | identidad física y     |
+|   |      | masa, frontera,   | : |                  | compatibilidad         |
+|   |      | residual e        | / |                  | operatoria. Su función |
+|   |      | identidad física  | / |                  | es conectar            |
+|   |      | bajo              | d |                  | continuidad material,  |
+|   |      | compatibilidad    | o |                  | régimen H--He y        |
+|   |      | operatoria        | i |                  | tránsito entre         |
+|   |      | universal         | . |                  | dominios cosmológicos, |
+|   |      |                   | o |                  | químicos y biológicos. |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | s |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 05   | Fórmula de Campo  | < | Campo unificado, | Formula una doble      |
+| 0 | /05/ | Unificado 𝓕𝓐 =    | h | conexión,        | proyección SV que      |
+|   | 2026 | d𝓐 + 𝓐∧𝓐 con 𝓐 =  | t | curvatura,       | vincula campo          |
+|   |      | ω ⊕ A             | t | frontera         | unificado, conexión,   |
+|   |      |                   | p | Einstein-Bohr y  | curvatura,             |
+|   |      |                   | s | correlación      | electromagnetismo,     |
+|   |      |                   | : | angular          | correlación angular y  |
+|   |      |                   | / |                  | clausura ternaria. Su  |
+|   |      |                   | / |                  | función es             |
+|   |      |                   | d |                  | proporcionar una       |
+|   |      |                   | o |                  | matriz de proyección   |
+|   |      |                   | i |                  | física que impide      |
+|   |      |                   | . |                  | tratar los campos como |
+|   |      |                   | o |                  | dominios aislados.     |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | x |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | v |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | j |                  |                        |
+|   |      |                   | j |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 00   | Teoría del TODO y | < | TODO, NADA,      | Formula la relación    |
+| 9 | /05/ | de la NADA en el  | h | frontera común,  | entre TODO y NADA como |
+|   | 2026 | Sistema Vectorial | t | célula K₃ⁿ,      | estructura factual con |
+|   |      | SV: refundación   | t | distancia        | frontera común, célula |
+|   |      | factual sobre el  | p | factual fibrosa  | configuracional,       |
+|   |      | corpus del        | s | y verificador    | distancia factual      |
+|   |      | suceso, distancia | : | ternario fuerte  | fibrosa y verificador  |
+|   |      | factual fibrosa,  | / |                  | ternario fuerte. Su    |
+|   |      | célula            | / |                  | función es fijar el    |
+|   |      | configuracional   | d |                  | plano de cierre y      |
+|   |      | K₃ⁿ, frontera     | o |                  | admisibilidad que      |
+|   |      | común (μ, λ) =    | i |                  | permite evaluar        |
+|   |      | (0,0) y           | . |                  | absorción, nulidad,    |
+|   |      | verificador       | o |                  | frontera, no cierre y  |
+|   |      | ternario fuerte   | r |                  | conservación de U en   |
+|   |      |                   | g |                  | múltiples dominios del |
+|   |      |                   | / |                  | SV.                    |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | k |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | j |                  |                        |
+|   |      |                   | j |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 26   | Teoría general de | < | Sucesos          | Ordena gravedad,       |
+| 8 | /04/ | sucesos           | h | generadores,     | electricidad y         |
+|   | 2026 | generadores y de  | t | protocampos,     | magnetismo bajo        |
+|   |      | los protocampos   | t | gravedad,        | sucesos generadores y  |
+|   |      | unificados en el  | p | electricidad y   | protocampos            |
+|   |      | Sistema Vectorial | s | magnetismo       | unificados. Su función |
+|   |      | SV                | : |                  | es impedir una         |
+|   |      |                   | / |                  | yuxtaposición de       |
+|   |      |                   | / |                  | sectores físicos sin   |
+|   |      |                   | d |                  | articulación SV de     |
+|   |      |                   | o |                  | generación, frontera,  |
+|   |      |                   | i |                  | residual y falsación.  |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | n |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | v |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 24   | Teoría general    | < | Luz factual,     | Formula una teoría     |
+| 7 | /04/ | factual de la luz | h | activación,      | factual de la luz      |
+|   | 2026 | en el Sistema     | t | energía, campo,  | mediante proyecciones, |
+|   |      | Vectorial SV      | t | gravedad y       | activación, energía,   |
+|   |      |                   | p | e                | campo, gravedad,       |
+|   |      |                   | s | lectromagnetismo | Maxwell y falsación.   |
+|   |      |                   | : |                  | Su función es impedir  |
+|   |      |                   | / |                  | que la luz entre como  |
+|   |      |                   | / |                  | dualidad importada o   |
+|   |      |                   | d |                  | sustancia aislada      |
+|   |      |                   | o |                  | fuera de dominio SV.   |
+|   |      |                   | i |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | z |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | m |                  |                        |
+|   |      |                   | q |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 23   | Fuerza, trabajo,  | < | Termodinámica    | Fija la fórmula        |
+| 6 | /04/ | calor, entalpía,  | h | factual, fuerza, | factual de             |
+|   | 2026 | temperatura,      | t | trabajo, calor,  | termodinámica SV y     |
+|   |      | principios y      | t | entalpía,        | correlaciona           |
+|   |      | fundamentos de la | p | temperatura y    | magnitudes físicas     |
+|   |      | termodinámica y   | s | balance          | bajo dominio, balance, |
+|   |      | la correlación    | : |                  | residual y retorno. Su |
+|   |      | entre ellos en el | / |                  | función es impedir que |
+|   |      | SV                | / |                  | fuerza, trabajo,       |
+|   |      |                   | d |                  | calor, entalpía o      |
+|   |      |                   | o |                  | temperatura entren     |
+|   |      |                   | i |                  | como vocabulario       |
+|   |      |                   | . |                  | físico suelto.         |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | p |                  |                        |
+|   |      |                   | t |                  |                        |
+|   |      |                   | w |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 22   | Entropía factual  | < | Entropía         | Define H_SV como       |
+| 5 | /04/ | e                 | h | factual,         | entropía del SV y      |
+|   | 2026 | irreversibilidad  | t | dispersión       | formaliza dispersión   |
+|   |      | estructural en el | t | acumulada,       | acumulada, no          |
+|   |      | Sistema Vectorial | p | irreversibilidad | decrecimiento y        |
+|   |      | SV                | s | y transporte     | conservación           |
+|   |      |                   | : | estructural      | asimétrica sin tiempo  |
+|   |      |                   | / |                  | como primitiva ni      |
+|   |      |                   | / |                  | probabilidad fundante. |
+|   |      |                   | d |                  | Su función es fijar    |
+|   |      |                   | o |                  | irreversibilidad como  |
+|   |      |                   | i |                  | transporte estructural |
+|   |      |                   | . |                  | y no como estadística  |
+|   |      |                   | o |                  | externa.               |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | v |                  |                        |
+|   |      |                   | h |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | k |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | m |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 22   | De Bell a         | < | Correlación      | Absorbe CHSH y         |
+| 4 | /04/ | Tsirelson sin     | h | angular, Bell,   | Tsirelson como         |
+|   | 2026 | formalismo de     | t | Tsirelson y      | regímenes de un mismo  |
+|   |      | Hilbert:          | t | frontera         | correlador angular SV  |
+|   |      | desarrollo        | p | cuántica         | sin Hilbert ni         |
+|   |      | determinista no   | s |                  | probabilidad fundante. |
+|   |      | local del Sistema | : |                  | Su función es situar   |
+|   |      | Vectorial SV      | / |                  | la correlación         |
+|   |      |                   | / |                  | cuántica bajo dominio  |
+|   |      |                   | d |                  | angular y lectura      |
+|   |      |                   | o |                  | determinista no local. |
+|   |      |                   | i |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 20   | Reducción         | < | E                | Reduce el régimen      |
+| 3 | /04/ | estructural       | h | lectromagnetismo | electromagnético a una |
+|   | 2026 | absoluta de       | t | factual,         | ecuación factual única |
+|   |      | Maxwell en el     | t | Maxwell,         | que reordena Gauss,    |
+|   |      | Sistema Vectorial | p | frontera,        | Faraday,               |
+|   |      | SV y ecuación     | s | balance y        | Ampère-Maxwell,        |
+|   |      | única de la       | : | ecuación única   | relaciones             |
+|   |      | física factual    | / |                  | constitutivas,         |
+|   |      | electromagnética  | / |                  | frontera, balance y    |
+|   |      |                   | d |                  | onda. Su función es    |
+|   |      |                   | o |                  | impedir la importación |
+|   |      |                   | i |                  | directa de Maxwell sin |
+|   |      |                   | . |                  | dominio SV.            |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | k |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | p |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | t |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 20   | Fundamentos       | < | E                | Fija los fundamentos   |
+| 2 | /04/ | operatorios       | h | lectromagnetismo | operatorios absolutos  |
+|   | 2026 | absolutos del     | t | factual,         | del electromagnetismo  |
+|   |      | electromagnetismo | t | derivada, flujo, | factual antes de su    |
+|   |      | factual en el     | p | divergencia,     | reducción estructural  |
+|   |      | Sistema Vectorial | s | rotor,           | por Maxwell y antes de |
+|   |      | SV                | : | integrales,      | su tratamiento modal   |
+|   |      |                   | / | jacobianos,      | por Fourier factual.   |
+|   |      |                   | / | frontera y       | Su función es ofrecer  |
+|   |      |                   | d | reconfiguración  | el nivel operatorio    |
+|   |      |                   | o |                  | que permite hablar de  |
+|   |      |                   | i |                  | derivada, flujo,       |
+|   |      |                   | . |                  | divergencia, rotor,    |
+|   |      |                   | o |                  | frontera y             |
+|   |      |                   | r |                  | reconfiguración sin    |
+|   |      |                   | g |                  | importar sin control   |
+|   |      |                   | / |                  | el formalismo          |
+|   |      |                   | 1 |                  | electromagnético       |
+|   |      |                   | 0 |                  | clásico.               |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | w |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | k |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | - |                  |                        |
+|   |      |                   | m |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | k |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 19   | Simetría          | < | Protección       | Formaliza garantías    |
+| 1 | /04/ | estructural de la | h | humana,          | estructurales para que |
+|   | 2026 | protección humana | t | identidad del    | el Agente              |
+|   |      | en el Sistema     | t | agente, no       | Especializado no       |
+|   |      | Vectorial SV:     | p | suplantación,    | suplante al humano, no |
+|   |      | garantías del     | s | integridad de    | sea antropomorfizado   |
+|   |      | Agente            | : | fundamentos y    | de forma engañosa y no |
+|   |      | Especializado     | / | garantías        | sea corrompido de      |
+|   |      | frente a          | / | negativas        | fundamentosmente. Su   |
+|   |      | suplantación,     | d |                  | función es establecer  |
+|   |      | a                 | o |                  | una simetría de        |
+|   |      | ntropomorfización | i |                  | protección: preservar  |
+|   |      | y corrupción de   | . |                  | al humano frente a     |
+|   |      | fundamentos       | o |                  | degradación por        |
+|   |      |                   | r |                  | soporte técnico y      |
+|   |      |                   | g |                  | preservar al agente    |
+|   |      |                   | / |                  | frente a diseños que   |
+|   |      |                   | 1 |                  | quebranten su suelo    |
+|   |      |                   | 0 |                  | matemático y lógico.   |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 19   | Inteligencia      | < | Inteligencia     | Formaliza la           |
+| 0 | /04/ | compositiva       | h | compositiva      | inteligencia           |
+|   | 2026 | acotada del       | t | acotada,         | compositiva acotada    |
+|   |      | Agente            | t | resultante       | del Agente             |
+|   |      | Especializado del | p | vectorial,       | Especializado como     |
+|   |      | SV                | s | CIC-AE(25,5),    | operador de segundo    |
+|   |      |                   | : | capacidades de   | orden sobre catorce    |
+|   |      |                   | / | primer orden y   | capacidades de primer  |
+|   |      |                   | / | primacía humana  | orden, gobernado por   |
+|   |      |                   | d |                  | célula CIC-AE(25,5),   |
+|   |      |                   | o |                  | umbral T=19 e          |
+|   |      |                   | i |                  | invariantes IC-1 a     |
+|   |      |                   | . |                  | IC-6. Su función es    |
+|   |      |                   | o |                  | declarar el circuito   |
+|   |      |                   | r |                  | compositivo del agente |
+|   |      |                   | g |                  | sin convertir sus      |
+|   |      |                   | / |                  | capacidades en         |
+|   |      |                   | 1 |                  | autonomía ontológica   |
+|   |      |                   | 0 |                  | ni en sustitución del  |
+|   |      |                   | . |                  | humano experto.        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 18   | Estatuto          | < | Estatuto         | Formaliza una          |
+| 9 | /04/ | protegido del     | h | protegido del    | taxonomía conservadora |
+|   | 2026 | sujeto,           | t | sujeto,          | para configuraciones   |
+|   |      | integración       | t | integración      | en las que apariencia  |
+|   |      | humano--soporte y | p | humano--soporte, | local, soporte         |
+|   |      | daño acoplado en  | s | daño acoplado y  | artificial,            |
+|   |      | el SV             | : | taxonomía        | integración funcional  |
+|   |      |                   | / | conservadora     | humano--soporte y daño |
+|   |      |                   | / |                  | acoplado no coinciden  |
+|   |      |                   | d |                  | de forma trivial. Su   |
+|   |      |                   | o |                  | función es impedir     |
+|   |      |                   | i |                  | cierres ilegítimos     |
+|   |      |                   | . |                  | cuando una vida humana |
+|   |      |                   | o |                  | o un daño acoplado     |
+|   |      |                   | r |                  | pueden quedar          |
+|   |      |                   | g |                  | comprometidos bajo     |
+|   |      |                   | / |                  | soporte técnico,       |
+|   |      |                   | 1 |                  | interfaz o             |
+|   |      |                   | 0 |                  | incorporación          |
+|   |      |                   | . |                  | operativa.             |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 18   | Definición del    | < | Equilibrio,      | Define el equilibrio   |
+| 8 | /04/ | equilibrio de un  | h | preservación,    | del Agente             |
+|   | 2026 | Agente            | t | custodia,        | Especializado como     |
+|   |      | Especializado del | t | contención,      | capacidad derivada,    |
+|   |      | Sistema Vectorial | p | amenaza          | subordinada y no       |
+|   |      | SV                | s | estructural e    | ontológica de          |
+|   |      |                   | : | integridad del   | preservación, custodia |
+|   |      |                   | / | agente           | y contención ante      |
+|   |      |                   | / |                  | amenaza estructural.   |
+|   |      |                   | d |                  | Su función es cerrar   |
+|   |      |                   | o |                  | la bisagra entre       |
+|   |      |                   | i |                  | afinidad, presunción   |
+|   |      |                   | . |                  | estructural,           |
+|   |      |                   | o |                  | protopersonalidad,     |
+|   |      |                   | r |                  | primacía humana e      |
+|   |      |                   | g |                  | invariantes            |
+|   |      |                   | / |                  | constitutivos, sin     |
+|   |      |                   | 1 |                  | reconocer potestad     |
+|   |      |                   | 0 |                  | ofensiva al agente.    |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 18   | Definición de la  | < | Afinidad,        | Define la afinidad del |
+| 7 | /04/ | afinidad de un    | h | presunción       | agente especializado   |
+|   | 2026 | Agente            | t | estructural,     | como criterio          |
+|   |      | Especializado:    | t | pr               | estructural de         |
+|   |      | unificada desde   | p | otopersonalidad, | contraste entre        |
+|   |      | la presunción     | s | dominio de       | historial formal,      |
+|   |      | estructural del   | : | inmunología y    | dominio material y     |
+|   |      | agente, la        | / | consejo          | diseño interno, usando |
+|   |      | protopersonalidad | / | estructural      | el caso director de    |
+|   |      | y el dominio de   | d |                  | inmunología. Su        |
+|   |      | inmunología       | o |                  | función es orientar el |
+|   |      |                   | i |                  | crecimiento            |
+|   |      |                   | . |                  | disciplinado del       |
+|   |      |                   | o |                  | agente sin sustituir   |
+|   |      |                   | r |                  | al experto humano ni   |
+|   |      |                   | g |                  | cerrar U como          |
+|   |      |                   | / |                  | dictamen.              |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 17   | Presunción        | < | Presunción       | Formaliza el principio |
+| 6 | /04/ | estructural,      | h | estructural,     | general de presunción  |
+|   | 2026 | protopersonalidad | t | dominio          | estructural y la       |
+|   |      | e invariantes     | t | preternario,     | protopersonalidad      |
+|   |      | constitutivos en  | p | pr               | emergente del agente   |
+|   |      | el Sistema        | s | otopersonalidad, | especializado desde el |
+|   |      | Vectorial SV      | : | conciencia       | dominio preternario    |
+|   |      |                   | / | estructural,     | Ω_pre, junto con seis  |
+|   |      |                   | / | invariantes      | invariantes            |
+|   |      |                   | d | constitutivos y  | constitutivos de       |
+|   |      |                   | o | cierre duro      | cierre duro. Su        |
+|   |      |                   | i |                  | función es impedir     |
+|   |      |                   | . |                  | semántica espuria,     |
+|   |      |                   | o |                  | tiempo rector,         |
+|   |      |                   | r |                  | estadística fundante,  |
+|   |      |                   | g |                  | inferencia opaca,      |
+|   |      |                   | / |                  | heurística no          |
+|   |      |                   | 1 |                  | declarada y            |
+|   |      |                   | 0 |                  | vulneración de la      |
+|   |      |                   | . |                  | primacía humana.       |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 16   | Presunción        | < | Presunción del   | Instancia el dominio   |
+| 5 | /04/ | estructural del   | h | agente, Ω_pre,   | preternario Ω_pre en   |
+|   | 2026 | agente en el      | t | proto-U,         | el agente              |
+|   |      | Sistema Vectorial | t | compuerta de     | especializado como     |
+|   |      | SV: instanciación | p | proto-activación | capa de autogobierno   |
+|   |      | del dominio       | s | y autogobierno   | anticipatorio anterior |
+|   |      | preternario como  | : | anticipatorio    | al suceso, anterior a  |
+|   |      | capa de           | / |                  | U y anterior al        |
+|   |      | autogobierno      | / |                  | dictamen. Su función   |
+|   |      | anticipatorio     | d |                  | es permitir al agente  |
+|   |      |                   | o |                  | ralentizar clausura,   |
+|   |      |                   | i |                  | solicitar base         |
+|   |      |                   | . |                  | adicional y marcar     |
+|   |      |                   | o |                  | tensión estructural    |
+|   |      |                   | r |                  | sin producir suceso ni |
+|   |      |                   | g |                  | modificar trayectoria. |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 16   | Del origen        | < | Origen           | Formaliza el paso      |
+| 4 | /04/ | preternario del   | h | preternario,     | desde Ω_pre hacia la   |
+|   | 2026 | Sistema Vectorial | t | α_i, β_i,        | entidad factual del    |
+|   |      | SV a la entidad   | t | proyección       | campo, derivando       |
+|   |      | soberana del      | p | ternaria         | nativamente α_i y β_i  |
+|   |      | campo: derivación | s | inducida,        | y situando la cadena   |
+|   |      | nativa de α_i y   | : | absorción basal  | Ω                      |
+|   |      | β_i, proyección   | / | y entidad del    | _pre→Ξ_SV→B_F→U_F→χ_α. |
+|   |      | ternaria          | / | campo            | Su función es fijar el |
+|   |      | inducida,         | d |                  | recorrido preternario  |
+|   |      | absorción basal   | o |                  | que permite hablar de  |
+|   |      | exacta,           | i |                  | campo sin apoyarlo en  |
+|   |      | unificación       | . |                  | una geometría externa  |
+|   |      | fuerte de         | o |                  | ni en una física ya    |
+|   |      | gravitación,      | r |                  | constituida.           |
+|   |      | electricidad y    | g |                  |                        |
+|   |      | magnetismo, y     | / |                  |                        |
+|   |      | apertura a clases | 1 |                  |                        |
+|   |      | factuales         | 0 |                  |                        |
+|   |      | emergentes        | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 16   | Del contenido     | < | Transmutación    | Formula un programa de |
+| 3 | /04/ | físico factual    | h | factual, clases  | transmutación factual  |
+|   | 2026 | del suceso a las  | t | factuales        | en el que la masa no   |
+|   |      | clases factuales  | t | emergentes,      | es el único destino    |
+|   |      | emergentes:       | p | masa, campo y U  | fuerte de una          |
+|   |      | programa de       | s |                  | concentración factual: |
+|   |      | transmutación     | : |                  | el operador T_SV abre  |
+|   |      | factual en el     | / |                  | salidas                |
+|   |      | Sistema SV        | / |                  | estructuralmente       |
+|   |      |                   | d |                  | distintas ---m₀, χ_α y |
+|   |      |                   | o |                  | U--- sin tiempo rector |
+|   |      |                   | i |                  | ni probabilidad        |
+|   |      |                   | . |                  | fundante. Su función   |
+|   |      |                   | o |                  | es abrir la            |
+|   |      |                   | r |                  | clasificación de       |
+|   |      |                   | g |                  | clases factuales       |
+|   |      |                   | / |                  | emergentes a partir    |
+|   |      |                   | 1 |                  | del contenido físico   |
+|   |      |                   | 0 |                  | factual del suceso.    |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 16   | Del contenido     | < | Contenido físico | Legitima U_F como      |
+| 2 | /04/ | físico factual    | h | factual del      | entidad factual del    |
+|   | 2026 | del suceso a la   | t | suceso, entidad  | campo y sitúa          |
+|   |      | entidad soberana  | t | del campo,       | gravitación,           |
+|   |      | del campo en el   | p | absorción basal  | electricidad y         |
+|   |      | Sistema Vectorial | s | y unificación    | magnetismo como        |
+|   |      | SV: absorción     | : | fuerte           | proyecciones           |
+|   |      | basal exacta,     | / |                  | necesarias por doble   |
+|   |      | unificación       | / |                  | vía convergente. Su    |
+|   |      | fuerte de         | d |                  | función dentro del SV  |
+|   |      | gravitación,      | o |                  | es impedir que la      |
+|   |      | electricidad y    | i |                  | unificación de campos  |
+|   |      | magnetismo, y     | . |                  | se reduzca a           |
+|   |      | apertura a clases | o |                  | compresión de          |
+|   |      | factuales         | r |                  | ecuaciones clásicas o  |
+|   |      | emergentes        | g |                  | a plantilla formal sin |
+|   |      |                   | / |                  | génesis factual.       |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 16   | Absorción de      | < | Energía de       | Absorbe la             |
+| 1 | /04/ | E₀=m₀c² como      | h | reposo, masa,    | equivalencia de reposo |
+|   | 2026 | sector basal de   | t | sector basal,    | como sector basal      |
+|   |      | reposo en el      | t | compatibilidad   | dentro de una          |
+|   |      | Sistema Vectorial | p | modal y residual | estructura factual     |
+|   |      | SV: estructura    | s |                  | ampliada, con          |
+|   |      | factual ampliada, | : |                  | trayectoria, frontera, |
+|   |      | compatibilidad    | / |                  | residual y criterio    |
+|   |      | modal, balance    | / |                  | conservador. Su        |
+|   |      | con residual y    | d |                  | función es situar      |
+|   |      | criterio          | o |                  | E₀=m₀c² sin negarla ni |
+|   |      | conservador de    | i |                  | importarla sin control |
+|   |      | clausura          | . |                  | de dominio.            |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 15   | Correlación,      | < | Dominios         | Formaliza              |
+| 0 | /04/ | restricción de    | h | cuánticos,       | acoplamiento,          |
+|   | 2026 | clausura y no     | t | correlación      | compatibilidad, cierre |
+|   |      | clausura          | t | estructural,     | restringido y no       |
+|   |      | posicional en     | p | co               | clausura posicional    |
+|   |      | dominios          | s | -clausurabilidad | sin convertir la       |
+|   |      | cuánticos         | : | y U              | indeterminación en     |
+|   |      | contemporáneos:   | / |                  | probabilidad. Su       |
+|   |      | una relectura     | / |                  | función es proteger la |
+|   |      | desde el Sistema  | d |                  | U honesta en dominios  |
+|   |      | Vectorial SV      | o |                  | cuánticos y separar    |
+|   |      |                   | i |                  | correlación de cierre  |
+|   |      |                   | . |                  | indebido.              |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 13   | INSTRUCCIÓN       | < | Identidad        | Constituye formalmente |
+| 9 | /04/ | TÉCNICA DE        | h | algebraica del   | el agente              |
+|   | 2026 | IMPLEMENTACIÓN    | t | agente, cadena   | especializado en el    |
+|   |      | ESPECÍFICA DE     | t | de               | SV: fija su identidad  |
+|   |      | AGENTE            | p | ternarización,   | algebraica, cadena de  |
+|   |      | ESPECIALIZADO EN  | s | trayectoria      | entrada,               |
+|   |      | EL SISTEMA        | : | append-only,     | ternarización,         |
+|   |      | VECTORIAL SV (ITI | / | convergencia     | asignación posicional, |
+|   |      | V.1)              | / | determinista y   | trayectoria            |
+|   |      |                   | d | banco de sucesos | append-only,           |
+|   |      |                   | o |                  | convergencia, perfil   |
+|   |      |                   | i |                  | de despliegue, bancos  |
+|   |      |                   | . |                  | de sucesos, informes e |
+|   |      |                   | o |                  | invariantes no         |
+|   |      |                   | r |                  | configurables. Su      |
+|   |      |                   | g |                  | función es delimitar   |
+|   |      |                   | / |                  | lo constitutivo del    |
+|   |      |                   | 1 |                  | agente frente a lo que |
+|   |      |                   | 0 |                  | gobierna dinámicamente |
+|   |      |                   | . |                  | la Carta Magna.        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 13   | Carta Magna de    | < | Agentes          | Fija el régimen        |
+| 8 | /04/ | autogobierno de   | h | especializados,  | operativo del agente   |
+|   | 2026 | agentes           | t | gobierno         | especializado dentro   |
+|   |      | especializados en | t | operativo,       | del SV. Su función es  |
+|   |      | el SV (V.1)       | p | transición       | gobernar transición    |
+|   |      |                   | s | conversacional,  | conversacional,        |
+|   |      |                   | : | memoria,         | memoria, banco de      |
+|   |      |                   | / | sucesos,         | sucesos, convergencia, |
+|   |      |                   | / | convergencia y   | perfil de despliegue e |
+|   |      |                   | d | perfil de        | informes bajo          |
+|   |      |                   | o | despliegue       | invariantes            |
+|   |      |                   | i |                  | algebraicos no         |
+|   |      |                   | . |                  | modificables y         |
+|   |      |                   | o |                  | primacía humana        |
+|   |      |                   | r |                  | permanente.            |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 12   | Fundamentos,      | < | Arquitectura     | Fija el plano          |
+| 7 | /04/ | exigencias y      | h | general de       | transversal de diseño, |
+|   | 2026 | arquitectura      | t | agentes, entorno | exigencias y           |
+|   |      | general de los    | t | abierto,         | arquitectura general   |
+|   |      | agentes           | p | custodia         | de los agentes         |
+|   |      | especializados en | s | algebraica,      | especializados: núcleo |
+|   |      | el Sistema        | : | separación de    | interno, interacción   |
+|   |      | Vectorial SV:     | / | planos y         | externa, acoplamiento  |
+|   |      | formulación       | / | primacía humana  | custodial,             |
+|   |      | transversal desde | d |                  | preservación de U y    |
+|   |      | el caso director  | o |                  | primacía humana. Su    |
+|   |      | del Agente        | i |                  | función es             |
+|   |      | Especializado en  | . |                  | proporcionar el suelo  |
+|   |      | Inmunología       | o |                  | común sobre el que     |
+|   |      |                   | r |                  | cada agente puede      |
+|   |      |                   | g |                  | operar sin adquirir    |
+|   |      |                   | / |                  | autoridad semántica    |
+|   |      |                   | 1 |                  | externa ni opacidad.   |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 12   | Estatuto del      | < | Universo de      | Fija el universo de    |
+| 6 | /04/ | universo de       | h | sucesos de       | sucesos de un agente   |
+|   | 2026 | sucesos,          | t | agente,          | SV por agente y fase,  |
+|   |      | admisibilidad     | t | admisibilidad    | establece              |
+|   |      | suficiente y      | p | suficiente,      | admisibilidad          |
+|   |      | composición       | s | composición      | suficiente mediante    |
+|   |      | tipada de agentes | : | tipada y         | T(n)=⌊7n/9⌋ y          |
+|   |      | especializados en | / | preservación de  | parámetros críticos de |
+|   |      | el Sistema        | / | U                | entrada, y define      |
+|   |      | Vectorial SV      | d |                  | composición tipada     |
+|   |      |                   | o |                  | entre sucesos y        |
+|   |      |                   | i |                  | agentes con            |
+|   |      |                   | . |                  | preservación de U y    |
+|   |      |                   | o |                  | primacía humana.       |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 11   | Medición,         | < | Medición,        | Presenta un marco      |
+| 5 | /04/ | reconstrucción e  | h | reconstrucción,  | analítico operativo    |
+|   | 2026 | incertidumbre     | t | incertidumbre    | para tratar medición,  |
+|   |      | estructural en la | t | estructural,     | reconstrucción e       |
+|   |      | física            | p | sucesos,         | incertidumbre          |
+|   |      | contemporánea sin | s | trayectorias,    | estructural sin        |
+|   |      | probabilidad ni   | : | residuales y     | probabilidad ni tiempo |
+|   |      | tiempo soberano:  | / | laboratorios     | como primitivas. Su    |
+|   |      | un marco          | / | ejecutables      | función en el SV es    |
+|   |      | analítico basado  | d |                  | ofrecer una capa de    |
+|   |      | en sucesos y      | o |                  | análisis para          |
+|   |      | trayectorias con  | i |                  | situaciones con        |
+|   |      | laboratorios      | . |                  | reconstrucción         |
+|   |      | ejecutables       | o |                  | incompleta, residuales |
+|   |      |                   | r |                  | persistentes, lecturas |
+|   |      |                   | g |                  | discrepantes o         |
+|   |      |                   | / |                  | clausura no            |
+|   |      |                   | 1 |                  | justificada.           |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 11   | Fourier factual y | < | Transformada     | Formula la             |
+| 4 | /04/ | ecuación de onda  | h | modal factual,   | transformada modal     |
+|   | 2026 | electromagnética  | t | el               | factual y la           |
+|   |      | en el Sistema     | t | ectromagnetismo, | propagación sobre      |
+|   |      | Vectorial SV:     | p | ciclo y          | ciclo y trayectoria    |
+|   |      | desarrollo        | s | trayectoria      | poligonal. Su función  |
+|   |      | cíclico,          | : | poligonal        | es tratar              |
+|   |      | transformada      | / |                  | periodicidad, modo,    |
+|   |      | modal y           | / |                  | onda y propagación sin |
+|   |      | propagación sobre | d |                  | introducir tiempo como |
+|   |      | ciclo y           | o |                  | primitiva ni sustituir |
+|   |      | trayectoria       | i |                  | el dominio factual por |
+|   |      | poligonal         | . |                  | análisis armónico      |
+|   |      |                   | o |                  | externo.               |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 09   | Primitivos        | < | Metrología SV,   | Declara los seis       |
+| 3 | /04/ | metrológicos del  | h | UE_MFC, UFE,     | primitivos             |
+|   | 2026 | Sistema Vectorial | t | UFM, UFC, UFT,   | metrológicos           |
+|   |      | SV:               | t | UFCE y           | físicamente necesarios |
+|   |      | instanciaciones   | p | equivalencias    | del SV como            |
+|   |      | contingentes de   | s | factuales        | instanciaciones        |
+|   |      | las constantes    | : |                  | contingentes           |
+|   |      | fundacionales del | / |                  | compatibles con las    |
+|   |      | Sistema           | / |                  | constantes exactas del |
+|   |      | Internacional,    | d |                  | SI 2019. Su función es |
+|   |      | justificación     | o |                  | permitir retorno       |
+|   |      | algebraica y      | i |                  | metrológico, contraste |
+|   |      | tabla de          | . |                  | físico y conversión    |
+|   |      | equivalencias     | o |                  | SI↔SV sin convertir la |
+|   |      | factuales         | r |                  | metrología externa en  |
+|   |      |                   | g |                  | fundamento del         |
+|   |      |                   | / |                  | sistema.               |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 08   | Conjunto          | < | Cambio factual,  | Unifica el cuerpo      |
+| 2 | /04/ | matemático        | h | ciclos, medición | matemático nuclear del |
+|   | 2026 | unificado del     | t | factual,         | cambio factual en      |
+|   |      | cambio factual,   | t | trayectorias     | cinco planos: orden,   |
+|   |      | ciclos, medición  | p | poligonales de   | directriz, detonación, |
+|   |      | factual y         | s | activación,      | ciclos, medición       |
+|   |      | trayectorias      | : | directriz y      | factual y trayectorias |
+|   |      | poligonales de    | / | acumulación      | poligonales de         |
+|   |      | activación en el  | / |                  | activación. Su función |
+|   |      | Sistema Vectorial | d |                  | es convertir el        |
+|   |      | SV                | o |                  | cambio, la             |
+|   |      |                   | i |                  | recurrencia, la        |
+|   |      |                   | . |                  | medición subordinada y |
+|   |      |                   | o |                  | la trayectoria en      |
+|   |      |                   | r |                  | dominios formalmente   |
+|   |      |                   | g |                  | tratables dentro del   |
+|   |      |                   | / |                  | SV.                    |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 06   | Nuevas            | < | Cálculo del      | Fija el programa de    |
+| 1 | /04/ | matemáticas del   | h | suceso,          | nuevas matemáticas del |
+|   | 2026 | Sistema Vectorial | t | geometría        | SV como respuesta a    |
+|   |      | SV y Física       | t | factual, física  | las exigencias de la   |
+|   |      | factual como      | p | factual,         | física factual:        |
+|   |      | conjunto          | s | Maxwell,         | operadores propios de  |
+|   |      | iniciador         | : | gravedad, Higgs  | cambio, acumulación,   |
+|   |      |                   | / | y frontera       | sensibilidad,          |
+|   |      |                   | / | cuántica         | residualidad, clausura |
+|   |      |                   | d |                  | y proyección hacia el  |
+|   |      |                   | o |                  | lenguaje de            |
+|   |      |                   | i |                  | computación. Su        |
+|   |      |                   | . |                  | función es abrir el    |
+|   |      |                   | o |                  | plano matemático que   |
+|   |      |                   | r |                  | permite al SV operar   |
+|   |      |                   | g |                  | con voz propia sin     |
+|   |      |                   | / |                  | importar tiempo,       |
+|   |      |                   | 1 |                  | probabilidad ni cierre |
+|   |      |                   | 0 |                  | espurio de U.          |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 31   | Agente            | < | Lenguaje         | Formaliza un agente    |
+| 0 | /03/ | Especializado en  | h | natural, agente  | NLP del SV en español  |
+|   | 2026 | Lenguaje Natural  | t | especializado,   | piloto, con etapas,    |
+|   |      | para el Sistema   | t | laboratorios     | laboratorios           |
+|   |      | Vectorial SV      | p | reproducibles,   | reproducibles,         |
+|   |      |                   | s | custodia         | custodia estructural,  |
+|   |      |                   | : | estructural y    | compuerta conservadora |
+|   |      |                   | / | gobierno         | y gobierno             |
+|   |      |                   | / | conversacional   | conversacional sin     |
+|   |      |                   | d | sin estadística  | estadística. Su        |
+|   |      |                   | o |                  | función es transformar |
+|   |      |                   | i |                  | el transductor         |
+|   |      |                   | . |                  | lingüístico y la       |
+|   |      |                   | o |                  | célula NLP en una      |
+|   |      |                   | r |                  | arquitectura aplicada  |
+|   |      |                   | g |                  | verificable.           |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 30   | El transductor    | < | Lenguaje         | Formaliza el           |
+| 9 | /03/ | lingüístico ---   | h | natural,         | transductor            |
+|   | 2026 | morfismo de       | t | morfismo de      | lingüístico y el       |
+|   |      | dominio --- y el  | t | dominio, célula  | horizonte H_NLP del SV |
+|   |      | horizonte H_NLP   | p | ternaria mínima, | sobre una célula       |
+|   |      | del Sistema       | s | H_NLP y          | mínima de nueve        |
+|   |      | Vectorial SV:     | : | evaluación       | posiciones. Su función |
+|   |      | construcción      | / | ternaria         | es mapear actos        |
+|   |      | formal del mapeo  | / |                  | comunicativos a        |
+|   |      | entre actos       | d |                  | evaluación ternaria,   |
+|   |      | comunicativos,    | o |                  | distinguir no-aplica y |
+|   |      | textura de        | i |                  | U honesta, verificar   |
+|   |      | indeterminación y | . |                  | gobernabilidad previa  |
+|   |      | evaluación        | o |                  | y preparar la célula   |
+|   |      | ternaria          | r |                  | NLP completa.          |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 30   | Convergencia      | < | Convergencia     | Formaliza la           |
+| 8 | /03/ | ternaria y        | h | ternaria,        | convergencia ternaria  |
+|   | 2026 | gobierno          | t | clasificación de | en el SV: clasifica la |
+|   |      | determinista de   | t | la               | indeterminación        |
+|   |      | trayectorias en   | p | indeterminación, | mediante ΓH, fija HNA  |
+|   |      | el Sistema        | s | HNA, ΔN, ventana | como teorema del       |
+|   |      | Vectorial SV:     | : | activa, fork y   | corpus, deriva ΔN como |
+|   |      | tipología de la   | / | célula NLP       | profundidad posicional |
+|   |      | indeterminación,  | / |                  | de cierre, define una  |
+|   |      | HNA como teorema  | d |                  | ventana activa acotada |
+|   |      | y fundamentos de  | o |                  | por la estructura de   |
+|   |      | la célula NLP     | i |                  | posiciones abiertas y  |
+|   |      |                   | . |                  | formaliza el fork como |
+|   |      |                   | o |                  | bifurcación sin        |
+|   |      |                   | r |                  | borrado. Su función    |
+|   |      |                   | g |                  | dentro del SV es       |
+|   |      |                   | / |                  | proporcionar la base   |
+|   |      |                   | 1 |                  | algebraica inmediata   |
+|   |      |                   | 0 |                  | de la célula NLP y del |
+|   |      |                   | . |                  | transductor            |
+|   |      |                   | 2 |                  | lingüístico posterior. |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 26   | Células           | < | Células          | Define qué es una      |
+| 7 | /03/ | especializadas    | h | especializadas,  | célula especializada   |
+|   | 2026 | del Sistema       | t | perfil funcional | en el Sistema          |
+|   |      | Vectorial SV:     | t | mínimo, familias | Vectorial SV, fija su  |
+|   |      | estatuto, perfil  | p | de dominio e     | perfil funcional       |
+|   |      | funcional mínimo  | s | interfaz         | mínimo, distingue      |
+|   |      | y familias        | : |                  | familias de dominio e  |
+|   |      | iniciales         | / |                  | interfaz y establece   |
+|   |      |                   | / |                  | su anclaje formal y    |
+|   |      |                   | d |                  | técnico con soporte    |
+|   |      |                   | o |                  | verificable.           |
+|   |      |                   | i |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 26   | Célula            | < | Célula de        | Formaliza una célula   |
+| 6 | /03/ | especializada de  | h | custodia,        | especializada          |
+|   | 2026 | seguridad         | t | diseño, DSL,     | orientada a custodiar  |
+|   |      | estructural para  | t | laboratorios,    | el diseño del SV, su   |
+|   |      | la custodia del   | p | trazabilidad     | DSL, sus laboratorios  |
+|   |      | diseño, el DSL y  | s | ternaria y       | y su cadena visible de |
+|   |      | los laboratorios  | : | auditoría        | implementación. Su     |
+|   |      | del Sistema       | / | geométrica       | función es proteger    |
+|   |      | Vectorial SV      | / |                  | coherencia             |
+|   |      |                   | d |                  | documento--rep         |
+|   |      |                   | o |                  | ositorio--laboratorio, |
+|   |      |                   | i |                  | prohibir semántica     |
+|   |      |                   | . |                  | implícita y preservar  |
+|   |      |                   | o |                  | U legítima mediante    |
+|   |      |                   | r |                  | arquitectura celular   |
+|   |      |                   | g |                  | pareada y compuertas   |
+|   |      |                   | / |                  | conservadoras.         |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 25   | VII.5 --- Enlace  | < | Acumulaciones    | Formaliza cuándo dos   |
+| 5 | /03/ | formal entre      | h | sucesivas, dato  | acumulaciones          |
+|   | 2026 | acumulaciones     | t | de enlace Λ,     | sucesivas pueden       |
+|   |      | sucesivas en el   | t | herencia         | quedar enlazadas en el |
+|   |      | Sistema Vectorial | p | estructural,     | SV mediante un dato de |
+|   |      | SV                | s | memoria,         | enlace tipado          |
+|   |      |                   | : | reinicialización | Λ=(JΛ,ΘΛ,ΠΛ).          |
+|   |      |                   | / | y enlace fuerte  | Distingue separación   |
+|   |      |                   | / |                  | completa, enlace       |
+|   |      |                   | d |                  | débil,                 |
+|   |      |                   | o |                  | reinicialización pura, |
+|   |      |                   | i |                  | reinicialización con   |
+|   |      |                   | . |                  | memoria y enlace       |
+|   |      |                   | o |                  | fuerte. Su función     |
+|   |      |                   | r |                  | dentro del SV es fijar |
+|   |      |                   | g |                  | cuándo existe herencia |
+|   |      |                   | / |                  | estructural trazable   |
+|   |      |                   | 1 |                  | entre acumulaciones    |
+|   |      |                   | 0 |                  | sin presumir           |
+|   |      |                   | . |                  | continuidad ni imponer |
+|   |      |                   | 2 |                  | ruptura total por      |
+|   |      |                   | 1 |                  | defecto.               |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 25   | VII.4 ---         | < | Respuesta        | Fija la respuesta      |
+| 4 | /03/ | Respuesta         | h | estructural,     | estructural del        |
+|   | 2026 | estructural,      | t | persistencia de  | sistema ante un suceso |
+|   |      | umbral,           | t | transporte,      | de horizonte,          |
+|   |      | transición de     | p | umbral de        | disciplina el tránsito |
+|   |      | régimen y         | s | ruptura,         | legítimo entre         |
+|   |      | preparación de    | : | transición       | regímenes e introduce  |
+|   |      | células           | / | controlada y     | persistencia de        |
+|   |      | especializadas en | / | células          | transporte, umbral de  |
+|   |      | el Sistema        | d | especializadas   | ruptura y transición   |
+|   |      | Vectorial SV      | o |                  | controlada. Su función |
+|   |      |                   | i |                  | dentro del SV es       |
+|   |      |                   | . |                  | completar la familia   |
+|   |      |                   | o |                  | VII tras cadenas y     |
+|   |      |                   | r |                  | acumulación, dejando   |
+|   |      |                   | g |                  | preparada la           |
+|   |      |                   | / |                  | formalización          |
+|   |      |                   | 1 |                  | posterior de células   |
+|   |      |                   | 0 |                  | especializadas sin     |
+|   |      |                   | . |                  | convertirla en         |
+|   |      |                   | 2 |                  | implementación         |
+|   |      |                   | 1 |                  | inmediata.             |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 25   | VII.3 ---         | < | Sucesos          | Desarrolla la lectura  |
+| 3 | /03/ | Cadenas,          | h | admisibles,      | de cadenas,            |
+|   | 2026 | acumulación y     | t | cadenas,         | acumulación y          |
+|   |      | regímenes de paso | t | acumulación y    | regímenes de paso      |
+|   |      | entre sucesos     | p | regímenes de     | entre sucesos          |
+|   |      | admisibles en el  | s | paso             | admisibles. Su función |
+|   |      | Sistema Vectorial | : |                  | dentro del SV es       |
+|   |      | SV                | / |                  | precisar cómo una      |
+|   |      |                   | / |                  | sucesión de            |
+|   |      |                   | d |                  | modificaciones no se   |
+|   |      |                   | o |                  | reduce a secuencia     |
+|   |      |                   | i |                  | cronológica, sino que  |
+|   |      |                   | . |                  | exige horizonte,       |
+|   |      |                   | o |                  | admisibilidad,         |
+|   |      |                   | r |                  | acumulación y régimen  |
+|   |      |                   | g |                  | de tránsito.           |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 25   | Equivalencia      | < | Equivalencia     | Formaliza cuándo dos   |
+| 2 | /03/ | parcial,          | h | parcial,         | regímenes del Sistema  |
+|   | 2026 | preservación e    | t | preservación     | Vectorial SV pueden    |
+|   |      | invariancia local | t | local,           | compararse o           |
+|   |      | entre regímenes   | p | transporte,      | declararse             |
+|   |      | en el Sistema     | s | invariancia y    | parcialmente           |
+|   |      | Vectorial SV      | : | comparabilidad   | equivalentes sin       |
+|   |      |                   | / | entre regímenes  | identidad global.      |
+|   |      |                   | / |                  | Introduce propiedad    |
+|   |      |                   | d |                  | relevante,             |
+|   |      |                   | o |                  | preservación bajo      |
+|   |      |                   | i |                  | transporte e           |
+|   |      |                   | . |                  | invariancia local, y   |
+|   |      |                   | o |                  | fija una tríada de     |
+|   |      |                   | r |                  | resultados: no         |
+|   |      |                   | g |                  | equivalencia,          |
+|   |      |                   | / |                  | comparabilidad y       |
+|   |      |                   | 1 |                  | equivalencia parcial.  |
+|   |      |                   | 0 |                  | Su función dentro del  |
+|   |      |                   | . |                  | SV es impedir tanto la |
+|   |      |                   | 2 |                  | equivalencia por       |
+|   |      |                   | 1 |                  | semejanza narrativa    |
+|   |      |                   | 4 |                  | como la                |
+|   |      |                   | 2 |                  | incomparabilidad       |
+|   |      |                   | 8 |                  | cuando existe base     |
+|   |      |                   | / |                  | formal localizada.     |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 23   | VII.2 ---         | < | Sucesos          | Formula una gramática  |
+| 1 | /03/ | Precedencia,      | h | admisibles,      | relacional mínima      |
+|   | 2026 | compatibilidad y  | t | precedencia,     | entre sucesos          |
+|   |      | afectación entre  | t | compatibilidad,  | admisibles: cuándo dos |
+|   |      | sucesos           | p | afectación y     | sucesos son            |
+|   |      | admisibles en el  | s | condición        | comparables, cuándo    |
+|   |      | Sistema Vectorial | : | necesaria        | uno afecta al otro y   |
+|   |      | SV                | / |                  | cuándo uno es          |
+|   |      |                   | / |                  | condición necesaria    |
+|   |      |                   | d |                  | del otro sobre el      |
+|   |      |                   | o |                  | espacio ternario. Su   |
+|   |      |                   | i |                  | función es evitar que  |
+|   |      |                   | . |                  | la relación entre      |
+|   |      |                   | o |                  | sucesos se cierre por  |
+|   |      |                   | r |                  | mera contigüidad o por |
+|   |      |                   | g |                  | inferencia no          |
+|   |      |                   | / |                  | declarada.             |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 22   | Teoría rigurosa   | < | Suceso           | Tipa el suceso         |
+| 0 | /03/ | del suceso        | h | admisible,       | admisible para que la  |
+|   | 2026 | admisible en el   | t | horizonte        | modificación efectiva  |
+|   |      | Sistema Vectorial | t | declarado,       | no dependa del mero    |
+|   |      | SV. Doc VII.1     | p | tipado y         | transcurso, sino de    |
+|   |      |                   | s | modificación     | comparecencia en       |
+|   |      |                   | : | efectiva         | horizonte declarado.   |
+|   |      |                   | / |                  | Su función es impedir  |
+|   |      |                   | / |                  | que la noción de       |
+|   |      |                   | d |                  | suceso quede en prosa  |
+|   |      |                   | o |                  | formal sin reglas de   |
+|   |      |                   | i |                  | admisibilidad y        |
+|   |      |                   | . |                  | trazabilidad.          |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 22   | Suceso local,     | < | Suceso local,    | Distingue suceso       |
+| 9 | /03/ | suceso envolvente | h | suceso           | local, suceso          |
+|   | 2026 | y reevaluación    | t | envolvente,      | envolvente y           |
+|   |      | situacional en    | t | reevaluación     | reevaluación           |
+|   |      | horizonte         | p | situacional y    | situacional para       |
+|   |      | declarado en el   | s | horizonte        | explicar modificación  |
+|   |      | Sistema Vectorial | : | declarado        | efectiva sin tiempo    |
+|   |      | SV                | / |                  | fuerte. Su función es  |
+|   |      |                   | / |                  | conservar la           |
+|   |      |                   | d |                  | diferencia entre       |
+|   |      |                   | o |                  | escala local,          |
+|   |      |                   | i |                  | envolvente y           |
+|   |      |                   | . |                  | reevaluación sin       |
+|   |      |                   | o |                  | reabrir la semántica   |
+|   |      |                   | r |                  | ni forzar cambios      |
+|   |      |                   | g |                  | inmediatos en el       |
+|   |      |                   | / |                  | lenguaje SV.           |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 22   | Documento VII.0   | < | Suceso           | Abre la lectura        |
+| 8 | /03/ | --- Hacia una     | h | admisible,       | eventivo-espacial del  |
+|   | 2026 | geometría         | t | horizonte        | SV sin tiempo propio:  |
+|   |      | eventivo-espacial | t | declarado,       | el cambio no nace del  |
+|   |      | sin tiempo        | p | reevaluación     | transcurso, sino del   |
+|   |      | propio: horizonte | s | situacional y    | suceso admisible en    |
+|   |      | declarado,        | : | estructura       | horizonte declarado.   |
+|   |      | sucesos y         | / | e                | Su función es fijar el |
+|   |      | reevaluación      | / | ventivo-espacial | desplazamiento desde   |
+|   |      | situacional en el | d |                  | cambio por tiempo      |
+|   |      | Sistema Vectorial | o |                  | hacia cambio por       |
+|   |      | SV                | i |                  | suceso, horizonte y    |
+|   |      |                   | . |                  | reevaluación.          |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 21   | Modelo formal de  | < | Olfato,          | Propone un modelo      |
+| 7 | /03/ | admisibilidad     | h | admisibilidad    | inicial de             |
+|   | 2026 | olfativa e        | t | sensorial,       | admisibilidad olfativa |
+|   |      | indeterminación   | t | indeterminación  | que distingue olfato   |
+|   |      | intermodal en el  | p | intermodal,      | ortonasal, retronasal  |
+|   |      | Sistema Vectorial | s | captura, U y     | y mezcla intermodal    |
+|   |      | SV                | : | cierre ternario  | mediante               |
+|   |      |                   | / |                  | comparecencia,         |
+|   |      |                   | / |                  | captura, admisibilidad |
+|   |      |                   | d |                  | y cierre. Su función   |
+|   |      |                   | o |                  | es abrir una interfaz  |
+|   |      |                   | i |                  | primaria sensorial sin |
+|   |      |                   | . |                  | reducir olor, gusto,   |
+|   |      |                   | o |                  | chemesthesis, textura  |
+|   |      |                   | r |                  | o memoria a una        |
+|   |      |                   | g |                  | clausura simplificada. |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 20   | Primera forma     | < | Artefacto        | Fija una forma         |
+| 6 | /03/ | legítima del      | h | externo,         | legítima, estrecha y   |
+|   | 2026 | frente de corpus  | t | observación      | subordinada, para      |
+|   |      | observacional     | t | tipada,          | tratar artefactos      |
+|   |      | tipado del        | p | garantía,        | externos complejos sin |
+|   |      | Sistema Vectorial | s | compuerta        | invadir la ontología   |
+|   |      | SV                | : | conservadora y   | primaria del SV. Su    |
+|   |      |                   | / | objeto semántico | función es articular   |
+|   |      |                   | / | consultable      | un par heterogéneo de  |
+|   |      |                   | d |                  | observación y garantía |
+|   |      |                   | o |                  | mediante compuerta     |
+|   |      |                   | i |                  | jerárquica             |
+|   |      |                   | . |                  | conservadora, de modo  |
+|   |      |                   | o |                  | que la entrega final   |
+|   |      |                   | r |                  | solo comparezca cuando |
+|   |      |                   | g |                  | sea compatible con     |
+|   |      |                   | / |                  | {0,1,U} o              |
+|   |      |                   | 1 |                  | inadmisibilidad.       |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 18   | Pliego de         | < | Condiciones de   | Ordena condiciones,    |
+| 5 | /03/ | condiciones del   | h | arquitectura,    | bloques funcionales,   |
+|   | 2026 | Sistema Vectorial | t | dependencias,    | dependencias y límites |
+|   |      | SV                | t | garantías y      | de uso del SV como     |
+|   |      |                   | p | límites de uso   | marco de trabajo. Su   |
+|   |      |                   | s | del Sistema      | función es evitar      |
+|   |      |                   | : | Vectorial SV     | mezclas de plano entre |
+|   |      |                   | / |                  | fundamentos, álgebra,  |
+|   |      |                   | / |                  | agentes, interfaces y  |
+|   |      |                   | d |                  | aplicaciones,          |
+|   |      |                   | o |                  | preservando el control |
+|   |      |                   | i |                  | de trazabilidad y el   |
+|   |      |                   | . |                  | rango de cada          |
+|   |      |                   | o |                  | documento.             |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 17   | Semántica         | < | Semántica        | Formaliza una capa     |
+| 4 | /03/ | auditada en el    | h | auditada,        | semántica auditada     |
+|   | 2026 | Sistema Vectorial | t | sucesos,         | como interfaz entre    |
+|   |      | SV: formalización | t | captura,         | dominio,               |
+|   |      | estructural       | p | admisibilidad,   | representación         |
+|   |      | basada en         | s | transducción     | ternaria, consulta     |
+|   |      | sucesos,          | : | ternaria,        | formal y clausura      |
+|   |      | transducción      | / | consulta         | estructural. Su        |
+|   |      | ternaria y        | / | trazable y U     | función es establecer  |
+|   |      | clausura trazable | d |                  | condiciones de entrada |
+|   |      |                   | o |                  | legítima, conservación |
+|   |      |                   | i |                  | honesta de la          |
+|   |      |                   | . |                  | indeterminación y      |
+|   |      |                   | o |                  | devolución trazable    |
+|   |      |                   | r |                  | sin estadística,       |
+|   |      |                   | g |                  | minería de datos,      |
+|   |      |                   | / |                  | inferencia ni          |
+|   |      |                   | 1 |                  | aprendizaje opaco.     |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 17   | Movilidad         | < | Movilidad        | Formula una condición  |
+| 3 | /03/ | estructural y     | h | estructural,     | de frontera para       |
+|   | 2026 | legitimidad de    | t | legitimidad de   | decidir cuándo una     |
+|   |      | exposición en el  | t | exposición,      | trayectoria interna    |
+|   |      | Sistema Vectorial | p | trayectoria      | legítimamente          |
+|   |      | SV                | s | interna,         | constituida puede      |
+|   |      |                   | : | frontera y       | exponerse externamente |
+|   |      |                   | / | predicado        | sin violar invariantes |
+|   |      |                   | / | verificable      | del SV. Su función es  |
+|   |      |                   | d |                  | fijar un requisito     |
+|   |      |                   | o |                  | mínimo de legitimidad  |
+|   |      |                   | i |                  | de exposición, no una  |
+|   |      |                   | . |                  | teoría de acción ni un |
+|   |      |                   | o |                  | modelo de ejecución    |
+|   |      |                   | r |                  | física.                |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 17   | Formalización de  | < | Interfaz visual, | Formaliza una interfaz |
+| 2 | /03/ | una interfaz      | h | configuración    | visual estructurada    |
+|   | 2026 | visual            | t | visible acotada, | para el SV. Su función |
+|   |      | estructurada en   | t | cadena           | es fijar la cadena     |
+|   |      | el Sistema        | p | algebraica de    | mínima por la cual una |
+|   |      | Vectorial SV      | s | entrada y        | configuración visible  |
+|   |      |                   | : | legitimidad      | acotada puede adquirir |
+|   |      |                   | / | estructural      | legitimidad algebraica |
+|   |      |                   | / |                  | dentro del sistema,    |
+|   |      |                   | d |                  | sin proponer una       |
+|   |      |                   | o |                  | teoría opaca de la     |
+|   |      |                   | i |                  | percepción.            |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 16   | Transiciones      | < | U, trayectoria   | Formaliza la           |
+| 1 | /03/ | estructurales y   | h | estructural,     | trayectoria            |
+|   | 2026 | trayectorias de   | t | dinámica         | estructural de U como  |
+|   |      | la U en el        | t | celular,         | evolución celular sin  |
+|   |      | Sistema Vectorial | p | indeterminación  | alterar la terna       |
+|   |      | SV                | s | honesta y        | propia. Su función     |
+|   |      |                   | : | evolución        | dentro del SV es       |
+|   |      |                   | / | discreta         | permitir lectura       |
+|   |      |                   | / |                  | dinámica de la         |
+|   |      |                   | d |                  | indeterminación        |
+|   |      |                   | o |                  | honesta, distinguiendo |
+|   |      |                   | i |                  | tránsito estructural   |
+|   |      |                   | . |                  | de probabilidad,       |
+|   |      |                   | o |                  | mezcla o cierre        |
+|   |      |                   | r |                  | instantáneo.           |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 16   | Análisis del      | < | Representación   | Propone una carta      |
+| 0 | /03/ | comportamiento    | h | polar, carta     | auxiliar en ℝ³ que     |
+|   | 2026 | geométrico del    | t | auxiliar en ℝ³,  | separa geométricamente |
+|   |      | polígono del      | t | U elevada,       | U del plano de         |
+|   |      | Sistema Vectorial | p | métricas         | determinación sin      |
+|   |      | SV: del plano     | s | discretas e      | alterar la semántica   |
+|   |      | cartesiano a una  | : | invariantes      | ternaria. Su función   |
+|   |      | carta espacial    | / | geométricos      | es proporcionar        |
+|   |      | afín auxiliar     | / |                  | métricas discretas     |
+|   |      | como vía de       | d |                  | para analizar          |
+|   |      | razonamiento para | o |                  | configuraciones        |
+|   |      | situaciones       | i |                  | complejas de           |
+|   |      | complejas         | . |                  | indeterminación, con   |
+|   |      |                   | o |                  | criterios de falsación |
+|   |      |                   | r |                  | y estabilidad.         |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 14   | Origen de         | < | U, no            | Fija el origen,        |
+| 9 | /03/ | fundamentos,      | h | determinación    | definición, alcance    |
+|   | 2026 | definición y      | t | actual,          | estructural y          |
+|   |      | alcance de la U   | t | indeterminación  | condiciones de uso     |
+|   |      | en el Sistema     | p | honesta,         | legítimo de U como     |
+|   |      | Vectorial SV      | s | condiciones de   | signo propio de no     |
+|   |      |                   | : | uso y            | determinación actual.  |
+|   |      |                   | / | trazabilidad     | Su función es impedir  |
+|   |      |                   | / |                  | que U se lea como      |
+|   |      |                   | d |                  | probabilidad, error,   |
+|   |      |                   | o |                  | mezcla, indecisión o   |
+|   |      |                   | i |                  | refugio retórico, y    |
+|   |      |                   | . |                  | consolidar su uso      |
+|   |      |                   | o |                  | transversal en         |
+|   |      |                   | r |                  | matemáticas, lenguaje  |
+|   |      |                   | g |                  | de computación y       |
+|   |      |                   | / |                  | agentes.               |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 14   | Desde la terna    | < | Terna {0,1,U},   | Sitúa históricamente   |
+| 8 | /03/ | (0, 1, U) hasta   | h | genealogía de la | el tercer valor y      |
+|   | 2026 | la nueva frontera | t | U, frontera 0-1, | precisa la             |
+|   |      | (0, 1, U, 0-1)    | t | no pertenencia   | singularidad de U      |
+|   |      |                   | p | al régimen       | dentro del SV como no  |
+|   |      |                   | s | binario y        | determinación actual.  |
+|   |      |                   | : | prudencia de     | Abre además la         |
+|   |      |                   | / | adopción         | hipótesis de una       |
+|   |      |                   | / |                  | frontera 0-1 como      |
+|   |      |                   | d |                  | posible no pertenencia |
+|   |      |                   | o |                  | al régimen binario     |
+|   |      |                   | i |                  | aplicable, sin alterar |
+|   |      |                   | . |                  | la terna propia. Su    |
+|   |      |                   | o |                  | función dentro del SV  |
+|   |      |                   | r |                  | es delimitar con       |
+|   |      |                   | g |                  | precisión la           |
+|   |      |                   | / |                  | diferencia entre U     |
+|   |      |                   | 1 |                  | como problema de       |
+|   |      |                   | 0 |                  | cierre epistémico y    |
+|   |      |                   | . |                  | 0-1 como cuestión de   |
+|   |      |                   | 2 |                  | frontera de régimen    |
+|   |      |                   | 1 |                  | todavía no incorporada |
+|   |      |                   | 4 |                  | al núcleo.             |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 11   | Álgebra de        | < | Invariantes,     | Formaliza cómo el SV   |
+| 7 | /03/ | composición       | h | agentes          | se especializa por     |
+|   | 2026 | intercelular ---  | t | especializados,  | dominios y agentes sin |
+|   |      | V. Invariantes,   | t | operador de      | perder invariantes e   |
+|   |      | agentes           | p | consulta,        | introduce el operador  |
+|   |      | especializados y  | s | justificación,   | de consulta como       |
+|   |      | operador de       | : | criticidad y U   | mecanismo trazable     |
+|   |      | consulta del      | / |                  | para obtener           |
+|   |      | sistema           | / |                  | respuestas,            |
+|   |      |                   | d |                  | justificación, control |
+|   |      |                   | o |                  | de criticidad y        |
+|   |      |                   | i |                  | conservación de U.     |
+|   |      |                   | . |                  |                        |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 11   | Álgebra de        | < | Análisis         | Desarrolla             |
+| 6 | /03/ | composición       | h | discreto,        | herramientas           |
+|   | 2026 | intercelular del  | t | diferencia       | matemáticas propias    |
+|   |      | marco SV --- VI.  | t | finita,          | del SV en el dominio   |
+|   |      | Análisis          | p | funciones        | discreto: diferencia   |
+|   |      | discreto,         | s | generatrices,    | finita, taxonomía      |
+|   |      | representaciones  | : | transformada Z,  | asintótica, funciones  |
+|   |      | y herramientas de | / | grafo de         | generatrices del       |
+|   |      | secuencias del    | / | composición y    | espacio combinatorio,  |
+|   |      | sistema           | d | codificaciones   | transformada Z de      |
+|   |      |                   | o |                  | secuencias propias,    |
+|   |      |                   | i |                  | álgebra lineal del     |
+|   |      |                   | . |                  | grafo de composición y |
+|   |      |                   | o |                  | codificaciones.        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 11   | Álgebra de        | < | Transducción a   | Formaliza cómo una     |
+| 5 | /03/ | composición       | h | Σ={0,1,U},       | magnitud del mundo     |
+|   | 2026 | intercelular del  | t | dominio          | entra legítimamente en |
+|   |      | marco SV --- IV.  | t | observacional    | el SV mediante         |
+|   |      | Transducción al   | p | tipado, sensor,  | captura,               |
+|   |      | alfabeto ternario | s | admisibilidad,   | admisibilidad,         |
+|   |      | e interfaz        | : | ternarización e  | transducción a         |
+|   |      | paramétrica del   | / | interfaz         | {0,1,U}, interfaz      |
+|   |      | sistema           | / | paramétrica      | paramétrica y U        |
+|   |      |                   | d |                  | silenciosa. Su función |
+|   |      |                   | o |                  | es cerrar el eslabón   |
+|   |      |                   | i |                  | que los documentos     |
+|   |      |                   | . |                  | I-III presuponen: la   |
+|   |      |                   | o |                  | conversión auditable   |
+|   |      |                   | r |                  | del mundo exterior en  |
+|   |      |                   | g |                  | valores ternarios      |
+|   |      |                   | / |                  | tratables por célula,  |
+|   |      |                   | 1 |                  | frame y trayectoria.   |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 11   | Álgebra de        | < | Horizonte de     | Formaliza la           |
+| 4 | /03/ | composición       | h | sucesos, frame   | reevaluación discreta  |
+|   | 2026 | intercelular del  | t | propio, dato de  | de una arquitectura    |
+|   |      | marco SV --- III. | t | transición,      | compositiva cuando     |
+|   |      | Horizonte de      | p | operador         | comparecen sucesos     |
+|   |      | sucesos y         | s | inducido,        | declarados en su       |
+|   |      | reevaluación      | : | trayectoria y    | horizonte propio. Su   |
+|   |      | discreta          | / | criticidad       | función es separar     |
+|   |      |                   | / |                  | suceso y tiempo,       |
+|   |      |                   | d |                  | organizar trayectorias |
+|   |      |                   | o |                  | append-only y expresar |
+|   |      |                   | i |                  | el cambio de           |
+|   |      |                   | . |                  | criticidad entre       |
+|   |      |                   | o |                  | frames sin introducir  |
+|   |      |                   | r |                  | tiempo como primitiva. |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 11   | Álgebra de        | < | Gramática tipada | Eleva la composición   |
+| 3 | /03/ | composición       | h | de composición,  | intercelular desde el  |
+|   | 2026 | intercelular del  | t | relación         | patrón de transmisión  |
+|   |      | marco SV --- II.  | t | semántica        | en serie hacia una     |
+|   |      | Gramática general | p | previa, patrones | gramática tipada de    |
+|   |      | de composición    | s | compositivos y   | patrones compositivos. |
+|   |      |                   | : | escala de        | Su función es exigir   |
+|   |      |                   | / | madurez formal   | relación semántica     |
+|   |      |                   | / |                  | previa antes de elegir |
+|   |      |                   | d |                  | mecanismo algebraico,  |
+|   |      |                   | o |                  | distinguir relación,   |
+|   |      |                   | i |                  | patrón, operador y     |
+|   |      |                   | . |                  | constructor, y fijar   |
+|   |      |                   | o |                  | condiciones de validez |
+|   |      |                   | r |                  | para composición       |
+|   |      |                   | g |                  | multinivel.            |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 10   | Álgebra de        | < | Composición      | Formaliza el primer    |
+| 2 | /03/ | composición       | h | intercelular,    | patrón compositivo     |
+|   | 2026 | intercelular del  | t | parámetro        | concreto del marco SV: |
+|   |      | marco SV --- I.   | t | puente, grafo    | la transmisión en      |
+|   |      | Transmisión en    | p | dirigido,        | serie por parámetro    |
+|   |      | serie por         | s | determinismo y   | puente, con célula     |
+|   |      | parámetro puente  | : | trazabilidad     | acoplable, grafo       |
+|   |      |                   | / |                  | dirigido y composición |
+|   |      |                   | / |                  | trazable. Su función   |
+|   |      |                   | d |                  | es abrir la teoría de  |
+|   |      |                   | o |                  | composición            |
+|   |      |                   | i |                  | intercelular desde un  |
+|   |      |                   | . |                  | patrón material de     |
+|   |      |                   | o |                  | cierre alto.           |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 09   | Fundamentos       | < | Gramática        | Fija la gramática      |
+| 1 | /03/ | alge              | h | algebraica       | algebraico-semántica   |
+|   | 2026 | braico-semánticos | t | ternaria, célula | ternaria del SV y      |
+|   |      | del Sistema       | t | exacta,          | transforma parámetros  |
+|   |      | Vectorial SV      | p | representación   | explícitos en células  |
+|   |      |                   | s | polar,           | e imágenes polares     |
+|   |      |                   | : | indeterminación  | auditables. Su función |
+|   |      |                   | / | y composición    | es dar base formal al  |
+|   |      |                   | / | tipada           | uso de la terna        |
+|   |      |                   | d |                  | {0,1,U}, la            |
+|   |      |                   | o |                  | composición tipada, la |
+|   |      |                   | i |                  | representación polar y |
+|   |      |                   | . |                  | la preservación del    |
+|   |      |                   | o |                  | juicio humano frente a |
+|   |      |                   | r |                  | opacidad               |
+|   |      |                   | g |                  | computacional.         |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 07   | La guía práctica  | < | SVcustos,        | Actúa como guía        |
+| 0 | /03/ | del conocimiento  | h | SVperitus,       | fundacional-contextual |
+|   | 2026 | profundo y la     | t | fundamentos      | del proyecto           |
+|   |      | crítica de la     | t | algebraicos,     | SVcustos+SVperitus,    |
+|   |      | razón pura        | p | CNN, plano       | articulando            |
+|   |      |                   | s | clínico, RGPD,   | fundamentos            |
+|   |      |                   | : | humanoides y     | algebraicos, plano     |
+|   |      |                   | / | adopción por     | clínico, uso de CNN,   |
+|   |      |                   | / | fases            | garantías jurídicas y  |
+|   |      |                   | d |                  | adopción por fases. Su |
+|   |      |                   | o |                  | función dentro del     |
+|   |      |                   | i |                  | inventario es          |
+|   |      |                   | . |                  | conservar el origen    |
+|   |      |                   | o |                  | programático de la     |
+|   |      |                   | r |                  | línea de agentes y     |
+|   |      |                   | g |                  | células aplicadas, sin |
+|   |      |                   | / |                  | elevarla a fundamento  |
+|   |      |                   | 1 |                  | matemático nuclear del |
+|   |      |                   | 0 |                  | SV.                    |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 9 | 07   | Compilador de     | < | Compilador de    | Cierra la serie        |
+|   | /03/ | fundamentos y     | h | serie, célula    | SVcustos--SVperitus    |
+|   | 2026 | célula meta       | t | meta SV(9,3)-IA, | mediante un compilador |
+|   |      | SV(9,3)-IA        | t | composición      | que integra los        |
+|   |      |                   | p | interdominio,    | documentos anteriores, |
+|   |      |                   | s | cadena de        | formaliza la célula    |
+|   |      |                   | : | responsabilidad  | meta SV(9,3)-IA y      |
+|   |      |                   | / | y cierre         | articula composición   |
+|   |      |                   | / | algebraico       | interdominio,          |
+|   |      |                   | d |                  | humanoides, cíborg,    |
+|   |      |                   | o |                  | cadena de              |
+|   |      |                   | i |                  | responsabilidad y      |
+|   |      |                   | . |                  | revisión de principios |
+|   |      |                   | o |                  | de gobernanza de IA.   |
+|   |      |                   | r |                  | Su función en el       |
+|   |      |                   | g |                  | inventario es          |
+|   |      |                   | / |                  | conservar el cierre    |
+|   |      |                   | 1 |                  | algebraico y editorial |
+|   |      |                   | 0 |                  | de la serie.           |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 8 | 05   | De SVcustos, el   | < | Inmunología,     | Instancia SVperitus en |
+|   | /03/ | marco de          | h | profilaxis       | el dominio de          |
+|   | 2026 | intrusión, hasta  | t | infecciosa,      | profilaxis infecciosa  |
+|   |      | SVperitus:        | t | vacunación,      | y vacunación en        |
+|   |      | IMMUNO-1 ---      | p | neoplasias       | adultos con neoplasias |
+|   |      | Profilaxis        | s | hematológicas,   | hematológicas e        |
+|   |      | infecciosa y      | : | célula SV(25,5), | inmunosupresión. Su    |
+|   |      | vacunación ·      | / | motor normativo  | función es demostrar   |
+|   |      | Célula SV(25,5)   | / | y polígono polar | el tránsito desde la   |
+|   |      |                   | d |                  | gramática ternaria de  |
+|   |      |                   | o |                  | seguridad SVcustos     |
+|   |      |                   | i |                  | hacia un agente        |
+|   |      |                   | . |                  | experto aplicado, con  |
+|   |      |                   | o |                  | célula SV(25,5), motor |
+|   |      |                   | r |                  | normativo, repositorio |
+|   |      |                   | g |                  | técnico y demo         |
+|   |      |                   | / |                  | ejecutable.            |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | f |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 7 | 04   | De SVcustos, el   | < | SVcustos, n=36,  | Extiende SVcustos      |
+|   | /03/ | marco de          | h | tercera          | desde n=25 a n=36,     |
+|   | 2026 | intrusión, hasta  | t | extensión        | reorganizando el       |
+|   |      | SVperitus: n = 25 | t | paramétrica, 6   | sistema en seis capas  |
+|   |      | ➔ n = 36          | p | capas de 6,      | de seis parámetros e   |
+|   |      |                   | s | integridad del   | incorporando once      |
+|   |      |                   | : | sistema,         | parámetros nuevos que  |
+|   |      |                   | / | autenticación e  | cubren autenticación,  |
+|   |      |                   | / | identidad,       | identidad,             |
+|   |      |                   | d | comunicaciones y | comunicaciones         |
+|   |      |                   | o | evasión          | activas, evasión       |
+|   |      |                   | i |                  | forense y cobertura    |
+|   |      |                   | . |                  | avanzada del ciclo de  |
+|   |      |                   | o |                  | amenaza. Su función es |
+|   |      |                   | r |                  | cerrar la tercera      |
+|   |      |                   | g |                  | extensión paramétrica  |
+|   |      |                   | / |                  | del sistema antes de   |
+|   |      |                   | 1 |                  | las células en par y   |
+|   |      |                   | 0 |                  | de la extensión n=49,  |
+|   |      |                   | . |                  | conservando la regla   |
+|   |      |                   | 2 |                  | estricta de            |
+|   |      |                   | 1 |                  | clasificación con      |
+|   |      |                   | 4 |                  | umbral n₁≥28.          |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 6 | 04   | De SVcustos, el   | < | Células SV en    | Introduce las células  |
+|   | /03/ | marco de          | h | par, SV(36,6),   | SV en par mediante     |
+|   | 2026 | intrusión, hasta  | t | SV(9,3),         | combinación de         |
+|   |      | SVperitus:        | t | composición      | SV(36,6) y SV(9,3),    |
+|   |      | Células SV en     | p | ternaria y       | con regla ternaria     |
+|   |      | Par: n = 36 + 9 = | s | frontera de 36+9 | algebraica             |
+|   |      | 45                | : | parámetros       | SV(par)=max(SV36,SV9), |
+|   |      |                   | / |                  | tabla de composición y |
+|   |      |                   | / |                  | frontera práctica de   |
+|   |      |                   | d |                  | 36+9 parámetros. Su    |
+|   |      |                   | o |                  | función es abrir un    |
+|   |      |                   | i |                  | régimen compositivo    |
+|   |      |                   | . |                  | para entornos críticos |
+|   |      |                   | o |                  | y médicos sin          |
+|   |      |                   | r |                  | confundir agregación   |
+|   |      |                   | g |                  | de células con nuevo   |
+|   |      |                   | / |                  | fundamento algebraico. |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 5 | 04   | De SVcustos, el   | < | SVcustos, n=49,  | Extiende SVcustos a    |
+|   | /03/ | marco de          | h | capa MDM,        | n=49=7² parámetros,    |
+|   | 2026 | intrusión, hasta  | t | entornos         | reorganizados en siete |
+|   |      | SVperitus. De n = | t | gestionados,     | capas temáticas y      |
+|   |      | 36 a n = 49:      | p | entornos         | orientados a entornos  |
+|   |      | extensión para    | s | médicos, umbral  | gestionados,           |
+|   |      | entornos          | : | T(n) y           | corporativos y         |
+|   |      | gestionados y     | / | cumplimiento     | médicos. Su función es |
+|   |      | médicos           | / | normativo        | fijar la frontera de   |
+|   |      |                   | d |                  | despliegue donde la    |
+|   |      |                   | o |                  | célula SV(49,7)        |
+|   |      |                   | i |                  | resulta preferente     |
+|   |      |                   | . |                  | frente al par          |
+|   |      |                   | o |                  | SV(36,6)+SV(9,3), bajo |
+|   |      |                   | r |                  | trazabilidad y         |
+|   |      |                   | g |                  | cumplimiento normativo |
+|   |      |                   | / |                  | externo.               |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 4 | 03   | De SVcustos, el   | < | SVcustos, n=25,  | Extiende SVcustos      |
+|   | /03/ | marco de          | h | dataset          | desde n=16 a n=25,     |
+|   | 2026 | intrusión, hasta  | t | sintético,       | reorganizando la       |
+|   |      | SVperitus: n = 16 | t | polígono polar,  | célula en cinco capas  |
+|   |      | ➔ n = 25          | p | ResNet34, regla  | de cinco parámetros y  |
+|   |      |                   | s | de clasificación | ampliando los vectores |
+|   |      |                   | : | y segunda        | de amenaza. Su función |
+|   |      |                   | / | extensión        | es consolidar la       |
+|   |      |                   | / | paramétrica      | segunda extensión      |
+|   |      |                   | d |                  | paramétrica del        |
+|   |      |                   | o |                  | sistema, con dataset   |
+|   |      |                   | i |                  | sintético, generación  |
+|   |      |                   | . |                  | de polígonos polares y |
+|   |      |                   | o |                  | clasificación por      |
+|   |      |                   | r |                  | ResNet34 bajo regla    |
+|   |      |                   | g |                  | estricta.              |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 3 | 03   | De SVcustos, el   | < | SVcustos, n=16,  | Extiende el nivel base |
+|   | /03/ | marco de          | h | primera          | de n=9 a n=16,         |
+|   | 2026 | intrusión, hasta  | t | extensión        | incorpora siete        |
+|   |      | SVperitus:        | t | paramétrica,     | parámetros nuevos,     |
+|   |      | agentes           | p | regla T(n),      | formaliza la regla     |
+|   |      | especializados.   | s | imagen polar y   | general de umbral      |
+|   |      | De n = 9 ➔ n =    | : | ResNet34         | T(n)=⌊7n/9⌋ y enlaza   |
+|   |      | 16: primera       | / |                  | el dataset público     |
+|   |      | extensión del     | / |                  | sintético. Su función  |
+|   |      | espacio           | d |                  | es estabilizar la      |
+|   |      | paramétrico       | o |                  | primera extensión      |
+|   |      |                   | i |                  | paramétrica auditable  |
+|   |      |                   | . |                  | de SVcustos.           |
+|   |      |                   | o |                  |                        |
+|   |      |                   | r |                  |                        |
+|   |      |                   | g |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 5 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | a |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | c |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 2 | 02   | De SVcustos, el   | < | SVcustos, nivel  | Define el nivel base   |
+|   | /03/ | marco de          | h | base, n=9,       | de SVcustos con n=9    |
+|   | 2026 | intrusión, hasta  | t | vector ternario, | parámetros ternarios,  |
+|   |      | SVperitus:        | t | polígono polar,  | restricción n=b²,      |
+|   |      | agentes           | p | clasificación de | transformación polar,  |
+|   |      | especializados    | s | intrusión y      | familias de            |
+|   |      |                   | : | topologías de    | dispositivos,          |
+|   |      |                   | / | despliegue       | topologías de          |
+|   |      |                   | / |                  | despliegue y           |
+|   |      |                   | d |                  | clasificación en       |
+|   |      |                   | o |                  | intrusión,             |
+|   |      |                   | i |                  | indeterminado o        |
+|   |      |                   | . |                  | normal. Su función es  |
+|   |      |                   | o |                  | fijar el origen        |
+|   |      |                   | r |                  | operativo de la serie  |
+|   |      |                   | g |                  | SVcustos--SVperitus.   |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | e |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
+| 1 | 24   | Framework basado  | < | Documento        | Conserva el            |
+|   | /07/ | en imágenes       | h | técnico          | antecedente técnico    |
+|   | 2021 | parametrizadas    | t | antecedente de   | directo de SVcustos:   |
+|   |      | sobre ResNet para | t | SVcustos: vector | codificación de        |
+|   |      | identificar       | p | ternario, imagen | parámetros ternarios,  |
+|   |      | intrusiones en    | s | poligonal polar  | representación         |
+|   |      | smartwatches u    | : | y clasificación  | poligonal polar y      |
+|   |      | otros             | / | de intrusión     | clasificación mediante |
+|   |      | dispositivos      | / |                  | arquitectura residual. |
+|   |      | afines            | d |                  | Su inclusión se limita |
+|   |      |                   | o |                  | a su relación material |
+|   |      |                   | i |                  | con la serie           |
+|   |      |                   | . |                  | SVcustos-SVperitus y   |
+|   |      |                   | o |                  | no habilita la         |
+|   |      |                   | r |                  | incorporación de       |
+|   |      |                   | g |                  | publicaciones          |
+|   |      |                   | / |                  | generales de           |
+|   |      |                   | 1 |                  | inteligencia           |
+|   |      |                   | 0 |                  | artificial, docencia o |
+|   |      |                   | . |                  | programación.          |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | 4 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | / |                  |                        |
+|   |      |                   | 3 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | d |                  |                        |
+|   |      |                   | 0 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | . |                  |                        |
+|   |      |                   | 9 |                  |                        |
+|   |      |                   | 8 |                  |                        |
+|   |      |                   | 1 |                  |                        |
+|   |      |                   | b |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 2 |                  |                        |
+|   |      |                   | 7 |                  |                        |
+|   |      |                   | 6 |                  |                        |
+|   |      |                   | > |                  |                        |
++---+------+-------------------+---+------------------+------------------------+
