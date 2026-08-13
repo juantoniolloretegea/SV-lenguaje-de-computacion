@@ -222,9 +222,6 @@ def validate_authority_static(program: AuthorityStaticProgram) -> None:
     for name, rule in declared.items():
         if not rule.reads <= COMPONENTS or not rule.writes <= COMPONENTS:
             raise J6Error(E615, f"rule {name} references unknown state component")
-        expected = SEALED_RULES[name]
-        if rule != expected:
-            raise J6Error(E615, f"rule {name} diverges from sealed A.2 effect signature")
         if rule.effect_class == EffectClass.INFORMATIONAL:
             if not rule.writes <= {"I", "Hist"}:
                 raise J6Error(E614, f"informational rule {name} writes authority/constitution")
@@ -236,6 +233,9 @@ def validate_authority_static(program: AuthorityStaticProgram) -> None:
             raise J6Error(E603, f"rule {name} introduces token outside capability mint")
         if name in {"COMMIT_DET", "COMMIT_SOV_U", "RESOLVE_SOV_U"} and not rule.requires_subject_principal_match:
             raise J6Error(E604, f"rule {name} lacks subject=principal(token) precondition")
+        expected = SEALED_RULES[name]
+        if rule != expected:
+            raise J6Error(E615, f"rule {name} diverges from sealed A.2 effect signature")
 
 
 def canonical_lower(program: AuthorityStaticProgram) -> str:
