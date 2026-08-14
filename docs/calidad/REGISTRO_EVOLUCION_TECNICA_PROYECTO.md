@@ -54,6 +54,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 | RETP-2026-043 | 26/03/2026 | 17:57:47 | CAMBIO_DOCUMENTACION_PUBLICA | Lenguaje SV / sincronización del espejo doctrinal de células especializadas y alta registral de nota de hoja de ruta / Fase IV | cerrado |
 | RETP-2026-044 | 26/03/2026 | NO_CONSTA | SANEAMIENTO_REGISTRAL_Y_ASENTAMIENTO_FINAL_DE_CICLO | Lenguaje SV / asentamiento final del ciclo UCBC12 y apertura trazable del piloto de seguridad estructural / Fase IV | cerrado |
 | RETP-2026-045 | 30/03/2026 | NO_CONSTA | DECISION_GOBIERNO_TECNICO | Lenguaje SV / alerta formal por Colección I publicada custodia estructural y continuidad hacia NLP / Fase IV | cerrado |
+| RETP-2026-046 | 14/08/2026 | 18:31:00 | CIERRE_AUDITADO_CON_RESERVA | SV-AUTH / A.2 r2 + J6 estático de referencia / rama sv-auth-v0.2 / Fase IV | cerrado |
 
 ## Entradas detalladas
 
@@ -746,4 +747,19 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Impacto:** gobierno_tecnico; trazabilidad; coordinacion_entre_sedes; cautela_semantica; continuidad_operativa.  
 - **Objeción adversarial:** Riesgo de ignorar la nueva presión doctrinal y aplicada sobre el Lenguaje SV o de sobreactuarla hasta doblar ahora el curso natural del lenguaje. No procede ninguno de los dos extremos: el lote sólo advierte, sincroniza y deja vigilancia formal visible.  
 - **Decisión:** Cerrar como lote registral y documental separado la absorción técnica de la Colección I publicada y de la custodia estructural asociada, manteniendo NLP como continuidad vigilada y no como obligación implementativa inmediata.  
+- **Estado:** cerrado
+
+### RETP-2026-046 — SV-AUTH / A.2 r2 + J6 estático de referencia / rama sv-auth-v0.2 / Fase IV
+
+- **Fecha:** 14/08/2026  
+- **Hora (Europe/Madrid):** 18:31:00  
+- **Tipo de hito:** CIERRE_AUDITADO_CON_RESERVA  
+- **Resumen del cambio:** Se cierra registralmente el macrolote SV-AUTH desarrollado en rama separada, se preservan A.2 v0.2.2, su sello r2 y J6 estático de referencia como sustrato técnico reutilizable y se bloquea cualquier integración automática en `main`.  
+- **Motivo / argumento:** El trabajo alcanzó un punto formal y ejecutable materialmente aprovechable, pero su continuación hacia el lenguaje integrado fue detenida deliberadamente para evitar avance arquitectónico precipitado y para exigir una autorización previa, transparente y trazable antes de tocar gramática, IR, parser, validator, runner, Playground o motor.  
+- **Base doctrinal / técnica:** `SV_AUTH_A2_CLAUSURA_OPERACIONAL_v0_2_2.md`; `SV_AUTH_A2_PRUEBAS_v0_2_2.md`; `SV_AUTH_A2_SELLO_Y_TRAZABILIDAD_r2_2026_08_13.md`; rama `sv-auth-v0.2`; procedimiento de auditoría técnica; regla de barrido integral por macrolote.  
+- **Artefactos afectados:** `docs/calidad/ACTA_TECNICA_DE_CIERRE_AUDITADO_Y_PRESERVACION_CONTROLADA_DE_SV_AUTH_A2_R2_Y_J6_2026_08_14.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`; `docs/calidad/README.md`; rama `sv-auth-v0.2` como punto técnico de restauración.  
+- **Evidencia:** `VERIFICACION_INTEGRAL` del árbol y contraste `main ↔ sv-auth-v0.2`; punto auditado `main=18a561eb81bda793db857381d1a1d4cda320a13c` y `sv-auth-v0.2=12874332ba1dfa28d2a00ca265f2ece8164871a0`; 9 commits por delante y 0 por detrás antes del asiento; diferencia limitada a 8 archivos; r2 SHA-256 `7c18761cf5546c8fdd9ad962c0ea3e0a54a9ddd4a4bf6d43c0ab29c7e4cf794f`; 78/78, 537 sentencias, 24 no cubiertas, 96 %; J6 21/21 y 97 %; ausencia de integración AUTH en parser, validator, IR, gramática, runner, Playground o motor.  
+- **Impacto:** trazabilidad; gobierno_tecnico; preservacion_controlada; reproducibilidad; control_de_alcance; mantenibilidad.  
+- **Objeción adversarial:** Riesgo doble: perder o relegar un trabajo válido por no estar en `main`, o retroproyectarlo como capacidad productiva ya integrada por estar formalizado y probado. Ninguno procede: el estado correcto es sustrato técnico preservado, auditado y latente, con integración futura bloqueada hasta decisión previa.  
+- **Decisión:** Cerrar el macrolote como `LATENTE_LEGITIMO`; preservar `sv-auth-v0.2` en `12874332ba1dfa28d2a00ca265f2ece8164871a0`; no fusionar ni integrar por esta acta; exigir acta arquitectónica previa antes de cualquier reapertura implementativa; no abrir deuda viva artificial ni mezclar publicaciones o transductores en esta regularización de Calidad.  
 - **Estado:** cerrado
