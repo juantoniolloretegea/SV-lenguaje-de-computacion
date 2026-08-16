@@ -6,8 +6,7 @@
 **Ámbito:** `SV-lenguaje-de-computacion`  
 **Estado:** vigente tras aprobación humana  
 **Destinatario operativo principal:** futuras unidades y responsables técnicos que deban continuar el Lenguaje SV  
-**Acta privada local:** existe y queda custodiada por el director humano
-
+**Acta privada local:** existe y queda custodiada de forma local
 ## 1. Objeto
 
 La presente acta ordena los frentes semánticos, matemáticos, de seguridad y de continuidad que deberán comparecer antes de cualquier nueva expansión material del Lenguaje SV.
@@ -19,7 +18,7 @@ Su finalidad es impedir cuatro errores de continuidad:
 3. continuar IR, DSL, bibliotecas, agentes o backend sobre distinciones todavía no suficientemente reconciliadas;
 4. bloquear indefinidamente el Lenguaje por pretender completar de antemano toda matemática o toda colección lateral.
 
-Esta acta es autocontenida y debe poder gobernar una futura reentrada aunque el director humano proporcione sólo una referencia parcial. Existe además un acta privada local, custodiada por el director humano, destinada a restauración de contexto cuando esté disponible. No es normativa y no sustituye esta acta ni a la doctrina superior.
+Esta acta es autocontenida y debe poder gobernar una futura reentrada. Existe además un acta privada local destinada a restauración de contexto cuando esté disponible. No es normativa y no sustituye esta acta ni a la doctrina superior.
 
 ## 2. Jerarquía aplicable
 
@@ -49,7 +48,7 @@ El tablero vigente del frente final mantiene:
 
 El frontend existente analiza, valida, baja a IR y serializa. Esa capacidad no equivale todavía a ejecución operacional general. El backend soberano en Rust permanece como objetivo futuro y no se abre por esta acta.
 
-Hasta este punto, `FFL-A` era el primer frente cerrable por prioridad técnica. A partir de la presente acta se introduce, por decisión humana expresa, una **pausa preventiva adicional**: una vez incorporada esta acta, no se realizará nueva modificación material del Lenguaje SV hasta completar el punto de control doctrinal y matemático definido en las secciones 7 y 8.
+Hasta este punto, `FFL-A` era el primer frente cerrable por prioridad técnica. A partir de la presente acta se introduce una **pausa preventiva adicional**: una vez incorporada esta acta, no se realizará nueva modificación material del Lenguaje SV hasta completar el punto de control doctrinal y matemático definido en las secciones 7 y 8.
 
 Esta pausa:
 
