@@ -6,8 +6,7 @@
 **Ámbito:** `SV-lenguaje-de-computacion`  
 **Estado:** vigente tras aprobación humana  
 **Destinatario operativo principal:** futuras unidades y responsables técnicos que deban continuar el Lenguaje SV  
-**Memoria privada correlativa:** `ACTA_PRIVADA_FINAL_CONTINUIDAD_RADIOGRAFIA_LENGUAJE_SV_2026-08-16.docx`  
-**SHA-256 de la memoria privada correlativa:** `7bc42de94c23beea3f57e61fb379bac860b4b42fa760d6554a41b55da01dbd23`
+**Acta privada local:** existe y queda custodiada por el director humano
 
 ## 1. Objeto
 
@@ -20,7 +19,7 @@ Su finalidad es impedir cuatro errores de continuidad:
 3. continuar IR, DSL, bibliotecas, agentes o backend sobre distinciones todavía no suficientemente reconciliadas;
 4. bloquear indefinidamente el Lenguaje por pretender completar de antemano toda matemática o toda colección lateral.
 
-Esta acta es autocontenida y debe poder gobernar una futura reentrada aunque el director humano proporcione sólo una referencia parcial. Existe además una memoria privada de continuidad, identificada arriba por nombre y SHA-256, con mayor granularidad histórica y forense. Esa memoria no es normativa y no sustituye esta acta ni a la doctrina superior; sirve exclusivamente para restauración de contexto cuando esté disponible.
+Esta acta es autocontenida y debe poder gobernar una futura reentrada aunque el director humano proporcione sólo una referencia parcial. Existe además un acta privada local, custodiada por el director humano, destinada a restauración de contexto cuando esté disponible. No es normativa y no sustituye esta acta ni a la doctrina superior.
 
 ## 2. Jerarquía aplicable
 
@@ -233,21 +232,13 @@ Esta acta:
 - no integra motor IA, NLP, Banco de Idiomas, agentes o programación natural en SVP;
 - no abre Rust soberano.
 
-## 13. Memoria privada correlativa y restauración futura
+## 13. Acta privada local y restauración futura
 
-Existe una memoria privada de mayor resolución:
+Existe un acta privada local, custodiada por el director humano.
 
-`ACTA_PRIVADA_FINAL_CONTINUIDAD_RADIOGRAFIA_LENGUAJE_SV_2026-08-16.docx`
+Cuando el director humano la proporcione o autorice su lectura, una futura unidad deberá leerla **después de esta acta** y **antes de proponer una reapertura material**, y deberá contrastarla siempre con el repositorio y la doctrina frescos.
 
-SHA-256:
-
-`7bc42de94c23beea3f57e61fb379bac860b4b42fa760d6554a41b55da01dbd23`
-
-La memoria privada conserva genealogía, rectificaciones, adversariales, dudas históricas, hallazgos de implementación y detalle de procedencia que no resulta necesario exponer en el repositorio público. No es normativa.
-
-Cuando el director humano la proporcione o autorice su lectura desde su almacenamiento privado, una futura unidad deberá leerla **después de esta acta** y **antes de proponer una reapertura material**, y deberá contrastarla siempre con el repositorio y la doctrina frescos.
-
-La ausencia temporal de la memoria privada no invalida esta acta ni autoriza a inferir el contenido que falte.
+La ausencia temporal del acta privada no invalida esta acta pública ni autoriza a inferir el contenido que falte.
 
 ## 14. Cierre
 
