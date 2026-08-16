@@ -55,6 +55,7 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 | RETP-2026-044 | 26/03/2026 | NO_CONSTA | SANEAMIENTO_REGISTRAL_Y_ASENTAMIENTO_FINAL_DE_CICLO | Lenguaje SV / asentamiento final del ciclo UCBC12 y apertura trazable del piloto de seguridad estructural / Fase IV | cerrado |
 | RETP-2026-045 | 30/03/2026 | NO_CONSTA | DECISION_GOBIERNO_TECNICO | Lenguaje SV / alerta formal por Colección I publicada custodia estructural y continuidad hacia NLP / Fase IV | cerrado |
 | RETP-2026-046 | 14/08/2026 | 18:31:00 | CIERRE_AUDITADO_CON_RESERVA | SV-AUTH / A.2 r2 + J6 estático de referencia / rama sv-auth-v0.2 / Fase IV | cerrado |
+| RETP-2026-047 | 16/08/2026 | 06:03 | FIJACION_FUENTE_DOCTRINAL_Y_CONTINUIDAD_PRE_DSL | Aprendizaje trazable / fuente doctrinal fijada / continuidad N3-N4 y pre-DSL / Fase IV | cerrado |
 
 ## Entradas detalladas
 
@@ -733,7 +734,6 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Decisión:** Cerrar el asentamiento final del ciclo UCBC12 antes de la continuidad operativa, dejando el Acta absorbida como límite superior, la sede celular actualizada y el registro técnico nuevamente legible y coordinado con el CSV maestro.  
 - **Estado:** cerrado
 
-
 ### RETP-2026-045 — Lenguaje SV / alerta formal por Colección I publicada custodia estructural y continuidad hacia NLP / Fase IV
 
 - **Fecha:** 30/03/2026  
@@ -762,4 +762,19 @@ Este registro coordina la lectura humana del historial técnico del Lenguaje SV 
 - **Impacto:** trazabilidad; gobierno_tecnico; preservacion_controlada; reproducibilidad; control_de_alcance; mantenibilidad.  
 - **Objeción adversarial:** Riesgo doble: perder o relegar un trabajo válido por no estar en `main`, o retroproyectarlo como capacidad productiva ya integrada por estar formalizado y probado. Ninguno procede: el estado correcto es sustrato técnico preservado, auditado y latente, con integración futura bloqueada hasta decisión previa.  
 - **Decisión:** Cerrar el macrolote como `LATENTE_LEGITIMO`; preservar `sv-auth-v0.2` en `12874332ba1dfa28d2a00ca265f2ece8164871a0`; no fusionar ni integrar por esta acta; exigir acta arquitectónica previa antes de cualquier reapertura implementativa; no abrir deuda viva artificial ni mezclar publicaciones o transductores en esta regularización de Calidad.  
+- **Estado:** cerrado
+
+### RETP-2026-047 — Aprendizaje trazable / fuente doctrinal fijada / continuidad N3-N4 y pre-DSL / Fase IV
+
+- **Fecha:** 16/08/2026  
+- **Hora (Europe/Madrid):** 06:03  
+- **Tipo de hito:** FIJACION_FUENTE_DOCTRINAL_Y_CONTINUIDAD_PRE_DSL  
+- **Resumen del cambio:** Se fija la fuente doctrinal efectiva del aprendizaje trazable tras DOI español, envío JAR y cápsula Code Ocean; se recupera el perímetro de custodia/continuidad y se establece la compuerta de matriz pre-DSL, manteniendo IR, gramática y código sin cambios.  
+- **Motivo / argumento:** El acta del 15/08 y la rama latente preservaban el núcleo, pero faltaba alta en el registro maestro y un mapa final que conservara de forma explícita custodia, pérdida de soporte, recuperación, procedencia y separación entre hecho histórico y veredicto operacional. La proximidad del frente DSL exige no partir de memoria ni de la serialización auxiliar.  
+- **Base doctrinal / técnica:** publicación doctrinal española DOI `10.21428/39829d0b.bebc607c`; envío JAR `6a8347e5-23d3-4f03-87e7-1a8e95e5e594` v1.0, `Technical check`; Code Ocean `10.24433/CO.4645115.v1` provisional; `IR_CANONICA_BIENFORMACION_SV_v0_2.md`; `GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`; acta SV-AUTH; nota de capa IA trazable; custodia estructural.  
+- **Artefactos afectados:** `docs/calidad/ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`; `docs/calidad/README.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`; `docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`; `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`; rama `traceable-learning-ir-v0.1` y `TRACEABLE_LEARNING_MAPA_DE_CONTINUIDAD_IR_N3_N4_v0_2.md`.  
+- **Evidencia:** `VERIFICACION_INTEGRAL` del perímetro afectado; fuente doctrinal en `SV-matematica-semantica`; DOI español; JAR v1.0 en `Technical check`; cápsula Code Ocean v1 en verificación con DOI provisional; 18 casos finitos de referencia; contraste material con IR v0.2, gramática v0.1, AUTH, REAL/SIM y custodia.  
+- **Impacto:** trazabilidad; gobierno_tecnico; continuidad_operativa; cautela_semantica; preservacion_controlada; preparacion_dsl.  
+- **Objeción adversarial:** Riesgo doble: perder al bajar al DSL las distinciones costosas sobre custodia, recuperación, soporte y veredicto operacional, o sobreactuar la publicación incorporando prematuramente `learn`, `episode` o campos del checker a la gramática/IR. El riesgo simétrico es ignorar material técnicamente aprovechable por permanecer fuera de `main`.  
+- **Decisión:** Fijar la fuente; conservar v0.1 como historia y v0.2 como mapa prospectivo en la rama latente; no fusionar ni modificar IR/DSL/código; exigir como siguiente paso una matriz `doctrina ↔ IR ↔ cambio mínimo ↔ juicio ↔ error ↔ lowering ↔ evidencia`, seguida de acta de reapertura antes de implementación.  
 - **Estado:** cerrado
