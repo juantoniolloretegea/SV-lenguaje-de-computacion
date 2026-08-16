@@ -41,3 +41,14 @@ La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repos
 ## Estado de hito actualmente acreditado
 
 La arquitectura vigente permite sostener ya, en régimen auditado y subordinado, `H1 — Base segura`, siempre sin convertir esa verificación en cierre total del frente ni en habilitación automática de `H2`, `H3` o del backend. La formalización de esa verificación se registra en `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`. Además, y sobre la base de `H2-pre` como dictamen de no bloqueo, el estado actual autoriza ya la **apertura restringida de `H2`** como frente arquitectónico-auditor de trabajo, sin verificación positiva todavía del hito ni habilitación automática de implementación fuerte o backend. Véase `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`.
+
+## Rama latente de aprendizaje trazable
+
+Esta rama contiene dos mapas documentales de continuidad para el aprendizaje trazable:
+
+- `TRACEABLE_LEARNING_MAPA_DE_CONTINUIDAD_IR_N3_N4_v0_1.md` — primera recepción y preservación prospectiva;
+- `TRACEABLE_LEARNING_MAPA_DE_CONTINUIDAD_IR_N3_N4_v0_2.md` — fuente doctrinal fijada, perímetro de custodia/continuidad, contraste con IR v0.2 y gramática superficial v0.1, y compuerta pre-DSL.
+
+El mapa v0.1 se conserva como historia de recepción. El mapa v0.2 es la referencia prospectiva vigente de esta rama, pero **no constituye especificación implementativa** y no autoriza merge a `main`.
+
+Antes de modificar IR, gramática, parser o lowering por razón del aprendizaje trazable deberá construirse y aprobarse la matriz `doctrina ↔ IR v0.2 ↔ cambio mínimo ↔ sintaxis candidata ↔ juicio de bienformación ↔ error observable ↔ lowering ↔ evidencia/prueba ↔ AUTH/REAL-SIM/custodia`, seguida de la correspondiente acta arquitectónica de reapertura.
