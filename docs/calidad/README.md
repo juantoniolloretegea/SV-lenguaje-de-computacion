@@ -29,6 +29,8 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `ACTA_TECNICA_DE_CIERRE_AUDITADO_DEL_PARCHE_CORRECTIVO_DEL_FRONTEND_2026_03_23.md`
 - `ACTA_TECNICA_DE_SINCRONIZACION_DOCUMENTAL_DEL_CONTRATO_DIAGNOSTICO_VISIBLE_2026_03_24.md`
 - `ACTA_TECNICA_DE_CIERRE_AUDITADO_Y_PRESERVACION_CONTROLADA_DE_SV_AUTH_A2_R2_Y_J6_2026_08_14.md`
+- `ACTA_TECNICA_DE_RECEPCION_DOCTRINAL_Y_PRESERVACION_DE_CONTINUIDAD_DEL_APRENDIZAJE_TRAZABLE_HACIA_IR_N3_N4_2026_08_15.md`
+- `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`
 
 ### Vigilancia UCBC e integración de alertas tempranas
 
@@ -49,6 +51,8 @@ Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, 
 - `NOTA_HOJA_DE_RUTA_CELULA_VERIFICACION_GENERACION_MATEMATICA_SV_2026_03_26.md`
 - `ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md`
 - `ACTA_TECNICA_DE_ALERTA_DE_GOBIERNO_SOBRE_COLECCION_I_CUSTODIA_ESTRUCTURAL_Y_FRENTE_NLP_2026_03_30.md`
+- `ACTA_TECNICA_DE_RECEPCION_DOCTRINAL_Y_PRESERVACION_DE_CONTINUIDAD_DEL_APRENDIZAJE_TRAZABLE_HACIA_IR_N3_N4_2026_08_15.md`
+- `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`
 
 ### Resiliencia, horizontes y control por hitos
 
@@ -143,3 +147,11 @@ El **Acta técnica de prohibición absoluta de uso bélico y primacía de superv
 Su existencia no sustituye a la doctrina canónica ni autoriza por sí sola endurecimiento inmediato de IR, runner o backend. La deuda futura relativa a la compuerta o contrato de resolución entre polos de prohibición y protección permanece **explícita, futura y no bloqueante**.
 
 La apertura material de la microauditoría del piloto de seguridad estructural en la sede doctrinal de células especializadas debe leerse en ese marco: como delimitación inicial seria del primer piso piloto del carril celular, no como implementación automática ya cerrada.
+
+## Nota adicional sobre aprendizaje trazable y continuidad pre-DSL
+
+La publicación doctrinal de aprendizaje trazable queda recibida por el Lenguaje SV y su fuente efectiva queda fijada mediante el acta complementaria de 16/08/2026. El frente se mantiene como **latente legítimo**: no introduce todavía nodos IR, sintaxis, parser, lowering, validator ni motor.
+
+La preservación no se limita al predicado de aprendizaje. Deben mantenerse diferenciadas la trayectoria del sistema, el registro histórico de conocimiento y la proyección activa; la adquisición nueva y la recuperación; el soporte histórico y la consulta operacional presente; y, ante pérdida parcial, la disponibilidad del soporte originario, la reconstruibilidad del estado, la reconstruibilidad de la procedencia y la posibilidad de volver a emitir un veredicto operacional definido.
+
+La futura entrada en el DSL queda condicionada a una matriz previa `doctrina ↔ IR v0.2 ↔ cambio mínimo ↔ juicio de bienformación ↔ error observable ↔ lowering ↔ evidencia/prueba`, contrastada además contra AUTH preservado, separación REAL/SIM y custodia estructural. Hasta ese cierre, el mapa v0.2 de la rama `traceable-learning-ir-v0.1` es documentación prospectiva y no una especificación implementativa.
