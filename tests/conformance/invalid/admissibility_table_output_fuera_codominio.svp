@@ -1,0 +1,13 @@
+-- Debe fallar con E011: una salida de la tabla no pertenece al codominio de salida.
+
+codomain KIn = { A, B };
+codomain KOut = { OK, NO_OK };
+
+admissibility_table T1 {
+  input_codomains: [KIn];
+  output_codomain: KOut;
+  table: {
+    (A) -> OK;
+    (B) -> FUERA;
+  };
+}

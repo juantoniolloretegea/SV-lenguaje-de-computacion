@@ -84,6 +84,10 @@ E010 = SVPErrorDef("E010", "InvalidRole",
     "Rol no reconocido: se esperaba Base, Supervisor o Composite",
     ErrorLevel.LAYER0, ErrorPhase.PARSE)
 
+E011 = SVPErrorDef("E011", "TableOutputNotInCodomain",
+    "La salida de una fila de la tabla de admisibilidad debe pertenecer al codominio de salida declarado",
+    ErrorLevel.LAYER0, ErrorPhase.VALIDATE)
+
 # ── Capa 1 — Estado ──────────────────────────────────────────────────
 
 E101 = SVPErrorDef("E101", "VectorLengthMismatch",
@@ -226,7 +230,7 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 # ── Catálogo completo ────────────────────────────────────────────────
 
 ERRORS = {e.code: e for e in [
-    E001, E002, E003, E004, E005, E006, E007, E008, E009, E010,
+    E001, E002, E003, E004, E005, E006, E007, E008, E009, E010, E011,
     E101, E102, E103, E104, E105, E106, E111, E112, E113,
     E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212,
     E301, E302, E303, E304, E307, E406,

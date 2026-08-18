@@ -12,7 +12,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 
 from typing import Dict, Set
 from svp_ast import *
-from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
+from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011,
                          E101, E102, E104, E105, E112, E113, E202, E211, E212, E303, E304, E307, E406,
                          E401, E402, E403)
 
@@ -201,9 +201,14 @@ class Validator:
         for values in expected_inputs:
             expected_combinations = {prefix + (value,) for prefix in expected_combinations for value in values}
 
+        output_values = set(self.symbols[node.output_codomain].values)
         seen_rows = []
         for keys, output in node.table:
             seen_rows.append(keys)
+            if output not in output_values:
+                raise SVPError(
+                    E011, node.loc.line, node.loc.col,
+                    f"Tabla {node.name!r} produce {output!r}, fuera del codominio de salida {node.output_codomain!r}")
 
         seen_set = set(seen_rows)
         missing = expected_combinations - seen_set
