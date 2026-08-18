@@ -41,7 +41,7 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 | E110 | `InvalidAdmissibilitySpec` | `E401` comprueba `parameter_id`, conjunto de estados y presencia de `rule` | PARCIAL | No se acredita determinismo material de `rule`. |
 | E111 | `UnorderedCodomain` | `E111` existe; `max/min` están prohibidos en v0.1 mediante `E210` | CUBIERTO_ESTRUCTURAL | La condición canónica no es alcanzable en la superficie actual de `max/min`; E111 permanece reserva convergente. |
 | E201 | `VectorLengthMismatch` | `E101 — VectorLengthMismatch` | CUBIERTO_OTRO_ID | Se comprueba en `CellState` y en ambos vectores de `CoupledState`. |
-| E202 | `IllegalBridgeUpdate` | no se compara hoy `base_vector` frente a `updated_vector` fuera de posiciones puente | NO_MATERIALIZADO | El E202 efectivo protege otra obligación (`GateInputNotEvalResult`). |
+| E202 | `IllegalBridgeUpdate` | `E112 — IllegalBridgeUpdate` compara `base_vector` y `updated_vector` y rechaza cambios fuera del `BridgeSet` | PARCIAL | La cláusula posicional de J2.2 queda materializada bajo ID efectivo libre. El `E202` efectivo sigue siendo `GateInputNotEvalResult`; no se acredita todavía que los valores modificados provengan de un `Connector` bien formado. |
 | E203 | `CyclicCompositionGraph` | `E103 — GraphCycleDetected` | CUBIERTO_OTRO_ID | Detección directa de ciclo y cobertura explícita. |
 | E204 | `MissingConflictOperator` | `Graph.conflicts` es opcional y el validator no comprueba concurrencia por `(target, position)` | NO_MATERIALIZADO | El E204 efectivo protege otra obligación (`QueryMissingContext`). |
 | E205 | `UndeclaredRegime` | parser exige `regime` y solo acepta `Simple` o `General`; fallo de forma cae en `E001` efectivo | CUBIERTO_ESTRUCTURAL | La obligación está impuesta por gramática, no por E205 canónico. |
@@ -72,16 +72,18 @@ La divergencia por numeración no debe ocultar cuatro clases distintas de situac
 
 1. **obligaciones canónicas ya protegidas con otro ID**, por ejemplo `E101→E004`, `E103→E105`, `E105→E009`, `E201→E101`, `E203→E103`, `E404/E405→E304` y `E507→E403`;
 2. **obligaciones precluidas por la superficie vigente**, como mutación de `Frame`, borrado/reordenación de trayectoria o `max/min` sobre codominio no ordenado;
-3. **obligaciones parcialmente protegidas**, donde la estructura actual cubre una parte pero no permite atribuir cierre completo del juicio canónico, como `E107–E110`, `E304` y `E305`;
-4. **deuda funcional real todavía no materializada**, destacando `E202`, `E204`, `E206`, `E301–E303` canónicos, `E403` canónico y `E406`, además de obligaciones posteriores de consulta/ABI.
+3. **obligaciones parcialmente protegidas**, donde la estructura actual cubre una parte pero no permite atribuir cierre completo del juicio canónico, como `E107–E110`, `E202` mediante `E112`, `E304` y `E305`;
+4. **deuda funcional real todavía no materializada**, destacando `E204`, `E206`, `E301–E303` canónicos, `E403` canónico y `E406`, además de obligaciones posteriores de consulta/ABI.
 
 Las clases tercera y cuarta no pueden desaparecer por documentación. Deben permanecer visibles como deuda de implementación o ABI para los bloques posteriores correspondientes.
+
+La materialización de `E112` no convierte la obligación canónica `E202` en `CUBIERTO_OTRO_ID`: J2.2 contiene además una exigencia de procedencia desde un `Connector` bien formado que la representación actual de `CoupledState` no permite verificar por sí sola.
 
 ## 5. Efecto sobre FFL-A
 
 FFL-A no exige implementar de inmediato todos los diagnósticos de la IR. Su criterio de cierre admite una deuda **localizada, gobernada y explicitada**.
 
-Este crosswalk permite distinguir qué divergencias son puramente numéricas, cuáles son de alcanzabilidad y cuáles representan una obligación canónica aún no materializada. Por tanto, puede servir como evidencia de gobierno del contrato diagnóstico bajo Vía B, pero **no cierra por sí solo FFL-A ni transfiere la deuda funcional a estado de resuelta**.
+Este crosswalk permite distinguir qué divergencias son puramente numéricas, cuáles son de alcanzabilidad y cuáles representan una obligación canónica aún no materializada. Por tanto, sirve como evidencia de gobierno del contrato diagnóstico bajo Vía B, sin transferir a estado de resuelta la deuda funcional que corresponde a FFL-B o FFL-E.
 
 ## 6. Regla de continuidad
 
