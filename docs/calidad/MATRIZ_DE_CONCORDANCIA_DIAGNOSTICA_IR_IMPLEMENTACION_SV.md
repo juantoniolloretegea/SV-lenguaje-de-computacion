@@ -122,7 +122,7 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E005|—|DuplicateIdentifier|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E006|—|UndeclaredReference|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E007|—|InvalidConnectorMapping|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
-|E008|—|ConnectorTargetNotTri|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E008|—|ConnectorTargetNotTri|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E009|—|TableInputMismatch|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E010|—|InvalidRole|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E207|—|ResolveMissingMechanism|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
@@ -138,7 +138,7 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.
 4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.
 5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
-6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda ya concentrada en `E003` y `E004`.
+6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda concentrada en `E003`, `E004` y `E008`.
 7. El contraste fino documentado de `E102 / E104 / E106 / E111` ya no desemboca observacionalmente en `E006` o `E008` para `E102` y `E104`: ambos constan hoy con emisión observable y cobertura explícita propia.
 8. `E106` y `E111` mantienen su condición de coincidencias ancla, pero siguen sin cobertura explícita de suite en la superficie v0.1.
 9. Dentro de la familia `E201–E211`, `E208` y `E209` pasan ya a emisión observable y cobertura explícita por los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
