@@ -255,11 +255,24 @@ class Validator:
         self._require_ref(node.relation, node.loc, "SemanticRelationDecl")
         for n_ref in node.nodes:
             self._require_ref(n_ref, node.loc, "CoupledSpecDecl")
+
+        node_set = set(node.nodes)
+        # Comprobaciones estructurales de referencia de Edge. Las obligaciones
+        # semánticas finas de J2.3 (BridgeSet, compatibilidad de Connector y
+        # concurrencia/ConflictOperator) se gobiernan por separado bajo Vía B.
+        for e in node.edges:
+            if e.source not in node_set:
+                raise SVPError(E006, node.loc.line, node.loc.col,
+                               f"Edge.source {e.source!r} no pertenece a los nodos declarados de {node.name!r}")
+            if e.target not in node_set:
+                raise SVPError(E006, node.loc.line, node.loc.col,
+                               f"Edge.target {e.target!r} no pertenece a los nodos declarados de {node.name!r}")
+            self._require_ref(e.connector, node.loc, "ConnectorDecl")
+
         # Cycle detection via topological sort
         adj: Dict[str, Set[str]] = {n_ref: set() for n_ref in node.nodes}
         for e in node.edges:
-            if e.source in adj:
-                adj[e.source].add(e.target)
+            adj[e.source].add(e.target)
         visited = set()
         in_stack = set()
         def dfs(v):
@@ -403,7 +416,7 @@ class Validator:
                                f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
 
     def _validate_eval(self, node: EvalCmd):
-        self._require_ref(node.input_ref, node.loc)
+        self._require_ref(node.input_ref, node.loc, "CellStateDecl")
 
     def _validate_resolve(self, node: ResolveCmd):
         self._require_ref(node.with_spec, node.loc, "ResSpecDecl")
