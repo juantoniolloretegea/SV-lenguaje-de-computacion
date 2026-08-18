@@ -37,12 +37,20 @@ cellstate S1 {
   vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
+coupledspec CC1 { cell: C1; bridges: [3]; }
+
+coupledstate CS1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
 let E1 = evaluate(S1);
 
 frame F1 {
   index: 1;
   architecture: Arch1;
-  cell_states: [S1];
+  cell_states: [CS1];
   eval_results: [E1];
   gate_results: [];
   supervision: [];
@@ -52,7 +60,7 @@ frame F1 {
 frame F2 {
   index: 2;
   architecture: Arch1;
-  cell_states: [S1];
+  cell_states: [CS1];
   eval_results: [E1];
   gate_results: [];
   supervision: [];
