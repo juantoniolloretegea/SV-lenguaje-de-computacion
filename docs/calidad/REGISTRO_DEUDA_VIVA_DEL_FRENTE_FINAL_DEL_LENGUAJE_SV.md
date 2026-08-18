@@ -8,7 +8,7 @@ Este registro concentra únicamente la deuda viva relevante para el frente final
 
 ### DFL-001 — Concordancia IR ↔ catálogo ↔ implementación
 
-- **Descripción:** persiste una tensión reconocida entre la norma diagnóstica superior (IR v0.2) y el catálogo implementativo efectivo. La divergencia queda ya localizada en dos planos complementarios: matriz por identificador y crosswalk funcional de obligaciones canónicas. El estado vigente distingue 4 coincidencias semánticas por mismo ID, 20 divergencias por mismo ID, 14 códigos solo IR y 15 códigos solo implementación; además separa obligaciones cubiertas por otro ID o por estructura de aquellas parciales o no materializadas. En FFL-B, la cláusula posicional de la obligación canónica `E202 — IllegalBridgeUpdate` queda materializada parcialmente mediante `E112`, mientras la exigencia de procedencia desde un `Connector` bien formado permanece abierta. La obligación canónica `E206 — EdgeConnectorMismatch` queda protegida funcionalmente mediante `E113` para la compatibilidad contextual de posición, `target_position` y codominio fuente, complementada por las comprobaciones del mapping ya existentes.
+- **Descripción:** persiste una tensión reconocida entre la norma diagnóstica superior (IR v0.2) y el catálogo implementativo efectivo. La divergencia queda localizada en dos planos complementarios: matriz por identificador y crosswalk funcional de obligaciones canónicas. El estado vigente distingue 4 coincidencias semánticas por mismo ID, 20 divergencias por mismo ID, 14 códigos solo IR y 16 códigos solo implementación. En FFL-B, la cláusula posicional de la obligación canónica `E202 — IllegalBridgeUpdate` queda materializada parcialmente mediante `E112`, mientras la exigencia de procedencia desde un `Connector` bien formado permanece abierta. La obligación canónica `E206 — EdgeConnectorMismatch` queda protegida funcionalmente mediante `E113` para la compatibilidad contextual de posición, `target_position` y codominio fuente, complementada por las comprobaciones del mapping ya existentes. La obligación canónica `E403 — UndeclaredHorizonEvent` queda protegida funcionalmente mediante `E307`, que compara los tipos de suceso de `TransitionData` con el `Horizon` referenciado.
 - **Riesgo:** confundir convergencia numérica con protección funcional, o presentar como cerrada una obligación canónica que solo está parcial o prospectivamente materializada.
 - **Estado:** gobernada y no bloqueante para el cierre de FFL-A bajo Vía B; permanece viva para convergencia futura y para los bloques de implementación/ABI que correspondan.
 - **Prioridad:** alta.
@@ -32,15 +32,12 @@ Este registro concentra únicamente la deuda viva relevante para el frente final
 
 Toda nueva deuda viva relevante deberá incorporarse aquí si afecta al cierre del frente, y deberá desaparecer de este registro solo por cierre acreditado o traslado formalmente justificado.
 
-
 ### DFL-004 — Distinción entre frame histórico, reapertura y consulta presente
 
 - **Descripción:** persiste como deuda viva del frente la necesidad de demostrar concordancia fuerte entre el último frame históricamente acreditado, la reapertura legítima a `U`, la cobertura/admisibilidad vigente y la forma en que la consulta expresa el estado actual sin sobreatribuir cierre.
 - **Riesgo:** confusión entre historial acreditado y estado presente; persistencia ilegítima de cierres fuertes; degradación insuficientemente gobernada a `U`; ambigüedad pública de la consulta.
 - **Estado:** abierta y gobernada.
 - **Prioridad:** alta.
-
-
 
 ### DFL-005 — Campos opacos de Domain todavía no interpretados por runtime
 

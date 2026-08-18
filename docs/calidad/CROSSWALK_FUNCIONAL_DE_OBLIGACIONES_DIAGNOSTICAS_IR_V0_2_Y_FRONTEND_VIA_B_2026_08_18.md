@@ -54,7 +54,7 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 | E306 | `UntaggedSupervisable` | parser exige constructores de `Supervisable`; el caso opaco se emite como `E205` efectivo | CUBIERTO_OTRO_ID | La etiqueta estructural queda exigida con numeración efectiva distinta. |
 | E401 | `FrameMutationAttempt` | no existe operación superficial de mutación de `Frame`; `E301` efectivo conserva el invariante en catálogo | CUBIERTO_ESTRUCTURAL | La inmutabilidad se preserva hoy principalmente por construcción/tipo, no por disparo autónomo. |
 | E402 | `NonAppendOnlyTrajectory` | no existe operación superficial para borrar o reordenar entradas previas; `E302` efectivo conserva el invariante en catálogo | CUBIERTO_ESTRUCTURAL | La trayectoria se construye y valida, pero no se expone mutación retroactiva. |
-| E403 | `UndeclaredHorizonEvent` | `TransitionData.horizon_ref` se valida con `E303` efectivo, pero no se comprueba que cada `event_type` pertenezca a `Horizon.events` | NO_MATERIALIZADO | Es una deuda funcional concreta de N3; el E403 efectivo pertenece a consultas. |
+| E403 | `UndeclaredHorizonEvent` | `E307 — UndeclaredHorizonEvent` comprueba que cada `TransitionData.events[].event_type` pertenezca al conjunto `Horizon.events` del `horizon_ref` | CUBIERTO_OTRO_ID | La obligación material de J4.3 queda protegida sin reutilizar `E403`, que en el catálogo efectivo mantiene `QueryContractViolation`. |
 | E404 | `BrokenAlternation` | `E304 — TrajectoryAlternanceViolation` | CUBIERTO_OTRO_ID | Valida transición obligatoria en entradas no finales y prohibida en la última. |
 | E405 | `EmptyTrajectory` | `E304 — TrajectoryAlternanceViolation` | CUBIERTO_OTRO_ID | El validator rechaza `entries` vacío. |
 | E406 | `InsufficientTransitionData` | parser admite lista vacía de `induced_parameters` y el validator no la rechaza | NO_MATERIALIZADO | Deuda funcional concreta de N3. |
@@ -70,16 +70,18 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 
 La divergencia por numeración no debe ocultar cuatro clases distintas de situación:
 
-1. **obligaciones canónicas ya protegidas con otro ID**, por ejemplo `E101→E004`, `E103→E105`, `E105→E009`, `E201→E101`, `E203→E103`, `E206→E113`, `E404/E405→E304` y `E507→E403`;
+1. **obligaciones canónicas ya protegidas con otro ID**, por ejemplo `E101→E004`, `E103→E105`, `E105→E009`, `E201→E101`, `E203→E103`, `E206→E113`, `E403→E307`, `E404/E405→E304` y `E507→E403`;
 2. **obligaciones precluidas por la superficie vigente**, como mutación de `Frame`, borrado/reordenación de trayectoria o `max/min` sobre codominio no ordenado;
 3. **obligaciones parcialmente protegidas**, donde la estructura actual cubre una parte pero no permite atribuir cierre completo del juicio canónico, como `E107–E110`, `E202` mediante `E112`, `E304` y `E305`;
-4. **deuda funcional real todavía no materializada**, destacando `E204`, `E301–E303` canónicos, `E403` canónico y `E406`, además de obligaciones posteriores de consulta/ABI.
+4. **deuda funcional real todavía no materializada**, destacando `E204`, `E301–E303` canónicos y `E406`, además de obligaciones posteriores de consulta/ABI.
 
 Las clases tercera y cuarta no pueden desaparecer por documentación. Deben permanecer visibles como deuda de implementación o ABI para los bloques posteriores correspondientes.
 
 La materialización de `E112` no convierte la obligación canónica `E202` en `CUBIERTO_OTRO_ID`: J2.2 contiene además una exigencia de procedencia desde un `Connector` bien formado que la representación actual de `CoupledState` no permite verificar por sí sola.
 
-`E113` sí permite clasificar `E206` como `CUBIERTO_OTRO_ID` en el alcance de la superficie actual, porque los datos necesarios para la compatibilidad contextual de la arista están representados y el mapping interno del conector ya dispone de validación separada.
+`E113` permite clasificar `E206` como `CUBIERTO_OTRO_ID` en el alcance de la superficie actual, porque los datos necesarios para la compatibilidad contextual de la arista están representados y el mapping interno del conector ya dispone de validación separada.
+
+`E307` permite clasificar `E403` como `CUBIERTO_OTRO_ID`: tanto `TransitionData.events` como `Horizon.events` están ya representados y su pertenencia es una comprobación directa, sin nueva semántica ni nueva sintaxis.
 
 ## 5. Efecto sobre FFL-A
 

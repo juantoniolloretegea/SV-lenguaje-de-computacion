@@ -28,16 +28,18 @@ No debe interpretarse como sustitución de la IR v0.2 ni como cancelación de la
 
 Constan actualmente:
 
-- **39 códigos** en el catálogo implementativo efectivo;
+- **40 códigos** en el catálogo implementativo efectivo;
 - **4 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`);
 - **20 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
-- **15 códigos** presentes en implementación y no codificados en la IR v0.2.
+- **16 códigos** presentes en implementación y no codificados en la IR v0.2.
 
 La actualización de `E102` y `E104` no reescribe el contraste histórico: registra que el frontend vigente emite ya esos identificadores para las mismas obligaciones diagnósticas que fija la IR v0.2. Las antiguas caídas de esos subcasos a `E006` y `E008` quedaron superadas por la resincronización posterior del frontend.
 
 `E112` materializa bajo Vía B, con identificador efectivo libre, la parte verificable de la obligación canónica `E202 — IllegalBridgeUpdate` que exige que `updated_vector` difiera de `base_vector` únicamente en posiciones del `BridgeSet`. La procedencia de los valores desde un `Connector` bien formado permanece fuera de ese cierre parcial.
 
 `E113` materializa bajo Vía B la obligación canónica `E206 — EdgeConnectorMismatch` en la superficie actualmente representable: la posición de la arista debe pertenecer al `BridgeSet` del target, debe coincidir con `Connector.target_position` y `Connector.source_codomain` debe coincidir con el codominio de la célula transmisora. La validez interna del mapping del conector continúa gobernada por las comprobaciones efectivas `E104` y `E007`.
+
+`E307` materializa bajo Vía B la obligación canónica `E403 — UndeclaredHorizonEvent`: cada `event_type` de `TransitionData.events` debe pertenecer a `Horizon.events` del `horizon_ref` declarado. El identificador canónico `E403` no se reutiliza porque en el contrato efectivo vigente significa `QueryContractViolation`.
 
 ## 5. Regla de uso
 
@@ -85,6 +87,7 @@ Mientras siga vigente la regularización por Vía B:
 | E302 | `TrajectoryMutationForbidden` | Evolución | `validate` | divergente respecto de IR v0.2 | No se permite modificar, eliminar ni reordenar entradas de una Trajectory (append-only por tipo) |
 | E303 | `TransitionDataMissingHorizon` | Evolución | `validate` | divergente respecto de IR v0.2 | TransitionData declarado sin referencia a Horizon |
 | E304 | `TrajectoryAlternanceViolation` | Evolución | `validate` | divergente respecto de IR v0.2 | La secuencia de entradas de Trajectory no respeta las invariantes de alternancia |
+| E307 | `UndeclaredHorizonEvent` | Evolución | `validate` | no consta en IR v0.2 | TransitionData referencia un tipo de suceso que no pertenece al Horizon declarado |
 | E401 | `DomainPortContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Domain incumple el contrato mínimo de enganche declarado |
 | E402 | `AgentDomainContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Agent incompatible con el Domain o con la arquitectura declarada |
 | E403 | `QueryContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | QuerySpec o QueryContext incompatibles con el contrato de uso |
@@ -93,72 +96,17 @@ Mientras siga vigente la regularización por Vía B:
 
 ## 7. Emisión observable y casos explícitos de conformidad
 
-Para evitar sobreatribución de cobertura, se distinguen aquí tres planos distintos del estado actual del frontend de referencia.
-
 ### 7.1. Códigos con emisión directa observable en el código fuente
 
 Constan con sitio de emisión directo observable en el frontend actual, al menos, los siguientes códigos:
 
-- `E001`
-- `E002`
-- `E004`
-- `E005`
-- `E006`
-- `E007`
-- `E009`
-- `E010`
-- `E101`
-- `E102`
-- `E103`
-- `E104`
-- `E105`
-- `E112`
-- `E113`
-- `E202`
-- `E204`
-- `E205`
-- `E208`
-- `E209`
-- `E210`
-- `E211`
-- `E303`
-- `E304`
-- `E401`
-- `E402`
-- `E403`
-- `E507`
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
 
 ### 7.2. Códigos con caso explícito de conformidad declarado
 
-La suite de conformidad vigente contiene casos inválidos con código esperado declarado, al menos, para los siguientes códigos:
+La suite de conformidad vigente contiene casos inválidos con código esperado declarado, al menos, para:
 
-- `E001`
-- `E002`
-- `E005`
-- `E006`
-- `E007`
-- `E009`
-- `E010`
-- `E101`
-- `E102`
-- `E103`
-- `E104`
-- `E105`
-- `E112`
-- `E113`
-- `E202`
-- `E204`
-- `E205`
-- `E208`
-- `E209`
-- `E210`
-- `E211`
-- `E303`
-- `E304`
-- `E401`
-- `E402`
-- `E403`
-- `E507`
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
 
 La presencia de un caso y de su código esperado no equivale, por sí sola, a una nueva ejecución global acreditada de la suite. La suficiencia dinámica de la batería se cerrará específicamente en `FFL-C`.
 
@@ -166,55 +114,26 @@ La presencia de un caso y de su código esperado no equivale, por sí sola, a un
 
 La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola, que exista hoy un sitio de emisión directo observable ni que esté cubierto por la suite.
 
-En particular, el caso adversarial `u_coercion.svp` se vincula con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
-
-Los casos `conector_mapping_incompleto.svp` y `admissibility_table_incompleta.svp` disponen de códigos esperados `E007` y `E009`, respectivamente.
-
-Asimismo, `domain_chain_mismatch.svp`, `agent_architecture_mismatch.svp` y `query_context_type_mismatch.svp` vinculan los códigos `E401`, `E402` y `E403` a casos explícitos de conformidad, fijando un primer contrato mínimo de enganche en N4/Uso sin sobreatribuir todavía interpretación ejecutiva plena a todos los campos opacos de `Domain`.
-
-Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden casos explícitos para `E005` y `E010`.
-
-Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp` añaden casos explícitos para `E101` y `E105`.
-
-El caso `invalid_tri_literal.svp` aporta un caso explícito para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
-
-Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan casos explícitos para `E102` y `E104`, respectivamente. En el estado vigente, esas emisiones coinciden con las obligaciones canónicas `MissingOutputSemantics` e `InvalidConnectorCodomain` de la IR v0.2.
-
 `E008` permanece en el catálogo implementativo por trazabilidad, pero **no dispone hoy de sitio de emisión directo ni de caso explícito en la suite**. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`.
 
-Los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp` fijan casos explícitos para `E208` y `E209`.
-
-El caso `transition_data_horizon_no_declarado.svp` fija un caso explícito para `E303`.
-
-El caso `coupledstate_update_fuera_bridges.svp` fija el caso explícito de `E112` para la parte verificable de `J2.2`: si `base_vector` y `updated_vector` difieren, toda posición modificada debe pertenecer al `BridgeSet` del `CoupledSpec`. Este cierre es **parcial respecto de J2.2**: no acredita todavía que el valor actualizado proceda de un `Connector` bien formado.
+El caso `coupledstate_update_fuera_bridges.svp` fija el caso explícito de `E112` para la parte verificable de `J2.2`. Este cierre es **parcial respecto de J2.2**: no acredita todavía que el valor actualizado proceda de un `Connector` bien formado.
 
 Los casos `edge_position_fuera_bridges.svp`, `edge_connector_target_position_mismatch.svp` y `edge_connector_source_codomain_mismatch.svp` separan las tres incompatibilidades contextuales verificables de `J2.3` que se emiten como `E113`. Junto con las comprobaciones internas ya existentes del mapping del conector (`E104`/`E007`), constituyen la ruta efectiva de la obligación canónica `E206 — EdgeConnectorMismatch` bajo Vía B.
+
+El caso `transition_event_fuera_horizon.svp` fija la ruta efectiva `E307` para la obligación canónica `E403 — UndeclaredHorizonEvent`, sin sustituir el significado implementativo vigente de `E403`.
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 
 ### 7.4. Estado fino de la emitibilidad pública de `E301–E304`
 
-- `E304` dispone de **emisión observable directa** en `src/svp_validator.py` y de **caso explícito** en la suite de conformidad vigente.
-- `E301` y `E302` permanecen como **invariantes de tipo** (`Frame` inmutable y `Trajectory` append-only) cuya violación no cuenta todavía con una operación superficial publicada que las dispare como error autónomo en v0.1.
-- `E303` dispone de **emisión observable directa** en la validación de `TransitionData` y de **caso explícito** mediante `transition_data_horizon_no_declarado.svp`.
+- `E304` dispone de emisión observable directa y caso explícito.
+- `E301` y `E302` permanecen como invariantes de tipo sin operación superficial autónoma publicada.
+- `E303` dispone de emisión observable directa y caso explícito mediante `transition_data_horizon_no_declarado.svp`.
 
 ## 8. Regla de continuidad
 
-Si el catálogo implementativo cambia, este documento deberá actualizarse en el mismo bloque de trabajo que altere:
-
-- `src/svp_errors.py`,
-- `src/svp_validator.py`,
-- `tests/run_conformance.py`,
-- o la documentación pública correspondiente.
+Si el catálogo implementativo cambia, este documento deberá actualizarse en el mismo bloque de trabajo que altere `src/svp_errors.py`, `src/svp_validator.py`, `tests/run_conformance.py` o la documentación pública correspondiente.
 
 ## 9. Vigencia
 
 Este documento permanece vigente mientras el frontend de referencia mantenga un catálogo implementativo efectivo no plenamente reconciliado con la IR v0.2.
-
-## Cobertura explícita añadida
-
-- `E202` dispone de caso explícito en suite mediante `gate_input_no_evalresult.svp`.
-- `E204` dispone de caso explícito en suite mediante `query_context_opaco.svp`.
-- `E205` dispone de caso explícito en suite mediante `supervise_target_opaco.svp`.
-- `E112` dispone de caso explícito mediante `coupledstate_update_fuera_bridges.svp`; su alcance es la cláusula posicional de `J2.2`, no la procedencia por conector.
-- `E113` dispone de tres casos explícitos que separan posición fuera de `BridgeSet`, desacuerdo `Edge.position`/`Connector.target_position` y codominio fuente incompatible.
