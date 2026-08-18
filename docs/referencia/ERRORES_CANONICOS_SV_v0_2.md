@@ -97,7 +97,6 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E005`
 - `E006`
 - `E007`
-- `E008`
 - `E009`
 - `E010`
 - `E101`
@@ -128,7 +127,6 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E005`
 - `E006`
 - `E007`
-- `E008`
 - `E009`
 - `E010`
 - `E101`
@@ -153,7 +151,7 @@ La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola,
 
 En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observacionalmente con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
 
-De forma análoga, los casos adversariales `conector_mapping_incompleto.svp`, `conector_target_no_ternario.svp` y `admissibility_table_incompleta.svp` dejan ya constancia observable de emisión para `E007`, `E008` y `E009`, respectivamente, y pasan a formar parte de la cobertura explícita de la suite de conformidad.
+Los casos adversariales `conector_mapping_incompleto.svp` y `admissibility_table_incompleta.svp` dejan constancia observable de emisión para `E007` y `E009`, respectivamente, y forman parte de la cobertura explícita de la suite de conformidad.
 
 Asimismo, `domain_chain_mismatch.svp`, `agent_architecture_mismatch.svp` y `query_context_type_mismatch.svp` convierten en emisión observable y cobertura explícita los códigos `E401`, `E402` y `E403`, fijando un primer cierre verificable del contrato mínimo de enganche en N4/Uso sin sobreatribuir todavía interpretación ejecutiva plena a todos los campos opacos de `Domain`.
 
@@ -163,7 +161,9 @@ Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_ran
 
 El caso adversarial `invalid_tri_literal.svp` aporta ahora cobertura explícita observable para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
 
-Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan ya emisión observable y cobertura explícita para `E102` y `E104`, respectivamente, y obligan a corregir las antiguas lecturas que los absorbían en `E006` o `E008`.
+Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan emisión observable y cobertura explícita para `E102` y `E104`, respectivamente, y obligan a descartar las antiguas lecturas que los absorbían en `E006` o `E008`.
+
+`E008` permanece en el catálogo implementativo por trazabilidad, pero **no dispone hoy de sitio de emisión directo ni de caso explícito en la suite**. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`; por tanto, `E008` no debe presentarse como observable o cubierto en la superficie vigente.
 
 Los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp` fijan ya emisión observable y cobertura explícita para `E208` y `E209`, dejando atrás su anterior estatuto de deuda sin adversarial explícito.
 
