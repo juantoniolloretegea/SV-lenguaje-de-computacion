@@ -2,7 +2,7 @@
 
 **Fecha:** 18/08/2026  
 **Frente:** FFL-B — P0-B de estabilización previa a nuevos microcierres  
-**Estado:** APLICADO EN RAMA / PENDIENTE DE EVIDENCIA DINÁMICA  
+**Estado:** CERRADO  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **ISSN:** 2695-6411
@@ -76,22 +76,37 @@ Se actualizan en el mismo lote:
 - `docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
 - esta acta.
 
-## 7. Criterio de cierre
+## 7. Evidencia dinámica y cierre
 
-P0-B no se declarará cerrado por la mera aplicación del parche. Requiere:
+La rama `agent/ffl-b-p0b-supervise-meta`, con `HEAD` funcional `8080e22ddd103b6a33ae157ce86bdf1de540025d`, fue ejecutada en solo lectura por una unidad auditora independiente, sin commits ni parches de esa unidad.
 
-1. inspección del diff y confirmación de radio corto;
-2. `tests/run_conformance.py` en **44/44**;
-3. `tests/run_cli_smoke.py` en **3/3**;
-4. `tests/run_sec0_smoke.py` en **3/3**;
-5. confirmación de que `supervise_meta_no_evalresult.svp` emite exactamente `E212`;
-6. confirmación de que `supervise_coupled_wrong_role.svp` emite exactamente `E211`.
+Resultados recibidos como evidencia externa de cierre:
 
-Hasta disponer de esa evidencia dinámica el estado permanece **aplicado en rama / pendiente de cierre**.
+- `tests/run_conformance.py`: **44/44**, `rc=0`;
+- `tests/run_cli_smoke.py`: **3/3**, `rc=0`;
+- `tests/run_sec0_smoke.py`: **3/3**, `rc=0`;
+- `supervise_meta_no_evalresult.svp`: emisión exacta `E212 — SuperviseMetaNotEvalResult`;
+- `supervise_coupled_wrong_role.svp`: emisión exacta `E211 — SuperviseMetaNotSupervisor`.
+
+La adversarial separa así los dos juicios: `E212` protege el tipo del primer argumento y `E211` protege su procedencia desde rol `Supervisor`, incluida la ruta `CoupledState → CoupledSpec → CellSpec` recibida por P0-A.
+
+Se verificó además la conservación de las propiedades vecinas relevantes:
+
+- `supervise_targets.svp` continúa válido;
+- `evaluate(CoupledState)` continúa aceptado mediante la sonda documentada de composición en serie;
+- `Frame.cell_states` continúa exigiendo `CoupledStateDecl`;
+- `_validate_eval` conserva la unión `CellStateDecl | CoupledStateDecl`;
+- `E406` continúa sin materializarse y permanece fuera de este lote.
+
+El contraste del diff frente a P0-A acredita radio corto: el cambio funcional queda localizado en el alta de `E212` y en `_validate_supervise`; el resto corresponde a pruebas y sincronización documental del mismo juicio.
+
+Con esta evidencia, **P0-B queda cerrado** y el punto de estabilización P0 queda satisfecho en sus dos partes.
 
 ## 8. Continuidad
 
-Sólo después del cierre de P0-B podrá considerarse P0 estabilizado y reabrirse la secuencia de microcierres FFL-B, empezando por la nueva auditoría mínima de `E406 — InsufficientTransitionData`.
+El cierre conjunto de P0-A y P0-B permite reanudar la secuencia de microcierres FFL-B desde una base nuevamente verde.
+
+El siguiente candidato continúa siendo `E406 — InsufficientTransitionData`, pero su mera posición en la secuencia no constituye autorización de implementación. Antes de cualquier parche deberá realizarse una nueva microauditoría mínima contra el repositorio fresco, confirmar la obligación material exacta, su alcanzabilidad y el diff estrictamente mínimo que la represente.
 
 No se abre backend, Rust, WASM, runtime, IA productiva, stdlib ni `NL → SVP`.
 

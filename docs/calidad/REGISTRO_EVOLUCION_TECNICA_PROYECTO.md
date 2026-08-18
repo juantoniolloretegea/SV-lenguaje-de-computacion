@@ -29,6 +29,8 @@ Esta compactación no reescribe ni elimina el histórico anterior. El archivo hi
 | RETP-2026-052 | 18/08/2026 | 13:15:04 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / E113 ↔ E206 canónico | cerrado |
 | RETP-2026-053 | 18/08/2026 | 13:25:03 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E307 ↔ E403 canónico | cerrado |
 | RETP-2026-054 | 18/08/2026 | 13:30:27 | SORPRESA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / intento E406 revertido | cerrado |
+| RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
+| RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
 
 ## Entradas detalladas del tramo vivo
 
@@ -104,7 +106,7 @@ Esta compactación no reescribe ni elimina el histórico anterior. El archivo hi
 - **Evidencia:** commits `b59bbb345b0e9d0ead8457fd80f8a7f8299ff129` y `a2dd1ef59272ee9149283ccdc3c4d5cde7201f4b`; contraste material de las tres comprobaciones.  
 - **Impacto:** coherencia IR-implementación; trazabilidad; contrato diagnóstico; mantenibilidad.  
 - **Objeción adversarial:** riesgo de renumerar E206 implementativo o de declarar equivalencia semántica por coincidencia de identificador.  
-- **Decisión:** mantener Vía B y registrar E113 como ruta efectiva explícita de la obligación E206 canónica sin renumeración masiva.  
+- **Decisión:** mantener Vía B y registrar E113 como ruta efectiva explícita de la obligación E206 canónico sin renumeración masiva.  
 - **Estado:** cerrado.
 
 ### RETP-2026-053 — Lenguaje SV / FFL-B / J4.3 / E307 ↔ E403 canónico
@@ -135,4 +137,34 @@ Esta compactación no reescribe ni elimina el histórico anterior. El archivo hi
 - **Impacto:** control de calidad; trazabilidad; disciplina de parche; mantenibilidad.  
 - **Objeción adversarial:** riesgo de aceptar un parche funcionalmente plausible pese a un diff amplio no justificado, o de confundir la reversión con rechazo de la obligación E406.  
 - **Decisión:** revertir el intento completo; mantener E406 como siguiente candidato únicamente mediante diff estrictamente mínimo y nueva verificación.  
+- **Estado:** cerrado.
+
+### RETP-2026-055 — Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable
+
+- **Fecha:** 18/08/2026  
+- **Hora (Europe/Madrid):** 21:35:25  
+- **Tipo de hito:** CAMBIO_FUNCIONAL_GOBERNADO  
+- **Resumen del cambio:** Se reconcilia el contrato `CellState` / `CoupledState` / `evaluate` / `Frame`: `evaluate` acepta ambos estados evaluables, mientras `Frame.cell_states` conserva `CoupledState`; P0-A queda cerrado tras evidencia dinámica independiente.  
+- **Motivo / argumento:** Una regresión local había estrechado `_validate_eval` a `CellStateDecl`, contradiciendo la gramática vigente y la evaluación de configuración acoplada ya constituida, además de romper una sonda SEC-0 y ejemplos documentados.  
+- **Base doctrinal / técnica:** Gramática superficial mínima v0.1; IR v0.2 y adenda técnica de estado evaluable acoplado; Documento I de composición intercelular; disciplina de radio corto.  
+- **Artefactos afectados:** `ADENDA_TECNICA_IR_v0_2_ESTADO_EVALUABLE_ACOPLADO_2026_08_18.md`; `src/svp_validator.py`; sondas y ejemplos afectados; `docs/calidad/ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md`.  
+- **Evidencia:** rama `agent/ffl-b-evaluable-state-reconcile` verificada en `b9db1a268e7acf8283f99eb6d7d09da243a9293c`; conformidad **42/42**, CLI **3/3**, SEC-0 **3/3**; aceptación de las tres sondas discriminantes; cierre documental en `0fde188d77a3ebd2fb08f2ba33f51dd173a834c4`.  
+- **Impacto:** coherencia IR-implementación; trazabilidad; control de regresión; secuenciación.  
+- **Objeción adversarial:** riesgo de reparar la regresión relajando `Frame` para admitir `CellState`, o de mezclar en el mismo juicio el hueco independiente de `supervise`.  
+- **Decisión:** mantener `Frame.cell_states : CoupledState`, restaurar `evaluate(CellState | CoupledState)` y separar P0-B como juicio posterior.  
+- **Estado:** cerrado.
+
+### RETP-2026-056 — Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211
+
+- **Fecha:** 18/08/2026  
+- **Hora (Europe/Madrid):** 21:35:25  
+- **Tipo de hito:** CAMBIO_FUNCIONAL_GOBERNADO  
+- **Resumen del cambio:** Se impone `meta_eval : EvalResult` en `supervise` mediante `E212 — SuperviseMetaNotEvalResult` y se extiende `E211 — SuperviseMetaNotSupervisor` a la procedencia por `CoupledState → CoupledSpec → CellSpec`; P0-B queda cerrado tras adversarial dinámica independiente.  
+- **Motivo / argumento:** J3.3 exige que el primer argumento de `supervise` sea un `EvalResult` procedente de una célula de segundo orden; el validator sólo comprobaba existencia y rol cuando el objeto ya era un `EvalCmd`, dejando atravesar referencias existentes de otro tipo y omitiendo la ruta acoplada autorizada por P0-A.  
+- **Base doctrinal / técnica:** IR canónica v0.2, J3.3; P0-A; regularización diagnóstica por Vía B; contrato efectivo de `supervise`.  
+- **Artefactos afectados:** `src/svp_errors.py`; `src/svp_validator.py`; `tests/run_conformance.py`; dos adversariales nuevos; catálogo, matriz, crosswalk, deuda viva y `docs/calidad/ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md`.  
+- **Evidencia:** rama `agent/ffl-b-p0b-supervise-meta` verificada en `8080e22ddd103b6a33ae157ce86bdf1de540025d`; conformidad **44/44**, CLI **3/3**, SEC-0 **3/3**; emisión exacta `E212` para tipo incorrecto y `E211` para rol incorrecto por ruta acoplada; conservación de `supervise_targets`, `evaluate(CoupledState)` y `Frame.cell_states : CoupledState`.  
+- **Impacto:** coherencia IR-implementación; contrato diagnóstico; trazabilidad; control de regresión; mantenibilidad.  
+- **Objeción adversarial:** riesgo de colapsar en un único diagnóstico el fallo de tipo y el fallo de rol, o de reutilizar indebidamente `E306`, que protege el etiquetado del `target : Supervisable`.  
+- **Decisión:** mantener `E212` para tipo de `meta_eval` y `E211` para procedencia Supervisor; declarar P0 estabilizado en sus dos partes y conservar `E406` sin abrir hasta nueva microauditoría mínima.  
 - **Estado:** cerrado.
