@@ -8,6 +8,7 @@ cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
 cellspec C2 { b: 3; codomain: K3; semantics: Klin; role: Base; }
 
 coupledspec CC1 { cell: C1; bridges: [3]; }
+coupledspec CC2 { cell: C2; bridges: [3]; }
 
 connector Phi1 {
   source_codomain: K3;
@@ -26,10 +27,10 @@ pattern P_cycle {
 }
 
 graph G_cycle {
-  nodes: [CC1, C2];
+  nodes: [CC1, CC2];
   edges: [
-    edge(source: CC1, target: C2, position: 3, connector: Phi1),
-    edge(source: C2, target: CC1, position: 3, connector: Phi1)
+    edge(source: CC1, target: CC2, position: 3, connector: Phi1),
+    edge(source: CC2, target: CC1, position: 3, connector: Phi1)
   ];
   relation: R_cycle;
   regime: Simple;
