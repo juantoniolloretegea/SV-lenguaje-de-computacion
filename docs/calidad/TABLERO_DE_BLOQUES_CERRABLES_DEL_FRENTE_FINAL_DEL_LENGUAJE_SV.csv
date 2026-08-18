@@ -1,5 +1,5 @@
 ID_Bloque,Bloque,Objeto,Dependencia_Principal,Estado,Criterio_de_Cierre,Observacion
-FFL-A,Contrato diagnostico,IR ↔ catalogo ↔ emision observable,IR_CANONICA_BIENFORMACION_SV_v0_2.md / docs/referencia/ERRORES_CANONICOS_SV_v0_2.md / src/svp_errors.py,abierto,Concordancia suficiente o deuda gobernada y explicitada,Prioridad maxima
+FFL-A,Contrato diagnostico,IR ↔ catalogo ↔ emision observable,IR_CANONICA_BIENFORMACION_SV_v0_2.md / docs/referencia/ERRORES_CANONICOS_SV_v0_2.md / src/svp_errors.py,abierto,Concordancia suficiente o deuda gobernada y explicitada,Reabierto por Ruta A el 18/08/2026; prioridad maxima
 FFL-B,Cadena de implementacion,lexer ↔ parser ↔ lowering ↔ validator ↔ serializer ↔ CLI/playground,src/,abierto,Coherencia tecnica verificable con IR y frontera,
 FFL-C,Suite y evidencia,conformidad ↔ smoke ↔ SEC-0 ↔ cobertura observable,tests/,abierto,Evidencia suficiente para sostener el estado publico declarado,
 FFL-D,Documentacion publica,estado publico verificable sin sobreatribucion,README.md / docs/README.md / docs/referencia/,abierto,Alineacion completa entre documento publico y evidencia,
