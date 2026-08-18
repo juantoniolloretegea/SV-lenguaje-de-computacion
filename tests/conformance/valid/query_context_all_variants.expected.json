@@ -93,6 +93,47 @@
     },
     {
       "fields": {
+        "bridges": [
+          3
+        ],
+        "cell": "C1"
+      },
+      "level": "N0",
+      "name": "CC1",
+      "type": "CoupledSpec"
+    },
+    {
+      "fields": {
+        "base_vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ],
+        "spec": "CC1",
+        "updated_vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ]
+      },
+      "level": "N1",
+      "name": "CS1",
+      "type": "CoupledState"
+    },
+    {
+      "fields": {
         "input_codomains": [
           "K3",
           "K3"
@@ -204,7 +245,7 @@
       "fields": {
         "architecture": "Arch1",
         "cell_states": [
-          "S1"
+          "CS1"
         ],
         "criticalities": [],
         "eval_results": [
@@ -213,6 +254,7 @@
         "gate_results": [
           "G1"
         ],
+        "immutable": true,
         "index": 1,
         "supervision": []
       },
@@ -224,7 +266,7 @@
       "fields": {
         "architecture": "Arch1",
         "cell_states": [
-          "S1"
+          "CS1"
         ],
         "criticalities": [],
         "eval_results": [
@@ -233,6 +275,7 @@
         "gate_results": [
           "G1"
         ],
+        "immutable": true,
         "index": 2,
         "supervision": []
       },
@@ -242,6 +285,7 @@
     },
     {
       "fields": {
+        "append_only": true,
         "entries": [
           {
             "frame": "F1",
@@ -458,5 +502,5 @@
   ],
   "serializer_version": "0.1.0",
   "source_file": "query_context_all_variants.svp",
-  "source_sha256": "1e91f4d9c1c7039acfbb07880bb5b66e9ede2fe4ca2d652dccc22b3f388e28a4"
+  "source_sha256": "1e0102a0e446002744ac2de7619cb7618c749d2ab20ca7b8728a9dc54a56769f"
 }
