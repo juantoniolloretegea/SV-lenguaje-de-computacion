@@ -49,7 +49,7 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 | E301 | `InconsistentCounts` | no existe hoy materialización ejecutiva completa de `EvalResult.counts` contra J3.1 | NO_MATERIALIZADO | El E301 efectivo es `FrameMutationForbidden`. |
 | E302 | `WrongThreshold` | no existe hoy comprobación diagnóstica autónoma del `threshold` de `EvalResult` | NO_MATERIALIZADO | El E302 efectivo es `TrajectoryMutationForbidden`. |
 | E303 | `ClassificationPrecedenceViolation` | no existe hoy comprobación autónoma de precedencia de clasificación | NO_MATERIALIZADO | El E303 efectivo y observable es `TransitionDataMissingHorizon`; no debe confundirse con E303 canónico. |
-| E304 | `NonDeterministicGate` | `E009` impide filas ausentes, extra o duplicadas en `AdmissibilityTable` | CUBIERTO_OTRO_ID | La unicidad de combinación de entrada impide dos salidas de tabla para la misma entrada en la representación vigente. |
+| E304 | `NonDeterministicGate` | `E009` impide filas ausentes, extra o duplicadas en `AdmissibilityTable`; `gate` se baja hoy a una operación IR, sin ejecución material de `GateResult.output` en el frontend | PARCIAL | La representación de la tabla impide dos filas distintas para una misma entrada, pero J3.3 no queda plenamente ejercido mientras no exista evaluación ejecutiva del resultado de compuerta. |
 | E305 | `UnsafeUResolution` | parser exige `ResSpec`, contexto y mecanismo; validator solo verifica la referencia a `ResSpec` | PARCIAL | No se acredita todavía `ResolutionRecord` completo ni toda J3.4. |
 | E306 | `UntaggedSupervisable` | parser exige constructores de `Supervisable`; el caso opaco se emite como `E205` efectivo | CUBIERTO_OTRO_ID | La etiqueta estructural queda exigida con numeración efectiva distinta. |
 | E401 | `FrameMutationAttempt` | no existe operación superficial de mutación de `Frame`; `E301` efectivo conserva el invariante en catálogo | CUBIERTO_ESTRUCTURAL | La inmutabilidad se preserva hoy principalmente por construcción/tipo, no por disparo autónomo. |
@@ -68,13 +68,14 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 
 ## 4. Hallazgos de mayor riesgo
 
-La divergencia por numeración no debe ocultar tres clases distintas de situación:
+La divergencia por numeración no debe ocultar cuatro clases distintas de situación:
 
 1. **obligaciones canónicas ya protegidas con otro ID**, por ejemplo `E101→E004`, `E103→E105`, `E105→E009`, `E201→E101`, `E203→E103`, `E404/E405→E304` y `E507→E403`;
 2. **obligaciones precluidas por la superficie vigente**, como mutación de `Frame`, borrado/reordenación de trayectoria o `max/min` sobre codominio no ordenado;
-3. **deuda funcional real todavía no materializada**, destacando `E202`, `E204`, `E206`, `E301–E303` canónicos, `E403` canónico y `E406`, además de obligaciones posteriores de consulta/ABI.
+3. **obligaciones parcialmente protegidas**, donde la estructura actual cubre una parte pero no permite atribuir cierre completo del juicio canónico, como `E107–E110`, `E304` y `E305`;
+4. **deuda funcional real todavía no materializada**, destacando `E202`, `E204`, `E206`, `E301–E303` canónicos, `E403` canónico y `E406`, además de obligaciones posteriores de consulta/ABI.
 
-La tercera clase no puede desaparecer por documentación. Debe permanecer visible como deuda de implementación o ABI para los bloques posteriores correspondientes.
+Las clases tercera y cuarta no pueden desaparecer por documentación. Deben permanecer visibles como deuda de implementación o ABI para los bloques posteriores correspondientes.
 
 ## 5. Efecto sobre FFL-A
 
