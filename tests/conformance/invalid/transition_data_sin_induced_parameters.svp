@@ -1,0 +1,12 @@
+-- FFL-B: J4.3 / E406 — TransitionData debe contener al menos un induced_parameter.
+
+horizon H1 {
+  architecture: A1;
+  events: [E1];
+}
+
+transition_data T1 {
+  horizon_ref: H1;
+  events: [(E1, Zero)];
+  induced_parameters: [];
+}

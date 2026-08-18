@@ -190,6 +190,10 @@ E307 = SVPErrorDef("E307", "UndeclaredHorizonEvent",
     "TransitionData referencia un tipo de suceso que no pertenece al Horizon declarado",
     ErrorLevel.LAYER3, ErrorPhase.VALIDATE)
 
+E406 = SVPErrorDef("E406", "InsufficientTransitionData",
+    "TransitionData debe declarar al menos un cambio en induced_parameters",
+    ErrorLevel.LAYER3, ErrorPhase.VALIDATE)
+
 # ── Capa 4 — Uso ─────────────────────────────────────────────────────
 
 E401 = SVPErrorDef("E401", "DomainPortContractViolation",
@@ -221,7 +225,7 @@ ERRORS = {e.code: e for e in [
     E001, E002, E003, E004, E005, E006, E007, E008, E009, E010,
     E101, E102, E103, E104, E105, E106, E111, E112, E113,
     E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211,
-    E301, E302, E303, E304, E307,
+    E301, E302, E303, E304, E307, E406,
     E401, E402, E403,
     E501, E507,
 ]}

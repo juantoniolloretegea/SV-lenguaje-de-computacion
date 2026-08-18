@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
-                         E101, E102, E104, E105, E112, E113, E202, E211, E303, E304, E307,
+                         E101, E102, E104, E105, E112, E113, E202, E211, E303, E304, E307, E406,
                          E401, E402, E403)
 
 
@@ -26,11 +26,8 @@ class Validator:
 
     def validate(self):
         """Ejecuta todas las validaciones. Lanza SVPError en el primer error."""
-        # Fase 1: registrar todos los nombres
         for node in self.program.nodes:
             self._register(node)
-
-        # Fase 2: validar cada nodo
         for node in self.program.nodes:
             self._validate_node(node)
 
@@ -54,64 +51,35 @@ class Validator:
                            f"{name!r} es {self.symbol_types[name]}, se esperaba {expected_type}")
 
     def _validate_node(self, node: ASTNode):
-        if isinstance(node, CellSpecDecl):
-            self._validate_cellspec(node)
-        elif isinstance(node, CoupledSpecDecl):
-            self._validate_coupledspec(node)
-        elif isinstance(node, CellStateDecl):
-            self._validate_cellstate(node)
-        elif isinstance(node, CoupledStateDecl):
-            self._validate_coupledstate(node)
-        elif isinstance(node, ConnectorDecl):
-            self._validate_connector(node)
-        elif isinstance(node, AdmissibilityTableDecl):
-            self._validate_admissibility_table(node)
-        elif isinstance(node, CaptureSpecDecl):
-            self._validate_capture_spec(node)
-        elif isinstance(node, AdmissibilitySpecDecl):
-            self._validate_admissibility_spec(node)
-        elif isinstance(node, TernarizerDecl):
-            self._validate_ternarizer(node)
-        elif isinstance(node, GraphDecl):
-            self._validate_graph(node)
-        elif isinstance(node, HorizonDecl):
-            self._validate_horizon(node)
-        elif isinstance(node, FrameDecl):
-            self._validate_frame(node)
-        elif isinstance(node, TransitionDataDecl):
-            self._validate_transition_data(node)
-        elif isinstance(node, TrajectoryDecl):
-            self._validate_trajectory(node)
-        elif isinstance(node, DomainDecl):
-            self._validate_domain(node)
-        elif isinstance(node, AgentDecl):
-            self._validate_agent(node)
-        elif isinstance(node, QuerySpecDecl):
-            self._validate_query_spec(node)
-        elif isinstance(node, GateCmd):
-            self._validate_gate(node)
-        elif isinstance(node, EvalCmd):
-            self._validate_eval(node)
-        elif isinstance(node, ResolveCmd):
-            self._validate_resolve(node)
-        elif isinstance(node, QueryCmd):
-            self._validate_query(node)
-        elif isinstance(node, SuperviseCmd):
-            self._validate_supervise(node)
-        elif isinstance(node, ComposeCmd):
-            self._validate_compose(node)
-        elif isinstance(node, ProjectionCmd):
-            self._validate_projection(node)
-        elif isinstance(node, CodomainDecl):
-            self._validate_codomain(node)
-
-    # ── Validaciones concretas ────────────────────────────────────────
+        if isinstance(node, CellSpecDecl): self._validate_cellspec(node)
+        elif isinstance(node, CoupledSpecDecl): self._validate_coupledspec(node)
+        elif isinstance(node, CellStateDecl): self._validate_cellstate(node)
+        elif isinstance(node, CoupledStateDecl): self._validate_coupledstate(node)
+        elif isinstance(node, ConnectorDecl): self._validate_connector(node)
+        elif isinstance(node, AdmissibilityTableDecl): self._validate_admissibility_table(node)
+        elif isinstance(node, CaptureSpecDecl): self._validate_capture_spec(node)
+        elif isinstance(node, AdmissibilitySpecDecl): self._validate_admissibility_spec(node)
+        elif isinstance(node, TernarizerDecl): self._validate_ternarizer(node)
+        elif isinstance(node, GraphDecl): self._validate_graph(node)
+        elif isinstance(node, HorizonDecl): self._validate_horizon(node)
+        elif isinstance(node, FrameDecl): self._validate_frame(node)
+        elif isinstance(node, TransitionDataDecl): self._validate_transition_data(node)
+        elif isinstance(node, TrajectoryDecl): self._validate_trajectory(node)
+        elif isinstance(node, DomainDecl): self._validate_domain(node)
+        elif isinstance(node, AgentDecl): self._validate_agent(node)
+        elif isinstance(node, QuerySpecDecl): self._validate_query_spec(node)
+        elif isinstance(node, GateCmd): self._validate_gate(node)
+        elif isinstance(node, EvalCmd): self._validate_eval(node)
+        elif isinstance(node, ResolveCmd): self._validate_resolve(node)
+        elif isinstance(node, QueryCmd): self._validate_query(node)
+        elif isinstance(node, SuperviseCmd): self._validate_supervise(node)
+        elif isinstance(node, ComposeCmd): self._validate_compose(node)
+        elif isinstance(node, ProjectionCmd): self._validate_projection(node)
+        elif isinstance(node, CodomainDecl): self._validate_codomain(node)
 
     def _validate_cellspec(self, node: CellSpecDecl):
-        # J1.1: b >= 3
         if node.b < 3:
-            raise SVPError(E002, node.loc.line, node.loc.col,
-                           f"b = {node.b}, debe ser >= 3")
+            raise SVPError(E002, node.loc.line, node.loc.col, f"b = {node.b}, debe ser >= 3")
         self._require_ref(node.codomain, node.loc, "CodomainDecl")
         if node.semantics not in self.symbols:
             raise SVPError(E102, node.loc.line, node.loc.col,
@@ -149,112 +117,79 @@ class Validator:
             if len(node.updated_vector) != expected_len:
                 raise SVPError(E101, node.loc.line, node.loc.col,
                                f"updated_vector de longitud {len(node.updated_vector)}, se esperaba {expected_len}")
-
             bridge_positions = set(coupled.bridges)
-            for position, (base_value, updated_value) in enumerate(
-                    zip(node.base_vector, node.updated_vector), start=1):
+            for position, (base_value, updated_value) in enumerate(zip(node.base_vector, node.updated_vector), start=1):
                 if base_value != updated_value and position not in bridge_positions:
-                    raise SVPError(
-                        E112, node.loc.line, node.loc.col,
-                        f"CoupledState {node.name!r} modifica la posición {position}, "
-                        f"fuera del BridgeSet {sorted(bridge_positions)} de {node.spec!r}")
+                    raise SVPError(E112, node.loc.line, node.loc.col,
+                                   f"CoupledState {node.name!r} modifica la posición {position}, fuera del BridgeSet {sorted(bridge_positions)} de {node.spec!r}")
 
     def _validate_connector(self, node: ConnectorDecl):
         self._require_ref(node.source_codomain, node.loc, "CodomainDecl")
         codomain = self.symbols[node.source_codomain]
         expected_values = set(codomain.values)
         seen_keys = []
-
         for key, target in node.mapping:
             seen_keys.append(key)
             if target not in {"Zero", "One", "U"}:
                 raise SVPError(E104, node.loc.line, node.loc.col,
                                f"El destino {target!r} queda fuera del alfabeto ternario permitido en el conector {node.name!r}")
-
         seen_set = set(seen_keys)
         missing = expected_values - seen_set
         extras = seen_set - expected_values
         duplicates = sorted({key for key in seen_keys if seen_keys.count(key) > 1})
         if missing or extras or duplicates:
             detail_parts = []
-            if missing:
-                detail_parts.append("faltan " + ", ".join(sorted(missing)))
-            if extras:
-                detail_parts.append("sobran " + ", ".join(sorted(extras)))
-            if duplicates:
-                detail_parts.append("duplicados " + ", ".join(duplicates))
-            detail = "; ".join(detail_parts)
+            if missing: detail_parts.append("faltan " + ", ".join(sorted(missing)))
+            if extras: detail_parts.append("sobran " + ", ".join(sorted(extras)))
+            if duplicates: detail_parts.append("duplicados " + ", ".join(duplicates))
             raise SVPError(E007, node.loc.line, node.loc.col,
-                           f"Conector {node.name!r} con mapping inválido: {detail}")
+                           f"Conector {node.name!r} con mapping inválido: {'; '.join(detail_parts)}")
 
     def _validate_admissibility_table(self, node: AdmissibilityTableDecl):
         for cod_name in node.input_codomains:
             self._require_ref(cod_name, node.loc, "CodomainDecl")
         self._require_ref(node.output_codomain, node.loc, "CodomainDecl")
-
-        expected_inputs = []
-        for cod_name in node.input_codomains:
-            cod = self.symbols[cod_name]
-            expected_inputs.append(list(cod.values))
-
+        expected_inputs = [list(self.symbols[c].values) for c in node.input_codomains]
         expected_combinations = {()}
         for values in expected_inputs:
             expected_combinations = {prefix + (value,) for prefix in expected_combinations for value in values}
-
-        seen_rows = []
-        for keys, output in node.table:
-            seen_rows.append(keys)
-
+        seen_rows = [keys for keys, output in node.table]
         seen_set = set(seen_rows)
         missing = expected_combinations - seen_set
         extras = {row for row in seen_set if row not in expected_combinations}
         duplicates = sorted({row for row in seen_rows if seen_rows.count(row) > 1})
-
         if missing or extras or duplicates:
             detail_parts = []
-            if missing:
-                detail_parts.append("faltan " + ", ".join(str(row) for row in sorted(missing)))
-            if extras:
-                detail_parts.append("sobran " + ", ".join(str(row) for row in sorted(extras)))
-            if duplicates:
-                detail_parts.append("duplicadas " + ", ".join(str(row) for row in duplicates))
-            detail = "; ".join(detail_parts)
+            if missing: detail_parts.append("faltan " + ", ".join(str(row) for row in sorted(missing)))
+            if extras: detail_parts.append("sobran " + ", ".join(str(row) for row in sorted(extras)))
+            if duplicates: detail_parts.append("duplicadas " + ", ".join(str(row) for row in duplicates))
             raise SVPError(E009, node.loc.line, node.loc.col,
-                           f"Tabla {node.name!r} incompleta o inconsistente: {detail}")
+                           f"Tabla {node.name!r} incompleta o inconsistente: {'; '.join(detail_parts)}")
 
     def _validate_capture_spec(self, node: CaptureSpecDecl):
         if node.parameter_id <= 0:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"CaptureSpec {node.name!r} con parameter_id no positivo")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"CaptureSpec {node.name!r} con parameter_id no positivo")
         if not node.observation_space:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"CaptureSpec {node.name!r} sin observation_space")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"CaptureSpec {node.name!r} sin observation_space")
         if node.failure_symbol != "Bottom":
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"CaptureSpec {node.name!r} debe declarar failure_symbol = Bottom")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"CaptureSpec {node.name!r} debe declarar failure_symbol = Bottom")
 
     def _validate_admissibility_spec(self, node: AdmissibilitySpecDecl):
         if node.parameter_id <= 0:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"AdmissibilitySpec {node.name!r} con parameter_id no positivo")
-        states_raw = node.states.strip()
-        states_items = [part.strip() for part in states_raw.strip("{}").split(",") if part.strip()]
+            raise SVPError(E401, node.loc.line, node.loc.col, f"AdmissibilitySpec {node.name!r} con parameter_id no positivo")
+        states_items = [part.strip() for part in node.states.strip().strip("{}").split(",") if part.strip()]
         expected_states = {"Ok", "Degraded", "Failed", "U"}
         if len(states_items) != 4 or set(states_items) != expected_states:
             raise SVPError(E401, node.loc.line, node.loc.col,
                            f"AdmissibilitySpec {node.name!r} debe declarar exactamente los estados {{Ok, Degraded, Failed, U}}")
         if not node.rule:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"AdmissibilitySpec {node.name!r} sin rule")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"AdmissibilitySpec {node.name!r} sin rule")
 
     def _validate_ternarizer(self, node: TernarizerDecl):
         if not node.observation_space:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Ternarizer {node.name!r} sin observation_space")
-        partitions = [node.partition_zero, node.partition_one, node.partition_u]
-        if any(not part for part in partitions):
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Ternarizer {node.name!r} con particiones incompletas")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Ternarizer {node.name!r} sin observation_space")
+        if any(not part for part in [node.partition_zero, node.partition_one, node.partition_u]):
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Ternarizer {node.name!r} con particiones incompletas")
 
     def _validate_codomain(self, node: CodomainDecl):
         if len(node.values) == 0:
@@ -264,79 +199,51 @@ class Validator:
         self._require_ref(node.relation, node.loc, "SemanticRelationDecl")
         for n_ref in node.nodes:
             self._require_ref(n_ref, node.loc, "CoupledSpecDecl")
-
         node_set = set(node.nodes)
         for e in node.edges:
             if e.source not in node_set:
-                raise SVPError(E006, node.loc.line, node.loc.col,
-                               f"Edge.source {e.source!r} no pertenece a los nodos declarados de {node.name!r}")
+                raise SVPError(E006, node.loc.line, node.loc.col, f"Edge.source {e.source!r} no pertenece a los nodos declarados de {node.name!r}")
             if e.target not in node_set:
-                raise SVPError(E006, node.loc.line, node.loc.col,
-                               f"Edge.target {e.target!r} no pertenece a los nodos declarados de {node.name!r}")
+                raise SVPError(E006, node.loc.line, node.loc.col, f"Edge.target {e.target!r} no pertenece a los nodos declarados de {node.name!r}")
             self._require_ref(e.connector, node.loc, "ConnectorDecl")
-
             source_spec = self.symbols[e.source]
             target_spec = self.symbols[e.target]
             connector = self.symbols[e.connector]
-
             if e.position not in set(target_spec.bridges):
-                raise SVPError(
-                    E113, e.loc.line, e.loc.col,
-                    f"Edge de {e.source!r} a {e.target!r} usa position {e.position}, "
-                    f"fuera del BridgeSet {sorted(set(target_spec.bridges))} del target")
-
+                raise SVPError(E113, e.loc.line, e.loc.col,
+                               f"Edge de {e.source!r} a {e.target!r} usa position {e.position}, fuera del BridgeSet {sorted(set(target_spec.bridges))} del target")
             if connector.target_position != e.position:
-                raise SVPError(
-                    E113, e.loc.line, e.loc.col,
-                    f"Connector {e.connector!r} declara target_position {connector.target_position}, "
-                    f"pero la arista usa position {e.position}")
-
+                raise SVPError(E113, e.loc.line, e.loc.col,
+                               f"Connector {e.connector!r} declara target_position {connector.target_position}, pero la arista usa position {e.position}")
             self._require_ref(source_spec.cell, e.loc, "CellSpecDecl")
             source_cell = self.symbols[source_spec.cell]
             if connector.source_codomain != source_cell.codomain:
-                raise SVPError(
-                    E113, e.loc.line, e.loc.col,
-                    f"Connector {e.connector!r} declara source_codomain {connector.source_codomain!r}, "
-                    f"pero la célula transmisora {source_cell.name!r} usa {source_cell.codomain!r}")
-
-        # Cycle detection via topological sort
+                raise SVPError(E113, e.loc.line, e.loc.col,
+                               f"Connector {e.connector!r} declara source_codomain {connector.source_codomain!r}, pero la célula transmisora {source_cell.name!r} usa {source_cell.codomain!r}")
         adj: Dict[str, Set[str]] = {n_ref: set() for n_ref in node.nodes}
-        for e in node.edges:
-            adj[e.source].add(e.target)
-        visited = set()
-        in_stack = set()
+        for e in node.edges: adj[e.source].add(e.target)
+        visited = set(); in_stack = set()
         def dfs(v):
             if v in in_stack:
                 from svp_errors import E103
-                raise SVPError(E103, node.loc.line, node.loc.col,
-                               f"Ciclo detectado en el grafo que incluye {v!r}")
-            if v in visited:
-                return
+                raise SVPError(E103, node.loc.line, node.loc.col, f"Ciclo detectado en el grafo que incluye {v!r}")
+            if v in visited: return
             in_stack.add(v)
-            for w in adj.get(v, []):
-                dfs(w)
-            in_stack.remove(v)
-            visited.add(v)
-        for v in node.nodes:
-            dfs(v)
+            for w in adj.get(v, []): dfs(w)
+            in_stack.remove(v); visited.add(v)
+        for v in node.nodes: dfs(v)
 
     def _validate_horizon(self, node: HorizonDecl):
         if not node.architecture:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Horizon {node.name!r} sin architecture")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Horizon {node.name!r} sin architecture")
         if len(node.events) == 0:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Horizon {node.name!r} sin events")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Horizon {node.name!r} sin events")
 
     def _validate_frame(self, node: FrameDecl):
-        for ref in node.cell_states:
-            self._require_ref(ref, node.loc, "CoupledStateDecl")
-        for ref in node.eval_results:
-            self._require_ref(ref, node.loc, "EvalCmd")
-        for ref in node.gate_results:
-            self._require_ref(ref, node.loc, "GateCmd")
-        for ref in node.supervision:
-            self._require_ref(ref, node.loc, "SuperviseCmd")
+        for ref in node.cell_states: self._require_ref(ref, node.loc, "CoupledStateDecl")
+        for ref in node.eval_results: self._require_ref(ref, node.loc, "EvalCmd")
+        for ref in node.gate_results: self._require_ref(ref, node.loc, "GateCmd")
+        for ref in node.supervision: self._require_ref(ref, node.loc, "SuperviseCmd")
 
     def _validate_transition_data(self, node: TransitionDataDecl):
         if node.horizon_ref not in self.symbols:
@@ -345,190 +252,128 @@ class Validator:
         if self.symbol_types[node.horizon_ref] != "HorizonDecl":
             raise SVPError(E303, node.loc.line, node.loc.col,
                            f"TransitionData {node.name!r} referencia {node.horizon_ref!r}, pero no es Horizon")
-
         horizon = self.symbols[node.horizon_ref]
         declared_events = set(horizon.events)
         for event_state in node.events:
             if event_state.event_type not in declared_events:
-                raise SVPError(
-                    E307, node.loc.line, node.loc.col,
-                    f"TransitionData {node.name!r} referencia el tipo de suceso "
-                    f"{event_state.event_type!r}, no declarado en Horizon {node.horizon_ref!r}")
+                raise SVPError(E307, node.loc.line, node.loc.col,
+                               f"TransitionData {node.name!r} referencia el tipo de suceso {event_state.event_type!r}, no declarado en Horizon {node.horizon_ref!r}")
+        if len(node.induced_parameters) == 0:
+            raise SVPError(E406, node.loc.line, node.loc.col,
+                           f"TransitionData {node.name!r} no declara ningún cambio en induced_parameters")
 
     def _validate_trajectory(self, node: TrajectoryDecl):
         if len(node.entries) == 0:
-            raise SVPError(E304, node.loc.line, node.loc.col,
-                           "Trajectory.entries no puede estar vacío")
-
+            raise SVPError(E304, node.loc.line, node.loc.col, "Trajectory.entries no puede estar vacío")
         last_index = len(node.entries) - 1
         for idx, entry in enumerate(node.entries):
             self._require_ref(entry.frame, node.loc, "FrameDecl")
             if idx < last_index and entry.transition is None:
-                raise SVPError(E304, node.loc.line, node.loc.col,
-                               f"La entrada {idx + 1} de '{node.name}' no es la última y debe llevar transition")
+                raise SVPError(E304, node.loc.line, node.loc.col, f"La entrada {idx + 1} de '{node.name}' no es la última y debe llevar transition")
             if idx == last_index and entry.transition is not None:
-                raise SVPError(E304, node.loc.line, node.loc.col,
-                               f"La última entrada de '{node.name}' no puede llevar transition")
-            if entry.transition is not None:
-                self._require_ref(entry.transition, node.loc, "TransitionDataDecl")
+                raise SVPError(E304, node.loc.line, node.loc.col, f"La última entrada de '{node.name}' no puede llevar transition")
+            if entry.transition is not None: self._require_ref(entry.transition, node.loc, "TransitionDataDecl")
 
     def _validate_domain(self, node: DomainDecl):
         if node.horizon not in self.symbols or self.symbol_types[node.horizon] != "HorizonDecl":
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Domain {node.name!r} referencia un horizon no declarado o de tipo incorrecto: {node.horizon!r}")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} referencia un horizon no declarado o de tipo incorrecto: {node.horizon!r}")
         if not node.capture_specs or not node.admissibility_specs or not node.ternarizers:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Domain {node.name!r} debe declarar capture_specs, admissibility_specs y ternarizers no vacíos")
-
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} debe declarar capture_specs, admissibility_specs y ternarizers no vacíos")
         capture_nodes = []
         for ref in node.capture_specs:
             if ref not in self.symbols or self.symbol_types[ref] != "CaptureSpecDecl":
-                raise SVPError(E401, node.loc.line, node.loc.col,
-                               f"Domain {node.name!r} referencia CaptureSpec no declarado o de tipo incorrecto: {ref!r}")
+                raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} referencia CaptureSpec no declarado o de tipo incorrecto: {ref!r}")
             capture_nodes.append(self.symbols[ref])
-
         admissibility_nodes = []
         for ref in node.admissibility_specs:
             if ref not in self.symbols or self.symbol_types[ref] != "AdmissibilitySpecDecl":
-                raise SVPError(E401, node.loc.line, node.loc.col,
-                               f"Domain {node.name!r} referencia AdmissibilitySpec no declarado o de tipo incorrecto: {ref!r}")
+                raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} referencia AdmissibilitySpec no declarado o de tipo incorrecto: {ref!r}")
             admissibility_nodes.append(self.symbols[ref])
-
         ternarizer_nodes = []
         for ref in node.ternarizers:
             if ref not in self.symbols or self.symbol_types[ref] != "TernarizerDecl":
-                raise SVPError(E401, node.loc.line, node.loc.col,
-                               f"Domain {node.name!r} referencia Ternarizer no declarado o de tipo incorrecto: {ref!r}")
+                raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} referencia Ternarizer no declarado o de tipo incorrecto: {ref!r}")
             ternarizer_nodes.append(self.symbols[ref])
-
-        capture_param_ids = {n.parameter_id for n in capture_nodes}
-        admissibility_param_ids = {n.parameter_id for n in admissibility_nodes}
-        if capture_param_ids != admissibility_param_ids:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Domain {node.name!r} no conserva la misma familia de parameter_id entre capture_specs y admissibility_specs")
-
+        if {n.parameter_id for n in capture_nodes} != {n.parameter_id for n in admissibility_nodes}:
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} no conserva la misma familia de parameter_id entre capture_specs y admissibility_specs")
         ternarizer_spaces = {n.observation_space for n in ternarizer_nodes}
         capture_spaces = {n.observation_space for n in capture_nodes}
         if not capture_spaces.issubset(ternarizer_spaces):
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"Domain {node.name!r} declara CaptureSpec cuyo observation_space no queda cubierto por los ternarizers")
+            raise SVPError(E401, node.loc.line, node.loc.col, f"Domain {node.name!r} declara CaptureSpec cuyo observation_space no queda cubierto por los ternarizers")
 
     def _validate_agent(self, node: AgentDecl):
         if node.domain not in self.symbols or self.symbol_types[node.domain] != "DomainDecl":
-            raise SVPError(E402, node.loc.line, node.loc.col,
-                           f"Agent {node.name!r} referencia un Domain no declarado o de tipo incorrecto: {node.domain!r}")
-
-        domain = self.symbols[node.domain]
-        horizon = self.symbols.get(domain.horizon)
+            raise SVPError(E402, node.loc.line, node.loc.col, f"Agent {node.name!r} referencia un Domain no declarado o de tipo incorrecto: {node.domain!r}")
+        domain = self.symbols[node.domain]; horizon = self.symbols.get(domain.horizon)
         if horizon is None or not isinstance(horizon, HorizonDecl):
-            raise SVPError(E402, node.loc.line, node.loc.col,
-                           f"Agent {node.name!r} no puede vincularse a un Domain con horizon inválido")
+            raise SVPError(E402, node.loc.line, node.loc.col, f"Agent {node.name!r} no puede vincularse a un Domain con horizon inválido")
         if node.architecture != horizon.architecture:
-            raise SVPError(E402, node.loc.line, node.loc.col,
-                           f"Agent {node.name!r} declara architecture {node.architecture!r}, pero su Domain opera sobre {horizon.architecture!r}")
+            raise SVPError(E402, node.loc.line, node.loc.col, f"Agent {node.name!r} declara architecture {node.architecture!r}, pero su Domain opera sobre {horizon.architecture!r}")
 
     def _validate_query_spec(self, node: QuerySpecDecl):
         if node.query_type == "PendingU":
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           "query_type 'PendingU' está reconocido por la gramática, pero no está habilitado en v0.1")
-        allowed = {
-            "PointEvaluation": "Cell",
-            "TrajectoryState": "Trajectory",
-            "FrameComparison": "Pair",
-            "GlobalCriticality": "Architecture",
-            "CoverageState": "Architecture",
-        }
+            raise SVPError(E403, node.loc.line, node.loc.col, "query_type 'PendingU' está reconocido por la gramática, pero no está habilitado en v0.1")
+        allowed = {"PointEvaluation": "Cell", "TrajectoryState": "Trajectory", "FrameComparison": "Pair", "GlobalCriticality": "Architecture", "CoverageState": "Architecture"}
         expected_scope = allowed.get(node.query_type)
         if expected_scope is None:
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           f"query_type no reconocido: {node.query_type!r}")
+            raise SVPError(E403, node.loc.line, node.loc.col, f"query_type no reconocido: {node.query_type!r}")
         if node.scope != expected_scope:
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           f"scope {node.scope!r} incompatible con query_type {node.query_type!r}; se esperaba {expected_scope!r}")
+            raise SVPError(E403, node.loc.line, node.loc.col, f"scope {node.scope!r} incompatible con query_type {node.query_type!r}; se esperaba {expected_scope!r}")
 
     def _validate_gate(self, node: GateCmd):
         self._require_ref(node.using, node.loc, "AdmissibilityTableDecl")
         for inp in node.inputs:
             self._require_ref(inp, node.loc)
             if self.symbol_types[inp] != "EvalCmd":
-                raise SVPError(E202, node.loc.line, node.loc.col,
-                               f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
+                raise SVPError(E202, node.loc.line, node.loc.col, f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
 
-    def _validate_eval(self, node: EvalCmd):
-        self._require_ref(node.input_ref, node.loc, "CellStateDecl")
-
-    def _validate_resolve(self, node: ResolveCmd):
-        self._require_ref(node.with_spec, node.loc, "ResSpecDecl")
+    def _validate_eval(self, node: EvalCmd): self._require_ref(node.input_ref, node.loc, "CellStateDecl")
+    def _validate_resolve(self, node: ResolveCmd): self._require_ref(node.with_spec, node.loc, "ResSpecDecl")
 
     def _validate_query(self, node: QueryCmd):
         if node.spec not in self.symbols or self.symbol_types[node.spec] != "QuerySpecDecl":
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           f"query usa QuerySpec no declarado o de tipo incorrecto: {node.spec!r}")
+            raise SVPError(E403, node.loc.line, node.loc.col, f"query usa QuerySpec no declarado o de tipo incorrecto: {node.spec!r}")
         if node.by not in self.symbols or self.symbol_types[node.by] != "AgentDecl":
-            raise SVPError(E402, node.loc.line, node.loc.col,
-                           f"query usa Agent no declarado o de tipo incorrecto: {node.by!r}")
-
-        spec = self.symbols[node.spec]
-        agent = self.symbols[node.by]
-        expected_type = spec.query_type
-
+            raise SVPError(E402, node.loc.line, node.loc.col, f"query usa Agent no declarado o de tipo incorrecto: {node.by!r}")
+        spec = self.symbols[node.spec]; agent = self.symbols[node.by]; expected_type = spec.query_type
         if isinstance(node.context, QCPointEval):
-            self._require_ref(node.context.ref, node.loc, "FrameDecl")
-            actual_type = "PointEvaluation"
+            self._require_ref(node.context.ref, node.loc, "FrameDecl"); actual_type = "PointEvaluation"
         elif isinstance(node.context, QCTrajectoryView):
-            self._require_ref(node.context.ref, node.loc, "TrajectoryDecl")
-            actual_type = "TrajectoryState"
+            self._require_ref(node.context.ref, node.loc, "TrajectoryDecl"); actual_type = "TrajectoryState"
         elif isinstance(node.context, QCFrameComparison):
-            self._require_ref(node.context.ref1, node.loc, "FrameDecl")
-            self._require_ref(node.context.ref2, node.loc, "FrameDecl")
-            actual_type = "FrameComparison"
+            self._require_ref(node.context.ref1, node.loc, "FrameDecl"); self._require_ref(node.context.ref2, node.loc, "FrameDecl"); actual_type = "FrameComparison"
         elif isinstance(node.context, QCArchitectureView):
             actual_type = "GlobalCriticality"
             if node.context.arch != agent.architecture:
-                raise SVPError(E403, node.loc.line, node.loc.col,
-                               f"ArchitectureView declara {node.context.arch!r}, pero el Agent consulta sobre {agent.architecture!r}")
-            for ref in node.context.cells:
-                self._require_ref(ref, node.loc, "CellSpecDecl")
-            for ref in node.context.evals:
-                self._require_ref(ref, node.loc, "EvalCmd")
-            for ref in node.context.gates:
-                self._require_ref(ref, node.loc, "GateCmd")
+                raise SVPError(E403, node.loc.line, node.loc.col, f"ArchitectureView declara {node.context.arch!r}, pero el Agent consulta sobre {agent.architecture!r}")
+            for ref in node.context.cells: self._require_ref(ref, node.loc, "CellSpecDecl")
+            for ref in node.context.evals: self._require_ref(ref, node.loc, "EvalCmd")
+            for ref in node.context.gates: self._require_ref(ref, node.loc, "GateCmd")
         elif isinstance(node.context, QCCoverageReport):
-            actual_type = "CoverageState"
-            self._require_ref(node.context.ref1, node.loc, "DomainDecl")
+            actual_type = "CoverageState"; self._require_ref(node.context.ref1, node.loc, "DomainDecl")
             if node.context.ref1 != agent.domain:
-                raise SVPError(E403, node.loc.line, node.loc.col,
-                               f"CoverageReport usa Domain {node.context.ref1!r}, pero el Agent consulta sobre {agent.domain!r}")
+                raise SVPError(E403, node.loc.line, node.loc.col, f"CoverageReport usa Domain {node.context.ref1!r}, pero el Agent consulta sobre {agent.domain!r}")
         else:
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           "query con QueryContext no reconocido")
-
+            raise SVPError(E403, node.loc.line, node.loc.col, "query con QueryContext no reconocido")
         if expected_type != actual_type:
-            raise SVPError(E403, node.loc.line, node.loc.col,
-                           f"QuerySpec {spec.name!r} declara {expected_type!r}, pero el QueryContext ejecutado corresponde a {actual_type!r}")
+            raise SVPError(E403, node.loc.line, node.loc.col, f"QuerySpec {spec.name!r} declara {expected_type!r}, pero el QueryContext ejecutado corresponde a {actual_type!r}")
 
     def _validate_supervise(self, node: SuperviseCmd):
         self._require_ref(node.meta_eval, node.loc)
         target_ref = getattr(node.target, "ref", None)
-        if target_ref is not None:
-            self._require_ref(target_ref, node.loc)
+        if target_ref is not None: self._require_ref(target_ref, node.loc)
         meta_node = self.symbols.get(node.meta_eval)
         if meta_node and isinstance(meta_node, EvalCmd):
             state_node = self.symbols.get(meta_node.input_ref)
             if state_node and isinstance(state_node, CellStateDecl):
                 spec_node = self.symbols.get(state_node.spec)
-                if spec_node and isinstance(spec_node, CellSpecDecl):
-                    if spec_node.role != "Supervisor":
-                        raise SVPError(E211, node.loc.line, node.loc.col,
-                                       f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, "
-                                       f"pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
+                if spec_node and isinstance(spec_node, CellSpecDecl) and spec_node.role != "Supervisor":
+                    raise SVPError(E211, node.loc.line, node.loc.col,
+                                   f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
 
-    def _validate_projection(self, node: ProjectionCmd):
-        self._require_ref(node.source, node.loc)
+    def _validate_projection(self, node: ProjectionCmd): self._require_ref(node.source, node.loc)
 
     def _validate_compose(self, node: ComposeCmd):
         self._require_ref(node.graph, node.loc, "GraphDecl")
-        for r in node.relations:
-            self._require_ref(r, node.loc, "SemanticRelationDecl")
-        for p in node.patterns:
-            self._require_ref(p, node.loc, "PatternDecl")
+        for r in node.relations: self._require_ref(r, node.loc, "SemanticRelationDecl")
+        for p in node.patterns: self._require_ref(p, node.loc, "PatternDecl")
