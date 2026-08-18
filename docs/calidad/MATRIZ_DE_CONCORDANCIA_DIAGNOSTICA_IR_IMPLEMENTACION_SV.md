@@ -43,29 +43,35 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 - `Tratamiento_Recomendado`
 - `Observaciones`
 
-**Estado:** salida técnica resincronizada  
-**Fecha de trabajo:** 24/03/2026  
-**Base de contraste:** árbol del repositorio verificado del lenguaje + IR v0.2 + catálogo público efectivo + implementación + validator + suite
+**Fecha base de trabajo:** 24/03/2026  
+**Resincronización vigente:** 18/08/2026  
+**Base de contraste:** árbol fresco del repositorio + IR v0.2 + catálogo público efectivo + parser + validator + lowering + suite
+
+La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105` y la convergencia vigente de `E102/E104`.
 
 ## 1. Resultado global
 
-La microauditoría cerrada del Bloque A arroja, en esta salida técnica, el siguiente balance:
+El balance vigente del contrato por identificador es:
 
 - **IR v0.2:** 38 códigos
 - **Catálogo implementativo efectivo / contrato público actual:** 37 códigos
-- **Coincidencia plena:** 2
-- **Mismo ID / significado distinto:** 22
+- **Coincidencia semántica por mismo ID:** 4 (`E102`, `E104`, `E106`, `E111`)
+- **Mismo ID / significado distinto:** 20
 - **Solo IR:** 14
 - **Solo implementación:** 13
 
 El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la desalineación semántica estructural entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
 
-## 2. Coincidencias plenas
+## 2. Coincidencias por mismo identificador
 
 |Código|IR|Contrato efectivo|Emisión|Suite|Tratamiento|
 |---|---|---|---|---|---|
+|E102|MissingOutputSemantics|MissingOutputSemantics|si_directa|si_explicita|mantener_vigente|
+|E104|InvalidConnectorCodomain|InvalidConnectorCodomain|si_directa|si_explicita|mantener_vigente|
 |E106|MissingSemanticRelation|MissingSemanticRelation|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
 |E111|UnorderedCodomain|UnorderedCodomain|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
+
+`E102` y `E104` se incorporan aquí por estado vigente, no por retroproyección. En marzo existieron sondas en las que esos subcasos caían respectivamente a `E006` y `E008`; la implementación posterior corrigió esa situación y hoy ambos códigos disponen de emisión propia y cobertura explícita.
 
 ## 3. Mismo ID / significado distinto
 
@@ -74,9 +80,7 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E001|InvalidTriCoercion|InvalidTriValue|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E002|InvalidCellSize|InvalidBValue|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E101|EmptyCodomain|VectorLengthMismatch|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E102|MissingOutputSemantics|MissingOutputSemantics|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E103|IllegalBridgePosition|GraphCycleDetected|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
-|E104|InvalidConnectorCodomain|InvalidConnectorCodomain|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E105|IncompleteAdmissibilityTable|BridgePositionOutOfRange|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E201|VectorLengthMismatch|LiteralResultForbidden|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E202|IllegalBridgeUpdate|GateInputNotEvalResult|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
@@ -133,13 +137,19 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 
 ## 6. Observaciones operativas
 
-1. **Los únicos dos códigos plenamente convergentes** son `E106` y `E111`.
-2. El grupo crítico es el de **22 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.
+1. `E102`, `E104`, `E106` y `E111` son hoy las cuatro coincidencias semánticas por mismo identificador entre IR y contrato efectivo.
+2. El grupo crítico restante es el de **20 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.
 3. Los **13 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas.
-4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del **horizonte ABI semántico-diagnóstico** todavía no implementado.
-5. `E507` mantiene hoy divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` ya se manifiesta explícitamente como `E507` en la suite vigente.
+4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del horizonte ABI semántico-diagnóstico todavía no implementado o no expuesto bajo su identificador canónico.
+5. `E507` mantiene divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` se manifiesta explícitamente como `E507` en la suite vigente.
 6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda concentrada en `E003`, `E004` y `E008`.
-7. El contraste fino documentado de `E102 / E104 / E106 / E111` ya no desemboca observacionalmente en `E006` o `E008` para `E102` y `E104`: ambos constan hoy con emisión observable y cobertura explícita propia.
-8. `E106` y `E111` mantienen su condición de coincidencias ancla, pero siguen sin cobertura explícita de suite en la superficie v0.1.
-9. Dentro de la familia `E201–E211`, `E208` y `E209` pasan ya a emisión observable y cobertura explícita por los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
-10. La familia `E301–E304` deja ya acreditada emisión observable y cobertura explícita para `E303` y `E304`; `E301` y `E302` permanecen como invariantes de tipo sin cierre superficial equivalente.
+7. `E102` y `E104` ya no deben describirse como divergencias vigentes: poseen nombre, obligación material, emisión y cobertura compatibles con la IR v0.2.
+8. `E106` y `E111` mantienen coincidencia semántica, pero siguen sin cobertura explícita de suite en la superficie v0.1.
+9. Dentro de la familia `E201–E211`, `E208` y `E209` disponen de emisión observable y cobertura explícita por los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
+10. La familia `E301–E304` deja acreditada emisión observable y cobertura explícita para `E303` y `E304`; `E301` y `E302` permanecen como invariantes de tipo sin cierre superficial equivalente.
+
+## 7. Límite de esta matriz
+
+Esta matriz clasifica la relación **por identificador**. No debe confundirse con una tabla de equivalencias funcionales entre códigos distintos.
+
+Por ejemplo, una obligación canónica puede estar materialmente protegida en la superficie actual por otro código implementativo (`EmptyCodomain`, `VectorLengthMismatch`, `CyclicCompositionGraph`, `BrokenAlternation` o `QueryContextMismatch` son casos que requieren lectura cruzada). La correspondencia funcional completa deberá mantenerse separada de esta clasificación por ID para no confundir convergencia semántica con convergencia numérica.
