@@ -40,8 +40,30 @@
     },
     {
       "fields": {
-        "spec": "C1",
-        "vector": [
+        "bridges": [
+          3
+        ],
+        "cell": "C1"
+      },
+      "level": "N0",
+      "name": "CC1",
+      "type": "CoupledSpec"
+    },
+    {
+      "fields": {
+        "base_vector": [
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "Zero",
+          "One",
+          "U",
+          "Zero",
+          "One"
+        ],
+        "spec": "CC1",
+        "updated_vector": [
           "Zero",
           "One",
           "U",
@@ -55,7 +77,7 @@
       },
       "level": "N1",
       "name": "S1",
-      "type": "CellState"
+      "type": "CoupledState"
     },
     {
       "fields": {
@@ -98,6 +120,7 @@
         "criticalities": [],
         "eval_results": [],
         "gate_results": [],
+        "immutable": true,
         "index": 1,
         "supervision": []
       },
@@ -114,6 +137,7 @@
         "criticalities": [],
         "eval_results": [],
         "gate_results": [],
+        "immutable": true,
         "index": 2,
         "supervision": []
       },
@@ -123,6 +147,7 @@
     },
     {
       "fields": {
+        "append_only": true,
         "entries": [
           {
             "frame": "F1",
@@ -141,5 +166,5 @@
   "operations": [],
   "serializer_version": "0.1.0",
   "source_file": "trajectory_alternance_valid.svp",
-  "source_sha256": "04acc994c5943058cc5a8f77bd7981427ea7fbcfdad9bdc3d67be321c35a6d14"
+  "source_sha256": "b9de2a8fa2bebca625bed6776b911db9747b2e59df891da673ff5ecdb66ce5b4"
 }
