@@ -254,9 +254,7 @@ class Validator:
     def _validate_graph(self, node: GraphDecl):
         self._require_ref(node.relation, node.loc, "SemanticRelationDecl")
         for n_ref in node.nodes:
-            if n_ref not in self.symbols:
-                raise SVPError(E006, node.loc.line, node.loc.col,
-                               f"Nodo del grafo no declarado: {n_ref!r}")
+            self._require_ref(n_ref, node.loc, "CoupledSpecDecl")
         # Cycle detection via topological sort
         adj: Dict[str, Set[str]] = {n_ref: set() for n_ref in node.nodes}
         for e in node.edges:
