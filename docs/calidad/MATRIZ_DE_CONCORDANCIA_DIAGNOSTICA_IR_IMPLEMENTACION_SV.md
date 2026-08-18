@@ -47,17 +47,17 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 **Resincronización vigente:** 18/08/2026  
 **Base de contraste:** árbol fresco del repositorio + IR v0.2 + catálogo público efectivo + parser + validator + lowering + suite
 
-La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104`, la materialización parcial de `E202 — IllegalBridgeUpdate` mediante `E112`, la ruta funcional de `E206 — EdgeConnectorMismatch` mediante `E113`, la materialización de la precondición `J3.3 meta_eval : EvalResult` mediante `E212` y la ruta funcional de `E403 — UndeclaredHorizonEvent` mediante `E307`.
+La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104`, la materialización parcial de `E202 — IllegalBridgeUpdate` mediante `E112`, la ruta funcional de `E206 — EdgeConnectorMismatch` mediante `E113`, la materialización de la precondición `J3.3 meta_eval : EvalResult` mediante `E212`, la ruta funcional de `E403 — UndeclaredHorizonEvent` mediante `E307` y la convergencia material de `E406 — InsufficientTransitionData` para la no-vaciedad de `induced_parameters`.
 
 ## 1. Resultado global
 
 El balance vigente del contrato por identificador es:
 
 - **IR v0.2:** 38 códigos
-- **Catálogo implementativo efectivo / contrato público actual:** 41 códigos
-- **Coincidencia semántica por mismo ID:** 4 (`E102`, `E104`, `E106`, `E111`)
+- **Catálogo implementativo efectivo / contrato público actual:** 42 códigos
+- **Coincidencia semántica por mismo ID:** 5 (`E102`, `E104`, `E106`, `E111`, `E406`)
 - **Mismo ID / significado distinto:** 20
-- **Solo IR:** 14
+- **Solo IR:** 13
 - **Solo implementación:** 17
 
 El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la desalineación semántica estructural entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
@@ -70,8 +70,11 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E104|InvalidConnectorCodomain|InvalidConnectorCodomain|si_directa|si_explicita|mantener_vigente|
 |E106|MissingSemanticRelation|MissingSemanticRelation|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
 |E111|UnorderedCodomain|UnorderedCodomain|no_directa|no_explicita|mantener_vigente_y_ampliar_cobertura|
+|E406|InsufficientTransitionData|InsufficientTransitionData|si_directa|si_explicita|mantener_vigente|
 
 `E102` y `E104` se incorporan aquí por estado vigente, no por retroproyección. En marzo existieron sondas en las que esos subcasos caían respectivamente a `E006` y `E008`; la implementación posterior corrigió esa situación y hoy ambos códigos disponen de emisión propia y caso explícito de conformidad.
+
+`E406` converge exactamente en la cláusula de `J4.3` que exige que `induced_parameters` no esté vacío. Esta coincidencia no autoriza a declarar cerrada por extensión la cláusula adicional de suficiencia para reconstruir el operador inducido.
 
 ## 3. Mismo ID / significado distinto
 
@@ -116,7 +119,6 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E306|UntaggedSupervisable|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E404|BrokenAlternation|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E405|EmptyTrajectory|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
-|E406|InsufficientTransitionData|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E502|QueryMutatesTrajectory|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E503|StrongConclusionUnderInsufficientCoverage|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
 |E504|UndeclaredLossyEncoding|—|no_directa|no_explicita|reservar_para_ABI_y_fase_posterior|
@@ -147,14 +149,15 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 
 ## 6. Observaciones operativas
 
-1. `E102`, `E104`, `E106` y `E111` son hoy las cuatro coincidencias semánticas por mismo identificador entre IR y contrato efectivo.
+1. `E102`, `E104`, `E106`, `E111` y `E406` son hoy las cinco coincidencias semánticas por mismo identificador entre IR y contrato efectivo.
 2. El grupo crítico restante es el de **20 divergencias con mismo ID**.
 3. Los **17 códigos solo implementación** incluyen `E112`, `E113`, `E212` y `E307` como materializaciones deliberadas bajo Vía B de obligaciones o precondiciones canónicas cuyos identificadores originales están ocupados, no existen como código autónomo o no deben reutilizarse por semejanza.
-4. Los **14 códigos solo IR** permanecen como horizonte ABI o deuda no materializada bajo su identificador canónico.
+4. Los **13 códigos solo IR** permanecen como horizonte ABI o deuda no materializada bajo su identificador canónico.
 5. `E112` no autoriza declarar cerrado todo `J2.2`, porque la procedencia de los valores actualizados desde un `Connector` bien formado no está representada de forma verificable en `CoupledState`.
 6. `E113` dispone de sitio de emisión y tres casos explícitos que separan incompatibilidades de posición, `target_position` y codominio fuente.
 7. `E212` dispone de sitio de emisión y caso explícito para la precondición `J3.3 meta_eval : EvalResult`; `E211` conserva la comprobación de rol `Supervisor` y se extiende al camino de estado acoplado autorizado por P0-A. `E306` permanece separado porque corresponde al etiquetado de `target : Supervisable`.
 8. `E307` dispone de sitio de emisión y caso explícito `transition_event_fuera_horizon.svp`; protege funcionalmente la obligación canónica `E403` sin cambiar el `E403` efectivo.
+9. `E406` dispone de sitio de emisión y caso explícito `transition_induced_parameters_vacios.svp`; su convergencia se limita a la no-vaciedad de `induced_parameters` y no acredita por sí sola toda la suficiencia reconstructiva exigida por `J4.3`.
 
 ## 7. Límite de esta matriz
 

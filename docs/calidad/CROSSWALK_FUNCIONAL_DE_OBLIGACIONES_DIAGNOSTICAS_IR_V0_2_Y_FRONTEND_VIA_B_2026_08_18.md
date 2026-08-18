@@ -57,7 +57,7 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 | E403 | `UndeclaredHorizonEvent` | `E307 — UndeclaredHorizonEvent` comprueba que cada `TransitionData.events[].event_type` pertenezca al conjunto `Horizon.events` del `horizon_ref` | CUBIERTO_OTRO_ID | La obligación material de J4.3 queda protegida sin reutilizar `E403`, que en el catálogo efectivo mantiene `QueryContractViolation`. |
 | E404 | `BrokenAlternation` | `E304 — TrajectoryAlternanceViolation` | CUBIERTO_OTRO_ID | Valida transición obligatoria en entradas no finales y prohibida en la última. |
 | E405 | `EmptyTrajectory` | `E304 — TrajectoryAlternanceViolation` | CUBIERTO_OTRO_ID | El validator rechaza `entries` vacío. |
-| E406 | `InsufficientTransitionData` | parser admite lista vacía de `induced_parameters` y el validator no la rechaza | NO_MATERIALIZADO | Deuda funcional concreta de N3. |
+| E406 | `InsufficientTransitionData` | `E406 — InsufficientTransitionData` rechaza `induced_parameters` vacío | CONVERGENTE_ID | Cierra exactamente la obligación diagnóstica de lista no vacía; no acredita por sí sola toda la suficiencia reconstructiva de J4.3. |
 | E501 | `OpaqueJustification` | no existe ejecución material completa de `QueryResult.justification` | NO_MATERIALIZADO | El E501 efectivo es `SerializationNonDeterministic`. |
 | E502 | `QueryMutatesTrajectory` | la superficie de consulta vigente no expone una operación de mutación de trayectoria | CUBIERTO_ESTRUCTURAL | Debe reevaluarse cuando exista ejecución material de consultas. |
 | E503 | `StrongConclusionUnderInsufficientCoverage` | no existe todavía cierre ejecutivo completo de consulta/cobertura | NO_MATERIALIZADO | Permanece en el horizonte ABI. |
@@ -79,7 +79,7 @@ La divergencia por numeración no debe ocultar cuatro clases distintas de situac
 1. **obligaciones canónicas ya protegidas con otro ID**, por ejemplo `E101→E004`, `E103→E105`, `E105→E009`, `E201→E101`, `E203→E103`, `E206→E113`, `E403→E307`, `E404/E405→E304` y `E507→E403`;
 2. **obligaciones precluidas por la superficie vigente**, como mutación de `Frame`, borrado/reordenación de trayectoria o `max/min` sobre codominio no ordenado;
 3. **obligaciones parcialmente protegidas**, donde la estructura actual cubre una parte pero no permite atribuir cierre completo del juicio canónico, como `E107–E110`, `E202` mediante `E112`, `E304` y `E305`;
-4. **deuda funcional real todavía no materializada**, destacando `E204`, `E301–E303` canónicos y `E406`, además de obligaciones posteriores de consulta/ABI.
+4. **deuda funcional real todavía no materializada**, destacando `E204` y `E301–E303` canónicos, además de obligaciones posteriores de consulta/ABI.
 
 Las clases tercera y cuarta no pueden desaparecer por documentación. Deben permanecer visibles como deuda de implementación o ABI para los bloques posteriores correspondientes.
 
@@ -90,6 +90,8 @@ La materialización de `E112` no convierte la obligación canónica `E202` en `C
 `E212` no constituye una nueva obligación doctrinal: materializa una precondición literal de `J3.3` que ya estaba en la IR. Se mantiene separado de `E211`, que protege la procedencia desde rol `Supervisor`, y de `E306`, que protege el etiquetado del objeto supervisado.
 
 `E307` permite clasificar `E403` como `CUBIERTO_OTRO_ID`: tanto `TransitionData.events` como `Horizon.events` están ya representados y su pertenencia es una comprobación directa, sin nueva semántica ni nueva sintaxis.
+
+`E406` constituye una convergencia exacta por identificador para la cláusula de `J4.3` que exige al menos un cambio en `induced_parameters`. No se extiende esa convergencia a la cláusula adicional de suficiencia para reconstruir el operador inducido, que requiere evidencia independiente.
 
 ## 5. Efecto sobre FFL-A
 

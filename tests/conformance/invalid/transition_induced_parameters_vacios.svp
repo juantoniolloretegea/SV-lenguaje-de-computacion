@@ -1,0 +1,12 @@
+-- transition_induced_parameters_vacios.svp — J4.3 / E406
+
+horizon H1 {
+  architecture: Arch1;
+  events: [Cambio];
+}
+
+transition_data TD1 {
+  horizon_ref: H1;
+  events: [(Cambio, One)];
+  induced_parameters: [];
+}

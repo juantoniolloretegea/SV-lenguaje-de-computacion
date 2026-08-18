@@ -28,8 +28,8 @@ No debe interpretarse como sustitución de la IR v0.2 ni como cancelación de la
 
 Constan actualmente:
 
-- **41 códigos** en el catálogo implementativo efectivo;
-- **4 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`);
+- **42 códigos** en el catálogo implementativo efectivo;
+- **5 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`, `E406`);
 - **20 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
 - **17 códigos** presentes en implementación y no codificados en la IR v0.2.
 
@@ -42,6 +42,8 @@ La actualización de `E102` y `E104` no reescribe el contraste histórico: regis
 `E212` materializa bajo Vía B la precondición de `J3.3` según la cual `SupervisionResult.meta_eval` debe ser un `EvalResult`. `E211` conserva la comprobación distinta de procedencia desde una célula con rol `Supervisor`, aplicable tanto a evaluaciones de `CellState` como de `CoupledState` conforme a la adenda técnica de estado evaluable acoplado. Esta materialización no altera `E306 — UntaggedSupervisable`, que gobierna el etiquetado del objeto supervisado.
 
 `E307` materializa bajo Vía B la obligación canónica `E403 — UndeclaredHorizonEvent`: cada `event_type` de `TransitionData.events` debe pertenecer a `Horizon.events` del `horizon_ref` declarado. El identificador canónico `E403` no se reutiliza porque en el contrato efectivo vigente significa `QueryContractViolation`.
+
+`E406` converge por identificador y significado con la IR v0.2 para la obligación explícita de `J4.3` que exige que `induced_parameters` no esté vacío. Esta convergencia **no cierra por sí sola todo J4.3**: la cláusula adicional de suficiencia para reconstruir el operador inducido conserva el estatuto que corresponda mientras no exista comprobación material independiente.
 
 ## 5. Regla de uso
 
@@ -91,6 +93,7 @@ Mientras siga vigente la regularización por Vía B:
 | E303 | `TransitionDataMissingHorizon` | Evolución | `validate` | divergente respecto de IR v0.2 | TransitionData declarado sin referencia a Horizon |
 | E304 | `TrajectoryAlternanceViolation` | Evolución | `validate` | divergente respecto de IR v0.2 | La secuencia de entradas de Trajectory no respeta las invariantes de alternancia |
 | E307 | `UndeclaredHorizonEvent` | Evolución | `validate` | no consta en IR v0.2 | TransitionData referencia un tipo de suceso que no pertenece al Horizon declarado |
+| E406 | `InsufficientTransitionData` | Evolución | `validate` | coincidente con IR v0.2 | TransitionData debe especificar al menos un cambio en induced_parameters |
 | E401 | `DomainPortContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Domain incumple el contrato mínimo de enganche declarado |
 | E402 | `AgentDomainContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | Agent incompatible con el Domain o con la arquitectura declarada |
 | E403 | `QueryContractViolation` | Uso | `validate` | divergente respecto de IR v0.2 | QuerySpec o QueryContext incompatibles con el contrato de uso |
@@ -103,13 +106,13 @@ Mientras siga vigente la regularización por Vía B:
 
 Constan con sitio de emisión directo observable en el frontend actual, al menos, los siguientes códigos:
 
-`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 ### 7.2. Códigos con caso explícito de conformidad declarado
 
 La suite de conformidad vigente contiene casos inválidos con código esperado declarado, al menos, para:
 
-`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 La presencia de un caso y de su código esperado no equivale, por sí sola, a una nueva ejecución global acreditada de la suite. La suficiencia dinámica de la batería se cerrará específicamente en `FFL-C`.
 
@@ -126,6 +129,8 @@ Los casos `edge_position_fuera_bridges.svp`, `edge_connector_target_position_mis
 Los casos `supervise_meta_no_evalresult.svp` y `supervise_coupled_wrong_role.svp` separan las dos precondiciones del primer argumento de `supervise`: `E212` rechaza una referencia existente que no sea `EvalResult`, mientras `E211` rechaza un `EvalResult` cuya célula fuente no tenga rol `Supervisor`, incluido el camino acoplado `CoupledState → CoupledSpec → CellSpec`.
 
 El caso `transition_event_fuera_horizon.svp` fija la ruta efectiva `E307` para la obligación canónica `E403 — UndeclaredHorizonEvent`, sin sustituir el significado implementativo vigente de `E403`.
+
+El caso `transition_induced_parameters_vacios.svp` fija `E406` para la obligación literal de `J4.3` que prohíbe un `TransitionData` sin cambios inducidos declarados. El caso no acredita por sí solo la cláusula más amplia de reconstrucción del operador inducido.
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 

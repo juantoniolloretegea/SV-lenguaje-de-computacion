@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
-                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E303, E304, E307,
+                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E303, E304, E307, E406,
                          E401, E402, E403)
 
 
@@ -354,6 +354,11 @@ class Validator:
                     E307, node.loc.line, node.loc.col,
                     f"TransitionData {node.name!r} referencia el tipo de suceso "
                     f"{event_state.event_type!r}, no declarado en Horizon {node.horizon_ref!r}")
+
+        if not node.induced_parameters:
+            raise SVPError(
+                E406, node.loc.line, node.loc.col,
+                f"TransitionData {node.name!r} debe especificar al menos un cambio en induced_parameters")
 
     def _validate_trajectory(self, node: TrajectoryDecl):
         if len(node.entries) == 0:
