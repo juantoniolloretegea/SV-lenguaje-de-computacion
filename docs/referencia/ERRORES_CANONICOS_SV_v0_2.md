@@ -136,6 +136,9 @@ La suite de conformidad vigente cubre de forma explícita, al menos, los siguien
 - `E103`
 - `E104`
 - `E105`
+- `E202`
+- `E204`
+- `E205`
 - `E208`
 - `E209`
 - `E210`
