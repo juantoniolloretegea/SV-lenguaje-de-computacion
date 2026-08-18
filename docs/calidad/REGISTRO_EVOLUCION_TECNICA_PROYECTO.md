@@ -31,6 +31,7 @@ Esta compactación no reescribe ni elimina el histórico anterior. El archivo hi
 | RETP-2026-054 | 18/08/2026 | 13:30:27 | SORPRESA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / intento E406 revertido | cerrado |
 | RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
+| RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
 
 ## Entradas detalladas del tramo vivo
 
@@ -167,4 +168,19 @@ Esta compactación no reescribe ni elimina el histórico anterior. El archivo hi
 - **Impacto:** coherencia IR-implementación; contrato diagnóstico; trazabilidad; control de regresión; mantenibilidad.  
 - **Objeción adversarial:** riesgo de colapsar en un único diagnóstico el fallo de tipo y el fallo de rol, o de reutilizar indebidamente `E306`, que protege el etiquetado del `target : Supervisable`.  
 - **Decisión:** mantener `E212` para tipo de `meta_eval` y `E211` para procedencia Supervisor; declarar P0 estabilizado en sus dos partes y conservar `E406` sin abrir hasta nueva microauditoría mínima.  
+- **Estado:** cerrado.
+
+### RETP-2026-057 — Lenguaje SV / FFL-B / J4.3 / E406 mínimo
+
+- **Fecha:** 18/08/2026  
+- **Hora (Europe/Madrid):** 22:11:00  
+- **Tipo de hito:** CAMBIO_FUNCIONAL_GOBERNADO  
+- **Resumen del cambio:** Se materializa y cierra `E406 — InsufficientTransitionData` para rechazar `TransitionData` con `induced_parameters` vacío, con convergencia exacta por identificador y sin atribuir cierre completo de J4.3.  
+- **Motivo / argumento:** La IR v0.2 asigna E406 exactamente a `induced_parameters` vacío; gramática, AST, parser y lowering ya representaban la lista y sólo faltaba la comprobación de no-vaciedad en el validator.  
+- **Base doctrinal / técnica:** IR canónica v0.2, J4.3 y E406; acta de reapertura por Ruta A; decisión FFL-B de materialización diagnóstica subordinada; disciplina de radio corto.  
+- **Artefactos afectados:** `src/svp_errors.py`; `src/svp_validator.py`; `tests/run_conformance.py`; `tests/conformance/invalid/transition_induced_parameters_vacios.svp`; catálogo, matriz, crosswalk, deuda viva y `docs/calidad/ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md`.  
+- **Evidencia:** rama `agent/ffl-b-e406-min-transition` verificada en `a1d3d98b1971fe3cb7c1941dc1b3d9ce41b1e54c`; conformidad **45/45**, CLI **3/3**, SEC-0 **3/3**; emisión exacta `E406` para lista vacía; `transition_data_events.svp` continúa válido; `E307` se conserva y precede a E406; diff de un commit y radio corto.  
+- **Impacto:** coherencia IR-implementación; convergencia diagnóstica; trazabilidad; control de regresión; disciplina de parche.  
+- **Objeción adversarial:** riesgo de convertir la no-vaciedad en prueba de reconstructibilidad del operador inducido o declarar cerrado todo J4.3.  
+- **Decisión:** cerrar sólo la cláusula de no-vaciedad mediante E406; mantener fuera de cierre la suficiencia reconstructiva y cualquier validación adicional de los triples `induced_parameters`; no abrir automáticamente otro microcierre.  
 - **Estado:** cerrado.
