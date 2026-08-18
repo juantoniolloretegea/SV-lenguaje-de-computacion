@@ -66,6 +66,12 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 | E506 | `AutomatedDesignDelegation` | no existe en la superficie actual una operación que delegue modificación de diseño a un proceso automático | CUBIERTO_ESTRUCTURAL | Sigue siendo límite normativo para futuras capas. |
 | E507 | `QueryContextMismatch` | `E403 — QueryContractViolation` | CUBIERTO_OTRO_ID | El validator compara `QuerySpec.query_type` con el constructor real de `QueryContext`; existe cobertura explícita. |
 
+### 3.1. Precondición de J3.3 sin código canónico autónomo
+
+`J3.3` exige que `SupervisionResult.meta_eval` sea un `EvalResult` procedente de una célula de segundo orden. La tabla de errores de la IR v0.2 no asigna un código autónomo a la violación de tipo del primer argumento de `supervise`: `E306` se refiere al etiquetado del `target : Supervisable`, no a `meta_eval`.
+
+P0-B materializa esa precondición de forma subordinada mediante `E212 — SuperviseMetaNotEvalResult`. La comprobación posterior de procedencia desde una célula con rol `Supervisor` permanece bajo `E211 — SuperviseMetaNotSupervisor` y cubre tanto la ruta simple `EvalCmd → CellState → CellSpec` como la ruta acoplada `EvalCmd → CoupledState → CoupledSpec → CellSpec` recibida por P0-A. Esta precisión no modifica ni absorbe `E306`.
+
 ## 4. Hallazgos de mayor riesgo
 
 La divergencia por numeración no debe ocultar cuatro clases distintas de situación:
@@ -80,6 +86,8 @@ Las clases tercera y cuarta no pueden desaparecer por documentación. Deben perm
 La materialización de `E112` no convierte la obligación canónica `E202` en `CUBIERTO_OTRO_ID`: J2.2 contiene además una exigencia de procedencia desde un `Connector` bien formado que la representación actual de `CoupledState` no permite verificar por sí sola.
 
 `E113` permite clasificar `E206` como `CUBIERTO_OTRO_ID` en el alcance de la superficie actual, porque los datos necesarios para la compatibilidad contextual de la arista están representados y el mapping interno del conector ya dispone de validación separada.
+
+`E212` no constituye una nueva obligación doctrinal: materializa una precondición literal de `J3.3` que ya estaba en la IR. Se mantiene separado de `E211`, que protege la procedencia desde rol `Supervisor`, y de `E306`, que protege el etiquetado del objeto supervisado.
 
 `E307` permite clasificar `E403` como `CUBIERTO_OTRO_ID`: tanto `TransitionData.events` como `Horizon.events` están ya representados y su pertenencia es una comprobación directa, sin nueva semántica ni nueva sintaxis.
 

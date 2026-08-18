@@ -45,6 +45,8 @@ EXPECTED_INVALID_CODES = {
     "supervise_target_opaco.svp": "E205",
     "supervise_undeclared_target.svp": "E006",
     "supervise_wrong_role.svp": "E211",
+    "supervise_meta_no_evalresult.svp": "E212",
+    "supervise_coupled_wrong_role.svp": "E211",
     "trajectory_alternance_violation.svp": "E304",
     "u_coercion.svp": "E507",
     "domain_chain_mismatch.svp": "E401",

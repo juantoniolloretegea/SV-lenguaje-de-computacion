@@ -28,16 +28,18 @@ No debe interpretarse como sustitución de la IR v0.2 ni como cancelación de la
 
 Constan actualmente:
 
-- **40 códigos** en el catálogo implementativo efectivo;
+- **41 códigos** en el catálogo implementativo efectivo;
 - **4 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`);
 - **20 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
-- **16 códigos** presentes en implementación y no codificados en la IR v0.2.
+- **17 códigos** presentes en implementación y no codificados en la IR v0.2.
 
 La actualización de `E102` y `E104` no reescribe el contraste histórico: registra que el frontend vigente emite ya esos identificadores para las mismas obligaciones diagnósticas que fija la IR v0.2. Las antiguas caídas de esos subcasos a `E006` y `E008` quedaron superadas por la resincronización posterior del frontend.
 
 `E112` materializa bajo Vía B, con identificador efectivo libre, la parte verificable de la obligación canónica `E202 — IllegalBridgeUpdate` que exige que `updated_vector` difiera de `base_vector` únicamente en posiciones del `BridgeSet`. La procedencia de los valores desde un `Connector` bien formado permanece fuera de ese cierre parcial.
 
 `E113` materializa bajo Vía B la obligación canónica `E206 — EdgeConnectorMismatch` en la superficie actualmente representable: la posición de la arista debe pertenecer al `BridgeSet` del target, debe coincidir con `Connector.target_position` y `Connector.source_codomain` debe coincidir con el codominio de la célula transmisora. La validez interna del mapping del conector continúa gobernada por las comprobaciones efectivas `E104` y `E007`.
+
+`E212` materializa bajo Vía B la precondición de `J3.3` según la cual `SupervisionResult.meta_eval` debe ser un `EvalResult`. `E211` conserva la comprobación distinta de procedencia desde una célula con rol `Supervisor`, aplicable tanto a evaluaciones de `CellState` como de `CoupledState` conforme a la adenda técnica de estado evaluable acoplado. Esta materialización no altera `E306 — UntaggedSupervisable`, que gobierna el etiquetado del objeto supervisado.
 
 `E307` materializa bajo Vía B la obligación canónica `E403 — UndeclaredHorizonEvent`: cada `event_type` de `TransitionData.events` debe pertenecer a `Horizon.events` del `horizon_ref` declarado. El identificador canónico `E403` no se reutiliza porque en el contrato efectivo vigente significa `QueryContractViolation`.
 
@@ -83,6 +85,7 @@ Mientras siga vigente la regularización por Vía B:
 | E209 | `ComposeMissingPatterns` | Resultado | `parse` | no consta en IR v0.2 | compose invocado sin lista de patrones |
 | E210 | `MaxMinForbidden` | Resultado | `parse` | no consta en IR v0.2 | max/min no están disponibles en la superficie v0.1 |
 | E211 | `SuperviseMetaNotSupervisor` | Resultado | `validate` | no consta en IR v0.2 | El primer argumento de supervise debe provenir de una célula con rol Supervisor |
+| E212 | `SuperviseMetaNotEvalResult` | Resultado | `validate` | no consta en IR v0.2 | El primer argumento de supervise debe ser un identificador de EvalResult |
 | E301 | `FrameMutationForbidden` | Evolución | `validate` | divergente respecto de IR v0.2 | No se permite modificar un Frame existente (inmutable por tipo) |
 | E302 | `TrajectoryMutationForbidden` | Evolución | `validate` | divergente respecto de IR v0.2 | No se permite modificar, eliminar ni reordenar entradas de una Trajectory (append-only por tipo) |
 | E303 | `TransitionDataMissingHorizon` | Evolución | `validate` | divergente respecto de IR v0.2 | TransitionData declarado sin referencia a Horizon |
@@ -100,13 +103,13 @@ Mientras siga vigente la regularización por Vía B:
 
 Constan con sitio de emisión directo observable en el frontend actual, al menos, los siguientes códigos:
 
-`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
 
 ### 7.2. Códigos con caso explícito de conformidad declarado
 
 La suite de conformidad vigente contiene casos inválidos con código esperado declarado, al menos, para:
 
-`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E303`, `E304`, `E307`, `E401`, `E402`, `E403`, `E507`.
 
 La presencia de un caso y de su código esperado no equivale, por sí sola, a una nueva ejecución global acreditada de la suite. La suficiencia dinámica de la batería se cerrará específicamente en `FFL-C`.
 
@@ -119,6 +122,8 @@ La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola,
 El caso `coupledstate_update_fuera_bridges.svp` fija el caso explícito de `E112` para la parte verificable de `J2.2`. Este cierre es **parcial respecto de J2.2**: no acredita todavía que el valor actualizado proceda de un `Connector` bien formado.
 
 Los casos `edge_position_fuera_bridges.svp`, `edge_connector_target_position_mismatch.svp` y `edge_connector_source_codomain_mismatch.svp` separan las tres incompatibilidades contextuales verificables de `J2.3` que se emiten como `E113`. Junto con las comprobaciones internas ya existentes del mapping del conector (`E104`/`E007`), constituyen la ruta efectiva de la obligación canónica `E206 — EdgeConnectorMismatch` bajo Vía B.
+
+Los casos `supervise_meta_no_evalresult.svp` y `supervise_coupled_wrong_role.svp` separan las dos precondiciones del primer argumento de `supervise`: `E212` rechaza una referencia existente que no sea `EvalResult`, mientras `E211` rechaza un `EvalResult` cuya célula fuente no tenga rol `Supervisor`, incluido el camino acoplado `CoupledState → CoupledSpec → CellSpec`.
 
 El caso `transition_event_fuera_horizon.svp` fija la ruta efectiva `E307` para la obligación canónica `E403 — UndeclaredHorizonEvent`, sin sustituir el significado implementativo vigente de `E403`.
 

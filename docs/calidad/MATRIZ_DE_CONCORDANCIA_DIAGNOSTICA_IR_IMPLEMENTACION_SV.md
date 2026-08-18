@@ -47,18 +47,18 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 **Resincronización vigente:** 18/08/2026  
 **Base de contraste:** árbol fresco del repositorio + IR v0.2 + catálogo público efectivo + parser + validator + lowering + suite
 
-La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104`, la materialización parcial de `E202 — IllegalBridgeUpdate` mediante `E112`, la ruta funcional de `E206 — EdgeConnectorMismatch` mediante `E113` y la ruta funcional de `E403 — UndeclaredHorizonEvent` mediante `E307`.
+La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104`, la materialización parcial de `E202 — IllegalBridgeUpdate` mediante `E112`, la ruta funcional de `E206 — EdgeConnectorMismatch` mediante `E113`, la materialización de la precondición `J3.3 meta_eval : EvalResult` mediante `E212` y la ruta funcional de `E403 — UndeclaredHorizonEvent` mediante `E307`.
 
 ## 1. Resultado global
 
 El balance vigente del contrato por identificador es:
 
 - **IR v0.2:** 38 códigos
-- **Catálogo implementativo efectivo / contrato público actual:** 40 códigos
+- **Catálogo implementativo efectivo / contrato público actual:** 41 códigos
 - **Coincidencia semántica por mismo ID:** 4 (`E102`, `E104`, `E106`, `E111`)
 - **Mismo ID / significado distinto:** 20
 - **Solo IR:** 14
-- **Solo implementación:** 16
+- **Solo implementación:** 17
 
 El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la desalineación semántica estructural entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
 
@@ -142,17 +142,19 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E209|—|ComposeMissingPatterns|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E210|—|MaxMinForbidden|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E211|—|SuperviseMetaNotSupervisor|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E212|—|SuperviseMetaNotEvalResult|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E307|—|UndeclaredHorizonEvent|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 
 ## 6. Observaciones operativas
 
 1. `E102`, `E104`, `E106` y `E111` son hoy las cuatro coincidencias semánticas por mismo identificador entre IR y contrato efectivo.
 2. El grupo crítico restante es el de **20 divergencias con mismo ID**.
-3. Los **16 códigos solo implementación** incluyen `E112`, `E113` y `E307` como materializaciones deliberadas bajo Vía B de obligaciones canónicas cuyos identificadores originales ya están ocupados por significados efectivos distintos.
+3. Los **17 códigos solo implementación** incluyen `E112`, `E113`, `E212` y `E307` como materializaciones deliberadas bajo Vía B de obligaciones o precondiciones canónicas cuyos identificadores originales están ocupados, no existen como código autónomo o no deben reutilizarse por semejanza.
 4. Los **14 códigos solo IR** permanecen como horizonte ABI o deuda no materializada bajo su identificador canónico.
 5. `E112` no autoriza declarar cerrado todo `J2.2`, porque la procedencia de los valores actualizados desde un `Connector` bien formado no está representada de forma verificable en `CoupledState`.
 6. `E113` dispone de sitio de emisión y tres casos explícitos que separan incompatibilidades de posición, `target_position` y codominio fuente.
-7. `E307` dispone de sitio de emisión y caso explícito `transition_event_fuera_horizon.svp`; protege funcionalmente la obligación canónica `E403` sin cambiar el `E403` efectivo.
+7. `E212` dispone de sitio de emisión y caso explícito para la precondición `J3.3 meta_eval : EvalResult`; `E211` conserva la comprobación de rol `Supervisor` y se extiende al camino de estado acoplado autorizado por P0-A. `E306` permanece separado porque corresponde al etiquetado de `target : Supervisable`.
+8. `E307` dispone de sitio de emisión y caso explícito `transition_event_fuera_horizon.svp`; protege funcionalmente la obligación canónica `E403` sin cambiar el `E403` efectivo.
 
 ## 7. Límite de esta matriz
 

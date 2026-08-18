@@ -168,6 +168,10 @@ E211 = SVPErrorDef("E211", "SuperviseMetaNotSupervisor",
     "El primer argumento de supervise debe provenir de una célula con rol Supervisor",
     ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
 
+E212 = SVPErrorDef("E212", "SuperviseMetaNotEvalResult",
+    "El primer argumento de supervise debe ser un identificador de EvalResult",
+    ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
+
 # ── Capa 3 — Evolución ───────────────────────────────────────────────
 
 E301 = SVPErrorDef("E301", "FrameMutationForbidden",
@@ -220,7 +224,7 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 ERRORS = {e.code: e for e in [
     E001, E002, E003, E004, E005, E006, E007, E008, E009, E010,
     E101, E102, E103, E104, E105, E106, E111, E112, E113,
-    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211,
+    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212,
     E301, E302, E303, E304, E307,
     E401, E402, E403,
     E501, E507,

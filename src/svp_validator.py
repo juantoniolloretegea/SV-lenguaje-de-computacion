@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
-                         E101, E102, E104, E105, E112, E113, E202, E211, E303, E304, E307,
+                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E303, E304, E307,
                          E401, E402, E403)
 
 
@@ -513,19 +513,29 @@ class Validator:
 
     def _validate_supervise(self, node: SuperviseCmd):
         self._require_ref(node.meta_eval, node.loc)
+        if self.symbol_types[node.meta_eval] != "EvalCmd":
+            raise SVPError(E212, node.loc.line, node.loc.col,
+                           f"El primer argumento de supervise {node.meta_eval!r} no es EvalResult "
+                           f"(es {self.symbol_types[node.meta_eval]})")
+
         target_ref = getattr(node.target, "ref", None)
         if target_ref is not None:
             self._require_ref(target_ref, node.loc)
-        meta_node = self.symbols.get(node.meta_eval)
-        if meta_node and isinstance(meta_node, EvalCmd):
-            state_node = self.symbols.get(meta_node.input_ref)
-            if state_node and isinstance(state_node, CellStateDecl):
-                spec_node = self.symbols.get(state_node.spec)
-                if spec_node and isinstance(spec_node, CellSpecDecl):
-                    if spec_node.role != "Supervisor":
-                        raise SVPError(E211, node.loc.line, node.loc.col,
-                                       f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, "
-                                       f"pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
+
+        meta_node = self.symbols[node.meta_eval]
+        state_node = self.symbols.get(meta_node.input_ref)
+        spec_node = None
+        if isinstance(state_node, CellStateDecl):
+            spec_node = self.symbols.get(state_node.spec)
+        elif isinstance(state_node, CoupledStateDecl):
+            coupled_spec = self.symbols.get(state_node.spec)
+            if isinstance(coupled_spec, CoupledSpecDecl):
+                spec_node = self.symbols.get(coupled_spec.cell)
+
+        if isinstance(spec_node, CellSpecDecl) and spec_node.role != "Supervisor":
+            raise SVPError(E211, node.loc.line, node.loc.col,
+                           f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, "
+                           f"pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
 
     def _validate_projection(self, node: ProjectionCmd):
         self._require_ref(node.source, node.loc)

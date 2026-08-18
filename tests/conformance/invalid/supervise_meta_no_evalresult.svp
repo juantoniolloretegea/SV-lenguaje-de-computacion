@@ -1,0 +1,21 @@
+-- supervise_meta_no_evalresult.svp — meta_eval existente pero no es EvalResult
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec CMeta {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Supervisor;
+}
+
+cellstate SMeta {
+  spec: CMeta;
+  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
+
+let EMeta = evaluate(SMeta);
+
+-- Debe fallar con E212: SMeta existe, pero no es un EvalResult.
+let SV_bad = supervise(SMeta, target: CellTarget(EMeta));
