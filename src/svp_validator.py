@@ -455,7 +455,11 @@ class Validator:
                                f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
 
     def _validate_eval(self, node: EvalCmd):
-        self._require_ref(node.input_ref, node.loc, "CellStateDecl")
+        self._require_ref(node.input_ref, node.loc)
+        if self.symbol_types[node.input_ref] not in {"CellStateDecl", "CoupledStateDecl"}:
+            raise SVPError(E006, node.loc.line, node.loc.col,
+                           f"{node.input_ref!r} es {self.symbol_types[node.input_ref]}, "
+                           "se esperaba CellStateDecl o CoupledStateDecl")
 
     def _validate_resolve(self, node: ResolveCmd):
         self._require_ref(node.with_spec, node.loc, "ResSpecDecl")

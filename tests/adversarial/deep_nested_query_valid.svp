@@ -10,9 +10,15 @@ cellspec C1 {
   role: Base;
 }
 
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+coupledspec CC1 {
+  cell: C1;
+  bridges: [];
+}
+
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
 capture_spec Cap_SEC0 {

@@ -12,6 +12,11 @@ cellspec C1 {
   role: Base;
 }
 
+coupledspec CC1 {
+  cell: C1;
+  bridges: [];
+}
+
 capture_spec Cap1 {
   parameter_id: 1;
   observation_domain: DominioObs1;
@@ -34,9 +39,10 @@ ternarizer Ter1 {
   mapping: MapTer1;
 }
 
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
 let E1 = evaluate(S1);

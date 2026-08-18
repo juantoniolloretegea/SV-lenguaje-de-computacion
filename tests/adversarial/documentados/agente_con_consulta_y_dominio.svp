@@ -66,9 +66,10 @@ horizon H1 {
   events: [EvExogeno_1];
 }
 
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+  updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
 }
 
 let E1 = evaluate(S1);
