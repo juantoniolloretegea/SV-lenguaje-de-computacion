@@ -173,13 +173,13 @@ El código `E004` mantiene sitio de emisión directo en el validator, pero sigue
 
 ### 7.4. Estado fino de la emitibilidad pública de `E301–E304`
 
-Tras la microauditoría E y el contraste directo con gramática, parser, validator y suite, la familia `E301–E304` no debe leerse hoy como un bloque homogéneo de emitibilidad pública ya materializada.
+Tras la resincronización visible del 24/03/2026 y el contraste directo con `src/svp_validator.py` y `tests/run_conformance.py`, la familia `E301–E304` no debe leerse como un bloque homogéneo, pero tampoco puede seguir presentándose `E303` como no acreditado.
 
-- `E304` sí dispone de **emisión observable directa** en `src/svp_validator.py` y de **cobertura explícita** en la suite de conformidad vigente.
-- `E301` y `E302` permanecen hoy como **invariantes de tipo** (`Frame` inmutable y `Trajectory` append-only) cuya violación no cuenta todavía con una operación superficial publicada que las dispare como error autónomo en v0.1.
-- `E303` permanece en catálogo, pero **no dispone aún de emisión autónoma acreditada** en la superficie pública vigente: la ausencia de `horizon_ref` cae hoy en error de parseo, y las referencias ausentes o de tipo incorrecto se canalizan observacionalmente por `E006`.
+- `E304` dispone de **emisión observable directa** en `src/svp_validator.py` y de **cobertura explícita** en la suite de conformidad vigente.
+- `E301` y `E302` permanecen como **invariantes de tipo** (`Frame` inmutable y `Trajectory` append-only) cuya violación no cuenta todavía con una operación superficial publicada que las dispare como error autónomo en v0.1.
+- `E303` dispone de **emisión observable directa** en la validación de `TransitionData` y de **cobertura explícita** mediante `transition_data_horizon_no_declarado.svp`.
 
-En consecuencia, la tabla general del catálogo no debe interpretarse como si `E301`, `E302`, `E303` y `E304` compartieran ya el mismo nivel de emitibilidad pública efectiva. El catálogo conserva esos códigos por trazabilidad implementativa, pero la emitibilidad observable acreditada de la familia queda hoy cerrada de forma plena solo para `E304`.
+En consecuencia, `E303` y `E304` constan con emitibilidad observable y cobertura explícita en la superficie vigente, mientras que `E301` y `E302` conservan un estatuto distinto como invariantes de tipo sin operación superficial autónoma publicada. Esta precisión no modifica el catálogo implementativo ni la IR v0.2; elimina únicamente una contradicción documental ya superada por la evidencia del repositorio.
 
 ## 8. Regla de continuidad
 
