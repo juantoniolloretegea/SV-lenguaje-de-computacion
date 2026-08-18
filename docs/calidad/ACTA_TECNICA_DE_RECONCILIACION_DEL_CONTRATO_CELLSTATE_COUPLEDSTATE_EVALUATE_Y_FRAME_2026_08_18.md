@@ -2,7 +2,7 @@
 
 **Fecha:** 18/08/2026  
 **Frente:** FFL-B — P0-A de estabilización previa a nuevos microcierres  
-**Estado:** aplicación preparada; cierre condicionado a verificación dinámica posterior  
+**Estado:** CERRADO  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **ISSN:** 2695-6411
@@ -81,20 +81,26 @@ Se rechaza por radio de cambio. El defecto es real, pero no es la causa de la re
 - `examples/consulta_framecomparison.svp`;
 - `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`.
 
-La sonda `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp` no requiere modificación: ya representa correctamente `CoupledState` tanto en `evaluate` como en `Frame` y debe volver a ser aceptada al restaurarse legítimamente `evaluate(CoupledState)`.
+La sonda `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp` no requiere modificación: ya representa correctamente `CoupledState` tanto en `evaluate` como en `Frame` y vuelve a ser aceptada al restaurarse legítimamente `evaluate(CoupledState)`.
 
-## 7. Criterio de cierre de P0-A
+## 7. Evidencia dinámica de cierre
 
-El lote no se declarará cerrado sólo por estar aplicado. Requiere, como mínimo:
+La rama `agent/ffl-b-evaluable-state-reconcile`, con `HEAD` previo de verificación `b9db1a268e7acf8283f99eb6d7d09da243a9293c`, fue ejecutada en solo lectura por una unidad auditora independiente, sin commits ni parches de esa unidad.
 
-1. inspección posterior del diff y confirmación de radio corto;
-2. conformidad principal sin regresión;
-3. CLI smoke sin regresión;
-4. SEC-0 nuevamente verde;
-5. aceptación de `examples/consulta_framecomparison.svp`;
-6. aceptación de las sondas documentadas `agente_con_consulta_y_dominio.svp` y `composicion_serie_con_trayectoria.svp`.
+Resultados comunicados y recibidos como evidencia externa de cierre:
 
-Hasta disponer de esa evidencia dinámica, el estado es **aplicado / pendiente de cierre** y no se reabre `E406`.
+- `tests/run_conformance.py`: **42/42**, `rc=0`;
+- `tests/run_cli_smoke.py`: **3/3**, `rc=0`;
+- `tests/run_sec0_smoke.py`: **3/3**, `rc=0`;
+- `examples/consulta_framecomparison.svp`: `rc=0`, IR JSON producido;
+- `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`: `rc=0`, IR JSON producido;
+- `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp`: `rc=0`, IR JSON producido sin modificación del archivo.
+
+La última sonda constituye una evidencia especialmente discriminante: atraviesa el frontend sólo por la restauración legítima de `evaluate(CoupledState)`, no por maquillaje del fixture.
+
+La inspección del diff acredita además radio corto: el cambio funcional de `src/svp_validator.py` es de cinco adiciones y una eliminación; no existe remaquetación masiva ni contaminación ajena al juicio.
+
+Con esta evidencia, P0-A queda **cerrado**.
 
 ## 8. Continuidad de P0
 
