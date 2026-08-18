@@ -8,10 +8,11 @@ Este registro concentra únicamente la deuda viva relevante para el frente final
 
 ### DFL-001 — Concordancia IR ↔ catálogo ↔ implementación
 
-- **Descripción:** persiste una tensión reconocida entre la norma diagnóstica superior (IR v0.2 y catálogo canónico) y el catálogo implementativo efectivo.
-- **Riesgo:** desalineación entre contrato público, emisión observable y documentación.
-- **Estado:** abierta y gobernada.
+- **Descripción:** persiste una tensión reconocida entre la norma diagnóstica superior (IR v0.2) y el catálogo implementativo efectivo. La divergencia queda ya localizada en dos planos complementarios: matriz por identificador y crosswalk funcional de obligaciones canónicas. El estado vigente distingue 4 coincidencias semánticas por mismo ID, 20 divergencias por mismo ID, 14 códigos solo IR y 13 códigos solo implementación; además separa obligaciones cubiertas por otro ID o por estructura de aquellas parciales o no materializadas.
+- **Riesgo:** confundir convergencia numérica con protección funcional, o presentar como cerrada una obligación canónica que solo está parcial o prospectivamente materializada.
+- **Estado:** gobernada y no bloqueante para el cierre de FFL-A bajo Vía B; permanece viva para convergencia futura y para los bloques de implementación/ABI que correspondan.
 - **Prioridad:** alta.
+- **Evidencia de gobierno:** `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`, `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv` y `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`.
 
 ### DFL-002 — Sincronización documentación pública ↔ evidencia
 
