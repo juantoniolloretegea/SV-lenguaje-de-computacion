@@ -47,18 +47,18 @@ Esta matriz no autoriza por sí sola a modificar la IR, el catálogo público ni
 **Resincronización vigente:** 18/08/2026  
 **Base de contraste:** árbol fresco del repositorio + IR v0.2 + catálogo público efectivo + parser + validator + lowering + suite
 
-La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104` y la materialización parcial de la obligación canónica `E202 — IllegalBridgeUpdate` mediante el identificador efectivo `E112`.
+La resincronización de 18/08/2026 no reescribe la historia del Bloque A. Corrige únicamente afirmaciones que quedaron superadas por cambios posteriores ya materializados y hoy observables, en particular la alcanzabilidad de `E008`, la cobertura de `E101/E105`, la convergencia vigente de `E102/E104`, la materialización parcial de `E202 — IllegalBridgeUpdate` mediante `E112` y la ruta funcional de `E206 — EdgeConnectorMismatch` mediante `E113`.
 
 ## 1. Resultado global
 
 El balance vigente del contrato por identificador es:
 
 - **IR v0.2:** 38 códigos
-- **Catálogo implementativo efectivo / contrato público actual:** 38 códigos
+- **Catálogo implementativo efectivo / contrato público actual:** 39 códigos
 - **Coincidencia semántica por mismo ID:** 4 (`E102`, `E104`, `E106`, `E111`)
 - **Mismo ID / significado distinto:** 20
 - **Solo IR:** 14
-- **Solo implementación:** 14
+- **Solo implementación:** 15
 
 El cuello de botella del contrato diagnóstico no está en la inexistencia de catálogo, sino en la desalineación semántica estructural entre la norma diagnóstica superior y el contrato efectivo del frontend de referencia.
 
@@ -98,7 +98,9 @@ El cuello de botella del contrato diagnóstico no está en la inexistencia de ca
 |E501|OpaqueJustification|SerializationNonDeterministic|no_directa|no_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 |E507|QueryContextMismatch|UCoercionDetected|si_directa|si_explicita|regularizacion_documental_inmediata_y_convergencia_posterior|
 
-La fila `E202` sigue siendo divergente por identificador: el `E202` efectivo continúa significando `GateInputNotEvalResult`. La cláusula posicional de la obligación canónica `IllegalBridgeUpdate` se protege ahora mediante `E112`, registrado separadamente como código solo implementación; la cláusula de procedencia por conector permanece abierta.
+`E202` sigue siendo divergente por identificador: el `E202` efectivo continúa significando `GateInputNotEvalResult`. La cláusula posicional de la obligación canónica `IllegalBridgeUpdate` se protege mediante `E112`, registrado separadamente como código solo implementación; la cláusula de procedencia por conector permanece abierta.
+
+`E206` sigue siendo divergente por identificador porque el `E206` efectivo continúa significando `ResolveMissingContext`. Su obligación canónica `EdgeConnectorMismatch` dispone ahora de ruta funcional bajo `E113`, sin renumerar el contrato efectivo existente.
 
 ## 4. Presentes solo en IR
 
@@ -132,6 +134,7 @@ La fila `E202` sigue siendo divergente por identificador: el `E202` efectivo con
 |E009|—|TableInputMismatch|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E010|—|InvalidRole|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E112|—|IllegalBridgeUpdate|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
+|E113|—|EdgeConnectorMismatch|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E207|—|ResolveMissingMechanism|no_directa|no_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E208|—|ComposeMissingRelations|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
 |E209|—|ComposeMissingPatterns|si_directa|si_explicita|mantener_como_deuda_gobernada_bajo_Via_B|
@@ -142,7 +145,7 @@ La fila `E202` sigue siendo divergente por identificador: el `E202` efectivo con
 
 1. `E102`, `E104`, `E106` y `E111` son hoy las cuatro coincidencias semánticas por mismo identificador entre IR y contrato efectivo.
 2. El grupo crítico restante es el de **20 divergencias con mismo ID**, porque produce falsa apariencia de convergencia si solo se mira el identificador.
-3. Los **14 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas; `E112` es una materialización deliberada bajo Vía B de una subobligación canónica cuyo identificador `E202` ya está ocupado por otro significado efectivo.
+3. Los **15 códigos solo implementación** obligan a reconocer que el frontend opera hoy con un contrato efectivo más rico que la IR en algunas zonas; `E112` y `E113` son materializaciones deliberadas bajo Vía B de obligaciones canónicas cuyos identificadores originales ya están ocupados por significados efectivos distintos.
 4. Los **14 códigos solo IR** no deben tratarse como “errores fantasma”, sino como parte del horizonte ABI semántico-diagnóstico todavía no implementado o no expuesto bajo su identificador canónico.
 5. `E507` mantiene divergencia semántica respecto de la IR, pero el subcaso observable de coerción implícita de `U` se manifiesta explícitamente como `E507` en la suite vigente.
 6. Dentro de la familia `E001–E010`, la deuda viva de alcanzabilidad superficial queda concentrada en `E003`, `E004` y `E008`.
@@ -151,11 +154,12 @@ La fila `E202` sigue siendo divergente por identificador: el `E202` efectivo con
 9. Dentro de la familia `E201–E211`, `E208` y `E209` disponen de emisión observable y casos explícitos mediante `compose_relations_vacias.svp` y `compose_patterns_vacios.svp`.
 10. La familia `E301–E304` deja acreditada emisión observable y caso explícito para `E303` y `E304`; `E301` y `E302` permanecen como invariantes de tipo sin cierre superficial equivalente.
 11. `E112` dispone de sitio de emisión y caso explícito `coupledstate_update_fuera_bridges.svp`; no autoriza declarar cerrado todo `J2.2`, porque la procedencia de los valores actualizados desde un `Connector` bien formado no está representada de forma verificable en `CoupledState`.
+12. `E113` dispone de sitio de emisión y tres casos explícitos que separan las incompatibilidades de posición, `target_position` y codominio fuente; el crosswalk funcional es la sede que determina su relación con el `E206` canónico.
 
 ## 7. Límite de esta matriz
 
 Esta matriz clasifica la relación **por identificador**. No debe confundirse con una tabla de equivalencias funcionales entre códigos distintos.
 
-Por ejemplo, una obligación canónica puede estar materialmente protegida en la superficie actual por otro código implementativo (`EmptyCodomain`, `VectorLengthMismatch`, `CyclicCompositionGraph`, `BrokenAlternation` o `QueryContextMismatch` son casos que requieren lectura cruzada). La correspondencia funcional completa deberá mantenerse separada de esta clasificación por ID para no confundir convergencia semántica con convergencia numérica.
+Por ejemplo, una obligación canónica puede estar materialmente protegida en la superficie actual por otro código implementativo. La correspondencia funcional completa deberá mantenerse separada de esta clasificación por ID para no confundir convergencia semántica con convergencia numérica.
 
 La marca `si_explicita` en la columna de suite significa que existe un caso con código esperado declarado en la batería; no equivale por sí sola a afirmar una nueva ejecución global posterior a cada modificación. Esa evidencia dinámica se acreditará en `FFL-C`.

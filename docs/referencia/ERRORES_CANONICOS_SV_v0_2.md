@@ -28,14 +28,16 @@ No debe interpretarse como sustitución de la IR v0.2 ni como cancelación de la
 
 Constan actualmente:
 
-- **38 códigos** en el catálogo implementativo efectivo;
+- **39 códigos** en el catálogo implementativo efectivo;
 - **4 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`);
 - **20 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
-- **14 códigos** presentes en implementación y no codificados en la IR v0.2.
+- **15 códigos** presentes en implementación y no codificados en la IR v0.2.
 
 La actualización de `E102` y `E104` no reescribe el contraste histórico: registra que el frontend vigente emite ya esos identificadores para las mismas obligaciones diagnósticas que fija la IR v0.2. Las antiguas caídas de esos subcasos a `E006` y `E008` quedaron superadas por la resincronización posterior del frontend.
 
-La incorporación de `E112` tampoco altera la IR v0.2: materializa bajo Vía B, con identificador efectivo libre, la parte verificable de la obligación canónica `E202 — IllegalBridgeUpdate` que exige que `updated_vector` difiera de `base_vector` únicamente en posiciones del `BridgeSet`. La procedencia de los valores desde un `Connector` bien formado permanece fuera de este cierre parcial.
+`E112` materializa bajo Vía B, con identificador efectivo libre, la parte verificable de la obligación canónica `E202 — IllegalBridgeUpdate` que exige que `updated_vector` difiera de `base_vector` únicamente en posiciones del `BridgeSet`. La procedencia de los valores desde un `Connector` bien formado permanece fuera de ese cierre parcial.
+
+`E113` materializa bajo Vía B la obligación canónica `E206 — EdgeConnectorMismatch` en la superficie actualmente representable: la posición de la arista debe pertenecer al `BridgeSet` del target, debe coincidir con `Connector.target_position` y `Connector.source_codomain` debe coincidir con el codominio de la célula transmisora. La validez interna del mapping del conector continúa gobernada por las comprobaciones efectivas `E104` y `E007`.
 
 ## 5. Regla de uso
 
@@ -67,6 +69,7 @@ Mientras siga vigente la regularización por Vía B:
 | E106 | `MissingSemanticRelation` | Estado | `validate` | coincidente con IR v0.2 | Composición sin relación semántica previa declarada |
 | E111 | `UnorderedCodomain` | Estado | `validate` | coincidente con IR v0.2 | Codominio usado en compuerta sin orden documentado |
 | E112 | `IllegalBridgeUpdate` | Estado | `validate` | no consta en IR v0.2 | CoupledState modifica una posición fuera del BridgeSet declarado |
+| E113 | `EdgeConnectorMismatch` | Estado | `validate` | no consta en IR v0.2 | Edge incompatible con BridgeSet, target_position o codominio fuente declarados |
 | E201 | `LiteralResultForbidden` | Resultado | `parse` | divergente respecto de IR v0.2 | No se permite construir literales de EvalResult, GateResult, ResolutionRecord, QueryResult ni SupervisionResult |
 | E202 | `GateInputNotEvalResult` | Resultado | `validate` | divergente respecto de IR v0.2 | Los argumentos de gate deben ser identificadores de EvalResult |
 | E203 | `GateMissingTable` | Resultado | `parse` | divergente respecto de IR v0.2 | gate invocado sin tabla de admisibilidad nombrada (using) |
@@ -88,7 +91,7 @@ Mientras siga vigente la regularización por Vía B:
 | E501 | `SerializationNonDeterministic` | Serialización/conformidad | `lower` | divergente respecto de IR v0.2 | La serialización JSON no es determinista |
 | E507 | `UCoercionDetected` | Serialización/conformidad | `parse` | divergente respecto de IR v0.2 | Coerción implícita de U detectada (prohibición constitutiva) |
 
-## 7. Emisión observable y cobertura explícita de suite
+## 7. Emisión observable y casos explícitos de conformidad
 
 Para evitar sobreatribución de cobertura, se distinguen aquí tres planos distintos del estado actual del frontend de referencia.
 
@@ -110,6 +113,7 @@ Constan con sitio de emisión directo observable en el frontend actual, al menos
 - `E104`
 - `E105`
 - `E112`
+- `E113`
 - `E202`
 - `E204`
 - `E205`
@@ -141,6 +145,7 @@ La suite de conformidad vigente contiene casos inválidos con código esperado d
 - `E104`
 - `E105`
 - `E112`
+- `E113`
 - `E202`
 - `E204`
 - `E205`
@@ -161,39 +166,37 @@ La presencia de un caso y de su código esperado no equivale, por sí sola, a un
 
 La mera presencia de un código en `src/svp_errors.py` no implica, por sí sola, que exista hoy un sitio de emisión directo observable ni que esté cubierto por la suite.
 
-En particular, el caso adversarial `u_coercion.svp` pasa a manifestarse observacionalmente con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
+En particular, el caso adversarial `u_coercion.svp` se vincula con `E507`, de modo que la prohibición constitutiva de coerción implícita de `U` deja de quedar absorbida por la bolsa genérica de `E001` en ese subcaso.
 
-Los casos adversariales `conector_mapping_incompleto.svp` y `admissibility_table_incompleta.svp` dejan constancia observable de emisión para `E007` y `E009`, respectivamente, y disponen de código esperado explícito en la suite de conformidad.
+Los casos `conector_mapping_incompleto.svp` y `admissibility_table_incompleta.svp` disponen de códigos esperados `E007` y `E009`, respectivamente.
 
 Asimismo, `domain_chain_mismatch.svp`, `agent_architecture_mismatch.svp` y `query_context_type_mismatch.svp` vinculan los códigos `E401`, `E402` y `E403` a casos explícitos de conformidad, fijando un primer contrato mínimo de enganche en N4/Uso sin sobreatribuir todavía interpretación ejecutiva plena a todos los campos opacos de `Domain`.
 
-Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden además casos explícitos para `E005` y `E010`, sin alterar el comportamiento implementativo del frontend.
+Los casos `duplicate_identifier.svp` e `invalid_role_literal.svp` añaden casos explícitos para `E005` y `E010`.
 
-Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp` añaden casos explícitos para `E101` y `E105`, respectivamente, sin introducir semántica nueva en el validator.
+Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_rango.svp` añaden casos explícitos para `E101` y `E105`.
 
-El caso adversarial `invalid_tri_literal.svp` aporta un caso explícito para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
+El caso `invalid_tri_literal.svp` aporta un caso explícito para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
 
-Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan casos explícitos para `E102` y `E104`, respectivamente. En el estado vigente, esas emisiones coinciden con las obligaciones canónicas `MissingOutputSemantics` e `InvalidConnectorCodomain` de la IR v0.2; las antiguas caídas a `E006` y `E008` quedan como trazabilidad histórica superada.
+Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan casos explícitos para `E102` y `E104`, respectivamente. En el estado vigente, esas emisiones coinciden con las obligaciones canónicas `MissingOutputSemantics` e `InvalidConnectorCodomain` de la IR v0.2.
 
-`E008` permanece en el catálogo implementativo por trazabilidad, pero **no dispone hoy de sitio de emisión directo ni de caso explícito en la suite**. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`; por tanto, `E008` no debe presentarse como observable o cubierto en la superficie vigente.
+`E008` permanece en el catálogo implementativo por trazabilidad, pero **no dispone hoy de sitio de emisión directo ni de caso explícito en la suite**. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`.
 
-Los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp` fijan casos explícitos para `E208` y `E209`, dejando atrás su anterior estatuto de deuda sin adversarial explícito.
+Los casos `compose_relations_vacias.svp` y `compose_patterns_vacios.svp` fijan casos explícitos para `E208` y `E209`.
 
-El caso `transition_data_horizon_no_declarado.svp` fija un caso explícito para `E303`, de modo que deja de ser correcto presentarlo como código sin prueba preparada en la superficie pública vigente.
+El caso `transition_data_horizon_no_declarado.svp` fija un caso explícito para `E303`.
 
 El caso `coupledstate_update_fuera_bridges.svp` fija el caso explícito de `E112` para la parte verificable de `J2.2`: si `base_vector` y `updated_vector` difieren, toda posición modificada debe pertenecer al `BridgeSet` del `CoupledSpec`. Este cierre es **parcial respecto de J2.2**: no acredita todavía que el valor actualizado proceda de un `Connector` bien formado.
+
+Los casos `edge_position_fuera_bridges.svp`, `edge_connector_target_position_mismatch.svp` y `edge_connector_source_codomain_mismatch.svp` separan las tres incompatibilidades contextuales verificables de `J2.3` que se emiten como `E113`. Junto con las comprobaciones internas ya existentes del mapping del conector (`E104`/`E007`), constituyen la ruta efectiva de la obligación canónica `E206 — EdgeConnectorMismatch` bajo Vía B.
 
 El código `E004` mantiene sitio de emisión directo en el validator, pero sigue sin caso adversarial explícito en la superficie v0.1 porque el parser no permite actualmente declarar un `codomain` vacío.
 
 ### 7.4. Estado fino de la emitibilidad pública de `E301–E304`
 
-Tras la resincronización visible del 24/03/2026 y el contraste directo con `src/svp_validator.py` y `tests/run_conformance.py`, la familia `E301–E304` no debe leerse como un bloque homogéneo, pero tampoco puede seguir presentándose `E303` como no acreditado.
-
 - `E304` dispone de **emisión observable directa** en `src/svp_validator.py` y de **caso explícito** en la suite de conformidad vigente.
 - `E301` y `E302` permanecen como **invariantes de tipo** (`Frame` inmutable y `Trajectory` append-only) cuya violación no cuenta todavía con una operación superficial publicada que las dispare como error autónomo en v0.1.
 - `E303` dispone de **emisión observable directa** en la validación de `TransitionData` y de **caso explícito** mediante `transition_data_horizon_no_declarado.svp`.
-
-En consecuencia, `E303` y `E304` constan con emitibilidad observable y caso explícito en la superficie vigente, mientras que `E301` y `E302` conservan un estatuto distinto como invariantes de tipo sin operación superficial autónoma publicada. Esta precisión no modifica el catálogo implementativo ni la IR v0.2; elimina únicamente una contradicción documental ya superada por la evidencia del repositorio.
 
 ## 8. Regla de continuidad
 
@@ -214,3 +217,4 @@ Este documento permanece vigente mientras el frontend de referencia mantenga un 
 - `E204` dispone de caso explícito en suite mediante `query_context_opaco.svp`.
 - `E205` dispone de caso explícito en suite mediante `supervise_target_opaco.svp`.
 - `E112` dispone de caso explícito mediante `coupledstate_update_fuera_bridges.svp`; su alcance es la cláusula posicional de `J2.2`, no la procedencia por conector.
+- `E113` dispone de tres casos explícitos que separan posición fuera de `BridgeSet`, desacuerdo `Edge.position`/`Connector.target_position` y codominio fuente incompatible.
