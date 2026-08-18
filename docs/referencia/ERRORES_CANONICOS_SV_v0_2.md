@@ -29,9 +29,11 @@ No debe interpretarse como sustitución de la IR v0.2 ni como cancelación de la
 Constan actualmente:
 
 - **37 códigos** en el catálogo implementativo efectivo;
-- **2 códigos** coincidentes con la IR v0.2;
-- **22 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
+- **4 códigos** coincidentes con la IR v0.2 (`E102`, `E104`, `E106`, `E111`);
+- **20 códigos** con el mismo identificador pero significado divergente respecto de la IR v0.2;
 - **13 códigos** presentes en implementación y no codificados en la IR v0.2.
+
+La actualización de `E102` y `E104` no reescribe el contraste histórico: registra que el frontend vigente emite ya esos identificadores para las mismas obligaciones diagnósticas que fija la IR v0.2. Las antiguas caídas de esos subcasos a `E006` y `E008` quedaron superadas por la resincronización posterior del frontend.
 
 ## 5. Regla de uso
 
@@ -56,9 +58,9 @@ Mientras siga vigente la regularización por Vía B:
 | E009 | `TableInputMismatch` | Definición | `validate` | no consta en IR v0.2 | Las entradas de la tabla de admisibilidad no cubren el producto cartesiano de los codominios |
 | E010 | `InvalidRole` | Definición | `parse` | no consta en IR v0.2 | Rol no reconocido: se esperaba Base, Supervisor o Composite |
 | E101 | `VectorLengthMismatch` | Estado | `validate` | divergente respecto de IR v0.2 | La longitud del vector no coincide con b² de la CellSpec referenciada |
-| E102 | `MissingOutputSemantics` | Estado | `validate` | divergente respecto de IR v0.2 | La CellSpec referencia una OutputSemantics no declarada o de tipo incorrecto |
+| E102 | `MissingOutputSemantics` | Estado | `validate` | coincidente con IR v0.2 | La CellSpec referencia una OutputSemantics no declarada o de tipo incorrecto |
 | E103 | `GraphCycleDetected` | Estado | `validate` | divergente respecto de IR v0.2 | El grafo de composición contiene ciclos (prohibido) |
-| E104 | `InvalidConnectorCodomain` | Estado | `validate` | divergente respecto de IR v0.2 | El conector declara un destino fuera del alfabeto ternario permitido |
+| E104 | `InvalidConnectorCodomain` | Estado | `validate` | coincidente con IR v0.2 | El conector declara un destino fuera del alfabeto ternario permitido |
 | E105 | `BridgePositionOutOfRange` | Estado | `validate` | divergente respecto de IR v0.2 | Posición puente fuera del rango [1, n] de la célula |
 | E106 | `MissingSemanticRelation` | Estado | `validate` | coincidente con IR v0.2 | Composición sin relación semántica previa declarada |
 | E111 | `UnorderedCodomain` | Estado | `validate` | coincidente con IR v0.2 | Codominio usado en compuerta sin orden documentado |
@@ -161,7 +163,7 @@ Los casos `cellstate_vector_length_mismatch.svp` y `bridge_position_fuera_de_ran
 
 El caso adversarial `invalid_tri_literal.svp` aporta ahora cobertura explícita observable para `E001` sobre un literal ternario no reconocido, sin revertir la extracción del subcaso `u_coercion.svp` hacia `E507`.
 
-Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan emisión observable y cobertura explícita para `E102` y `E104`, respectivamente, y obligan a descartar las antiguas lecturas que los absorbían en `E006` o `E008`.
+Los casos `output_semantics_no_declarada.svp` y `conector_target_no_ternario.svp` fijan emisión observable y cobertura explícita para `E102` y `E104`, respectivamente. En el estado vigente, esas emisiones coinciden con las obligaciones canónicas `MissingOutputSemantics` e `InvalidConnectorCodomain` de la IR v0.2; las antiguas caídas a `E006` y `E008` quedan como trazabilidad histórica superada.
 
 `E008` permanece en el catálogo implementativo por trazabilidad, pero **no dispone hoy de sitio de emisión directo ni de caso explícito en la suite**. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`; por tanto, `E008` no debe presentarse como observable o cubierto en la superficie vigente.
 
@@ -193,7 +195,6 @@ Si el catálogo implementativo cambia, este documento deberá actualizarse en el
 ## 9. Vigencia
 
 Este documento permanece vigente mientras el frontend de referencia mantenga un catálogo implementativo efectivo no plenamente reconciliado con la IR v0.2.
-
 
 ## Cobertura explícita añadida
 
