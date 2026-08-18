@@ -284,6 +284,7 @@ class Lowering:
             "gate_results": list(n.gate_results),
             "supervision": list(n.supervision),
             "criticalities": list(n.criticalities),
+            "immutable": True,
         })
 
     def _lower_transition_data(self, n: TransitionDataDecl) -> IRObject:
@@ -313,7 +314,10 @@ class Lowering:
             if e.transition:
                 entry["transition"] = e.transition
             entries.append(entry)
-        return IRObject("N3", "Trajectory", n.name, {"entries": entries})
+        return IRObject("N3", "Trajectory", n.name, {
+            "entries": entries,
+            "append_only": True,
+        })
 
     # ── N4 ────────────────────────────────────────────────────────────
 
