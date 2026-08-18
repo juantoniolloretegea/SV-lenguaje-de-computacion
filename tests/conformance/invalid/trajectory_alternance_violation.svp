@@ -5,9 +5,12 @@ output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
 
 cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
 
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+coupledspec CC1 { cell: C1; bridges: [3]; }
+
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
 horizon H1 {
