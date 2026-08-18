@@ -289,7 +289,7 @@ class Validator:
 
     def _validate_frame(self, node: FrameDecl):
         for ref in node.cell_states:
-            self._require_ref(ref, node.loc, "CellStateDecl")
+            self._require_ref(ref, node.loc, "CoupledStateDecl")
         for ref in node.eval_results:
             self._require_ref(ref, node.loc, "EvalCmd")
         for ref in node.gate_results:
