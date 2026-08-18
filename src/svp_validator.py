@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
-                         E101, E102, E104, E105, E202, E211, E303, E304,
+                         E101, E102, E104, E105, E112, E202, E211, E303, E304,
                          E401, E402, E403)
 
 
@@ -149,6 +149,15 @@ class Validator:
             if len(node.updated_vector) != expected_len:
                 raise SVPError(E101, node.loc.line, node.loc.col,
                                f"updated_vector de longitud {len(node.updated_vector)}, se esperaba {expected_len}")
+
+            bridge_positions = set(coupled.bridges)
+            for position, (base_value, updated_value) in enumerate(
+                    zip(node.base_vector, node.updated_vector), start=1):
+                if base_value != updated_value and position not in bridge_positions:
+                    raise SVPError(
+                        E112, node.loc.line, node.loc.col,
+                        f"CoupledState {node.name!r} modifica la posición {position}, "
+                        f"fuera del BridgeSet {sorted(bridge_positions)} de {node.spec!r}")
 
     def _validate_connector(self, node: ConnectorDecl):
         self._require_ref(node.source_codomain, node.loc, "CodomainDecl")

@@ -114,6 +114,10 @@ E111 = SVPErrorDef("E111", "UnorderedCodomain",
     "Codominio usado en compuerta sin orden documentado",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
+E112 = SVPErrorDef("E112", "IllegalBridgeUpdate",
+    "CoupledState modifica una posición fuera del BridgeSet declarado",
+    ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
+
 # ── Capa 2 — Resultado ───────────────────────────────────────────────
 
 E201 = SVPErrorDef("E201", "LiteralResultForbidden",
@@ -207,7 +211,7 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 
 ERRORS = {e.code: e for e in [
     E001, E002, E003, E004, E005, E006, E007, E008, E009, E010,
-    E101, E102, E103, E104, E105, E106, E111,
+    E101, E102, E103, E104, E105, E106, E111, E112,
     E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211,
     E301, E302, E303, E304,
     E401, E402, E403,

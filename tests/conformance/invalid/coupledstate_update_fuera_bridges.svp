@@ -1,0 +1,27 @@
+-- FFL-B: J2.2 parcial — una actualización fuera de BridgeSet debe rechazarse.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+
+output_semantics Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+coupledspec CC1 {
+  cell: C1;
+  bridges: [3];
+}
+
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+  updated_vector: [One, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero];
+}
