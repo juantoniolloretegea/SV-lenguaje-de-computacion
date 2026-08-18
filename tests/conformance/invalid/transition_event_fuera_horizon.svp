@@ -1,0 +1,12 @@
+-- FFL-B: J4.3 — todo tipo de suceso de TransitionData debe pertenecer al Horizon referenciado.
+
+horizon H1 {
+  architecture: A1;
+  events: [E1];
+}
+
+transition_data T1 {
+  horizon_ref: H1;
+  events: [(E2, Zero)];
+  induced_parameters: [(C1, 1, Zero)];
+}

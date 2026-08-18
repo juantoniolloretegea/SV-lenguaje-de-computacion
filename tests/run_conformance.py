@@ -29,6 +29,7 @@ EXPECTED_INVALID_CODES = {
     "edge_position_fuera_bridges.svp": "E113",
     "edge_connector_target_position_mismatch.svp": "E113",
     "edge_connector_source_codomain_mismatch.svp": "E113",
+    "transition_event_fuera_horizon.svp": "E307",
     "bad_b_value.svp": "E002",
     "conector_mapping_incompleto.svp": "E007",
     "conector_target_no_ternario.svp": "E104",
