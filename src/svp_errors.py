@@ -200,7 +200,7 @@ E501 = SVPErrorDef("E501", "SerializationNonDeterministic",
 
 E507 = SVPErrorDef("E507", "UCoercionDetected",
     "Coerción implícita de U detectada (prohibición constitutiva)",
-    ErrorLevel.LAYER5, ErrorPhase.VALIDATE)
+    ErrorLevel.LAYER5, ErrorPhase.PARSE)
 
 
 # ── Catálogo completo ────────────────────────────────────────────────
