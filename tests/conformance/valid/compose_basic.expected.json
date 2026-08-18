@@ -63,6 +63,17 @@
     },
     {
       "fields": {
+        "bridges": [
+          3
+        ],
+        "cell": "C2"
+      },
+      "level": "N0",
+      "name": "CC2",
+      "type": "CoupledSpec"
+    },
+    {
+      "fields": {
         "mapping": {
           "APTO": "Zero",
           "INDETERMINADO": "U",
@@ -102,12 +113,12 @@
             "connector": "Phi1",
             "position": 3,
             "source": "CC1",
-            "target": "C2"
+            "target": "CC2"
           }
         ],
         "nodes": [
           "CC1",
-          "C2"
+          "CC2"
         ],
         "regime": "Simple",
         "relation": "R_serie"
@@ -135,5 +146,5 @@
   ],
   "serializer_version": "0.1.0",
   "source_file": "compose_basic.svp",
-  "source_sha256": "95b783220da208a02e212dddbe3bd3a7b8f3c10887acca5c19865ba1c9b0d698"
+  "source_sha256": "b91d5caa7ffb8457fadf3920d4f6135142c4c8ea7927da8a549a012148a6230b"
 }
