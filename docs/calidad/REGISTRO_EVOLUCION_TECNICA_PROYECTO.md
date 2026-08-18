@@ -24,12 +24,12 @@ Las entradas de este archivo se redactan conforme a `CRITERIO_DE_REDACCION_PUBLI
 | RETP-2026-051 | 18/08/2026 | 13:05:54 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.2 parcial / E112 | cerrado |
 | RETP-2026-052 | 18/08/2026 | 13:15:04 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / E113 ↔ E206 canónico | cerrado |
 | RETP-2026-053 | 18/08/2026 | 13:25:03 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E307 ↔ E403 canónico | cerrado |
-| RETP-2026-054 | 18/08/2026 | 13:30:27 | INCIDENCIA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / intento E406 revertido | cerrado |
+| RETP-2026-054 | 18/08/2026 | 13:30:27 | SORPRESA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / intento E406 revertido | cerrado |
 | RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
 
-> El tipo histórico `SORPRESA_TECNICA_Y_REVERSION` de RETP-054 se conserva en el CSV maestro. En esta lectura humana se expresa como **incidencia técnica y reversión** por adecuación al criterio de redacción pública, sin alterar el hecho registrado.
+> `SORPRESA_TECNICA_Y_REVERSION` se conserva como identificador histórico exacto del tipo registral de RETP-054. En la prosa pública se describe como **incidencia técnica y reversión**.
 
 ## 3. Entradas detalladas
 
