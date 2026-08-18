@@ -12,19 +12,9 @@
 
 Esta carpeta no constituye autoridad doctrinal superior. Su función es documentar de forma revisable por terceros el estado de la sede operativa y su relación con la matemática, la especificación, la implementación y la evidencia.
 
-## 2. Regla de redacción pública
+## 2. Punto de entrada para continuidad vigente
 
-Rige el documento:
-
-- `CRITERIO_DE_REDACCION_PUBLICA_DE_LOS_REGISTROS_DE_CALIDAD_2026_08_18.md`
-
-Las actas y registros públicos se redactarán en español técnico, formal y sobrio. Los extranjerismos sólo se conservarán cuando sean nombres propios, acrónimos, identificadores literales o cuando su traducción perjudique la precisión y la trazabilidad.
-
-La documentación pública debe exponer hechos, fundamento, decisión, evidencia, alcance y estado. No debe trasladar conversaciones internas, relatos del proceso de coordinación ni expresiones coloquiales impropias de un registro técnico.
-
-## 3. Punto de entrada para continuidad vigente
-
-La reentrada actual deberá comenzar, como mínimo, por estas piezas:
+La continuidad actual queda documentada, como mínimo, por estas piezas:
 
 1. `ACTA_TECNICA_DE_ORDENACION_DE_CONTINUIDAD_SEMANTICA_Y_ARQUITECTONICA_DEL_LENGUAJE_SV_2026_08_16.md`;
 2. `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`;
@@ -36,9 +26,9 @@ La reentrada actual deberá comenzar, como mínimo, por estas piezas:
 
 El acta de 16/08/2026 conserva la jerarquía, los seis bloques de continuidad y las compuertas posteriores. La pausa preventiva que estableció fue superada por la reapertura de 18/08/2026 en el alcance expresamente autorizado.
 
-## 4. Estado técnico reciente de FFL-B
+## 3. Estado técnico reciente de FFL-B
 
-Los cierres técnicos más recientes que deben permanecer visibles son:
+Los cierres técnicos más recientes son:
 
 - `ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md` — P0-A;
 - `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
@@ -46,7 +36,7 @@ Los cierres técnicos más recientes que deben permanecer visibles son:
 
 La evidencia acumulada al cierre de E406 acredita una batería de conformidad de **45/45**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre. Estas cifras describen el último cierre acreditado y no autorizan por sí solas la apertura del siguiente juicio técnico.
 
-## 5. Contrato diagnóstico y correspondencia funcional
+## 4. Contrato diagnóstico y correspondencia funcional
 
 Los instrumentos principales son:
 
@@ -56,9 +46,7 @@ Los instrumentos principales son:
 - `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`;
 - `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`.
 
-El nombre histórico `CROSSWALK_..._FRONTEND_...` se conserva para no romper referencias ya registradas. Su función pública es la de **tabla de correspondencias funcionales entre obligaciones de la IR y la etapa frontal del compilador**.
-
-## 6. Control de evolución y evidencia
+## 5. Control de evolución y evidencia
 
 ### Registro maestro
 
@@ -82,9 +70,7 @@ El nombre histórico `CROSSWALK_..._FRONTEND_...` se conserva para no romper ref
 - `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`;
 - `ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`.
 
-Las afirmaciones globales sobre el estado del repositorio deben apoyarse en lectura integral del árbol fresco. Una lectura acotada sólo legitima conclusiones igualmente acotadas.
-
-## 7. Vigilancia doctrinal y continuidad
+## 6. Vigilancia doctrinal y continuidad
 
 Permanecen como instrumentos de referencia, entre otros:
 
@@ -98,10 +84,10 @@ Permanecen como instrumentos de referencia, entre otros:
 
 La existencia de una publicación, colección, rama experimental o realización aplicada no autoriza por sí misma una modificación de gramática, IR, validador, entorno de ejecución o bibliotecas.
 
-## 8. Regla de continuidad
+## 7. Jerarquía de continuidad
 
 El orden de autoridad continúa siendo:
 
 `doctrina y matemática soberanas → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-Antes de seleccionar un nuevo cierre técnico deberá comprobarse el repositorio fresco, la deuda realmente restante y el fundamento de la obligación. Ningún documento de calidad puede convertir por sí solo una previsión futura en semántica ejecutiva.
+Ningún documento de calidad puede convertir por sí solo una previsión futura en semántica ejecutiva.
