@@ -1,159 +1,107 @@
-# Calidad del frente operativo
+# Calidad del frente operativo del Lenguaje SV
 
-**Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 4 de abril de 2026  
-**Versión del conjunto:** V.1 del conjunto  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
-**Licencia:** CC BY-NC-ND 4.0  
-**Titularidad y autoría:** © Juan Antonio Lloret Egea, 2026. Este conjunto se distribuye con atribución explícita de autoría y bajo la licencia indicada, sin autorización para apropiación de la paternidad intelectual del Sistema Vectorial SV.  
+**Licencia:** CC BY-NC-ND 4.0
 
----
+## 1. Función de esta carpeta
 
+`docs/calidad/` reúne los instrumentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y registro del Lenguaje SV.
 
-Esta carpeta reúne instrumentos activos de control, verificación, deuda viva, barridos secuenciales y trazabilidad de trabajo por agente del Lenguaje SV.
+Esta carpeta no constituye autoridad doctrinal superior. Su función es documentar de forma revisable por terceros el estado de la sede operativa y su relación con la matemática, la especificación, la implementación y la evidencia.
 
-## Instrumentos activos
+## 2. Regla de redacción pública
 
-### Registro maestro y control del frente final
+Rige el documento:
 
-- `PROCEDIMIENTO_AUDITORIA_TECNICA_SV.md`
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`
-- `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`
-- `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`
-- `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`
-- `C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`
-- `ACTA_TECNICA_DE_CIERRE_AUDITADO_DEL_PARCHE_CORRECTIVO_DEL_FRONTEND_2026_03_23.md`
-- `ACTA_TECNICA_DE_SINCRONIZACION_DOCUMENTAL_DEL_CONTRATO_DIAGNOSTICO_VISIBLE_2026_03_24.md`
-- `ACTA_TECNICA_DE_CIERRE_AUDITADO_Y_PRESERVACION_CONTROLADA_DE_SV_AUTH_A2_R2_Y_J6_2026_08_14.md`
-- `ACTA_TECNICA_DE_RECEPCION_DOCTRINAL_Y_PRESERVACION_DE_CONTINUIDAD_DEL_APRENDIZAJE_TRAZABLE_HACIA_IR_N3_N4_2026_08_15.md`
-- `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`
-- `ACTA_TECNICA_DE_ORDENACION_DE_CONTINUIDAD_SEMANTICA_Y_ARQUITECTONICA_DEL_LENGUAJE_SV_2026_08_16.md`
-- `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`
+- `CRITERIO_DE_REDACCION_PUBLICA_DE_LOS_REGISTROS_DE_CALIDAD_2026_08_18.md`
 
-### Vigilancia UCBC e integración de alertas tempranas
+Las actas y registros públicos se redactarán en español técnico, formal y sobrio. Los extranjerismos sólo se conservarán cuando sean nombres propios, acrónimos, identificadores literales o cuando su traducción perjudique la precisión y la trazabilidad.
 
-- `ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_INTERFACES_Y_ALERTA_TEMPRANA_AL_LENGUAJE_SV_2026_03_21.md`
-- `ACTA_TECNICA_DE_VIGILANCIA_UCBC_SOBRE_NOTA_DE_PRECISION_DE_SUCESO_LOCAL_Y_HORIZONTE_DECLARADO_2026_03_22.md`
-- `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md`
-- `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.csv`
+La documentación pública debe exponer hechos, fundamento, decisión, evidencia, alcance y estado. No debe trasladar conversaciones internas, relatos del proceso de coordinación ni expresiones coloquiales impropias de un registro técnico.
 
+## 3. Punto de entrada para continuidad vigente
 
-### Gobierno semántico ante frentes doctrinales abiertos
+La reentrada actual deberá comenzar, como mínimo, por estas piezas:
 
-- `ACTA_TECNICA_DE_CONSOLIDACION_DE_LA_FAMILIA_VII_Y_ALERTA_DE_GOBIERNO_SEMANTICO_PARA_EL_LENGUAJE_SV_2026_03_24.md`
-- `ACTA_TECNICA_DE_CIERRE_PROVISIONAL_DE_PC_HNA_Y_CONDICIONES_DE_REAPERTURA_2026_03_26.md`
-- `ACTA_TECNICA_COMPLEMENTARIA_DE_CONTINUIDAD_TRAS_LA_FAMILIA_VII_Y_REORDENACION_DEL_RUMBO_PREBACKEND_2026_03_26.md`
-- `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`
-- `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md`
-- `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.csv`
-- `NOTA_HOJA_DE_RUTA_CELULA_VERIFICACION_GENERACION_MATEMATICA_SV_2026_03_26.md`
-- `ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md`
-- `ACTA_TECNICA_DE_ALERTA_DE_GOBIERNO_SOBRE_COLECCION_I_CUSTODIA_ESTRUCTURAL_Y_FRENTE_NLP_2026_03_30.md`
-- `ACTA_TECNICA_DE_RECEPCION_DOCTRINAL_Y_PRESERVACION_DE_CONTINUIDAD_DEL_APRENDIZAJE_TRAZABLE_HACIA_IR_N3_N4_2026_08_15.md`
-- `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`
+1. `ACTA_TECNICA_DE_ORDENACION_DE_CONTINUIDAD_SEMANTICA_Y_ARQUITECTONICA_DEL_LENGUAJE_SV_2026_08_16.md`;
+2. `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`;
+3. `ACTA_TECNICA_DE_CIERRE_GOBERNADO_DE_FFL_A_CONTRATO_DIAGNOSTICO_2026_08_18.md`;
+4. `DECISION_FFL_B_GOBIERNO_DE_DIAGNOSTICOS_EFECTIVOS_BAJO_VIA_B_2026_08_18.md`;
+5. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
+6. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
+7. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 
-### Resiliencia, horizontes y control por hitos
+El acta de 16/08/2026 conserva la jerarquía, los seis bloques de continuidad y las compuertas posteriores. La pausa preventiva que estableció fue superada por la reapertura de 18/08/2026 en el alcance expresamente autorizado.
 
-- `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`
-- `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`
-- `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`
-- `ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`
-- `ACTA_TECNICA_DE_MICROAUDITORIA_H2_PRE_NO_BLOQUEO_2026_03_23.md`
-- `ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`
-- `ACTA_TECNICA_DE_CONSOLIDACION_AUDITADA_DE_H2_RESTRINGIDO_2026_03_23.md`
+## 4. Estado técnico reciente de FFL-B
 
-### Barridos secuenciales de actividad y latencia del repo
+Los cierres técnicos más recientes que deben permanecer visibles son:
 
-- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`
-- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`
-- `ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`
+- `ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md` — P0-A;
+- `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
+- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — materialización mínima de E406.
 
-### Partes de trabajo por agente
+La evidencia acumulada al cierre de E406 acredita una batería de conformidad de **45/45**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre. Estas cifras describen el último cierre acreditado y no autorizan por sí solas la apertura del siguiente juicio técnico.
 
-- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`
-- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`
+## 5. Contrato diagnóstico y correspondencia funcional
 
-## Regla de uso para la base de verificación
+Los instrumentos principales son:
 
-Los registros de barrido y de partes por agente introducen una taxonomía obligatoria de lectura del árbol del repositorio verificado:
+- `C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`;
+- `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`;
+- `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`;
+- `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`;
+- `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`.
 
-- `INFERIDA`
-- `MEMORIA_REFERENCIAL`
-- `PARCIAL`
-- `VERIFICACION_ACOTADA`
-- `VERIFICACION_INTEGRAL`
+El nombre histórico `CROSSWALK_..._FRONTEND_...` se conserva para no romper referencias ya registradas. Su función pública es la de **tabla de correspondencias funcionales entre obligaciones de la IR y la etapa frontal del compilador**.
 
-### Regla operativa
+## 6. Control de evolución y evidencia
 
-- Las afirmaciones globales sobre el estado del repositorio y cualquier propuesta estructural, registral o de fase deben apoyarse en lectura `VERIFICACION_INTEGRAL` del árbol del repositorio verificado.
-- La lectura `VERIFICACION_ACOTADA` solo puede legitimar actuaciones locales y explícitamente delimitadas.
-- Las lecturas `INFERIDA` o `MEMORIA_REFERENCIAL` no bastan para introducir cambios estructurales ni para declarar estados globales del árbol.
+### Registro maestro
 
-## Regla de identificación de agente
+- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` — autoridad registral de la numeración RETP;
+- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` — lectura humana del tramo vivo;
+- `historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md` — preservación del histórico detallado hasta RETP-047.
 
-Cuando deba identificarse una unidad de trabajo, se usará siempre la forma **Agente X**, donde **X** es el nombre operativo completo de la unidad identificada.
+### Deuda y bloques
 
-## Regla de barrido secuencial
+- `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
+- `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
+- `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`;
+- `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
+- `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
 
-Cada **5 microparches** o **1 macrolote equivalente**, lo que ocurra antes, deberá ejecutarse un barrido secuencial del árbol del repositorio verificado. Ese barrido no debe basarse en la fecha de creación o de modificación del paquete comprimido aportado como señal bruta suficiente. Debe valorar:
+### Barridos y partes de trabajo
 
-1. actividad estructural del fichero;
-2. uso funcional efectivo;
-3. latencia legítima o sospechosa;
-4. necesidad o no de análisis adicional.
+- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`;
+- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`;
+- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`;
+- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`;
+- `ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`.
 
-## Nota de prudencia
+Las afirmaciones globales sobre el estado del repositorio deben apoyarse en lectura integral del árbol fresco. Una lectura acotada sólo legitima conclusiones igualmente acotadas.
 
-Este bloque combina registro maestro, deuda viva, vigilancia UCBC, control de horizontes, verificación por hitos, barridos secuenciales y partes de trabajo por agente. Ninguno de estos instrumentos autoriza por sí mismo cambios de gramática, IR, validator, runner o backend.
+## 7. Vigilancia doctrinal y continuidad
 
-La superación auditada de `H1 — Base segura` no elimina por sí sola la deuda viva del frente final ni la deuda viva de hitos posteriores; su función es dejar constancia de que la base actual del lenguaje ya resulta suficientemente segura para seguir avanzando sin reabrir gramática, IR o validator por entusiasmo.
+Permanecen como instrumentos de referencia, entre otros:
 
-La microauditoría `H2-pre` tampoco verifica `H2`; solo deja asentado que el estado actual no muestra un estrechamiento ilegítimo del espacio estructural futuro de ese hito.
+- `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md` y `.csv`;
+- `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md` y `.csv`;
+- `PROTOCOLO_CORTO_DE_VIGILANCIA_CONCEPTUAL_ABSOLUTA_DEL_LENGUAJE_SV_ANTE_FRENTES_DOCTRINALES_ABIERTOS_2026_03_24.md`;
+- `ACTA_TECNICA_DE_ALERTA_DE_GOBIERNO_SOBRE_COLECCION_I_CUSTODIA_ESTRUCTURAL_Y_FRENTE_NLP_2026_03_30.md`;
+- `ACTA_TECNICA_DE_CIERRE_AUDITADO_Y_PRESERVACION_CONTROLADA_DE_SV_AUTH_A2_R2_Y_J6_2026_08_14.md`;
+- `ACTA_TECNICA_DE_RECEPCION_DOCTRINAL_Y_PRESERVACION_DE_CONTINUIDAD_DEL_APRENDIZAJE_TRAZABLE_HACIA_IR_N3_N4_2026_08_15.md`;
+- `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`.
 
-La autorización restringida de apertura de `H2` se apoya en esa ausencia de bloqueo y en la base segura ya acreditada por `H1`, pero no convierte `H2` en hito verificado: `Q-04` y `Q-05` permanecen en `Pendiente` hasta futura verificación positiva.
+La existencia de una publicación, colección, rama experimental o realización aplicada no autoriza por sí misma una modificación de gramática, IR, validador, entorno de ejecución o bibliotecas.
 
+## 8. Regla de continuidad
 
-## Nota de consolidación de H2 restringido
+El orden de autoridad continúa siendo:
 
-La serie mínima de suficiencia estructural de **H2 restringido** queda ya consolidada por lectura auditada de sus tres subfrentes:
+`doctrina y matemática soberanas → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-- `H2.1` — elasticidad de la IR para alojar futuras familias de propiedades preservadas;
-- `H2.2` — no-rigidez del `validator` ante patrones de transición no uniformes;
-- `H2.3` — suficiencia del plano ejecutable actual para no hipotecar evoluciones futuras.
-
-Esta consolidación **no** verifica `H2` como hito. Su función es otra: dejar asentado que la apertura restringida de `H2` ya no descansa solo en un dictamen de no-bloqueo, sino también en una auditoría positiva mínima de suficiencia estructural.
-
-
-## Nota adicional sobre diferenciación estructural
-
-La consolidación doctrinal de la familia VII obliga a no tratar todos los soportes del sistema con igual rigidez. El Lenguaje SV debe distinguir entre estructura ósea ya consolidada, soportes funcionales de formalización y zonas de articulación con frentes emergentes, evitando la igualación de dureza que cerraría prematuramente el espacio semántico futuro.
-
-## Nota adicional sobre continuidad prebackend
-
-La colección pública **Células especializadas del Sistema Vectorial SV** ya existe y su pieza marco ya cuenta con `release_1`; por tanto, debe tratarse ya como colección pública visible absorbida por el espejo doctrinal de colecciones.
-
-Su efecto actual sobre el Lenguaje SV sigue siendo de **vigilancia estructural y cautela de implementación**: no autoriza implementación automática, no adelanta `NLP`, no desplaza la deuda viva semántica vigente y no legitima abrir una célula específica sin pasar antes por el perfil funcional mínimo del documento marco.
-
-A partir de la documentación de gobierno del 26/03/2026, el siguiente frente correcto tras el sellado técnico mínimo deja de ser una secuencia rígida de interfaces pendientes y pasa a ser la **pieza marco** de células especializadas, dejando `NLP` después y manteniendo `oído` y `tacto` como frentes pendientes reordenables.
-
-Tras la publicación visible del Documento 1 de la **Colección I** en la sede doctrinal superior, `NLP` deja de ser sólo un nombre de continuidad remota y pasa a comparecer como frente de vigilancia formal para el Lenguaje SV. Esa nueva presión no altera por sí sola la apertura vigente de hitos ni autoriza implementación inmediata, pero sí exige mantener expresamente a la vista la custodia estructural ya publicada y la cautela sobre `N4/Uso`, IR, gramática, validator, runner y backend.
-
-## Nota adicional sobre límite superior y piloto de seguridad
-
-El **Acta técnica de prohibición absoluta de uso bélico y primacía de supervivencia humana** queda ya integrada como límite superior del ecosistema SV y como techo normativo explícito para cualquier futura célula especializada de seguridad, vigilancia o preservación estructural.
-
-Su existencia no sustituye a la doctrina canónica ni autoriza por sí sola endurecimiento inmediato de IR, runner o backend. La deuda futura relativa a la compuerta o contrato de resolución entre polos de prohibición y protección permanece **explícita, futura y no bloqueante**.
-
-La apertura material de la microauditoría del piloto de seguridad estructural en la sede doctrinal de células especializadas debe leerse en ese marco: como delimitación inicial seria del primer piso piloto del carril celular, no como implementación automática ya cerrada.
-
-## Nota adicional sobre aprendizaje trazable y continuidad pre-DSL
-
-La publicación doctrinal de aprendizaje trazable queda recibida por el Lenguaje SV y su fuente efectiva queda fijada mediante el acta complementaria de 16/08/2026. El frente se mantiene como **latente legítimo**: no introduce todavía nodos IR, sintaxis, parser, lowering, validator ni motor.
-
-La preservación no se limita al predicado de aprendizaje. Deben mantenerse diferenciadas la trayectoria del sistema, el registro histórico de conocimiento y la proyección activa; la adquisición nueva y la recuperación; el soporte histórico y la consulta operacional presente; y, ante pérdida parcial, la disponibilidad del soporte originario, la reconstruibilidad del estado, la reconstruibilidad de la procedencia y la posibilidad de volver a emitir un veredicto operacional definido.
-
-La futura entrada en el DSL queda condicionada a una matriz previa `doctrina ↔ IR v0.2 ↔ cambio mínimo ↔ juicio de bienformación ↔ error observable ↔ lowering ↔ evidencia/prueba`, contrastada además contra AUTH preservado, separación REAL/SIM y custodia estructural. Hasta ese cierre, el mapa v0.2 de la rama `traceable-learning-ir-v0.1` es documentación prospectiva y no una especificación implementativa.
+Antes de seleccionar un nuevo cierre técnico deberá comprobarse el repositorio fresco, la deuda realmente restante y el fundamento de la obligación. Ningún documento de calidad puede convertir por sí solo una previsión futura en semántica ejecutiva.

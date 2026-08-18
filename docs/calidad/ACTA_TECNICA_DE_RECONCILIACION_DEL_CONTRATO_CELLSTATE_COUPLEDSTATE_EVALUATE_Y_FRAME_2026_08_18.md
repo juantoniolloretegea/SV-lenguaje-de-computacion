@@ -1,79 +1,64 @@
-# Acta técnica de reconciliación del contrato CellState / CoupledState / evaluate / Frame
+# Acta técnica de reconciliación del contrato `CellState` / `CoupledState` / `evaluate` / `Frame`
 
 **Fecha:** 18/08/2026  
-**Frente:** FFL-B — P0-A de estabilización previa a nuevos microcierres  
+**Frente:** FFL-B — P0-A de estabilización  
 **Estado:** CERRADO  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **ISSN:** 2695-6411
 
----
+## 1. Objeto
 
-## 1. Disparador
+Esta acta registra la reconciliación de la relación entre los estados simples y acoplados, la operación `evaluate` y el contenido de `Frame.cell_states`.
 
-Una auditoría independiente de lectura completa del repositorio detectó que, tras el commit `3255ae6438a6affbcc660caf8c9077d81ae5286b`, la suite principal de conformidad permanecía verde, mientras una sonda SEC-0 y ejemplos documentados dejaban de atravesar el validator por una discordancia `CellState` / `CoupledState`.
-
-La sorpresa tiene impacto de contrato y activa auditoría dura conforme al `PROCEDIMIENTO_AUDITORIA_TECNICA_SV.md`.
+La revisión se abrió al constatar una regresión posterior a la confirmación de cambios `3255ae6438a6affbcc660caf8c9077d81ae5286b`: la batería principal de conformidad permanecía satisfactoria, pero una prueba de SEC-0 y varios ejemplos documentados dejaban de superar la validación por una discordancia entre `CellState` y `CoupledState`.
 
 ## 2. Hechos comprobados
 
-1. `Frame.cell_states` está tipado en la IR v0.2 como lista de `CoupledState`, y el validator vigente exige `CoupledStateDecl` en ese campo.
-2. El commit `3255ae6` endureció `_validate_eval` para aceptar exclusivamente `CellStateDecl`.
-3. La Gramática superficial mínima v0.1 declara que `evaluate` admite `CellState` o `CoupledState`.
-4. El Documento I de composición intercelular establece que, tras la transmisión, la evaluación de una célula acoplada se realiza sobre su vector actualizado `x̃_i`, mediante `y_i = χ_i(C_i[x̃_i])`.
-5. La IR v0.2 conservaba, sin embargo, `EvalResult.source_state : CellStateRef` y formulaba J3.1 exclusivamente respecto de `CellState`.
-6. Existen sondas y ejemplos que representan ambos regímenes: evaluación simple sobre `CellState` y evaluación compositiva sobre `CoupledState`.
-7. La misma auditoría ha localizado además un hueco distinto en `supervise`: el validator comprueba la existencia de `meta_eval` y, si ya es un `EvalCmd`, el rol Supervisor de su célula fuente, pero no rechaza de forma expresa un primer argumento que no sea `EvalResult`.
+1. `Frame.cell_states` está tipado en la IR v0.2 como lista de `CoupledState` y el validador exige `CoupledStateDecl` en ese campo.
+2. La revisión `3255ae6` restringió `_validate_eval` a `CellStateDecl`.
+3. La Gramática superficial mínima v0.1 admite que `evaluate` reciba `CellState` o `CoupledState`.
+4. El Documento I de composición intercelular establece que, tras la transmisión, una célula acoplada se evalúa sobre su vector actualizado `x̃_i`, mediante `y_i = χ_i(C_i[x̃_i])`.
+5. La IR v0.2 mantenía `EvalResult.source_state : CellStateRef` y formulaba J3.1 sólo respecto de `CellState`.
+6. El repositorio contiene casos legítimos de evaluación simple y de evaluación sobre estado acoplado.
 
 ## 3. Clasificación
 
-**Error real P0-A:** estrechez localizada de la IR v0.2 y del validator respecto de la evaluación de estado acoplado ya constituida por la matemática superior.
+Se constataron dos cuestiones distintas:
 
-**Error real de fixtures P0-A:** algunas sondas antiguas introducían un `CellState` directamente en `Frame.cell_states`, contradiciendo el tipado vigente de `Frame`.
+- una estrechez de la IR v0.2 y del validador respecto de la evaluación de un estado acoplado ya sustentada por la matemática superior;
+- varios casos de prueba antiguos que introducían un `CellState` directamente en `Frame.cell_states`, en contradicción con el tipado vigente de `Frame`.
 
-**Error real P0-B, separado:** `supervise` debe exigir un `EvalResult` como primer argumento antes de comprobar su procedencia desde una célula con rol `Supervisor`. Se tratará en un microbloque inmediatamente posterior, con juicio, ruta diagnóstica y prueba propios.
-
-**Deuda futura separada:** la IR y el validator no imponen todavía una correspondencia general entre los `CoupledState` almacenados en un `Frame` y las fuentes de sus `EvalResult`.
-
-**Fuera de P0-A:** salidas de tablas, `CoverageReport`, `compose`, proyecciones, `E406`, índices y portada no se incorporan a este lote.
+Durante la misma revisión se identificó una cuestión separada relativa a `supervise(meta_eval, ...)`. Esa cuestión se trató posteriormente en P0-B y no forma parte del juicio material de esta acta.
 
 ## 4. Decisión
 
-Se adopta una reconciliación acotada para P0-A:
+Se adopta la siguiente reconciliación acotada:
 
-- preservar `IR_CANONICA_BIENFORMACION_SV_v0_2.md` como versión histórica de marzo;
-- añadir una adenda técnica vigente que fija `EvaluableStateRef = CellStateRef | CoupledStateRef`;
-- para `CellState`, evaluar `vector`;
-- para `CoupledState`, evaluar `updated_vector` y conservar `base_vector` como procedencia;
-- mantener `Frame.cell_states : [CoupledState]` sin relajación;
-- modificar únicamente `_validate_eval` para admitir ambos tipos y rechazar cualquier tercero;
-- corregir las sondas que introducían `CellState` dentro de `Frame`, convirtiéndolas en representaciones acopladas explícitas cuando su propio objeto es un frame de arquitectura.
+- se preserva `IR_CANONICA_BIENFORMACION_SV_v0_2.md` como versión histórica de marzo;
+- una adenda técnica vigente fija `EvaluableStateRef = CellStateRef | CoupledStateRef`;
+- para `CellState`, la evaluación toma `vector` como configuración efectiva;
+- para `CoupledState`, la evaluación toma `updated_vector`, conservando `base_vector` como procedencia;
+- `Frame.cell_states` continúa siendo una lista de `CoupledState`;
+- `_validate_eval` admite exclusivamente `CellStateDecl` o `CoupledStateDecl`;
+- los casos de prueba que introducían indebidamente un `CellState` en `Frame` se corrigen mediante una representación acoplada explícita.
 
-El hueco de `supervise` no se mezcla en este commit. Se abre como P0-B inmediatamente después de verificar P0-A, evitando un parche compuesto y preservando la regla operativa de un juicio por commit.
+No se introduce un estado transitorio oculto ni una coerción implícita entre ambos tipos.
 
-## 5. Adversarial
+## 5. Contraste crítico
 
-### Objeción A — aceptar ambos tipos sólo en el validator
+Se descartaron expresamente estas alternativas:
 
-Se rechaza. Haría verde la implementación dejando la IR v0.2 formalmente más estrecha y permitiría que una capa inferior corrigiera silenciosamente a su especificación.
+- aceptar ambos tipos únicamente en el validador sin corregir la estrechez documental de la IR;
+- restringir la gramática a `CellState`, en contradicción con la evaluación compositiva ya constituida;
+- relajar `Frame.cell_states` para admitir `CellState`;
+- derivar implícitamente un `CellState` oculto desde `CoupledState`.
 
-### Objeción B — restringir la gramática a CellState
+La solución adoptada mantiene la distinción de tipos, preserva la procedencia y limita el cambio al contrato realmente afectado.
 
-Se rechaza. Contradiría el Documento I, que exige evaluar la configuración actualizada de la célula acoplada, y convertiría en ilegítima una operación compositiva ya constituida.
+## 6. Artefactos afectados
 
-### Objeción C — permitir CellState en Frame
-
-Se rechaza. Debilitaría J4.1 y borraría la distinción entre estado simple y estado acoplado dentro de la evaluación completa de una arquitectura.
-
-### Objeción D — derivar implícitamente un CellState oculto desde CoupledState
-
-No se adopta. El frontend actual ya baja `evaluate(identifier)` conservando la referencia al estado fuente; introducir un estado transitorio implícito añadiría una transformación no especificada y degradaría la procedencia. La solución mínima es tipar explícitamente la unión de estados evaluables.
-
-### Objeción E — añadir también `supervise` al mismo parche
-
-Se rechaza por radio de cambio. El defecto es real, pero no es la causa de la regresión SEC-0 producida por `3255ae6` y dispone de un contrato distinto en J3.3. Integrarlo ahora debilitaría la trazabilidad causal del microcierre y dificultaría atribuir cualquier nueva regresión.
-
-## 6. Artefactos del lote P0-A
+El cierre comprende:
 
 - `ADENDA_TECNICA_IR_v0_2_ESTADO_EVALUABLE_ACOPLADO_2026_08_18.md`;
 - `src/svp_validator.py`;
@@ -81,37 +66,29 @@ Se rechaza por radio de cambio. El defecto es real, pero no es la causa de la re
 - `examples/consulta_framecomparison.svp`;
 - `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`.
 
-La sonda `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp` no requiere modificación: ya representa correctamente `CoupledState` tanto en `evaluate` como en `Frame` y vuelve a ser aceptada al restaurarse legítimamente `evaluate(CoupledState)`.
+`tests/adversarial/documentados/composicion_serie_con_trayectoria.svp` no necesitó modificación: ya representaba correctamente `CoupledState` tanto en `evaluate` como en `Frame`.
 
-## 7. Evidencia dinámica de cierre
+## 7. Evidencia de cierre
 
-La rama `agent/ffl-b-evaluable-state-reconcile`, con `HEAD` previo de verificación `b9db1a268e7acf8283f99eb6d7d09da243a9293c`, fue ejecutada en solo lectura por una unidad auditora independiente, sin commits ni parches de esa unidad.
+La rama `agent/ffl-b-evaluable-state-reconcile`, en la revisión `b9db1a268e7acf8283f99eb6d7d09da243a9293c`, fue sometida a verificación externa en modo de solo lectura.
 
-Resultados comunicados y recibidos como evidencia externa de cierre:
+Resultados acreditados:
 
-- `tests/run_conformance.py`: **42/42**, `rc=0`;
-- `tests/run_cli_smoke.py`: **3/3**, `rc=0`;
-- `tests/run_sec0_smoke.py`: **3/3**, `rc=0`;
-- `examples/consulta_framecomparison.svp`: `rc=0`, IR JSON producido;
-- `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`: `rc=0`, IR JSON producido;
-- `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp`: `rc=0`, IR JSON producido sin modificación del archivo.
+- `tests/run_conformance.py`: **42/42**;
+- `tests/run_cli_smoke.py`: **3/3**;
+- `tests/run_sec0_smoke.py`: **3/3**;
+- `examples/consulta_framecomparison.svp`: válido, con producción de IR JSON;
+- `tests/adversarial/documentados/agente_con_consulta_y_dominio.svp`: válido, con producción de IR JSON;
+- `tests/adversarial/documentados/composicion_serie_con_trayectoria.svp`: válido, con producción de IR JSON y sin modificación del archivo.
 
-La última sonda constituye una evidencia especialmente discriminante: atraviesa el frontend sólo por la restauración legítima de `evaluate(CoupledState)`, no por maquillaje del fixture.
+La última comprobación es especialmente discriminante: confirma que `evaluate(CoupledState)` vuelve a ser aceptado sin alterar el caso de prueba que ya representaba correctamente la composición.
 
-La inspección del diff acredita además radio corto: el cambio funcional de `src/svp_validator.py` es de cinco adiciones y una eliminación; no existe remaquetación masiva ni contaminación ajena al juicio.
+La comparación de cambios mostró un alcance funcional estrictamente acotado en `src/svp_validator.py`, sin reordenación general del archivo ni modificaciones ajenas al juicio.
 
-Con esta evidencia, P0-A queda **cerrado**.
+## 8. Estado y límites
 
-## 8. Continuidad de P0
+**P0-A queda cerrado.**
 
-El cierre de P0-A no autoriza por sí solo abrir nuevos diagnósticos FFL-B. El paso inmediato es P0-B: materializar la exigencia `supervise(meta_eval, ...)` con `meta_eval : EvalResult`, conservar después la comprobación de rol `Supervisor`, dotar el hueco de prueba trazable y reejecutar las tres suites.
+El cierre no modifica la gramática superficial, no declara cerrado FFL-B y no abre infraestructura de ejecución, Rust, WASM, IA productiva, biblioteca estándar ni `NL → SVP`.
 
-P0 completo sólo podrá considerarse estabilizado cuando P0-A y P0-B estén cerrados y la evidencia dinámica global sea verde.
-
-## 9. Límites
-
-No se abre backend, Rust, WASM, runtime, IA productiva ni `NL → SVP`. No se declara cerrada FFL-B. No se modifica la gramática superficial, porque su formulación dual de `evaluate` queda confirmada por la matemática superior.
-
----
-
-*Documento técnico subordinado del Lenguaje SV.*
+La correspondencia general entre cada `CoupledState` almacenado en un `Frame` y cada `EvalResult` del mismo `Frame` permanece como cuestión técnica separada cuando resulte materialmente necesaria.
