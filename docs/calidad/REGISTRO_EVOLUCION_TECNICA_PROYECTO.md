@@ -12,8 +12,6 @@ La lectura de continuidad es:
 
 `histórico 000–047 → registro vivo desde 048 → CSV maestro como autoridad de numeración`.
 
-Las entradas de este archivo se redactan conforme a `CRITERIO_DE_REDACCION_PUBLICA_DE_LOS_REGISTROS_DE_CALIDAD_2026_08_18.md`.
-
 ## 2. Tabla del tramo vivo
 
 | ID | Fecha | Hora | Tipo | Frente / fase | Estado |
@@ -28,8 +26,6 @@ Las entradas de este archivo se redactan conforme a `CRITERIO_DE_REDACCION_PUBLI
 | RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
-
-> `SORPRESA_TECNICA_Y_REVERSION` se conserva como identificador histórico exacto del tipo registral de RETP-054. En la prosa pública se describe como **incidencia técnica y reversión**.
 
 ## 3. Entradas detalladas
 
@@ -110,8 +106,6 @@ Las entradas de este archivo se redactan conforme a `CRITERIO_DE_REDACCION_PUBLI
 - **Decisión:** cerrar exclusivamente la cláusula de no-vaciedad y no abrir automáticamente otro juicio técnico.
 - **Estado:** cerrado.
 
-## 4. Regla de continuidad
+## 4. Autoridad registral
 
-El registro vivo deberá actualizarse junto con el CSV maestro cuando un nuevo hito cambie materialmente el estado gobernable del proyecto.
-
-No se utilizará el registro para narrar pasos mecánicos de trabajo ni deliberaciones internas. Su función es conservar hechos, fundamento, evidencia, decisión y estado de forma pública, sobria y verificable.
+La numeración y los tipos RETP permanecen gobernados por `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
