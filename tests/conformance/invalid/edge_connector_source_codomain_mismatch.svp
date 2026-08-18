@@ -1,0 +1,26 @@
+-- FFL-B: J2.3 — Connector.source_codomain debe coincidir con el codomain de la célula transmisora.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+codomain KALT = { SI, NO, DUDA };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+cellspec C2 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+
+coupledspec CC1 { cell: C1; bridges: [3]; }
+coupledspec CC2 { cell: C2; bridges: [3]; }
+
+connector Phi1 {
+  source_codomain: KALT;
+  target_position: 3;
+  mapping: { SI -> Zero; NO -> One; DUDA -> U; }
+}
+
+semantic_relation R1 { kind: DeclaredRelation; constraints: [Serie]; }
+
+graph G1 {
+  nodes: [CC1, CC2];
+  edges: [edge(source: CC1, target: CC2, position: 3, connector: Phi1)];
+  relation: R1;
+  regime: Simple;
+}

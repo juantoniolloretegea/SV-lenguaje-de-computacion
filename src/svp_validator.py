@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009,
-                         E101, E102, E104, E105, E112, E202, E211, E303, E304,
+                         E101, E102, E104, E105, E112, E113, E202, E211, E303, E304,
                          E401, E402, E403)
 
 
@@ -266,9 +266,6 @@ class Validator:
             self._require_ref(n_ref, node.loc, "CoupledSpecDecl")
 
         node_set = set(node.nodes)
-        # Comprobaciones estructurales de referencia de Edge. Las obligaciones
-        # semánticas finas de J2.3 (BridgeSet, compatibilidad de Connector y
-        # concurrencia/ConflictOperator) se gobiernan por separado bajo Vía B.
         for e in node.edges:
             if e.source not in node_set:
                 raise SVPError(E006, node.loc.line, node.loc.col,
@@ -277,6 +274,30 @@ class Validator:
                 raise SVPError(E006, node.loc.line, node.loc.col,
                                f"Edge.target {e.target!r} no pertenece a los nodos declarados de {node.name!r}")
             self._require_ref(e.connector, node.loc, "ConnectorDecl")
+
+            source_spec = self.symbols[e.source]
+            target_spec = self.symbols[e.target]
+            connector = self.symbols[e.connector]
+
+            if e.position not in set(target_spec.bridges):
+                raise SVPError(
+                    E113, e.loc.line, e.loc.col,
+                    f"Edge de {e.source!r} a {e.target!r} usa position {e.position}, "
+                    f"fuera del BridgeSet {sorted(set(target_spec.bridges))} del target")
+
+            if connector.target_position != e.position:
+                raise SVPError(
+                    E113, e.loc.line, e.loc.col,
+                    f"Connector {e.connector!r} declara target_position {connector.target_position}, "
+                    f"pero la arista usa position {e.position}")
+
+            self._require_ref(source_spec.cell, e.loc, "CellSpecDecl")
+            source_cell = self.symbols[source_spec.cell]
+            if connector.source_codomain != source_cell.codomain:
+                raise SVPError(
+                    E113, e.loc.line, e.loc.col,
+                    f"Connector {e.connector!r} declara source_codomain {connector.source_codomain!r}, "
+                    f"pero la célula transmisora {source_cell.name!r} usa {source_cell.codomain!r}")
 
         # Cycle detection via topological sort
         adj: Dict[str, Set[str]] = {n_ref: set() for n_ref in node.nodes}

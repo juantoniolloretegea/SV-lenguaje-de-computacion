@@ -8,8 +8,8 @@ parsea, valida, baja y compara el JSON canónico producido con su
 Para cada caso inválido:
 parsea y comprueba que falla con el código exacto esperado.
 
-Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
-ISSN 2695-6411 | CC BY-NC-ND 4.0
+Autor: Juan Antonio Lloret Egea | ORCID 0000‑0002‑6634‑3351
+ISSN 2695‑6411 | CC BY‑NC‑ND 4.0
 """
 
 import json
@@ -26,6 +26,9 @@ EXPECTED_INVALID_CODES = {
     "bridge_position_fuera_de_rango.svp": "E105",
     "cellstate_vector_length_mismatch.svp": "E101",
     "coupledstate_update_fuera_bridges.svp": "E112",
+    "edge_position_fuera_bridges.svp": "E113",
+    "edge_connector_target_position_mismatch.svp": "E113",
+    "edge_connector_source_codomain_mismatch.svp": "E113",
     "bad_b_value.svp": "E002",
     "conector_mapping_incompleto.svp": "E007",
     "conector_target_no_ternario.svp": "E104",
