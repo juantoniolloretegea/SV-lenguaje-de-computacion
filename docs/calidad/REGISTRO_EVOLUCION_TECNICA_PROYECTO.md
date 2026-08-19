@@ -28,6 +28,7 @@ La lectura de continuidad es:
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
 | RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
 | RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
+| RETP-2026-060 | 19/08/2026 | 08:20:00 | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / fundamentos / no clausura certificada | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -124,6 +125,15 @@ La lectura de continuidad es:
 - **Evidencia:** verificación independiente en modo de solo lectura con conformidad **48/48**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E213/E214 y conservación de `resolve_projection.svp`.
 - **Límite:** el cierre es estructural; no ejecuta resultados ni calcula campos. `target`, `context` y `mechanism` pertenecen a esquemas canónicos, pero son palabras reservadas y no están disponibles actualmente como identificadores de campo tras el punto.
 - **Decisión:** cerrar las dos precondiciones estructurales de proyección sin modificar gramática, IR ni infraestructura de ejecución.
+- **Estado:** cerrado.
+
+### RETP-2026-060 — Recepción latente de no clausura certificada
+
+- **Hecho:** se recibe en la sede operativa la publicación «No clausura certificada en sistemas finitos de resolución» con estatuto `LATENTE_LEGITIMO`, sin modificar código, gramática ni IR.
+- **Fundamento:** DOI `10.21428/39829d0b.f0892864`; sede `SV-matematica-semantica/documentos/fundamentos/`; jerarquía doctrina → especificación → lenguaje.
+- **Evidencia:** el árbol de `main` en `552a142276c08fdba4db5281d67af774f14ed1f6` no contenía asiento ni acta de recepción; el registro maestro recibe únicamente la fila `RETP-2026-060`.
+- **Límite:** el certificado de no clausura no es trabajo pendiente, no es un cuarto valor, no altera `Σ = {0, 1, U}`, no crea operador nuevo, no obliga cambio de DSL y no abre AUTH, aprendizaje trazable ni etapa frontal adicional.
+- **Decisión:** recibir y preservar; no implementar. La traducción material exigirá un acta arquitectónica previa.
 - **Estado:** cerrado.
 
 ## 4. Autoridad registral
