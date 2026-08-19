@@ -15,8 +15,8 @@ La presente acta deja constancia de la recepción, en la sede operativa del Leng
 
 El propósito no es integrar esa publicación en el lenguaje vigente. Es impedir dos errores simétricos:
 
-1. que una unidad posterior ignore la publicación al continuar la IR, la gramática, `U`, `resolve` o la revisión de estados;
-2. que la publicación se interprete como semántica ya vigente del DSL, como cuarto valor de `Σ`, como operador nuevo o como autorización de infraestructura de ejecución.
+1. que la publicación quede omitida en futuras revisiones de la IR, la gramática, `U`, `resolve` o la revisión de estados;
+2. que la publicación se interprete como semántica ya vigente del lenguaje SVP, como cuarto valor de `Σ`, como operador nuevo o como autorización de infraestructura de ejecución.
 
 ## 2. Jerarquía aplicable
 
@@ -68,7 +68,7 @@ Ese estatuto significa:
 - el certificado de no clausura **no** es un cuarto valor;
 - no altera `Σ = {0, 1, U}`;
 - no crea operador nuevo;
-- no obliga cambio de DSL, gramática, AST, analizador sintáctico, validador, descenso a IR ni serialización;
+- no obliga cambio de lenguaje SVP, gramática, AST, analizador sintáctico, validador, descenso a IR ni serialización;
 - no abre AUTH, aprendizaje trazable ni etapa frontal adicional;
 - no autoriza ejecutar `χ`, `resolve` como solucionador automático ni introducir tipos `Context`/`Mechanism` materiales.
 
@@ -90,7 +90,7 @@ Queda expresamente no autorizado:
 - añadir palabras reservadas, nodos IR o códigos de error;
 - alterar analizador sintáctico, validador, descenso, serializador, interfaz de línea de órdenes, Playground o bibliotecas;
 - abrir infraestructura de ejecución, Rust productivo, WASM, FFL-C/D/E, NLP o Beta / 0-1;
-- introducir un objeto de certificado en el DSL;
+- introducir un objeto de certificado en el lenguaje SVP;
 - tratar `U` como marca de búsqueda incompleta;
 - autocerrar `U` para simular un veredicto.
 

@@ -132,7 +132,7 @@ La lectura de continuidad es:
 - **Hecho:** se recibe en la sede operativa la publicación «No clausura certificada en sistemas finitos de resolución» con estatuto `LATENTE_LEGITIMO`, sin modificar código, gramática ni IR.
 - **Fundamento:** DOI `10.21428/39829d0b.f0892864`; sede `SV-matematica-semantica/documentos/fundamentos/`; jerarquía doctrina → especificación → lenguaje.
 - **Evidencia:** el árbol de `main` en `552a142276c08fdba4db5281d67af774f14ed1f6` no contenía asiento ni acta de recepción; el registro maestro recibe únicamente la fila `RETP-2026-060`.
-- **Límite:** el certificado de no clausura no es trabajo pendiente, no es un cuarto valor, no altera `Σ = {0, 1, U}`, no crea operador nuevo, no obliga cambio de DSL y no abre AUTH, aprendizaje trazable ni etapa frontal adicional.
+- **Límite:** el certificado de no clausura no es trabajo pendiente, no es un cuarto valor, no altera `Σ = {0, 1, U}`, no crea operador nuevo, no obliga cambio de lenguaje SVP y no abre AUTH, aprendizaje trazable ni etapa frontal adicional.
 - **Decisión:** recibir y preservar; no implementar. La traducción material exigirá un acta arquitectónica previa.
 - **Estado:** cerrado.
 
