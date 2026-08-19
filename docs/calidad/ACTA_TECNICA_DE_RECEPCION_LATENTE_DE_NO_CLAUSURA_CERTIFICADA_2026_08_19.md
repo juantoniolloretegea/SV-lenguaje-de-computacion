@@ -1,7 +1,9 @@
 # Acta técnica de recepción latente de «No clausura certificada»
 
 **Fecha:** 19/08/2026  
-**Hora (Europe/Madrid):** 08:20:00  
+**Hora (Europe/Madrid):** NO_CONSTA
+
+La marca horaria 08:20:00 consignada inicialmente no estaba respaldada por evidencia registral reproducible. El commit canónico `be68345d0a27b10bca083ae260e2e12270c469aa` tiene marca temporal `2026-08-19T07:21:19Z` (`09:21:19` en Europe/Madrid); esta marca se conserva como evidencia de materialización y no se identifica con la hora exacta del hito, que permanece como `NO_CONSTA`.
 **Naturaleza:** acta de gobierno técnico y recepción doctrinal latente  
 **Frente:** Lenguaje SV / fundamentos / no clausura certificada  
 **Estado:** cerrada para recepción; continuidad técnica latente  
