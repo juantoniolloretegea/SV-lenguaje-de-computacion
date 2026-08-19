@@ -13,14 +13,14 @@
 
 ## Lenguaje de computación del Sistema Vectorial SV
 
-Este repositorio es la **sede operativa y técnica del Lenguaje SV (SVP)**. Reúne la especificación del lenguaje, su representación intermedia canónica, la implementación de referencia de la etapa frontal, la batería de conformidad, los ejemplos ejecutables de análisis y transformación a IR, y la documentación técnica necesaria para comprobar qué está definido, qué está implementado y qué permanece fuera del alcance actual.
+Este repositorio es la **sede operativa y técnica del Lenguaje SV (SVP)**. Reúne la especificación del lenguaje, su representación intermedia, la implementación de referencia de la etapa frontal, la batería de conformidad, los ejemplos ejecutables de análisis y transformación a IR, y la documentación técnica necesaria para comprobar qué está definido, qué está implementado y qué permanece fuera del alcance actual.
 
 La sede doctrinal superior del Sistema Vectorial SV se mantiene en [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica). Este repositorio no sustituye aquella autoridad: **materializa en lenguaje de computación una parte gobernada de la doctrina y del álgebra del SV**.
 
 La cadena de autoridad técnica se expresa así:
 
 ```text
-doctrina y matemática soberanas
+doctrina y matemática
         ↓
 especificación del lenguaje
         ↓
@@ -49,7 +49,7 @@ El anexo de este README conserva la base científica, médica y arquitectónica 
 
 ## Estado técnico público
 
-A fecha de esta actualización, la sede pública contiene las siguientes piezas principales:
+A fecha de esta actualización, la sede pública contiene los siguientes elementos principales:
 
 | Elemento | Estado y función | Enlace |
 |---|---|---|
@@ -124,7 +124,7 @@ Para procesar un ejemplo de SVP mediante la etapa frontal:
 python src/svp_main.py examples/celula_basica_con_evaluacion.svp
 ```
 
-La salida obtenida es IR serializada en JSON canónico. El hecho de producir esa IR no equivale a ejecutar todo el sistema algebraico ni a habilitar automáticamente una infraestructura soberana de ejecución.
+La salida obtenida es IR serializada en JSON. El hecho de producir esa IR no equivale a ejecutar todo el sistema algebraico ni a habilitar automáticamente una infraestructura de ejecución.
 
 ---
 
@@ -134,7 +134,7 @@ La documentación del repositorio se organiza por función:
 
 - [`docs/arquitectura/`](./docs/arquitectura/) — arquitectura técnica y contratos estructurales;
 - [`docs/calidad/`](./docs/calidad/) — evidencia de comprobación, concordancia diagnóstica, deuda técnica y registros de estado;
-- [`docs/gobierno/`](./docs/gobierno/) — piezas locales de gobierno operativo y compatibilidad;
+- [`docs/gobierno/`](./docs/gobierno/) — elementos locales de gobierno operativo y compatibilidad;
 - [`docs/referencia/`](./docs/referencia/) — referencia técnica y diagnóstica;
 - [`docs/manual_svp/`](./docs/manual_svp/) — manual de trabajo del lenguaje.
 
@@ -377,8 +377,8 @@ La condición de representación demográfica es respuesta directa al fallo docu
 | Campo | Valor |
 |---|---|
 | Identificador | ACTOR-TRANSLATE |
-| Tarea | Traducción del JSON canónico al lenguaje clínico del dominio |
-| Acceso a vector | Solo al JSON canónico de salida; no puede modificarlo |
+| Tarea | Traducción del JSON al lenguaje clínico del dominio |
+| Acceso a vector | Solo al JSON de salida; no puede modificarlo |
 | Prohibición | No puede emitir recomendaciones terapéuticas |
 | Separación | Ninguna salida de ACTOR-TRANSLATE afecta la trayectoria algebraica |
 
@@ -388,7 +388,7 @@ La condición de representación demográfica es respuesta directa al fallo docu
 
 ## Parte IV — Director de orquesta: el `deployment_profile`
 
-El perfil de despliegue se representa mediante el nodo `deployment_profile` en la IR canónica del SVP. No es un modelo de IA: es un conjunto de reglas declarativas que el compilador SVP verifica en tiempo de compilación y que la infraestructura de ejecución lee durante la ejecución.
+El perfil de despliegue se representa mediante el nodo `deployment_profile` en la IR del SVP. No es un modelo de IA: es un conjunto de reglas declarativas que el compilador SVP verifica en tiempo de compilación y que la infraestructura de ejecución lee durante la ejecución.
 
 ### IV.1 El Ternarizer formal
 
@@ -644,7 +644,7 @@ def gate_value(left, right):
 | ACTOR-NLP-LOCAL | Local; sin salida | No aplica (sin API) | Ninguno |
 | ACTOR-NLP-API-LIGHT | Servicio externo sujeto a los términos y al contrato vigentes | Según condiciones contractuales aplicables | Acuerdo y garantías de protección de datos que resulten exigibles |
 | ACTOR-CNN-A | Local; polígonos sintéticos | No (ImageNet preentrenados) | Ninguno |
-| ACTOR-TRANSLATE | Local o API; solo JSON canónico | No | Ninguno para JSON abstracto |
+| ACTOR-TRANSLATE | Local o API; solo JSON | No | Ninguno para JSON abstracto |
 | Motor algebraico | Local; determinista | No aplica | Ninguno |
 
 ### VI.3 Minimización de datos (Art. 5.1.c RGPD)
