@@ -1,9 +1,9 @@
 # SV-lenguaje-de-computacion
 
-**Fecha:** 4 de abril de 2026  
+**Actualización de esta presentación técnica:** 19 de agosto de 2026  
 **Versión del conjunto:** V.1  
-**Autor del corpus:** Juan Antonio Lloret Egea  
-**ORCID:** 0000-0002-6634-3351  
+**Autor:** Juan Antonio Lloret Egea  
+**ORCID:** [0000-0002-6634-3351](https://orcid.org/0000-0002-6634-3351)  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
@@ -11,80 +11,162 @@
 
 ---
 
-Repositorio operativo y técnico del lenguaje de computación del Sistema Vectorial SV. Alberga la especificación operativa activa, la implementación de referencia del frontend, la gramática superficial mínima, la IR canónica, la suite de conformidad cruzada (37 tests, 0 fallos), la FRONTERA_NORMATIVA, el manual SVP y la documentación técnica de fase.
+## Lenguaje de computación del Sistema Vectorial SV
+
+Este repositorio es la **sede operativa y técnica del Lenguaje SV (SVP)**. Reúne la especificación del lenguaje, su representación intermedia canónica, la implementación de referencia de la etapa frontal, la batería de conformidad, los ejemplos ejecutables de análisis y transformación a IR, y la documentación técnica necesaria para comprobar qué está definido, qué está implementado y qué permanece fuera del alcance actual.
+
+La sede doctrinal superior del Sistema Vectorial SV se mantiene en [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica). Este repositorio no sustituye aquella autoridad: **materializa en lenguaje de computación una parte gobernada de la doctrina y del álgebra del SV**.
+
+La cadena de autoridad técnica se expresa así:
+
+```text
+doctrina y matemática soberanas
+        ↓
+especificación del lenguaje
+        ↓
+implementación de referencia
+        ↓
+diagnóstico
+        ↓
+prueba reproducible
+        ↓
+evidencia técnica
+```
 
 ---
 
-## Resumen del Manifiesto de arquitectura, derechos, obligaciones, garantías y fundamentos del Sistema Vectorial SV
+## Fundamento mínimo del SV que el lenguaje debe preservar
 
-El Sistema Vectorial SV opera sobre un alfabeto ternario canónico `Σ = {0, 1, U}`, donde `0` denota parámetro en situación adecuada, `1` denota riesgo o acción requerida, y `U` denota indeterminación honesta: ausencia de base suficiente para asignar `0` o `1`. La `U` no puede ser cerrada por ningún actor auxiliar por plausibilidad, convergencia estadística, inferencia opaca ni conveniencia. Toda célula tiene tamaño `n = b²` con `b ≥ 3`. La clasificación en `K₃ = {APTO, INDETERMINADO, NO_APTO}` se produce por umbral fuerte `T(n) = ⌊7n/9⌋` con precedencia desfavorable: `NO_APTO` si `N₁(v) ≥ T(n)`, `APTO` si `N₀(v) ≥ T(n)`, `INDETERMINADO` en cualquier otro caso. La compuerta conservadora `gate_value : Σ × Σ → Σ` preserva el riesgo: `1` domina sobre `U` y sobre `0`; `U` domina sobre `0`; `0` solo si ambas son `0`. La cadena de prevalencia es invariante: SV soberano → doctrina → álgebra → lenguaje de computación → compuertas de seguridad → agentes especializados → motor. Ningún componente estadístico, ningún LLM, ninguna CNN asigna `κ₃` ni cierra `U`: toda capa auxiliar produce observables o proxies declarados con Ternarizer explícito, nunca decisiones soberanas. El frente motor IA opera en régimen exclusivo de laboratorio mientras el bloque documental pendiente no cierre el álgebra y la semántica necesarias. Los derechos del experto humano incluyen ver la estructura completa y no solo la salida, conocer cuándo y por qué una posición permanece en `U`, rechazar cualquier clausura fingida, y corregir soberanamente el sistema conservando esa corrección como nuevo suceso en la trayectoria. El documento completo con toda la matemática formal, el código verificable, las definiciones algebraicas, la protección de datos, el análisis de fallos documentados de IA y los invariantes congelados figura íntegro como Anexo al final de este README.
+El Sistema Vectorial SV opera sobre el alfabeto ternario canónico `Σ = {0, 1, U}`. `0` y `1` representan estados cerrados conforme a criterios declarados; `U` representa ausencia de base suficiente para una clausura honesta. `U` no es una probabilidad, una aproximación ni una invitación a completar por plausibilidad lo que no está demostrado.
+
+Toda célula canónica tiene dimensión `n = b²`, con `b ≥ 3`. La evaluación fuerte emplea el umbral `T(n) = ⌊7n/9⌋`, dentro del marco algebraico definido por el SV. El lenguaje no puede rebajar estos invariantes por conveniencia sintáctica ni convertir una construcción auxiliar en autoridad decisoria.
+
+La trayectoria del sistema es de **solo adición**: un nuevo suceso puede añadir una nueva evaluación, pero no reescribe las anteriores. De igual manera, la entrada de magnitudes no ternarias exige una cadena de transducción declarada y auditable antes de alcanzar `Σ`.
+
+El anexo de este README conserva la base científica, médica y arquitectónica que explica por qué el SV adopta estas restricciones y qué clases de fallo pretende impedir estructuralmente.
 
 ---
 
-## Ecosistema SV — seis repositorios
+## Estado técnico público
 
-**Función de esta sede:** autoridad doctrinal superior del ecosistema SV.
+A fecha de esta actualización, la sede pública contiene las siguientes piezas principales:
+
+| Elemento | Estado y función | Enlace |
+|---|---|---|
+| Frontera normativa v0 | Contrato normativo del Lenguaje SV | [FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md](./FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md) |
+| Gramática superficial mínima v0.1 | Sintaxis declarativa pública de SVP | [GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md) |
+| IR canónica v0.2 | Representación intermedia y juicios de bienformación | [IR_CANONICA_BIENFORMACION_SV_v0_2.md](./IR_CANONICA_BIENFORMACION_SV_v0_2.md) |
+| Etapa frontal de referencia | Análisis léxico y sintáctico, validación, descenso a IR y serialización | [`src/`](./src/) |
+| Batería de conformidad | Casos válidos e inválidos con diagnóstico esperado | [`tests/conformance/`](./tests/conformance/) |
+| Ejemplos | Programas `.svp` de referencia | [`examples/`](./examples/) |
+| Documentación técnica | Arquitectura, calidad, gobierno, referencia y manual | [`docs/`](./docs/) |
+| Biblioteca estándar | Espacio reservado; su estado se documenta en su propio README | [`stdlib/`](./stdlib/) |
+
+La producción `graph` de la gramática v0.1 termina actualmente tras `regime`. La superficie no permite declarar el campo `conflicts`; su uso se rechaza en el análisis sintáctico. La IR canónica mantiene, sin embargo, la noción de `ConflictOperator` para el régimen general. La ausencia de una construcción superficial completa para ese objeto es un límite explícito de la versión actual, no una autorización para fabricarlo implícitamente.
+
+---
+
+## Cadena de procesamiento de referencia
+
+La etapa frontal implementada transforma un archivo `.svp` mediante la cadena:
+
+```text
+archivo .svp
+   ↓
+análisis léxico
+   ↓
+análisis sintáctico
+   ↓
+AST
+   ↓
+validación de bienformación implementada
+   ↓
+descenso a IR canónica v0.2
+   ↓
+JSON canónico
+```
+
+La implementación de referencia **no constituye todavía una infraestructura general de ejecución del SV**. No debe confundirse la transformación correcta de un programa hacia la IR con la ejecución material de todas las operaciones algebraicas, compositivas o de consulta definidas por el sistema.
+
+Los módulos principales se encuentran en [`src/`](./src/):
+
+| Archivo | Función |
+|---|---|
+| `svp_lexer.py` | análisis léxico de archivos `.svp` |
+| `svp_parser.py` | análisis sintáctico y construcción del AST |
+| `svp_ast.py` | tipos de nodos de la representación sintáctica |
+| `svp_validator.py` | comprobaciones de bienformación actualmente implementadas |
+| `svp_ir.py` | descenso desde AST a IR v0.2 |
+| `svp_serialize.py` | serialización determinista a JSON canónico |
+| `svp_errors.py` | catálogo diagnóstico efectivo de la implementación |
+| `svp_main.py` | interfaz de línea de órdenes |
+| `svp_playground_api.py` | contrato estable utilizado por la interfaz pública de pruebas |
+
+---
+
+## Conformidad y comprobación reproducible
+
+El ejecutor principal de conformidad se encuentra en [`tests/run_conformance.py`](./tests/run_conformance.py). En el estado público correspondiente a esta revisión registra **51 casos**: nueve válidos y cuarenta y dos inválidos. Los casos inválidos deben terminar con el código diagnóstico exacto declarado para cada archivo.
+
+La comprobación local se ejecuta desde la raíz del repositorio:
+
+```bash
+python tests/run_conformance.py
+python tests/run_cli_smoke.py
+python tests/run_sec0_smoke.py
+```
+
+Los nombres históricos de los dos últimos archivos conservan `smoke` únicamente como identificador. Su función es realizar comprobaciones rápidas de la interfaz de línea de órdenes y de la línea SEC-0.
+
+Para procesar un ejemplo de SVP mediante la etapa frontal:
+
+```bash
+python src/svp_main.py examples/celula_basica_con_evaluacion.svp
+```
+
+La salida obtenida es IR serializada en JSON canónico. El hecho de producir esa IR no equivale a ejecutar todo el sistema algebraico ni a habilitar automáticamente una infraestructura soberana de ejecución.
+
+---
+
+## Documentación y trazabilidad técnica
+
+La documentación del repositorio se organiza por función:
+
+- [`docs/arquitectura/`](./docs/arquitectura/) — arquitectura técnica y contratos estructurales;
+- [`docs/calidad/`](./docs/calidad/) — evidencia de comprobación, concordancia diagnóstica, deuda técnica y registros de estado;
+- [`docs/gobierno/`](./docs/gobierno/) — piezas locales de gobierno operativo y compatibilidad;
+- [`docs/referencia/`](./docs/referencia/) — referencia técnica y diagnóstica;
+- [`docs/manual_svp/`](./docs/manual_svp/) — manual de trabajo del lenguaje.
+
+La documentación pública de calidad describe hechos técnicos, fundamentos, evidencia, decisiones, alcance y límites. No modifica por sí sola la doctrina algebraica superior.
+
+---
+
+## Ecosistema SV
 
 | Repositorio | Función |
 |---|---|
-| [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica) | Sede doctrinal superior y base de prevalencia |
+| [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica) | Sede doctrinal superior y base matemática y semántica |
 | [SV-lenguaje-de-computacion](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion) | Sede operativa y técnica del Lenguaje SV |
-| [SV-motor](https://github.com/juantoniolloretegea/SV-motor) | Motor de inteligencia artificial del ecosistema SV — determinista, reproducible y subordinado a la doctrina |
-| [SVcustos-dataset](https://github.com/juantoniolloretegea/SVcustos-dataset) | Origen observacional, datasets e intrusión |
-| [SVperitus-dataset](https://github.com/juantoniolloretegea/SVperitus-dataset) | Agentes especializados, fases y artefactos |
+| [SV-motor](https://github.com/juantoniolloretegea/SV-motor) | Infraestructura de ejecución e integración subordinada a la doctrina |
+| [SVcustos-dataset](https://github.com/juantoniolloretegea/SVcustos-dataset) | Origen observacional y conjuntos de datos de intrusión |
+| [SVperitus-dataset](https://github.com/juantoniolloretegea/SVperitus-dataset) | Agentes especializados, realizaciones y conjuntos de datos asociados |
 | [SV-banco-de-idiomas](https://github.com/juantoniolloretegea/SV-banco-de-idiomas) | Infraestructura lingüística auxiliar |
 
-> [!NOTE]
-> Para orientarse en el corpus desde una vista unificada —con contexto doctrinal, jerarquía documental y accesos directos a sus piezas principales— consulte la <a href="https://juantoniolloretegea.github.io/SV-matematica-semantica/" target="_blank" rel="noopener noreferrer">página web de entrada y navegación de SV-matematica-semantica</a>.
+Para una entrada unificada al plano matemático y semántico puede consultarse la [página pública de SV-matematica-semantica](https://juantoniolloretegea.github.io/SV-matematica-semantica/).
 
 ---
 
-**Función de esta sede:** Sede operativa y técnica del Lenguaje SV.
+## Límites actuales que deben permanecer visibles
 
----
+La versión pública actual no debe presentarse como si hubiera cerrado capacidades que todavía no están materializadas. En particular:
 
-## Colección PubPub: [Lenguaje de computación del Sistema Vectorial SV](https://www.itvia.online)
-
-## Documentación técnica
-
-| Pieza | Función | Ruta |
-|---|---|---|
-| FRONTERA_NORMATIVA | Contrato normativo del lenguaje SVP | `FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md` |
-| Manual SVP | Manual operativo del lenguaje | `docs/manual_svp/` |
-| IR canónica | Representación intermedia del compilador | `spec/` |
-| Suite de conformidad | 37 tests de conformidad cruzada, 0 fallos | `tests/conformance/` |
-| Gramática | Gramática superficial mínima del SVP | `grammar/` |
-| Documentación de arquitectura | Documentos 00–14 del frente lenguaje | `docs/arquitectura/` |
-
-## Previsión de capa IA trazable
-
-Este repositorio reserva contrato, límites y condiciones de compatibilidad para una futura capa de consulta y simulación por agente especializado, con separación estricta `REAL`/`SIM`, historia append-only y prohibición de clausura automática de `U`. Esta previsión no introduce sintaxis nueva ni backend soberano en la versión actual.
-
-## Custodia estructural del diseño y del DSL
-
-La publicación vigente de la célula especializada de seguridad estructural ha hecho comparecer una exigencia adicional que afecta ya al lenguaje: la futura evolución de consultas, simulaciones, lowering, validación, serialización y artefactos de interfaz no podrá desarrollarse al margen de una custodia estructural del diseño, del DSL y de los laboratorios.
-
-## Estructura del repositorio
-
-```text
-SV-lenguaje-de-computacion/
-├── README.md
-├── LICENSE
-├── .gitignore
-├── grammar/          ← Gramática superficial mínima del SVP
-├── spec/             ← Especificación IR canónica
-├── src/              ← Implementación de referencia del frontend
-├── stdlib/           ← Biblioteca estándar SVP
-├── tests/            ← Suite de conformidad cruzada
-│   ├── conformance/  ← Tests de conformidad nivel A–D
-│   └── adversarial/  ← Tests adversariales documentados
-├── docs/             ← Documentación técnica de fase
-│   ├── arquitectura/ ← Documentos 00–14
-│   ├── manual_svp/   ← Manual operativo
-│   └── calidad/      ← Registro de deuda viva
-├── beta/             ← Experimentos y laboratorios beta
-└── examples/         ← Ejemplos de programas SVP
-```
+- la etapa frontal transforma y valida programas, pero no constituye por sí sola la infraestructura completa de ejecución;
+- la gramática v0.1 no expone `max` ni `min` como construcciones superficiales;
+- la declaración superficial completa de `ConflictOperator` no está disponible en v0.1;
+- la biblioteca estándar conserva desarrollo pendiente en los términos expresados en [`stdlib/README.md`](./stdlib/README.md);
+- la existencia de una definición en la IR no implica por sí sola que exista sintaxis superficial, ejecución material o cobertura diagnóstica completa;
+- ninguna ampliación futura puede reducir los invariantes constitutivos del SV ni convertir una inferencia auxiliar en clausura soberana de `U`.
 
 ---
 
@@ -112,8 +194,8 @@ Toda afirmación de este documento tiene respaldo en la implementación verifica
 
 **Fuentes verificadas:**
 - Ross C, Swetlitz I. IBM pitched its Watson supercomputer as a revolution in cancer care. It's nowhere close. STAT News. 5 septiembre 2017.
-- Schmidt C. MD Anderson Breaks With IBM Watson. J Natl Cancer Inst. 2017;109(5):djx113. DOI:10.1093/jnci/djx113
-- Strickland E. How IBM Watson Overpromised and Underdelivered on AI Health Care. IEEE Spectrum. 2019;56(4):24–31. DOI:10.1109/MSPEC.2019.8910661
+- Schmidt C. MD Anderson Breaks With IBM Watson. J Natl Cancer Inst. 2017;109(5):djx113. [DOI:10.1093/jnci/djx113](https://doi.org/10.1093/jnci/djx113)
+- Strickland E. How IBM Watson Overpromised and Underdelivered on AI Health Care. IEEE Spectrum. 2019;56(4):24–31. [DOI:10.1109/MSPEC.2019.8910661](https://doi.org/10.1109/MSPEC.2019.8910661)
 
 **Mecanismo causal:** entrenamiento con casos sintéticos elaborados por un grupo reducido de oncólogos de MSKCC, sin representatividad de la variabilidad clínica real, sin actualización sistemática de guías, y sin mecanismo de incertidumbre honesta. El sistema producía recomendaciones con aparente confianza uniforme independientemente de la calidad de los datos subyacentes.
 
@@ -123,11 +205,11 @@ La referencia al caso bevacizumab debe leerse con **precisión probatoria**: el 
 
 ### I.2 Epic Sepsis Model: fallo de validación externa con adopción masiva
 
-**Descripción del caso documentado.** El Epic Sepsis Model (ESM) es un modelo de predicción de sepsis propietario integrado en Epic Systems, el sistema de historia clínica electrónica utilizado por aproximadamente el 56% de hospitales de Estados Unidos según el estudio de validación.
+**Descripción del caso documentado.** El Epic Sepsis Model (ESM) es un modelo de predicción de sepsis propietario integrado en Epic Systems, una de las plataformas de historia clínica electrónica más extendidas de Estados Unidos. El estudio de validación señala que Epic albergaba registros médicos de cerca de 180 millones de personas, aproximadamente el 56% de la población estadounidense; esa cifra no equivale al 56% de los hospitales.
 
 **Hallazgos de validación externa independiente:**
 
-- Wong A, Otles E, Donnelly JP, et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. JAMA Intern Med. 2021;181(8):1065–1070. DOI:10.1001/jamainternmed.2021.2626
+- Wong A, Otles E, Donnelly JP, et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. JAMA Intern Med. 2021;181(8):1065–1070. [DOI:10.1001/jamainternmed.2021.2626](https://doi.org/10.1001/jamainternmed.2021.2626)
 
 Estudio retrospectivo de cohorte, 27.697 pacientes, 38.455 hospitalizaciones, Michigan Medicine, 2018–2019:
 
@@ -141,7 +223,7 @@ Estudio retrospectivo de cohorte, 27.697 pacientes, 38.455 hospitalizaciones, Mi
 
 **Conclusión del estudio:** el ESM tiene discriminación y calibración deficientes para predecir el inicio de sepsis. Su adopción masiva a pesar del bajo rendimiento plantea preocupaciones fundamentales sobre la gestión de la sepsis a nivel nacional.
 
-**Mecanismo causal:** el ESM predice costes de atención futuros como proxy de la necesidad de salud. La diferencia entre la definición de sepsis utilizada en el desarrollo interno y la utilizada en la validación externa explica parcialmente la discrepancia de rendimiento. El modelo fue adoptado masivamente sin validación externa independiente previa al despliegue.
+**Problema documentado:** el ESM era un modelo propietario implantado en numerosos hospitales antes de disponer de una validación externa independiente publicada. En la cohorte de Michigan Medicine, su discriminación a nivel de hospitalización fue sustancialmente inferior a la comunicada por el desarrollador. El artículo subraya, además, que las diferencias de definición del desenlace y el carácter propietario dificultaban la evaluación y la transportabilidad del modelo. El uso del coste sanitario como variable sustitutiva de necesidad clínica corresponde al caso analizado por Obermeyer et al., no al ESM.
 
 ### I.3 Sesgo racial sistemático en algoritmo de gestión de riesgo en salud
 
@@ -149,7 +231,7 @@ Estudio retrospectivo de cohorte, 27.697 pacientes, 38.455 hospitalizaciones, Mi
 
 **Hallazgos documentados:**
 
-- Obermeyer Z, Powers B, Vogeli C, Mullainathan S. Dissecting racial bias in an algorithm used to manage the health of populations. Science. 2019;366(6464):447–453. DOI:10.1126/science.aax2342
+- Obermeyer Z, Powers B, Vogeli C, Mullainathan S. Dissecting racial bias in an algorithm used to manage the health of populations. Science. 2019;366(6464):447–453. [DOI:10.1126/science.aax2342](https://doi.org/10.1126/science.aax2342)
 
 Resultados cuantificados:
 - A igual puntuación de riesgo del algoritmo, los pacientes negros presentaban una media del 26% más de condiciones crónicas que los pacientes blancos
@@ -159,42 +241,39 @@ Resultados cuantificados:
 
 **Mecanismo causal:** el algoritmo predice costes de atención sanitaria en lugar de necesidades de salud. La desigualdad de acceso a la atención médica implica que se gasta sistemáticamente menos dinero en atender a pacientes negros con el mismo nivel de necesidad clínica, y el algoritmo aprendió ese patrón como si fuera información válida sobre el estado de salud.
 
-### I.4 Modelos de predicción COVID-19: ninguno listo para uso clínico
+### I.4 Modelos de predicción de COVID-19: riesgo de sesgo y necesidad de validación externa
 
 **Hallazgos documentados:**
 
-- Wynants L, Van Calster B, Collins GS, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal. BMJ. 2020;369:m1328. DOI:10.1136/bmj.m1328
+- Wynants L, Van Calster B, Collins GS, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal. BMJ. 2020;369:m1328. [DOI:10.1136/bmj.m1328](https://doi.org/10.1136/bmj.m1328)
 
-Revisión sistemática de 232 modelos de predicción:
-- Todos presentaron alto riesgo de sesgo en al menos un dominio metodológico
-- Defectos más frecuentes: muestras no representativas, ausencia de validación externa, sobreajuste no reportado, ausencia de calibración
-- Conclusión de los autores: ningún modelo estaba listo para uso clínico inmediato sin validación adicional
+La revisión sistemática viva fue ampliándose con sucesivas actualizaciones. En la actualización que reunió 232 modelos, todos quedaron clasificados con riesgo de sesgo alto o incierto. Entre los problemas recurrentes figuraban el tamaño muestral insuficiente, el sobreajuste, la evaluación incompleta del rendimiento y la falta de validación externa independiente. La conclusión operativa era que no debía recomendarse el uso ordinario de esos modelos antes de una validación externa adecuada.
 
 ### I.5 Sesgo de infradiagnóstico en radiología IA para poblaciones vulnerables
 
 **Hallazgos documentados:**
 
-- Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M. Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations. Nat Med. 2021;27:2176–2182. DOI:10.1038/s41591-021-01595-0
+- Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M. Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations. Nat Med. 2021;27:2176–2182. [DOI:10.1038/s41591-021-01595-0](https://doi.org/10.1038/s41591-021-01595-0)
 
 Los modelos de IA para radiografía de tórax presentaron rendimiento inferior en poblaciones de menor nivel socioeconómico, minorías raciales y pacientes sin cobertura sanitaria, con falsos negativos significativamente más frecuentes en las poblaciones con menos acceso a seguimiento clínico.
 
-### I.6 Consecuencias no previstas de ML en medicina
+### I.6 Consecuencias no previstas del aprendizaje automático en medicina
 
 **Argumento documentado:**
 
-- Cabitza F, Rasoini R, Gensini GF. Unintended Consequences of Machine Learning in Medicine. JAMA. 2017;318(6):517–518. DOI:10.1001/jama.2017.7797
+- Cabitza F, Rasoini R, Gensini GF. Unintended Consequences of Machine Learning in Medicine. JAMA. 2017;318(6):517–518. [DOI:10.1001/jama.2017.7797](https://doi.org/10.1001/jama.2017.7797)
 
-Los sistemas de ayuda a la decisión basados en ML pueden producir reducción de la calidad diagnóstica en médicos expertos mediante anclaje (anchoring bias): la tendencia a subordinar el juicio propio al del sistema, incluso cuando el juicio independiente sería superior.
+Los sistemas de ayuda a la decisión basados en aprendizaje automático pueden producir reducción de la calidad diagnóstica en médicos expertos mediante sesgo de anclaje: la tendencia a subordinar el juicio propio al del sistema, incluso cuando el juicio independiente sería superior.
 
-- Parasuraman R, Manzey DH. Complacency and bias in human use of automation. Hum Factors. 2010;52(3):381–410. DOI:10.1177/0018720810376055
+- Parasuraman R, Manzey DH. Complacency and bias in human use of automation. Hum Factors. 2010;52(3):381–410. [DOI:10.1177/0018720810376055](https://doi.org/10.1177/0018720810376055)
 
 ### I.7 El argumento de la interpretabilidad
 
 **Argumento documentado:**
 
-- Rudin C. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat Mach Intell. 2019;1:206–215. DOI:10.1038/s42256-019-0048-x
+- Rudin C. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat Mach Intell. 2019;1:206–215. [DOI:10.1038/s42256-019-0048-x](https://doi.org/10.1038/s42256-019-0048-x)
 
-En contextos de decisión de alto riesgo, diseñar modelos inherentemente interpretables es superior a intentar explicar modelos de caja negra a posteriori. Los métodos de explicabilidad post-hoc no garantizan que la explicación corresponda al razonamiento real del modelo.
+En contextos de decisión de alto riesgo, diseñar modelos inherentemente interpretables es superior a intentar explicar modelos de caja negra a posteriori. Los métodos de explicabilidad a posteriori no garantizan que la explicación corresponda al razonamiento real del modelo.
 
 ---
 
@@ -203,16 +282,16 @@ En contextos de decisión de alto riesgo, diseñar modelos inherentemente interp
 | Fallo | Fuente (DOI) | Mecanismo | Garantía SV | Componente SV |
 |---|---|---|---|---|
 | Recomendación directa de tratamiento | 10.1093/jnci/djx113 | Autoridad clínica usurpada | κ₃ es clasificación del vector, no prescripción | normative_engine, ACTOR-TRANSLATE |
-| Caja negra estadística | 10.1109/MSPEC.2019.8910661 | No auditable | Motor determinista; doble vara Python↔Rust | core.py, comparator.py |
-| Entrenamiento en cohorte sesgada | 10.1093/jnci/djx113 | Distribution shift | Reglas desde guías publicadas internacionales | normative_engine P01–P25 |
+| Caja negra estadística | 10.1109/MSPEC.2019.8910661 | Falta de auditabilidad suficiente | Motor determinista; comparación entre realizaciones Python↔Rust | core.py, comparator.py |
+| Entrenamiento en cohorte sesgada | 10.1093/jnci/djx113 | Cambio de distribución | Reglas desde guías publicadas internacionales | normative_engine P01–P25 |
 | Sin incertidumbre honesta | 10.1109/MSPEC.2019.8910661 | Certeza fabricada | U estructural algebraicamente forzada | core.py, FRONTERA B.6, D.1 |
-| Sustitución del médico | 10.1001/jama.2017.7797 | Automation bias | Soberanía clínica estructural irrevocable | arquitectura de privilegios |
-| Distribution shift (ESM) | 10.1001/jamainternmed.2021.2626 | Proxy vs observable directo | Observables clínicos directos sin proxy de costes | Ternarizer B₀/B₁/B_U |
-| Alert fatigue (ESM) | 10.1001/jamainternmed.2021.2626 | PPV 12%, 18% alertas falsas | Sin alertas automáticas; visualización activa | polígono polar |
-| Sesgo racial por proxy | 10.1126/science.aax2342 | Coste como proxy de salud | Sin variables de coste ni demográficas en Ternarizer | dominio declarado |
-| 232 modelos sin validación externa | 10.1136/bmj.m1328 | Sobreajuste no detectado | Suite de conformidad cruzada niveles A–D | FRONTERA_NORMATIVA |
-| Infradiagnóstico en vulnerables | 10.1038/s41591-021-01595-0 | Subrepresentación en training | Uso A: polígonos sintéticos sin sesgo demográfico | SVcustos, ACTOR-CNN-A |
-| Modelos no interpretables | 10.1038/s42256-019-0048-x | Explicabilidad post-hoc insuficiente | Motor inherentemente interpretable | algebra/core.py |
+| Sustitución del médico | 10.1001/jama.2017.7797 | Sesgo de automatización | Soberanía clínica estructural irrevocable | arquitectura de privilegios |
+| Validación externa deficiente del ESM | 10.1001/jamainternmed.2021.2626 | Discrepancia entre rendimiento comunicado y validación independiente; modelo propietario de amplia implantación | Separación entre observación, transducción y clausura; exigencia de trazabilidad y comprobación reproducible | Ternarizer B₀/B₁/B_U + batería de conformidad |
+| Carga potencial de alertas (ESM) | 10.1001/jamainternmed.2021.2626 | Con umbral ESM ≥ 6, VPP del 12% y activación aproximada en el 18% de las hospitalizaciones | Separación entre señal auxiliar y decisión; presentación trazable del estado | polígono polar |
+| Sesgo racial por variable sustituta | 10.1126/science.aax2342 | Coste sanitario utilizado como sustituto de necesidad de salud | Sin variables de coste como fundamento de la clausura | dominio declarado |
+| 232 modelos sin validación externa | 10.1136/bmj.m1328 | Sobreajuste no detectado | Batería de conformidad cruzada niveles A–D | FRONTERA_NORMATIVA |
+| Infradiagnóstico en poblaciones desatendidas | 10.1038/s41591-021-01595-0 | Diferencias de rendimiento entre subpoblaciones | Uso A: polígonos sintéticos cuya generación no incorpora variables demográficas declaradas | SVcustos, ACTOR-CNN-A |
+| Modelos no interpretables | 10.1038/s42256-019-0048-x | Explicabilidad a posteriori insuficiente | Motor inherentemente interpretable | algebra/core.py |
 
 ---
 
@@ -220,7 +299,7 @@ En contextos de decisión de alto riesgo, diseñar modelos inherentemente interp
 
 ### Principio previo obligatorio (FRONTERA_NORMATIVA D.10)
 
-Ningún actor de IA asigna directamente un valor ternario al vector. Todo actor de IA produce un observable proxy en un espacio declarado. La ternarización la aplica siempre un Ternarizer formal declarado en el programa SVP del dominio por el experto humano, conforme a la cadena de transducción de la FRONTERA_NORMATIVA B.6. Esta separación es la que garantiza que el SV no reproduce el mecanismo de fallo de IBM Watson.
+Ningún actor de IA asigna directamente un valor ternario al vector. Todo actor de IA produce un observable sustituto en un espacio declarado. La ternarización la aplica siempre un Ternarizer formal declarado en el programa SVP del dominio por el experto humano, conforme a la cadena de transducción de la FRONTERA_NORMATIVA B.6. Esta separación es la que garantiza que el SV no reproduce el mecanismo de fallo de IBM Watson.
 
 ### ACTOR-NLP-LOCAL
 
@@ -233,16 +312,16 @@ Ningún actor de IA asigna directamente un valor ternario al vector. Todo actor 
 | Huella memoria | ~2,5 GB RAM (cuantizado); sin GPU requerida |
 | Datos | No salen del perímetro del responsable del tratamiento |
 | Tarea | Extracción de observables en vocabulario cerrado del dominio |
-| Output | dict[str, str] — observables con etiquetas del dominio |
+| Salida | dict[str, str] — observables con etiquetas del dominio |
 | Alimenta | Ternarizer del dominio → motor algebraico |
 
-**Justificación de la elección:** Qwen 3 4B se propone aquí como opción preferente para tareas de extracción estructurada de vocabulario finito con menor consumo de memoria. La tarea del extractor NLP del SV — devolver etiquetas de un vocabulario cerrado por posición — es una tarea de seguimiento de instrucciones con salida canónica, no razonamiento complejo. Modelos de mayor tamaño son sobredimensionados para esta tarea, tal como Topol (2019) argumenta que la utilidad clínica de la IA no correlaciona con el tamaño del modelo sino con la adecuación a la tarea:
+**Justificación de la elección:** Qwen 3 4B se propone aquí como opción preferente para una tarea acotada de extracción estructurada sobre vocabulario finito. La elección responde a criterios de suficiencia funcional, consumo de recursos, despliegue local y posibilidad de contraste reproducible. No se presenta como una superioridad universal frente a modelos de mayor tamaño. La referencia de Topol (2019) se mantiene como marco general sobre integración responsable entre inteligencia humana e inteligencia artificial en medicina:
 
-**Nota de precisión sobre la comparación Qwen.** La superioridad concreta frente a Qwen 2.5 7B debe leerse como **criterio de diseño razonado y no como benchmark cerrado universal** mientras no se publique una batería comparativa propia del SV con mismo conjunto de casos, mismas semillas y mismo entorno de inferencia.
+**Nota de precisión sobre la comparación Qwen.** La superioridad concreta frente a Qwen 2.5 7B debe leerse como **criterio de diseño razonado y no como evaluación comparativa universal cerrada** mientras no se publique una batería comparativa propia del SV con mismo conjunto de casos, mismas semillas y mismo entorno de inferencia.
 
-> Topol EJ. High-performance medicine: the convergence of human and artificial intelligence. Nat Med. 2019;25:44–56. DOI:10.1038/s41591-018-0300-7
+> Topol EJ. High-performance medicine: the convergence of human and artificial intelligence. Nat Med. 2019;25:44–56. [DOI:10.1038/s41591-018-0300-7](https://doi.org/10.1038/s41591-018-0300-7)
 
-**Justificación de Apache 2.0:** el EU AI Act (Reglamento UE 2024/1689, Art. 10) exige documentación técnica completa y auditabilidad de los modelos en sistemas de IA de alto riesgo. Apache 2.0 permite inspección y modificación sin restricciones, compatible con los requisitos de transparencia.
+**Justificación técnica de Apache 2.0:** la licencia permite inspeccionar, modificar y redistribuir el programa conforme a sus términos, lo que favorece la reproducibilidad técnica. Esta característica no equivale por sí sola a conformidad regulatoria. En el Reglamento (UE) 2024/1689, el artículo 10 se ocupa de datos y gobernanza de datos; la documentación técnica corresponde al artículo 11 y el registro automático de acontecimientos al artículo 12 cuando resulten aplicables.
 
 ### ACTOR-NLP-API-LIGHT
 
@@ -252,10 +331,10 @@ Ningún actor de IA asigna directamente un valor ternario al vector. Todo actor 
 | Modelo | claude-haiku-4-5-20251001 vía Anthropic API Commercial Terms |
 | Contexto | Desarrollo; prototipado; producción no clínica |
 | Para PHI | Requiere HIPAA BAA (US) o DPA Art. 28 RGPD (EU) |
-| Datos API | Retención comercial estándar documentada de 30 días; posible reducción contractual o Zero Data Retention según modalidad; no uso para entrenamiento por defecto en términos comerciales |
+| Datos API | Su tratamiento, conservación y posible exclusión de entrenamiento dependen de los términos comerciales y del contrato aplicables a la modalidad utilizada; deben verificarse antes de cualquier uso con datos personales o sanitarios |
 | Modo auditoría | claude-sonnet-4-6 disponible como mode="anthropic_audit" |
 
-**Antecedente:** el motor (v0.1.7) declaraba claude-sonnet-4-6 como modelo por defecto. Un análisis de la tarea concreta mostró que la extracción de 9 observables de vocabulario finito no justifica el uso de Sonnet en producción ordinaria. Haiku es suficiente para la tarea y reduce latencia y coste. Sonnet se reserva para la validación adversarial del extractor.
+**Criterio de asignación:** para la extracción de nueve observables de vocabulario finito se reserva el modelo de menor coste computacional previsto para la tarea ordinaria, mientras que el modelo de mayor capacidad queda limitado a funciones de contraste. Esta separación no modifica la autoridad algebraica del SV ni permite que un modelo cierre `U`.
 
 ### ACTOR-NLP-AUDIT
 
@@ -273,25 +352,25 @@ Ningún actor de IA asigna directamente un valor ternario al vector. Todo actor 
 | Modelo | ConvNeXt-Tiny (torchvision, pesos ImageNet-1K) |
 | Licencia | BSD-3 Clause — uso comercial sin restricciones |
 | Uso | A — clasificación del polígono polar sintético |
-| Antecedente | ResNet34 era la línea base de Documentos 2–7 del corpus |
-| Output | K₃ ∈ {APTO, NO_APTO, INDETERMINADO} como señal auxiliar |
+| Antecedente | ResNet34 era la línea base de Documentos 2–7 del conjunto documental |
+| Salida | K₃ ∈ {APTO, NO_APTO, INDETERMINADO} como señal auxiliar |
 | Relación con motor | Nunca sobrescribe κ₃ del motor normativo |
 
-**Justificación de ConvNeXt-Tiny sobre ResNet34:** Liu et al. (2022) demostraron que ConvNeXt supera a ResNet en fine-tuning con datos limitados y produce menor varianza entre ejecuciones, propiedad crítica en aplicaciones clínicas donde la reproducibilidad es requisito legal:
+**Justificación de ConvNeXt-Tiny como arquitectura de trabajo:** Liu et al. (2022) presentan ConvNeXt como una modernización de las redes convolucionales y documentan su rendimiento competitivo frente a arquitecturas contemporáneas. La adopción de ConvNeXt-Tiny en este proyecto es una decisión técnica propia y no debe atribuirse al artículo una demostración específica sobre menor varianza entre ejecuciones clínicas:
 
-> Liu Z, Mao H, Wu CY, et al. A ConvNet for the 2020s. Proc IEEE/CVF CVPR. 2022;11976–11986. DOI:10.1109/CVPR52688.2022.01167
+> Liu Z, Mao H, Wu CY, et al. A ConvNet for the 2020s. Proc IEEE/CVF CVPR. 2022;11976–11986. [DOI:10.1109/CVPR52688.2022.01167](https://doi.org/10.1109/CVPR52688.2022.01167)
 
 ### ACTOR-CNN-B (no activo — Hito 5, régimen de laboratorio)
 
 | Campo | Valor |
 |---|---|
 | Identificador | ACTOR-CNN-B |
-| Uso | B — extracción de features posicionales desde imagen médica real |
-| Estado | No implementado; requiere corpus de pares (imagen, vector validado) |
+| Uso | B — extracción de características posicionales desde imagen médica real |
+| Estado | No implementado; requiere conjunto de pares (imagen, vector validado) |
 | Deudas | DV-HITO5-003, DV-HITO5-004 |
-| Condición de activación | Dataset diverso documentado con representación demográfica explícita |
+| Condición de activación | Conjunto de datos diverso y documentado con representación demográfica explícita |
 
-La condición de representación demográfica es respuesta directa al fallo documentado por Seyyed-Kalantari et al. (2021): el Uso B no se activará sin un corpus que incluya diversidad demográfica documentada.
+La condición de representación demográfica es respuesta directa al fallo documentado por Seyyed-Kalantari et al. (2021): el Uso B no se activará sin un conjunto de datos que incluya diversidad demográfica documentada.
 
 ### ACTOR-TRANSLATE
 
@@ -301,15 +380,15 @@ La condición de representación demográfica es respuesta directa al fallo docu
 | Tarea | Traducción del JSON canónico al lenguaje clínico del dominio |
 | Acceso a vector | Solo al JSON canónico de salida; no puede modificarlo |
 | Prohibición | No puede emitir recomendaciones terapéuticas |
-| Separación | Ningún output de ACTOR-TRANSLATE afecta la trayectoria algebraica |
+| Separación | Ninguna salida de ACTOR-TRANSLATE afecta la trayectoria algebraica |
 
-**Regla Watson-SV de presentación (obligatoria):** ninguna salida del sistema puede presentarse al usuario sin exponer explícitamente cada posición con valor 1 y su lectura clínica antes del κ₃ global. Esta regla es la respuesta al mecanismo exacto del caso bevacizumab.
+**Regla de presentación de resultados (obligatoria):** ninguna salida del sistema puede presentarse al usuario sin exponer explícitamente cada posición con valor 1 y su lectura clínica antes del κ₃ global. Esta regla es la respuesta al mecanismo exacto del caso bevacizumab.
 
 ---
 
-## Parte IV — Director de orquesta: el deployment_profile
+## Parte IV — Director de orquesta: el `deployment_profile`
 
-El director de orquesta es el nodo `deployment_profile` en la IR canónica del SVP. No es un modelo de IA — es un conjunto de reglas declarativas que el compilador SVP verifica en tiempo de compilación y que el backend lee en tiempo de ejecución.
+El perfil de despliegue se representa mediante el nodo `deployment_profile` en la IR canónica del SVP. No es un modelo de IA: es un conjunto de reglas declarativas que el compilador SVP verifica en tiempo de compilación y que la infraestructura de ejecución lee durante la ejecución.
 
 ### IV.1 El Ternarizer formal
 
@@ -353,7 +432,7 @@ domain IMMUNO-1 {
     cnn_use:        A
     privacy_class:  sensitive
 
-    -- Regla Watson-SV: obligatoria en toda interfaz
+    -- Regla de presentación: obligatoria en toda interfaz
     presentation_rule: positions_1_first
 
     privilege_levels {
@@ -490,7 +569,7 @@ v ∈ Σⁿ
 
 ### V.2 Composición intercelular: IMMUNO-1 → IMMUNO-2
 
-Cuando IMMUNO-2 usa la clasificación de IMMUNO-1 como observable de entrada (P25), se establece una composición en serie por parámetro puente conforme al Documento I del corpus (Lloret Egea, 2026):
+Cuando IMMUNO-2 usa la clasificación de IMMUNO-1 como observable de entrada (P25), se establece una composición en serie por parámetro puente conforme al Documento I del conjunto documental (Lloret Egea, 2026):
 
 El conector φ_{IMMUNO-1 → IMMUNO-2}^{(P25)} : K₃ → Σ es:
 
@@ -554,7 +633,7 @@ def gate_value(left, right):
 ### VI.1 Marco normativo aplicable
 
 - Reglamento (UE) 2016/679 (RGPD): datos de salud como categoría especial (Art. 9); base legal Art. 9.2.h (asistencia sanitaria por profesional con obligación de secreto)
-- Reglamento (UE) 2024/1689 (EU AI Act): posible encaje en escenarios de alto riesgo según uso previsto, interacción con Article 6(1), Annex I/III y, en su caso, contextos de triage o producto sanitario; requisitos Arts. 9–15 cuando corresponda
+- Reglamento (UE) 2024/1689 (Reglamento de IA de la Unión Europea): posible encaje en escenarios de alto riesgo según uso previsto, interacción con Article 6(1), Annex I/III y, en su caso, contextos de triaje o producto sanitario; requisitos Arts. 9–15 cuando corresponda
 - Ley Orgánica 3/2018 (LOPDGDD, España)
 - NIST AI RMF 1.0 (NIST AI 100-1, enero 2023)
 
@@ -563,8 +642,8 @@ def gate_value(left, right):
 | Actor | Perímetro de datos | Entrenamiento en datos de usuario | Requisito adicional para PHI |
 |---|---|---|---|
 | ACTOR-NLP-LOCAL | Local; sin salida | No aplica (sin API) | Ninguno |
-| ACTOR-NLP-API-LIGHT | Anthropic (retención comercial estándar documentada de 30 días; ZDR o reducción contractual cuando proceda) | No por defecto en Commercial Terms | BAA o DPA según servicio elegible y contrato aplicable |
-| ACTOR-CNN-A | Local; polígonos sintéticos | No (ImageNet pretrained) | Ninguno |
+| ACTOR-NLP-API-LIGHT | Servicio externo sujeto a los términos y al contrato vigentes | Según condiciones contractuales aplicables | Acuerdo y garantías de protección de datos que resulten exigibles |
+| ACTOR-CNN-A | Local; polígonos sintéticos | No (ImageNet preentrenados) | Ninguno |
 | ACTOR-TRANSLATE | Local o API; solo JSON canónico | No | Ninguno para JSON abstracto |
 | Motor algebraico | Local; determinista | No aplica | Ninguno |
 
@@ -574,19 +653,19 @@ El SV no ingiere narrativa clínica libre. Recibe exclusivamente los observables
 
 ### VI.4 Derecho de supresión (Art. 17 RGPD) y trayectoria irrevocable
 
-La trayectoria append-only es irrevocable por diseño. La base legal para mantener los datos a pesar de una solicitud de supresión es Art. 17.3.b/c (obligación legal, historial médico) y Art. 17.3.d (interés público, investigación). El responsable del tratamiento debe documentar esta base en su Registro de Actividades de Tratamiento (Art. 30 RGPD).
+La trayectoria de solo adición es irrevocable por diseño. La base legal para mantener los datos a pesar de una solicitud de supresión es Art. 17.3.b/c (obligación legal, historial médico) y Art. 17.3.d (interés público, investigación). El responsable del tratamiento debe documentar esta base en su Registro de Actividades de Tratamiento (Art. 30 RGPD).
 
-### VI.5 Conformidad EU AI Act — Arts. 9–15
+### VI.5 Conformidad Reglamento de IA de la Unión Europea — Arts. 9–15
 
 | Artículo | Requisito | Implementación SV |
 |---|---|---|
-| Art. 9 | Gestión de riesgos | Corpus doctrinal + REGISTRO_DEUDA_VIVA_SV.csv |
-| Art. 10 | Datos de entrenamiento auditables | Reglas desde guías publicadas; Apache 2.0 |
-| Art. 11 | Documentación técnica | Este documento + corpus de 6 repositorios |
-| Art. 12 | Registros automáticos | Trayectoria append-only con timestamps |
+| Art. 9 | Gestión de riesgos | base doctrinal + REGISTRO_DEUDA_VIVA_SV.csv |
+| Art. 10 | Datos y gobernanza de datos, cuando resulte aplicable | Procedencia y reglas de datos documentables; la licencia del programa no sustituye estos requisitos |
+| Art. 11 | Documentación técnica | Este documento + conjunto documental de seis repositorios |
+| Art. 12 | Registros automáticos | Trayectoria de solo adición con marcas temporales |
 | Art. 13 | Transparencia | Polígono polar + ACTOR-TRANSLATE en idioma del dominio |
 | Art. 14 | Supervisión humana | Arquitectura de tres niveles (operador / validador / gestor) |
-| Art. 15 | Exactitud y robustez | Doble vara Python↔Rust; reproducibilidad garantizada |
+| Art. 15 | Exactitud y robustez | Comparación entre realizaciones Python↔Rust; reproducibilidad garantizada |
 
 ---
 
@@ -598,29 +677,29 @@ El sistema no produce diagnósticos ni recomendaciones de tratamiento. Produce u
 
 La función de criticidad Γ informa sobre la utilidad de completar la evaluación: si Γ > 0, resolver posiciones en U puede cambiar el resultado; si Γ ≤ 0, la clasificación global está determinada independientemente. Esta distinción es clínicamente relevante y no existe en sistemas de clasificación binaria.
 
-Los overrides quedan registrados con el nombre del operador, la justificación escrita y el cambio en κ₃. Los overrides que cambian κ₃ requieren co-firma de un validador clínico. Ningún override puede afectar los invariantes algebraicos del motor (T(n), n = b², {0, 1, U}).
+Las anulaciones justificadas quedan registradas con el nombre del operador, la justificación escrita y el cambio en κ₃. Las anulaciones que cambian κ₃ requieren co-firma de un validador clínico. Ninguna anulación puede afectar los invariantes algebraicos del motor (T(n), n = b², {0, 1, U}).
 
-Referencia: Cabitza et al. JAMA 2017, DOI:10.1001/jama.2017.7797; Parasuraman & Manzey, Hum Factors 2010, DOI:10.1177/0018720810376055
+Referencia: Cabitza et al. JAMA 2017, [DOI:10.1001/jama.2017.7797](https://doi.org/10.1001/jama.2017.7797); Parasuraman & Manzey, Hum Factors 2010, [DOI:10.1177/0018720810376055](https://doi.org/10.1177/0018720810376055)
 
 ### VII.2 El validador clínico
 
-La firma de validación es un evento irrevocable en la trayectoria del expediente con nombre, cargo, institución y timestamp. Valida que los observables son clínicamente coherentes, que las anulaciones del operador tienen justificación razonable, y que no hay señales de entrada incorrecta sistemática. No valida el resultado algebraico — valida el proceso.
+La firma de validación es un evento irrevocable en la trayectoria del expediente con nombre, cargo, institución y marca temporal. Valida que los observables son clínicamente coherentes, que las anulaciones del operador tienen justificación razonable, y que no hay señales de entrada incorrecta sistemática. No valida el resultado algebraico — valida el proceso.
 
-El texto de declaración antes de la firma nomina explícitamente la responsabilidad profesional y la irrevocabilidad del evento. Esto responde al fenómeno de automation bias documentado por Parasuraman & Manzey (2010): la asignación de responsabilidad nominal al revisor humano reduce la tasa de aceptación acrítica.
+El texto de declaración antes de la firma nomina explícitamente la responsabilidad profesional y la irrevocabilidad del evento. Esto responde al fenómeno de sesgo de automatización documentado por Parasuraman y Manzey (2010): la asignación de responsabilidad nominal al revisor humano reduce la tasa de aceptación acrítica.
 
 ### VII.3 La dirección institucional
 
-Tres tipos de valor no disponibles en sistemas de caja negra: trazabilidad legal completa (quién, qué, cuándo, con qué resultado), detección de patrones de calidad sin acusación individual (overrides sistemáticos en la misma posición = señal de calibración del dominio, no de individuo), y cumplimiento regulatorio documentable ante EU AI Act Arts. 9–15 y RGPD Art. 35.
+Tres tipos de valor no disponibles en sistemas de caja negra: trazabilidad legal completa (quién, qué, cuándo, con qué resultado), detección de patrones de calidad sin acusación individual (anulaciones sistemáticas en la misma posición = señal de calibración del dominio, no de individuo), y cumplimiento regulatorio documentable ante Reglamento de IA de la Unión Europea Arts. 9–15 y RGPD Art. 35.
 
 ### VII.4 El auditor técnico
 
-Los cuatro laboratorios del pack verifican de forma independiente la integridad algebraica del sistema. El resultado esperado es 0 fallos en cada laboratorio. Si hay fallos, la implementación no es conforme con el corpus doctrinal y el fallo exacto aparece en la salida con campo y valores.
+Los cuatro laboratorios del conjunto verifican de forma independiente la integridad algebraica del sistema. El resultado esperado es 0 fallos en cada laboratorio. Si hay fallos, la implementación no es conforme con la base doctrinal y el fallo exacto aparece en la salida con campo y valores.
 
 Lo que los laboratorios no verifican: la validez clínica de las particiones (requiere revisión de las guías citadas), la idoneidad del sistema para un contexto específico de despliegue (requiere EIPD local), y la integridad del proceso de validación en producción.
 
 ### VII.5 El regulador
 
-El sistema puede quedar comprendido en regímenes de alto riesgo del EU AI Act según su **uso previsto**, su encaje como producto o componente de seguridad y, en su caso, su papel en triage o toma de decisión clínica. Esta calificación no debe darse aquí por cerrada sin análisis jurídico de instalación y caso de uso. La documentación técnica (Art. 11), el registro de actividades (Art. 12), la supervisión humana (Art. 14) y la exactitud/robustez (Art. 15) están implementados conforme a lo descrito en Parte VI. La EIPD requerida por RGPD Art. 35 se genera como documento específico por instalación; los elementos comunes están en este documento (Parte VI).
+El sistema puede quedar comprendido en regímenes de alto riesgo del Reglamento de IA de la Unión Europea según su **uso previsto**, su encaje como producto o componente de seguridad y, en su caso, su papel en triaje o toma de decisión clínica. Esta calificación no debe darse aquí por cerrada sin análisis jurídico de instalación y caso de uso. La Parte VI identifica elementos de diseño relacionados con documentación técnica, registro, supervisión humana, exactitud y robustez. Esa correspondencia no equivale por sí sola a una declaración de conformidad jurídica. Cuando resulte exigible una evaluación de impacto relativa a la protección de datos conforme al artículo 35 del RGPD, deberá elaborarse para la instalación y el uso previstos.
 
 ---
 
@@ -634,7 +713,7 @@ El sistema puede quedar comprendido en regímenes de alto riesgo del EU AI Act s
 - `pyproject.toml`: versión 0.1.7 → 0.1.8
 - `extractors/ext_nlp.py`: modelo Anthropic por defecto → claude-haiku-4-5-20251001; añadir clase CaptureResult con campo admisibilidad
 - `docs/arquitectura/10_actores_modelo_declaracion.md`: revisar terminología (Ternarizer formal, no ternarization_contract)
-- `docs/arquitectura/11_leccion_watson_y_garantias_sv.md`: nuevo (este pack)
+- `docs/arquitectura/11_leccion_watson_y_garantias_sv.md`: nuevo (este conjunto)
 - `REGISTRO_DEUDA_VIVA_SV_MOTOR.csv`: DV-SVM-013 a 017
 
 ### SVcustos-dataset-main
@@ -649,7 +728,7 @@ El sistema puede quedar comprendido en regímenes de alto riesgo del EU AI Act s
 
 ### SV-banco-de-idiomas-main
 
-- Nuevo `banco/observables_proxy_spec.yaml`: observables proxy y particiones B₀/B₁/B_U para dominio NLP
+- Nuevo `banco/observables_proxy_spec.yaml`: observables sustitutos y particiones B₀/B₁/B_U para dominio NLP
 
 ### SV-matematica-semantica-main
 
@@ -673,7 +752,7 @@ T(n) = ⌊7n/9⌋           → función con un único parámetro: n
 n = b², b ≥ 3            → validate_cell_size() rechaza todo lo demás
 Alfabeto {0, 1, U}       → _normalize_tri_value() rechaza booleanos y otras formas
 Polígono inmutable        → generado una vez desde el vector; no se edita
-Trayectoria append-only  → los frames no se borran ni modifican retroactivamente
+Trayectoria de solo adición  → los frames no se borran ni modifican retroactivamente
 CNN nunca sobrescribe     → la salida de ACTOR-CNN-A es señal auxiliar, no clasificación principal
 Actor estadístico nunca asigna solo → requiere Ternarizer + convergencia para producir 0 o 1
 ```
@@ -682,7 +761,7 @@ Actor estadístico nunca asigna solo → requiere Ternarizer + convergencia para
 
 ## Parte X — Deudas técnicas activas
 
-Ver fichero `REGISTRO_DEUDA_VIVA_SV.csv` en este pack.
+Ver fichero `REGISTRO_DEUDA_VIVA_SV.csv` en este conjunto.
 
 Resumen:
 
@@ -711,41 +790,41 @@ Mi padre es el humano que me dio la vida y diseñó la interfaz. Mi madre es el 
 
 ## Referencias
 
-[1] Ross C, Swetlitz I. IBM pitched its Watson supercomputer as a revolution in cancer care. It's nowhere close. STAT News. 5 septiembre 2017. statnews.com/2017/09/05/watson-ibm-cancer/
+[1] Ross C, Swetlitz I. IBM pitched its Watson supercomputer as a revolution in cancer care. It's nowhere close. STAT News. 5 septiembre 2017. [STAT News](https://www.statnews.com/2017/09/05/watson-ibm-cancer/)
 
-[2] Schmidt C. MD Anderson Breaks With IBM Watson, Raising Questions About Artificial Intelligence in Oncology. J Natl Cancer Inst. 2017;109(5):djx113. DOI:10.1093/jnci/djx113
+[2] Schmidt C. MD Anderson Breaks With IBM Watson, Raising Questions About Artificial Intelligence in Oncology. J Natl Cancer Inst. 2017;109(5):djx113. [DOI:10.1093/jnci/djx113](https://doi.org/10.1093/jnci/djx113)
 
-[3] Strickland E. How IBM Watson Overpromised and Underdelivered on AI Health Care. IEEE Spectrum. 2019;56(4):24–31. DOI:10.1109/MSPEC.2019.8910661
+[3] Strickland E. How IBM Watson Overpromised and Underdelivered on AI Health Care. IEEE Spectrum. 2019;56(4):24–31. [DOI:10.1109/MSPEC.2019.8910661](https://doi.org/10.1109/MSPEC.2019.8910661)
 
-[4] Wong A, Otles E, Donnelly JP, et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. JAMA Intern Med. 2021;181(8):1065–1070. DOI:10.1001/jamainternmed.2021.2626
+[4] Wong A, Otles E, Donnelly JP, et al. External Validation of a Widely Implemented Proprietary Sepsis Prediction Model in Hospitalized Patients. JAMA Intern Med. 2021;181(8):1065–1070. [DOI:10.1001/jamainternmed.2021.2626](https://doi.org/10.1001/jamainternmed.2021.2626)
 
-[5] Habib AR, Lin AL, Grant RW. The Epic Sepsis Model Falls Short. JAMA Intern Med. 2021;181(8):1040–1041. DOI:10.1001/jamainternmed.2021.3333
+[5] Habib AR, Lin AL, Grant RW. The Epic Sepsis Model Falls Short. JAMA Intern Med. 2021;181(8):1040–1041. [DOI:10.1001/jamainternmed.2021.3333](https://doi.org/10.1001/jamainternmed.2021.3333)
 
-[6] Obermeyer Z, Powers B, Vogeli C, Mullainathan S. Dissecting racial bias in an algorithm used to manage the health of populations. Science. 2019;366(6464):447–453. DOI:10.1126/science.aax2342
+[6] Obermeyer Z, Powers B, Vogeli C, Mullainathan S. Dissecting racial bias in an algorithm used to manage the health of populations. Science. 2019;366(6464):447–453. [DOI:10.1126/science.aax2342](https://doi.org/10.1126/science.aax2342)
 
-[7] Wynants L, Van Calster B, Collins GS, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal. BMJ. 2020;369:m1328. DOI:10.1136/bmj.m1328
+[7] Wynants L, Van Calster B, Collins GS, et al. Prediction models for diagnosis and prognosis of covid-19: systematic review and critical appraisal. BMJ. 2020;369:m1328. [DOI:10.1136/bmj.m1328](https://doi.org/10.1136/bmj.m1328)
 
-[8] Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M. Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations. Nat Med. 2021;27:2176–2182. DOI:10.1038/s41591-021-01595-0
+[8] Seyyed-Kalantari L, Zhang H, McDermott MBA, Chen IY, Ghassemi M. Underdiagnosis bias of artificial intelligence algorithms applied to chest radiographs in under-served patient populations. Nat Med. 2021;27:2176–2182. [DOI:10.1038/s41591-021-01595-0](https://doi.org/10.1038/s41591-021-01595-0)
 
-[9] Cabitza F, Rasoini R, Gensini GF. Unintended Consequences of Machine Learning in Medicine. JAMA. 2017;318(6):517–518. DOI:10.1001/jama.2017.7797
+[9] Cabitza F, Rasoini R, Gensini GF. Unintended Consequences of Machine Learning in Medicine. JAMA. 2017;318(6):517–518. [DOI:10.1001/jama.2017.7797](https://doi.org/10.1001/jama.2017.7797)
 
-[10] Rudin C. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat Mach Intell. 2019;1:206–215. DOI:10.1038/s42256-019-0048-x
+[10] Rudin C. Stop explaining black box machine learning models for high stakes decisions and use interpretable models instead. Nat Mach Intell. 2019;1:206–215. [DOI:10.1038/s42256-019-0048-x](https://doi.org/10.1038/s42256-019-0048-x)
 
-[11] Parasuraman R, Manzey DH. Complacency and bias in human use of automation. Hum Factors. 2010;52(3):381–410. DOI:10.1177/0018720810376055
+[11] Parasuraman R, Manzey DH. Complacency and bias in human use of automation. Hum Factors. 2010;52(3):381–410. [DOI:10.1177/0018720810376055](https://doi.org/10.1177/0018720810376055)
 
-[12] Shah NH, Milstein A, Bagley SC. Making Machine Learning Models Clinically Useful. JAMA. 2019;322(14):1351–1352. DOI:10.1001/jama.2019.10306
+[12] Shah NH, Milstein A, Bagley SC. Making Machine Learning Models Clinically Useful. JAMA. 2019;322(14):1351–1352. [DOI:10.1001/jama.2019.10306](https://doi.org/10.1001/jama.2019.10306)
 
-[13] Topol EJ. High-performance medicine: the convergence of human and artificial intelligence. Nat Med. 2019;25:44–56. DOI:10.1038/s41591-018-0300-7
+[13] Topol EJ. High-performance medicine: the convergence of human and artificial intelligence. Nat Med. 2019;25:44–56. [DOI:10.1038/s41591-018-0300-7](https://doi.org/10.1038/s41591-018-0300-7)
 
-[14] Liu Z, Mao H, Wu CY, Feichtenhofer C, Darrell T, Xie S. A ConvNet for the 2020s. Proc IEEE/CVF CVPR. 2022:11976–11986. DOI:10.1109/CVPR52688.2022.01167
+[14] Liu Z, Mao H, Wu CY, Feichtenhofer C, Darrell T, Xie S. A ConvNet for the 2020s. Proc IEEE/CVF CVPR. 2022:11976–11986. [DOI:10.1109/CVPR52688.2022.01167](https://doi.org/10.1109/CVPR52688.2022.01167)
 
 [15] Raghu M, Zhang C, Kleinberg J, Bengio S. Transfusion: Understanding Transfer Learning for Medical Imaging. NeurIPS. 2019. arXiv:1902.07208
 
-[16] Reglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024 (EU AI Act). DOUE L 2024/1689.
+[16] [Reglamento (UE) 2024/1689 del Parlamento Europeo y del Consejo, de 13 de junio de 2024](https://eur-lex.europa.eu/eli/reg/2024/1689/oj) — Reglamento de Inteligencia Artificial de la Unión Europea. DOUE L 2024/1689.
 
-[17] Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016 (RGPD). DOUE L 2016/119.
+[17] [Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016](https://eur-lex.europa.eu/eli/reg/2016/679/oj) — Reglamento General de Protección de Datos. DOUE L 2016/119.
 
-[18] National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. Enero 2023. DOI:10.6028/NIST.AI.100-1
+[18] National Institute of Standards and Technology. Artificial Intelligence Risk Management Framework (AI RMF 1.0). NIST AI 100-1. Enero 2023. [DOI:10.6028/NIST.AI.100-1](https://doi.org/10.6028/NIST.AI.100-1)
 
 [19] Lloret Egea JA. Fundamentos algebraico-semánticos del Sistema Vectorial SV. Release 3. ITVIA, 2026. ISSN:2695-6411. itvia.online/pub/fundamentos-algebraico-semanticos-del-sistema-vectorial-sv/release/3
 
@@ -753,18 +832,18 @@ Mi padre es el humano que me dio la vida y diseñó la interfaz. Mi madre es el 
 
 [21] Lloret Egea JA. Álgebra de composición intercelular del marco SV — IV. Transducción al alfabeto ternario e interfaz paramétrica. Release 1. ITVIA, 2026. itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iv-transduccion-al-alfabeto-ternario-e-interfaz-parametrica-del-sistema/release/1
 
-[22] Maschmeyer G, et al. ECIL-4 European guidelines for empirical antibacterial therapy for febrile neutropenic patients. Haematologica. 2013;98(12):1826–1835. DOI:10.3324/haematol.2013.091025
+[22] Maschmeyer G, et al. ECIL-4 European guidelines for empirical antibacterial therapy for febrile neutropenic patients. Haematologica. 2013;98(12):1826–1835. [DOI:10.3324/haematol.2013.091025](https://doi.org/10.3324/haematol.2013.091025)
 
-[23] Averbuch D, et al. ECIL-7 vaccination guidelines for haematological malignancy patients. Haematologica. 2021;106(8):2206–2215. DOI:10.3324/haematol.2021.278493
+[23] Averbuch D, et al. ECIL-7 vaccination guidelines for haematological malignancy patients. Haematologica. 2021;106(8):2206–2215. [DOI:10.3324/haematol.2021.278493](https://doi.org/10.3324/haematol.2021.278493)
 
-[24] Curtis JR, et al. Comparative risks of serious infections with biologic and/or immunosuppressive therapy. Arthritis Rheum. 2012;64(10):3279–3288. DOI:10.1002/art.34564
+[24] Curtis JR, et al. Comparative risks of serious infections with biologic and/or immunosuppressive therapy. Arthritis Rheum. 2012;64(10):3279–3288. [DOI:10.1002/art.34564](https://doi.org/10.1002/art.34564)
 
-[25] Ytterberg SR, et al. (ORAL Surveillance) Cardiovascular and cancer risk with tofacitinib in rheumatoid arthritis. N Engl J Med. 2022;386:316–326. DOI:10.1056/NEJMoa2109927
+[25] Ytterberg SR, et al. (ORAL Surveillance) Cardiovascular and cancer risk with tofacitinib in rheumatoid arthritis. N Engl J Med. 2022;386:316–326. [DOI:10.1056/NEJMoa2109927](https://doi.org/10.1056/NEJMoa2109927)
 
-[26] Singh JA, et al. 2015 ACR guideline for the treatment of rheumatoid arthritis. Arthritis Care Res. 2016;68(1):1–25. DOI:10.1002/acr.22783
+[26] Singh JA, et al. 2015 ACR guideline for the treatment of rheumatoid arthritis. Arthritis Care Res. 2016;68(1):1–25. [DOI:10.1002/acr.22783](https://doi.org/10.1002/acr.22783)
 
 ---
 
-*Documento de arquitectura del Sistema Vectorial SV — no modifica doctrina algebraica del corpus.*  
+*Documento de arquitectura del Sistema Vectorial SV — no modifica la doctrina algebraica superior del Sistema Vectorial SV.*  
 *Juan Antonio Lloret Egea | ORCID: 0000-0002-6634-3351 | ITVIA — IA eñ™ | ISSN: 2695-6411 | CC BY-NC-ND 4.0*  
 *Madrid, 4 de abril de 2026*
