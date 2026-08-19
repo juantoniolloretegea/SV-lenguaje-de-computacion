@@ -28,6 +28,7 @@ La lectura de continuidad es:
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
 | RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
 | RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
+| RETP-2026-060 | 19/08/2026 | NO_CONSTA | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / recepción doctrinal latente / no clausura certificada | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -124,6 +125,15 @@ La lectura de continuidad es:
 - **Evidencia:** verificación independiente en modo de solo lectura con conformidad **48/48**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E213/E214 y conservación de `resolve_projection.svp`.
 - **Límite:** el cierre es estructural; no ejecuta resultados ni calcula campos. `target`, `context` y `mechanism` pertenecen a esquemas canónicos, pero son palabras reservadas y no están disponibles actualmente como identificadores de campo tras el punto.
 - **Decisión:** cerrar las dos precondiciones estructurales de proyección sin modificar gramática, IR ni infraestructura de ejecución.
+- **Estado:** cerrado.
+
+### RETP-2026-060 — Recepción latente de «No clausura certificada»
+
+- **Hecho:** se recibe como referencia latente legítima la publicación «No clausura certificada en sistemas finitos de resolución: certificados operativos, morfismos conservativos y complejidad de revisión», DOI `10.21428/39829d0b.f0892864`.
+- **Fundamento:** la publicación distingue trabajo pendiente de no clausura certificada, conserva `Σ = {0, 1, U}` para los marcos completados y, en la especialización SV, mantiene una autorización humana adicional para constituir un registro soberano de `U`.
+- **Evidencia:** la pieza consta materialmente en la sede doctrinal superior; no constaba una recepción técnica equivalente ni su DOI en el repositorio del Lenguaje.
+- **Límite:** la recepción no implementa certificados, resolvedores finitos, morfismos, cocientes de revisión, memoria de frontera ni un operador automático de constitución de `U`.
+- **Decisión:** clasificar la pieza como `LATENTE_LEGITIMO`, sin abrir deuda funcional inmediata ni modificar gramática, IR, código, Beta o infraestructura de ejecución.
 - **Estado:** cerrado.
 
 ## 4. Autoridad registral
