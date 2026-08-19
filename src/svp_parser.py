@@ -379,12 +379,9 @@ class Parser:
         else:
             raise SVPError(E001, t.line, t.col, "Se esperaba Simple o General")
         self._expect(TT.SEMICOLON)
-        conflicts = None
-        if self._cur().type == TT.IDENTIFIER and self._cur().value == "conflicts":
-            self._field("conflicts"); conflicts = self._parse_id_list(); self._expect(TT.SEMICOLON)
         self._expect(TT.RBRACE)
         return GraphDecl(name=name, nodes=nodes, edges=edges, relation=rel,
-                          regime=regime, conflicts=conflicts, loc=loc)
+                          regime=regime, loc=loc)
 
     # ── Composición ───────────────────────────────────────────────────
 

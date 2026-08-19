@@ -154,7 +154,6 @@ class GraphDecl:
     edges: List[EdgeLiteral]
     relation: str
     regime: str  # "Simple" | "General"
-    conflicts: Optional[List[str]] = None
     loc: Loc = field(default_factory=lambda: Loc(0, 0))
 
 

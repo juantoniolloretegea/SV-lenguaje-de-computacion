@@ -249,8 +249,6 @@ class Lowering:
             "relation": n.relation,
             "regime": n.regime,
         }
-        if n.conflicts:
-            fields["conflicts"] = list(n.conflicts)
         return IRObject("N1", "CompositionGraph", n.name, fields)
 
     # ── Composición ───────────────────────────────────────────────────

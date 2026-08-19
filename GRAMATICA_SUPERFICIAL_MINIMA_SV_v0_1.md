@@ -297,7 +297,6 @@ graph_decl                 ::= "graph" identifier "{"
                                "edges" ":" list<edge_literal> ";"
                                "relation" ":" identifier ";"
                                "regime" ":" regime_literal ";"
-                               [ "conflicts" ":" list<identifier> ";" ]
                                "}" ;
 ```
 
