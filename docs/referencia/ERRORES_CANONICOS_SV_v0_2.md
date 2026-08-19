@@ -2,21 +2,21 @@
 
 ## 1. Naturaleza y subordinación
 
-Este documento es operativo, técnico y subordinado. Describe el catálogo efectivo utilizado por la etapa frontal de referencia y no sustituye la autoridad normativa de la IR canónica v0.2.
+Este documento describe el catálogo efectivo utilizado por la etapa frontal de referencia. Su función es operativa y técnica. La IR v0.2 conserva la autoridad normativa superior sobre los juicios de bienformación.
 
-La relación entre ambos contratos se gobierna mediante la regularización por Vía B y los instrumentos de concordancia de `docs/calidad/`.
+La relación entre ambos contratos se documenta mediante la regularización por Vía B y los documentos de concordancia de `docs/calidad/`.
 
 ## 2. Estado vigente
 
-Tras la materialización de `E114`, constan:
+Tras la incorporación de `E215 — GateTableSignatureMismatch` constan:
 
-- **46 códigos** en el catálogo efectivo;
+- **47 códigos** en el catálogo efectivo;
 - **5 coincidencias semánticas por mismo identificador** con la IR v0.2: `E102`, `E104`, `E106`, `E111`, `E406`;
 - **20 códigos** con el mismo identificador y significado distinto;
-- **21 códigos** presentes sólo en la implementación efectiva;
+- **22 códigos** presentes sólo en la implementación efectiva;
 - **13 códigos** presentes sólo en la IR v0.2.
 
-Los recuentos anteriores describen la relación por identificador. La protección funcional de una obligación canónica puede existir mediante otro diagnóstico y se documenta en la tabla de correspondencias funcionales.
+Los recuentos anteriores describen la relación por identificador. Una obligación definida por la IR puede estar protegida mediante otro diagnóstico; esa correspondencia se registra por separado.
 
 ## 3. Precisiones vigentes
 
@@ -24,37 +24,37 @@ Los recuentos anteriores describen la relación por identificador. La protecció
 
 `E113` protege la compatibilidad representable de `J2.3` entre `Edge`, `BridgeSet`, `target_position` y codominio fuente.
 
-`E114` materializa la unicidad de `(target, position)` exigida por `J2.3` en régimen `Simple`. No posee identificador canónico autónomo. No materializa `E204 — MissingConflictOperator` ni la cláusula de régimen `General`.
+`E114` materializa la unicidad de `(target, position)` exigida por `J2.3` en régimen `Simple`. No posee identificador autónomo equivalente en la IR v0.2 y no materializa `E204 — MissingConflictOperator` ni la cláusula de régimen `General`.
 
 `E212` exige que `supervise.meta_eval` sea un `EvalResult`; `E211` mantiene separada la obligación de procedencia desde una célula con rol `Supervisor`.
 
-`E006` cubre tanto la referencia inexistente como la referencia existente cuyo tipo no corresponde a la clase exigida. En `supervise`, esta segunda cláusula protege la correspondencia entre cada constructor de `Supervisable` y el tipo de su contenido: `CellTarget` contiene `EvalResult`, `ComposedTarget` contiene `GateResult` y `SystemTarget` contiene `CompositionGraph`. No sustituye a `E205`, que sigue exigiendo el constructor explícito. No cierra la semántica completa de J3.3.
+`E006` se utiliza tanto para una referencia inexistente como para una referencia existente cuyo tipo no corresponde a la clase exigida. Esta reutilización es funcional, pero el nombre `UndeclaredReference` y su mensaje base describen con mayor precisión el primer supuesto. La diferencia queda registrada como deuda diagnóstica.
 
-`E307` materializa la pertenencia de cada tipo de suceso de `TransitionData.events` al `Horizon` declarado.
+`E307` exige que cada tipo de suceso de `TransitionData.events` pertenezca al `Horizon` declarado.
 
 `E406` coincide con la IR v0.2 para la condición `induced_parameters` no vacío. No acredita por sí solo la suficiencia reconstructiva completa de `J4.3`.
 
-`E011` exige que cada salida literal de `AdmissibilityTable.table` pertenezca a su `output_codomain`. No sustituye ni redefine `E105 — IncompleteAdmissibilityTable` ni `E106 — MissingSemanticRelation` canónicos.
+`E011` exige que cada salida literal de `AdmissibilityTable.table` pertenezca a `output_codomain`.
 
-`E213` y `E214` protegen la legalidad estructural de la proyección de campos de resultados. La IR v0.2 no asigna códigos autónomos a estas dos precondiciones. `E213` rechaza una fuente declarada que no produzca uno de los cinco objetos de resultado proyectables de la superficie vigente; `E214` rechaza un campo ajeno al esquema canónico del resultado correspondiente.
+`E213` y `E214` protegen la legalidad estructural de la proyección de campos de resultados. No ejecutan el resultado ni calculan el valor proyectado.
 
-`E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos de análisis sintáctico. Se emiten únicamente ante la ausencia acreditada de los campos obligatorios `context` y `mechanism` en la superficie de `resolve`. No cierran `E108` canónico ni J1.6, no tipan `Context` ni `Mechanism`, no comparan identificadores con `ResSpec` y no ejecutan `resolve`. El `E206` canónico continúa siendo `EdgeConnectorMismatch` y permanece protegido funcionalmente por `E113`.
+`E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` se emiten ante la ausencia acreditada de los campos obligatorios `context` y `mechanism` en la forma superficial de `resolve`. No cierran J1.6 ni ejecutan una resolución de `U`.
 
-La presencia de un campo en el esquema canónico no implica necesariamente que su nombre sea expresable en la superficie léxica actual. `target`, `context` y `mechanism` son palabras reservadas y no pueden emplearse actualmente como identificadores de campo tras el punto sin que intervenga antes el análisis sintáctico.
+`E215 — GateTableSignatureMismatch` exige que la lista de `EvalResult` recibida por `gate` tenga la misma longitud que `AdmissibilityTable.input_codomains` y que el codominio correspondiente a cada posición coincida exactamente. La comparación es nominal y posicional: dos codominios distintos no se consideran equivalentes por compartir el mismo conjunto de valores. E215 no ejecuta la tabla ni calcula `GateResult.output`.
 
 ## 4. Catálogo efectivo
 
-| Código | Nombre | Capa | Fase | Situación respecto de IR v0.2 | Mensaje base |
+| Código | Nombre | Capa | Fase | Situación respecto de IR v0.2 | Mensaje base o alcance |
 |---|---|---|---|---|---|
 | E001 | `InvalidTriValue` | Definición | `parse` | divergente | Valor ternario no reconocido: se esperaba Zero, One o U |
 | E002 | `InvalidBValue` | Definición | `validate` | divergente | El valor de b debe ser un entero >= 3 |
 | E003 | `NSquaredViolation` | Definición | `lower` | sólo implementación | n debe ser b² |
 | E004 | `EmptyCodomain` | Definición | `validate` | sólo implementación | El codominio declarado no puede estar vacío |
 | E005 | `DuplicateIdentifier` | Definición | `validate` | sólo implementación | Identificador ya declarado en el ámbito actual |
-| E006 | `UndeclaredReference` | Definición | `validate` | sólo implementación | Referencia a identificador no declarado o de tipo estructuralmente incompatible |
+| E006 | `UndeclaredReference` | Definición | `validate` | sólo implementación | Referencia inexistente; se reutiliza también para incompatibilidad estructural de tipo |
 | E007 | `InvalidConnectorMapping` | Definición | `validate` | sólo implementación | El mapeo del conector no cubre todos los valores del codominio fuente |
 | E008 | `ConnectorTargetNotTri` | Definición | `validate` | sólo implementación | El destino del mapeo del conector debe ser un literal ternario |
-| E009 | `TableInputMismatch` | Definición | `validate` | sólo implementación | Las entradas de la tabla no cubren el producto cartesiano de los codominios |
+| E009 | `TableInputMismatch` | Definición | `validate` | sólo implementación | Las filas de la tabla no cubren exactamente el producto cartesiano de los codominios de entrada |
 | E010 | `InvalidRole` | Definición | `parse` | sólo implementación | Rol no reconocido |
 | E011 | `TableOutputNotInCodomain` | Definición | `validate` | sólo implementación | La salida de una fila debe pertenecer al codominio de salida declarado |
 | E101 | `VectorLengthMismatch` | Estado | `validate` | divergente | La longitud del vector no coincide con b² de la `CellSpec` referenciada |
@@ -81,13 +81,14 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 | E212 | `SuperviseMetaNotEvalResult` | Resultado | `validate` | sólo implementación | El primer argumento de `supervise` debe ser un identificador de `EvalResult` |
 | E213 | `ProjectionSourceNotResult` | Resultado | `validate` | sólo implementación | La fuente de una proyección debe ser un objeto de resultado producido por un operador compatible |
 | E214 | `ProjectionFieldNotFound` | Resultado | `validate` | sólo implementación | El campo proyectado debe pertenecer al esquema del tipo de resultado de la fuente |
+| E215 | `GateTableSignatureMismatch` | Resultado | `validate` | sólo implementación | La secuencia de entradas de `gate` debe coincidir, en número y codominio por posición, con los codominios de entrada de la tabla |
 | E301 | `FrameMutationForbidden` | Evolución | `validate` | divergente | No se permite modificar un `Frame` existente |
 | E302 | `TrajectoryMutationForbidden` | Evolución | `validate` | divergente | No se permite modificar, eliminar ni reordenar entradas de una `Trajectory` |
 | E303 | `TransitionDataMissingHorizon` | Evolución | `validate` | divergente | `TransitionData` declarado sin referencia válida a `Horizon` |
 | E304 | `TrajectoryAlternanceViolation` | Evolución | `validate` | divergente | La secuencia de entradas de `Trajectory` no respeta la alternancia constitutiva |
 | E307 | `UndeclaredHorizonEvent` | Evolución | `validate` | sólo implementación | `TransitionData` referencia un tipo de suceso ajeno al `Horizon` declarado |
 | E406 | `InsufficientTransitionData` | Evolución | `validate` | coincidente | `TransitionData` debe especificar al menos un cambio en `induced_parameters` |
-| E401 | `DomainPortContractViolation` | Uso | `validate` | divergente | `Domain` incumple el contrato mínimo de enganche declarado |
+| E401 | `DomainPortContractViolation` | Uso | `validate` | divergente | `Domain` incumple el contrato mínimo de enlace declarado |
 | E402 | `AgentDomainContractViolation` | Uso | `validate` | divergente | `Agent` incompatible con el `Domain` o con la arquitectura declarada |
 | E403 | `QueryContractViolation` | Uso | `validate` | divergente | `QuerySpec` o `QueryContext` incompatibles con el contrato de uso |
 | E501 | `SerializationNonDeterministic` | Serialización/conformidad | `lower` | divergente | La serialización JSON no es determinista |
@@ -97,23 +98,23 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 
 Disponen de punto de emisión directo observable, al menos:
 
-`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E215`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 La batería de conformidad vigente contiene casos con código esperado declarado, al menos, para:
 
-`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E215`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 `E008` permanece en el catálogo por trazabilidad, sin punto de emisión directo ni caso explícito en la batería vigente. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`.
 
 `E004` mantiene punto de emisión directo, pero la superficie v0.1 no permite declarar actualmente un `codomain` vacío y por ello no dispone de un caso superficial específico.
 
-La cobertura de un diagnóstico no equivale por sí sola al cierre completo del juicio canónico relacionado.
+La cobertura de un diagnóstico no equivale por sí sola al cierre completo del juicio de la IR relacionado.
 
-## 6. Proyección de resultados
+## 6. Resultados y límites estructurales
 
-Los campos reconocidos estructuralmente por el cierre E213/E214 son los fijados por la IR v0.2 para los cinco resultados producidos por operadores de superficie:
+Los campos reconocidos por E213/E214 son los fijados por la IR v0.2 para los cinco resultados producidos por operadores de superficie:
 
-| Productor superficial | Tipo de resultado IR | Campos canónicos |
+| Productor superficial | Tipo de resultado IR | Campos |
 |---|---|---|
 | `evaluate` | `EvalResult` | `source_state`, `counts`, `threshold`, `classification`, `criticality`, `deltas` |
 | `gate` | `GateResult` | `inputs`, `table`, `output` |
@@ -123,6 +124,10 @@ Los campos reconocidos estructuralmente por el cierre E213/E214 son los fijados 
 
 `CriticalityResult` no se incorpora porque la superficie v0.1 no dispone de un operador que lo produzca.
 
-## 7. Regla de continuidad
+E215 completa la comprobación estructural de la firma de entrada de `gate`. La determinación de `GateResult.output` permanece fuera del alcance de esta etapa.
 
-Todo cambio del catálogo efectivo deberá mantener sincronizados el punto de emisión, la evidencia ejecutable y los instrumentos públicos de concordancia. La IR v0.2 conserva en todo momento la autoridad normativa superior.
+## 7. Cierre de FFL-B
+
+FFL-B queda cerrado con la evidencia **57/57**, pruebas rápidas de la interfaz de línea de órdenes **3/3** y SEC-0 **3/3**. Las obligaciones restantes que requieren ampliar representación, semántica o ejecución permanecen registradas como deuda y no se consideran resueltas.
+
+Cualquier modificación posterior del catálogo efectivo deberá mantener sincronizados el punto de emisión, la evidencia ejecutable y los documentos públicos de concordancia.

@@ -1,7 +1,7 @@
 # `tests/` — Batería de conformidad SVP → IR
 
 **Fecha de resincronización:** 19 de agosto de 2026  
-**Autor del corpus:** Juan Antonio Lloret Egea  
+**Autor:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
@@ -11,11 +11,11 @@
 
 Esta carpeta contiene la evidencia ejecutable de conformidad de la etapa frontal de referencia del Lenguaje SV.
 
-La cadena comprobada es:
+La secuencia comprobada es:
 
-`.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON canónico`
+`.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON normalizado`
 
-Para cada caso válido, `tests/run_conformance.py` exige que la salida canónica coincida con su archivo `.expected.json`.
+Para cada caso válido, `tests/run_conformance.py` exige que la salida normalizada coincida con su archivo `.expected.json`.
 
 Para cada caso inválido, el mismo ejecutor exige que el procesamiento termine con el código diagnóstico exacto declarado en `EXPECTED_INVALID_CODES`.
 
@@ -31,13 +31,13 @@ Los nombres históricos de los dos últimos ejecutores contienen `smoke`; se con
 
 ## 3. Estado acreditado
 
-Tras el tipado estructural del contenido de `Supervisable`, una verificación independiente en modo de solo lectura confirmó:
+Tras la incorporación de `E215 — GateTableSignatureMismatch` se acredita:
 
-- conformidad: **55/55**;
+- conformidad: **57/57**;
 - pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
 - SEC-0: **3/3**.
 
-La batería principal se compone de **9 casos válidos** y **46 casos inválidos**.
+La batería principal se compone de **9 casos válidos** y **48 casos inválidos**.
 
 ## 4. Casos válidos
 
@@ -55,9 +55,9 @@ La batería principal se compone de **9 casos válidos** y **46 casos inválidos
 
 ## 5. Casos inválidos
 
-La relación normativa de casos inválidos y códigos esperados se mantiene en `EXPECTED_INVALID_CODES`, dentro de `tests/run_conformance.py`. Esa tabla es la fuente ejecutable para la correspondencia caso → diagnóstico.
+La relación completa de casos inválidos y códigos esperados se mantiene en `EXPECTED_INVALID_CODES`, dentro de `tests/run_conformance.py`. Esa tabla es la referencia ejecutable para la correspondencia caso → diagnóstico.
 
-Entre los cierres recientes expresamente cubiertos figuran:
+Entre las comprobaciones recientes figuran:
 
 - `admissibility_table_output_fuera_codominio.svp` → `E011`;
 - `supervise_meta_no_evalresult.svp` → `E212`;
@@ -73,15 +73,28 @@ Entre los cierres recientes expresamente cubiertos figuran:
 - `graph_simple_concurrencia_mismo_puente.svp` → `E114`;
 - `supervise_celltarget_tipo_incorrecto.svp` → `E006`;
 - `supervise_composedtarget_tipo_incorrecto.svp` → `E006`;
-- `supervise_systemtarget_tipo_incorrecto.svp` → `E006`.
+- `supervise_systemtarget_tipo_incorrecto.svp` → `E006`;
+- `gate_numero_entradas_incompatible_con_tabla.svp` → `E215`;
+- `gate_codominio_posicional_incompatible_con_tabla.svp` → `E215`.
 
-La cobertura de un código mediante un caso explícito no implica por sí sola la cobertura exhaustiva de toda la obligación canónica relacionada.
+La cobertura de un código mediante un caso explícito no implica por sí sola la cobertura exhaustiva de todo el juicio de la IR relacionado.
 
-## 6. Límites
+## 6. Alcance de E215
+
+E215 comprueba la correspondencia entre la secuencia de `EvalResult` recibida por `gate` y `AdmissibilityTable.input_codomains`:
+
+- igual número de entradas;
+- igual codominio nominal en cada posición.
+
+La comprobación posicional distingue codominios diferentes aunque contengan el mismo conjunto de valores. También se verificó de forma adicional la ruta de una evaluación procedente de `CoupledState`.
+
+E215 no ejecuta la tabla ni calcula `GateResult.output`.
+
+## 7. Límites
 
 Esta batería comprueba la conformidad de la etapa frontal y su descenso a IR. No constituye por sí sola una ejecución material del sistema ni acredita capacidades de infraestructura de ejecución que no estén implementadas.
 
-La convergencia completa entre la IR canónica y el catálogo diagnóstico efectivo se gobierna en `docs/calidad/` y `docs/referencia/`.
+FFL-B queda cerrado con esta evidencia acumulada. FFL-C, FFL-D y FFL-E permanecen pendientes hasta decisión expresa.
 
 ---
 

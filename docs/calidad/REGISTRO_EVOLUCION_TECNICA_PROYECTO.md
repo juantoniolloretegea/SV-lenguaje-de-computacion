@@ -14,7 +14,7 @@ La continuidad documental se organiza así:
 
 ## 2. Tabla del tramo vigente
 
-| ID | Fecha | Hora | Tipo | Frente / fase | Estado |
+| ID | Fecha | Hora | Tipo | Ámbito / fase | Estado |
 |---|---|---|---|---|---|
 | RETP-2026-048 | 18/08/2026 | 11:34:13 | REAPERTURA_GOBERNADA | Lenguaje SV / Ruta A / retorno a FFL-A | cerrado |
 | RETP-2026-049 | 18/08/2026 | 11:58:10 | CIERRE_BLOQUE_Y_APERTURA_SECUENCIAL | Lenguaje SV / FFL-A → FFL-B | cerrado |
@@ -35,13 +35,15 @@ La continuidad documental se organiza así:
 | RETP-2026-064 | 19/08/2026 | 21:31:26 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / régimen `Simple` / E114 | cerrado |
 | RETP-2026-065 | 19/08/2026 | 21:50:14 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J3.3 / `Supervisable` | cerrado |
 | RETP-2026-066 | 19/08/2026 | NO_CONSTA | SINCRONIZACION_REGISTRAL_Y_CALIDAD | Lenguaje SV / calidad / actualización de registros | cerrado |
+| RETP-2026-067 | 19/08/2026 | 22:31:48 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J3.2 parcial / firma de `gate` / E215 | cerrado |
+| RETP-2026-068 | 19/08/2026 | NO_CONSTA | CIERRE_BLOQUE_Y_SINCRONIZACION_REGISTRAL | Lenguaje SV / cierre de FFL-B / deuda técnica delimitada | cerrado |
 
 ## 3. Entradas detalladas
 
 ### RETP-2026-048 — Reapertura por Ruta A
 
 - **Hecho:** se levanta la pausa preventiva del 16/08/2026 en el alcance autorizado y FFL-A pasa a ser la prioridad inmediata.
-- **Fundamento:** las comprobaciones previas sobre continuidad semántica y arquitectónica no muestran un bloqueo del frente técnico inmediato.
+- **Fundamento:** las comprobaciones previas sobre continuidad semántica y arquitectónica no muestran un bloqueo del ámbito técnico inmediato.
 - **Decisión:** reabrir únicamente desde FFL-A y mantener sin apertura los bloques posteriores no autorizados.
 - **Estado:** cerrado.
 
@@ -170,11 +172,28 @@ La continuidad documental se organiza así:
 - **Decisión:** mantener FFL-B como único bloque técnico activo y FFL-C, FFL-D y FFL-E en estado pendiente hasta decisión expresa.
 - **Estado:** cerrado.
 
+### RETP-2026-067 — Firma posicional de `gate` / E215
+
+- **Hecho:** `E215 — GateTableSignatureMismatch` exige que la secuencia de `EvalResult` recibida por `gate` coincida, en número y codominio por posición, con `AdmissibilityTable.input_codomains`.
+- **Fundamento:** la IR v0.2 conserva la firma ordenada de codominios de entrada y la implementación ya permite obtener el codominio de cada evaluación desde `CellState` o `CoupledState`.
+- **Evidencia:** commit `15398f3441c80168f5d09866b0cba4e74221a6aa`; conformidad **57/57**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3**; dos casos negativos específicos con E215 y comprobaciones positivas adicionales.
+- **Límite:** la validación no ejecuta la tabla ni calcula `GateResult.output`.
+- **Decisión:** cerrar únicamente la firma estructural de entrada de `gate`.
+- **Estado:** cerrado.
+
+### RETP-2026-068 — Cierre de FFL-B
+
+- **Hecho:** FFL-B se cierra tras E215 y la revisión final de las obligaciones restantes.
+- **Fundamento:** las obligaciones todavía abiertas identificadas exigen ampliar representación, semántica o ejecución: `ConflictOperator` en régimen `General`, procedencia completa de `CoupledState`, suficiencia reconstructiva de `TransitionData`, producción de `CriticalityResult`, ejecución de `GateResult.output` y semántica ejecutiva completa de `SupervisionResult`.
+- **Evidencia:** base funcional `15398f3441c80168f5d09866b0cba4e74221a6aa`; conformidad **57/57**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**; deuda viva y tablas de correspondencias actualizadas.
+- **Decisión:** cerrar FFL-B con deuda técnica explícita y mantener FFL-C, FFL-D y FFL-E en estado pendiente. Cualquier reapertura o apertura posterior requerirá decisión expresa y fundamento técnico identificable.
+- **Estado:** cerrado.
+
 ## 4. Estado de continuidad
 
-FFL-B continúa como único bloque técnico activo. FFL-C, FFL-D y FFL-E permanecen sin apertura hasta decisión expresa posterior.
+FFL-A y FFL-B están cerrados. FFL-C, FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
 
-La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`.
+La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md` y no invalida el cierre de FFL-B.
 
 ## 5. Numeración registral
 
