@@ -1,0 +1,9 @@
+-- Debe fallar con E206: resolve reconoce with, pero el campo obligatorio context no ocupa su posición.
+
+res_spec RS1 {
+  context: ContextoClinico;
+  mechanism: RevisionExperto;
+  mapping: MapeoResolucion;
+}
+
+let RR1 = resolve(U, with: RS1, mechanism: M1);

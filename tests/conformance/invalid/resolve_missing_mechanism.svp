@@ -1,0 +1,9 @@
+-- Debe fallar con E207: resolve reconoce context, pero el campo obligatorio mechanism no ocupa su posición.
+
+res_spec RS1 {
+  context: ContextoClinico;
+  mechanism: RevisionExperto;
+  mapping: MapeoResolucion;
+}
+
+let RR1 = resolve(U, with: RS1, context: Ctx1);

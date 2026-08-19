@@ -46,6 +46,8 @@ EXPECTED_INVALID_CODES = {
     "projection_source_no_resultado.svp": "E213",
     "projection_campo_inexistente.svp": "E214",
     "query_context_opaco.svp": "E204",
+    "resolve_missing_context.svp": "E206",
+    "resolve_missing_mechanism.svp": "E207",
     "supervise_target_opaco.svp": "E205",
     "supervise_undeclared_target.svp": "E006",
     "supervise_wrong_role.svp": "E211",

@@ -647,12 +647,46 @@ class Parser:
         self._expect(TT.COMMA)
         self._kw_field(TT.KW_WITH)
         ws = self._expect_id()
-        self._expect(TT.COMMA)
-        self._kw_field(TT.KW_CONTEXT)
-        ctx = self._expect_id()
-        self._expect(TT.COMMA)
-        self._kw_field(TT.KW_MECHANISM)
-        mech = self._expect_id()
+
+        # E206: ausencia real del campo obligatorio context.
+        # Puntuación malformada o token inesperado permanece en E001.
+        if self._peek(TT.KW_CONTEXT):
+            self._expect(TT.COMMA)
+            self._kw_field(TT.KW_CONTEXT)
+            ctx = self._expect_id()
+        elif self._match(TT.COMMA):
+            t = self._cur()
+            if t.type in (TT.KW_MECHANISM, TT.RPAREN):
+                raise SVPError(E206, t.line, t.col,
+                               "Falta el campo obligatorio 'context' en resolve")
+            self._kw_field(TT.KW_CONTEXT)
+            ctx = self._expect_id()
+        else:
+            t = self._cur()
+            if t.type in (TT.KW_MECHANISM, TT.RPAREN):
+                raise SVPError(E206, t.line, t.col,
+                               "Falta el campo obligatorio 'context' en resolve")
+            self._expect(TT.COMMA)
+
+        # E207: context reconocido y ausencia real del campo obligatorio mechanism.
+        if self._peek(TT.KW_MECHANISM):
+            self._expect(TT.COMMA)
+            self._kw_field(TT.KW_MECHANISM)
+            mech = self._expect_id()
+        elif self._match(TT.COMMA):
+            t = self._cur()
+            if t.type == TT.RPAREN:
+                raise SVPError(E207, t.line, t.col,
+                               "Falta el campo obligatorio 'mechanism' en resolve")
+            self._kw_field(TT.KW_MECHANISM)
+            mech = self._expect_id()
+        else:
+            t = self._cur()
+            if t.type == TT.RPAREN:
+                raise SVPError(E207, t.line, t.col,
+                               "Falta el campo obligatorio 'mechanism' en resolve")
+            self._expect(TT.COMMA)
+
         self._expect(TT.RPAREN)
         self._expect(TT.SEMICOLON)
         return ResolveCmd(name=name, with_spec=ws, context=ctx, mechanism=mech, loc=loc)
