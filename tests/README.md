@@ -31,13 +31,13 @@ Los nombres históricos de los dos últimos ejecutores contienen `smoke`; se con
 
 ## 3. Estado acreditado
 
-Tras el cierre de los campos obligatorios de `resolve` mediante E206/E207 efectivos, una verificación independiente en modo de solo lectura confirmó:
+Tras la materialización de `E114 — SimpleRegimeConcurrency`, una verificación independiente en modo de solo lectura confirmó:
 
-- conformidad: **50/50**;
+- conformidad: **52/52**;
 - pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
 - SEC-0: **3/3**.
 
-La batería principal se compone de **9 casos válidos** y **41 casos inválidos**.
+La batería principal se compone de **9 casos válidos** y **43 casos inválidos**.
 
 ## 4. Casos válidos
 
@@ -68,7 +68,9 @@ Entre los cierres recientes expresamente cubiertos figuran:
 - `projection_campo_inexistente.svp` → `E214`;
 - `projection_undeclared_source.svp` → `E006`;
 - `resolve_missing_context.svp` → `E206`;
-- `resolve_missing_mechanism.svp` → `E207`.
+- `resolve_missing_mechanism.svp` → `E207`;
+- `graph_conflicts_fuera_de_v0_1.svp` → `E001`;
+- `graph_simple_concurrencia_mismo_puente.svp` → `E114`.
 
 La cobertura de un código mediante un caso explícito no implica por sí sola la cobertura exhaustiva de toda la obligación canónica relacionada.
 

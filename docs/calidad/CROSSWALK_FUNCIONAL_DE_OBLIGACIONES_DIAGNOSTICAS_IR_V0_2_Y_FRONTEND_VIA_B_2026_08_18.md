@@ -42,7 +42,7 @@ La ausencia del identificador canónico no implica por sí sola ausencia de prot
 | E201 | `VectorLengthMismatch` | `E101 — VectorLengthMismatch` | CUBIERTO_OTRO_ID | Se comprueba en `CellState` y en ambos vectores de `CoupledState`. |
 | E202 | `IllegalBridgeUpdate` | `E112 — IllegalBridgeUpdate` | PARCIAL | La cláusula posicional está materializada; la procedencia desde un `Connector` permanece abierta. |
 | E203 | `CyclicCompositionGraph` | `E103 — GraphCycleDetected` | CUBIERTO_OTRO_ID | Detección directa y cobertura explícita. |
-| E204 | `MissingConflictOperator` | no existe comprobación de concurrencia por `(target, position)` | NO_MATERIALIZADO | El E204 efectivo protege otra obligación. |
+| E204 | `MissingConflictOperator` | no existe `ConflictOperator` ni comprobación de RG1 | NO_MATERIALIZADO | El E204 efectivo protege otra obligación. La unicidad de `(target, position)` en régimen Simple se cubre por `E114` y no materializa esta obligación. |
 | E205 | `UndeclaredRegime` | el análisis sintáctico exige `regime` y restringe sus valores | CUBIERTO_ESTRUCTURAL | La obligación se impone por forma. |
 | E206 | `EdgeConnectorMismatch` | `E113 — EdgeConnectorMismatch`, con `E104/E007` para el conector | CUBIERTO_OTRO_ID | Se protege la compatibilidad contextual representada. |
 | E301 | `InconsistentCounts` | sin ejecución material completa de `EvalResult.counts` | NO_MATERIALIZADO | El E301 efectivo protege otra obligación. |
@@ -87,8 +87,12 @@ Esta protección es estructural. No ejecuta el resultado ni calcula el valor pro
 
 Los campos canónicos `target`, `context` y `mechanism` están afectados por una restricción léxica independiente: son palabras reservadas y no pueden escribirse actualmente como identificadores después del punto. Su reconocimiento en el esquema no equivale a disponibilidad superficial.
 
+### 3.4. Unicidad de `(target, position)` en régimen Simple
+
+J2.3 exige que, en régimen Simple, cada par `(target, position)` reciba a lo sumo una arista. `E114 — SimpleRegimeConcurrency` materializa esa cláusula sobre el grafo ya comprobado en sus aristas individuales y en su aciclicidad. No existe código canónico autónomo para ella. No se identifica con `E204 — MissingConflictOperator`, que permanece `NO_MATERIALIZADO` porque la superficie v0.1 no representa `ConflictOperator` ni la concurrencia de régimen General.
+
 ## 4. Efecto sobre FFL-A y FFL-B
 
 FFL-A admite deuda localizada y gobernada bajo Vía B. FFL-B puede reducir esa deuda únicamente mediante condiciones representables, fundamento normativo suficiente, diagnóstico inequívoco y evidencia específica.
 
-Los cierres E112, E113, E212/E211, E307, E406, E011, E213/E214 y E206/E207 efectivos no autorizan por sí mismos la apertura de otros bloques ni convierten protecciones parciales en cierres completos.
+Los cierres E112, E113, E114, E212/E211, E307, E406, E011, E213/E214 y E206/E207 efectivos no autorizan por sí mismos la apertura de otros bloques ni convierten protecciones parciales en cierres completos.

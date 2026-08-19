@@ -8,12 +8,12 @@ La relación entre ambos contratos se gobierna mediante la regularización por V
 
 ## 2. Estado vigente
 
-Tras la materialización de `E213` y `E214`, constan:
+Tras la materialización de `E114`, constan:
 
-- **45 códigos** en el catálogo efectivo;
+- **46 códigos** en el catálogo efectivo;
 - **5 coincidencias semánticas por mismo identificador** con la IR v0.2: `E102`, `E104`, `E106`, `E111`, `E406`;
 - **20 códigos** con el mismo identificador y significado distinto;
-- **20 códigos** presentes sólo en la implementación efectiva;
+- **21 códigos** presentes sólo en la implementación efectiva;
 - **13 códigos** presentes sólo en la IR v0.2.
 
 Los recuentos anteriores describen la relación por identificador. La protección funcional de una obligación canónica puede existir mediante otro diagnóstico y se documenta en la tabla de correspondencias funcionales.
@@ -23,6 +23,8 @@ Los recuentos anteriores describen la relación por identificador. La protecció
 `E112` materializa la restricción posicional verificable de `J2.2`; no acredita la procedencia completa de cada actualización desde un `Connector`.
 
 `E113` protege la compatibilidad representable de `J2.3` entre `Edge`, `BridgeSet`, `target_position` y codominio fuente.
+
+`E114` materializa la unicidad de `(target, position)` exigida por `J2.3` en régimen `Simple`. No posee identificador canónico autónomo. No materializa `E204 — MissingConflictOperator` ni la cláusula de régimen `General`.
 
 `E212` exige que `supervise.meta_eval` sea un `EvalResult`; `E211` mantiene separada la obligación de procedencia desde una célula con rol `Supervisor`.
 
@@ -62,6 +64,7 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 | E111 | `UnorderedCodomain` | Estado | `validate` | coincidente | Codominio usado en compuerta sin orden documentado |
 | E112 | `IllegalBridgeUpdate` | Estado | `validate` | sólo implementación | `CoupledState` modifica una posición fuera del `BridgeSet` declarado |
 | E113 | `EdgeConnectorMismatch` | Estado | `validate` | sólo implementación | `Edge` incompatible con `BridgeSet`, `target_position` o codominio fuente declarados |
+| E114 | `SimpleRegimeConcurrency` | Estado | `validate` | sólo implementación | El régimen Simple no admite más de una arista sobre la misma posición puente de una célula receptora |
 | E201 | `LiteralResultForbidden` | Resultado | `parse` | divergente | No se permite construir literales de objetos de resultado |
 | E202 | `GateInputNotEvalResult` | Resultado | `validate` | divergente | Los argumentos de `gate` deben ser identificadores de `EvalResult` |
 | E203 | `GateMissingTable` | Resultado | `parse` | divergente | `gate` invocado sin tabla de admisibilidad nombrada |
@@ -92,11 +95,11 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 
 Disponen de punto de emisión directo observable, al menos:
 
-`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 La batería de conformidad vigente contiene casos con código esperado declarado, al menos, para:
 
-`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E114`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 `E008` permanece en el catálogo por trazabilidad, sin punto de emisión directo ni caso explícito en la batería vigente. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`.
 

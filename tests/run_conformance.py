@@ -38,6 +38,7 @@ EXPECTED_INVALID_CODES = {
     "duplicate_identifier.svp": "E005",
     "compose_cycle_graph.svp": "E103",
     "graph_conflicts_fuera_de_v0_1.svp": "E001",
+    "graph_simple_concurrencia_mismo_puente.svp": "E114",
     "gate_input_no_evalresult.svp": "E202",
     "gate_undeclared_input.svp": "E006",
     "invalid_role_literal.svp": "E010",

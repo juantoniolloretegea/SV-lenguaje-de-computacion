@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011,
-                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E213, E214,
+                         E101, E102, E104, E105, E112, E113, E114, E202, E211, E212, E213, E214,
                          E303, E304, E307, E406, E401, E402, E403)
 
 
@@ -324,6 +324,16 @@ class Validator:
             visited.add(v)
         for v in node.nodes:
             dfs(v)
+
+        if node.regime == "Simple":
+            seen = {}
+            for e in node.edges:
+                key = (e.target, e.position)
+                if key in seen:
+                    raise SVPError(
+                        E114, e.loc.line, e.loc.col,
+                        f"concurrencia sobre ({e.target!r}, {e.position}) en régimen Simple")
+                seen[key] = e
 
     def _validate_horizon(self, node: HorizonDecl):
         if not node.architecture:

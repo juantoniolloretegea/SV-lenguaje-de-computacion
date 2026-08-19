@@ -14,13 +14,13 @@ La clasificación por identificador se complementa con la tabla de correspondenc
 El balance vigente por identificador es:
 
 - **IR v0.2:** 38 códigos;
-- **catálogo efectivo:** 45 códigos;
+- **catálogo efectivo:** 46 códigos;
 - **coincidencia semántica por mismo identificador:** 5 (`E102`, `E104`, `E106`, `E111`, `E406`);
 - **mismo identificador con significado distinto:** 20;
 - **sólo IR:** 13;
-- **sólo implementación:** 20.
+- **sólo implementación:** 21.
 
-La resincronización incorpora expresamente `E213 — ProjectionSourceNotResult` y `E214 — ProjectionFieldNotFound`, y deja constancia de que `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` disponen ya de emisión directa y de cobertura explícita. Los recuentos por identificador no cambian: ambos códigos ya pertenecían al catálogo efectivo.
+La resincronización incorpora `E114 — SimpleRegimeConcurrency` como diagnóstico efectivo de la unicidad de `(target, position)` en régimen `Simple`. Los recuentos por identificador canónico no cambian: `E114` no posee equivalente autónomo en la IR v0.2 y no materializa `E204 — MissingConflictOperator`.
 
 ## 3. Coincidencias por mismo identificador
 
@@ -48,15 +48,16 @@ La existencia de una ruta alternativa no autoriza a renumerar ni a declarar equi
 
 ## 5. Códigos sólo presentes en la implementación
 
-Constan **20**:
+Constan **21**:
 
-`E003`, `E004`, `E005`, `E006`, `E007`, `E008`, `E009`, `E010`, `E011`, `E112`, `E113`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E307`.
+`E003`, `E004`, `E005`, `E006`, `E007`, `E008`, `E009`, `E010`, `E011`, `E112`, `E113`, `E114`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E307`.
 
 ### 5.1. Materializaciones recientes bajo Vía B
 
 - `E011` exige que cada salida literal de `AdmissibilityTable.table` pertenezca a `output_codomain`;
 - `E112` protege la restricción posicional verificable de J2.2;
 - `E113` protege la compatibilidad contextual representable de J2.3;
+- `E114` protege la unicidad de `(target, position)` en régimen `Simple` exigida por J2.3; no materializa `E204` canónico ni RG1;
 - `E212` exige `supervise.meta_eval : EvalResult`;
 - `E211` mantiene separada la procedencia desde rol `Supervisor`;
 - `E307` exige que los tipos de suceso de `TransitionData` pertenezcan al `Horizon` declarado;
