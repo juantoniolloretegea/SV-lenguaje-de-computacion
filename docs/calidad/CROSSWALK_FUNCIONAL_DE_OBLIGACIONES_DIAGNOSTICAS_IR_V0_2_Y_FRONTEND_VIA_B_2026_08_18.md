@@ -1,6 +1,7 @@
 # Tabla de correspondencias funcionales de obligaciones diagnósticas IR v0.2 ↔ etapa frontal bajo Vía B
 
-**Fecha:** 18/08/2026  
+**Fecha de origen:** 18/08/2026  
+**Última resincronización:** 19/08/2026  
 **Ámbito:** FFL-A — contrato diagnóstico  
 **Autoridad superior:** `IR_CANONICA_BIENFORMACION_SV_v0_2.md`  
 **Contrato efectivo subordinado:** `docs/referencia/ERRORES_CANONICOS_SV_v0_2.md` + `src/svp_errors.py`
@@ -72,6 +73,12 @@ La ausencia del identificador canónico no equivale por sí sola a ausencia de p
 
 P0-B materializa esa precondición mediante `E212 — SuperviseMetaNotEvalResult`. La comprobación posterior de procedencia desde una célula con rol `Supervisor` permanece bajo `E211 — SuperviseMetaNotSupervisor` y cubre tanto la ruta simple `EvalCmd → CellState → CellSpec` como la ruta acoplada `EvalCmd → CoupledState → CoupledSpec → CellSpec` recibida por P0-A. Esta precisión no modifica ni absorbe `E306`.
 
+### 3.2. Obligación tipada de `AdmissibilityTable` sin código canónico autónomo
+
+La definición de `AdmissibilityTable` en la IR v0.2 establece `table : [Codomain] -> Codomain`. Por tanto, cada salida literal de una fila debe pertenecer al `output_codomain` declarado. J1.4 añade obligaciones de completitud, determinismo, asimetría documentada cuando exista y relación semántica previa, pero la tabla canónica de errores no asigna un identificador autónomo a la pertenencia de la salida al codominio declarado.
+
+`E011 — TableOutputNotInCodomain` materializa únicamente esa condición de tipado bajo Vía B. No se identifica con `E105 — IncompleteAdmissibilityTable`, que continúa referido a la completitud, ni con `E106 — MissingSemanticRelation`. La batería distingue `E011` de `E009 — TableInputMismatch` mediante casos independientes.
+
 ## 4. Riesgos de interpretación
 
 La divergencia de numeración no debe ocultar cuatro situaciones distintas:
@@ -93,10 +100,12 @@ Las situaciones tercera y cuarta deben permanecer visibles como deuda de impleme
 
 `E406` constituye una convergencia exacta por identificador para la cláusula de `J4.3` que exige al menos un elemento en `induced_parameters`. Esa convergencia no se extiende a la suficiencia para reconstruir el operador inducido.
 
+`E011` protege la pertenencia de las salidas literales de `AdmissibilityTable` a `output_codomain`. No constituye por sí solo cierre completo de J1.4 ni prueba de ejecución material de `GateResult`.
+
 ## 5. Efecto sobre FFL-A y FFL-B
 
 FFL-A no exigía implementar de inmediato todos los diagnósticos de la IR. Su criterio de cierre admitió deuda **localizada, gobernada y explicitada**.
 
 Esta tabla permite distinguir qué divergencias son numéricas, cuáles dependen de la alcanzabilidad de la superficie y cuáles representan una obligación canónica aún no materializada.
 
-Los cierres posteriores de FFL-B deberán actualizar esta tabla cuando cambie materialmente la protección de una obligación canónica. Ninguna actualización podrá convertir una protección parcial en cierre completo sin evidencia específica.
+Los cierres posteriores de FFL-B deberán actualizar esta tabla cuando cambie materialmente la protección de una obligación canónica o de una condición tipada ya fijada por la IR. Ninguna actualización podrá convertir una protección parcial en cierre completo sin evidencia específica.

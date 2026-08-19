@@ -26,6 +26,7 @@ La lectura de continuidad es:
 | RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
+| RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -33,7 +34,7 @@ La lectura de continuidad es:
 
 - **Hecho:** se levanta la pausa preventiva del 16/08/2026 en el alcance autorizado y se reabre el frente técnico con FFL-A como prioridad inmediata.
 - **Fundamento:** cierre funcional del antiguo programa de gobierno determinista, publicación y cierre de la Dinámica del Suceso y microauditoría Potencial/Tesauro resuelta por Ruta A.
-- **Evidencia:** acta pública de reapertura incorporada a `main` y comprobación del repositorio fresco.
+- **Evidencia:** acta pública de reapertura incorporada a `main` y comprobación del repositorio vigente.
 - **Decisión:** reabrir únicamente desde FFL-A; mantener cerradas las compuertas independientes no autorizadas.
 - **Estado:** cerrado.
 
@@ -48,7 +49,7 @@ La lectura de continuidad es:
 ### RETP-2026-050 — Regla de materialización diagnóstica de FFL-B
 
 - **Hecho:** se fija que FFL-B sólo materializará obligaciones ya representables y sustentadas por fundamento expreso, ruta diagnóstica inequívoca y prueba trazable.
-- **Fundamento:** IR canónica v0.2, Vía B, acta de reapertura y procedimiento de auditoría técnica.
+- **Fundamento:** IR canónica v0.2, Vía B, acta de reapertura y procedimiento de verificación técnica.
 - **Decisión:** trabajar mediante unidades técnicas acotadas; cada nuevo diagnóstico efectivo deberá sincronizar código, emisión, prueba, catálogo, matriz, correspondencias funcionales y deuda viva.
 - **Estado:** cerrado.
 
@@ -77,7 +78,7 @@ La lectura de continuidad es:
 ### RETP-2026-054 — Incidencia técnica y reversión del primer intento E406
 
 - **Hecho:** el primer intento de materializar E406 se revirtió al comprobarse que la comparación de cambios excedía el alcance del juicio y reordenaba código ajeno a la modificación necesaria.
-- **Fundamento:** disciplina de cambios mínimos y procedimiento de auditoría técnica.
+- **Fundamento:** disciplina de cambios mínimos y procedimiento de verificación técnica.
 - **Decisión:** restaurar íntegramente el estado anterior y mantener E406 pendiente hasta una nueva revisión con alcance estrictamente acotado.
 - **Estado:** cerrado.
 
@@ -85,7 +86,7 @@ La lectura de continuidad es:
 
 - **Hecho:** `evaluate` vuelve a aceptar `CellState` y `CoupledState`, mientras `Frame.cell_states` conserva exclusivamente `CoupledState`.
 - **Fundamento:** gramática v0.1, adenda técnica a la IR v0.2 y matemática de composición intercelular.
-- **Evidencia:** verificación externa de la rama correspondiente con conformidad **42/42**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y aceptación de los programas discriminantes.
+- **Evidencia:** verificación independiente con conformidad **42/42**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y aceptación de los programas discriminantes.
 - **Decisión:** preservar la distinción entre estado simple y acoplado y separar el juicio de `supervise` para P0-B.
 - **Estado:** cerrado.
 
@@ -93,7 +94,7 @@ La lectura de continuidad es:
 
 - **Hecho:** `supervise` exige que `meta_eval` sea un `EvalResult`; `E212` protege el tipo y `E211` protege la procedencia desde una célula con rol `Supervisor`, también por la ruta acoplada.
 - **Fundamento:** J3.3, P0-A y Vía B.
-- **Evidencia:** verificación externa con conformidad **44/44**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y emisión exacta de E212/E211 en los dos casos negativos específicos.
+- **Evidencia:** verificación independiente con conformidad **44/44**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y emisión exacta de E212/E211 en los dos casos negativos específicos.
 - **Decisión:** declarar estabilizado P0 en sus dos partes.
 - **Estado:** cerrado.
 
@@ -101,9 +102,18 @@ La lectura de continuidad es:
 
 - **Hecho:** `E406 — InsufficientTransitionData` rechaza `TransitionData` con `induced_parameters` vacío.
 - **Fundamento:** J4.3 y tabla canónica de errores de la IR v0.2, que asignan E406 a esa condición exacta.
-- **Evidencia:** verificación externa con conformidad **45/45**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E406, conservación del caso válido y precedencia de E307.
+- **Evidencia:** verificación independiente con conformidad **45/45**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E406, conservación del caso válido y precedencia de E307.
 - **Límite:** no se acredita por este cierre la suficiencia de una lista no vacía para reconstruir el operador inducido.
 - **Decisión:** cerrar exclusivamente la cláusula de no-vaciedad y no abrir automáticamente otro juicio técnico.
+- **Estado:** cerrado.
+
+### RETP-2026-058 — J1.4 / E011 / codominio de salida de `AdmissibilityTable`
+
+- **Hecho:** `E011 — TableOutputNotInCodomain` rechaza una fila de `AdmissibilityTable` cuya salida literal no pertenece al `output_codomain` declarado.
+- **Fundamento:** la IR v0.2 tipa `AdmissibilityTable.table` como función hacia el codominio de salida; la condición estaba representada por los datos existentes y no requería modificar gramática ni IR.
+- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **46/46**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E011, conservación de E009 para tabla incompleta y aceptación de `gate_table.svp`.
+- **Límite:** E011 no equivale a E105 ni E106 canónicos, no cierra todo J1.4 y no acredita ejecución material de `GateResult`.
+- **Decisión:** cerrar exclusivamente la pertenencia de las salidas literales al `output_codomain` declarado y conservar abiertas las restantes obligaciones que no estén acreditadas por otra ruta.
 - **Estado:** cerrado.
 
 ## 4. Autoridad registral

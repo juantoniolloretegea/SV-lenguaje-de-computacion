@@ -32,9 +32,10 @@ Los cierres técnicos más recientes son:
 
 - `ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md` — P0-A;
 - `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
-- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — materialización mínima de E406.
+- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — materialización mínima de E406;
+- `ACTA_TECNICA_DE_CIERRE_FFL_B_E011_CODOMINIO_DE_SALIDA_DE_ADMISSIBILITYTABLE_2026_08_19.md` — pertenencia de las salidas literales de `AdmissibilityTable` a su `output_codomain`.
 
-La evidencia acumulada al cierre de E406 acredita una batería de conformidad de **45/45**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre. Estas cifras describen el último cierre acreditado y no autorizan por sí solas la apertura del siguiente juicio técnico.
+La evidencia acumulada al cierre de E011 acredita una batería de conformidad de **46/46**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre. Estas cifras describen el último cierre acreditado y no autorizan por sí solas la apertura del siguiente juicio técnico.
 
 ## 4. Contrato diagnóstico y correspondencia funcional
 
@@ -61,14 +62,6 @@ Los instrumentos principales son:
 - `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`;
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
-
-### Barridos y partes de trabajo
-
-- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md`;
-- `REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.csv`;
-- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`;
-- `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv`;
-- `ACTA_DE_ACTIVACION_DEL_CONTROL_DE_BARRIDOS_Y_PARTES_POR_AGENTE_2026_03_23.md`.
 
 ## 6. Vigilancia doctrinal y continuidad
 
