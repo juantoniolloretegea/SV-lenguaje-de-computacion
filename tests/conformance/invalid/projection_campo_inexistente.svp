@@ -1,0 +1,10 @@
+-- Debe fallar con E214: la fuente es un ResolutionRecord, pero el campo no existe.
+
+res_spec RS1 {
+  context: ContextoClinico;
+  mechanism: RevisionExperto;
+  mapping: MapeoResolucion;
+}
+
+let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
+let X = RR1.campo_inexistente;

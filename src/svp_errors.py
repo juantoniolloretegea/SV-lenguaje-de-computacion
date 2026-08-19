@@ -176,6 +176,14 @@ E212 = SVPErrorDef("E212", "SuperviseMetaNotEvalResult",
     "El primer argumento de supervise debe ser un identificador de EvalResult",
     ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
 
+E213 = SVPErrorDef("E213", "ProjectionSourceNotResult",
+    "La fuente de una proyección debe ser un objeto de resultado producido por un operador compatible",
+    ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
+
+E214 = SVPErrorDef("E214", "ProjectionFieldNotFound",
+    "El campo proyectado no pertenece al esquema del tipo de resultado de la fuente",
+    ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
+
 # ── Capa 3 — Evolución ───────────────────────────────────────────────
 
 E301 = SVPErrorDef("E301", "FrameMutationForbidden",
@@ -232,7 +240,7 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 ERRORS = {e.code: e for e in [
     E001, E002, E003, E004, E005, E006, E007, E008, E009, E010, E011,
     E101, E102, E103, E104, E105, E106, E111, E112, E113,
-    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212,
+    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212, E213, E214,
     E301, E302, E303, E304, E307, E406,
     E401, E402, E403,
     E501, E507,

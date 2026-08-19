@@ -43,6 +43,8 @@ EXPECTED_INVALID_CODES = {
     "invalid_tri_literal.svp": "E001",
     "max_keyword.svp": "E210",
     "projection_undeclared_source.svp": "E006",
+    "projection_source_no_resultado.svp": "E213",
+    "projection_campo_inexistente.svp": "E214",
     "query_context_opaco.svp": "E204",
     "supervise_target_opaco.svp": "E205",
     "supervise_undeclared_target.svp": "E006",

@@ -1,0 +1,4 @@
+-- Debe fallar con E213: la fuente existe, pero no es un objeto de resultado proyectable.
+
+codomain K1 = { A };
+let X = K1.values;

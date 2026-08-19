@@ -13,8 +13,8 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011,
-                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E303, E304, E307, E406,
-                         E401, E402, E403)
+                         E101, E102, E104, E105, E112, E113, E202, E211, E212, E213, E214,
+                         E303, E304, E307, E406, E401, E402, E403)
 
 
 class Validator:
@@ -549,6 +549,24 @@ class Validator:
 
     def _validate_projection(self, node: ProjectionCmd):
         self._require_ref(node.source, node.loc)
+
+        result_fields = {
+            "EvalCmd": {"source_state", "counts", "threshold", "classification", "criticality", "deltas"},
+            "GateCmd": {"inputs", "table", "output"},
+            "ResolveCmd": {"parameter", "previous", "resolved_to", "context", "mechanism"},
+            "QueryCmd": {"response", "justification", "metadata"},
+            "SuperviseCmd": {"meta_eval", "target", "verdict"},
+        }
+        source_type = self.symbol_types[node.source]
+        allowed_fields = result_fields.get(source_type)
+        if allowed_fields is None:
+            raise SVPError(
+                E213, node.loc.line, node.loc.col,
+                f"La fuente {node.source!r} es {source_type}, no un objeto de resultado proyectable")
+        if node.field_name not in allowed_fields:
+            raise SVPError(
+                E214, node.loc.line, node.loc.col,
+                f"El campo {node.field_name!r} no pertenece al esquema de {source_type} para {node.source!r}")
 
     def _validate_compose(self, node: ComposeCmd):
         self._require_ref(node.graph, node.loc, "GraphDecl")
