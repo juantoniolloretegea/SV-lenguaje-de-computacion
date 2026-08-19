@@ -71,6 +71,10 @@ La ausencia del identificador canónico no implica por sí sola ausencia de prot
 
 J3.3 exige que `SupervisionResult.meta_eval` sea un `EvalResult` procedente de una célula de segundo orden. `E212 — SuperviseMetaNotEvalResult` materializa la precondición de tipo. `E211 — SuperviseMetaNotSupervisor` mantiene separada la procedencia desde una célula con rol `Supervisor`. `E306` continúa referido al etiquetado de `target : Supervisable`.
 
+### 3.1.1. Contenido estructural de `Supervisable`
+
+La IR v0.2 define `Supervisable` como unión etiquetada `CellTarget(EvalResult) | ComposedTarget(GateResult) | SystemTarget(CompositionGraph)`. El análisis sintáctico exige el constructor explícito (`E205`). El validador exige, mediante `E006`, que la referencia contenida exista y pertenezca a la clase estructural correspondiente (`EvalCmd`, `GateCmd` o `GraphDecl`). Esta protección es de tipado estructural. No cierra J3.3: no acredita el determinismo de `verdict`, el efecto de `Veto` ni la semántica ejecutiva de la supervisión. `E306` canónico sigue referido al etiquetado de `target` y no se declara equivalente a `E006`.
+
 ### 3.2. Salida de `AdmissibilityTable`
 
 La firma `table : [Codomain] -> Codomain` exige que cada salida literal pertenezca al `output_codomain`. `E011 — TableOutputNotInCodomain` materializa esa condición. No se identifica con `E105 — IncompleteAdmissibilityTable` ni con `E106 — MissingSemanticRelation`.

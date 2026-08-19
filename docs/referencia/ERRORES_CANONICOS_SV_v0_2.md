@@ -28,6 +28,8 @@ Los recuentos anteriores describen la relación por identificador. La protecció
 
 `E212` exige que `supervise.meta_eval` sea un `EvalResult`; `E211` mantiene separada la obligación de procedencia desde una célula con rol `Supervisor`.
 
+`E006` cubre tanto la referencia inexistente como la referencia existente cuyo tipo no corresponde a la clase exigida. En `supervise`, esta segunda cláusula protege la correspondencia entre cada constructor de `Supervisable` y el tipo de su contenido: `CellTarget` contiene `EvalResult`, `ComposedTarget` contiene `GateResult` y `SystemTarget` contiene `CompositionGraph`. No sustituye a `E205`, que sigue exigiendo el constructor explícito. No cierra la semántica completa de J3.3.
+
 `E307` materializa la pertenencia de cada tipo de suceso de `TransitionData.events` al `Horizon` declarado.
 
 `E406` coincide con la IR v0.2 para la condición `induced_parameters` no vacío. No acredita por sí solo la suficiencia reconstructiva completa de `J4.3`.
@@ -49,7 +51,7 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 | E003 | `NSquaredViolation` | Definición | `lower` | sólo implementación | n debe ser b² |
 | E004 | `EmptyCodomain` | Definición | `validate` | sólo implementación | El codominio declarado no puede estar vacío |
 | E005 | `DuplicateIdentifier` | Definición | `validate` | sólo implementación | Identificador ya declarado en el ámbito actual |
-| E006 | `UndeclaredReference` | Definición | `validate` | sólo implementación | Referencia a identificador no declarado |
+| E006 | `UndeclaredReference` | Definición | `validate` | sólo implementación | Referencia a identificador no declarado o de tipo estructuralmente incompatible |
 | E007 | `InvalidConnectorMapping` | Definición | `validate` | sólo implementación | El mapeo del conector no cubre todos los valores del codominio fuente |
 | E008 | `ConnectorTargetNotTri` | Definición | `validate` | sólo implementación | El destino del mapeo del conector debe ser un literal ternario |
 | E009 | `TableInputMismatch` | Definición | `validate` | sólo implementación | Las entradas de la tabla no cubren el producto cartesiano de los codominios |

@@ -538,9 +538,12 @@ class Validator:
                            f"El primer argumento de supervise {node.meta_eval!r} no es EvalResult "
                            f"(es {self.symbol_types[node.meta_eval]})")
 
-        target_ref = getattr(node.target, "ref", None)
-        if target_ref is not None:
-            self._require_ref(target_ref, node.loc)
+        if isinstance(node.target, CellTarget):
+            self._require_ref(node.target.ref, node.loc, "EvalCmd")
+        elif isinstance(node.target, ComposedTarget):
+            self._require_ref(node.target.ref, node.loc, "GateCmd")
+        elif isinstance(node.target, SystemTarget):
+            self._require_ref(node.target.ref, node.loc, "GraphDecl")
 
         meta_node = self.symbols[node.meta_eval]
         state_node = self.symbols.get(meta_node.input_ref)
