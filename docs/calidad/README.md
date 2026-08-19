@@ -32,10 +32,11 @@ Los cierres técnicos más recientes son:
 
 - `ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md` — P0-A;
 - `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
-- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — materialización mínima de E406;
-- `ACTA_TECNICA_DE_CIERRE_FFL_B_E011_CODOMINIO_DE_SALIDA_DE_ADMISSIBILITYTABLE_2026_08_19.md` — pertenencia de las salidas literales de `AdmissibilityTable` a su `output_codomain`.
+- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — no-vaciedad de `induced_parameters`;
+- `ACTA_TECNICA_DE_CIERRE_FFL_B_E011_CODOMINIO_DE_SALIDA_DE_ADMISSIBILITYTABLE_2026_08_19.md` — pertenencia de las salidas literales de `AdmissibilityTable` a su `output_codomain`;
+- `ACTA_TECNICA_DE_CIERRE_FFL_B_E213_E214_PROYECCION_DE_RESULTADOS_2026_08_19.md` — tipo de fuente y pertenencia de campo en la proyección estructural de resultados.
 
-La evidencia acumulada al cierre de E011 acredita una batería de conformidad de **46/46**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre. Estas cifras describen el último cierre acreditado y no autorizan por sí solas la apertura del siguiente juicio técnico.
+La evidencia acumulada al cierre de E213/E214 acredita una batería de conformidad de **48/48**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre.
 
 ## 4. Contrato diagnóstico y correspondencia funcional
 
@@ -46,6 +47,8 @@ Los instrumentos principales son:
 - `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`;
 - `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`;
 - `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`.
+
+El nombre histórico del archivo de correspondencias contiene términos ingleses y se conserva exclusivamente por trazabilidad de las referencias ya publicadas.
 
 ## 5. Control de evolución y evidencia
 

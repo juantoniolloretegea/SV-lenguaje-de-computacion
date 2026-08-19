@@ -27,6 +27,7 @@ La lectura de continuidad es:
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
 | RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
+| RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -114,6 +115,15 @@ La lectura de continuidad es:
 - **Evidencia:** verificación independiente en modo de solo lectura con conformidad **46/46**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E011, conservación de E009 para tabla incompleta y aceptación de `gate_table.svp`.
 - **Límite:** E011 no equivale a E105 ni E106 canónicos, no cierra todo J1.4 y no acredita ejecución material de `GateResult`.
 - **Decisión:** cerrar exclusivamente la pertenencia de las salidas literales al `output_codomain` declarado y conservar abiertas las restantes obligaciones que no estén acreditadas por otra ruta.
+- **Estado:** cerrado.
+
+### RETP-2026-059 — Proyección estructural / E213-E214
+
+- **Hecho:** `E213 — ProjectionSourceNotResult` rechaza una fuente declarada que no produzca un objeto de resultado proyectable y `E214 — ProjectionFieldNotFound` rechaza un campo ajeno al esquema canónico del resultado correspondiente. Una fuente inexistente conserva `E006` con precedencia.
+- **Fundamento:** la superficie v0.1 ya contiene la operación de proyección y la IR v0.2 fija los esquemas de `EvalResult`, `GateResult`, `ResolutionRecord`, `QueryResult` y `SupervisionResult`.
+- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **48/48**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E213/E214 y conservación de `resolve_projection.svp`.
+- **Límite:** el cierre es estructural; no ejecuta resultados ni calcula campos. `target`, `context` y `mechanism` pertenecen a esquemas canónicos, pero son palabras reservadas y no están disponibles actualmente como identificadores de campo tras el punto.
+- **Decisión:** cerrar las dos precondiciones estructurales de proyección sin modificar gramática, IR ni infraestructura de ejecución.
 - **Estado:** cerrado.
 
 ## 4. Autoridad registral

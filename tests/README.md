@@ -1,87 +1,80 @@
-# tests/ — Suite de conformidad DSL → IR
+# `tests/` — Batería de conformidad SVP → IR
 
-**Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 4 de abril de 2026  
-**Versión del conjunto:** V.1 del conjunto  
+**Fecha de resincronización:** 19 de agosto de 2026  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
-**Licencia:** CC BY-NC-ND 4.0  
-**Titularidad y autoría:** © Juan Antonio Lloret Egea, 2026. Este conjunto se distribuye con atribución explícita de autoría y bajo la licencia indicada, sin autorización para apropiación de la paternidad intelectual del Sistema Vectorial SV.  
+**Licencia:** CC BY-NC-ND 4.0
 
----
+## 1. Objeto
 
+Esta carpeta contiene la evidencia ejecutable de conformidad de la etapa frontal de referencia del Lenguaje SV.
 
-## Qué comprueba
+La cadena comprobada es:
 
-Verifica mecánicamente que la cadena `.svp` → parser → validación → IR v0.2 → JSON canónico funciona correctamente.
+`.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON canónico`
 
-Para cada caso válido, comprueba que se produce JSON con los campos obligatorios y que coincide bit a bit, en forma canónica, con su `.expected.json` correspondiente.
+Para cada caso válido, `tests/run_conformance.py` exige que la salida canónica coincida con su archivo `.expected.json`.
 
-Para cada caso inválido, comprueba que falla con el código exacto esperado del catálogo.
+Para cada caso inválido, el mismo ejecutor exige que el procesamiento termine con el código diagnóstico exacto declarado en `EXPECTED_INVALID_CODES`.
 
-Además, incluye una batería mínima de **smoke tests de CLI** para verificar el contrato externo de la implementación de referencia:
-- ejecución válida por `stdout`
-- ejecución válida con `-o` y creación de archivo
-- ejecución inválida con `rc=1` y prefijo `ERROR:` en `stderr`
-
-## Ejecución
+## 2. Ejecución
 
 ```bash
 python tests/run_conformance.py
 python tests/run_cli_smoke.py
+python tests/run_sec0_smoke.py
 ```
 
-## Casos válidos (8)
+Los nombres históricos de los dos últimos ejecutores contienen `smoke`; se conservan como identificadores de archivo. Su función es realizar pruebas rápidas de la interfaz de línea de órdenes y de la línea SEC-0.
 
-| Archivo | Qué verifica |
-|---------|-------------|
-| `cell_basic.svp` | Célula simple b=3, codominio, semántica, estado, evaluación |
-| `gate_table.svp` | Dos células + compuerta con tabla explícita de admisibilidad |
-| `resolve_projection.svp` | Resolución de U con ResolutionRecord + proyección `resolved_to` |
-| `supervise_targets.svp` | Supervisión meta con CellTarget y ComposedTarget, rol Supervisor |
-| `compose_basic.svp` | Composición con relación semántica y patrón declarados |
-| `transition_data_events.svp` | TransitionData con sucesos tipados (`event_state_literal`) e `induced_parameters` |
-| `query_context_all_variants.svp` | Cobertura conjunta de las cinco variantes de `QueryContext` en operaciones `query` |
-| `trajectory_alternance_valid.svp` | Trayectoria mínima que respeta la alternancia constitutiva de `TrajectoryEntry` |
+## 3. Estado acreditado
 
-## Casos inválidos (23)
+Tras el cierre estructural de proyección E213/E214, una verificación independiente en modo de solo lectura confirmó:
 
-| Archivo | Qué debe rechazar | Error esperado |
-|---------|-------------------|----------------|
-| `admissibility_table_incompleta.svp` | tabla de admisibilidad que no cubre el producto cartesiano completo | E009 |
-| `bad_b_value.svp` | b=2 (debe ser ≥ 3) | E002 |
-| `bridge_position_fuera_de_rango.svp` | posición puente fuera de rango en `coupledspec` | E105 |
-| `cellstate_vector_length_mismatch.svp` | `cellstate` con vector de longitud distinta de b² | E101 |
-| `compose_cycle_graph.svp` | ciclo en grafo de composición declarado | E103 |
-| `conector_mapping_incompleto.svp` | conector con `mapping` incompleto respecto del codominio fuente | E007 |
-| `conector_target_no_ternario.svp` | conector cuyo destino de `mapping` no es literal ternario | E008 |
-| `duplicate_identifier.svp` | redeclaración de identificador en el mismo ámbito | E005 |
-| `gate_input_no_evalresult.svp` | `gate` con un `CellState` donde se esperaba `EvalResult` | E202 |
-| `gate_undeclared_input.svp` | `gate` con una entrada no declarada | E006 |
-| `invalid_role_literal.svp` | rol no reconocido en `cellspec` | E010 |
-| `invalid_tri_literal.svp` | literal ternario no reconocido en vector de `cellstate` | E001 |
-| `max_keyword.svp` | Uso de `max` (no disponible en v0.1) | E210 |
-| `projection_undeclared_source.svp` | proyección `resolved_to` sobre fuente no declarada | E006 |
-| `query_context_opaco.svp` | `query` sin constructor explícito de `QueryContext` | E204 |
-| `supervise_target_opaco.svp` | `supervise` sin constructor explícito de `Supervisable` | E205 |
-| `supervise_undeclared_target.svp` | `supervise` con target no declarado | E006 |
-| `supervise_wrong_role.svp` | supervise con célula de rol Base (debe ser Supervisor) | E211 |
-| `trajectory_alternance_violation.svp` | `Trajectory` con entrada no final sin `transition` | E304 |
-| `u_coercion.svp` | `null` como literal ternario (coerción de U prohibida) | E507 |
+- conformidad: **48/48**;
+- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
+- SEC-0: **3/3**.
 
-## Qué no comprueba todavía
+La batería principal se compone de **9 casos válidos** y **39 casos inválidos**.
 
-- Cobertura exhaustiva del catálogo implementativo vigente
-- Convergencia exhaustiva entre catálogo implementativo vigente e IR v0.2
-- Cobertura exhaustiva de la CLI sobre todos los válidos e inválidos
+## 4. Casos válidos
 
-## Resultado actual
+| Archivo | Objeto principal |
+|---|---|
+| `admissibility_spec_states_permutados.svp` | admisibilidad con orden de estados no significativo |
+| `cell_basic.svp` | célula simple, estado y evaluación |
+| `compose_basic.svp` | composición con relación semántica y patrón declarados |
+| `gate_table.svp` | compuerta con tabla explícita de admisibilidad |
+| `query_context_all_variants.svp` | cinco variantes vigentes de `QueryContext` |
+| `resolve_projection.svp` | resolución de `U` y proyección estructural de `resolved_to` |
+| `supervise_targets.svp` | supervisión con objetos supervisables tipados |
+| `transition_data_events.svp` | `TransitionData` con sucesos tipados y cambios inducidos |
+| `trajectory_alternance_valid.svp` | alternancia constitutiva de `TrajectoryEntry` |
 
-31 de 31 casos de conformidad pasan.
+## 5. Casos inválidos
 
-Además, la batería de smoke tests CLI aporta 3 comprobaciones mínimas de contrato externo y la batería SEC-0 añade 3 comprobaciones de humo adicionales. Estas sondas complementarias no sustituyen la suite principal de conformidad, pero sí forman parte del estado observable actual del repositorio.
+La relación normativa de casos inválidos y códigos esperados se mantiene en `EXPECTED_INVALID_CODES`, dentro de `tests/run_conformance.py`. Esa tabla es la fuente ejecutable para la correspondencia caso → diagnóstico.
+
+Entre los cierres recientes expresamente cubiertos figuran:
+
+- `admissibility_table_output_fuera_codominio.svp` → `E011`;
+- `supervise_meta_no_evalresult.svp` → `E212`;
+- `supervise_coupled_wrong_role.svp` → `E211`;
+- `transition_event_fuera_horizon.svp` → `E307`;
+- `transition_induced_parameters_vacios.svp` → `E406`;
+- `projection_source_no_resultado.svp` → `E213`;
+- `projection_campo_inexistente.svp` → `E214`;
+- `projection_undeclared_source.svp` → `E006`.
+
+La cobertura de un código mediante un caso explícito no implica por sí sola la cobertura exhaustiva de toda la obligación canónica relacionada.
+
+## 6. Límites
+
+Esta batería comprueba la conformidad de la etapa frontal y su descenso a IR. No constituye por sí sola una ejecución material del sistema ni acredita capacidades de infraestructura de ejecución que no estén implementadas.
+
+La convergencia completa entre la IR canónica y el catálogo diagnóstico efectivo se gobierna en `docs/calidad/` y `docs/referencia/`.
 
 ---
 
