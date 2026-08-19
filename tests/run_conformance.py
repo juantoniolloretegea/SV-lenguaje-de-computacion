@@ -41,6 +41,8 @@ EXPECTED_INVALID_CODES = {
     "graph_simple_concurrencia_mismo_puente.svp": "E114",
     "gate_input_no_evalresult.svp": "E202",
     "gate_undeclared_input.svp": "E006",
+    "gate_numero_entradas_incompatible_con_tabla.svp": "E215",
+    "gate_codominio_posicional_incompatible_con_tabla.svp": "E215",
     "invalid_role_literal.svp": "E010",
     "invalid_tri_literal.svp": "E001",
     "max_keyword.svp": "E210",

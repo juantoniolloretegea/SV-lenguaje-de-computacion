@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011,
-                         E101, E102, E104, E105, E112, E113, E114, E202, E211, E212, E213, E214,
+                         E101, E102, E104, E105, E112, E113, E114, E202, E211, E212, E213, E214, E215,
                          E303, E304, E307, E406, E401, E402, E403)
 
 
@@ -466,6 +466,26 @@ class Validator:
             raise SVPError(E403, node.loc.line, node.loc.col,
                            f"scope {node.scope!r} incompatible con query_type {node.query_type!r}; se esperaba {expected_scope!r}")
 
+    def _codomain_of_eval(self, eval_name: str):
+        eval_node = self.symbols.get(eval_name)
+        if not isinstance(eval_node, EvalCmd):
+            return None
+        state = self.symbols.get(eval_node.input_ref)
+        if isinstance(state, CellStateDecl):
+            spec = self.symbols.get(state.spec)
+            if not isinstance(spec, CellSpecDecl):
+                return None
+            return spec.codomain
+        if isinstance(state, CoupledStateDecl):
+            coupled = self.symbols.get(state.spec)
+            if not isinstance(coupled, CoupledSpecDecl):
+                return None
+            cell = self.symbols.get(coupled.cell)
+            if not isinstance(cell, CellSpecDecl):
+                return None
+            return cell.codomain
+        return None
+
     def _validate_gate(self, node: GateCmd):
         self._require_ref(node.using, node.loc, "AdmissibilityTableDecl")
         for inp in node.inputs:
@@ -473,6 +493,24 @@ class Validator:
             if self.symbol_types[inp] != "EvalCmd":
                 raise SVPError(E202, node.loc.line, node.loc.col,
                                f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
+
+        table = self.symbols[node.using]
+        expected = list(table.input_codomains)
+        if len(node.inputs) != len(expected):
+            raise SVPError(
+                E215, node.loc.line, node.loc.col,
+                f"gate recibe {len(node.inputs)} entradas; la tabla {node.using!r} declara {len(expected)}")
+
+        actual = []
+        for inp in node.inputs:
+            codomain = self._codomain_of_eval(inp)
+            if codomain is None:
+                return
+            actual.append(codomain)
+        if actual != expected:
+            raise SVPError(
+                E215, node.loc.line, node.loc.col,
+                f"secuencia de codominios {actual} incompatible con {expected} de la tabla {node.using!r}")
 
     def _validate_eval(self, node: EvalCmd):
         self._require_ref(node.input_ref, node.loc)
