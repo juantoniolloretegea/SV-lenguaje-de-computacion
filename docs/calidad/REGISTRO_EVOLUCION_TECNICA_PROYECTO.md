@@ -2,17 +2,17 @@
 
 ## 1. Finalidad
 
-Este registro ofrece la lectura humana del tramo vivo del historial técnico del Lenguaje SV. El CSV maestro `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` conserva la autoridad registral de la numeración RETP.
+Este documento ofrece la lectura humana del tramo vigente del historial técnico del Lenguaje SV. El archivo `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` mantiene la numeración RETP y la relación completa de asientos.
 
-El detalle de `RETP-2026-000` a `RETP-2026-047` permanece preservado en:
+El detalle comprendido entre `RETP-2026-000` y `RETP-2026-047` permanece preservado en:
 
 `docs/calidad/historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md`.
 
-La lectura de continuidad es:
+La continuidad documental se organiza así:
 
-`histórico 000–047 → registro vivo desde 048 → CSV maestro como autoridad de numeración`.
+`histórico 000–047 → registro vigente desde 048 → CSV maestro de numeración`.
 
-## 2. Tabla del tramo vivo
+## 2. Tabla del tramo vigente
 
 | ID | Fecha | Hora | Tipo | Frente / fase | Estado |
 |---|---|---|---|---|---|
@@ -20,132 +20,162 @@ La lectura de continuidad es:
 | RETP-2026-049 | 18/08/2026 | 11:58:10 | CIERRE_BLOQUE_Y_APERTURA_SECUENCIAL | Lenguaje SV / FFL-A → FFL-B | cerrado |
 | RETP-2026-050 | 18/08/2026 | 12:28:08 | DECISION_GOBIERNO_TECNICO | Lenguaje SV / FFL-B / materialización diagnóstica subordinada | cerrado |
 | RETP-2026-051 | 18/08/2026 | 13:05:54 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.2 parcial / E112 | cerrado |
-| RETP-2026-052 | 18/08/2026 | 13:15:04 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / E113 ↔ E206 canónico | cerrado |
-| RETP-2026-053 | 18/08/2026 | 13:25:03 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E307 ↔ E403 canónico | cerrado |
-| RETP-2026-054 | 18/08/2026 | 13:30:27 | SORPRESA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / intento E406 revertido | cerrado |
-| RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / contrato de estado evaluable | cerrado |
+| RETP-2026-052 | 18/08/2026 | 13:15:04 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / E113 | cerrado |
+| RETP-2026-053 | 18/08/2026 | 13:25:03 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E307 | cerrado |
+| RETP-2026-054 | 18/08/2026 | 13:30:27 | SORPRESA_TECNICA_Y_REVERSION | Lenguaje SV / FFL-B / primer intento E406 revertido | cerrado |
+| RETP-2026-055 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-A / estado evaluable | cerrado |
 | RETP-2026-056 | 18/08/2026 | 21:35:25 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / P0-B / J3.3 / E212-E211 | cerrado |
-| RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 mínimo | cerrado |
-| RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
+| RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 | cerrado |
+| RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 | cerrado |
 | RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
 | RETP-2026-060 | 19/08/2026 | NO_CONSTA | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / fundamentos / no clausura certificada | cerrado |
-| RETP-2026-061 | 19/08/2026 | NO_CONSTA | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / resolve / E206-E207 efectivos | cerrado |
+| RETP-2026-061 | 19/08/2026 | NO_CONSTA | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / `resolve` / E206-E207 efectivos | cerrado |
+| RETP-2026-062 | 19/08/2026 | 20:40:45 | CORRECCION_ESTRUCTURAL | Lenguaje SV / FFL-B / `graph_decl` | cerrado |
+| RETP-2026-063 | 19/08/2026 | 21:11:57 | CAMBIO_DOCUMENTACION_PUBLICA | Lenguaje SV / documentación principal | cerrado |
+| RETP-2026-064 | 19/08/2026 | 21:31:26 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / régimen `Simple` / E114 | cerrado |
+| RETP-2026-065 | 19/08/2026 | 21:50:14 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J3.3 / `Supervisable` | cerrado |
+| RETP-2026-066 | 19/08/2026 | NO_CONSTA | SINCRONIZACION_REGISTRAL_Y_CALIDAD | Lenguaje SV / calidad / actualización de registros | cerrado |
 
 ## 3. Entradas detalladas
 
 ### RETP-2026-048 — Reapertura por Ruta A
 
-- **Hecho:** se levanta la pausa preventiva del 16/08/2026 en el alcance autorizado y se reabre el frente técnico con FFL-A como prioridad inmediata.
-- **Fundamento:** cierre funcional del antiguo programa de gobierno determinista, publicación y cierre de la Dinámica del Suceso y microauditoría Potencial/Tesauro resuelta por Ruta A.
-- **Evidencia:** acta pública de reapertura incorporada a `main` y comprobación del repositorio vigente.
-- **Decisión:** reabrir únicamente desde FFL-A; mantener cerradas las compuertas independientes no autorizadas.
+- **Hecho:** se levanta la pausa preventiva del 16/08/2026 en el alcance autorizado y FFL-A pasa a ser la prioridad inmediata.
+- **Fundamento:** las comprobaciones previas sobre continuidad semántica y arquitectónica no muestran un bloqueo del frente técnico inmediato.
+- **Decisión:** reabrir únicamente desde FFL-A y mantener sin apertura los bloques posteriores no autorizados.
 - **Estado:** cerrado.
 
 ### RETP-2026-049 — Cierre de FFL-A y apertura secuencial de FFL-B
 
-- **Hecho:** FFL-A se cierra bajo Vía B con deuda residual explícita y gobernada; FFL-B pasa a ser el único bloque técnico inmediato.
-- **Fundamento:** matriz de concordancia, tabla de correspondencias funcionales y criterios de cierre del frente final.
-- **Evidencia:** tablero de bloques y documentación específica de cierre de FFL-A.
-- **Decisión:** no exigir convergencia nominal total cuando la deuda restante esté localizada y gobernada; no abrir FFL-C/D/E de forma simultánea.
+- **Hecho:** FFL-A se cierra bajo Vía B con deuda residual explícita; FFL-B pasa a ser el único bloque técnico activo.
+- **Fundamento:** la matriz diagnóstica y la tabla de correspondencias funcionales permiten localizar la divergencia restante sin exigir igualdad nominal completa entre la IR y el catálogo efectivo.
+- **Decisión:** mantener FFL-C, FFL-D y FFL-E sin apertura mientras no exista una decisión posterior expresa.
 - **Estado:** cerrado.
 
 ### RETP-2026-050 — Regla de materialización diagnóstica de FFL-B
 
-- **Hecho:** se fija que FFL-B sólo materializará obligaciones ya representables y sustentadas por fundamento expreso, ruta diagnóstica inequívoca y prueba trazable.
-- **Fundamento:** IR canónica v0.2, Vía B, acta de reapertura y procedimiento de verificación técnica.
-- **Decisión:** trabajar mediante unidades técnicas acotadas; cada nuevo diagnóstico efectivo deberá sincronizar código, emisión, prueba, catálogo, matriz, correspondencias funcionales y deuda viva.
+- **Hecho:** FFL-B queda limitado a obligaciones ya representables, con fundamento normativo expreso, diagnóstico inequívoco y prueba trazable.
+- **Decisión:** todo nuevo diagnóstico efectivo deberá conservar la correspondencia entre definición, emisión, prueba y documentación pública.
 - **Estado:** cerrado.
 
 ### RETP-2026-051 — J2.2 parcial / E112
 
-- **Hecho:** se impone que las diferencias entre `base_vector` y `updated_vector` de `CoupledState` sólo afecten a posiciones pertenecientes al `BridgeSet` correspondiente.
-- **Fundamento:** J2.2 de la IR v0.2 y datos ya presentes en AST y validador.
+- **Hecho:** `CoupledState` sólo puede diferir de su vector de partida en posiciones pertenecientes al `BridgeSet` declarado.
 - **Límite:** no queda acreditada la procedencia completa de cada actualización desde un `Connector` concreto.
-- **Decisión:** cerrar únicamente la cláusula posicional mediante `E112`.
+- **Decisión:** cerrar únicamente la condición posicional mediante `E112`.
 - **Estado:** cerrado.
 
-### RETP-2026-052 — J2.3 / E113 ↔ E206 canónico
+### RETP-2026-052 — J2.3 / E113
 
-- **Hecho:** se materializan las compatibilidades ya representadas entre arista, posición puente y conector.
-- **Fundamento:** J2.3 y E206 canónico; la numeración E206 efectiva estaba ocupada por otra obligación bajo Vía B.
-- **Decisión:** utilizar `E113` como ruta efectiva y documentar expresamente la correspondencia funcional, sin renumeración masiva.
+- **Hecho:** se comprueban la posición puente de la arista, su concordancia con `Connector.target_position` y la compatibilidad del codominio de la célula transmisora con el conector.
+- **Decisión:** utilizar `E113 — EdgeConnectorMismatch` como diagnóstico efectivo de estas incompatibilidades y mantener separada la numeración definida en la IR.
 - **Estado:** cerrado.
 
-### RETP-2026-053 — J4.3 / E307 ↔ E403 canónico
+### RETP-2026-053 — J4.3 / E307
 
-- **Hecho:** cada tipo de suceso declarado en `TransitionData.events` debe pertenecer al `Horizon` referenciado.
-- **Fundamento:** J4.3, E403 canónico y representación ya existente de `TransitionData.events` y `Horizon.events`.
-- **Decisión:** materializar la obligación mediante `E307`, sin identificar `TransitionData` con un suceso admisible ni ampliar la semántica eventiva.
+- **Hecho:** cada tipo de suceso de `TransitionData.events` debe pertenecer al `Horizon` referido.
+- **Decisión:** materializar esta condición mediante `E307`, sin ampliar la semántica de sucesos.
 - **Estado:** cerrado.
 
 ### RETP-2026-054 — Incidencia técnica y reversión del primer intento E406
 
-- **Hecho:** el primer intento de materializar E406 se revirtió al comprobarse que la comparación de cambios excedía el alcance del juicio y reordenaba código ajeno a la modificación necesaria.
-- **Fundamento:** disciplina de cambios mínimos y procedimiento de verificación técnica.
-- **Decisión:** restaurar íntegramente el estado anterior y mantener E406 pendiente hasta una nueva revisión con alcance estrictamente acotado.
+- **Hecho:** la primera modificación destinada a E406 fue revertida porque la comparación de cambios excedía el alcance necesario.
+- **Decisión:** restaurar el estado anterior y exigir una modificación estrictamente acotada antes de reintentar E406.
 - **Estado:** cerrado.
 
 ### RETP-2026-055 — P0-A / estado evaluable
 
-- **Hecho:** `evaluate` vuelve a aceptar `CellState` y `CoupledState`, mientras `Frame.cell_states` conserva exclusivamente `CoupledState`.
-- **Fundamento:** gramática v0.1, adenda técnica a la IR v0.2 y matemática de composición intercelular.
-- **Evidencia:** verificación independiente con conformidad **42/42**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y aceptación de los programas discriminantes.
-- **Decisión:** preservar la distinción entre estado simple y acoplado y separar el juicio de `supervise` para P0-B.
+- **Hecho:** `evaluate` acepta `CellState` y `CoupledState`, mientras `Frame.cell_states` conserva exclusivamente `CoupledState`.
+- **Evidencia:** conformidad **42/42**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Decisión:** preservar la distinción entre estado simple y estado acoplado.
 - **Estado:** cerrado.
 
 ### RETP-2026-056 — P0-B / J3.3 / E212-E211
 
-- **Hecho:** `supervise` exige que `meta_eval` sea un `EvalResult`; `E212` protege el tipo y `E211` protege la procedencia desde una célula con rol `Supervisor`, también por la ruta acoplada.
-- **Fundamento:** J3.3, P0-A y Vía B.
-- **Evidencia:** verificación independiente con conformidad **44/44**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3** y emisión exacta de E212/E211 en los dos casos negativos específicos.
-- **Decisión:** declarar estabilizado P0 en sus dos partes.
+- **Hecho:** `supervise.meta_eval` debe ser un `EvalResult`; `E212` protege el tipo y `E211` la procedencia desde una célula con rol `Supervisor`, incluida la ruta mediante `CoupledState`.
+- **Evidencia:** conformidad **44/44**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Decisión:** mantener separados el error de tipo y el error de procedencia.
 - **Estado:** cerrado.
 
-### RETP-2026-057 — J4.3 / E406 mínimo
+### RETP-2026-057 — J4.3 / E406
 
 - **Hecho:** `E406 — InsufficientTransitionData` rechaza `TransitionData` con `induced_parameters` vacío.
-- **Fundamento:** J4.3 y tabla canónica de errores de la IR v0.2, que asignan E406 a esa condición exacta.
-- **Evidencia:** verificación independiente con conformidad **45/45**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E406, conservación del caso válido y precedencia de E307.
-- **Límite:** no se acredita por este cierre la suficiencia de una lista no vacía para reconstruir el operador inducido.
-- **Decisión:** cerrar exclusivamente la cláusula de no-vaciedad y no abrir automáticamente otro juicio técnico.
+- **Evidencia:** conformidad **45/45**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Límite:** una lista no vacía no demuestra por sí sola la suficiencia para reconstruir el operador inducido.
 - **Estado:** cerrado.
 
-### RETP-2026-058 — J1.4 / E011 / codominio de salida de `AdmissibilityTable`
+### RETP-2026-058 — J1.4 / E011
 
-- **Hecho:** `E011 — TableOutputNotInCodomain` rechaza una fila de `AdmissibilityTable` cuya salida literal no pertenece al `output_codomain` declarado.
-- **Fundamento:** la IR v0.2 tipa `AdmissibilityTable.table` como función hacia el codominio de salida; la condición estaba representada por los datos existentes y no requería modificar gramática ni IR.
-- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **46/46**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E011, conservación de E009 para tabla incompleta y aceptación de `gate_table.svp`.
-- **Límite:** E011 no equivale a E105 ni E106 canónicos, no cierra todo J1.4 y no acredita ejecución material de `GateResult`.
-- **Decisión:** cerrar exclusivamente la pertenencia de las salidas literales al `output_codomain` declarado y conservar abiertas las restantes obligaciones que no estén acreditadas por otra ruta.
+- **Hecho:** cada salida literal de `AdmissibilityTable.table` debe pertenecer al `output_codomain` declarado.
+- **Evidencia:** conformidad **46/46**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Límite:** la condición no agota J1.4 ni acredita ejecución material de `GateResult`.
 - **Estado:** cerrado.
 
 ### RETP-2026-059 — Proyección estructural / E213-E214
 
-- **Hecho:** `E213 — ProjectionSourceNotResult` rechaza una fuente declarada que no produzca un objeto de resultado proyectable y `E214 — ProjectionFieldNotFound` rechaza un campo ajeno al esquema canónico del resultado correspondiente. Una fuente inexistente conserva `E006` con precedencia.
-- **Fundamento:** la superficie v0.1 ya contiene la operación de proyección y la IR v0.2 fija los esquemas de `EvalResult`, `GateResult`, `ResolutionRecord`, `QueryResult` y `SupervisionResult`.
-- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **48/48**, pruebas rápidas de línea de órdenes **3/3**, SEC-0 **3/3**, emisión exacta de E213/E214 y conservación de `resolve_projection.svp`.
-- **Límite:** el cierre es estructural; no ejecuta resultados ni calcula campos. `target`, `context` y `mechanism` pertenecen a esquemas canónicos, pero son palabras reservadas y no están disponibles actualmente como identificadores de campo tras el punto.
-- **Decisión:** cerrar las dos precondiciones estructurales de proyección sin modificar gramática, IR ni infraestructura de ejecución.
+- **Hecho:** `E213` exige una fuente que produzca un resultado proyectable y `E214` exige que el campo pertenezca al esquema del resultado correspondiente.
+- **Evidencia:** conformidad **48/48**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Límite:** la comprobación no ejecuta el resultado ni calcula el valor proyectado.
 - **Estado:** cerrado.
 
 ### RETP-2026-060 — Recepción latente de no clausura certificada
 
-- **Hecho:** se recibe en la sede operativa la publicación «No clausura certificada en sistemas finitos de resolución» con estatuto `LATENTE_LEGITIMO`, sin modificar código, gramática ni IR.
-- **Fundamento:** DOI `10.21428/39829d0b.f0892864`; sede `SV-matematica-semantica/documentos/fundamentos/`; jerarquía doctrina → especificación → lenguaje.
-- **Evidencia:** el árbol de `main` en `552a142276c08fdba4db5281d67af774f14ed1f6` no contenía asiento ni acta de recepción; el registro maestro recibe únicamente la fila `RETP-2026-060`. La hora exacta del hito no consta de forma reproducible; el commit canónico `be68345d0a27b10bca083ae260e2e12270c469aa` aporta únicamente evidencia temporal de materialización.
-- **Límite:** el certificado de no clausura no es trabajo pendiente, no es un cuarto valor, no altera `Σ = {0, 1, U}`, no crea operador nuevo, no obliga cambio de lenguaje SVP y no abre AUTH, aprendizaje trazable ni etapa frontal adicional.
-- **Decisión:** recibir y preservar; no implementar. La traducción material exigirá un acta arquitectónica previa.
+- **Hecho:** la publicación «No clausura certificada en sistemas finitos de resolución» queda recibida con estatuto `LATENTE_LEGITIMO`, sin modificación de código, gramática ni IR.
+- **Fundamento:** DOI `10.21428/39829d0b.f0892864` y documentación de fundamentos del Sistema SV.
+- **Decisión:** preservar la recepción sin traducirla automáticamente a construcciones del lenguaje.
 - **Estado:** cerrado.
 
-### RETP-2026-061 — E206/E207 efectivos en la superficie de resolve
+### RETP-2026-061 — E206/E207 efectivos en `resolve`
 
-- **Hecho:** se documenta que `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos y alcanzables de análisis sintáctico para la ausencia acreditada de los campos obligatorios de `resolve`.
-- **Fundamento:** gramática superficial mínima v0.1; IR canónica v0.2; Vía B; lote funcional integrado en `02dc7c4ec2d171c994a3a9e937bed5d43021cde8`.
-- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **50/50**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3**, y emisión exacta de `resolve_missing_context.svp` → `E206` y `resolve_missing_mechanism.svp` → `E207`.
-- **Límite:** no cierra `E108` canónico ni J1.6; no tipa `Context` ni `Mechanism`; no compara identificadores con `ResSpec`; no ejecuta `resolve` ni convierte `resolve` en solucionador de `U`. El `E206` canónico sigue siendo `EdgeConnectorMismatch`, protegido por `E113`.
-- **Decisión:** registrar el cierre documental acotado y no abrir otro diagnóstico por este acto.
+- **Hecho:** `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos para la ausencia de `context` y `mechanism` en la forma superficial de `resolve`.
+- **Evidencia:** conformidad **50/50**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Límite:** no se cierra J1.6, no se tipan `Context` ni `Mechanism` y no se ejecuta una resolución material de `U`.
 - **Estado:** cerrado.
 
-## 4. Autoridad registral
+### RETP-2026-062 — Retirada de `conflicts` de `graph_decl`
 
-La numeración y los tipos RETP permanecen gobernados por `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+- **Hecho:** `conflicts` deja de formar parte de `graph_decl`, `GraphDecl` y del descenso a IR. `CompositionGraph` conserva `nodes`, `edges`, `relation` y `regime`.
+- **Fundamento:** la definición de `CompositionGraph` no contiene ese campo y la superficie v0.1 no dispone de una declaración completa de `ConflictOperator`.
+- **Evidencia:** commit `058befbd6402c80ac7bc1d10eab0d8d035126531`; conformidad **51/51**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3** y `graph_conflicts_fuera_de_v0_1.svp` → `E001`.
+- **Límite:** la retirada del campo no materializa `MissingConflictOperator` ni elimina el régimen `General`.
+- **Estado:** cerrado.
+
+### RETP-2026-063 — Actualización del README principal
+
+- **Hecho:** el README principal se actualiza para reflejar el estado técnico vigente, conservar los fundamentos y antecedentes médicos del Sistema SV, mantener la dedicatoria final y ofrecer una orientación pública acorde con el repositorio actual.
+- **Evidencia:** commits `e0a58ea6af6a370960b244e9c9f06636994523d6` y `a2c4cdfdc17408ce6a989a8a1c52a8b3ff7d5e02`; la comparación respecto del estado anterior afecta únicamente a `README.md`.
+- **Límite:** la actualización documental no modifica la implementación, la gramática, la IR ni el contrato diagnóstico.
+- **Estado:** cerrado.
+
+### RETP-2026-064 — J2.3 / régimen `Simple` / E114
+
+- **Hecho:** en régimen `Simple`, cada par `(target, position)` puede recibir como máximo una arista; la concurrencia se rechaza mediante `E114 — SimpleRegimeConcurrency`.
+- **Evidencia:** commit `0911d246050a9f739a3b8235f3bfd861584b4273`; conformidad **52/52**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3** y emisión exacta de E114.
+- **Límite:** la comprobación no se extiende al régimen `General`; `MissingConflictOperator` permanece sin materializar.
+- **Estado:** cerrado.
+
+### RETP-2026-065 — Contenido estructural de `Supervisable`
+
+- **Hecho:** `CellTarget` exige un `EvalResult`, `ComposedTarget` un `GateResult` y `SystemTarget` un `CompositionGraph`. Una referencia existente de tipo incompatible se rechaza mediante `E006`; `E205` continúa reservado a la exigencia de constructor explícito.
+- **Evidencia:** commit `59e055ea8a66437c91558e1e8096eb5c6e670b8c`; conformidad **55/55**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3** y tres casos negativos específicos con E006.
+- **Límite:** no se cierra la semántica completa de J3.3. La aceptación positiva de `SystemTarget(CompositionGraph)` fue comprobada de forma adicional, pero todavía no dispone de un caso válido específico conservado en la batería principal.
+- **Decisión:** cerrar únicamente la correspondencia estructural entre cada constructor y su contenido.
+- **Estado:** cerrado.
+
+### RETP-2026-066 — Sincronización de los registros de calidad
+
+- **Hecho:** los documentos vivos de calidad se actualizan para incorporar RETP-062 a RETP-065, reflejar la conformidad **55/55**, registrar las limitaciones todavía abiertas y corregir el tablero de bloques.
+- **Fundamento:** el registro de evolución terminaba en RETP-061, la deuda viva no recogía E114 ni el tipado de `Supervisable`, el README de calidad mantenía **52/52** y el tablero mostraba FFL-C, FFL-D y FFL-E como abiertos pese a la secuencia vigente.
+- **Alcance:** sólo se modifican documentos de `docs/calidad/`; el historial CSV hasta RETP-061 se conserva sin alteración.
+- **Decisión:** mantener FFL-B como único bloque técnico activo y FFL-C, FFL-D y FFL-E en estado pendiente hasta decisión expresa.
+- **Estado:** cerrado.
+
+## 4. Estado de continuidad
+
+FFL-B continúa como único bloque técnico activo. FFL-C, FFL-D y FFL-E permanecen sin apertura hasta decisión expresa posterior.
+
+La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`.
+
+## 5. Numeración registral
+
+La numeración RETP se mantiene en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.

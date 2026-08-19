@@ -1,6 +1,6 @@
 # Calidad del frente operativo del Lenguaje SV
 
-**Autor del corpus:** Juan Antonio Lloret Egea  
+**Autor:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
@@ -8,13 +8,13 @@
 
 ## 1. Función de esta carpeta
 
-`docs/calidad/` reúne los instrumentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y registro del Lenguaje SV.
+`docs/calidad/` reúne los documentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y registro del Lenguaje SV.
 
-Esta carpeta no constituye autoridad doctrinal superior. Su función es documentar de forma revisable por terceros el estado de la sede operativa y su relación con la matemática, la especificación, la implementación y la evidencia.
+Esta carpeta no constituye autoridad doctrinal superior. Su función es documentar de forma revisable por terceros el estado técnico del repositorio y su relación con la matemática, la especificación, la implementación y la evidencia.
 
-## 2. Punto de entrada para continuidad vigente
+## 2. Continuidad vigente
 
-La continuidad actual queda documentada, como mínimo, por estas piezas:
+La continuidad actual queda documentada, como mínimo, por:
 
 1. `ACTA_TECNICA_DE_ORDENACION_DE_CONTINUIDAD_SEMANTICA_Y_ARQUITECTONICA_DEL_LENGUAJE_SV_2026_08_16.md`;
 2. `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`;
@@ -24,26 +24,27 @@ La continuidad actual queda documentada, como mínimo, por estas piezas:
 6. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
 7. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 
-El acta de 16/08/2026 conserva la jerarquía, los seis bloques de continuidad y las compuertas posteriores. La pausa preventiva que estableció fue superada por la reapertura de 18/08/2026 en el alcance expresamente autorizado.
+FFL-B continúa como único bloque técnico activo. FFL-C, FFL-D y FFL-E permanecen sin apertura hasta decisión expresa posterior.
 
 ## 3. Estado técnico reciente de FFL-B
 
-Los cierres técnicos más recientes son:
+Los cierres documentados mediante acta hasta E206/E207 se complementan con los siguientes cambios registrados:
 
-- `ACTA_TECNICA_DE_RECONCILIACION_DEL_CONTRATO_CELLSTATE_COUPLEDSTATE_EVALUATE_Y_FRAME_2026_08_18.md` — P0-A;
-- `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
-- `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — no-vaciedad de `induced_parameters`;
-- `ACTA_TECNICA_DE_CIERRE_FFL_B_E011_CODOMINIO_DE_SALIDA_DE_ADMISSIBILITYTABLE_2026_08_19.md` — pertenencia de las salidas literales de `AdmissibilityTable` a su `output_codomain`;
-- `ACTA_TECNICA_DE_CIERRE_FFL_B_E213_E214_PROYECCION_DE_RESULTADOS_2026_08_19.md` — tipo de fuente y pertenencia de campo en la proyección estructural de resultados;
-- `ACTA_TECNICA_DE_CIERRE_FFL_B_E206_E207_CAMPOS_OBLIGATORIOS_DE_RESOLVE_2026_08_19.md` — ausencia acreditada de `context` y `mechanism` en `resolve`.
+- `RETP-2026-062` — retirada de `conflicts` de `graph_decl` y rechazo superficial mediante E001;
+- `RETP-2026-064` — unicidad de `(target, position)` en régimen `Simple` mediante `E114 — SimpleRegimeConcurrency`;
+- `RETP-2026-065` — correspondencia estructural entre cada constructor de `Supervisable` y el tipo de su contenido mediante E006.
 
-La unicidad de `(target, position)` en régimen `Simple` queda protegida por `E114 — SimpleRegimeConcurrency`.
+La evidencia acumulada vigente acredita:
 
-La evidencia acumulada vigente acredita una batería de conformidad de **52/52**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**.
+- conformidad: **55/55** — 9 casos válidos y 46 inválidos;
+- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
+- SEC-0: **3/3**.
+
+La corrección de `graph_decl` no materializa `MissingConflictOperator`. E114 sólo protege el régimen `Simple`. El tipado de `Supervisable` no cierra la semántica completa de J3.3.
 
 ## 4. Contrato diagnóstico y correspondencia funcional
 
-Los instrumentos principales son:
+Los documentos principales son:
 
 - `C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`;
 - `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`;
@@ -51,15 +52,15 @@ Los instrumentos principales son:
 - `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`;
 - `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`.
 
-El nombre histórico del archivo de correspondencias contiene términos ingleses y se conserva exclusivamente por trazabilidad de las referencias ya publicadas.
+Los nombres históricos de algunos archivos contienen términos ingleses. Se conservan sin modificación para mantener la trazabilidad de referencias publicadas.
 
 ## 5. Control de evolución y evidencia
 
 ### Registro maestro
 
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` — autoridad registral de la numeración RETP;
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` — lectura humana del tramo vivo;
-- `historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md` — preservación del histórico detallado hasta RETP-047.
+- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` — numeración RETP y relación completa de asientos;
+- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` — lectura humana del tramo vigente;
+- `historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md` — preservación del historial detallado hasta RETP-047.
 
 ### Deuda y bloques
 
@@ -69,9 +70,11 @@ El nombre histórico del archivo de correspondencias contiene términos ingleses
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
 
+Los registros de hitos H1-H3 no requieren modificación por los cierres 062-065, porque ninguno de ellos verifica un hito nuevo ni abre H3.
+
 ## 6. Vigilancia doctrinal y continuidad
 
-Permanecen como instrumentos de referencia, entre otros:
+Permanecen como documentos de referencia, entre otros:
 
 - `ESPEJO_DOCTRINAL_COLECCIONES_LENGUAJE_SV.md` y `.csv`;
 - `MATRIZ_DE_VIGILANCIA_TEMPRANA_UCBC_INTERFACES_LENGUAJE_SV.md` y `.csv`;
@@ -82,12 +85,12 @@ Permanecen como instrumentos de referencia, entre otros:
 - `ACTA_TECNICA_COMPLEMENTARIA_DE_FIJACION_DE_FUENTE_DOCTRINAL_Y_PRESERVACION_PRE_DSL_DEL_APRENDIZAJE_TRAZABLE_2026_08_16.md`;
 - `ACTA_TECNICA_DE_RECEPCION_LATENTE_DE_NO_CLAUSURA_CERTIFICADA_2026_08_19.md`.
 
-La existencia de una publicación, colección, rama experimental o realización aplicada no autoriza por sí misma una modificación de gramática, IR, validador, entorno de ejecución o bibliotecas.
+La existencia de una publicación, colección, rama experimental o realización aplicada no autoriza por sí misma una modificación de gramática, IR, validador, infraestructura de ejecución o bibliotecas.
 
 ## 7. Jerarquía de continuidad
 
-El orden de autoridad continúa siendo:
+El orden aplicable continúa siendo:
 
-`doctrina y matemática soberanas → especificación → implementación → diagnóstico → prueba → evidencia`.
+`doctrina y matemática del Sistema SV → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-Ningún documento de calidad puede convertir por sí solo una previsión futura en semántica ejecutiva.
+Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva.
