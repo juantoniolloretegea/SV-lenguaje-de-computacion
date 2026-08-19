@@ -20,7 +20,7 @@ El balance vigente por identificador es:
 - **sólo IR:** 13;
 - **sólo implementación:** 20.
 
-La resincronización incorpora expresamente `E213 — ProjectionSourceNotResult` y `E214 — ProjectionFieldNotFound`. Ambos son diagnósticos efectivos bajo Vía B y carecen de identificador canónico autónomo en la tabla de errores de la IR v0.2.
+La resincronización incorpora expresamente `E213 — ProjectionSourceNotResult` y `E214 — ProjectionFieldNotFound`, y deja constancia de que `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` disponen ya de emisión directa y de cobertura explícita. Los recuentos por identificador no cambian: ambos códigos ya pertenecían al catálogo efectivo.
 
 ## 3. Coincidencias por mismo identificador
 
@@ -61,9 +61,13 @@ Constan **20**:
 - `E211` mantiene separada la procedencia desde rol `Supervisor`;
 - `E307` exige que los tipos de suceso de `TransitionData` pertenezcan al `Horizon` declarado;
 - `E213` exige que la fuente de una proyección sea un productor superficial de un objeto de resultado proyectable;
-- `E214` exige que el campo proyectado pertenezca al esquema canónico del resultado correspondiente.
+- `E214` exige que el campo proyectado pertenezca al esquema canónico del resultado correspondiente;
+- `E206` efectivo exige la presencia del campo obligatorio `context` en `resolve` y permanece divergente respecto del `E206` canónico `EdgeConnectorMismatch`;
+- `E207` efectivo exige la presencia del campo obligatorio `mechanism` en `resolve` y continúa siendo sólo implementación.
 
 `E213` y `E214` disponen de emisión directa y de casos explícitos. La fuente inexistente continúa gobernada por `E006`, que mantiene precedencia.
+
+`E206` y `E207` efectivos disponen de emisión directa y de casos explícitos. Su alcance se limita al análisis sintáctico de `resolve`. No cierran `E108` canónico ni J1.6.
 
 ### 5.2. Alcanzabilidad de campos de proyección
 

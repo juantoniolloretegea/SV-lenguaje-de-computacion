@@ -34,9 +34,10 @@ Los cierres técnicos más recientes son:
 - `ACTA_TECNICA_P0_B_CONTRATO_META_EVAL_DE_SUPERVISE_2026_08_18.md` — P0-B;
 - `ACTA_TECNICA_FFL_B_E406_INDUCED_PARAMETERS_MINIMO_2026_08_18.md` — no-vaciedad de `induced_parameters`;
 - `ACTA_TECNICA_DE_CIERRE_FFL_B_E011_CODOMINIO_DE_SALIDA_DE_ADMISSIBILITYTABLE_2026_08_19.md` — pertenencia de las salidas literales de `AdmissibilityTable` a su `output_codomain`;
-- `ACTA_TECNICA_DE_CIERRE_FFL_B_E213_E214_PROYECCION_DE_RESULTADOS_2026_08_19.md` — tipo de fuente y pertenencia de campo en la proyección estructural de resultados.
+- `ACTA_TECNICA_DE_CIERRE_FFL_B_E213_E214_PROYECCION_DE_RESULTADOS_2026_08_19.md` — tipo de fuente y pertenencia de campo en la proyección estructural de resultados;
+- `ACTA_TECNICA_DE_CIERRE_FFL_B_E206_E207_CAMPOS_OBLIGATORIOS_DE_RESOLVE_2026_08_19.md` — ausencia acreditada de `context` y `mechanism` en `resolve`.
 
-La evidencia acumulada al cierre de E213/E214 acredita una batería de conformidad de **48/48**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre.
+La evidencia acumulada al cierre de E206/E207 efectivos acredita una batería de conformidad de **50/50**, pruebas rápidas de la interfaz de línea de órdenes de **3/3** y SEC-0 de **3/3**, según las actas específicas de cierre.
 
 ## 4. Contrato diagnóstico y correspondencia funcional
 

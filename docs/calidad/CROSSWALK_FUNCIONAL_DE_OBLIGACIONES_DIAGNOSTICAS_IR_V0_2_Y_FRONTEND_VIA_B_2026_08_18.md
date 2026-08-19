@@ -35,7 +35,7 @@ La ausencia del identificador canónico no implica por sí sola ausencia de prot
 | E105 | `IncompleteAdmissibilityTable` | `E009 — TableInputMismatch` | CUBIERTO_OTRO_ID | Comprueba faltantes, elementos adicionales y duplicados del producto cartesiano. |
 | E106 | `MissingSemanticRelation` | `E106` existe; la forma exige `relation` y una referencia ausente cae en `E006` | CONVERGENTE_ID | Coincidencia del catálogo sin emisión superficial autónoma de E106. |
 | E107 | `InvalidTernarizerPartition` | `E401` comprueba únicamente presencia no vacía de las tres referencias de partición | PARCIAL | No se acredita cobertura, disjunción ni ausencia de solapamiento. |
-| E108 | `MissingResContext` | el análisis sintáctico exige `context` y `mechanism` | PARCIAL | La forma está protegida; J1.6 no queda cerrado materialmente por esa sola exigencia. |
+| E108 | `MissingResContext` | ausencia acreditada de `context` en `resolve` → `E206` efectivo; ausencia acreditada de `mechanism` tras `context` reconocido → `E207` efectivo | PARCIAL | La forma de ambos campos obligatorios de `resolve` está protegida. Eso no prueba el resto de J1.6, no tipa `Context` ni `Mechanism` y no acredita correspondencia nominal con `ResSpec`. |
 | E109 | `InvalidCaptureSpec` | `E401` comprueba `parameter_id`, `observation_space` y `Bottom` | PARCIAL | No se acredita todo J1.7. |
 | E110 | `InvalidAdmissibilitySpec` | `E401` comprueba `parameter_id`, estados y presencia de `rule` | PARCIAL | No se acredita el determinismo material de `rule`. |
 | E111 | `UnorderedCodomain` | `E111` existe; `max/min` están prohibidos mediante `E210` | CUBIERTO_ESTRUCTURAL | La condición no es alcanzable mediante `max/min` en la superficie actual. |
@@ -91,4 +91,4 @@ Los campos canónicos `target`, `context` y `mechanism` están afectados por una
 
 FFL-A admite deuda localizada y gobernada bajo Vía B. FFL-B puede reducir esa deuda únicamente mediante condiciones representables, fundamento normativo suficiente, diagnóstico inequívoco y evidencia específica.
 
-Los cierres E112, E113, E212/E211, E307, E406, E011 y E213/E214 no autorizan por sí mismos la apertura de otros bloques ni convierten protecciones parciales en cierres completos.
+Los cierres E112, E113, E212/E211, E307, E406, E011, E213/E214 y E206/E207 efectivos no autorizan por sí mismos la apertura de otros bloques ni convierten protecciones parciales en cierres completos.

@@ -31,13 +31,13 @@ Los nombres históricos de los dos últimos ejecutores contienen `smoke`; se con
 
 ## 3. Estado acreditado
 
-Tras el cierre estructural de proyección E213/E214, una verificación independiente en modo de solo lectura confirmó:
+Tras el cierre de los campos obligatorios de `resolve` mediante E206/E207 efectivos, una verificación independiente en modo de solo lectura confirmó:
 
-- conformidad: **48/48**;
+- conformidad: **50/50**;
 - pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
 - SEC-0: **3/3**.
 
-La batería principal se compone de **9 casos válidos** y **39 casos inválidos**.
+La batería principal se compone de **9 casos válidos** y **41 casos inválidos**.
 
 ## 4. Casos válidos
 
@@ -66,7 +66,9 @@ Entre los cierres recientes expresamente cubiertos figuran:
 - `transition_induced_parameters_vacios.svp` → `E406`;
 - `projection_source_no_resultado.svp` → `E213`;
 - `projection_campo_inexistente.svp` → `E214`;
-- `projection_undeclared_source.svp` → `E006`.
+- `projection_undeclared_source.svp` → `E006`;
+- `resolve_missing_context.svp` → `E206`;
+- `resolve_missing_mechanism.svp` → `E207`.
 
 La cobertura de un código mediante un caso explícito no implica por sí sola la cobertura exhaustiva de toda la obligación canónica relacionada.
 

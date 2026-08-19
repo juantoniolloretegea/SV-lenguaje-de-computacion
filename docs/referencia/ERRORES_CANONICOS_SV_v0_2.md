@@ -34,6 +34,8 @@ Los recuentos anteriores describen la relación por identificador. La protecció
 
 `E213` y `E214` protegen la legalidad estructural de la proyección de campos de resultados. La IR v0.2 no asigna códigos autónomos a estas dos precondiciones. `E213` rechaza una fuente declarada que no produzca uno de los cinco objetos de resultado proyectables de la superficie vigente; `E214` rechaza un campo ajeno al esquema canónico del resultado correspondiente.
 
+`E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos de análisis sintáctico. Se emiten únicamente ante la ausencia acreditada de los campos obligatorios `context` y `mechanism` en la superficie de `resolve`. No cierran `E108` canónico ni J1.6, no tipan `Context` ni `Mechanism`, no comparan identificadores con `ResSpec` y no ejecutan `resolve`. El `E206` canónico continúa siendo `EdgeConnectorMismatch` y permanece protegido funcionalmente por `E113`.
+
 La presencia de un campo en el esquema canónico no implica necesariamente que su nombre sea expresable en la superficie léxica actual. `target`, `context` y `mechanism` son palabras reservadas y no pueden emplearse actualmente como identificadores de campo tras el punto sin que intervenga antes el análisis sintáctico.
 
 ## 4. Catálogo efectivo
@@ -90,11 +92,11 @@ La presencia de un campo en el esquema canónico no implica necesariamente que s
 
 Disponen de punto de emisión directo observable, al menos:
 
-`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E004`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 La batería de conformidad vigente contiene casos con código esperado declarado, al menos, para:
 
-`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
+`E001`, `E002`, `E005`, `E006`, `E007`, `E009`, `E010`, `E011`, `E101`, `E102`, `E103`, `E104`, `E105`, `E112`, `E113`, `E202`, `E204`, `E205`, `E206`, `E207`, `E208`, `E209`, `E210`, `E211`, `E212`, `E213`, `E214`, `E303`, `E304`, `E307`, `E406`, `E401`, `E402`, `E403`, `E507`.
 
 `E008` permanece en el catálogo por trazabilidad, sin punto de emisión directo ni caso explícito en la batería vigente. El subcaso superficial de destino no ternario de conector se emite actualmente como `E104`.
 

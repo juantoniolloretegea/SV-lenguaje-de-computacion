@@ -29,6 +29,7 @@ La lectura de continuidad es:
 | RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 / codominio de salida de `AdmissibilityTable` | cerrado |
 | RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
 | RETP-2026-060 | 19/08/2026 | NO_CONSTA | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / fundamentos / no clausura certificada | cerrado |
+| RETP-2026-061 | 19/08/2026 | NO_CONSTA | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / resolve / E206-E207 efectivos | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -134,6 +135,15 @@ La lectura de continuidad es:
 - **Evidencia:** el árbol de `main` en `552a142276c08fdba4db5281d67af774f14ed1f6` no contenía asiento ni acta de recepción; el registro maestro recibe únicamente la fila `RETP-2026-060`. La hora exacta del hito no consta de forma reproducible; el commit canónico `be68345d0a27b10bca083ae260e2e12270c469aa` aporta únicamente evidencia temporal de materialización.
 - **Límite:** el certificado de no clausura no es trabajo pendiente, no es un cuarto valor, no altera `Σ = {0, 1, U}`, no crea operador nuevo, no obliga cambio de lenguaje SVP y no abre AUTH, aprendizaje trazable ni etapa frontal adicional.
 - **Decisión:** recibir y preservar; no implementar. La traducción material exigirá un acta arquitectónica previa.
+- **Estado:** cerrado.
+
+### RETP-2026-061 — E206/E207 efectivos en la superficie de resolve
+
+- **Hecho:** se documenta que `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos y alcanzables de análisis sintáctico para la ausencia acreditada de los campos obligatorios de `resolve`.
+- **Fundamento:** gramática superficial mínima v0.1; IR canónica v0.2; Vía B; lote funcional integrado en `02dc7c4ec2d171c994a3a9e937bed5d43021cde8`.
+- **Evidencia:** verificación independiente en modo de solo lectura con conformidad **50/50**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3**, y emisión exacta de `resolve_missing_context.svp` → `E206` y `resolve_missing_mechanism.svp` → `E207`.
+- **Límite:** no cierra `E108` canónico ni J1.6; no tipa `Context` ni `Mechanism`; no compara identificadores con `ResSpec`; no ejecuta `resolve` ni convierte `resolve` en solucionador de `U`. El `E206` canónico sigue siendo `EdgeConnectorMismatch`, protegido por `E113`.
+- **Decisión:** registrar el cierre documental acotado y no abrir otro diagnóstico por este acto.
 - **Estado:** cerrado.
 
 ## 4. Autoridad registral
