@@ -22,11 +22,12 @@ La continuidad actual queda documentada, como mínimo, por:
 4. `DECISION_FFL_B_GOBIERNO_DE_DIAGNOSTICOS_EFECTIVOS_BAJO_VIA_B_2026_08_18.md`;
 5. `ACTA_TECNICA_DE_APERTURA_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
 6. `ACTA_TECNICA_DE_CIERRE_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
-7. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
-8. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
-9. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+7. `../arquitectura/ACTA_TECNICA_DE_APERTURA_DE_FFL_E_INTERFAZ_SEMANTICO_DIAGNOSTICA_2026_08_21.md`;
+8. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
+9. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
+10. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 
-FFL-A, FFL-B y FFL-C están cerrados. FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
+FFL-A, FFL-B y FFL-C están cerrados. FFL-E está abierto desde el 21/08/2026. FFL-D permanece pendiente.
 
 ## 3. Cierre técnico de FFL-B
 
@@ -69,7 +70,24 @@ Los cuatro ejecutores terminaron con código de retorno 0 y el árbol permaneci�
 
 Los 48 casos inválidos cubren explícitamente 37 de los 47 códigos efectivos. Los diez restantes están clasificados por su alcanzabilidad real, por rutas diagnósticas alternativas o por preservación estructural; no se amplía el lenguaje para producir casos artificiales.
 
-FFL-C queda cerrado. El cierre no abre FFL-D ni FFL-E.
+FFL-C queda cerrado. Su cierre no se altera por la apertura posterior de FFL-E.
+
+## 4.1. Apertura técnica de FFL-E
+
+FFL-E se abrió el 21/08/2026 para fijar el contrato semántico-diagnóstico de suficiencia representacional por operación en dominios, agentes, consultas e interfaces.
+
+La apertura establece desde el inicio que:
+
+- `Tri = {Zero, One, U}` permanece inalterado;
+- el codominio terminal de una evaluación conserva su tipo declarado y no se identifica por defecto con `Tri`;
+- una representación con pérdida puede ser suficiente para una operación e insuficiente para otra;
+- la insuficiencia representacional no produce `U`;
+- las capas o estratos son estructura declarada del dominio y no se deducen únicamente de `n = b²`;
+- una interfaz sólo puede atribuirse la información que transmite de forma declarada.
+
+El contrato técnico de FFL-E se documenta en `docs/arquitectura/CONTRATO_MINIMO_DE_SUFIENCIA_REPRESENTACIONAL_POR_OPERACION_PARA_EL_LENGUAJE_SV_2026_08_21.md`.
+
+La apertura no modifica todavía `src/`, gramática v0.1, IR v0.2, validador, catálogo diagnóstico ni pruebas. FFL-D continúa pendiente.
 
 ## 5. Contrato diagnóstico y correspondencia funcional
 
@@ -96,7 +114,7 @@ Tras E215 constan:
 
 La coincidencia numérica no implica equivalencia material. Las rutas alternativas se documentan en la matriz y en la tabla de correspondencias funcionales.
 
-FFL-C no modifica estas cifras: amplía y caracteriza la evidencia de prueba, no el catálogo diagnóstico.
+FFL-C no modifica estas cifras: amplía y caracteriza la evidencia de prueba, no el catálogo diagnóstico. FFL-E reserva la clase semántica `RepresentationInsufficientForOperation`, pero no le asigna todavía código numérico ni capacidad de emisión; por tanto, las cifras anteriores permanecen vigentes.
 
 ## 7. Deuda técnica que no bloquea los cierres alcanzados
 
@@ -114,6 +132,8 @@ La forma válida `SystemTarget(CompositionGraph)` ya dispone de un caso permanen
 
 Estas limitaciones quedan registradas como deuda o como capacidades no representadas. No invalidan los cierres de FFL-B ni FFL-C.
 
+FFL-E añade un ámbito nuevo de especificación: identidad y estratificación de parámetros, cadenas de representación, requisitos de representación de operaciones, certificados de recuperabilidad y diagnóstico de representación insuficiente. Estas capacidades no se atribuyen todavía a la implementación.
+
 ## 8. Control de evolución y evidencia
 
 ### Registro de evolución
@@ -130,7 +150,7 @@ Estas limitaciones quedan registradas como deuda o como capacidades no represent
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
 
-Los registros de hitos H1-H3 no cambian por E215 ni por los cierres de FFL-B y FFL-C: ninguno de estos actos verifica por sí mismo un hito nuevo ni abre H3.
+Los registros de hitos H1-H3 no cambian por E215 ni por los cierres de FFL-B y FFL-C. La apertura de FFL-E tampoco verifica por sí misma un hito nuevo.
 
 ## 9. Regla de continuidad
 
@@ -138,4 +158,4 @@ El orden aplicable continúa siendo:
 
 `doctrina y matemática del Sistema SV → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. Cualquier reapertura de FFL-B o FFL-C, o apertura de FFL-D o FFL-E, requiere decisión expresa y fundamento técnico identificable.
+Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. La apertura de FFL-E establece el contrato que deberá gobernar una ampliación posterior; no declara implementadas las capacidades que describe.
