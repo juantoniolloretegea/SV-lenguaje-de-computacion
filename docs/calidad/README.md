@@ -20,15 +20,17 @@ La continuidad actual queda documentada, como mínimo, por:
 2. `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`;
 3. `ACTA_TECNICA_DE_CIERRE_GOBERNADO_DE_FFL_A_CONTRATO_DIAGNOSTICO_2026_08_18.md`;
 4. `DECISION_FFL_B_GOBIERNO_DE_DIAGNOSTICOS_EFECTIVOS_BAJO_VIA_B_2026_08_18.md`;
-5. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
-6. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
-7. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+5. `ACTA_TECNICA_DE_APERTURA_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
+6. `ACTA_TECNICA_DE_CIERRE_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
+7. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
+8. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
+9. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 
-FFL-A y FFL-B están cerrados. FFL-C, FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
+FFL-A, FFL-B y FFL-C están cerrados. FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
 
 ## 3. Cierre técnico de FFL-B
 
-FFL-B queda cerrado tras completar las comprobaciones estructurales representables sin ampliar la gramática, la IR ni la capacidad de ejecución.
+FFL-B quedó cerrado tras completar las comprobaciones estructurales representables sin ampliar la gramática, la IR ni la capacidad de ejecución.
 
 Los cambios finales registrados son:
 
@@ -38,7 +40,7 @@ Los cambios finales registrados son:
 - `RETP-2026-067` — correspondencia entre la secuencia de entradas de `gate` y `AdmissibilityTable.input_codomains` mediante `E215 — GateTableSignatureMismatch`;
 - `RETP-2026-068` — cierre de FFL-B con deuda técnica explícita y sin apertura automática de los bloques posteriores.
 
-La evidencia acumulada vigente acredita:
+La evidencia de cierre de FFL-B fue:
 
 - conformidad: **57/57** — 9 casos válidos y 48 inválidos;
 - pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
@@ -46,7 +48,30 @@ La evidencia acumulada vigente acredita:
 
 E215 comprueba únicamente número y codominio por posición. No ejecuta la compuerta ni calcula `GateResult.output`.
 
-## 4. Contrato diagnóstico y correspondencia funcional
+## 4. Cierre técnico de FFL-C
+
+FFL-C se abrió el 20/08/2026 con escritura funcional limitada a `tests/` y modo de solo lectura sobre `src/`, gramática, AST, IR, validador, catálogo diagnóstico y manual.
+
+Durante el bloque se incorporaron:
+
+- el caso válido permanente `SystemTarget(CompositionGraph)`;
+- una caracterización específica de la doble emisión observable de E006;
+- un inventario de cobertura que separa caso persistido, emisión observable y propiedad estructural.
+
+Una verificación independiente en modo de solo lectura sobre `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33` acreditó:
+
+- conformidad: **58/58** — 10 casos válidos y 48 inválidos;
+- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
+- SEC-0: **3/3**;
+- caracterización de E006: **4/4**.
+
+Los cuatro ejecutores terminaron con código de retorno 0 y el árbol permaneció sin cambios antes y después de la ejecución.
+
+Los 48 casos inválidos cubren explícitamente 37 de los 47 códigos efectivos. Los diez restantes están clasificados por su alcanzabilidad real, por rutas diagnósticas alternativas o por preservación estructural; no se amplía el lenguaje para producir casos artificiales.
+
+FFL-C queda cerrado. El cierre no abre FFL-D ni FFL-E.
+
+## 5. Contrato diagnóstico y correspondencia funcional
 
 Los documentos principales son:
 
@@ -58,7 +83,7 @@ Los documentos principales son:
 
 Los nombres históricos de algunos archivos contienen términos ingleses. Se conservan sin modificación para mantener la trazabilidad de referencias publicadas.
 
-## 5. Estado diagnóstico vigente
+## 6. Estado diagnóstico vigente
 
 Tras E215 constan:
 
@@ -71,9 +96,11 @@ Tras E215 constan:
 
 La coincidencia numérica no implica equivalencia material. Las rutas alternativas se documentan en la matriz y en la tabla de correspondencias funcionales.
 
-## 6. Deuda técnica que no bloquea el cierre
+FFL-C no modifica estas cifras: amplía y caracteriza la evidencia de prueba, no el catálogo diagnóstico.
 
-Permanecen expresamente fuera de FFL-B:
+## 7. Deuda técnica que no bloquea los cierres alcanzados
+
+Permanecen expresamente fuera de FFL-B y FFL-C:
 
 - la concurrencia en régimen `General` que requiera `ConflictOperator`;
 - la procedencia completa de una actualización de `CoupledState` desde un `Connector` concreto;
@@ -83,9 +110,11 @@ Permanecen expresamente fuera de FFL-B:
 - el determinismo material de `SupervisionResult.verdict` y el efecto de `Veto`;
 - la revisión futura del alcance de E006 cuando una referencia existe pero su tipo es incompatible.
 
-Estas limitaciones quedan registradas como deuda o como capacidades no representadas. No justifican mantener FFL-B abierto.
+La forma válida `SystemTarget(CompositionGraph)` ya dispone de un caso permanente de conformidad y deja de ser deuda de cobertura positiva.
 
-## 7. Control de evolución y evidencia
+Estas limitaciones quedan registradas como deuda o como capacidades no representadas. No invalidan los cierres de FFL-B ni FFL-C.
+
+## 8. Control de evolución y evidencia
 
 ### Registro de evolución
 
@@ -101,12 +130,12 @@ Estas limitaciones quedan registradas como deuda o como capacidades no represent
 - `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
 - `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
 
-Los registros de hitos H1-H3 no cambian por E215 ni por el cierre de FFL-B: ninguno de estos actos verifica por sí mismo un hito nuevo ni abre H3.
+Los registros de hitos H1-H3 no cambian por E215 ni por los cierres de FFL-B y FFL-C: ninguno de estos actos verifica por sí mismo un hito nuevo ni abre H3.
 
-## 8. Regla de continuidad
+## 9. Regla de continuidad
 
 El orden aplicable continúa siendo:
 
 `doctrina y matemática del Sistema SV → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. Cualquier reapertura de FFL-B o apertura de FFL-C, FFL-D o FFL-E requiere decisión expresa y fundamento técnico identificable.
+Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. Cualquier reapertura de FFL-B o FFL-C, o apertura de FFL-D o FFL-E, requiere decisión expresa y fundamento técnico identificable.

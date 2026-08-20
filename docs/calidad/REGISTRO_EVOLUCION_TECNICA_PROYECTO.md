@@ -28,15 +28,17 @@ La continuidad documental se organiza así:
 | RETP-2026-057 | 18/08/2026 | 22:11:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J4.3 / E406 | cerrado |
 | RETP-2026-058 | 19/08/2026 | 06:32:40 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J1.4 / E011 | cerrado |
 | RETP-2026-059 | 19/08/2026 | 07:03:00 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / proyección estructural / E213-E214 | cerrado |
-| RETP-2026-060 | 19/08/2026 | NO_CONSTA | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / fundamentos / no clausura certificada | cerrado |
-| RETP-2026-061 | 19/08/2026 | NO_CONSTA | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / `resolve` / E206-E207 efectivos | cerrado |
+| RETP-2026-060 | 19/08/2026 | 09:21:19 | RECEPCION_DOCTRINAL_LATENTE | Lenguaje SV / fundamentos / no clausura certificada | cerrado |
+| RETP-2026-061 | 19/08/2026 | 12:04:50 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / `resolve` / E206-E207 efectivos | cerrado |
 | RETP-2026-062 | 19/08/2026 | 20:40:45 | CORRECCION_ESTRUCTURAL | Lenguaje SV / FFL-B / `graph_decl` | cerrado |
 | RETP-2026-063 | 19/08/2026 | 21:11:57 | CAMBIO_DOCUMENTACION_PUBLICA | Lenguaje SV / documentación principal | cerrado |
 | RETP-2026-064 | 19/08/2026 | 21:31:26 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J2.3 / régimen `Simple` / E114 | cerrado |
 | RETP-2026-065 | 19/08/2026 | 21:50:14 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J3.3 / `Supervisable` | cerrado |
-| RETP-2026-066 | 19/08/2026 | NO_CONSTA | SINCRONIZACION_REGISTRAL_Y_CALIDAD | Lenguaje SV / calidad / actualización de registros | cerrado |
+| RETP-2026-066 | 19/08/2026 | 22:18:33 | SINCRONIZACION_REGISTRAL_Y_CALIDAD | Lenguaje SV / calidad / actualización de registros | cerrado |
 | RETP-2026-067 | 19/08/2026 | 22:31:48 | CAMBIO_FUNCIONAL_GOBERNADO | Lenguaje SV / FFL-B / J3.2 parcial / firma de `gate` / E215 | cerrado |
-| RETP-2026-068 | 19/08/2026 | NO_CONSTA | CIERRE_BLOQUE_Y_SINCRONIZACION_REGISTRAL | Lenguaje SV / cierre de FFL-B / deuda técnica delimitada | cerrado |
+| RETP-2026-068 | 19/08/2026 | 23:40:14 | CIERRE_BLOQUE_Y_SINCRONIZACION_REGISTRAL | Lenguaje SV / cierre de FFL-B / deuda técnica delimitada | cerrado |
+| RETP-2026-069 | 20/08/2026 | 07:23:44 | APERTURA_BLOQUE_Y_PREPARACION_PROBATORIA | Lenguaje SV / FFL-C / pruebas y evidencia | cerrado |
+| RETP-2026-070 | 20/08/2026 | 08:16:26 | CIERRE_BLOQUE_Y_SINCRONIZACION_DE_EVIDENCIA | Lenguaje SV / FFL-C / cierre probatorio | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -124,13 +126,14 @@ La continuidad documental se organiza así:
 
 - **Hecho:** la publicación «No clausura certificada en sistemas finitos de resolución» queda recibida con estatuto `LATENTE_LEGITIMO`, sin modificación de código, gramática ni IR.
 - **Fundamento:** DOI `10.21428/39829d0b.f0892864` y documentación de fundamentos del Sistema SV.
+- **Evidencia temporal:** commit `be68345d…`, 19/08/2026 a las **09:21:19** (Europe/Madrid).
 - **Decisión:** preservar la recepción sin traducirla automáticamente a construcciones del lenguaje.
 - **Estado:** cerrado.
 
 ### RETP-2026-061 — E206/E207 efectivos en `resolve`
 
 - **Hecho:** `E206 — ResolveMissingContext` y `E207 — ResolveMissingMechanism` son diagnósticos efectivos para la ausencia de `context` y `mechanism` en la forma superficial de `resolve`.
-- **Evidencia:** conformidad **50/50**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**.
+- **Evidencia:** conformidad **50/50**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**; lote funcional `02dc7c4e…` a las **12:04:50** (Europe/Madrid). La integración documental posterior se produjo a las 19:02:26 y no sustituye la hora del hito funcional.
 - **Límite:** no se cierra J1.6, no se tipan `Context` ni `Mechanism` y no se ejecuta una resolución material de `U`.
 - **Estado:** cerrado.
 
@@ -160,7 +163,7 @@ La continuidad documental se organiza así:
 
 - **Hecho:** `CellTarget` exige un `EvalResult`, `ComposedTarget` un `GateResult` y `SystemTarget` un `CompositionGraph`. Una referencia existente de tipo incompatible se rechaza mediante `E006`; `E205` continúa reservado a la exigencia de constructor explícito.
 - **Evidencia:** commit `59e055ea8a66437c91558e1e8096eb5c6e670b8c`; conformidad **55/55**, interfaz de línea de órdenes **3/3**, SEC-0 **3/3** y tres casos negativos específicos con E006.
-- **Límite:** no se cierra la semántica completa de J3.3. La aceptación positiva de `SystemTarget(CompositionGraph)` fue comprobada de forma adicional, pero todavía no dispone de un caso válido específico conservado en la batería principal.
+- **Límite:** no se cierra la semántica completa de J3.3. La aceptación positiva de `SystemTarget(CompositionGraph)` fue comprobada de forma adicional, pero en este hito todavía no disponía de un caso válido específico conservado en la batería principal.
 - **Decisión:** cerrar únicamente la correspondencia estructural entre cada constructor y su contenido.
 - **Estado:** cerrado.
 
@@ -168,7 +171,8 @@ La continuidad documental se organiza así:
 
 - **Hecho:** los documentos vivos de calidad se actualizan para incorporar RETP-062 a RETP-065, reflejar la conformidad **55/55**, registrar las limitaciones todavía abiertas y corregir el tablero de bloques.
 - **Fundamento:** el registro de evolución terminaba en RETP-061, la deuda viva no recogía E114 ni el tipado de `Supervisable`, el README de calidad mantenía **52/52** y el tablero mostraba FFL-C, FFL-D y FFL-E como abiertos pese a la secuencia vigente.
-- **Alcance:** sólo se modifican documentos de `docs/calidad/`; el historial CSV hasta RETP-061 se conserva sin alteración.
+- **Evidencia temporal:** commit `359c61bc…`, 19/08/2026 a las **22:18:33** (Europe/Madrid).
+- **Alcance:** sólo se modificaron documentos de `docs/calidad/`; el historial CSV hasta RETP-061 se conservó sin alteración.
 - **Decisión:** mantener FFL-B como único bloque técnico activo y FFL-C, FFL-D y FFL-E en estado pendiente hasta decisión expresa.
 - **Estado:** cerrado.
 
@@ -185,15 +189,33 @@ La continuidad documental se organiza así:
 
 - **Hecho:** FFL-B se cierra tras E215 y la revisión final de las obligaciones restantes.
 - **Fundamento:** las obligaciones todavía abiertas identificadas exigen ampliar representación, semántica o ejecución: `ConflictOperator` en régimen `General`, procedencia completa de `CoupledState`, suficiencia reconstructiva de `TransitionData`, producción de `CriticalityResult`, ejecución de `GateResult.output` y semántica ejecutiva completa de `SupervisionResult`.
-- **Evidencia:** base funcional `15398f3441c80168f5d09866b0cba4e74221a6aa`; conformidad **57/57**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**; deuda viva y tablas de correspondencias actualizadas.
+- **Evidencia:** base funcional `15398f3441c80168f5d09866b0cba4e74221a6aa`; conformidad **57/57**, interfaz de línea de órdenes **3/3** y SEC-0 **3/3**; deuda viva y tablas de correspondencias actualizadas; commit documental `d7b15e9…` a las **23:40:14** (Europe/Madrid).
 - **Decisión:** cerrar FFL-B con deuda técnica explícita y mantener FFL-C, FFL-D y FFL-E en estado pendiente. Cualquier reapertura o apertura posterior requerirá decisión expresa y fundamento técnico identificable.
+- **Estado:** cerrado.
+
+### RETP-2026-069 — Apertura y preparación probatoria de FFL-C
+
+- **Hecho:** FFL-C se abre para comprobar la suficiencia de la evidencia reproducible, con escritura funcional limitada a `tests/` y modo de solo lectura sobre `src/`, gramática, AST, IR, validador, catálogo diagnóstico y manual.
+- **Fundamento:** FFL-B estaba cerrado y el tablero exigía una decisión expresa antes de activar el bloque de pruebas y evidencia.
+- **Evidencia:** commit de apertura `910af1dd0c7ba1f811f4b77a7872626e1c3e695d` a las **07:23:44**; caso permanente `SystemTarget(CompositionGraph)` en `a0af722b0ba51cabd5d5fea9c7d719d3ba775e5d`; caracterización de E006 en `1e7ffa795fe0528888834dd35d09c321cb00c9f3`; inventario de cobertura en `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33`.
+- **Límite:** no se modifica implementación, gramática, IR, validador, catálogo diagnóstico ni manual.
+- **Decisión:** persistir únicamente las comprobaciones que acreditan afirmaciones técnicas ya existentes y clasificar las ausencias de cobertura sin ampliar el lenguaje.
+- **Estado:** cerrado.
+
+### RETP-2026-070 — Cierre de FFL-C
+
+- **Hecho:** una verificación independiente en modo de solo lectura ejecuta las cuatro baterías sobre `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33`, con árbol limpio antes y después y código de retorno 0 en todos los ejecutores.
+- **Evidencia:** conformidad **58/58** — 10 casos válidos y 48 inválidos; pruebas rápidas de la interfaz de línea de órdenes **3/3**; SEC-0 **3/3**; caracterización de E006 **4/4**; ausencia de divergencias de resultado.
+- **Cobertura:** los 48 casos inválidos cubren directamente 37 de los 47 códigos efectivos. Los diez restantes se clasifican por inalcanzabilidad desde la superficie vigente, ruta diagnóstica alternativa o preservación estructural, sin fabricar casos mediante ampliación del lenguaje.
+- **Límite:** la evidencia no ejecuta `GateResult.output`, no materializa la semántica completa de supervisión, no incorpora `ConflictOperator` ni produce `CriticalityResult`. La deuda de precisión de E006 permanece documentada.
+- **Decisión:** cerrar FFL-C y mantener FFL-D y FFL-E pendientes, sin apertura automática de ningún bloque posterior.
 - **Estado:** cerrado.
 
 ## 4. Estado de continuidad
 
-FFL-A y FFL-B están cerrados. FFL-C, FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
+FFL-A, FFL-B y FFL-C están cerrados. FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
 
-La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md` y no invalida el cierre de FFL-B.
+La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md` y no invalida los cierres alcanzados.
 
 ## 5. Numeración registral
 

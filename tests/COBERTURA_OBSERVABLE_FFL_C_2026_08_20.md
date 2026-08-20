@@ -13,11 +13,18 @@ Tras incorporar `supervise_systemtarget_valido.svp`, la carpeta de conformidad c
 - 10 casos válidos, cada uno con su archivo `.expected.json`;
 - 48 casos inválidos con código esperado declarado en `tests/run_conformance.py`.
 
-La ejecución completa de este estado debe verificarse antes de declarar un nuevo resultado agregado de conformidad.
+Una verificación independiente en modo de solo lectura sobre `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33` confirmó:
+
+- conformidad: **58/58** — 10 casos válidos + 48 inválidos;
+- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
+- SEC-0: **3/3**;
+- caracterización de E006: **4/4**.
+
+Los cuatro ejecutores terminaron con código de retorno 0. El árbol de trabajo permaneció sin modificaciones antes y después de la ejecución y no se observaron divergencias de resultado.
 
 Los 48 casos inválidos cubren explícitamente 37 de los 47 códigos del catálogo efectivo. La diferencia entre número de casos y número de códigos se debe a que varios diagnósticos disponen de más de un caso discriminante.
 
-## 3. Supervisable y E006
+## 3. `Supervisable` y E006
 
 La cobertura persistida de `Supervisable` comprende:
 
@@ -31,7 +38,7 @@ La cobertura persistida de `Supervisable` comprende:
 1. referencia inexistente;
 2. referencia existente de tipo incompatible.
 
-Esta caracterización no cambia el significado declarado del diagnóstico ni resuelve la deuda de precisión de su nombre y mensaje.
+La comprobación específica cubre cuatro casos y obtuvo **4/4**. Esta caracterización no cambia el significado declarado del diagnóstico ni resuelve la deuda de precisión de su nombre y mensaje.
 
 ## 4. Códigos sin caso inválido de extremo a extremo
 
@@ -52,10 +59,14 @@ Diez códigos del catálogo efectivo no disponen de un caso `.svp` inválido que
 
 ## 5. Consecuencia para la lectura de cobertura
 
-La cifra total de casos superados no debe interpretarse como cobertura exhaustiva de todos los códigos ni de todos los juicios de la IR. La evidencia debe leerse en tres niveles separados:
+La cifra total de casos superados no debe interpretarse como cobertura exhaustiva de todos los códigos ni de todos los juicios de la IR. La evidencia se lee en tres niveles separados:
 
 1. **caso persistido:** existe una entrada concreta y una expectativa verificable;
 2. **emisión observable:** el procesamiento completo puede alcanzar el diagnóstico indicado;
 3. **propiedad estructural:** una obligación puede estar preservada porque la superficie no ofrece la operación que permitiría vulnerarla, sin que por ello exista un diagnóstico alcanzable.
 
-FFL-C debe cerrar únicamente cuando estos tres niveles queden descritos sin atribuir cobertura donde sólo existe imposibilidad estructural o una ruta diagnóstica distinta.
+La combinación de inventario, casos persistidos y ejecución independiente satisface el criterio probatorio fijado para FFL-C sin atribuir cobertura donde sólo existe imposibilidad estructural o una ruta diagnóstica distinta.
+
+## 6. Estado
+
+FFL-C queda cerrado con evidencia reproducible de **58/58 + 3/3 + 3/3 + 4/4**. FFL-D y FFL-E permanecen pendientes y no se abren por efecto de este cierre.
