@@ -11,7 +11,7 @@ Este documento fija el contrato mínimo que deberá respetar el Lenguaje SV cuan
 El contrato distingue cuatro cuestiones que no deben confundirse:
 
 - el valor ternario de un parámetro;
-- la clasificación producida por una célula;
+- la salida tipada producida por una célula;
 - la información conservada por una representación;
 - y la posibilidad de ejecutar exactamente una operación a partir de esa representación.
 
@@ -40,19 +40,26 @@ La existencia de dos parámetros en el mismo estrato no autoriza a permutarlos s
 
 ## 4. Representaciones declaradas
 
-Una representación de un dominio se modela conceptualmente mediante:
+Una representación de un dominio se modela conceptualmente mediante una aplicación desde el espacio realizable del dominio:
 
-`RepresentationSpec = { domain, source, output_type, mapping, loss_kind }`
+`F_j : X_D -> R_j`
+
+con una especificación equivalente a:
+
+`RepresentationSpec = { domain, output_type, mapping, loss_kind }`
 
 con:
 
-- `domain`: dominio al que pertenece la representación;
-- `source`: estado o representación de origen;
-- `output_type`: tipo de la salida;
-- `mapping`: aplicación determinista declarada;
+- `domain`: dominio cuyo espacio realizable es `X_D`;
+- `output_type`: tipo `R_j` de la salida;
+- `mapping`: aplicación determinista `F_j : X_D -> R_j`;
 - `loss_kind`: `Injective` o `Lossy`.
 
 La declaración `Lossy` informa de que la representación puede identificar estados distintos. No determina por sí sola qué operaciones dejan de ser recuperables.
+
+Una reducción entre dos niveles no forma parte de `RepresentationSpec`. Las reducciones pertenecen a la cadena que relaciona representaciones ya declaradas.
+
+Si `R_j` es un codominio terminal de una célula, su tipo es el codominio declarado por esa célula. No se identifica por defecto con `Tri`. Cualquier aplicación posterior desde un codominio terminal a `Tri` constituye una transducción separada y debe declararse como tal.
 
 ## 5. Cadena de representaciones
 
@@ -64,7 +71,11 @@ con niveles ordenados
 
 `F_0, F_1, ..., F_m`
 
-y reducciones deterministas `r_j` tales que
+y reducciones deterministas
+
+`r_j : R_j -> R_(j+1)`
+
+tales que
 
 `F_(j+1) = r_j ∘ F_j`.
 
@@ -74,7 +85,7 @@ La numeración pertenece a la cadena declarada. No establece un orden universal 
 
 Sea `Q : X_D -> Y` una operación determinista con firma declarada.
 
-`Q` es exactamente recuperable desde `F_j` cuando existe una aplicación `q_j` con firma compatible tal que
+`Q` es exactamente recuperable desde `F_j` cuando existe una aplicación `q_j : R_j -> Y` con firma compatible tal que
 
 `Q = q_j ∘ F_j`.
 
@@ -132,7 +143,13 @@ Cuando una consulta dependa de una operación cuya recuperabilidad se haya certi
 
 Conceptualmente:
 
-`RepresentationRequirement = { operation, chain, accepted_levels, certificate }`
+`RepresentationRequirement = { operation, chain, certificate }`
+
+Si el certificado fija `frontier_index = l`, los niveles admitidos por ese requisito quedan derivados por la estructura de la cadena:
+
+`accepted_levels = {0, ..., l}`.
+
+`accepted_levels` no es un campo libre que pueda ampliarse por declaración del usuario. La propiedad de segmento inicial se deriva de `F_(j+1) = r_j ∘ F_j` y del certificado correspondiente.
 
 Una consulta sólo podrá atribuirse recuperabilidad exacta si el `QueryContext` suministra una representación admitida por el requisito o información adicional expresamente declarada que forme parte de un nuevo certificado.
 
@@ -161,7 +178,7 @@ Este contrato no modifica `Connector`. Un `Connector` conserva su firma tipada e
 El Lenguaje SV deberá distinguir entre:
 
 - `U`, como valor ternario legítimo;
-- una clasificación terminal perteneciente a su codominio declarado;
+- una salida terminal perteneciente al codominio declarado de la célula;
 - y la imposibilidad de ejecutar exactamente una operación porque la representación disponible no conserva información suficiente.
 
 FFL-E reserva para la tercera situación la clase semántica:
@@ -194,37 +211,42 @@ Sin modificar todavía la IR v0.2, el contrato identifica como candidatos mínim
 
 Estos objetos pertenecen al ámbito de uso, dominio, consulta y análisis. No requieren ampliar `Tri` ni alterar la estructura de `CellState`.
 
+La salida terminal tipada y su relación con el evaluador de la célula se tratan separadamente en la adenda técnica de FFL-E sobre evaluación y codominios de salida.
+
 ## 15. Requisitos de bienformación que deberá preservar una ampliación posterior
 
 Una ampliación de especificación o implementación sólo será válida si garantiza, como mínimo:
 
-1. que todas las representaciones de una cadena pertenecen al mismo dominio declarado;
-2. que las reducciones entre niveles son compatibles por tipos;
-3. que el índice certificado pertenece a la cadena;
-4. que la aplicación de recuperación tiene dominio y codominio compatibles con la representación y la operación;
-5. que todo testigo negativo utiliza estados acreditados como realizables;
-6. que la igualdad de representación y la desigualdad de salida del testigo quedan verificadas o respaldadas por evidencia explícita;
-7. que ninguna insuficiencia representacional se degrada a `U`;
-8. que una interfaz no recibe atribuciones superiores a la información transmitida;
-9. que la información lateral utilizada por una recuperación queda declarada;
-10. que la serialización conserva de forma determinista todas las referencias del certificado.
+1. que toda `RepresentationSpec` declara una aplicación desde `X_D` a su tipo de salida;
+2. que todas las representaciones de una cadena pertenecen al mismo dominio declarado;
+3. que las reducciones entre niveles son compatibles por tipos;
+4. que cada reducción satisface la igualdad declarada `F_(j+1) = r_j ∘ F_j`;
+5. que el índice certificado pertenece a la cadena;
+6. que la aplicación de recuperación tiene dominio y codominio compatibles con la representación y la operación;
+7. que todo testigo negativo utiliza estados acreditados como realizables;
+8. que la igualdad de representación y la desigualdad de salida del testigo quedan verificadas o respaldadas por evidencia explícita;
+9. que ninguna insuficiencia representacional se degrada a `U`;
+10. que una interfaz no recibe atribuciones superiores a la información transmitida;
+11. que la información lateral utilizada por una recuperación queda declarada;
+12. que la serialización conserva de forma determinista todas las referencias del certificado.
 
 ## 16. Prohibiciones
 
 Queda excluido de este contrato:
 
-- inferir automáticamente una frontera por el mero índice de una representación;
+- inferir automáticamente un límite representacional por el mero índice de una representación;
 - tratar una agregación con pérdida como equivalente al estado completo;
 - reconstruir etiquetas eliminadas mediante aproximación y presentarlas como recuperación exacta;
 - fabricar `U` para representar una insuficiencia de la consulta;
-- asumir que dos dominios con el mismo perfil de fronteras comparten semántica;
+- asumir que dos dominios con el mismo perfil de límites representacionales comparten semántica;
 - utilizar prevalencia, probabilidad o rendimiento estadístico como sustituto de la igualdad funcional exigida por el certificado;
+- identificar una salida terminal tipada con `Tri` sin una transducción explícita;
 - alterar la semántica de `resolve` o `ResolutionRecord` para alojar este mecanismo.
 
 ## 17. Compatibilidad con el estado vigente
 
-El contrato es compatible con la gramática v0.1, la IR v0.2 y la implementación actualmente publicada porque no modifica sus objetos existentes ni atribuye ejecución nueva.
+El contrato no atribuye ejecución nueva a la gramática v0.1, la IR v0.2 ni a la implementación actualmente publicada.
 
-Su efecto inmediato es normativo para FFL-E: delimita qué deberá conservar una futura ampliación del lenguaje cuando incorpore representaciones, consultas e interfaces capaces de expresar y verificar suficiencia por operación.
+Su efecto inmediato es fijar el alcance técnico de FFL-E: delimita qué deberá conservar una futura ampliación del lenguaje cuando incorpore representaciones, consultas e interfaces capaces de expresar y verificar suficiencia por operación.
 
 La transición a sintaxis, objetos IR ejecutables, validación y pruebas deberá realizarse en una fase posterior y con versión explícita de las especificaciones afectadas.
