@@ -75,3 +75,16 @@ Cuando una entrada tenga valor estratégico de adopción o ecosistema, podrá da
 - `WIRQ-2026-005` — shell y entorno interactivo del lenguaje SV orientado al desarrollador, con ayuda contextual solo bajo demanda explícita.
 - `WIRQ-2026-006` — capacidad de trabajo sincronizado local/remoto del ecosistema de desarrollo SV, diferida hasta madurez funcional e infraestructural suficiente.
 - `WIRQ-2026-007` — generación de agentes especializados por el lenguaje SV a partir de patrones expertos, con configuración precargada, base informativa actualizable y remisión estructural al repositorio `SVperitus`.
+- `WIRQ-2026-008` — gobierno de identidades, funciones técnicas, trazabilidad humana, responsabilidad sobre automatización y distribución reconocida de versiones estables del Lenguaje SV.
+
+## 10. WIRQ-2026-008 — condición de reentrada
+
+Esta entrada conserva una necesidad de gobierno para una fase estable del Lenguaje SV sin convertirla en requisito de las versiones intermedias ni interferir con los trabajos arquitectónicos previos.
+
+El alcance futuro deberá distinguir, como mínimo, las funciones de desarrollo del Lenguaje, programación en SV, implantación, superadministración de una implantación, administración, soporte técnico de funcionamiento y formación. Las funciones no constituyen una escala lineal de privilegio: cada una deberá disponer de competencias y límites propios, y una misma persona sólo podrá acumular funciones cuando la política aplicable lo permita sin falsear una separación de responsabilidades exigida.
+
+La arquitectura deberá prever identidad humana fuerte para las operaciones privilegiadas; vinculación expresa entre persona, función, ámbito y acto; trazabilidad de la intervención automatizada; y la prohibición de que una IA ejerza de manera autónoma una función de máxima autoridad sin una persona responsable previamente vinculada. La autenticación de una sesión no sustituirá, cuando el efecto lo requiera, la atribución del acto concreto.
+
+El código fuente podrá permanecer públicamente auditable. La posesión o compilación del código no equivaldrá por sí sola a distribución oficial ni a implantación reconocida. La fase estable deberá estudiar un registro federado y verificable de distribuciones, identidades, licencias e implantaciones, con minimización de datos personales y sin convertir un depósito central de usuarios en punto único de confianza o de fallo.
+
+**IRQ asignado: IRQ-4.** La entrada permanece aparcada. Su diseño formal no se activa durante SEC.0 ni por cada versión intermedia. La condición de reentrada es una decisión expresa de preparar una primera versión declarada estable que admita distribución oficial o implantaciones reconocidas. Antes de liberar esa versión deberán quedar definidos el modelo de funciones y competencias, la identidad y trazabilidad exigibles, la tutela humana de automatizaciones de máxima autoridad, el ciclo de concesión y revocación de funciones, y la relación entre código público, distribución reconocida e implantación legítima.
