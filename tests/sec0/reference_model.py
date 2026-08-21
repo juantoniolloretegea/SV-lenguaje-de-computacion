@@ -51,10 +51,9 @@ class Budget:
 
 @dataclass
 class ExecutionLedger:
-    """Estado mínimo acumulativo para recursos y autorizaciones consumibles."""
+    """Estado mínimo acumulativo de consumo de recursos."""
 
     used: dict[str, int] = field(default_factory=dict)
-    consumed_authorities: set[str] = field(default_factory=set)
 
     def can_reserve(self, budget: Budget, requested: Mapping[str, int]) -> bool:
         if not budget.valid() or not requested:
@@ -72,12 +71,6 @@ class ExecutionLedger:
     def reserve(self, requested: Mapping[str, int]) -> None:
         for resource, amount in requested.items():
             self.used[resource] = self.used.get(resource, 0) + amount
-
-    def consume_authority(self, name: str) -> bool:
-        if name in self.consumed_authorities:
-            return False
-        self.consumed_authorities.add(name)
-        return True
 
 
 _AUTHORITY_SEAL = object()
@@ -260,13 +253,22 @@ def admit_independence_premise(fault: str, basis: FrozenSet[str]) -> Independenc
     return IndependencePremise(fault, basis, _seal=_INDEPENDENCE_SEAL)
 
 
-@dataclass(frozen=True)
+@dataclass
 class ContinuityWitness:
+    """Testigo lógico de continuidad condicionado a una premisa externa de independencia."""
+
     name: str
     independence: IndependencePremise
+    consumed_authorities: set[str] = field(default_factory=set)
 
     def independent_for(self, fault: str) -> bool:
         return self.independence.admitted and self.independence.fault == fault
+
+    def consume_authority(self, name: str) -> bool:
+        if name in self.consumed_authorities:
+            return False
+        self.consumed_authorities.add(name)
+        return True
 
 
 @dataclass(frozen=True)
@@ -324,19 +326,17 @@ class DecisionEngine:
                 return Decision(CheckStatus.D_N, False, "presupuesto de recursos excedido o ausente")
 
         if form.consumable or form.authority.consumable:
-            if ledger is None:
-                return Decision(CheckStatus.D_N, False, "registro de consumo ausente")
             if continuity_witness is None or not continuity_witness.independent_for(fault):
                 return Decision(CheckStatus.D_N, False, "unicidad de consumo no acreditable")
-            if form.authority.name in ledger.consumed_authorities:
+            if form.authority.name in continuity_witness.consumed_authorities:
                 return Decision(CheckStatus.D_R, False, "autoridad ya consumida")
 
         if resource_request:
             assert ledger is not None
             ledger.reserve(resource_request)
         if form.consumable or form.authority.consumable:
-            assert ledger is not None
-            if not ledger.consume_authority(form.authority.name):
+            assert continuity_witness is not None
+            if not continuity_witness.consume_authority(form.authority.name):
                 return Decision(CheckStatus.D_R, False, "autoridad ya consumida")
 
         return Decision(CheckStatus.D_A, True, "todas las obligaciones aplicables acreditadas")
