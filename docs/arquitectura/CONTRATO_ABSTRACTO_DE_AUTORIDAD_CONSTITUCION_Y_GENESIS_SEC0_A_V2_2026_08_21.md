@@ -2,7 +2,8 @@
 
 **Fecha:** 21/08/2026  
 **Estado:** contrato arquitectónico cerrado  
-**Ámbito:** Lenguaje SV — SEC.0-A
+**Ámbito:** Lenguaje SV — SEC.0-A  
+**Vigencia:** para T-0 y sus referencias derivadas, este contrato debe leerse conjuntamente con [`ADENDA_CORRECTIVA_SEC0_A_UNIDAD_DE_GENESIS_Y_CONTINUIDAD_AUTORITATIVA_2026_08_22.md`](./ADENDA_CORRECTIVA_SEC0_A_UNIDAD_DE_GENESIS_Y_CONTINUIDAD_AUTORITATIVA_2026_08_22.md), que prevalece ante cualquier lectura incompatible.
 
 ## 1. Objeto
 
