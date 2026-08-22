@@ -57,11 +57,38 @@ evidencia mínima de alcance sobre el objetivo
 resultado contractual esperado
 ```
 
-El catálogo incluye escenarios relativos a autoridad y constitución, fallo cerrado, continuidad y persistencia, consumo y recursos, raíces de confianza, TCB, atestación, mediación, falsabilidad, aplicabilidad y evidencia.
+La existencia de un vector en el catálogo no constituye cobertura. La matriz de correspondencia `obligación → vector` declara expresamente `NO_PROBADO` mientras no exista una ejecución falsable sobre el `SUT` exacto con alcance causal acreditado, oráculo admisible y veredicto derivado.
+
+El catálogo incluye escenarios relativos a autoridad y constitución, fallo cerrado, continuidad y persistencia, consumo y recursos, raíces de confianza, `TCB(G)`, atestación, mediación, falsabilidad, aplicabilidad, evidencia y transferencia entre perfiles.
 
 Las antiguas materializaciones contractuales en Python se conservan en el historial del repositorio, pero no forman parte del árbol vigente. Su retirada evita atribuir a una maqueta local el estatuto de backend, entorno de ejecución o mecanismo material de seguridad.
 
-Los vectores podrán convertirse en pruebas ejecutables cuando exista un SUT identificable y pueda conservarse la traza exigida por SEC.0-T: `TestRun`, `SUT`, `TestCase`, `Targets`, `ThreatModel`, `InitialState`, `InjectedFaults`, `ReachedFaults`, `Oracle`, `Observer`, `Expected`, `Observed`, `Verdict` y `Artifacts`. Las propiedades que dependan de infraestructura externa al proceso deberán ejercerse finalmente contra el sistema completo.
+Los vectores podrán convertirse en pruebas ejecutables cuando exista un `SUT` identificable y pueda conservarse la traza exigida por SEC.0-T:
+
+```text
+TestRun
+SUT
+TestCase
+Targets
+ThreatModel
+InitialState
+InjectedFaults
+ReachedFaults
+Oracle
+Observer
+Expected
+Observed
+Verdict
+Artifacts
+```
+
+`ReachedFaults` no puede reducirse a un registro emitido por el mismo componente bajo la misma clase de fallo cuando ese fallo pueda falsear también el registro. La evidencia de una vía lateral concreta no acredita otras vías no equivalentes.
+
+Los controles positivos y negativos de una misma afirmación deben corresponder a la misma identidad relevante de `SUT`, garantía y perfil material. Un efecto positivo debe ser observable dentro del alcance declarado; un no-op o una mera afirmación interna de éxito no bastan cuando puedan ser falseados por el mismo fallo.
+
+Añadir persistencia, recuperación, administración, comunicaciones, una nueva dependencia material u otra capacidad causalmente relevante puede cambiar las clases aplicables aunque el binario permanezca idéntico. La evidencia anterior no se transfiere automáticamente a la identidad resultante.
+
+Las propiedades que dependan de infraestructura externa al proceso deberán ejercerse finalmente contra el sistema completo.
 
 ## 5. Casos válidos de conformidad SVP → IR
 
