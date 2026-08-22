@@ -50,7 +50,9 @@ G
 
 Una propiedad no se considerará materializada porque exista una función, tipo, objeto inmutable, comprobación local o rama de código que la represente.
 
-La propiedad sólo podrá atribuirse a una realización cuando, dentro del modelo de fallos declarado, las vías materiales capaces de producir el efecto protegido estén mediadas por mecanismos suficientes o queden expresamente fuera del alcance de la garantía.
+Dentro del alcance afirmado, todo componente cuya alteración o compromiso pueda falsificar `G` deberá quedar incluido en `TCB(G)` o deberá existir evidencia suficiente de que no puede producir esa falsificación bajo el modelo declarado. Una delimitación de alcance no puede utilizarse para excluir precisamente un componente capaz de falsear la garantía que se afirma.
+
+La propiedad sólo podrá atribuirse a una realización cuando las vías materiales capaces de producir el efecto protegido estén gobernadas de forma suficiente para el modelo de fallos y límites declarados.
 
 ## 4. Cadena de transformación y ejecución
 
@@ -152,7 +154,7 @@ D-R — REFUTADO
 D-N — NO_VERIFICABLE
 ```
 
-Una forma sujeta a control sólo puede continuar cuando todas las obligaciones aplicables están en `D-A`. `D-R` y `D-N` bloquean el efecto protegido correspondiente.
+Una forma sujeta a control sólo puede continuar cuando todas las obligaciones aplicables están en `D-A`. `D-R` y `D-N` bloquean el efecto protegido correspondiente y su diferencia deberá conservarse en la traza y el diagnóstico.
 
 `D-N` es un estado técnico de comprobación. No pertenece a `Tri` y no puede convertirse en `U`, éxito, advertencia tolerable ni permiso por reintento.
 
@@ -391,6 +393,7 @@ dependencias relevantes
 configuración
 definición de garantías
 estado inicial
+datos de prueba
 perfil material
 versión de la batería
 instrumentación
@@ -437,11 +440,15 @@ INCONCLUSO
 
 `PASS` exige caso falsable ejecutado, alcance acreditado y resultado esperado obtenido. `FAIL` registra una violación o resultado incompatible. `NO_EJECUTADO`, `NO_PROBADO` e `INCONCLUSO` no constituyen cobertura.
 
+Un `FAIL` confirmado no queda eliminado por acumulación posterior de ejecuciones `PASS`; sólo puede cerrarse conforme al procedimiento causal de SEC.0-T.
+
 Los estados de prueba permanecen separados de `Tri` y de `D-A`, `D-R` y `D-N`.
 
 La instrumentación deberá declararse y no podrá considerarse transparente cuando altere orden, concurrencia, tiempo, recursos, persistencia o privilegios relevantes para el fallo ensayado.
 
 La aplicabilidad de una clase de prueba derivará de las capacidades y garantías efectivamente presentes en el `SUT`; no podrá reducirse mediante una declaración unilateral de «no aplicable».
+
+Cuando `TestRun` sostenga una afirmación pública de conformidad, su integridad deberá quedar protegida frente a la misma clase de fallo para la que se invoca como evidencia. Una traza reescribible por el mismo `SUT` puede conservar valor de laboratorio, pero no constituye por sí sola evidencia pública independiente frente a dicho fallo.
 
 El catálogo `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md`, una vez incorporado al árbol principal, constituirá la referencia independiente de la implementación para los escenarios conservados.
 
@@ -519,7 +526,8 @@ La materialización podrá avanzar por capas sin atribuir a cada capa el sello f
 - aplicación de vectores SEC.0 al sistema completo;
 - escenarios integrales A/D/M/X;
 - fallos compuestos;
-- regresiones permanentes;
+- reducción de cada violación a una regresión mínima sin retirar el escenario integral que la descubrió;
+- nueva ejecución de los escenarios integrales tras la corrección;
 - delimitación final de garantías y límites.
 
 Esta secuencia no implica que todos los perfiles deban ofrecer todas las garantías materiales.
