@@ -63,7 +63,10 @@ En consecuencia:
 - restaurar autoridad preexistente corresponde a T-R cuando exista continuidad legítima;
 - conceder, delegar, revocar o modificar autoridad corresponde a T-G dentro de su régimen;
 - alterar constitución, formas o condiciones constitutivas corresponde a T-C;
+- los actos que sólo informen, verifiquen, habiliten o ejerzan autoridad ya existente conservan las clases T-I, T-V, T-H o T-E correspondientes;
 - sólo una continuidad genuinamente nueva y no habitada puede disponer de T-0.
+
+La nueva identidad técnica no reclasifica por sí sola ninguna operación: la clase T-* continúa derivándose del efecto real del acto.
 
 ## 6. Documentos correctivos
 
