@@ -17,7 +17,7 @@ No se modifican las restantes clases T-*, las magnitudes de autoridad, el régim
 
 T-0 constituye exclusivamente el primer estado legítimo de autoridad de una **continuidad autoritativa aún no habitada**.
 
-Una continuidad deja de ser no habitada desde que ha admitido autoridad, una instancia vinculada a esa autoridad, estado autoritativo persistente, un `AStore`, dependencias `PDep` relevantes o un antecedente legítimo susceptible de recuperación.
+Una continuidad deja de ser no habitada desde que contiene o admite autoridad, estado autoritativo persistente, una instancia vinculada a esa autoridad, un `AStore` que contenga o fundamente estado autoritativo previamente admitido, dependencias `PDep` ya constituidas relevantes para autoridad o un antecedente legítimo susceptible de recuperación. La mera existencia física de almacenamiento vacío, estructuras sin autoridad admitida o una identidad técnica preparada para el primer arranque no consume por sí sola la génesis.
 
 Por tanto, no crean una nueva T-0 por sí mismos:
 
