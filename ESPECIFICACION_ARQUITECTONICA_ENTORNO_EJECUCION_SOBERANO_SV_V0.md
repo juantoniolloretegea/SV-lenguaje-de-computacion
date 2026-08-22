@@ -98,17 +98,23 @@ La realización deberá conservar las distinciones de SEC.0-A. La capacidad téc
 
 Una autoridad sólo puede reconocerse por T-0, T-C, T-G o T-R bajo sus condiciones respectivas. T-I, T-V, T-H y T-E no constituyen autoridad.
 
-### 6.1. T-0 sólo en la génesis inicial de la instancia
+### 6.1. T-0 sólo en la génesis inicial de una continuidad autoritativa
 
-T-0 sólo puede constituir el primer estado legítimo de autoridad de una instancia durante su génesis inicial admitida, antes de que dicha instancia entre en un estado ordinario de ejecución protegido.
+T-0 sólo puede constituir el primer estado legítimo de autoridad de una continuidad autoritativa antes de que esa continuidad haya admitido una instancia y antes de que exista en ella estado autoritativo previo susceptible de restauración, gobierno o ampliación.
 
-Un perfil material o de garantías puede formar parte de esa configuración inicial. **Crear, sustituir o ampliar un perfil después de la génesis de la instancia no constituye una nueva T-0**: el acto deberá clasificarse por su efecto real como T-G o T-C, o como T-R si únicamente restaura autoridad preexistente bajo continuidad legítima.
+La identidad efímera de proceso, contenedor, máquina virtual, ejecución, `instance_id`, `boot_nonce` o mecanismo equivalente **no crea una nueva génesis soberana**. Si una nueva instancia se conecta, monta, restaura o continúa un `AStore`, `PDep` o relación de continuidad que ya haya admitido autoridad o una instancia previa, T-0 deja de estar disponible para esa continuidad.
 
-T-0 no es una operación ordinaria disponible después de entrar en un estado de ejecución admitido. Un procedimiento denominado `bootstrap`, `init`, `genesis` o equivalente no adquiere estatuto T-0 por su nombre.
+En una continuidad ya habitada:
 
-Después de la génesis, todo acto que conceda, amplíe, delegue, sustituya o restaure autoridad debe satisfacer autoridad previa y `Req` aplicables.
+- un reinicio, recuperación o sustitución que únicamente restablece autoridad preexistente bajo continuidad legítima deberá gobernarse como T-R;
+- todo acto que conceda, amplíe, delegue, sustituya o reconstituya autoridad con efectos nuevos deberá gobernarse como T-G o T-C según corresponda;
+- iniciar otro proceso, contenedor, réplica, fork o instancia con identificador distinto no autoriza a escribir una segunda génesis sobre el mismo estado autoritativo.
 
-Etiquetar como T-0 una fabricación de autoridad en ejecución no la legitima y el efecto debe quedar bloqueado conforme a SEC.0-A/D.
+Un perfil material o de garantías puede formar parte de la configuración inicial de una continuidad aún no habitada. Crear, sustituir o ampliar un perfil después de esa génesis no constituye una nueva T-0: el acto deberá clasificarse por su efecto real como T-G o T-C, o como T-R si únicamente restaura autoridad preexistente bajo continuidad legítima.
+
+T-0 no es una operación ordinaria disponible sobre una continuidad ya admitida. Un procedimiento denominado `bootstrap`, `init`, `genesis`, «nueva instancia» o equivalente no adquiere estatuto T-0 por su nombre ni por cambiar el identificador local de ejecución.
+
+Etiquetar como T-0 una fabricación de autoridad sobre una continuidad previamente habitada no la legitima y el efecto debe quedar bloqueado conforme a SEC.0-A/D.
 
 ### 6.2. Forma constituida
 
@@ -326,6 +332,7 @@ Capabilities(SUT,G)
 TCB(G)
 ThreatModel(G)
 FailureLimit(G)
+continuidad autoritativa, AStore y PDep relevantes
 estado inicial
 datos de prueba
 perfil material
@@ -340,6 +347,8 @@ Una diferencia capaz de afectar causalmente a `G` impide transferir automáticam
 Añadir o retirar persistencia, recuperación, administración, comunicaciones, privilegios, virtualización, una raíz, una vía de actualización o cualquier dependencia causalmente relevante puede cambiar `Capabilities(SUT,G)`, `TCB(G)` y las clases aplicables aunque el binario no cambie.
 
 Cuando ocurra, cambia la identidad probatoria para las propiedades afectadas. La evidencia previa no se hereda por identidad de binario, nombre de perfil ni similitud de configuración. Esas propiedades vuelven a `NO_PROBADO` hasta nueva comprobación.
+
+Cambiar únicamente el identificador efímero de una instancia no crea una continuidad autoritativa nueva ni habilita T-0 si `AStore`, `PDep` o la relación de continuidad permanecen causalmente enlazados al estado ya admitido.
 
 ## 21. Interfaz adversarial
 
@@ -418,7 +427,7 @@ Tipos, operaciones puras, correspondencia IR → Rust, semántica determinista y
 
 ### R1 — autoridad, mediación y decisiones protegidas
 
-Formas constituidas, T-0 restringida a la génesis inicial de instancia, autoridad aplicable, `Req`, fallo cerrado, ligaduras y trazas.
+Formas constituidas, T-0 restringida a la génesis inicial de la continuidad autoritativa, autoridad aplicable, `Req`, fallo cerrado, ligaduras y trazas.
 
 ### R2 — persistencia y continuidad material
 
@@ -436,7 +445,7 @@ La secuencia no implica que todos los perfiles deban ofrecer todas las garantía
 
 ## 25. Doble garantía ligada a identidad exacta
 
-Una realización sólo podrá aspirar al cierre para una identidad exacta de `SUT`, garantía y perfil cuando concurran:
+Una realización sólo podrá aspirar al cierre para una identidad exacta de `SUT`, garantía, perfil y continuidad autoritativa cuando concurran:
 
 ### Garantía I — construcción conforme
 
@@ -452,7 +461,7 @@ La existencia documental de vectores no satisface Garantía II. Una propiedad ap
 
 ### 25.1. No herencia del doble sello
 
-El doble sello no se hereda automáticamente después de añadir o retirar persistencia, recuperación, administración, comunicaciones, privilegios, dependencias materiales, ni después de cambiar `TCB(G)`, `ThreatModel(G)`, `FailureLimit(G)` o `Capabilities(SUT,G)`.
+El doble sello no se hereda automáticamente después de añadir o retirar persistencia, recuperación, administración, comunicaciones, privilegios, dependencias materiales, ni después de cambiar `TCB(G)`, `ThreatModel(G)`, `FailureLimit(G)`, `Capabilities(SUT,G)` o la continuidad autoritativa relevante.
 
 Cuando el cambio sea causalmente relevante, la realización resultante constituye una nueva identidad probatoria para las propiedades afectadas y deberá volver a satisfacer Garantía I y Garantía II en ese alcance.
 
@@ -466,8 +475,8 @@ Rust tampoco elimina por sí solo fallos de diseño, lógica o cadena de suminis
 
 ## 27. Cierre de v0
 
-El entorno soberano del Lenguaje SV deberá construirse alrededor de garantías, autoridad constituida, identidad exacta de realización y puntos materiales de imposición.
+El entorno soberano del Lenguaje SV deberá construirse alrededor de garantías, autoridad constituida, identidad exacta de realización, continuidad autoritativa y puntos materiales de imposición.
 
-T-0 queda restringida a la génesis inicial de la instancia; una garantía no puede rebajarse por renombrado; un estado recuperado no acredita circularmente su propia legitimidad; una capacidad añadida puede cambiar la identidad probatoria del sistema; y ningún doble sello se transfiere automáticamente a una realización distinta de la que fue construida y comprobada.
+T-0 queda restringida a la génesis inicial de una continuidad autoritativa aún no habitada; crear un nuevo proceso, contenedor, réplica, fork, reinicio o identificador de instancia sobre una continuidad ya admitida no crea otra génesis. Una garantía no puede rebajarse por renombrado; un estado recuperado no acredita circularmente su propia legitimidad; una capacidad añadida puede cambiar la identidad probatoria del sistema; y ningún doble sello se transfiere automáticamente a una realización distinta de la que fue construida y comprobada.
 
 La siguiente evolución deberá concretar las interfaces mínimas entre el núcleo Rust y las dependencias externas sin seleccionar prematuramente tecnologías de plataforma.
