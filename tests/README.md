@@ -29,7 +29,7 @@ python tests/run_e006_characterization.py
 
 Los nombres históricos de dos ejecutores contienen `smoke`; se conservan como identificadores de archivo. `tests/run_sec0_smoke.py` corresponde a la línea previa de resistencia del compilador y sus tres casos no deben interpretarse como cobertura de los contratos SEC.0-A/D/M/X/T.
 
-El catálogo adversarial SEC.0 se documenta en `tests/sec0/README.md` y `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md`.
+El catálogo adversarial SEC.0 se documenta en `tests/sec0/README.md`, `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md` y `tests/sec0/MATRIZ_CORRESPONDENCIA_ALCANCE_SEC0_V1.md`.
 
 ## 3. Estado acreditado de la etapa frontal
 
@@ -57,9 +57,9 @@ evidencia mínima de alcance sobre el objetivo
 resultado contractual esperado
 ```
 
-La existencia de un vector en el catálogo no constituye cobertura. La matriz de correspondencia `obligación → vector` declara expresamente `NO_PROBADO` mientras no exista una ejecución falsable sobre el `SUT` exacto con alcance causal acreditado, oráculo admisible y veredicto derivado.
+La existencia de un vector en el catálogo no constituye cobertura. La matriz `tests/sec0/MATRIZ_CORRESPONDENCIA_ALCANCE_SEC0_V1.md` relaciona propiedad, vector y condición mínima de alcance causal, y mantiene `NO_PROBADO` mientras no exista una ejecución falsable sobre el `SUT` exacto con alcance acreditado, oráculo admisible y veredicto derivado.
 
-El catálogo incluye escenarios relativos a autoridad y constitución, fallo cerrado, continuidad y persistencia, consumo y recursos, raíces de confianza, `TCB(G)`, atestación, mediación, falsabilidad, aplicabilidad, evidencia y transferencia entre perfiles.
+El catálogo incluye escenarios relativos a autoridad y constitución, fallo cerrado, continuidad y persistencia, consumo y recursos, raíces de confianza, `TCB(G)`, atestación, mediación, falsabilidad, aplicabilidad, evidencia y transferencia entre perfiles. Incluye expresamente `V-A-13`: una nueva identidad local de proceso, contenedor, réplica, fork o reinicio no habilita una segunda T-0 sobre una continuidad autoritativa, `AStore` o `PDep` ya habitados.
 
 Las antiguas materializaciones contractuales en Python se conservan en el historial del repositorio, pero no forman parte del árbol vigente. Su retirada evita atribuir a una maqueta local el estatuto de backend, entorno de ejecución o mecanismo material de seguridad.
 
@@ -82,9 +82,9 @@ Verdict
 Artifacts
 ```
 
-`ReachedFaults` no puede reducirse a un registro emitido por el mismo componente bajo la misma clase de fallo cuando ese fallo pueda falsear también el registro. La evidencia de una vía lateral concreta no acredita otras vías no equivalentes.
+`ReachedFaults` no puede reducirse a un registro emitido por el mismo componente bajo la misma clase de fallo cuando ese fallo pueda falsear también el registro. La evidencia de una vía concreta sólo se transfiere a otra cuando se acredita que ambas comparten la misma dependencia causal relevante; de lo contrario cada vía requiere alcance propio.
 
-Los controles positivos y negativos de una misma afirmación deben corresponder a la misma identidad relevante de `SUT`, garantía y perfil material. Un efecto positivo debe ser observable dentro del alcance declarado; un no-op o una mera afirmación interna de éxito no bastan cuando puedan ser falseados por el mismo fallo.
+Los controles positivos y negativos de una misma afirmación deben corresponder a la misma identidad relevante de `SUT`, garantía y perfil material. En un positivo, `Observed` debe corresponder al cambio, emisión o consecuencia material del objeto o recurso protegido por `G`; un permiso, indicador interno, no-op, ausencia de rechazo o registro de éxito no bastan.
 
 Añadir persistencia, recuperación, administración, comunicaciones, una nueva dependencia material u otra capacidad causalmente relevante puede cambiar las clases aplicables aunque el binario permanezca idéntico. La evidencia anterior no se transfiere automáticamente a la identidad resultante.
 
