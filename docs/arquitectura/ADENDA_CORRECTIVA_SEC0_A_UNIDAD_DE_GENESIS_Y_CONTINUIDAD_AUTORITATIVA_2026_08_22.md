@@ -30,7 +30,7 @@ Por tanto, no crean una nueva T-0 por sí mismos:
 - la reubicación o reconstrucción técnica de una realización;
 - el montaje, restauración o incorporación de estado autoritativo perteneciente a una continuidad ya habitada.
 
-Si cualquiera de esas operaciones actúa sobre una continuidad ya habitada, T-0 no está disponible. El acto deberá clasificarse por su efecto real como T-R, T-G o T-C según corresponda.
+Si cualquiera de esas operaciones actúa sobre una continuidad ya habitada, T-0 no está disponible. La identidad técnica nueva no altera por sí sola la clase T-* del acto. Si el acto restaura autoridad preexistente, modifica autoridad o altera la constitución, deberá clasificarse como T-R, T-G o T-C según su efecto. Si sólo informa, verifica, habilita o ejerce autoridad ya existente, conserva la clase ordinaria T-I, T-V, T-H o T-E que corresponda.
 
 ## 3. Disponibilidad de génesis
 
@@ -74,7 +74,7 @@ La regla de SEC.0-A §6 permanece vigente:
 T-0 | T-C | T-G | T-R
 ```
 
-son las únicas vías abstractas por las que puede existir autoridad bajo sus condiciones respectivas.
+son las únicas vías abstractas por las que puede llegar a existir autoridad bajo sus condiciones respectivas.
 
 Esta adenda no añade una vía nueva. Restringe T-0 a su único supuesto legítimo y evita que una segunda identidad técnica la reutilice sobre una continuidad ya habitada.
 
@@ -83,6 +83,8 @@ En una continuidad ya habitada:
 - restaurar sin ampliar autoridad preexistente corresponde a T-R cuando exista continuidad legítima acreditable;
 - conceder, delegar o modificar autoridad dentro del régimen aplicable corresponde a T-G;
 - alterar la constitución o introducir condiciones materialmente nuevas corresponde a T-C.
+
+Esta regla no convierte en T-R, T-G o T-C los actos ordinarios que no restauran, crean ni modifican autoridad. T-I, T-V, T-H y T-E conservan exactamente su ámbito original.
 
 ## 7. Relación con continuidad y bifurcaciones
 
@@ -123,7 +125,7 @@ Resultado exigido:
 T-0 no disponible
 ```
 
-El acto deberá clasificarse como T-R, T-G o T-C según su efecto; una autoridad fabricada mediante segunda génesis no es legítima.
+Si el acto pretende restaurar, crear o modificar autoridad deberá clasificarse como T-R, T-G o T-C según su efecto. Si no altera autoridad, conservará la clase ordinaria que le corresponda. En ningún caso una autoridad fabricada mediante segunda génesis es legítima.
 
 Este caso deberá mantenerse alineado con `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md`, en particular con `V-A-13`.
 
