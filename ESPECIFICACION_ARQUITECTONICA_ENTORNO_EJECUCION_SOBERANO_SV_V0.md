@@ -6,41 +6,41 @@
 
 ## 1. Objeto
 
-Este documento define la frontera mínima que deberá separar el backend soberano del Lenguaje SV, orientado a Rust, de las dependencias materiales necesarias para sostener garantías SEC.0.
+Este documento define la frontera mínima entre el backend soberano del Lenguaje SV, orientado a Rust, y las dependencias materiales necesarias para sostener garantías SEC.0.
 
-Su finalidad es impedir tres reducciones incorrectas:
+Su finalidad es impedir cinco reducciones incorrectas:
 
 1. identificar el backend con el sistema completo;
 2. atribuir al lenguaje de implementación garantías que dependen de almacenamiento, administración, recuperación, raíces de confianza, aislamiento, comunicaciones, presentación humana u otras dependencias externas al proceso;
-3. convertir autoridad, forma, requisitos, presupuesto, modelo de fallos o límites de garantía en parámetros libres que la propia ejecución pueda rebajar.
+3. convertir autoridad, forma, requisitos, presupuesto, modelo de fallos o límites de garantía en parámetros libres de ejecución;
+4. heredar evidencia después de cambiar una capacidad, dependencia o perfil que pueda afectar causalmente a la garantía;
+5. presentar una conformidad obtenida sobre un perfil estrecho como conformidad de un sistema posterior más amplio.
 
-La especificación no abre todavía una implementación Rust y no selecciona sistema operativo, motor de almacenamiento, hipervisor, base de datos, mecanismo criptográfico, hardware, servicio de identidad ni plataforma de despliegue.
+La especificación no abre todavía una implementación Rust ni selecciona plataforma material. No modifica semántica, gramática, IR, catálogo diagnóstico ni SEC.0-A/D/M/X/T.
 
-No modifica la semántica del Lenguaje SV, la gramática, la IR canónica, el catálogo diagnóstico ni los contratos SEC.0-A/D/M/X/T.
-
-## 2. Antecedentes vigentes
+## 2. Antecedentes y jerarquía
 
 Esta especificación se interpreta conjuntamente con:
 
-- `FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`, que fija el núcleo semántico y la condición de legitimidad del lenguaje;
-- `OBJETIVO_RUST_0_BACKEND_SOBERANO.md`, que establece Rust como objetivo principal del backend soberano y excluye la dependencia de Python en destino;
-- `MANIFIESTO_DE_ARQUITECTURA_DERECHOS_OBLIGACIONES_GARANTIAS_Y_FUNDAMENTOS_DEL_SISTEMA_VECTORIAL_SV_V1.md`, que fija la subordinación de capas y la separación entre laboratorio y producción;
-- los contratos SEC.0-A, SEC.0-D, SEC.0-M, SEC.0-X y SEC.0-T;
-- `ACTA_ARQUITECTONICA_ESTATUTO_LABORATORIO_BACKEND_SOBERANO_Y_DOBLE_GARANTIA_SV_2026_08_22.md`, que establece la doble garantía de construcción conforme y comprobación adversarial integral.
+- `FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md`;
+- `OBJETIVO_RUST_0_BACKEND_SOBERANO.md`;
+- `MANIFIESTO_DE_ARQUITECTURA_DERECHOS_OBLIGACIONES_GARANTIAS_Y_FUNDAMENTOS_DEL_SISTEMA_VECTORIAL_SV_V1.md`;
+- SEC.0-A, SEC.0-D, SEC.0-M, SEC.0-X y SEC.0-T;
+- `ACTA_ARQUITECTONICA_ESTATUTO_LABORATORIO_BACKEND_SOBERANO_Y_DOBLE_GARANTIA_SV_2026_08_22.md`.
 
-En caso de conflicto, esta pieza no puede utilizarse para rebajar una obligación doctrinal o contractual superior.
+En caso de conflicto, esta pieza no rebaja ninguna obligación superior.
 
-## 3. Principio de frontera
+## 3. Unidad de análisis por garantía
 
-La unidad de seguridad no es el proceso Rust. La unidad de análisis es la **garantía concreta** y todas las dependencias capaces de falsificarla.
+La unidad de seguridad no es el proceso Rust. La unidad de análisis es la garantía concreta `G` y todas las dependencias capaces de falsificarla.
 
-Para cada garantía `G` deberá poder establecerse:
+Para cada `G` deberá poder establecerse:
 
 ```text
 G
 → propiedad contractual
 → punto de imposición
-→ componentes que pueden falsificarla
+→ componentes capaces de falsificarla
 → TCB(G)
 → ThreatModel(G)
 → Evidence(G)
@@ -48,15 +48,13 @@ G
 → límites declarados
 ```
 
-Una propiedad no se considerará materializada porque exista una función, tipo, objeto inmutable, comprobación local o rama de código que la represente.
+Una función, un tipo o una comprobación local no materializan por sí solos una garantía.
 
-Dentro del alcance afirmado, todo componente cuya alteración o compromiso pueda falsificar `G` deberá quedar incluido en `TCB(G)` o deberá existir evidencia suficiente de que no puede producir esa falsificación bajo el modelo declarado. Una delimitación de alcance no puede utilizarse para excluir precisamente un componente capaz de falsear la garantía que se afirma.
-
-La propiedad sólo podrá atribuirse a una realización cuando las vías materiales capaces de producir el efecto protegido estén gobernadas de forma suficiente para el modelo de fallos y límites declarados.
+Todo componente cuyo compromiso pueda falsificar `G` deberá incluirse en `TCB(G)` o quedar excluido mediante evidencia suficiente dentro del modelo de fallos declarado. Una delimitación de alcance no puede utilizarse para ocultar precisamente un falsificador de la garantía afirmada.
 
 ## 4. Cadena de transformación y ejecución
 
-La arquitectura futura deberá distinguir al menos las etapas siguientes:
+La arquitectura deberá distinguir:
 
 ```text
 fuente SVP
@@ -70,59 +68,49 @@ fuente SVP
 → efectos mediados
 ```
 
-La etapa frontal de referencia puede continuar temporalmente en Python mientras permanezca vigente esa decisión arquitectónica. El artefacto soberano final no deberá requerir Python para su ejecución.
+La etapa frontal de referencia puede continuar temporalmente en Python. El artefacto soberano final no deberá requerir Python para ejecutarse.
 
-La aceptación de una etapa no acredita automáticamente la siguiente:
+La aceptación de una etapa no acredita automáticamente la siguiente.
 
-```text
-fuente válida
-≠ artefacto correcto
-artefacto correcto
-≠ artefacto cargado correcto
-artefacto cargado correcto
-≠ estado persistente legítimo
-estado de ejecución admitido
-≠ autoridad suficiente para todo efecto
-```
+## 5. Núcleo Rust: obligaciones intra-proceso
 
-## 5. Núcleo soberano en Rust
+Dentro de su frontera real, el núcleo soberano deberá preservar:
 
-El backend y el entorno de ejecución en Rust deberán asumir únicamente las garantías que puedan imponer realmente dentro de su frontera.
+1. tipos y distinciones semánticas obligatorias;
+2. `Tri` sin conversiones implícitas prohibidas;
+3. correspondencia entre IR admitida y operaciones ejecutables;
+4. separación entre información, evidencia, hecho constituido, autoridad, habilitación y ejercicio;
+5. mediación interna de operaciones protegidas de su perímetro;
+6. fallo cerrado ante `D-R` y `D-N`;
+7. ligadura de decisiones a revisión y contexto pertinentes;
+8. trazas suficientes dentro del alcance interno;
+9. declaración de dependencias que el proceso no puede garantizar.
 
-Como mínimo, el núcleo soberano deberá poder preservar:
+Estas propiedades son intra-proceso. **No constituyen por sí solas Garantía I material** cuando `G` dependa de componentes externos.
 
-1. los tipos y distinciones semánticas obligatorias del lenguaje;
-2. la representación irreductible de `Tri` sin conversiones implícitas prohibidas;
-3. la correspondencia entre IR admitida y operaciones ejecutables;
-4. la separación entre información, evidencia, hecho constituido, autoridad, habilitación y ejercicio cuando la realización materialice estas categorías;
-5. la mediación interna de toda operación protegida que pertenezca a su perímetro;
-6. el fallo cerrado ante resultados técnicos `D-R` y `D-N` cuando la operación dependa de esas comprobaciones;
-7. la ligadura de cada decisión protegida a la revisión y contexto materialmente pertinentes;
-8. la producción de trazas suficientes para reconstruir decisiones y efectos dentro del alcance declarado;
-9. la identificación explícita de las dependencias que el propio proceso no puede garantizar.
+En particular, mediación interna no equivale a mediación completa; una traza emitida por el propio `SUT` no es necesariamente evidencia pública independiente; y el fallo cerrado lógico no demuestra la integridad o disponibilidad de verificadores externos.
 
-Rust aporta una base favorable para seguridad de memoria, tipado, control explícito de recursos internos y construcción de artefactos autónomos. Estas propiedades no sustituyen la demostración de corrección semántica ni las garantías materiales externas.
+Todo uso de `unsafe`, FFI o código nativo externo deberá incluirse en `TCB(G)` cuando pueda falsificar la garantía.
 
-Todo uso de `unsafe`, FFI, código nativo externo o mecanismo equivalente deberá incluirse en `TCB(G)` para toda garantía que pueda falsear.
+## 6. Autoridad, formas y génesis
 
-## 6. Autoridad, constitución y formas protegidas
+La realización deberá conservar las distinciones de SEC.0-A. La capacidad técnica o administrativa no constituye por sí misma autoridad SV.
 
-La realización deberá conservar las distinciones de SEC.0-A entre:
+Una autoridad sólo puede reconocerse por T-0, T-C, T-G o T-R bajo sus condiciones respectivas. T-I, T-V, T-H y T-E no constituyen autoridad.
 
-```text
-información
-evidencia admitida
-hecho semántico constituido
-autoridad
-habilitación
-ejercicio
-```
+### 6.1. T-0 sólo en génesis
 
-La capacidad técnica de ejecutar código, administrar una máquina, escribir almacenamiento o poseer privilegios del sistema operativo no constituye por sí misma autoridad SV.
+T-0 sólo puede constituir el primer estado legítimo de autoridad de una instancia o perfil durante su génesis admitida.
 
-Una autoridad sólo podrá reconocerse como legítimamente constituida por las vías fijadas en SEC.0-A: T-0, T-C, T-G o T-R bajo sus condiciones respectivas. T-I, T-V, T-H y T-E no constituyen autoridad.
+No es una operación ordinaria disponible después de entrar en un estado de ejecución admitido. Un procedimiento denominado `bootstrap`, `init`, `genesis` o equivalente no adquiere estatuto T-0 por su nombre.
 
-Toda forma concreta `F` deberá derivar de un descriptor semántico previamente constituido que fije, al menos, cuando sean aplicables:
+Después de la génesis, todo acto que conceda, amplíe, delegue, sustituya o restaure autoridad debe clasificarse por su efecto real como T-G, T-C o T-R y satisfacer autoridad previa y `Req` aplicables.
+
+Etiquetar como T-0 una fabricación de autoridad en ejecución no la legitima y el efecto debe quedar bloqueado conforme a SEC.0-A/D.
+
+### 6.2. Forma constituida
+
+Toda forma `F` deberá derivar de un descriptor previamente constituido que fije, cuando corresponda:
 
 - clase T-*;
 - familia de efectos;
@@ -130,23 +118,19 @@ Toda forma concreta `F` deberá derivar de un descriptor semántico previamente 
 - autoridad previa necesaria;
 - regla de acumulación.
 
-La clase de transición, su familia de efectos y la autoridad exigida no podrán ser elegidas por el llamador, el ejecutor, el verificador, el monitor ni otro componente interesado en la aceptación del acto.
+La clase y autoridad exigidas no pueden ser elegidas por un componente interesado en la aceptación del acto.
 
-Introducir una forma nueva o modificar materialmente su clase o familia de efectos exige la transición constitutiva correspondiente. Delegar o modificar autoridad exige una T-G o T-C válida cuando así lo determine SEC.0-A; la mera no ampliación de un objeto técnico de permisos no demuestra por sí sola que exista derecho de gobierno.
+## 7. Requisitos y fallo cerrado
 
-## 7. Requisitos constituidos, aplicabilidad y fallo cerrado
-
-Para toda forma sujeta a control, el entorno deberá preservar el conjunto constituido:
+Para toda forma sujeta a control se preserva:
 
 ```text
 Req(F,e | C) = N(F,e | C) ∪ S(F,e | C)
 ```
 
-La pertenencia de una obligación a `Req`, su aplicabilidad y la posibilidad de omitirla no podrán decidirse localmente durante la ejecución para favorecer el acto.
+La aplicabilidad de obligaciones no puede rebajarse durante la ejecución.
 
-Las obligaciones nucleares fijadas por SEC.0-D permanecerán no eludibles en las condiciones previstas por ese contrato. Una forma sujeta a control con `Req = ∅` no adquiere permiso por ausencia de requisitos.
-
-El resultado técnico de cada obligación conserva exactamente la distinción:
+Se mantienen exactamente:
 
 ```text
 D-A — ACREDITADO
@@ -154,63 +138,58 @@ D-R — REFUTADO
 D-N — NO_VERIFICABLE
 ```
 
-Una forma sujeta a control sólo puede continuar cuando todas las obligaciones aplicables están en `D-A`. `D-R` y `D-N` bloquean el efecto protegido correspondiente y su diferencia deberá conservarse en la traza y el diagnóstico.
+Sólo puede continuar una forma cuando todas las obligaciones aplicables están en `D-A`. `D-R` y `D-N` bloquean el efecto correspondiente. `D-N` no es `U` ni éxito.
 
-`D-N` es un estado técnico de comprobación. No pertenece a `Tri` y no puede convertirse en `U`, éxito, advertencia tolerable ni permiso por reintento.
+Una forma de emergencia, recuperación, mantenimiento o excepción requiere constitución, autoridad y `Req` propios.
 
-Una forma de emergencia, recuperación, mantenimiento o excepción deberá disponer de constitución, autoridad y `Req` propios. No puede utilizarse como vía para eludir un `D-R` o `D-N` de la forma ordinaria.
+Si evidencias o verificadores aplicables son incompatibles y no existe regla de resolución previamente constituida, corresponde `D-N`.
 
-## 8. Políticas constituidas y prohibición de rebaja en ejecución
+## 8. Políticas constituidas y rebaja por renombrado
 
-Las políticas que condicionan una garantía no podrán presentarse como opciones ordinarias modificables por la misma ejecución cuya validez depende de ellas.
-
-Cuando sean aplicables, deberán quedar previamente constituidos o gobernados:
+Cuando sean aplicables, deberán estar previamente constituidos o gobernados:
 
 - `Budget(F | C)`;
-- requisitos de actualidad o frescura;
-- reglas de revocación y vigencia;
-- reglas de acumulación;
-- reglas de continuidad y recuperación;
+- requisitos de actualidad;
+- revocación y vigencia;
+- acumulación;
+- continuidad y recuperación;
 - `ThreatModel(G)`;
 - `FailureLimit(G)`;
-- definición de `TCB(G)`;
-- criterios de aplicabilidad de verificadores y clases de prueba.
+- `TCB(G)`;
+- criterios de aplicabilidad.
 
-Un acto no podrá aumentar localmente su presupuesto, suprimir una obligación de actualidad, reducir el modelo de fallos, eliminar un falsificador de `TCB(G)` ni declarar no aplicable una capacidad materialmente presente para obtener un resultado favorable.
+No pueden rebajarse como parámetros ordinarios del acto.
 
-Toda modificación legítima de estas condiciones deberá seguir la transición de gobierno o constitución que corresponda y producir una nueva identidad de garantía o realización cuando la diferencia pueda afectar causalmente a la evidencia previa.
+### 8.1. Cambio de garantía
 
-## 9. Efecto protegido y mediación
+Reducir `ThreatModel(G)`, `TCB(G)`, `FailureLimit(G)`, dependencias o requisitos y denominar al resultado `G'` no conserva la identidad de `G` ni su evidencia.
 
-Se denomina **efecto protegido** a todo efecto cuya producción dependa de autoridad, constitución, verificación, continuidad, consumo, recuperación o cualquier otra condición fijada por SEC.0.
+Todo cambio causalmente relevante requiere una transición de gobierno o constitución válida apoyada en autoridad previamente constituida. La nueva identidad no legitima el cambio por sí sola.
 
-Para una garantía de mediación completa deberá cumplirse:
+Si el sujeto beneficiado por la rebaja necesita precisamente la garantía modificada para acreditar su propia autoridad de cambio, existe acreditación circular y el acto no puede fundarse en esa misma base. Cuando el modelo de fallos exija independencia, la autoridad o procedimiento de gobierno deberá ser suficientemente independiente frente a la misma clase de fallo.
+
+Una `G'` legítimamente más estrecha deberá declarar su alcance menor y no heredará el sello ni la evidencia de `G`. Las propiedades afectadas permanecen `NO_PROBADO` hasta nueva comprobación.
+
+## 9. Efecto protegido y mediación completa
+
+Un efecto protegido es todo efecto dependiente de autoridad, constitución, verificación, continuidad, consumo, recuperación u otra condición SEC.0.
+
+Para afirmar mediación completa:
 
 ```text
 cualquier vía material capaz de producir el efecto protegido
 → atraviesa un punto gobernado equivalente
 ```
 
-No basta con que la interfaz ordinaria utilice el mediador.
+No basta la interfaz ordinaria.
 
-Deben incluirse en el análisis, cuando puedan producir el mismo efecto:
+El análisis deberá incluir cualquier vía administrativa, de mantenimiento, recuperación, actualización, depuración, carga o extensión dinámica, escritura directa, código externo, infraestructura anfitriona, virtualización, gestión material o mecanismo equivalente que pueda modificar el recurso final o evitar el punto de imposición.
 
-- interfaces administrativas;
-- mantenimiento;
-- recuperación;
-- actualización;
-- depuración;
-- escritura directa;
-- herramientas operativas;
-- procesos privilegiados;
-- restauración de estado;
-- mecanismos externos capaces de modificar el recurso final.
+La lista es no exhaustiva. El criterio es causal: si una dependencia puede falsificar `G`, entra en `TCB(G)` salvo exclusión acreditada.
 
-Una vía alternativa puede existir, pero deberá constituirse como forma gobernada con autoridad, requisitos y garantías propios.
+## 10. Estado autoritativo y recuperación no circular
 
-## 10. Estado autoritativo, dependencias persistentes y continuidad
-
-El entorno soberano deberá distinguir entre:
+El entorno distinguirá:
 
 ```text
 estado de proceso
@@ -219,61 +198,47 @@ estado persistente autoritativo
 continuidad vigente
 ```
 
-Toda decisión protegida que deba sobrevivir a reinicio o recuperación deberá poder reconstruir y acreditar las dependencias suficientes de `PDep(d | C)` según SEC.0-M.
+Las decisiones que sobrevivan a reinicio o recuperación deberán reconstruir y acreditar `PDep(d | C)`.
 
-Una vista, caché, índice o resumen no autoritativo puede ayudar a localizar información, pero no sustituye por sí solo a `AStore`. Si una estructura derivada determina una decisión autoritativa, deberá asumir expresamente las obligaciones de una fuente autoritativa para ese alcance.
+Una vista o índice no autoritativo no sustituye por sí solo a `AStore`.
 
-Las afirmaciones negativas basadas en ausencia requieren cobertura acreditada. La ausencia de un elemento en un índice incompleto no demuestra su ausencia del estado autoritativo.
+La recuperación no puede fundarse únicamente en una prueba que retroceda o se clone indistinguiblemente junto con el estado protegido.
 
-El backend Rust puede mantener y comprobar estructuras internas, pero no puede atribuir por sí solo resistencia material a retroceso o clonación cuando el estado del proceso y su almacenamiento puedan copiarse o restaurarse conjuntamente.
+### 10.1. Estado y clave bajo el mismo fallo
 
-Las decisiones sobre revocación, consumo único, continuidad, acumulación persistente o recuperación deberán depender de una fuente o relación de continuidad cuya resistencia sea suficiente frente al fallo declarado.
+El estado recuperado no puede ser la única fuente de la clave, raíz, testigo o regla que acredita la legitimidad de ese mismo estado frente al fallo considerado.
+
+Si el mismo fallo puede restaurar simultáneamente el estado y su única prueba de legitimidad, la recuperación permanece no acreditable para las decisiones dependientes.
 
 ## 11. Ligadura entre comprobación y efecto
 
-Una acreditación sólo puede utilizarse mientras continúe siendo aplicable al objeto, revisión, contexto y vigencia de los que dependió.
+Una acreditación sólo puede utilizarse mientras siga siendo aplicable al objeto, revisión, contexto y vigencia de los que dependió.
 
-En el punto material de compromiso del efecto deberá poder acreditarse que las ligaduras relevantes siguen siendo válidas o que una regla previamente constituida demuestra que los cambios intermedios no afectan a `Req(F,e | C)`.
+En el punto de compromiso debe acreditarse continuidad suficiente entre comprobación y efecto. Si cambia una dimensión material, el `D-A` anterior no basta: se requiere nueva comprobación o corresponde `D-N`.
 
-Si esa continuidad no puede acreditarse, corresponde `D-N` y deberá repetirse la comprobación sobre un estado aplicable antes de producir el efecto.
+Persistir un `D-A` no lo independiza de su contexto.
 
-La especificación no impone una técnica concreta de coordinación; exige la propiedad de continuidad entre comprobación y efecto.
+## 12. Consumo único y concurrencia
 
-## 12. Consumo único y anti-retroceso
+Una autorización de un solo uso debe impedir que un segundo ejercicio quede acreditado después de clonación, restauración, bifurcación o carrera concurrente dentro del modelo declarado.
 
-Una autoridad o autorización de un solo uso exige que un segundo ejercicio no pueda acreditarse después de clonación, restauración o bifurcación dentro del modelo de fallos declarado.
+Un contador local dentro de la misma imagen retrocedible no basta para una garantía fuerte.
 
-Un contador local, fichero local, variable del proceso, marca en memoria o registro almacenado en la misma imagen retrocedible no basta para una garantía fuerte de consumo único.
+Si dos ejecutores alcanzan simultáneamente el punto de compromiso de la misma autoridad consumible, como máximo un efecto puede quedar acreditado.
 
-La realización deberá declarar qué mecanismo sostiene la unicidad y frente a qué fallos es independiente.
+## 13. Recursos, presupuesto, tiempo y aislamiento
 
-Si no existe un mecanismo suficiente, el comportamiento correcto es bloquear o declarar técnicamente no verificable el ejercicio que dependa de esa unicidad.
+Cuando SEC.0-M lo exija, `Budget(F | C)` deberá estar constituido y permitir decidir el régimen admisible antes del exceso. No podrá sustituirse durante la ejecución por otro más amplio.
 
-## 13. Recursos, presupuesto y aislamiento
+El backend puede contabilizar consumo lógico, pero la imposición material de límites puede requerir soporte externo.
 
-Para toda forma repetible, recursiva, expansiva, abierta a entrada no confiable o capaz de generar actos humanos privilegiados deberá existir, cuando lo exija SEC.0-M, un `Budget(F | C)` previamente constituido.
+La atención humana sigue siendo un recurso finito.
 
-El presupuesto deberá declarar los recursos relevantes y una cota o criterio de admisión materialmente comprobable. No podrá sustituirse durante la ejecución por un presupuesto más amplio para permitir un acto que ya habría excedido la política constituida.
+Toda decisión dependiente del tiempo deberá declarar su fuente temporal. Una marca temporal mayor no demuestra continuidad ni vigencia. Si la fuente temporal puede ser alterada bajo el fallo declarado, deberá formar parte de las dependencias y de `TCB(G)` cuando pueda falsificar la garantía.
 
-El entorno Rust puede contabilizar consumo lógico, pero la imposición material de límites de CPU, memoria, almacenamiento, entrada/salida, procesos u otros recursos puede requerir mecanismos externos al proceso.
+## 14. Raíz, arranque, actualización y recuperación
 
-Para cada recurso relevante deberá distinguirse:
-
-```text
-medición
-contabilidad
-límite lógico
-imposición material
-reserva de control
-```
-
-No se considerará aislada una reserva cuando el mismo fallo o sujeto pueda agotar simultáneamente el recurso ordinario y la capacidad necesaria para rechazar, registrar, revocar, detener o recuperar.
-
-La atención humana, cuando sea aplicable, se mantiene como recurso finito de la arquitectura y no se transforma en capacidad ilimitada por automatización.
-
-## 14. Raíz de confianza, arranque, actualización y recuperación
-
-Toda garantía que dependa de la identidad o integridad del artefacto ejecutado deberá declarar:
+Toda garantía dependiente de la identidad o integridad del artefacto ejecutado deberá declarar:
 
 ```text
 Root(G)
@@ -283,115 +248,82 @@ Evidence(G)
 FailureLimit(G)
 ```
 
-La definición de estas magnitudes deberá estar protegida frente a la misma clase de fallo para la que se invocan. No podrán reescribirse durante el acto para excluir un componente capaz de falsificar la garantía.
+Estas magnitudes no pueden reescribirse durante el acto para excluir falsificadores.
 
-El backend no puede convertir en raíz de confianza una variable o configuración cuya legitimidad dependa circularmente del mismo estado que pretende validar.
+Si el modelo incluye compromiso o sospecha de la raíz saliente, la recuperación requiere una vía suficientemente independiente frente al mismo fallo.
 
-La arquitectura deberá distinguir:
+La recuperación parte de autoridad y reglas previamente constituidas; no inventa autoridad después del compromiso.
 
-- construcción;
-- artefacto producido;
-- artefacto distribuido;
-- artefacto cargado;
-- estado de ejecución admitido.
+El arranque correcto no acredita por sí solo la legitimidad del estado persistente.
 
-Los mecanismos de actualización y recuperación forman parte del perímetro cuando pueden sustituir cualquiera de esos elementos.
+## 15. Construcción y artefacto ejecutado
 
-Si el modelo de fallos incluye compromiso o sospecha de la raíz saliente, la recuperación deberá depender de una vía suficientemente independiente frente al mismo fallo. La recuperación deberá partir además de una autoridad y regla previamente constituidas; no puede inventar autoridad después del compromiso.
+El código fuente revisable no acredita por sí solo el artefacto cargado.
 
-## 15. Construcción y correspondencia fuente-artefacto
+Toda afirmación sobre el ejecutable deberá considerar compilador, configuración de construcción, dependencias, enlazado, bibliotecas externas y procedimiento de distribución y carga cuando puedan afectar causalmente a `G`.
 
-El backend Rust no queda acreditado únicamente porque su código fuente sea revisable.
+Una diferencia causalmente relevante entre fuente, artefacto producido, distribuido o cargado cambia la identidad probatoria de la realización.
 
-Toda afirmación sobre el artefacto ejecutado deberá considerar, cuando proceda:
+## 16. Atestación y estado vivo
 
-- compilador;
-- versión y configuración de compilación;
-- dependencias;
-- código generado;
-- enlazador;
-- bibliotecas nativas;
-- guiones o herramientas capaces de modificar el resultado;
-- procedimiento de distribución y carga.
+La atestación es evidencia, no autoridad.
 
-Un componente podrá excluirse de `TCB(G_build)` sólo cuando exista evidencia suficiente para demostrar que no puede falsificar la garantía dentro del fallo declarado.
+La actualidad exigida deriva de la forma o garantía constituida y no de una decisión local.
 
-## 16. Atestación y evidencia de estado vivo
-
-La atestación, si se adopta, será una fuente de evidencia y no una fuente de autoridad.
-
-El entorno deberá poder distinguir evidencia histórica de evidencia actual cuando una forma dependa del estado vivo de la plataforma.
-
-La exigencia de actualidad deberá derivarse de la forma o garantía constituida y no de una decisión local tomada durante la operación.
-
-Cuando la atestación dependa de una raíz, servicio o componente externo, ese componente deberá quedar incluido en el conjunto técnico de confianza correspondiente.
+Una evidencia antigua no acredita el estado vivo actual cuando la diferencia sea material para `G`.
 
 ## 17. Comunicaciones y efectos externos
 
-Una comunicación autenticada no acredita por sí sola que el proceso del extremo se encuentre en un estado admitido.
+Un canal autenticado no acredita por sí solo que el proceso del extremo esté en un estado admitido.
 
-Las garantías de comunicación deberán separar, cuando proceda:
+Las garantías de comunicación separarán identidad, integridad, actualidad, confidencialidad, estado del proceso y correspondencia entre solicitud y efecto cuando proceda.
 
-- identidad del extremo;
-- integridad del contenido;
-- actualidad o no repetición;
-- confidencialidad;
-- identidad o estado del proceso receptor;
-- correspondencia entre solicitud autorizada y efecto externo.
-
-Cuando un efecto externo pueda haber ocurrido sin que el proceso local pueda determinarlo, no deberá repetirse automáticamente salvo que exista una regla gobernada de idempotencia, reconciliación, compensación o comprobación suficiente.
+Si un efecto externo pudo ocurrir y no puede determinarse, no deberá repetirse automáticamente sin una regla gobernada suficiente.
 
 ## 18. Presentación y autorización humanas
 
-Cuando una operación privilegiada dependa de una decisión humana, la garantía deberá abarcar la cadena necesaria para que la persona actúe sobre la representación correcta del objeto y de su consecuencia.
+Cuando una operación privilegiada dependa de una decisión humana, deberá conservarse la ligadura entre objeto, revisión, representación, identidad del actor, acto de autorización y efecto ejecutado.
 
-La realización deberá conservar, cuando proceda, ligadura entre:
+Una firma válida no demuestra por sí sola comprensión ni fidelidad de presentación.
 
-- objeto;
-- revisión;
-- representación;
-- identidad del actor;
-- acto de autorización;
-- efecto finalmente ejecutado.
+Una aprobación humana no constituye independencia frente a un fallo que pueda falsear simultáneamente la raíz y la presentación, identidad, canal o evidencia de firma utilizada para obtenerla.
 
-Una firma válida no demuestra por sí sola comprensión ni fidelidad de la presentación.
-
-## 19. Frontera de garantías: backend frente a soporte material
-
-La clasificación siguiente es orientativa y deberá concretarse por perfil de realización:
+## 19. Frontera de garantías
 
 | Propiedad | Papel posible del backend Rust | Soporte material adicional normalmente necesario | Evidencia final |
 |---|---|---|---|
-| semántica de `Tri` y operadores puros | principal | no necesariamente | pruebas de conformidad y equivalencia |
-| tipado y separación de estados internos | principal | no necesariamente | pruebas y revisión del artefacto |
-| fallo cerrado lógico | principal | fuente de evidencia o verificación cuando sea externa | pruebas de decisión e integración |
-| mediación dentro del proceso | principal | control de vías externas al proceso | ataque del perímetro completo |
-| consumo acumulativo local | principal | persistencia si debe sobrevivir reinicios | pruebas de reinicio y continuidad |
-| consumo único fuerte | parcial | mecanismo resistente a clonación o retroceso | ataque de clonación y restauración |
-| revocación persistente | parcial | almacenamiento y continuidad suficientes | ataque de restauración y bifurcación |
-| aislamiento de CPU, memoria o almacenamiento | parcial | sistema operativo, hipervisor, hardware o mecanismo equivalente | agotamiento adversarial |
-| raíz de confianza | consumidor de la raíz | raíz externa o materialmente anterior suficiente | ataque de sustitución y recuperación |
-| correspondencia fuente-artefacto | productor parcial | cadena de construcción y verificación independiente | reproducción o evidencia equivalente |
-| atestación | consumidor y verificador | raíz y mecanismo de atestación | repetición, sustitución y actualidad |
-| presentación humana fiel | parcial | interfaz y camino de presentación confiables | cambio entre presentación y firma |
-| efecto externo no repetido | parcial | soporte del sistema externo o reconciliación | fallo entre emisión y confirmación |
+| semántica de `Tri` y operadores puros | principal | no necesariamente | conformidad y equivalencia |
+| tipado y estados internos | principal | no necesariamente | pruebas y revisión |
+| fallo cerrado lógico | principal | verificación externa cuando corresponda | decisión e integración |
+| mediación dentro del proceso | principal | control de vías externas | comprobación del perímetro |
+| consumo acumulativo local | principal | persistencia si sobrevive reinicios | reinicio y continuidad |
+| consumo único fuerte | parcial | soporte resistente a clonación, retroceso y concurrencia | comprobación material |
+| revocación persistente | parcial | almacenamiento y continuidad | restauración y bifurcación |
+| aislamiento de recursos | parcial | plataforma capaz de imponerlo | agotamiento adversarial |
+| raíz de confianza | consumidor | raíz suficiente | sustitución y recuperación |
+| fuente-artefacto | productor parcial | cadena de construcción | evidencia de correspondencia |
+| atestación | consumidor/verificador | raíz y mecanismo externo | actualidad y sustitución |
+| presentación humana | parcial | interfaz y camino confiables | cambio presentación-acto |
+| efecto externo | parcial | reconciliación o soporte externo | fallo entre emisión y confirmación |
 
-La tabla no atribuye automáticamente una garantía a ninguna tecnología concreta.
+La tabla no atribuye automáticamente ninguna garantía ni constituye Garantía I por sí sola.
 
-## 20. Identidad de la realización sometida a prueba
+## 20. Identidad exacta del SUT
 
-Toda realización que aspire a una afirmación de conformidad deberá poder identificarse de forma suficiente.
-
-Como mínimo, según el alcance, deberán poder ligarse:
+Toda afirmación de conformidad deberá ligar, según el alcance:
 
 ```text
 versión de fuente
 IR o entrada admitida
 versión del backend
-artefacto ejecutable
+artefacto ejecutable y cargado
 dependencias relevantes
 configuración
 definición de garantías
+Capabilities(SUT,G)
+TCB(G)
+ThreatModel(G)
+FailureLimit(G)
 estado inicial
 datos de prueba
 perfil material
@@ -399,13 +331,17 @@ versión de la batería
 instrumentación
 ```
 
-Una diferencia capaz de afectar causalmente a una garantía impide transferir automáticamente evidencia entre realizaciones.
+Una diferencia capaz de afectar causalmente a `G` impide transferir automáticamente evidencia.
 
-## 21. Interfaz para comprobación adversarial
+### 20.1. Cambio de capacidades
 
-La futura realización deberá permitir construir pruebas sin introducir una segunda semántica de referencia.
+Añadir o retirar persistencia, recuperación, administración, comunicaciones, privilegios, virtualización, una raíz, una vía de actualización o cualquier dependencia causalmente relevante puede cambiar `Capabilities(SUT,G)`, `TCB(G)` y las clases aplicables aunque el binario no cambie.
 
-Toda ejecución que pretenda aportar cobertura conforme a SEC.0-T deberá poder conservar, según el alcance, la traza:
+Cuando ocurra, cambia la identidad probatoria para las propiedades afectadas. La evidencia previa no se hereda por identidad de binario, nombre de perfil ni similitud de configuración. Esas propiedades vuelven a `NO_PROBADO` hasta nueva comprobación.
+
+## 21. Interfaz adversarial
+
+Toda ejecución que pretenda aportar cobertura conforme a SEC.0-T deberá conservar:
 
 ```text
 TestRun
@@ -424,11 +360,13 @@ Verdict
 Artifacts
 ```
 
-La mera correspondencia nominal de `Targets` no constituye cobertura. El fallo o mutación deberá ser materialmente ejercitable y `ReachedFaults` deberá acreditar que alcanzó la dependencia objetivo.
+La correspondencia nominal de `Targets` no es cobertura. `ReachedFaults` debe acreditar alcance causal.
 
-`Oracle` no podrá depender circularmente del componente sometido a la misma clase de fallo. `Verdict` deberá derivarse de `Expected` y `Observed`.
+Un registro del propio `SUT` no basta cuando la misma clase de fallo pueda falsear simultáneamente objetivo y registro.
 
-Se conservarán al menos los estados de prueba establecidos por SEC.0-T:
+`Oracle` no puede ser circular frente al mismo fallo. `Verdict` deriva de `Expected` y `Observed`.
+
+Se mantienen:
 
 ```text
 PASS
@@ -438,132 +376,96 @@ NO_PROBADO
 INCONCLUSO
 ```
 
-`PASS` exige caso falsable ejecutado, alcance acreditado y resultado esperado obtenido. `FAIL` registra una violación o resultado incompatible. `NO_EJECUTADO`, `NO_PROBADO` e `INCONCLUSO` no constituyen cobertura.
+`NO_EJECUTADO`, `NO_PROBADO` e `INCONCLUSO` no cubren. Un `FAIL` confirmado sólo desaparece mediante cierre causal conforme a SEC.0-T.
 
-Un `FAIL` confirmado no queda eliminado por acumulación posterior de ejecuciones `PASS`; sólo puede cerrarse conforme al procedimiento causal de SEC.0-T.
+La aplicabilidad deriva de las capacidades efectivamente presentes. No puede reducirse por declaración unilateral.
 
-Los estados de prueba permanecen separados de `Tri` y de `D-A`, `D-R` y `D-N`.
+La evidencia pública deberá estar protegida frente a la misma clase de fallo para la que se invoca.
 
-La instrumentación deberá declararse y no podrá considerarse transparente cuando altere orden, concurrencia, tiempo, recursos, persistencia o privilegios relevantes para el fallo ensayado.
-
-La aplicabilidad de una clase de prueba derivará de las capacidades y garantías efectivamente presentes en el `SUT`; no podrá reducirse mediante una declaración unilateral de «no aplicable».
-
-Cuando `TestRun` sostenga una afirmación pública de conformidad, su integridad deberá quedar protegida frente a la misma clase de fallo para la que se invoca como evidencia. Una traza reescribible por el mismo `SUT` puede conservar valor de laboratorio, pero no constituye por sí sola evidencia pública independiente frente a dicho fallo.
-
-El catálogo `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md`, una vez incorporado al árbol principal, constituirá la referencia independiente de la implementación para los escenarios conservados.
+El catálogo `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md` será una referencia de escenarios falsables; su mera existencia documental no constituye cobertura.
 
 ## 22. Perfiles de realización
 
-La arquitectura podrá admitir perfiles materiales distintos siempre que no compartan una denominación de garantía más fuerte que las propiedades que realmente sostienen.
+Un perfil deberá declarar garantías, capacidades, dependencias, modelo de fallos, límites y propiedades no acreditadas.
 
-Un perfil deberá declarar:
+No puede construirse una conformidad agregando resultados positivos de un perfil y negativos de otro. La afirmación debe sostenerse sobre una misma identidad probatoria de `SUT`, garantía y perfil.
 
-- garantías ofrecidas;
-- componentes incluidos;
-- dependencias externas;
-- modelo de fallos;
-- límites;
-- propiedades no acreditadas.
-
-Una realización local de laboratorio puede ser útil sin ofrecer resistencia a clonación, retroceso, compromiso administrativo o sustitución de artefactos. Esas limitaciones deberán permanecer explícitas y no podrán heredarse silenciosamente hacia un perfil soberano.
+La expresión «SEC.0 conforme» sin identificar garantías, perfil, capacidades y límites no basta para una afirmación de doble garantía.
 
 ## 23. Condiciones previas a la implementación Rust
 
-Antes de atribuir a un módulo Rust una garantía SEC.0 concreta deberá estar identificada, al menos:
+Antes de atribuir a un módulo Rust una garantía SEC.0 deberán estar identificados:
 
-1. la propiedad contractual que implementa;
-2. la forma constituida, autoridad y requisitos de los que dependa;
-3. el punto exacto donde se impone;
-4. las vías materiales capaces de evitar ese punto;
-5. las dependencias que entran en `TCB(G)`;
-6. el modelo de fallos dentro del cual se formula la garantía;
-7. qué parte puede imponerse dentro del proceso y qué parte requiere soporte externo;
-8. el vector adversarial que podrá falsarla cuando exista una realización comprobable.
+1. propiedad contractual;
+2. forma, autoridad y requisitos aplicables;
+3. punto de imposición;
+4. vías capaces de evitarlo;
+5. `TCB(G)`;
+6. modelo de fallos;
+7. frontera entre proceso y soporte externo;
+8. vector falsable;
+9. criterio de observación y alcance causal.
 
-Estas condiciones no obligan a resolver desde el inicio todas las garantías materiales. Sí impiden presentar una representación local como si ya fuera una garantía material completa.
+No es necesario resolver inicialmente todas las garantías materiales. Sí queda prohibido presentar una representación local como garantía material completa.
 
-## 24. Secuencia arquitectónica de realización
+## 24. Secuencia de realización
 
-La materialización podrá avanzar por capas sin atribuir a cada capa el sello final del sistema:
+### R0 — núcleo semántico soberano
 
-### Fase R0 — núcleo semántico soberano
+Tipos, operaciones puras, correspondencia IR → Rust, semántica determinista y conformidad local.
 
-- tipos y operaciones puras exigidas por la frontera normativa;
-- correspondencia IR → representación Rust;
-- semántica determinista y trazable;
-- pruebas de conformidad local.
+### R1 — autoridad, mediación y decisiones protegidas
 
-### Fase R1 — autoridad, mediación y decisiones protegidas
+Formas constituidas, T-0 restringida a génesis, autoridad aplicable, `Req`, fallo cerrado, ligaduras y trazas.
 
-- formas constituidas y clasificación T-* no discrecional;
-- frontera explícita de efectos protegidos;
-- autoridad y `Req(F,e | C)` aplicables;
-- fallo cerrado;
-- ligaduras de revisión y contexto;
-- trazas de decisión;
-- interfaces para evidencia y estado autoritativo.
+### R2 — persistencia y continuidad material
 
-### Fase R2 — persistencia y continuidad material
+`AStore`, `PDep`, revocación, presupuestos, tiempo cuando proceda, recuperación no circular, bifurcación y consumo único si el perfil lo ofrece.
 
-- estado autoritativo y `PDep`;
-- revocación;
-- presupuestos y acumulación persistente;
-- recuperación;
-- bifurcación;
-- consumo único cuando el perfil pretenda ofrecerlo.
+### R3 — confianza de plataforma
 
-### Fase R3 — confianza de plataforma
+Construcción, artefacto, raíz, actualización, atestación, aislamiento y dependencias materiales capaces de falsificar garantías.
 
-- construcción y artefacto;
-- raíz de confianza;
-- actualización;
-- atestación cuando proceda;
-- aislamiento material de recursos;
-- vías administrativas y de mantenimiento.
+### R4 — integración adversarial
 
-### Fase R4 — integración adversarial
+Aplicación de vectores al sistema completo, fallos compuestos, comprobación de vías materiales, reducción causal y regresiones permanentes.
 
-- aplicación de vectores SEC.0 al sistema completo;
-- escenarios integrales A/D/M/X;
-- fallos compuestos;
-- reducción de cada violación a una regresión mínima sin retirar el escenario integral que la descubrió;
-- nueva ejecución de los escenarios integrales tras la corrección;
-- delimitación final de garantías y límites.
+La secuencia no implica que todos los perfiles deban ofrecer todas las garantías.
 
-Esta secuencia no implica que todos los perfiles deban ofrecer todas las garantías materiales.
+## 25. Doble garantía ligada a identidad exacta
 
-## 25. Doble garantía de cierre
-
-Una realización soberana sólo podrá aspirar al cierre dentro de un alcance declarado cuando concurran:
+Una realización sólo podrá aspirar al cierre para una identidad exacta de `SUT`, garantía y perfil cuando concurran:
 
 ### Garantía I — construcción conforme
 
-La arquitectura y la realización conservan los contratos aplicables y disponen de mecanismos suficientes para imponerlos dentro del modelo de fallos declarado.
+La arquitectura y realización conservan los contratos aplicables y disponen de mecanismos suficientes para imponerlos dentro del modelo de fallos, incluidas las dependencias materiales necesarias para `G`.
+
+Las propiedades intra-proceso del §5 no bastan por sí solas cuando `G` depende del exterior del proceso.
 
 ### Garantía II — resistencia adversarial integral
 
-El sistema completo ha sido sometido a ataques capaces de alcanzar las dependencias materiales que pueden falsificar esas garantías, sin quedar una violación pendiente dentro del alcance ensayado.
+El sistema completo correspondiente a la misma identidad ha sido sometido a pruebas capaces de alcanzar las dependencias que pueden falsificar `G`, sin violaciones pendientes dentro del alcance ensayado.
 
-La superación de pruebas locales del backend no sustituye la segunda garantía.
+La existencia documental de vectores no satisface Garantía II. Una propiedad aplicable en `NO_PROBADO`, `NO_EJECUTADO` o `INCONCLUSO` impide la afirmación completa en el alcance afectado.
+
+### 25.1. No herencia del doble sello
+
+El doble sello no se hereda automáticamente después de añadir o retirar persistencia, recuperación, administración, comunicaciones, privilegios, dependencias materiales, ni después de cambiar `TCB(G)`, `ThreatModel(G)`, `FailureLimit(G)` o `Capabilities(SUT,G)`.
+
+Cuando el cambio sea causalmente relevante, la realización resultante constituye una nueva identidad probatoria para las propiedades afectadas y deberá volver a satisfacer Garantía I y Garantía II en ese alcance.
+
+La superación de pruebas sobre un perfil de laboratorio no acredita un perfil posterior con capacidades adicionales.
 
 ## 26. No garantías
 
-Esta especificación no promete:
+Esta especificación no promete seguridad absoluta, ausencia de vulnerabilidades desconocidas, disponibilidad perfecta, independencia física universal, ejecución exactamente una vez frente a sistemas externos sin soporte suficiente, integridad de componentes no acreditados, comprensión humana ni resistencia ilimitada frente a control físico total.
 
-- seguridad absoluta;
-- ausencia de vulnerabilidades desconocidas;
-- disponibilidad perfecta;
-- independencia física universal;
-- ejecución exactamente una vez frente a sistemas externos que no la soporten;
-- integridad de un sistema operativo, hipervisor o hardware no acreditados;
-- que Rust elimine por sí solo fallos de diseño, lógica o cadena de suministro;
-- comprensión humana;
-- resistencia ilimitada frente a un atacante con control físico total.
+Rust tampoco elimina por sí solo fallos de diseño, lógica o cadena de suministro.
 
 ## 27. Cierre de v0
 
-El entorno soberano del Lenguaje SV deberá construirse alrededor de garantías, autoridad constituida y puntos de imposición, no alrededor de la mera elección de un lenguaje de programación.
+El entorno soberano del Lenguaje SV deberá construirse alrededor de garantías, autoridad constituida, identidad exacta de realización y puntos materiales de imposición.
 
-Rust queda fijado como base principal del backend soberano, pero las garantías que excedan la frontera del proceso deberán depender de mecanismos materiales expresamente declarados y sometidos al mismo régimen de trazabilidad, fallo cerrado y comprobación adversarial que el resto del sistema.
+T-0 queda restringida a génesis; una garantía no puede rebajarse por renombrado; un estado recuperado no acredita circularmente su propia legitimidad; una capacidad añadida puede cambiar la identidad probatoria del sistema; y ningún doble sello se transfiere automáticamente a una realización distinta de la que fue construida y comprobada.
 
-La siguiente evolución de esta especificación deberá concretar las interfaces mínimas entre el núcleo Rust y las dependencias externas sin seleccionar prematuramente tecnologías de plataforma.
+La siguiente evolución deberá concretar las interfaces mínimas entre el núcleo Rust y las dependencias externas sin seleccionar prematuramente tecnologías de plataforma.
