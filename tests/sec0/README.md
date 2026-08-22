@@ -8,9 +8,10 @@ Su finalidad es fijar qué condición debe atacarse, qué evidencia permite acre
 
 Este directorio no contiene un backend, un entorno de ejecución ni una realización material de seguridad.
 
-## 2. Referencia vigente
+## 2. Referencias vigentes
 
 - `VECTORES_ADVERSARIALES_SEC0_V1.md`: catálogo inicial de vectores derivados de los contratos SEC.0 e independientes de la implementación.
+- `MATRIZ_CORRESPONDENCIA_ALCANCE_SEC0_V1.md`: correspondencia `propiedad → vector → evidencia mínima de alcance causal`, sin atribución de cobertura ejecutada.
 
 El ejecutor histórico `tests/run_sec0_smoke.py` pertenece a la línea previa de resistencia del compilador. Sus tres casos no deben interpretarse como cobertura de SEC.0-A/D/M/X/T.
 
@@ -20,7 +21,7 @@ La existencia de un vector documentado no constituye cobertura ni `PASS`.
 
 Mientras un vector no se ejecute sobre un `SUT` exacto con falsabilidad material, alcance causal acreditado, oráculo admisible y veredicto derivado, la propiedad correspondiente permanece `NO_PROBADO`.
 
-La matriz incluida en `VECTORES_ADVERSARIALES_SEC0_V1.md` es una tabla de correspondencia entre obligaciones y vectores, no una afirmación de cobertura ejecutada.
+La matriz incluida en el catálogo relaciona obligaciones y vectores; la matriz de alcance causal añade qué hecho mínimo deberá acreditarse para considerar alcanzada la dependencia objetivo. Ninguna de las dos es una afirmación de cobertura ejecutada.
 
 Las realizaciones ejecutables de SEC.0 desarrolladas anteriormente en Python se conservan en el historial del repositorio como evidencia de exploración y reducción de escenarios, pero no constituyen la referencia vigente de seguridad ni una realización soberana.
 
