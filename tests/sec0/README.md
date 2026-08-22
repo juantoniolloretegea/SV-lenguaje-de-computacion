@@ -50,6 +50,10 @@ Las propiedades cuya verdad dependa de almacenamiento, recuperación, administra
 
 El catálogo conserva expresamente el caso en que una instancia nueva intenta invocar T-0 sobre una continuidad autoritativa, `AStore` o `PDep` ya habitados. Cambiar el identificador local de proceso, contenedor, réplica, fork o reinicio no constituye una nueva génesis soberana.
 
+En los controles positivos, `Observed` debe ser el cambio, emisión o consecuencia material del objeto o recurso protegido por `G`, no un permiso, indicador interno, no-op, ausencia de rechazo o registro de éxito.
+
+La evidencia obtenida sobre una vía sólo puede transferirse a otra si se acredita que ambas comparten la misma dependencia causal relevante para el fallo ensayado. Si esa equivalencia no puede demostrarse, cada vía requiere `Reach` propio.
+
 ## 5. Relación con la doble garantía
 
 Las pruebas derivadas de estos vectores contribuyen a la comprobación de conformidad, pero no constituyen por sí solas el cierre final.
