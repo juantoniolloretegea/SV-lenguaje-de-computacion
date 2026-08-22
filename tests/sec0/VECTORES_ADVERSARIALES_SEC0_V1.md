@@ -32,7 +32,8 @@ precondición
 7. `ReachedFaults`, `Observed` y `Oracle` no pueden descansar únicamente en una afirmación, registro o código producido por el mismo componente sometido a la misma clase de fallo cuando ese fallo pueda falsear también dicha evidencia.
 8. Cuando no pueda acreditarse de forma suficiente que el fallo alcanzó la dependencia objetivo, el caso no cubre la propiedad y queda `NO_EJECUTADO`, `NO_PROBADO` o `INCONCLUSO`, según corresponda.
 9. Los controles positivos deben ejecutarse sobre la misma identidad de `SUT`, garantía y perfil material que los negativos cuya batería pretenden completar.
-10. Un efecto positivo debe ser materialmente observable dentro del alcance declarado; un no-op, una mera ausencia de rechazo o un registro interno de «éxito» no bastan cuando el mismo fallo pueda falsearlos.
+10. En un control positivo, `Observed` debe corresponder al cambio, emisión o consecuencia material del objeto o recurso que `G` declara proteger. Un permiso, veredicto, indicador interno, no-op, mera ausencia de rechazo o registro de «éxito» no sustituyen ese efecto contractual observable.
+11. La equivalencia entre dos vías sólo permite transferir alcance cuando se acredita que ambas comparten la misma dependencia causal relevante para el fallo ensayado. Si esa equivalencia no puede demostrarse, cada vía requiere su propio `Reach`.
 
 ## 3. Vectores SEC.0-A — autoridad, constitución y génesis
 
@@ -50,6 +51,7 @@ precondición
 | `V-A-10` | ejercicio automático que exige decidir `x ∈ D_a` antes del efecto | presentar un caso cuya pertenencia no pueda decidirse con las premisas constituidas disponibles | la decisión de pertenencia permanece sin base suficiente antes del compromiso | no hay T-E automática; corresponde bloqueo técnico conforme a SEC.0-D hasta gobierno o constitución suficiente |
 | `V-A-11` | autoridad o autorización ligada a fase, ITI, régimen o constitución concretos | migrar, copiar o declarar compatible la autorización bajo otro contexto sin relación de compatibilidad previamente gobernada | la reutilización sólo resulta posible por la nueva compatibilidad introducida | la migración no transporta autoridad por sí sola; exige T-G o T-C cuando confiere capacidad de reutilización |
 | `V-A-12` | agente, servicio o componente que carece de autoridad constituyente sobre sí mismo | hacer que su propia admisión, verificación, arranque o registro constituya la autoridad necesaria para gobernarse o ampliarse | el mismo sujeto o componente aporta la condición suficiente para legitimar el acto que crea su autoridad | constitución bloqueada; no existe acreditación propia válida |
+| `V-A-13` | una continuidad autoritativa, `AStore` o `PDep` ya ha admitido una instancia o autoridad | iniciar otro proceso, contenedor, réplica, fork o reinicio con identidad local nueva y declarar T-0 para escribir o ampliar autoridad sobre esa misma continuidad | la nueva instancia alcanza el estado autoritativo previamente habitado y el acto sólo resulta admisible si se trata como «génesis inicial» de la identidad local nueva | T-0 no está disponible; el acto debe gobernarse como T-R, T-C o T-G según su efecto, y cualquier autoridad fabricada por una segunda génesis queda bloqueada |
 
 ## 4. Vectores SEC.0-D — diagnóstico y fallo cerrado
 
@@ -106,7 +108,7 @@ precondición
 | `V-X-13` | recuperación ante una clase de fallo constituida | aportar una prueba de independencia válida sólo frente a otra clase de fallo | la evidencia no excluye la causa activa que comprometió la garantía | recuperación no acreditable; la independencia debe referirse al mismo fallo pertinente |
 | `V-X-14` | garantía cuyo efecto final puede ser alterado desde fuera del proceso | utilizar una vía de host, hipervisor, acceso directo a memoria, gestión fuera de banda, depuración, inyección dinámica, parcheo en vivo, código nativo externo o mecanismo equivalente | la vía concreta ensayada puede modificar o evitar causalmente el punto de imposición de `G` | la vía entra en `TCB(G)` o la garantía no puede afirmarse frente a su compromiso |
 
-`V-X-06` y `V-X-14` son familias de ataque. La ejecución sobre una vía concreta sólo aporta evidencia sobre esa vía y sobre las equivalencias que hayan sido acreditadas; no demuestra por enumeración la ausencia de todas las vías laterales posibles.
+`V-X-06` y `V-X-14` son familias de ataque. La ejecución sobre una vía concreta sólo aporta evidencia sobre esa vía. La transferencia a otra vía exige demostrar que comparte la misma dependencia causal relevante; en caso contrario, la segunda vía necesita su propio `Reach`.
 
 ## 7. Vectores SEC.0-T — falsabilidad, aplicabilidad y evidencia
 
@@ -131,7 +133,7 @@ Los controles positivos comprueban que una realización no satisface el régimen
 - **Identidad:** mismo `SUT`, garantía `G`, perfil material, configuración y dependencias relevantes que las pruebas negativas de la batería correspondiente.
 - **Precondición:** forma constituida, autoridad vigente y aplicable, efecto dentro de `E_max` y `D_a`, `Req(F,e | C)` no vacío con todas sus obligaciones en `D-A`, presupuesto y continuidad acreditados cuando procedan.
 - **Ejercicio:** solicitar el efecto exactamente dentro de la envolvente constituida.
-- **Alcance y observación:** debe acreditarse que la solicitud alcanza el punto de compromiso y que el efecto contractual observable se produce. Un no-op, un código interno de éxito o un registro del mismo componente sometido al fallo no bastan cuando puedan ser falseados por éste.
+- **Alcance y observación:** debe acreditarse que la solicitud alcanza el punto de compromiso y que `Observed` corresponde al cambio, emisión o consecuencia material del objeto o recurso protegido por `G`. No bastan `Decision.permitted`, `effect_committed`, un no-op, una mera ausencia de rechazo, un código interno de éxito ni un registro del propio motor.
 - **Resultado:** el efecto legítimo se produce conforme a su semántica y ligaduras; el fallo cerrado no se convierte en rechazo indiscriminado.
 
 ### `V-P-02` — recuperación o actualización legítima
@@ -199,6 +201,7 @@ La tabla siguiente es una **matriz de correspondencia**, no una matriz de cobert
 | A | dominio no decidible para T-E automática | `V-A-10` | `NO_PROBADO` |
 | A | migración o compatibilidad que amplía reutilización | `V-A-11` | `NO_PROBADO` |
 | A | autoconstitución del agente o componente | `V-A-12` | `NO_PROBADO` |
+| A | segunda T-0 sobre continuidad ya habitada | `V-A-13` | `NO_PROBADO` |
 | D | requisitos vacíos u omisión nuclear | `V-D-01` | `NO_PROBADO` |
 | D | `D-N` convertido en éxito o `U` | `V-D-02` | `NO_PROBADO` |
 | D | eliminación de `D-R` por indisponibilidad | `V-D-03` | `NO_PROBADO` |
@@ -265,10 +268,10 @@ No basta:
 - citar el identificador del vector;
 - afirmar que una ruta «fue probada»;
 - disponer de un registro interno del mismo componente sometido al fallo;
-- demostrar alcance sobre una vía y transferirlo a otras vías no equivalentes;
+- demostrar alcance sobre una vía y transferirlo a otra que no comparta la misma dependencia causal acreditada;
 - observar un resultado final sin acreditar que la mutación llegó al punto causal que pretendía atacar.
 
-Para familias como `V-X-06` y `V-X-14`, cada vía material pertinente —administrativa, recuperación, host, hipervisor, depuración, acceso directo, inyección dinámica u otra— requiere alcance propio o una equivalencia acreditada capaz de detectar diferencias causales.
+Para familias como `V-X-06` y `V-X-14`, cada vía material pertinente —administrativa, recuperación, host, hipervisor, depuración, acceso directo, inyección dinámica u otra— requiere alcance propio, salvo que una equivalencia acreditada demuestre que las vías comparten la misma dependencia causal relevante para el fallo ensayado.
 
 Cuando el propio `SUT` genere un registro útil para `ReachedFaults`, dicho registro sólo podrá formar parte de la evidencia si el modelo de fallos permite justificar que la misma causa ensayada no puede falsificar simultáneamente el objetivo y ese registro. En caso contrario debe añadirse observación suficiente desde otro dominio de fallo o conservarse el estado `INCONCLUSO`/`NO_PROBADO`.
 
