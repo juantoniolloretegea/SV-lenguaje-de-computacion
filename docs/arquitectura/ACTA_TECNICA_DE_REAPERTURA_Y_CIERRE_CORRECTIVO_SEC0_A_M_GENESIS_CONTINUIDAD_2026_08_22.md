@@ -59,7 +59,8 @@ Se fija:
 En consecuencia:
 
 - una continuidad ya habitada no admite una segunda T-0;
-- una nueva identidad técnica sobre `AStore`, `PDep` o autoridad previa no crea génesis;
+- una nueva identidad técnica que herede, monte, restaure o utilice como fundamento de autoridad `AStore`, `PDep` o estado autoritativo previamente admitidos no crea génesis;
+- la mera preparación de almacenamiento vacío o de una identidad técnica para el primer arranque no consume por sí sola T-0;
 - restaurar autoridad preexistente corresponde a T-R cuando exista continuidad legítima;
 - conceder, delegar, revocar o modificar autoridad corresponde a T-G dentro de su régimen;
 - alterar constitución, formas o condiciones constitutivas corresponde a T-C;
