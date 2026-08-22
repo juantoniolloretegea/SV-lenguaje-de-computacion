@@ -30,11 +30,13 @@ Si la implantación:
 
 entonces no existe una nueva T-0.
 
-El acto deberá tratarse según su efecto real:
+La nueva identidad técnica no altera por sí sola la clase T-* de los actos que ejecute. Cuando el acto restaure, conceda, delegue, revoque, modifique o reconstituya autoridad, deberá tratarse según su efecto real:
 
 - T-R, cuando únicamente restablezca autoridad preexistente bajo continuidad legítima;
 - T-G, cuando conceda, delegue, revoque o modifique autoridad dentro del régimen aplicable;
 - T-C, cuando altere constitución, formas, compatibilidad u otras condiciones constitutivas.
+
+Los actos que sólo informen, verifiquen, habiliten o ejerzan autoridad ya existente conservan las clases T-I, T-V, T-H o T-E correspondientes.
 
 ### 2.2. Continuidad genuinamente nueva
 
@@ -50,7 +52,7 @@ La frase original:
 
 debe interpretarse desde esta adenda como:
 
-> Si una copia debe convertirse en una implantación distinta, deberá existir la transición legítima correspondiente conforme a SEC.0-A. Cuando la implantación herede, restaure, monte, prolongue o utilice estado autoritativo previo, T-0 no está disponible y la transición deberá ser T-R, T-G o T-C según el efecto. Sólo una continuidad autoritativa genuinamente nueva y aún no habitada puede disponer de T-0.
+> Si una copia debe convertirse en una implantación distinta, deberá respetar la transición legítima que corresponda conforme a SEC.0-A. Cuando la implantación herede, restaure, monte, prolongue o utilice estado autoritativo previo, T-0 no está disponible. Si el acto restaura o modifica autoridad, deberá ser T-R, T-G o T-C según su efecto; si no altera autoridad, conservará la clase ordinaria que corresponda. Sólo una continuidad autoritativa genuinamente nueva y aún no habitada puede disponer de T-0.
 
 ## 4. Relación con `AStore` y `PDep`
 
@@ -71,10 +73,10 @@ La relación correcta es:
 nuevo proceso o nueva implantación
 +
 continuidad autoritativa previa
-⇒ continuidad, recuperación o cambio gobernado
+⇒ no hay nueva T-0
 ```
 
-según corresponda.
+La clase concreta de cada acto posterior continúa derivándose de su efecto real conforme a SEC.0-A.
 
 ## 5. Relación con bifurcación
 
@@ -96,7 +98,7 @@ Si el estado recuperado pertenece a una continuidad ya habitada:
 reinicio/restauración ≠ T-0
 ```
 
-La clasificación deberá conservar el efecto real y las obligaciones de T-R, T-G o T-C.
+Cuando el acto sea materialmente recuperación de autoridad, conservará las obligaciones de T-R. Si además modifica o reconstituye autoridad o constitución, deberá tratarse como T-G o T-C según el efecto. Un acto que no altere autoridad conserva su clase ordinaria.
 
 ## 7. Caso de regresión obligatorio
 
