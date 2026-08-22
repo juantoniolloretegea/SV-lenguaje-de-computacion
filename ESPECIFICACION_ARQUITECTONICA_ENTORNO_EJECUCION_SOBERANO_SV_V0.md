@@ -2,7 +2,8 @@
 
 **Fecha:** 22/08/2026  
 **Estado:** borrador arquitectónico v0  
-**Ámbito:** `SV-lenguaje-de-computacion`
+**Ámbito:** `SV-lenguaje-de-computacion`  
+**Vigencia:** la secuencia R0–R4 y el cierre de esta v0 deben leerse conjuntamente con [`docs/arquitectura/ADENDA_DE_ALCANCE_TEMPORAL_A_ESPECIFICACION_ENTORNO_SOBERANO_SV_V0_2026_08_22.md`](./docs/arquitectura/ADENDA_DE_ALCANCE_TEMPORAL_A_ESPECIFICACION_ENTORNO_SOBERANO_SV_V0_2026_08_22.md), que precisa su carácter futuro y condicionado y prevalece ante cualquier lectura que los convierta en una orden automática de inicio de implementación.
 
 ## 1. Objeto
 
