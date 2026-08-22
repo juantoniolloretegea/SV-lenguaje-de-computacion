@@ -12,7 +12,7 @@
 Esta carpeta contiene dos ámbitos que deben mantenerse diferenciados:
 
 1. la **evidencia ejecutable de la etapa frontal de referencia** del Lenguaje SV, cuya secuencia es `.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON normalizado`;
-2. el **catálogo portable de vectores adversariales SEC.0**, destinado a fijar condiciones de ataque, evidencia de alcance y resultados contractuales esperados sin anticipar una realización soberana en Python.
+2. el **catálogo de vectores adversariales SEC.0 independiente de la implementación**, destinado a fijar condiciones de ataque, evidencia de alcance y resultados contractuales esperados sin anticipar una realización soberana en Python.
 
 Para cada caso válido de la etapa frontal, `tests/run_conformance.py` exige que la salida normalizada coincida con su archivo `.expected.json`. Para cada caso inválido, el mismo ejecutor exige que el procesamiento termine con el código diagnóstico exacto declarado en `EXPECTED_INVALID_CODES`.
 
@@ -61,7 +61,7 @@ El catálogo incluye escenarios relativos a autoridad y constitución, fallo cer
 
 Las antiguas materializaciones contractuales en Python se conservan en el historial del repositorio, pero no forman parte del árbol vigente. Su retirada evita atribuir a una maqueta local el estatuto de backend, entorno de ejecución o mecanismo material de seguridad.
 
-Los vectores podrán convertirse en pruebas ejecutables cuando exista un SUT identificable y puedan conservarse `Reach`, criterio esperado, observación, instrumentación y veredicto derivado. Las propiedades que dependan de infraestructura externa al proceso deberán ejercerse finalmente contra el sistema completo.
+Los vectores podrán convertirse en pruebas ejecutables cuando exista un SUT identificable y pueda conservarse la traza exigida por SEC.0-T: `TestRun`, `SUT`, `TestCase`, `Targets`, `ThreatModel`, `InitialState`, `InjectedFaults`, `ReachedFaults`, `Oracle`, `Observer`, `Expected`, `Observed`, `Verdict` y `Artifacts`. Las propiedades que dependan de infraestructura externa al proceso deberán ejercerse finalmente contra el sistema completo.
 
 ## 5. Casos válidos de conformidad SVP → IR
 
