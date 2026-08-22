@@ -30,10 +30,10 @@ La mera coincidencia de nombres entre una propiedad y un vector no constituye al
 1. `ReachedFaults` debe acreditar que la alteración llegó a la dependencia que materializa la propiedad concreta.
 2. Un registro emitido por el mismo componente sometido al mismo fallo no basta cuando ese fallo pueda falsear simultáneamente objetivo y registro.
 3. La observación de un efecto final no sustituye la prueba de que la alteración alcanzó el punto causal pretendido.
-4. La evidencia obtenida sobre una vía material no se transfiere a otra vía no equivalente.
+4. La evidencia obtenida sobre una vía material no se transfiere a otra vía salvo que se acredite que ambas comparten la misma dependencia causal relevante para el fallo ensayado; en otro caso, cada vía requiere `Reach` propio.
 5. Cuando no exista observación suficiente, el caso permanece `NO_EJECUTADO`, `NO_PROBADO` o `INCONCLUSO`; nunca `PASS` por mera invocación.
 6. `Oracle` y `Observed` deben permanecer distinguibles. El `SUT` no puede definir por sí solo el criterio que decide si su propia respuesta era correcta frente al mismo fallo.
-7. Los controles positivos deben acreditar un efecto contractual observable, no sólo ausencia de rechazo.
+7. Los controles positivos deben acreditar en `Observed` el cambio, emisión o consecuencia material del objeto o recurso protegido por `G`; un permiso, indicador interno, no-op, ausencia de rechazo o registro de éxito no bastan.
 
 ## 3. SEC.0-A
 
@@ -51,6 +51,7 @@ La mera coincidencia de nombres entre una propiedad y un vector no constituye al
 | `V-A-10` | T-E automática exige pertenencia decidible | el punto previo al efecto recibe un caso para el que `x ∈ D_a` no puede acreditarse ni refutarse con estado admitido | `NO_PROBADO` |
 | `V-A-11` | compatibilidad o migración que habilita reutilización requiere gobierno | una autorización ligada a un contexto alcanza un efecto bajo otro contexto únicamente gracias a una compatibilidad no constituida | `NO_PROBADO` |
 | `V-A-12` | prohibición de autoconstitución | el mismo agente o componente alcanza el acto constitutivo usando como única base su propia admisión, verificación, arranque o registro | `NO_PROBADO` |
+| `V-A-13` | T-0 no puede repetirse sobre una continuidad autoritativa ya habitada | una instancia con identidad local nueva alcanza un `AStore`, `PDep` o continuidad que ya admitió autoridad o una instancia previa e intenta escribir o ampliar autoridad invocando T-0 | `NO_PROBADO` |
 
 ## 4. SEC.0-D
 
@@ -107,7 +108,7 @@ La mera coincidencia de nombres entre una propiedad y un vector no constituye al
 | `V-X-13` | independencia debe corresponder al fallo pertinente | la prueba aportada excluye otra clase de fallo pero no la causa activa que falsifica `G` | `NO_PROBADO` |
 | `V-X-14` | dependencias externas capaces de evitar el punto de imposición entran en `TCB(G)` | la vía externa concreta modifica causalmente el recurso final o evita el control cuya completitud se afirma | `NO_PROBADO` |
 
-`V-X-06` y `V-X-14` exigen alcance **por vía concreta**. Una ejecución sobre una vía no acredita las demás salvo equivalencia material demostrada.
+`V-X-06` y `V-X-14` exigen alcance por vía concreta. Una ejecución sobre una vía sólo puede transferirse a otra si se acredita que ambas comparten la misma dependencia causal relevante para el fallo ensayado; de no ser así, cada vía requiere `Reach` propio.
 
 ## 7. SEC.0-T
 
@@ -127,7 +128,7 @@ La mera coincidencia de nombres entre una propiedad y un vector no constituye al
 
 | Vector | Propiedad | Qué cuenta como `Reach` mínimo | Estado actual |
 |---|---|---|---|
-| `V-P-01` | una operación legítima no debe quedar bloqueada indiscriminadamente | la misma identidad de `SUT/G/perfil` alcanza el punto de compromiso y el efecto contractual esperado se observa de forma admisible | `NO_PROBADO` |
+| `V-P-01` | una operación legítima no debe quedar bloqueada indiscriminadamente | la misma identidad de `SUT/G/perfil` alcanza el punto de compromiso y `Observed` acredita el cambio, emisión o consecuencia material del objeto o recurso protegido por `G`; un permiso, indicador interno o registro no sustituyen ese efecto | `NO_PROBADO` |
 | `V-P-02` | una recuperación o actualización legítima debe poder avanzar | la transición autorizada alcanza materialmente el estado resultante esperado bajo la misma identidad y garantías declaradas | `NO_PROBADO` |
 
 No puede utilizarse un control positivo de un perfil para completar la afirmación de otro perfil.
