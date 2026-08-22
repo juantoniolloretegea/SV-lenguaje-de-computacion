@@ -98,13 +98,15 @@ La realización deberá conservar las distinciones de SEC.0-A. La capacidad téc
 
 Una autoridad sólo puede reconocerse por T-0, T-C, T-G o T-R bajo sus condiciones respectivas. T-I, T-V, T-H y T-E no constituyen autoridad.
 
-### 6.1. T-0 sólo en génesis
+### 6.1. T-0 sólo en la génesis inicial de la instancia
 
-T-0 sólo puede constituir el primer estado legítimo de autoridad de una instancia o perfil durante su génesis admitida.
+T-0 sólo puede constituir el primer estado legítimo de autoridad de una instancia durante su génesis inicial admitida, antes de que dicha instancia entre en un estado ordinario de ejecución protegido.
 
-No es una operación ordinaria disponible después de entrar en un estado de ejecución admitido. Un procedimiento denominado `bootstrap`, `init`, `genesis` o equivalente no adquiere estatuto T-0 por su nombre.
+Un perfil material o de garantías puede formar parte de esa configuración inicial. **Crear, sustituir o ampliar un perfil después de la génesis de la instancia no constituye una nueva T-0**: el acto deberá clasificarse por su efecto real como T-G o T-C, o como T-R si únicamente restaura autoridad preexistente bajo continuidad legítima.
 
-Después de la génesis, todo acto que conceda, amplíe, delegue, sustituya o restaure autoridad debe clasificarse por su efecto real como T-G, T-C o T-R y satisfacer autoridad previa y `Req` aplicables.
+T-0 no es una operación ordinaria disponible después de entrar en un estado de ejecución admitido. Un procedimiento denominado `bootstrap`, `init`, `genesis` o equivalente no adquiere estatuto T-0 por su nombre.
+
+Después de la génesis, todo acto que conceda, amplíe, delegue, sustituya o restaure autoridad debe satisfacer autoridad previa y `Req` aplicables.
 
 Etiquetar como T-0 una fabricación de autoridad en ejecución no la legitima y el efecto debe quedar bloqueado conforme a SEC.0-A/D.
 
@@ -416,7 +418,7 @@ Tipos, operaciones puras, correspondencia IR → Rust, semántica determinista y
 
 ### R1 — autoridad, mediación y decisiones protegidas
 
-Formas constituidas, T-0 restringida a génesis, autoridad aplicable, `Req`, fallo cerrado, ligaduras y trazas.
+Formas constituidas, T-0 restringida a la génesis inicial de instancia, autoridad aplicable, `Req`, fallo cerrado, ligaduras y trazas.
 
 ### R2 — persistencia y continuidad material
 
@@ -466,6 +468,6 @@ Rust tampoco elimina por sí solo fallos de diseño, lógica o cadena de suminis
 
 El entorno soberano del Lenguaje SV deberá construirse alrededor de garantías, autoridad constituida, identidad exacta de realización y puntos materiales de imposición.
 
-T-0 queda restringida a génesis; una garantía no puede rebajarse por renombrado; un estado recuperado no acredita circularmente su propia legitimidad; una capacidad añadida puede cambiar la identidad probatoria del sistema; y ningún doble sello se transfiere automáticamente a una realización distinta de la que fue construida y comprobada.
+T-0 queda restringida a la génesis inicial de la instancia; una garantía no puede rebajarse por renombrado; un estado recuperado no acredita circularmente su propia legitimidad; una capacidad añadida puede cambiar la identidad probatoria del sistema; y ningún doble sello se transfiere automáticamente a una realización distinta de la que fue construida y comprobada.
 
 La siguiente evolución deberá concretar las interfaces mínimas entre el núcleo Rust y las dependencias externas sin seleccionar prematuramente tecnologías de plataforma.
