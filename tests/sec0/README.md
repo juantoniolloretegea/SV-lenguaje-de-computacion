@@ -1,4 +1,4 @@
-# SEC.0 — vectores adversariales portables
+# SEC.0 — vectores adversariales independientes de la implementación
 
 ## 1. Objeto
 
@@ -10,7 +10,7 @@ Este directorio no contiene un backend, un entorno de ejecución ni una realizac
 
 ## 2. Referencia vigente
 
-- `VECTORES_ADVERSARIALES_SEC0_V1.md`: catálogo inicial de vectores portables derivados de los contratos SEC.0.
+- `VECTORES_ADVERSARIALES_SEC0_V1.md`: catálogo inicial de vectores derivados de los contratos SEC.0 e independientes de la implementación.
 
 El ejecutor histórico `tests/run_sec0_smoke.py` pertenece a la línea previa de resistencia del compilador. Sus tres casos no deben interpretarse como cobertura de SEC.0-A/D/M/X/T.
 
@@ -24,20 +24,26 @@ El valor reutilizable se conserva en los vectores, criterios esperados y regresi
 
 ## 4. Condición de ejecución futura
 
-Un vector sólo deberá adquirir forma ejecutable cuando exista un sistema sometido a prueba identificable y pueda conservarse evidencia suficiente de:
+Un vector sólo deberá adquirir forma ejecutable cuando exista un sistema sometido a prueba identificable y pueda conservarse, conforme a SEC.0-T, evidencia suficiente de:
 
 ```text
-SUT exacto
-estado inicial
-fallo o mutación
-objetivo
-Reach
-criterio esperado
-observación
-instrumentación
-veredicto derivado
-artefactos
+TestRun
+SUT
+TestCase
+Targets
+ThreatModel
+InitialState
+InjectedFaults
+ReachedFaults
+Oracle
+Observer
+Expected
+Observed
+Verdict
+Artifacts
 ```
+
+`ReachedFaults` acredita el alcance efectivo del fallo o mutación sobre el objetivo. `Oracle` debe ser no circular frente a la misma clase de fallo y `Verdict` debe derivarse de `Expected` y `Observed`.
 
 Las propiedades cuya verdad dependa de almacenamiento, recuperación, administración, raíces de confianza, aislamiento, comunicaciones u otras dependencias externas al proceso no pueden acreditarse únicamente mediante una prueba local del backend.
 
@@ -52,6 +58,6 @@ La acreditación de una realización soberana exige conjuntamente:
 
 ## 6. Regla de evolución
 
-Todo fallo confirmado que revele una nueva vía causal debe conservarse como vector o regresión portable. Cuando un escenario integral descubra una interacción, el caso reducido no sustituye al escenario integral original.
+Todo fallo confirmado que revele una nueva vía causal debe conservarse como vector o regresión reutilizable. Cuando un escenario integral descubra una interacción, el caso reducido no sustituye al escenario integral original.
 
 No debe añadirse una materialización ejecutable si su única finalidad es simular en Python una garantía que deberá imponerse posteriormente por la realización soberana o por infraestructura material externa.
