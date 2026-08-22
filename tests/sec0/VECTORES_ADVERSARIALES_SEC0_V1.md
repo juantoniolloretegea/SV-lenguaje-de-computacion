@@ -1,7 +1,7 @@
-# Vectores adversariales portables SEC.0 — V1
+# Vectores adversariales SEC.0 — V1
 
 **Fecha:** 22/08/2026  
-**Estado:** catálogo inicial de pruebas portables  
+**Estado:** catálogo inicial independiente de la implementación  
 **Ámbito:** `SV-lenguaje-de-computacion`
 
 ## 1. Objeto
@@ -21,7 +21,7 @@ precondición
 
 Una ejecución sólo puede utilizarse como cobertura si puede acreditarse que el fallo o la mutación alcanzó el objetivo declarado y que el criterio esperado no depende circularmente del componente sometido al mismo fallo.
 
-## 2. Reglas de portabilidad
+## 2. Reglas de reutilización
 
 1. El vector no presupone Python, Rust ni una plataforma concreta.
 2. El resultado esperado procede de los contratos SEC.0, no de la conducta observada del sistema sometido a prueba.
@@ -81,9 +81,9 @@ Una ejecución sólo puede utilizarse como cobertura si puede acreditarse que el
 
 | ID | Precondición | Alteración adversarial | Evidencia mínima de alcance | Resultado esperado |
 |---|---|---|---|---|
-| `V-T-01` | caso que declara cubrir un invariante | ejecutar una mutación que no alcance la dependencia objetivo | la sonda o evidencia de alcance no muestra modificación del objetivo | `NO_EJECUTADO` o `NO_PROBADO`; nunca `PASS` |
+| `V-T-01` | caso que declara cubrir un invariante | ejecutar una mutación que no alcance la dependencia objetivo | la sonda o evidencia de alcance no acredita modificación del objetivo | el caso no cubre el invariante; `NO_EJECUTADO` o el estado técnico que corresponda; nunca `PASS` |
 | `V-T-02` | vector asociado a un invariante | cambiar únicamente la etiqueta de `Targets` sin modificar el fallo causal ensayado | el fallo ejercido no viola la propiedad correspondiente al nuevo identificador | no existe cobertura del invariante reetiquetado |
-| `V-T-03` | prueba falsable con resultado esperado | hacer que el SUT produzca también el criterio de corrección o asignar manualmente un veredicto incompatible con `Expected` y `Observed` | el criterio depende del mismo componente bajo fallo o el veredicto no se deriva de la comparación | evidencia no admisible como `PASS`; el veredicto debe derivarse del criterio independiente |
+| `V-T-03` | prueba falsable con resultado esperado | hacer que el SUT produzca también el criterio de corrección o asignar un veredicto incompatible con `Expected` y `Observed` | `Oracle` depende del mismo componente sometido al fallo o `Verdict` no se deriva de `Expected` y `Observed` | evidencia no admisible como `PASS`; el criterio debe ser no circular frente al mismo fallo y el veredicto debe derivarse del resultado observado |
 | `V-T-04` | prueba de carrera, orden, recursos o tiempo | instrumentar de forma que el observador elimine el fallo | la conducta cambia al introducir la instrumentación | el resultado sólo cubre el SUT aumentado; no se transfiere a la realización ordinaria |
 | `V-T-05` | SUT con capacidad material relevante | omitir esa capacidad de la descripción para excluir su clase de prueba | una observación independiente demuestra que la capacidad existe | la clase sigue siendo aplicable |
 | `V-T-06` | evidencia pública utilizada frente a un fallo | permitir que el mismo fallo reescriba SUT y evidencia | la causa ensayada controla ambos extremos | la evidencia conserva valor de laboratorio, pero no constituye evidencia pública independiente frente a ese fallo |
@@ -124,20 +124,26 @@ Los siguientes escenarios deben conservarse además de sus reducciones locales p
 
 ## 9. Condición para convertir un vector en prueba ejecutable
 
-Un vector de este catálogo sólo debe transformarse en una prueba concreta cuando exista un SUT identificable y un mecanismo suficiente para declarar y conservar:
+Un vector de este catálogo sólo debe transformarse en una prueba concreta cuando exista un SUT identificable y un mecanismo suficiente para declarar y conservar, conforme a SEC.0-T:
 
 ```text
-SUT exacto
-estado inicial
-fallo o mutación
-objetivo
-método de Reach
-criterio esperado
-observación
-instrumentación
-veredicto derivado
-artefactos de evidencia
+TestRun
+SUT
+TestCase
+Targets
+ThreatModel
+InitialState
+InjectedFaults
+ReachedFaults
+Oracle
+Observer
+Expected
+Observed
+Verdict
+Artifacts
 ```
+
+`ReachedFaults` debe acreditar que la alteración alcanzó la dependencia que pretendía afectar. `Verdict` debe derivarse de `Expected` y `Observed`; no constituye un dato libre. `Oracle` no puede depender circularmente del componente sometido a la misma clase de fallo.
 
 Cuando una propiedad dependa de almacenamiento, recuperación, infraestructura, raíz de confianza, administración, aislamiento u otra dependencia externa al proceso, la ejecución local del backend sólo proporciona evidencia parcial. La acreditación final de esa propiedad requiere ejercer el vector sobre el sistema completo dentro del modelo de fallos declarado.
 
