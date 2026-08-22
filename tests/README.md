@@ -1,6 +1,6 @@
-# `tests/` — Baterías ejecutables del Lenguaje SV
+# `tests/` — Baterías y vectores de comprobación del Lenguaje SV
 
-**Fecha de resincronización:** 21 de agosto de 2026  
+**Fecha de resincronización:** 22 de agosto de 2026  
 **Autor:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
@@ -9,14 +9,14 @@
 
 ## 1. Objeto
 
-Esta carpeta contiene dos ámbitos de evidencia ejecutable que deben mantenerse diferenciados:
+Esta carpeta contiene dos ámbitos que deben mantenerse diferenciados:
 
-1. la conformidad de la etapa frontal de referencia del Lenguaje SV, cuya secuencia es `.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON normalizado`;
-2. la materialización ejecutable inicial de obligaciones seleccionadas de los contratos SEC.0-A, SEC.0-D, SEC.0-M, SEC.0-X y SEC.0-T.
+1. la **evidencia ejecutable de la etapa frontal de referencia** del Lenguaje SV, cuya secuencia es `.svp → análisis sintáctico → validación → descenso a IR v0.2 → JSON normalizado`;
+2. el **catálogo portable de vectores adversariales SEC.0**, destinado a fijar condiciones de ataque, evidencia de alcance y resultados contractuales esperados sin anticipar una realización soberana en Python.
 
 Para cada caso válido de la etapa frontal, `tests/run_conformance.py` exige que la salida normalizada coincida con su archivo `.expected.json`. Para cada caso inválido, el mismo ejecutor exige que el procesamiento termine con el código diagnóstico exacto declarado en `EXPECTED_INVALID_CODES`.
 
-La batería contractual SEC.0 se mantiene separada en `tests/sec0/` y `tests/run_sec0_contracts.py`. No modifica gramática, IR v0.2, validador ni catálogo diagnóstico y no constituye un entorno de ejecución de producción.
+Los vectores SEC.0 se mantienen separados en `tests/sec0/`. No modifican gramática, IR v0.2, validador ni catálogo diagnóstico y no constituyen por sí mismos una implementación material de los contratos.
 
 ## 2. Ejecución
 
@@ -25,12 +25,11 @@ python tests/run_conformance.py
 python tests/run_cli_smoke.py
 python tests/run_sec0_smoke.py
 python tests/run_e006_characterization.py
-python tests/run_sec0_contracts.py
 ```
 
 Los nombres históricos de dos ejecutores contienen `smoke`; se conservan como identificadores de archivo. `tests/run_sec0_smoke.py` corresponde a la línea previa de resistencia del compilador y sus tres casos no deben interpretarse como cobertura de los contratos SEC.0-A/D/M/X/T.
 
-La batería contractual nueva se documenta en `tests/sec0/README.md`.
+El catálogo adversarial SEC.0 se documenta en `tests/sec0/README.md` y `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md`.
 
 ## 3. Estado acreditado de la etapa frontal
 
@@ -45,13 +44,24 @@ Los cuatro ejecutores finalizaron con código de retorno 0 y el árbol de trabaj
 
 Estos resultados son históricos y están ligados al estado indicado. No se transfieren automáticamente a commits posteriores.
 
-## 4. Batería contractual SEC.0
+## 4. Vectores contractuales SEC.0
 
-`tests/run_sec0_contracts.py` y `tests/sec0/reference_model.py` constituyen la primera materialización ejecutable de propiedades seleccionadas de los contratos SEC.0 cerrados el 21 de agosto de 2026.
+`tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md` conserva escenarios derivados de los contratos SEC.0 cerrados el 21 de agosto de 2026 mediante una forma independiente de la implementación.
 
-Su objetivo inicial es comprobar la traducibilidad de obligaciones como fallo cerrado, autoridad preconstituida, presupuesto de recursos, continuidad, independencia frente al mismo fallo, actualidad de atestación, ligadura presentación-firma, falsabilidad y cobertura de pruebas.
+Cada vector fija, como mínimo:
 
-Un resultado satisfactorio de esta batería acredita únicamente el modelo ejecutable y los casos efectivamente ensayados. No equivale a conformidad completa de la implementación vigente ni a certificación de una plataforma material.
+```text
+precondición
+alteración o fallo ejercido
+evidencia mínima de alcance sobre el objetivo
+resultado contractual esperado
+```
+
+El catálogo incluye escenarios relativos a autoridad y constitución, fallo cerrado, continuidad y persistencia, consumo y recursos, raíces de confianza, TCB, atestación, mediación, falsabilidad, aplicabilidad y evidencia.
+
+Las antiguas materializaciones contractuales en Python se conservan en el historial del repositorio, pero no forman parte del árbol vigente. Su retirada evita atribuir a una maqueta local el estatuto de backend, entorno de ejecución o mecanismo material de seguridad.
+
+Los vectores podrán convertirse en pruebas ejecutables cuando exista un SUT identificable y puedan conservarse `Reach`, criterio esperado, observación, instrumentación y veredicto derivado. Las propiedades que dependan de infraestructura externa al proceso deberán ejercerse finalmente contra el sistema completo.
 
 ## 5. Casos válidos de conformidad SVP → IR
 
@@ -126,7 +136,7 @@ La evidencia de la etapa frontal se interpreta distinguiendo:
 2. emisión observable;
 3. propiedad estructural.
 
-La batería SVP → IR comprueba conformidad de la etapa frontal y su descenso a IR. La batería SEC.0 comprueba, de forma separada, un modelo ejecutable de referencia de obligaciones contractuales. Ninguna de las dos constituye por sí sola una certificación de ejecución material completa.
+La batería SVP → IR comprueba conformidad de la etapa frontal y su descenso a IR. Los vectores SEC.0 fijan, de forma separada, ataques y criterios contractuales para realizaciones futuras. Ninguno de estos dos ámbitos constituye por sí solo una certificación de ejecución material completa.
 
 FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente hasta decisión expresa.
 
