@@ -2,10 +2,9 @@
 svp_validator.py — Verificación implementada de bienformación del AST
 
 Aplica la cobertura implementada y explícita de validación sobre el AST
-producido por el parser, subordinada a la IR canónica v0.2 y a sus
-correcciones vigentes. No equivale todavía, por sí sola, a la totalidad
-de los juicios J0.1–J5.2 ni cierra completamente la capa N4/Uso.
-No ejecuta nada: solo valida.
+producido por el parser, subordinada a la IR canónica v0.3.
+No equivale todavía, por sí sola, a la totalidad de los juicios J0.1–J5.2
+ni cierra completamente la capa N4/Uso. No ejecuta nada: solo valida.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
@@ -353,7 +352,7 @@ class Validator:
 
         if node.criticalities:
             raise SVPError(E308, node.loc.line, node.loc.col,
-                           "La superficie v0.1 no posee productor constituido de CriticalityResult; "
+                           "La superficie v0.2 no posee productor constituido de CriticalityResult; "
                            "Frame.criticalities debe permanecer vacío")
 
         seen_state_refs = set()
@@ -513,7 +512,7 @@ class Validator:
     def _validate_query_spec(self, node: QuerySpecDecl):
         if node.query_type == "PendingU":
             raise SVPError(E403, node.loc.line, node.loc.col,
-                           "query_type 'PendingU' está reconocido por la gramática, pero no está habilitado en v0.1")
+                           "query_type 'PendingU' está reconocido por la gramática, pero no está habilitado en v0.2")
         allowed = {
             "PointEvaluation": "Cell",
             "TrajectoryState": "Trajectory",
