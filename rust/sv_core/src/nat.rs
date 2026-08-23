@@ -3,8 +3,8 @@
 /// La gramática define `nat` como una secuencia decimal sin cota semántica.
 /// Esta representación conserva ese dominio sin depender del tamaño de palabra
 /// de la plataforma. En R0-2 sólo se necesita identidad y conservación exacta;
-/// la aritmética sobre naturales queda fuera de este frente.
-#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
+/// la aritmética y el orden sobre naturales quedan fuera de este frente.
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct Nat {
     decimal: String,
 }
