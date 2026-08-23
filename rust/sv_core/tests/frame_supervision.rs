@@ -1,12 +1,12 @@
 use sv_core::{
-    Frame, FrameCandidate, ResolvedArchitecture, ResolvedCoupledState, ResolvedEvalResult,
+    Frame, FrameCandidate, Nat, ResolvedArchitecture, ResolvedCoupledState, ResolvedEvalResult,
     ResolvedSupervisionResult, ResolvedSupervisionTarget,
 };
 
 fn base_candidate() -> FrameCandidate {
     FrameCandidate::new(
         "F0",
-        0,
+        Nat::from_u64(0),
         ResolvedArchitecture::new("A0", vec!["N1".into()]),
     )
     .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
