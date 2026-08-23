@@ -3,11 +3,13 @@
 //! Esta biblioteca Rust contiene la realización compartida por los destinos
 //! nativo y WebAssembly. R0-1 fija `Tri`; R0-2 incorpora `Nat`, `Frame` y el
 //! cierre relacional mínimo exigido por la IR canónica 0.3; R0-3 materializa
-//! C01 mediante la separación tipada entre captura, admisibilidad y `Tri`.
+//! C01 mediante la separación tipada entre captura, admisibilidad y `Tri`; R0-4
+//! materializa C02 mediante revisión identificada de `U` sin clausura automática.
 
 pub mod admissibility;
 pub mod frame;
 pub mod nat;
+pub mod resolution;
 
 pub use admissibility::{
     AdmissibilitySpec, AdmissibilityState, CaptureOutcome, InvalidAdmissibilitySpec,
@@ -15,6 +17,10 @@ pub use admissibility::{
 };
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 pub use nat::{InvalidNat, Nat};
+pub use resolution::{
+    ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
+    U_RESOLUTION_DIAGNOSTIC_CODE,
+};
 
 pub const GRAMMAR_VERSION: &str = "0.2";
 pub const IR_VERSION: &str = "0.3";
@@ -88,6 +94,9 @@ pub const ENGINE_VERSIONS: EngineVersions = EngineVersions {
 
 #[cfg(test)]
 mod frame_tests;
+
+#[cfg(test)]
+mod resolution_tests;
 
 #[cfg(test)]
 mod tests {
