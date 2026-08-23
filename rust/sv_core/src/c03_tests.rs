@@ -54,8 +54,43 @@ fn c03_accepts_a_coherent_declared_subset_without_exhaustivity() {
 }
 
 #[test]
-fn c03_rejects_an_evaluation_whose_source_escapes_the_frame() {
-    let candidate = FrameCandidate::new(
+fn c03_rejects_states_outside_architecture_or_multiple_states_for_one_node() {
+    let outside = FrameCandidate::new(
+        "F_C03",
+        Nat::from_u64(0),
+        ResolvedArchitecture::new("A_C03", vec!["N1".into()]),
+    )
+    .with_cell_states(vec![ResolvedCoupledState::new("S_EXT", "N_EXT")]);
+
+    let outside_error = Frame::from_candidate(outside).expect_err("debe rechazar nodo externo");
+    assert!(matches!(
+        outside_error,
+        FrameClosureViolation::StateOutsideArchitecture { .. }
+    ));
+    assert_e308(outside_error);
+
+    let repeated_node = FrameCandidate::new(
+        "F_C03",
+        Nat::from_u64(0),
+        ResolvedArchitecture::new("A_C03", vec!["N1".into()]),
+    )
+    .with_cell_states(vec![
+        ResolvedCoupledState::new("S1", "N1"),
+        ResolvedCoupledState::new("S2", "N1"),
+    ]);
+
+    let repeated_error =
+        Frame::from_candidate(repeated_node).expect_err("debe rechazar dos estados por nodo");
+    assert!(matches!(
+        repeated_error,
+        FrameClosureViolation::MultipleStatesForNode { .. }
+    ));
+    assert_e308(repeated_error);
+}
+
+#[test]
+fn c03_rejects_external_or_duplicated_evaluation_sources() {
+    let external = FrameCandidate::new(
         "F_C03",
         Nat::from_u64(0),
         ResolvedArchitecture::new("A_C03", vec!["N1".into()]),
@@ -63,12 +98,32 @@ fn c03_rejects_an_evaluation_whose_source_escapes_the_frame() {
     .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
     .with_eval_results(vec![ResolvedEvalResult::new("E_EXT", "S_EXT")]);
 
-    let error = Frame::from_candidate(candidate).expect_err("debe rechazar fuente externa");
+    let external_error =
+        Frame::from_candidate(external).expect_err("debe rechazar fuente externa");
     assert!(matches!(
-        error,
+        external_error,
         FrameClosureViolation::EvalSourceOutsideFrame { .. }
     ));
-    assert_e308(error);
+    assert_e308(external_error);
+
+    let duplicated = FrameCandidate::new(
+        "F_C03",
+        Nat::from_u64(0),
+        ResolvedArchitecture::new("A_C03", vec!["N1".into()]),
+    )
+    .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
+    .with_eval_results(vec![
+        ResolvedEvalResult::new("E1", "S1"),
+        ResolvedEvalResult::new("E2", "S1"),
+    ]);
+
+    let duplicated_error =
+        Frame::from_candidate(duplicated).expect_err("debe rechazar fuente duplicada");
+    assert!(matches!(
+        duplicated_error,
+        FrameClosureViolation::DuplicateEvalSource { .. }
+    ));
+    assert_e308(duplicated_error);
 }
 
 #[test]
