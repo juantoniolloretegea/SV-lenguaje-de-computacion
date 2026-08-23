@@ -127,15 +127,15 @@ casos inválidos = 61
 total           = 72
 ```
 
-El corte final verificado de la rama es:
+El corte sometido a integración continua tras las correcciones funcionales y documentales debe satisfacer simultáneamente:
 
 ```text
-head      = f35b2509dd19775f07e0ab3aa089dfd8dc1941ca
-workflow  = Conformidad SVP #9
-run       = 32651255700
-pasados   = 72
-fallidos  = 0
+pasados  = 72
+fallidos = 0
+oráculos modificados = no
 ```
+
+La identificación exacta del `head` y de la ejecución de integración continua correspondiente se conserva en el historial del pull request y del flujo `Conformidad SVP`.
 
 La integración continua ejecuta dos controles distintos:
 
