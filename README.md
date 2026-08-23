@@ -50,8 +50,8 @@ diagnóstico y pruebas de conformidad
 | Serializador | **0.1.0** | Serialización JSON determinista. |
 | Etapa frontal de referencia | **Python** | Análisis léxico y sintáctico, AST, validación, descenso a IR y serialización. |
 | SVP Playground | **Python / Pyodide** | Entorno público de comprobación en navegador, alineado con Gramática 0.2 e IR 0.3. |
-| Conformidad | **72/72** | 11 casos válidos y 61 inválidos; los archivos de referencia versionados no se modifican durante la comprobación. |
-| Núcleo en Rust y WebAssembly | **En desarrollo** | PR [#9](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/9); todavía no forma parte de `main`. |
+| Conformidad | **72/72** | 11 casos válidos y 61 inválidos; los archivos de referencia registrados no se modifican durante la comprobación. |
+| Núcleo en Rust y WebAssembly | **En desarrollo** | Solicitud de incorporación [#9](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/9); todavía no forma parte de `main`. |
 | Biblioteca estándar | **Pendiente** | Su situación se documenta en [`stdlib/README.md`](./stdlib/README.md). |
 
 Las versiones anteriores permanecen accesibles para comparación y trazabilidad. La relación completa entre versiones, fechas, correcciones y evidencia pública se mantiene en el [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md).
@@ -96,7 +96,7 @@ let RR1 = resolve((S1, 3), with: RS1,
                   mechanism: RevisionExperto);
 ```
 
-La posición es uno-basada, debe existir y debe contener `U`. El contexto y el mecanismo declarados deben ser compatibles con el `ResSpec` correspondiente.
+La numeración de la posición comienza en 1; la posición debe existir y debe contener `U`. El contexto y el mecanismo declarados deben ser compatibles con el `ResSpec` correspondiente.
 
 Diagnóstico asociado:
 
@@ -178,7 +178,7 @@ Puede ejecutarse desde la raíz del repositorio mediante:
 python tests/run_conformance.py
 ```
 
-Los casos válidos comparan la IR emitida con archivos JSON de referencia versionados en el repositorio. Los casos inválidos deben terminar con el código diagnóstico esperado. La integración continua ejecuta la misma batería y comprueba que esos archivos de referencia no cambien durante la ejecución.
+Los casos válidos comparan la IR emitida con archivos JSON de referencia registrados en el repositorio. Los casos inválidos deben terminar con el código diagnóstico esperado. La integración continua ejecuta la misma batería y comprueba que esos archivos de referencia no cambien durante la ejecución.
 
 La revisión 0.2/0.3 añade los diagnósticos:
 
@@ -197,9 +197,9 @@ El catálogo efectivo v0.3 conserva el catálogo v0.2 y añade esos tres código
 
 ## Desarrollo en Rust y WebAssembly
 
-La realización en Rust se encuentra en desarrollo en el PR [#9](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/9). Su objetivo es mantener una sola implementación del núcleo semántico y compilarla para ejecución nativa y para WebAssembly, sin crear una semántica distinta para el navegador.
+La realización en Rust se encuentra en desarrollo en la solicitud de incorporación [#9](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/9). Su objetivo es mantener una sola implementación del núcleo semántico y compilarla para ejecución nativa y para WebAssembly, sin crear una semántica distinta para el navegador.
 
-El estado integrado en `main` continúa siendo la etapa frontal de referencia en Python. El desarrollo Rust/WebAssembly no debe presentarse como vigente hasta que exista una incorporación expresa y sus pruebas correspondientes.
+En `main` continúa integrada la etapa frontal de referencia en Python. El desarrollo Rust/WebAssembly no debe presentarse como vigente hasta que exista una incorporación expresa y sus pruebas correspondientes.
 
 El Playground público continuará utilizando Python/Pyodide durante la transición. Su sustitución se realizará cuando el mismo núcleo Rust pueda demostrar correspondencia suficiente entre ejecución nativa, WebAssembly y la referencia Python.
 
@@ -243,9 +243,9 @@ El historial de Git conserva el detalle de cada modificación. El historial de v
 
 ---
 
-## Anexo histórico preservado
+## Anexo histórico conservado
 
-El texto que sigue reproduce sin modificación el anexo incluido en la presentación pública del 19 de agosto de 2026. Se conserva por continuidad documental. Sus afirmaciones técnicas deben leerse en relación con la fecha en que fueron publicadas; cuando exista una modificación posterior expresamente versionada, la especificación vigente determina el comportamiento actual del Lenguaje.
+El texto que sigue conserva el contenido del anexo incluido en la presentación pública del 19 de agosto de 2026. Se mantiene por continuidad documental. Sus afirmaciones técnicas deben leerse en relación con la fecha en que fueron publicadas; cuando exista una modificación posterior expresamente versionada, la especificación vigente determina el comportamiento actual del Lenguaje.
 
 La presentación completa de aquella fecha permanece además disponible como [instantánea histórica de 19/08/2026](./docs/historico/README_2026_08_19.md).
 
@@ -258,6 +258,7 @@ La presentación completa de aquella fecha permanece además disponible como [in
 ---
 
 ## Resumen
+
 El Sistema Vectorial SV (SV) es un marco algebraico determinista para la evaluación estructurada de parámetros clínicos con incertidumbre formalmente representada. Este documento establece la arquitectura de integración de capas de inteligencia artificial (IA) en el ecosistema SV, con especificación de actores, contratos formales, garantías algebraicas, protección de datos y verificación independiente. El documento nace del análisis forense de fallos documentados de sistemas de IA médica — específicamente de IBM Watson for Oncology, el Epic Sepsis Model, y el sesgo racial en algoritmos de gestión sanitaria — y establece, para cada categoría de fallo documentado, la respuesta arquitectónica implementada en el SV.
 
 Toda afirmación de este documento tiene respaldo en la implementación verificable de los repositorios públicos del ecosistema SV o en bibliografía científica con DOI verificado. No se incluyen inferencias no verificables ni afirmaciones sin respaldo directo.
