@@ -8,12 +8,7 @@
 pub mod frame;
 pub mod nat;
 
-pub use frame::{
-    Frame, FrameCandidate, FrameClosureViolation, ResolvedArchitecture,
-    ResolvedCoupledState, ResolvedEvalResult, ResolvedGateResult,
-    ResolvedSupervisionResult, ResolvedSupervisionTarget,
-    FRAME_CLOSURE_DIAGNOSTIC_CODE,
-};
+pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 pub use nat::{InvalidNat, Nat};
 
 pub const GRAMMAR_VERSION: &str = "0.2";
@@ -85,6 +80,9 @@ pub const ENGINE_VERSIONS: EngineVersions = EngineVersions {
     ir: IR_VERSION,
     serializer: SERIALIZER_VERSION,
 };
+
+#[cfg(test)]
+mod frame_tests;
 
 #[cfg(test)]
 mod tests {
