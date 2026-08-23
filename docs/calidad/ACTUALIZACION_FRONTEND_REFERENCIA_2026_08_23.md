@@ -127,11 +127,14 @@ casos inválidos = 61
 total           = 72
 ```
 
-El resultado verificado para el radio funcional previo a esta actualización documental es:
+El corte final verificado de la rama es:
 
 ```text
-pasados  = 72
-fallidos = 0
+head      = f35b2509dd19775f07e0ab3aa089dfd8dc1941ca
+workflow  = Conformidad SVP #9
+run       = 32651255700
+pasados   = 72
+fallidos  = 0
 ```
 
 La integración continua ejecuta dos controles distintos:
