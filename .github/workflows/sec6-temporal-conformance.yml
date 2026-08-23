@@ -1,0 +1,48 @@
+name: Sec6 temporal conformance
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener rama
+        uses: actions/checkout@v4
+
+      - name: Comprobar sintaxis Python
+        run: python3 -m py_compile src/*.py tests/run_conformance.py
+
+      - name: Regenerar JSON esperados desde el frontend de la rama
+        run: |
+          python3 - <<'PY'
+          import os
+          import sys
+          from pathlib import Path
+
+          root = Path.cwd()
+          sys.path.insert(0, str(root / "src"))
+          from svp_main import process_file
+
+          valid = root / "tests" / "conformance" / "valid"
+          for src in sorted(valid.glob("*.svp")):
+              expected = src.with_suffix(".expected.json")
+              expected.write_text(process_file(str(src)) + "\n", encoding="utf-8")
+              print(f"regenerado {expected.name}")
+          PY
+
+      - name: Ejecutar batería de conformidad
+        run: python3 tests/run_conformance.py
+
+      - name: Conservar JSON regenerados
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sec6-expected-json
+          path: tests/conformance/valid/*.expected.json
+          if-no-files-found: error
+          retention-days: 1
