@@ -1,0 +1,6 @@
+-- Debe fallar con E110: Failed/U técnicos no forman parte de AdmissibilityState.
+admissibility_spec AdmLegacy {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaLegacy;
+}
