@@ -1,0 +1,6 @@
+-- Debe fallar con E110: Failed no forma parte de AdmissibilityState.
+admissibility_spec AdmFailed {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed};
+  rule: ReglaLegacy;
+}
