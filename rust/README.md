@@ -6,12 +6,15 @@ Esta carpeta contiene el inicio de la realización Rust del núcleo semántico d
 
 ```text
 sv_core
-  ├─ Tri = {Zero, One, U}
+  ├─ Tri = {0, 1, U}
+  ├─ representación Rust: Zero = 0, One = 1, U = 2
   └─ versiones canónicas: Gramática 0.2 / IR 0.3 / serializador 0.1.0
 
 sv_wasm
   └─ adaptador WebAssembly mínimo que delega la semántica ternaria en sv_core
 ```
+
+Los nombres `Zero` y `One` son identificadores internos de Rust. La representación textual canónica del Lenguaje SV permanece `0`, `1`, `U`.
 
 El adaptador WebAssembly no constituye un segundo motor semántico. Su función es exponer el mismo núcleo a un destino de ejecución distinto.
 
