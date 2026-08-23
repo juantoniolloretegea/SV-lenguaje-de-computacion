@@ -20,6 +20,10 @@ R0-3
   sv_core
     └─ C01: separación tipada entre captura, admisibilidad y Tri
 
+R0-4
+  sv_core
+    └─ C02: revisión identificada de U sin clausura automática
+
 sv_wasm
   └─ adaptador WebAssembly del mismo sv_core
 ```
@@ -80,7 +84,36 @@ Los identificadores heredados `Failed` y `U` no pertenecen a `AdmissibilityState
 
 La existencia de `Tri.U` permanece intacta. Una observación admitida sólo podrá alcanzar legítimamente `Tri.U` por la vía semántica del `Ternarizer` cuando pertenezca a `partition_u`. R0-3 no adelanta la realización completa de esa ternarización ni introduce una conversión automática desde admisibilidad.
 
-La imposibilidad de convertir automáticamente `NotAdmitted` o `Bottom` a `Tri` se comprueba también mediante pruebas de compilación negativa de la propia documentación Rust.
+## C02 en R0-4
+
+R0-4 materializa la frontera de revisión de una `U` constituida e identificable:
+
+```text
+ResolutionTarget = (EvaluableStateRef, position)
+```
+
+La posición es uno-basada. El objetivo debe ser un `CellState` o `CoupledState` evaluable y el valor efectivo de la posición debe ser exactamente `Tri.U`. En `CoupledState` se usa el vector efectivo actualizado.
+
+`ResSpec` conserva las identidades de contexto y mecanismo. Mientras no exista una relación ampliada expresamente constituida, la instancia de revisión debe coincidir exactamente con ambas identidades. Las violaciones del objetivo o de esa compatibilidad se identifican mediante `E305` (`UnsafeUResolution`).
+
+`ResolutionRecord` separa expresamente:
+
+```text
+previous
+reviewed_to
+resolved_to
+```
+
+`reviewed_to` puede conservar el material producido por una revisión. Ese resultado no reescribe el estado objetivo ni constituye por sí solo una clausura positiva. En el circuito materializado por R0-4:
+
+```text
+previous    = U
+resolved_to = U
+```
+
+incluso cuando `reviewed_to` proponga `0` o `1`. Así permanece representable `U → revisión → U`.
+
+La constitución de `ResolutionRecord` permanece dentro de `sv_core` mientras no esté enlazada la resolución general de símbolos. Los adaptadores no disponen de una construcción pública que permita fabricar un registro con clausura positiva.
 
 ## Fronteras
 
@@ -90,8 +123,8 @@ Este corte no contiene todavía:
 - resolución general de símbolos en Rust;
 - transformación completa a IR 0.3;
 - serialización canónica completa;
-- realización de C02 o de la etapa específica C03 prevista en R0-4/R0-5;
-- `resolve` soberano en Rust;
+- realización de la etapa específica C03 prevista en R0-5;
+- una autoridad externa de clausura positiva;
 - realización completa de `Ternarizer`;
 - sustitución del Playground Python/Pyodide;
 - Garantía I o Garantía II.
@@ -103,8 +136,8 @@ La invalidez técnica de la interfaz binaria WebAssembly permanece fuera de `Tri
 La integración continua comprueba:
 
 1. las pruebas nativas del espacio de trabajo Rust;
-2. las pruebas de documentación, incluidas las conversiones que deben ser imposibles;
+2. las pruebas de documentación vigentes;
 3. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
 4. la compilación de `sv_wasm` para ese mismo destino.
 
-La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat`, `Frame` ni C01.
+La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01 ni C02.
