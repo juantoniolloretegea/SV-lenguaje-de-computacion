@@ -16,6 +16,10 @@ R0-2
     ├─ Nat sin cota dependiente del tamaño de palabra
     └─ Frame + cierre relacional mínimo J-F0…J-F5
 
+R0-3
+  sv_core
+    └─ C01: separación tipada entre captura, admisibilidad y Tri
+
 sv_wasm
   └─ adaptador WebAssembly del mismo sv_core
 ```
@@ -48,6 +52,32 @@ Las estructuras auxiliares `Resolved*` son proyecciones internas de relaciones y
 
 Toda violación de este cierre se identifica en el núcleo mediante el código canónico `E308` (`FrameClosureViolation`).
 
+## C01 en R0-3
+
+R0-3 materializa la separación constitutiva entre fallo técnico, admisibilidad y valor ternario:
+
+```text
+CaptureOutcome::Bottom   ↛ Tri
+NotAdmitted              ↛ Tri
+fallo técnico            ↛ Tri.U
+```
+
+`AdmissibilityState` es un tipo cerrado con exactamente tres variantes:
+
+```text
+Ok
+Degraded
+NotAdmitted
+```
+
+Los identificadores heredados `Failed` y `U` no pertenecen a ese tipo. Las etiquetas ajenas al conjunto cerrado, un `parameter_id` nulo o una regla ausente se identifican mediante `E110` (`InvalidAdmissibilitySpec`) en la frontera materializada por este corte.
+
+`CaptureOutcome<T>` representa materialmente la separación entre una observación obtenida y `Bottom`, símbolo técnico de fallo de captura. No constituye un nuevo valor del Lenguaje ni amplía `Tri`.
+
+La existencia de `Tri.U` permanece intacta. Una observación admitida sólo podrá alcanzar legítimamente `Tri.U` por la vía semántica del `Ternarizer` cuando pertenezca a `partition_u`. R0-3 no adelanta la realización completa de esa ternarización ni introduce una conversión automática desde admisibilidad.
+
+La imposibilidad de convertir automáticamente `NotAdmitted` o `Bottom` a `Tri` se comprueba también mediante pruebas de compilación negativa de la propia documentación Rust.
+
 ## Fronteras
 
 Este corte no contiene todavía:
@@ -56,8 +86,9 @@ Este corte no contiene todavía:
 - resolución general de símbolos en Rust;
 - transformación completa a IR 0.3;
 - serialización canónica completa;
-- materialización de C01–C03 como operaciones Rust;
+- materialización de C02 o C03 como operaciones Rust;
 - `resolve` soberano en Rust;
+- realización completa de `Ternarizer`;
 - sustitución del Playground Python/Pyodide;
 - Garantía I o Garantía II.
 
@@ -68,7 +99,8 @@ La invalidez técnica de la interfaz binaria WebAssembly permanece fuera de `Tri
 La integración continua comprueba:
 
 1. las pruebas nativas del espacio de trabajo Rust;
-2. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
-3. la compilación de `sv_wasm` para ese mismo destino.
+2. las pruebas de documentación, incluidas las conversiones que deben ser imposibles;
+3. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
+4. la compilación de `sv_wasm` para ese mismo destino.
 
-La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat` ni `Frame`.
+La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat`, `Frame` ni C01.
