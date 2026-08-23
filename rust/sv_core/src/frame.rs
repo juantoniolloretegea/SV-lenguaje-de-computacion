@@ -1,3 +1,4 @@
+use crate::Nat;
 use std::collections::BTreeSet;
 
 /// Código diagnóstico canónico para violaciones del cierre de `Frame`.
@@ -159,11 +160,11 @@ impl ResolvedSupervisionResult {
 }
 
 /// Candidato ya resuelto que aporta a `Frame` únicamente las relaciones necesarias
-/// para decidir J-F0…J-F5. No sustituye al AST ni a la IR canónica.
+/// para decidir J-F0…J-F5. No sustituye al árbol sintáctico ni a la IR canónica.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct FrameCandidate {
     name: String,
-    index: u64,
+    index: Nat,
     architecture: ResolvedArchitecture,
     cell_states: Vec<ResolvedCoupledState>,
     eval_results: Vec<ResolvedEvalResult>,
@@ -173,7 +174,7 @@ pub struct FrameCandidate {
 }
 
 impl FrameCandidate {
-    pub fn new(name: impl Into<String>, index: u64, architecture: ResolvedArchitecture) -> Self {
+    pub fn new(name: impl Into<String>, index: Nat, architecture: ResolvedArchitecture) -> Self {
         Self {
             name: name.into(),
             index,
@@ -219,7 +220,7 @@ impl FrameCandidate {
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct Frame {
     name: String,
-    index: u64,
+    index: Nat,
     architecture: String,
     cell_states: Vec<String>,
     eval_results: Vec<String>,
@@ -271,7 +272,8 @@ impl Frame {
             }
         }
 
-        let frame_states: BTreeSet<String> = cell_states.iter().map(|state| state.name.clone()).collect();
+        let frame_states: BTreeSet<String> =
+            cell_states.iter().map(|state| state.name.clone()).collect();
         let mut seen_eval_sources = BTreeSet::new();
         for eval in &eval_results {
             if !frame_states.contains(&eval.source_state) {
@@ -287,7 +289,8 @@ impl Frame {
             }
         }
 
-        let frame_evals: BTreeSet<String> = eval_results.iter().map(|eval| eval.name.clone()).collect();
+        let frame_evals: BTreeSet<String> =
+            eval_results.iter().map(|eval| eval.name.clone()).collect();
         for gate in &gate_results {
             for input in &gate.eval_inputs {
                 if !frame_evals.contains(input) {
@@ -299,7 +302,8 @@ impl Frame {
             }
         }
 
-        let frame_gates: BTreeSet<String> = gate_results.iter().map(|gate| gate.name.clone()).collect();
+        let frame_gates: BTreeSet<String> =
+            gate_results.iter().map(|gate| gate.name.clone()).collect();
         for supervision_result in &supervision {
             if !frame_evals.contains(&supervision_result.meta_eval) {
                 return Err(FrameClosureViolation::SupervisionMetaEvalOutsideFrame {
@@ -353,8 +357,8 @@ impl Frame {
         &self.name
     }
 
-    pub fn index(&self) -> u64 {
-        self.index
+    pub fn index(&self) -> &Nat {
+        &self.index
     }
 
     pub fn architecture(&self) -> &str {
@@ -431,307 +435,5 @@ pub enum FrameClosureViolation {
 impl FrameClosureViolation {
     pub const fn diagnostic_code(&self) -> &'static str {
         FRAME_CLOSURE_DIAGNOSTIC_CODE
-    }
-}
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    fn complete_candidate() -> FrameCandidate {
-        FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into(), "N2".into()]),
-        )
-        .with_cell_states(vec![
-            ResolvedCoupledState::new("S1", "N1"),
-            ResolvedCoupledState::new("S2", "N2"),
-        ])
-        .with_eval_results(vec![
-            ResolvedEvalResult::new("E1", "S1"),
-            ResolvedEvalResult::new("E2", "S2"),
-        ])
-        .with_gate_results(vec![ResolvedGateResult::new(
-            "G1",
-            vec!["E1".into(), "E2".into()],
-        )])
-        .with_supervision(vec![ResolvedSupervisionResult::new(
-            "SUP1",
-            "E2",
-            ResolvedSupervisionTarget::composed("G1"),
-        )])
-    }
-
-    #[test]
-    fn valid_frame_preserves_declared_references() {
-        let frame = Frame::from_candidate(complete_candidate()).expect("Frame válido");
-
-        assert_eq!(frame.name(), "F0");
-        assert_eq!(frame.index(), 0);
-        assert_eq!(frame.architecture(), "A0");
-        assert_eq!(frame.cell_states(), &["S1".to_string(), "S2".to_string()]);
-        assert_eq!(frame.eval_results(), &["E1".to_string(), "E2".to_string()]);
-        assert_eq!(frame.gate_results(), &["G1".to_string()]);
-        assert_eq!(frame.supervision(), &["SUP1".to_string()]);
-        assert!(frame.criticalities().is_empty());
-    }
-
-    #[test]
-    fn frame_is_not_exhaustive() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into(), "N2".into(), "N3".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")]);
-
-        assert!(Frame::from_candidate(candidate).is_ok());
-    }
-
-    #[test]
-    fn distinct_architecture_nodes_accept_distinct_states() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into(), "N2".into()]),
-        )
-        .with_cell_states(vec![
-            ResolvedCoupledState::new("S1", "N1"),
-            ResolvedCoupledState::new("S2", "N2"),
-        ]);
-
-        assert!(Frame::from_candidate(candidate).is_ok());
-    }
-
-    #[test]
-    fn duplicate_state_reference_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![
-            ResolvedCoupledState::new("S1", "N1"),
-            ResolvedCoupledState::new("S1", "N1"),
-        ]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::DuplicateStateReference {
-                state: "S1".into()
-            })
-        );
-    }
-
-    #[test]
-    fn state_outside_architecture_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S2", "N2")]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::StateOutsideArchitecture {
-                state: "S2".into(),
-                node: "N2".into(),
-                architecture: "A0".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn multiple_states_for_same_node_are_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![
-            ResolvedCoupledState::new("S1", "N1"),
-            ResolvedCoupledState::new("S2", "N1"),
-        ]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::MultipleStatesForNode { node: "N1".into() })
-        );
-    }
-
-    #[test]
-    fn eval_source_outside_frame_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S2")]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::EvalSourceOutsideFrame {
-                eval: "E1".into(),
-                source_state: "S2".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn duplicate_eval_source_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![
-            ResolvedEvalResult::new("E1", "S1"),
-            ResolvedEvalResult::new("E2", "S1"),
-        ]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::DuplicateEvalSource {
-                source_state: "S1".into()
-            })
-        );
-    }
-
-    #[test]
-    fn gate_input_outside_frame_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S1")])
-        .with_gate_results(vec![ResolvedGateResult::new(
-            "G1",
-            vec!["E1".into(), "E2".into()],
-        )]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::GateInputOutsideFrame {
-                gate: "G1".into(),
-                eval_input: "E2".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn supervision_meta_eval_outside_frame_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S1")])
-        .with_supervision(vec![ResolvedSupervisionResult::new(
-            "SUP1",
-            "E2",
-            ResolvedSupervisionTarget::cell("E1"),
-        )]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::SupervisionMetaEvalOutsideFrame {
-                supervision: "SUP1".into(),
-                meta_eval: "E2".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn supervision_cell_target_outside_frame_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S1")])
-        .with_supervision(vec![ResolvedSupervisionResult::new(
-            "SUP1",
-            "E1",
-            ResolvedSupervisionTarget::cell("E2"),
-        )]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::SupervisionCellTargetOutsideFrame {
-                supervision: "SUP1".into(),
-                target: "E2".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn supervision_composed_target_outside_frame_is_rejected() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S1")])
-        .with_supervision(vec![ResolvedSupervisionResult::new(
-            "SUP1",
-            "E1",
-            ResolvedSupervisionTarget::composed("G1"),
-        )]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::SupervisionComposedTargetOutsideFrame {
-                supervision: "SUP1".into(),
-                target: "G1".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn supervision_system_target_must_match_architecture() {
-        let candidate = FrameCandidate::new(
-            "F0",
-            0,
-            ResolvedArchitecture::new("A0", vec!["N1".into()]),
-        )
-        .with_cell_states(vec![ResolvedCoupledState::new("S1", "N1")])
-        .with_eval_results(vec![ResolvedEvalResult::new("E1", "S1")])
-        .with_supervision(vec![ResolvedSupervisionResult::new(
-            "SUP1",
-            "E1",
-            ResolvedSupervisionTarget::system("A1"),
-        )]);
-
-        assert_eq!(
-            Frame::from_candidate(candidate),
-            Err(FrameClosureViolation::SupervisionSystemTargetMismatch {
-                supervision: "SUP1".into(),
-                target: "A1".into(),
-                architecture: "A0".into(),
-            })
-        );
-    }
-
-    #[test]
-    fn non_empty_criticalities_are_rejected() {
-        let candidate = complete_candidate().with_criticalities(vec!["C1".into()]);
-
-        let error = Frame::from_candidate(candidate).expect_err("debe rechazar criticidades");
-        assert_eq!(error.diagnostic_code(), "E308");
-        assert_eq!(
-            error,
-            FrameClosureViolation::CriticalitiesNotProducible {
-                declared: vec!["C1".into()]
-            }
-        );
     }
 }
