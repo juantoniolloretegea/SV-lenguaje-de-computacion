@@ -1,4 +1,4 @@
--- resolve_projection.svp — resolve + proyección explícita de value
+-- resolve_projection.svp — resolve sobre una U constituida + proyección explícita
 
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 
@@ -8,11 +8,23 @@ output_semantics Klin {
   INDETERMINADO -> "u";
 }
 
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+cellstate S1 {
+  spec: C1;
+  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
 res_spec RS1 {
   context: ContextoClinico;
   mechanism: RevisionExperto;
   mapping: MapeoResolucion;
 }
 
-let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
+let RR1 = resolve((S1, 3), with: RS1, context: ContextoClinico, mechanism: RevisionExperto);
 let valor_resuelto = RR1.resolved_to;
