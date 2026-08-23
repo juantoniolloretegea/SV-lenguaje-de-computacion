@@ -1,0 +1,35 @@
+name: R0 Rust
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "rust/**"
+      - ".github/workflows/r0-rust.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  core-native-wasm:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener revisión
+        uses: actions/checkout@v4
+
+      - name: Fijar Rust estable
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustup target add wasm32-unknown-unknown
+          rustc --version
+          cargo --version
+
+      - name: Probar espacio de trabajo nativo
+        run: cargo test --manifest-path rust/Cargo.toml --workspace
+
+      - name: Comprobar núcleo para WebAssembly
+        run: cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
+
+      - name: Comprobar adaptador WebAssembly
+        run: cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
