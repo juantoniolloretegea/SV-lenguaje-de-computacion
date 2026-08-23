@@ -1,8 +1,8 @@
-use crate::frame::{
-    Frame, FrameCandidate, FrameClosureViolation, ResolvedArchitecture, ResolvedCoupledState,
-    ResolvedEvalResult, ResolvedGateResult, ResolvedSupervisionResult,
-    ResolvedSupervisionTarget, FRAME_CLOSURE_DIAGNOSTIC_CODE,
+use crate::frame::resolved::{
+    FrameCandidate, ResolvedArchitecture, ResolvedCoupledState, ResolvedEvalResult,
+    ResolvedGateResult, ResolvedSupervisionResult, ResolvedSupervisionTarget,
 };
+use crate::frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 use crate::Nat;
 
 fn complete_candidate() -> FrameCandidate {
