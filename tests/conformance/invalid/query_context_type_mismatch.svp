@@ -20,7 +20,7 @@ capture_spec Cap1 {
 
 admissibility_spec Adm1 {
   parameter_id: 1;
-  states: {Ok, Degraded, Failed, U};
+  states: {Ok, Degraded, NotAdmitted};
   rule: ReglaAdm1;
 }
 
@@ -32,11 +32,6 @@ ternarizer Ter1 {
   mapping: MapTer1;
 }
 
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
-}
-
 coupledspec CC1 { cell: C1; bridges: [3]; }
 
 coupledstate CS1 {
@@ -45,7 +40,19 @@ coupledstate CS1 {
   updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
-let E1 = evaluate(S1);
+semantic_relation RArch {
+  kind: DeclaredRelation;
+  constraints: [CoherenciaLocal];
+}
+
+graph Arch1 {
+  nodes: [CC1];
+  edges: [];
+  relation: RArch;
+  regime: Simple;
+}
+
+let E1 = evaluate(CS1);
 
 frame F1 {
   index: 1;
