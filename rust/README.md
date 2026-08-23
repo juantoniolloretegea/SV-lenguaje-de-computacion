@@ -23,19 +23,21 @@ El adaptador WebAssembly no constituye un segundo motor semántico. Su función 
 Este corte no contiene todavía:
 
 - analizador léxico o sintáctico Rust completo;
-- descenso completo a IR 0.3;
+- transformación completa a IR 0.3;
 - serialización canónica completa;
 - sustitución del Playground Python/Pyodide;
 - garantías materiales del sistema completo.
 
-La invalidez técnica de la ABI WebAssembly se representa fuera de `Tri`; no se transforma en `U`.
+La invalidez técnica de la interfaz binaria WebAssembly permanece fuera de `Tri`; no se transforma en `U`.
 
 ## Comprobación
 
-La integración continua debe verificar:
+La integración continua comprueba:
 
-1. pruebas nativas del espacio de trabajo Rust;
-2. compilación del mismo núcleo para `wasm32-unknown-unknown`;
-3. ausencia de una semántica ternaria duplicada en el adaptador.
+1. las pruebas nativas del espacio de trabajo Rust;
+2. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
+3. la compilación de `sv_wasm` para ese mismo destino.
+
+La ausencia de una segunda semántica no se deduce únicamente de que ambas compilaciones sean correctas. En este corte se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y delega en él la validación y representación ternarias, sin declarar otro tipo `Tri` ni otra tabla de correspondencia semántica.
 
 La ampliación posterior deberá conservar una única fuente semántica compartida por los destinos nativo y WebAssembly.
