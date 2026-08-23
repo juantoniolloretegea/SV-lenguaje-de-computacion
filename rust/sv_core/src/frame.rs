@@ -4,177 +4,194 @@ use std::collections::BTreeSet;
 /// Código diagnóstico canónico para violaciones del cierre de `Frame`.
 pub const FRAME_CLOSURE_DIAGNOSTIC_CODE: &str = "E308";
 
-/// Proyección interna de la arquitectura necesaria para validar un `Frame`.
+/// Relaciones ya resueltas que R0-2 necesita para comprobar el cierre de `Frame`.
 ///
-/// `nodes` contiene identidades de `CoupledSpec`, que son las identidades de nodo
-/// relevantes para J-F0 y J-F1. El `CellSpec` subyacente no participa en esa clave.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ResolvedArchitecture {
-    name: String,
-    nodes: Vec<String>,
-}
+/// Este submódulo es interno a `sv_core`. Mientras no esté enlazado el resolvedor
+/// posterior, su materialización sólo se consume en las pruebas del propio núcleo.
+#[cfg_attr(
+    not(test),
+    expect(
+        dead_code,
+        reason = "R0-2 materializa las relaciones resueltas antes de enlazar el resolvedor interno posterior"
+    )
+)]
+pub(crate) mod resolved {
+    use crate::Nat;
 
-impl ResolvedArchitecture {
-    pub(crate) fn new(name: impl Into<String>, nodes: Vec<String>) -> Self {
-        Self {
-            name: name.into(),
-            nodes,
+    /// Proyección interna de la arquitectura necesaria para validar un `Frame`.
+    ///
+    /// `nodes` contiene identidades de `CoupledSpec`, que son las identidades de nodo
+    /// relevantes para J-F0 y J-F1. El `CellSpec` subyacente no participa en esa clave.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct ResolvedArchitecture {
+        pub(super) name: String,
+        pub(super) nodes: Vec<String>,
+    }
+
+    impl ResolvedArchitecture {
+        pub(crate) fn new(name: impl Into<String>, nodes: Vec<String>) -> Self {
+            Self {
+                name: name.into(),
+                nodes,
+            }
+        }
+    }
+
+    /// Proyección interna de un `CoupledState` incluido en un `Frame`.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct ResolvedCoupledState {
+        pub(super) name: String,
+        pub(super) coupled_spec: String,
+    }
+
+    impl ResolvedCoupledState {
+        pub(crate) fn new(name: impl Into<String>, coupled_spec: impl Into<String>) -> Self {
+            Self {
+                name: name.into(),
+                coupled_spec: coupled_spec.into(),
+            }
+        }
+    }
+
+    /// Proyección interna de un `EvalResult` incluido en un `Frame`.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct ResolvedEvalResult {
+        pub(super) name: String,
+        pub(super) source_state: String,
+    }
+
+    impl ResolvedEvalResult {
+        pub(crate) fn new(name: impl Into<String>, source_state: impl Into<String>) -> Self {
+            Self {
+                name: name.into(),
+                source_state: source_state.into(),
+            }
+        }
+    }
+
+    /// Proyección interna de un `GateResult` incluido en un `Frame`.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct ResolvedGateResult {
+        pub(super) name: String,
+        pub(super) eval_inputs: Vec<String>,
+    }
+
+    impl ResolvedGateResult {
+        pub(crate) fn new(name: impl Into<String>, eval_inputs: Vec<String>) -> Self {
+            Self {
+                name: name.into(),
+                eval_inputs,
+            }
+        }
+    }
+
+    /// Objetivo de supervisión resuelto internamente para comprobar el cierre de `Frame`.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) enum ResolvedSupervisionTarget {
+        Cell(String),
+        Composed(String),
+        System(String),
+    }
+
+    impl ResolvedSupervisionTarget {
+        pub(crate) fn cell(eval_result: impl Into<String>) -> Self {
+            Self::Cell(eval_result.into())
+        }
+
+        pub(crate) fn composed(gate_result: impl Into<String>) -> Self {
+            Self::Composed(gate_result.into())
+        }
+
+        pub(crate) fn system(architecture: impl Into<String>) -> Self {
+            Self::System(architecture.into())
+        }
+    }
+
+    /// Proyección interna de un `SupervisionResult` incluido en un `Frame`.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct ResolvedSupervisionResult {
+        pub(super) name: String,
+        pub(super) meta_eval: String,
+        pub(super) target: ResolvedSupervisionTarget,
+    }
+
+    impl ResolvedSupervisionResult {
+        pub(crate) fn new(
+            name: impl Into<String>,
+            meta_eval: impl Into<String>,
+            target: ResolvedSupervisionTarget,
+        ) -> Self {
+            Self {
+                name: name.into(),
+                meta_eval: meta_eval.into(),
+                target,
+            }
+        }
+    }
+
+    /// Candidato interno que aporta a `Frame` únicamente las relaciones necesarias
+    /// para decidir J-F0…J-F5. No sustituye al árbol sintáctico ni a la IR canónica.
+    ///
+    /// Su construcción permanece dentro de `sv_core`: R0-2 no concede a adaptadores
+    /// ni consumidores externos autoridad para declarar como «resuelta» una relación.
+    #[derive(Debug, Clone, PartialEq, Eq)]
+    pub(crate) struct FrameCandidate {
+        pub(super) name: String,
+        pub(super) index: Nat,
+        pub(super) architecture: ResolvedArchitecture,
+        pub(super) cell_states: Vec<ResolvedCoupledState>,
+        pub(super) eval_results: Vec<ResolvedEvalResult>,
+        pub(super) gate_results: Vec<ResolvedGateResult>,
+        pub(super) supervision: Vec<ResolvedSupervisionResult>,
+        pub(super) criticalities: Vec<String>,
+    }
+
+    impl FrameCandidate {
+        pub(crate) fn new(
+            name: impl Into<String>,
+            index: Nat,
+            architecture: ResolvedArchitecture,
+        ) -> Self {
+            Self {
+                name: name.into(),
+                index,
+                architecture,
+                cell_states: Vec::new(),
+                eval_results: Vec::new(),
+                gate_results: Vec::new(),
+                supervision: Vec::new(),
+                criticalities: Vec::new(),
+            }
+        }
+
+        pub(crate) fn with_cell_states(mut self, cell_states: Vec<ResolvedCoupledState>) -> Self {
+            self.cell_states = cell_states;
+            self
+        }
+
+        pub(crate) fn with_eval_results(mut self, eval_results: Vec<ResolvedEvalResult>) -> Self {
+            self.eval_results = eval_results;
+            self
+        }
+
+        pub(crate) fn with_gate_results(mut self, gate_results: Vec<ResolvedGateResult>) -> Self {
+            self.gate_results = gate_results;
+            self
+        }
+
+        pub(crate) fn with_supervision(mut self, supervision: Vec<ResolvedSupervisionResult>) -> Self {
+            self.supervision = supervision;
+            self
+        }
+
+        pub(crate) fn with_criticalities(mut self, criticalities: Vec<String>) -> Self {
+            self.criticalities = criticalities;
+            self
         }
     }
 }
 
-/// Proyección interna de un `CoupledState` incluido en un `Frame`.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ResolvedCoupledState {
-    name: String,
-    coupled_spec: String,
-}
-
-impl ResolvedCoupledState {
-    pub(crate) fn new(name: impl Into<String>, coupled_spec: impl Into<String>) -> Self {
-        Self {
-            name: name.into(),
-            coupled_spec: coupled_spec.into(),
-        }
-    }
-}
-
-/// Proyección interna de un `EvalResult` incluido en un `Frame`.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ResolvedEvalResult {
-    name: String,
-    source_state: String,
-}
-
-impl ResolvedEvalResult {
-    pub(crate) fn new(name: impl Into<String>, source_state: impl Into<String>) -> Self {
-        Self {
-            name: name.into(),
-            source_state: source_state.into(),
-        }
-    }
-}
-
-/// Proyección interna de un `GateResult` incluido en un `Frame`.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ResolvedGateResult {
-    name: String,
-    eval_inputs: Vec<String>,
-}
-
-impl ResolvedGateResult {
-    pub(crate) fn new(name: impl Into<String>, eval_inputs: Vec<String>) -> Self {
-        Self {
-            name: name.into(),
-            eval_inputs,
-        }
-    }
-}
-
-/// Objetivo de supervisión resuelto internamente para comprobar el cierre de `Frame`.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) enum ResolvedSupervisionTarget {
-    Cell(String),
-    Composed(String),
-    System(String),
-}
-
-impl ResolvedSupervisionTarget {
-    pub(crate) fn cell(eval_result: impl Into<String>) -> Self {
-        Self::Cell(eval_result.into())
-    }
-
-    pub(crate) fn composed(gate_result: impl Into<String>) -> Self {
-        Self::Composed(gate_result.into())
-    }
-
-    pub(crate) fn system(architecture: impl Into<String>) -> Self {
-        Self::System(architecture.into())
-    }
-}
-
-/// Proyección interna de un `SupervisionResult` incluido en un `Frame`.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct ResolvedSupervisionResult {
-    name: String,
-    meta_eval: String,
-    target: ResolvedSupervisionTarget,
-}
-
-impl ResolvedSupervisionResult {
-    pub(crate) fn new(
-        name: impl Into<String>,
-        meta_eval: impl Into<String>,
-        target: ResolvedSupervisionTarget,
-    ) -> Self {
-        Self {
-            name: name.into(),
-            meta_eval: meta_eval.into(),
-            target,
-        }
-    }
-}
-
-/// Candidato interno que aporta a `Frame` únicamente las relaciones necesarias
-/// para decidir J-F0…J-F5. No sustituye al árbol sintáctico ni a la IR canónica.
-///
-/// Su construcción permanece dentro de `sv_core`: R0-2 no concede a adaptadores
-/// ni consumidores externos autoridad para declarar como «resuelta» una relación.
-#[derive(Debug, Clone, PartialEq, Eq)]
-pub(crate) struct FrameCandidate {
-    name: String,
-    index: Nat,
-    architecture: ResolvedArchitecture,
-    cell_states: Vec<ResolvedCoupledState>,
-    eval_results: Vec<ResolvedEvalResult>,
-    gate_results: Vec<ResolvedGateResult>,
-    supervision: Vec<ResolvedSupervisionResult>,
-    criticalities: Vec<String>,
-}
-
-impl FrameCandidate {
-    pub(crate) fn new(
-        name: impl Into<String>,
-        index: Nat,
-        architecture: ResolvedArchitecture,
-    ) -> Self {
-        Self {
-            name: name.into(),
-            index,
-            architecture,
-            cell_states: Vec::new(),
-            eval_results: Vec::new(),
-            gate_results: Vec::new(),
-            supervision: Vec::new(),
-            criticalities: Vec::new(),
-        }
-    }
-
-    pub(crate) fn with_cell_states(mut self, cell_states: Vec<ResolvedCoupledState>) -> Self {
-        self.cell_states = cell_states;
-        self
-    }
-
-    pub(crate) fn with_eval_results(mut self, eval_results: Vec<ResolvedEvalResult>) -> Self {
-        self.eval_results = eval_results;
-        self
-    }
-
-    pub(crate) fn with_gate_results(mut self, gate_results: Vec<ResolvedGateResult>) -> Self {
-        self.gate_results = gate_results;
-        self
-    }
-
-    pub(crate) fn with_supervision(mut self, supervision: Vec<ResolvedSupervisionResult>) -> Self {
-        self.supervision = supervision;
-        self
-    }
-
-    pub(crate) fn with_criticalities(mut self, criticalities: Vec<String>) -> Self {
-        self.criticalities = criticalities;
-        self
-    }
-}
+use resolved::{FrameCandidate, ResolvedSupervisionTarget};
 
 /// `Frame` constituido tras comprobar su cierre estructural y causal.
 ///
@@ -193,6 +210,13 @@ pub struct Frame {
 }
 
 impl Frame {
+    #[cfg_attr(
+        not(test),
+        expect(
+            dead_code,
+            reason = "R0-2 materializa el constructor interno antes de enlazar el resolvedor posterior"
+        )
+    )]
     pub(crate) fn from_candidate(
         candidate: FrameCandidate,
     ) -> Result<Self, FrameClosureViolation> {
