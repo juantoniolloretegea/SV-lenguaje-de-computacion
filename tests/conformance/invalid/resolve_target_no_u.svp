@@ -1,0 +1,7 @@
+-- Debe fallar con E305: el objetivo de resolve debe identificar una U constituida.
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+cellstate S1 { spec: C1; vector: [Zero, One, U, Zero, Zero, One, U, Zero, One]; }
+res_spec RS1 { context: Ctx; mechanism: Rev; mapping: MapRes; }
+let RR1 = resolve((S1, 1), with: RS1, context: Ctx, mechanism: Rev);
