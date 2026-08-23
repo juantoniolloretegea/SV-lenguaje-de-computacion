@@ -1,10 +1,12 @@
 //! Núcleo semántico de R0 para el Lenguaje SV.
 //!
-//! Este crate contiene la realización Rust compartida por los destinos nativo y
-//! WebAssembly. R0-1 fija `Tri`; R0-2 incorpora `Frame` y el cierre relacional
-//! mínimo exigido por la IR canónica 0.3, sin adelantar operaciones posteriores.
+//! Esta biblioteca Rust contiene la realización compartida por los destinos
+//! nativo y WebAssembly. R0-1 fija `Tri`; R0-2 incorpora `Nat`, `Frame` y el
+//! cierre relacional mínimo exigido por la IR canónica 0.3, sin adelantar
+//! operaciones posteriores.
 
 pub mod frame;
+pub mod nat;
 
 pub use frame::{
     Frame, FrameCandidate, FrameClosureViolation, ResolvedArchitecture,
@@ -12,6 +14,7 @@ pub use frame::{
     ResolvedSupervisionResult, ResolvedSupervisionTarget,
     FRAME_CLOSURE_DIAGNOSTIC_CODE,
 };
+pub use nat::{InvalidNat, Nat};
 
 pub const GRAMMAR_VERSION: &str = "0.2";
 pub const IR_VERSION: &str = "0.3";
