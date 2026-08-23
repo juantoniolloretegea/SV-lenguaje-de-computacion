@@ -24,6 +24,7 @@ from svp_main import process_file
 EXPECTED_INVALID_CODES = {
     "admissibility_table_incompleta.svp": "E009",
     "admissibility_table_output_fuera_codominio.svp": "E011",
+    "admissibility_spec_estados_legacy.svp": "E110",
     "bridge_position_fuera_de_rango.svp": "E105",
     "cellstate_vector_length_mismatch.svp": "E101",
     "coupledstate_update_fuera_bridges.svp": "E112",
@@ -52,6 +53,9 @@ EXPECTED_INVALID_CODES = {
     "query_context_opaco.svp": "E204",
     "resolve_missing_context.svp": "E206",
     "resolve_missing_mechanism.svp": "E207",
+    "resolve_target_no_u.svp": "E305",
+    "resolve_target_fuera_rango.svp": "E305",
+    "resolve_instancia_incompatible.svp": "E305",
     "supervise_target_opaco.svp": "E205",
     "supervise_undeclared_target.svp": "E006",
     "supervise_wrong_role.svp": "E211",
@@ -70,6 +74,12 @@ EXPECTED_INVALID_CODES = {
     "compose_patterns_vacios.svp": "E209",
     "pending_u_reconocido_no_habilitado.svp": "E403",
     "transition_data_horizon_no_declarado.svp": "E303",
+    "frame_estado_arquitectura_ajena.svp": "E308",
+    "frame_eval_externo.svp": "E308",
+    "frame_eval_duplicado.svp": "E308",
+    "frame_gate_input_externo.svp": "E308",
+    "frame_supervision_externa.svp": "E308",
+    "frame_criticality_no_producible.svp": "E308",
 }
 
 
