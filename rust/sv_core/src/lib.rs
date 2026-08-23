@@ -34,11 +34,12 @@ impl Tri {
         self as u8
     }
 
+    /// Representación textual canónica del valor semántico.
     #[inline]
     pub const fn label(self) -> &'static str {
         match self {
-            Self::Zero => "Zero",
-            Self::One => "One",
+            Self::Zero => "0",
+            Self::One => "1",
             Self::U => "U",
         }
     }
@@ -78,12 +79,33 @@ mod tests {
     use super::*;
 
     #[test]
+    fn tri_has_a_stable_one_byte_representation() {
+        assert_eq!(core::mem::size_of::<Tri>(), 1);
+    }
+
+    #[test]
     fn tri_is_exactly_ternary_at_the_public_boundary() {
         assert_eq!(Tri::try_from(0), Ok(Tri::Zero));
         assert_eq!(Tri::try_from(1), Ok(Tri::One));
         assert_eq!(Tri::try_from(2), Ok(Tri::U));
-        assert_eq!(Tri::try_from(3), Err(InvalidTriValue(3)));
-        assert_eq!(Tri::try_from(u8::MAX), Err(InvalidTriValue(u8::MAX)));
+
+        for value in 3..=u8::MAX {
+            assert_eq!(Tri::try_from(value), Err(InvalidTriValue(value)));
+        }
+    }
+
+    #[test]
+    fn tri_numeric_representation_is_canonical() {
+        assert_eq!(Tri::Zero.as_u8(), 0);
+        assert_eq!(Tri::One.as_u8(), 1);
+        assert_eq!(Tri::U.as_u8(), 2);
+    }
+
+    #[test]
+    fn tri_textual_representation_is_canonical() {
+        assert_eq!(Tri::Zero.label(), "0");
+        assert_eq!(Tri::One.label(), "1");
+        assert_eq!(Tri::U.label(), "U");
     }
 
     #[test]
