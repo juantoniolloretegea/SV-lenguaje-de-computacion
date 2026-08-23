@@ -1,0 +1,3 @@
+[workspace]
+members = ["sv_core", "sv_wasm"]
+resolver = "2"
