@@ -29,6 +29,14 @@ impl AdmissibilityState {
             Self::NotAdmitted => "NotAdmitted",
         }
     }
+
+    /// Indica si el estado representa una observación positivamente admitida.
+    ///
+    /// Esta propiedad no ternariza la observación: sólo `Ok` y `Degraded`
+    /// permiten continuar hacia una ternarización semántica posterior.
+    pub const fn is_admitted(self) -> bool {
+        matches!(self, Self::Ok | Self::Degraded)
+    }
 }
 
 impl TryFrom<&str> for AdmissibilityState {
@@ -164,6 +172,13 @@ mod tests {
     }
 
     #[test]
+    fn only_ok_and_degraded_are_positively_admitted() {
+        assert!(AdmissibilityState::Ok.is_admitted());
+        assert!(AdmissibilityState::Degraded.is_admitted());
+        assert!(!AdmissibilityState::NotAdmitted.is_admitted());
+    }
+
+    #[test]
     fn admissibility_spec_rejects_zero_parameter_id() {
         let error = AdmissibilitySpec::new("A0", Nat::from_u64(0), "Rule")
             .expect_err("parameter_id debe ser positivo");
@@ -199,7 +214,7 @@ mod tests {
     fn admitted_observation_does_not_itself_create_tri() {
         let observation = CaptureOutcome::Observation("dato");
         assert_eq!(observation, CaptureOutcome::Observation("dato"));
-        assert_eq!(AdmissibilityState::Ok.label(), "Ok");
-        assert_eq!(AdmissibilityState::Degraded.label(), "Degraded");
+        assert!(AdmissibilityState::Ok.is_admitted());
+        assert!(AdmissibilityState::Degraded.is_admitted());
     }
 }
