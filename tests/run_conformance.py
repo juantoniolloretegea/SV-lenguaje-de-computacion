@@ -1,15 +1,9 @@
 #!/usr/bin/env python3
-"""run_conformance.py — Ejecutor de la suite de conformidad DSL → IR
+"""run_conformance.py — Ejecutor de la batería de conformidad DSL → IR.
 
-Para cada caso válido:
-parsea, valida, baja y compara el JSON canónico producido con su
-`.expected.json` correspondiente.
-
-Para cada caso inválido:
-parsea y comprueba que falla con el código exacto esperado.
-
-Autor: Juan Antonio Lloret Egea | ORCID 0000‑0002‑6634‑3351
-ISSN 2695‑6411 | CC BY‑NC‑ND 4.0
+Los casos válidos se comparan contra JSON esperados comprometidos en el
+repositorio. Los casos inválidos deben terminar con el código diagnóstico
+exacto declarado. El ejecutor no regenera ni modifica los oráculos.
 """
 
 import json
@@ -20,6 +14,10 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from svp_errors import SVPError
 from svp_main import process_file
+
+IR_VERSION = "0.3"
+GRAMMAR_VERSION = "0.2"
+SERIALIZER_VERSION = "0.1.0"
 
 EXPECTED_INVALID_CODES = {
     "admissibility_table_incompleta.svp": "E009",
@@ -84,7 +82,6 @@ EXPECTED_INVALID_CODES = {
 
 
 def canonicalize_json_text(text: str) -> str:
-    """Normaliza texto JSON a una forma canónica estable."""
     data = json.loads(text)
     return json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
 
@@ -94,7 +91,7 @@ def expected_json_path(valid_dir: str, fname: str) -> str:
     return os.path.join(valid_dir, f"{stem}.expected.json")
 
 
-def run_tests():
+def run_tests() -> int:
     base = os.path.dirname(os.path.abspath(__file__))
     valid_dir = os.path.join(base, "conformance", "valid")
     invalid_dir = os.path.join(base, "conformance", "invalid")
@@ -103,7 +100,6 @@ def run_tests():
     failed = 0
     errors = []
 
-    # ── Casos válidos ──────────────────────────────────────────────────
     print("═══ Casos válidos ═══")
     if os.path.isdir(valid_dir):
         for fname in sorted(os.listdir(valid_dir)):
@@ -122,12 +118,10 @@ def run_tests():
                 result = process_file(path)
                 doc = json.loads(result)
 
-                assert "ir_version" in doc
-                assert "grammar_version" in doc
+                assert doc.get("ir_version") == IR_VERSION
+                assert doc.get("grammar_version") == GRAMMAR_VERSION
                 assert "source_sha256" in doc
-                assert "serializer_version" in doc
-                assert doc["ir_version"] == "0.2"
-                assert doc["grammar_version"] == "0.1"
+                assert doc.get("serializer_version") == SERIALIZER_VERSION
 
                 produced = canonicalize_json_text(result)
                 with open(exp_path, "r", encoding="utf-8") as fh:
@@ -141,12 +135,11 @@ def run_tests():
                 print(f" ✓ {fname}")
                 passed += 1
 
-            except Exception as e:
-                print(f" ✗ {fname}: {e}")
-                errors.append((fname, str(e)))
+            except Exception as exc:
+                print(f" ✗ {fname}: {exc}")
+                errors.append((fname, str(exc)))
                 failed += 1
 
-    # ── Casos inválidos ────────────────────────────────────────────────
     print("\n═══ Casos inválidos (deben fallar con código exacto) ═══")
     if os.path.isdir(invalid_dir):
         for fname in sorted(os.listdir(invalid_dir)):
@@ -162,37 +155,25 @@ def run_tests():
                 errors.append((fname, "No falló"))
                 failed += 1
 
-            except SVPError as e:
-                actual_code = e.error_def.code
-
+            except SVPError as exc:
+                actual_code = exc.error_def.code
                 if expected_code is None:
-                    print(
-                        f" ✗ {fname}: no tiene código esperado declarado y falló con {actual_code}"
-                    )
-                    errors.append(
-                        (fname, f"Sin código esperado declarado: {actual_code}")
-                    )
+                    print(f" ✗ {fname}: sin código esperado; obtuvo {actual_code}")
+                    errors.append((fname, f"Sin código esperado: {actual_code}"))
                     failed += 1
-
                 elif actual_code != expected_code:
-                    print(
-                        f" ✗ {fname}: código esperado {expected_code}, obtenido {actual_code}"
-                    )
-                    errors.append(
-                        (fname, f"Esperado {expected_code}, obtenido {actual_code}")
-                    )
+                    print(f" ✗ {fname}: esperado {expected_code}, obtenido {actual_code}")
+                    errors.append((fname, f"Esperado {expected_code}, obtenido {actual_code}"))
                     failed += 1
-
                 else:
-                    print(f" ✓ {fname}: {actual_code} ({e.error_def.name})")
+                    print(f" ✓ {fname}: {actual_code} ({exc.error_def.name})")
                     passed += 1
 
-            except Exception as e:
-                print(f" ? {fname}: error inesperado — {e}")
-                errors.append((fname, str(e)))
+            except Exception as exc:
+                print(f" ? {fname}: error inesperado — {exc}")
+                errors.append((fname, str(exc)))
                 failed += 1
 
-    # ── Resumen ────────────────────────────────────────────────────────
     print("\n═══ Resumen ═══")
     print(f" Pasados: {passed}")
     print(f" Fallidos: {failed}")
