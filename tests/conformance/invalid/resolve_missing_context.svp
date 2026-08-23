@@ -1,4 +1,4 @@
--- Debe fallar con E206: resolve reconoce with, pero el campo obligatorio context no ocupa su posición.
+-- Debe fallar con E206: resolve reconoce with, pero falta el campo obligatorio context.
 
 res_spec RS1 {
   context: ContextoClinico;
@@ -6,4 +6,4 @@ res_spec RS1 {
   mapping: MapeoResolucion;
 }
 
-let RR1 = resolve(U, with: RS1, mechanism: M1);
+let RR1 = resolve((S1, 3), with: RS1, mechanism: M1);
