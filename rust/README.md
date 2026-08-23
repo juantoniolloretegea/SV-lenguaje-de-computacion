@@ -1,32 +1,58 @@
 # Realización Rust de R0
 
-Esta carpeta contiene el inicio de la realización Rust del núcleo semántico del Lenguaje SV.
+Esta carpeta contiene la realización progresiva en Rust del núcleo semántico del Lenguaje SV, compartida por los destinos nativo y WebAssembly.
 
-## Alcance del corte inicial
+## Estado material
 
 ```text
-sv_core
-  ├─ Tri = {0, 1, U}
-  ├─ representación Rust: Zero = 0, One = 1, U = 2
-  └─ versiones canónicas: Gramática 0.2 / IR 0.3 / serializador 0.1.0
+R0-1
+  sv_core
+    ├─ Tri = {0, 1, U}
+    ├─ representación Rust: Zero = 0, One = 1, U = 2
+    └─ versiones canónicas: Gramática 0.2 / IR 0.3 / serializador 0.1.0
+
+R0-2
+  sv_core
+    └─ Frame + cierre relacional mínimo J-F0…J-F5
 
 sv_wasm
-  └─ adaptador WebAssembly mínimo que delega la semántica ternaria en sv_core
+  └─ adaptador WebAssembly del mismo sv_core
 ```
 
 Los nombres `Zero` y `One` son identificadores internos de Rust. La representación textual canónica del Lenguaje SV permanece `0`, `1`, `U`.
 
 El adaptador WebAssembly no constituye un segundo motor semántico. Su función es exponer el mismo núcleo a un destino de ejecución distinto.
 
+## `Frame` en R0-2
+
+R0-2 materializa `Frame` como objeto constituible únicamente cuando las relaciones ya resueltas satisfacen el cierre estructural y causal de la IR 0.3:
+
+- cada `CoupledState` pertenece a un nodo de `Frame.architecture`;
+- no se repite una referencia de estado ni existe más de un estado por nodo de arquitectura;
+- cada `EvalResult` procede de un estado incluido y no se duplica una misma fuente material;
+- cada `GateResult` depende exclusivamente de evaluaciones incluidas;
+- cada `SupervisionResult` mantiene `meta_eval` y objetivo dentro del mismo cierre;
+- `SystemTarget` coincide con `Frame.architecture`;
+- `criticalities` permanece vacío mientras no exista un productor superficial constituido de `CriticalityResult`.
+
+La comprobación no impone exhaustividad: un `Frame` puede declarar sólo una parte coherente de los estados y resultados de su arquitectura.
+
+Las estructuras auxiliares `Resolved*` son proyecciones de relaciones ya resueltas necesarias para comprobar este cierre en Rust. No crean nuevos tipos de la gramática ni de la IR canónica y no sustituyen al análisis sintáctico, a la resolución de símbolos ni al descenso a IR.
+
+Toda violación de este cierre se identifica en el núcleo mediante el código canónico `E308` (`FrameClosureViolation`).
+
 ## Fronteras
 
 Este corte no contiene todavía:
 
 - analizador léxico o sintáctico Rust completo;
+- resolución general de símbolos en Rust;
 - transformación completa a IR 0.3;
 - serialización canónica completa;
+- materialización de C01–C03 como operaciones Rust;
+- `resolve` soberano en Rust;
 - sustitución del Playground Python/Pyodide;
-- garantías materiales del sistema completo.
+- Garantía I o Garantía II.
 
 La invalidez técnica de la interfaz binaria WebAssembly permanece fuera de `Tri`; no se transforma en `U`.
 
@@ -38,6 +64,4 @@ La integración continua comprueba:
 2. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
 3. la compilación de `sv_wasm` para ese mismo destino.
 
-La ausencia de una segunda semántica no se deduce únicamente de que ambas compilaciones sean correctas. En este corte se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y delega en él la validación y representación ternarias, sin declarar otro tipo `Tri` ni otra tabla de correspondencia semántica.
-
-La ampliación posterior deberá conservar una única fuente semántica compartida por los destinos nativo y WebAssembly.
+La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri` ni de `Frame`.
