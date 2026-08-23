@@ -5,13 +5,6 @@
 //! cierre relacional mínimo exigido por la IR canónica 0.3, sin adelantar
 //! operaciones posteriores.
 
-#[cfg_attr(
-    not(test),
-    expect(
-        dead_code,
-        reason = "R0-2 materializa el cierre antes de enlazar el resolvedor interno posterior"
-    )
-)]
 pub mod frame;
 pub mod nat;
 
