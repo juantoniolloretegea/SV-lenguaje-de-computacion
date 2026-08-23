@@ -70,7 +70,11 @@ Degraded
 NotAdmitted
 ```
 
-Los identificadores heredados `Failed` y `U` no pertenecen a ese tipo. Las etiquetas ajenas al conjunto cerrado, un `parameter_id` nulo o una regla ausente se identifican mediante `E110` (`InvalidAdmissibilitySpec`) en la frontera materializada por este corte.
+`Ok` y `Degraded` representan estados positivamente admitidos; `NotAdmitted` no. Esta clasificación no produce por sí misma ningún valor de `Tri`.
+
+Los identificadores heredados `Failed` y `U` no pertenecen a `AdmissibilityState`. Las etiquetas ajenas al conjunto cerrado, un `parameter_id` nulo o una regla ausente se identifican mediante `E110` (`InvalidAdmissibilitySpec`) en la frontera materializada por este corte.
+
+`AdmissibilitySpec` no conserva una colección abierta de estados suministrada por el llamador: el conjunto admisible queda fijado por el propio tipo. La futura correspondencia con el campo explícito `states` de la IR y su forma serializada corresponde a R0-6; R0-3 no atribuye todavía equivalencia serial completa.
 
 `CaptureOutcome<T>` representa materialmente la separación entre una observación obtenida y `Bottom`, símbolo técnico de fallo de captura. No constituye un nuevo valor del Lenguaje ni amplía `Tri`.
 
@@ -86,7 +90,7 @@ Este corte no contiene todavía:
 - resolución general de símbolos en Rust;
 - transformación completa a IR 0.3;
 - serialización canónica completa;
-- materialización de C02 o C03 como operaciones Rust;
+- realización de C02 o de la etapa específica C03 prevista en R0-4/R0-5;
 - `resolve` soberano en Rust;
 - realización completa de `Ternarizer`;
 - sustitución del Playground Python/Pyodide;
