@@ -20,7 +20,7 @@ capture_spec Cap1 {
 
 admissibility_spec Adm1 {
   parameter_id: 1;
-  states: {Ok, Degraded, Failed, U};
+  states: {Ok, Degraded, NotAdmitted};
   rule: ReglaAdm1;
 }
 
@@ -45,6 +45,18 @@ coupledstate CS1 {
   updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
+semantic_relation RArch {
+  kind: DeclaredRelation;
+  constraints: [CoherenciaLocal];
+}
+
+graph Arch1 {
+  nodes: [CC1];
+  edges: [];
+  relation: RArch;
+  regime: Simple;
+}
+
 admissibility_table T1 {
   input_codomains: [K3, K3];
   output_codomain: K3;
@@ -61,7 +73,7 @@ admissibility_table T1 {
   }
 }
 
-let E1 = evaluate(S1);
+let E1 = evaluate(CS1);
 let G1 = gate([E1, E1], using: T1);
 
 horizon H1 {

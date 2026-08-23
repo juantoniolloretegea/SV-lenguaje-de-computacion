@@ -1,6 +1,6 @@
 """
-svp_ir.py — Definiciones de objetos IR v0.2 del lenguaje SV
-svp_lowering.py — Lowering: AST validado → IR v0.2
+svp_ir.py — Definiciones de objetos IR v0.3 del lenguaje SV
+svp_lowering.py — Lowering: AST validado → IR v0.3
 
 Cada nodo AST baja a exactamente un objeto IR. n se deriva de b como b².
 Esto no es ejecución del sistema; es cumplimiento de la especificación.
@@ -52,8 +52,8 @@ class IROperation:
 
 @dataclass
 class IRProgram:
-    ir_version: str = "0.2"
-    grammar_version: str = "0.1"
+    ir_version: str = "0.3"
+    grammar_version: str = "0.2"
     source_file: str = ""
     source_sha256: str = ""
     serializer_version: str = "0.1.0"
@@ -158,7 +158,7 @@ class Lowering:
     def _lower_cellspec(self, n: CellSpecDecl) -> IRObject:
         return IRObject("N0", "CellSpec", n.name, {
             "b": n.b,
-            "n": n.b ** 2,  # derivación estructural cerrada
+            "n": n.b ** 2,
             "codomain": n.codomain,
             "semantics": n.semantics,
             "role": n.role,
@@ -360,10 +360,12 @@ class Lowering:
                             "GateResult")
 
     def _lower_resolve(self, n: ResolveCmd) -> IROperation:
-        return IROperation("resolve", n.name,
-                            {"with_spec": n.with_spec, "context": n.context,
-                             "mechanism": n.mechanism},
-                            "ResolutionRecord")
+        return IROperation("resolve", n.name, {
+            "target": {"state": n.target.state, "position": n.target.position},
+            "with_spec": n.with_spec,
+            "context_instance": n.context,
+            "mechanism_instance": n.mechanism,
+        }, "ResolutionRecord")
 
     def _lower_query(self, n: QueryCmd) -> IROperation:
         ctx = self._lower_query_context(n.context)

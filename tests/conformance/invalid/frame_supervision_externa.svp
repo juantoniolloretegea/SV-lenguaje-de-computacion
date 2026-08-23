@@ -1,0 +1,15 @@
+-- Debe fallar con E308: meta_eval y target de supervisión deben pertenecer al cierre causal del Frame.
+codomain K3 = { A, B };
+output_semantics Sem { A -> "a"; B -> "b"; }
+cellspec CBase { b: 3; codomain: K3; semantics: Sem; role: Base; }
+cellspec CMeta { b: 3; codomain: K3; semantics: Sem; role: Supervisor; }
+coupledspec CCBase { cell: CBase; bridges: [1]; }
+coupledspec CCMeta { cell: CMeta; bridges: [1]; }
+coupledstate SBase { spec: CCBase; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+coupledstate SMeta { spec: CCMeta; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CCBase, CCMeta]; edges: []; relation: R; regime: Simple; }
+let EBase = evaluate(SBase);
+let EMeta = evaluate(SMeta);
+let SV = supervise(EMeta, target: CellTarget(EBase));
+frame F { index: 1; architecture: G; cell_states: [SBase, SMeta]; eval_results: [EBase]; gate_results: []; supervision: [SV]; criticalities: []; }

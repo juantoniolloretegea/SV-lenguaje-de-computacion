@@ -9,8 +9,8 @@ la convergencia futura con la norma superior.
 
 Cada error lleva código, nombre canónico, mensaje base, nivel y fase de emisión.
 
-Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
-ISSN 2695-6411 | CC BY-NC-ND 4.0
+Autor: Juan Antonio Lloret Egea | ORCID 0000‑0002‑6634‑3351
+ISSN 2695‑6411 | CC BY‑NC‑ND 4.0
 """
 
 from dataclasses import dataclass
@@ -86,6 +86,10 @@ E010 = SVPErrorDef("E010", "InvalidRole",
 
 E011 = SVPErrorDef("E011", "TableOutputNotInCodomain",
     "La salida de una fila de la tabla de admisibilidad debe pertenecer al codominio de salida declarado",
+    ErrorLevel.LAYER0, ErrorPhase.VALIDATE)
+
+E110 = SVPErrorDef("E110", "InvalidAdmissibilitySpec",
+    "AdmissibilitySpec debe usar exclusivamente Ok, Degraded y NotAdmitted",
     ErrorLevel.LAYER0, ErrorPhase.VALIDATE)
 
 # ── Capa 1 — Estado ──────────────────────────────────────────────────
@@ -192,6 +196,10 @@ E215 = SVPErrorDef("E215", "GateTableSignatureMismatch",
     "La secuencia de entradas de gate debe coincidir, en número y codominio por posición, con los codominios de entrada declarados por la tabla de admisibilidad",
     ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
 
+E305 = SVPErrorDef("E305", "UnsafeUResolution",
+    "resolve exige una U constituida e identificable y una instancia compatible con su ResSpec",
+    ErrorLevel.LAYER2, ErrorPhase.VALIDATE)
+
 # ── Capa 3 — Evolución ───────────────────────────────────────────────
 
 E301 = SVPErrorDef("E301", "FrameMutationForbidden",
@@ -212,6 +220,10 @@ E304 = SVPErrorDef("E304", "TrajectoryAlternanceViolation",
 
 E307 = SVPErrorDef("E307", "UndeclaredHorizonEvent",
     "TransitionData referencia un tipo de suceso que no pertenece al Horizon declarado",
+    ErrorLevel.LAYER3, ErrorPhase.VALIDATE)
+
+E308 = SVPErrorDef("E308", "FrameClosureViolation",
+    "Frame contiene una referencia fuera de su cierre estructural o causal, una identidad duplicada o una criticidad no producible por la superficie vigente",
     ErrorLevel.LAYER3, ErrorPhase.VALIDATE)
 
 E406 = SVPErrorDef("E406", "InsufficientTransitionData",
@@ -246,10 +258,10 @@ E507 = SVPErrorDef("E507", "UCoercionDetected",
 # ── Catálogo completo ────────────────────────────────────────────────
 
 ERRORS = {e.code: e for e in [
-    E001, E002, E003, E004, E005, E006, E007, E008, E009, E010, E011,
+    E001, E002, E003, E004, E005, E006, E007, E008, E009, E010, E011, E110,
     E101, E102, E103, E104, E105, E106, E111, E112, E113, E114,
-    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212, E213, E214, E215,
-    E301, E302, E303, E304, E307, E406,
+    E201, E202, E203, E204, E205, E206, E207, E208, E209, E210, E211, E212, E213, E214, E215, E305,
+    E301, E302, E303, E304, E307, E308, E406,
     E401, E402, E403,
     E501, E507,
 ]}

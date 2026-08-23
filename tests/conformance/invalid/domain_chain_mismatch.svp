@@ -10,7 +10,7 @@ capture_spec CapA {
 
 admissibility_spec AdmB {
   parameter_id: 2;
-  states: {Ok, Degraded, Failed, U};
+  states: {Ok, Degraded, NotAdmitted};
   rule: ReglaAdm2;
 }
 

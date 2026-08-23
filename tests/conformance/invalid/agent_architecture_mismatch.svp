@@ -10,7 +10,7 @@ capture_spec Cap1 {
 
 admissibility_spec Adm1 {
   parameter_id: 1;
-  states: {Ok, Degraded, Failed, U};
+  states: {Ok, Degraded, NotAdmitted};
   rule: ReglaAdm1;
 }
 

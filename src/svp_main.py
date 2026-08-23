@@ -5,8 +5,9 @@ svp_main.py — CLI del parser/lowering de referencia del lenguaje SV
 Uso:
     python svp_main.py archivo.svp [-o archivo.ir.json]
 
-Parsea un archivo .svp, valida la bienformación, baja a IR v0.2
-y serializa a JSON canónico.
+Parsea un archivo .svp, valida la bienformación, baja a IR v0.3
+y serializa a JSON canónico. La superficie materializada corresponde
+a la Gramática v0.2.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
@@ -56,6 +57,12 @@ def process_file(input_path: str, output_path: str = None) -> str:
     lowering = Lowering(program, source_sha256=source_hash)
     ir = lowering.lower()
 
+    # 4.1. Versión efectiva de la superficie y la IR materializadas por Sec.6.
+    # Los valores anteriores (Gramática 0.1 / IR 0.2) identifican el corte histórico
+    # previo a C01–C03 y no deben rotular la nueva salida observable.
+    ir.grammar_version = "0.2"
+    ir.ir_version = "0.3"
+
     # 5. Serializar → JSON
     json_output = serialize(ir)
 
@@ -70,7 +77,7 @@ def process_file(input_path: str, output_path: str = None) -> str:
 
 def main():
     argp = argparse.ArgumentParser(
-        description="Parser/lowering de referencia del lenguaje SV (.svp → IR v0.2 JSON)"
+        description="Parser/lowering de referencia del lenguaje SV (.svp → IR v0.3 JSON)"
     )
     argp.add_argument("input", help="Archivo .svp de entrada")
     argp.add_argument("-o", "--output", help="Archivo .ir.json de salida (por defecto: stdout)")

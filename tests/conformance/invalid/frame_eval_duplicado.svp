@@ -1,0 +1,11 @@
+-- Debe fallar con E308: un Frame no admite dos evaluaciones para la misma identidad de estado fuente.
+codomain K3 = { A, B };
+output_semantics Sem { A -> "a"; B -> "b"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Sem; role: Base; }
+coupledspec CC1 { cell: C1; bridges: [1]; }
+coupledstate S1 { spec: CC1; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CC1]; edges: []; relation: R; regime: Simple; }
+let E1 = evaluate(S1);
+let E2 = evaluate(S1);
+frame F { index: 1; architecture: G; cell_states: [S1]; eval_results: [E1, E2]; gate_results: []; supervision: []; criticalities: []; }

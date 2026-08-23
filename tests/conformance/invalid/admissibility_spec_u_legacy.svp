@@ -1,0 +1,6 @@
+-- Debe fallar con E110: U no forma parte de AdmissibilityState técnico.
+admissibility_spec AdmU {
+  parameter_id: 1;
+  states: {Ok, Degraded, U};
+  rule: ReglaLegacy;
+}

@@ -94,7 +94,7 @@ class CaptureSpecDecl:
 class AdmissibilitySpecDecl:
     name: str
     parameter_id: int
-    states: str  # literal "{Ok, Degraded, Failed, U}"
+    states: str  # literal "{Ok, Degraded, NotAdmitted}"
     rule: str
     loc: Loc
 
@@ -291,8 +291,15 @@ class GateCmd:
 
 
 @dataclass(frozen=True)
+class ResolutionTargetLiteral:
+    state: str
+    position: int
+
+
+@dataclass(frozen=True)
 class ResolveCmd:
     name: str
+    target: ResolutionTargetLiteral
     with_spec: str
     context: str
     mechanism: str

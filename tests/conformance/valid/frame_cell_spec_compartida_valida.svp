@@ -1,14 +1,20 @@
--- trajectory_alternance_violation.svp — trayectoria con alternancia inválida
-
+-- Dos nodos distintos pueden compartir la misma CellSpec; la unicidad de Frame es por nodo.
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
 
 cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
 
 coupledspec CC1 { cell: C1; bridges: [3]; }
+coupledspec CC2 { cell: C1; bridges: [3]; }
 
 coupledstate S1 {
   spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+coupledstate S2 {
+  spec: CC2;
   base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
   updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
@@ -19,43 +25,18 @@ semantic_relation RArch {
 }
 
 graph Arch1 {
-  nodes: [CC1];
+  nodes: [CC1, CC2];
   edges: [];
   relation: RArch;
   regime: Simple;
 }
 
-horizon H1 {
-  architecture: Arch1;
-  events: [CambioProfilaxis];
-}
-
-transition_data TD1 {
-  horizon_ref: H1;
-  events: [(CambioProfilaxis, One)];
-  induced_parameters: [(C1, 3, One)];
-}
-
 frame F1 {
   index: 1;
   architecture: Arch1;
-  cell_states: [S1];
+  cell_states: [S1, S2];
   eval_results: [];
   gate_results: [];
   supervision: [];
   criticalities: [];
-}
-
-frame F2 {
-  index: 2;
-  architecture: Arch1;
-  cell_states: [S1];
-  eval_results: [];
-  gate_results: [];
-  supervision: [];
-  criticalities: [];
-}
-
-trajectory TR_bad {
-  entries: [entry(frame: F1), entry(frame: F2)];
 }

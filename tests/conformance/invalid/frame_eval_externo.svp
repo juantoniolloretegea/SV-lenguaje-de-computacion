@@ -1,0 +1,11 @@
+-- Debe fallar con E308: un EvalResult del Frame no puede evaluar un estado externo a Frame.cell_states.
+codomain K3 = { A, B };
+output_semantics Sem { A -> "a"; B -> "b"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Sem; role: Base; }
+coupledspec CC1 { cell: C1; bridges: [1]; }
+coupledstate S1 { spec: CC1; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+coupledstate S2 { spec: CC1; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CC1]; edges: []; relation: R; regime: Simple; }
+let E2 = evaluate(S2);
+frame F { index: 1; architecture: G; cell_states: [S1]; eval_results: [E2]; gate_results: []; supervision: []; criticalities: []; }

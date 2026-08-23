@@ -1,0 +1,14 @@
+-- Debe fallar con E308: todo input de un GateResult del Frame debe pertenecer a Frame.eval_results.
+codomain K3 = { A, B };
+output_semantics Sem { A -> "a"; B -> "b"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Sem; role: Base; }
+coupledspec CC1 { cell: C1; bridges: [1]; }
+coupledstate S1 { spec: CC1; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+coupledstate S2 { spec: CC1; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [U,U,U,U,U,U,U,U,U]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CC1]; edges: []; relation: R; regime: Simple; }
+admissibility_table T { input_codomains: [K3, K3]; output_codomain: K3; table: { (A,A) -> A; (A,B) -> B; (B,A) -> B; (B,B) -> B; } }
+let E1 = evaluate(S1);
+let E2 = evaluate(S2);
+let G1 = gate([E1, E2], using: T);
+frame F { index: 1; architecture: G; cell_states: [S1]; eval_results: [E1]; gate_results: [G1]; supervision: []; criticalities: []; }

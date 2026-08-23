@@ -291,7 +291,7 @@ class Parser:
         self._expect(TT.LBRACE)
         self._field("parameter_id"); pid = self._expect_nat(); self._expect(TT.SEMICOLON)
         self._field("states")
-        # Parse literal {Ok, Degraded, Failed, U}
+        # Parse literal cerrado; el validador exige {Ok, Degraded, NotAdmitted}.
         self._expect(TT.LBRACE)
         vals = [self._advance().value]
         while self._match(TT.COMMA):
@@ -637,10 +637,18 @@ class Parser:
         self._expect(TT.SEMICOLON)
         return GateCmd(name=name, inputs=inputs, using=table, loc=loc)
 
+    def _parse_resolution_target(self) -> ResolutionTargetLiteral:
+        self._expect(TT.LPAREN)
+        state = self._expect_id()
+        self._expect(TT.COMMA)
+        position = self._expect_nat()
+        self._expect(TT.RPAREN)
+        return ResolutionTargetLiteral(state=state, position=position)
+
     def _parse_resolve_cmd(self, name: str, loc: Loc) -> ResolveCmd:
         self._advance()  # resolve
         self._expect(TT.LPAREN)
-        self._expect(TT.U_LIT)  # literal U
+        target = self._parse_resolution_target()
         self._expect(TT.COMMA)
         self._kw_field(TT.KW_WITH)
         ws = self._expect_id()
@@ -686,7 +694,8 @@ class Parser:
 
         self._expect(TT.RPAREN)
         self._expect(TT.SEMICOLON)
-        return ResolveCmd(name=name, with_spec=ws, context=ctx, mechanism=mech, loc=loc)
+        return ResolveCmd(name=name, target=target, with_spec=ws,
+                          context=ctx, mechanism=mech, loc=loc)
 
     def _parse_query_context(self) -> QueryContext:
         t = self._cur()

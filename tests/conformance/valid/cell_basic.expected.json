@@ -1,6 +1,6 @@
 {
-  "grammar_version": "0.1",
-  "ir_version": "0.2",
+  "grammar_version": "0.2",
+  "ir_version": "0.3",
   "objects": [
     {
       "fields": {

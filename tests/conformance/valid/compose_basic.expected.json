@@ -1,6 +1,6 @@
 {
-  "grammar_version": "0.1",
-  "ir_version": "0.2",
+  "grammar_version": "0.2",
+  "ir_version": "0.3",
   "objects": [
     {
       "fields": {
@@ -52,9 +52,7 @@
     },
     {
       "fields": {
-        "bridges": [
-          3
-        ],
+        "bridges": [3],
         "cell": "C1"
       },
       "level": "N0",
@@ -63,9 +61,7 @@
     },
     {
       "fields": {
-        "bridges": [
-          3
-        ],
+        "bridges": [3],
         "cell": "C2"
       },
       "level": "N0",
@@ -88,9 +84,7 @@
     },
     {
       "fields": {
-        "constraints": [
-          "ProfilaxisRiesgo"
-        ],
+        "constraints": ["ProfilaxisRiesgo"],
         "kind": "DeclaredRelation"
       },
       "level": "N0",
@@ -116,10 +110,7 @@
             "target": "CC2"
           }
         ],
-        "nodes": [
-          "CC1",
-          "CC2"
-        ],
+        "nodes": ["CC1", "CC2"],
         "regime": "Simple",
         "relation": "R_serie"
       },
@@ -132,12 +123,8 @@
     {
       "inputs": {
         "graph": "G1",
-        "patterns": [
-          "P_serie"
-        ],
-        "relations": [
-          "R_serie"
-        ]
+        "patterns": ["P_serie"],
+        "relations": ["R_serie"]
       },
       "name": "A1",
       "result_type": "Architecture",

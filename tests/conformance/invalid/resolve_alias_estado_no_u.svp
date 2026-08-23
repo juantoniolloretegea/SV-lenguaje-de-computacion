@@ -1,0 +1,8 @@
+-- Debe fallar con E305: resolve identifica el estado por referencia y la posición debe contener U.
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+cellspec C1 { b: 3; codomain: K3; semantics: Klin; role: Base; }
+cellstate S1 { spec: C1; vector: [Zero, One, U, Zero, Zero, One, U, Zero, One]; }
+cellstate S2 { spec: C1; vector: [Zero, One, U, Zero, Zero, One, U, Zero, One]; }
+res_spec RS1 { context: Ctx; mechanism: Rev; mapping: MapRes; }
+let RR1 = resolve((S2, 1), with: RS1, context: Ctx, mechanism: Rev);
