@@ -1,8 +1,15 @@
-//! Núcleo semántico mínimo de R0 para el Lenguaje SV.
+//! Núcleo semántico de R0 para el Lenguaje SV.
 //!
-//! Este crate inicia la realización Rust compartida por los destinos nativo y
-//! WebAssembly. En este corte sólo fija `Tri` y los metadatos canónicos de
-//! versión necesarios para evitar divergencias tempranas entre adaptadores.
+//! Esta biblioteca Rust contiene la realización compartida por los destinos
+//! nativo y WebAssembly. R0-1 fija `Tri`; R0-2 incorpora `Nat`, `Frame` y el
+//! cierre relacional mínimo exigido por la IR canónica 0.3, sin adelantar
+//! operaciones posteriores.
+
+pub mod frame;
+pub mod nat;
+
+pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
+pub use nat::{InvalidNat, Nat};
 
 pub const GRAMMAR_VERSION: &str = "0.2";
 pub const IR_VERSION: &str = "0.3";
@@ -73,6 +80,9 @@ pub const ENGINE_VERSIONS: EngineVersions = EngineVersions {
     ir: IR_VERSION,
     serializer: SERIALIZER_VERSION,
 };
+
+#[cfg(test)]
+mod frame_tests;
 
 #[cfg(test)]
 mod tests {
