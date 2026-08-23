@@ -13,6 +13,18 @@ coupledstate S1 {
   updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
 }
 
+semantic_relation RArch {
+  kind: DeclaredRelation;
+  constraints: [CoherenciaLocal];
+}
+
+graph Arch1 {
+  nodes: [CC1];
+  edges: [];
+  relation: RArch;
+  regime: Simple;
+}
+
 horizon H1 {
   architecture: Arch1;
   events: [CambioProfilaxis];
