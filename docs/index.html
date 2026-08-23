@@ -75,7 +75,7 @@
     <div class="panel-header">
       <div class="label"><div class="dot output" id="output-dot"></div><span id="output-label">IR v0.3 — JSON canónico</span></div>
     </div>
-    <pre id="output">Pulse «Parsear» para compilar su código .svp a IR v0.3.</pre>
+    <pre id="output">Pulse «Analizar» para obtener la IR v0.3 a partir de su código .svp.</pre>
   </div>
 </main>
 
@@ -86,13 +86,13 @@
   </div>
   <div style="display:flex;gap:8px;">
     <button class="btn-secondary" type="button" onclick="clearAll()">Limpiar</button>
-    <button id="run-btn" type="button" onclick="runParser()" disabled>Parsear</button>
+    <button id="run-btn" type="button" onclick="runParser()" disabled>Analizar</button>
   </div>
 </div>
 
 <section class="reference-strip">
   <h2>Referencia técnica vigente</h2>
-  <p>El Playground utiliza la etapa frontal de referencia integrada en <code>main</code>. La salida identifica las versiones efectivas de Gramática, IR y serializador; las versiones anteriores permanecen disponibles en el historial del repositorio.</p>
+  <p>El Playground utiliza la etapa frontal de referencia en Python integrada en <code>main</code>. La salida identifica las versiones efectivas de Gramática, IR y serializador; las versiones anteriores permanecen disponibles en el historial del repositorio. Esta aplicación no constituye por sí misma la realización soberana R0 ni acredita las Garantías I o II.</p>
   <div class="reference-grid">
     <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md" target="_blank" rel="noopener noreferrer"><strong>Gramática v0.2</strong><span>Sintaxis vigente y reglas actualizadas de admisibilidad, resolución y Frame.</span></a>
     <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_3.md" target="_blank" rel="noopener noreferrer"><strong>IR v0.3</strong><span>Representación canónica y juicios de bienformación vigentes.</span></a>
@@ -150,7 +150,7 @@ async function init(){
   try{
     setStatus('Cargando Pyodide...',true);
     pyodide=await loadPyodide();
-    setStatus('Descargando frontend vigente desde main...',true);
+    setStatus('Descargando la etapa frontal vigente desde main...',true);
     for(const fname of PY_FILES){
       const resp=await fetch(REPO_BASE+fname,{cache:'no-store'});
       if(!resp.ok) throw new Error('No se pudo descargar '+fname+': '+resp.status);
@@ -161,7 +161,7 @@ import sys
 if '/home/pyodide' not in sys.path:
     sys.path.insert(0, '/home/pyodide')
 `);
-    ready=true;runBtn.disabled=false;setStatus('Frontend 0.2 / IR 0.3 cargado — listo para compilar');
+    ready=true;runBtn.disabled=false;setStatus('Etapa frontal 0.2 / IR 0.3 cargada — lista para analizar');
   }catch(e){
     console.error(e);ready=false;runBtn.disabled=true;
     setStatus('Error al cargar: '+(e&&e.message?e.message:String(e)));
@@ -171,9 +171,9 @@ if '/home/pyodide' not in sys.path:
 async function runParser(){
   if(!ready||!pyodide)return;
   const code=document.getElementById('editor').value;
-  if(!code.trim()){renderFailure({code:'EMPTY',message:'No hay código .svp para parsear.'});setStatus('Editor vacío');return;}
+  if(!code.trim()){renderFailure({code:'EMPTY',message:'No hay código .svp para analizar.'});setStatus('Editor vacío');return;}
   try{
-    setStatus('Parseando...',true);
+    setStatus('Analizando...',true);
     pyodide.globals.set('PLAYGROUND_SOURCE',code);
     pyodide.globals.set('PLAYGROUND_FILENAME','playground.svp');
     const envelopeJson=await pyodide.runPythonAsync(`
@@ -181,7 +181,7 @@ from svp_playground_api import compile_for_playground
 compile_for_playground(PLAYGROUND_SOURCE, PLAYGROUND_FILENAME)
 `);
     const envelope=JSON.parse(envelopeJson);
-    if(envelope&&envelope.ok===true){renderSuccess(envelope);setStatus('Parseo correcto — IR 0.3 generada');}
+    if(envelope&&envelope.ok===true){renderSuccess(envelope);setStatus('Análisis correcto — IR 0.3 generada');}
     else if(envelope&&envelope.ok===false){renderFailure(envelope.error);setStatus('Error detectado');}
     else throw new Error('Respuesta inesperada del Playground');
   }catch(e){console.error(e);renderFailure({code:'INTERNAL',message:e&&e.message?e.message:String(e)});setStatus('Error interno');}
@@ -190,10 +190,10 @@ compile_for_playground(PLAYGROUND_SOURCE, PLAYGROUND_FILENAME)
 function clearAll(){
   document.getElementById('editor').value='';
   const output=document.getElementById('output');
-  output.textContent='Pulse «Parsear» para compilar su código .svp a IR v0.3.';
+  output.textContent='Pulse «Analizar» para obtener la IR v0.3 a partir de su código .svp.';
   output.className='success-output';
   setOutputLabel('IR v0.3 — JSON canónico');
-  setStatus(ready?'Frontend 0.2 / IR 0.3 cargado — listo para compilar':'Cargando Pyodide...');
+  setStatus(ready?'Etapa frontal 0.2 / IR 0.3 cargada — lista para analizar':'Cargando Pyodide...');
 }
 
 function loadExample(){
