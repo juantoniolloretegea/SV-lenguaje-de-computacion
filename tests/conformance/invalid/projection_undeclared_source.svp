@@ -1,3 +1,2 @@
-res_spec RS1 { context: ContextoClinico; mechanism: RevisionExperto; mapping: MapeoResolucion; }
-let RR1 = resolve(U, with: RS1, context: Ctx1, mechanism: M1);
+-- Debe fallar con E006: la fuente proyectada no está declarada.
 let X = E999.resolved_to;
