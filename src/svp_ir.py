@@ -1,6 +1,6 @@
 """
-svp_ir.py — Definiciones de objetos IR v0.2 del lenguaje SV
-svp_lowering.py — Lowering: AST validado → IR v0.2
+svp_ir.py — Definiciones de objetos IR v0.3 del lenguaje SV
+svp_lowering.py — Lowering: AST validado → IR v0.3
 
 Cada nodo AST baja a exactamente un objeto IR. n se deriva de b como b².
 Esto no es ejecución del sistema; es cumplimiento de la especificación.
@@ -52,8 +52,8 @@ class IROperation:
 
 @dataclass
 class IRProgram:
-    ir_version: str = "0.2"
-    grammar_version: str = "0.1"
+    ir_version: str = "0.3"
+    grammar_version: str = "0.2"
     source_file: str = ""
     source_sha256: str = ""
     serializer_version: str = "0.1.0"
