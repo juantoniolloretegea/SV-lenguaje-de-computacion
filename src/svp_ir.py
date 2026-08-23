@@ -158,7 +158,7 @@ class Lowering:
     def _lower_cellspec(self, n: CellSpecDecl) -> IRObject:
         return IRObject("N0", "CellSpec", n.name, {
             "b": n.b,
-            "n": n.b ** 2,  # derivación estructural cerrada
+            "n": n.b ** 2,
             "codomain": n.codomain,
             "semantics": n.semantics,
             "role": n.role,
@@ -360,10 +360,12 @@ class Lowering:
                             "GateResult")
 
     def _lower_resolve(self, n: ResolveCmd) -> IROperation:
-        return IROperation("resolve", n.name,
-                            {"with_spec": n.with_spec, "context": n.context,
-                             "mechanism": n.mechanism},
-                            "ResolutionRecord")
+        return IROperation("resolve", n.name, {
+            "target": {"state": n.target.state, "position": n.target.position},
+            "with_spec": n.with_spec,
+            "context_instance": n.context,
+            "mechanism_instance": n.mechanism,
+        }, "ResolutionRecord")
 
     def _lower_query(self, n: QueryCmd) -> IROperation:
         ctx = self._lower_query_context(n.context)
