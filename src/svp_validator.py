@@ -2,9 +2,10 @@
 svp_validator.py — Verificación implementada de bienformación del AST
 
 Aplica la cobertura implementada y explícita de validación sobre el AST
-producido por el parser, subordinada a la IR canónica v0.2.
-No equivale todavía, por sí sola, a la totalidad de los juicios J0.1–J5.2
-ni cierra completamente la capa N4/Uso. No ejecuta nada: solo valida.
+producido por el parser, subordinada a la IR canónica v0.2 y a sus
+correcciones vigentes. No equivale todavía, por sí sola, a la totalidad
+de los juicios J0.1–J5.2 ni cierra completamente la capa N4/Uso.
+No ejecuta nada: solo valida.
 
 Autor: Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351
 ISSN 2695-6411 | CC BY-NC-ND 4.0
@@ -12,25 +13,24 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 
 from typing import Dict, Set
 from svp_ast import *
-from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011,
-                         E101, E102, E104, E105, E112, E113, E114, E202, E211, E212, E213, E214, E215,
-                         E303, E304, E307, E406, E401, E402, E403)
+from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011, E110,
+                         E101, E102, E104, E105, E112, E113, E114,
+                         E202, E211, E212, E213, E214, E215, E305,
+                         E303, E304, E307, E308, E406,
+                         E401, E402, E403)
 
 
 class Validator:
     def __init__(self, program: Program):
         self.program = program
         self.symbols: Dict[str, ASTNode] = {}
-        self.symbol_types: Dict[str, str] = {}  # name -> type tag
+        self.symbol_types: Dict[str, str] = {}
         self.errors = []
 
     def validate(self):
         """Ejecuta todas las validaciones. Lanza SVPError en el primer error."""
-        # Fase 1: registrar todos los nombres
         for node in self.program.nodes:
             self._register(node)
-
-        # Fase 2: validar cada nodo
         for node in self.program.nodes:
             self._validate_node(node)
 
@@ -39,8 +39,8 @@ class Validator:
         if name is None:
             return
         if name in self.symbols:
-            raise SVPError(E005, getattr(node, "loc", Loc(0,0)).line,
-                           getattr(node, "loc", Loc(0,0)).col,
+            raise SVPError(E005, getattr(node, "loc", Loc(0, 0)).line,
+                           getattr(node, "loc", Loc(0, 0)).col,
                            f"Identificador duplicado: {name!r}")
         self.symbols[name] = node
         self.symbol_types[name] = type(node).__name__
@@ -108,7 +108,6 @@ class Validator:
     # ── Validaciones concretas ────────────────────────────────────────
 
     def _validate_cellspec(self, node: CellSpecDecl):
-        # J1.1: b >= 3
         if node.b < 3:
             raise SVPError(E002, node.loc.line, node.loc.col,
                            f"b = {node.b}, debe ser >= 3")
@@ -199,7 +198,9 @@ class Validator:
 
         expected_combinations = {()}
         for values in expected_inputs:
-            expected_combinations = {prefix + (value,) for prefix in expected_combinations for value in values}
+            expected_combinations = {
+                prefix + (value,) for prefix in expected_combinations for value in values
+            }
 
         output_values = set(self.symbols[node.output_codomain].values)
         seen_rows = []
@@ -240,16 +241,17 @@ class Validator:
 
     def _validate_admissibility_spec(self, node: AdmissibilitySpecDecl):
         if node.parameter_id <= 0:
-            raise SVPError(E401, node.loc.line, node.loc.col,
+            raise SVPError(E110, node.loc.line, node.loc.col,
                            f"AdmissibilitySpec {node.name!r} con parameter_id no positivo")
         states_raw = node.states.strip()
         states_items = [part.strip() for part in states_raw.strip("{}").split(",") if part.strip()]
-        expected_states = {"Ok", "Degraded", "Failed", "U"}
-        if len(states_items) != 4 or set(states_items) != expected_states:
-            raise SVPError(E401, node.loc.line, node.loc.col,
-                           f"AdmissibilitySpec {node.name!r} debe declarar exactamente los estados {{Ok, Degraded, Failed, U}}")
+        expected_states = {"Ok", "Degraded", "NotAdmitted"}
+        if len(states_items) != 3 or set(states_items) != expected_states:
+            raise SVPError(E110, node.loc.line, node.loc.col,
+                           f"AdmissibilitySpec {node.name!r} debe declarar exactamente los estados "
+                           "{Ok, Degraded, NotAdmitted}")
         if not node.rule:
-            raise SVPError(E401, node.loc.line, node.loc.col,
+            raise SVPError(E110, node.loc.line, node.loc.col,
                            f"AdmissibilitySpec {node.name!r} sin rule")
 
     def _validate_ternarizer(self, node: TernarizerDecl):
@@ -304,12 +306,12 @@ class Validator:
                     f"Connector {e.connector!r} declara source_codomain {connector.source_codomain!r}, "
                     f"pero la célula transmisora {source_cell.name!r} usa {source_cell.codomain!r}")
 
-        # Cycle detection via topological sort
         adj: Dict[str, Set[str]] = {n_ref: set() for n_ref in node.nodes}
         for e in node.edges:
             adj[e.source].add(e.target)
         visited = set()
         in_stack = set()
+
         def dfs(v):
             if v in in_stack:
                 from svp_errors import E103
@@ -322,6 +324,7 @@ class Validator:
                 dfs(w)
             in_stack.remove(v)
             visited.add(v)
+
         for v in node.nodes:
             dfs(v)
 
@@ -344,14 +347,74 @@ class Validator:
                            f"Horizon {node.name!r} sin events")
 
     def _validate_frame(self, node: FrameDecl):
+        self._require_ref(node.architecture, node.loc, "GraphDecl")
+        graph = self.symbols[node.architecture]
+        graph_nodes = set(graph.nodes)
+
+        if node.criticalities:
+            raise SVPError(E308, node.loc.line, node.loc.col,
+                           "La superficie v0.1 no posee productor constituido de CriticalityResult; "
+                           "Frame.criticalities debe permanecer vacío")
+
+        seen_state_refs = set()
+        seen_specs = set()
         for ref in node.cell_states:
             self._require_ref(ref, node.loc, "CoupledStateDecl")
+            state = self.symbols[ref]
+            if ref in seen_state_refs:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"Frame {node.name!r} repite CoupledState {ref!r}")
+            seen_state_refs.add(ref)
+            if state.spec not in graph_nodes:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"CoupledState {ref!r} usa {state.spec!r}, fuera de la arquitectura {node.architecture!r}")
+            if state.spec in seen_specs:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"Frame {node.name!r} contiene más de un estado para el nodo {state.spec!r}")
+            seen_specs.add(state.spec)
+
+        frame_cells = set(node.cell_states)
+        seen_eval_sources = set()
         for ref in node.eval_results:
             self._require_ref(ref, node.loc, "EvalCmd")
+            ev = self.symbols[ref]
+            if ev.input_ref not in frame_cells:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"EvalResult {ref!r} evalúa {ev.input_ref!r}, que no pertenece a Frame.cell_states")
+            if ev.input_ref in seen_eval_sources:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"Frame {node.name!r} contiene evaluaciones duplicadas para {ev.input_ref!r}")
+            seen_eval_sources.add(ev.input_ref)
+
+        frame_evals = set(node.eval_results)
         for ref in node.gate_results:
             self._require_ref(ref, node.loc, "GateCmd")
+            gate = self.symbols[ref]
+            missing = [inp for inp in gate.inputs if inp not in frame_evals]
+            if missing:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"GateResult {ref!r} depende de evaluaciones externas al Frame: {missing}")
+
+        frame_gates = set(node.gate_results)
         for ref in node.supervision:
             self._require_ref(ref, node.loc, "SuperviseCmd")
+            sup = self.symbols[ref]
+            if sup.meta_eval not in frame_evals:
+                raise SVPError(E308, node.loc.line, node.loc.col,
+                               f"SupervisionResult {ref!r} usa meta_eval externo al Frame: {sup.meta_eval!r}")
+            if isinstance(sup.target, CellTarget):
+                if sup.target.ref not in frame_evals:
+                    raise SVPError(E308, node.loc.line, node.loc.col,
+                                   f"SupervisionResult {ref!r} usa CellTarget externo al Frame: {sup.target.ref!r}")
+            elif isinstance(sup.target, ComposedTarget):
+                if sup.target.ref not in frame_gates:
+                    raise SVPError(E308, node.loc.line, node.loc.col,
+                                   f"SupervisionResult {ref!r} usa ComposedTarget externo al Frame: {sup.target.ref!r}")
+            elif isinstance(sup.target, SystemTarget):
+                if sup.target.ref != node.architecture:
+                    raise SVPError(E308, node.loc.line, node.loc.col,
+                                   f"SupervisionResult {ref!r} usa SystemTarget {sup.target.ref!r}, "
+                                   f"distinto de Frame.architecture {node.architecture!r}")
 
     def _validate_transition_data(self, node: TransitionDataDecl):
         if node.horizon_ref not in self.symbols:
@@ -385,10 +448,10 @@ class Validator:
             self._require_ref(entry.frame, node.loc, "FrameDecl")
             if idx < last_index and entry.transition is None:
                 raise SVPError(E304, node.loc.line, node.loc.col,
-                               f"La entrada {idx + 1} de '{node.name}' no es la última y debe llevar transition")
+                               f"La entrada {idx + 1} de {node.name!r} no es la última y debe llevar transition")
             if idx == last_index and entry.transition is not None:
                 raise SVPError(E304, node.loc.line, node.loc.col,
-                               f"La última entrada de '{node.name}' no puede llevar transition")
+                               f"La última entrada de {node.name!r} no puede llevar transition")
             if entry.transition is not None:
                 self._require_ref(entry.transition, node.loc, "TransitionDataDecl")
 
@@ -455,8 +518,8 @@ class Validator:
             "PointEvaluation": "Cell",
             "TrajectoryState": "Trajectory",
             "FrameComparison": "Pair",
-            "GlobalCriticality": "Architecture",
             "CoverageState": "Architecture",
+            "GlobalCriticality": "Architecture",
         }
         expected_scope = allowed.get(node.query_type)
         if expected_scope is None:
@@ -492,7 +555,7 @@ class Validator:
             self._require_ref(inp, node.loc)
             if self.symbol_types[inp] != "EvalCmd":
                 raise SVPError(E202, node.loc.line, node.loc.col,
-                               f"Argumento de gate '{inp}' no es EvalResult (es {self.symbol_types[inp]})")
+                               f"Argumento de gate {inp!r} no es EvalResult (es {self.symbol_types[inp]})")
 
         table = self.symbols[node.using]
         expected = list(table.input_codomains)
@@ -521,6 +584,30 @@ class Validator:
 
     def _validate_resolve(self, node: ResolveCmd):
         self._require_ref(node.with_spec, node.loc, "ResSpecDecl")
+        self._require_ref(node.target.state, node.loc)
+
+        target = self.symbols[node.target.state]
+        if isinstance(target, CellStateDecl):
+            vector = target.vector
+        elif isinstance(target, CoupledStateDecl):
+            vector = target.updated_vector
+        else:
+            raise SVPError(E305, node.loc.line, node.loc.col,
+                           f"ResolutionTarget.state {node.target.state!r} no es un estado evaluable")
+
+        pos = node.target.position
+        if pos < 1 or pos > len(vector):
+            raise SVPError(E305, node.loc.line, node.loc.col,
+                           f"ResolutionTarget.position {pos} fuera de rango [1, {len(vector)}]")
+        if vector[pos - 1] != "U":
+            raise SVPError(E305, node.loc.line, node.loc.col,
+                           f"ResolutionTarget ({node.target.state!r}, {pos}) no identifica una U constituida")
+
+        rs = self.symbols[node.with_spec]
+        if node.context != rs.context or node.mechanism != rs.mechanism:
+            raise SVPError(E305, node.loc.line, node.loc.col,
+                           f"Instancia de revisión ({node.context!r}, {node.mechanism!r}) incompatible con "
+                           f"ResSpec {node.with_spec!r} = ({rs.context!r}, {rs.mechanism!r})")
 
     def _validate_query(self, node: QueryCmd):
         if node.spec not in self.symbols or self.symbol_types[node.spec] != "QuerySpecDecl":
@@ -596,7 +683,7 @@ class Validator:
         if isinstance(spec_node, CellSpecDecl) and spec_node.role != "Supervisor":
             raise SVPError(E211, node.loc.line, node.loc.col,
                            f"El primer argumento de supervise debe provenir de una célula con rol Supervisor, "
-                           f"pero '{node.meta_eval}' proviene de '{spec_node.name}' con rol '{spec_node.role}'")
+                           f"pero {node.meta_eval!r} proviene de {spec_node.name!r} con rol {spec_node.role!r}")
 
     def _validate_projection(self, node: ProjectionCmd):
         self._require_ref(node.source, node.loc)
@@ -604,7 +691,7 @@ class Validator:
         result_fields = {
             "EvalCmd": {"source_state", "counts", "threshold", "classification", "criticality", "deltas"},
             "GateCmd": {"inputs", "table", "output"},
-            "ResolveCmd": {"parameter", "previous", "resolved_to", "context", "mechanism"},
+            "ResolveCmd": {"target", "previous", "reviewed_to", "resolved_to", "context_ref", "mechanism_ref"},
             "QueryCmd": {"response", "justification", "metadata"},
             "SuperviseCmd": {"meta_eval", "target", "verdict"},
         }
