@@ -44,7 +44,7 @@ R0-2 materializa `Frame` como objeto constituible únicamente cuando las relacio
 
 La comprobación no impone exhaustividad: un `Frame` puede declarar sólo una parte coherente de los estados y resultados de su arquitectura.
 
-Las estructuras auxiliares `Resolved*` son proyecciones de relaciones ya resueltas necesarias para comprobar este cierre en Rust. No crean nuevos tipos de la gramática ni de la IR canónica y no sustituyen al análisis sintáctico, a la resolución de símbolos ni al descenso a IR.
+Las estructuras auxiliares `Resolved*` son proyecciones internas de relaciones ya resueltas necesarias para comprobar este cierre. No crean nuevos tipos de la gramática ni de la IR canónica, no forman parte de la interfaz pública de `sv_core` y no conceden a los adaptadores autoridad para declarar por sí mismos que una relación ha sido resuelta. El análisis sintáctico, la resolución general de símbolos y el descenso completo a IR permanecen fuera de R0-2.
 
 Toda violación de este cierre se identifica en el núcleo mediante el código canónico `E308` (`FrameClosureViolation`).
 
