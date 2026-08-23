@@ -28,7 +28,7 @@ El adaptador WebAssembly no constituye un segundo motor semántico. Su función 
 
 La gramática define `nat` como una secuencia decimal sin cota semántica y la IR declara `Frame.index : Nat`. Por ello, `sv_core` no representa ese índice mediante `u64`, `usize` ni otro entero limitado por la plataforma.
 
-`Nat` conserva el valor mediante una representación decimal canónica de precisión arbitraria. En R0-2 sólo se requiere identidad y conservación exacta del índice ordinal; no se introduce aritmética sobre naturales. Los ceros iniciales se normalizan y el material que no sea decimal se rechaza antes de constituir el valor.
+`Nat` conserva el valor mediante una representación decimal canónica de precisión arbitraria. En R0-2 sólo se requieren identidad y conservación exacta del índice ordinal; no se introducen aritmética ni relación de orden sobre naturales. Los ceros iniciales se normalizan y el material que no sea decimal se rechaza antes de constituir el valor.
 
 ## `Frame` en R0-2
 
