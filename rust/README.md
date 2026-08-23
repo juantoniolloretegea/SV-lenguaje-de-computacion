@@ -13,6 +13,7 @@ R0-1
 
 R0-2
   sv_core
+    ├─ Nat sin cota dependiente del tamaño de palabra
     └─ Frame + cierre relacional mínimo J-F0…J-F5
 
 sv_wasm
@@ -22,6 +23,12 @@ sv_wasm
 Los nombres `Zero` y `One` son identificadores internos de Rust. La representación textual canónica del Lenguaje SV permanece `0`, `1`, `U`.
 
 El adaptador WebAssembly no constituye un segundo motor semántico. Su función es exponer el mismo núcleo a un destino de ejecución distinto.
+
+## Naturales en R0-2
+
+La gramática define `nat` como una secuencia decimal sin cota semántica y la IR declara `Frame.index : Nat`. Por ello, `sv_core` no representa ese índice mediante `u64`, `usize` ni otro entero limitado por la plataforma.
+
+`Nat` conserva el valor mediante una representación decimal canónica de precisión arbitraria. En R0-2 sólo se requiere identidad y conservación exacta del índice ordinal; no se introduce aritmética sobre naturales. Los ceros iniciales se normalizan y el material que no sea decimal se rechaza antes de constituir el valor.
 
 ## `Frame` en R0-2
 
@@ -64,4 +71,4 @@ La integración continua comprueba:
 2. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
 3. la compilación de `sv_wasm` para ese mismo destino.
 
-La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri` ni de `Frame`.
+La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat` ni `Frame`.
