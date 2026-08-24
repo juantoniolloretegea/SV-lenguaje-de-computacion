@@ -91,7 +91,7 @@ La distribución mediante Cloudflare no constituye autoridad semántica: entrega
 
 La implementación Python no se elimina por la aparición de Rust/WebAssembly. Permanece como referencia diferencial, conserva el catálogo diagnóstico y sostiene los oráculos comprometidos de la batería de conformidad.
 
-El Playground público anterior, basado en Python/Pyodide, dejó de ser la puerta principal del Lenguaje al desplegarse el entorno Rust/WebAssembly. Su interfaz se conserva como [instantánea histórica de 24/08/2026](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md).
+El Playground público anterior, basado en Python/Pyodide, dejó de ser el punto de acceso público principal del Lenguaje al desplegarse el entorno Rust/WebAssembly. Su interfaz se conserva como [instantánea histórica de 24/08/2026](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md).
 
 La presentación README previa a este relevo también se conserva íntegramente en [`docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md`](./docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md).
 
@@ -143,7 +143,7 @@ Permanecen además las deudas técnicas registradas en la documentación de cali
 
 La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas, los desarrollos pendientes y los entornos públicos registrados.
 
-El historial de Git conserva el detalle de cada modificación. Las instantáneas históricas permiten reconstruir el estado de la presentación pública sin mantener simultáneamente dos entornos como puerta vigente.
+El historial de Git conserva el detalle de cada modificación. Las instantáneas históricas permiten reconstruir el estado de la presentación pública sin mantener simultáneamente dos entornos como puntos de acceso vigentes.
 
 ---
 
