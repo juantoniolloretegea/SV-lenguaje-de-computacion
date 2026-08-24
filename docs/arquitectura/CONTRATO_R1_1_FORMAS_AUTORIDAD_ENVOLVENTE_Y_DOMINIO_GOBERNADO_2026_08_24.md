@@ -4,7 +4,7 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-1  
-**Estado:** candidato de cierre · no integrado
+**Estado:** cerrado
 
 ## 1. Objeto
 
@@ -158,12 +158,33 @@ El corte incorpora casos que comprueban, entre otros extremos:
 - rechazo de un efecto situado fuera de su dominio gobernado;
 - ausencia de ampliación por miembros duplicados.
 
-## 11. Límites
+## 11. Obligación trasladada a R1-2: unicidad constitutiva
+
+R1-1 no materializa todavía un registro productivo de formas o autoridades y, por tanto, no atribuye unicidad global a sus referencias nominales.
+
+Cuando R1-2 introduzca las primeras vías productivas de constitución deberá impedir, dentro del SUT de R1, que una misma referencia identifique simultáneamente constituciones incompatibles.
+
+Como mínimo deberán quedar preservadas:
+
+```text
+mismo AuthorityRef
+⇒ no dos autoridades constituidas incompatibles
+
+mismo FormRef
+⇒ no dos descriptores constituidos incompatibles
+```
+
+La mera igualdad de identificadores no resolverá conflictos entre constituciones. La creación, sustitución o modificación deberá proceder de la transición autorizante que corresponda y conservar la clasificación no discrecional de SEC.0-A.
+
+Esta obligación no se considera satisfecha por R1-1; queda expresamente abierta para R1-2.
+
+## 12. Límites
 
 R1-1 no materializa:
 
 - vías autorizantes T-0, T-C, T-G o T-R;
 - restricción operativa de T-0 por continuidad;
+- unicidad productiva de `AuthorityRef` o `FormRef`;
 - habilitación;
 - `Req(F,e | C)`;
 - aplicabilidad de verificadores;
@@ -180,9 +201,28 @@ R1-1 no materializa:
 
 No modifica Gramática 0.2, IR 0.3, serializador 0.1.0 ni la semántica cerrada de R0.
 
-## 12. Criterio de cierre
+## 13. Evidencia de cierre
 
-R1-1 podrá cerrarse cuando se compruebe conjuntamente que:
+El candidato técnico cerrado es:
+
+```text
+0ba7c69a482b8398f150e398979e58ef39e38692
+```
+
+Sobre ese corte concluyeron correctamente:
+
+```text
+Conformidad SVP              #103  SUCCESS
+R0 Rust                       #76  SUCCESS
+R0-8 Baseline nativa          #28  SUCCESS
+R0 WASM paridad de tres vías  #24  SUCCESS
+```
+
+La regresión confirma que la incorporación de los tipos y comprobaciones de R1-1 no altera la conformidad, la realización Rust cerrada en R0, la referencia basal nativa ni la paridad WebAssembly heredada.
+
+## 14. Cierre
+
+Quedan satisfechos los criterios de R1-1:
 
 1. los tipos y pruebas compilan en el mismo `sv_core`;
 2. una referencia nominal no basta para ampliar `E_max` ni `D_a`;
@@ -192,14 +232,17 @@ R1-1 podrá cerrarse cuando se compruebe conjuntamente que:
 6. las regresiones heredadas de R0 permanecen correctas;
 7. R2–R4 y las Garantías I y II continúan fuera del alcance.
 
-Hasta que estas condiciones queden acreditadas, el estado permanece:
+Estado resultante:
 
 ```text
 R0 = CERRADO
 R1 = ABIERTO
 R1-0 = CERRADO
-R1-1 = EN DESARROLLO
+R1-1 = CERRADO
+R1-2 = NO INICIADO
 R2–R4 = NO INICIADOS
 Garantía I = NO_PROBADO
 Garantía II = NO_PROBADO
 ```
+
+El cierre de R1-1 no abre automáticamente R1-2.
