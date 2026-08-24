@@ -3,7 +3,8 @@
 **Fecha:** 24 de agosto de 2026  
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
-**Corte:** R1-0
+**Corte:** R1-0  
+**Estado:** cerrado
 
 ## 1. Objeto
 
@@ -90,6 +91,8 @@ ControlId → ExerciseRef
 
 La frontera de construcción permanece dentro del núcleo para que los cortes posteriores puedan asociarla a las condiciones de constitución, gobierno, habilitación o ejercicio que correspondan.
 
+El constructor interno común se denomina `from_core_id`: su nombre expresa únicamente que la referencia nace dentro del núcleo. No atribuye por sí solo admisión, constitución o autoridad; cada corte que produzca una de estas referencias deberá acreditar separadamente el estatuto correspondiente.
+
 Esta propiedad no prueba todavía que toda autoridad futura sea legítima: únicamente elimina una vía pública de fabricación por construcción directa.
 
 ## 4. Separación respecto de la semántica ternaria
@@ -126,7 +129,24 @@ Las regresiones de R1-0 comprueban:
 - imposibilidad de construir públicamente una referencia protegida desde un `ControlId` mediante documentación de compilación negativa;
 - imposibilidad de convertir públicamente `CheckResult::NotVerifiable` en `Tri` mediante documentación de compilación negativa.
 
-## 6. Límites
+## 6. Evidencia de cierre
+
+El candidato técnico comprobado es:
+
+```text
+6eed662288367d1e518e18106cb1d314e4a4bd54
+```
+
+Sobre ese corte concluyeron correctamente:
+
+- `Conformidad SVP` #93;
+- `R0 Rust` #66, que ejecuta `cargo test --workspace`, construye el destino nativo, ejerce la equivalencia R0-7 y comprueba `sv_core` y `sv_wasm` para `wasm32-unknown-unknown`;
+- `R0-8 Baseline nativa` #18;
+- `R0 WASM paridad de tres vías` #14.
+
+No se observó regresión en la semántica, la conformidad, la medición basal ni el destino WebAssembly heredados de R0.
+
+## 7. Límites
 
 R1-0 no materializa:
 
@@ -146,13 +166,25 @@ R1-0 no materializa:
 
 Estas materias conservan los cortes R1-1…R1-6 o las fases posteriores que les correspondan.
 
-## 7. Criterio de cierre de R1-0
+## 8. Cierre
 
-R1-0 puede considerarse cerrado cuando:
+Quedan satisfechos los criterios de R1-0:
 
-1. los tipos anteriores compilan en el mismo `sv_core` utilizado por R0;
+1. los tipos compilan en el mismo `sv_core` utilizado por R0;
 2. las pruebas y la documentación de compilación negativa concluyen correctamente;
 3. las baterías heredadas de R0 no presentan regresión;
 4. no se introduce una segunda semántica, una conversión técnica hacia `Tri` ni una vía pública de fabricación de referencias protegidas.
 
-El cierre de R1-0 no abre automáticamente R1-1 ni modifica el estado de R2–R4.
+Estado resultante:
+
+```text
+R0 = CERRADO
+R1 = ABIERTO
+R1-0 = CERRADO
+R1-1 = NO INICIADO
+R2–R4 = NO INICIADOS
+Garantía I = NO_PROBADO
+Garantía II = NO_PROBADO
+```
+
+El cierre de R1-0 no abre automáticamente R1-1.
