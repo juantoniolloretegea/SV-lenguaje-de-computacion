@@ -1,233 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SVP Playground — Sistema Vectorial SV</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=https://lenguaje-sv.itvia.online/">
+  <link rel="canonical" href="https://lenguaje-sv.itvia.online/">
+  <title>Lenguaje de Computación SV — entorno público</title>
   <style>
-    :root {
-      --bg:#ffffff; --surface:#f6f8fb; --surface-strong:#eef3ff;
-      --border:#d8e1f0; --text:#111827; --text-dim:#475569;
-      --accent:#2563eb; --accent-hover:#1d4ed8; --accent-soft:#dbeafe;
-      --green:#15803d; --red:#b91c1c; --red-soft:#fee2e2;
-      --mono:"JetBrains Mono","Fira Code","Cascadia Code",Consolas,monospace;
-    }
-    *{box-sizing:border-box;margin:0;padding:0}
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--bg);color:var(--text);min-height:100vh;display:flex;flex-direction:column}
-    header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 32px;border-bottom:1px solid var(--border);background:var(--surface);flex-wrap:wrap}
-    .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:46px;height:46px;border-radius:12px;background:var(--accent);color:white;display:grid;place-items:center;font-weight:700;letter-spacing:.03em}
-    .brand h1{font-size:1.1rem;font-weight:700}.brand h1 span{color:var(--text-dim);font-weight:500}
-    nav{display:flex;gap:22px;flex-wrap:wrap}nav a{color:var(--accent);text-decoration:none;font-weight:500}nav a:hover{color:var(--accent-hover);text-decoration:underline}
-    .version-strip{display:flex;gap:12px;align-items:center;flex-wrap:wrap;padding:10px 24px;border-bottom:1px solid var(--border);background:#fff;color:var(--text-dim);font-size:.92rem}
-    .version-pill{border:1px solid var(--border);border-radius:999px;padding:5px 10px;background:var(--surface)}
-    main{flex:1;display:grid;grid-template-columns:1fr 1fr;min-height:0}
-    .panel{display:flex;flex-direction:column;min-height:0;border-right:1px solid var(--border)}.panel:last-child{border-right:none}
-    .panel-header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 20px;background:var(--surface-strong);border-bottom:1px solid var(--border);min-height:56px}
-    .label{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--text-dim)}
-    .dot{width:10px;height:10px;border-radius:999px}.dot.input{background:var(--accent)}.dot.output{background:var(--green)}.dot.error{background:var(--red)}
-    #editor,#output{flex:1;width:100%;min-height:0;border:none;outline:none;resize:none;padding:20px;font-family:var(--mono);font-size:.98rem;line-height:1.65;background:#fff;color:var(--text);overflow:auto;white-space:pre-wrap}
-    #editor::placeholder{color:#94a3b8}.success-output{background:#f8fafc;color:var(--text)}.error-output{background:var(--red-soft);color:var(--red)}
-    .toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 20px;border-top:1px solid var(--border);background:var(--surface);flex-wrap:wrap}
-    .status{display:flex;align-items:center;gap:10px;color:var(--text-dim);min-height:24px}.spinner{width:16px;height:16px;border:2px solid #cbd5e1;border-top:2px solid var(--accent);border-radius:999px;animation:spin .8s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}
-    button{border:1px solid var(--border);border-radius:12px;padding:10px 18px;font-weight:600;cursor:pointer;transition:.15s ease;font-size:.98rem}.btn-secondary,#example-btn{background:#fff;color:var(--text)}.btn-secondary:hover,#example-btn:hover{background:#f8fafc}
-    #run-btn{background:var(--accent);color:white;border-color:transparent}#run-btn:hover:not(:disabled){background:var(--accent-hover)}#run-btn:disabled{opacity:.45;cursor:not-allowed}
-    .reference-strip{border-top:1px solid var(--border);background:var(--surface);padding:20px 24px 24px}.reference-strip h2{font-size:1rem;margin-bottom:6px}.reference-strip p{color:var(--text-dim);margin-bottom:14px;line-height:1.5}
-    .reference-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}.reference-card{display:block;background:#fff;border:1px solid var(--border);border-radius:14px;padding:14px 16px;color:var(--text);text-decoration:none}.reference-card:hover{border-color:var(--accent);background:var(--accent-soft)}.reference-card strong{display:block;margin-bottom:6px;color:var(--accent)}.reference-card span{display:block;color:var(--text-dim);line-height:1.45;font-size:.95rem}
-    footer{text-align:center;padding:16px 20px;font-size:.92rem;color:var(--text-dim);border-top:1px solid var(--border);background:var(--surface)}footer a{color:var(--accent);text-decoration:none}footer a:hover{text-decoration:underline}
-    @media(max-width:900px){main{grid-template-columns:1fr}.panel{border-right:none;border-bottom:1px solid var(--border)}.panel:last-child{border-bottom:none}.reference-grid{grid-template-columns:1fr 1fr}}
-    @media(max-width:640px){.reference-grid{grid-template-columns:1fr}}
+    :root { color-scheme: light dark; }
+    body { max-width: 760px; margin: 10vh auto; padding: 0 24px; font-family: system-ui, sans-serif; line-height: 1.6; }
+    a { text-underline-offset: 3px; }
+    code { overflow-wrap: anywhere; }
   </style>
 </head>
 <body>
-<header>
-  <div class="brand">
-    <div class="logo">SVP</div>
-    <h1>SVP Playground <span>— Sistema Vectorial SV</span></h1>
-  </div>
-  <nav>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion" target="_blank" rel="noopener noreferrer">Repositorio</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md" target="_blank" rel="noopener noreferrer">Gramática v0.2</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_3.md" target="_blank" rel="noopener noreferrer">IR v0.3</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/referencia/ERRORES_CANONICOS_SV_v0_3.md" target="_blank" rel="noopener noreferrer">Diagnósticos</a>
-    <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/README.md" target="_blank" rel="noopener noreferrer">Calidad</a>
-    <a href="https://github.com/juantoniolloretegea/SV-matematica-semantica" target="_blank" rel="noopener noreferrer">Doctrina</a>
-  </nav>
-</header>
-
-<div class="version-strip">
-  <span class="version-pill">Gramática 0.2</span>
-  <span class="version-pill">IR 0.3</span>
-  <span class="version-pill">Serializador 0.1.0</span>
-  <span>Motor de referencia: Python ejecutado localmente en el navegador mediante Pyodide.</span>
-</div>
-
-<main>
-  <div class="panel">
-    <div class="panel-header">
-      <div class="label"><div class="dot input"></div><span>Código .svp</span></div>
-      <button id="example-btn" class="btn-secondary" type="button" onclick="loadExample()">Ejemplo</button>
-    </div>
-    <textarea id="editor" spellcheck="false" placeholder="Escriba aquí su código .svp ..."></textarea>
-  </div>
-
-  <div class="panel">
-    <div class="panel-header">
-      <div class="label"><div class="dot output" id="output-dot"></div><span id="output-label">IR v0.3 — JSON canónico</span></div>
-    </div>
-    <pre id="output">Pulse «Analizar» para obtener la IR v0.3 a partir de su código .svp.</pre>
-  </div>
-</main>
-
-<div class="toolbar">
-  <div class="status" id="status">
-    <div class="spinner" id="spinner" style="display:none"></div>
-    <span id="status-text">Cargando Pyodide...</span>
-  </div>
-  <div style="display:flex;gap:8px;">
-    <button class="btn-secondary" type="button" onclick="clearAll()">Limpiar</button>
-    <button id="run-btn" type="button" onclick="runParser()" disabled>Analizar</button>
-  </div>
-</div>
-
-<section class="reference-strip">
-  <h2>Referencia técnica vigente</h2>
-  <p>El Playground utiliza la etapa frontal de referencia en Python integrada en <code>main</code>. La salida identifica las versiones efectivas de Gramática, IR y serializador; las versiones anteriores permanecen disponibles en el historial del repositorio. Esta aplicación no constituye por sí misma la realización soberana R0 ni acredita las Garantías I o II.</p>
-  <div class="reference-grid">
-    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md" target="_blank" rel="noopener noreferrer"><strong>Gramática v0.2</strong><span>Sintaxis vigente y reglas actualizadas de admisibilidad, resolución y Frame.</span></a>
-    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/IR_CANONICA_BIENFORMACION_SV_v0_3.md" target="_blank" rel="noopener noreferrer"><strong>IR v0.3</strong><span>Representación canónica y juicios de bienformación vigentes.</span></a>
-    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/referencia/ERRORES_CANONICOS_SV_v0_3.md" target="_blank" rel="noopener noreferrer"><strong>Diagnósticos v0.3</strong><span>Catálogo efectivo, incluidos E110, E305 y E308, con la deuda E204 conservada.</span></a>
-    <a class="reference-card" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/ACTUALIZACION_FRONTEND_REFERENCIA_2026_08_23.md" target="_blank" rel="noopener noreferrer"><strong>Conformidad</strong><span>Alcance técnico, batería 72/72 y control de oráculos comprometidos.</span></a>
-  </div>
-</section>
-
-<footer>
-  Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a><br>
-  Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0
-</footer>
-
-<script src="https://cdn.jsdelivr.net/pyodide/v0.25.1/full/pyodide.js"></script>
-<script>
-const REPO_BASE = 'https://raw.githubusercontent.com/juantoniolloretegea/SV-lenguaje-de-computacion/main/src/';
-const PY_FILES = [
-  'svp_errors.py','svp_ast.py','svp_lexer.py','svp_parser.py','svp_validator.py',
-  'svp_ir.py','svp_serialize.py','svp_main.py','svp_playground_api.py'
-];
-let pyodide = null;
-let ready = false;
-
-function setStatus(message, spinning=false){
-  document.getElementById('spinner').style.display = spinning ? 'block' : 'none';
-  document.getElementById('status-text').textContent = message;
-}
-function setOutputLabel(text, error=false){
-  document.getElementById('output-label').textContent = text;
-  document.getElementById('output-dot').className = error ? 'dot error' : 'dot output';
-}
-function renderSuccess(envelope){
-  const output=document.getElementById('output');
-  output.textContent=envelope.ir_json || '';
-  output.className='success-output';
-  const meta=envelope.meta || {};
-  const ir=meta.ir_version || '0.3';
-  const grammar=meta.grammar_version || '0.2';
-  setOutputLabel(`IR v${ir} — JSON canónico ✓ · Gramática v${grammar}`);
-}
-function renderFailure(errorObj){
-  const output=document.getElementById('output');
-  const e=errorObj || {};
-  const lines=[];
-  lines.push((e.code || 'INTERNAL') + (e.name ? ' (' + e.name + ')' : ''));
-  lines.push(e.detail || e.message || 'Error desconocido');
-  if(e.line!=null || e.column!=null){lines.push('línea '+(e.line ?? '?')+' · columna '+(e.column ?? '?'));}
-  output.textContent=lines.join('\n');
-  output.className='error-output';
-  setOutputLabel('Error',true);
-}
-
-async function init(){
-  const runBtn=document.getElementById('run-btn');
-  try{
-    setStatus('Cargando Pyodide...',true);
-    pyodide=await loadPyodide();
-    setStatus('Descargando la etapa frontal vigente desde main...',true);
-    for(const fname of PY_FILES){
-      const resp=await fetch(REPO_BASE+fname,{cache:'no-store'});
-      if(!resp.ok) throw new Error('No se pudo descargar '+fname+': '+resp.status);
-      pyodide.FS.writeFile('/home/pyodide/'+fname,await resp.text());
-    }
-    await pyodide.runPythonAsync(`
-import sys
-if '/home/pyodide' not in sys.path:
-    sys.path.insert(0, '/home/pyodide')
-`);
-    ready=true;runBtn.disabled=false;setStatus('Etapa frontal 0.2 / IR 0.3 cargada — lista para analizar');
-  }catch(e){
-    console.error(e);ready=false;runBtn.disabled=true;
-    setStatus('Error al cargar: '+(e&&e.message?e.message:String(e)));
-  }
-}
-
-async function runParser(){
-  if(!ready||!pyodide)return;
-  const code=document.getElementById('editor').value;
-  if(!code.trim()){renderFailure({code:'EMPTY',message:'No hay código .svp para analizar.'});setStatus('Editor vacío');return;}
-  try{
-    setStatus('Analizando...',true);
-    pyodide.globals.set('PLAYGROUND_SOURCE',code);
-    pyodide.globals.set('PLAYGROUND_FILENAME','playground.svp');
-    const envelopeJson=await pyodide.runPythonAsync(`
-from svp_playground_api import compile_for_playground
-compile_for_playground(PLAYGROUND_SOURCE, PLAYGROUND_FILENAME)
-`);
-    const envelope=JSON.parse(envelopeJson);
-    if(envelope&&envelope.ok===true){renderSuccess(envelope);setStatus('Análisis correcto — IR 0.3 generada');}
-    else if(envelope&&envelope.ok===false){renderFailure(envelope.error);setStatus('Error detectado');}
-    else throw new Error('Respuesta inesperada del Playground');
-  }catch(e){console.error(e);renderFailure({code:'INTERNAL',message:e&&e.message?e.message:String(e)});setStatus('Error interno');}
-}
-
-function clearAll(){
-  document.getElementById('editor').value='';
-  const output=document.getElementById('output');
-  output.textContent='Pulse «Analizar» para obtener la IR v0.3 a partir de su código .svp.';
-  output.className='success-output';
-  setOutputLabel('IR v0.3 — JSON canónico');
-  setStatus(ready?'Etapa frontal 0.2 / IR 0.3 cargada — lista para analizar':'Cargando Pyodide...');
-}
-
-function loadExample(){
-  document.getElementById('editor').value=`-- cell_basic.svp — Célula simple b=3, n=9
--- Caso válido de conformidad: declaración mínima + evaluación
-
-codomain K3 = { APTO, NO_APTO, INDETERMINADO };
-
-output_semantics Klin {
-  APTO -> "Clasificación fuerte favorable";
-  NO_APTO -> "Clasificación fuerte desfavorable";
-  INDETERMINADO -> "Sin clasificación fuerte";
-}
-
-cellspec C1 {
-  b: 3;
-  codomain: K3;
-  semantics: Klin;
-  role: Base;
-}
-
-cellstate S1 {
-  spec: C1;
-  vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
-}
-
-let E1 = evaluate(S1);`;
-}
-
-document.getElementById('editor').addEventListener('keydown',function(e){
-  if(e.key==='Tab'){e.preventDefault();const start=this.selectionStart,end=this.selectionEnd;this.value=this.value.substring(0,start)+'  '+this.value.substring(end);this.selectionStart=this.selectionEnd=start+2;}
-  if(e.key==='Enter'&&(e.ctrlKey||e.metaKey)){e.preventDefault();runParser();}
-});
-window.addEventListener('load',init);
-</script>
+  <main>
+    <h1>Lenguaje de Computación SV</h1>
+    <p>El entorno público principal del Lenguaje SV se encuentra en <a href="https://lenguaje-sv.itvia.online/">lenguaje-sv.itvia.online</a>.</p>
+    <p>La interfaz anterior basada en Python/Pyodide se conserva como antecedente de trazabilidad en <a href="./historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md">la documentación histórica</a>.</p>
+    <p>Si la redirección automática no se produce, utilice el enlace al entorno público principal.</p>
+  </main>
 </body>
 </html>
