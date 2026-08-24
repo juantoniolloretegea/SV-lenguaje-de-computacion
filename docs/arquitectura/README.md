@@ -54,7 +54,8 @@ La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repos
 R0 = CERRADO
 R1 = ABIERTO
 R1-0 = CERRADO
-R1-1 = EN DESARROLLO
+R1-1 = CERRADO
+R1-2 = NO INICIADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -65,6 +66,6 @@ Garantía II = NO_PROBADO
 
 R1-0 fija los tipos cerrados y las fronteras de construcción del control soberano. Su adenda de alcance precisa que la autoridad de R1 es intra-proceso, que la continuidad lógica no se identifica con una instancia técnica y que la mediación acreditable en R1 termina en la frontera de `sv_core`.
 
-R1-1 fija la estructura candidata de las formas, la autoridad acotada, `E_max` y `D_a`. No existe todavía una vía productiva de constitución de formas o autoridad: esa capacidad queda reservada a R1-2 y deberá quedar ligada a las transiciones autorizantes correspondientes.
+R1-1 fija la estructura de las formas, la autoridad acotada, `E_max` y `D_a`. La envolvente conserva la descripción completa del efecto y el dominio gobernado usa pertenencia exacta. No existe todavía una vía productiva de constitución de formas o autoridad: esa capacidad queda reservada a R1-2 y deberá quedar ligada a las transiciones autorizantes correspondientes. R1-2 deberá preservar asimismo la unicidad constitutiva de `AuthorityRef` y `FormRef`.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
