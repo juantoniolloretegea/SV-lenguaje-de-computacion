@@ -31,11 +31,12 @@ Las correcciones que no justifican un cambio de número de versión se registran
 | Fecha | Situación actual | Gramática | IR | Serializador | Realización o entorno | Modificación material | Evidencia pública |
 |---|---|---:|---:|---:|---|---|---|
 | 12/03/2026 | Histórica | — | 0.2 | — | Especificación | Primera IR canónica v0.2 y sistema de bienformación. | [Confirmación `233b8ab`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/233b8ab71e542864fd87ab7580e581ca6a7e34b6) · [IR v0.2](../../IR_CANONICA_BIENFORMACION_SV_v0_2.md) · [Catálogo efectivo v0.2](../referencia/ERRORES_CANONICOS_SV_v0_2.md) |
-| 12/03/2026 | Histórica | 0.1 | 0.2 | 0.1.0 | Especificación e implementación de referencia | Primera gramática superficial mínima v0.1, subordinada a la IR v0.2. La implementación de referencia emitía la versión 0.1.0 del serializador. | [Confirmación `3503ab6`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/3503ab6074217c1c411a106382c29c9392b313cc) · [Gramática v0.1](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md) |
+| 12/03/2026 | Histórica | 0.1 | 0.2 | 0.1.0 | Especificación e implementación de referencia | Primera gramática superficial mínima v0.1, subordinada a la IR v0.2. La implementación de referencia emitía ya la versión 0.1.0 del serializador. | [Confirmación `3503ab6`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/3503ab6074217c1c411a106382c29c9392b313cc) · [Gramática v0.1](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md) |
 | 12/03/2026 | Histórica | 0.1 | 0.2 | 0.1.0 | Implementación de referencia en Python | Incorporación del analizador sintáctico, validación, descenso a IR y JSON canónico; batería inicial de 10 casos. | [Confirmación `9ae1b40`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/9ae1b40ac917ea21533cbdb5c74c645027efcc96) |
 | 12/03/2026 | Histórica | 0.1 | 0.2 | 0.1.0 | SVP Playground | Primera publicación del entorno de comprobación en navegador. | [Confirmación `011902b`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/011902b4c49e2d9b34cdda9ea4df31b8438bf37e) |
 | 23/08/2026 | **Vigente** | **0.2** | **0.3** | **0.1.0** | Etapa frontal de referencia en Python | Integración de C01–C03: separación entre admisibilidad técnica y `Tri.U`; resolución identificada de una `U` constituida; coherencia estructural y causal de `Frame`. Batería de conformidad: 72/72. | [PR #7](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/7) · [integración `59a022a`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/59a022a7691d28c6afcf18456ad1ef0aae562362) · [Gramática v0.2](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md) · [IR v0.3](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md) |
 | 23/08/2026 | **Histórica como acceso público** | **0.2** | **0.3** | **0.1.0** | SVP Playground mediante Python/Pyodide | Alineación del entorno público con Gramática 0.2 e IR 0.3. El 24/08/2026 dejó de ser la puerta pública principal al materializarse el entorno Rust/WebAssembly; la implementación Python permanece como referencia diferencial. | [PR #8](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/8) · [integración `af1491b`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/af1491b53f070a75989cbdd90f76dfeadfa3e9ab) · [instantánea histórica](../historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md) |
+| 24/08/2026 | **Vigente** | **0.2** | **0.3** | **Proyección diferencial 0.1.0** | **Rust nativo y WebAssembly de navegador sobre `sv_core` compartido** | Integración de la realización Rust/WebAssembly y de la comprobación de paridad sobre el corpus comprometido. La admisión/rechazo coincide en Python, Rust nativo y WebAssembly; el observable textual de proyección es idéntico entre Rust nativo y WebAssembly. No se acredita identidad textual Python↔`equivalence_json` ni paridad diagnóstica exacta `E***`. | [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) · [integración `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69) · [R0 WASM paridad de tres vías #11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/32742397555) · [entorno público](https://lenguaje-sv.itvia.online/) |
 
 El guion largo (`—`) indica que el elemento correspondiente no disponía en esa entrada de un número de versión independiente que este registro pueda acreditar con la misma precisión.
 
@@ -65,12 +66,16 @@ No cambian por esta revisión `Tri = {Zero, One, U}`, la ausencia de tiempo, rel
 
 La realización Rust mantiene una sola implementación del núcleo en `sv_core`, compartida por el destino nativo y por WebAssembly. Python conserva el papel de referencia diferencial; no se crea una segunda semántica para el navegador.
 
-| Fecha | Situación | Gramática | IR | Pieza | Comprobación | Evidencia pública |
-|---|---|---:|---:|---|---|---|
-| 23/08/2026 | En desarrollo | 0.2 | 0.3 | Inicio de R0 en Rust: `sv_core` compartido por ejecución nativa y WebAssembly. | Pruebas Rust nativas correctas; compilación inicial para `wasm32-unknown-unknown`; conformidad Python preservada. | [PR #9](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/9) |
-| 24/08/2026 | **Desplegada, no integrada** | **0.2** | **0.3** | Paridad de tres vías y ejecución real en navegador del mismo `sv_core`; proyección diferencial 0.1.0. | 11/11 válidos equivalentes; 61/61 inválidos rechazados; dos reconstrucciones independientes producen los mismos ejecutables. La paridad diagnóstica exacta `E***` queda fuera de alcance. | [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) · [R0 WASM paridad de tres vías #11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/32742397555) · [entorno público](https://lenguaje-sv.itvia.online/) |
+La paridad acreditada en el corte integrado se formula así:
 
-Identidad del corte desplegado:
+```text
+mismo texto .svp
++ aceptación/rechazo alineado en Python · Rust nativo · WebAssembly
++ observable textual de proyección idéntico Rust nativo ↔ WebAssembly
+≠ identidad textual Python ↔ equivalence_json
+```
+
+Identidad del corte integrado y desplegado:
 
 ```text
 fuente
@@ -85,7 +90,7 @@ El entorno público se sirve en `lenguaje-sv.itvia.online`. La distribución web
 
 La URL auxiliar `workers.dev` no forma parte del acceso público normal. El dominio institucional es la puerta pública del entorno desplegado.
 
-Mientras la línea Rust/WebAssembly no se integre expresamente en `main`, su despliegue público no altera por sí mismo la situación de integración del repositorio. Cuando se produzca esa incorporación, esta entrada deberá promoverse de «Desplegada, no integrada» a «Vigente» y enlazar la confirmación de integración.
+La integración de la línea Rust/WebAssembly en `main` no cierra por sí sola R0 ni modifica el estatuto histórico del Playground Python/Pyodide como acceso público anterior.
 
 ## 7. Límites de la comprobación WebAssembly
 
@@ -93,6 +98,7 @@ La evidencia disponible acredita el corte y el corpus declarados, no propiedades
 
 - la proyección diferencial 0.1.0 no constituye el serializador canónico completo;
 - la paridad exacta de códigos `E***` y mensajes de error no está acreditada;
+- no se acredita identidad textual bit a bit entre la salida Python y `equivalence_json`;
 - la ejecución en un navegador real no demuestra compatibilidad universal con todos los motores;
 - una entrada no admitida o un fallo técnico no se convierten en `Tri.U`;
 - el despliegue no prueba por sí solo las Garantías I o II;
