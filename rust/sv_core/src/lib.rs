@@ -1,10 +1,10 @@
 //! Núcleo semántico de R0 para el Lenguaje SV.
 //!
 //! Esta biblioteca Rust contiene la realización compartida por los destinos
-//! nativo y WebAssembly. R0-1 fija `Tri`; R0-2 incorpora `Nat`, `Frame` y el
-//! cierre relacional mínimo exigido por la IR canónica 0.3; R0-3 materializa
-//! C01 mediante la separación tipada entre captura, admisibilidad y `Tri`; R0-4
-//! materializa C02 mediante revisión identificada de `U` sin clausura automática.
+//! nativo y WebAssembly. `Tri`, `Nat`, `Frame`, C01 y C02 residen en el mismo
+//! núcleo. C03 corresponde al cierre relacional y causal J-F0…J-F5 de `Frame`:
+//! no introduce un segundo constructor ni una semántica paralela, sino que
+//! consolida y somete a regresión la misma autoridad de constitución.
 
 pub mod admissibility;
 pub mod frame;
@@ -91,6 +91,9 @@ pub const ENGINE_VERSIONS: EngineVersions = EngineVersions {
     ir: IR_VERSION,
     serializer: SERIALIZER_VERSION,
 };
+
+#[cfg(test)]
+mod c03_tests;
 
 #[cfg(test)]
 mod frame_tests;

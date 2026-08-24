@@ -1,72 +1,70 @@
-# Realización Rust de R0
+# Núcleo Rust del Lenguaje SV
 
-Esta carpeta contiene la realización progresiva en Rust del núcleo semántico del Lenguaje SV, compartida por los destinos nativo y WebAssembly.
+Esta carpeta contiene la realización compartida en Rust del núcleo semántico del Lenguaje SV para destinos nativo y WebAssembly.
+
+La implementación mantiene una sola fuente semántica en `sv_core`. `sv_wasm` es un adaptador material del mismo núcleo y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01, C02 o C03.
 
 ## Estado material
 
+El núcleo contiene actualmente:
+
 ```text
-R0-1
-  sv_core
-    ├─ Tri = {0, 1, U}
-    ├─ representación Rust: Zero = 0, One = 1, U = 2
-    └─ versiones canónicas: Gramática 0.2 / IR 0.3 / serializador 0.1.0
-
-R0-2
-  sv_core
-    ├─ Nat sin cota dependiente del tamaño de palabra
-    └─ Frame + cierre relacional mínimo J-F0…J-F5
-
-R0-3
-  sv_core
-    └─ C01: separación tipada entre captura, admisibilidad y Tri
-
-R0-4
-  sv_core
-    └─ C02: revisión identificada de U sin clausura automática
-
-sv_wasm
-  └─ adaptador WebAssembly del mismo sv_core
+Tri = {0, 1, U}
+Nat de precisión decimal no limitada por el tamaño de palabra
+Frame con cierre estructural y causal J-F0…J-F5
+C01: separación de captura/admisibilidad respecto de Tri
+C02: revisión identificada de U sin clausura automática
+C03: cierre relacional y causal de Frame
 ```
 
-Los nombres `Zero` y `One` son identificadores internos de Rust. La representación textual canónica del Lenguaje SV permanece `0`, `1`, `U`.
+Las versiones observables integradas permanecen:
 
-El adaptador WebAssembly no constituye un segundo motor semántico. Su función es exponer el mismo núcleo a un destino de ejecución distinto.
+```text
+Gramática   = 0.2
+IR          = 0.3
+serializador = 0.1.0
+```
 
-## Naturales en R0-2
+Los identificadores Rust `Zero` y `One` son internos. La representación textual canónica del Lenguaje permanece `0`, `1`, `U`.
+
+## Naturales
 
 La gramática define `nat` como una secuencia decimal sin cota semántica y la IR declara `Frame.index : Nat`. Por ello, `sv_core` no representa ese índice mediante `u64`, `usize` ni otro entero limitado por la plataforma.
 
-`Nat` conserva el valor mediante una representación decimal canónica de precisión arbitraria. En R0-2 sólo se requieren identidad y conservación exacta del índice ordinal; no se introducen aritmética ni relación de orden sobre naturales. Los ceros iniciales se normalizan y el material que no sea decimal se rechaza antes de constituir el valor.
+`Nat` conserva el valor mediante una representación decimal canónica de precisión arbitraria. En el alcance actual sólo se requieren identidad y conservación exacta; no se exponen aritmética ni relación de orden sobre naturales. Los ceros iniciales se normalizan y el material no decimal se rechaza antes de constituir el valor.
 
-## `Frame` en R0-2
+## `Frame` y C03
 
-R0-2 materializa `Frame` como objeto constituible únicamente cuando las relaciones ya resueltas satisfacen el cierre estructural y causal de la IR 0.3:
+C03 es el cierre relacional y causal de `Frame`; no existe un segundo constructor ni una segunda semántica para esta propiedad. La constitución de `Frame` aplica J-F0…J-F5 sobre relaciones previamente resueltas:
 
 - cada `CoupledState` pertenece a un nodo de `Frame.architecture`;
 - no se repite una referencia de estado ni existe más de un estado por nodo de arquitectura;
+- la identidad de nodo se determina por `CoupledSpec`, no por el `CellSpec` subyacente;
 - cada `EvalResult` procede de un estado incluido y no se duplica una misma fuente material;
 - cada `GateResult` depende exclusivamente de evaluaciones incluidas;
 - cada `SupervisionResult` mantiene `meta_eval` y objetivo dentro del mismo cierre;
 - `SystemTarget` coincide con `Frame.architecture`;
 - `criticalities` permanece vacío mientras no exista un productor superficial constituido de `CriticalityResult`.
 
-La comprobación no impone exhaustividad: un `Frame` puede declarar sólo una parte coherente de los estados y resultados de su arquitectura.
+La comprobación exige coherencia de lo declarado y **no impone exhaustividad**.
 
-Las estructuras auxiliares `Resolved*` son proyecciones internas de relaciones ya resueltas necesarias para comprobar este cierre. No crean nuevos tipos de la gramática ni de la IR canónica, no forman parte de la interfaz pública de `sv_core` y no conceden a los adaptadores autoridad para declarar por sí mismos que una relación ha sido resuelta. El análisis sintáctico, la resolución general de símbolos y el descenso completo a IR permanecen fuera de R0-2.
+Las estructuras auxiliares `Resolved*` son internas a `sv_core`. No forman parte de la interfaz pública y no conceden a los adaptadores autoridad para declarar por sí mismos que una relación ha sido resuelta.
 
-Toda violación de este cierre se identifica en el núcleo mediante el código canónico `E308` (`FrameClosureViolation`).
+Toda violación del cierre materializado se identifica mediante `E308` (`FrameClosureViolation`).
 
-## C01 en R0-3
+La batería específica de C03 revalida el cierre completo después de la incorporación de C01 y C02 sin introducir nueva lógica de producción: acepta un subconjunto declarado coherente y rechaza escapes causales en evaluaciones, compuertas, supervisión y criticidades no producibles.
 
-R0-3 materializa la separación constitutiva entre fallo técnico, admisibilidad y valor ternario:
+## C01 — captura y admisibilidad
+
+La captura y la admisibilidad técnicas permanecen separadas de la semántica ternaria:
 
 ```text
-CaptureOutcome::Bottom   ↛ Tri
-NotAdmitted              ↛ Tri
-fallo técnico            ↛ Tri.U
+CaptureOutcome::Bottom ↛ Tri
+NotAdmitted            ↛ Tri
+fallo técnico          ↛ Tri.U
 ```
 
-`AdmissibilityState` es un tipo cerrado con exactamente tres variantes:
+`AdmissibilityState` es un conjunto cerrado representado por:
 
 ```text
 Ok
@@ -74,29 +72,25 @@ Degraded
 NotAdmitted
 ```
 
-`Ok` y `Degraded` representan estados positivamente admitidos; `NotAdmitted` no. Esta clasificación no produce por sí misma ningún valor de `Tri`.
+`Ok` y `Degraded` son estados positivamente admitidos; `NotAdmitted` no. Esta clasificación no produce por sí misma ningún valor de `Tri`.
 
-Los identificadores heredados `Failed` y `U` no pertenecen a `AdmissibilityState`. Las etiquetas ajenas al conjunto cerrado, un `parameter_id` nulo o una regla ausente se identifican mediante `E110` (`InvalidAdmissibilitySpec`) en la frontera materializada por este corte.
+Las etiquetas heredadas `Failed` y `U` no pertenecen a `AdmissibilityState`. Las infracciones materializadas de `AdmissibilitySpec` se identifican mediante `E110` (`InvalidAdmissibilitySpec`).
 
-`AdmissibilitySpec` no conserva una colección abierta de estados suministrada por el llamador: el conjunto admisible queda fijado por el propio tipo. La futura correspondencia con el campo explícito `states` de la IR y su forma serializada corresponde a R0-6; R0-3 no atribuye todavía equivalencia serial completa.
+Una observación admitida sólo puede alcanzar legítimamente `Tri.U` por una ternarización semántica cuya `partition_u` corresponda; no existe conversión automática desde la admisibilidad.
 
-`CaptureOutcome<T>` representa materialmente la separación entre una observación obtenida y `Bottom`, símbolo técnico de fallo de captura. No constituye un nuevo valor del Lenguaje ni amplía `Tri`.
+## C02 — revisión identificada de `U`
 
-La existencia de `Tri.U` permanece intacta. Una observación admitida sólo podrá alcanzar legítimamente `Tri.U` por la vía semántica del `Ternarizer` cuando pertenezca a `partition_u`. R0-3 no adelanta la realización completa de esa ternarización ni introduce una conversión automática desde admisibilidad.
-
-## C02 en R0-4
-
-R0-4 materializa la frontera de revisión de una `U` constituida e identificable:
+La revisión se dirige a una ocurrencia constituida e identificable:
 
 ```text
 ResolutionTarget = (EvaluableStateRef, position)
 ```
 
-La posición es uno-basada. El objetivo debe ser un `CellState` o `CoupledState` evaluable y el valor efectivo de la posición debe ser exactamente `Tri.U`. En `CoupledState` se usa el vector efectivo actualizado.
+La posición es uno-basada. El objetivo debe ser un `CellState` o `CoupledState` evaluable y el valor efectivo de la posición debe ser exactamente `Tri.U`. En `CoupledState` se utiliza el vector actualizado como vector efectivo.
 
-`ResSpec` conserva las identidades de contexto y mecanismo. Mientras no exista una relación ampliada expresamente constituida, la instancia de revisión debe coincidir exactamente con ambas identidades. Las violaciones del objetivo o de esa compatibilidad se identifican mediante `E305` (`UnsafeUResolution`).
+`ResSpec` conserva las identidades de contexto y mecanismo. Mientras no exista una relación ampliada expresamente constituida, la instancia de revisión debe coincidir exactamente con ambas identidades. Las violaciones se identifican mediante `E305` (`UnsafeUResolution`).
 
-`ResolutionRecord` separa expresamente:
+`ResolutionRecord` separa:
 
 ```text
 previous
@@ -104,40 +98,41 @@ reviewed_to
 resolved_to
 ```
 
-`reviewed_to` puede conservar el material producido por una revisión. Ese resultado no reescribe el estado objetivo ni constituye por sí solo una clausura positiva. En el circuito materializado por R0-4:
+El material de revisión no reescribe el estado objetivo ni constituye clausura positiva. En el circuito actualmente materializado:
 
 ```text
 previous    = U
 resolved_to = U
 ```
 
-incluso cuando `reviewed_to` proponga `0` o `1`. Así permanece representable `U → revisión → U`.
+incluso cuando `reviewed_to` proponga `0` o `1`. Por tanto, permanece representable `U → revisión → U`.
 
-La constitución de `ResolutionRecord` permanece dentro de `sv_core` mientras no esté enlazada la resolución general de símbolos. Los adaptadores no disponen de una construcción pública que permita fabricar un registro con clausura positiva.
+La constitución de `ResolutionRecord` permanece dentro de `sv_core`; los adaptadores no disponen de una construcción pública que permita fabricar una clausura positiva.
 
-## Fronteras
+## Fronteras actuales
 
-Este corte no contiene todavía:
+Este núcleo no acredita todavía:
 
 - analizador léxico o sintáctico Rust completo;
-- resolución general de símbolos en Rust;
-- transformación completa a IR 0.3;
+- resolución general de símbolos enlazada;
+- transformación completa de la IR 0.3 a representación soberana;
 - serialización canónica completa;
-- realización de la etapa específica C03 prevista en R0-5;
-- una autoridad externa de clausura positiva;
+- autoridad externa de clausura positiva;
 - realización completa de `Ternarizer`;
 - sustitución del Playground Python/Pyodide;
-- Garantía I o Garantía II.
+- Garantía I;
+- Garantía II.
 
-La invalidez técnica de la interfaz binaria WebAssembly permanece fuera de `Tri`; no se transforma en `U`.
+La invalidez técnica de una interfaz o plataforma permanece fuera de `Tri` y no se transforma en `U`.
 
 ## Comprobación
 
 La integración continua comprueba:
 
-1. las pruebas nativas del espacio de trabajo Rust;
-2. las pruebas de documentación vigentes;
-3. la compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
-4. la compilación de `sv_wasm` para ese mismo destino.
+1. pruebas nativas del espacio de trabajo Rust;
+2. pruebas de documentación vigentes;
+3. compilación del mismo `sv_core` para `wasm32-unknown-unknown`;
+4. compilación de `sv_wasm` para ese destino;
+5. conservación independiente de la conformidad del frontend Python.
 
-La unicidad semántica no se deduce únicamente de una compilación correcta. Se conserva estructuralmente porque `sv_wasm` depende de `sv_core` y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01 ni C02.
+La unicidad semántica no se deduce únicamente de una compilación correcta: se conserva estructuralmente porque los adaptadores dependen de `sv_core` y no contienen una implementación paralela de las propiedades constitutivas.
