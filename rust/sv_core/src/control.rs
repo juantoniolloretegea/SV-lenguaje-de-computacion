@@ -11,7 +11,7 @@
 //! use sv_core::{AuthorityRef, ControlId};
 //!
 //! let id = ControlId::new("authority:1").unwrap();
-//! let _authority = AuthorityRef::from_constituted_id(id);
+//! let _authority = AuthorityRef::from_core_id(id);
 //! ```
 //!
 //! Los resultados técnicos de comprobación tampoco pueden convertirse en un
@@ -146,12 +146,13 @@ macro_rules! opaque_control_ref {
                 &self.0
             }
 
-            /// Frontera interna de construcción.
+            /// Frontera interna de construcción del núcleo.
             ///
-            /// Los adaptadores externos no pueden convertir un identificador
-            /// ordinario en una referencia constituida de esta categoría.
+            /// El método no atribuye por su nombre admisión, constitución o
+            /// autoridad. El corte que produzca cada referencia deberá
+            /// acreditar separadamente el estatuto correspondiente.
             #[inline]
-            pub(crate) fn from_constituted_id(id: ControlId) -> Self {
+            pub(crate) fn from_core_id(id: ControlId) -> Self {
                 Self(id)
             }
         }
@@ -164,7 +165,7 @@ opaque_control_ref!(
 );
 opaque_control_ref!(
     AdmittedEvidenceRef,
-    "Referencia a evidencia cuya admisión debe haber sido constituida por una vía gobernada."
+    "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
 );
 opaque_control_ref!(
     ConstitutedFactRef,
