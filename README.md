@@ -19,6 +19,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 
 - [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — ejecución Rust/WebAssembly local en el navegador.
 - [Cierre integral de R0](./docs/calidad/ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) — cierre de la primera realización soberana del núcleo semántico.
+- [Apertura de R1](./docs/arquitectura/ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md) — autoridad, mediación y decisiones protegidas dentro del proceso soberano.
 - [Playground Python/Pyodide histórico](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md) — antecedente conservado para trazabilidad.
 - [Historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md).
 - [Gramática superficial mínima v0.2](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md).
@@ -42,9 +43,10 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>; ejecución local en el navegador. |
 | Conformidad | **72/72** | 11 casos válidos y 61 inválidos en la batería comprometida. |
 | Paridad de tres vías | **Ejecutada** | Referencia Python, Rust nativo y WebAssembly de navegador sobre el mismo corpus; WASI se conserva como evidencia complementaria. |
-| R0 | **CERRADO** | Primera realización soberana del núcleo semántico; el cierre no inicia R1. |
-| R1–R4 | **NO INICIADOS** | Fases materiales posteriores con objeto y cierre propios. |
-| Garantía I / Garantía II | **NO_PROBADO** | El cierre de R0 no acredita ninguna de las dos garantías. |
+| R0 | **CERRADO** | Primera realización soberana del núcleo semántico. |
+| R1 | **ABIERTO** | Autoridad, mediación, `Req`, fallo cerrado, ligaduras y trazas dentro del proceso soberano. |
+| R2–R4 | **NO INICIADOS** | Persistencia/continuidad, plataforma material y ataque integral conservan sus fases propias. |
+| Garantía I / Garantía II | **NO_PROBADO** | La apertura de R1 no acredita ninguna de las dos garantías. |
 | Biblioteca estándar | **Pendiente** | Estado documentado en [`stdlib/README.md`](./stdlib/README.md). |
 
 El artefacto WebAssembly utilizado por el entorno público corresponde al corte:
@@ -60,7 +62,7 @@ SHA-256
 
 La realización Rust/WebAssembly quedó integrada mediante la [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) y la [confirmación `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69). La identidad del artefacto y las pruebas asociadas permiten distinguir el despliegue público de la mera presentación web.
 
-El [acta de cierre integral de R0](./docs/calidad/ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) fija el alcance del cierre y enumera expresamente las propiedades que permanecen fuera de esta fase.
+El [acta de cierre integral de R0](./docs/calidad/ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) fija el alcance de la primera realización soberana y enumera expresamente las propiedades que permanecen fuera de esa fase. La [apertura de R1](./docs/arquitectura/ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md) delimita de forma separada la materialización de autoridad, mediación y decisiones protegidas, sin abrir R2–R4.
 
 ---
 
@@ -91,6 +93,8 @@ proyección diferencial de R0
 ```
 
 La distribución mediante Cloudflare no constituye autoridad semántica: entrega los activos estáticos del entorno público; la compilación se ejecuta localmente en el navegador.
+
+R1 amplía `sv_core` únicamente en su frontera de control intra-proceso. La capacidad de un adaptador, un proceso o un componente técnico para invocar al núcleo no constituye por sí misma autoridad SV.
 
 ---
 
@@ -140,18 +144,21 @@ Las comprobaciones anteriores no deben ampliarse más allá de su evidencia mate
 - un fallo técnico o una entrada no admitida no se convierten en `Tri.U`;
 - el despliegue público no acredita por sí solo las Garantías I o II;
 - **R0 está cerrado dentro del alcance de su primera realización soberana**;
-- **R1–R4 permanecen no iniciados** y no se abren por el cierre de R0;
+- **R1 está abierto exclusivamente para autoridad, mediación y decisiones protegidas intra-proceso**;
+- **R2–R4 permanecen no iniciados**;
 - **Garantía I y Garantía II permanecen `NO_PROBADO`**.
+
+R1 no atribuye todavía persistencia autoritativa durable, recuperación material, aislamiento de plataforma, raíz de confianza, cadena de suministro, identidad externa, criptografía, mediación material completa ni resistencia adversarial integral del SUT. Estas propiedades conservan el régimen de fases posteriores fijado por la arquitectura soberana.
 
 La Frontera Normativa v0 de marzo se conserva como antecedente. Para C01–C03, su lectura vigente queda determinada por la [adenda técnica de vigencia](./ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md), la Gramática 0.2 y la IR 0.3 en las cláusulas expresamente sustituidas.
 
-Permanecen además las deudas técnicas registradas en la documentación de calidad, entre ellas `ConflictOperator`/J2.3, la divergencia histórica de `E204`, `RG1`, las limitaciones de `CriticalityResult`, `FFL-D` y el desarrollo pendiente de la biblioteca estándar. El cierre de R0 no atribuye realización a ninguna de ellas.
+Permanecen además las deudas técnicas registradas en la documentación de calidad, entre ellas `ConflictOperator`/J2.3, la divergencia histórica de `E204`, `RG1`, las limitaciones de `CriticalityResult`, `FFL-D` y el desarrollo pendiente de la biblioteca estándar. Ni el cierre de R0 ni la apertura de R1 atribuyen realización a ninguna de ellas.
 
 ---
 
 ## Calidad, trazabilidad e historial
 
-La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas, los desarrollos pendientes, los entornos públicos registrados y el cierre integral de R0.
+La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas, los desarrollos pendientes, los entornos públicos registrados y los hitos de realización.
 
 El historial de Git conserva el detalle de cada modificación. Las instantáneas históricas permiten reconstruir el estado de la presentación pública sin mantener simultáneamente dos entornos como puntos de acceso vigentes.
 
