@@ -52,12 +52,12 @@ fn continuity_occupancy_has_distinct_uninhabited_and_inhabited_states() {
 
 #[test]
 fn protected_reference_categories_are_nominally_distinct() {
-    let information = InformationRef::from_constituted_id(ControlId::new("x").unwrap());
-    let evidence = AdmittedEvidenceRef::from_constituted_id(ControlId::new("x").unwrap());
-    let fact = ConstitutedFactRef::from_constituted_id(ControlId::new("x").unwrap());
-    let authority = AuthorityRef::from_constituted_id(ControlId::new("x").unwrap());
-    let enablement = EnablementRef::from_constituted_id(ControlId::new("x").unwrap());
-    let exercise = ExerciseRef::from_constituted_id(ControlId::new("x").unwrap());
+    let information = InformationRef::from_core_id(ControlId::new("x").unwrap());
+    let evidence = AdmittedEvidenceRef::from_core_id(ControlId::new("x").unwrap());
+    let fact = ConstitutedFactRef::from_core_id(ControlId::new("x").unwrap());
+    let authority = AuthorityRef::from_core_id(ControlId::new("x").unwrap());
+    let enablement = EnablementRef::from_core_id(ControlId::new("x").unwrap());
+    let exercise = ExerciseRef::from_core_id(ControlId::new("x").unwrap());
 
     assert_eq!(information.id().as_str(), "x");
     assert_eq!(evidence.id().as_str(), "x");
