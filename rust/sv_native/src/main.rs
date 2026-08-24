@@ -3,7 +3,10 @@ use std::fs;
 use std::path::Path;
 use std::process::ExitCode;
 
-use sv_core::{compile_svp, IrObjectKind, IrOperationKind, IrProgram, Nat, Tri};
+use sv_core::{
+    compile_svp, IrObjectKind, IrOperationKind, IrProgram, IrQueryContext, IrSupervisableTarget,
+    Nat, Tri,
+};
 
 fn main() -> ExitCode {
     let mut args = env::args_os();
@@ -45,8 +48,8 @@ fn main() -> ExitCode {
 /// Proyección JSON de equivalencia para R0-7.
 ///
 /// No constituye el serializador canónico completo del Lenguaje. Su única
-/// función es permitir que la prueba diferencial compare el `IrProgram`
-/// soberano producido desde el mismo `.svp` con la referencia vigente.
+/// función es comparar el `IrProgram` soberano producido desde el mismo `.svp`
+/// con la referencia diferencial vigente.
 fn equivalence_json(program: &IrProgram) -> String {
     let objects = program
         .objects()
@@ -87,14 +90,7 @@ fn fields_json(kind: &IrObjectKind) -> String {
     match kind {
         IrObjectKind::Codomain { values } => format!("{{\"values\":{}}}", strings(values)),
         IrObjectKind::OutputSemantics { mappings } => {
-            let mut mappings = mappings.clone();
-            mappings.sort_by(|a, b| a.0.cmp(&b.0));
-            let body = mappings
-                .iter()
-                .map(|(key, value)| format!("{}:{}", js(key), js(value)))
-                .collect::<Vec<_>>()
-                .join(",");
-            format!("{{\"mappings\":{{{body}}}}}")
+            format!("{{\"mappings\":{}}}", string_map(mappings))
         }
         IrObjectKind::CellSpec {
             b,
@@ -105,6 +101,62 @@ fn fields_json(kind: &IrObjectKind) -> String {
         } => format!(
             "{{\"b\":{},\"codomain\":{},\"n\":{},\"role\":{},\"semantics\":{}}}",
             nat(b), js(codomain), nat(n), js(role), js(semantics),
+        ),
+        IrObjectKind::CoupledSpec { cell, bridges } => format!(
+            "{{\"bridges\":{},\"cell\":{}}}",
+            nats(bridges), js(cell),
+        ),
+        IrObjectKind::Connector {
+            source_codomain,
+            target_position,
+            mapping,
+        } => {
+            let mut mapping = mapping.clone();
+            mapping.sort_by(|a, b| a.0.cmp(&b.0));
+            let body = mapping
+                .iter()
+                .map(|(key, value)| format!("{}:{}", js(key), js(value.ir_label())))
+                .collect::<Vec<_>>()
+                .join(",");
+            format!(
+                "{{\"mapping\":{{{}}},\"source_codomain\":{},\"target_position\":{}}}",
+                body,
+                js(source_codomain),
+                nat(target_position),
+            )
+        }
+        IrObjectKind::AdmissibilityTable {
+            input_codomains,
+            output_codomain,
+            table,
+        } => {
+            let table = table
+                .iter()
+                .map(|(inputs, output)| {
+                    format!(
+                        "{{\"inputs\":{},\"output\":{}}}",
+                        strings(inputs),
+                        js(output)
+                    )
+                })
+                .collect::<Vec<_>>()
+                .join(",");
+            format!(
+                "{{\"input_codomains\":{},\"output_codomain\":{},\"table\":[{}]}}",
+                strings(input_codomains),
+                js(output_codomain),
+                table,
+            )
+        }
+        IrObjectKind::CaptureSpec {
+            parameter_id,
+            observation_domain,
+            observation_space,
+            failure_symbol,
+            mapping,
+        } => format!(
+            "{{\"failure_symbol\":{},\"mapping\":{},\"observation_domain\":{},\"observation_space\":{},\"parameter_id\":{}}}",
+            js(failure_symbol), js(mapping), js(observation_domain), js(observation_space), nat(parameter_id),
         ),
         IrObjectKind::AdmissibilitySpec {
             parameter_id,
@@ -118,9 +170,21 @@ fn fields_json(kind: &IrObjectKind) -> String {
                 .join(", ");
             format!(
                 "{{\"parameter_id\":{},\"rule\":{},\"states\":{}}}",
-                nat(parameter_id), js(rule), js(&format!("{{{labels}}}")),
+                nat(parameter_id),
+                js(rule),
+                js(&format!("{{{labels}}}")),
             )
         }
+        IrObjectKind::Ternarizer {
+            observation_space,
+            partition_zero,
+            partition_one,
+            partition_u,
+            mapping,
+        } => format!(
+            "{{\"mapping\":{},\"observation_space\":{},\"partition_one\":{},\"partition_u\":{},\"partition_zero\":{}}}",
+            js(mapping), js(observation_space), js(partition_one), js(partition_u), js(partition_zero),
+        ),
         IrObjectKind::ResSpec {
             context,
             mechanism,
@@ -133,10 +197,6 @@ fn fields_json(kind: &IrObjectKind) -> String {
             "{{\"spec\":{},\"vector\":{}}}",
             js(spec), tris(vector),
         ),
-        IrObjectKind::CoupledSpec { cell, bridges } => format!(
-            "{{\"bridges\":{},\"cell\":{}}}",
-            nats(bridges), js(cell),
-        ),
         IrObjectKind::CoupledState {
             spec,
             base_vector,
@@ -145,6 +205,27 @@ fn fields_json(kind: &IrObjectKind) -> String {
             "{{\"base_vector\":{},\"spec\":{},\"updated_vector\":{}}}",
             tris(base_vector), js(spec), tris(updated_vector),
         ),
+        IrObjectKind::CompositionGraph {
+            nodes,
+            edges,
+            relation,
+            regime,
+        } => {
+            let edges = edges
+                .iter()
+                .map(|(source, target, position, connector)| {
+                    format!(
+                        "{{\"connector\":{},\"position\":{},\"source\":{},\"target\":{}}}",
+                        js(connector), nat(position), js(source), js(target)
+                    )
+                })
+                .collect::<Vec<_>>()
+                .join(",");
+            format!(
+                "{{\"edges\":[{}],\"nodes\":{},\"regime\":{},\"relation\":{}}}",
+                edges, strings(nodes), js(regime), js(relation),
+            )
+        }
         IrObjectKind::SemanticRelation {
             kind,
             table,
@@ -160,24 +241,28 @@ fn fields_json(kind: &IrObjectKind) -> String {
             }
             format!("{{{}}}", fields.join(","))
         }
-        IrObjectKind::CompositionGraph {
-            nodes,
-            edges,
-            relation,
-            regime,
+        IrObjectKind::Pattern {
+            kind,
+            arity,
+            constraints,
         } => {
-            let edges = edges
-                .iter()
-                .map(|(source, target, position, connector)| {
-                    format!("[{},{},{},{}]", js(source), js(target), nat(position), js(connector))
-                })
-                .collect::<Vec<_>>()
-                .join(",");
-            format!(
-                "{{\"edges\":[{}],\"nodes\":{},\"regime\":{},\"relation\":{}}}",
-                edges, strings(nodes), js(regime), js(relation),
-            )
+            let mut fields = Vec::new();
+            if let Some(arity) = arity {
+                fields.push(format!("\"arity\":{}", nat(arity)));
+            }
+            if let Some(constraints) = constraints {
+                fields.push(format!("\"constraints\":{}", strings(constraints)));
+            }
+            fields.push(format!("\"kind\":{}", js(kind)));
+            format!("{{{}}}", fields.join(","))
         }
+        IrObjectKind::Horizon {
+            architecture,
+            events,
+        } => format!(
+            "{{\"architecture\":{},\"events\":{}}}",
+            js(architecture), strings(events),
+        ),
         IrObjectKind::Frame {
             index,
             architecture,
@@ -191,9 +276,92 @@ fn fields_json(kind: &IrObjectKind) -> String {
             js(architecture), strings(cell_states), strings(criticalities), strings(eval_results),
             strings(gate_results), nat(index), strings(supervision),
         ),
-        other => panic!(
-            "la proyección de equivalencia R0-7 aún no cubre {}",
-            other.ir_type()
+        IrObjectKind::TransitionData {
+            horizon_ref,
+            events,
+            induced_parameters,
+            metadata,
+        } => {
+            let events = events
+                .iter()
+                .map(|(event_type, state)| {
+                    format!(
+                        "{{\"event_type\":{},\"state\":{}}}",
+                        js(event_type),
+                        js(state.ir_label())
+                    )
+                })
+                .collect::<Vec<_>>()
+                .join(",");
+            let induced = induced_parameters
+                .iter()
+                .map(|(cell_ref, position, value)| {
+                    format!(
+                        "{{\"cell_ref\":{},\"position\":{},\"value\":{}}}",
+                        js(cell_ref),
+                        nat(position),
+                        js(value.ir_label())
+                    )
+                })
+                .collect::<Vec<_>>()
+                .join(",");
+            let mut fields = vec![
+                format!("\"events\":[{}]", events),
+                format!("\"horizon_ref\":{}", js(horizon_ref)),
+                format!("\"induced_parameters\":[{}]", induced),
+            ];
+            if let Some(metadata) = metadata {
+                fields.push(format!("\"metadata\":{}", strings(metadata)));
+            }
+            format!("{{{}}}", fields.join(","))
+        }
+        IrObjectKind::Trajectory { entries } => {
+            let entries = entries
+                .iter()
+                .map(|(frame, transition)| match transition {
+                    Some(transition) => format!(
+                        "{{\"frame\":{},\"transition\":{}}}",
+                        js(frame), js(transition)
+                    ),
+                    None => format!("{{\"frame\":{}}}", js(frame)),
+                })
+                .collect::<Vec<_>>()
+                .join(",");
+            format!("{{\"append_only\":true,\"entries\":[{}]}}", entries)
+        }
+        IrObjectKind::Domain {
+            parameters,
+            interface,
+            horizon,
+            capture_specs,
+            admissibility_specs,
+            ternarizers,
+            exogeneity_mask,
+            silent_u,
+            transduction_policy,
+            u_policy,
+            closure_criterion,
+        } => format!(
+            "{{\"admissibility_specs\":{},\"capture_specs\":{},\"closure_criterion\":{},\"exogeneity_mask\":{},\"horizon\":{},\"interface\":{},\"parameters\":{},\"silent_u\":{},\"ternarizers\":{},\"transduction_policy\":{},\"u_policy\":{}}}",
+            strings(admissibility_specs), strings(capture_specs), js(closure_criterion), js(exogeneity_mask),
+            js(horizon), js(interface), strings(parameters), js(silent_u), strings(ternarizers),
+            js(transduction_policy), js(u_policy),
+        ),
+        IrObjectKind::Agent {
+            architecture,
+            domain,
+            query_engine,
+        } => format!(
+            "{{\"architecture\":{},\"domain\":{},\"query_engine\":{}}}",
+            js(architecture), js(domain), js(query_engine),
+        ),
+        IrObjectKind::QuerySpec {
+            query_type,
+            scope,
+            restrictions,
+        } => format!(
+            "{{\"query_type\":{},\"restrictions\":{},\"scope\":{}}}",
+            js(query_type), strings(restrictions), js(scope),
         ),
     }
 }
@@ -211,6 +379,13 @@ fn operation_json(operation: &sv_core::IrOperation) -> String {
 fn inputs_json(kind: &IrOperationKind) -> String {
     match kind {
         IrOperationKind::Evaluate { state } => format!("{{\"state\":{}}}", js(state)),
+        IrOperationKind::Gate {
+            eval_results,
+            table,
+        } => format!(
+            "{{\"eval_results\":{},\"table\":{}}}",
+            strings(eval_results), js(table),
+        ),
         IrOperationKind::Resolve {
             target_state,
             target_position,
@@ -221,14 +396,78 @@ fn inputs_json(kind: &IrOperationKind) -> String {
             "{{\"context_instance\":{},\"mechanism_instance\":{},\"target\":{{\"position\":{},\"state\":{}}},\"with_spec\":{}}}",
             js(context_instance), js(mechanism_instance), nat(target_position), js(target_state), js(with_spec),
         ),
+        IrOperationKind::Query { spec, by, context } => format!(
+            "{{\"by\":{},\"context\":{},\"spec\":{}}}",
+            js(by), query_context_json(context), js(spec),
+        ),
+        IrOperationKind::Supervise { meta_eval, target } => format!(
+            "{{\"meta_eval\":{},\"target\":{}}}",
+            js(meta_eval), supervision_target_json(target),
+        ),
+        IrOperationKind::Compose {
+            graph,
+            relations,
+            patterns,
+        } => format!(
+            "{{\"graph\":{},\"patterns\":{},\"relations\":{}}}",
+            js(graph), strings(patterns), strings(relations),
+        ),
         IrOperationKind::Projection { source, field } => {
             format!("{{\"field\":{},\"source\":{}}}", js(field), js(source))
         }
-        other => panic!(
-            "la proyección de equivalencia R0-7 aún no cubre {}",
-            other.op_type()
+    }
+}
+
+fn query_context_json(context: &IrQueryContext) -> String {
+    match context {
+        IrQueryContext::PointEval { reference } => format!(
+            "{{\"ref\":{},\"variant\":{}}}",
+            js(reference), js(context.variant_label()),
+        ),
+        IrQueryContext::TrajectoryView { reference } => format!(
+            "{{\"ref\":{},\"variant\":{}}}",
+            js(reference), js(context.variant_label()),
+        ),
+        IrQueryContext::FrameComparison { references } => format!(
+            "{{\"refs\":{},\"variant\":{}}}",
+            strings(references), js(context.variant_label()),
+        ),
+        IrQueryContext::ArchitectureView {
+            architecture,
+            cells,
+            evals,
+            gates,
+        } => format!(
+            "{{\"architecture\":{},\"cells\":{},\"evals\":{},\"gates\":{},\"variant\":{}}}",
+            js(architecture), strings(cells), strings(evals), strings(gates), js(context.variant_label()),
+        ),
+        IrQueryContext::CoverageReport { references } => format!(
+            "{{\"refs\":{},\"variant\":{}}}",
+            strings(references), js(context.variant_label()),
         ),
     }
+}
+
+fn supervision_target_json(target: &IrSupervisableTarget) -> String {
+    match target {
+        IrSupervisableTarget::Cell { reference }
+        | IrSupervisableTarget::Composed { reference }
+        | IrSupervisableTarget::System { reference } => format!(
+            "{{\"ref\":{},\"variant\":{}}}",
+            js(reference), js(target.variant_label()),
+        ),
+    }
+}
+
+fn string_map(values: &[(String, String)]) -> String {
+    let mut values = values.to_vec();
+    values.sort_by(|a, b| a.0.cmp(&b.0));
+    let body = values
+        .iter()
+        .map(|(key, value)| format!("{}:{}", js(key), js(value)))
+        .collect::<Vec<_>>()
+        .join(",");
+    format!("{{{body}}}")
 }
 
 fn nat(value: &Nat) -> &str {
@@ -257,10 +496,14 @@ fn tris(values: &[Tri]) -> String {
     )
 }
 
-fn strings(values: &[String]) -> String {
+fn strings<T: AsRef<str>>(values: &[T]) -> String {
     format!(
         "[{}]",
-        values.iter().map(|value| js(value)).collect::<Vec<_>>().join(",")
+        values
+            .iter()
+            .map(|value| js(value.as_ref()))
+            .collect::<Vec<_>>()
+            .join(",")
     )
 }
 
