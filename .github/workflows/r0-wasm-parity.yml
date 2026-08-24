@@ -9,6 +9,9 @@ on:
       - "tests/r0_7_equivalence.py"
       - "tests/r0_wasm_parity.py"
       - "tests/run_wasi_sv_native.js"
+      - "tests/r0_wasm_browser_manifest.py"
+      - "tests/r0_wasm_browser.html"
+      - "tests/r0_wasm_browser.js"
       - "tests/conformance/valid/**"
       - "tests/conformance/invalid/**"
       - ".github/workflows/r0-wasm-parity.yml"
@@ -34,7 +37,7 @@ jobs:
           rustc --version
           cargo --version
 
-      - name: Registrar host WebAssembly
+      - name: Registrar hosts WebAssembly
         run: |
           node --version
           python --version
@@ -43,6 +46,12 @@ jobs:
           git rev-list --parents -n 1 HEAD
           echo "source head: ${{ github.event.pull_request.head.sha }}"
           echo "base head: ${{ github.event.pull_request.base.sha }}"
+          for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$candidate" >/dev/null 2>&1; then
+              "$candidate" --version
+              break
+            fi
+          done
 
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace
@@ -55,21 +64,77 @@ jobs:
           cargo build --manifest-path rust/Cargo.toml --release -p sv_native --target wasm32-wasip1
           test -f rust/target/wasm32-wasip1/release/sv-native.wasm
 
-      - name: Mantener compilable el adaptador WebAssembly de navegador
+      - name: Construir adaptador WebAssembly de navegador
         run: |
-          cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
-          cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+          cargo build --manifest-path rust/Cargo.toml --release -p sv_wasm --target wasm32-unknown-unknown
+          test -f rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm
 
-      - name: Ejercer paridad Python nativo WebAssembly
+      - name: Ejercer paridad complementaria por WASI
         run: |
           mkdir -p artifacts/r0-wasm
           python tests/r0_wasm_parity.py \
             --native-bin rust/target/release/sv-native \
             --wasm-bin rust/target/wasm32-wasip1/release/sv-native.wasm \
             --wasi-runner tests/run_wasi_sv_native.js \
-            --report artifacts/r0-wasm/three-way-parity.json \
+            --report artifacts/r0-wasm/three-way-parity-wasi.json \
             --source-head "${{ github.event.pull_request.head.sha }}" \
             --base-head "${{ github.event.pull_request.base.sha }}"
+
+      - name: Preparar manifiesto de paridad para navegador
+        run: |
+          mkdir -p artifacts/r0-browser
+          python tests/r0_wasm_browser_manifest.py \
+            --native-bin rust/target/release/sv-native \
+            --output artifacts/r0-browser/manifest.json \
+            --source-head "${{ github.event.pull_request.head.sha }}" \
+            --base-head "${{ github.event.pull_request.base.sha }}"
+          cp rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm artifacts/r0-browser/sv_wasm.wasm
+
+      - name: Ejercer paridad en navegador real
+        run: |
+          CHROME=""
+          for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$candidate" >/dev/null 2>&1; then
+              CHROME="$(command -v "$candidate")"
+              break
+            fi
+          done
+          if [ -z "$CHROME" ]; then
+            echo "No hay navegador Chromium/Chrome disponible en el ejecutor" >&2
+            exit 1
+          fi
+          "$CHROME" --version | tee artifacts/r0-browser/browser-version.txt
+
+          python -m http.server 8765 --bind 127.0.0.1 > artifacts/r0-browser/http-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+
+          READY=0
+          for _ in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:8765/tests/r0_wasm_browser.html >/dev/null; then
+              READY=1
+              break
+            fi
+            sleep 0.25
+          done
+          if [ "$READY" -ne 1 ]; then
+            echo "Servidor HTTP de prueba no disponible" >&2
+            exit 1
+          fi
+
+          "$CHROME" \
+            --headless=new \
+            --no-sandbox \
+            --disable-gpu \
+            --disable-dev-shm-usage \
+            --virtual-time-budget=30000 \
+            --dump-dom \
+            http://127.0.0.1:8765/tests/r0_wasm_browser.html \
+            > artifacts/r0-browser/browser-parity-dom.html
+
+          grep -q 'data-status="pass"' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"valid_ok":11' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"invalid_ok":61' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |
@@ -77,6 +142,8 @@ jobs:
           wc -c rust/target/release/sv-native > artifacts/r0-wasm/sv-native.bytes
           sha256sum rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.sha256
           wc -c rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.bytes
+          sha256sum rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm > artifacts/r0-browser/sv-wasm-browser.sha256
+          wc -c rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm > artifacts/r0-browser/sv-wasm-browser.bytes
           git rev-parse HEAD > artifacts/r0-wasm/git-checkout-head.txt
           echo "${{ github.event.pull_request.head.sha }}" > artifacts/r0-wasm/git-source-head.txt
           echo "${{ github.event.pull_request.base.sha }}" > artifacts/r0-wasm/git-base-head.txt
@@ -93,6 +160,8 @@ jobs:
           retention-days: 90
           path: |
             artifacts/r0-wasm/
+            artifacts/r0-browser/
             rust/target/release/sv-native
             rust/target/wasm32-wasip1/release/sv-native.wasm
+            rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm
             rust/Cargo.lock
