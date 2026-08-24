@@ -136,7 +136,7 @@ Los enlaces documentales externos sólo se solicitan cuando el usuario decide ab
 
 ## 7. Conservación del Playground Python/Pyodide
 
-El entorno Python/Pyodide precedente se conserva como antecedente histórico y no como segunda puerta pública vigente:
+El entorno Python/Pyodide precedente se conserva como antecedente histórico y no como segundo punto de acceso público vigente:
 
 - [registro histórico del Playground Python/Pyodide](../historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md).
 
