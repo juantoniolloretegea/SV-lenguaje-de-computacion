@@ -1,0 +1,98 @@
+name: R0 WASM paridad de tres vías
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "rust/**"
+      - "src/**"
+      - "tests/r0_7_equivalence.py"
+      - "tests/r0_wasm_parity.py"
+      - "tests/run_wasi_sv_native.js"
+      - "tests/conformance/valid/**"
+      - "tests/conformance/invalid/**"
+      - ".github/workflows/r0-wasm-parity.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  three-way-parity:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener revisión
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Fijar Rust 1.98.0 y targets WebAssembly
+        run: |
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          rustup target add wasm32-wasip1 --toolchain 1.98.0
+          rustup target add wasm32-unknown-unknown --toolchain 1.98.0
+          rustc --version
+          cargo --version
+
+      - name: Registrar host WebAssembly
+        run: |
+          node --version
+          python --version
+          uname -a
+          git rev-parse HEAD
+          git rev-list --parents -n 1 HEAD
+          echo "source head: ${{ github.event.pull_request.head.sha }}"
+          echo "base head: ${{ github.event.pull_request.base.sha }}"
+
+      - name: Probar espacio de trabajo nativo
+        run: cargo test --manifest-path rust/Cargo.toml --workspace
+
+      - name: Construir sv-native release nativo
+        run: cargo build --manifest-path rust/Cargo.toml --release -p sv_native
+
+      - name: Construir el mismo sv-native para wasm32-wasip1
+        run: |
+          cargo build --manifest-path rust/Cargo.toml --release -p sv_native --target wasm32-wasip1
+          test -f rust/target/wasm32-wasip1/release/sv-native.wasm
+
+      - name: Mantener compilable el adaptador WebAssembly de navegador
+        run: |
+          cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
+          cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+
+      - name: Ejercer paridad Python nativo WebAssembly
+        run: |
+          mkdir -p artifacts/r0-wasm
+          python tests/r0_wasm_parity.py \
+            --native-bin rust/target/release/sv-native \
+            --wasm-bin rust/target/wasm32-wasip1/release/sv-native.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --report artifacts/r0-wasm/three-way-parity.json \
+            --source-head "${{ github.event.pull_request.head.sha }}" \
+            --base-head "${{ github.event.pull_request.base.sha }}"
+
+      - name: Registrar identidad de los artefactos
+        run: |
+          sha256sum rust/target/release/sv-native > artifacts/r0-wasm/sv-native.sha256
+          wc -c rust/target/release/sv-native > artifacts/r0-wasm/sv-native.bytes
+          sha256sum rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.sha256
+          wc -c rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.bytes
+          git rev-parse HEAD > artifacts/r0-wasm/git-checkout-head.txt
+          echo "${{ github.event.pull_request.head.sha }}" > artifacts/r0-wasm/git-source-head.txt
+          echo "${{ github.event.pull_request.base.sha }}" > artifacts/r0-wasm/git-base-head.txt
+          git rev-list --parents -n 1 HEAD > artifacts/r0-wasm/git-checkout-lineage.txt
+          rustc --version > artifacts/r0-wasm/rustc-version.txt
+          cargo --version > artifacts/r0-wasm/cargo-version.txt
+          node --version > artifacts/r0-wasm/node-version.txt
+
+      - name: Preservar evidencia de paridad
+        uses: actions/upload-artifact@v4
+        with:
+          name: r0-wasm-three-way-parity
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/r0-wasm/
+            rust/target/release/sv-native
+            rust/target/wasm32-wasip1/release/sv-native.wasm
+            rust/Cargo.lock
