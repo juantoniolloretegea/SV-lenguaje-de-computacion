@@ -7,6 +7,7 @@
 //! o la IR canónica.
 
 pub mod admissibility;
+pub mod authority;
 pub mod control;
 mod equivalence;
 mod frontend;
@@ -20,9 +21,14 @@ pub use admissibility::{
     AdmissibilitySpec, AdmissibilityState, CaptureOutcome, InvalidAdmissibilitySpec,
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
+pub use authority::{
+    AccumulationContract, ConstitutedAuthority, EffectEnvelope, FormDescriptor, GovernedDomain,
+};
 pub use control::{
-    AdmittedEvidenceRef, AuthorityRef, CheckResult, ConstitutedFactRef, ContinuityOccupancy,
-    ControlId, EnablementRef, ExerciseRef, InformationRef, InvalidControlId, TransitionClass,
+    AccumulationRuleRef, AdmittedEvidenceRef, AuthorityHolderRef, AuthorityRef, CheckResult,
+    ConstitutedFactRef, ContextRef, ContinuityOccupancy, ControlId, EffectFamilyRef, EffectRef,
+    EnablementRef, ExerciseRef, FormRef, GovernedObjectRef, InformationRef, InvalidControlId,
+    TransitionClass,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
