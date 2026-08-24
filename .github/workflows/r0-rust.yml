@@ -5,6 +5,9 @@ on:
     branches: [main]
     paths:
       - "rust/**"
+      - "src/**"
+      - "tests/r0_7_equivalence.py"
+      - "tests/conformance/valid/**"
       - ".github/workflows/r0-rust.yml"
 
 permissions:
@@ -27,6 +30,12 @@ jobs:
 
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace
+
+      - name: Construir ejecutable nativo R0-7
+        run: cargo build --manifest-path rust/Cargo.toml -p sv_native
+
+      - name: Ejercer equivalencia R0-7 sobre el mismo SVP
+        run: python tests/r0_7_equivalence.py --rust-bin rust/target/debug/sv-native
 
       - name: Comprobar núcleo para WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
