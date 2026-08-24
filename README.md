@@ -39,7 +39,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Núcleo Rust | **`sv_core`** | Una sola implementación compartida por el destino nativo y WebAssembly. |
 | Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>; ejecución local en el navegador. |
 | Conformidad | **72/72** | 11 casos válidos y 61 inválidos en la batería comprometida. |
-| Paridad de tres vías | **Ejecutada** | Referencia Python, Rust nativo y WebAssembly navegador sobre el mismo corpus; WASI se conserva como evidencia complementaria. |
+| Paridad de tres vías | **Ejecutada** | Referencia Python, Rust nativo y WebAssembly de navegador sobre el mismo corpus; WASI se conserva como evidencia complementaria. |
 | Biblioteca estándar | **Pendiente** | Estado documentado en [`stdlib/README.md`](./stdlib/README.md). |
 
 El artefacto WebAssembly utilizado por el entorno público corresponde al corte:
@@ -53,7 +53,7 @@ SHA-256
 7b49228624f101dc8d863a2b4d631b7ed8eacb4ee4a29c2459d32f6b63aff5dc
 ```
 
-La realización Rust/WebAssembly se documenta en la [solicitud de incorporación #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22). La identidad del artefacto y las pruebas asociadas permiten distinguir el despliegue público de la mera presentación web.
+La realización Rust/WebAssembly quedó integrada mediante la [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) y la [confirmación `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69). La identidad del artefacto y las pruebas asociadas permiten distinguir el despliegue público de la mera presentación web.
 
 ---
 
@@ -66,7 +66,7 @@ archivo .svp
    ↓
 sv_core::compile_svp
    ├── Rust nativo
-   └── WebAssembly navegador
+   └── WebAssembly de navegador
 ```
 
 El adaptador WebAssembly no contiene una segunda gramática, un segundo analizador ni reglas semánticas independientes. La interfaz JavaScript transporta bytes, invoca las funciones exportadas del módulo y presenta el observable devuelto.
@@ -114,7 +114,7 @@ La paridad exacta del código diagnóstico `E***` y del texto de los mensajes de
 La ejecución de navegador asociada al corte indicado produjo:
 
 ```text
-válidos admitidos   = 11/11
+válidos admitidos    = 11/11
 inválidos rechazados = 61/61
 ```
 
@@ -141,7 +141,7 @@ Permanecen además las deudas técnicas registradas en la documentación de cali
 
 ## Calidad, trazabilidad e historial
 
-La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas y los desarrollos o despliegues cuya integración todavía deba acreditarse.
+La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas, los desarrollos pendientes y los entornos públicos registrados.
 
 El historial de Git conserva el detalle de cada modificación. Las instantáneas históricas permiten reconstruir el estado de la presentación pública sin mantener simultáneamente dos entornos como puerta vigente.
 
