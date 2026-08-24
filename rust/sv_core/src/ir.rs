@@ -95,12 +95,8 @@ impl IrObject {
 /// observables queda fijado por esta enumeración.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum IrObjectKind {
-    Codomain {
-        values: Vec<String>,
-    },
-    OutputSemantics {
-        mappings: Vec<(String, String)>,
-    },
+    Codomain { values: Vec<String> },
+    OutputSemantics { mappings: Vec<(String, String)> },
     CellSpec {
         b: Nat,
         n: Nat,
@@ -108,10 +104,7 @@ pub enum IrObjectKind {
         semantics: String,
         role: String,
     },
-    CoupledSpec {
-        cell: String,
-        bridges: Vec<Nat>,
-    },
+    CoupledSpec { cell: String, bridges: Vec<Nat> },
     Connector {
         source_codomain: String,
         target_position: Nat,
@@ -146,10 +139,7 @@ pub enum IrObjectKind {
         mechanism: String,
         mapping: String,
     },
-    CellState {
-        spec: String,
-        vector: Vec<Tri>,
-    },
+    CellState { spec: String, vector: Vec<Tri> },
     CoupledState {
         spec: String,
         base_vector: Vec<Tri>,
@@ -190,9 +180,7 @@ pub enum IrObjectKind {
         induced_parameters: Vec<(String, Nat, Tri)>,
         metadata: Option<Vec<String>>,
     },
-    Trajectory {
-        entries: Vec<(String, Option<String>)>,
-    },
+    Trajectory { entries: Vec<(String, Option<String>)> },
     Domain {
         parameters: Vec<String>,
         interface: String,
@@ -316,24 +304,16 @@ impl IrOperation {
 /// Contexto cerrado de la operación `query`.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum IrQueryContext {
-    PointEval {
-        reference: String,
-    },
-    TrajectoryView {
-        reference: String,
-    },
-    FrameComparison {
-        references: [String; 2],
-    },
+    PointEval { reference: String },
+    TrajectoryView { reference: String },
+    FrameComparison { references: [String; 2] },
     ArchitectureView {
         architecture: String,
         cells: Vec<String>,
         evals: Vec<String>,
         gates: Vec<String>,
     },
-    CoverageReport {
-        references: [String; 3],
-    },
+    CoverageReport { references: [String; 3] },
 }
 
 impl IrQueryContext {
@@ -351,15 +331,9 @@ impl IrQueryContext {
 /// Objetivo cerrado de la operación `supervise`.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum IrSupervisableTarget {
-    Cell {
-        reference: String,
-    },
-    Composed {
-        reference: String,
-    },
-    System {
-        reference: String,
-    },
+    Cell { reference: String },
+    Composed { reference: String },
+    System { reference: String },
 }
 
 impl IrSupervisableTarget {
@@ -375,9 +349,7 @@ impl IrSupervisableTarget {
 /// Campos tipados y cerrados de las operaciones IR.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum IrOperationKind {
-    Evaluate {
-        state: String,
-    },
+    Evaluate { state: String },
     Gate {
         eval_results: Vec<String>,
         table: String,
@@ -437,17 +409,10 @@ impl IrOperationKind {
 
 /// Frontera interna de constitución de la representación IR.
 ///
-/// R0-6 materializa la representación antes de enlazar el descenso Rust completo.
-/// Por ello, los adaptadores externos pueden inspeccionar un `IrProgram` ya
-/// constituido, pero no fabricar uno ni declarar unilateralmente objetos u operaciones
-/// como IR soberana.
-#[cfg_attr(
-    not(test),
-    expect(
-        dead_code,
-        reason = "R0-6 materializa la representación IR antes de enlazar el descenso Rust posterior"
-    )
-)]
+/// R0-7 enlaza el descenso Rust con esta misma representación cerrada en R0-6.
+/// Los adaptadores externos pueden inspeccionar un `IrProgram` ya constituido,
+/// pero no fabricar uno ni declarar unilateralmente objetos u operaciones como
+/// IR soberana.
 pub(crate) mod construction {
     use super::{IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram};
 

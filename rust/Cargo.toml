@@ -1,3 +1,3 @@
 [workspace]
-members = ["sv_core", "sv_wasm"]
+members = ["sv_core", "sv_wasm", "sv_native"]
 resolver = "2"

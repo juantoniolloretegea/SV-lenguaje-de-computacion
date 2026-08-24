@@ -7,15 +7,18 @@
 //! consolida y somete a regresión la misma autoridad de constitución.
 
 pub mod admissibility;
+mod frontend;
 pub mod frame;
 pub mod ir;
 pub mod nat;
 pub mod resolution;
+mod wellformed;
 
 pub use admissibility::{
     AdmissibilitySpec, AdmissibilityState, CaptureOutcome, InvalidAdmissibilitySpec,
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
+pub use frontend::FrontendError;
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 pub use ir::{
     IrLevel, IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram, IrQueryContext,
@@ -38,6 +41,30 @@ pub const IR_VERSION_MINOR: u16 = 3;
 pub const SERIALIZER_VERSION_MAJOR: u16 = 0;
 pub const SERIALIZER_VERSION_MINOR: u16 = 1;
 pub const SERIALIZER_VERSION_PATCH: u16 = 0;
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum CompileError {
+    Frontend(FrontendError),
+    InvalidProgram(String),
+}
+
+impl From<FrontendError> for CompileError {
+    fn from(error: FrontendError) -> Self {
+        Self::Frontend(error)
+    }
+}
+
+/// Compila texto SVP a la representación soberana IR 0.3 y valida su
+/// bienformación antes de exponerla fuera del núcleo.
+///
+/// El analizador sintáctico y el descenso permanecen internos. Un adaptador
+/// externo no puede solicitar una `IrProgram` aceptada sin atravesar también
+/// la validación soberana de este núcleo.
+pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, CompileError> {
+    let program = frontend::compile_svp(source, source_file)?;
+    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    Ok(program)
+}
 
 /// Valor ternario constitutivo del Lenguaje SV.
 ///
