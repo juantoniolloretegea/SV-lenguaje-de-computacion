@@ -30,6 +30,7 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md`
 - `CONTRATO_R1_0_TIPOS_CERRADOS_Y_FRONTERAS_DE_CONSTRUCCION_2026_08_24.md`
 - `ADENDA_R1_0_ALCANCE_AUTORIDAD_CONTINUIDAD_Y_FRONTERA_DE_R1_2026_08_24.md`
+- `CONTRATO_R1_1_FORMAS_AUTORIDAD_ENVOLVENTE_Y_DOMINIO_GOBERNADO_2026_08_24.md`
 
 ## Regla de lectura
 
@@ -63,5 +64,7 @@ Garantía II = NO_PROBADO
 ```
 
 R1-0 fija los tipos cerrados y las fronteras de construcción del control soberano. Su adenda de alcance precisa que la autoridad de R1 es intra-proceso, que la continuidad lógica no se identifica con una instancia técnica y que la mediación acreditable en R1 termina en la frontera de `sv_core`.
+
+R1-1 fija la estructura candidata de las formas, la autoridad acotada, `E_max` y `D_a`. No existe todavía una vía productiva de constitución de formas o autoridad: esa capacidad queda reservada a R1-2 y deberá quedar ligada a las transiciones autorizantes correspondientes.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
