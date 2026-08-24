@@ -64,7 +64,7 @@ Inhabited
 
 Clonar, copiar o reconstruir dentro del mismo proceso una representación ya habitada no restablece la disponibilidad de T-0.
 
-Un nuevo proceso que no incorpore ni continúe estado autoritativo previo puede constituir, dentro de este modelo limitado, una continuidad todavía no habitada. Determinar materialmente continuidad entre procesos, restauraciones, réplicas o estados persistentes queda fuera de R1 y corresponde a las fases posteriores previstas para persistencia y plataforma.
+Un estado lógico nuevo que no contenga ni represente antecedente autoritativo puede estar en `Uninhabited` dentro de R1. Ese estado lógico no acredita que un proceso real constituya por sí mismo una continuidad autoritativa nueva. Determinar materialmente continuidad entre procesos, restauraciones, réplicas o estados persistentes queda fuera de R1 y corresponde a las fases posteriores previstas para persistencia y plataforma.
 
 ## 4. Efecto protegido en R1
 
