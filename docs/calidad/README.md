@@ -26,9 +26,10 @@ La continuidad actual queda documentada, como mínimo, por:
 8. `../arquitectura/ACTA_TECNICA_DE_CIERRE_DE_FFL_E_INTERFAZ_SEMANTICO_DIAGNOSTICA_2026_08_21.md`;
 9. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
 10. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
-11. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+11. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`;
+12. `ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md`.
 
-FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente.
+FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente. R0 está cerrado dentro del alcance de la primera realización soberana del núcleo semántico; R1–R4 permanecen no iniciados y las Garantías I y II permanecen `NO_PROBADO`.
 
 ## 3. Cierre técnico de FFL-B
 
@@ -98,6 +99,33 @@ FFL-E reserva la clase semántica `RepresentationInsufficientForOperation`, pero
 
 El cierre es arquitectónico. No modifica `src/`, gramática v0.1, IR v0.2, validador, catálogo diagnóstico ni pruebas. FFL-D continúa pendiente.
 
+## 4.2. Cierre integral de R0
+
+R0 quedó cerrado el 24/08/2026 como primera realización soberana del núcleo semántico del Lenguaje SV.
+
+El cierre comprende la materialización incremental R0-0…R0-8, la correspondencia IR 0.3 → representación soberana Rust, la equivalencia contra el corpus comprometido, la medición basal nativa, el destino WebAssembly de navegador, la paridad ejercida, el entorno público y la reconciliación normativa necesaria para C01–C03.
+
+La batería vigente en el cierre contiene **72/72 casos**: 11 válidos y 61 inválidos.
+
+El estado posterior queda fijado así:
+
+```text
+R0  = CERRADO
+R1  = NO INICIADO
+R2  = NO INICIADO
+R3  = NO INICIADO
+R4  = NO INICIADO
+
+Garantía I  = NO_PROBADO
+Garantía II = NO_PROBADO
+
+Sec.6 = ABIERTA
+```
+
+El cierre no acredita paridad diagnóstica exacta `E***`, serializador canónico Rust completo, API Rust pública de alto nivel, compatibilidad universal entre navegadores, autonomía completa de distribución, `ConflictOperator`/J2.3 ni `FFL-D`.
+
+La evidencia y los límites quedan desarrollados en `ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md`.
+
 ## 5. Contrato diagnóstico y correspondencia funcional
 
 Los documentos principales son:
@@ -143,6 +171,8 @@ Estas limitaciones quedan registradas como deuda o como capacidades no represent
 
 El trabajo posterior derivado de FFL-E pertenece a una nueva fase de especificación e implementación: identidad y agrupación de parámetros, salida terminal tipada, cadenas de representación, requisitos de representación de operaciones, certificados de recuperabilidad y diagnóstico de representación insuficiente. Ninguna de estas capacidades se atribuye todavía a la implementación.
 
+El cierre integral de R0 tampoco transforma estas deudas en capacidades realizadas. Sus límites propios se enumeran en el acta de cierre y permanecen sujetos a las fases o frentes que correspondan.
+
 ## 8. Control de evolución y evidencia
 
 ### Registro de evolución
@@ -167,4 +197,4 @@ El orden aplicable continúa siendo:
 
 `doctrina y matemática del Sistema SV → especificación → implementación → diagnóstico → prueba → evidencia`.
 
-Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. El cierre de FFL-E deja fijado el contrato que deberá gobernar la siguiente ampliación versionada del lenguaje; no declara implementadas las capacidades que describe.
+Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. El cierre de R0 deja cerrada únicamente su primera realización soberana del núcleo semántico; no inicia R1–R4 ni acredita las Garantías I o II.
