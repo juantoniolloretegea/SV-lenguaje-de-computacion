@@ -3,6 +3,25 @@
 //! Este módulo fija las distinciones nominales mínimas que las fases de
 //! autoridad, mediación y fallo cerrado necesitan conservar. No concede
 //! autoridad, no decide permisos y no ejecuta efectos protegidos.
+//!
+//! Las referencias protegidas no pueden fabricarse desde un identificador por
+//! la API pública:
+//!
+//! ```compile_fail
+//! use sv_core::{AuthorityRef, ControlId};
+//!
+//! let id = ControlId::new("authority:1").unwrap();
+//! let _authority = AuthorityRef::from_constituted_id(id);
+//! ```
+//!
+//! Los resultados técnicos de comprobación tampoco pueden convertirse en un
+//! valor ternario del Lenguaje:
+//!
+//! ```compile_fail
+//! use sv_core::{CheckResult, Tri};
+//!
+//! let _tri: Tri = CheckResult::NotVerifiable.into();
+//! ```
 
 use core::fmt;
 
@@ -163,17 +182,3 @@ opaque_control_ref!(
     ExerciseRef,
     "Referencia a un ejercicio materializado; no confiere titularidad por sí mismo."
 );
-
-/// Las categorías protegidas no pueden fabricarse desde un identificador por
-/// la API pública.
-///
-/// ```compile_fail
-/// use sv_core::{AuthorityRef, ControlId};
-///
-/// let id = ControlId::new("authority:1").unwrap();
-/// let _authority = AuthorityRef::from_constituted_id(id);
-/// ```
-///
-/// La construcción existe únicamente dentro de `sv_core`, donde los cortes
-/// posteriores de R1 podrán ligarla a las condiciones contractuales.
-pub fn protected_references_are_core_constructed() {}
