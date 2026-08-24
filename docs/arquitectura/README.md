@@ -50,6 +50,8 @@ La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repos
 ```text
 R0 = CERRADO
 R1 = ABIERTO
+R1-0 = CERRADO
+R1-1 = NO INICIADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -57,5 +59,7 @@ R4 = NO INICIADO
 Garantía I = NO_PROBADO
 Garantía II = NO_PROBADO
 ```
+
+R1-0 fija los tipos cerrados y las fronteras de construcción del control soberano. No concede autoridad, no decide permisos y no ejecuta efectos protegidos.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
