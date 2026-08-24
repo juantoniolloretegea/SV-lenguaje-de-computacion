@@ -31,6 +31,8 @@ no es una afirmación fabricada por el propio núcleo
 
 `sv_core` no incorpora en R1-2 un constructor público capaz de acuñar esa premisa. En consecuencia, los adaptadores nativo y WebAssembly no pueden autodeclararla mediante la API ordinaria del núcleo.
 
+La premisa es de un solo uso dentro del modelo intra-proceso: una génesis completada la consume y la misma instancia no puede iniciar otra continuidad lógica. Un rechazo previo a la constitución no la consume.
+
 La acreditación material de la procedencia, identidad, integridad o legitimidad externa de esa premisa queda fuera de R1. R1-2 sólo materializa la consecuencia intra-proceso de consumir una premisa ya dada dentro del modelo declarado.
 
 ## 3. Continuidad lógica de R1
@@ -69,16 +71,17 @@ T-0 es la única transición productiva de autoridad materializada en R1-2.
 
 Para que una T-0 pueda completar una génesis deben satisfacerse conjuntamente:
 
-1. existe una premisa constituyente externa opaca;
+1. existe una premisa constituyente externa opaca no consumida;
 2. la continuidad lógica está `Uninhabited`;
 3. la propuesta contiene al menos una forma inicial;
 4. la propuesta contiene al menos una autoridad inicial;
 5. las referencias de forma son únicas dentro de la constitución;
 6. las referencias de autoridad son únicas dentro de la constitución;
 7. las autoridades propuestas tienen `E_max` y `D_a` estructuralmente coherentes;
-8. toda autoridad previa exigida por una forma inicial queda identificada dentro del mismo estado inicial constituido.
+8. toda forma T-G, T-C o T-R declara una autoridad previa requerida;
+9. toda autoridad previa exigida por una forma inicial queda identificada dentro del mismo estado inicial constituido.
 
-Una génesis rechazada no consume T-0 ni cambia el estado de ocupación.
+Una génesis rechazada no consume T-0, no cambia el estado de ocupación y no consume la premisa constituyente.
 
 Una génesis completada produce conjuntamente:
 
@@ -86,6 +89,7 @@ Una génesis completada produce conjuntamente:
 formas iniciales constituidas
 + autoridades iniciales constituidas
 + continuidad = Inhabited
++ premisa constituyente = consumida
 ```
 
 Desde ese instante:
@@ -150,6 +154,8 @@ T-R = BLOQUEADA_PENDIENTE_DE_REQUISITOS
 
 La razón es estructural: R1-3 todavía no ha materializado `Req(F,e | C)` ni los resultados aplicables `D-A/D-R/D-N`. Permitir cambios efectivos antes de esa frontera permitiría eludir la condición de fallo cerrado que R1 debe demostrar.
 
+Aunque una forma T-G, T-C o T-R pueda formar parte del conjunto inicial constituido por T-0, su descriptor debe identificar la autoridad previa requerida y su ejecución continúa bloqueada hasta la materialización de R1-3 y de las etapas posteriores que correspondan.
+
 El bloqueo no produce `Tri.U`, no constituye autoridad y no equivale a una clausura semántica.
 
 ## 8. Clasificación no discrecional
@@ -162,7 +168,7 @@ R1-2 no incorpora todavía ejecución protegida. Sólo fija la relación entre c
 
 Los objetos propuestos para génesis son datos de construcción y no autoridad.
 
-La conversión desde propuesta a forma o autoridad constituida sólo puede producirse dentro de la puerta T-0 de R1-2 y mediante una capacidad interna sellada que no forma parte de la API ordinaria.
+La conversión desde propuesta a forma o autoridad constituida sólo puede producirse dentro de la puerta T-0 de R1-2. La operación consumidora de T-0 puede ser invocada únicamente si ya existe una `ExternalGenesisPremise`; `sv_core` no ofrece una operación pública que permita acuñar esa capacidad opaca.
 
 No existe un constructor público alternativo para:
 
@@ -172,9 +178,10 @@ EffectDescriptor
 EffectEnvelope
 GovernedDomain
 ConstitutedAuthority
+ExternalGenesisPremise
 ```
 
-La mera posesión de referencias nominales tampoco permite construir esos objetos.
+La mera posesión de referencias nominales tampoco permite construir esos objetos constituidos ni fabricar la premisa.
 
 ## 10. Pruebas obligatorias
 
@@ -182,16 +189,19 @@ R1-2 deberá ejercer al menos los casos siguientes:
 
 1. T-0 válida sobre continuidad `Uninhabited` constituye el estado inicial y deja la continuidad `Inhabited`;
 2. segunda T-0 sobre la misma continuidad falla;
-3. una génesis vacía falla sin consumir T-0;
-4. duplicar `FormRef` falla antes de constituir;
-5. duplicar `AuthorityRef` falla antes de constituir;
-6. una autoridad con efecto fuera de su contexto falla;
-7. una autoridad con efecto fuera de `D_a` falla;
+3. una génesis vacía falla sin consumir T-0 ni la premisa;
+4. una premisa ya consumida no puede iniciar otra génesis;
+5. duplicar `FormRef` falla antes de constituir;
+6. duplicar `AuthorityRef` falla antes de constituir;
+7. una forma T-G/T-C/T-R sin autoridad previa declarada falla antes de constituir;
 8. una forma que exige una autoridad no incluida en el estado inicial falla;
-9. T-I, T-V, T-H y T-E se clasifican como no autorizantes;
-10. T-G, T-C y T-R quedan bloqueadas hasta R1-3;
-11. ninguna denegación o bloqueo se proyecta a `Tri`;
-12. las regresiones completas de R0 permanecen correctas.
+9. una autoridad con efecto fuera de su contexto falla;
+10. una autoridad con efecto fuera de `D_a` falla;
+11. T-I, T-V, T-H y T-E se clasifican como no autorizantes;
+12. T-G, T-C y T-R quedan bloqueadas hasta R1-3;
+13. un consumidor externo no puede construir `ExternalGenesisPremise` mediante la API ordinaria;
+14. ninguna denegación o bloqueo se proyecta a `Tri`;
+15. las regresiones completas de R0 permanecen correctas.
 
 ## 11. Límites
 
@@ -219,14 +229,16 @@ Tampoco abre R2, R3 ni R4.
 R1-2 podrá cerrarse cuando exista evidencia reproducible de que:
 
 1. T-0 es la única vía productiva de autoridad del corte;
-2. T-0 requiere simultáneamente premisa constituyente y continuidad no habitada;
+2. T-0 requiere simultáneamente premisa constituyente no consumida y continuidad no habitada;
 3. una segunda T-0 no puede ejecutarse sobre la misma continuidad lógica;
-4. una génesis rechazada no altera el estado;
-5. `FormRef` y `AuthorityRef` no admiten duplicaciones constitutivas dentro del estado inicial;
-6. T-I/T-V/T-H/T-E no producen autoridad;
-7. T-G/T-C/T-R no aplican cambios antes de R1-3;
-8. ninguna vía ordinaria del adaptador puede fabricar la premisa o los objetos constituidos;
-9. R0 permanece sin regresiones.
+4. una premisa consumida no puede reutilizarse para otra génesis;
+5. una génesis rechazada no altera el estado ni consume la premisa;
+6. `FormRef` y `AuthorityRef` no admiten duplicaciones constitutivas dentro del estado inicial;
+7. las formas T-G/T-C/T-R no nacen sin autoridad previa declarada;
+8. T-I/T-V/T-H/T-E no producen autoridad;
+9. T-G/T-C/T-R no aplican cambios antes de R1-3;
+10. ninguna vía ordinaria del adaptador puede fabricar la premisa o los objetos constituidos;
+11. R0 permanece sin regresiones.
 
 Hasta ese cierre:
 
