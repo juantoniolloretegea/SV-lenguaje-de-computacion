@@ -19,39 +19,19 @@ function unpackResult(packed) {
   };
 }
 
-function copyInput(exports, text) {
+function writeInternalBuffer(exports, exportName, text) {
   const bytes = encoder.encode(text);
-  const ptr = exports.sv_alloc(bytes.length);
+  const ptr = exports[exportName](bytes.length);
   new Uint8Array(exports.memory.buffer, ptr, bytes.length).set(bytes);
-  return { ptr, len: bytes.length };
 }
 
 function compileCase(exports, source, fileName) {
-  const sourceBuffer = copyInput(exports, source);
-  const fileBuffer = copyInput(exports, fileName);
+  writeInternalBuffer(exports, "sv_source_buffer", source);
+  writeInternalBuffer(exports, "sv_file_buffer", fileName);
 
-  let packed;
-  try {
-    packed = exports.sv_compile_svp_json(
-      sourceBuffer.ptr,
-      sourceBuffer.len,
-      fileBuffer.ptr,
-      fileBuffer.len,
-    );
-  } finally {
-    exports.sv_free(sourceBuffer.ptr, sourceBuffer.len);
-    exports.sv_free(fileBuffer.ptr, fileBuffer.len);
-  }
-
-  const result = unpackResult(packed);
-  let text;
-  try {
-    const bytes = new Uint8Array(exports.memory.buffer, result.ptr, result.len);
-    text = decoder.decode(bytes.slice());
-  } finally {
-    exports.sv_free(result.ptr, result.len);
-  }
-
+  const result = unpackResult(exports.sv_compile_svp_json());
+  const bytes = new Uint8Array(exports.memory.buffer, result.ptr, result.len);
+  const text = decoder.decode(bytes.slice());
   return { error: result.error, text };
 }
 
@@ -69,7 +49,12 @@ async function main() {
   const { instance } = await WebAssembly.instantiate(wasmBytes, {});
   const exports = instance.exports;
 
-  const required = ["memory", "sv_alloc", "sv_free", "sv_compile_svp_json"];
+  const required = [
+    "memory",
+    "sv_source_buffer",
+    "sv_file_buffer",
+    "sv_compile_svp_json",
+  ];
   for (const name of required) {
     if (!(name in exports)) {
       throw new Error(`export WebAssembly ausente: ${name}`);
