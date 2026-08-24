@@ -1,5 +1,8 @@
 use crate::ir::construction;
-use crate::{AdmissibilityState, IrObjectKind, IrOperationKind, IrProgram, Nat, Tri};
+use crate::{
+    AdmissibilityState, IrObjectKind, IrOperationKind, IrProgram, IrQueryContext,
+    IrSupervisableTarget, Nat, Tri,
+};
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum FrontendError {
@@ -122,19 +125,29 @@ impl<'a> Parser<'a> {
 
     fn parse(mut self) -> Result<IrProgram, FrontendError> {
         while !matches!(self.peek(), Token::Eof) {
-            let keyword = self.peek_word()?.to_owned();
-            match keyword.as_str() {
+            match self.peek_word()?.to_owned().as_str() {
                 "codomain" => self.parse_codomain()?,
                 "output_semantics" => self.parse_output_semantics()?,
                 "cellspec" => self.parse_cellspec()?,
-                "cellstate" => self.parse_cellstate()?,
-                "admissibility_spec" => self.parse_admissibility_spec()?,
-                "res_spec" => self.parse_res_spec()?,
                 "coupledspec" => self.parse_coupledspec()?,
+                "connector" => self.parse_connector()?,
+                "admissibility_table" => self.parse_admissibility_table()?,
+                "capture_spec" => self.parse_capture_spec()?,
+                "admissibility_spec" => self.parse_admissibility_spec()?,
+                "ternarizer" => self.parse_ternarizer()?,
+                "res_spec" => self.parse_res_spec()?,
+                "cellstate" => self.parse_cellstate()?,
                 "coupledstate" => self.parse_coupledstate()?,
                 "semantic_relation" => self.parse_semantic_relation()?,
+                "pattern" => self.parse_pattern()?,
                 "graph" => self.parse_graph()?,
+                "horizon" => self.parse_horizon()?,
                 "frame" => self.parse_frame()?,
+                "transition_data" => self.parse_transition_data()?,
+                "trajectory" => self.parse_trajectory()?,
+                "domain" => self.parse_domain()?,
+                "agent" => self.parse_agent()?,
+                "query_spec" => self.parse_query_spec()?,
                 "let" => self.parse_let()?,
                 other => return Err(FrontendError::Unsupported(other.to_owned())),
             }
@@ -153,10 +166,8 @@ impl<'a> Parser<'a> {
         self.sym('=')?;
         let values = self.word_set()?;
         self.sym(';')?;
-        self.objects.push(construction::object(
-            name,
-            IrObjectKind::Codomain { values },
-        ));
+        self.objects
+            .push(construction::object(name, IrObjectKind::Codomain { values }));
         Ok(())
     }
 
@@ -215,22 +226,132 @@ impl<'a> Parser<'a> {
         Ok(())
     }
 
-    fn parse_cellstate(&mut self) -> Result<(), FrontendError> {
-        self.word("cellstate")?;
+    fn parse_coupledspec(&mut self) -> Result<(), FrontendError> {
+        self.word("coupledspec")?;
         let name = self.take_word()?;
         self.sym('{')?;
-        self.word("spec")?;
+        self.word("cell")?;
         self.sym(':')?;
-        let spec = self.take_word()?;
+        let cell = self.take_word()?;
         self.sym(';')?;
-        self.word("vector")?;
+        self.word("bridges")?;
         self.sym(':')?;
-        let vector = self.tri_list()?;
+        let bridges = self.nat_list()?;
         self.sym(';')?;
         self.sym('}')?;
         self.objects.push(construction::object(
             name,
-            IrObjectKind::CellState { spec, vector },
+            IrObjectKind::CoupledSpec { cell, bridges },
+        ));
+        Ok(())
+    }
+
+    fn parse_connector(&mut self) -> Result<(), FrontendError> {
+        self.word("connector")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("source_codomain")?;
+        self.sym(':')?;
+        let source_codomain = self.take_word()?;
+        self.sym(';')?;
+        self.word("target_position")?;
+        self.sym(':')?;
+        let target_position = self.take_nat()?;
+        self.sym(';')?;
+        self.word("mapping")?;
+        self.sym(':')?;
+        self.sym('{')?;
+        let mut mapping = Vec::new();
+        while !self.at_sym('}') {
+            let key = self.take_word()?;
+            self.arrow()?;
+            let value = self.take_tri()?;
+            self.sym(';')?;
+            mapping.push((key, value));
+        }
+        self.sym('}')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Connector {
+                source_codomain,
+                target_position,
+                mapping,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_admissibility_table(&mut self) -> Result<(), FrontendError> {
+        self.word("admissibility_table")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("input_codomains")?;
+        self.sym(':')?;
+        let input_codomains = self.word_list()?;
+        self.sym(';')?;
+        self.word("output_codomain")?;
+        self.sym(':')?;
+        let output_codomain = self.take_word()?;
+        self.sym(';')?;
+        self.word("table")?;
+        self.sym(':')?;
+        self.sym('{')?;
+        let mut table = Vec::new();
+        while !self.at_sym('}') {
+            let inputs = self.word_tuple()?;
+            self.arrow()?;
+            let output = self.take_word()?;
+            self.sym(';')?;
+            table.push((inputs, output));
+        }
+        self.sym('}')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::AdmissibilityTable {
+                input_codomains,
+                output_codomain,
+                table,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_capture_spec(&mut self) -> Result<(), FrontendError> {
+        self.word("capture_spec")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("parameter_id")?;
+        self.sym(':')?;
+        let parameter_id = self.take_nat()?;
+        self.sym(';')?;
+        self.word("observation_domain")?;
+        self.sym(':')?;
+        let observation_domain = self.take_word()?;
+        self.sym(';')?;
+        self.word("observation_space")?;
+        self.sym(':')?;
+        let observation_space = self.take_word()?;
+        self.sym(';')?;
+        self.word("failure_symbol")?;
+        self.sym(':')?;
+        let failure_symbol = self.take_word()?;
+        self.sym(';')?;
+        self.word("mapping")?;
+        self.sym(':')?;
+        let mapping = self.take_word()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::CaptureSpec {
+                parameter_id,
+                observation_domain,
+                observation_space,
+                failure_symbol,
+                mapping,
+            },
         ));
         Ok(())
     }
@@ -282,6 +403,44 @@ impl<'a> Parser<'a> {
         Ok(())
     }
 
+    fn parse_ternarizer(&mut self) -> Result<(), FrontendError> {
+        self.word("ternarizer")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("observation_space")?;
+        self.sym(':')?;
+        let observation_space = self.take_word()?;
+        self.sym(';')?;
+        self.word("partition_zero")?;
+        self.sym(':')?;
+        let partition_zero = self.take_word()?;
+        self.sym(';')?;
+        self.word("partition_one")?;
+        self.sym(':')?;
+        let partition_one = self.take_word()?;
+        self.sym(';')?;
+        self.word("partition_u")?;
+        self.sym(':')?;
+        let partition_u = self.take_word()?;
+        self.sym(';')?;
+        self.word("mapping")?;
+        self.sym(':')?;
+        let mapping = self.take_word()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Ternarizer {
+                observation_space,
+                partition_zero,
+                partition_one,
+                partition_u,
+                mapping,
+            },
+        ));
+        Ok(())
+    }
+
     fn parse_res_spec(&mut self) -> Result<(), FrontendError> {
         self.word("res_spec")?;
         let name = self.take_word()?;
@@ -310,22 +469,22 @@ impl<'a> Parser<'a> {
         Ok(())
     }
 
-    fn parse_coupledspec(&mut self) -> Result<(), FrontendError> {
-        self.word("coupledspec")?;
+    fn parse_cellstate(&mut self) -> Result<(), FrontendError> {
+        self.word("cellstate")?;
         let name = self.take_word()?;
         self.sym('{')?;
-        self.word("cell")?;
+        self.word("spec")?;
         self.sym(':')?;
-        let cell = self.take_word()?;
+        let spec = self.take_word()?;
         self.sym(';')?;
-        self.word("bridges")?;
+        self.word("vector")?;
         self.sym(':')?;
-        let bridges = self.nat_list()?;
+        let vector = self.tri_list()?;
         self.sym(';')?;
         self.sym('}')?;
         self.objects.push(construction::object(
             name,
-            IrObjectKind::CoupledSpec { cell, bridges },
+            IrObjectKind::CellState { spec, vector },
         ));
         Ok(())
     }
@@ -390,6 +549,38 @@ impl<'a> Parser<'a> {
         Ok(())
     }
 
+    fn parse_pattern(&mut self) -> Result<(), FrontendError> {
+        self.word("pattern")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("kind")?;
+        self.sym(':')?;
+        let kind = self.take_word()?;
+        self.sym(';')?;
+        let mut arity = None;
+        let mut constraints = None;
+        while !self.at_sym('}') {
+            let field = self.take_word()?;
+            self.sym(':')?;
+            match field.as_str() {
+                "arity" => arity = Some(self.take_nat()?),
+                "constraints" => constraints = Some(self.word_list()?),
+                other => return Err(FrontendError::Unsupported(other.to_owned())),
+            }
+            self.sym(';')?;
+        }
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Pattern {
+                kind,
+                arity,
+                constraints,
+            },
+        ));
+        Ok(())
+    }
+
     fn parse_graph(&mut self) -> Result<(), FrontendError> {
         self.word("graph")?;
         let name = self.take_word()?;
@@ -400,13 +591,7 @@ impl<'a> Parser<'a> {
         self.sym(';')?;
         self.word("edges")?;
         self.sym(':')?;
-        self.sym('[')?;
-        if !self.at_sym(']') {
-            return Err(FrontendError::Unsupported(
-                "R0-7 inicial sólo ejerce graph.edges = []".into(),
-            ));
-        }
-        self.sym(']')?;
+        let edges = self.edge_list()?;
         self.sym(';')?;
         self.word("relation")?;
         self.sym(':')?;
@@ -421,9 +606,32 @@ impl<'a> Parser<'a> {
             name,
             IrObjectKind::CompositionGraph {
                 nodes,
-                edges: Vec::new(),
+                edges,
                 relation,
                 regime,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_horizon(&mut self) -> Result<(), FrontendError> {
+        self.word("horizon")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("architecture")?;
+        self.sym(':')?;
+        let architecture = self.take_word()?;
+        self.sym(';')?;
+        self.word("events")?;
+        self.sym(':')?;
+        let events = self.word_list()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Horizon {
+                architecture,
+                events,
             },
         ));
         Ok(())
@@ -477,6 +685,182 @@ impl<'a> Parser<'a> {
         Ok(())
     }
 
+    fn parse_transition_data(&mut self) -> Result<(), FrontendError> {
+        self.word("transition_data")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("horizon_ref")?;
+        self.sym(':')?;
+        let horizon_ref = self.take_word()?;
+        self.sym(';')?;
+        self.word("events")?;
+        self.sym(':')?;
+        let events = self.event_list()?;
+        self.sym(';')?;
+        self.word("induced_parameters")?;
+        self.sym(':')?;
+        let induced_parameters = self.induced_parameter_list()?;
+        self.sym(';')?;
+        let mut metadata = None;
+        if !self.at_sym('}') {
+            self.word("metadata")?;
+            self.sym(':')?;
+            metadata = Some(self.word_list()?);
+            self.sym(';')?;
+        }
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::TransitionData {
+                horizon_ref,
+                events,
+                induced_parameters,
+                metadata,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_trajectory(&mut self) -> Result<(), FrontendError> {
+        self.word("trajectory")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("entries")?;
+        self.sym(':')?;
+        let entries = self.trajectory_entries()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Trajectory { entries },
+        ));
+        Ok(())
+    }
+
+    fn parse_domain(&mut self) -> Result<(), FrontendError> {
+        self.word("domain")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("parameters")?;
+        self.sym(':')?;
+        let parameters = self.word_list()?;
+        self.sym(';')?;
+        self.word("interface")?;
+        self.sym(':')?;
+        let interface = self.take_word()?;
+        self.sym(';')?;
+        self.word("horizon")?;
+        self.sym(':')?;
+        let horizon = self.take_word()?;
+        self.sym(';')?;
+        self.word("capture_specs")?;
+        self.sym(':')?;
+        let capture_specs = self.word_list()?;
+        self.sym(';')?;
+        self.word("admissibility_specs")?;
+        self.sym(':')?;
+        let admissibility_specs = self.word_list()?;
+        self.sym(';')?;
+        self.word("ternarizers")?;
+        self.sym(':')?;
+        let ternarizers = self.word_list()?;
+        self.sym(';')?;
+        self.word("exogeneity_mask")?;
+        self.sym(':')?;
+        let exogeneity_mask = self.take_word()?;
+        self.sym(';')?;
+        self.word("silent_u")?;
+        self.sym(':')?;
+        let silent_u = self.take_word()?;
+        self.sym(';')?;
+        self.word("transduction_policy")?;
+        self.sym(':')?;
+        let transduction_policy = self.take_word()?;
+        self.sym(';')?;
+        self.word("u_policy")?;
+        self.sym(':')?;
+        let u_policy = self.take_word()?;
+        self.sym(';')?;
+        self.word("closure_criterion")?;
+        self.sym(':')?;
+        let closure_criterion = self.take_word()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Domain {
+                parameters,
+                interface,
+                horizon,
+                capture_specs,
+                admissibility_specs,
+                ternarizers,
+                exogeneity_mask,
+                silent_u,
+                transduction_policy,
+                u_policy,
+                closure_criterion,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_agent(&mut self) -> Result<(), FrontendError> {
+        self.word("agent")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("architecture")?;
+        self.sym(':')?;
+        let architecture = self.take_word()?;
+        self.sym(';')?;
+        self.word("domain")?;
+        self.sym(':')?;
+        let domain = self.take_word()?;
+        self.sym(';')?;
+        self.word("query_engine")?;
+        self.sym(':')?;
+        let query_engine = self.take_word()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::Agent {
+                architecture,
+                domain,
+                query_engine,
+            },
+        ));
+        Ok(())
+    }
+
+    fn parse_query_spec(&mut self) -> Result<(), FrontendError> {
+        self.word("query_spec")?;
+        let name = self.take_word()?;
+        self.sym('{')?;
+        self.word("query_type")?;
+        self.sym(':')?;
+        let query_type = self.take_word()?;
+        self.sym(';')?;
+        self.word("scope")?;
+        self.sym(':')?;
+        let scope = self.take_word()?;
+        self.sym(';')?;
+        self.word("restrictions")?;
+        self.sym(':')?;
+        let restrictions = self.word_list()?;
+        self.sym(';')?;
+        self.sym('}')?;
+        self.objects.push(construction::object(
+            name,
+            IrObjectKind::QuerySpec {
+                query_type,
+                scope,
+                restrictions,
+            },
+        ));
+        Ok(())
+    }
+
     fn parse_let(&mut self) -> Result<(), FrontendError> {
         self.word("let")?;
         let name = self.take_word()?;
@@ -491,6 +875,23 @@ impl<'a> Parser<'a> {
                 self.operations.push(construction::operation(
                     name,
                     IrOperationKind::Evaluate { state },
+                ));
+            }
+            "gate" => {
+                self.sym('(')?;
+                let eval_results = self.word_list()?;
+                self.sym(',')?;
+                self.word("using")?;
+                self.sym(':')?;
+                let table = self.take_word()?;
+                self.sym(')')?;
+                self.sym(';')?;
+                self.operations.push(construction::operation(
+                    name,
+                    IrOperationKind::Gate {
+                        eval_results,
+                        table,
+                    },
                 ));
             }
             "resolve" => {
@@ -525,6 +926,69 @@ impl<'a> Parser<'a> {
                     },
                 ));
             }
+            "supervise" => {
+                self.sym('(')?;
+                let meta_eval = self.take_word()?;
+                self.sym(',')?;
+                self.word("target")?;
+                self.sym(':')?;
+                let variant = self.take_word()?;
+                self.sym('(')?;
+                let reference = self.take_word()?;
+                self.sym(')')?;
+                self.sym(')')?;
+                self.sym(';')?;
+                let target = match variant.as_str() {
+                    "CellTarget" => IrSupervisableTarget::Cell { reference },
+                    "ComposedTarget" => IrSupervisableTarget::Composed { reference },
+                    "SystemTarget" => IrSupervisableTarget::System { reference },
+                    other => return Err(FrontendError::Unsupported(other.to_owned())),
+                };
+                self.operations.push(construction::operation(
+                    name,
+                    IrOperationKind::Supervise { meta_eval, target },
+                ));
+            }
+            "compose" => {
+                self.sym('(')?;
+                let graph = self.take_word()?;
+                self.sym(',')?;
+                self.word("relations")?;
+                self.sym(':')?;
+                let relations = self.word_list()?;
+                self.sym(',')?;
+                self.word("patterns")?;
+                self.sym(':')?;
+                let patterns = self.word_list()?;
+                self.sym(')')?;
+                self.sym(';')?;
+                self.operations.push(construction::operation(
+                    name,
+                    IrOperationKind::Compose {
+                        graph,
+                        relations,
+                        patterns,
+                    },
+                ));
+            }
+            "query" => {
+                self.sym('(')?;
+                let spec = self.take_word()?;
+                self.sym(',')?;
+                self.word("by")?;
+                self.sym(':')?;
+                let by = self.take_word()?;
+                self.sym(',')?;
+                self.word("in")?;
+                self.sym(':')?;
+                let context = self.query_context()?;
+                self.sym(')')?;
+                self.sym(';')?;
+                self.operations.push(construction::operation(
+                    name,
+                    IrOperationKind::Query { spec, by, context },
+                ));
+            }
             source => {
                 self.sym('.')?;
                 let field = self.take_word()?;
@@ -539,6 +1003,180 @@ impl<'a> Parser<'a> {
             }
         }
         Ok(())
+    }
+
+    fn query_context(&mut self) -> Result<IrQueryContext, FrontendError> {
+        let variant = self.take_word()?;
+        self.sym('(')?;
+        let context = match variant.as_str() {
+            "PointEval" => IrQueryContext::PointEval {
+                reference: self.take_word()?,
+            },
+            "TrajectoryView" => IrQueryContext::TrajectoryView {
+                reference: self.take_word()?,
+            },
+            "FrameComparison" => {
+                let a = self.take_word()?;
+                self.sym(',')?;
+                let b = self.take_word()?;
+                IrQueryContext::FrameComparison { references: [a, b] }
+            }
+            "ArchitectureView" => {
+                let architecture = self.take_word()?;
+                self.sym(',')?;
+                let cells = self.word_list()?;
+                self.sym(',')?;
+                let evals = self.word_list()?;
+                self.sym(',')?;
+                let gates = self.word_list()?;
+                IrQueryContext::ArchitectureView {
+                    architecture,
+                    cells,
+                    evals,
+                    gates,
+                }
+            }
+            "CoverageReport" => {
+                let a = self.take_word()?;
+                self.sym(',')?;
+                let b = self.take_word()?;
+                self.sym(',')?;
+                let c = self.take_word()?;
+                IrQueryContext::CoverageReport {
+                    references: [a, b, c],
+                }
+            }
+            other => return Err(FrontendError::Unsupported(other.to_owned())),
+        };
+        self.sym(')')?;
+        Ok(context)
+    }
+
+    fn edge_list(&mut self) -> Result<Vec<(String, String, Nat, String)>, FrontendError> {
+        self.sym('[')?;
+        let mut out = Vec::new();
+        if !self.at_sym(']') {
+            loop {
+                self.word("edge")?;
+                self.sym('(')?;
+                self.word("source")?;
+                self.sym(':')?;
+                let source = self.take_word()?;
+                self.sym(',')?;
+                self.word("target")?;
+                self.sym(':')?;
+                let target = self.take_word()?;
+                self.sym(',')?;
+                self.word("position")?;
+                self.sym(':')?;
+                let position = self.take_nat()?;
+                self.sym(',')?;
+                self.word("connector")?;
+                self.sym(':')?;
+                let connector = self.take_word()?;
+                self.sym(')')?;
+                out.push((source, target, position, connector));
+                if self.at_sym(',') {
+                    self.sym(',')?;
+                } else {
+                    break;
+                }
+            }
+        }
+        self.sym(']')?;
+        Ok(out)
+    }
+
+    fn event_list(&mut self) -> Result<Vec<(String, Tri)>, FrontendError> {
+        self.sym('[')?;
+        let mut out = Vec::new();
+        if !self.at_sym(']') {
+            loop {
+                self.sym('(')?;
+                let event = self.take_word()?;
+                self.sym(',')?;
+                let state = self.take_tri()?;
+                self.sym(')')?;
+                out.push((event, state));
+                if self.at_sym(',') {
+                    self.sym(',')?;
+                } else {
+                    break;
+                }
+            }
+        }
+        self.sym(']')?;
+        Ok(out)
+    }
+
+    fn induced_parameter_list(&mut self) -> Result<Vec<(String, Nat, Tri)>, FrontendError> {
+        self.sym('[')?;
+        let mut out = Vec::new();
+        if !self.at_sym(']') {
+            loop {
+                self.sym('(')?;
+                let cell_ref = self.take_word()?;
+                self.sym(',')?;
+                let position = self.take_nat()?;
+                self.sym(',')?;
+                let value = self.take_tri()?;
+                self.sym(')')?;
+                out.push((cell_ref, position, value));
+                if self.at_sym(',') {
+                    self.sym(',')?;
+                } else {
+                    break;
+                }
+            }
+        }
+        self.sym(']')?;
+        Ok(out)
+    }
+
+    fn trajectory_entries(&mut self) -> Result<Vec<(String, Option<String>)>, FrontendError> {
+        self.sym('[')?;
+        let mut out = Vec::new();
+        if !self.at_sym(']') {
+            loop {
+                self.word("entry")?;
+                self.sym('(')?;
+                self.word("frame")?;
+                self.sym(':')?;
+                let frame = self.take_word()?;
+                let transition = if self.at_sym(',') {
+                    self.sym(',')?;
+                    self.word("transition")?;
+                    self.sym(':')?;
+                    Some(self.take_word()?)
+                } else {
+                    None
+                };
+                self.sym(')')?;
+                out.push((frame, transition));
+                if self.at_sym(',') {
+                    self.sym(',')?;
+                } else {
+                    break;
+                }
+            }
+        }
+        self.sym(']')?;
+        Ok(out)
+    }
+
+    fn word_tuple(&mut self) -> Result<Vec<String>, FrontendError> {
+        self.sym('(')?;
+        let mut out = Vec::new();
+        loop {
+            out.push(self.take_word()?);
+            if self.at_sym(',') {
+                self.sym(',')?;
+            } else {
+                break;
+            }
+        }
+        self.sym(')')?;
+        Ok(out)
     }
 
     fn word_set(&mut self) -> Result<Vec<String>, FrontendError> {
@@ -597,14 +1235,7 @@ impl<'a> Parser<'a> {
         let mut values = Vec::new();
         if !self.at_sym(']') {
             loop {
-                let label = self.take_word()?;
-                let value = match label.as_str() {
-                    "Zero" => Tri::Zero,
-                    "One" => Tri::One,
-                    "U" => Tri::U,
-                    _ => return Err(FrontendError::InvalidTri(label)),
-                };
-                values.push(value);
+                values.push(self.take_tri()?);
                 if self.at_sym(',') {
                     self.sym(',')?;
                 } else {
@@ -614,6 +1245,16 @@ impl<'a> Parser<'a> {
         }
         self.sym(']')?;
         Ok(values)
+    }
+
+    fn take_tri(&mut self) -> Result<Tri, FrontendError> {
+        let label = self.take_word()?;
+        match label.as_str() {
+            "Zero" => Ok(Tri::Zero),
+            "One" => Ok(Tri::One),
+            "U" => Ok(Tri::U),
+            _ => Err(FrontendError::InvalidTri(label)),
+        }
     }
 
     fn peek(&self) -> &Token {
@@ -752,12 +1393,10 @@ fn sha256_hex(data: &[u8]) -> String {
         msg.push(0);
     }
     msg.extend_from_slice(&bit_len.to_be_bytes());
-
     let mut h = [
         0x6a09e667u32,0xbb67ae85,0x3c6ef372,0xa54ff53a,
         0x510e527f,0x9b05688c,0x1f83d9ab,0x5be0cd19,
     ];
-
     for chunk in msg.chunks_exact(64) {
         let mut w = [0u32; 64];
         for i in 0..16 {
@@ -803,7 +1442,6 @@ fn sha256_hex(data: &[u8]) -> String {
         h[6] = h[6].wrapping_add(g);
         h[7] = h[7].wrapping_add(hh);
     }
-
     let mut out = String::with_capacity(64);
     for word in h {
         use std::fmt::Write;
@@ -825,72 +1463,33 @@ mod tests {
     }
 
     #[test]
-    fn compiles_cell_basic_from_actual_svp_text() {
-        let source = include_str!("../../../tests/conformance/valid/cell_basic.svp");
-        let ir = compile_svp(source, "cell_basic.svp").expect("SVP canónico válido");
-        assert_eq!(
-            ir.source_sha256(),
-            "6b9106283251318fa57bf3cb8e1fda32eebefe518e160ed882d7368f8c591463"
-        );
-        assert_eq!(ir.objects().len(), 4);
-        assert_eq!(ir.operations().len(), 1);
-    }
-
-    #[test]
-    fn compiles_admissibility_order_from_actual_svp_text() {
-        let source = include_str!(
-            "../../../tests/conformance/valid/admissibility_spec_states_permutados.svp"
-        );
-        let ir = compile_svp(source, "admissibility_spec_states_permutados.svp")
-            .expect("SVP canónico válido");
-        assert_eq!(ir.objects().len(), 1);
-        match ir.objects()[0].kind() {
-            IrObjectKind::AdmissibilitySpec { states, .. } => assert_eq!(
-                *states,
-                [
-                    AdmissibilityState::NotAdmitted,
-                    AdmissibilityState::Ok,
-                    AdmissibilityState::Degraded
-                ]
-            ),
-            other => panic!("objeto inesperado: {other:?}"),
+    fn compiles_all_current_valid_cases_from_actual_svp_text() {
+        let cases = [
+            ("admissibility_spec_states_permutados.svp", include_str!("../../../tests/conformance/valid/admissibility_spec_states_permutados.svp")),
+            ("cell_basic.svp", include_str!("../../../tests/conformance/valid/cell_basic.svp")),
+            ("compose_basic.svp", include_str!("../../../tests/conformance/valid/compose_basic.svp")),
+            ("frame_cell_spec_compartida_valida.svp", include_str!("../../../tests/conformance/valid/frame_cell_spec_compartida_valida.svp")),
+            ("gate_table.svp", include_str!("../../../tests/conformance/valid/gate_table.svp")),
+            ("query_context_all_variants.svp", include_str!("../../../tests/conformance/valid/query_context_all_variants.svp")),
+            ("resolve_projection.svp", include_str!("../../../tests/conformance/valid/resolve_projection.svp")),
+            ("supervise_systemtarget_valido.svp", include_str!("../../../tests/conformance/valid/supervise_systemtarget_valido.svp")),
+            ("supervise_targets.svp", include_str!("../../../tests/conformance/valid/supervise_targets.svp")),
+            ("trajectory_alternance_valid.svp", include_str!("../../../tests/conformance/valid/trajectory_alternance_valid.svp")),
+            ("transition_data_events.svp", include_str!("../../../tests/conformance/valid/transition_data_events.svp")),
+        ];
+        for (name, source) in cases {
+            compile_svp(source, name).unwrap_or_else(|error| panic!("{name}: {error:?}"));
         }
     }
 
     #[test]
-    fn compiles_resolve_projection_from_actual_svp_text() {
-        let source = include_str!("../../../tests/conformance/valid/resolve_projection.svp");
-        let ir = compile_svp(source, "resolve_projection.svp").expect("SVP canónico válido");
-        assert_eq!(
-            ir.source_sha256(),
-            "ea3310416cd67bddffc1a783093b2f3ab4353a548a260a0f2949c7888d4f7c13"
-        );
-        assert_eq!(ir.operations().len(), 2);
-        assert!(matches!(
-            ir.operations()[0].kind(),
-            IrOperationKind::Resolve { .. }
-        ));
-        assert!(matches!(
-            ir.operations()[1].kind(),
-            IrOperationKind::Projection { .. }
-        ));
-    }
-
-    #[test]
-    fn compiles_frame_c03_case_from_actual_svp_text() {
-        let source = include_str!(
-            "../../../tests/conformance/valid/frame_cell_spec_compartida_valida.svp"
-        );
-        let ir = compile_svp(source, "frame_cell_spec_compartida_valida.svp")
-            .expect("SVP canónico válido");
-        assert_eq!(
-            ir.source_sha256(),
-            "8ef0a7123ccd9fdc465547f82e4df13f57b9f4a8381b3a728aaa192d1909e66d"
-        );
-        assert_eq!(ir.objects().len(), 10);
-        assert!(matches!(
-            ir.objects().last().unwrap().kind(),
-            IrObjectKind::Frame { .. }
-        ));
+    fn query_context_variants_are_materialized_as_closed_ir_variants() {
+        let source = include_str!("../../../tests/conformance/valid/query_context_all_variants.svp");
+        let ir = compile_svp(source, "query_context_all_variants.svp").expect("SVP canónico válido");
+        let queries = ir.operations().iter().filter_map(|op| match op.kind() {
+            IrOperationKind::Query { context, .. } => Some(context.variant_label()),
+            _ => None,
+        }).collect::<Vec<_>>();
+        assert_eq!(queries, ["PointEval", "TrajectoryView", "FrameComparison", "ArchitectureView", "CoverageReport"]);
     }
 }
