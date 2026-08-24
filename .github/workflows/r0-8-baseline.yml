@@ -1,0 +1,97 @@
+name: R0-8 Baseline nativa
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "rust/**"
+      - "tests/r0_8_baseline.py"
+      - "tests/r0_8_scale.py"
+      - "tests/r0_7_equivalence.py"
+      - "tests/conformance/valid/**"
+      - ".github/workflows/r0-8-baseline.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  native-baseline:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener revisión
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Fijar Rust 1.98.0
+        run: |
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          rustc --version
+          cargo --version
+
+      - name: Registrar entorno del ejecutor
+        run: |
+          uname -a
+          lscpu
+          free -h
+          python --version
+          git rev-parse HEAD
+          git rev-list --parents -n 1 HEAD
+          echo "source head: ${{ github.event.pull_request.head.sha }}"
+          echo "base head: ${{ github.event.pull_request.base.sha }}"
+
+      - name: Probar espacio de trabajo nativo
+        run: cargo test --manifest-path rust/Cargo.toml --workspace
+
+      - name: Construir SUT nativo en release
+        run: cargo build --manifest-path rust/Cargo.toml --release -p sv_native
+
+      - name: Revalidar equivalencia R0-7 con el binario release
+        run: python tests/r0_7_equivalence.py --rust-bin rust/target/release/sv-native
+
+      - name: Medir baseline nativa R0-8
+        run: |
+          mkdir -p artifacts/r0-8
+          python tests/r0_8_baseline.py \
+            --rust-bin rust/target/release/sv-native \
+            --output artifacts/r0-8/baseline-native.json \
+            --source-head "${{ github.event.pull_request.head.sha }}" \
+            --warmups 5 \
+            --runs 30 \
+            --rss-runs 5
+
+      - name: Medir curvas N01 N02 N03
+        run: |
+          python tests/r0_8_scale.py \
+            --rust-bin rust/target/release/sv-native \
+            --output artifacts/r0-8/scale-native.json \
+            --generated-dir artifacts/r0-8/generated \
+            --source-head "${{ github.event.pull_request.head.sha }}" \
+            --base-head "${{ github.event.pull_request.base.sha }}" \
+            --warmups 3 \
+            --runs 20 \
+            --rss-runs 3 \
+            --cpu-batch-runs 100
+
+      - name: Registrar identidad del SUT
+        run: |
+          sha256sum rust/target/release/sv-native > artifacts/r0-8/sv-native.sha256
+          wc -c rust/target/release/sv-native > artifacts/r0-8/sv-native.bytes
+          git rev-parse HEAD > artifacts/r0-8/git-checkout-head.txt
+          echo "${{ github.event.pull_request.head.sha }}" > artifacts/r0-8/git-source-head.txt
+          echo "${{ github.event.pull_request.base.sha }}" > artifacts/r0-8/git-base-head.txt
+          git rev-list --parents -n 1 HEAD > artifacts/r0-8/git-checkout-lineage.txt
+          rustc --version > artifacts/r0-8/rustc-version.txt
+          cargo --version > artifacts/r0-8/cargo-version.txt
+
+      - name: Preservar evidencia R0-8
+        uses: actions/upload-artifact@v4
+        with:
+          name: r0-8-baseline-native
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/r0-8/
+            rust/target/release/sv-native
+            rust/Cargo.lock
