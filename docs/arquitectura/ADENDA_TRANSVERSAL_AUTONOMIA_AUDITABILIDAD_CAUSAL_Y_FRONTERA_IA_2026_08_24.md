@@ -7,11 +7,12 @@
 
 ## 1. Objeto
 
-Esta adenda fija tres condiciones transversales para cualquier realización que pretenda conservar las propiedades del Lenguaje SV:
+Esta adenda fija cuatro condiciones transversales para cualquier realización que pretenda conservar las propiedades del Lenguaje SV:
 
 1. autonomía ejecutiva real del camino soberano;
 2. auditabilidad del camino causal material de las garantías reclamadas;
-3. frontera entre información externa, causalidad material, autoridad y confianza técnica.
+3. frontera entre información externa, causalidad material, autoridad y confianza técnica;
+4. confinamiento de los efectos y del consumo material de entradas ya admitidas.
 
 No modifica la gramática, la IR 0.3, `Tri`, `Frame`, C01–C03 ni las clases de transición de SEC.0.
 
@@ -177,7 +178,50 @@ La información externa no puede por sí misma crear o ampliar:
 - `Tri`;
 - clausura de `U`.
 
-## 8. Patrón de propuesta y verificación independiente
+## 8. Admisión, confianza y efectos posteriores
+
+La admisión de una entrada no constituye por sí sola confianza general sobre su contenido ni autorización para reutilizarla fuera del objeto, ámbito, forma o finalidad gobernados que resulten aplicables.
+
+Por tanto:
+
+```text
+admisión
+≠ confianza
+≠ autoridad
+≠ libertad de efecto
+```
+
+Una entrada admitida continúa sometida a las reglas de ligadura, requisitos, autoridad, acumulación y contexto que gobiernen el efecto posterior.
+
+Cuando la garantía requiera reconstrucción probatoria, deberá poder determinarse con suficiencia qué objeto entró, qué regla permitió su admisión, a qué objeto o ámbito quedó ligado y qué efecto material produjo. Esta exigencia no obliga a incorporar la totalidad del expediente probatorio en `Frame` ni a imponer el coste forense máximo a toda operación.
+
+## 9. Recursos y disponibilidad bajo entradas admitidas
+
+La admisión tampoco constituye un derecho a consumo material ilimitado.
+
+Una realización que invoque servicios externos, verificaciones, reintentos, colas u otras operaciones capaces de ampliar trabajo deberá gobernar ese consumo dentro del perfil aplicable. Las suboperaciones no pueden ampliar unilateralmente la envolvente de recursos concedida a la operación que las origina.
+
+En particular:
+
+```text
+información externa
+≠ autoridad adicional
+≠ presupuesto computacional adicional
+```
+
+Los límites materiales pueden depender del perfil y de la realización. No constituyen semántica universal de `Tri` o `Frame` ni introducen un reloj semántico por utilizar temporizadores, ventanas operativas o mediciones de rendimiento.
+
+El agotamiento de recursos:
+
+- no produce `Tri.U`;
+- no autoriza éxito por defecto;
+- no permite omitir una condición necesaria y mantener el mismo efecto protegido;
+- debe impedir el efecto cuyo cumplimiento ya no pueda acreditarse, sin extender innecesariamente el bloqueo a componentes independientes;
+- debe preservar, dentro del alcance declarado, capacidad suficiente para rechazo, detención, diagnóstico y recuperación.
+
+Los propios mecanismos de control, registro y observabilidad forman parte del análisis de recursos cuando puedan contribuir al agotamiento.
+
+## 10. Patrón de propuesta y verificación independiente
 
 Cuando una salida externa proponga un objeto cuya corrección sea material para una garantía, podrá utilizarse el patrón:
 
@@ -202,7 +246,7 @@ Debe analizarse si existe una causa común capaz de alinear el error, entre otra
 
 Si el verificador sólo comprueba la forma del candidato o vuelve a confiar en la misma inferencia que pretende verificar, no existe independencia suficiente respecto de la corrección material del candidato.
 
-## 9. Estadística, reproducibilidad y ternarización
+## 11. Estadística, reproducibilidad y ternarización
 
 No se deduce:
 
@@ -229,7 +273,7 @@ El `Ternarizer` no legitima por sí solo la entrada que recibe. La admisibilidad
 
 La coincidencia de varios modelos no transforma por cantidad una inferencia en verdad, autoridad o clausura. Puede utilizarse como señal auxiliar bajo una regla gobernada, sin adquirir por ello estatuto normativo propio.
 
-## 10. Tiempo y estadística como datos de dominio
+## 12. Tiempo y estadística como datos de dominio
 
 El tiempo, una magnitud estadística u otra información externa pueden formar parte de un dominio que los declare y constituya expresamente.
 
@@ -245,7 +289,7 @@ No constituyen primitivas universales del Lenguaje ni pueden entrar de forma imp
 
 El tiempo técnico puede utilizarse para medición, forensia, caducidad operativa o evidencia cuando la regla aplicable lo declare. No se deriva de ello una semántica temporal universal de `Frame`.
 
-## 11. Tutela humana
+## 13. Tutela humana
 
 La presencia de una persona en una interfaz no acredita por sí sola tutela humana efectiva.
 
@@ -260,9 +304,9 @@ Cuando una garantía dependa de decisión o revisión humana deberán quedar suf
 
 Una ratificación meramente formal de una salida automática no convierte a la persona en verificador independiente.
 
-## 12. Alcance de garantías
+## 14. Alcance de garantías
 
-La presente adenda no afirma seguridad absoluta ni viabilidad universal.
+La presente adenda no afirma seguridad absoluta, disponibilidad absoluta ni viabilidad universal.
 
 Una acreditación deberá continuar expresando, según proceda:
 
@@ -280,7 +324,7 @@ límites no probados
 
 La ausencia de un fallo observado no demuestra que no existan fallos fuera del alcance ensayado.
 
-## 13. Relación con R0–R4
+## 15. Relación con R0–R4
 
 La distribución de responsabilidades permanece:
 
@@ -288,11 +332,13 @@ La distribución de responsabilidades permanece:
 R0  → semántica soberana y camino funcional autónomo
 R1  → autoridad, mediación y fallo cerrado
 R2  → persistencia, continuidad y recuperación
-R3  → plataforma, construcción, carga, aislamiento y raíces
+R3  → plataforma, construcción, carga, aislamiento y recursos materiales
 R4  → ataque integral del SUT exacto
 ```
 
 R0 no puede considerarse completo si sólo existe una biblioteca Rust probada pero no un camino `.svp` autónomo suficiente para el perfil declarado.
+
+Las políticas de servicios, colas, reintentos, aislamiento o limitación material no se convierten por ello en primitivas de R0.
 
 R3 no queda probado por el mero hecho de compilar o ejecutar en un sistema operativo concreto.
 
@@ -300,12 +346,13 @@ R4 debe atacar el mismo sistema material cuya garantía se reclama; un modo de a
 
 No se crea una fase R0-9.
 
-## 14. Estado
+## 16. Estado
 
 Esta adenda fija condiciones arquitectónicas. No declara ya demostradas:
 
 - autonomía completa;
 - auditabilidad causal de extremo a extremo;
+- disponibilidad bajo una carga o modelo de amenaza concretos;
 - viabilidad material;
 - Garantía I;
 - Garantía II;
