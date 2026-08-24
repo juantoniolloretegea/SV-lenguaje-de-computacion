@@ -21,9 +21,8 @@ pub use admissibility::{
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
 pub use control::{
-    protected_references_are_core_constructed, AdmittedEvidenceRef, AuthorityRef, CheckResult,
-    ConstitutedFactRef, ContinuityOccupancy, ControlId, EnablementRef, ExerciseRef,
-    InformationRef, InvalidControlId, TransitionClass,
+    AdmittedEvidenceRef, AuthorityRef, CheckResult, ConstitutedFactRef, ContinuityOccupancy,
+    ControlId, EnablementRef, ExerciseRef, InformationRef, InvalidControlId, TransitionClass,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
