@@ -8,6 +8,7 @@ on:
       - "src/**"
       - "tests/r0_7_equivalence.py"
       - "tests/conformance/valid/**"
+      - "tests/conformance/invalid/**"
       - ".github/workflows/r0-rust.yml"
 
 permissions:
