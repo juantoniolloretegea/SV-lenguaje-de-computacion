@@ -7,6 +7,7 @@
 //! consolida y somete a regresión la misma autoridad de constitución.
 
 pub mod admissibility;
+mod equivalence;
 mod frontend;
 pub mod frame;
 pub mod ir;
@@ -18,6 +19,7 @@ pub use admissibility::{
     AdmissibilitySpec, AdmissibilityState, CaptureOutcome, InvalidAdmissibilitySpec,
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
+pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 pub use ir::{
