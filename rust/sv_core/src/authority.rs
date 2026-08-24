@@ -4,9 +4,11 @@
 //! envolventes máximas de efectos y dominios gobernados. No implementa todavía
 //! transiciones T-*, habilitación, `Req`, permisos ni ejecución de efectos.
 //!
-//! Las estructuras que implican constitución no disponen de constructor
-//! público. Identificar una forma, un titular o una autoridad no permite
-//! fabricar el objeto constituido correspondiente.
+//! R1-1 no ofrece una vía de constitución operativa en compilaciones de
+//! producción. Los constructores brutos usados para comprobar invariantes
+//! estructurales sólo existen bajo `cfg(test)`. La primera vía productiva capaz
+//! de producir una forma o una autoridad constituida deberá incorporarse en
+//! R1-2 y quedar ligada a una transición autorizante válida.
 
 use std::collections::BTreeSet;
 
@@ -42,6 +44,7 @@ pub struct EffectDescriptor {
 }
 
 impl EffectDescriptor {
+    #[cfg(test)]
     fn constitute(
         reference: EffectRef,
         family: EffectFamilyRef,
@@ -79,9 +82,9 @@ impl EffectDescriptor {
 
 /// Descriptor semántico constituido de una forma concreta de transición.
 ///
-/// Los campos quedan fijados en la constitución y no ofrecen mutadores
-/// públicos. R1-2 deberá gobernar las vías que puedan producir descriptores
-/// nuevos o modificar materialmente el conjunto de formas.
+/// Los campos no ofrecen mutadores públicos. R1-2 deberá materializar las vías
+/// autorizantes que puedan producir descriptores nuevos o modificar
+/// materialmente el conjunto de formas.
 #[derive(Debug, PartialEq, Eq)]
 pub struct FormDescriptor {
     reference: FormRef,
@@ -93,6 +96,7 @@ pub struct FormDescriptor {
 }
 
 impl FormDescriptor {
+    #[cfg(test)]
     fn constitute(
         reference: FormRef,
         transition_class: TransitionClass,
@@ -167,6 +171,7 @@ pub struct EffectEnvelope {
 }
 
 impl EffectEnvelope {
+    #[cfg(test)]
     fn constitute(effects: impl IntoIterator<Item = EffectDescriptor>) -> Self {
         Self {
             effects: effects.into_iter().collect(),
@@ -206,6 +211,7 @@ pub struct GovernedDomain {
 }
 
 impl GovernedDomain {
+    #[cfg(test)]
     fn constitute(objects: impl IntoIterator<Item = GovernedObjectRef>) -> Self {
         Self {
             objects: objects.into_iter().collect(),
@@ -233,7 +239,7 @@ impl GovernedDomain {
     }
 }
 
-/// Incoherencia al constituir el alcance de una autoridad.
+/// Incoherencia al comprobar la constitución de alcance de una autoridad.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum InvalidAuthorityScope {
     EffectOutsideAuthorityContext,
@@ -242,7 +248,7 @@ pub enum InvalidAuthorityScope {
 
 /// Autoridad constituida y acotada para un titular y un contexto.
 ///
-/// El objeto no implementa `Clone` ni expone un constructor público. Una
+/// El objeto no implementa `Clone` ni expone un constructor operativo. Una
 /// `AuthorityRef` copiable continúa siendo sólo una referencia nominal y no
 /// sustituye este objeto constituido.
 #[derive(Debug, PartialEq, Eq)]
@@ -255,6 +261,7 @@ pub struct ConstitutedAuthority {
 }
 
 impl ConstitutedAuthority {
+    #[cfg(test)]
     fn constitute(
         reference: AuthorityRef,
         holder: AuthorityHolderRef,
