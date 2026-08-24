@@ -1,7 +1,7 @@
 # Arquitectura del frente operativo
 
 **Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 4 de abril de 2026  
+**Fecha:** 24 de agosto de 2026  
 **Versión del conjunto:** V.1 del conjunto  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
@@ -12,8 +12,7 @@
 
 ---
 
-
-Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frente activo del lenguaje SV.
+Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frente activo del Lenguaje SV.
 
 ## Piezas vigentes de referencia
 
@@ -24,20 +23,37 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `CONTRATO_DE_ENGANCHE_DE_INTERFACES_FUTURAS_Y_ABI_SEMANTICO_DIAGNOSTICO_MINIMO.md`
 - `MARCO_ESTABILIDAD_RESILIENCIA_LENGUAJE_SV.md`
 - `INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
+- `CONTRATO_ABSTRACTO_DE_AUTORIDAD_CONSTITUCION_Y_GENESIS_SEC0_A_V2_2026_08_21.md`
+- `ADENDA_CORRECTIVA_SEC0_A_UNIDAD_DE_GENESIS_Y_CONTINUIDAD_AUTORITATIVA_2026_08_22.md`
+- `CONTRATO_ABSTRACTO_DE_DIAGNOSTICO_Y_FALLO_CERRADO_SEC0_D_2026_08_21.md`
+- `ADENDA_DE_ALCANCE_TEMPORAL_A_ESPECIFICACION_ENTORNO_SOBERANO_SV_V0_2026_08_22.md`
+- `ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md`
 
 ## Regla de lectura
 
-Estas piezas deben leerse de forma acumulativa y subordinada:
+Las piezas históricas del frente básico conservan su valor dentro del alcance para el que fueron emitidas. La realización soberana se interpreta además conforme a la especificación del entorno de ejecución soberano y a sus contratos SEC.0 vigentes.
 
-1. apertura del frente y hoja de ruta;
-2. criterios de cierre del frente final;
-3. nota de arquitectura mínima del núcleo enganchable;
-4. contrato mínimo de enganche y ABI semántico-diagnóstico;
-5. marco de estabilidad, resiliencia y horizontes del lenguaje;
-6. informe de continuidad del frente básico y habilitación prudente del backend.
+Para R1, el orden de lectura material es:
+
+1. cierre integral de R0;
+2. especificación arquitectónica del entorno soberano y su adenda de alcance temporal;
+3. SEC.0-A y la corrección de T-0 por continuidad autoritativa;
+4. SEC.0-D sobre `Req`, `D-A/D-R/D-N` y fallo cerrado;
+5. acta técnica de apertura de R1.
 
 La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repositorio.
 
-## Estado de hito actualmente acreditado
+## Estado de realización
 
-La arquitectura vigente permite sostener ya, en régimen auditado y subordinado, `H1 — Base segura`, siempre sin convertir esa verificación en cierre total del frente ni en habilitación automática de `H2`, `H3` o del backend. La formalización de esa verificación se registra en `docs/calidad/ACTA_TECNICA_DE_VERIFICACION_DEL_HITO_1_BASE_SEGURA_2026_03_23.md`. Además, y sobre la base de `H2-pre` como dictamen de no bloqueo, el estado actual autoriza ya la **apertura restringida de `H2`** como frente arquitectónico-auditor de trabajo, sin verificación positiva todavía del hito ni habilitación automática de implementación fuerte o backend. Véase `docs/calidad/ACTA_TECNICA_DE_AUTORIZACION_RESTRINGIDA_DE_APERTURA_DE_H2_2026_03_23.md`.
+```text
+R0 = CERRADO
+R1 = ABIERTO
+R2 = NO INICIADO
+R3 = NO INICIADO
+R4 = NO INICIADO
+
+Garantía I = NO_PROBADO
+Garantía II = NO_PROBADO
+```
+
+R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
