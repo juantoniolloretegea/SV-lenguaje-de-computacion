@@ -4,17 +4,11 @@ use std::collections::BTreeSet;
 /// Código diagnóstico canónico para violaciones del cierre de `Frame`.
 pub const FRAME_CLOSURE_DIAGNOSTIC_CODE: &str = "E308";
 
-/// Relaciones ya resueltas que R0-2 necesita para comprobar el cierre de `Frame`.
+/// Relaciones resueltas que el núcleo necesita para comprobar el cierre de `Frame`.
 ///
-/// Este submódulo es interno a `sv_core`. Mientras no esté enlazado el resolvedor
-/// posterior, su materialización sólo se consume en las pruebas del propio núcleo.
-#[cfg_attr(
-    not(test),
-    expect(
-        dead_code,
-        reason = "R0-2 materializa las relaciones resueltas antes de enlazar el resolvedor interno posterior"
-    )
-)]
+/// Este submódulo es interno a `sv_core`. R0-7 lo enlaza desde la resolución
+/// nominal del mismo núcleo; no constituye una representación paralela ni una
+/// interfaz por la que un adaptador pueda declarar relaciones como resueltas.
 pub(crate) mod resolved {
     use crate::Nat;
 
@@ -132,8 +126,8 @@ pub(crate) mod resolved {
     /// Candidato interno que aporta a `Frame` únicamente las relaciones necesarias
     /// para decidir J-F0…J-F5. No sustituye al árbol sintáctico ni a la IR canónica.
     ///
-    /// Su construcción permanece dentro de `sv_core`: R0-2 no concede a adaptadores
-    /// ni consumidores externos autoridad para declarar como «resuelta» una relación.
+    /// Su construcción permanece dentro de `sv_core`; los consumidores externos no
+    /// reciben autoridad para declarar como «resuelta» una relación.
     #[derive(Debug, Clone, PartialEq, Eq)]
     pub(crate) struct FrameCandidate {
         pub(super) name: String,
@@ -210,13 +204,10 @@ pub struct Frame {
 }
 
 impl Frame {
-    #[cfg_attr(
-        not(test),
-        expect(
-            dead_code,
-            reason = "R0-2 materializa el constructor interno antes de enlazar el resolvedor posterior"
-        )
-    )]
+    /// Constituye un `Frame` desde relaciones ya resueltas por el propio núcleo.
+    ///
+    /// R0-7 usa este mismo constructor para validar la representación IR; no existe
+    /// una segunda implementación de J-F0…J-F5 en la etapa frontal.
     pub(crate) fn from_candidate(
         candidate: FrameCandidate,
     ) -> Result<Self, FrameClosureViolation> {
