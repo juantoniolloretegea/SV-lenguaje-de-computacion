@@ -4,7 +4,7 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-2  
-**Estado:** abierto · en realización
+**Estado:** candidato de cierre · no integrado
 
 ## 1. Objeto
 
@@ -183,9 +183,9 @@ ExternalGenesisPremise
 
 La mera posesión de referencias nominales tampoco permite construir esos objetos constituidos ni fabricar la premisa.
 
-## 10. Pruebas obligatorias
+## 10. Pruebas estructurales
 
-R1-2 deberá ejercer al menos los casos siguientes:
+El corte ejerce, entre otros, los casos siguientes:
 
 1. T-0 válida sobre continuidad `Uninhabited` constituye el estado inicial y deja la continuidad `Inhabited`;
 2. segunda T-0 sobre la misma continuidad falla;
@@ -226,7 +226,7 @@ Tampoco abre R2, R3 ni R4.
 
 ## 12. Criterio de cierre
 
-R1-2 podrá cerrarse cuando exista evidencia reproducible de que:
+R1-2 es cerrable cuando existe evidencia reproducible de que:
 
 1. T-0 es la única vía productiva de autoridad del corte;
 2. T-0 requiere simultáneamente premisa constituyente no consumida y continuidad no habitada;
@@ -240,14 +240,31 @@ R1-2 podrá cerrarse cuando exista evidencia reproducible de que:
 10. ninguna vía ordinaria del adaptador puede fabricar la premisa o los objetos constituidos;
 11. R0 permanece sin regresiones.
 
-Hasta ese cierre:
+## 13. Evidencia del candidato
+
+El corte `181ada79d920592f132f272e3005bfd7f9a4dae6`, que contiene la realización y el contrato de R1-2, concluyó correctamente las comprobaciones automáticas siguientes:
+
+```text
+Conformidad SVP              #110 = SUCCESS
+R0 Rust                       #82 = SUCCESS
+R0-8 Baseline nativa          #34 = SUCCESS
+R0 WASM paridad de tres vías  #30 = SUCCESS
+```
+
+La prueba Rust ejecutó 93 casos unitarios del núcleo sin fallos y cinco pruebas documentales sin fallos. Entre estas últimas se comprueba por compilación negativa que la API ordinaria no permite construir `ExternalGenesisPremise` mediante sus campos privados.
+
+La batería heredada de equivalencia conserva 11/11 casos válidos equivalentes y 61/61 casos inválidos rechazados.
+
+Las modificaciones documentales posteriores no alteran la realización sometida a esas pruebas; su integración exige, no obstante, comprobar de nuevo el `head` final de la solicitud de cambios.
+
+## 14. Estado
 
 ```text
 R0 = CERRADO
 R1 = ABIERTO
 R1-0 = CERRADO
 R1-1 = CERRADO
-R1-2 = EN DESARROLLO
+R1-2 = CANDIDATO DE CIERRE · NO INTEGRADO
 R2–R4 = NO INICIADOS
 Garantía I = NO_PROBADO
 Garantía II = NO_PROBADO
