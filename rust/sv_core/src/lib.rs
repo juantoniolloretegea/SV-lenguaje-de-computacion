@@ -1,12 +1,13 @@
-//! Núcleo semántico de R0 para el Lenguaje SV.
+//! Núcleo soberano del Lenguaje SV.
 //!
-//! Esta biblioteca Rust contiene la realización compartida por los destinos
-//! nativo y WebAssembly. `Tri`, `Nat`, `Frame`, C01 y C02 residen en el mismo
-//! núcleo. C03 corresponde al cierre relacional y causal J-F0…J-F5 de `Frame`:
-//! no introduce un segundo constructor ni una semántica paralela, sino que
-//! consolida y somete a regresión la misma autoridad de constitución.
+//! R0 materializa la semántica compartida por los destinos nativo y
+//! WebAssembly. R1 añade, sobre el mismo `sv_core`, las fronteras de control
+//! necesarias para autoridad, mediación y decisiones protegidas. Los tipos de
+//! control no constituyen una segunda semántica y no alteran `Tri`, la gramática
+//! o la IR canónica.
 
 pub mod admissibility;
+pub mod control;
 mod equivalence;
 mod frontend;
 pub mod frame;
@@ -18,6 +19,10 @@ mod wellformed;
 pub use admissibility::{
     AdmissibilitySpec, AdmissibilityState, CaptureOutcome, InvalidAdmissibilitySpec,
     ADMISSIBILITY_DIAGNOSTIC_CODE,
+};
+pub use control::{
+    AdmittedEvidenceRef, AuthorityRef, CheckResult, ConstitutedFactRef, ContinuityOccupancy,
+    ControlId, EnablementRef, ExerciseRef, InformationRef, InvalidControlId, TransitionClass,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
@@ -70,8 +75,8 @@ pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, Compile
 
 /// Valor ternario constitutivo del Lenguaje SV.
 ///
-/// No representa estados técnicos de captura, admisibilidad, disponibilidad
-/// de plataforma ni deuda de realización.
+/// No representa estados técnicos de captura, admisibilidad, comprobación,
+/// disponibilidad de plataforma ni deuda de realización.
 #[repr(u8)]
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub enum Tri {
@@ -138,6 +143,9 @@ pub const ENGINE_VERSIONS: EngineVersions = EngineVersions {
 
 #[cfg(test)]
 mod c03_tests;
+
+#[cfg(test)]
+mod control_tests;
 
 #[cfg(test)]
 mod frame_tests;

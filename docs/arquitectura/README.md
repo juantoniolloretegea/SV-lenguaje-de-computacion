@@ -28,6 +28,7 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `CONTRATO_ABSTRACTO_DE_DIAGNOSTICO_Y_FALLO_CERRADO_SEC0_D_2026_08_21.md`
 - `ADENDA_DE_ALCANCE_TEMPORAL_A_ESPECIFICACION_ENTORNO_SOBERANO_SV_V0_2026_08_22.md`
 - `ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md`
+- `CONTRATO_R1_0_TIPOS_CERRADOS_Y_FRONTERAS_DE_CONSTRUCCION_2026_08_24.md`
 
 ## Regla de lectura
 
@@ -39,7 +40,8 @@ Para R1, el orden de lectura material es:
 2. especificación arquitectónica del entorno soberano y su adenda de alcance temporal;
 3. SEC.0-A y la corrección de T-0 por continuidad autoritativa;
 4. SEC.0-D sobre `Req`, `D-A/D-R/D-N` y fallo cerrado;
-5. acta técnica de apertura de R1.
+5. acta técnica de apertura de R1;
+6. contratos y registros de cada corte R1-n conforme se integren.
 
 La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repositorio.
 
@@ -48,6 +50,8 @@ La sede doctrinal superior permanece fuera de esta carpeta y fuera de este repos
 ```text
 R0 = CERRADO
 R1 = ABIERTO
+R1-0 = CERRADO
+R1-1 = NO INICIADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -55,5 +59,7 @@ R4 = NO INICIADO
 Garantía I = NO_PROBADO
 Garantía II = NO_PROBADO
 ```
+
+R1-0 fija los tipos cerrados y las fronteras de construcción del control soberano. No concede autoridad, no decide permisos y no ejecuta efectos protegidos.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
