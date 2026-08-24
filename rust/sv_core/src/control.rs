@@ -183,3 +183,31 @@ opaque_control_ref!(
     ExerciseRef,
     "Referencia a un ejercicio materializado; no confiere titularidad por sí mismo."
 );
+opaque_control_ref!(
+    FormRef,
+    "Referencia a una forma de transición constituida."
+);
+opaque_control_ref!(
+    EffectFamilyRef,
+    "Referencia a una familia de efectos fijada por constitución."
+);
+opaque_control_ref!(
+    EffectRef,
+    "Referencia a un efecto concreto; identificarlo no equivale a autorizarlo."
+);
+opaque_control_ref!(
+    ContextRef,
+    "Referencia a una ligadura de contexto relevante para autoridad o forma."
+);
+opaque_control_ref!(
+    AuthorityHolderRef,
+    "Referencia al titular de una autoridad; no constituye autoridad por sí misma."
+);
+opaque_control_ref!(
+    GovernedObjectRef,
+    "Referencia a un objeto candidato a pertenecer al dominio gobernado D_a."
+);
+opaque_control_ref!(
+    AccumulationRuleRef,
+    "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+);
