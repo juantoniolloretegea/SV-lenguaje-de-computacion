@@ -16,10 +16,17 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 
 CASES = [
-    "cell_basic",
     "admissibility_spec_states_permutados",
-    "resolve_projection",
+    "cell_basic",
+    "compose_basic",
     "frame_cell_spec_compartida_valida",
+    "gate_table",
+    "query_context_all_variants",
+    "resolve_projection",
+    "supervise_systemtarget_valido",
+    "supervise_targets",
+    "trajectory_alternance_valid",
+    "transition_data_events",
 ]
 
 
