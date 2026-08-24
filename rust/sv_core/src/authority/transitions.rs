@@ -56,7 +56,7 @@ pub const fn transition_disposition(class: TransitionClass) -> TransitionDisposi
 /// queda fuera de R1.
 ///
 /// ```compile_fail
-/// use sv_core::ExternalGenesisPremise;
+/// use sv_core::authority::transitions::ExternalGenesisPremise;
 /// let _premise = ExternalGenesisPremise { consumed: false };
 /// ```
 #[derive(Debug)]
@@ -210,6 +210,10 @@ pub enum GenesisError {
     EmptyInitialAuthorities,
     DuplicateFormRef(FormRef),
     DuplicateAuthorityRef(AuthorityRef),
+    AuthorizingFormWithoutRequiredAuthority {
+        form: FormRef,
+        class: TransitionClass,
+    },
     MissingRequiredAuthority {
         form: FormRef,
         authority: AuthorityRef,
@@ -277,13 +281,15 @@ impl AuthorityContinuity {
         self.authorities.get(reference)
     }
 
-    /// Puerta interna de T-0.
+    /// Puerta de T-0 de R1-2.
     ///
-    /// Es `pub(crate)` porque R1-2 materializa la transición dentro de
-    /// `sv_core`, pero no ofrece a los adaptadores una API que pueda acuñar por
-    /// sí misma la premisa externa necesaria. La operación es transaccional:
-    /// todo rechazo deja la continuidad y la premisa sin consumir.
-    pub(crate) fn apply_genesis(
+    /// La operación es pública como consumidor de una capacidad opaca, pero
+    /// `sv_core` no ofrece un constructor público de
+    /// `ExternalGenesisPremise`. Por ello, un adaptador ordinario no puede
+    /// autodeclarar la premisa necesaria para activar esta vía. La operación es
+    /// además transaccional: todo rechazo deja la continuidad y la premisa sin
+    /// consumir.
+    pub fn apply_genesis(
         &mut self,
         premise: &mut ExternalGenesisPremise,
         plan: GenesisPlan,
@@ -317,6 +323,19 @@ impl AuthorityContinuity {
         for form in &plan.forms {
             if !form_refs.insert(form.reference.clone()) {
                 return Err(GenesisError::DuplicateFormRef(form.reference.clone()));
+            }
+
+            if matches!(
+                form.transition_class,
+                TransitionClass::Governance
+                    | TransitionClass::Constitutive
+                    | TransitionClass::Recovery
+            ) && form.required_authority.is_none()
+            {
+                return Err(GenesisError::AuthorizingFormWithoutRequiredAuthority {
+                    form: form.reference.clone(),
+                    class: form.transition_class,
+                });
             }
 
             if let Some(required) = &form.required_authority {
@@ -591,6 +610,43 @@ mod tests {
         assert_eq!(
             result,
             Err(GenesisError::DuplicateAuthorityRef(duplicated))
+        );
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+    }
+
+    #[test]
+    fn authorizing_form_requires_prior_authority_reference() {
+        let root = authority_ref("authority:root");
+        let form = form_ref("form:govern");
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form.clone(),
+                TransitionClass::Governance,
+                effect_family_ref("family:govern"),
+                [context_ref("context:genesis")],
+                None,
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                root,
+                holder_ref("holder:root"),
+                context_ref("context:genesis"),
+                [],
+                [object_ref("object:one")],
+            )],
+        );
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::AuthorizingFormWithoutRequiredAuthority {
+                form,
+                class: TransitionClass::Governance,
+            })
         );
         assert!(continuity.t0_available());
         assert!(!premise.is_consumed());
