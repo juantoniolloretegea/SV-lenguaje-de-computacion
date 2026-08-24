@@ -26,7 +26,9 @@ La situación de un entorno público y la integración de su código se registra
 
 Las correcciones que no justifican un cambio de número de versión se registran separadamente. Una corrección factual del presente documento debe dejar constancia de la razón de la rectificación.
 
-## 3. Versiones integradas
+El cierre de una fase de realización se registra como hito técnico independiente y no fuerza por sí mismo un cambio de versión de Gramática, IR o serializador.
+
+## 3. Versiones integradas e hitos de realización
 
 | Fecha | Situación actual | Gramática | IR | Serializador | Realización o entorno | Modificación material | Evidencia pública |
 |---|---|---:|---:|---:|---|---|---|
@@ -37,6 +39,7 @@ Las correcciones que no justifican un cambio de número de versión se registran
 | 23/08/2026 | **Vigente** | **0.2** | **0.3** | **0.1.0** | Etapa frontal de referencia en Python | Integración de C01–C03: separación entre admisibilidad técnica y `Tri.U`; resolución identificada de una `U` constituida; coherencia estructural y causal de `Frame`. Batería de conformidad: 72/72. | [PR #7](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/7) · [integración `59a022a`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/59a022a7691d28c6afcf18456ad1ef0aae562362) · [Gramática v0.2](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md) · [IR v0.3](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md) |
 | 23/08/2026 | **Histórica como acceso público** | **0.2** | **0.3** | **0.1.0** | SVP Playground mediante Python/Pyodide | Alineación del entorno público con Gramática 0.2 e IR 0.3. El 24/08/2026 dejó de ser el punto de acceso público principal al materializarse el entorno Rust/WebAssembly; la implementación Python permanece como referencia diferencial. | [PR #8](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/8) · [integración `af1491b`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/af1491b53f070a75989cbdd90f76dfeadfa3e9ab) · [instantánea histórica](../historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md) |
 | 24/08/2026 | **Vigente** | **0.2** | **0.3** | **Proyección diferencial 0.1.0** | **Rust nativo y WebAssembly de navegador sobre `sv_core` compartido** | Integración de la realización Rust/WebAssembly y de la comprobación de paridad sobre el corpus comprometido. La admisión/rechazo coincide en Python, Rust nativo y WebAssembly; el observable textual de proyección es idéntico entre Rust nativo y WebAssembly. No se acredita identidad textual Python↔`equivalence_json` ni paridad diagnóstica exacta `E***`. | [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) · [integración `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69) · [R0 WASM paridad de tres vías #11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/32742397555) · [entorno público](https://lenguaje-sv.itvia.online/) |
+| 24/08/2026 | **R0 cerrado** | **0.2** | **0.3** | **0.1.0 de referencia / proyección Rust 0.1.0** | **Primera realización soberana del núcleo semántico** | Cierre integral de R0 tras completar R0-0…R0-8, WebAssembly de navegador, paridad ejecutada, entorno público y reconciliación normativa. R1–R4 permanecen no iniciados; Garantía I y Garantía II permanecen `NO_PROBADO`. | [Acta de cierre integral de R0](./ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) |
 
 El guion largo (`—`) indica que el elemento correspondiente no disponía en esa entrada de un número de versión independiente que este registro pueda acreditar con la misma precisión.
 
@@ -91,7 +94,7 @@ El entorno público se sirve en `lenguaje-sv.itvia.online`. La distribución web
 
 La URL auxiliar `workers.dev` no forma parte del acceso público normal. El dominio institucional constituye el punto de acceso público principal del entorno desplegado.
 
-La integración de la línea Rust/WebAssembly en `main` no cierra por sí sola R0 ni modifica el estatuto histórico del Playground Python/Pyodide como acceso público anterior.
+La integración de la línea Rust/WebAssembly en `main` no cerró por sí sola R0. El cierre integral se registra mediante el acta específica de 24/08/2026 y no modifica el estatuto histórico del Playground Python/Pyodide como acceso público anterior.
 
 ## 7. Límites de la comprobación WebAssembly
 
@@ -103,10 +106,34 @@ La evidencia disponible acredita el corte y el corpus declarados, no propiedades
 - la ejecución en un navegador real no demuestra compatibilidad universal con todos los motores;
 - una entrada no admitida o un fallo técnico no se convierten en `Tri.U`;
 - el despliegue no prueba por sí solo las Garantías I o II;
-- R0 permanece abierto hasta su cierre integral expreso;
-- R1–R4 no se consideran iniciados por esta materialización.
+- el cierre integral de R0 no amplía estas comprobaciones más allá de su evidencia material.
 
-## 8. Relación con la calidad y la trazabilidad
+## 8. Cierre integral de R0
+
+Con fecha 24/08/2026 queda cerrado R0 como primera realización soberana del núcleo semántico del Lenguaje SV.
+
+El cierre comprende R0-0…R0-8, la ejecución WebAssembly de navegador, la paridad ejercida en el corpus comprometido, el entorno público y la reconciliación normativa necesaria para mantener coherencia entre la realización y la documentación vigente.
+
+El cierre no constituye una garantía integral del sistema completo. El estado posterior es:
+
+```text
+R0  = CERRADO
+R1  = NO INICIADO
+R2  = NO INICIADO
+R3  = NO INICIADO
+R4  = NO INICIADO
+
+Garantía I  = NO_PROBADO
+Garantía II = NO_PROBADO
+
+Sec.6 = ABIERTA
+```
+
+Permanecen fuera del alcance acreditado, entre otras materias, la paridad diagnóstica exacta `E***`, el serializador canónico Rust completo, una API Rust pública de alto nivel, la compatibilidad universal entre navegadores, la autonomía completa de distribución, `ConflictOperator`/J2.3 y `FFL-D`.
+
+La apertura de R1 requiere un acto separado.
+
+## 9. Relación con la calidad y la trazabilidad
 
 Este historial permite responder, entre otras, a estas preguntas:
 
@@ -115,12 +142,15 @@ Este historial permite responder, entre otras, a estas preguntas:
 - qué implementación o entorno público la materializaba;
 - qué comprobación acompañó su incorporación o despliegue;
 - qué correcciones relevantes se efectuaron sin cambiar el número de versión;
-- qué desarrollos posteriores permanecen todavía sin integrar.
+- qué desarrollos posteriores permanecen todavía sin integrar;
+- qué alcance exacto fue declarado al cerrar R0.
 
 La existencia de una entrada no sustituye la comprobación técnica de los documentos y artefactos enlazados. En caso de discrepancia, la evidencia material del repositorio y la documentación técnica vigente determinan el alcance acreditado.
 
-## 9. Regla de continuidad
+## 10. Regla de continuidad
 
 Toda nueva versión de Gramática, IR, serialización, realización o entorno público que modifique de forma observable la referencia vigente deberá añadir una entrada a este historial.
 
 Las versiones anteriores permanecerán accesibles como antecedentes. Los errores y correcciones relevantes deberán registrarse cuando sean necesarios para comprender la evolución técnica, sin ocultarlos ni convertirlos por sí solos en una nueva versión.
+
+El cierre de R0 no autoriza a atribuir estado iniciado a R1–R4 ni a considerar probadas las Garantías I o II.
