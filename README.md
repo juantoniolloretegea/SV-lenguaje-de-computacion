@@ -22,6 +22,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 - [Historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md).
 - [Gramática superficial mínima v0.2](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md).
 - [Representación intermedia y bienformación v0.3](./IR_CANONICA_BIENFORMACION_SV_v0_3.md).
+- [Adenda de vigencia de la Frontera Normativa para C01–C03](./ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md).
 - [Catálogo efectivo de errores v0.3](./docs/referencia/ERRORES_CANONICOS_SV_v0_3.md).
 - [Documentación de calidad](./docs/calidad/README.md).
 
@@ -134,6 +135,8 @@ Las comprobaciones anteriores no deben ampliarse más allá de su evidencia mate
 - el despliegue público no acredita por sí solo las Garantías I o II;
 - R0 permanece abierto mientras no exista cierre integral expreso;
 - R1–R4 no se consideran iniciados por el despliegue WebAssembly.
+
+La Frontera Normativa v0 de marzo se conserva como antecedente. Para C01–C03, su lectura vigente queda determinada por la [adenda técnica de vigencia](./ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md), la Gramática 0.2 y la IR 0.3 en las cláusulas expresamente sustituidas.
 
 Permanecen además las deudas técnicas registradas en la documentación de calidad, entre ellas `ConflictOperator`/J2.3, la divergencia histórica de `E204`, `RG1`, las limitaciones de `CriticalityResult` y el desarrollo pendiente de la biblioteca estándar.
 
