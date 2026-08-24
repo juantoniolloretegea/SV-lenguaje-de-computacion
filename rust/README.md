@@ -2,7 +2,7 @@
 
 Esta carpeta contiene la realización compartida en Rust del núcleo semántico del Lenguaje SV para destinos nativo y WebAssembly.
 
-La implementación mantiene una sola fuente semántica en `sv_core`. `sv_wasm` es un adaptador material del mismo núcleo y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01, C02 o C03.
+La implementación mantiene una sola fuente semántica en `sv_core`. `sv_wasm` es un adaptador material del mismo núcleo y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01, C02, C03 ni de la representación IR 0.3.
 
 ## Estado material
 
@@ -15,17 +15,18 @@ Frame con cierre estructural y causal J-F0…J-F5
 C01: separación de captura/admisibilidad respecto de Tri
 C02: revisión identificada de U sin clausura automática
 C03: cierre relacional y causal de Frame
+R0-6: representación Rust tipada y cerrada de la IR 0.3 emitible
 ```
 
 Las versiones observables integradas permanecen:
 
 ```text
-Gramática   = 0.2
-IR          = 0.3
+Gramática    = 0.2
+IR           = 0.3
 serializador = 0.1.0
 ```
 
-Los identificadores Rust `Zero` y `One` son internos. La representación textual canónica del Lenguaje permanece `0`, `1`, `U`.
+Los identificadores de la superficie y de la IR se mantienen diferenciados cuando corresponde. Para `Tri`, la superficie canónica utiliza `0`, `1`, `U`, mientras que la IR vigente conserva las etiquetas nominales `Zero`, `One`, `U`.
 
 ## Naturales
 
@@ -109,14 +110,37 @@ incluso cuando `reviewed_to` proponga `0` o `1`. Por tanto, permanece representa
 
 La constitución de `ResolutionRecord` permanece dentro de `sv_core`; los adaptadores no disponen de una construcción pública que permita fabricar una clausura positiva.
 
+## R0-6 — correspondencia IR 0.3
+
+`sv_core` dispone de una representación Rust cerrada para la estructura que la etapa frontal 0.2 emite como IR 0.3.
+
+`IrProgram` fija por construcción las versiones canónicas y conserva:
+
+```text
+source_file
+source_sha256
+objects     — orden de emisión preservado
+operations  — orden de emisión preservado
+```
+
+Los niveles y nombres de tipo de cada objeto no son cadenas suministradas por el llamador: derivan de una enumeración cerrada `IrObjectKind`. El radio emitible comprende 22 tipos de objeto distribuidos en N0, N1, N3 y N4. Las operaciones se representan mediante siete variantes cerradas de `IrOperationKind`, con `type` y `result_type` derivados de la variante y no modificables como datos independientes.
+
+La representación conserva, entre otros, los campos de `AdmissibilitySpec`, `Frame`, `TransitionData`, `Trajectory`, `Domain` y la operación `resolve`. El orden declarado de los estados de `AdmissibilitySpec` se preserva explícitamente, de modo que una permutación válida no se reduce a un conjunto sin orden. `Frame.immutable` y `Trajectory.append_only` se mantienen como invariantes constitutivos verdaderos en la representación.
+
+No existe un mapa genérico de campos capaz de declarar tipos IR nuevos o combinaciones arbitrarias de `level`, `type` y `result_type`. La constitución de `IrProgram`, `IrObject` e `IrOperation` permanece interna a `sv_core` hasta que se enlace el descenso Rust completo; los consumidores externos disponen de lectura de una representación ya constituida, no de autoridad para fabricarla.
+
+R0-6 **no implementa todavía la serialización JSON canónica**. La correspondencia estructural y tipada se mantiene separada de la codificación textual y de las pruebas de equivalencia entre realizaciones, que pertenecen a etapas posteriores.
+
 ## Fronteras actuales
 
 Este núcleo no acredita todavía:
 
 - analizador léxico o sintáctico Rust completo;
 - resolución general de símbolos enlazada;
-- transformación completa de la IR 0.3 a representación soberana;
-- serialización canónica completa;
+- descenso Rust completo desde la gramática hasta `IrProgram`;
+- serialización JSON canónica completa;
+- pruebas de equivalencia cruzada propias de R0-7;
+- medición de referencia propia de R0-8;
 - autoridad externa de clausura positiva;
 - realización completa de `Ternarizer`;
 - sustitución del Playground Python/Pyodide;

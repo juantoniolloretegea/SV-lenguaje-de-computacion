@@ -8,6 +8,7 @@
 
 pub mod admissibility;
 pub mod frame;
+pub mod ir;
 pub mod nat;
 pub mod resolution;
 
@@ -16,6 +17,10 @@ pub use admissibility::{
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
+pub use ir::{
+    IrLevel, IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram, IrQueryContext,
+    IrSupervisableTarget,
+};
 pub use nat::{InvalidNat, Nat};
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
@@ -52,12 +57,22 @@ impl Tri {
         self as u8
     }
 
-    /// Representación textual canónica del valor semántico.
+    /// Representación textual canónica de la superficie del Lenguaje SV.
     #[inline]
     pub const fn label(self) -> &'static str {
         match self {
             Self::Zero => "0",
             Self::One => "1",
+            Self::U => "U",
+        }
+    }
+
+    /// Etiqueta nominal usada por la IR canónica 0.3 para valores ternarios.
+    #[inline]
+    pub const fn ir_label(self) -> &'static str {
+        match self {
+            Self::Zero => "Zero",
+            Self::One => "One",
             Self::U => "U",
         }
     }
@@ -97,6 +112,9 @@ mod c03_tests;
 
 #[cfg(test)]
 mod frame_tests;
+
+#[cfg(test)]
+mod ir_tests;
 
 #[cfg(test)]
 mod resolution_tests;
