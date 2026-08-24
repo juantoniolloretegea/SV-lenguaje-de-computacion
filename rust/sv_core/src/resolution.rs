@@ -151,18 +151,11 @@ impl UnsafeUResolution {
     }
 }
 
-/// Proyección interna de símbolos ya resueltos necesaria para aplicar C02.
+/// Proyección interna de símbolos resueltos necesaria para aplicar C02.
 ///
-/// La resolución general de símbolos permanece fuera de R0-4; por ello estas
-/// formas no constituyen una interfaz pública ni permiten a un adaptador declarar
-/// por sí mismo que una referencia ha sido resuelta.
-#[cfg_attr(
-    not(test),
-    expect(
-        dead_code,
-        reason = "R0-4 materializa C02 antes de enlazar el resolvedor interno posterior"
-    )
-)]
+/// Estas formas no constituyen una interfaz pública ni permiten a un adaptador
+/// declarar por sí mismo que una referencia ha sido resuelta. R0-7 las enlaza
+/// desde la validación soberana del mismo `sv_core`.
 pub(crate) mod resolved {
     use crate::Tri;
 
@@ -234,16 +227,9 @@ use resolved::ResolvedTargetState;
 
 /// Constituye el registro de revisión para una `U` identificada.
 ///
-/// La función permanece interna a `sv_core` hasta enlazar la resolución general
-/// de símbolos. No recibe autoridad de clausura positiva: por construcción,
-/// `resolved_to` es `Tri::U` en este frente.
-#[cfg_attr(
-    not(test),
-    expect(
-        dead_code,
-        reason = "R0-4 materializa la operación interna antes de enlazar el resolvedor posterior"
-    )
-)]
+/// La función permanece interna a `sv_core`. R0-7 le entrega referencias ya
+/// resueltas, pero no altera C02: `resolved_to` continúa siendo `Tri::U` y la
+/// revisión no adquiere autoridad positiva por ejecución.
 pub(crate) fn review_u(
     state: &ResolvedTargetState,
     position: Nat,
