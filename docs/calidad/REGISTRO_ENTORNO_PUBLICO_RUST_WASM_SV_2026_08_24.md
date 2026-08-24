@@ -88,16 +88,29 @@ inválidos = 61
 total     = 72
 ```
 
+La paridad acreditada en este corte se formula de manera estricta:
+
+```text
+mismo texto .svp
++ aceptación/rechazo alineado en Python · Rust nativo · WebAssembly
++ observable textual de proyección idéntico Rust nativo ↔ WebAssembly
+≠ identidad textual Python ↔ equivalence_json
+```
+
 Resultados:
 
-- 11/11 casos válidos: referencia Python, oráculo JSON comprometido, Rust nativo y WebAssembly navegador resultan equivalentes dentro de la proyección comparada;
-- 61/61 casos inválidos: rechazo en Python, Rust nativo y WebAssembly navegador;
-- WASI conserva la misma aceptación/rechazo como evidencia complementaria;
-- dos reconstrucciones independientes del mismo corte producen bit a bit los mismos ejecutables nativo, WASI y WebAssembly navegador.
+- 11/11 casos válidos son admitidos por Python, Rust nativo y WebAssembly de navegador;
+- 61/61 casos inválidos son rechazados por las tres vías;
+- en los casos válidos, Rust nativo y WebAssembly producen el mismo observable textual de proyección;
+- la referencia Python coincide con los oráculos canónicos comprometidos y conserva su función diferencial;
+- no se acredita identidad textual bit a bit entre la salida Python y `equivalence_json`;
+- WASI conserva la misma admisión/rechazo como evidencia complementaria;
+- dos reconstrucciones independientes del mismo corte producen bit a bit los mismos ejecutables nativo, WASI y WebAssembly de navegador.
 
 Evidencia pública:
 
 - [PR #22 — R0: WebAssembly y paridad ejecutada de tres vías](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22);
+- [integración `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69);
 - [R0 WASM paridad de tres vías #11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/32742397555).
 
 ## 6. Distribución pública
@@ -136,6 +149,7 @@ Este despliegue no acredita más de lo que prueban sus artefactos y casos:
 - no existe paridad exacta acreditada de códigos `E***` ni de textos diagnósticos;
 - la ejecución en un navegador real no demuestra compatibilidad universal con todos los motores;
 - la proyección diferencial no es el serializador canónico completo;
+- no se acredita identidad textual bit a bit entre la salida Python y `equivalence_json`;
 - la distribución web no constituye autoridad semántica;
 - una entrada no admitida o un fallo técnico no se convierten en `Tri.U`;
 - el despliegue no prueba las Garantías I o II;
@@ -144,6 +158,8 @@ Este despliegue no acredita más de lo que prueban sus artefactos y casos:
 
 ## 9. Estado de integración
 
-A 24/08/2026, el entorno público está materializado y operativo sobre el corte identificado, mientras la línea Rust/WebAssembly correspondiente continúa pendiente de integración expresa en `main` mediante la PR #22.
+La línea Rust/WebAssembly correspondiente al corte identificado fue integrada en `main` el 24/08/2026 mediante la PR #22 y la confirmación `befc666fabe54ecd541416610bf31ddfe776aa69`.
 
-El despliegue público y la integración del código son hechos distintos y deben mantenerse separados en la trazabilidad hasta que exista una confirmación de integración.
+El despliegue público se había materializado previamente sobre el mismo artefacto WebAssembly. La incorporación a `main` establece la referencia integrada del código; no modifica retrospectivamente la identidad del artefacto desplegado ni amplía el alcance de las pruebas descritas en este registro.
+
+La integración de este acto no cierra por sí sola R0 en su conjunto.
