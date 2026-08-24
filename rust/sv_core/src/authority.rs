@@ -1,8 +1,8 @@
 //! Formas constituidas y magnitudes de autoridad de R1-1.
 //!
-//! Este módulo representa descriptores de forma, envolventes máximas de
-//! efectos y dominios gobernados. No implementa todavía transiciones T-*,
-//! habilitación, `Req`, permisos ni ejecución de efectos.
+//! Este módulo representa descriptores de forma, efectos descritos,
+//! envolventes máximas de efectos y dominios gobernados. No implementa todavía
+//! transiciones T-*, habilitación, `Req`, permisos ni ejecución de efectos.
 //!
 //! Las estructuras que implican constitución no disponen de constructor
 //! público. Identificar una forma, un titular o una autoridad no permite
@@ -26,6 +26,54 @@ pub enum AccumulationContract {
     Idempotent,
     GovernedAggregator(AccumulationRuleRef),
     DecidableTracePredicate(AccumulationRuleRef),
+}
+
+/// Efecto concreto descrito por identidad, familia, objeto y contexto.
+///
+/// Esta estructura permite comprobar alcance. No constituye autorización para
+/// ejecutarlo y no dispone de constructor público.
+#[derive(Debug, PartialEq, Eq)]
+pub struct EffectDescriptor {
+    reference: EffectRef,
+    family: EffectFamilyRef,
+    object: GovernedObjectRef,
+    context: ContextRef,
+}
+
+impl EffectDescriptor {
+    fn constitute(
+        reference: EffectRef,
+        family: EffectFamilyRef,
+        object: GovernedObjectRef,
+        context: ContextRef,
+    ) -> Self {
+        Self {
+            reference,
+            family,
+            object,
+            context,
+        }
+    }
+
+    #[inline]
+    pub fn reference(&self) -> &EffectRef {
+        &self.reference
+    }
+
+    #[inline]
+    pub fn family(&self) -> &EffectFamilyRef {
+        &self.family
+    }
+
+    #[inline]
+    pub fn object(&self) -> &GovernedObjectRef {
+        &self.object
+    }
+
+    #[inline]
+    pub fn context(&self) -> &ContextRef {
+        &self.context
+    }
 }
 
 /// Descriptor semántico constituido de una forma concreta de transición.
@@ -90,6 +138,13 @@ impl FormDescriptor {
     #[inline]
     pub fn accumulation(&self) -> &AccumulationContract {
         &self.accumulation
+    }
+
+    /// Comprueba únicamente la pertenencia del efecto a la familia declarada
+    /// por la forma. No decide autoridad, habilitación ni permiso.
+    #[inline]
+    pub fn describes_effect_family(&self, effect: &EffectDescriptor) -> bool {
+        &self.effect_family == effect.family()
     }
 }
 
@@ -235,6 +290,18 @@ impl ConstitutedAuthority {
     pub fn governs(&self, object: &GovernedObjectRef) -> bool {
         self.governed_domain.contains(object)
     }
+
+    /// Comprueba que el efecto descrito pertenece simultáneamente al contexto,
+    /// a `E_max` y a `D_a` de esta autoridad.
+    ///
+    /// Un resultado positivo acredita sólo alcance constituido. No equivale a
+    /// habilitación ni a permiso de ejecución.
+    #[inline]
+    pub fn contains_effect_scope(&self, effect: &EffectDescriptor) -> bool {
+        &self.context == effect.context()
+            && self.contains_effect(effect.reference())
+            && self.governs(effect.object())
+    }
 }
 
 #[cfg(test)]
@@ -274,6 +341,20 @@ mod tests {
         GovernedObjectRef::from_core_id(id(value))
     }
 
+    fn effect_descriptor(
+        effect: &str,
+        family: &str,
+        object: &str,
+        context: &str,
+    ) -> EffectDescriptor {
+        EffectDescriptor::constitute(
+            effect_ref(effect),
+            effect_family_ref(family),
+            object_ref(object),
+            context_ref(context),
+        )
+    }
+
     #[test]
     fn form_descriptor_freezes_the_constituted_dimensions() {
         let required = authority_ref("authority:prior");
@@ -292,6 +373,23 @@ mod tests {
         assert_eq!(descriptor.context_bindings().count(), 2);
         assert_eq!(descriptor.requires_authority(), Some(&required));
         assert_eq!(descriptor.accumulation(), &AccumulationContract::SingleUse);
+    }
+
+    #[test]
+    fn form_descriptor_rejects_an_effect_from_another_family_by_scope_test() {
+        let descriptor = FormDescriptor::constitute(
+            form_ref("form:1"),
+            TransitionClass::Exercise,
+            effect_family_ref("family:write"),
+            [context_ref("context:1")],
+            None,
+            AccumulationContract::NotApplicable,
+        );
+        let matching = effect_descriptor("effect:1", "family:write", "object:1", "context:1");
+        let foreign = effect_descriptor("effect:2", "family:delete", "object:1", "context:1");
+
+        assert!(descriptor.describes_effect_family(&matching));
+        assert!(!descriptor.describes_effect_family(&foreign));
     }
 
     #[test]
@@ -338,6 +436,47 @@ mod tests {
         assert!(!authority.contains_effect(&denied));
         assert!(authority.governs(&member));
         assert!(!authority.governs(&outsider));
+    }
+
+    #[test]
+    fn effect_scope_requires_context_envelope_and_domain_together() {
+        let authority = ConstitutedAuthority::constitute(
+            authority_ref("authority:1"),
+            holder_ref("holder:1"),
+            context_ref("context:1"),
+            [effect_ref("effect:allowed")],
+            [object_ref("object:member")],
+        );
+
+        let inside = effect_descriptor(
+            "effect:allowed",
+            "family:write",
+            "object:member",
+            "context:1",
+        );
+        let wrong_effect = effect_descriptor(
+            "effect:other",
+            "family:write",
+            "object:member",
+            "context:1",
+        );
+        let wrong_object = effect_descriptor(
+            "effect:allowed",
+            "family:write",
+            "object:outsider",
+            "context:1",
+        );
+        let wrong_context = effect_descriptor(
+            "effect:allowed",
+            "family:write",
+            "object:member",
+            "context:2",
+        );
+
+        assert!(authority.contains_effect_scope(&inside));
+        assert!(!authority.contains_effect_scope(&wrong_effect));
+        assert!(!authority.contains_effect_scope(&wrong_object));
+        assert!(!authority.contains_effect_scope(&wrong_context));
     }
 
     #[test]
