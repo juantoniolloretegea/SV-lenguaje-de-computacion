@@ -30,9 +30,10 @@ pub enum AccumulationContract {
 
 /// Efecto concreto descrito por identidad, familia, objeto y contexto.
 ///
-/// Esta estructura permite comprobar alcance. No constituye autorización para
-/// ejecutarlo y no dispone de constructor público.
-#[derive(Debug, PartialEq, Eq)]
+/// La identidad nominal del efecto no sustituye las restantes ligaduras. Dos
+/// descriptores que reutilicen la misma `EffectRef` con familia, objeto o
+/// contexto distintos no representan el mismo alcance constituido.
+#[derive(Debug, Clone, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct EffectDescriptor {
     reference: EffectRef,
     family: EffectFamilyRef,
@@ -140,33 +141,40 @@ impl FormDescriptor {
         &self.accumulation
     }
 
-    /// Comprueba únicamente la pertenencia del efecto a la familia declarada
-    /// por la forma. No decide autoridad, habilitación ni permiso.
+    /// Comprueba las dimensiones del efecto que R1-1 puede ligar desde la
+    /// forma: familia y contexto constituido.
+    ///
+    /// Un resultado positivo no decide autoridad, habilitación, `Req` ni
+    /// permiso.
     #[inline]
-    pub fn describes_effect_family(&self, effect: &EffectDescriptor) -> bool {
-        &self.effect_family == effect.family()
+    pub fn describes_effect(&self, effect: &EffectDescriptor) -> bool {
+        &self.effect_family == effect.family() && self.context_bindings.contains(effect.context())
     }
 }
 
 /// Envolvente máxima de efectos `E_max(a | C)`.
 ///
-/// La colección es cerrada después de la constitución. No existen métodos
+/// La colección conserva la descripción completa de cada efecto constituido:
+/// identidad, familia, objeto y contexto. No depende de que `EffectRef` sea
+/// globalmente única fuera de esta frontera.
+///
+/// La envolvente queda cerrada después de la constitución. No existen métodos
 /// públicos que añadan efectos por información, verificación, habilitación o
 /// ejercicio ordinarios.
 #[derive(Debug, PartialEq, Eq)]
 pub struct EffectEnvelope {
-    effects: BTreeSet<EffectRef>,
+    effects: BTreeSet<EffectDescriptor>,
 }
 
 impl EffectEnvelope {
-    fn constitute(effects: impl IntoIterator<Item = EffectRef>) -> Self {
+    fn constitute(effects: impl IntoIterator<Item = EffectDescriptor>) -> Self {
         Self {
             effects: effects.into_iter().collect(),
         }
     }
 
     #[inline]
-    pub fn contains(&self, effect: &EffectRef) -> bool {
+    pub fn contains(&self, effect: &EffectDescriptor) -> bool {
         self.effects.contains(effect)
     }
 
@@ -181,7 +189,7 @@ impl EffectEnvelope {
     }
 
     #[inline]
-    pub fn iter(&self) -> impl Iterator<Item = &EffectRef> {
+    pub fn iter(&self) -> impl Iterator<Item = &EffectDescriptor> {
         self.effects.iter()
     }
 }
@@ -225,6 +233,13 @@ impl GovernedDomain {
     }
 }
 
+/// Incoherencia al constituir el alcance de una autoridad.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum InvalidAuthorityScope {
+    EffectOutsideAuthorityContext,
+    EffectOutsideGovernedDomain,
+}
+
 /// Autoridad constituida y acotada para un titular y un contexto.
 ///
 /// El objeto no implementa `Clone` ni expone un constructor público. Una
@@ -244,16 +259,30 @@ impl ConstitutedAuthority {
         reference: AuthorityRef,
         holder: AuthorityHolderRef,
         context: ContextRef,
-        effects: impl IntoIterator<Item = EffectRef>,
+        effects: impl IntoIterator<Item = EffectDescriptor>,
         objects: impl IntoIterator<Item = GovernedObjectRef>,
-    ) -> Self {
-        Self {
+    ) -> Result<Self, InvalidAuthorityScope> {
+        let governed_domain = GovernedDomain::constitute(objects);
+        let effects: Vec<_> = effects.into_iter().collect();
+
+        if effects.iter().any(|effect| effect.context() != &context) {
+            return Err(InvalidAuthorityScope::EffectOutsideAuthorityContext);
+        }
+
+        if effects
+            .iter()
+            .any(|effect| !governed_domain.contains(effect.object()))
+        {
+            return Err(InvalidAuthorityScope::EffectOutsideGovernedDomain);
+        }
+
+        Ok(Self {
             reference,
             holder,
             context,
             max_effects: EffectEnvelope::constitute(effects),
-            governed_domain: GovernedDomain::constitute(objects),
-        }
+            governed_domain,
+        })
     }
 
     #[inline]
@@ -282,7 +311,7 @@ impl ConstitutedAuthority {
     }
 
     #[inline]
-    pub fn contains_effect(&self, effect: &EffectRef) -> bool {
+    pub fn contains_effect(&self, effect: &EffectDescriptor) -> bool {
         self.max_effects.contains(effect)
     }
 
@@ -291,15 +320,15 @@ impl ConstitutedAuthority {
         self.governed_domain.contains(object)
     }
 
-    /// Comprueba que el efecto descrito pertenece simultáneamente al contexto,
-    /// a `E_max` y a `D_a` de esta autoridad.
+    /// Comprueba que el efecto descrito pertenece simultáneamente a `E_max`,
+    /// a `D_a` y al contexto de esta autoridad.
     ///
     /// Un resultado positivo acredita sólo alcance constituido. No equivale a
-    /// habilitación ni a permiso de ejecución.
+    /// habilitación, cumplimiento de `Req`, permiso ni ejecución.
     #[inline]
     pub fn contains_effect_scope(&self, effect: &EffectDescriptor) -> bool {
         &self.context == effect.context()
-            && self.contains_effect(effect.reference())
+            && self.contains_effect(effect)
             && self.governs(effect.object())
     }
 }
@@ -376,7 +405,7 @@ mod tests {
     }
 
     #[test]
-    fn form_descriptor_rejects_an_effect_from_another_family_by_scope_test() {
+    fn form_scope_requires_family_and_context_together() {
         let descriptor = FormDescriptor::constitute(
             form_ref("form:1"),
             TransitionClass::Exercise,
@@ -386,20 +415,29 @@ mod tests {
             AccumulationContract::NotApplicable,
         );
         let matching = effect_descriptor("effect:1", "family:write", "object:1", "context:1");
-        let foreign = effect_descriptor("effect:2", "family:delete", "object:1", "context:1");
+        let wrong_family = effect_descriptor("effect:2", "family:delete", "object:1", "context:1");
+        let wrong_context = effect_descriptor("effect:3", "family:write", "object:1", "context:2");
 
-        assert!(descriptor.describes_effect_family(&matching));
-        assert!(!descriptor.describes_effect_family(&foreign));
+        assert!(descriptor.describes_effect(&matching));
+        assert!(!descriptor.describes_effect(&wrong_family));
+        assert!(!descriptor.describes_effect(&wrong_context));
     }
 
     #[test]
-    fn effect_envelope_is_exact_and_not_wildcarded() {
-        let allowed = effect_ref("effect:allowed");
-        let other = effect_ref("effect:other");
+    fn effect_envelope_uses_the_complete_effect_scope() {
+        let allowed = effect_descriptor("effect:1", "family:write", "object:1", "context:1");
+        let same_reference_other_family =
+            effect_descriptor("effect:1", "family:delete", "object:1", "context:1");
+        let same_reference_other_object =
+            effect_descriptor("effect:1", "family:write", "object:2", "context:1");
+        let same_reference_other_context =
+            effect_descriptor("effect:1", "family:write", "object:1", "context:2");
         let envelope = EffectEnvelope::constitute([allowed.clone()]);
 
         assert!(envelope.contains(&allowed));
-        assert!(!envelope.contains(&other));
+        assert!(!envelope.contains(&same_reference_other_family));
+        assert!(!envelope.contains(&same_reference_other_object));
+        assert!(!envelope.contains(&same_reference_other_context));
         assert_eq!(envelope.len(), 1);
     }
 
@@ -416,10 +454,19 @@ mod tests {
 
     #[test]
     fn constituted_authority_binds_holder_context_envelope_and_domain() {
-        let allowed = effect_ref("effect:allowed");
-        let denied = effect_ref("effect:denied");
         let member = object_ref("object:member");
-        let outsider = object_ref("object:outsider");
+        let allowed = effect_descriptor(
+            "effect:allowed",
+            "family:write",
+            "object:member",
+            "context:1",
+        );
+        let denied = effect_descriptor(
+            "effect:denied",
+            "family:write",
+            "object:member",
+            "context:1",
+        );
 
         let authority = ConstitutedAuthority::constitute(
             authority_ref("authority:1"),
@@ -427,7 +474,8 @@ mod tests {
             context_ref("context:1"),
             [allowed.clone()],
             [member.clone()],
-        );
+        )
+        .unwrap();
 
         assert_eq!(authority.reference().id().as_str(), "authority:1");
         assert_eq!(authority.holder().id().as_str(), "holder:1");
@@ -435,38 +483,80 @@ mod tests {
         assert!(authority.contains_effect(&allowed));
         assert!(!authority.contains_effect(&denied));
         assert!(authority.governs(&member));
-        assert!(!authority.governs(&outsider));
     }
 
     #[test]
-    fn effect_scope_requires_context_envelope_and_domain_together() {
-        let authority = ConstitutedAuthority::constitute(
+    fn authority_rejects_effect_outside_its_context() {
+        let result = ConstitutedAuthority::constitute(
             authority_ref("authority:1"),
             holder_ref("holder:1"),
             context_ref("context:1"),
-            [effect_ref("effect:allowed")],
+            [effect_descriptor(
+                "effect:1",
+                "family:write",
+                "object:1",
+                "context:2",
+            )],
+            [object_ref("object:1")],
+        );
+
+        assert_eq!(
+            result,
+            Err(InvalidAuthorityScope::EffectOutsideAuthorityContext)
+        );
+    }
+
+    #[test]
+    fn authority_rejects_effect_outside_its_governed_domain() {
+        let result = ConstitutedAuthority::constitute(
+            authority_ref("authority:1"),
+            holder_ref("holder:1"),
+            context_ref("context:1"),
+            [effect_descriptor(
+                "effect:1",
+                "family:write",
+                "object:outsider",
+                "context:1",
+            )],
             [object_ref("object:member")],
         );
 
+        assert_eq!(
+            result,
+            Err(InvalidAuthorityScope::EffectOutsideGovernedDomain)
+        );
+    }
+
+    #[test]
+    fn effect_scope_requires_complete_constituted_effect_and_domain() {
         let inside = effect_descriptor(
             "effect:allowed",
             "family:write",
             "object:member",
             "context:1",
         );
-        let wrong_effect = effect_descriptor(
-            "effect:other",
-            "family:write",
+        let authority = ConstitutedAuthority::constitute(
+            authority_ref("authority:1"),
+            holder_ref("holder:1"),
+            context_ref("context:1"),
+            [inside.clone()],
+            [object_ref("object:member")],
+        )
+        .unwrap();
+
+        let same_reference_wrong_family = effect_descriptor(
+            "effect:allowed",
+            "family:delete",
             "object:member",
             "context:1",
         );
-        let wrong_object = effect_descriptor(
+        let same_reference_wrong_object = effect_descriptor(
             "effect:allowed",
             "family:write",
             "object:outsider",
             "context:1",
         );
-        let wrong_context = effect_descriptor(
+        let same_reference_wrong_context = effect_descriptor(
             "effect:allowed",
             "family:write",
             "object:member",
@@ -474,14 +564,14 @@ mod tests {
         );
 
         assert!(authority.contains_effect_scope(&inside));
-        assert!(!authority.contains_effect_scope(&wrong_effect));
-        assert!(!authority.contains_effect_scope(&wrong_object));
-        assert!(!authority.contains_effect_scope(&wrong_context));
+        assert!(!authority.contains_effect_scope(&same_reference_wrong_family));
+        assert!(!authority.contains_effect_scope(&same_reference_wrong_object));
+        assert!(!authority.contains_effect_scope(&same_reference_wrong_context));
     }
 
     #[test]
     fn duplicate_members_do_not_expand_envelope_or_domain() {
-        let effect = effect_ref("effect:1");
+        let effect = effect_descriptor("effect:1", "family:write", "object:1", "context:1");
         let object = object_ref("object:1");
 
         let authority = ConstitutedAuthority::constitute(
@@ -490,7 +580,8 @@ mod tests {
             context_ref("context:1"),
             [effect.clone(), effect],
             [object.clone(), object],
-        );
+        )
+        .unwrap();
 
         assert_eq!(authority.max_effects().len(), 1);
         assert_eq!(authority.governed_domain().len(), 1);
