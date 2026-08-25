@@ -17,6 +17,8 @@ use crate::control::{
     VerifierFamilyRef, VerifierRef,
 };
 
+pub mod initial;
+
 /// Obligación nuclear de SEC.0-D.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum CoreRequirementKind {
@@ -512,22 +514,13 @@ mod tests {
 
     fn mandatory_descriptors() -> Vec<RequirementDescriptor> {
         [
-            (
-                "req:form",
-                CoreRequirementKind::FormValidity,
-            ),
-            (
-                "req:authority",
-                CoreRequirementKind::ApplicableAuthority,
-            ),
+            ("req:form", CoreRequirementKind::FormValidity),
+            ("req:authority", CoreRequirementKind::ApplicableAuthority),
             (
                 "req:verifier",
                 CoreRequirementKind::VerifierAdmissibilityAndApplicability,
             ),
-            (
-                "req:no-self",
-                CoreRequirementKind::NoSelfAccreditation,
-            ),
+            ("req:no-self", CoreRequirementKind::NoSelfAccreditation),
         ]
         .into_iter()
         .map(|(reference, core)| {
@@ -794,9 +787,7 @@ mod tests {
 
         assert_eq!(
             aggregate_requirement_checks(&set, &checks),
-            Err(CheckAggregationError::DuplicateCheck(
-                first.reference().clone()
-            ))
+            Err(CheckAggregationError::DuplicateCheck(first.reference().clone()))
         );
     }
 
@@ -815,9 +806,7 @@ mod tests {
 
         assert_eq!(
             aggregate_requirement_checks(&set, &[foreign_check]),
-            Err(CheckAggregationError::BindingMismatch(
-                first.reference().clone()
-            ))
+            Err(CheckAggregationError::BindingMismatch(first.reference().clone()))
         );
     }
 }
