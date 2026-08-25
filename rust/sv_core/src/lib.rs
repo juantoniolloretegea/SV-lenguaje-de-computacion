@@ -10,6 +10,7 @@ pub mod admissibility;
 pub mod authority;
 pub mod control;
 mod equivalence;
+pub mod execution;
 mod frontend;
 pub mod frame;
 pub mod ir;
@@ -41,6 +42,10 @@ pub use control::{
     VerifierRef,
 };
 pub use equivalence::equivalence_json;
+pub use execution::{
+    execute_mediated, EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest,
+    ExerciseAttemptState, ExerciseConfirmation, ExerciseTraceEntry,
+};
 pub use frontend::FrontendError;
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
 pub use ir::{

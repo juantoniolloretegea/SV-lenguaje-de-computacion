@@ -1,9 +1,14 @@
 use super::*;
 use crate::control::{
-    ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef, ReuseBindingKeyRef,
-    ReuseBindingValueRef, ReuseRuleRef, VerifierFamilyRef, VerifierRef,
+    AccumulationRuleRef, ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef,
+    ExerciseRef, ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, VerifierFamilyRef,
+    VerifierRef,
 };
-use crate::mediation::{mediate_permit, MediationError};
+use crate::execution::{
+    execute_mediated, EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest,
+    ExerciseAttemptState,
+};
+use crate::mediation::{mediate_permit, MediatedEffectCommitment, MediationError};
 use crate::permission::{decide_permit, PermitDecision, PermitDecisionError, PermitRejection};
 use crate::requirements::initial::{
     ApplicabilityProposal, CoverageRuleProposal, InitialRequirementError, ReuseBindingProposal,
@@ -76,6 +81,10 @@ fn reuse_binding_key(value: &str) -> ReuseBindingKeyRef {
 
 fn reuse_binding_value(value: &str) -> ReuseBindingValueRef {
     ReuseBindingValueRef::from_core_id(id(value))
+}
+
+fn accumulation_rule_ref(value: &str) -> AccumulationRuleRef {
+    AccumulationRuleRef::from_core_id(id(value))
 }
 
 fn mandatory_requirement_proposals(
@@ -277,6 +286,16 @@ fn permission_verifier(requirement: &RequirementRef, suffix: &str) -> VerifierRe
 }
 
 fn permission_plan() -> GenesisPlan {
+    permission_plan_with(
+        TransitionClass::Exercise,
+        AccumulationContract::SingleUse,
+    )
+}
+
+fn permission_plan_with(
+    transition_class: TransitionClass,
+    accumulation: AccumulationContract,
+) -> GenesisPlan {
     let form = form_ref("form:permit");
     let family = effect_family_ref("family:write");
     let context = context_ref("context:permit");
@@ -342,11 +361,11 @@ fn permission_plan() -> GenesisPlan {
         [
             FormProposal::new(
                 form,
-                TransitionClass::Exercise,
+                transition_class,
                 family.clone(),
                 [context.clone()],
                 Some(authority.clone()),
-                AccumulationContract::SingleUse,
+                accumulation,
             ),
             FormProposal::new(
                 form_ref("form:permit:free"),
@@ -396,10 +415,23 @@ fn permission_plan() -> GenesisPlan {
 }
 
 fn permission_continuity() -> AuthorityContinuity {
+    permission_continuity_with(
+        TransitionClass::Exercise,
+        AccumulationContract::SingleUse,
+    )
+}
+
+fn permission_continuity_with(
+    transition_class: TransitionClass,
+    accumulation: AccumulationContract,
+) -> AuthorityContinuity {
     let mut continuity = AuthorityContinuity::uninhabited();
     let mut premise = ExternalGenesisPremise::for_test();
     continuity
-        .apply_genesis(&mut premise, permission_plan())
+        .apply_genesis(
+            &mut premise,
+            permission_plan_with(transition_class, accumulation),
+        )
         .unwrap();
     assert!(premise.is_consumed());
     continuity
@@ -469,6 +501,36 @@ fn granted_permission<'a>(
         panic!("la decisión debía conceder el permiso de prueba");
     };
     permit
+}
+
+fn mediated_commitment(continuity: &AuthorityContinuity) -> MediatedEffectCommitment {
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(continuity, &authority, "effect:permit:allowed");
+    let permit = granted_permission(continuity, effect);
+    mediate_permit(continuity, permit, effect).unwrap()
+}
+
+#[derive(Default)]
+struct TestExecutor {
+    calls: usize,
+    fail: bool,
+    last_exercise: Option<ExerciseRef>,
+    last_effect: Option<EffectRef>,
+}
+
+impl EffectExecutor for TestExecutor {
+    type Error = &'static str;
+
+    fn execute(&mut self, request: &ExecutionRequest<'_>) -> Result<(), Self::Error> {
+        self.calls += 1;
+        self.last_exercise = Some(request.exercise().clone());
+        self.last_effect = Some(request.effect_reference().clone());
+        if self.fail {
+            Err("adapter-error")
+        } else {
+            Ok(())
+        }
+    }
 }
 
 #[test]
@@ -636,6 +698,197 @@ fn different_effect_cannot_cross_mediation_with_valid_permit() {
             presented: effect_ref("effect:permit:foreign"),
         })
     );
+}
+
+#[test]
+fn mediated_t_e_executes_once_and_records_append_only_trace() {
+    let continuity = permission_continuity();
+    let commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut adapter = TestExecutor::default();
+
+    let confirmation = execute_mediated(&mut execution, commitment, &mut adapter).unwrap();
+
+    assert_eq!(adapter.calls, 1);
+    assert_eq!(adapter.last_exercise.as_ref(), Some(confirmation.exercise()));
+    assert_eq!(adapter.last_effect.as_ref(), Some(confirmation.effect().reference()));
+    assert_eq!(confirmation.authority(), &authority_ref("authority:permit"));
+    assert_eq!(confirmation.form(), &form_ref("form:permit"));
+    assert_eq!(confirmation.effect().reference(), &effect_ref("effect:permit:allowed"));
+    assert_eq!(confirmation.context(), &context_ref("context:permit"));
+    assert_eq!(confirmation.exercise().id().as_str(), "exercise:1");
+    assert_eq!(execution.exercise_event_count(), 2);
+
+    let events = execution.exercise_events().collect::<Vec<_>>();
+    assert_eq!(events[0].exercise(), confirmation.exercise());
+    assert_eq!(events[0].state(), ExerciseAttemptState::DispatchCommitted);
+    assert_eq!(events[1].exercise(), confirmation.exercise());
+    assert_eq!(events[1].state(), ExerciseAttemptState::Confirmed);
+    assert_eq!(
+        execution.exercise_state(confirmation.exercise()),
+        Some(ExerciseAttemptState::Confirmed)
+    );
+}
+
+#[test]
+fn adapter_error_after_dispatch_is_indeterminate_not_non_execution() {
+    let continuity = permission_continuity();
+    let commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut adapter = TestExecutor {
+        fail: true,
+        ..Default::default()
+    };
+
+    let result = execute_mediated(&mut execution, commitment, &mut adapter);
+    let Err(ExecutionError::AdapterIndeterminate { exercise, error }) = result else {
+        panic!("el error del adaptador debía quedar como ejecución indeterminada");
+    };
+
+    assert_eq!(error, "adapter-error");
+    assert_eq!(adapter.calls, 1);
+    assert_eq!(execution.exercise_event_count(), 2);
+    assert_eq!(
+        execution.exercise_state(&exercise),
+        Some(ExerciseAttemptState::Indeterminate)
+    );
+    assert_eq!(
+        execution.exercise_events().map(|entry| entry.state()).collect::<Vec<_>>(),
+        vec![
+            ExerciseAttemptState::DispatchCommitted,
+            ExerciseAttemptState::Indeterminate,
+        ]
+    );
+}
+
+#[test]
+fn single_use_blocks_second_dispatch_after_confirmed_exercise() {
+    let continuity = permission_continuity();
+    let first_commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut adapter = TestExecutor::default();
+
+    let first = execute_mediated(&mut execution, first_commitment, &mut adapter).unwrap();
+    let second_commitment = mediated_commitment(execution.authority());
+
+    assert_eq!(
+        execute_mediated(&mut execution, second_commitment, &mut adapter),
+        Err(ExecutionError::SingleUseAlreadyDispatched(
+            first.exercise().clone()
+        ))
+    );
+    assert_eq!(adapter.calls, 1);
+    assert_eq!(execution.exercise_event_count(), 2);
+}
+
+#[test]
+fn single_use_blocks_second_dispatch_after_indeterminate_attempt() {
+    let continuity = permission_continuity();
+    let first_commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut failing = TestExecutor {
+        fail: true,
+        ..Default::default()
+    };
+
+    let first_result = execute_mediated(&mut execution, first_commitment, &mut failing);
+    let Err(ExecutionError::AdapterIndeterminate { exercise, .. }) = first_result else {
+        panic!("el primer intento debía quedar indeterminado");
+    };
+
+    let second_commitment = mediated_commitment(execution.authority());
+    let mut succeeding = TestExecutor::default();
+    assert_eq!(
+        execute_mediated(&mut execution, second_commitment, &mut succeeding),
+        Err(ExecutionError::SingleUseAlreadyDispatched(exercise))
+    );
+    assert_eq!(succeeding.calls, 0);
+    assert_eq!(execution.exercise_event_count(), 2);
+}
+
+#[test]
+fn idempotent_requires_new_governed_attempt_and_new_exercise_ref() {
+    let continuity = permission_continuity_with(
+        TransitionClass::Exercise,
+        AccumulationContract::Idempotent,
+    );
+    let first_commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut adapter = TestExecutor::default();
+
+    let first = execute_mediated(&mut execution, first_commitment, &mut adapter).unwrap();
+    let second_commitment = mediated_commitment(execution.authority());
+    let second = execute_mediated(&mut execution, second_commitment, &mut adapter).unwrap();
+
+    assert_eq!(adapter.calls, 2);
+    assert_ne!(first.exercise(), second.exercise());
+    assert_eq!(first.exercise().id().as_str(), "exercise:1");
+    assert_eq!(second.exercise().id().as_str(), "exercise:2");
+    assert_eq!(execution.exercise_event_count(), 4);
+}
+
+#[test]
+fn governed_accumulation_contracts_remain_closed_before_adapter() {
+    let cases = [
+        AccumulationContract::GovernedAggregator(accumulation_rule_ref("accumulation:aggregate")),
+        AccumulationContract::DecidableTracePredicate(accumulation_rule_ref("accumulation:trace")),
+    ];
+
+    for accumulation in cases {
+        let continuity = permission_continuity_with(TransitionClass::Exercise, accumulation.clone());
+        let commitment = mediated_commitment(&continuity);
+        let mut execution = ExecutionContinuity::from_authority(continuity);
+        let mut adapter = TestExecutor::default();
+        let result = execute_mediated(&mut execution, commitment, &mut adapter);
+
+        match accumulation {
+            AccumulationContract::GovernedAggregator(rule) => assert_eq!(
+                result,
+                Err(ExecutionError::GovernedAggregatorUnavailable(rule))
+            ),
+            AccumulationContract::DecidableTracePredicate(rule) => assert_eq!(
+                result,
+                Err(ExecutionError::TracePredicateUnavailable(rule))
+            ),
+            _ => unreachable!(),
+        }
+        assert_eq!(adapter.calls, 0);
+        assert_eq!(execution.exercise_event_count(), 0);
+    }
+}
+
+#[test]
+fn non_exercise_commitment_is_rejected_before_adapter_dispatch() {
+    let continuity = permission_continuity_with(
+        TransitionClass::Information,
+        AccumulationContract::NotApplicable,
+    );
+    let commitment = mediated_commitment(&continuity);
+    let mut execution = ExecutionContinuity::from_authority(continuity);
+    let mut adapter = TestExecutor::default();
+
+    assert_eq!(
+        execute_mediated(&mut execution, commitment, &mut adapter),
+        Err(ExecutionError::UnsupportedTransitionClass(
+            TransitionClass::Information
+        ))
+    );
+    assert_eq!(adapter.calls, 0);
+    assert_eq!(execution.exercise_event_count(), 0);
+}
+
+#[test]
+fn r1_4_unit_three_does_not_make_authorizing_classes_productive() {
+    for class in [
+        TransitionClass::Governance,
+        TransitionClass::Constitutive,
+        TransitionClass::Recovery,
+    ] {
+        assert_eq!(
+            transition_disposition(class),
+            TransitionDisposition::BlockedPendingRequirements
+        );
+    }
 }
 
 #[test]
