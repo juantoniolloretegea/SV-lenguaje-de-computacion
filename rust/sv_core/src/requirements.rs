@@ -16,6 +16,7 @@ use crate::control::{
     ApplicabilityRuleRef, CheckResult, ContextRef, EffectFamilyRef, FormRef, RequirementRef,
     VerifierFamilyRef, VerifierRef,
 };
+use crate::requirements_conflict::ConflictResolutionRule;
 
 pub mod initial;
 
@@ -40,8 +41,10 @@ pub enum RequirementClass {
 /// Descriptor inmutable de una obligación ligada a forma, familia de efectos y
 /// contexto.
 ///
-/// La primera unidad de R1-3 no expone un constructor productivo. La existencia
-/// de una referencia nominal no basta para fabricar este objeto constituido.
+/// La existencia de una referencia nominal no basta para fabricar este objeto
+/// constituido. Cuando existe una regla de resolución de conflicto, queda
+/// ligada al descriptor durante la constitución inicial y no durante el acto de
+/// comprobación.
 #[derive(Debug, PartialEq, Eq)]
 pub struct RequirementDescriptor {
     reference: RequirementRef,
@@ -51,6 +54,7 @@ pub struct RequirementDescriptor {
     context: ContextRef,
     admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
+    conflict_resolution_rule: Option<ConflictResolutionRule>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -60,7 +64,7 @@ pub enum InvalidRequirementDescriptor {
 
 impl RequirementDescriptor {
     #[cfg(test)]
-    fn constitute_for_test(
+    pub(crate) fn constitute_for_test(
         reference: RequirementRef,
         class: RequirementClass,
         form: FormRef,
@@ -83,6 +87,7 @@ impl RequirementDescriptor {
             context,
             admissible_verifier_families,
             applicability_rule,
+            conflict_resolution_rule: None,
         })
     }
 
@@ -121,6 +126,13 @@ impl RequirementDescriptor {
         &self.applicability_rule
     }
 
+    /// Regla de resolución de conflicto constituida para esta obligación, si
+    /// existe. Su ausencia conserva el fallo cerrado `conflicto → D-N`.
+    #[inline]
+    pub fn conflict_resolution_rule(&self) -> Option<&ConflictResolutionRule> {
+        self.conflict_resolution_rule.as_ref()
+    }
+
     #[inline]
     pub fn accepts_applicability(&self, applicability: &VerifierApplicability) -> bool {
         applicability.requirement == self.reference
@@ -129,6 +141,14 @@ impl RequirementDescriptor {
             && self
                 .admissible_verifier_families
                 .contains(&applicability.verifier_family)
+    }
+
+    #[cfg(test)]
+    pub(crate) fn attach_conflict_resolution_rule_for_test(
+        &mut self,
+        rule: ConflictResolutionRule,
+    ) {
+        self.conflict_resolution_rule = Some(rule);
     }
 }
 
@@ -148,7 +168,7 @@ pub struct VerifierApplicability {
 
 impl VerifierApplicability {
     #[cfg(test)]
-    fn constitute_for_test(
+    pub(crate) fn constitute_for_test(
         verifier: VerifierRef,
         verifier_family: VerifierFamilyRef,
         requirement: RequirementRef,
@@ -193,9 +213,9 @@ impl VerifierApplicability {
 /// Conjunto constituido de obligaciones aplicables a una forma, familia de
 /// efectos y contexto.
 ///
-/// La construcción productiva queda deliberadamente fuera de esta primera
-/// unidad. El tipo conserva el invariante de no vacuidad y el núcleo obligatorio
-/// cuando se constituye en las pruebas de realización.
+/// El tipo conserva el invariante de no vacuidad y el núcleo obligatorio. La
+/// constitución productiva de R1-3 se realiza exclusivamente desde la puerta
+/// T-0 mediante el submódulo `initial`.
 #[derive(Debug, PartialEq, Eq)]
 pub struct RequirementSet {
     form: FormRef,
@@ -333,7 +353,7 @@ pub enum CheckFormationError {
 
 impl RequirementCheck {
     #[cfg(test)]
-    fn constitute_for_test(
+    pub(crate) fn constitute_for_test(
         descriptor: &RequirementDescriptor,
         applicability: &VerifierApplicability,
         result: CheckResult,
@@ -380,7 +400,7 @@ impl RequirementCheck {
     }
 
     #[inline]
-    fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
         self.requirement == descriptor.reference
             && self.form == descriptor.form
             && self.effect_family == descriptor.effect_family
