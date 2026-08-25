@@ -17,7 +17,7 @@ Permit concedido
 + forma vigente
 + autoridad vigente
 + alcance vigente E_max / D_a
-+ Req gobernante vigente
++ reutilización 3E positiva de cada obligación
 + Applicable(V,q,C) participantes vigentes
 → MediatedEffectCommitment
 ```
@@ -101,27 +101,43 @@ objeto(effect) ∈ D_a
 
 La mediación no recibe booleanos de pertenencia suministrados por el llamador.
 
-## 7. Instantánea gobernante de Req y aplicabilidad participante
+## 7. Continuidad gobernada de Req
 
-La unidad 1 conservaba la ligadura de `Req` y el resultado técnico `D-A`. La unidad 2 refuerza el sello del permiso con una instantánea material del contenido gobernante de cada obligación.
+La decisión de permiso conserva, para cada obligación que sustentó el `D-A` final, un `HistoricalQualifiedRequirementResult` producido por la frontera de reutilización de R1-3.
 
-Para cada `RequirementDescriptor` se conservan, como mínimo:
+Ese objeto contiene el resultado posterior a cobertura, la ligadura material de la obligación, las reglas de conflicto y cobertura, la regla de reutilización y los verificadores participantes.
+
+La mediación no sustituye la vigencia de R1-3 por una comparación propia más débil. Para cada obligación exige:
 
 ```text
-RequirementRef
-+ RequirementClass
-+ familias admisibles de verificadores
-+ ApplicabilityRuleRef
-+ regla de conflicto y su contenido, si existe
-+ regla de cobertura y su contenido, si existe
-+ regla de reutilización y sus ligaduras, si existe
+reuse_historical_requirement_result(q_actual, q_histórico)
+→ Reused
++ resultado = D-A
 ```
 
-La mediación vuelve a obtener el `RequirementSet` vigente y exige igualdad exacta de esa instantánea.
+Por tanto:
 
-Por tanto, conservar la misma referencia nominal de una regla cambiando su contenido no mantiene vigente el permiso.
+```text
+ausencia de ReuseRule histórica
+→ no reutilizable
+→ no compromiso mediado
 
-Además, para cada verificador que participó efectivamente en los `ResolvedRequirementResult` que sustentaron el permiso, se sella la relación constituida:
+ausencia de ReuseRule vigente
+→ no reutilizable
+→ no compromiso mediado
+
+cambio material de ligadura o de regla
+→ no reutilizable
+→ no compromiso mediado
+```
+
+La forma del `RequirementSet` también debe permanecer completa: añadir, retirar o sustituir obligaciones invalida la mediación del permiso anterior.
+
+Con ello R1-4 no crea una segunda vía de reutilización al margen de 3E.
+
+## 8. Aplicabilidad participante
+
+Para cada verificador que participó efectivamente en los `ResolvedRequirementResult` que sustentaron el permiso, se sella la relación constituida:
 
 ```text
 RequirementRef
@@ -135,7 +151,7 @@ La decisión positiva sólo sella relaciones `Applicable(V,q,C)` recuperadas de 
 
 La existencia de otras relaciones de aplicabilidad que no participaron en la decisión no altera por sí sola la vigencia del permiso.
 
-## 8. Resultado técnico
+## 9. Resultado técnico
 
 Todo `Permit` productivo procede de un resultado final `D-A` de R1-3.
 
@@ -145,11 +161,11 @@ La mediación conserva defensivamente la comprobación:
 technical_result = D-A
 ```
 
-Un estado distinto no puede formar compromiso mediado.
+Además, cada resultado histórico por obligación debe ser reutilizable como `D-A` mediante 3E.
 
-La mediación no recalcula ni promociona `D-R` o `D-N`, porque esos resultados no producen `Permit` en la unidad 1.
+Un estado distinto no puede formar compromiso mediado. La mediación no promociona `D-R` ni `D-N`.
 
-## 9. Salida positiva
+## 10. Salida positiva
 
 La única salida positiva es:
 
@@ -165,7 +181,7 @@ El objeto:
 - conserva internamente el permiso consumido;
 - mantiene la identidad concreta del efecto y las ligaduras asociadas.
 
-## 10. Fallo cerrado
+## 11. Fallo cerrado
 
 La mediación falla de forma cerrada cuando, entre otros casos:
 
@@ -175,8 +191,8 @@ La mediación falla de forma cerrada cuando, entre otros casos:
 - la autoridad ya no existe;
 - titular o contexto de autoridad han cambiado;
 - el efecto ya no pertenece a `E_max` o su objeto a `D_a`;
-- el `RequirementSet` ya no existe;
-- el contenido gobernante de `Req` ha cambiado;
+- el `RequirementSet` ya no existe o cambia de forma;
+- una obligación no puede reutilizarse positivamente por 3E;
 - una relación `Applicable(V,q,C)` participante ha desaparecido o ha cambiado materialmente.
 
 Estos fallos:
@@ -188,7 +204,7 @@ Estos fallos:
 ↛ efecto ejecutado
 ```
 
-## 11. No ejecución en esta unidad
+## 12. No ejecución en esta unidad
 
 `MediatedEffectCommitment` no ejecuta el efecto.
 
@@ -203,7 +219,7 @@ efecto protegido ejecutado
 
 No será admisible una vía productiva que acepte directamente `Permit`, `EffectRef`, `EffectDescriptor` o un booleano de autorización para comprometer el efecto externo.
 
-## 12. Clases de transición
+## 13. Clases de transición
 
 Esta unidad no hace productivas por sí sola T-G, T-C ni T-R.
 
@@ -211,7 +227,7 @@ T-I, T-V, T-H y T-E continúan sin constituir autoridad.
 
 La existencia de un compromiso mediado tampoco equivale a haber ejecutado una transición de dominio.
 
-## 13. Tiempo y estado técnico
+## 14. Tiempo y estado técnico
 
 La mediación no introduce:
 
@@ -221,9 +237,9 @@ La mediación no introduce:
 - caducidad por paso del tiempo;
 - `async` como requisito semántico.
 
-La vigencia se decide por igualdad de ligaduras constituidas.
+La vigencia se decide mediante las ligaduras constituidas y la reutilización gobernada de 3E.
 
-## 14. Fuera de alcance
+## 15. Fuera de alcance
 
 Quedan fuera de esta unidad:
 
@@ -240,18 +256,20 @@ Quedan fuera de esta unidad:
 
 La igualdad estructural de dos estados constituidos no se presenta en esta unidad como prueba de identidad durable entre procesos distintos.
 
-## 15. Criterio de cierre
+## 16. Criterio de cierre
 
 La unidad será cerrable cuando se demuestre que:
 
 1. sólo un `Permit` legítimo puede entrar en la mediación;
 2. la mediación consume ese permiso;
 3. el efecto presentado coincide exactamente con el autorizado;
-4. forma, autoridad, alcance, `Req` y aplicabilidades participantes se revalidan contra el estado vigente;
-5. cambios materiales conservando referencias nominales impiden el compromiso;
-6. el compromiso mediado no es fabricable;
-7. no existe ejecución externa en esta unidad;
-8. T-G, T-C y T-R permanecen no productivas;
-9. R0 y R1-3/R1-4 unidad 1 no sufren regresión.
+4. forma, autoridad y alcance se revalidan contra el estado vigente;
+5. cada obligación que sustentó el permiso atraviesa reutilización positiva 3E como `D-A`;
+6. las aplicabilidades participantes continúan constituidas con la misma ligadura;
+7. cambios materiales conservando referencias nominales impiden el compromiso;
+8. el compromiso mediado no es fabricable;
+9. no existe ejecución externa en esta unidad;
+10. T-G, T-C y T-R permanecen no productivas;
+11. R0 y R1-3/R1-4 unidad 1 no sufren regresión.
 
 Hasta que estas condiciones no estén acreditadas, R1-4 permanece abierto.
