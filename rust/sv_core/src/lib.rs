@@ -68,10 +68,9 @@ pub use decision_trace::{
     decide_permit_traced, execute_traced_mediated, mediate_traced_permit, ConflictRuleTrace,
     CoverageRuleTrace, DecisionTrace, DecisionTraceRef, IndividualCheckTrace,
     ProtectedDecisionContinuity, RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError,
-    TracedAdapterError, TracedBlockedDecision, TracedDecisionError, TracedEffectExecutor,
-    TracedExecutionError, TracedExecutionRequest, TracedExerciseConfirmation,
-    TracedMediatedCommitment, TracedMediationError, TracedPermit, TracedPermitDecision,
-    TracedPermitDisposition,
+    TracedAdapterError, TracedBlockedDecision, TracedDecisionError, TracedExecutionError,
+    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError, TracedPermit,
+    TracedPermitDecision, TracedPermitDisposition,
 };
 pub use equivalence::equivalence_json;
 pub use execution::{
