@@ -18,6 +18,7 @@ Permit concedido
 + autoridad vigente
 + alcance vigente E_max / D_a
 + Req gobernante vigente
++ Applicable(V,q,C) participantes vigentes
 → MediatedEffectCommitment
 ```
 
@@ -100,7 +101,7 @@ objeto(effect) ∈ D_a
 
 La mediación no recibe booleanos de pertenencia suministrados por el llamador.
 
-## 7. Instantánea gobernante de Req
+## 7. Instantánea gobernante de Req y aplicabilidad participante
 
 La unidad 1 conservaba la ligadura de `Req` y el resultado técnico `D-A`. La unidad 2 refuerza el sello del permiso con una instantánea material del contenido gobernante de cada obligación.
 
@@ -119,6 +120,20 @@ RequirementRef
 La mediación vuelve a obtener el `RequirementSet` vigente y exige igualdad exacta de esa instantánea.
 
 Por tanto, conservar la misma referencia nominal de una regla cambiando su contenido no mantiene vigente el permiso.
+
+Además, para cada verificador que participó efectivamente en los `ResolvedRequirementResult` que sustentaron el permiso, se sella la relación constituida:
+
+```text
+RequirementRef
++ VerifierRef
++ VerifierFamilyRef
++ ContextRef
++ ApplicabilityRuleRef
+```
+
+La decisión positiva sólo sella relaciones `Applicable(V,q,C)` recuperadas de la continuidad constituida. En la mediación, cada una debe seguir existiendo con las mismas dimensiones. La desaparición o variación de una relación participante impide formar el compromiso mediado.
+
+La existencia de otras relaciones de aplicabilidad que no participaron en la decisión no altera por sí sola la vigencia del permiso.
 
 ## 8. Resultado técnico
 
@@ -161,7 +176,8 @@ La mediación falla de forma cerrada cuando, entre otros casos:
 - titular o contexto de autoridad han cambiado;
 - el efecto ya no pertenece a `E_max` o su objeto a `D_a`;
 - el `RequirementSet` ya no existe;
-- el contenido gobernante de `Req` ha cambiado.
+- el contenido gobernante de `Req` ha cambiado;
+- una relación `Applicable(V,q,C)` participante ha desaparecido o ha cambiado materialmente.
 
 Estos fallos:
 
@@ -214,12 +230,15 @@ Quedan fuera de esta unidad:
 - ejecución adaptadora del efecto;
 - materialización de `ExerciseRef` como hecho ejecutado;
 - interpretación productiva de contratos de acumulación;
+- identidad durable de una continuidad entre procesos;
 - persistencia durable;
 - R2, R3 y R4;
 - `BudgetΣ`;
 - IA-SEC;
 - Garantía I;
 - Garantía II.
+
+La igualdad estructural de dos estados constituidos no se presenta en esta unidad como prueba de identidad durable entre procesos distintos.
 
 ## 15. Criterio de cierre
 
@@ -228,7 +247,7 @@ La unidad será cerrable cuando se demuestre que:
 1. sólo un `Permit` legítimo puede entrar en la mediación;
 2. la mediación consume ese permiso;
 3. el efecto presentado coincide exactamente con el autorizado;
-4. forma, autoridad, alcance y `Req` se revalidan contra el estado vigente;
+4. forma, autoridad, alcance, `Req` y aplicabilidades participantes se revalidan contra el estado vigente;
 5. cambios materiales conservando referencias nominales impiden el compromiso;
 6. el compromiso mediado no es fabricable;
 7. no existe ejecución externa en esta unidad;
