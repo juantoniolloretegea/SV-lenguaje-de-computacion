@@ -4,7 +4,7 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-3  
-**Estado:** realización candidata de cierre
+**Estado:** cerrada · integrada
 
 ## 1. Objeto
 
@@ -244,7 +244,7 @@ R1-3 / unidad 2 = CERRADA · INTEGRADA
 R1-3 / unidad 3A = CERRADA · INTEGRADA
 R1-3 / unidad 3B = CERRADA · INTEGRADA
 R1-3 / unidad 3C = CERRADA · INTEGRADA
-R1-3 / unidad 3D = CANDIDATA DE CIERRE
+R1-3 / unidad 3D = CERRADA · INTEGRADA
 
 R1-4 = NO INICIADO
 R2–R4 = NO INICIADOS
