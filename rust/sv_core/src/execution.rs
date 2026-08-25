@@ -9,13 +9,15 @@
 //! acredita persistencia durable, atomicidad con el mundo externo ni
 //! correspondencia material independiente.
 
-use crate::authority::{AccumulationContract, EffectDescriptor, FormDescriptor};
 use crate::authority::transitions::AuthorityContinuity;
+use crate::authority::{AccumulationContract, EffectDescriptor};
 use crate::control::{
     AccumulationRuleRef, AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef, ControlId,
     EffectFamilyRef, EffectRef, ExerciseRef, FormRef, GovernedObjectRef, TransitionClass,
 };
-use crate::mediation::MediatedEffectCommitment;
+use crate::mediation::{
+    revalidate_mediated_commitment, MediatedEffectCommitment, MediationError,
+};
 
 /// Estado técnico append-only de un intento de ejercicio.
 ///
@@ -210,6 +212,11 @@ fn decimal_successor(value: &str) -> String {
 ///
 /// No existe constructor público. Obtener referencias desde esta solicitud no
 /// permite producir otro compromiso ni otra solicitud ejecutable.
+///
+/// ```compile_fail
+/// use sv_core::ExecutionRequest;
+/// let _ = ExecutionRequest::new();
+/// ```
 #[derive(Debug)]
 pub struct ExecutionRequest<'a> {
     exercise: &'a ExerciseRef,
@@ -331,6 +338,7 @@ impl ExerciseConfirmation {
 pub enum ExecutionError<E> {
     UnsupportedTransitionClass(TransitionClass),
     NonAccreditedCommitment,
+    MediationRevalidation(MediationError),
     CurrentFormMissing(FormRef),
     CurrentFormBindingChanged(FormRef),
     CurrentAuthorityMissing(AuthorityRef),
@@ -394,12 +402,15 @@ fn current_binding_is_compatible(
     Ok(())
 }
 
-fn map_infallible_gate_error<E>(error: ExecutionError<core::convert::Infallible>) -> ExecutionError<E> {
+fn map_infallible_gate_error<E>(
+    error: ExecutionError<core::convert::Infallible>,
+) -> ExecutionError<E> {
     match error {
         ExecutionError::UnsupportedTransitionClass(class) => {
             ExecutionError::UnsupportedTransitionClass(class)
         }
         ExecutionError::NonAccreditedCommitment => ExecutionError::NonAccreditedCommitment,
+        ExecutionError::MediationRevalidation(error) => ExecutionError::MediationRevalidation(error),
         ExecutionError::CurrentFormMissing(form) => ExecutionError::CurrentFormMissing(form),
         ExecutionError::CurrentFormBindingChanged(form) => {
             ExecutionError::CurrentFormBindingChanged(form)
@@ -428,9 +439,11 @@ fn map_infallible_gate_error<E>(error: ExecutionError<core::convert::Infallible>
 
 /// Ejecuta una T-E mediada contra un puerto explícito.
 ///
-/// El compromiso se consume. La traza registra `DispatchCommitted` antes de
-/// invocar el adaptador. Un error posterior queda como `Indeterminate`; no se
-/// interpreta como ausencia de efecto ni devuelve el compromiso para reintento.
+/// El compromiso se consume. Antes de abrir el despacho se repite la misma
+/// revalidación completa de mediación sobre `Req`, 3E y las aplicabilidades
+/// participantes. La traza registra `DispatchCommitted` antes de invocar el
+/// adaptador. Un error posterior queda como `Indeterminate`; no se interpreta
+/// como ausencia de efecto ni devuelve el compromiso para reintento.
 pub fn execute_mediated<A: EffectExecutor>(
     continuity: &mut ExecutionContinuity,
     commitment: MediatedEffectCommitment,
@@ -445,6 +458,9 @@ pub fn execute_mediated<A: EffectExecutor>(
     if commitment.technical_result() != CheckResult::Accredited {
         return Err(ExecutionError::NonAccreditedCommitment);
     }
+
+    revalidate_mediated_commitment(continuity.authority(), &commitment)
+        .map_err(ExecutionError::MediationRevalidation)?;
 
     current_binding_is_compatible(continuity.authority(), &commitment)
         .map_err(map_infallible_gate_error)?;
@@ -506,6 +522,9 @@ mod tests {
     fn decimal_successor_is_unbounded_by_machine_word_width() {
         assert_eq!(decimal_successor("0"), "1");
         assert_eq!(decimal_successor("9"), "10");
-        assert_eq!(decimal_successor("999999999999999999999999999999"), "1000000000000000000000000000000");
+        assert_eq!(
+            decimal_successor("999999999999999999999999999999"),
+            "1000000000000000000000000000000"
+        );
     }
 }
