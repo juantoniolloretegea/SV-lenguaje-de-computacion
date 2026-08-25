@@ -15,7 +15,7 @@ pub mod frame;
 pub mod ir;
 pub mod nat;
 pub mod requirements;
-pub mod requirements_bridge;
+mod requirements_bridge;
 pub mod requirements_conflict;
 pub mod requirements_coverage;
 pub mod resolution;
@@ -49,16 +49,16 @@ pub use requirements::{
     VerifierApplicability,
 };
 pub use requirements_bridge::{
-    aggregate_resolved_requirement_results, resolve_requirement_result, ResolvedAggregationError,
-    ResolvedRequirementResult,
+    resolve_requirement_result, ResolvedAggregationError, ResolvedRequirementResult,
 };
 pub use requirements_conflict::{
     resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,
     RequirementConflictError,
 };
 pub use requirements_coverage::{
-    assess_requirement_coverage, CoverageAssessment, CoverageAssessmentError, CoverageDisposition,
-    CoverageRule, CoverageRuleFormationError,
+    aggregate_covered_requirement_results, assess_requirement_coverage, CoveredAggregationError,
+    CoverageAssessment, CoverageAssessmentError, CoverageDisposition, CoverageRule,
+    CoverageRuleFormationError,
 };
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
