@@ -665,48 +665,35 @@ mod tests {
 
     #[test]
     fn coverage_rule_identity_is_part_of_the_resolved_binding() {
-        let mut first_descriptor = specific_descriptor("req:1", "context:1");
+        let mut original = descriptor(
+            "req:form",
+            RequirementClass::Core(CoreRequirementKind::FormValidity),
+            "context:1",
+        );
         attach_rule(
-            &mut first_descriptor,
+            &mut original,
             "coverage:first",
-            [verifier("verifier:1")],
+            [verifier("verifier:0")],
         );
-        let resolved = resolved_one(
-            &first_descriptor,
-            "verifier:1",
-            CheckResult::Accredited,
-        );
+        let resolved = resolved_one(&original, "verifier:0", CheckResult::Accredited);
 
-        let mut second_descriptor = specific_descriptor("req:1", "context:1");
+        let mut descriptors = mandatory_descriptors();
+        let target = descriptors
+            .iter_mut()
+            .find(|descriptor| descriptor.reference() == &requirement("req:form"))
+            .unwrap();
         attach_rule(
-            &mut second_descriptor,
+            target,
             "coverage:second",
-            [verifier("verifier:1")],
+            [verifier("verifier:0")],
         );
-        let set = RequirementSet::constitute_for_test(
-            form("form:1"),
-            family("family:write"),
-            context("context:1"),
-            [
-                second_descriptor,
-                descriptor(
-                    "req:authority",
-                    RequirementClass::Core(CoreRequirementKind::ApplicableAuthority),
-                    "context:1",
-                ),
-                descriptor(
-                    "req:verifier",
-                    RequirementClass::Core(CoreRequirementKind::VerifierAdmissibilityAndApplicability),
-                    "context:1",
-                ),
-                descriptor(
-                    "req:no-self",
-                    RequirementClass::Core(CoreRequirementKind::NoSelfAccreditation),
-                    "context:1",
-                ),
-            ],
-        );
+        let set = set_from(descriptors);
 
-        assert!(set.is_err() || resolved.requirement() == &requirement("req:1"));
+        assert_eq!(
+            aggregate_covered_requirement_results(&set, &[resolved]),
+            Err(CoveredAggregationError::Resolved(
+                ResolvedAggregationError::BindingMismatch(requirement("req:form"))
+            ))
+        );
     }
 }
