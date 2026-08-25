@@ -1,9 +1,9 @@
-//! Transiciones de autoridad y génesis lógica de R1-2.
+//! Transiciones de autoridad y génesis lógica de R1-2 y R1-3.
 //!
-//! Este módulo es descendiente de `authority` para que la única vía productiva
-//! de construcción de `FormDescriptor` y `ConstitutedAuthority` de este corte
-//! quede situada en la puerta T-0. Los adaptadores externos no reciben
-//! constructores equivalentes.
+//! R1-2 conserva la única vía productiva inicial de autoridad: T-0 bajo
+//! premisa externa opaca y continuidad no habitada. R1-3 superpone sobre esa
+//! misma puerta la constitución inicial de `Req` y `Applicable` para las formas
+//! sujetas a control, sin ejecutar comprobaciones ni producir permisos.
 //!
 //! La continuidad representada aquí es lógica e intra-proceso. No acredita
 //! continuidad material entre procesos, réplicas, restauraciones o estados
@@ -17,7 +17,12 @@ use super::{
 };
 use crate::control::{
     AuthorityHolderRef, AuthorityRef, ContextRef, ContinuityOccupancy, EffectFamilyRef, EffectRef,
-    FormRef, GovernedObjectRef, TransitionClass,
+    FormRef, GovernedObjectRef, RequirementRef, TransitionClass, VerifierRef,
+};
+use crate::requirements::{RequirementSet, VerifierApplicability};
+use crate::requirements::initial::{
+    constitute_initial, ApplicabilityProposal, InitialRequirementError, InitialRequirementState,
+    RequirementBinding, RequirementProposal,
 };
 
 /// Disposición de una clase T-* respecto de la constitución de autoridad en
@@ -28,8 +33,8 @@ pub enum TransitionDisposition {
     GenesisOnly,
     /// T-I, T-V, T-H y T-E: no pueden constituir autoridad.
     NonAuthorizing,
-    /// T-G, T-C y T-R: no aplican cambios hasta que R1-3 materialice `Req` y
-    /// los resultados de comprobación aplicables.
+    /// T-G, T-C y T-R: no aplican cambios; R1-3 constituye requisitos pero no
+    /// hace productivas estas transiciones.
     BlockedPendingRequirements,
 }
 
@@ -75,6 +80,16 @@ impl ExternalGenesisPremise {
     pub const fn is_consumed(&self) -> bool {
         self.consumed
     }
+}
+
+/// Capacidad interna de constitución inicial de requisitos.
+///
+/// No tiene constructor accesible fuera de este módulo y no implementa
+/// `Clone`. El submódulo de requisitos exige una referencia a esta capacidad
+/// para convertir propuestas en objetos constituidos.
+#[derive(Debug)]
+pub(crate) struct GenesisControlToken {
+    _private: (),
 }
 
 /// Descripción ordinaria de un efecto propuesto para la constitución inicial.
@@ -136,6 +151,22 @@ impl FormProposal {
             accumulation,
         }
     }
+
+    /// Predicado cerrado de sujeción a control para la representación de R1.
+    ///
+    /// No existe un booleano libre suministrable por el ejecutor. Una forma se
+    /// considera controlada si depende de autoridad previa o pertenece a una
+    /// clase que puede modificar gobierno, constitución o recuperación.
+    #[inline]
+    fn subject_to_control(&self) -> bool {
+        self.required_authority.is_some()
+            || matches!(
+                self.transition_class,
+                TransitionClass::Governance
+                    | TransitionClass::Constitutive
+                    | TransitionClass::Recovery
+            )
+    }
 }
 
 /// Descripción ordinaria de una autoridad propuesta para el estado inicial.
@@ -170,10 +201,16 @@ impl AuthorityProposal {
 }
 
 /// Propuesta completa de estado inicial para T-0.
+///
+/// Las propuestas de requisitos y aplicabilidad forman parte del mismo plan;
+/// no existe en esta unidad una operación posterior para completarlas sobre
+/// una continuidad ya habitada.
 #[derive(Debug, PartialEq, Eq)]
 pub struct GenesisPlan {
     forms: Vec<FormProposal>,
     authorities: Vec<AuthorityProposal>,
+    requirements: Vec<RequirementProposal>,
+    applicabilities: Vec<ApplicabilityProposal>,
 }
 
 impl GenesisPlan {
@@ -184,7 +221,23 @@ impl GenesisPlan {
         Self {
             forms: forms.into_iter().collect(),
             authorities: authorities.into_iter().collect(),
+            requirements: Vec::new(),
+            applicabilities: Vec::new(),
         }
+    }
+
+    /// Añade propuestas de constitución inicial de R1-3.
+    ///
+    /// Las propuestas continúan siendo datos ordinarios hasta que T-0 las
+    /// valide y las constituya de forma atómica.
+    pub fn with_initial_control(
+        mut self,
+        requirements: impl IntoIterator<Item = RequirementProposal>,
+        applicabilities: impl IntoIterator<Item = ApplicabilityProposal>,
+    ) -> Self {
+        self.requirements = requirements.into_iter().collect();
+        self.applicabilities = applicabilities.into_iter().collect();
+        self
     }
 
     #[inline]
@@ -195,6 +248,16 @@ impl GenesisPlan {
     #[inline]
     pub fn authority_count(&self) -> usize {
         self.authorities.len()
+    }
+
+    #[inline]
+    pub fn requirement_proposal_count(&self) -> usize {
+        self.requirements.len()
+    }
+
+    #[inline]
+    pub fn applicability_proposal_count(&self) -> usize {
+        self.applicabilities.len()
     }
 }
 
@@ -218,12 +281,20 @@ pub enum GenesisError {
         form: FormRef,
         authority: AuthorityRef,
     },
+    ControlledFormWithoutContext(FormRef),
     InvalidAuthorityScope(InvalidAuthorityScope),
+    InvalidInitialRequirements(InitialRequirementError),
 }
 
 impl From<InvalidAuthorityScope> for GenesisError {
     fn from(error: InvalidAuthorityScope) -> Self {
         Self::InvalidAuthorityScope(error)
+    }
+}
+
+impl From<InitialRequirementError> for GenesisError {
+    fn from(error: InitialRequirementError) -> Self {
+        Self::InvalidInitialRequirements(error)
     }
 }
 
@@ -237,6 +308,7 @@ pub struct AuthorityContinuity {
     occupancy: ContinuityOccupancy,
     forms: BTreeMap<FormRef, FormDescriptor>,
     authorities: BTreeMap<AuthorityRef, ConstitutedAuthority>,
+    initial_requirements: InitialRequirementState,
 }
 
 impl AuthorityContinuity {
@@ -247,6 +319,7 @@ impl AuthorityContinuity {
             occupancy: ContinuityOccupancy::Uninhabited,
             forms: BTreeMap::new(),
             authorities: BTreeMap::new(),
+            initial_requirements: InitialRequirementState::default(),
         }
     }
 
@@ -272,6 +345,16 @@ impl AuthorityContinuity {
     }
 
     #[inline]
+    pub fn requirement_set_count(&self) -> usize {
+        self.initial_requirements.requirement_set_count()
+    }
+
+    #[inline]
+    pub fn verifier_applicability_count(&self) -> usize {
+        self.initial_requirements.applicability_count()
+    }
+
+    #[inline]
     pub fn form(&self, reference: &FormRef) -> Option<&FormDescriptor> {
         self.forms.get(reference)
     }
@@ -281,14 +364,35 @@ impl AuthorityContinuity {
         self.authorities.get(reference)
     }
 
-    /// Puerta de T-0 de R1-2.
+    /// Devuelve el `Req` constituido para una ligadura inicial exacta.
+    #[inline]
+    pub fn requirement_set(
+        &self,
+        form: &FormRef,
+        effect_family: &EffectFamilyRef,
+        context: &ContextRef,
+    ) -> Option<&RequirementSet> {
+        self.initial_requirements
+            .requirement_set(form, effect_family, context)
+    }
+
+    /// Devuelve una relación de aplicabilidad constituida por T-0.
+    #[inline]
+    pub fn verifier_applicability(
+        &self,
+        requirement: &RequirementRef,
+        verifier: &VerifierRef,
+        context: &ContextRef,
+    ) -> Option<&VerifierApplicability> {
+        self.initial_requirements
+            .applicability(requirement, verifier, context)
+    }
+
+    /// Puerta de T-0 de R1-2 con la conjunción constitutiva de R1-3.
     ///
-    /// La operación es pública como consumidor de una capacidad opaca, pero
-    /// `sv_core` no ofrece un constructor público de
-    /// `ExternalGenesisPremise`. Por ello, un adaptador ordinario no puede
-    /// autodeclarar la premisa necesaria para activar esta vía. La operación es
-    /// además transaccional: todo rechazo deja la continuidad y la premisa sin
-    /// consumir.
+    /// La operación continúa consumiendo la misma premisa opaca de R1-2. Toda
+    /// validación se completa sobre objetos locales y sólo después se compromete
+    /// el estado completo de la continuidad.
     pub fn apply_genesis(
         &mut self,
         premise: &mut ExternalGenesisPremise,
@@ -320,6 +424,7 @@ impl AuthorityContinuity {
         }
 
         let mut form_refs = BTreeSet::new();
+        let mut controlled_bindings = Vec::new();
         for form in &plan.forms {
             if !form_refs.insert(form.reference.clone()) {
                 return Err(GenesisError::DuplicateFormRef(form.reference.clone()));
@@ -344,6 +449,21 @@ impl AuthorityContinuity {
                         form: form.reference.clone(),
                         authority: required.clone(),
                     });
+                }
+            }
+
+            if form.subject_to_control() {
+                if form.context_bindings.is_empty() {
+                    return Err(GenesisError::ControlledFormWithoutContext(
+                        form.reference.clone(),
+                    ));
+                }
+                for context in &form.context_bindings {
+                    controlled_bindings.push(RequirementBinding::new(
+                        form.reference.clone(),
+                        form.effect_family.clone(),
+                        context.clone(),
+                    ));
                 }
             }
         }
@@ -389,6 +509,14 @@ impl AuthorityContinuity {
             );
         }
 
+        let token = GenesisControlToken { _private: () };
+        let initial_requirements = constitute_initial(
+            &token,
+            controlled_bindings,
+            plan.requirements,
+            plan.applicabilities,
+        )?;
+
         let mut forms = BTreeMap::new();
         for proposal in plan.forms {
             let reference = proposal.reference.clone();
@@ -407,6 +535,7 @@ impl AuthorityContinuity {
 
         self.forms = forms;
         self.authorities = authorities;
+        self.initial_requirements = initial_requirements;
         self.occupancy = ContinuityOccupancy::Inhabited;
         premise.consumed = true;
         Ok(())
@@ -422,7 +551,11 @@ impl Default for AuthorityContinuity {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::control::{ControlId, TransitionClass};
+    use crate::control::{
+        ApplicabilityRuleRef, ControlId, RequirementRef, TransitionClass, VerifierFamilyRef,
+        VerifierRef,
+    };
+    use crate::requirements::{CoreRequirementKind, RequirementClass};
 
     fn id(value: &str) -> ControlId {
         ControlId::new(value).unwrap()
@@ -456,27 +589,104 @@ mod tests {
         GovernedObjectRef::from_core_id(id(value))
     }
 
+    fn requirement_ref(value: &str) -> RequirementRef {
+        RequirementRef::from_core_id(id(value))
+    }
+
+    fn verifier_ref(value: &str) -> VerifierRef {
+        VerifierRef::from_core_id(id(value))
+    }
+
+    fn verifier_family_ref(value: &str) -> VerifierFamilyRef {
+        VerifierFamilyRef::from_core_id(id(value))
+    }
+
+    fn applicability_rule_ref(value: &str) -> ApplicabilityRuleRef {
+        ApplicabilityRuleRef::from_core_id(id(value))
+    }
+
+    fn mandatory_requirement_proposals(
+        form: &str,
+        family: &str,
+        context: &str,
+    ) -> Vec<RequirementProposal> {
+        [
+            ("form", CoreRequirementKind::FormValidity),
+            ("authority", CoreRequirementKind::ApplicableAuthority),
+            (
+                "verifier",
+                CoreRequirementKind::VerifierAdmissibilityAndApplicability,
+            ),
+            ("no-self", CoreRequirementKind::NoSelfAccreditation),
+        ]
+        .into_iter()
+        .map(|(suffix, kind)| {
+            RequirementProposal::new(
+                requirement_ref(&format!("req:{form}:{suffix}")),
+                RequirementClass::Core(kind),
+                form_ref(form),
+                effect_family_ref(family),
+                context_ref(context),
+                [verifier_family_ref("verifier-family:canonical")],
+                applicability_rule_ref("applicability:canonical"),
+            )
+        })
+        .collect()
+    }
+
     fn valid_plan() -> GenesisPlan {
         let authority = authority_ref("authority:genesis");
+        let form = "form:exercise";
+        let context = "context:genesis";
         GenesisPlan::new(
             [FormProposal::new(
-                form_ref("form:exercise"),
+                form_ref(form),
                 TransitionClass::Exercise,
                 effect_family_ref("family:write"),
-                [context_ref("context:genesis")],
+                [context_ref(context)],
                 Some(authority.clone()),
                 AccumulationContract::SingleUse,
             )],
             [AuthorityProposal::new(
                 authority,
                 holder_ref("holder:root"),
-                context_ref("context:genesis"),
+                context_ref(context),
                 [EffectProposal::new(
                     effect_ref("effect:write-one"),
                     effect_family_ref("family:write"),
                     object_ref("object:one"),
-                    context_ref("context:genesis"),
+                    context_ref(context),
                 )],
+                [object_ref("object:one")],
+            )],
+        )
+        .with_initial_control(
+            mandatory_requirement_proposals(form, "family:write", context),
+            [ApplicabilityProposal::new(
+                verifier_ref("verifier:canonical"),
+                verifier_family_ref("verifier-family:canonical"),
+                requirement_ref("req:form:exercise:form"),
+                context_ref(context),
+                applicability_rule_ref("applicability:canonical"),
+            )],
+        )
+    }
+
+    fn uncontrolled_plan() -> GenesisPlan {
+        GenesisPlan::new(
+            [FormProposal::new(
+                form_ref("form:information"),
+                TransitionClass::Information,
+                effect_family_ref("family:read"),
+                [context_ref("context:genesis")],
+                None,
+                AccumulationContract::NotApplicable,
+            )],
+            [AuthorityProposal::new(
+                authority_ref("authority:root"),
+                holder_ref("holder:root"),
+                context_ref("context:genesis"),
+                [],
                 [object_ref("object:one")],
             )],
         )
@@ -494,9 +704,25 @@ mod tests {
         assert!(premise.is_consumed());
         assert_eq!(continuity.form_count(), 1);
         assert_eq!(continuity.authority_count(), 1);
+        assert_eq!(continuity.requirement_set_count(), 1);
+        assert_eq!(continuity.verifier_applicability_count(), 1);
         assert!(continuity.form(&form_ref("form:exercise")).is_some());
         assert!(continuity
             .authority(&authority_ref("authority:genesis"))
+            .is_some());
+        assert!(continuity
+            .requirement_set(
+                &form_ref("form:exercise"),
+                &effect_family_ref("family:write"),
+                &context_ref("context:genesis")
+            )
+            .is_some());
+        assert!(continuity
+            .verifier_applicability(
+                &requirement_ref("req:form:exercise:form"),
+                &verifier_ref("verifier:canonical"),
+                &context_ref("context:genesis")
+            )
             .is_some());
     }
 
@@ -512,7 +738,7 @@ mod tests {
         assert_eq!(result, Err(GenesisError::AlreadyInhabited));
         assert!(!second.is_consumed());
         assert_eq!(continuity.form_count(), 1);
-        assert_eq!(continuity.authority_count(), 1);
+        assert_eq!(continuity.requirement_set_count(), 1);
     }
 
     #[test]
@@ -528,6 +754,7 @@ mod tests {
         assert!(!premise.is_consumed());
         assert_eq!(continuity.form_count(), 0);
         assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
     }
 
     #[test]
@@ -727,6 +954,7 @@ mod tests {
         assert!(continuity.t0_available());
         assert_eq!(continuity.form_count(), 0);
         assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
         assert!(!premise.is_consumed());
     }
 
@@ -769,6 +997,181 @@ mod tests {
         assert!(continuity.t0_available());
         assert_eq!(continuity.form_count(), 0);
         assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+        assert!(!premise.is_consumed());
+    }
+
+    #[test]
+    fn controlled_form_without_requirements_is_rejected_atomically() {
+        let authority = authority_ref("authority:genesis");
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form_ref("form:exercise"),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [context_ref("context:genesis")],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref("context:genesis"),
+                [],
+                [object_ref("object:one")],
+            )],
+        );
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert!(matches!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::MissingRequirementSet { .. }
+            ))
+        ));
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+    }
+
+    #[test]
+    fn missing_mandatory_core_rejects_whole_genesis() {
+        let authority = authority_ref("authority:genesis");
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements.pop();
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form_ref(form),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [context_ref(context)],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref(context),
+                [],
+                [object_ref("object:one")],
+            )],
+        )
+        .with_initial_control(requirements, []);
+
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert!(matches!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::MissingMandatoryCore { .. }
+            ))
+        ));
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+    }
+
+    #[test]
+    fn applicability_mismatch_rejects_whole_genesis() {
+        let authority = authority_ref("authority:genesis");
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form_ref(form),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [context_ref(context)],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref(context),
+                [],
+                [object_ref("object:one")],
+            )],
+        )
+        .with_initial_control(
+            mandatory_requirement_proposals(form, "family:write", context),
+            [ApplicabilityProposal::new(
+                verifier_ref("verifier:bad"),
+                verifier_family_ref("verifier-family:wrong"),
+                requirement_ref("req:form:exercise:form"),
+                context_ref(context),
+                applicability_rule_ref("applicability:canonical"),
+            )],
+        );
+
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert!(matches!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::ApplicabilityMismatch { .. }
+            ))
+        ));
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+    }
+
+    #[test]
+    fn uncontrolled_genesis_remains_valid_without_requirements() {
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        continuity
+            .apply_genesis(&mut premise, uncontrolled_plan())
+            .unwrap();
+
+        assert_eq!(continuity.occupancy(), ContinuityOccupancy::Inhabited);
+        assert!(premise.is_consumed());
+        assert_eq!(continuity.requirement_set_count(), 0);
+    }
+
+    #[test]
+    fn controlled_form_without_context_is_rejected_before_constitution() {
+        let authority = authority_ref("authority:genesis");
+        let form = form_ref("form:exercise");
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form.clone(),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref("context:genesis"),
+                [],
+                [object_ref("object:one")],
+            )],
+        );
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        assert_eq!(
+            continuity.apply_genesis(&mut premise, plan),
+            Err(GenesisError::ControlledFormWithoutContext(form))
+        );
+        assert!(continuity.t0_available());
         assert!(!premise.is_consumed());
     }
 
@@ -788,7 +1191,7 @@ mod tests {
     }
 
     #[test]
-    fn governance_constitutive_and_recovery_are_blocked_until_requirements_exist() {
+    fn governance_constitutive_and_recovery_remain_non_productive() {
         for class in [
             TransitionClass::Governance,
             TransitionClass::Constitutive,
@@ -802,7 +1205,7 @@ mod tests {
     }
 
     #[test]
-    fn only_genesis_has_productive_disposition_in_r1_2() {
+    fn only_genesis_has_productive_disposition_in_r1_3_unit_2() {
         assert_eq!(
             transition_disposition(TransitionClass::Genesis),
             TransitionDisposition::GenesisOnly
