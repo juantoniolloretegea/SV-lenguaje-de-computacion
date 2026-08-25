@@ -1,14 +1,14 @@
 //! Requisitos, aplicabilidad y resultados técnicos de R1-3.
 //!
-//! Esta primera unidad materializa estructuras cerradas para `Req(F,e | C)` y
-//! `Applicable(V,q,C)`. No ofrece constructores públicos para constituir esas
-//! relaciones durante el acto de comprobación, no produce `Permit` y no
-//! ejecuta efectos protegidos.
+//! Este módulo materializa estructuras cerradas para `Req(F,e | C)`,
+//! `Applicable(V,q,C)` y comprobaciones individuales selladas. No ofrece
+//! constructores públicos para constituir esas relaciones durante el acto de
+//! comprobación, no produce `Permit` y no ejecuta efectos protegidos.
 //!
 //! Un valor `CheckResult::Accredited` aislado sigue siendo sólo un resultado
-//! técnico nominal. La agregación pública de este módulo acepta únicamente
-//! comprobaciones ligadas a una obligación y a una relación de aplicabilidad
-//! ya constituida.
+//! técnico nominal. La agregación productiva final pertenece al puente sellado
+//! de R1-3 y acepta resultados de obligación ya resueltos, no comprobaciones
+//! individuales seleccionadas localmente.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -236,7 +236,7 @@ pub enum InvalidRequirementSet {
 
 impl RequirementSet {
     #[cfg(test)]
-    fn constitute_for_test(
+    pub(crate) fn constitute_for_test(
         form: FormRef,
         effect_family: EffectFamilyRef,
         context: ContextRef,
@@ -412,8 +412,12 @@ impl RequirementCheck {
     }
 }
 
+/// Error de la agregación transitoria de la unidad 1, conservada únicamente
+/// para regresión interna. La frontera productiva final de R1-3 agrega
+/// `ResolvedRequirementResult` mediante `requirements_bridge`.
+#[cfg(test)]
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub enum CheckAggregationError {
+pub(crate) enum CheckAggregationError {
     EmptyRequirementSet,
     UnexpectedCheck(RequirementRef),
     DuplicateCheck(RequirementRef),
@@ -421,12 +425,11 @@ pub enum CheckAggregationError {
     MissingCheck(RequirementRef),
 }
 
-/// Agrega comprobaciones ligadas a un `RequirementSet` completo.
-///
-/// La función no acepta `CheckResult` crudos. Exige una comprobación sellada
-/// por obligación, verifica cobertura exacta y conserva la precedencia
-/// contractual `D-R > D-N > D-A`.
-pub fn aggregate_requirement_checks(
+/// Agregación transitoria de la unidad 1, disponible sólo en pruebas de
+/// regresión. Tras 3A/3B una comprobación individual no constituye una entrada
+/// pública suficiente para la agregación entre obligaciones.
+#[cfg(test)]
+pub(crate) fn aggregate_requirement_checks(
     requirements: &RequirementSet,
     checks: &[RequirementCheck],
 ) -> Result<CheckResult, CheckAggregationError> {
