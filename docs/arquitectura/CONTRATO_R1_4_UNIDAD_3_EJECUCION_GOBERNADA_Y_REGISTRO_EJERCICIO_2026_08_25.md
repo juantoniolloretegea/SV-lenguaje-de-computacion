@@ -1,19 +1,19 @@
 # R1-4 — Unidad 3: ejecución gobernada y registro de ejercicio
 
-**Estado:** ABIERTA  
+**Estado:** CERRADA · INTEGRADA  
 **Fecha:** 25 de agosto de 2026
 
 ## 1. Objeto
 
-Esta unidad abre la primera frontera de ejecución material de R1-4 después de la decisión de permiso y de la mediación no eludible ya integradas.
+Esta unidad materializa la primera frontera de ejecución material de R1-4 después de la decisión de permiso y de la mediación no eludible ya integradas.
 
-El punto de entrada exigible será exclusivamente:
+El punto de entrada exigible es exclusivamente:
 
 ```text
 MediatedEffectCommitment
 ```
 
-La relación mínima de esta unidad será:
+La relación mínima de esta unidad es:
 
 ```text
 MediatedEffectCommitment
@@ -28,7 +28,7 @@ La unidad no reabre `Req`, no vuelve a decidir el permiso y no admite una vía a
 
 ## 2. Corte de clases de transición
 
-La primera clase susceptible de ejecución material en esta unidad será:
+La primera clase susceptible de ejecución material en esta unidad es:
 
 ```text
 T-E = Exercise
@@ -280,14 +280,14 @@ Para formas no idempotentes, cualquier nuevo intento requerirá además que el r
 
 ## 17. T-E productiva sin autoridad nueva
 
-El cierre positivo de esta unidad permitirá afirmar únicamente:
+El cierre positivo de esta unidad permite afirmar únicamente:
 
 ```text
 T-E puede materializar un ejercicio protegido
 si y sólo si atraviesa decisión, mediación y ejecución gobernadas
 ```
 
-No permitirá afirmar:
+No permite afirmar:
 
 ```text
 T-E → nueva autoridad
@@ -382,7 +382,7 @@ Quedan fuera de esta unidad:
 
 ## 22. Criterio de cierre
 
-La unidad será cerrable cuando se demuestre que:
+La unidad queda cerrada porque se ha demostrado que:
 
 1. #41 permanece integrada sin regresión;
 2. sólo `MediatedEffectCommitment` puede abrir la ejecución gobernada de T-E;
@@ -401,4 +401,4 @@ La unidad será cerrable cuando se demuestre que:
 15. el cierre no se usa para justificar una futura ejecución contra ligaduras gobernantes modificadas sin revalidación o versión explícita;
 16. R0, R1-3 y las unidades 1–2 de R1-4 permanecen correctas en nativo y WebAssembly.
 
-Hasta que estas condiciones no estén acreditadas, R1-4 permanece abierto y la unidad 3 no podrá declararse cerrada.
+Estas condiciones quedan acreditadas para el alcance de la unidad 3. R1-4 permanece abierto; T-G, T-C y T-R continúan no productivas; las Garantías I y II permanecen `NO_PROBADO`.
