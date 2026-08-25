@@ -19,11 +19,11 @@ use crate::control::{
     AuthorityHolderRef, AuthorityRef, ContextRef, ContinuityOccupancy, EffectFamilyRef, EffectRef,
     FormRef, GovernedObjectRef, RequirementRef, TransitionClass, VerifierRef,
 };
-use crate::requirements::{RequirementSet, VerifierApplicability};
 use crate::requirements::initial::{
     constitute_initial, ApplicabilityProposal, InitialRequirementError, InitialRequirementState,
     RequirementBinding, RequirementProposal,
 };
+use crate::requirements::{RequirementSet, VerifierApplicability};
 
 /// Disposición de una clase T-* respecto de la constitución de autoridad en
 /// R1-2.
@@ -552,9 +552,10 @@ impl Default for AuthorityContinuity {
 mod tests {
     use super::*;
     use crate::control::{
-        ApplicabilityRuleRef, ControlId, RequirementRef, TransitionClass, VerifierFamilyRef,
-        VerifierRef,
+        ApplicabilityRuleRef, ConflictResolutionRuleRef, ControlId, RequirementRef,
+        TransitionClass, VerifierFamilyRef, VerifierRef,
     };
+    use crate::requirements::initial::ConflictResolutionRuleProposal;
     use crate::requirements::{CoreRequirementKind, RequirementClass};
 
     fn id(value: &str) -> ControlId {
@@ -603,6 +604,10 @@ mod tests {
 
     fn applicability_rule_ref(value: &str) -> ApplicabilityRuleRef {
         ApplicabilityRuleRef::from_core_id(id(value))
+    }
+
+    fn conflict_rule_ref(value: &str) -> ConflictResolutionRuleRef {
+        ConflictResolutionRuleRef::from_core_id(id(value))
     }
 
     fn mandatory_requirement_proposals(
@@ -1127,6 +1132,120 @@ mod tests {
         assert!(!premise.is_consumed());
         assert_eq!(continuity.authority_count(), 0);
         assert_eq!(continuity.requirement_set_count(), 0);
+    }
+
+    #[test]
+    fn conflict_rule_without_applicable_decisive_verifier_rejects_t0_atomically() {
+        let authority = authority_ref("authority:genesis");
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let requirement = requirement_ref("req:form:exercise:form");
+        let decisive = verifier_ref("verifier:decisive");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_conflict_resolution_rule(
+            ConflictResolutionRuleProposal::new(
+                conflict_rule_ref("conflict-rule:form"),
+                decisive.clone(),
+            ),
+        );
+
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form_ref(form),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [context_ref(context)],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref(context),
+                [],
+                [object_ref("object:one")],
+            )],
+        )
+        .with_initial_control(requirements, []);
+
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::ConflictResolverNotApplicable {
+                    requirement,
+                    verifier: decisive,
+                }
+            ))
+        );
+        assert_eq!(continuity.occupancy(), ContinuityOccupancy::Uninhabited);
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.form_count(), 0);
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+        assert_eq!(continuity.verifier_applicability_count(), 0);
+    }
+
+    #[test]
+    fn duplicate_conflict_rule_reference_across_requirements_rejects_t0_atomically() {
+        let authority = authority_ref("authority:genesis");
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let shared = conflict_rule_ref("conflict-rule:shared");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_conflict_resolution_rule(
+            ConflictResolutionRuleProposal::new(
+                shared.clone(),
+                verifier_ref("verifier:decisive-one"),
+            ),
+        );
+        requirements[1] = requirements[1].clone().with_conflict_resolution_rule(
+            ConflictResolutionRuleProposal::new(
+                shared.clone(),
+                verifier_ref("verifier:decisive-two"),
+            ),
+        );
+
+        let plan = GenesisPlan::new(
+            [FormProposal::new(
+                form_ref(form),
+                TransitionClass::Exercise,
+                effect_family_ref("family:write"),
+                [context_ref(context)],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            )],
+            [AuthorityProposal::new(
+                authority,
+                holder_ref("holder:root"),
+                context_ref(context),
+                [],
+                [object_ref("object:one")],
+            )],
+        )
+        .with_initial_control(requirements, []);
+
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::DuplicateConflictResolutionRuleRef(shared)
+            ))
+        );
+        assert_eq!(continuity.occupancy(), ContinuityOccupancy::Uninhabited);
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.form_count(), 0);
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+        assert_eq!(continuity.verifier_applicability_count(), 0);
     }
 
     #[test]
