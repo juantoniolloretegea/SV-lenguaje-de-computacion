@@ -1,4 +1,4 @@
-//! Constitución inicial de `Req` y `Applicable` para R1-3.
+//! Constitución inicial de `Req`, `Applicable` y reglas de conflicto para R1-3.
 //!
 //! Este submódulo sólo convierte propuestas en objetos constituidos cuando
 //! recibe la capacidad interna emitida por la puerta T-0. No ejecuta
@@ -12,9 +12,31 @@ use super::{
 };
 use crate::authority::transitions::GenesisControlToken;
 use crate::control::{
-    ApplicabilityRuleRef, ContextRef, EffectFamilyRef, FormRef, RequirementRef,
-    VerifierFamilyRef, VerifierRef,
+    ApplicabilityRuleRef, ConflictResolutionRuleRef, ContextRef, EffectFamilyRef, FormRef,
+    RequirementRef, VerifierFamilyRef, VerifierRef,
 };
+use crate::requirements_conflict::ConflictResolutionRule;
+
+/// Propuesta ordinaria de una regla de resolución de conflicto para una
+/// obligación.
+///
+/// La propuesta sólo identifica la regla y el verificador que pretende quedar
+/// fijado como decisivo. Las restantes ligaduras se derivan de la obligación y
+/// de `Applicable(V,q,C)` durante T-0.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ConflictResolutionRuleProposal {
+    reference: ConflictResolutionRuleRef,
+    decisive_verifier: VerifierRef,
+}
+
+impl ConflictResolutionRuleProposal {
+    pub fn new(reference: ConflictResolutionRuleRef, decisive_verifier: VerifierRef) -> Self {
+        Self {
+            reference,
+            decisive_verifier,
+        }
+    }
+}
 
 /// Propuesta ordinaria de una obligación para la constitución inicial.
 ///
@@ -29,6 +51,7 @@ pub struct RequirementProposal {
     context: ContextRef,
     admissible_verifier_families: Vec<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
+    conflict_resolution_rule: Option<ConflictResolutionRuleProposal>,
 }
 
 impl RequirementProposal {
@@ -49,7 +72,21 @@ impl RequirementProposal {
             context,
             admissible_verifier_families: admissible_verifier_families.into_iter().collect(),
             applicability_rule,
+            conflict_resolution_rule: None,
         }
+    }
+
+    /// Adjunta una propuesta de regla de conflicto a esta obligación.
+    ///
+    /// La adjunción no constituye la regla. La conversión sólo puede producirse
+    /// dentro de T-0 y exige que el verificador decisivo sea ya aplicable a la
+    /// obligación y al contexto constituidos.
+    pub fn with_conflict_resolution_rule(
+        mut self,
+        rule: ConflictResolutionRuleProposal,
+    ) -> Self {
+        self.conflict_resolution_rule = Some(rule);
+        self
     }
 }
 
@@ -137,6 +174,12 @@ pub enum InitialRequirementError {
         verifier: VerifierRef,
         context: ContextRef,
     },
+    DuplicateConflictResolutionRuleRef(ConflictResolutionRuleRef),
+    UnknownRequirementForConflictRule(RequirementRef),
+    ConflictResolverNotApplicable {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+    },
 }
 
 /// Estado inicial constituido de requisitos y relaciones de aplicabilidad.
@@ -198,7 +241,7 @@ const MANDATORY_CORE: [CoreRequirementKind; 4] = [
 /// la puerta T-0. Su presencia evita que otra operación interna convierta una
 /// propuesta en objeto constituido por mera llamada a esta función.
 pub(crate) fn constitute_initial(
-    _token: &GenesisControlToken,
+    token: &GenesisControlToken,
     controlled_bindings: impl IntoIterator<Item = RequirementBinding>,
     proposals: impl IntoIterator<Item = RequirementProposal>,
     applicability_proposals: impl IntoIterator<Item = ApplicabilityProposal>,
@@ -206,6 +249,9 @@ pub(crate) fn constitute_initial(
     let controlled: BTreeSet<_> = controlled_bindings.into_iter().collect();
     let mut grouped: BTreeMap<RequirementBinding, Vec<RequirementDescriptor>> = BTreeMap::new();
     let mut reference_to_binding: BTreeMap<RequirementRef, RequirementBinding> = BTreeMap::new();
+    let mut pending_conflict_rules: BTreeMap<RequirementRef, ConflictResolutionRuleProposal> =
+        BTreeMap::new();
+    let mut conflict_rule_refs = BTreeSet::new();
 
     for proposal in proposals {
         let binding = RequirementBinding::new(
@@ -236,6 +282,15 @@ pub(crate) fn constitute_initial(
             ));
         }
 
+        if let Some(rule) = proposal.conflict_resolution_rule {
+            if !conflict_rule_refs.insert(rule.reference.clone()) {
+                return Err(InitialRequirementError::DuplicateConflictResolutionRuleRef(
+                    rule.reference,
+                ));
+            }
+            pending_conflict_rules.insert(proposal.reference.clone(), rule);
+        }
+
         grouped.entry(binding).or_default().push(RequirementDescriptor {
             reference: proposal.reference,
             class: proposal.class,
@@ -244,6 +299,7 @@ pub(crate) fn constitute_initial(
             context: proposal.context,
             admissible_verifier_families: families,
             applicability_rule: proposal.applicability_rule,
+            conflict_resolution_rule: None,
         });
     }
 
@@ -331,6 +387,53 @@ pub(crate) fn constitute_initial(
                 context: key.context,
             });
         }
+    }
+
+    for (requirement, proposal) in pending_conflict_rules {
+        let Some(binding) = reference_to_binding.get(&requirement).cloned() else {
+            return Err(InitialRequirementError::UnknownRequirementForConflictRule(
+                requirement,
+            ));
+        };
+
+        let Some(descriptor) = sets
+            .get(&binding)
+            .and_then(|set| set.requirement(&requirement))
+        else {
+            return Err(InitialRequirementError::UnknownRequirementForConflictRule(
+                requirement,
+            ));
+        };
+
+        let key = ApplicabilityKey {
+            requirement: requirement.clone(),
+            verifier: proposal.decisive_verifier.clone(),
+            context: descriptor.context().clone(),
+        };
+
+        let Some(applicability) = applicabilities.get(&key) else {
+            return Err(InitialRequirementError::ConflictResolverNotApplicable {
+                requirement,
+                verifier: proposal.decisive_verifier,
+            });
+        };
+
+        let rule = ConflictResolutionRule::constitute_from_genesis(
+            token,
+            proposal.reference,
+            descriptor,
+            applicability,
+        );
+
+        let Some(descriptor_mut) = sets
+            .get_mut(&binding)
+            .and_then(|set| set.requirements.get_mut(&requirement))
+        else {
+            return Err(InitialRequirementError::UnknownRequirementForConflictRule(
+                requirement,
+            ));
+        };
+        descriptor_mut.conflict_resolution_rule = Some(rule);
     }
 
     Ok(InitialRequirementState {

@@ -227,3 +227,7 @@ opaque_control_ref!(
     ApplicabilityRuleRef,
     "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
 );
+opaque_control_ref!(
+    ConflictResolutionRuleRef,
+    "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+);
