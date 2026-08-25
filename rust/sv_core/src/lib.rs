@@ -14,6 +14,7 @@ mod frontend;
 pub mod frame;
 pub mod ir;
 pub mod nat;
+pub mod requirements;
 pub mod resolution;
 mod wellformed;
 
@@ -25,10 +26,11 @@ pub use authority::{
     AccumulationContract, ConstitutedAuthority, EffectEnvelope, FormDescriptor, GovernedDomain,
 };
 pub use control::{
-    AccumulationRuleRef, AdmittedEvidenceRef, AuthorityHolderRef, AuthorityRef, CheckResult,
-    ConstitutedFactRef, ContextRef, ContinuityOccupancy, ControlId, EffectFamilyRef, EffectRef,
-    EnablementRef, ExerciseRef, FormRef, GovernedObjectRef, InformationRef, InvalidControlId,
-    TransitionClass,
+    AccumulationRuleRef, AdmittedEvidenceRef, ApplicabilityRuleRef, AuthorityHolderRef,
+    AuthorityRef, CheckResult, ConstitutedFactRef, ContextRef, ContinuityOccupancy, ControlId,
+    EffectFamilyRef, EffectRef, EnablementRef, ExerciseRef, FormRef, GovernedObjectRef,
+    InformationRef, InvalidControlId, RequirementRef, TransitionClass, VerifierFamilyRef,
+    VerifierRef,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
@@ -38,6 +40,11 @@ pub use ir::{
     IrSupervisableTarget,
 };
 pub use nat::{InvalidNat, Nat};
+pub use requirements::{
+    aggregate_requirement_checks, CheckAggregationError, CheckFormationError, CoreRequirementKind,
+    InvalidRequirementDescriptor, InvalidRequirementSet, RequirementCheck, RequirementClass,
+    RequirementDescriptor, RequirementSet, VerifierApplicability,
+};
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
     U_RESOLUTION_DIAGNOSTIC_CODE,

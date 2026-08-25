@@ -211,3 +211,19 @@ opaque_control_ref!(
     AccumulationRuleRef,
     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
 );
+opaque_control_ref!(
+    RequirementRef,
+    "Referencia a una obligación de Req; identificarla no acredita su cumplimiento."
+);
+opaque_control_ref!(
+    VerifierRef,
+    "Referencia a un verificador concreto; su mera existencia no acredita aplicabilidad."
+);
+opaque_control_ref!(
+    VerifierFamilyRef,
+    "Referencia a una familia de verificadores admisibles para una obligación."
+);
+opaque_control_ref!(
+    ApplicabilityRuleRef,
+    "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
+);
