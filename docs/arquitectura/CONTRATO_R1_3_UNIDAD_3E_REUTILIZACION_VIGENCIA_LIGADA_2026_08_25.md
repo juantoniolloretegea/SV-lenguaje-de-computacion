@@ -4,13 +4,13 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-3  
-**Estado:** abierta
+**Estado:** realización candidata de cierre
 
 ## 1. Objeto
 
 Esta unidad gobierna si un resultado técnico obtenido en un estado constituido anterior puede emplearse de nuevo como resultado válido para la misma obligación sin repetir íntegramente su comprobación.
 
-La reutilización no se presume por identidad nominal, por proximidad cronológica ni por disponibilidad del resultado. Sólo es admisible cuando permanecen acreditadas todas las ligaduras materialmente causales de su validez.
+La reutilización no se presume por identidad nominal, proximidad cronológica ni mera disponibilidad del resultado. Sólo es admisible cuando el resultado histórico ya fue cualificado por la cobertura aplicable y continúan acreditadas todas las ligaduras materialmente causales de su validez.
 
 Por tanto:
 
@@ -19,9 +19,9 @@ resultado histórico existente
 ≠ resultado históricamente reutilizable
 ```
 
-## 2. Punto de partida
+## 2. Punto de partida y frontera
 
-Las unidades 3A–3D ya separan:
+Las unidades 3A–3D separan:
 
 ```text
 comprobación individual
@@ -33,46 +33,85 @@ comprobación individual
 
 La unidad 3E no reabre esas reglas.
 
-En particular, la reutilización histórica no podrá operar directamente sobre un `ResolvedRequirementResult` sin haber conservado antes la cualificación de cobertura exigida por 3D.
-
-La frontera requerida es:
+En particular, la reutilización histórica no opera directamente sobre un `ResolvedRequirementResult`. La frontera realizada es:
 
 ```text
-resultado resuelto
-+ cobertura constituida
-→ resultado cualificado del acto
-→ posible reutilización histórica
+RequirementCheck[]
+→ resolución 3A / 3B
+→ ResolvedRequirementResult
+→ cualificación de cobertura 3D
+→ HistoricalQualifiedRequirementResult
+→ evaluación de reutilización 3E
 ```
 
-De este modo se impide que una acreditación intra-obligación que 3D habría degradado a `D-N` por cobertura insuficiente reaparezca posteriormente como `D-A` mediante reutilización.
+`HistoricalQualifiedRequirementResult` carece de constructor público. Su formación vuelve a validar la ligadura completa del resultado resuelto frente al `RequirementDescriptor` constituido y conserva el resultado posterior a la cualificación de cobertura.
 
-## 3. Regla de cierre para la reutilización
+De este modo:
 
-Para una obligación constituida `q`, la reutilización sólo podrá preservar el resultado anterior cuando el resultado histórico y el estado constituido actual mantengan exactamente las ligaduras relevantes exigidas por una regla previamente constituida.
+```text
+D-A resuelto
++ cobertura incompleta
+→ D-N cualificado
+→ resultado histórico = D-N
+```
 
-La primera realización adoptará una regla cerrada de la forma:
+y una acreditación insuficientemente cubierta no puede reaparecer posteriormente como `D-A` mediante reutilización.
+
+## 3. Regla constituida de reutilización
+
+Para una obligación constituida `q`, la primera realización materializa:
 
 ```text
 ReuseRule(q)
-= ExactBindingSet({b1,...,bn})
+= ExactBindingSet({(k1,v1),...,(kn,vn)})
 ```
 
 con conjunto no vacío.
 
-La ausencia de `ReuseRule(q)` no equivale a una regla con conjunto vacío:
+Cada `ki` identifica una dimensión de continuidad y cada `vi` el valor constituido que esa dimensión debe conservar. Clave y valor emplean tipos nominales distintos:
+
+```text
+ReuseBindingKeyRef
+≠ ReuseBindingValueRef
+```
+
+Por tanto, cambiar el valor de una dimensión no puede confundirse con declarar una dimensión diferente.
+
+La ausencia de regla no equivale a una regla con conjunto vacío:
 
 ```text
 ReuseRule(q) = ∅
 ↛ reutilización libre
 ```
 
-Sin regla constituida suficiente, el resultado previo no es reutilizable.
+Sin regla constituida suficiente, el resultado histórico no es reutilizable.
 
-## 4. Ligaduras históricas
+## 4. Constitución por T-0
+
+`RequirementProposal` puede transportar una `ReuseRuleProposal`, formada por una referencia de regla y una colección de `ReuseBindingProposal`.
+
+Propuesta y regla constituida permanecen separadas. La conversión productiva exige la capacidad interna de T-0 y liga la regla al `RequirementDescriptor` correspondiente.
+
+T-0 rechaza de forma atómica:
+
+1. una `ReuseRuleRef` reutilizada entre obligaciones;
+2. un conjunto de ligaduras vacío;
+3. una misma `ReuseBindingKeyRef` repetida dentro de la regla.
+
+La regla constituida deriva del descriptor, y por tanto congela además:
+
+- obligación;
+- forma;
+- familia de efectos;
+- contexto constitutivo.
+
+El acto de reutilización no recibe una regla elegible por el llamador, no puede omitir la regla constituida ni sustituirla por otra.
+
+## 5. Ligaduras históricas
 
 Las ligaduras de reutilización representan hechos o referencias constituidas cuya variación puede alterar la validez material del resultado.
 
-Cuando sean causales, deberán poder representar, entre otras, las dimensiones siguientes:
+Cuando sean causales, pueden representar, entre otras, las dimensiones siguientes:
 
 - objeto gobernado;
 - operación o familia de operaciones;
@@ -84,23 +123,57 @@ Cuando sean causales, deberán poder representar, entre otras, las dimensiones s
 - condición de vigencia o no revocación;
 - cualquier otra ligadura específica cuya variación pueda modificar el resultado.
 
-Las dimensiones ya selladas por `RequirementDescriptor` y por las unidades 3A–3D continúan formando parte de la identidad material. La regla de reutilización no las sustituye ni las debilita.
+La regla no interpreta esos valores como texto, fecha o puntuación. Son referencias opacas del dominio de control y su semántica concreta debe proceder del régimen que las constituya.
 
-## 5. Constitución y elección de la regla
+Las dimensiones ya gobernadas por `RequirementDescriptor` y por 3A–3D continúan formando parte de la identidad material y no pueden ser sustituidas por el conjunto adicional de reutilización.
 
-La regla de reutilización deberá quedar ligada al `RequirementDescriptor` durante una transición constitutiva legítima. En el estado material actualmente disponible de R1, la única puerta productiva sigue siendo T-0.
+## 6. Sellado material del resultado
 
-El acto de reutilización no podrá:
+La reutilización histórica no se apoya sólo en referencias nominales de reglas.
 
-- escoger una regla alternativa;
-- omitir una regla constituida;
-- sustituir una ligadura por otra;
-- declarar irrelevante una ligadura porque favorezca el resultado;
-- fabricar vigencia por mera afirmación.
+`ResolvedRequirementResult` conserva materialmente:
 
-La propuesta de una regla no equivale a su constitución.
+- obligación y clase;
+- forma;
+- familia de efectos;
+- contexto;
+- familias admisibles de verificadores;
+- regla de aplicabilidad;
+- contenido material de la regla de conflicto, cuando existe;
+- contenido material de la regla de cobertura, cuando existe;
+- contenido material de la regla de reutilización, cuando existe;
+- verificadores participantes;
+- resultado técnico resuelto.
 
-## 6. Vigencia sin tiempo implícito
+En particular, el sello conserva:
+
+```text
+ConflictResolutionRule
+→ referencia
++ verificador decisivo
++ familia del verificador
++ regla de aplicabilidad
+
+CoverageRule
+→ referencia
++ conjunto requerido de verificadores
+
+ReuseRule
+→ referencia
++ mapa exacto de ligaduras
+```
+
+Por tanto:
+
+```text
+misma referencia nominal de regla
++ contenido material distinto
+→ ligadura distinta
+```
+
+Esto impide tratar como continuidad válida un cambio de regla encubierto bajo el mismo identificador.
+
+## 7. Vigencia sin tiempo implícito
 
 La vigencia no introduce un reloj semántico ni una fecha privilegiada en `sv_core`.
 
@@ -112,7 +185,7 @@ más reciente = vigente
 fecha posterior = resultado superior
 ```
 
-Cuando una versión, régimen, autorización, antecedente o condición de validez cambie con consecuencias materiales, ese cambio deberá quedar representado mediante una ligadura constituida distinta.
+Cuando una versión, régimen, autorización, antecedente o condición de validez cambie con consecuencias materiales, ese cambio debe quedar representado mediante una ligadura constituida distinta.
 
 Por tanto:
 
@@ -122,73 +195,112 @@ vigencia
 ≠ paso del tiempo
 ```
 
-La fecha o el tiempo de un dominio externo podrán formar parte de evidencia situada cuando una regla de dominio lo exija, pero no constituyen una primitiva universal de esta unidad.
+La fecha o el tiempo de un dominio externo pueden formar parte de evidencia situada cuando una regla de dominio lo exija, pero no constituyen una primitiva universal de esta unidad.
 
-## 7. Resultado de la evaluación de reutilización
+## 8. Formación del resultado histórico cualificado
+
+`seal_historical_qualified_result` recibe únicamente:
+
+- el `RequirementDescriptor` constituido del acto;
+- el `ResolvedRequirementResult` ya formado por la vía gobernada.
+
+Antes de formar el sello histórico:
+
+1. comprueba que corresponde a la misma obligación;
+2. verifica la ligadura material completa del resultado resuelto contra el descriptor;
+3. evalúa la cobertura constituida;
+4. guarda exclusivamente el resultado ya cualificado por cobertura.
+
+La operación conserva también los verificadores participantes y una instantánea material de las reglas gobernadas relevantes.
+
+No produce persistencia durable ni acredita continuidad entre procesos. Sólo forma el objeto cerrado que puede ser presentado posteriormente a una evaluación de reutilización.
+
+## 9. Evaluación de reutilización
+
+`reuse_historical_requirement_result` recibe únicamente:
+
+- el `RequirementDescriptor` constituido actual;
+- un `HistoricalQualifiedRequirementResult` sellado.
+
+La regla y las ligaduras actuales se obtienen del descriptor. No existen parámetros de tiempo, regla alternativa, vigencia libre o preferencia aportados por el llamador.
 
 Para la misma obligación `q`:
 
 ```text
 resultado histórico cualificado
-+ ReuseRule constituida
-+ todas las ligaduras exigidas continúan
-→ se conserva el resultado histórico
++ ReuseRule histórica
++ ReuseRule actual
++ ligadura material base idéntica
++ conjunto exacto de ligaduras idéntico
+→ resultado reutilizable
 ```
+
+La continuidad exacta conserva, sin promoción:
+
+```text
+D-A → D-A
+D-R → D-R
+D-N → D-N
+```
+
+La reutilización no vuelve a resolver conflictos ni recalcula mayorías. Tampoco transforma una cobertura incompleta en completa.
+
+## 10. Fallo cerrado de reutilización
+
+La reutilización no positiva produce `D-N` para la obligación del acto actual cuando:
+
+- el resultado histórico no estaba ligado a una regla de reutilización;
+- el descriptor actual carece de regla de reutilización;
+- cambia una dimensión material base;
+- cambia el contenido de una regla gobernada relevante;
+- cambia una clave o un valor del conjunto exacto de reutilización;
+- no puede acreditarse la continuidad exigida.
 
 Por tanto:
 
 ```text
-D-A reutilizable → D-A
-D-R reutilizable → D-R
-D-N reutilizable → D-N
+resultado histórico no reutilizable
+→ Check(q) = D-N
 ```
 
-La reutilización nunca promociona un resultado.
+El resultado histórico original no se modifica ni se borra.
 
-Si falta la regla, falta una ligadura exigida, una ligadura ha cambiado o su continuidad no puede acreditarse:
-
-```text
-resultado previo = no reutilizable
-Check(q) = D-N
-```
-
-El resultado histórico original no se reescribe ni se borra; simplemente deja de ser admisible como sustituto de una nueva comprobación bajo el estado actual.
-
-## 8. Obligación distinta
-
-Un resultado de `q1` no puede reutilizarse como resultado de `q2` aunque sus restantes ligaduras coincidan.
+Un resultado histórico de otra obligación constituye, en cambio, una incompatibilidad estructural:
 
 ```text
 q1 ≠ q2
-→ no existe reutilización entre obligaciones
+→ error estructural
 ```
 
-La presentación de un resultado histórico de otra obligación constituye una incompatibilidad estructural, no una forma de `D-N` dentro de la obligación actual.
+No se degrada silenciosamente una obligación ajena a `D-N` de la obligación actual.
 
-## 9. Interacción con cobertura
+## 11. Interacción con cambios de regla
 
-La unidad 3E deberá conservar el resultado ya cualificado por 3D.
+Una referencia nominal idéntica no basta para acreditar continuidad.
 
-No podrá reutilizar directamente un `D-A` resuelto si la cobertura histórica correspondiente era incompleta.
-
-En particular:
+Quedan cerrados, entre otros, los casos:
 
 ```text
-D-A resuelto
-+ cobertura incompleta
-→ D-N cualificado
-→ sólo D-N puede ser candidato histórico
+misma ConflictResolutionRuleRef
++ distinto verificador decisivo
+→ no reutilizable
+
+misma CoverageRuleRef
++ distinto conjunto requerido
+→ no reutilizable
+
+misma ReuseRuleRef
++ distinto valor para una clave
+→ no reutilizable
 ```
 
-La reutilización no vuelve a calcular mayorías, conflictos ni cobertura. Sólo decide si el resultado cualificado previamente puede seguir sustituyendo una nueva comprobación.
+También una variación de clase, forma, familia de efectos, contexto, familias admisibles de verificadores o regla de aplicabilidad impide la reutilización positiva.
 
-## 10. Interacción con revocación
+## 12. Revocación y reintento
 
 R1-3 no materializa persistencia durable de revocaciones ni continuidad entre procesos.
 
-En esta unidad, una revocación o pérdida de vigencia sólo afecta a la reutilización cuando queda representada por una variación de una ligadura constituida relevante.
-
-Por tanto:
+En esta unidad, una revocación o pérdida de vigencia afecta a la reutilización únicamente cuando queda representada por una variación de una ligadura constituida relevante:
 
 ```text
 cambio de condición de vigencia
@@ -197,32 +309,31 @@ cambio de condición de vigencia
 → D-N
 ```
 
-Esta regla no produce por sí misma una transición de revocación ni ejecuta efectos protegidos.
+La regla no produce por sí misma una transición de revocación ni ejecuta efectos protegidos.
 
-## 11. Reintento
-
-Un reintento no transforma por sí solo un resultado anterior:
+Un reintento tampoco promociona un resultado:
 
 ```text
 D-N histórico + reintento
 ↛ D-A
 ```
 
-Si se realiza una nueva comprobación completa bajo el estado actual, su resultado pertenece al nuevo acto y deberá atravesar de nuevo las reglas 3A–3D. No es una promoción del resultado histórico.
+Si se realiza una nueva comprobación bajo el estado actual, su resultado pertenece a un nuevo acto y debe atravesar de nuevo 3A–3D.
 
-## 12. Frontera productiva
+## 13. Frontera productiva
 
-La unidad deberá impedir las vías siguientes:
+La realización impide las vías siguientes:
 
 ```text
 ResolvedRequirementResult
-→ reutilización directa sin cobertura
+→ reutilización histórica directa
 
 resultado histórico
 → D-A por coincidencia nominal de RequirementRef
 
-misma regla nominal + ligaduras distintas
-→ reutilización
+misma referencia nominal de regla
++ contenido distinto
+→ continuidad falsa
 
 ausencia de ReuseRule
 → reutilización positiva
@@ -231,41 +342,41 @@ cronología
 → vigencia implícita
 ```
 
-La API pública de reutilización deberá recibir el resultado histórico ya sellado y el `RequirementDescriptor` constituido actual. La regla y las ligaduras actuales deberán obtenerse del descriptor, no de parámetros libres suministrados para el acto.
+`HistoricalQualifiedRequirementResult`, `ReuseRule` y las instantáneas materiales de reglas no producen por sí mismos `Tri`, `Permit`, autoridad o efecto protegido.
 
-## 13. Pruebas mínimas de cierre
+## 14. Evidencia de realización
 
-La realización deberá demostrar, como mínimo, que:
+La batería de esta unidad cubre, además de las regresiones anteriores:
 
-1. una regla de reutilización no acepta un conjunto vacío de ligaduras;
-2. una ligadura repetida se rechaza;
-3. una referencia de regla reutilizada de forma incompatible se rechaza durante la constitución;
-4. la regla queda ligada a la obligación, forma, familia de efectos y contexto constituidos;
-5. la regla no puede fabricarse fuera de la puerta constitutiva;
-6. ausencia de regla impide la reutilización positiva;
-7. cambio de una sola ligadura material impide la reutilización;
-8. continuidad exacta de todas las ligaduras conserva `D-A`;
-9. continuidad exacta conserva `D-R`;
-10. continuidad exacta conserva `D-N` sin promocionarlo;
-11. un resultado de otra obligación se rechaza estructuralmente;
-12. una variación de contexto impide reutilización;
-13. una variación de regla de aplicabilidad, conflicto o cobertura impide reutilización;
-14. una variación de condición de vigencia impide reutilización;
-15. no existe selección por fecha, orden de llegada o «último resultado»;
-16. un resultado sin cobertura suficiente no puede reaparecer como `D-A` histórico;
-17. la reutilización no produce `Tri`, `Permit`, autoridad ni efecto protegido;
-18. T-G, T-C y T-R permanecen no productivas;
-19. no se introduce reloj, ejecución asíncrona, dependencia externa ni estado durable;
-20. las regresiones de R0 y de las unidades 1, 2 y 3A–3D permanecen correctas.
+1. rechazo de regla de reutilización con conjunto vacío;
+2. rechazo de clave de ligadura duplicada;
+3. constitución positiva de una regla mediante `AuthorityContinuity::apply_genesis`;
+4. rechazo atómico por T-0 de conjunto vacío;
+5. rechazo atómico por T-0 de clave duplicada;
+6. rechazo atómico por T-0 de `ReuseRuleRef` reutilizada entre obligaciones;
+7. imposibilidad de fabricar el resultado histórico desde un `CheckResult` nominal;
+8. imposibilidad de pasar un `ResolvedRequirementResult` directamente a la API de reutilización;
+9. cobertura incompleta sellada como `D-N` y conservada como `D-N` al reutilizar;
+10. continuidad exacta que conserva `D-A`;
+11. continuidad exacta que conserva `D-R`;
+12. continuidad exacta que conserva `D-N`;
+13. ausencia de regla actual que cierra en `D-N`;
+14. cambio de una sola ligadura que cierra en `D-N`;
+15. misma referencia de regla con contenido de ligadura distinto que cierra en `D-N`;
+16. cambio de contexto que impide reutilización;
+17. resultado de otra obligación rechazado estructuralmente;
+18. conservación de las regresiones de R0 y de 3A–3D.
 
-## 14. Exclusiones
+Los rechazos T-0 verifican atomicidad de la génesis: continuidad no habitada, premisa no consumida, T-0 disponible y ausencia de estado parcial comprometido.
+
+## 15. Exclusiones
 
 Esta unidad no materializa:
 
 - persistencia durable de resultados;
 - almacenamiento histórico externo;
 - revocación durable;
-- continuidad entre procesos;
+- continuidad material entre procesos;
 - orden temporal canónico;
 - reloj semántico;
 - caducidad automática por fecha;
@@ -276,7 +387,9 @@ Esta unidad no materializa:
 - Garantía I;
 - Garantía II.
 
-## 15. Estado
+T-G, T-C y T-R permanecen no productivas.
+
+## 16. Estado
 
 ```text
 R0 = CERRADO
@@ -292,7 +405,7 @@ R1-3 / unidad 3A = CERRADA · INTEGRADA
 R1-3 / unidad 3B = CERRADA · INTEGRADA
 R1-3 / unidad 3C = CERRADA · INTEGRADA
 R1-3 / unidad 3D = CERRADA · INTEGRADA
-R1-3 / unidad 3E = ABIERTA
+R1-3 / unidad 3E = CANDIDATA DE CIERRE
 
 R1-4 = NO INICIADO
 R2–R4 = NO INICIADOS
