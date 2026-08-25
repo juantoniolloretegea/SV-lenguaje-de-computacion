@@ -5,18 +5,66 @@
 //! comprobación seleccionada. Sólo un `ResolvedRequirementResult` formado por
 //! la vía de resolución puede entrar en la agregación gobernada.
 //!
-//! El resultado conserva la identidad de los verificadores participantes y la
-//! referencia de la regla de cobertura constituida, cuando existe. Así una
-//! variación de cobertura altera la ligadura material del sello.
+//! El resultado conserva la identidad de los verificadores participantes y el
+//! contenido material de las reglas constituidas que forman parte de la
+//! obligación. Así una variación de conflicto, cobertura o reutilización altera
+//! la ligadura del sello aunque conserve la misma referencia nominal.
 
-use std::collections::BTreeSet;
+use std::collections::{BTreeMap, BTreeSet};
 
 use crate::control::{
     ApplicabilityRuleRef, CheckResult, ConflictResolutionRuleRef, ContextRef, CoverageRuleRef,
-    EffectFamilyRef, FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
+    EffectFamilyRef, FormRef, RequirementRef, ReuseBindingKeyRef, ReuseBindingValueRef,
+    ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements::{RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet};
 use crate::requirements_conflict::{resolve_requirement_checks, RequirementConflictError};
+
+#[derive(Debug, PartialEq, Eq)]
+struct ConflictRuleBinding {
+    reference: ConflictResolutionRuleRef,
+    decisive_verifier: VerifierRef,
+    verifier_family: VerifierFamilyRef,
+    applicability_rule: ApplicabilityRuleRef,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct CoverageRuleBinding {
+    reference: CoverageRuleRef,
+    required_verifiers: BTreeSet<VerifierRef>,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct ReuseRuleBinding {
+    reference: ReuseRuleRef,
+    exact_bindings: BTreeMap<ReuseBindingKeyRef, ReuseBindingValueRef>,
+}
+
+fn conflict_rule_binding(descriptor: &RequirementDescriptor) -> Option<ConflictRuleBinding> {
+    descriptor.conflict_resolution_rule().map(|rule| ConflictRuleBinding {
+        reference: rule.reference().clone(),
+        decisive_verifier: rule.decisive_verifier().clone(),
+        verifier_family: rule.verifier_family().clone(),
+        applicability_rule: rule.applicability_rule().clone(),
+    })
+}
+
+fn coverage_rule_binding(descriptor: &RequirementDescriptor) -> Option<CoverageRuleBinding> {
+    descriptor.coverage_rule().map(|rule| CoverageRuleBinding {
+        reference: rule.reference().clone(),
+        required_verifiers: rule.required_verifiers().cloned().collect(),
+    })
+}
+
+fn reuse_rule_binding(descriptor: &RequirementDescriptor) -> Option<ReuseRuleBinding> {
+    descriptor.reuse_rule().map(|rule| ReuseRuleBinding {
+        reference: rule.reference().clone(),
+        exact_bindings: rule
+            .bindings()
+            .map(|(key, value)| (key.clone(), value.clone()))
+            .collect(),
+    })
+}
 
 /// Resultado técnico ya resuelto de una obligación constituida.
 ///
@@ -37,8 +85,9 @@ pub struct ResolvedRequirementResult {
     context: ContextRef,
     admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
-    conflict_resolution_rule: Option<ConflictResolutionRuleRef>,
-    coverage_rule: Option<CoverageRuleRef>,
+    conflict_resolution_rule: Option<ConflictRuleBinding>,
+    coverage_rule: Option<CoverageRuleBinding>,
+    reuse_rule: Option<ReuseRuleBinding>,
     participating_verifiers: BTreeSet<VerifierRef>,
     result: CheckResult,
 }
@@ -60,12 +109,9 @@ impl ResolvedRequirementResult {
                 .cloned()
                 .collect(),
             applicability_rule: descriptor.applicability_rule().clone(),
-            conflict_resolution_rule: descriptor
-                .conflict_resolution_rule()
-                .map(|rule| rule.reference().clone()),
-            coverage_rule: descriptor
-                .coverage_rule()
-                .map(|rule| rule.reference().clone()),
+            conflict_resolution_rule: conflict_rule_binding(descriptor),
+            coverage_rule: coverage_rule_binding(descriptor),
+            reuse_rule: reuse_rule_binding(descriptor),
             participating_verifiers,
             result,
         }
@@ -90,7 +136,7 @@ impl ResolvedRequirementResult {
     }
 
     #[inline]
-    fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
         self.requirement == *descriptor.reference()
             && self.class == descriptor.class()
             && self.form == *descriptor.form()
@@ -102,14 +148,9 @@ impl ResolvedRequirementResult {
                     .admissible_verifier_families()
                     .cloned()
                     .collect::<BTreeSet<_>>()
-            && self.conflict_resolution_rule
-                == descriptor
-                    .conflict_resolution_rule()
-                    .map(|rule| rule.reference().clone())
-            && self.coverage_rule
-                == descriptor
-                    .coverage_rule()
-                    .map(|rule| rule.reference().clone())
+            && self.conflict_resolution_rule == conflict_rule_binding(descriptor)
+            && self.coverage_rule == coverage_rule_binding(descriptor)
+            && self.reuse_rule == reuse_rule_binding(descriptor)
     }
 }
 

@@ -17,6 +17,7 @@ use crate::control::{
 };
 use crate::requirements_conflict::ConflictResolutionRule;
 use crate::requirements_coverage::CoverageRule;
+use crate::requirements_reuse::ReuseRule;
 
 pub mod initial;
 
@@ -42,9 +43,9 @@ pub enum RequirementClass {
 /// contexto.
 ///
 /// La existencia de una referencia nominal no basta para fabricar este objeto
-/// constituido. Las reglas de conflicto y cobertura, cuando existen, quedan
-/// ligadas al descriptor durante la constitución inicial y no durante el acto
-/// de comprobación o agregación.
+/// constituido. Las reglas de conflicto, cobertura y reutilización, cuando
+/// existen, quedan ligadas al descriptor durante la constitución inicial y no
+/// durante el acto de comprobación, agregación o reutilización.
 #[derive(Debug, PartialEq, Eq)]
 pub struct RequirementDescriptor {
     reference: RequirementRef,
@@ -56,6 +57,7 @@ pub struct RequirementDescriptor {
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRule>,
     coverage_rule: Option<CoverageRule>,
+    reuse_rule: Option<ReuseRule>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -90,6 +92,7 @@ impl RequirementDescriptor {
             applicability_rule,
             conflict_resolution_rule: None,
             coverage_rule: None,
+            reuse_rule: None,
         })
     }
 
@@ -143,6 +146,14 @@ impl RequirementDescriptor {
         self.coverage_rule.as_ref()
     }
 
+    /// Regla de reutilización histórica constituida para esta obligación, si
+    /// existe. Su ausencia impide la reutilización positiva de resultados
+    /// históricos.
+    #[inline]
+    pub fn reuse_rule(&self) -> Option<&ReuseRule> {
+        self.reuse_rule.as_ref()
+    }
+
     #[inline]
     pub fn accepts_applicability(&self, applicability: &VerifierApplicability) -> bool {
         applicability.requirement == self.reference
@@ -164,6 +175,11 @@ impl RequirementDescriptor {
     #[cfg(test)]
     pub(crate) fn attach_coverage_rule_for_test(&mut self, rule: CoverageRule) {
         self.coverage_rule = Some(rule);
+    }
+
+    #[cfg(test)]
+    pub(crate) fn attach_reuse_rule_for_test(&mut self, rule: ReuseRule) {
+        self.reuse_rule = Some(rule);
     }
 }
 

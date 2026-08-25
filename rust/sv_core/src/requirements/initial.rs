@@ -1,8 +1,8 @@
-//! Constitución inicial de `Req`, `Applicable`, reglas de conflicto y cobertura para R1-3.
+//! Constitución inicial de `Req`, `Applicable` y reglas gobernadas para R1-3.
 //!
 //! Este submódulo sólo convierte propuestas en objetos constituidos cuando
 //! recibe la capacidad interna emitida por la puerta T-0. No ejecuta
-//! comprobaciones y no produce permiso ni efecto.
+//! comprobaciones, no reutiliza resultados y no produce permiso ni efecto.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -13,10 +13,12 @@ use super::{
 use crate::authority::transitions::GenesisControlToken;
 use crate::control::{
     ApplicabilityRuleRef, ConflictResolutionRuleRef, ContextRef, CoverageRuleRef,
-    EffectFamilyRef, FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
+    EffectFamilyRef, FormRef, RequirementRef, ReuseBindingKeyRef, ReuseBindingValueRef,
+    ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements_conflict::ConflictResolutionRule;
 use crate::requirements_coverage::CoverageRule;
+use crate::requirements_reuse::ReuseRule;
 
 /// Propuesta ordinaria de una regla de resolución de conflicto para una
 /// obligación.
@@ -63,10 +65,49 @@ impl CoverageRuleProposal {
     }
 }
 
+/// Par propuesto dimensión/valor para una regla de reutilización.
+///
+/// La clave identifica la condición cuya continuidad será exigible; el valor
+/// identifica el estado constituido que deberá permanecer exactamente igual.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ReuseBindingProposal {
+    key: ReuseBindingKeyRef,
+    value: ReuseBindingValueRef,
+}
+
+impl ReuseBindingProposal {
+    pub fn new(key: ReuseBindingKeyRef, value: ReuseBindingValueRef) -> Self {
+        Self { key, value }
+    }
+}
+
+/// Propuesta ordinaria de una regla de reutilización histórica.
+///
+/// La propuesta no declara vigencia. T-0 fija un conjunto exacto y no vacío de
+/// ligaduras; la reutilización posterior sólo podrá preservar un resultado si
+/// ese conjunto coincide íntegramente con el estado constituido actual.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ReuseRuleProposal {
+    reference: ReuseRuleRef,
+    exact_bindings: Vec<ReuseBindingProposal>,
+}
+
+impl ReuseRuleProposal {
+    pub fn new(
+        reference: ReuseRuleRef,
+        exact_bindings: impl IntoIterator<Item = ReuseBindingProposal>,
+    ) -> Self {
+        Self {
+            reference,
+            exact_bindings: exact_bindings.into_iter().collect(),
+        }
+    }
+}
+
 /// Propuesta ordinaria de una obligación para la constitución inicial.
 ///
 /// Una propuesta no es una obligación constituida y no puede agregarse como
-/// resultado de comprobación.
+/// resultado de comprobación ni reutilizar resultados históricos.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct RequirementProposal {
     reference: RequirementRef,
@@ -78,6 +119,7 @@ pub struct RequirementProposal {
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRuleProposal>,
     coverage_rule: Option<CoverageRuleProposal>,
+    reuse_rule: Option<ReuseRuleProposal>,
 }
 
 impl RequirementProposal {
@@ -100,6 +142,7 @@ impl RequirementProposal {
             applicability_rule,
             conflict_resolution_rule: None,
             coverage_rule: None,
+            reuse_rule: None,
         }
     }
 
@@ -123,6 +166,15 @@ impl RequirementProposal {
     /// válida para la misma obligación y contexto.
     pub fn with_coverage_rule(mut self, rule: CoverageRuleProposal) -> Self {
         self.coverage_rule = Some(rule);
+        self
+    }
+
+    /// Adjunta una propuesta de regla de reutilización histórica.
+    ///
+    /// La regla no se constituye durante el acto de reutilización. T-0 fija la
+    /// referencia y el conjunto exacto de ligaduras dentro del descriptor.
+    pub fn with_reuse_rule(mut self, rule: ReuseRuleProposal) -> Self {
+        self.reuse_rule = Some(rule);
         self
     }
 }
@@ -228,6 +280,13 @@ pub enum InitialRequirementError {
         requirement: RequirementRef,
         verifier: VerifierRef,
     },
+    DuplicateReuseRuleRef(ReuseRuleRef),
+    EmptyReuseBindingSet(RequirementRef),
+    DuplicateReuseBindingKey {
+        requirement: RequirementRef,
+        key: ReuseBindingKeyRef,
+    },
+    UnknownRequirementForReuseRule(RequirementRef),
 }
 
 /// Estado inicial constituido de requisitos y aplicabilidad.
@@ -304,6 +363,8 @@ pub(crate) fn constitute_initial(
     let mut pending_coverage_rules: BTreeMap<RequirementRef, CoverageRuleProposal> =
         BTreeMap::new();
     let mut coverage_rule_refs = BTreeSet::new();
+    let mut pending_reuse_rules: BTreeMap<RequirementRef, ReuseRuleProposal> = BTreeMap::new();
+    let mut reuse_rule_refs = BTreeSet::new();
 
     for proposal in proposals {
         let binding = RequirementBinding::new(
@@ -366,6 +427,27 @@ pub(crate) fn constitute_initial(
             pending_coverage_rules.insert(proposal.reference.clone(), rule);
         }
 
+        if let Some(rule) = proposal.reuse_rule {
+            if !reuse_rule_refs.insert(rule.reference.clone()) {
+                return Err(InitialRequirementError::DuplicateReuseRuleRef(rule.reference));
+            }
+            if rule.exact_bindings.is_empty() {
+                return Err(InitialRequirementError::EmptyReuseBindingSet(
+                    proposal.reference,
+                ));
+            }
+            let mut seen = BTreeSet::new();
+            for binding in &rule.exact_bindings {
+                if !seen.insert(binding.key.clone()) {
+                    return Err(InitialRequirementError::DuplicateReuseBindingKey {
+                        requirement: proposal.reference,
+                        key: binding.key.clone(),
+                    });
+                }
+            }
+            pending_reuse_rules.insert(proposal.reference.clone(), rule);
+        }
+
         grouped.entry(binding).or_default().push(RequirementDescriptor {
             reference: proposal.reference,
             class: proposal.class,
@@ -376,6 +458,7 @@ pub(crate) fn constitute_initial(
             applicability_rule: proposal.applicability_rule,
             conflict_resolution_rule: None,
             coverage_rule: None,
+            reuse_rule: None,
         });
     }
 
@@ -564,6 +647,48 @@ pub(crate) fn constitute_initial(
             ));
         };
         descriptor_mut.coverage_rule = Some(rule);
+    }
+
+    for (requirement, proposal) in pending_reuse_rules {
+        let Some(binding) = reference_to_binding.get(&requirement).cloned() else {
+            return Err(InitialRequirementError::UnknownRequirementForReuseRule(
+                requirement,
+            ));
+        };
+
+        let rule = {
+            let Some(descriptor) = sets
+                .get(&binding)
+                .and_then(|set| set.requirement(&requirement))
+            else {
+                return Err(InitialRequirementError::UnknownRequirementForReuseRule(
+                    requirement,
+                ));
+            };
+
+            let exact_bindings: BTreeMap<_, _> = proposal
+                .exact_bindings
+                .into_iter()
+                .map(|binding| (binding.key, binding.value))
+                .collect();
+
+            ReuseRule::constitute_from_genesis(
+                token,
+                proposal.reference,
+                descriptor,
+                exact_bindings,
+            )
+        };
+
+        let Some(descriptor_mut) = sets
+            .get_mut(&binding)
+            .and_then(|set| set.requirements.get_mut(&requirement))
+        else {
+            return Err(InitialRequirementError::UnknownRequirementForReuseRule(
+                requirement,
+            ));
+        };
+        descriptor_mut.reuse_rule = Some(rule);
     }
 
     Ok(InitialRequirementState {

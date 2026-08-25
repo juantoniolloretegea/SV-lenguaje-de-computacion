@@ -18,6 +18,7 @@ pub mod requirements;
 mod requirements_bridge;
 pub mod requirements_conflict;
 pub mod requirements_coverage;
+pub mod requirements_reuse;
 pub mod resolution;
 mod wellformed;
 
@@ -33,7 +34,8 @@ pub use control::{
     AuthorityRef, CheckResult, ConflictResolutionRuleRef, ConstitutedFactRef, ContextRef,
     ContinuityOccupancy, ControlId, CoverageRuleRef, EffectFamilyRef, EffectRef, EnablementRef,
     ExerciseRef, FormRef, GovernedObjectRef, InformationRef, InvalidControlId, RequirementRef,
-    TransitionClass, VerifierFamilyRef, VerifierRef,
+    ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, TransitionClass, VerifierFamilyRef,
+    VerifierRef,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
@@ -59,6 +61,12 @@ pub use requirements_coverage::{
     aggregate_covered_requirement_results, assess_requirement_coverage, CoveredAggregationError,
     CoverageAssessment, CoverageAssessmentError, CoverageDisposition, CoverageRule,
     CoverageRuleFormationError,
+};
+pub use requirements_reuse::{
+    reuse_historical_requirement_result, seal_historical_qualified_result,
+    HistoricalQualificationError, HistoricalQualifiedRequirementResult, ReuseAssessment,
+    ReuseAssessmentError, ReuseDisposition, ReuseRejectionReason, ReuseRule,
+    ReuseRuleFormationError,
 };
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
