@@ -32,7 +32,6 @@ pub mod admissibility;
 pub mod authority;
 pub mod control;
 pub mod decision_trace;
-pub mod decision_trace_qualification;
 mod equivalence;
 mod execution;
 mod frontend;
@@ -67,13 +66,13 @@ pub use control::{
 };
 pub use decision_trace::{
     decide_permit_traced, execute_traced_mediated, mediate_traced_permit, ConflictRuleTrace,
-    CoverageRuleTrace, DecisionTrace, DecisionTraceRef, ProtectedDecisionContinuity,
-    RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError, TracedBlockedDecision,
-    TracedDecisionError, TracedEffectExecutor, TracedExecutionError, TracedExecutionRequest,
-    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError, TracedPermit,
-    TracedPermitDecision, TracedPermitDisposition,
+    CoverageRuleTrace, DecisionTrace, DecisionTraceRef, IndividualCheckTrace,
+    ProtectedDecisionContinuity, RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError,
+    TracedAdapterError, TracedBlockedDecision, TracedDecisionError, TracedEffectExecutor,
+    TracedExecutionError, TracedExecutionRequest, TracedExerciseConfirmation,
+    TracedMediatedCommitment, TracedMediationError, TracedPermit, TracedPermitDecision,
+    TracedPermitDisposition,
 };
-pub use decision_trace_qualification::qualified_requirement_trace_result;
 pub use equivalence::equivalence_json;
 pub use execution::{
     EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
@@ -94,7 +93,8 @@ pub use requirements::{
     VerifierApplicability,
 };
 pub use requirements_bridge::{
-    resolve_requirement_result, ResolvedAggregationError, ResolvedRequirementResult,
+    resolve_requirement_result, ResolvedAggregationError, ResolvedCheckObservation,
+    ResolvedRequirementResult,
 };
 pub use requirements_conflict::{
     resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,
