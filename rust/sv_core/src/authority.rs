@@ -1,14 +1,13 @@
-//! Formas constituidas y magnitudes de autoridad de R1-1.
+//! Formas constituidas y magnitudes de autoridad de R1.
 //!
-//! Este módulo representa descriptores de forma, efectos descritos,
-//! envolventes máximas de efectos y dominios gobernados. No implementa todavía
-//! transiciones T-*, habilitación, `Req`, permisos ni ejecución de efectos.
+//! R1-1 fija descriptores de forma, efectos descritos, envolventes máximas y
+//! dominios gobernados. R1-2 añade, como submódulo descendiente, la única
+//! puerta productiva de constitución disponible en ese corte: T-0 bajo premisa
+//! externa opaca y continuidad lógica no habitada.
 //!
-//! R1-1 no ofrece una vía de constitución operativa en compilaciones de
-//! producción. Los constructores brutos usados para comprobar invariantes
-//! estructurales sólo existen bajo `cfg(test)`. La primera vía productiva capaz
-//! de producir una forma o una autoridad constituida deberá incorporarse en
-//! R1-2 y quedar ligada a una transición autorizante válida.
+//! Los constructores brutos conservados en este archivo sólo existen bajo
+//! `cfg(test)`. El código de producción no recibe constructores alternativos
+//! que permitan fabricar formas o autoridad al margen de la puerta gobernada.
 
 use std::collections::BTreeSet;
 
@@ -16,6 +15,8 @@ use crate::control::{
     AccumulationRuleRef, AuthorityHolderRef, AuthorityRef, ContextRef, EffectFamilyRef, EffectRef,
     FormRef, GovernedObjectRef, TransitionClass,
 };
+
+pub mod transitions;
 
 /// Contrato de acumulación fijado por el descriptor de una forma.
 ///
@@ -82,9 +83,9 @@ impl EffectDescriptor {
 
 /// Descriptor semántico constituido de una forma concreta de transición.
 ///
-/// Los campos no ofrecen mutadores públicos. R1-2 deberá materializar las vías
-/// autorizantes que puedan producir descriptores nuevos o modificar
-/// materialmente el conjunto de formas.
+/// Los campos no ofrecen mutadores públicos. R1-2 materializa la génesis
+/// inicial; las modificaciones posteriores de formas continúan reservadas a
+/// las transiciones autorizantes que correspondan.
 #[derive(Debug, PartialEq, Eq)]
 pub struct FormDescriptor {
     reference: FormRef,
@@ -248,7 +249,7 @@ pub enum InvalidAuthorityScope {
 
 /// Autoridad constituida y acotada para un titular y un contexto.
 ///
-/// El objeto no implementa `Clone` ni expone un constructor operativo. Una
+/// El objeto no implementa `Clone` ni expone un constructor ordinario. Una
 /// `AuthorityRef` copiable continúa siendo sólo una referencia nominal y no
 /// sustituye este objeto constituido.
 #[derive(Debug, PartialEq, Eq)]

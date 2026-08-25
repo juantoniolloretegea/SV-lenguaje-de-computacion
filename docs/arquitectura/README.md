@@ -31,6 +31,7 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `CONTRATO_R1_0_TIPOS_CERRADOS_Y_FRONTERAS_DE_CONSTRUCCION_2026_08_24.md`
 - `ADENDA_R1_0_ALCANCE_AUTORIDAD_CONTINUIDAD_Y_FRONTERA_DE_R1_2026_08_24.md`
 - `CONTRATO_R1_1_FORMAS_AUTORIDAD_ENVOLVENTE_Y_DOMINIO_GOBERNADO_2026_08_24.md`
+- `CONTRATO_R1_2_TRANSICIONES_Y_GENESIS_2026_08_24.md`
 
 ## Regla de lectura
 
@@ -55,7 +56,7 @@ R0 = CERRADO
 R1 = ABIERTO
 R1-0 = CERRADO
 R1-1 = CERRADO
-R1-2 = NO INICIADO
+R1-2 = CANDIDATO DE CIERRE · NO INTEGRADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -66,6 +67,8 @@ Garantía II = NO_PROBADO
 
 R1-0 fija los tipos cerrados y las fronteras de construcción del control soberano. Su adenda de alcance precisa que la autoridad de R1 es intra-proceso, que la continuidad lógica no se identifica con una instancia técnica y que la mediación acreditable en R1 termina en la frontera de `sv_core`.
 
-R1-1 fija la estructura de las formas, la autoridad acotada, `E_max` y `D_a`. La envolvente conserva la descripción completa del efecto y el dominio gobernado usa pertenencia exacta. No existe todavía una vía productiva de constitución de formas o autoridad: esa capacidad queda reservada a R1-2 y deberá quedar ligada a las transiciones autorizantes correspondientes. R1-2 deberá preservar asimismo la unicidad constitutiva de `AuthorityRef` y `FormRef`.
+R1-1 fija la estructura de las formas, la autoridad acotada, `E_max` y `D_a`. La envolvente conserva la descripción completa del efecto y el dominio gobernado usa pertenencia exacta. La constitución productiva quedó reservada a las transiciones autorizantes del corte siguiente.
+
+R1-2 materializa T-0 como única vía productiva de autoridad de su corte. Exige simultáneamente una premisa constituyente externa opaca no consumida y una continuidad lógica no habitada; una génesis válida ocupa la continuidad y consume la premisa. Las referencias de formas y autoridades son únicas dentro del estado inicial, una génesis rechazada no produce estado parcial y las formas T-G, T-C y T-R deben identificar autoridad previa. T-I, T-V, T-H y T-E permanecen no autorizantes; T-G, T-C y T-R no aplican cambios de autoridad mientras R1-3 no materialice `Req` y los resultados de comprobación aplicables. La representación no acredita continuidad material entre procesos ni permite deducir una nueva génesis de un reinicio técnico.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
