@@ -7,8 +7,9 @@
 
 use std::collections::BTreeSet;
 
+use crate::authority::transitions::GenesisControlToken;
 use crate::control::{
-    CoverageRuleRef, EffectFamilyRef, FormRef, RequirementRef, ContextRef, VerifierRef,
+    ContextRef, CoverageRuleRef, EffectFamilyRef, FormRef, RequirementRef, VerifierRef,
 };
 use crate::requirements::RequirementDescriptor;
 use crate::requirements_bridge::ResolvedRequirementResult;
@@ -35,6 +36,23 @@ pub enum CoverageRuleFormationError {
 }
 
 impl CoverageRule {
+    pub(crate) fn constitute_from_genesis(
+        _token: &GenesisControlToken,
+        reference: CoverageRuleRef,
+        descriptor: &RequirementDescriptor,
+        required_verifiers: BTreeSet<VerifierRef>,
+    ) -> Self {
+        debug_assert!(!required_verifiers.is_empty());
+        Self {
+            reference,
+            requirement: descriptor.reference().clone(),
+            form: descriptor.form().clone(),
+            effect_family: descriptor.effect_family().clone(),
+            context: descriptor.context().clone(),
+            required_verifiers,
+        }
+    }
+
     #[cfg(test)]
     pub(crate) fn constitute_for_test(
         reference: CoverageRuleRef,
@@ -79,7 +97,7 @@ impl CoverageRule {
     }
 
     #[inline]
-    fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
         self.requirement == *descriptor.reference()
             && self.form == *descriptor.form()
             && self.effect_family == *descriptor.effect_family()
@@ -207,9 +225,7 @@ pub fn assess_requirement_coverage(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::control::{
-        ApplicabilityRuleRef, CheckResult, ControlId, VerifierFamilyRef,
-    };
+    use crate::control::{ApplicabilityRuleRef, CheckResult, ControlId, VerifierFamilyRef};
     use crate::requirements::{
         RequirementCheck, RequirementClass, RequirementDescriptor, VerifierApplicability,
     };
@@ -295,11 +311,7 @@ mod tests {
     fn coverage_rule_rejects_empty_required_set() {
         let descriptor = descriptor("req:1", "context:1");
         assert_eq!(
-            CoverageRule::constitute_for_test(
-                coverage_rule("coverage:1"),
-                &descriptor,
-                [],
-            ),
+            CoverageRule::constitute_for_test(coverage_rule("coverage:1"), &descriptor, []),
             Err(CoverageRuleFormationError::EmptyRequiredVerifierSet)
         );
     }
