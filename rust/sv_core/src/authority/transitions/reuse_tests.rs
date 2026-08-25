@@ -1163,14 +1163,12 @@ fn r1_5_conflict_trace_preserves_each_individual_check_before_dn_resolution() {
     let requirement = trace.requirement(&conflict_requirement).unwrap();
     assert_eq!(requirement.resolved_result(), CheckResult::NotVerifiable);
     assert_eq!(requirement.qualified_result(), CheckResult::NotVerifiable);
-    let observed = requirement
-        .checks()
-        .map(|check| check.result())
-        .collect::<BTreeSet<_>>();
-    assert_eq!(
-        observed,
-        [CheckResult::Accredited, CheckResult::Refuted]
-            .into_iter()
-            .collect()
-    );
+    let checks = requirement.checks().collect::<Vec<_>>();
+    assert_eq!(checks.len(), 2);
+    assert!(checks
+        .iter()
+        .any(|check| check.result() == CheckResult::Accredited));
+    assert!(checks
+        .iter()
+        .any(|check| check.result() == CheckResult::Refuted));
 }
