@@ -295,10 +295,14 @@ pub(crate) fn constitute_initial(
                 proposal.requirement,
             ));
         };
-        let descriptor = sets
+        let Some(descriptor) = sets
             .get(binding)
             .and_then(|set| set.requirement(&proposal.requirement))
-            .expect("la referencia de obligación ya fue validada en el régimen inicial");
+        else {
+            return Err(InitialRequirementError::UnknownRequirementForApplicability(
+                proposal.requirement,
+            ));
+        };
 
         let applicability = VerifierApplicability {
             verifier: proposal.verifier.clone(),
