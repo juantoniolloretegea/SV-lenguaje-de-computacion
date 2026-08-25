@@ -5,11 +5,34 @@
 //! necesarias para autoridad, mediación y decisiones protegidas. Los tipos de
 //! control no constituyen una segunda semántica y no alteran `Tri`, la gramática
 //! o la IR canónica.
+//!
+//! Desde R1-5 las entradas productivas de decisión, mediación y ejecución deben
+//! atravesar la envolvente trazada. Las funciones crudas de R1-4 permanecen
+//! internas al núcleo y no forman parte de la API pública ordinaria:
+//!
+//! ```compile_fail
+//! use sv_core::decide_permit;
+//! ```
+//!
+//! ```compile_fail
+//! use sv_core::mediate_permit;
+//! ```
+//!
+//! ```compile_fail
+//! use sv_core::execute_mediated;
+//! ```
+//!
+//! Tampoco puede alcanzarse la función cruda mediante un módulo interno:
+//!
+//! ```compile_fail
+//! use sv_core::permission::decide_permit;
+//! ```
 
 pub mod admissibility;
 pub mod authority;
 pub mod control;
 pub mod decision_trace;
+pub mod decision_trace_qualification;
 mod equivalence;
 mod execution;
 mod frontend;
@@ -47,9 +70,10 @@ pub use decision_trace::{
     CoverageRuleTrace, DecisionTrace, DecisionTraceRef, ProtectedDecisionContinuity,
     RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError, TracedBlockedDecision,
     TracedDecisionError, TracedEffectExecutor, TracedExecutionError, TracedExecutionRequest,
-    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError,
-    TracedPermit, TracedPermitDecision, TracedPermitDisposition,
+    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError, TracedPermit,
+    TracedPermitDecision, TracedPermitDisposition,
 };
+pub use decision_trace_qualification::qualified_requirement_trace_result;
 pub use equivalence::equivalence_json;
 pub use execution::{
     EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
