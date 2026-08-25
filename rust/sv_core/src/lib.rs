@@ -5,18 +5,41 @@
 //! necesarias para autoridad, mediación y decisiones protegidas. Los tipos de
 //! control no constituyen una segunda semántica y no alteran `Tri`, la gramática
 //! o la IR canónica.
+//!
+//! Desde R1-5 las entradas productivas de decisión, mediación y ejecución deben
+//! atravesar la envolvente trazada. Las funciones crudas de R1-4 permanecen
+//! internas al núcleo y no forman parte de la API pública ordinaria:
+//!
+//! ```compile_fail
+//! use sv_core::decide_permit;
+//! ```
+//!
+//! ```compile_fail
+//! use sv_core::mediate_permit;
+//! ```
+//!
+//! ```compile_fail
+//! use sv_core::execute_mediated;
+//! ```
+//!
+//! Tampoco puede alcanzarse la función cruda mediante un módulo interno:
+//!
+//! ```compile_fail
+//! use sv_core::permission::decide_permit;
+//! ```
 
 pub mod admissibility;
 pub mod authority;
 pub mod control;
+pub mod decision_trace;
 mod equivalence;
-pub mod execution;
+mod execution;
 mod frontend;
 pub mod frame;
 pub mod ir;
-pub mod mediation;
+mod mediation;
 pub mod nat;
-pub mod permission;
+mod permission;
 pub mod requirements;
 mod requirements_bridge;
 pub mod requirements_conflict;
@@ -41,10 +64,18 @@ pub use control::{
     ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, TransitionClass, VerifierFamilyRef,
     VerifierRef,
 };
+pub use decision_trace::{
+    decide_permit_traced, execute_traced_mediated, mediate_traced_permit, ConflictRuleTrace,
+    CoverageRuleTrace, DecisionTrace, DecisionTraceRef, IndividualCheckTrace,
+    ProtectedDecisionContinuity, RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError,
+    TracedAdapterError, TracedBlockedDecision, TracedDecisionError, TracedExecutionError,
+    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError, TracedPermit,
+    TracedPermitDecision, TracedPermitDisposition,
+};
 pub use equivalence::equivalence_json;
 pub use execution::{
-    execute_mediated, EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest,
-    ExerciseAttemptState, ExerciseConfirmation, ExerciseTraceEntry,
+    EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
+    ExerciseConfirmation, ExerciseTraceEntry,
 };
 pub use frontend::FrontendError;
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
@@ -52,16 +83,17 @@ pub use ir::{
     IrLevel, IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram, IrQueryContext,
     IrSupervisableTarget,
 };
-pub use mediation::{mediate_permit, MediatedEffectCommitment, MediationError};
+pub use mediation::{MediatedEffectCommitment, MediationError};
 pub use nat::{InvalidNat, Nat};
-pub use permission::{decide_permit, Permit, PermitDecision, PermitDecisionError, PermitRejection};
+pub use permission::{Permit, PermitDecision, PermitDecisionError, PermitRejection};
 pub use requirements::{
     CheckFormationError, CoreRequirementKind, InvalidRequirementDescriptor, InvalidRequirementSet,
     RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet,
     VerifierApplicability,
 };
 pub use requirements_bridge::{
-    resolve_requirement_result, ResolvedAggregationError, ResolvedRequirementResult,
+    resolve_requirement_result, ResolvedAggregationError, ResolvedCheckObservation,
+    ResolvedRequirementResult,
 };
 pub use requirements_conflict::{
     resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,

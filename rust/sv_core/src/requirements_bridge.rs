@@ -5,10 +5,12 @@
 //! comprobación seleccionada. Sólo un `ResolvedRequirementResult` formado por
 //! la vía de resolución puede entrar en la agregación gobernada.
 //!
-//! El resultado conserva la identidad de los verificadores participantes y el
-//! contenido material de las reglas constituidas que forman parte de la
-//! obligación. Así una variación de conflicto, cobertura o reutilización altera
-//! la ligadura del sello aunque conserve la misma referencia nominal.
+//! El resultado conserva la identidad y el resultado técnico de cada
+//! comprobación participante, además del contenido material de las reglas
+//! constituidas que forman parte de la obligación. Así R1-5 puede reconstruir
+//! la causalidad individual sin volver a resolver la obligación, y una variación
+//! de conflicto, cobertura o reutilización altera la ligadura del sello aunque
+//! conserve la misma referencia nominal.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -17,7 +19,9 @@ use crate::control::{
     EffectFamilyRef, FormRef, RequirementRef, ReuseBindingKeyRef, ReuseBindingValueRef,
     ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
-use crate::requirements::{RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet};
+use crate::requirements::{
+    RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet,
+};
 use crate::requirements_conflict::{resolve_requirement_checks, RequirementConflictError};
 
 #[derive(Debug, PartialEq, Eq)]
@@ -41,12 +45,14 @@ struct ReuseRuleBinding {
 }
 
 fn conflict_rule_binding(descriptor: &RequirementDescriptor) -> Option<ConflictRuleBinding> {
-    descriptor.conflict_resolution_rule().map(|rule| ConflictRuleBinding {
-        reference: rule.reference().clone(),
-        decisive_verifier: rule.decisive_verifier().clone(),
-        verifier_family: rule.verifier_family().clone(),
-        applicability_rule: rule.applicability_rule().clone(),
-    })
+    descriptor
+        .conflict_resolution_rule()
+        .map(|rule| ConflictRuleBinding {
+            reference: rule.reference().clone(),
+            decisive_verifier: rule.decisive_verifier().clone(),
+            verifier_family: rule.verifier_family().clone(),
+            applicability_rule: rule.applicability_rule().clone(),
+        })
 }
 
 fn coverage_rule_binding(descriptor: &RequirementDescriptor) -> Option<CoverageRuleBinding> {
@@ -66,11 +72,51 @@ fn reuse_rule_binding(descriptor: &RequirementDescriptor) -> Option<ReuseRuleBin
     })
 }
 
+/// Observación individual ya admitida dentro de una resolución gobernada.
+///
+/// Este objeto no es una `RequirementCheck` fabricable ni puede participar de
+/// nuevo en resolución. Conserva únicamente la identidad causal y el resultado
+/// técnico de la comprobación que efectivamente formó parte del conjunto
+/// resuelto.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct ResolvedCheckObservation {
+    verifier: VerifierRef,
+    verifier_family: VerifierFamilyRef,
+    applicability_rule: ApplicabilityRuleRef,
+    result: CheckResult,
+}
+
+impl ResolvedCheckObservation {
+    #[inline]
+    pub fn verifier(&self) -> &VerifierRef {
+        &self.verifier
+    }
+
+    #[inline]
+    pub fn verifier_family(&self) -> &VerifierFamilyRef {
+        &self.verifier_family
+    }
+
+    #[inline]
+    pub fn applicability_rule(&self) -> &ApplicabilityRuleRef {
+        &self.applicability_rule
+    }
+
+    #[inline]
+    pub const fn result(&self) -> CheckResult {
+        self.result
+    }
+}
+
 /// Resultado técnico ya resuelto de una obligación constituida.
 ///
 /// No existe constructor público. El valor sólo puede formarse después de
 /// atravesar `resolve_requirement_checks`, por lo que un `CheckResult` nominal
 /// no basta para fabricar una entrada agregable.
+///
+/// Además de la resolución final conserva las observaciones individuales que
+/// fueron realmente suministradas a la resolución. La colección es canónica por
+/// `VerifierRef` y no introduce peso, mayoría ni orden de llegada.
 ///
 /// ```compile_fail
 /// use sv_core::{CheckResult, ResolvedRequirementResult};
@@ -89,15 +135,17 @@ pub struct ResolvedRequirementResult {
     coverage_rule: Option<CoverageRuleBinding>,
     reuse_rule: Option<ReuseRuleBinding>,
     participating_verifiers: BTreeSet<VerifierRef>,
+    check_observations: BTreeMap<VerifierRef, ResolvedCheckObservation>,
     result: CheckResult,
 }
 
 impl ResolvedRequirementResult {
     fn from_governed_resolution(
         descriptor: &RequirementDescriptor,
-        participating_verifiers: BTreeSet<VerifierRef>,
+        check_observations: BTreeMap<VerifierRef, ResolvedCheckObservation>,
         result: CheckResult,
     ) -> Self {
+        let participating_verifiers = check_observations.keys().cloned().collect();
         Self {
             requirement: descriptor.reference().clone(),
             class: descriptor.class(),
@@ -113,6 +161,7 @@ impl ResolvedRequirementResult {
             coverage_rule: coverage_rule_binding(descriptor),
             reuse_rule: reuse_rule_binding(descriptor),
             participating_verifiers,
+            check_observations,
             result,
         }
     }
@@ -128,6 +177,20 @@ impl ResolvedRequirementResult {
     #[inline]
     pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
         self.participating_verifiers.iter()
+    }
+
+    /// Observaciones individuales que formaron parte de la resolución.
+    ///
+    /// El orden es canónico por `VerifierRef`; no expresa prioridad temporal ni
+    /// peso de voto.
+    #[inline]
+    pub fn check_observations(&self) -> impl Iterator<Item = &ResolvedCheckObservation> {
+        self.check_observations.values()
+    }
+
+    #[inline]
+    pub fn check_observation(&self, verifier: &VerifierRef) -> Option<&ResolvedCheckObservation> {
+        self.check_observations.get(verifier)
     }
 
     #[inline]
@@ -151,24 +214,42 @@ impl ResolvedRequirementResult {
             && self.conflict_resolution_rule == conflict_rule_binding(descriptor)
             && self.coverage_rule == coverage_rule_binding(descriptor)
             && self.reuse_rule == reuse_rule_binding(descriptor)
+            && self.participating_verifiers
+                == self.check_observations.keys().cloned().collect::<BTreeSet<_>>()
+            && self.check_observations.values().all(|observation| {
+                observation.applicability_rule == self.applicability_rule
+                    && self
+                        .admissible_verifier_families
+                        .contains(&observation.verifier_family)
+            })
     }
 }
 
 /// Resuelve el conjunto de comprobaciones suministrado para una obligación y
-/// sella el resultado con la ligadura material de su descriptor constituido y
-/// la identidad de los verificadores que participaron.
+/// sella el resultado con la ligadura material de su descriptor constituido,
+/// junto con las observaciones individuales que participaron.
 pub fn resolve_requirement_result(
     descriptor: &RequirementDescriptor,
     checks: &[&RequirementCheck],
 ) -> Result<ResolvedRequirementResult, RequirementConflictError> {
     let result = resolve_requirement_checks(descriptor, checks)?;
-    let participating_verifiers = checks
+    let check_observations = checks
         .iter()
-        .map(|check| check.verifier().clone())
+        .map(|check| {
+            (
+                check.verifier().clone(),
+                ResolvedCheckObservation {
+                    verifier: check.verifier().clone(),
+                    verifier_family: check.verifier_family().clone(),
+                    applicability_rule: check.applicability_rule().clone(),
+                    result: check.result(),
+                },
+            )
+        })
         .collect();
     Ok(ResolvedRequirementResult::from_governed_resolution(
         descriptor,
-        participating_verifiers,
+        check_observations,
         result,
     ))
 }
@@ -346,7 +427,7 @@ mod tests {
     }
 
     #[test]
-    fn homogeneous_single_check_is_sealed_with_its_descriptor_and_participant() {
+    fn homogeneous_single_check_is_sealed_with_descriptor_and_observation() {
         let descriptor = descriptor("req:1", RequirementClass::Specific);
         let resolved = resolved(&descriptor, "verifier:1", CheckResult::Accredited);
 
@@ -356,11 +437,24 @@ mod tests {
             resolved.participating_verifiers().collect::<Vec<_>>(),
             vec![&verifier("verifier:1")]
         );
+        let observation = resolved
+            .check_observation(&verifier("verifier:1"))
+            .expect("la observación participante debe quedar sellada");
+        assert_eq!(observation.verifier(), &verifier("verifier:1"));
+        assert_eq!(
+            observation.verifier_family(),
+            &verifier_family("verifier-family:canonical")
+        );
+        assert_eq!(
+            observation.applicability_rule(),
+            &applicability_rule("applicability:canonical")
+        );
+        assert_eq!(observation.result(), CheckResult::Accredited);
         assert!(resolved.matches_descriptor(&descriptor));
     }
 
     #[test]
-    fn conflict_without_rule_is_sealed_as_dn_and_preserves_participants() {
+    fn conflict_without_rule_preserves_each_individual_result() {
         let descriptor = descriptor("req:1", RequirementClass::Specific);
         let left = check(&descriptor, "verifier:1", CheckResult::Accredited);
         let right = check(&descriptor, "verifier:2", CheckResult::Refuted);
@@ -368,13 +462,21 @@ mod tests {
         let resolved = resolve_requirement_result(&descriptor, &[&left, &right]).unwrap();
 
         assert_eq!(resolved.result(), CheckResult::NotVerifiable);
-        assert_eq!(resolved.participating_verifiers().count(), 2);
-        assert!(resolved
-            .participating_verifiers()
-            .any(|value| value == &verifier("verifier:1")));
-        assert!(resolved
-            .participating_verifiers()
-            .any(|value| value == &verifier("verifier:2")));
+        assert_eq!(resolved.check_observations().count(), 2);
+        assert_eq!(
+            resolved
+                .check_observation(&verifier("verifier:1"))
+                .unwrap()
+                .result(),
+            CheckResult::Accredited
+        );
+        assert_eq!(
+            resolved
+                .check_observation(&verifier("verifier:2"))
+                .unwrap()
+                .result(),
+            CheckResult::Refuted
+        );
     }
 
     #[test]
