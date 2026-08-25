@@ -1,12 +1,17 @@
 use super::*;
 use crate::control::{
-    ApplicabilityRuleRef, ControlId, ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef,
-    VerifierFamilyRef,
+    ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef, ReuseBindingKeyRef,
+    ReuseBindingValueRef, ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
+use crate::permission::{decide_permit, PermitDecision, PermitDecisionError, PermitRejection};
 use crate::requirements::initial::{
-    InitialRequirementError, ReuseBindingProposal, ReuseRuleProposal,
+    ApplicabilityProposal, CoverageRuleProposal, InitialRequirementError, ReuseBindingProposal,
+    ReuseRuleProposal,
 };
-use crate::requirements::{CoreRequirementKind, RequirementClass};
+use crate::requirements::{
+    CoreRequirementKind, RequirementCheck, RequirementClass, RequirementSet,
+};
+use crate::requirements_bridge::{resolve_requirement_result, ResolvedRequirementResult};
 
 fn id(value: &str) -> ControlId {
     ControlId::new(value).unwrap()
@@ -44,12 +49,20 @@ fn requirement_ref(value: &str) -> RequirementRef {
     RequirementRef::from_core_id(id(value))
 }
 
+fn verifier_ref(value: &str) -> VerifierRef {
+    VerifierRef::from_core_id(id(value))
+}
+
 fn verifier_family_ref(value: &str) -> VerifierFamilyRef {
     VerifierFamilyRef::from_core_id(id(value))
 }
 
 fn applicability_rule_ref(value: &str) -> ApplicabilityRuleRef {
     ApplicabilityRuleRef::from_core_id(id(value))
+}
+
+fn coverage_rule_ref(value: &str) -> CoverageRuleRef {
+    CoverageRuleRef::from_core_id(id(value))
 }
 
 fn reuse_rule_ref(value: &str) -> ReuseRuleRef {
@@ -256,4 +269,327 @@ fn duplicate_reuse_rule_reference_across_requirements_rejects_t0_atomically() {
         ))
     );
     assert_rejected_genesis_is_atomic(&continuity, &premise);
+}
+
+fn permission_verifier(requirement: &RequirementRef, suffix: &str) -> VerifierRef {
+    verifier_ref(&format!("verifier:{}:{suffix}", requirement.id().as_str()))
+}
+
+fn permission_plan() -> GenesisPlan {
+    let form = form_ref("form:permit");
+    let family = effect_family_ref("family:write");
+    let context = context_ref("context:permit");
+    let authority = authority_ref("authority:permit");
+    let verifier_family = verifier_family_ref("verifier-family:permit");
+    let applicability_rule = applicability_rule_ref("applicability:permit");
+
+    let mandatory = [
+        ("req:permit:form", CoreRequirementKind::FormValidity),
+        ("req:permit:authority", CoreRequirementKind::ApplicableAuthority),
+        (
+            "req:permit:verifier",
+            CoreRequirementKind::VerifierAdmissibilityAndApplicability,
+        ),
+        ("req:permit:no-self", CoreRequirementKind::NoSelfAccreditation),
+    ];
+
+    let mut requirements = Vec::new();
+    let mut applicabilities = Vec::new();
+    for (reference, kind) in mandatory {
+        let requirement = requirement_ref(reference);
+        let primary = permission_verifier(&requirement, "primary");
+        let alternate = permission_verifier(&requirement, "alternate");
+        requirements.push(
+            RequirementProposal::new(
+                requirement.clone(),
+                RequirementClass::Core(kind),
+                form.clone(),
+                family.clone(),
+                context.clone(),
+                [verifier_family.clone()],
+                applicability_rule.clone(),
+            )
+            .with_coverage_rule(CoverageRuleProposal::new(
+                coverage_rule_ref(&format!("coverage:{reference}")),
+                [primary.clone()],
+            )),
+        );
+        applicabilities.push(ApplicabilityProposal::new(
+            primary,
+            verifier_family.clone(),
+            requirement.clone(),
+            context.clone(),
+            applicability_rule.clone(),
+        ));
+        applicabilities.push(ApplicabilityProposal::new(
+            alternate,
+            verifier_family.clone(),
+            requirement,
+            context.clone(),
+            applicability_rule.clone(),
+        ));
+    }
+
+    GenesisPlan::new(
+        [
+            FormProposal::new(
+                form,
+                TransitionClass::Exercise,
+                family.clone(),
+                [context.clone()],
+                Some(authority.clone()),
+                AccumulationContract::SingleUse,
+            ),
+            FormProposal::new(
+                form_ref("form:permit:free"),
+                TransitionClass::Information,
+                family.clone(),
+                [context.clone()],
+                None,
+                AccumulationContract::NotApplicable,
+            ),
+        ],
+        [
+            AuthorityProposal::new(
+                authority,
+                holder_ref("holder:permit"),
+                context.clone(),
+                [
+                    EffectProposal::new(
+                        effect_ref("effect:permit:allowed"),
+                        family.clone(),
+                        object_ref("object:permit"),
+                        context.clone(),
+                    ),
+                    EffectProposal::new(
+                        effect_ref("effect:permit:wrong-family"),
+                        effect_family_ref("family:delete"),
+                        object_ref("object:permit"),
+                        context.clone(),
+                    ),
+                ],
+                [object_ref("object:permit")],
+            ),
+            AuthorityProposal::new(
+                authority_ref("authority:permit:other"),
+                holder_ref("holder:permit:other"),
+                context.clone(),
+                [EffectProposal::new(
+                    effect_ref("effect:permit:foreign"),
+                    family,
+                    object_ref("object:permit:foreign"),
+                    context.clone(),
+                )],
+                [object_ref("object:permit:foreign")],
+            ),
+        ],
+    )
+    .with_initial_control(requirements, applicabilities)
+}
+
+fn permission_continuity() -> AuthorityContinuity {
+    let mut continuity = AuthorityContinuity::uninhabited();
+    let mut premise = ExternalGenesisPremise::for_test();
+    continuity
+        .apply_genesis(&mut premise, permission_plan())
+        .unwrap();
+    assert!(premise.is_consumed());
+    continuity
+}
+
+fn permission_requirement_set(continuity: &AuthorityContinuity) -> &RequirementSet {
+    continuity
+        .requirement_set(
+            &form_ref("form:permit"),
+            &effect_family_ref("family:write"),
+            &context_ref("context:permit"),
+        )
+        .unwrap()
+}
+
+fn permission_results(
+    continuity: &AuthorityContinuity,
+    first_result: CheckResult,
+    use_alternate_for_first: bool,
+) -> Vec<ResolvedRequirementResult> {
+    let set = permission_requirement_set(continuity);
+    set.iter()
+        .enumerate()
+        .map(|(index, descriptor)| {
+            let suffix = if index == 0 && use_alternate_for_first {
+                "alternate"
+            } else {
+                "primary"
+            };
+            let verifier = permission_verifier(descriptor.reference(), suffix);
+            let applicability = continuity
+                .verifier_applicability(descriptor.reference(), &verifier, descriptor.context())
+                .unwrap();
+            let result = if index == 0 {
+                first_result
+            } else {
+                CheckResult::Accredited
+            };
+            let check = RequirementCheck::constitute_for_test(descriptor, applicability, result)
+                .unwrap();
+            resolve_requirement_result(descriptor, &[&check]).unwrap()
+        })
+        .collect()
+}
+
+fn permission_effect<'a>(
+    continuity: &'a AuthorityContinuity,
+    authority: &AuthorityRef,
+    effect: &str,
+) -> &'a EffectDescriptor {
+    continuity
+        .authority(authority)
+        .unwrap()
+        .max_effects()
+        .iter()
+        .find(|candidate| candidate.reference().id().as_str() == effect)
+        .unwrap()
+}
+
+#[test]
+fn complete_governed_da_forms_a_sealed_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let results = permission_results(&continuity, CheckResult::Accredited, false);
+
+    let decision = decide_permit(&continuity, &form, effect, &results).unwrap();
+    let PermitDecision::Granted(permit) = decision else {
+        panic!("la decisión debía conceder un permiso sellado");
+    };
+
+    assert_eq!(permit.authority(), &authority);
+    assert_eq!(permit.required_authority(), &authority);
+    assert_eq!(permit.authority_holder(), &holder_ref("holder:permit"));
+    assert_eq!(permit.authority_context(), &context_ref("context:permit"));
+    assert_eq!(permit.form(), &form);
+    assert_eq!(permit.transition_class(), TransitionClass::Exercise);
+    assert_eq!(permit.form_effect_family(), &effect_family_ref("family:write"));
+    assert_eq!(permit.effect_reference(), &effect_ref("effect:permit:allowed"));
+    assert_eq!(permit.governed_object(), &object_ref("object:permit"));
+    assert_eq!(permit.context(), &context_ref("context:permit"));
+    assert_eq!(permit.requirement_form(), &form);
+    assert_eq!(
+        permit.requirement_effect_family(),
+        &effect_family_ref("family:write")
+    );
+    assert_eq!(permit.requirement_context(), &context_ref("context:permit"));
+    assert_eq!(permit.technical_result(), CheckResult::Accredited);
+    assert_eq!(permit.accumulation(), &AccumulationContract::SingleUse);
+}
+
+#[test]
+fn refuted_requirements_never_form_positive_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let results = permission_results(&continuity, CheckResult::Refuted, false);
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &results),
+        Ok(PermitDecision::NotGranted(
+            PermitRejection::RefutedRequirements
+        ))
+    );
+}
+
+#[test]
+fn not_verifiable_requirements_never_form_positive_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let results = permission_results(&continuity, CheckResult::NotVerifiable, false);
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &results),
+        Ok(PermitDecision::NotGranted(
+            PermitRejection::NotVerifiableRequirements
+        ))
+    );
+}
+
+#[test]
+fn accredited_but_incomplete_coverage_never_forms_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let results = permission_results(&continuity, CheckResult::Accredited, true);
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &results),
+        Ok(PermitDecision::NotGranted(
+            PermitRejection::NotVerifiableRequirements
+        ))
+    );
+}
+
+#[test]
+fn form_effect_mismatch_is_closed_before_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:wrong-family");
+    let results = permission_results(&continuity, CheckResult::Accredited, false);
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &results),
+        Err(PermitDecisionError::FormEffectMismatch {
+            form,
+            effect: effect_ref("effect:permit:wrong-family"),
+        })
+    );
+}
+
+#[test]
+fn effect_outside_required_authority_scope_is_closed_before_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit");
+    let main_authority = authority_ref("authority:permit");
+    let other_authority = authority_ref("authority:permit:other");
+    let effect = permission_effect(&continuity, &other_authority, "effect:permit:foreign");
+    let results = permission_results(&continuity, CheckResult::Accredited, false);
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &results),
+        Err(PermitDecisionError::EffectOutsideAuthorityScope {
+            authority: main_authority,
+            effect: effect_ref("effect:permit:foreign"),
+        })
+    );
+}
+
+#[test]
+fn form_without_required_authority_cannot_form_permit() {
+    let continuity = permission_continuity();
+    let form = form_ref("form:permit:free");
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+
+    assert_eq!(
+        decide_permit(&continuity, &form, effect, &[]),
+        Err(PermitDecisionError::FormWithoutRequiredAuthority(form))
+    );
+}
+
+#[test]
+fn r1_4_unit_one_does_not_make_authorizing_classes_productive() {
+    for class in [
+        TransitionClass::Governance,
+        TransitionClass::Constitutive,
+        TransitionClass::Recovery,
+    ] {
+        assert_eq!(
+            transition_disposition(class),
+            TransitionDisposition::BlockedPendingRequirements
+        );
+    }
 }
