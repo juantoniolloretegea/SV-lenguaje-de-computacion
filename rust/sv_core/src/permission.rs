@@ -91,6 +91,13 @@ struct PermitRequirementSetSnapshot {
     requirements: BTreeMap<RequirementRef, PermitRequirementSnapshot>,
 }
 
+#[derive(Debug, PartialEq, Eq)]
+struct PermitApplicabilitySnapshot {
+    verifier_family: VerifierFamilyRef,
+    context: ContextRef,
+    applicability_rule: ApplicabilityRuleRef,
+}
+
 fn requirement_snapshot(descriptor: &RequirementDescriptor) -> PermitRequirementSnapshot {
     PermitRequirementSnapshot {
         class: descriptor.class(),
@@ -133,6 +140,45 @@ fn requirement_set_snapshot(requirements: &RequirementSet) -> PermitRequirementS
     }
 }
 
+fn applicability_snapshots(
+    continuity: &AuthorityContinuity,
+    requirements: &RequirementSet,
+    resolved_results: &[ResolvedRequirementResult],
+) -> Result<
+    BTreeMap<(RequirementRef, VerifierRef), PermitApplicabilitySnapshot>,
+    PermitDecisionError,
+> {
+    let mut snapshots = BTreeMap::new();
+
+    for result in resolved_results {
+        let requirement = result.requirement();
+        let descriptor = requirements.requirement(requirement).ok_or_else(|| {
+            PermitDecisionError::MissingRequirementForApplicability(requirement.clone())
+        })?;
+
+        for verifier in result.participating_verifiers() {
+            let applicability = continuity
+                .verifier_applicability(requirement, verifier, descriptor.context())
+                .ok_or_else(|| PermitDecisionError::MissingConstitutedApplicability {
+                    requirement: requirement.clone(),
+                    verifier: verifier.clone(),
+                    context: descriptor.context().clone(),
+                })?;
+
+            snapshots.insert(
+                (requirement.clone(), verifier.clone()),
+                PermitApplicabilitySnapshot {
+                    verifier_family: applicability.verifier_family().clone(),
+                    context: applicability.context().clone(),
+                    applicability_rule: applicability.applicability_rule().clone(),
+                },
+            );
+        }
+    }
+
+    Ok(snapshots)
+}
+
 /// Permiso positivo sellado para un acto protegido concreto.
 ///
 /// El tipo no implementa `Clone` ni ofrece constructor público. Sólo
@@ -140,8 +186,9 @@ fn requirement_set_snapshot(requirements: &RequirementSet) -> PermitRequirementS
 /// forma, la autoridad y `Req`, y de obtener un resultado técnico final `D-A`
 /// mediante la agregación gobernada de R1-3.
 ///
-/// El sello conserva además la descripción gobernante de `Req` y de la forma
-/// que deberá seguir coincidiendo en la mediación. Conservar esa instantánea no
+/// El sello conserva además la descripción gobernante de `Req`, las relaciones
+/// `Applicable(V,q,C)` de los verificadores que participaron y la forma que
+/// deberá seguir coincidiendo en la mediación. Conservar esa instantánea no
 /// ejecuta el efecto ni convierte el permiso en autoridad nueva.
 #[derive(Debug, PartialEq, Eq)]
 pub struct Permit {
@@ -149,6 +196,7 @@ pub struct Permit {
     form: PermitFormBinding,
     effect: EffectDescriptor,
     requirements: PermitRequirementSetSnapshot,
+    applicabilities: BTreeMap<(RequirementRef, VerifierRef), PermitApplicabilitySnapshot>,
     technical_result: CheckResult,
 }
 
@@ -255,6 +303,39 @@ impl Permit {
     pub(crate) fn matches_current_requirements(&self, requirements: &RequirementSet) -> bool {
         self.requirements == requirement_set_snapshot(requirements)
     }
+
+    pub(crate) fn first_changed_applicability(
+        &self,
+        continuity: &AuthorityContinuity,
+    ) -> Option<(RequirementRef, VerifierRef, ContextRef)> {
+        for ((requirement, verifier), snapshot) in &self.applicabilities {
+            let Some(current) = continuity.verifier_applicability(
+                requirement,
+                verifier,
+                &snapshot.context,
+            ) else {
+                return Some((
+                    requirement.clone(),
+                    verifier.clone(),
+                    snapshot.context.clone(),
+                ));
+            };
+
+            if current.verifier_family() != &snapshot.verifier_family
+                || current.requirement() != requirement
+                || current.context() != &snapshot.context
+                || current.applicability_rule() != &snapshot.applicability_rule
+            {
+                return Some((
+                    requirement.clone(),
+                    verifier.clone(),
+                    snapshot.context.clone(),
+                ));
+            }
+        }
+
+        None
+    }
 }
 
 /// Ausencia cerrada de permiso positivo por el resultado técnico final de
@@ -296,6 +377,12 @@ pub enum PermitDecisionError {
         effect_family: EffectFamilyRef,
         context: ContextRef,
     },
+    MissingRequirementForApplicability(RequirementRef),
+    MissingConstitutedApplicability {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+        context: ContextRef,
+    },
     InvalidGovernedResult(CoveredAggregationError),
 }
 
@@ -313,8 +400,9 @@ impl From<CoveredAggregationError> for PermitDecisionError {
 /// vuelve a obtener el resultado final de R1-3 para la ligadura exacta del acto.
 ///
 /// Un `D-A` final es necesario, pero sólo produce `Permit` si además coinciden
-/// forma, familia, contexto, autoridad requerida y alcance constituido del
-/// efecto. `D-R` y `D-N` producen ausencia cerrada de permiso positivo.
+/// forma, familia, contexto, autoridad requerida, alcance constituido del
+/// efecto y las relaciones de aplicabilidad constituidas de los verificadores
+/// participantes. `D-R` y `D-N` producen ausencia cerrada de permiso positivo.
 pub fn decide_permit(
     continuity: &AuthorityContinuity,
     form_reference: &FormRef,
@@ -364,24 +452,30 @@ pub fn decide_permit(
         CheckResult::NotVerifiable => Ok(PermitDecision::NotGranted(
             PermitRejection::NotVerifiableRequirements,
         )),
-        CheckResult::Accredited => Ok(PermitDecision::Granted(Permit {
-            authority: PermitAuthorityBinding {
-                reference: authority.reference().clone(),
-                holder: authority.holder().clone(),
-                context: authority.context().clone(),
-            },
-            form: PermitFormBinding {
-                reference: form.reference().clone(),
-                transition_class: form.transition_class(),
-                effect_family: form.effect_family().clone(),
-                context_bindings: form.context_bindings().cloned().collect(),
-                selected_context: effect.context().clone(),
-                required_authority: required_authority.clone(),
-                accumulation: form.accumulation().clone(),
-            },
-            effect: effect.clone(),
-            requirements: requirement_set_snapshot(requirements),
-            technical_result,
-        })),
+        CheckResult::Accredited => {
+            let applicabilities =
+                applicability_snapshots(continuity, requirements, resolved_results)?;
+
+            Ok(PermitDecision::Granted(Permit {
+                authority: PermitAuthorityBinding {
+                    reference: authority.reference().clone(),
+                    holder: authority.holder().clone(),
+                    context: authority.context().clone(),
+                },
+                form: PermitFormBinding {
+                    reference: form.reference().clone(),
+                    transition_class: form.transition_class(),
+                    effect_family: form.effect_family().clone(),
+                    context_bindings: form.context_bindings().cloned().collect(),
+                    selected_context: effect.context().clone(),
+                    required_authority: required_authority.clone(),
+                    accumulation: form.accumulation().clone(),
+                },
+                effect: effect.clone(),
+                requirements: requirement_set_snapshot(requirements),
+                applicabilities,
+                technical_result,
+            }))
+        }
     }
 }
