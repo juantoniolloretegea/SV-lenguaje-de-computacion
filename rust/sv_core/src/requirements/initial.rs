@@ -230,15 +230,15 @@ pub enum InitialRequirementError {
     },
 }
 
-/// Estado inicial constituido de requisitos, aplicabilidad y reglas gobernadas.
+/// Estado inicial constituido de requisitos y aplicabilidad.
 ///
-/// No tiene constructor público. Sólo T-0 puede obtenerlo a partir de
-/// propuestas mediante `constitute_initial`.
+/// Las reglas gobernadas quedan ligadas dentro de cada `RequirementDescriptor`.
+/// No tiene constructor público y sólo T-0 puede obtenerlo mediante
+/// `constitute_initial`.
 #[derive(Debug, PartialEq, Eq, Default)]
 pub(crate) struct InitialRequirementState {
     sets: BTreeMap<RequirementBinding, RequirementSet>,
     applicabilities: BTreeMap<ApplicabilityKey, VerifierApplicability>,
-    coverage_rules: BTreeMap<RequirementRef, CoverageRule>,
 }
 
 impl InitialRequirementState {
@@ -268,20 +268,12 @@ impl InitialRequirementState {
         })
     }
 
-    pub(crate) fn coverage_rule(&self, requirement: &RequirementRef) -> Option<&CoverageRule> {
-        self.coverage_rules.get(requirement)
-    }
-
     pub(crate) fn requirement_set_count(&self) -> usize {
         self.sets.len()
     }
 
     pub(crate) fn applicability_count(&self) -> usize {
         self.applicabilities.len()
-    }
-
-    pub(crate) fn coverage_rule_count(&self) -> usize {
-        self.coverage_rules.len()
     }
 }
 
@@ -383,6 +375,7 @@ pub(crate) fn constitute_initial(
             admissible_verifier_families: families,
             applicability_rule: proposal.applicability_rule,
             conflict_resolution_rule: None,
+            coverage_rule: None,
         });
     }
 
@@ -479,34 +472,36 @@ pub(crate) fn constitute_initial(
             ));
         };
 
-        let Some(descriptor) = sets
-            .get(&binding)
-            .and_then(|set| set.requirement(&requirement))
-        else {
-            return Err(InitialRequirementError::UnknownRequirementForConflictRule(
-                requirement,
-            ));
-        };
+        let rule = {
+            let Some(descriptor) = sets
+                .get(&binding)
+                .and_then(|set| set.requirement(&requirement))
+            else {
+                return Err(InitialRequirementError::UnknownRequirementForConflictRule(
+                    requirement,
+                ));
+            };
 
-        let key = ApplicabilityKey {
-            requirement: requirement.clone(),
-            verifier: proposal.decisive_verifier.clone(),
-            context: descriptor.context().clone(),
-        };
+            let key = ApplicabilityKey {
+                requirement: requirement.clone(),
+                verifier: proposal.decisive_verifier.clone(),
+                context: descriptor.context().clone(),
+            };
 
-        let Some(applicability) = applicabilities.get(&key) else {
-            return Err(InitialRequirementError::ConflictResolverNotApplicable {
-                requirement,
-                verifier: proposal.decisive_verifier,
-            });
-        };
+            let Some(applicability) = applicabilities.get(&key) else {
+                return Err(InitialRequirementError::ConflictResolverNotApplicable {
+                    requirement,
+                    verifier: proposal.decisive_verifier,
+                });
+            };
 
-        let rule = ConflictResolutionRule::constitute_from_genesis(
-            token,
-            proposal.reference,
-            descriptor,
-            applicability,
-        );
+            ConflictResolutionRule::constitute_from_genesis(
+                token,
+                proposal.reference,
+                descriptor,
+                applicability,
+            )
+        };
 
         let Some(descriptor_mut) = sets
             .get_mut(&binding)
@@ -519,50 +514,60 @@ pub(crate) fn constitute_initial(
         descriptor_mut.conflict_resolution_rule = Some(rule);
     }
 
-    let mut coverage_rules = BTreeMap::new();
     for (requirement, proposal) in pending_coverage_rules {
         let Some(binding) = reference_to_binding.get(&requirement).cloned() else {
             return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
                 requirement,
             ));
         };
-        let Some(descriptor) = sets
-            .get(&binding)
-            .and_then(|set| set.requirement(&requirement))
+
+        let rule = {
+            let Some(descriptor) = sets
+                .get(&binding)
+                .and_then(|set| set.requirement(&requirement))
+            else {
+                return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
+                    requirement,
+                ));
+            };
+
+            let mut required_verifiers = BTreeSet::new();
+            for verifier in proposal.required_verifiers {
+                let key = ApplicabilityKey {
+                    requirement: requirement.clone(),
+                    verifier: verifier.clone(),
+                    context: descriptor.context().clone(),
+                };
+                if !applicabilities.contains_key(&key) {
+                    return Err(InitialRequirementError::CoverageVerifierNotApplicable {
+                        requirement,
+                        verifier,
+                    });
+                }
+                required_verifiers.insert(verifier);
+            }
+
+            CoverageRule::constitute_from_genesis(
+                token,
+                proposal.reference,
+                descriptor,
+                required_verifiers,
+            )
+        };
+
+        let Some(descriptor_mut) = sets
+            .get_mut(&binding)
+            .and_then(|set| set.requirements.get_mut(&requirement))
         else {
             return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
                 requirement,
             ));
         };
-
-        let mut required_verifiers = BTreeSet::new();
-        for verifier in proposal.required_verifiers {
-            let key = ApplicabilityKey {
-                requirement: requirement.clone(),
-                verifier: verifier.clone(),
-                context: descriptor.context().clone(),
-            };
-            if !applicabilities.contains_key(&key) {
-                return Err(InitialRequirementError::CoverageVerifierNotApplicable {
-                    requirement,
-                    verifier,
-                });
-            }
-            required_verifiers.insert(verifier);
-        }
-
-        let rule = CoverageRule::constitute_from_genesis(
-            token,
-            proposal.reference,
-            descriptor,
-            required_verifiers,
-        );
-        coverage_rules.insert(requirement, rule);
+        descriptor_mut.coverage_rule = Some(rule);
     }
 
     Ok(InitialRequirementState {
         sets,
         applicabilities,
-        coverage_rules,
     })
 }
