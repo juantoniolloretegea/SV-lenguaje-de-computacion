@@ -28,10 +28,10 @@ pub use authority::{
 };
 pub use control::{
     AccumulationRuleRef, AdmittedEvidenceRef, ApplicabilityRuleRef, AuthorityHolderRef,
-    AuthorityRef, CheckResult, ConstitutedFactRef, ContextRef, ContinuityOccupancy, ControlId,
-    EffectFamilyRef, EffectRef, EnablementRef, ExerciseRef, FormRef, GovernedObjectRef,
-    InformationRef, InvalidControlId, RequirementRef, TransitionClass, VerifierFamilyRef,
-    VerifierRef,
+    AuthorityRef, CheckResult, ConflictResolutionRuleRef, ConstitutedFactRef, ContextRef,
+    ContinuityOccupancy, ControlId, EffectFamilyRef, EffectRef, EnablementRef, ExerciseRef,
+    FormRef, GovernedObjectRef, InformationRef, InvalidControlId, RequirementRef, TransitionClass,
+    VerifierFamilyRef, VerifierRef,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
@@ -47,7 +47,8 @@ pub use requirements::{
     RequirementDescriptor, RequirementSet, VerifierApplicability,
 };
 pub use requirements_conflict::{
-    resolve_requirement_checks_without_rule, RequirementConflictError,
+    resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,
+    RequirementConflictError,
 };
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
