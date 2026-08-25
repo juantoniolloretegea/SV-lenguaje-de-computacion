@@ -595,13 +595,17 @@ mod tests {
         let set = set_with_complete_coverage();
         let results: Vec<_> = set
             .iter()
-            .enumerate()
-            .map(|(index, descriptor)| {
-                resolved_one(
-                    descriptor,
-                    &format!("verifier:{index}"),
-                    CheckResult::Accredited,
-                )
+            .map(|descriptor| {
+                let required = descriptor
+                    .coverage_rule()
+                    .expect("el conjunto de prueba tiene cobertura")
+                    .required_verifiers()
+                    .next()
+                    .expect("la regla de cobertura no es vacía")
+                    .id()
+                    .as_str()
+                    .to_owned();
+                resolved_one(descriptor, &required, CheckResult::Accredited)
             })
             .collect();
 
@@ -665,35 +669,54 @@ mod tests {
 
     #[test]
     fn coverage_rule_identity_is_part_of_the_resolved_binding() {
-        let mut original = descriptor(
+        let mut source_descriptor = descriptor(
             "req:form",
             RequirementClass::Core(CoreRequirementKind::FormValidity),
             "context:1",
         );
         attach_rule(
-            &mut original,
+            &mut source_descriptor,
             "coverage:first",
-            [verifier("verifier:0")],
+            [verifier("verifier:1")],
         );
-        let resolved = resolved_one(&original, "verifier:0", CheckResult::Accredited);
+        let resolved = resolved_one(
+            &source_descriptor,
+            "verifier:1",
+            CheckResult::Accredited,
+        );
 
-        let mut descriptors = mandatory_descriptors();
-        let target = descriptors
-            .iter_mut()
-            .find(|descriptor| descriptor.reference() == &requirement("req:form"))
-            .unwrap();
-        attach_rule(
-            target,
-            "coverage:second",
-            [verifier("verifier:0")],
+        let mut target_descriptor = descriptor(
+            "req:form",
+            RequirementClass::Core(CoreRequirementKind::FormValidity),
+            "context:1",
         );
-        let set = set_from(descriptors);
+        attach_rule(
+            &mut target_descriptor,
+            "coverage:second",
+            [verifier("verifier:1")],
+        );
+        let set = set_from(vec![
+            target_descriptor,
+            descriptor(
+                "req:authority",
+                RequirementClass::Core(CoreRequirementKind::ApplicableAuthority),
+                "context:1",
+            ),
+            descriptor(
+                "req:verifier",
+                RequirementClass::Core(CoreRequirementKind::VerifierAdmissibilityAndApplicability),
+                "context:1",
+            ),
+            descriptor(
+                "req:no-self",
+                RequirementClass::Core(CoreRequirementKind::NoSelfAccreditation),
+                "context:1",
+            ),
+        ]);
 
         assert_eq!(
-            aggregate_covered_requirement_results(&set, &[resolved]),
-            Err(CoveredAggregationError::Resolved(
-                ResolvedAggregationError::BindingMismatch(requirement("req:form"))
-            ))
+            aggregate_resolved_requirement_results(&set, &[resolved]),
+            Err(ResolvedAggregationError::BindingMismatch(requirement("req:form")))
         );
     }
 }
