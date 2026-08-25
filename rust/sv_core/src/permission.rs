@@ -1,9 +1,9 @@
 //! Decisión sellada de permiso para R1-4.
 //!
 //! La unidad 1 materializa la frontera de decisión. La unidad 2 refuerza el
-//! sello con una instantánea de las ligaduras gobernantes que deberán seguir
-//! vigentes en el punto de mediación. Ninguna de las dos unidades ejecuta por
-//! sí misma un efecto protegido.
+//! sello con las ligaduras gobernantes que deberán seguir vigentes en el punto
+//! de mediación. Ninguna de las dos unidades ejecuta por sí misma un efecto
+//! protegido.
 //!
 //! Un resultado técnico nominal no puede convertirse en permiso:
 //!
@@ -24,15 +24,19 @@ use std::collections::{BTreeMap, BTreeSet};
 use crate::authority::transitions::AuthorityContinuity;
 use crate::authority::{AccumulationContract, ConstitutedAuthority, EffectDescriptor, FormDescriptor};
 use crate::control::{
-    ApplicabilityRuleRef, AuthorityHolderRef, AuthorityRef, CheckResult, ConflictResolutionRuleRef,
-    ContextRef, CoverageRuleRef, EffectFamilyRef, EffectRef, FormRef, GovernedObjectRef,
-    RequirementRef, ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, TransitionClass,
+    ApplicabilityRuleRef, AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef,
+    EffectFamilyRef, EffectRef, FormRef, GovernedObjectRef, RequirementRef, TransitionClass,
     VerifierFamilyRef, VerifierRef,
 };
-use crate::requirements::{RequirementClass, RequirementDescriptor, RequirementSet};
+use crate::requirements::RequirementSet;
 use crate::requirements_bridge::ResolvedRequirementResult;
 use crate::requirements_coverage::{
     aggregate_covered_requirement_results, CoveredAggregationError,
+};
+use crate::requirements_reuse::{
+    reuse_historical_requirement_result, seal_historical_qualified_result,
+    HistoricalQualificationError, HistoricalQualifiedRequirementResult, ReuseDisposition,
+    ReuseRejectionReason,
 };
 
 #[derive(Debug, PartialEq, Eq)]
@@ -54,90 +58,32 @@ struct PermitFormBinding {
 }
 
 #[derive(Debug, PartialEq, Eq)]
-struct PermitConflictRuleSnapshot {
-    reference: ConflictResolutionRuleRef,
-    decisive_verifier: VerifierRef,
-    verifier_family: VerifierFamilyRef,
-    applicability_rule: ApplicabilityRuleRef,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-struct PermitCoverageRuleSnapshot {
-    reference: CoverageRuleRef,
-    required_verifiers: BTreeSet<VerifierRef>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-struct PermitReuseRuleSnapshot {
-    reference: ReuseRuleRef,
-    exact_bindings: BTreeMap<ReuseBindingKeyRef, ReuseBindingValueRef>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-struct PermitRequirementSnapshot {
-    class: RequirementClass,
-    admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
-    applicability_rule: ApplicabilityRuleRef,
-    conflict_rule: Option<PermitConflictRuleSnapshot>,
-    coverage_rule: Option<PermitCoverageRuleSnapshot>,
-    reuse_rule: Option<PermitReuseRuleSnapshot>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
-struct PermitRequirementSetSnapshot {
-    form: FormRef,
-    effect_family: EffectFamilyRef,
-    context: ContextRef,
-    requirements: BTreeMap<RequirementRef, PermitRequirementSnapshot>,
-}
-
-#[derive(Debug, PartialEq, Eq)]
 struct PermitApplicabilitySnapshot {
     verifier_family: VerifierFamilyRef,
     context: ContextRef,
     applicability_rule: ApplicabilityRuleRef,
 }
 
-fn requirement_snapshot(descriptor: &RequirementDescriptor) -> PermitRequirementSnapshot {
-    PermitRequirementSnapshot {
-        class: descriptor.class(),
-        admissible_verifier_families: descriptor
-            .admissible_verifier_families()
-            .cloned()
-            .collect(),
-        applicability_rule: descriptor.applicability_rule().clone(),
-        conflict_rule: descriptor.conflict_resolution_rule().map(|rule| {
-            PermitConflictRuleSnapshot {
-                reference: rule.reference().clone(),
-                decisive_verifier: rule.decisive_verifier().clone(),
-                verifier_family: rule.verifier_family().clone(),
-                applicability_rule: rule.applicability_rule().clone(),
-            }
-        }),
-        coverage_rule: descriptor.coverage_rule().map(|rule| PermitCoverageRuleSnapshot {
-            reference: rule.reference().clone(),
-            required_verifiers: rule.required_verifiers().cloned().collect(),
-        }),
-        reuse_rule: descriptor.reuse_rule().map(|rule| PermitReuseRuleSnapshot {
-            reference: rule.reference().clone(),
-            exact_bindings: rule
-                .bindings()
-                .map(|(key, value)| (key.clone(), value.clone()))
-                .collect(),
-        }),
-    }
-}
+fn historical_results(
+    requirements: &RequirementSet,
+    resolved_results: &[ResolvedRequirementResult],
+) -> Result<
+    BTreeMap<RequirementRef, HistoricalQualifiedRequirementResult>,
+    PermitDecisionError,
+> {
+    let mut historical = BTreeMap::new();
 
-fn requirement_set_snapshot(requirements: &RequirementSet) -> PermitRequirementSetSnapshot {
-    PermitRequirementSetSnapshot {
-        form: requirements.form().clone(),
-        effect_family: requirements.effect_family().clone(),
-        context: requirements.context().clone(),
-        requirements: requirements
-            .iter()
-            .map(|descriptor| (descriptor.reference().clone(), requirement_snapshot(descriptor)))
-            .collect(),
+    for result in resolved_results {
+        let requirement = result.requirement();
+        let descriptor = requirements.requirement(requirement).ok_or_else(|| {
+            PermitDecisionError::MissingRequirementForHistoricalSeal(requirement.clone())
+        })?;
+        let sealed = seal_historical_qualified_result(descriptor, result)
+            .map_err(PermitDecisionError::HistoricalQualification)?;
+        historical.insert(requirement.clone(), sealed);
     }
+
+    Ok(historical)
 }
 
 fn applicability_snapshots(
@@ -186,16 +132,16 @@ fn applicability_snapshots(
 /// forma, la autoridad y `Req`, y de obtener un resultado técnico final `D-A`
 /// mediante la agregación gobernada de R1-3.
 ///
-/// El sello conserva además la descripción gobernante de `Req`, las relaciones
-/// `Applicable(V,q,C)` de los verificadores que participaron y la forma que
-/// deberá seguir coincidiendo en la mediación. Conservar esa instantánea no
-/// ejecuta el efecto ni convierte el permiso en autoridad nueva.
+/// Para la mediación se conservan resultados históricos ya cualificados por 3D
+/// y las relaciones `Applicable(V,q,C)` de los verificadores participantes. El
+/// sellado histórico no presume vigencia: la unidad 2 deberá reutilizar cada
+/// resultado mediante la regla constituida de 3E.
 #[derive(Debug, PartialEq, Eq)]
 pub struct Permit {
     authority: PermitAuthorityBinding,
     form: PermitFormBinding,
     effect: EffectDescriptor,
-    requirements: PermitRequirementSetSnapshot,
+    historical_results: BTreeMap<RequirementRef, HistoricalQualifiedRequirementResult>,
     applicabilities: BTreeMap<(RequirementRef, VerifierRef), PermitApplicabilitySnapshot>,
     technical_result: CheckResult,
 }
@@ -258,17 +204,17 @@ impl Permit {
 
     #[inline]
     pub fn requirement_form(&self) -> &FormRef {
-        &self.requirements.form
+        &self.form.reference
     }
 
     #[inline]
     pub fn requirement_effect_family(&self) -> &EffectFamilyRef {
-        &self.requirements.effect_family
+        self.effect.family()
     }
 
     #[inline]
     pub fn requirement_context(&self) -> &ContextRef {
-        &self.requirements.context
+        self.effect.context()
     }
 
     #[inline]
@@ -299,9 +245,43 @@ impl Permit {
             && self.authority.context == *authority.context()
     }
 
-    #[inline]
-    pub(crate) fn matches_current_requirements(&self, requirements: &RequirementSet) -> bool {
-        self.requirements == requirement_set_snapshot(requirements)
+    pub(crate) fn first_non_reusable_requirement(
+        &self,
+        requirements: &RequirementSet,
+    ) -> Option<(RequirementRef, Option<ReuseRejectionReason>)> {
+        if requirements.len() != self.historical_results.len() {
+            return Some((
+                requirements
+                    .iter()
+                    .find(|descriptor| !self.historical_results.contains_key(descriptor.reference()))
+                    .map(|descriptor| descriptor.reference().clone())
+                    .or_else(|| self.historical_results.keys().next().cloned())
+                    .unwrap_or_else(|| RequirementRef::from_core_id(
+                        crate::control::ControlId::new("requirement:shape-mismatch")
+                            .expect("identificador interno fijo válido"),
+                    )),
+                None,
+            ));
+        }
+
+        for descriptor in requirements.iter() {
+            let Some(historical) = self.historical_results.get(descriptor.reference()) else {
+                return Some((descriptor.reference().clone(), None));
+            };
+
+            let assessment = match reuse_historical_requirement_result(descriptor, historical) {
+                Ok(assessment) => assessment,
+                Err(_) => return Some((descriptor.reference().clone(), None)),
+            };
+
+            if assessment.disposition() != ReuseDisposition::Reused
+                || assessment.result() != CheckResult::Accredited
+            {
+                return Some((descriptor.reference().clone(), assessment.rejection_reason()));
+            }
+        }
+
+        None
     }
 
     pub(crate) fn first_changed_applicability(
@@ -377,6 +357,8 @@ pub enum PermitDecisionError {
         effect_family: EffectFamilyRef,
         context: ContextRef,
     },
+    MissingRequirementForHistoricalSeal(RequirementRef),
+    HistoricalQualification(HistoricalQualificationError),
     MissingRequirementForApplicability(RequirementRef),
     MissingConstitutedApplicability {
         requirement: RequirementRef,
@@ -402,7 +384,8 @@ impl From<CoveredAggregationError> for PermitDecisionError {
 /// Un `D-A` final es necesario, pero sólo produce `Permit` si además coinciden
 /// forma, familia, contexto, autoridad requerida, alcance constituido del
 /// efecto y las relaciones de aplicabilidad constituidas de los verificadores
-/// participantes. `D-R` y `D-N` producen ausencia cerrada de permiso positivo.
+/// participantes. Los resultados por obligación se sellan como resultados
+/// históricos cualificados para que la mediación posterior deba pasar por 3E.
 pub fn decide_permit(
     continuity: &AuthorityContinuity,
     form_reference: &FormRef,
@@ -453,6 +436,7 @@ pub fn decide_permit(
             PermitRejection::NotVerifiableRequirements,
         )),
         CheckResult::Accredited => {
+            let historical_results = historical_results(requirements, resolved_results)?;
             let applicabilities =
                 applicability_snapshots(continuity, requirements, resolved_results)?;
 
@@ -472,7 +456,7 @@ pub fn decide_permit(
                     accumulation: form.accumulation().clone(),
                 },
                 effect: effect.clone(),
-                requirements: requirement_set_snapshot(requirements),
+                historical_results,
                 applicabilities,
                 technical_result,
             }))
