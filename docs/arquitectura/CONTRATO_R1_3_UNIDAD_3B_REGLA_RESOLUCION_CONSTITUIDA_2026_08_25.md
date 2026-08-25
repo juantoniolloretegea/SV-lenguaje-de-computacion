@@ -4,7 +4,7 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-3  
-**Estado:** contrato de realización
+**Estado:** realizado e integrado
 
 ## 1. Objeto
 
@@ -203,8 +203,8 @@ R1-3 = ABIERTO
 
 R1-3 / unidad 1 = CERRADA · INTEGRADA
 R1-3 / unidad 2 = CERRADA · INTEGRADA
-R1-3 / unidad 3A = CANDIDATA DE INTEGRACIÓN
-R1-3 / unidad 3B = EN REALIZACIÓN
+R1-3 / unidad 3A = CERRADA · INTEGRADA
+R1-3 / unidad 3B = CERRADA · INTEGRADA
 
 R1-4 = NO INICIADO
 R2–R4 = NO INICIADOS
