@@ -1,7 +1,7 @@
 # Arquitectura del frente operativo
 
 **Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 24 de agosto de 2026  
+**Fecha:** 25 de agosto de 2026  
 **Versión del conjunto:** V.1 del conjunto  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
@@ -32,6 +32,7 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `ADENDA_R1_0_ALCANCE_AUTORIDAD_CONTINUIDAD_Y_FRONTERA_DE_R1_2026_08_24.md`
 - `CONTRATO_R1_1_FORMAS_AUTORIDAD_ENVOLVENTE_Y_DOMINIO_GOBERNADO_2026_08_24.md`
 - `CONTRATO_R1_2_TRANSICIONES_Y_GENESIS_2026_08_24.md`
+- `ACTA_TECNICA_CIERRE_R1_2_TRANSICIONES_AUTORIDAD_Y_GENESIS_2026_08_25.md`
 
 ## Regla de lectura
 
@@ -56,7 +57,8 @@ R0 = CERRADO
 R1 = ABIERTO
 R1-0 = CERRADO
 R1-1 = CERRADO
-R1-2 = CANDIDATO DE CIERRE · NO INTEGRADO
+R1-2 = CERRADO · INTEGRADO
+R1-3 = NO INICIADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -69,6 +71,8 @@ R1-0 fija los tipos cerrados y las fronteras de construcción del control sobera
 
 R1-1 fija la estructura de las formas, la autoridad acotada, `E_max` y `D_a`. La envolvente conserva la descripción completa del efecto y el dominio gobernado usa pertenencia exacta. La constitución productiva quedó reservada a las transiciones autorizantes del corte siguiente.
 
-R1-2 materializa T-0 como única vía productiva de autoridad de su corte. Exige simultáneamente una premisa constituyente externa opaca no consumida y una continuidad lógica no habitada; una génesis válida ocupa la continuidad y consume la premisa. Las referencias de formas y autoridades son únicas dentro del estado inicial, una génesis rechazada no produce estado parcial y las formas T-G, T-C y T-R deben identificar autoridad previa. T-I, T-V, T-H y T-E permanecen no autorizantes; T-G, T-C y T-R no aplican cambios de autoridad mientras R1-3 no materialice `Req` y los resultados de comprobación aplicables. La representación no acredita continuidad material entre procesos ni permite deducir una nueva génesis de un reinicio técnico.
+R1-2 queda cerrado e integrado. Materializa T-0 como única vía productiva de autoridad de su corte y exige simultáneamente una premisa constituyente externa opaca no consumida y una continuidad lógica no habitada. Una génesis válida ocupa la continuidad y consume la premisa; una génesis rechazada no produce estado parcial ni consume la premisa. Las referencias de formas y autoridades son únicas dentro del estado inicial. T-I, T-V, T-H y T-E permanecen no autorizantes. T-G, T-C y T-R pueden existir como clases constituidas, pero no aplican cambios de autoridad mientras no se materialicen los requisitos, resultados de comprobación y la mediación posterior. La representación no acredita continuidad material entre procesos ni permite deducir una nueva génesis de un reinicio técnico.
+
+El campo de estado conservado en el contrato de R1-2 corresponde al candidato previo a la integración; el estado vigente del corte queda fijado por su acta técnica de cierre de 25 de agosto de 2026 y por este índice.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
