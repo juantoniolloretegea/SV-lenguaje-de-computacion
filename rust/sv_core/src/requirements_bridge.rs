@@ -1,16 +1,20 @@
 //! Puente sellado entre la resolución intra-obligación y la agregación de R1-3.
 //!
 //! Una `RequirementCheck` describe una comprobación individual. Este módulo
-//! impide que una comprobación seleccionada localmente sustituya al resultado
-//! gobernado de la obligación cuando existen varias comprobaciones aplicables.
-//! Sólo un `ResolvedRequirementResult` formado por la vía de resolución puede
-//! entrar en la agregación pública final de `Req`.
+//! impide que la agregación inter-obligaciones acepte directamente una
+//! comprobación seleccionada. Sólo un `ResolvedRequirementResult` formado por
+//! la vía de resolución puede entrar en la agregación de esta unidad.
+//!
+//! La unidad no acredita que el conjunto de comprobaciones suministrado a la
+//! resolución sea exhaustivo. Conserva la identidad de los verificadores que
+//! participaron para que la cobertura pueda gobernarse separadamente antes del
+//! cierre completo de R1-3.
 
 use std::collections::BTreeSet;
 
 use crate::control::{
     ApplicabilityRuleRef, CheckResult, ConflictResolutionRuleRef, ContextRef, EffectFamilyRef,
-    FormRef, RequirementRef, VerifierFamilyRef,
+    FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements::{RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet};
 use crate::requirements_conflict::{resolve_requirement_checks, RequirementConflictError};
@@ -19,8 +23,12 @@ use crate::requirements_conflict::{resolve_requirement_checks, RequirementConfli
 ///
 /// No existe constructor público. El valor sólo puede formarse después de
 /// atravesar `resolve_requirement_checks`, por lo que un `CheckResult` nominal
-/// o una `RequirementCheck` elegida localmente no bastan para fabricar una
-/// entrada agregable.
+/// no basta para fabricar una entrada agregable.
+///
+/// ```compile_fail
+/// use sv_core::{CheckResult, ResolvedRequirementResult};
+/// let _ = ResolvedRequirementResult::new(CheckResult::Accredited);
+/// ```
 #[derive(Debug, PartialEq, Eq)]
 pub struct ResolvedRequirementResult {
     requirement: RequirementRef,
@@ -31,12 +39,14 @@ pub struct ResolvedRequirementResult {
     admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRuleRef>,
+    participating_verifiers: BTreeSet<VerifierRef>,
     result: CheckResult,
 }
 
 impl ResolvedRequirementResult {
     fn from_governed_resolution(
         descriptor: &RequirementDescriptor,
+        participating_verifiers: BTreeSet<VerifierRef>,
         result: CheckResult,
     ) -> Self {
         Self {
@@ -53,6 +63,7 @@ impl ResolvedRequirementResult {
             conflict_resolution_rule: descriptor
                 .conflict_resolution_rule()
                 .map(|rule| rule.reference().clone()),
+            participating_verifiers,
             result,
         }
     }
@@ -60,6 +71,14 @@ impl ResolvedRequirementResult {
     #[inline]
     pub fn requirement(&self) -> &RequirementRef {
         &self.requirement
+    }
+
+    /// Verificadores cuyas comprobaciones formaron parte del conjunto
+    /// efectivamente resuelto. Esta colección describe participación, no
+    /// acredita por sí sola exhaustividad ni cobertura suficiente.
+    #[inline]
+    pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.participating_verifiers.iter()
     }
 
     #[inline]
@@ -87,23 +106,32 @@ impl ResolvedRequirementResult {
     }
 }
 
-/// Resuelve todas las comprobaciones suministradas de una obligación y sella
-/// el resultado con la ligadura material de su descriptor constituido.
+/// Resuelve el conjunto de comprobaciones suministrado para una obligación y
+/// sella el resultado con la ligadura material de su descriptor constituido y
+/// la identidad de los verificadores que participaron.
 ///
 /// Esta función no recibe un `CheckResult` elegido por el llamador. La
 /// resolución conserva las reglas de 3A y 3B antes de formar el objeto
-/// agregable.
+/// agregable. La exhaustividad del conjunto suministrado pertenece a la
+/// cobertura posterior de R1-3 y no queda acreditada por esta función.
 pub fn resolve_requirement_result(
     descriptor: &RequirementDescriptor,
     checks: &[&RequirementCheck],
 ) -> Result<ResolvedRequirementResult, RequirementConflictError> {
     let result = resolve_requirement_checks(descriptor, checks)?;
+    let participating_verifiers = checks
+        .iter()
+        .map(|check| check.verifier().clone())
+        .collect();
     Ok(ResolvedRequirementResult::from_governed_resolution(
-        descriptor, result,
+        descriptor,
+        participating_verifiers,
+        result,
     ))
 }
 
-/// Entrada estructural inválida en la agregación final de obligaciones.
+/// Entrada estructural inválida en la agregación de obligaciones de esta
+/// unidad.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum ResolvedAggregationError {
     EmptyRequirementSet,
@@ -117,7 +145,18 @@ pub enum ResolvedAggregationError {
 /// un `RequirementSet` completo.
 ///
 /// Conserva la precedencia contractual `D-R > D-N > D-A` y no produce permiso,
-/// autoridad, efecto protegido ni valor ternario.
+/// autoridad, efecto protegido ni valor ternario. La función acredita cobertura
+/// del conjunto de obligaciones de `Req`, no exhaustividad interna de las
+/// comprobaciones utilizadas para resolver cada obligación.
+///
+/// Una comprobación individual no puede sustituir al resultado resuelto:
+///
+/// ```compile_fail
+/// use sv_core::{aggregate_resolved_requirement_results, RequirementCheck, RequirementSet};
+/// fn bypass(set: &RequirementSet, check: RequirementCheck) {
+///     let _ = aggregate_resolved_requirement_results(set, &[check]);
+/// }
+/// ```
 pub fn aggregate_resolved_requirement_results(
     requirements: &RequirementSet,
     results: &[ResolvedRequirementResult],
@@ -173,7 +212,7 @@ pub fn aggregate_resolved_requirement_results(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::control::{ControlId, VerifierRef};
+    use crate::control::ControlId;
     use crate::requirements::{
         CoreRequirementKind, RequirementCheck, RequirementClass, RequirementDescriptor,
         RequirementSet, VerifierApplicability,
@@ -274,17 +313,21 @@ mod tests {
     }
 
     #[test]
-    fn homogeneous_single_check_is_sealed_with_its_descriptor() {
+    fn homogeneous_single_check_is_sealed_with_its_descriptor_and_participant() {
         let descriptor = descriptor("req:1", RequirementClass::Specific);
         let resolved = resolved(&descriptor, "verifier:1", CheckResult::Accredited);
 
         assert_eq!(resolved.requirement(), descriptor.reference());
         assert_eq!(resolved.result(), CheckResult::Accredited);
+        assert_eq!(
+            resolved.participating_verifiers().collect::<Vec<_>>(),
+            vec![&verifier("verifier:1")]
+        );
         assert!(resolved.matches_descriptor(&descriptor));
     }
 
     #[test]
-    fn conflict_without_rule_is_sealed_as_dn() {
+    fn conflict_without_rule_is_sealed_as_dn_and_preserves_participants() {
         let descriptor = descriptor("req:1", RequirementClass::Specific);
         let left = check(&descriptor, "verifier:1", CheckResult::Accredited);
         let right = check(&descriptor, "verifier:2", CheckResult::Refuted);
@@ -292,6 +335,13 @@ mod tests {
         let resolved = resolve_requirement_result(&descriptor, &[&left, &right]).unwrap();
 
         assert_eq!(resolved.result(), CheckResult::NotVerifiable);
+        assert_eq!(resolved.participating_verifiers().count(), 2);
+        assert!(resolved
+            .participating_verifiers()
+            .any(|value| value == &verifier("verifier:1")));
+        assert!(resolved
+            .participating_verifiers()
+            .any(|value| value == &verifier("verifier:2")));
     }
 
     #[test]
@@ -360,7 +410,7 @@ mod tests {
     }
 
     #[test]
-    fn aggregation_requires_complete_coverage() {
+    fn aggregation_requires_complete_requirement_coverage() {
         let set = set();
         let first = set.iter().next().unwrap();
         let result = resolved(first, "verifier:1", CheckResult::Accredited);
@@ -369,6 +419,20 @@ mod tests {
             aggregate_resolved_requirement_results(&set, &[result]),
             Err(ResolvedAggregationError::MissingResult(_))
         ));
+    }
+
+    #[test]
+    fn aggregation_rejects_unexpected_requirement_result() {
+        let set = set();
+        let foreign = descriptor("req:foreign", RequirementClass::Specific);
+        let result = resolved(&foreign, "verifier:foreign", CheckResult::Accredited);
+
+        assert_eq!(
+            aggregate_resolved_requirement_results(&set, &[result]),
+            Err(ResolvedAggregationError::UnexpectedResult(requirement(
+                "req:foreign"
+            )))
+        );
     }
 
     #[test]
