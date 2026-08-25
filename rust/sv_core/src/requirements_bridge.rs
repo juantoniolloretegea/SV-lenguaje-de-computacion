@@ -5,15 +5,16 @@
 //! comprobación seleccionada. Sólo un `ResolvedRequirementResult` formado por
 //! la vía de resolución puede entrar en la agregación gobernada.
 //!
-//! El resultado conserva la identidad de los verificadores participantes y la
-//! referencia de la regla de cobertura constituida, cuando existe. Así una
-//! variación de cobertura altera la ligadura material del sello.
+//! El resultado conserva la identidad de los verificadores participantes y las
+//! referencias de las reglas constituidas que forman parte de la obligación.
+//! Así una variación de conflicto, cobertura o reutilización altera la ligadura
+//! material del sello.
 
 use std::collections::BTreeSet;
 
 use crate::control::{
     ApplicabilityRuleRef, CheckResult, ConflictResolutionRuleRef, ContextRef, CoverageRuleRef,
-    EffectFamilyRef, FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
+    EffectFamilyRef, FormRef, RequirementRef, ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements::{RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet};
 use crate::requirements_conflict::{resolve_requirement_checks, RequirementConflictError};
@@ -39,6 +40,7 @@ pub struct ResolvedRequirementResult {
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRuleRef>,
     coverage_rule: Option<CoverageRuleRef>,
+    reuse_rule: Option<ReuseRuleRef>,
     participating_verifiers: BTreeSet<VerifierRef>,
     result: CheckResult,
 }
@@ -66,6 +68,9 @@ impl ResolvedRequirementResult {
             coverage_rule: descriptor
                 .coverage_rule()
                 .map(|rule| rule.reference().clone()),
+            reuse_rule: descriptor
+                .reuse_rule()
+                .map(|rule| rule.reference().clone()),
             participating_verifiers,
             result,
         }
@@ -90,7 +95,7 @@ impl ResolvedRequirementResult {
     }
 
     #[inline]
-    fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
         self.requirement == *descriptor.reference()
             && self.class == descriptor.class()
             && self.form == *descriptor.form()
@@ -109,6 +114,10 @@ impl ResolvedRequirementResult {
             && self.coverage_rule
                 == descriptor
                     .coverage_rule()
+                    .map(|rule| rule.reference().clone())
+            && self.reuse_rule
+                == descriptor
+                    .reuse_rule()
                     .map(|rule| rule.reference().clone())
     }
 }
