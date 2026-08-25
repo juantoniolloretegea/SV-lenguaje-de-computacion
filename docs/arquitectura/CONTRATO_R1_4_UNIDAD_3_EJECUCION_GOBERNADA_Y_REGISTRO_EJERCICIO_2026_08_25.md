@@ -182,6 +182,19 @@ No se afirmará todavía unicidad durable entre procesos, réplicas, restauracio
 
 La unidad 3 no podrá ignorar `AccumulationContract` en el punto de ejecución.
 
+A efectos de acumulación, el alcance exacto de ejercicio de esta unidad será:
+
+```text
+ExerciseScope
+=
+FormRef
++ AuthorityRef
++ EffectDescriptor completo
++ ContextRef seleccionado
+```
+
+Como `EffectDescriptor` conserva `EffectRef`, `EffectFamilyRef`, `GovernedObjectRef` y `ContextRef`, no se identifican por accidente dos ejercicios sólo por compartir familia, referencia nominal u objeto.
+
 El primer régimen será:
 
 ```text
@@ -189,12 +202,13 @@ NotApplicable
 → sin restricción adicional de acumulación en R1-4/3
 
 SingleUse
-→ un ejercicio confirmado previo del mismo alcance impide un nuevo despacho
-→ un intento previo indeterminado también bloquea un nuevo despacho ordinario
+→ un ejercicio confirmado previo del mismo ExerciseScope impide un nuevo despacho
+→ un intento previo indeterminado del mismo ExerciseScope también bloquea
+  un nuevo despacho ordinario
 
 Idempotent
-→ puede existir un nuevo intento, pero siempre con un nuevo Permit,
-   un nuevo MediatedEffectCommitment y un nuevo ExerciseRef
+→ puede existir un nuevo intento del mismo ExerciseScope, pero siempre con
+  un nuevo Permit, un nuevo MediatedEffectCommitment y un nuevo ExerciseRef
 
 GovernedAggregator(rule)
 DecidableTracePredicate(rule)
@@ -208,7 +222,7 @@ La mera presencia de una referencia `AccumulationRuleRef` no equivale a haber ev
 
 `SingleUse` no significa solamente que una instancia de `Permit` o de `MediatedEffectCommitment` no pueda clonarse.
 
-La ejecución deberá consultar la traza de ejercicios de la continuidad para impedir un segundo despacho cuando exista un ejercicio confirmado anterior del mismo alcance protegido.
+La ejecución deberá consultar la traza de ejercicios de la continuidad para impedir un segundo despacho cuando exista un ejercicio confirmado anterior del mismo `ExerciseScope`.
 
 Un intento indeterminado posterior al despacho se tratará conservadoramente como bloqueo para `SingleUse` mientras no exista una recuperación gobernada capaz de resolver su estado.
 
@@ -303,7 +317,7 @@ cambio protegido
 
 No se adelanta aquí esa realización.
 
-## 19. Tiempo y concurrencia
+## 19. Tiempo, concurrencia y vigencia entre mediación y despacho
 
 La unidad no introduce reloj semántico, marcas temporales de vigencia ni regla «el último gana».
 
@@ -312,6 +326,18 @@ El ordinal de ejercicio, si se utiliza, será exclusivamente estructural.
 La primera realización podrá ser secuencial y síncrona. No se afirmará seguridad frente a concurrencia entre procesos ni exclusión distribuida; esas propiedades requieren continuidad y persistencia materiales posteriores.
 
 Dentro de una misma `AuthorityContinuity`, la realización deberá evitar que dos despachos secuenciales ordinarios reutilicen la misma identidad o violen un `SingleUse` ya registrado.
+
+En el corte actual T-G, T-C y T-R permanecen no productivas. Por ello, entre una mediación válida y el despacho de T-E no existe todavía una vía productiva que pueda modificar forma, autoridad, `E_max`, `D_a`, `Req` o sus reglas constituidas.
+
+Esta propiedad deja de ser suficiente en cuanto una clase capaz de modificar esas ligaduras se vuelva productiva. Antes de permitir esa coexistencia deberá demostrarse una de estas garantías equivalentes:
+
+```text
+revalidación completa inmediatamente antes del despacho
+```
+
+u otra ligadura explícita de versión/estado constituido que impida ejecutar un compromiso mediado contra un estado gobernante posterior incompatible.
+
+La futura productividad de T-G, T-C o T-R no podrá apoyarse en el cierre de esta unidad para omitir esa comprobación.
 
 ## 20. Regla de no elusión
 
@@ -366,12 +392,13 @@ La unidad será cerrable cuando se demuestre que:
 6. una confirmación positiva queda ligada al mismo efecto, forma y autoridad del compromiso;
 7. un error posterior al despacho no se interpreta como «no ejecutado»;
 8. la indeterminación técnica no se convierte en `Tri.U` ni en `D-*`;
-9. `SingleUse` bloquea un segundo despacho tras ejercicio confirmado o intento indeterminado;
+9. `SingleUse` bloquea un segundo despacho del mismo `ExerciseScope` tras ejercicio confirmado o intento indeterminado;
 10. `Idempotent` no reutiliza el mismo compromiso ni borra intentos anteriores;
 11. contratos gobernados de acumulación permanecen cerrados mientras no exista su evaluador;
 12. T-E productiva no constituye ni amplía autoridad;
 13. T-G, T-C y T-R permanecen no productivas;
 14. no existe una vía productiva alternativa que eluda `MediatedEffectCommitment`;
-15. R0, R1-3 y las unidades 1–2 de R1-4 permanecen correctas en nativo y WebAssembly.
+15. el cierre no se usa para justificar una futura ejecución contra ligaduras gobernantes modificadas sin revalidación o versión explícita;
+16. R0, R1-3 y las unidades 1–2 de R1-4 permanecen correctas en nativo y WebAssembly.
 
 Hasta que estas condiciones no estén acreditadas, R1-4 permanece abierto y la unidad 3 no podrá declararse cerrada.
