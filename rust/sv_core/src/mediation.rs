@@ -12,6 +12,7 @@ use crate::control::{
     GovernedObjectRef, RequirementRef, TransitionClass, VerifierRef,
 };
 use crate::permission::Permit;
+use crate::requirements_reuse::ReuseRejectionReason;
 
 /// Compromiso mediado de un único permiso para un efecto protegido concreto.
 ///
@@ -118,6 +119,10 @@ pub enum MediationError {
         effect_family: EffectFamilyRef,
         context: ContextRef,
     },
+    RequirementNotReusable {
+        requirement: RequirementRef,
+        reason: Option<ReuseRejectionReason>,
+    },
     ApplicabilityBindingChanged {
         requirement: RequirementRef,
         verifier: VerifierRef,
@@ -131,9 +136,8 @@ pub enum MediationError {
 /// La operación consume el `Permit`: una misma instancia no puede atravesar
 /// dos veces la frontera por clonación, copia o préstamo. Antes de formar el
 /// compromiso comprueba el `EffectDescriptor` completo, la forma, la autoridad,
-/// `E_max`, `D_a`, la instantánea gobernante de `Req` y las relaciones
-/// `Applicable(V,q,C)` de los verificadores participantes selladas al conceder
-/// el permiso.
+/// `E_max`, `D_a`, la reutilización gobernada por 3E de cada resultado que
+/// sustentó el permiso y las relaciones `Applicable(V,q,C)` participantes.
 ///
 /// El resultado positivo sigue sin equivaler a ejecución material. Una unidad
 /// posterior deberá consumir `MediatedEffectCommitment` en el punto donde el
@@ -186,12 +190,20 @@ pub fn mediate_permit(
             context: permit.requirement_context().clone(),
         })?;
 
-    if !permit.matches_current_requirements(requirements) {
+    let requirement_shape_changed = requirements.len() != permit.historical_requirement_count()
+        || requirements
+            .iter()
+            .any(|descriptor| !permit.has_historical_requirement(descriptor.reference()));
+    if requirement_shape_changed {
         return Err(MediationError::RequirementBindingChanged {
             form: permit.requirement_form().clone(),
             effect_family: permit.requirement_effect_family().clone(),
             context: permit.requirement_context().clone(),
         });
+    }
+
+    if let Some((requirement, reason)) = permit.first_non_reusable_requirement(requirements) {
+        return Err(MediationError::RequirementNotReusable { requirement, reason });
     }
 
     if let Some((requirement, verifier, context)) = permit.first_changed_applicability(continuity) {
