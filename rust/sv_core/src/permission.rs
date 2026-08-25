@@ -1,7 +1,9 @@
 //! Decisión sellada de permiso para R1-4.
 //!
-//! Esta primera unidad materializa únicamente la frontera de decisión. No
-//! ejecuta efectos protegidos ni hace productiva ninguna clase T-*.
+//! La unidad 1 materializa la frontera de decisión. La unidad 2 refuerza el
+//! sello con una instantánea de las ligaduras gobernantes que deberán seguir
+//! vigentes en el punto de mediación. Ninguna de las dos unidades ejecuta por
+//! sí misma un efecto protegido.
 //!
 //! Un resultado técnico nominal no puede convertirse en permiso:
 //!
@@ -17,12 +19,17 @@
 //! let _ = Permit::new();
 //! ```
 
+use std::collections::{BTreeMap, BTreeSet};
+
 use crate::authority::transitions::AuthorityContinuity;
-use crate::authority::{AccumulationContract, EffectDescriptor};
+use crate::authority::{AccumulationContract, ConstitutedAuthority, EffectDescriptor, FormDescriptor};
 use crate::control::{
-    AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef, EffectFamilyRef, EffectRef, FormRef,
-    GovernedObjectRef, TransitionClass,
+    ApplicabilityRuleRef, AuthorityHolderRef, AuthorityRef, CheckResult, ConflictResolutionRuleRef,
+    ContextRef, CoverageRuleRef, EffectFamilyRef, EffectRef, FormRef, GovernedObjectRef,
+    RequirementRef, ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, TransitionClass,
+    VerifierFamilyRef, VerifierRef,
 };
+use crate::requirements::{RequirementClass, RequirementDescriptor, RequirementSet};
 use crate::requirements_bridge::ResolvedRequirementResult;
 use crate::requirements_coverage::{
     aggregate_covered_requirement_results, CoveredAggregationError,
@@ -40,9 +47,90 @@ struct PermitFormBinding {
     reference: FormRef,
     transition_class: TransitionClass,
     effect_family: EffectFamilyRef,
-    context: ContextRef,
+    context_bindings: BTreeSet<ContextRef>,
+    selected_context: ContextRef,
     required_authority: AuthorityRef,
     accumulation: AccumulationContract,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitConflictRuleSnapshot {
+    reference: ConflictResolutionRuleRef,
+    decisive_verifier: VerifierRef,
+    verifier_family: VerifierFamilyRef,
+    applicability_rule: ApplicabilityRuleRef,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitCoverageRuleSnapshot {
+    reference: CoverageRuleRef,
+    required_verifiers: BTreeSet<VerifierRef>,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitReuseRuleSnapshot {
+    reference: ReuseRuleRef,
+    exact_bindings: BTreeMap<ReuseBindingKeyRef, ReuseBindingValueRef>,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitRequirementSnapshot {
+    class: RequirementClass,
+    admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
+    applicability_rule: ApplicabilityRuleRef,
+    conflict_rule: Option<PermitConflictRuleSnapshot>,
+    coverage_rule: Option<PermitCoverageRuleSnapshot>,
+    reuse_rule: Option<PermitReuseRuleSnapshot>,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitRequirementSetSnapshot {
+    form: FormRef,
+    effect_family: EffectFamilyRef,
+    context: ContextRef,
+    requirements: BTreeMap<RequirementRef, PermitRequirementSnapshot>,
+}
+
+fn requirement_snapshot(descriptor: &RequirementDescriptor) -> PermitRequirementSnapshot {
+    PermitRequirementSnapshot {
+        class: descriptor.class(),
+        admissible_verifier_families: descriptor
+            .admissible_verifier_families()
+            .cloned()
+            .collect(),
+        applicability_rule: descriptor.applicability_rule().clone(),
+        conflict_rule: descriptor.conflict_resolution_rule().map(|rule| {
+            PermitConflictRuleSnapshot {
+                reference: rule.reference().clone(),
+                decisive_verifier: rule.decisive_verifier().clone(),
+                verifier_family: rule.verifier_family().clone(),
+                applicability_rule: rule.applicability_rule().clone(),
+            }
+        }),
+        coverage_rule: descriptor.coverage_rule().map(|rule| PermitCoverageRuleSnapshot {
+            reference: rule.reference().clone(),
+            required_verifiers: rule.required_verifiers().cloned().collect(),
+        }),
+        reuse_rule: descriptor.reuse_rule().map(|rule| PermitReuseRuleSnapshot {
+            reference: rule.reference().clone(),
+            exact_bindings: rule
+                .bindings()
+                .map(|(key, value)| (key.clone(), value.clone()))
+                .collect(),
+        }),
+    }
+}
+
+fn requirement_set_snapshot(requirements: &RequirementSet) -> PermitRequirementSetSnapshot {
+    PermitRequirementSetSnapshot {
+        form: requirements.form().clone(),
+        effect_family: requirements.effect_family().clone(),
+        context: requirements.context().clone(),
+        requirements: requirements
+            .iter()
+            .map(|descriptor| (descriptor.reference().clone(), requirement_snapshot(descriptor)))
+            .collect(),
+    }
 }
 
 /// Permiso positivo sellado para un acto protegido concreto.
@@ -52,17 +140,15 @@ struct PermitFormBinding {
 /// forma, la autoridad y `Req`, y de obtener un resultado técnico final `D-A`
 /// mediante la agregación gobernada de R1-3.
 ///
-/// Esta unidad no ofrece todavía una operación que consuma el permiso para
-/// ejecutar un efecto. La mediación productiva pertenece a una unidad posterior
-/// de R1-4.
+/// El sello conserva además la descripción gobernante de `Req` y de la forma
+/// que deberá seguir coincidiendo en la mediación. Conservar esa instantánea no
+/// ejecuta el efecto ni convierte el permiso en autoridad nueva.
 #[derive(Debug, PartialEq, Eq)]
 pub struct Permit {
     authority: PermitAuthorityBinding,
     form: PermitFormBinding,
     effect: EffectDescriptor,
-    requirement_form: FormRef,
-    requirement_effect_family: EffectFamilyRef,
-    requirement_context: ContextRef,
+    requirements: PermitRequirementSetSnapshot,
     technical_result: CheckResult,
 }
 
@@ -119,22 +205,22 @@ impl Permit {
 
     #[inline]
     pub fn context(&self) -> &ContextRef {
-        &self.form.context
+        &self.form.selected_context
     }
 
     #[inline]
     pub fn requirement_form(&self) -> &FormRef {
-        &self.requirement_form
+        &self.requirements.form
     }
 
     #[inline]
     pub fn requirement_effect_family(&self) -> &EffectFamilyRef {
-        &self.requirement_effect_family
+        &self.requirements.effect_family
     }
 
     #[inline]
     pub fn requirement_context(&self) -> &ContextRef {
-        &self.requirement_context
+        &self.requirements.context
     }
 
     #[inline]
@@ -145,6 +231,29 @@ impl Permit {
     #[inline]
     pub fn accumulation(&self) -> &AccumulationContract {
         &self.form.accumulation
+    }
+
+    #[inline]
+    pub(crate) fn matches_current_form(&self, form: &FormDescriptor) -> bool {
+        self.form.reference == *form.reference()
+            && self.form.transition_class == form.transition_class()
+            && self.form.effect_family == *form.effect_family()
+            && self.form.context_bindings == form.context_bindings().cloned().collect()
+            && form.context_bindings().any(|context| context == &self.form.selected_context)
+            && form.requires_authority() == Some(&self.form.required_authority)
+            && self.form.accumulation == *form.accumulation()
+    }
+
+    #[inline]
+    pub(crate) fn matches_current_authority(&self, authority: &ConstitutedAuthority) -> bool {
+        self.authority.reference == *authority.reference()
+            && self.authority.holder == *authority.holder()
+            && self.authority.context == *authority.context()
+    }
+
+    #[inline]
+    pub(crate) fn matches_current_requirements(&self, requirements: &RequirementSet) -> bool {
+        self.requirements == requirement_set_snapshot(requirements)
     }
 }
 
@@ -265,14 +374,13 @@ pub fn decide_permit(
                 reference: form.reference().clone(),
                 transition_class: form.transition_class(),
                 effect_family: form.effect_family().clone(),
-                context: effect.context().clone(),
+                context_bindings: form.context_bindings().cloned().collect(),
+                selected_context: effect.context().clone(),
                 required_authority: required_authority.clone(),
                 accumulation: form.accumulation().clone(),
             },
             effect: effect.clone(),
-            requirement_form: requirements.form().clone(),
-            requirement_effect_family: requirements.effect_family().clone(),
-            requirement_context: requirements.context().clone(),
+            requirements: requirement_set_snapshot(requirements),
             technical_result,
         })),
     }
