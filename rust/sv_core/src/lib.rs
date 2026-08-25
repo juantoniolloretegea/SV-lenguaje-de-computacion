@@ -14,6 +14,7 @@ mod frontend;
 pub mod frame;
 pub mod ir;
 pub mod nat;
+pub mod permission;
 pub mod requirements;
 mod requirements_bridge;
 pub mod requirements_conflict;
@@ -27,7 +28,8 @@ pub use admissibility::{
     ADMISSIBILITY_DIAGNOSTIC_CODE,
 };
 pub use authority::{
-    AccumulationContract, ConstitutedAuthority, EffectEnvelope, FormDescriptor, GovernedDomain,
+    AccumulationContract, ConstitutedAuthority, EffectDescriptor, EffectEnvelope, FormDescriptor,
+    GovernedDomain,
 };
 pub use control::{
     AccumulationRuleRef, AdmittedEvidenceRef, ApplicabilityRuleRef, AuthorityHolderRef,
@@ -45,6 +47,7 @@ pub use ir::{
     IrSupervisableTarget,
 };
 pub use nat::{InvalidNat, Nat};
+pub use permission::{decide_permit, Permit, PermitDecision, PermitDecisionError, PermitRejection};
 pub use requirements::{
     CheckFormationError, CoreRequirementKind, InvalidRequirementDescriptor, InvalidRequirementSet,
     RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet,
