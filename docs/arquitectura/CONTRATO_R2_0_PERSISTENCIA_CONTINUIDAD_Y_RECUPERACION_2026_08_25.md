@@ -189,7 +189,7 @@ R1 dejó T-G, T-C y T-R no productivas. R2 no abre estas clases de forma general
 
 R2 deberá materializar, de forma acotada por forma y familia de efecto:
 
-1. una vía T-G suficiente para que una revocación gobernada pueda persistir y seguir siendo eficaz después de reinicio o recuperación; y
+1. una vía T-G suficiente para persistir una revocación gobernada y mantenerla eficaz dentro de una continuidad cuya vigencia haya quedado acreditada; una restauración cuya continuidad no pueda acreditarse no podrá presentarse como vigente por omitir esa revocación; y
 2. una vía T-R suficiente para restablecer autoridad preexistente bajo continuidad legítima sin crearla, ampliarla ni escoger silenciosamente entre continuidades incompatibles.
 
 La apertura de R2 no habilita por sí sola:
@@ -345,7 +345,7 @@ R2 sólo podrá cerrarse si existe evidencia reproducible de que:
 4. la ausencia en una vista o índice no se utiliza como ausencia autoritativa sin cobertura acreditada;
 5. una continuidad vigente no se selecciona por `HEAD`, fecha, contador, orden de llegada, velocidad o conveniencia;
 6. restauración, clonación o nueva identidad técnica no reabren T-0;
-7. una revocación gobernada persiste y no desaparece por reinicio o restauración dentro del alcance realizado;
+7. una revocación gobernada permanece eficaz después de reinicio dentro de una continuidad acreditada; una restauración que no permita acreditar la continuidad vigente no puede presentarse como válida por omitir la revocación;
 8. T-R sólo restablece autoridad preexistente bajo continuidad legítima y no crea ni amplía autoridad;
 9. una bifurcación incompatible bloquea los efectos dependientes cuando la política exige unicidad y no puede acreditarse la continuidad vigente;
 10. un efecto material indeterminado no se reinterpreta como éxito, ausencia, D-A ni `Tri.U`, ni se reintenta automáticamente;
