@@ -4,24 +4,24 @@
 **Ámbito:** `sv_core`  
 **Fase:** R1 — autoridad, mediación y decisiones protegidas  
 **Corte:** R1-3  
-**Estado:** contrato de realización
+**Estado:** realizado e integrado
 
 ## 1. Objeto
 
-Esta unidad materializa el puente entre la resolución gobernada de las comprobaciones suministradas para una obligación individual y la agregación técnica del conjunto completo de obligaciones `Req(F,e | C)`.
+Esta unidad materializa el puente entre la resolución gobernada de las comprobaciones suministradas para una obligación individual y la validación estructural del conjunto completo de obligaciones `Req(F,e | C)`.
 
-Las unidades 3A y 3B ya determinan el resultado técnico de una obligación `q` a partir del conjunto de comprobaciones que recibe la resolución. La agregación entre obligaciones no debe poder sustituir ese resultado resuelto por una `RequirementCheck` individual seleccionada localmente.
+Las unidades 3A y 3B determinan el resultado técnico de una obligación `q` a partir del conjunto de comprobaciones que recibe la resolución. La agregación entre obligaciones no debe poder sustituir ese resultado resuelto por una `RequirementCheck` individual seleccionada localmente.
 
-La composición de esta unidad es:
+La composición materializada es:
 
 ```text
 RequirementCheck(q,V1), ..., RequirementCheck(q,Vn)
 → resolución gobernada del conjunto suministrado para q
 → ResolvedRequirementResult(q)
-→ agregación sobre Req(F,e | C)
+→ validación estructural sobre Req(F,e | C)
 ```
 
-Esta unidad no acredita que el conjunto de comprobaciones suministrado para `q` sea exhaustivo respecto de todas las comprobaciones o evidencias materialmente exigibles. Esa propiedad pertenece a la cobertura posterior de R1-3.
+La unidad no acredita que el conjunto de comprobaciones suministrado para `q` sea exhaustivo respecto de todas las comprobaciones o evidencias materialmente exigibles. Esa propiedad pertenece a la cobertura constituida de la unidad 3D.
 
 La unidad no produce `Permit`, no ejecuta efectos protegidos, no modifica `Tri` y no abre R1-4.
 
@@ -41,7 +41,7 @@ El tipo no ofrece constructor público. Sólo la vía de resolución gobernada p
 
 ## 3. Ligadura material y participación
 
-El resultado resuelto conserva las dimensiones del descriptor cuya variación puede cambiar su interpretación o validez dentro de este corte:
+El resultado resuelto conserva las dimensiones del descriptor cuya variación puede cambiar su interpretación o validez:
 
 - identidad de la obligación;
 - clase de obligación;
@@ -61,7 +61,7 @@ verificador participante
 
 La identidad de los participantes proporciona trazabilidad para la cobertura posterior, pero no demuestra por sí misma que no existan otras comprobaciones materialmente exigibles.
 
-La agregación vuelve a contrastar la ligadura del resultado resuelto contra el `RequirementDescriptor` contenido en el `RequirementSet` recibido.
+La unidad 3D amplía esta ligadura con la identidad de la regla de cobertura constituida, cuando existe, de modo que un cambio de cobertura también invalida la reutilización estructural del sello contra un descriptor distinto.
 
 Una coincidencia meramente nominal de `RequirementRef` no basta para reutilizar un resultado con otra ligadura.
 
@@ -84,9 +84,9 @@ CheckResult
 → ResolvedRequirementResult
 ```
 
-La unidad también impide que una `RequirementCheck` individual entre directamente en la agregación inter-obligaciones y sustituya al objeto resuelto.
+La unidad también impide que una `RequirementCheck` individual sustituya al objeto resuelto dentro de la composición inter-obligaciones.
 
-Esta restricción no equivale a afirmar que la unidad detecte por sí sola toda comprobación omitida antes de llamar a la resolución. Determinar qué comprobaciones o evidencias debían estar presentes pertenece a la cobertura posterior de R1-3.
+Esta restricción no equivale a afirmar que la unidad detecte por sí sola toda comprobación omitida antes de llamar a la resolución. Determinar qué comprobaciones o evidencias debían estar presentes pertenece a la cobertura constituida de 3D.
 
 ## 5. Conflicto
 
@@ -102,13 +102,13 @@ conflicto(q) + regla constituida y aplicable
 → resultado gobernado por esa regla
 ```
 
-El resultado obtenido se sella después de resolver el conjunto suministrado y sólo entonces puede entrar en la agregación entre obligaciones.
+El resultado obtenido se sella después de resolver el conjunto suministrado y sólo entonces puede continuar hacia la composición entre obligaciones.
 
-## 6. Agregación cerrada entre obligaciones
+## 6. Validación estructural entre obligaciones
 
-La agregación productiva de esta unidad acepta exclusivamente resultados resueltos sellados, uno por obligación constituida del `RequirementSet`.
+La unidad valida exclusivamente resultados resueltos sellados, uno por obligación constituida del `RequirementSet`.
 
-Debe comprobar:
+Comprueba:
 
 1. conjunto `Req` no vacío;
 2. ninguna obligación inesperada;
@@ -118,7 +118,7 @@ Debe comprobar:
 
 Esta cobertura es cobertura del conjunto de obligaciones de `Req`; no acredita exhaustividad interna de las comprobaciones empleadas para resolver cada obligación.
 
-La precedencia permanece:
+La precedencia estructural preservada es:
 
 ```text
 D-R  si existe al menos una obligación REFUTADA;
@@ -126,7 +126,7 @@ D-N  si ninguna está REFUTADA y existe al menos una NO_VERIFICABLE;
 D-A  sólo si todas están ACREDITADAS.
 ```
 
-La resolución intra-obligación y la agregación inter-obligaciones son operaciones distintas y no deben fusionarse mediante selección implícita.
+Tras la materialización de 3D, esta agregación no cualificada permanece como validación interna. La frontera productiva pública pasa por la cobertura constituida antes de obtener el resultado agregado final.
 
 ## 7. Cierre de la vía anterior
 
@@ -136,7 +136,7 @@ Tras 3A y 3B no puede permanecer como vía pública productiva, porque permitir�
 
 Por tanto, la vía directa `RequirementCheck → agregación` queda restringida a pruebas internas de regresión y deja de formar parte de la frontera productiva de R1-3.
 
-La retirada de esta vía no resuelve por sí misma la exhaustividad del conjunto de comprobaciones pasado a la resolución.
+3D aplica el mismo criterio a la agregación no cualificada de `ResolvedRequirementResult`: se conserva internamente como validación estructural, pero ya no constituye la frontera pública final.
 
 ## 8. Prohibiciones
 
@@ -150,14 +150,14 @@ La unidad no permite:
 - convertir `D-A`, `D-R` o `D-N` en `Tri`;
 - convertir el resultado agregado en `Permit`.
 
-La detección de una comprobación materialmente exigible que no fue suministrada a la resolución no se atribuye a esta unidad y debe quedar gobernada por la cobertura posterior.
+La detección de una comprobación materialmente exigible que no fue suministrada a la resolución no se atribuye a esta unidad y queda gobernada por 3D.
 
 ## 9. Frontera con cobertura y reutilización
 
-Esta unidad gobierna la composición de resultados resueltos dentro de un acto técnico ya constituido. No materializa todavía:
+Esta unidad gobierna la composición de resultados resueltos dentro de un acto técnico ya constituido. No materializa por sí sola:
 
 - exhaustividad de comprobaciones o evidencias por obligación;
-- reglas de cobertura parcial;
+- reglas de cobertura;
 - reutilización histórica;
 - vigencia temporal;
 - sustitución de resultados almacenados.
@@ -166,37 +166,35 @@ En particular:
 
 ```text
 ResolvedRequirementResult(q) válido sobre comprobaciones suministradas
-↛ cobertura exhaustiva de q
+↛ cobertura suficiente de q
 
 ResolvedRequirementResult(q) válido en una ligadura
 ↛ reutilizable automáticamente en otra ligadura o estado posterior
 ```
 
-La conservación de los verificadores participantes permite que la unidad posterior de cobertura disponga de trazabilidad sin confundir participación con suficiencia.
+La conservación de los verificadores participantes permite que 3D evalúe cobertura sin confundir participación con suficiencia.
 
-## 10. Pruebas mínimas
+## 10. Pruebas de cierre
 
-La realización deberá demostrar, como mínimo:
+La realización demuestra, como mínimo, que:
 
 1. `ResolvedRequirementResult` no tiene constructor público;
 2. un `CheckResult` nominal no puede convertirse directamente en resultado resuelto;
-3. una `RequirementCheck` individual no puede entrar en la agregación productiva de esta unidad;
+3. una `RequirementCheck` individual no puede sustituir al resultado resuelto en la composición inter-obligaciones;
 4. conflicto sin regla produce un resultado resuelto `D-N`;
 5. conflicto con regla constituida conserva el resultado gobernado antes de sellarlo;
 6. el resultado resuelto conserva la identidad de los verificadores participantes;
 7. participación de verificadores no se presenta como prueba de exhaustividad;
-8. una ligadura material distinta se rechaza en la agregación;
+8. una ligadura material distinta se rechaza;
 9. una obligación inesperada se rechaza;
 10. una obligación repetida se rechaza;
 11. falta de una obligación de `Req` se rechaza;
-12. un resultado acreditado para cada obligación de `Req` agrega a `D-A`, sin prejuzgar la cobertura interna posterior;
-13. una refutación agrega a `D-R` aunque exista además `D-N`;
-14. `D-N` se conserva cuando no existe refutación;
-15. el orden de los resultados resueltos no altera la agregación;
-16. `D-N` permanece fuera de `Tri`;
-17. no se produce `Permit`, autoridad ni efecto protegido;
-18. T-G, T-C y T-R permanecen no productivas;
-19. las regresiones de R0 y de las unidades anteriores de R1 permanecen correctas.
+12. la precedencia `D-R > D-N > D-A` permanece determinista;
+13. el orden de los resultados resueltos no altera la validación;
+14. `D-N` permanece fuera de `Tri`;
+15. no se produce `Permit`, autoridad ni efecto protegido;
+16. T-G, T-C y T-R permanecen no productivas;
+17. las regresiones de R0 y de las unidades anteriores de R1 permanecen correctas.
 
 ## 11. Estado
 
@@ -212,7 +210,8 @@ R1-3 / unidad 1 = CERRADA · INTEGRADA
 R1-3 / unidad 2 = CERRADA · INTEGRADA
 R1-3 / unidad 3A = CERRADA · INTEGRADA
 R1-3 / unidad 3B = CERRADA · INTEGRADA
-R1-3 / unidad 3C = EN REALIZACIÓN
+R1-3 / unidad 3C = CERRADA · INTEGRADA
+R1-3 / unidad 3D = CANDIDATA DE CIERRE
 
 R1-4 = NO INICIADO
 R2–R4 = NO INICIADOS
