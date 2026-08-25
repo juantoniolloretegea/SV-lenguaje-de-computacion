@@ -1,0 +1,722 @@
+//! Cobertura de comprobaciones exigibles para una obligación de R1-3.
+//!
+//! La aplicabilidad de un verificador no lo convierte por sí sola en obligatorio.
+//! La regla de cobertura queda ligada al `RequirementDescriptor` durante T-0;
+//! el acto de evaluación no puede elegirla, sustituirla ni omitirla.
+
+use crate::authority::transitions::GenesisControlToken;
+use crate::control::{
+    CheckResult, ContextRef, CoverageRuleRef, EffectFamilyRef, FormRef, RequirementRef,
+    VerifierRef,
+};
+use crate::requirements::{RequirementDescriptor, RequirementSet};
+use crate::requirements_bridge::{
+    aggregate_resolved_requirement_results, ResolvedAggregationError, ResolvedRequirementResult,
+};
+use std::collections::BTreeSet;
+
+/// Regla cerrada de cobertura para una obligación constituida.
+///
+/// La primera realización fija un conjunto no vacío de verificadores concretos
+/// cuya participación resulta necesaria para acreditar cobertura positiva.
+/// `Applicable(V,q,C)` y `required(V,q,C)` permanecen separados.
+#[derive(Debug, PartialEq, Eq)]
+pub struct CoverageRule {
+    reference: CoverageRuleRef,
+    requirement: RequirementRef,
+    form: FormRef,
+    effect_family: EffectFamilyRef,
+    context: ContextRef,
+    required_verifiers: BTreeSet<VerifierRef>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum CoverageRuleFormationError {
+    EmptyRequiredVerifierSet,
+    DuplicateRequiredVerifier(VerifierRef),
+}
+
+impl CoverageRule {
+    pub(crate) fn constitute_from_genesis(
+        _token: &GenesisControlToken,
+        reference: CoverageRuleRef,
+        descriptor: &RequirementDescriptor,
+        required_verifiers: BTreeSet<VerifierRef>,
+    ) -> Self {
+        debug_assert!(!required_verifiers.is_empty());
+        Self {
+            reference,
+            requirement: descriptor.reference().clone(),
+            form: descriptor.form().clone(),
+            effect_family: descriptor.effect_family().clone(),
+            context: descriptor.context().clone(),
+            required_verifiers,
+        }
+    }
+
+    #[cfg(test)]
+    pub(crate) fn constitute_for_test(
+        reference: CoverageRuleRef,
+        descriptor: &RequirementDescriptor,
+        required_verifiers: impl IntoIterator<Item = VerifierRef>,
+    ) -> Result<Self, CoverageRuleFormationError> {
+        let mut required = BTreeSet::new();
+        for verifier in required_verifiers {
+            if !required.insert(verifier.clone()) {
+                return Err(CoverageRuleFormationError::DuplicateRequiredVerifier(
+                    verifier,
+                ));
+            }
+        }
+        if required.is_empty() {
+            return Err(CoverageRuleFormationError::EmptyRequiredVerifierSet);
+        }
+
+        Ok(Self {
+            reference,
+            requirement: descriptor.reference().clone(),
+            form: descriptor.form().clone(),
+            effect_family: descriptor.effect_family().clone(),
+            context: descriptor.context().clone(),
+            required_verifiers: required,
+        })
+    }
+
+    #[inline]
+    pub fn reference(&self) -> &CoverageRuleRef {
+        &self.reference
+    }
+
+    #[inline]
+    pub fn requirement(&self) -> &RequirementRef {
+        &self.requirement
+    }
+
+    #[inline]
+    pub fn required_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.required_verifiers.iter()
+    }
+
+    #[inline]
+    pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+        self.requirement == *descriptor.reference()
+            && self.form == *descriptor.form()
+            && self.effect_family == *descriptor.effect_family()
+            && self.context == *descriptor.context()
+    }
+}
+
+/// Resultado técnico de la evaluación de cobertura.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CoverageDisposition {
+    Complete,
+    Incomplete,
+}
+
+/// Evidencia estructural de qué participantes exige la regla, cuáles estuvieron
+/// presentes y cuáles faltaron.
+///
+/// Este objeto no es un `CheckResult`, no pertenece a `Tri` y no produce
+/// permiso.
+#[derive(Debug, PartialEq, Eq)]
+pub struct CoverageAssessment {
+    requirement: RequirementRef,
+    rule: Option<CoverageRuleRef>,
+    required_verifiers: BTreeSet<VerifierRef>,
+    participating_verifiers: BTreeSet<VerifierRef>,
+    missing_required_verifiers: BTreeSet<VerifierRef>,
+    disposition: CoverageDisposition,
+}
+
+impl CoverageAssessment {
+    #[inline]
+    pub fn requirement(&self) -> &RequirementRef {
+        &self.requirement
+    }
+
+    #[inline]
+    pub fn rule(&self) -> Option<&CoverageRuleRef> {
+        self.rule.as_ref()
+    }
+
+    #[inline]
+    pub const fn disposition(&self) -> CoverageDisposition {
+        self.disposition
+    }
+
+    #[inline]
+    pub fn required_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.required_verifiers.iter()
+    }
+
+    #[inline]
+    pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.participating_verifiers.iter()
+    }
+
+    #[inline]
+    pub fn missing_required_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.missing_required_verifiers.iter()
+    }
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum CoverageAssessmentError {
+    ResultRequirementMismatch {
+        expected: RequirementRef,
+        found: RequirementRef,
+    },
+    RuleBindingMismatch(CoverageRuleRef),
+}
+
+/// Evalúa la cobertura del conjunto efectivamente resuelto para una obligación.
+///
+/// La regla, si existe, se obtiene exclusivamente del descriptor constituido.
+/// Su ausencia no se interpreta como cobertura vacía: produce `Incomplete`.
+/// Los participantes adicionales no añaden peso, voto ni autoridad.
+pub fn assess_requirement_coverage(
+    descriptor: &RequirementDescriptor,
+    resolved: &ResolvedRequirementResult,
+) -> Result<CoverageAssessment, CoverageAssessmentError> {
+    if resolved.requirement() != descriptor.reference() {
+        return Err(CoverageAssessmentError::ResultRequirementMismatch {
+            expected: descriptor.reference().clone(),
+            found: resolved.requirement().clone(),
+        });
+    }
+
+    let rule = descriptor.coverage_rule();
+    if let Some(rule) = rule {
+        if !rule.matches_descriptor(descriptor) {
+            return Err(CoverageAssessmentError::RuleBindingMismatch(
+                rule.reference().clone(),
+            ));
+        }
+    }
+
+    let participating_verifiers: BTreeSet<_> = resolved
+        .participating_verifiers()
+        .cloned()
+        .collect();
+    let required_verifiers: BTreeSet<_> = rule
+        .map(|rule| rule.required_verifiers().cloned().collect())
+        .unwrap_or_default();
+    let missing_required_verifiers: BTreeSet<_> = required_verifiers
+        .difference(&participating_verifiers)
+        .cloned()
+        .collect();
+
+    let disposition = if rule.is_some() && missing_required_verifiers.is_empty() {
+        CoverageDisposition::Complete
+    } else {
+        CoverageDisposition::Incomplete
+    };
+
+    Ok(CoverageAssessment {
+        requirement: descriptor.reference().clone(),
+        rule: rule.map(|rule| rule.reference().clone()),
+        required_verifiers,
+        participating_verifiers,
+        missing_required_verifiers,
+        disposition,
+    })
+}
+
+/// Error estructural de la agregación gobernada por cobertura.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub enum CoveredAggregationError {
+    Resolved(ResolvedAggregationError),
+    Coverage(CoverageAssessmentError),
+}
+
+impl From<ResolvedAggregationError> for CoveredAggregationError {
+    fn from(error: ResolvedAggregationError) -> Self {
+        Self::Resolved(error)
+    }
+}
+
+impl From<CoverageAssessmentError> for CoveredAggregationError {
+    fn from(error: CoverageAssessmentError) -> Self {
+        Self::Coverage(error)
+    }
+}
+
+/// Agrega resultados resueltos sólo después de cualificar la cobertura de cada
+/// obligación con la regla que ya forma parte de su descriptor constituido.
+///
+/// La función reutiliza primero la validación estructural de 3C para garantizar
+/// cobertura exacta de `Req` y ligaduras materiales. Después cualifica cada
+/// obligación. La ausencia de regla o la falta de un verificador requerido
+/// impiden `D-A`, pero no borran una refutación ya materializada.
+pub fn aggregate_covered_requirement_results(
+    requirements: &RequirementSet,
+    results: &[ResolvedRequirementResult],
+) -> Result<CheckResult, CoveredAggregationError> {
+    aggregate_resolved_requirement_results(requirements, results)?;
+
+    let mut saw_refuted = false;
+    let mut saw_not_verifiable = false;
+
+    for resolved in results {
+        let descriptor = requirements
+            .requirement(resolved.requirement())
+            .expect("3C ya validó la presencia de la obligación");
+        let assessment = assess_requirement_coverage(descriptor, resolved)?;
+
+        let qualified = match resolved.result() {
+            CheckResult::Refuted => CheckResult::Refuted,
+            CheckResult::Accredited
+                if assessment.disposition() == CoverageDisposition::Complete =>
+            {
+                CheckResult::Accredited
+            }
+            CheckResult::Accredited | CheckResult::NotVerifiable => CheckResult::NotVerifiable,
+        };
+
+        match qualified {
+            CheckResult::Accredited => {}
+            CheckResult::Refuted => saw_refuted = true,
+            CheckResult::NotVerifiable => saw_not_verifiable = true,
+        }
+    }
+
+    if saw_refuted {
+        Ok(CheckResult::Refuted)
+    } else if saw_not_verifiable {
+        Ok(CheckResult::NotVerifiable)
+    } else {
+        Ok(CheckResult::Accredited)
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+    use crate::control::{ApplicabilityRuleRef, ControlId, VerifierFamilyRef};
+    use crate::requirements::{
+        CoreRequirementKind, RequirementCheck, RequirementClass, RequirementDescriptor,
+        RequirementSet, VerifierApplicability,
+    };
+    use crate::requirements_bridge::resolve_requirement_result;
+
+    fn id(value: &str) -> ControlId {
+        ControlId::new(value).unwrap()
+    }
+
+    fn requirement(value: &str) -> RequirementRef {
+        RequirementRef::from_core_id(id(value))
+    }
+
+    fn form(value: &str) -> FormRef {
+        FormRef::from_core_id(id(value))
+    }
+
+    fn family(value: &str) -> EffectFamilyRef {
+        EffectFamilyRef::from_core_id(id(value))
+    }
+
+    fn context(value: &str) -> ContextRef {
+        ContextRef::from_core_id(id(value))
+    }
+
+    fn verifier(value: &str) -> VerifierRef {
+        VerifierRef::from_core_id(id(value))
+    }
+
+    fn verifier_family(value: &str) -> VerifierFamilyRef {
+        VerifierFamilyRef::from_core_id(id(value))
+    }
+
+    fn applicability_rule(value: &str) -> ApplicabilityRuleRef {
+        ApplicabilityRuleRef::from_core_id(id(value))
+    }
+
+    fn coverage_rule(value: &str) -> CoverageRuleRef {
+        CoverageRuleRef::from_core_id(id(value))
+    }
+
+    fn descriptor(reference: &str, class: RequirementClass, context_value: &str) -> RequirementDescriptor {
+        RequirementDescriptor::constitute_for_test(
+            requirement(reference),
+            class,
+            form("form:1"),
+            family("family:write"),
+            context(context_value),
+            [verifier_family("verifier-family:canonical")],
+            applicability_rule("applicability:canonical"),
+        )
+        .unwrap()
+    }
+
+    fn specific_descriptor(reference: &str, context_value: &str) -> RequirementDescriptor {
+        descriptor(reference, RequirementClass::Specific, context_value)
+    }
+
+    fn attach_rule(
+        descriptor: &mut RequirementDescriptor,
+        rule_reference: &str,
+        required: impl IntoIterator<Item = VerifierRef>,
+    ) {
+        let rule = CoverageRule::constitute_for_test(
+            coverage_rule(rule_reference),
+            descriptor,
+            required,
+        )
+        .unwrap();
+        descriptor.attach_coverage_rule_for_test(rule);
+    }
+
+    fn mandatory_descriptors() -> Vec<RequirementDescriptor> {
+        [
+            ("req:form", CoreRequirementKind::FormValidity),
+            ("req:authority", CoreRequirementKind::ApplicableAuthority),
+            (
+                "req:verifier",
+                CoreRequirementKind::VerifierAdmissibilityAndApplicability,
+            ),
+            ("req:no-self", CoreRequirementKind::NoSelfAccreditation),
+        ]
+        .into_iter()
+        .map(|(reference, kind)| descriptor(reference, RequirementClass::Core(kind), "context:1"))
+        .collect()
+    }
+
+    fn set_from(descriptors: Vec<RequirementDescriptor>) -> RequirementSet {
+        RequirementSet::constitute_for_test(
+            form("form:1"),
+            family("family:write"),
+            context("context:1"),
+            descriptors,
+        )
+        .unwrap()
+    }
+
+    fn set_without_coverage() -> RequirementSet {
+        set_from(mandatory_descriptors())
+    }
+
+    fn set_with_complete_coverage() -> RequirementSet {
+        let mut descriptors = mandatory_descriptors();
+        for (index, descriptor) in descriptors.iter_mut().enumerate() {
+            attach_rule(
+                descriptor,
+                &format!("coverage:{index}"),
+                [verifier(&format!("verifier:{index}"))],
+            );
+        }
+        set_from(descriptors)
+    }
+
+    fn check(
+        descriptor: &RequirementDescriptor,
+        verifier_value: &str,
+        result: CheckResult,
+    ) -> RequirementCheck {
+        let applicability = VerifierApplicability::constitute_for_test(
+            verifier(verifier_value),
+            verifier_family("verifier-family:canonical"),
+            descriptor.reference().clone(),
+            descriptor.context().clone(),
+            applicability_rule("applicability:canonical"),
+        );
+        RequirementCheck::constitute_for_test(descriptor, &applicability, result).unwrap()
+    }
+
+    fn resolved_one(
+        descriptor: &RequirementDescriptor,
+        verifier_value: &str,
+        result: CheckResult,
+    ) -> ResolvedRequirementResult {
+        let check = check(descriptor, verifier_value, result);
+        resolve_requirement_result(descriptor, &[&check]).unwrap()
+    }
+
+    fn resolved_many(
+        descriptor: &RequirementDescriptor,
+        values: &[(&str, CheckResult)],
+    ) -> ResolvedRequirementResult {
+        let checks: Vec<_> = values
+            .iter()
+            .map(|(value, result)| check(descriptor, value, *result))
+            .collect();
+        let refs: Vec<_> = checks.iter().collect();
+        resolve_requirement_result(descriptor, &refs).unwrap()
+    }
+
+    #[test]
+    fn coverage_rule_rejects_empty_required_set() {
+        let descriptor = specific_descriptor("req:1", "context:1");
+        assert_eq!(
+            CoverageRule::constitute_for_test(coverage_rule("coverage:1"), &descriptor, []),
+            Err(CoverageRuleFormationError::EmptyRequiredVerifierSet)
+        );
+    }
+
+    #[test]
+    fn coverage_rule_rejects_duplicate_required_verifier() {
+        let descriptor = specific_descriptor("req:1", "context:1");
+        let repeated = verifier("verifier:1");
+        assert_eq!(
+            CoverageRule::constitute_for_test(
+                coverage_rule("coverage:1"),
+                &descriptor,
+                [repeated.clone(), repeated.clone()],
+            ),
+            Err(CoverageRuleFormationError::DuplicateRequiredVerifier(repeated))
+        );
+    }
+
+    #[test]
+    fn absence_of_rule_is_not_empty_positive_coverage() {
+        let descriptor = specific_descriptor("req:1", "context:1");
+        let resolved = resolved_one(&descriptor, "verifier:1", CheckResult::Accredited);
+        let assessment = assess_requirement_coverage(&descriptor, &resolved).unwrap();
+
+        assert_eq!(assessment.disposition(), CoverageDisposition::Incomplete);
+        assert_eq!(assessment.rule(), None);
+        assert_eq!(assessment.required_verifiers().count(), 0);
+    }
+
+    #[test]
+    fn all_required_participants_complete_coverage() {
+        let mut descriptor = specific_descriptor("req:1", "context:1");
+        attach_rule(
+            &mut descriptor,
+            "coverage:1",
+            [verifier("verifier:1"), verifier("verifier:2")],
+        );
+        let resolved = resolved_many(
+            &descriptor,
+            &[
+                ("verifier:1", CheckResult::Accredited),
+                ("verifier:2", CheckResult::Accredited),
+            ],
+        );
+
+        let assessment = assess_requirement_coverage(&descriptor, &resolved).unwrap();
+        assert_eq!(assessment.disposition(), CoverageDisposition::Complete);
+        assert_eq!(assessment.missing_required_verifiers().count(), 0);
+    }
+
+    #[test]
+    fn missing_required_participant_is_explicit() {
+        let mut descriptor = specific_descriptor("req:1", "context:1");
+        attach_rule(
+            &mut descriptor,
+            "coverage:1",
+            [verifier("verifier:1"), verifier("verifier:2")],
+        );
+        let resolved = resolved_one(&descriptor, "verifier:1", CheckResult::Accredited);
+
+        let assessment = assess_requirement_coverage(&descriptor, &resolved).unwrap();
+        assert_eq!(assessment.disposition(), CoverageDisposition::Incomplete);
+        assert_eq!(
+            assessment.missing_required_verifiers().collect::<Vec<_>>(),
+            vec![&verifier("verifier:2")]
+        );
+    }
+
+    #[test]
+    fn extra_participant_does_not_replace_a_missing_required_one() {
+        let mut descriptor = specific_descriptor("req:1", "context:1");
+        attach_rule(
+            &mut descriptor,
+            "coverage:1",
+            [verifier("verifier:required")],
+        );
+        let resolved = resolved_one(&descriptor, "verifier:extra", CheckResult::Accredited);
+
+        let assessment = assess_requirement_coverage(&descriptor, &resolved).unwrap();
+        assert_eq!(assessment.disposition(), CoverageDisposition::Incomplete);
+        assert!(assessment
+            .missing_required_verifiers()
+            .any(|value| value == &verifier("verifier:required")));
+    }
+
+    #[test]
+    fn rule_bound_to_other_context_is_rejected_even_if_attached_for_test() {
+        let mut local = specific_descriptor("req:1", "context:1");
+        let foreign = specific_descriptor("req:1", "context:other");
+        let foreign_rule = CoverageRule::constitute_for_test(
+            coverage_rule("coverage:foreign"),
+            &foreign,
+            [verifier("verifier:1")],
+        )
+        .unwrap();
+        local.attach_coverage_rule_for_test(foreign_rule);
+        let resolved = resolved_one(&local, "verifier:1", CheckResult::Accredited);
+
+        assert_eq!(
+            assess_requirement_coverage(&local, &resolved),
+            Err(CoverageAssessmentError::RuleBindingMismatch(
+                coverage_rule("coverage:foreign")
+            ))
+        );
+    }
+
+    #[test]
+    fn result_from_other_requirement_is_rejected() {
+        let local = specific_descriptor("req:1", "context:1");
+        let foreign = specific_descriptor("req:2", "context:1");
+        let resolved = resolved_one(&foreign, "verifier:1", CheckResult::Accredited);
+
+        assert_eq!(
+            assess_requirement_coverage(&local, &resolved),
+            Err(CoverageAssessmentError::ResultRequirementMismatch {
+                expected: requirement("req:1"),
+                found: requirement("req:2"),
+            })
+        );
+    }
+
+    #[test]
+    fn accredited_results_without_coverage_rules_aggregate_to_dn() {
+        let set = set_without_coverage();
+        let results: Vec<_> = set
+            .iter()
+            .enumerate()
+            .map(|(index, descriptor)| {
+                resolved_one(
+                    descriptor,
+                    &format!("verifier:{index}"),
+                    CheckResult::Accredited,
+                )
+            })
+            .collect();
+
+        assert_eq!(
+            aggregate_covered_requirement_results(&set, &results),
+            Ok(CheckResult::NotVerifiable)
+        );
+    }
+
+    #[test]
+    fn complete_coverage_of_all_accredited_requirements_aggregates_to_da() {
+        let set = set_with_complete_coverage();
+        let results: Vec<_> = set
+            .iter()
+            .map(|descriptor| {
+                let required = descriptor
+                    .coverage_rule()
+                    .expect("el conjunto de prueba tiene cobertura")
+                    .required_verifiers()
+                    .next()
+                    .expect("la regla de cobertura no es vacía")
+                    .id()
+                    .as_str()
+                    .to_owned();
+                resolved_one(descriptor, &required, CheckResult::Accredited)
+            })
+            .collect();
+
+        assert_eq!(
+            aggregate_covered_requirement_results(&set, &results),
+            Ok(CheckResult::Accredited)
+        );
+    }
+
+    #[test]
+    fn missing_required_verifier_prevents_da() {
+        let mut descriptors = mandatory_descriptors();
+        for (index, descriptor) in descriptors.iter_mut().enumerate() {
+            let required = if index == 0 {
+                verifier("verifier:missing")
+            } else {
+                verifier(&format!("verifier:{index}"))
+            };
+            attach_rule(descriptor, &format!("coverage:{index}"), [required]);
+        }
+        let set = set_from(descriptors);
+        let results: Vec<_> = set
+            .iter()
+            .enumerate()
+            .map(|(index, descriptor)| {
+                resolved_one(
+                    descriptor,
+                    &format!("verifier:{index}"),
+                    CheckResult::Accredited,
+                )
+            })
+            .collect();
+
+        assert_eq!(
+            aggregate_covered_requirement_results(&set, &results),
+            Ok(CheckResult::NotVerifiable)
+        );
+    }
+
+    #[test]
+    fn refutation_is_not_erased_by_absent_coverage_rule() {
+        let set = set_without_coverage();
+        let results: Vec<_> = set
+            .iter()
+            .enumerate()
+            .map(|(index, descriptor)| {
+                let result = if index == 0 {
+                    CheckResult::Refuted
+                } else {
+                    CheckResult::Accredited
+                };
+                resolved_one(descriptor, &format!("verifier:{index}"), result)
+            })
+            .collect();
+
+        assert_eq!(
+            aggregate_covered_requirement_results(&set, &results),
+            Ok(CheckResult::Refuted)
+        );
+    }
+
+    #[test]
+    fn coverage_rule_identity_is_part_of_the_resolved_binding() {
+        let mut source_descriptor = descriptor(
+            "req:form",
+            RequirementClass::Core(CoreRequirementKind::FormValidity),
+            "context:1",
+        );
+        attach_rule(
+            &mut source_descriptor,
+            "coverage:first",
+            [verifier("verifier:1")],
+        );
+        let resolved = resolved_one(
+            &source_descriptor,
+            "verifier:1",
+            CheckResult::Accredited,
+        );
+
+        let mut target_descriptor = descriptor(
+            "req:form",
+            RequirementClass::Core(CoreRequirementKind::FormValidity),
+            "context:1",
+        );
+        attach_rule(
+            &mut target_descriptor,
+            "coverage:second",
+            [verifier("verifier:1")],
+        );
+        let set = set_from(vec![
+            target_descriptor,
+            descriptor(
+                "req:authority",
+                RequirementClass::Core(CoreRequirementKind::ApplicableAuthority),
+                "context:1",
+            ),
+            descriptor(
+                "req:verifier",
+                RequirementClass::Core(CoreRequirementKind::VerifierAdmissibilityAndApplicability),
+                "context:1",
+            ),
+            descriptor(
+                "req:no-self",
+                RequirementClass::Core(CoreRequirementKind::NoSelfAccreditation),
+                "context:1",
+            ),
+        ]);
+
+        assert_eq!(
+            aggregate_resolved_requirement_results(&set, &[resolved]),
+            Err(ResolvedAggregationError::BindingMismatch(requirement("req:form")))
+        );
+    }
+}

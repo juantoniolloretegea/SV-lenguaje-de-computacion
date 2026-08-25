@@ -6,9 +6,8 @@
 //! comprobación, no produce `Permit` y no ejecuta efectos protegidos.
 //!
 //! Un valor `CheckResult::Accredited` aislado sigue siendo sólo un resultado
-//! técnico nominal. La agregación productiva final pertenece al puente sellado
-//! de R1-3 y acepta resultados de obligación ya resueltos, no comprobaciones
-//! individuales seleccionadas localmente.
+//! técnico nominal. La agregación productiva final acepta resultados de
+//! obligación ya resueltos y cualificados por la cobertura constituida.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -17,6 +16,7 @@ use crate::control::{
     VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements_conflict::ConflictResolutionRule;
+use crate::requirements_coverage::CoverageRule;
 
 pub mod initial;
 
@@ -42,9 +42,9 @@ pub enum RequirementClass {
 /// contexto.
 ///
 /// La existencia de una referencia nominal no basta para fabricar este objeto
-/// constituido. Cuando existe una regla de resolución de conflicto, queda
-/// ligada al descriptor durante la constitución inicial y no durante el acto de
-/// comprobación.
+/// constituido. Las reglas de conflicto y cobertura, cuando existen, quedan
+/// ligadas al descriptor durante la constitución inicial y no durante el acto
+/// de comprobación o agregación.
 #[derive(Debug, PartialEq, Eq)]
 pub struct RequirementDescriptor {
     reference: RequirementRef,
@@ -55,6 +55,7 @@ pub struct RequirementDescriptor {
     admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRule>,
+    coverage_rule: Option<CoverageRule>,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
@@ -88,6 +89,7 @@ impl RequirementDescriptor {
             admissible_verifier_families,
             applicability_rule,
             conflict_resolution_rule: None,
+            coverage_rule: None,
         })
     }
 
@@ -133,6 +135,14 @@ impl RequirementDescriptor {
         self.conflict_resolution_rule.as_ref()
     }
 
+    /// Regla de cobertura constituida para esta obligación, si existe.
+    ///
+    /// La ausencia de regla no equivale a cobertura completa vacía.
+    #[inline]
+    pub fn coverage_rule(&self) -> Option<&CoverageRule> {
+        self.coverage_rule.as_ref()
+    }
+
     #[inline]
     pub fn accepts_applicability(&self, applicability: &VerifierApplicability) -> bool {
         applicability.requirement == self.reference
@@ -149,6 +159,11 @@ impl RequirementDescriptor {
         rule: ConflictResolutionRule,
     ) {
         self.conflict_resolution_rule = Some(rule);
+    }
+
+    #[cfg(test)]
+    pub(crate) fn attach_coverage_rule_for_test(&mut self, rule: CoverageRule) {
+        self.coverage_rule = Some(rule);
     }
 }
 
@@ -414,7 +429,7 @@ impl RequirementCheck {
 
 /// Error de la agregación transitoria de la unidad 1, conservada únicamente
 /// para regresión interna. La frontera productiva final de R1-3 agrega
-/// `ResolvedRequirementResult` mediante `requirements_bridge`.
+/// resultados resueltos y cualificados por cobertura.
 #[cfg(test)]
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub(crate) enum CheckAggregationError {

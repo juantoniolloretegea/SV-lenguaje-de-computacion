@@ -1,4 +1,4 @@
-//! Constitución inicial de `Req`, `Applicable` y reglas de conflicto para R1-3.
+//! Constitución inicial de `Req`, `Applicable`, reglas de conflicto y cobertura para R1-3.
 //!
 //! Este submódulo sólo convierte propuestas en objetos constituidos cuando
 //! recibe la capacidad interna emitida por la puerta T-0. No ejecuta
@@ -12,10 +12,11 @@ use super::{
 };
 use crate::authority::transitions::GenesisControlToken;
 use crate::control::{
-    ApplicabilityRuleRef, ConflictResolutionRuleRef, ContextRef, EffectFamilyRef, FormRef,
-    RequirementRef, VerifierFamilyRef, VerifierRef,
+    ApplicabilityRuleRef, ConflictResolutionRuleRef, ContextRef, CoverageRuleRef,
+    EffectFamilyRef, FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements_conflict::ConflictResolutionRule;
+use crate::requirements_coverage::CoverageRule;
 
 /// Propuesta ordinaria de una regla de resolución de conflicto para una
 /// obligación.
@@ -38,6 +39,30 @@ impl ConflictResolutionRuleProposal {
     }
 }
 
+/// Propuesta ordinaria de una regla de cobertura para una obligación.
+///
+/// La propuesta identifica la regla y el conjunto concreto de verificadores que
+/// pretende hacer exigibles. Las ligaduras materiales se derivan de la
+/// obligación y cada verificador deberá disponer de `Applicable(V,q,C)` antes
+/// de que T-0 constituya la regla.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct CoverageRuleProposal {
+    reference: CoverageRuleRef,
+    required_verifiers: Vec<VerifierRef>,
+}
+
+impl CoverageRuleProposal {
+    pub fn new(
+        reference: CoverageRuleRef,
+        required_verifiers: impl IntoIterator<Item = VerifierRef>,
+    ) -> Self {
+        Self {
+            reference,
+            required_verifiers: required_verifiers.into_iter().collect(),
+        }
+    }
+}
+
 /// Propuesta ordinaria de una obligación para la constitución inicial.
 ///
 /// Una propuesta no es una obligación constituida y no puede agregarse como
@@ -52,6 +77,7 @@ pub struct RequirementProposal {
     admissible_verifier_families: Vec<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRuleProposal>,
+    coverage_rule: Option<CoverageRuleProposal>,
 }
 
 impl RequirementProposal {
@@ -73,6 +99,7 @@ impl RequirementProposal {
             admissible_verifier_families: admissible_verifier_families.into_iter().collect(),
             applicability_rule,
             conflict_resolution_rule: None,
+            coverage_rule: None,
         }
     }
 
@@ -86,6 +113,16 @@ impl RequirementProposal {
         rule: ConflictResolutionRuleProposal,
     ) -> Self {
         self.conflict_resolution_rule = Some(rule);
+        self
+    }
+
+    /// Adjunta una propuesta de regla de cobertura a esta obligación.
+    ///
+    /// La adjunción no constituye la regla. T-0 deberá acreditar que cada
+    /// verificador requerido ya dispone de una relación `Applicable(V,q,C)`
+    /// válida para la misma obligación y contexto.
+    pub fn with_coverage_rule(mut self, rule: CoverageRuleProposal) -> Self {
+        self.coverage_rule = Some(rule);
         self
     }
 }
@@ -180,12 +217,24 @@ pub enum InitialRequirementError {
         requirement: RequirementRef,
         verifier: VerifierRef,
     },
+    DuplicateCoverageRuleRef(CoverageRuleRef),
+    EmptyCoverageRequiredVerifierSet(RequirementRef),
+    DuplicateCoverageRequiredVerifier {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+    },
+    UnknownRequirementForCoverageRule(RequirementRef),
+    CoverageVerifierNotApplicable {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+    },
 }
 
-/// Estado inicial constituido de requisitos y relaciones de aplicabilidad.
+/// Estado inicial constituido de requisitos y aplicabilidad.
 ///
-/// No tiene constructor público. Sólo T-0 puede obtenerlo a partir de
-/// propuestas mediante `constitute_initial`.
+/// Las reglas gobernadas quedan ligadas dentro de cada `RequirementDescriptor`.
+/// No tiene constructor público y sólo T-0 puede obtenerlo mediante
+/// `constitute_initial`.
 #[derive(Debug, PartialEq, Eq, Default)]
 pub(crate) struct InitialRequirementState {
     sets: BTreeMap<RequirementBinding, RequirementSet>,
@@ -252,6 +301,9 @@ pub(crate) fn constitute_initial(
     let mut pending_conflict_rules: BTreeMap<RequirementRef, ConflictResolutionRuleProposal> =
         BTreeMap::new();
     let mut conflict_rule_refs = BTreeSet::new();
+    let mut pending_coverage_rules: BTreeMap<RequirementRef, CoverageRuleProposal> =
+        BTreeMap::new();
+    let mut coverage_rule_refs = BTreeSet::new();
 
     for proposal in proposals {
         let binding = RequirementBinding::new(
@@ -291,6 +343,29 @@ pub(crate) fn constitute_initial(
             pending_conflict_rules.insert(proposal.reference.clone(), rule);
         }
 
+        if let Some(rule) = proposal.coverage_rule {
+            if !coverage_rule_refs.insert(rule.reference.clone()) {
+                return Err(InitialRequirementError::DuplicateCoverageRuleRef(
+                    rule.reference,
+                ));
+            }
+            if rule.required_verifiers.is_empty() {
+                return Err(InitialRequirementError::EmptyCoverageRequiredVerifierSet(
+                    proposal.reference,
+                ));
+            }
+            let mut seen = BTreeSet::new();
+            for verifier in &rule.required_verifiers {
+                if !seen.insert(verifier.clone()) {
+                    return Err(InitialRequirementError::DuplicateCoverageRequiredVerifier {
+                        requirement: proposal.reference,
+                        verifier: verifier.clone(),
+                    });
+                }
+            }
+            pending_coverage_rules.insert(proposal.reference.clone(), rule);
+        }
+
         grouped.entry(binding).or_default().push(RequirementDescriptor {
             reference: proposal.reference,
             class: proposal.class,
@@ -300,6 +375,7 @@ pub(crate) fn constitute_initial(
             admissible_verifier_families: families,
             applicability_rule: proposal.applicability_rule,
             conflict_resolution_rule: None,
+            coverage_rule: None,
         });
     }
 
@@ -396,34 +472,36 @@ pub(crate) fn constitute_initial(
             ));
         };
 
-        let Some(descriptor) = sets
-            .get(&binding)
-            .and_then(|set| set.requirement(&requirement))
-        else {
-            return Err(InitialRequirementError::UnknownRequirementForConflictRule(
-                requirement,
-            ));
-        };
+        let rule = {
+            let Some(descriptor) = sets
+                .get(&binding)
+                .and_then(|set| set.requirement(&requirement))
+            else {
+                return Err(InitialRequirementError::UnknownRequirementForConflictRule(
+                    requirement,
+                ));
+            };
 
-        let key = ApplicabilityKey {
-            requirement: requirement.clone(),
-            verifier: proposal.decisive_verifier.clone(),
-            context: descriptor.context().clone(),
-        };
+            let key = ApplicabilityKey {
+                requirement: requirement.clone(),
+                verifier: proposal.decisive_verifier.clone(),
+                context: descriptor.context().clone(),
+            };
 
-        let Some(applicability) = applicabilities.get(&key) else {
-            return Err(InitialRequirementError::ConflictResolverNotApplicable {
-                requirement,
-                verifier: proposal.decisive_verifier,
-            });
-        };
+            let Some(applicability) = applicabilities.get(&key) else {
+                return Err(InitialRequirementError::ConflictResolverNotApplicable {
+                    requirement,
+                    verifier: proposal.decisive_verifier,
+                });
+            };
 
-        let rule = ConflictResolutionRule::constitute_from_genesis(
-            token,
-            proposal.reference,
-            descriptor,
-            applicability,
-        );
+            ConflictResolutionRule::constitute_from_genesis(
+                token,
+                proposal.reference,
+                descriptor,
+                applicability,
+            )
+        };
 
         let Some(descriptor_mut) = sets
             .get_mut(&binding)
@@ -434,6 +512,58 @@ pub(crate) fn constitute_initial(
             ));
         };
         descriptor_mut.conflict_resolution_rule = Some(rule);
+    }
+
+    for (requirement, proposal) in pending_coverage_rules {
+        let Some(binding) = reference_to_binding.get(&requirement).cloned() else {
+            return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
+                requirement,
+            ));
+        };
+
+        let rule = {
+            let Some(descriptor) = sets
+                .get(&binding)
+                .and_then(|set| set.requirement(&requirement))
+            else {
+                return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
+                    requirement,
+                ));
+            };
+
+            let mut required_verifiers = BTreeSet::new();
+            for verifier in proposal.required_verifiers {
+                let key = ApplicabilityKey {
+                    requirement: requirement.clone(),
+                    verifier: verifier.clone(),
+                    context: descriptor.context().clone(),
+                };
+                if !applicabilities.contains_key(&key) {
+                    return Err(InitialRequirementError::CoverageVerifierNotApplicable {
+                        requirement,
+                        verifier,
+                    });
+                }
+                required_verifiers.insert(verifier);
+            }
+
+            CoverageRule::constitute_from_genesis(
+                token,
+                proposal.reference,
+                descriptor,
+                required_verifiers,
+            )
+        };
+
+        let Some(descriptor_mut) = sets
+            .get_mut(&binding)
+            .and_then(|set| set.requirements.get_mut(&requirement))
+        else {
+            return Err(InitialRequirementError::UnknownRequirementForCoverageRule(
+                requirement,
+            ));
+        };
+        descriptor_mut.coverage_rule = Some(rule);
     }
 
     Ok(InitialRequirementState {

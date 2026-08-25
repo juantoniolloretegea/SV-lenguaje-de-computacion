@@ -3,18 +3,17 @@
 //! Una `RequirementCheck` describe una comprobación individual. Este módulo
 //! impide que la agregación inter-obligaciones acepte directamente una
 //! comprobación seleccionada. Sólo un `ResolvedRequirementResult` formado por
-//! la vía de resolución puede entrar en la agregación de esta unidad.
+//! la vía de resolución puede entrar en la agregación gobernada.
 //!
-//! La unidad no acredita que el conjunto de comprobaciones suministrado a la
-//! resolución sea exhaustivo. Conserva la identidad de los verificadores que
-//! participaron para que la cobertura pueda gobernarse separadamente antes del
-//! cierre completo de R1-3.
+//! El resultado conserva la identidad de los verificadores participantes y la
+//! referencia de la regla de cobertura constituida, cuando existe. Así una
+//! variación de cobertura altera la ligadura material del sello.
 
 use std::collections::BTreeSet;
 
 use crate::control::{
-    ApplicabilityRuleRef, CheckResult, ConflictResolutionRuleRef, ContextRef, EffectFamilyRef,
-    FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
+    ApplicabilityRuleRef, CheckResult, ConflictResolutionRuleRef, ContextRef, CoverageRuleRef,
+    EffectFamilyRef, FormRef, RequirementRef, VerifierFamilyRef, VerifierRef,
 };
 use crate::requirements::{RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet};
 use crate::requirements_conflict::{resolve_requirement_checks, RequirementConflictError};
@@ -39,6 +38,7 @@ pub struct ResolvedRequirementResult {
     admissible_verifier_families: BTreeSet<VerifierFamilyRef>,
     applicability_rule: ApplicabilityRuleRef,
     conflict_resolution_rule: Option<ConflictResolutionRuleRef>,
+    coverage_rule: Option<CoverageRuleRef>,
     participating_verifiers: BTreeSet<VerifierRef>,
     result: CheckResult,
 }
@@ -63,6 +63,9 @@ impl ResolvedRequirementResult {
             conflict_resolution_rule: descriptor
                 .conflict_resolution_rule()
                 .map(|rule| rule.reference().clone()),
+            coverage_rule: descriptor
+                .coverage_rule()
+                .map(|rule| rule.reference().clone()),
             participating_verifiers,
             result,
         }
@@ -75,7 +78,7 @@ impl ResolvedRequirementResult {
 
     /// Verificadores cuyas comprobaciones formaron parte del conjunto
     /// efectivamente resuelto. Esta colección describe participación, no
-    /// acredita por sí sola exhaustividad ni cobertura suficiente.
+    /// acredita por sí sola cobertura suficiente.
     #[inline]
     pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
         self.participating_verifiers.iter()
@@ -103,17 +106,16 @@ impl ResolvedRequirementResult {
                 == descriptor
                     .conflict_resolution_rule()
                     .map(|rule| rule.reference().clone())
+            && self.coverage_rule
+                == descriptor
+                    .coverage_rule()
+                    .map(|rule| rule.reference().clone())
     }
 }
 
 /// Resuelve el conjunto de comprobaciones suministrado para una obligación y
 /// sella el resultado con la ligadura material de su descriptor constituido y
 /// la identidad de los verificadores que participaron.
-///
-/// Esta función no recibe un `CheckResult` elegido por el llamador. La
-/// resolución conserva las reglas de 3A y 3B antes de formar el objeto
-/// agregable. La exhaustividad del conjunto suministrado pertenece a la
-/// cobertura posterior de R1-3 y no queda acreditada por esta función.
 pub fn resolve_requirement_result(
     descriptor: &RequirementDescriptor,
     checks: &[&RequirementCheck],
@@ -141,23 +143,13 @@ pub enum ResolvedAggregationError {
     MissingResult(RequirementRef),
 }
 
-/// Agrega exactamente un resultado resuelto y sellado por cada obligación de
-/// un `RequirementSet` completo.
+/// Valida y agrega exactamente un resultado resuelto y sellado por cada
+/// obligación de un `RequirementSet` completo.
 ///
-/// Conserva la precedencia contractual `D-R > D-N > D-A` y no produce permiso,
-/// autoridad, efecto protegido ni valor ternario. La función acredita cobertura
-/// del conjunto de obligaciones de `Req`, no exhaustividad interna de las
-/// comprobaciones utilizadas para resolver cada obligación.
-///
-/// Una comprobación individual no puede sustituir al resultado resuelto:
-///
-/// ```compile_fail
-/// use sv_core::{aggregate_resolved_requirement_results, RequirementCheck, RequirementSet};
-/// fn bypass(set: &RequirementSet, check: RequirementCheck) {
-///     let _ = aggregate_resolved_requirement_results(set, &[check]);
-/// }
-/// ```
-pub fn aggregate_resolved_requirement_results(
+/// Esta función permanece interna tras 3D. La agregación pública exige además
+/// cualificación de cobertura. Aquí se conserva la validación estructural de 3C
+/// y su regresión independiente.
+pub(crate) fn aggregate_resolved_requirement_results(
     requirements: &RequirementSet,
     results: &[ResolvedRequirementResult],
 ) -> Result<CheckResult, ResolvedAggregationError> {

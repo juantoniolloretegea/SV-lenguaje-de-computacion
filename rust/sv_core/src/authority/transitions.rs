@@ -552,10 +552,12 @@ impl Default for AuthorityContinuity {
 mod tests {
     use super::*;
     use crate::control::{
-        ApplicabilityRuleRef, ConflictResolutionRuleRef, ControlId, RequirementRef,
-        TransitionClass, VerifierFamilyRef, VerifierRef,
+        ApplicabilityRuleRef, ConflictResolutionRuleRef, ControlId, CoverageRuleRef,
+        RequirementRef, TransitionClass, VerifierFamilyRef, VerifierRef,
     };
-    use crate::requirements::initial::ConflictResolutionRuleProposal;
+    use crate::requirements::initial::{
+        ConflictResolutionRuleProposal, CoverageRuleProposal,
+    };
     use crate::requirements::{CoreRequirementKind, RequirementClass};
 
     fn id(value: &str) -> ControlId {
@@ -610,6 +612,10 @@ mod tests {
         ConflictResolutionRuleRef::from_core_id(id(value))
     }
 
+    fn coverage_rule_ref(value: &str) -> CoverageRuleRef {
+        CoverageRuleRef::from_core_id(id(value))
+    }
+
     fn mandatory_requirement_proposals(
         form: &str,
         family: &str,
@@ -639,13 +645,15 @@ mod tests {
         .collect()
     }
 
-    fn valid_plan() -> GenesisPlan {
+    fn controlled_plan_with_initial_control(
+        requirements: Vec<RequirementProposal>,
+        applicabilities: Vec<ApplicabilityProposal>,
+    ) -> GenesisPlan {
         let authority = authority_ref("authority:genesis");
-        let form = "form:exercise";
         let context = "context:genesis";
         GenesisPlan::new(
             [FormProposal::new(
-                form_ref(form),
+                form_ref("form:exercise"),
                 TransitionClass::Exercise,
                 effect_family_ref("family:write"),
                 [context_ref(context)],
@@ -665,9 +673,15 @@ mod tests {
                 [object_ref("object:one")],
             )],
         )
-        .with_initial_control(
+        .with_initial_control(requirements, applicabilities)
+    }
+
+    fn valid_plan() -> GenesisPlan {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        controlled_plan_with_initial_control(
             mandatory_requirement_proposals(form, "family:write", context),
-            [ApplicabilityProposal::new(
+            vec![ApplicabilityProposal::new(
                 verifier_ref("verifier:canonical"),
                 verifier_family_ref("verifier-family:canonical"),
                 requirement_ref("req:form:exercise:form"),
@@ -695,6 +709,19 @@ mod tests {
                 [object_ref("object:one")],
             )],
         )
+    }
+
+    fn assert_rejected_genesis_is_atomic(
+        continuity: &AuthorityContinuity,
+        premise: &ExternalGenesisPremise,
+    ) {
+        assert_eq!(continuity.occupancy(), ContinuityOccupancy::Uninhabited);
+        assert!(continuity.t0_available());
+        assert!(!premise.is_consumed());
+        assert_eq!(continuity.form_count(), 0);
+        assert_eq!(continuity.authority_count(), 0);
+        assert_eq!(continuity.requirement_set_count(), 0);
+        assert_eq!(continuity.verifier_applicability_count(), 0);
     }
 
     #[test]
@@ -729,6 +756,162 @@ mod tests {
                 &context_ref("context:genesis")
             )
             .is_some());
+    }
+
+    #[test]
+    fn coverage_rule_is_constituted_by_t0_and_bound_to_requirement() {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let requirement = requirement_ref("req:form:exercise:form");
+        let required = verifier_ref("verifier:coverage");
+        let rule_reference = coverage_rule_ref("coverage-rule:form");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_coverage_rule(CoverageRuleProposal::new(
+            rule_reference.clone(),
+            [required.clone()],
+        ));
+        let plan = controlled_plan_with_initial_control(
+            requirements,
+            vec![ApplicabilityProposal::new(
+                required.clone(),
+                verifier_family_ref("verifier-family:canonical"),
+                requirement.clone(),
+                context_ref(context),
+                applicability_rule_ref("applicability:canonical"),
+            )],
+        );
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        continuity.apply_genesis(&mut premise, plan).unwrap();
+
+        let descriptor = continuity
+            .requirement_set(
+                &form_ref(form),
+                &effect_family_ref("family:write"),
+                &context_ref(context),
+            )
+            .and_then(|set| set.requirement(&requirement))
+            .expect("T-0 debe constituir la obligación");
+        let rule = descriptor
+            .coverage_rule()
+            .expect("T-0 debe ligar la regla de cobertura al descriptor");
+        assert_eq!(rule.reference(), &rule_reference);
+        assert_eq!(rule.requirement(), &requirement);
+        assert_eq!(rule.required_verifiers().collect::<Vec<_>>(), vec![&required]);
+        assert!(premise.is_consumed());
+    }
+
+    #[test]
+    fn empty_coverage_required_set_rejects_t0_atomically() {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let requirement = requirement_ref("req:form:exercise:form");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_coverage_rule(CoverageRuleProposal::new(
+            coverage_rule_ref("coverage-rule:empty"),
+            [],
+        ));
+        let plan = controlled_plan_with_initial_control(requirements, vec![]);
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::EmptyCoverageRequiredVerifierSet(requirement)
+            ))
+        );
+        assert_rejected_genesis_is_atomic(&continuity, &premise);
+    }
+
+    #[test]
+    fn duplicate_coverage_required_verifier_rejects_t0_atomically() {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let requirement = requirement_ref("req:form:exercise:form");
+        let repeated = verifier_ref("verifier:repeated");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_coverage_rule(CoverageRuleProposal::new(
+            coverage_rule_ref("coverage-rule:duplicate-verifier"),
+            [repeated.clone(), repeated.clone()],
+        ));
+        let plan = controlled_plan_with_initial_control(requirements, vec![]);
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::DuplicateCoverageRequiredVerifier {
+                    requirement,
+                    verifier: repeated,
+                }
+            ))
+        );
+        assert_rejected_genesis_is_atomic(&continuity, &premise);
+    }
+
+    #[test]
+    fn coverage_required_verifier_without_applicability_rejects_t0_atomically() {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let requirement = requirement_ref("req:form:exercise:form");
+        let missing = verifier_ref("verifier:not-applicable");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_coverage_rule(CoverageRuleProposal::new(
+            coverage_rule_ref("coverage-rule:requires-applicable"),
+            [missing.clone()],
+        ));
+        let plan = controlled_plan_with_initial_control(requirements, vec![]);
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::CoverageVerifierNotApplicable {
+                    requirement,
+                    verifier: missing,
+                }
+            ))
+        );
+        assert_rejected_genesis_is_atomic(&continuity, &premise);
+    }
+
+    #[test]
+    fn duplicate_coverage_rule_reference_across_requirements_rejects_t0_atomically() {
+        let form = "form:exercise";
+        let context = "context:genesis";
+        let shared = coverage_rule_ref("coverage-rule:shared");
+        let mut requirements = mandatory_requirement_proposals(form, "family:write", context);
+        requirements[0] = requirements[0].clone().with_coverage_rule(CoverageRuleProposal::new(
+            shared.clone(),
+            [verifier_ref("verifier:one")],
+        ));
+        requirements[1] = requirements[1].clone().with_coverage_rule(CoverageRuleProposal::new(
+            shared.clone(),
+            [verifier_ref("verifier:two")],
+        ));
+        let plan = controlled_plan_with_initial_control(requirements, vec![]);
+        let mut continuity = AuthorityContinuity::uninhabited();
+        let mut premise = ExternalGenesisPremise::for_test();
+
+        let result = continuity.apply_genesis(&mut premise, plan);
+
+        assert_eq!(
+            result,
+            Err(GenesisError::InvalidInitialRequirements(
+                InitialRequirementError::DuplicateCoverageRuleRef(shared)
+            ))
+        );
+        assert_rejected_genesis_is_atomic(&continuity, &premise);
     }
 
     #[test]

@@ -15,8 +15,9 @@ pub mod frame;
 pub mod ir;
 pub mod nat;
 pub mod requirements;
-pub mod requirements_bridge;
+mod requirements_bridge;
 pub mod requirements_conflict;
+pub mod requirements_coverage;
 pub mod resolution;
 mod wellformed;
 
@@ -30,9 +31,9 @@ pub use authority::{
 pub use control::{
     AccumulationRuleRef, AdmittedEvidenceRef, ApplicabilityRuleRef, AuthorityHolderRef,
     AuthorityRef, CheckResult, ConflictResolutionRuleRef, ConstitutedFactRef, ContextRef,
-    ContinuityOccupancy, ControlId, EffectFamilyRef, EffectRef, EnablementRef, ExerciseRef,
-    FormRef, GovernedObjectRef, InformationRef, InvalidControlId, RequirementRef, TransitionClass,
-    VerifierFamilyRef, VerifierRef,
+    ContinuityOccupancy, ControlId, CoverageRuleRef, EffectFamilyRef, EffectRef, EnablementRef,
+    ExerciseRef, FormRef, GovernedObjectRef, InformationRef, InvalidControlId, RequirementRef,
+    TransitionClass, VerifierFamilyRef, VerifierRef,
 };
 pub use equivalence::equivalence_json;
 pub use frontend::FrontendError;
@@ -48,12 +49,16 @@ pub use requirements::{
     VerifierApplicability,
 };
 pub use requirements_bridge::{
-    aggregate_resolved_requirement_results, resolve_requirement_result, ResolvedAggregationError,
-    ResolvedRequirementResult,
+    resolve_requirement_result, ResolvedAggregationError, ResolvedRequirementResult,
 };
 pub use requirements_conflict::{
     resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,
     RequirementConflictError,
+};
+pub use requirements_coverage::{
+    aggregate_covered_requirement_results, assess_requirement_coverage, CoveredAggregationError,
+    CoverageAssessment, CoverageAssessmentError, CoverageDisposition, CoverageRule,
+    CoverageRuleFormationError,
 };
 pub use resolution::{
     ResSpec, ResolutionRecord, ResolutionTarget, UnsafeUResolution,
