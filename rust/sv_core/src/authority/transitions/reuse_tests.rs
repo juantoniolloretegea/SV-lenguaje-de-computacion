@@ -313,6 +313,13 @@ fn permission_plan() -> GenesisPlan {
             .with_coverage_rule(CoverageRuleProposal::new(
                 coverage_rule_ref(&format!("coverage:{reference}")),
                 [primary.clone()],
+            ))
+            .with_reuse_rule(ReuseRuleProposal::new(
+                reuse_rule_ref(&format!("reuse:{reference}")),
+                [ReuseBindingProposal::new(
+                    reuse_binding_key("binding:permit:regime"),
+                    reuse_binding_value("value:permit:v1"),
+                )],
             )),
         );
         applicabilities.push(ApplicabilityProposal::new(
