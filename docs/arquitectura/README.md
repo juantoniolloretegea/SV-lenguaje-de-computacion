@@ -33,6 +33,8 @@ Esta carpeta reúne los documentos de arquitectura y gobierno técnico del frent
 - `CONTRATO_R1_1_FORMAS_AUTORIDAD_ENVOLVENTE_Y_DOMINIO_GOBERNADO_2026_08_24.md`
 - `CONTRATO_R1_2_TRANSICIONES_Y_GENESIS_2026_08_24.md`
 - `ACTA_TECNICA_CIERRE_R1_2_TRANSICIONES_AUTORIDAD_Y_GENESIS_2026_08_25.md`
+- `CONTRATO_R1_3_REQ_APLICABILIDAD_Y_RESULTADOS_2026_08_25.md`
+- `ACTA_TECNICA_APERTURA_R1_3_REQ_APLICABILIDAD_Y_RESULTADOS_2026_08_25.md`
 
 ## Regla de lectura
 
@@ -58,7 +60,8 @@ R1 = ABIERTO
 R1-0 = CERRADO
 R1-1 = CERRADO
 R1-2 = CERRADO · INTEGRADO
-R1-3 = NO INICIADO
+R1-3 = ABIERTO
+R1-4 = NO INICIADO
 R2 = NO INICIADO
 R3 = NO INICIADO
 R4 = NO INICIADO
@@ -74,5 +77,7 @@ R1-1 fija la estructura de las formas, la autoridad acotada, `E_max` y `D_a`. La
 R1-2 queda cerrado e integrado. Materializa T-0 como única vía productiva de autoridad de su corte y exige simultáneamente una premisa constituyente externa opaca no consumida y una continuidad lógica no habitada. Una génesis válida ocupa la continuidad y consume la premisa; una génesis rechazada no produce estado parcial ni consume la premisa. Las referencias de formas y autoridades son únicas dentro del estado inicial. T-I, T-V, T-H y T-E permanecen no autorizantes. T-G, T-C y T-R pueden existir como clases constituidas, pero no aplican cambios de autoridad mientras no se materialicen los requisitos, resultados de comprobación y la mediación posterior. La representación no acredita continuidad material entre procesos ni permite deducir una nueva génesis de un reinicio técnico.
 
 El campo de estado conservado en el contrato de R1-2 corresponde al candidato previo a la integración; el estado vigente del corte queda fijado por su acta técnica de cierre de 25 de agosto de 2026 y por este índice.
+
+R1-3 está abierto sobre el contrato de requisitos, aplicabilidad y resultados de comprobación. `N(F,e|C)` y `Applicable(V,q,C)` deberán derivar de estado previamente constituido y no podrán suministrarse como decisiones libres del acto de comprobación. El corte termina en `CheckResult` y su agregación técnica: no produce `Permit`, no ejecuta efectos y no hace productivas T-G, T-C o T-R. R1-4 permanece no iniciado.
 
 R1 queda limitado a autoridad, mediación y decisiones protegidas dentro del proceso soberano. La apertura no atribuye persistencia material, recuperación durable, aislamiento de plataforma, raíz de confianza, cadena de suministro ni resistencia adversarial integral del sistema completo.
