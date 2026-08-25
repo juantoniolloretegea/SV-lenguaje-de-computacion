@@ -245,25 +245,20 @@ impl Permit {
             && self.authority.context == *authority.context()
     }
 
+    #[inline]
+    pub(crate) fn historical_requirement_count(&self) -> usize {
+        self.historical_results.len()
+    }
+
+    #[inline]
+    pub(crate) fn has_historical_requirement(&self, requirement: &RequirementRef) -> bool {
+        self.historical_results.contains_key(requirement)
+    }
+
     pub(crate) fn first_non_reusable_requirement(
         &self,
         requirements: &RequirementSet,
     ) -> Option<(RequirementRef, Option<ReuseRejectionReason>)> {
-        if requirements.len() != self.historical_results.len() {
-            return Some((
-                requirements
-                    .iter()
-                    .find(|descriptor| !self.historical_results.contains_key(descriptor.reference()))
-                    .map(|descriptor| descriptor.reference().clone())
-                    .or_else(|| self.historical_results.keys().next().cloned())
-                    .unwrap_or_else(|| RequirementRef::from_core_id(
-                        crate::control::ControlId::new("requirement:shape-mismatch")
-                            .expect("identificador interno fijo válido"),
-                    )),
-                None,
-            ));
-        }
-
         for descriptor in requirements.iter() {
             let Some(historical) = self.historical_results.get(descriptor.reference()) else {
                 return Some((descriptor.reference().clone(), None));
