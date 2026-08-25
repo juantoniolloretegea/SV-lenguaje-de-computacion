@@ -131,22 +131,11 @@ pub enum MediationError {
     NonAccreditedPermitState,
 }
 
-/// Media un permiso ya concedido contra el estado constituido vigente.
-///
-/// La operación consume el `Permit`: una misma instancia no puede atravesar
-/// dos veces la frontera por clonación, copia o préstamo. Antes de formar el
-/// compromiso comprueba el `EffectDescriptor` completo, la forma, la autoridad,
-/// `E_max`, `D_a`, la reutilización gobernada por 3E de cada resultado que
-/// sustentó el permiso y las relaciones `Applicable(V,q,C)` participantes.
-///
-/// El resultado positivo sigue sin equivaler a ejecución material. Una unidad
-/// posterior deberá consumir `MediatedEffectCommitment` en el punto donde el
-/// adaptador externo pueda comprometer el efecto.
-pub fn mediate_permit(
+fn validate_permit_against_current(
     continuity: &AuthorityContinuity,
-    permit: Permit,
+    permit: &Permit,
     effect: &EffectDescriptor,
-) -> Result<MediatedEffectCommitment, MediationError> {
+) -> Result<(), MediationError> {
     if permit.effect() != effect {
         return Err(MediationError::EffectMismatch {
             permitted: permit.effect_reference().clone(),
@@ -218,5 +207,39 @@ pub fn mediate_permit(
         return Err(MediationError::NonAccreditedPermitState);
     }
 
+    Ok(())
+}
+
+/// Revalida internamente un compromiso ya mediado contra el estado
+/// autoritativo que va a abrir la ejecución.
+///
+/// La función no produce un segundo compromiso y no es parte de la API pública.
+/// Reutiliza exactamente la misma frontera de vigencia que `mediate_permit`, de
+/// modo que la ejecución no pueda sustituir 3E o `Applicable(V,q,C)` por una
+/// comparación estructural más débil.
+pub(crate) fn revalidate_mediated_commitment(
+    continuity: &AuthorityContinuity,
+    commitment: &MediatedEffectCommitment,
+) -> Result<(), MediationError> {
+    validate_permit_against_current(continuity, &commitment.permit, commitment.effect())
+}
+
+/// Media un permiso ya concedido contra el estado constituido vigente.
+///
+/// La operación consume el `Permit`: una misma instancia no puede atravesar
+/// dos veces la frontera por clonación, copia o préstamo. Antes de formar el
+/// compromiso comprueba el `EffectDescriptor` completo, la forma, la autoridad,
+/// `E_max`, `D_a`, la reutilización gobernada por 3E de cada resultado que
+/// sustentó el permiso y las relaciones `Applicable(V,q,C)` participantes.
+///
+/// El resultado positivo sigue sin equivaler a ejecución material. Una unidad
+/// posterior deberá consumir `MediatedEffectCommitment` en el punto donde el
+/// adaptador externo pueda comprometer el efecto.
+pub fn mediate_permit(
+    continuity: &AuthorityContinuity,
+    permit: Permit,
+    effect: &EffectDescriptor,
+) -> Result<MediatedEffectCommitment, MediationError> {
+    validate_permit_against_current(continuity, &permit, effect)?;
     Ok(MediatedEffectCommitment { permit })
 }
