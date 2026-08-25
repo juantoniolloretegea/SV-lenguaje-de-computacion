@@ -9,14 +9,15 @@
 pub mod admissibility;
 pub mod authority;
 pub mod control;
+pub mod decision_trace;
 mod equivalence;
-pub mod execution;
+mod execution;
 mod frontend;
 pub mod frame;
 pub mod ir;
-pub mod mediation;
+mod mediation;
 pub mod nat;
-pub mod permission;
+mod permission;
 pub mod requirements;
 mod requirements_bridge;
 pub mod requirements_conflict;
@@ -41,10 +42,18 @@ pub use control::{
     ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, TransitionClass, VerifierFamilyRef,
     VerifierRef,
 };
+pub use decision_trace::{
+    decide_permit_traced, execute_traced_mediated, mediate_traced_permit, ConflictRuleTrace,
+    CoverageRuleTrace, DecisionTrace, DecisionTraceRef, ProtectedDecisionContinuity,
+    RequirementDecisionTrace, ReuseRuleTrace, TraceAssemblyError, TracedBlockedDecision,
+    TracedDecisionError, TracedEffectExecutor, TracedExecutionError, TracedExecutionRequest,
+    TracedExerciseConfirmation, TracedMediatedCommitment, TracedMediationError,
+    TracedPermit, TracedPermitDecision, TracedPermitDisposition,
+};
 pub use equivalence::equivalence_json;
 pub use execution::{
-    execute_mediated, EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest,
-    ExerciseAttemptState, ExerciseConfirmation, ExerciseTraceEntry,
+    EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
+    ExerciseConfirmation, ExerciseTraceEntry,
 };
 pub use frontend::FrontendError;
 pub use frame::{Frame, FrameClosureViolation, FRAME_CLOSURE_DIAGNOSTIC_CODE};
@@ -52,9 +61,9 @@ pub use ir::{
     IrLevel, IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram, IrQueryContext,
     IrSupervisableTarget,
 };
-pub use mediation::{mediate_permit, MediatedEffectCommitment, MediationError};
+pub use mediation::{MediatedEffectCommitment, MediationError};
 pub use nat::{InvalidNat, Nat};
-pub use permission::{decide_permit, Permit, PermitDecision, PermitDecisionError, PermitRejection};
+pub use permission::{Permit, PermitDecision, PermitDecisionError, PermitRejection};
 pub use requirements::{
     CheckFormationError, CoreRequirementKind, InvalidRequirementDescriptor, InvalidRequirementSet,
     RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet,
