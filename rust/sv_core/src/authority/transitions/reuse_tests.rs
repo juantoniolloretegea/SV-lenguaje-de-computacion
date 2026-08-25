@@ -918,3 +918,259 @@ fn r1_4_unit_one_does_not_make_authorizing_classes_productive() {
         );
     }
 }
+
+#[test]
+fn r1_5_traced_chain_from_t0_binds_decision_mediation_and_real_exercise() {
+    use crate::decision_trace::{
+        decide_permit_traced, execute_traced_mediated, mediate_traced_permit,
+        ProtectedDecisionContinuity, TracedPermitDecision, TracedPermitDisposition,
+    };
+
+    let authority = authority_ref("authority:permit");
+    let raw = permission_continuity();
+    let effect = permission_effect(&raw, &authority, "effect:permit:allowed").clone();
+    let results = permission_results(&raw, CheckResult::Accredited, false);
+    let mut continuity = ProtectedDecisionContinuity::from_authority(raw);
+
+    let decision = decide_permit_traced(
+        &mut continuity,
+        &form_ref("form:permit"),
+        &effect,
+        &results,
+    )
+    .unwrap();
+    let TracedPermitDecision::Granted(permit) = decision else {
+        panic!("la decisión trazada debía conceder permiso");
+    };
+    let decision_ref = permit.decision_trace().clone();
+
+    let trace = continuity
+        .decision_trace(&decision_ref)
+        .expect("la decisión gobernada debe quedar registrada");
+    assert_eq!(trace.form(), &form_ref("form:permit"));
+    assert_eq!(trace.authority(), &authority);
+    assert_eq!(trace.effect(), &effect);
+    assert_eq!(trace.context(), &context_ref("context:permit"));
+    assert_eq!(trace.aggregate(), CheckResult::Accredited);
+    assert_eq!(trace.permit_disposition(), TracedPermitDisposition::Granted);
+    assert_eq!(trace.requirement_count(), 4);
+    for requirement in trace.requirements() {
+        assert_eq!(requirement.resolved_result(), CheckResult::Accredited);
+        assert_eq!(requirement.qualified_result(), CheckResult::Accredited);
+        let checks = requirement.checks().collect::<Vec<_>>();
+        assert_eq!(checks.len(), 1);
+        assert_eq!(checks[0].result(), CheckResult::Accredited);
+    }
+
+    let commitment = mediate_traced_permit(&mut continuity, permit, &effect).unwrap();
+    assert_eq!(commitment.decision_trace(), &decision_ref);
+    assert!(continuity.is_mediated(&decision_ref));
+
+    let mut adapter = TestExecutor::default();
+    let confirmation =
+        execute_traced_mediated(&mut continuity, commitment, &mut adapter).unwrap();
+
+    assert_eq!(adapter.calls, 1);
+    assert_eq!(confirmation.decision_trace(), &decision_ref);
+    assert_eq!(confirmation.effect(), &effect);
+    assert_eq!(
+        continuity.exercise_decision_ref(confirmation.exercise()),
+        Some(&decision_ref)
+    );
+    assert_eq!(
+        continuity.exercise_state(confirmation.exercise()),
+        Some(ExerciseAttemptState::Confirmed)
+    );
+    let states = continuity
+        .exercise_events()
+        .filter(|entry| entry.exercise() == confirmation.exercise())
+        .map(|entry| entry.state())
+        .collect::<Vec<_>>();
+    assert_eq!(
+        states,
+        vec![
+            ExerciseAttemptState::DispatchCommitted,
+            ExerciseAttemptState::Confirmed,
+        ]
+    );
+}
+
+#[test]
+fn r1_5_refuted_decision_is_traced_without_mediation_or_exercise() {
+    use crate::decision_trace::{
+        decide_permit_traced, ProtectedDecisionContinuity, TracedPermitDecision,
+        TracedPermitDisposition,
+    };
+
+    let authority = authority_ref("authority:permit");
+    let raw = permission_continuity();
+    let effect = permission_effect(&raw, &authority, "effect:permit:allowed").clone();
+    let results = permission_results(&raw, CheckResult::Refuted, false);
+    let mut continuity = ProtectedDecisionContinuity::from_authority(raw);
+
+    let decision = decide_permit_traced(
+        &mut continuity,
+        &form_ref("form:permit"),
+        &effect,
+        &results,
+    )
+    .unwrap();
+    let TracedPermitDecision::NotGranted(blocked) = decision else {
+        panic!("D-R no puede producir un permiso trazado");
+    };
+    assert_eq!(blocked.rejection(), PermitRejection::RefutedRequirements);
+    let decision_ref = blocked.decision_trace().clone();
+    let trace = continuity.decision_trace(&decision_ref).unwrap();
+
+    assert_eq!(trace.aggregate(), CheckResult::Refuted);
+    assert_eq!(
+        trace.permit_disposition(),
+        TracedPermitDisposition::BlockedRefuted
+    );
+    assert!(!continuity.is_mediated(&decision_ref));
+    assert_eq!(continuity.exercise_event_count(), 0);
+}
+
+#[test]
+fn r1_5_incomplete_coverage_traces_resolved_da_as_qualified_dn() {
+    use crate::decision_trace::{
+        decide_permit_traced, ProtectedDecisionContinuity, TracedPermitDecision,
+        TracedPermitDisposition,
+    };
+
+    let authority = authority_ref("authority:permit");
+    let raw = permission_continuity();
+    let effect = permission_effect(&raw, &authority, "effect:permit:allowed").clone();
+    let results = permission_results(&raw, CheckResult::Accredited, true);
+    let mut continuity = ProtectedDecisionContinuity::from_authority(raw);
+
+    let decision = decide_permit_traced(
+        &mut continuity,
+        &form_ref("form:permit"),
+        &effect,
+        &results,
+    )
+    .unwrap();
+    let TracedPermitDecision::NotGranted(blocked) = decision else {
+        panic!("cobertura incompleta no puede producir permiso");
+    };
+    assert_eq!(
+        blocked.rejection(),
+        PermitRejection::NotVerifiableRequirements
+    );
+    let trace = continuity.decision_trace(blocked.decision_trace()).unwrap();
+    assert_eq!(trace.aggregate(), CheckResult::NotVerifiable);
+    assert_eq!(
+        trace.permit_disposition(),
+        TracedPermitDisposition::BlockedNotVerifiable
+    );
+
+    let degraded = trace
+        .requirements()
+        .find(|requirement| {
+            requirement.resolved_result() == CheckResult::Accredited
+                && requirement.qualified_result() == CheckResult::NotVerifiable
+        })
+        .expect("la obligación sin cobertura requerida debe quedar cualificada como D-N");
+    let checks = degraded.checks().collect::<Vec<_>>();
+    assert_eq!(checks.len(), 1);
+    assert_eq!(checks[0].result(), CheckResult::Accredited);
+    assert!(checks[0].verifier().id().as_str().ends_with(":alternate"));
+}
+
+#[test]
+fn r1_5_conflict_trace_preserves_each_individual_check_before_dn_resolution() {
+    use crate::decision_trace::{
+        decide_permit_traced, ProtectedDecisionContinuity, TracedPermitDecision,
+    };
+
+    let authority = authority_ref("authority:permit");
+    let raw = permission_continuity();
+    let effect = permission_effect(&raw, &authority, "effect:permit:allowed").clone();
+    let set = permission_requirement_set(&raw);
+    let conflict_requirement = set.iter().next().unwrap().reference().clone();
+
+    let results = set
+        .iter()
+        .map(|descriptor| {
+            if descriptor.reference() == &conflict_requirement {
+                let primary = permission_verifier(descriptor.reference(), "primary");
+                let alternate = permission_verifier(descriptor.reference(), "alternate");
+                let primary_applicability = raw
+                    .verifier_applicability(
+                        descriptor.reference(),
+                        &primary,
+                        descriptor.context(),
+                    )
+                    .unwrap();
+                let alternate_applicability = raw
+                    .verifier_applicability(
+                        descriptor.reference(),
+                        &alternate,
+                        descriptor.context(),
+                    )
+                    .unwrap();
+                let accredited = RequirementCheck::constitute_for_test(
+                    descriptor,
+                    primary_applicability,
+                    CheckResult::Accredited,
+                )
+                .unwrap();
+                let refuted = RequirementCheck::constitute_for_test(
+                    descriptor,
+                    alternate_applicability,
+                    CheckResult::Refuted,
+                )
+                .unwrap();
+                resolve_requirement_result(descriptor, &[&accredited, &refuted]).unwrap()
+            } else {
+                let primary = permission_verifier(descriptor.reference(), "primary");
+                let applicability = raw
+                    .verifier_applicability(
+                        descriptor.reference(),
+                        &primary,
+                        descriptor.context(),
+                    )
+                    .unwrap();
+                let check = RequirementCheck::constitute_for_test(
+                    descriptor,
+                    applicability,
+                    CheckResult::Accredited,
+                )
+                .unwrap();
+                resolve_requirement_result(descriptor, &[&check]).unwrap()
+            }
+        })
+        .collect::<Vec<_>>();
+
+    let mut continuity = ProtectedDecisionContinuity::from_authority(raw);
+    let decision = decide_permit_traced(
+        &mut continuity,
+        &form_ref("form:permit"),
+        &effect,
+        &results,
+    )
+    .unwrap();
+    let TracedPermitDecision::NotGranted(blocked) = decision else {
+        panic!("un conflicto sin regla no puede producir permiso");
+    };
+    assert_eq!(
+        blocked.rejection(),
+        PermitRejection::NotVerifiableRequirements
+    );
+
+    let trace = continuity.decision_trace(blocked.decision_trace()).unwrap();
+    let requirement = trace.requirement(&conflict_requirement).unwrap();
+    assert_eq!(requirement.resolved_result(), CheckResult::NotVerifiable);
+    assert_eq!(requirement.qualified_result(), CheckResult::NotVerifiable);
+    let observed = requirement
+        .checks()
+        .map(|check| check.result())
+        .collect::<BTreeSet<_>>();
+    assert_eq!(
+        observed,
+        [CheckResult::Accredited, CheckResult::Refuted]
+            .into_iter()
+            .collect()
+    );
+}
