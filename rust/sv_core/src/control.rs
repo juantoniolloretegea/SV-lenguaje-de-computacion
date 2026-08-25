@@ -235,3 +235,15 @@ opaque_control_ref!(
     CoverageRuleRef,
     "Referencia a una regla previamente constituida de cobertura de comprobaciones exigibles."
 );
+opaque_control_ref!(
+    ReuseRuleRef,
+    "Referencia a una regla previamente constituida de reutilización de resultados cualificados."
+);
+opaque_control_ref!(
+    ReuseBindingKeyRef,
+    "Referencia a una dimensión constituida cuya continuidad puede ser exigible para reutilizar un resultado."
+);
+opaque_control_ref!(
+    ReuseBindingValueRef,
+    "Referencia al valor constituido de una dimensión de reutilización; identificarlo no acredita su vigencia."
+);
