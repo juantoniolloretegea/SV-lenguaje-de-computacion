@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - "rust/**"
+      - "docs/arquitectura/*R1_6*"
       - "src/**"
       - "tests/r0_7_equivalence.py"
       - "tests/conformance/valid/**"
