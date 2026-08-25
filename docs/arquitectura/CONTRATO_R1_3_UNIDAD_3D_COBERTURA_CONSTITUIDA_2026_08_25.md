@@ -88,6 +88,8 @@ Las ligaduras de obligación, forma, familia de efectos y contexto se derivan de
 
 La validación se completa antes de comprometer el estado de la continuidad, por lo que un rechazo de cobertura pertenece al rechazo atómico de la génesis completa.
 
+La regla constituida queda ligada al propio `RequirementDescriptor`. El acto de evaluación no recibe una regla de cobertura elegible por el llamador ni puede sustituir u omitir la regla constituida para la obligación.
+
 ## 6. Evaluación de cobertura
 
 La evaluación conserva de forma explícita:
@@ -103,7 +105,21 @@ La disposición de cobertura no pertenece a `Tri` y no constituye un nuevo resul
 
 La ausencia de regla produce `Incomplete` y nunca cobertura positiva vacía.
 
-## 7. Composición con los resultados técnicos
+## 7. Ligadura material del resultado resuelto
+
+La identidad de la regla de cobertura forma parte de la ligadura material de `ResolvedRequirementResult`.
+
+Por tanto:
+
+```text
+mismo q + misma forma + misma familia + mismo contexto
++ distinta CoverageRule
+→ ligadura distinta
+```
+
+Un resultado resuelto bajo una regla de cobertura no puede reutilizarse como si hubiese sido formado bajo otra. La validación estructural de 3C rechaza esa sustitución antes de la cualificación por cobertura.
+
+## 8. Composición con los resultados técnicos
 
 La cobertura cualifica la suficiencia de un resultado ya resuelto; no vuelve a resolver conflictos entre comprobaciones.
 
@@ -127,7 +143,7 @@ resultado resuelto = D-N
 
 De este modo, una ausencia de cobertura no borra una refutación conocida y tampoco puede promover una no verificabilidad.
 
-## 8. Agregación productiva
+## 9. Agregación productiva
 
 La frontera productiva de agregación de R1-3 pasa a ser:
 
@@ -138,7 +154,7 @@ aggregate_covered_requirement_results
 La función realiza dos etapas cerradas:
 
 1. reutiliza la validación estructural de 3C para exigir un resultado resuelto por cada obligación de `Req`, rechazar duplicados, obligaciones inesperadas y ligaduras ajenas;
-2. cualifica cada resultado mediante su regla de cobertura antes de aplicar la precedencia inter-obligaciones.
+2. obtiene la regla de cobertura del `RequirementDescriptor` constituido, cualifica cada resultado y sólo después aplica la precedencia inter-obligaciones.
 
 La precedencia permanece:
 
@@ -148,14 +164,17 @@ D-R > D-N > D-A
 
 La agregación no cualificada de 3C deja de formar parte de la frontera pública. `requirements_bridge` pasa a ser un módulo interno y `aggregate_resolved_requirement_results` no se reexporta.
 
-Así se evita la vía:
+Así se evitan ambas vías:
 
 ```text
 ResolvedRequirementResult acreditado
 → agregación pública sin comprobar cobertura
+
+regla de cobertura elegida por el llamador
+→ sustitución u omisión de la regla constituida
 ```
 
-## 9. Frontera con reglas futuras
+## 10. Frontera con reglas futuras
 
 Esta unidad no introduce:
 
@@ -169,7 +188,7 @@ Esta unidad no introduce:
 
 Cualquiera de esas formas sería una regla de cobertura diferente y requeriría constitución y pruebas propias.
 
-## 10. Frontera con reutilización histórica
+## 11. Frontera con reutilización histórica
 
 La unidad 3D gobierna cobertura dentro del acto y de su ligadura constituida.
 
@@ -184,7 +203,7 @@ cobertura completa ahora
 
 La vigencia y reutilización permanecen fuera de esta unidad.
 
-## 11. Pruebas mínimas de cierre
+## 12. Pruebas mínimas de cierre
 
 La realización deberá demostrar, como mínimo, que:
 
@@ -196,18 +215,21 @@ La realización deberá demostrar, como mínimo, que:
 6. un participante adicional no reemplaza a un requerido ausente;
 7. una regla ligada a otro contexto se rechaza;
 8. un resultado de otra obligación se rechaza;
-9. T-0 rechaza atómicamente una regla con verificador requerido no aplicable;
-10. T-0 rechaza atómicamente referencias de cobertura reutilizadas, conjuntos vacíos y requeridos duplicados;
-11. resultados acreditados sin regla suficiente agregan a `D-N`, no a `D-A`;
-12. cobertura completa de todas las obligaciones acreditadas agrega a `D-A`;
-13. falta de un requerido impide `D-A`;
-14. una refutación no se borra por ausencia de cobertura;
-15. la agregación no cualificada de 3C no permanece accesible como frontera pública;
-16. la cobertura no produce `Tri`, `Permit`, autoridad ni efecto protegido;
-17. T-G, T-C y T-R permanecen no productivas;
-18. las regresiones de R0 y de las unidades anteriores de R1 permanecen correctas.
+9. T-0 constituye positivamente una regla y la liga a la obligación correspondiente;
+10. T-0 rechaza atómicamente una regla con verificador requerido no aplicable;
+11. T-0 rechaza atómicamente referencias de cobertura reutilizadas, conjuntos vacíos y requeridos duplicados;
+12. resultados acreditados sin regla suficiente agregan a `D-N`, no a `D-A`;
+13. cobertura completa de todas las obligaciones acreditadas agrega a `D-A`;
+14. falta de un requerido impide `D-A`;
+15. una refutación no se borra por ausencia de cobertura;
+16. la identidad de `CoverageRule` forma parte de la ligadura del resultado resuelto;
+17. la agregación no cualificada de 3C no permanece accesible como frontera pública;
+18. la evaluación y agregación no aceptan una regla de cobertura suministrada por el llamador;
+19. la cobertura no produce `Tri`, `Permit`, autoridad ni efecto protegido;
+20. T-G, T-C y T-R permanecen no productivas;
+21. las regresiones de R0 y de las unidades anteriores de R1 permanecen correctas.
 
-## 12. Estado
+## 13. Estado
 
 ```text
 R0 = CERRADO
