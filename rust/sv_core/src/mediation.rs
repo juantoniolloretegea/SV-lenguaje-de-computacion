@@ -9,7 +9,7 @@ use crate::authority::transitions::AuthorityContinuity;
 use crate::authority::{AccumulationContract, EffectDescriptor};
 use crate::control::{
     AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef, EffectFamilyRef, EffectRef, FormRef,
-    GovernedObjectRef, TransitionClass,
+    GovernedObjectRef, RequirementRef, TransitionClass, VerifierRef,
 };
 use crate::permission::Permit;
 
@@ -118,6 +118,11 @@ pub enum MediationError {
         effect_family: EffectFamilyRef,
         context: ContextRef,
     },
+    ApplicabilityBindingChanged {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+        context: ContextRef,
+    },
     NonAccreditedPermitState,
 }
 
@@ -126,8 +131,9 @@ pub enum MediationError {
 /// La operación consume el `Permit`: una misma instancia no puede atravesar
 /// dos veces la frontera por clonación, copia o préstamo. Antes de formar el
 /// compromiso comprueba el `EffectDescriptor` completo, la forma, la autoridad,
-/// `E_max`, `D_a` y la instantánea gobernante de `Req` sellada al conceder el
-/// permiso.
+/// `E_max`, `D_a`, la instantánea gobernante de `Req` y las relaciones
+/// `Applicable(V,q,C)` de los verificadores participantes selladas al conceder
+/// el permiso.
 ///
 /// El resultado positivo sigue sin equivaler a ejecución material. Una unidad
 /// posterior deberá consumir `MediatedEffectCommitment` en el punto donde el
@@ -185,6 +191,14 @@ pub fn mediate_permit(
             form: permit.requirement_form().clone(),
             effect_family: permit.requirement_effect_family().clone(),
             context: permit.requirement_context().clone(),
+        });
+    }
+
+    if let Some((requirement, verifier, context)) = permit.first_changed_applicability(continuity) {
+        return Err(MediationError::ApplicabilityBindingChanged {
+            requirement,
+            verifier,
+            context,
         });
     }
 
