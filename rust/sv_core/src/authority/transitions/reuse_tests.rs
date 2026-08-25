@@ -3,6 +3,7 @@ use crate::control::{
     ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef, ReuseBindingKeyRef,
     ReuseBindingValueRef, ReuseRuleRef, VerifierFamilyRef, VerifierRef,
 };
+use crate::mediation::{mediate_permit, MediationError};
 use crate::permission::{decide_permit, PermitDecision, PermitDecisionError, PermitRejection};
 use crate::requirements::initial::{
     ApplicabilityProposal, CoverageRuleProposal, InitialRequirementError, ReuseBindingProposal,
@@ -451,6 +452,18 @@ fn permission_effect<'a>(
         .unwrap()
 }
 
+fn granted_permission<'a>(
+    continuity: &'a AuthorityContinuity,
+    effect: &'a EffectDescriptor,
+) -> crate::permission::Permit {
+    let results = permission_results(continuity, CheckResult::Accredited, false);
+    let decision = decide_permit(continuity, &form_ref("form:permit"), effect, &results).unwrap();
+    let PermitDecision::Granted(permit) = decision else {
+        panic!("la decisión debía conceder el permiso de prueba");
+    };
+    permit
+}
+
 #[test]
 fn complete_governed_da_forms_a_sealed_permit() {
     let continuity = permission_continuity();
@@ -578,6 +591,58 @@ fn form_without_required_authority_cannot_form_permit() {
         decide_permit(&continuity, &form, effect, &[]),
         Err(PermitDecisionError::FormWithoutRequiredAuthority(form))
     );
+}
+
+#[test]
+fn valid_permit_is_consumed_into_exact_mediated_commitment() {
+    let continuity = permission_continuity();
+    let authority = authority_ref("authority:permit");
+    let effect = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let permit = granted_permission(&continuity, effect);
+
+    let commitment = mediate_permit(&continuity, permit, effect).unwrap();
+
+    assert_eq!(commitment.authority(), &authority);
+    assert_eq!(commitment.authority_holder(), &holder_ref("holder:permit"));
+    assert_eq!(commitment.form(), &form_ref("form:permit"));
+    assert_eq!(commitment.transition_class(), TransitionClass::Exercise);
+    assert_eq!(commitment.effect_reference(), effect.reference());
+    assert_eq!(commitment.governed_object(), effect.object());
+    assert_eq!(commitment.context(), effect.context());
+    assert_eq!(commitment.technical_result(), CheckResult::Accredited);
+    assert_eq!(commitment.accumulation(), &AccumulationContract::SingleUse);
+}
+
+#[test]
+fn different_effect_cannot_cross_mediation_with_valid_permit() {
+    let continuity = permission_continuity();
+    let authority = authority_ref("authority:permit");
+    let other_authority = authority_ref("authority:permit:other");
+    let allowed = permission_effect(&continuity, &authority, "effect:permit:allowed");
+    let foreign = permission_effect(&continuity, &other_authority, "effect:permit:foreign");
+    let permit = granted_permission(&continuity, allowed);
+
+    assert_eq!(
+        mediate_permit(&continuity, permit, foreign),
+        Err(MediationError::EffectMismatch {
+            permitted: effect_ref("effect:permit:allowed"),
+            presented: effect_ref("effect:permit:foreign"),
+        })
+    );
+}
+
+#[test]
+fn r1_4_unit_two_does_not_make_authorizing_classes_productive() {
+    for class in [
+        TransitionClass::Governance,
+        TransitionClass::Constitutive,
+        TransitionClass::Recovery,
+    ] {
+        assert_eq!(
+            transition_disposition(class),
+            TransitionDisposition::BlockedPendingRequirements
+        );
+    }
 }
 
 #[test]
