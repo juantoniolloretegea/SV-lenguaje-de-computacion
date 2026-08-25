@@ -25,8 +25,11 @@ use crate::mediation::{mediate_permit, MediatedEffectCommitment, MediationError}
 use crate::permission::{
     decide_permit, Permit, PermitDecision, PermitDecisionError, PermitRejection,
 };
-use crate::requirements::{RequirementClass, RequirementDescriptor, RequirementSet};
-use crate::requirements_bridge::ResolvedRequirementResult;
+use crate::requirements::{RequirementClass, RequirementDescriptor};
+use crate::requirements_bridge::{ResolvedCheckObservation, ResolvedRequirementResult};
+use crate::requirements_reuse::{
+    seal_historical_qualified_result, HistoricalQualificationError,
+};
 
 /// Referencia opaca de una decisión trazada dentro de una continuidad lógica.
 ///
@@ -110,11 +113,56 @@ impl ReuseRuleTrace {
     }
 }
 
-/// Instantánea canónica de una obligación y su resultado ya resuelto.
+/// Resultado individual de una comprobación que participó en la resolución de
+/// una obligación.
 ///
-/// Conserva la ligadura material del descriptor vigente al producir el
-/// resultado, las reglas constituidas y el conjunto de verificadores que
-/// participaron. No es una `RequirementCheck` ni una capacidad de decisión.
+/// Es una instantánea de trazabilidad, no una `RequirementCheck` reutilizable.
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct IndividualCheckTrace {
+    verifier: VerifierRef,
+    verifier_family: VerifierFamilyRef,
+    applicability_rule: ApplicabilityRuleRef,
+    result: CheckResult,
+}
+
+impl IndividualCheckTrace {
+    fn from_observation(observation: &ResolvedCheckObservation) -> Self {
+        Self {
+            verifier: observation.verifier().clone(),
+            verifier_family: observation.verifier_family().clone(),
+            applicability_rule: observation.applicability_rule().clone(),
+            result: observation.result(),
+        }
+    }
+
+    #[inline]
+    pub fn verifier(&self) -> &VerifierRef {
+        &self.verifier
+    }
+
+    #[inline]
+    pub fn verifier_family(&self) -> &VerifierFamilyRef {
+        &self.verifier_family
+    }
+
+    #[inline]
+    pub fn applicability_rule(&self) -> &ApplicabilityRuleRef {
+        &self.applicability_rule
+    }
+
+    #[inline]
+    pub const fn result(&self) -> CheckResult {
+        self.result
+    }
+}
+
+/// Instantánea canónica de una obligación y de la cadena que produjo su
+/// resultado gobernado.
+///
+/// Conserva las comprobaciones individuales, el resultado de resolución
+/// 3A/3B/3C y el resultado ya cualificado por cobertura 3D. Una acreditación
+/// resuelta con cobertura incompleta queda por tanto trazada explícitamente como
+/// `D-N` en `qualified_result`.
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub struct RequirementDecisionTrace {
     requirement: RequirementRef,
@@ -127,21 +175,25 @@ pub struct RequirementDecisionTrace {
     conflict_rule: Option<ConflictRuleTrace>,
     coverage_rule: Option<CoverageRuleTrace>,
     reuse_rule: Option<ReuseRuleTrace>,
-    participating_verifiers: BTreeSet<VerifierRef>,
-    result: CheckResult,
+    checks: BTreeMap<VerifierRef, IndividualCheckTrace>,
+    resolved_result: CheckResult,
+    qualified_result: CheckResult,
 }
 
 impl RequirementDecisionTrace {
     fn from_resolved(
         descriptor: &RequirementDescriptor,
         resolved: &ResolvedRequirementResult,
-    ) -> Self {
-        let conflict_rule = descriptor.conflict_resolution_rule().map(|rule| ConflictRuleTrace {
-            reference: rule.reference().clone(),
-            decisive_verifier: rule.decisive_verifier().clone(),
-            verifier_family: rule.verifier_family().clone(),
-            applicability_rule: rule.applicability_rule().clone(),
-        });
+    ) -> Result<Self, HistoricalQualificationError> {
+        let qualified = seal_historical_qualified_result(descriptor, resolved)?.result();
+        let conflict_rule = descriptor
+            .conflict_resolution_rule()
+            .map(|rule| ConflictRuleTrace {
+                reference: rule.reference().clone(),
+                decisive_verifier: rule.decisive_verifier().clone(),
+                verifier_family: rule.verifier_family().clone(),
+                applicability_rule: rule.applicability_rule().clone(),
+            });
         let coverage_rule = descriptor.coverage_rule().map(|rule| CoverageRuleTrace {
             reference: rule.reference().clone(),
             required_verifiers: rule.required_verifiers().cloned().collect(),
@@ -153,8 +205,17 @@ impl RequirementDecisionTrace {
                 .map(|(key, value)| (key.clone(), value.clone()))
                 .collect(),
         });
+        let checks = resolved
+            .check_observations()
+            .map(|observation| {
+                (
+                    observation.verifier().clone(),
+                    IndividualCheckTrace::from_observation(observation),
+                )
+            })
+            .collect();
 
-        Self {
+        Ok(Self {
             requirement: descriptor.reference().clone(),
             class: descriptor.class(),
             form: descriptor.form().clone(),
@@ -168,9 +229,10 @@ impl RequirementDecisionTrace {
             conflict_rule,
             coverage_rule,
             reuse_rule,
-            participating_verifiers: resolved.participating_verifiers().cloned().collect(),
-            result: resolved.result(),
-        }
+            checks,
+            resolved_result: resolved.result(),
+            qualified_result: qualified,
+        })
     }
 
     #[inline]
@@ -224,13 +286,28 @@ impl RequirementDecisionTrace {
     }
 
     #[inline]
-    pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
-        self.participating_verifiers.iter()
+    pub fn check(&self, verifier: &VerifierRef) -> Option<&IndividualCheckTrace> {
+        self.checks.get(verifier)
     }
 
     #[inline]
-    pub const fn result(&self) -> CheckResult {
-        self.result
+    pub fn checks(&self) -> impl Iterator<Item = &IndividualCheckTrace> {
+        self.checks.values()
+    }
+
+    #[inline]
+    pub fn participating_verifiers(&self) -> impl Iterator<Item = &VerifierRef> {
+        self.checks.keys()
+    }
+
+    #[inline]
+    pub const fn resolved_result(&self) -> CheckResult {
+        self.resolved_result
+    }
+
+    #[inline]
+    pub const fn qualified_result(&self) -> CheckResult {
+        self.qualified_result
     }
 }
 
@@ -334,6 +411,7 @@ pub enum TraceAssemblyError {
     DuplicateRequirementResult(RequirementRef),
     RequirementBindingMismatch(RequirementRef),
     MissingRequirementResult(RequirementRef),
+    HistoricalQualification(HistoricalQualificationError),
     DecisionBindingMismatch,
     DuplicateDecisionTraceRef(DecisionTraceRef),
 }
@@ -517,23 +595,6 @@ impl ProtectedDecisionContinuity {
         self.next_decision_ordinal = decimal_successor(&self.next_decision_ordinal);
         Ok(())
     }
-
-    fn next_exercise_key(&self) -> String {
-        let mut ordinal = "0".to_owned();
-        for event in self.execution.exercise_events() {
-            if event.state() == ExerciseAttemptState::DispatchCommitted {
-                ordinal = decimal_successor(&ordinal);
-            }
-        }
-        format!("exercise:{}", decimal_successor(&ordinal))
-    }
-
-    fn dispatch_count(&self) -> usize {
-        self.execution
-            .exercise_events()
-            .filter(|entry| entry.state() == ExerciseAttemptState::DispatchCommitted)
-            .count()
-    }
 }
 
 fn decimal_successor(value: &str) -> String {
@@ -607,11 +668,10 @@ fn assemble_trace(
         if !resolved.matches_descriptor(descriptor) {
             return Err(TraceAssemblyError::RequirementBindingMismatch(requirement));
         }
+        let trace = RequirementDecisionTrace::from_resolved(descriptor, resolved)
+            .map_err(TraceAssemblyError::HistoricalQualification)?;
         if traced_requirements
-            .insert(
-                requirement.clone(),
-                RequirementDecisionTrace::from_resolved(descriptor, resolved),
-            )
+            .insert(requirement.clone(), trace)
             .is_some()
         {
             return Err(TraceAssemblyError::DuplicateRequirementResult(requirement));
@@ -759,12 +819,8 @@ pub fn mediate_traced_permit(
         return Err(TracedMediationError::DecisionBindingMismatch(reference));
     }
 
-    let commitment = mediate_permit(
-        continuity.authority(),
-        traced_permit.permit,
-        effect,
-    )
-    .map_err(TracedMediationError::Mediation)?;
+    let commitment = mediate_permit(continuity.authority(), traced_permit.permit, effect)
+        .map_err(TracedMediationError::Mediation)?;
     continuity.mediated.insert(reference.clone());
 
     Ok(TracedMediatedCommitment {
@@ -811,15 +867,26 @@ impl TracedExerciseConfirmation {
     }
 }
 
+/// Error del adaptador interno que enlaza el `ExerciseRef` real con su decisión
+/// antes de delegar en el ejecutor material.
+#[derive(Debug, PartialEq, Eq)]
+pub enum TracedAdapterError<E> {
+    TraceLinkConflict {
+        exercise: ExerciseRef,
+        existing: DecisionTraceRef,
+        presented: DecisionTraceRef,
+    },
+    Adapter(E),
+}
+
 #[derive(Debug, PartialEq, Eq)]
 pub enum TracedExecutionError<E> {
     UnknownDecisionTrace(DecisionTraceRef),
     DecisionNotMediated(DecisionTraceRef),
     DecisionBindingMismatch(DecisionTraceRef),
-    ExerciseReservationConflict(String),
     Execution {
         decision_trace: DecisionTraceRef,
-        error: ExecutionError<E>,
+        error: ExecutionError<TracedAdapterError<E>>,
     },
 }
 
@@ -835,76 +902,79 @@ fn trace_matches_commitment(
         && trace.context() == commitment.context()
 }
 
+struct LinkingExecutor<'a, A: EffectExecutor> {
+    inner: &'a mut A,
+    links: &'a mut BTreeMap<String, DecisionTraceRef>,
+    decision_trace: DecisionTraceRef,
+}
+
+impl<A: EffectExecutor> EffectExecutor for LinkingExecutor<'_, A> {
+    type Error = TracedAdapterError<A::Error>;
+
+    fn execute(&mut self, request: &ExecutionRequest<'_>) -> Result<(), Self::Error> {
+        let key = request.exercise().id().as_str().to_owned();
+        if let Some(existing) = self.links.get(&key) {
+            if existing != &self.decision_trace {
+                return Err(TracedAdapterError::TraceLinkConflict {
+                    exercise: request.exercise().clone(),
+                    existing: existing.clone(),
+                    presented: self.decision_trace.clone(),
+                });
+            }
+        } else {
+            self.links.insert(key, self.decision_trace.clone());
+        }
+        self.inner.execute(request).map_err(TracedAdapterError::Adapter)
+    }
+}
+
 /// Única entrada pública de ejecución protegida de R1-5.
 ///
-/// Antes de delegar en R1-4 reserva de forma determinista el enlace causal del
-/// próximo `ExerciseRef`. Si la ejecución falla antes del despacho la reserva se
-/// elimina; si el adaptador interrumpe la llamada después de `DispatchCommitted`,
-/// el enlace ya existe y no depende de una actualización posterior al efecto.
+/// La operación no predice `ExerciseRef`. El enlace causal se registra usando
+/// la referencia real que R1-4 ya ha inscrito como `DispatchCommitted`, dentro
+/// del adaptador interno de enlace y antes de delegar al ejecutor material. Por
+/// ello, si el ejecutor entra en pánico después de recibir la solicitud, el
+/// vínculo `ExerciseRef → DecisionTraceRef` ya existe.
 pub fn execute_traced_mediated<A: EffectExecutor>(
     continuity: &mut ProtectedDecisionContinuity,
     traced_commitment: TracedMediatedCommitment,
     adapter: &mut A,
 ) -> Result<TracedExerciseConfirmation, TracedExecutionError<A::Error>> {
     let reference = traced_commitment.decision_trace.clone();
-    let trace = continuity
-        .decision_trace(&reference)
-        .ok_or_else(|| TracedExecutionError::UnknownDecisionTrace(reference.clone()))?;
-    if !continuity.is_mediated(&reference) {
-        return Err(TracedExecutionError::DecisionNotMediated(reference));
-    }
-    if !trace_matches_commitment(trace, &traced_commitment.commitment) {
-        return Err(TracedExecutionError::DecisionBindingMismatch(reference));
+    {
+        let trace = continuity
+            .decision_trace(&reference)
+            .ok_or_else(|| TracedExecutionError::UnknownDecisionTrace(reference.clone()))?;
+        if !continuity.is_mediated(&reference) {
+            return Err(TracedExecutionError::DecisionNotMediated(reference));
+        }
+        if !trace_matches_commitment(trace, &traced_commitment.commitment) {
+            return Err(TracedExecutionError::DecisionBindingMismatch(reference));
+        }
     }
 
-    let exercise_key = continuity.next_exercise_key();
-    if continuity.exercise_links.contains_key(&exercise_key) {
-        return Err(TracedExecutionError::ExerciseReservationConflict(exercise_key));
-    }
-    continuity
-        .exercise_links
-        .insert(exercise_key.clone(), reference.clone());
-    let dispatches_before = continuity.dispatch_count();
+    let result = {
+        let execution = &mut continuity.execution;
+        let links = &mut continuity.exercise_links;
+        let mut linking = LinkingExecutor {
+            inner: adapter,
+            links,
+            decision_trace: reference.clone(),
+        };
+        execute_mediated(execution, traced_commitment.commitment, &mut linking)
+    };
 
-    match execute_mediated(
-        &mut continuity.execution,
-        traced_commitment.commitment,
-        adapter,
-    ) {
-        Ok(confirmation) => {
-            let actual = confirmation.exercise().id().as_str();
-            if actual != exercise_key {
-                return Err(TracedExecutionError::ExerciseReservationConflict(
-                    actual.to_owned(),
-                ));
-            }
-            Ok(TracedExerciseConfirmation {
-                confirmation,
-                decision_trace: reference,
-            })
-        }
-        Err(error) => {
-            if continuity.dispatch_count() == dispatches_before {
-                continuity.exercise_links.remove(&exercise_key);
-            }
-            Err(TracedExecutionError::Execution {
-                decision_trace: reference,
-                error,
-            })
-        }
+    match result {
+        Ok(confirmation) => Ok(TracedExerciseConfirmation {
+            confirmation,
+            decision_trace: reference,
+        }),
+        Err(error) => Err(TracedExecutionError::Execution {
+            decision_trace: reference,
+            error,
+        }),
     }
 }
-
-/// La solicitud cruda de R1-4 no se expone como vía pública de ejecución de
-/// R1-5. El tipo sigue siendo visible para implementar el puerto, pero sólo la
-/// envolvente trazada puede producir una instancia real durante el despacho.
-pub trait TracedEffectExecutor: EffectExecutor {}
-
-impl<T: EffectExecutor> TracedEffectExecutor for T {}
-
-/// Firma de solo lectura útil para adaptadores que quieran expresar
-/// explícitamente que reciben una solicitud gobernada ya sellada.
-pub type TracedExecutionRequest<'a> = ExecutionRequest<'a>;
 
 #[cfg(test)]
 mod tests {
@@ -917,14 +987,6 @@ mod tests {
             decimal_successor("999999999999999999999999999999999999"),
             "1000000000000000000000000000000000000"
         );
-    }
-
-    #[test]
-    fn empty_execution_continuity_predicts_first_exercise_without_a_clock() {
-        let continuity = ProtectedDecisionContinuity::from_authority(
-            AuthorityContinuity::uninhabited(),
-        );
-        assert_eq!(continuity.next_exercise_key(), "exercise:1");
     }
 
     #[test]
