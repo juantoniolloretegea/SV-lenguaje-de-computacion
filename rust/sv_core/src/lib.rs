@@ -15,6 +15,7 @@ pub mod frame;
 pub mod ir;
 pub mod nat;
 pub mod requirements;
+pub mod requirements_bridge;
 pub mod requirements_conflict;
 pub mod resolution;
 mod wellformed;
@@ -42,9 +43,13 @@ pub use ir::{
 };
 pub use nat::{InvalidNat, Nat};
 pub use requirements::{
-    aggregate_requirement_checks, CheckAggregationError, CheckFormationError, CoreRequirementKind,
-    InvalidRequirementDescriptor, InvalidRequirementSet, RequirementCheck, RequirementClass,
-    RequirementDescriptor, RequirementSet, VerifierApplicability,
+    CheckFormationError, CoreRequirementKind, InvalidRequirementDescriptor, InvalidRequirementSet,
+    RequirementCheck, RequirementClass, RequirementDescriptor, RequirementSet,
+    VerifierApplicability,
+};
+pub use requirements_bridge::{
+    aggregate_resolved_requirement_results, resolve_requirement_result, ResolvedAggregationError,
+    ResolvedRequirementResult,
 };
 pub use requirements_conflict::{
     resolve_requirement_checks, resolve_requirement_checks_without_rule, ConflictResolutionRule,
