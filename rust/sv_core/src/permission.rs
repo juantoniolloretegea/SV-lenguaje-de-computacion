@@ -1,7 +1,9 @@
 //! Decisión sellada de permiso para R1-4.
 //!
-//! Esta primera unidad materializa únicamente la frontera de decisión. No
-//! ejecuta efectos protegidos ni hace productiva ninguna clase T-*.
+//! La unidad 1 materializa la frontera de decisión. La unidad 2 refuerza el
+//! sello con las ligaduras gobernantes que deberán seguir vigentes en el punto
+//! de mediación. Ninguna de las dos unidades ejecuta por sí misma un efecto
+//! protegido.
 //!
 //! Un resultado técnico nominal no puede convertirse en permiso:
 //!
@@ -17,15 +19,24 @@
 //! let _ = Permit::new();
 //! ```
 
+use std::collections::{BTreeMap, BTreeSet};
+
 use crate::authority::transitions::AuthorityContinuity;
-use crate::authority::{AccumulationContract, EffectDescriptor};
+use crate::authority::{AccumulationContract, ConstitutedAuthority, EffectDescriptor, FormDescriptor};
 use crate::control::{
-    AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef, EffectFamilyRef, EffectRef, FormRef,
-    GovernedObjectRef, TransitionClass,
+    ApplicabilityRuleRef, AuthorityHolderRef, AuthorityRef, CheckResult, ContextRef,
+    EffectFamilyRef, EffectRef, FormRef, GovernedObjectRef, RequirementRef, TransitionClass,
+    VerifierFamilyRef, VerifierRef,
 };
+use crate::requirements::RequirementSet;
 use crate::requirements_bridge::ResolvedRequirementResult;
 use crate::requirements_coverage::{
     aggregate_covered_requirement_results, CoveredAggregationError,
+};
+use crate::requirements_reuse::{
+    reuse_historical_requirement_result, seal_historical_qualified_result,
+    HistoricalQualificationError, HistoricalQualifiedRequirementResult, ReuseDisposition,
+    ReuseRejectionReason,
 };
 
 #[derive(Debug, PartialEq, Eq)]
@@ -40,9 +51,78 @@ struct PermitFormBinding {
     reference: FormRef,
     transition_class: TransitionClass,
     effect_family: EffectFamilyRef,
-    context: ContextRef,
+    context_bindings: BTreeSet<ContextRef>,
+    selected_context: ContextRef,
     required_authority: AuthorityRef,
     accumulation: AccumulationContract,
+}
+
+#[derive(Debug, PartialEq, Eq)]
+struct PermitApplicabilitySnapshot {
+    verifier_family: VerifierFamilyRef,
+    context: ContextRef,
+    applicability_rule: ApplicabilityRuleRef,
+}
+
+fn historical_results(
+    requirements: &RequirementSet,
+    resolved_results: &[ResolvedRequirementResult],
+) -> Result<
+    BTreeMap<RequirementRef, HistoricalQualifiedRequirementResult>,
+    PermitDecisionError,
+> {
+    let mut historical = BTreeMap::new();
+
+    for result in resolved_results {
+        let requirement = result.requirement();
+        let descriptor = requirements.requirement(requirement).ok_or_else(|| {
+            PermitDecisionError::MissingRequirementForHistoricalSeal(requirement.clone())
+        })?;
+        let sealed = seal_historical_qualified_result(descriptor, result)
+            .map_err(PermitDecisionError::HistoricalQualification)?;
+        historical.insert(requirement.clone(), sealed);
+    }
+
+    Ok(historical)
+}
+
+fn applicability_snapshots(
+    continuity: &AuthorityContinuity,
+    requirements: &RequirementSet,
+    resolved_results: &[ResolvedRequirementResult],
+) -> Result<
+    BTreeMap<(RequirementRef, VerifierRef), PermitApplicabilitySnapshot>,
+    PermitDecisionError,
+> {
+    let mut snapshots = BTreeMap::new();
+
+    for result in resolved_results {
+        let requirement = result.requirement();
+        let descriptor = requirements.requirement(requirement).ok_or_else(|| {
+            PermitDecisionError::MissingRequirementForApplicability(requirement.clone())
+        })?;
+
+        for verifier in result.participating_verifiers() {
+            let applicability = continuity
+                .verifier_applicability(requirement, verifier, descriptor.context())
+                .ok_or_else(|| PermitDecisionError::MissingConstitutedApplicability {
+                    requirement: requirement.clone(),
+                    verifier: verifier.clone(),
+                    context: descriptor.context().clone(),
+                })?;
+
+            snapshots.insert(
+                (requirement.clone(), verifier.clone()),
+                PermitApplicabilitySnapshot {
+                    verifier_family: applicability.verifier_family().clone(),
+                    context: applicability.context().clone(),
+                    applicability_rule: applicability.applicability_rule().clone(),
+                },
+            );
+        }
+    }
+
+    Ok(snapshots)
 }
 
 /// Permiso positivo sellado para un acto protegido concreto.
@@ -52,17 +132,17 @@ struct PermitFormBinding {
 /// forma, la autoridad y `Req`, y de obtener un resultado técnico final `D-A`
 /// mediante la agregación gobernada de R1-3.
 ///
-/// Esta unidad no ofrece todavía una operación que consuma el permiso para
-/// ejecutar un efecto. La mediación productiva pertenece a una unidad posterior
-/// de R1-4.
+/// Para la mediación se conservan resultados históricos ya cualificados por 3D
+/// y las relaciones `Applicable(V,q,C)` de los verificadores participantes. El
+/// sellado histórico no presume vigencia: la unidad 2 deberá reutilizar cada
+/// resultado mediante la regla constituida de 3E.
 #[derive(Debug, PartialEq, Eq)]
 pub struct Permit {
     authority: PermitAuthorityBinding,
     form: PermitFormBinding,
     effect: EffectDescriptor,
-    requirement_form: FormRef,
-    requirement_effect_family: EffectFamilyRef,
-    requirement_context: ContextRef,
+    historical_results: BTreeMap<RequirementRef, HistoricalQualifiedRequirementResult>,
+    applicabilities: BTreeMap<(RequirementRef, VerifierRef), PermitApplicabilitySnapshot>,
     technical_result: CheckResult,
 }
 
@@ -119,22 +199,22 @@ impl Permit {
 
     #[inline]
     pub fn context(&self) -> &ContextRef {
-        &self.form.context
+        &self.form.selected_context
     }
 
     #[inline]
     pub fn requirement_form(&self) -> &FormRef {
-        &self.requirement_form
+        &self.form.reference
     }
 
     #[inline]
     pub fn requirement_effect_family(&self) -> &EffectFamilyRef {
-        &self.requirement_effect_family
+        self.effect.family()
     }
 
     #[inline]
     pub fn requirement_context(&self) -> &ContextRef {
-        &self.requirement_context
+        self.effect.context()
     }
 
     #[inline]
@@ -145,6 +225,91 @@ impl Permit {
     #[inline]
     pub fn accumulation(&self) -> &AccumulationContract {
         &self.form.accumulation
+    }
+
+    #[inline]
+    pub(crate) fn matches_current_form(&self, form: &FormDescriptor) -> bool {
+        self.form.reference == *form.reference()
+            && self.form.transition_class == form.transition_class()
+            && self.form.effect_family == *form.effect_family()
+            && self.form.context_bindings == form.context_bindings().cloned().collect()
+            && form.context_bindings().any(|context| context == &self.form.selected_context)
+            && form.requires_authority() == Some(&self.form.required_authority)
+            && self.form.accumulation == *form.accumulation()
+    }
+
+    #[inline]
+    pub(crate) fn matches_current_authority(&self, authority: &ConstitutedAuthority) -> bool {
+        self.authority.reference == *authority.reference()
+            && self.authority.holder == *authority.holder()
+            && self.authority.context == *authority.context()
+    }
+
+    #[inline]
+    pub(crate) fn historical_requirement_count(&self) -> usize {
+        self.historical_results.len()
+    }
+
+    #[inline]
+    pub(crate) fn has_historical_requirement(&self, requirement: &RequirementRef) -> bool {
+        self.historical_results.contains_key(requirement)
+    }
+
+    pub(crate) fn first_non_reusable_requirement(
+        &self,
+        requirements: &RequirementSet,
+    ) -> Option<(RequirementRef, Option<ReuseRejectionReason>)> {
+        for descriptor in requirements.iter() {
+            let Some(historical) = self.historical_results.get(descriptor.reference()) else {
+                return Some((descriptor.reference().clone(), None));
+            };
+
+            let assessment = match reuse_historical_requirement_result(descriptor, historical) {
+                Ok(assessment) => assessment,
+                Err(_) => return Some((descriptor.reference().clone(), None)),
+            };
+
+            if assessment.disposition() != ReuseDisposition::Reused
+                || assessment.result() != CheckResult::Accredited
+            {
+                return Some((descriptor.reference().clone(), assessment.rejection_reason()));
+            }
+        }
+
+        None
+    }
+
+    pub(crate) fn first_changed_applicability(
+        &self,
+        continuity: &AuthorityContinuity,
+    ) -> Option<(RequirementRef, VerifierRef, ContextRef)> {
+        for ((requirement, verifier), snapshot) in &self.applicabilities {
+            let Some(current) = continuity.verifier_applicability(
+                requirement,
+                verifier,
+                &snapshot.context,
+            ) else {
+                return Some((
+                    requirement.clone(),
+                    verifier.clone(),
+                    snapshot.context.clone(),
+                ));
+            };
+
+            if current.verifier_family() != &snapshot.verifier_family
+                || current.requirement() != requirement
+                || current.context() != &snapshot.context
+                || current.applicability_rule() != &snapshot.applicability_rule
+            {
+                return Some((
+                    requirement.clone(),
+                    verifier.clone(),
+                    snapshot.context.clone(),
+                ));
+            }
+        }
+
+        None
     }
 }
 
@@ -187,6 +352,14 @@ pub enum PermitDecisionError {
         effect_family: EffectFamilyRef,
         context: ContextRef,
     },
+    MissingRequirementForHistoricalSeal(RequirementRef),
+    HistoricalQualification(HistoricalQualificationError),
+    MissingRequirementForApplicability(RequirementRef),
+    MissingConstitutedApplicability {
+        requirement: RequirementRef,
+        verifier: VerifierRef,
+        context: ContextRef,
+    },
     InvalidGovernedResult(CoveredAggregationError),
 }
 
@@ -204,8 +377,10 @@ impl From<CoveredAggregationError> for PermitDecisionError {
 /// vuelve a obtener el resultado final de R1-3 para la ligadura exacta del acto.
 ///
 /// Un `D-A` final es necesario, pero sólo produce `Permit` si además coinciden
-/// forma, familia, contexto, autoridad requerida y alcance constituido del
-/// efecto. `D-R` y `D-N` producen ausencia cerrada de permiso positivo.
+/// forma, familia, contexto, autoridad requerida, alcance constituido del
+/// efecto y las relaciones de aplicabilidad constituidas de los verificadores
+/// participantes. Los resultados por obligación se sellan como resultados
+/// históricos cualificados para que la mediación posterior deba pasar por 3E.
 pub fn decide_permit(
     continuity: &AuthorityContinuity,
     form_reference: &FormRef,
@@ -255,25 +430,31 @@ pub fn decide_permit(
         CheckResult::NotVerifiable => Ok(PermitDecision::NotGranted(
             PermitRejection::NotVerifiableRequirements,
         )),
-        CheckResult::Accredited => Ok(PermitDecision::Granted(Permit {
-            authority: PermitAuthorityBinding {
-                reference: authority.reference().clone(),
-                holder: authority.holder().clone(),
-                context: authority.context().clone(),
-            },
-            form: PermitFormBinding {
-                reference: form.reference().clone(),
-                transition_class: form.transition_class(),
-                effect_family: form.effect_family().clone(),
-                context: effect.context().clone(),
-                required_authority: required_authority.clone(),
-                accumulation: form.accumulation().clone(),
-            },
-            effect: effect.clone(),
-            requirement_form: requirements.form().clone(),
-            requirement_effect_family: requirements.effect_family().clone(),
-            requirement_context: requirements.context().clone(),
-            technical_result,
-        })),
+        CheckResult::Accredited => {
+            let historical_results = historical_results(requirements, resolved_results)?;
+            let applicabilities =
+                applicability_snapshots(continuity, requirements, resolved_results)?;
+
+            Ok(PermitDecision::Granted(Permit {
+                authority: PermitAuthorityBinding {
+                    reference: authority.reference().clone(),
+                    holder: authority.holder().clone(),
+                    context: authority.context().clone(),
+                },
+                form: PermitFormBinding {
+                    reference: form.reference().clone(),
+                    transition_class: form.transition_class(),
+                    effect_family: form.effect_family().clone(),
+                    context_bindings: form.context_bindings().cloned().collect(),
+                    selected_context: effect.context().clone(),
+                    required_authority: required_authority.clone(),
+                    accumulation: form.accumulation().clone(),
+                },
+                effect: effect.clone(),
+                historical_results,
+                applicabilities,
+                technical_result,
+            }))
+        }
     }
 }

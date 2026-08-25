@@ -13,6 +13,7 @@ mod equivalence;
 mod frontend;
 pub mod frame;
 pub mod ir;
+pub mod mediation;
 pub mod nat;
 pub mod permission;
 pub mod requirements;
@@ -46,6 +47,7 @@ pub use ir::{
     IrLevel, IrObject, IrObjectKind, IrOperation, IrOperationKind, IrProgram, IrQueryContext,
     IrSupervisableTarget,
 };
+pub use mediation::{mediate_permit, MediatedEffectCommitment, MediationError};
 pub use nat::{InvalidNat, Nat};
 pub use permission::{decide_permit, Permit, PermitDecision, PermitDecisionError, PermitRejection};
 pub use requirements::{
@@ -157,7 +159,7 @@ pub struct InvalidTriValue(pub u8);
 impl TryFrom<u8> for Tri {
     type Error = InvalidTriValue;
 
-    fn try_from(value: u8) -> Result<Self, Self::Error> {
+    fn try_from(value: u8) -> Result<Self, InvalidTriValue> {
         match value {
             0 => Ok(Self::Zero),
             1 => Ok(Self::One),
