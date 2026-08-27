@@ -135,7 +135,7 @@ jobs:
 
           grep -q 'data-status="pass"' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"valid_ok":12' artifacts/r0-browser/browser-parity-dom.html
-          grep -q '"invalid_ok":66' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"invalid_ok":67' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |
