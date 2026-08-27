@@ -1,0 +1,22 @@
+{
+  "grammar_version": "0.2",
+  "ir_version": "0.3",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "Sí_1",
+          "Niño",
+          "PINGÜINO"
+        ]
+      },
+      "level": "N0",
+      "name": "Señal_2",
+      "type": "Codomain"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "identificadores_espanol.svp",
+  "source_sha256": "1dc9004944635c9ac72226e0802f9da59c39f0afb9359e2ecf1256e5edc09253"
+}

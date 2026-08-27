@@ -1,4 +1,5 @@
 use crate::ir::construction;
+use crate::identifier_profile::{is_identifier_continue, is_identifier_start, is_reserved_word};
 use crate::{
     AdmissibilityState, IrObjectKind, IrOperationKind, IrProgram, IrQueryContext,
     IrSupervisableTarget, Nat, Tri,
@@ -35,7 +36,9 @@ fn tokenize(source: &str) -> Result<Vec<Token>, FrontendError> {
     let mut i = 0usize;
     while i < bytes.len() {
         let b = bytes[i];
-        if b.is_ascii_whitespace() {
+
+        // Espacio léxico cerrado: SP, HT, CR y LF.
+        if matches!(b, b' ' | b'\t' | b'\r' | b'\n') {
             i += 1;
             continue;
         }
@@ -77,26 +80,37 @@ fn tokenize(source: &str) -> Result<Vec<Token>, FrontendError> {
             ));
             continue;
         }
-        if b.is_ascii_alphabetic() || b == b'_' {
+
+        let ch = source[i..]
+            .chars()
+            .next()
+            .expect("i apunta a una frontera UTF-8 válida");
+        if is_identifier_start(ch) {
             let start = i;
-            i += 1;
-            while i < bytes.len()
-                && (bytes[i].is_ascii_alphanumeric() || bytes[i] == b'_')
-            {
-                i += 1;
+            i += ch.len_utf8();
+            while i < bytes.len() {
+                let next = source[i..]
+                    .chars()
+                    .next()
+                    .expect("i apunta a una frontera UTF-8 válida");
+                if !is_identifier_continue(next) {
+                    break;
+                }
+                i += next.len_utf8();
             }
-            out.push(Token::Word(
-                std::str::from_utf8(&bytes[start..i]).unwrap().to_owned(),
-            ));
+            out.push(Token::Word(source[start..i].to_owned()));
             continue;
         }
-        let ch = b as char;
-        if "{}[]();:,=.".contains(ch) {
+
+        if ch.is_ascii() && "{}[]();:,=.".contains(ch) {
             out.push(Token::Sym(ch));
             i += 1;
             continue;
         }
-        return Err(FrontendError::UnexpectedToken(ch.to_string()));
+        return Err(FrontendError::UnexpectedToken(format!(
+            "carácter léxico no admitido U+{:04X}",
+            ch as u32
+        )));
     }
     out.push(Token::Eof);
     Ok(out)
@@ -209,7 +223,7 @@ impl<'a> Parser<'a> {
         self.sym(';')?;
         self.word("role")?;
         self.sym(':')?;
-        let role = self.take_word()?;
+        let role = self.take_raw_word()?;
         self.sym(';')?;
         self.sym('}')?;
         let n = square_nat(&b)?;
@@ -336,7 +350,7 @@ impl<'a> Parser<'a> {
         self.sym(';')?;
         self.word("failure_symbol")?;
         self.sym(':')?;
-        let failure_symbol = self.take_word()?;
+        let failure_symbol = self.take_raw_word()?;
         self.sym(';')?;
         self.word("mapping")?;
         self.sym(':')?;
@@ -523,7 +537,7 @@ impl<'a> Parser<'a> {
         self.sym('{')?;
         self.word("kind")?;
         self.sym(':')?;
-        let kind = self.take_word()?;
+        let kind = self.take_raw_word()?;
         self.sym(';')?;
         let mut table = None;
         let mut constraints = None;
@@ -555,7 +569,7 @@ impl<'a> Parser<'a> {
         self.sym('{')?;
         self.word("kind")?;
         self.sym(':')?;
-        let kind = self.take_word()?;
+        let kind = self.take_raw_word()?;
         self.sym(';')?;
         let mut arity = None;
         let mut constraints = None;
@@ -599,7 +613,7 @@ impl<'a> Parser<'a> {
         self.sym(';')?;
         self.word("regime")?;
         self.sym(':')?;
-        let regime = self.take_word()?;
+        let regime = self.take_raw_word()?;
         self.sym(';')?;
         self.sym('}')?;
         self.objects.push(construction::object(
@@ -839,11 +853,11 @@ impl<'a> Parser<'a> {
         self.sym('{')?;
         self.word("query_type")?;
         self.sym(':')?;
-        let query_type = self.take_word()?;
+        let query_type = self.take_raw_word()?;
         self.sym(';')?;
         self.word("scope")?;
         self.sym(':')?;
-        let scope = self.take_word()?;
+        let scope = self.take_raw_word()?;
         self.sym(';')?;
         self.word("restrictions")?;
         self.sym(':')?;
@@ -865,7 +879,7 @@ impl<'a> Parser<'a> {
         self.word("let")?;
         let name = self.take_word()?;
         self.sym('=')?;
-        let first = self.take_word()?;
+        let first = self.take_raw_word()?;
         match first.as_str() {
             "evaluate" => {
                 self.sym('(')?;
@@ -932,7 +946,7 @@ impl<'a> Parser<'a> {
                 self.sym(',')?;
                 self.word("target")?;
                 self.sym(':')?;
-                let variant = self.take_word()?;
+                let variant = self.take_raw_word()?;
                 self.sym('(')?;
                 let reference = self.take_word()?;
                 self.sym(')')?;
@@ -990,6 +1004,11 @@ impl<'a> Parser<'a> {
                 ));
             }
             source => {
+                if is_reserved_word(source) {
+                    return Err(FrontendError::UnexpectedToken(format!(
+                        "palabra reservada donde se esperaba identificador: {source}"
+                    )));
+                }
                 self.sym('.')?;
                 let field = self.take_word()?;
                 self.sym(';')?;
@@ -1006,7 +1025,7 @@ impl<'a> Parser<'a> {
     }
 
     fn query_context(&mut self) -> Result<IrQueryContext, FrontendError> {
-        let variant = self.take_word()?;
+        let variant = self.take_raw_word()?;
         self.sym('(')?;
         let context = match variant.as_str() {
             "PointEval" => IrQueryContext::PointEval {
@@ -1248,7 +1267,7 @@ impl<'a> Parser<'a> {
     }
 
     fn take_tri(&mut self) -> Result<Tri, FrontendError> {
-        let label = self.take_word()?;
+        let label = self.take_raw_word()?;
         match label.as_str() {
             "Zero" => Ok(Tri::Zero),
             "One" => Ok(Tri::One),
@@ -1271,7 +1290,7 @@ impl<'a> Parser<'a> {
         }
     }
 
-    fn take_word(&mut self) -> Result<String, FrontendError> {
+    fn take_raw_word(&mut self) -> Result<String, FrontendError> {
         match self.tokens.get(self.pos).cloned() {
             Some(Token::Word(value)) => {
                 self.pos += 1;
@@ -1279,6 +1298,17 @@ impl<'a> Parser<'a> {
             }
             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
             Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+        }
+    }
+
+    fn take_word(&mut self) -> Result<String, FrontendError> {
+        let value = self.take_raw_word()?;
+        if is_reserved_word(&value) {
+            Err(FrontendError::UnexpectedToken(format!(
+                "palabra reservada donde se esperaba identificador: {value}"
+            )))
+        } else {
+            Ok(value)
         }
     }
 
@@ -1305,7 +1335,7 @@ impl<'a> Parser<'a> {
     }
 
     fn word(&mut self, expected: &str) -> Result<(), FrontendError> {
-        let got = self.take_word()?;
+        let got = self.take_raw_word()?;
         if got == expected {
             Ok(())
         } else {
@@ -1470,6 +1500,7 @@ mod tests {
             ("compose_basic.svp", include_str!("../../../tests/conformance/valid/compose_basic.svp")),
             ("frame_cell_spec_compartida_valida.svp", include_str!("../../../tests/conformance/valid/frame_cell_spec_compartida_valida.svp")),
             ("gate_table.svp", include_str!("../../../tests/conformance/valid/gate_table.svp")),
+            ("identificadores_espanol.svp", include_str!("../../../tests/conformance/valid/identificadores_espanol.svp")),
             ("query_context_all_variants.svp", include_str!("../../../tests/conformance/valid/query_context_all_variants.svp")),
             ("resolve_projection.svp", include_str!("../../../tests/conformance/valid/resolve_projection.svp")),
             ("supervise_systemtarget_valido.svp", include_str!("../../../tests/conformance/valid/supervise_systemtarget_valido.svp")),
