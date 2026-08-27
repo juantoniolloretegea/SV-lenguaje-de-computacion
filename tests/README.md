@@ -98,6 +98,7 @@ Las propiedades que dependan de infraestructura externa al proceso deberán ejer
 | `cell_basic.svp` | célula simple, estado y evaluación |
 | `compose_basic.svp` | composición con relación semántica y patrón declarados |
 | `gate_table.svp` | compuerta con tabla explícita de admisibilidad |
+| `identificadores_espanol.svp` | identificadores del perfil léxico español con tildes, `ñ`, `ü`, dígitos y guion bajo en continuación |
 | `query_context_all_variants.svp` | cinco variantes vigentes de `QueryContext` |
 | `resolve_projection.svp` | resolución de `U` y proyección estructural de `resolved_to` |
 | `supervise_targets.svp` | supervisión con objetos supervisables tipados |
@@ -106,6 +107,8 @@ Las propiedades que dependan de infraestructura externa al proceso deberán ejer
 | `trajectory_alternance_valid.svp` | alternancia constitutiva de `TrajectoryEntry` |
 
 ## 6. Casos inválidos
+
+La batería incluye además casos léxicos negativos para guion bajo inicial, palabras reservadas en posición de identificador, marcas combinantes, alfabetos externos al perfil, letras latinas no enumeradas y dígitos no ASCII. Todos ellos deben rechazarse antes de constituir una IR válida.
 
 La relación completa de casos inválidos y códigos esperados se mantiene en `EXPECTED_INVALID_CODES`, dentro de `tests/run_conformance.py`. Esa tabla es la referencia ejecutable para la correspondencia caso → diagnóstico.
 

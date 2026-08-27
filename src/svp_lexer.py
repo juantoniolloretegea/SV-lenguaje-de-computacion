@@ -13,6 +13,7 @@ from enum import Enum, auto
 from typing import List
 
 from svp_errors import SVPError, E001
+from svp_identifier_profile import is_identifier_start, is_identifier_continue
 
 
 class TT(Enum):
@@ -300,22 +301,23 @@ def tokenize(source: str, filename: str = "<stdin>") -> List[Token]:
             col += 1
             continue
 
-        # Numbers
-        if ch.isdigit():
+        # Números naturales: exclusivamente dígitos ASCII 0..9.
+        if "0" <= ch <= "9":
             start_col = col
             num = []
-            while i < n and source[i].isdigit():
+            while i < n and "0" <= source[i] <= "9":
                 num.append(source[i])
                 i += 1
                 col += 1
             tokens.append(Token(TT.NAT, "".join(num), line, start_col))
             continue
 
-        # Identifiers and keywords
-        if ch.isalpha() or ch == "_":
+        # Identificadores y palabras reservadas. El inicio exige una letra del
+        # perfil cerrado; el guion bajo sólo puede aparecer en continuación.
+        if is_identifier_start(ch):
             start_col = col
             word = []
-            while i < n and (source[i].isalnum() or source[i] == "_"):
+            while i < n and is_identifier_continue(source[i]):
                 word.append(source[i])
                 i += 1
                 col += 1

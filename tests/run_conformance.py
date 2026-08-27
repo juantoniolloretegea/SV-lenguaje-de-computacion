@@ -20,6 +20,12 @@ GRAMMAR_VERSION = "0.2"
 SERIALIZER_VERSION = "0.1.0"
 
 EXPECTED_INVALID_CODES = {
+    "identificador_palabra_reservada.svp": "E001",
+    "identificador_guion_bajo_inicial.svp": "E001",
+    "identificador_marca_combinante.svp": "E001",
+    "identificador_alfabeto_fuera_perfil.svp": "E001",
+    "identificador_latino_fuera_perfil.svp": "E001",
+    "nat_digitos_no_ascii.svp": "E001",
     "admissibility_table_incompleta.svp": "E009",
     "admissibility_table_output_fuera_codominio.svp": "E011",
     "admissibility_spec_estados_legacy.svp": "E110",

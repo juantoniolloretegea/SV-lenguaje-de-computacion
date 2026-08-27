@@ -35,6 +35,7 @@ pub mod decision_trace;
 mod equivalence;
 mod execution;
 mod frontend;
+mod identifier_profile;
 pub mod frame;
 pub mod ir;
 mod mediation;

@@ -31,7 +31,7 @@ La v0.2 baja a la IR canónica v0.3.
 
 ## 2. Objetivos de la revisión
 
-Esta versión corrige tres fronteras observables del frontend:
+Esta versión corrige tres fronteras observables de la etapa frontal:
 
 1. separa los estados de admisibilidad técnica del valor semántico `Tri.U`;
 2. obliga a que `resolve` identifique una ocurrencia constituida de `U` mediante estado y posición;
@@ -244,7 +244,7 @@ Esta versión no introduce:
 
 - nuevos literales de `Tri`;
 - `max` o `min` en la superficie;
-- authoring superficial completo de `ConflictOperator`;
+- declaración superficial completa de `ConflictOperator`;
 - primitivas de tiempo, reloj o UTC;
 - `deployment_profile` como construcción del Lenguaje;
 - TCB, raíz de confianza o atestación como tipos de IR;
@@ -277,4 +277,10 @@ Las demás construcciones v0.1 permanecen compatibles mientras satisfagan los ju
 
 ## 10. Dictamen técnico
 
-La gramática v0.2 mantiene la superficie austera del Lenguaje SV y corrige exclusivamente las fronteras necesarias para impedir que un fallo técnico se convierta en semántica ternaria, que una revisión opere sobre un `U` abstracto sin identidad y que un `Frame` pueda declarar resultados ajenos a su propio cierre estructural o causal.
+La gramática v0.2 mantiene la superficie austera del Lenguaje SV y corrige las fronteras necesarias para impedir que un fallo técnico se convierta en semántica ternaria, que una revisión opere sobre un `U` abstracto sin identidad y que un `Frame` pueda declarar resultados ajenos a su propio cierre estructural o causal. El perfil léxico complementario de la sección 11 cierra además las primitivas heredadas `letter` y `digit` sin modificar la semántica.
+
+---
+
+## 11. Perfil léxico complementario
+
+Las primitivas `letter` y `digit` heredadas de la Gramática v0.1 se interpretan conforme a `ADENDA_NORMATIVA_PERFIL_LEXICO_GRAMATICA_SVP_0_2_2026_08_27.md`. La adenda cierra el repertorio de identificadores y naturales sin modificar `Tri`, la IR 0.3 ni las palabras reservadas.
