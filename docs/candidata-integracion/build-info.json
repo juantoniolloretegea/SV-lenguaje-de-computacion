@@ -9,8 +9,8 @@
   "laboratory_commit": "fa43dc49adf9da8cff72d1a03c981c77d27ed93f",
   "laboratory_run": 33207042268,
   "evidence_artifact_digest": "sha256:0542d58430f530c8fb3ca47c7a089b9dd0a4d7a365b14a8f52c50dcd12dd3568",
-  "wasm_sha256": "03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03",
-  "wasm_bytes": 377812,
+  "wasm_sha256": "95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3",
+  "wasm_bytes": 378956,
   "grammar": "0.2",
   "ir": "0.3",
   "projection": "0.1.0",
@@ -30,5 +30,8 @@
     "cross_file_text_or_token_concatenation": false,
     "global_wellformedness_after_canonical_merge": true
   },
-  "integration_base": "79311c516288537e625f444f13826ed86227cca2"
+  "integration_base": "79311c516288537e625f444f13826ed86227cca2",
+  "wasm_source_head": "6c2fcc7f5a771eb0ce89acf959e2ad4ae1874750",
+  "wasm_evidence_run": 33271320776,
+  "closed_domain_browser_probes": 6
 }
