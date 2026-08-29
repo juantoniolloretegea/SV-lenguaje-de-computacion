@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Language Beta History</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="info.css">
+</head>
+<body data-source-profile="en">
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SV · BETA HISTORY</p>
+      <h1>SV Language Beta History</h1>
+      <p class="subtitle">Record of experimental versions, stable incorporation and pending work.</p>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <nav class="doc-nav" aria-label="Beta history navigation">
+      <a href="./?ui=en">Stable environment</a>
+      <a href="features.html">Features</a>
+      <a href="programming-metrics.html">Programming and metrics</a>
+      <a href="seguridad-b2.html">Security</a>
+      <a href="diagnosticos.html">Diagnostics</a>
+    </nav>
+
+    <section class="doc-section">
+      <h2>1. Recording rule</h2>
+      <p>The <code>B1</code>, <code>B2</code>, <code>B3</code>… series identifies experimental versions and does not replace normative versioning of the Language. A Beta may be public and functional before becoming part of the stable realization.</p>
+      <p>Stable incorporation of a Beta is recorded separately from its experimental existence and does not remove proposals or debts that remain open.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>2. Beta B1</h2>
+      <div class="doc-table-wrap"><table class="doc-table"><tbody>
+        <tr><th>Date</th><td>28/08/2026</td></tr>
+        <tr><th>Status</th><td><span class="status-badge">Historical · experimental · not incorporated</span></td></tr>
+        <tr><th>Canonical grammar</th><td>0.2</td></tr>
+        <tr><th>IR</th><td>0.3</td></tr>
+        <tr><th>Source profiles</th><td>SVP-ES · SVP-EN</td></tr>
+        <tr><th>WASM</th><td>355221 bytes</td></tr>
+        <tr><th>WASM SHA-256</th><td><code>da37c14e0b5f4e8b0a66756427e7ddc006b7823a0b45737a35fdeeaef3ac3754</code></td></tr>
+        <tr><th>Result</th><td>First public bilingual experimental distribution with explicit source-profile selection.</td></tr>
+        <tr><th>Superseded by</th><td><strong>Beta B2</strong></td></tr>
+      </tbody></table></div>
+    </section>
+
+    <section class="doc-section">
+      <h2>3. Beta B2</h2>
+      <div class="doc-table-wrap"><table class="doc-table"><tbody>
+        <tr><th>Experimental implementation</th><td>28/08/2026</td></tr>
+        <tr><th>Technical incorporation into the stable realization</th><td>29/08/2026</td></tr>
+        <tr><th>Status</th><td><span class="status-badge">Technically incorporated · Quality record closure pending</span></td></tr>
+        <tr><th>Canonical grammar</th><td>0.2</td></tr>
+        <tr><th>IR</th><td>0.3</td></tr>
+        <tr><th>Projection</th><td>0.1.0</td></tr>
+        <tr><th>Source profiles</th><td>SVP-ES · SVP-EN</td></tr>
+        <tr><th>Experimental version</th><td><code>fa43dc49adf9da8cff72d1a03c981c77d27ed93f</code></td></tr>
+        <tr><th>B2 sovereign integration</th><td><code>9b9c890a609839ad4b00fa71ded5e373ea354112</code></td></tr>
+        <tr><th>Stable cut published after presentation adjustments</th><td><code>e1d1d33af497e800adaa9a7dcc6ebc6f18b838b5</code></td></tr>
+        <tr><th>WASM</th><td>377812 bytes</td></tr>
+        <tr><th>WASM SHA-256</th><td><code>03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03</code></td></tr>
+        <tr><th>Material change</th><td>Explicit ES/EN source profiles and assembly of independent-profile units, common canonicalization and subsequent global validation.</td></tr>
+      </tbody></table></div>
+
+      <h3>Incorporated capabilities</h3>
+      <ul>
+        <li>Explicit <code>SVP-ES</code>/<code>SVP-EN</code> selection, without autodetection.</li>
+        <li>One internal computational identity shared by both source profiles.</li>
+        <li>Assembly of independent-profile units without concatenating source text or lexical sequences.</li>
+        <li>Editor, example library, diagnostics, security, features and metrics in the public environment.</li>
+        <li>WebAssembly identity verified by byte length and hash.</li>
+      </ul>
+
+      <h3>Inherited debt not attributable to B2</h3>
+      <p>B2 incorporation does not by itself resolve the inherited grammatical debt recorded as <code>DFL-007</code>. That debt belongs to the sovereign Language front and keeps R2 continuity suspended until its correction and corresponding recertification.</p>
+      <p><a class="inline-link" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md">Open the public live-debt register</a></p>
+    </section>
+
+    <section class="doc-section">
+      <h2>4. Pending work for later Betas</h2>
+      <div class="doc-table-wrap"><table class="doc-table"><thead><tr><th>Identifier</th><th>Status</th><th>Object</th></tr></thead><tbody>
+        <tr><td><code>LAB-P001</code></td><td>Proposal</td><td>Integrated development and project environment.</td></tr>
+        <tr><td><code>LAB-P002</code></td><td>Partial</td><td>Editing state and modified-file status within a complete project model.</td></tr>
+        <tr><td><code>LAB-P003</code></td><td>Proposal</td><td>Structured diagnostics and localizable presentation.</td></tr>
+        <tr><td><code>LAB-P004</code></td><td>Partial</td><td>Persistent provenance of source profiles and their versions.</td></tr>
+        <tr><td><code>LAB-P005</code></td><td>Partial</td><td>General infrastructure for multiple files, projects, modules and dependencies.</td></tr>
+        <tr><td><code>LAB-P006</code></td><td>Proposal</td><td>Highlighting, completion and navigation derived from the canonical catalogue.</td></tr>
+        <tr><td><code>LAB-P007</code></td><td>Under study</td><td>Additional source-language profiles.</td></tr>
+        <tr><td><code>LAB-P008</code></td><td>Under study</td><td>Size and distribution strategy as source profiles grow.</td></tr>
+        <tr><td><code>LAB-P009</code></td><td>Proposal</td><td>Unicode visual security.</td></tr>
+        <tr><td><code>LAB-P010</code></td><td>Pending check</td><td>Specific <code>trajectory</code>/<code>Trajectory</code> parity.</td></tr>
+        <tr><td><code>LAB-P011</code></td><td>Proposal</td><td>Stable manual through GitHub Wiki.</td></tr>
+        <tr><td><code>LAB-P012</code></td><td>Partial</td><td>Versioned security record by Beta and incorporation.</td></tr>
+      </tbody></table></div>
+      <p>These entries preserve identified needs without automatically turning them into implementation commitments or core properties.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>5. Continuity status</h2>
+      <p>Beta B2 remains the experimental antecedent of the stable realization incorporated on 29 August 2026. Later Betas must retain their own identity, reproducible evidence, explicit limits and a traceable relation with any future stable incorporation.</p>
+    </section>
+  </main>
+</body>
+</html>
