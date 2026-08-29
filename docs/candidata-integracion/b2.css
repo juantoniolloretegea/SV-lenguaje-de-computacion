@@ -73,9 +73,9 @@
   border-radius: 12px; background: linear-gradient(180deg, var(--unit-profile-soft), #fff 135px);
 }
 .assembly-unit[data-profile="en"] {
-  --unit-profile: #235d91;
-  --unit-profile-soft: #eef7ff;
-  --unit-profile-line: #9fc4e4;
+  --unit-profile: #7a2343;
+  --unit-profile-soft: #fff2f6;
+  --unit-profile-line: #dca5b7;
 }
 .assembly-unit-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 10px; }
 .assembly-unit-head h3 { margin: 0; font-size: 1rem; }
