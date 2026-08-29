@@ -52,13 +52,14 @@ jobs:
       - name: Preparar copia de construcción fuera del árbol Git
         run: |
           set -euo pipefail
-          rm -rf /tmp/candidate-rust /tmp/candidate-target
-          cp -a rust /tmp/candidate-rust
+          rm -rf /tmp/candidate-tree /tmp/candidate-target
+          mkdir -p /tmp/candidate-tree
+          rsync -a --exclude='.git' ./ /tmp/candidate-tree/
           export CARGO_TARGET_DIR=/tmp/candidate-target
-          cargo test --workspace --manifest-path /tmp/candidate-rust/Cargo.toml | tee /tmp/evidence/cargo-test.txt
-          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_native
-          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_core --example probe_assembly_2b
-          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+          cargo test --workspace --manifest-path /tmp/candidate-tree/rust/Cargo.toml | tee /tmp/evidence/cargo-test.txt
+          cargo build --release --manifest-path /tmp/candidate-tree/rust/Cargo.toml -p sv_native
+          cargo build --release --manifest-path /tmp/candidate-tree/rust/Cargo.toml -p sv_core --example probe_assembly_2b
+          cargo build --release --manifest-path /tmp/candidate-tree/rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
           echo "RUST_WORKSPACE_TESTS=PASS" | tee -a /tmp/evidence/cargo-test.txt
 
       - name: Ejecutar conformidad Python y equivalencia diferencial R0-7
