@@ -1,0 +1,224 @@
+name: "Validación candidata Beta 2 → producción"
+
+on:
+  push:
+    branches:
+      - integracion-beta2-candidata-produccion-2026-08-29
+    paths:
+      - .github/workflows/validacion-candidata-beta2-produccion.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener candidata
+        uses: actions/checkout@v4
+        with:
+          ref: integracion-beta2-candidata-produccion-2026-08-29
+          fetch-depth: 0
+
+      - name: Fijar Rust 1.98.0
+        run: |
+          set -euo pipefail
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          rustup target add wasm32-unknown-unknown --toolchain 1.98.0
+          rustc --version
+          cargo --version
+
+      - name: Verificar identidad de la fuente B2
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/evidence
+          {
+            echo "CANDIDATE_HEAD=$(git rev-parse HEAD)"
+            echo "CANDIDATE_BASE=79311c516288537e625f444f13826ed86227cca2"
+            echo "B2_SOURCE_COMMIT=0feab99e1ca7a25a0076d085ba9c073fe7af298f"
+            echo "PUBLIC_BETA_SOURCE=ebe53b1faf3162f0e19b528e60d5fe859b1201ac"
+            rustc --version
+            cargo --version
+          } | tee /tmp/evidence/environment.txt
+          echo "b919b3dff9104c60cc527789e30f46a882ee414c3893b15c48055bbd23f44b3b  rust/sv_core/src/frontend.rs" | sha256sum -c -
+          echo "a83064846827affb17df52279aea625dff5c6e0aa753c6c876d7cc4792a31b6e  rust/sv_core/src/lib.rs" | sha256sum -c -
+          echo "c0d4896a867328036aedb5f0b91ae7d04157bb1bf8c77c177ca1d1b81f0ed70a  rust/sv_native/src/main.rs" | sha256sum -c -
+          echo "b5d4e11c3f6260eaee504a98f7d08033493b3591afecb11b766dfc4807cdb608  rust/sv_wasm/src/lib.rs" | sha256sum -c -
+          echo "f21983e2f9053dc00f0384974e9ba922547bca52f5046353403ccbb07eef4f3a  rust/sv_core/examples/probe_assembly_2b.rs" | sha256sum -c - | tee /tmp/evidence/source-identity.txt
+          echo "SOURCE_IDENTITY=PASS" | tee -a /tmp/evidence/source-identity.txt
+
+      - name: Preparar copia de construcción fuera del árbol Git
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/candidate-rust /tmp/candidate-target
+          cp -a rust /tmp/candidate-rust
+          export CARGO_TARGET_DIR=/tmp/candidate-target
+          cargo test --workspace --manifest-path /tmp/candidate-rust/Cargo.toml | tee /tmp/evidence/cargo-test.txt
+          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_native
+          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_core --example probe_assembly_2b
+          cargo build --release --manifest-path /tmp/candidate-rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+          echo "RUST_WORKSPACE_TESTS=PASS" | tee -a /tmp/evidence/cargo-test.txt
+
+      - name: Ejecutar conformidad Python y equivalencia diferencial R0-7
+        run: |
+          set -euo pipefail
+          python3 tests/run_conformance.py | tee /tmp/evidence/python-conformance.txt
+          python3 tests/r0_7_equivalence.py --rust-bin /tmp/candidate-target/release/sv-native | tee /tmp/evidence/r0-7.txt
+          echo "PYTHON_CONFORMANCE=PASS" | tee -a /tmp/evidence/python-conformance.txt
+          echo "R0_7=PASS" | tee -a /tmp/evidence/r0-7.txt
+
+      - name: Verificar compatibilidad del modo heredado con perfil EN explícito
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' | tee /tmp/evidence/default-vs-en.txt
+          from pathlib import Path
+          import subprocess
+          binary='/tmp/candidate-target/release/sv-native'
+          cases=sorted(Path('tests/conformance/valid').glob('*.svp'))+sorted(Path('tests/conformance/invalid').glob('*.svp'))
+          assert len(cases)==79, len(cases)
+          failures=[]
+          for p in cases:
+              a=subprocess.run([binary,str(p)],text=True,capture_output=True)
+              b=subprocess.run([binary,'--profile','en',str(p)],text=True,capture_output=True)
+              if (a.returncode,a.stdout,a.stderr)!=(b.returncode,b.stdout,b.stderr):
+                  failures.append(p.name)
+          assert not failures, failures
+          print(f'DEFAULT_VS_EXPLICIT_EN={len(cases)}/{len(cases)} PASS')
+          PY
+
+      - name: Verificar ensamblaje ES+EN
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/assembly
+          cat > /tmp/assembly/a_es.svp <<'EOF'
+          codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+          semántica_de_salida Klin {
+            APTO -> "favorable";
+            NO_APTO -> "desfavorable";
+            INDETERMINADO -> "sin cierre";
+          }
+          EOF
+          cat > /tmp/assembly/b_en.svp <<'EOF'
+          cellspec C1 {
+            b: 3;
+            codomain: K3;
+            semantics: Klin;
+            role: Base;
+          }
+          cellstate S1 {
+            spec: C1;
+            vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+          }
+          let E1 = evaluate(S1);
+          EOF
+          /tmp/candidate-target/release/examples/probe_assembly_2b es /tmp/assembly/a_es.svp en /tmp/assembly/b_en.svp > /tmp/assembly/result.json
+          python3 - <<'PY' | tee /tmp/evidence/assembly.txt
+          import json
+          p=json.load(open('/tmp/assembly/result.json'))
+          assert p['grammar_version']=='0.2'
+          assert p['ir_version']=='0.3'
+          assert len(p['objects'])==4
+          assert len(p['operations'])==1
+          assert p['source_file'].startswith('@assembly/2b/')
+          assert len(p['source_sha256'])==64
+          print('ASSEMBLY_ES_EN=PASS')
+          PY
+
+      - name: Reconstruir distribución WebAssembly y comparar con la recompilación
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64,gzip,hashlib,json,re
+          root=Path('docs/candidata-integracion')
+          loader=(root/'wasm-loader-b2.js').read_text()
+          block=re.search(r'const wasmChunks = \[(.*?)\];',loader,re.S)
+          assert block
+          chunks=re.findall(r'"([^"]+\.b64)"',block.group(1))
+          assert len(chunks)==22, len(chunks)
+          joined=''.join(''.join((root/p).read_text().split()) for p in chunks)
+          compressed=base64.b64decode(joined,validate=True)
+          wasm=gzip.decompress(compressed)
+          Path('/tmp/distributed.wasm').write_bytes(wasm)
+          digest=hashlib.sha256(wasm).hexdigest()
+          info=json.loads((root/'build-info.json').read_text())
+          assert len(wasm)==377812==info['wasm_bytes']
+          assert digest=='03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03'==info['wasm_sha256']
+          print('DISTRIBUTED_WASM_CHUNKS=22')
+          print('DISTRIBUTED_WASM_BYTES=377812')
+          print('DISTRIBUTED_WASM_SHA256='+digest)
+          PY
+          cp /tmp/candidate-target/wasm32-unknown-unknown/release/sv_wasm.wasm /tmp/rebuilt.wasm
+          test "$(wc -c < /tmp/rebuilt.wasm)" = "377812"
+          test "$(sha256sum /tmp/rebuilt.wasm | cut -d' ' -f1)" = "03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03"
+          cmp /tmp/distributed.wasm /tmp/rebuilt.wasm
+          {
+            echo "REBUILT_WASM_BYTES=$(wc -c < /tmp/rebuilt.wasm)"
+            echo "REBUILT_WASM_SHA256=$(sha256sum /tmp/rebuilt.wasm | cut -d' ' -f1)"
+            echo "DISTRIBUTED_EQUALS_REBUILT=PASS"
+          } | tee /tmp/evidence/wasm-identity.txt
+
+      - name: Verificar exportaciones WebAssembly
+        run: |
+          set -euo pipefail
+          node - <<'JS' | tee /tmp/evidence/wasm-exports.txt
+          const fs=require('fs');
+          const bytes=fs.readFileSync('/tmp/distributed.wasm');
+          WebAssembly.instantiate(bytes,{}).then(({instance})=>{
+            const required=['memory','sv_source_buffer','sv_file_buffer','sv_compile_svp_json_profile','sv_assembly_source_b_buffer','sv_assembly_file_b_buffer','sv_compile_svp_assembly_json','sv_grammar_version_major','sv_grammar_version_minor','sv_ir_version_major','sv_ir_version_minor','sv_serializer_version_major','sv_serializer_version_minor','sv_serializer_version_patch'];
+            for(const name of required) if(!(name in instance.exports)) throw new Error('export ausente: '+name);
+            console.log('WASM_REQUIRED_EXPORTS=PASS');
+          }).catch(e=>{console.error(e);process.exit(1);});
+          JS
+
+      - name: Auditar estado documental y separación de historiales
+        run: |
+          set -euo pipefail
+          python3 - <<'PY' | tee /tmp/evidence/product-static.txt
+          from pathlib import Path
+          import json
+          root=Path('docs/candidata-integracion')
+          index=(root/'index.html').read_text()
+          html='\n'.join(p.read_text(errors='ignore') for p in root.glob('*.html'))
+          assert 'Beta B1' not in html and 'BETA B1' not in html
+          assert 'view-ide' not in html
+          assert 'data-workspace-target="ide"' not in html
+          for phrase in ['experimental · no promovida','experimental · no incorporada','Experimental · no promovida','Experimental · no incorporada']:
+              assert phrase not in html, phrase
+          assert index.count('id="diagnostics-link"')==1
+          assert '?file=GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md' in index
+          assert '?file=IR_CANONICA_BIENFORMACION_SV_v0_3.md' in index
+          assert '../beta-publica/historial-beta.html' in index
+          assert 'docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md' in index
+          assert not (root/'historial-beta.html').exists()
+          assert not (root/'beta-history.html').exists()
+          assert Path('docs/beta-publica/historial-beta.html').exists()
+          assert Path('docs/beta-publica/beta-history.html').exists()
+          info=json.loads((root/'build-info.json').read_text())
+          assert info['status']=='production_candidate'
+          assert info['promotion_status']=='pending_quality_authorization'
+          assert info['candidate_base']=='79311c516288537e625f444f13826ed86227cca2'
+          assert info['source_commit']=='0feab99e1ca7a25a0076d085ba9c073fe7af298f'
+          assert info['public_distribution_commit']=='ebe53b1faf3162f0e19b528e60d5fe859b1201ac'
+          assert 'Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal)' in index
+          print('PRODUCT_STATIC_STATE=PASS')
+          print('BETA_HISTORY_SEPARATED=PASS')
+          print('STABLE_HISTORY_NOT_EMBEDDED_IN_CANDIDATE=PASS')
+          PY
+
+      - name: Confirmar que la validación no generó cambios en el árbol versionado
+        run: |
+          set -euo pipefail
+          git status --porcelain | tee /tmp/evidence/git-status.txt
+          test -z "$(git status --porcelain)"
+          echo "WORKTREE_CLEAN_AFTER_VALIDATION=PASS" | tee -a /tmp/evidence/git-status.txt
+
+      - name: Publicar evidencia de validación
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: candidata-beta2-produccion-validacion
+          path: /tmp/evidence/
+          retention-days: 30
