@@ -14,7 +14,7 @@ use sv_core::{
 use std::cell::RefCell;
 
 #[cfg(target_arch = "wasm32")]
-use sv_core::{compile_svp, equivalence_json};
+use sv_core::{compile_svp, compile_svp_assembly, compile_svp_profile, equivalence_json, SourceProfile, SourceUnit};
 
 const INVALID_TRI: i32 = -1;
 
@@ -79,6 +79,8 @@ const RESULT_ERROR: u64 = 1_u64 << 63;
 std::thread_local! {
     static SOURCE_BUFFER: RefCell<Vec<u8>> = RefCell::new(Vec::new());
     static FILE_BUFFER: RefCell<Vec<u8>> = RefCell::new(Vec::new());
+    static SOURCE_BUFFER_B: RefCell<Vec<u8>> = RefCell::new(Vec::new());
+    static FILE_BUFFER_B: RefCell<Vec<u8>> = RefCell::new(Vec::new());
     static OUTPUT_BUFFER: RefCell<Vec<u8>> = RefCell::new(Vec::new());
 }
 
@@ -101,6 +103,21 @@ pub extern "C" fn sv_source_buffer(len: u32) -> u32 {
 #[no_mangle]
 pub extern "C" fn sv_file_buffer(len: u32) -> u32 {
     FILE_BUFFER.with(|buffer| resize_buffer(buffer, len))
+}
+
+
+/// Segundo búfer de fuente para el ensamblaje multifuente experimental.
+#[cfg(target_arch = "wasm32")]
+#[no_mangle]
+pub extern "C" fn sv_assembly_source_b_buffer(len: u32) -> u32 {
+    SOURCE_BUFFER_B.with(|buffer| resize_buffer(buffer, len))
+}
+
+/// Segundo búfer de nombre de archivo para el ensamblaje multifuente experimental.
+#[cfg(target_arch = "wasm32")]
+#[no_mangle]
+pub extern "C" fn sv_assembly_file_b_buffer(len: u32) -> u32 {
+    FILE_BUFFER_B.with(|buffer| resize_buffer(buffer, len))
 }
 
 #[cfg(target_arch = "wasm32")]
@@ -144,6 +161,75 @@ pub extern "C" fn sv_compile_svp_json() -> u64 {
     };
 
     match compile_svp(&source, &source_file) {
+        Ok(program) => packed_result(equivalence_json(&program).into_bytes(), false),
+        Err(error) => packed_result(format!("{error:?}").into_bytes(), true),
+    }
+}
+
+
+#[cfg(target_arch = "wasm32")]
+#[no_mangle]
+pub extern "C" fn sv_compile_svp_json_profile(profile: u32) -> u64 {
+    let Some(profile) = SourceProfile::from_abi_code(profile) else {
+        return packed_result(b"perfil SVP no admitido".to_vec(), true);
+    };
+    let source = SOURCE_BUFFER.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let source = match source {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"entrada SVP no UTF-8".to_vec(), true),
+    };
+    let source_file = FILE_BUFFER.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let source_file = match source_file {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"nombre de archivo no UTF-8".to_vec(), true),
+    };
+    match compile_svp_profile(&source, &source_file, profile) {
+        Ok(program) => packed_result(equivalence_json(&program).into_bytes(), false),
+        Err(error) => packed_result(format!("{error:?}").into_bytes(), true),
+    }
+}
+
+
+/// Compila y valida conjuntamente dos unidades fuente con perfiles explícitos.
+/// La unidad A usa los búferes ordinarios; la unidad B usa los búferes de
+/// ensamblaje. No existe detección automática de idioma ni concatenación de
+/// texto entre ambas fuentes.
+#[cfg(target_arch = "wasm32")]
+#[no_mangle]
+pub extern "C" fn sv_compile_svp_assembly_json(profile_a: u32, profile_b: u32) -> u64 {
+    let Some(profile_a) = SourceProfile::from_abi_code(profile_a) else {
+        return packed_result(b"perfil SVP A no admitido".to_vec(), true);
+    };
+    let Some(profile_b) = SourceProfile::from_abi_code(profile_b) else {
+        return packed_result(b"perfil SVP B no admitido".to_vec(), true);
+    };
+
+    let source_a = SOURCE_BUFFER.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let source_a = match source_a {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"entrada SVP A no UTF-8".to_vec(), true),
+    };
+    let file_a = FILE_BUFFER.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let file_a = match file_a {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"nombre de archivo A no UTF-8".to_vec(), true),
+    };
+    let source_b = SOURCE_BUFFER_B.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let source_b = match source_b {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"entrada SVP B no UTF-8".to_vec(), true),
+    };
+    let file_b = FILE_BUFFER_B.with(|buffer| String::from_utf8(buffer.borrow().clone()));
+    let file_b = match file_b {
+        Ok(value) => value,
+        Err(_) => return packed_result(b"nombre de archivo B no UTF-8".to_vec(), true),
+    };
+
+    let units = [
+        SourceUnit::new(&source_a, &file_a, profile_a),
+        SourceUnit::new(&source_b, &file_b, profile_b),
+    ];
+    match compile_svp_assembly(&units) {
         Ok(program) => packed_result(equivalence_json(&program).into_bytes(), false),
         Err(error) => packed_result(format!("{error:?}").into_bytes(), true),
     }
