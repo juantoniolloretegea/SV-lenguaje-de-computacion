@@ -25,14 +25,22 @@ function writeInternalBuffer(exports, exportName, text) {
   new Uint8Array(exports.memory.buffer, ptr, bytes.length).set(bytes);
 }
 
+function readCompileResult(exports, packed) {
+  const result = unpackResult(packed);
+  const bytes = new Uint8Array(exports.memory.buffer, result.ptr, result.len);
+  return { error: result.error, text: decoder.decode(bytes.slice()) };
+}
+
 function compileCase(exports, source, fileName) {
   writeInternalBuffer(exports, "sv_source_buffer", source);
   writeInternalBuffer(exports, "sv_file_buffer", fileName);
+  return readCompileResult(exports, exports.sv_compile_svp_json());
+}
 
-  const result = unpackResult(exports.sv_compile_svp_json());
-  const bytes = new Uint8Array(exports.memory.buffer, result.ptr, result.len);
-  const text = decoder.decode(bytes.slice());
-  return { error: result.error, text };
+function compileProfileCase(exports, source, fileName, profileCode) {
+  writeInternalBuffer(exports, "sv_source_buffer", source);
+  writeInternalBuffer(exports, "sv_file_buffer", fileName);
+  return readCompileResult(exports, exports.sv_compile_svp_json_profile(profileCode));
 }
 
 async function main() {
@@ -54,6 +62,7 @@ async function main() {
     "sv_source_buffer",
     "sv_file_buffer",
     "sv_compile_svp_json",
+    "sv_compile_svp_json_profile",
   ];
   for (const name of required) {
     if (!(name in exports)) {
@@ -91,12 +100,58 @@ async function main() {
     }
   }
 
+  const closedDomainProbes = [
+    {
+      name: "DG-01-EN",
+      profile: 0,
+      source: "semantic_relation R { kind: ForeignRelation; }",
+    },
+    {
+      name: "DG-02-EN",
+      profile: 0,
+      source: "pattern P { kind: ForeignPattern; arity: 1; }",
+    },
+    {
+      name: "DG-03-EN",
+      profile: 0,
+      source: "semantic_relation R { kind: DeclaredRelation; } graph G { nodes: []; edges: []; relation: R; regime: ForeignRegime; }",
+    },
+    {
+      name: "DG-01-ES",
+      profile: 1,
+      source: "relación_semántica R { clase: RelaciónExtranjera; }",
+    },
+    {
+      name: "DG-02-ES",
+      profile: 1,
+      source: "patrón P { clase: PatrónExtranjero; aridad: 1; }",
+    },
+    {
+      name: "DG-03-ES",
+      profile: 1,
+      source: "relación_semántica R { clase: RelaciónDeclarada; } grafo G { nodos: []; aristas: []; relación: R; régimen: RégimenExtranjero; }",
+    },
+  ];
+
+  let closedDomainsOk = 0;
+  for (const probe of closedDomainProbes) {
+    const result = compileProfileCase(exports, probe.source, `${probe.name}.svp`, probe.profile);
+    if (!result.error) {
+      failures.push(`${probe.name}: WebAssembly aceptó un literal fuera de un dominio cerrado`);
+    } else if (!result.text.includes("dominio cerrado")) {
+      failures.push(`${probe.name}: rechazo sin acreditar la frontera de dominio cerrado: ${result.text}`);
+    } else {
+      closedDomainsOk += 1;
+    }
+  }
+
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
     versions,
     valid_ok: validOk,
     invalid_ok: invalidOk,
+    closed_domains_ok: closedDomainsOk,
     failures,
   };
 
