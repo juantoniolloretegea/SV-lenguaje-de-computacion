@@ -1,71 +1,11 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>SV — Diagnostics · Beta B2</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="info.css">
-</head>
-<body data-source-profile="en">
-  <header class="site-header">
-    <div class="brand-block">
-      <p class="eyebrow">SV · BETA B2</p>
-      <h1>Diagnostics</h1>
-      <p class="subtitle">Relationship between the B2 experimental interface and the SV Language reference error catalogue.</p>
-    </div>
-  </header>
-
-  <main class="doc-main">
-    <nav class="doc-nav" aria-label="Beta B2 navigation">
-      <a href="./?ui=en#editor">Back to the work environment</a>
-      <a href="security-b2.html">Security</a>
-      <a href="features.html">Features</a>
-      <a href="beta-history.html">Beta history</a>
-      <a href="programming-metrics.html">Methodology and metrics</a>
-      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Language repository</a>
-    </nav>
-
-    <div class="experimental-notice"><strong>Experimental state.</strong> Beta B2 presents diagnostics emitted by the compiler; it does not redefine their identifiers or normative meaning.</div>
-
-    <section class="doc-section">
-      <h2>1. Applicable catalogue</h2>
-      <p>The B2 reference version is <code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code>. For Grammar 0.2 and IR 0.3, the public reference document is <code>docs/referencia/ERRORES_CANONICOS_SV_v0_3.md</code>.</p>
-      <p>That effective catalogue contains <strong>50 codes</strong>. Version 0.3 preserves the 0.2 catalogue and adds <code>E110</code>, <code>E305</code> and <code>E308</code>.</p>
-    </section>
-
-    <section class="doc-section">
-      <h2>2. Diagnostics added in v0.3</h2>
-      <div class="doc-table-wrap"><table class="doc-table">
-        <thead><tr><th>Code</th><th>Name</th><th>Scope</th></tr></thead>
-        <tbody>
-          <tr><td><code>E110</code></td><td><code>InvalidAdmissibilitySpec</code></td><td><code>AdmissibilitySpec</code> contract.</td></tr>
-          <tr><td><code>E305</code></td><td><code>UnsafeUResolution</code></td><td>Constituted <code>U</code> target and an instance compatible with its <code>ResSpec</code>.</td></tr>
-          <tr><td><code>E308</code></td><td><code>FrameClosureViolation</code></td><td>Internal relational coherence and structural or causal closure of <code>Frame</code>.</td></tr>
-        </tbody>
-      </table></div>
-    </section>
-
-    <section class="doc-section">
-      <h2>3. Compiler/interface separation</h2>
-      <p><code>E...</code> codes belong to the compiler catalogue. Browser messages concerning WebAssembly loading, source-size limits, UTF-8, hashes or transport are Beta-interface conditions and must not be confused with semantic diagnostics of the Language.</p>
-      <p>B2 preserves the structured output returned by WebAssembly and does not assign an alternative meaning to catalogue codes.</p>
-    </section>
-
-    <section class="doc-section">
-      <h2>4. Known divergence</h2>
-      <p>The public catalogue explicitly preserves a historical divergence for <code>E204</code>: the historical IR identifies it as <code>MissingConflictOperator</code>, while the effective initial-compilation catalogue uses it as <code>QueryMissingContext</code>. B2 neither hides nor locally rewrites that divergence.</p>
-    </section>
-
-    <section class="doc-section">
-      <h2>5. Scope of this page</h2>
-      <p>This page provides access from the Beta. The exhaustive definition of each code, its emission points and maintenance obligations remain in the reference document of the main Language repository.</p>
-    </section>
-  </main>
-
-  <footer><p>SV Computing Language · Beta B2 · Diagnostics.</p></footer>
-</body>
-</html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>Diagnostics</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="info.css"></head>
+<body><header class="site-header"><div class="brand-block"><p class="eyebrow">SV · PRODUCTION CANDIDATE</p><h1>Diagnostics</h1><p class="subtitle">Applicable catalog, layer separation and diagnostic-parity limits.</p></div></header>
+<main class="doc-main"><nav class="doc-nav" aria-label="Documentation navigation"><a href="./">Back to the SV workspace</a><a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Version history</a></nav><div class="experimental-notice"><strong>Scope.</strong> This page provides diagnostic access from the candidate and does not redefine the canonical catalog.</div>
+<section class="doc-section"><h2>1. Applicable catalog</h2><p>For Grammar 0.2 and IR 0.3, the effective catalog contains <strong>50 codes</strong>. Version 0.3 retains the 0.2 catalog and adds <code>E110</code>, <code>E305</code> and <code>E308</code>.</p></section>
+<section class="doc-section"><h2>2. v0.3 additions</h2><div class="doc-table-wrap"><table class="doc-table"><thead><tr><th>Code</th><th>Name</th><th>Scope</th></tr></thead><tbody><tr><td><code>E110</code></td><td><code>InvalidAdmissibilitySpec</code></td><td><code>AdmissibilitySpec</code> contract.</td></tr><tr><td><code>E305</code></td><td><code>UnsafeUResolution</code></td><td>Constituted U target and compatible instance.</td></tr><tr><td><code>E308</code></td><td><code>FrameClosureViolation</code></td><td>Relational coherence and <code>Frame</code> closure.</td></tr></tbody></table></div></section>
+<section class="doc-section"><h2>3. Layer separation</h2><p><code>E...</code> codes belong to the compiler. Messages about WebAssembly loading, source size, UTF-8, digests or transport belong to the interface and are not semantic Language diagnostics.</p></section>
+<section class="doc-section"><h2>4. Preserved historical divergence</h2><p>The catalog preserves the historical <code>E204</code> divergence: historical IR names it <code>MissingConflictOperator</code>, while the effective early-compilation catalog uses <code>QueryMissingContext</code>. The candidate neither hides nor locally reassigns this divergence.</p></section>
+<section class="doc-section"><h2>5. Evidentiary limit</h2><p>Regression confirms acceptance/rejection over the current corpus, but does not establish exact diagnostic-text identity between Python and Rust/WebAssembly.</p></section></main>
+<footer><p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a></p><p>Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p></footer></body></html>

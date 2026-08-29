@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>SV — Laboratorio del Lenguaje · Beta B2</title>
+  <title>Lenguaje de Computación SV — candidata de producción</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="b2.css">
 </head>
@@ -17,7 +17,7 @@
         <div class="beta-logo" aria-hidden="true">SVP</div>
         <div>
           <h1 data-i18n="title">Lenguaje de Computación SV</h1>
-          <p>Beta B2 · SVP-ES + SVP-EN · Rust / WebAssembly</p>
+          <p>SVP-ES + SVP-EN · Rust / WebAssembly</p>
         </div>
       </div>
       <nav class="beta-nav" aria-label="Accesos principales">
@@ -28,26 +28,26 @@
   </header>
 
   <div class="beta-state-line">
-    <strong>Beta B2 · experimental · no promovida</strong>
-    <span>Gramática 0.2 · IR 0.3 · Proyección 0.1.0 · corte soberano <code>f6b704e819e7…</code></span>
+    <strong>Candidata de producción · revisión previa a publicación</strong>
+    <span>Gramática 0.2 · IR 0.3 · Proyección 0.1.0 · fuente candidata <code>0feab99e1ca7…</code></span>
   </div>
 
   <div class="laboratory-layout">
-    <aside class="laboratory-rail" aria-label="Navegación del laboratorio">
+    <aside class="laboratory-rail" aria-label="Navegación del Lenguaje SV">
       <div class="rail-group">
-        <p class="rail-heading">Playground</p>
+        <p class="rail-heading">Herramientas</p>
         <button type="button" class="rail-button is-active" data-workspace-target="editor">Editor SVP</button>
         <button type="button" class="rail-button" data-workspace-target="assembly">Ensamblaje</button>
       </div>
 
       <div class="rail-group">
         <p class="rail-heading">Referencia</p>
-        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">
+        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje/?file=GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md" target="_blank" rel="noopener noreferrer">
           <strong>Gramática 0.2</strong>
           <small><code>GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md</code></small>
           <span>abrir lector traducible</span>
         </a>
-        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">
+        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje/?file=IR_CANONICA_BIENFORMACION_SV_v0_3.md" target="_blank" rel="noopener noreferrer">
           <strong>IR 0.3</strong>
           <small><code>IR_CANONICA_BIENFORMACION_SV_v0_3.md</code></small>
           <span>abrir lector traducible</span>
@@ -56,23 +56,24 @@
       </div>
 
       <div class="rail-group">
-        <p class="rail-heading">Garantías</p>
+        <p class="rail-heading">Documentación</p>
+        <a id="diagnostics-link" class="rail-link compact" href="diagnosticos.html" data-i18n="diagnostics">Diagnósticos</a>
         <a id="security-link" class="rail-link compact" href="seguridad-b2.html" data-i18n="security">Seguridad</a>
         <a class="rail-link compact" href="caracteristicas.html" data-i18n="features">Características</a>
-        <a class="rail-link compact" href="historial-beta.html" data-i18n="history">Historial Beta</a>
-        <a class="rail-link compact" href="programacion-metricas.html">Programación y métricas</a>
+        <a id="metrics-link" class="rail-link compact" href="programacion-metricas.html">Programación y métricas</a>
       </div>
 
       <div class="rail-group">
-        <p class="rail-heading">Desarrollo</p>
-        <button type="button" class="rail-button rail-button-future" data-workspace-target="ide">IDE <span>próxima Beta</span></button>
+        <p class="rail-heading">Trazabilidad</p>
+        <a id="beta-history-link" class="rail-link compact" href="../beta-publica/historial-beta.html" data-i18n="history">Historial Beta</a>
+        <a id="stable-history-link" class="rail-link compact" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a>
       </div>
     </aside>
 
     <div class="laboratory-content">
       <section class="workspace-view" id="view-editor" data-workspace-view="editor">
         <div class="view-heading">
-          <div><p class="eyebrow">PLAYGROUND</p><h2>Editor SVP</h2><p>Compilación local con perfil fuente explícito. La interfaz y el lenguaje del código permanecen independientes.</p></div>
+          <div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2>Editor SVP</h2><p>Compilación local con perfil fuente explícito. La interfaz y el lenguaje del código permanecen independientes.</p></div>
         </div>
 
         <section class="control-panel" aria-label="Configuración">
@@ -114,7 +115,7 @@
       </section>
 
       <section class="workspace-view" id="view-assembly" data-workspace-view="assembly" hidden>
-        <div class="view-heading"><div><p class="eyebrow">PLAYGROUND · B2</p><h2 data-i18n="assemblyTitle">Ensamblaje multifuente</h2><p data-i18n="assemblyIntro">Dos unidades .svp mantienen fronteras y perfiles independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.</p></div></div>
+        <div class="view-heading"><div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2 data-i18n="assemblyTitle">Ensamblaje multifuente</h2><p data-i18n="assemblyIntro">Dos unidades .svp mantienen fronteras y perfiles independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.</p></div></div>
         <section class="assembly-shell" aria-labelledby="assembly-title">
           <div class="panel-heading"><div><h3 id="assembly-title" data-i18n="assemblyTitle">Ensamblaje multifuente</h3></div><span class="result-state" id="assembly-joint" data-state="idle" data-i18n="waiting">Pendiente</span></div>
           <div class="assembly-pair-bar"><span data-i18n="assemblyCheck">Validación conjunta</span><strong id="assembly-pair">SVP-ES + SVP-EN → IR 0.3</strong></div>
@@ -127,18 +128,18 @@
         </section>
       </section>
 
-      <section class="workspace-view" id="view-ide" data-workspace-view="ide" hidden>
-        <div class="ide-shell-placeholder"><p class="eyebrow">PRÓXIMA BETA · PROPUESTA</p><h2>Entorno integrado de desarrollo</h2><p>Este espacio reserva la futura evolución del Playground hacia proyectos, varios archivos, pestañas, símbolos, diagnósticos estructurados, representación IR y trazas. Beta B2 no implementa esas capacidades ni introduce un segundo analizador.</p><div class="ide-placeholder-grid"><div>Proyecto</div><div>Editor / pestañas</div><div>Diagnósticos · IR · trazas</div></div></div>
-      </section>
 
       <section class="build-panel compact-build" aria-labelledby="build-title">
-        <h2 id="build-title" data-i18n="reproducibility">Identidad de Beta B2</h2>
-        <dl><div><dt data-i18n="betaVersion">Beta</dt><dd><strong id="build-beta">B2</strong></dd></div><div><dt data-i18n="betaState">Estado</dt><dd><strong data-i18n="betaStateValue">Experimental · no promovida</strong></dd></div><div><dt data-i18n="sourceCut">Corte fuente soberano</dt><dd><code id="build-source-commit">—</code></dd></div><div><dt>WebAssembly SHA-256</dt><dd><code id="build-wasm-sha">—</code></dd></div><div><dt data-i18n="wasmSize">Tamaño WebAssembly</dt><dd><code id="build-wasm-bytes">—</code></dd></div><div><dt>Gramática</dt><dd><code id="build-grammar">0.2</code></dd></div><div><dt>IR</dt><dd><code id="build-ir">0.3</code></dd></div><div><dt data-i18n="projection">Proyección</dt><dd><code id="build-projection">0.1.0</code></dd></div></dl>
+        <h2 id="build-title" data-i18n="reproducibility">Identidad técnica de la candidata</h2>
+        <dl><div><dt data-i18n="betaVersion">Procedencia</dt><dd><strong id="build-beta">B2</strong></dd></div><div><dt data-i18n="betaState">Estado</dt><dd><strong data-i18n="betaStateValue">Candidata de producción · pendiente de autorización de Calidad</strong></dd></div><div><dt data-i18n="sourceCut">Corte fuente soberano</dt><dd><code id="build-source-commit">—</code></dd></div><div><dt>WebAssembly SHA-256</dt><dd><code id="build-wasm-sha">—</code></dd></div><div><dt data-i18n="wasmSize">Tamaño WebAssembly</dt><dd><code id="build-wasm-bytes">—</code></dd></div><div><dt>Gramática</dt><dd><code id="build-grammar">0.2</code></dd></div><div><dt>IR</dt><dd><code id="build-ir">0.3</code></dd></div><div><dt data-i18n="projection">Proyección</dt><dd><code id="build-projection">0.1.0</code></dd></div></dl>
       </section>
     </div>
   </div>
 
-  <footer><p data-i18n="footerText">La interfaz sólo transporta bytes y presenta resultados. La compilación, el ensamblaje canónico y la validación global se ejecutan localmente en el WebAssembly de Beta B2.</p></footer>
+  <footer>
+    <p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a></p>
+    <p>Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p>
+  </footer>
   <script src="wasm-loader-b2.js" defer></script>
   <script src="workspace-b2.js?v=b2-ui-return-20260829-1" defer></script>
   <script src="app-b2.js" defer></script>

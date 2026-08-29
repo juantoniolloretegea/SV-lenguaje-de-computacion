@@ -74,5 +74,5 @@
   }
 
   const requested = location.hash.replace(/^#/, "");
-  activate(["editor", "assembly", "ide"].includes(requested) ? requested : "editor", false);
+  activate(["editor", "assembly"].includes(requested) ? requested : "editor", false);
 })();

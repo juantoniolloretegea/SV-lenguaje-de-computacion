@@ -1,87 +1,10 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="color-scheme" content="light">
-  <meta name="referrer" content="no-referrer">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>SV — Security · Beta B2</title>
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="info.css">
-</head>
-<body data-source-profile="en">
-  <header class="site-header">
-    <div class="brand-block">
-      <p class="eyebrow">SV · BETA B2</p>
-      <h1>Security</h1>
-      <p class="subtitle">Verifiable controls of the B2 experimental interface and limits of the guarantees described.</p>
-    </div>
-  </header>
-
-  <main class="doc-main">
-    <nav class="doc-nav" aria-label="Beta B2 navigation">
-      <a href="./?ui=en#editor">Back to the work environment</a>
-      <a href="diagnostics.html">Diagnostics</a>
-      <a href="features.html">Features</a>
-      <a href="beta-history.html">Beta history</a>
-      <a href="programming-metrics.html">Methodology and metrics</a>
-      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Language repository</a>
-    </nav>
-
-    <div class="experimental-notice"><strong>Scope.</strong> This page documents observable controls of Beta B2. It is not a general security certification and does not imply inclusion in the stable release.</div>
-
-    <section class="doc-section">
-      <h2>1. Identity and execution</h2>
-      <div class="doc-table-wrap"><table class="doc-table"><tbody>
-        <tr><th>Beta</th><td><strong>B2 · experimental · not included in the stable release</strong></td></tr>
-        <tr><th>Reference version</th><td><code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code></td></tr>
-        <tr><th>Grammar</th><td>0.2</td></tr>
-        <tr><th>IR</th><td>0.3</td></tr>
-        <tr><th>Expected WebAssembly</th><td><code>03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03</code> · 377812 bytes</td></tr>
-      </tbody></table></div>
-      <p>Compilation and assembly run locally in the browser through WebAssembly. Before instantiating the module, the interface computes its SHA-256 and also checks the declared byte size; a mismatch prevents initialization.</p>
-    </section>
-
-    <section class="doc-section">
-      <h2>2. Source profile and language separation</h2>
-      <ul>
-        <li>Source-profile selection is explicit: <code>es</code> or <code>en</code>.</li>
-        <li>There is no language autodetection.</li>
-        <li>Changing the interface language cannot modify source bytes or active source profiles.</li>
-        <li>Changing a source profile never translates or rewrites the program.</li>
-        <li>SVP-ES and SVP-EN are interpreted before the shared parser and use the same internal identities.</li>
-      </ul>
-    </section>
-
-    <section class="doc-section">
-      <h2>3. Interface controls</h2>
-      <ul>
-        <li>The content security policy restricts scripts, styles, connections, images and fonts to the same origin, except for the explicit capabilities required for WebAssembly and embedded data.</li>
-        <li>The interface limits each source unit to 1 MiB.</li>
-        <li>UTF-8 result decoding is fatal: invalid byte sequences are not silently replaced.</li>
-        <li>The interface computes the SHA-256 of the current source and, when present, compares it with the <code>source_sha256</code> returned by compilation.</li>
-        <li>Downloading source preserves its text; no automatic translation or transformation is applied.</li>
-      </ul>
-    </section>
-
-    <section class="doc-section">
-      <h2>4. File assembly</h2>
-      <p>B2 keeps two source units with independent profiles. It does not concatenate text or lexical sequences across files. Each unit is analyzed under its own profile and joint validation takes place after both representations have been integrated into one IR.</p>
-    </section>
-
-    <section class="doc-section">
-      <h2>5. Known limits</h2>
-      <ul>
-        <li>B2 remains a public experimental version and is not a stable release.</li>
-        <li>Browser, static-hosting and external delivery-chain security lie outside compiler semantics.</li>
-        <li>Visual Unicode security in strings, comments and other presentation forms is not declared resolved.</li>
-        <li>The existence of two units in B2 does not yet establish a general project infrastructure or an arbitrary module count.</li>
-        <li>These controls do not replace a security review before any inclusion in the stable release.</li>
-      </ul>
-    </section>
-  </main>
-
-  <footer><p>SV Computing Language · Beta B2 · Security.</p></footer>
-</body>
-</html>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'"><title>Security</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="info.css"></head>
+<body><header class="site-header"><div class="brand-block"><p class="eyebrow">SV · PRODUCTION CANDIDATE</p><h1>Security</h1><p class="subtitle">Observable security controls and limits of the production candidate.</p></div></header>
+<main class="doc-main"><nav class="doc-nav" aria-label="Documentation navigation"><a href="./">Back to the SV workspace</a><a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Version history</a></nav><div class="experimental-notice"><strong>Status.</strong> Verifiable controls of the production candidate; this is not a general security certification.</div>
+<section class="doc-section"><h2>1. Identity and execution</h2><p>Compilation and assembly run locally in WebAssembly. The expected module is 377812 bytes, SHA-256 <code>03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03</code>. The interface checks both digest and size before instantiation.</p></section>
+<section class="doc-section"><h2>2. Profile and isolation</h2><ul><li>Explicit <code>es</code>/<code>en</code> selection; no autodetection.</li><li>Interface language does not modify source or profiles.</li><li>Changing profile does not translate or alter program bytes.</li><li>Assembly never concatenates text or token streams across files.</li></ul></section>
+<section class="doc-section"><h2>3. Interface controls</h2><ul><li>Restrictive Content Security Policy.</li><li>1 MiB source-unit limit in the interface.</li><li>Strict UTF-8 result decoding.</li><li>Source SHA-256 is checked when compilation returns a digest.</li></ul></section>
+<section class="doc-section"><h2>4. Limits</h2><ul><li>Browser, hosting and external delivery-chain security are outside compiler semantics.</li><li>Visual Unicode security is not declared solved.</li><li>Two units do not establish a general project or arbitrary-module infrastructure.</li><li>Inherited core debts remain open under Quality governance.</li></ul><p><a class="inline-link" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/ACTA_TECNICA_DE_ENCARGO_CORRECTIVO_INCIDENTAL_HUECOS_HEREDADOS_BETA_2_Y_BLOQUEO_R2_2026_08_29.md" target="_blank" rel="noopener noreferrer">Applicable Quality record.</a></p></section></main>
+<footer><p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a></p><p>Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p></footer></body></html>
