@@ -66,9 +66,9 @@
 .assembly-pair-bar strong { font-family: var(--mono); }
 .assembly-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 .assembly-unit {
-  --unit-profile: #7a2343;
-  --unit-profile-soft: #fff2f6;
-  --unit-profile-line: #dca5b7;
+  --unit-profile: #0b57d0;
+  --unit-profile-soft: #eef5ff;
+  --unit-profile-line: #91b8f4;
   min-width: 0; padding: 15px; border: 1px solid var(--unit-profile-line); border-top: 5px solid var(--unit-profile);
   border-radius: 12px; background: linear-gradient(180deg, var(--unit-profile-soft), #fff 135px);
 }

@@ -1,11 +1,9 @@
 {
-  "status": "production_candidate",
+  "status": "production",
   "beta": "B2",
   "provenance": "Beta B2",
-  "candidate_branch": "integracion-beta2-candidata-produccion-2026-08-29",
-  "candidate_base": "79311c516288537e625f444f13826ed86227cca2",
   "source_commit": "0feab99e1ca7a25a0076d085ba9c073fe7af298f",
-  "promotion_status": "pending_quality_authorization",
+  "promotion_status": "authorized_for_production",
   "public_distribution_commit": "ebe53b1faf3162f0e19b528e60d5fe859b1201ac",
   "laboratory_commit": "fa43dc49adf9da8cff72d1a03c981c77d27ed93f",
   "laboratory_run": 33207042268,
@@ -24,11 +22,12 @@
   "profile_selection": "explicit",
   "autodetection": false,
   "assembly": {
-    "status": "candidate",
+    "status": "production",
     "minimum_units": 2,
     "browser_interface_units": 2,
     "unit_profiles_independent": true,
     "cross_file_text_or_token_concatenation": false,
     "global_wellformedness_after_canonical_merge": true
-  }
+  },
+  "integration_base": "79311c516288537e625f444f13826ed86227cca2"
 }

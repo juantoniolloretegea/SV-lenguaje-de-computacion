@@ -17,9 +17,6 @@ const I18N = {
     security: "Seguridad",
     features: "Características",
     history: "Historial Beta",
-    stable: "Versión publicada",
-    experimentalTitle: "Candidata de producción.",
-    experimentalText: "Esta rama es candidata de producción y permanece pendiente de autorización de Calidad y publicación.",
     interfaceLanguage: "Interfaz",
     sourceLanguage: "Código SV",
     activeProfile: "Perfil de código activo",
@@ -39,13 +36,9 @@ const I18N = {
     examplesHelp: "Los ejemplos se cargan sólo cuando usted lo solicita. El idioma de la interfaz y el perfil del código son independientes.",
     architectureTitle: "Una sola identidad computacional",
     architectureText: "SVP-ES y SVP-EN se canonicalizan antes del análisis sintáctico y convergen en el mismo analizador, IR y semántica. Los identificadores, cadenas, comentarios y datos del usuario no se traducen.",
-    reproducibility: "Identidad técnica de la candidata",
-    sourceCut: "Corte fuente de la candidata",
     wasmSize: "Tamaño WebAssembly",
     projection: "Proyección",
     betaVersion: "Procedencia",
-    betaState: "Estado",
-    betaStateValue: "Candidata de producción · pendiente de autorización de Calidad",
     assemblyTitle: "Ensamblaje multifuente",
     assemblyIntro: "Dos unidades .svp mantienen fronteras y perfiles independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.",
     unitA: "Unidad A",
@@ -98,9 +91,6 @@ const I18N = {
     security: "Security",
     features: "Features",
     history: "Beta history",
-    stable: "Published release",
-    experimentalTitle: "Production candidate.",
-    experimentalText: "This branch is a production candidate pending Quality authorization and publication.",
     interfaceLanguage: "Interface",
     sourceLanguage: "SV code",
     activeProfile: "Active source profile",
@@ -120,13 +110,9 @@ const I18N = {
     examplesHelp: "Examples are loaded only when requested. Interface language and source profile remain independent.",
     architectureTitle: "One computational identity",
     architectureText: "SVP-ES and SVP-EN are canonicalized before parsing and converge on the same parser, IR and semantics. User identifiers, strings, comments and data are not translated.",
-    reproducibility: "Production candidate technical identity",
-    sourceCut: "Candidate source cut",
     wasmSize: "WebAssembly size",
     projection: "Projection",
     betaVersion: "Provenance",
-    betaState: "State",
-    betaStateValue: "Production candidate · pending Quality authorization",
     assemblyTitle: "Multi-source assembly",
     assemblyIntro: "Two .svp units retain independent boundaries and profiles. They are analyzed under their own profile, converge on canonical representation and are validated together in one IR. Text or token streams are never concatenated across files.",
     unitA: "Unit A",
@@ -274,9 +260,9 @@ async function initializeWasm() {
     if (!(name in exports)) throw new Error(`export WebAssembly ausente: ${name}`);
   }
   state.wasm = exports;
-  el.buildGrammar.textContent = `${exports.sv_grammar_version_major()}.${exports.sv_grammar_version_minor()}`;
-  el.buildIr.textContent = `${exports.sv_ir_version_major()}.${exports.sv_ir_version_minor()}`;
-  el.buildProjection.textContent = `${exports.sv_serializer_version_major()}.${exports.sv_serializer_version_minor()}.${exports.sv_serializer_version_patch()}`;
+  if (el.buildGrammar) el.buildGrammar.textContent = `${exports.sv_grammar_version_major()}.${exports.sv_grammar_version_minor()}`;
+  if (el.buildIr) el.buildIr.textContent = `${exports.sv_ir_version_major()}.${exports.sv_ir_version_minor()}`;
+  if (el.buildProjection) el.buildProjection.textContent = `${exports.sv_serializer_version_major()}.${exports.sv_serializer_version_minor()}.${exports.sv_serializer_version_patch()}`;
   setEditorStatus(t("wasmReady"));
   return exports;
 }
@@ -574,10 +560,10 @@ async function loadBuildInfo() {
   const response = await fetch("build-info.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`build-info HTTP ${response.status}`);
   state.build = await response.json();
-  el.buildSourceCommit.textContent = state.build.source_commit ?? "—";
-  el.buildWasmSha.textContent = state.build.wasm_sha256 ?? "—";
-  el.buildWasmBytes.textContent = state.build.wasm_bytes != null ? `${state.build.wasm_bytes} bytes` : "—";
-  el.buildBeta.textContent = state.build.beta ?? "B2";
+  if (el.buildSourceCommit) el.buildSourceCommit.textContent = state.build.source_commit ?? "—";
+  if (el.buildWasmSha) el.buildWasmSha.textContent = state.build.wasm_sha256 ?? "—";
+  if (el.buildWasmBytes) el.buildWasmBytes.textContent = state.build.wasm_bytes != null ? `${state.build.wasm_bytes} bytes` : "—";
+  if (el.buildBeta) el.buildBeta.textContent = state.build.beta ?? "B2";
 }
 
 async function loadExamples() {

@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light">
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
-  <title>Lenguaje de Computación SV — candidata de producción</title>
+  <title>Lenguaje de Computación SV</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="b2.css">
 </head>
@@ -21,15 +21,14 @@
         </div>
       </div>
       <nav class="beta-nav" aria-label="Accesos principales">
-        <a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer" data-i18n="stable">Versión publicada</a>
         <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer" data-i18n="repository">Repositorio</a>
       </nav>
     </div>
   </header>
 
-  <div class="beta-state-line">
-    <strong>Candidata de producción · revisión previa a publicación</strong>
-    <span>Gramática 0.2 · IR 0.3 · Proyección 0.1.0 · fuente candidata <code>0feab99e1ca7…</code></span>
+  <div class="beta-state-line" aria-label="Versiones técnicas publicadas">
+    <strong>Gramática 0.2 · IR 0.3 · Proyección 0.1.0</strong>
+    <span>SVP-ES + SVP-EN · Rust / WebAssembly</span>
   </div>
 
   <div class="laboratory-layout">
@@ -64,7 +63,7 @@
 
       <div class="rail-group">
         <p class="rail-heading">Trazabilidad</p>
-        <a id="beta-history-link" class="rail-link compact" href="../beta-publica/historial-beta.html" data-i18n="history">Historial Beta</a>
+        <a id="beta-history-link" class="rail-link compact" href="https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/beta-publica/historial-beta.html" target="_blank" rel="noopener noreferrer" data-i18n="history">Historial Beta</a>
         <a id="stable-history-link" class="rail-link compact" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a>
       </div>
     </aside>
@@ -126,19 +125,10 @@
           <div class="assembly-output-shell"><div class="panel-heading"><h3 data-i18n="assemblyResult">Resultado del ensamblaje</h3></div><pre id="assembly-output" tabindex="0" aria-live="polite"></pre><p id="assembly-status" aria-live="polite"></p></div>
         </section>
       </section>
-
-
-      <section class="build-panel compact-build" aria-labelledby="build-title">
-        <h2 id="build-title" data-i18n="reproducibility">Identidad técnica de la candidata</h2>
-        <dl><div><dt data-i18n="betaVersion">Procedencia</dt><dd><strong id="build-beta">B2</strong></dd></div><div><dt data-i18n="betaState">Estado</dt><dd><strong data-i18n="betaStateValue">Candidata de producción · pendiente de autorización de Calidad</strong></dd></div><div><dt data-i18n="sourceCut">Corte fuente de la candidata</dt><dd><code id="build-source-commit">—</code></dd></div><div><dt>WebAssembly SHA-256</dt><dd><code id="build-wasm-sha">—</code></dd></div><div><dt data-i18n="wasmSize">Tamaño WebAssembly</dt><dd><code id="build-wasm-bytes">—</code></dd></div><div><dt>Gramática</dt><dd><code id="build-grammar">0.2</code></dd></div><div><dt>IR</dt><dd><code id="build-ir">0.3</code></dd></div><div><dt data-i18n="projection">Proyección</dt><dd><code id="build-projection">0.1.0</code></dd></div></dl>
-      </section>
     </div>
   </div>
 
-  <footer>
-    <p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a></p>
-    <p>Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p>
-  </footer>
+  <footer><p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a> · Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p></footer>
   <script src="wasm-loader-b2.js" defer></script>
   <script src="workspace-b2.js?v=b2-ui-return-20260829-1" defer></script>
   <script src="app-b2.js" defer></script>

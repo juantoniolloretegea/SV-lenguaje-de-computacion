@@ -13,11 +13,11 @@
 }
 
 body[data-source-profile="es"] {
-  --profile: #7a2343;
-  --profile-dark: #5d1731;
-  --profile-soft: #fff2f6;
-  --profile-soft-2: #fae2ea;
-  --profile-line: #dca5b7;
+  --profile: #0b57d0;
+  --profile-dark: #073b93;
+  --profile-soft: #eef5ff;
+  --profile-soft-2: #dceaff;
+  --profile-line: #91b8f4;
 }
 
 body[data-source-profile="en"] {
