@@ -1,0 +1,168 @@
+-- query_context_all_variants.svp — cobertura de las cinco variantes de QueryContext
+
+codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+semántica_de_salida Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+especificación_de_celda C1 {
+  b: 3;
+  codominio: K3;
+  semántica: Klin;
+  rol: Base;
+}
+
+especificación_de_captura Cap1 {
+  identificador_de_parámetro: 1;
+  dominio_de_observación: DominioObs1;
+  espacio_de_observación: ObsEsp1;
+  símbolo_de_fallo: FalloCaptura;
+  correspondencia: MapCaptura1;
+}
+
+especificación_de_admisibilidad Adm1 {
+  identificador_de_parámetro: 1;
+  estados: {Admitido, Degradado, NoAdmitido};
+  regla: ReglaAdm1;
+}
+
+ternarizador Ter1 {
+  espacio_de_observación: ObsEsp1;
+  partición_cero: Zona0;
+  partición_uno: Zona1;
+  partición_u: ZonaU;
+  correspondencia: MapTer1;
+}
+
+estado_de_celda S1 {
+  especificación: C1;
+  vector: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+}
+
+especificación_acoplada CC1 { celda: C1; puentes: [3]; }
+
+estado_acoplado CS1 {
+  especificación: CC1;
+  vector_base: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+  vector_actualizado: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+}
+
+relación_semántica RArch {
+  clase: RelaciónDeclarada;
+  restricciones: [CoherenciaLocal];
+}
+
+grafo Arch1 {
+  nodos: [CC1];
+  aristas: [];
+  relación: RArch;
+  régimen: Simple;
+}
+
+tabla_de_admisibilidad T1 {
+  codominios_de_entrada: [K3, K3];
+  codominio_de_salida: K3;
+  tabla: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+sea E1 = evaluar(CS1);
+sea G1 = compuerta([E1, E1], usando: T1);
+
+horizonte H1 {
+  arquitectura: Arch1;
+  sucesos: [CambioProfilaxis];
+}
+
+datos_de_transición TD1 {
+  referencia_de_horizonte: H1;
+  sucesos: [(CambioProfilaxis, Uno)];
+  parámetros_inducidos: [(C1, 3, Uno)];
+}
+
+marco F1 {
+  índice: 1;
+  arquitectura: Arch1;
+  estados_de_celda: [CS1];
+  resultados_de_evaluación: [E1];
+  resultados_de_compuerta: [G1];
+  supervisión: [];
+  criticidades: [];
+}
+
+marco F2 {
+  índice: 2;
+  arquitectura: Arch1;
+  estados_de_celda: [CS1];
+  resultados_de_evaluación: [E1];
+  resultados_de_compuerta: [G1];
+  supervisión: [];
+  criticidades: [];
+}
+
+trayectoria TR1 {
+  entradas_de_trayectoria: [entrada(marco: F1, transición: TD1), entrada(marco: F2)];
+}
+
+dominio D1 {
+  parámetros: [P1];
+  interfaz: I1;
+  horizonte: H1;
+  especificaciones_de_captura: [Cap1];
+  especificaciones_de_admisibilidad: [Adm1];
+  ternarizadores: [Ter1];
+  máscara_de_exogeneidad: Exo1;
+  u_silenciosa: SU1;
+  política_de_transducción: TP1;
+  política_de_u: UP1;
+  criterio_de_clausura: CCrit1;
+}
+
+agente AG1 {
+  arquitectura: Arch1;
+  dominio: D1;
+  motor_de_consulta: QE1;
+}
+
+especificación_de_consulta QSPoint {
+  tipo_de_consulta: EvaluaciónPuntual;
+  alcance: Celda;
+  limitaciones: [R1];
+}
+
+especificación_de_consulta QSTraj {
+  tipo_de_consulta: EstadoTrayectoria;
+  alcance: Trayectoria;
+  limitaciones: [R1];
+}
+
+especificación_de_consulta QSFrameCmp {
+  tipo_de_consulta: ComparaciónMarcos;
+  alcance: Par;
+  limitaciones: [R1];
+}
+
+especificación_de_consulta QSArch {
+  tipo_de_consulta: CriticidadGlobal;
+  alcance: Arquitectura;
+  limitaciones: [R1];
+}
+
+especificación_de_consulta QSCov {
+  tipo_de_consulta: EstadoCobertura;
+  alcance: Arquitectura;
+  limitaciones: [R1];
+}
+
+sea Q1 = consultar(QSPoint, por: AG1, en: VistaEvaluaciónPuntual(F1));
+sea Q2 = consultar(QSTraj, por: AG1, en: VistaTrayectoria(TR1));
+sea Q3 = consultar(QSFrameCmp, por: AG1, en: ComparaciónMarcos(F1, F2));
+sea Q4 = consultar(QSArch, por: AG1, en: VistaArquitectura(Arch1, [C1], [E1], [G1]));
+sea Q5 = consultar(QSCov, por: AG1, en: InformeCobertura(D1, I1, SU1));

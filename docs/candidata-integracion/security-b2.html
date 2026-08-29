@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Security · Beta B2</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="info.css">
+</head>
+<body data-source-profile="en">
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SV · BETA B2</p>
+      <h1>Security</h1>
+      <p class="subtitle">Verifiable controls of the B2 experimental interface and limits of the guarantees described.</p>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <nav class="doc-nav" aria-label="Beta B2 navigation">
+      <a href="./?ui=en#editor">Back to the work environment</a>
+      <a href="diagnostics.html">Diagnostics</a>
+      <a href="features.html">Features</a>
+      <a href="beta-history.html">Beta history</a>
+      <a href="programming-metrics.html">Methodology and metrics</a>
+      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Language repository</a>
+    </nav>
+
+    <div class="experimental-notice"><strong>Scope.</strong> This page documents observable controls of Beta B2. It is not a general security certification and does not imply inclusion in the stable release.</div>
+
+    <section class="doc-section">
+      <h2>1. Identity and execution</h2>
+      <div class="doc-table-wrap"><table class="doc-table"><tbody>
+        <tr><th>Beta</th><td><strong>B2 · experimental · not included in the stable release</strong></td></tr>
+        <tr><th>Reference version</th><td><code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code></td></tr>
+        <tr><th>Grammar</th><td>0.2</td></tr>
+        <tr><th>IR</th><td>0.3</td></tr>
+        <tr><th>Expected WebAssembly</th><td><code>03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03</code> · 377812 bytes</td></tr>
+      </tbody></table></div>
+      <p>Compilation and assembly run locally in the browser through WebAssembly. Before instantiating the module, the interface computes its SHA-256 and also checks the declared byte size; a mismatch prevents initialization.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>2. Source profile and language separation</h2>
+      <ul>
+        <li>Source-profile selection is explicit: <code>es</code> or <code>en</code>.</li>
+        <li>There is no language autodetection.</li>
+        <li>Changing the interface language cannot modify source bytes or active source profiles.</li>
+        <li>Changing a source profile never translates or rewrites the program.</li>
+        <li>SVP-ES and SVP-EN are interpreted before the shared parser and use the same internal identities.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>3. Interface controls</h2>
+      <ul>
+        <li>The content security policy restricts scripts, styles, connections, images and fonts to the same origin, except for the explicit capabilities required for WebAssembly and embedded data.</li>
+        <li>The interface limits each source unit to 1 MiB.</li>
+        <li>UTF-8 result decoding is fatal: invalid byte sequences are not silently replaced.</li>
+        <li>The interface computes the SHA-256 of the current source and, when present, compares it with the <code>source_sha256</code> returned by compilation.</li>
+        <li>Downloading source preserves its text; no automatic translation or transformation is applied.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>4. File assembly</h2>
+      <p>B2 keeps two source units with independent profiles. It does not concatenate text or lexical sequences across files. Each unit is analyzed under its own profile and joint validation takes place after both representations have been integrated into one IR.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>5. Known limits</h2>
+      <ul>
+        <li>B2 remains a public experimental version and is not a stable release.</li>
+        <li>Browser, static-hosting and external delivery-chain security lie outside compiler semantics.</li>
+        <li>Visual Unicode security in strings, comments and other presentation forms is not declared resolved.</li>
+        <li>The existence of two units in B2 does not yet establish a general project infrastructure or an arbitrary module count.</li>
+        <li>These controls do not replace a security review before any inclusion in the stable release.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><p>SV Computing Language · Beta B2 · Security.</p></footer>
+</body>
+</html>

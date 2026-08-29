@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Laboratorio del Lenguaje · Beta B2</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="b2.css">
+</head>
+<body data-ui-lang="es" data-source-profile="es">
+  <header class="beta-header">
+    <div class="beta-header-inner">
+      <div class="beta-brand">
+        <div class="beta-logo" aria-hidden="true">SVP</div>
+        <div>
+          <h1 data-i18n="title">Lenguaje de Computación SV</h1>
+          <p>Beta B2 · SVP-ES + SVP-EN · Rust / WebAssembly</p>
+        </div>
+      </div>
+      <nav class="beta-nav" aria-label="Accesos principales">
+        <a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer" data-i18n="stable">Entorno estable</a>
+        <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer" data-i18n="repository">Repositorio</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="beta-state-line">
+    <strong>Beta B2 · experimental · no promovida</strong>
+    <span>Gramática 0.2 · IR 0.3 · Proyección 0.1.0 · corte soberano <code>f6b704e819e7…</code></span>
+  </div>
+
+  <div class="laboratory-layout">
+    <aside class="laboratory-rail" aria-label="Navegación del laboratorio">
+      <div class="rail-group">
+        <p class="rail-heading">Playground</p>
+        <button type="button" class="rail-button is-active" data-workspace-target="editor">Editor SVP</button>
+        <button type="button" class="rail-button" data-workspace-target="assembly">Ensamblaje</button>
+      </div>
+
+      <div class="rail-group">
+        <p class="rail-heading">Referencia</p>
+        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">
+          <strong>Gramática 0.2</strong>
+          <small><code>GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md</code></small>
+          <span>abrir lector traducible</span>
+        </a>
+        <a class="rail-link" href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">
+          <strong>IR 0.3</strong>
+          <small><code>IR_CANONICA_BIENFORMACION_SV_v0_3.md</code></small>
+          <span>abrir lector traducible</span>
+        </a>
+        <a id="diagnostics-link" class="rail-link compact" href="diagnosticos.html" data-i18n="diagnostics">Diagnósticos</a>
+      </div>
+
+      <div class="rail-group">
+        <p class="rail-heading">Garantías</p>
+        <a id="security-link" class="rail-link compact" href="seguridad-b2.html" data-i18n="security">Seguridad</a>
+        <a class="rail-link compact" href="caracteristicas.html" data-i18n="features">Características</a>
+        <a class="rail-link compact" href="historial-beta.html" data-i18n="history">Historial Beta</a>
+        <a class="rail-link compact" href="programacion-metricas.html">Programación y métricas</a>
+      </div>
+
+      <div class="rail-group">
+        <p class="rail-heading">Desarrollo</p>
+        <button type="button" class="rail-button rail-button-future" data-workspace-target="ide">IDE <span>próxima Beta</span></button>
+      </div>
+    </aside>
+
+    <div class="laboratory-content">
+      <section class="workspace-view" id="view-editor" data-workspace-view="editor">
+        <div class="view-heading">
+          <div><p class="eyebrow">PLAYGROUND</p><h2>Editor SVP</h2><p>Compilación local con perfil fuente explícito. La interfaz y el lenguaje del código permanecen independientes.</p></div>
+        </div>
+
+        <section class="control-panel" aria-label="Configuración">
+          <div class="control-group"><span class="control-label" data-i18n="interfaceLanguage">Interfaz</span><div class="segmented" role="group"><button type="button" data-ui-choice="es" aria-pressed="true">Español</button><button type="button" data-ui-choice="en" aria-pressed="false">English</button></div></div>
+          <div class="control-group profile-control"><span class="control-label" data-i18n="sourceLanguage">Código SV</span><div class="segmented profile-segmented" role="group"><button type="button" data-profile-choice="es" aria-pressed="true">Español · SVP-ES</button><button type="button" data-profile-choice="en" aria-pressed="false">English · SVP-EN</button></div></div>
+        </section>
+
+        <section class="profile-banner" aria-live="polite"><div><span class="profile-kicker" data-i18n="activeProfile">Perfil de código activo</span><strong id="profile-label">ESPAÑOL · SVP-ES</strong></div><p data-i18n="profileExplanation">El perfil es explícito. Cambiarlo no traduce ni modifica el contenido del editor.</p></section>
+
+        <section class="workspace editor-workspace-single">
+          <div class="editor-column">
+            <section class="editor-shell" aria-labelledby="editor-title">
+              <div class="panel-heading"><div><p class="panel-kicker" data-i18n="sourceCode">Código fuente</p><h3 id="editor-title" data-i18n="editor">Editor SVP</h3></div><span class="profile-chip" id="editor-profile-chip">SVP-ES</span></div>
+              <div class="file-row"><label for="file-name" data-i18n="fileName">Archivo</label><input id="file-name" value="programa.svp" spellcheck="false" autocomplete="off" maxlength="240"><button type="button" id="download-source" class="secondary" data-i18n="download">Descargar .svp</button></div>
+
+              <div class="editor-commandbar" role="toolbar" aria-label="Acciones del editor">
+                <div class="editor-actions editor-actions-top">
+                  <button type="button" id="run-source" class="primary" data-i18n="run">Compilar</button>
+                  <button type="button" id="clear-output" class="secondary" data-i18n="clearOutput">Limpiar resultado</button>
+                </div>
+                <details class="examples-details examples-menu">
+                  <summary><span><strong data-i18n="library">Biblioteca</strong> · <span data-i18n="examples">Ejemplos</span> <span class="examples-count">6</span></span><span class="profile-chip" id="examples-profile-chip">SVP-ES</span></summary>
+                  <div class="examples-panel examples-panel-collapsed">
+                    <p class="examples-help" data-i18n="examplesHelp">Los ejemplos se cargan sólo cuando usted lo solicita. El idioma de la interfaz y el perfil del código son independientes.</p>
+                    <div id="examples-list" class="examples-list examples-list-grid"></div>
+                  </div>
+                </details>
+              </div>
+
+              <textarea id="source-editor" spellcheck="false" autocapitalize="off" autocomplete="off" aria-label="Editor de código SVP"></textarea>
+              <div class="source-metadata"><span><strong>SHA-256</strong> <code id="source-sha">—</code></span><span><strong data-i18n="selectedProfile">Perfil</strong> <code id="source-profile-code">es</code></span></div>
+              <p id="editor-status" class="status-line" aria-live="polite"></p>
+            </section>
+            <section class="result-shell" aria-labelledby="result-title"><div class="panel-heading"><div><p class="panel-kicker" data-i18n="execution">Compilación local</p><h3 id="result-title" data-i18n="result">Resultado</h3></div><span id="result-state" class="result-state" data-state="idle" data-i18n="notExecuted">Sin ejecutar</span></div><pre id="result-output" tabindex="0" aria-live="polite"></pre></section>
+          </div>
+        </section>
+
+        <section class="architecture-compact"><h3 data-i18n="architectureTitle">Una sola identidad computacional</h3><p data-i18n="architectureText">SVP-ES y SVP-EN se canonicalizan antes del análisis sintáctico y convergen en el mismo analizador, IR y semántica. Los identificadores, cadenas, comentarios y datos del usuario no se traducen.</p></section>
+      </section>
+
+      <section class="workspace-view" id="view-assembly" data-workspace-view="assembly" hidden>
+        <div class="view-heading"><div><p class="eyebrow">PLAYGROUND · B2</p><h2 data-i18n="assemblyTitle">Ensamblaje multifuente</h2><p data-i18n="assemblyIntro">Dos unidades .svp mantienen fronteras y perfiles independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.</p></div></div>
+        <section class="assembly-shell" aria-labelledby="assembly-title">
+          <div class="panel-heading"><div><h3 id="assembly-title" data-i18n="assemblyTitle">Ensamblaje multifuente</h3></div><span class="result-state" id="assembly-joint" data-state="idle" data-i18n="waiting">Pendiente</span></div>
+          <div class="assembly-pair-bar"><span data-i18n="assemblyCheck">Validación conjunta</span><strong id="assembly-pair">SVP-ES + SVP-EN → IR 0.3</strong></div>
+          <div class="assembly-grid">
+            <article class="assembly-unit" id="assembly-card-a" data-slot="a" data-profile="es"><div class="assembly-unit-head"><h3 data-i18n="unitA">Unidad A</h3><span class="assembly-profile-chip" id="assembly-profile-a">SVP-ES</span></div><div class="assembly-profile-selector" role="group"><button type="button" data-assembly-profile="es" aria-pressed="true">SVP-ES</button><button type="button" data-assembly-profile="en" aria-pressed="false">SVP-EN</button></div><div class="assembly-file-row"><label class="upload-label" for="assembly-file-a" data-i18n="chooseFile">Subir .svp</label><input id="assembly-file-a" type="file" accept=".svp,text/plain"><input id="assembly-name-a" type="text" value="unidad-a.svp" maxlength="240" aria-label="Nombre de archivo A"></div><textarea id="assembly-source-a" class="assembly-source" spellcheck="false" autocomplete="off" aria-label="Fuente de la unidad A"></textarea><div class="assembly-meta">SHA-256 <code id="assembly-hash-a">—</code></div><div class="assembly-check-row"><span data-i18n="individualCheck">Comprobación aislada</span><span id="assembly-standalone-a" class="result-state" data-state="idle" data-i18n="waiting">Pendiente</span></div></article>
+            <article class="assembly-unit" id="assembly-card-b" data-slot="b" data-profile="en"><div class="assembly-unit-head"><h3 data-i18n="unitB">Unidad B</h3><span class="assembly-profile-chip" id="assembly-profile-b">SVP-EN</span></div><div class="assembly-profile-selector" role="group"><button type="button" data-assembly-profile="es" aria-pressed="false">SVP-ES</button><button type="button" data-assembly-profile="en" aria-pressed="true">SVP-EN</button></div><div class="assembly-file-row"><label class="upload-label" for="assembly-file-b" data-i18n="chooseFile">Subir .svp</label><input id="assembly-file-b" type="file" accept=".svp,text/plain"><input id="assembly-name-b" type="text" value="unidad-b.svp" maxlength="240" aria-label="Nombre de archivo B"></div><textarea id="assembly-source-b" class="assembly-source" spellcheck="false" autocomplete="off" aria-label="Fuente de la unidad B"></textarea><div class="assembly-meta">SHA-256 <code id="assembly-hash-b">—</code></div><div class="assembly-check-row"><span data-i18n="individualCheck">Comprobación aislada</span><span id="assembly-standalone-b" class="result-state" data-state="idle" data-i18n="waiting">Pendiente</span></div></article>
+          </div>
+          <div class="assembly-actions"><button type="button" class="secondary" id="load-demo-independent" data-i18n="loadIndependentDemo">Demostración ES+EN independiente</button><button type="button" class="secondary" id="load-demo-linked" data-i18n="loadLinkedDemo">Demostración enlazada ES→EN</button><button type="button" class="primary" id="run-assembly" data-i18n="assemble">Compilar y ensamblar</button><button type="button" class="secondary" id="clear-assembly" data-i18n="clearAssembly">Limpiar ensamblaje</button></div>
+          <div class="assembly-output-shell"><div class="panel-heading"><h3 data-i18n="assemblyResult">Resultado del ensamblaje</h3></div><pre id="assembly-output" tabindex="0" aria-live="polite"></pre><p id="assembly-status" aria-live="polite"></p></div>
+        </section>
+      </section>
+
+      <section class="workspace-view" id="view-ide" data-workspace-view="ide" hidden>
+        <div class="ide-shell-placeholder"><p class="eyebrow">PRÓXIMA BETA · PROPUESTA</p><h2>Entorno integrado de desarrollo</h2><p>Este espacio reserva la futura evolución del Playground hacia proyectos, varios archivos, pestañas, símbolos, diagnósticos estructurados, representación IR y trazas. Beta B2 no implementa esas capacidades ni introduce un segundo analizador.</p><div class="ide-placeholder-grid"><div>Proyecto</div><div>Editor / pestañas</div><div>Diagnósticos · IR · trazas</div></div></div>
+      </section>
+
+      <section class="build-panel compact-build" aria-labelledby="build-title">
+        <h2 id="build-title" data-i18n="reproducibility">Identidad de Beta B2</h2>
+        <dl><div><dt data-i18n="betaVersion">Beta</dt><dd><strong id="build-beta">B2</strong></dd></div><div><dt data-i18n="betaState">Estado</dt><dd><strong data-i18n="betaStateValue">Experimental · no promovida</strong></dd></div><div><dt data-i18n="sourceCut">Corte fuente soberano</dt><dd><code id="build-source-commit">—</code></dd></div><div><dt>WebAssembly SHA-256</dt><dd><code id="build-wasm-sha">—</code></dd></div><div><dt data-i18n="wasmSize">Tamaño WebAssembly</dt><dd><code id="build-wasm-bytes">—</code></dd></div><div><dt>Gramática</dt><dd><code id="build-grammar">0.2</code></dd></div><div><dt>IR</dt><dd><code id="build-ir">0.3</code></dd></div><div><dt data-i18n="projection">Proyección</dt><dd><code id="build-projection">0.1.0</code></dd></div></dl>
+      </section>
+    </div>
+  </div>
+
+  <footer><p data-i18n="footerText">La interfaz sólo transporta bytes y presenta resultados. La compilación, el ensamblaje canónico y la validación global se ejecutan localmente en el WebAssembly de Beta B2.</p></footer>
+  <script src="wasm-loader-b2.js" defer></script>
+  <script src="workspace-b2.js?v=b2-ui-return-20260829-1" defer></script>
+  <script src="app-b2.js" defer></script>
+</body>
+</html>

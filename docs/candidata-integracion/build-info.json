@@ -1,0 +1,29 @@
+{
+  "status": "experimental",
+  "beta": "B2",
+  "beta_id": "B2",
+  "beta_constituted_on": "2026-08-28",
+  "promotion_status": "not_promoted",
+  "source_commit": "f6b704e819e7d08589f00e9e3f9550deab21d0b1",
+  "laboratory_commit": "fa43dc49adf9da8cff72d1a03c981c77d27ed93f",
+  "laboratory_run": 33207042268,
+  "evidence_artifact_digest": "sha256:0542d58430f530c8fb3ca47c7a089b9dd0a4d7a365b14a8f52c50dcd12dd3568",
+  "wasm_sha256": "03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03",
+  "wasm_bytes": 377812,
+  "grammar": "0.2",
+  "ir": "0.3",
+  "projection": "0.1.0",
+  "profiles": ["es", "en"],
+  "default_ui": "es",
+  "default_source_profile": "es",
+  "profile_selection": "explicit",
+  "autodetection": false,
+  "assembly": {
+    "status": "experimental",
+    "minimum_units": 2,
+    "browser_interface_units": 2,
+    "unit_profiles_independent": true,
+    "cross_file_text_or_token_concatenation": false,
+    "global_wellformedness_after_canonical_merge": true
+  }
+}

@@ -1,0 +1,35 @@
+-- compose_basic.svp — Composición con relación y patrón declarados
+
+codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+semántica_de_salida Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+especificación_de_celda C1 { b: 3; codominio: K3; semántica: Klin; rol: Base; }
+especificación_de_celda C2 { b: 3; codominio: K3; semántica: Klin; rol: Base; }
+
+especificación_acoplada CC1 { celda: C1; puentes: [3]; }
+especificación_acoplada CC2 { celda: C2; puentes: [3]; }
+
+conector Phi1 {
+  codominio_de_origen: K3;
+  posición_objetivo: 3;
+  correspondencia: { APTO -> Cero; NO_APTO -> Uno; INDETERMINADO -> U; }
+}
+
+relación_semántica R_serie {
+  clase: RelaciónDeclarada;
+  restricciones: [ProfilaxisRiesgo];
+}
+
+patrón P_serie {
+  clase: PatrónDeclarado;
+  aridad: 2;
+}
+
+grafo G1 {
+  nodos: [CC1, CC2];
+  aristas: [arista(origen: CC1, objetivo: CC2, posición: 3, conector: Phi1)];
+  relación: R_serie;
+  régimen: Simple;
+}
+
+sea A1 = componer(G1, relaciones: [R_serie], patrones: [P_serie]);

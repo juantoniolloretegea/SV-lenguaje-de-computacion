@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Características de Beta B1</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="info.css">
+</head>
+<body data-source-profile="es">
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SV · BETA B1</p>
+      <h1>Características de esta versión</h1>
+      <p class="subtitle">Ficha técnica pública de la versión experimental ES/EN del Lenguaje de Computación SV.</p>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <nav class="doc-nav" aria-label="Navegación de Beta B1">
+      <a href="./">Volver al entorno de trabajo Beta</a>
+      <a href="programacion-metricas.html">Metodología y métricas</a>
+      <a href="historial-beta.html">Historial Beta</a>
+      <a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer">Entorno estable</a>
+      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Repositorio del Lenguaje</a>
+    </nav>
+
+    <div class="experimental-notice" role="status">
+      <strong>Estado experimental.</strong>
+      Esta ficha describe Beta B1 y su evidencia reproducible. No convierte la rama Beta en versión estable ni acredita su incorporación a producción.
+    </div>
+
+    <section class="doc-section">
+      <h2>Datos de Beta B1</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><th>Identificador</th><td><strong>Beta B1</strong></td></tr>
+            <tr><th>Estado</th><td><span class="status-badge">Desplegada · experimental · no incorporada a la versión estable</span></td></tr>
+            <tr><th>Fecha de publicación experimental</th><td>28/08/2026</td></tr>
+            <tr><th>Versión de referencia</th><td><code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code></td></tr>
+            <tr><th>Gramática</th><td>SVP 0.2</td></tr>
+            <tr><th>IR</th><td>0.3</td></tr>
+            <tr><th>Perfiles experimentales disponibles</th><td><code>SVP-ES</code> · <code>SVP-EN</code></td></tr>
+            <tr><th>Perfil predeterminado de la Beta</th><td><code>es</code></td></tr>
+            <tr><th>WebAssembly SHA-256</th><td><code>da37c14e0b5f4e8b0a66756427e7ddc006b7823a0b45737a35fdeeaef3ac3754</code></td></tr>
+            <tr><th>WebAssembly</th><td>355221 bytes</td></tr>
+            <tr><th>Incorporación a la versión estable</th><td><strong>No realizada</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <h2>Modelo bilingüe de entrada</h2>
+      <p class="doc-lead">Beta B1 no contiene dos lenguajes computacionales. Ofrece dos formas lingüísticas de entrada que se interpretan antes del análisis sintáctico común.</p>
+      <pre class="doc-code">bytes UTF-8
+   ↓
+perfil fuente explícito: es | en
+   ↓
+clasificación de la grafía
+   ↓
+identidad interna del terminal
+   ↓
+analizador sintáctico único
+   ↓
+IR 0.3 única
+   ↓
+bienformación y semántica únicas
+   ↓
+Rust nativo / WebAssembly</pre>
+      <p>El índice experimental seleccionado clasifica cada grafía mediante una única tabla conjunta y conserva, para cada entrada, la identidad interna y los perfiles en los que está admitida. La compilación no recorre secuencialmente una lista de idiomas.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Propiedades de B1</h2>
+      <ul>
+        <li>La selección de perfil es explícita; no existe autodetección de idioma.</li>
+        <li>Los únicos selectores disponibles son <code>en</code> y <code>es</code>.</li>
+        <li>Cambiar el idioma de la interfaz no cambia el perfil del código.</li>
+        <li>Cambiar el perfil del código no traduce ni modifica la fuente.</li>
+        <li>Los identificadores definidos por el usuario, las cadenas, los comentarios y los datos no se traducen.</li>
+        <li>Las diferencias ES/EN se resuelven antes de que alcancen el analizador sintáctico, la IR o la semántica.</li>
+        <li>Dos fuentes ES/EN equivalentes conservan procedencias y <code>source_sha256</code> diferentes.</li>
+        <li>Una forma perteneciente al perfil contrario no puede actuar como sintaxis válida del perfil activo.</li>
+        <li>La interfaz web transporta bytes e invoca el WebAssembly local; no implementa una segunda semántica.</li>
+        <li>No se utiliza traducción automática, IA, base de datos ni servicio remoto para decidir el significado del programa.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Cobertura lingüística</h2>
+      <div class="metric-grid">
+        <div class="metric-card"><strong>154 / 154</strong><span>identidades del catálogo cubiertas por la prueba experimental</span></div>
+        <div class="metric-card"><strong>147</strong><span>formas actualmente realizables</span></div>
+        <div class="metric-card"><strong>7</strong><span>formas protegidas pero no realizables en la versión de referencia</span></div>
+        <div class="metric-card"><strong>19 pares</strong><span>fuentes válidas ES/EN con carga semántica equivalente</span></div>
+        <div class="metric-card"><strong>12 / 12</strong><span>fuentes EN rechazadas al forzar perfil ES</span></div>
+        <div class="metric-card"><strong>12 / 12</strong><span>fuentes ES rechazadas al forzar perfil EN</span></div>
+      </div>
+      <p>Las siete formas protegidas sin producción positiva actual son <code>PendingU</code>, <code>True</code>, <code>max</code>, <code>min</code>, <code>null</code>, <code>None</code> y <code>NaN</code>. Su protección forma parte de la definición de la versión; no se crean programas artificialmente válidos para convertirlas en formas productivas.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Rendimiento y coste material</h2>
+      <p>En la prueba final del índice conjunto, la incorporación de ES no produjo incremento medido de asignaciones, bytes asignados, pico incremental ni memoria viva final al compilar el mismo corpus inglés. El coste añadido se concentra principalmente en código y tablas estáticas.</p>
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Magnitud</th><th>Un perfil EN</th><th>Índice conjunto ES/EN</th><th>Lectura</th></tr></thead>
+          <tbody>
+            <tr><td>CPU mediana</td><td>17406,804 ns</td><td>16924,057 ns</td><td>−2,671 % en esta prueba; no se atribuye como ganancia intrínseca del bilingüismo.</td></tr>
+            <tr><td>Asignaciones/compilación</td><td>135,75</td><td>135,75</td><td>0 adicionales medidas.</td></tr>
+            <tr><td>Bytes asignados/compilación</td><td>33706,92</td><td>33706,92</td><td>0 adicionales medidos.</td></tr>
+            <tr><td>Pico incremental</td><td>55854 B</td><td>55854 B</td><td>0 B adicionales medidos.</td></tr>
+            <tr><td>Memoria viva final</td><td>0 B</td><td>0 B</td><td>0 B.</td></tr>
+            <tr><td>Ejecutable nativo</td><td>919056 B</td><td>927584 B</td><td>+0,928 %.</td></tr>
+            <tr><td>WebAssembly</td><td>343378 B</td><td>355221 B</td><td>+3,449 %.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>La forma española mostró, en el corpus de rendimiento ensayado, una mediana aproximadamente 2,11 % superior a la de un control inglés igualado en bytes. Esa prueba no identifica una causa léxica única y la diferencia queda confinada a la fase inicial de compilación.</p>
+      <p><a class="inline-link" href="programacion-metricas.html">Consulte Metodología y métricas para los detalles y los valores completos.</a></p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Qué no acredita Beta B1</h2>
+      <ul>
+        <li>No constituye todavía una versión estable de SVP-ES.</li>
+        <li>No modifica retroactivamente la Gramática 0.2 de referencia ni su repertorio actual de palabras reservadas.</li>
+        <li>No acredita una infraestructura general de proyectos, módulos o unidades de varios archivos.</li>
+        <li>No habilita mezcla arbitraria de sintaxis ES/EN dentro de una misma unidad fuente.</li>
+        <li>No define perfiles portugués, francés, italiano, alemán ni ningún otro idioma.</li>
+        <li>No demuestra coste constante para un número arbitrario de perfiles; cada ampliación deberá medirse.</li>
+        <li>No resuelve todavía el trabajo pendiente sobre seguridad visual Unicode, diagnósticos estructurados ni herramientas de desarrollo.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Trazabilidad de una futura incorporación</h2>
+      <p>Una Beta desplegada no se convierte en versión estable por ser públicamente accesible. Una futura incorporación deberá identificar la Beta exacta, su versión de referencia, la evidencia de regresión y seguridad, la comparación con <code>main</code>, la documentación sincronizada y el commit finalmente integrado en el repositorio principal del Lenguaje.</p>
+      <p><a class="inline-link" href="historial-beta.html">El Historial Beta conserva el estado de B1 y las propuestas abiertas para la siguiente revisión.</a></p>
+    </section>
+  </main>
+
+  <footer><p>Lenguaje de Computación SV · Beta B1 · Ficha técnica experimental.</p></footer>
+</body>
+</html>

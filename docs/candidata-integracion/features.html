@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Beta B1 Features</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="info.css">
+</head>
+<body data-source-profile="en">
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SV · BETA B1</p>
+      <h1>Features of this version</h1>
+      <p class="subtitle">Public technical sheet for the experimental ES/EN version of the SV Computing Language.</p>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <nav class="doc-nav" aria-label="Beta B1 navigation">
+      <a href="./?ui=en#editor">Back to the Beta work environment</a>
+      <a href="programming-metrics.html">Methodology and metrics</a>
+      <a href="beta-history.html">Beta history</a>
+      <a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer">Stable environment</a>
+      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Language repository</a>
+    </nav>
+
+    <div class="experimental-notice" role="status">
+      <strong>Experimental state.</strong>
+      This sheet describes Beta B1 and its reproducible evidence. It does not make the Beta branch a stable release and does not establish inclusion in production.
+    </div>
+
+    <section class="doc-section">
+      <h2>Beta B1 technical data</h2>
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <tbody>
+            <tr><th>Identifier</th><td><strong>Beta B1</strong></td></tr>
+            <tr><th>State</th><td><span class="status-badge">Deployed · experimental · not included in the stable release</span></td></tr>
+            <tr><th>Experimental publication date</th><td>28/08/2026</td></tr>
+            <tr><th>Reference version</th><td><code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code></td></tr>
+            <tr><th>Grammar</th><td>SVP 0.2</td></tr>
+            <tr><th>IR</th><td>0.3</td></tr>
+            <tr><th>Experimental profiles available</th><td><code>SVP-ES</code> · <code>SVP-EN</code></td></tr>
+            <tr><th>Default Beta profile</th><td><code>es</code></td></tr>
+            <tr><th>WebAssembly SHA-256</th><td><code>da37c14e0b5f4e8b0a66756427e7ddc006b7823a0b45737a35fdeeaef3ac3754</code></td></tr>
+            <tr><th>WebAssembly</th><td>355221 bytes</td></tr>
+            <tr><th>Inclusion in the stable release</th><td><strong>Not performed</strong></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="doc-section">
+      <h2>Bilingual input model</h2>
+      <p class="doc-lead">Beta B1 does not contain two computational languages. It offers two linguistic input forms that are interpreted before the shared parser.</p>
+      <pre class="doc-code">UTF-8 bytes
+   ↓
+explicit source profile: es | en
+   ↓
+spelling classification
+   ↓
+internal terminal identity
+   ↓
+single parser
+   ↓
+single IR 0.3
+   ↓
+single well-formedness and semantics
+   ↓
+native Rust / WebAssembly</pre>
+      <p>The selected experimental index classifies each spelling through one joint table and retains, for each entry, its internal identity and the profiles in which it is accepted. Compilation does not traverse a language list sequentially.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>B1 properties</h2>
+      <ul>
+        <li>Profile selection is explicit; there is no language autodetection.</li>
+        <li>The only available selectors are <code>en</code> and <code>es</code>.</li>
+        <li>Changing interface language does not change the source-code profile.</li>
+        <li>Changing the source-code profile does not translate or modify the source.</li>
+        <li>User-defined identifiers, strings, comments and data are not translated.</li>
+        <li>ES/EN differences are resolved before reaching the parser, IR or semantics.</li>
+        <li>Equivalent ES/EN sources retain different provenance and different <code>source_sha256</code> values.</li>
+        <li>A form belonging to the opposite profile cannot act as valid syntax under the active profile.</li>
+        <li>The web interface transports bytes and invokes local WebAssembly; it does not implement a second semantics.</li>
+        <li>No machine translation, AI, database or remote service is used to determine program meaning.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Language coverage</h2>
+      <div class="metric-grid">
+        <div class="metric-card"><strong>154 / 154</strong><span>catalogue identities covered by the experimental test</span></div>
+        <div class="metric-card"><strong>147</strong><span>forms currently realizable</span></div>
+        <div class="metric-card"><strong>7</strong><span>protected forms not realizable in the reference version</span></div>
+        <div class="metric-card"><strong>19 pairs</strong><span>valid ES/EN sources with equivalent semantic payload</span></div>
+        <div class="metric-card"><strong>12 / 12</strong><span>EN sources rejected when forced under ES</span></div>
+        <div class="metric-card"><strong>12 / 12</strong><span>ES sources rejected when forced under EN</span></div>
+      </div>
+      <p>The seven protected forms without current positive production are <code>PendingU</code>, <code>True</code>, <code>max</code>, <code>min</code>, <code>null</code>, <code>None</code> and <code>NaN</code>. Their protection is part of the version definition; artificially valid programs are not created merely to make those forms productive.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>Performance and material cost</h2>
+      <p>In the final joint-index test, adding ES produced no measured increase in allocations, allocated bytes, incremental peak or final live memory when compiling the same English corpus. The added cost is concentrated mainly in code and static tables.</p>
+      <div class="doc-table-wrap">
+        <table class="doc-table">
+          <thead><tr><th>Magnitude</th><th>Single EN profile</th><th>ES/EN joint index</th><th>Reading</th></tr></thead>
+          <tbody>
+            <tr><td>Median CPU</td><td>17406.804 ns</td><td>16924.057 ns</td><td>−2.671% in this test; not attributed as an intrinsic bilingual speedup.</td></tr>
+            <tr><td>Allocations/compilation</td><td>135.75</td><td>135.75</td><td>0 additional measured.</td></tr>
+            <tr><td>Allocated bytes/compilation</td><td>33706.92</td><td>33706.92</td><td>0 additional measured.</td></tr>
+            <tr><td>Incremental peak</td><td>55854 B</td><td>55854 B</td><td>0 B additional measured.</td></tr>
+            <tr><td>Final live memory</td><td>0 B</td><td>0 B</td><td>0 B.</td></tr>
+            <tr><td>Native executable</td><td>919056 B</td><td>927584 B</td><td>+0.928%.</td></tr>
+            <tr><td>WebAssembly</td><td>343378 B</td><td>355221 B</td><td>+3.449%.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>In the tested performance corpus, the Spanish form showed a median approximately 2.11% above an English control matched in bytes. That test does not identify a single lexical cause, and the difference remains confined to the initial compilation stage.</p>
+      <p><a class="inline-link" href="programming-metrics.html">See Methodology and metrics for details and complete values.</a></p>
+    </section>
+
+    <section class="doc-section">
+      <h2>What Beta B1 does not establish</h2>
+      <ul>
+        <li>It does not yet establish a stable version of SVP-ES.</li>
+        <li>It does not retroactively modify reference Grammar 0.2 or its current reserved-word repertoire.</li>
+        <li>It does not establish a general infrastructure for projects, modules or multiple-file units.</li>
+        <li>It does not enable arbitrary mixing of ES/EN syntax inside one source unit.</li>
+        <li>It does not define Portuguese, French, Italian, German or any other language profile.</li>
+        <li>It does not demonstrate constant cost for an arbitrary number of profiles; each extension must be measured.</li>
+        <li>It does not yet resolve pending work concerning visual Unicode security, structured diagnostics or development tools.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>Traceability of future inclusion</h2>
+      <p>A deployed Beta does not become a stable release merely by being publicly accessible. Any future inclusion must identify the exact Beta, its reference version, regression and security evidence, comparison with <code>main</code>, synchronized documentation and the commit ultimately integrated into the main Language repository.</p>
+      <p><a class="inline-link" href="beta-history.html">The Beta history preserves B1 state and open proposals for the next revision.</a></p>
+    </section>
+  </main>
+
+  <footer><p>SV Computing Language · Beta B1 · Experimental technical sheet.</p></footer>
+</body>
+</html>

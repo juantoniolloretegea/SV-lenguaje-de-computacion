@@ -1,0 +1,30 @@
+-- resolve_projection.svp — resolve sobre una U constituida + proyección explícita
+
+codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+
+semántica_de_salida Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+especificación_de_celda C1 {
+  b: 3;
+  codominio: K3;
+  semántica: Klin;
+  rol: Base;
+}
+
+estado_de_celda S1 {
+  especificación: C1;
+  vector: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+}
+
+especificación_de_resolución RS1 {
+  contexto: ContextoClinico;
+  mecanismo: RevisionExperto;
+  correspondencia: MapeoResolucion;
+}
+
+sea RR1 = resolver((S1, 3), con: RS1, contexto: ContextoClinico, mecanismo: RevisionExperto);
+sea valor_resuelto = RR1.valor_resuelto;

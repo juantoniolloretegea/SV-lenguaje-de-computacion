@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>SV — Seguridad · Beta B2</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="info.css">
+</head>
+<body data-source-profile="es">
+  <header class="site-header">
+    <div class="brand-block">
+      <p class="eyebrow">SV · BETA B2</p>
+      <h1>Seguridad</h1>
+      <p class="subtitle">Controles verificables de la interfaz experimental B2 y límites de las garantías descritas.</p>
+    </div>
+  </header>
+
+  <main class="doc-main">
+    <nav class="doc-nav" aria-label="Navegación de Beta B2">
+      <a href="./">Volver al entorno de trabajo</a>
+      <a href="diagnosticos.html">Diagnósticos</a>
+      <a href="caracteristicas.html">Características</a>
+      <a href="historial-beta.html">Historial Beta</a>
+      <a href="programacion-metricas.html">Metodología y métricas</a>
+      <a href="https://lectura-sv.itvia.online/lenguaje" target="_blank" rel="noopener noreferrer">Repositorio del Lenguaje</a>
+    </nav>
+
+    <div class="experimental-notice"><strong>Alcance.</strong> Esta página documenta controles observables de Beta B2. No constituye una certificación general de seguridad ni implica su incorporación a la versión estable.</div>
+
+    <section class="doc-section">
+      <h2>1. Identidad y ejecución</h2>
+      <div class="doc-table-wrap"><table class="doc-table"><tbody>
+        <tr><th>Beta</th><td><strong>B2 · experimental · no incorporada a la versión estable</strong></td></tr>
+        <tr><th>Versión de referencia</th><td><code>f6b704e819e7d08589f00e9e3f9550deab21d0b1</code></td></tr>
+        <tr><th>Gramática</th><td>0.2</td></tr>
+        <tr><th>IR</th><td>0.3</td></tr>
+        <tr><th>WebAssembly esperado</th><td><code>03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03</code> · 377812 bytes</td></tr>
+      </tbody></table></div>
+      <p>La compilación y el ensamblaje se ejecutan localmente en el navegador mediante WebAssembly. Antes de instanciar el módulo, la interfaz calcula su SHA-256 y comprueba también el tamaño declarado; una discrepancia impide su inicialización.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>2. Perfil fuente y separación lingüística</h2>
+      <ul>
+        <li>La selección de perfil es explícita: <code>es</code> o <code>en</code>.</li>
+        <li>No existe autodetección de idioma.</li>
+        <li>Cambiar el idioma de la interfaz no puede modificar la fuente ni los perfiles activos.</li>
+        <li>Cambiar el perfil fuente no traduce ni altera los bytes del programa.</li>
+        <li>SVP-ES y SVP-EN se interpretan antes del análisis sintáctico común y utilizan las mismas identidades internas.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>3. Controles de la interfaz</h2>
+      <ul>
+        <li>La política de seguridad de contenido restringe scripts, estilos, conexiones, imágenes y fuentes al propio origen, salvo las excepciones expresamente necesarias para WebAssembly y datos embebidos.</li>
+        <li>La fuente admitida por la interfaz está limitada a 1 MiB por unidad.</li>
+        <li>La decodificación de resultados UTF-8 se realiza en modo fatal: una secuencia inválida no se sustituye silenciosamente.</li>
+        <li>La interfaz calcula SHA-256 de la fuente actual y contrasta, cuando existe, el <code>source_sha256</code> devuelto por la compilación.</li>
+        <li>La descarga de una fuente conserva su texto; no ejecuta traducción ni transformación automática.</li>
+      </ul>
+    </section>
+
+    <section class="doc-section">
+      <h2>4. Ensamblaje de archivos</h2>
+      <p>B2 mantiene dos unidades fuente con perfiles independientes. No concatena textos ni secuencias léxicas entre archivos. Cada unidad se analiza bajo su propio perfil y la validación conjunta se realiza después de integrar ambas representaciones en una única IR.</p>
+    </section>
+
+    <section class="doc-section">
+      <h2>5. Límites conocidos</h2>
+      <ul>
+        <li>B2 sigue siendo una versión experimental pública y no una versión estable.</li>
+        <li>La seguridad del navegador, del alojamiento estático y de la cadena de entrega externa queda fuera de la semántica del compilador.</li>
+        <li>La seguridad visual Unicode en cadenas, comentarios y otras formas de presentación no se declara resuelta.</li>
+        <li>La existencia de dos unidades en la interfaz B2 no acredita todavía una infraestructura general de proyectos o un número arbitrario de módulos.</li>
+        <li>Los controles aquí documentados no sustituyen una revisión de seguridad previa a cualquier incorporación a la versión estable.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer><p>Lenguaje de Computación SV · Beta B2 · Seguridad.</p></footer>
+</body>
+</html>

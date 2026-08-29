@@ -1,0 +1,9 @@
+{
+  "origin_repository": "juantoniolloretegea/SVcustos-dataset",
+  "origin_branch": "lab/lenguaje-sv-beta",
+  "origin_commit": "ebe53b1faf3162f0e19b528e60d5fe859b1201ac",
+  "origin_beta": "B2",
+  "candidate_base": "79311c516288537e625f444f13826ed86227cca2",
+  "state": "candidate_not_promoted",
+  "promotion_authorized": false
+}
