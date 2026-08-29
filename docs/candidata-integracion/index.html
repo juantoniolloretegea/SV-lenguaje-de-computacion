@@ -71,15 +71,15 @@
     <div class="laboratory-content">
       <section class="workspace-view" id="view-editor" data-workspace-view="editor">
         <div class="view-heading">
-          <div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2>Editor SVP</h2><p>Compilación local con perfil fuente explícito. La interfaz y el lenguaje del código permanecen independientes.</p></div>
+          <div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2>Editor SVP</h2><p>Compilación local con perfil fuente explícito. La interfaz y el perfil fuente del código permanecen independientes.</p></div>
         </div>
 
         <section class="control-panel" aria-label="Configuración">
           <div class="control-group"><span class="control-label" data-i18n="interfaceLanguage">Interfaz</span><div class="segmented" role="group"><button type="button" data-ui-choice="es" aria-pressed="true">Español</button><button type="button" data-ui-choice="en" aria-pressed="false">English</button></div></div>
-          <div class="control-group profile-control"><span class="control-label" data-i18n="sourceLanguage">Código SV</span><div class="segmented profile-segmented" role="group"><button type="button" data-profile-choice="es" aria-pressed="true">Español · SVP-ES</button><button type="button" data-profile-choice="en" aria-pressed="false">English · SVP-EN</button></div></div>
+          <div class="control-group profile-control"><span class="control-label" data-i18n="sourceLanguage">Perfil fuente</span><div class="segmented profile-segmented" role="group"><button type="button" data-profile-choice="es" aria-pressed="true">Español · SVP-ES</button><button type="button" data-profile-choice="en" aria-pressed="false">English · SVP-EN</button></div></div>
         </section>
 
-        <section class="profile-banner" aria-live="polite"><div><span class="profile-kicker" data-i18n="activeProfile">Perfil de código activo</span><strong id="profile-label">ESPAÑOL · SVP-ES</strong></div><p data-i18n="profileExplanation">El perfil es explícito. Cambiarlo no traduce ni modifica el contenido del editor.</p></section>
+        <section class="profile-banner" aria-live="polite"><div><span class="profile-kicker" data-i18n="activeProfile">Perfil fuente del código</span><strong id="profile-label">ESPAÑOL · SVP-ES</strong></div><p data-i18n="profileExplanation">El perfil es explícito. Cambiarlo no traduce ni modifica el contenido del editor.</p></section>
 
         <section class="workspace editor-workspace-single">
           <div class="editor-column">
@@ -95,7 +95,7 @@
                 <details class="examples-details examples-menu">
                   <summary><span><strong data-i18n="library">Biblioteca</strong> · <span data-i18n="examples">Ejemplos</span> <span class="examples-count">6</span></span><span class="profile-chip" id="examples-profile-chip">SVP-ES</span></summary>
                   <div class="examples-panel examples-panel-collapsed">
-                    <p class="examples-help" data-i18n="examplesHelp">Los ejemplos se cargan sólo cuando usted lo solicita. El idioma de la interfaz y el perfil del código son independientes.</p>
+                    <p class="examples-help" data-i18n="examplesHelp">Los ejemplos se cargan sólo cuando usted lo solicita. El idioma de la interfaz y el perfil fuente del código son independientes.</p>
                     <div id="examples-list" class="examples-list examples-list-grid"></div>
                   </div>
                 </details>
@@ -113,7 +113,7 @@
       </section>
 
       <section class="workspace-view" id="view-assembly" data-workspace-view="assembly" hidden>
-        <div class="view-heading"><div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2 data-i18n="assemblyTitle">Ensamblaje multifuente</h2><p data-i18n="assemblyIntro">Dos unidades .svp mantienen fronteras y perfiles independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.</p></div></div>
+        <div class="view-heading"><div><p class="eyebrow">ENTORNO DE TRABAJO</p><h2 data-i18n="assemblyTitle">Ensamblaje multifuente</h2><p data-i18n="assemblyIntro">Dos unidades .svp mantienen fronteras y perfiles fuente independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.</p></div></div>
         <section class="assembly-shell" aria-labelledby="assembly-title">
           <div class="panel-heading"><div><h3 id="assembly-title" data-i18n="assemblyTitle">Ensamblaje multifuente</h3></div><span class="result-state" id="assembly-joint" data-state="idle" data-i18n="waiting">Pendiente</span></div>
           <div class="assembly-pair-bar"><span data-i18n="assemblyCheck">Validación conjunta</span><strong id="assembly-pair">SVP-ES + SVP-EN → IR 0.3</strong></div>
@@ -129,8 +129,7 @@
   </div>
 
   <footer><p>Lenguaje de computación del Sistema Vectorial SV — .svp (Sistema Vectorial Poligonal) · <a href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md" target="_blank" rel="noopener noreferrer">Historial de versiones</a> · Juan Antonio Lloret Egea · <a href="https://orcid.org/0000-0002-6634-3351" target="_blank" rel="noopener noreferrer">ORCID 0000-0002-6634-3351</a> · ISSN 2695-6411 · CC BY-NC-ND 4.0</p></footer>
-  <script src="wasm-loader-b2.js" defer></script>
-  <script src="workspace-b2.js?v=b2-ui-return-20260829-1" defer></script>
+  <script src="workspace-b2.js?v=b2-conformidad-runtime-20260829-2" defer></script>
   <script src="app-b2.js" defer></script>
 </body>
 </html>

@@ -35,6 +35,7 @@ pub mod decision_trace;
 mod equivalence;
 mod execution;
 mod frontend;
+mod grammar_conformance;
 mod identifier_profile;
 pub mod frame;
 pub mod ir;
@@ -141,13 +142,15 @@ impl From<FrontendError> for CompileError {
 }
 
 /// Compila texto SVP a la representación soberana IR 0.3 y valida su
-/// bienformación antes de exponerla fuera del núcleo.
+/// conformidad gramatical cerrada y su bienformación antes de exponerla fuera
+/// del núcleo.
 ///
 /// El analizador sintáctico y el descenso permanecen internos. Un adaptador
 /// externo no puede solicitar una `IrProgram` aceptada sin atravesar también
-/// la validación soberana de este núcleo.
+/// las fronteras soberanas de conformidad y bienformación de este núcleo.
 pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, CompileError> {
     let program = frontend::compile_svp(source, source_file)?;
+    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
@@ -158,10 +161,10 @@ pub fn compile_svp_profile(
     profile: SourceProfile,
 ) -> Result<IrProgram, CompileError> {
     let program = frontend::compile_svp_with_profile(source, source_file, profile)?;
+    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
-
 
 /// Unidad fuente de un ensamblaje multifuente experimental.
 ///
@@ -206,9 +209,10 @@ fn assembly_identity(units: &[SourceUnit<'_>]) -> String {
 /// No concatena texto ni tokens entre archivos. Cada fuente alcanza EOF dentro
 /// de su propia frontera y se canonicaliza bajo su perfil explícito. Los
 /// objetos y operaciones resultantes se reúnen conservando el orden de las
-/// unidades; sólo entonces se ejecuta la validación de bienformación sobre el
-/// programa conjunto. Esto permite referencias entre unidades sin permitir que
-/// una producción sintáctica atraviese la frontera entre archivos.
+/// unidades; sólo entonces se ejecutan la conformidad gramatical cerrada y la
+/// validación de bienformación sobre el programa conjunto. Esto permite
+/// referencias entre unidades sin permitir que una producción sintáctica
+/// atraviese la frontera entre archivos.
 pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, CompileError> {
     if units.len() < 2 {
         return Err(CompileError::InvalidProgram(
@@ -235,6 +239,7 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
         objects,
         operations,
     );
+    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
