@@ -39,6 +39,7 @@ La continuidad documental se organiza así:
 | RETP-2026-068 | 19/08/2026 | 23:40:14 | CIERRE_BLOQUE_Y_SINCRONIZACION_REGISTRAL | Lenguaje SV / cierre de FFL-B / deuda técnica delimitada | cerrado |
 | RETP-2026-069 | 20/08/2026 | 07:23:44 | APERTURA_BLOQUE_Y_PREPARACION_PROBATORIA | Lenguaje SV / FFL-C / pruebas y evidencia | cerrado |
 | RETP-2026-070 | 20/08/2026 | 08:16:26 | CIERRE_BLOQUE_Y_SINCRONIZACION_DE_EVIDENCIA | Lenguaje SV / FFL-C / cierre probatorio | cerrado |
+| RETP-2026-071 | 29/08/2026 | NO_CONSTA | INTEGRACION_PUBLICACION_Y_CIERRE_DE_CONFORMIDAD | Lenguaje SV / Beta B2 / realización estable bilingüe / cierre DFL-007 | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -211,11 +212,34 @@ La continuidad documental se organiza así:
 - **Decisión:** cerrar FFL-C y mantener FFL-D y FFL-E pendientes, sin apertura automática de ningún bloque posterior.
 - **Estado:** cerrado.
 
+### RETP-2026-071 — Integración, publicación y cierre de conformidad de B2
+
+- **Hecho:** B2 queda integrada y publicada como realización estable bilingüe `SVP-ES` / `SVP-EN`; se cierran los dominios gramaticales DG-01, DG-02 y DG-03 sobre identidad canónica, se constituye normativamente la capa de perfiles fuente, se corrige la navegación efectiva del Historial Beta y se completan las reconciliaciones DD-01 y VH-01 exigidas por DFL-007.
+- **Fundamento:** la verificación ampliada de B2 descubrió huecos heredados de conformidad gramatical y desajustes documentales que afectaban a una base previamente cerrada. El cierre exige corrección material, regresión permanente, reconciliación normativa y revalidación de dependencias, no la mera publicación del artefacto.
+- **Evidencia:** PR #55; corte de realización `c1acf943a7a44ce81080881e59283de8a2019606`; WebAssembly `378956` bytes, SHA-256 `95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3`; paquete de despliegue `167503` bytes, SHA-256 `566200f97bfea86a0b7ce7c4919bac9d5367a67b8cba719eef1c573942d696f5`; conformidad 79/79; `sv_core` 210/210; dominios cerrados 5/5; seis sondas DG en navegador; `sv_wasm` 2/2; documentación ejecutable 17/17; comprobación material del Historial Beta; acta de conformidad de 29/08/2026.
+- **Decisión:** cerrar DFL-007, re-cerrar el perímetro R0 afectado, revalidar R1 y levantar únicamente la suspensión de R2 causada por esa deuda. R2 recupera su estado abierto previo.
+- **Límites:** `ConflictOperator` y J2.3 para concurrencia en régimen `General` permanecen abiertos; R2 no queda cerrado; R3 y R4 no se inician; Garantía I y Garantía II permanecen `NO_PROBADO`; la verificación externa independiente del corte final se registrará por separado.
+- **Criterio registral:** el ciclo B2 se registra como un único hito material; el detalle mecánico de sus correcciones permanece en Git y en la evidencia enlazada.
+- **Estado:** cerrado.
+
 ## 4. Estado de continuidad
 
-FFL-A, FFL-B y FFL-C están cerrados. FFL-D y FFL-E permanecen pendientes hasta decisión expresa posterior.
+FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
 
-La deuda relativa a la concordancia entre la IR, el catálogo efectivo y la implementación permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md` y no invalida los cierres alcanzados.
+El estado de realización posterior al cierre correctivo B2 es:
+
+```text
+R0 = CERRADO, incluido el perímetro correctivo de DFL-007
+R1 = CERRADO y revalidado sobre la base corregida
+R2 = ABIERTO; levantada la suspensión específica causada por DFL-007
+R3 = NO INICIADO
+R4 = NO INICIADO
+
+Garantía I  = NO_PROBADO
+Garantía II = NO_PROBADO
+```
+
+La deuda técnica restante permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`. El cierre de DFL-007 no materializa `ConflictOperator` ni completa J2.3 para concurrencia en régimen `General`. La verificación externa independiente del corte final permanece pendiente y se documentará separadamente.
 
 ## 5. Numeración registral
 
