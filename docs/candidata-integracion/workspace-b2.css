@@ -103,7 +103,7 @@
   margin: 0;
 }
 .editor-commandbar .examples-menu {
-  position: relative;
+  position: static;
   flex: 1 1 360px;
   min-width: 280px;
   margin: 0;
@@ -123,9 +123,11 @@
 }
 .editor-commandbar .examples-menu .examples-panel-collapsed {
   position: absolute;
+  z-index: 60;
   top: calc(100% + 6px);
-  right: 0;
-  width: min(980px, 76vw);
+  left: 50%;
+  right: auto;
+  width: min(980px, calc(100vw - 48px));
   max-height: 64vh;
   overflow: auto;
   box-sizing: border-box;
@@ -133,6 +135,7 @@
   border-radius: 12px;
   background: #fff;
   box-shadow: 0 18px 48px rgba(15, 23, 42, .18);
+  transform: translateX(-50%);
 }
 .examples-count {
   display: inline-flex;
@@ -234,6 +237,8 @@
   .editor-commandbar .examples-menu { min-width: 0; width: 100%; }
   .editor-commandbar .examples-menu .examples-panel-collapsed {
     position: static;
+    left: auto;
+    right: auto;
     width: auto;
     max-height: none;
     margin-top: 0;
@@ -242,6 +247,7 @@
     border-bottom: 0;
     border-radius: 0 0 10px 10px;
     box-shadow: none;
+    transform: none;
   }
   .assembly-actions.assembly-actions-top button { flex: 1 1 100%; }
   .compact-build dl div { grid-template-columns: 1fr; gap: 3px; }
