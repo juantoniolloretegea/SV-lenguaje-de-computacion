@@ -1,4 +1,5 @@
 name: Integración Beta 2 — materializar fuente Rust candidata
+# Segunda ejecución: archivo fuente completo tras incorporar la parte 02.
 
 on:
   push:
