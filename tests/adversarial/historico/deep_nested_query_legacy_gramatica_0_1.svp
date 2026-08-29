@@ -1,0 +1,142 @@
+-- Vector adversarial histórico procedente de la Gramática 0.1; no es válido bajo Gramática 0.2.
+
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 {
+  b: 3;
+  codomain: K3;
+  semantics: Klin;
+  role: Base;
+}
+
+coupledspec CC1 {
+  cell: C1;
+  bridges: [];
+}
+
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One];
+}
+
+capture_spec Cap_SEC0 {
+  parameter_id: 1;
+  observation_domain: DominioObs_SEC0;
+  observation_space: ObsEsp_SEC0;
+  failure_symbol: Bottom;
+  mapping: MapCaptura_SEC0;
+}
+
+admissibility_spec Adm_SEC0 {
+  parameter_id: 1;
+  states: {Ok, Degraded, Failed, U};
+  rule: ReglaAdm_SEC0;
+}
+
+ternarizer Ter_SEC0 {
+  observation_space: ObsEsp_SEC0;
+  partition_zero: Zona0_SEC0;
+  partition_one: Zona1_SEC0;
+  partition_u: ZonaU_SEC0;
+  mapping: MapTer_SEC0;
+}
+
+admissibility_table T1 {
+  input_codomains: [K3, K3];
+  output_codomain: K3;
+  table: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+let E1 = evaluate(S1);
+let G1 = gate([E1, E1], using: T1);
+
+frame F1 {
+  index: 1;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+frame F2 {
+  index: 2;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+horizon H_SEC0 {
+  architecture: Arch_SEC0;
+  events: [CambioProfilaxis, NuevoCultivo];
+}
+
+transition_data TD_SEC0_12 {
+  horizon_ref: H_SEC0;
+  events: [(CambioProfilaxis, One)];
+  induced_parameters: [(C1, 3, One)];
+}
+
+transition_data TD_SEC0_23 {
+  horizon_ref: H_SEC0;
+  events: [(NuevoCultivo, Zero)];
+  induced_parameters: [(C1, 7, Zero)];
+}
+
+frame F3 {
+  index: 3;
+  architecture: Arch_SEC0;
+  cell_states: [S1];
+  eval_results: [E1];
+  gate_results: [G1];
+  supervision: [];
+  criticalities: [];
+}
+
+trajectory TR_SEC0 {
+  entries: [entry(frame: F1, transition: TD_SEC0_12), entry(frame: F2, transition: TD_SEC0_23), entry(frame: F3)];
+}
+
+domain D_SEC0 {
+  parameters: [P_SEC0];
+  interface: I_SEC0;
+  horizon: H_SEC0;
+  capture_specs: [Cap_SEC0];
+  admissibility_specs: [Adm_SEC0];
+  ternarizers: [Ter_SEC0];
+  exogeneity_mask: Exo_SEC0;
+  silent_u: SU_SEC0;
+  transduction_policy: TP_SEC0;
+  u_policy: UP_SEC0;
+  closure_criterion: CCrit_SEC0;
+}
+
+agent AG_SEC0 {
+  architecture: Arch_SEC0;
+  domain: D_SEC0;
+  query_engine: QE_SEC0;
+}
+
+query_spec QS_SEC0 {
+  query_type: TrajectoryState;
+  scope: Trajectory;
+  restrictions: [R_SEC0];
+}
+
+let Q_SEC0 = query(QS_SEC0, by: AG_SEC0, in: TrajectoryView(TR_SEC0));
