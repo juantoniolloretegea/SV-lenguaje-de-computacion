@@ -4,197 +4,145 @@
 **ORCID:** 0000-0002-6634-3351  
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
-**Licencia:** CC BY-NC-ND 4.0
+**Licencia:** CC BY-NC-ND 4.0  
+**Última actualización:** 29 de agosto de 2026
 
 ## 1. Función de esta carpeta
 
-`docs/calidad/` reúne los documentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y registro del Lenguaje SV.
+`docs/calidad/` reúne los documentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y evolución del Lenguaje SV.
 
-Su función es documentar de forma revisable por terceros el estado técnico del repositorio y su relación con la matemática, la especificación, la implementación y la evidencia.
+Su función es permitir que un tercero distinga con precisión entre especificación, realización, evidencia ejecutable, deuda técnica, estado de fases y despliegue público. Los documentos de Calidad no sustituyen a la gramática, la IR, el código ni las pruebas que fundamentan cada afirmación.
 
-## 2. Continuidad vigente
+## 2. Estado de continuidad vigente
 
-La continuidad actual queda documentada, como mínimo, por:
-
-1. `ACTA_TECNICA_DE_ORDENACION_DE_CONTINUIDAD_SEMANTICA_Y_ARQUITECTONICA_DEL_LENGUAJE_SV_2026_08_16.md`;
-2. `ACTA_TECNICA_DE_REAPERTURA_DEL_LENGUAJE_SV_POR_RUTA_A_Y_RETORNO_A_FFL_A_2026_08_18.md`;
-3. `ACTA_TECNICA_DE_CIERRE_GOBERNADO_DE_FFL_A_CONTRATO_DIAGNOSTICO_2026_08_18.md`;
-4. `DECISION_FFL_B_GOBIERNO_DE_DIAGNOSTICOS_EFECTIVOS_BAJO_VIA_B_2026_08_18.md`;
-5. `ACTA_TECNICA_DE_APERTURA_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
-6. `ACTA_TECNICA_DE_CIERRE_DE_FFL_C_PRUEBAS_Y_EVIDENCIA_2026_08_20.md`;
-7. `../arquitectura/ACTA_TECNICA_DE_APERTURA_DE_FFL_E_INTERFAZ_SEMANTICO_DIAGNOSTICA_2026_08_21.md`;
-8. `../arquitectura/ACTA_TECNICA_DE_CIERRE_DE_FFL_E_INTERFAZ_SEMANTICO_DIAGNOSTICA_2026_08_21.md`;
-9. `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
-10. `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
-11. `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`;
-12. `ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md`.
-
-FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente. R0 está cerrado dentro del alcance de la primera realización soberana del núcleo semántico; R1–R4 permanecen no iniciados y las Garantías I y II permanecen `NO_PROBADO`.
-
-## 3. Cierre técnico de FFL-B
-
-FFL-B quedó cerrado tras completar las comprobaciones estructurales representables sin ampliar la gramática, la IR ni la capacidad de ejecución.
-
-Los cambios finales registrados son:
-
-- `RETP-2026-062` — retirada de `conflicts` de `graph_decl` y rechazo superficial mediante E001;
-- `RETP-2026-064` — unicidad de `(target, position)` en régimen `Simple` mediante `E114 — SimpleRegimeConcurrency`;
-- `RETP-2026-065` — correspondencia estructural entre cada constructor de `Supervisable` y el tipo de su contenido mediante E006;
-- `RETP-2026-067` — correspondencia entre la secuencia de entradas de `gate` y `AdmissibilityTable.input_codomains` mediante `E215 — GateTableSignatureMismatch`;
-- `RETP-2026-068` — cierre de FFL-B con deuda técnica explícita y sin apertura automática de los bloques posteriores.
-
-La evidencia de cierre de FFL-B fue:
-
-- conformidad: **57/57** — 9 casos válidos y 48 inválidos;
-- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
-- SEC-0: **3/3**.
-
-E215 comprueba únicamente número y codominio por posición. No ejecuta la compuerta ni calcula `GateResult.output`.
-
-## 4. Cierre técnico de FFL-C
-
-FFL-C se abrió el 20/08/2026 con escritura funcional limitada a `tests/` y modo de solo lectura sobre `src/`, gramática, AST, IR, validador, catálogo diagnóstico y manual.
-
-Durante el bloque se incorporaron:
-
-- el caso válido permanente `SystemTarget(CompositionGraph)`;
-- una caracterización específica de la doble emisión observable de E006;
-- un inventario de cobertura que separa caso persistido, emisión observable y propiedad estructural.
-
-Una verificación independiente en modo de solo lectura sobre `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33` acreditó:
-
-- conformidad: **58/58** — 10 casos válidos y 48 inválidos;
-- pruebas rápidas de la interfaz de línea de órdenes: **3/3**;
-- SEC-0: **3/3**;
-- caracterización de E006: **4/4**.
-
-Los cuatro ejecutores terminaron con código de retorno 0 y el árbol permaneció sin cambios antes y después de la ejecución.
-
-Los 48 casos inválidos cubren explícitamente 37 de los 47 códigos efectivos. Los diez restantes están clasificados por su alcanzabilidad real, por rutas diagnósticas alternativas o por preservación estructural; no se amplía el lenguaje para producir casos artificiales.
-
-FFL-C queda cerrado.
-
-## 4.1. Cierre técnico de FFL-E
-
-FFL-E se abrió y cerró el 21/08/2026 tras fijar el contrato mínimo de suficiencia representacional por operación para dominios, agentes, consultas e interfaces.
-
-Quedan publicados:
-
-- `docs/arquitectura/CONTRATO_MINIMO_DE_SUFIENCIA_REPRESENTACIONAL_POR_OPERACION_PARA_EL_LENGUAJE_SV_2026_08_21.md`;
-- `docs/arquitectura/ADENDA_TECNICA_SOBRE_SALIDA_TERMINAL_TIPADA_Y_EVALUACION_DE_CELULA_2026_08_21.md`;
-- `docs/arquitectura/MATRIZ_DE_IMPACTO_DE_LA_SUFIENCIA_REPRESENTACIONAL_EN_LA_ESPECIFICACION_Y_LA_IMPLEMENTACION_2026_08_21.md`.
-
-El cierre establece que:
-
-- `Tri = {Zero, One, U}` permanece inalterado;
-- la salida terminal pertenece al codominio tipado de la célula y no se identifica por defecto con `Tri`;
-- una representación con pérdida puede ser suficiente para una operación e insuficiente para otra;
-- la insuficiencia representacional no produce `U`;
-- los estados usados como testigos de pérdida deben ser realizables en el dominio declarado;
-- las agrupaciones semánticas relevantes deben declararse y no se deducen únicamente de `n=b²`;
-- una interfaz sólo puede atribuirse la información que transmite de forma declarada;
-- la IR v0.2 deberá corregir en una versión posterior la especialización de `EvalResult.classification` respecto del `CellSpec.codomain` genérico.
-
-FFL-E reserva la clase semántica `RepresentationInsufficientForOperation`, pero no le asigna código ni capacidad de emisión.
-
-El cierre es arquitectónico. No modifica `src/`, gramática v0.1, IR v0.2, validador, catálogo diagnóstico ni pruebas. FFL-D continúa pendiente.
-
-## 4.2. Cierre integral de R0
-
-R0 quedó cerrado el 24/08/2026 como primera realización soberana del núcleo semántico del Lenguaje SV.
-
-El cierre comprende la materialización incremental R0-0…R0-8, la correspondencia IR 0.3 → representación soberana Rust, la equivalencia contra el corpus comprometido, la medición basal nativa, el destino WebAssembly de navegador, la paridad ejercida, el entorno público y la reconciliación normativa necesaria para C01–C03.
-
-La batería vigente en el cierre contiene **72/72 casos**: 11 válidos y 61 inválidos.
-
-El estado posterior queda fijado así:
+Tras el cierre correctivo de 29/08/2026, el estado aplicable es:
 
 ```text
-R0  = CERRADO
-R1  = NO INICIADO
-R2  = NO INICIADO
-R3  = NO INICIADO
-R4  = NO INICIADO
+R0 = CERRADO, incluido el perímetro correctivo de DFL-007
+R1 = CERRADO y revalidado sobre la base R0 corregida
+R2 = ABIERTO; levantada la suspensión específica causada por DFL-007
+R3 = NO INICIADO
+R4 = NO INICIADO
 
 Garantía I  = NO_PROBADO
 Garantía II = NO_PROBADO
-
-Sec.6 = ABIERTA
 ```
 
-El cierre no acredita paridad diagnóstica exacta `E***`, serializador canónico Rust completo, API Rust pública de alto nivel, compatibilidad universal entre navegadores, autonomía completa de distribución, `ConflictOperator`/J2.3 ni `FFL-D`.
+El levantamiento de la suspensión no constituye cierre de R2 ni acredita persistencia o continuidad material todavía no demostradas.
 
-La evidencia y los límites quedan desarrollados en `ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md`.
+Los documentos principales de esta transición son:
 
-## 5. Contrato diagnóstico y correspondencia funcional
+- [`ACTA_TECNICA_DE_ENCARGO_CORRECTIVO_INCIDENTAL_HUECOS_HEREDADOS_BETA_2_Y_BLOQUEO_R2_2026_08_29.md`](./ACTA_TECNICA_DE_ENCARGO_CORRECTIVO_INCIDENTAL_HUECOS_HEREDADOS_BETA_2_Y_BLOQUEO_R2_2026_08_29.md) — apertura y condiciones del encargo DFL-007;
+- [`ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md`](./ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md) — cierre del encargo, revalidación de R1 y levantamiento de la suspensión específica de R2;
+- [`../arquitectura/ACTA_TECNICA_CIERRE_R1_2026_08_25.md`](../arquitectura/ACTA_TECNICA_CIERRE_R1_2026_08_25.md) — cierre técnico original de R1;
+- [`../arquitectura/ACTA_TECNICA_APERTURA_R2_PERSISTENCIA_Y_CONTINUIDAD_MATERIAL_2026_08_25.md`](../arquitectura/ACTA_TECNICA_APERTURA_R2_PERSISTENCIA_Y_CONTINUIDAD_MATERIAL_2026_08_25.md) — apertura de R2.
 
-Los documentos principales son:
+## 3. Corte correctivo B2
 
-- `C1C_DECISION_REGULARIZACION_CONTRATO_DIAGNOSTICO.md`;
-- `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`;
-- `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`;
-- `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`;
-- `DICTAMEN_DE_SANEAMIENTO_DEL_BLOQUE_A_CONTRATO_DIAGNOSTICO.md`.
+La realización estable corregida queda integrada en:
 
-Los nombres históricos de algunos archivos contienen términos ingleses. Se conservan sin modificación para mantener la trazabilidad de referencias publicadas.
+```text
+main de realización = c1acf943a7a44ce81080881e59283de8a2019606
+```
 
-## 6. Estado diagnóstico vigente
+WebAssembly publicado:
 
-Tras E215 constan:
+```text
+bytes   = 378956
+SHA-256 = 95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3
+```
 
-- **38 códigos** definidos por la IR v0.2;
-- **47 códigos** en el catálogo efectivo;
-- **5 coincidencias semánticas por mismo identificador**;
-- **20 identificadores compartidos con significado distinto**;
-- **13 códigos** presentes sólo en la IR v0.2;
-- **22 códigos** presentes sólo en la implementación efectiva.
+Paquete utilizado para el despliegue manual:
 
-La coincidencia numérica no implica equivalencia material. Las rutas alternativas se documentan en la matriz y en la tabla de correspondencias funcionales.
+```text
+SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip
+bytes   = 167503
+SHA-256 = 566200f97bfea86a0b7ce7c4919bac9d5367a67b8cba719eef1c573942d696f5
+archivos = 39
+```
 
-FFL-C no modifica estas cifras: amplía y caracteriza la evidencia de prueba, no el catálogo diagnóstico. FFL-E tampoco las modifica porque las nuevas condiciones permanecen en especificación y no tienen todavía punto de emisión implementado.
+La comprobación material posterior al despliegue confirmó que los historiales Beta español e inglés se representan como páginas HTML y no como código fuente.
 
-## 7. Deuda técnica que no bloquea los cierres alcanzados
+## 4. Evidencia de conformidad
 
-Permanecen expresamente fuera de FFL-B y FFL-C:
+Las ejecuciones asociadas a la base corregida acreditan:
 
-- la concurrencia en régimen `General` que requiera `ConflictOperator`;
-- la procedencia completa de una actualización de `CoupledState` desde un `Connector` concreto;
+```text
+conformidad R0-7              = 79/79
+  válidos                     = 12/12
+  inválidos                   = 67/67
+sv_core                       = 210/210
+dominios cerrados Rust        = 5/5
+sondas DG-01/02/03 navegador  = 6/6
+sv_wasm                       = 2/2
+doc-tests sv_core             = 17/17
+```
+
+Evidencia reproducible:
+
+- [PR #55](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/55);
+- [Conformidad SVP — 33271992372](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992372);
+- [R0 Rust — 33271992363](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992363);
+- [R0-8 — 33271992371](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992371);
+- [R0 WebAssembly y navegador — 33271992457](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992457).
+
+Las seis sondas de navegador ejercen DG-01, DG-02 y DG-03 en `SVP-ES` y `SVP-EN`. Las regresiones permanecen incorporadas al repositorio.
+
+## 5. Separación de perfiles y gramática
+
+El estado normativo vigente distingue:
+
+```text
+perfil léxico de identificadores
+≠
+perfil fuente SVP-ES / SVP-EN
+```
+
+Los perfiles fuente se constituyen en `ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md` y convergen sobre una única Gramática canónica 0.2, una única IR 0.3 y una única semántica.
+
+La realización vigente contiene 154 identidades canónicas, 297 grafías distintas y 11 formas compartidas. La selección es explícita y no existe autodetección de perfil.
+
+## 6. DFL-007
+
+DFL-007 se considera cerrada porque:
+
+- `SemanticRelation.kind`, `Pattern.kind` y `Graph.regime` están nuevamente restringidos a sus dominios normativos;
+- existen regresiones permanentes para ES y EN;
+- el corpus de conformidad y la paridad nativa/WebAssembly permanecen verdes;
+- la Gramática 0.2 reconcilia los cierres internos heredados de `connector.mapping` y `admissibility_table.table`;
+- el vector `deep_nested_query_valid.svp` ha sido reclasificado como vector histórico de Gramática 0.1;
+- R1 fue revalidado sobre la base corregida.
+
+La publicación estable de B2 y el cierre de DFL-007 son hechos distintos. La publicación no cerró por sí sola la deuda ni habilitó automáticamente R2.
+
+## 7. Deuda que permanece abierta
+
+El cierre de DFL-007 no elimina otras deudas vivas. En particular, sigue pendiente la materialización de `ConflictOperator` y la comprobación completa de J2.3 para concurrencia en régimen `General`.
+
+También conservan su estatuto propio, según el registro de deuda:
+
+- la concordancia diagnóstica no agotada entre IR y catálogo efectivo;
+- la procedencia completa de determinadas actualizaciones de `CoupledState`;
 - la suficiencia reconstructiva completa de `TransitionData`;
-- la producción y validación material de `Frame.criticalities`;
+- la producción material de `CriticalityResult`;
 - la ejecución de `GateResult.output`;
-- el determinismo material de `SupervisionResult.verdict` y el efecto de `Veto`;
-- la revisión futura del alcance de E006 cuando una referencia existe pero su tipo es incompatible.
+- la semántica ejecutiva completa de supervisión;
+- las obligaciones de FFL-D y las capacidades materiales de fases posteriores.
 
-La forma válida `SystemTarget(CompositionGraph)` ya dispone de un caso permanente de conformidad y deja de ser deuda de cobertura positiva.
+Ninguna de estas deudas se considera resuelta por el cierre correctivo B2.
 
-Estas limitaciones quedan registradas como deuda o como capacidades no representadas. No invalidan los cierres de FFL-B ni FFL-C.
+## 8. Registros vivos
 
-El trabajo posterior derivado de FFL-E pertenece a una nueva fase de especificación e implementación: identidad y agrupación de parámetros, salida terminal tipada, cadenas de representación, requisitos de representación de operaciones, certificados de recuperabilidad y diagnóstico de representación insuficiente. Ninguna de estas capacidades se atribuye todavía a la implementación.
+- [`REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`](./REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md) — deuda técnica vigente y deuda cerrada relevante para continuidad;
+- [`REGISTRO_EVOLUCION_TECNICA_PROYECTO.md`](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md) — lectura humana del tramo registral vigente;
+- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` — numeración maestra RETP;
+- [`HISTORIAL_VERSIONES_LENGUAJE_SV.md`](./HISTORIAL_VERSIONES_LENGUAJE_SV.md) — evolución de versiones, realizaciones y entornos;
+- `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv` — bloques técnicos y deuda asociada.
 
-El cierre integral de R0 tampoco transforma estas deudas en capacidades realizadas. Sus límites propios se enumeran en el acta de cierre y permanecen sujetos a las fases o frentes que correspondan.
+El detalle mecánico de cada modificación permanece en Git. Los registros vivos concentran hitos materiales y no crean un asiento independiente para cada corrección menor de una misma operación de integración y cierre.
 
-## 8. Control de evolución y evidencia
+## 9. Verificación independiente pendiente
 
-### Registro de evolución
+El presente cierre acredita la conformidad interna del corte corregido y su despliegue material. La verificación externa independiente del mismo corte se documentará mediante un acta separada cuando se complete.
 
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv` — numeración RETP y relación completa de asientos;
-- `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` — lectura humana del tramo vigente;
-- `historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md` — preservación del historial detallado hasta RETP-047.
-
-### Deuda y bloques
-
-- `REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`;
-- `TABLERO_DE_BLOQUES_CERRABLES_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.csv`;
-- `REGISTRO_CALIDAD_HITOS_LENGUAJE_SV.csv`;
-- `DEUDA_VIVA_HITOS_LENGUAJE_SV.csv`;
-- `MATRIZ_UCBC_HORIZONTES_LENGUAJE_SV.csv`.
-
-Los registros de hitos H1-H3 no cambian por E215, por los cierres de FFL-B y FFL-C ni por el cierre arquitectónico de FFL-E.
-
-## 9. Regla de continuidad
-
-El orden aplicable continúa siendo:
-
-`doctrina y matemática del Sistema SV → especificación → implementación → diagnóstico → prueba → evidencia`.
-
-Ningún documento de calidad puede convertir por sí solo una previsión futura en capacidad ejecutiva. El cierre de R0 deja cerrada únicamente su primera realización soberana del núcleo semántico; no inicia R1–R4 ni acredita las Garantías I o II.
+Hasta entonces no se atribuye al cierre de conformidad el estatuto de verificación independiente.
