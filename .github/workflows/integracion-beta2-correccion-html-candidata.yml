@@ -1,0 +1,50 @@
+name: "Integración Beta 2 — corrección final HTML candidata"
+
+on:
+  push:
+    branches:
+      - integracion-beta2-candidata-produccion-2026-08-29
+    paths:
+      - .github/workflows/integracion-beta2-correccion-html-candidata.yml
+
+permissions:
+  contents: write
+
+jobs:
+  corregir:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: integracion-beta2-candidata-produccion-2026-08-29
+      - name: Corregir HTML estático
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path('docs/candidata-integracion/index.html')
+          s=p.read_text()
+          duplicate='        <a id="diagnostics-link" class="rail-link compact" href="diagnosticos.html" data-i18n="diagnostics">Diagnósticos</a>\n'
+          if s.count(duplicate) != 2:
+              raise SystemExit(f'cantidad inesperada de enlaces de diagnósticos: {s.count(duplicate)}')
+          s=s.replace(duplicate,'',1)
+          old='<a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer" data-i18n="stable">Entorno estable</a>'
+          new='<a href="https://lenguaje-sv.itvia.online/" target="_blank" rel="noopener noreferrer" data-i18n="stable">Versión publicada</a>'
+          if old not in s: raise SystemExit('texto estático de versión publicada no localizado')
+          s=s.replace(old,new,1)
+          old='<dt data-i18n="sourceCut">Corte fuente soberano</dt>'
+          new='<dt data-i18n="sourceCut">Corte fuente de la candidata</dt>'
+          if old not in s: raise SystemExit('etiqueta estática de corte no localizada')
+          s=s.replace(old,new,1)
+          if s.count('id="diagnostics-link"') != 1: raise SystemExit('id de diagnósticos no único')
+          p.write_text(s)
+          print('HTML_CANDIDATA=PASS')
+          PY
+      - name: Registrar corrección y retirar flujo temporal
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/integracion-beta2-correccion-html-candidata.yml
+          git config user.name "Juan Antonio Lloret Egea"
+          git config user.email "111652409+juantoniolloretegea@users.noreply.github.com"
+          git add docs/candidata-integracion/index.html .github/workflows/integracion-beta2-correccion-html-candidata.yml
+          git commit -m "integración: corrige navegación estática de la candidata"
+          git push origin HEAD:integracion-beta2-candidata-produccion-2026-08-29
