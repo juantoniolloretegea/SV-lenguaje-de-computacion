@@ -51,6 +51,17 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Estado:** reconocida; fuera del alcance cerrado de FFL-B y FFL-C.
 - **Prioridad:** posterior y dependiente de decisión arquitectónica expresa.
 
+### DFL-007 — Huecos heredados de cierre gramatical de la realización Rust
+
+- **Descripción:** una ampliación de la verificación realizada durante Beta 2 identificó tres producciones cerradas que la realización Rust del corte `f6b704e819e7d08589f00e9e3f9550deab21d0b1` no rechaza correctamente: `SemanticRelation.kind` fuera de `DeclaredRelation`, `Pattern.kind` fuera de `DeclaredPattern` y `Graph.regime` fuera de `Simple | General`.
+- **Efecto material:** un valor ajeno en `Graph.regime` permite evitar la restricción de concurrencia que corresponde al régimen `Simple`; la sonda derivada de `graph_simple_concurrencia_mismo_puente.svp` es rechazada por la referencia Python y aceptada por Rust cuando `Simple` se sustituye por `ForeignRegime`.
+- **Origen:** la comparación binaria entre el corte productivo y Beta 2 reproduce la misma aceptación en las cuatro sondas decisivas. La deuda es anterior a Beta 2 y no constituye una regresión de esa fase.
+- **Deuda asociada:** debe reconciliarse la desincronización histórica de la EBNF en los cierres internos de `connector.mapping` y `admissibility_table.table`, y reclasificarse `tests/adversarial/deep_nested_query_valid.svp`, cuyo nombre conserva un estatuto de validez anterior a la Gramática 0.2.
+- **Impacto de continuidad:** R0 queda reabierto de forma correctiva y acotada en el perímetro de conformidad gramatical afectado; R1 conserva sus resultados técnicos, pero su cierre queda suspendido como habilitación de continuidad mientras no se revalide contra la base R0 corregida; R2 queda suspendido y no debe continuar hasta el cierre acreditado del encargo.
+- **Estado:** abierta y bloqueante para la continuidad de R2.
+- **Prioridad:** crítica para restablecer la base de conformidad antes de proseguir las fases posteriores.
+- **Evidencia y condiciones de cierre:** `ACTA_TECNICA_DE_ENCARGO_CORRECTIVO_INCIDENTAL_HUECOS_HEREDADOS_BETA_2_Y_BLOQUEO_R2_2026_08_29.md`.
+
 ## 3. Estado de FFL-B
 
 FFL-B se cerró tras E215 porque las obligaciones restantes identificadas no podían materializarse de forma honesta mediante una comprobación estructural adicional sin ampliar representación, semántica o ejecución.
