@@ -3,7 +3,7 @@
 (() => {
   const stylesheet = document.createElement("link");
   stylesheet.rel = "stylesheet";
-  stylesheet.href = "workspace-b2.css?v=b2-assembly-toolbar-20260829-1";
+  stylesheet.href = "workspace-b2.css?v=b2-examples-centered-20260829-1";
   document.head.append(stylesheet);
 
   const staticI18n = document.createElement("script");
