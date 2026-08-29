@@ -19,14 +19,29 @@ jobs:
           ref: integracion-beta2-candidata-produccion-2026-08-29
           fetch-depth: 0
 
-      - name: Aplicar paquete exacto autorizado
+      - name: Reconstruir y verificar paquete exacto
         shell: bash
         run: |
           set -euo pipefail
           python3 - <<'PY'
           from pathlib import Path
-          import base64, io, zipfile
-          payload = base64.b64decode(Path('.tmp/final-ui.b64').read_text().strip(), validate=True)
+          import base64, hashlib, io, zipfile
+
+          parts = [
+              '.tmp/final-ui-part-0.b64',
+              '.tmp/final-ui-part-1.b64',
+              '.tmp/final-ui-part-2.b64',
+              '.tmp/final-ui-part-3a.b64',
+              '.tmp/final-ui-part-3b.b64',
+              '.tmp/final-ui-part-3c.b64',
+          ]
+          encoded = ''.join(Path(p).read_text(encoding='utf-8') for p in parts)
+          encoded = ''.join(encoded.split())
+          payload = base64.b64decode(encoded, validate=True)
+          expected_zip = '680677b28d47478d8a46a7faff5c40c9e5d3460abe6496e277823f0cf1ec7a01'
+          actual_zip = hashlib.sha256(payload).hexdigest()
+          assert actual_zip == expected_zip, (actual_zip, expected_zip)
+
           target = Path('docs/candidata-integracion')
           allowed = {
             'index.html','styles.css','b2.css','app-b2.js','i18n-static-b2.js',
@@ -39,9 +54,10 @@ jobs:
               assert names == allowed, (names - allowed, allowed - names)
               for name in sorted(names):
                   (target / name).write_bytes(z.read(name))
+          print('ZIP_SHA256=' + actual_zip)
           PY
 
-      - name: Verificar identidad exacta del resultado
+      - name: Verificar identidad exacta y residuos
         shell: bash
         run: |
           set -euo pipefail
@@ -71,7 +87,48 @@ jobs:
           ! grep -q '>Versión publicada<' index.html
           ! grep -q 'class="build-panel' index.html
           grep -q -- '--profile: #0b57d0;' styles.css
-          grep -q 'href="https://lectura-sv.itvia.online/lenguaje"' index.html
+          grep -q '"status": "production"' build-info.json
+          grep -q '"promotion_status": "authorized_for_production"' build-info.json
+
+      - name: Verificar enlaces relativos y estructura HTML
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlsplit
+
+          root = Path('docs/candidata-integracion')
+          pages = sorted(root.glob('*.html'))
+          failures = []
+          for page in pages:
+              class P(HTMLParser):
+                  def __init__(self):
+                      super().__init__(); self.hrefs=[]; self.ids=[]
+                  def handle_starttag(self, tag, attrs):
+                      a=dict(attrs)
+                      if 'id' in a: self.ids.append(a['id'])
+                      if tag == 'a' and 'href' in a: self.hrefs.append(a['href'])
+              p=P(); p.feed(page.read_text(encoding='utf-8'))
+              if len(p.ids) != len(set(p.ids)):
+                  failures.append(f'{page.name}: identificadores HTML duplicados')
+              for href in p.hrefs:
+                  u=urlsplit(href)
+                  if u.scheme or u.netloc or href.startswith('#') or href.startswith('mailto:'):
+                      continue
+                  rel=u.path
+                  if rel in ('', './'):
+                      dest=root/'index.html'
+                  else:
+                      dest=(page.parent/rel)
+                      if dest.is_dir(): dest=dest/'index.html'
+                  if not dest.exists():
+                      failures.append(f'{page.name}: destino relativo inexistente: {href}')
+          if failures:
+              raise SystemExit('\n'.join(failures))
+          print(f'HTML_PAGES={len(pages)} RELATIVE_LINKS=PASS DUPLICATE_IDS=PASS')
+          PY
 
       - name: Confirmar radio de cambios
         shell: bash
@@ -80,13 +137,21 @@ jobs:
           git diff --name-only HEAD -- docs/candidata-integracion | sort | tee /tmp/changed.txt
           test "$(wc -l < /tmp/changed.txt)" -eq 15
 
-      - name: Retirar herramientas temporales y fijar resultado
+      - name: Retirar mecanismos temporales y fijar resultado
         shell: bash
         run: |
           set -euo pipefail
           git config user.name "Juan Antonio Lloret Egea"
           git config user.email "111652409+juantoniolloretegea@users.noreply.github.com"
           git add docs/candidata-integracion
-          git rm .tmp/final-ui.b64 .github/workflows/finaliza-ui-produccion.yml
-          git commit -m "producción: aplica ajustes visuales finales autorizados"
+          git rm -f \
+            .tmp/final-ui.b64 \
+            .tmp/final-ui-part-0.b64 \
+            .tmp/final-ui-part-1.b64 \
+            .tmp/final-ui-part-2.b64 \
+            .tmp/final-ui-part-3a.b64 \
+            .tmp/final-ui-part-3b.b64 \
+            .tmp/final-ui-part-3c.b64 \
+            .github/workflows/finaliza-ui-produccion.yml
+          git commit -m "producción: aplica ajustes finales autorizados y retira útiles temporales"
           git push origin HEAD:integracion-beta2-candidata-produccion-2026-08-29
