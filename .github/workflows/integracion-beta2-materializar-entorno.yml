@@ -1,0 +1,127 @@
+name: Integración Beta 2 — materializar entorno candidato
+
+on:
+  push:
+    branches:
+      - integracion-beta2-candidata-produccion-2026-08-29
+    paths:
+      - .github/workflows/integracion-beta2-materializar-entorno.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  materializar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener rama candidata
+        uses: actions/checkout@v4
+        with:
+          ref: integracion-beta2-candidata-produccion-2026-08-29
+          fetch-depth: 0
+
+      - name: Obtener distribución pública Beta 2 fijada
+        run: |
+          set -euo pipefail
+          git clone --quiet --depth 1 --branch lab/lenguaje-sv-beta \
+            https://github.com/juantoniolloretegea/SVcustos-dataset.git /tmp/svcustos-beta
+          test "$(git -C /tmp/svcustos-beta rev-parse HEAD)" = "ebe53b1faf3162f0e19b528e60d5fe859b1201ac"
+
+      - name: Copiar realización pública B2 sin adaptación
+        run: |
+          set -euo pipefail
+          src=/tmp/svcustos-beta/docs
+          dst=docs/candidata-integracion
+          mkdir -p "$dst"
+          for f in \
+            app-b2.js b2.css build-info.json caracteristicas.html diagnosticos.html diagnostics.html \
+            example-profile-sync-b2.js examples.json features.html i18n-static-b2.js index.html info.css \
+            programacion-metricas.html programming-metrics.html security-b2.html seguridad-b2.html \
+            styles.css wasm-loader-b2.js workspace-b2.css workspace-b2.js
+          do
+            cp "$src/$f" "$dst/$f"
+          done
+          rm -rf "$dst/examples" "$dst/wasm-b2"
+          cp -R "$src/examples" "$dst/examples"
+          cp -R "$src/wasm-b2" "$dst/wasm-b2"
+
+      - name: Conservar historial público de Beta por separado
+        run: |
+          set -euo pipefail
+          src=/tmp/svcustos-beta/docs
+          dst=docs/beta-publica
+          mkdir -p "$dst"
+          cp "$src/historial-beta.html" "$dst/historial-beta.html"
+          cp "$src/beta-history.html" "$dst/beta-history.html"
+          cp "$src/info.css" "$dst/info.css"
+          cp "$src/styles.css" "$dst/styles.css"
+          cat > "$dst/README.md" <<'EOF'
+          # Historial público de versiones Beta del Lenguaje SV
+
+          Este directorio conserva la procedencia pública de las versiones Beta del Lenguaje SV y el trabajo experimental que quedó pendiente en cada una de ellas.
+
+          El historial Beta es independiente del historial de versiones estables integrado en `docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md`. Una capacidad descrita como propuesta o pendiente en una Beta no adquiere por ello el estatuto de requisito, deuda o compromiso de una versión estable.
+
+          La incorporación de una capacidad procedente de Beta a una versión estable requiere integración expresa en el repositorio soberano, comprobaciones aplicables y registro de Calidad.
+
+          Origen fijado para la copia B1/B2 conservada en este directorio:
+
+          - repositorio: `juantoniolloretegea/SVcustos-dataset`;
+          - rama: `lab/lenguaje-sv-beta`;
+          - commit: `ebe53b1faf3162f0e19b528e60d5fe859b1201ac`;
+          - fecha de incorporación al candidato: 29 de agosto de 2026.
+          EOF
+
+      - name: Registrar procedencia material del candidato
+        run: |
+          cat > docs/candidata-integracion/origen-beta2.json <<'EOF'
+          {
+            "origin_repository": "juantoniolloretegea/SVcustos-dataset",
+            "origin_branch": "lab/lenguaje-sv-beta",
+            "origin_commit": "ebe53b1faf3162f0e19b528e60d5fe859b1201ac",
+            "origin_beta": "B2",
+            "candidate_base": "79311c516288537e625f444f13826ed86227cca2",
+            "state": "candidate_not_promoted",
+            "promotion_authorized": false
+          }
+          EOF
+
+      - name: Verificar copia byte a byte
+        run: |
+          set -euo pipefail
+          src=/tmp/svcustos-beta/docs
+          dst=docs/candidata-integracion
+          for f in \
+            app-b2.js b2.css build-info.json caracteristicas.html diagnosticos.html diagnostics.html \
+            example-profile-sync-b2.js examples.json features.html i18n-static-b2.js index.html info.css \
+            programacion-metricas.html programming-metrics.html security-b2.html seguridad-b2.html \
+            styles.css wasm-loader-b2.js workspace-b2.css workspace-b2.js
+          do
+            cmp "$src/$f" "$dst/$f"
+          done
+          diff -qr "$src/examples" "$dst/examples"
+          diff -qr "$src/wasm-b2" "$dst/wasm-b2"
+          echo "COPIA_B2_BYTE_A_BYTE=PASS"
+
+      - name: Confirmar que no se arrastran artefactos B1 ni protocolo de laboratorio
+        run: |
+          set -euo pipefail
+          test ! -e docs/candidata-integracion/app.js
+          test ! -e docs/candidata-integracion/beta-meta.js
+          test ! -e docs/candidata-integracion/sv_wasm.wasm
+          test ! -e docs/candidata-integracion/PROTOCOLO_V1_DE_CLASIFICACION_Y_TRANSITO_ENTRE_NUCLEO_LABORATORIO_Y_DISTRIBUCION_EXPERIMENTAL_SV_2026_08_29.md
+          echo "FRONTERA_CANDIDATA=PASS"
+
+      - name: Incorporar copia material a la rama candidata
+        run: |
+          set -euo pipefail
+          git config user.name "Juan Antonio Lloret Egea"
+          git config user.email "111652409+juantoniolloretegea@users.noreply.github.com"
+          git add docs/candidata-integracion docs/beta-publica
+          if git diff --cached --quiet; then
+            echo "Sin cambios que incorporar"
+            exit 0
+          fi
+          git commit -m "integración: materializa entorno Beta 2 y conserva historial Beta separado"
+          git push origin HEAD:integracion-beta2-candidata-produccion-2026-08-29
