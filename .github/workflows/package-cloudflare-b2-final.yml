@@ -1,0 +1,138 @@
+name: Empaquetado Cloudflare B2 final
+
+on:
+  push:
+    branches:
+      - package/cloudflare-b2-final-20260829
+    paths:
+      - ".github/workflows/package-cloudflare-b2-final.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener corte soberano exacto
+        uses: actions/checkout@v4
+        with:
+          ref: c1acf943a7a44ce81080881e59283de8a2019606
+          fetch-depth: 1
+
+      - name: Construir paquete estático cerrado
+        run: |
+          set -euo pipefail
+          ROOT="$PWD"
+          SRC="$ROOT/docs/candidata-integracion"
+          DIST="$ROOT/artifacts/cloudflare-dist"
+          ZIP="$ROOT/artifacts/SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip"
+          mkdir -p "$DIST"
+          cp -a "$SRC"/. "$DIST"/
+          rm -f "$DIST/.estado"
+
+          test -f "$DIST/index.html"
+          test -f "$DIST/historial-beta.html"
+          test -f "$DIST/beta-history.html"
+          test -f "$DIST/sv_wasm_b2.wasm.gz.b64"
+          test ! -e "$DIST/wasm-loader-b2.js"
+          test ! -e "$DIST/wasm-b2"
+
+          cat > "$DIST/_headers" <<'EOF'
+          /*
+            Content-Security-Policy: default-src 'none'; script-src 'self' 'wasm-unsafe-eval'; style-src 'self'; connect-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'none'
+            X-Content-Type-Options: nosniff
+            X-Frame-Options: DENY
+            Referrer-Policy: no-referrer
+            Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=(), serial=(), hid=()
+            Cross-Origin-Resource-Policy: same-origin
+          EOF
+          sed -i 's/^          //' "$DIST/_headers"
+
+          cat > "$DIST/robots.txt" <<'EOF'
+          User-agent: *
+          Allow: /
+          EOF
+          sed -i 's/^          //' "$DIST/robots.txt"
+
+          cat > "$DIST/DEPLOYMENT_SOURCE.txt" <<'EOF'
+          SV Language public static deployment
+          Repository: juantoniolloretegea/SV-lenguaje-de-computacion
+          Repository main for this package: c1acf943a7a44ce81080881e59283de8a2019606
+          Certified B2 functional cut: 046adc6ad3f91183bde62afd99a20ff8f6eae4bb
+          B2 production integration commit: 9b9c890a609839ad4b00fa71ded5e373ea354112
+          Consolidated conformity correction: PR #55
+          Corrective head validated before merge: 307c9ba80925385fa79fae717f4e9b0c68e58ac4
+          WebAssembly evidence source head: 6c2fcc7f5a771eb0ce89acf959e2ad4ae1874750
+          WebAssembly evidence run: 33271320776
+          Closed-domain browser probes: 6/6
+          WebAssembly bytes: 378956
+          WebAssembly SHA-256: 95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3
+          Grammar: 0.2
+          IR: 0.3
+          Projection: 0.1.0
+          Source profiles: SVP-ES, SVP-EN
+          Production visual identity: SVP-ES blue; SVP-EN rose
+          Distribution: single deterministic gzip/Base64 WebAssembly payload; no fetch interceptor or fragment reconstruction
+          EOF
+          sed -i 's/^          //' "$DIST/DEPLOYMENT_SOURCE.txt"
+
+          python - <<'PY'
+          from pathlib import Path
+          import base64, gzip, hashlib, json, re
+          dist=Path('artifacts/cloudflare-dist')
+          raw=base64.b64decode((dist/'sv_wasm_b2.wasm.gz.b64').read_text(encoding='ascii'))
+          wasm=gzip.decompress(raw)
+          assert len(wasm)==378956, len(wasm)
+          assert hashlib.sha256(wasm).hexdigest()=='95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3'
+          info=json.loads((dist/'build-info.json').read_text(encoding='utf-8'))
+          assert info['wasm_bytes']==378956
+          assert info['wasm_sha256']=='95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3'
+          index=(dist/'index.html').read_text(encoding='utf-8')
+          assert 'wasm-loader-b2.js' not in index
+          assert 'historial-beta.html' in index
+          js=(dist/'i18n-static-b2.js').read_text(encoding='utf-8')
+          assert 'github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/beta-publica' not in js
+          assert 'beta-history.html' in js and 'historial-beta.html' in js
+          for p in dist.rglob('*'):
+              if p.is_file() and p.suffix in {'.html','.js','.json','.css'}:
+                  t=p.read_text(encoding='utf-8')
+                  assert '03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03' not in t, p
+          PY
+
+          (
+            cd "$DIST"
+            find . -type f ! -name SHA256SUMS.txt -printf '%P\n' | LC_ALL=C sort | while read -r f; do sha256sum "$f"; done > SHA256SUMS.txt
+          )
+
+          python - <<'PY'
+          from pathlib import Path
+          import zipfile
+          dist=Path('artifacts/cloudflare-dist')
+          target=Path('artifacts/SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip')
+          files=sorted(p for p in dist.rglob('*') if p.is_file())
+          with zipfile.ZipFile(target,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
+              for p in files:
+                  rel=p.relative_to(dist).as_posix()
+                  info=zipfile.ZipInfo(rel, date_time=(2026,8,29,0,0,0))
+                  info.compress_type=zipfile.ZIP_DEFLATED
+                  info.external_attr=(0o100644 & 0xFFFF) << 16
+                  z.writestr(info,p.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
+          PY
+
+          echo "PACKAGE_SHA256=$(sha256sum "$ZIP" | awk '{print $1}')" | tee "$ROOT/artifacts/package-identity.txt"
+          echo "PACKAGE_BYTES=$(wc -c < "$ZIP")" | tee -a "$ROOT/artifacts/package-identity.txt"
+          echo "FILE_COUNT=$(unzip -Z1 "$ZIP" | wc -l)" | tee -a "$ROOT/artifacts/package-identity.txt"
+          unzip -t "$ZIP"
+
+      - name: Publicar artefacto exacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: sv-language-cloudflare-b2-final-conformidad
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip
+            artifacts/package-identity.txt
+            artifacts/cloudflare-dist/SHA256SUMS.txt
+            artifacts/cloudflare-dist/DEPLOYMENT_SOURCE.txt
