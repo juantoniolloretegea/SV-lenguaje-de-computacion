@@ -30,7 +30,9 @@ jobs:
           expected_parts = {
               '.tmp/final-ui-part-0.b64': 'bc15dd9db0e9bf72d099106c9cf2baa85085c66d13d76fe41684ac08ebda2609',
               '.tmp/final-ui-part-1.b64': 'b0f5cf47b59a2b9ee78c53d1262839b9486720fa1e60c933b6e0ea8ab2cd2149',
-              '.tmp/final-ui-part-2.b64': '8542f91946c74bc0731df8daf7dd6f89debb739ac5e0c61003e83aea1ce37bc7',
+              '.tmp/final-ui-part-2a.b64': 'e980e00bac01c3c35955fb9ec6fb5c1da8cbfbeb6701cfb143cb11255eca26eb',
+              '.tmp/final-ui-part-2b.b64': '84106dae9b415eeb5e730991a852656f488bb89d5f28eaa01fcfab485c8e9900',
+              '.tmp/final-ui-part-2c.b64': 'cf6f26d79dc25dd73cf08da8085a3464dccdb4ca85811241367355f7136e56ee',
               '.tmp/final-ui-part-3a.b64': '8c384f7724dd3fe8ad8f9aeb50a20d2290f1bbf37a3a267080a8645f827f2c64',
               '.tmp/final-ui-part-3b.b64': 'c894b752d0ceb8e68660c681ed4fae88f93c8116e02d853698023289f0b92620',
               '.tmp/final-ui-part-3c.b64': '41c268a1b3ce69339c060ad64790a43832b14f69ac228777a29c69be4e4b67eb',
@@ -44,9 +46,11 @@ jobs:
               normalized.append(text)
 
           encoded = ''.join(normalized)
+          assert len(encoded) == 47872, len(encoded)
           payload = base64.b64decode(encoded, validate=True)
           expected_zip = '680677b28d47478d8a46a7faff5c40c9e5d3460abe6496e277823f0cf1ec7a01'
           actual_zip = hashlib.sha256(payload).hexdigest()
+          assert len(payload) == 35903, len(payload)
           assert actual_zip == expected_zip, (actual_zip, expected_zip)
 
           target = Path('docs/candidata-integracion')
@@ -156,6 +160,9 @@ jobs:
             .tmp/final-ui-part-0.b64 \
             .tmp/final-ui-part-1.b64 \
             .tmp/final-ui-part-2.b64 \
+            .tmp/final-ui-part-2a.b64 \
+            .tmp/final-ui-part-2b.b64 \
+            .tmp/final-ui-part-2c.b64 \
             .tmp/final-ui-part-3a.b64 \
             .tmp/final-ui-part-3b.b64 \
             .tmp/final-ui-part-3c.b64 \
