@@ -1,6 +1,6 @@
 # SV-lenguaje-de-computacion
 
-**Actualización de esta presentación técnica:** 24 de agosto de 2026  
+**Actualización de esta presentación técnica:** 29 de agosto de 2026  
 **Autor:** Juan Antonio Lloret Egea  
 **ORCID:** [0000-0002-6634-3351](https://orcid.org/0000-0002-6634-3351)  
 **Institución:** ITVIA — IA eñ™  
@@ -11,156 +11,183 @@
 
 ## Lenguaje de computación del Sistema Vectorial SV
 
-Este repositorio contiene la especificación pública y las realizaciones verificables del Lenguaje SV (SVP). Reúne la gramática, la representación intermedia (IR), la etapa frontal de referencia, el núcleo Rust, los adaptadores de ejecución, el catálogo de diagnósticos, la batería de conformidad y la documentación de calidad y trazabilidad.
+Este repositorio contiene la especificación pública y las realizaciones verificables del Lenguaje SV (SVP): gramática, representación intermedia (IR), perfiles fuente, etapa frontal de referencia, núcleo Rust, destinos nativo y WebAssembly, pruebas de conformidad, documentación arquitectónica y registros de calidad.
 
-Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen en [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica). Este repositorio desarrolla su expresión como lenguaje de computación dentro del alcance definido por sus especificaciones.
+Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen en [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica). Este repositorio desarrolla su expresión como lenguaje de computación dentro del alcance acreditado por sus especificaciones y pruebas.
 
 ### Accesos directos
 
-- [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — ejecución Rust/WebAssembly local en el navegador.
-- [Cierre integral de R0](./docs/calidad/ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) — cierre de la primera realización soberana del núcleo semántico.
-- [Apertura de R1](./docs/arquitectura/ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md) — autoridad, mediación y decisiones protegidas dentro del proceso soberano.
-- [Playground Python/Pyodide histórico](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md) — antecedente conservado para trazabilidad.
-- [Historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md).
+- [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — compilación Rust/WebAssembly local en el navegador.
 - [Gramática superficial mínima v0.2](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md).
+- [Especificación normativa de perfiles fuente SVP-ES / SVP-EN](./ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md).
 - [Representación intermedia y bienformación v0.3](./IR_CANONICA_BIENFORMACION_SV_v0_3.md).
-- [Adenda de vigencia de la Frontera Normativa para C01–C03](./ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md).
-- [Catálogo efectivo de errores v0.3](./docs/referencia/ERRORES_CANONICOS_SV_v0_3.md).
+- [Cierre técnico de R1](./docs/arquitectura/ACTA_TECNICA_CIERRE_R1_2026_08_25.md).
+- [Apertura de R2](./docs/arquitectura/ACTA_TECNICA_APERTURA_R2_PERSISTENCIA_Y_CONTINUIDAD_MATERIAL_2026_08_25.md).
+- [Cierre correctivo B2 y restauración de continuidad](./docs/calidad/ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md).
+- [Historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md).
 - [Documentación de calidad](./docs/calidad/README.md).
 
 ---
 
-## Estado técnico
+## Estado técnico vigente
 
-| Elemento | Versión o estado | Alcance |
+| Elemento | Versión o estado | Alcance acreditado |
 |---|---|---|
-| Gramática superficial mínima | **0.2** | Sintaxis vigente para admisibilidad, `resolve` y `Frame`. |
-| Representación intermedia | **0.3** | Estructuras y reglas de bienformación vigentes. |
-| Serializador canónico de referencia | **0.1.0** | Serialización JSON determinista de la implementación Python. |
-| Proyección diferencial Rust | **0.1.0** | Observable compartido por los destinos Rust nativo y WebAssembly; no sustituye al serializador canónico completo. |
-| Etapa frontal Python | **Referencia diferencial** | Conserva análisis, validación, descenso a IR, diagnósticos y oráculos de conformidad. |
-| Núcleo Rust | **`sv_core`** | Una sola implementación compartida por el destino nativo y WebAssembly. |
-| Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>; ejecución local en el navegador. |
-| Conformidad | **72/72** | 11 casos válidos y 61 inválidos en la batería comprometida. |
-| Paridad de tres vías | **Ejecutada** | Referencia Python, Rust nativo y WebAssembly de navegador sobre el mismo corpus; WASI se conserva como evidencia complementaria. |
-| R0 | **CERRADO** | Primera realización soberana del núcleo semántico. |
-| R1 | **ABIERTO** | Autoridad, mediación, `Req`, fallo cerrado, ligaduras y trazas dentro del proceso soberano. |
-| R2–R4 | **NO INICIADOS** | Persistencia/continuidad, plataforma material y ataque integral conservan sus fases propias. |
-| Garantía I / Garantía II | **NO_PROBADO** | La apertura de R1 no acredita ninguna de las dos garantías. |
-| Biblioteca estándar | **Pendiente** | Estado documentado en [`stdlib/README.md`](./stdlib/README.md). |
+| Gramática canónica | **0.2** | Gramática común aplicada tras resolver el perfil fuente explícito. |
+| Perfiles fuente | **SVP-ES · SVP-EN** | Dos representaciones fuente cerradas que convergen sobre una misma identidad canónica. |
+| Perfil léxico | **`svp-grammar-0.2-lex-es-1`** | Repertorio de identificadores; es independiente de los perfiles fuente. |
+| Representación intermedia | **0.3** | IR canónica común, independiente del idioma de fuente. |
+| Serializador canónico de referencia | **0.1.0** | JSON determinista de la implementación Python de referencia. |
+| Proyección diferencial Rust | **0.1.0** | Observable compartido por Rust nativo y WebAssembly; no sustituye al serializador canónico completo. |
+| Núcleo Rust | **`sv_core`** | Implementación compartida por los destinos nativo y WebAssembly. |
+| Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>. |
+| Conformidad R0-7 | **79/79** | 12 casos válidos y 67 inválidos. |
+| `sv_core` | **210/210** | Espacio de trabajo Rust sobre la base correctiva. |
+| Dominios cerrados | **5/5 + 6/6 navegador** | Regresiones permanentes y sondas DG-01/02/03 en SVP-ES y SVP-EN. |
+| `sv_wasm` | **2/2** | Adaptador WebAssembly sobre el mismo núcleo. |
+| Documentación ejecutable `sv_core` | **17/17** | Pruebas de documentación Rust. |
+| R0 | **CERRADO** | Incluido el perímetro correctivo abierto por DFL-007. |
+| R1 | **CERRADO Y REVALIDADO** | Autoridad, mediación, decisiones protegidas y trazas intra-proceso sobre la base R0 corregida. |
+| R2 | **ABIERTO** | Persistencia y continuidad material; levantada la suspensión específica causada por DFL-007. |
+| R3–R4 | **NO INICIADOS** | Conservan sus fases propias. |
+| Garantía I / Garantía II | **NO_PROBADO** | Ningún cierre anterior acredita estas garantías. |
 
-El artefacto WebAssembly utilizado por el entorno público corresponde al corte:
-
-```text
-fuente
-20a1f95cbf1bdbfb4f16cd39335bd71ca1d1c606
-
-sv_wasm.wasm
-SHA-256
-7b49228624f101dc8d863a2b4d631b7ed8eacb4ee4a29c2459d32f6b63aff5dc
-```
-
-La realización Rust/WebAssembly quedó integrada mediante la [PR #22](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/22) y la [confirmación `befc666`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/befc666fabe54ecd541416610bf31ddfe776aa69). La identidad del artefacto y las pruebas asociadas permiten distinguir el despliegue público de la mera presentación web.
-
-El [acta de cierre integral de R0](./docs/calidad/ACTA_TECNICA_DE_CIERRE_INTEGRAL_R0_PRIMERA_REALIZACION_SOBERANA_SV_2026_08_24.md) fija el alcance de la primera realización soberana y enumera expresamente las propiedades que permanecen fuera de esa fase. La [apertura de R1](./docs/arquitectura/ACTA_TECNICA_DE_APERTURA_R1_AUTORIDAD_MEDIACION_Y_DECISIONES_PROTEGIDAS_2026_08_24.md) delimita de forma separada la materialización de autoridad, mediación y decisiones protegidas, sin abrir R2–R4.
+El levantamiento de la suspensión de R2 no constituye cierre de R2 ni prueba propiedades materiales que pertenecen a esa fase.
 
 ---
 
-## Una sola semántica, varios destinos materiales
+## Una gramática canónica y dos perfiles fuente
 
-La arquitectura cerrada de R0 mantiene una sola implementación del núcleo semántico:
+La arquitectura vigente distingue el perfil léxico de los perfiles fuente:
 
 ```text
-archivo .svp
+bytes UTF-8 de la unidad
+        ↓
+perfil léxico común de identificadores
+        ↓
+perfil fuente explícito SVP-ES o SVP-EN
+        ↓
+identidad canónica de forma constitutiva
+        ↓
+Gramática canónica 0.2
+        ↓
+IR canónica 0.3
+        ↓
+semántica única del Lenguaje SV
+```
+
+`SVP-ES` y `SVP-EN` no crean dos gramáticas, dos representaciones intermedias ni dos semánticas. La realización vigente contiene **154 identidades canónicas**, **297 grafías distintas** y **11 formas compartidas**.
+
+La selección de perfil fuente es explícita. No existe autodetección ni caída silenciosa entre perfiles. La canonicalización no traduce identificadores del usuario, cadenas, comentarios, datos ni nombres de archivo, y la huella `source_sha256` se calcula sobre los bytes UTF-8 originales.
+
+---
+
+## Identidad de la realización WebAssembly publicada
+
+El corte de realización integrado es:
+
+```text
+main de realización
+c1acf943a7a44ce81080881e59283de8a2019606
+```
+
+La identidad del WebAssembly desplegado es:
+
+```text
+sv_wasm.wasm
+bytes   = 378956
+SHA-256 = 95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3
+```
+
+La distribución estática utilizada para el despliegue manual queda identificada por:
+
+```text
+SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip
+bytes   = 167503
+SHA-256 = 566200f97bfea86a0b7ce7c4919bac9d5367a67b8cba719eef1c573942d696f5
+```
+
+La distribución contiene una única representación Base64 comprimida del módulo. La aplicación comprueba identidad y tamaño antes de utilizar el WebAssembly.
+
+Cloudflare constituye la capa de distribución del entorno público, no una autoridad semántica independiente. La compilación del texto `.svp` se realiza localmente en el navegador mediante el mismo `sv_core` utilizado por el destino Rust nativo.
+
+---
+
+## Conformidad y corrección DFL-007
+
+La ampliación de la verificación durante B2 descubrió tres dominios cerrados que Rust trataba como palabras abiertas:
+
+```text
+SemanticRelation.kind
+Pattern.kind
+Graph.regime
+```
+
+La corrección vigente exige:
+
+```text
+SemanticRelation.kind = DeclaredRelation
+Pattern.kind          = DeclaredPattern
+Graph.regime          ∈ {Simple, General}
+```
+
+La comprobación se aplica sobre la identidad canónica común, por lo que una única regla protege SVP-ES y SVP-EN. Las sondas de regresión quedan incorporadas de forma permanente en Rust y en la prueba WebAssembly de navegador.
+
+La deuda distinta relativa a `ConflictOperator` y a la concurrencia bajo régimen `General` permanece abierta. No forma parte del cierre de DG-03.
+
+Evidencia principal:
+
+- [PR #55](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/55);
+- [R0 Rust — ejecución 33271992363](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992363);
+- [R0-8 — ejecución 33271992371](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992371);
+- [R0 WebAssembly y navegador — ejecución 33271992457](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/33271992457).
+
+---
+
+## Referencia Python y varios destinos materiales
+
+Python permanece como referencia diferencial y conserva los oráculos y parte del contrato diagnóstico histórico. Rust constituye la realización soberana compartida por el destino nativo y WebAssembly.
+
+```text
+fuente .svp
    ↓
-sv_core::compile_svp
+perfil fuente explícito
+   ↓
+sv_core
    ├── Rust nativo
    └── WebAssembly de navegador
 ```
 
-El adaptador WebAssembly no contiene una segunda gramática, un segundo analizador ni reglas semánticas independientes. La interfaz JavaScript transporta bytes, invoca las funciones exportadas del módulo y presenta el observable devuelto.
+El adaptador WebAssembly no introduce una segunda gramática ni reglas semánticas independientes. JavaScript transporta bytes, selecciona de forma explícita el perfil solicitado, invoca las exportaciones del módulo y presenta el observable resultante.
 
-En el entorno público:
-
-```text
-texto .svp
-   ↓
-sv_wasm
-   ↓
-sv_core::compile_svp
-   ↓
-proyección diferencial de R0
-```
-
-La distribución mediante Cloudflare no constituye autoridad semántica: entrega los activos estáticos del entorno público; la compilación se ejecuta localmente en el navegador.
-
-R1 amplía `sv_core` únicamente en su frontera de control intra-proceso. La capacidad de un adaptador, un proceso o un componente técnico para invocar al núcleo no constituye por sí misma autoridad SV.
+El Playground Python/Pyodide anterior se conserva como [instantánea histórica](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md).
 
 ---
 
-## Referencia Python y conservación histórica
+## Límites vigentes
 
-La implementación Python no se elimina por la aparición de Rust/WebAssembly. Permanece como referencia diferencial, conserva el catálogo diagnóstico y sostiene los oráculos comprometidos de la batería de conformidad.
+Las comprobaciones publicadas deben leerse dentro de su alcance material:
 
-El Playground público anterior, basado en Python/Pyodide, dejó de ser el punto de acceso público principal del Lenguaje al desplegarse el entorno Rust/WebAssembly. Su interfaz se conserva como [instantánea histórica de 24/08/2026](./docs/historico/PLAYGROUND_PYTHON_PYODIDE_2026_08_24.md).
+- la proyección diferencial Rust 0.1.0 no es el serializador canónico completo;
+- no se acredita paridad textual exacta de todos los códigos y mensajes diagnósticos entre realizaciones;
+- una ejecución en Chromium no acredita compatibilidad universal con todos los motores de navegador;
+- una entrada no admitida o un fallo técnico no se convierten en `Tri.U`;
+- el despliegue público no prueba por sí solo ninguna garantía de fase;
+- `ConflictOperator`/J2.3 para concurrencia en régimen `General` permanece pendiente;
+- R2 sigue abierto y debe acreditar sus propias propiedades de persistencia y continuidad material;
+- Garantía I y Garantía II permanecen `NO_PROBADO`.
 
-La presentación README previa a este relevo también se conserva íntegramente en [`docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md`](./docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md).
-
----
-
-## Conformidad y paridad ejecutada
-
-La batería vigente contiene:
-
-```text
-casos válidos   = 11
-casos inválidos = 61
-total           = 72
-```
-
-La comprobación WebAssembly utiliza el mismo texto `.svp` que las otras realizaciones. Para los casos válidos se contrasta la referencia Python, los oráculos JSON comprometidos, el destino Rust nativo y el destino WebAssembly de navegador. Para los casos inválidos se exige rechazo en las tres vías.
-
-La paridad exacta del código diagnóstico `E***` y del texto de los mensajes de error no forma parte del alcance acreditado por esta comprobación.
-
-La ejecución de navegador asociada al corte indicado produjo:
-
-```text
-válidos admitidos    = 11/11
-inválidos rechazados = 61/61
-```
-
-Dos reconstrucciones independientes del mismo corte produjeron bit a bit los mismos ejecutables nativo, WASI y WebAssembly de navegador; la variación observada se limitó al registro operativo del servidor HTTP de la prueba.
-
----
-
-## Fronteras y límites
-
-Las comprobaciones anteriores no deben ampliarse más allá de su evidencia material:
-
-- la proyección diferencial no se presenta como serializador canónico completo;
-- la conformidad 72/72 acredita el corpus comprometido, no una garantía integral del sistema;
-- no se acredita paridad diagnóstica exacta `E***`;
-- la ejecución en un navegador real no implica compatibilidad universal con todos los motores de navegador;
-- un fallo técnico o una entrada no admitida no se convierten en `Tri.U`;
-- el despliegue público no acredita por sí solo las Garantías I o II;
-- **R0 está cerrado dentro del alcance de su primera realización soberana**;
-- **R1 está abierto exclusivamente para autoridad, mediación y decisiones protegidas intra-proceso**;
-- **R2–R4 permanecen no iniciados**;
-- **Garantía I y Garantía II permanecen `NO_PROBADO`**.
-
-R1 no atribuye todavía persistencia autoritativa durable, recuperación material, aislamiento de plataforma, raíz de confianza, cadena de suministro, identidad externa, criptografía, mediación material completa ni resistencia adversarial integral del SUT. Estas propiedades conservan el régimen de fases posteriores fijado por la arquitectura soberana.
-
-La Frontera Normativa v0 de marzo se conserva como antecedente. Para C01–C03, su lectura vigente queda determinada por la [adenda técnica de vigencia](./ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md), la Gramática 0.2 y la IR 0.3 en las cláusulas expresamente sustituidas.
-
-Permanecen además las deudas técnicas registradas en la documentación de calidad, entre ellas `ConflictOperator`/J2.3, la divergencia histórica de `E204`, `RG1`, las limitaciones de `CriticalityResult`, `FFL-D` y el desarrollo pendiente de la biblioteca estándar. Ni el cierre de R0 ni la apertura de R1 atribuyen realización a ninguna de ellas.
+La deuda técnica vigente se mantiene en [`docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md`](./docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md).
 
 ---
 
 ## Calidad, trazabilidad e historial
 
-La documentación pública de calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue las versiones integradas, las piezas históricas, los desarrollos pendientes, los entornos públicos registrados y los hitos de realización.
+La documentación pública de Calidad se encuentra en [`docs/calidad/`](./docs/calidad/). El [historial de versiones](./docs/calidad/HISTORIAL_VERSIONES_LENGUAJE_SV.md) distingue versiones normativas, realizaciones, entornos públicos, correcciones y estados de continuidad.
 
-El historial de Git conserva el detalle de cada modificación. Las instantáneas históricas permiten reconstruir el estado de la presentación pública sin mantener simultáneamente dos entornos como puntos de acceso vigentes.
+El historial de Git conserva el detalle mecánico de los cambios. Los registros de Calidad concentran los hitos materiales y no sustituyen las pruebas ni las especificaciones que fundamentan cada afirmación.
+
+La verificación externa independiente del corte final se registrará mediante un acta separada cuando se complete; no se presume por la existencia del presente cierre de conformidad.
 
 ---
 
@@ -171,12 +198,12 @@ El historial de Git conserva el detalle de cada modificación. Las instantáneas
 | [SV-matematica-semantica](https://github.com/juantoniolloretegea/SV-matematica-semantica) | fundamentos matemáticos y semánticos |
 | [SV-lenguaje-de-computacion](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion) | especificación y realizaciones del Lenguaje SV |
 | [SV-motor](https://github.com/juantoniolloretegea/SV-motor) | infraestructura de ejecución e integración |
-| [SVcustos-dataset](https://github.com/juantoniolloretegea/SVcustos-dataset) | conjuntos de datos y antecedentes de seguridad estructural |
+| [SVcustos-dataset](https://github.com/juantoniolloretegea/SVcustos-dataset) | conjuntos de datos y sede pública de realizaciones Beta cuando corresponda |
 | [SVperitus-dataset](https://github.com/juantoniolloretegea/SVperitus-dataset) | agentes especializados y conjuntos de datos asociados |
 | [SV-banco-de-idiomas](https://github.com/juantoniolloretegea/SV-banco-de-idiomas) | infraestructura lingüística auxiliar |
 
 ---
 
-## Archivo histórico de la presentación anterior
+## Archivo histórico
 
-La presentación pública anterior, incluido el anexo histórico que contenía, se conserva íntegramente en [`docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md`](./docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md). Su conservación permite mantener la trazabilidad documental sin trasladar a la portada vigente material que ya no describe el estado técnico actual.
+La presentación pública anterior al entorno Rust/WebAssembly se conserva íntegramente en [`docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md`](./docs/historico/README_2026_08_24_PRE_ENTORNO_RUST_WASM.md).
