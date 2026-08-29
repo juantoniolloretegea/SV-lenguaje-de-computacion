@@ -1,0 +1,24 @@
+-- cell_basic.svp — Célula simple b=3, n=9
+-- Test de conformidad: declaración mínima + evaluación
+
+codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+
+semántica_de_salida Klin {
+  APTO -> "Clasificación fuerte favorable";
+  NO_APTO -> "Clasificación fuerte desfavorable";
+  INDETERMINADO -> "Sin clasificación fuerte";
+}
+
+especificación_de_celda C1 {
+  b: 3;
+  codominio: K3;
+  semántica: Klin;
+  rol: Base;
+}
+
+estado_de_celda S1 {
+  especificación: C1;
+  vector: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+}
+
+sea E1 = evaluar(S1);

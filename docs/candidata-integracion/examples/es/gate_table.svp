@@ -1,0 +1,53 @@
+-- gate_table.svp — Compuerta con tabla explícita de admisibilidad
+
+codominio K3 = { APTO, NO_APTO, INDETERMINADO };
+
+semántica_de_salida Klin {
+  APTO -> "ok";
+  NO_APTO -> "no";
+  INDETERMINADO -> "u";
+}
+
+especificación_de_celda C1 {
+  b: 3;
+  codominio: K3;
+  semántica: Klin;
+  rol: Base;
+}
+
+especificación_de_celda C2 {
+  b: 3;
+  codominio: K3;
+  semántica: Klin;
+  rol: Base;
+}
+
+estado_de_celda S1 {
+  especificación: C1;
+  vector: [Cero, Uno, U, Cero, Cero, Uno, U, Cero, Uno];
+}
+
+estado_de_celda S2 {
+  especificación: C2;
+  vector: [Cero, Cero, Cero, Uno, Cero, Cero, Cero, Uno, Cero];
+}
+
+tabla_de_admisibilidad T1 {
+  codominios_de_entrada: [K3, K3];
+  codominio_de_salida: K3;
+  tabla: {
+    (APTO, APTO) -> APTO;
+    (APTO, NO_APTO) -> NO_APTO;
+    (APTO, INDETERMINADO) -> INDETERMINADO;
+    (NO_APTO, APTO) -> NO_APTO;
+    (NO_APTO, NO_APTO) -> NO_APTO;
+    (NO_APTO, INDETERMINADO) -> NO_APTO;
+    (INDETERMINADO, APTO) -> INDETERMINADO;
+    (INDETERMINADO, NO_APTO) -> NO_APTO;
+    (INDETERMINADO, INDETERMINADO) -> INDETERMINADO;
+  }
+}
+
+sea E1 = evaluar(S1);
+sea E2 = evaluar(S2);
+sea G1 = compuerta([E1, E2], usando: T1);
