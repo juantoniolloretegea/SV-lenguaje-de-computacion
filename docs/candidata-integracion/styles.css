@@ -21,11 +21,11 @@ body[data-source-profile="es"] {
 }
 
 body[data-source-profile="en"] {
-  --profile: #235d91;
-  --profile-dark: #17466f;
-  --profile-soft: #eef7ff;
-  --profile-soft-2: #dceeff;
-  --profile-line: #9fc4e4;
+  --profile: #7a2343;
+  --profile-dark: #5d1731;
+  --profile-soft: #fff2f6;
+  --profile-soft-2: #fae2ea;
+  --profile-line: #dca5b7;
 }
 
 * { box-sizing: border-box; }
