@@ -1,5 +1,5 @@
 name: Integración Beta 2 — materializar fuente Rust candidata
-# Segunda ejecución: archivo fuente completo tras incorporar la parte 02.
+# Tercera ejecución: el repositorio soberano no rastrea Cargo.lock en rust/.
 
 on:
   push:
@@ -42,23 +42,24 @@ jobs:
       - name: Materializar únicamente la fuente gobernada de B2
         run: |
           set -euo pipefail
-          LOCK_BEFORE=$(sha256sum rust/Cargo.lock | awk '{print $1}')
+          if git ls-files --error-unmatch rust/Cargo.lock >/dev/null 2>&1; then
+            echo "Cargo.lock no debe formar parte del corte soberano" >&2
+            exit 1
+          fi
           cp /tmp/b2-source/rust/sv_core/src/frontend.rs rust/sv_core/src/frontend.rs
           cp /tmp/b2-source/rust/sv_core/src/lib.rs rust/sv_core/src/lib.rs
           cp /tmp/b2-source/rust/sv_native/src/main.rs rust/sv_native/src/main.rs
           cp /tmp/b2-source/rust/sv_wasm/src/lib.rs rust/sv_wasm/src/lib.rs
+          mkdir -p rust/sv_core/examples
           cp /tmp/b2-source/rust/sv_core/examples/probe_assembly_2b.rs rust/sv_core/examples/probe_assembly_2b.rs
-          LOCK_AFTER=$(sha256sum rust/Cargo.lock | awk '{print $1}')
-          test "$LOCK_BEFORE" = "$LOCK_AFTER"
-          echo "CARGO_LOCK_UNCHANGED=$LOCK_AFTER"
 
-      - name: Validar con el cierre de dependencias soberano
+      - name: Validar con el manifiesto soberano
         run: |
           set -euo pipefail
-          cargo test --locked --workspace --manifest-path rust/Cargo.toml
+          cargo test --workspace --manifest-path rust/Cargo.toml
           rustup target add wasm32-unknown-unknown
           export CARGO_TARGET_DIR="$GITHUB_WORKSPACE/target-integracion-b2"
-          cargo build --locked --release --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+          cargo build --release --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
           WASM="$CARGO_TARGET_DIR/wasm32-unknown-unknown/release/sv_wasm.wasm"
           test "$(wc -c < "$WASM" | tr -d ' ')" = "377812"
           test "$(sha256sum "$WASM" | awk '{print $1}')" = "03a958e5c24a23aebfab6d68aaa24e40d83085127b7a2bc7d23fd27a27ac6e03"
@@ -68,6 +69,7 @@ jobs:
       - name: Verificar radio de modificación fuente
         run: |
           set -euo pipefail
+          rm -f rust/Cargo.lock
           git status --short
           test -z "$(git status --short rust/Cargo.lock)"
           test "$(git status --short rust/sv_core/src/frontend.rs | wc -l)" -eq 1
