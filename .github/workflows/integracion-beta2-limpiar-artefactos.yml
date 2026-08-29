@@ -1,0 +1,54 @@
+name: "Integración Beta 2 — limpiar artefactos de construcción"
+
+on:
+  push:
+    branches:
+      - integracion-beta2-candidata-produccion-2026-08-29
+    paths:
+      - .github/workflows/integracion-beta2-limpiar-artefactos.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  limpiar:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Obtener rama candidata
+        uses: actions/checkout@v4
+        with:
+          ref: integracion-beta2-candidata-produccion-2026-08-29
+          fetch-depth: 0
+
+      - name: Retirar exclusivamente salidas accidentales de construcción
+        run: |
+          set -euo pipefail
+          rm -rf target-integracion-b2
+          rm -f rust/Cargo.lock
+          rm -rf .integracion-beta2-staging
+
+      - name: Verificar identidad de la fuente B2 gobernada
+        run: |
+          set -euo pipefail
+          echo "b919b3dff9104c60cc527789e30f46a882ee414c3893b15c48055bbd23f44b3b  rust/sv_core/src/frontend.rs" | sha256sum -c -
+          echo "a83064846827affb17df52279aea625dff5c6e0aa753c6c876d7cc4792a31b6e  rust/sv_core/src/lib.rs" | sha256sum -c -
+          echo "c0d4896a867328036aedb5f0b91ae7d04157bb1bf8c77c177ca1d1b81f0ed70a  rust/sv_native/src/main.rs" | sha256sum -c -
+          echo "b5d4e11c3f6260eaee504a98f7d08033493b3591afecb11b766dfc4807cdb608  rust/sv_wasm/src/lib.rs" | sha256sum -c -
+          echo "f21983e2f9053dc00f0384974e9ba922547bca52f5046353403ccbb07eef4f3a  rust/sv_core/examples/probe_assembly_2b.rs" | sha256sum -c -
+          test -z "$(git status --short rust/Cargo.lock)"
+          test ! -e target-integracion-b2
+          test ! -e .integracion-beta2-staging
+          echo "FUENTE_B2_IDENTIDAD=PASS"
+          echo "ARTEFACTOS_CONSTRUCCION_AUSENTES=PASS"
+
+      - name: Incorporar saneamiento y retirar flujo temporal
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/integracion-beta2-limpiar-artefactos.yml
+          git config user.name "Juan Antonio Lloret Egea"
+          git config user.email "111652409+juantoniolloretegea@users.noreply.github.com"
+          git add -u target-integracion-b2 .integracion-beta2-staging .github/workflows/integracion-beta2-limpiar-artefactos.yml rust/Cargo.lock 2>/dev/null || true
+          git status --short
+          git commit -am "integración: retira artefactos de construcción de la candidata"
+          git push origin HEAD:integracion-beta2-candidata-produccion-2026-08-29
