@@ -19,7 +19,7 @@ jobs:
           ref: integracion-beta2-candidata-produccion-2026-08-29
           fetch-depth: 0
 
-      - name: Reconstruir y verificar paquete exacto
+      - name: Verificar fragmentos y reconstruir paquete exacto
         shell: bash
         run: |
           set -euo pipefail
@@ -27,16 +27,23 @@ jobs:
           from pathlib import Path
           import base64, hashlib, io, zipfile
 
-          parts = [
-              '.tmp/final-ui-part-0.b64',
-              '.tmp/final-ui-part-1.b64',
-              '.tmp/final-ui-part-2.b64',
-              '.tmp/final-ui-part-3a.b64',
-              '.tmp/final-ui-part-3b.b64',
-              '.tmp/final-ui-part-3c.b64',
-          ]
-          encoded = ''.join(Path(p).read_text(encoding='utf-8') for p in parts)
-          encoded = ''.join(encoded.split())
+          expected_parts = {
+              '.tmp/final-ui-part-0.b64': 'bc15dd9db0e9bf72d099106c9cf2baa85085c66d13d76fe41684ac08ebda2609',
+              '.tmp/final-ui-part-1.b64': 'b0f5cf47b59a2b9ee78c53d1262839b9486720fa1e60c933b6e0ea8ab2cd2149',
+              '.tmp/final-ui-part-2.b64': '8542f91946c74bc0731df8daf7dd6f89debb739ac5e0c61003e83aea1ce37bc7',
+              '.tmp/final-ui-part-3a.b64': '8c384f7724dd3fe8ad8f9aeb50a20d2290f1bbf37a3a267080a8645f827f2c64',
+              '.tmp/final-ui-part-3b.b64': 'c894b752d0ceb8e68660c681ed4fae88f93c8116e02d853698023289f0b92620',
+              '.tmp/final-ui-part-3c.b64': '41c268a1b3ce69339c060ad64790a43832b14f69ac228777a29c69be4e4b67eb',
+          }
+          normalized = []
+          for path, expected in expected_parts.items():
+              text = ''.join(Path(path).read_text(encoding='utf-8').split())
+              actual = hashlib.sha256(text.encode()).hexdigest()
+              print(f'{path} LEN={len(text)} SHA256={actual}')
+              assert actual == expected, (path, actual, expected)
+              normalized.append(text)
+
+          encoded = ''.join(normalized)
           payload = base64.b64decode(encoded, validate=True)
           expected_zip = '680677b28d47478d8a46a7faff5c40c9e5d3460abe6496e277823f0cf1ec7a01'
           actual_zip = hashlib.sha256(payload).hexdigest()
