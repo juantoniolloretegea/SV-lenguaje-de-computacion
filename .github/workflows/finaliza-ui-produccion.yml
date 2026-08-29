@@ -19,7 +19,7 @@ jobs:
           ref: integracion-beta2-candidata-produccion-2026-08-29
           fetch-depth: 0
 
-      - name: Verificar fragmentos y reconstruir paquete exacto
+      - name: Reconstruir paquete por identidad criptográfica
         shell: bash
         run: |
           set -euo pipefail
@@ -27,23 +27,36 @@ jobs:
           from pathlib import Path
           import base64, hashlib, io, zipfile
 
-          expected_parts = {
-              '.tmp/final-ui-part-0.b64': 'bc15dd9db0e9bf72d099106c9cf2baa85085c66d13d76fe41684ac08ebda2609',
-              '.tmp/final-ui-part-1.b64': 'b0f5cf47b59a2b9ee78c53d1262839b9486720fa1e60c933b6e0ea8ab2cd2149',
-              '.tmp/final-ui-part-2a.b64': 'e980e00bac01c3c35955fb9ec6fb5c1da8cbfbeb6701cfb143cb11255eca26eb',
-              '.tmp/final-ui-part-2b.b64': '84106dae9b415eeb5e730991a852656f488bb89d5f28eaa01fcfab485c8e9900',
-              '.tmp/final-ui-part-2c.b64': 'cf6f26d79dc25dd73cf08da8085a3464dccdb4ca85811241367355f7136e56ee',
-              '.tmp/final-ui-part-3a.b64': '8c384f7724dd3fe8ad8f9aeb50a20d2290f1bbf37a3a267080a8645f827f2c64',
-              '.tmp/final-ui-part-3b.b64': 'c894b752d0ceb8e68660c681ed4fae88f93c8116e02d853698023289f0b92620',
-              '.tmp/final-ui-part-3c.b64': '41c268a1b3ce69339c060ad64790a43832b14f69ac228777a29c69be4e4b67eb',
-          }
+          expected_parts = [
+              ('.tmp/final-ui-part-0.b64', 'bc15dd9db0e9bf72d099106c9cf2baa85085c66d13d76fe41684ac08ebda2609'),
+              ('.tmp/final-ui-part-1.b64', 'b0f5cf47b59a2b9ee78c53d1262839b9486720fa1e60c933b6e0ea8ab2cd2149'),
+              ('.tmp/final-ui-part-2a.b64', 'e980e00bac01c3c35955fb9ec6fb5c1da8cbfbeb6701cfb143cb11255eca26eb'),
+              ('.tmp/final-ui-part-2b.b64', '84106dae9b415eeb5e730991a852656f488bb89d5f28eaa01fcfab485c8e9900'),
+              ('.tmp/final-ui-part-2c.b64', 'cf6f26d79dc25dd73cf08da8085a3464dccdb4ca85811241367355f7136e56ee'),
+              ('.tmp/final-ui-part-3a.b64', '8c384f7724dd3fe8ad8f9aeb50a20d2290f1bbf37a3a267080a8645f827f2c64'),
+              ('.tmp/final-ui-part-3b.b64', 'c894b752d0ceb8e68660c681ed4fae88f93c8116e02d853698023289f0b92620'),
+              ('.tmp/final-ui-part-3c.b64', '41c268a1b3ce69339c060ad64790a43832b14f69ac228777a29c69be4e4b67eb'),
+          ]
+
+          def sha(s):
+              return hashlib.sha256(s.encode()).hexdigest()
+
           normalized = []
-          for path, expected in expected_parts.items():
+          for path, expected in expected_parts:
               text = ''.join(Path(path).read_text(encoding='utf-8').split())
-              actual = hashlib.sha256(text.encode()).hexdigest()
-              print(f'{path} LEN={len(text)} SHA256={actual}')
-              assert actual == expected, (path, actual, expected)
-              normalized.append(text)
+              if sha(text) == expected:
+                  print(f'{path}: EXACT LEN={len(text)} SHA256={expected}')
+                  normalized.append(text)
+                  continue
+              repairs = []
+              for i in range(len(text)):
+                  candidate = text[:i] + text[i+1:]
+                  if sha(candidate) == expected:
+                      repairs.append((i, text[i], candidate))
+              assert len(repairs) == 1, (path, len(text), sha(text), expected, len(repairs))
+              i, ch, repaired = repairs[0]
+              print(f'{path}: TRANSPORT_INSERTION_REMOVED index={i} char={ch!r} LEN={len(repaired)} SHA256={expected}')
+              normalized.append(repaired)
 
           encoded = ''.join(normalized)
           assert len(encoded) == 47872, len(encoded)
@@ -109,7 +122,6 @@ jobs:
           from html.parser import HTMLParser
           from pathlib import Path
           from urllib.parse import urlsplit
-
           root = Path('docs/candidata-integracion')
           pages = sorted(root.glob('*.html'))
           failures = []
@@ -129,15 +141,10 @@ jobs:
                   if u.scheme or u.netloc or href.startswith('#') or href.startswith('mailto:'):
                       continue
                   rel=u.path
-                  if rel in ('', './'):
-                      dest=root/'index.html'
-                  else:
-                      dest=(page.parent/rel)
-                      if dest.is_dir(): dest=dest/'index.html'
-                  if not dest.exists():
-                      failures.append(f'{page.name}: destino relativo inexistente: {href}')
-          if failures:
-              raise SystemExit('\n'.join(failures))
+                  dest=root/'index.html' if rel in ('', './') else page.parent/rel
+                  if dest.is_dir(): dest=dest/'index.html'
+                  if not dest.exists(): failures.append(f'{page.name}: destino relativo inexistente: {href}')
+          if failures: raise SystemExit('\n'.join(failures))
           print(f'HTML_PAGES={len(pages)} RELATIVE_LINKS=PASS DUPLICATE_IDS=PASS')
           PY
 
