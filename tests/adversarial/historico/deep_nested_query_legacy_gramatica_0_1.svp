@@ -1,4 +1,4 @@
--- deep_nested_query_valid.svp — estructura moderadamente profunda con query
+-- Vector adversarial histórico procedente de la Gramática 0.1; no es válido bajo Gramática 0.2.
 
 codomain K3 = { APTO, NO_APTO, INDETERMINADO };
 output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }

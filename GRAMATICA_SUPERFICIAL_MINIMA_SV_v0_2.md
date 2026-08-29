@@ -284,3 +284,39 @@ La gramática v0.2 mantiene la superficie austera del Lenguaje SV y corrige las 
 ## 11. Perfil léxico complementario
 
 Las primitivas `letter` y `digit` heredadas de la Gramática v0.1 se interpretan conforme a `ADENDA_NORMATIVA_PERFIL_LEXICO_GRAMATICA_SVP_0_2_2026_08_27.md`. La adenda cierra el repertorio de identificadores y naturales sin modificar `Tri`, la IR 0.3 ni las palabras reservadas.
+
+---
+
+## 12. Perfiles fuente
+
+Los perfiles fuente `SVP-ES` y `SVP-EN` se rigen por `ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md`.
+
+El perfil fuente es una capa de representación anterior a la aplicación de la gramática canónica. Resuelve exclusivamente las formas constitutivas declaradas por el perfil hacia una misma identidad canónica. No crea una segunda gramática, una segunda IR ni una segunda semántica, y no debe confundirse con el perfil léxico complementario de la sección 11.
+
+Por tanto, `grammar_version = 0.2` identifica la gramática canónica común aplicada después de la resolución del perfil fuente explícito.
+
+---
+
+## 13. Reconciliación de cierres internos heredados
+
+La forma vigente de las producciones heredadas `connector_decl` y `table_decl` sustituye únicamente el cierre interno de `mapping` y `table` conservado en el texto histórico v0.1. El bloque interno termina en `}` sin un punto y coma adicional antes de la llave de cierre de la declaración:
+
+```ebnf
+connector_decl             ::= "connector" identifier "{"
+                               "source_codomain" ":" identifier ";"
+                               "target_position" ":" nat ";"
+                               "mapping" ":" "{"
+                                   { identifier "->" tri_literal ";" }
+                               "}"
+                               "}" ;
+
+table_decl                 ::= "admissibility_table" identifier "{"
+                               "input_codomains" ":" list<identifier> ";"
+                               "output_codomain" ":" identifier ";"
+                               "table" ":" "{"
+                                   { tuple_literal "->" identifier ";" }
+                               "}"
+                               "}" ;
+```
+
+Esta reconciliación fija normativamente la forma ya adoptada por el corpus canónico y por la realización Rust. No amplía el lenguaje, no modifica la semántica de `Connector` o `AdmissibilityTable` y no cambia los números de versión de Gramática, IR o serializador. La redacción v0.1 se conserva sin modificación como antecedente histórico.

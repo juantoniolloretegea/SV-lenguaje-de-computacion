@@ -4,7 +4,7 @@
 
 Este registro concentra la deuda técnica que sigue siendo relevante para la fase final del Lenguaje SV. No sustituye al registro de evolución ni a la documentación matemática y normativa del Sistema SV.
 
-El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante esté identificada, delimitada y no se presente como capacidad ya disponible.
+El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante esté identificada, delimitada y no se presente como capacidad ya disponible. Las deudas cerradas que hayan afectado a la continuidad de fases se conservan cuando su trazabilidad sea necesaria para interpretar el estado vigente.
 
 ## 2. Deuda viva
 
@@ -12,18 +12,17 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 
 - **Descripción:** persiste una diferencia conocida entre la tabla de diagnósticos definida por la IR v0.2 y el catálogo efectivo de la implementación. La relación entre ambos se mantiene mediante la matriz por identificador y la tabla de correspondencias funcionales.
 - **Reducciones acreditadas en FFL-B:** `E112` protege la restricción posicional de `CoupledState`; `E113` la compatibilidad representable entre aristas y conectores; `E114` la unicidad de `(target, position)` en régimen `Simple`; `E212` y `E211` las condiciones representadas sobre `supervise.meta_eval`; `E006` comprueba el tipo del contenido de `CellTarget`, `ComposedTarget` y `SystemTarget`; `E307` la pertenencia de tipos de suceso al `Horizon`; `E406` la no vaciedad de `TransitionData.induced_parameters`; `E011` la pertenencia de las salidas de `AdmissibilityTable` a `output_codomain`; `E213/E214` la legalidad estructural de las proyecciones; `E206/E207` efectivos la presencia de `context` y `mechanism` en `resolve`; y `E215` la concordancia, en número y codominio por posición, entre las entradas de `gate` y `AdmissibilityTable.input_codomains`.
-- **Corrección estructural acreditada:** `conflicts` fue retirado de `graph_decl` porque no pertenece a `CompositionGraph` y la superficie v0.1 no dispone de una declaración completa de `ConflictOperator`.
+- **Corrección estructural acreditada:** `conflicts` fue retirado de `graph_decl` porque no pertenece a `CompositionGraph` y la superficie vigente no dispone todavía de una declaración completa de `ConflictOperator`.
 - **Límites vigentes:** la concurrencia en régimen `General` que requiera `ConflictOperator` permanece sin comprobación material; la procedencia completa de una actualización de `CoupledState` desde un `Connector` concreto no está representada; una lista no vacía de `induced_parameters` no demuestra por sí sola la reconstrucción del operador inducido; E011 y E215 no ejecutan `GateResult.output`; E213/E214 no ejecutan resultados; E206/E207 no cierran J1.6; el tipado del contenido de `Supervisable` no acredita el determinismo de `verdict`, el efecto de `Veto` ni la ejecución completa de la supervisión.
-- **Precisión diagnóstica pendiente:** `E006 — UndeclaredReference` se utiliza tanto para una referencia inexistente como para una referencia existente de tipo incompatible. FFL-C caracteriza de forma persistente ambos supuestos mediante cuatro comprobaciones, con resultado **4/4**, pero no modifica el nombre, el mensaje ni el contrato diagnóstico. El nombre y el mensaje base describen con mayor precisión el primer supuesto.
-- **Cobertura positiva resuelta en FFL-C:** `SystemTarget(CompositionGraph)` dispone desde el 20/08/2026 de un caso válido específico conservado en la batería principal y forma parte de la conformidad acreditada de **58/58**.
-- **Estado:** gobernada; no bloquea los cierres de FFL-B ni FFL-C.
-- **Prioridad:** alta para una futura revisión del contrato diagnóstico, no para reabrir FFL-B o FFL-C por sí sola.
+- **Precisión diagnóstica pendiente:** `E006 — UndeclaredReference` se utiliza tanto para una referencia inexistente como para una referencia existente de tipo incompatible. FFL-C caracteriza de forma persistente ambos supuestos mediante cuatro comprobaciones, pero no modifica el nombre, el mensaje ni el contrato diagnóstico.
+- **Estado:** gobernada; no bloquea por sí sola los cierres alcanzados.
+- **Prioridad:** alta para una futura revisión del contrato diagnóstico.
 - **Evidencia:** `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`, `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`, `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md` y `tests/COBERTURA_OBSERVABLE_FFL_C_2026_08_20.md`.
 
 ### DFL-002 — Sincronización entre documentación pública y evidencia
 
 - **Descripción:** la documentación pública requiere vigilancia continua para no atribuir cierres, capacidades o coberturas que la evidencia no sostenga.
-- **Estado:** abierta como obligación de mantenimiento documental; no bloquea FFL-B ni FFL-C.
+- **Estado:** abierta como obligación de mantenimiento documental.
 - **Prioridad:** media-alta.
 
 ### DFL-003 — Interfaz semántico-diagnóstica materializada, pero no agotada
@@ -45,22 +44,25 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Estado:** abierta y reconocida.
 - **Prioridad:** media.
 
-### DFL-006 — Resultados y datos sin productor o ejecución material en la superficie v0.1
+### DFL-006 — Resultados y datos sin productor o ejecución material
 
-- **Descripción:** `Frame.criticalities` admite referencias a `CriticalityResult`, pero la superficie v0.1 no dispone de un operador que produzca ese resultado. Del mismo modo, `GateResult.output` y determinadas consecuencias de `SupervisionResult` pertenecen a una fase de ejecución todavía no materializada.
-- **Estado:** reconocida; fuera del alcance cerrado de FFL-B y FFL-C.
+- **Descripción:** `Frame.criticalities` admite referencias a `CriticalityResult`, pero la superficie vigente no dispone de un operador que produzca ese resultado. Del mismo modo, `GateResult.output` y determinadas consecuencias de `SupervisionResult` pertenecen a una fase de ejecución todavía no materializada.
+- **Estado:** reconocida; fuera del alcance de los cierres que no materializan esas capacidades.
 - **Prioridad:** posterior y dependiente de decisión arquitectónica expresa.
 
-### DFL-007 — Huecos heredados de cierre gramatical de la realización Rust
+### DFL-007 — Huecos heredados de cierre gramatical de la realización Rust — CERRADA
 
-- **Descripción:** una ampliación de la verificación realizada durante Beta 2 identificó tres producciones cerradas que la realización Rust del corte `f6b704e819e7d08589f00e9e3f9550deab21d0b1` no rechaza correctamente: `SemanticRelation.kind` fuera de `DeclaredRelation`, `Pattern.kind` fuera de `DeclaredPattern` y `Graph.regime` fuera de `Simple | General`.
-- **Efecto material:** un valor ajeno en `Graph.regime` permite evitar la restricción de concurrencia que corresponde al régimen `Simple`; la sonda derivada de `graph_simple_concurrencia_mismo_puente.svp` es rechazada por la referencia Python y aceptada por Rust cuando `Simple` se sustituye por `ForeignRegime`.
-- **Origen:** la comparación binaria entre el corte productivo y Beta 2 reproduce la misma aceptación en las cuatro sondas decisivas. La deuda es anterior a Beta 2 y no constituye una regresión de esa fase.
-- **Deuda asociada:** debe reconciliarse la desincronización histórica de la EBNF en los cierres internos de `connector.mapping` y `admissibility_table.table`, y reclasificarse `tests/adversarial/deep_nested_query_valid.svp`, cuyo nombre conserva un estatuto de validez anterior a la Gramática 0.2.
-- **Impacto de continuidad:** R0 queda reabierto de forma correctiva y acotada en el perímetro de conformidad gramatical afectado; R1 conserva sus resultados técnicos, pero su cierre queda suspendido como habilitación de continuidad mientras no se revalide contra la base R0 corregida; R2 queda suspendido y no debe continuar hasta el cierre acreditado del encargo.
-- **Estado:** abierta y bloqueante para la continuidad de R2.
-- **Prioridad:** crítica para restablecer la base de conformidad antes de proseguir las fases posteriores.
-- **Evidencia y condiciones de cierre:** `ACTA_TECNICA_DE_ENCARGO_CORRECTIVO_INCIDENTAL_HUECOS_HEREDADOS_BETA_2_Y_BLOQUEO_R2_2026_08_29.md`.
+- **Descripción histórica:** durante la ampliación de la verificación asociada a B2 se identificaron tres producciones cerradas que la realización Rust aceptaba indebidamente: `SemanticRelation.kind` fuera de `DeclaredRelation`, `Pattern.kind` fuera de `DeclaredPattern` y `Graph.regime` fuera de `Simple | General`.
+- **Efecto material histórico:** un valor ajeno en `Graph.regime` permitía evitar la restricción de concurrencia aplicable al régimen `Simple`. La deuda era anterior a B2 y no constituía una regresión introducida por los perfiles fuente.
+- **Corrección:** la realización Rust impone los tres dominios sobre la identidad canónica común y la bienformación conserva una comprobación defensiva equivalente. La misma frontera protege `SVP-ES` y `SVP-EN`.
+- **Regresión permanente:** quedan incorporadas pruebas Rust para los dominios cerrados y seis sondas directas de navegador, DG-01/02/03 en ambos perfiles fuente.
+- **Evidencia ejecutable:** conformidad R0-7 **79/79** — 12 válidos y 67 inválidos; `sv_core` **210/210**; pruebas específicas de dominios cerrados **5/5**; sondas de navegador **6/6**; `sv_wasm` **2/2**; documentación ejecutable `sv_core` **17/17**.
+- **DD-01:** la Gramática 0.2 fija expresamente la forma vigente de los cierres internos de `connector.mapping` y `admissibility_table.table`, sin reescribir la v0.1 histórica ni ampliar el lenguaje.
+- **VH-01:** el antiguo `tests/adversarial/deep_nested_query_valid.svp` queda reclasificado como `tests/adversarial/historico/deep_nested_query_legacy_gramatica_0_1.svp`, con estatuto histórico explícito.
+- **Continuidad:** R0 queda nuevamente cerrado en el perímetro correctivo afectado; R1 queda revalidado sobre la base corregida; la suspensión específica de R2 causada por DFL-007 queda levantada y R2 recupera su estado abierto previo.
+- **Estado:** **cerrada el 29/08/2026**.
+- **Evidencia de cierre:** `ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md`, PR #55 y ejecuciones de conformidad asociadas.
+- **Límite:** el cierre de DFL-007 no materializa `ConflictOperator` ni completa J2.3 para concurrencia en régimen `General`; esa deuda permanece dentro de DFL-001 y de la documentación normativa correspondiente.
 
 ## 3. Estado de FFL-B
 
@@ -70,19 +72,12 @@ Una publicación futura, una ampliación matemática o una nueva necesidad técn
 
 ## 4. Estado de FFL-C
 
-FFL-C se cierra el 20/08/2026 con evidencia reproducible de:
+FFL-C se cerró el 20/08/2026 con la evidencia correspondiente a su corte histórico. Las ampliaciones posteriores de la batería de conformidad no reescriben ese cierre, aunque el corpus vigente sea mayor.
 
-- conformidad **58/58** — 10 casos válidos y 48 inválidos;
-- pruebas rápidas de la interfaz de línea de órdenes **3/3**;
-- SEC-0 **3/3**;
-- caracterización de E006 **4/4**.
-
-Los 48 casos inválidos cubren directamente 37 de los 47 códigos efectivos. Los diez códigos restantes quedan clasificados por alcanzabilidad, ruta diagnóstica alternativa o preservación estructural. La ausencia de un caso inválido directo no se convierte en deuda artificial cuando la superficie vigente no permite producir honestamente ese caso.
-
-FFL-C no modifica el contrato diagnóstico ni acredita capacidades de ejecución material ausentes. FFL-D y FFL-E permanecen pendientes.
+FFL-C no modifica el contrato diagnóstico ni acredita capacidades de ejecución material ausentes. FFL-D permanece pendiente.
 
 ## 5. Regla de mantenimiento
 
-Toda deuda que afecte a un cierre ya declarado deberá incorporarse a este registro o a su documento sucesor. Sólo podrá retirarse mediante cierre acreditado o traslado expresamente justificado a otro bloque.
+Toda deuda que afecte a un cierre ya declarado deberá incorporarse a este registro o a su documento sucesor. Sólo podrá retirarse del conjunto de deuda viva mediante cierre acreditado o traslado expresamente justificado a otro bloque; cuando su efecto sobre la continuidad sea material, se conservará la trazabilidad del cierre.
 
 Las actualizaciones deberán expresar hechos, fundamento, evidencia, alcance y estado, sin presentar hipótesis o previsiones como capacidades ya existentes.
