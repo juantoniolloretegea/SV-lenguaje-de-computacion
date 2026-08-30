@@ -5,7 +5,7 @@
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
-**Última actualización:** 29 de agosto de 2026
+**Última actualización:** 30 de agosto de 2026
 
 ## 1. Objeto
 
@@ -83,13 +83,24 @@ bytes   = 378956
 SHA-256 = 95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3
 ```
 
-Paquete de despliegue:
+Paquete de despliegue inicialmente acreditado el 29 de agosto de 2026:
 
 ```text
 SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-29_FINAL_CONFORMIDAD.zip
 bytes   = 167503
 SHA-256 = 566200f97bfea86a0b7ce7c4919bac9d5367a67b8cba719eef1c573942d696f5
 ```
+
+Paquete reconciliado cargado el 30 de agosto de 2026 para el cierre del Playground:
+
+```text
+SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-30_FINAL_RECONCILIADO.zip
+archivos = 39
+bytes    = 168612
+SHA-256  = 11e53a6c9b836006d0f01eb8af69b3bfbedae29524078a40966fe87acf5c19db
+```
+
+El segundo paquete no invalida la identidad histórica del primero: documenta la reconciliación final del mismo cierre B2 y constituye el artefacto de despliegue vigente.
 
 El entorno público se sirve en `lenguaje-sv.itvia.online`. La distribución web entrega los activos estáticos; la compilación del texto `.svp` se ejecuta localmente en el navegador mediante `sv_wasm` y `sv_core`.
 
