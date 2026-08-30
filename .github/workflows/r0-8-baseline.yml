@@ -96,3 +96,5 @@ jobs:
             artifacts/r0-8/
             rust/target/release/sv-native
             rust/Cargo.lock
+
+# Disparo instrumental temporal: auditoría final PR #57 sobre un único head.

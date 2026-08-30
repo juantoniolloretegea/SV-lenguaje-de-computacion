@@ -167,3 +167,5 @@ jobs:
             rust/target/wasm32-wasip1/release/sv-native.wasm
             rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm
             rust/Cargo.lock
+
+# Disparo instrumental temporal: auditoría final PR #57 sobre un único head.

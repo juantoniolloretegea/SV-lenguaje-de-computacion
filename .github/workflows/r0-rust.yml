@@ -44,3 +44,5 @@ jobs:
 
       - name: Comprobar adaptador WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+
+# Disparo instrumental temporal: auditoría final PR #57 sobre un único head.
