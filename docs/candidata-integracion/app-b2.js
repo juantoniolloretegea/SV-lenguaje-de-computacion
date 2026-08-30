@@ -38,7 +38,7 @@ const I18N = {
     architectureText: "SVP-ES y SVP-EN se canonicalizan antes del análisis sintáctico y convergen en el mismo analizador, IR y semántica. Los identificadores, cadenas, comentarios y datos del usuario no se traducen.",
     wasmSize: "Tamaño WebAssembly",
     projection: "Proyección",
-    betaVersion: "Procedencia",
+    betaVersion: "Corte estable",
     assemblyTitle: "Ensamblaje multifuente",
     assemblyIntro: "Dos unidades .svp mantienen fronteras y perfiles fuente independientes. Se analizan bajo su perfil, convergen en representación canónica y se validan conjuntamente en una única IR. No se concatenan textos ni tokens entre archivos.",
     unitA: "Unidad A",
@@ -112,7 +112,7 @@ const I18N = {
     architectureText: "SVP-ES and SVP-EN are canonicalized before parsing and converge on the same parser, IR and semantics. User identifiers, strings, comments and data are not translated.",
     wasmSize: "WebAssembly size",
     projection: "Projection",
-    betaVersion: "Provenance",
+    betaVersion: "Stable cut",
     assemblyTitle: "Multi-source assembly",
     assemblyIntro: "Two .svp units retain independent boundaries and source profiles. They are analyzed under their own profile, converge on canonical representation and are validated together in one IR. Text or token streams are never concatenated across files.",
     unitA: "Unit A",
@@ -560,7 +560,7 @@ async function loadBuildInfo() {
   const response = await fetch("build-info.json", { cache: "no-store" });
   if (!response.ok) throw new Error(`build-info HTTP ${response.status}`);
   state.build = await response.json();
-  if (el.buildSourceCommit) el.buildSourceCommit.textContent = state.build.source_commit ?? "—";
+  if (el.buildSourceCommit) el.buildSourceCommit.textContent = state.build.stable_realization_commit ?? state.build.source_commit ?? "—";
   if (el.buildWasmSha) el.buildWasmSha.textContent = state.build.wasm_sha256 ?? "—";
   if (el.buildWasmBytes) el.buildWasmBytes.textContent = state.build.wasm_bytes != null ? `${state.build.wasm_bytes} bytes` : "—";
   if (el.buildBeta) el.buildBeta.textContent = state.build.beta ?? "B2";

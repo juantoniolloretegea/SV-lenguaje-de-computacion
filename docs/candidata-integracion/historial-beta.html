@@ -54,14 +54,16 @@
       <div class="doc-table-wrap"><table class="doc-table"><tbody>
         <tr><th>Implementación experimental</th><td>28/08/2026</td></tr>
         <tr><th>Incorporación técnica a la versión estable</th><td>29/08/2026</td></tr>
-        <tr><th>Estado</th><td><span class="status-badge">Incorporada técnicamente · cierre registral de Calidad pendiente</span></td></tr>
+        <tr><th>Estado</th><td><span class="status-badge">Incorporada · cierre interno de Calidad registrado · verificación independiente final pendiente</span></td></tr>
         <tr><th>Gramática</th><td>0.2</td></tr>
         <tr><th>IR</th><td>0.3</td></tr>
         <tr><th>Proyección</th><td>0.1.0</td></tr>
         <tr><th>Perfiles</th><td>SVP-ES · SVP-EN</td></tr>
         <tr><th>Versión experimental</th><td><code>fa43dc49adf9da8cff72d1a03c981c77d27ed93f</code></td></tr>
         <tr><th>Integración soberana B2</th><td><code>9b9c890a609839ad4b00fa71ded5e373ea354112</code></td></tr>
-        <tr><th>Corte estable publicado tras ajustes finales</th><td><code>e1d1d33af497e800adaa9a7dcc6ebc6f18b838b5</code></td></tr>
+        <tr><th>Corte estable publicado tras ajustes de presentación</th><td><code>e1d1d33af497e800adaa9a7dcc6ebc6f18b838b5</code></td></tr>
+        <tr><th>Corte de realización estable corregida</th><td><code>c1acf943a7a44ce81080881e59283de8a2019606</code></td></tr>
+        <tr><th>Corte de cierre interno de Calidad</th><td><code>8248ec5c2c90e39e5b3798205090facc402d2a88</code></td></tr>
         <tr><th>WASM</th><td>378956 bytes</td></tr>
         <tr><th>WASM SHA-256</th><td><code>95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3</code></td></tr>
         <tr><th>Cambio material</th><td>Perfiles fuente explícitos ES/EN y ensamblaje de dos unidades con perfiles independientes, canonicalización común y validación global posterior.</td></tr>
@@ -76,9 +78,10 @@
         <li>WebAssembly verificado por tamaño y huella.</li>
       </ul>
 
-      <h3>Deuda heredada no atribuible a B2</h3>
-      <p>La incorporación de B2 no resuelve la deuda gramatical heredada registrada como <code>DFL-007</code>. Esa deuda afecta al frente soberano del Lenguaje y mantiene suspendida la continuidad de R2 hasta su resolución y recertificación correspondiente.</p>
-      <p><a class="inline-link" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md">Abrir registro público de deuda viva</a></p>
+      <h3>Deuda heredada y cierre posterior</h3>
+      <p>La incorporación inicial de B2 no resolvía por sí sola la deuda gramatical heredada <code>DFL-007</code>. Posteriormente, DG-01, DG-02 y DG-03 fueron corregidos sobre la identidad canónica común en la realización estable <code>c1acf943a7a44ce81080881e59283de8a2019606</code>; el cierre interno de Calidad quedó registrado en <code>8248ec5c2c90e39e5b3798205090facc402d2a88</code>. R0 quedó nuevamente cerrado en el perímetro afectado, R1 fue revalidado y R2 recuperó su estado abierto previo.</p>
+      <p>El cierre de <code>DFL-007</code> no materializa <code>ConflictOperator</code> ni completa J2.3 para concurrencia en régimen <code>General</code>; esa deuda permanece separada.</p>
+      <p><a class="inline-link" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md">Abrir acta pública de cierre de conformidad</a> · <a class="inline-link" href="https://lectura-sv.itvia.online/lenguaje/?file=docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md">Abrir registro público de deuda viva</a></p>
     </section>
 
     <section class="doc-section">
@@ -102,7 +105,7 @@
 
     <section class="doc-section">
       <h2>5. Estado de continuidad</h2>
-      <p>Beta B2 queda como antecedente experimental de la realización estable incorporada el 29 de agosto de 2026. Las Betas posteriores deberán conservar identidad propia, evidencia reproducible, límites explícitos y relación trazable con cualquier incorporación estable futura.</p>
+      <p>Beta B2 queda como antecedente experimental de la realización estable incorporada el 29 de agosto de 2026. Tras el cierre correctivo de DFL-007, R0 permanece cerrado, R1 cerrado y revalidado, y R2 abierto dentro de su alcance propio. Las Betas posteriores deberán conservar identidad propia, evidencia reproducible, límites explícitos y relación trazable con cualquier incorporación estable futura.</p>
     </section>
   </main>
 </body>
