@@ -30,7 +30,7 @@ jobs:
             app-b2.js b2.css beta-history.html build-info.json caracteristicas.html
             diagnosticos.html diagnostics.html example-profile-sync-b2.js examples.json
             features.html historial-beta.html i18n-static-b2.js index.html info.css
-            origen-beta2.json programacion-metricas.html programming-metrics.html robots.txt
+            origen-beta2.json programacion-metricas.html programming-metrics.html
             security-b2.html seguridad-b2.html styles.css sv_wasm_b2.wasm.gz.b64
             workspace-b2.css workspace-b2.js
           )
@@ -48,12 +48,13 @@ jobs:
             Cross-Origin-Resource-Policy: same-origin
           EOF
           sed -i 's/^          //' "$OUT/_headers"
+          printf 'User-agent: *\nAllow: /\n' > "$OUT/robots.txt"
 
-          cat > "$OUT/DEPLOYMENT_SOURCE.txt" <<'EOF'
+          cat > "$OUT/DEPLOYMENT_SOURCE.txt" <<EOF
           SV Language public static deployment — reconciled B2 closure
           Repository: juantoniolloretegea/SV-lenguaje-de-computacion
           Final reconciliation: PR #57
-          Static reconciliation source commit: 1a4239ea82f70c2be8edc7310d48defab74b5286
+          Static content source commit: ${GITHUB_SHA}
           Stable realization commit: c1acf943a7a44ce81080881e59283de8a2019606
           Internal Quality closure commit: 8248ec5c2c90e39e5b3798205090facc402d2a88
           Quality register entry: RETP-2026-071
@@ -80,6 +81,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           import os, base64, gzip, hashlib, json, zipfile
+          from html.parser import HTMLParser
           src=Path(os.environ['RUNNER_TEMP'])/'package'
           b64=(src/'sv_wasm_b2.wasm.gz.b64').read_text(encoding='ascii')
           wasm=gzip.decompress(base64.b64decode(''.join(b64.split())))
@@ -90,6 +92,27 @@ jobs:
           assert info['wasm_sha256']=='95c7d1e0313567ef099c6e426a7fcee8ff4a5ac8adb670265f859f1bf03caab3'
           assert info['stable_realization_commit']=='c1acf943a7a44ce81080881e59283de8a2019606'
           assert info['quality_closure_commit']=='8248ec5c2c90e39e5b3798205090facc402d2a88'
+          assert info['quality_register_entry']=='RETP-2026-071'
+          assert not (src/'wasm-loader-b2.js').exists()
+          assert not (src/'wasm-b2').exists()
+          for p in src.rglob('*.json'):
+              json.loads(p.read_text(encoding='utf-8'))
+          class P(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.ids=[]; self.refs=[]
+              def handle_starttag(self, tag, attrs):
+                  d=dict(attrs)
+                  if 'id' in d: self.ids.append(d['id'])
+                  for key in ('href','src'):
+                      if key in d: self.refs.append(d[key])
+          for h in src.rglob('*.html'):
+              parser=P(); parser.feed(h.read_text(encoding='utf-8'))
+              assert len(parser.ids)==len(set(parser.ids)), f'id duplicado: {h}'
+              for ref in parser.refs:
+                  if not ref or ref.startswith(('#','http://','https://','mailto:','data:')):
+                      continue
+                  target=(h.parent/ref.split('?',1)[0].split('#',1)[0]).resolve()
+                  assert target.exists(), f'enlace local ausente: {h} -> {ref}'
           dst=Path(os.environ['RUNNER_TEMP'])/'out'/'SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-30_FINAL_RECONCILIADO.zip'
           stamp=(2026,8,30,0,0,0)
           with zipfile.ZipFile(dst,'w',compression=zipfile.ZIP_DEFLATED,compresslevel=9) as z:
@@ -99,6 +122,8 @@ jobs:
                   zi.external_attr=(0o100644 << 16)
                   z.writestr(zi,p.read_bytes(),compress_type=zipfile.ZIP_DEFLATED,compresslevel=9)
           PY
+
+          for js in "$OUT"/*.js; do node --check "$js" >/dev/null; done
 
           ZIP="$RUNNER_TEMP/out/SV_LENGUAJE_PRODUCCION_B2_CLOUDFLARE_2026-08-30_FINAL_RECONCILIADO.zip"
           unzip -t "$ZIP"
