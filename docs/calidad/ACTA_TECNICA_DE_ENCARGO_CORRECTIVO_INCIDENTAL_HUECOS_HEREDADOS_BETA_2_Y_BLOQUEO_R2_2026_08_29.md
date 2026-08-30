@@ -4,6 +4,8 @@
 **Estado:** deuda heredada confirmada; continuidad de R2 suspendida  
 **Corte de referencia:** `SV-lenguaje-de-computacion@f6b704e819e7d08589f00e9e3f9550deab21d0b1`
 
+> **Vigencia documental:** antecedente histórico. El encargo `DFL-007` fue cerrado y la suspensión aquí acordada quedó levantada por el [acta técnica de conformidad del cierre correctivo B2 y restauración de continuidad](./ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md), que constituye el estado vigente.
+
 ## 1. Objeto
 
 Durante la verificación de Beta 2 se amplió el contraste de conformidad más allá de la batería comprometida y se localizaron tres huecos de cierre gramatical en la realización Rust, junto con dos incidencias históricas de documentación e inventario.
