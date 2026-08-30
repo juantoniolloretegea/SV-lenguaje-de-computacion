@@ -13,11 +13,19 @@ El cierre no amplía el alcance de R0 o R1, no completa R2 y no modifica las Gar
 
 ## 2. Corte material objeto de cierre
 
-La corrección funcional y su distribución estable quedan integradas en el corte soberano:
+La corrección funcional y su distribución estable quedan integradas en el corte de realización:
 
 ```text
-main de realización = c1acf943a7a44ce81080881e59283de8a2019606
+realización estable = c1acf943a7a44ce81080881e59283de8a2019606
 ```
+
+El cierre documental y registral posterior queda constituido en un corte distinto:
+
+```text
+cierre interno de Calidad = 8248ec5c2c90e39e5b3798205090facc402d2a88
+```
+
+Ambos identificadores cumplen funciones distintas: el primero identifica la realización que produce el WebAssembly corregido; el segundo incorpora las reconciliaciones documentales y registrales posteriores. No se exige que una corrección exclusivamente documental altere o reconstruya el WebAssembly ya acreditado.
 
 La realización WebAssembly publicada queda identificada por:
 
@@ -120,7 +128,7 @@ La reconciliación documenta la forma ya adoptada por el corpus canónico y por 
 
 ### 6.2. VH-01 — vector adversarial histórico
 
-El archivo anteriormente denominado `tests/adversarial/deep_nested_query_valid.svp` deja de presentarse como programa válido de la gramática actual.
+El archivo anteriormente denominado `tests/adversarial/deep_nested_query_valid.svp` deja de presentarse como programa válido de la gramática actual en el corte documental de cierre.
 
 Su contenido histórico se conserva en:
 
@@ -128,7 +136,7 @@ Su contenido histórico se conserva en:
 tests/adversarial/historico/deep_nested_query_legacy_gramatica_0_1.svp
 ```
 
-con indicación expresa de que corresponde a Gramática 0.1 y no es válido bajo Gramática 0.2.
+con indicación expresa de que corresponde a Gramática 0.1 y no es válido bajo Gramática 0.2. Esta reclasificación es registral y posterior al corte de realización `c1acf943a7a44ce81080881e59283de8a2019606`; el vector no forma parte del módulo WebAssembly ni condiciona su identidad material.
 
 ## 7. Revalidación de R1
 
@@ -215,7 +223,11 @@ Tampoco acredita:
 
 Las demás deudas vivas mantienen su estatuto propio.
 
-## 12. Dictamen
+## 12. Registro de evolución
+
+El hito consolidado de este ciclo se registra como `RETP-2026-071` en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y en su CSV maestro. No se crea un asiento independiente para cada corrección de la misma operación material.
+
+## 13. Dictamen
 
 El perímetro correctivo abierto por DFL-007 queda cerrado. Los tres dominios gramaticales vuelven a coincidir con la Gramática canónica 0.2 en la realización Rust y WebAssembly, los dos perfiles fuente convergen sobre una única comprobación canónica, las discrepancias documentales asociadas quedan reconciliadas y R1 conserva sus propiedades técnicas sobre la base corregida.
 

@@ -33,5 +33,10 @@
   "integration_base": "79311c516288537e625f444f13826ed86227cca2",
   "wasm_source_head": "6c2fcc7f5a771eb0ce89acf959e2ad4ae1874750",
   "wasm_evidence_run": 33271320776,
-  "closed_domain_browser_probes": 6
+  "closed_domain_browser_probes": 6,
+  "source_commit_role": "certified_b2_functional_cut",
+  "public_distribution_commit_role": "SVcustos Beta B2 public distribution",
+  "stable_realization_commit": "c1acf943a7a44ce81080881e59283de8a2019606",
+  "quality_closure_commit": "8248ec5c2c90e39e5b3798205090facc402d2a88",
+  "quality_register_entry": "RETP-2026-071"
 }
