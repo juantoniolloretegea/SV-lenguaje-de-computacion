@@ -225,7 +225,7 @@ Las demás deudas vivas mantienen su estatuto propio.
 
 ## 12. Registro de evolución
 
-El hito consolidado de este ciclo se registra como `RETP-2026-071` en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.md` y en su CSV maestro. No se crea un asiento independiente para cada corrección de la misma operación material.
+El hito consolidado de este ciclo se registra como [`RETP-2026-071`](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md) en el registro de evolución técnica y en su CSV maestro. No se crea un asiento independiente para cada corrección de la misma operación material.
 
 ## 13. Dictamen
 
