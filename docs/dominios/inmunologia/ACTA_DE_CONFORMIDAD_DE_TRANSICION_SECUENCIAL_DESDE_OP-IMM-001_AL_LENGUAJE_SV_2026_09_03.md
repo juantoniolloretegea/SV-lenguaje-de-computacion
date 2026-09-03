@@ -43,7 +43,7 @@ El punto de relevo está formado por los siguientes documentos, todos en `docs/d
 Los tres documentos antecedentes establecen, respectivamente:
 
 - el dictamen `ENCAJA_CON_CAMBIOS`;
-- el resultado adversarial `PASA_CON_PRECISIONES_INCORPORADAS`, con cero refutaciones materiales;
+- el resultado adversarial `PASA_CON_PRECISIONES_INCORPORADAS`, sin refutaciones materiales del dictamen después de incorporar cinco precisiones normativas;
 - el contrato de sincronización que separa autonomía clínica, interfaz externa y actos materiales condicionados.
 
 ## 4. Decisión de ingeniería de procesos
