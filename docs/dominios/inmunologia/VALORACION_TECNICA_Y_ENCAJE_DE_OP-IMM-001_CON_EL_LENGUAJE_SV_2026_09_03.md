@@ -15,10 +15,12 @@ El corte leído permite demostrar una parte estructural: perfiles fuente explíc
 La integración correcta exige tres fronteras simultáneas:
 
 1. un perfil externo, versionado y verificable del dominio y del motor para los 27 parámetros, sus fuentes, reglas, terminologías, configuraciones y resultados;
-2. extensiones compatibles del Lenguaje sólo para invariantes que se demuestren transversales y no puedan mantenerse fuera de la IR sin pérdida normativa;
+2. extensiones compatibles del Lenguaje sólo para invariantes cuya equivalencia causal se demuestre en más de un universo y que no puedan mantenerse fuera de la IR sin pérdida normativa;
 3. las fases ya previstas de persistencia, confianza material e integración adversarial cuando el Director autorice su apertura.
 
 No se recomienda modificar ahora gramática, IR, catálogo diagnóstico, serialización ni código. El siguiente paso útil es un experimento sintético de integración estrictamente no clínica, precedido por decisiones arquitectónicas expresas y por una autorización separada.
+
+Esta secuencia condiciona la **integración técnica con el Lenguaje**, no la continuidad constitutiva del dominio. Inmunología puede seguir abriendo y agotando universos, raíces, parámetros, reglas, fuentes y consecuencias conforme a su propio método, sin cuota prefijada y sin esperar a R2. Cada universo conserva constitución, identidad y prueba propias: no existe herencia automática de requisitos, estados, reglas ni soluciones desde `OP-IMM-001`.
 
 ## 2. Cortes, método y límites
 
@@ -46,7 +48,9 @@ No se deduce capacidad desde el nombre de una fase ni desde una intención futur
 
 La célula mínima del Lenguaje SV es **`SV(9,3)`**: nueve posiciones sobre base ternaria. No existen células SV de cardinalidad 1, 2, 3 o 6 y queda prohibido fabricarlas, simularlas mediante relleno, duplicar parámetros para alcanzar nueve o mezclar agrupaciones clínicas distintas en una célula.
 
-Las cardinalidades `(6,1,3,2,6,9)` de G6 son cardinalidades de **agrupaciones clínicas externas**, no tamaños de célula. En el corte actual, sólo `M-MODIFIER-001`, con nueve parámetros, es candidato a una proyección directa sobre una célula `SV(9,3)`. Las otras cinco agrupaciones deben permanecer en un esquema de dominio externo hasta que una decisión arquitectónica transversal determine una representación legítima.
+Las cardinalidades `(6,1,3,2,6,9)` de G6 son cardinalidades de **agrupaciones clínicas externas**, no tamaños de célula. En el corte actual, sólo `M-MODIFIER-001`, con nueve parámetros, puede someterse a evaluación como candidato a una posible proyección sobre una célula `SV(9,3)`. Las otras cinco agrupaciones deben permanecer en un esquema de dominio externo hasta que una decisión arquitectónica sustentada por contraste entre universos determine una representación legítima.
+
+La cardinalidad nueve es necesaria, pero no suficiente. `M-MODIFIER-001` no queda constituida como célula por esta valoración: antes tendrían que demostrarse la correspondencia exacta de sus nueve posiciones, la partición ternaria disjunta y exhaustiva de cada observable admitido, el codominio, la semántica de salida, la operación y la suficiencia relativa a esa operación.
 
 ## 3. Índice probatorio
 
@@ -107,7 +111,7 @@ Estas carencias no demuestran un fallo material del ensamblador multifuente. Dem
 
 | Requisito_ID | estado | capacidad actual | localizador | prueba | límite | componente responsable | dependencia | horizonte | siguiente decisión |
 |---|---|---|---|---|---|---|---|---|---|
-| `REQ-IMM-LSV-001` | `EXTENSION_COMPATIBLE_NECESARIA` | `IrProgram` conserva fichero, hash fuente, objetos y operaciones; no conserva el perfil fuente ni la tupla completa | IMM-TECH; LSV-IR | inspección de `IrProgram` | faltan finalidad, reglas, configuración, fuentes, dependencias, terminologías, jurisdicción, instante y estado humano | dominio + motor; Lenguaje si el invariante resulta transversal | decisión sobre manifiesto de ejecución | desarrollo próximo | especificar primero un manifiesto externo versionado y decidir después qué campos deben entrar en IR |
+| `REQ-IMM-LSV-001` | `EXTENSION_COMPATIBLE_NECESARIA` | `IrProgram` conserva fichero, hash fuente, objetos y operaciones; no conserva el perfil fuente ni la tupla completa | IMM-TECH; LSV-IR | inspección de `IrProgram` | faltan finalidad, reglas, configuración, fuentes, dependencias, terminologías, jurisdicción, instante y estado humano | dominio + motor; Lenguaje sólo si se demuestra equivalencia causal en más de un universo | decisión sobre manifiesto de ejecución | desarrollo próximo | especificar primero un manifiesto externo versionado y decidir después qué campos deben entrar en IR |
 | `REQ-IMM-LSV-002` | `REPRESENTABLE_HOY_NO_INTEGRADO` | perfiles explícitos conservan los bytes UTF-8 originales y calculan `source_sha256` sin normalización Unicode | LSV-PROFILES; LSV-IR | conformidad de perfiles y campo `source_sha256` | la normalización NFC del dato clínico, si se usa, debe ser otra transformación versionada y preservar original y hash | Lenguaje para `.svp`; motor/dominio para carga clínica | perfil OP de entrada | ahora | probar en OP diferencias de byte, Unicode y perfil sin alterar el fuente |
 | `REQ-IMM-LSV-003` | `EXTENSION_COMPATIBLE_NECESARIA` | existe serialización canónica Python de IR y paridad Rust nativo/WASM de una proyección | LSV-R0; LSV-IR | corpus diferencial y paridad de destinos | no existe salida clínica OP canónica; tampoco se acreditan en Rust totalidad/unicidad de `OutputSemantics` ni rechazo universal de colisiones JSON | motor + Lenguaje | identidad completa y serializador OP | desarrollo próximo | fijar el objeto exacto cuya igualdad se exige, cerrar sus invariantes y definir su serializador canónico |
 | `REQ-IMM-LSV-004` | `DISPONIBLE_HOY_DEMOSTRADO` | Python canoniza la IR completa de referencia; Rust nativo y WASM igualan su proyección diferencial | LSV-R0 | pruebas R0-7/R0-8 y código de ambos serializadores | `equivalence_json` no debe presentarse como serializador canónico completo de Rust | Lenguaje | ninguna | ahora | conservar separados ambos alcances en toda evidencia OP |
@@ -131,7 +135,7 @@ Estas carencias no demuestran un fallo material del ensamblador multifuente. Dem
 | `REQ-IMM-LSV-022` | `FASE_FUTURA_YA_PREVISTA` | R1 separa permiso, intento y efecto; `SEC.0-M` prevé reanudación e incertidumbre | LSV-R1; LSV-SEC; LSV-R2 | contratos abstractos | faltan idempotencia persistente y reconciliación de efecto externo | R2 + motor + conector | 010, 011 y 018 | R2/R4 | definir claves de idempotencia y estados de reconciliación sin afirmar exactamente-una-vez |
 | `REQ-IMM-LSV-023` | `DISPONIBLE_HOY_DEMOSTRADO` | la asignación por capas está fijada en esta valoración y concuerda con SEC/R2 | LSV-SEC; LSV-R2; sección 4 | contraste de responsabilidades | asignar no equivale a realizar | Lenguaje: invariantes; motor: orquestación; almacenamiento/SO: materialidad; organización: gobierno | ninguna | ahora | conservar esta separación en cada requisito futuro |
 | `REQ-IMM-LSV-024` | `REPRESENTABLE_HOY_NO_INTEGRADO` | SEC fija propiedades mínimas abstractas sin prescribir base de datos o sistema operativo | LSV-SEC | contratos M/X/T/D | aún no existe perfil mínimo OP ni pruebas materiales | Lenguaje para invariantes; infraestructura para tecnología | aplicabilidad OP | ahora | seleccionar sólo propiedades causales al universo y posponer elecciones tecnológicas |
-| `REQ-IMM-LSV-025` | `EXTENSION_COMPATIBLE_NECESARIA` | cadenas y objetos declarativos pueden conservar identificadores opacos | LSV-IR; IMM-TECH | campos abiertos y hashes fuente | no hay tipo vigente que exija conjuntamente sistema, versión, código, URI, jurisdicción, vigencia y hash | dominio + motor; Lenguaje si se vuelve invariante transversal | decisión 026 | desarrollo próximo | crear esquema externo cerrado y validar presencia, formato y hash |
+| `REQ-IMM-LSV-025` | `EXTENSION_COMPATIBLE_NECESARIA` | cadenas y objetos declarativos pueden conservar identificadores opacos | LSV-IR; IMM-TECH | campos abiertos y hashes fuente | no hay tipo vigente que exija conjuntamente sistema, versión, código, URI, jurisdicción, vigencia y hash | dominio + motor; Lenguaje sólo si se demuestra equivalencia causal en más de un universo | decisión 026 | desarrollo próximo | crear esquema externo cerrado y validar presencia, formato y hash |
 | `REQ-IMM-LSV-026` | `DECISION_ARQUITECTONICA_REQUERIDA` | IR admite nombres/referencias, pero no gobierna metadatos clínicos completos | LSV-IR; LSV-FFLE; IMM-G10 | inspección estructural | incorporar detalles de un único dominio al núcleo universal sería prematuro | Director + dominio + Lenguaje | al menos otro universo y análisis de pérdida | antes de cambiar IR | mantener en perfil/conector todo dato no requerido por la semántica del Lenguaje |
 | `REQ-IMM-LSV-027` | `RESPONSABILIDAD_DE_OTRO_COMPONENTE` | FHIR puede transportar procedencia y auditoría como referencias externas | IMM-TECH | encaje de interfaces, no implementación | `Provenance` y `AuditEvent` no prueban verdad clínica, autoridad ni ejecución material | motor/conector + organización | perfiles FHIR autorizados | desarrollo próximo | mapear sin equivalencias semánticas implícitas y conservar identidad/hashes |
 | `REQ-IMM-LSV-028` | `RESPONSABILIDAD_DE_OTRO_COMPONENTE` | los recursos FHIR pueden referenciarse desde el manifiesto del dominio | IMM-TECH; LSV-IR | representabilidad de identificadores opacos | el núcleo no debe interpretar automáticamente recursos clínicos | dominio + conector FHIR | perfiles, versiones y jurisdicción | desarrollo próximo | definir cardinalidad, versión, propósito y hash por tipo de referencia |
@@ -146,10 +150,10 @@ Estas carencias no demuestran un fallo material del ensamblador multifuente. Dem
 | `REQ-IMM-LSV-037` | `RESPONSABILIDAD_DE_OTRO_COMPONENTE` | la identidad por hashes permite minimizar contenido sin perder toda ligadura | IMM-TECH; LSV-SEC | diseño de referencias | retención, base jurídica y seudonimización son políticas del producto/organización; el hash puede seguir siendo dato personal | organización + infraestructura + dominio | evaluación de protección de datos | antes de datos reales | fijar plazos, bases, borrado, separación de claves y evidencia mínima por finalidad |
 | `REQ-IMM-LSV-038` | `RESPONSABILIDAD_DE_OTRO_COMPONENTE` | el Lenguaje aporta conformidad técnica parcial, nunca autorización clínica | IMM-REQ; LSV-README | prohibiciones y estados de garantía | retirar la prohibición exige además validación clínica, seguridad, privacidad, calidad, infraestructura y autorización | organización/fabricante/promotor/autoridades | cierre de todos los controles aplicables | revisión futura | mantener `OP-IMM-001_USO_CON_DATOS_REALES = PROHIBIDO` hasta decisión formal externa |
 | `REQ-IMM-LSV-039` | `REPRESENTABLE_HOY_NO_INTEGRADO` | puede diseñarse un corpus sintético de 27 parámetros y una proyección estructural limitada | IMM-G6; IMM-G8; LSV-IR | propuesta de sección 7 | no acredita resultado clínico, persistencia, criticidad ni aptitud; requiere autorización antes de ejecutar | dominio + Lenguaje + motor | decisiones de sección 8 | siguiente acto autorizado | aprobar primero manifiesto, oráculos, límites y casos negativos |
-| `REQ-IMM-LSV-040` | `REPRESENTABLE_HOY_NO_INTEGRADO` | perfiles, hashes, declaraciones de captura/admisibilidad/ternarización, `Tri` y una célula `SV(9,3)` pueden ensayarse sin cambiar gramática/IR | LSV-PROFILES; LSV-IR; IMM-G6 | corpus sintético propuesto | las otras cinco agrupaciones no se convierten en celdas; parámetros y trazas quedan en esquema externo | dominio + Lenguaje + motor | mapa estable de IDs | ahora, tras autorización | probar sólo la proyección estructural explícitamente declarada |
+| `REQ-IMM-LSV-040` | `REPRESENTABLE_HOY_NO_INTEGRADO` | perfiles, hashes y declaraciones de captura/admisibilidad/ternarización pueden ensayarse con `Tri` sin cambiar gramática/IR | LSV-PROFILES; LSV-IR; IMM-G6 | corpus sintético propuesto | las cinco agrupaciones menores no son celdas y la agrupación de nueve aún no ha demostrado constitución celular; parámetros y trazas quedan en esquema externo | dominio + Lenguaje + motor | mapa estable de IDs | ahora, tras autorización | probar la estructura externa y, separadamente, la candidatura celular de `M-MODIFIER-001` |
 | `REQ-IMM-LSV-041` | `DISPONIBLE_HOY_DEMOSTRADO` | están identificadas las necesidades que exceden el corte: identidad completa, resultados/trazas tipados, testigo de pérdida, salida canónica total e invariantes pendientes de codominio, salida y referencias | LSV-IR; LSV-FFLE; LSV-DEBT | contraste de campos, validadores y realizaciones | identificar una necesidad no autoriza el cambio; el primer recurso debe ser un perfil externo | Director + Lenguaje | evidencia de más universos y decisión 026 | antes de cualquier cambio | no modificar gramática; valorar futura IR/serialización sólo si el perfil externo es insuficiente y cerrar por separado la deuda nuclear aplicable |
 | `REQ-IMM-LSV-042` | `DISPONIBLE_HOY_DEMOSTRADO` | se separan perfiles/manifiestos/corpus reversibles de tipos IR, semántica, geometría y fases difíciles de revertir | IMM-G10; LSV-FFLE | análisis de alternativas | la reversibilidad operativa depende después de persistencia y migraciones | Director + responsables de cada capa | inventario de decisiones | ahora | autorizar por separado cada decisión difícil y registrar su razón |
-| `REQ-IMM-LSV-043` | `DISPONIBLE_HOY_DEMOSTRADO` | el orden técnico queda definido sin fechas | secciones 7 y 8 | dependencias explícitas | no es compromiso de producción | Director + dominio + Lenguaje + motor | decisiones previas de cada etapa | incremental | seguir el orden: decisiones, perfil externo, corpus, prueba estructural, evaluación transversal, fases materiales |
+| `REQ-IMM-LSV-043` | `DISPONIBLE_HOY_DEMOSTRADO` | el orden técnico queda definido sin fechas | secciones 7 y 8 | dependencias explícitas | no es compromiso de producción | Director + dominio + Lenguaje + motor | decisiones previas de cada etapa | incremental | seguir el orden: decisiones, perfil externo, corpus, prueba estructural, contraste inter-universos, fases materiales |
 | `REQ-IMM-LSV-044` | `DISPONIBLE_HOY_DEMOSTRADO` | existen puertas de revisión que permiten crear más universos sin congelar una infraestructura universal | IMM-REQ; LSV-FFLE; sección 9 | disparadores explícitos | las puertas no permiten ocultar deuda ni usar capacidades no probadas | Director + gobierno técnico | nuevos universos, revisión por pares y evidencia empírica | incremental/universal | revisar al segundo universo, ante pérdida representacional y antes de datos reales o cambio de IR |
 
 ### 5.1 Recuento y ausencia de ambigüedad
@@ -169,11 +173,13 @@ Estas carencias no demuestran un fallo material del ensamblador multifuente. Dem
 
 La ausencia de filas `NO_ADMISIBLE` no legitima cualquier implementación. Sí serían no admisibles las soluciones prohibidas en las secciones 2.3 y 8. La matriz clasifica necesidades; no avala medios incompatibles para satisfacerlas.
 
+En los requisitos de naturaleza analítica —asignación de responsabilidades, identificación de límites, orden y puertas de revisión— `DISPONIBLE_HOY_DEMOSTRADO` significa que la respuesta puede obtenerse de evidencia ya existente en el corte; no significa que exista una nueva capacidad ejecutable ni que esta valoración la haya incorporado al Lenguaje.
+
 ## 6. Respuestas a las diez preguntas de bisturí
 
 ### 6.1 ¿Puede la IR 0.3 representar los 27 parámetros, sus fuentes, su resultado ternario y la pérdida de distinción sin crear tipos nuevos?
 
-**No de forma fiel.** Puede enumerar 27 nombres opacos en `Domain.parameters`, usar identificadores numéricos en captura/admisibilidad y representar vectores `Tri`. No puede expresar de manera tipada la identidad y propiedad de cada parámetro, sus fuentes, transformaciones, `ParameterResult` ni el testigo de la distinción perdida. Las seis cardinalidades de G6 no son seis tamaños de célula. Sólo el grupo de nueve puede proyectarse directamente sobre una célula `SV(9,3)`.
+**No de forma fiel.** Puede enumerar 27 nombres opacos en `Domain.parameters`, usar identificadores numéricos en captura/admisibilidad y representar vectores `Tri`. No puede expresar de manera tipada la identidad y propiedad de cada parámetro, sus fuentes, transformaciones, `ParameterResult` ni el testigo de la distinción perdida. Las seis cardinalidades de G6 no son seis tamaños de célula. Sólo el grupo de nueve puede someterse a una prueba de constitución como candidato a `SV(9,3)`; la cardinalidad no autoriza su proyección.
 
 ### 6.2 ¿Puede representar la ejecución técnicamente inválida fuera de `Tri` con el detalle requerido?
 
@@ -197,7 +203,7 @@ OP puede aportar casos para estado autoritativo, dependencias persistentes, disc
 
 ### 6.7 ¿FHIR, DICOM y las terminologías deben tratarse como perfiles externos, dependencias persistentes, tipos de IR o combinaciones?
 
-FHIR y las terminologías deben comenzar como perfiles externos versionados y, cuando sean causalmente relevantes, como dependencias persistentes del manifiesto con sistema, versión, jurisdicción y hash. Sólo un invariante semántico transversal demostrado en varios universos justificaría un tipo de IR. DICOM no es aplicable al alcance actual; si aparece, debe empezar como referencia externa opaca verificable por UID/hash, no como semántica del núcleo.
+FHIR y las terminologías deben comenzar como perfiles externos versionados y, cuando sean causalmente relevantes, como dependencias persistentes del manifiesto con sistema, versión, jurisdicción y hash. Sólo un invariante semántico causalmente equivalente demostrado en varios universos justificaría un tipo de IR. DICOM no es aplicable al alcance actual; si aparece, debe empezar como referencia externa opaca verificable por UID/hash, no como semántica del núcleo.
 
 ### 6.8 ¿Dónde reside la frontera exacta entre Lenguaje SV y SV-motor?
 
@@ -214,11 +220,11 @@ Ningún requisito de resultado es en sí incompatible, pero varias realizaciones
 - convertir FHIR, DICOM o un registro de auditoría en verdad clínica automática;
 - cargar persistencia, regulación, validación clínica o gobierno organizativo sobre el núcleo;
 - presentar como salida canónica completa la proyección diferencial Rust;
-- ejecutar R2 o cambiar IR antes de autorización y evidencia transversal.
+- ejecutar R2 o cambiar IR antes de autorización y evidencia comparada entre universos.
 
 ### 6.10 ¿Cuál es la integración mínima útil demostrable ahora sin afirmar aptitud clínica?
 
-La definida en la sección 7: manifiesto externo exacto, datos sintéticos, 27 IDs estables, proyección estructural limitada, una única célula real `SV(9,3)` para `M-MODIFIER-001`, cinco agrupaciones externas, casos negativos y comparación separada de Python y Rust/WASM. Su salida sólo puede titularse **evidencia estructural no clínica**.
+La definida en la sección 7: manifiesto externo exacto, datos sintéticos, 27 IDs estables, proyección estructural limitada, prueba previa de constitución de `M-MODIFIER-001` como candidato a `SV(9,3)`, cinco agrupaciones externas, casos negativos y comparación separada de Python y Rust/WASM. Su salida sólo puede titularse **evidencia estructural no clínica**.
 
 ## 7. Propuesta mínima de integración sintética
 
@@ -229,7 +235,7 @@ Esta propuesta no constituye autorización de ejecución.
 3. Usar exclusivamente datos sintéticos, sin identificadores ni datos derivados de pacientes.
 4. Fijar un mapa estable y reversible de los 27 identificadores de dominio a identificadores técnicos, sin convertir el número técnico en significado clínico.
 5. Declarar en `.svp`, cuando pasen la gramática y bienformación vigentes, sólo captura, admisibilidad, ternarización, referencias de dominio y operaciones estructurales ya existentes.
-6. Proyectar **únicamente** `M-MODIFIER-001` sobre una célula `SV(9,3)`. Mantener las agrupaciones de 6, 1, 3, 2 y 6 parámetros en el esquema externo; no son células.
+6. Someter `M-MODIFIER-001` a una prueba previa de constitución de célula. Sólo si demuestra correspondencia posicional, particiones, codominio, semántica de salida, operación y suficiencia podrá proyectarse sobre `SV(9,3)`. Mantener las agrupaciones de 6, 1, 3, 2 y 6 parámetros en el esquema externo; no son células.
 7. Mantener `Frame.criticalities = []`. La criticidad contextual vive en el perfil externo hasta que exista productor formal autorizado.
 8. Construir casos positivos y negativos, al menos:
    - misma identidad produce mismos bytes dentro de cada serializador declarado;
@@ -250,7 +256,7 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 
 | Decisión | Recomendación técnica | Motivo |
 |---|---|---|
-| Representación de las seis agrupaciones G6 | conservar cinco agrupaciones en esquema externo y proyectar sólo el grupo de nueve a `SV(9,3)` | preserva la célula mínima y evita relleno o mezcla semántica |
+| Representación de las seis agrupaciones G6 | conservar las seis agrupaciones en esquema externo; admitir el grupo de nueve sólo como candidato a `SV(9,3)` y exigir constitución semántica antes de proyectarlo | preserva la célula mínima y evita identificar cardinalidad con célula, relleno o mezcla semántica |
 | Identidad, `ParameterResult` y traza | comenzar con perfil externo completo | permite obtener evidencia sin congelar IR desde un único universo |
 | Promoción de campos a IR | decidir sólo ante pérdida normativa demostrada y repetición en más universos | evita particularizar el Lenguaje para Inmunología |
 | Criticidad | mantenerla fuera de `Frame` y sin productor implícito | DFL-006 sigue viva y la realización rechaza criticidades no vacías |
@@ -274,11 +280,11 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 
 ### 9.2 Puertas de revisión
 
-- **Segundo universo constituido:** comparar invariantes antes de universalizar tipos o metadatos.
+- **Segundo universo constituido:** comparar requisitos sin herencia automática; sólo una coincidencia demostrada y causalmente equivalente puede proponerse como candidata común antes de universalizar tipos o metadatos.
 - **Pérdida representacional demostrada:** decidir si se resuelve en perfil, motor o IR.
 - **Primer efecto externo:** revisar autoridad, idempotencia, incertidumbre y recuperación.
 - **Apertura autorizada de R2:** incorporar los casos OP de persistencia sin alterar su contrato por conveniencia de dominio.
-- **Antes de cambiar gramática o IR:** adversarial transversal y regresión completa del Lenguaje.
+- **Antes de cambiar gramática o IR:** adversarial inter-universos y regresión completa del Lenguaje.
 - **Antes de usar datos reales:** cierre independiente de seguridad, privacidad, calidad, infraestructura, validación clínica y autorización.
 - **Revisión por pares y pluralidad suficiente de universos:** revisión universal de interoperabilidad y arquitectura.
 
@@ -308,7 +314,7 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 | Carencia | Situación | Responsable primario | Disparador |
 |---|---|---|---|
 | identidad completa de ejecución | no existe en un objeto vigente | dominio + motor; posible extensión futura del Lenguaje | perfil externo y contraste con más universos |
-| resultado y traza tipados por parámetro | no existen en IR 0.3 | dominio + motor; Lenguaje si es transversal | experimento sintético y análisis de pérdida |
+| resultado y traza tipados por parámetro | no existen en IR 0.3 | dominio + motor; Lenguaje sólo si se demuestra equivalencia causal en más de un universo | experimento sintético y análisis de pérdida |
 | testigo de pérdida de distinción | previsto por FFL-E, no realizado | Lenguaje | futura autorización de realización |
 | productor de criticidad | ausente; DFL-006 | dominio + Lenguaje | decisión arquitectónica específica |
 | unicidad de codominio y totalidad/unicidad de salida | no acreditadas por la bienformación Rust vigente | Lenguaje | cierre nuclear específico, separado de R2 |
@@ -323,8 +329,8 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 
 El veredicto es **`ENCAJA_CON_CAMBIOS`** con el siguiente alcance exacto:
 
-- **encaja hoy** una proyección estructural, sintética y no clínica sobre capacidades ya existentes;
-- **requiere cambios compatibles** en perfiles/manifiestos del dominio y del motor, y posiblemente en una futura IR sólo tras evidencia transversal;
+- **encaja hoy** la preparación de una proyección estructural, sintética y no clínica sobre capacidades ya existentes; la constitución de `M-MODIFIER-001` como célula sigue pendiente de prueba;
+- **requiere cambios compatibles** en perfiles/manifiestos del dominio y del motor, y posiblemente en una futura IR sólo tras evidencia comparada entre universos;
 - **requiere fases futuras ya previstas** para persistencia, recuperación, confianza material e integración adversarial;
 - **requiere otros componentes** para interoperabilidad clínica, infraestructura, privacidad, calidad, regulación y validación;
 - **no autoriza** cambios, experimento, apertura de fase, despliegue ni uso con datos reales.
