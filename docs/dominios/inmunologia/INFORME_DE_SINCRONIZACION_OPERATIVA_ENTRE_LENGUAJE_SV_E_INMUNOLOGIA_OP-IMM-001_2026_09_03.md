@@ -65,7 +65,7 @@ Para constituir esa candidatura deben demostrarse, como mínimo, nueve posicione
 
 ### 4.4 Procedencia y reproducción
 
-Toda fuente, regla, configuración, terminología y transformación causalmente relevante debe poder identificarse mediante sistema, versión, jurisdicción o ámbito cuando proceda, vigencia y huella verificable. La misma identidad de ejecución, con las mismas entradas, fuentes, reglas y versiones, debe producir la misma salida o un fallo explícito.
+Toda fuente, regla, configuración, terminología y transformación causalmente relevante debe poder identificarse mediante sistema, versión, jurisdicción o ámbito cuando proceda, vigencia y huella verificable. **Toda ejecución válida con identidad completa idéntica debe producir exactamente los mismos bytes de salida canónica. Un fallo técnico no es una salida alternativa: determina que no existe ejecución clínica válida y debe generar exclusivamente el registro técnico estructurado correspondiente.**
 
 ## 5. Paquete de entrega de Inmunología por universo
 
