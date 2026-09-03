@@ -65,17 +65,19 @@ Los resultados posibles son:
 | `ADV-IMM-20` | ¿Las diez preguntas “de bisturí” quedan sustituidas por formulaciones genéricas? | existen diez respuestas expresas con límites, responsables y siguiente evidencia | `PASA` | la decisión puede reconstruirse |
 | `ADV-IMM-21` | ¿`ENCAJA_CON_CAMBIOS` equivale a ordenar cambios inmediatos del Lenguaje? | prioriza perfiles y manifiestos externos; una modificación futura de IR requiere pérdida normativa y evidencia inter-universos | `PASA` | el Lenguaje no se modifica por anticipación |
 | `ADV-IMM-22` | ¿La conclusión contradice la autonomía clínica de Inmunología? | mantiene en el dominio finalidad, parámetros, fuentes, reglas, criticidad y significado | `PASA` | la sincronización no absorbe la autoridad del dominio |
+| `ADV-IMM-23` | ¿El contrato de reproducibilidad admite el fallo técnico como salida alternativa ante una identidad completa idéntica? | la formulación inicial «misma salida o un fallo explícito» permitía esa lectura; se sustituye por identidad de bytes para toda ejecución válida y se separa el registro técnico de una ejecución clínica inexistente | `PASA_CON_PRECISION` | determinismo de la ejecución válida y fallo técnico quedan normativamente disjuntos |
 
 ## 5. Precisiones incorporadas
 
-La adversarial no encontró una refutación material. Encontró cuatro lecturas que debían cerrarse para impedir conformidades aparentes:
+La adversarial no encontró una refutación material del dictamen. Encontró cinco lecturas que debían cerrarse para impedir conformidades aparentes:
 
 1. **cardinalidad no es célula:** `M-MODIFIER-001` sólo es candidata a `SV(9,3)` hasta demostrar correspondencia posicional, particiones ternarias disjuntas y exhaustivas, codominio, semántica de salida, operación y suficiencia relativa a ella;
 2. **no hay herencia automática:** una coincidencia entre universos sólo puede elevarse a candidata común si su equivalencia causal se demuestra;
 3. **Inmunología no queda bloqueada:** puede continuar su constitución autónoma sin esperar a R2 ni a una extensión del Lenguaje;
-4. **disponibilidad analítica no es realización:** poder responder un requisito mediante evidencia existente no añade capacidad al ejecutable.
+4. **disponibilidad analítica no es realización:** poder responder un requisito mediante evidencia existente no añade capacidad al ejecutable;
+5. **fallo técnico no es salida alternativa:** una ejecución válida con identidad completa idéntica debe producir exactamente los mismos bytes de salida canónica; el fallo determina inexistencia de ejecución clínica válida y sólo exige su registro técnico estructurado.
 
-Estas cuatro precisiones han quedado incorporadas a la valoración soberana. No requieren modificar el dictamen.
+Estas cinco precisiones han quedado incorporadas al corpus soberano. No requieren modificar el dictamen.
 
 ## 6. Continuidad y conformidad resultantes
 
@@ -98,7 +100,9 @@ No puede rebajarse a `NO_ENCAJA`, porque el Lenguaje ya ofrece estructura ternar
 
 ```text
 ADVERSARIAL_VALORACION_OP_IMM_001 = PASA_CON_PRECISIONES_INCORPORADAS
-REFUTACIONES_MATERIALES = 0
+REFUTACIONES_MATERIALES_DEL_DICTAMEN = 0
+PRECISIONES_NORMATIVAS_INCORPORADAS = 5
+PRECISIONES_PENDIENTES = 0
 DICTAMEN_SOBERANO = ENCAJA_CON_CAMBIOS
 CELULA_MINIMA = SV(9,3)
 M_MODIFIER_001_COMO_CELULA = CANDIDATA_PENDIENTE_DE_CONSTITUCION
