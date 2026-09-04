@@ -42,7 +42,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Núcleo Rust | **`sv_core`** | Implementación compartida por los destinos nativo y WebAssembly. |
 | Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>. |
 | Conformidad vigente | **80/80** | 12 casos válidos y 68 inválidos, incluido N0-01. |
-| `sv_core` | **213/213** | Espacio de trabajo Rust sobre la base correctiva más tres pruebas N0-01. |
+| `sv_core` | **210/210 + N0-01 3/3** | Suite interna y pruebas de integración específicas de unicidad de `Codomain`. |
 | Dominios cerrados | **5/5 + 6/6 navegador** | Regresiones permanentes y sondas DG-01/02/03 en SVP-ES y SVP-EN. |
 | `sv_wasm` | **2/2** | Adaptador WebAssembly sobre el mismo núcleo. |
 | Documentación ejecutable `sv_core` | **17/17** | Pruebas de documentación Rust. |

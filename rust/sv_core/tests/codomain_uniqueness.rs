@@ -1,3 +1,5 @@
+//! Oráculos específicos de N0-01, separados del recuento de la suite interna de `sv_core`.
+
 use sv_core::{
     compile_svp_assembly, compile_svp_profile, CompileError, SourceProfile, SourceUnit,
 };
