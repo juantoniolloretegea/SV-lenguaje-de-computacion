@@ -5,7 +5,8 @@
 **Rama de trabajo:** `valoracion-op-imm-001-20260903`  
 **Naturaleza:** acta de conformidad arquitectónica y de continuidad operativa  
 **Estatuto:** punto de relevo entre el caso director inmunológico y el siguiente frente del Lenguaje  
-**Dictamen:** `CONFORME_PARA_TRANSICION_SECUENCIAL`
+**Dictamen:** `CONFORME_PARA_TRANSICION_SECUENCIAL`  
+**Corrección constitutiva incorporada:** 04-09-2026; exhaustividad corregida, secuencia serial precisada y segundo falsador designado.
 
 ## 1. Objeto
 
@@ -25,11 +26,11 @@ El acta no constituye cierre del dominio de Inmunología, modificación del Leng
 | Objeto | Corte | Estatuto en esta transición |
 |---|---|---|
 | Lenguaje SV soberano | `main@3c122d1f79a1fcf7f9c3f02db5e7534b4efb7c2d` | base estable leída; no modificada por esta acta |
-| Rama documental de trabajo | `valoracion-op-imm-001-20260903@edf4648f2405a1b99391b796b0c98b0befb192cd` más la presente acta | punto de continuidad y decisión |
+| Rama documental de trabajo | `valoracion-op-imm-001-20260903@691d79b6246c4e63d3052a48b69606ef232c870c` antes de la corrección de 04-09-2026 | punto documental auditado; la identidad final se verifica de nuevo antes de fusionar |
 | Inmunología | `SVperitus-dataset/dominio-inmunologia@3bea6b714be3bd1330e6ca6bbbc228b0eb9c065d` | corte congelado para pausa controlada |
 | Playground | identidad ejecutable anterior, no modificada por este expediente | estable e inalterado |
 
-La comprobación aplicable al `head edf4648f…` es la ejecución **`Conformidad SVP` número `33753014156`**, concluida con `success`. Esta evidencia confirma que los tres documentos anteriores no alteraron la conformidad comprobada por el flujo; no acredita nuevas capacidades clínicas ni un nuevo cierre nuclear.
+La comprobación pública aplicable al `head 691d79b…` anterior a esta corrección es la ejecución **`Conformidad SVP` `33755720470`** (`run_number = 261`), concluida con `success`. Es una comprobación documental: no acredita nuevas capacidades clínicas ni cierre nuclear. El `head` resultante de la corrección deberá superar de nuevo el flujo antes de cualquier fusión.
 
 ## 3. Corpus documental conforme
 
@@ -40,10 +41,10 @@ El punto de relevo está formado por los siguientes documentos, todos en `docs/d
 3. `INFORME_DE_SINCRONIZACION_OPERATIVA_ENTRE_LENGUAJE_SV_E_INMUNOLOGIA_OP-IMM-001_2026_09_03.md`;
 4. la presente acta de conformidad de transición.
 
-Los tres documentos antecedentes establecen, respectivamente:
+Los tres documentos antecedentes, ya corregidos para reconciliar las familias `REQ-IMM-SV-001..015` y `REQ-IMM-LSV-001..044`, establecen, respectivamente:
 
 - el dictamen `ENCAJA_CON_CAMBIOS`;
-- el resultado adversarial `PASA_CON_PRECISIONES_INCORPORADAS`, sin refutaciones materiales del dictamen después de incorporar cinco precisiones normativas;
+- el resultado adversarial corregido `PASA_CON_CORRECCIONES_CONSTITUTIVAS_INCORPORADAS`: el dictamen `ENCAJA_CON_CAMBIOS` se mantiene, pero se retiran la exhaustividad autorreferencial y otras formulaciones auxiliares refutadas;
 - el contrato de sincronización que separa autonomía clínica, interfaz externa y actos materiales condicionados.
 
 ## 4. Decisión de ingeniería de procesos
@@ -150,17 +151,17 @@ El regreso no heredará automáticamente una solución. Reabrirá el corte inmun
 
 ## 10. Dominios posteriores
 
-Después de la primera revalidación inmunológica, el Lenguaje deberá recibir otros casos directores —por ejemplo, Neumología, Genética, Investigación u otros que se constituyan—. Su función será atacar supuestas generalidades y descubrir dependencias ocultas del primer caso.
+Después de la primera revalidación inmunológica, el segundo falsador designado es el dominio heterogéneo **ciberseguridad inteligente**, constituido como semilla el 04-09-2026 en `SVperitus-dataset`, rama `dominio-ciberseguridad-inteligente`, ruta `dominios/ciberseguridad-inteligente/dominio-04-09-26/`.
 
-No se fija por esta acta un número suficiente de dominios ni se preseleccionan sus resultados. La universalización exige evidencia y contraste, no cuota nominal.
+Su trabajo sustantivo no comienza ahora. Recibirá el relevo sólo después de que Lenguaje incorpore el retorno inmunológico y publique un corte candidato. Su función será atacar supuestas generalidades mediante infraestructuras operacionales y, cuando aplique, sistemas y modelos de IA versionados y reproducibles. No se fija por esta acta un número suficiente de dominios ni se preseleccionan resultados: dos perfiles permiten contraste, no prueban universalidad absoluta.
 
 ## 11. Dictamen de conformidad
 
 La transición es conforme porque:
 
 - existe un corte reproducible de ambos repositorios;
-- la valoración de `OP-IMM-001` es exhaustiva respecto de sus 44 requisitos;
-- la conclusión sobrevivió a una adversarial explícita;
+- la valoración cubre explícitamente los 15 requisitos G10 y las 44 solicitudes técnicas, indicando equivalencias, coberturas parciales y ampliaciones transversales;
+- la conclusión sobrevivió a una adversarial explícita después de incorporar correcciones constitutivas;
 - la pausa de Inmunología no destruye ni clausura su trabajo;
 - el Lenguaje recibe un caso director sin subordinarse a una única especialidad;
 - el siguiente frente comienza por deuda nuclear ya acreditada;
@@ -181,6 +182,9 @@ MAIN_MODIFICADA_POR_ESTA_ACTA = NO
 CELULA_MINIMA = SV(9,3)
 CELULAS_MENORES = PROHIBIDAS
 REGRESO_A_INMUNOLOGIA = TRAS_CANDIDATA_O_NECESIDAD_CONSTITUTIVA
+SEGUNDO_FALSADOR = CIBERSEGURIDAD_INTELIGENTE_DIFERIDA
+CORRECCIONES_CONSTITUTIVAS_04_09_2026 = INCORPORADAS
+CONFORMIDAD_DEL_HEAD_CORREGIDO = OBLIGATORIA_ANTES_DE_FUSION
 FUSION_AUTORIZADA_POR_ESTA_ACTA = NO
 ```
 
