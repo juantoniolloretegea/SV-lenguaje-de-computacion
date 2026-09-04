@@ -4,7 +4,8 @@
 **Emisor:** unidad responsable del Lenguaje de computación SV  
 **Objeto:** someter a refutación la valoración técnica de encaje de `OP-IMM-001` antes de utilizarla como frontera de sincronización  
 **Naturaleza:** control adversarial documental y arquitectónico; no modifica el Lenguaje, no abre laboratorio ni ejecuta R2, R3, R4 o una garantía  
-**Resultado:** `PASA_CON_PRECISIONES_INCORPORADAS`
+**Resultado inicial:** `PASA_CON_PRECISIONES_INCORPORADAS`  
+**Resultado tras auditoría constitutiva de 04-09-2026:** `PASA_CON_CORRECCIONES_CONSTITUTIVAS_INCORPORADAS`
 
 ## 1. Tesis sometida a refutación
 
@@ -61,7 +62,7 @@ Los resultados posibles son:
 | `ADV-IMM-16` | ¿Los resultados de un universo se heredan automáticamente por los siguientes? | cada universo conserva constitución, identidad y prueba propias | `PASA_CON_PRECISION` | sólo una equivalencia causal demostrada puede proponerse como candidata común |
 | `ADV-IMM-17` | ¿La espera de cambios del Lenguaje bloquea la constitución de nuevos universos inmunológicos? | la valoración habilita continuar raíces, parámetros, reglas, fuentes y consecuencias sin esperar a R2 | `PASA_CON_PRECISION` | se separa continuidad del dominio de integración técnica |
 | `ADV-IMM-18` | ¿Los requisitos analíticos marcados como disponibles se leen como nueva capacidad ejecutable? | el estatuto significa que la respuesta puede derivarse del corte y no que exista un nuevo ejecutable | `PASA_CON_PRECISION` | se impide inflar la realización |
-| `ADV-IMM-19` | ¿La matriz omite o duplica requisitos de la solicitud? | contiene los 44 requisitos, una fila por ID, un estatuto único y las diez dimensiones exigidas | `PASA` | la respuesta es exhaustiva respecto de G10 |
+| `ADV-IMM-19` | ¿La matriz omite o duplica requisitos de la solicitud? | contiene las 44 solicitudes `REQ-IMM-LSV`, pero la primera ronda no comparó la familia independiente `REQ-IMM-SV-001..015` de `G10-SV` | `NO_PASA_EN_PRIMERA_RONDA · CORREGIDO` | se incorpora correspondencia `15 ↔ 44`, se preservan coberturas parciales y se distinguen once ampliaciones sin padre G10 exclusivo |
 | `ADV-IMM-20` | ¿Las diez preguntas “de bisturí” quedan sustituidas por formulaciones genéricas? | existen diez respuestas expresas con límites, responsables y siguiente evidencia | `PASA` | la decisión puede reconstruirse |
 | `ADV-IMM-21` | ¿`ENCAJA_CON_CAMBIOS` equivale a ordenar cambios inmediatos del Lenguaje? | prioriza perfiles y manifiestos externos; una modificación futura de IR requiere pérdida normativa y evidencia inter-universos | `PASA` | el Lenguaje no se modifica por anticipación |
 | `ADV-IMM-22` | ¿La conclusión contradice la autonomía clínica de Inmunología? | mantiene en el dominio finalidad, parámetros, fuentes, reglas, criticidad y significado | `PASA` | la sincronización no absorbe la autoridad del dominio |
@@ -69,22 +70,36 @@ Los resultados posibles son:
 
 ## 5. Precisiones incorporadas
 
-La adversarial no encontró una refutación material del dictamen. Encontró cinco lecturas que debían cerrarse para impedir conformidades aparentes:
+La primera ronda adversarial no encontró una refutación material del dictamen `ENCAJA_CON_CAMBIOS`. Encontró cinco lecturas que debían cerrarse para impedir conformidades aparentes:
 
 1. **cardinalidad no es célula:** `M-MODIFIER-001` sólo es candidata a `SV(9,3)` hasta demostrar correspondencia posicional, particiones ternarias disjuntas y exhaustivas, codominio, semántica de salida, operación y suficiencia relativa a ella;
 2. **no hay herencia automática:** una coincidencia entre universos sólo puede elevarse a candidata común si su equivalencia causal se demuestra;
-3. **Inmunología no queda bloqueada:** puede continuar su constitución autónoma sin esperar a R2 ni a una extensión del Lenguaje;
+3. **autonomía no significa concurrencia:** Inmunología no depende de R2 para pensar su dominio, pero queda en pausa controlada mientras el frente operativo único trabaja en Lenguaje; sólo se reactiva mediante relevo explícito;
 4. **disponibilidad analítica no es realización:** poder responder un requisito mediante evidencia existente no añade capacidad al ejecutable;
 5. **fallo técnico no es salida alternativa:** una ejecución válida con identidad completa idéntica debe producir exactamente los mismos bytes de salida canónica; el fallo determina inexistencia de ejecución clínica válida y sólo exige su registro técnico estructurado.
 
-Estas cinco precisiones han quedado incorporadas al corpus soberano. No requieren modificar el dictamen.
+Estas cinco precisiones quedaron incorporadas en la primera ronda. La auditoría posterior sí refutó formulaciones auxiliares y un control de completitud; no refutó el dictamen `ENCAJA_CON_CAMBIOS`.
 
-## 6. Continuidad y conformidad resultantes
+## 6. Correcciones constitutivas posteriores
+
+La auditoría de 04-09-2026 añadió ataques que la matriz inicial no contenía. Se incorporan sin crear una adenda inmunológica:
+
+| ID | Ataque posterior | Resultado | Corrección incorporada |
+|---|---|---|---|
+| `ADV-IMM-24` | ¿La cobertura de 44 solicitudes demuestra respuesta a los 15 requisitos soberanos de G10? | `NO_PASA` | correspondencia completa `15 ↔ 44`, con coberturas parciales y ampliaciones transversales explícitas |
+| `ADV-IMM-25` | ¿Un `Domain` que compila garantiza denotación, versión, suficiencia de parámetros e integridad de referencias? | `NO_PASA` | se registra que pueden compilar nombres inexistentes, falta versión propia y `parameters` puede quedar desligado de `capture_specs`; pasa al cierre nuclear |
+| `ADV-IMM-26` | ¿Dominio y agente quedan separados y un agente puede declarar cobertura parcial o multidominio? | `NO_PASA` | se declara que no son equivalentes; la gramática vigente no enuncia esa cobertura ni constituye agente o superagente |
+| `ADV-IMM-27` | ¿El ensamblaje vigente demuestra composición de perfiles o superagentes? | `NO_PASA` | se registra pérdida de procedencia por objeto, sensibilidad al orden, prohibición de homónimos y rechazo de `Agent`/`Domain` por `compose` |
+| `ADV-IMM-28` | ¿La autonomía de dos carriles permite trabajo sustantivo paralelo? | `NO_PASA` | los carriles quedan como clasificación de actos, no agenda concurrente; rige un solo frente y relevos por corte |
+
+Estas correcciones son constitutivas porque cambian el alcance de afirmaciones y el orden de trabajo. Permanecen documentales: no modifican gramática, IR, Rust, WASM ni dominio clínico.
+
+## 7. Continuidad y conformidad resultantes
 
 | Dimensión | Estado | Límite exacto |
 |---|---|---|
 | continuidad del Lenguaje | `CONSERVADA` | no se modifica especificación, gramática, IR, Rust, WASM ni perfiles |
-| continuidad de Inmunología | `HABILITADA` | puede seguir constituyendo universos sin reclamar todavía integración SV |
+| continuidad de Inmunología | `PAUSA_CONTROLADA` | conserva autonomía y corte; se reactiva sólo tras candidata y relevo del Lenguaje |
 | conformidad geométrica | `CONDICIONADA` | ninguna célula menor que `SV(9,3)`; el grupo de nueve aún debe constituirse semánticamente |
 | conformidad representacional | `PARCIAL` | hay proyección estructural posible, no representación fiel completa |
 | conformidad ejecutable | `NO_ACREDITADA_PARA_OP-IMM-001` | no existe integración del expediente ni salida clínica canónica |
@@ -92,22 +107,23 @@ Estas cinco precisiones han quedado incorporadas al corpus soberano. No requiere
 | apertura de R2 | `NO_EJECUTADA` | su eventual apertura material requiere autorización expresa separada |
 | estado del Playground | `INALTERADO` | esta operación es documental y de arquitectura de dominio |
 
-## 7. Veredicto adversarial
+## 8. Veredicto adversarial
 
-La conclusión `ENCAJA_CON_CAMBIOS` **sobrevive a la adversarial**.
+La conclusión `ENCAJA_CON_CAMBIOS` **sobrevive a la adversarial corregida**. No sobreviven la exhaustividad autorreferencial, la suficiencia de `Domain`, la composición de agentes ni la concurrencia de frentes.
 
 No puede rebajarse a `NO_ENCAJA`, porque el Lenguaje ya ofrece estructura ternaria, identidad fuente, IR, operaciones y fronteras suficientes para preparar una proyección sintética limitada. Tampoco puede elevarse a `ENCAJA` ni a `REPRESENTABLE_COMPLETAMENTE`, porque faltan identidad de ejecución, semántica y resultados tipados por parámetro, testigos de pérdida, salida clínica canónica, persistencia, recuperación, confianza material y validación clínica.
 
 ```text
-ADVERSARIAL_VALORACION_OP_IMM_001 = PASA_CON_PRECISIONES_INCORPORADAS
-REFUTACIONES_MATERIALES_DEL_DICTAMEN = 0
-PRECISIONES_NORMATIVAS_INCORPORADAS = 5
-PRECISIONES_PENDIENTES = 0
+ADVERSARIAL_VALORACION_OP_IMM_001 = PASA_CON_CORRECCIONES_CONSTITUTIVAS_INCORPORADAS
+REFUTACIONES_MATERIALES_DEL_DICTAMEN_ENCAJA_CON_CAMBIOS = 0
+FORMULACIONES_AUXILIARES_REFUTADAS_Y_CORREGIDAS = 5
+PRECISIONES_NORMATIVAS_DE_PRIMERA_RONDA = 5
+CORRECCIONES_PENDIENTES = 0
 DICTAMEN_SOBERANO = ENCAJA_CON_CAMBIOS
 CELULA_MINIMA = SV(9,3)
 M_MODIFIER_001_COMO_CELULA = CANDIDATA_PENDIENTE_DE_CONSTITUCION
 HERENCIA_AUTOMATICA_ENTRE_UNIVERSOS = PROHIBIDA
-CONTINUIDAD_AUTONOMA_DE_INMUNOLOGIA = HABILITADA
+INMUNOLOGIA = PAUSA_CONTROLADA
 CAMBIO_DEL_LENGUAJE = NO
 APERTURA_MATERIAL_DE_R2 = NO
 USO_CLINICO_O_DATOS_REALES = PROHIBIDO
