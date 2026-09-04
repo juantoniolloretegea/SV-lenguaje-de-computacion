@@ -3,19 +3,21 @@
 **Fecha:** 3 de septiembre de 2026  
 **Emisor:** unidad responsable del Lenguaje de computación SV  
 **Destinatario:** dominio de Inmunología  
-**Base:** valoración `ENCAJA_CON_CAMBIOS` y adversarial `PASA_CON_PRECISIONES_INCORPORADAS`  
-**Estatuto:** marco de coordinación; no autoriza cambios del Lenguaje, laboratorio, datos reales ni uso clínico
+**Base:** valoración `ENCAJA_CON_CAMBIOS` y adversarial corregida `PASA_CON_CORRECCIONES_CONSTITUTIVAS_INCORPORADAS`  
+**Estatuto:** marco de coordinación; no autoriza cambios del Lenguaje, laboratorio, datos reales ni uso clínico  
+**Corrección constitutiva incorporada:** 04-09-2026; autonomía separada de concurrencia y secuencia de relevos actualizada.
 
 ## 1. Decisión de sincronización
 
-Inmunología **puede continuar ahora** su trabajo constitutivo. No necesita esperar a R2, a una nueva IR ni a una integración ejecutable para abrir y agotar sus universos clínicos conforme a su propio método.
+Inmunología conserva capacidad y autonomía para continuar su trabajo constitutivo, pero **no es el frente activo ahora**. No depende de R2 ni de una nueva IR para pensar el dominio; sí respeta la secuencia de un único frente y queda en pausa hasta recibir una candidata del Lenguaje.
 
-La frontera correcta es doble:
+La frontera correcta distingue capacidad de agenda:
 
-- `CONTINUIDAD_CONSTITUTIVA_DE_INMUNOLOGIA = HABILITADA`;
+- `CAPACIDAD_CONSTITUTIVA_DE_INMUNOLOGIA = CONSERVADA`;
+- `INMUNOLOGIA = PAUSA_CONTROLADA`;
 - `INTEGRACION_EJECUTABLE_CON_LENGUAJE_SV = CONDICIONADA`.
 
-La condición técnica limita lo que puede afirmarse sobre integración, pero no reduce el espacio de investigación del dominio. El Lenguaje recibe requisitos demostrados; no fija de antemano cuántos universos, raíces, parámetros, reglas, fuentes o consecuencias debe descubrir Inmunología.
+La condición técnica no reduce el espacio de investigación del dominio. El Lenguaje recibe requisitos demostrados y no fija de antemano cuántos universos, raíces, parámetros, reglas, fuentes o consecuencias debe descubrir Inmunología. La pausa sólo ordena cuándo se ejerce esa autonomía.
 
 ## 2. Principios de autonomía coordinada
 
@@ -35,7 +37,7 @@ La condición técnica limita lo que puede afirmarse sobre integración, pero no
 | `B — PREPARACION_DE_INTERFAZ` | elaborar manifiestos versionados, resultados tipados por parámetro, mapas de proyección, catálogos cerrados de salida, testigos de pérdida, dependencias y huellas | son contratos candidatos externos; no cambian gramática, IR ni ejecutable |
 | `C — ACTO_MATERIAL_CONDICIONADO` | integrar, compilar, persistir, desplegar o modificar Lenguaje/motor sólo tras decisión y autorización correspondientes | incluye Rust, WASM, gramática, IR, diagnósticos, serializador, laboratorio y ejecución de R2/R3/R4 |
 
-Los carriles A y B pueden avanzar sin bloquearse mutuamente y sin esperar a que el carril C se abra. El carril B debe conservar las necesidades del dominio incluso cuando el Lenguaje vigente no pueda expresarlas.
+Los carriles clasifican actos y responsabilidades; **no autorizan ejecución sustantiva paralela**. A y B podrán avanzar durante un frente inmunológico expresamente abierto, sin convertir C en requisito previo. En el estado actual permanecen en pausa. El carril B debe conservar las necesidades del dominio incluso cuando el Lenguaje vigente no pueda expresarlas.
 
 ## 4. Contrato mínimo que ambos lados deben respetar
 
@@ -105,7 +107,7 @@ Cada clasificación debe señalar evidencia, pérdida, propietario, dependencia,
 | Hecho observado | Acto adecuado | Lo que no ocurre automáticamente |
 |---|---|---|
 | cierre constitutivo de un universo | entregar su paquete y conservarlo con corte exacto | no se modifica el Lenguaje |
-| aparición de un segundo universo | comparar causalmente ambos sin herencia | no se universalizan campos por coincidencia nominal |
+| aparición de un segundo dominio heterogéneo | comparar causalmente ambos sin herencia; el designado es ciberseguridad inteligente cuando reciba relevo | no se universalizan campos por coincidencia nominal ni se inicia en paralelo |
 | pérdida representacional demostrada | decidir si corresponde al dominio, motor, Lenguaje o infraestructura | no se abre R2 ni se cambia IR por inercia |
 | necesidad del primer efecto autorizado | contrastar con las fronteras de R1 y la eventual fase pertinente | no se confunde mediación intra-proceso con persistencia |
 | propuesta concreta sobre gramática o IR | adversarial inter-universos, especificación, corpus negativo y regresión integral | no se altera producción en el mismo acto |
@@ -113,18 +115,18 @@ Cada clasificación debe señalar evidencia, pérdida, propietario, dependencia,
 
 Estos disparadores son puntos de entrega y decisión, no cuotas temporales ni auditorías de cada producto intermedio.
 
-## 8. Aplicación inmediata a OP-IMM-001
+## 8. Aplicación al próximo retorno de OP-IMM-001
 
-El dominio puede continuar sin espera con:
+El trabajo inmediato pertenece al Lenguaje: reparación de la PR #60, `N0` y cierre de invariantes intrínsecos. Inmunología permanece congelada. Cuando reciba el relevo y el corte candidato deberá:
 
-- consolidación de los 27 IDs, propietarios y fuentes;
-- cierre de las ternarizaciones y causas de `U` aún pendientes;
-- separación de ausencia de regla, ausencia de configuración y fallo técnico;
-- definición del catálogo de salida y de su autoridad;
-- diseño del corpus sintético, incluidos casos negativos y testigos de pérdida;
-- constitución de universos posteriores conforme al recorrido propio de Inmunología.
+- verificar identidades de entrada y salida;
+- validar la correspondencia entre `REQ-IMM-SV-001..015` y `REQ-IMM-LSV-001..044`, sin crear una tercera familia;
+- instanciar y falsar el contrato candidato de perfil de dominio respecto de `OP-IMM-001 / Q0 v0`, no de toda la Inmunología;
+- conservar `REQ-IMM-SV-011 = U_NO_DECIDIDO` salvo evidencia nueva;
+- producir testigos positivos, negativos y de pérdida;
+- devolver un paquete único y trazable al Lenguaje.
 
-La preparación de interfaz debe mantener las seis agrupaciones de G6 fuera de la geometría celular. Para `M-MODIFIER-001` puede prepararse una **prueba de constitución**, pero no declararse una célula hasta satisfacer todos los requisitos semánticos de la sección 4.1.
+La preparación de interfaz mantendrá las seis agrupaciones de G6 fuera de la geometría celular. Para `M-MODIFIER-001` podrá prepararse una **prueba de constitución**, pero no declararse una célula hasta satisfacer todos los requisitos semánticos de la sección 4.1.
 
 No debe hacerse todavía:
 
@@ -143,7 +145,8 @@ La sincronización preserva las dos autonomías: Inmunología puede descubrir si
 El punto estable es:
 
 ```text
-INMUNOLOGIA_CONTINUIDAD_CONSTITUTIVA = HABILITADA
+INMUNOLOGIA_CAPACIDAD_CONSTITUTIVA = CONSERVADA
+INMUNOLOGIA = PAUSA_CONTROLADA
 INMUNOLOGIA_ESPERA_A_R2 = NO
 UNIVERSOS_RECORRIDO = SECUENCIAL_SIN_CUOTA_PREFIJADA
 HERENCIA_AUTOMATICA_ENTRE_UNIVERSOS = PROHIBIDA
@@ -158,4 +161,4 @@ R2_EJECUTADA = NO
 USO_CLINICO_O_DATOS_REALES = PROHIBIDO
 ```
 
-El siguiente paso del dominio es continuar su constitución y preparar el paquete de interfaz de `OP-IMM-001`. Cualquier experimento ejecutable, apertura de laboratorio o cambio soberano seguirá requiriendo un acto separado y autorización expresa.
+El siguiente paso operativo no pertenece al dominio: corresponde al Lenguaje reparar la PR #60 y cerrar `N0` e invariantes intrínsecos. El próximo paso de Inmunología ocurrirá sólo tras relevo explícito. Cualquier experimento ejecutable, apertura de laboratorio o cambio soberano seguirá requiriendo un acto separado y autorización expresa.
