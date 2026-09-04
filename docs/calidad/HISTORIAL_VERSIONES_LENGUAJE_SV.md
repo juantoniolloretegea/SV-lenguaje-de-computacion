@@ -5,7 +5,7 @@
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
-**Última actualización:** 30 de agosto de 2026
+**Última actualización:** 4 de septiembre de 2026
 
 ## 1. Objeto
 
@@ -60,6 +60,7 @@ No cambian `Tri = {Zero, One, U}`, la ausencia de tiempo, reloj o UTC como primi
 | 24/08/2026 | Frontera Normativa v0 respecto de Gramática 0.2 / IR 0.3 | Reconciliación de las cláusulas superadas por C01–C03. | La Frontera Normativa v0 se conserva como antecedente y la adenda fija la precedencia vigente. | [Adenda técnica de vigencia](../../ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md) |
 | 29/08/2026 | Gramática canónica 0.2 / IR 0.3 / realización Rust | Cierre de los dominios `SemanticRelation.kind`, `Pattern.kind` y `Graph.regime`; constitución de perfiles fuente; reconciliación de cierres EBNF internos y reclasificación del vector adversarial histórico. | Se cierra DFL-007 sin crear una segunda gramática ni modificar J2.3-General. Las regresiones quedan permanentes para ES y EN. | [PR #55](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/55) · [Acta de conformidad](./ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md) |
 | 29/08/2026 | Entorno estable B2 | El Historial Beta español e inglés pasa a servirse como página local efectiva; se elimina la sobrescritura dinámica hacia una representación `blob`. | El entorno desplegado representa ambos historiales como HTML y no como código fuente. | [Entorno público](https://lenguaje-sv.itvia.online/) · [PR #55](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/55) |
+| 04/09/2026 | IR 0.3 / catálogo efectivo / realizaciones Python y Rust | N0-01 fija `Codomain` como conjunto representado sin miembros repetidos y `E004 — InvalidCodomain` como identidad diagnóstica vigente. | El rechazo es común a ambos perfiles fuente y no amplía `OutputSemantics`, JSON, dominios ni ensamblaje. | [Acta N0-01](../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md) |
 
 ## 6. Realización Rust/WebAssembly y entorno público vigente
 

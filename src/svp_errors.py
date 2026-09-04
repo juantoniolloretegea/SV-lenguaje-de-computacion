@@ -56,8 +56,8 @@ E003 = SVPErrorDef("E003", "NSquaredViolation",
     "n debe ser b² (derivado automáticamente, no declarado por el usuario)",
     ErrorLevel.LAYER0, ErrorPhase.LOWER)
 
-E004 = SVPErrorDef("E004", "EmptyCodomain",
-    "El codominio declarado no puede estar vacío",
+E004 = SVPErrorDef("E004", "InvalidCodomain",
+    "El codominio debe ser finito, explícito, no vacío y sin miembros repetidos",
     ErrorLevel.LAYER0, ErrorPhase.VALIDATE)
 
 E005 = SVPErrorDef("E005", "DuplicateIdentifier",

@@ -33,6 +33,7 @@ EXPECTED_INVALID_CODES = {
     "admissibility_spec_u_legacy.svp": "E110",
     "bridge_position_fuera_de_rango.svp": "E105",
     "cellstate_vector_length_mismatch.svp": "E101",
+    "codomain_miembro_duplicado.svp": "E004",
     "coupledstate_update_fuera_bridges.svp": "E112",
     "edge_position_fuera_bridges.svp": "E113",
     "edge_connector_target_position_mismatch.svp": "E113",

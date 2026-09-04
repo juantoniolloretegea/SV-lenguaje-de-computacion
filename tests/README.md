@@ -31,6 +31,8 @@ Los nombres históricos de dos ejecutores contienen `smoke`; se conservan como i
 
 El catálogo adversarial SEC.0 se documenta en `tests/sec0/README.md`, `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md` y `tests/sec0/MATRIZ_CORRESPONDENCIA_ALCANCE_SEC0_V1.md`.
 
+El corte N0-01 añade un único caso negativo de conformidad para la unicidad de `Codomain`. El corpus vigente pasa a **80 casos** —12 válidos y 68 inválidos— sin regenerar ni modificar los doce oráculos JSON válidos.
+
 ## 3. Estado acreditado de la etapa frontal
 
 Sobre el estado `3d48c422915b0e0bed65ba2e7ce8b807d7a94c33`, una verificación independiente en modo de solo lectura acreditó:
@@ -114,6 +116,7 @@ La relación completa de casos inválidos y códigos esperados se mantiene en `E
 
 Entre las comprobaciones recientes figuran:
 
+- `codomain_miembro_duplicado.svp` → `E004`;
 - `admissibility_table_output_fuera_codominio.svp` → `E011`;
 - `supervise_meta_no_evalresult.svp` → `E212`;
 - `supervise_coupled_wrong_role.svp` → `E211`;

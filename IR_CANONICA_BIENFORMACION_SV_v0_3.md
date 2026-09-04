@@ -246,6 +246,7 @@ La versión del serializador no cambia porque las reglas de ordenación y canoni
 Esta versión añade o refuerza, en el radio implementado, los siguientes juicios:
 
 ```text
+J-K0  Codomain contiene al menos un miembro y no contiene miembros repetidos.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
 J-R0  resolve identifica un estado evaluable y una posición real.
@@ -261,6 +262,19 @@ J-F5  CriticalityResult no producible no puede declararse.
 ```
 
 Estos nombres sirven para lectura técnica de v0.3 y no renumeran retrospectivamente los juicios de v0.2.
+
+### 6.1. `Codomain` como conjunto representado
+
+Para toda declaración `K : Codomain` con representación secuencial `K.values`:
+
+```text
+K.values ≠ []
+card(K.values) = card(set(K.values))
+```
+
+La secuencia conserva el orden declarado para la representación y la serialización, pero no convierte por sí sola al codominio en un orden total semántico. Un miembro repetido produce rechazo `E004 — InvalidCodomain`; el frontend no elimina duplicados, no ordena los miembros y no repara el programa en silencio.
+
+El identificador `E101 — EmptyCodomain` de la tabla histórica de IR v0.2 no se reutiliza: en el catálogo efectivo vigente `E101` identifica `VectorLengthMismatch`. N0-01 fija `E004` como identidad observable única para la invalidez estructural de `Codomain`, sin reescribir el antecedente histórico ni cerrar la deuda distinta `E111 — UnorderedCodomain`.
 
 ---
 
@@ -284,17 +298,18 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La implementación de referencia correspondiente a esta versión dispone de una batería de 72 casos:
+La implementación de referencia correspondiente a esta versión dispone de una batería de 80 casos:
 
 ```text
-11 válidos
-61 inválidos
-72 total
+12 válidos
+68 inválidos
+80 total
 ```
 
 Los casos válidos comparan la salida contra IR canónica comprometida. Los inválidos exigen el código diagnóstico declarado. La batería incluye contraejemplos específicos para:
 
 - estados de admisibilidad heredados;
+- `Codomain` con un miembro repetido;
 - objetivo de `resolve` fuera de rango o distinto de `U`;
 - instancia de revisión incompatible;
 - estados de `Frame` ajenos a la arquitectura;
