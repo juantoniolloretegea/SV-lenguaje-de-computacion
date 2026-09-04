@@ -222,6 +222,15 @@ La continuidad documental se organiza así:
 - **Criterio registral:** el ciclo B2 se registra como un único hito material; el detalle mecánico de sus correcciones permanece en Git y en la evidencia enlazada.
 - **Estado:** cerrado.
 
+### RETP-2026-072 — Arquitectura de software: núcleo, frontera y host
+
+- **Hecho:** se constituye un único núcleo semántico en Rust, un contrato de frontera canónico pendiente de especificación y un host operacional desacoplado. WebAssembly es candidata inicial no exclusiva; .NET es candidata de host; FFI permanece condicionada a necesidad y prueba.
+- **Fundamento:** la integración hospitalaria, la periferia conectada y la ciberseguridad exigen responsabilidades explícitas sin trasladar protocolos, conectores ni reglas de dominio al núcleo.
+- **Evidencia:** [acta técnica de arquitectura de software](./ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md); base `main@736ea643d7f65ba4bf26dbbb321383b8becc8d64`; revisión estructural de `PR #61@fafd65b887658d8aecf429aa1fb78b7f78174e92`, incluidos los dos comparadores que aplican `sort_keys=True` y los 68 casos inválidos sin contraejemplo de `failure_symbol != Bottom`.
+- **Decisión:** conservar una sola fuente semántica en `sv_core`; especificar la frontera antes de elegir el host; mantener plataforma, ABI, conectores y persistencia sujetos a prototipo, licencias y comparación reproducible; declarar por separado perfiles fuente, perfiles de dominio y cobertura de agentes.
+- **Límites:** no se integra la PR #61, no se abre fase material, no se incorpora el laboratorio privado, no se fija .NET ni WebAssembly como solución definitiva y no se autoriza uso clínico ni datos reales.
+- **Estado:** cerrado.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
