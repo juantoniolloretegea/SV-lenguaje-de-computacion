@@ -4,7 +4,8 @@
 **Emisor:** unidad responsable del Lenguaje de computación SV  
 **Destinatario:** dominio de Inmunología — `OP-IMM-001 / Q0 v0`  
 **Naturaleza:** respuesta técnica de encaje; no modifica el Lenguaje SV, no abre R2, R3, R4 ni una garantía y no autoriza desarrollo ni uso clínico  
-**Dictamen:** `ENCAJA_CON_CAMBIOS`
+**Dictamen:** `ENCAJA_CON_CAMBIOS`  
+**Corrección constitutiva incorporada:** 04-09-2026; reconciliación completa de las familias `REQ-IMM-SV` y `REQ-IMM-LSV`, incorporación de los contraejemplos ejecutables sobre `Domain`, `Agent` y ensamblaje, y ajuste del orden serial.
 
 ## 1. Dictamen ejecutivo
 
@@ -14,13 +15,13 @@ El corte leído permite demostrar una parte estructural: perfiles fuente explíc
 
 La integración correcta exige tres fronteras simultáneas:
 
-1. un perfil externo, versionado y verificable del dominio y del motor para los 27 parámetros, sus fuentes, reglas, terminologías, configuraciones y resultados;
+1. un contrato externo, versionado y verificable del dominio y del motor para los 27 parámetros, sus fuentes, reglas, terminologías, configuraciones y resultados; este contrato no se identifica con un perfil fuente;
 2. extensiones compatibles del Lenguaje sólo para invariantes cuya equivalencia causal se demuestre en más de un universo y que no puedan mantenerse fuera de la IR sin pérdida normativa;
 3. las fases ya previstas de persistencia, confianza material e integración adversarial cuando el Director autorice su apertura.
 
-No se recomienda modificar ahora gramática, IR, catálogo diagnóstico, serialización ni código. El siguiente paso útil es un experimento sintético de integración estrictamente no clínica, precedido por decisiones arquitectónicas expresas y por una autorización separada.
+No se autoriza ahora el experimento sintético ni una extensión de dominio. El orden corregido es: reparar este expediente; producir `N0` como clasificación de objetos y oráculos existentes; cerrar en rama nueva los invariantes intrínsecos que no dependen de la clínica; y sólo entonces regresar a Inmunología con una candidata contrastable. Cada modificación material mantiene autorización, rama, especificación y prueba propias.
 
-Esta secuencia condiciona la **integración técnica con el Lenguaje**, no la continuidad constitutiva del dominio. Inmunología puede seguir abriendo y agotando universos, raíces, parámetros, reglas, fuentes y consecuencias conforme a su propio método, sin cuota prefijada y sin esperar a R2. Cada universo conserva constitución, identidad y prueba propias: no existe herencia automática de requisitos, estados, reglas ni soluciones desde `OP-IMM-001`.
+Esta secuencia conserva la autonomía intelectual del dominio, pero no autoriza concurrencia operativa. Inmunología queda en `PAUSA_CONTROLADA` sobre su corte reproducible hasta el relevo del Lenguaje. El cierre de `OP-IMM-001 / Q0 v0` no equivale al cierre de toda la Inmunología y no existe herencia automática de requisitos, estados, reglas ni soluciones.
 
 ## 2. Cortes, método y límites
 
@@ -100,14 +101,55 @@ La estabilidad del Playground y el cierre registral B2 no eliminan deuda del nú
 | codominio | `wellformed.rs` exige que el codominio no esté vacío, pero no acredita unicidad de todos sus miembros | una salida OP no puede confiar todavía en que un codominio mal constituido sea rechazado |
 | `OutputSemantics` | la realización no prueba totalidad, unicidad ni pertenencia de cada símbolo al codominio declarado | no puede acreditarse una plantilla clínica total y unívoca sólo porque el programa compile |
 | proyección JSON | la proyección diferencial Rust no es el serializador canónico completo y la cadena vigente no acredita rechazo universal de claves homónimas | OP necesita un serializador propio cerrado y casos negativos de colisión |
-| `Domain` | varios campos se conservan nominalmente sin interpretación ejecutiva completa; DFL-005 permanece viva | enumerar los 27 parámetros no demuestra que sus políticas y criterios sean ejecutados |
+| `Domain` | acepta nombres y referencias que pueden no denotar objetos existentes; carece de versión propia; `parameters` puede quedar vacío y sin ligadura suficiente con `capture_specs`; esa ausencia de interpretación no está cubierta íntegramente por DFL-005 | compilar un `Domain` no demuestra identidad, integridad referencial, suficiencia ni ejecución de sus políticas |
+| `Agent` y cobertura | la relación agente↔dominio puede reducirse a igualdad de cadenas no denotantes; la gramática vigente no permite declarar cobertura parcial ni composición multidominio | dominio y agente no son equivalentes y ningún agente o superagente queda constituido por este expediente |
+| ensamblaje | `compose` no acepta `Agent` ni `Domain`; el artefacto pierde procedencia por objeto, rechaza homónimos en vez de resolverlos y la inversión del orden de unidades altera bytes y hash | el ensamblaje vigente no sirve como fundamento demostrado de composición de perfiles de dominio ni de superagentes |
 | criticidad | no existe productor material de `CriticalityResult`; DFL-006 permanece viva | `Frame.criticalities` debe seguir vacío y la criticidad OP fuera del Frame |
 | referencias | la bienformación local de `Horizon` no basta por sí sola para acreditar toda referencia arquitectónica | el experimento debe incluir referencias colgantes como casos negativos externos |
 | resolución humana | una revisión no equivale automáticamente a cierre clínico positivo ni a persistencia de la decisión | toda adjudicación OP debe ser un acto nuevo, explícito y atribuible |
 
-Estas carencias no demuestran un fallo material del ensamblador multifuente. Demuestran que **compilar o ensamblar no basta para acreditar el contrato clínico-técnico de OP-IMM-001**.
+Estas carencias no invalidan el contrato vigente del ensamblador multifuente, pero sí refutan su uso como prueba de composición semántica de dominios o agentes. **Compilar o ensamblar no basta para acreditar el contrato clínico-técnico de `OP-IMM-001`, y el ensamblaje actual no enuncia un superagente.**
 
-## 5. Matriz completa de los 44 requisitos
+## 5. Reconciliación de las dos familias de requisitos
+
+La auditoría posterior encontró dos familias emitidas el mismo día por el mismo dominio y referidas al mismo corte: quince requisitos `REQ-IMM-SV` en `G10-SV` y cuarenta y cuatro solicitudes `REQ-IMM-LSV` en la Solicitud de valoración. La matriz original respondía las 44 solicitudes, pero su control de completitud era autorreferencial y no demostraba cobertura de los 15 requisitos G10. La afirmación de exhaustividad queda corregida por las dos tablas siguientes.
+
+### 5.1 Correspondencia de los quince requisitos G10
+
+| G10 | Necesidad soberana del dominio | Correspondencia `REQ-IMM-LSV` | Relación y resolución en esta valoración |
+|---|---|---|---|
+| `REQ-IMM-SV-001` | estado ternario por parámetro | `REQ-IMM-LSV-007`, `REQ-IMM-LSV-012`, `REQ-IMM-LSV-040` | `COBERTURA_CON_REFINAMIENTO`: `Tri` existe; el resultado OP tipado e integrado no |
+| `REQ-IMM-SV-002` | composición ordenada de unidades y referencias | `REQ-IMM-LSV-025`, `REQ-IMM-LSV-026`, `REQ-IMM-LSV-040`, `REQ-IMM-LSV-041` | `COBERTURA_PARCIAL`: se conserva como requisito G10 propio; falta prueba ejecutable de orden, referencia y composición |
+| `REQ-IMM-SV-003` | supervisión humana de salida estructural | `REQ-IMM-LSV-009`, `REQ-IMM-LSV-015`, `REQ-IMM-LSV-016`, `REQ-IMM-LSV-033` | `COBERTURA_CON_REFINAMIENTO`: R1 aporta actos; integración y durabilidad no están acreditadas |
+| `REQ-IMM-SV-004` | `Frame` derivado de arquitectura existente | `REQ-IMM-LSV-026`, `REQ-IMM-LSV-031`, `REQ-IMM-LSV-041` | `COBERTURA_PARCIAL`: la forma existe, pero debe cerrarse la referencia arquitectónica colgante como invariante nuclear |
+| `REQ-IMM-SV-005` | procedencia, fuente, versión, localizador y hash | `REQ-IMM-LSV-001`, `REQ-IMM-LSV-002`, `REQ-IMM-LSV-012`, `REQ-IMM-LSV-016`, `REQ-IMM-LSV-017`, `REQ-IMM-LSV-025`, `REQ-IMM-LSV-027`, `REQ-IMM-LSV-028`, `REQ-IMM-LSV-029`, `REQ-IMM-LSV-034`, `REQ-IMM-LSV-035`, `REQ-IMM-LSV-037` | `DESPLIEGUE`: contrato de dominio/motor; promoción nuclear sólo ante pérdida transversal demostrada |
+| `REQ-IMM-SV-006` | causas tipadas de `U` sin nuevos valores | `REQ-IMM-LSV-007`, `REQ-IMM-LSV-012`, `REQ-IMM-LSV-013`, `REQ-IMM-LSV-031` | `COBERTURA_CON_REFINAMIENTO`: `U` se conserva; la causa queda fuera del valor ternario y requiere esquema |
+| `REQ-IMM-SV-007` | fallo técnico separado de `U` clínica | `REQ-IMM-LSV-007`, `REQ-IMM-LSV-008`, `REQ-IMM-LSV-011`, `REQ-IMM-LSV-015`, `REQ-IMM-LSV-017`, `REQ-IMM-LSV-019`, `REQ-IMM-LSV-022` | `EQUIVALENCIA_Y_DESPLIEGUE`: separación normativa disponible; resultado OP y durabilidad pendientes |
+| `REQ-IMM-SV-008` | adjudicación humana de `U` crítica/no crítica con motivo | `REQ-IMM-LSV-009`, `REQ-IMM-LSV-014`, `REQ-IMM-LSV-015`, `REQ-IMM-LSV-016` | `DESPLIEGUE`: actos R1 más regla, identidad y esquema de dominio; no hay saneamiento retrospectivo |
+| `REQ-IMM-SV-009` | veto no compensable anterior al resumen | `REQ-IMM-LSV-009`, `REQ-IMM-LSV-014`, `REQ-IMM-LSV-015`, `REQ-IMM-LSV-031` | `COBERTURA_PARCIAL`: se retiene expresamente el orden y la no compensabilidad; no se deducen de revisión o criticidad |
+| `REQ-IMM-SV-010` | productor superficial de criticidades | `REQ-IMM-LSV-014`, `REQ-IMM-LSV-041` | `EQUIVALENCIA`: candidata a extensión; DFL-006 permanece viva y `Frame.criticalities` sigue vacío |
+| `REQ-IMM-SV-011` | matrices `(6,1,3,2,6,9)` sin relleno | `REQ-IMM-LSV-026`, `REQ-IMM-LSV-039`, `REQ-IMM-LSV-040`, `REQ-IMM-LSV-041` | `U_NO_DECIDIDO`: sólo nueve es candidata geométrica; quedan prohibidos relleno, duplicación, fragmentación y mezcla |
+| `REQ-IMM-SV-012` | resumen reversible a seis frames y 27 parámetros | `REQ-IMM-LSV-003`, `REQ-IMM-LSV-012`, `REQ-IMM-LSV-013`, `REQ-IMM-LSV-017`, `REQ-IMM-LSV-034`, `REQ-IMM-LSV-039`, `REQ-IMM-LSV-040` | `COBERTURA_CON_PRUEBA_PENDIENTE`: representable por composición, reversibilidad aún no ejecutada |
+| `REQ-IMM-SV-013` | manifiestos cerrados de configuración clínica | `REQ-IMM-LSV-001`, `REQ-IMM-LSV-005`, `REQ-IMM-LSV-006`, `REQ-IMM-LSV-009`, `REQ-IMM-LSV-012`, `REQ-IMM-LSV-016`, `REQ-IMM-LSV-018`, `REQ-IMM-LSV-025`, `REQ-IMM-LSV-034` | `DESPLIEGUE`: contrato versionado de dominio/motor; no palabra reservada del núcleo |
+| `REQ-IMM-SV-014` | una de cuatro salidas exclusivas sin consejo terapéutico | `REQ-IMM-LSV-003`, `REQ-IMM-LSV-006`, `REQ-IMM-LSV-007`, `REQ-IMM-LSV-008`, `REQ-IMM-LSV-017`, `REQ-IMM-LSV-031`, `REQ-IMM-LSV-038`, `REQ-IMM-LSV-039` | `DESPLIEGUE`: codominio y catálogo cerrados del perfil; no existe salida clínica ejecutable |
+| `REQ-IMM-SV-015` | reproducción byte a byte con orden canónico | `REQ-IMM-LSV-002`, `REQ-IMM-LSV-003`, `REQ-IMM-LSV-004`, `REQ-IMM-LSV-005`, `REQ-IMM-LSV-017`, `REQ-IMM-LSV-035` | `EQUIVALENCIA_CON_LIMITE`: exigencia válida; objeto de salida e identidad completa aún deben cerrarse |
+
+### 5.2 Solicitudes LSV sin padre exclusivo en G10
+
+Las once solicitudes siguientes amplían el análisis hacia persistencia, plataforma, gobierno o proceso. No deben fingirse como equivalentes a un requisito G10 ni eliminarse:
+
+| Solicitudes `REQ-IMM-LSV` | Estatuto respecto de G10 | Conservación |
+|---|---|---|
+| `REQ-IMM-LSV-010`, `REQ-IMM-LSV-020`, `REQ-IMM-LSV-021` | ampliación material de estado, TOCTOU e integridad persistente | casos futuros de R2; no abren R2 |
+| `REQ-IMM-LSV-023`, `REQ-IMM-LSV-024` | asignación transversal de responsabilidades y mínimos de plataforma | contrato de frontera; no capacidad ejecutable |
+| `REQ-IMM-LSV-030` | pregunta de aplicabilidad DICOM | `NO_APLICABLE_JUSTIFICADO` en este universo |
+| `REQ-IMM-LSV-032`, `REQ-IMM-LSV-036` | evidencia normativa parcial y aislamiento del entorno | responsabilidad compartida fuera del núcleo clínico |
+| `REQ-IMM-LSV-042`, `REQ-IMM-LSV-043`, `REQ-IMM-LSV-044` | reversibilidad, orden y puertas de revisión | gobierno del proceso; no requisito clínico nuevo |
+
+La unión de ambas tablas cubre los quince requisitos G10 y las cuarenta y cuatro solicitudes LSV. Una correspondencia múltiple no significa duplicación y una ampliación transversal no altera la clasificación soberana de G10.
+
+### 5.3 Matriz completa de las 44 solicitudes técnicas
+
 
 | Requisito_ID | estado | capacidad actual | localizador | prueba | límite | componente responsable | dependencia | horizonte | siguiente decisión |
 |---|---|---|---|---|---|---|---|---|---|
@@ -156,7 +198,7 @@ Estas carencias no demuestran un fallo material del ensamblador multifuente. Dem
 | `REQ-IMM-LSV-043` | `DISPONIBLE_HOY_DEMOSTRADO` | el orden técnico queda definido sin fechas | secciones 7 y 8 | dependencias explícitas | no es compromiso de producción | Director + dominio + Lenguaje + motor | decisiones previas de cada etapa | incremental | seguir el orden: decisiones, perfil externo, corpus, prueba estructural, contraste inter-universos, fases materiales |
 | `REQ-IMM-LSV-044` | `DISPONIBLE_HOY_DEMOSTRADO` | existen puertas de revisión que permiten crear más universos sin congelar una infraestructura universal | IMM-REQ; LSV-FFLE; sección 9 | disparadores explícitos | las puertas no permiten ocultar deuda ni usar capacidades no probadas | Director + gobierno técnico | nuevos universos, revisión por pares y evidencia empírica | incremental/universal | revisar al segundo universo, ante pérdida representacional y antes de datos reales o cambio de IR |
 
-### 5.1 Recuento y ausencia de ambigüedad
+### 5.4 Recuento de las 44 solicitudes técnicas
 
 | Estado | Requisitos |
 |---|---:|
@@ -269,14 +311,14 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 
 ### 9.1 Orden técnico sin fechas
 
-1. aceptar o corregir las decisiones de la sección 8;
-2. constituir el perfil externo y el manifiesto de ejecución;
-3. revisar el corpus sintético y sus oráculos antes de ejecutarlo;
-4. autorizar, en acto separado, la integración estructural mínima;
-5. medir qué información se pierde y qué invariantes se repiten en otros universos;
-6. decidir si alguna carencia justifica una futura extensión de IR o serialización;
-7. aportar los casos materiales a R2/R3/R4 sólo cuando cada fase sea autorizada;
-8. someter el producto y la organización a sus procesos clínicos, de seguridad, calidad y regulación antes de cualquier dato real.
+1. reparar este expediente y mantener la PR #60 sin fusionar hasta nueva autorización;
+2. abrir una rama nueva del Lenguaje desde la base que resulte y producir `N0` como radiografía de objetos existentes y oráculos;
+3. cerrar los invariantes intrínsecos de codominio, semántica de salida, proyección, referencias y ensamblaje vacío;
+4. regresar de forma acotada a Inmunología para contrastar `OP-IMM-001`, incluida la reconciliación `15 ↔ 44` y `REQ-IMM-SV-011`;
+5. incorporar el retorno y fijar el contrato candidato de perfil de dominio, sin identificarlo con `PerfilFuente`;
+6. activar después el dominio heterogéneo de ciberseguridad inteligente como segundo falsador;
+7. consolidar sólo los invariantes que sobrevivan a ambos perfiles y conservar como deuda lo no demostrado;
+8. autorizar aparte cualquier corpus ejecutable, R2/R3/R4, producto o uso con datos reales.
 
 ### 9.2 Puertas de revisión
 
@@ -319,6 +361,9 @@ El experimento demuestra representación parcial y disciplina de frontera. No de
 | productor de criticidad | ausente; DFL-006 | dominio + Lenguaje | decisión arquitectónica específica |
 | unicidad de codominio y totalidad/unicidad de salida | no acreditadas por la bienformación Rust vigente | Lenguaje | cierre nuclear específico, separado de R2 |
 | colisiones de proyección JSON y referencias colgantes | rechazo completo no acreditado | Lenguaje | casos negativos y cierre nuclear específico |
+| identidad, versión y suficiencia de `Domain` | pueden compilar referencias no denotantes y parámetros desligados de captura | Lenguaje | `N0`, contrato de perfil y oráculos negativos |
+| cobertura de `Agent` | no existe declaración suficiente de cobertura parcial o multidominio | Lenguaje + perfil de agente | fase posterior a perfiles de dominio |
+| ensamblaje semántico de agentes | `compose` no acepta `Agent`/`Domain` ni preserva la procedencia necesaria por objeto | Lenguaje | especificación previa; no inferir superagente |
 | salida clínica canónica | ausente | motor + dominio | cierre del perfil de salida |
 | persistencia y recuperación | contratos existentes, realización no demostrada | R2 + infraestructura | apertura material autorizada de R2 |
 | cadena de construcción y carga soberana | no demostrada | R3/R4 + infraestructura | fases previas cerradas y autorización |
@@ -346,5 +391,8 @@ RELLENO_DUPLICACION_O_MEZCLA_PARA_COMPLETAR_CELDA = PROHIBIDO
 LENGUAJE_SV_MODIFICADO_POR_ESTA_RESPUESTA = NO
 R2_R3_R4_O_GARANTIA_ABIERTA_POR_ESTA_RESPUESTA = NO
 EXPERIMENTO_SINTETICO_AUTORIZADO_POR_ESTA_RESPUESTA = NO
-SIGUIENTE_ACTO = DECISION_ARQUITECTONICA_Y_AUTORIZACION_SEPARADA
+INMUNOLOGIA = PAUSA_CONTROLADA
+PERFIL_DOMINIO = CONTRATO_CANDIDATO_NO_TIPO_VIGENTE
+SUPERAGENTE = NO_ENUNCIADO
+SIGUIENTE_ACTO = N0_Y_CIERRE_DE_INVARIANTES_INTRINSECOS_EN_RAMA_NUEVA
 ```
