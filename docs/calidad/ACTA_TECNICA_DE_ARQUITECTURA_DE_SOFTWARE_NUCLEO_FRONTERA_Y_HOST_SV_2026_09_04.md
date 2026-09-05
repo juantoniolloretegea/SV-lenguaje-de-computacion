@@ -1,11 +1,12 @@
 # Acta técnica de arquitectura de software: núcleo, frontera y host del Lenguaje SV
 
 **Fecha:** 4 de septiembre de 2026  
+**Revisión de precisión:** 5 de septiembre de 2026  
 **Repositorio:** `SV-lenguaje-de-computacion`  
 **Sede:** `docs/calidad/` de `main`  
 **Naturaleza:** fijación arquitectónica; no implementación  
 **Estado:** arquitectura base constituida; elecciones de host, transporte e interoperabilidad pendientes de prueba  
-**Registro aplicable:** `RETP-2026-072`
+**Registros aplicables:** `RETP-2026-072`; precisión rectora `RETP-2026-073`
 
 ## 1. Objeto
 
@@ -15,7 +16,7 @@ Se constituye una arquitectura de tres estratos:
 
 | Estrato | Responsabilidad | Exclusiones |
 |---|---|---|
-| Núcleo soberano | Parseo, AST, IR, bienformación, validación y operaciones puras del Lenguaje. Una única fuente semántica en `sv_core`, reutilizable por ejecución nativa y WebAssembly. | Red, bases de datos, interfaz de usuario, protocolos clínicos, terminologías, autenticación, periféricos y reglas particulares de dominio. |
+| Núcleo soberano | Parseo, AST, IR, bienformación y validación intrínseca hoy materializados; custodia futura de las operaciones algebraicas puras sólo cuando hayan sido especificadas y probadas. Una única fuente semántica en `sv_core`, reutilizable por ejecución nativa y WebAssembly. | Constitución de células de dominio, asignación de parámetros, cobertura de agentes, red, bases de datos, interfaz, protocolos clínicos, terminologías, autenticación, periféricos y reglas particulares de dominio. |
 | Contrato de frontera | Sobre canónico y versionado entre núcleo y anfitrión: identidad, procedencia, orden, límites de recursos, diagnósticos, versiones y resultados. Convierte entradas externas en peticiones cerradas y conserva la causa de cada fallo. | No redefine `Tri`, no corrige datos en silencio, no inventa semántica de dominio y no sustituye al ensamblaje multifuente. |
 | Host operacional | Integración con sistemas externos, red, persistencia, mensajería, identidad, autorización, interfaz, observabilidad y adaptadores. En salud puede alojar HL7/FHIR, DICOM, terminologías, historia clínica, laboratorio, telemedicina y software hospitalario. | No interpreta de nuevo el Lenguaje ni mantiene una segunda realización semántica en otro lenguaje. |
 
@@ -28,6 +29,16 @@ La separación es normativa para el diseño; no afirma que los dos estratos exte
 Rust se conserva como lenguaje del núcleo. La posible adopción de .NET para el host no autoriza una reescritura del compilador ni una segunda semántica en C#. Toda plataforma deberá invocar la misma realización de `sv_core` o una derivación compilada de la misma fuente.
 
 El núcleo seguirá siendo independiente de dominio y de infraestructura. Una necesidad de Inmunología, ciberseguridad inteligente o cualquier dominio posterior sólo podrá promoverse al núcleo cuando se demuestre que es un invariante del Lenguaje y no una conveniencia del primer caso estudiado.
+
+### 2.1.1 Núcleo receptor y comprobador, no autor del dominio
+
+La frontera de competencia se fija en los [Pilares y restricciones de diseño del Lenguaje de Computación SV](./PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md).
+
+El núcleo preserva los invariantes universales `Σ={0,1,U}`, `b≥3`, `n=b²` y el estado como vector plano, ordenado y posicional de longitud `n`. No decide para ningún dominio el valor de `b`, el número de células, su composición, la asignación de parámetros ni la cobertura de un agente.
+
+Las unidades competentes de dominio constituyen esas decisiones; las unidades competentes de agente reciben la constitución y declaran cobertura y capacidades; el Lenguaje debe esperar un contrato explícito, comprobarlo cuando sea representable y rechazar su ausencia o incoherencia sin rellenar, redondear, reordenar ni inferir.
+
+La realización vigente sólo acredita la restricción `b≥3`, la derivación `n=b²` y la longitud del vector. La constitución completa dominio→células→agente no está hoy representada ni validada de extremo a extremo. Esta ausencia es una obligación arquitectónica pendiente, no una autorización para simularla mediante cadenas opacas.
 
 ### 2.2 WebAssembly como candidata inicial de aislamiento
 
@@ -86,10 +97,10 @@ El ensamblaje de fuentes no es este contrato. Ensamblar unidades y cruzar una fr
 Se mantienen las siguientes distinciones:
 
 1. **Perfil fuente:** lleva una sintaxis concreta a la misma IR sin introducir significado de dominio.
-2. **Perfil de dominio:** define por completo el vocabulario, compromisos, identidades, fuentes, reglas, criticidades y límites de un dominio fuera del núcleo universal.
-3. **Agente:** es una realización consumidora. Puede utilizar todo un dominio, una parte declarada o varios dominios compatibles según su diseño; no se identifica por defecto con ninguno de ellos.
+2. **Perfil o constitución de dominio:** deberá definir por completo, en su sede competente, el vocabulario, compromisos, identidades, fuentes, parámetros, células, asignación posicional, reglas, criticidades y límites del dominio fuera del núcleo universal.
+3. **Agente:** será una realización consumidora de una constitución recibida. Podrá utilizar todo un dominio, una parte declarada o varios dominios compatibles sólo cuando su contrato lo represente y valide; no se identifica por defecto con ninguno de ellos.
 
-Un dominio se define entero aunque un agente no lo recorra entero. La cobertura del agente deberá declararse y validarse cuando se constituya su contrato; no se infiere por igualdad de nombres ni por presencia de un objeto `Domain`.
+La completitud del dominio y la cobertura total, parcial o multidominio del agente son requisitos arquitectónicos. No son hoy capacidades acreditadas por la sintaxis o la IR vigentes: `Domain` no contiene una versión completa del contrato y `Agent` sólo admite una referencia `domain` sin campo de cobertura. No se inferirán por igualdad de nombres ni por presencia de un objeto `Domain`.
 
 La composición de dominios no enuncia por sí sola un superagente. Tampoco autoriza a tratar un perfil de dominio como si fuera un perfil lingüístico ES/EN.
 
@@ -149,8 +160,12 @@ FFI = ALTERNATIVA_CONDICIONADA_A_NECESIDAD_Y_PRUEBA
 HOST_DOTNET = CANDIDATO_NO_CONSTITUIDO
 PERFIL_FUENTE = DISTINTO_DE_PERFIL_DE_DOMINIO
 DOMINIO = DISTINTO_DE_AGENTE
-DOMINIO = DEFINIDO_COMPLETO
-COBERTURA_DE_AGENTE = EXPLICITA_Y_POSIBLEMENTE_PARCIAL_O_MULTIDOMINIO
+CONTRATO_DE_DOMINIO_COMPLETO = REQUISITO_NO_REPRESENTABLE_HOY
+CONSTITUCION_DE_CELULAS = COMPETENCIA_DE_LA_UNIDAD_DE_DOMINIO
+ELECCION_DE_B_Y_ASIGNACION_POR_EL_NUCLEO = PROHIBIDA
+COBERTURA_DE_AGENTE = REQUISITO_ARQUITECTONICO_NO_REPRESENTABLE_HOY
+REPARACION_O_INFERENCIA_SILENCIOSA = PROHIBIDA
+EJECUCION_ALGEBRAICA_COMPLETA_EN_SV_CORE = NO_ACREDITADA
 INMUNOLOGIA = PRIMER_CASO_DIRECTOR
 CIBERSEGURIDAD_INTELIGENTE = SEGUNDO_FALSADOR
 PR61_INTEGRADA_POR_ESTA_ACTA = NO

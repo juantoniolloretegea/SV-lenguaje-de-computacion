@@ -40,6 +40,8 @@ La continuidad documental se organiza así:
 | RETP-2026-069 | 20/08/2026 | 07:23:44 | APERTURA_BLOQUE_Y_PREPARACION_PROBATORIA | Lenguaje SV / FFL-C / pruebas y evidencia | cerrado |
 | RETP-2026-070 | 20/08/2026 | 08:16:26 | CIERRE_BLOQUE_Y_SINCRONIZACION_DE_EVIDENCIA | Lenguaje SV / FFL-C / cierre probatorio | cerrado |
 | RETP-2026-071 | 29/08/2026 | NO_CONSTA | INTEGRACION_PUBLICACION_Y_CIERRE_DE_CONFORMIDAD | Lenguaje SV / Beta B2 / realización estable bilingüe / cierre DFL-007 | cerrado |
+| RETP-2026-072 | 04/09/2026 | 22:04:26 | FIJACION_ARQUITECTONICA | Lenguaje SV / arquitectura de software / núcleo, frontera y host | cerrado |
+| RETP-2026-073 | 05/09/2026 | 13:42:20 | FIJACION_RESTRICCIONES_DE_DISENO | Lenguaje SV / pilares / frontera de autoridad dominio-agente-núcleo | cerrado |
 
 ## 3. Entradas detalladas
 
@@ -229,6 +231,16 @@ La continuidad documental se organiza así:
 - **Evidencia:** [acta técnica de arquitectura de software](./ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md); base `main@736ea643d7f65ba4bf26dbbb321383b8becc8d64`; revisión estructural de `PR #61@fafd65b887658d8aecf429aa1fb78b7f78174e92`, incluidos los dos comparadores que aplican `sort_keys=True` y los 68 casos inválidos sin contraejemplo de `failure_symbol != Bottom`.
 - **Decisión:** conservar una sola fuente semántica en `sv_core`; especificar la frontera antes de elegir el host; mantener plataforma, ABI, conectores y persistencia sujetos a prototipo, licencias y comparación reproducible; declarar por separado perfiles fuente, perfiles de dominio y cobertura de agentes.
 - **Límites:** no se integra la PR #61, no se abre fase material, no se incorpora el laboratorio privado, no se fija .NET ni WebAssembly como solución definitiva y no se autoriza uso clínico ni datos reales.
+- **Estado:** cerrado.
+
+### RETP-2026-073 — Pilares y restricciones de diseño del Lenguaje SV
+
+- **Hecho:** se fija una pieza rectora que preserva la célula exacta como vector plano, ordenado y posicional de longitud `n=b²`; separa `U` de cualquier fallo o relleno; y delimita la autoridad entre las unidades de dominio, las unidades de agente, el Lenguaje, la frontera, el host y cualquier IA auxiliar. La raíz incorpora `AGENTS.md` como puerta operativa de lectura obligatoria, identificación del corte y detención ante contradicción.
+- **Fundamento:** la realización vigente acredita `b≥3`, la derivación de `n` y la longitud del vector, pero no representa todavía el contrato completo dominio→células→agente. Esa ausencia no puede permitir que el núcleo decida tamaños, distribuya inventarios, rellene posiciones o acepte en silencio una constitución incompleta.
+- **Evidencia:** [Pilares y restricciones de diseño](./PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md); `AGENTS.md`; base `main@ec00a5464239df081d0165fd09a1b738c579555b`; inspección de `frontend.rs`, `ir.rs`, `wellformed.rs`, `svp_validator.py`, `svp_ir.py` e IR v0.3; contraste con los fundamentos algebraico-semánticos, la doctrina de `U` y la arquitectura general de agentes especializados.
+- **Decisión:** el dominio constituye sus células y asignaciones; el agente recibe esa constitución y declara cobertura y capacidades; el Lenguaje valida y preserva sin suplantar. Se prohíben inferencia, redondeo, relleno, reordenación, reparación silenciosa y conversión de fallos a `U`. La ausencia de representación se declara como obligación pendiente.
+- **Límites:** no se elige `b` para ningún dominio, no se decide el número de células, no se asignan parámetros, no se constituye un bus o un perfil central, no se selecciona host y no se abre fase material. La ejecución algebraica completa en `sv_core` permanece no acreditada.
+- **Corrección registral:** se repara la serialización CSV de `RETP-2026-072`, que había quedado encapsulada como una sola celda, sin alterar su contenido material.
 - **Estado:** cerrado.
 
 ## 4. Estado de continuidad
