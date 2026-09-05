@@ -264,7 +264,20 @@ class Validator:
 
     def _validate_codomain(self, node: CodomainDecl):
         if len(node.values) == 0:
-            raise SVPError(E004, node.loc.line, node.loc.col)
+            raise SVPError(E004, node.loc.line, node.loc.col,
+                           f"Codomain {node.name!r} vacío")
+
+        seen = set()
+        duplicates = []
+        for value in node.values:
+            if value in seen and value not in duplicates:
+                duplicates.append(value)
+            seen.add(value)
+
+        if duplicates:
+            rendered = ", ".join(repr(value) for value in duplicates)
+            raise SVPError(E004, node.loc.line, node.loc.col,
+                           f"Codomain {node.name!r} repite: {rendered}")
 
     def _validate_graph(self, node: GraphDecl):
         self._require_ref(node.relation, node.loc, "SemanticRelationDecl")

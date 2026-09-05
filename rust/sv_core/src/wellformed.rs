@@ -75,7 +75,22 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
     match kind {
         IrObjectKind::Codomain { values } => {
             if values.is_empty() {
-                return Err(format!("codomain {name} vacío"));
+                return Err(format!(
+                    "E004 (InvalidCodomain): codomain {name} vacío"
+                ));
+            }
+            let mut seen = BTreeSet::new();
+            let mut duplicates = BTreeSet::new();
+            for value in values {
+                if !seen.insert(value.as_str()) {
+                    duplicates.insert(value.as_str());
+                }
+            }
+            if !duplicates.is_empty() {
+                return Err(format!(
+                    "E004 (InvalidCodomain): codomain {name} repite: {}",
+                    duplicates.into_iter().collect::<Vec<_>>().join(", ")
+                ));
             }
         }
         IrObjectKind::OutputSemantics { .. } => {}

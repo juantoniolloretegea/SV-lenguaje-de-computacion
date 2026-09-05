@@ -4,7 +4,7 @@
 
 Este documento describe el catálogo efectivo utilizado por la etapa frontal de referencia correspondiente a Gramática v0.2 e IR v0.3.
 
-La versión v0.3 conserva el catálogo v0.2 y añade tres diagnósticos para las correcciones de admisibilidad, revisión identificada de `U` y cierre de `Frame`.
+La versión v0.3 conserva el catálogo v0.2, añade tres diagnósticos para las correcciones de admisibilidad, revisión identificada de `U` y cierre de `Frame`, y precisa el alcance efectivo de `E004` para `Codomain`.
 
 ```text
 catálogo v0.3
@@ -22,15 +22,22 @@ El catálogo v0.2 se conserva como antecedente histórico y no se reescribe.
 
 El catálogo efectivo contiene **50 códigos**.
 
-Los tres códigos incorporados en esta versión son:
+Los tres códigos incorporados y el código precisado en esta versión son:
 
 | Código | Nombre | Capa | Fase | Alcance |
 |---|---|---|---|---|
+| E004 | `InvalidCodomain` | Definición | `validate` | `Codomain` debe ser finito, explícito, no vacío y no contener miembros repetidos |
 | E110 | `InvalidAdmissibilitySpec` | Definición | `validate` | `AdmissibilitySpec` debe usar exclusivamente `Ok`, `Degraded` y `NotAdmitted`, con `parameter_id > 0` y regla no vacía |
 | E305 | `UnsafeUResolution` | Resultado | `validate` | `resolve` exige una `U` constituida e identificable y una instancia compatible con su `ResSpec` |
 | E308 | `FrameClosureViolation` | Evolución | `validate` | `Frame` contiene una referencia fuera de su cierre estructural o causal, una identidad duplicada o una criticidad no producible por la superficie vigente |
 
 Todos los códigos restantes mantienen el nombre y alcance del catálogo v0.2 salvo que una especificación posterior los sustituya expresamente.
+
+### 2.1. Precisión de `E004 — InvalidCodomain`
+
+`E004` se emite ante un `Codomain` vacío o con uno o más miembros repetidos. La realización debe rechazar la declaración y conservar como observables el código y el nombre; no puede deduplicar ni reordenar los miembros para fabricar una entrada válida.
+
+La tabla histórica de IR v0.2 asignó `E101 — EmptyCodomain`. Ese identificador no se reutiliza porque el catálogo efectivo ya lo asigna a `VectorLengthMismatch`. La correspondencia histórica permanece registrada como divergencia y N0-01 establece `E004` como identidad vigente, sin renumeración retroactiva.
 
 ---
 
@@ -143,14 +150,14 @@ E110, E305 y E308 no constituyen una solución lateral de esa deuda.
 
 ## 8. Cobertura reproducible
 
-La batería vigente contiene 72 casos:
+La batería vigente contiene 80 casos:
 
 ```text
-11 válidos
-61 inválidos
+12 válidos
+68 inválidos
 ```
 
-Los diagnósticos E110, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.
+Los diagnósticos E004, E110, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, codominios con miembros distintos, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.
 
 La existencia de un caso diagnóstico demuestra cobertura observable de ese supuesto; no equivale por sí sola al cierre de todos los juicios normativos relacionados.
 
