@@ -5,6 +5,10 @@
 **Acto precedente:** `N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md`  
 **Objeto:** cerrar la invalidez intrínseca de un `Codomain` con miembros repetidos, sin incorporar todavía contratos de perfil, dominio, salida, JSON o ensamblaje.
 
+**Revalidación posterior:** compatible con `main@230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`, `AGENTS.md`, `RETP-2026-072`, `RETP-2026-073` y los Pilares y restricciones de diseño del Lenguaje SV.
+
+N0-01 actúa exclusivamente sobre un invariante intrínseco ya representable de `Codomain`. No decide células, `b`, parámetros, dominio, agente, bus, host ni operación algebraica, y no atribuye a `sv_core` ejecución soberana distinta de la validación aquí probada.
+
 ## 1. Decisión
 
 `Codomain` representa un conjunto finito y explícito mediante una secuencia que conserva el orden declarado. Su bienformación exige:

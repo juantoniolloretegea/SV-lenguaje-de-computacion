@@ -7,12 +7,15 @@
 **Naturaleza:** clasificación forense y orden de cierre; acto exclusivamente documental  
 **Estado:** `N0_CONSTITUIDA · NUCLEO_NO_CERRADO`  
 **Efecto material sobre el Lenguaje:** ninguno  
+**Reconciliación posterior:** leída y comprobada sobre `main@230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`; queda subordinada a `AGENTS.md`, a `RETP-2026-072`, a `RETP-2026-073` y a los Pilares y restricciones de diseño del Lenguaje SV.
 
 ## 0. Precisión terminológica obligatoria
 
 La sigla `N0` de este documento identifica una **etapa de radiografía previa al cierre nuclear**. No designa ni modifica el nivel `N0 — Definición` de la IR canónica.
 
 Este acto no constituye una nueva meta-IR, un `PerfilDominio`, un agente, un superagente, una fase de persistencia ni una semántica de dominio.
+
+La clasificación forense y la secuencia propuestas en este corte no pueden utilizarse para decidir células, valores de `b`, asignaciones de parámetros, cobertura de agentes, bus, host ni ejecución algebraica no acreditada. Cuando una pieza posterior de rango aplicable precise el orden de trabajo, prevalece esa pieza sin borrar la identidad histórica de esta radiografía.
 
 ## 1. Objeto
 

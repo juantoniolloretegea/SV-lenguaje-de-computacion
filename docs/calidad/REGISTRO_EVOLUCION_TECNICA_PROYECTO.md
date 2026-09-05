@@ -42,6 +42,7 @@ La continuidad documental se organiza así:
 | RETP-2026-071 | 29/08/2026 | NO_CONSTA | INTEGRACION_PUBLICACION_Y_CIERRE_DE_CONFORMIDAD | Lenguaje SV / Beta B2 / realización estable bilingüe / cierre DFL-007 | cerrado |
 | RETP-2026-072 | 04/09/2026 | 22:04:26 | FIJACION_ARQUITECTONICA | Lenguaje SV / arquitectura de software / núcleo, frontera y host | cerrado |
 | RETP-2026-073 | 05/09/2026 | 13:42:20 | FIJACION_RESTRICCIONES_DE_DISENO | Lenguaje SV / pilares / frontera de autoridad dominio-agente-núcleo | cerrado |
+| RETP-2026-074 | 05/09/2026 | 14:56:55 | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / N0-01 / unicidad de `Codomain` | en_verificacion |
 
 ## 3. Entradas detalladas
 
@@ -242,6 +243,15 @@ La continuidad documental se organiza así:
 - **Límites:** no se elige `b` para ningún dominio, no se decide el número de células, no se asignan parámetros, no se constituye un bus o un perfil central, no se selecciona host y no se abre fase material. La ejecución algebraica completa en `sv_core` permanece no acreditada.
 - **Corrección registral:** se repara la serialización CSV de `RETP-2026-072`, que había quedado encapsulada como una sola celda, sin alterar su contenido material.
 - **Estado:** cerrado.
+
+### RETP-2026-074 — N0-01: unicidad de `Codomain`
+
+- **Hecho:** se impone en Python y Rust que `Codomain` sea una secuencia finita explícita, no vacía y sin miembros repetidos. El incumplimiento produce `E004 (InvalidCodomain)` y el ensamblaje falla cerrado.
+- **Fundamento:** la semántica de conjunto de `Codomain` no admite repetición. Aceptarla permitiría una representación ambigua o con pérdida y divergencias entre realizaciones.
+- **Evidencia provisional:** [radiografía N0](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md); [acta N0-01](../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md); base `main@230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`; sincronización `c1975b9077284aeb240378ff00cd1253e25495b2`; verificación local Python: conformidad 80/80, CLI 3/3, caracterización E006 4/4 y `compileall`. Falta registrar la CI de la cabeza que incorpora este asiento.
+- **Decisión:** mantener N0-01 como invariante intrínseco y representable; no reparar ni reordenar el codominio; no extender el cierre a orden, totalidad de salida ni N0-02 y siguientes.
+- **Límites:** no decide células, valores de `b`, parámetros, dominios, agentes, bus, host u operación algebraica; no acredita ejecución soberana adicional en `sv_core`.
+- **Estado:** en_verificacion.
 
 ## 4. Estado de continuidad
 
