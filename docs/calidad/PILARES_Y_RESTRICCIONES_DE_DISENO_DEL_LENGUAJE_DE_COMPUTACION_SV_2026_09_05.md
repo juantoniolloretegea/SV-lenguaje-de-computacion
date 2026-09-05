@@ -31,27 +31,27 @@ Cuando un ejemplo, comentario, prueba auxiliar o realización contradiga esta pi
 
 El alfabeto semántico canónico es:
 
-[
-Sigma = {0,1,U}
-]
+$$
+\Sigma = \{0,1,U\}
+$$
 
 Para cada célula exacta, la constitución declara un número natural `b` con `b ≥ 3`. El número de parámetros de la célula es:
 
-[
+$$
 n=b^2
-]
+$$
 
 y su estado exacto pertenece a:
 
-[
-mathcal{S}_n=Sigma^n
-]
+$$
+\mathcal{S}_n=\Sigma^n
+$$
 
 La cardinalidad del espacio de estados posibles es:
 
-[
-|mathcal{S}_n|=3^n
-]
+$$
+|\mathcal{S}_n|=3^n
+$$
 
 Estas igualdades no son una sugerencia de implementación ni una opción del perfil.
 
@@ -69,6 +69,13 @@ La condición `b ≥ 3` es intrínseca. El núcleo debe rechazar toda `CellSpec`
 
 El valor `n` no es una segunda decisión libre: se deriva de `b`. Ningún host, perfil, agente, parser o serializador puede aceptar simultáneamente un `b` y un `n` incompatibles, ni sustituir uno por otro, ni escoger el cuadrado «más próximo».
 
+En la superficie `.svp` vigente, `n` no es declarado por el autor: el frontend lo deriva de `b` y lo materializa después en la IR emitida. Esa protección por construcción no autoriza a confiar en un `n` materializado cuando una frontera futura admita IR importada, ensamblada o reintroducida. Toda vía de entrada deberá adoptar y probar uno de estos regímenes, sin zona intermedia:
+
+1. `n` es inalcanzable como dato independiente y se deriva siempre de `b`; o
+2. `n` llega materializado y la frontera comprueba de forma explícita `n=b²` antes de admitir el objeto.
+
+El diagnóstico `E003 — NSquaredViolation` figura en el catálogo vigente, pero no tiene hoy punto de emisión ejecutable. Por tanto, no puede citarse como protección activa. Antes de abrir una vía de entrada que transporte `n`, deberá fijarse expresamente su estatuto y existir una regresión que impida confiar en un valor incompatible.
+
 ### 1.4 Orden e identidad posicional
 
 Cada posición del vector conserva identidad, orden y vínculo con el parámetro que la constitución competente le haya asignado. Permutar, ordenar alfabéticamente, compactar, deduplicar o reconstruir posiciones cambia el objeto salvo prueba normativa expresa en contrario.
@@ -77,9 +84,9 @@ La proyección, serialización, ensamblaje y transporte deberán preservar este 
 
 Cuando la constitución de dominio utilice una correspondencia posicional,
 
-[
-mu_i:{1,ldots,n_i}longrightarrow P_i,
-]
+$$
+\mu_i:\{1,\ldots,n_i\}\longrightarrow P_i,
+$$
 
 donde `P_i` es el conjunto de parámetros declarado para la célula `i`, esa correspondencia deberá recibirse de forma explícita. El núcleo no la construye ni presume que sea inyectiva, sobreyectiva o biyectiva; tampoco decide el régimen de parámetros compartidos. Sólo podrá comprobar las propiedades que el contrato versionado haya constituido.
 
@@ -192,6 +199,8 @@ A fecha de esta pieza, el estado que puede afirmarse es:
 |---|---|---|
 | `b ≥ 3` | Implementada en referencia Python y `sv_core`. | Una célula inferior al mínimo se rechaza. |
 | Derivación `n=b²` | Implementada en lowering Python y frontend Rust. | `n` no se elige por separado. |
+| Protección persistida de la generalidad en `b` | En `main@ec00a546`, las 15 declaraciones reales de `CellSpec` del corpus positivo de conformidad usan `b=3`; no hay un caso positivo persistido con otro valor admisible. | La realización expresa una regla general, pero el corpus todavía no protege esa generalidad frente a regresión. |
+| `E003 — NSquaredViolation` | Declarado y catalogado, sin punto de emisión ejecutable; la superficie actual deriva `n` de `b`. | Es una imposibilidad estructural de la entrada vigente, no un diagnóstico activo reutilizable por una futura frontera. |
 | Estado como vector plano `Vec<Tri>` | Implementado en la IR Rust. | No existe una matriz canónica `b × b`. |
 | Longitud del vector igual a `n` | Implementada en validadores Python y Rust. | Un estado de longitud incompatible se rechaza. |
 | Constitución completa de células desde un dominio | No representada ni comprobada de extremo a extremo. | No puede inferirse ni darse por cerrada. |
@@ -226,6 +235,7 @@ Para cada restricción que llegue a ser representable deberán existir:
 
 - caso positivo mínimo;
 - para acreditar la generalidad de `n=b²`, casos positivos sintéticos con el valor mínimo y con al menos otro `b` admisible distinto, sin parámetros ni semántica de un dominio real;
+- si `n` continúa siendo exclusivamente derivado, regresión que impida introducirlo como dato independiente; si una frontera llega a recibirlo materializado, caso negativo que presente `b` y `n` incompatibles y compruebe el rechazo antes de admisión;
 - contraejemplo negativo que rompa exactamente esa restricción;
 - diagnóstico de la capa correcta;
 - prueba de que no se sustituye el fallo por `U`;
@@ -294,6 +304,8 @@ NUCLEO = VALIDA_Y_PRESERVA_SIN_SUPLANTAR
 CONTRATO_DE_DOMINIO_Y_AGENTE = OBLIGATORIO_Y_PENDIENTE_DE_SEDE
 COBERTURA_DE_AGENTE = REQUISITO_NO_REPRESENTABLE_HOY
 EJECUCION_ALGEBRAICA_COMPLETA_EN_SV_CORE = NO_ACREDITADA
+GENERALIDAD_EN_B_PROTEGIDA_POR_CORPUS = NO
+E003 = DECLARADO_SIN_EMISOR_EJECUTABLE
 BUS_CENTRAL = NO_CONSTITUIDO
 HOST_FINAL = NO_DECIDIDO
 FASE_MATERIAL_ABIERTA = NO
