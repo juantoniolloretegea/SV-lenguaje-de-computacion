@@ -7,6 +7,8 @@
 
 **Revalidación posterior:** compatible con `main@230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`, `AGENTS.md`, `RETP-2026-072`, `RETP-2026-073` y los Pilares y restricciones de diseño del Lenguaje SV.
 
+**Cierre probatorio posterior:** la cabeza material `49fa4e2c9afee9a7bcb3ed7a792f3490477c69f6` superó Conformidad SVP #276 (`33967623538`), R0 Rust #205 (`33967623535`), R0-8 Baseline nativa #156 (`33967623518`) y R0 WASM paridad de tres vías #151 (`33967623548`).
+
 N0-01 actúa exclusivamente sobre un invariante intrínseco ya representable de `Codomain`. No decide células, `b`, parámetros, dominio, agente, bus, host ni operación algebraica, y no atribuye a `sv_core` ejecución soberana distinta de la validación aquí probada.
 
 ## 1. Decisión
@@ -78,7 +80,7 @@ El siguiente acto nuclear admisible es N0-02: relación total y sin claves repet
 ## 7. Dictamen de alcance
 
 ```text
-CODOMAIN_COMO_CONJUNTO                = CERRADO_EN_N0_01_SI_CI_VERDE
+CODOMAIN_COMO_CONJUNTO                = CERRADO_EN_N0_01
 DIAGNOSTICO_E004                      = IDENTIDAD_VIGENTE
 RENORMALIZACION_SILENCIOSA            = PROHIBIDA
 PERFILES_DE_DOMINIO                   = NO_AFECTADOS
