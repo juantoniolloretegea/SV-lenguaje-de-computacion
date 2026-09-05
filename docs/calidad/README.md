@@ -5,13 +5,23 @@
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
-**Última actualización:** 29 de agosto de 2026
+**Última actualización:** 5 de septiembre de 2026
 
 ## 1. Función de esta carpeta
 
 `docs/calidad/` reúne los documentos públicos de control técnico, trazabilidad, deuda viva, verificación, continuidad y evolución del Lenguaje SV.
 
 Su función es permitir que un tercero distinga con precisión entre especificación, realización, evidencia ejecutable, deuda técnica, estado de fases y despliegue público. Los documentos de Calidad no sustituyen a la gramática, la IR, el código ni las pruebas que fundamentan cada afirmación.
+
+## 1.1. Pieza rectora de diseño
+
+La entrada prioritaria para cualquier modificación de gramática, IR, validación, núcleo, frontera, host, dominio o agente es:
+
+- [**Pilares y restricciones de diseño del Lenguaje de Computación SV**](./PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md).
+
+Esta pieza fija una frontera de autoridad: la unidad competente de dominio constituye sus células y asignaciones; la unidad competente de agente declara su cobertura sobre una constitución recibida; el Lenguaje representa, valida, preserva y falla cerrado, pero no completa ni suplanta esas decisiones. También impide confundir una célula exacta —vector plano de longitud `n=b²`— con una matriz `b × b`, utilizar `U` como relleno o convertir una ausencia contractual en aceptación silenciosa.
+
+Su relación con el reparto entre núcleo, frontera y host se documenta en el [acta técnica de arquitectura de software](./ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md).
 
 ## 2. Estado de continuidad vigente
 
