@@ -1,6 +1,6 @@
 # SV-lenguaje-de-computacion
 
-**Actualización de esta presentación técnica:** 29 de agosto de 2026  
+**Actualización de esta presentación técnica:** 5 de septiembre de 2026  
 **Autor:** Juan Antonio Lloret Egea  
 **ORCID:** [0000-0002-6634-3351](https://orcid.org/0000-0002-6634-3351)  
 **Institución:** ITVIA — IA eñ™  
@@ -17,6 +17,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 
 ### Accesos directos
 
+- **[Pilares y restricciones de diseño del Lenguaje de Computación SV](./docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md)** — pieza rectora: fija lo que el núcleo debe preservar y rechazar, y lo que tiene prohibido decidir por el dominio o por el agente.
 - [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — compilación Rust/WebAssembly local en el navegador.
 - [Gramática superficial mínima v0.2](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md).
 - [Especificación normativa de perfiles fuente SVP-ES / SVP-EN](./ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md).
@@ -37,6 +38,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Perfiles fuente | **SVP-ES · SVP-EN** | Dos representaciones fuente cerradas que convergen sobre una misma identidad canónica. |
 | Perfil léxico | **`svp-grammar-0.2-lex-es-1`** | Repertorio de identificadores; es independiente de los perfiles fuente. |
 | Representación intermedia | **0.3** | IR canónica común, independiente del idioma de fuente. |
+| Pilares de diseño | **RECTOR_DE_DISENO** | El núcleo valida y preserva contratos constituidos; no elige células, tamaños, asignaciones ni cobertura de agentes. |
 | Serializador canónico de referencia | **0.1.0** | JSON determinista de la implementación Python de referencia. |
 | Proyección diferencial Rust | **0.1.0** | Observable compartido por Rust nativo y WebAssembly; no sustituye al serializador canónico completo. |
 | Núcleo Rust | **`sv_core`** | Implementación compartida por los destinos nativo y WebAssembly. |
