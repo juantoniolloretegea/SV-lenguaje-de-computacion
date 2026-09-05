@@ -59,7 +59,9 @@ Estas igualdades no son una sugerencia de implementación ni una opción del per
 
 Una célula exacta es un **vector plano, ordenado y posicional de longitud `n`**. La igualdad `n=b²` determina la longitud; no convierte la célula en una tabla, una cuadrícula ni una colección de `b` filas de `b` parámetros.
 
-Por tanto, quedan prohibidas expresiones y realizaciones que traten la célula como «celda `b × b`», «matriz `b × b`» o cualquier estructura bidimensional equivalente, salvo que se declare expresamente como representación auxiliar sin autoridad ontológica y se pruebe una correspondencia exacta, reversible y sin reordenación con el vector canónico.
+Por tanto, quedan prohibidas expresiones y realizaciones que traten la célula como «celda `b × b`», «matriz `b × b`» o cualquier estructura bidimensional equivalente. Una disposición visual en cuadrícula no es la representación canónica y no podrá utilizarse como entrada, IR, contrato de dominio ni oráculo de prueba de la célula.
+
+La única tabla compatible con la cardinalidad anterior sería una enumeración conceptual del universo de estados: `3ⁿ` filas, cada una de ellas un vector ordenado de longitud `n`. Esa tabla no es una célula y el Lenguaje no necesita ni debe presumir su materialización completa en memoria.
 
 ### 1.3 Mínimo y derivación
 
@@ -72,6 +74,14 @@ El valor `n` no es una segunda decisión libre: se deriva de `b`. Ningún host, 
 Cada posición del vector conserva identidad, orden y vínculo con el parámetro que la constitución competente le haya asignado. Permutar, ordenar alfabéticamente, compactar, deduplicar o reconstruir posiciones cambia el objeto salvo prueba normativa expresa en contrario.
 
 La proyección, serialización, ensamblaje y transporte deberán preservar este orden o declarar una transformación canónica reversible cuya legitimidad haya sido constituida antes.
+
+Cuando la constitución de dominio utilice una correspondencia posicional,
+
+[
+mu_i:{1,ldots,n_i}longrightarrow P_i,
+]
+
+donde `P_i` es el conjunto de parámetros declarado para la célula `i`, esa correspondencia deberá recibirse de forma explícita. El núcleo no la construye ni presume que sea inyectiva, sobreyectiva o biyectiva; tampoco decide el régimen de parámetros compartidos. Sólo podrá comprobar las propiedades que el contrato versionado haya constituido.
 
 ### 1.5 `U` no es relleno ni fallo técnico
 
@@ -215,6 +225,7 @@ Ninguna obligación de esta pieza se considerará protegida sólo porque una pru
 Para cada restricción que llegue a ser representable deberán existir:
 
 - caso positivo mínimo;
+- para acreditar la generalidad de `n=b²`, casos positivos sintéticos con el valor mínimo y con al menos otro `b` admisible distinto, sin parámetros ni semántica de un dominio real;
 - contraejemplo negativo que rompa exactamente esa restricción;
 - diagnóstico de la capa correcta;
 - prueba de que no se sustituye el fallo por `U`;
