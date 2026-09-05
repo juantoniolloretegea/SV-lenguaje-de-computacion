@@ -66,10 +66,15 @@ N0-01 no decide:
 - orden total semántico de un codominio;
 - colisiones de claves o forma canónica del JSON;
 - integridad referencial de `Horizon.architecture`;
+- cobertura, disjunción o ausencia de solapamiento de las particiones de `Ternarizer`, incluida la repetición nominal de `partition_zero`, `partition_one` y `partition_u`;
+- unicidad de las posiciones de `CoupledSpec.bridges` ni el cierre representacional de `BridgeSet`;
+- estatuto de multiplicidad o unicidad de `Horizon.events`;
 - suficiencia de `Domain`, cobertura de `Agent` o perfiles de dominio;
 - composición de dominios o superagentes;
 - modificación de los perfiles fuente SVP-ES y SVP-EN;
 - actualización de toolchain, MSRV o dependencias Rust.
+
+Estas exclusiones no declaran admisibles los tres estados anteriores. Impiden presentar el cierre de `Codomain` como cierre general de toda secuencia con semántica de conjunto. Su examen exige actos separados y no puede resolverse por analogía dentro de N0-01.
 
 ## 6. Criterio de cierre y continuidad
 

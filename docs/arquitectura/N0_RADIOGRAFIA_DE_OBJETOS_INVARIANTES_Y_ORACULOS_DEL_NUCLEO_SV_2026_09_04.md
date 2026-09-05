@@ -98,6 +98,18 @@ DFL-005 identifica los seis campos opacos de `Domain` y `Agent.query_engine`, pe
 
 La identidad de los diagnósticos relativos a `Codomain` tampoco está reconciliada entre la tabla normativa heredada y las realizaciones vigentes. N0 registra el desacuerdo bajo DFL-001; el acto N0-01 deberá fijar una sola identidad observable antes de congelar nuevos oráculos.
 
+### 3.5 Adversarial posterior a N0-01 y clasificación de sus hallazgos
+
+Una revisión ejecutada sobre la cabeza `a4f00b96809e48ecc1c4b01da17bf9ef24400cdf` confirmó el cierre material de N0-01 y ejerció tres sondas hermanas. Las tres fueron admitidas por Python y Rust; esa admisión es anterior a N0-01 y no fue introducida por su parche.
+
+| Sonda | Hecho de realización | Estatuto y destino |
+|---|---|---|
+| `Ternarizer` con las tres particiones nombradas igual | ambos validadores sólo comprueban que las cadenas no estén vacías | `E107 — InvalidTernarizerPartition` ya constaba como `PARCIAL`: no están acreditadas cobertura, disjunción ni ausencia de solapamiento. Es deuda prioritaria antes de acreditar cualquier productor material de `Tri.U`; no es extensión de N0-01. |
+| `CoupledSpec` con `bridges: [3, 3]` | se comprueba el rango de cada posición, no su unicidad | la IR heredada declara `BridgeSet` y J1.2 exige un subconjunto. Es candidato intrínseco para un microcierre separado; N0-01 no autoriza deduplicación ni reparación silenciosa. |
+| `Horizon` con `events: [E, E]` | no existe comprobación de repetición | el campo se expresa como lista `[EventType]`, aunque la notación asociada usa un conjunto. Se registra como ambigüedad normativa: no se declara defecto ni se parchea hasta fijar si la multiplicidad tiene significado. |
+
+La revisión confirmó además que Rust agrupa hoy los fallos de bienformación bajo `CompileError::InvalidProgram(String)` y que la identidad `E004` se comprueba como contenido textual. Python dispone de una definición diagnóstica estructurada. La diferencia es deuda del contrato diagnóstico bajo DFL-001; no invalida la equivalencia observable probada para N0-01 y no se corrige dentro de este acto.
+
 ## 4. Frontera arquitectónica preservada
 
 ### 4.1 Núcleo, contrato, perfil, instancia e infraestructura
@@ -289,6 +301,9 @@ El identificador diagnóstico exacto se fijará en el parche normativo correspon
 | `SON-N0-08` | dos agentes sobre un dominio | capacidad vigente: debe permanecer admisible |
 | `SON-N0-09` | un agente sobre cobertura parcial | hoy no representable; no debe simularse mediante prosa |
 | `SON-N0-10` | un agente sobre dos dominios | hoy no representable; exige decisión separada |
+| `SON-N0-11` | las tres particiones de `Ternarizer` con el mismo nombre | ¿qué representación permite probar J1.5 sin inventar los conjuntos observacionales? |
+| `SON-N0-12` | `CoupledSpec.bridges = [3, 3]` | la semántica `BridgeSet` exige decidir y probar unicidad sin reparación silenciosa |
+| `SON-N0-13` | `Horizon.events = [E, E]` | ¿la lista representa un conjunto o una secuencia con multiplicidad? |
 
 Promover una sonda a oráculo exige una regla normativa previa. No se escribirá primero la prueba para obligar después a que la semántica adopte su presupuesto.
 
@@ -300,10 +315,18 @@ Promover una sonda a oráculo exige una regla normativa previa. No se escribirá
 2. cerrar la relación `CellSpec ↔ OutputSemantics ↔ Codomain`;
 3. impedir claves JSON homónimas y probar estabilidad de la proyección;
 4. resolver `Horizon.architecture` como `CompositionGraph` real;
-5. dictaminar el mínimo estructural de `Domain.parameters` y la multiplicidad de `parameter_id`, sin inventar todavía una correspondencia no representada;
-6. actualizar la deuda viva, la concordancia diagnóstica y el recuento documental de la batería afectados.
+5. cerrar en acto separado la unicidad de `CoupledSpec.bridges` como representación de `BridgeSet`, si el cotejo normativo no descubre una contradicción;
+6. dictaminar el estatuto de multiplicidad de `Horizon.events` sin convertir por analogía una lista en conjunto;
+7. dictaminar el mínimo estructural de `Domain.parameters` y la multiplicidad de `parameter_id`, sin inventar todavía una correspondencia no representada;
+8. actualizar la deuda viva, la concordancia diagnóstica y el recuento documental de la batería afectados.
 
 Cada punto se realizará en un commit delimitado o en una unidad indivisible justificada. No se mezclará con contenido de Inmunología o Ciberseguridad.
+
+### K1-T — Puerta previa a la producción material de `Tri.U`
+
+Antes de acreditar una ruta ejecutable que produzca `Tri.U` mediante `Ternarizer`, deberá cerrarse o impedirse explícitamente la deuda `E107/J1.5`: cobertura completa, disjunción y ausencia de solapamiento de `(B_0, B_1, B_U)`. La representación vigente mediante cadenas no autoriza al núcleo a inventar esos conjuntos, inferirlos desde el dominio ni aceptar en silencio que no puede comprobarlos.
+
+Esta puerta no ordena implementar ahora el ternarizador, no modifica el álgebra y no altera la separación de competencias entre dominio, agente y Lenguaje.
 
 ### F — Contrato candidato de dominio
 
