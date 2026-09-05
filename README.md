@@ -17,6 +17,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 
 ### Accesos directos
 
+- **[Puerta operativa obligatoria para agentes](./AGENTS.md)** — exige identificar el corte, leer el rector y detener cualquier cambio que lo contradiga o pretenda completarlo por inferencia.
 - **[Pilares y restricciones de diseño del Lenguaje de Computación SV](./docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md)** — pieza rectora: fija lo que el núcleo debe preservar y rechazar, y lo que tiene prohibido decidir por el dominio o por el agente.
 - [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — compilación Rust/WebAssembly local en el navegador.
 - [Gramática superficial mínima v0.2](./GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md).
