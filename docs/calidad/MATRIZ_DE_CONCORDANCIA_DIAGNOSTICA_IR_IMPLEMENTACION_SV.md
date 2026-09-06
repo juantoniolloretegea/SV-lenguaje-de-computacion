@@ -12,6 +12,8 @@ La clasificación por identificador se complementa con la tabla de correspondenc
 
 > **Nota posterior N0-01 — 04/09/2026.** Esta matriz y su CSV conservan la fotografía histórica del 19/08/2026. N0-01 no recalcula retrospectivamente sus balances globales: fija en la sucesión v0.3 `E004 — InvalidCodomain` como emisión directa y explícita para `Codomain` vacío o con miembros repetidos. El detalle vigente y su relación con el `E101 — EmptyCodomain` histórico constan en `ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md`.
 
+> **Nota posterior N0-02 — 06/09/2026.** El [catálogo efectivo v0.3](../referencia/ERRORES_CANONICOS_SV_v0_3.md) añade `E115 — InvalidOutputSemantics` para J-K1. `E102` mantiene su alcance de referencia ausente o de tipo incorrecto. Esta adición no recalcula la fotografía histórica de esta matriz ni su CSV; DFL-001 permanece abierta.
+
 ## 2. Resultado global
 
 El balance vigente por identificador es:

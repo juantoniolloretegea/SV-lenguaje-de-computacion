@@ -21,6 +21,11 @@ GRAMMAR_VERSION = "0.2"
 SERIALIZER_VERSION = "0.1.0"
 
 EXPECTED_INVALID_CODES = {
+    "output_semantics_vacia.svp": "E115",
+    "output_semantics_clave_ausente.svp": "E115",
+    "output_semantics_clave_ajena.svp": "E115",
+    "output_semantics_clave_repetida.svp": "E115",
+
     "identificador_palabra_reservada.svp": "E001",
     "identificador_guion_bajo_inicial.svp": "E001",
     "identificador_marca_combinante.svp": "E001",

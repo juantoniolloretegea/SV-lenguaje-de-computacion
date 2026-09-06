@@ -395,3 +395,9 @@ DOMINIO_Y_AGENTE = SEPARADOS
 ENSAMBLAJE_Y_SUPERAGENTE = NO_EQUIVALENTES
 NUCLEO_CERRADO = NO
 ```
+
+## 12. Recepción posterior de N0-02 · 06/09/2026
+
+RETP-079 constituye J-K1 y realiza el cierre de cada relación `CellSpec–OutputSemantics–Codomain`, con diagnóstico E115 y corpus de 85 casos. El [acta N0-02](./ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) fija evidencia, perfiles, límites y condición de promoción. Esta radiografía conserva sus hallazgos en el corte que los originó; no describe esos defectos como recién introducidos.
+
+Tras integrar ese expediente, la continuación es N0-03: ausencia global de miembros JSON homónimos y estabilidad de proyección. `semantics_unbound_duplicate` conserva un testigo explícito no cubierto por el vínculo de N0-02. La deuda CRLF sigue en DFL-008 y la concordancia diagnóstica general en DFL-001. No se declara cerrado el conjunto de K1.

@@ -9,6 +9,8 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
+**Precisiones posteriores:** N0-01 (§6.1) y N0-02 (§6.2), con alcance y diagnóstico expresos
+
 ---
 
 ## 1. Estatuto y relación con v0.2
@@ -247,6 +249,7 @@ Esta versión añade o refuerza, en el radio implementado, los siguientes juicio
 
 ```text
 J-K0  Codomain contiene al menos un miembro y no contiene miembros repetidos.
+J-K1  Cada CellSpec enlaza una interpretación única para cada miembro de su Codomain, sin claves ajenas.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
 J-R0  resolve identifica un estado evaluable y una posición real.
@@ -278,6 +281,28 @@ El identificador `E101 — EmptyCodomain` de la tabla histórica de IR v0.2 no s
 
 ---
 
+<a id="relacion-n0-02"></a>
+
+### 6.2. Relación total y unívoca `CellSpec–OutputSemantics–Codomain`
+
+Para cada `C : CellSpec`, sean `K = C.codomain` y `S = C.semantics` las declaraciones resueltas por identidad y tipo. Se exige:
+
+```text
+keys = [key | (key, description) ∈ S.mappings]
+card(keys) = card(set(keys))
+set(keys) = set(K.values)
+```
+
+Esta regla concreta J1.1 de IR v0.2: cada símbolo del codominio tiene exactamente una interpretación declarada. Rechaza una semántica vacía sobre codominio no vacío, claves ausentes, ajenas o repetidas, incluso si la repetición conserva el mismo texto. No exige textos descriptivos distintos, no juzga su contenido y no exige el mismo orden de declaración de claves y miembros. La validación no completa, deduplica ni reordena las declaraciones; conserva las reglas de representación y serialización existentes.
+
+La comprobación se realiza sobre cada `CellSpec`, después de resolver sus referencias, antes de producir la proyección observable. Las referencias adelantadas y las distribuidas entre unidades ES/EN se resuelven sobre el programa completo o ensamblado. Si varias celdas comparten una semántica, cada relación debe satisfacer la regla por separado; otra declaración semántica no suple sus claves ausentes.
+
+La invalidez de esta relación produce `E115 — InvalidOutputSemantics`, fase `validate`, capa efectiva 1 (Estado), con identidad de la celda, semántica y codominio implicados. `E102 — MissingOutputSemantics` conserva su alcance efectivo para referencia semántica ausente o de tipo incorrecto. El rechazo no produce IR ni un valor `U`.
+
+N0-02 cierra esta relación constituida, sin añadir a `OutputSemantics` una referencia propia de codominio. La validación global de nombres homónimos de JSON, incluidas declaraciones sin vínculo con una `CellSpec`, permanece en N0-03. La Gramática v0.2, el esquema de IR v0.3 y el serializador v0.1.0 se conservan: se refuerza la admisión de entradas, no se modifica la forma de salida de los programas conformes. Los programas que violan J-K1 dejan de admitirse.
+
+---
+
 ## 7. Elementos no modificados
 
 La versión 0.3 no introduce ni resuelve:
@@ -298,18 +323,19 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La implementación de referencia correspondiente a esta versión dispone de una batería de 80 casos:
+La implementación de referencia correspondiente a esta versión dispone de una batería de 85 casos:
 
 ```text
-12 válidos
-68 inválidos
-80 total
+13 válidos
+72 inválidos
+85 total
 ```
 
 Los casos válidos comparan la salida contra IR canónica comprometida. Los inválidos exigen el código diagnóstico declarado. La batería incluye contraejemplos específicos para:
 
 - estados de admisibilidad heredados;
 - `Codomain` con un miembro repetido;
+- semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - objetivo de `resolve` fuera de rango o distinto de `U`;
 - instancia de revisión incompatible;
 - estados de `Frame` ajenos a la arquitectura;

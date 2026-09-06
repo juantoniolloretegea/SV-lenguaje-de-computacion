@@ -1,0 +1,4 @@
+-- N0-02: orden independiente y textos descriptivos compartidos.
+codomain K = { B, A };
+output_semantics S { A -> "igual"; B -> "igual"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }

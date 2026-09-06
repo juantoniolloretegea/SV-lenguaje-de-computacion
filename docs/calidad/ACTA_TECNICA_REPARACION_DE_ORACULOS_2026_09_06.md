@@ -149,3 +149,7 @@ integrado con esos controles correctos. La continuación es **fila 3, K1 desde
 N0-02**, conservando N0-03, DFL-001 y DFL-008 en sus sedes. Detectar una carencia
 no la cierra. No se acredita cierre nuclear, ejecución algebraica adicional ni
 R2/R3/R4.
+
+## 7. Sucesión N0-02 del banco de sensibilidad · 06/09/2026
+
+El [acta N0-02, RETP-079](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) modifica explícitamente la expectativa de `semantics_duplicate`: después de resolver la relación constituida se exige E115 en ambos emisores. Conserva el control y las dos sondas CRLF, y añade la misma semántica duplicada sin `CellSpec` como testigo de la deuda N0-03. El esquema del informe pasa a `sv-oracle-sensitivity-v2`; su resultado es un control, un rechazo relacional y tres divergencias abiertas detectadas. Los resultados de §§4–6 permanecen ligados a su corte histórico. N0-02 no cierra DFL-008 ni la protección global de la proyección JSON.

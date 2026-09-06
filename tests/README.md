@@ -31,7 +31,7 @@ Los nombres históricos de dos ejecutores contienen `smoke`; se conservan como i
 
 El catálogo adversarial SEC.0 se documenta en `tests/sec0/README.md`, `tests/sec0/VECTORES_ADVERSARIALES_SEC0_V1.md` y `tests/sec0/MATRIZ_CORRESPONDENCIA_ALCANCE_SEC0_V1.md`.
 
-El corte N0-01 añade un único caso negativo de conformidad para la unicidad de `Codomain`. El corpus vigente pasa a **80 casos** —12 válidos y 68 inválidos— sin regenerar ni modificar los doce oráculos JSON válidos.
+El corte N0-01 añade un único caso negativo de conformidad para la unicidad de `Codomain`. El corpus de ese corte pasa a **80 casos** —12 válidos y 68 inválidos— sin regenerar ni modificar los doce oráculos JSON válidos.
 
 ## 3. Estado acreditado de la etapa frontal
 
@@ -179,7 +179,7 @@ FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente hasta dec
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
 
 
-## 6. Oráculos reparados · 06/09/2026
+## 10. Oráculos reparados · 06/09/2026
 
 El [acta de reparación de oráculos](../docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md)
 fija el alcance vigente y actualiza las menciones históricas a JSON normalizado:
@@ -197,3 +197,16 @@ las cuatro entradas, las salidas y errores originales y un informe con comandos,
 retornos y huellas. Un control conforme y tres divergencias detectadas acreditan
 la sensibilidad del comprobador. No amplían el corpus conforme ni cierran las
 divergencias. Una corrección posterior exige revisar explícitamente este banco.
+
+## 11. Cierre relacional N0-02 · 06/09/2026
+
+La [decisión J-K1 y el acta de cierre limitado](../docs/arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) añaden cuatro negativos E115 (vacía, clave ausente, ajena y repetida) y un positivo de orden independiente y textos compartidos. El corpus vigente es **85 = 13 válidos + 72 inválidos**, Gramática 0.2 / IR 0.3. Los doce esperados anteriores conservan su identidad; el nuevo esperado se declara desde los campos normativos y la huella de la fuente, sin generarlo desde la salida del compilador.
+
+```bash
+python -m unittest discover -s tests -p 'test_output_semantics_totality.py' -v
+cargo test --manifest-path rust/Cargo.toml -p sv_core --test output_semantics_totality
+```
+
+Las cinco pruebas Python verifican la relación y la conservación del AST; las seis Rust ejercen además ES/EN y ensamblaje con referencias cruzadas. Las subdivisiones de cada prueba no se suman como casos de conformidad.
+
+`run_oracle_sensitivity.py` pasa al esquema `sv-oracle-sensitivity-v2`: conserva el control y las dos sondas CRLF, exige E115 para `semantics_duplicate` enlazada y añade `semantics_unbound_duplicate` como testigo residual de N0-03. Resultado: un control, un rechazo N0-02 y tres divergencias abiertas detectadas. Las sondas siguen separadas de los 85 programas de conformidad; no se acredita cierre global de homónimos ni reparación de DFL-008.

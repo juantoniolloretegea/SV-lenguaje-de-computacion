@@ -100,3 +100,9 @@ rechazos actuales y no constituye paridad diagnóstica completa con Python. En
 particular, `admissibility_table_output_fuera_codominio.svp` conserva E011 en
 Python y un rechazo sintáctico previo en Rust. El nombre del caso no acredita
 cobertura de E011 en Rust. Véase el [acta de oráculos, §3](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md).
+
+## 7. Cierre relacional N0-02 y residuo N0-03 · 06/09/2026
+
+RETP-079 y el [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) cierran, tras la promoción de su expediente, la totalidad y unicidad de la semántica enlazada por cada `CellSpec`. J-K1 se comprueba en Python y Rust con E115, conservando E102 para la referencia ausente o de tipo incorrecto. Esta concordancia concreta no cierra DFL-001 ni modifica su fotografía diagnóstica histórica.
+
+N0-03 permanece abierto y es el siguiente relevo de K1. La sonda `semantics_unbound_duplicate` retira sólo `CellSpec` del testigo duplicado: Python sigue perdiendo un miembro y Rust emite homónimos. La comprobación universal de la proyección admitida debe cubrir ese supuesto, sin inferir una referencia de codominio ausente. La detección no acredita reparación ni aceptación normativa de la entrada. DFL-008 conserva ambas sondas CRLF y su condición de cierre.

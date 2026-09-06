@@ -104,10 +104,35 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             if nat_cmp_text(b, "3") == Ordering::Less {
                 return Err(format!("CellSpec {name}: b debe ser >= 3"));
             }
-            expect_object(symbols, codomain, "Codomain", |k| matches!(k, IrObjectKind::Codomain { .. }))?;
-            expect_object(symbols, semantics, "OutputSemantics", |k| matches!(k, IrObjectKind::OutputSemantics { .. }))?;
+            let codomain_kind = expect_object(symbols, codomain, "Codomain", |k| matches!(k, IrObjectKind::Codomain { .. }))?;
+            let semantics_kind = expect_object(symbols, semantics, "OutputSemantics", |k| matches!(k, IrObjectKind::OutputSemantics { .. }))?;
             if !matches!(role.as_str(), "Base" | "Supervisor" | "Composite") {
                 return Err(format!("CellSpec {name}: rol no reconocido: {role}"));
+            }
+            let expected: BTreeSet<&str> = match codomain_kind {
+                IrObjectKind::Codomain { values } => values.iter().map(String::as_str).collect(),
+                _ => unreachable!(),
+            };
+            let mappings = match semantics_kind {
+                IrObjectKind::OutputSemantics { mappings } => mappings,
+                _ => unreachable!(),
+            };
+            let mut seen = BTreeSet::new();
+            let mut duplicates = BTreeSet::new();
+            for (key, _) in mappings {
+                if !seen.insert(key.as_str()) {
+                    duplicates.insert(key.as_str());
+                }
+            }
+            let missing: Vec<_> = expected.difference(&seen).copied().collect();
+            let extra: Vec<_> = seen.difference(&expected).copied().collect();
+            if !duplicates.is_empty() || !missing.is_empty() || !extra.is_empty() {
+                return Err(format!(
+                    "E115 (InvalidOutputSemantics): CellSpec {name}, OutputSemantics {semantics}, Codomain {codomain}: repetidas=[{}]; ausentes=[{}]; ajenas=[{}]",
+                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
+                    missing.join(", "),
+                    extra.join(", "),
+                ));
             }
         }
         IrObjectKind::CoupledSpec { cell, bridges } => {
