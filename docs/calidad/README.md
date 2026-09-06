@@ -5,7 +5,7 @@
 **Institución:** ITVIA — IA eñ™  
 **ISSN:** 2695-6411  
 **Licencia:** CC BY-NC-ND 4.0  
-**Última actualización:** 5 de septiembre de 2026
+**Última actualización:** 6 de septiembre de 2026
 
 ## 1. Función de esta carpeta
 
@@ -22,6 +22,14 @@ La entrada prioritaria para cualquier modificación de gramática, IR, validaci�
 Esta pieza fija una frontera de autoridad: la unidad competente de dominio constituye sus células y asignaciones; la unidad competente de agente declara su cobertura sobre una constitución recibida; el Lenguaje representa, valida, preserva y falla cerrado, pero no completa ni suplanta esas decisiones. También impide confundir una célula exacta —vector plano de longitud `n=b²`— con una matriz `b × b`, utilizar `U` como relleno o convertir una ausencia contractual en aceptación silenciosa.
 
 Su relación con el reparto entre núcleo, frontera y host se documenta en el [acta técnica de arquitectura de software](./ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md).
+
+## 1.2. Perfiles, contratos y ensamblaje: condición de cierre
+
+> **Lectura prioritaria, junto con los Pilares:** [Acta técnica de perfiles, contratos y ensamblaje: representación, dominio y soporte tecnológico](./ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md).
+
+Esta acta fija la terna contractual, diferencia sus tres ensamblajes y precisa qué información y obligaciones deben llegar a la semántica y a la IR antes de consolidar el alcance nuclear. Exige pruebas previas de las realizaciones tecnológicas en el laboratorio, con enlaces a contratos, artefactos, resultados y límites, y conserva el relevo secuencial desde OP-IMM-001. Es el marco canónico de diseño; la candidata PT-SV-LOCAL y su matriz permanecen en la sede experimental.
+
+La [Documentación de laboratorios](https://juantoniolloretegea.github.io/SVcustos-dataset/laboratorio-de-infraestructura-SV/documentacion/) mantiene un vínculo explícito a esta acta, sin segunda copia normativa. Asiento RETP-075; RETP-074 conserva su asignación a la PR #61 pendiente de integración.
 
 ## 2. Estado de continuidad vigente
 

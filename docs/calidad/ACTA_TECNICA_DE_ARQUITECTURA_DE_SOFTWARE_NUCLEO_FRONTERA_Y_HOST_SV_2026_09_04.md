@@ -175,3 +175,10 @@ USO_CLINICO_O_DATOS_REALES = NO_AUTORIZADO
 ```
 
 Queda constituido este reparto como base para las decisiones posteriores de frontera e integración, sin alterar el estado funcional del Lenguaje SV.
+
+
+## 10. Desarrollo contractual de la terna · 06/09/2026
+
+El [acta de perfiles, contratos y ensamblaje](./ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md) desarrolla el apartado 4: perfil fuente, constitución de dominio y perfil de soporte tecnológico conservan identidad y contrato propios; el agente declara cobertura y permisos sobre las constituciones recibidas. Distingue ensamblaje multifuente, composición de dominios/agentes y ensamblaje tecnológico, y exige justificar la suficiencia de semántica y representación antes de cerrar el alcance nuclear.
+
+Los perfiles de soporte se vinculan al contrato de frontera y a las realizaciones del anfitrión. Se ensayan previamente en el laboratorio, cuyos registros se referencian sin copiar sus datos ni atribuirles autoridad normativa automática. La candidata tecnológica 020 no selecciona una plataforma ni acredita una integración completa. El reparto entre los tres estratos y las decisiones abiertas de esta acta se conserva. Registro complementario: RETP-2026-075.
