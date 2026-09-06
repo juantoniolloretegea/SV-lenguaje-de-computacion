@@ -8,6 +8,10 @@ on:
       - "docs/arquitectura/*R1_6*"
       - "src/**"
       - "tests/r0_7_equivalence.py"
+      - "tests/oracle_support.py"
+      - "tests/test_oracle_support.py"
+      - "tests/run_oracle_sensitivity.py"
+      - "tests/run_conformance.py"
       - "tests/conformance/valid/**"
       - "tests/conformance/invalid/**"
       - ".github/workflows/r0-rust.yml"
@@ -38,6 +42,21 @@ jobs:
 
       - name: Ejercer equivalencia R0-7 sobre el mismo SVP
         run: python tests/r0_7_equivalence.py --rust-bin rust/target/debug/sv-native
+
+      - name: Verificar sensibilidad ante divergencias conocidas
+        run: |
+          python tests/run_oracle_sensitivity.py \
+            --rust-bin rust/target/debug/sv-native \
+            --output-dir artifacts/oracle-sensitivity
+
+      - name: Preservar evidencia del observador
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: oracle-sensitivity
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/oracle-sensitivity/
 
       - name: Comprobar núcleo para WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown

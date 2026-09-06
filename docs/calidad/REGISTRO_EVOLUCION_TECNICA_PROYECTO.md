@@ -45,6 +45,7 @@ La continuidad documental se organiza así:
 | RETP-2026-074 | 05/09/2026 | 14:56:55 | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / N0-01 / unicidad de `Codomain` | cerrado |
 
 | RETP-2026-077 | 06/09/2026 | 22:26:33 | RECEPCION_Y_RECONCILIACION_GOBERNADA | Lenguaje SV / PR61 / N0-01 / relevo a oráculos | recepción delimitada; promoción por PR61 |
+| RETP-2026-078 | 06/09/2026 | NO_CONSTA | REPARACION_DE_ORACULOS | Lenguaje SV / fila 2 / PT02-PT04-PT13 | reparación delimitada; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -283,6 +284,14 @@ La continuidad documental se organiza así:
 - **Decisión:** recibir exclusivamente unicidad de Codomain, radiografía y deuda asociada. La recepción es efectiva en main cuando PR61 conste fusionada tras los controles de su candidato exacto. La [transición §18](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#recepcion-n0-01-20260906) deja como siguiente paso la reparación de oráculos y, después, K1 desde N0-02.
 - **Límites:** la equivalencia JSON normalizada no acredita identidad literal entre emisores, ni un código de salida no nulo demuestra por sí solo el diagnóstico esperado. Esas reparaciones generales siguen en la fila 2. No se modifica adicionalmente el código reconciliado, no se cambian toolchains, no se publica el Playground ni se cierra K1, álgebra, núcleo o R2/R3/R4.
 - **Estado:** recepción delimitada; promoción y corte de salida comprobables en el expediente PR61.
+
+### RETP-2026-078 — Reparación de oráculos y continuidad K1
+
+- **Hecho y fundamento:** se reemplaza la comparación JSON que perdía miembros u orden; se capturan bytes y se exige rechazo controlado con retorno 1, ausencia de IR e identidad diagnóstica. Fuente: main `91dc5a3`, Pilares, perfiles, secuencia, N0 y recepción RETP-077.
+- **Evidencia:** [acta de oráculos](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md), 80 casos conservados, 16 pruebas del observador, un control conforme y tres divergencias detectadas; destinos nativo/WASI/navegador según los controles del candidato exacto. Los doce esperados permanecen íntegros.
+- **Alcance:** PT02/PT04/PT13, identidad y entorno PT01/PT14. Comprobadores y documentación; la fuente Python, el núcleo Rust, la gramática y la IR conservan su identidad.
+- **Límites:** N0-02/N0-03 conservan semántica repetida y proyección; DFL-008 conserva pérdida CRLF; DFL-001 conserva la diferencia de fase y representación diagnóstica. Detectar no cierra estas deudas ni acredita un soporte productivo.
+- **Decisión y estado:** reparación efectiva tras promoción del expediente con los cuatro flujos correctos sobre la candidata exacta. La [transición §19](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#oraculos-20260906) deja como siguiente paso K1 desde N0-02.
 
 ## 4. Estado de continuidad
 

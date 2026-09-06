@@ -8,12 +8,18 @@ El host WASI sólo proporciona infraestructura de ejecución; no interpreta SVP.
 from __future__ import annotations
 
 import argparse
+import base64
 import hashlib
 import json
 from pathlib import Path
 import subprocess
 import sys
 from typing import Any
+
+from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
+                            assert_python_rejection, assert_rust_rejection,
+                            check_invalid_corpus)
+from run_conformance import EXPECTED_INVALID_CODES
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
@@ -28,51 +34,43 @@ def sha256_file(path: Path) -> str:
     return sha256_bytes(path.read_bytes())
 
 
-def canonical_json(text: str) -> str:
-    return json.dumps(
-        json.loads(text),
-        ensure_ascii=False,
-        sort_keys=True,
-        separators=(",", ":"),
-    )
-
-
-def run(command: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        command,
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
-
-
 def version(command: list[str]) -> str:
     completed = run(command)
     if completed.returncode != 0:
         return f"ERROR({completed.returncode}): {completed.stderr.strip()}"
-    return completed.stdout.strip() or completed.stderr.strip()
+    return (completed.stdout.strip() or completed.stderr.strip()).decode("utf-8")
 
 
 def case_record(
     name: str,
     category: str,
-    py: subprocess.CompletedProcess[str],
-    native: subprocess.CompletedProcess[str],
-    wasm: subprocess.CompletedProcess[str],
+    py: subprocess.CompletedProcess[bytes],
+    native: subprocess.CompletedProcess[bytes],
+    wasm: subprocess.CompletedProcess[bytes],
 ) -> dict[str, Any]:
     return {
         "case": name,
         "category": category,
+        "streams_base64": {
+            emitter: {stream: base64.b64encode(getattr(proc, stream)).decode("ascii")
+                      for stream in ["stdout", "stderr"]}
+            for emitter, proc in [("python", py), ("native", native), ("wasm", wasm)]
+        },
+        "commands": {"python": py.args, "native": native.args, "wasm": wasm.args},
         "returncodes": {
             "python": py.returncode,
             "native": native.returncode,
             "wasm": wasm.returncode,
         },
+        "stderr_sha256": {
+            "python": sha256_bytes(py.stderr),
+            "native": sha256_bytes(native.stderr),
+            "wasm": sha256_bytes(wasm.stderr),
+        },
         "stdout_sha256": {
-            "python": sha256_bytes(py.stdout.encode("utf-8")),
-            "native": sha256_bytes(native.stdout.encode("utf-8")),
-            "wasm": sha256_bytes(wasm.stdout.encode("utf-8")),
+            "python": sha256_bytes(py.stdout),
+            "native": sha256_bytes(native.stdout),
+            "wasm": sha256_bytes(wasm.stdout),
         },
     }
 
@@ -98,6 +96,9 @@ def main() -> int:
     invalid_cases = sorted(INVALID_DIR.glob("*.svp"))
     failures: list[str] = []
     records: list[dict[str, Any]] = []
+    check_invalid_corpus(invalid_cases)
+    if not valid_cases:
+        raise AssertionError("corpus válido vacío")
 
     for source in valid_cases:
         golden = source.with_suffix(".expected.json")
@@ -107,7 +108,7 @@ def main() -> int:
 
         py = run([sys.executable, "src/svp_main.py", str(source)])
         native = run([str(native_bin), str(source)])
-        wasm = run(["node", str(wasi_runner), str(wasm_bin), str(source)])
+        wasm = run(["node", "--no-warnings", str(wasi_runner), str(wasm_bin), str(source)])
         records.append(case_record(source.stem, "valid", py, native, wasm))
 
         if py.returncode != 0:
@@ -120,29 +121,14 @@ def main() -> int:
             failures.append(f"VALID {source.stem}: WebAssembly falló: {wasm.stderr.strip()}")
             continue
 
-        reference = canonical_json(py.stdout)
-        expected = canonical_json(golden.read_text(encoding="utf-8"))
-        sovereign = canonical_json(native.stdout)
-        webassembly = canonical_json(wasm.stdout)
-
-        if reference != expected:
-            failures.append(
-                f"VALID {source.stem}: Python ya no coincide con el golden comprometido"
-            )
-            continue
-        if sovereign != reference:
-            failures.append(
-                f"VALID {source.stem}: divergencia nativo/Python\n"
-                f"  Python: {reference}\n"
-                f"  Nativo: {sovereign}"
-            )
-            continue
-        if webassembly != sovereign:
-            failures.append(
-                f"VALID {source.stem}: divergencia WebAssembly/nativo\n"
-                f"  Nativo: {sovereign}\n"
-                f"  WASM:   {webassembly}"
-            )
+        try:
+            for result in [py, native, wasm]:
+                assert_success(result)
+            assert_json_equal(py.stdout, golden.read_bytes())
+            assert_json_equal(native.stdout, py.stdout)
+            assert_bytes_equal(wasm.stdout, native.stdout)
+        except AssertionError as exc:
+            failures.append(f"VALID {source.stem}: {exc}")
             continue
 
         print(f"R0 WASM VALID OK: {source.stem}")
@@ -150,35 +136,38 @@ def main() -> int:
     for source in invalid_cases:
         py = run([sys.executable, "src/svp_main.py", str(source)])
         native = run([str(native_bin), str(source)])
-        wasm = run(["node", str(wasi_runner), str(wasm_bin), str(source)])
+        wasm = run(["node", "--no-warnings", str(wasi_runner), str(wasm_bin), str(source)])
         records.append(case_record(source.stem, "invalid", py, native, wasm))
 
-        if py.returncode == 0:
-            failures.append(f"INVALID {source.stem}: Python aceptó el caso")
-            continue
-        if native.returncode == 0:
-            failures.append(f"INVALID {source.stem}: nativo aceptó el caso")
-            continue
-        if wasm.returncode == 0:
-            failures.append(f"INVALID {source.stem}: WebAssembly aceptó el caso")
+        try:
+            assert_python_rejection(py, EXPECTED_INVALID_CODES[source.name])
+            assert_rust_rejection(native, source.stem)
+            assert_rust_rejection(wasm, source.stem)
+            assert_bytes_equal(wasm.stderr, native.stderr)
+        except AssertionError as exc:
+            failures.append(f"INVALID {source.stem}: {exc}")
             continue
 
         print(f"R0 WASM INVALID OK: {source.stem}")
 
     report: dict[str, Any] = {
-        "schema": "sv-r0-wasm-three-way-parity-v1",
+        "schema": "sv-r0-wasm-three-way-parity-v2",
         "scope": "same-svp-python-native-wasm",
-        "diagnostic_parity": "not-proven",
+        "diagnostic_parity": "python-code; rust-text-identity; native-wasi-stderr-bytes",
+        "cross_language_diagnostic_equivalence": "not-proven",
+        "json_comparison": "ordered-pairs; duplicate-members-rejected; exact-numbers",
+        "byte_comparison": "native-wasi-stdout; raw-stream-sha256",
+        "wasi_warning_policy": "node --no-warnings; errors remain on stderr",
         "source_head": args.source_head,
         "base_head": args.base_head,
         "artifacts": {
             "native_binary": {
-                "path": str(native_bin.relative_to(ROOT)),
+                "path": str(native_bin),
                 "bytes": native_bin.stat().st_size,
                 "sha256": sha256_file(native_bin),
             },
             "wasm_module": {
-                "path": str(wasm_bin.relative_to(ROOT)),
+                "path": str(wasm_bin),
                 "bytes": wasm_bin.stat().st_size,
                 "sha256": sha256_file(wasm_bin),
                 "target": "wasm32-wasip1",

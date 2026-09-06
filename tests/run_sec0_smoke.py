@@ -9,7 +9,6 @@ Comprueba tres propiedades básicas del compilador de referencia:
 
 from __future__ import annotations
 
-import json
 import sys
 from pathlib import Path
 
@@ -21,18 +20,15 @@ sys.path.insert(0, str(SRC))
 
 from svp_main import process_file  # type: ignore
 from svp_errors import SVPError  # type: ignore
-
-
-def canonicalize_json_text(text: str) -> str:
-    data = json.loads(text)
-    return json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
+from oracle_support import ordered_json, assert_bytes_equal
 
 
 def assert_deterministic(path: Path, label: str) -> None:
-    first = canonicalize_json_text(process_file(str(path)))
-    second = canonicalize_json_text(process_file(str(path)))
-    if first != second:
-        raise AssertionError(f"{label}: lowering no determinista entre dos ejecuciones consecutivas")
+    first = process_file(str(path)).encode("utf-8")
+    second = process_file(str(path)).encode("utf-8")
+    ordered_json(first)
+    ordered_json(second)
+    assert_bytes_equal(first, second)
 
 
 def test_long_identifier_valid() -> None:
@@ -52,7 +48,9 @@ def test_duplicate_name_invalid() -> None:
 
 
 def test_deep_nested_query_valid() -> None:
-    assert_deterministic(ADV / "deep_nested_query_valid.svp", "deep_nested_query_valid")
+    # El antecedente de gramática 0.1 permanece archivado; DFL-007 ya lo retiró.
+    assert_deterministic(ROOT / "tests/conformance/valid/query_context_all_variants.svp",
+                         "query_context_all_variants")
 
 
 def main() -> int:

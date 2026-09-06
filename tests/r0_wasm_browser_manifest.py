@@ -2,9 +2,10 @@
 """Prepara el manifiesto de paridad para el destino WebAssembly de navegador.
 
 El manifiesto contiene el mismo texto `.svp` y, para válidos, el stdout exacto
-producido por el binario Rust nativo después de comprobar que Python = golden =
-nativo. El navegador recibe el texto SVP; nunca recibe IR preconstituida como
-entrada del módulo WebAssembly.
+producido por el binario Rust nativo después de comprobar la igualdad estructural
+con pares JSON ordenados entre Python, el esperado comprometido y Rust. El
+navegador recibe el texto SVP; nunca recibe IR preconstituida como entrada del
+módulo WebAssembly.
 """
 
 from __future__ import annotations
@@ -12,31 +13,16 @@ from __future__ import annotations
 import argparse
 import json
 from pathlib import Path
-import subprocess
 import sys
+
+from oracle_support import (run, assert_success, assert_json_equal,
+                            assert_python_rejection, assert_rust_rejection,
+                            check_invalid_corpus, cli_payload)
+from run_conformance import EXPECTED_INVALID_CODES
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
 INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"
-
-
-def canonical_json(text: str) -> str:
-    return json.dumps(
-        json.loads(text),
-        ensure_ascii=False,
-        sort_keys=True,
-        separators=(",", ":"),
-    )
-
-
-def run(command: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        command,
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
 
 
 def main() -> int:
@@ -53,6 +39,9 @@ def main() -> int:
 
     failures: list[str] = []
     cases: list[dict[str, object]] = []
+    check_invalid_corpus(INVALID_DIR.glob("*.svp"))
+    if not list(VALID_DIR.glob("*.svp")):
+        raise AssertionError("corpus válido vacío")
 
     for source in sorted(VALID_DIR.glob("*.svp")):
         golden = source.with_suffix(".expected.json")
@@ -69,11 +58,13 @@ def main() -> int:
             failures.append(f"VALID {source.stem}: falta golden")
             continue
 
-        reference = canonical_json(py.stdout)
-        expected = canonical_json(golden.read_text(encoding="utf-8"))
-        sovereign = canonical_json(native.stdout)
-        if reference != expected or sovereign != reference:
-            failures.append(f"VALID {source.stem}: Python/golden/nativo divergen")
+        try:
+            assert_success(py)
+            assert_success(native)
+            assert_json_equal(py.stdout, golden.read_bytes())
+            assert_json_equal(native.stdout, py.stdout)
+        except AssertionError as exc:
+            failures.append(f"VALID {source.stem}: {exc}")
             continue
 
         cases.append(
@@ -81,19 +72,19 @@ def main() -> int:
                 "name": source.stem,
                 "file_name": source.name,
                 "category": "valid",
-                "source": source.read_text(encoding="utf-8"),
-                "expected_stdout": native.stdout,
+                "source": source.read_bytes().decode("utf-8"),
+                "expected_payload": cli_payload(native.stdout).decode("utf-8"),
             }
         )
 
     for source in sorted(INVALID_DIR.glob("*.svp")):
         py = run([sys.executable, "src/svp_main.py", str(source)])
         native = run([str(native_bin), str(source)])
-        if py.returncode == 0:
-            failures.append(f"INVALID {source.stem}: Python aceptó el caso")
-            continue
-        if native.returncode == 0:
-            failures.append(f"INVALID {source.stem}: nativo aceptó el caso")
+        try:
+            assert_python_rejection(py, EXPECTED_INVALID_CODES[source.name])
+            diagnostic = assert_rust_rejection(native, source.stem)
+        except AssertionError as exc:
+            failures.append(f"INVALID {source.stem}: {exc}")
             continue
 
         cases.append(
@@ -101,13 +92,13 @@ def main() -> int:
                 "name": source.stem,
                 "file_name": source.name,
                 "category": "invalid",
-                "source": source.read_text(encoding="utf-8"),
-                "expected_stdout": None,
+                "source": source.read_bytes().decode("utf-8"),
+                "expected_diagnostic": diagnostic,
             }
         )
 
     result = {
-        "schema": "sv-r0-browser-parity-manifest-v1",
+        "schema": "sv-r0-browser-parity-manifest-v2",
         "source_head": args.source_head,
         "base_head": args.base_head,
         "rule": "browser receives source text only; expected output is test oracle only",

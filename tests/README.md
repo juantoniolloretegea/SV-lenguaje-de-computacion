@@ -177,3 +177,23 @@ FFL-A, FFL-B, FFL-C y FFL-E están cerrados. FFL-D permanece pendiente hasta dec
 
 *Lenguaje de computación del Sistema Vectorial SV.*  
 *Juan Antonio Lloret Egea | ORCID 0000-0002-6634-3351 | CC BY-NC-ND 4.0 | ISSN 2695-6411*
+
+
+## 6. Oráculos reparados · 06/09/2026
+
+El [acta de reparación de oráculos](../docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md)
+fija el alcance vigente y actualiza las menciones históricas a JSON normalizado:
+Gramática 0.2, IR 0.3, comparación de pares ordenados sin pérdida de miembros ni
+precisión numérica, e identidad literal donde se declara. Los doce archivos
+`.expected.json` y los ochenta programas de conformidad se conservan.
+
+```bash
+python -m unittest discover -s tests -p 'test_oracle_support.py' -v
+python tests/run_oracle_sensitivity.py --rust-bin rust/target/debug/sv-native --output-dir artifacts/oracle-sensitivity
+```
+
+La segunda orden exige un binario construido desde el corte examinado. Produce
+las cuatro entradas, las salidas y errores originales y un informe con comandos,
+retornos y huellas. Un control conforme y tres divergencias detectadas acreditan
+la sensibilidad del comprobador. No amplían el corpus conforme ni cierran las
+divergencias. Una corrección posterior exige revisar explícitamente este banco.

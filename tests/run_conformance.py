@@ -14,6 +14,7 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from svp_errors import SVPError
 from svp_main import process_file
+from oracle_support import assert_json_equal, ordered_json, check_invalid_corpus
 
 IR_VERSION = "0.3"
 GRAMMAR_VERSION = "0.2"
@@ -91,11 +92,6 @@ EXPECTED_INVALID_CODES = {
 }
 
 
-def canonicalize_json_text(text: str) -> str:
-    data = json.loads(text)
-    return json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
-
-
 def expected_json_path(valid_dir: str, fname: str) -> str:
     stem, _ = os.path.splitext(fname)
     return os.path.join(valid_dir, f"{stem}.expected.json")
@@ -105,6 +101,10 @@ def run_tests() -> int:
     base = os.path.dirname(os.path.abspath(__file__))
     valid_dir = os.path.join(base, "conformance", "valid")
     invalid_dir = os.path.join(base, "conformance", "invalid")
+    from pathlib import Path
+    check_invalid_corpus(Path(invalid_dir).glob("*.svp"))
+    if not list(Path(valid_dir).glob("*.svp")):
+        raise AssertionError("corpus válido vacío")
 
     passed = 0
     failed = 0
@@ -126,6 +126,7 @@ def run_tests() -> int:
                     )
 
                 result = process_file(path)
+                ordered_json(result.encode("utf-8"))
                 doc = json.loads(result)
 
                 assert doc.get("ir_version") == IR_VERSION
@@ -133,14 +134,8 @@ def run_tests() -> int:
                 assert "source_sha256" in doc
                 assert doc.get("serializer_version") == SERIALIZER_VERSION
 
-                produced = canonicalize_json_text(result)
-                with open(exp_path, "r", encoding="utf-8") as fh:
-                    expected = canonicalize_json_text(fh.read())
-
-                if produced != expected:
-                    raise AssertionError(
-                        f"JSON canónico distinto del expected: {os.path.basename(exp_path)}"
-                    )
+                with open(exp_path, "rb") as fh:
+                    assert_json_equal(result.encode("utf-8"), fh.read())
 
                 print(f" ✓ {fname}")
                 passed += 1

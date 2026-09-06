@@ -28,7 +28,8 @@ function writeInternalBuffer(exports, exportName, text) {
 function readCompileResult(exports, packed) {
   const result = unpackResult(packed);
   const bytes = new Uint8Array(exports.memory.buffer, result.ptr, result.len);
-  return { error: result.error, text: decoder.decode(bytes.slice()) };
+  const copy = bytes.slice();
+  return { error: result.error, text: decoder.decode(copy), bytes: copy };
 }
 
 function compileCase(exports, source, fileName) {
@@ -43,6 +44,10 @@ function compileProfileCase(exports, source, fileName, profileCode) {
   return readCompileResult(exports, exports.sv_compile_svp_json_profile(profileCode));
 }
 
+function equalBytes(left, right) {
+  return left.length === right.length && left.every((value, index) => value === right[index]);
+}
+
 async function main() {
   const [manifestResponse, wasmResponse] = await Promise.all([
     fetch("/artifacts/r0-browser/manifest.json", { cache: "no-store" }),
@@ -53,6 +58,13 @@ async function main() {
   }
 
   const manifest = await manifestResponse.json();
+  if (manifest.schema !== "sv-r0-browser-parity-manifest-v2" || manifest.failures.length) {
+    throw new Error("manifiesto inválido o con fallos previos");
+  }
+  if (!manifest.counts.valid || !manifest.counts.invalid ||
+      manifest.cases.length !== manifest.counts.valid + manifest.counts.invalid) {
+    throw new Error("corpus vacío o incompleto");
+  }
   const wasmBytes = await wasmResponse.arrayBuffer();
   const { instance } = await WebAssembly.instantiate(wasmBytes, {});
   const exports = instance.exports;
@@ -88,13 +100,17 @@ async function main() {
     if (testCase.category === "valid") {
       if (result.error) {
         failures.push(`VALID ${testCase.name}: WebAssembly rechazó: ${result.text}`);
-      } else if (result.text !== testCase.expected_stdout.trimEnd()) {
+      } else if (!equalBytes(result.bytes, encoder.encode(testCase.expected_payload))) {
         failures.push(`VALID ${testCase.name}: stdout WebAssembly != nativo`);
       } else {
         validOk += 1;
       }
+    } else if (testCase.category !== "invalid") {
+      failures.push(`categoría desconocida: ${testCase.category}`);
     } else if (!result.error) {
       failures.push(`INVALID ${testCase.name}: WebAssembly aceptó la entrada`);
+    } else if (!equalBytes(result.bytes, encoder.encode(testCase.expected_diagnostic))) {
+      failures.push(`INVALID ${testCase.name}: diagnóstico WASM != nativo`);
     } else {
       invalidOk += 1;
     }
@@ -145,6 +161,9 @@ async function main() {
     }
   }
 
+  if (validOk !== manifest.counts.valid || invalidOk !== manifest.counts.invalid) {
+    failures.push("recuentos ejecutados distintos del manifiesto");
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,

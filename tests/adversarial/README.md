@@ -55,3 +55,13 @@ No mide rendimiento, no hace fuzzing y no sustituye la suite oficial de conformi
 ## Sondas documentadas
 
 La subcarpeta `documentados/` reúne piezas públicas de contraste técnico inspiradas en lecturas adversariales externas. No forman parte de la suite principal de conformidad ni deben leerse como ejemplos canónicos de iniciación. Su función es mostrar, de forma legible, qué zonas del lenguaje ya son verificables y qué zonas siguen tensionando huecos de validación o de representación superficial.
+
+
+## Continuidad del ejecutor · 06/09/2026
+
+El archivo `deep_nested_query_valid.svp` fue reclasificado y archivado por DFL-007
+como antecedente de Gramática 0.1. El ejecutor utiliza ahora el caso vigente
+`tests/conformance/valid/query_context_all_variants.svp` para la comprobación de
+consulta. La tabla anterior conserva su carácter histórico. El determinismo se
+comprueba sobre los bytes UTF-8 de ambas salidas, sin ordenar ni reserializar JSON.
+La ausencia de miembros homónimos se verifica por separado.
