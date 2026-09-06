@@ -191,3 +191,8 @@ Queda constituido este encuadre de perfiles, contratos y ensamblajes y la exigen
 La nueva entrada RETP-075 se refiere a este acto documental. RETP-074 conserva su asignación a N0-01 en la PR #61 pendiente de integración; no se importa ni se da por integrado su cambio funcional mediante esta acta. El estado R0/R1/R2 y las garantías conservan sus registros propios.
 
 El resultado que debe recibir la continuación es concreto: **una obligación de suficiencia y trazabilidad antes de cerrar el alcance nuclear, alimentada por dominios constituidos y realizaciones tecnológicas previamente ensayadas, con ampliaciones de perfiles, contratos o representación sometidas a demostración y versionado**.
+
+
+## 15. Secuencia rectora desarrollada por etapas · 06/09/2026
+
+La [adenda de continuidad del acta de transición desde OP-IMM-001](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#adenda-secuencia-20260906) desarrolla el apartado 12 sin cambiar sus dependencias. Distribuye PT01–PT14 por etapa, conserva la compuerta F-IF y los retornos acotados IMM/CYB, y distingue consolidación nuclear, realización R2/R3/R4 y composición de agentes. La presente acta conserva la definición de los perfiles y sus contratos; el orden operativo se consulta en aquella adenda. Asiento RETP-076.

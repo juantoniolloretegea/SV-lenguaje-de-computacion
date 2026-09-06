@@ -253,6 +253,16 @@ La continuidad documental se organiza así:
 - **Numeración y continuidad:** RETP-074 ya está asignado a N0-01 en la PR #61 pendiente de integración; se conserva esa identidad sin importar su asiento ni presentar su cambio como incorporado a main. RETP-075 corresponde exclusivamente a esta fijación documental.
 - **Estado:** cerrado en su alcance documental.
 
+### RETP-2026-076 — Secuencia rectora desde PR #61 y obligaciones tecnológicas por etapa
+
+- **Hecho:** se actualiza el acta de transición desde OP-IMM-001 mediante adenda rectora de continuidad, sin sustituir el expediente histórico ni crear otra acta paralela.
+- **Fuentes:** transición integrada, radiografía N0 del head ad8e8dd30930e35b75bf5f2fad78938d36233b78, actas privadas R0/R1 V2 conservadas en el laboratorio (registro 024), Pilares RETP-073, arquitectura RETP-072/073, perfiles RETP-075, matriz tecnológica 020 y contratos R2-0/entorno soberano.
+- **Decisión:** conservar PR61/N0-01 → oráculos → K1 → F/F-IF → G/H IMM → incorporación Lenguaje → I/J CYB → resolución Lenguaje → puerta algebraica con K1-T → comprobación IMM/CYB → K2 → contrato operacional → consolidación; después, realización R2/R3/R4 y agentes en el alcance y dependencias que les correspondan. Distribuir PT01–PT14 por cada punto, reutilizando evidencia y exigiendo ensayo previo de las realizaciones a promover.
+- **Precisión:** N1/N2 son niveles de IR; no se inventan fases con esos nombres. G/H no constituye cierre integral de todos los universos inmunológicos. R2 conserva su apertura contractual y su ejecución pendiente; R0/R1 conservan sus cierres históricos.
+- **Evidencia:** [adenda rectora](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#adenda-secuencia-20260906), main de entrada 605d900fc535aec4b0010820499b93e44d111f5c; custodia privada de antecedentes 20da3c781286bee1966c22cf1fc7a4755be35b9b. Verificación documental de identidad, enlaces, preservación y concordancia registral; sin nueva campaña de ejecución.
+- **Límites:** no modifica gramática, IR, código, corpus ni workflows; no fusiona PR61, no abre materialmente R2/R3/R4, no constituye dominio/agente ni selecciona host. La preparación posterior de PR61 debe reconciliar main y conservar 074/075/076.
+- **Estado:** cerrado en alcance documental; la secuencia y sus obligaciones no se dan por ejecutadas.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.

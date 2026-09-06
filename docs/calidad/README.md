@@ -31,6 +31,12 @@ Esta acta fija la terna contractual, diferencia sus tres ensamblajes y precisa q
 
 La [Documentación de laboratorios](https://juantoniolloretegea.github.io/SVcustos-dataset/laboratorio-de-infraestructura-SV/documentacion/) mantiene un vínculo explícito a esta acta, sin segunda copia normativa. Asiento RETP-075; RETP-074 conserva su asignación a la PR #61 pendiente de integración.
 
+## 1.3. Secuencia rectora desde PR #61 y obligaciones de cada perfil
+
+> **Punto de reanudación:** [Acta de transición desde OP-IMM-001: adenda rectora de secuencia, §§12–17](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#adenda-secuencia-20260906).
+
+La adenda actualiza el acta existente con los antecedentes privados R0/R1, N0 y RETP-075. Fija los relevos de Lenguaje, Inmunología y Ciberseguridad; sitúa oráculos, K1/K1-T, F/F-IF, puerta algebraica, K2, contrato operacional y consolidación; distingue su continuación R2/R3/R4 y asigna PT01–PT14 a cada etapa. N1/N2 son niveles de IR, no fases nuevas. El retorno inmunológico no exige cerrar todos sus universos. Registro RETP-076; la PR #61 conserva su expediente N0-01 y RETP-074.
+
 ## 2. Estado de continuidad vigente
 
 Tras el cierre correctivo de 29/08/2026, el estado aplicable es:
