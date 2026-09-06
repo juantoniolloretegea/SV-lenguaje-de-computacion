@@ -243,6 +243,16 @@ La continuidad documental se organiza así:
 - **Corrección registral:** se repara la serialización CSV de `RETP-2026-072`, que había quedado encapsulada como una sola celda, sin alterar su contenido material.
 - **Estado:** cerrado.
 
+### RETP-2026-075 — Perfiles, contratos y ensamblaje: suficiencia para el cierre
+
+- **Hecho:** se fija en Calidad el marco canónico de representación, dominio y soporte tecnológico, con identidades, versiones y contratos distintos; se delimitan los tres ensamblajes, las obligaciones de suficiencia que deben llegar al Lenguaje antes de su cierre y la prueba previa en laboratorio de las realizaciones tecnológicas.
+- **Fundamento:** Pilares y arquitectura RETP-072/073; perfiles fuente ES/EN; contrato FFL-E de suficiencia representacional por operación; transición desde OP-IMM-001; secuencia N0; candidata y matriz del registro experimental 020.
+- **Evidencia:** [acta canónica](./ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md); base main 230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4; PR61 ad8e8dd30930e35b75bf5f2fad78938d36233b78; laboratorio e97fed715ff5e3ae19bbaccaf2852e9cd3288377; publicación 566aef09824f080c5cc09722223b5ac7327a32b4. Lectura y contraste documental, actualización de AGENTS.md y entradas prioritarias; ninguna nueva campaña material acredita esta acta.
+- **Decisión:** exigir encaje contractual y suficiencia demostrable para las operaciones incluidas en el cierre; recibir evidencia tecnológica previa con su alcance; reutilizar artefactos y oráculos existentes; mantener una sede canónica y su vínculo desde Documentación de laboratorios.
+- **Límites:** no añade tipos a la DSL/IR, no implementa álgebra, no selecciona host o ABI, no constituye dominio/agente, no integra R1 con el laboratorio ni cierra fases operacionales. Las realizaciones y garantías conservan sus propios estados.
+- **Numeración y continuidad:** RETP-074 ya está asignado a N0-01 en la PR #61 pendiente de integración; se conserva esa identidad sin importar su asiento ni presentar su cambio como incorporado a main. RETP-075 corresponde exclusivamente a esta fijación documental.
+- **Estado:** cerrado en su alcance documental.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
