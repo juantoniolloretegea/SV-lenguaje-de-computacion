@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Sensibilidad a deudas abiertas y regresión del cierre relacional N0-02.
+"""Sensibilidad a deudas abiertas y regresión de los cierres N0-02/N0-03.
 
-Las sondas CRLF conservan su alcance DFL-008. La semántica duplicada enlazada
-se rechaza con E115; la no enlazada conserva un testigo de la deuda N0-03.
+Las sondas CRLF conservan su alcance DFL-008. Las semánticas duplicadas enlazada
+y no enlazada se rechazan con E115 tras los cierres N0-02 y N0-03.
 """
 import argparse
 import hashlib
@@ -11,7 +11,7 @@ from pathlib import Path
 import sys
 
 from oracle_support import (run, assert_success, assert_json_equal, ordered_json,
-                            DuplicateJsonMember, OracleError, assert_python_rejection,
+                            OracleError, assert_python_rejection,
                             assert_rust_rejection)
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -59,7 +59,7 @@ def main():
                   'stdout_sha256': digest(value.stdout), 'stderr_sha256': digest(value.stderr)}
             for key, value in observations.items()}}
         try:
-            if name == 'semantics_duplicate':
+            if name in {'semantics_duplicate', 'semantics_unbound_duplicate'}:
                 assert_python_rejection(py, 'E115')
                 assert_rust_rejection(rust, 'output_semantics_clave_repetida')
                 for proc in [py, rust]:
@@ -67,10 +67,7 @@ def main():
                         raise OracleError('el rechazo no identifica la clave repetida')
             else:
                 assert_success(py)
-                if name != 'semantics_unbound_duplicate':
-                    assert_success(rust)
-                elif rust.returncode != 0 or rust.stderr:
-                    raise OracleError('no se reprodujo la admisión Rust de la sonda no enlazada')
+                assert_success(rust)
             if name == 'control_valid':
                 assert_json_equal(py.stdout, rust.stdout)
                 if json.loads(rust.stdout)['source_sha256'] != digest(raw):
@@ -79,15 +76,7 @@ def main():
             elif name == 'semantics_duplicate':
                 record['result'] = 'CIERRE_RELACIONAL_N0_02_E115'
             elif name == 'semantics_unbound_duplicate':
-                try:
-                    ordered_json(rust.stdout)
-                except DuplicateJsonMember:
-                    pass
-                else:
-                    raise OracleError('no se detectó el miembro JSON duplicado')
-                if ordered_json(py.stdout, reject_duplicates=False) == ordered_json(rust.stdout, reject_duplicates=False):
-                    raise OracleError('se perdió la multiplicidad durante el contraste')
-                record['result'] = 'DIVERGENCIA_DETECTADA_MIEMBRO_DUPLICADO'
+                record['result'] = 'CIERRE_N0_03_E115'
             else:
                 py_doc, rust_doc = json.loads(py.stdout), json.loads(rust.stdout)
                 if rust_doc['source_sha256'] != digest(raw) or py_doc['source_sha256'] == digest(raw):
@@ -110,9 +99,9 @@ def main():
             failures.append(name)
         records.append(record)
     report = {
-        'schema': 'sv-oracle-sensitivity-v2',
-        'scope': 'cierre relacional N0-02; sensibilidad a DFL-008 y N0-03 sin cerrar esas deudas',
-        'base_head': 'ed61af2fb80641866356a7138cc87763eab005d9',
+        'schema': 'sv-oracle-sensitivity-v3',
+        'scope': 'cierres N0-02 y N0-03; sensibilidad a DFL-008 abierta',
+        'base_head': '016b2f4d1f896dcbd4e8d177e8db4e736e2cd571',
         'checkout_head': run(['git', 'rev-parse', 'HEAD']).stdout.decode().strip(),
         'rust_binary_sha256': digest(args.rust_bin.read_bytes()),
         'observer_sha256': {name: digest((ROOT / 'tests' / name).read_bytes())
@@ -123,7 +112,7 @@ def main():
     if failures:
         print('No se acreditó la sensibilidad: ' + ', '.join(failures), file=sys.stderr)
         return 1
-    print('Sensibilidad: 1 control válido, 1 rechazo N0-02 y 3 divergencias abiertas detectadas.')
+    print('Sensibilidad: 1 control válido, 2 rechazos N0-02/N0-03 y 2 divergencias CRLF abiertas detectadas.')
     return 0
 
 

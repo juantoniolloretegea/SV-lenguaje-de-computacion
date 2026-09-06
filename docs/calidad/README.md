@@ -41,7 +41,9 @@ La adenda actualiza el acta existente con los antecedentes privados R0/R1, N0 y 
 
 **Relevo de oráculos:** [acta de reparación RETP-078](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md) y [transición §19](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#oraculos-20260906). Tras su promoción sigue K1 desde N0-02. En ese corte, las divergencias CRLF y de semántica duplicada quedaron detectadas y abiertas, sin sumarse al corpus conforme.
 
-**Relevo vigente de K1:** [cierre incremental N0-02, RETP-079](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) y [transición §20](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-02-20260906). Tras su promoción sigue N0-03. E115 protege cada relación `CellSpec–OutputSemantics–Codomain`; la proyección global de declaraciones no enlazadas y DFL-008 conservan sus testigos y deudas.
+**Relevo N0-02 de K1:** [cierre incremental N0-02, RETP-079](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) y [transición §20](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-02-20260906). Tras su promoción sigue N0-03. E115 protege cada relación `CellSpec–OutputSemantics–Codomain`; la proyección global de declaraciones no enlazadas y DFL-008 conservan sus testigos y deudas.
+
+**Relevo vigente de K1:** [N0-03, RETP-080](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) y [transición §21](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-03-20260906). Tras su promoción sigue N0-04. La semántica duplicada no enlazada queda como regresión de rechazo; CRLF y la concordancia diagnóstica general permanecen abiertos.
 
 ## 2. Estado de continuidad vigente
 

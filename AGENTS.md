@@ -9,7 +9,7 @@ Toda unidad humana o asistida que intervenga en gramática, perfiles fuente, par
 1. identificar el commit o la rama exactos sobre los que trabaja;
 2. leer completo `docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md`;
 3. leer completo `docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md`, que fija las obligaciones de suficiencia para representación, dominio y soporte tecnológico, sus ensamblajes y la prueba previa en laboratorio;
-4. leer completo `docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md`, incluida su adenda rectora de secuencia de 06/09/2026 (§§12–17) y los relevos de recepción N0-01 (§18) reparación de oráculos (§19) y cierre relacional N0-02 (§20), y el acta de fase y las entradas RETP directamente aplicables;
+4. leer completo `docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md`, incluida su adenda rectora de secuencia de 06/09/2026 (§§12–17) y los relevos de recepción N0-01 (§18), reparación de oráculos (§19), cierre relacional N0-02 (§20) y unicidad de proyección N0-03 (§21), y el acta de fase y las entradas RETP directamente aplicables;
 5. declarar en su informe el corte leído y las piezas rectoras consultadas.
 
 Si el documento rector falta, no puede leerse o contradice la tarea recibida, la modificación se detiene y la contradicción se eleva. Quedan prohibidas la reparación silenciosa y la conversión del comportamiento accidental del código en doctrina.

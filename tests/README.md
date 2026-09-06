@@ -210,3 +210,18 @@ cargo test --manifest-path rust/Cargo.toml -p sv_core --test output_semantics_to
 Las cinco pruebas Python verifican la relación y la conservación del AST; las seis Rust ejercen además ES/EN y ensamblaje con referencias cruzadas. Las subdivisiones de cada prueba no se suman como casos de conformidad.
 
 `run_oracle_sensitivity.py` pasa al esquema `sv-oracle-sensitivity-v2`: conserva el control y las dos sondas CRLF, exige E115 para `semantics_duplicate` enlazada y añade `semantics_unbound_duplicate` como testigo residual de N0-03. Resultado: un control, un rechazo N0-02 y tres divergencias abiertas detectadas. Las sondas siguen separadas de los 85 programas de conformidad; no se acredita cierre global de homónimos ni reparación de DFL-008.
+
+## 12. Unicidad y estabilidad de la proyección N0-03 · 06/09/2026
+
+El [acta N0-03](../docs/arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) y J-J0 añaden una comprobación complementaria de unicidad a todas las semánticas. El corpus vigente pasa a **88 = 14 válidos + 74 inválidos**: se añade la semántica no enlazada repetida (E115), un control negativo del rechazo previo de `Connector.mapping` (E007) y un positivo de mapas independientes, claves compartidas entre objetos, mapa vacío y texto con LF, tabulación, barra inversa y Unicode. El nuevo esperado se declara desde el esquema; los trece anteriores permanecen intactos.
+
+`assert_json_roundtrip` comprueba lectura, escritura y nueva lectura del valor JSON conservando pares, orden, tipos y tokens numéricos. No es un serializador de IR. Se integra en `assert_success` y en la conformidad directa; R0-7, WASI y la preparación del manifiesto de navegador reciben la comprobación sin incorporar bibliotecas al núcleo. El navegador compara después los bytes exactos. Tres pruebas nuevas del observador verifican ámbitos locales, escapes homónimos y 5000 dígitos sin estrechamiento a un entero de máquina ni coma flotante: **19 pruebas del observador** en total.
+
+```bash
+python -m unittest discover -s tests -p 'test_json_projection.py' -v
+cargo test --manifest-path rust/Cargo.toml -p sv_core --test json_projection
+```
+
+Tres pruebas Python contrastan, además, la conservación de miembros desde AST antes de perderlos en un mapa. Cinco pruebas Rust cubren ES/EN, mapas independientes, rechazo sin celda, ensamblaje y la guarda previa de Connector. La etapa frontal vigente no interpreta escapes dentro de cadenas SVP: el positivo contiene LF y tabulación reales; el serializador JSON los escapa conforme a su contrato existente.
+
+El banco de sensibilidad pasa a `sv-oracle-sensitivity-v3`, conservando exactamente las cinco entradas de v2. Exige un control, dos rechazos E115 (N0-02/N0-03) y dos divergencias CRLF aún abiertas en DFL-008. No suma las sondas a la conformidad y no adapta automáticamente esperados a un nuevo resultado.

@@ -68,6 +68,25 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
     for operation in program.operations() {
         validate_operation(operation.name(), operation.kind(), &symbols)?;
     }
+    // N0-03: conservar la precedencia de los rechazos relacionales N0-02.
+    for object in program.objects() {
+        if let IrObjectKind::OutputSemantics { mappings } = object.kind() {
+            let mut seen = BTreeSet::new();
+            let mut duplicates = BTreeSet::new();
+            for (key, _) in mappings {
+                if !seen.insert(key.as_str()) {
+                    duplicates.insert(key.as_str());
+                }
+            }
+            if !duplicates.is_empty() {
+                return Err(format!(
+                    "E115 (InvalidOutputSemantics): OutputSemantics {}: repetidas=[{}]",
+                    object.name(),
+                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
+                ));
+            }
+        }
+    }
     Ok(())
 }
 

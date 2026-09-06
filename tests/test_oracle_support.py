@@ -1,4 +1,5 @@
 """Contraejemplos del observador, independientes del resultado del compilador."""
+import json
 import subprocess
 import sys
 import unittest
@@ -6,7 +7,7 @@ import unittest
 from oracle_support import (OracleError, DuplicateJsonMember, ordered_json,
                             assert_json_equal, assert_bytes_equal, assert_success,
                             assert_python_rejection, assert_rust_rejection,
-                            cli_payload, run)
+                            cli_payload, run, assert_json_roundtrip)
 
 
 def result(rc=1, out=b"", err=b""):
@@ -14,6 +15,21 @@ def result(rc=1, out=b"", err=b""):
 
 
 class OracleTests(unittest.TestCase):
+    def test_roundtrip_preserves_local_scope_arrays_and_strings(self):
+        raw = '{"b":[{"A":"ñ\\n\\t\\\\"},{"A":"igual"}],"a":[1,1,true,null,{},[]]}'.encode()
+        repeated = assert_json_roundtrip(raw)
+        self.assertEqual(json.loads(repeated), json.loads(raw))
+        self.assertEqual(list(json.loads(repeated)), ['b', 'a'])
+
+    def test_roundtrip_keeps_numeric_tokens_without_machine_or_digit_limit(self):
+        raw = b'{"n":' + b'9' * 5000 + b',"z":-0,"e":1.00e-999}'
+        self.assertEqual(assert_json_roundtrip(raw), raw)
+
+    def test_roundtrip_rejects_homonyms_after_decoding_escapes(self):
+        for raw in [b'{"A":1,"A":1}', b'{"deep":[{"A":1,"\\u0041":2}]}']:
+            with self.subTest(raw=raw), self.assertRaises(DuplicateJsonMember):
+                assert_json_roundtrip(raw)
+
     def test_allowed_json_layout(self):
         assert_json_equal(b'{"x": [1, "a"]}', b'{ "x" : [1,"\\u0061"] }\n')
 

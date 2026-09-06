@@ -14,13 +14,15 @@ sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
 
 from svp_errors import SVPError
 from svp_main import process_file
-from oracle_support import assert_json_equal, ordered_json, check_invalid_corpus
+from oracle_support import assert_json_equal, ordered_json, check_invalid_corpus, assert_json_roundtrip
 
 IR_VERSION = "0.3"
 GRAMMAR_VERSION = "0.2"
 SERIALIZER_VERSION = "0.1.0"
 
 EXPECTED_INVALID_CODES = {
+    "output_semantics_sin_celda_repetida.svp": "E115",
+    "connector_clave_repetida.svp": "E007",
     "output_semantics_vacia.svp": "E115",
     "output_semantics_clave_ausente.svp": "E115",
     "output_semantics_clave_ajena.svp": "E115",
@@ -131,7 +133,7 @@ def run_tests() -> int:
                     )
 
                 result = process_file(path)
-                ordered_json(result.encode("utf-8"))
+                assert_json_roundtrip(result.encode("utf-8"))
                 doc = json.loads(result)
 
                 assert doc.get("ir_version") == IR_VERSION

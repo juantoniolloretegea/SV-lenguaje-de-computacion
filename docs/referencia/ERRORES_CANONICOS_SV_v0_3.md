@@ -29,7 +29,7 @@ Los cuatro códigos incorporados y el código precisado en esta versión son:
 |---|---|---|---|---|
 | E004 | `InvalidCodomain` | Definición | `validate` | `Codomain` debe ser finito, explícito, no vacío y no contener miembros repetidos |
 | E110 | `InvalidAdmissibilitySpec` | Definición | `validate` | `AdmissibilitySpec` debe usar exclusivamente `Ok`, `Degraded` y `NotAdmitted`, con `parameter_id > 0` y regla no vacía |
-| E115 | `InvalidOutputSemantics` | Estado | `validate` | La relación de cada `CellSpec` con su `OutputSemantics` y `Codomain` exige exactamente una clave por miembro, sin claves ajenas ni repetidas |
+| E115 | `InvalidOutputSemantics` | Estado | `validate` | `OutputSemantics` exige claves únicas; cada `CellSpec` exige además cobertura exacta de su codominio, sin claves ajenas |
 | E305 | `UnsafeUResolution` | Resultado | `validate` | `resolve` exige una `U` constituida e identificable y una instancia compatible con su `ResSpec` |
 | E308 | `FrameClosureViolation` | Evolución | `validate` | `Frame` contiene una referencia fuera de su cierre estructural o causal, una identidad duplicada o una criticidad no producible por la superficie vigente |
 
@@ -47,7 +47,15 @@ La tabla histórica de IR v0.2 asignó `E101 — EmptyCodomain`. Ese identificad
 
 `E115` se emite después de resolver las referencias de una `CellSpec`, si las claves de su semántica no cubren exactamente su codominio o contienen repeticiones. Identifica celda, semántica y codominio; informa claves repetidas, ausentes y ajenas. La unicidad se exige también cuando los textos repetidos coinciden. Compartir textos entre símbolos distintos y declarar las claves en otro orden siguen siendo conformes.
 
-`E102 — MissingOutputSemantics` conserva su significado para referencia ausente o de tipo incorrecto. N0-02 no completa los diagnósticos de todo el Lenguaje ni la protección global de la proyección JSON pendiente en N0-03. El nombre y código E115 se observan en Python y en `CompileError::InvalidProgram` de Rust; esa concordancia concreta no equivale a un formato diagnóstico estructurado compartido. Véase [IR v0.3 §6.2](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#relacion-n0-02) y el [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md).
+`E102 — MissingOutputSemantics` conserva su significado para referencia ausente o de tipo incorrecto. N0-02 no completa los diagnósticos de todo el Lenguaje ni la protección global de la proyección JSON, concretada posteriormente por N0-03 (§2.3). El nombre y código E115 se observan en Python y en `CompileError::InvalidProgram` de Rust; esa concordancia concreta no equivale a un formato diagnóstico estructurado compartido. Véase [IR v0.3 §6.2](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#relacion-n0-02) y el [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md).
+
+---
+
+### 2.3. Precisión de E115 para declaraciones no enlazadas (N0-03)
+
+Toda `OutputSemantics` con claves repetidas produce E115, aunque ninguna `CellSpec` la use. Sin vínculo, el diagnóstico identifica sólo la semántica y las claves repetidas. La guarda complementaria se aplica después de las validaciones existentes y conserva la precedencia relacional de N0-02. No exige cobertura de un codominio ausente ni impide que mapas distintos compartan claves.
+
+Se precisa el texto general Python de E115 para expresar ambos alcances: unicidad propia de la semántica y cobertura de cada relación constituida. Se conservan código, nombre, capa, fase y detalles relacionales; no se afirma conservación literal de ese texto descriptivo anterior. El catálogo permanece en **51 códigos**. `Connector.mapping` conserva E007 en Python y su rechazo textual previo en Rust; N0-03 no renumera esos diagnósticos ni cierra DFL-001. Fuentes: [IR §6.3](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#proyeccion-n0-03) y [acta N0-03](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md).
 
 ---
 
@@ -160,11 +168,11 @@ E110, E305 y E308 no constituyen una solución lateral de esa deuda.
 
 ## 8. Cobertura reproducible
 
-La batería vigente contiene 85 casos:
+La batería vigente contiene 88 casos:
 
 ```text
-13 válidos
-72 inválidos
+14 válidos
+74 inválidos
 ```
 
 Los diagnósticos E004, E110, E115, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, codominios con miembros distintos, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.

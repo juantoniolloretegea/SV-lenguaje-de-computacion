@@ -135,7 +135,7 @@ E114 = SVPErrorDef("E114", "SimpleRegimeConcurrency",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
 E115 = SVPErrorDef("E115", "InvalidOutputSemantics",
-    "Cada miembro del codominio de la CellSpec debe tener una interpretación, sin claves ajenas ni repetidas",
+    "OutputSemantics no admite claves repetidas; cada CellSpec exige además cobertura exacta de su codominio",
     ErrorLevel.LAYER1, ErrorPhase.VALIDATE)
 
 # ── Capa 2 — Resultado ───────────────────────────────────────────────
