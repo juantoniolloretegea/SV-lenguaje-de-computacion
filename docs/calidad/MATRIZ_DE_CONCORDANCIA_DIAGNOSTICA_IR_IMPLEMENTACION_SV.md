@@ -10,6 +10,8 @@ La clasificación por identificador se complementa con la tabla de correspondenc
 **Base de contraste:** IR v0.2 + catálogo efectivo + análisis sintáctico + validador + descenso a IR + batería de conformidad.  
 **Base funcional:** `15398f3441c80168f5d09866b0cba4e74221a6aa`.
 
+> **Nota posterior N0-01 — 04/09/2026.** Esta matriz y su CSV conservan la fotografía histórica del 19/08/2026. N0-01 no recalcula retrospectivamente sus balances globales: fija en la sucesión v0.3 `E004 — InvalidCodomain` como emisión directa y explícita para `Codomain` vacío o con miembros repetidos. El detalle vigente y su relación con el `E101 — EmptyCodomain` histórico constan en `ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md`.
+
 ## 2. Resultado global
 
 El balance vigente por identificador es:

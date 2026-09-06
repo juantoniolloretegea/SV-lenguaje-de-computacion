@@ -42,6 +42,9 @@ La continuidad documental se organiza así:
 | RETP-2026-071 | 29/08/2026 | NO_CONSTA | INTEGRACION_PUBLICACION_Y_CIERRE_DE_CONFORMIDAD | Lenguaje SV / Beta B2 / realización estable bilingüe / cierre DFL-007 | cerrado |
 | RETP-2026-072 | 04/09/2026 | 22:04:26 | FIJACION_ARQUITECTONICA | Lenguaje SV / arquitectura de software / núcleo, frontera y host | cerrado |
 | RETP-2026-073 | 05/09/2026 | 13:42:20 | FIJACION_RESTRICCIONES_DE_DISENO | Lenguaje SV / pilares / frontera de autoridad dominio-agente-núcleo | cerrado |
+| RETP-2026-074 | 05/09/2026 | 14:56:55 | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / N0-01 / unicidad de `Codomain` | cerrado |
+
+| RETP-2026-077 | 06/09/2026 | 22:26:33 | RECEPCION_Y_RECONCILIACION_GOBERNADA | Lenguaje SV / PR61 / N0-01 / relevo a oráculos | recepción delimitada; promoción por PR61 |
 
 ## 3. Entradas detalladas
 
@@ -243,6 +246,14 @@ La continuidad documental se organiza así:
 - **Corrección registral:** se repara la serialización CSV de `RETP-2026-072`, que había quedado encapsulada como una sola celda, sin alterar su contenido material.
 - **Estado:** cerrado.
 
+### RETP-2026-074 — N0-01: unicidad de `Codomain`
+
+- **Hecho:** se impone en Python y Rust que `Codomain` sea una secuencia finita explícita, no vacía y sin miembros repetidos. El incumplimiento produce `E004 (InvalidCodomain)` y el ensamblaje falla cerrado.
+- **Fundamento:** la semántica de conjunto de `Codomain` no admite repetición. Aceptarla permitiría una representación ambigua o con pérdida y divergencias entre realizaciones.
+- **Evidencia:** [radiografía N0](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md); [acta N0-01](../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md); base `main@230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`; sincronización `c1975b9077284aeb240378ff00cd1253e25495b2`; verificación local Python: conformidad 80/80, CLI 3/3, caracterización E006 4/4 y `compileall`; cabeza final `a4f00b96809e48ecc1c4b01da17bf9ef24400cdf`: Conformidad SVP #277 (`33967778938`), R0 Rust #206 (`33967778943`), R0-8 Baseline nativa #157 (`33967779060`) y R0 WASM paridad de tres vías #152 (`33967778928`), todas `success`. La adversarial posterior confirma N0-01 e individualiza fuera de su radio `E107/J1.5`, la repetición de `BridgeSet`, la multiplicidad de `Horizon.events` y la identidad diagnóstica Rust textual.
+- **Decisión:** mantener N0-01 como invariante intrínseco y representable; no reparar ni reordenar el codominio; no extender el cierre a orden, totalidad de salida ni N0-02 y siguientes.
+- **Límites:** no decide células, valores de `b`, parámetros, dominios, agentes, bus, host u operación algebraica; no acredita ejecución soberana adicional en `sv_core`. Tampoco cierra por analogía `Ternarizer`, `BridgeSet`, la multiplicidad de `Horizon.events` ni la estructuración de diagnósticos Rust; esos extremos quedan individualizados en la radiografía y DFL-001.
+- **Estado:** cerrado.
 ### RETP-2026-075 — Perfiles, contratos y ensamblaje: suficiencia para el cierre
 
 - **Hecho:** se fija en Calidad el marco canónico de representación, dominio y soporte tecnológico, con identidades, versiones y contratos distintos; se delimitan los tres ensamblajes, las obligaciones de suficiencia que deben llegar al Lenguaje antes de su cierre y la prueba previa en laboratorio de las realizaciones tecnológicas.
@@ -262,6 +273,16 @@ La continuidad documental se organiza así:
 - **Evidencia:** [adenda rectora](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#adenda-secuencia-20260906), main de entrada 605d900fc535aec4b0010820499b93e44d111f5c; custodia privada de antecedentes 20da3c781286bee1966c22cf1fc7a4755be35b9b. Verificación documental de identidad, enlaces, preservación y concordancia registral; sin nueva campaña de ejecución.
 - **Límites:** no modifica gramática, IR, código, corpus ni workflows; no fusiona PR61, no abre materialmente R2/R3/R4, no constituye dominio/agente ni selecciona host. La preparación posterior de PR61 debe reconciliar main y conservar 074/075/076.
 - **Estado:** cerrado en alcance documental; la secuencia y sus obligaciones no se dan por ejecutadas.
+
+### RETP-2026-077 — Recepción de PR #61 / N0-01 sobre main vigente
+
+- **Hecho:** se reconcilia la cabeza N0-01 `ad8e8dd30930e35b75bf5f2fad78938d36233b78` con main `981159d6428197d1ad1d748649f1d8f690b2f588`, base común `230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`. Los asientos 074, 075 y 076 conservan íntegros texto e identidad en ambos formatos; 077 registra su recepción, no otro cierre semántico.
+- **Fuentes:** AGENTS, Pilares RETP-073, perfiles RETP-075, transición RETP-076, radiografía N0, acta de unicidad y registros aplicables. Las adendas de recepción actualizan la continuación sin borrar los estados históricos.
+- **Evidencia:** [acta N0-01 §8](../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md#recepcion-20260906): conformidad 80/80, CLI 3/3, E006 4/4, Rust 210+3+5+2 pruebas y 17 documentales, R0-7 12+68, compilación WASM; conservación literal de las doce salidas de cada emisor frente a main y de los doce oráculos comprometidos. El negativo nuevo exige rc=1, E004/InvalidCodomain y ausencia de IR. La identidad de la cabeza reconciliada, sus cuatro controles CI y la integración se documentan en [PR #61](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/61), sin trasladar los verdes antiguos.
+- **Perfiles:** PT01/PT04/PT14: candidato y artefactos identificados, diagnóstico y entorno comprobados; ES/EN y ensamblaje conservados en Rust, referencia Python en su alcance vigente. No aplica contenido clínico o CYB. El registro experimental 018 conserva su corpus histórico de 79 y no acredita los 80 ni el ensamblaje de esta PR.
+- **Decisión:** recibir exclusivamente unicidad de Codomain, radiografía y deuda asociada. La recepción es efectiva en main cuando PR61 conste fusionada tras los controles de su candidato exacto. La [transición §18](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#recepcion-n0-01-20260906) deja como siguiente paso la reparación de oráculos y, después, K1 desde N0-02.
+- **Límites:** la equivalencia JSON normalizada no acredita identidad literal entre emisores, ni un código de salida no nulo demuestra por sí solo el diagnóstico esperado. Esas reparaciones generales siguen en la fila 2. No se modifica adicionalmente el código reconciliado, no se cambian toolchains, no se publica el Playground ni se cierra K1, álgebra, núcleo o R2/R3/R4.
+- **Estado:** recepción delimitada; promoción y corte de salida comprobables en el expediente PR61.
 
 ## 4. Estado de continuidad
 

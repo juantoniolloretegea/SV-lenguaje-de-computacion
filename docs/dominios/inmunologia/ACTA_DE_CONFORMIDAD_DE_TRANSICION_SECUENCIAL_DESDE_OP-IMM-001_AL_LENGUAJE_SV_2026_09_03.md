@@ -2,6 +2,8 @@
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
+> **Relevo de la fila 1:** [recepción N0-01, §18](#recepcion-n0-01-20260906), RETP-077. Tras su integración corresponde reparar los oráculos; N0-02 viene después. El §17 conserva el estado anterior a esta recepción.
+
 **Fecha:** 3 de septiembre de 2026  
 **Sede:** `SV-lenguaje-de-computacion`  
 **Rama de trabajo:** `valoracion-op-imm-001-20260903`  
@@ -341,3 +343,24 @@ R2 = ABIERTA_CONTRACTUALMENTE_SIN_CIERRE_MATERIAL
 R3_R4 = NO_INICIADOS
 REALIZACION_MODIFICADA_POR_ESTA_ADENDA = NO
 ```
+
+<a id="recepcion-n0-01-20260906"></a>
+
+## 18. Recepción de PR #61 / N0-01 y relevo a oráculos · 06/09/2026
+
+**Registro:** RETP-2026-077. **Expediente de promoción y evidencia del candidato exacto:** [PR #61](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/61), sus [commits](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/61/commits) y [controles](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/61/checks). Este apartado desarrolla exclusivamente la fila 1; conserva la tabla y los antecedentes de §§12–17.
+
+| Campo de relevo | Recepción y límite comprobable |
+|---|---|
+| Cortes de entrada | Candidata N0-01 `ad8e8dd30930e35b75bf5f2fad78938d36233b78`; main `981159d6428197d1ad1d748649f1d8f690b2f588`; base común `230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`. Se incorpora main mediante reconciliación, sin reescribir el historial de la rama. |
+| Fuentes rectoras leídas | AGENTS, Pilares RETP-073, perfiles RETP-075, esta acta completa con RETP-076, radiografía y acta N0-01, y asientos directamente aplicables. La recepción conserva íntegros 074, 075 y 076, tanto en CSV como en Markdown. |
+| Frente y necesidad de semántica/IR | Lenguaje, compilación/validación de `Codomain`: finitud explícita, no vacío y unicidad. La representación ya existe; se impone su invariante con E004. No se añade un tipo de perfil, dominio o soporte a la IR. Gramática efectiva 0.2, IR 0.3 y serializador de referencia 0.1.0 conservan su alcance. |
+| Perfil fuente | SVP-EN y SVP-ES vigentes, sin nueva versión ni ampliación. Rust recibe pruebas positivas/negativas y ensamblaje con unidad inválida. La referencia Python y el corpus común ejercen su superficie existente; no se le atribuye ensamblaje bilingüe. |
+| Dominio | No aplica contenido de un dominio de conocimiento: el invariante es intrínseco al Lenguaje. IMM y CYB conservan sus relevos posteriores. |
+| Soporte y PT aplicables | PT01: identidad de fuentes, candidato y controles. PT04: E004 observable, diferenciando el diagnóstico textual Rust de un diagnóstico estructurado aún pendiente. PT14: corpus, versiones y entorno declarados. Rust 1.98.0 local; los flujos CI identifican sus propios compiladores y destinos nativo, WASI y navegador. No se promueve PT-SV-LOCAL como plataforma productiva. |
+| Evidencia recibida y nueva | Se conservan las pruebas N0-01 de la candidata y los registros históricos; se repiten las comprobaciones sobre la reconciliación. La [adenda del acta N0-01](../../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md#recepcion-20260906) precisa corpus, identidad literal y alcance diagnóstico. Los cuatro flujos exigibles deben acreditar la nueva cabeza: los resultados del head antiguo no se transfieren. |
+| Laboratorio | Se recibe el inventario y sus límites de §15.1. El [registro 018](https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/374a10b73041b5a4ba74909e50df98732aaff735/laboratorio-de-infraestructura-SV/registros/018-COMPARACION_DOTNET_FFI_WASM_2026_09_06.md) conserva sus 79 programas EN; no acredita retrospectivamente los 80 de N0-01, ES ni ensamblaje. Esta recepción no repite esa campaña ni selecciona FFI/.NET/Wasmtime. |
+| Decisión y salida | Recepción limitada de unicidad de `Codomain`, radiografía y deuda. Es efectiva en main cuando PR #61 conste fusionada, después de verificar su nueva cabeza y la base vigente. El expediente identifica cabeza, controles y commit de integración; mientras esté sólo en una rama sigue siendo candidata. |
+| Siguiente paso | Fila 2: reparación de oráculos, PT02/PT04/PT13, con contraejemplos y controles válidos; después K1 desde N0-02. La recepción no acredita esa reparación ni cierra N0-02, K1-T, F, K2, álgebra, núcleo o R2/R3/R4. |
+
+El éxito del corpus demuestra su alcance observado. Los ejecutores actuales normalizan JSON y algunos aceptan cualquier salida de proceso no nula como rechazo; esas limitaciones permanecen localizadas para la fila 2. Esta recepción comprueba por separado la conservación literal frente al corte de entrada, y para el negativo nuevo exige `rc=1`, E004 y ausencia de IR emitida. No convierte equivalencia normalizada en igualdad de bytes entre emisores ni en cobertura diagnóstica completa.
