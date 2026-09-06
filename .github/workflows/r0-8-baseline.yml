@@ -9,6 +9,10 @@ on:
       - "tests/r0_8_baseline.py"
       - "tests/r0_8_scale.py"
       - "tests/r0_7_equivalence.py"
+      - "tests/oracle_support.py"
+      - "tests/test_oracle_support.py"
+      - "tests/run_oracle_sensitivity.py"
+      - "tests/run_conformance.py"
       - "tests/conformance/valid/**"
       - ".github/workflows/r0-8-baseline.yml"
 

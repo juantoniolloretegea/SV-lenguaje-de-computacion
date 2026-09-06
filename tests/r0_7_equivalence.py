@@ -8,10 +8,12 @@ el mismo archivo .svp y no consume la IR emitida por Python.
 from __future__ import annotations
 
 import argparse
-import json
 from pathlib import Path
-import subprocess
 import sys
+from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
+                            assert_python_rejection, assert_rust_rejection,
+                            check_invalid_corpus)
+from run_conformance import EXPECTED_INVALID_CODES
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
@@ -19,25 +21,6 @@ INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"
 
 VALID_CASES = sorted(path.stem for path in VALID_DIR.glob("*.svp"))
 INVALID_CASES = sorted(path.stem for path in INVALID_DIR.glob("*.svp"))
-
-
-def canonical_json(text: str) -> str:
-    return json.dumps(
-        json.loads(text),
-        ensure_ascii=False,
-        sort_keys=True,
-        separators=(",", ":"),
-    )
-
-
-def run(command: list[str]) -> subprocess.CompletedProcess[str]:
-    return subprocess.run(
-        command,
-        cwd=ROOT,
-        text=True,
-        capture_output=True,
-        check=False,
-    )
 
 
 def main() -> int:
@@ -49,6 +32,9 @@ def main() -> int:
     args = parser.parse_args()
 
     failures: list[str] = []
+    check_invalid_corpus(INVALID_DIR.glob("*.svp"))
+    if not VALID_CASES:
+        raise AssertionError("corpus válido vacío")
 
     for case in VALID_CASES:
         source = VALID_DIR / f"{case}.svp"
@@ -64,21 +50,18 @@ def main() -> int:
             failures.append(f"VALID {case}: camino Rust falló: {rust.stderr.strip()}")
             continue
 
-        reference = canonical_json(py.stdout)
-        expected = canonical_json(golden.read_text(encoding="utf-8"))
-        sovereign = canonical_json(rust.stdout)
-
-        if reference != expected:
-            failures.append(
-                f"VALID {case}: la referencia vigente ya no coincide con el golden comprometido"
-            )
-            continue
-        if sovereign != reference:
-            failures.append(
-                f"VALID {case}: divergencia Rust/Python\n"
-                f"  Python: {reference}\n"
-                f"  Rust:   {sovereign}"
-            )
+        try:
+            assert_success(py)
+            assert_success(rust)
+            assert_json_equal(py.stdout, golden.read_bytes())
+            assert_json_equal(rust.stdout, py.stdout)
+            for command, first in [([sys.executable, "src/svp_main.py", str(source)], py),
+                                   ([args.rust_bin, str(source)], rust)]:
+                repeated = run(command)
+                assert_success(repeated)
+                assert_bytes_equal(first.stdout, repeated.stdout)
+        except AssertionError as exc:
+            failures.append(f"VALID {case}: {exc}")
             continue
 
         print(f"R0-7 VALID OK: {case}")
@@ -88,15 +71,11 @@ def main() -> int:
         py = run([sys.executable, "src/svp_main.py", str(source)])
         rust = run([args.rust_bin, str(source)])
 
-        if py.returncode == 0:
-            failures.append(
-                f"INVALID {case}: la referencia Python aceptó un caso comprometido como inválido"
-            )
-            continue
-        if rust.returncode == 0:
-            failures.append(
-                f"INVALID {case}: Rust aceptó una entrada que la referencia rechaza"
-            )
+        try:
+            assert_python_rejection(py, EXPECTED_INVALID_CODES[source.name])
+            assert_rust_rejection(rust, case)
+        except AssertionError as exc:
+            failures.append(f"INVALID {case}: {exc}")
             continue
 
         print(f"R0-7 INVALID OK: {case}")

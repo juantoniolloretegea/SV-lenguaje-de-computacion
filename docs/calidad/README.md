@@ -39,6 +39,8 @@ La adenda actualiza el acta existente con los antecedentes privados R0/R1, N0 y 
 
 **Relevo de N0-01:** [recepción de PR #61 y siguiente paso, §18](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#recepcion-n0-01-20260906), RETP-077. Su integración habilita la reparación de oráculos de la fila 2; después continúa K1 desde N0-02. El estado de fusión y los controles del candidato exacto se consultan en el expediente enlazado.
 
+**Relevo de oráculos:** [acta de reparación RETP-078](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md) y [transición §19](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#oraculos-20260906). Tras su promoción sigue K1 desde N0-02. Las divergencias CRLF y de semántica duplicada quedan detectadas y abiertas, sin sumarse al corpus conforme.
+
 ## 2. Estado de continuidad vigente
 
 Tras el cierre correctivo de 29/08/2026, el estado aplicable es:

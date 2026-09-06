@@ -9,11 +9,12 @@ Comprueba exclusivamente el contrato externo mínimo de la CLI:
 
 from __future__ import annotations
 
-import json
 import subprocess
 import sys
 import tempfile
 from pathlib import Path
+from oracle_support import (run, assert_success, assert_json_equal,
+                            assert_python_rejection)
 
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / "src"
@@ -23,23 +24,9 @@ CLI = SRC / "svp_main.py"
 PYTHON = sys.executable
 
 
-def canonicalize_json_text(text: str) -> str:
-    data = json.loads(text)
-    return json.dumps(data, ensure_ascii=False, sort_keys=True, indent=2) + "\n"
-
-
-def read_text(path: Path) -> str:
-    return path.read_text(encoding="utf-8")
-
-
-def run_cli(*args: str) -> subprocess.CompletedProcess[str]:
+def run_cli(*args: str) -> subprocess.CompletedProcess[bytes]:
     cmd = [PYTHON, str(CLI), *args]
-    return subprocess.run(cmd, capture_output=True, text=True, cwd=str(ROOT))
-
-
-def assert_equal(label: str, left: str, right: str) -> None:
-    if left != right:
-        raise AssertionError(f"{label}: salida distinta de expected")
+    return run(cmd)
 
 
 def test_valid_stdout() -> None:
@@ -48,9 +35,8 @@ def test_valid_stdout() -> None:
     proc = run_cli(str(svp))
     if proc.returncode != 0:
         raise AssertionError(f"valid_stdout: rc={proc.returncode} stderr={proc.stderr!r}")
-    actual = canonicalize_json_text(proc.stdout)
-    wanted = canonicalize_json_text(read_text(expected))
-    assert_equal("valid_stdout", actual, wanted)
+    assert_success(proc)
+    assert_json_equal(proc.stdout, expected.read_bytes())
 
 
 def test_valid_output_file() -> None:
@@ -63,9 +49,9 @@ def test_valid_output_file() -> None:
             raise AssertionError(f"valid_output_file: rc={proc.returncode} stderr={proc.stderr!r}")
         if not out.exists():
             raise AssertionError("valid_output_file: no se creó el archivo de salida")
-        actual = canonicalize_json_text(read_text(out))
-        wanted = canonicalize_json_text(read_text(expected))
-        assert_equal("valid_output_file", actual, wanted)
+        if proc.stdout or proc.stderr:
+            raise AssertionError("CLI con -o produjo salida adicional")
+        assert_json_equal(out.read_bytes(), expected.read_bytes())
 
 
 def test_invalid_cli() -> None:
@@ -75,8 +61,7 @@ def test_invalid_cli() -> None:
         proc = run_cli(str(svp), "-o", str(out))
         if proc.returncode != 1:
             raise AssertionError(f"invalid_cli: rc esperado 1, obtenido {proc.returncode}")
-        if "ERROR:" not in proc.stderr:
-            raise AssertionError(f"invalid_cli: stderr sin prefijo ERROR:, stderr={proc.stderr!r}")
+        assert_python_rejection(proc, "E507")
         if out.exists():
             raise AssertionError("invalid_cli: se creó archivo de salida para caso inválido")
 

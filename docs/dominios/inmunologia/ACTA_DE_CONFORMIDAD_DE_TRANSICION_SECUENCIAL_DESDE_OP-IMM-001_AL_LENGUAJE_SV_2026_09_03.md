@@ -4,6 +4,8 @@
 
 > **Relevo de la fila 1:** [recepción N0-01, §18](#recepcion-n0-01-20260906), RETP-077. Tras su integración corresponde reparar los oráculos; N0-02 viene después. El §17 conserva el estado anterior a esta recepción.
 
+> **Relevo de la fila 2:** [reparación de oráculos, §19](#oraculos-20260906), RETP-078. Tras su promoción corresponde K1 desde N0-02; las divergencias detectadas conservan su deuda.
+
 **Fecha:** 3 de septiembre de 2026  
 **Sede:** `SV-lenguaje-de-computacion`  
 **Rama de trabajo:** `valoracion-op-imm-001-20260903`  
@@ -364,3 +366,21 @@ REALIZACION_MODIFICADA_POR_ESTA_ADENDA = NO
 | Siguiente paso | Fila 2: reparación de oráculos, PT02/PT04/PT13, con contraejemplos y controles válidos; después K1 desde N0-02. La recepción no acredita esa reparación ni cierra N0-02, K1-T, F, K2, álgebra, núcleo o R2/R3/R4. |
 
 El éxito del corpus demuestra su alcance observado. Los ejecutores actuales normalizan JSON y algunos aceptan cualquier salida de proceso no nula como rechazo; esas limitaciones permanecen localizadas para la fila 2. Esta recepción comprueba por separado la conservación literal frente al corte de entrada, y para el negativo nuevo exige `rc=1`, E004 y ausencia de IR emitida. No convierte equivalencia normalizada en igualdad de bytes entre emisores ni en cobertura diagnóstica completa.
+
+
+<a id="oraculos-20260906"></a>
+
+## 19. Reparación de oráculos y relevo a K1 · 06/09/2026
+
+**Registro:** RETP-2026-078. **Corte de entrada:** main `91dc5a3c3b2298ef3fd1b2eefe607f379643e076`, con PR #61 integrada. Este apartado desarrolla exclusivamente la fila 2 y conserva las dependencias de la tabla.
+
+| Campo | Resultado, evidencia y límite |
+|---|---|
+| Producto | [Comprobadores reparados](../../calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md): pares JSON ordenados sin ocultar homónimos, tipos o precisión; bytes sin conversión de saltos; rechazo con retorno 1, ausencia de IR e identidad diagnóstica por vía. |
+| Semántica/IR | No se amplían ni se corrigen en esta fila. La Gramática 0.2, IR 0.3, referencia y núcleo conservan su realización. El observador deja de ocultar pérdidas. |
+| Perfiles | PT02/PT04/PT13, con identidad y entorno PT01/PT14. Corpus común EN; controles ES/EN y ensamblaje en sus suites existentes. No aplica contenido de dominio IMM/CYB ni se promueve un soporte tecnológico. |
+| Evidencia | 80 casos existentes preservados; 16 pruebas del observador; un control conforme y tres divergencias detectadas. Paridad nativa y destinos WASM por los flujos del candidato exacto. El acta precisa qué igualdades son estructurales y cuáles literales. |
+| Laboratorio | Se conserva la distinción validez/identidad de 016 y el alcance de 018. No se repite esa campaña ni se la convierte retrospectivamente en una prueba de los nuevos oráculos. |
+| Deuda | `semantics_duplicate` se devuelve a N0-02/N0-03; CRLF y el literal CRLF quedan bajo DFL-008; DFL-001 conserva la concordancia diagnóstica incompleta. Su detección no acredita reparación. |
+| Decisión | Reparación efectiva al integrarse su expediente con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos en la candidata exacta. La evidencia de sensibilidad se conserva separada de la conformidad. |
+| Relevo | Fila 3: K1 desde N0-02, relación total y sin claves repetidas entre CellSpec, OutputSemantics y Codomain. No se anticipan F, K2, álgebra, cierre nuclear o R2/R3/R4. |

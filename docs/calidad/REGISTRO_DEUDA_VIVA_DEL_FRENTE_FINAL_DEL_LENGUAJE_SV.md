@@ -66,6 +66,13 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Evidencia de cierre:** `ACTA_TECNICA_DE_CONFORMIDAD_CIERRE_CORRECTIVO_B2_Y_RESTAURACION_CONTINUIDAD_2026_08_29.md`, PR #55 y ejecuciones de conformidad asociadas.
 - **Límite:** el cierre de DFL-007 no materializa `ConflictOperator` ni completa J2.3 para concurrencia en régimen `General`; esa deuda permanece dentro de DFL-001 y de la documentación normativa correspondiente.
 
+### DFL-008 — Identidad de fuente y contenido CRLF en la referencia Python
+
+- **Hecho:** `process_file` lee en modo texto con conversión de saltos; una entrada CRLF cambia antes de calcular `source_sha256`. Si CRLF aparece dentro de una cadena, también cambia el literal. Rust conserva los bytes UTF-8 en las sondas correspondientes.
+- **Evidencia:** [reparación de oráculos, §4](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md); `tests/run_oracle_sensitivity.py`, casos `crlf` y `string_crlf`, entradas y salidas originales en su paquete de evidencia.
+- **Estado:** abierta y detectada; RETP-078 repara el observador, no la lectura Python.
+- **Condición de cierre:** preservar la entrada y el literal sin normalización silenciosa, con controles LF/CRLF, huellas de bytes y paridad pertinente. La fila 3 se reanuda por N0-02; esta deuda no puede darse por cerrada ni incluirse en una afirmación de identidad de fuente general mientras permanezca abierta.
+
 ## 3. Estado de FFL-B
 
 FFL-B se cerró tras E215 porque las obligaciones restantes identificadas no podían materializarse de forma honesta mediante una comprobación estructural adicional sin ampliar representación, semántica o ejecución.
@@ -83,3 +90,13 @@ FFL-C no modifica el contrato diagnóstico ni acredita capacidades de ejecución
 Toda deuda que afecte a un cierre ya declarado deberá incorporarse a este registro o a su documento sucesor. Sólo podrá retirarse del conjunto de deuda viva mediante cierre acreditado o traslado expresamente justificado a otro bloque; cuando su efecto sobre la continuidad sea material, se conservará la trazabilidad del cierre.
 
 Las actualizaciones deberán expresar hechos, fundamento, evidencia, alcance y estado, sin presentar hipótesis o previsiones como capacidades ya existentes.
+
+
+## 6. Precisión diagnóstica tras reparar los oráculos · 06/09/2026
+
+RETP-078 exige retorno 1, ausencia de IR y una identidad diagnóstica comprobable
+por vía. DFL-001 permanece abierta: la tabla textual de Rust caracteriza sus
+rechazos actuales y no constituye paridad diagnóstica completa con Python. En
+particular, `admissibility_table_output_fuera_codominio.svp` conserva E011 en
+Python y un rechazo sintáctico previo en Rust. El nombre del caso no acredita
+cobertura de E011 en Rust. Véase el [acta de oráculos, §3](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md).

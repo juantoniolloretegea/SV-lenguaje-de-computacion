@@ -8,6 +8,10 @@ on:
       - "docs/arquitectura/*R1_6*"
       - "src/**"
       - "tests/r0_7_equivalence.py"
+      - "tests/oracle_support.py"
+      - "tests/test_oracle_support.py"
+      - "tests/run_oracle_sensitivity.py"
+      - "tests/run_conformance.py"
       - "tests/r0_wasm_parity.py"
       - "tests/run_wasi_sv_native.js"
       - "tests/r0_wasm_browser_manifest.py"
@@ -155,6 +159,7 @@ jobs:
           node --version > artifacts/r0-wasm/node-version.txt
 
       - name: Preservar evidencia de paridad
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: r0-wasm-three-way-parity
