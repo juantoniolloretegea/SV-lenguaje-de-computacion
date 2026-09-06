@@ -23,6 +23,9 @@ jobs:
       - name: Verificar relación total CellSpec–OutputSemantics–Codomain
         run: python3 -m unittest discover -s tests -p 'test_output_semantics_totality.py' -v
 
+      - name: Verificar conservación de miembros de la proyección JSON
+        run: python3 -m unittest discover -s tests -p 'test_json_projection.py' -v
+
       - name: Verificar CLI y determinismo literal
         run: |
           python3 tests/run_cli_smoke.py

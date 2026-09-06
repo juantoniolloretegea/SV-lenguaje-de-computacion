@@ -48,6 +48,7 @@ La continuidad documental se organiza así:
 | RETP-2026-077 | 06/09/2026 | 22:26:33 | RECEPCION_Y_RECONCILIACION_GOBERNADA | Lenguaje SV / PR61 / N0-01 / relevo a oráculos | recepción delimitada; promoción por PR61 |
 | RETP-2026-078 | 06/09/2026 | NO_CONSTA | REPARACION_DE_ORACULOS | Lenguaje SV / fila 2 / PT02-PT04-PT13 | reparación delimitada; promoción por candidata exacta |
 | RETP-2026-079 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-02 | cierre relacional delimitado; promoción por candidata exacta |
+| RETP-2026-080 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-03 | cierre de proyección delimitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -303,6 +304,15 @@ La continuidad documental se organiza así:
 - **Perfiles:** PT04/PT13/PT14 y conservación PT01/PT02; ES/EN y ensamblaje Rust, referencia EN Python. La evidencia de laboratorio 016/018 mantiene alcance e identidad; no se promueve otra plataforma ni se amplía el corpus histórico de 018.
 - **Límites:** N0-03 conserva una semántica duplicada no enlazada como testigo de proyección defectuosa; DFL-008 conserva CRLF y DFL-001 la concordancia diagnóstica general. El banco de sensibilidad v2 exige un control, un rechazo N0-02 y tres divergencias abiertas detectadas, sin sumarlas a conformidad.
 - **Decisión y estado:** cierre relacional efectivo al integrar la candidata exacta con los cuatro flujos correctos. La [transición §20](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-02-20260906) deja N0-03 como siguiente paso dentro de K1. No se cierran K1, álgebra, núcleo ni R2/R3/R4.
+
+### RETP-2026-080 — N0-03: unicidad de miembros y estabilidad de proyección JSON
+
+- **Hecho y fuente:** main `016b2f4d1f896dcbd4e8d177e8db4e736e2cd571`, tras PR #66; radiografía N0-03, oráculos RETP-078/079 y transición §20. La semántica duplicada no enlazada seguía admitida y producía pérdida de miembros en Python y homónimos en Rust.
+- **Decisión y realización:** J-J0 en IR v0.3 §6.3 y comprobación complementaria de todas las semánticas, con E115 y precedencia relacional conservada. Se precisa su texto general Python. Los dos mapas variables del esquema quedan identificados; Connector conserva su guarda. No se cambia el emisor ni su versión.
+- **Evidencia:** [acta N0-03](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md), corpus 88/88, N0-03 Python 3/3 y Rust 5/5, observador 19/19 y regresiones anteriores correctas. Trece salidas por emisor y trece esperados conservados. El banco v3 conserva cinco fuentes: control, dos rechazos E115 y dos divergencias CRLF detectadas. Los cuatro flujos y la promoción se identifican en el expediente asociado a la candidata enlazada.
+- **Perfiles:** PT04/PT13/PT14 con PT01/PT02; ES/EN y ensamblaje Rust, referencia EN Python. Laboratorio 016/018 recibido dentro de sus límites; no se amplía su corpus histórico ni se promueve una plataforma.
+- **Límites:** el recorrido JSON no constituye un importador de IR ni un serializador canónico Rust completo. DFL-001 y DFL-008 siguen abiertas; las pruebas no acreditan suficiencia operacional universal ni una demostración mecanizada de todos los programas.
+- **Estado y relevo:** cierre efectivo al integrar la candidata exacta con los cuatro flujos correctos. La [transición §21](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-03-20260906) fija N0-04 como siguiente trabajo de K1. No se cierra K1, núcleo o R2/R3/R4.
 
 ## 4. Estado de continuidad
 

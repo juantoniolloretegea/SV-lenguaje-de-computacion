@@ -1,0 +1,3 @@
+-- E007: control de la guarda ya existente del segundo mapa variable.
+codomain K = { A, B };
+connector Conn { source_codomain: K; target_position: 1; mapping: { A -> Zero; B -> One; A -> Zero; } }

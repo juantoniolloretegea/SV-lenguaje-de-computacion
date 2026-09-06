@@ -1,0 +1,7 @@
+-- N0-03: claves locales a cada mapa, textos conservados y dos familias de mapas.
+output_semantics First { B -> "literal { [ ] } : , \ruta
+segunda	ñ"; A -> "común"; a -> "común"; }
+output_semantics Second { A -> "otro"; }
+output_semantics Empty {}
+codomain K = { B, A };
+connector Conn { source_codomain: K; target_position: 1; mapping: { B -> One; A -> Zero; } }

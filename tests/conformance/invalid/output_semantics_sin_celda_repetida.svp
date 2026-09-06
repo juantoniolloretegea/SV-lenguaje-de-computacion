@@ -1,0 +1,2 @@
+-- E115: la unicidad de claves no depende de que exista una CellSpec.
+output_semantics S { A -> "igual"; A -> "igual"; }

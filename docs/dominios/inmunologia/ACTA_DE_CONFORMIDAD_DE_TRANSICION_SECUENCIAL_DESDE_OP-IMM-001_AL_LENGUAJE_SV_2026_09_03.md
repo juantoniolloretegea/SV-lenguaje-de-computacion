@@ -402,3 +402,20 @@ El éxito del corpus demuestra su alcance observado. Los ejecutores actuales nor
 | Deuda | N0-03: proyección global, con testigo de semántica duplicada sin `CellSpec`. DFL-008: CRLF. DFL-001: concordancia diagnóstica general. El resto de K1/K1-T permanece pendiente. |
 | Decisión y salida | Cierre limitado efectivo cuando el expediente enlazado por el acta se integre con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos sobre su candidata exacta. Las identidades de cabeza, controles e integración pertenecen a ese expediente. |
 | Siguiente paso | Continuar fila 3 por N0-03; no saltar a F, dominios, álgebra, K2, frontera o consolidación. |
+
+<a id="cierre-n0-03-20260906"></a>
+
+## 21. Cierre incremental N0-03 y relevo a N0-04 · 06/09/2026
+
+**Registro:** RETP-2026-080. **Entrada:** main `016b2f4d1f896dcbd4e8d177e8db4e736e2cd571`, con PR #66 integrada. Se continúa la fila 3 dentro de K1, conservando la tabla y sus dependencias.
+
+| Campo | Decisión, evidencia y límite |
+|---|---|
+| Producto | [Acta N0-03](../../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md): unicidad de toda `OutputSemantics`, incluso sin celda, y recorrido JSON sin pérdida de miembros, tipos, orden ni tokens numéricos. |
+| Semántica/IR | J-J0 en IR v0.3 §6.3. La estructura existente basta; no se añaden tipos ni importación de IR. E115 conserva identidad y recibe la comprobación no enlazada; su texto general Python se precisa. |
+| Perfiles | SVP-ES/SVP-EN y ensamblaje comprobados en Rust; referencia EN Python. No aplica contenido IMM/CYB a este invariante intrínseco. PT04/PT13/PT14 y conservación PT01/PT02 reciben diagnósticos, paridad, corpus e identidades. |
+| Evidencia | 88 = 14 válidos + 74 inválidos; N0-03 Python 3/3, Rust 5/5; observador 19/19. Trece esperados intactos y trece salidas por emisor conservadas literalmente frente a la base. Los rechazos previos conservan identidad; sólo cambia el texto general E115 en cuatro casos Python. |
+| Sensibilidad | Las cinco fuentes anteriores se conservan. Esquema v3: un control, dos rechazos E115 y dos divergencias CRLF abiertas. No se suman las sondas a conformidad. |
+| Laboratorio | Se reutilizan oráculos y distinción validez/identidad de 016; 018 conserva sus 79 programas y condiciones. No se repite ni se amplía retrospectivamente esa campaña, ni se promueve otra plataforma. |
+| Decisión y salida | Cierre limitado efectivo al integrar el expediente enlazado con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos sobre su candidata exacta; cabeza, árbol, ejecuciones e integración quedan identificados en ese expediente. |
+| Deuda y siguiente paso | N0-04: referencia real de `Horizon.architecture` a `CompositionGraph`, según la radiografía. Se conservan DFL-001/008 y el resto de K1/K1-T. No se anticipan F, dominios, álgebra, K2, frontera o consolidación. |

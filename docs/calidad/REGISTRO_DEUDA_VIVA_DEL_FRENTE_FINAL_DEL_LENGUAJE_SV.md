@@ -106,3 +106,9 @@ cobertura de E011 en Rust. Véase el [acta de oráculos, §3](./ACTA_TECNICA_REP
 RETP-079 y el [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) cierran, tras la promoción de su expediente, la totalidad y unicidad de la semántica enlazada por cada `CellSpec`. J-K1 se comprueba en Python y Rust con E115, conservando E102 para la referencia ausente o de tipo incorrecto. Esta concordancia concreta no cierra DFL-001 ni modifica su fotografía diagnóstica histórica.
 
 N0-03 permanece abierto y es el siguiente relevo de K1. La sonda `semantics_unbound_duplicate` retira sólo `CellSpec` del testigo duplicado: Python sigue perdiendo un miembro y Rust emite homónimos. La comprobación universal de la proyección admitida debe cubrir ese supuesto, sin inferir una referencia de codominio ausente. La detección no acredita reparación ni aceptación normativa de la entrada. DFL-008 conserva ambas sondas CRLF y su condición de cierre.
+
+## 8. Cierre N0-03 y continuidad K1 · 06/09/2026
+
+RETP-080 y el [acta N0-03](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) resuelven, tras su promoción, el testigo residual de semántica duplicada sin `CellSpec`. La misma entrada se conserva y exige E115 en ambos emisores. La ausencia de homónimos se fundamenta en el inventario del esquema emitido y la guarda de sus mapas variables; el recorrido JSON acredita estabilidad del corpus sin pérdida de miembros, tipos ni precisión.
+
+Esta resolución no cierra DFL-001: el texto general E115 se precisa y su identidad se conserva, pero sigue faltando concordancia diagnóstica general. DFL-008 mantiene ambas sondas CRLF y su condición de cierre. N0-04 es el siguiente paso de K1; no se acredita un importador de IR, un serializador canónico Rust completo ni suficiencia operacional universal.

@@ -1,0 +1,64 @@
+{
+  "grammar_version": "0.2",
+  "ir_version": "0.3",
+  "objects": [
+    {
+      "fields": {
+        "mappings": {
+          "A": "común",
+          "B": "literal { [ ] } : , \\ruta\nsegunda\tñ",
+          "a": "común"
+        }
+      },
+      "level": "N0",
+      "name": "First",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "A": "otro"
+        }
+      },
+      "level": "N0",
+      "name": "Second",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "mappings": {}
+      },
+      "level": "N0",
+      "name": "Empty",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "values": [
+          "B",
+          "A"
+        ]
+      },
+      "level": "N0",
+      "name": "K",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mapping": {
+          "A": "Zero",
+          "B": "One"
+        },
+        "source_codomain": "K",
+        "target_position": 1
+      },
+      "level": "N0",
+      "name": "Conn",
+      "type": "Connector"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "output_semantics_independientes.svp",
+  "source_sha256": "e2301ce7b8569474484af5378f4fae3a96b56feb61d09b0d455a5d653843272a"
+}

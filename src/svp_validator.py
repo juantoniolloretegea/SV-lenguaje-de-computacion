@@ -32,6 +32,18 @@ class Validator:
             self._register(node)
         for node in self.program.nodes:
             self._validate_node(node)
+        # N0-03: conservar la precedencia de los rechazos relacionales N0-02.
+        for node in self.program.nodes:
+            if isinstance(node, OutputSemanticsDecl):
+                seen = set()
+                duplicates = set()
+                for key, _ in node.mappings:
+                    if key in seen:
+                        duplicates.add(key)
+                    seen.add(key)
+                if duplicates:
+                    raise SVPError(E115, node.loc.line, node.loc.col,
+                                   f"OutputSemantics {node.name}: repetidas=[{', '.join(sorted(duplicates))}]")
 
     def _register(self, node: ASTNode):
         name = getattr(node, "name", None)

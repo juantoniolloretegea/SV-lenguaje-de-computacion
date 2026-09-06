@@ -9,7 +9,7 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
-**Precisiones posteriores:** N0-01 (§6.1) y N0-02 (§6.2), con alcance y diagnóstico expresos
+**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2) y N0-03 (§6.3), con alcance y diagnóstico expresos
 
 ---
 
@@ -250,6 +250,7 @@ Esta versión añade o refuerza, en el radio implementado, los siguientes juicio
 ```text
 J-K0  Codomain contiene al menos un miembro y no contiene miembros repetidos.
 J-K1  Cada CellSpec enlaza una interpretación única para cada miembro de su Codomain, sin claves ajenas.
+J-J0  La proyección de un programa admitido no contiene miembros homónimos dentro de ningún objeto JSON.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
 J-R0  resolve identifica un estado evaluable y una posición real.
@@ -299,7 +300,30 @@ La comprobación se realiza sobre cada `CellSpec`, después de resolver sus refe
 
 La invalidez de esta relación produce `E115 — InvalidOutputSemantics`, fase `validate`, capa efectiva 1 (Estado), con identidad de la celda, semántica y codominio implicados. `E102 — MissingOutputSemantics` conserva su alcance efectivo para referencia semántica ausente o de tipo incorrecto. El rechazo no produce IR ni un valor `U`.
 
-N0-02 cierra esta relación constituida, sin añadir a `OutputSemantics` una referencia propia de codominio. La validación global de nombres homónimos de JSON, incluidas declaraciones sin vínculo con una `CellSpec`, permanece en N0-03. La Gramática v0.2, el esquema de IR v0.3 y el serializador v0.1.0 se conservan: se refuerza la admisión de entradas, no se modifica la forma de salida de los programas conformes. Los programas que violan J-K1 dejan de admitirse.
+N0-02 cierra esta relación constituida, sin añadir a `OutputSemantics` una referencia propia de codominio. La validación global de nombres homónimos de JSON, incluidas declaraciones sin vínculo con una `CellSpec`, se resuelve separadamente en N0-03 (§6.3). La Gramática v0.2, el esquema de IR v0.3 y el serializador v0.1.0 se conservan: se refuerza la admisión de entradas, no se modifica la forma de salida de los programas conformes. Los programas que violan J-K1 dejan de admitirse.
+
+---
+
+<a id="proyeccion-n0-03"></a>
+
+### 6.3. Unicidad local de miembros y estabilidad de proyección (N0-03)
+
+Toda declaración `S : OutputSemantics` debe tener claves distintas, también cuando ninguna `CellSpec` la referencia:
+
+```text
+keys = [key | (key, description) ∈ S.mappings]
+card(keys) = card(set(keys))
+```
+
+Una clave repetida produce `E115 — InvalidOutputSemantics`, incluso si los textos coinciden. Esta precisión extiende la sede de comprobación de la misma infracción de multiplicidad ya diagnosticada por N0-02; no reutiliza el código para un significado distinto. Sin una celda vinculante, el diagnóstico identifica la semántica y sus claves repetidas, sin fabricar identidades de celda o codominio. La comprobación complementaria se aplica después de las validaciones existentes, antes de exponer el programa admitido o descender a mapas; conserva los rechazos relacionales y su precedencia de N0-02.
+
+La unicidad es local a cada mapa. Distintas declaraciones pueden usar la misma clave; sus identidades y referencias siguen siendo independientes. No se deduplican claves, no se fusionan mapas ni se exige cobertura de un codominio no referenciado. Una semántica no enlazada y sin repeticiones conserva su admisibilidad estructural previa, incluida la forma vacía; eso no acredita su suficiencia para una operación o una celda futura.
+
+En el esquema emitido vigente, las claves variables se encuentran en `OutputSemantics.mappings` y `Connector.mapping`. El segundo conserva su comprobación de unicidad y cobertura anterior. Las filas de tablas, las secuencias y los campos textuales permanecen respectivamente filas, secuencias y texto; no se reinterpretan como mapas. Los nombres de los demás campos JSON son fijos y distintos dentro de cada objeto del esquema.
+
+Para la proyección JSON `P` de todo programa admitido del corpus comprobado, el recorrido `P → parse_JSON → serialize_JSON → parse_JSON` debe conservar miembros, nombres, valores, tipos, orden observable y representación numérica sin conversión a coma flotante. El lector de prueba rechaza homónimos a cualquier profundidad antes de formar mapas. La identidad de nombres se compara tras decodificar escapes JSON, sin normalización adicional. Se permiten diferencias de espacios y escapes equivalentes según el contrato del observador; esta propiedad no demuestra igualdad literal entre emisores.
+
+J-J0 se exige a todos los programas admitidos por las rutas constituidas. La revisión del esquema y la guarda de sus dos mapas variables fundamentan esa obligación; las pruebas acreditan el corpus y las variantes declaradas. No se afirma una verificación formal mecanizada universal. No se introduce un importador de IR ni una equivalencia completa entre AST, IR y doctrina: `equivalence_json` conserva su condición de proyección diferencial. Gramática 0.2, esquema IR 0.3 y serializador 0.1.0 mantienen sus versiones; la entrada que viola la unicidad deja de admitirse. La deuda CRLF de DFL-008 sigue separada.
 
 ---
 
@@ -323,12 +347,12 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La implementación de referencia correspondiente a esta versión dispone de una batería de 85 casos:
+La implementación de referencia correspondiente a esta versión dispone de una batería de 88 casos:
 
 ```text
-13 válidos
-72 inválidos
-85 total
+14 válidos
+74 inválidos
+88 total
 ```
 
 Los casos válidos comparan la salida contra IR canónica comprometida. Los inválidos exigen el código diagnóstico declarado. La batería incluye contraejemplos específicos para:
@@ -336,6 +360,7 @@ Los casos válidos comparan la salida contra IR canónica comprometida. Los inv�
 - estados de admisibilidad heredados;
 - `Codomain` con un miembro repetido;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
+- semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
 - objetivo de `resolve` fuera de rango o distinto de `U`;
 - instancia de revisión incompatible;
 - estados de `Frame` ajenos a la arquitectura;

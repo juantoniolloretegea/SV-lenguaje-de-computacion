@@ -46,6 +46,36 @@ def assert_json_equal(left: bytes, right: bytes) -> None:
         raise OracleError("divergencia JSON: orden, tipo, número o contenido distinto")
 
 
+def assert_json_roundtrip(raw: bytes) -> bytes:
+    """Recorrido del valor JSON, no serializador de IR ni reparación del programa.
+
+    Conserva tokens numéricos del parser para no estrechar Nat ni redondear.
+    Los pares se comprueban antes de producir cualquier mapa.
+    """
+    parsed = ordered_json(raw)
+
+    def encode(value):
+        if isinstance(value, tuple):
+            tag, entries = value
+            if tag == "object":
+                return "{" + ",".join(json.dumps(k, ensure_ascii=False) + ":" + encode(v)
+                                       for k, v in entries) + "}"
+            if tag == "number":
+                return entries
+            raise OracleError(f"etiqueta de valor JSON desconocida: {tag}")
+        if isinstance(value, list):
+            return "[" + ",".join(encode(v) for v in value) + "]"
+        return json.dumps(value, ensure_ascii=False, allow_nan=False)
+
+    try:
+        repeated = encode(parsed).encode("utf-8")
+    except (UnicodeError, ValueError) as exc:
+        raise OracleError(f"valor JSON no reproducible: {exc}") from exc
+    if ordered_json(repeated) != parsed:
+        raise OracleError("pérdida de miembros, tipos, orden o contenido en el recorrido JSON")
+    return repeated
+
+
 def assert_bytes_equal(left: bytes, right: bytes) -> None:
     if left != right:
         raise OracleError("bytes distintos")
@@ -62,7 +92,7 @@ def assert_success(proc: subprocess.CompletedProcess[bytes]) -> None:
         raise OracleError(f"se esperaba admisión: rc={proc.returncode}; {proc.stderr!r}")
     if proc.stderr:
         raise OracleError(f"admisión con stderr inesperado: {proc.stderr!r}")
-    ordered_json(proc.stdout)
+    assert_json_roundtrip(proc.stdout)
 
 
 def cli_payload(raw: bytes) -> bytes:
@@ -92,6 +122,8 @@ def assert_python_rejection(proc, expected_code: str) -> None:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan a los códigos Python ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "output_semantics_sin_celda_repetida": "E115 (InvalidOutputSemantics): OutputSemantics S: repetidas=[A]",
+    "connector_clave_repetida": "Connector Conn: clave duplicada",
     "output_semantics_vacia": "E115 (InvalidOutputSemantics)",
     "output_semantics_clave_ausente": "E115 (InvalidOutputSemantics)",
     "output_semantics_clave_ajena": "E115 (InvalidOutputSemantics)",
