@@ -20,6 +20,9 @@ jobs:
       - name: Verificar que los oráculos detectan las infracciones
         run: python3 -m unittest discover -s tests -p 'test_oracle_support.py' -v
 
+      - name: Verificar relación total CellSpec–OutputSemantics–Codomain
+        run: python3 -m unittest discover -s tests -p 'test_output_semantics_totality.py' -v
+
       - name: Verificar CLI y determinismo literal
         run: |
           python3 tests/run_cli_smoke.py

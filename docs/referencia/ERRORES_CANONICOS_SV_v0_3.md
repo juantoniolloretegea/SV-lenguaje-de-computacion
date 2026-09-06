@@ -4,12 +4,13 @@
 
 Este documento describe el catálogo efectivo utilizado por la etapa frontal de referencia correspondiente a Gramática v0.2 e IR v0.3.
 
-La versión v0.3 conserva el catálogo v0.2, añade tres diagnósticos para las correcciones de admisibilidad, revisión identificada de `U` y cierre de `Frame`, y precisa el alcance efectivo de `E004` para `Codomain`.
+La versión v0.3 conserva el catálogo v0.2, añade cuatro diagnósticos para las correcciones de admisibilidad, revisión identificada de `U`, cierre de `Frame` y totalización unívoca de la semántica de `CellSpec`, y precisa el alcance efectivo de `E004` para `Codomain`.
 
 ```text
 catálogo v0.3
 = catálogo v0.2
 + E110
++ E115
 + E305
 + E308
 ```
@@ -20,14 +21,15 @@ El catálogo v0.2 se conserva como antecedente histórico y no se reescribe.
 
 ## 2. Estado vigente
 
-El catálogo efectivo contiene **50 códigos**.
+El catálogo efectivo contiene **51 códigos**.
 
-Los tres códigos incorporados y el código precisado en esta versión son:
+Los cuatro códigos incorporados y el código precisado en esta versión son:
 
 | Código | Nombre | Capa | Fase | Alcance |
 |---|---|---|---|---|
 | E004 | `InvalidCodomain` | Definición | `validate` | `Codomain` debe ser finito, explícito, no vacío y no contener miembros repetidos |
 | E110 | `InvalidAdmissibilitySpec` | Definición | `validate` | `AdmissibilitySpec` debe usar exclusivamente `Ok`, `Degraded` y `NotAdmitted`, con `parameter_id > 0` y regla no vacía |
+| E115 | `InvalidOutputSemantics` | Estado | `validate` | La relación de cada `CellSpec` con su `OutputSemantics` y `Codomain` exige exactamente una clave por miembro, sin claves ajenas ni repetidas |
 | E305 | `UnsafeUResolution` | Resultado | `validate` | `resolve` exige una `U` constituida e identificable y una instancia compatible con su `ResSpec` |
 | E308 | `FrameClosureViolation` | Evolución | `validate` | `Frame` contiene una referencia fuera de su cierre estructural o causal, una identidad duplicada o una criticidad no producible por la superficie vigente |
 
@@ -38,6 +40,14 @@ Todos los códigos restantes mantienen el nombre y alcance del catálogo v0.2 sa
 `E004` se emite ante un `Codomain` vacío o con uno o más miembros repetidos. La realización debe rechazar la declaración y conservar como observables el código y el nombre; no puede deduplicar ni reordenar los miembros para fabricar una entrada válida.
 
 La tabla histórica de IR v0.2 asignó `E101 — EmptyCodomain`. Ese identificador no se reutiliza porque el catálogo efectivo ya lo asigna a `VectorLengthMismatch`. La correspondencia histórica permanece registrada como divergencia y N0-01 establece `E004` como identidad vigente, sin renumeración retroactiva.
+
+---
+
+### 2.2. Incorporación de `E115 — InvalidOutputSemantics` (N0-02)
+
+`E115` se emite después de resolver las referencias de una `CellSpec`, si las claves de su semántica no cubren exactamente su codominio o contienen repeticiones. Identifica celda, semántica y codominio; informa claves repetidas, ausentes y ajenas. La unicidad se exige también cuando los textos repetidos coinciden. Compartir textos entre símbolos distintos y declarar las claves en otro orden siguen siendo conformes.
+
+`E102 — MissingOutputSemantics` conserva su significado para referencia ausente o de tipo incorrecto. N0-02 no completa los diagnósticos de todo el Lenguaje ni la protección global de la proyección JSON pendiente en N0-03. El nombre y código E115 se observan en Python y en `CompileError::InvalidProgram` de Rust; esa concordancia concreta no equivale a un formato diagnóstico estructurado compartido. Véase [IR v0.3 §6.2](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#relacion-n0-02) y el [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md).
 
 ---
 
@@ -150,14 +160,14 @@ E110, E305 y E308 no constituyen una solución lateral de esa deuda.
 
 ## 8. Cobertura reproducible
 
-La batería vigente contiene 80 casos:
+La batería vigente contiene 85 casos:
 
 ```text
-12 válidos
-68 inválidos
+13 válidos
+72 inválidos
 ```
 
-Los diagnósticos E004, E110, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, codominios con miembros distintos, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.
+Los diagnósticos E004, E110, E115, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, codominios con miembros distintos, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.
 
 La existencia de un caso diagnóstico demuestra cobertura observable de ese supuesto; no equivale por sí sola al cierre de todos los juicios normativos relacionados.
 

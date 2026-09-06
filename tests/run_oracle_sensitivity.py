@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Sensibilidad frente a tres divergencias abiertas; no conformidad ampliada.
+"""Sensibilidad a deudas abiertas y regresión del cierre relacional N0-02.
 
-La base y las transformaciones reproducen las recetas N0-02/03 y de identidad
-de fuente. Un resultado correcto de este banco acredita detección, no reparación.
+Las sondas CRLF conservan su alcance DFL-008. La semántica duplicada enlazada
+se rechaza con E115; la no enlazada conserva un testigo de la deuda N0-03.
 """
 import argparse
 import hashlib
@@ -11,7 +11,8 @@ from pathlib import Path
 import sys
 
 from oracle_support import (run, assert_success, assert_json_equal, ordered_json,
-                            DuplicateJsonMember, OracleError)
+                            DuplicateJsonMember, OracleError, assert_python_rejection,
+                            assert_rust_rejection)
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROL = (
@@ -38,6 +39,8 @@ def main():
         'string_crlf': CONTROL.replace(b'"a"', b'"a\r\nb"'),
         'semantics_duplicate': CONTROL.replace(b'Beta -> "b";', b'Beta -> "b"; Alpha -> "other";'),
     }
+    cases['semantics_unbound_duplicate'] = cases['semantics_duplicate'].replace(
+        b'cellspec CC { b: 3; codomain: KK; semantics: SS; role: Base; }\n', b'')
     records, failures = [], []
     for name, raw in cases.items():
         source = out / f'{name}.svp'
@@ -56,19 +59,26 @@ def main():
                   'stdout_sha256': digest(value.stdout), 'stderr_sha256': digest(value.stderr)}
             for key, value in observations.items()}}
         try:
-            # Las tres entradas aún se admiten en el corte. Un cierre posterior
-            # debe actualizar este expediente explícitamente; no se tolera cualquier fallo.
-            assert_success(py)
-            if name != 'semantics_duplicate':
-                assert_success(rust)
-            elif rust.returncode != 0 or rust.stderr:
-                raise OracleError('no se reprodujo la admisión Rust de la sonda duplicada')
+            if name == 'semantics_duplicate':
+                assert_python_rejection(py, 'E115')
+                assert_rust_rejection(rust, 'output_semantics_clave_repetida')
+                for proc in [py, rust]:
+                    if b'repetidas=[Alpha]' not in proc.stderr:
+                        raise OracleError('el rechazo no identifica la clave repetida')
+            else:
+                assert_success(py)
+                if name != 'semantics_unbound_duplicate':
+                    assert_success(rust)
+                elif rust.returncode != 0 or rust.stderr:
+                    raise OracleError('no se reprodujo la admisión Rust de la sonda no enlazada')
             if name == 'control_valid':
                 assert_json_equal(py.stdout, rust.stdout)
                 if json.loads(rust.stdout)['source_sha256'] != digest(raw):
                     raise OracleError('identidad del control incorrecta')
                 record['result'] = 'CONTROL_CONFORME'
             elif name == 'semantics_duplicate':
+                record['result'] = 'CIERRE_RELACIONAL_N0_02_E115'
+            elif name == 'semantics_unbound_duplicate':
                 try:
                     ordered_json(rust.stdout)
                 except DuplicateJsonMember:
@@ -100,9 +110,9 @@ def main():
             failures.append(name)
         records.append(record)
     report = {
-        'schema': 'sv-oracle-sensitivity-v1',
-        'scope': 'detector de divergencias conocidas; no cierre de esas divergencias',
-        'base_head': '91dc5a3c3b2298ef3fd1b2eefe607f379643e076',
+        'schema': 'sv-oracle-sensitivity-v2',
+        'scope': 'cierre relacional N0-02; sensibilidad a DFL-008 y N0-03 sin cerrar esas deudas',
+        'base_head': 'ed61af2fb80641866356a7138cc87763eab005d9',
         'checkout_head': run(['git', 'rev-parse', 'HEAD']).stdout.decode().strip(),
         'rust_binary_sha256': digest(args.rust_bin.read_bytes()),
         'observer_sha256': {name: digest((ROOT / 'tests' / name).read_bytes())
@@ -113,7 +123,7 @@ def main():
     if failures:
         print('No se acreditó la sensibilidad: ' + ', '.join(failures), file=sys.stderr)
         return 1
-    print('Sensibilidad: 1 control válido y 3 divergencias detectadas; 0 divergencias reparadas.')
+    print('Sensibilidad: 1 control válido, 1 rechazo N0-02 y 3 divergencias abiertas detectadas.')
     return 0
 
 

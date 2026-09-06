@@ -384,3 +384,21 @@ El éxito del corpus demuestra su alcance observado. Los ejecutores actuales nor
 | Deuda | `semantics_duplicate` se devuelve a N0-02/N0-03; CRLF y el literal CRLF quedan bajo DFL-008; DFL-001 conserva la concordancia diagnóstica incompleta. Su detección no acredita reparación. |
 | Decisión | Reparación efectiva al integrarse su expediente con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos en la candidata exacta. La evidencia de sensibilidad se conserva separada de la conformidad. |
 | Relevo | Fila 3: K1 desde N0-02, relación total y sin claves repetidas entre CellSpec, OutputSemantics y Codomain. No se anticipan F, K2, álgebra, cierre nuclear o R2/R3/R4. |
+
+<a id="cierre-n0-02-20260906"></a>
+
+## 20. Cierre incremental N0-02 y relevo a N0-03 · 06/09/2026
+
+**Registro:** RETP-2026-079. **Entrada:** main `ed61af2fb80641866356a7138cc87763eab005d9`, con PR #65 integrada. Se desarrolla exclusivamente N0-02 dentro de la fila 3; la tabla y sus dependencias permanecen vigentes.
+
+| Campo | Decisión, evidencia y límite |
+|---|---|
+| Producto | [Acta N0-02](../../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md): cada `CellSpec` enlaza exactamente una interpretación por miembro de su `Codomain`, sin claves ajenas ni repetidas. |
+| Semántica/IR | J-K1 en IR v0.3 §6.2 y E115 en catálogo efectivo. La representación ya contiene la relación; se refuerza la validación sin cambiar Gramática 0.2, esquema IR 0.3 ni serializador 0.1.0. |
+| Perfil fuente y dominio | SVP-ES/SVP-EN y ensamblaje comprobados en Rust; Python en su superficie EN. Textos compartidos y orden independiente preservados. No aplica conocimiento IMM/CYB a este invariante intrínseco. |
+| Soporte y PT | PT04: rechazo E115 con identidad de la relación y ausencia de IR. PT13: paridad pertinente. PT14: corpus y entorno. PT01/PT02: identidades y conservación literal por emisor frente a la base; no equivalencia literal universal entre emisores. |
+| Evidencia | Corpus 85 = 13 válidos + 72 inválidos; cinco pruebas Python y seis Rust N0-02. Doce esperados anteriores intactos; cuatro negativos antes admitidos ahora rechazados en ambas vías. El banco conserva control, cierre relacional y tres divergencias abiertas detectadas. |
+| Laboratorio | Se recibe la distinción validez/identidad de 016 y se conserva el alcance de 018, 79 programas EN. No se promueve un nuevo perfil ni se atribuyen retrospectivamente a esos ensayos los 85 casos o el ensamblaje. La prueba previa y el enlace material mantienen sus puertas. |
+| Deuda | N0-03: proyección global, con testigo de semántica duplicada sin `CellSpec`. DFL-008: CRLF. DFL-001: concordancia diagnóstica general. El resto de K1/K1-T permanece pendiente. |
+| Decisión y salida | Cierre limitado efectivo cuando el expediente enlazado por el acta se integre con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos sobre su candidata exacta. Las identidades de cabeza, controles e integración pertenecen a ese expediente. |
+| Siguiente paso | Continuar fila 3 por N0-03; no saltar a F, dominios, álgebra, K2, frontera o consolidación. |

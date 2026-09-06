@@ -1,0 +1,44 @@
+{
+  "grammar_version": "0.2",
+  "ir_version": "0.3",
+  "objects": [
+    {
+      "fields": {
+        "values": [
+          "B",
+          "A"
+        ]
+      },
+      "level": "N0",
+      "name": "K",
+      "type": "Codomain"
+    },
+    {
+      "fields": {
+        "mappings": {
+          "A": "igual",
+          "B": "igual"
+        }
+      },
+      "level": "N0",
+      "name": "S",
+      "type": "OutputSemantics"
+    },
+    {
+      "fields": {
+        "b": 3,
+        "codomain": "K",
+        "n": 9,
+        "role": "Base",
+        "semantics": "S"
+      },
+      "level": "N0",
+      "name": "C",
+      "type": "CellSpec"
+    }
+  ],
+  "operations": [],
+  "serializer_version": "0.1.0",
+  "source_file": "output_semantics_total_permutada.svp",
+  "source_sha256": "efcc68fb5cd7b5d7d70e645fdfe122393cd8fd73b4a0ab65055fee64634bf013"
+}

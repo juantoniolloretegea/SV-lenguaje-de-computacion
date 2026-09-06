@@ -92,6 +92,11 @@ def assert_python_rejection(proc, expected_code: str) -> None:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan a los códigos Python ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "output_semantics_vacia": "E115 (InvalidOutputSemantics)",
+    "output_semantics_clave_ausente": "E115 (InvalidOutputSemantics)",
+    "output_semantics_clave_ajena": "E115 (InvalidOutputSemantics)",
+    "output_semantics_clave_repetida": "E115 (InvalidOutputSemantics)",
+
     "admissibility_spec_estados_legacy": 'InvalidAdmissibilityState("Failed")',
     "admissibility_spec_failed_legacy": 'InvalidAdmissibilityState("Failed")',
     "admissibility_spec_u_legacy": 'InvalidAdmissibilityState("U")',

@@ -1,0 +1,4 @@
+-- E115: relación CellSpec–OutputSemantics–Codomain inválida (clave_ausente).
+codomain K = { A, B };
+output_semantics S { A -> "a"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }

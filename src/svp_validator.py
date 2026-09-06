@@ -13,7 +13,7 @@ ISSN 2695-6411 | CC BY-NC-ND 4.0
 from typing import Dict, Set
 from svp_ast import *
 from svp_errors import (SVPError, E002, E004, E005, E006, E007, E009, E011, E110,
-                         E101, E102, E104, E105, E112, E113, E114,
+                         E101, E102, E104, E105, E112, E113, E114, E115,
                          E202, E211, E212, E213, E214, E215, E305,
                          E303, E304, E307, E308, E406,
                          E401, E402, E403)
@@ -117,6 +117,24 @@ class Validator:
         if self.symbol_types[node.semantics] != "OutputSemanticsDecl":
             raise SVPError(E102, node.loc.line, node.loc.col,
                            f"CellSpec {node.name!r} referencia {node.semantics!r}, pero no es OutputSemantics")
+        semantics = self.symbols[node.semantics]
+        codomain = self.symbols[node.codomain]
+        keys = [key for key, _ in semantics.mappings]
+        seen = set()
+        duplicates = set()
+        for key in keys:
+            if key in seen:
+                duplicates.add(key)
+            seen.add(key)
+        expected = set(codomain.values)
+        missing = expected - seen
+        extra = seen - expected
+        if duplicates or missing or extra:
+            raise SVPError(E115, node.loc.line, node.loc.col,
+                           f"CellSpec {node.name}, OutputSemantics {node.semantics}, Codomain {node.codomain}: "
+                           f"repetidas=[{', '.join(sorted(duplicates))}]; "
+                           f"ausentes=[{', '.join(sorted(missing))}]; "
+                           f"ajenas=[{', '.join(sorted(extra))}]")
 
     def _validate_coupledspec(self, node: CoupledSpecDecl):
         self._require_ref(node.cell, node.loc, "CellSpecDecl")

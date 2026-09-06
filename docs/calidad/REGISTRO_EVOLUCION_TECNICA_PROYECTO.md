@@ -43,9 +43,11 @@ La continuidad documental se organiza así:
 | RETP-2026-072 | 04/09/2026 | 22:04:26 | FIJACION_ARQUITECTONICA | Lenguaje SV / arquitectura de software / núcleo, frontera y host | cerrado |
 | RETP-2026-073 | 05/09/2026 | 13:42:20 | FIJACION_RESTRICCIONES_DE_DISENO | Lenguaje SV / pilares / frontera de autoridad dominio-agente-núcleo | cerrado |
 | RETP-2026-074 | 05/09/2026 | 14:56:55 | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / N0-01 / unicidad de `Codomain` | cerrado |
-
+| RETP-2026-075 | 06/09/2026 | NO_CONSTA | FIJACION_ARQUITECTONICA_Y_SUFICIENCIA_DE_CIERRE | Lenguaje SV / perfiles / contratos / ensamblaje / frontera | cerrado_documental |
+| RETP-2026-076 | 06/09/2026 | NO_CONSTA | ACTUALIZACION_RECTORA_DE_CONTINUIDAD | Lenguaje SV / cierre nuclear / retornos IMM-CYB / perfiles / R2-R4 | cerrado_documental |
 | RETP-2026-077 | 06/09/2026 | 22:26:33 | RECEPCION_Y_RECONCILIACION_GOBERNADA | Lenguaje SV / PR61 / N0-01 / relevo a oráculos | recepción delimitada; promoción por PR61 |
 | RETP-2026-078 | 06/09/2026 | NO_CONSTA | REPARACION_DE_ORACULOS | Lenguaje SV / fila 2 / PT02-PT04-PT13 | reparación delimitada; promoción por candidata exacta |
+| RETP-2026-079 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-02 | cierre relacional delimitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -292,6 +294,15 @@ La continuidad documental se organiza así:
 - **Alcance:** PT02/PT04/PT13, identidad y entorno PT01/PT14. Comprobadores y documentación; la fuente Python, el núcleo Rust, la gramática y la IR conservan su identidad.
 - **Límites:** N0-02/N0-03 conservan semántica repetida y proyección; DFL-008 conserva pérdida CRLF; DFL-001 conserva la diferencia de fase y representación diagnóstica. Detectar no cierra estas deudas ni acredita un soporte productivo.
 - **Decisión y estado:** reparación efectiva tras promoción del expediente con los cuatro flujos correctos sobre la candidata exacta. La [transición §19](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#oraculos-20260906) deja como siguiente paso K1 desde N0-02.
+
+### RETP-2026-079 — N0-02: relación total y unívoca de OutputSemantics
+
+- **Hecho y fundamento:** sobre main `ed61af2fb80641866356a7138cc87763eab005d9`, tras PR #65, J1.1 y la radiografía N0-02 se concretan en J-K1 de IR v0.3 §6.2. Cada CellSpec exige exactamente una interpretación por miembro de su Codomain. Se conservan textos compartidos y orden independiente; no se infiere ni repara.
+- **Realización:** Python y Rust validan la relación antes de emitir su proyección; E115 — InvalidOutputSemantics identifica claves repetidas, ausentes y ajenas. E102 conserva referencia ausente o de tipo incorrecto. Gramática, esquema IR y serializador conservan sus versiones.
+- **Evidencia:** [acta N0-02](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md), corpus 85/85, cinco pruebas Python y seis Rust específicas, 210+3+5+2 pruebas Rust anteriores y 17 documentales; doce salidas por emisor preservadas frente a la base y cuatro nuevos negativos antes admitidos. Los cuatro flujos y la integración se identifican en el expediente asociado a la rama enlazada por el acta.
+- **Perfiles:** PT04/PT13/PT14 y conservación PT01/PT02; ES/EN y ensamblaje Rust, referencia EN Python. La evidencia de laboratorio 016/018 mantiene alcance e identidad; no se promueve otra plataforma ni se amplía el corpus histórico de 018.
+- **Límites:** N0-03 conserva una semántica duplicada no enlazada como testigo de proyección defectuosa; DFL-008 conserva CRLF y DFL-001 la concordancia diagnóstica general. El banco de sensibilidad v2 exige un control, un rechazo N0-02 y tres divergencias abiertas detectadas, sin sumarlas a conformidad.
+- **Decisión y estado:** cierre relacional efectivo al integrar la candidata exacta con los cuatro flujos correctos. La [transición §20](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-02-20260906) deja N0-03 como siguiente paso dentro de K1. No se cierran K1, álgebra, núcleo ni R2/R3/R4.
 
 ## 4. Estado de continuidad
 
