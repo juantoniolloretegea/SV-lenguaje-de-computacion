@@ -312,3 +312,10 @@ FASE_MATERIAL_ABIERTA = NO
 ~~~
 
 Queda fijada esta frontera como condición de diseño, revisión e implementación. El núcleo no recibirá autoridad para decidir el dominio; tampoco recibirá permiso para ignorar, completar o aceptar en silencio aquello que el dominio o el agente deban declarar.
+
+
+## 12. Desarrollo de perfiles, contratos y ensamblaje · 06/09/2026
+
+El [acta técnica de perfiles, contratos y ensamblaje](./ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md) desarrolla estos Pilares en la terna representación, dominio y soporte tecnológico. Fija la comprobación de suficiencia del alcance que se consolida, el reparto de obligaciones entre semántica, IR y frontera, y la prueba previa de las realizaciones tecnológicas en el laboratorio. Su lectura es obligatoria conforme a AGENTS.md.
+
+El desarrollo no altera los invariantes ni convierte los perfiles de dominio o tecnología en tipos ejecutables ya disponibles. Mantiene la prohibición de campos opacos presentados como contratos comprobados, la competencia de dominio y agente y la decisión propia sobre la sede de cada representación. Los estados anteriores corresponden al corte declarado de esta pieza. Registro complementario: RETP-2026-075.

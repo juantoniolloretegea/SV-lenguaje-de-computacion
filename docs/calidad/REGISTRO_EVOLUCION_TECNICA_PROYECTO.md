@@ -44,6 +44,8 @@ La continuidad documental se organiza así:
 | RETP-2026-073 | 05/09/2026 | 13:42:20 | FIJACION_RESTRICCIONES_DE_DISENO | Lenguaje SV / pilares / frontera de autoridad dominio-agente-núcleo | cerrado |
 | RETP-2026-074 | 05/09/2026 | 14:56:55 | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / N0-01 / unicidad de `Codomain` | cerrado |
 
+| RETP-2026-077 | 06/09/2026 | 22:26:33 | RECEPCION_Y_RECONCILIACION_GOBERNADA | Lenguaje SV / PR61 / N0-01 / relevo a oráculos | recepción delimitada; promoción por PR61 |
+
 ## 3. Entradas detalladas
 
 ### RETP-2026-048 — Reapertura por Ruta A
@@ -252,6 +254,35 @@ La continuidad documental se organiza así:
 - **Decisión:** mantener N0-01 como invariante intrínseco y representable; no reparar ni reordenar el codominio; no extender el cierre a orden, totalidad de salida ni N0-02 y siguientes.
 - **Límites:** no decide células, valores de `b`, parámetros, dominios, agentes, bus, host u operación algebraica; no acredita ejecución soberana adicional en `sv_core`. Tampoco cierra por analogía `Ternarizer`, `BridgeSet`, la multiplicidad de `Horizon.events` ni la estructuración de diagnósticos Rust; esos extremos quedan individualizados en la radiografía y DFL-001.
 - **Estado:** cerrado.
+### RETP-2026-075 — Perfiles, contratos y ensamblaje: suficiencia para el cierre
+
+- **Hecho:** se fija en Calidad el marco canónico de representación, dominio y soporte tecnológico, con identidades, versiones y contratos distintos; se delimitan los tres ensamblajes, las obligaciones de suficiencia que deben llegar al Lenguaje antes de su cierre y la prueba previa en laboratorio de las realizaciones tecnológicas.
+- **Fundamento:** Pilares y arquitectura RETP-072/073; perfiles fuente ES/EN; contrato FFL-E de suficiencia representacional por operación; transición desde OP-IMM-001; secuencia N0; candidata y matriz del registro experimental 020.
+- **Evidencia:** [acta canónica](./ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md); base main 230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4; PR61 ad8e8dd30930e35b75bf5f2fad78938d36233b78; laboratorio e97fed715ff5e3ae19bbaccaf2852e9cd3288377; publicación 566aef09824f080c5cc09722223b5ac7327a32b4. Lectura y contraste documental, actualización de AGENTS.md y entradas prioritarias; ninguna nueva campaña material acredita esta acta.
+- **Decisión:** exigir encaje contractual y suficiencia demostrable para las operaciones incluidas en el cierre; recibir evidencia tecnológica previa con su alcance; reutilizar artefactos y oráculos existentes; mantener una sede canónica y su vínculo desde Documentación de laboratorios.
+- **Límites:** no añade tipos a la DSL/IR, no implementa álgebra, no selecciona host o ABI, no constituye dominio/agente, no integra R1 con el laboratorio ni cierra fases operacionales. Las realizaciones y garantías conservan sus propios estados.
+- **Numeración y continuidad:** RETP-074 ya está asignado a N0-01 en la PR #61 pendiente de integración; se conserva esa identidad sin importar su asiento ni presentar su cambio como incorporado a main. RETP-075 corresponde exclusivamente a esta fijación documental.
+- **Estado:** cerrado en su alcance documental.
+
+### RETP-2026-076 — Secuencia rectora desde PR #61 y obligaciones tecnológicas por etapa
+
+- **Hecho:** se actualiza el acta de transición desde OP-IMM-001 mediante adenda rectora de continuidad, sin sustituir el expediente histórico ni crear otra acta paralela.
+- **Fuentes:** transición integrada, radiografía N0 del head ad8e8dd30930e35b75bf5f2fad78938d36233b78, actas privadas R0/R1 V2 conservadas en el laboratorio (registro 024), Pilares RETP-073, arquitectura RETP-072/073, perfiles RETP-075, matriz tecnológica 020 y contratos R2-0/entorno soberano.
+- **Decisión:** conservar PR61/N0-01 → oráculos → K1 → F/F-IF → G/H IMM → incorporación Lenguaje → I/J CYB → resolución Lenguaje → puerta algebraica con K1-T → comprobación IMM/CYB → K2 → contrato operacional → consolidación; después, realización R2/R3/R4 y agentes en el alcance y dependencias que les correspondan. Distribuir PT01–PT14 por cada punto, reutilizando evidencia y exigiendo ensayo previo de las realizaciones a promover.
+- **Precisión:** N1/N2 son niveles de IR; no se inventan fases con esos nombres. G/H no constituye cierre integral de todos los universos inmunológicos. R2 conserva su apertura contractual y su ejecución pendiente; R0/R1 conservan sus cierres históricos.
+- **Evidencia:** [adenda rectora](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#adenda-secuencia-20260906), main de entrada 605d900fc535aec4b0010820499b93e44d111f5c; custodia privada de antecedentes 20da3c781286bee1966c22cf1fc7a4755be35b9b. Verificación documental de identidad, enlaces, preservación y concordancia registral; sin nueva campaña de ejecución.
+- **Límites:** no modifica gramática, IR, código, corpus ni workflows; no fusiona PR61, no abre materialmente R2/R3/R4, no constituye dominio/agente ni selecciona host. La preparación posterior de PR61 debe reconciliar main y conservar 074/075/076.
+- **Estado:** cerrado en alcance documental; la secuencia y sus obligaciones no se dan por ejecutadas.
+
+### RETP-2026-077 — Recepción de PR #61 / N0-01 sobre main vigente
+
+- **Hecho:** se reconcilia la cabeza N0-01 `ad8e8dd30930e35b75bf5f2fad78938d36233b78` con main `981159d6428197d1ad1d748649f1d8f690b2f588`, base común `230a205b08f4c54c9c8d9c1c7ad35b2f6ddbbfc4`. Los asientos 074, 075 y 076 conservan íntegros texto e identidad en ambos formatos; 077 registra su recepción, no otro cierre semántico.
+- **Fuentes:** AGENTS, Pilares RETP-073, perfiles RETP-075, transición RETP-076, radiografía N0, acta de unicidad y registros aplicables. Las adendas de recepción actualizan la continuación sin borrar los estados históricos.
+- **Evidencia:** [acta N0-01 §8](../arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md#recepcion-20260906): conformidad 80/80, CLI 3/3, E006 4/4, Rust 210+3+5+2 pruebas y 17 documentales, R0-7 12+68, compilación WASM; conservación literal de las doce salidas de cada emisor frente a main y de los doce oráculos comprometidos. El negativo nuevo exige rc=1, E004/InvalidCodomain y ausencia de IR. La identidad de la cabeza reconciliada, sus cuatro controles CI y la integración se documentan en [PR #61](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/61), sin trasladar los verdes antiguos.
+- **Perfiles:** PT01/PT04/PT14: candidato y artefactos identificados, diagnóstico y entorno comprobados; ES/EN y ensamblaje conservados en Rust, referencia Python en su alcance vigente. No aplica contenido clínico o CYB. El registro experimental 018 conserva su corpus histórico de 79 y no acredita los 80 ni el ensamblaje de esta PR.
+- **Decisión:** recibir exclusivamente unicidad de Codomain, radiografía y deuda asociada. La recepción es efectiva en main cuando PR61 conste fusionada tras los controles de su candidato exacto. La [transición §18](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#recepcion-n0-01-20260906) deja como siguiente paso la reparación de oráculos y, después, K1 desde N0-02.
+- **Límites:** la equivalencia JSON normalizada no acredita identidad literal entre emisores, ni un código de salida no nulo demuestra por sí solo el diagnóstico esperado. Esas reparaciones generales siguen en la fila 2. No se modifica adicionalmente el código reconciliado, no se cambian toolchains, no se publica el Playground ni se cierra K1, álgebra, núcleo o R2/R3/R4.
+- **Estado:** recepción delimitada; promoción y corte de salida comprobables en el expediente PR61.
 
 ## 4. Estado de continuidad
 
