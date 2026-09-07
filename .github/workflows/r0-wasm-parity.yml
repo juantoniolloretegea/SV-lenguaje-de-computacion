@@ -17,6 +17,7 @@ on:
       - "tests/k1_horizon_cases.py"
       - "tests/k1_domain_cases.py"
       - "tests/k1_optional_cases.py"
+      - "tests/k1_ternarizer_cases.py"
       - "tests/r0_wasm_browser.html"
       - "tests/r0_wasm_browser.js"
       - "tests/conformance/valid/**"
@@ -120,6 +121,14 @@ jobs:
             --wasi-runner tests/run_wasi_sv_native.js \
             --output-dir artifacts/r0-wasm/optional-fields
 
+      - name: Verificar el límite K1-T en nativo y WASI
+        run: |
+          python tests/k1_ternarizer_cases.py \
+            --native-probe rust/target/release/examples/assembly_probe \
+            --wasm-probe rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --output-dir artifacts/r0-wasm/ternarizer-boundary
+
       - name: Preparar manifiesto de paridad para navegador
         run: |
           mkdir -p artifacts/r0-browser
@@ -182,6 +191,7 @@ jobs:
           grep -q '"horizon_ok":20' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"domain_ok":24' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"optional_ok":64' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"ternarizer_ok":40' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |

@@ -19,6 +19,7 @@ from k1_bridge_cases import prepare as prepare_bridges
 from k1_horizon_cases import prepare as prepare_horizons
 from k1_domain_cases import prepare as prepare_domains
 from k1_optional_cases import prepare as prepare_optional
+from k1_ternarizer_cases import prepare as prepare_ternarizer
 
 from oracle_support import (run, assert_success, assert_json_equal,
                             assert_rust_rejection,
@@ -118,6 +119,7 @@ def main() -> int:
     horizon_cases = prepare_horizons(args.native_probe, args.output.parent / 'horizon-types')
     domain_cases = prepare_domains(args.native_probe, args.output.parent / 'domain-names')
     optional_cases = prepare_optional(args.native_probe, args.output.parent / 'optional-fields')
+    ternarizer_cases = prepare_ternarizer(args.native_probe, args.output.parent / "ternarizer-boundary")
     result = {
         "schema": "sv-r0-browser-parity-manifest-v3",
         "source_head": args.source_head,
@@ -133,6 +135,7 @@ def main() -> int:
         "horizon_cases": horizon_cases,
         "domain_cases": domain_cases,
         "optional_cases": optional_cases,
+        "ternarizer_cases": ternarizer_cases,
         "failures": failures,
     }
 

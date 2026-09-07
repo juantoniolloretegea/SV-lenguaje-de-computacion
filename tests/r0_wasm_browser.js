@@ -237,6 +237,17 @@ async function main() {
       } else { optionalOk++; }
     }
   }
+  let ternarizerOk = 0;
+  if (!manifest.ternarizer_cases || manifest.ternarizer_cases.length !== 40) {
+    failures.push("banco K1-T ausente o incompleto");
+  } else {
+    for (const probe of manifest.ternarizer_cases) {
+      const result = compileUnits(exports, probe.units);
+      if (result.error !== probe.error || result.text !== probe.expected_payload) {
+        failures.push(`K1-T ${probe.name}: divergencia frente al nativo comprobado`);
+      } else { ternarizerOk++; }
+    }
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
@@ -249,6 +260,7 @@ async function main() {
     horizon_ok: horizonOk,
     domain_ok: domainOk,
     optional_ok: optionalOk,
+    ternarizer_ok: ternarizerOk,
     failures,
   };
 

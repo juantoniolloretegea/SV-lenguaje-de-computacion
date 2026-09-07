@@ -1,6 +1,6 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
-> **Relevo vigente de la fila 3 · 07/09/2026:** [campos opcionales y concordancia, §27](#campos-opcionales-relevo-20260907), RETP-087. Tras su promoción sigue el cierre o delimitación expresa de K1-T. F recibe las ligaduras de instancia aún no representadas cuando se cumpla su puerta. Los relevos anteriores conservan su fecha y alcance.
+> **Relevo vigente · 07/09/2026:** [delimitación K1-T y salida acotada a F, §28](#k1-t-relevo-20260907), RETP-088. Tras integrar la candidata verificada corresponde fila 4/F; la ternarización productiva sigue no habilitada hasta acreditar sus obligaciones. F recibe las ligaduras de instancia y necesidades de transducción pendientes. Los relevos anteriores conservan su fecha y alcance.
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
@@ -261,7 +261,7 @@ Se mantiene el orden intrínseco de N0 §7: N0-01 en su PR; relación CellSpec�
 
 N0-05 y N0-07 conservan su destino K2. N0-06 conserva su división: las decisiones mínimas pertenecen a K1; la ligadura nominal/numeral, versión, cobertura y campos aún no interpretados requieren contrato y representación propios. No se pretende que una lista, una cadena nominal o una igualdad de cardinalidades resuelva esa ausencia.
 
-K1-T es una dependencia previa de cualquier ruta productiva mediante Ternarizer: cobertura, disjunción y ausencia de solapamiento de B_0, B_1 y B_U conforme a E107/J1.5. Debe cerrarse la obligación o impedirse expresamente esa ruta. No se atribuye ahora un conjunto observacional al dominio ni se declara concluida esta puerta.
+K1-T es una dependencia previa de cualquier ruta productiva mediante Ternarizer: cobertura, disjunción y ausencia de solapamiento de B_0, B_1 y B_U conforme a E107/J1.5. Debe cerrarse la obligación o impedirse expresamente esa ruta. No se atribuye un conjunto observacional al dominio. **Recepción RETP-088:** §28 resuelve esta alternativa mediante delimitación expresa de la ruta productiva no habilitada; no acredita una partición ni habilita esa producción por el hecho de abrir F.
 
 El perfil tecnológico recibe aquí lo necesario para conservar identidades y diagnósticos y reproducir los resultados. La higiene de toolchain, dependencias y ejecución local se delimita en un cambio propio cuando proceda. Una actualización de plataforma no debe contaminar la atribución causal de un cierre semántico.
 
@@ -483,3 +483,15 @@ Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y
 **Puerta de promoción:** 100 casos de conformidad, dos pruebas de integración y 64 testigos ES/EN/ensamblaje; los 94 observables y 14 esperados anteriores se conservan. Se exigen los cuatro flujos sobre la candidata exacta, con nativo, WASI y navegador. PT01/PT02/PT04/PT13/PT14 y los bancos previos conservan su función; el laboratorio histórico no recibe garantías retrospectivas.
 
 **Relevo:** DFL-010 cerrada en ese alcance al integrar la candidata verificada; continúa fila 3/K1 por **K1-T, cierre o delimitación expresa conforme a §14**. No se abre F ni se declara completado K1. DFL-001 conserva su deuda de concordancia y representación diagnóstica; DFL-005 entra obligatoriamente en F para las operaciones dependientes de ligaduras. DFL-009 mantiene fila 9 tras I/J; acceso editorial aplazado por decisión humana.
+
+
+<a id="k1-t-relevo-20260907"></a>
+## 28. K1-T: ruta productiva no habilitada y salida acotada a F · 07/09/2026
+
+**RETP-088; entrada:** main `1d3ebd2`, PR #73. La [radiografía §19](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#k1-t-20260907) recoge el cotejo normativo, las rutas, las pruebas y la rectificación de trece atribuciones sintácticas a E001. IR 0.3 §2.4 mantiene **Ternarizer como declaración nominal, sin producción habilitada observación → Tri**. Nombres iguales o distintos no prueban partición. No se inventan conjuntos ni se introduce fallo → U.
+
+**Puerta de promoción:** 100 casos del corpus, workspace y banco K1-T de 40 testigos ES/EN/ensamblaje; conservación de los 100 observables y 14 esperados anteriores. Se exigen los cuatro flujos correctos sobre candidata exacta, con paridad nativo/WASI/navegador y bancos precedentes. PT01/PT02/PT04/PT13/PT14 conservan identidad y alcance; la prueba no acredita aislamiento del host ni amplía ensayos históricos.
+
+**Relevo tras integrar la candidata verificada:** se satisface la alternativa de delimitación de §14 y se recibe la salida acotada de fila 3/K1. Sigue **fila 4/F: contrato candidato de representación y suficiencia por operación**, con F-IF conforme a §15. F debe recibir DFL-005 —identidad de instancia, mínimo y ligaduras— y la representación necesaria para transducción antes de admitir operaciones dependientes. La puerta algebraica, fila 10, mantiene Ternarizer excluido hasta demostrar su contrato productivo; este relevo no es cierre de E107/J1.5 ni ejecución algebraica.
+
+DFL-001 conserva diagnóstico y obligaciones no materializadas; DFL-008, sus pérdidas; N0-05/N0-07, K2. DFL-009 sigue en fila 9, retorno CYB. No se adelantan dominios, Cloudflare, R2/R3/R4 ni acceso editorial.

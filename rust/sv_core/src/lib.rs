@@ -148,6 +148,9 @@ impl From<FrontendError> for CompileError {
 /// El analizador sintáctico y el descenso permanecen internos. Un adaptador
 /// externo no puede solicitar una `IrProgram` aceptada sin atravesar también
 /// las fronteras soberanas de conformidad y bienformación de este núcleo.
+/// La aceptación acredita los juicios materializados, no toda obligación abstracta
+/// de la IR. En particular, Ternarizer conserva nombres opacos y no es ejecutable
+/// (K1-T / IR 0.3 §2.4). Esto también rige perfiles y ensamblaje.
 pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, CompileError> {
     let program = frontend::compile_svp(source, source_file)?;
     grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;

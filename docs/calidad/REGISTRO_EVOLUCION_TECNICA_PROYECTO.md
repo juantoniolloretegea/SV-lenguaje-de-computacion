@@ -53,6 +53,10 @@ La continuidad documental se organiza así:
 | RETP-2026-082 | 07/09/2026 | NO_CONSTA | RETIRADA_GOBERNADA_Y_CONTINUIDAD | Lenguaje SV / oráculos / K1 | retirada delimitada; promoción por candidata exacta |
 | RETP-2026-083 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / BridgeSet | cierre limitado; promoción por candidata exacta |
 | RETP-2026-084 | 07/09/2026 | NO_CONSTA | DICTAMEN_Y_CIERRE_INTRINSECO | Lenguaje SV / K1 / Horizon.events | cierre limitado; promoción por candidata exacta |
+| RETP-2026-085 | 07/09/2026 | NO_CONSTA | RECEPCION_DOCUMENTAL | Lenguaje SV / K1 / Documento III | cotejo delimitado; promoción por candidata exacta |
+| RETP-2026-086 | 07/09/2026 | NO_CONSTA | DICTAMEN_Y_CIERRE_NOMINAL | Lenguaje SV / K1 / Domain.parameters | cierre nominal; promoción por candidata exacta |
+| RETP-2026-087 | 07/09/2026 | NO_CONSTA | CIERRE_CORRECTIVO_Y_CONCORDANCIA | Lenguaje SV / K1 / DFL-010 | cierre delimitado; promoción por candidata exacta |
+| RETP-2026-088 | 07/09/2026 | NO_CONSTA | DELIMITACION_GOBERNADA_Y_RELEVO | Lenguaje SV / K1-T → F | ruta productiva no habilitada; salida acotada tras candidata verificada |
 
 ## 3. Entradas detalladas
 
@@ -367,6 +371,14 @@ La continuidad documental se organiza así:
 - **Cambio:** rechazo de repetición e inversión de campos opcionales en relación/patrón antes de sobrescribir; guardas de metadata/transition conservadas. Mismas listas, estructuras, emisores y versiones. Catálogo de 51 códigos declarado y emisión textual diferenciados; matriz/CSV de agosto conservados como historia, sin declarar completa DFL-001 ni cobertura E011 por su testigo sintáctico.
 - **Evidencia:** 100/100, dos pruebas de integración, 64 testigos ES/EN/ensamblaje; 94 observables previos y 14 esperados idénticos. Los seis nuevos negativos antes se admitían. Cuatro flujos exigidos sobre candidata exacta con nativo/WASI/navegador y bancos previos. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación del laboratorio histórico.
 - **Decisión y relevo:** DFL-010 cerrada en el inventario tras integración verificada. [Transición §27](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#campos-opcionales-relevo-20260907) conserva fila 3: sigue cierre o delimitación expresa K1-T. F aún pendiente; DFL-005 obligatoria allí para ligaduras, DFL-009 en retorno CYB y acceso editorial aplazado.
+
+### RETP-2026-088 — K1-T: delimitación productiva y relevo a F
+
+- **Entrada y fundamento:** main `1d3ebd22d30f61604fd51dc3d3d9864d1f0d7ac4`, PR #73; Pilares, perfiles, transición §27 y N0 §7. Gramática 0.2 con producciones heredadas, IR 0.2/J1.5 bajo IR 0.3 §2; Documento IV §§5.2–5.3 en el corte del autor `b8fd329`, blob `66ee444`, sin reactivar su fallo→U histórico.
+- **Dictamen:** [N0 §19](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#k1-t-20260907) e IR 0.3 §2.4 delimitan la ruta productiva observación→Tri no habilitada. Se conservan cinco nombres declarativos; no se los interpreta como conjuntos, función o prueba de partición. No se incorpora una operación ni API de ejecución.
+- **Rectificación:** trece atribuciones sintácticas a E001 se adscriben a sus producciones; E001 conserva InvalidTriValue y E107 su estatuto IR pendiente, sin emisión efectiva. Se explicita la corrección de RETP-087, manteniendo los asientos históricos. La tabla resumen recibe también 085–087, ya presentes en el detalle y CSV.
+- **Evidencia:** 100/100, workspace y 40 testigos K1-T (20 conservaciones/20 rechazos, ES/EN y ensamblaje); 100 observables anteriores y 14 esperados conservados. Cuatro flujos exigidos sobre candidata exacta, incluidos nativo/WASI/navegador y bancos previos. Sin cambio de emisores, estructura ni versiones; PT01/PT02/PT04/PT13/PT14.
+- **Decisión y relevo:** delimitación efectiva tras integración verificada; [transición §28](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#k1-t-relevo-20260907) recibe salida acotada de K1 y fija F. DFL-005 y necesidades de transducción se reciben allí antes de operaciones dependientes. E107/J1.5 sigue pendiente para producción; DFL-001/008 mantienen límites, DFL-009 retorno CYB, N0-05/N0-07 K2. No se cierran álgebra, dominio, núcleo ni R2/R3/R4.
 
 ## 4. Estado de continuidad
 

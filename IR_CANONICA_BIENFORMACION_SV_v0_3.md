@@ -63,6 +63,19 @@ La declaración inválida de `AdmissibilitySpec` se rechaza mediante:
 E110 — InvalidAdmissibilitySpec
 ```
 
+<a id="ternarizer-k1-t"></a>
+### 2.4. Límite material de `Ternarizer` · K1-T / RETP-088
+
+La superficie heredada `ternarizer_decl` representa `observation_space`, las tres particiones y `mapping` mediante identificadores. La realización actual conserva cinco cadenas; no representa conjuntos observacionales, pertenencia ni una función ejecutable. Su aceptación es **declarativa y estructural**: no acredita J1.5, cobertura, disjunción, totalidad o determinismo de τ. Nombres iguales o diferentes no sustituyen esas pruebas; no se les impone por analogía la unicidad nominal de otros objetos.
+
+**La producción observación → Tri mediante Ternarizer permanece no habilitada**, tanto para 0 y 1 como para U. La DSL no constituye una operación para invocarlo; la IR material no contiene tal operación y las entradas públicas de compilación/proyección no lo ejecutan. `mapping` no se evalúa como código Rust, ni se incorpora un ejecutor anfitrión por el hecho de declarar su nombre. Proyectar un campo de esa declaración como resultado de operación se rechaza. Una declaración de Domain que lo cite tampoco acredita una cadena productiva completa.
+
+Para habilitar esa ruta se deberán representar y comprobar el espacio aplicable, la cobertura y disjunción de B₀/B₁/Bᵤ, su pertenencia, la función total y determinista y el significado declarado de sus salidas, con independencia del resultado celular, identidad de la instancia destinataria y condiciones de admisibilidad. La prueba debe preceder a la producción, incluidos los destinos materiales aplicables. La imposibilidad de verificar una obligación impide acreditar esa ruta; no selecciona U ni inventa conjuntos. F recibe los requisitos de representación y ligadura; la puerta algebraica de la secuencia conserva la condición K1-T para cualquier realización posterior.
+
+La separación de §2.2 prevalece sobre la conversión conservadora a U del antecedente IR 0.2/J1.5 y de versiones históricas del Documento IV. Este límite no prohíbe los literales Tri constituidos ni sus codificaciones y no acredita aislamiento frente a código arbitrario externo al SV. `E107 — InvalidTernarizerPartition` identifica la deuda de la IR heredada, **no un código efectivo emitido por esta recepción**; DFL-001 conserva la concordancia pendiente.
+
+[La radiografía §19](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#k1-t-20260907) fija fuentes, rutas, testigos y alcance. K1-T se resuelve aquí por delimitación expresa de la vía no habilitada; no por prueba de una partición inexistente en la representación. Se conservan Gramática 0.2, IR 0.3 y proyección 0.1.0.
+
 ---
 
 ## 3. Resolución identificada de una `U`
