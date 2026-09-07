@@ -58,6 +58,7 @@ La continuidad documental se organiza así:
 | RETP-2026-087 | 07/09/2026 | NO_CONSTA | CIERRE_CORRECTIVO_Y_CONCORDANCIA | Lenguaje SV / K1 / DFL-010 | cierre delimitado; promoción por candidata exacta |
 | RETP-2026-088 | 07/09/2026 | NO_CONSTA | DELIMITACION_GOBERNADA_Y_RELEVO | Lenguaje SV / K1-T → F | ruta productiva no habilitada; salida acotada tras candidata verificada |
 | RETP-2026-089 | 07/09/2026 | NO_CONSTA | CONTRATO_CANDIDATO_Y_RELEVO | Lenguaje SV / F → F-IF | contrato por operación; ligaduras, suficiencia y pérdida localizadas; contraste pendiente |
+| RETP-2026-090 | 07/09/2026 | NO_CONSTA | CONTRASTE_SINTETICO_Y_RELEVO | Lenguaje SV / F-IF → G-H | seis espacios documentales; pérdida por operación; relevo IMM tras candidata verificada |
 
 ## 3. Entradas detalladas
 
@@ -389,6 +390,15 @@ La continuidad documental se organiza así:
 - **Recepción:** DFL-005 recibe mínimo por operación y ligaduras antes de admitir capacidades dependientes; K1-T conserva producción no habilitada. Se reutilizan la reconciliación IMM 15↔44 y PT01–PT14, con límites de 012/016/018; §6 precisa la sucesión K1 y retirada Python frente a la valoración histórica.
 - **Verificación:** revisión contractual, enlaces, cálculo finito y concordancia RETP; Conformidad SVP exigida en candidata exacta. Los blobs ejecutables, normas de Gramática/IR/perfiles, corpus, esperados, workflows y Playground se conservan. La paridad PR #74 conserva su corte, sin atribuirse como nueva prueba del contrato.
 - **Decisión:** formulación de fila 4 efectiva al integrar candidata verificada. [Transición §29](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#contrato-f-relevo-20260907) abre como siguiente paso fila 5/F-IF con sus seis testigos. No cierra las carencias de representación ni adelanta IMM/CYB, álgebra, K2 o materialidad. DFL-009 sigue en fila 9; acceso editorial aplazado.
+
+### RETP-2026-090 — Seis testigos F-IF y relevo G/H
+
+- **Entrada y fuentes:** main `7dd6ef5ea39fcd978d485d1e2db1f3caa8c4bca3`, PR #75; Pilares, perfiles, transición completa hasta §29, F-SV/0.1-candidata, FFL-E y campos actuales de IR. El corte IMM `3bea6b7` se conserva.
+- **Producto:** [F-IF/1](../arquitectura/F_IF_SEIS_TESTIGOS_SINTETICOS_Y_RELEVO_G_H_2026_09_07.md), cases.json, observador externo, controles de sensibilidad y evidencia comprometida. Seis productos documentales de ocho estados; 18 operaciones de lectura y cadena F0/F1/F2 explícita. No es ampliación de SV ni constitución clínica.
+- **Resultado:** 54 filas: 36 suficientes y 18 con pares de pérdida; 288 recuperaciones exactas y 144 sobre (H2,S,P); 24 controles técnicos y 12 pruebas del observador. La igualdad de H es literal; oráculos y cadena tienen identidades y no se actualizan automáticamente. Información lateral y pin de fuente son dependencias expresas.
+- **Insuficiencias:** las pérdidas identifican las representaciones incapaces de responder cada Q. Las operaciones no se ofrecen como SV: cadena/certificado y ligaduras no materializados. DFL-005, K1-T y DFL-006 conservan sus puertas; G/H recibe aplicación/no aplicación a los requisitos reconciliados 15↔44. Los paquetes artificiales no amplían OP-IMM-001.
+- **Verificación:** Conformidad SVP exigida en candidata exacta con la campaña añadida y corpus 100/100 preservado. Código Rust, Gramática/IR/perfiles y Playground intactos. La paridad PR #74 conserva su corte; no se la cuenta como ejecución nueva de F-IF. Se reutilizan PT y 012/016/018 con sus límites, sin garantía material adicional.
+- **Decisión:** integración verificada completa fila 5 en alcance sintético; [transición §30](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#f-if-relevo-20260907) entrega fila 6/G-H. No se adelantan CYB, álgebra, K2, frontera ni consolidación; DFL-009 sigue en fila 9 y acceso editorial aplazado.
 
 ## 4. Estado de continuidad
 

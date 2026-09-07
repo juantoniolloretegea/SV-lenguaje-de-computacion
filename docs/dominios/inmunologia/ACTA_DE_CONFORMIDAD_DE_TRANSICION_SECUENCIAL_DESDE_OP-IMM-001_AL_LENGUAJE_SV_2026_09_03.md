@@ -1,6 +1,6 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
-> **Relevo vigente · 07/09/2026:** [contrato candidato F y relevo a F-IF, §29](#contrato-f-relevo-20260907), RETP-089. Tras integrar la candidata documental verificada corresponde fila 5/F-IF. F recibe las ligaduras DFL-005 y la transducción no habilitada; declara sus condiciones e insuficiencias, sin materializarlas. Los relevos anteriores conservan su fecha y alcance.
+> **Relevo vigente · 07/09/2026:** [campaña F-IF y relevo G/H, §30](#f-if-relevo-20260907), RETP-090. Tras integrar la candidata verificada corresponde fila 6/G-H: contraste acotado de Inmunología. Los seis espacios sintéticos acreditan pérdidas y recuperaciones documentales; no ejecución SV ni suficiencia clínica. Los relevos anteriores conservan su fecha y alcance.
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
@@ -508,3 +508,16 @@ PT01/PT03/PT08/PT09/PT10/PT11/PT12 entran por operación; las demás obligacione
 **Verificación:** revisión documental y cálculo exhaustivo del control externo de cuatro estados, enlaces y concordancia RETP. No son ejecución SV ni campaña F-IF. Código, gramática, IR, perfiles, corpus, esperados, workflows y Playground conservan los blobs de la entrada. Se exige Conformidad SVP sobre la nueva candidata; la paridad nativo/WASI/navegador de PR #74 conserva su identidad y no se atribuye al contrato F como prueba nueva.
 
 **Relevo tras integración verificada:** fila 5/F-IF dentro de F, con los seis testigos de §15 y la entrega definida en candidata §9. Esta recepción completa la formulación de fila 4, no su contraste F-IF/IMM/CYB. Cada operación dependiente de una carencia sigue sin admitirse hasta resolverla. No se adelantan G/H, I/J, puerta algebraica, K2, frontera material ni consolidación.
+
+<a id="f-if-relevo-20260907"></a>
+## 30. Campaña F-IF y relevo acotado G/H · 07/09/2026
+
+**RETP-090; entrada:** main `7dd6ef5ea39fcd978d485d1e2db1f3caa8c4bca3`, PR #75 integrada. La [campaña F-IF/1](../../arquitectura/F_IF_SEIS_TESTIGOS_SINTETICOS_Y_RELEVO_G_H_2026_09_07.md) recibe F, las seis familias de §15.1 y sus datos de contrato, captura, admisibilidad, transducción no aplicable, operaciones y soporte. Son paquetes documentales artificiales, con realización externa del observador; no funciones nuevas del SV ni estados clínicos constituidos.
+
+**Evidencia:** seis productos completos de ocho estados, 18 consultas y 54 filas por operación/nivel: 36 suficientes mediante recuperación explícita y 18 con pares de pérdida. Se conservan 288 recuperaciones exactas, 144 sobre entrada conjunta H2/S/P, 24 controles técnicos y 12 pruebas de sensibilidad. El manifiesto conserva las fuentes; la interfaz no hereda sus IDs ni hashes ocultos. La cadena pierde información y, aun así, conserva consultas particulares. Se separan insuficiencia, no admisión, fallo y U.
+
+**Recepción y límites:** las doce consultas de detalle pierden sus distinciones en las reducciones identificadas. Las 18 siguen sin ofrecerse como operaciones SV: la cadena/certificado y sus ligaduras no están materializados en la IR vigente. G/H debe decidir cuáles de esas necesidades recibe OP-IMM-001; no se las adscribe automáticamente a los 27 parámetros. DFL-005, K1-T y DFL-006 conservan sus condiciones. PT01/PT02/PT03/PT04/PT07/PT10/PT12 y las obligaciones relacionadas reciben evidencia con aplicabilidad explícita; registros 012/016/018 mantienen su propio corte. No se acreditan custodia de plataforma, persistencia ni servicio remoto; DFL-009 permanece en fila 9.
+
+**Verificación y promoción:** Conformidad SVP sobre candidata exacta, con campaña/sensibilidad F-IF, observadores existentes y 100 casos SV preservados. El código Rust, la Gramática, IR, perfiles y Playground conservan sus blobs. La paridad PR #74 mantiene su alcance anterior; no acredita como nueva ejecución SV la campaña externa. El expediente de integración identifica base, cabeza, árbol, commit de prueba y ejecución.
+
+**Relevo tras integración verificada:** fila 5 completada en el alcance sintético; sigue **fila 6/G-H, retorno acotado IMM**, conforme a §9. Recibe F y esta matriz, aplica los requisitos reconciliados 15↔44 y devuelve fidelidad, pérdida y decisiones constitutivas pendientes. No exige cerrar todos los universos, no ejecuta Q0 ni activa el segundo dominio. Tras G/H corresponde fila 7/Lenguaje; se conservan las puertas posteriores.

@@ -25,6 +25,12 @@ jobs:
       - name: Verificar sensibilidad del observador de resultados
         run: python3 -m unittest discover -s tests -p 'test_oracle_support.py' -v
 
+      - name: Contrastar los seis paquetes documentales F-IF
+        run: |
+          node --version
+          node --test tests/f_if/sensitivity.mjs
+          node tests/f_if/run.mjs
+
       - name: Verificar contratos de la CLI y testigos SEC-0B
         run: |
           python3 tests/run_cli_smoke.py --rust-bin rust/target/debug/sv-native
@@ -34,4 +40,4 @@ jobs:
         run: python3 tests/run_conformance.py --rust-bin rust/target/debug/sv-native
 
       - name: Verificar que la batería conserva el corpus y los esperados
-        run: git diff --exit-code -- tests/conformance
+        run: git diff --exit-code -- tests/conformance tests/f_if
