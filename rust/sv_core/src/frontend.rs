@@ -1337,7 +1337,13 @@ impl<'a> Parser<'a> {
             let field = self.take_raw_word()?;
             self.sym(':')?;
             match field.as_str() {
+                "table" if table.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional repetido: table"))),
+                "table" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional fuera de orden: table"))),
                 "table" => table = Some(self.take_word()?),
+                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional repetido: constraints"))),
                 "constraints" => constraints = Some(self.word_list()?),
                 other => return Err(FrontendError::Unsupported(other.to_owned())),
             }
@@ -1369,7 +1375,13 @@ impl<'a> Parser<'a> {
             let field = self.take_raw_word()?;
             self.sym(':')?;
             match field.as_str() {
+                "arity" if arity.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional repetido: arity"))),
+                "arity" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional fuera de orden: arity"))),
                 "arity" => arity = Some(self.take_nat()?),
+                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional repetido: constraints"))),
                 "constraints" => constraints = Some(self.word_list()?),
                 other => return Err(FrontendError::Unsupported(other.to_owned())),
             }

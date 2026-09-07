@@ -1,0 +1,1 @@
+semantic_relation Probe { kind: DeclaredRelation; constraints: [B]; table: TabA; }

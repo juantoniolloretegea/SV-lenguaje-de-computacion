@@ -320,3 +320,11 @@ table_decl                 ::= "admissibility_table" identifier "{"
 ```
 
 Esta reconciliación fija normativamente la forma ya adoptada por el corpus canónico y por la realización Rust. No amplía el lenguaje, no modifica la semántica de `Connector` o `AdmissibilityTable` y no cambia los números de versión de Gramática, IR o serializador. La redacción v0.1 se conserva sin modificación como antecedente histórico.
+
+## 14. Recepción de la multiplicidad y el orden de campos opcionales · RETP-087
+
+Las producciones heredadas de v0.1 §§5.4–5.5 admiten cada campo entre corchetes cero o una vez, en el orden de la producción. `SemanticRelation` admite `table` seguido de `constraints`; `Pattern`, `arity` seguido de `constraints`. La omisión de cualquiera permite declarar el otro. `TransitionData.metadata` y `entry.transition` también son opcionales singulares, en sus posiciones declaradas. Estas reglas afectan a los campos, no a la multiplicidad de los elementos de sus listas.
+
+Repetir un campo, aunque repita el mismo valor o comience con una lista vacía, no es una forma de actualización: se rechaza durante el análisis, antes de perder una ocurrencia o emitir IR. La inversión de los dos campos de §5.4 también se rechaza; no se reordena la fuente. Los perfiles ES/EN comparten la producción después de resolver sus formas constitutivas.
+
+Esta recepción corrige DFL-010 en las dos rutinas de análisis Rust que sobrescribían campos. No crea sintaxis ni cambia las versiones. La [radiografía N0 §18](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) identifica diagnóstico, pruebas y límites; el catálogo E001 y la variante textual efectiva Rust mantienen su distinción.

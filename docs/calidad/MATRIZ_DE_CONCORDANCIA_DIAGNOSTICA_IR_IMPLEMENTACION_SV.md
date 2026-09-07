@@ -14,9 +14,11 @@ La clasificación por identificador se complementa con la tabla de correspondenc
 
 > **Nota posterior N0-02 — 06/09/2026.** El [catálogo efectivo v0.3](../referencia/ERRORES_CANONICOS_SV_v0_3.md) añade `E115 — InvalidOutputSemantics` para J-K1. `E102` mantiene su alcance de referencia ausente o de tipo incorrecto. Esta adición no recalcula la fotografía histórica de esta matriz ni su CSV; DFL-001 permanece abierta.
 
+> **Lectura vigente · RETP-087, 07/09/2026.** Los §§2–8 siguientes y el CSV son el balance histórico identificado arriba, incluidas sus capacidades y fases entonces pendientes. El compilador Python fue retirado en RETP-082. El catálogo v0.3 contiene **51 códigos declarados**, sin equivaler a 51 códigos estructurados emitidos por la realización actual. La concordancia del corpus vigente (**100 = 14 + 86**) se verifica mediante [EXPECTED_OBLIGATIONS](../../tests/run_conformance.py) y los [observables e inventarios](../../tests/oracle_support.py). Los seis negativos de campos opcionales corresponden a E001 y emiten `Frontend(UnexpectedToken(...))`, no el literal E001. El testigo histórico denominado `admissibility_table_output_fuera_codominio` sigue rechazado en sintaxis antes de E011; su nombre no demuestra aquella cobertura. [N0 §18](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) delimita este cotejo. DFL-001 permanece abierta; no se recalcula ni se eleva a estado actual el CSV histórico.
+
 ## 2. Resultado global
 
-El balance vigente por identificador es:
+El balance del corte de 19/08/2026 por identificador es:
 
 - **IR v0.2:** 38 códigos;
 - **catálogo efectivo:** 47 códigos;

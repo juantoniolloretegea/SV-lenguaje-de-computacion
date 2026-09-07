@@ -527,3 +527,37 @@ La [IR v0.3 §6.7](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#domain-parameters-
 ### 17.3. Relevo
 
 El cierre nominal es efectivo tras la integración de la candidata verificada. Sigue la fila 3: concordancia diagnóstica/deuda/corpus, DFL-010 y delimitación o cierre de K1-T. F permanece pendiente de esa salida. Al abrir F, el contrato debe resolver el mínimo, la identidad de instancia y las ligaduras/multiplicidad aquí localizadas antes de admitir operaciones que las necesiten; no podrán darse por resueltas mediante cadenas opacas. DFL-009 continúa diferida al retorno del primer universo CYB, fila 9. No se cierra dominio, álgebra, núcleo ni R2/R3/R4.
+
+
+<a id="campos-opcionales-20260907"></a>
+## 18. Campos opcionales sin pérdida y concordancia vigente · 07/09/2026
+
+**RETP-2026-087. Entrada:** main `000a7d2f7788d6863fa290c138bc0c192aba0d5e`, PR #72 integrada. Se reciben Pilares, perfiles, secuencia §26, DFL-001/010 y las producciones [Gramática v0.1 §§5.4–5.5](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md), heredadas expresamente por [v0.2 §1 y precisadas en §14](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md). No se modifica la autoridad de la DSL ni se añade una obligación semántica por analogía.
+
+### 18.1. Inventario y corrección
+
+| Producción y campo opcional | Hallazgo y tratamiento |
+|---|---|
+| `SemanticRelation.table`, `SemanticRelation.constraints` | El bucle sustituía la ocurrencia anterior y admitía `constraints` antes de `table`. Guarda previa a cada asignación: rechazo de repetición o inversión, incluso con valores iguales o lista vacía. |
+| `Pattern.arity`, `Pattern.constraints` | Mismo defecto en otra rutina Rust; mismo tratamiento de cardinalidad y orden de campos. |
+| `TransitionData.metadata` | La producción se analiza una sola vez y exige el cierre del objeto; la segunda ocurrencia ya se rechazaba. Se conservan y ejercen omisión, presencia y repetición. |
+| `entry.transition` | El análisis opcional singular exige después el cierre de la entrada; una segunda ocurrencia ya se rechazaba. Se conservan y ejercen los tres supuestos. |
+
+Es el inventario de los seis campos declarados opcionales por esas producciones; no un dictamen de multiplicidad de toda lista del lenguaje. `constraints: [B,A,B]` y `metadata: [B,A,B]` conservan todas sus ocurrencias y su orden. La ausencia se conserva como ausencia y `[]` como lista presente vacía. El mismo nombre de campo en objetos distintos no constituye repetición local.
+
+Las dos rutinas modificadas de `frontend.rs` rechazan antes de sobrescribir o construir el objeto. Utilizan `CompileError::Frontend(UnexpectedToken(...))`, con clase de objeto, nombre y campo canónico; la repetición se diagnostica antes que la inversión si ambas concurren. Se mantiene la ruta previa para campos desconocidos. No hay IR ni U sustitutiva del rechazo, normalización de campos ni cambio de serializador. La guarda sintáctica precede naturalmente a los juicios de bienformación: la conservación diagnóstica acreditada se limita al corpus anterior, no a toda fuente con varios defectos simultáneos.
+
+### 18.2. Concordancia entre obligación y observable
+
+La [matriz histórica](../calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md) y su CSV mantienen íntegro el corte de 19/08/2026; sus balances no describen la implementación actual. El [catálogo v0.3](../referencia/ERRORES_CANONICOS_SV_v0_3.md) contiene 51 códigos declarados. Ese número no acredita 51 códigos estructurados emitidos por Rust. `InvalidProgram(String)` y las variantes de error de las otras fases siguen requiriendo concordancia explícita (DFL-001).
+
+Los seis nuevos negativos se adscriben a la obligación sintáctica E001, sin afirmar emisión literal de E001. [EXPECTED_OBLIGATIONS](../../tests/run_conformance.py) enlaza nombre de caso y obligación; [RUST_REJECTION_TOKENS y check_invalid_corpus](../../tests/oracle_support.py) exigen su observable efectivo y la coincidencia exacta de inventarios. El banco nuevo exige además el texto íntegro de los seis diagnósticos añadidos. La asignación de un caso a un código no certifica su protección completa: `admissibility_table_output_fuera_codominio` sigue rechazado por sintaxis previa, sin acreditar la cláusula E011 por ese testigo. No se renumera ni se declara cerrada la concordancia general.
+
+### 18.3. Evidencia y relevo
+
+- **Conformidad: 100 = 14 válidos + 86 inválidos.** Se añaden cuatro fuentes de repetición y dos de inversión de campos. Sus bytes eran admitidos en la base; la candidata los rechaza. Los 94 observables anteriores conservan retorno, stdout y stderr byte por byte frente al binario de la base; los 14 esperados comprometidos permanecen idénticos.
+- **Dos pruebas de integración Rust** ejercen rechazo sin consumidor y conservación de ausencia/lista vacía/ocurrencias. La regresión nativa completa pasa. El [banco de 64 fuentes y ensamblajes](../../tests/k1_optional_cases.py) contiene 36 variantes de relación/patrón ES/EN, 12 de metadata/transition y 16 ensamblajes mixtos en ambos órdenes.
+- **Puerta de promoción:** cuatro flujos correctos sobre la candidata exacta. El [flujo existente](../../.github/workflows/r0-wasm-parity.yml) exige corpus, bancos previos y los 64 testigos en nativo, WASI y navegador real. Primero se verifica la realización contra los esperados de la DSL; después la paridad literal. El transporte Python prepara texto y observa procesos; no contiene compilador SV.
+- **PT01/PT02/PT04/PT13/PT14:** identidad de fuente/candidata, conservación ES/EN/ensamblaje, diagnóstico y entorno. Local: Rust/Cargo 1.98.0, `x86_64-unknown-linux-gnu`; CI registra sus versiones y anfitriones. Gramática 0.2, IR 0.3 y proyección 0.1.0 conservan versiones. Los registros 016/018 del laboratorio conservan su alcance; no se promueve otra plataforma.
+
+**Decisión:** DFL-010 queda cerrada en este inventario tras integrar la candidata verificada. La PR de `k1-dfl010-20260907` conserva cabeza, base, árbol y ejecuciones; preparar el manifiesto no acredita ejecución WASM. **Sigue fila 3/K1: cierre o delimitación expresa de K1-T**, según §7 y transición §14. No se habilita F por este acto. DFL-001 conserva la deuda diagnóstica estructurada; DFL-005 debe recibirse en F antes de admitir operaciones dependientes de las ligaduras ausentes. DFL-009 permanece en fila 9, retorno del primer universo CYB; el acceso editorial sigue aplazado. No se cierran dominio, álgebra, núcleo ni R2/R3/R4.

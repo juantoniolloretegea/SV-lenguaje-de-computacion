@@ -21,7 +21,7 @@ El catálogo v0.2 se conserva como antecedente histórico y no se reescribe.
 
 ## 2. Estado vigente
 
-El catálogo efectivo contiene **51 códigos**.
+El catálogo contiene **51 códigos declarados**. Tras la retirada del compilador Python (RETP-082), este inventario no acredita que la realización Rust emita los 51 como códigos estructurados. La [concordancia vigente](../calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md) distingue obligación, fase y texto observado; DFL-001 conserva la deuda diagnóstica. RETP-087 adscribe los nuevos rechazos de campos opcionales a E001, con emisión efectiva `Frontend(UnexpectedToken(...))`, sin crear ni renumerar códigos.
 
 Los cuatro códigos incorporados y el código precisado en esta versión son:
 
