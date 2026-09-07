@@ -127,6 +127,8 @@ pub enum IrObjectKind {
         states: [AdmissibilityState; 3],
         rule: String,
     },
+    /// Declaración nominal: los cinco nombres no prueban partición ni ejecutan τ.
+    /// K1-T / IR 0.3 §2.4 mantiene cerrada la producción observación → Tri.
     Ternarizer {
         observation_space: String,
         partition_zero: String,

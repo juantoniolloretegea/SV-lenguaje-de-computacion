@@ -21,7 +21,7 @@ El catálogo v0.2 se conserva como antecedente histórico y no se reescribe.
 
 ## 2. Estado vigente
 
-El catálogo contiene **51 códigos declarados**. Tras la retirada del compilador Python (RETP-082), este inventario no acredita que la realización Rust emita los 51 como códigos estructurados. La [concordancia vigente](../calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md) distingue obligación, fase y texto observado; DFL-001 conserva la deuda diagnóstica. RETP-087 adscribe los nuevos rechazos de campos opcionales a E001, con emisión efectiva `Frontend(UnexpectedToken(...))`, sin crear ni renumerar códigos.
+El catálogo contiene **51 códigos declarados**. Tras la retirada del compilador Python (RETP-082), este inventario no acredita que la realización Rust emita los 51 como códigos estructurados. La [concordancia vigente](../calidad/MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md) distingue obligación, fase y texto observado; DFL-001 conserva la deuda diagnóstica. **Rectificación RETP-088:** la atribución de los campos opcionales a E001 en RETP-087 era incorrecta. E001 sigue siendo `InvalidTriValue`; dichos rechazos se adscriben a Gramática 0.2 §14 y emiten `Frontend(UnexpectedToken(...))`. Se corrigen también seis atribuciones léxicas a §11 y `graph_conflicts` a la producción heredada `graph_decl`, conservando todos los observables. E107 pertenece al inventario IR 0.2 y no está entre los 51 códigos de este catálogo ni se emite como parte de K1-T. No se crean ni renumeran códigos.
 
 Los cuatro códigos incorporados y el código precisado en esta versión son:
 

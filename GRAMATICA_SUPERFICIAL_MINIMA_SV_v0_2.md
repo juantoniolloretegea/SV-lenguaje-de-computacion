@@ -327,4 +327,10 @@ Las producciones heredadas de v0.1 §§5.4–5.5 admiten cada campo entre corche
 
 Repetir un campo, aunque repita el mismo valor o comience con una lista vacía, no es una forma de actualización: se rechaza durante el análisis, antes de perder una ocurrencia o emitir IR. La inversión de los dos campos de §5.4 también se rechaza; no se reordena la fuente. Los perfiles ES/EN comparten la producción después de resolver sus formas constitutivas.
 
-Esta recepción corrige DFL-010 en las dos rutinas de análisis Rust que sobrescribían campos. No crea sintaxis ni cambia las versiones. La [radiografía N0 §18](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) identifica diagnóstico, pruebas y límites; el catálogo E001 y la variante textual efectiva Rust mantienen su distinción.
+Esta recepción corrige DFL-010 en las dos rutinas de análisis Rust que sobrescribían campos. No crea sintaxis ni cambia las versiones. La [radiografía N0 §18](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) identifica diagnóstico, pruebas y límites; el rechazo efectivo es `Frontend(UnexpectedToken(...))`. **Rectificación RETP-088:** la atribución previa a E001 era incorrecta; E001 significa `InvalidTriValue`. La obligación de estos campos se identifica por esta §14, sin crear un código diagnóstico.
+
+## 15. Declaración de Ternarizer y límite de ejecución · K1-T / RETP-088
+
+Se conserva `ternarizer_decl` de v0.1 §5.2 y su descenso declarativo. Sus identificadores no definen conjuntos ni una función ejecutable. Las operaciones de v0.1 §5.7, con las correcciones de esta v0.2, no contienen una llamada al ternarizador. Ni el nombre de la declaración ni el de su `mapping` autorizan código anfitrión. Las formas inventadas `ternarize(...)`/`ternarizar(...)` no son primitivas ni palabras constitutivas nuevas.
+
+La [IR 0.3 §2.4](IR_CANONICA_BIENFORMACION_SV_v0_3.md#ternarizer-k1-t) delimita la ruta productiva no habilitada y las obligaciones previas a su eventual incorporación. No se modifica la gramática, las tablas ES/EN ni las versiones.

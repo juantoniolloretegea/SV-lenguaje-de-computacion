@@ -561,3 +561,62 @@ Los seis nuevos negativos se adscriben a la obligación sintáctica E001, sin af
 - **PT01/PT02/PT04/PT13/PT14:** identidad de fuente/candidata, conservación ES/EN/ensamblaje, diagnóstico y entorno. Local: Rust/Cargo 1.98.0, `x86_64-unknown-linux-gnu`; CI registra sus versiones y anfitriones. Gramática 0.2, IR 0.3 y proyección 0.1.0 conservan versiones. Los registros 016/018 del laboratorio conservan su alcance; no se promueve otra plataforma.
 
 **Decisión:** DFL-010 queda cerrada en este inventario tras integrar la candidata verificada. La PR de `k1-dfl010-20260907` conserva cabeza, base, árbol y ejecuciones; preparar el manifiesto no acredita ejecución WASM. **Sigue fila 3/K1: cierre o delimitación expresa de K1-T**, según §7 y transición §14. No se habilita F por este acto. DFL-001 conserva la deuda diagnóstica estructurada; DFL-005 debe recibirse en F antes de admitir operaciones dependientes de las ligaduras ausentes. DFL-009 permanece en fila 9, retorno del primer universo CYB; el acceso editorial sigue aplazado. No se cierran dominio, álgebra, núcleo ni R2/R3/R4.
+
+
+<a id="k1-t-20260907"></a>
+## 19. K1-T: delimitación de Ternarizer y salida acotada de K1 · 07/09/2026
+
+**RETP-088; entrada:** main `1d3ebd22d30f61604fd51dc3d3d9864d1f0d7ac4`, árbol `ce3a97be6f6ab6935bed7b3e20bf1df51be9fedb`, PR #73 integrada. Se reciben completos los Pilares, el acta de perfiles y la transición hasta §27; después §7/K1-T de esta radiografía, Gramática 0.2 con producciones heredadas 0.1 §§5.2/5.7 e IR 0.2/J1.5 bajo las correcciones de IR 0.3 §2. La decisión humana autoriza K1-T.
+
+### 19.1. Fundamento y ataque a la suficiencia
+
+El [Documento IV §§5.2–5.3](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/composicion/IV_transduccion_alfabeto_ternario_interfaz_parametrica.md) exige partición, completitud, determinismo, criterio auditable, semántica previa e independencia del resultado celular (CT1–CT5). Se coteja ese texto del autor en `b8fd32978292d25adf9b87cf71e409005dce642c`, blob `66ee444aa72c216267750b679378a22f0ad7cc8a`; no se certifica identidad con una edición editorial inaccesible. Sus formulaciones históricas fallo/inadmisibilidad → U no se reactivan: rige la corrección expresa IR 0.3 §2, recogida en los Pilares y la secuencia. El acceso editorial continúa aplazado.
+
+| Pregunta adversarial | Hallazgo y consecuencia |
+|---|---|
+| ¿Tres nombres distintos prueban partición? | No: la IR material conserva cadenas, sin extensiones de conjuntos, pertenencia ni función. No prueba cobertura, disjunción o determinismo. |
+| ¿Tres nombres iguales justifican rechazar por solapamiento? | Tampoco se puede decidir esa propiedad desde cadenas opacas: faltan conjuntos y condiciones, incluidos posibles vacíos. Se conserva el texto como declaración; no se lo acredita como transductor bien formado. |
+| ¿`mapping: Tau` permite ejecutar Tau? | No: es un identificador, no código, umbral o función enlazada. Su nombre no autoriza un ejecutor Rust externo. |
+| ¿Compilar Domain con Ternarizer acredita la cadena? | No: las comprobaciones nominales de espacio y cadena no resuelven la partición ni las ligaduras de DFL-005. Los 24 testigos de Domain se reutilizan con ese alcance. |
+| ¿Sin ternarización se completa con U? | No: IR 0.3 §2 lo impide. Bottom/NotAdmitted no son literales Tri; una U explícita legítima conserva su significado. |
+| ¿E107 ya está emitido? | No: figura en IR 0.2, pero no entre los 51 códigos del catálogo efectivo 0.3. Una declaración nominal aceptada no prueba E107/J1.5. |
+
+### 19.2. Ruta material y delimitación
+
+La [IR 0.3 §2.4](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#ternarizer-k1-t) fija el límite actual antes de una futura realización. **K1-T se recibe por impedimento expreso de la ruta productiva observación → Tri, no como demostración de partición.** Se mantiene la estructura declarativa existente y no se añade una API artificial de ejecución fallida.
+
+| Superficie revisada | Qué hace y qué no acredita |
+|---|---|
+| `frontend.rs::parse_ternarizer`, `ir.rs::IrObjectKind::Ternarizer` | Conservan cinco identificadores/cadenas. `wellformed` comprueba estructura nominal y enlaces representados; no constituye conjuntos. |
+| Gramática heredada §5.7, `parse_let`, `IrOperationKind` | Las siete variantes son Evaluate, Gate, Resolve, Query, Supervise, Compose y Projection. No hay operación de ternarización ni llamada genérica a una función del host. |
+| `compile_svp`, `compile_svp_profile`, `compile_svp_assembly` | Validan lo materializado y devuelven IR declarativa. Los campos privados de IrProgram y las pruebas de cierre de API conservan la entrada por fuentes SV. |
+| `sv-native`, `assembly_probe`; `sv_wasm` entradas `sv_compile_svp_*` | Reciben fuentes SV y usan el mismo núcleo para compilar/proyectar; no interpretan Tau. `Ter.mapping` se rechaza como fuente que no es resultado de operación. |
+| `CaptureOutcome`, `AdmissibilityState`, `Tri`, `sv_tri_decode` | Los dos primeros no tienen conversión automática a Tri. Los literales y la decodificación 0/1/2 constituidos permanecen: decodificar una representación de U no es clasificar una observación. |
+| Frontera R1 y host | Sus contratos de permiso/efecto no son un intérprete de Ternarizer. Esta recepción no garantiza aislamiento frente a un host que ejecute código por otra vía; no acredita plataforma R3/R4. |
+
+Antes de habilitar producción deberán existir representación y prueba de espacio, partición completa/disjunta, pertenencia, función total/determinista, semántica, independencia y enlace autorizado a instancia/observación admitida. F recibe estas necesidades; cualquier realización posterior vuelve a K1-T antes de acreditarse ejecutable. No se eligen umbrales, conjuntos, células ni parámetros por el dominio.
+
+### 19.3. Rectificación diagnóstica y verificación
+
+**Rectificación de §18/RETP-087:** era incorrecto atribuir a E001 los seis rechazos de campos opcionales. E001 significa `InvalidTriValue`. El inventario activo pasa esos seis a Gramática 0.2 §14; otros seis rechazos léxicos a §11 y `graph_conflicts` a `graph_decl` heredada. Se conservan el corpus, sus 14 esperados y todos los textos de rechazo. `invalid_tri_literal` mantiene la obligación E001. La fotografía histórica de la matriz/CSV de agosto conserva su corte; la nota actual, el catálogo y esta rectificación explicitan el cambio. DFL-001 permanece abierta: no se renumera ni fabrica ningún diagnóstico. Se completan también en la tabla resumen RETP las entradas 085–087 ya presentes en detalle y CSV, sin alterar esos asientos.
+
+El banco [k1_ternarizer_cases.py](../../tests/k1_ternarizer_cases.py) tiene **40 testigos: 20 conservaciones y 20 rechazos**, con ES, EN y 20 ensamblajes mixtos en ambos órdenes. Conserva nombres iguales, diferentes y permutados, comprueba ausencia de operaciones/resultados fabricados y mantiene el vector explícito de nueve U. Rechaza llamadas a la declaración o formas inventadas, proyección como resultado y Bottom/NotAdmitted en vector Tri. Cada negativo exige rechazo controlado, salida vacía y diagnóstico exacto; un fallo de proceso no vale como rechazo. No se introducen esas formas adversariales en el vocabulario del SV.
+
+Comandos reproducibles, desde la raíz:
+
+```sh
+cargo test --manifest-path rust/Cargo.toml --workspace
+cargo build --manifest-path rust/Cargo.toml -p sv_native --bins --example assembly_probe
+python tests/run_conformance.py --rust-bin rust/target/debug/sv-native
+python tests/k1_ternarizer_cases.py --native-probe rust/target/debug/examples/assembly_probe --output-dir artifacts/k1-t
+```
+
+La comprobación local utiliza Rust/Cargo 1.98.0, destino `x86_64-unknown-linux-gnu`. Se exige **100/100**, banco K1-T 40/40, workspace y conservación literal de los 100 observables anteriores y 14 esperados. La candidata exige además los cuatro flujos CI y paridad nativo/WASI/navegador: bytes de proceso en WASI y payload/indicador de rechazo en navegador, manteniendo las diferencias de envoltorio declaradas. Se reutilizan bancos BridgeSet 18, Horizon 20, Domain 24, opcionales 64 y sensibilidad 5, sin contabilizarlos como nuevos casos del corpus.
+
+PT01/PT02/PT04/PT13/PT14 se acreditan sólo en el corte, fuentes, perfiles, diagnósticos y destinos ensayados. El workflow conserva SHA de fuente/base/checkout, versiones, comandos, salidas y huellas de artefactos durante 90 días; fuentes, obligaciones y procedimiento quedan versionados en Git. La evidencia experimental anterior del laboratorio no se amplía retrospectivamente. No se instala nada en el PC del usuario ni se abre un servicio.
+
+### 19.4. Relevo condicionado a integración verificada
+
+Queda satisfecha la alternativa de delimitación expresa prevista para K1-T. La **salida de la fila 3/K1 es acotada** por los cierres 079–087 y esta no habilitación. El siguiente paso es **fila 4/F**, contrato candidato, con F-IF dentro de su secuencia: debe recibir la identidad/ligaduras de DFL-005, la representación requerida por transducción y las obligaciones tecnológicas por operación. No se afirma cierre total de N0-06, E107/J1.5, concordancia general DFL-001, álgebra o núcleo.
+
+N0-05/N0-07 mantienen K2. DFL-008 conserva la evidencia de pérdida CRLF. DFL-009 se valora en fila 9 tras el primer universo CYB; no se adelanta Cloudflare ni un servicio nativo. El alcance productivo de Ternarizer sigue excluido de la puerta algebraica hasta su prueba propia. [Transición §28](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#k1-t-relevo-20260907) conserva el relevo canónico.
