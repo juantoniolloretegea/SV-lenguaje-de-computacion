@@ -43,7 +43,9 @@ La adenda actualiza el acta existente con los antecedentes privados R0/R1, N0 y 
 
 **Relevo N0-02 de K1:** [cierre incremental N0-02, RETP-079](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) y [transición §20](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-02-20260906). Tras su promoción sigue N0-03. E115 protege cada relación `CellSpec–OutputSemantics–Codomain`; la proyección global de declaraciones no enlazadas y DFL-008 conservan sus testigos y deudas.
 
-**Relevo vigente de K1:** [N0-03, RETP-080](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) y [transición §21](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-03-20260906). Tras su promoción sigue N0-04. La semántica duplicada no enlazada queda como regresión de rechazo; CRLF y la concordancia diagnóstica general permanecen abiertos.
+**Relevo N0-03 de K1:** [N0-03, RETP-080](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) y [transición §21](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-03-20260906). Tras su promoción sigue N0-04. La semántica duplicada no enlazada queda como regresión de rechazo; CRLF y la concordancia diagnóstica general permanecen abiertos.
+
+**Relevo vigente de K1:** [N0-04, RETP-081](../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) y [transición §22](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-04-20260907). Referencia real de arquitectura y corrección explícita del positivo histórico afectado. Tras promoción sigue la unicidad de `CoupledSpec.bridges` bajo `BridgeSet`; N0-05/N0-07 mantienen K2.
 
 ## 2. Estado de continuidad vigente
 

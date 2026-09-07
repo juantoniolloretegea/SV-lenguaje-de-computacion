@@ -59,6 +59,16 @@ Se precisa el texto general Python de E115 para expresar ambos alcances: unicida
 
 ---
 
+### 2.4. Referencia de arquitectura de Horizon (N0-04)
+
+`Horizon.architecture` utiliza la resolución tipada existente: `E006 — UndeclaredReference`, fase `validate`, capa efectiva 0, para referencia ausente o de tipo distinto a `GraphDecl` (representación AST de `CompositionGraph`). Se conservan nombre, mensaje base y detalles del comprobador Python. Su uso para tipo incorrecto ya está documentado en v0.2 y permanece como precisión diagnóstica pendiente en DFL-001.
+
+Rust conserva `CompileError::InvalidProgram(String)` y los mensajes del resolutor común: `referencia no declarada: X`, `X: se esperaba CompositionGraph` o `X no es un objeto declarado` cuando X nombra una operación. No se añade un literal E006 a esos mensajes ni se declara concordancia estructurada completa. La incompatibilidad `Agent–Domain` conserva E402 y su diagnóstico textual Rust. El catálogo sigue en **51 códigos**.
+
+La guarda se aplica sobre el programa completo después de las comprobaciones anteriores. Los negativos heredados pueden contener más de una infracción; conservar su primer diagnóstico no los convierte en controles aislados de J-H0. Los nuevos casos sí separan ausencia, tipo incorrecto y dos grafos reales distintos. Fuente: [IR §6.4](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#arquitectura-n0-04).
+
+---
+
 ## 3. E110 — `InvalidAdmissibilitySpec`
 
 E110 se emite cuando la declaración de admisibilidad no satisface el contrato v0.2.
@@ -168,11 +178,11 @@ E110, E305 y E308 no constituyen una solución lateral de esa deuda.
 
 ## 8. Cobertura reproducible
 
-La batería vigente contiene 88 casos:
+La batería vigente contiene 91 casos:
 
 ```text
 14 válidos
-74 inválidos
+77 inválidos
 ```
 
 Los diagnósticos E004, E110, E115, E305 y E308 disponen de contraejemplos ejecutables específicos. Los casos válidos incluyen, además, codominios con miembros distintos, admisibilidad con orden permutado de los tres estados permitidos, revisión de una `U` constituida y un `Frame` con dos nodos distintos que comparten legítimamente un mismo `CellSpec`.

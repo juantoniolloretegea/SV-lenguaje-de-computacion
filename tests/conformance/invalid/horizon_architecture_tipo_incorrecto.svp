@@ -1,0 +1,3 @@
+-- N0-04: existencia nominal no acredita el tipo de arquitectura.
+codomain K = { A };
+horizon H { architecture: K; events: [Event]; }

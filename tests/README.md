@@ -225,3 +225,11 @@ cargo test --manifest-path rust/Cargo.toml -p sv_core --test json_projection
 Tres pruebas Python contrastan, además, la conservación de miembros desde AST antes de perderlos en un mapa. Cinco pruebas Rust cubren ES/EN, mapas independientes, rechazo sin celda, ensamblaje y la guarda previa de Connector. La etapa frontal vigente no interpreta escapes dentro de cadenas SVP: el positivo contiene LF y tabulación reales; el serializador JSON los escapa conforme a su contrato existente.
 
 El banco de sensibilidad pasa a `sv-oracle-sensitivity-v3`, conservando exactamente las cinco entradas de v2. Exige un control, dos rechazos E115 (N0-02/N0-03) y dos divergencias CRLF aún abiertas en DFL-008. No suma las sondas a la conformidad y no adapta automáticamente esperados a un nuevo resultado.
+
+## 13. Referencia de arquitectura N0-04 · 07/09/2026
+
+El [acta N0-04](../docs/arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) documenta J-H0, diagnóstico, recepción y límites. El corpus vigente es **91 = 14 positivos + 77 negativos**. Las nuevas entradas aíslan arquitectura ausente, tipo incorrecto y dos grafos reales distintos para Agent.
+
+`transition_data_events.svp` conservaba Arch1 sin declarar. Se añaden explícitamente tres declaraciones al final y se modifica su esperado desde el esquema: los cinco objetos anteriores se mantienen; se añaden los tres nuevos y se actualiza la huella. Los otros trece esperados permanecen intactos. Las versiones históricas y sus huellas están enlazadas en el acta; no se regeneran esperados desde el compilador.
+
+Cuatro pruebas Python (`python -m unittest discover -s tests -p 'test_horizon_architecture.py' -v`) y cinco Rust (`cargo test --manifest-path rust/Cargo.toml -p sv_core --test horizon_architecture`) ejercen referencias, Agent y conservación. Rust incluye ES/EN y ensamblaje mixto; el corpus común 14/77 llega a WASI y navegador por los flujos existentes. La multiplicidad de Horizon.events se conserva sin decidir su estatuto. Los negativos anteriores conservan su primer rechazo aunque puedan contener otras infracciones; esa precedencia no acredita referencias válidas. Sensibilidad v3 y sus cinco fuentes permanecen intactas.

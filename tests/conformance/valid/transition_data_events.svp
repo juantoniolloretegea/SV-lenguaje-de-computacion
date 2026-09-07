@@ -15,3 +15,8 @@ transition_data TD1 {
   events: [(CambioProfilaxis, One), (NuevoCultivo, Zero)];
   induced_parameters: [(C1, 3, One), (C1, 7, Zero)];
 }
+
+-- N0-04: arquitectura explícita del horizonte; referencia adelantada.
+coupledspec CCArch { cell: C1; bridges: [3, 7]; }
+semantic_relation RArch { kind: DeclaredRelation; constraints: [Local]; }
+graph Arch1 { nodes: [CCArch]; edges: []; relation: RArch; regime: Simple; }

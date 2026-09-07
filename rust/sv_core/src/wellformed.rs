@@ -87,6 +87,13 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
             }
         }
     }
+    // N0-04: resolver sobre el programa completo, sin desplazar rechazos previos.
+    for object in program.objects() {
+        if let IrObjectKind::Horizon { architecture, .. } = object.kind() {
+            expect_object(&symbols, architecture, "CompositionGraph", |kind|
+                matches!(kind, IrObjectKind::CompositionGraph { .. }))?;
+        }
+    }
     Ok(())
 }
 

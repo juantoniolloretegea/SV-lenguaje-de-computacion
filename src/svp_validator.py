@@ -44,6 +44,10 @@ class Validator:
                 if duplicates:
                     raise SVPError(E115, node.loc.line, node.loc.col,
                                    f"OutputSemantics {node.name}: repetidas=[{', '.join(sorted(duplicates))}]")
+        # N0-04: resolver sobre el programa completo, sin desplazar rechazos previos.
+        for node in self.program.nodes:
+            if isinstance(node, HorizonDecl):
+                self._require_ref(node.architecture, node.loc, "GraphDecl")
 
     def _register(self, node: ASTNode):
         name = getattr(node, "name", None)

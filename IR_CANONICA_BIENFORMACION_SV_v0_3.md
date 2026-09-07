@@ -9,7 +9,7 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
-**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2) y N0-03 (§6.3), con alcance y diagnóstico expresos
+**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3) y N0-04 (§6.4), con alcance y diagnóstico expresos
 
 ---
 
@@ -251,6 +251,7 @@ Esta versión añade o refuerza, en el radio implementado, los siguientes juicio
 J-K0  Codomain contiene al menos un miembro y no contiene miembros repetidos.
 J-K1  Cada CellSpec enlaza una interpretación única para cada miembro de su Codomain, sin claves ajenas.
 J-J0  La proyección de un programa admitido no contiene miembros homónimos dentro de ningún objeto JSON.
+J-H0  Horizon.architecture resuelve un CompositionGraph declarado y bien formado.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
 J-R0  resolve identifica un estado evaluable y una posición real.
@@ -327,6 +328,29 @@ J-J0 se exige a todos los programas admitidos por las rutas constituidas. La rev
 
 ---
 
+<a id="arquitectura-n0-04"></a>
+
+### 6.4. Resolución de la arquitectura de `Horizon` (N0-04)
+
+IR v0.2, nivel 3, declara literalmente `Horizon.architecture : ArchitectureId`; el nivel 4 declara `Agent.architecture : CompositionGraph`. Se precisa aquí la resolución de aquella identidad en la superficie y la IR vigentes:
+
+```text
+Para todo H : Horizon admitido:
+resolve(H.architecture) : CompositionGraph
+Para todo A : Agent admitido, con D = resolve(A.domain) y H = resolve(D.horizon):
+A.architecture = H.architecture
+```
+
+Aquí `resolve` designa resolución de referencias en el juicio de bienformación, no la operación de revisión de U de la DSL. La referencia se resuelve por identidad exacta en el espacio global del programa completo o ensamblado. Debe existir un objeto declarado del tipo `CompositionGraph`, que a su vez supere sus comprobaciones de bienformación. No bastan una cadena no vacía, dos nombres iguales sin referente, un objeto de otro tipo ni un resultado de operación. Dos grafos de idéntica estructura y nombres distintos no son intercambiables por inferencia.
+
+La obligación alcanza horizontes sin consumidores y referencias adelantadas o entre unidades ES/EN. Las validaciones globales preceden a la admisión del programa; no se exige que el grafo aparezca antes del horizonte ni se introduce resolución parcial por unidad. Se conserva la validación previa de la relación `Agent–Domain–Horizon`: un programa sólo se admite si también supera J-H0, por lo que la igualdad del agente queda ligada al mismo grafo real.
+
+La comprobación complementaria de J-H0 se realiza después de las validaciones anteriores, incluida N0-03, para conservar la precedencia de los rechazos existentes. Si un programa viola varias obligaciones, el primer rechazo no certifica el cumplimiento de las restantes. La referencia ausente o de tipo incorrecto utiliza `E006 — UndeclaredReference` en Python y el rechazo textual de referencia tipada ya existente en Rust. La incompatibilidad de arquitectura del agente conserva `E402` en Python y su rechazo textual anterior en Rust. Se mantienen sus diferencias documentadas bajo DFL-001; no se atribuye un código estructurado común a Rust.
+
+La corrección no crea una arquitectura, no completa el dominio ni interpreta los campos opacos de `Domain` o `Agent`. No decide multiplicidad de `Horizon.events`, coherencia causal adicional entre horizontes y frames ni K1-T. Gramática 0.2, esquema IR 0.3 y serializador 0.1.0 mantienen sus versiones: la identidad ya estaba representada; se comprueba su referencia. No se modifican emisores ni se admite una IR o U como sustituto del rechazo.
+
+---
+
 ## 7. Elementos no modificados
 
 La versión 0.3 no introduce ni resuelve:
@@ -347,12 +371,12 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La implementación de referencia correspondiente a esta versión dispone de una batería de 88 casos:
+La implementación de referencia correspondiente a esta versión dispone de una batería de 91 casos:
 
 ```text
 14 válidos
-74 inválidos
-88 total
+77 inválidos
+91 total
 ```
 
 Los casos válidos comparan la salida contra IR canónica comprometida. Los inválidos exigen el código diagnóstico declarado. La batería incluye contraejemplos específicos para:
@@ -361,6 +385,7 @@ Los casos válidos comparan la salida contra IR canónica comprometida. Los inv�
 - `Codomain` con un miembro repetido;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
+- horizonte con arquitectura inexistente o de tipo incorrecto y agente con dos arquitecturas reales distintas;
 - objetivo de `resolve` fuera de rango o distinto de `U`;
 - instancia de revisión incompatible;
 - estados de `Frame` ajenos a la arquitectura;

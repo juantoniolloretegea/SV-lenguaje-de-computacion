@@ -21,6 +21,9 @@ GRAMMAR_VERSION = "0.2"
 SERIALIZER_VERSION = "0.1.0"
 
 EXPECTED_INVALID_CODES = {
+    "horizon_architecture_ausente.svp": "E006",
+    "horizon_architecture_tipo_incorrecto.svp": "E006",
+    "agent_arquitecturas_reales_distintas.svp": "E402",
     "output_semantics_sin_celda_repetida.svp": "E115",
     "connector_clave_repetida.svp": "E007",
     "output_semantics_vacia.svp": "E115",
