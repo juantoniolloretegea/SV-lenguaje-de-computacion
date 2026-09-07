@@ -1,0 +1,1822 @@
+{
+  "schema": "F-IF-EVIDENCE/1",
+  "base": "7dd6ef5ea39fcd978d485d1e2db1f3caa8c4bca3",
+  "inputs": [
+    {
+      "path": "tests/f_if/cases.json",
+      "sha256": "de96c4179e3c50cf3a812e4a77a6010468ee3f48074673fa57dc7ea346a5b201"
+    },
+    {
+      "path": "tests/f_if/run.mjs",
+      "sha256": "10944834542e84dfde185221516f50fab12661187c0b96b0b802ba6a8644825a"
+    }
+  ],
+  "totals": {
+    "families": 6,
+    "states": 48,
+    "operations": 18,
+    "rows": 54,
+    "sufficient": 36,
+    "losses": 18,
+    "exact_recoveries": 288,
+    "lateral_recoveries": 144,
+    "technical_controls": 24
+  },
+  "families": [
+    {
+      "id": "IF-IMM-01",
+      "sources": [
+        {
+          "id": "IF-IMM-01-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 331,
+          "sha256": "79356942a15f131e43162990de5957f1cad7a6ea7a6bfc248d9fe54bb53ed76d"
+        },
+        {
+          "id": "IF-IMM-01-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 342,
+          "sha256": "ad47fa78d90e44047b9b8422581241d9e2ca1ef82c82aa949a8ee75652059544"
+        },
+        {
+          "id": "IF-IMM-01-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 331,
+          "sha256": "20c09782fd63d9709caa6fe46e6d16fdf9af72481d7ac252780019261eddcaf7"
+        },
+        {
+          "id": "IF-IMM-01-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 342,
+          "sha256": "12dc4c2f36018e526420612cf403175c880e5798151d9e21057985a4d55fe145"
+        },
+        {
+          "id": "IF-IMM-01-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 331,
+          "sha256": "723cc664676fac1114cac667369970edd1ed4c411d1ee121ddf2187e71dc784c"
+        },
+        {
+          "id": "IF-IMM-01-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 342,
+          "sha256": "d11f3103c47bd748aa01bb9ae23fcb9d3cbefcaef6707dfcc5158e78e99fd4a7"
+        },
+        {
+          "id": "IF-IMM-01-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 331,
+          "sha256": "b5c363bd24191b8176d468c06bd24140970edfd41832249e7d74aa55e5f3dbef"
+        },
+        {
+          "id": "IF-IMM-01-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 342,
+          "sha256": "4646f87886375adda99efb7ac6877c180d93bc05b05e1b52bfb5e89ce323c311"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-unidad",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.observation",
+            "a.value",
+            "a.unit",
+            "a.criterion"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-unidad",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-01-000",
+            "y": "IF-IMM-01-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-01/packet/1\",\"context\":{\"request\":\"REQ-01-A\"},\"b\":{\"report\":\"REPORT-01\",\"state\":\"initial\",\"replaces\":null},\"fixed\":{\"sample\":\"SAMPLE-01\",\"source\":\"SYNTH-LAB/1\",\"purpose\":\"cotejo documental; sin conversión ni umbral clínico\"}}",
+            "transmitted_sha256": "f216d869f04ad3d71c3125161c6f28dfb70da3003764c5c596ba0f41daf2d458",
+            "q_x": [
+              "OBS-01",
+              "7",
+              "UNIT-ALFA",
+              "CRIT-ALFA/1"
+            ],
+            "q_y": [
+              "OBS-01",
+              "7",
+              "UNIT-BETA",
+              "CRIT-BETA/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-unidad",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-01-000",
+            "y": "IF-IMM-01-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-01/packet/1\",\"context\":{\"request\":\"REQ-01-A\"},\"fixed\":{\"sample\":\"SAMPLE-01\",\"source\":\"SYNTH-LAB/1\",\"purpose\":\"cotejo documental; sin conversión ni umbral clínico\"}}",
+            "transmitted_sha256": "b3e8cba78dcfdf2e7928c65363f533b00d0fc80568434a1f0d08af9434b36907",
+            "q_x": [
+              "OBS-01",
+              "7",
+              "UNIT-ALFA",
+              "CRIT-ALFA/1"
+            ],
+            "q_y": [
+              "OBS-01",
+              "7",
+              "UNIT-BETA",
+              "CRIT-BETA/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-correccion",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.report",
+            "b.state",
+            "b.replaces"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-correccion",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.report",
+            "b.state",
+            "b.replaces"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-correccion",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-01-000",
+            "y": "IF-IMM-01-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-01/packet/1\",\"context\":{\"request\":\"REQ-01-A\"},\"fixed\":{\"sample\":\"SAMPLE-01\",\"source\":\"SYNTH-LAB/1\",\"purpose\":\"cotejo documental; sin conversión ni umbral clínico\"}}",
+            "transmitted_sha256": "b3e8cba78dcfdf2e7928c65363f533b00d0fc80568434a1f0d08af9434b36907",
+            "q_x": [
+              "REPORT-01",
+              "initial",
+              null
+            ],
+            "q_y": [
+              "REPORT-01",
+              "corrected",
+              "OBS-PREV-01"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-peticion",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.request"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-peticion",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.request"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-01",
+          "operation": "Q01-peticion",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.request"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q01-unidad",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.observation",
+            "a.value",
+            "a.unit",
+            "a.criterion"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q01-correccion",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.report",
+            "b.state",
+            "b.replaces"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q01-peticion",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.request"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    },
+    {
+      "id": "IF-IMM-02",
+      "sources": [
+        {
+          "id": "IF-IMM-02-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 541,
+          "sha256": "063348c4c892b2ee6872602604d479336f1426c08d9c25bf239b0ff7ae357968"
+        },
+        {
+          "id": "IF-IMM-02-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 541,
+          "sha256": "40087c7814d8dd4c0be417277fb248612aa7566f7ae07003ebc1e34733a78a52"
+        },
+        {
+          "id": "IF-IMM-02-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 541,
+          "sha256": "9b3499ff54cb8fc9e6e8f41989de95c007da6174b4d773788c89dfe2a2f7663e"
+        },
+        {
+          "id": "IF-IMM-02-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 541,
+          "sha256": "d94e8685c8525d60d8a1e1740c119c99aea5ab4b74594860a96ae9e4526f0e3e"
+        },
+        {
+          "id": "IF-IMM-02-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 541,
+          "sha256": "564ff52aea0ae0ecd5f1f64b62aa3133942a78fcc43c8109eb2fec1ca939b33a"
+        },
+        {
+          "id": "IF-IMM-02-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 541,
+          "sha256": "3675e975b459d5a4f0537407acdfb466bd7680c1ae82a82063005d3c66065504"
+        },
+        {
+          "id": "IF-IMM-02-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 541,
+          "sha256": "7a4f63d3ac5a9a418efdf33107baffcde42c0803b4beefc95390daa61cd255fb"
+        },
+        {
+          "id": "IF-IMM-02-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 541,
+          "sha256": "84759cf1a03ddf8b0fdedc6c0d22131a1516006901cbc5e3de3b557e8b62695b"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-configuracion",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.panel",
+            "a.configuration",
+            "a.controls",
+            "a.derived_observation",
+            "a.derivation"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-configuracion",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-02-000",
+            "y": "IF-IMM-02-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-02/packet/1\",\"context\":{\"sample\":\"SAMPLE-02-A\"},\"b\":{\"report\":\"REPORT-02\",\"interpretation\":\"TEXT-A\",\"author\":\"SYNTH-READER-A\",\"rule\":\"REPORTING-A/1\"},\"fixed\":{\"instrument_file\":\"FILE-02\",\"instrument_bytes_utf8\":\"SYNTHETIC-INSTRUMENT-02\",\"instrument_version\":\"SYNTH-INSTRUMENT/1\",\"purpose\":\"mismo fichero; procedencias de derivación e interpretación distintas, sin calcular fenotipo\"}}",
+            "transmitted_sha256": "723a5892ddd349d0c706e2892a4518b25c4b6a7017205d0be0e8473c5cbe3db6",
+            "q_x": [
+              "PANEL-A/1",
+              "CFG-A/1",
+              [
+                "CTRL-A/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-A/1"
+            ],
+            "q_y": [
+              "PANEL-B/1",
+              "CFG-B/1",
+              [
+                "CTRL-B/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-B/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-configuracion",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-02-000",
+            "y": "IF-IMM-02-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-02/packet/1\",\"context\":{\"sample\":\"SAMPLE-02-A\"},\"fixed\":{\"instrument_file\":\"FILE-02\",\"instrument_bytes_utf8\":\"SYNTHETIC-INSTRUMENT-02\",\"instrument_version\":\"SYNTH-INSTRUMENT/1\",\"purpose\":\"mismo fichero; procedencias de derivación e interpretación distintas, sin calcular fenotipo\"}}",
+            "transmitted_sha256": "637e4495e6a28bd7ce17bbe2225e38e49ae7f070637fc0d556b34882f037a64d",
+            "q_x": [
+              "PANEL-A/1",
+              "CFG-A/1",
+              [
+                "CTRL-A/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-A/1"
+            ],
+            "q_y": [
+              "PANEL-B/1",
+              "CFG-B/1",
+              [
+                "CTRL-B/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-B/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-informe",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.report",
+            "b.interpretation",
+            "b.author",
+            "b.rule"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-informe",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.report",
+            "b.interpretation",
+            "b.author",
+            "b.rule"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-informe",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-02-000",
+            "y": "IF-IMM-02-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-02/packet/1\",\"context\":{\"sample\":\"SAMPLE-02-A\"},\"fixed\":{\"instrument_file\":\"FILE-02\",\"instrument_bytes_utf8\":\"SYNTHETIC-INSTRUMENT-02\",\"instrument_version\":\"SYNTH-INSTRUMENT/1\",\"purpose\":\"mismo fichero; procedencias de derivación e interpretación distintas, sin calcular fenotipo\"}}",
+            "transmitted_sha256": "637e4495e6a28bd7ce17bbe2225e38e49ae7f070637fc0d556b34882f037a64d",
+            "q_x": [
+              "REPORT-02",
+              "TEXT-A",
+              "SYNTH-READER-A",
+              "REPORTING-A/1"
+            ],
+            "q_y": [
+              "REPORT-02",
+              "TEXT-B",
+              "SYNTH-READER-B",
+              "REPORTING-B/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-muestra",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-muestra",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-02",
+          "operation": "Q02-muestra",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q02-configuracion",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.panel",
+            "a.configuration",
+            "a.controls",
+            "a.derived_observation",
+            "a.derivation"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q02-informe",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.report",
+            "b.interpretation",
+            "b.author",
+            "b.rule"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q02-muestra",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.sample"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    },
+    {
+      "id": "IF-IMM-03",
+      "sources": [
+        {
+          "id": "IF-IMM-03-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 414,
+          "sha256": "f5d01bafe80d7cf48fa0727e6d1a6d5911ea85212e4ef140ae3652f08d61afcc"
+        },
+        {
+          "id": "IF-IMM-03-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 414,
+          "sha256": "af423f157a1f2fbf2b2890f03b651e7b37ee95b5aaaef39c5e73bd5e45955053"
+        },
+        {
+          "id": "IF-IMM-03-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 414,
+          "sha256": "638093eb01cb82a5da24feed5d66a441a073a41e190b3878a42033279210dd40"
+        },
+        {
+          "id": "IF-IMM-03-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 414,
+          "sha256": "2a3fe991602226c282539822941b4f8f9b870984c5567f8a18ad655f806533df"
+        },
+        {
+          "id": "IF-IMM-03-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 414,
+          "sha256": "12add6a9d4d0923c2ca9e7df859d90f95128879f90ca7c81fb49fede49b25eb9"
+        },
+        {
+          "id": "IF-IMM-03-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 414,
+          "sha256": "c991cb3cc0a3d8052b770441b384422bbb2d954fae157a6536d1ac6f138157eb"
+        },
+        {
+          "id": "IF-IMM-03-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 414,
+          "sha256": "98f6c76206f074e5301db8d8d4c480e44d47a8539e48360085aa526484e039cd"
+        },
+        {
+          "id": "IF-IMM-03-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 414,
+          "sha256": "1510db28d241fcaf0caf1f37d3339b4cc99e56183433ac856fd877ae7cd4e0d1"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-informe",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.report",
+            "a.interpretation",
+            "a.author"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-informe",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-03-000",
+            "y": "IF-IMM-03-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-03/packet/1\",\"context\":{\"sample\":\"SAMPLE-03-A\"},\"b\":{\"site\":\"SITE-A\",\"procedure\":\"PROC-A/1\",\"processing\":\"PROCESS-A/1\"},\"fixed\":{\"annex\":\"ANNEX-03\",\"image\":\"IMAGE-03\",\"image_bytes_utf8\":\"SYNTHETIC-IMAGE-03\",\"purpose\":\"anexo artificial idéntico con informes distintos; no formato DICOM ni interpretación de imagen\"}}",
+            "transmitted_sha256": "c825286e315fb750dc11a2147d940af7978bb87ab5cb126e013c921d1242979f",
+            "q_x": [
+              "REPORT-03",
+              "TEXT-A",
+              "SYNTH-READER-A"
+            ],
+            "q_y": [
+              "REPORT-03",
+              "TEXT-B",
+              "SYNTH-READER-B"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-informe",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-03-000",
+            "y": "IF-IMM-03-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-03/packet/1\",\"context\":{\"sample\":\"SAMPLE-03-A\"},\"fixed\":{\"annex\":\"ANNEX-03\",\"image\":\"IMAGE-03\",\"image_bytes_utf8\":\"SYNTHETIC-IMAGE-03\",\"purpose\":\"anexo artificial idéntico con informes distintos; no formato DICOM ni interpretación de imagen\"}}",
+            "transmitted_sha256": "81b1c1af3eab5f8bc03531ca89895697d96a2bac6ee9ec830f2da06767c844bb",
+            "q_x": [
+              "REPORT-03",
+              "TEXT-A",
+              "SYNTH-READER-A"
+            ],
+            "q_y": [
+              "REPORT-03",
+              "TEXT-B",
+              "SYNTH-READER-B"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-procedimiento",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.site",
+            "b.procedure",
+            "b.processing"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-procedimiento",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.site",
+            "b.procedure",
+            "b.processing"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-procedimiento",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-03-000",
+            "y": "IF-IMM-03-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-03/packet/1\",\"context\":{\"sample\":\"SAMPLE-03-A\"},\"fixed\":{\"annex\":\"ANNEX-03\",\"image\":\"IMAGE-03\",\"image_bytes_utf8\":\"SYNTHETIC-IMAGE-03\",\"purpose\":\"anexo artificial idéntico con informes distintos; no formato DICOM ni interpretación de imagen\"}}",
+            "transmitted_sha256": "81b1c1af3eab5f8bc03531ca89895697d96a2bac6ee9ec830f2da06767c844bb",
+            "q_x": [
+              "SITE-A",
+              "PROC-A/1",
+              "PROCESS-A/1"
+            ],
+            "q_y": [
+              "SITE-B",
+              "PROC-B/1",
+              "PROCESS-B/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-muestra",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-muestra",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-03",
+          "operation": "Q03-muestra",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.sample"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q03-informe",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.report",
+            "a.interpretation",
+            "a.author"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q03-procedimiento",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.site",
+            "b.procedure",
+            "b.processing"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q03-muestra",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.sample"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    },
+    {
+      "id": "IF-IMM-04",
+      "sources": [
+        {
+          "id": "IF-IMM-04-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 429,
+          "sha256": "6f46fe8695bde407101aee8c4beda01e605b26d305ac36b4808d5337db19e36e"
+        },
+        {
+          "id": "IF-IMM-04-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 429,
+          "sha256": "485e4b5766c75965f3389fceaf2bfe57fd6999506c66202bf0c0e2291a0ab42d"
+        },
+        {
+          "id": "IF-IMM-04-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 412,
+          "sha256": "b4e39af44f2c27ba74ccf6f4ed3da7928c368756da4b605806f98a5bcefbe2ec"
+        },
+        {
+          "id": "IF-IMM-04-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 412,
+          "sha256": "c3f921bd63826e201e1d35eaef6a765220c3341e04f322b9f4fffdaefd494efe"
+        },
+        {
+          "id": "IF-IMM-04-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 429,
+          "sha256": "535a7e378f5cb227fffceb4fc772ad100ae4affabfed7c3e416bc5a2cc20199d"
+        },
+        {
+          "id": "IF-IMM-04-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 429,
+          "sha256": "5e209c794d059a45fb5e92d96478ecb16d5b935dc6572492e186be0464651601"
+        },
+        {
+          "id": "IF-IMM-04-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 412,
+          "sha256": "1c55af5f05305588bd49cc15b3af4a9a0bd792f3f24c3e5f9d5060cd74cc069d"
+        },
+        {
+          "id": "IF-IMM-04-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 412,
+          "sha256": "7a72497c70a77bda438c9204b7d11168d17833c53b9c242957f3390de7a12eda"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-constancia",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.administration",
+            "a.record_state",
+            "a.result"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-constancia",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-04-000",
+            "y": "IF-IMM-04-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-04/packet/1\",\"context\":{\"order\":\"ORDER-04-A\"},\"b\":{\"change\":\"CHANGE-A\",\"state\":\"unchanged\",\"reason\":\"REASON-A\"},\"fixed\":{\"intention\":\"INTENT-04\",\"regimen\":\"REGIMEN-04/1\",\"source\":\"SYNTH-ORDER-AND-RECORD/1\",\"purpose\":\"registro puede ser previo a la suspensión; ausencia de registro no prueba ausencia de administración\"}}",
+            "transmitted_sha256": "63f3d216ff629711c4079795fc2a0bb5f6ff9bfa14be83ee5c6eac94656c83db",
+            "q_x": [
+              "ADMIN-04",
+              "recorded",
+              "RECORDED-EFFECT-A"
+            ],
+            "q_y": [
+              null,
+              "not-recorded",
+              null
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-constancia",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-04-000",
+            "y": "IF-IMM-04-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-04/packet/1\",\"context\":{\"order\":\"ORDER-04-A\"},\"fixed\":{\"intention\":\"INTENT-04\",\"regimen\":\"REGIMEN-04/1\",\"source\":\"SYNTH-ORDER-AND-RECORD/1\",\"purpose\":\"registro puede ser previo a la suspensión; ausencia de registro no prueba ausencia de administración\"}}",
+            "transmitted_sha256": "4cc178f91a81cc35de591b3ccf0e4d70da6c54a13ac77a515ce100a88cabdbae",
+            "q_x": [
+              "ADMIN-04",
+              "recorded",
+              "RECORDED-EFFECT-A"
+            ],
+            "q_y": [
+              null,
+              "not-recorded",
+              null
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-cambio",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.change",
+            "b.state",
+            "b.reason"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-cambio",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.change",
+            "b.state",
+            "b.reason"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-cambio",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-04-000",
+            "y": "IF-IMM-04-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-04/packet/1\",\"context\":{\"order\":\"ORDER-04-A\"},\"fixed\":{\"intention\":\"INTENT-04\",\"regimen\":\"REGIMEN-04/1\",\"source\":\"SYNTH-ORDER-AND-RECORD/1\",\"purpose\":\"registro puede ser previo a la suspensión; ausencia de registro no prueba ausencia de administración\"}}",
+            "transmitted_sha256": "4cc178f91a81cc35de591b3ccf0e4d70da6c54a13ac77a515ce100a88cabdbae",
+            "q_x": [
+              "CHANGE-A",
+              "unchanged",
+              "REASON-A"
+            ],
+            "q_y": [
+              "CHANGE-B",
+              "suspended",
+              "REASON-B"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-orden",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.order"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-orden",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.order"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-04",
+          "operation": "Q04-orden",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.order"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q04-constancia",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.administration",
+            "a.record_state",
+            "a.result"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q04-cambio",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.change",
+            "b.state",
+            "b.reason"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q04-orden",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.order"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    },
+    {
+      "id": "IF-IMM-05",
+      "sources": [
+        {
+          "id": "IF-IMM-05-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 399,
+          "sha256": "4e86c7c2c51f510de51d780948c5f7af57045d21a998e550029a6acf7a1f8cce"
+        },
+        {
+          "id": "IF-IMM-05-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 402,
+          "sha256": "a8ff88358a1130eff1d9cd7d2c7e124a292370c5b76abb5e623cc0d2d97f5fbd"
+        },
+        {
+          "id": "IF-IMM-05-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 399,
+          "sha256": "fe9d43989568ba69b53946c4cedee271c7d8f44ad5d6055cdb600f98ca8e8363"
+        },
+        {
+          "id": "IF-IMM-05-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 402,
+          "sha256": "aca2cbce0d8f99bc320407be199e89070d3140e97bca27730af84a0ddcb22374"
+        },
+        {
+          "id": "IF-IMM-05-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 399,
+          "sha256": "085e7d0b9108504e8671c79cda0d02cbe307714b54574d81634ef1e0da3864e9"
+        },
+        {
+          "id": "IF-IMM-05-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 402,
+          "sha256": "e4ff1c20520ca713f5e5542de196bfb069735420bc51529a8470d6cd48726a33"
+        },
+        {
+          "id": "IF-IMM-05-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 399,
+          "sha256": "4c5cf607840e8a078c896829baff4b7060ac34ba6b10bee23f50a42886b3308f"
+        },
+        {
+          "id": "IF-IMM-05-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 402,
+          "sha256": "c1c4b778a0c54b647eb2b659630785b9a26ce181128c3d27495da4a95ac8b6e8"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-episodio",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.episode",
+            "a.encounter",
+            "a.start",
+            "a.end"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-episodio",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-05-000",
+            "y": "IF-IMM-05-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-05/packet/1\",\"context\":{\"location\":\"LOCATION-05-A\"},\"b\":{\"service\":\"SERVICE-A\",\"organization\":\"ORG-A/1\",\"modality\":\"inpatient\"},\"fixed\":{\"source\":\"SYNTH-ENCOUNTER/1\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"etiquetas temporales declaradas; no reloj vivo ni equivalencia ubicación-episodio\"}}",
+            "transmitted_sha256": "8995d029c4f7429b0a10cedb2ef5c3d5b070650f5d82c03fe9446fa753515e9b",
+            "q_x": [
+              "EPISODE-05-A",
+              "ENCOUNTER-05-A",
+              "T1",
+              "T2"
+            ],
+            "q_y": [
+              "EPISODE-05-B",
+              "ENCOUNTER-05-B",
+              "T3",
+              "T4"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-episodio",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-05-000",
+            "y": "IF-IMM-05-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-05/packet/1\",\"context\":{\"location\":\"LOCATION-05-A\"},\"fixed\":{\"source\":\"SYNTH-ENCOUNTER/1\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"etiquetas temporales declaradas; no reloj vivo ni equivalencia ubicación-episodio\"}}",
+            "transmitted_sha256": "eca113cdfa68aad30a567fdad94d0f98e18b4bb310a481d03d0c2250711fc3c6",
+            "q_x": [
+              "EPISODE-05-A",
+              "ENCOUNTER-05-A",
+              "T1",
+              "T2"
+            ],
+            "q_y": [
+              "EPISODE-05-B",
+              "ENCOUNTER-05-B",
+              "T3",
+              "T4"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-organizacion",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.service",
+            "b.organization",
+            "b.modality"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-organizacion",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.service",
+            "b.organization",
+            "b.modality"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-organizacion",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-05-000",
+            "y": "IF-IMM-05-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-05/packet/1\",\"context\":{\"location\":\"LOCATION-05-A\"},\"fixed\":{\"source\":\"SYNTH-ENCOUNTER/1\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"etiquetas temporales declaradas; no reloj vivo ni equivalencia ubicación-episodio\"}}",
+            "transmitted_sha256": "eca113cdfa68aad30a567fdad94d0f98e18b4bb310a481d03d0c2250711fc3c6",
+            "q_x": [
+              "SERVICE-A",
+              "ORG-A/1",
+              "inpatient"
+            ],
+            "q_y": [
+              "SERVICE-B",
+              "ORG-B/1",
+              "day-hospital"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-ubicacion",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.location"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-ubicacion",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.location"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-05",
+          "operation": "Q05-ubicacion",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.location"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q05-episodio",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.episode",
+            "a.encounter",
+            "a.start",
+            "a.end"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q05-organizacion",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.service",
+            "b.organization",
+            "b.modality"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q05-ubicacion",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.location"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    },
+    {
+      "id": "IF-IMM-06",
+      "sources": [
+        {
+          "id": "IF-IMM-06-000",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 526,
+          "sha256": "63f9f919b8f1baecf4664d325c713ad87809d60bc530985c13cf9b215bb65697"
+        },
+        {
+          "id": "IF-IMM-06-001",
+          "point": {
+            "context": 0,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 526,
+          "sha256": "96f0b14021d47b057363b4ce9b146a90af4d3d21716af6ac1a1c83305f593226"
+        },
+        {
+          "id": "IF-IMM-06-010",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 526,
+          "sha256": "15f9053465416dd01eba007a1d26a01d4137360f1d2369ce90c1d0de6ef6c996"
+        },
+        {
+          "id": "IF-IMM-06-011",
+          "point": {
+            "context": 0,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 526,
+          "sha256": "2546300a121b2bf569df0370349f089e990b39f563e404bbea79bb25154dfc5a"
+        },
+        {
+          "id": "IF-IMM-06-100",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 0
+          },
+          "bytes": 526,
+          "sha256": "3e620c40eb44f4f2ed872a4df1a18be69e6bb4fd538efc68fadbae418a295803"
+        },
+        {
+          "id": "IF-IMM-06-101",
+          "point": {
+            "context": 1,
+            "a": 0,
+            "b": 1
+          },
+          "bytes": 526,
+          "sha256": "4874db66e3b2f31b69d0e7f6b55b8bb36b6a9da94390d18b42a1b2d3aef49181"
+        },
+        {
+          "id": "IF-IMM-06-110",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 0
+          },
+          "bytes": 526,
+          "sha256": "b0ef78d3ea38c11946d34a29f46d68001d6798e30f47f1c0629bcae788d005ff"
+        },
+        {
+          "id": "IF-IMM-06-111",
+          "point": {
+            "context": 1,
+            "a": 1,
+            "b": 1
+          },
+          "bytes": 526,
+          "sha256": "1c7459c9e372ee619a57f8e527baf70a16f17f26a8c6a0dd0fa0304145c89886"
+        }
+      ],
+      "technical_controls": [
+        "CaptureFailure",
+        "NotAdmitted",
+        "MissingOrWrongConfiguration",
+        "TransportFailure"
+      ],
+      "matrix": [
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-historia",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "a.causal_order",
+            "a.states",
+            "a.amendment",
+            "a.provenance",
+            "a.episodes"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-historia",
+          "level": 1,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-06-000",
+            "y": "IF-IMM-06-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-06/packet/1\",\"context\":{\"dossier\":\"DOSSIER-06-A\"},\"b\":{\"valid_from\":\"T1\",\"valid_to\":\"T2\",\"basis\":\"VALIDITY-A/1\"},\"fixed\":{\"received_order\":[\"EVENT-2\",\"EVENT-1\"],\"current_state\":\"CURRENT\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"orden de recepción separado del causal; vista vigente no reemplaza historia\"}}",
+            "transmitted_sha256": "b6b00597a7272a7a215d79f4b1c30435aef1c79c7f64a605c97748c498d1bbec",
+            "q_x": [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-A",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-1",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-1",
+                "EPISODE-2"
+              ]
+            ],
+            "q_y": [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-B",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-3",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-3",
+                "EPISODE-2"
+              ]
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-historia",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-06-000",
+            "y": "IF-IMM-06-010",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-06/packet/1\",\"context\":{\"dossier\":\"DOSSIER-06-A\"},\"fixed\":{\"received_order\":[\"EVENT-2\",\"EVENT-1\"],\"current_state\":\"CURRENT\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"orden de recepción separado del causal; vista vigente no reemplaza historia\"}}",
+            "transmitted_sha256": "c0967400cf1e8ec2d537b6ede6daee49804e31007af0d4650f1e0c8cfe458845",
+            "q_x": [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-A",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-1",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-1",
+                "EPISODE-2"
+              ]
+            ],
+            "q_y": [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-B",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-3",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-3",
+                "EPISODE-2"
+              ]
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-vigencia",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.valid_from",
+            "b.valid_to",
+            "b.basis"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-vigencia",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "b.valid_from",
+            "b.valid_to",
+            "b.basis"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-vigencia",
+          "level": 2,
+          "judgment": "PERDIDA_DEMOSTRADA_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": null,
+          "witness": {
+            "x": "IF-IMM-06-000",
+            "y": "IF-IMM-06-001",
+            "transmitted_utf8": "{\"schema\":\"IF-IMM-06/packet/1\",\"context\":{\"dossier\":\"DOSSIER-06-A\"},\"fixed\":{\"received_order\":[\"EVENT-2\",\"EVENT-1\"],\"current_state\":\"CURRENT\",\"time_order\":[\"T1\",\"T2\",\"T3\",\"T4\"],\"purpose\":\"orden de recepción separado del causal; vista vigente no reemplaza historia\"}}",
+            "transmitted_sha256": "c0967400cf1e8ec2d537b6ede6daee49804e31007af0d4650f1e0c8cfe458845",
+            "q_x": [
+              "T1",
+              "T2",
+              "VALIDITY-A/1"
+            ],
+            "q_y": [
+              "T3",
+              "T4",
+              "VALIDITY-B/1"
+            ]
+          }
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-expediente",
+          "level": 0,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.dossier"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-expediente",
+          "level": 1,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.dossier"
+          ],
+          "witness": null
+        },
+        {
+          "family": "IF-IMM-06",
+          "operation": "Q06-expediente",
+          "level": 2,
+          "judgment": "SUFICIENTE_EN_X_FINITO",
+          "tested_states": 8,
+          "recovery": [
+            "context.dossier"
+          ],
+          "witness": null
+        }
+      ],
+      "certificates": [
+        {
+          "operation": "Q06-historia",
+          "frontier": 0,
+          "accepted_levels": [
+            0
+          ],
+          "recovery": [
+            "a.causal_order",
+            "a.states",
+            "a.amendment",
+            "a.provenance",
+            "a.episodes"
+          ],
+          "boundary_level": 1
+        },
+        {
+          "operation": "Q06-vigencia",
+          "frontier": 1,
+          "accepted_levels": [
+            0,
+            1
+          ],
+          "recovery": [
+            "b.valid_from",
+            "b.valid_to",
+            "b.basis"
+          ],
+          "boundary_level": 2
+        },
+        {
+          "operation": "Q06-expediente",
+          "frontier": 2,
+          "accepted_levels": [
+            0,
+            1,
+            2
+          ],
+          "recovery": [
+            "context.dossier"
+          ],
+          "boundary_level": null
+        }
+      ],
+      "exactChecks": 48,
+      "lateralChecks": 24
+    }
+  ]
+}

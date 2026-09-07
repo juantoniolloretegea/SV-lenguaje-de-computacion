@@ -1,0 +1,758 @@
+{
+  "schema": "F-IF/1",
+  "base": "7dd6ef5ea39fcd978d485d1e2db1f3caa8c4bca3",
+  "contract": "F-SV/0.1-candidata",
+  "scope": "Paquetes documentales sintéticos externos; ninguna operación SV ni decisión clínica",
+  "families": [
+    {
+      "id": "IF-IMM-01",
+      "name": "Analítica",
+      "axes": {
+        "context": [
+          {
+            "request": "REQ-01-A"
+          },
+          {
+            "request": "REQ-01-B"
+          }
+        ],
+        "a": [
+          {
+            "observation": "OBS-01",
+            "value": "7",
+            "unit": "UNIT-ALFA",
+            "criterion": "CRIT-ALFA/1"
+          },
+          {
+            "observation": "OBS-01",
+            "value": "7",
+            "unit": "UNIT-BETA",
+            "criterion": "CRIT-BETA/1"
+          }
+        ],
+        "b": [
+          {
+            "report": "REPORT-01",
+            "state": "initial",
+            "replaces": null
+          },
+          {
+            "report": "REPORT-01",
+            "state": "corrected",
+            "replaces": "OBS-PREV-01"
+          }
+        ]
+      },
+      "fixed": {
+        "sample": "SAMPLE-01",
+        "source": "SYNTH-LAB/1",
+        "purpose": "cotejo documental; sin conversión ni umbral clínico"
+      },
+      "operations": [
+        {
+          "id": "Q01-unidad",
+          "axis": "a",
+          "paths": [
+            "a.observation",
+            "a.value",
+            "a.unit",
+            "a.criterion"
+          ],
+          "expected": [
+            [
+              "OBS-01",
+              "7",
+              "UNIT-ALFA",
+              "CRIT-ALFA/1"
+            ],
+            [
+              "OBS-01",
+              "7",
+              "UNIT-BETA",
+              "CRIT-BETA/1"
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q01-correccion",
+          "axis": "b",
+          "paths": [
+            "b.report",
+            "b.state",
+            "b.replaces"
+          ],
+          "expected": [
+            [
+              "REPORT-01",
+              "initial",
+              null
+            ],
+            [
+              "REPORT-01",
+              "corrected",
+              "OBS-PREV-01"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q01-peticion",
+          "axis": "context",
+          "paths": [
+            "context.request"
+          ],
+          "expected": [
+            [
+              "REQ-01-A"
+            ],
+            [
+              "REQ-01-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    },
+    {
+      "id": "IF-IMM-02",
+      "name": "Citometría",
+      "axes": {
+        "context": [
+          {
+            "sample": "SAMPLE-02-A"
+          },
+          {
+            "sample": "SAMPLE-02-B"
+          }
+        ],
+        "a": [
+          {
+            "panel": "PANEL-A/1",
+            "configuration": "CFG-A/1",
+            "controls": [
+              "CTRL-A/1"
+            ],
+            "derived_observation": "DERIVED-02",
+            "derivation": "DERIVE-A/1"
+          },
+          {
+            "panel": "PANEL-B/1",
+            "configuration": "CFG-B/1",
+            "controls": [
+              "CTRL-B/1"
+            ],
+            "derived_observation": "DERIVED-02",
+            "derivation": "DERIVE-B/1"
+          }
+        ],
+        "b": [
+          {
+            "report": "REPORT-02",
+            "interpretation": "TEXT-A",
+            "author": "SYNTH-READER-A",
+            "rule": "REPORTING-A/1"
+          },
+          {
+            "report": "REPORT-02",
+            "interpretation": "TEXT-B",
+            "author": "SYNTH-READER-B",
+            "rule": "REPORTING-B/1"
+          }
+        ]
+      },
+      "fixed": {
+        "instrument_file": "FILE-02",
+        "instrument_bytes_utf8": "SYNTHETIC-INSTRUMENT-02",
+        "instrument_version": "SYNTH-INSTRUMENT/1",
+        "purpose": "mismo fichero; procedencias de derivación e interpretación distintas, sin calcular fenotipo"
+      },
+      "operations": [
+        {
+          "id": "Q02-configuracion",
+          "axis": "a",
+          "paths": [
+            "a.panel",
+            "a.configuration",
+            "a.controls",
+            "a.derived_observation",
+            "a.derivation"
+          ],
+          "expected": [
+            [
+              "PANEL-A/1",
+              "CFG-A/1",
+              [
+                "CTRL-A/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-A/1"
+            ],
+            [
+              "PANEL-B/1",
+              "CFG-B/1",
+              [
+                "CTRL-B/1"
+              ],
+              "DERIVED-02",
+              "DERIVE-B/1"
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q02-informe",
+          "axis": "b",
+          "paths": [
+            "b.report",
+            "b.interpretation",
+            "b.author",
+            "b.rule"
+          ],
+          "expected": [
+            [
+              "REPORT-02",
+              "TEXT-A",
+              "SYNTH-READER-A",
+              "REPORTING-A/1"
+            ],
+            [
+              "REPORT-02",
+              "TEXT-B",
+              "SYNTH-READER-B",
+              "REPORTING-B/1"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q02-muestra",
+          "axis": "context",
+          "paths": [
+            "context.sample"
+          ],
+          "expected": [
+            [
+              "SAMPLE-02-A"
+            ],
+            [
+              "SAMPLE-02-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    },
+    {
+      "id": "IF-IMM-03",
+      "name": "Médula ósea",
+      "axes": {
+        "context": [
+          {
+            "sample": "SAMPLE-03-A"
+          },
+          {
+            "sample": "SAMPLE-03-B"
+          }
+        ],
+        "a": [
+          {
+            "report": "REPORT-03",
+            "interpretation": "TEXT-A",
+            "author": "SYNTH-READER-A"
+          },
+          {
+            "report": "REPORT-03",
+            "interpretation": "TEXT-B",
+            "author": "SYNTH-READER-B"
+          }
+        ],
+        "b": [
+          {
+            "site": "SITE-A",
+            "procedure": "PROC-A/1",
+            "processing": "PROCESS-A/1"
+          },
+          {
+            "site": "SITE-B",
+            "procedure": "PROC-B/1",
+            "processing": "PROCESS-B/1"
+          }
+        ]
+      },
+      "fixed": {
+        "annex": "ANNEX-03",
+        "image": "IMAGE-03",
+        "image_bytes_utf8": "SYNTHETIC-IMAGE-03",
+        "purpose": "anexo artificial idéntico con informes distintos; no formato DICOM ni interpretación de imagen"
+      },
+      "operations": [
+        {
+          "id": "Q03-informe",
+          "axis": "a",
+          "paths": [
+            "a.report",
+            "a.interpretation",
+            "a.author"
+          ],
+          "expected": [
+            [
+              "REPORT-03",
+              "TEXT-A",
+              "SYNTH-READER-A"
+            ],
+            [
+              "REPORT-03",
+              "TEXT-B",
+              "SYNTH-READER-B"
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q03-procedimiento",
+          "axis": "b",
+          "paths": [
+            "b.site",
+            "b.procedure",
+            "b.processing"
+          ],
+          "expected": [
+            [
+              "SITE-A",
+              "PROC-A/1",
+              "PROCESS-A/1"
+            ],
+            [
+              "SITE-B",
+              "PROC-B/1",
+              "PROCESS-B/1"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q03-muestra",
+          "axis": "context",
+          "paths": [
+            "context.sample"
+          ],
+          "expected": [
+            [
+              "SAMPLE-03-A"
+            ],
+            [
+              "SAMPLE-03-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    },
+    {
+      "id": "IF-IMM-04",
+      "name": "Terapia oncológica",
+      "axes": {
+        "context": [
+          {
+            "order": "ORDER-04-A"
+          },
+          {
+            "order": "ORDER-04-B"
+          }
+        ],
+        "a": [
+          {
+            "administration": "ADMIN-04",
+            "record_state": "recorded",
+            "result": "RECORDED-EFFECT-A"
+          },
+          {
+            "administration": null,
+            "record_state": "not-recorded",
+            "result": null
+          }
+        ],
+        "b": [
+          {
+            "change": "CHANGE-A",
+            "state": "unchanged",
+            "reason": "REASON-A"
+          },
+          {
+            "change": "CHANGE-B",
+            "state": "suspended",
+            "reason": "REASON-B"
+          }
+        ]
+      },
+      "fixed": {
+        "intention": "INTENT-04",
+        "regimen": "REGIMEN-04/1",
+        "source": "SYNTH-ORDER-AND-RECORD/1",
+        "purpose": "registro puede ser previo a la suspensión; ausencia de registro no prueba ausencia de administración"
+      },
+      "operations": [
+        {
+          "id": "Q04-constancia",
+          "axis": "a",
+          "paths": [
+            "a.administration",
+            "a.record_state",
+            "a.result"
+          ],
+          "expected": [
+            [
+              "ADMIN-04",
+              "recorded",
+              "RECORDED-EFFECT-A"
+            ],
+            [
+              null,
+              "not-recorded",
+              null
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q04-cambio",
+          "axis": "b",
+          "paths": [
+            "b.change",
+            "b.state",
+            "b.reason"
+          ],
+          "expected": [
+            [
+              "CHANGE-A",
+              "unchanged",
+              "REASON-A"
+            ],
+            [
+              "CHANGE-B",
+              "suspended",
+              "REASON-B"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q04-orden",
+          "axis": "context",
+          "paths": [
+            "context.order"
+          ],
+          "expected": [
+            [
+              "ORDER-04-A"
+            ],
+            [
+              "ORDER-04-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    },
+    {
+      "id": "IF-IMM-05",
+      "name": "Ingreso y hospital de día",
+      "axes": {
+        "context": [
+          {
+            "location": "LOCATION-05-A"
+          },
+          {
+            "location": "LOCATION-05-B"
+          }
+        ],
+        "a": [
+          {
+            "episode": "EPISODE-05-A",
+            "encounter": "ENCOUNTER-05-A",
+            "start": "T1",
+            "end": "T2"
+          },
+          {
+            "episode": "EPISODE-05-B",
+            "encounter": "ENCOUNTER-05-B",
+            "start": "T3",
+            "end": "T4"
+          }
+        ],
+        "b": [
+          {
+            "service": "SERVICE-A",
+            "organization": "ORG-A/1",
+            "modality": "inpatient"
+          },
+          {
+            "service": "SERVICE-B",
+            "organization": "ORG-B/1",
+            "modality": "day-hospital"
+          }
+        ]
+      },
+      "fixed": {
+        "source": "SYNTH-ENCOUNTER/1",
+        "time_order": [
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ],
+        "purpose": "etiquetas temporales declaradas; no reloj vivo ni equivalencia ubicación-episodio"
+      },
+      "operations": [
+        {
+          "id": "Q05-episodio",
+          "axis": "a",
+          "paths": [
+            "a.episode",
+            "a.encounter",
+            "a.start",
+            "a.end"
+          ],
+          "expected": [
+            [
+              "EPISODE-05-A",
+              "ENCOUNTER-05-A",
+              "T1",
+              "T2"
+            ],
+            [
+              "EPISODE-05-B",
+              "ENCOUNTER-05-B",
+              "T3",
+              "T4"
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q05-organizacion",
+          "axis": "b",
+          "paths": [
+            "b.service",
+            "b.organization",
+            "b.modality"
+          ],
+          "expected": [
+            [
+              "SERVICE-A",
+              "ORG-A/1",
+              "inpatient"
+            ],
+            [
+              "SERVICE-B",
+              "ORG-B/1",
+              "day-hospital"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q05-ubicacion",
+          "axis": "context",
+          "paths": [
+            "context.location"
+          ],
+          "expected": [
+            [
+              "LOCATION-05-A"
+            ],
+            [
+              "LOCATION-05-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    },
+    {
+      "id": "IF-IMM-06",
+      "name": "Historia longitudinal",
+      "axes": {
+        "context": [
+          {
+            "dossier": "DOSSIER-06-A"
+          },
+          {
+            "dossier": "DOSSIER-06-B"
+          }
+        ],
+        "a": [
+          {
+            "causal_order": [
+              "EVENT-1",
+              "EVENT-2"
+            ],
+            "states": [
+              "OLD-A",
+              "CURRENT"
+            ],
+            "amendment": {
+              "id": "EVENT-2",
+              "replaces": "EVENT-1"
+            },
+            "provenance": [
+              "SOURCE-1",
+              "SOURCE-2"
+            ],
+            "episodes": [
+              "EPISODE-1",
+              "EPISODE-2"
+            ]
+          },
+          {
+            "causal_order": [
+              "EVENT-1",
+              "EVENT-2"
+            ],
+            "states": [
+              "OLD-B",
+              "CURRENT"
+            ],
+            "amendment": {
+              "id": "EVENT-2",
+              "replaces": "EVENT-1"
+            },
+            "provenance": [
+              "SOURCE-3",
+              "SOURCE-2"
+            ],
+            "episodes": [
+              "EPISODE-3",
+              "EPISODE-2"
+            ]
+          }
+        ],
+        "b": [
+          {
+            "valid_from": "T1",
+            "valid_to": "T2",
+            "basis": "VALIDITY-A/1"
+          },
+          {
+            "valid_from": "T3",
+            "valid_to": "T4",
+            "basis": "VALIDITY-B/1"
+          }
+        ]
+      },
+      "fixed": {
+        "received_order": [
+          "EVENT-2",
+          "EVENT-1"
+        ],
+        "current_state": "CURRENT",
+        "time_order": [
+          "T1",
+          "T2",
+          "T3",
+          "T4"
+        ],
+        "purpose": "orden de recepción separado del causal; vista vigente no reemplaza historia"
+      },
+      "operations": [
+        {
+          "id": "Q06-historia",
+          "axis": "a",
+          "paths": [
+            "a.causal_order",
+            "a.states",
+            "a.amendment",
+            "a.provenance",
+            "a.episodes"
+          ],
+          "expected": [
+            [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-A",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-1",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-1",
+                "EPISODE-2"
+              ]
+            ],
+            [
+              [
+                "EVENT-1",
+                "EVENT-2"
+              ],
+              [
+                "OLD-B",
+                "CURRENT"
+              ],
+              {
+                "id": "EVENT-2",
+                "replaces": "EVENT-1"
+              },
+              [
+                "SOURCE-3",
+                "SOURCE-2"
+              ],
+              [
+                "EPISODE-3",
+                "EPISODE-2"
+              ]
+            ]
+          ],
+          "frontier": 0
+        },
+        {
+          "id": "Q06-vigencia",
+          "axis": "b",
+          "paths": [
+            "b.valid_from",
+            "b.valid_to",
+            "b.basis"
+          ],
+          "expected": [
+            [
+              "T1",
+              "T2",
+              "VALIDITY-A/1"
+            ],
+            [
+              "T3",
+              "T4",
+              "VALIDITY-B/1"
+            ]
+          ],
+          "frontier": 1
+        },
+        {
+          "id": "Q06-expediente",
+          "axis": "context",
+          "paths": [
+            "context.dossier"
+          ],
+          "expected": [
+            [
+              "DOSSIER-06-A"
+            ],
+            [
+              "DOSSIER-06-B"
+            ]
+          ],
+          "frontier": 2
+        }
+      ]
+    }
+  ]
+}

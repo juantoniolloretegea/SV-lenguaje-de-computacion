@@ -51,6 +51,8 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 
 **Recepción RETP-089:** [F-SV/0.1-candidata, §§2–5](../arquitectura/CONTRATO_CANDIDATO_F_DOMINIO_REPRESENTACION_Y_SUFIENCIA_POR_OPERACION_2026_09_07.md) fija el mínimo relativo a la operación, identidad `(C,j)`, asignación explícita y régimen de alias/compartición o capturas alternativas sin elección implícita. Su representación completa sigue pendiente; no se impone una cardinalidad ni unicidad numérica universal. F-IF recibe las pruebas de suficiencia y pérdida; K2 conserva identidad/versionado transversal, sin diferir hasta allí el bloqueo de operaciones dependientes. La transducción mantiene la exclusión K1-T. **Estado: recibida contractualmente como candidata, no cerrada ni materializada.**
 
+**Recepción RETP-090:** [F-IF/1, §5](../arquitectura/F_IF_SEIS_TESTIGOS_SINTETICOS_Y_RELEVO_G_H_2026_09_07.md) localiza pérdidas concretas de interfaz y la ausencia de cadena/certificado comprobables en las operaciones actuales de SV. G/H recibe su aplicabilidad a OP-IMM-001. La suficiencia externa de consultas documentales no resuelve instancias ni ligaduras clínicas; ninguna de las 18 consultas se ofrece por ello en el núcleo. DFL-005 permanece abierta y bloqueante para operaciones dependientes.
+
 ### DFL-006 — Resultados y datos sin productor o ejecución material
 
 - **Descripción:** `Frame.criticalities` admite referencias a `CriticalityResult`, pero la superficie vigente no dispone de un operador que produzca ese resultado. Del mismo modo, `GateResult.output` y determinadas consecuencias de `SupervisionResult` pertenecen a una fase de ejecución todavía no materializada.
