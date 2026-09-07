@@ -28,8 +28,8 @@ fn reject(result: Result<IrProgram, CompileError>, expected: &str) {
 
 fn horizon(profile: SourceProfile, reference: &str) -> String {
     match profile {
-        SourceProfile::En => format!("horizon H {{ architecture: {reference}; events: [B,A,B]; }}"),
-        SourceProfile::Es => format!("horizonte H {{ arquitectura: {reference}; sucesos: [B,A,B]; }}"),
+        SourceProfile::En => format!("horizon H {{ architecture: {reference}; events: [B,A]; }}"),
+        SourceProfile::Es => format!("horizonte H {{ arquitectura: {reference}; sucesos: [B,A]; }}"),
     }
 }
 
@@ -60,7 +60,7 @@ fn n0_04_forward_reference_preserves_graph_and_events() {
             match actual.kind() {
                 IrObjectKind::Horizon { architecture, events } => {
                     assert_eq!(architecture, "G");
-                    assert_eq!(events, &["B", "A", "B"]);
+                    assert_eq!(events, &["B", "A"]);
                 }
                 other => panic!("objeto inesperado: {other:?}"),
             }
@@ -96,7 +96,7 @@ fn n0_04_mixed_assembly_resolves_or_rejects_in_both_orders() {
                 else {
                     let json = equivalence_json(&result.unwrap());
                     assert!(json.contains("\"architecture\":\"G\""));
-                    assert!(json.contains("\"events\":[\"B\",\"A\",\"B\"]"));
+                    assert!(json.contains("\"events\":[\"B\",\"A\"]"));
                 }
             }
         }

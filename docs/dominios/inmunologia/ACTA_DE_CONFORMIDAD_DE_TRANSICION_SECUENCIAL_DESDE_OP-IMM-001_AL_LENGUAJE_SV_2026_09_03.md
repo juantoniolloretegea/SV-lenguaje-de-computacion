@@ -453,3 +453,12 @@ La [deuda DFL-009](../../calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUA
 **RETP-083.** La [radiografía §15](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) recibe el juicio de unicidad J-B0, ya exigido por `BridgeSet`/J1.2. Rechaza posiciones repetidas sin deduplicar ni ordenar; conserva vacío, rango y los 14 esperados anteriores. Se exige conformidad 92/92 y paridad de los 18 testigos ES/EN/ensamblaje en nativo, WASI y navegador antes de promover la candidata. La retirada Python y DFL-009 permanecen en el commit y registro RETP-082 separados.
 
 **Punto vigente después de la promoción:** fila 3, K1, decisión sobre multiplicidad de `Horizon.events`. Continúan luego las obligaciones de `Domain`, concordancia diagnóstica y K1-T en el orden de §14; DFL-010 debe resolverse o delimitarse expresamente antes de F. No se da por habilitada la fila 4. La fila 9 recibe la evaluación tecnológica diferida tras I/J según §23.
+
+<a id="relevo-horizon-events-20260907"></a>
+## 25. Tipos del horizonte y relevo al mínimo de Domain · 07/09/2026
+
+**RETP-084; entrada main 16232b6, PR #69 integrada.** La [radiografía §16](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#horizon-events-20260907) fija J-H1 por cotejo del Documento III y la IR. El horizonte declara tipos: repetir una identidad no registra otra instancia. Se rechaza la repetición sin normalizar; se conservan orden, referencias y recurrencia entre horizontes/datos distintos. El testigo histórico N0-04 afectado queda identificado y sustituido explícitamente.
+
+Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y navegador antes de promover la candidata; se conservan corpus previo, esperados y bancos anteriores. No se cambia el contrato de TransitionData ni se acredita una nueva plataforma.
+
+**Punto vigente después de la promoción:** fila 3/K1, mínimo estructural de `Domain.parameters` y multiplicidad de `parameter_id` (§14). Continúan concordancia diagnóstica, DFL-010 y condiciones de K1-T; F permanece pendiente. La fila 9 conserva la recepción de DFL-009 tras I/J.

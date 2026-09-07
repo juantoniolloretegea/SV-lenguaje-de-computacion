@@ -433,3 +433,37 @@ La sonda SON-N0-12 se convierte en juicio J-B0, [IR 0.3 §6.5](../../IR_CANONICA
 **Promoción:** cierre limitado efectivo tras verificar los cuatro flujos sobre la candidata exacta e integrarla. Los identificadores de los flujos se mantienen; los artefactos incluyen salidas y huellas de los ejecutables utilizados. La PR identifica la cabeza, su base y los resultados efectivos. Generar un manifiesto local no acredita ejecución WASM.
 
 **Relevo:** sigue K1 por la decisión sobre multiplicidad de `Horizon.events`, después el mínimo de `Domain` y las condiciones de K1-T conforme a §7 y transición §14. DFL-010 conserva la pérdida de campos opcionales antes de F. DFL-009 se recibe en el retorno del primer universo CYB (fila 9). N0-05/N0-07 conservan K2. No se abre F ni se cierra núcleo, álgebra o R2/R3/R4.
+
+<a id="horizon-events-20260907"></a>
+## 16. Dictamen de multiplicidad de Horizon.events y cierre J-H1 · 07/09/2026
+
+**RETP-2026-084. Entrada:** main `16232b63438a6bc7ef7a8a6d9efc202d89c86679`, PR #69 integrada. Se reciben completos los Pilares RETP-073, el acta de perfiles RETP-075, esta radiografía y la transición con relevo §24. Se cotejan IR v0.2/v0.3, gramática 0.2 con la producción heredada de §5.5, los juicios y consumidores actuales. Continúa la fila 3/K1, punto 6 de §7.
+
+### 16.1. Cotejo y decisión de representación
+
+| Fuente | Alcance que fundamenta la decisión |
+|---|---|
+| [Documento III, release 1](https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iii-horizonte-de-sucesos-y-reevaluacion-discreta/release/1), DOI 10.21428/39829d0b.bb86c65d; §§3.2–3.5, 4.1 y 9 | ℋ(𝒜) enumera tipos relevantes declarados desde el dominio. Las instancias pertenecen al dato de transición. Una colección de episodios observados no define el horizonte. Su axiomática general permanece abierta. |
+| [IR v0.2 en el corte recibido](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/16232b63438a6bc7ef7a8a6d9efc202d89c86679/IR_CANONICA_BIENFORMACION_SV_v0_2.md), nivel 3 y J4.3 | `Horizon.events` contiene EventType; `TransitionData.events` contiene pares EventType/Tri. J4.3 comprueba pertenencia al horizonte. |
+| Gramática 0.2 §1 y producción heredada `horizon_decl`, §5.5 de 0.1 | La superficie usa lista de identificadores; esa elección sintáctica no decide por sí sola una semántica de episodios ni su multiplicidad. |
+| `wellformed.rs`, consumidor TransitionData | La comprobación de pertenencia usa un conjunto de nombres del horizonte. Es coherente con la distinción documental, pero el comportamiento del código no es su fundamento normativo. |
+
+**Dictamen:** la multiplicidad de un nombre dentro de `Horizon.events` no representa ocurrencias diferentes. J-H1 exige una sola declaración por identidad y horizonte. Se rechaza una repetición sin deduplicar ni ordenar. Tipos con nombres distintos no se fusionan por parecido; el dominio conserva su constitución. Se resuelve SON-N0-13 por cotejo propio, sin trasladar por analogía el dictamen de BridgeSet.
+
+No se altera `TransitionData` ni se regula por este acto la multiplicidad de pares del mismo tipo dentro de un único dato. La recurrencia en datos distintos se conserva; no acredita ejecución material del operador inducido ni causalidad completa de una trayectoria. El rechazo previo de horizonte vacío permanece y no se presenta como teorema deducido de su carácter de conjunto.
+
+### 16.2. Realización, testigos y conservación
+
+J-H1 se añade después de los controles existentes, incluido el recorrido completo de referencias J-H0. El núcleo rechaza antes de admitir IR y diagnostica el horizonte y el tipo repetido. Se preservan la precedencia de referencia ausente/tipo incorrecto, vacío y pertenencia de TransitionData. No cambia parser, emisor, versiones, esquema ni API productiva. El compilador Python continúa retirado.
+
+El nuevo negativo `horizon_tipo_suceso_repetido.svp` contiene `[B,A,B]`: la base lo admitía y la candidata lo rechaza. El corpus es **93 = 14 válidos + 79 inválidos**; los 92 casos anteriores conservan fuentes, retornos y salidas literales, y los 14 esperados permanecen intactos.
+
+Tres pruebas de integración comprueban repetición, identidad local/orden y precedencia diagnóstica. El banco `tests/k1_horizon_cases.py` contiene **20 testigos**: ES/EN, orden, repetición no adyacente, vacío, nombres distintos, dos horizontes que comparten tipos, dos datos de transición que instancian el mismo tipo y ensamblaje mixto en ambos sentidos y órdenes. Sus expectativas de campos y diagnósticos se prescriben antes de comparar destinos. Reutiliza el transporte de testigos y `assembly_probe`, sin crear otra implementación de SV.
+
+El control anterior de N0-04 conservaba `[B,A,B]` sin fijar su estatuto. En `horizon_architecture.rs` se cambia explícitamente a `[B,A]` para seguir comprobando orden y referencia; el historial conserva el original y la nueva prueba recibe su rechazo. No se presenta esa modificación como conservación literal de aquel testigo ni se reescribe su acta histórica.
+
+Se exigen los mismos 20 testigos en **nativo, WASI y navegador real**, junto con los 18 de BridgeSet, las cinco sondas de sensibilidad, el corpus y las regresiones previas. Los cuatro trabajos CI conservan identidad. PT01/PT02/PT04/PT13/PT14 reciben fuentes, perfiles, diagnósticos, comandos y artefactos de la candidata exacta. Los registros 016/018 del laboratorio mantienen su alcance histórico; no se promueve otra plataforma.
+
+**Promoción:** cierre limitado efectivo tras los cuatro flujos correctos e integración. El expediente de la PR asociada a `k1-horizon-events-20260907` identifica cabeza, base y árbol probado; generar un manifiesto no acredita ejecución WASM.
+
+**Relevo:** sigue K1 por el mínimo estructural de `Domain.parameters` y la multiplicidad de `parameter_id`, según §7 y transición §14. DFL-010, concordancia diagnóstica y K1-T conservan sus obligaciones. F permanece pendiente; DFL-009 se reevalúa en la fila 9, al retornar del primer universo CYB. No se consolidan núcleo, dominio, álgebra ni R2/R3/R4.

@@ -1,0 +1,8 @@
+-- J-H1: el horizonte declara tipos; repetir B no declara otra instancia.
+codomain K = { A };
+output_semantics S { A -> "a"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec CC { cell: C; bridges: [3]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CC]; edges: []; relation: R; regime: Simple; }
+horizon H { architecture: G; events: [B,A,B]; }
