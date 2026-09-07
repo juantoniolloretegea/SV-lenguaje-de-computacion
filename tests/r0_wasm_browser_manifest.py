@@ -18,6 +18,7 @@ from run_oracle_sensitivity import sources as sensitivity_sources, verify as ver
 from k1_bridge_cases import prepare as prepare_bridges
 from k1_horizon_cases import prepare as prepare_horizons
 from k1_domain_cases import prepare as prepare_domains
+from k1_optional_cases import prepare as prepare_optional
 
 from oracle_support import (run, assert_success, assert_json_equal,
                             assert_rust_rejection,
@@ -116,6 +117,7 @@ def main() -> int:
     bridge_cases = prepare_bridges(args.native_probe, args.output.parent / 'bridge-set')
     horizon_cases = prepare_horizons(args.native_probe, args.output.parent / 'horizon-types')
     domain_cases = prepare_domains(args.native_probe, args.output.parent / 'domain-names')
+    optional_cases = prepare_optional(args.native_probe, args.output.parent / 'optional-fields')
     result = {
         "schema": "sv-r0-browser-parity-manifest-v3",
         "source_head": args.source_head,
@@ -130,6 +132,7 @@ def main() -> int:
         "bridge_cases": bridge_cases,
         "horizon_cases": horizon_cases,
         "domain_cases": domain_cases,
+        "optional_cases": optional_cases,
         "failures": failures,
     }
 

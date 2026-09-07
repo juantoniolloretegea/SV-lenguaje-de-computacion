@@ -1,0 +1,1 @@
+pattern Probe { kind: DeclaredPattern; arity: 2; constraints: [A]; constraints: [B]; }

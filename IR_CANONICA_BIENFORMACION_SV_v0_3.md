@@ -426,12 +426,12 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La conformidad vigente de SV dispone de una batería de 94 casos:
+La conformidad vigente de SV dispone de una batería de 100 casos:
 
 ```text
 14 válidos
-80 inválidos
-94 total
+86 inválidos
+100 total
 ```
 
 Los casos válidos comparan directamente la proyección nativa con los esperados comprometidos mediante el observador de pares JSON ordenados. Los inválidos exigen rechazo controlado y el texto esperado para su obligación; no se afirma que el destino emita todos los códigos del catálogo (DFL-001, RETP-082). La batería incluye contraejemplos específicos para:
@@ -441,6 +441,7 @@ Los casos válidos comparan directamente la proyección nativa con los esperados
 - `CoupledSpec.bridges` con una posición repetida;
 - `Horizon.events` con un tipo de suceso repetido;
 - `Domain.parameters` con un nombre repetido;
+- campos opcionales repetidos o invertidos en `SemanticRelation`/`Pattern` (Gramática v0.2 §14; RETP-087), rechazados antes de construir IR;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
 - horizonte con arquitectura inexistente o de tipo incorrecto y agente con dos arquitecturas reales distintas;

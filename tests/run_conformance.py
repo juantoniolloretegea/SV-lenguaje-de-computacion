@@ -14,6 +14,12 @@ from oracle_support import (run, assert_success, assert_json_equal, assert_bytes
                             assert_rust_rejection,
                             check_invalid_corpus)
 EXPECTED_OBLIGATIONS = {
+    "semantic_relation_table_repetida.svp": "E001",
+    "semantic_relation_constraints_repetida.svp": "E001",
+    "pattern_arity_repetida.svp": "E001",
+    "pattern_constraints_repetida.svp": "E001",
+    "semantic_relation_campos_invertidos.svp": "E001",
+    "pattern_campos_invertidos.svp": "E001",
     "domain_parametro_nominal_repetido.svp": "J-D0/Domain.parameters",
     "horizon_tipo_suceso_repetido.svp": "J-H1/Horizon.events",
     "coupledspec_puente_repetido.svp": "J1.2/BridgeSet",

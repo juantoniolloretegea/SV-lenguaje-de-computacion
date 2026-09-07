@@ -226,6 +226,17 @@ async function main() {
       } else { domainOk++; }
     }
   }
+  let optionalOk = 0;
+  if (!manifest.optional_cases || manifest.optional_cases.length !== 64) {
+    failures.push("banco Campos opcionales ausente o incompleto");
+  } else {
+    for (const probe of manifest.optional_cases) {
+      const result = compileUnits(exports, probe.units);
+      if (result.error !== probe.error || result.text !== probe.expected_payload) {
+        failures.push(`Campos opcionales ${probe.name}: divergencia frente al nativo comprobado`);
+      } else { optionalOk++; }
+    }
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
@@ -237,6 +248,7 @@ async function main() {
     bridge_ok: bridgeOk,
     horizon_ok: horizonOk,
     domain_ok: domainOk,
+    optional_ok: optionalOk,
     failures,
   };
 

@@ -1,6 +1,6 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
-> **Relevo vigente de la fila 3 · 07/09/2026:** [Domain, §26](#domain-relevo-20260907), RETP-086. Tras su promoción siguen concordancia diagnóstica/deuda/corpus, DFL-010 y condiciones de K1-T. F recibe expresamente las ligaduras de instancia aún no representadas. Los relevos anteriores conservan su fecha y alcance.
+> **Relevo vigente de la fila 3 · 07/09/2026:** [campos opcionales y concordancia, §27](#campos-opcionales-relevo-20260907), RETP-087. Tras su promoción sigue el cierre o delimitación expresa de K1-T. F recibe las ligaduras de instancia aún no representadas cuando se cumpla su puerta. Los relevos anteriores conservan su fecha y alcance.
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
@@ -473,3 +473,13 @@ Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y
 **Puerta de promoción:** 94 casos de conformidad, tres pruebas de integración y 24 testigos ES/EN/ensamblaje; cuatro flujos correctos sobre la candidata exacta, con ejecución nativa, WASI y navegador. Diez testigos preservan representaciones con ligaduras pendientes; su aceptación no acredita la constitución completa del dominio. PT01/PT02/PT04/PT13/PT14 conservan identidad, diagnóstico, evidencia y entorno. No se amplía el laboratorio histórico.
 
 **Relevo tras promoción:** continúa fila 3/K1 por concordancia diagnóstica/deuda/corpus, DFL-010 y condiciones de K1-T. J-D0 no cierra N0-06 entero: el mínimo de `parameters`, la correspondencia nombre–instancia `(C,j)`–cadena y la multiplicidad numérica quedan en DFL-005, con recepción obligatoria en F y condición bloqueante para operaciones que las requieran. No se deducen correspondencias de posiciones o cardinalidades ni se difiere su suficiencia únicamente a K2. F permanece pendiente de la salida K1/K1-T. DFL-009 conserva la fila 9, retorno del primer universo CYB, para valorar servicio nativo y Cloudflare/Workers u otros. El acceso editorial queda aplazado por decisión humana.
+
+
+<a id="campos-opcionales-relevo-20260907"></a>
+## 27. Campos opcionales y relevo a K1-T · 07/09/2026
+
+**RETP-087; entrada:** main `000a7d2`, PR #72. La [radiografía §18](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) recibe los seis campos opcionales gramaticales. Corrige la sobrescritura y el orden de campos de relación/patrón, conservando las guardas de metadata/transition. No altera listas, emisores ni versiones. La concordancia distingue los 51 códigos declarados del catálogo y la emisión efectiva; la matriz de agosto y su CSV conservan su estatuto histórico.
+
+**Puerta de promoción:** 100 casos de conformidad, dos pruebas de integración y 64 testigos ES/EN/ensamblaje; los 94 observables y 14 esperados anteriores se conservan. Se exigen los cuatro flujos sobre la candidata exacta, con nativo, WASI y navegador. PT01/PT02/PT04/PT13/PT14 y los bancos previos conservan su función; el laboratorio histórico no recibe garantías retrospectivas.
+
+**Relevo:** DFL-010 cerrada en ese alcance al integrar la candidata verificada; continúa fila 3/K1 por **K1-T, cierre o delimitación expresa conforme a §14**. No se abre F ni se declara completado K1. DFL-001 conserva su deuda de concordancia y representación diagnóstica; DFL-005 entra obligatoriamente en F para las operaciones dependientes de ligaduras. DFL-009 mantiene fila 9 tras I/J; acceso editorial aplazado por decisión humana.

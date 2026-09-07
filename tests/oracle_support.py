@@ -112,6 +112,12 @@ def diagnostic_text(raw: bytes) -> str:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan automáticamente a los códigos del catálogo ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "semantic_relation_table_repetida": 'Frontend(UnexpectedToken("SemanticRelation Probe: campo opcional repetido: table"))',
+    "semantic_relation_constraints_repetida": 'Frontend(UnexpectedToken("SemanticRelation Probe: campo opcional repetido: constraints"))',
+    "pattern_arity_repetida": 'Frontend(UnexpectedToken("Pattern Probe: campo opcional repetido: arity"))',
+    "pattern_constraints_repetida": 'Frontend(UnexpectedToken("Pattern Probe: campo opcional repetido: constraints"))',
+    "semantic_relation_campos_invertidos": 'Frontend(UnexpectedToken("SemanticRelation Probe: campo opcional fuera de orden: table"))',
+    "pattern_campos_invertidos": 'Frontend(UnexpectedToken("Pattern Probe: campo opcional fuera de orden: arity"))',
     "domain_parametro_nominal_repetido": "Domain D: parámetro nominal repetido: B",
     "horizon_tipo_suceso_repetido": "Horizon H: tipo de suceso repetido: B",
     "coupledspec_puente_repetido": "CoupledSpec CC: posición puente repetida: 3",

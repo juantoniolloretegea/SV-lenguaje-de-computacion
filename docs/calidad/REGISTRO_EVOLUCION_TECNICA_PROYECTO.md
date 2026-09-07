@@ -361,6 +361,13 @@ La continuidad documental se organiza así:
 - **Límite adversarial:** el numeral `parameter_id` no identifica por sí solo la instancia `(C,j)`. No se inventan ligaduras, cardinalidades ni prohibiciones de vacío o multiplicidad; diez testigos conservan esas representaciones sin acreditarlas como dominio completo. DFL-005 recibe la insuficiencia con puerta obligatoria en F para operaciones que dependan de ella. No se reactiva fallo→U del antecedente IV.
 - **Decisión y relevo:** cierre nominal efectivo tras integración verificada. [Transición §26](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#domain-relevo-20260907): concordancia diagnóstica/deuda/corpus, DFL-010 y K1-T antes de F. PT01/PT02/PT04/PT13/PT14; mismas versiones y plataformas. DFL-009 conserva retorno CYB; acceso editorial aplazado. No se cierra N0-06 entero, K1, dominio ni núcleo.
 
+### RETP-2026-087 — Campos opcionales sin pérdida y concordancia vigente
+
+- **Entrada y fundamento:** main `000a7d2`, PR #72; Pilares, perfiles y transición §26. Gramática v0.1 §§5.4–5.5 heredada por v0.2 §1; precisión v0.2 §14. [N0 §18](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) concentra inventario, cambio y evidencia.
+- **Cambio:** rechazo de repetición e inversión de campos opcionales en relación/patrón antes de sobrescribir; guardas de metadata/transition conservadas. Mismas listas, estructuras, emisores y versiones. Catálogo de 51 códigos declarado y emisión textual diferenciados; matriz/CSV de agosto conservados como historia, sin declarar completa DFL-001 ni cobertura E011 por su testigo sintáctico.
+- **Evidencia:** 100/100, dos pruebas de integración, 64 testigos ES/EN/ensamblaje; 94 observables previos y 14 esperados idénticos. Los seis nuevos negativos antes se admitían. Cuatro flujos exigidos sobre candidata exacta con nativo/WASI/navegador y bancos previos. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación del laboratorio histórico.
+- **Decisión y relevo:** DFL-010 cerrada en el inventario tras integración verificada. [Transición §27](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#campos-opcionales-relevo-20260907) conserva fila 3: sigue cierre o delimitación expresa K1-T. F aún pendiente; DFL-005 obligatoria allí para ligaduras, DFL-009 en retorno CYB y acceso editorial aplazado.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
