@@ -462,3 +462,5 @@ La [deuda DFL-009](../../calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUA
 Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y navegador antes de promover la candidata; se conservan corpus previo, esperados y bancos anteriores. No se cambia el contrato de TransitionData ni se acredita una nueva plataforma.
 
 **Punto vigente después de la promoción:** fila 3/K1, mínimo estructural de `Domain.parameters` y multiplicidad de `parameter_id` (§14). Continúan concordancia diagnóstica, DFL-010 y condiciones de K1-T; F permanece pendiente. La fila 9 conserva la recepción de DFL-009 tras I/J.
+
+**Recepción documental RETP-085, 07/09/2026:** el [DOI del Documento III](https://doi.org/10.21428/39829d0b.bb86c65d) sustituye el enlace a release1. La [radiografía §16.3](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#reconciliacion-documento-iii-20260907) conserva el cotejo de la actualización en el repositorio del autor, la corrección notacional y el límite de acceso a la página editorial. El dictamen J-H1 y el relevo K1/Domain se mantienen en ese alcance.

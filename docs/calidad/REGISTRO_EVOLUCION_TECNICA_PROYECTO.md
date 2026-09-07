@@ -347,6 +347,13 @@ La continuidad documental se organiza así:
 - **Evidencia:** 93/93, tres pruebas de integración, 20 testigos ES/EN/ensamblaje; 92 observables previos y 14 esperados conservados. El testigo N0-04 [B,A,B] se sustituye explícitamente por [B,A] para su comprobación de orden, y pasa al nuevo rechazo. Los cuatro flujos exigen nativo/WASI/navegador sobre la candidata exacta.
 - **Estado y relevo:** efectivo tras integración verificada; transición §25 fija K1/Domain.parameters y multiplicidad de parameter_id. DFL-001/005/010 y K1-T conservan alcance; F pendiente. DFL-009 sigue diferida al retorno del primer universo CYB. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación retrospectiva de laboratorio.
 
+### RETP-2026-085 — DOI del Documento III y cotejo de actualización
+
+- **Entrada y objeto:** main `02cd27d`, PR #70; precisión humana sobre la release citada. Se reciben Pilares, perfiles, secuencia §25, Frontera e IR. El [DOI estable](https://doi.org/10.21428/39829d0b.bb86c65d) sustituye cuatro enlaces a release1.
+- **Evidencia y resultado:** [radiografía §16.3](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#reconciliacion-documento-iii-20260907); cotejo completo del texto del autor, commits `1afa2ab` y `b8fd329`, con identidades de blob. Nota audiovisual, presentación y notación 𝒯 → 𝒰 del operador inducido; definiciones y límites aplicables se conservan. Frontera §3 recibe la notación corregida.
+- **Límite:** HTTP 403 impidió cotejar directamente la página editorial actual. La conclusión se limita al texto identificado del repositorio del autor; no certifica otra edición ni identidad literal de la página remota. RETP-084 conserva la consulta histórica; no se reescribe su evidencia.
+- **Verificación y relevo:** revisión documental y Conformidad SVP exigida sobre candidata exacta; código, corpus y workflows conservados. J-H1 y la evidencia nativo/WASI/navegador de PR #70 mantienen su alcance. Sigue K1/Domain; F y deudas pendientes conservan sus puertas, incluida DFL-009 en retorno CYB.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
