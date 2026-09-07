@@ -40,7 +40,7 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Perfil léxico | **`svp-grammar-0.2-lex-es-1`** | Repertorio de identificadores; es independiente de los perfiles fuente. |
 | Representación intermedia | **0.3** | IR canónica común, independiente del idioma de fuente. |
 | Pilares de diseño | **RECTOR_DE_DISENO** | El núcleo valida y preserva contratos constituidos; no elige células, tamaños, asignaciones ni cobertura de agentes. |
-| Serializador canónico de referencia | **0.1.0** | JSON determinista de la implementación Python de referencia. |
+| Serializador canónico de referencia | **0.1.0** | Contrato y esperados conservados; emisor Python retirado del camino activo (RETP-082). |
 | Proyección diferencial Rust | **0.1.0** | Observable compartido por Rust nativo y WebAssembly; no sustituye al serializador canónico completo. |
 | Núcleo Rust | **`sv_core`** | Implementación compartida por los destinos nativo y WebAssembly. |
 | Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>. |
@@ -147,9 +147,9 @@ Evidencia principal:
 
 ---
 
-## Referencia Python y varios destinos materiales
+## Realización SV y destinos materiales
 
-Python permanece como referencia diferencial y conserva los oráculos y parte del contrato diagnóstico histórico. Rust constituye la realización soberana compartida por el destino nativo y WebAssembly.
+La realización compartida está en Rust y recibe fuentes SV conforme a la DSL y sus contratos. El compilador Python se ha retirado del camino activo, conservando su historial. Los oráculos comprometidos comprueban directamente las obligaciones del SV y la paridad nativa/WASM; los scripts auxiliares no constituyen otro compilador. Véase la [retirada y conservación de obligaciones](./docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907).
 
 ```text
 fuente .svp

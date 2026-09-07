@@ -70,8 +70,23 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 
 - **Hecho:** `process_file` lee en modo texto con conversión de saltos; una entrada CRLF cambia antes de calcular `source_sha256`. Si CRLF aparece dentro de una cadena, también cambia el literal. Rust conserva los bytes UTF-8 en las sondas correspondientes.
 - **Evidencia:** [reparación de oráculos, §4](./ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md); `tests/run_oracle_sensitivity.py`, casos `crlf` y `string_crlf`, entradas y salidas originales en su paquete de evidencia.
-- **Estado:** abierta y detectada; RETP-078 repara el observador, no la lectura Python.
+- **Estado histórico en RETP-078:** abierta y detectada; se reparó el observador, no la lectura Python. **Sucesión RETP-082:** retirada de la vía afectada; véase §10. No se declara reparado el compilador histórico.
 - **Condición de cierre:** preservar la entrada y el literal sin normalización silenciosa, con controles LF/CRLF, huellas de bytes y paridad pertinente. La fila 3 se reanuda por N0-02; esta deuda no puede darse por cerrada ni incluirse en una afirmación de identidad de fuente general mientras permanezca abierta.
+
+### DFL-009 — Servicio remoto de SV con realización nativa: evaluación diferida
+
+- **Decisión humana de 07/09/2026, RETP-082:** retomar esta opción en la fila 9, al regresar al Lenguaje después del primer universo de Ciberseguridad Inteligente (I/J). No detiene K1 ni F.
+- **Objeto:** valorar la comprobación pública de fuentes SV mediante un ejecutable nativo identificado, sin instalar Rust/Cargo en el equipo del visitante y sin depender de Actions durante el uso del servicio. El Playground actual y los ejecutores de CI conservan su cometido.
+- **Opciones por evaluar entonces:** sede del laboratorio u otro anfitrión, incluido Cloudflare y el aprovechamiento de Workers u otros servicios. Debe identificarse el destino material real; aceptar código escrito en Rust no basta para acreditar ejecución de un binario nativo.
+- **Evidencia reutilizable:** CLI existente, pruebas nativas/WASI/navegador y [registro 018 del laboratorio](https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/243bb59f82b3b859e49394dfddeba82f4bf11848/laboratorio-de-infraestructura-SV/registros/018-COMPARACION_DOTNET_FFI_WASM_2026_09_06.md), con sus realizaciones FFI/WASM y límites. Su corpus histórico no se amplía retrospectivamente.
+- **Salida exigida en el retorno:** necesidad concreta del dominio; entradas limitadas a la DSL; identidad del artefacto; aislamiento, recursos, fallos y coste; distinción entre medición del núcleo, red y espera; ensayo previo pertinente en laboratorio antes de promover una realización (PT01/PT04/PT08/PT09/PT11/PT13/PT14).
+- **Estado:** diferida; no elige proveedor, contrata servicio ni acredita despliegue o garantías materiales.
+
+### DFL-010 — Campos opcionales repetidos antes de la proyección
+
+- **Origen:** revisión adversarial de la retirada Python en el corte a09b9ef. Una declaración de patrón con `arity: 2; arity: 3;` conserva sólo la última ocurrencia; el defecto se observó en ambos frontales.
+- **Obligación:** la gramática 0.2 §5.4 impide repetir campos opcionales. El control de claves JSON posteriores no descubre una pérdida que ya ocurrió durante el análisis de la fuente.
+- **Tratamiento:** pendiente de corrección delimitada en K1 y de comprobación de los demás campos opcionales, antes de F. Retirar Python no corrige el defecto compartido. Conservar un testigo de duplicación y comprobar el rechazo desde SV en los destinos aplicables.
 
 ## 3. Estado de FFL-B
 
@@ -118,3 +133,9 @@ Esta resolución no cierra DFL-001: el texto general E115 se precisa y su identi
 RETP-081 y el [acta N0-04](../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) cierran, tras promoción, la resolución real de `Horizon.architecture` como grafo declarado y bien formado. La identidad de arquitectura del agente queda vinculada por su relación existente al mismo referente. La corrección explícita de un positivo histórico y sus huellas forman parte del expediente.
 
 E006 conserva su contrato efectivo Python y Rust su rechazo textual de referencia tipada; no se amplía el catálogo ni se cierra DFL-001. DFL-008 conserva las dos sondas CRLF. La multiplicidad de sucesos y las relaciones causales de horizonte/frame fuera de J-H0 no se dan por resueltas. Sigue el acto de unicidad de CoupledSpec.bridges bajo BridgeSet; las decisiones de Domain y K1-T conservan el orden de la transición §14.
+
+## 10. Retirada del compilador Python y deuda diferida · 07/09/2026
+
+RETP-082 retira la vía activa afectada por DFL-008. Las cinco fuentes del banco permanecen: identidad y contenido CRLF se exigen directamente a la realización SV; las pérdidas se inyectan sobre los observables para comprobar la sensibilidad del detector. La retirada se acredita mediante esas mismas entradas en nativo, WASI y navegador, en la candidata promovida. El antecedente Python queda accesible en Git, sin recompilarlo como condición de conformidad.
+
+DFL-001 conserva la concordancia diagnóstica y el alcance incompleto del serializador; la eliminación del comparador Python no los resuelve. DFL-009 se recibe en el retorno posterior a I/J. DFL-010 permanece en K1. Ninguna de estas anotaciones abre F ni cierra K1.

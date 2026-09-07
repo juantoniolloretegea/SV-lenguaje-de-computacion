@@ -6,12 +6,10 @@ on:
     paths:
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
-      - "src/**"
-      - "tests/r0_7_equivalence.py"
+      - "tests/run_conformance.py"
       - "tests/oracle_support.py"
       - "tests/test_oracle_support.py"
       - "tests/run_oracle_sensitivity.py"
-      - "tests/run_conformance.py"
       - "tests/conformance/valid/**"
       - "tests/conformance/invalid/**"
       - ".github/workflows/r0-rust.yml"
@@ -40,8 +38,8 @@ jobs:
       - name: Construir ejecutable nativo R0-7
         run: cargo build --manifest-path rust/Cargo.toml -p sv_native
 
-      - name: Ejercer equivalencia R0-7 sobre el mismo SVP
-        run: python tests/r0_7_equivalence.py --rust-bin rust/target/debug/sv-native
+      - name: Verificar conformidad SV frente a esperados comprometidos
+        run: python tests/run_conformance.py --rust-bin rust/target/debug/sv-native
 
       - name: Verificar sensibilidad ante divergencias conocidas
         run: |

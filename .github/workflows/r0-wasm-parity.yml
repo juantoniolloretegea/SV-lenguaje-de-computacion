@@ -1,4 +1,4 @@
-name: R0 WASM paridad de tres vías
+name: R0 WASM paridad nativa y navegador
 
 on:
   pull_request:
@@ -6,12 +6,10 @@ on:
     paths:
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
-      - "src/**"
-      - "tests/r0_7_equivalence.py"
+      - "tests/run_conformance.py"
       - "tests/oracle_support.py"
       - "tests/test_oracle_support.py"
       - "tests/run_oracle_sensitivity.py"
-      - "tests/run_conformance.py"
       - "tests/r0_wasm_parity.py"
       - "tests/run_wasi_sv_native.js"
       - "tests/r0_wasm_browser_manifest.py"
@@ -85,6 +83,14 @@ jobs:
             --source-head "${{ github.event.pull_request.head.sha }}" \
             --base-head "${{ github.event.pull_request.base.sha }}"
 
+      - name: Verificar los cinco testigos conservados en WASI
+        run: |
+          python tests/run_oracle_sensitivity.py \
+            --rust-bin rust/target/release/sv-native \
+            --wasm-bin rust/target/wasm32-wasip1/release/sv-native.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --output-dir artifacts/r0-wasm/sensitivity
+
       - name: Preparar manifiesto de paridad para navegador
         run: |
           mkdir -p artifacts/r0-browser
@@ -141,6 +147,7 @@ jobs:
           grep -q '"valid_ok":14' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"invalid_ok":77' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"closed_domains_ok":6' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"sensitivity_ok":5' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |

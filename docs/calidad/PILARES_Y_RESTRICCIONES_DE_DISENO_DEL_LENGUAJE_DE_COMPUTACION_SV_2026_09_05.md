@@ -220,7 +220,7 @@ Los pilares algebraicos del SV no pueden tener varias realizaciones soberanas di
 La arquitectura deberá conducir a una única custodia ejecutable de la semántica y del álgebra canónicas, derivada de sus fuentes soberanas y compartida por los destinos materiales. Hasta que se decida y materialice esa custodia:
 
 - no se afirmará que `sv_core` ejecuta operaciones que sólo representa o valida;
-- una realización Python externa podrá servir de referencia o laboratorio, pero no adquirir autoridad por antigüedad o disponibilidad;
+- el compilador Python retirado (RETP-082) conserva valor de antecedente histórico; no interviene en la conformidad activa ni adquiere autoridad por antigüedad o disponibilidad;
 - ninguna capa LLM, estadística o probabilística entrará en la cadena de cálculo soberano;
 - cualquier promoción de `T(n)`, `K₃`, compuertas u otra operación al núcleo exigirá correspondencia doctrinal, especificación, oráculos positivos y negativos y paridad entre destinos;
 - la decisión de custodia se adoptará en su puerta propia, sin improvisarla durante una corrección de parser, IR o dominio.
@@ -240,7 +240,7 @@ Para cada restricción que llegue a ser representable deberán existir:
 - diagnóstico de la capa correcta;
 - prueba de que no se sustituye el fallo por `U`;
 - conservación de orden, identidad y procedencia en la proyección;
-- paridad sobre la misma entrada entre referencia autorizada, Rust nativo y WebAssembly cuando dichos destinos sean aplicables;
+- conformidad de fuentes SV contra obligaciones y esperados comprometidos, y paridad sobre la misma entrada entre la realización nativa y WebAssembly aplicable, en cada incremento funcional sobre la candidata que se pretende promover (RETP-082);
 - oráculo de bytes o huella cuando se afirme identidad byte a byte;
 - prueba de que host, adaptador o agente no pueden eludir el juicio del núcleo.
 

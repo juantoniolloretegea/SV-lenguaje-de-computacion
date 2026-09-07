@@ -8,11 +8,10 @@ on:
       - "docs/arquitectura/*R1_6*"
       - "tests/r0_8_baseline.py"
       - "tests/r0_8_scale.py"
-      - "tests/r0_7_equivalence.py"
+      - "tests/run_conformance.py"
       - "tests/oracle_support.py"
       - "tests/test_oracle_support.py"
       - "tests/run_oracle_sensitivity.py"
-      - "tests/run_conformance.py"
       - "tests/conformance/valid/**"
       - ".github/workflows/r0-8-baseline.yml"
 
@@ -52,8 +51,8 @@ jobs:
       - name: Construir SUT nativo en release
         run: cargo build --manifest-path rust/Cargo.toml --release -p sv_native
 
-      - name: Revalidar equivalencia R0-7 con el binario release
-        run: python tests/r0_7_equivalence.py --rust-bin rust/target/release/sv-native
+      - name: Verificar conformidad SV con el binario release
+        run: python tests/run_conformance.py --rust-bin rust/target/release/sv-native
 
       - name: Medir baseline nativa R0-8
         run: |

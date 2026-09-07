@@ -19,9 +19,9 @@ Relación entre la gramática superficial vigente y el parser de referencia del 
 
 ## Estado real actual
 
-- La gramática superficial vigente del lenguaje se publica en la raíz del repositorio: `GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_1.md`.
-- El parser de referencia activo se implementa en `src/svp_parser.py`.
-- La cadena efectiva de trabajo sigue siendo: gramática superficial vigente → parser/lowering de referencia → validator → IR canónica v0.2.
+- La gramática superficial vigente del lenguaje se publica en la raíz del repositorio: `GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md`.
+- El frontend activo se implementa en `rust/sv_core/src/frontend.rs`; recibe los perfiles fuente SVP-ES/SVP-EN.
+- La cadena efectiva de trabajo sigue siendo: gramática superficial vigente → frontend SV → juicios de buena formación → IR canónica v0.3.
 
 ## Función de esta carpeta
 
@@ -38,5 +38,7 @@ Su función queda reservada para futuros artefactos auxiliares de formalización
 Nada de lo que en el futuro se aloje aquí podrá desplazar por sí solo:
 
 - la gramática superficial vigente publicada en la raíz;
-- el parser de referencia activo en `src/`;
+- la realización subordinada a la DSL en `rust/sv_core/`;
 - ni la subordinación a la IR canónica y a la frontera normativa.
+
+RETP-082 retira el compilador Python. El [estado anterior](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/grammar/README.md) conserva la descripción histórica; las versiones vigentes y su autoridad documental constan en el [índice principal](../README.md).

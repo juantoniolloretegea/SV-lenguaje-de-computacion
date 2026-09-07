@@ -157,3 +157,27 @@ El [acta N0-02, RETP-079](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDA
 ## 8. Sucesión N0-03: recorrido JSON y segundo rechazo E115 · 06/09/2026
 
 El [acta N0-03, RETP-080](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) añade el recorrido de lectura/escritura del valor JSON y tres pruebas del observador (19 en total). El banco de sensibilidad v3 conserva exactamente las cinco fuentes de v2: exige un control, dos rechazos E115 y dos divergencias CRLF aún abiertas. La sonda no enlazada se conserva como regresión de cierre; no se retira ni se cuenta como una divergencia pendiente. Los resultados de las secciones anteriores conservan su identidad histórica.
+
+<a id="retirada-python-20260907"></a>
+## 9. Retirada del compilador Python y conservación de obligaciones · 07/09/2026
+
+**RETP-2026-082. Corte de entrada:** `a09b9efef51f88de29048b9b35e7ac085dc0918f`, PR #68 integrada. Se han leído los Pilares RETP-073, el acta de perfiles RETP-075, la secuencia RETP-076 con sus relevos hasta §22 y las actas de oráculos/N0-02/N0-03/N0-04. La decisión humana retira el compilador Python del camino activo; conserva las obligaciones del SV y su trazabilidad en Git.
+
+La autoridad procede de la DSL, la semántica, la IR y sus contratos. La realización en Rust está subordinada a ellos. Ni la coincidencia de dos implementaciones ni un resultado verde del compilador antiguo constituye autorización semántica.
+
+| Elemento | Sucesión verificable |
+|---|---|
+| Once módulos del compilador y su API Python | Retirados de `src/`; último corte íntegro enlazado desde su README. No hay importación activa ni veto del compilador antiguo en CI. |
+| Corpus comprometido: 14 válidos y 77 inválidos | Fuentes y 14 esperados conservados byte por byte en este cambio. `run_conformance.py` compara la salida nativa directamente con los esperados y comprueba cada rechazo controlado. |
+| Obligaciones diagnósticas | Se conserva el inventario histórico de códigos separado de las expectativas textuales efectivas. DFL-001 sigue abierta: el caso histórico denominado E011 aún encuentra un rechazo sintáctico previo; no se cuenta como prueba de ese juicio semántico. |
+| Pruebas del AST/validador Python N0-02/N0-03/N0-04 | Se retiran con el objeto que probaban. Los casos del corpus y las pruebas de integración Rust sobre fuentes SV de esos cierres permanecen. No se atribuyen a Rust propiedades internas del AST Python. Los cuatro casos E006 permanecen en el corpus. |
+| CLI y SEC.0 | Los contratos conservados de admisión, rechazo y los tres testigos SEC.0 recorren `sv-native`. La opción Python `-o` y la API antigua se retiran; no se añaden a la interfaz nativa. |
+| Cinco fuentes del banco de sensibilidad | Mismos bytes de entrada; banco v4: control, identidad CRLF, literal CRLF y dos rechazos E115 N0-02/N0-03. Las pérdidas inyectadas deben ser detectadas por el observador; no son una nueva ejecución histórica de Python. |
+| Destinos materiales | Nativo frente a esperados; WASI frente al observable nativo comprobado; navegador real sobre las mismas fuentes y los cinco testigos. Se conserva la distinción entre igualdad JSON ordenada y literal. |
+| Scripts auxiliares Python | Sólo orquestan procesos, transportan bytes y observan JSON/retornos. No analizan ni validan SV y no producen sus resultados esperados. |
+
+El runner redundante `r0_7_equivalence.py` queda consolidado en `run_conformance.py`. Los identificadores de los cuatro trabajos CI se conservan para mantener sus puertas. La conformidad de SV y la paridad nativa/WASM aplicable se exigen sobre la candidata exacta en cada incremento funcional; un resultado de otro corte no lo acredita.
+
+**Comprobación local de la retirada:** 91/91 del corpus, 18 pruebas del observador, contrato CLI, 3/3 SEC.0 y 5/5 sondas nativas. La conformidad WASI y de navegador se acredita en los cuatro flujos de la candidata antes de integrar; la generación local del manifiesto no se presenta como ejecución de navegador. Gramática, IR, núcleo y corpus no cambian en el commit de retirada. Este acto no completa el serializador canónico, el catálogo diagnóstico ni la ejecución algebraica.
+
+La revisión adversarial no encontró una familia gramatical normativa exclusiva de Python pendiente de migrar en las 29 familias inventariadas; esa constatación finita no demuestra equivalencia universal. Su defecto compartido de campos opcionales repetidos se conserva como DFL-010. DFL-008 sale del camino activo por retirada de la vía afectada, no por reparación retrospectiva. La evaluación de servicio nativo/Cloudflare queda diferida como DFL-009 para la fila 9. Continúa K1 desde BridgeSet; F permanece pendiente.

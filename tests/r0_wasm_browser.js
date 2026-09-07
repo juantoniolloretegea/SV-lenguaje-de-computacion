@@ -58,7 +58,7 @@ async function main() {
   }
 
   const manifest = await manifestResponse.json();
-  if (manifest.schema !== "sv-r0-browser-parity-manifest-v2" || manifest.failures.length) {
+  if (manifest.schema !== "sv-r0-browser-parity-manifest-v3" || manifest.failures.length) {
     throw new Error("manifiesto inválido o con fallos previos");
   }
   if (!manifest.counts.valid || !manifest.counts.invalid ||
@@ -113,6 +113,19 @@ async function main() {
       failures.push(`INVALID ${testCase.name}: diagnóstico WASM != nativo`);
     } else {
       invalidOk += 1;
+    }
+  }
+
+  let sensitivityOk = 0;
+  if (!Array.isArray(manifest.sensitivity_cases) || manifest.sensitivity_cases.length !== 5) {
+    throw new Error('faltan las cinco fuentes de sensibilidad');
+  }
+  for (const testCase of manifest.sensitivity_cases) {
+    const result = compileCase(exports, testCase.source, testCase.file_name);
+    if (result.error !== testCase.error || result.text !== testCase.expected_payload) {
+      failures.push(`SENSITIVITY ${testCase.name}: estado o bytes distintos del nativo comprobado`);
+    } else {
+      sensitivityOk += 1;
     }
   }
 
@@ -171,6 +184,7 @@ async function main() {
     valid_ok: validOk,
     invalid_ok: invalidOk,
     closed_domains_ok: closedDomainsOk,
+    sensitivity_ok: sensitivityOk,
     failures,
   };
 
