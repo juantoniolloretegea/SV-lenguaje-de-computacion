@@ -1,0 +1,5 @@
+codomain K = { A };
+semantic_relation R { kind: DeclaredRelation; }
+pattern P { kind: DeclaredPattern; }
+
+let X = compose(K, relations: [R], patterns: [P]);

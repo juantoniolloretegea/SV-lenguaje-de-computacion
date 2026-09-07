@@ -48,6 +48,7 @@ pub mod requirements_conflict;
 pub mod requirements_coverage;
 pub mod requirements_reuse;
 pub mod resolution;
+mod transition_data_wellformed;
 mod wellformed;
 
 pub use admissibility::{
@@ -155,6 +156,8 @@ pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, Compile
     let program = frontend::compile_svp(source, source_file)?;
     grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    transition_data_wellformed::validate_program(&program)
+        .map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 
@@ -166,6 +169,8 @@ pub fn compile_svp_profile(
     let program = frontend::compile_svp_with_profile(source, source_file, profile)?;
     grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    transition_data_wellformed::validate_program(&program)
+        .map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 
@@ -244,6 +249,8 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
     );
     grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    transition_data_wellformed::validate_program(&program)
+        .map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 

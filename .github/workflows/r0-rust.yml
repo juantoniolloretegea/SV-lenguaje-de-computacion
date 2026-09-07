@@ -10,6 +10,9 @@ on:
       - "tests/oracle_support.py"
       - "tests/test_oracle_support.py"
       - "tests/run_oracle_sensitivity.py"
+      - "tests/run_row7_transitiondata_conformance.py"
+      - "tests/run_directed_mutation_sensitivity.py"
+      - "tests/row7_transitiondata/**"
       - "tests/conformance/valid/**"
       - "tests/conformance/invalid/**"
       - ".github/workflows/r0-rust.yml"
@@ -19,15 +22,15 @@ permissions:
 
 jobs:
   core-native-wasm:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Obtener revisión
         uses: actions/checkout@v4
 
-      - name: Fijar Rust estable
+      - name: Fijar Rust de referencia
         run: |
-          rustup toolchain install stable --profile minimal
-          rustup default stable
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
           rustup target add wasm32-unknown-unknown
           rustc --version
           cargo --version
@@ -38,8 +41,13 @@ jobs:
       - name: Construir la realización nativa del SV
         run: cargo build --manifest-path rust/Cargo.toml -p sv_native
 
-      - name: Verificar conformidad SV frente a esperados comprometidos
+      - name: Verificar conformidad SV frente a resultados esperados fijados
         run: python tests/run_conformance.py --rust-bin rust/target/debug/sv-native
+
+      - name: Verificar conformidad causal del cierre correctivo
+        run: |
+          python tests/run_row7_transitiondata_conformance.py \
+            --rust-bin rust/target/debug/sv-native
 
       - name: Verificar conservación de testigos y sensibilidad del observador
         run: |
@@ -56,8 +64,38 @@ jobs:
           retention-days: 90
           path: artifacts/oracle-sensitivity/
 
+      - name: Verificar sensibilidad ante mutaciones dirigidas
+        run: |
+          python tests/run_directed_mutation_sensitivity.py \
+            --output-dir artifacts/directed-mutation-sensitivity
+
+      - name: Preservar evidencia de mutaciones dirigidas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: directed-mutation-sensitivity
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/directed-mutation-sensitivity/
+
       - name: Compilar núcleo para WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
 
       - name: Compilar adaptador WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown
+
+  compatibilidad-rust-estable:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener revisión
+        uses: actions/checkout@v4
+
+      - name: Identificar Rust estable disponible
+        run: |
+          rustup toolchain install stable --profile minimal
+          rustup default stable
+          rustc --version
+          cargo --version
+
+      - name: Comprobar compatibilidad adicional
+        run: cargo test --manifest-path rust/Cargo.toml --workspace

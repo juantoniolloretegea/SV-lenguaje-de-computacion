@@ -14,8 +14,8 @@ def horizon(profile, events, name='H'):
 
 def transitions(profile):
  if profile=='en':
-  return 'transition_data TD1 { horizon_ref: H; events: [(B,One)]; induced_parameters: [(C,3,One)]; } transition_data TD2 { horizon_ref: H; events: [(B,U)]; induced_parameters: [(C,3,U)]; }\n'
- return 'datos_de_transición TD1 { referencia_de_horizonte: H; sucesos: [(B,Uno)]; parámetros_inducidos: [(C,3,Uno)]; } datos_de_transición TD2 { referencia_de_horizonte: H; sucesos: [(B,U)]; parámetros_inducidos: [(C,3,U)]; }\n'
+  return 'transition_data TD1 { horizon_ref: H; events: [(B,One)]; induced_parameters: [(CC,3,One)]; } transition_data TD2 { horizon_ref: H; events: [(B,U)]; induced_parameters: [(CC,3,U)]; }\n'
+ return 'datos_de_transición TD1 { referencia_de_horizonte: H; sucesos: [(B,Uno)]; parámetros_inducidos: [(CC,3,Uno)]; } datos_de_transición TD2 { referencia_de_horizonte: H; sucesos: [(B,U)]; parámetros_inducidos: [(CC,3,U)]; }\n'
 
 def sources():
  result=[]

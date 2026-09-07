@@ -33,7 +33,7 @@ horizon H1 {
 transition_data TD1 {
   horizon_ref: H1;
   events: [(CambioProfilaxis, One)];
-  induced_parameters: [(C1, 3, One)];
+  induced_parameters: [(CC1, 3, One)];
 }
 
 frame F1 {

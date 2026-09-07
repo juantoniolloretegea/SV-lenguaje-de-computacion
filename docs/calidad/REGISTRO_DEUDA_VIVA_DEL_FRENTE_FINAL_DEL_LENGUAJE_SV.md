@@ -95,6 +95,24 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Obligación:** la gramática 0.2 §1 conserva las producciones de v0.1 §§5.4–5.5, que impiden repetir campos opcionales; v0.2 §14 precisa su recepción. El control de claves JSON posteriores no descubre una pérdida que ya ocurrió durante el análisis de la fuente.
 - **Cierre RETP-087:** la [radiografía §18](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) inventaría los seis campos opcionales, corrige cuatro y comprueba las dos guardas singulares ya existentes. Repetición e inversión se rechazan antes de perder información; las listas conservan sus elementos. Conformidad 100/100, dos pruebas de integración y 64 testigos en nativo/WASI/navegador exigidos sobre la candidata exacta. **Estado: cerrada en ese alcance tras verificación e integración.** La retirada Python se conserva como antecedente y no recibe esta reparación retrospectivamente.
 
+### DFL-011 — Nombre histórico `cell_ref` para una identidad de nodo
+
+- **Hecho:** la proyección 0.1.0 serializa cada elemento de `TransitionData.induced_parameters` con la clave `cell_ref`, aunque el primer componente de la IR es `NodeId` y, en la representación vigente, debe resolver un `CoupledSpec` perteneciente al grafo del horizonte.
+- **Riesgo:** un consumidor puede interpretar el valor como referencia directa a `CellSpec` y colapsar nodos arquitectónicos distintos que compartan la misma especificación celular.
+- **Decisión vigente:** no se cambia silenciosamente el nombre dentro del esquema 0.1.0. La semántica tipada se documenta y se protege con un testigo en el que dos nodos distintos comparten `CellSpec` y conservan identidades independientes.
+- **Objetivo de corrección:** la primera versión incompatible posterior del esquema de proyección, inicialmente 0.2.0, deberá sustituir `cell_ref` por `node_ref` o una denominación equivalente y publicar una regla de migración inequívoca. La transición no podrá emitir simultáneamente dos claves contradictorias ni aceptar una conversión implícita a `CellSpec`.
+- **Estado:** abierta y gobernada; no invalida por sí sola la proyección 0.1.0, pero impide afirmar que su nomenclatura es autosuficiente.
+- **Prioridad:** alta antes de estabilizar una interfaz pública externa o cerrar K2.
+
+### DFL-012 — Independencia entre realizaciones semánticas
+
+- **Hecho:** las vías nativa, WASI y de navegador ejecutan la misma custodia Rust de `sv_core` sobre destinos distintos. La retirada de la realización Python eliminó la comparación entre dos implementaciones semánticas independientes.
+- **Riesgo:** un defecto compartido por `sv_core` puede producir resultados coincidentes en todos los destinos y no ser detectado por la paridad de transporte.
+- **Controles compensatorios actuales:** resultados esperados comprometidos, comprobaciones causales, comparación exacta de bytes y pares JSON, pruebas de sensibilidad y mutaciones dirigidas. Estos controles acreditan consistencia interna y capacidad de detección en sus muestras, pero no restauran la independencia perdida.
+- **Condición de cierre:** disponer de una segunda realización semántica independiente para un subconjunto algebraico expresamente delimitado, o de comprobadores derivados de la doctrina y no de la misma realización, con correspondencia verificable de entradas, salidas y exclusiones.
+- **Estado:** abierta; bloquea cualquier afirmación de independencia entre realizaciones, pero no invalida por sí sola la conformidad interna de la custodia Rust.
+- **Prioridad:** alta antes de la puerta algebraica y de la consolidación nuclear.
+
 ## 3. Estado de FFL-B
 
 FFL-B se cerró tras E215 porque las obligaciones restantes identificadas no podían materializarse de forma honesta mediante una comprobación estructural adicional sin ampliar representación, semántica o ejecución.
@@ -157,4 +175,4 @@ La siguiente decisión de K1 es la multiplicidad de `Horizon.events`, cuyo estat
 
 RETP-084 resuelve la multiplicidad de `Horizon.events` por su carácter de declaración de tipos en el Documento III y la IR: una identidad por horizonte, con rechazo de repeticiones y conservación de orden. La recurrencia del mismo tipo en horizontes o datos de transición distintos permanece. No se amplía el catálogo diagnóstico ni se resuelve la multiplicidad de pares dentro de un único TransitionData o la axiomática general de horizontes.
 
-Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter_id. DFL-005/010, los demás límites de DFL-001 y K1-T permanecen; F no queda habilitada. DFL-009 conserva su evaluación al retornar del primer universo CYB.
+Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter_id. DFL-005/010, los demás límites de DFL-001 y K1-T permanecen; F no queda habilitada. DFL-009 conserva su evaluación al retornar del primer universo CYB como punto de evaluación, sin bloquear este avance.
