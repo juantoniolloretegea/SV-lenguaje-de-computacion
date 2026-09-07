@@ -57,6 +57,7 @@ La continuidad documental se organiza así:
 | RETP-2026-086 | 07/09/2026 | NO_CONSTA | DICTAMEN_Y_CIERRE_NOMINAL | Lenguaje SV / K1 / Domain.parameters | cierre nominal; promoción por candidata exacta |
 | RETP-2026-087 | 07/09/2026 | NO_CONSTA | CIERRE_CORRECTIVO_Y_CONCORDANCIA | Lenguaje SV / K1 / DFL-010 | cierre delimitado; promoción por candidata exacta |
 | RETP-2026-088 | 07/09/2026 | NO_CONSTA | DELIMITACION_GOBERNADA_Y_RELEVO | Lenguaje SV / K1-T → F | ruta productiva no habilitada; salida acotada tras candidata verificada |
+| RETP-2026-089 | 07/09/2026 | NO_CONSTA | CONTRATO_CANDIDATO_Y_RELEVO | Lenguaje SV / F → F-IF | contrato por operación; ligaduras, suficiencia y pérdida localizadas; contraste pendiente |
 
 ## 3. Entradas detalladas
 
@@ -379,6 +380,15 @@ La continuidad documental se organiza así:
 - **Rectificación:** trece atribuciones sintácticas a E001 se adscriben a sus producciones; E001 conserva InvalidTriValue y E107 su estatuto IR pendiente, sin emisión efectiva. Se explicita la corrección de RETP-087, manteniendo los asientos históricos. La tabla resumen recibe también 085–087, ya presentes en el detalle y CSV.
 - **Evidencia:** 100/100, workspace y 40 testigos K1-T (20 conservaciones/20 rechazos, ES/EN y ensamblaje); 100 observables anteriores y 14 esperados conservados. Cuatro flujos exigidos sobre candidata exacta, incluidos nativo/WASI/navegador y bancos previos. Sin cambio de emisores, estructura ni versiones; PT01/PT02/PT04/PT13/PT14.
 - **Decisión y relevo:** delimitación efectiva tras integración verificada; [transición §28](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#k1-t-relevo-20260907) recibe salida acotada de K1 y fija F. DFL-005 y necesidades de transducción se reciben allí antes de operaciones dependientes. E107/J1.5 sigue pendiente para producción; DFL-001/008 mantienen límites, DFL-009 retorno CYB, N0-05/N0-07 K2. No se cierran álgebra, dominio, núcleo ni R2/R3/R4.
+
+### RETP-2026-089 — Contrato candidato F y relevo a F-IF
+
+- **Entrada y fuentes:** main `4d5f93b612003352a63c8c01bf99e1000a6d0125`, PR #74; Pilares, perfiles, transición completa hasta §28, FFL-E, valoración/adversarial/sincronización IMM corregidas, N0/K1, IR y representación Rust; matriz tecnológica 020 en `374a10b`. El corte clínico recibido permanece `3bea6b7`.
+- **Producto:** [F-SV/0.1-candidata](../arquitectura/CONTRATO_CANDIDATO_F_DOMINIO_REPRESENTACION_Y_SUFIENCIA_POR_OPERACION_2026_09_07.md): identidad/versiones y terna, perímetro, operaciones, instancias/ligaduras, transducción pendiente, recuperabilidad por operación, información lateral, responsabilidad y soporte. Su versión es documental, no una ampliación de Gramática/IR.
+- **Adversarial:** diferencia suficiencia demostrada, pérdida demostrada y suficiencia no acreditada. Control exhaustivo externo de cuatro estados: una representación con pérdida conserva Q_cuenta y pierde Q_izquierda; información lateral explícita no acredita recuperación desde la representación sola. No es célula, prueba clínica, ejecución SV ni campaña F-IF.
+- **Recepción:** DFL-005 recibe mínimo por operación y ligaduras antes de admitir capacidades dependientes; K1-T conserva producción no habilitada. Se reutilizan la reconciliación IMM 15↔44 y PT01–PT14, con límites de 012/016/018; §6 precisa la sucesión K1 y retirada Python frente a la valoración histórica.
+- **Verificación:** revisión contractual, enlaces, cálculo finito y concordancia RETP; Conformidad SVP exigida en candidata exacta. Los blobs ejecutables, normas de Gramática/IR/perfiles, corpus, esperados, workflows y Playground se conservan. La paridad PR #74 conserva su corte, sin atribuirse como nueva prueba del contrato.
+- **Decisión:** formulación de fila 4 efectiva al integrar candidata verificada. [Transición §29](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#contrato-f-relevo-20260907) abre como siguiente paso fila 5/F-IF con sus seis testigos. No cierra las carencias de representación ni adelanta IMM/CYB, álgebra, K2 o materialidad. DFL-009 sigue en fila 9; acceso editorial aplazado.
 
 ## 4. Estado de continuidad
 

@@ -1,5 +1,7 @@
 # Valoración técnica y encaje de OP-IMM-001 con el Lenguaje SV
 
+> **Recepción posterior · RETP-089, 07/09/2026:** [F-SV/0.1-candidata, §6](../../arquitectura/CONTRATO_CANDIDATO_F_DOMINIO_REPRESENTACION_Y_SUFIENCIA_POR_OPERACION_2026_09_07.md#6-recepción-del-caso-director-y-actualización-del-encaje) recibe esta reconciliación y precisa los avances K1, la retirada del compilador Python y los límites vigentes. Las menciones de Python y capacidades «actuales» del cuerpo corresponden a su corte histórico; no constituyen instrucciones activas. La [transición §29](./ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#contrato-f-relevo-20260907) fija el siguiente paso F-IF. No se modifica la constitución IMM.
+
 **Fecha:** 3 de septiembre de 2026  
 **Emisor:** unidad responsable del Lenguaje de computación SV  
 **Destinatario:** dominio de Inmunología — `OP-IMM-001 / Q0 v0`  
