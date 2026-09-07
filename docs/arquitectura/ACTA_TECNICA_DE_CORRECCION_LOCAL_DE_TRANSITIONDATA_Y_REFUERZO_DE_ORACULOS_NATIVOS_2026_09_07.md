@@ -4,9 +4,9 @@
 **Identificador registral:** `RETP-2026-093`  
 **Base material:** `bc3b22c9e9319e8f191390c8cfe9fa1577904d87`  
 **Recepción G/H de base:** `9b32edda21072b3d2a138d9e92d95febdbc21ac4`  
-**Corte material previamente verificado:** `9a79e1370afa3f22ab85f94b455bfc5aa1ac0d82`  
+**Corte material verificado:** `80aee0a48adb72710770adbfbe9f5d0d71585a6f`  
 **Solicitud de incorporación:** `#78`  
-**Estado:** `CANDIDATA_EN_REVERIFICACION`
+**Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`
 
 ## 1. Objeto
 
@@ -64,63 +64,82 @@ También se mantienen regresiones para:
 - longitud del vector;
 - metadatos de la proyección.
 
-## 5. Cobertura multientorno
+## 5. Cierre de la insuficiencia de cobertura por destino
 
-El corte material `9a79e137…` contenía nueve casos causales específicos en una batería nativa separada. La campaña compartida de conformidad mantenía entonces 14 casos válidos y 86 inválidos, pero no incluía esos nueve testigos.
+El corte material anterior `9a79e1370afa3f22ab85f94b455bfc5aa1ac0d82` contenía nueve casos causales específicos en una batería nativa separada. La campaña compartida mantenía 14 casos válidos y 86 inválidos, pero no incluía esos nueve testigos.
 
-Una comprobación independiente neutralizó la regla de pertenencia del nodo al grafo del horizonte. Las pruebas Rust detectaron la mutación, mientras la campaña compartida permaneció conforme. El resultado demostró una insuficiencia de cobertura por destino: la regla estaba realizada y protegida nativamente, pero las ejecuciones WASI y de navegador no la ejercitaban mediante el corpus común.
+Una verificación independiente neutralizó la comprobación de pertenencia del nodo al grafo del horizonte. Las pruebas Rust detectaron la mutación, mientras la campaña compartida permaneció conforme. El resultado demostró una insuficiencia de cobertura por destino: la regla estaba realizada y protegida nativamente, pero las ejecuciones WASI y de navegador no la ejercitaban mediante el corpus común.
 
-La candidata corrige esa insuficiencia de la forma siguiente:
+La candidata verificada resuelve esa insuficiencia de la forma siguiente:
 
-1. los nueve testigos causales pasan al corpus compartido `tests/conformance/invalid/`;
-2. el comprobador causal mantiene mensajes exactos, pero consume los mismos archivos del corpus común;
-3. se evita conservar dos copias divergentes de las mismas fuentes;
-4. el corpus esperado pasa a 14 casos válidos y 95 inválidos en los destinos aplicables;
-5. la promoción exige una ejecución nueva sobre la cabeza exacta resultante.
+1. los nueve testigos causales pertenecen ahora al corpus compartido `tests/conformance/invalid/`;
+2. el comprobador causal consume esos mismos archivos y conserva la identidad textual exacta de cada rechazo;
+3. se eliminaron las copias separadas para impedir divergencias entre fuentes de prueba;
+4. el corpus compartido pasa a 14 casos válidos y 95 inválidos;
+5. la aserción de navegador quedó alineada con el cardinal efectivo de 95 inválidos;
+6. las vías nativa, WASI y de navegador ejecutaron el corpus ampliado sobre el corte material identificado.
 
-La conformidad anterior de los destinos se conserva como antecedente del corte `9a79e137…`, pero no acredita por sí sola la ampliación del corpus.
+El fallo previo de la comprobación de navegador tras ampliar el corpus correspondía a la expectativa cardinal obsoleta de 86 casos. No reveló una divergencia semántica; su corrección consistió exclusivamente en exigir el cardinal nuevo de 95.
 
 ## 6. Deuda de esquema e independencia semántica
 
-La proyección 0.1.0 conserva la clave histórica `cell_ref` para el primer componente de `induced_parameters`, aunque su valor representa ahora una identidad `NodeId` resuelta como `CoupledSpec`. Cambiar esa clave dentro de la misma versión alteraría el esquema de forma encubierta. La deuda queda registrada como DFL-011, con migración explícita a `node_ref` o denominación equivalente en una versión incompatible posterior.
+La proyección 0.1.0 conserva la clave histórica `cell_ref` para el primer componente de `induced_parameters`, aunque su valor representa una identidad `NodeId` resuelta como `CoupledSpec`. Cambiar esa clave dentro de la misma versión alteraría el esquema de forma encubierta. La deuda queda registrada como DFL-011, con migración explícita a `node_ref` o denominación equivalente en una versión incompatible posterior.
 
 Las vías nativa, WASI y de navegador ejecutan la misma custodia Rust de `sv_core` sobre destinos diferentes. La paridad entre ellas acredita conservación de transporte y de observables, pero no independencia entre realizaciones semánticas. Esta pérdida queda registrada como DFL-012. Los resultados esperados comprometidos, las pruebas causales, las mutaciones y la comparación exacta de bytes son controles compensatorios; no sustituyen una segunda realización independiente ni un comprobador derivado de la doctrina.
 
-## 7. Evidencia antecedente reproducida
+## 7. Evidencia de verificación
 
-Sobre el corte material `9a79e137…` quedaron acreditados:
+La comprobación de referencia utilizó Rust 1.98.0. La comprobación complementaria resolvió el canal estable como Rust 1.98.1. Los cuatro flujos terminaron correctamente sobre `80aee0a48adb72710770adbfbe9f5d0d71585a6f`:
 
-| Comprobación | Resultado |
-|---|---|
-| `sv_core` | `211/211` |
-| Nuevas pruebas correctivas | `16/16` |
-| Corpus compartido anterior | `14/14` válidos y `86/86` inválidos |
-| Casos causales nativos | `9/9` |
-| Mutaciones dirigidas | `12/12` detectadas; `0` supervivientes; `0` inválidas |
-| Rust de referencia | `1.98.0`, conforme |
-| Compatibilidad adicional | `stable = 1.98.1`, conforme |
-| Conformidad SVP | ejecución `34161898934`, conforme |
-| R0-8 nativa | ejecución `34161898968`, conforme |
-| R0 Rust | ejecución `34161898907`, conforme |
-| R0 WASM y navegador | ejecución `34161898894`, conforme |
+| Comprobación | Ejecución | Resultado |
+|---|---:|---|
+| Conformidad SVP | `34164984055` | conforme |
+| R0-8 Baseline nativa | `34164984130` | conforme |
+| R0 Rust | `34164984049` | conforme |
+| R0 WASM, WASI y navegador | `34164984231` | conforme |
+| Pruebas unitarias de `sv_core` | dentro de R0 Rust | `211/211` |
+| Corpus compartido | dentro de R0 Rust y del flujo WebAssembly | `14/14` válidos y `95/95` inválidos |
+| Conformidad causal de la fila 7 | dentro de R0 Rust | `9/9` |
+| Mutaciones dirigidas | dentro de R0 Rust | `12/12` detectadas; `0` supervivientes; `0` inválidas |
+| Sensibilidad del observador | dentro de R0 Rust y WASI | conforme |
+| Ejecución en navegador real | dentro del flujo WebAssembly | conforme |
 
-La relación `12/12` describe la muestra de mutaciones dirigida y no constituye cobertura exhaustiva del repositorio.
-
-## 8. Condición de promoción
-
-La cabeza revisada sólo podrá promoverse si:
-
-1. las cuatro comprobaciones de integración terminan correctamente sobre la cabeza exacta;
-2. el corpus compartido acredita 14 casos válidos y 95 inválidos en nativo, WASI y navegador;
-3. los nueve casos conservan su causa exacta en el comprobador causal;
-4. las mutaciones dirigidas continúan detectadas y los archivos quedan restaurados;
-5. la comparación de cambios no incorpora dominio, infraestructura, plataforma ni documentación ajena al alcance;
-6. DFL-011 y DFL-012 permanecen explícitas y no se presentan como capacidades resueltas.
-
-Hasta entonces:
+Evidencia preservada:
 
 ```text
-CIERRE_CORRECTIVO = CANDIDATO_EN_REVERIFICACION
+oracle-sensitivity
+artefacto = 10033851370
+sha256 = bab862e9254ee3b5ba2902f5e58ab433bcf8e6ed8493c034411dd8b8e8c78438
+
+directed-mutation-sensitivity
+artefacto = 10033855035
+sha256 = b4744a0e595aba79f71b824f8a164bda09a40dda27973127259d828ed0e6facb
+
+r0-wasm-three-way-parity
+artefacto = 10033866342
+sha256 = b701aad62c25b5db3834860affb9df82d66e8a70cfc20c58b98c76fd5322ff33
+```
+
+La relación `12/12` describe únicamente la muestra dirigida. No constituye cobertura exhaustiva de mutación del repositorio.
+
+## 8. Alcance del cierre candidato
+
+Quedan cerrados o protegidos en la candidata verificada:
+
+```text
+H04_REFERENCIA_DE_NODO_PERTENENCIA_Y_RANGO = CERRADO_EN_CANDIDATA
+H05_FUNCIONALIDAD_LOCAL_DE_SUCESOS_Y_DESTINOS = CERRADO_EN_CANDIDATA
+M08B_FRAME_ARCHITECTURE = PROTEGIDO_POR_REGRESION
+M08C_COMPOSE_GRAPH = PROTEGIDO_POR_REGRESION
+P02_GEOMETRIA_CELULAR = PROTEGIDA_POR_REGRESION
+METADATOS_DE_PROYECCION = PROTEGIDOS_POR_REGRESION
+COBERTURA_COMPARTIDA_H04_H05 = VERIFICADA_EN_NATIVO_WASI_Y_NAVEGADOR
+```
+
+La promoción sigue separada de la verificación. Requiere revisar la comparación final contra la recepción G/H, mantener el orden de integración de las solicitudes y confirmar que el diferencial no incorpora objetos ajenos al alcance.
+
+```text
+CIERRE_CORRECTIVO = CANDIDATA_VERIFICADA
 PROMOCION = PENDIENTE
 FILA_7 = ABIERTA
 CANDIDATA_PARA_SEGUNDO_CONTRASTE = NO_EMITIDA
