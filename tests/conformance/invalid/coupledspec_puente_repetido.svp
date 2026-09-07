@@ -1,0 +1,5 @@
+-- J1.2: BridgeSet no admite dos ocurrencias de la misma posición.
+codomain K = { A };
+output_semantics S { A -> "a"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec CC { cell: C; bridges: [3,3]; }

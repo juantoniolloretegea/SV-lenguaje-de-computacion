@@ -3,7 +3,7 @@
 
 El manifiesto contiene el mismo texto `.svp` y, para válidos, el stdout exacto
 producido por el binario Rust nativo después de comprobar la igualdad estructural
-con pares JSON ordenados entre Python, el esperado comprometido y Rust. El
+con pares JSON ordenados entre el esperado comprometido y la realización nativa del SV. El
 navegador recibe el texto SVP; nunca recibe IR preconstituida como entrada del
 módulo WebAssembly.
 """
@@ -14,11 +14,12 @@ import argparse
 import json
 from pathlib import Path
 import sys
+from run_oracle_sensitivity import sources as sensitivity_sources, verify as verify_sensitivity
+from k1_bridge_cases import prepare as prepare_bridges
 
 from oracle_support import (run, assert_success, assert_json_equal,
-                            assert_python_rejection, assert_rust_rejection,
+                            assert_rust_rejection,
                             check_invalid_corpus, cli_payload)
-from run_conformance import EXPECTED_INVALID_CODES
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
@@ -28,6 +29,7 @@ INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--native-bin", required=True, type=Path)
+    parser.add_argument("--native-probe", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--source-head")
     parser.add_argument("--base-head")
@@ -45,12 +47,8 @@ def main() -> int:
 
     for source in sorted(VALID_DIR.glob("*.svp")):
         golden = source.with_suffix(".expected.json")
-        py = run([sys.executable, "src/svp_main.py", str(source)])
         native = run([str(native_bin), str(source)])
 
-        if py.returncode != 0:
-            failures.append(f"VALID {source.stem}: Python falló: {py.stderr.strip()}")
-            continue
         if native.returncode != 0:
             failures.append(f"VALID {source.stem}: nativo falló: {native.stderr.strip()}")
             continue
@@ -59,10 +57,8 @@ def main() -> int:
             continue
 
         try:
-            assert_success(py)
             assert_success(native)
-            assert_json_equal(py.stdout, golden.read_bytes())
-            assert_json_equal(native.stdout, py.stdout)
+            assert_json_equal(native.stdout, golden.read_bytes())
         except AssertionError as exc:
             failures.append(f"VALID {source.stem}: {exc}")
             continue
@@ -78,10 +74,8 @@ def main() -> int:
         )
 
     for source in sorted(INVALID_DIR.glob("*.svp")):
-        py = run([sys.executable, "src/svp_main.py", str(source)])
         native = run([str(native_bin), str(source)])
         try:
-            assert_python_rejection(py, EXPECTED_INVALID_CODES[source.name])
             diagnostic = assert_rust_rejection(native, source.stem)
         except AssertionError as exc:
             failures.append(f"INVALID {source.stem}: {exc}")
@@ -97,8 +91,29 @@ def main() -> int:
             }
         )
 
+    # Mismas cinco fuentes del banco, comprobadas antes de recibir paridad.
+    sensitivity_cases = []
+    source_dir = args.output.parent / 'sensitivity-sources'
+    source_dir.mkdir(parents=True, exist_ok=True)
+    for name, raw in sensitivity_sources().items():
+        source = source_dir / f'{name}.svp'
+        source.write_bytes(raw)
+        native = run([str(native_bin), str(source.resolve())])
+        try:
+            verify_sensitivity(name, raw, native)
+            if native.returncode == 0:
+                payload = cli_payload(native.stdout).decode('utf-8')
+            else:
+                payload = assert_rust_rejection(native, 'output_semantics_clave_repetida')
+            sensitivity_cases.append({'name': name, 'file_name': source.name,
+                'source': raw.decode('utf-8'), 'error': native.returncode == 1,
+                'expected_payload': payload})
+        except (AssertionError, ValueError) as exc:
+            failures.append(f'SENSITIVITY {name}: {exc}')
+
+    bridge_cases = prepare_bridges(args.native_probe, args.output.parent / 'bridge-set')
     result = {
-        "schema": "sv-r0-browser-parity-manifest-v2",
+        "schema": "sv-r0-browser-parity-manifest-v3",
         "source_head": args.source_head,
         "base_head": args.base_head,
         "rule": "browser receives source text only; expected output is test oracle only",
@@ -107,6 +122,8 @@ def main() -> int:
             "invalid": sum(case["category"] == "invalid" for case in cases),
         },
         "cases": cases,
+        "sensitivity_cases": sensitivity_cases,
+        "bridge_cases": bridge_cases,
         "failures": failures,
     }
 

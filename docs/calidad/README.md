@@ -180,3 +180,5 @@ El detalle mecánico de cada modificación permanece en Git. Los registros vivos
 El presente cierre acredita la conformidad interna del corte corregido y su despliegue material. La verificación externa independiente del mismo corte se documentará mediante un acta separada cuando se complete.
 
 Hasta entonces no se atribuye al cierre de conformidad el estatuto de verificación independiente.
+
+Continuidad de 07/09/2026: [retirada del compilador Python y conservación de obligaciones](ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907), RETP-082; [unicidad BridgeSet y relevo K1](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907), RETP-083. La evaluación del servicio nativo y Cloudflare queda en DFL-009, retorno del primer universo CYB.

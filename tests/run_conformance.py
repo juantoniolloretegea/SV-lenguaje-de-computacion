@@ -1,26 +1,20 @@
 #!/usr/bin/env python3
-"""run_conformance.py — Ejecutor de la batería de conformidad DSL → IR.
+"""Conformidad SV: fuentes DSL frente a esperados comprometidos y rechazo controlado.
 
-Los casos válidos se comparan contra JSON esperados comprometidos en el
-repositorio. Los casos inválidos deben terminar con el código diagnóstico
-exacto declarado. El ejecutor no regenera ni modifica los oráculos.
+El observador no interpreta SV ni genera resultados esperados. El catálogo
+conserva las obligaciones diagnósticas; no afirma que la CLI emita esos códigos.
 """
 
-import json
-import os
+from __future__ import annotations
+
+import argparse
+from pathlib import Path
 import sys
-
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
-
-from svp_errors import SVPError
-from svp_main import process_file
-from oracle_support import assert_json_equal, ordered_json, check_invalid_corpus, assert_json_roundtrip
-
-IR_VERSION = "0.3"
-GRAMMAR_VERSION = "0.2"
-SERIALIZER_VERSION = "0.1.0"
-
-EXPECTED_INVALID_CODES = {
+from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
+                            assert_rust_rejection,
+                            check_invalid_corpus)
+EXPECTED_OBLIGATIONS = {
+    "coupledspec_puente_repetido.svp": "J1.2/BridgeSet",
     "horizon_architecture_ausente.svp": "E006",
     "horizon_architecture_tipo_incorrecto.svp": "E006",
     "agent_arquitecturas_reales_distintas.svp": "E402",
@@ -101,105 +95,71 @@ EXPECTED_INVALID_CODES = {
     "frame_criticality_no_producible.svp": "E308",
 }
 
+ROOT = Path(__file__).resolve().parents[1]
+VALID_DIR = ROOT / "tests" / "conformance" / "valid"
+INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"
 
-def expected_json_path(valid_dir: str, fname: str) -> str:
-    stem, _ = os.path.splitext(fname)
-    return os.path.join(valid_dir, f"{stem}.expected.json")
+VALID_CASES = sorted(path.stem for path in VALID_DIR.glob("*.svp"))
+INVALID_CASES = sorted(path.stem for path in INVALID_DIR.glob("*.svp"))
 
 
-def run_tests() -> int:
-    base = os.path.dirname(os.path.abspath(__file__))
-    valid_dir = os.path.join(base, "conformance", "valid")
-    invalid_dir = os.path.join(base, "conformance", "invalid")
-    from pathlib import Path
-    check_invalid_corpus(Path(invalid_dir).glob("*.svp"))
-    if not list(Path(valid_dir).glob("*.svp")):
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--rust-bin",
+        default=str(ROOT / "rust" / "target" / "debug" / "sv-native"),
+    )
+    args = parser.parse_args()
+
+    failures: list[str] = []
+    check_invalid_corpus(INVALID_DIR.glob("*.svp"))
+    if not VALID_CASES:
         raise AssertionError("corpus válido vacío")
 
-    passed = 0
-    failed = 0
-    errors = []
+    for case in VALID_CASES:
+        source = VALID_DIR / f"{case}.svp"
+        golden = source.with_suffix(".expected.json")
 
-    print("═══ Casos válidos ═══")
-    if os.path.isdir(valid_dir):
-        for fname in sorted(os.listdir(valid_dir)):
-            if not fname.endswith(".svp"):
-                continue
+        rust = run([args.rust_bin, str(source)])
+        if rust.returncode != 0:
+            failures.append(f"VALID {case}: camino Rust falló: {rust.stderr.strip()}")
+            continue
 
-            path = os.path.join(valid_dir, fname)
-            exp_path = expected_json_path(valid_dir, fname)
+        try:
+            assert_success(rust)
+            assert_json_equal(rust.stdout, golden.read_bytes())
+            repeated = run([args.rust_bin, str(source)])
+            assert_success(repeated)
+            assert_bytes_equal(rust.stdout, repeated.stdout)
+        except AssertionError as exc:
+            failures.append(f"VALID {case}: {exc}")
+            continue
 
-            try:
-                if not os.path.exists(exp_path):
-                    raise FileNotFoundError(
-                        f"Falta expected JSON para {fname}: {os.path.basename(exp_path)}"
-                    )
+        print(f"Conformidad SV VALID OK: {case}")
 
-                result = process_file(path)
-                assert_json_roundtrip(result.encode("utf-8"))
-                doc = json.loads(result)
+    for case in INVALID_CASES:
+        source = INVALID_DIR / f"{case}.svp"
+        rust = run([args.rust_bin, str(source)])
 
-                assert doc.get("ir_version") == IR_VERSION
-                assert doc.get("grammar_version") == GRAMMAR_VERSION
-                assert "source_sha256" in doc
-                assert doc.get("serializer_version") == SERIALIZER_VERSION
+        try:
+            assert_rust_rejection(rust, case)
+        except AssertionError as exc:
+            failures.append(f"INVALID {case}: {exc}")
+            continue
 
-                with open(exp_path, "rb") as fh:
-                    assert_json_equal(result.encode("utf-8"), fh.read())
+        print(f"Conformidad SV INVALID OK: {case}")
 
-                print(f" ✓ {fname}")
-                passed += 1
+    if failures:
+        print("\n".join(failures), file=sys.stderr)
+        return 1
 
-            except Exception as exc:
-                print(f" ✗ {fname}: {exc}")
-                errors.append((fname, str(exc)))
-                failed += 1
-
-    print("\n═══ Casos inválidos (deben fallar con código exacto) ═══")
-    if os.path.isdir(invalid_dir):
-        for fname in sorted(os.listdir(invalid_dir)):
-            if not fname.endswith(".svp"):
-                continue
-
-            path = os.path.join(invalid_dir, fname)
-            expected_code = EXPECTED_INVALID_CODES.get(fname)
-
-            try:
-                process_file(path)
-                print(f" ✗ {fname}: debería haber fallado pero produjo JSON")
-                errors.append((fname, "No falló"))
-                failed += 1
-
-            except SVPError as exc:
-                actual_code = exc.error_def.code
-                if expected_code is None:
-                    print(f" ✗ {fname}: sin código esperado; obtuvo {actual_code}")
-                    errors.append((fname, f"Sin código esperado: {actual_code}"))
-                    failed += 1
-                elif actual_code != expected_code:
-                    print(f" ✗ {fname}: esperado {expected_code}, obtenido {actual_code}")
-                    errors.append((fname, f"Esperado {expected_code}, obtenido {actual_code}"))
-                    failed += 1
-                else:
-                    print(f" ✓ {fname}: {actual_code} ({exc.error_def.name})")
-                    passed += 1
-
-            except Exception as exc:
-                print(f" ? {fname}: error inesperado — {exc}")
-                errors.append((fname, str(exc)))
-                failed += 1
-
-    print("\n═══ Resumen ═══")
-    print(f" Pasados: {passed}")
-    print(f" Fallidos: {failed}")
-
-    if errors:
-        print("\n Errores:")
-        for name, msg in errors:
-            print(f" {name}: {msg}")
-
-    return 0 if failed == 0 else 1
+    print(
+        "Conformidad SV: "
+        f"{len(VALID_CASES)}/{len(VALID_CASES)} válidos frente a esperados comprometidos y "
+        f"{len(INVALID_CASES)}/{len(INVALID_CASES)} inválidos rechazados sobre el mismo .svp"
+    )
+    return 0
 
 
 if __name__ == "__main__":
-    sys.exit(run_tests())
+    raise SystemExit(main())

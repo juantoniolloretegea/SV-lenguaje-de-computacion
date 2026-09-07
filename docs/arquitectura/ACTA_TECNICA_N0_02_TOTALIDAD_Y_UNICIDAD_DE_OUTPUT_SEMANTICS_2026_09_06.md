@@ -41,7 +41,7 @@ Esta precisión refuerza la admisión: las entradas que violan J-K1 dejan de ace
 
 ## 3. Realización y oráculos
 
-La referencia [Python](../../src/svp_validator.py) comprueba multiplicidad y cobertura en `_validate_cellspec`, después de resolver los tipos y antes del descenso que construiría el mapa. [Rust](../../rust/sv_core/src/wellformed.rs) aplica el mismo juicio al programa completo en `validate_object`. Sus rutas públicas de compilación EN, ES y ensamblaje ya atraviesan esa validación; no se introduce otra ruta paralela.
+La referencia [Python](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/src/svp_validator.py) comprueba multiplicidad y cobertura en `_validate_cellspec`, después de resolver los tipos y antes del descenso que construiría el mapa. [Rust](../../rust/sv_core/src/wellformed.rs) aplica el mismo juicio al programa completo en `validate_object`. Sus rutas públicas de compilación EN, ES y ensamblaje ya atraviesan esa validación; no se introduce otra ruta paralela.
 
 El corpus pasa de **80 a 85 casos: 13 válidos y 72 inválidos**. Se añaden:
 
@@ -53,7 +53,7 @@ El corpus pasa de **80 a 85 casos: 13 válidos y 72 inválidos**. Se añaden:
 
 El esperado nuevo se declara desde los campos normativos y la huella de la fuente; no se genera desde la salida del compilador. Los doce esperados anteriores conservan su identidad Git. Los cuatro negativos exigen retorno 1, ausencia de IR y E115; no basta un fallo de proceso.
 
-Las [cinco pruebas Python](../../tests/test_output_semantics_totality.py) verifican, además, conservación del AST tras aceptación o rechazo, referencias adelantadas, semántica compartida y conservación de E102. Las [seis pruebas Rust](../../rust/sv_core/tests/output_semantics_totality.rs) ejercen ES/EN, preservación de secuencias y textos, ensamblaje con referencias cruzadas en ambos órdenes de unidades, rechazo de las cuatro clases de defecto y comprobación separada de cada celda. Los subcasos no se suman al corpus de conformidad.
+Las [cinco pruebas Python](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/tests/test_output_semantics_totality.py) verifican, además, conservación del AST tras aceptación o rechazo, referencias adelantadas, semántica compartida y conservación de E102. Las [seis pruebas Rust](../../rust/sv_core/tests/output_semantics_totality.rs) ejercen ES/EN, preservación de secuencias y textos, ensamblaje con referencias cruzadas en ambos órdenes de unidades, rechazo de las cuatro clases de defecto y comprobación separada de cada celda. Los subcasos no se suman al corpus de conformidad.
 
 ## 4. Sucesión explícita del banco de sensibilidad
 

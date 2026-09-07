@@ -1,4 +1,4 @@
-name: R0 WASM paridad de tres vías
+name: R0 WASM paridad nativa y navegador
 
 on:
   pull_request:
@@ -6,15 +6,14 @@ on:
     paths:
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
-      - "src/**"
-      - "tests/r0_7_equivalence.py"
+      - "tests/run_conformance.py"
       - "tests/oracle_support.py"
       - "tests/test_oracle_support.py"
       - "tests/run_oracle_sensitivity.py"
-      - "tests/run_conformance.py"
       - "tests/r0_wasm_parity.py"
       - "tests/run_wasi_sv_native.js"
       - "tests/r0_wasm_browser_manifest.py"
+      - "tests/k1_bridge_cases.py"
       - "tests/r0_wasm_browser.html"
       - "tests/r0_wasm_browser.js"
       - "tests/conformance/valid/**"
@@ -85,11 +84,30 @@ jobs:
             --source-head "${{ github.event.pull_request.head.sha }}" \
             --base-head "${{ github.event.pull_request.base.sha }}"
 
+      - name: Verificar los cinco testigos conservados en WASI
+        run: |
+          python tests/run_oracle_sensitivity.py \
+            --rust-bin rust/target/release/sv-native \
+            --wasm-bin rust/target/wasm32-wasip1/release/sv-native.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --output-dir artifacts/r0-wasm/sensitivity
+
+      - name: Verificar BridgeSet y ensamblaje en nativo y WASI
+        run: |
+          cargo build --manifest-path rust/Cargo.toml -p sv_native --example assembly_probe --release
+          cargo build --manifest-path rust/Cargo.toml -p sv_native --example assembly_probe --release --target wasm32-wasip1
+          python tests/k1_bridge_cases.py \
+            --native-probe rust/target/release/examples/assembly_probe \
+            --wasm-probe rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --output-dir artifacts/r0-wasm/bridge-set
+
       - name: Preparar manifiesto de paridad para navegador
         run: |
           mkdir -p artifacts/r0-browser
           python tests/r0_wasm_browser_manifest.py \
             --native-bin rust/target/release/sv-native \
+            --native-probe rust/target/release/examples/assembly_probe \
             --output artifacts/r0-browser/manifest.json \
             --source-head "${{ github.event.pull_request.head.sha }}" \
             --base-head "${{ github.event.pull_request.base.sha }}"
@@ -139,12 +157,15 @@ jobs:
 
           grep -q 'data-status="pass"' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"valid_ok":14' artifacts/r0-browser/browser-parity-dom.html
-          grep -q '"invalid_ok":77' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"invalid_ok":78' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"closed_domains_ok":6' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"sensitivity_ok":5' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"bridge_ok":18' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |
           sha256sum rust/target/release/sv-native > artifacts/r0-wasm/sv-native.sha256
+          sha256sum rust/target/release/examples/assembly_probe rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm > artifacts/r0-wasm/assembly-probe.sha256
           wc -c rust/target/release/sv-native > artifacts/r0-wasm/sv-native.bytes
           sha256sum rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.sha256
           wc -c rust/target/wasm32-wasip1/release/sv-native.wasm > artifacts/r0-wasm/sv-native-wasi.bytes
@@ -169,6 +190,8 @@ jobs:
             artifacts/r0-wasm/
             artifacts/r0-browser/
             rust/target/release/sv-native
+            rust/target/release/examples/assembly_probe
+            rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm
             rust/target/wasm32-wasip1/release/sv-native.wasm
             rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm
             rust/Cargo.lock

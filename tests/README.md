@@ -1,5 +1,9 @@
 # `tests/` — Baterías y vectores de comprobación del Lenguaje SV
 
+**Estado vigente · RETP-082:** conformidad directa de SV por `run_conformance.py --rust-bin rust/target/debug/sv-native`, CLI/SEC.0 con ese mismo argumento y paridad nativa/WASI/navegador en CI. Se conservan 14 esperados y el corpus negativo; los códigos catalogados y los rechazos textuales efectivos se distinguen en la [adenda de oráculos](../docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907). El compilador Python está retirado.
+
+La descripción fechada de agosto que sigue es un antecedente histórico, no el contrato de ejecución vigente.
+
 **Fecha de resincronización:** 22 de agosto de 2026  
 **Autor:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  

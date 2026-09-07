@@ -1,5 +1,7 @@
 # Núcleo Rust del Lenguaje SV
 
+**Continuidad 07/09/2026 · RETP-082:** los apartados R0-6 siguientes conservan su alcance histórico. El frontend SV y los destinos vigentes están descritos en el [índice principal](../README.md); el compilador Python ha sido retirado y la conformidad usa directamente los esperados comprometidos.
+
 Esta carpeta contiene la realización compartida en Rust del núcleo semántico del Lenguaje SV para destinos nativo y WebAssembly.
 
 La implementación mantiene una sola fuente semántica en `sv_core`. `sv_wasm` es un adaptador material del mismo núcleo y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01, C02, C03 ni de la representación IR 0.3.

@@ -10,25 +10,34 @@ const path = require("node:path");
 const { WASI } = require("node:wasi");
 
 async function main() {
-  if (process.argv.length !== 4) {
-    console.error("uso: node tests/run_wasi_sv_native.js <sv-native.wasm> <archivo.svp>");
+  if (process.argv.length < 4) {
+    console.error("uso: node tests/run_wasi_sv_native.js <binario.wasm> [--profile en|es] <archivo.svp> ...");
     process.exitCode = 2;
     return;
   }
 
   const wasmPath = path.resolve(process.argv[2]);
-  const sourcePath = path.resolve(process.argv[3]);
-  const hostDir = path.dirname(sourcePath);
-  const guestDir = "/sv-input";
-  const guestPath = `${guestDir}/${path.basename(sourcePath)}`;
+  const argumentsIn = process.argv.slice(3);
+  const guestArgs = [];
+  const preopens = {};
+  for (let i = 0; i < argumentsIn.length; i++) {
+    if (argumentsIn[i] === "--profile") {
+      const profile = argumentsIn[++i];
+      if (!["en", "es"].includes(profile)) throw new Error("perfil de prueba inválido");
+      guestArgs.push("--profile", profile);
+    } else {
+      const sourcePath = path.resolve(argumentsIn[i]);
+      const guestDir = `/sv-input-${i}`;
+      preopens[guestDir] = path.dirname(sourcePath);
+      guestArgs.push(`${guestDir}/${path.basename(sourcePath)}`);
+    }
+  }
 
   const wasi = new WASI({
     version: "preview1",
-    args: ["sv-native", guestPath],
+    args: [path.basename(wasmPath), ...guestArgs],
     env: {},
-    preopens: {
-      [guestDir]: hostDir,
-    },
+    preopens,
     returnOnExit: true,
   });
 

@@ -413,3 +413,23 @@ Después sigue N0-04: referencia real de `Horizon.architecture` a `CompositionGr
 RETP-081 y el [acta N0-04](./ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) realizan J-H0. Se precisa la frase abreviada de la radiografía: IR v0.2 declara `ArchitectureId` en Horizon, no literalmente `CompositionGraph`; este último es el referente ahora resuelto y el tipo declarado para Agent. Los antecedentes permanecen identificados. La obligación afecta a todos los horizontes, incluso sin consumidores, sin resolver parcialmente unidades fuente.
 
 El corpus pasa a 91 = 14 válidos + 77 inválidos. Se documenta la corrección de un positivo histórico cuya arquitectura no estaba declarada; no se afirma que sus bytes anteriores sigan admitidos. Tras la promoción sigue la unicidad de `CoupledSpec.bridges` conforme a §7, luego las determinaciones de Horizon.events y Domain. N0-05/N0-07 permanecen en K2; DFL-001/008 y K1-T conservan sus deudas.
+
+<a id="cierre-bridgeset-20260907"></a>
+## 15. Cierre incremental de unicidad de BridgeSet · 07/09/2026
+
+**RETP-2026-083. Entrada:** main `a09b9efef51f88de29048b9b35e7ac085dc0918f`, PR #68, y retirada Python RETP-082 conservada en commit separado. Se reciben los Pilares RETP-073, perfiles RETP-075, transición §§12–23 y la obligación §7/K1.1–5 de esta radiografía.
+
+La sonda SON-N0-12 se convierte en juicio J-B0, [IR 0.3 §6.5](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#bridgeset-j-b0), por cotejo de la definición `BridgeSet` y J1.2 de la IR heredada. No se encontró contradicción entre su carácter de subconjunto y el límite explícito del conjunto vacío. La lista superficial conserva el orden de las posiciones válidas; una repetición se rechaza sin deduplicación. No se generaliza esta decisión a `Horizon.events`.
+
+| Comprobación | Evidencia y límite |
+|---|---|
+| Contraejemplo antes/después | La fuente nueva `coupledspec_puente_repetido.svp`, con `[3,3]`, era admitida por el binario nativo del corte a09b9ef. La candidata la rechaza antes de admitir IR, identificando `CC` y la posición `3`. |
+| Juicio nativo | Tres pruebas de integración desde fuentes SV: repetición/identidad Nat, conjunto vacío/orden y precedencia del rango. No se modifica el emisor ni otra familia de objetos. |
+| Perfiles y ensamblaje | 18 testigos sintéticos en `tests/k1_bridge_cases.py`: ES/EN, vacío, orden `[9,1,3]`, repetición, `03/3`, rango y ensamblaje mixto en ambas orientaciones y órdenes. El auxiliar `assembly_probe` sólo transporta fuentes a la API pública existente; no amplía la CLI productiva. |
+| Oráculo independiente | Las posiciones admitidas y el diagnóstico de rechazo están prescritos por cada testigo. La comparación nativo/WASM se efectúa después de esa comprobación. El corpus pasa a 92 = 14 válidos + 78 inválidos; los 14 esperados y 91 fuentes anteriores permanecen intactos. |
+| Destinos | Esos mismos 18 testigos se exigen en nativo, WASI y navegador real; la batería histórica y las cinco sondas de sensibilidad se conservan. La emisión nativa previa de los 14 positivos y 77 rechazos se compara literalmente con la candidata. |
+| PT01/PT02/PT04/PT13/PT14 | Identidad de fuente/candidata, perfiles y límites diagnósticos; corpus, comandos y artefactos de los cuatro flujos. Laboratorio 016/018 reutilizado dentro de su alcance, sin nueva plataforma ni aumento retrospectivo de pruebas. |
+
+**Promoción:** cierre limitado efectivo tras verificar los cuatro flujos sobre la candidata exacta e integrarla. Los identificadores de los flujos se mantienen; los artefactos incluyen salidas y huellas de los ejecutables utilizados. La PR identifica la cabeza, su base y los resultados efectivos. Generar un manifiesto local no acredita ejecución WASM.
+
+**Relevo:** sigue K1 por la decisión sobre multiplicidad de `Horizon.events`, después el mínimo de `Domain` y las condiciones de K1-T conforme a §7 y transición §14. DFL-010 conserva la pérdida de campos opcionales antes de F. DFL-009 se recibe en el retorno del primer universo CYB (fila 9). N0-05/N0-07 conservan K2. No se abre F ni se cierra núcleo, álgebra o R2/R3/R4.

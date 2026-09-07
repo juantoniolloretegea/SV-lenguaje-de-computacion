@@ -6,7 +6,7 @@ import unittest
 
 from oracle_support import (OracleError, DuplicateJsonMember, ordered_json,
                             assert_json_equal, assert_bytes_equal, assert_success,
-                            assert_python_rejection, assert_rust_rejection,
+                            assert_rust_rejection,
                             cli_payload, run, assert_json_roundtrip)
 
 
@@ -74,11 +74,6 @@ class OracleTests(unittest.TestCase):
         proc = run([sys.executable, '-c', 'import sys; sys.stdout.buffer.write(b"a\\r\\nb")'])
         self.assertEqual(proc.stdout, b'a\r\nb')
 
-    def test_expected_python_diagnostic_not_identifier(self):
-        assert_python_rejection(result(err=b'ERROR: E006 (UndeclaredReference): E999\n'), 'E006')
-        with self.assertRaises(OracleError):
-            assert_python_rejection(result(err=b'ERROR: E999 (Wrong): E006\n'), 'E006')
-
     def test_controlled_rust_rejection(self):
         assert_rust_rejection(result(err=b'SVP no admitido: InvalidProgram("CellSpec X: b debe ser >= 3")\n'),
                               'bad_b_value')
@@ -86,7 +81,6 @@ class OracleTests(unittest.TestCase):
     def test_internal_panic_signal_and_host_failure_are_not_rejections(self):
         for rc in [0, 2, 101, -11, 137]:
             for check, err, arg in [
-                (assert_python_rejection, b'ERROR: E002 (InvalidBValue): b\n', 'E002'),
                 (assert_rust_rejection, b'SVP no admitido: InvalidProgram("b debe ser >= 3")\n', 'bad_b_value')]:
                 with self.subTest(rc=rc), self.assertRaises(OracleError):
                     check(result(rc=rc, err=err), arg)
@@ -94,13 +88,11 @@ class OracleTests(unittest.TestCase):
     def test_generic_or_wrong_rejection_is_not_accepted(self):
         for err in [b'', b'\xff', b'ERROR INTERNO: E002\n', b'panic: E002\n', b'ERROR: E004 (InvalidCodomain): b\n']:
             with self.subTest(err=err), self.assertRaises(OracleError):
-                assert_python_rejection(result(err=err), 'E002')
+                assert_rust_rejection(result(err=err), 'bad_b_value')
         with self.assertRaises(OracleError):
             assert_rust_rejection(result(err=b'SVP no admitido: InvalidProgram("otro fallo")\n'), 'bad_b_value')
 
     def test_rejection_with_ir_is_failure(self):
-        with self.assertRaises(OracleError):
-            assert_python_rejection(result(out=b'{}', err=b'ERROR: E002 (InvalidBValue): b\n'), 'E002')
         with self.assertRaises(OracleError):
             assert_rust_rejection(result(out=b'{}', err=b'SVP no admitido: InvalidProgram("b debe ser >= 3")\n'),
                                   'bad_b_value')

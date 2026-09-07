@@ -109,19 +109,10 @@ def diagnostic_text(raw: bytes) -> str:
         raise OracleError("diagnóstico no UTF-8") from exc
 
 
-def assert_python_rejection(proc, expected_code: str) -> None:
-    if proc.returncode != 1 or proc.stdout:
-        raise OracleError(f"rechazo Python inválido: rc={proc.returncode}; stdout={proc.stdout!r}")
-    text = diagnostic_text(proc.stderr)
-    if not re.fullmatch(r"ERROR: " + re.escape(expected_code) + r" \([A-Za-z0-9_]+\)[^\n]*\n", text):
-        raise OracleError(f"diagnóstico Python distinto de {expected_code}: {text!r}")
-    if "ERROR INTERNO:" in text or "Traceback" in text:
-        raise OracleError("fallo interno presentado como rechazo")
-
-
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
-# No se equiparan a los códigos Python ni constituyen un nuevo catálogo del núcleo.
+# No se equiparan automáticamente a los códigos del catálogo ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "coupledspec_puente_repetido": "CoupledSpec CC: posición puente repetida: 3",
     "horizon_architecture_ausente": "referencia no declarada: Missing",
     "horizon_architecture_tipo_incorrecto": "K: se esperaba CompositionGraph",
     "agent_arquitecturas_reales_distintas": "Agent AG: architecture incompatible con Domain",
@@ -204,23 +195,26 @@ RUST_REJECTION_TOKENS = {
 }
 
 
-def assert_rust_rejection(proc, case: str) -> str:
+def assert_rejection(proc, token: str) -> str:
     if proc.returncode != 1 or proc.stdout:
         raise OracleError(f"rechazo Rust inválido: rc={proc.returncode}; stdout={proc.stdout!r}")
     text = diagnostic_text(proc.stderr)
     # Un pánico (101), señal, fallo de carga (2), vacío o excepción no satisfacen esto.
     if not re.fullmatch(r'SVP no admitido: (?:InvalidProgram\("[^\n]+"\)|Frontend\([^\n]+\))\n', text):
         raise OracleError(f"no es un rechazo CompileError controlado: {text!r}")
-    token = RUST_REJECTION_TOKENS[case]
     if token not in text:
         raise OracleError(f"falta identidad textual {token!r}: {text!r}")
     return text[len("SVP no admitido: "):-1]
 
 
+def assert_rust_rejection(proc, case: str) -> str:
+    return assert_rejection(proc, RUST_REJECTION_TOKENS[case])
+
+
 def check_invalid_corpus(paths) -> None:
-    from run_conformance import EXPECTED_INVALID_CODES
+    from run_conformance import EXPECTED_OBLIGATIONS
     names = {path.name for path in paths}
-    if not names or names != set(EXPECTED_INVALID_CODES):
-        raise OracleError("corpus inválido vacío o distinto del catálogo Python")
+    if not names or names != set(EXPECTED_OBLIGATIONS):
+        raise OracleError("corpus inválido vacío o distinto del catálogo de obligaciones")
     if {Path(name).stem for name in names} != set(RUST_REJECTION_TOKENS):
         raise OracleError("corpus inválido distinto de las identidades textuales Rust")

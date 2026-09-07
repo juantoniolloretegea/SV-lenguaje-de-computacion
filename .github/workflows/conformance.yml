@@ -9,34 +9,29 @@ permissions:
 
 jobs:
   conformance:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Obtener revisión
         uses: actions/checkout@v4
 
-      - name: Comprobar sintaxis Python
-        run: python3 -m py_compile src/*.py tests/run_conformance.py
+      - name: Preparar realización nativa identificada
+        run: |
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          rustc --version
+          cargo --version
+          cargo build --manifest-path rust/Cargo.toml -p sv_native
 
-      - name: Verificar que los oráculos detectan las infracciones
+      - name: Verificar sensibilidad del observador de resultados
         run: python3 -m unittest discover -s tests -p 'test_oracle_support.py' -v
 
-      - name: Verificar relación total CellSpec–OutputSemantics–Codomain
-        run: python3 -m unittest discover -s tests -p 'test_output_semantics_totality.py' -v
-
-      - name: Verificar conservación de miembros de la proyección JSON
-        run: python3 -m unittest discover -s tests -p 'test_json_projection.py' -v
-
-      - name: Verificar referencia real de arquitectura
-        run: python3 -m unittest discover -s tests -p 'test_horizon_architecture.py' -v
-
-      - name: Verificar CLI y determinismo literal
+      - name: Verificar contratos de la CLI y testigos SEC-0B
         run: |
-          python3 tests/run_cli_smoke.py
-          python3 tests/run_sec0_smoke.py
-          python3 tests/run_e006_characterization.py
+          python3 tests/run_cli_smoke.py --rust-bin rust/target/debug/sv-native
+          python3 tests/run_sec0_smoke.py --rust-bin rust/target/debug/sv-native
 
-      - name: Ejecutar batería contra oráculos comprometidos
-        run: python3 tests/run_conformance.py
+      - name: Verificar fuentes SV frente a oráculos comprometidos
+        run: python3 tests/run_conformance.py --rust-bin rust/target/debug/sv-native
 
-      - name: Verificar que la batería no modifica los oráculos
-        run: git diff --exit-code -- tests/conformance/valid
+      - name: Verificar que la batería conserva el corpus y los esperados
+        run: git diff --exit-code -- tests/conformance

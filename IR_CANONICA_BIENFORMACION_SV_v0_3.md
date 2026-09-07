@@ -9,7 +9,7 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
-**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3) y N0-04 (§6.4), con alcance y diagnóstico expresos
+**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3) N0-04 (§6.4) y BridgeSet (§6.5), con alcance y diagnóstico expresos
 
 ---
 
@@ -251,6 +251,7 @@ Esta versión añade o refuerza, en el radio implementado, los siguientes juicio
 J-K0  Codomain contiene al menos un miembro y no contiene miembros repetidos.
 J-K1  Cada CellSpec enlaza una interpretación única para cada miembro de su Codomain, sin claves ajenas.
 J-J0  La proyección de un programa admitido no contiene miembros homónimos dentro de ningún objeto JSON.
+J-B0  CoupledSpec.bridges no repite posiciones como valores Nat.
 J-H0  Horizon.architecture resuelve un CompositionGraph declarado y bien formado.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
@@ -351,6 +352,25 @@ La corrección no crea una arquitectura, no completa el dominio ni interpreta lo
 
 ---
 
+<a id="bridgeset-j-b0"></a>
+### 6.5. Unicidad de posiciones de `BridgeSet` (J-B0)
+
+IR v0.2, definición de `CoupledSpec` y J1.2, declara `bridges : BridgeSet`, subconjunto de `{1,…,n}`. La lista superficial representa ese conjunto: dos ocurrencias de la misma posición no constituyen dos puentes distintos. Para admitir una especificación acoplable:
+
+```text
+J-B0: para todo i != j, bridges[i] != bridges[j] como valores Nat.
+```
+
+Se conserva la comprobación de rango `1 ≤ posición ≤ n`. El conjunto vacío sigue admitido con el límite de J1.2: no participa en transmisión en serie. Las posiciones válidas conservan su orden declarado en la IR y su proyección. No se ordena ni deduplica la entrada, ni se repara una infracción. `03` y `3` denotan el mismo Nat según la representación numérica vigente; su coexistencia se rechaza.
+
+El juicio se aplica al programa completo, incluidas unidades SVP-ES/SVP-EN ensambladas con referencias adelantadas. Se conserva la precedencia de la referencia tipada a `CellSpec` y de los rechazos de rango; la unicidad se comprueba después de recorrer el rango completo de esa lista. Un primer rechazo no acredita las obligaciones restantes.
+
+La realización emite el rechazo textual controlado `CoupledSpec <id>: posición puente repetida: <Nat>`. No se asigna por analogía un código nuevo: el catálogo efectivo y su concordancia permanecen bajo DFL-001. El caso del corpus se identifica por la obligación `J1.2/BridgeSet`, separada del observable. Gramática 0.2, esquema IR 0.3 y proyección 0.1.0 conservan sus versiones; el cambio impone una propiedad ya constituida, sin añadir un campo ni una operación.
+
+RETP-083 y la [radiografía §15](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) delimitan evidencia y relevo. La retirada Python de RETP-082 conserva en Git sus antecedentes; las menciones a ambas realizaciones en los cierres anteriores describen esos cortes históricos.
+
+---
+
 ## 7. Elementos no modificados
 
 La versión 0.3 no introduce ni resuelve:
@@ -371,18 +391,19 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La implementación de referencia correspondiente a esta versión dispone de una batería de 91 casos:
+La conformidad vigente de SV dispone de una batería de 92 casos:
 
 ```text
 14 válidos
-77 inválidos
-91 total
+78 inválidos
+92 total
 ```
 
-Los casos válidos comparan la salida contra IR canónica comprometida. Los inválidos exigen el código diagnóstico declarado. La batería incluye contraejemplos específicos para:
+Los casos válidos comparan directamente la proyección nativa con los esperados comprometidos mediante el observador de pares JSON ordenados. Los inválidos exigen rechazo controlado y el texto esperado para su obligación; no se afirma que el destino emita todos los códigos del catálogo (DFL-001, RETP-082). La batería incluye contraejemplos específicos para:
 
 - estados de admisibilidad heredados;
 - `Codomain` con un miembro repetido;
+- `CoupledSpec.bridges` con una posición repetida;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
 - horizonte con arquitectura inexistente o de tipo incorrecto y agente con dos arquitecturas reales distintas;

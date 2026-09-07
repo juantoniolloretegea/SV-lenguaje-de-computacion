@@ -50,6 +50,8 @@ La continuidad documental se organiza así:
 | RETP-2026-079 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-02 | cierre relacional delimitado; promoción por candidata exacta |
 | RETP-2026-080 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-03 | cierre de proyección delimitado; promoción por candidata exacta |
 | RETP-2026-081 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-04 | cierre referencial delimitado; promoción por candidata exacta |
+| RETP-2026-082 | 07/09/2026 | NO_CONSTA | RETIRADA_GOBERNADA_Y_CONTINUIDAD | Lenguaje SV / oráculos / K1 | retirada delimitada; promoción por candidata exacta |
+| RETP-2026-083 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / BridgeSet | cierre limitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -322,6 +324,20 @@ La continuidad documental se organiza así:
 - **Evidencia:** [acta N0-04](../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md), corpus 91/91, cuatro pruebas Python y cinco Rust; regresiones previas correctas. Trece positivos y 74 negativos conservan salidas literales por vía; se declara el positivo histórico colgante y la corrección de su fuente/esperado. Cinco sondas de sensibilidad conservadas.
 - **Perfiles:** PT04/PT13/PT14 con PT01/PT02; EN Python, ES/EN y ensamblaje mixto Rust. Laboratorio 016/018 conserva alcance; no se promueve otra realización tecnológica ni se amplían retrospectivamente sus pruebas.
 - **Límites y relevo:** DFL-001/008 y resto de K1/K1-T abiertos. Cierre efectivo tras los cuatro flujos correctos y promoción del candidato exacto. [Transición §22](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-04-20260907): sigue unicidad de CoupledSpec.bridges bajo BridgeSet; N0-05/N0-07 permanecen en K2. No se consolida el núcleo ni se abre una garantía material.
+
+### RETP-2026-082 — Retirada Python y continuidad K1
+
+- **Entrada y fuente:** main a09b9ef, PR #68; decisión humana, Pilares, perfiles y transición §22. El acto queda en la [adenda de oráculos §9](ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907).
+- **Cambio y evidencia:** retirada del compilador y API Python, conservación de 14 esperados/77 negativos y núcleo en este commit. Conformidad directa 91/91, 18 pruebas del observador, CLI, 3 SEC.0 y 5 sondas nativas; WASI/navegador exigidos sobre la candidata exacta antes de integrar. Historial enlazado, sin nuevo oráculo generado por la realización.
+- **Límites y relevo:** DFL-001 abierta; DFL-008 sale de la vía activa por retirada, no por corrección histórica. DFL-010 conserva el defecto compartido de campos repetidos. DFL-009 difiere servicio nativo y Cloudflare/Workers u otros hasta fila 9, retorno del primer universo CYB. Continúa K1 por BridgeSet, no F. PT01/PT02/PT04/PT13/PT14; no se promueve una plataforma ni se amplía el laboratorio histórico.
+- **Estado:** efectivo tras los cuatro flujos correctos e integración de la candidata identificada en la PR correspondiente.
+
+### RETP-2026-083 — Unicidad de BridgeSet y relevo K1
+
+- **Entrada y fundamento:** a09b9ef, PR #68, retirada RETP-082 en commit separado; definición de BridgeSet y J1.2, Pilares, perfiles y secuencia §14. J-B0 se precisa en IR v0.3 §6.5.
+- **Cambio y evidencia:** se rechazan repeticiones Nat sin deduplicar ni ordenar; vacío y precedencia del rango conservados. Tres pruebas intrínsecas, corpus 92/92 y 18 testigos ES/EN/ensamblaje; comparación literal de los 91 casos anteriores y 14 esperados intactos. Nativo/WASI/navegador exigidos antes de integrar la candidata exacta.
+- **Límites:** sin nuevos campos, operaciones, versiones o código diagnóstico; DFL-001 sigue abierta. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación de evidencia histórica del laboratorio.
+- **Decisión y relevo:** cierre limitado efectivo tras cuatro flujos correctos e integración. [Radiografía §15](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) y transición §24 fijan K1/Horizon.events; F pendiente. DFL-009 conserva su recepción al retornar del primer universo CYB.
 
 ## 4. Estado de continuidad
 
