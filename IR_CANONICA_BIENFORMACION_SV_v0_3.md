@@ -9,7 +9,7 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
-**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3) N0-04 (§6.4) y BridgeSet (§6.5), con alcance y diagnóstico expresos
+**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3), N0-04 (§6.4), BridgeSet (§6.5) y tipos de suceso del horizonte (§6.6), con alcance y diagnóstico expresos
 
 ---
 
@@ -253,6 +253,7 @@ J-K1  Cada CellSpec enlaza una interpretación única para cada miembro de su Co
 J-J0  La proyección de un programa admitido no contiene miembros homónimos dentro de ningún objeto JSON.
 J-B0  CoupledSpec.bridges no repite posiciones como valores Nat.
 J-H0  Horizon.architecture resuelve un CompositionGraph declarado y bien formado.
+J-H1  Horizon.events declara cada identidad de tipo de suceso una sola vez por horizonte.
 J-A0  AdmissibilitySpec usa exactamente Ok/Degraded/NotAdmitted.
 J-A1  Fallo técnico o NotAdmitted no fabrican Tri.
 J-R0  resolve identifica un estado evaluable y una posición real.
@@ -371,6 +372,23 @@ RETP-083 y la [radiografía §15](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_IN
 
 ---
 
+<a id="horizon-events-j-h1"></a>
+### 6.6. Tipos declarados y multiplicidad de `Horizon.events` (J-H1)
+
+El [Documento III, release 1](https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iii-horizonte-de-sucesos-y-reevaluacion-discreta/release/1), §§3.2–3.5 y 4.1, distingue el horizonte de tipos declarados de los sucesos instanciados registrados en los datos de transición. IR v0.2, nivel 3, conserva esa distinción: `Horizon.events : [EventType]` representa ℋ(𝒜), mientras `TransitionData.events : [(EventType, Tri)]` porta el dato νₙ. Los corchetes de la superficie son una forma de representación; no convierten el horizonte en una secuencia de episodios observados.
+
+Se fija la regla de representación **J-H1**: dentro de un `Horizon` admitido, cada identidad de tipo de suceso aparece una sola vez. `[B,A,B]` se rechaza; no se deduplica a `[B,A]`. El orden explícito de una lista válida se conserva en la IR y la proyección, sin atribuirle prioridad causal o cronológica. El núcleo no elige los tipos relevantes ni identifica por inferencia nombres distintos.
+
+La unicidad es local a cada horizonte y usa la identidad exacta del identificador admitido por su perfil. Dos horizontes pueden declarar el mismo tipo. Un tipo puede volver a estar instanciado en datos de transición diferentes, con su valor ternario propio. Esa recurrencia no se representa duplicando la declaración del tipo en el horizonte. La representación o el estatuto de varios pares del mismo tipo dentro de **un único** `TransitionData` no se resuelve mediante este juicio.
+
+J-H1 se comprueba sobre el programa completo o ensamblado, también en horizontes sin consumidores y referencias adelantadas. Se aplica después de los juicios previos, incluido J-H0, para conservar sus diagnósticos. Un primer rechazo no certifica las obligaciones restantes. La realización emite `Horizon <id>: tipo de suceso repetido: <tipo>` como rechazo textual controlado; no se le asigna por analogía un código catalogado. El oráculo identifica la obligación `J-H1/Horizon.events`; DFL-001 conserva la concordancia diagnóstica pendiente.
+
+Se mantiene el rechazo previo del horizonte vacío dentro del alcance material vigente; este acto no lo deriva del carácter de conjunto ni constituye una axiomática completa de horizontes. El Documento III §9 deja abierta esa axiomática. Tampoco se materializan por J-H1 el operador inducido, la ejecución de trayectorias, el contrato de dominio o una equivalencia tiempo–suceso. Gramática 0.2, esquema IR 0.3 y proyección 0.1.0 conservan sus versiones y su estructura.
+
+La [radiografía §16](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#horizon-events-20260907), RETP-084, conserva el cotejo, los antecedentes y la evidencia de perfiles/destinos.
+
+---
+
 ## 7. Elementos no modificados
 
 La versión 0.3 no introduce ni resuelve:
@@ -391,12 +409,12 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La conformidad vigente de SV dispone de una batería de 92 casos:
+La conformidad vigente de SV dispone de una batería de 93 casos:
 
 ```text
 14 válidos
-78 inválidos
-92 total
+79 inválidos
+93 total
 ```
 
 Los casos válidos comparan directamente la proyección nativa con los esperados comprometidos mediante el observador de pares JSON ordenados. Los inválidos exigen rechazo controlado y el texto esperado para su obligación; no se afirma que el destino emita todos los códigos del catálogo (DFL-001, RETP-082). La batería incluye contraejemplos específicos para:
@@ -404,6 +422,7 @@ Los casos válidos comparan directamente la proyección nativa con los esperados
 - estados de admisibilidad heredados;
 - `Codomain` con un miembro repetido;
 - `CoupledSpec.bridges` con una posición repetida;
+- `Horizon.events` con un tipo de suceso repetido;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
 - horizonte con arquitectura inexistente o de tipo incorrecto y agente con dos arquitecturas reales distintas;

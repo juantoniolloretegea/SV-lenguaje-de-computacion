@@ -45,23 +45,26 @@ def verify(case, proc):
         raise AssertionError(f'BridgeSet perdido o reordenado: {actual!r}')
     return cli_payload(proc.stdout).decode('utf-8')
 
-def prepare(native_probe, outdir, wasm_probe=None, wasi_runner=None):
+def prepare(native_probe, outdir, wasm_probe=None, wasi_runner=None, *, cases=None, verify_case=None):
+    # Shared process/byte transport; each bank supplies its own SV obligations.
+    if cases is None: cases = sources()
+    if verify_case is None: verify_case = verify
     outdir = Path(outdir).resolve(); outdir.mkdir(parents=True, exist_ok=True)
     result = []
-    for case in sources():
+    for case in cases:
         directory = outdir / case['name']; directory.mkdir(exist_ok=True)
         arguments = []
         for unit in case['units']:
             path = directory / unit['file_name']; path.write_bytes(unit['source'].encode('utf-8'))
             arguments += ['--profile', unit['profile'], str(path)]
         native = run([str(Path(native_probe).resolve()), *arguments])
-        payload = verify(case, native)
+        payload = verify_case(case, native)
         (directory / 'native.stdout').write_bytes(native.stdout)
         (directory / 'native.stderr').write_bytes(native.stderr)
         record = dict(case, expected_payload=payload, error=bool(case['diagnostic']), native_command=native.args)
         if wasm_probe:
             wasi = run(['node','--no-warnings',str(Path(wasi_runner).resolve()),str(Path(wasm_probe).resolve()),*arguments])
-            verify(case, wasi)
+            verify_case(case, wasi)
             (directory / 'wasi.stdout').write_bytes(wasi.stdout)
             (directory / 'wasi.stderr').write_bytes(wasi.stderr)
             if (native.returncode,native.stdout,native.stderr) != (wasi.returncode,wasi.stdout,wasi.stderr):

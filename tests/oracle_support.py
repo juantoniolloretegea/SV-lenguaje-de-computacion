@@ -112,6 +112,7 @@ def diagnostic_text(raw: bytes) -> str:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan automáticamente a los códigos del catálogo ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "horizon_tipo_suceso_repetido": "Horizon H: tipo de suceso repetido: B",
     "coupledspec_puente_repetido": "CoupledSpec CC: posición puente repetida: 3",
     "horizon_architecture_ausente": "referencia no declarada: Missing",
     "horizon_architecture_tipo_incorrecto": "K: se esperaba CompositionGraph",

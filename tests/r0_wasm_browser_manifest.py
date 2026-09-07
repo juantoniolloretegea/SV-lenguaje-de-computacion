@@ -16,6 +16,7 @@ from pathlib import Path
 import sys
 from run_oracle_sensitivity import sources as sensitivity_sources, verify as verify_sensitivity
 from k1_bridge_cases import prepare as prepare_bridges
+from k1_horizon_cases import prepare as prepare_horizons
 
 from oracle_support import (run, assert_success, assert_json_equal,
                             assert_rust_rejection,
@@ -112,6 +113,7 @@ def main() -> int:
             failures.append(f'SENSITIVITY {name}: {exc}')
 
     bridge_cases = prepare_bridges(args.native_probe, args.output.parent / 'bridge-set')
+    horizon_cases = prepare_horizons(args.native_probe, args.output.parent / 'horizon-types')
     result = {
         "schema": "sv-r0-browser-parity-manifest-v3",
         "source_head": args.source_head,
@@ -124,6 +126,7 @@ def main() -> int:
         "cases": cases,
         "sensitivity_cases": sensitivity_cases,
         "bridge_cases": bridge_cases,
+        "horizon_cases": horizon_cases,
         "failures": failures,
     }
 

@@ -94,6 +94,18 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
                 matches!(kind, IrObjectKind::CompositionGraph { .. }))?;
         }
     }
+    // J-H1: Horizon enumerates declared event types, not their occurrences.
+    // Preserve earlier diagnostics and reject repetition without normalizing.
+    for object in program.objects() {
+        if let IrObjectKind::Horizon { events, .. } = object.kind() {
+            let mut seen = BTreeSet::new();
+            for event in events {
+                if !seen.insert(event.as_str()) {
+                    return Err(format!("Horizon {}: tipo de suceso repetido: {event}", object.name()));
+                }
+            }
+        }
+    }
     Ok(())
 }
 

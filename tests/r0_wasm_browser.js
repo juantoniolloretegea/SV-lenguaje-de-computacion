@@ -204,6 +204,17 @@ async function main() {
       } else { bridgeOk++; }
     }
   }
+  let horizonOk = 0;
+  if (!manifest.horizon_cases || manifest.horizon_cases.length !== 20) {
+    failures.push("banco Horizon ausente o incompleto");
+  } else {
+    for (const probe of manifest.horizon_cases) {
+      const result = compileUnits(exports, probe.units);
+      if (result.error !== probe.error || result.text !== probe.expected_payload) {
+        failures.push(`Horizon ${probe.name}: divergencia frente al nativo comprobado`);
+      } else { horizonOk++; }
+    }
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
@@ -213,6 +224,7 @@ async function main() {
     closed_domains_ok: closedDomainsOk,
     sensitivity_ok: sensitivityOk,
     bridge_ok: bridgeOk,
+    horizon_ok: horizonOk,
     failures,
   };
 

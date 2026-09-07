@@ -52,6 +52,7 @@ La continuidad documental se organiza así:
 | RETP-2026-081 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-04 | cierre referencial delimitado; promoción por candidata exacta |
 | RETP-2026-082 | 07/09/2026 | NO_CONSTA | RETIRADA_GOBERNADA_Y_CONTINUIDAD | Lenguaje SV / oráculos / K1 | retirada delimitada; promoción por candidata exacta |
 | RETP-2026-083 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / BridgeSet | cierre limitado; promoción por candidata exacta |
+| RETP-2026-084 | 07/09/2026 | NO_CONSTA | DICTAMEN_Y_CIERRE_INTRINSECO | Lenguaje SV / K1 / Horizon.events | cierre limitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -338,6 +339,13 @@ La continuidad documental se organiza así:
 - **Cambio y evidencia:** se rechazan repeticiones Nat sin deduplicar ni ordenar; vacío y precedencia del rango conservados. Tres pruebas intrínsecas, corpus 92/92 y 18 testigos ES/EN/ensamblaje; comparación literal de los 91 casos anteriores y 14 esperados intactos. Nativo/WASI/navegador exigidos antes de integrar la candidata exacta.
 - **Límites:** sin nuevos campos, operaciones, versiones o código diagnóstico; DFL-001 sigue abierta. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación de evidencia histórica del laboratorio.
 - **Decisión y relevo:** cierre limitado efectivo tras cuatro flujos correctos e integración. [Radiografía §15](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) y transición §24 fijan K1/Horizon.events; F pendiente. DFL-009 conserva su recepción al retornar del primer universo CYB.
+
+### RETP-2026-084 — Tipos declarados del horizonte y multiplicidad
+
+- **Entrada:** main 16232b6, PR #69; Documento III release1 §§3.2–3.5/4.1/9, IR v0.2 nivel3/J4.3, Pilares, perfiles y secuencia. [Radiografía §16](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#horizon-events-20260907) conserva el cotejo.
+- **Decisión:** J-H1 exige unicidad local de tipos en Horizon.events; rechaza repeticiones sin ordenar ni deduplicar. Instancias en datos distintos y tipos compartidos entre horizontes permanecen. No se modifica TransitionData ni se deduce una axiomática de horizonte vacío.
+- **Evidencia:** 93/93, tres pruebas de integración, 20 testigos ES/EN/ensamblaje; 92 observables previos y 14 esperados conservados. El testigo N0-04 [B,A,B] se sustituye explícitamente por [B,A] para su comprobación de orden, y pasa al nuevo rechazo. Los cuatro flujos exigen nativo/WASI/navegador sobre la candidata exacta.
+- **Estado y relevo:** efectivo tras integración verificada; transición §25 fija K1/Domain.parameters y multiplicidad de parameter_id. DFL-001/005/010 y K1-T conservan alcance; F pendiente. DFL-009 sigue diferida al retorno del primer universo CYB. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación retrospectiva de laboratorio.
 
 ## 4. Estado de continuidad
 

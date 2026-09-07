@@ -14,6 +14,7 @@ on:
       - "tests/run_wasi_sv_native.js"
       - "tests/r0_wasm_browser_manifest.py"
       - "tests/k1_bridge_cases.py"
+      - "tests/k1_horizon_cases.py"
       - "tests/r0_wasm_browser.html"
       - "tests/r0_wasm_browser.js"
       - "tests/conformance/valid/**"
@@ -92,7 +93,7 @@ jobs:
             --wasi-runner tests/run_wasi_sv_native.js \
             --output-dir artifacts/r0-wasm/sensitivity
 
-      - name: Verificar BridgeSet y ensamblaje en nativo y WASI
+      - name: Verificar BridgeSet, Horizon y ensamblaje en nativo y WASI
         run: |
           cargo build --manifest-path rust/Cargo.toml -p sv_native --example assembly_probe --release
           cargo build --manifest-path rust/Cargo.toml -p sv_native --example assembly_probe --release --target wasm32-wasip1
@@ -101,6 +102,11 @@ jobs:
             --wasm-probe rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm \
             --wasi-runner tests/run_wasi_sv_native.js \
             --output-dir artifacts/r0-wasm/bridge-set
+          python tests/k1_horizon_cases.py \
+            --native-probe rust/target/release/examples/assembly_probe \
+            --wasm-probe rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm \
+            --wasi-runner tests/run_wasi_sv_native.js \
+            --output-dir artifacts/r0-wasm/horizon-types
 
       - name: Preparar manifiesto de paridad para navegador
         run: |
@@ -157,10 +163,11 @@ jobs:
 
           grep -q 'data-status="pass"' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"valid_ok":14' artifacts/r0-browser/browser-parity-dom.html
-          grep -q '"invalid_ok":78' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"invalid_ok":79' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"closed_domains_ok":6' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"sensitivity_ok":5' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"bridge_ok":18' artifacts/r0-browser/browser-parity-dom.html
+          grep -q '"horizon_ok":20' artifacts/r0-browser/browser-parity-dom.html
 
       - name: Registrar identidad de los artefactos
         run: |
