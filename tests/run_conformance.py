@@ -11,8 +11,10 @@ import argparse
 from pathlib import Path
 import sys
 from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
-                            assert_rust_rejection,
+                            assert_rust_rejection, RUST_REJECTION_TOKENS,
                             check_invalid_corpus)
+from run_row7_transitiondata_conformance import EXPECTED as ROW7_REJECTION_TOKENS
+
 EXPECTED_OBLIGATIONS = {
     "semantic_relation_table_repetida.svp": "Gramática0.2/§14",
     "semantic_relation_constraints_repetida.svp": "Gramática0.2/§14",
@@ -111,6 +113,12 @@ EXPECTED_OBLIGATIONS = {
     "frame_supervision_externa.svp": "E308",
     "frame_criticality_no_producible.svp": "E308",
 }
+
+# Los nueve testigos compartidos conservan una sola identidad textual, usada
+# tanto por la conformidad general como por la comprobación causal acotada.
+RUST_REJECTION_TOKENS.update(
+    {Path(name).stem: token for name, token in ROW7_REJECTION_TOKENS.items()}
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
