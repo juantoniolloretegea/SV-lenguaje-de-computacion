@@ -489,3 +489,41 @@ El cotejo completo identifica: adición del enlace a la demostración audiovisua
 **Dictamen y límite de evidencia:** en el texto identificado del autor no se detecta una obligación normativa nueva omitida por J-H1 ni una cuestión que la actualización haya cerrado y aquí se mantuviera indebidamente abierta. Sí se subsanan la referencia obsoleta y la correspondencia notacional heredada. La consulta directa de la página editorial, tanto desde el DOI como de Release 2, devolvió HTTP 403; este cotejo acredita el contenido del repositorio identificado, no identidad literal con la página editorial servida hoy ni ausencia de una edición posterior no reflejada allí. El DOI queda como puerta estable y el commit como identidad de la evidencia consultada.
 
 **Verificación y relevo:** cambio documental; código, gramática ejecutable, esquema, corpus, esperados y workflows conservan los blobs de la PR #70. Se revisan cuatro sustituciones de URL, notación, enlaces locales y concordancia RETP, y se exige el flujo Conformidad SVP sobre esta candidata. La paridad nativo/WASI/navegador de PR #70 conserva su corte y no se vuelve a contabilizar como una prueba nueva. Continúa K1 por `Domain.parameters` y `parameter_id`; F, DFL-001/005/010 y K1-T mantienen sus puertas. DFL-009 sigue diferida al retorno del primer universo CYB (fila 9).
+
+<a id="domain-parameters-20260907"></a>
+## 17. Dictamen K1 sobre Domain: unicidad nominal y ligadura aún no representada · 07/09/2026
+
+**RETP-086; entrada:** main `4536bd051cc58bf183b8b9efa5a5f818f18090f9`, PR #71 integrada. Leídos íntegramente AGENTS, Pilares RETP-073, perfiles RETP-075 y transición con su §25; también N0-06/§7, IR v0.2 nivel 4, IR v0.3, Gramática v0.1 §5.6 conservada por v0.2, contrato mínimo de interfaces y DFL-005. El expediente continúa la fila 3/K1. El acceso editorial queda aplazado por decisión humana; no se declara recuperada otra edición web.
+
+### 17.1. Fuente y resultado del cotejo
+
+El texto del autor en `SV-matematica-semantica@b8fd32978292d25adf9b87cf71e409005dce642c` identifica:
+
+- [Documento V §5.1](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/composicion/V_invariantes_agentes_operador_consulta.md), blob `d609810b4072a4b61e29ef10f4d26751862b0c86`: 𝒫 es un conjunto de instancias `(C,j)`, no de meros números `j`.
+- [Documento IV §§4.2–4.3 y 6.1–6.4](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/composicion/IV_transduccion_alfabeto_ternario_interfaz_parametrica.md), blob `66ee444aa72c216267750b679378a22f0ad7cc8a`: captura por parámetro exógeno e interfaz de instancias con célula. El cotejo aquí se limita a identidad y exposición; no reactiva las formulaciones históricas de fallo→U sustituidas expresamente por IR v0.3 §2 y los Pilares §1.5.
+
+| Pregunta de N0-06 | Dictamen y sede |
+|---|---|
+| Nombres repetidos en `parameters` | J-D0 exige unicidad nominal local y preservación de orden. Repetir el mismo identificador no declara una segunda instancia distinta. El Lenguaje puede rechazarlo sin inventar su correspondencia. |
+| `parameters = []` | El conjunto doctrinal no tiene aquí cláusula expresa de no vaciedad. No se deduce un rechazo de `b≥3` ni del número de capturas. Su admisión estructural previa se conserva como límite; F deberá decidir el mínimo del contrato operacional de dominio. |
+| `parameter_id` repetido | La instancia exige `(C,j)`. Por ejemplo, `(C1,1)` y `(C2,1)` son distintas aunque repitan el numeral; la IR no enlaza ese numeral con `C`. Tampoco representa un selector de capturas alternativas para una misma instancia. Prohibir toda repetición o declararla unívocamente válida sería asumir la relación ausente. F debe fijarla antes de usarla. |
+| Igualdad de conjuntos de captura/admisibilidad | Se conserva la comprobación existente, pero no demuestra multiplicidad, correspondencia entre objetos ni cobertura por instancia. Las listas originales siguen en IR/proyección; no se deduplican. |
+| Cardinalidad nominal distinta de la cadena | No se exige igualdad: una cardinalidad coincidente tampoco reconstruye las identidades. Se preserva la entrada y se mantiene la falta de ligadura en DFL-005. |
+
+Los Pilares §1.4 impiden presumir inyectividad, sobreyectividad o biyectividad de una asignación. J-D0 no las establece: nombres diferentes pueden seguir careciendo de referente, o requerir un contrato que detecte alias de una misma instancia. **Este cierre no acredita una constitución completa de Domain ni resuelve N0-06 entero.** F recibe estas insuficiencias representacionales de forma explícita; K2 conserva versión, procedencia y nombres en su alcance posterior.
+
+### 17.2. Realización y evidencia exigida
+
+La [IR v0.3 §6.7](../../IR_CANONICA_BIENFORMACION_SV_v0_3.md#domain-parameters-j-d0) fija J-D0 antes del parche. `wellformed.rs` añade una comprobación global posterior a los juicios existentes; no modifica parser, tipos, serializador, Nat, primitivas, álgebra ni datos de dominio. El rechazo es textual y controlado: `Domain D: parámetro nominal repetido: B`, sin nuevo código catalogado y sin IR ni U como sustituto.
+
+- Conformidad: **94 = 14 válidos + 80 inválidos**, con el único nuevo negativo `domain_parametro_nominal_repetido.svp`. Sus bytes eran admitidos por la base y son rechazados por la candidata.
+- Los **93 observables anteriores** conservan literalmente retorno, stdout y stderr frente al binario construido desde la base; los **14 esperados comprometidos** no cambian.
+- Tres pruebas de integración Rust ejercen dominio sin consumidor, identidad exacta/orden y precedencia de rechazos previos. La regresión nativa completa conserva R0/R1 en su alcance.
+- [Banco de 24 testigos](../../tests/k1_domain_cases.py): ocho variantes por perfil y ocho ensamblajes mixtos en ambos órdenes. Catorce ejercen J-D0 o guardas anteriores; diez preservan representaciones con ligadura pendiente (vacío, cardinalidad y multiplicidad numérica), sin certificarlas como contratos completos. El transporte existente verifica retorno, ausencia de IR en rechazo, diagnóstico exacto, campos y orden; compara bytes nativo/WASI y carga la misma fuente en el módulo de navegador.
+- Se exigen los cuatro flujos sobre la candidata exacta: Conformidad SVP, R0 Rust, R0-8 y R0 WASM. WASI y navegador deben ejecutar el corpus completo, los 24 testigos nuevos y los bancos previos de BridgeSet/Horizon/sensibilidad. La paridad entre realizaciones sólo complementa el juicio contra la DSL y sus esperados.
+
+**Perfiles y entorno:** SVP-ES/SVP-EN; Gramática 0.2, IR 0.3 y proyección 0.1.0 conservan versión. PT01/PT02/PT04/PT13/PT14 reciben identidad, preservación, diagnóstico, paridad y entorno. Local: Rust/Cargo 1.98.0, destino `x86_64-unknown-linux-gnu`; las ejecuciones CI registran sus compiladores y anfitriones propios. El código Python del banco sólo prepara fuentes y observa procesos, sin compilador SV ni autoridad semántica. No interviene contenido IMM/CYB ni se promueve otra plataforma. Se reutilizan los observadores y el alcance de laboratorio 016/018 sin repetir esa campaña ni extenderle estos resultados.
+
+### 17.3. Relevo
+
+El cierre nominal es efectivo tras la integración de la candidata verificada. Sigue la fila 3: concordancia diagnóstica/deuda/corpus, DFL-010 y delimitación o cierre de K1-T. F permanece pendiente de esa salida. Al abrir F, el contrato debe resolver el mínimo, la identidad de instancia y las ligaduras/multiplicidad aquí localizadas antes de admitir operaciones que las necesiten; no podrán darse por resueltas mediante cadenas opacas. DFL-009 continúa diferida al retorno del primer universo CYB, fila 9. No se cierra dominio, álgebra, núcleo ni R2/R3/R4.

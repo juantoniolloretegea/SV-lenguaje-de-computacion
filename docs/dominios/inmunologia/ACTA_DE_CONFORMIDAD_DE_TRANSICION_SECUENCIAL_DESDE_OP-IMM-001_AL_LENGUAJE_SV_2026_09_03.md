@@ -1,6 +1,6 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
-> **Relevo vigente de la fila 3 · 07/09/2026:** [N0-04, §22](#cierre-n0-04-20260907), RETP-081. Tras su promoción sigue la unicidad de `CoupledSpec.bridges` bajo `BridgeSet`. Los relevos anteriores conservan su fecha y alcance.
+> **Relevo vigente de la fila 3 · 07/09/2026:** [Domain, §26](#domain-relevo-20260907), RETP-086. Tras su promoción siguen concordancia diagnóstica/deuda/corpus, DFL-010 y condiciones de K1-T. F recibe expresamente las ligaduras de instancia aún no representadas. Los relevos anteriores conservan su fecha y alcance.
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
@@ -464,3 +464,12 @@ Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y
 **Punto vigente después de la promoción:** fila 3/K1, mínimo estructural de `Domain.parameters` y multiplicidad de `parameter_id` (§14). Continúan concordancia diagnóstica, DFL-010 y condiciones de K1-T; F permanece pendiente. La fila 9 conserva la recepción de DFL-009 tras I/J.
 
 **Recepción documental RETP-085, 07/09/2026:** el [DOI del Documento III](https://doi.org/10.21428/39829d0b.bb86c65d) sustituye el enlace a release1. La [radiografía §16.3](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#reconciliacion-documento-iii-20260907) conserva el cotejo de la actualización en el repositorio del autor, la corrección notacional y el límite de acceso a la página editorial. El dictamen J-H1 y el relevo K1/Domain se mantienen en ese alcance.
+
+<a id="domain-relevo-20260907"></a>
+## 26. Unicidad nominal de Domain y recepción de ligaduras pendientes · 07/09/2026
+
+**RETP-086; entrada:** main `4536bd051cc58bf183b8b9efa5a5f818f18090f9`, PR #71. La [radiografía §17](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#domain-parameters-20260907) conserva el cotejo de los Documentos IV/V, la norma J-D0, los testigos y los límites. Se rechazan nombres repetidos dentro de `Domain.parameters`, sin deduplicar ni alterar el orden. Se conservan versiones y juicios anteriores.
+
+**Puerta de promoción:** 94 casos de conformidad, tres pruebas de integración y 24 testigos ES/EN/ensamblaje; cuatro flujos correctos sobre la candidata exacta, con ejecución nativa, WASI y navegador. Diez testigos preservan representaciones con ligaduras pendientes; su aceptación no acredita la constitución completa del dominio. PT01/PT02/PT04/PT13/PT14 conservan identidad, diagnóstico, evidencia y entorno. No se amplía el laboratorio histórico.
+
+**Relevo tras promoción:** continúa fila 3/K1 por concordancia diagnóstica/deuda/corpus, DFL-010 y condiciones de K1-T. J-D0 no cierra N0-06 entero: el mínimo de `parameters`, la correspondencia nombre–instancia `(C,j)`–cadena y la multiplicidad numérica quedan en DFL-005, con recepción obligatoria en F y condición bloqueante para operaciones que las requieran. No se deducen correspondencias de posiciones o cardinalidades ni se difiere su suficiencia únicamente a K2. F permanece pendiente de la salida K1/K1-T. DFL-009 conserva la fila 9, retorno del primer universo CYB, para valorar servicio nativo y Cloudflare/Workers u otros. El acceso editorial queda aplazado por decisión humana.

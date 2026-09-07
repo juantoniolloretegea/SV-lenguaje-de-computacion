@@ -106,6 +106,18 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
             }
         }
     }
+    // J-D0: local nominal identity; no inferred (cell, position) or numeric binding.
+    // Preserve the previous diagnostics and the original order in the IR.
+    for object in program.objects() {
+        if let IrObjectKind::Domain { parameters, .. } = object.kind() {
+            let mut seen = BTreeSet::new();
+            for parameter in parameters {
+                if !seen.insert(parameter.as_str()) {
+                    return Err(format!("Domain {}: parámetro nominal repetido: {parameter}", object.name()));
+                }
+            }
+        }
+    }
     Ok(())
 }
 

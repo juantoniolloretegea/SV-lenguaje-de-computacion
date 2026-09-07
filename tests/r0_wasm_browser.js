@@ -215,6 +215,17 @@ async function main() {
       } else { horizonOk++; }
     }
   }
+  let domainOk = 0;
+  if (!manifest.domain_cases || manifest.domain_cases.length !== 24) {
+    failures.push("banco Domain ausente o incompleto");
+  } else {
+    for (const probe of manifest.domain_cases) {
+      const result = compileUnits(exports, probe.units);
+      if (result.error !== probe.error || result.text !== probe.expected_payload) {
+        failures.push(`Domain ${probe.name}: divergencia frente al nativo comprobado`);
+      } else { domainOk++; }
+    }
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
@@ -225,6 +236,7 @@ async function main() {
     sensitivity_ok: sensitivityOk,
     bridge_ok: bridgeOk,
     horizon_ok: horizonOk,
+    domain_ok: domainOk,
     failures,
   };
 

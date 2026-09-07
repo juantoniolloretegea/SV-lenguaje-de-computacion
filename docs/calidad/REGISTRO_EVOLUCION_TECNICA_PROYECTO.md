@@ -354,6 +354,13 @@ La continuidad documental se organiza así:
 - **Límite:** HTTP 403 impidió cotejar directamente la página editorial actual. La conclusión se limita al texto identificado del repositorio del autor; no certifica otra edición ni identidad literal de la página remota. RETP-084 conserva la consulta histórica; no se reescribe su evidencia.
 - **Verificación y relevo:** revisión documental y Conformidad SVP exigida sobre candidata exacta; código, corpus y workflows conservados. J-H1 y la evidencia nativo/WASI/navegador de PR #70 mantienen su alcance. Sigue K1/Domain; F y deudas pendientes conservan sus puertas, incluida DFL-009 en retorno CYB.
 
+### RETP-2026-086 — Domain: unicidad nominal y ligaduras pendientes
+
+- **Entrada y fundamento:** main `4536bd0`, PR #71; Pilares, perfiles, secuencia §25 y N0-06/§7. Documentos V §5.1 y IV §§4.2–4.3/6.1–6.4 en el corte del autor `b8fd329`; [radiografía §17](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#domain-parameters-20260907) identifica blobs y alcance. IR v0.3 §6.7 precisa J-D0 antes de su realización.
+- **Cambio y evidencia:** rechazo de nombres repetidos dentro de Domain, preservando orden y diagnósticos previos. Conformidad 94/94; tres pruebas de integración; banco de 24 testigos ES/EN/ensamblaje. Los 93 observables anteriores y los 14 esperados se conservan. Cuatro flujos exigidos sobre candidata exacta, incluidos nativo/WASI/navegador.
+- **Límite adversarial:** el numeral `parameter_id` no identifica por sí solo la instancia `(C,j)`. No se inventan ligaduras, cardinalidades ni prohibiciones de vacío o multiplicidad; diez testigos conservan esas representaciones sin acreditarlas como dominio completo. DFL-005 recibe la insuficiencia con puerta obligatoria en F para operaciones que dependan de ella. No se reactiva fallo→U del antecedente IV.
+- **Decisión y relevo:** cierre nominal efectivo tras integración verificada. [Transición §26](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#domain-relevo-20260907): concordancia diagnóstica/deuda/corpus, DFL-010 y K1-T antes de F. PT01/PT02/PT04/PT13/PT14; mismas versiones y plataformas. DFL-009 conserva retorno CYB; acceso editorial aplazado. No se cierra N0-06 entero, K1, dominio ni núcleo.
+
 ## 4. Estado de continuidad
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.

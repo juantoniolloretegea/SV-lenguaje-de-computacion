@@ -1,6 +1,6 @@
 # `tests/` — Baterías y vectores de comprobación del Lenguaje SV
 
-**Estado vigente · RETP-082:** conformidad directa de SV por `run_conformance.py --rust-bin rust/target/debug/sv-native`, CLI/SEC.0 con ese mismo argumento y paridad nativa/WASI/navegador en CI. Se conservan 14 esperados y el corpus negativo; los códigos catalogados y los rechazos textuales efectivos se distinguen en la [adenda de oráculos](../docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907). El compilador Python está retirado.
+**Estado vigente · RETP-086:** conformidad directa de SV por `run_conformance.py --rust-bin rust/target/debug/sv-native`, CLI/SEC.0 con ese mismo argumento y paridad nativa/WASI/navegador en CI. Corpus **94 = 14 válidos + 80 inválidos**; se conservan los 14 esperados. Los códigos catalogados y los rechazos textuales efectivos se distinguen en la [adenda de oráculos](../docs/calidad/ACTA_TECNICA_REPARACION_DE_ORACULOS_2026_09_06.md#retirada-python-20260907). El compilador Python está retirado; sus pruebas citadas más abajo son antecedentes históricos. El [banco Domain](k1_domain_cases.py) y la [radiografía §17](../docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#domain-parameters-20260907) fijan el alcance nuevo.
 
 La descripción fechada de agosto que sigue es un antecedente histórico, no el contrato de ejecución vigente.
 
