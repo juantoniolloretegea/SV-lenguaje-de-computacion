@@ -18,7 +18,7 @@ N0-02 cerró cada relación `CellSpec–OutputSemantics–Codomain`. El testigo 
 
 ## 2. Inventario de las sedes de emisión
 
-Se revisan íntegramente el [descenso Python](../../src/svp_ir.py), su [serializador](../../src/svp_serialize.py), la [proyección Rust](../../rust/sv_core/src/equivalence.rs) y las guardas aplicables de ambos validadores.
+Se revisan íntegramente el [descenso Python](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/src/svp_ir.py), su [serializador](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/src/svp_serialize.py), la [proyección Rust](../../rust/sv_core/src/equivalence.rs) y las guardas aplicables de ambos validadores.
 
 | Sede del esquema vigente | Riesgo y guarda |
 |---|---|
@@ -53,7 +53,7 @@ El corpus pasa de **85 a 88 programas: 14 válidos y 74 inválidos**:
 - [`connector_clave_repetida.svp`](../../tests/conformance/invalid/connector_clave_repetida.svp): control E007 de una protección anterior; no se presenta como corrección nueva de Connector.
 - [`output_semantics_independientes.svp`](../../tests/conformance/valid/output_semantics_independientes.svp): claves locales, textos compartidos, mapa vacío, ambas familias de mapas y texto con LF, tabulación, barra inversa y Unicode. Su [esperado](../../tests/conformance/valid/output_semantics_independientes.expected.json) se declara desde el esquema y la huella de fuente, sin generarlo desde el compilador.
 
-Los trece esperados anteriores conservan su identidad. Las [tres pruebas Python N0-03](../../tests/test_json_projection.py) verifican el rechazo antes de descender a mapas, la ausencia de mutación y la conservación de cada miembro de los mapas del corpus desde el AST. Las [cinco pruebas Rust](../../rust/sv_core/tests/json_projection.rs) ejercen ES/EN, claves compartidas entre objetos, preservación del programa, ensamblaje en ambos órdenes y la guarda de Connector. Las [pruebas del observador](../../tests/test_oracle_support.py) pasan de 16 a 19 e incluyen un número de 5000 dígitos y homónimos expresados mediante escapes equivalentes. Estas subdivisiones no se suman al corpus de conformidad.
+Los trece esperados anteriores conservan su identidad. Las [tres pruebas Python N0-03](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/tests/test_json_projection.py) verifican el rechazo antes de descender a mapas, la ausencia de mutación y la conservación de cada miembro de los mapas del corpus desde el AST. Las [cinco pruebas Rust](../../rust/sv_core/tests/json_projection.rs) ejercen ES/EN, claves compartidas entre objetos, preservación del programa, ensamblaje en ambos órdenes y la guarda de Connector. Las [pruebas del observador](../../tests/test_oracle_support.py) pasan de 16 a 19 e incluyen un número de 5000 dígitos y homónimos expresados mediante escapes equivalentes. Estas subdivisiones no se suman al corpus de conformidad.
 
 ## 5. Sensibilidad, resultados y promoción
 

@@ -51,6 +51,7 @@ La continuidad documental se organiza así:
 | RETP-2026-080 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-03 | cierre de proyección delimitado; promoción por candidata exacta |
 | RETP-2026-081 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-04 | cierre referencial delimitado; promoción por candidata exacta |
 | RETP-2026-082 | 07/09/2026 | NO_CONSTA | RETIRADA_GOBERNADA_Y_CONTINUIDAD | Lenguaje SV / oráculos / K1 | retirada delimitada; promoción por candidata exacta |
+| RETP-2026-083 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / BridgeSet | cierre limitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -330,6 +331,13 @@ La continuidad documental se organiza así:
 - **Cambio y evidencia:** retirada del compilador y API Python, conservación de 14 esperados/77 negativos y núcleo en este commit. Conformidad directa 91/91, 18 pruebas del observador, CLI, 3 SEC.0 y 5 sondas nativas; WASI/navegador exigidos sobre la candidata exacta antes de integrar. Historial enlazado, sin nuevo oráculo generado por la realización.
 - **Límites y relevo:** DFL-001 abierta; DFL-008 sale de la vía activa por retirada, no por corrección histórica. DFL-010 conserva el defecto compartido de campos repetidos. DFL-009 difiere servicio nativo y Cloudflare/Workers u otros hasta fila 9, retorno del primer universo CYB. Continúa K1 por BridgeSet, no F. PT01/PT02/PT04/PT13/PT14; no se promueve una plataforma ni se amplía el laboratorio histórico.
 - **Estado:** efectivo tras los cuatro flujos correctos e integración de la candidata identificada en la PR correspondiente.
+
+### RETP-2026-083 — Unicidad de BridgeSet y relevo K1
+
+- **Entrada y fundamento:** a09b9ef, PR #68, retirada RETP-082 en commit separado; definición de BridgeSet y J1.2, Pilares, perfiles y secuencia §14. J-B0 se precisa en IR v0.3 §6.5.
+- **Cambio y evidencia:** se rechazan repeticiones Nat sin deduplicar ni ordenar; vacío y precedencia del rango conservados. Tres pruebas intrínsecas, corpus 92/92 y 18 testigos ES/EN/ensamblaje; comparación literal de los 91 casos anteriores y 14 esperados intactos. Nativo/WASI/navegador exigidos antes de integrar la candidata exacta.
+- **Límites:** sin nuevos campos, operaciones, versiones o código diagnóstico; DFL-001 sigue abierta. PT01/PT02/PT04/PT13/PT14; no nueva plataforma ni ampliación de evidencia histórica del laboratorio.
+- **Decisión y relevo:** cierre limitado efectivo tras cuatro flujos correctos e integración. [Radiografía §15](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) y transición §24 fijan K1/Horizon.events; F pendiente. DFL-009 conserva su recepción al retornar del primer universo CYB.
 
 ## 4. Estado de continuidad
 

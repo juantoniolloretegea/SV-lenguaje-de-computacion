@@ -15,6 +15,7 @@ import json
 from pathlib import Path
 import sys
 from run_oracle_sensitivity import sources as sensitivity_sources, verify as verify_sensitivity
+from k1_bridge_cases import prepare as prepare_bridges
 
 from oracle_support import (run, assert_success, assert_json_equal,
                             assert_rust_rejection,
@@ -28,6 +29,7 @@ INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--native-bin", required=True, type=Path)
+    parser.add_argument("--native-probe", required=True, type=Path)
     parser.add_argument("--output", required=True, type=Path)
     parser.add_argument("--source-head")
     parser.add_argument("--base-head")
@@ -109,6 +111,7 @@ def main() -> int:
         except (AssertionError, ValueError) as exc:
             failures.append(f'SENSITIVITY {name}: {exc}')
 
+    bridge_cases = prepare_bridges(args.native_probe, args.output.parent / 'bridge-set')
     result = {
         "schema": "sv-r0-browser-parity-manifest-v3",
         "source_head": args.source_head,
@@ -120,6 +123,7 @@ def main() -> int:
         },
         "cases": cases,
         "sensitivity_cases": sensitivity_cases,
+        "bridge_cases": bridge_cases,
         "failures": failures,
     }
 

@@ -35,13 +35,13 @@ jobs:
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace
 
-      - name: Construir ejecutable nativo R0-7
+      - name: Construir la realización nativa del SV
         run: cargo build --manifest-path rust/Cargo.toml -p sv_native
 
       - name: Verificar conformidad SV frente a esperados comprometidos
         run: python tests/run_conformance.py --rust-bin rust/target/debug/sv-native
 
-      - name: Verificar sensibilidad ante divergencias conocidas
+      - name: Verificar conservación de testigos y sensibilidad del observador
         run: |
           python tests/run_oracle_sensitivity.py \
             --rust-bin rust/target/debug/sv-native \
@@ -56,8 +56,8 @@ jobs:
           retention-days: 90
           path: artifacts/oracle-sensitivity/
 
-      - name: Comprobar núcleo para WebAssembly
+      - name: Compilar núcleo para WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_core --target wasm32-unknown-unknown
 
-      - name: Comprobar adaptador WebAssembly
+      - name: Compilar adaptador WebAssembly
         run: cargo check --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown

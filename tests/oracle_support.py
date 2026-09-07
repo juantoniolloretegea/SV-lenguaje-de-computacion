@@ -112,6 +112,7 @@ def diagnostic_text(raw: bytes) -> str:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan automáticamente a los códigos del catálogo ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "coupledspec_puente_repetido": "CoupledSpec CC: posición puente repetida: 3",
     "horizon_architecture_ausente": "referencia no declarada: Missing",
     "horizon_architecture_tipo_incorrecto": "K: se esperaba CompositionGraph",
     "agent_arquitecturas_reales_distintas": "Agent AG: architecture incompatible con Domain",
@@ -211,9 +212,9 @@ def assert_rust_rejection(proc, case: str) -> str:
 
 
 def check_invalid_corpus(paths) -> None:
-    from run_conformance import EXPECTED_CATALOG_CODES
+    from run_conformance import EXPECTED_OBLIGATIONS
     names = {path.name for path in paths}
-    if not names or names != set(EXPECTED_CATALOG_CODES):
+    if not names or names != set(EXPECTED_OBLIGATIONS):
         raise OracleError("corpus inválido vacío o distinto del catálogo de obligaciones")
     if {Path(name).stem for name in names} != set(RUST_REJECTION_TOKENS):
         raise OracleError("corpus inválido distinto de las identidades textuales Rust")

@@ -20,7 +20,7 @@ La radiografía describe el referente requerido como `CompositionGraph`. El text
 
 Python y Rust admitían un horizonte con arquitectura inexistente o de otro tipo. La igualdad nominal entre la arquitectura del agente y la de su horizonte tampoco acreditaba por sí sola un referente real. Los dos nuevos negativos mínimos reproducen admisión con retorno 0 en la base y rechazo con retorno 1, sin IR, en la candidata.
 
-Se añade una comprobación complementaria de todos los horizontes al final de la validación global, después de los controles anteriores y N0-03. Reutiliza `_require_ref` en [Python](../../src/svp_validator.py) y `expect_object` en [Rust](../../rust/sv_core/src/wellformed.rs), con tipo `GraphDecl`/`CompositionGraph`. Conserva la precedencia de los rechazos anteriores, las referencias adelantadas y la resolución entre unidades. No transforma ni completa la fuente o el programa.
+Se añade una comprobación complementaria de todos los horizontes al final de la validación global, después de los controles anteriores y N0-03. Reutiliza `_require_ref` en [Python](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/src/svp_validator.py) y `expect_object` en [Rust](../../rust/sv_core/src/wellformed.rs), con tipo `GraphDecl`/`CompositionGraph`. Conserva la precedencia de los rechazos anteriores, las referencias adelantadas y la resolución entre unidades. No transforma ni completa la fuente o el programa.
 
 La validación existente de `Agent–Domain–Horizon` se conserva. Para admitir el programa deben cumplirse tanto la igualdad de arquitectura del agente como J-H0; por ello ambas designan el mismo grafo real. No hace falta duplicar el resolutor dentro de Agent. Un grafo declarado sigue sometido a sus propias guardas. Un grafo homónimo de un horizonte, una operación o un objeto de otro tipo no satisface J-H0. Dos grafos estructuralmente iguales con identidades distintas no se sustituyen.
 
@@ -47,7 +47,7 @@ Los otros trece esperados y sus fuentes permanecen byte a byte iguales. Los 74 n
 
 ## 4. Pruebas y promoción
 
-Las [cuatro pruebas Python](../../tests/test_horizon_architecture.py) y las [cinco Rust](../../rust/sv_core/tests/horizon_architecture.rs) comprueban ausencia, tipo incorrecto, autorreferencia, referencia a operación, referente gráfico mal formado, referencias adelantadas, identidad del agente y ausencia de mutación. Rust ejerce ES/EN y ensamblaje mixto en ambos órdenes y con los papeles de los perfiles intercambiados. Python conserva su superficie EN. La secuencia de sucesos se conserva, incluidas repeticiones, como control del alcance previo; su significado normativo queda pendiente de su acto propio.
+Las [cuatro pruebas Python](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a09b9efef51f88de29048b9b35e7ac085dc0918f/tests/test_horizon_architecture.py) y las [cinco Rust](../../rust/sv_core/tests/horizon_architecture.rs) comprueban ausencia, tipo incorrecto, autorreferencia, referencia a operación, referente gráfico mal formado, referencias adelantadas, identidad del agente y ausencia de mutación. Rust ejerce ES/EN y ensamblaje mixto en ambos órdenes y con los papeles de los perfiles intercambiados. Python conserva su superficie EN. La secuencia de sucesos se conserva, incluidas repeticiones, como control del alcance previo; su significado normativo queda pendiente de su acto propio.
 
 | Verificación local | Resultado |
 |---|---|

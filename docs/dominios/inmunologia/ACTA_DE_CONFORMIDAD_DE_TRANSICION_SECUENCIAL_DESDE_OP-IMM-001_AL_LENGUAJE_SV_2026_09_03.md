@@ -446,3 +446,10 @@ El éxito del corpus demuestra su alcance observado. Los ejecutores actuales nor
 La [deuda DFL-009](../../calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md#dfl-009--servicio-remoto-de-sv-con-realización-nativa-evaluación-diferida) se recibe **en la fila 9, al retornar del primer universo de Ciberseguridad Inteligente después de I/J**. Se valorará entonces un servicio público de SV con ejecutable nativo identificado, incluido Cloudflare/Workers u otros, reutilizando lo demostrado en el laboratorio. No exige instalación Rust/Cargo en el equipo del visitante ni abre ahora una plataforma; debe comprobarse qué destino ejecuta realmente cada opción.
 
 **Relevo:** sigue la fila 3, K1: unicidad de CoupledSpec.bridges bajo BridgeSet, después las decisiones de Horizon.events y Domain en el orden de §14. La pérdida por campos opcionales repetidos se conserva como DFL-010 dentro de K1. F (fila 4) continúa pendiente de la salida de K1 y de las condiciones expresas de K1-T; la deuda tecnológica diferida no desplaza esas obligaciones.
+
+<a id="relevo-bridgeset-20260907"></a>
+## 24. Cierre de BridgeSet y siguiente obligación K1 · 07/09/2026
+
+**RETP-083.** La [radiografía §15](../../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#cierre-bridgeset-20260907) recibe el juicio de unicidad J-B0, ya exigido por `BridgeSet`/J1.2. Rechaza posiciones repetidas sin deduplicar ni ordenar; conserva vacío, rango y los 14 esperados anteriores. Se exige conformidad 92/92 y paridad de los 18 testigos ES/EN/ensamblaje en nativo, WASI y navegador antes de promover la candidata. La retirada Python y DFL-009 permanecen en el commit y registro RETP-082 separados.
+
+**Punto vigente después de la promoción:** fila 3, K1, decisión sobre multiplicidad de `Horizon.events`. Continúan luego las obligaciones de `Domain`, concordancia diagnóstica y K1-T en el orden de §14; DFL-010 debe resolverse o delimitarse expresamente antes de F. No se da por habilitada la fila 4. La fila 9 recibe la evaluación tecnológica diferida tras I/J según §23.

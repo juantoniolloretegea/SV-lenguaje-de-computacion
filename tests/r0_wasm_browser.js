@@ -44,6 +44,19 @@ function compileProfileCase(exports, source, fileName, profileCode) {
   return readCompileResult(exports, exports.sv_compile_svp_json_profile(profileCode));
 }
 
+function compileUnits(exports, units) {
+  const code = profile => ({ en: 0, es: 1 })[profile];
+  if (units.length === 1) {
+    return compileProfileCase(exports, units[0].source, units[0].file_name, code(units[0].profile));
+  }
+  if (units.length !== 2) throw new Error("testigo de ensamblaje inválido");
+  writeInternalBuffer(exports, "sv_source_buffer", units[0].source);
+  writeInternalBuffer(exports, "sv_file_buffer", units[0].file_name);
+  writeInternalBuffer(exports, "sv_assembly_source_b_buffer", units[1].source);
+  writeInternalBuffer(exports, "sv_assembly_file_b_buffer", units[1].file_name);
+  return readCompileResult(exports, exports.sv_compile_svp_assembly_json(code(units[0].profile), code(units[1].profile)));
+}
+
 function equalBytes(left, right) {
   return left.length === right.length && left.every((value, index) => value === right[index]);
 }
@@ -75,6 +88,9 @@ async function main() {
     "sv_file_buffer",
     "sv_compile_svp_json",
     "sv_compile_svp_json_profile",
+    "sv_assembly_source_b_buffer",
+    "sv_assembly_file_b_buffer",
+    "sv_compile_svp_assembly_json",
   ];
   for (const name of required) {
     if (!(name in exports)) {
@@ -177,6 +193,17 @@ async function main() {
   if (validOk !== manifest.counts.valid || invalidOk !== manifest.counts.invalid) {
     failures.push("recuentos ejecutados distintos del manifiesto");
   }
+  let bridgeOk = 0;
+  if (!manifest.bridge_cases || manifest.bridge_cases.length !== 18) {
+    failures.push("banco BridgeSet ausente o incompleto");
+  } else {
+    for (const probe of manifest.bridge_cases) {
+      const result = compileUnits(exports, probe.units);
+      if (result.error !== probe.error || result.text !== probe.expected_payload) {
+        failures.push(`BridgeSet ${probe.name}: divergencia frente al nativo comprobado`);
+      } else { bridgeOk++; }
+    }
+  }
   const summary = {
     source_head: manifest.source_head,
     base_head: manifest.base_head,
@@ -185,6 +212,7 @@ async function main() {
     invalid_ok: invalidOk,
     closed_domains_ok: closedDomainsOk,
     sensitivity_ok: sensitivityOk,
+    bridge_ok: bridgeOk,
     failures,
   };
 

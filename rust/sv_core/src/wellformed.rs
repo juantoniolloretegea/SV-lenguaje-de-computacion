@@ -169,6 +169,14 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
                     return Err(format!("CoupledSpec {name}: posición puente fuera de rango"));
                 }
             }
+            // J1.2: BridgeSet is a set of Nat values. Reject repetition;
+            // do not deduplicate or reorder the declared positions.
+            let mut seen = BTreeSet::new();
+            for position in bridges {
+                if !seen.insert(position.as_decimal()) {
+                    return Err(format!("CoupledSpec {name}: posición puente repetida: {}", position.as_decimal()));
+                }
+            }
         }
         IrObjectKind::Connector { source_codomain, mapping, .. } => {
             let codomain = expect_object(symbols, source_codomain, "Codomain", |k| matches!(k, IrObjectKind::Codomain { .. }))?;

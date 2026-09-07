@@ -13,7 +13,8 @@ import sys
 from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
                             assert_rust_rejection,
                             check_invalid_corpus)
-EXPECTED_CATALOG_CODES = {
+EXPECTED_OBLIGATIONS = {
+    "coupledspec_puente_repetido.svp": "J1.2/BridgeSet",
     "horizon_architecture_ausente.svp": "E006",
     "horizon_architecture_tipo_incorrecto.svp": "E006",
     "agent_arquitecturas_reales_distintas.svp": "E402",
