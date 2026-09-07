@@ -375,7 +375,7 @@ RETP-083 y la [radiografía §15](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_IN
 <a id="horizon-events-j-h1"></a>
 ### 6.6. Tipos declarados y multiplicidad de `Horizon.events` (J-H1)
 
-El [Documento III, release 1](https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iii-horizonte-de-sucesos-y-reevaluacion-discreta/release/1), §§3.2–3.5 y 4.1, distingue el horizonte de tipos declarados de los sucesos instanciados registrados en los datos de transición. IR v0.2, nivel 3, conserva esa distinción: `Horizon.events : [EventType]` representa ℋ(𝒜), mientras `TransitionData.events : [(EventType, Tri)]` porta el dato νₙ. Los corchetes de la superficie son una forma de representación; no convierten el horizonte en una secuencia de episodios observados.
+El [Documento III (DOI)](https://doi.org/10.21428/39829d0b.bb86c65d), §§3.2–3.5 y 4.1, distingue el horizonte de tipos declarados de los sucesos instanciados registrados en los datos de transición. IR v0.2, nivel 3, conserva esa distinción: `Horizon.events : [EventType]` representa ℋ(𝒜), mientras `TransitionData.events : [(EventType, Tri)]` porta el dato νₙ. Los corchetes de la superficie son una forma de representación; no convierten el horizonte en una secuencia de episodios observados.
 
 Se fija la regla de representación **J-H1**: dentro de un `Horizon` admitido, cada identidad de tipo de suceso aparece una sola vez. `[B,A,B]` se rechaza; no se deduplica a `[B,A]`. El orden explícito de una lista válida se conserva en la IR y la proyección, sin atribuirle prioridad causal o cronológica. El núcleo no elige los tipos relevantes ni identifica por inferencia nombres distintos.
 
@@ -385,7 +385,7 @@ J-H1 se comprueba sobre el programa completo o ensamblado, también en horizonte
 
 Se mantiene el rechazo previo del horizonte vacío dentro del alcance material vigente; este acto no lo deriva del carácter de conjunto ni constituye una axiomática completa de horizontes. El Documento III §9 deja abierta esa axiomática. Tampoco se materializan por J-H1 el operador inducido, la ejecución de trayectorias, el contrato de dominio o una equivalencia tiempo–suceso. Gramática 0.2, esquema IR 0.3 y proyección 0.1.0 conservan sus versiones y su estructura.
 
-La [radiografía §16](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#horizon-events-20260907), RETP-084, conserva el cotejo, los antecedentes y la evidencia de perfiles/destinos.
+La [radiografía §16](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#horizon-events-20260907), RETP-084, conserva el cotejo, los antecedentes y la evidencia de perfiles/destinos. El cotejo actualizado del Documento III y sus límites de comprobación constan en [§16.3](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#reconciliacion-documento-iii-20260907), RETP-085.
 
 ---
 

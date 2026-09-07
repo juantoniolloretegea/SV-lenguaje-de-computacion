@@ -35,7 +35,7 @@ Este documento es doctrina derivada del corpus publicado del Sistema Vectorial S
 | Fundamentos algebraico-semánticos del SV (R3) | Autoridad normativa suprema | Célula, alfabeto, umbral, evaluación, composición tipada, familia ℱ_SV, invariantes |
 | Doc I — Transmisión en serie por parámetro puente (R4) | Composición, Grado A | Célula acoplable, conector, grafo DAG, regímenes RS/RG, conflicto, criticidad condicionada |
 | Doc II — Gramática general de composición (R1) | Composición, Grados B/C | Relación semántica previa, compuerta, meta-supervisión, Comp, escala de madurez |
-| Doc III — Horizonte de sucesos y reevaluación discreta (R1) | Reevaluación | Frame, dato de transición, operador inducido, trayectoria, cascada |
+| Doc III — Horizonte de sucesos y reevaluación discreta (DOI; RETP-085) | Reevaluación | Frame, dato de transición, operador inducido, trayectoria, cascada |
 | Doc IV — Transducción al alfabeto ternario e interfaz paramétrica (R1) | Transducción | Cadena formal del mundo al sistema, sensor, admisibilidad, ternarización, U silenciosa |
 | Doc V — Invariantes, agentes y operador de consulta (R2) | Uso y consulta | Dominio, agente, operador de consulta, teoremas de invariancia |
 | Doc VI — Análisis discreto, representaciones y secuencias (R1) | Herramientas de análisis | Diferencias finitas, transformada Z, función generatriz, matrices de grafo, codificaciones |
@@ -68,7 +68,9 @@ El corpus doctrinal contiene colisiones de nombre entre símbolos con significad
 | `Connector` | φⱼ→ᵢ⁽ᵏ⁾ : Kⱼ → Σ | Conector de transmisión intercelular | Doc I §4.2 |
 | `Ternarizer` | τⱼ : Oⱼ → Σ | Función de ternarización | Doc IV §4.5 |
 | `AdmissibilityTable` | 𝒯 : Kᵢ × Kⱼ → K_comp | Tabla de admisibilidad de una compuerta | Doc II §9.2 |
-| `InducedTransitionOp` | 𝒯_{νₙ} | Operador inducido por un dato de transición | Doc III §3.6 |
+| `InducedTransitionOp` | 𝒰_{νₙ} | Operador inducido por un dato de transición | Doc III §3.6 |
+
+La recepción documental de 07/09/2026, [RETP-085 y radiografía §16.3](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#reconciliacion-documento-iii-20260907), actualiza el enlace del Documento III y su notación del operador inducido. `AdmissibilityTable` conserva 𝒯; el identificador `InducedTransitionOp` y su obligación no cambian. El antecedente anterior queda conservado en Git.
 
 ---
 
@@ -329,7 +331,7 @@ Estos invariantes se derivan directamente del corpus doctrinal y no pueden ser v
 
 [R3] Juan Antonio Lloret Egea. *Álgebra de composición intercelular del marco SV — II. Gramática general de composición.* v1.0, Release 1. ITVIA, 2026. https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--ii-gramatica-general-de-composicion/release/1
 
-[R4] Juan Antonio Lloret Egea. *Álgebra de composición intercelular del marco SV — III. Horizonte de sucesos y reevaluación discreta.* v1, Release 1. ITVIA, 2026. https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iii-horizonte-de-sucesos-y-reevaluacion-discreta/release/1
+[R4] Juan Antonio Lloret Egea. *Álgebra de composición intercelular del marco SV — III. Horizonte de sucesos y reevaluación discreta.* v1. ITVIA, 2026. https://doi.org/10.21428/39829d0b.bb86c65d
 
 [R5] Juan Antonio Lloret Egea. *Álgebra de composición intercelular del marco SV — IV. Transducción al alfabeto ternario e interfaz paramétrica del sistema.* v1, Release 1. ITVIA, 2026. https://www.itvia.online/pub/algebra-de-composicion-intercelular-del-marco-sv--iv-transduccion-al-alfabeto-ternario-e-interfaz-parametrica-del-sistema/release/1
 
