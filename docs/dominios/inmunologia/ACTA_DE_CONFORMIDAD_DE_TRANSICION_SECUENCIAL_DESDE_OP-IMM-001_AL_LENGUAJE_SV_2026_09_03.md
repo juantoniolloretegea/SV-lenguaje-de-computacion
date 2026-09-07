@@ -1,6 +1,6 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
-> **Relevo vigente · 07/09/2026:** [delimitación K1-T y salida acotada a F, §28](#k1-t-relevo-20260907), RETP-088. Tras integrar la candidata verificada corresponde fila 4/F; la ternarización productiva sigue no habilitada hasta acreditar sus obligaciones. F recibe las ligaduras de instancia y necesidades de transducción pendientes. Los relevos anteriores conservan su fecha y alcance.
+> **Relevo vigente · 07/09/2026:** [contrato candidato F y relevo a F-IF, §29](#contrato-f-relevo-20260907), RETP-089. Tras integrar la candidata documental verificada corresponde fila 5/F-IF. F recibe las ligaduras DFL-005 y la transducción no habilitada; declara sus condiciones e insuficiencias, sin materializarlas. Los relevos anteriores conservan su fecha y alcance.
 
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
@@ -495,3 +495,16 @@ Conformidad 93/93 y los 20 testigos ES/EN/ensamblaje se exigen en nativo, WASI y
 **Relevo tras integrar la candidata verificada:** se satisface la alternativa de delimitación de §14 y se recibe la salida acotada de fila 3/K1. Sigue **fila 4/F: contrato candidato de representación y suficiencia por operación**, con F-IF conforme a §15. F debe recibir DFL-005 —identidad de instancia, mínimo y ligaduras— y la representación necesaria para transducción antes de admitir operaciones dependientes. La puerta algebraica, fila 10, mantiene Ternarizer excluido hasta demostrar su contrato productivo; este relevo no es cierre de E107/J1.5 ni ejecución algebraica.
 
 DFL-001 conserva diagnóstico y obligaciones no materializadas; DFL-008, sus pérdidas; N0-05/N0-07, K2. DFL-009 sigue en fila 9, retorno CYB. No se adelantan dominios, Cloudflare, R2/R3/R4 ni acceso editorial.
+
+<a id="contrato-f-relevo-20260907"></a>
+## 29. Contrato candidato F y relevo a F-IF · 07/09/2026
+
+**RETP-089; entrada:** main `4d5f93b612003352a63c8c01bf99e1000a6d0125`, PR #74 integrada. La fila 4 entrega [F-SV/0.1-candidata](../../arquitectura/CONTRATO_CANDIDATO_F_DOMINIO_REPRESENTACION_Y_SUFIENCIA_POR_OPERACION_2026_09_07.md), subordinada a Pilares, perfiles y FFL-E. El contrato identifica terna, perímetro, operación, representación y soporte; distingue suficiencia demostrada, pérdida demostrada y suficiencia no acreditada.
+
+DFL-005 recibe mínimo por operación, identidad de instancia `(C,j)` y ligaduras explícitas, sin inferir cardinalidades ni multiplicidad numérica. K1-T mantiene la transducción productiva no habilitada; F localiza su representación requerida antes de ofrecerla. Los 15 requisitos G10 y 44 solicitudes LSV conservan su reconciliación existente; §6 de la candidata precisa los avances K1 y la retirada Python frente a la valoración histórica. Inmunología mantiene su corte y pausa controlada.
+
+PT01/PT03/PT08/PT09/PT10/PT11/PT12 entran por operación; las demás obligaciones se aplican conforme a representación, efectos y destinos. Se reciben matriz 020 y registros 012/016/018 con sus límites, sin elegir plataforma ni ampliar sus pruebas. DFL-009 conserva fila 9 tras el primer universo CYB.
+
+**Verificación:** revisión documental y cálculo exhaustivo del control externo de cuatro estados, enlaces y concordancia RETP. No son ejecución SV ni campaña F-IF. Código, gramática, IR, perfiles, corpus, esperados, workflows y Playground conservan los blobs de la entrada. Se exige Conformidad SVP sobre la nueva candidata; la paridad nativo/WASI/navegador de PR #74 conserva su identidad y no se atribuye al contrato F como prueba nueva.
+
+**Relevo tras integración verificada:** fila 5/F-IF dentro de F, con los seis testigos de §15 y la entrega definida en candidata §9. Esta recepción completa la formulación de fila 4, no su contraste F-IF/IMM/CYB. Cada operación dependiente de una carencia sigue sin admitirse hasta resolverla. No se adelantan G/H, I/J, puerta algebraica, K2, frontera material ni consolidación.
