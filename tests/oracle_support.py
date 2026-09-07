@@ -122,6 +122,9 @@ def assert_python_rejection(proc, expected_code: str) -> None:
 # Identidades textuales observables en frontend.rs/wellformed.rs y sus módulos.
 # No se equiparan a los códigos Python ni constituyen un nuevo catálogo del núcleo.
 RUST_REJECTION_TOKENS = {
+    "horizon_architecture_ausente": "referencia no declarada: Missing",
+    "horizon_architecture_tipo_incorrecto": "K: se esperaba CompositionGraph",
+    "agent_arquitecturas_reales_distintas": "Agent AG: architecture incompatible con Domain",
     "output_semantics_sin_celda_repetida": "E115 (InvalidOutputSemantics): OutputSemantics S: repetidas=[A]",
     "connector_clave_repetida": "Connector Conn: clave duplicada",
     "output_semantics_vacia": "E115 (InvalidOutputSemantics)",

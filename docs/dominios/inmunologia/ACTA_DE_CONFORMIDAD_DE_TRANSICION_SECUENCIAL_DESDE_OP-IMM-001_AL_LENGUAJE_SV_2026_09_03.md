@@ -1,5 +1,7 @@
 # Acta de conformidad de transición secuencial desde OP-IMM-001 al Lenguaje SV
 
+> **Relevo vigente de la fila 3 · 07/09/2026:** [N0-04, §22](#cierre-n0-04-20260907), RETP-081. Tras su promoción sigue la unicidad de `CoupledSpec.bridges` bajo `BridgeSet`. Los relevos anteriores conservan su fecha y alcance.
+
 > **Continuidad vigente · 06/09/2026:** la [adenda rectora de secuencia (§§12–17)](#adenda-secuencia-20260906) actualiza el recorrido desde PR #61 hasta la consolidación nuclear y su continuación material. Distribuye las obligaciones de los perfiles tecnológicos y conserva los estados históricos de esta acta. Registro RETP-076.
 
 > **Relevo de la fila 1:** [recepción N0-01, §18](#recepcion-n0-01-20260906), RETP-077. Tras su integración corresponde reparar los oráculos; N0-02 viene después. El §17 conserva el estado anterior a esta recepción.
@@ -419,3 +421,19 @@ El éxito del corpus demuestra su alcance observado. Los ejecutores actuales nor
 | Laboratorio | Se reutilizan oráculos y distinción validez/identidad de 016; 018 conserva sus 79 programas y condiciones. No se repite ni se amplía retrospectivamente esa campaña, ni se promueve otra plataforma. |
 | Decisión y salida | Cierre limitado efectivo al integrar el expediente enlazado con Conformidad SVP, R0 Rust, R0-8 y R0 WASM correctos sobre su candidata exacta; cabeza, árbol, ejecuciones e integración quedan identificados en ese expediente. |
 | Deuda y siguiente paso | N0-04: referencia real de `Horizon.architecture` a `CompositionGraph`, según la radiografía. Se conservan DFL-001/008 y el resto de K1/K1-T. No se anticipan F, dominios, álgebra, K2, frontera o consolidación. |
+
+<a id="cierre-n0-04-20260907"></a>
+
+## 22. Cierre incremental N0-04 y relevo a BridgeSet · 07/09/2026
+
+**Registro:** RETP-2026-081. **Entrada:** main `f9aa3ebada0db222bb9d196f94a9b42dac185f97`, PR #67 integrada. Continúa la fila 3; la tabla rectora y sus dependencias se conservan.
+
+| Campo | Decisión, evidencia y límite |
+|---|---|
+| Producto y fuente | [Acta N0-04](../../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) y J-H0, IR v0.3 §6.4: `ArchitectureId` del horizonte resuelve un `CompositionGraph` declarado y bien formado. La precisión literal de IR v0.2 queda explícita. |
+| Realización | Resolutores existentes Python/Rust sobre el programa completo, después de las validaciones previas. La igualdad Agent–Domain–Horizon queda ligada a un referente real. Sin nuevos campos, códigos ni cambios de emisor o versión. |
+| Perfiles y soporte | EN Python; ES/EN y ensamblaje mixto Rust, referencias adelantadas y ambos órdenes. PT04/PT13/PT14 y PT01/PT02. No aplica contenido de dominio IMM/CYB ni se promueve un soporte nuevo. |
+| Evidencia | 91/91, Python N0-04 4/4 y Rust 5/5; regresiones previas correctas. Trece positivos y 74 negativos conservados literalmente por vía. El positivo histórico `transition_data_events` tenía una referencia colgante: se documentan rechazo de sus bytes originales, corrección declarativa y cambio explícito del esperado. |
+| Laboratorio y deuda | 016/018 mantienen sus alcances, con prueba tecnológica previa en su puerta. Cinco sondas de sensibilidad conservadas: control, dos rechazos E115 y dos divergencias CRLF abiertas. DFL-001/008 y resto de K1/K1-T no se cierran. |
+| Decisión y salida | Cierre efectivo tras integrar la candidata exacta con los cuatro flujos correctos; identidad de cabeza, árbol, base, ejecuciones y promoción en el expediente enlazado. |
+| Siguiente paso | Unicidad de `CoupledSpec.bridges` bajo `BridgeSet`, cotejando su norma; después multiplicidad de `Horizon.events` y mínimo estructural de Domain. N0-05/N0-07 siguen en K2. No se adelantan F, dominios, álgebra, frontera, consolidación ni R2/R3/R4. |

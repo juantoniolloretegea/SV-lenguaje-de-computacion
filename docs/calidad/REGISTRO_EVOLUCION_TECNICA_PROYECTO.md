@@ -49,6 +49,7 @@ La continuidad documental se organiza así:
 | RETP-2026-078 | 06/09/2026 | NO_CONSTA | REPARACION_DE_ORACULOS | Lenguaje SV / fila 2 / PT02-PT04-PT13 | reparación delimitada; promoción por candidata exacta |
 | RETP-2026-079 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-02 | cierre relacional delimitado; promoción por candidata exacta |
 | RETP-2026-080 | 06/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-03 | cierre de proyección delimitado; promoción por candidata exacta |
+| RETP-2026-081 | 07/09/2026 | NO_CONSTA | CIERRE_INTRINSECO_GOBERNADO | Lenguaje SV / K1 / N0-04 | cierre referencial delimitado; promoción por candidata exacta |
 
 ## 3. Entradas detalladas
 
@@ -313,6 +314,14 @@ La continuidad documental se organiza así:
 - **Perfiles:** PT04/PT13/PT14 con PT01/PT02; ES/EN y ensamblaje Rust, referencia EN Python. Laboratorio 016/018 recibido dentro de sus límites; no se amplía su corpus histórico ni se promueve una plataforma.
 - **Límites:** el recorrido JSON no constituye un importador de IR ni un serializador canónico Rust completo. DFL-001 y DFL-008 siguen abiertas; las pruebas no acreditan suficiencia operacional universal ni una demostración mecanizada de todos los programas.
 - **Estado y relevo:** cierre efectivo al integrar la candidata exacta con los cuatro flujos correctos. La [transición §21](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-03-20260906) fija N0-04 como siguiente trabajo de K1. No se cierra K1, núcleo o R2/R3/R4.
+
+### RETP-2026-081 — N0-04: referencia real de arquitectura del horizonte
+
+- **Fuente y decisión:** main `f9aa3ebada0db222bb9d196f94a9b42dac185f97`, PR #67; Pilares, perfiles, secuencia §21 y radiografía N0-04. J-H0 precisa la resolución de `ArchitectureId` de IR v0.2 como `CompositionGraph` declarado y bien formado.
+- **Realización:** resolutores existentes Python/Rust, aplicados a todos los horizontes después de validaciones previas. Agent conserva su comprobación de igualdad con el horizonte del dominio; la admisión completa exige referente real. E006/E402 y rechazos textuales Rust mantienen su contrato; 51 códigos, misma gramática, esquema IR y emisores.
+- **Evidencia:** [acta N0-04](../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md), corpus 91/91, cuatro pruebas Python y cinco Rust; regresiones previas correctas. Trece positivos y 74 negativos conservan salidas literales por vía; se declara el positivo histórico colgante y la corrección de su fuente/esperado. Cinco sondas de sensibilidad conservadas.
+- **Perfiles:** PT04/PT13/PT14 con PT01/PT02; EN Python, ES/EN y ensamblaje mixto Rust. Laboratorio 016/018 conserva alcance; no se promueve otra realización tecnológica ni se amplían retrospectivamente sus pruebas.
+- **Límites y relevo:** DFL-001/008 y resto de K1/K1-T abiertos. Cierre efectivo tras los cuatro flujos correctos y promoción del candidato exacto. [Transición §22](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#cierre-n0-04-20260907): sigue unicidad de CoupledSpec.bridges bajo BridgeSet; N0-05/N0-07 permanecen en K2. No se consolida el núcleo ni se abre una garantía material.
 
 ## 4. Estado de continuidad
 

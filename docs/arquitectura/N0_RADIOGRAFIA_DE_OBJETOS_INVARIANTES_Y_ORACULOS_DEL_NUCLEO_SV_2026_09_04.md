@@ -407,3 +407,9 @@ Tras integrar ese expediente, la continuación es N0-03: ausencia global de miem
 RETP-080 y el [acta N0-03](./ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) constituyen J-J0, completan la unicidad de todas las semánticas y comprueban estabilidad de la proyección admitida. El corpus pasa a 88 = 14 válidos + 74 inválidos; los emisores y sus versiones conservan su realización. E115 recibe explícitamente la comprobación no enlazada y la precisión de su texto general Python. La promoción permanece ligada a la candidata y a sus controles.
 
 Después sigue N0-04: referencia real de `Horizon.architecture` a `CompositionGraph` y coherencia relacional pertinente. Esta recepción no decide N0-05 ni salta las obligaciones intrínsecas restantes, K1-T o las deudas DFL-001/008. La radiografía inicial conserva sus hallazgos históricos.
+
+## 14. Recepción posterior de N0-04 · 07/09/2026
+
+RETP-081 y el [acta N0-04](./ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) realizan J-H0. Se precisa la frase abreviada de la radiografía: IR v0.2 declara `ArchitectureId` en Horizon, no literalmente `CompositionGraph`; este último es el referente ahora resuelto y el tipo declarado para Agent. Los antecedentes permanecen identificados. La obligación afecta a todos los horizontes, incluso sin consumidores, sin resolver parcialmente unidades fuente.
+
+El corpus pasa a 91 = 14 válidos + 77 inválidos. Se documenta la corrección de un positivo histórico cuya arquitectura no estaba declarada; no se afirma que sus bytes anteriores sigan admitidos. Tras la promoción sigue la unicidad de `CoupledSpec.bridges` conforme a §7, luego las determinaciones de Horizon.events y Domain. N0-05/N0-07 permanecen en K2; DFL-001/008 y K1-T conservan sus deudas.

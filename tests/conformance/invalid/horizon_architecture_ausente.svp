@@ -1,0 +1,2 @@
+-- N0-04: un horizonte sin consumidores también exige arquitectura declarada.
+horizon H { architecture: Missing; events: [Event]; }

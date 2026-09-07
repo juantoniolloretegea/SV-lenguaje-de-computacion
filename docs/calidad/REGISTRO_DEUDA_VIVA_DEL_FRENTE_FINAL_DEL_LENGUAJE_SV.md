@@ -112,3 +112,9 @@ N0-03 permanece abierto y es el siguiente relevo de K1. La sonda `semantics_unbo
 RETP-080 y el [acta N0-03](../arquitectura/ACTA_TECNICA_N0_03_UNICIDAD_DE_MIEMBROS_Y_ESTABILIDAD_DE_PROYECCION_JSON_2026_09_06.md) resuelven, tras su promoción, el testigo residual de semántica duplicada sin `CellSpec`. La misma entrada se conserva y exige E115 en ambos emisores. La ausencia de homónimos se fundamenta en el inventario del esquema emitido y la guarda de sus mapas variables; el recorrido JSON acredita estabilidad del corpus sin pérdida de miembros, tipos ni precisión.
 
 Esta resolución no cierra DFL-001: el texto general E115 se precisa y su identidad se conserva, pero sigue faltando concordancia diagnóstica general. DFL-008 mantiene ambas sondas CRLF y su condición de cierre. N0-04 es el siguiente paso de K1; no se acredita un importador de IR, un serializador canónico Rust completo ni suficiencia operacional universal.
+
+## 9. Cierre N0-04 y continuidad K1 · 07/09/2026
+
+RETP-081 y el [acta N0-04](../arquitectura/ACTA_TECNICA_N0_04_REFERENCIA_REAL_DE_ARQUITECTURA_DEL_HORIZONTE_2026_09_07.md) cierran, tras promoción, la resolución real de `Horizon.architecture` como grafo declarado y bien formado. La identidad de arquitectura del agente queda vinculada por su relación existente al mismo referente. La corrección explícita de un positivo histórico y sus huellas forman parte del expediente.
+
+E006 conserva su contrato efectivo Python y Rust su rechazo textual de referencia tipada; no se amplía el catálogo ni se cierra DFL-001. DFL-008 conserva las dos sondas CRLF. La multiplicidad de sucesos y las relaciones causales de horizonte/frame fuera de J-H0 no se dan por resueltas. Sigue el acto de unicidad de CoupledSpec.bridges bajo BridgeSet; las decisiones de Domain y K1-T conservan el orden de la transición §14.

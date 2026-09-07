@@ -1,0 +1,14 @@
+-- N0-04: dos grafos declarados e iguales en estructura no son la misma identidad.
+codomain K = { A };
+output_semantics S { A -> "a"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec CC { cell: C; bridges: [3]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph Arch1 { nodes: [CC]; edges: []; relation: R; regime: Simple; }
+graph Arch2 { nodes: [CC]; edges: []; relation: R; regime: Simple; }
+horizon H { architecture: Arch1; events: [Event]; }
+capture_spec Cap { parameter_id: 1; observation_domain: Obs; observation_space: Space; failure_symbol: Bottom; mapping: Capture; }
+admissibility_spec Adm { parameter_id: 1; states: {Ok, Degraded, NotAdmitted}; rule: Rule; }
+ternarizer T { observation_space: Space; partition_zero: Z0; partition_one: Z1; partition_u: ZU; mapping: Map; }
+domain D { parameters: [P]; interface: I; horizon: H; capture_specs: [Cap]; admissibility_specs: [Adm]; ternarizers: [T]; exogeneity_mask: Mask; silent_u: SU; transduction_policy: TP; u_policy: UP; closure_criterion: Close; }
+agent AG { architecture: Arch2; domain: D; query_engine: QE; }

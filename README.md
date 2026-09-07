@@ -44,8 +44,8 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 | Proyección diferencial Rust | **0.1.0** | Observable compartido por Rust nativo y WebAssembly; no sustituye al serializador canónico completo. |
 | Núcleo Rust | **`sv_core`** | Implementación compartida por los destinos nativo y WebAssembly. |
 | Entorno público | **Rust / WebAssembly** | <https://lenguaje-sv.itvia.online/>. |
-| Conformidad vigente | **88/88** | 14 casos válidos y 74 inválidos, incluidos N0-01, N0-02 y N0-03. |
-| `sv_core` | **210/210 + N0-01 3/3 + N0-02 6/6 + N0-03 5/5** | Suite interna e integración de codominios, semánticas y mapas de la proyección JSON. |
+| Conformidad vigente | **91/91** | 14 casos válidos y 77 inválidos, incluidos N0-01 a N0-04. |
+| `sv_core` | **210/210 + N0-01 3/3 + N0-02 6/6 + N0-03 5/5 + N0-04 5/5** | Suite interna e integración de codominios, semánticas, mapas JSON y referencias de arquitectura. |
 | Dominios cerrados | **5/5 + 6/6 navegador** | Regresiones permanentes y sondas DG-01/02/03 en SVP-ES y SVP-EN. |
 | `sv_wasm` | **2/2** | Adaptador WebAssembly sobre el mismo núcleo. |
 | Documentación ejecutable `sv_core` | **17/17** | Pruebas de documentación Rust. |
