@@ -40,11 +40,13 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Estado:** abierta y gobernada.
 - **Prioridad:** alta.
 
-### DFL-005 — Campos de `Domain` sin interpretación ejecutiva completa
+### DFL-005 — Identidad de instancia, ligaduras y campos de `Domain` sin interpretación completa
 
 - **Descripción:** aunque el contrato mínimo de enlace dispone de validación formal inicial, la etapa frontal del compilador no ejecuta todavía una interpretación material completa de `interface`, `exogeneity_mask`, `silent_u`, `transduction_policy`, `u_policy`, `closure_criterion` ni `query_engine`.
 - **Estado:** abierta y reconocida.
 - **Prioridad:** media.
+
+**Ampliación RETP-086:** [N0 §17](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#domain-parameters-20260907) cierra sólo la unicidad nominal local de `parameters` (J-D0). La instancia doctrinal `(C,j)` y su ligadura con nombres, captura, admisibilidad y transducción no están representadas. El vacío, la multiplicidad numérica y las cardinalidades no se resuelven por inferencia. **Recepción obligatoria en F, con prioridad bloqueante para operaciones que dependan de esas ligaduras**: fijar contrato, mínimo, multiplicidad y evidencia antes de admitirlas. La aceptación estructural de una lista no equivale a constitución completa ni acredita cobertura. No se pospone esta suficiencia únicamente a K2.
 
 ### DFL-006 — Resultados y datos sin productor o ejecución material
 

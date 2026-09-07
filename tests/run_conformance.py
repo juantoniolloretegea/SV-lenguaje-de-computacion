@@ -14,6 +14,7 @@ from oracle_support import (run, assert_success, assert_json_equal, assert_bytes
                             assert_rust_rejection,
                             check_invalid_corpus)
 EXPECTED_OBLIGATIONS = {
+    "domain_parametro_nominal_repetido.svp": "J-D0/Domain.parameters",
     "horizon_tipo_suceso_repetido.svp": "J-H1/Horizon.events",
     "coupledspec_puente_repetido.svp": "J1.2/BridgeSet",
     "horizon_architecture_ausente.svp": "E006",

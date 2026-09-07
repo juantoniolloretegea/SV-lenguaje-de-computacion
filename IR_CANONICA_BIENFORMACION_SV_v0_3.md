@@ -9,7 +9,7 @@
 **Fecha:** 23 de agosto de 2026  
 **Estado:** Especificación técnica pública — v0.3
 
-**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3), N0-04 (§6.4), BridgeSet (§6.5) y tipos de suceso del horizonte (§6.6), con alcance y diagnóstico expresos
+**Precisiones posteriores:** N0-01 (§6.1), N0-02 (§6.2), N0-03 (§6.3), N0-04 (§6.4), BridgeSet (§6.5), tipos de suceso del horizonte (§6.6) e identidad nominal de Domain (§6.7), con alcance y diagnóstico expresos
 
 ---
 
@@ -389,6 +389,23 @@ La [radiografía §16](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y
 
 ---
 
+<a id="domain-parameters-j-d0"></a>
+### 6.7. Identidad nominal de `Domain.parameters` y límite de `parameter_id` (J-D0)
+
+El [Documento V §5.1](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/b8fd32978292d25adf9b87cf71e409005dce642c/documentos/composicion/V_invariantes_agentes_operador_consulta.md) define 𝒫 como conjunto de instancias `(C,j)`. La IR heredada declara `[ParameterInstance]`, pero la Gramática 0.2 conserva la superficie de v0.1 §5.6: una lista de identificadores. Esa lista nominal no materializa todavía la instancia ni su vínculo con la captura. Los Pilares §§1.4 y 4 impiden reconstruir ese vínculo por posición, nombre o igualdad de cardinalidades.
+
+Se fija **J-D0**, obligación limitada de representación: cada identificador de `Domain.parameters` aparece a lo sumo una vez dentro de ese `Domain`. La identidad es la exacta del identificador admitido por el perfil fuente, sin equivalencias inferidas. `[B,A,B]` se rechaza; una lista admitida conserva su orden y sus nombres. La unicidad es local: dos dominios pueden declarar un mismo nombre. No se deduplica, ordena ni completa la lista, ni se afirma que nombres diferentes acrediten instancias distintas.
+
+El juicio se aplica al programa completo, incluido el ensamblaje ES/EN y los dominios sin agente consumidor. Se comprueba después de los juicios previos, para conservar sus diagnósticos. El rechazo textual controlado es `Domain <id>: parámetro nominal repetido: <nombre>`, bajo `CompileError::InvalidProgram`; impide emitir IR y no produce `Tri.U`. No se inventa un código catalogado: DFL-001 conserva la concordancia pendiente.
+
+**Mínimo y multiplicidad no deducibles:** el carácter de conjunto no establece por sí solo no vaciedad. Tampoco permite identificar dos `parameter_id` numéricos iguales con la misma instancia `(C,j)`: falta `C` y falta una ligadura explícita. Este acto no añade un rechazo al vacío ni una unicidad numérica por dominio, ni impone igualdad entre el número de nombres y el de capturas. Se conservan los controles existentes de referencias, cadenas no vacías, igualdad de conjuntos de IDs de captura/admisibilidad y cobertura nominal de espacios por ternarizadores, con sus límites. Las listas originales y su multiplicidad se preservan en la proyección; la igualdad de conjuntos no acredita una correspondencia unívoca.
+
+La aceptación representacional de esos casos pendientes no certifica constitución completa, cobertura ni uso operacional del dominio. **F debe recibir y resolver la identidad de instancia, las ligaduras y el régimen de multiplicidad antes de admitir operaciones que dependan de ellos**; no basta posponerlo a K2 ni usar el numeral como posición. La no vaciedad se decide dentro de ese contrato y su alcance, sin derivar `b`, células ni relleno desde el inventario.
+
+Gramática 0.2, esquema IR 0.3 y proyección 0.1.0 conservan sus estructuras y versiones. [Radiografía §17](docs/arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#domain-parameters-20260907), RETP-086, identifica el cotejo, las pruebas y las obligaciones que permanecen abiertas.
+
+---
+
 ## 7. Elementos no modificados
 
 La versión 0.3 no introduce ni resuelve:
@@ -409,12 +426,12 @@ La divergencia histórica del identificador `E204` permanece documentada en el c
 
 ## 8. Evidencia de conformidad
 
-La conformidad vigente de SV dispone de una batería de 93 casos:
+La conformidad vigente de SV dispone de una batería de 94 casos:
 
 ```text
 14 válidos
-79 inválidos
-93 total
+80 inválidos
+94 total
 ```
 
 Los casos válidos comparan directamente la proyección nativa con los esperados comprometidos mediante el observador de pares JSON ordenados. Los inválidos exigen rechazo controlado y el texto esperado para su obligación; no se afirma que el destino emita todos los códigos del catálogo (DFL-001, RETP-082). La batería incluye contraejemplos específicos para:
@@ -423,6 +440,7 @@ Los casos válidos comparan directamente la proyección nativa con los esperados
 - `Codomain` con un miembro repetido;
 - `CoupledSpec.bridges` con una posición repetida;
 - `Horizon.events` con un tipo de suceso repetido;
+- `Domain.parameters` con un nombre repetido;
 - semántica de `CellSpec` vacía, incompleta, con clave ajena o repetida;
 - semántica repetida sin celda vinculante y control de la guarda previa de claves de `Connector`;
 - horizonte con arquitectura inexistente o de tipo incorrecto y agente con dos arquitecturas reales distintas;
