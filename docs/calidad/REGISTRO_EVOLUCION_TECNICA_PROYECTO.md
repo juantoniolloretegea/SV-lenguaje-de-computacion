@@ -59,6 +59,10 @@ La continuidad documental se organiza así:
 | RETP-2026-088 | 07/09/2026 | NO_CONSTA | DELIMITACION_GOBERNADA_Y_RELEVO | Lenguaje SV / K1-T → F | ruta productiva no habilitada; salida acotada tras candidata verificada |
 | RETP-2026-089 | 07/09/2026 | NO_CONSTA | CONTRATO_CANDIDATO_Y_RELEVO | Lenguaje SV / F → F-IF | contrato por operación; ligaduras, suficiencia y pérdida localizadas; contraste pendiente |
 | RETP-2026-090 | 07/09/2026 | NO_CONSTA | CONTRASTE_SINTETICO_Y_RELEVO | Lenguaje SV / F-IF → G-H | seis espacios documentales; pérdida por operación; relevo IMM tras candidata verificada |
+| RETP-2026-091 | 07/09/2026 | NO_CONSTA | RECEPCION_DOCUMENTAL | Lenguaje SV / fila 7 | Recepción G/H: suficiencia no acreditada para ejecutar Q0 |
+| RETP-2026-092 | 07/09/2026 | NO_CONSTA | MANDATO_Y_RESTAURACION_DOCUMENTAL | Lenguaje SV / fila 7 | Español obligatorio y revisión integral final: DFL-011 |
+| RETP-2026-093 | 07/09/2026 | NO_CONSTA | CORRECCION_LOCAL_Y_COBERTURA | Lenguaje SV / fila 7 | TransitionData: cierre local candidato H04/H05 y corpus compartido 14+95 |
+| RETP-2026-094 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_ORACULO_Y_REGISTROS | Lenguaje SV / fila 7 | E115: cuatro causas discriminadas y prueba de intercambio |
 
 ## 3. Entradas detalladas
 
@@ -400,7 +404,56 @@ La continuidad documental se organiza así:
 - **Verificación:** Conformidad SVP exigida en candidata exacta con la campaña añadida y corpus 100/100 preservado. Código Rust, Gramática/IR/perfiles y Playground intactos. La paridad PR #74 conserva su corte; no se la cuenta como ejecución nueva de F-IF. Se reutilizan PT y 012/016/018 con sus límites, sin garantía material adicional.
 - **Decisión:** integración verificada completa fila 5 en alcance sintético; [transición §30](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#f-if-relevo-20260907) entrega fila 6/G-H. No se adelantan CYB, álgebra, K2, frontera ni consolidación; DFL-009 sigue en fila 9 y acceso editorial aplazado.
 
+### RETP-2026-091 — Recepción documental de G/H
+
+- **Expediente:** [Markdown RETP-091](./RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.md) y [CSV vinculado](./RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.csv), ambos conservados. Este enlace al maestro se incorpora el 08/09/2026; no inventa una integración ni una ejecución anterior.
+- **Identidad:** Lenguaje `bc3b22c9e9319e8f191390c8cfe9fa1577904d87`; retorno G/H `54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9`; recepción candidata `9b32edda21072b3d2a138d9e92d95febdbc21ac4`, PR #77.
+- **Dictamen:** `SUFICIENCIA_NO_ACREDITADA_PARA_EJECUTAR_Q0`. No afirma irrepresentabilidad; SP-01…SP-12 siguen sin ejecución integral.
+- **Continuidad:** la fila 7 queda abierta en la candidata con PT01/PT03/PT04/PT14. DFL-005, H06/H07 y las restantes obligaciones conservan sus límites. Inmunología permanece en pausa; constituir el primer universo falsador de Ciberseguridad corresponde a su unidad cuando reciba una candidata apta.
+- **Estado:** `RECIBIDO_EN_CANDIDATA_NO_INTEGRADA`.
+
+### RETP-2026-092 — Restauración del mandato del español
+
+- **Documentos autorizados:** [acta del español](./ACTA_DE_USO_DEL_ESPANOL_EN_TODOS_LOS_REPOSITORIOS_SV_2026_09_07.md) y [CSV RETP-092](./RETP_2026_092_USO_DEL_ESPANOL_EN_REPOSITORIOS_SV.csv). Este apartado es su enlace Markdown desde el maestro; no sustituye ni altera el acta.
+- **Identidad de restauración, 08/09/2026:** fuente `149fcbc0c7cd5a1b9b5870272e5f7f1103376185`; objeto Git del acta `89be13febe50f2893e738471ab246e1ac33b45a7`; objeto Git del CSV `fe737cbe3a61e670ad1365b6d3cd1796e96e2a06`. Se restituyen exactamente los bytes autorizados.
+- **Gobierno:** DFL-011 pertenece a la revisión integral del español en todos los repositorios SV, públicos y privados. El mandato rige desde su aprobación; la retirada posterior fue un error de la candidata.
+- **Momento:** español correcto desde ahora en redacción nueva o revisada; revisión integral, una vez resuelto el trabajo técnico previo y antes del cierre del núcleo. No suspende la fila 7 ni autoriza modificaciones indiscriminadas de README o actas históricas.
+- **Estado:** `PENDIENTE_DFL-011`; la revisión integral no se declara realizada.
+
+### RETP-2026-093 — Incorporación del subcierre local al maestro
+
+- **Expediente:** [Markdown RETP-093](./RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.md), [CSV vinculado](./RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.csv) y acta técnica allí enlazada. El enlace maestro se incorpora el 08/09/2026.
+- **Corte y alcance:** `80aee0a48adb72710770adbfbe9f5d0d71585a6f`, con sucesión documental `1864ebfbcf198fdefe6b8fb879a32f2c5e844993`. H04/H05 locales y nueve negativos incorporados al corpus compartido `14+95`. Las ejecuciones y huellas originales permanecen en el expediente con su corte; no prueban por anticipado la corrección E115 de RETP-094.
+- **Rectificación de identidades:** DFL-011 conserva el español; el nombre histórico `cell_ref` pasa de la referencia candidata DFL-011 a DFL-012; la independencia semántica pasa de DFL-012 a DFL-013. No se modifica la clave externa ni se cierra ninguna de estas obligaciones.
+- **Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA` en el alcance y corte identificados. DFL-005, H06/H07 y la causalidad ejecutiva entre transición y marcos siguen abiertas.
+
+<a id="retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral"></a>
+
+### RETP-2026-094 — Discriminación causal E115 y rectificación registral
+
+- **Entrada:** PR #78 en `1864ebfbcf198fdefe6b8fb879a32f2c5e844993`, apilada sobre la recepción G/H de PR #77. La nueva candidata debe incorporar la restitución literal del español registrada en RETP-092.
+- **Fundamento independiente:** [acta N0-02, §2](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) e IR 0.3 §6.2: para `CellSpec C`, `OutputSemantics S` y `Codomain K={A,B}`, cada miembro aparece una sola vez y no hay claves ajenas. Los esperados proceden de esa obligación aplicada a los testigos comprometidos, no de copiar la salida del compilador.
+
+| Testigo | Claves repetidas | Claves ausentes | Claves ajenas |
+|---|---|---|---|
+| `output_semantics_vacia` | ninguna | A, B | ninguna |
+| `output_semantics_clave_ausente` | ninguna | B | ninguna |
+| `output_semantics_clave_ajena` | ninguna | ninguna | X |
+| `output_semantics_clave_repetida` | A | ninguna | ninguna |
+
+- **Cambio:** cuatro expectativas en `oracle_support.py` conservan los tres conjuntos discriminantes y los referentes C/S/K. El mecanismo sigue siendo comprobación de un fragmento específico dentro del rechazo controlado; no se afirma igualdad literal de todo `stderr`. No cambia la semántica Rust, el inventario de 14 válidos y 95 inválidos, los testigos ni sus JSON esperados.
+- **Sensibilidad fijada:** `test_oracle_support.py` incorpora cuatro controles válidos, los doce intercambios dirigidos entre causas distintas y doce sustituciones de uno de los tres referentes. Con los tokens anteriores los veinticuatro contraejemplos no eran rechazados; tras la corrección se rechazan todos. Las 21 pruebas locales pasan y conservan los controles generales de retorno `1`, salida IR vacía y envoltorio de rechazo.
+- **Límites de la clasificación:** ocho grupos de tokens compartidos reúnen veinte casos del inventario de 95; ese recuento no mide fidelidad diagnóstica. Se ha demostrado y corregido la pérdida discriminante del grupo E115 de cuatro casos. Los otros grupos y los 75 tokens únicos no reciben por ello una certificación causal. No se modifican los diagnósticos de `compose`, la resolución de alias ni sus obligaciones mediante esta corrección; DFL-001 continúa abierta.
+- **Continuidad registral:** RETP-091/092/093 quedan enlazados desde el maestro; DFL-011 conserva el mandato del español, DFL-012 identifica `cell_ref` y DFL-013 la independencia semántica. La revisión integral del español es final y no bloquea fila 7. Las rectificaciones de identificadores en el expediente candidato RETP-093 se señalan con fecha propia.
+- **Verificación integrada exigida:** Conformidad SVP, R0 Rust, R0-8 y R0 WASM sobre la nueva cabeza, incluido corpus nativo/WASI/navegador. Los resultados anteriores conservan sus cortes. La prueba local del observador no se presenta como una compilación local nueva de Rust.
+- **Estado al constituir esta candidata:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. DFL-005, H06/H07, la ejecución causal y la independencia semántica permanecen abiertas. No se cierra la fila 7 ni se entrega todavía una candidata a Ciberseguridad.
+
+
 ## 4. Estado de continuidad
+
+**Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. La comprobación integrada de esta nueva cabeza está pendiente. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
+
+**Sucesión registral de 08/09/2026 (PR #77, candidata):** RETP-091 recibe G/H y RETP-092 restituye el mandato del español. Estos asientos describen una candidata sin integrar; `main@bc3b22c9` conserva RETP-090. La fila 7 permanece abierta y la fila 8 no se activa. El estado B2 que sigue conserva su alcance histórico.
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
 

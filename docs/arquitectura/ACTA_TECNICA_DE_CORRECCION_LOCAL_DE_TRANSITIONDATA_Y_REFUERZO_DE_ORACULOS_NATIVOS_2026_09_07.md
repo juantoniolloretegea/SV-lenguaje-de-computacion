@@ -83,9 +83,9 @@ El fallo previo de la comprobación de navegador tras ampliar el corpus correspo
 
 ## 6. Deuda de esquema e independencia semántica
 
-La proyección 0.1.0 conserva la clave histórica `cell_ref` para el primer componente de `induced_parameters`, aunque su valor representa una identidad `NodeId` resuelta como `CoupledSpec`. Cambiar esa clave dentro de la misma versión alteraría el esquema de forma encubierta. La deuda queda registrada como DFL-011, con migración explícita a `node_ref` o denominación equivalente en una versión incompatible posterior.
+La proyección 0.1.0 conserva la clave histórica `cell_ref` para el primer componente de `induced_parameters`, aunque su valor representa una identidad `NodeId` resuelta como `CoupledSpec`. Cambiar esa clave dentro de la misma versión alteraría el esquema de forma encubierta. La deuda queda registrada como DFL-012, con migración explícita a `node_ref` o denominación equivalente en una versión incompatible posterior.
 
-Las vías nativa, WASI y de navegador ejecutan la misma custodia Rust de `sv_core` sobre destinos diferentes. La paridad entre ellas acredita conservación de transporte y de observables, pero no independencia entre realizaciones semánticas. Esta pérdida queda registrada como DFL-012. Los resultados esperados comprometidos, las pruebas causales, las mutaciones y la comparación exacta de bytes son controles compensatorios; no sustituyen una segunda realización independiente ni un comprobador derivado de la doctrina.
+Las vías nativa, WASI y de navegador ejecutan la misma custodia Rust de `sv_core` sobre destinos diferentes. La paridad entre ellas acredita conservación de transporte y de observables, pero no independencia entre realizaciones semánticas. Esta pérdida queda registrada como DFL-013. Los resultados esperados comprometidos, las pruebas causales, las mutaciones y la comparación exacta de bytes son controles compensatorios; no sustituyen una segunda realización independiente ni un comprobador derivado de la doctrina.
 
 ## 7. Evidencia de verificación
 
@@ -157,3 +157,7 @@ Permanecen abiertas:
 - la pertenencia de consultas, evaluaciones e informes de cobertura;
 - la independencia entre realizaciones semánticas;
 - la migración del nombre histórico `cell_ref`.
+
+## 10. Rectificación de identificadores de 08/09/2026
+
+La asignación candidata anterior colisionaba con DFL-011, reservada al español. Se corrigen las referencias del apartado 6 a DFL-012 (`cell_ref`) y DFL-013 (independencia semántica), conservando sus obligaciones. La evidencia anterior mantiene su corte; la sucesión del observador E115 y del registro maestro se identifica en RETP-094. Esta rectificación no amplía el cierre local de H04/H05.

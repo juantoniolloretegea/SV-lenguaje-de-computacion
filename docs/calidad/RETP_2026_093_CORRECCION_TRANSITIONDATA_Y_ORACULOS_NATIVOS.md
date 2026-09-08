@@ -26,7 +26,7 @@ El corte `9a79e1370afa3f22ab85f94b455bfc5aa1ac0d82` acreditó los nueve casos ca
 La candidata verificada:
 
 - incorpora los nueve casos en `tests/conformance/invalid/`;
-- hace que el comprobador causal consuma los mismos archivos y sus mensajes exactos;
+- hace que el comprobador causal consuma los mismos archivos y sus fragmentos causales específicos;
 - elimina las copias separadas;
 - amplía el corpus de `14 + 86` a `14 + 95`;
 - alinea la comprobación de navegador con el cardinal de 95 inválidos;
@@ -34,8 +34,8 @@ La candidata verificada:
 
 ## 3. Deuda expresamente registrada
 
-- **DFL-011:** la clave histórica `cell_ref` transporta una identidad `NodeId` resuelta como `CoupledSpec`; la migración de nombre queda reservada a una versión incompatible posterior del esquema.
-- **DFL-012:** nativo, WASI y navegador comparten `sv_core`; su paridad no constituye independencia entre realizaciones semánticas.
+- **DFL-012:** la clave histórica `cell_ref` transporta una identidad `NodeId` resuelta como `CoupledSpec`; la migración de nombre queda reservada a una versión incompatible posterior del esquema.
+- **DFL-013:** nativo, WASI y navegador comparten `sv_core`; su paridad no constituye independencia entre realizaciones semánticas.
 
 ## 4. Evidencia
 
@@ -61,8 +61,8 @@ La comprobación de referencia utilizó Rust 1.98.0 y la compatibilidad compleme
 H04 = CERRADO_EN_CANDIDATA
 H05 = CERRADO_EN_CANDIDATA
 COBERTURA_COMPARTIDA_H04_H05 = VERIFICADA_EN_NATIVO_WASI_Y_NAVEGADOR
-DFL_011 = ABIERTA_Y_GOBERNADA
 DFL_012 = ABIERTA_Y_GOBERNADA
+DFL_013 = ABIERTA_Y_GOBERNADA
 PROMOCION = PENDIENTE
 FILA_7 = ABIERTA
 ```
@@ -77,3 +77,7 @@ La promoción exige la comparación final contra la recepción G/H y el mantenim
 - `tests/run_row7_transitiondata_conformance.py`;
 - `tests/run_directed_mutation_sensitivity.py`;
 - `tests/conformance/invalid/`.
+
+## 7. Rectificación registral de 08/09/2026
+
+DFL-011 pertenece al mandato del español. Las referencias candidatas anteriores se corrigen: nombre histórico `cell_ref`, DFL-011 → DFL-012; independencia semántica, DFL-012 → DFL-013. Se conservan contenido, límites y evidencia de cada obligación. La evidencia de §4 pertenece al corte `80aee0a`; la nueva corrección del observador y su verificación se registran en [RETP-094 del maestro](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral).

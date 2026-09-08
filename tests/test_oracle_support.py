@@ -14,7 +14,43 @@ def result(rc=1, out=b"", err=b""):
     return subprocess.CompletedProcess([], rc, out, err)
 
 
+# N0-02 §2 / IR 0.3 §6.2: cada miembro de K={A,B} aparece una vez,
+# sin claves ajenas. Expectativas fijadas por los cuatro testigos fuente,
+# independientes del diccionario del observador y de la salida del compilador.
+E115_WITNESSES = {
+    "output_semantics_vacia": "repetidas=[]; ausentes=[A, B]; ajenas=[]",
+    "output_semantics_clave_ausente": "repetidas=[]; ausentes=[B]; ajenas=[]",
+    "output_semantics_clave_ajena": "repetidas=[]; ausentes=[]; ajenas=[X]",
+    "output_semantics_clave_repetida": "repetidas=[A]; ausentes=[]; ajenas=[]",
+}
+
+
+def e115_result(cause, objects="CellSpec C, OutputSemantics S, Codomain K"):
+    message = f"E115 (InvalidOutputSemantics): {objects}: {cause}"
+    return result(err=f'SVP no admitido: InvalidProgram("{message}")\n'.encode())
+
+
 class OracleTests(unittest.TestCase):
+    def test_e115_accepts_each_normative_witness(self):
+        for case, cause in E115_WITNESSES.items():
+            with self.subTest(case=case):
+                assert_rust_rejection(e115_result(cause), case)
+
+    def test_e115_rejects_each_other_cause(self):
+        for case in E115_WITNESSES:
+            for other, cause in E115_WITNESSES.items():
+                if case != other:
+                    with self.subTest(case=case, other=other), self.assertRaises(OracleError):
+                        assert_rust_rejection(e115_result(cause), case)
+
+    def test_e115_requires_the_witness_objects(self):
+        for case, cause in E115_WITNESSES.items():
+            for objects in ["CellSpec Otra, OutputSemantics S, Codomain K",
+                            "CellSpec C, OutputSemantics Otra, Codomain K",
+                            "CellSpec C, OutputSemantics S, Codomain Otro"]:
+                with self.subTest(case=case, objects=objects), self.assertRaises(OracleError):
+                    assert_rust_rejection(e115_result(cause, objects), case)
+
     def test_roundtrip_preserves_local_scope_arrays_and_strings(self):
         raw = '{"b":[{"A":"ñ\\n\\t\\\\"},{"A":"igual"}],"a":[1,1,true,null,{},[]]}'.encode()
         repeated = assert_json_roundtrip(raw)
