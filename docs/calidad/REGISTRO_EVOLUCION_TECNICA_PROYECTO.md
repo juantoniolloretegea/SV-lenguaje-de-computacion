@@ -753,3 +753,28 @@ La numeración RETP se mantiene en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
 **Oráculos previos:** las 48 entradas mantendrán bytes y huellas, salvo el comentario de procedencia; el testigo G/H y el vector fijo LIG permanecen intactos. Dos lectores independientes rechazarán números fuera del subconjunto documental antes de perder representación, claves índice, duplicados, UTF-8 inválido y sustitutos aislados. No se restringe Nat ni se transforman números de dominio en cadenas. Se conservarán las 28 mutaciones y los tres destinos de RETP-100.
 
 **Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía resultado dinámico ni se cambia el estado de #81, fila 7, las doce SP o Q0. Ningún README ni acta histórica recibe una edición.
+
+**Realización verificada:** contrato previo `9f1f39328e363c92d17d2aaf3fb0e51efff23930`; material `a20afe9d76da173295f5c123614189b31d705974`; árbol `0cff4a5b0b907f1105e0519793fb9a56e2e6497d`. La [PR #82](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/82) se apila sobre `ccc007578e23df3a304208733687824e2f241438` de #81. La fusión virtual comprobada `3a09cbdc7ffcadc69edd46af5297e381223c641d` tiene el mismo árbol material y padres `ccc00757…` y `a20afe9d…`; ninguna candidata se ha promovido.
+
+| Comprobación sobre el material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust, incluida compatibilidad adicional | [34209375380](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375380) | Conforme |
+| Conformidad SVP | [34209375465](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375465) | Conforme |
+| R0-8 nativo | [34209375394](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375394) | Conforme |
+| Paridad nativa, WASI y navegador | [34209375404](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375404) | Conforme |
+
+La referencia es Rust/Cargo 1.98.0 sobre Ubuntu 24.04. Las pruebas nuevas dan 7/7 en Rust y 6/6 en JavaScript, con causas fijadas antes de ejecutar. La herramienta autónoma regenera los 48 datos sin alterar un byte; sólo cambia el comentario de procedencia de su archivo. El vector fijo LIG mantiene `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`. El espacio de trabajo conserva 211 unitarias de `sv_core` y todas sus suites sin fallos; el corpus da 14/14 válidos y 106/106 inválidos. Se detectan las 43/43 mutaciones previas, sin supervivientes ni inválidas.
+
+El observador mantiene 48 transportes y 48 huellas recalculadas desde el contrato cotejado, 16 recuperaciones F0, 16 con información lateral, 16 controles H y ocho pérdidas de H. Sus 28/28 ataques caen por la causa exigida; el control reserializado es admitido. Los informes de transporte conservan identidad literal nativo/WASI/navegador. Esto preserva RETP-100 y no constituye una segunda semántica de SV.
+
+| Artefacto publicado por GitHub | Identificador | Bytes | SHA-256 del archivo comprimido según GitHub |
+| --- | --- | ---: | --- |
+| gh-lig-documental | 10049139187 | 12124 | `4c90cad004b211e6bde1845e3b9f6ac6d4c3472aa9e9928b6b0ef90f994f4800` |
+| oracle-sensitivity | 10049145180 | 5014 | `4933c69e1ec5ec3512b79ee1889e032742bce259b3f827808a21ce97e1310b9c` |
+| directed-mutation-sensitivity | 10049171351 | 161962 | `4ae9652791e043bc396982b65a101ad3223aff62a53dfc0665cbc0a6a91d880f` |
+| r0-8-baseline-native | 10049143461 | 414322 | `4d1c120c49e0b5c6d1ac768a88fa64bf879d24605c61c20a292fb020b77639de` |
+| r0-wasm-three-way-parity | 10049167252 | 3418646 | `84f4a4722d7a07414908f585582dc1942a60ed309b62e6c55e403c4015c9bc74` |
+
+Los resultados dinámicos se cotejan con los registros de ejecución. Los bytes y huellas de esta tabla proceden de los metadatos de GitHub; no se afirma una descarga y reverificación local de los archivos comprimidos. Las modificaciones posteriores a `a20afe9d…` sólo inscriben esta evidencia; su cabeza y comprobaciones figuran en la PR.
+
+**Estado actual:** `CORRECCION_VERIFICADA_NO_PROMOVIDA`. Se han retirado dos archivos Python, quedan 17 bajo `tests/` y también fragmentos e invocaciones Python en CI. No se presenta el recuento de extensiones como inventario completo de dependencias. Node y GNU Coreutils permanecen explícitos. La distribución final sin Python y su prueba en entorno limpio, la revisión externa, la resolución completa de fila 7 y la ejecución de las doce SP permanecen pendientes. Acta del español, README y repositorios de dominio intactos.
