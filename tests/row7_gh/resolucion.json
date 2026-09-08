@@ -23,7 +23,7 @@
       "id": "BYTES",
       "operation": "GH-DOC-01…08: transporte documental",
       "contract": "GH-LIG/0.1 §§2–3",
-      "available": "Paso por LIG y recuperación documental literal a contrastar en esta candidata.",
+      "available": "48 transportes documentales por LIG: 16 recuperaciones F0, 16 HS con información lateral declarada y 16 controles reducidos H; ocho pérdidas y recálculo externo de las 48 huellas comprobados en RETP-099/100. No acredita ejecución clínica.",
       "excluded": "No interpreta unidades, atribución, ventanas, clínica ni historia autoritativa.",
       "responsible": "Lenguaje e interfaz documental",
       "stage": "DFL-005; SP-05 documental, fila 7",
@@ -959,7 +959,7 @@
       "limit": "Historia previa necesaria no es seguimiento posterior al inicio. No exige toda historia clínica: sólo las dependencias declaradas. Persistencia/custodia material siguen R2/R3/R4."
     }
   ],
-  "acceptance": "Inventario íntegro y partes documentales probadas no equivalen a suficiencia Q0 ni autorizan automáticamente el relevo. Revisión externa de candidatas apiladas pendiente.",
+  "acceptance": "Inventario íntegro y partes documentales probadas no equivalen a suficiencia Q0 ni autorizan automáticamente el relevo. Por disposición del Director, RETP-102 reúne la candidata completa para una revisión externa fuerte antes del relevo a Ciberseguridad; no se exigen revisiones externas entre incrementos.",
   "material_evidence": {
     "head": "bcf25c5b566a6535ba1c3851346fbb355b98ae84",
     "tree": "1396245f5ef0d14528dc2fa2347350d460b898ab",

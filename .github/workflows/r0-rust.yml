@@ -6,6 +6,7 @@ on:
     paths:
       - "tests/row7_bindings/**"
       - "tests/row7_gh/**"
+      - "tests/row7_candidate/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
