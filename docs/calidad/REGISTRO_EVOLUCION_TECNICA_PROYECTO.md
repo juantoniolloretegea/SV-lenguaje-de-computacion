@@ -447,12 +447,36 @@ La continuidad documental se organiza así:
 - **Continuidad registral:** RETP-091/092/093 quedan enlazados desde el maestro; DFL-011 conserva el mandato del español, DFL-012 identifica `cell_ref` y DFL-013 la independencia semántica. La revisión integral del español es final y no bloquea fila 7. Las rectificaciones de identificadores en el expediente candidato RETP-093 se señalan con fecha propia.
 - **Dependencia descubierta en la primera ejecución:** la cabeza `a23c834a9e1f14c2e5cf67dca3c458e08fca2606` pasó Conformidad SVP (`34180121748`) y R0-8 (`34180121875`), pero falló en R0 Rust (`34180121709`) y R0 WASM (`34180121701`). Dos fuentes del banco de sensibilidad reutilizaban la expectativa del corpus aunque declaraban CC/SS/KK y Alpha. Se corrigen `run_oracle_sensitivity.py` y su consumidor `r0_wasm_browser_manifest.py` para exigir expectativas propias de N0-02/N0-03, con y sin CellSpec. Dos controles positivos y cuatro sustituciones de contexto protegen esta separación. Se mantienen las mismas cinco fuentes del banco y los 95 negativos; no se rebaja la expectativa E115 ni se modifica Rust. El fallo y su sucesión quedan identificados, sin presentar aquel corte como conforme.
 - **Verificación integrada exigida:** Conformidad SVP, R0 Rust, R0-8 y R0 WASM sobre la nueva cabeza, incluido corpus nativo/WASI/navegador. Los resultados anteriores conservan sus cortes. La prueba local del observador no se presenta como una compilación local nueva de Rust.
-- **Estado al constituir esta candidata:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. DFL-005, H06/H07, la ejecución causal y la independencia semántica permanecen abiertas. No se cierra la fila 7 ni se entrega todavía una candidata a Ciberseguridad.
+- **Estado inicial, conservado como antecedente:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. DFL-005, H06/H07, la ejecución causal y la independencia semántica permanecen abiertas. No se cierra la fila 7 ni se entrega todavía una candidata a Ciberseguridad.
 
+
+#### Verificación integrada de RETP-094 · 08/09/2026
+
+Corte material verificado: `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be`; recepción incorporada: `1cbe4b9e6d9c484e540f1385109b38badc800c4f`. Los cambios posteriores de este asiento sólo registran la evidencia. No se confunde esta verificación con la del corte fallido `a23c834a`.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0-8 Baseline nativa | [34180315127](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315127) | conforme |
+| Conformidad SVP | [34180315138](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315138) | conforme |
+| R0 Rust | [34180315113](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113) | conforme |
+| R0 WASM paridad nativa y navegador | [34180315118](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315118) | conforme |
+
+Resultados: 23 pruebas del observador; corpus compartido 14/14 válidos y 95/95 inválidos en nativo, WASI y navegador; 9/9 casos causales de fila 7; cinco fuentes del banco conservadas; 12/12 mutaciones dirigidas detectadas, sin supervivientes ni mutantes inválidos; 211/211 pruebas unitarias de `sv_core`, además de sus pruebas de integración. Referencia CI Rust/Cargo 1.98.0 sobre Ubuntu 24.04; compatibilidad adicional con 1.98.1. La comprobación local del observador utilizó Python 3.12.13. No se afirma identidad con un despliegue productivo.
+
+| Paquete de evidencia | Artefacto | SHA-256 del archivo ZIP |
+|---|---|---|
+| `directed-mutation-sensitivity` | [10038665677](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113/artifacts/10038665677) | `baad7fc1878bfc260e0e2ac613a8a350d0df6adf43945c3e16bb3d23ac302193` |
+| `oracle-sensitivity` | [10038661363](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113/artifacts/10038661363) | `e8e468c24d800dab002c8f6b3567333cfb05104096e4d7c3fdf2d46c4af39cd6` |
+| `r0-8-baseline-native` | [10038664487](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315127/artifacts/10038664487) | `8b8ffa42b104475a56f90142e2d3bbeb3995305d10bcfa1edec60281dcf9eb4f` |
+| `r0-wasm-three-way-parity` | [10038676790](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315118/artifacts/10038676790) | `3580d39657ea483716e3d57ecf70d24b9e2b6fb6acf9c0437c07c075f1471f3c` |
+
+Los paquetes conservan las entradas, salidas, comandos, versiones y huellas producidos por los flujos correspondientes. La identificación del ZIP procede del metadato de Actions; no se declara una descarga y verificación local del ZIP. La identidad de la realización y de los observadores figura en los manifiestos de cada paquete.
+
+**Estado de RETP-094: `CANDIDATA_VERIFICADA_NO_PROMOVIDA`.** La PR #77 ha pasado Conformidad SVP [34179902203](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34179902203) sobre `1cbe4b9e6d9c484e540f1385109b38badc800c4f`. El acta del español y RETP-092 mantienen sus objetos originales. La candidata correctiva sigue dependiendo de #77; la fila 7 y las obligaciones enumeradas permanecen abiertas. La referencia temporal de #78 a main sólo permite activar los flujos existentes y debe volver a `recepcion-gh-20260907` antes de dejar el relevo.
 
 ## 4. Estado de continuidad
 
-**Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. La comprobación integrada de esta nueva cabeza está pendiente. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
+**Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. El corte material `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` ha superado los cuatro flujos; su evidencia se identifica en RETP-094. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
 
 **Sucesión registral de 08/09/2026 (PR #77, candidata):** RETP-091 recibe G/H y RETP-092 restituye el mandato del español. Estos asientos describen una candidata sin integrar; `main@bc3b22c9` conserva RETP-090. La fila 7 permanece abierta y la fila 8 no se activa. El estado B2 que sigue conserva su alcance histórico.
 
