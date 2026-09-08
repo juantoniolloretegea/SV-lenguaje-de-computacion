@@ -520,7 +520,37 @@ Se han leído los registros de los trabajos y los metadatos de artefactos; sus h
 
 **Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`. La cola de evidencia actualiza únicamente los tres registros de Calidad y conserva el permiso ejecutable `100755` del comprobador de mutaciones, sin cambiar su contenido probado. La cabeza final conserva su propia comprobación en el expediente de PR #78. Se restablecerá la base `recepcion-gh-20260907` tras verificarla; la PR continúa dependiendo de #77. DFL-001 y fila 7 permanecen abiertas.
 
+<a id="retp-096"></a>
+
+### RETP-2026-096 — Integración secuencial de la recepción y del subcierre correctivo
+
+**Fecha:** 08/09/2026. **Estado:** `RECEPCION_Y_SUBCIERRE_INTEGRADOS_FILA_7_ABIERTA`.
+
+La autorización de continuación permite promover los objetos revisados, sin modificar el mandato del español ni declarar cerrado el frente actual. Se han leído AGENTS, Pilares, acta de perfiles, transición completa, F, devolución G/H y registros vigentes. La revisión distingue evidencia de candidata, árbol probado e integración.
+
+| Objeto | Cabeza comprobada | Integración en main | Árbol conservado |
+|---|---|---|---|
+| PR #77, recepción G/H y restitución literal | `1cbe4b9e6d9c484e540f1385109b38badc800c4f` | `5e0f2e1fb0861879ce9963b370f89dd8137e9388` | `717972e1abac4ab7ff388a2923d3cb04b3de4cf7` |
+| PR #78, H04/H05 locales y oráculos RETP-093…095 | `29984b41ce68813e90fb3dbc0ba47de9593b8561` | `1706099aef4a0e3846706c3963e7c76313adaf68` | `3f1858439745236530b6f19c6761055f8a8478a2` |
+
+La primera cabeza pasó [Conformidad SVP 34179902203](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34179902203). Antes de promover la segunda, se integró #77, se cambió la base de #78 a main y se creó una reconciliación de dos padres sin cambiar su árbol: la cabeza `29984b41…` conserva exactamente el árbol de `e5211264…`. No se presenta una comprobación antigua como ejecución nueva.
+
+| Comprobación renovada de #78 | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust, referencia y compatibilidad adicional | [34187196322](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196322) | Satisfactorio |
+| R0-8 Baseline nativa | [34187196355](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196355) | Satisfactorio |
+| Conformidad SVP | [34187196408](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196408) | Satisfactorio |
+| Paridad nativa/WASI/navegador | [34187196441](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196441) | Satisfactorio |
+
+Las cuatro ejecuciones identifican `29984b41…` como cabeza. Los trabajos nativo y navegador y sus pasos terminaron satisfactoriamente. GitHub confirma ambas fusiones y sus firmas verificadas; los árboles de integración coinciden con los examinados. El resultado no acredita una segunda realización semántica ni la causalidad exhaustiva del corpus.
+
+La restauración del español conserva el acta, blob `89be13febe50f2893e738471ab246e1ac33b45a7`, y RETP-092 CSV, blob `fe737cbe3a61e670ad1365b6d3cd1796e96e2a06`. DFL-011 conserva su identidad y su revisión integral final. Ningún README, acta histórica o repositorio de dominio se ha modificado.
+
+**Sucesión de estado:** RETP-091…095 conservan las afirmaciones y los cortes de sus candidatas históricas; este asiento documenta su integración efectiva. `main@1706099a…` contiene ya G/H y el subcierre H04/H05, E115 y E011. DFL-001, DFL-005, H06/H07 y la realización causal de transiciones siguen abiertas. La fila 7 continúa mediante [el contrato de continuidad y ligaduras por operación](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md); no se emite candidata para CYB ni se abre la fila 8.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-096, 08/09/2026:** las PR #77 y #78 están integradas en orden. El corte actual de entrada a la continuidad es `main@1706099aef4a0e3846706c3963e7c76313adaf68`; la fila 7 permanece abierta. Las entradas candidatas siguientes son antecedentes conservados, no el estado actual.
 
 **Sucesión RETP-095, 08/09/2026 (candidata):** el testigo E011 y su oráculo se han corregido y verificado sobre `461acc633d364a2eca964539a3835529fbc72c58`, con los cuatro flujos conformes. Se preservan la guarda semántica existente y la deuda de emisión diagnóstica; no hay promoción ni cierre de fila 7.
 
