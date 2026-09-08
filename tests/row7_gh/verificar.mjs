@@ -1,8 +1,10 @@
 // Observador documental externo. Los esperados proceden del retorno G/H fijado.
-import {readFileSync} from 'node:fs';
+import {readFileSync,mkdtempSync,writeFileSync,rmSync} from 'node:fs';
+import {tmpdir} from 'node:os';
+import {spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
-import {resolve} from 'node:path';
+import {resolve,join} from 'node:path';
 import {contractHash} from './contract_hash.mjs';
 import {parseDocumentaryJson} from './documentary_json.mjs';
 
@@ -10,7 +12,7 @@ const root = new URL('./', import.meta.url);
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
 function requireThat(condition, code) { if (!condition) throw new Error(code); }
-function pinned(name, expected, parse = JSON.parse) {
+function pinned(name, expected, parse = parseDocumentaryJson) {
   const bytes = readFileSync(new URL(name,root));
   requireThat(hash(bytes) === expected, 'FUENTE_ALTERADA');
   return parse(bytes);
@@ -36,8 +38,8 @@ function verifyProgram(p) {
   requireThat(typeof p.projection_hex==='string' && /^(?:[0-9a-f]{2})+$/.test(p.projection_hex),'PROGRAMA_PROYECCION');
   const bytes=Buffer.from(p.projection_hex,'hex');
   let projection;
-  try { projection=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes)); }
-  catch { throw new Error('PROGRAMA_PROYECCION'); }
+  try { projection=parseDocumentaryJson(bytes); }
+  catch (error) { throw new Error(`PROGRAMA_PROYECCION:${error.message}`); }
   requireThat(projection.source_file===p.source_file && projection.source_sha256===p.source_sha256,'PROGRAMA_PROYECCION');
   return {source_file:p.source_file,source_sha256:p.source_sha256,projection_sha256:hash(bytes)};
 }
@@ -108,7 +110,7 @@ function expectArtifact(actual,id,value,code) {
   requireThat(actual.id === id && actual.version === '1', 'REFERENTE');
   const bytes = artifactBytes(actual);
   requireThat(bytes.equals(jsonBytes(value)), code);
-  return JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes));
+  return parseDocumentaryJson(bytes);
 }
 function ask(packet,operation) {
   return operation.paths.map(path => path.split('.').reduce((value,key) => {
@@ -214,17 +216,79 @@ export function sensitivity(report,resolution) {
           semantic_contract_hashes_recalculated:true,results:rows};
 }
 
+// Frontera efectiva: nunca convertir los bytes mediante JSON.parse antes del control.
+// Su subconjunto numérico pertenece a este informe sintético, no al Nat de la DSL.
+export function verifyBytes(reportBytes, matrixBytes) {
+  return verify(parseDocumentaryJson(reportBytes),parseDocumentaryJson(matrixBytes));
+}
+
+export function inputSensitivity(reportBytes,matrixBytes) {
+  const report=parseDocumentaryJson(reportBytes),matrix=parseDocumentaryJson(matrixBytes);
+  const raw=JSON.stringify(report),rawMatrix=JSON.stringify(matrix);
+  const insert=member=>Buffer.from('{'+member+raw.slice(1));
+  const projection=structuredClone(report);
+  const original=Buffer.from(projection.program.projection_hex,'hex').toString('utf8');
+  projection.program.projection_hex=Buffer.from('{"source_file":"FALSO",'+original.slice(1)).toString('hex');
+  const owner='"owner":"D"';
+  requireThat(raw.includes(owner),'ENTRADA_CONTROL_PROPIETARIO');
+  const attacks=[
+    ['ME01_schema_repetido','JSON_CLAVE_REPETIDA',insert('"schema":"FALSO",'),matrixBytes],
+    ['ME02_results_repetido','JSON_CLAVE_REPETIDA',insert('"results":[],'),matrixBytes],
+    ['ME03_propietario_repetido','JSON_CLAVE_REPETIDA',Buffer.from(raw.replace(owner,'"owner":"OTRO",'+owner)),matrixBytes],
+    ['ME04_clave_escapada_repetida','JSON_CLAVE_REPETIDA',insert('"\\u0073chema":"FALSO",'),matrixBytes],
+    ['ME05_matriz_repetida','JSON_CLAVE_REPETIDA',reportBytes,Buffer.from('{"row7_closed":true,'+rawMatrix.slice(1))],
+    ['ME06_proyeccion_repetida','PROGRAMA_PROYECCION:JSON_CLAVE_REPETIDA',jsonBytes(projection),matrixBytes],
+    ['ME07_utf8_invalido','JSON_UTF8',Buffer.concat([Buffer.from('{"extra":"'),Buffer.from([0xff]),Buffer.from('",'+raw.slice(1))]),matrixBytes],
+    ['ME08_unicode_invalido','JSON_UNICODE',insert('"extra":"\\ud800",'),matrixBytes],
+    ['ME09_entero_fuera_de_subconjunto','JSON_NUMERO_RANGO',insert('"extra":9007199254740993,'),matrixBytes],
+    ['ME10_forma_numerica','JSON_NUMERO_FORMA',insert('"extra":1e0,'),matrixBytes],
+    ['ME11_clave_que_reordena','JSON_CLAVE_INDICE',insert('"0":true,'),matrixBytes],
+  ];
+  const rows=[];
+  const temporary=mkdtempSync(join(tmpdir(),'sv-gh-entrada-'));
+  try {
+    const invoke=(r,m)=>{
+      const input=join(temporary,'informe.json'),matrixFile=join(temporary,'matriz.json');
+      writeFileSync(input,r);writeFileSync(matrixFile,m);
+      return spawnSync(process.execPath,[fileURLToPath(import.meta.url),input,'--matriz',matrixFile],{encoding:'utf8',timeout:10000});
+    };
+    for(const [r,m] of [[reportBytes,matrixBytes],[Buffer.from(JSON.stringify(report,null,2)),Buffer.from(JSON.stringify(matrix,null,2))]]) {
+      const control=invoke(r,m);
+      requireThat(control.status===0 && control.stderr==='' && parseDocumentaryJson(Buffer.from(control.stdout)).transports===48,'ENTRADA_CONTROL');
+    }
+    for(const [id,expected,r,m] of attacks) {
+      const child=invoke(r,m);
+      const actual=child.status===1 && child.stdout==='' ? child.stderr.trim() : 'SURVIVED_OR_UNCONTROLLED';
+      requireThat(actual===expected,`${id}: esperado ${expected}, recibido ${actual}`);
+      rows.push({id,expected,actual});
+    }
+  } finally {
+    rmSync(temporary,{recursive:true,force:true});
+  }
+  return {entrypoint:'CLI',raw_input_control:'ACCEPTED',reserialized_control:'ACCEPTED',directed_mutations:rows.length,survivors:0,results:rows};
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   try {
     const args=process.argv.slice(2);
-    const matrix=JSON.parse(readFileSync(new URL('resolucion.json',root)));
+    let matrixPath=new URL('resolucion.json',root);
+    const matrixOption=args.indexOf('--matriz');
+    if(matrixOption!==-1) {
+      requireThat(matrixOption===args.length-2,'Uso: --matriz MATRIZ.json al final');
+      matrixPath=args[matrixOption+1];args.splice(matrixOption,2);
+    }
+    const matrixBytes=readFileSync(matrixPath);
+    const matrix=parseDocumentaryJson(matrixBytes);
     if (args.length===1 && args[0]==='--inventario') {
       console.log(JSON.stringify({verification:'INVENTARIO_CONFORME_NO_EVIDENCIA_DE_TRANSPORTE',matrix:verifyResolution(matrix)},null,2));
     } else {
-      requireThat(args.length===1 || (args.length===2 && args[1]==='--autoprueba'),'Uso: verificar.mjs INFORME.json [--autoprueba] | --inventario');
-      const report=JSON.parse(readFileSync(args[0]));
-      const result=verify(report,matrix);
-      if (args[1]==='--autoprueba') result.sensitivity=sensitivity(report,matrix);
+      requireThat(args.length===1 || (args.length===2 && args[1]==='--autoprueba'),'Uso: verificar.mjs INFORME.json [--autoprueba] [--matriz MATRIZ.json] | --inventario');
+      const reportBytes=readFileSync(args[0]);
+      const result=verifyBytes(reportBytes,matrixBytes);
+      if (args[1]==='--autoprueba') {
+        result.sensitivity=sensitivity(parseDocumentaryJson(reportBytes),matrix);
+        result.input_sensitivity=inputSensitivity(reportBytes,matrixBytes);
+      }
       console.log(JSON.stringify(result,null,2));
     }
   } catch (error) { console.error(error.message); process.exitCode=1; }

@@ -36,6 +36,7 @@ jobs:
           bash tests/row7_candidate/empaquetar.sh "$cut" artifacts/fila7/repeticion
           cmp artifacts/fila7/paquete/fila7-fuentes.tar.gz artifacts/fila7/repeticion/fila7-fuentes.tar.gz
           bash tests/row7_candidate/autoprueba_paquete.sh artifacts/fila7/paquete/fuentes | tee artifacts/fila7/controles-paquete.txt
+          bash tests/row7_candidate/autoprueba_permisos.sh "$cut" | tee artifacts/fila7/controles-permisos.txt
 
       - name: Preparar entorno Ubuntu identificado sin intérpretes
         run: |

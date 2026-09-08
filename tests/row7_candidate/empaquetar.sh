@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 # RETP-102: toma archivos del commit exacto, nunca del directorio de trabajo.
 set -euo pipefail
+# Fija tanto los metadatos generados como los permisos extraídos por git archive.
+umask 0022
 [[ $# == 2 ]] || { echo 'Uso: empaquetar.sh COMMIT DIRECTORIO_NUEVO' >&2; exit 2; }
 cut=$(git rev-parse --verify "$1^{commit}")
 destination=$2
@@ -15,7 +17,7 @@ while IFS= read -r -d '' path; do
   esac
 done < <(git ls-tree -r -z --name-only "$cut")
 [[ ${#files[@]} -gt 0 ]] || { echo 'PAQUETE_VACIO' >&2; exit 1; }
-git archive "$cut" -- "${files[@]}" | tar -x -C "$destination/fuentes"
+git -c tar.umask=0022 archive "$cut" -- "${files[@]}" | tar -x -C "$destination/fuentes"
 printf '%s\n' "$cut" > "$destination/fuentes/CORTE_GIT.txt"
 (
   cd "$destination/fuentes"
