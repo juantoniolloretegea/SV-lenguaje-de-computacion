@@ -1,4 +1,5 @@
 # Registro de evolución técnica del proyecto
+| RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CONTRATO_PREVIO | Fila 7 / fronteras de verificación | CONTRATO_PREVIO_CORRECCION_PENDIENTE |
 
 ## 1. Finalidad
 
@@ -818,3 +819,12 @@ Pasan 348 pruebas Rust del espacio de trabajo, incluidas 211 unitarias del núcl
 Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se presentan como descargas reverificadas localmente. La evidencia de comportamiento procede de los registros de los trabajos. La cola registral posterior a `bb23381…` sólo inscribe estos resultados; su cabeza, ejecuciones y paquete correspondiente quedan identificados en la PR. El cambio de `CORTE_GIT.txt` genera una huella de paquete nueva incluso si los fuentes del producto permanecen idénticos.
 
 **Estado: `CANDIDATA_COMPLETA_PARA_ADVERSARIAL_NO_PROMOVIDA`.** El alcance total desde `main@1706099…` incluye 578 inserciones en `sv_core/src` de #79/#80; no se presenta como núcleo intacto. La matriz cubre 15 requisitos, 44 formulaciones y 81 relaciones con responsables y límites. Quedan la revisión externa fuerte del conjunto y la decisión de entrega; no hay promoción, apertura CYB ni cierre Q0/SP. Persisten 17 archivos Python e invocaciones de CI en el repositorio completo. La ruta Rust aislada queda acreditada para esta candidata; no equivale a retirada global de herramientas ni a la distribución final. README, acta del español y dominios no cambian.
+
+
+<a id="retp-103"></a>
+
+### RETP-2026-103 — Adversarial completa y corrección de las fronteras de verificación
+
+[Acta, contraejemplos, contrato previo y límites](ADVERSARIAL_DE_FILA_7_Y_FRONTERAS_DE_VERIFICACION_2026_09_08.md). Entrada `316facc2284858600d2c72fa44e8c715ab047373` sobre `main@1706099aef4a0e3846706c3963e7c76313adaf68`. Se reproducen AF-01 (JSON con miembros repetidos admitido), AF-02 (FIFO omitido del inventario) y AF-03 (permisos no fijados cambian el paquete). La lectura del núcleo y los contrastes de procedencia no refutan la capacidad representacional declarada; no acreditan Q0 ni funciones excluidas.
+
+**Estado inicial: `CONTRATO_PREVIO_CORRECCION_PENDIENTE`.** Se exige lectura estricta en la entrada efectiva, inventario de todos los tipos de archivo y reproducción bajo máscaras distintas; causas y controles previos se conservarán en las regresiones. Sin cambio del núcleo, README, acta del español ni dominios. Fila 7 permanece abierta; no se entrega candidata a CYB. Los 17 auxiliares Python y usos de CI siguen declarados, sin confundirse con el paquete autónomo probado.
