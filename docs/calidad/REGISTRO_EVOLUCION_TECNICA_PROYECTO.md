@@ -564,9 +564,33 @@ La condición precede al resultado: once negativos comprometidos declaran J4.2/J
 
 **Continuidad obligatoria:** materializar DFL-005 a partir de las nueve obligaciones y refutadores de §4; comprobar el subconjunto realmente ofrecido y completar la matriz de pérdidas antes de emitir candidata para CYB. El banco de contextos no se utilizará para certificar ligaduras aún ausentes. Inmunología continúa en pausa y la fila 8 no se activa. Ningún README, acta histórica, norma del español, plataforma o repositorio de dominio cambia.
 
+#### Verificación integrada de RETP-097 · 08/09/2026
+
+La candidata material `abe5e544730f76f3052c9afd809446746df34c03` supera los cuatro flujos. El ensayo de Actions utiliza `ac1d5e87966cf78a2bd87bd749a2c30ca9ac145b`, con árbol `50be23a1efc386d84ff1fe766e49e41c2be8cc36`, idéntico al de la cabeza candidata; no es una integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust | [34188332623](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623) | Conforme |
+| Conformidad SVP | [34188332639](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332639) | Conforme |
+| R0-8 Baseline nativa | [34188332608](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332608) | Conforme |
+| Paridad nativa/WASI/navegador | [34188332624](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332624) | Conforme |
+
+Resultados leídos en los trabajos: 211 pruebas unitarias de `sv_core` y once pruebas nuevas de contexto satisfactorias; 14/14 válidos y 106/106 inválidos en el corpus compartido; once controles positivos de reparación puntual; perfiles español/inglés y ensamblaje mixto en ambos órdenes. Las 24 mutaciones dirigidas se detectan, incluidas CX01…CX11, sin supervivientes ni mutantes inválidos. Se conservan las pruebas anteriores; no se interpreta la muestra dirigida como cobertura exhaustiva.
+
+| Paquete | Artefacto | Bytes ZIP | SHA-256 declarado por Actions |
+|---|---|---|---|
+| Mutaciones dirigidas | [10041303991](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623/artifacts/10041303991) | 98485 | `ffde1e62ac26aa7292b5bf337d3f1f0d7b5e9cebca17084563b994b44559c9b1` |
+| Sensibilidad del observador | [10041296428](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623/artifacts/10041296428) | 5014 | `89de3704ed1d19de6dcde9a2b339c81795941636c511fd4eeb9daa94920489c0` |
+| Línea base nativa | [10041298829](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332608/artifacts/10041298829) | 412618 | `e397a72bf2d37402d1731f7840b084b18a5466c9eea01434320c966bb1d8e6cd` |
+| Paridad entre destinos | [10041310878](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332624/artifacts/10041310878) | 1870296 | `5c1d8ce074f155f4a28f771a1e342ea3e29fb837fb95b152e40bebffa8e91ed6` |
+
+Se identifican metadatos de Actions y registros de ejecución; no se declara una descarga y recálculo local de esos ZIP. Referencia Rust/Cargo 1.98.0 sobre Ubuntu 24.04; stable permanece separado. El cambio posterior a la candidata material registra esta evidencia y precisa la discordancia de `ArchitectureView` entre la forma abstracta de IR 0.2 y la material, sin cambiar la realización ni sus testigos.
+
+**Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #79. La cabeza documental final conserva su comprobación exacta en el expediente de la PR. No hay todavía revisión adversarial externa de este nuevo incremento. El siguiente bloque material sigue siendo DFL-005; la coherencia local de contexto no acredita ligaduras, cobertura, permisos, consulta completa ni ejecución causal. La fila 7 permanece abierta.
+
 ## 4. Estado de continuidad
 
-**Sucesión RETP-097, 08/09/2026 (candidata):** se fija y materializa la coherencia local H06/H07; DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. Comprobación integrada pendiente.
+**Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.
 
 **Sucesión RETP-096, 08/09/2026:** las PR #77 y #78 están integradas en orden. El corte actual de entrada a la continuidad es `main@1706099aef4a0e3846706c3963e7c76313adaf68`; la fila 7 permanece abierta. Las entradas candidatas siguientes son antecedentes conservados, no el estado actual.
 

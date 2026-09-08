@@ -32,6 +32,8 @@ La arquitectura y el dominio son los referidos explícitamente por `Agent`. La r
 | `ArchitectureView.gates` | Cada evaluación de entrada de cada compuerta satisface la condición anterior, aunque no figure además en la lista explícita de evaluaciones de la vista. |
 | `CoverageReport` | Los tres referentes coinciden con `Agent.domain`, `Domain.interface` y `Domain.silent_u`, respectivamente. No basta comprobar el primero. |
 
+La variante material de `ArchitectureView` recibe `(arquitectura, cells, evals, gates)`, con `cells` de tipo `CellSpec`. La enumeración del antecedente IR 0.2 incluye evaluaciones, compuertas y supervisiones. Este incremento conserva la forma material, comprueba sus referentes y registra esa discordancia dentro de DFL-003/DFL-001; no afirma haber reconciliado el esquema abstracto ni añade supervisiones por inferencia.
+
 Las dos últimas cadenas de `CoverageReport` siguen siendo nombres nominales de la representación recibida: esta corrección **no** las convierte en objetos `Interface` o `SilentU` materializados. Tampoco se infiere permiso ni cobertura completa por pertenecer al mismo grafo. La aceptación no ejecuta `query`, no materializa `restrictions` ni satisface CQ1–CQ6 completos. DFL-003, DFL-004 y DFL-005 conservan esas obligaciones.
 
 No se asignan códigos E nuevos por semejanza. Los rechazos locales identificarán trayectoria o consulta, referente atacado y causa concreta. DFL-001 conserva la concordancia diagnóstica general.
