@@ -588,6 +588,18 @@ Se identifican metadatos de Actions y registros de ejecución; no se declara una
 
 **Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #79. La cabeza documental final conserva su comprobación exacta en el expediente de la PR. No hay todavía revisión adversarial externa de este nuevo incremento. El siguiente bloque material sigue siendo DFL-005; la coherencia local de contexto no acredita ligaduras, cobertura, permisos, consulta completa ni ejecución causal. La fila 7 permanece abierta.
 
+<a id="retp-098"></a>
+
+### RETP-2026-098 — Ligaduras por operación LIG/0.1
+
+**Entrada exacta:** `eeb7cf47bfbbbc6b617107b5976cde358a460377`, PR #79 candidata y no integrada. Se adopta el [contrato material DFL-005](../arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md) como sucesor de §4 del contrato de continuidad. F-SV/0.1 §3.1 y G/H SP-01/02/05, incluido GH-DOC-07, justifican la sede y el alcance.
+
+**Decisión previa:** entrada Rust tipada versionada en `sv_core`, enlazada al programa exacto y a una expectativa contractual aportada expresamente. Se valida una operación identificada y se recuperan sus usos ordenados, instancias, destinos, reglas referidas, compartición y alcance lateral. No se altera gramática ni proyección 0.1.0. La compilación declarativa no obtiene esta capacidad implícitamente.
+
+**Testigos previos:** L01–L24 y sus controles constan en el contrato antes de la realización. Los ataques internos deben llegar a su condición; recalcular la huella contractual en ellos impide que la integridad enmascare la falta de una guarda. Artefactos y reglas llevan referentes exactos, pero sus bytes no autentican autoridad ni prueban significado clínico.
+
+**Estado inicial:** `CONTRATO_PREVIO_REALIZACION_Y_PRUEBAS_PENDIENTES`. El incremento se apila sobre PR #79; no acredita su revisión externa ni la promueve. Matriz final de pérdidas, recuperación de respuestas con S, ejecución Q0, K1-T, productores y autoridad permanecen pendientes. Fila 7 abierta, CYB no emitida. Actas históricas, README y norma del español intactos.
+
 ## 4. Estado de continuidad
 
 **Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.
