@@ -1,4 +1,6 @@
--- Debe fallar con E011: una salida de la tabla no pertenece al codominio de salida.
+-- Obligación E011: FUERA no pertenece a KOut={OK,NO_OK}.
+-- Debe alcanzar la validación semántica: AdmissibilityTable T1: salida fuera de codominio.
+-- El código literal E011 sigue pendiente de emisión estructurada en Rust (DFL-001).
 
 codomain KIn = { A, B };
 codomain KOut = { OK, NO_OK };
@@ -9,5 +11,5 @@ admissibility_table T1 {
   table: {
     (A) -> OK;
     (B) -> FUERA;
-  };
+  }
 }

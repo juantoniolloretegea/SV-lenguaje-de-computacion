@@ -143,8 +143,8 @@ RUST_REJECTION_TOKENS = {
     "admissibility_spec_failed_legacy": 'InvalidAdmissibilityState("Failed")',
     "admissibility_spec_u_legacy": 'InvalidAdmissibilityState("U")',
     "admissibility_table_incompleta": "tabla incompleta",
-    # Diferencia de fase existente: el cierre interno legado se rechaza al analizar.
-    "admissibility_table_output_fuera_codominio": "esperado }, recibido Sym(';')",
+    # RETP-095: E011 identifica la obligación; Rust exige su causa semántica textual.
+    "admissibility_table_output_fuera_codominio": "AdmissibilityTable T1: salida fuera de codominio",
     "agent_architecture_mismatch": "architecture incompatible con Domain",
     "bad_b_value": "b debe ser >= 3",
     "bridge_position_fuera_de_rango": "posición puente fuera de rango",

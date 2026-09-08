@@ -39,6 +39,12 @@ class Mutant:
 
 MUTANTS = (
     Mutant(
+        "AT01", "neutralizar la pertenencia de la salida de tabla al codominio", "rust/sv_core/src/wellformed.rs",
+        "if !out_values.contains(output.as_str()) {",
+        "if false && !out_values.contains(output.as_str()) {",
+        "admissibility_table_causal", "salida_ajena_al_codominio_alcanza_la_guarda_semantica",
+    ),
+    Mutant(
         "M01", "relajar b mínimo de 3 a 2", "rust/sv_core/src/wellformed.rs",
         'if nat_cmp_text(b, "3") == Ordering::Less {',
         'if nat_cmp_text(b, "2") == Ordering::Less {',
@@ -109,6 +115,7 @@ MUTANTS = (
 )
 
 CONTROL_TESTS = (
+    "admissibility_table_causal",
     "architecture_type_guards",
     "cell_geometry_native",
     "projection_metadata_native",

@@ -44,6 +44,24 @@ def sensitivity_rejections():
 
 
 class OracleTests(unittest.TestCase):
+    def test_table_output_accepts_its_semantic_cause(self):
+        # Catálogo efectivo §3/E011 y testigo: FUERA no pertenece a KOut.
+        proc = result(err=b'SVP no admitido: InvalidProgram("AdmissibilityTable T1: salida fuera de codominio")\n')
+        assert_rust_rejection(proc, 'admissibility_table_output_fuera_codominio')
+
+    def test_table_output_rejects_syntax_other_causes_and_another_table(self):
+        diagnostics = [
+            'Frontend(UnexpectedToken("esperado }, recibido Sym(\';\')"))',
+            'InvalidProgram("AdmissibilityTable T1: tabla incompleta")',
+            'InvalidProgram("AdmissibilityTable T1: entrada fuera de codominio")',
+            'InvalidProgram("AdmissibilityTable T2: salida fuera de codominio")',
+        ]
+        for diagnostic in diagnostics:
+            with self.subTest(diagnostic=diagnostic), self.assertRaises(OracleError):
+                assert_rust_rejection(
+                    result(err=f'SVP no admitido: {diagnostic}\n'.encode()),
+                    'admissibility_table_output_fuera_codominio')
+
     def test_sensitivity_uses_its_own_witnesses(self):
         for name, proc in sensitivity_rejections().items():
             with self.subTest(name=name):

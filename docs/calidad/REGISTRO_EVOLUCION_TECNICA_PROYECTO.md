@@ -63,6 +63,7 @@ La continuidad documental se organiza así:
 | RETP-2026-092 | 07/09/2026 | NO_CONSTA | MANDATO_Y_RESTAURACION_DOCUMENTAL | Lenguaje SV / fila 7 | Español obligatorio y revisión integral final: DFL-011 |
 | RETP-2026-093 | 07/09/2026 | NO_CONSTA | CORRECCION_LOCAL_Y_COBERTURA | Lenguaje SV / fila 7 | TransitionData: cierre local candidato H04/H05 y corpus compartido 14+95 |
 | RETP-2026-094 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_ORACULO_Y_REGISTROS | Lenguaje SV / fila 7 | E115: cuatro causas discriminadas y prueba de intercambio |
+| RETP-2026-095 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_TESTIGO_Y_ORACULO | Lenguaje SV / fila 7 | CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA |
 
 ## 3. Entradas detalladas
 
@@ -474,7 +475,24 @@ Los paquetes conservan las entradas, salidas, comandos, versiones y huellas prod
 
 **Estado de RETP-094: `CANDIDATA_VERIFICADA_NO_PROMOVIDA`.** La PR #77 ha pasado Conformidad SVP [34179902203](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34179902203) sobre `1cbe4b9e6d9c484e540f1385109b38badc800c4f`. El acta del español y RETP-092 mantienen sus objetos originales. La candidata correctiva sigue dependiendo de #77; la fila 7 y las obligaciones enumeradas permanecen abiertas. La referencia temporal de #78 a main sólo permite activar los flujos existentes y debe volver a `recepcion-gh-20260907` antes de dejar el relevo.
 
+<a id="retp-095"></a>
+
+### RETP-2026-095 — Testigo causal de salida de tabla fuera de codominio
+
+- **Corte de entrada:** `5eea9bfd5b7646236568da82a9091acfe68f4082`, cabeza de PR #78, sobre PR #77 `1cbe4b9e6d9c484e540f1385109b38badc800c4f`; main continúa en `bc3b22c9e9319e8f191390c8cfe9fa1577904d87`. Se han leído AGENTS, Pilares, acta de perfiles, transición completa y registros aplicables. La autorización de subsanación se conserva; ambas solicitudes siguen candidatas.
+- **Obligación y testigo previos al resultado:** [Gramática 0.2 §13](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md#13-reconciliación-de-cierres-internos-heredados) exige cerrar `table` con `}` sin punto y coma adicional. El [catálogo efectivo §3/E011](../referencia/ERRORES_CANONICOS_SV_v0_2.md#3-precisiones-vigentes) exige que cada salida pertenezca al codominio declarado. El testigo cubre una vez A y B de KIn, declara KOut={OK,NO_OK} y usa FUERA como única salida ajena. Su condición esperada es pertenencia de salida, no sintaxis, aridad, entrada ni totalidad.
+- **Hallazgo y precisión:** el testigo anterior terminaba su bloque interno en `};` y su expectativa aceptaba aquel error sintáctico. La limitación ya consta en RETP-078, RETP-087, la matriz de concordancia y DFL-001/§6. La guarda semántica existe en `validate_admissibility_table`: rechaza la salida ajena con `AdmissibilityTable T1: salida fuera de codominio`. No procede afirmar que la falta del literal E011 demuestre ausencia de esta guarda, ni presentar la brecha como no registrada.
+- **Corrección mínima:** se elimina ese punto y coma, se precisa el comentario del testigo y se sustituye la expectativa sintáctica por la causa semántica y la identidad T1. No se cambia `sv_core/src`, Gramática, IR ni serializador. Corpus: 14 válidos y 95 inválidos; se corrige un testigo existente, sin añadir casos al inventario general. Los 14 JSON esperados permanecen intactos.
+- **Identidad del testigo:** SHA-256 anterior `32141541dfd1bfdf067dd66d10ca4298c38d5359747f4b507c9be8598c5c6ec5`; corregido `6c9e279af988256348b5d6c73c6478ca035998dbe14dd8201dc367e2e6a0ddf1`. Los bytes anteriores se conservan en la confirmación de entrada.
+- **Pruebas locales del observador:** 25/25. La expectativa acepta el rechazo semántico de T1 y rechaza cuatro sustituciones: error sintáctico anterior, tabla incompleta, entrada ajena y salida ajena de T2. Con el token anterior las dos pruebas nuevas fallan: se rechaza el control semántico y se admite indebidamente el error de sintaxis. Se conservan retorno 1, salida IR vacía y envoltorio controlado. Estas pruebas construyen mensajes y no se presentan como compilación local Rust.
+- **Comprobaciones de realización exigidas:** tres pruebas Rust usan el fichero comprometido: rechazo semántico exacto; admisión al sustituir únicamente FUERA por NO_OK; rechazo sintáctico al reintroducir el cierre antiguo. La mutación dirigida AT01 retira exclusivamente la guarda de salida y debe hacer fallar la primera prueba. Se añade al banco precedente sin reclasificar su evidencia histórica de doce mutantes. Conformidad SVP, R0 Rust, R0-8 y R0 WASM comprobarán la candidata identificada; el mismo negativo corregido pertenece al corpus nativo/WASI/navegador.
+- **Límites y continuidad:** E011 conserva su obligación catalogada, pero este cambio no introduce su código literal ni una estructura diagnóstica. No ejecuta la tabla ni GateResult.output. E204 y la causalidad no medida de otros testigos permanecen fuera del subcierre; no se deduce un porcentaje global de fidelidad. DFL-001, DFL-005, H06/H07 e independencia semántica continúan abiertas. DFL-011 y su acta permanecen intactas. La fila 7 sigue abierta y no se activa Ciberseguridad.
+- **Estado inicial:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. La comprobación integrada debe añadirse con su cabeza, ejecuciones y artefactos; ningún resultado previo acredita esta modificación.
+
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-095, 08/09/2026 (candidata):** se corrige el testigo E011 y su oráculo; se preservan la guarda semántica existente y la deuda de emisión diagnóstica. La verificación integrada está pendiente; no hay promoción ni cierre de fila 7.
 
 **Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. El corte material `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` ha superado los cuatro flujos; su evidencia se identifica en RETP-094. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
 
