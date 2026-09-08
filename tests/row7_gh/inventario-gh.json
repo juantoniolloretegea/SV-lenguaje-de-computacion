@@ -1,0 +1,1513 @@
+{
+  "schema": "GH-INVENTARIO-RECIBIDO/1",
+  "source_commit": "54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9",
+  "g10": [
+    {
+      "id": "REQ-IMM-SV-001",
+      "obligacion": "estado ternario por parámetro",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-001",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-007",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-06"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-012",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-040",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-07"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-002",
+      "obligacion": "composición ordenada de unidades y referencias",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-002",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-025",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-026",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-040",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-041",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-04"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-003",
+      "obligacion": "supervisión humana de salida estructural",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-003",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-009",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-015",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-016",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-033",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-11"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-004",
+      "obligacion": "`Frame` derivado de arquitectura existente",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-004",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-026",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-031",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-03"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-041",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-04"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-005",
+      "obligacion": "procedencia, fuente, versión, localizador y hash",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-005",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-001",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-002",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-05"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-012",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-016",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-017",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-025",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-027",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-05"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-028",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-029",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-03"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-034",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-035",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-11"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-037",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-05"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-006",
+      "obligacion": "causas tipadas de `U` sin nuevos valores",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-006",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-007",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-06"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-012",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-013",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-031",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-03"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-007",
+      "obligacion": "fallo técnico separado de `U` clínica",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-007",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-007",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-06"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-008",
+          "relacion": "EQUIVALENCIA_NORMATIVA_ACOTADA",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-011",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-11"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-015",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-017",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-019",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-11"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-022",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-11"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-008",
+      "obligacion": "adjudicación humana de `U` crítica/no crítica con motivo",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-008",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-009",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-014",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-015",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-016",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-009",
+      "obligacion": "veto no compensable anterior al resumen",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-009",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-009",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-014",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-015",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-031",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-03"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-010",
+      "obligacion": "productor superficial de criticidades",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-010",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-014",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-041",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-04"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-011",
+      "obligacion": "matrices `(6,1,3,2,6,9)` sin relleno",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-011",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-026",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-039",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-040",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-041",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-04"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-012",
+      "obligacion": "resumen reversible a seis frames y 27 parámetros",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-012",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-003",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-012",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-013",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-017",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-034",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-039",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-040",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "GH-DOC-07"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-013",
+      "obligacion": "manifiestos cerrados de configuración clínica",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-013",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-001",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-005",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-006",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-009",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-012",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-016",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-04"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-018",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-11"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-025",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-01"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-034",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-01"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-014",
+      "obligacion": "una de cuatro salidas exclusivas sin consejo terapéutico",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-014",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-003",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-006",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-07"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-007",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-06"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-008",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-09"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-017",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-031",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-03"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-038",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-11"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-039",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-02"
+        }
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-015",
+      "obligacion": "reproducción byte a byte con orden canónico",
+      "source": {
+        "source": "IMM-G10",
+        "section": "§2, REQ-IMM-SV-015",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/15-requisitos-lenguaje-sv/G10-SV_requisitos_demostrados_OP-IMM-001_v0.1_2026-09-03.md"
+      },
+      "enlaces": [
+        {
+          "lsv": "REQ-IMM-LSV-002",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "GH-DOC-05"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-003",
+          "relacion": "EQUIVALENCIA_NORMATIVA_ACOTADA",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-004",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-005",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-017",
+          "relacion": "REFINAMIENTO",
+          "prueba_o_pendiente": "SP-08"
+        },
+        {
+          "lsv": "REQ-IMM-LSV-035",
+          "relacion": "COBERTURA_PARCIAL",
+          "prueba_o_pendiente": "SP-11"
+        }
+      ]
+    }
+  ],
+  "lsv": [
+    {
+      "id": "REQ-IMM-LSV-001",
+      "formulacion": "representar la identidad completa de ejecución definida en el marco técnico de `OP-IMM-001`.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-001",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Lenguaje + perfil",
+      "testigo": "SP-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-002",
+      "formulacion": "conservar los bytes fuente y sus hashes sin normalización silenciosa.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-002",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "Interfaz + Lenguaje",
+      "testigo": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-003",
+      "formulacion": "producir una salida canónica con igualdad byte a byte para identidad de ejecución idéntica.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-003",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-012",
+        "REQ-IMM-SV-014",
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "Lenguaje + motor",
+      "testigo": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-004",
+      "formulacion": "determinar qué parte de la salida ya es canónica en Rust nativo y WebAssembly y qué parte sigue limitada a la referencia Python.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-004",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "Lenguaje",
+      "testigo": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-005",
+      "formulacion": "impedir que locale, orden de mapas, reloj, plataforma, concurrencia o mensajes variables alteren la salida normativa.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-005",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-013",
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "Lenguaje + motor",
+      "testigo": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-006",
+      "formulacion": "prohibir prosa generativa libre en toda salida clínica autorizada; valorar plantillas cerradas y versionadas.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-006",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-013",
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Dominio + Lenguaje",
+      "testigo": "SP-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-007",
+      "formulacion": "representar sin colisión `0`, `1`, `U`, dato no admitido, regla no constituida, configuración ausente y ejecución técnica inválida.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-007",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-001",
+        "REQ-IMM-SV-006",
+        "REQ-IMM-SV-007",
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Dominio + Lenguaje",
+      "testigo": "GH-DOC-06"
+    },
+    {
+      "id": "REQ-IMM-LSV-008",
+      "formulacion": "garantizar que un fallo técnico nunca se transforme en `U`, `0`, `1`, consejo o perfil parcial.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-008",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-007",
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Lenguaje + motor",
+      "testigo": "SP-09"
+    },
+    {
+      "id": "REQ-IMM-LSV-009",
+      "formulacion": "representar bloqueo, abstención, adjudicación humana y reapertura sin reescritura retrospectiva.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-009",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-003",
+        "REQ-IMM-SV-008",
+        "REQ-IMM-SV-009",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Lenguaje + autoridad",
+      "testigo": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-010",
+      "formulacion": "ligar comprobación y efecto al mismo estado material para impedir decisiones sobre datos sustituidos durante la ejecución.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-010",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "R2 + motor",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-011",
+      "formulacion": "definir el comportamiento ante interrupción en cada frontera de efecto, incluido el caso de efecto externo incierto.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-011",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-007"
+      ],
+      "responsable": "R2 + motor",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-012",
+      "formulacion": "registrar por parámetro entradas, regla, fuentes, transformaciones, estados intermedios y resultado.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-012",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-001",
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-006",
+        "REQ-IMM-SV-012",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Dominio + interfaz + Lenguaje",
+      "testigo": "GH-DOC-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-013",
+      "formulacion": "registrar la distinción clínica que no puede reconstruirse cuando un parámetro queda indeterminado.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-013",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-006",
+        "REQ-IMM-SV-012"
+      ],
+      "responsable": "Dominio + interfaz",
+      "testigo": "GH-DOC-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-014",
+      "formulacion": "permitir criticidad contextual sólo mediante regla clínica versionada y autoridad identificada.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-014",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-008",
+        "REQ-IMM-SV-009",
+        "REQ-IMM-SV-010"
+      ],
+      "responsable": "Dominio + autoridad clínica",
+      "testigo": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-015",
+      "formulacion": "impedir que una intervención humana sanee silenciosamente una ejecución técnicamente inválida.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-015",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-003",
+        "REQ-IMM-SV-007",
+        "REQ-IMM-SV-008",
+        "REQ-IMM-SV-009"
+      ],
+      "responsable": "Lenguaje + autoridad",
+      "testigo": "SP-09"
+    },
+    {
+      "id": "REQ-IMM-LSV-016",
+      "formulacion": "identificar autor, organización, delegación, revisión, firma, revocación y versión de toda regla o adjudicación.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-016",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-003",
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-008",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Institución + interfaz + Lenguaje",
+      "testigo": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-017",
+      "formulacion": "producir un paquete de auditoría reproducible sin depender de chats, memoria del modelo o explicación posterior.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-017",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-007",
+        "REQ-IMM-SV-012",
+        "REQ-IMM-SV-014",
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "Lenguaje + motor",
+      "testigo": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-018",
+      "formulacion": "persistencia autoritativa de estados, decisiones, fuentes, configuraciones y trazas.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-018",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "R2 + motor + institución",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-019",
+      "formulacion": "recuperación después de caída de proceso, sistema o suministro sin fabricar continuidad.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-019",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-007"
+      ],
+      "responsable": "R2 + sistema operativo",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-020",
+      "formulacion": "detección de escritura parcial, corrupción, retroceso, clonación y bifurcación.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-020",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "R2 + almacenamiento",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-021",
+      "formulacion": "distinción entre copia, réplica, vista, respaldo y estado autoritativo.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-021",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "R2 + institución",
+      "testigo": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-022",
+      "formulacion": "política para reanudación, repetición idempotente y efecto externo de estado incierto.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-022",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-007"
+      ],
+      "responsable": "R2 + motor",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-023",
+      "formulacion": "asignación entre R2, SV-motor, almacenamiento, sistema operativo y organización sanitaria.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-023",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Lenguaje + motor + infraestructura",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-024",
+      "formulacion": "requisitos mínimos que el lenguaje debe imponer a una plataforma sin prescribir prematuramente una tecnología.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-024",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Lenguaje",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-025",
+      "formulacion": "representar referencias externas con sistema, versión, código, URI, jurisdicción, vigencia y hash cuando proceda.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-025",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-002",
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Dominio + interfaz",
+      "testigo": "GH-DOC-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-026",
+      "formulacion": "indicar qué metadatos deben formar parte de la semántica y cuáles deben permanecer en perfiles o conectores.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-026",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-002",
+        "REQ-IMM-SV-004",
+        "REQ-IMM-SV-011"
+      ],
+      "responsable": "Lenguaje + dominio",
+      "testigo": "SP-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-027",
+      "formulacion": "encaje con FHIR `Provenance` y `AuditEvent` sin identificar transporte con verdad clínica.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-027",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005"
+      ],
+      "responsable": "Interfaz clínica + Lenguaje",
+      "testigo": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-028",
+      "formulacion": "encaje de `Encounter`, `EpisodeOfCare`, `CareTeam`, `Observation`, `DiagnosticReport`, `ServiceRequest` e `ImagingStudy` como referencias externas perfiladas.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-028",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005"
+      ],
+      "responsable": "Interfaz clínica + dominio",
+      "testigo": "GH-DOC-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-029",
+      "formulacion": "representación versionada de SNOMED CT, LOINC, UCUM, ICD-11 y terminologías locales, incluidas equivalencias no exactas y códigos retirados.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-029",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005"
+      ],
+      "responsable": "Dominio + interfaz terminológica",
+      "testigo": "SP-03"
+    },
+    {
+      "id": "REQ-IMM-LSV-030",
+      "formulacion": "determinar si DICOM y DICOMweb deben ser opacos para el núcleo, verificables por hash y UID, o requieren alguna forma nueva.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-030",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Dominio",
+      "testigo": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-031",
+      "formulacion": "impedir que el lenguaje interprete imágenes, códigos o informes sin una regla clínica constituida.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-031",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-004",
+        "REQ-IMM-SV-006",
+        "REQ-IMM-SV-009",
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Dominio + Lenguaje",
+      "testigo": "SP-03"
+    },
+    {
+      "id": "REQ-IMM-LSV-032",
+      "formulacion": "identificar qué evidencias técnicas puede aportar el lenguaje a ISO 13485, ISO 14971, IEC 62304, IEC 81001-5-1, ISO/IEC 27001 e ISO/IEC 42001, sin declarar conformidad.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-032",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Calidad + responsables de producto",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-033",
+      "formulacion": "identificar qué obligaciones quedan necesariamente fuera del repositorio del lenguaje.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-033",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-003"
+      ],
+      "responsable": "Institución + responsables de producto",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-034",
+      "formulacion": "aportar trazabilidad entre requisito, riesgo, control, código, prueba y versión cuando corresponda al lenguaje.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-034",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-012",
+        "REQ-IMM-SV-013"
+      ],
+      "responsable": "Calidad + Lenguaje",
+      "testigo": "SP-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-035",
+      "formulacion": "cadena de construcción, dependencias, artefactos, distribución y carga; indicar relación con R3/R4 y Garantías I/II.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-035",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-015"
+      ],
+      "responsable": "R3/R4 + Calidad",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-036",
+      "formulacion": "aislamiento de secretos, datos clínicos y registros; indicar límites del lenguaje y necesidades del entorno.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-036",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Entorno + institución",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-037",
+      "formulacion": "conservación, minimización y seudonimización sin degradar la trazabilidad clínica autorizada.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-037",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-005"
+      ],
+      "responsable": "Institución + interfaz",
+      "testigo": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-038",
+      "formulacion": "criterios técnicos que deben cumplirse antes de retirar la prohibición de usar datos reales.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-038",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Institución + Calidad + dominio",
+      "testigo": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-039",
+      "formulacion": "proponer el mínimo experimento sintético de integración de los 27 parámetros que no abra uso clínico.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-039",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-011",
+        "REQ-IMM-SV-012",
+        "REQ-IMM-SV-014"
+      ],
+      "responsable": "Lenguaje + dominio",
+      "testigo": "SP-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-040",
+      "formulacion": "indicar qué subconjunto puede ensayarse hoy sin tocar gramática o IR.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-040",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-001",
+        "REQ-IMM-SV-002",
+        "REQ-IMM-SV-011",
+        "REQ-IMM-SV-012"
+      ],
+      "responsable": "Interfaz documental",
+      "testigo": "GH-DOC-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-041",
+      "formulacion": "identificar cualquier necesidad que obligue a cambiar gramática, IR, catálogo diagnóstico o serialización.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-041",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [
+        "REQ-IMM-SV-002",
+        "REQ-IMM-SV-004",
+        "REQ-IMM-SV-010",
+        "REQ-IMM-SV-011"
+      ],
+      "responsable": "Lenguaje",
+      "testigo": "SP-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-042",
+      "formulacion": "separar cambios reversibles de decisiones arquitectónicas difíciles de revertir.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-042",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Lenguaje + Director",
+      "testigo": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-043",
+      "formulacion": "estimar dependencias y orden técnico, no fechas ni compromisos de producción.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-043",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Lenguaje",
+      "testigo": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-044",
+      "formulacion": "proponer puntos de revisión que permitan seguir constituyendo universos sin cerrar prematuramente la infraestructura universal.",
+      "source": {
+        "source": "IMM-REQ",
+        "section": "§12, REQ-IMM-LSV-044",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Solicitud_de_valoracion_y_encaje_tecnico_de_OP-IMM-001_con_el_Lenguaje_SV_2026-09-03.md"
+      },
+      "g10": [],
+      "responsable": "Director + sedes competentes",
+      "testigo": "SP-12"
+    }
+  ],
+  "independent_lsv": [
+    "REQ-IMM-LSV-010",
+    "REQ-IMM-LSV-020",
+    "REQ-IMM-LSV-021",
+    "REQ-IMM-LSV-023",
+    "REQ-IMM-LSV-024",
+    "REQ-IMM-LSV-030",
+    "REQ-IMM-LSV-032",
+    "REQ-IMM-LSV-036",
+    "REQ-IMM-LSV-042",
+    "REQ-IMM-LSV-043",
+    "REQ-IMM-LSV-044"
+  ],
+  "families": [
+    {
+      "id": "IF-IMM-01",
+      "estado": "APLICA_PARCIALMENTE",
+      "parametros": [
+        "PAR-IGG-DEF-Q-001",
+        "PAR-ANC-DEF-Q-001"
+      ],
+      "consultas": {
+        "Q01-unidad": "APLICA a identidad, unidad y referencia; el criterio artificial no es intervalo clínico",
+        "Q01-correccion": "APLICA a validez/versión y enlace de sustitución del informe",
+        "Q01-peticion": "APLICA como vínculo petición/muestra/episodio, insuficiente por sí solo"
+      },
+      "limite": "Faltan método, intervalo clínicamente aplicable y captura/transducción Q0; el producto finito IF no demuestra esos requisitos.",
+      "source": {
+        "source": "IMM-CLIN",
+        "section": "§4.3, parámetros 8 y 10",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/universos-clinicos/01-evaluacion-predecisional-riesgo-infeccioso-antes-inmunosupresion-adultos/Expediente_predecisional_de_informacion_clinica_pertinente_antes_de_iniciar_tratamiento_inmunosupresor_en_adultos_v1.1_2026-09-03.md"
+      }
+    },
+    {
+      "id": "IF-IMM-02",
+      "estado": "NO_APLICA_EN_Q0_V0",
+      "parametros": [],
+      "consultas": {
+        "Q02-configuracion": "NO_APLICA",
+        "Q02-informe": "NO_APLICA",
+        "Q02-muestra": "NO_APLICA"
+      },
+      "limite": "El A0 recibido no consume paneles ni observación citométrica derivada. SEM-HUE-001 no suministra un parámetro citométrico adoptado. La utilidad general del patrón no crea un uso en Q0.",
+      "source": {
+        "source": "IMM-G6",
+        "section": "§3",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/11-matrices-en-evaluacion/G6-MAT_propiedad_matricial_A0_OP-IMM-001_v0.1_2026-09-03.md"
+      }
+    },
+    {
+      "id": "IF-IMM-03",
+      "estado": "NO_APLICA_EN_Q0_V0",
+      "parametros": [],
+      "consultas": {
+        "Q03-informe": "NO_APLICA",
+        "Q03-procedimiento": "NO_APLICA como consulta de médula ósea",
+        "Q03-muestra": "NO_APLICA"
+      },
+      "limite": "No hay consumidor de médula/imagen digital. La asplenia usa documentación profesional ya adjudicada; el antecedente de procedimiento invasivo no requiere procesar médula. DICOM/LSV-030 siguen no aplicables.",
+      "source": {
+        "source": "IMM-CLIN",
+        "section": "§4.3, parámetro 9, y §4.5, parámetro 18; recepción §8.4",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/universos-clinicos/01-evaluacion-predecisional-riesgo-infeccioso-antes-inmunosupresion-adultos/Expediente_predecisional_de_informacion_clinica_pertinente_antes_de_iniciar_tratamiento_inmunosupresor_en_adultos_v1.1_2026-09-03.md"
+      }
+    },
+    {
+      "id": "IF-IMM-04",
+      "estado": "APLICA_PARCIALMENTE_COMO_DISTINCION_DOCUMENTAL",
+      "parametros": [
+        "PAR-IMMUNO-START-PLAN-DOC-001",
+        "PAR-GC-PLAN-SYS-001"
+      ],
+      "consultas": {
+        "Q04-constancia": "NO es una operación consumida: se recibe la prohibición de deducir administración desde orden",
+        "Q04-cambio": "APLICA al estado/cambio del plan documental, sin ejecutar suspensión",
+        "Q04-orden": "APLICA a identidad de propuesta; insuficiente sin estado, intención y versión"
+      },
+      "limite": "El contenido oncológico, resultado terapéutico y administración como ejecución están fuera de Q0. Traslado sólo de la distinción, con testigo propio GH-DOC-03; no herencia de reglas.",
+      "source": {
+        "source": "IMM-CLIN",
+        "section": "§§1.2, 2.2 y parámetros 1 y 7",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/universos-clinicos/01-evaluacion-predecisional-riesgo-infeccioso-antes-inmunosupresion-adultos/Expediente_predecisional_de_informacion_clinica_pertinente_antes_de_iniciar_tratamiento_inmunosupresor_en_adultos_v1.1_2026-09-03.md"
+      }
+    },
+    {
+      "id": "IF-IMM-05",
+      "estado": "APLICA_PARCIALMENTE",
+      "parametros": [
+        "PAR-EPISODE-LEAD-DOC-001",
+        "PAR-IMMUNO-PART-DOC-001",
+        "PAR-INF-HOSP-HIST-001",
+        "PAR-INF-ORGSUP-HIST-001",
+        "PAR-ACUTECARE-ENC-HIST-001",
+        "PAR-INV-PROC-HIST-001"
+      ],
+      "consultas": {
+        "Q05-episodio": "APLICA a identidad y periodo; no aporta por sí sola REL-ATRIB",
+        "Q05-organizacion": "APLICA como contexto; servicio/organización no asignan autoridad ni causa",
+        "Q05-ubicacion": "NO es una pregunta autónoma requerida; ubicación es contexto no sustituto de episodio"
+      },
+      "limite": "Q0 requiere además atribución, cobertura, autoridad y ventanas explícitas. No obliga a importar toda la familia ni a crear otro parámetro.",
+      "source": {
+        "source": "IMM-CORR2",
+        "section": "§2; IMM-CLIN parámetros 3, 4 y 13–18",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/10-atomicidad-en-evaluacion/Suceso_correctivo_configuracion_atribucion_y_vigencia_A0_OP-IMM-001_v0.1_2026-09-03.md"
+      }
+    },
+    {
+      "id": "IF-IMM-06",
+      "estado": "APLICA_A_PROCEDENCIA_Y_VIGENCIA",
+      "parametros": [
+        "PAR-IMMUNO-START-PLAN-DOC-001",
+        "PAR-BASE-DX-DOC-001",
+        "PAR-EPISODE-LEAD-DOC-001",
+        "PAR-IMMUNO-PART-DOC-001",
+        "PAR-LOCAL-PROTOCOL-APPLICABLE-001",
+        "PAR-EXEC-CONSTRAINT-DOC-001",
+        "PAR-GC-PLAN-SYS-001",
+        "PAR-IGG-DEF-Q-001",
+        "PAR-SPL-ANAT-ABS-001",
+        "PAR-ANC-DEF-Q-001",
+        "PAR-IV-DEVICE-PRESENT-001",
+        "PAR-IMPLANT-PRESENT-001",
+        "PAR-INF-HOSP-HIST-001",
+        "PAR-INF-ORGSUP-HIST-001",
+        "PAR-OI-DOC-HIST-001",
+        "PAR-MDRO-COL-DOC-001",
+        "PAR-ACUTECARE-ENC-HIST-001",
+        "PAR-INV-PROC-HIST-001",
+        "PAR-DM-DOC-ACTIVE-001",
+        "PAR-HF-DOC-ACTIVE-001",
+        "PAR-CKD-DOC-ACTIVE-001",
+        "PAR-KRT-ACTIVE-001",
+        "PAR-BRONCHIECTASIS-DOC-ACTIVE-001",
+        "PAR-RESP-SUPPORT-ACTIVE-001",
+        "PAR-CIRRHOSIS-DOC-ACTIVE-001",
+        "PAR-MALNUTRITION-ASSESS-POS-001",
+        "PAR-FRAILTY-ASSESS-POS-001"
+      ],
+      "consultas": {
+        "Q06-historia": "APLICA a antecedentes, rectificaciones y procedencia según dependencia de cada resultado",
+        "Q06-vigencia": "APLICA a fecha índice y reglas temporales propias, sin ventana universal",
+        "Q06-expediente": "APLICA a identificación, insuficiente para reproducir historia"
+      },
+      "limite": "Historia previa necesaria no es seguimiento posterior al inicio. No exige toda historia clínica: sólo las dependencias declaradas. Persistencia/custodia material siguen R2/R3/R4.",
+      "source": {
+        "source": "IMM-TECH",
+        "section": "§§3, 5, 8 y 11; IMM-CORR2 §6",
+        "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/Marco_tecnico_de_responsabilidad_trazabilidad_reproducibilidad_y_criticidad_OP-IMM-001_v0.1_2026-09-03.md"
+      }
+    }
+  ],
+  "profile": {
+    "id": "PERFIL_DOCUMENTAL_CANDIDATO_OP-IMM-001_Q0_v0_GH_2026-09-07",
+    "signature": "Q0: X_Q0_admisible -> Y_OP; la realizabilidad completa y la selección ejecutable no están acreditadas",
+    "outputs": [
+      {
+        "id": "PERFIL_PREDECISIONAL_SELLADO",
+        "meaning": "Acto humano explícito de suficiencia informativa, bajo precondiciones, sin U material sin adjudicar; no autoriza tratamiento.",
+        "source": {
+          "source": "IMM-G7",
+          "section": "§§1, 5–7; bajo IMM-TECH §§3–4 y recepción §8",
+          "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/12-rutas-en-evaluacion/G7-RUT_usos_composicion_y_rutas_OP-IMM-001_v0.1_2026-09-03.md"
+        }
+      },
+      {
+        "id": "U_CRITICA_NO_CERRADA",
+        "meaning": "Indeterminación clínica material legítima pendiente de cierre; no es falta de regla, insuficiencia representacional ni fallo técnico.",
+        "source": {
+          "source": "IMM-G7",
+          "section": "§§1, 5–7; bajo IMM-TECH §§3–4 y recepción §8",
+          "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/12-rutas-en-evaluacion/G7-RUT_usos_composicion_y_rutas_OP-IMM-001_v0.1_2026-09-03.md"
+        }
+      },
+      {
+        "id": "FUERA_DE_ALCANCE",
+        "meaning": "Exclusión clínica positivamente identificada en una evaluación técnica válida de alcance.",
+        "source": {
+          "source": "IMM-G7",
+          "section": "§§1, 5–7; bajo IMM-TECH §§3–4 y recepción §8",
+          "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/12-rutas-en-evaluacion/G7-RUT_usos_composicion_y_rutas_OP-IMM-001_v0.1_2026-09-03.md"
+        }
+      },
+      {
+        "id": "ABSTENERSE_O_ESCALAR",
+        "meaning": "Salida estructural por condición clínica o de gobierno declarada; no contenedor de fallo técnico.",
+        "source": {
+          "source": "IMM-G7",
+          "section": "§§1, 5–7; bajo IMM-TECH §§3–4 y recepción §8",
+          "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/d4d6c81cb9aab5194abc8e61212c0d63877a0b9c/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/12-rutas-en-evaluacion/G7-RUT_usos_composicion_y_rutas_OP-IMM-001_v0.1_2026-09-03.md"
+        }
+      }
+    ],
+    "groups": [
+      {
+        "id": "M-CTX-AUTH-001",
+        "parameters": [
+          "PAR-IMMUNO-START-PLAN-DOC-001",
+          "PAR-BASE-DX-DOC-001",
+          "PAR-EPISODE-LEAD-DOC-001",
+          "PAR-IMMUNO-PART-DOC-001",
+          "PAR-LOCAL-PROTOCOL-APPLICABLE-001",
+          "PAR-EXEC-CONSTRAINT-DOC-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      },
+      {
+        "id": "M-EXP-001",
+        "parameters": [
+          "PAR-GC-PLAN-SYS-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      },
+      {
+        "id": "M-HOST-001",
+        "parameters": [
+          "PAR-IGG-DEF-Q-001",
+          "PAR-SPL-ANAT-ABS-001",
+          "PAR-ANC-DEF-Q-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      },
+      {
+        "id": "M-BARRIER-001",
+        "parameters": [
+          "PAR-IV-DEVICE-PRESENT-001",
+          "PAR-IMPLANT-PRESENT-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      },
+      {
+        "id": "M-HISTORY-001",
+        "parameters": [
+          "PAR-INF-HOSP-HIST-001",
+          "PAR-INF-ORGSUP-HIST-001",
+          "PAR-OI-DOC-HIST-001",
+          "PAR-MDRO-COL-DOC-001",
+          "PAR-ACUTECARE-ENC-HIST-001",
+          "PAR-INV-PROC-HIST-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      },
+      {
+        "id": "M-MODIFIER-001",
+        "parameters": [
+          "PAR-DM-DOC-ACTIVE-001",
+          "PAR-HF-DOC-ACTIVE-001",
+          "PAR-CKD-DOC-ACTIVE-001",
+          "PAR-KRT-ACTIVE-001",
+          "PAR-BRONCHIECTASIS-DOC-ACTIVE-001",
+          "PAR-RESP-SUPPORT-ACTIVE-001",
+          "PAR-CIRRHOSIS-DOC-ACTIVE-001",
+          "PAR-MALNUTRITION-ASSESS-POS-001",
+          "PAR-FRAILTY-ASSESS-POS-001"
+        ],
+        "estado": "AGRUPACION_EXTERNA_NO_CELULA"
+      }
+    ],
+    "cells": [],
+    "mu_c": "NO_CONSTITUIDA_NO_SE_INFIERE_DEL_ORDEN_DOCUMENTAL",
+    "req_011": "U_NO_DECIDIDO",
+    "clinical_execution": false,
+    "output_when_technical_failure": "NINGUNA_SALIDA_CLINICA; sólo EJECUCION_TECNICA_NO_VALIDA"
+  },
+  "parameters": [
+    "PAR-IMMUNO-START-PLAN-DOC-001",
+    "PAR-BASE-DX-DOC-001",
+    "PAR-EPISODE-LEAD-DOC-001",
+    "PAR-IMMUNO-PART-DOC-001",
+    "PAR-LOCAL-PROTOCOL-APPLICABLE-001",
+    "PAR-EXEC-CONSTRAINT-DOC-001",
+    "PAR-GC-PLAN-SYS-001",
+    "PAR-IGG-DEF-Q-001",
+    "PAR-SPL-ANAT-ABS-001",
+    "PAR-ANC-DEF-Q-001",
+    "PAR-IV-DEVICE-PRESENT-001",
+    "PAR-IMPLANT-PRESENT-001",
+    "PAR-INF-HOSP-HIST-001",
+    "PAR-INF-ORGSUP-HIST-001",
+    "PAR-OI-DOC-HIST-001",
+    "PAR-MDRO-COL-DOC-001",
+    "PAR-ACUTECARE-ENC-HIST-001",
+    "PAR-INV-PROC-HIST-001",
+    "PAR-DM-DOC-ACTIVE-001",
+    "PAR-HF-DOC-ACTIVE-001",
+    "PAR-CKD-DOC-ACTIVE-001",
+    "PAR-KRT-ACTIVE-001",
+    "PAR-BRONCHIECTASIS-DOC-ACTIVE-001",
+    "PAR-RESP-SUPPORT-ACTIVE-001",
+    "PAR-CIRRHOSIS-DOC-ACTIVE-001",
+    "PAR-MALNUTRITION-ASSESS-POS-001",
+    "PAR-FRAILTY-ASSESS-POS-001"
+  ]
+}

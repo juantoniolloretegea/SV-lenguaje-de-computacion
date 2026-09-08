@@ -1,0 +1,963 @@
+{
+  "schema": "GH-LIG-RESOLUCION/0.1",
+  "source_head": "d374e1cb373a3dcd141faf482f9501ceb47a7e0b",
+  "gh_commit": "54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9",
+  "status": "CANDIDATA_NO_PROMOVIDA",
+  "row7_closed": false,
+  "q0_sufficient": false,
+  "cyb_opened": false,
+  "contract": "GH-LIG/0.1",
+  "treatments": [
+    {
+      "id": "IDENTIDAD",
+      "operation": "LIG/0.1: validate_bindings",
+      "contract": "LIG/0.1 §§2–4",
+      "available": "Identidad y versión de contrato/programa/operación; referentes, propietario, usos y alcance de S comprobados.",
+      "excluded": "No acredita identidad completa de una ejecución clínica, credenciales ni significado de documentos.",
+      "responsible": "Lenguaje; reglas y constitución: dominio/institución",
+      "stage": "DFL-005, fila 7; aplicación Q0 condicionada a SP-01/02",
+      "reentry_condition": "Probar cada dependencia de la operación clínica con constitución y autoridad efectivas.",
+      "evidence": "L01–L24; RETP-098"
+    },
+    {
+      "id": "BYTES",
+      "operation": "GH-DOC-01…08: transporte documental",
+      "contract": "GH-LIG/0.1 §§2–3",
+      "available": "Paso por LIG y recuperación documental literal a contrastar en esta candidata.",
+      "excluded": "No interpreta unidades, atribución, ventanas, clínica ni historia autoritativa.",
+      "responsible": "Lenguaje e interfaz documental",
+      "stage": "DFL-005; SP-05 documental, fila 7",
+      "reentry_condition": "Mantener fuentes/orden y declarar toda S; para Q0, constituir y ejecutar reglas propias.",
+      "evidence": "tests/row7_gh/; GH-DOC-01…08"
+    },
+    {
+      "id": "CONTEXTO",
+      "operation": "Trajectory y query declarativos",
+      "contract": "Contrato de continuidad RETP-097",
+      "available": "Bienformación local de arquitecturas y referentes; CoverageReport contrasta sus tres nombres.",
+      "excluded": "No prueba causalidad, append-only persistente, permisos, cobertura ni CQ1–CQ6.",
+      "responsible": "Lenguaje",
+      "stage": "DFL-003/004/005; H06/H07 locales en fila 7",
+      "reentry_condition": "Resolver semántica N3/N4 y contratos de cobertura antes de ofrecer esas operaciones.",
+      "evidence": "RETP-097; once testigos de contexto"
+    },
+    {
+      "id": "CLINICA",
+      "operation": "Admisión/transducción Q0",
+      "contract": "G/H SP-03; K1-T",
+      "available": "Ninguna ejecución clínica ofrecida. Referentes LIG sólo preservan identidad.",
+      "excluded": "No hay reglas productivas, partición, totalidad ni transducción observación→Tri acreditadas.",
+      "responsible": "Dominio e institución: significado/reglas; Lenguaje: comprobación/ejecución",
+      "stage": "K1-T; puerta algebraica fila 10 y retorno fila 11 según secuencia",
+      "reentry_condition": "Reglas clínicas constituidas y testigos completos previos a habilitar la operación.",
+      "evidence": "G/H SP-03 sólo especificado"
+    },
+    {
+      "id": "AUTORIDAD",
+      "operation": "Adjudicación, revocación y sucesión",
+      "contract": "G/H SP-10; contratos R1",
+      "available": "Identidad de declaración referida y transporte documental.",
+      "excluded": "Una huella o nombre no autentica autoridad; no habilita intervención clínica ni saneamiento técnico.",
+      "responsible": "Institución/autoridad; Lenguaje y motor para enlace y ejecución",
+      "stage": "R1 integrado y soporte R2/R3/R4; frontera fila 13",
+      "reentry_condition": "Acreditar legitimidad, ámbito, vigencia y sucesión en la realización receptora.",
+      "evidence": "G/H SP-10 sólo especificado; GH-DOC-04 documental"
+    },
+    {
+      "id": "CRITICIDAD",
+      "operation": "Producción y consumo de criticidades",
+      "contract": "G/H SP-04; DFL-006",
+      "available": "Ningún productor Q0 ofrecido.",
+      "excluded": "No se deriva criticidad de etiqueta, grupo, presencia de U o firma.",
+      "responsible": "Lenguaje/motor: productor y traza; dominio/institución: regla y autoridad",
+      "stage": "DFL-006; realización algebraica fila 10 y contraste fila 11",
+      "reentry_condition": "Productor trazable y regla constituida, sin reemplazar pendientes por resultados nominales.",
+      "evidence": "G/H SP-04 sólo especificado"
+    },
+    {
+      "id": "RESUMEN",
+      "operation": "Recuperar respuesta desde H o (H,S)",
+      "contract": "F-SV/0.1; G/H SP-05/06",
+      "available": "Falsación documental finita; orden e información lateral explícitos.",
+      "excluded": "No ofrece resumen clínico reversible, veto ejecutivo, composición de seis frames ni 27 parámetros.",
+      "responsible": "Lenguaje/motor; dependencias de dominio constituidas",
+      "stage": "DFL-005/004; FFL-E; resolución por operación en fila 7, ejecución posterior según secuencia",
+      "reentry_condition": "Demostrar recuperación de cada respuesta ofrecida y no compensación con reglas/productores efectivos.",
+      "evidence": "GH-DOC-01…08; SP-05/06 sólo especificados"
+    },
+    {
+      "id": "SALIDA",
+      "operation": "Selector terminal Q0",
+      "contract": "G/H SP-07; REQ-IMM-SV-014",
+      "available": "Ninguna salida clínica ofrecida. Se conserva el codominio recibido.",
+      "excluded": "No emite ni selecciona las cuatro salidas; no introduce quinta salida o consejo.",
+      "responsible": "Dominio: contrato; Lenguaje/motor: realización; autoridad: sello",
+      "stage": "SP-07; integración posterior a reglas y productor constituidos",
+      "reentry_condition": "Ejecutar tabla terminal exclusiva con premisas válidas y autoridad material.",
+      "evidence": "G/H SP-07 sólo especificado"
+    },
+    {
+      "id": "FALLO",
+      "operation": "Fallo técnico frente a resultado clínico",
+      "contract": "G/H SP-09; K1-T",
+      "available": "Errores de compilación/LIG son rechazos técnicos; no contienen resultado clínico.",
+      "excluded": "No prueba interrupción de Q0 ni efectos inciertos; no convierte ausencia en Tri o salida clínica.",
+      "responsible": "Lenguaje/motor y frontera",
+      "stage": "SP-09; DFL-006 y soporte operacional fila 13/R2",
+      "reentry_condition": "Ensayar cortes de ejecución en cada fase y garantizar ausencia de salida clínica parcial.",
+      "evidence": "G/H SP-09 sólo especificado; negativos LIG y corpus"
+    },
+    {
+      "id": "REPRODUCCION",
+      "operation": "Reproducción de bytes",
+      "contract": "LIG/0.1 §2; G/H SP-08",
+      "available": "Proyección declarativa y sondas del mismo Rust entre destinos, en los conjuntos identificados.",
+      "excluded": "No prueba Q0, concurrencia completa ni independencia semántica. Python compilador permanece retirado.",
+      "responsible": "Lenguaje/motor",
+      "stage": "DFL-001/013; SP-08 integrado pendiente",
+      "reentry_condition": "Identidad completa de ejecución y resultados normativos independientes para la operación ofrecida.",
+      "evidence": "RETP-098; nueva sonda GH-LIG; G/H SP-08 sólo especificado"
+    },
+    {
+      "id": "SOPORTE",
+      "operation": "Persistencia, efecto, aislamiento y plataforma",
+      "contract": "G/H SP-11; tabla rectora",
+      "available": "Sin capacidad material nueva ofrecida por este incremento.",
+      "excluded": "No acredita almacenamiento autoritativo, recuperación, permisos del entorno, normas de producto ni garantías I/II.",
+      "responsible": "Responsables originales de cada formulación LSV; Lenguaje/motor/infraestructura/institución",
+      "stage": "DFL-009 fila 9 tras CYB; frontera fila 13; R2/R3/R4 según contrato",
+      "reentry_condition": "Contrato material y ensayos por sede; no seleccionar plataforma por la existencia del prototipo.",
+      "evidence": "G/H SP-11 sólo especificado"
+    },
+    {
+      "id": "CONSTITUCION",
+      "operation": "Distribución paramétrica/celular Q0",
+      "contract": "REQ-IMM-SV-011; G/H SP-02",
+      "available": "LIG admite operación sin destino y distingue instancias cuando el dominio las constituye.",
+      "excluded": "Los 27 parámetros y grupos (6,1,3,2,6,9) no se convierten en células. U_NO_DECIDIDO se conserva.",
+      "responsible": "Dominio: constitución; Lenguaje: representación/comprobación",
+      "stage": "DFL-005; retorno acotado sólo si una operación justificada exige esa decisión",
+      "reentry_condition": "Constitución explícita del dominio; nunca geometría inferida por cardinalidad.",
+      "evidence": "LIG LP05; G/H SV-011 y GH-DOC-07"
+    },
+    {
+      "id": "PERIMETRO",
+      "operation": "Relevo y aplicabilidad",
+      "contract": "Tabla rectora fila 7; G/H SP-12",
+      "available": "Se recibe la aplicabilidad de seis familias y 18 consultas sin extender Q0.",
+      "excluded": "No abre Ciberseguridad ni otro universo; no introduce DICOM/citometría/médula.",
+      "responsible": "Director y sedes competentes; Lenguaje entrega candidata",
+      "stage": "Fila 7 abierta; fila 8 a cargo de Ciberseguridad",
+      "reentry_condition": "Revisión y recepción de candidata identificada con esta matriz; decisión propia del segundo falsador.",
+      "evidence": "G/H SP-12; inventario-gh.json"
+    }
+  ],
+  "g10": [
+    {
+      "id": "REQ-IMM-SV-001",
+      "treatments": [
+        "IDENTIDAD",
+        "CLINICA"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-002",
+      "treatments": [
+        "IDENTIDAD",
+        "CONTEXTO",
+        "RESUMEN"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-003",
+      "treatments": [
+        "AUTORIDAD",
+        "SALIDA"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-004",
+      "treatments": [
+        "CONTEXTO"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-005",
+      "treatments": [
+        "IDENTIDAD",
+        "BYTES"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-006",
+      "treatments": [
+        "CLINICA",
+        "FALLO",
+        "BYTES"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-007",
+      "treatments": [
+        "FALLO"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-008",
+      "treatments": [
+        "AUTORIDAD",
+        "CRITICIDAD",
+        "BYTES"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-009",
+      "treatments": [
+        "RESUMEN",
+        "CRITICIDAD"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-010",
+      "treatments": [
+        "CRITICIDAD"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-011",
+      "treatments": [
+        "CONSTITUCION"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-012",
+      "treatments": [
+        "RESUMEN",
+        "BYTES"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-013",
+      "treatments": [
+        "IDENTIDAD",
+        "CLINICA",
+        "AUTORIDAD"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-014",
+      "treatments": [
+        "SALIDA"
+      ]
+    },
+    {
+      "id": "REQ-IMM-SV-015",
+      "treatments": [
+        "REPRODUCCION"
+      ]
+    }
+  ],
+  "lsv": [
+    {
+      "id": "REQ-IMM-LSV-001",
+      "treatments": [
+        "IDENTIDAD"
+      ],
+      "responsible": "Lenguaje + perfil",
+      "source_witness": "SP-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-002",
+      "treatments": [
+        "BYTES"
+      ],
+      "responsible": "Interfaz + Lenguaje",
+      "source_witness": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-003",
+      "treatments": [
+        "REPRODUCCION"
+      ],
+      "responsible": "Lenguaje + motor",
+      "source_witness": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-004",
+      "treatments": [
+        "REPRODUCCION"
+      ],
+      "responsible": "Lenguaje",
+      "source_witness": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-005",
+      "treatments": [
+        "REPRODUCCION"
+      ],
+      "responsible": "Lenguaje + motor",
+      "source_witness": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-006",
+      "treatments": [
+        "SALIDA"
+      ],
+      "responsible": "Dominio + Lenguaje",
+      "source_witness": "SP-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-007",
+      "treatments": [
+        "CLINICA",
+        "FALLO",
+        "BYTES"
+      ],
+      "responsible": "Dominio + Lenguaje",
+      "source_witness": "GH-DOC-06"
+    },
+    {
+      "id": "REQ-IMM-LSV-008",
+      "treatments": [
+        "FALLO"
+      ],
+      "responsible": "Lenguaje + motor",
+      "source_witness": "SP-09"
+    },
+    {
+      "id": "REQ-IMM-LSV-009",
+      "treatments": [
+        "AUTORIDAD",
+        "BYTES"
+      ],
+      "responsible": "Lenguaje + autoridad",
+      "source_witness": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-010",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R2 + motor",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-011",
+      "treatments": [
+        "SOPORTE",
+        "FALLO"
+      ],
+      "responsible": "R2 + motor",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-012",
+      "treatments": [
+        "IDENTIDAD",
+        "BYTES",
+        "CLINICA"
+      ],
+      "responsible": "Dominio + interfaz + Lenguaje",
+      "source_witness": "GH-DOC-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-013",
+      "treatments": [
+        "BYTES",
+        "CLINICA"
+      ],
+      "responsible": "Dominio + interfaz",
+      "source_witness": "GH-DOC-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-014",
+      "treatments": [
+        "CRITICIDAD",
+        "AUTORIDAD"
+      ],
+      "responsible": "Dominio + autoridad clínica",
+      "source_witness": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-015",
+      "treatments": [
+        "FALLO",
+        "AUTORIDAD"
+      ],
+      "responsible": "Lenguaje + autoridad",
+      "source_witness": "SP-09"
+    },
+    {
+      "id": "REQ-IMM-LSV-016",
+      "treatments": [
+        "IDENTIDAD",
+        "AUTORIDAD"
+      ],
+      "responsible": "Institución + interfaz + Lenguaje",
+      "source_witness": "GH-DOC-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-017",
+      "treatments": [
+        "REPRODUCCION"
+      ],
+      "responsible": "Lenguaje + motor",
+      "source_witness": "SP-08"
+    },
+    {
+      "id": "REQ-IMM-LSV-018",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R2 + motor + institución",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-019",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R2 + sistema operativo",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-020",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R2 + almacenamiento",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-021",
+      "treatments": [
+        "SOPORTE",
+        "BYTES"
+      ],
+      "responsible": "R2 + institución",
+      "source_witness": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-022",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R2 + motor",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-023",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "Lenguaje + motor + infraestructura",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-024",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "Lenguaje",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-025",
+      "treatments": [
+        "IDENTIDAD",
+        "BYTES"
+      ],
+      "responsible": "Dominio + interfaz",
+      "source_witness": "GH-DOC-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-026",
+      "treatments": [
+        "CONSTITUCION",
+        "IDENTIDAD"
+      ],
+      "responsible": "Lenguaje + dominio",
+      "source_witness": "SP-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-027",
+      "treatments": [
+        "BYTES",
+        "SOPORTE"
+      ],
+      "responsible": "Interfaz clínica + Lenguaje",
+      "source_witness": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-028",
+      "treatments": [
+        "BYTES",
+        "CLINICA"
+      ],
+      "responsible": "Interfaz clínica + dominio",
+      "source_witness": "GH-DOC-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-029",
+      "treatments": [
+        "CLINICA",
+        "IDENTIDAD"
+      ],
+      "responsible": "Dominio + interfaz terminológica",
+      "source_witness": "SP-03"
+    },
+    {
+      "id": "REQ-IMM-LSV-030",
+      "treatments": [
+        "PERIMETRO"
+      ],
+      "responsible": "Dominio",
+      "source_witness": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-031",
+      "treatments": [
+        "CLINICA"
+      ],
+      "responsible": "Dominio + Lenguaje",
+      "source_witness": "SP-03"
+    },
+    {
+      "id": "REQ-IMM-LSV-032",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "Calidad + responsables de producto",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-033",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "Institución + responsables de producto",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-034",
+      "treatments": [
+        "IDENTIDAD"
+      ],
+      "responsible": "Calidad + Lenguaje",
+      "source_witness": "SP-01"
+    },
+    {
+      "id": "REQ-IMM-LSV-035",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "R3/R4 + Calidad",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-036",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "responsible": "Entorno + institución",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-037",
+      "treatments": [
+        "SOPORTE",
+        "BYTES"
+      ],
+      "responsible": "Institución + interfaz",
+      "source_witness": "GH-DOC-05"
+    },
+    {
+      "id": "REQ-IMM-LSV-038",
+      "treatments": [
+        "SOPORTE",
+        "CLINICA"
+      ],
+      "responsible": "Institución + Calidad + dominio",
+      "source_witness": "SP-11"
+    },
+    {
+      "id": "REQ-IMM-LSV-039",
+      "treatments": [
+        "CONSTITUCION",
+        "PERIMETRO"
+      ],
+      "responsible": "Lenguaje + dominio",
+      "source_witness": "SP-02"
+    },
+    {
+      "id": "REQ-IMM-LSV-040",
+      "treatments": [
+        "BYTES"
+      ],
+      "responsible": "Interfaz documental",
+      "source_witness": "GH-DOC-07"
+    },
+    {
+      "id": "REQ-IMM-LSV-041",
+      "treatments": [
+        "CRITICIDAD",
+        "CONTEXTO"
+      ],
+      "responsible": "Lenguaje",
+      "source_witness": "SP-04"
+    },
+    {
+      "id": "REQ-IMM-LSV-042",
+      "treatments": [
+        "PERIMETRO"
+      ],
+      "responsible": "Lenguaje + Director",
+      "source_witness": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-043",
+      "treatments": [
+        "PERIMETRO"
+      ],
+      "responsible": "Lenguaje",
+      "source_witness": "SP-12"
+    },
+    {
+      "id": "REQ-IMM-LSV-044",
+      "treatments": [
+        "PERIMETRO"
+      ],
+      "responsible": "Director + sedes competentes",
+      "source_witness": "SP-12"
+    }
+  ],
+  "specified": [
+    {
+      "id": "SP-01",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "IDENTIDAD"
+      ],
+      "owner": "DFL-005; interfaz/motor",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-02",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "IDENTIDAD",
+        "CONSTITUCION"
+      ],
+      "owner": "DFL-005; REQ-IMM-SV-011",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-03",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "CLINICA"
+      ],
+      "owner": "K1-T; configuración de dominio",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-04",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "CRITICIDAD"
+      ],
+      "owner": "DFL-006; dominio/autoridad",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-05",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "RESUMEN",
+        "BYTES"
+      ],
+      "owner": "DFL-005; FFL-E; interfaz",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-06",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "RESUMEN"
+      ],
+      "owner": "REQ-IMM-SV-002/009; Lenguaje/motor",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-07",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "SALIDA"
+      ],
+      "owner": "REQ-IMM-SV-014; Lenguaje",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-08",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "REPRODUCCION"
+      ],
+      "owner": "REQ-IMM-SV-015; Lenguaje/motor",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-09",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "FALLO"
+      ],
+      "owner": "REQ-IMM-SV-007; Lenguaje/motor",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-10",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "AUTORIDAD"
+      ],
+      "owner": "R1 integrado; institución/motor",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-11",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "SOPORTE"
+      ],
+      "owner": "R2/R3/R4; DFL-009 en fila 9; contrato operacional fila 13",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    },
+    {
+      "id": "SP-12",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "treatments": [
+        "PERIMETRO"
+      ],
+      "owner": "Recepción §8; Director y sedes competentes",
+      "evidence": "NO_EJECUTADO_Q0; partes locales identificadas por separado"
+    }
+  ],
+  "documentary": [
+    {
+      "id": "GH-DOC-01",
+      "operation": "GH-DOC-01-RECUPERAR",
+      "paths": [
+        "detail.unidad",
+        "detail.metodo",
+        "detail.referencia"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-02",
+      "operation": "GH-DOC-02-RECUPERAR",
+      "paths": [
+        "detail.relacion"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-03",
+      "operation": "GH-DOC-03-RECUPERAR",
+      "paths": [
+        "detail.estado",
+        "detail.revision"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-04",
+      "operation": "GH-DOC-04-RECUPERAR",
+      "paths": [
+        "detail.acto",
+        "detail.autor",
+        "detail.motivo"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-05",
+      "operation": "GH-DOC-05-RECUPERAR",
+      "paths": [
+        "detail.antecedente",
+        "detail.enmienda"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-06",
+      "operation": "GH-DOC-06-RECUPERAR",
+      "paths": [
+        "detail.categoria",
+        "detail.salida_clinica_documentada"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-07",
+      "operation": "GH-DOC-07-RECUPERAR",
+      "paths": [
+        "detail.ligaduras"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    },
+    {
+      "id": "GH-DOC-08",
+      "operation": "GH-DOC-08-RECUPERAR",
+      "paths": [
+        "detail.ventana",
+        "detail.incluye_extremo_final"
+      ],
+      "treatments": [
+        "BYTES",
+        "RESUMEN"
+      ],
+      "representations": [
+        "F0",
+        "H",
+        "HS"
+      ],
+      "expected_loss_in_H": true,
+      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+    }
+  ],
+  "families": [
+    {
+      "id": "IF-IMM-01",
+      "status": "APLICA_PARCIALMENTE",
+      "queries": {
+        "Q01-unidad": "APLICA a identidad, unidad y referencia; el criterio artificial no es intervalo clínico",
+        "Q01-correccion": "APLICA a validez/versión y enlace de sustitución del informe",
+        "Q01-peticion": "APLICA como vínculo petición/muestra/episodio, insuficiente por sí solo"
+      },
+      "limit": "Faltan método, intervalo clínicamente aplicable y captura/transducción Q0; el producto finito IF no demuestra esos requisitos."
+    },
+    {
+      "id": "IF-IMM-02",
+      "status": "NO_APLICA_EN_Q0_V0",
+      "queries": {
+        "Q02-configuracion": "NO_APLICA",
+        "Q02-informe": "NO_APLICA",
+        "Q02-muestra": "NO_APLICA"
+      },
+      "limit": "El A0 recibido no consume paneles ni observación citométrica derivada. SEM-HUE-001 no suministra un parámetro citométrico adoptado. La utilidad general del patrón no crea un uso en Q0."
+    },
+    {
+      "id": "IF-IMM-03",
+      "status": "NO_APLICA_EN_Q0_V0",
+      "queries": {
+        "Q03-informe": "NO_APLICA",
+        "Q03-procedimiento": "NO_APLICA como consulta de médula ósea",
+        "Q03-muestra": "NO_APLICA"
+      },
+      "limit": "No hay consumidor de médula/imagen digital. La asplenia usa documentación profesional ya adjudicada; el antecedente de procedimiento invasivo no requiere procesar médula. DICOM/LSV-030 siguen no aplicables."
+    },
+    {
+      "id": "IF-IMM-04",
+      "status": "APLICA_PARCIALMENTE_COMO_DISTINCION_DOCUMENTAL",
+      "queries": {
+        "Q04-constancia": "NO es una operación consumida: se recibe la prohibición de deducir administración desde orden",
+        "Q04-cambio": "APLICA al estado/cambio del plan documental, sin ejecutar suspensión",
+        "Q04-orden": "APLICA a identidad de propuesta; insuficiente sin estado, intención y versión"
+      },
+      "limit": "El contenido oncológico, resultado terapéutico y administración como ejecución están fuera de Q0. Traslado sólo de la distinción, con testigo propio GH-DOC-03; no herencia de reglas."
+    },
+    {
+      "id": "IF-IMM-05",
+      "status": "APLICA_PARCIALMENTE",
+      "queries": {
+        "Q05-episodio": "APLICA a identidad y periodo; no aporta por sí sola REL-ATRIB",
+        "Q05-organizacion": "APLICA como contexto; servicio/organización no asignan autoridad ni causa",
+        "Q05-ubicacion": "NO es una pregunta autónoma requerida; ubicación es contexto no sustituto de episodio"
+      },
+      "limit": "Q0 requiere además atribución, cobertura, autoridad y ventanas explícitas. No obliga a importar toda la familia ni a crear otro parámetro."
+    },
+    {
+      "id": "IF-IMM-06",
+      "status": "APLICA_A_PROCEDENCIA_Y_VIGENCIA",
+      "queries": {
+        "Q06-historia": "APLICA a antecedentes, rectificaciones y procedencia según dependencia de cada resultado",
+        "Q06-vigencia": "APLICA a fecha índice y reglas temporales propias, sin ventana universal",
+        "Q06-expediente": "APLICA a identificación, insuficiente para reproducir historia"
+      },
+      "limit": "Historia previa necesaria no es seguimiento posterior al inicio. No exige toda historia clínica: sólo las dependencias declaradas. Persistencia/custodia material siguen R2/R3/R4."
+    }
+  ],
+  "acceptance": "Inventario íntegro y partes documentales probadas no equivalen a suficiencia Q0 ni autorizan automáticamente el relevo. Revisión externa de candidatas apiladas pendiente."
+}

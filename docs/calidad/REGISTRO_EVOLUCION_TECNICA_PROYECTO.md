@@ -628,6 +628,16 @@ Las huellas de archivo de esta tabla proceden de los metadatos de Actions; no se
 
 **Decisión actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #80 apilada sobre #79. La cola documental sólo registra evidencia; las comprobaciones de su cabeza exacta quedan enlazadas en la PR. DFL-005 ya tiene una realización verificable de ligaduras LIG/0.1; no queda por diseñar esa representación desde cero. Permanecen el contraste externo de #79/#80, la resolución final por operación de las pérdidas G/H y la candidata completa de fila 7. Los documentos referidos conservan identidad, pero su semántica y autoridad no se dan por ejecutadas ni autenticadas. La fila 7 permanece abierta.
 
+<a id="retp-099"></a>
+
+### RETP-2026-099 — Resolución por operación del retorno G/H y transporte LIG
+
+**Entrada:** `d374e1cb373a3dcd141faf482f9501ceb47a7e0b`, PR #80 no promovida, sobre PR #79. **Fuente G/H:** `54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9`. Se adopta [GH-LIG/0.1](../arquitectura/RESOLUCION_DE_PERDIDAS_GH_Y_TRANSPORTE_LIG_2026_09_08.md) antes de realizar su sonda. La matriz enlaza los 15 G10, 44 LSV y 81 enlaces recibidos con capacidades concretas, exclusiones, responsables y condiciones de reapertura. Mantiene las doce SP como no ejecutadas integralmente y no declara suficiencia Q0.
+
+**Objeto material:** transportar los dieciséis estados GH-DOC por `validate_bindings`, con tres representaciones F0/H/HS. Se esperan 48 transportes, 16 recuperaciones F0, 16 recuperaciones con S, 16 controles conservados en H y ocho pérdidas H demostradas. Son obligaciones y recuentos previos, no resultados ejecutados. Los resultados proceden del testigo G/H; el núcleo sólo valida ligaduras y conserva bytes. La sonda no constituye los 27 parámetros, no ejecuta clínica y no introduce una operación SV.
+
+**Estado:** `CONTRATO_Y_RESOLUCION_CANDIDATOS_PENDIENTES_DE_PRUEBA`. Las fuentes originales se identifican por bytes, SHA-256 y blob Git; el inventario público es una extracción, no una reverificación de las 44 fuentes primarias. Falta ejecutar y revisar esta candidata. Fila 7 abierta; CYB no abierta; PR #79/#80 sin promoción.
+
 ## 4. Estado de continuidad
 
 **Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.

@@ -218,3 +218,10 @@ DFL-005 recibe una realización en `sv_core::bindings` del [contrato material pr
 
 
 **Verificación RETP-098:** LIG/0.1 queda realizada y comprobada en `c4c50a0677498c66dd77f7c5a61b5e2173fd291c`, PR #80: cuatro flujos conformes, 45 pruebas Rust nuevas, 53 testigos en cuatro entradas con paridad literal entre nativo/WASI/navegador; 43/43 mutaciones dirigidas detectadas (19 nuevas). Los cortes, ejecuciones y artefactos están en RETP-098 del maestro CSV/Markdown. DFL-005 deja de describirse, para este alcance candidato, como ausencia total de representación. Sigue abierta para la resolución operacional del retorno y no se ofrece suficiencia Q0. La construcción privada del resultado conserva las ligaduras; no acredita permisos, interpretación de documentos ni recuperación clínica con S. PR #79 y #80 permanecen sin integrar y pendientes de contraste externo.
+
+
+## Sucesión candidata RETP-099 · Resolución por operación G/H
+
+DFL-005 se contrasta ahora con ocho pares documentales recibidos a través de LIG/0.1 y una matriz completa de inventario 15/44/81. La sonda aún está pendiente de prueba. La conservación de bytes, su identidad y la recuperación externa de campos no ejecutan significado clínico ni autoridad. Las doce SP integradas permanecen no ejecutadas; las exclusiones, responsables y condiciones de reapertura constan en GH-LIG/0.1 y su matriz. No se borra deuda por disponer de un documento referido.
+
+La fila 7 sigue abierta. No se transforma esta propuesta en cierre de H06/H07 completos, N3/N4, K1-T, DFL-006, DFL-001 o independencia semántica. PR #79/#80 no promovidas; el nuevo transporte y la matriz requieren evidencia y contraste externo antes de emitir la candidata a Ciberseguridad.
