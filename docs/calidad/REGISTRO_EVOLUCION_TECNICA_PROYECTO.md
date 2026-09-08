@@ -675,6 +675,8 @@ Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo lo
 
 **Realización candidata:** contrato íntegro en la sonda, codificación JavaScript independiente y correspondencia completa con la plantilla/testigo recibidos. El vector fijo de RETP-098 concuerda con el nuevo codificador. La autoprueba reúne 28 ataques previstos: los 16 anteriores (MG09 ahora exige recálculo) y doce nuevos, incluidos F0/HS, ambas H falsas, todas las huellas cero y contratos modificados con huella recalculada. La ejecución integrada aún está pendiente.
 
+**Primer ensayo de corrección:** `e40473aaabeef59761bc613549e30356c0b21fa8`: R0 Rust, conformidad y R0-8 conformes; recálculo 48/48 y ataques 28/28 en nativo/WASI. La ejecución de paridad `34202052200` falló al capturar `PENDIENTE` en el navegador; ese corte no pasa la puerta completa. Se ajusta la sonda de navegador para cargar ambas entradas antes de compilar/instanciar WASM síncronamente, conservando presupuesto e igualdad literal. El ensayo posterior debe verificarse de nuevo.
+
 **Estado:** `CORRECCION_DEL_OBSERVADOR_PENDIENTE_DE_PRUEBA`. Se conservan los resultados y límites de RETP-099 en su corte; el nuevo incremento requiere su propia verificación. Fila 7 abierta; candidatas sin promover; doce SP integradas sin ejecución acreditada.
 
 ## 4. Estado de continuidad
