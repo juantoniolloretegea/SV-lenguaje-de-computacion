@@ -663,6 +663,18 @@ Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo lo
 
 **Estado actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #81 sobre #80. La matriz queda contrastada en su inventario y en el transporte documental ensayado; su suficiencia como entrega de fila 7 requiere revisión, no la decide el verificador. Las doce SP integradas siguen no ejecutadas. La cola de evidencia no altera el núcleo, las sondas ni sus esperados originales; la comprobación de la cabeza final se enlaza en la PR. Continúan sin promoción #79/#80/#81 y sin emisión a CYB. No queda por realizar este transporte; permanecen el contraste externo y la decisión sobre el alcance de la candidata completa. Ninguna operación excluida se ofrece por el hecho de estar documentada.
 
+<a id="retp-100"></a>
+
+### RETP-2026-100 — Recálculo externo de huellas contractuales GH-LIG
+
+**Entrada exacta:** `b58b4c88d30c1de3548cac9b4ac16ebbf7250717`, PR #81 no promovida. La revisión externa aportada por el Director reproduce las pérdidas y transportes, pero refuta que el observador compruebe el valor de `contract_sha256`. Se reproduce el defecto en el observador anterior con 48 huellas a cero y entradas sintéticas derivadas de G/H; no se atribuye ese control a una ejecución Rust.
+
+**Decisión previa:** aplicar [GH-LIG §7](../arquitectura/RESOLUCION_DE_PERDIDAS_GH_Y_TRANSPORTE_LIG_2026_09_08.md#7-rectificacion-del-observador-contractual--retp-100). Publicar la representación contractual completa, cotejarla con el testigo y recalcular su codificación y SHA-256 fuera del emisor. La batería atacará tanto huellas aisladas como falsificaciones simétricas de H y modificaciones coherentes de contrato/huella. El esquema del informe de pruebas pasa a 0.2; LIG/0.1, gramática, serializador y realización productiva permanecen.
+
+**Rectificación de alcance:** sólo #81 conserva intactos los archivos de realización del núcleo. La pila #79/#80 incluye nuevas capacidades y guardas de bienformación, que sí cambian la aceptación de entradas. El número de inserciones no demuestra identidad semántica. La prosa de la matriz permanece sometida a revisión humana, expresamente fuera de lo que acredita el verificador.
+
+**Estado:** `CORRECCION_DEL_OBSERVADOR_PENDIENTE_DE_PRUEBA`. Se conservan los resultados y límites de RETP-099 en su corte; el nuevo incremento requiere su propia verificación. Fila 7 abierta; candidatas sin promover; doce SP integradas sin ejecución acreditada.
+
 ## 4. Estado de continuidad
 
 **Sucesión RETP-099, 08/09/2026 (candidata):** PR #81 verifica transporte G/H por LIG y conserva el inventario 15/44/81 con límites por operación. #79/#80/#81 siguen no promovidas; fila 7 abierta. Este asiento sucede a las descripciones candidatas anteriores sin retroeditarlas.

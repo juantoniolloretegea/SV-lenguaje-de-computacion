@@ -70,3 +70,16 @@ cargo +1.98.0 test --manifest-path rust/Cargo.toml -p sv_core --test gh_bindings
 ```
 
 El flujo `r0-wasm-parity.yml` conserva las órdenes exactas de construcción WASI y ejecución en navegador real, sus informes y artefactos. El modo `--inventario` sólo acredita el inventario; exige un informe real para comprobar transporte. `CONFORME_EN_TRANSPORTE_DOCUMENTAL` no significa suficiencia Q0, autenticación clínica ni cierre de fila 7.
+
+
+## 7. Rectificación del observador contractual · RETP-100
+
+**Corte examinado:** `b58b4c88d30c1de3548cac9b4ac16ebbf7250717`. La auditoría externa aportada por el Director identifica una omisión real: el observador comprueba formato de `contract_sha256` e igualdad de las dos H, pero no el valor de la huella. Una reproducción sintética del observador anterior admite las 48 huellas a cero. No se presenta esa reproducción como ejecución de Rust. Las ocho pérdidas documentales permanecen probadas por sus bytes y fuentes; el recálculo independiente de la huella contractual queda pendiente de esta corrección.
+
+**Obligación previa:** GH-LIG-OBSERVACIONES/0.2 debe exponer el contrato completo obtenido de `ValidatedBindings`, con todos sus campos y todos los bytes de artefactos, además de la proyección de programa referida. Un codificador JavaScript externo calculará SHA-256 sobre la codificación LIG/0.1 §2 —prefijo, longitudes u64 big-endian, opciones, naturales decimales y orden explícito— sin llamar a Rust ni leer `binding_contract_sha256` como esperado. Se contrastará también con el testigo independiente fijo ya constituido en RETP-098; ninguna huella correcta se fijará copiando la salida nueva de la sonda.
+
+Cada contrato emitido debe corresponder exactamente a la construcción GH-LIG declarada en §2: portador D/AG, una instancia I1/P, un uso U1 sin destino ni alias, referencias y artefactos íntegros, definición de operación G/H, F0/H/HS y S sólo donde corresponde. La plantilla de prueba LIG y los testigos G/H se fijan por huella. Comparar únicamente diferencias entre huellas no satisface esta obligación. Se rechazarán F0 o HS falsificadas, las dos H falsificadas por igual, las 48 huellas a cero y alteraciones de contrato con su huella recalculada.
+
+**Identidad de programa:** el observador coteja el hash de la fuente portadora literal y calcula el de los bytes de proyección publicados; exige sus metadatos de fuente y el mismo enlace en el contrato. Eso comprueba integridad y enlace, no vuelve a implementar ni a demostrar independientemente la semántica del compilador. El informe lo declarará expresamente. Un informe público y coherente no acredita por sí solo que su emisor haya ejecutado Rust; la evidencia de ejecución conserva su sede en los trabajos y artefactos identificados.
+
+**Alcance de la pila:** la #81 no modifica `rust/sv_core/src`; las #79/#80 añaden el validador de ligaduras y comprobaciones de contexto invocadas durante compilación. Las inserciones puras no prueban conservación del comportamiento: las nuevas guardas rechazan entradas antes admitidas. Debe revisarse y describirse ese cambio al promover. La prosa de los tratamientos de la matriz requiere revisión humana; ni la no vaciedad ni una huella demuestran su verdad o suficiencia. No se presenta este refuerzo como cierre de fila 7, Q0, DFL-005 global o independencia semántica.

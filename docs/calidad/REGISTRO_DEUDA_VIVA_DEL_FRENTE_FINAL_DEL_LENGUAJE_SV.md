@@ -228,3 +228,10 @@ La fila 7 sigue abierta. No se transforma esta propuesta en cierre de H06/H07 co
 
 
 **Verificación RETP-099:** el corte `bcf25c5b566a6535ba1c3851346fbb355b98ae84`, PR #81, acredita el transporte de los ocho pares GH-DOC por LIG: 48 transportes y recuperación documental F0/HS, con ocho pérdidas H conservadas y declaradas. Cuatro flujos conformes; ocho pruebas Rust y 16 ataques del observador satisfactorios; paridad literal en tres destinos. Este alcance deja de estar pendiente de realizar. La matriz 15/44/81 conserva responsables y límites; no otorga suficiencia clínica ni cierra las doce SP integradas. La revisión de las tres candidatas apiladas y la decisión de entrega de fila 7 siguen pendientes. No se licencia ninguna operación que necesite las capacidades excluidas.
+
+
+## Rectificación candidata RETP-100 · Huella contractual ante el observador externo
+
+La auditoría de `b58b4c88…` confirma el transporte y refuta la vigilancia del valor de `contract_sha256` por el observador GH-LIG. DFL-001 conserva esta omisión de observación hasta su corrección probada; no se inventa una nueva identidad DFL. RETP-100 exige contrato completo cotejado con su testigo y recálculo externo. El ensayo anterior no pierde sus ocho pérdidas documentales, pero no acredita el recálculo ahora exigido.
+
+La pila #79/#80 sí modifica capacidad y aceptación de entradas mediante nuevas guardas. La #81 sólo añade pruebas y gobierno. La matriz requiere juicio humano sobre sus tratamientos; el control de inventario no valida esa prosa. Permanecen fila 7 abierta, doce SP no ejecutadas y ausencia de promoción; no se concede capacidad clínica mediante la rectificación del observador.
