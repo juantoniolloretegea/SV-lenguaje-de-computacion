@@ -2,8 +2,9 @@ name: R0 WASM paridad nativa y navegador
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "fila7-*"]
     paths:
+      - "tests/row7_bindings/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
@@ -129,6 +130,18 @@ jobs:
             --wasi-runner tests/run_wasi_sv_native.js \
             --output-dir artifacts/r0-wasm/ternarizer-boundary
 
+      - name: Comprobar LIG/0.1 en nativo y WASI
+        run: |
+          mkdir -p artifacts/r0-browser
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example binding_probe --release
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example binding_probe --release --target wasm32-wasip1
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example binding_probe_browser --release --target wasm32-unknown-unknown
+          rust/target/release/examples/binding_probe > artifacts/r0-browser/bindings-native.json
+          node tests/row7_bindings/run_wasi.mjs rust/target/wasm32-wasip1/release/examples/binding_probe.wasm > artifacts/r0-wasm/bindings-wasi.json
+          cmp artifacts/r0-browser/bindings-native.json artifacts/r0-wasm/bindings-wasi.json
+          cp rust/target/wasm32-unknown-unknown/release/examples/binding_probe_browser.wasm artifacts/r0-browser/
+          sha256sum rust/target/release/examples/binding_probe rust/target/wasm32-wasip1/release/examples/binding_probe.wasm artifacts/r0-browser/binding_probe_browser.wasm > artifacts/r0-wasm/bindings-probes.sha256
+
       - name: Preparar manifiesto de paridad para navegador
         run: |
           mkdir -p artifacts/r0-browser
@@ -193,6 +206,43 @@ jobs:
           grep -q '"optional_ok":64' artifacts/r0-browser/browser-parity-dom.html
           grep -q '"ternarizer_ok":40' artifacts/r0-browser/browser-parity-dom.html
 
+      - name: Comprobar LIG/0.1 en navegador real
+        run: |
+          CHROME=""
+          for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$candidate" >/dev/null 2>&1; then
+              CHROME="$(command -v "$candidate")"
+              break
+            fi
+          done
+          test -n "$CHROME"
+          python -m http.server 8766 --bind 127.0.0.1 > artifacts/r0-browser/bindings-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for _ in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:8766/tests/row7_bindings/browser.html >/dev/null; then break; fi
+            sleep 0.25
+          done
+          "$CHROME" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=30000 --dump-dom http://127.0.0.1:8766/tests/row7_bindings/browser.html > artifacts/r0-browser/bindings-browser.html 2> artifacts/r0-browser/bindings-browser.log
+          python - <<'PYCODE'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          class Result(HTMLParser):
+              active=False
+              text=''
+              def handle_starttag(self, tag, attrs):
+                  if tag=='pre' and dict(attrs).get('id')=='result': self.active=True
+              def handle_endtag(self, tag):
+                  if tag=='pre': self.active=False
+              def handle_data(self, data):
+                  if self.active: self.text+=data
+          result=Result()
+          result.feed(Path('artifacts/r0-browser/bindings-browser.html').read_text())
+          expected='CONFORME '+Path('artifacts/r0-browser/bindings-native.json').read_text().removesuffix('\n')
+          assert result.text==expected, result.text[:2000]
+          print('LIG/0.1: nativo, WASI y navegador con identidad literal de resultados')
+          PYCODE
+
       - name: Registrar identidad de los artefactos
         run: |
           sha256sum rust/target/release/sv-native > artifacts/r0-wasm/sv-native.sha256
@@ -221,6 +271,8 @@ jobs:
             artifacts/r0-wasm/
             artifacts/r0-browser/
             rust/target/release/sv-native
+            rust/target/release/examples/binding_probe
+            rust/target/wasm32-wasip1/release/examples/binding_probe.wasm
             rust/target/release/examples/assembly_probe
             rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm
             rust/target/wasm32-wasip1/release/sv-native.wasm

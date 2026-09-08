@@ -600,6 +600,12 @@ Se identifican metadatos de Actions y registros de ejecución; no se declara una
 
 **Estado inicial:** `CONTRATO_PREVIO_REALIZACION_Y_PRUEBAS_PENDIENTES`. El incremento se apila sobre PR #79; no acredita su revisión externa ni la promueve. Matriz final de pérdidas, recuperación de respuestas con S, ejecución Q0, K1-T, productores y autoridad permanecen pendientes. Fila 7 abierta, CYB no emitida. Actas históricas, README y norma del español intactos.
 
+**Realización candidata posterior al contrato `5fd6087a7fe7ec6b12c8c8f4e9c90a0c116a2eac`:** `sv_core::bindings` materializa LIG/0.1; el resultado posee construcción privada y conserva contrato, operación y programa. El banco contiene 44 negativos y nueve positivos, cada uno en compilación ordinaria, perfil español y ensamblaje en ambos órdenes. Un testigo de codificación fijado desde §2, calculado por un observador Python independiente, protege la huella sin copiar salida Rust. Se añaden 19 mutaciones dirigidas, hasta 43 en la campaña general. Estas cifras son inventario de pruebas, **no resultados ejecutados** en este punto.
+
+**Distribución:** sondas aparte para nativo, WASI y navegador, con comparación literal de informes. La API productiva de `sv_wasm` y el corpus SVP 14+106 se conservan; LIG/0.1 tiene banco propio porque su entrada es tipada, no sintaxis SVP. Los cuatro flujos admiten bases `fila7-*` para comprobar candidatas apiladas sin presentar la PR #79 como integrada. No se cambia la versión Rust de referencia.
+
+**Estado de realización:** `CANDIDATA_MATERIAL_PENDIENTE_DE_VERIFICACION`. Se registrará el corte exacto y sus resultados al terminar las ejecuciones. Falta contraste externo y matriz final de pérdidas; la fila 7 no se cierra por compilar esta interfaz.
+
 ## 4. Estado de continuidad
 
 **Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.

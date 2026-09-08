@@ -6,3 +6,7 @@ publish = false
 
 [lib]
 path = "src/lib.rs"
+
+[[example]]
+name = "binding_probe_browser"
+crate-type = ["cdylib"]

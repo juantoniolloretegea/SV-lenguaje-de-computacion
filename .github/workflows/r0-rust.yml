@@ -2,8 +2,9 @@ name: R0 Rust
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "fila7-*"]
     paths:
+      - "tests/row7_bindings/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
@@ -34,6 +35,9 @@ jobs:
           rustup target add wasm32-unknown-unknown
           rustc --version
           cargo --version
+
+      - name: Verificar codificación contra el testigo independiente
+        run: python tests/row7_bindings/hash_reference.py
 
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace

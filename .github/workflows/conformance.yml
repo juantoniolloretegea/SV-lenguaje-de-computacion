@@ -2,7 +2,7 @@ name: Conformidad SVP
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "fila7-*"]
 
 permissions:
   contents: read

@@ -29,6 +29,7 @@
 //! ```
 
 pub mod admissibility;
+pub mod bindings;
 pub mod authority;
 pub mod control;
 pub mod decision_trace;

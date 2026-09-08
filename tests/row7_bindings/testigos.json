@@ -1,0 +1,314 @@
+{
+  "schema": "LIG-TEST/0.1",
+  "normative_contract": "CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md",
+  "cases": [
+    {
+      "id": "L01_version",
+      "expected_kind": "ContractIdentity",
+      "expected_subject": "ContratoD",
+      "contract_hash_recalculated": false,
+      "condition": "c.version=\"2\".into();"
+    },
+    {
+      "id": "L02_orden_expectativa",
+      "expected_kind": "ContractIdentity",
+      "expected_subject": "ContratoD",
+      "contract_hash_recalculated": false,
+      "condition": "c.operations[0].uses.swap(0,1);"
+    },
+    {
+      "id": "L03_programa",
+      "expected_kind": "ProgramIdentity",
+      "expected_subject": "otro.svp",
+      "contract_hash_recalculated": true,
+      "condition": "c.program.source_file=\"otro.svp\".into();"
+    },
+    {
+      "id": "L04_bytes",
+      "expected_kind": "ArtifactIntegrity",
+      "expected_subject": "ConstitucionD",
+      "contract_hash_recalculated": true,
+      "condition": "c.artifacts[0].bytes.push(0);"
+    },
+    {
+      "id": "L05_version_duplicada",
+      "expected_kind": "DuplicateIdentity",
+      "expected_subject": "ConstitucionD",
+      "contract_hash_recalculated": true,
+      "condition": "let mut a=c.artifacts[0].clone(); a.reference.version=\"2\".into(); c.artifacts.push(a);"
+    },
+    {
+      "id": "L06_referencia_exacta",
+      "expected_kind": "ExactReference",
+      "expected_subject": "Phi",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].capture.definition.version=\"2\".into();"
+    },
+    {
+      "id": "L06_referencia_ausente",
+      "expected_kind": "MissingReference",
+      "expected_subject": "Ausente",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].capture.definition.identifier=\"Ausente\".into();"
+    },
+    {
+      "id": "L07_clase",
+      "expected_kind": "ArtifactKind",
+      "expected_subject": "Phi",
+      "contract_hash_recalculated": true,
+      "condition": "c.artifacts[2].kind=ArtifactKind::Provenance;"
+    },
+    {
+      "id": "L08_instancia_duplicada",
+      "expected_kind": "DuplicateIdentity",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[1].identifier=\"I1\".into();"
+    },
+    {
+      "id": "L09_propietario",
+      "expected_kind": "Owner",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].owner=\"D2\".into();"
+    },
+    {
+      "id": "L09_parametro",
+      "expected_kind": "DomainMembership",
+      "expected_subject": "Ajeno",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].parameter=\"Ajeno\".into();"
+    },
+    {
+      "id": "L10_captura_tipo",
+      "expected_kind": "ObjectType",
+      "expected_subject": "C1",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].capture.object=\"C1\".into();"
+    },
+    {
+      "id": "L10_captura_ajena",
+      "expected_kind": "DomainMembership",
+      "expected_subject": "CapFuera",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].capture.object=\"CapFuera\".into();"
+    },
+    {
+      "id": "L10_admision_tipo",
+      "expected_kind": "ObjectType",
+      "expected_subject": "C1",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].admission.object=\"C1\".into();"
+    },
+    {
+      "id": "L10_admision_ajena",
+      "expected_kind": "DomainMembership",
+      "expected_subject": "AdmFuera",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].admission.object=\"AdmFuera\".into();"
+    },
+    {
+      "id": "L11_numeral_captura",
+      "expected_kind": "ParameterIdentity",
+      "expected_subject": "Cap2",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].capture.object=\"Cap2\".into();"
+    },
+    {
+      "id": "L11_numeral_admision",
+      "expected_kind": "ParameterIdentity",
+      "expected_subject": "Adm2",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].admission.object=\"Adm2\".into();"
+    },
+    {
+      "id": "L12_regla",
+      "expected_kind": "RuleIdentity",
+      "expected_subject": "Cap",
+      "contract_hash_recalculated": true,
+      "condition": "let mut a=c.artifacts[2].clone(); a.reference.identifier=\"OtraPhi\".into(); c.instances[0].capture.definition=a.reference.clone(); c.artifacts.push(a);"
+    },
+    {
+      "id": "L13_ternarizador_ajeno",
+      "expected_kind": "DomainMembership",
+      "expected_subject": "TerFuera",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].ternarizer.as_mut().unwrap().object=\"TerFuera\".into();"
+    },
+    {
+      "id": "L13_espacio",
+      "expected_kind": "ObservationSpace",
+      "expected_subject": "Ter2",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].ternarizer.as_mut().unwrap().object=\"Ter2\".into();"
+    },
+    {
+      "id": "L14_procedencia",
+      "expected_kind": "ProvenanceMissing",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.instances[0].provenance.clear();"
+    },
+    {
+      "id": "L15_operacion",
+      "expected_kind": "OperationIdentity",
+      "expected_subject": "Otra",
+      "contract_hash_recalculated": true,
+      "condition": "q.operation=\"Otra\".into();"
+    },
+    {
+      "id": "L15_version_operacion",
+      "expected_kind": "OperationIdentity",
+      "expected_subject": "OP",
+      "contract_hash_recalculated": true,
+      "condition": "q.operation_version=\"2\".into();"
+    },
+    {
+      "id": "L16_instancia_ausente",
+      "expected_kind": "InstanceMissing",
+      "expected_subject": "I0",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].instance=\"I0\".into();"
+    },
+    {
+      "id": "L17_destino_ausente",
+      "expected_kind": "DestinationMissing",
+      "expected_subject": "U1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination=None;"
+    },
+    {
+      "id": "L18_destino_tipo",
+      "expected_kind": "ObjectType",
+      "expected_subject": "C1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().node=\"C1\".into();"
+    },
+    {
+      "id": "L18_destino_ausente",
+      "expected_kind": "MissingReference",
+      "expected_subject": "C0",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().node=\"C0\".into();"
+    },
+    {
+      "id": "L18_nodo_ajeno",
+      "expected_kind": "NodeMembership",
+      "expected_subject": "CCFuera",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().node=\"CCFuera\".into();"
+    },
+    {
+      "id": "L19_cero",
+      "expected_kind": "PositionRange",
+      "expected_subject": "U1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().position=n(0);"
+    },
+    {
+      "id": "L19_diez",
+      "expected_kind": "PositionRange",
+      "expected_subject": "U1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().position=n(10);"
+    },
+    {
+      "id": "L19_nat_grande",
+      "expected_kind": "PositionRange",
+      "expected_subject": "U1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[0].destination.as_mut().unwrap().position=Nat::from_decimal(\"184467440737095516160\").unwrap();"
+    },
+    {
+      "id": "L20_colision",
+      "expected_kind": "DestinationCollision",
+      "expected_subject": "U2",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[1].destination=c.operations[0].uses[0].destination.clone();"
+    },
+    {
+      "id": "L21_comparticion_ausente",
+      "expected_kind": "Sharing",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].sharing.clear();"
+    },
+    {
+      "id": "L22_alias_posterior",
+      "expected_kind": "Alias",
+      "expected_subject": "U2",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses.swap(0,1);"
+    },
+    {
+      "id": "L22_alias_instancia",
+      "expected_kind": "Alias",
+      "expected_subject": "U2",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[1].instance=\"I2\".into();"
+    },
+    {
+      "id": "L22_alias_destino",
+      "expected_kind": "Alias",
+      "expected_subject": "U2",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[1].destination.as_mut().unwrap().position=n(4);"
+    },
+    {
+      "id": "L23_comparticion_incompleta",
+      "expected_kind": "Sharing",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].sharing[0].use_ids.pop();"
+    },
+    {
+      "id": "L23_comparticion_orden",
+      "expected_kind": "Sharing",
+      "expected_subject": "I1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].sharing[0].use_ids.swap(0,1);"
+    },
+    {
+      "id": "L24_lateral_oculta",
+      "expected_kind": "SideInformation",
+      "expected_subject": "OP",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].side_information=vec![reference(&c,\"Lateral\")];"
+    },
+    {
+      "id": "L24_lateral_ausente",
+      "expected_kind": "SideInformation",
+      "expected_subject": "OP",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].side_information.clear();"
+    },
+    {
+      "id": "L00_esquema",
+      "expected_kind": "Schema",
+      "expected_subject": "LIG/otro",
+      "contract_hash_recalculated": true,
+      "condition": "c.schema=\"LIG/otro\".into();"
+    },
+    {
+      "id": "L00_identidad_vacia",
+      "expected_kind": "InvalidIdentity",
+      "expected_subject": "",
+      "contract_hash_recalculated": true,
+      "condition": "c.identifier.clear();"
+    },
+    {
+      "id": "L00_uso_duplicado",
+      "expected_kind": "DuplicateIdentity",
+      "expected_subject": "U1",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations[0].uses[1].identifier=\"U1\".into();"
+    },
+    {
+      "id": "L00_operacion_duplicada",
+      "expected_kind": "DuplicateIdentity",
+      "expected_subject": "OP",
+      "contract_hash_recalculated": true,
+      "condition": "c.operations.push(c.operations[0].clone());"
+    }
+  ]
+}

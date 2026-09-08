@@ -208,3 +208,10 @@ DFL-011 (español), DFL-012 (nombre `cell_ref`) y DFL-013 (independencia) conser
 **Concordancia de `ArchitectureView` (DFL-003/DFL-001):** la variante material recibe arquitectura, especificaciones celulares, evaluaciones y compuertas; el antecedente IR 0.2 enumera arquitectura, evaluaciones, compuertas y supervisiones. RETP-097 comprueba pertenencia sobre la forma material y conserva esta diferencia como no reconciliada. No se ofrece la comprobación como semántica N4 completa ni se cambia la firma por inferencia.
 
 **Verificación de la candidata RETP-097:** `abe5e544730f76f3052c9afd809446746df34c03` supera R0 Rust, conformidad, R0-8 y paridad nativa/WASI/navegador (ejecuciones y artefactos en el maestro). Once pruebas de contexto y controles de reparación puntual; corpus 14+106; 24/24 mutaciones dirigidas detectadas. H06/H07 quedan comprobadas sólo en la relación estructural descrita, dentro de PR #79, no promovida. Las obligaciones de DFL-005 y de N3/N4 no materializadas mantienen su estado abierto.
+
+
+## Sucesión candidata RETP-098 · LIG/0.1
+
+DFL-005 recibe una realización en `sv_core::bindings` del [contrato material previo](../arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md): identidad de programa y contrato, instancia, propietario, parámetro, referencias tipadas de captura/admisión, destino, usos ordenados, alias y compartición explícitos, procedencia y alcance con información lateral. La operación concreta se solicita por identidad y versión exactas. La candidata está pendiente de ejecutar sus comprobaciones y no se presenta como capacidad integrada.
+
+**La deuda permanece abierta:** LIG/0.1 comprueba representación y referentes, no significado clínico ni autoridad de sus artefactos; no ejecuta transducción, Q0 ni recuperación de respuestas por F. Faltan la resolución final de las pérdidas del retorno y la candidata completa de fila 7. Las operaciones dependientes que no satisfagan esos contratos siguen fuera de capacidad. H06/H07 conservan el alcance candidato PR #79, sin atribuirles promoción. DFL-011/012/013 permanecen intactas en identidad y sede.
