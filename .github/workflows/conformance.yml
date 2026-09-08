@@ -2,7 +2,7 @@ name: Conformidad SVP
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "fila7-*"]
 
 permissions:
   contents: read
@@ -30,6 +30,13 @@ jobs:
           node --version
           node --test tests/f_if/sensitivity.mjs
           node tests/f_if/run.mjs
+
+      - name: Verificar inventario y entradas recibidas G/H
+        run: |
+          rustc --edition=2021 tests/row7_gh/generar_entradas.rs -o rust/target/gh-generate
+          rust/target/gh-generate --check
+          node --test tests/row7_gh/documentary_json.test.mjs
+          node tests/row7_gh/verificar.mjs --inventario
 
       - name: Verificar contratos de la CLI y testigos SEC-0B
         run: |

@@ -2,8 +2,11 @@ name: R0 Rust
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, "fila7-*"]
     paths:
+      - "tests/row7_bindings/**"
+      - "tests/row7_gh/**"
+      - "tests/row7_candidate/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
@@ -34,6 +37,34 @@ jobs:
           rustup target add wasm32-unknown-unknown
           rustc --version
           cargo --version
+
+      - name: Verificar codificación contra el testigo independiente
+        run: node tests/row7_gh/contract_hash.mjs --referencia
+
+      - name: Probar lectores documentales independientes y preparación Rust
+        run: |
+          mkdir -p rust/target
+          rustc --edition=2021 --test tests/row7_gh/generar_entradas.rs -o rust/target/gh-input-tests
+          rust/target/gh-input-tests
+          node --test tests/row7_gh/documentary_json.test.mjs
+
+      - name: Contrastar transporte documental G/H sobre LIG/0.1
+        run: |
+          rustc --edition=2021 tests/row7_gh/generar_entradas.rs -o rust/target/gh-generate
+          rust/target/gh-generate --check
+          mkdir -p artifacts/gh-lig
+          cargo run --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe > artifacts/gh-lig/native.json
+          node tests/row7_gh/verificar.mjs artifacts/gh-lig/native.json --autoprueba > artifacts/gh-lig/verification.json
+          cat artifacts/gh-lig/verification.json
+
+      - name: Preservar contraste documental G/H
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gh-lig-documental
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/gh-lig/
 
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace

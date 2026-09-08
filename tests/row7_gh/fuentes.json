@@ -1,0 +1,33 @@
+{
+  "schema": "GH-FUENTES-RECIBIDAS/1",
+  "repository": "juantoniolloretegea/SVperitus-dataset",
+  "commit": "54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9",
+  "path": "dominios/inmunologia/marco-tecnico-de-universos-subdominios-y-modulos/01-op-imm-001-informacion-preinmunosupresion-adultos/retorno-gh-2026-09-07",
+  "originals": [
+    {
+      "name": "testigos.json",
+      "bytes": 31168,
+      "sha256": "037944fe4ca28524d7e89403d08e881462f7ec349c21e7d9127ccf4c7c7b1f62",
+      "git_blob": "0427d76392db4572bd336a6467f51cf954fcfd8f"
+    },
+    {
+      "name": "contraste.json",
+      "bytes": 362169,
+      "sha256": "7b7865985f5b96cc98aeb4d02430a8a480513c4ce229aaffda48589ee3481b39",
+      "git_blob": "6ca5f9c2448b4d77498c1204ee24431ce745cf42"
+    }
+  ],
+  "published": [
+    {
+      "name": "testigos-gh.json",
+      "bytes": 31168,
+      "sha256": "037944fe4ca28524d7e89403d08e881462f7ec349c21e7d9127ccf4c7c7b1f62"
+    },
+    {
+      "name": "inventario-gh.json",
+      "bytes": 65183,
+      "sha256": "fad302dc94331f5c4245c0a87c7b47765ee344abb0cd8d56d718d238a7fb2ee6"
+    }
+  ],
+  "extraction": "inventario-gh.json conserva sin reformular los campos seleccionados de contraste.json; no sustituye las 44 fuentes primarias ni declara reverificarlas."
+}

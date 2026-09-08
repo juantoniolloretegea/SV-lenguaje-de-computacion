@@ -1,0 +1,79 @@
+name: Fila 7 fuentes y ejecución sin intérpretes
+
+on:
+  pull_request:
+    branches: [main, "fila7-*"]
+
+permissions:
+  contents: read
+
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  construccion-aislada:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener la cabeza exacta de la candidata
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Fijar herramienta Rust de referencia
+        run: |
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          rustc --version
+          cargo --version
+
+      - name: Preparar paquete determinista y atacar su inventario
+        run: |
+          mkdir -p artifacts/fila7
+          cut=$(git rev-parse HEAD)
+          test "$cut" = '${{ github.event.pull_request.head.sha }}'
+          bash tests/row7_candidate/empaquetar.sh "$cut" artifacts/fila7/paquete
+          bash tests/row7_candidate/empaquetar.sh "$cut" artifacts/fila7/repeticion
+          cmp artifacts/fila7/paquete/fila7-fuentes.tar.gz artifacts/fila7/repeticion/fila7-fuentes.tar.gz
+          bash tests/row7_candidate/autoprueba_paquete.sh artifacts/fila7/paquete/fuentes | tee artifacts/fila7/controles-paquete.txt
+          bash tests/row7_candidate/autoprueba_permisos.sh "$cut" | tee artifacts/fila7/controles-permisos.txt
+
+      - name: Preparar entorno Ubuntu identificado sin intérpretes
+        run: |
+          docker pull ubuntu:24.04
+          base_image=$(docker image inspect ubuntu:24.04 --format '{{index .RepoDigests 0}}')
+          printf '%s\n' "$base_image" > artifacts/fila7/imagen-base.txt
+          docker build --build-arg BASE_IMAGE="$base_image" -t sv-fila7-sin-interpretes tests/row7_candidate
+          docker image inspect sv-fila7-sin-interpretes > artifacts/fila7/imagen-ejecutada.json
+
+      - name: Construir y probar sin red ni intérpretes
+        run: |
+          toolchain=$(dirname "$(dirname "$(rustup which --toolchain 1.98.0 rustc)")")
+          mkdir -p artifacts/fila7/ejecucion
+          docker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --read-only --tmpfs /tmp:rw,nosuid,size=128m \
+            --user "$(id -u):$(id -g)" \
+            -v "$toolchain:/opt/rust:ro" \
+            -v "$PWD/artifacts/fila7/paquete/fuentes:/work:rw" \
+            -v "$PWD/artifacts/fila7/ejecucion:/out:rw" \
+            -v "$PWD/tests/row7_candidate/ejecutar_aislado.sh:/ejecutar.sh:ro" \
+            sv-fila7-sin-interpretes /bin/bash /ejecutar.sh 2>&1 | tee artifacts/fila7/ejecucion.log
+
+      - name: Contrastar externamente el informe del entorno aislado
+        run: |
+          node tests/row7_gh/verificar.mjs artifacts/fila7/ejecucion/gh.json --autoprueba > artifacts/fila7/verificacion-externa.json
+          cat artifacts/fila7/verificacion-externa.json
+          cat artifacts/fila7/paquete/fila7-fuentes.tar.gz.sha256
+
+      - name: Preservar paquete y evidencia sin cachés de construcción
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fila7-candidata-sin-interpretes
+          if-no-files-found: error
+          retention-days: 90
+          path: |
+            artifacts/fila7/*.txt
+            artifacts/fila7/*.json
+            artifacts/fila7/*.log
+            artifacts/fila7/paquete/fila7-fuentes.tar.gz*
+            artifacts/fila7/ejecucion/

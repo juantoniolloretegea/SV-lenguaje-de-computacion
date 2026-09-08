@@ -120,6 +120,12 @@ RUST_REJECTION_TOKENS.update(
     {Path(name).stem: token for name, token in ROW7_REJECTION_TOKENS.items()}
 )
 
+# RETP-097: esperados fijados por J4.2/J5.1 y el contrato de fila 7.
+import json
+_CONTEXT_CASES = json.loads((Path(__file__).parent / "row7_context" / "testigos.json").read_text(encoding="utf-8"))["cases"]
+EXPECTED_OBLIGATIONS.update({case["id"] + ".svp": case["obligation"] for case in _CONTEXT_CASES})
+RUST_REJECTION_TOKENS.update({case["id"]: case["expected"] for case in _CONTEXT_CASES})
+
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"
 INVALID_DIR = ROOT / "tests" / "conformance" / "invalid"

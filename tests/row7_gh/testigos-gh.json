@@ -1,0 +1,864 @@
+{
+  "schema": "TESTIGOS-GH/1",
+  "scope": "Ocho pares documentales externos; no son pacientes, estados celulares ni testigos clínicos admisibles de Q0.",
+  "authority": "Etiquetas SYN/sintéticas son datos artificiales sin autoridad clínica. Oráculos literales predeclarados; el observador no interpreta clínica.",
+  "witnesses": [
+    {
+      "id": "GH-DOC-01",
+      "title": "Unidad, método y referencia de IgG/ANC",
+      "parameters": [
+        "PAR-IGG-DEF-Q-001",
+        "PAR-ANC-DEF-Q-001"
+      ],
+      "sources": [
+        "IMM-CLIN",
+        "IMM-G5-10"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-012"
+      ],
+      "operation": {
+        "id": "GH-DOC-01-RECUPERAR",
+        "paths": [
+          "detail.unidad",
+          "detail.metodo",
+          "detail.referencia"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-01",
+              "common": {
+                "dato": "cantidad-sintetica-7",
+                "informe": "informe-sintetico"
+              },
+              "detail": {
+                "unidad": "unidad-A",
+                "metodo": "metodo-A",
+                "referencia": "referencia-A"
+              }
+            },
+            "expected": [
+              "unidad-A",
+              "metodo-A",
+              "referencia-A"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-01",
+              "common": {
+                "dato": "cantidad-sintetica-7",
+                "informe": "informe-sintetico"
+              },
+              "detail": {
+                "unidad": "unidad-B",
+                "metodo": "metodo-B",
+                "referencia": "referencia-B"
+              }
+            },
+            "expected": [
+              "unidad-B",
+              "metodo-B",
+              "referencia-B"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-01"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "No permite tratar un mismo texto numérico como observación suficiente; no se compara ningún valor con un intervalo clínico."
+    },
+    {
+      "id": "GH-DOC-02",
+      "title": "Atribución profesional frente a mera coincidencia",
+      "parameters": [
+        "PAR-INF-HOSP-HIST-001",
+        "PAR-INF-ORGSUP-HIST-001"
+      ],
+      "sources": [
+        "IMM-CORR2"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-012"
+      ],
+      "operation": {
+        "id": "GH-DOC-02-RECUPERAR",
+        "paths": [
+          "detail.relacion"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-02",
+              "common": {
+                "episodio": "episodio-sintetico",
+                "ingreso": "ingreso-sintetico",
+                "tiempo": "t0"
+              },
+              "detail": {
+                "relacion": "ATRIBUCION_DOCUMENTAL",
+                "emisor": "autor-sintetico-A"
+              }
+            },
+            "expected": [
+              "ATRIBUCION_DOCUMENTAL"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-02",
+              "common": {
+                "episodio": "episodio-sintetico",
+                "ingreso": "ingreso-sintetico",
+                "tiempo": "t0"
+              },
+              "detail": {
+                "relacion": "COINCIDENCIA_SIN_ATRIBUCION",
+                "emisor": "autor-sintetico-A"
+              }
+            },
+            "expected": [
+              "COINCIDENCIA_SIN_ATRIBUCION"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-02"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "Conservar el enlace adjudicado no diagnostica causalidad. Suprimirlo hace imposible consultar qué relación consta."
+    },
+    {
+      "id": "GH-DOC-03",
+      "title": "Estado de la propuesta, distinto de administración",
+      "parameters": [
+        "PAR-IMMUNO-START-PLAN-DOC-001",
+        "PAR-GC-PLAN-SYS-001"
+      ],
+      "sources": [
+        "IMM-CLIN",
+        "IMM-G5-GC"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-013"
+      ],
+      "operation": {
+        "id": "GH-DOC-03-RECUPERAR",
+        "paths": [
+          "detail.estado",
+          "detail.revision"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-03",
+              "common": {
+                "propuesta": "propuesta-sintetica",
+                "agente": "agente-sintetico",
+                "administracion": "NO_AFIRMADA"
+              },
+              "detail": {
+                "estado": "PROPUESTA_VIGENTE",
+                "revision": "revision-A"
+              }
+            },
+            "expected": [
+              "PROPUESTA_VIGENTE",
+              "revision-A"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-03",
+              "common": {
+                "propuesta": "propuesta-sintetica",
+                "agente": "agente-sintetico",
+                "administracion": "NO_AFIRMADA"
+              },
+              "detail": {
+                "estado": "PROPUESTA_RETIRADA",
+                "revision": "revision-B"
+              }
+            },
+            "expected": [
+              "PROPUESTA_RETIRADA",
+              "revision-B"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-03"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "Recupera la vigencia documental; no aplica pauta, suspensión ni infiere administración."
+    },
+    {
+      "id": "GH-DOC-04",
+      "title": "Adjudicación de una indeterminación, separada del valor",
+      "parameters": [
+        "PAR-IGG-DEF-Q-001"
+      ],
+      "sources": [
+        "IMM-G7",
+        "IMM-TECH"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-008",
+        "REQ-IMM-SV-010"
+      ],
+      "operation": {
+        "id": "GH-DOC-04-RECUPERAR",
+        "paths": [
+          "detail.acto",
+          "detail.autor",
+          "detail.motivo"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-04",
+              "common": {
+                "parametro": "PAR-IGG-DEF-Q-001",
+                "valor_documentado": "U",
+                "episodio": "episodio-sintetico"
+              },
+              "detail": {
+                "acto": "SIN_ADJUDICACION",
+                "autor": "NO_CONSTA",
+                "motivo": "NO_CONSTA"
+              }
+            },
+            "expected": [
+              "SIN_ADJUDICACION",
+              "NO_CONSTA",
+              "NO_CONSTA"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-04",
+              "common": {
+                "parametro": "PAR-IGG-DEF-Q-001",
+                "valor_documentado": "U",
+                "episodio": "episodio-sintetico"
+              },
+              "detail": {
+                "acto": "NO_CRITICA_ADJUDICADA",
+                "autor": "autor-sintetico",
+                "motivo": "motivo-sintetico-limitado"
+              }
+            },
+            "expected": [
+              "NO_CRITICA_ADJUDICADA",
+              "autor-sintetico",
+              "motivo-sintetico-limitado"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-04"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "Recupera qué se escribió; las etiquetas sintéticas no prueban legitimidad clínica ni autentican al autor. No calcula criticidad."
+    },
+    {
+      "id": "GH-DOC-05",
+      "title": "Antecedente y enmienda frente a vista actual",
+      "parameters": [
+        "PAR-DM-DOC-ACTIVE-001"
+      ],
+      "sources": [
+        "IMM-TECH",
+        "IMM-CORR2"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-012"
+      ],
+      "operation": {
+        "id": "GH-DOC-05-RECUPERAR",
+        "paths": [
+          "detail.antecedente",
+          "detail.enmienda"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-05",
+              "common": {
+                "vista": "documento-actual-sintetico",
+                "fecha_indice": "t0"
+              },
+              "detail": {
+                "antecedente": "fuente-anterior-A",
+                "enmienda": "correccion-A",
+                "orden": [
+                  "t-2",
+                  "t-1",
+                  "t0"
+                ]
+              }
+            },
+            "expected": [
+              "fuente-anterior-A",
+              "correccion-A"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-05",
+              "common": {
+                "vista": "documento-actual-sintetico",
+                "fecha_indice": "t0"
+              },
+              "detail": {
+                "antecedente": "fuente-anterior-B",
+                "enmienda": "correccion-B",
+                "orden": [
+                  "t-2",
+                  "t-1",
+                  "t0"
+                ]
+              }
+            },
+            "expected": [
+              "fuente-anterior-B",
+              "correccion-B"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-05"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "La vista actual idéntica no permite recuperar historia causal/documental diferente. No acredita persistencia autoritativa."
+    },
+    {
+      "id": "GH-DOC-06",
+      "title": "Indeterminación clínica documentada frente a configuración no constituida",
+      "parameters": [
+        "PAR-MALNUTRITION-ASSESS-POS-001"
+      ],
+      "sources": [
+        "IMM-TECH",
+        "LSV-F"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-006",
+        "REQ-IMM-SV-007"
+      ],
+      "operation": {
+        "id": "GH-DOC-06-RECUPERAR",
+        "paths": [
+          "detail.categoria",
+          "detail.salida_clinica_documentada"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-06",
+              "common": {
+                "pantalla": "SIN_DATO_RESUMIDO",
+                "objeto": "evaluacion-sintetica"
+              },
+              "detail": {
+                "categoria": "OBSERVACION_ADMITIDA_CON_U_DOCUMENTADA",
+                "regla": "regla-sintetica-identificada",
+                "salida_clinica_documentada": "U"
+              }
+            },
+            "expected": [
+              "OBSERVACION_ADMITIDA_CON_U_DOCUMENTADA",
+              "U"
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-06",
+              "common": {
+                "pantalla": "SIN_DATO_RESUMIDO",
+                "objeto": "evaluacion-sintetica"
+              },
+              "detail": {
+                "categoria": "CONFIGURACION_AUSENTE",
+                "regla": "NO_CONSTITUIDA",
+                "salida_clinica_documentada": "NINGUNA"
+              }
+            },
+            "expected": [
+              "CONFIGURACION_AUSENTE",
+              "NINGUNA"
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-06"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "El banco recupera etiquetas exógenas, no ejecuta esa regla ni habilita nutrición; el registro admisible de OP continúa vacío."
+    },
+    {
+      "id": "GH-DOC-07",
+      "title": "Ligadura parámetro-observable pese a igual inventario",
+      "parameters": [
+        "PAR-IGG-DEF-Q-001",
+        "PAR-ANC-DEF-Q-001"
+      ],
+      "sources": [
+        "IMM-G6",
+        "LSV-F"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-001",
+        "REQ-IMM-SV-011",
+        "REQ-IMM-SV-012"
+      ],
+      "operation": {
+        "id": "GH-DOC-07-RECUPERAR",
+        "paths": [
+          "detail.ligaduras"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-07",
+              "common": {
+                "ids": [
+                  "PAR-IGG-DEF-Q-001",
+                  "PAR-ANC-DEF-Q-001"
+                ],
+                "miembros": 2
+              },
+              "detail": {
+                "ligaduras": [
+                  [
+                    "PAR-IGG-DEF-Q-001",
+                    "doc-IgG"
+                  ],
+                  [
+                    "PAR-ANC-DEF-Q-001",
+                    "doc-ANC"
+                  ]
+                ]
+              }
+            },
+            "expected": [
+              [
+                [
+                  "PAR-IGG-DEF-Q-001",
+                  "doc-IgG"
+                ],
+                [
+                  "PAR-ANC-DEF-Q-001",
+                  "doc-ANC"
+                ]
+              ]
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-07",
+              "common": {
+                "ids": [
+                  "PAR-IGG-DEF-Q-001",
+                  "PAR-ANC-DEF-Q-001"
+                ],
+                "miembros": 2
+              },
+              "detail": {
+                "ligaduras": [
+                  [
+                    "PAR-IGG-DEF-Q-001",
+                    "doc-ANC"
+                  ],
+                  [
+                    "PAR-ANC-DEF-Q-001",
+                    "doc-IgG"
+                  ]
+                ]
+              }
+            },
+            "expected": [
+              [
+                [
+                  "PAR-IGG-DEF-Q-001",
+                  "doc-ANC"
+                ],
+                [
+                  "PAR-ANC-DEF-Q-001",
+                  "doc-IgG"
+                ]
+              ]
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-07"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "Ambas son cadenas documentales realizables; la segunda es una sonda de error, no una ligadura clínicamente admisible. El teorema de pérdida es documental, no clínico. Dos registros no son una célula."
+    },
+    {
+      "id": "GH-DOC-08",
+      "title": "Ventana y pertenencia de sus extremos",
+      "parameters": [
+        "PAR-ACUTECARE-ENC-HIST-001",
+        "PAR-INV-PROC-HIST-001"
+      ],
+      "sources": [
+        "IMM-CORR2",
+        "IMM-G5-20"
+      ],
+      "requirements": [
+        "REQ-IMM-SV-005",
+        "REQ-IMM-SV-013"
+      ],
+      "operation": {
+        "id": "GH-DOC-08-RECUPERAR",
+        "paths": [
+          "detail.ventana",
+          "detail.incluye_extremo_final"
+        ],
+        "meaning": "Recuperación literal del dato documental indicado, sin interpretación clínica"
+      },
+      "domain": {
+        "definition": "Exactamente los dos paquetes x e y enumerados. Todas sus combinaciones documentales son construibles por copia literal; no se afirma pertenencia a X_Q0 clínico.",
+        "states": [
+          {
+            "id": "x",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-08",
+              "common": {
+                "evento": "evento-sintetico",
+                "instante": "t0",
+                "intervalo": [
+                  "t-1",
+                  "t0"
+                ]
+              },
+              "detail": {
+                "ventana": "ventana-A",
+                "incluye_extremo_final": true
+              }
+            },
+            "expected": [
+              "ventana-A",
+              true
+            ]
+          },
+          {
+            "id": "y",
+            "packet": {
+              "schema": "GH-DOC/1",
+              "context": "GH-DOC-08",
+              "common": {
+                "evento": "evento-sintetico",
+                "instante": "t0",
+                "intervalo": [
+                  "t-1",
+                  "t0"
+                ]
+              },
+              "detail": {
+                "ventana": "ventana-B",
+                "incluye_extremo_final": false
+              }
+            },
+            "expected": [
+              "ventana-B",
+              false
+            ]
+          }
+        ]
+      },
+      "representations": {
+        "F0": "Identidad del paquete",
+        "F1": "Eliminar únicamente detail; conserva schema/context/common y su orden",
+        "H": "encode JSON compacto UTF-8 del observador F-IF recibido",
+        "equality": "Igualdad de bytes, sin transformación silenciosa"
+      },
+      "control": {
+        "operation": {
+          "paths": [
+            "context"
+          ]
+        },
+        "expected": [
+          "GH-DOC-08"
+        ],
+        "meaning": "Consulta que sigue siendo recuperable tras la pérdida; refuta exigir ausencia absoluta de reducción."
+      },
+      "limit": "Conserva el operando temporal; no fija una ventana sanitaria, ni decide exposición clínica."
+    }
+  ],
+  "specified": [
+    {
+      "id": "SP-01",
+      "title": "Identidad y referentes completos",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Identidad completa única, todas las fuentes/reglas/entradas resolubles en la realización OP.",
+      "negative": "Cambiar hash, versión o referente; ausencia de manifiesto; la ejecución no produce salida clínica.",
+      "owner": "DFL-005; interfaz/motor",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-02",
+      "title": "Instancias, propiedad y composición",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Resolver cada ID a captura y a (C,j) si se constituye; orden de uso, régimen de compartición y μ_C explícitos.",
+      "negative": "Mismos 27 nombres con ligaduras permutadas; numerales homónimos; owner duplicado; nueve miembros sin célula. No aceptar por conteo.",
+      "owner": "DFL-005; REQ-IMM-SV-011",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-03",
+      "title": "Admisibilidad y transducción",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Partición total/disjunta B0/B1/BU sobre observaciones admitidas, con fuente, bordes y significado clínico constituido.",
+      "negative": "Bottom, NotAdmitted, configuración ausente, datos fuera de población o fuente no admitida: ningún Tri por defecto.",
+      "owner": "K1-T; configuración de dominio",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-04",
+      "title": "Consecuencia y criticidad",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Cadena parámetro-uso-consecuencia-regla-contexto-autoridad con productor legítimo y testigo clínico realizable.",
+      "negative": "Cambiar contexto o autoridad; misma etiqueta de parámetro no decide criticidad; firma humana no subsana fallo.",
+      "owner": "DFL-006; dominio/autoridad",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-05",
+      "title": "Resumen reversible por operación",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Recuperar las dependencias de cada consulta OP a partir de H; o de (H,S) declarada y disponible.",
+      "negative": "Igual H con diferente fuente, U, veto, versión, orden o atribución que OP requiera. No recuperar con acceso lateral oculto.",
+      "owner": "DFL-005; FFL-E; interfaz",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-06",
+      "title": "Orden y no compensación",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Validar alcance, control, autoridad y vetos antes del resumen; una condición favorable no cancela otra material.",
+      "negative": "Invertir orden o introducir promedio/mayoría; error antes de proyección: no perfil parcial utilizable.",
+      "owner": "REQ-IMM-SV-002/009; Lenguaje/motor",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-07",
+      "title": "Cuatro salidas exclusivas",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Con premisas ya adjudicadas y técnicamente válidas, aplicar exactamente la tabla total del contrato candidato.",
+      "negative": "Dos salidas, quinta salida clínica, sellado sin acto humano o inclusión de fallo técnico en Y_OP.",
+      "owner": "REQ-IMM-SV-014; Lenguaje",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-08",
+      "title": "Reproducción exacta de OP",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Misma tupla completa en realización identificada, salida y traza canónicas byte a byte en ejecución independiente y nativo/WASM pertinentes.",
+      "negative": "Orden de mapas, locale, reloj vivo, decimal redondeado o distinta dependencia cambian salida sin nueva identidad: rechazar.",
+      "owner": "REQ-IMM-SV-015; Lenguaje/motor",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-09",
+      "title": "Fallo técnico separado",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Registro técnico tipado identifica fase, componente, versión y evidencia; ninguna salida clínica asociada a ejecución fallida.",
+      "negative": "Cortar captura, verificación, evaluación o serialización; impedir 0/1/U, abstención clínica o perfil parcial por sustitución.",
+      "owner": "REQ-IMM-SV-007; Lenguaje/motor",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-10",
+      "title": "Autoridad, revocación y sucesión",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Acto humano nuevo enlazado a antecedente, con alcance y legitimidad verificados en la misma identidad.",
+      "negative": "Nombre sin acreditación, delegación vencida, revocación o modificación del antecedente.",
+      "owner": "R1 integrado; institución/motor",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-11",
+      "title": "Materialidad y obligaciones externas",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Plan de pruebas por soporte: efecto verificado/confirmado, durabilidad, restauración, permisos y cadena de construcción según PT aplicables.",
+      "negative": "Caída, corrupción, retroceso, efecto incierto, datos sustituidos y dependencia no autorizada; pruebas materiales en sede competente.",
+      "owner": "R2/R3/R4; DFL-009 en fila 9; contrato operacional fila 13",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    },
+    {
+      "id": "SP-12",
+      "title": "Perímetro y relevo",
+      "status": "SOLO_ESPECIFICADO_NO_EJECUTADO",
+      "positive": "Consumos limitados a Q0 v0; DICOM/citometría/médula no adoptados; Lenguaje recibe fila 7 y IMM se pausa.",
+      "negative": "Importar una familia por nombre, inferir conformidad clínica de CI o abrir otro universo/fase.",
+      "owner": "Recepción §8; Director y sedes competentes",
+      "absence": "No se dispone de una realización clínica Q0 admisible que permita ejecutar este oráculo completo. Las partes documentales ensayadas se identifican por separado."
+    }
+  ]
+}

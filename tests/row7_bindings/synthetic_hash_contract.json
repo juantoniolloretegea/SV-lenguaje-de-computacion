@@ -1,0 +1,235 @@
+{
+  "schema": "LIG/0.1",
+  "identifier": "ContratoD",
+  "version": "1",
+  "program": {
+    "source_file": "identidad-fija.svp",
+    "source_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "projection_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "domain": "D",
+  "agent": "AG",
+  "constitution": {
+    "identifier": "ConstitucionD",
+    "version": "1",
+    "sha256": "638faf3dbe456f21617e74ed47958760fc859618acaae15b1e05b64aebb05655"
+  },
+  "authority": {
+    "identifier": "AutorD",
+    "version": "1",
+    "sha256": "36375a3111fef5161645ac4b1e4ec10518f5901a1b4fdf265e84fc2b323ba78a"
+  },
+  "instances": [
+    {
+      "identifier": "I1",
+      "owner": "D",
+      "parameter": "P",
+      "parameter_id": "1",
+      "capture": {
+        "object": "Cap",
+        "definition": {
+          "identifier": "Phi",
+          "version": "1",
+          "sha256": "3dbd76838d7adbfc6ac3956bbf9198cfbd231c8753402d68289b521b488bdea2"
+        }
+      },
+      "admission": {
+        "object": "Adm",
+        "definition": {
+          "identifier": "Regla",
+          "version": "1",
+          "sha256": "6cfa1cfae98953b6a764d66cab0454ae311dc28e3ab738318d399062801fc32e"
+        }
+      },
+      "ternarizer": {
+        "object": "Ter",
+        "definition": {
+          "identifier": "Tau",
+          "version": "1",
+          "sha256": "a133a1dd0956bed7ef931d0cd0825bd35c4a8dd2bc08e8cbc8db33cf28ddc0ec"
+        }
+      },
+      "provenance": [
+        {
+          "identifier": "FuenteP",
+          "version": "1",
+          "sha256": "3f51c53b0defd152aec0772af31c8d2a0f9a3479cb1304e8b74ccddba97b4cb9"
+        }
+      ]
+    },
+    {
+      "identifier": "I2",
+      "owner": "D",
+      "parameter": "P",
+      "parameter_id": "1",
+      "capture": {
+        "object": "Cap",
+        "definition": {
+          "identifier": "Phi",
+          "version": "1",
+          "sha256": "3dbd76838d7adbfc6ac3956bbf9198cfbd231c8753402d68289b521b488bdea2"
+        }
+      },
+      "admission": {
+        "object": "Adm",
+        "definition": {
+          "identifier": "Regla",
+          "version": "1",
+          "sha256": "6cfa1cfae98953b6a764d66cab0454ae311dc28e3ab738318d399062801fc32e"
+        }
+      },
+      "ternarizer": {
+        "object": "Ter",
+        "definition": {
+          "identifier": "Tau",
+          "version": "1",
+          "sha256": "a133a1dd0956bed7ef931d0cd0825bd35c4a8dd2bc08e8cbc8db33cf28ddc0ec"
+        }
+      },
+      "provenance": [
+        {
+          "identifier": "FuenteP",
+          "version": "1",
+          "sha256": "3f51c53b0defd152aec0772af31c8d2a0f9a3479cb1304e8b74ccddba97b4cb9"
+        }
+      ]
+    }
+  ],
+  "operations": [
+    {
+      "identifier": "OP",
+      "version": "1",
+      "definition": {
+        "identifier": "OP",
+        "version": "1",
+        "sha256": "e8e7648c6db782473bce6aa262e1a87f5f3162304f808dba45ec0d234e80a093"
+      },
+      "uses": [
+        {
+          "identifier": "U1",
+          "instance": "I1",
+          "destination": {
+            "node": "CC1",
+            "position": "3"
+          },
+          "alias_of": null
+        },
+        {
+          "identifier": "U2",
+          "instance": "I1",
+          "destination": {
+            "node": "CC1",
+            "position": "3"
+          },
+          "alias_of": "U1"
+        }
+      ],
+      "requires_destination": true,
+      "sharing": [
+        {
+          "instance": "I1",
+          "use_ids": [
+            "U1",
+            "U2"
+          ],
+          "rule": {
+            "identifier": "Compartir",
+            "version": "1",
+            "sha256": "49815cc59fd502f234f033c49be3676cab78b1ae54b35815ef7d61354aaa8390"
+          }
+        }
+      ],
+      "input_scope": "BindingsWithSideInformation",
+      "side_information": [
+        {
+          "identifier": "Lateral",
+          "version": "1",
+          "sha256": "2e0bf82239f13d035cf51a804267ac652683cbf54746dfb72113ae33103d459d"
+        }
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "reference": {
+        "identifier": "ConstitucionD",
+        "version": "1",
+        "sha256": "638faf3dbe456f21617e74ed47958760fc859618acaae15b1e05b64aebb05655"
+      },
+      "kind": "Constitution",
+      "text": "testigo declarativo ConstitucionD; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "AutorD",
+        "version": "1",
+        "sha256": "36375a3111fef5161645ac4b1e4ec10518f5901a1b4fdf265e84fc2b323ba78a"
+      },
+      "kind": "AuthorityDeclaration",
+      "text": "testigo declarativo AutorD; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "Phi",
+        "version": "1",
+        "sha256": "3dbd76838d7adbfc6ac3956bbf9198cfbd231c8753402d68289b521b488bdea2"
+      },
+      "kind": "CaptureDefinition",
+      "text": "testigo declarativo Phi; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "Regla",
+        "version": "1",
+        "sha256": "6cfa1cfae98953b6a764d66cab0454ae311dc28e3ab738318d399062801fc32e"
+      },
+      "kind": "AdmissionDefinition",
+      "text": "testigo declarativo Regla; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "Tau",
+        "version": "1",
+        "sha256": "a133a1dd0956bed7ef931d0cd0825bd35c4a8dd2bc08e8cbc8db33cf28ddc0ec"
+      },
+      "kind": "TernarizerDefinition",
+      "text": "testigo declarativo Tau; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "FuenteP",
+        "version": "1",
+        "sha256": "3f51c53b0defd152aec0772af31c8d2a0f9a3479cb1304e8b74ccddba97b4cb9"
+      },
+      "kind": "Provenance",
+      "text": "testigo declarativo FuenteP; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "Compartir",
+        "version": "1",
+        "sha256": "49815cc59fd502f234f033c49be3676cab78b1ae54b35815ef7d61354aaa8390"
+      },
+      "kind": "SharingRule",
+      "text": "testigo declarativo Compartir; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "OP",
+        "version": "1",
+        "sha256": "e8e7648c6db782473bce6aa262e1a87f5f3162304f808dba45ec0d234e80a093"
+      },
+      "kind": "OperationDefinition",
+      "text": "testigo declarativo OP; versión 1"
+    },
+    {
+      "reference": {
+        "identifier": "Lateral",
+        "version": "1",
+        "sha256": "2e0bf82239f13d035cf51a804267ac652683cbf54746dfb72113ae33103d459d"
+      },
+      "kind": "SideInformation",
+      "text": "testigo declarativo Lateral; versión 1"
+    }
+  ]
+}

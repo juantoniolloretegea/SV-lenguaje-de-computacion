@@ -1,4 +1,6 @@
 # Registro de evolución técnica del proyecto
+| RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
+| RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA |
 
 ## 1. Finalidad
 
@@ -520,7 +522,199 @@ Se han leído los registros de los trabajos y los metadatos de artefactos; sus h
 
 **Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`. La cola de evidencia actualiza únicamente los tres registros de Calidad y conserva el permiso ejecutable `100755` del comprobador de mutaciones, sin cambiar su contenido probado. La cabeza final conserva su propia comprobación en el expediente de PR #78. Se restablecerá la base `recepcion-gh-20260907` tras verificarla; la PR continúa dependiendo de #77. DFL-001 y fila 7 permanecen abiertas.
 
+<a id="retp-096"></a>
+
+### RETP-2026-096 — Integración secuencial de la recepción y del subcierre correctivo
+
+**Fecha:** 08/09/2026. **Estado:** `RECEPCION_Y_SUBCIERRE_INTEGRADOS_FILA_7_ABIERTA`.
+
+La autorización de continuación permite promover los objetos revisados, sin modificar el mandato del español ni declarar cerrado el frente actual. Se han leído AGENTS, Pilares, acta de perfiles, transición completa, F, devolución G/H y registros vigentes. La revisión distingue evidencia de candidata, árbol probado e integración.
+
+| Objeto | Cabeza comprobada | Integración en main | Árbol conservado |
+|---|---|---|---|
+| PR #77, recepción G/H y restitución literal | `1cbe4b9e6d9c484e540f1385109b38badc800c4f` | `5e0f2e1fb0861879ce9963b370f89dd8137e9388` | `717972e1abac4ab7ff388a2923d3cb04b3de4cf7` |
+| PR #78, H04/H05 locales y oráculos RETP-093…095 | `29984b41ce68813e90fb3dbc0ba47de9593b8561` | `1706099aef4a0e3846706c3963e7c76313adaf68` | `3f1858439745236530b6f19c6761055f8a8478a2` |
+
+La primera cabeza pasó [Conformidad SVP 34179902203](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34179902203). Antes de promover la segunda, se integró #77, se cambió la base de #78 a main y se creó una reconciliación de dos padres sin cambiar su árbol: la cabeza `29984b41…` conserva exactamente el árbol de `e5211264…`. No se presenta una comprobación antigua como ejecución nueva.
+
+| Comprobación renovada de #78 | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust, referencia y compatibilidad adicional | [34187196322](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196322) | Satisfactorio |
+| R0-8 Baseline nativa | [34187196355](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196355) | Satisfactorio |
+| Conformidad SVP | [34187196408](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196408) | Satisfactorio |
+| Paridad nativa/WASI/navegador | [34187196441](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34187196441) | Satisfactorio |
+
+Las cuatro ejecuciones identifican `29984b41…` como cabeza. Los trabajos nativo y navegador y sus pasos terminaron satisfactoriamente. GitHub confirma ambas fusiones y sus firmas verificadas; los árboles de integración coinciden con los examinados. El resultado no acredita una segunda realización semántica ni la causalidad exhaustiva del corpus.
+
+La restauración del español conserva el acta, blob `89be13febe50f2893e738471ab246e1ac33b45a7`, y RETP-092 CSV, blob `fe737cbe3a61e670ad1365b6d3cd1796e96e2a06`. DFL-011 conserva su identidad y su revisión integral final. Ningún README, acta histórica o repositorio de dominio se ha modificado.
+
+**Sucesión de estado:** RETP-091…095 conservan las afirmaciones y los cortes de sus candidatas históricas; este asiento documenta su integración efectiva. `main@1706099a…` contiene ya G/H y el subcierre H04/H05, E115 y E011. DFL-001, DFL-005, H06/H07 y la realización causal de transiciones siguen abiertas. La fila 7 continúa mediante [el contrato de continuidad y ligaduras por operación](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md); no se emite candidata para CYB ni se abre la fila 8.
+
+<a id="retp-097"></a>
+
+### RETP-2026-097 — Coherencia local de trayectoria y contextos; contrato previo de ligaduras
+
+**Entrada:** `main@1706099aef4a0e3846706c3963e7c76313adaf68`. **Contrato anterior a la realización:** `cb8843b20ac84330ad4a5b46fe544c95ab8e7766`, [continuidad y ligaduras por operación](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md). **Estado inicial:** `CANDIDATA_MATERIAL_CI_PENDIENTE`.
+
+La nueva comprobación del núcleo exige identidad de arquitectura entre todos los marcos de una trayectoria y los horizontes de sus transiciones. Comprueba también la pertenencia estructural de los marcos y trayectorias consultados, las especificaciones celulares, evaluaciones y entradas de compuerta de `ArchitectureView`, y la correspondencia de los tres referentes de `CoverageReport` con el dominio del agente. El mismo núcleo aplica la regla en compilación ordinaria, perfilada y ensamblaje; no hay una segunda implementación en el anfitrión.
+
+La condición precede al resultado: once negativos comprometidos declaran J4.2/J5.1, el objeto atacado, la causa completa y la reparación de un único referente que debe producir un control válido. El banco Rust comprueba cada negativo en la entrada ordinaria, perfil inglés, perfil español y ensamblaje mixto en ambos órdenes. Las once mutaciones nuevas CX01…CX11 retiran guardas por separado; se añaden a las trece anteriores. Los testigos se conservan en `tests/row7_context/testigos.json` y en el corpus compartido. No se generan esperados desde una ejecución.
+
+**Inventario previsto:** 14 válidos y 106 inválidos (once nuevos). Los catorce JSON esperados previos permanecen intactos. Se ha comprobado localmente la concordancia del inventario y las 25 pruebas previas del observador. Rust, conformidad nativa/WASI/navegador y la campaña de 24 mutaciones quedan pendientes de ejecución identificada. No hay compilador Rust local; las pruebas Rust se ejecutarán con la referencia de los flujos, Rust/Cargo 1.98.0 sobre Ubuntu 24.04; stable conserva su función adicional.
+
+**Alcance:** cierre local candidato H06/H07 de coherencia estructural, sin ejecución de `query`, restricciones, transiciones o criticidad. La igualdad nominal de `interface` y `silent_u` no materializa sus contratos. Una `CellSpec` presente en un grafo no identifica un nodo único ni acredita cobertura o permisos. No se prueba relación append-only entre versiones persistentes. DFL-001, DFL-003/004/005 y DFL-006 permanecen abiertas; la matriz §5 del contrato es de tratamiento de este incremento, no la condición final de salida de fila 7.
+
+**Continuidad obligatoria:** materializar DFL-005 a partir de las nueve obligaciones y refutadores de §4; comprobar el subconjunto realmente ofrecido y completar la matriz de pérdidas antes de emitir candidata para CYB. El banco de contextos no se utilizará para certificar ligaduras aún ausentes. Inmunología continúa en pausa y la fila 8 no se activa. Ningún README, acta histórica, norma del español, plataforma o repositorio de dominio cambia.
+
+#### Verificación integrada de RETP-097 · 08/09/2026
+
+La candidata material `abe5e544730f76f3052c9afd809446746df34c03` supera los cuatro flujos. El ensayo de Actions utiliza `ac1d5e87966cf78a2bd87bd749a2c30ca9ac145b`, con árbol `50be23a1efc386d84ff1fe766e49e41c2be8cc36`, idéntico al de la cabeza candidata; no es una integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust | [34188332623](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623) | Conforme |
+| Conformidad SVP | [34188332639](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332639) | Conforme |
+| R0-8 Baseline nativa | [34188332608](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332608) | Conforme |
+| Paridad nativa/WASI/navegador | [34188332624](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332624) | Conforme |
+
+Resultados leídos en los trabajos: 211 pruebas unitarias de `sv_core` y once pruebas nuevas de contexto satisfactorias; 14/14 válidos y 106/106 inválidos en el corpus compartido; once controles positivos de reparación puntual; perfiles español/inglés y ensamblaje mixto en ambos órdenes. Las 24 mutaciones dirigidas se detectan, incluidas CX01…CX11, sin supervivientes ni mutantes inválidos. Se conservan las pruebas anteriores; no se interpreta la muestra dirigida como cobertura exhaustiva.
+
+| Paquete | Artefacto | Bytes ZIP | SHA-256 declarado por Actions |
+|---|---|---|---|
+| Mutaciones dirigidas | [10041303991](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623/artifacts/10041303991) | 98485 | `ffde1e62ac26aa7292b5bf337d3f1f0d7b5e9cebca17084563b994b44559c9b1` |
+| Sensibilidad del observador | [10041296428](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332623/artifacts/10041296428) | 5014 | `89de3704ed1d19de6dcde9a2b339c81795941636c511fd4eeb9daa94920489c0` |
+| Línea base nativa | [10041298829](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332608/artifacts/10041298829) | 412618 | `e397a72bf2d37402d1731f7840b084b18a5466c9eea01434320c966bb1d8e6cd` |
+| Paridad entre destinos | [10041310878](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34188332624/artifacts/10041310878) | 1870296 | `5c1d8ce074f155f4a28f771a1e342ea3e29fb837fb95b152e40bebffa8e91ed6` |
+
+Se identifican metadatos de Actions y registros de ejecución; no se declara una descarga y recálculo local de esos ZIP. Referencia Rust/Cargo 1.98.0 sobre Ubuntu 24.04; stable permanece separado. El cambio posterior a la candidata material registra esta evidencia y precisa la discordancia de `ArchitectureView` entre la forma abstracta de IR 0.2 y la material, sin cambiar la realización ni sus testigos.
+
+**Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #79. La cabeza documental final conserva su comprobación exacta en el expediente de la PR. No hay todavía revisión adversarial externa de este nuevo incremento. El siguiente bloque material sigue siendo DFL-005; la coherencia local de contexto no acredita ligaduras, cobertura, permisos, consulta completa ni ejecución causal. La fila 7 permanece abierta.
+
+<a id="retp-098"></a>
+
+### RETP-2026-098 — Ligaduras por operación LIG/0.1
+
+**Entrada exacta:** `eeb7cf47bfbbbc6b617107b5976cde358a460377`, PR #79 candidata y no integrada. Se adopta el [contrato material DFL-005](../arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md) como sucesor de §4 del contrato de continuidad. F-SV/0.1 §3.1 y G/H SP-01/02/05, incluido GH-DOC-07, justifican la sede y el alcance.
+
+**Decisión previa:** entrada Rust tipada versionada en `sv_core`, enlazada al programa exacto y a una expectativa contractual aportada expresamente. Se valida una operación identificada y se recuperan sus usos ordenados, instancias, destinos, reglas referidas, compartición y alcance lateral. No se altera gramática ni proyección 0.1.0. La compilación declarativa no obtiene esta capacidad implícitamente.
+
+**Testigos previos:** L01–L24 y sus controles constan en el contrato antes de la realización. Los ataques internos deben llegar a su condición; recalcular la huella contractual en ellos impide que la integridad enmascare la falta de una guarda. Artefactos y reglas llevan referentes exactos, pero sus bytes no autentican autoridad ni prueban significado clínico.
+
+**Estado inicial:** `CONTRATO_PREVIO_REALIZACION_Y_PRUEBAS_PENDIENTES`. El incremento se apila sobre PR #79; no acredita su revisión externa ni la promueve. Matriz final de pérdidas, recuperación de respuestas con S, ejecución Q0, K1-T, productores y autoridad permanecen pendientes. Fila 7 abierta, CYB no emitida. Actas históricas, README y norma del español intactos.
+
+**Realización candidata posterior al contrato `5fd6087a7fe7ec6b12c8c8f4e9c90a0c116a2eac`:** `sv_core::bindings` materializa LIG/0.1; el resultado posee construcción privada y conserva contrato, operación y programa. El banco contiene 44 negativos y nueve positivos, cada uno en compilación ordinaria, perfil español y ensamblaje en ambos órdenes. Un testigo de codificación fijado desde §2, calculado por un observador Python independiente, protege la huella sin copiar salida Rust. Se añaden 19 mutaciones dirigidas, hasta 43 en la campaña general. Estas cifras son inventario de pruebas, **no resultados ejecutados** en este punto.
+
+**Distribución:** sondas aparte para nativo, WASI y navegador, con comparación literal de informes. La API productiva de `sv_wasm` y el corpus SVP 14+106 se conservan; LIG/0.1 tiene banco propio porque su entrada es tipada, no sintaxis SVP. Los cuatro flujos admiten bases `fila7-*` para comprobar candidatas apiladas sin presentar la PR #79 como integrada. No se cambia la versión Rust de referencia.
+
+**Estado de realización:** `CANDIDATA_MATERIAL_PENDIENTE_DE_VERIFICACION`. Se registrará el corte exacto y sus resultados al terminar las ejecuciones. Falta contraste externo y matriz final de pérdidas; la fila 7 no se cierra por compilar esta interfaz.
+
+**Verificación del corte material:** `c4c50a0677498c66dd77f7c5a61b5e2173fd291c`, árbol `554c3c7a02da93277f108546c54156e173f12414`. GitHub ejecutó la composición `6bd5375c2d9ce83718c262a17f807566a03f75c5`, con padres `eeb7cf47…` y `c4c50a06…`; su árbol coincide exactamente con el árbol material. Se han inspeccionado los registros completos de R0 Rust y de paridad, además de los estados de los cuatro flujos.
+
+| Comprobación del corte material | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust; referencia 1.98.0 / compatibilidad adicional 1.98.1 | [34193869757](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869757) | Conforme en ambos trabajos |
+| Conformidad SVP | [34193869739](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869739) | 14/14 válidos y 106/106 inválidos |
+| R0-8 nativa | [34193869735](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869735) | Conforme |
+| Paridad nativa/WASI/navegador | [34193869688](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869688) | Conforme; informes LIG/0.1 literalmente idénticos |
+
+**Resultados acotados:** 211 pruebas unitarias previas de `sv_core` y 45 pruebas de integración nuevas: 44 negativos individuales y una prueba que reúne nueve positivos. La sonda ejerce los 53 casos en cuatro entradas —ordinaria, perfil español y ensamblaje en ambos órdenes—: 212 resultados por destino, con control de reparación para cada negativo. `43/43` mutantes dirigidos detectados, incluidos `LB01…LB19`; cero supervivientes y cero inválidos. La codificación coincide con el testigo independiente `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`. No se deduce de esas cifras cobertura universal ni una segunda realización semántica.
+
+| Artefacto de Actions | Identificador | Bytes declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| Mutaciones dirigidas | 10043171096 | 161965 | `4a27b24060ede1addad7ee4f74af7b4eb48cccc454a15fa90be354f1a99ddfc2` |
+| Sensibilidad del observador | 10043154978 | 5014 | `575e8d0eeb4afff7232369438da42b03362d1a3d5ba9179a3dfb6a39767aecf8` |
+| R0-8 | 10043158762 | 414226 | `25d183bb3fe62a6d860d08d4c272c5388703d6e2d02bbc33e3d8a3abc0a9a84c` |
+| Paridad, incluidas sondas e informes LIG | 10043175787 | 2634607 | `f644f0f09054e5d207b820aa72a28a454de567e8d54d8a706dc92287bf718d4e` |
+
+Las huellas de archivo de esta tabla proceden de los metadatos de Actions; no se afirma haber recalculado localmente el SHA-256 de los ZIP. Las ejecuciones y sus registros sí se han inspeccionado. El banco y los esperados están comprometidos, disponibles para reproducción; las sondas conservadas son artefactos de pruebas, no adaptadores productivos.
+
+**Decisión actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #80 apilada sobre #79. La cola documental sólo registra evidencia; las comprobaciones de su cabeza exacta quedan enlazadas en la PR. DFL-005 ya tiene una realización verificable de ligaduras LIG/0.1; no queda por diseñar esa representación desde cero. Permanecen el contraste externo de #79/#80, la resolución final por operación de las pérdidas G/H y la candidata completa de fila 7. Los documentos referidos conservan identidad, pero su semántica y autoridad no se dan por ejecutadas ni autenticadas. La fila 7 permanece abierta.
+
+<a id="retp-099"></a>
+
+### RETP-2026-099 — Resolución por operación del retorno G/H y transporte LIG
+
+**Entrada:** `d374e1cb373a3dcd141faf482f9501ceb47a7e0b`, PR #80 no promovida, sobre PR #79. **Fuente G/H:** `54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9`. Se adopta [GH-LIG/0.1](../arquitectura/RESOLUCION_DE_PERDIDAS_GH_Y_TRANSPORTE_LIG_2026_09_08.md) antes de realizar su sonda. La matriz enlaza los 15 G10, 44 LSV y 81 enlaces recibidos con capacidades concretas, exclusiones, responsables y condiciones de reapertura. Mantiene las doce SP como no ejecutadas integralmente y no declara suficiencia Q0.
+
+**Objeto material:** transportar los dieciséis estados GH-DOC por `validate_bindings`, con tres representaciones F0/H/HS. Se esperan 48 transportes, 16 recuperaciones F0, 16 recuperaciones con S, 16 controles conservados en H y ocho pérdidas H demostradas. Son obligaciones y recuentos previos, no resultados ejecutados. Los resultados proceden del testigo G/H; el núcleo sólo valida ligaduras y conserva bytes. La sonda no constituye los 27 parámetros, no ejecuta clínica y no introduce una operación SV.
+
+**Realización candidata:** ocho pruebas Rust del transporte y sondas para nativo/WASI/navegador; entradas regeneradas desde G/H sin resultados Rust; observador externo con 16 ataques y causas exigidas. El control sintético local del observador rechaza 16/16 ataques y admite reserialización; ese control no constituye ejecución del núcleo. La ejecución integrada aún está pendiente.
+
+**Estado:** `CONTRATO_Y_RESOLUCION_CANDIDATOS_PENDIENTES_DE_PRUEBA`. Las fuentes originales se identifican por bytes, SHA-256 y blob Git; el inventario público es una extracción, no una reverificación de las 44 fuentes primarias. Falta ejecutar y revisar esta candidata. Fila 7 abierta; CYB no abierta; PR #79/#80 sin promoción.
+
+
+**Verificación material:** `bcf25c5b566a6535ba1c3851346fbb355b98ae84`, árbol `1396245f5ef0d14528dc2fa2347350d460b898ab`. La composición de Actions `32b07237ee5696f78dc23fbc696f02e41b42a856` tiene padres `d374e1cb…` y `bcf25c5b…` y exactamente el mismo árbol; no es una integración en main. El contrato previo quedó fijado en `b75b090687daecfacb4be05a836d2bd97359a68e`.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust, referencia 1.98.0 y compatibilidad adicional 1.98.1 | [34199496426](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496426) | Conforme |
+| Conformidad SVP | [34199496454](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496454) | Conforme |
+| R0-8 nativa | [34199496495](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496495) | Conforme |
+| Paridad nativa/WASI/navegador | [34199496428](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496428) | Conforme; informes GH-LIG literalmente idénticos |
+
+**Resultado leído en los registros completos:** 48 transportes admitidos, 16 recuperaciones F0, 16 recuperaciones con S declarada, 16 controles conservados en H y ocho pérdidas H demostradas. Ocho pruebas Rust nuevas satisfactorias; se mantienen las 211 unitarias previas. El observador rechaza 16/16 ataques por la causa fijada y admite el control reserializado. La campaña previa de núcleo conserva 43/43 mutantes dirigidos detectados, sin supervivientes ni inválidos. No se suman ambas campañas como un porcentaje universal.
+
+| Paquete de evidencia | Artefacto | Bytes ZIP declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| directed-mutation-sensitivity | 10045252545 | 161954 | `b15f36e615ae86d9b7cf96b6dea74a27ab5d281d5faa3de89b8bbc3e581b0ed1` |
+| oracle-sensitivity | 10045231173 | 5014 | `f2f4651664e15d04f7969752dac30e296a5d3e961c3916f4358c87952d45cff7` |
+| gh-lig-documental | 10045225622 | 6979 | `5055e58b73dd70ad0d6514bda2e2c717cee396e0842c42abff92fe43ca182533` |
+| r0-wasm-three-way-parity | 10045257855 | 3382205 | `0572e01f215520ac5a64c704f77088345f956ed00f84892702fd8f09570da7be` |
+
+Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo local de esos archivos. Las fuentes y entradas están comprometidas, los registros de ejecución se han inspeccionado y la campaña es reproducible por sus órdenes públicas.
+
+**Estado actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #81 sobre #80. La matriz queda contrastada en su inventario y en el transporte documental ensayado; su suficiencia como entrega de fila 7 requiere revisión, no la decide el verificador. Las doce SP integradas siguen no ejecutadas. La cola de evidencia no altera el núcleo, las sondas ni sus esperados originales; la comprobación de la cabeza final se enlaza en la PR. Continúan sin promoción #79/#80/#81 y sin emisión a CYB. No queda por realizar este transporte; permanecen el contraste externo y la decisión sobre el alcance de la candidata completa. Ninguna operación excluida se ofrece por el hecho de estar documentada.
+
+<a id="retp-100"></a>
+
+### RETP-2026-100 — Recálculo externo de huellas contractuales GH-LIG
+
+**Entrada exacta:** `b58b4c88d30c1de3548cac9b4ac16ebbf7250717`, PR #81 no promovida. La revisión externa aportada por el Director reproduce las pérdidas y transportes, pero refuta que el observador compruebe el valor de `contract_sha256`. Se reproduce el defecto en el observador anterior con 48 huellas a cero y entradas sintéticas derivadas de G/H; no se atribuye ese control a una ejecución Rust.
+
+**Decisión previa:** aplicar [GH-LIG §7](../arquitectura/RESOLUCION_DE_PERDIDAS_GH_Y_TRANSPORTE_LIG_2026_09_08.md#7-rectificacion-del-observador-contractual--retp-100). Publicar la representación contractual completa, cotejarla con el testigo y recalcular su codificación y SHA-256 fuera del emisor. La batería atacará tanto huellas aisladas como falsificaciones simétricas de H y modificaciones coherentes de contrato/huella. El esquema del informe de pruebas pasa a 0.2; LIG/0.1, gramática, serializador y realización productiva permanecen.
+
+**Rectificación de alcance:** sólo #81 conserva intactos los archivos de realización del núcleo. La pila #79/#80 incluye nuevas capacidades y guardas de bienformación, que sí cambian la aceptación de entradas. El número de inserciones no demuestra identidad semántica. La prosa de la matriz permanece sometida a revisión humana, expresamente fuera de lo que acredita el verificador.
+
+**Realización candidata:** contrato íntegro en la sonda, codificación JavaScript independiente y correspondencia completa con la plantilla/testigo recibidos. El vector fijo de RETP-098 concuerda con el nuevo codificador. La autoprueba reúne 28 ataques previstos: los 16 anteriores (MG09 ahora exige recálculo) y doce nuevos, incluidos F0/HS, ambas H falsas, todas las huellas cero y contratos modificados con huella recalculada. La ejecución integrada aún está pendiente.
+
+**Primer ensayo de corrección:** `e40473aaabeef59761bc613549e30356c0b21fa8`: R0 Rust, conformidad y R0-8 conformes; recálculo 48/48 y ataques 28/28 en nativo/WASI. La ejecución de paridad `34202052200` falló al capturar `PENDIENTE` en el navegador; ese corte no pasa la puerta completa. Se ajusta la sonda de navegador para cargar ambas entradas antes de compilar/instanciar WASM síncronamente, conservando presupuesto e igualdad literal. El ensayo posterior debe verificarse de nuevo.
+
+**Estado:** `CORRECCION_DEL_OBSERVADOR_PENDIENTE_DE_PRUEBA`. Se conservan los resultados y límites de RETP-099 en su corte; el nuevo incremento requiere su propia verificación. Fila 7 abierta; candidatas sin promover; doce SP integradas sin ejecución acreditada.
+
+
+**Verificación de la corrección:** `acfd168670ca69af33cc2966d9fce0fc9dd3adcd`, árbol `bbc4a4d4ee7a5937e401cfed993e778abe5f7745`. La composición de Actions `5d6ad5fd32c00d41e80efa4180c37c58456df475` tiene ese mismo árbol, con padres `d374e1cb…` y `acfd1686…`; no es integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| Conformidad SVP | [34202350649](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350649) | Conforme |
+| R0-8 Baseline nativa | [34202350672](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350672) | Conforme |
+| R0 WASM paridad nativa y navegador | [34202350725](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350725) | Conforme |
+| R0 Rust | [34202350608](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350608) | Conforme |
+
+Los registros completos de Rust y paridad acreditan **48/48 huellas contractuales recalculadas**, 28/28 ataques rechazados por su causa, control reserializado admitido e identidad literal de informes en nativo/WASI/navegador. Se conservan 48 transportes, 16 recuperaciones F0, 16 HS, 16 controles H y ocho pérdidas H. La campaña previa conserva 43/43 mutantes dirigidos detectados; no se suman esas muestras como cobertura universal.
+
+MH01/MH02 detectan F0/HS falsas; MH03 detecta ambas H con el mismo valor falso; MH04 detecta las 48 huellas cero. MH05–MH08 y MH12 alteran contrato y recalculan su huella: se rechazan por divergencia del testigo. MG09 ya no se presenta como vigilancia del valor por mera desigualdad: ahora falla por `CONTRATO_RECALCULO`. El codificador externo concuerda con el testigo fijo `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`, anterior a esta sonda.
+
+| Artefacto | Identificador | Bytes ZIP declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| directed-mutation-sensitivity | 10046352660 | 161959 | `253f11e95dd90e1ab1df73477bb25060a5632431676a451ca79a5861d238753a` |
+| oracle-sensitivity | 10046328397 | 5015 | `90f6479bc3d486523bf90043fc903be96675269cf62c43ae969235e266463432` |
+| gh-lig-documental | 10046322340 | 12124 | `dfa4119bcc3c8aaae9cb21dde020ec61ec62a0d249e6a18f9a7632dac7054e7f` |
+| r0-wasm-three-way-parity | 10046354784 | 3418616 | `64368eb3c321a719d947d7769129ca7f43bce011ef7b5ca2708182f6399e4cf5` |
+
+Se han inspeccionado ejecuciones y registros. Las huellas ZIP son metadatos de GitHub, no recálculos locales. Las entradas y el vector previo de codificación permanecen intactos. La primera ejecución fallida se conserva arriba; no se ha omitido ni reinterpretado como conforme. La corrección de sincronización del navegador conserva presupuesto e igualdad literal.
+
+**Estado actual:** `CORRECCION_VERIFICADA_NO_PROMOVIDA`, PR #81. La cola registral posterior no cambia sondas, codificador ni esperados; la verificación de su cabeza exacta se identifica en la PR. Este cierre se limita al observador contractual. La semántica completa del programa portador, la ejecución del emisor y la suficiencia de la prosa de la matriz no quedan probadas por el informe aislado. Continúan fila 7 abierta, doce SP integradas no ejecutadas y revisión de candidatas #79–#81 pendiente antes de promoción.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-100, 08/09/2026 (candidata):** corregido y verificado el recálculo externo de huellas contractuales GH-LIG. La pila sigue no promovida y la prosa de resolución requiere revisión humana.
+
+**Sucesión RETP-099, 08/09/2026 (candidata):** PR #81 verifica transporte G/H por LIG y conserva el inventario 15/44/81 con límites por operación. #79/#80/#81 siguen no promovidas; fila 7 abierta. Este asiento sucede a las descripciones candidatas anteriores sin retroeditarlas.
+
+**Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.
+
+**Sucesión RETP-096, 08/09/2026:** las PR #77 y #78 están integradas en orden. El corte actual de entrada a la continuidad es `main@1706099aef4a0e3846706c3963e7c76313adaf68`; la fila 7 permanece abierta. Las entradas candidatas siguientes son antecedentes conservados, no el estado actual.
 
 **Sucesión RETP-095, 08/09/2026 (candidata):** el testigo E011 y su oráculo se han corregido y verificado sobre `461acc633d364a2eca964539a3835529fbc72c58`, con los cuatro flujos conformes. Se preservan la guarda semántica existente y la deuda de emisión diagnóstica; no hay promoción ni cierre de fila 7.
 
@@ -548,3 +742,136 @@ La deuda técnica restante permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FREN
 ## 5. Numeración registral
 
 La numeración RETP se mantiene en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+
+<a id="retp-101"></a>
+
+### RETP-2026-101 — Dependencias de verificación y preparación G/H sin Python
+
+**Entrada:** `ccc007578e23df3a304208733687824e2f241438`, PR #81 no promovida. Se leen Pilares RETP-073, perfiles RETP-075, secuencia rectora y sucesiones RETP-082/096…100. El mandato del Director exige entrega final sin dependencia de Python; no se presume cumplido por haber retirado el compilador antiguo.
+
+**Contrato previo:** [dependencias y entradas G/H](./DEPENDENCIAS_DE_VERIFICACION_Y_ENTRADAS_GH_2026_09_08.md). El incremento prevé retirar dos de los 19 scripts Python: generación G/H mediante herramienta Rust separada y referencia LIG mediante el codificador externo ya existente. GNU Coreutils/sha256sum permanece declarado como herramienta de preparación; Node como observador. El generador no importa sv_core. Los 17 Python restantes y la prueba de distribución final autónoma conservan su condición pendiente.
+
+**Oráculos previos:** las 48 entradas mantendrán bytes y huellas, salvo el comentario de procedencia; el testigo G/H y el vector fijo LIG permanecen intactos. Dos lectores independientes rechazarán números fuera del subconjunto documental antes de perder representación, claves índice, duplicados, UTF-8 inválido y sustitutos aislados. No se restringe Nat ni se transforman números de dominio en cadenas. Se conservarán las 28 mutaciones y los tres destinos de RETP-100.
+
+**Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía resultado dinámico ni se cambia el estado de #81, fila 7, las doce SP o Q0. Ningún README ni acta histórica recibe una edición.
+
+**Realización verificada:** contrato previo `9f1f39328e363c92d17d2aaf3fb0e51efff23930`; material `a20afe9d76da173295f5c123614189b31d705974`; árbol `0cff4a5b0b907f1105e0519793fb9a56e2e6497d`. La [PR #82](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/82) se apila sobre `ccc007578e23df3a304208733687824e2f241438` de #81. La fusión virtual comprobada `3a09cbdc7ffcadc69edd46af5297e381223c641d` tiene el mismo árbol material y padres `ccc00757…` y `a20afe9d…`; ninguna candidata se ha promovido.
+
+| Comprobación sobre el material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust, incluida compatibilidad adicional | [34209375380](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375380) | Conforme |
+| Conformidad SVP | [34209375465](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375465) | Conforme |
+| R0-8 nativo | [34209375394](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375394) | Conforme |
+| Paridad nativa, WASI y navegador | [34209375404](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34209375404) | Conforme |
+
+La referencia es Rust/Cargo 1.98.0 sobre Ubuntu 24.04. Las pruebas nuevas dan 7/7 en Rust y 6/6 en JavaScript, con causas fijadas antes de ejecutar. La herramienta autónoma regenera los 48 datos sin alterar un byte; sólo cambia el comentario de procedencia de su archivo. El vector fijo LIG mantiene `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`. El espacio de trabajo conserva 211 unitarias de `sv_core` y todas sus suites sin fallos; el corpus da 14/14 válidos y 106/106 inválidos. Se detectan las 43/43 mutaciones previas, sin supervivientes ni inválidas.
+
+El observador mantiene 48 transportes y 48 huellas recalculadas desde el contrato cotejado, 16 recuperaciones F0, 16 con información lateral, 16 controles H y ocho pérdidas de H. Sus 28/28 ataques caen por la causa exigida; el control reserializado es admitido. Los informes de transporte conservan identidad literal nativo/WASI/navegador. Esto preserva RETP-100 y no constituye una segunda semántica de SV.
+
+| Artefacto publicado por GitHub | Identificador | Bytes | SHA-256 del archivo comprimido según GitHub |
+| --- | --- | ---: | --- |
+| gh-lig-documental | 10049139187 | 12124 | `4c90cad004b211e6bde1845e3b9f6ac6d4c3472aa9e9928b6b0ef90f994f4800` |
+| oracle-sensitivity | 10049145180 | 5014 | `4933c69e1ec5ec3512b79ee1889e032742bce259b3f827808a21ce97e1310b9c` |
+| directed-mutation-sensitivity | 10049171351 | 161962 | `4ae9652791e043bc396982b65a101ad3223aff62a53dfc0665cbc0a6a91d880f` |
+| r0-8-baseline-native | 10049143461 | 414322 | `4d1c120c49e0b5c6d1ac768a88fa64bf879d24605c61c20a292fb020b77639de` |
+| r0-wasm-three-way-parity | 10049167252 | 3418646 | `84f4a4722d7a07414908f585582dc1942a60ed309b62e6c55e403c4015c9bc74` |
+
+Los resultados dinámicos se cotejan con los registros de ejecución. Los bytes y huellas de esta tabla proceden de los metadatos de GitHub; no se afirma una descarga y reverificación local de los archivos comprimidos. Las modificaciones posteriores a `a20afe9d…` sólo inscriben esta evidencia; su cabeza y comprobaciones figuran en la PR.
+
+**Estado actual:** `CORRECCION_VERIFICADA_NO_PROMOVIDA`. Se han retirado dos archivos Python, quedan 17 bajo `tests/` y también fragmentos e invocaciones Python en CI. No se presenta el recuento de extensiones como inventario completo de dependencias. Node y GNU Coreutils permanecen explícitos. La distribución final sin Python y su prueba en entorno limpio, la revisión externa, la resolución completa de fila 7 y la ejecución de las doce SP permanecen pendientes. Acta del español, README y repositorios de dominio intactos.
+
+
+<a id="retp-102"></a>
+
+### RETP-2026-102 — Candidata completa y reproducción Rust sin intérpretes
+
+**Mandato:** revisión externa fuerte sobre la candidata completa de fila 7 antes de CYB; se suprimen las pausas para revisión externa entre incrementos. Entrada `2f4581cc80307053e2b93b3f2e3be3a3caac8d82`. [Contrato previo y resolución de alcance](../arquitectura/CANDIDATA_DE_FILA_7_Y_REPRODUCCION_SIN_INTERPRETES_2026_09_08.md).
+
+**Obligaciones previas:** paquete determinista de fuentes Rust y entradas literales, sin Python/JavaScript ni binarios previos; inventario de integridad y controles causales de alteración; construcción offline y pruebas en Ubuntu 24.04 sin intérpretes Python/Node; mantenimiento de los cuatro flujos y del observador externo. La herramienta de aislamiento no constituye plataforma.
+
+**Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía reproducción aislada ni candidata material completa. La auditoría final abarca main@1706099… hasta el corte final; no sólo la última PR. SP/Q0 y fila 7 conservan sus límites; acta del español intacta.
+
+**Realización comprobada:** contrato previo `66f22db1324411fbc40e8adf3a5f5f15c7b4d3d7`; material `bb23381ba63a0512180ffb80f849a7241520b4c8`; árbol `10101231bdc753516fb4f21155774508cbde46b5`. [PR #83](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/83) se apila sobre #82 en `2f4581cc80307053e2b93b3f2e3be3a3caac8d82`. La fusión virtual `9ce6747562385c9201cb8835dc72253d7a07a619` tiene esos dos padres y el mismo árbol; el nuevo flujo comprueba directamente la cabeza material. Las cinco ejecuciones terminaron correctamente.
+
+| Comprobación material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust y compatibilidad adicional | [34212583875](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583875) | Conforme |
+| Conformidad SVP | [34212583972](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583972) | Conforme |
+| R0-8 nativo | [34212583946](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583946) | Conforme |
+| Paridad nativa, WASI y navegador | [34212583932](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583932) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34212583983](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583983) | Conforme |
+
+**Prueba aislada:** paquete de 227 archivos Git literales y dos objetos de inventario, sin Python/JavaScript ni binarios previos. Dos preparaciones producen el mismo archivo `fila7-fuentes.tar.gz`, SHA-256 `9f8cd42a400c1f908926735f2f82785b7bfd6423c1e0e6a9f1bbe64a7f9b268d`. Los cuatro controles de embalaje caen por `PAQUETE_TIPO`, `PAQUETE_INVENTARIO`, `PAQUETE_AUSENTE` y `PAQUETE_HUELLA`; el control íntegro pasa. Esta huella procede de la ejecución identificada; no se confunde con la del ZIP de custodia.
+
+El entorno usa Ubuntu 24.04, imagen base `sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517` e imagen ejecutada `sha256:b6dbb24eaa887ddd63c943664d64e771068c994737b86cda55916ad3062b97f2`. Se preserva su inventario de paquetes. Rust `1.98.0 (88d9e12ae 2026-08-18)` y Cargo `1.98.0 (797e8a9bc 2026-08-05)` están montados desde la herramienta de referencia. La ausencia de intérpretes Python/Node se comprueba por ejecutables y paquetes; sólo se montan paquete, herramienta Rust, conductor Bash y salida. Construcción y pruebas con red deshabilitada, Cargo offline y directorio Cargo vacío. La preparación de la imagen sí utiliza red; no se afirma construcción bit a bit del compilador o de cualquier entorno futuro.
+
+Pasan 348 pruebas Rust del espacio de trabajo, incluidas 211 unitarias del núcleo y 17 de documentación ejecutable; también las suites LIG de 45 casos, contexto de 11 y G/H de 8. La regeneración comprueba los 48 datos, las dos sondas se ejecutan y la CLI admite ambos perfiles. El testigo de posición cero produce retorno 1, IR vacía y su causa exacta prevista. Tras la ejecución, los fuentes inventariados conservan sus huellas. Node ejecuta **fuera del contenedor** el observador externo: 48 huellas recalculadas, 16 recuperaciones F0, 16 HS con S declarada, 16 controles H y ocho pérdidas; 28/28 ataques detectados, incluido falsear ambas H simétricamente. El resto de los flujos mantiene 14/14 válidos, 106/106 inválidos, 43/43 mutaciones detectadas y paridad literal nativa/WASI/navegador.
+
+| Artefacto publicado por GitHub | Identificador | Bytes | SHA-256 del ZIP según GitHub |
+| --- | --- | ---: | --- |
+| fila7-candidata-sin-interpretes | 10050429631 | 626579 | `90d8f401e10f405839974eb2e181b9fd5b01f478486bb819f4229a7fa2e7e646` |
+| gh-lig-documental | 10050412775 | 12124 | `62bc21f36ea80e4f60a5d8add4b334083b20c9990de5600e870a97a718d41ffe` |
+| oracle-sensitivity | 10050419176 | 5016 | `500f4d322936bf589dc0004db4d69badd773a4148ed64b21b0cd4b8ee664bb2c` |
+| directed-mutation-sensitivity | 10050441019 | 161963 | `e59e60da6560e2916e813579f47d43b2a54ecfeb4ee94b3f4532788cdb71bdad` |
+| r0-8-baseline-native | 10050416417 | 414317 | `de26cd00a1794f8028ab0f450f50326d51f00dae9c177b6529401ef3a8cb1db5` |
+| r0-wasm-three-way-parity | 10050442974 | 3418627 | `6585831161aac1e8b80762e973fe2e8a29cfe3a1784364764c666192b27ca9ba` |
+
+Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se presentan como descargas reverificadas localmente. La evidencia de comportamiento procede de los registros de los trabajos. La cola registral posterior a `bb23381…` sólo inscribe estos resultados; su cabeza, ejecuciones y paquete correspondiente quedan identificados en la PR. El cambio de `CORTE_GIT.txt` genera una huella de paquete nueva incluso si los fuentes del producto permanecen idénticos.
+
+**Estado: `CANDIDATA_COMPLETA_PARA_ADVERSARIAL_NO_PROMOVIDA`.** El alcance total desde `main@1706099…` incluye 578 inserciones en `sv_core/src` de #79/#80; no se presenta como núcleo intacto. La matriz cubre 15 requisitos, 44 formulaciones y 81 relaciones con responsables y límites. Quedan la revisión externa fuerte del conjunto y la decisión de entrega; no hay promoción, apertura CYB ni cierre Q0/SP. Persisten 17 archivos Python e invocaciones de CI en el repositorio completo. La ruta Rust aislada queda acreditada para esta candidata; no equivale a retirada global de herramientas ni a la distribución final. README, acta del español y dominios no cambian.
+
+
+<a id="retp-103"></a>
+
+### RETP-2026-103 — Adversarial completa y corrección de las fronteras de verificación
+
+[Acta, contraejemplos, contrato previo y límites](ADVERSARIAL_DE_FILA_7_Y_FRONTERAS_DE_VERIFICACION_2026_09_08.md). Entrada `316facc2284858600d2c72fa44e8c715ab047373` sobre `main@1706099aef4a0e3846706c3963e7c76313adaf68`. Se reproducen AF-01 (JSON con miembros repetidos admitido), AF-02 (FIFO omitido del inventario) y AF-03 (permisos no fijados cambian el paquete). La lectura del núcleo y los contrastes de procedencia no refutan la capacidad representacional declarada; no acreditan Q0 ni funciones excluidas.
+
+**Estado inicial: `CONTRATO_PREVIO_CORRECCION_PENDIENTE`.** Se exige lectura estricta en la entrada efectiva, inventario de todos los tipos de archivo y reproducción bajo máscaras distintas; causas y controles previos se conservarán en las regresiones. Sin cambio del núcleo, README, acta del español ni dominios. Fila 7 permanece abierta; no se entrega candidata a CYB. Los 17 auxiliares Python y usos de CI siguen declarados, sin confundirse con el paquete autónomo probado.
+
+**Resultado:** contrato previo `f6986cf828fb9e4047f0f68d1276d22b4835d29f`; material `0b7fa120f3f09f98399f07bf87cda9410ca1b54e`, árbol `b66ac3cbc4287d594b3b97b214ef81c171b4ace2`. Los cinco flujos 34224986578, 34224986677, 34224986628, 34224986579 y 34224986696 son conformes; detalle, enlaces y huellas descargadas en el acta vinculada. Once ataques por la CLI real y ocho ataques de paquete detectados por causa; permisos 0000/0077 producen paquete idéntico. Se conservan 348 pruebas Rust aisladas, corpus 14+106, 43 mutantes, 28 ataques semánticos, 48 huellas y paridad de destinos. No hay cambio de sv_core; el ejecutable descargado es idéntico al de #83.
+
+**Estado vigente: `ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS`.** Candidata técnicamente apta en su alcance representacional para integración gobernada y posterior entrega. Quedan integración y decisión registral de entrega; no se declara fila 7 cerrada ni se abre CYB. No quedan AF-01/02/03 sin resolver en la candidata. Se mantienen Q0/SP sin ejecución integrada, las obligaciones ejecutivas posteriores y los 17 auxiliares Python residuales. La autonomía del paquete no cierra la retirada global ni la revisión del español.
+
+
+<a id="retp-104"></a>
+
+### RETP-2026-104 — Identidad de la matriz revisada y protección de sus tratamientos
+
+**Entrada exacta:** PR #84 en `e13dc8390e72848b4419ebe229d1b81666546eaf`, árbol `f439f6b405ab4534a6b0e670aff4b8176e739060`. Rigen la fila 7, PT01/PT03/PT04/PT14, GH-LIG/0.1 y RETP-103. La matriz comprometida `tests/row7_gh/resolucion.json` tiene SHA-256 `1927c3ac2605f01128d46f2aaed74516d9915463c5949625aabbd8bd324ac15f`. No se modifica su contenido.
+
+**Contraste recibido y reproducido:** la variante conflictiva repetida en el informe y `row7_closed` repetido en la matriz ya se rechazan por `JSON_CLAVE_REPETIDA` en esta cabeza. Los puntos de lectura de informe, matriz, proyección y fuentes fijadas utilizan el lector estricto. Sin embargo, sustituir `treatments[0].available` por una afirmación de ejecución completa Q0 sigue obteniendo conformidad, tanto por la CLI con `--matriz` como por la función exportada `verify`. La ausencia de juicio semántico automático sobre la prosa estaba declarada; faltaba garantizar la identidad del documento revisado al que se refiere el resultado.
+
+**AF-04: identidad de matriz no fijada.** La objeción afecta al observador y al gobierno documental; no refuta el recálculo de las 48 huellas ni la realización Rust. El dictamen de aptitud de RETP-103 queda condicionado a esta corrección adicional. Se mantienen AF-01/02/03 corregidos y sus pruebas, sin repetir trabajo de dominio.
+
+**Contrato previo de la corrección:**
+
+1. Toda matriz recibida por la CLI, incluida la ruta ordinaria y `--inventario`, se analizará estrictamente antes de verificar su huella literal contra el SHA-256 anterior. Un duplicado conservará su causa de lectura; un documento distinto y bien formado se rechazará por `MATRIZ_HUELLA`. La opción `--matriz` permite cambiar la ubicación del documento exacto, no sustituir la decisión revisada.
+2. La matriz de referencia se cargará con ese mismo anclaje. Las funciones exportadas que reciben objetos cotejarán el documento completo con esa referencia, incluidas prosa, orden, tratamientos y cualquier campo no comprobado individualmente. La discrepancia de contenido bien formado tendrá causa `MATRIZ_CONTENIDO`. Las comprobaciones estructurales previas conservan sus causas actuales.
+3. El resultado identificará la huella de la matriz revisada y distinguirá igualdad documental de suficiencia clínica. `decision_sufficiency_automatically_proven` seguirá siendo falso. Cambiar la matriz requerirá nuevo corte revisado y actualización expresa del ancla; no se regenerará la huella automáticamente desde la entrada que se juzga.
+4. Se conservarán los 28 ataques semánticos y once ataques de entrada por la CLI real. Se añadirán alteración de prosa, reserialización de matriz, una propiedad adicional y la variante conflictiva del informe. El control positivo reserializará sólo el informe y conservará los bytes originales de la matriz. La reserialización de la matriz deja de ser control positivo porque su identidad literal pasa a formar parte del contrato.
+5. Una batería recorrerá los trece tratamientos y sus ocho campos textuales distintos del identificador (operación, contrato, capacidad, exclusión, responsable, etapa, retorno y evidencia): 104 sustituciones independientes deben ser rechazadas por `MATRIZ_CONTENIDO` también en la API de objetos. No basta con proteger únicamente `available` ni sólo la CLI.
+
+**Estado inicial:** `CONTRATO_PREVIO_CORRECCION_PENDIENTE`. Se exige comprobación local causal y los cinco flujos sobre cabeza exacta. El núcleo, LIG, Gramática, IR, corpus, matriz, README, acta del español, RETP-092 y dominios permanecen fuera del cambio. Se mantienen los 17 auxiliares Python y sus usos de CI declarados; la generación Rust de entradas de prueba no constituye interpretación productiva adicional de la DSL ni elimina por sí sola toda dependencia. No hay promoción, cierre de fila 7 ni apertura CYB.
+
+
+**Corrección material:** contrato previo `722a4146e051ec1518ff402291da9606a3e4125b`; realización `eef05771aa2b5101571b3de3d58c41bcb4d64a4c`, árbol `837e3ce5986b1f6490b489e1eaad4b75e51fc334`, en la misma PR #84. La fusión virtual `9bc305cc61b69d31a417a14caa08bc8853567ed8` tiene los padres #83 y esta candidata y el mismo árbol. La matriz conserva literalmente su SHA-256 de entrada.
+
+| Flujo de la cabeza material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust y compatibilidad adicional | [34227864840](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864840) | Conforme |
+| Conformidad SVP | [34227864842](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864842) | Conforme |
+| R0-8 nativo | [34227864845](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864845) | Conforme |
+| Paridad nativa, WASI y navegador | [34227864830](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864830) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34227864828](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864828) | Conforme |
+
+**Resultado causal:** 28/28 ataques semánticos anteriores, 15/15 ataques de bytes por la CLI real y 104/104 sustituciones de los textos de los trece tratamientos por la API, sin supervivientes. Las duplicidades conservan `JSON_CLAVE_REPETIDA`; la sustitución del documento literal cae por `MATRIZ_HUELLA`; la alteración de contenido por objetos cae por `MATRIZ_CONTENIDO`. La comparación de datos propios, orden y valores evita que `toJSON` o un acceso implícito sustituya el documento comparado. Una sonda adicional confirma rechazo de la prosa falsa por ambas rutas CLI, incluida `--inventario`, y rechazo de un `toJSON` que intentaría ocultarla en la API.
+
+El resultado contiene `reviewed_document_sha256` y `reviewed_document_content_matches=true`; mantiene `decision_sufficiency_automatically_proven=false`. La huella identifica el documento candidato revisado en este corte, no un estado futuro de integración. Una modificación legítima de la matriz requiere otro corte revisado y el ancla correspondiente. El control positivo conserva sus bytes exactos; sólo el informe puede reserializarse sin cambiar esa identidad.
+
+Se conservan 48 huellas contractuales recalculadas, 16/16/16 y ocho pérdidas H; 43/43 mutaciones dirigidas detectadas; corpus 14/14 válidos y 106/106 inválidos; 348 pruebas Rust en el entorno identificado sin Python/Node, sin red y Cargo offline. El observador Node permanece fuera del aislamiento. AF-02/03 conservan los ocho ataques de paquete y reproducción bajo permisos distintos. No se cambia el generador Rust ni el carácter generado de las entradas de prueba.
+
+**Custodia descargada y verificada localmente:** artefacto `10056512017`, 628043 bytes; ZIP SHA-256 `2ba554008e6ab28d0b405b9a2b7fb79e973977b8a464f0b73208820ca990df2e`. Paquete interior `c2d0a1217d5f642da3566cf5a4ba477d98f622478031506b7886ee30ce1988a1`. Ejecutable `cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a`, idéntico al anterior. El informe `verificacion-externa.json` conserva los quince ataques de entrada y las 104 sustituciones, además de los 28 ataques previos; `ejecucion.log` conserva las pruebas aisladas.
+
+**Estado vigente:** `MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA`. AF-04 queda corregido en la candidata y se levanta la reserva añadida al dictamen de RETP-103. La aptitud sigue limitada al alcance representacional examinado y a la integración gobernada con decisión de entrega; no acredita verdad clínica de los textos ni ausencia universal de defectos. No hay promoción, cierre registral de fila 7 ni apertura CYB. DFL-001 general, DFL-013, los 17 auxiliares Python y restantes límites conservan su condición. La cola posterior al material sólo registra estos resultados; cabeza final, nueva huella del paquete y sus cinco flujos quedan identificados en la PR.

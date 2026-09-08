@@ -193,3 +193,80 @@ Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter
 [RETP-094 del maestro](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral) corrige cuatro expectativas E115 que descartaban los conjuntos de claves repetidas, ausentes y ajenas. El cierre local queda probado contra intercambios de causa y de referente; no acredita causalidad exhaustiva del corpus ni cierra DFL-001. El corte `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` supera su propia verificación integrada, identificada en RETP-094; no se cierra por ello DFL-001.
 
 DFL-011 conserva el mandato del español. Se subsana la colisión candidata: `cell_ref` queda en DFL-012 e independencia semántica en DFL-013. La evidencia de RETP-093 conserva su corte y sus límites. DFL-005 y H06/H07 siguen pendientes; H04/H05 sólo tienen el cierre local candidato registrado, sin ejecución ni causalidad entre marcos. Se mantiene la secuencia de filas 7 y 8 y la competencia de Ciberseguridad para constituir su propio universo falsador.
+
+
+## Sucesión de RETP-096/097 · 08/09/2026
+
+RETP-096 registra la integración de PR #77 y #78 en `main@1706099aef4a0e3846706c3963e7c76313adaf68`. Los cierres locales de `TransitionData`, el refuerzo E115 y el testigo E011 dejan de estar sólo en candidata. Sus límites permanecen: no se cierra DFL-001 ni la fila 7.
+
+RETP-097 propone comprobar H06/H07 **en su relación estructural**: arquitecturas de trayectoria/horizonte/contexto y pertenencia de referencias de consulta; `CoverageReport` contrasta sus tres nombres. La comprobación integrada está pendiente. Ninguna de esas guardas materializa `Interface`, `SilentU`, CQ1–CQ6, permisos o la cobertura del agente. La continuidad histórica entre versiones y la causalidad ejecutiva siguen sin acreditarse.
+
+**DFL-005 permanece abierta y bloqueante por operación.** Su contrato de entrada y sus refutadores están delimitados en [el contrato de fila 7, §4](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md#4-dfl-005-contrato-de-entrada-todavía-sin-realización). Falta realizar y probar identidades/versiones, ligaduras, compartición, usos y procedencia. Esta obligación no se sustituye por el cierre local de pertenencia. No se atribuye todavía DFL-005 a una estructura Rust ni a un esquema externo que el núcleo no valide.
+
+DFL-011 (español), DFL-012 (nombre `cell_ref`) y DFL-013 (independencia) conservan identidad y obligaciones. La matriz de tratamiento del incremento no equivale a matriz final de resolución de pérdidas; no habilita el relevo a Ciberseguridad.
+
+**Concordancia de `ArchitectureView` (DFL-003/DFL-001):** la variante material recibe arquitectura, especificaciones celulares, evaluaciones y compuertas; el antecedente IR 0.2 enumera arquitectura, evaluaciones, compuertas y supervisiones. RETP-097 comprueba pertenencia sobre la forma material y conserva esta diferencia como no reconciliada. No se ofrece la comprobación como semántica N4 completa ni se cambia la firma por inferencia.
+
+**Verificación de la candidata RETP-097:** `abe5e544730f76f3052c9afd809446746df34c03` supera R0 Rust, conformidad, R0-8 y paridad nativa/WASI/navegador (ejecuciones y artefactos en el maestro). Once pruebas de contexto y controles de reparación puntual; corpus 14+106; 24/24 mutaciones dirigidas detectadas. H06/H07 quedan comprobadas sólo en la relación estructural descrita, dentro de PR #79, no promovida. Las obligaciones de DFL-005 y de N3/N4 no materializadas mantienen su estado abierto.
+
+
+## Sucesión candidata RETP-098 · LIG/0.1
+
+DFL-005 recibe una realización en `sv_core::bindings` del [contrato material previo](../arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md): identidad de programa y contrato, instancia, propietario, parámetro, referencias tipadas de captura/admisión, destino, usos ordenados, alias y compartición explícitos, procedencia y alcance con información lateral. La operación concreta se solicita por identidad y versión exactas. La candidata está pendiente de ejecutar sus comprobaciones y no se presenta como capacidad integrada.
+
+**La deuda permanece abierta:** LIG/0.1 comprueba representación y referentes, no significado clínico ni autoridad de sus artefactos; no ejecuta transducción, Q0 ni recuperación de respuestas por F. Faltan la resolución final de las pérdidas del retorno y la candidata completa de fila 7. Las operaciones dependientes que no satisfagan esos contratos siguen fuera de capacidad. H06/H07 conservan el alcance candidato PR #79, sin atribuirles promoción. DFL-011/012/013 permanecen intactas en identidad y sede.
+
+
+**Verificación RETP-098:** LIG/0.1 queda realizada y comprobada en `c4c50a0677498c66dd77f7c5a61b5e2173fd291c`, PR #80: cuatro flujos conformes, 45 pruebas Rust nuevas, 53 testigos en cuatro entradas con paridad literal entre nativo/WASI/navegador; 43/43 mutaciones dirigidas detectadas (19 nuevas). Los cortes, ejecuciones y artefactos están en RETP-098 del maestro CSV/Markdown. DFL-005 deja de describirse, para este alcance candidato, como ausencia total de representación. Sigue abierta para la resolución operacional del retorno y no se ofrece suficiencia Q0. La construcción privada del resultado conserva las ligaduras; no acredita permisos, interpretación de documentos ni recuperación clínica con S. PR #79 y #80 permanecen sin integrar y pendientes de contraste externo.
+
+
+## Sucesión candidata RETP-099 · Resolución por operación G/H
+
+DFL-005 se contrasta ahora con ocho pares documentales recibidos a través de LIG/0.1 y una matriz completa de inventario 15/44/81. La sonda aún está pendiente de prueba. La conservación de bytes, su identidad y la recuperación externa de campos no ejecutan significado clínico ni autoridad. Las doce SP integradas permanecen no ejecutadas; las exclusiones, responsables y condiciones de reapertura constan en GH-LIG/0.1 y su matriz. No se borra deuda por disponer de un documento referido.
+
+La fila 7 sigue abierta. No se transforma esta propuesta en cierre de H06/H07 completos, N3/N4, K1-T, DFL-006, DFL-001 o independencia semántica. PR #79/#80 no promovidas; el nuevo transporte y la matriz requieren evidencia y contraste externo antes de emitir la candidata a Ciberseguridad.
+
+
+**Verificación RETP-099:** el corte `bcf25c5b566a6535ba1c3851346fbb355b98ae84`, PR #81, acredita el transporte de los ocho pares GH-DOC por LIG: 48 transportes y recuperación documental F0/HS, con ocho pérdidas H conservadas y declaradas. Cuatro flujos conformes; ocho pruebas Rust y 16 ataques del observador satisfactorios; paridad literal en tres destinos. Este alcance deja de estar pendiente de realizar. La matriz 15/44/81 conserva responsables y límites; no otorga suficiencia clínica ni cierra las doce SP integradas. La revisión de las tres candidatas apiladas y la decisión de entrega de fila 7 siguen pendientes. No se licencia ninguna operación que necesite las capacidades excluidas.
+
+
+## Rectificación candidata RETP-100 · Huella contractual ante el observador externo
+
+La auditoría de `b58b4c88…` confirma el transporte y refuta la vigilancia del valor de `contract_sha256` por el observador GH-LIG. DFL-001 conserva esta omisión de observación hasta su corrección probada; no se inventa una nueva identidad DFL. RETP-100 exige contrato completo cotejado con su testigo y recálculo externo. El ensayo anterior no pierde sus ocho pérdidas documentales, pero no acredita el recálculo ahora exigido.
+
+La pila #79/#80 sí modifica capacidad y aceptación de entradas mediante nuevas guardas. La #81 sólo añade pruebas y gobierno. La matriz requiere juicio humano sobre sus tratamientos; el control de inventario no valida esa prosa. Permanecen fila 7 abierta, doce SP no ejecutadas y ausencia de promoción; no se concede capacidad clínica mediante la rectificación del observador.
+
+
+**Cierre local de la rectificación RETP-100:** `acfd168670ca69af33cc2966d9fce0fc9dd3adcd` supera los cuatro flujos, con 48 huellas recalculadas externamente y 28/28 ataques detectados por causa; informes idénticos nativo/WASI/navegador. Las ocho pérdidas documentales se conservan. La primera ejecución fallida del navegador y la corrección de sincronización constan en el maestro CSV/Markdown. DFL-001 no queda cerrada globalmente; se subsana la omisión concreta del observador. PR #81 no promovida, fila 7 abierta y revisión humana de la prosa de resolución pendiente.
+
+
+## Continuidad de dependencias de verificación · RETP-101
+
+El mandato del Director requiere entrega final de la DSL sin Python para construcción, generación imprescindible o ejecución. El inventario de entrada contiene 19 scripts Python de pruebas; su ubicación no autoriza permanencia en la entrega. Se prevé retirar dos en RETP-101 sin disminuir controles, conservando los demás como dependencia pendiente y explícita. No se crea una segunda identidad DFL: esta continuidad afecta a los oráculos de DFL-001, a la independencia de DFL-013 y al inventario de dependencias del cierre. DFL-011 y el acta del español permanecen intactos.
+
+La interfaz web usa JavaScript y el observador externo usa Node; el compilador Rust no los incorpora como dependencias Cargo. Esa lectura estática no acredita por sí sola construcción de la distribución final en un entorno limpio. El contrato previo y los controles de representación están en [RETP-101](./DEPENDENCIAS_DE_VERIFICACION_Y_ENTRADAS_GH_2026_09_08.md). Las pruebas b=4 ya existen nativamente, pero su extensión al corpus compartido, el régimen de errores de frontera y la estrategia de entradas adversarias no quedan cerrados por retirar scripts.
+
+**Incremento local verificado:** `a20afe9d76da173295f5c123614189b31d705974`, PR #82 en borrador. Se retiran los dos Python previstos; el generador Rust autónomo y el codificador externo conservan los 48 datos y la constante LIG. Pasan 7/7 pruebas Rust de preparación, 6/6 JavaScript, los cuatro flujos, 28/28 ataques del observador, 43/43 mutaciones previas y la paridad literal de los tres destinos. Se impide la conversión con pérdida en el subconjunto documental; no se restringe Nat. Permanecen 17 archivos Python, las invocaciones y fragmentos Python de CI, Node y `sha256sum`. El recuento de archivos no acredita eliminación de dependencias; la entrega final y su construcción en entorno limpio siguen pendientes. DFL-001/013 no se cierran globalmente y la fila 7 no se promueve.
+
+
+## Continuidad hacia la candidata completa · RETP-102
+
+Por orden del Director, la revisión externa fuerte se realiza al terminar materialmente la fila 7 y antes de CYB; no detiene los incrementos intermedios. Las menciones anteriores de revisión inmediata son históricas. Continúan todas las comprobaciones internas y las exclusiones por operación de GH-LIG. La nueva candidata deberá acreditar una ruta de construcción/pruebas Rust sin intérpretes; ese alcance no borra los 17 archivos Python ni el Python incrustado en CI, no cierra la distribución final ni la independencia semántica. Contrato previo en [RETP-102](../arquitectura/CANDIDATA_DE_FILA_7_Y_REPRODUCCION_SIN_INTERPRETES_2026_09_08.md).
+
+**Preparación material completada:** `bb23381ba63a0512180ffb80f849a7241520b4c8`, PR #83, supera los cinco flujos. El paquete literal y determinista permite construir y ejecutar 348 pruebas Rust sin intérpretes Python/Node, sin red y sin caché anterior. Los cuatro ataques al paquete son detectados por causa. Se conservan 48 transportes G/H, 48 huellas recalculadas externamente, 28/28 ataques del observador y 43/43 mutaciones dirigidas; la matriz 15/44/81 mantiene las doce SP integradas no ejecutadas.
+
+La candidata queda completa **para su adversarial externa**, no promovida ni entregada. DFL-005 tiene la realización representacional por operación descrita en LIG/0.1 y su contraste documental; no es una deuda ilimitada cerrada por esta prueba. H06/H07 sólo acreditan coherencia estructural, no CQ1–CQ6 ni causalidad ejecutiva. DFL-001/003/004/006/009/011/012/013 y las capacidades clínicas o de autoridad excluidas conservan sus obligaciones. La ruta Rust autónoma está probada en este corte, mientras la retirada global de los 17 Python y del Python de CI sigue explícitamente pendiente. La auditoría final debe examinar el cambio completo desde main y estos límites antes de CYB; no se requiere una nueva pausa de revisión por cada PR de la pila.
+
+
+### Continuidad RETP-2026-103 — Adversarial del conjunto y fronteras de verificación
+
+El [acta RETP-103](ADVERSARIAL_DE_FILA_7_Y_FRONTERAS_DE_VERIFICACION_2026_09_08.md) registra AF-01, AF-02 y AF-03: lectura JSON que perdía miembros repetidos, inventario que omitía archivos especiales y permisos ambientales no fijados. Quedan corregidos en `0b7fa120f3f09f98399f07bf87cda9410ca1b54e`, con once ataques por la CLI real, ocho de paquete y comparación bajo máscaras 0000/0077; cinco flujos conformes. El maestro CSV/Markdown y el acta conservan cortes, causas y custodia descargada.
+
+DFL-001 conserva sus restantes obligaciones: este cierre candidato es local a los observadores y al paquete. DFL-005 y H06/H07 conservan el alcance representacional delimitado por sus contratos, sin ejecución clínica ni permisos materiales añadidos. La auditoría acumulada queda concluida con las correcciones verificadas; resta integración gobernada y decisión de entrega. No se ofrece Q0 ni se ejecutan las doce SP. La ausencia de intérpretes del paquete no cierra los 17 auxiliares Python y fragmentos de CI residuales, ni DFL-013. DFL-011, el acta del español y RETP-092 conservan identidad y mandato. No se abre Ciberseguridad ni se declara cerrado el núcleo.
+
+
+### Continuidad RETP-2026-104 — Identidad de la matriz revisada
+
+[RETP-104](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-104) individualiza AF-04: una prosa de tratamiento alterada aún pasa la CLI y la API del observador en `e13dc8390e72848b4419ebe229d1b81666546eaf`, aunque los duplicados ya son rechazados. La aptitud indicada en RETP-103 queda condicionada a fijar la matriz literal revisada y cotejar todo su contenido. DFL-001 conserva las demás obligaciones. No se reabren AF-01/02/03, no se alteran decisiones de la matriz ni se autoriza ejecución Q0. Contrato previo; corrección pendiente, sin promoción ni apertura CYB.
+
+**Resultado RETP-104:** AF-04 queda corregido en `eef05771aa2b5101571b3de3d58c41bcb4d64a4c`: matriz literal fijada, comparación completa por API, 15 ataques CLI y 104 sustituciones textuales rechazadas; 28 ataques anteriores conservados y cinco flujos conformes. La matriz no cambia. El maestro CSV/Markdown conserva la evidencia descargada y sus huellas. Se levanta la reserva específica al dictamen de RETP-103, sin cerrar DFL-001 general ni las capacidades ejecutivas excluidas, sin dispensar la retirada residual de Python y sin promoción o entrega automática.

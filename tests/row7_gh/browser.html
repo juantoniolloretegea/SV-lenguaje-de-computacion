@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><title>Transporte GH-LIG/0.1</title>
+<body><pre id="result">PENDIENTE</pre><script>
+(async () => {
+  try {
+    // Cargar las dos entradas antes de ejecutar. La compilación síncrona evita
+    // capturar PENDIENTE mientras el compilador WASM asíncrono sigue trabajando.
+    const [bytes, native] = await Promise.all([
+      fetch('/artifacts/r0-browser/gh_binding_probe_browser.wasm').then(r => r.arrayBuffer()),
+      fetch('/artifacts/r0-browser/gh-native.json').then(r => r.text()),
+    ]);
+    const instance = new WebAssembly.Instance(new WebAssembly.Module(bytes), {});
+    const e = instance.exports;
+    const code = e.binding_probe_run();
+    const result = new TextDecoder('utf-8', {fatal:true}).decode(new Uint8Array(e.memory.buffer, e.binding_probe_ptr(), e.binding_probe_len()));
+    if (code !== 0) throw new Error(result);
+    if (result + '\n' !== native) throw new Error('Paridad literal de ligaduras divergente');
+    document.getElementById('result').textContent = 'CONFORME ' + result;
+  } catch (error) { document.getElementById('result').textContent = 'FALLO ' + error.message; }
+})();
+</script></body></html>
