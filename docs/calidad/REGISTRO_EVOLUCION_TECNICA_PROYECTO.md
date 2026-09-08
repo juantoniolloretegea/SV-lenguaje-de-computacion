@@ -740,3 +740,16 @@ La deuda técnica restante permanece registrada en `REGISTRO_DEUDA_VIVA_DEL_FREN
 ## 5. Numeración registral
 
 La numeración RETP se mantiene en `REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv`.
+
+
+<a id="retp-101"></a>
+
+### RETP-2026-101 — Dependencias de verificación y preparación G/H sin Python
+
+**Entrada:** `ccc007578e23df3a304208733687824e2f241438`, PR #81 no promovida. Se leen Pilares RETP-073, perfiles RETP-075, secuencia rectora y sucesiones RETP-082/096…100. El mandato del Director exige entrega final sin dependencia de Python; no se presume cumplido por haber retirado el compilador antiguo.
+
+**Contrato previo:** [dependencias y entradas G/H](./DEPENDENCIAS_DE_VERIFICACION_Y_ENTRADAS_GH_2026_09_08.md). El incremento prevé retirar dos de los 19 scripts Python: generación G/H mediante herramienta Rust separada y referencia LIG mediante el codificador externo ya existente. GNU Coreutils/sha256sum permanece declarado como herramienta de preparación; Node como observador. El generador no importa sv_core. Los 17 Python restantes y la prueba de distribución final autónoma conservan su condición pendiente.
+
+**Oráculos previos:** las 48 entradas mantendrán bytes y huellas, salvo el comentario de procedencia; el testigo G/H y el vector fijo LIG permanecen intactos. Dos lectores independientes rechazarán números fuera del subconjunto documental antes de perder representación, claves índice, duplicados, UTF-8 inválido y sustitutos aislados. No se restringe Nat ni se transforman números de dominio en cadenas. Se conservarán las 28 mutaciones y los tres destinos de RETP-100.
+
+**Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía resultado dinámico ni se cambia el estado de #81, fila 7, las doce SP o Q0. Ningún README ni acta histórica recibe una edición.

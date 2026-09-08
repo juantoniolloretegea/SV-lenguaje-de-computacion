@@ -238,3 +238,10 @@ La pila #79/#80 sí modifica capacidad y aceptación de entradas mediante nuevas
 
 
 **Cierre local de la rectificación RETP-100:** `acfd168670ca69af33cc2966d9fce0fc9dd3adcd` supera los cuatro flujos, con 48 huellas recalculadas externamente y 28/28 ataques detectados por causa; informes idénticos nativo/WASI/navegador. Las ocho pérdidas documentales se conservan. La primera ejecución fallida del navegador y la corrección de sincronización constan en el maestro CSV/Markdown. DFL-001 no queda cerrada globalmente; se subsana la omisión concreta del observador. PR #81 no promovida, fila 7 abierta y revisión humana de la prosa de resolución pendiente.
+
+
+## Continuidad de dependencias de verificación · RETP-101
+
+El mandato del Director requiere entrega final de la DSL sin Python para construcción, generación imprescindible o ejecución. El inventario de entrada contiene 19 scripts Python de pruebas; su ubicación no autoriza permanencia en la entrega. Se prevé retirar dos en RETP-101 sin disminuir controles, conservando los demás como dependencia pendiente y explícita. No se crea una segunda identidad DFL: esta continuidad afecta a los oráculos de DFL-001, a la independencia de DFL-013 y al inventario de dependencias del cierre. DFL-011 y el acta del español permanecen intactos.
+
+La interfaz web usa JavaScript y el observador externo usa Node; el compilador Rust no los incorpora como dependencias Cargo. Esa lectura estática no acredita por sí sola construcción de la distribución final en un entorno limpio. El contrato previo y los controles de representación están en [RETP-101](./DEPENDENCIAS_DE_VERIFICACION_Y_ENTRADAS_GH_2026_09_08.md). Las pruebas b=4 ya existen nativamente, pero su extensión al corpus compartido, el régimen de errores de frontera y la estrategia de entradas adversarias no quedan cerrados por retirar scripts.
