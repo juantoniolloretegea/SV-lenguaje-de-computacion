@@ -1,5 +1,6 @@
 # Registro de evolución técnica del proyecto
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
+| RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | CONTRATO_PREVIO_CORRECCION_PENDIENTE |
 
 ## 1. Finalidad
 
@@ -832,3 +833,24 @@ Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se pres
 **Resultado:** contrato previo `f6986cf828fb9e4047f0f68d1276d22b4835d29f`; material `0b7fa120f3f09f98399f07bf87cda9410ca1b54e`, árbol `b66ac3cbc4287d594b3b97b214ef81c171b4ace2`. Los cinco flujos 34224986578, 34224986677, 34224986628, 34224986579 y 34224986696 son conformes; detalle, enlaces y huellas descargadas en el acta vinculada. Once ataques por la CLI real y ocho ataques de paquete detectados por causa; permisos 0000/0077 producen paquete idéntico. Se conservan 348 pruebas Rust aisladas, corpus 14+106, 43 mutantes, 28 ataques semánticos, 48 huellas y paridad de destinos. No hay cambio de sv_core; el ejecutable descargado es idéntico al de #83.
 
 **Estado vigente: `ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS`.** Candidata técnicamente apta en su alcance representacional para integración gobernada y posterior entrega. Quedan integración y decisión registral de entrega; no se declara fila 7 cerrada ni se abre CYB. No quedan AF-01/02/03 sin resolver en la candidata. Se mantienen Q0/SP sin ejecución integrada, las obligaciones ejecutivas posteriores y los 17 auxiliares Python residuales. La autonomía del paquete no cierra la retirada global ni la revisión del español.
+
+
+<a id="retp-104"></a>
+
+### RETP-2026-104 — Identidad de la matriz revisada y protección de sus tratamientos
+
+**Entrada exacta:** PR #84 en `e13dc8390e72848b4419ebe229d1b81666546eaf`, árbol `f439f6b405ab4534a6b0e670aff4b8176e739060`. Rigen la fila 7, PT01/PT03/PT04/PT14, GH-LIG/0.1 y RETP-103. La matriz comprometida `tests/row7_gh/resolucion.json` tiene SHA-256 `1927c3ac2605f01128d46f2aaed74516d9915463c5949625aabbd8bd324ac15f`. No se modifica su contenido.
+
+**Contraste recibido y reproducido:** la variante conflictiva repetida en el informe y `row7_closed` repetido en la matriz ya se rechazan por `JSON_CLAVE_REPETIDA` en esta cabeza. Los puntos de lectura de informe, matriz, proyección y fuentes fijadas utilizan el lector estricto. Sin embargo, sustituir `treatments[0].available` por una afirmación de ejecución completa Q0 sigue obteniendo conformidad, tanto por la CLI con `--matriz` como por la función exportada `verify`. La ausencia de juicio semántico automático sobre la prosa estaba declarada; faltaba garantizar la identidad del documento revisado al que se refiere el resultado.
+
+**AF-04: identidad de matriz no fijada.** La objeción afecta al observador y al gobierno documental; no refuta el recálculo de las 48 huellas ni la realización Rust. El dictamen de aptitud de RETP-103 queda condicionado a esta corrección adicional. Se mantienen AF-01/02/03 corregidos y sus pruebas, sin repetir trabajo de dominio.
+
+**Contrato previo de la corrección:**
+
+1. Toda matriz recibida por la CLI, incluida la ruta ordinaria y `--inventario`, se analizará estrictamente antes de verificar su huella literal contra el SHA-256 anterior. Un duplicado conservará su causa de lectura; un documento distinto y bien formado se rechazará por `MATRIZ_HUELLA`. La opción `--matriz` permite cambiar la ubicación del documento exacto, no sustituir la decisión revisada.
+2. La matriz de referencia se cargará con ese mismo anclaje. Las funciones exportadas que reciben objetos cotejarán el documento completo con esa referencia, incluidas prosa, orden, tratamientos y cualquier campo no comprobado individualmente. La discrepancia de contenido bien formado tendrá causa `MATRIZ_CONTENIDO`. Las comprobaciones estructurales previas conservan sus causas actuales.
+3. El resultado identificará la huella de la matriz revisada y distinguirá igualdad documental de suficiencia clínica. `decision_sufficiency_automatically_proven` seguirá siendo falso. Cambiar la matriz requerirá nuevo corte revisado y actualización expresa del ancla; no se regenerará la huella automáticamente desde la entrada que se juzga.
+4. Se conservarán los 28 ataques semánticos y once ataques de entrada por la CLI real. Se añadirán alteración de prosa, reserialización de matriz, una propiedad adicional y la variante conflictiva del informe. El control positivo reserializará sólo el informe y conservará los bytes originales de la matriz. La reserialización de la matriz deja de ser control positivo porque su identidad literal pasa a formar parte del contrato.
+5. Una batería recorrerá los trece tratamientos y sus ocho campos textuales distintos del identificador (operación, contrato, capacidad, exclusión, responsable, etapa, retorno y evidencia): 104 sustituciones independientes deben ser rechazadas por `MATRIZ_CONTENIDO` también en la API de objetos. No basta con proteger únicamente `available` ni sólo la CLI.
+
+**Estado inicial:** `CONTRATO_PREVIO_CORRECCION_PENDIENTE`. Se exige comprobación local causal y los cinco flujos sobre cabeza exacta. El núcleo, LIG, Gramática, IR, corpus, matriz, README, acta del español, RETP-092 y dominios permanecen fuera del cambio. Se mantienen los 17 auxiliares Python y sus usos de CI declarados; la generación Rust de entradas de prueba no constituye interpretación productiva adicional de la DSL ni elimina por sí sola toda dependencia. No hay promoción, cierre de fila 7 ni apertura CYB.
