@@ -9,7 +9,7 @@ import hashlib
 import json
 from pathlib import Path
 import sys
-from oracle_support import run, assert_success, assert_json_equal, OracleError, assert_rust_rejection
+from oracle_support import run, assert_success, assert_json_equal, OracleError, assert_rejection
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTROL = (
@@ -17,6 +17,21 @@ CONTROL = (
     b'output_semantics SS { Alpha -> "a"; Beta -> "b"; }\n'
     b'cellspec CC { b: 3; codomain: KK; semantics: SS; role: Base; }\n'
 )
+
+# N0-02/N0-03 sobre las fuentes propias del banco: Alpha aparece dos veces.
+# No se reutiliza la expectativa de otro testigo con referentes C/S/K.
+REJECTION_TOKENS = {
+    'semantics_duplicate': (
+        'E115 (InvalidOutputSemantics): CellSpec CC, OutputSemantics SS, Codomain KK: '
+        'repetidas=[Alpha]; ausentes=[]; ajenas=[]'),
+    'semantics_unbound_duplicate': (
+        'E115 (InvalidOutputSemantics): OutputSemantics SS: repetidas=[Alpha]'),
+}
+
+
+def assert_sensitivity_rejection(name, proc):
+    return assert_rejection(proc, REJECTION_TOKENS[name])
+
 
 def digest(raw):
     return hashlib.sha256(raw).hexdigest()
@@ -34,9 +49,7 @@ def sources():
 
 def verify(name, raw, proc):
     if name in {'semantics_duplicate', 'semantics_unbound_duplicate'}:
-        diagnostic = assert_rust_rejection(proc, 'output_semantics_clave_repetida')
-        if 'repetidas=[Alpha]' not in diagnostic:
-            raise OracleError('el rechazo no identifica Alpha')
+        assert_sensitivity_rejection(name, proc)
         return 'RECHAZO_N0_02_N0_03'
     assert_success(proc)
     doc = json.loads(proc.stdout)

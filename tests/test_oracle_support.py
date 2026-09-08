@@ -8,6 +8,7 @@ from oracle_support import (OracleError, DuplicateJsonMember, ordered_json,
                             assert_json_equal, assert_bytes_equal, assert_success,
                             assert_rust_rejection,
                             cli_payload, run, assert_json_roundtrip)
+from run_oracle_sensitivity import assert_sensitivity_rejection
 
 
 def result(rc=1, out=b"", err=b""):
@@ -30,7 +31,32 @@ def e115_result(cause, objects="CellSpec C, OutputSemantics S, Codomain K"):
     return result(err=f'SVP no admitido: InvalidProgram("{message}")\n'.encode())
 
 
+def sensitivity_rejections():
+    # Las dos fuentes del banco difieren en la presencia de CellSpec CC.
+    return {
+        'semantics_duplicate': e115_result(
+            'repetidas=[Alpha]; ausentes=[]; ajenas=[]',
+            'CellSpec CC, OutputSemantics SS, Codomain KK'),
+        'semantics_unbound_duplicate': result(err=(
+            b'SVP no admitido: InvalidProgram("E115 (InvalidOutputSemantics): '
+            b'OutputSemantics SS: repetidas=[Alpha]")\n')),
+    }
+
+
 class OracleTests(unittest.TestCase):
+    def test_sensitivity_uses_its_own_witnesses(self):
+        for name, proc in sensitivity_rejections().items():
+            with self.subTest(name=name):
+                assert_sensitivity_rejection(name, proc)
+
+    def test_sensitivity_rejects_the_other_scope_and_corpus_objects(self):
+        for name in sensitivity_rejections():
+            others = [proc for other, proc in sensitivity_rejections().items() if name != other]
+            others.append(e115_result('repetidas=[A]; ausentes=[]; ajenas=[]'))
+            for proc in others:
+                with self.subTest(name=name, diagnostic=proc.stderr), self.assertRaises(OracleError):
+                    assert_sensitivity_rejection(name, proc)
+
     def test_e115_accepts_each_normative_witness(self):
         for case, cause in E115_WITNESSES.items():
             with self.subTest(case=case):
