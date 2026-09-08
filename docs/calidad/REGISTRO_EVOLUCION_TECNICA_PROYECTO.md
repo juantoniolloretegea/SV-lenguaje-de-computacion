@@ -606,6 +606,28 @@ Se identifican metadatos de Actions y registros de ejecución; no se declara una
 
 **Estado de realización:** `CANDIDATA_MATERIAL_PENDIENTE_DE_VERIFICACION`. Se registrará el corte exacto y sus resultados al terminar las ejecuciones. Falta contraste externo y matriz final de pérdidas; la fila 7 no se cierra por compilar esta interfaz.
 
+**Verificación del corte material:** `c4c50a0677498c66dd77f7c5a61b5e2173fd291c`, árbol `554c3c7a02da93277f108546c54156e173f12414`. GitHub ejecutó la composición `6bd5375c2d9ce83718c262a17f807566a03f75c5`, con padres `eeb7cf47…` y `c4c50a06…`; su árbol coincide exactamente con el árbol material. Se han inspeccionado los registros completos de R0 Rust y de paridad, además de los estados de los cuatro flujos.
+
+| Comprobación del corte material | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust; referencia 1.98.0 / compatibilidad adicional 1.98.1 | [34193869757](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869757) | Conforme en ambos trabajos |
+| Conformidad SVP | [34193869739](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869739) | 14/14 válidos y 106/106 inválidos |
+| R0-8 nativa | [34193869735](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869735) | Conforme |
+| Paridad nativa/WASI/navegador | [34193869688](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34193869688) | Conforme; informes LIG/0.1 literalmente idénticos |
+
+**Resultados acotados:** 211 pruebas unitarias previas de `sv_core` y 45 pruebas de integración nuevas: 44 negativos individuales y una prueba que reúne nueve positivos. La sonda ejerce los 53 casos en cuatro entradas —ordinaria, perfil español y ensamblaje en ambos órdenes—: 212 resultados por destino, con control de reparación para cada negativo. `43/43` mutantes dirigidos detectados, incluidos `LB01…LB19`; cero supervivientes y cero inválidos. La codificación coincide con el testigo independiente `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`. No se deduce de esas cifras cobertura universal ni una segunda realización semántica.
+
+| Artefacto de Actions | Identificador | Bytes declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| Mutaciones dirigidas | 10043171096 | 161965 | `4a27b24060ede1addad7ee4f74af7b4eb48cccc454a15fa90be354f1a99ddfc2` |
+| Sensibilidad del observador | 10043154978 | 5014 | `575e8d0eeb4afff7232369438da42b03362d1a3d5ba9179a3dfb6a39767aecf8` |
+| R0-8 | 10043158762 | 414226 | `25d183bb3fe62a6d860d08d4c272c5388703d6e2d02bbc33e3d8a3abc0a9a84c` |
+| Paridad, incluidas sondas e informes LIG | 10043175787 | 2634607 | `f644f0f09054e5d207b820aa72a28a454de567e8d54d8a706dc92287bf718d4e` |
+
+Las huellas de archivo de esta tabla proceden de los metadatos de Actions; no se afirma haber recalculado localmente el SHA-256 de los ZIP. Las ejecuciones y sus registros sí se han inspeccionado. El banco y los esperados están comprometidos, disponibles para reproducción; las sondas conservadas son artefactos de pruebas, no adaptadores productivos.
+
+**Decisión actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #80 apilada sobre #79. La cola documental sólo registra evidencia; las comprobaciones de su cabeza exacta quedan enlazadas en la PR. DFL-005 ya tiene una realización verificable de ligaduras LIG/0.1; no queda por diseñar esa representación desde cero. Permanecen el contraste externo de #79/#80, la resolución final por operación de las pérdidas G/H y la candidata completa de fila 7. Los documentos referidos conservan identidad, pero su semántica y autoridad no se dan por ejecutadas ni autenticadas. La fila 7 permanece abierta.
+
 ## 4. Estado de continuidad
 
 **Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.
