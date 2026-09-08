@@ -95,6 +95,15 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Obligación:** la gramática 0.2 §1 conserva las producciones de v0.1 §§5.4–5.5, que impiden repetir campos opcionales; v0.2 §14 precisa su recepción. El control de claves JSON posteriores no descubre una pérdida que ya ocurrió durante el análisis de la fuente.
 - **Cierre RETP-087:** la [radiografía §18](../arquitectura/N0_RADIOGRAFIA_DE_OBJETOS_INVARIANTES_Y_ORACULOS_DEL_NUCLEO_SV_2026_09_04.md#campos-opcionales-20260907) inventaría los seis campos opcionales, corrige cuatro y comprueba las dos guardas singulares ya existentes. Repetición e inversión se rechazan antes de perder información; las listas conservan sus elementos. Conformidad 100/100, dos pruebas de integración y 64 testigos en nativo/WASI/navegador exigidos sobre la candidata exacta. **Estado: cerrada en ese alcance tras verificación e integración.** La retirada Python se conserva como antecedente y no recibe esta reparación retrospectivamente.
 
+### DFL-011 — Revisión integral del español en todos los repositorios SV
+
+- **Mandato:** acta de uso del español de 07/09/2026 y RETP-2026-092, conservados íntegramente. Comprende todos los repositorios SV, públicos y privados.
+- **Aplicación inmediata:** toda redacción nueva o revisada debe respetar el español correcto, natural, técnico y preciso.
+- **Condición final:** una vez resueltas las obligaciones técnicas previas y antes del cierre del núcleo, revisar íntegramente todos los repositorios conforme al acta. La revisión integral no está realizada y no suspende la continuidad de la fila 7.
+- **Restauración de 08/09/2026:** se recuperan el acta y su CSV desde `149fcbc0c7cd5a1b9b5870272e5f7f1103376185`, sin alterar sus bytes. La retirada posterior no revocó el mandato ni liberó este identificador.
+- **Evidencia:** [acta autorizada](./ACTA_DE_USO_DEL_ESPANOL_EN_TODOS_LOS_REPOSITORIOS_SV_2026_09_07.md), [CSV RETP-092](./RETP_2026_092_USO_DEL_ESPANOL_EN_REPOSITORIOS_SV.csv) y registro maestro RETP-092.
+- **Estado:** vigente; revisión integral pendiente antes de la consolidación final. Su alcance y autoridad permanecen intactos.
+
 ## 3. Estado de FFL-B
 
 FFL-B se cerró tras E215 porque las obligaciones restantes identificadas no podían materializarse de forma honesta mediante una comprobación estructural adicional sin ampliar representación, semántica o ejecución.

@@ -59,6 +59,8 @@ La continuidad documental se organiza así:
 | RETP-2026-088 | 07/09/2026 | NO_CONSTA | DELIMITACION_GOBERNADA_Y_RELEVO | Lenguaje SV / K1-T → F | ruta productiva no habilitada; salida acotada tras candidata verificada |
 | RETP-2026-089 | 07/09/2026 | NO_CONSTA | CONTRATO_CANDIDATO_Y_RELEVO | Lenguaje SV / F → F-IF | contrato por operación; ligaduras, suficiencia y pérdida localizadas; contraste pendiente |
 | RETP-2026-090 | 07/09/2026 | NO_CONSTA | CONTRASTE_SINTETICO_Y_RELEVO | Lenguaje SV / F-IF → G-H | seis espacios documentales; pérdida por operación; relevo IMM tras candidata verificada |
+| RETP-2026-091 | 07/09/2026 | NO_CONSTA | RECEPCION_DOCUMENTAL | Lenguaje SV / fila 7 | Recepción G/H: suficiencia no acreditada para ejecutar Q0 |
+| RETP-2026-092 | 07/09/2026 | NO_CONSTA | MANDATO_Y_RESTAURACION_DOCUMENTAL | Lenguaje SV / fila 7 | Español obligatorio y revisión integral final: DFL-011 |
 
 ## 3. Entradas detalladas
 
@@ -400,7 +402,25 @@ La continuidad documental se organiza así:
 - **Verificación:** Conformidad SVP exigida en candidata exacta con la campaña añadida y corpus 100/100 preservado. Código Rust, Gramática/IR/perfiles y Playground intactos. La paridad PR #74 conserva su corte; no se la cuenta como ejecución nueva de F-IF. Se reutilizan PT y 012/016/018 con sus límites, sin garantía material adicional.
 - **Decisión:** integración verificada completa fila 5 en alcance sintético; [transición §30](../dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md#f-if-relevo-20260907) entrega fila 6/G-H. No se adelantan CYB, álgebra, K2, frontera ni consolidación; DFL-009 sigue en fila 9 y acceso editorial aplazado.
 
+### RETP-2026-091 — Recepción documental de G/H
+
+- **Expediente:** [Markdown RETP-091](./RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.md) y [CSV vinculado](./RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.csv), ambos conservados. Este enlace al maestro se incorpora el 08/09/2026; no inventa una integración ni una ejecución anterior.
+- **Identidad:** Lenguaje `bc3b22c9e9319e8f191390c8cfe9fa1577904d87`; retorno G/H `54fe0d89c9e59065eae2bc8a38f5ec0832ece4b9`; recepción candidata `9b32edda21072b3d2a138d9e92d95febdbc21ac4`, PR #77.
+- **Dictamen:** `SUFICIENCIA_NO_ACREDITADA_PARA_EJECUTAR_Q0`. No afirma irrepresentabilidad; SP-01…SP-12 siguen sin ejecución integral.
+- **Continuidad:** la fila 7 queda abierta en la candidata con PT01/PT03/PT04/PT14. DFL-005, H06/H07 y las restantes obligaciones conservan sus límites. Inmunología permanece en pausa; constituir el primer universo falsador de Ciberseguridad corresponde a su unidad cuando reciba una candidata apta.
+- **Estado:** `RECIBIDO_EN_CANDIDATA_NO_INTEGRADA`.
+
+### RETP-2026-092 — Restauración del mandato del español
+
+- **Documentos autorizados:** [acta del español](./ACTA_DE_USO_DEL_ESPANOL_EN_TODOS_LOS_REPOSITORIOS_SV_2026_09_07.md) y [CSV RETP-092](./RETP_2026_092_USO_DEL_ESPANOL_EN_REPOSITORIOS_SV.csv). Este apartado es su enlace Markdown desde el maestro; no sustituye ni altera el acta.
+- **Identidad de restauración, 08/09/2026:** fuente `149fcbc0c7cd5a1b9b5870272e5f7f1103376185`; objeto Git del acta `89be13febe50f2893e738471ab246e1ac33b45a7`; objeto Git del CSV `fe737cbe3a61e670ad1365b6d3cd1796e96e2a06`. Se restituyen exactamente los bytes autorizados.
+- **Gobierno:** DFL-011 pertenece a la revisión integral del español en todos los repositorios SV, públicos y privados. El mandato rige desde su aprobación; la retirada posterior fue un error de la candidata.
+- **Momento:** español correcto desde ahora en redacción nueva o revisada; revisión integral, una vez resuelto el trabajo técnico previo y antes del cierre del núcleo. No suspende la fila 7 ni autoriza modificaciones indiscriminadas de README o actas históricas.
+- **Estado:** `PENDIENTE_DFL-011`; la revisión integral no se declara realizada.
+
 ## 4. Estado de continuidad
+
+**Sucesión registral de 08/09/2026 (PR #77, candidata):** RETP-091 recibe G/H y RETP-092 restituye el mandato del español. Estos asientos describen una candidata sin integrar; `main@bc3b22c9` conserva RETP-090. La fila 7 permanece abierta y la fila 8 no se activa. El estado B2 que sigue conserva su alcance histórico.
 
 FFL-A, FFL-B, FFL-C y FFL-E permanecen cerrados; FFL-D permanece pendiente dentro de su alcance propio.
 
