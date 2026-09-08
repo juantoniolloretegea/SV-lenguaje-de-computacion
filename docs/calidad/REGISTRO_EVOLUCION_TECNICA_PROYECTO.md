@@ -640,7 +640,32 @@ Las huellas de archivo de esta tabla proceden de los metadatos de Actions; no se
 
 **Estado:** `CONTRATO_Y_RESOLUCION_CANDIDATOS_PENDIENTES_DE_PRUEBA`. Las fuentes originales se identifican por bytes, SHA-256 y blob Git; el inventario público es una extracción, no una reverificación de las 44 fuentes primarias. Falta ejecutar y revisar esta candidata. Fila 7 abierta; CYB no abierta; PR #79/#80 sin promoción.
 
+
+**Verificación material:** `bcf25c5b566a6535ba1c3851346fbb355b98ae84`, árbol `1396245f5ef0d14528dc2fa2347350d460b898ab`. La composición de Actions `32b07237ee5696f78dc23fbc696f02e41b42a856` tiene padres `d374e1cb…` y `bcf25c5b…` y exactamente el mismo árbol; no es una integración en main. El contrato previo quedó fijado en `b75b090687daecfacb4be05a836d2bd97359a68e`.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust, referencia 1.98.0 y compatibilidad adicional 1.98.1 | [34199496426](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496426) | Conforme |
+| Conformidad SVP | [34199496454](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496454) | Conforme |
+| R0-8 nativa | [34199496495](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496495) | Conforme |
+| Paridad nativa/WASI/navegador | [34199496428](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34199496428) | Conforme; informes GH-LIG literalmente idénticos |
+
+**Resultado leído en los registros completos:** 48 transportes admitidos, 16 recuperaciones F0, 16 recuperaciones con S declarada, 16 controles conservados en H y ocho pérdidas H demostradas. Ocho pruebas Rust nuevas satisfactorias; se mantienen las 211 unitarias previas. El observador rechaza 16/16 ataques por la causa fijada y admite el control reserializado. La campaña previa de núcleo conserva 43/43 mutantes dirigidos detectados, sin supervivientes ni inválidos. No se suman ambas campañas como un porcentaje universal.
+
+| Paquete de evidencia | Artefacto | Bytes ZIP declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| directed-mutation-sensitivity | 10045252545 | 161954 | `b15f36e615ae86d9b7cf96b6dea74a27ab5d281d5faa3de89b8bbc3e581b0ed1` |
+| oracle-sensitivity | 10045231173 | 5014 | `f2f4651664e15d04f7969752dac30e296a5d3e961c3916f4358c87952d45cff7` |
+| gh-lig-documental | 10045225622 | 6979 | `5055e58b73dd70ad0d6514bda2e2c717cee396e0842c42abff92fe43ca182533` |
+| r0-wasm-three-way-parity | 10045257855 | 3382205 | `0572e01f215520ac5a64c704f77088345f956ed00f84892702fd8f09570da7be` |
+
+Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo local de esos archivos. Las fuentes y entradas están comprometidas, los registros de ejecución se han inspeccionado y la campaña es reproducible por sus órdenes públicas.
+
+**Estado actual:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`, PR #81 sobre #80. La matriz queda contrastada en su inventario y en el transporte documental ensayado; su suficiencia como entrega de fila 7 requiere revisión, no la decide el verificador. Las doce SP integradas siguen no ejecutadas. La cola de evidencia no altera el núcleo, las sondas ni sus esperados originales; la comprobación de la cabeza final se enlaza en la PR. Continúan sin promoción #79/#80/#81 y sin emisión a CYB. No queda por realizar este transporte; permanecen el contraste externo y la decisión sobre el alcance de la candidata completa. Ninguna operación excluida se ofrece por el hecho de estar documentada.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-099, 08/09/2026 (candidata):** PR #81 verifica transporte G/H por LIG y conserva el inventario 15/44/81 con límites por operación. #79/#80/#81 siguen no promovidas; fila 7 abierta. Este asiento sucede a las descripciones candidatas anteriores sin retroeditarlas.
 
 **Sucesión RETP-097, 08/09/2026 (candidata):** la coherencia local H06/H07 se ha verificado sobre `abe5e544…`, con cuatro flujos conformes. DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. PR #79 no promovida.
 

@@ -762,7 +762,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-02",
@@ -780,7 +780,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-03",
@@ -799,7 +799,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-04",
@@ -819,7 +819,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-05",
@@ -838,7 +838,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-06",
@@ -857,7 +857,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-07",
@@ -875,7 +875,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     },
     {
       "id": "GH-DOC-08",
@@ -894,7 +894,7 @@
         "HS"
       ],
       "expected_loss_in_H": true,
-      "evidence": "tests/row7_gh/; resultado de ejecución pendiente"
+      "evidence": "Corte bcf25c5b566a6535ba1c3851346fbb355b98ae84; 6 transportes; recuperación F0/HS y control H en ambos estados; pérdida H comprobada. Acciones 34199496426/34199496428."
     }
   ],
   "families": [
@@ -959,5 +959,44 @@
       "limit": "Historia previa necesaria no es seguimiento posterior al inicio. No exige toda historia clínica: sólo las dependencias declaradas. Persistencia/custodia material siguen R2/R3/R4."
     }
   ],
-  "acceptance": "Inventario íntegro y partes documentales probadas no equivalen a suficiencia Q0 ni autorizan automáticamente el relevo. Revisión externa de candidatas apiladas pendiente."
+  "acceptance": "Inventario íntegro y partes documentales probadas no equivalen a suficiencia Q0 ni autorizan automáticamente el relevo. Revisión externa de candidatas apiladas pendiente.",
+  "material_evidence": {
+    "head": "bcf25c5b566a6535ba1c3851346fbb355b98ae84",
+    "tree": "1396245f5ef0d14528dc2fa2347350d460b898ab",
+    "verification": "CONFORME_EN_TRANSPORTE_DOCUMENTAL",
+    "transports": 48,
+    "full_recoveries": 16,
+    "recoveries_with_declared_side_information": 16,
+    "reduced_controls": 16,
+    "losses_in_H": 8,
+    "observer_directed_mutations": 16,
+    "observer_survivors": 0,
+    "core_directed_mutations": 43,
+    "core_survivors": 0,
+    "same_rust_three_targets": true,
+    "independent_semantics": false,
+    "clinical_integration_executed": false,
+    "runs": [
+      {
+        "id": 34199496495,
+        "name": "R0-8 Baseline nativa",
+        "conclusion": "success"
+      },
+      {
+        "id": 34199496454,
+        "name": "Conformidad SVP",
+        "conclusion": "success"
+      },
+      {
+        "id": 34199496426,
+        "name": "R0 Rust",
+        "conclusion": "success"
+      },
+      {
+        "id": 34199496428,
+        "name": "R0 WASM paridad nativa y navegador",
+        "conclusion": "success"
+      }
+    ]
+  }
 }

@@ -53,3 +53,20 @@ Cada requisito mantiene los responsables del retorno. Los tratamientos siguiente
 El verificador debe rechazar omisiones o duplicaciones de los 15/44 requisitos, los 81 enlaces recibidos, las ocho familias GH-DOC, las doce SP y las seis familias/18 consultas F-IF. La trazabilidad de los 27 parámetros y las cuatro salidas se conserva en el inventario; `REQ-IMM-SV-011` permanece `U_NO_DECIDIDO`. No se convierte ningún grupo, ni siquiera el de nueve, en célula. IF-IMM-02/03 mantienen su no aplicabilidad Q0; las demás conservan exactamente el límite recibido, no una adopción universal.
 
 La revisión de la matriz decidirá si las capacidades ofrecidas bastan como candidata para el segundo falsador. Hasta esa recepción, #79/#80 y este incremento siguen sin promover y la fila 7 permanece abierta. Ciberseguridad constituye su propio universo en la fila 8; no recibe una obligación de completar Q0. Tampoco se solicita ahora un retorno de Inmunología. DFL-005 no se cierra globalmente: su representación candidata está materializada, mientras las operaciones que requieran interpretación, autoridad, transducción o resultados integrados conservan sus condiciones. DFL-011, el acta del español y RETP-092 no se alteran; DFL-012/013 conservan sus identidades. No se modifican README ni actas históricas.
+
+
+## 6. Resultado y reproducción del corte material
+
+RETP-099 registra la ejecución de `bcf25c5b566a6535ba1c3851346fbb355b98ae84`: 48 transportes, 16 recuperaciones F0, 16 HS, 16 controles H y ocho pérdidas H; ocho pruebas Rust; 16 ataques del observador rechazados por su causa. Nativo/WASI/navegador emiten informes idénticos. Los cuatro flujos son conformes y conservan la campaña previa de 43 mutantes de núcleo. PR #81 continúa candidata y no promovida.
+
+Desde la raíz del repositorio, con Rust/Cargo 1.98.0 y Node disponibles:
+
+```sh
+python tests/row7_gh/generar_entradas.py --check
+node tests/row7_gh/verificar.mjs --inventario
+cargo +1.98.0 run --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe > gh-observaciones.json
+node tests/row7_gh/verificar.mjs gh-observaciones.json --autoprueba
+cargo +1.98.0 test --manifest-path rust/Cargo.toml -p sv_core --test gh_bindings
+```
+
+El flujo `r0-wasm-parity.yml` conserva las órdenes exactas de construcción WASI y ejecución en navegador real, sus informes y artefactos. El modo `--inventario` sólo acredita el inventario; exige un informe real para comprobar transporte. `CONFORME_EN_TRANSPORTE_DOCUMENTAL` no significa suficiencia Q0, autenticación clínica ni cierre de fila 7.
