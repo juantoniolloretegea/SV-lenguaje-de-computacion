@@ -673,6 +673,8 @@ Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo lo
 
 **Rectificación de alcance:** sólo #81 conserva intactos los archivos de realización del núcleo. La pila #79/#80 incluye nuevas capacidades y guardas de bienformación, que sí cambian la aceptación de entradas. El número de inserciones no demuestra identidad semántica. La prosa de la matriz permanece sometida a revisión humana, expresamente fuera de lo que acredita el verificador.
 
+**Realización candidata:** contrato íntegro en la sonda, codificación JavaScript independiente y correspondencia completa con la plantilla/testigo recibidos. El vector fijo de RETP-098 concuerda con el nuevo codificador. La autoprueba reúne 28 ataques previstos: los 16 anteriores (MG09 ahora exige recálculo) y doce nuevos, incluidos F0/HS, ambas H falsas, todas las huellas cero y contratos modificados con huella recalculada. La ejecución integrada aún está pendiente.
+
 **Estado:** `CORRECCION_DEL_OBSERVADOR_PENDIENTE_DE_PRUEBA`. Se conservan los resultados y límites de RETP-099 en su corte; el nuevo incremento requiere su propia verificación. Fila 7 abierta; candidatas sin promover; doce SP integradas sin ejecución acreditada.
 
 ## 4. Estado de continuidad

@@ -3,6 +3,8 @@
 #[path = "../row7_bindings/cases.rs"]
 mod carrier;
 use sv_core::bindings::*;
+#[path = "contract_json.rs"]
+mod contract_json;
 
 pub struct Input {
     witness: &'static str, state: &'static str, variant: &'static str,
@@ -84,9 +86,11 @@ pub fn report() -> Result<String, String> {
         let definition = get(&value,&value.operation().definition);
         let side = value.operation().side_information.iter().map(|r| artifact_json(get(&value,r))).collect::<Vec<_>>().join(",");
         let inventory = value.contract().artifacts.iter().map(|a|format!("\"{}\"",a.reference.identifier)).collect::<Vec<_>>().join(",");
-        rows.push(format!("{{\"witness\":\"{}\",\"state\":\"{}\",\"variant\":\"{}\",\"operation\":\"{}\",\"contract_sha256\":\"{}\",\"scope\":\"{:?}\",\"source\":{},\"definition\":{},\"side\":[{}],\"artifact_ids\":[{}]}}",
+        rows.push(format!("{{\"witness\":\"{}\",\"state\":\"{}\",\"variant\":\"{}\",\"operation\":\"{}\",\"contract_sha256\":\"{}\",\"scope\":\"{:?}\",\"source\":{},\"definition\":{},\"side\":[{}],\"artifact_ids\":[{}],\"contract\":{}}}",
             input.witness,input.state,input.variant,value.operation().identifier,value.expectation().sha256,value.operation().input_scope,
-            artifact_json(source),artifact_json(definition),side,inventory));
+            artifact_json(source),artifact_json(definition),side,inventory,contract_json::json(value.contract())));
     }
-    Ok(format!("{{\"schema\":\"GH-LIG-OBSERVACIONES/0.1\",\"results\":[{}]}}", rows.join(",")))
+    let program = carrier::program(0)?;
+    Ok(format!("{{\"schema\":\"GH-LIG-OBSERVACIONES/0.2\",\"program\":{{\"source_file\":\"{}\",\"source_sha256\":\"{}\",\"projection_hex\":\"{}\"}},\"results\":[{}]}}",
+        program.source_file(),program.source_sha256(),hex(sv_core::equivalence_json(&program).as_bytes()),rows.join(",")))
 }

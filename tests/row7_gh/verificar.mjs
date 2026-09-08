@@ -3,6 +3,7 @@ import {readFileSync} from 'node:fs';
 import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
+import {contractHash} from './contract_hash.mjs';
 
 const root = new URL('./', import.meta.url);
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
@@ -19,6 +20,45 @@ const variants = ['F0','H','HS'];
 const ids = rows => rows.map(row => row.id);
 const jsonBytes = value => Buffer.from(JSON.stringify(value),'utf8');
 const rowKey = r => `${r.witness}/${r.state}/${r.variant}`;
+const carrierTemplate = pinned('../row7_bindings/synthetic_hash_contract.json','4b82fee9fd4ca9987c84cc453a3043392d5531660c3bc02043920fff8cb4ad85');
+for (const a of carrierTemplate.artifacts) {
+  a.hex=Buffer.from(a.text,'utf8').toString('hex'); delete a.text;
+}
+const codecReferenceHash='beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0';
+requireThat(contractHash(carrierTemplate)===codecReferenceHash,'CODIFICACION_TESTIGO_INDEPENDIENTE');
+const carrierBytes=readFileSync(new URL('../row7_bindings/base.svp',root));
+requireThat(hash(carrierBytes)==='accbd7b0d8af928d392a2ad379cd70b7d1d9322925d92a40e0ec69ac2882d9c5','FUENTE_PORTADORA');
+
+// Integra bytes y metadatos de proyección; no constituye una segunda semántica de compilación.
+function verifyProgram(p) {
+  requireThat(p && p.source_file==='ligaduras.svp' && p.source_sha256===hash(carrierBytes),'PROGRAMA_FUENTE');
+  requireThat(typeof p.projection_hex==='string' && /^(?:[0-9a-f]{2})+$/.test(p.projection_hex),'PROGRAMA_PROYECCION');
+  const bytes=Buffer.from(p.projection_hex,'hex');
+  let projection;
+  try { projection=JSON.parse(new TextDecoder('utf-8',{fatal:true}).decode(bytes)); }
+  catch { throw new Error('PROGRAMA_PROYECCION'); }
+  requireThat(projection.source_file===p.source_file && projection.source_sha256===p.source_sha256,'PROGRAMA_PROYECCION');
+  return {source_file:p.source_file,source_sha256:p.source_sha256,projection_sha256:hash(bytes)};
+}
+function expectedContract(witness,state,variant,program) {
+  const c=structuredClone(carrierTemplate);
+  c.identifier=`${witness.id}-${variant}`;c.program=program;
+  c.instances=c.instances.slice(0,1);c.instances[0].ternarizer=null;
+  const op=c.operations[0];op.uses=op.uses.slice(0,1);op.uses[0].destination=null;op.uses[0].alias_of=null;
+  op.requires_destination=false;op.sharing=[];op.input_scope=variant==='HS'?'BindingsWithSideInformation':'BindingsOnly';op.side_information=[];
+  c.artifacts=c.artifacts.filter(a=>!['Tau','Compartir','Lateral'].includes(a.reference.identifier));
+  const replace=(a,value)=>{const bytes=jsonBytes(value);a.hex=bytes.toString('hex');a.reference.sha256=hash(bytes);};
+  const packet=variant==='F0'?state.packet:Object.fromEntries(Object.entries(state.packet).filter(([key])=>key!=='detail'));
+  const provenance=c.artifacts.find(a=>a.reference.identifier==='FuenteP');replace(provenance,packet);
+  c.instances[0].provenance=[structuredClone(provenance.reference)];
+  const definition=c.artifacts.find(a=>a.reference.identifier==='OP');definition.reference.identifier=witness.operation.id;replace(definition,witness.operation);
+  op.identifier=witness.operation.id;op.definition=structuredClone(definition.reference);
+  if(variant==='HS') {
+    const side={reference:{identifier:'S',version:'1',sha256:''},kind:'SideInformation',hex:''};
+    replace(side,{detail:state.packet.detail});c.artifacts.push(side);op.side_information=[structuredClone(side.reference)];
+  }
+  return c;
+}
 
 // Este control demuestra integridad del inventario, no dicta la suficiencia de una decisión.
 export function verifyResolution(resolution) {
@@ -77,7 +117,8 @@ function ask(packet,operation) {
 }
 export function verify(report,resolution) {
   const matrix = verifyResolution(resolution);
-  requireThat(report.schema === 'GH-LIG-OBSERVACIONES/0.1' && Array.isArray(report.results), 'INFORME_ESQUEMA');
+  requireThat(report.schema === 'GH-LIG-OBSERVACIONES/0.2' && Array.isArray(report.results), 'INFORME_ESQUEMA');
+  const program=verifyProgram(report.program);
   const expectedKeys = source.witnesses.flatMap(w => w.domain.states.flatMap(s => variants.map(v => `${w.id}/${s.id}/${v}`)));
   requireThat(report.results.length === expectedKeys.length, 'INVENTARIO');
   requireThat(same(report.results.map(rowKey),expectedKeys), 'IDENTIDAD_TESTIGO');
@@ -111,6 +152,9 @@ export function verify(report,resolution) {
           requireThat(lost,'PERDIDA_NO_EJERCIDA');
           h.push({bytes:row.source.hex,contract:row.contract_sha256,expected:state.expected});
         }
+        // El contrato se coteja ANTES del hash: recalcular una falsificación no la legitima.
+        requireThat(same(row.contract,expectedContract(witness,state,variant,program)),'CONTRATO_TESTIGO');
+        requireThat(contractHash(row.contract)===row.contract_sha256,'CONTRATO_RECALCULO');
       }
     }
     requireThat(h[0].bytes === h[1].bytes && h[0].contract === h[1].contract, 'H_IDENTIDAD');
@@ -118,6 +162,9 @@ export function verify(report,resolution) {
   }
   return {verification:'CONFORME_EN_TRANSPORTE_DOCUMENTAL',transports:report.results.length,full_recoveries:full,
           recoveries_with_declared_side_information:sideRecovery,reduced_controls:controls,losses_in_H:losses,matrix,
+          contract_hashes_recomputed:report.results.length,codec_reference_hash:codecReferenceHash,
+          program_projection_bytes_hashed:true,program_semantics_independently_revalidated:false,
+          executor_run_proven_by_report_alone:false,
           sv_query_executed:false,q0_executed:false,clinical_authority_authenticated:false};
 }
 function replaceBytes(artifact,value) { const bytes=jsonBytes(value); artifact.hex=bytes.toString('hex'); artifact.sha256=hash(bytes); }
@@ -132,7 +179,7 @@ export function sensitivity(report,resolution) {
     ['MG06_S_atribuida_a_H','ALCANCE_S',(r)=>select(r,'HS').scope='BindingsOnly'],
     ['MG07_operacion_sustituida','OPERACION',(r)=>r.results[0].operation='OTRA'],
     ['MG08_referente_sustituido','REFERENTE',(r)=>r.results[0].source.id='OTRA'],
-    ['MG09_H_filtra_estado','H_IDENTIDAD',(r)=>select(r,'H').contract_sha256='a'.repeat(64)],
+    ['MG09_H_filtra_estado','CONTRATO_RECALCULO',(r)=>select(r,'H').contract_sha256='a'.repeat(64)],
     ['MG10_huella_de_artefacto','ARTEFACTO_INTEGRIDAD',(r)=>r.results[0].source.sha256='a'.repeat(64)],
     ['MG11_artefacto_lateral_oculto','REGISTRO_ARTEFACTOS',(r)=>select(r,'H').artifact_ids.push('S')],
     ['MG12_formulacion_omitida','MATRIZ_INVENTARIO',(_r,m)=>m.lsv.pop()],
@@ -140,6 +187,18 @@ export function sensitivity(report,resolution) {
     ['MG14_fila_cerrada','MATRIZ_ALCANCE',(_r,m)=>m.row7_closed=true],
     ['MG15_S_sustituida_con_huella_recalculada','CONTENIDO_S',(r)=>replaceBytes(select(r,'HS').side[0],{detail:{inventado:true}})],
     ['MG16_definicion_sustituida','DEFINICION',(r)=>replaceBytes(r.results[0].definition,{id:r.results[0].operation,paths:['context']})],
+    ['MH01_huella_F0','CONTRATO_RECALCULO',(r)=>select(r,'F0').contract_sha256='0'.repeat(64)],
+    ['MH02_huella_HS','CONTRATO_RECALCULO',(r)=>select(r,'HS').contract_sha256='0'.repeat(64)],
+    ['MH03_ambas_H_falsas','CONTRATO_RECALCULO',(r)=>r.results.filter(x=>x.witness==='GH-DOC-01'&&x.variant==='H').forEach(x=>x.contract_sha256='0'.repeat(64))],
+    ['MH04_todas_las_huellas_cero','CONTRATO_RECALCULO',(r)=>r.results.forEach(x=>x.contract_sha256='0'.repeat(64))],
+    ['MH05_propietario_y_huella','CONTRATO_TESTIGO',(r)=>{const x=r.results[0];x.contract.instances[0].owner='OTRO';x.contract_sha256=contractHash(x.contract);}],
+    ['MH06_alias_y_huella','CONTRATO_TESTIGO',(r)=>{const x=r.results[0];x.contract.operations[0].uses[0].alias_of='U1';x.contract_sha256=contractHash(x.contract);}],
+    ['MH07_artefacto_y_huella','CONTRATO_TESTIGO',(r)=>{const x=r.results[0];x.contract.artifacts.pop();x.contract_sha256=contractHash(x.contract);}],
+    ['MH08_proyeccion_contractual_y_huella','CONTRATO_TESTIGO',(r)=>{const x=r.results[0];x.contract.program.projection_sha256='0'.repeat(64);x.contract_sha256=contractHash(x.contract);}],
+    ['MH09_fuente_portadora','PROGRAMA_FUENTE',(r)=>r.program.source_sha256='0'.repeat(64)],
+    ['MH10_proyeccion_sin_metadatos','PROGRAMA_PROYECCION',(r)=>r.program.projection_hex=Buffer.from('{}').toString('hex')],
+    ['MH11_contrato_ausente','CONTRATO_TESTIGO',(r)=>delete r.results[0].contract],
+    ['MH12_clase_y_huella','CONTRATO_TESTIGO',(r)=>{const x=r.results[0];x.contract.artifacts[0].kind='Provenance';x.contract_sha256=contractHash(x.contract);}],
   ];
   verify(JSON.parse(JSON.stringify(report,null,2)),JSON.parse(JSON.stringify(resolution,null,2)));
   const rows=[];
@@ -150,7 +209,8 @@ export function sensitivity(report,resolution) {
     requireThat(actual===cause,`${id}: esperado ${cause}, recibido ${actual}`);
     rows.push({id,expected:cause,actual});
   }
-  return {reserialized_control:'ACCEPTED',directed_mutations:rows.length,survivors:0,semantic_artifact_hashes_recalculated:true,results:rows};
+  return {reserialized_control:'ACCEPTED',directed_mutations:rows.length,survivors:0,semantic_artifact_hashes_recalculated:true,
+          semantic_contract_hashes_recalculated:true,results:rows};
 }
 
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
