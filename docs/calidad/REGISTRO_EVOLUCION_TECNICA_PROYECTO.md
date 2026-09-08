@@ -63,7 +63,7 @@ La continuidad documental se organiza así:
 | RETP-2026-092 | 07/09/2026 | NO_CONSTA | MANDATO_Y_RESTAURACION_DOCUMENTAL | Lenguaje SV / fila 7 | Español obligatorio y revisión integral final: DFL-011 |
 | RETP-2026-093 | 07/09/2026 | NO_CONSTA | CORRECCION_LOCAL_Y_COBERTURA | Lenguaje SV / fila 7 | TransitionData: cierre local candidato H04/H05 y corpus compartido 14+95 |
 | RETP-2026-094 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_ORACULO_Y_REGISTROS | Lenguaje SV / fila 7 | E115: cuatro causas discriminadas y prueba de intercambio |
-| RETP-2026-095 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_TESTIGO_Y_ORACULO | Lenguaje SV / fila 7 | CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA |
+| RETP-2026-095 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_TESTIGO_Y_ORACULO | Lenguaje SV / fila 7 | CANDIDATA_VERIFICADA_NO_PROMOVIDA |
 
 ## 3. Entradas detalladas
 
@@ -490,9 +490,39 @@ Los paquetes conservan las entradas, salidas, comandos, versiones y huellas prod
 - **Estado inicial:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. La comprobación integrada debe añadirse con su cabeza, ejecuciones y artefactos; ningún resultado previo acredita esta modificación.
 
 
+#### Verificación integrada de RETP-095 · 08/09/2026
+
+La candidata material `461acc633d364a2eca964539a3835529fbc72c58` supera los cuatro flujos. Actions comprueba la confirmación de ensayo `439f88802e8fc67a0deb56b454eb1ee433cff2d3`, con árbol `9c1b33e8d5008ce622b522bf66d8a4279267eb8a`, idéntico al de la candidata. La base sigue siendo main `bc3b22c9`; esa confirmación de ensayo no es una integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust | [34183907220](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220) | Conforme |
+| Conformidad SVP | [34183907211](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907211) | Conforme |
+| R0-8 Baseline nativa | [34183907292](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907292) | Conforme |
+| R0 WASM paridad nativa y navegador | [34183907306](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907306) | Conforme |
+
+Rust/Cargo 1.98.0 sobre Ubuntu 24.04 es la referencia; Rust/Cargo 1.98.1 se comprueba adicionalmente como compatibilidad de `stable`. Los registros de ejecución confirman:
+
+- observador: 25/25 pruebas;
+- tres pruebas Rust de tabla: rechazo semántico exacto, control válido por sustitución de una salida y rechazo del cierre sintáctico anterior;
+- corpus: 14/14 válidos y 95/95 inválidos en nativo, WASI y navegador; el testigo corregido recorre el corpus compartido;
+- AT01 detectada; campaña dirigida 13/13, cero supervivientes y cero mutaciones inválidas. El banco conserva parches, órdenes, salidas y comprobaciones de restauración; no es un porcentaje exhaustivo de cobertura;
+- los bancos anteriores de conformidad, sensibilidad, F-IF y perfiles mantienen sus comprobaciones y límites.
+
+| Paquete | Artefacto | Bytes del ZIP | SHA-256 declarado por Actions |
+|---|---|---|---|
+| `directed-mutation-sensitivity` | [10039850030](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220/artifacts/10039850030) | 49418 | `2274d34c84c14c0d84036e7ccd9df36623e1591ba52331e30571d4c2875b00f0` |
+| `oracle-sensitivity` | [10039845019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220/artifacts/10039845019) | 5015 | `61b2b7477feaf30f689661b35c2547ab44a1413c5d851711adde3d0dfa1c1846` |
+| `r0-8-baseline-native` | [10039846755](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907292/artifacts/10039846755) | 406236 | `c88311d428a769548f7cf430aae7a26a72933b65765371e6d1b55da44cc1cb30` |
+| `r0-wasm-three-way-parity` | [10039860570](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907306/artifacts/10039860570) | 1838740 | `e94fd7210714ce71fedc360467857f992419dd35fa890223ee8ec06cc7b6cbf5` |
+
+Se han leído los registros de los trabajos y los metadatos de artefactos; sus huellas no se presentan como una descarga y recálculo local de esos ZIP. El control semántico esperado procede del catálogo y del testigo, y la causa exacta se exige en la prueba Rust y en el corpus. La ausencia del literal E011 sigue siendo deuda diagnóstica, independiente de la guarda ahora ejercida.
+
+**Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`. La cola de evidencia actualiza únicamente los tres registros de Calidad y conserva el permiso ejecutable `100755` del comprobador de mutaciones, sin cambiar su contenido probado. La cabeza final conserva su propia comprobación en el expediente de PR #78. Se restablecerá la base `recepcion-gh-20260907` tras verificarla; la PR continúa dependiendo de #77. DFL-001 y fila 7 permanecen abiertas.
+
 ## 4. Estado de continuidad
 
-**Sucesión RETP-095, 08/09/2026 (candidata):** se corrige el testigo E011 y su oráculo; se preservan la guarda semántica existente y la deuda de emisión diagnóstica. La verificación integrada está pendiente; no hay promoción ni cierre de fila 7.
+**Sucesión RETP-095, 08/09/2026 (candidata):** el testigo E011 y su oráculo se han corregido y verificado sobre `461acc633d364a2eca964539a3835529fbc72c58`, con los cuatro flujos conformes. Se preservan la guarda semántica existente y la deuda de emisión diagnóstica; no hay promoción ni cierre de fila 7.
 
 **Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. El corte material `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` ha superado los cuatro flujos; su evidencia se identifica en RETP-094. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
 
