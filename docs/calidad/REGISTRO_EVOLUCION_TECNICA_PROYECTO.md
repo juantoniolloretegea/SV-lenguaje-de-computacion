@@ -679,7 +679,34 @@ Las huellas de ZIP proceden de metadatos de Actions; no se declara recálculo lo
 
 **Estado:** `CORRECCION_DEL_OBSERVADOR_PENDIENTE_DE_PRUEBA`. Se conservan los resultados y límites de RETP-099 en su corte; el nuevo incremento requiere su propia verificación. Fila 7 abierta; candidatas sin promover; doce SP integradas sin ejecución acreditada.
 
+
+**Verificación de la corrección:** `acfd168670ca69af33cc2966d9fce0fc9dd3adcd`, árbol `bbc4a4d4ee7a5937e401cfed993e778abe5f7745`. La composición de Actions `5d6ad5fd32c00d41e80efa4180c37c58456df475` tiene ese mismo árbol, con padres `d374e1cb…` y `acfd1686…`; no es integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| Conformidad SVP | [34202350649](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350649) | Conforme |
+| R0-8 Baseline nativa | [34202350672](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350672) | Conforme |
+| R0 WASM paridad nativa y navegador | [34202350725](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350725) | Conforme |
+| R0 Rust | [34202350608](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34202350608) | Conforme |
+
+Los registros completos de Rust y paridad acreditan **48/48 huellas contractuales recalculadas**, 28/28 ataques rechazados por su causa, control reserializado admitido e identidad literal de informes en nativo/WASI/navegador. Se conservan 48 transportes, 16 recuperaciones F0, 16 HS, 16 controles H y ocho pérdidas H. La campaña previa conserva 43/43 mutantes dirigidos detectados; no se suman esas muestras como cobertura universal.
+
+MH01/MH02 detectan F0/HS falsas; MH03 detecta ambas H con el mismo valor falso; MH04 detecta las 48 huellas cero. MH05–MH08 y MH12 alteran contrato y recalculan su huella: se rechazan por divergencia del testigo. MG09 ya no se presenta como vigilancia del valor por mera desigualdad: ahora falla por `CONTRATO_RECALCULO`. El codificador externo concuerda con el testigo fijo `beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0`, anterior a esta sonda.
+
+| Artefacto | Identificador | Bytes ZIP declarados por GitHub | SHA-256 declarado por GitHub |
+|---|---|---:|---|
+| directed-mutation-sensitivity | 10046352660 | 161959 | `253f11e95dd90e1ab1df73477bb25060a5632431676a451ca79a5861d238753a` |
+| oracle-sensitivity | 10046328397 | 5015 | `90f6479bc3d486523bf90043fc903be96675269cf62c43ae969235e266463432` |
+| gh-lig-documental | 10046322340 | 12124 | `dfa4119bcc3c8aaae9cb21dde020ec61ec62a0d249e6a18f9a7632dac7054e7f` |
+| r0-wasm-three-way-parity | 10046354784 | 3418616 | `64368eb3c321a719d947d7769129ca7f43bce011ef7b5ca2708182f6399e4cf5` |
+
+Se han inspeccionado ejecuciones y registros. Las huellas ZIP son metadatos de GitHub, no recálculos locales. Las entradas y el vector previo de codificación permanecen intactos. La primera ejecución fallida se conserva arriba; no se ha omitido ni reinterpretado como conforme. La corrección de sincronización del navegador conserva presupuesto e igualdad literal.
+
+**Estado actual:** `CORRECCION_VERIFICADA_NO_PROMOVIDA`, PR #81. La cola registral posterior no cambia sondas, codificador ni esperados; la verificación de su cabeza exacta se identifica en la PR. Este cierre se limita al observador contractual. La semántica completa del programa portador, la ejecución del emisor y la suficiencia de la prosa de la matriz no quedan probadas por el informe aislado. Continúan fila 7 abierta, doce SP integradas no ejecutadas y revisión de candidatas #79–#81 pendiente antes de promoción.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-100, 08/09/2026 (candidata):** corregido y verificado el recálculo externo de huellas contractuales GH-LIG. La pila sigue no promovida y la prosa de resolución requiere revisión humana.
 
 **Sucesión RETP-099, 08/09/2026 (candidata):** PR #81 verifica transporte G/H por LIG y conserva el inventario 15/44/81 con límites por operación. #79/#80/#81 siguen no promovidas; fila 7 abierta. Este asiento sucede a las descripciones candidatas anteriores sin retroeditarlas.
 
