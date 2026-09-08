@@ -1,0 +1,14 @@
+codomain K = { A };
+output_semantics S { A -> "a"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec CC { cell: C; bridges: [1, 9]; }
+coupledspec CCFuera { cell: C; bridges: [1, 9]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G { nodes: [CC]; edges: []; relation: R; regime: Simple; }
+horizon H { architecture: G; events: [Cambio]; }
+
+transition_data T {
+  horizon_ref: H;
+  events: [(Cambio, One)];
+  induced_parameters: [(CCFuera, 1, One)];
+}

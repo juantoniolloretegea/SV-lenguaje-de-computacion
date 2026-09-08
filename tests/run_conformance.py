@@ -11,8 +11,10 @@ import argparse
 from pathlib import Path
 import sys
 from oracle_support import (run, assert_success, assert_json_equal, assert_bytes_equal,
-                            assert_rust_rejection,
+                            assert_rust_rejection, RUST_REJECTION_TOKENS,
                             check_invalid_corpus)
+from run_row7_transitiondata_conformance import EXPECTED as ROW7_REJECTION_TOKENS
+
 EXPECTED_OBLIGATIONS = {
     "semantic_relation_table_repetida.svp": "Gramática0.2/§14",
     "semantic_relation_constraints_repetida.svp": "Gramática0.2/§14",
@@ -53,6 +55,15 @@ EXPECTED_OBLIGATIONS = {
     "edge_connector_source_codomain_mismatch.svp": "E113",
     "transition_event_fuera_horizon.svp": "E307",
     "transition_induced_parameters_vacios.svp": "E406",
+    "compose_graph_tipo_incorrecto.svp": "E006/compose(graph):CompositionGraph",
+    "frame_architecture_tipo_incorrecto.svp": "E006/Frame.architecture:CompositionGraph",
+    "transition_event_tipo_repetido.svp": "H05/TransitionData.events",
+    "transition_induced_destino_repetido.svp": "H05/TransitionData.induced_parameters",
+    "transition_induced_node_ausente.svp": "H04/NodeId",
+    "transition_induced_node_fuera_arquitectura.svp": "H04/NodeId∈Horizon.architecture",
+    "transition_induced_node_tipo_incorrecto.svp": "H04/NodeId:CoupledSpec",
+    "transition_induced_position_cero.svp": "H04/1≤position≤n",
+    "transition_induced_position_fuera_rango.svp": "H04/1≤position≤n",
     "bad_b_value.svp": "E002",
     "conector_mapping_incompleto.svp": "E007",
     "conector_target_no_ternario.svp": "E104",
@@ -102,6 +113,12 @@ EXPECTED_OBLIGATIONS = {
     "frame_supervision_externa.svp": "E308",
     "frame_criticality_no_producible.svp": "E308",
 }
+
+# Los nueve testigos compartidos conservan una sola identidad textual, usada
+# tanto por la conformidad general como por la comprobación causal acotada.
+RUST_REJECTION_TOKENS.update(
+    {Path(name).stem: token for name, token in ROW7_REJECTION_TOKENS.items()}
+)
 
 ROOT = Path(__file__).resolve().parents[1]
 VALID_DIR = ROOT / "tests" / "conformance" / "valid"

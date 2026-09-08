@@ -8,13 +8,93 @@ from oracle_support import (OracleError, DuplicateJsonMember, ordered_json,
                             assert_json_equal, assert_bytes_equal, assert_success,
                             assert_rust_rejection,
                             cli_payload, run, assert_json_roundtrip)
+from run_oracle_sensitivity import assert_sensitivity_rejection
 
 
 def result(rc=1, out=b"", err=b""):
     return subprocess.CompletedProcess([], rc, out, err)
 
 
+# N0-02 §2 / IR 0.3 §6.2: cada miembro de K={A,B} aparece una vez,
+# sin claves ajenas. Expectativas fijadas por los cuatro testigos fuente,
+# independientes del diccionario del observador y de la salida del compilador.
+E115_WITNESSES = {
+    "output_semantics_vacia": "repetidas=[]; ausentes=[A, B]; ajenas=[]",
+    "output_semantics_clave_ausente": "repetidas=[]; ausentes=[B]; ajenas=[]",
+    "output_semantics_clave_ajena": "repetidas=[]; ausentes=[]; ajenas=[X]",
+    "output_semantics_clave_repetida": "repetidas=[A]; ausentes=[]; ajenas=[]",
+}
+
+
+def e115_result(cause, objects="CellSpec C, OutputSemantics S, Codomain K"):
+    message = f"E115 (InvalidOutputSemantics): {objects}: {cause}"
+    return result(err=f'SVP no admitido: InvalidProgram("{message}")\n'.encode())
+
+
+def sensitivity_rejections():
+    # Las dos fuentes del banco difieren en la presencia de CellSpec CC.
+    return {
+        'semantics_duplicate': e115_result(
+            'repetidas=[Alpha]; ausentes=[]; ajenas=[]',
+            'CellSpec CC, OutputSemantics SS, Codomain KK'),
+        'semantics_unbound_duplicate': result(err=(
+            b'SVP no admitido: InvalidProgram("E115 (InvalidOutputSemantics): '
+            b'OutputSemantics SS: repetidas=[Alpha]")\n')),
+    }
+
+
 class OracleTests(unittest.TestCase):
+    def test_table_output_accepts_its_semantic_cause(self):
+        # Catálogo efectivo §3/E011 y testigo: FUERA no pertenece a KOut.
+        proc = result(err=b'SVP no admitido: InvalidProgram("AdmissibilityTable T1: salida fuera de codominio")\n')
+        assert_rust_rejection(proc, 'admissibility_table_output_fuera_codominio')
+
+    def test_table_output_rejects_syntax_other_causes_and_another_table(self):
+        diagnostics = [
+            'Frontend(UnexpectedToken("esperado }, recibido Sym(\';\')"))',
+            'InvalidProgram("AdmissibilityTable T1: tabla incompleta")',
+            'InvalidProgram("AdmissibilityTable T1: entrada fuera de codominio")',
+            'InvalidProgram("AdmissibilityTable T2: salida fuera de codominio")',
+        ]
+        for diagnostic in diagnostics:
+            with self.subTest(diagnostic=diagnostic), self.assertRaises(OracleError):
+                assert_rust_rejection(
+                    result(err=f'SVP no admitido: {diagnostic}\n'.encode()),
+                    'admissibility_table_output_fuera_codominio')
+
+    def test_sensitivity_uses_its_own_witnesses(self):
+        for name, proc in sensitivity_rejections().items():
+            with self.subTest(name=name):
+                assert_sensitivity_rejection(name, proc)
+
+    def test_sensitivity_rejects_the_other_scope_and_corpus_objects(self):
+        for name in sensitivity_rejections():
+            others = [proc for other, proc in sensitivity_rejections().items() if name != other]
+            others.append(e115_result('repetidas=[A]; ausentes=[]; ajenas=[]'))
+            for proc in others:
+                with self.subTest(name=name, diagnostic=proc.stderr), self.assertRaises(OracleError):
+                    assert_sensitivity_rejection(name, proc)
+
+    def test_e115_accepts_each_normative_witness(self):
+        for case, cause in E115_WITNESSES.items():
+            with self.subTest(case=case):
+                assert_rust_rejection(e115_result(cause), case)
+
+    def test_e115_rejects_each_other_cause(self):
+        for case in E115_WITNESSES:
+            for other, cause in E115_WITNESSES.items():
+                if case != other:
+                    with self.subTest(case=case, other=other), self.assertRaises(OracleError):
+                        assert_rust_rejection(e115_result(cause), case)
+
+    def test_e115_requires_the_witness_objects(self):
+        for case, cause in E115_WITNESSES.items():
+            for objects in ["CellSpec Otra, OutputSemantics S, Codomain K",
+                            "CellSpec C, OutputSemantics Otra, Codomain K",
+                            "CellSpec C, OutputSemantics S, Codomain Otro"]:
+                with self.subTest(case=case, objects=objects), self.assertRaises(OracleError):
+                    assert_rust_rejection(e115_result(cause, objects), case)
+
     def test_roundtrip_preserves_local_scope_arrays_and_strings(self):
         raw = '{"b":[{"A":"ñ\\n\\t\\\\"},{"A":"igual"}],"a":[1,1,true,null,{},[]]}'.encode()
         repeated = assert_json_roundtrip(raw)

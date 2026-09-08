@@ -10,6 +10,8 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 
 ### DFL-001 — Concordancia entre IR, catálogo e implementación
 
+**Sucesión candidata RETP-095, 08/09/2026:** [el asiento del maestro](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-095) corrige el cierre interno del testigo E011 y exige su causa semántica de pertenencia de salida. La guarda Rust ya existía; la limitación sintáctica de RETP-078/087 se conserva como antecedente. La candidata `461acc633d364a2eca964539a3835529fbc72c58` supera los cuatro flujos, tres pruebas causales Rust y la mutación AT01. No se acredita emisión del código literal E011 ni cierre de DFL-001.
+
 - **Descripción:** persiste una diferencia conocida entre la tabla de diagnósticos definida por la IR v0.2 y el catálogo efectivo de la implementación. La relación entre ambos se mantiene mediante la matriz por identificador y la tabla de correspondencias funcionales.
 - **Reducciones acreditadas en FFL-B:** `E112` protege la restricción posicional de `CoupledState`; `E113` la compatibilidad representable entre aristas y conectores; `E114` la unicidad de `(target, position)` en régimen `Simple`; `E212` y `E211` las condiciones representadas sobre `supervise.meta_eval`; `E006` comprueba el tipo del contenido de `CellTarget`, `ComposedTarget` y `SystemTarget`; `E307` la pertenencia de tipos de suceso al `Horizon`; `E406` la no vaciedad de `TransitionData.induced_parameters`; `E011` la pertenencia de las salidas de `AdmissibilityTable` a `output_codomain`; `E213/E214` la legalidad estructural de las proyecciones; `E206/E207` efectivos la presencia de `context` y `mechanism` en `resolve`; y `E215` la concordancia, en número y codominio por posición, entre las entradas de `gate` y `AdmissibilityTable.input_codomains`.
 - **Reducción acreditada en N0-01:** `E004 — InvalidCodomain` queda fijado como identidad observable única para un `Codomain` vacío o con miembros repetidos, con rechazo equivalente en Python y Rust. El `E101 — EmptyCodomain` de la IR v0.2 se conserva sólo como antecedente histórico porque el catálogo efectivo asigna `E101` a `VectorLengthMismatch`.
@@ -104,6 +106,24 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Evidencia:** [acta autorizada](./ACTA_DE_USO_DEL_ESPANOL_EN_TODOS_LOS_REPOSITORIOS_SV_2026_09_07.md), [CSV RETP-092](./RETP_2026_092_USO_DEL_ESPANOL_EN_REPOSITORIOS_SV.csv) y registro maestro RETP-092.
 - **Estado:** vigente; revisión integral pendiente antes de la consolidación final. Su alcance y autoridad permanecen intactos.
 
+### DFL-012 — Nombre histórico `cell_ref` para una identidad de nodo
+
+- **Hecho:** la proyección 0.1.0 serializa cada elemento de `TransitionData.induced_parameters` con la clave `cell_ref`, aunque el primer componente de la IR es `NodeId` y, en la representación vigente, debe resolver un `CoupledSpec` perteneciente al grafo del horizonte.
+- **Riesgo:** un consumidor puede interpretar el valor como referencia directa a `CellSpec` y colapsar nodos arquitectónicos distintos que compartan la misma especificación celular.
+- **Decisión vigente:** no se cambia silenciosamente el nombre dentro del esquema 0.1.0. La semántica tipada se documenta y se protege con un testigo en el que dos nodos distintos comparten `CellSpec` y conservan identidades independientes.
+- **Objetivo de corrección:** la primera versión incompatible posterior del esquema de proyección, inicialmente 0.2.0, deberá sustituir `cell_ref` por `node_ref` o una denominación equivalente y publicar una regla de migración inequívoca. La transición no podrá emitir simultáneamente dos claves contradictorias ni aceptar una conversión implícita a `CellSpec`.
+- **Estado:** abierta y gobernada; no invalida por sí sola la proyección 0.1.0, pero impide afirmar que su nomenclatura es autosuficiente.
+- **Prioridad:** alta antes de estabilizar una interfaz pública externa o cerrar K2.
+
+### DFL-013 — Independencia entre realizaciones semánticas
+
+- **Hecho:** las vías nativa, WASI y de navegador ejecutan la misma custodia Rust de `sv_core` sobre destinos distintos. La retirada de la realización Python eliminó la comparación entre dos implementaciones semánticas independientes.
+- **Riesgo:** un defecto compartido por `sv_core` puede producir resultados coincidentes en todos los destinos y no ser detectado por la paridad de transporte.
+- **Controles compensatorios actuales:** resultados esperados comprometidos, comprobaciones causales, comparación exacta de bytes y pares JSON, pruebas de sensibilidad y mutaciones dirigidas. Estos controles acreditan consistencia interna y capacidad de detección en sus muestras, pero no restauran la independencia perdida.
+- **Condición de cierre:** disponer de una segunda realización semántica independiente para un subconjunto algebraico expresamente delimitado, o de comprobadores derivados de la doctrina y no de la misma realización, con correspondencia verificable de entradas, salidas y exclusiones.
+- **Estado:** abierta; bloquea cualquier afirmación de independencia entre realizaciones, pero no invalida por sí sola la conformidad interna de la custodia Rust.
+- **Prioridad:** alta antes de la puerta algebraica y de la consolidación nuclear.
+
 ## 3. Estado de FFL-B
 
 FFL-B se cerró tras E215 porque las obligaciones restantes identificadas no podían materializarse de forma honesta mediante una comprobación estructural adicional sin ampliar representación, semántica o ejecución.
@@ -166,4 +186,10 @@ La siguiente decisión de K1 es la multiplicidad de `Horizon.events`, cuyo estat
 
 RETP-084 resuelve la multiplicidad de `Horizon.events` por su carácter de declaración de tipos en el Documento III y la IR: una identidad por horizonte, con rechazo de repeticiones y conservación de orden. La recurrencia del mismo tipo en horizontes o datos de transición distintos permanece. No se amplía el catálogo diagnóstico ni se resuelve la multiplicidad de pares dentro de un único TransitionData o la axiomática general de horizontes.
 
-Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter_id. DFL-005/010, los demás límites de DFL-001 y K1-T permanecen; F no queda habilitada. DFL-009 conserva su evaluación al retornar del primer universo CYB.
+Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter_id. DFL-005/010, los demás límites de DFL-001 y K1-T permanecen; F no queda habilitada. DFL-009 conserva su evaluación al retornar del primer universo CYB como punto de evaluación, sin bloquear este avance.
+
+## 13. Rectificación del observador y de identidades · 08/09/2026
+
+[RETP-094 del maestro](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral) corrige cuatro expectativas E115 que descartaban los conjuntos de claves repetidas, ausentes y ajenas. El cierre local queda probado contra intercambios de causa y de referente; no acredita causalidad exhaustiva del corpus ni cierra DFL-001. El corte `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` supera su propia verificación integrada, identificada en RETP-094; no se cierra por ello DFL-001.
+
+DFL-011 conserva el mandato del español. Se subsana la colisión candidata: `cell_ref` queda en DFL-012 e independencia semántica en DFL-013. La evidencia de RETP-093 conserva su corte y sus límites. DFL-005 y H06/H07 siguen pendientes; H04/H05 sólo tienen el cierre local candidato registrado, sin ejecución ni causalidad entre marcos. Se mantiene la secuencia de filas 7 y 8 y la competencia de Ciberseguridad para constituir su propio universo falsador.

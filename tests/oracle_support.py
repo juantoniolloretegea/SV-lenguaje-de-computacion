@@ -126,17 +126,25 @@ RUST_REJECTION_TOKENS = {
     "agent_arquitecturas_reales_distintas": "Agent AG: architecture incompatible con Domain",
     "output_semantics_sin_celda_repetida": "E115 (InvalidOutputSemantics): OutputSemantics S: repetidas=[A]",
     "connector_clave_repetida": "Connector Conn: clave duplicada",
-    "output_semantics_vacia": "E115 (InvalidOutputSemantics)",
-    "output_semantics_clave_ausente": "E115 (InvalidOutputSemantics)",
-    "output_semantics_clave_ajena": "E115 (InvalidOutputSemantics)",
-    "output_semantics_clave_repetida": "E115 (InvalidOutputSemantics)",
+    "output_semantics_vacia": (
+        "E115 (InvalidOutputSemantics): CellSpec C, OutputSemantics S, Codomain K: "
+        "repetidas=[]; ausentes=[A, B]; ajenas=[]"),
+    "output_semantics_clave_ausente": (
+        "E115 (InvalidOutputSemantics): CellSpec C, OutputSemantics S, Codomain K: "
+        "repetidas=[]; ausentes=[B]; ajenas=[]"),
+    "output_semantics_clave_ajena": (
+        "E115 (InvalidOutputSemantics): CellSpec C, OutputSemantics S, Codomain K: "
+        "repetidas=[]; ausentes=[]; ajenas=[X]"),
+    "output_semantics_clave_repetida": (
+        "E115 (InvalidOutputSemantics): CellSpec C, OutputSemantics S, Codomain K: "
+        "repetidas=[A]; ausentes=[]; ajenas=[]"),
 
     "admissibility_spec_estados_legacy": 'InvalidAdmissibilityState("Failed")',
     "admissibility_spec_failed_legacy": 'InvalidAdmissibilityState("Failed")',
     "admissibility_spec_u_legacy": 'InvalidAdmissibilityState("U")',
     "admissibility_table_incompleta": "tabla incompleta",
-    # Diferencia de fase existente: el cierre interno legado se rechaza al analizar.
-    "admissibility_table_output_fuera_codominio": "esperado }, recibido Sym(';')",
+    # RETP-095: E011 identifica la obligación; Rust exige su causa semántica textual.
+    "admissibility_table_output_fuera_codominio": "AdmissibilityTable T1: salida fuera de codominio",
     "agent_architecture_mismatch": "architecture incompatible con Domain",
     "bad_b_value": "b debe ser >= 3",
     "bridge_position_fuera_de_rango": "posición puente fuera de rango",

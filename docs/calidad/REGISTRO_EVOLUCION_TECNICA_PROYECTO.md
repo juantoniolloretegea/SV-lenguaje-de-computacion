@@ -61,6 +61,9 @@ La continuidad documental se organiza así:
 | RETP-2026-090 | 07/09/2026 | NO_CONSTA | CONTRASTE_SINTETICO_Y_RELEVO | Lenguaje SV / F-IF → G-H | seis espacios documentales; pérdida por operación; relevo IMM tras candidata verificada |
 | RETP-2026-091 | 07/09/2026 | NO_CONSTA | RECEPCION_DOCUMENTAL | Lenguaje SV / fila 7 | Recepción G/H: suficiencia no acreditada para ejecutar Q0 |
 | RETP-2026-092 | 07/09/2026 | NO_CONSTA | MANDATO_Y_RESTAURACION_DOCUMENTAL | Lenguaje SV / fila 7 | Español obligatorio y revisión integral final: DFL-011 |
+| RETP-2026-093 | 07/09/2026 | NO_CONSTA | CORRECCION_LOCAL_Y_COBERTURA | Lenguaje SV / fila 7 | TransitionData: cierre local candidato H04/H05 y corpus compartido 14+95 |
+| RETP-2026-094 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_ORACULO_Y_REGISTROS | Lenguaje SV / fila 7 | E115: cuatro causas discriminadas y prueba de intercambio |
+| RETP-2026-095 | 08/09/2026 | NO_CONSTA | CORRECCION_DE_TESTIGO_Y_ORACULO | Lenguaje SV / fila 7 | CANDIDATA_VERIFICADA_NO_PROMOVIDA |
 
 ## 3. Entradas detalladas
 
@@ -418,7 +421,110 @@ La continuidad documental se organiza así:
 - **Momento:** español correcto desde ahora en redacción nueva o revisada; revisión integral, una vez resuelto el trabajo técnico previo y antes del cierre del núcleo. No suspende la fila 7 ni autoriza modificaciones indiscriminadas de README o actas históricas.
 - **Estado:** `PENDIENTE_DFL-011`; la revisión integral no se declara realizada.
 
+### RETP-2026-093 — Incorporación del subcierre local al maestro
+
+- **Expediente:** [Markdown RETP-093](./RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.md), [CSV vinculado](./RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.csv) y acta técnica allí enlazada. El enlace maestro se incorpora el 08/09/2026.
+- **Corte y alcance:** `80aee0a48adb72710770adbfbe9f5d0d71585a6f`, con sucesión documental `1864ebfbcf198fdefe6b8fb879a32f2c5e844993`. H04/H05 locales y nueve negativos incorporados al corpus compartido `14+95`. Las ejecuciones y huellas originales permanecen en el expediente con su corte; no prueban por anticipado la corrección E115 de RETP-094.
+- **Rectificación de identidades:** DFL-011 conserva el español; el nombre histórico `cell_ref` pasa de la referencia candidata DFL-011 a DFL-012; la independencia semántica pasa de DFL-012 a DFL-013. No se modifica la clave externa ni se cierra ninguna de estas obligaciones.
+- **Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA` en el alcance y corte identificados. DFL-005, H06/H07 y la causalidad ejecutiva entre transición y marcos siguen abiertas.
+
+<a id="retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral"></a>
+
+### RETP-2026-094 — Discriminación causal E115 y rectificación registral
+
+- **Entrada:** PR #78 en `1864ebfbcf198fdefe6b8fb879a32f2c5e844993`, apilada sobre la recepción G/H de PR #77. La nueva candidata debe incorporar la restitución literal del español registrada en RETP-092.
+- **Fundamento independiente:** [acta N0-02, §2](../arquitectura/ACTA_TECNICA_N0_02_TOTALIDAD_Y_UNICIDAD_DE_OUTPUT_SEMANTICS_2026_09_06.md) e IR 0.3 §6.2: para `CellSpec C`, `OutputSemantics S` y `Codomain K={A,B}`, cada miembro aparece una sola vez y no hay claves ajenas. Los esperados proceden de esa obligación aplicada a los testigos comprometidos, no de copiar la salida del compilador.
+
+| Testigo | Claves repetidas | Claves ausentes | Claves ajenas |
+|---|---|---|---|
+| `output_semantics_vacia` | ninguna | A, B | ninguna |
+| `output_semantics_clave_ausente` | ninguna | B | ninguna |
+| `output_semantics_clave_ajena` | ninguna | ninguna | X |
+| `output_semantics_clave_repetida` | A | ninguna | ninguna |
+
+- **Cambio:** cuatro expectativas en `oracle_support.py` conservan los tres conjuntos discriminantes y los referentes C/S/K. El mecanismo sigue siendo comprobación de un fragmento específico dentro del rechazo controlado; no se afirma igualdad literal de todo `stderr`. No cambia la semántica Rust, el inventario de 14 válidos y 95 inválidos, los testigos ni sus JSON esperados.
+- **Sensibilidad fijada:** `test_oracle_support.py` incorpora cuatro controles válidos, los doce intercambios dirigidos entre causas distintas y doce sustituciones de uno de los tres referentes. Con los tokens anteriores los veinticuatro contraejemplos no eran rechazados; tras la corrección se rechazan todos. Las 23 pruebas locales pasan y conservan los controles generales de retorno `1`, salida IR vacía y envoltorio de rechazo.
+- **Límites de la clasificación:** ocho grupos de tokens compartidos reúnen veinte casos del inventario de 95; ese recuento no mide fidelidad diagnóstica. Se ha demostrado y corregido la pérdida discriminante del grupo E115 de cuatro casos. Los otros grupos y los 75 tokens únicos no reciben por ello una certificación causal. No se modifican los diagnósticos de `compose`, la resolución de alias ni sus obligaciones mediante esta corrección; DFL-001 continúa abierta.
+- **Continuidad registral:** RETP-091/092/093 quedan enlazados desde el maestro; DFL-011 conserva el mandato del español, DFL-012 identifica `cell_ref` y DFL-013 la independencia semántica. La revisión integral del español es final y no bloquea fila 7. Las rectificaciones de identificadores en el expediente candidato RETP-093 se señalan con fecha propia.
+- **Dependencia descubierta en la primera ejecución:** la cabeza `a23c834a9e1f14c2e5cf67dca3c458e08fca2606` pasó Conformidad SVP (`34180121748`) y R0-8 (`34180121875`), pero falló en R0 Rust (`34180121709`) y R0 WASM (`34180121701`). Dos fuentes del banco de sensibilidad reutilizaban la expectativa del corpus aunque declaraban CC/SS/KK y Alpha. Se corrigen `run_oracle_sensitivity.py` y su consumidor `r0_wasm_browser_manifest.py` para exigir expectativas propias de N0-02/N0-03, con y sin CellSpec. Dos controles positivos y cuatro sustituciones de contexto protegen esta separación. Se mantienen las mismas cinco fuentes del banco y los 95 negativos; no se rebaja la expectativa E115 ni se modifica Rust. El fallo y su sucesión quedan identificados, sin presentar aquel corte como conforme.
+- **Verificación integrada exigida:** Conformidad SVP, R0 Rust, R0-8 y R0 WASM sobre la nueva cabeza, incluido corpus nativo/WASI/navegador. Los resultados anteriores conservan sus cortes. La prueba local del observador no se presenta como una compilación local nueva de Rust.
+- **Estado inicial, conservado como antecedente:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. DFL-005, H06/H07, la ejecución causal y la independencia semántica permanecen abiertas. No se cierra la fila 7 ni se entrega todavía una candidata a Ciberseguridad.
+
+
+#### Verificación integrada de RETP-094 · 08/09/2026
+
+Corte material verificado: `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be`; recepción incorporada: `1cbe4b9e6d9c484e540f1385109b38badc800c4f`. Los cambios posteriores de este asiento sólo registran la evidencia. No se confunde esta verificación con la del corte fallido `a23c834a`.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0-8 Baseline nativa | [34180315127](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315127) | conforme |
+| Conformidad SVP | [34180315138](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315138) | conforme |
+| R0 Rust | [34180315113](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113) | conforme |
+| R0 WASM paridad nativa y navegador | [34180315118](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315118) | conforme |
+
+Resultados: 23 pruebas del observador; corpus compartido 14/14 válidos y 95/95 inválidos en nativo, WASI y navegador; 9/9 casos causales de fila 7; cinco fuentes del banco conservadas; 12/12 mutaciones dirigidas detectadas, sin supervivientes ni mutantes inválidos; 211/211 pruebas unitarias de `sv_core`, además de sus pruebas de integración. Referencia CI Rust/Cargo 1.98.0 sobre Ubuntu 24.04; compatibilidad adicional con 1.98.1. La comprobación local del observador utilizó Python 3.12.13. No se afirma identidad con un despliegue productivo.
+
+| Paquete de evidencia | Artefacto | SHA-256 del archivo ZIP |
+|---|---|---|
+| `directed-mutation-sensitivity` | [10038665677](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113/artifacts/10038665677) | `baad7fc1878bfc260e0e2ac613a8a350d0df6adf43945c3e16bb3d23ac302193` |
+| `oracle-sensitivity` | [10038661363](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315113/artifacts/10038661363) | `e8e468c24d800dab002c8f6b3567333cfb05104096e4d7c3fdf2d46c4af39cd6` |
+| `r0-8-baseline-native` | [10038664487](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315127/artifacts/10038664487) | `8b8ffa42b104475a56f90142e2d3bbeb3995305d10bcfa1edec60281dcf9eb4f` |
+| `r0-wasm-three-way-parity` | [10038676790](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34180315118/artifacts/10038676790) | `3580d39657ea483716e3d57ecf70d24b9e2b6fb6acf9c0437c07c075f1471f3c` |
+
+Los paquetes conservan las entradas, salidas, comandos, versiones y huellas producidos por los flujos correspondientes. La identificación del ZIP procede del metadato de Actions; no se declara una descarga y verificación local del ZIP. La identidad de la realización y de los observadores figura en los manifiestos de cada paquete.
+
+**Estado de RETP-094: `CANDIDATA_VERIFICADA_NO_PROMOVIDA`.** La PR #77 ha pasado Conformidad SVP [34179902203](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34179902203) sobre `1cbe4b9e6d9c484e540f1385109b38badc800c4f`. El acta del español y RETP-092 mantienen sus objetos originales. La candidata correctiva sigue dependiendo de #77; la fila 7 y las obligaciones enumeradas permanecen abiertas. La referencia temporal de #78 a main sólo permite activar los flujos existentes y debe volver a `recepcion-gh-20260907` antes de dejar el relevo.
+
+<a id="retp-095"></a>
+
+### RETP-2026-095 — Testigo causal de salida de tabla fuera de codominio
+
+- **Corte de entrada:** `5eea9bfd5b7646236568da82a9091acfe68f4082`, cabeza de PR #78, sobre PR #77 `1cbe4b9e6d9c484e540f1385109b38badc800c4f`; main continúa en `bc3b22c9e9319e8f191390c8cfe9fa1577904d87`. Se han leído AGENTS, Pilares, acta de perfiles, transición completa y registros aplicables. La autorización de subsanación se conserva; ambas solicitudes siguen candidatas.
+- **Obligación y testigo previos al resultado:** [Gramática 0.2 §13](../../GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md#13-reconciliación-de-cierres-internos-heredados) exige cerrar `table` con `}` sin punto y coma adicional. El [catálogo efectivo §3/E011](../referencia/ERRORES_CANONICOS_SV_v0_2.md#3-precisiones-vigentes) exige que cada salida pertenezca al codominio declarado. El testigo cubre una vez A y B de KIn, declara KOut={OK,NO_OK} y usa FUERA como única salida ajena. Su condición esperada es pertenencia de salida, no sintaxis, aridad, entrada ni totalidad.
+- **Hallazgo y precisión:** el testigo anterior terminaba su bloque interno en `};` y su expectativa aceptaba aquel error sintáctico. La limitación ya consta en RETP-078, RETP-087, la matriz de concordancia y DFL-001/§6. La guarda semántica existe en `validate_admissibility_table`: rechaza la salida ajena con `AdmissibilityTable T1: salida fuera de codominio`. No procede afirmar que la falta del literal E011 demuestre ausencia de esta guarda, ni presentar la brecha como no registrada.
+- **Corrección mínima:** se elimina ese punto y coma, se precisa el comentario del testigo y se sustituye la expectativa sintáctica por la causa semántica y la identidad T1. No se cambia `sv_core/src`, Gramática, IR ni serializador. Corpus: 14 válidos y 95 inválidos; se corrige un testigo existente, sin añadir casos al inventario general. Los 14 JSON esperados permanecen intactos.
+- **Identidad del testigo:** SHA-256 anterior `32141541dfd1bfdf067dd66d10ca4298c38d5359747f4b507c9be8598c5c6ec5`; corregido `6c9e279af988256348b5d6c73c6478ca035998dbe14dd8201dc367e2e6a0ddf1`. Los bytes anteriores se conservan en la confirmación de entrada.
+- **Pruebas locales del observador:** 25/25. La expectativa acepta el rechazo semántico de T1 y rechaza cuatro sustituciones: error sintáctico anterior, tabla incompleta, entrada ajena y salida ajena de T2. Con el token anterior las dos pruebas nuevas fallan: se rechaza el control semántico y se admite indebidamente el error de sintaxis. Se conservan retorno 1, salida IR vacía y envoltorio controlado. Estas pruebas construyen mensajes y no se presentan como compilación local Rust.
+- **Comprobaciones de realización exigidas:** tres pruebas Rust usan el fichero comprometido: rechazo semántico exacto; admisión al sustituir únicamente FUERA por NO_OK; rechazo sintáctico al reintroducir el cierre antiguo. La mutación dirigida AT01 retira exclusivamente la guarda de salida y debe hacer fallar la primera prueba. Se añade al banco precedente sin reclasificar su evidencia histórica de doce mutantes. Conformidad SVP, R0 Rust, R0-8 y R0 WASM comprobarán la candidata identificada; el mismo negativo corregido pertenece al corpus nativo/WASI/navegador.
+- **Límites y continuidad:** E011 conserva su obligación catalogada, pero este cambio no introduce su código literal ni una estructura diagnóstica. No ejecuta la tabla ni GateResult.output. E204 y la causalidad no medida de otros testigos permanecen fuera del subcierre; no se deduce un porcentaje global de fidelidad. DFL-001, DFL-005, H06/H07 e independencia semántica continúan abiertas. DFL-011 y su acta permanecen intactas. La fila 7 sigue abierta y no se activa Ciberseguridad.
+- **Estado inicial:** `CORRECCION_LOCAL_VERIFICADA_CI_PENDIENTE_NO_PROMOVIDA`. La comprobación integrada debe añadirse con su cabeza, ejecuciones y artefactos; ningún resultado previo acredita esta modificación.
+
+
+#### Verificación integrada de RETP-095 · 08/09/2026
+
+La candidata material `461acc633d364a2eca964539a3835529fbc72c58` supera los cuatro flujos. Actions comprueba la confirmación de ensayo `439f88802e8fc67a0deb56b454eb1ee433cff2d3`, con árbol `9c1b33e8d5008ce622b522bf66d8a4279267eb8a`, idéntico al de la candidata. La base sigue siendo main `bc3b22c9`; esa confirmación de ensayo no es una integración en main.
+
+| Comprobación | Ejecución | Resultado |
+|---|---|---|
+| R0 Rust | [34183907220](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220) | Conforme |
+| Conformidad SVP | [34183907211](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907211) | Conforme |
+| R0-8 Baseline nativa | [34183907292](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907292) | Conforme |
+| R0 WASM paridad nativa y navegador | [34183907306](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907306) | Conforme |
+
+Rust/Cargo 1.98.0 sobre Ubuntu 24.04 es la referencia; Rust/Cargo 1.98.1 se comprueba adicionalmente como compatibilidad de `stable`. Los registros de ejecución confirman:
+
+- observador: 25/25 pruebas;
+- tres pruebas Rust de tabla: rechazo semántico exacto, control válido por sustitución de una salida y rechazo del cierre sintáctico anterior;
+- corpus: 14/14 válidos y 95/95 inválidos en nativo, WASI y navegador; el testigo corregido recorre el corpus compartido;
+- AT01 detectada; campaña dirigida 13/13, cero supervivientes y cero mutaciones inválidas. El banco conserva parches, órdenes, salidas y comprobaciones de restauración; no es un porcentaje exhaustivo de cobertura;
+- los bancos anteriores de conformidad, sensibilidad, F-IF y perfiles mantienen sus comprobaciones y límites.
+
+| Paquete | Artefacto | Bytes del ZIP | SHA-256 declarado por Actions |
+|---|---|---|---|
+| `directed-mutation-sensitivity` | [10039850030](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220/artifacts/10039850030) | 49418 | `2274d34c84c14c0d84036e7ccd9df36623e1591ba52331e30571d4c2875b00f0` |
+| `oracle-sensitivity` | [10039845019](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907220/artifacts/10039845019) | 5015 | `61b2b7477feaf30f689661b35c2547ab44a1413c5d851711adde3d0dfa1c1846` |
+| `r0-8-baseline-native` | [10039846755](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907292/artifacts/10039846755) | 406236 | `c88311d428a769548f7cf430aae7a26a72933b65765371e6d1b55da44cc1cb30` |
+| `r0-wasm-three-way-parity` | [10039860570](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34183907306/artifacts/10039860570) | 1838740 | `e94fd7210714ce71fedc360467857f992419dd35fa890223ee8ec06cc7b6cbf5` |
+
+Se han leído los registros de los trabajos y los metadatos de artefactos; sus huellas no se presentan como una descarga y recálculo local de esos ZIP. El control semántico esperado procede del catálogo y del testigo, y la causa exacta se exige en la prueba Rust y en el corpus. La ausencia del literal E011 sigue siendo deuda diagnóstica, independiente de la guarda ahora ejercida.
+
+**Estado:** `CANDIDATA_VERIFICADA_NO_PROMOVIDA`. La cola de evidencia actualiza únicamente los tres registros de Calidad y conserva el permiso ejecutable `100755` del comprobador de mutaciones, sin cambiar su contenido probado. La cabeza final conserva su propia comprobación en el expediente de PR #78. Se restablecerá la base `recepcion-gh-20260907` tras verificarla; la PR continúa dependiendo de #77. DFL-001 y fila 7 permanecen abiertas.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-095, 08/09/2026 (candidata):** el testigo E011 y su oráculo se han corregido y verificado sobre `461acc633d364a2eca964539a3835529fbc72c58`, con los cuatro flujos conformes. Se preservan la guarda semántica existente y la deuda de emisión diagnóstica; no hay promoción ni cierre de fila 7.
+
+**Sucesión de la PR #78, 08/09/2026 (candidata):** RETP-093 enlaza el subcierre local; RETP-094 corrige E115 y la numeración de deuda. El corte material `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` ha superado los cuatro flujos; su evidencia se identifica en RETP-094. Ninguno de los asientos constituye una fusión; la fila 7 sigue abierta.
 
 **Sucesión registral de 08/09/2026 (PR #77, candidata):** RETP-091 recibe G/H y RETP-092 restituye el mandato del español. Estos asientos describen una candidata sin integrar; `main@bc3b22c9` conserva RETP-090. La fila 7 permanece abierta y la fila 8 no se activa. El estado B2 que sigue conserva su alcance histórico.
 

@@ -1,0 +1,11 @@
+codomain K = { A };
+
+frame F {
+  index: 0;
+  architecture: K;
+  cell_states: [];
+  eval_results: [];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}

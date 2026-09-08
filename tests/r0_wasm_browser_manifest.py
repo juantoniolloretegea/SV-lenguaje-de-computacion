@@ -14,7 +14,8 @@ import argparse
 import json
 from pathlib import Path
 import sys
-from run_oracle_sensitivity import sources as sensitivity_sources, verify as verify_sensitivity
+from run_oracle_sensitivity import (sources as sensitivity_sources, verify as verify_sensitivity,
+                                    assert_sensitivity_rejection)
 from k1_bridge_cases import prepare as prepare_bridges
 from k1_horizon_cases import prepare as prepare_horizons
 from k1_domain_cases import prepare as prepare_domains
@@ -108,7 +109,7 @@ def main() -> int:
             if native.returncode == 0:
                 payload = cli_payload(native.stdout).decode('utf-8')
             else:
-                payload = assert_rust_rejection(native, 'output_semantics_clave_repetida')
+                payload = assert_sensitivity_rejection(name, native)
             sensitivity_cases.append({'name': name, 'file_name': source.name,
                 'source': raw.decode('utf-8'), 'error': native.returncode == 1,
                 'expected_payload': payload})

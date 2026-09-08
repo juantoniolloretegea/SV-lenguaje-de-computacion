@@ -44,7 +44,7 @@ def evolution(profile, family, mode):
     if profile == 'en':
         metadata = '' if family != 'metadata' or mode == 'omitted' else 'metadata: [B,A,B];'
         if family == 'metadata' and mode == 'repeated': metadata += ' metadata: [];'
-        source = BASE[profile] + horizon(profile, 'Ev') + f'transition_data TD {{ horizon_ref: H; events: [(Ev,One)]; induced_parameters: [(C,3,One)]; {metadata} }}\n'
+        source = BASE[profile] + horizon(profile, 'Ev') + f'transition_data TD {{ horizon_ref: H; events: [(Ev,One)]; induced_parameters: [(CC,3,One)]; {metadata} }}\n'
         for i in [0, 1]:
             source += f'frame F{i} {{ index: {i}; architecture: G; cell_states: []; eval_results: []; gate_results: []; supervision: []; criticalities: []; }}\n'
         transition = '' if mode == 'omitted' else ', transition: TD'
@@ -54,7 +54,7 @@ def evolution(profile, family, mode):
     else:
         metadata = '' if family != 'metadata' or mode == 'omitted' else 'metadatos: [B,A,B];'
         if family == 'metadata' and mode == 'repeated': metadata += ' metadatos: [];'
-        source = BASE[profile] + horizon(profile, 'Ev') + f'datos_de_transición TD {{ referencia_de_horizonte: H; sucesos: [(Ev,Uno)]; parámetros_inducidos: [(C,3,Uno)]; {metadata} }}\n'
+        source = BASE[profile] + horizon(profile, 'Ev') + f'datos_de_transición TD {{ referencia_de_horizonte: H; sucesos: [(Ev,Uno)]; parámetros_inducidos: [(CC,3,Uno)]; {metadata} }}\n'
         for i in [0, 1]:
             source += f'marco F{i} {{ índice: {i}; arquitectura: G; estados_de_celda: []; resultados_de_evaluación: []; resultados_de_compuerta: []; supervisión: []; criticidades: []; }}\n'
         transition = '' if mode == 'omitted' else ', transición: TD'
