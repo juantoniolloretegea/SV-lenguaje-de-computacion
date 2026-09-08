@@ -31,6 +31,11 @@ jobs:
           node --test tests/f_if/sensitivity.mjs
           node tests/f_if/run.mjs
 
+      - name: Verificar inventario y entradas recibidas G/H
+        run: |
+          python3 tests/row7_gh/generar_entradas.py --check
+          node tests/row7_gh/verificar.mjs --inventario
+
       - name: Verificar contratos de la CLI y testigos SEC-0B
         run: |
           python3 tests/run_cli_smoke.py --rust-bin rust/target/debug/sv-native

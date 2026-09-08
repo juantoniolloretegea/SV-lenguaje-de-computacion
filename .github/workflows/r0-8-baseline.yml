@@ -5,6 +5,7 @@ on:
     branches: [main, "fila7-*"]
     paths:
       - "tests/row7_bindings/**"
+      - "tests/row7_gh/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/r0_8_baseline.py"

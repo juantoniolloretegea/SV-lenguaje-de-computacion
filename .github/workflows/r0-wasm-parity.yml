@@ -5,6 +5,7 @@ on:
     branches: [main, "fila7-*"]
     paths:
       - "tests/row7_bindings/**"
+      - "tests/row7_gh/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
@@ -142,6 +143,20 @@ jobs:
           cp rust/target/wasm32-unknown-unknown/release/examples/binding_probe_browser.wasm artifacts/r0-browser/
           sha256sum rust/target/release/examples/binding_probe rust/target/wasm32-wasip1/release/examples/binding_probe.wasm artifacts/r0-browser/binding_probe_browser.wasm > artifacts/r0-wasm/bindings-probes.sha256
 
+      - name: Contrastar G/H por LIG en nativo y WASI
+        run: |
+          python tests/row7_gh/generar_entradas.py --check
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe --release
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe --release --target wasm32-wasip1
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe_browser --release --target wasm32-unknown-unknown
+          rust/target/release/examples/gh_binding_probe > artifacts/r0-browser/gh-native.json
+          node tests/row7_bindings/run_wasi.mjs rust/target/wasm32-wasip1/release/examples/gh_binding_probe.wasm > artifacts/r0-wasm/gh-wasi.json
+          cmp artifacts/r0-browser/gh-native.json artifacts/r0-wasm/gh-wasi.json
+          node tests/row7_gh/verificar.mjs artifacts/r0-browser/gh-native.json --autoprueba > artifacts/r0-wasm/gh-verification.json
+          cat artifacts/r0-wasm/gh-verification.json
+          cp rust/target/wasm32-unknown-unknown/release/examples/gh_binding_probe_browser.wasm artifacts/r0-browser/
+          sha256sum rust/target/release/examples/gh_binding_probe rust/target/wasm32-wasip1/release/examples/gh_binding_probe.wasm artifacts/r0-browser/gh_binding_probe_browser.wasm > artifacts/r0-wasm/gh-probes.sha256
+
       - name: Preparar manifiesto de paridad para navegador
         run: |
           mkdir -p artifacts/r0-browser
@@ -243,6 +258,43 @@ jobs:
           print('LIG/0.1: nativo, WASI y navegador con identidad literal de resultados')
           PYCODE
 
+      - name: Comprobar transporte G/H por LIG/0.1 en navegador real
+        run: |
+          CHROME=""
+          for candidate in google-chrome google-chrome-stable chromium chromium-browser; do
+            if command -v "$candidate" >/dev/null 2>&1; then
+              CHROME="$(command -v "$candidate")"
+              break
+            fi
+          done
+          test -n "$CHROME"
+          python -m http.server 8767 --bind 127.0.0.1 > artifacts/r0-browser/gh-server.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill "$SERVER_PID" 2>/dev/null || true' EXIT
+          for _ in $(seq 1 40); do
+            if curl -fsS http://127.0.0.1:8767/tests/row7_gh/browser.html >/dev/null; then break; fi
+            sleep 0.25
+          done
+          "$CHROME" --headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage --virtual-time-budget=30000 --dump-dom http://127.0.0.1:8767/tests/row7_gh/browser.html > artifacts/r0-browser/gh-browser.html 2> artifacts/r0-browser/gh-browser.log
+          python - <<'PYCODE'
+          from pathlib import Path
+          from html.parser import HTMLParser
+          class Result(HTMLParser):
+              active=False
+              text=''
+              def handle_starttag(self, tag, attrs):
+                  if tag=='pre' and dict(attrs).get('id')=='result': self.active=True
+              def handle_endtag(self, tag):
+                  if tag=='pre': self.active=False
+              def handle_data(self, data):
+                  if self.active: self.text+=data
+          result=Result()
+          result.feed(Path('artifacts/r0-browser/gh-browser.html').read_text())
+          expected='CONFORME '+Path('artifacts/r0-browser/gh-native.json').read_text().removesuffix('\n')
+          assert result.text==expected, result.text[:2000]
+          print('GH-LIG/0.1: nativo, WASI y navegador con identidad literal de resultados')
+          PYCODE
+
       - name: Registrar identidad de los artefactos
         run: |
           sha256sum rust/target/release/sv-native > artifacts/r0-wasm/sv-native.sha256
@@ -272,6 +324,8 @@ jobs:
             artifacts/r0-browser/
             rust/target/release/sv-native
             rust/target/release/examples/binding_probe
+            rust/target/release/examples/gh_binding_probe
+            rust/target/wasm32-wasip1/release/examples/gh_binding_probe.wasm
             rust/target/wasm32-wasip1/release/examples/binding_probe.wasm
             rust/target/release/examples/assembly_probe
             rust/target/wasm32-wasip1/release/examples/assembly_probe.wasm

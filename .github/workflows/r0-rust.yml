@@ -5,6 +5,7 @@ on:
     branches: [main, "fila7-*"]
     paths:
       - "tests/row7_bindings/**"
+      - "tests/row7_gh/**"
       - "rust/**"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
@@ -38,6 +39,23 @@ jobs:
 
       - name: Verificar codificación contra el testigo independiente
         run: python tests/row7_bindings/hash_reference.py
+
+      - name: Contrastar transporte documental G/H sobre LIG/0.1
+        run: |
+          python tests/row7_gh/generar_entradas.py --check
+          mkdir -p artifacts/gh-lig
+          cargo run --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe > artifacts/gh-lig/native.json
+          node tests/row7_gh/verificar.mjs artifacts/gh-lig/native.json --autoprueba > artifacts/gh-lig/verification.json
+          cat artifacts/gh-lig/verification.json
+
+      - name: Preservar contraste documental G/H
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: gh-lig-documental
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/gh-lig/
 
       - name: Probar espacio de trabajo nativo
         run: cargo test --manifest-path rust/Cargo.toml --workspace

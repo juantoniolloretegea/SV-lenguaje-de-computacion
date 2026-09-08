@@ -636,6 +636,8 @@ Las huellas de archivo de esta tabla proceden de los metadatos de Actions; no se
 
 **Objeto material:** transportar los dieciséis estados GH-DOC por `validate_bindings`, con tres representaciones F0/H/HS. Se esperan 48 transportes, 16 recuperaciones F0, 16 recuperaciones con S, 16 controles conservados en H y ocho pérdidas H demostradas. Son obligaciones y recuentos previos, no resultados ejecutados. Los resultados proceden del testigo G/H; el núcleo sólo valida ligaduras y conserva bytes. La sonda no constituye los 27 parámetros, no ejecuta clínica y no introduce una operación SV.
 
+**Realización candidata:** ocho pruebas Rust del transporte y sondas para nativo/WASI/navegador; entradas regeneradas desde G/H sin resultados Rust; observador externo con 16 ataques y causas exigidas. El control sintético local del observador rechaza 16/16 ataques y admite reserialización; ese control no constituye ejecución del núcleo. La ejecución integrada aún está pendiente.
+
 **Estado:** `CONTRATO_Y_RESOLUCION_CANDIDATOS_PENDIENTES_DE_PRUEBA`. Las fuentes originales se identifican por bytes, SHA-256 y blob Git; el inventario público es una extracción, no una reverificación de las 44 fuentes primarias. Falta ejecutar y revisar esta candidata. Fila 7 abierta; CYB no abierta; PR #79/#80 sin promoción.
 
 ## 4. Estado de continuidad
