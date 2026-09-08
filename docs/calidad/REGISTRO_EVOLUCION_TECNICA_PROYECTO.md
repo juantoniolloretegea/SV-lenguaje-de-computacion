@@ -1,6 +1,6 @@
 # Registro de evolución técnica del proyecto
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
-| RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | CONTRATO_PREVIO_CORRECCION_PENDIENTE |
+| RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA |
 
 ## 1. Finalidad
 
@@ -854,3 +854,24 @@ Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se pres
 5. Una batería recorrerá los trece tratamientos y sus ocho campos textuales distintos del identificador (operación, contrato, capacidad, exclusión, responsable, etapa, retorno y evidencia): 104 sustituciones independientes deben ser rechazadas por `MATRIZ_CONTENIDO` también en la API de objetos. No basta con proteger únicamente `available` ni sólo la CLI.
 
 **Estado inicial:** `CONTRATO_PREVIO_CORRECCION_PENDIENTE`. Se exige comprobación local causal y los cinco flujos sobre cabeza exacta. El núcleo, LIG, Gramática, IR, corpus, matriz, README, acta del español, RETP-092 y dominios permanecen fuera del cambio. Se mantienen los 17 auxiliares Python y sus usos de CI declarados; la generación Rust de entradas de prueba no constituye interpretación productiva adicional de la DSL ni elimina por sí sola toda dependencia. No hay promoción, cierre de fila 7 ni apertura CYB.
+
+
+**Corrección material:** contrato previo `722a4146e051ec1518ff402291da9606a3e4125b`; realización `eef05771aa2b5101571b3de3d58c41bcb4d64a4c`, árbol `837e3ce5986b1f6490b489e1eaad4b75e51fc334`, en la misma PR #84. La fusión virtual `9bc305cc61b69d31a417a14caa08bc8853567ed8` tiene los padres #83 y esta candidata y el mismo árbol. La matriz conserva literalmente su SHA-256 de entrada.
+
+| Flujo de la cabeza material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust y compatibilidad adicional | [34227864840](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864840) | Conforme |
+| Conformidad SVP | [34227864842](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864842) | Conforme |
+| R0-8 nativo | [34227864845](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864845) | Conforme |
+| Paridad nativa, WASI y navegador | [34227864830](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864830) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34227864828](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34227864828) | Conforme |
+
+**Resultado causal:** 28/28 ataques semánticos anteriores, 15/15 ataques de bytes por la CLI real y 104/104 sustituciones de los textos de los trece tratamientos por la API, sin supervivientes. Las duplicidades conservan `JSON_CLAVE_REPETIDA`; la sustitución del documento literal cae por `MATRIZ_HUELLA`; la alteración de contenido por objetos cae por `MATRIZ_CONTENIDO`. La comparación de datos propios, orden y valores evita que `toJSON` o un acceso implícito sustituya el documento comparado. Una sonda adicional confirma rechazo de la prosa falsa por ambas rutas CLI, incluida `--inventario`, y rechazo de un `toJSON` que intentaría ocultarla en la API.
+
+El resultado contiene `reviewed_document_sha256` y `reviewed_document_content_matches=true`; mantiene `decision_sufficiency_automatically_proven=false`. La huella identifica el documento candidato revisado en este corte, no un estado futuro de integración. Una modificación legítima de la matriz requiere otro corte revisado y el ancla correspondiente. El control positivo conserva sus bytes exactos; sólo el informe puede reserializarse sin cambiar esa identidad.
+
+Se conservan 48 huellas contractuales recalculadas, 16/16/16 y ocho pérdidas H; 43/43 mutaciones dirigidas detectadas; corpus 14/14 válidos y 106/106 inválidos; 348 pruebas Rust en el entorno identificado sin Python/Node, sin red y Cargo offline. El observador Node permanece fuera del aislamiento. AF-02/03 conservan los ocho ataques de paquete y reproducción bajo permisos distintos. No se cambia el generador Rust ni el carácter generado de las entradas de prueba.
+
+**Custodia descargada y verificada localmente:** artefacto `10056512017`, 628043 bytes; ZIP SHA-256 `2ba554008e6ab28d0b405b9a2b7fb79e973977b8a464f0b73208820ca990df2e`. Paquete interior `c2d0a1217d5f642da3566cf5a4ba477d98f622478031506b7886ee30ce1988a1`. Ejecutable `cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a`, idéntico al anterior. El informe `verificacion-externa.json` conserva los quince ataques de entrada y las 104 sustituciones, además de los 28 ataques previos; `ejecucion.log` conserva las pruebas aisladas.
+
+**Estado vigente:** `MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA`. AF-04 queda corregido en la candidata y se levanta la reserva añadida al dictamen de RETP-103. La aptitud sigue limitada al alcance representacional examinado y a la integración gobernada con decisión de entrega; no acredita verdad clínica de los textos ni ausencia universal de defectos. No hay promoción, cierre registral de fila 7 ni apertura CYB. DFL-001 general, DFL-013, los 17 auxiliares Python y restantes límites conservan su condición. La cola posterior al material sólo registra estos resultados; cabeza final, nueva huella del paquete y sus cinco flujos quedan identificados en la PR.
