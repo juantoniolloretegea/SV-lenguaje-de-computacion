@@ -778,3 +778,14 @@ El observador mantiene 48 transportes y 48 huellas recalculadas desde el contrat
 Los resultados dinámicos se cotejan con los registros de ejecución. Los bytes y huellas de esta tabla proceden de los metadatos de GitHub; no se afirma una descarga y reverificación local de los archivos comprimidos. Las modificaciones posteriores a `a20afe9d…` sólo inscriben esta evidencia; su cabeza y comprobaciones figuran en la PR.
 
 **Estado actual:** `CORRECCION_VERIFICADA_NO_PROMOVIDA`. Se han retirado dos archivos Python, quedan 17 bajo `tests/` y también fragmentos e invocaciones Python en CI. No se presenta el recuento de extensiones como inventario completo de dependencias. Node y GNU Coreutils permanecen explícitos. La distribución final sin Python y su prueba en entorno limpio, la revisión externa, la resolución completa de fila 7 y la ejecución de las doce SP permanecen pendientes. Acta del español, README y repositorios de dominio intactos.
+
+
+<a id="retp-102"></a>
+
+### RETP-2026-102 — Candidata completa y reproducción Rust sin intérpretes
+
+**Mandato:** revisión externa fuerte sobre la candidata completa de fila 7 antes de CYB; se suprimen las pausas para revisión externa entre incrementos. Entrada `2f4581cc80307053e2b93b3f2e3be3a3caac8d82`. [Contrato previo y resolución de alcance](../arquitectura/CANDIDATA_DE_FILA_7_Y_REPRODUCCION_SIN_INTERPRETES_2026_09_08.md).
+
+**Obligaciones previas:** paquete determinista de fuentes Rust y entradas literales, sin Python/JavaScript ni binarios previos; inventario de integridad y controles causales de alteración; construcción offline y pruebas en Ubuntu 24.04 sin intérpretes Python/Node; mantenimiento de los cuatro flujos y del observador externo. La herramienta de aislamiento no constituye plataforma.
+
+**Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía reproducción aislada ni candidata material completa. La auditoría final abarca main@1706099… hasta el corte final; no sólo la última PR. SP/Q0 y fila 7 conservan sus límites; acta del español intacta.
