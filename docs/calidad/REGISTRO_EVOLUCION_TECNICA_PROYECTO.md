@@ -1,5 +1,5 @@
 # Registro de evolución técnica del proyecto
-| RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CONTRATO_PREVIO | Fila 7 / fronteras de verificación | CONTRATO_PREVIO_CORRECCION_PENDIENTE |
+| RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
 
 ## 1. Finalidad
 
@@ -828,3 +828,7 @@ Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se pres
 [Acta, contraejemplos, contrato previo y límites](ADVERSARIAL_DE_FILA_7_Y_FRONTERAS_DE_VERIFICACION_2026_09_08.md). Entrada `316facc2284858600d2c72fa44e8c715ab047373` sobre `main@1706099aef4a0e3846706c3963e7c76313adaf68`. Se reproducen AF-01 (JSON con miembros repetidos admitido), AF-02 (FIFO omitido del inventario) y AF-03 (permisos no fijados cambian el paquete). La lectura del núcleo y los contrastes de procedencia no refutan la capacidad representacional declarada; no acreditan Q0 ni funciones excluidas.
 
 **Estado inicial: `CONTRATO_PREVIO_CORRECCION_PENDIENTE`.** Se exige lectura estricta en la entrada efectiva, inventario de todos los tipos de archivo y reproducción bajo máscaras distintas; causas y controles previos se conservarán en las regresiones. Sin cambio del núcleo, README, acta del español ni dominios. Fila 7 permanece abierta; no se entrega candidata a CYB. Los 17 auxiliares Python y usos de CI siguen declarados, sin confundirse con el paquete autónomo probado.
+
+**Resultado:** contrato previo `f6986cf828fb9e4047f0f68d1276d22b4835d29f`; material `0b7fa120f3f09f98399f07bf87cda9410ca1b54e`, árbol `b66ac3cbc4287d594b3b97b214ef81c171b4ace2`. Los cinco flujos 34224986578, 34224986677, 34224986628, 34224986579 y 34224986696 son conformes; detalle, enlaces y huellas descargadas en el acta vinculada. Once ataques por la CLI real y ocho ataques de paquete detectados por causa; permisos 0000/0077 producen paquete idéntico. Se conservan 348 pruebas Rust aisladas, corpus 14+106, 43 mutantes, 28 ataques semánticos, 48 huellas y paridad de destinos. No hay cambio de sv_core; el ejecutable descargado es idéntico al de #83.
+
+**Estado vigente: `ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS`.** Candidata técnicamente apta en su alcance representacional para integración gobernada y posterior entrega. Quedan integración y decisión registral de entrega; no se declara fila 7 cerrada ni se abre CYB. No quedan AF-01/02/03 sin resolver en la candidata. Se mantienen Q0/SP sin ejecución integrada, las obligaciones ejecutivas posteriores y los 17 auxiliares Python residuales. La autonomía del paquete no cierra la retirada global ni la revisión del español.

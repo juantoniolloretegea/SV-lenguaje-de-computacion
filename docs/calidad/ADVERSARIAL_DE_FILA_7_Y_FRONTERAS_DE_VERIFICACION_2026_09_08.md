@@ -43,3 +43,45 @@ La revisión del núcleo no ha localizado un contraejemplo nuevo dentro de la ca
 `CONTRATO_PREVIO_CORRECCION_PENDIENTE`. Los tres contraejemplos impiden aceptar la PR #83 tal como está como cierre de la auditoría fuerte. La corrección requiere regresiones conformes y repetición de los cinco flujos sobre una cabeza exacta.
 
 El repositorio completo conserva 17 auxiliares Python y usos de Python en CI. Node sigue siendo dependencia de observación externa y del ensayo en navegador; no se oculta dentro del paquete Rust. La prueba autónoma del paquete no demuestra retirada global de esas dependencias ni identidad con la versión viva de producción. La entrega final permanece sujeta al inventario completo y al mandato de ausencia de Python en construcción, generación imprescindible y ejecución de la DSL. Esta corrección no constituye distribución final, elección de plataforma ni apertura de Ciberseguridad.
+
+
+## 6. Corrección y comprobación material
+
+El contrato previo se fijó en `f6986cf828fb9e4047f0f68d1276d22b4835d29f`. La realización es `0b7fa120f3f09f98399f07bf87cda9410ca1b54e`, árbol `b66ac3cbc4287d594b3b97b214ef81c171b4ace2`, en la [PR #84](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/84), apilada sobre #83. La fusión virtual `b821494b08cbe9078d283e1862b107b076d75f5c` tiene los padres #83 y esta cabeza y el mismo árbol material. No es integración en main.
+
+| Flujo de la candidata material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust y compatibilidad adicional | [34224986578](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34224986578) | Conforme |
+| Conformidad SVP | [34224986677](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34224986677) | Conforme |
+| R0-8 nativo | [34224986628](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34224986628) | Conforme |
+| Paridad nativa, WASI y navegador | [34224986579](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34224986579) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34224986696](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34224986696) | Conforme |
+
+AF-01 queda detectado por once ataques ME01–ME11, cada uno ejecutado contra la CLI real en un proceso separado: retorno 1, salida estándar vacía y causa exacta. Los controles íntegro y reserializado se admiten. Se preservan los 28 ataques semánticos previos, las 48 huellas recalculadas, 16 recuperaciones F0, 16 HS, 16 controles H y ocho pérdidas. La proyección interna del informe y la matriz también atraviesan el lector estricto. El parámetro `--matriz` permite ensayar los bytes de una matriz alternativa sin cambiar la matriz comprometida.
+
+AF-02 queda detectado por ocho ataques de paquete: los cuatro anteriores, FIFO con nombre Python, FIFO con nombre Rust permitido, FIFO en lugar de `CORTE_GIT.txt` y enlace. El control precede a la lectura de los metadatos; un límite externo de diez segundos hace que un bloqueo sea fallo del ensayo y nunca rechazo válido. AF-03 queda detectado por la comparación bajo máscaras 0000 y 0077, aplicadas tanto al proceso como a la configuración Git. Los paquetes son idénticos. Con el empaquetador corregido, el corte anterior #83 reproduce también literalmente su archivo publicado.
+
+Se mantienen corpus 14/14 válidos y 106/106 inválidos, 43/43 mutantes dirigidos detectados y paridad entre los tres destinos. El entorno aislado conserva 348 pruebas Rust conformes, sin Python/Node ni red durante construcción y ejecución. Node verifica el informe fuera del aislamiento. El paquete sigue conteniendo 227 archivos Git y dos objetos de inventario: no se ha añadido JavaScript al paquete Rust.
+
+**Custodia descargada y verificada:** artefacto `10055323351`, 627275 bytes; ZIP SHA-256 `45dff56767f8b55c24860b40505da71efebcaf65a3047be3ef3bc9ec34d586ba`. Paquete interior SHA-256 `67fbb2a206f1665216ce26e4b1d2669bd5f606b8cc23d31dbc2e33e972939700`. Ejecutable SHA-256 `cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a`, idéntico al descargado de #83. Estas tres huellas se han recalculado localmente; no se toman únicamente de los metadatos del proveedor. Los archivos `controles-paquete.txt`, `controles-permisos.txt`, `verificacion-externa.json` y `ejecucion.log` conservan la evidencia causal.
+
+Como contraste adicional de no estrechamiento, el ejecutable auditado admite una especificación `b=4294967296` y destino `18446744073709551616` (n=b², superior a u64), sin construir un vector de esa longitud. El destino inmediatamente superior se rechaza por E406 y el límite exacto. El ensayo no atribuye viabilidad de recursos a un vector de ese tamaño.
+
+Reproducción de los controles, desde la raíz y con las herramientas de verificación declaradas:
+
+```sh
+node tests/row7_gh/verificar.mjs INFORME_GH.json --autoprueba
+bash tests/row7_candidate/empaquetar.sh 0b7fa120f3f09f98399f07bf87cda9410ca1b54e DIRECTORIO_NUEVO
+bash tests/row7_candidate/autoprueba_paquete.sh DIRECTORIO_NUEVO/fuentes
+bash tests/row7_candidate/autoprueba_permisos.sh 0b7fa120f3f09f98399f07bf87cda9410ca1b54e
+```
+
+## 7. Dictamen y continuidad
+
+**Estado: `ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS`.** AF-01, AF-02 y AF-03 quedan corregidos y protegidos en esta candidata. La adversarial del conjunto #79–#83, con esta corrección, no ha dejado un contraejemplo pendiente dentro de la capacidad representacional examinada. No constituye una prueba de ausencia universal de defectos.
+
+La candidata corregida es técnicamente apta, en ese alcance, para su integración gobernada y posterior entrega al segundo falsador. Lo pendiente de este relevo es conservar las identidades y verificaciones al integrar la pila y registrar la decisión de entrega. La fila 7 no se declara integrada ni administrativamente cerrada aquí; Ciberseguridad no se activa mediante esta PR. La unidad correspondiente constituirá su universo en la fila 8. No se exige repetir F, F-IF o G/H.
+
+El cierre de estos tres hallazgos no cierra DFL-001 en general, DFL-013 ni la retirada residual de Python. El ensayo aislado acredita autonomía del paquete examinado; el repositorio y su verificación completa siguen conteniendo 17 auxiliares Python, JavaScript de observación/transporte/navegador y fragmentos de CI expresamente declarados. La entrega final sin Python, la revisión integral del español, el versionado de `cell_ref`, las capacidades ejecutivas y las sedes posteriores conservan sus obligaciones. No se confunde esta candidata con la distribución productiva viva.
+
+La cola registral posterior al corte material sólo incorpora este resultado y la continuidad de deuda. La cabeza final y la repetición de los cinco flujos se identifican en la PR, evitando autorreferenciar una confirmación desde sus propios bytes.
