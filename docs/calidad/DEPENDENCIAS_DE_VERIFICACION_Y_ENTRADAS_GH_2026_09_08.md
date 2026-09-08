@@ -32,6 +32,18 @@ La generación exacta debe conservar las 48 entradas del corte precedente salvo 
 
 ## 5. Reproducción y continuidad
 
-Las órdenes actualizadas de preparación, sustitutas de la invocación Python histórica del §6 de GH-LIG, quedarán en este apartado después de materializar la herramienta. Las comprobaciones se ejecutarán sobre una candidata propia apilada sobre PR #81; no se modificará aquella cabeza durante su contraste externo.
+Las siguientes órdenes se ejecutan desde la raíz del repositorio y sustituyen la invocación Python histórica del §6 de GH-LIG. Requieren Rust 1.98.0, GNU Coreutils y Node para la auditoría externa:
+
+```sh
+mkdir -p rust/target
+rustc +1.98.0 --edition=2021 tests/row7_gh/generar_entradas.rs -o rust/target/gh-generate
+rust/target/gh-generate --check
+rustc +1.98.0 --edition=2021 --test tests/row7_gh/generar_entradas.rs -o rust/target/gh-input-tests
+rust/target/gh-input-tests
+node --test tests/row7_gh/documentary_json.test.mjs
+node tests/row7_gh/contract_hash.mjs --referencia
+```
+
+La herramienta sólo escribe `entradas.rs` si se invoca sin `--check`; CI emplea siempre la comprobación sin escritura. El lector Rust reside en `documentary_json.rs`; el lector externo en `documentary_json.mjs`. Los controles de cada lector tienen expectativas fijadas por §3–4. Las comprobaciones se ejecutan sobre una candidata propia apilada sobre PR #81; no se modifica aquella cabeza durante su contraste externo.
 
 El inventario residual previsto es 17 ficheros Python activos. Su retirada completa, la construcción sin intérpretes en entorno limpio, las pruebas de geometría ampliada y la concordancia de errores de frontera permanecen pendientes; no quedan satisfechas por este incremento. No se alteran núcleo, gramática, IR, distribución web ni repositorios de dominio. La fila 7 sigue abierta y no se promueve ninguna candidata.

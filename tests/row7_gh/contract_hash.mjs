@@ -1,5 +1,8 @@
 // Codificación LIG/0.1 §2: campos y longitudes declarados, sin importar Rust.
 import {createHash} from 'node:crypto';
+import {readFileSync} from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {resolve} from 'node:path';
 export function encodedContract(c) {
   const chunks=[Buffer.from('SV-LIG-0.1\0','ascii')];
   const count=n=>{if(!Number.isSafeInteger(n)||n<0)throw Error('LONGITUD');const b=Buffer.alloc(8);b.writeBigUInt64BE(BigInt(n));chunks.push(b);};
@@ -35,3 +38,21 @@ export function encodedContract(c) {
   return Buffer.concat(chunks);
 }
 export const contractHash=c=>createHash('sha256').update(encodedContract(c)).digest('hex');
+
+// El vector y el esperado son los fijados en RETP-098; no se toma una salida Rust.
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
+  try {
+    if (process.argv.slice(2).join(' ') !== '--referencia') throw Error('Uso: contract_hash.mjs --referencia');
+    const bytes = readFileSync(new URL('../row7_bindings/synthetic_hash_contract.json', import.meta.url));
+    if (createHash('sha256').update(bytes).digest('hex') !== '4b82fee9fd4ca9987c84cc453a3043392d5531660c3bc02043920fff8cb4ad85') throw Error('VECTOR_FIJO_ALTERADO');
+    const expected = readFileSync(new URL('../row7_bindings/synthetic_hash_contract.sha256', import.meta.url), 'utf8').trim();
+    if (expected !== 'beff99707d648d591714e431b462bf61546da931771a6168cd80b1c8037f7dc0') throw Error('ESPERADO_FIJO_ALTERADO');
+    const contract = JSON.parse(bytes);
+    for (const artifact of contract.artifacts) {
+      artifact.hex = Buffer.from(artifact.text, 'utf8').toString('hex'); delete artifact.text;
+    }
+    const actual = contractHash(contract);
+    if (actual !== expected) throw Error('CODIFICACION_TESTIGO_INDEPENDIENTE');
+    console.log('Codificación LIG/0.1 conforme al testigo independiente:', actual);
+  } catch (error) { console.error(error.message); process.exitCode = 1; }
+}

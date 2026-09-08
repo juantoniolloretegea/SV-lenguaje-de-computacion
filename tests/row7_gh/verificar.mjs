@@ -4,17 +4,18 @@ import {createHash} from 'node:crypto';
 import {fileURLToPath} from 'node:url';
 import {resolve} from 'node:path';
 import {contractHash} from './contract_hash.mjs';
+import {parseDocumentaryJson} from './documentary_json.mjs';
 
 const root = new URL('./', import.meta.url);
 const hash = bytes => createHash('sha256').update(bytes).digest('hex');
 const same = (a,b) => JSON.stringify(a) === JSON.stringify(b);
 function requireThat(condition, code) { if (!condition) throw new Error(code); }
-function pinned(name, expected) {
+function pinned(name, expected, parse = JSON.parse) {
   const bytes = readFileSync(new URL(name,root));
   requireThat(hash(bytes) === expected, 'FUENTE_ALTERADA');
-  return JSON.parse(bytes);
+  return parse(bytes);
 }
-const source = pinned('testigos-gh.json','037944fe4ca28524d7e89403d08e881462f7ec349c21e7d9127ccf4c7c7b1f62');
+const source = pinned('testigos-gh.json','037944fe4ca28524d7e89403d08e881462f7ec349c21e7d9127ccf4c7c7b1f62',parseDocumentaryJson);
 const inventory = pinned('inventario-gh.json','fad302dc94331f5c4245c0a87c7b47765ee344abb0cd8d56d718d238a7fb2ee6');
 const variants = ['F0','H','HS'];
 const ids = rows => rows.map(row => row.id);

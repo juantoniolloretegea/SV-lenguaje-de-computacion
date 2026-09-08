@@ -33,7 +33,9 @@ jobs:
 
       - name: Verificar inventario y entradas recibidas G/H
         run: |
-          python3 tests/row7_gh/generar_entradas.py --check
+          rustc --edition=2021 tests/row7_gh/generar_entradas.rs -o rust/target/gh-generate
+          rust/target/gh-generate --check
+          node --test tests/row7_gh/documentary_json.test.mjs
           node tests/row7_gh/verificar.mjs --inventario
 
       - name: Verificar contratos de la CLI y testigos SEC-0B

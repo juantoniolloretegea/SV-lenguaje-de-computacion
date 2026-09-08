@@ -145,7 +145,8 @@ jobs:
 
       - name: Contrastar G/H por LIG en nativo y WASI
         run: |
-          python tests/row7_gh/generar_entradas.py --check
+          rustc --edition=2021 tests/row7_gh/generar_entradas.rs -o rust/target/gh-generate
+          rust/target/gh-generate --check
           cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe --release
           cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe --release --target wasm32-wasip1
           cargo build --manifest-path rust/Cargo.toml -p sv_core --example gh_binding_probe_browser --release --target wasm32-unknown-unknown
