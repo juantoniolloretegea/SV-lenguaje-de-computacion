@@ -789,3 +789,32 @@ Los resultados dinámicos se cotejan con los registros de ejecución. Los bytes 
 **Obligaciones previas:** paquete determinista de fuentes Rust y entradas literales, sin Python/JavaScript ni binarios previos; inventario de integridad y controles causales de alteración; construcción offline y pruebas en Ubuntu 24.04 sin intérpretes Python/Node; mantenimiento de los cuatro flujos y del observador externo. La herramienta de aislamiento no constituye plataforma.
 
 **Estado inicial:** `CONTRATO_PREVIO_IMPLEMENTACION_PENDIENTE`. No se declara todavía reproducción aislada ni candidata material completa. La auditoría final abarca main@1706099… hasta el corte final; no sólo la última PR. SP/Q0 y fila 7 conservan sus límites; acta del español intacta.
+
+**Realización comprobada:** contrato previo `66f22db1324411fbc40e8adf3a5f5f15c7b4d3d7`; material `bb23381ba63a0512180ffb80f849a7241520b4c8`; árbol `10101231bdc753516fb4f21155774508cbde46b5`. [PR #83](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/83) se apila sobre #82 en `2f4581cc80307053e2b93b3f2e3be3a3caac8d82`. La fusión virtual `9ce6747562385c9201cb8835dc72253d7a07a619` tiene esos dos padres y el mismo árbol; el nuevo flujo comprueba directamente la cabeza material. Las cinco ejecuciones terminaron correctamente.
+
+| Comprobación material | Ejecución | Resultado |
+| --- | --- | --- |
+| R0 Rust y compatibilidad adicional | [34212583875](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583875) | Conforme |
+| Conformidad SVP | [34212583972](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583972) | Conforme |
+| R0-8 nativo | [34212583946](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583946) | Conforme |
+| Paridad nativa, WASI y navegador | [34212583932](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583932) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34212583983](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34212583983) | Conforme |
+
+**Prueba aislada:** paquete de 227 archivos Git literales y dos objetos de inventario, sin Python/JavaScript ni binarios previos. Dos preparaciones producen el mismo archivo `fila7-fuentes.tar.gz`, SHA-256 `9f8cd42a400c1f908926735f2f82785b7bfd6423c1e0e6a9f1bbe64a7f9b268d`. Los cuatro controles de embalaje caen por `PAQUETE_TIPO`, `PAQUETE_INVENTARIO`, `PAQUETE_AUSENTE` y `PAQUETE_HUELLA`; el control íntegro pasa. Esta huella procede de la ejecución identificada; no se confunde con la del ZIP de custodia.
+
+El entorno usa Ubuntu 24.04, imagen base `sha256:33ceb71981b602c1a7443a53469e4dba065f7503eab3078a2d7a57a2ab987517` e imagen ejecutada `sha256:b6dbb24eaa887ddd63c943664d64e771068c994737b86cda55916ad3062b97f2`. Se preserva su inventario de paquetes. Rust `1.98.0 (88d9e12ae 2026-08-18)` y Cargo `1.98.0 (797e8a9bc 2026-08-05)` están montados desde la herramienta de referencia. La ausencia de intérpretes Python/Node se comprueba por ejecutables y paquetes; sólo se montan paquete, herramienta Rust, conductor Bash y salida. Construcción y pruebas con red deshabilitada, Cargo offline y directorio Cargo vacío. La preparación de la imagen sí utiliza red; no se afirma construcción bit a bit del compilador o de cualquier entorno futuro.
+
+Pasan 348 pruebas Rust del espacio de trabajo, incluidas 211 unitarias del núcleo y 17 de documentación ejecutable; también las suites LIG de 45 casos, contexto de 11 y G/H de 8. La regeneración comprueba los 48 datos, las dos sondas se ejecutan y la CLI admite ambos perfiles. El testigo de posición cero produce retorno 1, IR vacía y su causa exacta prevista. Tras la ejecución, los fuentes inventariados conservan sus huellas. Node ejecuta **fuera del contenedor** el observador externo: 48 huellas recalculadas, 16 recuperaciones F0, 16 HS con S declarada, 16 controles H y ocho pérdidas; 28/28 ataques detectados, incluido falsear ambas H simétricamente. El resto de los flujos mantiene 14/14 válidos, 106/106 inválidos, 43/43 mutaciones detectadas y paridad literal nativa/WASI/navegador.
+
+| Artefacto publicado por GitHub | Identificador | Bytes | SHA-256 del ZIP según GitHub |
+| --- | --- | ---: | --- |
+| fila7-candidata-sin-interpretes | 10050429631 | 626579 | `90d8f401e10f405839974eb2e181b9fd5b01f478486bb819f4229a7fa2e7e646` |
+| gh-lig-documental | 10050412775 | 12124 | `62bc21f36ea80e4f60a5d8add4b334083b20c9990de5600e870a97a718d41ffe` |
+| oracle-sensitivity | 10050419176 | 5016 | `500f4d322936bf589dc0004db4d69badd773a4148ed64b21b0cd4b8ee664bb2c` |
+| directed-mutation-sensitivity | 10050441019 | 161963 | `e59e60da6560e2916e813579f47d43b2a54ecfeb4ee94b3f4532788cdb71bdad` |
+| r0-8-baseline-native | 10050416417 | 414317 | `de26cd00a1794f8028ab0f450f50326d51f00dae9c177b6529401ef3a8cb1db5` |
+| r0-wasm-three-way-parity | 10050442974 | 3418627 | `6585831161aac1e8b80762e973fe2e8a29cfe3a1784364764c666192b27ca9ba` |
+
+Los tamaños y huellas de los ZIP se cotejan con metadatos de GitHub, no se presentan como descargas reverificadas localmente. La evidencia de comportamiento procede de los registros de los trabajos. La cola registral posterior a `bb23381…` sólo inscribe estos resultados; su cabeza, ejecuciones y paquete correspondiente quedan identificados en la PR. El cambio de `CORTE_GIT.txt` genera una huella de paquete nueva incluso si los fuentes del producto permanecen idénticos.
+
+**Estado: `CANDIDATA_COMPLETA_PARA_ADVERSARIAL_NO_PROMOVIDA`.** El alcance total desde `main@1706099…` incluye 578 inserciones en `sv_core/src` de #79/#80; no se presenta como núcleo intacto. La matriz cubre 15 requisitos, 44 formulaciones y 81 relaciones con responsables y límites. Quedan la revisión externa fuerte del conjunto y la decisión de entrega; no hay promoción, apertura CYB ni cierre Q0/SP. Persisten 17 archivos Python e invocaciones de CI en el repositorio completo. La ruta Rust aislada queda acreditada para esta candidata; no equivale a retirada global de herramientas ni a la distribución final. README, acta del español y dominios no cambian.
