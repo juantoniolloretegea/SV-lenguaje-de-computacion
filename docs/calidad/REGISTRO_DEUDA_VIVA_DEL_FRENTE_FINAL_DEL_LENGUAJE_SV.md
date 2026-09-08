@@ -1,5 +1,7 @@
 # Registro de deuda viva de la fase final del Lenguaje SV
 
+**Continuidad vigente:** [sucesión RETP-105](#relevo-retp-105), integración de las capacidades representacionales y entrega a CYB; se conservan las exclusiones por operación y la deuda no cerrada.
+
 ## 1. Naturaleza
 
 Este registro concentra la deuda técnica que sigue siendo relevante para la fase final del Lenguaje SV. No sustituye al registro de evolución ni a la documentación matemática y normativa del Sistema SV.
@@ -270,3 +272,28 @@ DFL-001 conserva sus restantes obligaciones: este cierre candidato es local a lo
 [RETP-104](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-104) individualiza AF-04: una prosa de tratamiento alterada aún pasa la CLI y la API del observador en `e13dc8390e72848b4419ebe229d1b81666546eaf`, aunque los duplicados ya son rechazados. La aptitud indicada en RETP-103 queda condicionada a fijar la matriz literal revisada y cotejar todo su contenido. DFL-001 conserva las demás obligaciones. No se reabren AF-01/02/03, no se alteran decisiones de la matriz ni se autoriza ejecución Q0. Contrato previo; corrección pendiente, sin promoción ni apertura CYB.
 
 **Resultado RETP-104:** AF-04 queda corregido en `eef05771aa2b5101571b3de3d58c41bcb4d64a4c`: matriz literal fijada, comparación completa por API, 15 ataques CLI y 104 sustituciones textuales rechazadas; 28 ataques anteriores conservados y cinco flujos conformes. La matriz no cambia. El maestro CSV/Markdown conserva la evidencia descargada y sus huellas. Se levanta la reserva específica al dictamen de RETP-103, sin cerrar DFL-001 general ni las capacidades ejecutivas excluidas, sin dispensar la retirada residual de Python y sin promoción o entrega automática.
+
+
+<a id="relevo-retp-105"></a>
+
+## Sucesión RETP-2026-105 — Integración y entrega representacional a CYB
+
+[RETP-105 del maestro CSV/Markdown](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-105) registra la integración real de PR #85, `140d319995a5df685860b348c0fd086ae6130faf`, árbol `46b2bbdbc65799c2753a2cd30fba343dde8140e2`, idéntico al de la cabeza probada `ab61d9bb7a2002d3a4a389e292c2a9b0a850d264`. La entrega adquiere efecto al incorporarse el asiento a main. Sustituye el estado de promoción pendiente de las sucesiones anteriores; no modifica sus pruebas ni sus límites.
+
+| Obligación | Estado tras esta integración y efecto sobre la oferta |
+|---|---|
+| DFL-005 | LIG/0.1 y su contraste documental quedan integrados; queda cerrado ese subconjunto de representación por operación. La deuda general continúa abierta para campos sin interpretación completa, autoridad y capacidades adicionales. La mera presencia de Domain/Agent no acredita constitución ni permisos. |
+| H06/H07; DFL-003/004 | Guardas de coherencia estructural integradas. No se ofrecen CQ1–CQ6 completos, continuidad persistente entre versiones ni causalidad ejecutiva; las operaciones que los necesiten requieren su realización antes de admitirse. |
+| DFL-001 | Reparaciones causales y AF-01…AF-04 integradas. Continúan la concordancia diagnóstica general y las obligaciones no agotadas; igualdad documental y paridad de destinos no son prueba universal de semántica. |
+| K1-T y DFL-006 | Producción observación→Tri, criticidad y resultados ejecutivos pendientes: excluidos de la oferta actual. Conservan la puerta algebraica y sus comprobaciones posteriores conforme a la tabla rectora. |
+| Q0 y SP-01…SP-12 | Suficiencia integrada no acreditada. No se transfieren a CYB como ejecución disponible; el relevo representacional no requiere ejecutar clínicamente Q0. |
+| DFL-009 | Evaluación del servicio y soporte diferida a fila 9 tras el retorno CYB; no elegida por esta integración. |
+| DFL-011 | Español: mandato íntegro y revisión de todos los repositorios antes del cierre nuclear. No se renumera ni se convierte en freno de fila 8. |
+| DFL-012 | Nombre histórico `cell_ref` conservado en serializador 0.1.0, con identidad efectiva de nodo. Migración y compatibilidad pendientes de su decisión de versionado. |
+| DFL-013 | No existe segunda realización semántica independiente. Permanece abierta; la paridad nativo/WASI/navegador no la cierra. |
+| Dependencias de entrega final | Persisten 17 auxiliares Python e invocaciones de CI y Node externo. El paquete Rust aislado está probado sin esos intérpretes; no se dispensa la retirada global ni se declara completa la distribución final. |
+| Infraestructura y agentes materiales | Las garantías R2/R3/R4, soporte, persistencia y autoridad material no se acreditan por el contrato documental CYB ni por esta entrega. Conservan sus etapas propias. |
+
+La fila 7 queda completada para la entrega representacional identificada; el siguiente trabajo sustantivo es fila 8, a cargo de Ciberseguridad Inteligente. La matriz documental fijada conserva su corte candidato: este cambio de gobierno se registra por sucesión, sin modificar sus banderas para fabricar una certificación automática.
+
+El receptor comprobará su corte y el paquete antes de constituir su perímetro y catálogo Excel. Si la operación CYB necesita una capacidad excluida, se registra insuficiencia o se devuelve la obligación al Lenguaje; no se rellena con una cadena opaca, un supuesto permiso ni `U`. Una ausencia de contraejemplo se informa como tal, con su cobertura finita. No se declara cerrado el núcleo ni recibida una auditoría CYB todavía no ejecutada.

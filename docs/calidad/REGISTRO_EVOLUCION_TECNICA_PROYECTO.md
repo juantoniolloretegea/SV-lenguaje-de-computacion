@@ -1,4 +1,6 @@
 # Registro de evolución técnica del proyecto
+
+**Continuidad vigente:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
 | RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA |
 
@@ -875,3 +877,89 @@ Se conservan 48 huellas contractuales recalculadas, 16/16/16 y ocho pérdidas H;
 **Custodia descargada y verificada localmente:** artefacto `10056512017`, 628043 bytes; ZIP SHA-256 `2ba554008e6ab28d0b405b9a2b7fb79e973977b8a464f0b73208820ca990df2e`. Paquete interior `c2d0a1217d5f642da3566cf5a4ba477d98f622478031506b7886ee30ce1988a1`. Ejecutable `cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a`, idéntico al anterior. El informe `verificacion-externa.json` conserva los quince ataques de entrada y las 104 sustituciones, además de los 28 ataques previos; `ejecucion.log` conserva las pruebas aisladas.
 
 **Estado vigente:** `MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA`. AF-04 queda corregido en la candidata y se levanta la reserva añadida al dictamen de RETP-103. La aptitud sigue limitada al alcance representacional examinado y a la integración gobernada con decisión de entrega; no acredita verdad clínica de los textos ni ausencia universal de defectos. No hay promoción, cierre registral de fila 7 ni apertura CYB. DFL-001 general, DFL-013, los 17 auxiliares Python y restantes límites conservan su condición. La cola posterior al material sólo registra estos resultados; cabeza final, nueva huella del paquete y sus cinco flujos quedan identificados en la PR.
+
+
+<a id="retp-105"></a>
+
+### RETP-2026-105 — Integración de fila 7 y entrega representacional a Ciberseguridad
+
+**Decisión humana:** el 08/09/2026, Juan Antonio Lloret Egea autoriza expresamente fusionar la PR #85 y completar inmediatamente el registro de entrega. La instrucción de Ciberseguridad ya estaba aprobada; faltaba la entrega técnica. Su autorización de continuación permanece vigente y no se sustituye por una petición nueva para empezar el catálogo.
+
+**Efectividad de este asiento:** la integración técnica descrita abajo ya está realizada. La entrega y el cierre de la fila 7 en su alcance representacional adquieren efecto al incorporarse este asiento CSV/Markdown a `main`. Mientras el asiento esté únicamente en una rama, sigue pendiente ese último acto registral. La confirmación que incorpora el asiento es el corte documental de entrega; no se inventa su identidad antes de existir. La PR que lo integra identifica su cabeza, árbol y comprobación.
+
+**Lectura rectora y ámbito:** `AGENTS.md`, Pilares RETP-073, perfiles RETP-075, acta completa de transición con tabla de catorce filas y sucesiones, contratos de fila 7 y RETP-096…104. El corte técnico examinado es `ab61d9bb7a2002d3a4a389e292c2a9b0a850d264`; se coteja su integración real. Se aplica la salida de fila 7 y se entrega a fila 8, PT01/PT03/PT04/PT14. No se modifica la tabla ni se constituye un universo desde el Lenguaje.
+
+#### Identidad de la integración realizada
+
+| Objeto | Identidad comprobada |
+|---|---|
+| Repositorio | `juantoniolloretegea/SV-lenguaje-de-computacion` |
+| Base de integración | `1706099aef4a0e3846706c3963e7c76313adaf68` |
+| Cabeza aprobada y probada | `ab61d9bb7a2002d3a4a389e292c2a9b0a850d264` |
+| Integración real de PR #85 | [`140d319995a5df685860b348c0fd086ae6130faf`](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/140d319995a5df685860b348c0fd086ae6130faf) |
+| Fecha de integración | 08/09/2026, 15:14:58 UTC; 17:14:58 Europe/Madrid |
+| Árbol integrado, idéntico al probado | `46b2bbdbc65799c2753a2cd30fba343dde8140e2` |
+| Padres de la integración | La base y la cabeza anteriores, en ese orden |
+| Verificación GitHub | Firma verificada de la confirmación de integración |
+| Historial conservado | Las 26 confirmaciones acumuladas de #79–#84; 70 archivos, 8387 inserciones y 5 eliminaciones frente a la base |
+| Integración virtual previa | `b9f501073d99b39a72fca24441ffedba905e6c77`, con los mismos padres y árbol; distinta de la integración real |
+
+La [PR #85](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/85) reúne el conjunto previamente auditado. No añade una realización ni sustituye los objetos revisados. Las antiguas declaraciones de «no promovido» en RETP-097…104 describen sus cortes; esta sucesión establece la promoción actual sin retroeditar esos antecedentes. Las solicitudes apiladas quedan comprendidas en la integración y no constituyen seis trabajos aún por fusionar.
+
+#### Comprobación de la cabeza exacta contra main
+
+| Comprobación | Ejecución de PR #85 | Resultado |
+|---|---|---|
+| R0 Rust y compatibilidad adicional | [34242084924](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084924) | Conforme |
+| Conformidad SVP | [34242084948](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084948) | Conforme |
+| R0-8 nativo | [34242084923](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084923) | Conforme |
+| Paridad nativa, WASI y navegador | [34242084881](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084881) | Conforme |
+| Fuentes y ejecución sin intérpretes | [34242084883](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084883) | Conforme |
+
+La identidad de árbol liga esas pruebas con la integración real; no se presentan como nuevas ejecuciones disparadas por el commit de fusión. Rust/Cargo 1.98.0 sobre Ubuntu 24.04 conserva el carácter de entorno de referencia del expediente; `stable` es compatibilidad adicional. Esta integración no identifica ni modifica por sí misma el despliegue de producción.
+
+Se reciben los resultados de RETP-103/104 y de estos flujos: corpus 14 válidos y 106 inválidos; 43 mutaciones dirigidas detectadas; 48 transportes y 48 huellas contractuales recalculadas; 16 recuperaciones F0, 16 HS con información lateral declarada y 16 controles H, con ocho pérdidas H; 348 pruebas Rust del paquete aislado. Los 28 ataques semánticos, 15 ataques de bytes por CLI y 104 sustituciones de prosa por API permanecen como campañas distintas; AF-01…AF-04 quedan corregidos en su alcance. No son puntuación exhaustiva del repositorio ni demostración universal.
+
+#### Paquete entregado y custodia
+
+El objeto de fuentes entregado es `paquete/fila7-fuentes.tar.gz` del artefacto `fila7-candidata-sin-interpretes`, ID **10056736840**, [ejecución 34228422997 de la misma cabeza](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34228422997/artifacts/10056736840). Fue descargado y sus huellas se comprobaron antes de promover.
+
+| Objeto | SHA-256 |
+|---|---|
+| ZIP descargado de custodia | `b4d310a8fd1fe55ecd114741eddc43c2639766fdf64264ce4cb09c3f7a615842` |
+| Paquete interior de fuentes | `3ec9d06dfb184eb59249203b6758a2b433d9093e5db78593a51405a27013a398` |
+| Informe G/H `ejecucion/gh.json` | `b38f85a2c07c12ea12930888a3659fe5decde55dac89c1c582ce00e77f7da074` |
+| Matriz documental revisada `tests/row7_gh/resolucion.json` | `1927c3ac2605f01128d46f2aaed74516d9915463c5949625aabbd8bd324ac15f` |
+
+La repetición de PR #85 publica además el artefacto **10062427504** en la [ejecución 34242084883](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34242084883/artifacts/10062427504), ZIP SHA-256 declarado por GitHub `87d3c84a225818ae5e76fa069f2d3e41109e9565a4df14e6ef6ae693e1b1d620`. Su ZIP se identifica por separado; no se intercambian ambas huellas.
+
+El paquete contiene 227 archivos Git y dos objetos de inventario; `CORTE_GIT.txt` conserva la cabeza de fuentes `ab61d9bb…`. El corte de integración tiene el mismo árbol. Los archivos de este asiento son gobierno posterior, no una reconstrucción ficticia del paquete. La custodia de Actions tiene su régimen de conservación: el receptor verificará acceso y huellas al recibirla; una URL por sí sola no sustituye el artefacto. Los fuentes y herramientas de preparación permanecen localizables en la confirmación Git exacta. La preparación documentada en `docs/arquitectura/CANDIDATA_DE_FILA_7_Y_REPRODUCCION_SIN_INTERPRETES_2026_09_08.md` permite repetir el embalaje en ese corte.
+
+#### Capacidades que recibe el segundo falsador
+
+| Objeto o uso | Capacidad entregada y fuente | Límite que conserva |
+|---|---|---|
+| Compilación y contextos | ES/EN y ensamblaje; comprobaciones locales de TransitionData y coherencia estructural H06/H07, RETP-093/097 | No causalidad ejecutiva, continuidad persistente entre versiones ni CQ1–CQ6 completos |
+| Ligaduras por operación | `sv_core::bindings`, LIG/0.1; identidad y versión exactas, instancias, destinos, usos ordenados, compartición explícita y referencias tipadas, RETP-098 | No autenticación material de autoridad, interpretación clínica ni ejecución productiva observación→Tri |
+| Pérdidas recibidas G/H | GH-LIG/0.1, matriz 15 requisitos/44 formulaciones/81 relaciones y ocho pares documentales, RETP-099/100 | Recuperar con S no acredita H sola; transporte documental no ejecuta Q0 |
+| Observadores y paquete | Contratos y controles de RETP-101…104, con entrada estricta, huellas recalculadas y matriz fijada | Igualdad de prosa no prueba su suficiencia semántica; paridad entre destinos usa una sola realización |
+
+El juicio de salida acepta **ese alcance representacional** y su tratamiento explícito de las pérdidas para ser atacado por CYB. Se conserva el inventario por operación de `tests/row7_gh/resolucion.json`; ninguna operación que requiera capacidades excluidas se ofrece como ejecutable. La matriz y sus banderas `row7_closed=false` y `decision_sufficiency_automatically_proven=false` pertenecen al objeto documental candidato fijado. Este asiento gobierna el relevo posterior, sin alterar esos bytes ni hacer que el observador emita una certificación de cierre humano.
+
+DFL-005 deja de ser ausencia de realización para LIG/0.1 y queda integrada **en ese subconjunto**; no se clausuran todos los campos de Domain/Agent ni la deuda general. DFL-001, DFL-003/004, DFL-006, DFL-009, DFL-011/012/013 y los demás pendientes conservan su sede y condición por operación. La [sucesión RETP-105 de deuda viva](REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md#relevo-retp-105) precisa los límites.
+
+Permanecen 17 auxiliares Python y sus invocaciones de CI, además del observador Node. La ruta Rust aislada funciona sin esos intérpretes; no se declara terminada la retirada global ni la distribución final de la DSL. K1-T sigue sin producción habilitada; Q0 y SP-01…SP-12 no tienen ejecución integrada acreditada. La puerta algebraica, K2, el contrato operacional y R2/R3/R4 no se adelantan. El acta del español, RETP-092 y DFL-011 conservan el mandato íntegro de revisión de todos los repositorios antes del cierre nuclear.
+
+#### Decisión y punto de comienzo del receptor
+
+**Fila 7: completada y entregada en el alcance representacional declarado, al integrarse este asiento. Fila 8: receptor habilitado para comenzar su encargo; todavía no realizado ni certificado. Núcleo: no consolidado.**
+
+El receptor es la unidad competente de Ciberseguridad Inteligente, en `SVperitus-dataset`, rama `dominio-ciberseguridad-inteligente`, bajo `dominios/ciberseguridad-inteligente/dominio-04-09-26/`. La instrucción aprobada está custodiada en [la confirmación 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c](https://github.com/juantoniolloretegea/SVperitus-dataset/commit/47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c), ruta `dominios/ciberseguridad-inteligente/dominio-04-09-26/watson-biblioteca-ciber/Aprobada_INSTRUCCION_RELEVO_CIBERSEGURIDAD_INTELIGENTE_2026_09_08.md`. La referencia se debe leer en su repositorio y corte; no se presupone trasladada automáticamente a otra rama.
+
+El **primer acto sustantivo** es fijar el perímetro y los criterios de admisión del catálogo profesional, en **Excel (.xlsx)** con tablas, filtros, fórmulas de control y trazabilidad por entrada, conforme al mandato humano. Se reciben programas universitarios y certificaciones pertinentes, estándares y normativa de ciberseguridad e IA con su naturaleza diferenciada. El catálogo precede a la elección de operación y a la constitución de universo.
+
+La unidad CYB aplicará el método reconciliado de Inmunología; no heredará parámetros, agrupaciones ni salidas clínicas. Dominio, agente y cobertura conservan sus contratos distintos. Las fuentes externas entran capturadas, versionadas y con huella; sus cambios no se convierten en observaciones del sistema. Las magnitudes exactas, la adquisición separada y el juicio por operación conservan las condiciones de la instrucción. El Lenguaje entrega una candidata falsable, no un universo CYB predefinido.
+
+Al comenzar, el receptor registrará su comprobación de estas identidades y la disponibilidad del paquete en su sede. **La entrega emitida no se confunde con una recepción ya ejecutada por CYB.** No se exige repetir la autorización ni ejecutar clínicamente Q0 o las doce SP para este comienzo. Una discrepancia de corte, una dependencia imprescindible no satisfecha o una pérdida vuelve al Lenguaje con su operación y evidencia. Si no aparece contraejemplo, se informa el alcance efectivamente contrastado sin fabricar una pérdida ni declarar universalidad.
+
+El final de fila 8 será el contrato CYB y el dictamen con evidencia, contraejemplos si los hay y límites; el control volverá al Lenguaje, fila 9. La revisión de plataforma y DFL-009 conservan ese momento. Los README y los expedientes históricos de ambos dominios permanecen intactos por este asiento.
