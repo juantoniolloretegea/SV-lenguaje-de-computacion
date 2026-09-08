@@ -39,6 +39,72 @@ class Mutant:
 
 MUTANTS = (
     Mutant(
+        'CX01', 'neutralizar la arquitectura de los marcos de una trayectoria', 'rust/sv_core/src/context_wellformed.rs',
+        'if actual != architecture {\n                    return Err(format!("Trajectory {name}: Frame',
+        'if false && actual != architecture {\n                    return Err(format!("Trajectory {name}: Frame',
+        "context_wellformed", 'trajectory_frame_arquitectura_distinta',
+    ),
+    Mutant(
+        'CX02', 'neutralizar la arquitectura del horizonte de transición', 'rust/sv_core/src/context_wellformed.rs',
+        'if actual != architecture {\n                                return Err(format!("Trajectory {name}: TransitionData',
+        'if false && actual != architecture {\n                                return Err(format!("Trajectory {name}: TransitionData',
+        "context_wellformed", 'trajectory_horizon_arquitectura_distinta',
+    ),
+    Mutant(
+        'CX03', 'neutralizar la arquitectura del marco consultado', 'rust/sv_core/src/context_wellformed.rs',
+        'if actual != architecture {\n            return Err(format!("Query {query}: Frame',
+        'if false && actual != architecture {\n            return Err(format!("Query {query}: Frame',
+        "context_wellformed", 'query_point_frame_ajeno',
+    ),
+    Mutant(
+        'CX04', 'neutralizar la arquitectura de la trayectoria consultada', 'rust/sv_core/src/context_wellformed.rs',
+        'if actual != architecture {\n                    return Err(format!("Query {name}: Trajectory',
+        'if false && actual != architecture {\n                    return Err(format!("Query {name}: Trajectory',
+        "context_wellformed", 'query_trajectory_ajena',
+    ),
+    Mutant(
+        'CX05', 'neutralizar la pertenencia de CellSpec a la vista', 'rust/sv_core/src/context_wellformed.rs',
+        'if !context.cell_in_graph(cell, nodes)? {',
+        'if false && !context.cell_in_graph(cell, nodes)? {',
+        "context_wellformed", 'query_architecture_cell_ajena',
+    ),
+    Mutant(
+        'CX06', 'neutralizar la pertenencia de evaluaciones a la vista', 'rust/sv_core/src/context_wellformed.rs',
+        'if !context.evaluation_in_graph(evaluation, nodes)? {\n                        return Err(format!("Query {name}: EvalResult',
+        'if false && !context.evaluation_in_graph(evaluation, nodes)? {\n                        return Err(format!("Query {name}: EvalResult',
+        "context_wellformed", 'query_architecture_eval_nodo_ajeno',
+    ),
+    Mutant(
+        'CX07', 'neutralizar la pertenencia de entradas de compuerta', 'rust/sv_core/src/context_wellformed.rs',
+        'if !context.evaluation_in_graph(evaluation, nodes)? {\n                            return Err(format!("Query {name}: GateResult',
+        'if false && !context.evaluation_in_graph(evaluation, nodes)? {\n                            return Err(format!("Query {name}: GateResult',
+        "context_wellformed", 'query_architecture_gate_entrada_ajena',
+    ),
+    Mutant(
+        'CX08', 'neutralizar el referente de interfaz de CoverageReport', 'rust/sv_core/src/context_wellformed.rs',
+        'if &references[1] != interface {',
+        'if false && &references[1] != interface {',
+        "context_wellformed", 'query_coverage_interface_ajena',
+    ),
+    Mutant(
+        'CX09', 'neutralizar el referente de U silenciosa de CoverageReport', 'rust/sv_core/src/context_wellformed.rs',
+        'if &references[2] != silent_u {',
+        'if false && &references[2] != silent_u {',
+        "context_wellformed", 'query_coverage_silent_u_ajena',
+    ),
+    Mutant(
+        'CX10', 'confundir una especificación compartida con pertenencia del nodo', 'rust/sv_core/src/context_wellformed.rs',
+        'Ok(nodes.iter().any(|node| node == spec))',
+        'Ok(true || nodes.iter().any(|node| node == spec))',
+        "context_wellformed", 'query_architecture_eval_nodo_ajeno',
+    ),
+    Mutant(
+        'CX11', 'admitir CellState de una especificación celular ajena', 'rust/sv_core/src/context_wellformed.rs',
+        'IrObjectKind::CellState { spec, .. } => self.cell_in_graph(spec, nodes),',
+        'IrObjectKind::CellState { spec, .. } => Ok(true || self.cell_in_graph(spec, nodes)?),',
+        "context_wellformed", 'query_architecture_eval_celda_ajena',
+    ),
+    Mutant(
         "AT01", "neutralizar la pertenencia de la salida de tabla al codominio", "rust/sv_core/src/wellformed.rs",
         "if !out_values.contains(output.as_str()) {",
         "if false && !out_values.contains(output.as_str()) {",
@@ -115,6 +181,7 @@ MUTANTS = (
 )
 
 CONTROL_TESTS = (
+    "context_wellformed",
     "admissibility_table_causal",
     "architecture_type_guards",
     "cell_geometry_native",

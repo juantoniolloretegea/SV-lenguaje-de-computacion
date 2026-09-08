@@ -1,0 +1,43 @@
+-- J5.1/CQ5/SP-05: Query Q: Frame FAjena: arquitectura G2 ajena al Agent AG (G1)
+codomain K = { A };
+output_semantics S { A -> "a"; }
+cellspec C1 { b: 3; codomain: K; semantics: S; role: Base; }
+cellspec C2 { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec CC1 { cell: C1; bridges: [1]; }
+coupledspec CCCompartido { cell: C1; bridges: [1]; }
+coupledspec CCFuera { cell: C1; bridges: [1]; }
+semantic_relation R { kind: DeclaredRelation; constraints: [Local]; }
+graph G1 { nodes: [CC1, CCCompartido]; edges: []; relation: R; regime: Simple; }
+graph G2 { nodes: [CCFuera]; edges: []; relation: R; regime: Simple; }
+coupledstate CS1 { spec: CC1; base_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; updated_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; }
+coupledstate CSCompartido { spec: CCCompartido; base_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; updated_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; }
+coupledstate CSFuera { spec: CCFuera; base_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; updated_vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; }
+cellstate SLocal { spec: C1; vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; }
+cellstate SAjena { spec: C2; vector: [One,Zero,U,Zero,Zero,Zero,Zero,Zero,Zero]; }
+let E1 = evaluate(CS1);
+let ECompartida = evaluate(CSCompartido);
+let EFuera = evaluate(CSFuera);
+let ELocal = evaluate(SLocal);
+let EAjena = evaluate(SAjena);
+admissibility_table TA { input_codomains: [K]; output_codomain: K; table: { (A) -> A; } }
+let Gate1 = gate([E1], using: TA);
+let GateFuera = gate([EFuera], using: TA);
+horizon H1 { architecture: G1; events: [Cambio]; }
+horizon H2 { architecture: G2; events: [Cambio]; }
+transition_data TD1 { horizon_ref: H1; events: [(Cambio,One)]; induced_parameters: [(CC1,1,One)]; }
+transition_data TD2 { horizon_ref: H2; events: [(Cambio,One)]; induced_parameters: [(CCFuera,1,One)]; }
+frame F1 { index: 1; architecture: G1; cell_states: [CS1]; eval_results: [E1]; gate_results: []; supervision: []; criticalities: []; }
+frame F2 { index: 2; architecture: G1; cell_states: [CS1]; eval_results: [E1]; gate_results: []; supervision: []; criticalities: []; }
+frame FAjena { index: 2; architecture: G2; cell_states: [CSFuera]; eval_results: [EFuera]; gate_results: []; supervision: []; criticalities: []; }
+capture_spec Cap { parameter_id: 1; observation_domain: W; observation_space: O; failure_symbol: Bottom; mapping: Phi; }
+admissibility_spec Adm { parameter_id: 1; states: {Ok,Degraded,NotAdmitted}; rule: Regla; }
+ternarizer Ter { observation_space: O; partition_zero: B0; partition_one: B1; partition_u: BU; mapping: Tau; }
+domain D { parameters: [P]; interface: I; horizon: H1; capture_specs: [Cap]; admissibility_specs: [Adm]; ternarizers: [Ter]; exogeneity_mask: Exo; silent_u: SU; transduction_policy: TP; u_policy: UP; closure_criterion: Cierre; }
+agent AG { architecture: G1; domain: D; query_engine: QE; }
+query_spec QP { query_type: PointEvaluation; scope: Cell; restrictions: []; }
+query_spec QT { query_type: TrajectoryState; scope: Trajectory; restrictions: []; }
+query_spec QF { query_type: FrameComparison; scope: Pair; restrictions: []; }
+query_spec QA { query_type: GlobalCriticality; scope: Architecture; restrictions: []; }
+query_spec QC { query_type: CoverageState; scope: Architecture; restrictions: []; }
+-- OBJETO_ATACADO
+let Q = query(QF, by: AG, in: FrameComparison(F1, FAjena));

@@ -1,0 +1,115 @@
+{
+  "contract": "CONTINUIDAD-LIGADURAS-F7/0.1-candidata",
+  "cases": [
+    {
+      "id": "trajectory_frame_arquitectura_distinta",
+      "obligation": "J4.2/SP-02",
+      "expected": "Trajectory TR: Frame FAjena: arquitectura G2 distinta de G1",
+      "repair": {
+        "old": "FAjena",
+        "new": "F2"
+      },
+      "tail": "trajectory TR { entries: [entry(frame: F1, transition: TD1), entry(frame: FAjena)]; }"
+    },
+    {
+      "id": "trajectory_horizon_arquitectura_distinta",
+      "obligation": "J4.2/SP-02",
+      "expected": "Trajectory TR: TransitionData TD2: horizonte H2 de G2 distinto de G1",
+      "repair": {
+        "old": "TD2",
+        "new": "TD1"
+      },
+      "tail": "trajectory TR { entries: [entry(frame: F1, transition: TD2), entry(frame: F2)]; }"
+    },
+    {
+      "id": "query_point_frame_ajeno",
+      "obligation": "J5.1/CQ5/SP-05",
+      "expected": "Query Q: Frame FAjena: arquitectura G2 ajena al Agent AG (G1)",
+      "repair": {
+        "old": "FAjena",
+        "new": "F1"
+      },
+      "tail": "let Q = query(QP, by: AG, in: PointEval(FAjena));"
+    },
+    {
+      "id": "query_trajectory_ajena",
+      "obligation": "J5.1/CQ5/SP-05",
+      "expected": "Query Q: Trajectory TR: arquitectura G2 ajena al Agent AG (G1)",
+      "repair": {
+        "old": "FAjena",
+        "new": "F1"
+      },
+      "tail": "trajectory TR { entries: [entry(frame: FAjena)]; }\nlet Q = query(QT, by: AG, in: TrajectoryView(TR));"
+    },
+    {
+      "id": "query_comparison_frame_ajeno",
+      "obligation": "J5.1/CQ5/SP-05",
+      "expected": "Query Q: Frame FAjena: arquitectura G2 ajena al Agent AG (G1)",
+      "repair": {
+        "old": "FAjena",
+        "new": "F2"
+      },
+      "tail": "let Q = query(QF, by: AG, in: FrameComparison(F1, FAjena));"
+    },
+    {
+      "id": "query_architecture_cell_ajena",
+      "obligation": "J5.1/CQ4/SP-02",
+      "expected": "Query Q: CellSpec C2 ajena a la arquitectura G1",
+      "repair": {
+        "old": "C2",
+        "new": "C1"
+      },
+      "tail": "let Q = query(QA, by: AG, in: ArchitectureView(G1, [C2], [], []));"
+    },
+    {
+      "id": "query_architecture_eval_nodo_ajeno",
+      "obligation": "J5.1/CQ4/SP-02",
+      "expected": "Query Q: EvalResult EFuera ajeno a la arquitectura G1",
+      "repair": {
+        "old": "EFuera",
+        "new": "ECompartida"
+      },
+      "tail": "let Q = query(QA, by: AG, in: ArchitectureView(G1, [], [EFuera], []));"
+    },
+    {
+      "id": "query_architecture_eval_celda_ajena",
+      "obligation": "J5.1/CQ4/SP-02",
+      "expected": "Query Q: EvalResult EAjena ajeno a la arquitectura G1",
+      "repair": {
+        "old": "EAjena",
+        "new": "ELocal"
+      },
+      "tail": "let Q = query(QA, by: AG, in: ArchitectureView(G1, [], [EAjena], []));"
+    },
+    {
+      "id": "query_architecture_gate_entrada_ajena",
+      "obligation": "J5.1/CQ4/SP-02",
+      "expected": "Query Q: GateResult GateFuera: EvalResult EFuera ajeno a la arquitectura G1",
+      "repair": {
+        "old": "GateFuera",
+        "new": "Gate1"
+      },
+      "tail": "let Q = query(QA, by: AG, in: ArchitectureView(G1, [], [], [GateFuera]));"
+    },
+    {
+      "id": "query_coverage_interface_ajena",
+      "obligation": "J5.1/CQ4/SP-02",
+      "expected": "Query Q: CoverageReport: interface IAjena distinta de Domain D (I)",
+      "repair": {
+        "old": "IAjena",
+        "new": "I"
+      },
+      "tail": "let Q = query(QC, by: AG, in: CoverageReport(D, IAjena, SU));"
+    },
+    {
+      "id": "query_coverage_silent_u_ajena",
+      "obligation": "J5.1/CQ6/SP-05",
+      "expected": "Query Q: CoverageReport: silent_u SUAjena distinta de Domain D (SU)",
+      "repair": {
+        "old": "SUAjena",
+        "new": "SU"
+      },
+      "tail": "let Q = query(QC, by: AG, in: CoverageReport(D, I, SUAjena));"
+    }
+  ]
+}

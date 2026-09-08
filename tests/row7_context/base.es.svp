@@ -1,0 +1,40 @@
+codominio K = { A };
+semántica_de_salida S { A -> "a"; }
+especificación_de_celda C1 { b: 3; codominio: K; semántica: S; rol: Base; }
+especificación_de_celda C2 { b: 3; codominio: K; semántica: S; rol: Base; }
+especificación_acoplada CC1 { celda: C1; puentes: [1]; }
+especificación_acoplada CCCompartido { celda: C1; puentes: [1]; }
+especificación_acoplada CCFuera { celda: C1; puentes: [1]; }
+relación_semántica R { clase: RelaciónDeclarada; restricciones: [Local]; }
+grafo G1 { nodos: [CC1, CCCompartido]; aristas: []; relación: R; régimen: Simple; }
+grafo G2 { nodos: [CCFuera]; aristas: []; relación: R; régimen: Simple; }
+estado_acoplado CS1 { especificación: CC1; vector_base: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; vector_actualizado: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; }
+estado_acoplado CSCompartido { especificación: CCCompartido; vector_base: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; vector_actualizado: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; }
+estado_acoplado CSFuera { especificación: CCFuera; vector_base: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; vector_actualizado: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; }
+estado_de_celda SLocal { especificación: C1; vector: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; }
+estado_de_celda SAjena { especificación: C2; vector: [Uno,Cero,U,Cero,Cero,Cero,Cero,Cero,Cero]; }
+sea E1 = evaluar(CS1);
+sea ECompartida = evaluar(CSCompartido);
+sea EFuera = evaluar(CSFuera);
+sea ELocal = evaluar(SLocal);
+sea EAjena = evaluar(SAjena);
+tabla_de_admisibilidad TA { codominios_de_entrada: [K]; codominio_de_salida: K; tabla: { (A) -> A; } }
+sea Gate1 = compuerta([E1], usando: TA);
+sea GateFuera = compuerta([EFuera], usando: TA);
+horizonte H1 { arquitectura: G1; sucesos: [Cambio]; }
+horizonte H2 { arquitectura: G2; sucesos: [Cambio]; }
+datos_de_transición TD1 { referencia_de_horizonte: H1; sucesos: [(Cambio,Uno)]; parámetros_inducidos: [(CC1,1,Uno)]; }
+datos_de_transición TD2 { referencia_de_horizonte: H2; sucesos: [(Cambio,Uno)]; parámetros_inducidos: [(CCFuera,1,Uno)]; }
+marco F1 { índice: 1; arquitectura: G1; estados_de_celda: [CS1]; resultados_de_evaluación: [E1]; resultados_de_compuerta: []; supervisión: []; criticidades: []; }
+marco F2 { índice: 2; arquitectura: G1; estados_de_celda: [CS1]; resultados_de_evaluación: [E1]; resultados_de_compuerta: []; supervisión: []; criticidades: []; }
+marco FAjena { índice: 2; arquitectura: G2; estados_de_celda: [CSFuera]; resultados_de_evaluación: [EFuera]; resultados_de_compuerta: []; supervisión: []; criticidades: []; }
+especificación_de_captura Cap { identificador_de_parámetro: 1; dominio_de_observación: W; espacio_de_observación: O; símbolo_de_fallo: FalloCaptura; correspondencia: Phi; }
+especificación_de_admisibilidad Adm { identificador_de_parámetro: 1; estados: {Admitido,Degradado,NoAdmitido}; regla: Regla; }
+ternarizador Ter { espacio_de_observación: O; partición_cero: B0; partición_uno: B1; partición_u: BU; correspondencia: Tau; }
+dominio D { parámetros: [P]; interfaz: I; horizonte: H1; especificaciones_de_captura: [Cap]; especificaciones_de_admisibilidad: [Adm]; ternarizadores: [Ter]; máscara_de_exogeneidad: Exo; u_silenciosa: SU; política_de_transducción: TP; política_de_u: UP; criterio_de_clausura: Cierre; }
+agente AG { arquitectura: G1; dominio: D; motor_de_consulta: QE; }
+especificación_de_consulta QP { tipo_de_consulta: EvaluaciónPuntual; alcance: Celda; limitaciones: []; }
+especificación_de_consulta QT { tipo_de_consulta: EstadoTrayectoria; alcance: Trayectoria; limitaciones: []; }
+especificación_de_consulta QF { tipo_de_consulta: ComparaciónMarcos; alcance: Par; limitaciones: []; }
+especificación_de_consulta QA { tipo_de_consulta: CriticidadGlobal; alcance: Arquitectura; limitaciones: []; }
+especificación_de_consulta QC { tipo_de_consulta: EstadoCobertura; alcance: Arquitectura; limitaciones: []; }

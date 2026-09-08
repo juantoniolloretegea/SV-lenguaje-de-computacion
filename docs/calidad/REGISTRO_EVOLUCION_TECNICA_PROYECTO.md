@@ -548,7 +548,25 @@ La restauración del español conserva el acta, blob `89be13febe50f2893e738471ab
 
 **Sucesión de estado:** RETP-091…095 conservan las afirmaciones y los cortes de sus candidatas históricas; este asiento documenta su integración efectiva. `main@1706099a…` contiene ya G/H y el subcierre H04/H05, E115 y E011. DFL-001, DFL-005, H06/H07 y la realización causal de transiciones siguen abiertas. La fila 7 continúa mediante [el contrato de continuidad y ligaduras por operación](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md); no se emite candidata para CYB ni se abre la fila 8.
 
+<a id="retp-097"></a>
+
+### RETP-2026-097 — Coherencia local de trayectoria y contextos; contrato previo de ligaduras
+
+**Entrada:** `main@1706099aef4a0e3846706c3963e7c76313adaf68`. **Contrato anterior a la realización:** `cb8843b20ac84330ad4a5b46fe544c95ab8e7766`, [continuidad y ligaduras por operación](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md). **Estado inicial:** `CANDIDATA_MATERIAL_CI_PENDIENTE`.
+
+La nueva comprobación del núcleo exige identidad de arquitectura entre todos los marcos de una trayectoria y los horizontes de sus transiciones. Comprueba también la pertenencia estructural de los marcos y trayectorias consultados, las especificaciones celulares, evaluaciones y entradas de compuerta de `ArchitectureView`, y la correspondencia de los tres referentes de `CoverageReport` con el dominio del agente. El mismo núcleo aplica la regla en compilación ordinaria, perfilada y ensamblaje; no hay una segunda implementación en el anfitrión.
+
+La condición precede al resultado: once negativos comprometidos declaran J4.2/J5.1, el objeto atacado, la causa completa y la reparación de un único referente que debe producir un control válido. El banco Rust comprueba cada negativo en la entrada ordinaria, perfil inglés, perfil español y ensamblaje mixto en ambos órdenes. Las once mutaciones nuevas CX01…CX11 retiran guardas por separado; se añaden a las trece anteriores. Los testigos se conservan en `tests/row7_context/testigos.json` y en el corpus compartido. No se generan esperados desde una ejecución.
+
+**Inventario previsto:** 14 válidos y 106 inválidos (once nuevos). Los catorce JSON esperados previos permanecen intactos. Se ha comprobado localmente la concordancia del inventario y las 25 pruebas previas del observador. Rust, conformidad nativa/WASI/navegador y la campaña de 24 mutaciones quedan pendientes de ejecución identificada. No hay compilador Rust local; las pruebas Rust se ejecutarán con la referencia de los flujos, Rust/Cargo 1.98.0 sobre Ubuntu 24.04; stable conserva su función adicional.
+
+**Alcance:** cierre local candidato H06/H07 de coherencia estructural, sin ejecución de `query`, restricciones, transiciones o criticidad. La igualdad nominal de `interface` y `silent_u` no materializa sus contratos. Una `CellSpec` presente en un grafo no identifica un nodo único ni acredita cobertura o permisos. No se prueba relación append-only entre versiones persistentes. DFL-001, DFL-003/004/005 y DFL-006 permanecen abiertas; la matriz §5 del contrato es de tratamiento de este incremento, no la condición final de salida de fila 7.
+
+**Continuidad obligatoria:** materializar DFL-005 a partir de las nueve obligaciones y refutadores de §4; comprobar el subconjunto realmente ofrecido y completar la matriz de pérdidas antes de emitir candidata para CYB. El banco de contextos no se utilizará para certificar ligaduras aún ausentes. Inmunología continúa en pausa y la fila 8 no se activa. Ningún README, acta histórica, norma del español, plataforma o repositorio de dominio cambia.
+
 ## 4. Estado de continuidad
+
+**Sucesión RETP-097, 08/09/2026 (candidata):** se fija y materializa la coherencia local H06/H07; DFL-005 recibe contrato y refutadores previos, sin atribuirle todavía realización. Comprobación integrada pendiente.
 
 **Sucesión RETP-096, 08/09/2026:** las PR #77 y #78 están integradas en orden. El corte actual de entrada a la continuidad es `main@1706099aef4a0e3846706c3963e7c76313adaf68`; la fila 7 permanece abierta. Las entradas candidatas siguientes son antecedentes conservados, no el estado actual.
 

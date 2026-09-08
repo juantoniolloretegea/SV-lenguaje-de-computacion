@@ -193,3 +193,14 @@ Continúa K1 por el mínimo de Domain.parameters y la multiplicidad de parameter
 [RETP-094 del maestro](./REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-2026-094--discriminacion-causal-e115-y-rectificacion-registral) corrige cuatro expectativas E115 que descartaban los conjuntos de claves repetidas, ausentes y ajenas. El cierre local queda probado contra intercambios de causa y de referente; no acredita causalidad exhaustiva del corpus ni cierra DFL-001. El corte `bf660b00c0c2b38c7e5e4327b1e89f0ec81348be` supera su propia verificación integrada, identificada en RETP-094; no se cierra por ello DFL-001.
 
 DFL-011 conserva el mandato del español. Se subsana la colisión candidata: `cell_ref` queda en DFL-012 e independencia semántica en DFL-013. La evidencia de RETP-093 conserva su corte y sus límites. DFL-005 y H06/H07 siguen pendientes; H04/H05 sólo tienen el cierre local candidato registrado, sin ejecución ni causalidad entre marcos. Se mantiene la secuencia de filas 7 y 8 y la competencia de Ciberseguridad para constituir su propio universo falsador.
+
+
+## Sucesión de RETP-096/097 · 08/09/2026
+
+RETP-096 registra la integración de PR #77 y #78 en `main@1706099aef4a0e3846706c3963e7c76313adaf68`. Los cierres locales de `TransitionData`, el refuerzo E115 y el testigo E011 dejan de estar sólo en candidata. Sus límites permanecen: no se cierra DFL-001 ni la fila 7.
+
+RETP-097 propone comprobar H06/H07 **en su relación estructural**: arquitecturas de trayectoria/horizonte/contexto y pertenencia de referencias de consulta; `CoverageReport` contrasta sus tres nombres. La comprobación integrada está pendiente. Ninguna de esas guardas materializa `Interface`, `SilentU`, CQ1–CQ6, permisos o la cobertura del agente. La continuidad histórica entre versiones y la causalidad ejecutiva siguen sin acreditarse.
+
+**DFL-005 permanece abierta y bloqueante por operación.** Su contrato de entrada y sus refutadores están delimitados en [el contrato de fila 7, §4](../arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md#4-dfl-005-contrato-de-entrada-todavía-sin-realización). Falta realizar y probar identidades/versiones, ligaduras, compartición, usos y procedencia. Esta obligación no se sustituye por el cierre local de pertenencia. No se atribuye todavía DFL-005 a una estructura Rust ni a un esquema externo que el núcleo no valide.
+
+DFL-011 (español), DFL-012 (nombre `cell_ref`) y DFL-013 (independencia) conservan identidad y obligaciones. La matriz de tratamiento del incremento no equivale a matriz final de resolución de pérdidas; no habilita el relevo a Ciberseguridad.

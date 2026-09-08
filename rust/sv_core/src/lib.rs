@@ -49,6 +49,7 @@ pub mod requirements_coverage;
 pub mod requirements_reuse;
 pub mod resolution;
 mod transition_data_wellformed;
+mod context_wellformed;
 mod wellformed;
 
 pub use admissibility::{
@@ -158,6 +159,7 @@ pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, Compile
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
+    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 
@@ -171,6 +173,7 @@ pub fn compile_svp_profile(
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
+    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 
@@ -251,6 +254,7 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
     wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
+    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
     Ok(program)
 }
 
