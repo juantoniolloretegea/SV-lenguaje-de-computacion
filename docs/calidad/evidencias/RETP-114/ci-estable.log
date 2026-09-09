@@ -1,0 +1,1148 @@
+﻿2026-09-09T20:37:03.1941878Z Current runner version: '2.337.0'
+2026-09-09T20:37:03.1962337Z ##[group]Runner Image Provisioner
+2026-09-09T20:37:03.1963050Z Hosted Compute Agent
+2026-09-09T20:37:03.1963609Z Version: 20260828.587
+2026-09-09T20:37:03.1964376Z Commit: abac92662cab4cc7352de4f9f9d2e2419aad9c29
+2026-09-09T20:37:03.1965052Z Build Date: 2026-08-28T16:44:25Z
+2026-09-09T20:37:03.1965617Z Worker ID: {73b11271-cf77-4881-a7f3-37b31fbdc4dc}
+2026-09-09T20:37:03.1966224Z Azure Region: westus3
+2026-09-09T20:37:03.1966739Z ##[endgroup]
+2026-09-09T20:37:03.1967831Z ##[group]Operating System
+2026-09-09T20:37:03.1968412Z Ubuntu
+2026-09-09T20:37:03.1968854Z 24.04.4
+2026-09-09T20:37:03.1969304Z LTS
+2026-09-09T20:37:03.1969778Z ##[endgroup]
+2026-09-09T20:37:03.1970242Z ##[group]Runner Image
+2026-09-09T20:37:03.1970731Z Image: ubuntu-24.04
+2026-09-09T20:37:03.1971250Z Version: 20260831.293.1
+2026-09-09T20:37:03.1972285Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260831.293/images/ubuntu/Ubuntu2404-Readme.md
+2026-09-09T20:37:03.1973616Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260831.293
+2026-09-09T20:37:03.1974606Z ##[endgroup]
+2026-09-09T20:37:03.1975599Z ##[group]GITHUB_TOKEN Permissions
+2026-09-09T20:37:03.1977296Z Contents: read
+2026-09-09T20:37:03.1977868Z Metadata: read
+2026-09-09T20:37:03.1978330Z ##[endgroup]
+2026-09-09T20:37:03.1979976Z Secret source: Actions
+2026-09-09T20:37:03.1980805Z Cache mode: write
+2026-09-09T20:37:03.1981382Z Prepare workflow directory
+2026-09-09T20:37:03.2327252Z Prepare all required actions
+2026-09-09T20:37:03.2365517Z Getting action download info
+2026-09-09T20:37:03.5070711Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-09-09T20:37:03.7609198Z Complete job name: compatibilidad-rust-estable
+2026-09-09T20:37:03.8194107Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-09T20:37:03.8201027Z ##[group]Run actions/checkout@v4
+2026-09-09T20:37:03.8201574Z with:
+2026-09-09T20:37:03.8202027Z   repository: juantoniolloretegea/SV-lenguaje-de-computacion
+2026-09-09T20:37:03.8205275Z   token: ***
+2026-09-09T20:37:03.8205627Z   ssh-strict: true
+2026-09-09T20:37:03.8205979Z   ssh-user: git
+2026-09-09T20:37:03.8206406Z   persist-credentials: true
+2026-09-09T20:37:03.8206836Z   clean: true
+2026-09-09T20:37:03.8207192Z   sparse-checkout-cone-mode: true
+2026-09-09T20:37:03.8207604Z   fetch-depth: 1
+2026-09-09T20:37:03.8207952Z   fetch-tags: false
+2026-09-09T20:37:03.8208311Z   show-progress: true
+2026-09-09T20:37:03.8208672Z   lfs: false
+2026-09-09T20:37:03.8209046Z   submodules: false
+2026-09-09T20:37:03.8209411Z   set-safe-directory: true
+2026-09-09T20:37:03.8209811Z   allow-unsafe-pr-checkout: false
+2026-09-09T20:37:03.8210381Z ##[endgroup]
+2026-09-09T20:37:03.9027387Z Syncing repository: juantoniolloretegea/SV-lenguaje-de-computacion
+2026-09-09T20:37:03.9029669Z ##[group]Getting Git version info
+2026-09-09T20:37:03.9030808Z Working directory is '/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion'
+2026-09-09T20:37:03.9032338Z [command]/usr/bin/git version
+2026-09-09T20:37:03.9146524Z git version 2.55.0
+2026-09-09T20:37:03.9153430Z ##[endgroup]
+2026-09-09T20:37:03.9166847Z Temporarily overriding HOME='/home/runner/work/_temp/0552d320-d39f-4965-af41-45f3a59062ca' before making global git config changes
+2026-09-09T20:37:03.9168568Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-09T20:37:03.9173077Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion
+2026-09-09T20:37:03.9275887Z Deleting the contents of '/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion'
+2026-09-09T20:37:03.9280703Z ##[group]Initializing the repository
+2026-09-09T20:37:03.9284451Z [command]/usr/bin/git init /home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion
+2026-09-09T20:37:04.0181862Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-09-09T20:37:04.0183230Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-09-09T20:37:04.0184580Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-09-09T20:37:04.0190205Z hint: call:
+2026-09-09T20:37:04.0191133Z hint:
+2026-09-09T20:37:04.0191758Z hint: 	git config --global init.defaultBranch <name>
+2026-09-09T20:37:04.0192293Z hint:
+2026-09-09T20:37:04.0192779Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-09-09T20:37:04.0193565Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-09-09T20:37:04.0194285Z hint:
+2026-09-09T20:37:04.0194628Z hint: 	git branch -m <name>
+2026-09-09T20:37:04.0195013Z hint:
+2026-09-09T20:37:04.0195527Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-09-09T20:37:04.0198848Z Initialized empty Git repository in /home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion/.git/
+2026-09-09T20:37:04.0200587Z [command]/usr/bin/git remote add origin https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion
+2026-09-09T20:37:04.0374264Z ##[endgroup]
+2026-09-09T20:37:04.0375638Z ##[group]Disabling automatic garbage collection
+2026-09-09T20:37:04.0376649Z [command]/usr/bin/git config --local gc.auto 0
+2026-09-09T20:37:04.0775067Z ##[endgroup]
+2026-09-09T20:37:04.0776562Z ##[group]Setting up auth
+2026-09-09T20:37:04.0778806Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-09T20:37:04.0811003Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-09T20:37:04.1145134Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-09T20:37:04.1174564Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-09T20:37:04.1360894Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-09T20:37:04.1390944Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-09T20:37:04.1578236Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-09-09T20:37:04.1879114Z ##[endgroup]
+2026-09-09T20:37:04.1881085Z ##[group]Fetching the repository
+2026-09-09T20:37:04.1888580Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +049563bc815a7a133e4fb83ccc2382da26851ee2:refs/remotes/pull/89/merge
+2026-09-09T20:37:05.2434372Z From https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion
+2026-09-09T20:37:05.2436473Z  * [new ref]         049563bc815a7a133e4fb83ccc2382da26851ee2 -> pull/89/merge
+2026-09-09T20:37:05.2440718Z ##[endgroup]
+2026-09-09T20:37:05.2441463Z ##[group]Determining the checkout info
+2026-09-09T20:37:05.2442199Z ##[endgroup]
+2026-09-09T20:37:05.2445833Z [command]/usr/bin/git sparse-checkout disable
+2026-09-09T20:37:05.2490321Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-09-09T20:37:05.2516342Z ##[group]Checking out the ref
+2026-09-09T20:37:05.2519145Z [command]/usr/bin/git checkout --progress --force refs/remotes/pull/89/merge
+2026-09-09T20:37:05.2928936Z Note: switching to 'refs/remotes/pull/89/merge'.
+2026-09-09T20:37:05.2929373Z 
+2026-09-09T20:37:05.2929665Z You are in 'detached HEAD' state. You can look around, make experimental
+2026-09-09T20:37:05.2930482Z changes and commit them, and you can discard any commits you make in this
+2026-09-09T20:37:05.2931450Z state without impacting any branches by switching back to a branch.
+2026-09-09T20:37:05.2931883Z 
+2026-09-09T20:37:05.2932196Z If you want to create a new branch to retain commits you create, you may
+2026-09-09T20:37:05.2932651Z do so (now or later) by using -c with the switch command. Example:
+2026-09-09T20:37:05.2932940Z 
+2026-09-09T20:37:05.2933113Z   git switch -c <new-branch-name>
+2026-09-09T20:37:05.2933413Z 
+2026-09-09T20:37:05.2933591Z Or undo this operation with:
+2026-09-09T20:37:05.2933858Z 
+2026-09-09T20:37:05.2934202Z   git switch -
+2026-09-09T20:37:05.2934493Z 
+2026-09-09T20:37:05.2934834Z Turn off this advice by setting config variable advice.detachedHead to false
+2026-09-09T20:37:05.2935218Z 
+2026-09-09T20:37:05.2935600Z HEAD is now at 049563b Merge b7636296f2c75715691464df83a030d006a2f054 into 73c738348a9493a459744c62b8ade382ff595af5
+2026-09-09T20:37:05.2938995Z ##[endgroup]
+2026-09-09T20:37:05.2976227Z [command]/usr/bin/git log -1 --format=%H
+2026-09-09T20:37:05.2999061Z 049563bc815a7a133e4fb83ccc2382da26851ee2
+2026-09-09T20:37:05.3191542Z ##[group]Run rustup toolchain install stable --profile minimal
+2026-09-09T20:37:05.3192125Z [36;1mrustup toolchain install stable --profile minimal[0m
+2026-09-09T20:37:05.3192570Z [36;1mrustup default stable[0m
+2026-09-09T20:37:05.3192919Z [36;1mrustc --version[0m
+2026-09-09T20:37:05.3193250Z [36;1mcargo --version[0m
+2026-09-09T20:37:05.3230217Z shell: /usr/bin/bash -e {0}
+2026-09-09T20:37:05.3230601Z ##[endgroup]
+2026-09-09T20:37:05.5344875Z info: syncing channel updates for stable-x86_64-unknown-linux-gnu
+2026-09-09T20:37:05.6377287Z info: latest update on 2026-09-03 for version 1.98.1 (48a229cea 2026-09-01)
+2026-09-09T20:37:05.6513678Z info: removing previous version of component clippy
+2026-09-09T20:37:05.6525942Z info: removing previous version of component rustfmt
+2026-09-09T20:37:05.6533526Z info: removing previous version of component cargo
+2026-09-09T20:37:05.6565811Z info: removing previous version of component rust-std
+2026-09-09T20:37:05.6603163Z info: removing previous version of component rustc
+2026-09-09T20:37:05.6641586Z info: downloading 5 components
+2026-09-09T20:37:12.9306478Z 
+2026-09-09T20:37:12.9367825Z   stable-x86_64-unknown-linux-gnu updated - rustc 1.98.1 (48a229cea 2026-09-01) (from rustc 1.98.0 (88d9e12ae 2026-08-18))
+2026-09-09T20:37:12.9368430Z 
+2026-09-09T20:37:12.9469489Z info: using existing install for stable-x86_64-unknown-linux-gnu
+2026-09-09T20:37:12.9476341Z info: default toolchain set to stable-x86_64-unknown-linux-gnu
+2026-09-09T20:37:12.9476771Z 
+2026-09-09T20:37:12.9534300Z   stable-x86_64-unknown-linux-gnu unchanged - rustc 1.98.1 (48a229cea 2026-09-01)
+2026-09-09T20:37:12.9534741Z 
+2026-09-09T20:37:12.9639592Z rustc 1.98.1 (48a229cea 2026-09-01)
+2026-09-09T20:37:12.9722569Z cargo 1.98.1 (797e8a9bc 2026-08-05)
+2026-09-09T20:37:12.9763137Z ##[group]Run cargo test --manifest-path rust/Cargo.toml --workspace
+2026-09-09T20:37:12.9763540Z [36;1mcargo test --manifest-path rust/Cargo.toml --workspace[0m
+2026-09-09T20:37:12.9797097Z shell: /usr/bin/bash -e {0}
+2026-09-09T20:37:12.9797330Z ##[endgroup]
+2026-09-09T20:37:13.0224199Z    Compiling sv_core v0.1.0 (/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion/rust/sv_core)
+2026-09-09T20:37:13.8830693Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8831504Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8832028Z     |
+2026-09-09T20:37:13.8916650Z 141 |           impl $name {
+2026-09-09T20:37:13.8934742Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8935428Z ...
+2026-09-09T20:37:13.8935814Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8936279Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8936614Z ...
+2026-09-09T20:37:13.8936934Z 162 | / opaque_control_ref!(
+2026-09-09T20:37:13.8937254Z 163 | |     InformationRef,
+2026-09-09T20:37:13.8937995Z 164 | |     "Referencia nominal a información dentro del dominio de control."
+2026-09-09T20:37:13.8938789Z 165 | | );
+2026-09-09T20:37:13.8939037Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8939365Z     |
+2026-09-09T20:37:13.8939733Z     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-09-09T20:37:13.8940562Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8941182Z 
+2026-09-09T20:37:13.8941627Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8942076Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8942436Z     |
+2026-09-09T20:37:13.8942679Z 141 |           impl $name {
+2026-09-09T20:37:13.8943059Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8943480Z ...
+2026-09-09T20:37:13.8943794Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8944565Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8944917Z ...
+2026-09-09T20:37:13.8945145Z 166 | / opaque_control_ref!(
+2026-09-09T20:37:13.8945434Z 167 | |     AdmittedEvidenceRef,
+2026-09-09T20:37:13.8946120Z 168 | |     "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
+2026-09-09T20:37:13.8946691Z 169 | | );
+2026-09-09T20:37:13.8946948Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8947259Z     |
+2026-09-09T20:37:13.8947867Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8948496Z 
+2026-09-09T20:37:13.8948685Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8949134Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8949455Z     |
+2026-09-09T20:37:13.8949700Z 141 |           impl $name {
+2026-09-09T20:37:13.8950077Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8950479Z ...
+2026-09-09T20:37:13.8950793Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8951212Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8951539Z ...
+2026-09-09T20:37:13.8951769Z 170 | / opaque_control_ref!(
+2026-09-09T20:37:13.8952068Z 171 | |     ConstitutedFactRef,
+2026-09-09T20:37:13.8952679Z 172 | |     "Referencia a un hecho semántico constituido; no equivale a autoridad."
+2026-09-09T20:37:13.8953149Z 173 | | );
+2026-09-09T20:37:13.8953380Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8953691Z     |
+2026-09-09T20:37:13.8954457Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8955043Z 
+2026-09-09T20:37:13.8955235Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8955975Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8956292Z     |
+2026-09-09T20:37:13.8956526Z 141 |           impl $name {
+2026-09-09T20:37:13.8956891Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8957302Z ...
+2026-09-09T20:37:13.8957608Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8958017Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8958329Z ...
+2026-09-09T20:37:13.8958559Z 174 | / opaque_control_ref!(
+2026-09-09T20:37:13.8958851Z 175 | |     AuthorityRef,
+2026-09-09T20:37:13.8959475Z 176 | |     "Referencia a autoridad constituida; su constructor no forma parte de la API pública."
+2026-09-09T20:37:13.8960038Z 177 | | );
+2026-09-09T20:37:13.8960292Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8960598Z     |
+2026-09-09T20:37:13.8961224Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8961858Z 
+2026-09-09T20:37:13.8962061Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8962718Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8963044Z     |
+2026-09-09T20:37:13.8963289Z 141 |           impl $name {
+2026-09-09T20:37:13.8963661Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8964349Z ...
+2026-09-09T20:37:13.8964664Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8965092Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8965416Z ...
+2026-09-09T20:37:13.8965667Z 178 | / opaque_control_ref!(
+2026-09-09T20:37:13.8965978Z 179 | |     EnablementRef,
+2026-09-09T20:37:13.8966599Z 180 | |     "Referencia a una habilitación de autoridad ya existente; no amplía autoridad."
+2026-09-09T20:37:13.8967097Z 181 | | );
+2026-09-09T20:37:13.8967337Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8967669Z     |
+2026-09-09T20:37:13.8968287Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8968903Z 
+2026-09-09T20:37:13.8969092Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8969538Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8969867Z     |
+2026-09-09T20:37:13.8970123Z 141 |           impl $name {
+2026-09-09T20:37:13.8970502Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8970915Z ...
+2026-09-09T20:37:13.8971233Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8971650Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8971962Z ...
+2026-09-09T20:37:13.8972191Z 186 | / opaque_control_ref!(
+2026-09-09T20:37:13.8972483Z 187 | |     FormRef,
+2026-09-09T20:37:13.8972940Z 188 | |     "Referencia a una forma de transición constituida."
+2026-09-09T20:37:13.8973351Z 189 | | );
+2026-09-09T20:37:13.8973610Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8973915Z     |
+2026-09-09T20:37:13.8974688Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8975341Z 
+2026-09-09T20:37:13.8975512Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8975923Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8976222Z     |
+2026-09-09T20:37:13.8976447Z 141 |           impl $name {
+2026-09-09T20:37:13.8976817Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8977201Z ...
+2026-09-09T20:37:13.8977513Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8977923Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8978238Z ...
+2026-09-09T20:37:13.8978463Z 190 | / opaque_control_ref!(
+2026-09-09T20:37:13.8978760Z 191 | |     EffectFamilyRef,
+2026-09-09T20:37:13.8979532Z 192 | |     "Referencia a una familia de efectos fijada por constitución."
+2026-09-09T20:37:13.8980015Z 193 | | );
+2026-09-09T20:37:13.8980272Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8980575Z     |
+2026-09-09T20:37:13.8981132Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8981726Z 
+2026-09-09T20:37:13.8981915Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8982329Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8982636Z     |
+2026-09-09T20:37:13.8982863Z 141 |           impl $name {
+2026-09-09T20:37:13.8983220Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8983619Z ...
+2026-09-09T20:37:13.8983930Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8984523Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8984861Z ...
+2026-09-09T20:37:13.8985102Z 194 | / opaque_control_ref!(
+2026-09-09T20:37:13.8985416Z 195 | |     EffectRef,
+2026-09-09T20:37:13.8985849Z 196 | |     "Referencia a un efecto concreto; identificarlo no equivale a autorizarlo."
+2026-09-09T20:37:13.8986539Z 197 | | );
+2026-09-09T20:37:13.8986786Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8987079Z     |
+2026-09-09T20:37:13.8987650Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8988244Z 
+2026-09-09T20:37:13.8988426Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8988842Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8989170Z     |
+2026-09-09T20:37:13.8989409Z 141 |           impl $name {
+2026-09-09T20:37:13.8989777Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8990178Z ...
+2026-09-09T20:37:13.8990494Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8990936Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8991264Z ...
+2026-09-09T20:37:13.8991496Z 198 | / opaque_control_ref!(
+2026-09-09T20:37:13.8991792Z 199 | |     ContextRef,
+2026-09-09T20:37:13.8992236Z 200 | |     "Referencia a una ligadura de contexto relevante para autoridad o forma."
+2026-09-09T20:37:13.8992740Z 201 | | );
+2026-09-09T20:37:13.8992999Z     | |_- in this macro invocation
+2026-09-09T20:37:13.8993306Z     |
+2026-09-09T20:37:13.8993923Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.8994690Z 
+2026-09-09T20:37:13.8994894Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.8995337Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.8995665Z     |
+2026-09-09T20:37:13.8995897Z 141 |           impl $name {
+2026-09-09T20:37:13.8996257Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.8996648Z ...
+2026-09-09T20:37:13.8996978Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.8997414Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.8997788Z ...
+2026-09-09T20:37:13.8998020Z 202 | / opaque_control_ref!(
+2026-09-09T20:37:13.8998333Z 203 | |     AuthorityHolderRef,
+2026-09-09T20:37:13.8998975Z 204 | |     "Referencia al titular de una autoridad; no constituye autoridad por sí misma."
+2026-09-09T20:37:13.8999504Z 205 | | );
+2026-09-09T20:37:13.8999760Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9000063Z     |
+2026-09-09T20:37:13.9000645Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9001234Z 
+2026-09-09T20:37:13.9001440Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9001858Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9002159Z     |
+2026-09-09T20:37:13.9002379Z 141 |           impl $name {
+2026-09-09T20:37:13.9002957Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9003356Z ...
+2026-09-09T20:37:13.9003675Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9004284Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9004598Z ...
+2026-09-09T20:37:13.9004834Z 206 | / opaque_control_ref!(
+2026-09-09T20:37:13.9005141Z 207 | |     GovernedObjectRef,
+2026-09-09T20:37:13.9005611Z 208 | |     "Referencia a un objeto candidato a pertenecer al dominio gobernado D_a."
+2026-09-09T20:37:13.9006103Z 209 | | );
+2026-09-09T20:37:13.9006360Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9006654Z     |
+2026-09-09T20:37:13.9007253Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9007859Z 
+2026-09-09T20:37:13.9008036Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9008457Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9008771Z     |
+2026-09-09T20:37:13.9009005Z 141 |           impl $name {
+2026-09-09T20:37:13.9009392Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9010002Z ...
+2026-09-09T20:37:13.9010316Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9010744Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9011047Z ...
+2026-09-09T20:37:13.9011271Z 210 | / opaque_control_ref!(
+2026-09-09T20:37:13.9011577Z 211 | |     AccumulationRuleRef,
+2026-09-09T20:37:13.9012181Z 212 | |     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+2026-09-09T20:37:13.9012644Z 213 | | );
+2026-09-09T20:37:13.9012897Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9013202Z     |
+2026-09-09T20:37:13.9013788Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9014526Z 
+2026-09-09T20:37:13.9014729Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9015153Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9015472Z     |
+2026-09-09T20:37:13.9015691Z 141 |           impl $name {
+2026-09-09T20:37:13.9016057Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9016441Z ...
+2026-09-09T20:37:13.9016744Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9017176Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9017492Z ...
+2026-09-09T20:37:13.9017719Z 214 | / opaque_control_ref!(
+2026-09-09T20:37:13.9018008Z 215 | |     RequirementRef,
+2026-09-09T20:37:13.9018603Z 216 | |     "Referencia a una obligación de Req; identificarla no acredita su cumplimiento."
+2026-09-09T20:37:13.9019119Z 217 | | );
+2026-09-09T20:37:13.9019374Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9019675Z     |
+2026-09-09T20:37:13.9020243Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9020836Z 
+2026-09-09T20:37:13.9021034Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9021458Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9021765Z     |
+2026-09-09T20:37:13.9021989Z 141 |           impl $name {
+2026-09-09T20:37:13.9022349Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9022760Z ...
+2026-09-09T20:37:13.9023078Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9023487Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9023792Z ...
+2026-09-09T20:37:13.9024188Z 218 | / opaque_control_ref!(
+2026-09-09T20:37:13.9024484Z 219 | |     VerifierRef,
+2026-09-09T20:37:13.9024972Z 220 | |     "Referencia a un verificador concreto; su mera existencia no acredita aplicabilidad."
+2026-09-09T20:37:13.9025523Z 221 | | );
+2026-09-09T20:37:13.9025985Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9026294Z     |
+2026-09-09T20:37:13.9026887Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9027505Z 
+2026-09-09T20:37:13.9027702Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9028135Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9028451Z     |
+2026-09-09T20:37:13.9028682Z 141 |           impl $name {
+2026-09-09T20:37:13.9029041Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9029429Z ...
+2026-09-09T20:37:13.9029744Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9030169Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9030461Z ...
+2026-09-09T20:37:13.9030684Z 222 | / opaque_control_ref!(
+2026-09-09T20:37:13.9030982Z 223 | |     VerifierFamilyRef,
+2026-09-09T20:37:13.9031593Z 224 | |     "Referencia a una familia de verificadores admisibles para una obligación."
+2026-09-09T20:37:13.9032075Z 225 | | );
+2026-09-09T20:37:13.9032324Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9032837Z     |
+2026-09-09T20:37:13.9033431Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9034140Z 
+2026-09-09T20:37:13.9034328Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9034727Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9035036Z     |
+2026-09-09T20:37:13.9035268Z 141 |           impl $name {
+2026-09-09T20:37:13.9035645Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9036033Z ...
+2026-09-09T20:37:13.9036343Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9036775Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9037079Z ...
+2026-09-09T20:37:13.9037322Z 226 | / opaque_control_ref!(
+2026-09-09T20:37:13.9037631Z 227 | |     ApplicabilityRuleRef,
+2026-09-09T20:37:13.9038278Z 228 | |     "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
+2026-09-09T20:37:13.9038808Z 229 | | );
+2026-09-09T20:37:13.9039053Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9039372Z     |
+2026-09-09T20:37:13.9039965Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9040539Z 
+2026-09-09T20:37:13.9040735Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9041152Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9041466Z     |
+2026-09-09T20:37:13.9041695Z 141 |           impl $name {
+2026-09-09T20:37:13.9042054Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9042442Z ...
+2026-09-09T20:37:13.9042744Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9043171Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9043506Z ...
+2026-09-09T20:37:13.9043734Z 230 | / opaque_control_ref!(
+2026-09-09T20:37:13.9044214Z 231 | |     ConflictResolutionRuleRef,
+2026-09-09T20:37:13.9044969Z 232 | |     "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+2026-09-09T20:37:13.9045581Z 233 | | );
+2026-09-09T20:37:13.9045825Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9046124Z     |
+2026-09-09T20:37:13.9046717Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9047301Z 
+2026-09-09T20:37:13.9047486Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9047906Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9048221Z     |
+2026-09-09T20:37:13.9048456Z 141 |           impl $name {
+2026-09-09T20:37:13.9049047Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9049468Z ...
+2026-09-09T20:37:13.9049772Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9050207Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9050524Z ...
+2026-09-09T20:37:13.9050749Z 234 | / opaque_control_ref!(
+2026-09-09T20:37:13.9051049Z 235 | |     CoverageRuleRef,
+2026-09-09T20:37:13.9051576Z 236 | |     "Referencia a una regla previamente constituida de cobertura de comprobaciones exigibles."
+2026-09-09T20:37:13.9052169Z 237 | | );
+2026-09-09T20:37:13.9052422Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9052721Z     |
+2026-09-09T20:37:13.9053313Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9053915Z 
+2026-09-09T20:37:13.9054258Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9054681Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9054999Z     |
+2026-09-09T20:37:13.9055235Z 141 |           impl $name {
+2026-09-09T20:37:13.9055613Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9056223Z ...
+2026-09-09T20:37:13.9056530Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9056953Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9057273Z ...
+2026-09-09T20:37:13.9057508Z 238 | / opaque_control_ref!(
+2026-09-09T20:37:13.9057803Z 239 | |     ReuseRuleRef,
+2026-09-09T20:37:13.9058512Z 240 | |     "Referencia a una regla previamente constituida de reutilización de resultados cualificados."
+2026-09-09T20:37:13.9059116Z 241 | | );
+2026-09-09T20:37:13.9059367Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9059657Z     |
+2026-09-09T20:37:13.9060255Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9060851Z 
+2026-09-09T20:37:13.9061062Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9061494Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9061819Z     |
+2026-09-09T20:37:13.9062057Z 141 |           impl $name {
+2026-09-09T20:37:13.9062421Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9062810Z ...
+2026-09-09T20:37:13.9063122Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9063538Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9063878Z ...
+2026-09-09T20:37:13.9064259Z 242 | / opaque_control_ref!(
+2026-09-09T20:37:13.9064570Z 243 | |     ReuseBindingKeyRef,
+2026-09-09T20:37:13.9065340Z 244 | |     "Referencia a una dimensión constituida cuya continuidad puede ser exigible para reutilizar un resultado."
+2026-09-09T20:37:13.9066009Z 245 | | );
+2026-09-09T20:37:13.9066258Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9066565Z     |
+2026-09-09T20:37:13.9067167Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9067767Z 
+2026-09-09T20:37:13.9067954Z warning: associated function `from_core_id` is never used
+2026-09-09T20:37:13.9068398Z    --> sv_core/src/control.rs:155:27
+2026-09-09T20:37:13.9068718Z     |
+2026-09-09T20:37:13.9068947Z 141 |           impl $name {
+2026-09-09T20:37:13.9069303Z     |           ---------- associated function in this implementation
+2026-09-09T20:37:13.9069700Z ...
+2026-09-09T20:37:13.9069999Z 155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+2026-09-09T20:37:13.9070405Z     |                             ^^^^^^^^^^^^
+2026-09-09T20:37:13.9070709Z ...
+2026-09-09T20:37:13.9070936Z 246 | / opaque_control_ref!(
+2026-09-09T20:37:13.9071239Z 247 | |     ReuseBindingValueRef,
+2026-09-09T20:37:13.9072041Z 248 | |     "Referencia al valor constituido de una dimensión de reutilización; identificarlo no acredita su vigencia."
+2026-09-09T20:37:13.9072660Z 249 | | );
+2026-09-09T20:37:13.9073124Z     | |_- in this macro invocation
+2026-09-09T20:37:13.9073436Z     |
+2026-09-09T20:37:13.9074168Z     = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+2026-09-09T20:37:13.9074789Z 
+2026-09-09T20:37:13.9074933Z warning: function `compile_svp` is never used
+2026-09-09T20:37:13.9075313Z    --> sv_core/src/frontend.rs:803:8
+2026-09-09T20:37:13.9075622Z     |
+2026-09-09T20:37:13.9076067Z 803 | pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, FrontendError> {
+2026-09-09T20:37:13.9076615Z     |        ^^^^^^^^^^^
+2026-09-09T20:37:13.9076786Z 
+2026-09-09T20:37:13.9076985Z warning: function `compile_svp_with_profile` is never used
+2026-09-09T20:37:13.9077412Z    --> sv_core/src/frontend.rs:807:8
+2026-09-09T20:37:13.9077721Z     |
+2026-09-09T20:37:13.9077968Z 807 | pub fn compile_svp_with_profile(
+2026-09-09T20:37:13.9078298Z     |        ^^^^^^^^^^^^^^^^^^^^^^^^
+2026-09-09T20:37:13.9078514Z 
+2026-09-09T20:37:13.9078659Z warning: constant `PROFILE_ID` is never used
+2026-09-09T20:37:13.9079045Z  --> sv_core/src/identifier_profile.rs:6:18
+2026-09-09T20:37:13.9079668Z   |
+2026-09-09T20:37:13.9080019Z 6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+2026-09-09T20:37:13.9080461Z   |                  ^^^^^^^^^^
+2026-09-09T20:37:13.9080645Z 
+2026-09-09T20:37:13.9080813Z warning: function `is_reserved_word` is never used
+2026-09-09T20:37:13.9081233Z   --> sv_core/src/identifier_profile.rs:22:15
+2026-09-09T20:37:13.9081582Z    |
+2026-09-09T20:37:13.9081879Z 22 | pub(crate) fn is_reserved_word(word: &str) -> bool {
+2026-09-09T20:37:13.9082272Z    |               ^^^^^^^^^^^^^^^^
+2026-09-09T20:37:13.9082482Z 
+2026-09-09T20:37:13.9082637Z warning: method `matches_descriptor` is never used
+2026-09-09T20:37:13.9083060Z    --> sv_core/src/requirements_reuse.rs:121:19
+2026-09-09T20:37:13.9083417Z     |
+2026-09-09T20:37:13.9083664Z  44 | impl ReuseRule {
+2026-09-09T20:37:13.9084144Z     | -------------- method in this implementation
+2026-09-09T20:37:13.9084502Z ...
+2026-09-09T20:37:13.9084958Z 121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+2026-09-09T20:37:13.9085540Z     |                   ^^^^^^^^^^^^^^^^^^
+2026-09-09T20:37:13.9085767Z 
+2026-09-09T20:37:13.9086037Z warning: hiding a lifetime that's elided elsewhere is confusing
+2026-09-09T20:37:13.9086488Z     --> sv_core/src/frontend.rs:2161:13
+2026-09-09T20:37:13.9086809Z      |
+2026-09-09T20:37:13.9087062Z 2161 |     fn peek(&self) -> &Token {
+2026-09-09T20:37:13.9087396Z      |             ^^^^^     ^^^^^^
+2026-09-09T20:37:13.9087684Z      |             |         ||
+2026-09-09T20:37:13.9088019Z      |             |         |the same lifetime is hidden here
+2026-09-09T20:37:13.9088446Z      |             |         the same lifetime is elided here
+2026-09-09T20:37:13.9088842Z      |             the lifetime is elided here
+2026-09-09T20:37:13.9089180Z      |
+2026-09-09T20:37:13.9089638Z      = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+2026-09-09T20:37:13.9090282Z      = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+2026-09-09T20:37:13.9090712Z help: use `'_` for type paths
+2026-09-09T20:37:13.9091018Z      |
+2026-09-09T20:37:13.9091269Z 2161 |     fn peek(&self) -> &Token<'_> {
+2026-09-09T20:37:13.9091610Z      |                             ++++
+2026-09-09T20:37:13.9091826Z 
+2026-09-09T20:37:14.4149811Z warning: function `permission_plan` is never used
+2026-09-09T20:37:14.4151159Z    --> sv_core/src/authority/transitions/reuse_tests.rs:288:4
+2026-09-09T20:37:14.4151698Z     |
+2026-09-09T20:37:14.4152068Z 288 | fn permission_plan() -> GenesisPlan {
+2026-09-09T20:37:14.4152583Z     |    ^^^^^^^^^^^^^^^
+2026-09-09T20:37:14.4152964Z     |
+2026-09-09T20:37:14.4153404Z     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-09-09T20:37:14.4153847Z 
+2026-09-09T20:37:17.1976277Z warning: `sv_core` (lib) generated 27 warnings (run `cargo fix --lib -p sv_core` to apply 1 suggestion)
+2026-09-09T20:37:17.1977707Z    Compiling sv_wasm v0.1.0 (/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion/rust/sv_wasm)
+2026-09-09T20:37:17.1979240Z    Compiling sv_native v0.1.0 (/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion/rust/sv_native)
+2026-09-09T20:37:18.7915219Z warning: function `report` is never used
+2026-09-09T20:37:18.7915833Z    --> sv_core/tests/../../../tests/row7_bindings/cases.rs:165:8
+2026-09-09T20:37:18.7944666Z     |
+2026-09-09T20:37:18.7974929Z 165 | pub fn report()->Result<String,String> {
+2026-09-09T20:37:18.7987091Z     |        ^^^^^^
+2026-09-09T20:37:18.8014409Z     |
+2026-09-09T20:37:18.8044588Z     = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-09-09T20:37:18.8045056Z 
+2026-09-09T20:37:19.3582409Z warning: `sv_core` (test "bindings") generated 1 warning
+2026-09-09T20:37:19.4182143Z warning: `sv_core` (lib test) generated 4 warnings (3 duplicates)
+2026-09-09T20:37:19.5380299Z warning: function `check_witness` is never used
+2026-09-09T20:37:19.5394894Z   --> sv_core/examples/../../../tests/row7_gh/probe.rs:59:8
+2026-09-09T20:37:19.5414719Z    |
+2026-09-09T20:37:19.5434670Z 59 | pub fn check_witness(witness: &str) -> Result<(), String> {
+2026-09-09T20:37:19.5464524Z    |        ^^^^^^^^^^^^^
+2026-09-09T20:37:19.5494622Z    |
+2026-09-09T20:37:19.5504671Z    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+2026-09-09T20:37:19.5524492Z 
+2026-09-09T20:37:20.0594164Z warning: `sv_core` (example "gh_binding_probe") generated 1 warning
+2026-09-09T20:37:21.7407949Z warning: `sv_core` (example "gh_binding_probe_browser") generated 1 warning (1 duplicate)
+2026-09-09T20:37:21.7408452Z     Finished `test` profile [unoptimized + debuginfo] target(s) in 8.74s
+2026-09-09T20:37:21.7428423Z      Running unittests src/lib.rs (rust/target/debug/deps/sv_core-e98b85bbe4a69b9b)
+2026-09-09T20:37:21.7439537Z 
+2026-09-09T20:37:21.7439655Z running 211 tests
+2026-09-09T20:37:21.7447680Z test admissibility::tests::admissibility_labels_are_exact ... ok
+2026-09-09T20:37:21.7448368Z test admissibility::tests::admissibility_spec_rejects_missing_rule ... ok
+2026-09-09T20:37:21.7449027Z test admissibility::tests::admissibility_spec_rejects_zero_parameter_id ... ok
+2026-09-09T20:37:21.7449666Z test admissibility::tests::admitted_observation_does_not_itself_create_tri ... ok
+2026-09-09T20:37:21.7450231Z test admissibility::tests::admissibility_state_is_exactly_the_closed_v0_2_set ... ok
+2026-09-09T20:37:21.7450657Z test admissibility::tests::only_ok_and_degraded_are_positively_admitted ... ok
+2026-09-09T20:37:21.7451315Z test admissibility::tests::technical_capture_failure_remains_outside_tri ... ok
+2026-09-09T20:37:21.7452039Z test admissibility::tests::valid_admissibility_spec_preserves_identity_parameter_and_rule ... ok
+2026-09-09T20:37:21.7452741Z test authority::tests::authority_rejects_effect_outside_its_context ... ok
+2026-09-09T20:37:21.7453342Z test authority::tests::authority_rejects_effect_outside_its_governed_domain ... ok
+2026-09-09T20:37:21.7454576Z test authority::tests::effect_envelope_uses_the_complete_effect_scope ... ok
+2026-09-09T20:37:21.7455328Z test authority::tests::constituted_authority_binds_holder_context_envelope_and_domain ... ok
+2026-09-09T20:37:21.7456107Z test authority::tests::effect_scope_requires_complete_constituted_effect_and_domain ... ok
+2026-09-09T20:37:21.7456821Z test authority::tests::duplicate_members_do_not_expand_envelope_or_domain ... ok
+2026-09-09T20:37:21.7457447Z test authority::tests::form_descriptor_freezes_the_constituted_dimensions ... ok
+2026-09-09T20:37:21.7462002Z test authority::tests::form_scope_requires_family_and_context_together ... ok
+2026-09-09T20:37:21.7462897Z test authority::tests::governed_domain_membership_is_decidable_before_exercise ... ok
+2026-09-09T20:37:21.7463701Z test authority::transitions::reuse_tests::accredited_but_incomplete_coverage_never_forms_permit ... ok
+2026-09-09T20:37:21.7464717Z test authority::transitions::reuse_tests::complete_governed_da_forms_a_sealed_permit ... ok
+2026-09-09T20:37:21.7465263Z test authority::transitions::reuse_tests::adapter_error_after_dispatch_is_indeterminate_not_non_execution ... ok
+2026-09-09T20:37:21.7465882Z test authority::transitions::reuse_tests::duplicate_reuse_rule_reference_across_requirements_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7466438Z test authority::transitions::reuse_tests::empty_reuse_binding_set_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7466948Z test authority::transitions::reuse_tests::different_effect_cannot_cross_mediation_with_valid_permit ... ok
+2026-09-09T20:37:21.7467497Z test authority::transitions::reuse_tests::effect_outside_required_authority_scope_is_closed_before_permit ... ok
+2026-09-09T20:37:21.7469053Z test authority::transitions::reuse_tests::duplicate_reuse_binding_key_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7470110Z test authority::transitions::reuse_tests::form_effect_mismatch_is_closed_before_permit ... ok
+2026-09-09T20:37:21.7470920Z test authority::transitions::reuse_tests::form_without_required_authority_cannot_form_permit ... ok
+2026-09-09T20:37:21.7472001Z test authority::transitions::reuse_tests::idempotent_requires_new_governed_attempt_and_new_exercise_ref ... ok
+2026-09-09T20:37:21.7472926Z test authority::transitions::reuse_tests::governed_accumulation_contracts_remain_closed_before_adapter ... ok
+2026-09-09T20:37:21.7474689Z test authority::transitions::reuse_tests::not_verifiable_requirements_never_form_positive_permit ... ok
+2026-09-09T20:37:21.7475836Z test authority::transitions::reuse_tests::r1_4_unit_one_does_not_make_authorizing_classes_productive ... ok
+2026-09-09T20:37:21.7476980Z test authority::transitions::reuse_tests::r1_4_unit_two_does_not_make_authorizing_classes_productive ... ok
+2026-09-09T20:37:21.7478114Z test authority::transitions::reuse_tests::r1_4_unit_three_does_not_make_authorizing_classes_productive ... ok
+2026-09-09T20:37:21.7480586Z test authority::transitions::reuse_tests::mediated_t_e_executes_once_and_records_append_only_trace ... ok
+2026-09-09T20:37:21.7485092Z test authority::transitions::reuse_tests::non_exercise_commitment_is_rejected_before_adapter_dispatch ... ok
+2026-09-09T20:37:21.7486445Z test authority::transitions::reuse_tests::r1_5_conflict_trace_preserves_each_individual_check_before_dn_resolution ... ok
+2026-09-09T20:37:21.7495166Z test authority::transitions::reuse_tests::r1_5_incomplete_coverage_traces_resolved_da_as_qualified_dn ... ok
+2026-09-09T20:37:21.7496369Z test authority::transitions::reuse_tests::r1_5_refuted_decision_is_traced_without_mediation_or_exercise ... ok
+2026-09-09T20:37:21.7497375Z test authority::transitions::reuse_tests::r1_5_traced_chain_from_t0_binds_decision_mediation_and_real_exercise ... ok
+2026-09-09T20:37:21.7498293Z test authority::transitions::reuse_tests::reuse_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+2026-09-09T20:37:21.7499038Z test authority::transitions::reuse_tests::refuted_requirements_never_form_positive_permit ... ok
+2026-09-09T20:37:21.7499533Z test authority::transitions::tests::applicability_mismatch_rejects_whole_genesis ... ok
+2026-09-09T20:37:21.7500174Z test authority::transitions::tests::authority_effect_outside_context_is_rejected_without_partial_state ... ok
+2026-09-09T20:37:21.7501073Z test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_indeterminate_attempt ... ok
+2026-09-09T20:37:21.7501998Z test authority::transitions::tests::authority_effect_outside_domain_is_rejected_without_partial_state ... ok
+2026-09-09T20:37:21.7502858Z test authority::transitions::tests::authorizing_form_requires_prior_authority_reference ... ok
+2026-09-09T20:37:21.7503681Z test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_confirmed_exercise ... ok
+2026-09-09T20:37:21.7504646Z test authority::transitions::reuse_tests::valid_permit_is_consumed_into_exact_mediated_commitment ... ok
+2026-09-09T20:37:21.7505722Z test authority::transitions::tests::controlled_form_without_requirements_is_rejected_atomically ... ok
+2026-09-09T20:37:21.7506638Z test authority::transitions::tests::conflict_rule_without_applicable_decisive_verifier_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7507526Z test authority::transitions::tests::consumed_external_premise_cannot_seed_another_genesis ... ok
+2026-09-09T20:37:21.7508373Z test authority::transitions::tests::controlled_form_without_context_is_rejected_before_constitution ... ok
+2026-09-09T20:37:21.7509271Z test authority::transitions::tests::coverage_required_verifier_without_applicability_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7510174Z test authority::transitions::tests::coverage_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+2026-09-09T20:37:21.7511029Z test authority::transitions::tests::duplicate_authority_reference_is_rejected_atomically ... ok
+2026-09-09T20:37:21.7511791Z test authority::transitions::tests::duplicate_form_reference_is_rejected_atomically ... ok
+2026-09-09T20:37:21.7512683Z test authority::transitions::tests::duplicate_conflict_rule_reference_across_requirements_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7513661Z test authority::transitions::tests::duplicate_coverage_rule_reference_across_requirements_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7515185Z test authority::transitions::tests::duplicate_coverage_required_verifier_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7516024Z test authority::transitions::tests::governance_constitutive_and_recovery_remain_non_productive ... ok
+2026-09-09T20:37:21.7516938Z test authority::transitions::tests::information_verification_enablement_and_exercise_are_non_authorizing ... ok
+2026-09-09T20:37:21.7517759Z test authority::transitions::tests::missing_mandatory_core_rejects_whole_genesis ... ok
+2026-09-09T20:37:21.7518502Z test authority::transitions::tests::empty_coverage_required_set_rejects_t0_atomically ... ok
+2026-09-09T20:37:21.7519304Z test authority::transitions::tests::only_genesis_has_productive_disposition_in_r1_3_unit_2 ... ok
+2026-09-09T20:37:21.7520064Z test authority::transitions::tests::missing_required_authority_is_rejected ... ok
+2026-09-09T20:37:21.7520793Z test authority::transitions::tests::rejected_empty_genesis_does_not_consume_t0_or_premise ... ok
+2026-09-09T20:37:21.7521644Z test authority::transitions::tests::uncontrolled_genesis_remains_valid_without_requirements ... ok
+2026-09-09T20:37:21.7522396Z test authority::transitions::tests::second_t0_on_the_same_continuity_is_rejected ... ok
+2026-09-09T20:37:21.7523068Z test c03_tests::c03_rejects_criticalities_while_no_surface_producer_exists ... ok
+2026-09-09T20:37:21.7523722Z test c03_tests::c03_accepts_a_coherent_declared_subset_without_exhaustivity ... ok
+2026-09-09T20:37:21.7524537Z test authority::transitions::tests::valid_t0_constitutes_initial_state_and_consumes_genesis ... ok
+2026-09-09T20:37:21.7525276Z test c03_tests::c03_rejects_a_gate_or_supervision_that_escapes_the_causal_closure ... ok
+2026-09-09T20:37:21.7525946Z test c03_tests::c03_rejects_external_or_duplicated_evaluation_sources ... ok
+2026-09-09T20:37:21.7526636Z test control_tests::continuity_occupancy_has_distinct_uninhabited_and_inhabited_states ... ok
+2026-09-09T20:37:21.7527412Z test c03_tests::c03_rejects_states_outside_architecture_or_multiple_states_for_one_node ... ok
+2026-09-09T20:37:21.7528000Z test control_tests::check_results_are_exactly_the_three_sec0d_results ... ok
+2026-09-09T20:37:21.7528367Z test control_tests::control_id_rejects_empty_or_blank_identifiers ... ok
+2026-09-09T20:37:21.7528750Z test control_tests::protected_reference_categories_are_nominally_distinct ... ok
+2026-09-09T20:37:21.7529145Z test control_tests::technical_check_results_are_a_type_distinct_from_tri ... ok
+2026-09-09T20:37:21.7529545Z test control_tests::transition_classes_preserve_the_eight_contractual_labels ... ok
+2026-09-09T20:37:21.7529954Z test decision_trace::tests::decimal_successor_is_not_machine_word_bounded ... ok
+2026-09-09T20:37:21.7530642Z test decision_trace::tests::decision_references_are_structural_ordinals ... ok
+2026-09-09T20:37:21.7531221Z test equivalence::tests::json_escape_is_deterministic ... ok
+2026-09-09T20:37:21.7531793Z test execution::tests::decimal_successor_is_unbounded_by_machine_word_width ... ok
+2026-09-09T20:37:21.7532436Z test frame_tests::distinct_architecture_nodes_accept_distinct_states ... ok
+2026-09-09T20:37:21.7532991Z test frame_tests::duplicate_eval_source_is_rejected ... ok
+2026-09-09T20:37:21.7533468Z test frame_tests::duplicate_state_reference_is_rejected ... ok
+2026-09-09T20:37:21.7533934Z test frame_tests::eval_source_outside_frame_is_rejected ... ok
+2026-09-09T20:37:21.7534636Z test frame_tests::frame_is_not_exhaustive ... ok
+2026-09-09T20:37:21.7535031Z test frame_tests::gate_input_outside_frame_is_rejected ... ok
+2026-09-09T20:37:21.7535352Z test frame_tests::multiple_states_for_same_node_are_rejected ... ok
+2026-09-09T20:37:21.7535694Z test frame_tests::supervision_cell_target_inside_frame_is_valid ... ok
+2026-09-09T20:37:21.7536028Z test frame_tests::non_empty_criticalities_are_rejected ... ok
+2026-09-09T20:37:21.7536331Z test frame_tests::state_outside_architecture_is_rejected ... ok
+2026-09-09T20:37:21.7536811Z test frame_tests::supervision_cell_target_outside_frame_is_rejected ... ok
+2026-09-09T20:37:21.7537204Z test frame_tests::supervision_composed_target_outside_frame_is_rejected ... ok
+2026-09-09T20:37:21.7537584Z test frame_tests::supervision_meta_eval_outside_frame_is_rejected ... ok
+2026-09-09T20:37:21.7537965Z test frame_tests::supervision_system_target_matching_architecture_is_valid ... ok
+2026-09-09T20:37:21.7538350Z test frame_tests::supervision_system_target_must_match_architecture ... ok
+2026-09-09T20:37:21.7538758Z test frame_tests::valid_frame_preserves_declared_references_and_unbounded_nat_index ... ok
+2026-09-09T20:37:21.7539232Z test frontend::source_profile_public_tests_2a::selector_textual_y_abi_son_cerrados_y_estables ... ok
+2026-09-09T20:37:21.7539723Z test frontend::profile_catalog_tests_2a::catalogos_y_aislamiento_interperfil_son_exhaustivos ... ok
+2026-09-09T20:37:21.7542908Z test frontend::tests::sha256_matches_known_vector ... ok
+2026-09-09T20:37:21.7543755Z test frontend::tests::query_context_variants_are_materialized_as_closed_ir_variants ... ok
+2026-09-09T20:37:21.7545194Z test frontend::union_surface_index_tests_2a::indice_conjunto_preserva_identidad_y_pertenencia_de_perfil ... ok
+2026-09-09T20:37:21.7546285Z test identifier_profile::tests::cubre_la_ortografia_espanola_del_perfil ... ok
+2026-09-09T20:37:21.7548342Z test identifier_profile::tests::excluye_formas_no_canónicas_y_otros_alfabetos ... ok
+2026-09-09T20:37:21.7549276Z test identifier_profile::tests::las_palabras_reservadas_no_son_identificadores ... ok
+2026-09-09T20:37:21.7550178Z test ir_tests::frame_ir_preserves_unbounded_index_declared_order_and_immutability ... ok
+2026-09-09T20:37:21.7550954Z test ir_tests::admissibility_state_order_from_ir_is_preserved ... ok
+2026-09-09T20:37:21.7551754Z test ir_tests::object_type_and_level_are_derived_not_supplied ... ok
+2026-09-09T20:37:21.7552514Z test ir_tests::operation_type_and_result_are_derived_not_supplied ... ok
+2026-09-09T20:37:21.7553344Z test ir_tests::resolve_operation_preserves_identified_target_and_instances ... ok
+2026-09-09T20:37:21.7554347Z test ir_tests::program_header_is_fixed_and_order_is_preserved ... ok
+2026-09-09T20:37:21.7555111Z test ir_tests::query_and_supervision_variants_keep_canonical_labels ... ok
+2026-09-09T20:37:21.7555946Z test ir_tests::trajectory_append_only_is_constitutive_in_the_representation ... ok
+2026-09-09T20:37:21.7556774Z test ir_tests::tri_has_distinct_language_and_ir_labels ... ok
+2026-09-09T20:37:21.7557524Z test multisource_assembly_tests_2b::el_perfil_erroneo_no_se_rescata_por_la_otra_unidad ... ok
+2026-09-09T20:37:21.7558259Z test multisource_assembly_tests_2b::admite_las_cuatro_combinaciones_de_perfil ... ok
+2026-09-09T20:37:21.7558735Z test multisource_assembly_tests_2b::las_colisiones_globales_se_rechazan ... ok
+2026-09-09T20:37:21.7565009Z test frontend::tests::compiles_all_current_valid_cases_from_actual_svp_text ... ok
+2026-09-09T20:37:21.7566700Z test multisource_assembly_tests_2b::referencia_transfronteriza_exige_el_ensamblaje_global ... ok
+2026-09-09T20:37:21.7567729Z test multisource_assembly_tests_2b::una_produccion_no_puede_cruzar_la_frontera_de_archivo ... ok
+2026-09-09T20:37:21.7568683Z test nat::tests::nat_accepts_values_beyond_u64_without_narrowing ... ok
+2026-09-09T20:37:21.7569455Z test nat::tests::nat_has_one_internal_decimal_representation_per_value ... ok
+2026-09-09T20:37:21.7571359Z test nat::tests::nat_rejects_non_decimal_material ... ok
+2026-09-09T20:37:21.7572267Z test requirements::tests::aggregation_rejects_same_reference_with_different_material_binding ... ok
+2026-09-09T20:37:21.7573237Z test requirements::tests::aggregation_requires_complete_coverage ... ok
+2026-09-09T20:37:21.7574369Z test requirements::tests::aggregation_rejects_duplicate_check_for_same_requirement ... ok
+2026-09-09T20:37:21.7575204Z test multisource_assembly_tests_2b::la_identidad_de_ensamblaje_es_determinista_y_sensible_al_orden ... ok
+2026-09-09T20:37:21.7576043Z test requirements::tests::applicability_must_match_requirement_context_family_and_rule ... ok
+2026-09-09T20:37:21.7576916Z test requirements::tests::all_accredited_aggregates_to_da ... ok
+2026-09-09T20:37:21.7577450Z test requirements::tests::requirement_set_rejects_empty_req ... ok
+2026-09-09T20:37:21.7577992Z test requirements::tests::refutation_precedes_not_verifiable ... ok
+2026-09-09T20:37:21.7578568Z test requirements::tests::dn_is_preserved_when_there_is_no_refutation ... ok
+2026-09-09T20:37:21.7579266Z test requirements::tests::nominal_da_cannot_form_an_aggregable_check_without_applicability ... ok
+2026-09-09T20:37:21.7580011Z test requirements::tests::requirement_set_rejects_reused_reference ... ok
+2026-09-09T20:37:21.7580632Z test requirements::tests::requirement_set_requires_the_non_eludible_core ... ok
+2026-09-09T20:37:21.7581305Z test requirements_bridge::tests::aggregation_rejects_foreign_material_binding ... ok
+2026-09-09T20:37:21.7582031Z test requirements_bridge::tests::aggregation_rejects_unexpected_requirement_result ... ok
+2026-09-09T20:37:21.7582739Z test requirements_bridge::tests::aggregation_is_independent_of_result_order ... ok
+2026-09-09T20:37:21.7583449Z test requirements_bridge::tests::aggregation_requires_complete_requirement_coverage ... ok
+2026-09-09T20:37:21.7584261Z test requirements_bridge::tests::complete_accreditation_aggregates_to_da ... ok
+2026-09-09T20:37:21.7584955Z test requirements_bridge::tests::aggregation_rejects_duplicate_requirement_result ... ok
+2026-09-09T20:37:21.7585736Z test requirements_bridge::tests::conflict_without_rule_preserves_each_individual_result ... ok
+2026-09-09T20:37:21.7586434Z test requirements_bridge::tests::dn_is_preserved_without_refutation ... ok
+2026-09-09T20:37:21.7587205Z test requirements_bridge::tests::homogeneous_single_check_is_sealed_with_descriptor_and_observation ... ok
+2026-09-09T20:37:21.7588018Z test requirements_conflict::tests::absent_decisive_verifier_leaves_conflict_at_dn ... ok
+2026-09-09T20:37:21.7588730Z test requirements_bridge::tests::refutation_precedes_dn_after_resolution ... ok
+2026-09-09T20:37:21.7589468Z test requirements_conflict::tests::accredited_and_refuted_without_rule_become_not_verifiable ... ok
+2026-09-09T20:37:21.7590232Z test requirements_conflict::tests::conflict_result_is_independent_of_input_order ... ok
+2026-09-09T20:37:21.7591028Z test requirements_conflict::tests::accredited_and_not_verifiable_without_rule_remain_not_verifiable ... ok
+2026-09-09T20:37:21.7591890Z test requirements_conflict::tests::decisive_accredited_verifier_resolves_conflict_to_da ... ok
+2026-09-09T20:37:21.7592635Z test requirements_conflict::tests::decisive_dn_verifier_cannot_promote_conflict ... ok
+2026-09-09T20:37:21.7593383Z test requirements_conflict::tests::decisive_refuted_verifier_resolves_conflict_to_dr ... ok
+2026-09-09T20:37:21.7594311Z test requirements_conflict::tests::empty_check_set_is_rejected ... ok
+2026-09-09T20:37:21.7595091Z test requirements_conflict::tests::homogeneous_accredited_checks_remain_accredited ... ok
+2026-09-09T20:37:21.7595859Z test requirements_conflict::tests::homogeneous_not_verifiable_checks_remain_not_verifiable ... ok
+2026-09-09T20:37:21.7596611Z test requirements_conflict::tests::homogeneous_refuted_checks_remain_refuted ... ok
+2026-09-09T20:37:21.7597300Z test requirements_conflict::tests::mixed_requirements_are_not_a_single_conflict ... ok
+2026-09-09T20:37:21.7598059Z test requirements_conflict::tests::majority_does_not_override_constituted_decisive_verifier ... ok
+2026-09-09T20:37:21.7598851Z test requirements_conflict::tests::public_governed_path_rejects_foreign_material_binding ... ok
+2026-09-09T20:37:21.7599668Z test requirements_conflict::tests::refuted_and_not_verifiable_without_rule_become_not_verifiable ... ok
+2026-09-09T20:37:21.7600483Z test requirements_conflict::tests::public_governed_path_without_rule_keeps_conflict_at_dn ... ok
+2026-09-09T20:37:21.7601252Z test requirements_coverage::tests::absence_of_rule_is_not_empty_positive_coverage ... ok
+2026-09-09T20:37:21.7601986Z test requirements_conflict::tests::repeated_verifier_is_rejected_instead_of_weighted ... ok
+2026-09-09T20:37:21.7602948Z test requirements_conflict::tests::repeated_verifier_with_incompatible_results_is_rejected_on_public_path ... ok
+2026-09-09T20:37:21.7603807Z test requirements_coverage::tests::all_required_participants_complete_coverage ... ok
+2026-09-09T20:37:21.7604671Z test requirements_coverage::tests::accredited_results_without_coverage_rules_aggregate_to_dn ... ok
+2026-09-09T20:37:21.7605584Z test requirements_coverage::tests::complete_coverage_of_all_accredited_requirements_aggregates_to_da ... ok
+2026-09-09T20:37:21.7606422Z test requirements_coverage::tests::coverage_rule_identity_is_part_of_the_resolved_binding ... ok
+2026-09-09T20:37:21.7607192Z test requirements_coverage::tests::coverage_rule_rejects_duplicate_required_verifier ... ok
+2026-09-09T20:37:21.7607908Z test requirements_coverage::tests::coverage_rule_rejects_empty_required_set ... ok
+2026-09-09T20:37:21.7608656Z test requirements_coverage::tests::extra_participant_does_not_replace_a_missing_required_one ... ok
+2026-09-09T20:37:21.7609451Z test requirements_coverage::tests::missing_required_participant_is_explicit ... ok
+2026-09-09T20:37:21.7610151Z test requirements_coverage::tests::refutation_is_not_erased_by_absent_coverage_rule ... ok
+2026-09-09T20:37:21.7610849Z test requirements_coverage::tests::missing_required_verifier_prevents_da ... ok
+2026-09-09T20:37:21.7611513Z test requirements_coverage::tests::result_from_other_requirement_is_rejected ... ok
+2026-09-09T20:37:21.7612305Z test requirements_coverage::tests::rule_bound_to_other_context_is_rejected_even_if_attached_for_test ... ok
+2026-09-09T20:37:21.7613029Z test requirements_reuse::tests::exact_continuity_preserves_da ... ok
+2026-09-09T20:37:21.7613458Z test requirements_reuse::tests::changed_context_closes_to_dn ... ok
+2026-09-09T20:37:21.7613842Z test requirements_reuse::tests::exact_continuity_preserves_dn_without_promotion ... ok
+2026-09-09T20:37:21.7614541Z test requirements_reuse::tests::changed_single_binding_closes_to_dn ... ok
+2026-09-09T20:37:21.7614898Z test requirements_reuse::tests::exact_continuity_preserves_dr ... ok
+2026-09-09T20:37:21.7615266Z test requirements_reuse::tests::other_requirement_is_structural_error ... ok
+2026-09-09T20:37:21.7615681Z test requirements_reuse::tests::incomplete_coverage_cannot_reappear_as_historical_da ... ok
+2026-09-09T20:37:21.7616099Z test requirements_reuse::tests::missing_current_rule_closes_to_dn ... ok
+2026-09-09T20:37:21.7616481Z test requirements_reuse::tests::reuse_rule_rejects_duplicate_binding_key ... ok
+2026-09-09T20:37:21.7616921Z test resolution_tests::arbitrary_precision_position_cannot_overflow_into_a_valid_index ... ok
+2026-09-09T20:37:21.7617346Z test requirements_reuse::tests::reuse_rule_rejects_empty_binding_set ... ok
+2026-09-09T20:37:21.7617735Z test resolution_tests::cell_target_u_is_reviewable_and_closure_remains_u ... ok
+2026-09-09T20:37:21.7618275Z test requirements_reuse::tests::same_rule_reference_with_changed_binding_is_not_reusable ... ok
+2026-09-09T20:37:21.7618703Z test resolution_tests::context_instance_must_match_res_spec_exactly ... ok
+2026-09-09T20:37:21.7619214Z      Running tests/admissibility_table_causal.rs (rust/target/debug/deps/admissibility_table_causal-831034eb70aced15)
+2026-09-09T20:37:21.7619699Z test resolution_tests::non_evaluable_target_is_rejected_with_e305 ... ok
+2026-09-09T20:37:21.7620079Z test resolution_tests::coupled_target_uses_the_effective_updated_vector ... ok
+2026-09-09T20:37:21.7620622Z test resolution_tests::position_beyond_effective_vector_is_rejected ... ok
+2026-09-09T20:37:21.7621245Z test resolution_tests::mechanism_instance_must_match_res_spec_exactly ... ok
+2026-09-09T20:37:21.7621864Z test resolution_tests::res_spec_preserves_opaque_contract_references ... ok
+2026-09-09T20:37:21.7622465Z test resolution_tests::review_does_not_mutate_the_effective_state ... ok
+2026-09-09T20:37:21.7623152Z test resolution_tests::review_material_never_becomes_positive_closure_by_execution_alone ... ok
+2026-09-09T20:37:21.7623814Z test resolution_tests::target_value_must_be_a_constituted_u ... ok
+2026-09-09T20:37:21.7624539Z test resolution_tests::zero_position_is_rejected_as_not_one_based ... ok
+2026-09-09T20:37:21.7625023Z test tests::technical_invalidity_is_not_u ... ok
+2026-09-09T20:37:21.7625450Z test tests::tri_has_a_stable_one_byte_representation ... ok
+2026-09-09T20:37:21.7625885Z test tests::tri_is_exactly_ternary_at_the_public_boundary ... ok
+2026-09-09T20:37:21.7626191Z test tests::tri_numeric_representation_is_canonical ... ok
+2026-09-09T20:37:21.7626466Z test tests::tri_roundtrip_is_canonical ... ok
+2026-09-09T20:37:21.7626851Z test tests::tri_textual_representation_is_canonical ... ok
+2026-09-09T20:37:21.7627375Z test wellformed::tests::decimal_order_does_not_narrow_unbounded_nat ... ok
+2026-09-09T20:37:21.7628013Z test tests::version_constants_match_the_integrated_frontend_contract ... ok
+2026-09-09T20:37:21.7628735Z test transition_data_wellformed::tests::decimal_order_does_not_narrow_unbounded_naturals ... ok
+2026-09-09T20:37:21.7629211Z 
+2026-09-09T20:37:21.7629532Z test result: ok. 211 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+2026-09-09T20:37:21.7629808Z 
+2026-09-09T20:37:21.7630093Z      Running tests/architecture_type_guards.rs (rust/target/debug/deps/architecture_type_guards-2cee4a15eca049a3)
+2026-09-09T20:37:21.7630558Z 
+2026-09-09T20:37:21.7630664Z running 3 tests
+2026-09-09T20:37:21.7630989Z test el_cierre_interno_historico_falla_en_sintaxis ... ok
+2026-09-09T20:37:21.7631394Z test sustituir_solo_la_salida_por_un_miembro_declarado_admite_la_tabla ... ok
+2026-09-09T20:37:21.7631776Z test salida_ajena_al_codominio_alcanza_la_guarda_semantica ... ok
+2026-09-09T20:37:21.7631980Z 
+2026-09-09T20:37:21.7632159Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:21.7632409Z 
+2026-09-09T20:37:21.7638915Z 
+2026-09-09T20:37:21.7639023Z running 3 tests
+2026-09-09T20:37:21.7643598Z test compose_graph_exige_composition_graph_en_ambos_perfiles ... ok
+2026-09-09T20:37:21.7644333Z test frame_architecture_exige_composition_graph_en_ambos_perfiles ... ok
+2026-09-09T20:37:21.7644977Z test frame_y_compose_conservan_sus_controles_validos ... ok
+2026-09-09T20:37:21.7645286Z 
+2026-09-09T20:37:21.7662647Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:21.7663153Z 
+2026-09-09T20:37:21.7663824Z 
+2026-09-09T20:37:21.7664288Z running 45 tests
+2026-09-09T20:37:21.7675409Z      Running tests/bindings.rs (rust/target/debug/deps/bindings-7ad04d569a4f1e09)
+2026-09-09T20:37:21.7844503Z test l00_esquema ... ok
+2026-09-09T20:37:21.7914437Z test l00_identidad_vacia ... ok
+2026-09-09T20:37:21.7944357Z test l00_operacion_duplicada ... ok
+2026-09-09T20:37:21.8080266Z test l00_uso_duplicado ... ok
+2026-09-09T20:37:21.8097091Z test l01_version ... ok
+2026-09-09T20:37:21.8204521Z test l02_orden_expectativa ... ok
+2026-09-09T20:37:21.8319891Z test l04_bytes ... ok
+2026-09-09T20:37:21.8364518Z test l03_programa ... ok
+2026-09-09T20:37:21.8524917Z test l06_referencia_exacta ... ok
+2026-09-09T20:37:21.8540309Z test l05_version_duplicada ... ok
+2026-09-09T20:37:21.8694927Z test l06_referencia_ausente ... ok
+2026-09-09T20:37:21.8753459Z test l07_clase ... ok
+2026-09-09T20:37:21.8814812Z test l08_instancia_duplicada ... ok
+2026-09-09T20:37:21.8921913Z test l09_parametro ... ok
+2026-09-09T20:37:21.9035885Z test l09_propietario ... ok
+2026-09-09T20:37:21.9124384Z test l10_admision_ajena ... ok
+2026-09-09T20:37:21.9192432Z test l10_admision_tipo ... ok
+2026-09-09T20:37:21.9294608Z test l10_captura_ajena ... ok
+2026-09-09T20:37:21.9324700Z test controles_positivos_preservan_identidad_orden_y_multiplicidad ... ok
+2026-09-09T20:37:21.9353677Z test l10_captura_tipo ... ok
+2026-09-09T20:37:21.9453329Z test l11_numeral_admision ... ok
+2026-09-09T20:37:21.9544459Z test l11_numeral_captura ... ok
+2026-09-09T20:37:21.9574730Z test l12_regla ... ok
+2026-09-09T20:37:21.9654378Z test l13_espacio ... ok
+2026-09-09T20:37:21.9734694Z test l13_ternarizador_ajeno ... ok
+2026-09-09T20:37:21.9784371Z test l14_procedencia ... ok
+2026-09-09T20:37:21.9814824Z test l15_operacion ... ok
+2026-09-09T20:37:21.9881911Z test l15_version_operacion ... ok
+2026-09-09T20:37:21.9972523Z test l17_destino_ausente ... ok
+2026-09-09T20:37:22.0001749Z test l16_instancia_ausente ... ok
+2026-09-09T20:37:22.0142574Z test l18_destino_ausente ... ok
+2026-09-09T20:37:22.0160811Z test l18_nodo_ajeno ... ok
+2026-09-09T20:37:22.0244580Z test l18_destino_tipo ... ok
+2026-09-09T20:37:22.0287605Z test l19_cero ... ok
+2026-09-09T20:37:22.0394826Z test l19_nat_grande ... ok
+2026-09-09T20:37:22.0444375Z test l19_diez ... ok
+2026-09-09T20:37:22.0534475Z test l20_colision ... ok
+2026-09-09T20:37:22.0574463Z test l21_comparticion_ausente ... ok
+2026-09-09T20:37:22.0614409Z test l22_alias_destino ... ok
+2026-09-09T20:37:22.0704662Z test l22_alias_instancia ... ok
+2026-09-09T20:37:22.0764508Z test l22_alias_posterior ... ok
+2026-09-09T20:37:22.0821129Z test l23_comparticion_incompleta ... ok
+2026-09-09T20:37:22.0871467Z test l23_comparticion_orden ... ok
+2026-09-09T20:37:22.0901731Z test l24_lateral_ausente ... ok
+2026-09-09T20:37:22.0937263Z test l24_lateral_oculta ... ok
+2026-09-09T20:37:22.0937474Z 
+2026-09-09T20:37:22.0937775Z test result: ok. 45 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+2026-09-09T20:37:22.0938168Z 
+2026-09-09T20:37:22.0941224Z      Running tests/bridge_set.rs (rust/target/debug/deps/bridge_set-f8f80712d2621bd3)
+2026-09-09T20:37:22.0951597Z 
+2026-09-09T20:37:22.0951689Z running 3 tests
+2026-09-09T20:37:22.0957163Z test duplicate_nat_positions_are_rejected_before_ir_admission ... ok
+2026-09-09T20:37:22.0958575Z test empty_set_and_declared_order_are_preserved ... ok
+2026-09-09T20:37:22.0959040Z test existing_range_rejection_keeps_precedence ... ok
+2026-09-09T20:37:22.0959329Z 
+2026-09-09T20:37:22.0959683Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:22.0960119Z 
+2026-09-09T20:37:22.0960833Z      Running tests/cell_geometry_native.rs (rust/target/debug/deps/cell_geometry_native-b232fc850b36d786)
+2026-09-09T20:37:22.0969086Z 
+2026-09-09T20:37:22.0969500Z running 4 tests
+2026-09-09T20:37:22.0973160Z test b_menor_que_tres_se_rechaza_nativamente_en_ambos_perfiles ... ok
+2026-09-09T20:37:22.0973932Z test b_tres_y_b_cuatro_derivan_nueve_y_dieciseis_posiciones ... ok
+2026-09-09T20:37:22.0975066Z test vector_de_longitud_dieciseis_es_admisible_para_b_cuatro ... ok
+2026-09-09T20:37:22.0976412Z test longitud_de_vector_distinta_de_n_se_rechaza_nativamente ... ok
+2026-09-09T20:37:22.0976754Z 
+2026-09-09T20:37:22.0977056Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:22.0977391Z 
+2026-09-09T20:37:22.0978302Z      Running tests/codomain_uniqueness.rs (rust/target/debug/deps/codomain_uniqueness-df0b930e565c1938)
+2026-09-09T20:37:22.0987074Z 
+2026-09-09T20:37:22.0987201Z running 3 tests
+2026-09-09T20:37:22.0990859Z test n0_01_conserva_codominios_distintos_en_ambos_perfiles ... ok
+2026-09-09T20:37:22.0991436Z test n0_01_el_ensamblaje_no_rescata_un_codominio_duplicado ... ok
+2026-09-09T20:37:22.0992080Z test n0_01_rechaza_miembro_duplicado_en_ambos_perfiles ... ok
+2026-09-09T20:37:22.0992387Z 
+2026-09-09T20:37:22.0992680Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:22.0993064Z 
+2026-09-09T20:37:22.0993875Z      Running tests/context_wellformed.rs (rust/target/debug/deps/context_wellformed-6cda78664636a13c)
+2026-09-09T20:37:22.1002319Z 
+2026-09-09T20:37:22.1002489Z running 11 tests
+2026-09-09T20:37:22.1096460Z test query_architecture_eval_celda_ajena ... ok
+2026-09-09T20:37:22.1097034Z test query_architecture_eval_nodo_ajeno ... ok
+2026-09-09T20:37:22.1097422Z test query_architecture_cell_ajena ... ok
+2026-09-09T20:37:22.1097812Z test query_architecture_gate_entrada_ajena ... ok
+2026-09-09T20:37:22.1183689Z test query_coverage_silent_u_ajena ... ok
+2026-09-09T20:37:22.1211175Z test query_comparison_frame_ajeno ... ok
+2026-09-09T20:37:22.1248790Z test query_coverage_interface_ajena ... ok
+2026-09-09T20:37:22.1252083Z test query_point_frame_ajeno ... ok
+2026-09-09T20:37:22.1252473Z test trajectory_frame_arquitectura_distinta ... ok
+2026-09-09T20:37:22.1267151Z test query_trajectory_ajena ... ok
+2026-09-09T20:37:22.1294691Z test trajectory_horizon_arquitectura_distinta ... ok
+2026-09-09T20:37:22.1294999Z 
+2026-09-09T20:37:22.1295299Z test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-09T20:37:22.1295643Z 
+2026-09-09T20:37:22.1297431Z      Running tests/cyb_authority_boundary.rs (rust/target/debug/deps/cyb_authority_boundary-acd046cf60c9f4c1)
+2026-09-09T20:37:22.1306299Z 
+2026-09-09T20:37:22.1306512Z running 9 tests
+2026-09-09T20:37:22.2591749Z test fa01_referencia_de_autoridad_privada ... ok
+2026-09-09T20:37:22.2605525Z test fa02_macro_no_elude_referencia_privada ... ok
+2026-09-09T20:37:22.2664961Z test fa03_premisa_externa_no_fabricable ... ok
+2026-09-09T20:37:22.2895137Z test fa04_macro_no_elude_premisa_privada ... ok
+2026-09-09T20:37:22.2938957Z test fa05_ligadura_validada_no_es_autoridad ... ok
+2026-09-09T20:37:22.3065673Z test fa06_resultado_elegido_no_es_permiso ... ok
+2026-09-09T20:37:22.3252478Z test fa07_booleano_no_sustituye_premisa ... ok
+2026-09-09T20:37:22.3875830Z test datos_documentales_no_constituyen_autoridad ... ok
+2026-09-09T20:37:22.4076047Z test macro_de_datos_nominales_admitida ... ok
+2026-09-09T20:37:22.4076267Z 
+2026-09-09T20:37:22.4076483Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.28s
+2026-09-09T20:37:22.4076774Z 
+2026-09-09T20:37:22.4078360Z      Running tests/cyb_reception.rs (rust/target/debug/deps/cyb_reception-6d85e085905facab)
+2026-09-09T20:37:22.4087797Z 
+2026-09-09T20:37:22.4087924Z running 12 tests
+2026-09-09T20:37:22.4329284Z test cyb_instancias_documentales_independientes ... ok
+2026-09-09T20:37:22.8125755Z test cyb_rechazos_causales_y_reparaciones ... ok
+2026-09-09T20:37:24.4645078Z test cyb_definicion_y_modulos_exactos ... ok
+2026-09-09T20:37:25.6303293Z test cyb_ensamblaje_inverso ... ok
+2026-09-09T20:37:25.6308567Z test probe::json::tests::preserves_fixed_values_order_and_unicode ... ok
+2026-09-09T20:37:25.6309378Z test probe::json::tests::rejects_duplicate_and_index_keys ... ok
+2026-09-09T20:37:25.6310088Z test probe::json::tests::rejects_invalid_unicode_and_utf8 ... ok
+2026-09-09T20:37:25.6310834Z test probe::json::tests::rejects_json_syntax_instead_of_repairing_it ... ok
+2026-09-09T20:37:25.6311679Z test probe::json::tests::rejects_numeric_conversion_before_it_loses_information ... ok
+2026-09-09T20:37:25.6436075Z test cyb_ensamblaje_directo ... ok
+2026-09-09T20:37:25.9380352Z test cyb_transporte_en ... ok
+2026-09-09T20:37:27.0484215Z test cyb_transporte_es ... ok
+2026-09-09T20:37:27.0484488Z 
+2026-09-09T20:37:27.0485222Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 4.64s
+2026-09-09T20:37:27.0485677Z 
+2026-09-09T20:37:27.0488446Z      Running tests/diagnostic_frontend.rs (rust/target/debug/deps/diagnostic_frontend-752c0ee6b7b1e3c7)
+2026-09-09T20:37:27.0496885Z 
+2026-09-09T20:37:27.0496990Z running 7 tests
+2026-09-09T20:37:27.0501690Z test lexical_character_and_foreign_surface_keep_original_ranges ... ok
+2026-09-09T20:37:27.0502322Z test eof_preserves_original_utf8_bytes_and_selected_language ... ok
+2026-09-09T20:37:27.0502985Z test mixed_assembly_attributes_only_the_faulty_unit_even_with_duplicate_file_names ... ok
+2026-09-09T20:37:27.0503677Z test quoted_text_is_not_copied_into_the_new_explanation ... ok
+2026-09-09T20:37:27.0504634Z test source_hash_changes_with_original_bytes_without_normalization ... ok
+2026-09-09T20:37:27.0505038Z test optional_fields_repetition_and_order_are_distinct ... ok
+2026-09-09T20:37:27.0505428Z test valid_foreign_contextual_identifiers_and_professional_literals_are_unchanged ... ok
+2026-09-09T20:37:27.0505826Z 
+2026-09-09T20:37:27.0506130Z test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.0506784Z 
+2026-09-09T20:37:27.0507179Z      Running tests/diagnostic_validation.rs (rust/target/debug/deps/diagnostic_validation-87420f5bcd16d194)
+2026-09-09T20:37:27.0513828Z 
+2026-09-09T20:37:27.0514098Z running 8 tests
+2026-09-09T20:37:27.0521166Z test cases::cobertura_no_se_inventa_para_causas_pendientes ... ok
+2026-09-09T20:37:27.0529064Z test cases::colision_conserva_ambas_declaraciones_aunque_coincida_el_archivo ... ok
+2026-09-09T20:37:27.0529767Z test cases::base_y_dominios_cerrados_se_localizan_sin_crear_codigos ... ok
+2026-09-09T20:37:27.0530485Z test cases::fallo_local_no_atribuye_defecto_a_unidad_sana_y_huella_es_original ... ok
+2026-09-09T20:37:27.0531042Z test cases::colision_objeto_operacion_y_operacion_operacion_conserva_precedencia ... ok
+2026-09-09T20:37:27.0531500Z test cases::codominio_causa_codigo_prosa_y_control_en_ambos_perfiles ... ok
+2026-09-09T20:37:27.0532055Z test cases::referencias_cruzadas_conservan_contextos_por_unidad_y_orden ... ok
+2026-09-09T20:37:27.0532738Z test cases::semantica_distingue_repetidas_ausentes_y_ajenas_sin_revelar_textos ... ok
+2026-09-09T20:37:27.0533170Z 
+2026-09-09T20:37:27.0533465Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.0534118Z 
+2026-09-09T20:37:27.0534482Z      Running tests/domain_parameters.rs (rust/target/debug/deps/domain_parameters-4b03534aa35049f5)
+2026-09-09T20:37:27.0540028Z 
+2026-09-09T20:37:27.0540230Z running 3 tests
+2026-09-09T20:37:27.0546413Z test exact_names_and_order_are_preserved_without_numeric_binding ... ok
+2026-09-09T20:37:27.0547003Z test unconsumed_domain_rejects_repeated_nominal_identity ... ok
+2026-09-09T20:37:27.0551699Z test previous_chain_and_reference_rejections_remain_first ... ok
+2026-09-09T20:37:27.0552060Z 
+2026-09-09T20:37:27.0552394Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.0552826Z 
+2026-09-09T20:37:27.0553331Z      Running tests/gh_bindings.rs (rust/target/debug/deps/gh_bindings-de29042572f07f78)
+2026-09-09T20:37:27.0561616Z 
+2026-09-09T20:37:27.0561759Z running 8 tests
+2026-09-09T20:37:27.0812942Z test antecedente_enmienda ... ok
+2026-09-09T20:37:27.0813484Z test adjudicacion_separada ... ok
+2026-09-09T20:37:27.0813871Z test estado_propuesta ... ok
+2026-09-09T20:37:27.0814388Z test atribucion_documental ... ok
+2026-09-09T20:37:27.1023667Z test extremo_de_ventana ... ok
+2026-09-09T20:37:27.1050930Z test unidad_metodo_referencia ... ok
+2026-09-09T20:37:27.1067985Z test u_y_configuracion_ausente ... ok
+2026-09-09T20:37:27.1068356Z test ligaduras_ordenadas ... ok
+2026-09-09T20:37:27.1068566Z 
+2026-09-09T20:37:27.1068865Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+2026-09-09T20:37:27.1069289Z 
+2026-09-09T20:37:27.1072053Z      Running tests/grammar_closed_domains.rs (rust/target/debug/deps/grammar_closed_domains-e0c367647ee885d3)
+2026-09-09T20:37:27.1081240Z 
+2026-09-09T20:37:27.1081377Z running 5 tests
+2026-09-09T20:37:27.1085477Z test dg01_rechaza_kind_ajeno_en_y_es ... ok
+2026-09-09T20:37:27.1089892Z test dg02_rechaza_pattern_ajeno_en_y_es ... ok
+2026-09-09T20:37:27.1090317Z test dg03_rechaza_regime_ajeno_en_y_es ... ok
+2026-09-09T20:37:27.1090785Z test ensamblaje_no_rescata_un_literal_ajeno_de_otra_unidad ... ok
+2026-09-09T20:37:27.1091387Z test dominios_canónicos_siguen_admitidos_en_y_es ... ok
+2026-09-09T20:37:27.1091615Z 
+2026-09-09T20:37:27.1091925Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1092192Z 
+2026-09-09T20:37:27.1092440Z      Running tests/horizon_architecture.rs (rust/target/debug/deps/horizon_architecture-9f28d8c726d9b5d3)
+2026-09-09T20:37:27.1098661Z 
+2026-09-09T20:37:27.1098768Z running 5 tests
+2026-09-09T20:37:27.1124922Z test n0_04_existing_graph_must_be_wellformed ... ok
+2026-09-09T20:37:27.1131028Z test n0_04_forward_reference_preserves_graph_and_events ... ok
+2026-09-09T20:37:27.1131593Z test n0_04_missing_wrong_type_self_and_operation_in_both_profiles ... ok
+2026-09-09T20:37:27.1132345Z test n0_04_agent_identity_and_equal_missing_names ... ok
+2026-09-09T20:37:27.1132823Z test n0_04_mixed_assembly_resolves_or_rejects_in_both_orders ... ok
+2026-09-09T20:37:27.1133036Z 
+2026-09-09T20:37:27.1133318Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1133591Z 
+2026-09-09T20:37:27.1133804Z      Running tests/horizon_events.rs (rust/target/debug/deps/horizon_events-b142018fe3362822)
+2026-09-09T20:37:27.1141792Z 
+2026-09-09T20:37:27.1141925Z running 3 tests
+2026-09-09T20:37:27.1153713Z test duplicate_types_are_rejected_in_an_unconsumed_horizon ... ok
+2026-09-09T20:37:27.1154682Z test previous_reference_empty_and_membership_diagnostics_remain_first ... ok
+2026-09-09T20:37:27.1155282Z test uniqueness_is_local_and_preserves_declared_order ... ok
+2026-09-09T20:37:27.1155591Z 
+2026-09-09T20:37:27.1155887Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1156305Z 
+2026-09-09T20:37:27.1156646Z      Running tests/json_projection.rs (rust/target/debug/deps/json_projection-17d7617f8f9b87c2)
+2026-09-09T20:37:27.1163536Z 
+2026-09-09T20:37:27.1163682Z running 5 tests
+2026-09-09T20:37:27.1171256Z test n0_03_conserva_guarda_previa_del_otro_mapa_variable ... ok
+2026-09-09T20:37:27.1171831Z test n0_03_conserva_claves_compartidas_entre_mapas_y_mapa_vacio ... ok
+2026-09-09T20:37:27.1172348Z test n0_03_ensamblaje_no_rescata_duplicados_sin_celda ... ok
+2026-09-09T20:37:27.1172874Z test n0_03_ensamblaje_conserva_ambitos_y_referencias_de_n0_02 ... ok
+2026-09-09T20:37:27.1173337Z test n0_03_rechaza_semantica_no_enlazada_en_es_en ... ok
+2026-09-09T20:37:27.1173618Z 
+2026-09-09T20:37:27.1173904Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1174620Z 
+2026-09-09T20:37:27.1175539Z      Running tests/optional_fields.rs (rust/target/debug/deps/optional_fields-885ef1251dd3ca6f)
+2026-09-09T20:37:27.1184310Z 
+2026-09-09T20:37:27.1184707Z running 2 tests
+2026-09-09T20:37:27.1187207Z test optional_absence_and_list_occurrences_are_preserved ... ok
+2026-09-09T20:37:27.1188540Z test malformed_declarations_are_rejected_without_a_consumer ... ok
+2026-09-09T20:37:27.1188821Z 
+2026-09-09T20:37:27.1189120Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1189385Z 
+2026-09-09T20:37:27.1190496Z      Running tests/output_semantics_totality.rs (rust/target/debug/deps/output_semantics_totality-ec99375d99084d96)
+2026-09-09T20:37:27.1198496Z 
+2026-09-09T20:37:27.1198631Z running 6 tests
+2026-09-09T20:37:27.1205425Z test n0_02_ensambla_relacion_total_entre_unidades_en_es ... ok
+2026-09-09T20:37:27.1206256Z test n0_02_cada_celda_comprueba_su_codominio_aunque_comparta_semantica ... ok
+2026-09-09T20:37:27.1215491Z test n0_02_otra_semantica_no_completa_la_referenciada ... ok
+2026-09-09T20:37:27.1216007Z test n0_02_preserva_orden_y_textos_compartidos_en_es_en ... ok
+2026-09-09T20:37:27.1217934Z test n0_02_ensamblaje_no_rescata_relacion_invalida ... ok
+2026-09-09T20:37:27.1220027Z test n0_02_rechaza_cuatro_defectos_en_es_en_y_referencias_adelantadas ... ok
+2026-09-09T20:37:27.1220417Z 
+2026-09-09T20:37:27.1220746Z test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1221026Z 
+2026-09-09T20:37:27.1222123Z      Running tests/projection_metadata_native.rs (rust/target/debug/deps/projection_metadata_native-56a56e08f64ba01a)
+2026-09-09T20:37:27.1232018Z 
+2026-09-09T20:37:27.1232143Z running 3 tests
+2026-09-09T20:37:27.1239951Z test proyeccion_emite_una_vez_version_fichero_y_huella_reales ... ok
+2026-09-09T20:37:27.1240535Z test bytes_fuente_distintos_modifican_la_huella_y_su_emision ... ok
+2026-09-09T20:37:27.1241155Z test source_file_modifica_la_proyeccion_sin_alterar_la_huella_del_contenido ... ok
+2026-09-09T20:37:27.1241414Z 
+2026-09-09T20:37:27.1241616Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1242036Z 
+2026-09-09T20:37:27.1243810Z      Running tests/transition_data_wellformed.rs (rust/target/debug/deps/transition_data_wellformed-654ea574b405fdae)
+2026-09-09T20:37:27.1251354Z 
+2026-09-09T20:37:27.1251531Z running 6 tests
+2026-09-09T20:37:27.1261351Z test transition_data_admite_nodos_declarados_posiciones_extremas_e_instancias_compartidas ... ok
+2026-09-09T20:37:27.1262454Z test transition_data_rechaza_destino_inducido_repetido_con_valor_igual_o_distinto ... ok
+2026-09-09T20:37:27.1270179Z test ensamblaje_mixto_no_rescata_transition_data_invalido ... ok
+2026-09-09T20:37:27.1270646Z test transition_data_rechaza_cero_y_posicion_superior_a_n_sin_estrechar_nat ... ok
+2026-09-09T20:37:27.1271110Z test transition_data_rechaza_tipo_de_suceso_repetido_con_valor_igual_o_distinto ... ok
+2026-09-09T20:37:27.1271552Z test transition_data_rechaza_nodo_ausente_tipo_incorrecto_o_fuera_de_arquitectura ... ok
+2026-09-09T20:37:27.1271970Z 
+2026-09-09T20:37:27.1272266Z test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1272711Z 
+2026-09-09T20:37:27.1273293Z      Running unittests src/main.rs (rust/target/debug/deps/sv_native-a234669dbf45e7c1)
+2026-09-09T20:37:27.1280203Z 
+2026-09-09T20:37:27.1280324Z running 0 tests
+2026-09-09T20:37:27.1280483Z 
+2026-09-09T20:37:27.1280829Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1281144Z 
+2026-09-09T20:37:27.1282357Z      Running unittests src/lib.rs (rust/target/debug/deps/sv_wasm-bb7885f8c3d907e0)
+2026-09-09T20:37:27.1289907Z 
+2026-09-09T20:37:27.1290034Z running 2 tests
+2026-09-09T20:37:27.1291984Z test tests::exported_versions_match_core ... ok
+2026-09-09T20:37:27.1292458Z test tests::wasm_boundary_delegates_tri_to_core ... ok
+2026-09-09T20:37:27.1292744Z 
+2026-09-09T20:37:27.1293084Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.1293499Z 
+2026-09-09T20:37:27.1293647Z    Doc-tests sv_core
+2026-09-09T20:37:27.2268091Z 
+2026-09-09T20:37:27.2268563Z running 17 tests
+2026-09-09T20:37:27.2555634Z test sv_core/src/admissibility.rs - admissibility::CaptureOutcome (line 70) - compile fail ... ok
+2026-09-09T20:37:27.2556704Z test sv_core/src/admissibility.rs - admissibility::AdmissibilityState (line 11) - compile fail ... ok
+2026-09-09T20:37:27.2561236Z test sv_core/src/control.rs - control (line 10) - compile fail ... ok
+2026-09-09T20:37:27.2578260Z test sv_core/src/authority/transitions.rs - authority::transitions::ExternalGenesisPremise (line 63) - compile fail ... ok
+2026-09-09T20:37:27.2867483Z test sv_core/src/control.rs - control (line 20) - compile fail ... ok
+2026-09-09T20:37:27.2887726Z test sv_core/src/decision_trace.rs - decision_trace::DecisionTrace (line 330) - compile fail ... ok
+2026-09-09T20:37:27.2903326Z test sv_core/src/lib.rs - (line 13) - compile fail ... ok
+2026-09-09T20:37:27.2917421Z test sv_core/src/execution.rs - execution::ExecutionRequest (line 216) - compile fail ... ok
+2026-09-09T20:37:27.3154882Z test sv_core/src/lib.rs - (line 21) - compile fail ... ok
+2026-09-09T20:37:27.3155256Z test sv_core/src/lib.rs - (line 17) - compile fail ... ok
+2026-09-09T20:37:27.3170793Z test sv_core/src/lib.rs - (line 27) - compile fail ... ok
+2026-09-09T20:37:27.3205193Z test sv_core/src/mediation.rs - mediation::MediatedEffectCommitment (line 24) - compile fail ... ok
+2026-09-09T20:37:27.3425972Z test sv_core/src/permission.rs - permission (line 10) - compile fail ... ok
+2026-09-09T20:37:27.3434706Z test sv_core/src/permission.rs - permission (line 17) - compile fail ... ok
+2026-09-09T20:37:27.3436768Z test sv_core/src/requirements_bridge.rs - requirements_bridge::ResolvedRequirementResult (line 121) - compile fail ... ok
+2026-09-09T20:37:27.3480311Z test sv_core/src/requirements_reuse.rs - requirements_reuse::HistoricalQualifiedRequirementResult (line 156) - compile fail ... ok
+2026-09-09T20:37:27.3633178Z test sv_core/src/requirements_reuse.rs - requirements_reuse::reuse_historical_requirement_result (line 368) - compile fail ... ok
+2026-09-09T20:37:27.3633613Z 
+2026-09-09T20:37:27.3633816Z test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.14s
+2026-09-09T20:37:27.3634248Z 
+2026-09-09T20:37:27.3643841Z    Doc-tests sv_wasm
+2026-09-09T20:37:27.3757773Z 
+2026-09-09T20:37:27.3758172Z running 0 tests
+2026-09-09T20:37:27.3758383Z 
+2026-09-09T20:37:27.3758701Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T20:37:27.3759111Z 
+2026-09-09T20:37:27.3875395Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+2026-09-09T20:37:27.3876572Z Post job cleanup.
+2026-09-09T20:37:27.4562846Z [command]/usr/bin/git version
+2026-09-09T20:37:27.4597925Z git version 2.55.0
+2026-09-09T20:37:27.4625751Z Temporarily overriding HOME='/home/runner/work/_temp/8c6f434e-3a39-458b-b33f-f351e87a19a8' before making global git config changes
+2026-09-09T20:37:27.4626932Z Adding repository directory to the temporary git global config as a safe directory
+2026-09-09T20:37:27.4629819Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion
+2026-09-09T20:37:27.4661731Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-09-09T20:37:27.4690774Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-09-09T20:37:27.4893426Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-09-09T20:37:27.4917615Z http.https://github.com/.extraheader
+2026-09-09T20:37:27.4926679Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-09-09T20:37:27.4957231Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-09-09T20:37:27.5174799Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-09-09T20:37:27.5206851Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-09-09T20:37:27.5540231Z Cleaning up orphan processes
+2026-09-09T20:37:27.5785989Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

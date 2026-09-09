@@ -360,3 +360,10 @@ DFL-005 general conserva la recepción profesional R1 después del trabajo diagn
 Se comprometen los casos de la primera etapa de procedencia y explicación ES/EN antes de la realización. El alcance de DFL-001/011 conserva los emisores posteriores, migración de oráculos y transportes, DG01–DG14 y entrega visible. No se presume localizado el Lenguaje ni se habilita el relevo profesional R1. Véase [RETP-113](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-113).
 
 **Resultado RETP-113:** primera etapa frontal en 5627416505b119192423722e94a71a3137f1a17a, seis flujos conformes y siete pruebas nuevas dentro de 376 aprobadas. Procedencia original y explicaciones ES/EN disponibles en el error frontal de las entradas existentes; CLI/ABI/playground mantienen aún su salida histórica. Las validaciones posteriores y los diagnósticos relacionales no se dan por localizados. Continúan DFL-001/011, DG01–DG14 completos, entrega visible y relevo profesional R1; #89 permanece en borrador.
+
+
+## Continuación RETP-114 · Diagnósticos de declaración
+
+Diez emisores de declaración incorporan siete causas y procedencia original en `b7636296f2c75715691464df83a030d006a2f054`, con ocho pruebas nuevas y 384 correctas; seis flujos conformes. E004/E115, base celular, dominios cerrados y colisiones se presentan en ES/EN según los perfiles efectivos; el ensamblaje conserva índices de unidad y declaraciones relacionadas. La estructura se prueba en Rust nativo; la paridad previa no acredita presentación localizada en navegador. [RETP-114](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-114) conserva el primer fallo de adaptación del banco y su reparación.
+
+DFL-001/011 siguen abiertos: faltan los restantes emisores, detalle de campos y referencias, transporte CLI/ABI, playground, DG01–DG14 completos y entrega visible. La variante adicional de `CompileError` exige adaptación de coincidencias exhaustivas. No se promueve #89 ni se enlaza R1; no cambian las constituciones IMM/CYB, la anotación G/H, las facultades ni la política de medición y conservación del núcleo.

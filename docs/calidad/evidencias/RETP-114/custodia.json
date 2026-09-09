@@ -1,0 +1,72 @@
+{
+  "version": "RETP-114/1",
+  "fecha": "2026-09-09",
+  "base": "ba4c63c6140015b14eb7afd9b1e32ce8307cc705",
+  "esperados_commit": "f15d411d40a943e3976822ad7e87061cd061a9ac",
+  "primera_realizacion": "0f9eafad6d6d10cbc06f16914e3029406b9d0afb",
+  "correccion_banco_commit": "b7636296f2c75715691464df83a030d006a2f054",
+  "arbol": "99e31a0aa19a27ce93e0da47465e33b433d533bd",
+  "fusion_ci": "049563bc815a7a133e4fb83ccc2382da26851ee2",
+  "arbol_fusion_ci": "99e31a0aa19a27ce93e0da47465e33b433d533bd",
+  "flujos": [
+    {
+      "id": 34402105209,
+      "nombre": "Retorno CYB documental",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402105209",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    },
+    {
+      "id": 34402104877,
+      "nombre": "R0-8 Baseline nativa",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402104877",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    },
+    {
+      "id": 34402104854,
+      "nombre": "Conformidad SVP",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402104854",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    },
+    {
+      "id": 34402105006,
+      "nombre": "R0 Rust",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402105006",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    },
+    {
+      "id": 34402104881,
+      "nombre": "R0 WASM paridad nativa y navegador",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402104881",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    },
+    {
+      "id": 34402105070,
+      "nombre": "Fila 7 fuentes y ejecución sin intérpretes",
+      "estado": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34402105070",
+      "head_sha": "b7636296f2c75715691464df83a030d006a2f054"
+    }
+  ],
+  "pruebas_rust": 384,
+  "pruebas_nuevas": 8,
+  "alcance_nuevo": "Causas de declaración y procedencia en pruebas Rust nativas. Diez emisores de RETP-112; siete variantes de causa. La paridad histórica no acredita transporte localizado en WASI/navegador.",
+  "pendientes": [
+    "Resto de validaciones y emisores",
+    "Transporte CLI/ABI y playground",
+    "DG01–DG14 completos",
+    "Entrega visible",
+    "Recepción profesional R1"
+  ],
+  "compilacion_local": false
+}

@@ -1,0 +1,106 @@
+{
+  "version": "RETP-114/1",
+  "corte_material": "b7636296f2c75715691464df83a030d006a2f054",
+  "archivos": [
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/ci-aislado.log",
+      "bytes": 267051,
+      "sha256": "68ac7475df8512c27b15ed46d22b3d95d8043ba87c926df4c66aa92c8188663d"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/ci-estable.log",
+      "bytes": 93230,
+      "sha256": "40a8fedf7b6f8dd66ac9d3ce081919ec608ffe257d81ffeb548764ab5bcdff58"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/ci-nativo.log",
+      "bytes": 147544,
+      "sha256": "3ecb4c4fec70c5d796fc106d225e0bc2c40c9095bde1ccb7b3d59400b8585a07"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/ci-nucleo.log",
+      "bytes": 284397,
+      "sha256": "83b567bd089ee8d52d99a8364db06a444c1d1c70083416d580fcc1a9d5c1bb32"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/ci-paridad.log",
+      "bytes": 496371,
+      "sha256": "03d28b29be104bd81c7d95b1370ee8bd4d0f71fc4fa415091b724d832eb1646c"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/custodia.json",
+      "bytes": 2846,
+      "sha256": "21ffbb7edab8383faed5a35c68e0fb9cb7f678198a9665dd5c3ba6c569a1fa3b"
+    },
+    {
+      "ruta": "docs/calidad/evidencias/RETP-114/primer-corte-fallido.log",
+      "bytes": 92863,
+      "sha256": "d8a2a9c111f5b9a5900bea74cf596ef11547681788788dfac5ed73fd77b61af1"
+    },
+    {
+      "ruta": "rust/sv_core/src/diagnostic_frontend.rs",
+      "bytes": 9479,
+      "sha256": "124f284eee2207f2e3f08b7d439fd5197b96a845a7564f85129c859cac24f361"
+    },
+    {
+      "ruta": "rust/sv_core/src/diagnostic_validation.rs",
+      "bytes": 8470,
+      "sha256": "85e630691520db74651af8480231b4318b94d4fca21f4944fbdedbde2bc3e396"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "bytes": 102633,
+      "sha256": "3d63757cf5da69450e2e2090669ac71b88271bb6df89e5a4a78f25f5711273a2"
+    },
+    {
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "bytes": 2398,
+      "sha256": "ef6e5b879744234a52b46daacd72f721e45f20583476f7f70dd7a921f4318969"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "bytes": 19220,
+      "sha256": "427bc0ff57c350c7c3bbf7d350ae866909e5686cfcf5a10114dcc49cef2aea14"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "bytes": 41845,
+      "sha256": "3a28da5e65e5ea1f3531ccc4d1c0c9bda2ea3d0cecbe46f2a1ffea6dfd8a70fb"
+    },
+    {
+      "ruta": "rust/sv_core/tests/cell_geometry_native.rs",
+      "bytes": 2705,
+      "sha256": "77833a58dedb3ab7322f689706aa1a576048a69b344cd11f3357071c1df426b9"
+    },
+    {
+      "ruta": "rust/sv_core/tests/codomain_uniqueness.rs",
+      "bytes": 2395,
+      "sha256": "fb2bb17385e853bbd0e8e8d58002334befa82d84201ab098b1df0a7945922423"
+    },
+    {
+      "ruta": "rust/sv_core/tests/diagnostic_validation.rs",
+      "bytes": 69,
+      "sha256": "0ac68f88b760118a079d549655651038e6adb9af2427e2f732ef9931e2c817d7"
+    },
+    {
+      "ruta": "rust/sv_core/tests/grammar_closed_domains.rs",
+      "bytes": 3302,
+      "sha256": "1ea2a5471417d87c9df8bbc41972710c04b41821fac38a64399a1607c27fad08"
+    },
+    {
+      "ruta": "rust/sv_core/tests/json_projection.rs",
+      "bytes": 4138,
+      "sha256": "b5f9f933696a87df3af3614f710ffcdbfed4dd54494086cd4829bc9e7e53a771"
+    },
+    {
+      "ruta": "rust/sv_core/tests/output_semantics_totality.rs",
+      "bytes": 5068,
+      "sha256": "ebd61be454771944dceef2f4cf8f197cd96aeef965a829c6f4bb2c61d45584a8"
+    },
+    {
+      "ruta": "tests/diagnostic_validation/cases.rs",
+      "bytes": 9987,
+      "sha256": "51856ba96e4d1fd5069f51cf9db5f76bbcd66849140ddf315c800c34a33e2ef0"
+    }
+  ]
+}
