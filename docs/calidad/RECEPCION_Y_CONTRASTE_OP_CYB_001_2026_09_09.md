@@ -95,3 +95,87 @@ El dictamen distinguirá pérdida de H demostrada en el alcance del par, suficie
 DFL-009 tiene ahora su oportunidad de evaluación en fila 9 (servicio nativo, identidad, aislamiento, recursos, fallos y coste), pero no desplaza este contraste ni selecciona plataforma. Q0 IMM, sus doce SP, K1-T, DFL-003/004/006, DFL-001 general y R2/R3/R4 conservan sus límites. DFL-011 sigue siendo el español; DFL-012 el nombre externo `cell_ref`; DFL-013 la diversidad independiente ausente. Los 17 auxiliares Python y el observador externo Node continúan pendientes según RETP-105. Esta campaña no los incorpora a una entrega productiva ni acredita su retirada global.
 
 Ciberseguridad permanece en pausa controlada. El siguiente objeto del Lenguaje será la decisión sobre los consumidores operacionales que hagan falta tras este contraste, con dato, regla, diagnóstico, efecto y sede. No se abre otro universo ni se solicita de nuevo la aprobación ya otorgada.
+
+## 5. Resultado ejecutado y dictamen receptor RETP-106
+
+Esta sucesión sustituye únicamente el estado pendiente de ejecución del §4. Las expectativas se publicaron primero en `1a668710e410c63b57426c46617c273553dc5566`, árbol `554efbddaa338e7ee95a0cde6f7c6ec7f909475a`, idéntico al corte local previo `840c8625…`. La implementación de prueba se publicó después en **`219d6a374c38d1a14a7e191592032f70f89ee402`**, árbol **`6997c987d51a9ef5d06b334a6f2dd04bd00e624f`**, [PR #87](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/87). La cola documental posterior conserva código, originales y esperados de ese árbol.
+
+**Precisión de correspondencia:** en la tabla previa, RS02 citaba PR-005…015: la porción P26/P27 termina en PR-014; PR-015 corresponde a P28/RS03. SI03 es el antecedente temporal de RS03; SI06 presiona la delegación de RS02. Las referencias exactas de cada SI se conservan en `originales/v03/requisitos_lenguaje.json`, sin renumeración. Esta precisión no cambia entradas, reglas, esperados ni ejecución. Los 46 PR ensayan P25…P32; la campaña no acredita evaluación de las 32 definiciones ni repite los 64 casos de la revisión 0.2.
+
+### 5.1. Resultados observados
+
+| Comprobación | Resultado y límite |
+|---|---|
+| Originales y expectativas | 11/11 JSON literales verificados contra el manifiesto fijado |
+| Pruebas Rust de recepción | 11/11: seis pruebas receptoras y cinco pruebas reutilizadas del lector documental |
+| Transporte por cuatro entradas | 186 por EN, ES y ambos órdenes de ensamblaje: 744 comprobaciones de conservación, además de los controles de pares |
+| Rechazos de LIG | Seis ataques por cuatro entradas, con tipo/sujeto exactos y control reparado admitido: 24/24 |
+| Instancias independientes | Dos instancias sintéticas de la misma definición preservan evidencias distintas; no constituye instancias paramétricas CYB |
+| Recálculo externo | 186/186 contratos completos reconstruidos y huellas LIG recalculadas; informe EN |
+| Uso externo de casos completos | 78/78 respuestas coinciden con los esperados originales |
+| Pares | 18/18: F0 conserva 36 respuestas; H colisiona en 18 pares completos; HS recupera las 36 respuestas con S explícita |
+| Sensibilidad de reglas externas | 22/22 mutantes dirigidos detectados; transcripción de reglas del dominio, no mutación del núcleo |
+| Sensibilidad del observador | 12/12 ataques: ocho a la API y cuatro a bytes a través del lector; además, dos ataques a la CLI real repetidos localmente |
+| Repetición | Dos ejecuciones en Actions y una local del binario descargado producen bytes idénticos; dos ejecuciones del observador en Node 22.23.2 y 24.19.0 producen el mismo informe |
+| Paquete Rust aislado | 359/359 pruebas, sin Python/Node en el contenedor, sin red y Cargo offline. La nueva sonda nativa utiliza `sha256sum` de GNU Coreutils; no es una dependencia productiva añadida a `sv_core` |
+
+La campaña nueva es nativa. El flujo de WASI/navegador conserva el corpus y las sondas anteriores; su resultado verde **no se atribuye a los nuevos 186 transportes CYB**. La sonda no se distribuye como capacidad productiva de esos destinos.
+
+### 5.2. Evidencia y reproducción
+
+| Flujo de la cabeza material | Ejecución conforme |
+|---|---|
+| Retorno CYB documental | [34342683917](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683917) |
+| R0 Rust | [34342683914](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683914) |
+| Conformidad SVP | [34342683846](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683846) |
+| R0-8 nativo | [34342683918](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683918) |
+| Paridad del corpus anterior | [34342683797](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683797) |
+| Paquete sin intérpretes | [34342683882](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683882) |
+
+El flujo receptor comprueba la cabeza exacta, Rust 1.98.0, Cargo 1.98.0, Ubuntu 24.04.4, imagen `20260831.293.1`, Node 22.23.2 y GNU Coreutils 9.4. La repetición local usa el **mismo binario descargado**, no una segunda compilación ni una segunda realización SV.
+
+El artefacto [10100396197](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34342683917/artifacts/10100396197), `retorno-cyb-documental`, fue descargado y verificado: 560171 bytes, ZIP SHA-256 `980a251d81fb033690822f6872211eb316137764ae2534358c50897654c76dd4`. Una primera URL temporal devolvió HTTP 403; una nueva descarga completó la custodia y la comprobación. No se reutiliza ese fallo técnico como resultado del dominio.
+
+| Objeto | SHA-256 |
+|---|---|
+| Emisor nativo | `b02cdf1c87de1b54354fa5851a95f94cb641bbece8bf2f9c9439bffc4736198e` |
+| Transporte y repeticiones | `0b9d0d69636490df56913e684ac17f8e306bb84775eafec4d032068eae9214c0` |
+| Informe externo | `b84d04b007fd2212fb29db3004609b15787fdedd794c37ec29640675ff5cd357` |
+| Paquete de fuentes declarado por el flujo aislado | `ab7df6856744ed684553ef9aa27f5a9d81600a6b8b94bcc4a0f19412c752a76b` |
+
+El último hash procede del registro del flujo; no se confunde con el ZIP receptor descargado. El paquete comprende 242 archivos Git y dos de inventario. La custodia de Actions tiene retención de 90 días; los originales, esperados, fuentes del banco y el [informe completo](evidencias/RETP-106/verificacion-219d6a37.json) quedan además en Git. Sus herramientas y huellas están en la misma carpeta. No se presume conservación indefinida de una URL.
+
+Reproducción desde la raíz del corte material, con las herramientas indicadas:
+
+```sh
+node tests/retorno_cyb/verificar.mjs --fuentes
+cargo +1.98.0 test --manifest-path rust/Cargo.toml -p sv_core --test cyb_reception --offline
+cargo +1.98.0 run --manifest-path rust/Cargo.toml -p sv_core --example cyb_reception_probe --release --offline > transporte.json
+node tests/retorno_cyb/verificar.mjs transporte.json --autoprueba > verificacion.json
+sha256sum transporte.json verificacion.json
+```
+
+El portador EN y su proyección de referencia ya existían. La huella de proyección fijada por el observador se cotejó con el ejecutable custodiado del corte RETP-104/105; es referencia de regresión de la misma realización, no oráculo doctrinal independiente. El SHA de cada contrato sí se recalcula mediante el codificador externo LIG ya contrastado con el vector independiente.
+
+### 5.3. Dictamen por capacidad
+
+| Capacidad examinada | Dictamen | Consecuencia |
+|---|---|---|
+| Recuperar cargas completas o con S mediante LIG y el portador | **Suficiencia acreditada en el alcance documental ejecutado** | No hay pérdida impuesta por LIG en estas cargas y usos; no se justifica ampliar la IR para corregir una pérdida no encontrada |
+| Recuperar de H la distinción que eliminó | **Pérdida demostrada para 18 pares y consultas fijadas** | Exigir F0 o la S declarada cuando se consuma esa distinción; ninguna suficiencia de H por igualdad del resultado técnico |
+| Aplicar las reglas documentales recibidas tras recuperar datos | **Concordancia externa acreditada para 78 casos y consultas de pares** | La regla vive en el observador de prueba; la aceptación LIG no equivale a su aplicación ni a autoridad |
+| Ejecutar OP-CYB-001, Frame, consejo y transducción productivos | **No acreditado por esta campaña** | Continúan fuera de la oferta, con dependencias concretas. No se sustituye esa falta con el resultado del observador |
+| Autenticidad, permisos, acceso, custodia y cobertura reales | **No acreditado** | Requieren constitución, observación y soporte material correspondientes; R2/R3/R4 no aprobados |
+
+No se ha reproducido un defecto nuevo del núcleo en este perímetro. La pérdida demostrada está en la reducción H elegida para el caso. Tampoco se deduce que toda necesidad profesional esté ya realizada: la prueba demuestra conservación y uso documental externo, mientras la interpretación operacional y la imposición material tienen sedes diferentes.
+
+Los artefactos `ConstitucionD`, `AutorD`, `Phi`, `Regla` y `OP` siguen siendo los literales sintéticos del portador anterior. Las reglas profesionales del observador están fijadas por su código y los anexos identificados; **no se ha constituido una ligadura productiva entre esas reglas y una operación CYB mediante aquellos literales**. El transporte recupera documentos que el comprobador externo consume bajo su regla fija. Éste es precisamente el límite que exige concretar el consumidor operacional siguiente y no atribuir a `OP` una ejecución profesional que no realiza.
+
+### 5.4. Trabajo que permanece y punto exacto de continuación
+
+1. **Consumidores operacionales del Lenguaje:** concretar qué operación SV debe usar atribución/autoridad/tiempo (RS01–03/05), vistas/alcance (RS04/07) y continuidad/obligaciones (RS09–12). Para cada una, fijar entradas, regla recibida, resultado y última capacidad disponible; decidir la sede formal sin convertir toda la carga en una cadena opaca ni elevar los nombres de relación del dominio a invariantes universales. Hasta materializar el consumidor, no ofrecer su ejecución.
+2. **Identidad paramétrica y arquitectura CYB:** LIG mantiene dependencias de captura/admisión nominal y agente/grafo. Si un consumidor exige posiciones, Frame o cobertura celular, devolver esa necesidad constitutiva precisa; no asignar los 32 parámetros desde el Lenguaje. El contrato externo de documentos ya contrastado puede continuar sin esa atribución.
+3. **K1-T y productores:** identificar las operaciones que requieran observación→Tri, criticidad o consejo ejecutado; conservar DFL-006 y la puerta algebraica de la secuencia. Los resultados de los auxiliares no los sustituyen.
+4. **Soporte y DFL-009:** evaluar en fila 9 servicio nativo, identidad efectiva, límites, aislamiento, fallo, repetición y coste frente a estas necesidades. Reutilizar la evidencia del laboratorio y sus límites; no seleccionar plataforma por este expediente ni declarar seguridad material a partir de transporte correcto.
+
+No se requiere reabrir la aprobación del universo ni otro universo para continuar. La recepción técnica y este primer contraste quedan realizados **en candidata**; la fila 9 y el núcleo permanecen abiertos. La integración registral se distinguirá de la existencia de la PR y de sus pruebas. Ciberseguridad conserva su pausa; ningún pendiente sin realización se presenta como capacidad autorizada para pasar.

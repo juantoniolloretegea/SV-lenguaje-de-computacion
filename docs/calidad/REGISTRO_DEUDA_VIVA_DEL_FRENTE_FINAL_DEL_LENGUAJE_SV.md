@@ -297,3 +297,22 @@ DFL-001 conserva sus restantes obligaciones: este cierre candidato es local a lo
 La fila 7 queda completada para la entrega representacional identificada; el siguiente trabajo sustantivo es fila 8, a cargo de Ciberseguridad Inteligente. La matriz documental fijada conserva su corte candidato: este cambio de gobierno se registra por sucesión, sin modificar sus banderas para fabricar una certificación automática.
 
 El receptor comprobará su corte y el paquete antes de constituir su perímetro y catálogo Excel. Si la operación CYB necesita una capacidad excluida, se registra insuficiencia o se devuelve la obligación al Lenguaje; no se rellena con una cadena opaca, un supuesto permiso ni `U`. Una ausencia de contraejemplo se informa como tal, con su cobertura finita. No se declara cerrado el núcleo ni recibida una auditoría CYB todavía no ejecutada.
+
+<a id="relevo-retp-106"></a>
+
+## Sucesión RETP-2026-106 — Retorno CYB y uso documental contrastado
+
+[RETP-106](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-106) recibe el relevo CYB aprobado en `169af16d05ffc954454bb5528ec106e5752b7016` y contrasta LIG integrado sobre `66967a80…`. Su candidata `219d6a374c38d1a14a7e191592032f70f89ee402` preserva los originales y supera seis flujos. El [dictamen receptor](RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md#53-dictamen-por-capacidad) limita la suficiencia a conservación y uso documental externo: 78 casos, 18 pares y 186 contratos comprobados. No amplía la oferta productiva ni cierra por referencia ninguna deuda ejecutiva.
+
+| Obligación | Resultado recibido y próximo objeto concreto |
+|---|---|
+| DFL-005 | LIG preserva estas cargas completas y laterales; los 18 pares pierden información sólo en H. Queda por definir qué consumidores operacionales necesitan aplicar atribución, autoridad, tiempo, vistas, cobertura y continuidad; representar el documento no equivale a ejecutar su regla. Mantener los límites por operación hasta realizar ese consumidor. |
+| DFL-003/004 y H06/H07 | Se conservan las guardas integradas. RS03/09/10/12 precisan historia, antecedentes, relaciones y reevaluación; el observador externo no acredita CQ1–CQ6 ni causalidad de una trayectoria SV. Definir el uso necesario antes de alterar su representación. |
+| Constitución celular CYB | Las 32 definiciones no constituyen célula, agente ni posiciones. El banco D/AG es sintético. Una necesidad de Frame/destino/cobertura celular vuelve al dominio únicamente con la pregunta y operación que la requieren. |
+| K1-T y DFL-006 | La concordancia de reglas externas no habilita captura, admisión ni observación→Tri productivas; tampoco criticidad ni consejo ejecutado. Identificar los consumidores dependientes y conservar la puerta algebraica correspondiente. |
+| DFL-001 | Los doce ataques al nuevo observador y sus referencias fijadas cubren ese perímetro, sin cierre general de diagnósticos ni de independencia del criterio. |
+| DFL-009 | Tras este retorno aprobado llega su oportunidad de evaluación en fila 9: servicio nativo, identidad efectiva, recursos, aislamiento, fallos, repetición y coste. No queda resuelta ni se selecciona plataforma; se cotejará con los ensayos identificados del laboratorio. |
+| DFL-011/012/013 y distribución final | Español, nombre histórico `cell_ref` y diversidad independiente conservan sus identidades. Continúan 17 auxiliares Python e invocaciones de CI, más Node externo. Las 359 pruebas aisladas no acreditan su retirada global. |
+| R2/R3/R4 | Autenticidad, permisos, difusión, custodia, persistencia y cobertura reales siguen sin acreditación por este banco. Un resultado documental favorable no autoriza una actuación ni certifica infraestructura. |
+
+Recepción y primer contraste efectuados en candidata; fila 9 y núcleo abiertos. Ciberseguridad permanece en pausa controlada. La próxima decisión debe fijar consumidores y dependencias por operación, conservar la necesidad profesional aprobada y escoger la representación suficiente con evidencia; no repetir el catálogo, constituir otro universo ni dispensar pendientes mediante una etiqueta.

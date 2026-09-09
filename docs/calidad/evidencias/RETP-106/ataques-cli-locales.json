@@ -1,0 +1,14 @@
+[
+  {
+    "ataque": "duplicada",
+    "rc": 1,
+    "stdout": "",
+    "stderr": "JSON_CLAVE_REPETIDA\n"
+  },
+  {
+    "ataque": "numero",
+    "rc": 1,
+    "stdout": "",
+    "stderr": "JSON_NUMERO_FORMA\n"
+  }
+]
