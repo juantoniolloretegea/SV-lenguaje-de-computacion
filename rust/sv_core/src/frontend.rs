@@ -1,4 +1,6 @@
 use crate::ir::construction;
+pub use crate::diagnostic_frontend::FrontendError;
+use crate::diagnostic_frontend::{FrontendCause, FrontendExpectation, LegacyFrontendError};
 use crate::identifier_profile::{is_identifier_continue, is_identifier_start};
 use crate::{
     AdmissibilityState, IrObjectKind, IrOperationKind, IrProgram, IrQueryContext,
@@ -789,16 +791,6 @@ mod source_profile_public_tests_2a {
 }
 
 #[derive(Debug, Clone, PartialEq, Eq)]
-pub enum FrontendError {
-    UnexpectedEnd,
-    UnexpectedToken(String),
-    Unsupported(String),
-    InvalidNatural(String),
-    InvalidAdmissibilityState(String),
-    InvalidTri(String),
-}
-
-#[derive(Debug, Clone, PartialEq, Eq)]
 enum Token<'a> {
     Word(&'a str, u8),
     Nat(String),
@@ -817,13 +809,27 @@ pub fn compile_svp_with_profile(
     source_file: &str,
     profile: SourceProfile,
 ) -> Result<IrProgram, FrontendError> {
-    let tokens = tokenize(source, profile)?;
-    Parser::new(tokens, source, source_file).parse()
+    compile_with_provenance(source, source_file, profile).map(|parsed| parsed.program)
 }
 
-fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>>, FrontendError> {
+pub(crate) struct ParsedProgram {
+    pub(crate) program: IrProgram,
+    pub(crate) provenance: crate::diagnostic_validation::Provenance,
+}
+
+pub(crate) fn compile_with_provenance(source: &str, source_file: &str, profile: SourceProfile)
+    -> Result<ParsedProgram, FrontendError> {
+    let (tokens, spans) = tokenize(source, source_file, profile)?;
+    Parser::new(tokens, spans, source, source_file, profile).parse()
+}
+
+fn tokenize<'a>(source: &'a str, source_file: &str, profile: SourceProfile)
+    -> Result<(Vec<Token<'a>>, Vec<(usize, usize)>), FrontendError> {
     let bytes = source.as_bytes();
     let mut out = Vec::new();
+    let mut spans = Vec::new();
+    let failure = |legacy, cause, span| FrontendError::new(
+        legacy, cause, Some(span), source, source_file, profile);
     let mut i = 0usize;
     while i < bytes.len() {
         let b = bytes[i];
@@ -842,6 +848,7 @@ fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>
         }
         if b == b'-' && i + 1 < bytes.len() && bytes[i + 1] == b'>' {
             out.push(Token::Arrow);
+            spans.push((i, i + 2));
             i += 2;
             continue;
         }
@@ -852,11 +859,14 @@ fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>
                 i += 1;
             }
             if i >= bytes.len() {
-                return Err(FrontendError::UnexpectedEnd);
+                return Err(failure(LegacyFrontendError::UnexpectedEnd,
+                    FrontendCause::UnexpectedEnd, (bytes.len(), bytes.len())));
             }
             let text = std::str::from_utf8(&bytes[start..i])
-                .map_err(|_| FrontendError::UnexpectedToken("cadena no UTF-8".into()))?;
+                .map_err(|_| failure(LegacyFrontendError::UnexpectedToken("cadena no UTF-8".into()),
+                    FrontendCause::InvalidTextEncoding, (start - 1, i + 1)))?;
             out.push(Token::Text(text.to_owned()));
+            spans.push((start - 1, i + 1));
             i += 1;
             continue;
         }
@@ -869,6 +879,7 @@ fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>
             out.push(Token::Nat(
                 std::str::from_utf8(&bytes[start..i]).unwrap().to_owned(),
             ));
+            spans.push((start, i));
             continue;
         }
 
@@ -891,46 +902,58 @@ fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>
             }
             let status = classify_surface(profile, &source[start..i]);
             out.push(Token::Word(&source[start..i], status));
+            spans.push((start, i));
             continue;
         }
 
         if ch.is_ascii() && "{}[]();:,=.".contains(ch) {
             out.push(Token::Sym(ch));
+            spans.push((i, i + 1));
             i += 1;
             continue;
         }
-        return Err(FrontendError::UnexpectedToken(format!(
+        return Err(failure(LegacyFrontendError::UnexpectedToken(format!(
             "carácter léxico no admitido U+{:04X}",
             ch as u32
-        )));
+        )), FrontendCause::InvalidLexicalCharacter(ch), (i, i + ch.len_utf8())));
     }
     out.push(Token::Eof);
-    Ok(out)
+    spans.push((bytes.len(), bytes.len()));
+    Ok((out, spans))
 }
 
 struct Parser<'a> {
     tokens: Vec<Token<'a>>,
+    spans: Vec<(usize, usize)>,
     pos: usize,
     source: &'a str,
     source_file: &'a str,
+    profile: SourceProfile,
     objects: Vec<crate::IrObject>,
     operations: Vec<crate::IrOperation>,
 }
 
 impl<'a> Parser<'a> {
-    fn new(tokens: Vec<Token<'a>>, source: &'a str, source_file: &'a str) -> Self {
+    fn new(tokens: Vec<Token<'a>>, spans: Vec<(usize, usize)>, source: &'a str,
+        source_file: &'a str, profile: SourceProfile) -> Self {
         Self {
             tokens,
+            spans,
             pos: 0,
             source,
             source_file,
+            profile,
             objects: Vec::new(),
             operations: Vec::new(),
         }
     }
 
-    fn parse(mut self) -> Result<IrProgram, FrontendError> {
+    fn parse(mut self) -> Result<ParsedProgram, FrontendError> {
+        let mut provenance = crate::diagnostic_validation::Provenance::default();
+        let source_sha256 = sha256_hex(self.source.as_bytes());
         while !matches!(self.peek(), Token::Eof) {
+            let start = self.spans[self.pos].0;
+            let is_operation = self.peek_word()? == "let";
             match self.peek_word()? {
                 "codomain" => self.parse_codomain()?,
                 "output_semantics" => self.parse_output_semantics()?,
@@ -955,15 +978,16 @@ impl<'a> Parser<'a> {
                 "agent" => self.parse_agent()?,
                 "query_spec" => self.parse_query_spec()?,
                 "let" => self.parse_let()?,
-                other => return Err(FrontendError::Unsupported(other.to_owned())),
+                other => return Err(self.unsupported(other, self.pos)),
             }
+            let context = crate::DiagnosticContext::declaration(self.source_file,
+                &source_sha256, self.profile, (start, self.spans[self.pos - 1].1));
+            if is_operation { provenance.operations.push(context); }
+            else { provenance.objects.push(context); }
         }
-        Ok(construction::program(
-            self.source_file,
-            sha256_hex(self.source.as_bytes()),
-            self.objects,
-            self.operations,
-        ))
+        Ok(ParsedProgram { program: construction::program(
+            self.source_file, source_sha256, self.objects, self.operations,
+        ), provenance })
     }
 
     fn parse_codomain(&mut self) -> Result<(), FrontendError> {
@@ -1003,6 +1027,7 @@ impl<'a> Parser<'a> {
         self.sym('{')?;
         self.word("b")?;
         self.sym(':')?;
+        let b_index = self.pos;
         let b = self.take_nat()?;
         self.sym(';')?;
         self.word("codomain")?;
@@ -1018,7 +1043,8 @@ impl<'a> Parser<'a> {
         let role = self.take_raw_word()?;
         self.sym(';')?;
         self.sym('}')?;
-        let n = square_nat(&b)?;
+        let n = square_nat(&b).map_err(|text| self.failure(
+            LegacyFrontendError::InvalidNatural(text.clone()), FrontendCause::InvalidNatural(text), b_index))?;
         self.objects.push(construction::object(
             name,
             IrObjectKind::CellSpec {
@@ -1173,11 +1199,14 @@ impl<'a> Parser<'a> {
         self.word("states")?;
         self.sym(':')?;
         self.sym('{')?;
+        let states_index = self.pos;
         let mut states = Vec::new();
         loop {
+            let label_index = self.pos;
             let label = self.take_raw_word()?;
             let state = AdmissibilityState::try_from(label.as_str())
-                .map_err(|_| FrontendError::InvalidAdmissibilityState(label))?;
+                .map_err(|_| self.failure(LegacyFrontendError::InvalidAdmissibilityState(label.clone()),
+                    self.surface_cause(label_index, FrontendCause::InvalidAdmissibilityState(self.original_word(label_index, &label))), label_index))?;
             states.push(state);
             if self.at_sym(',') {
                 self.sym(',')?;
@@ -1188,10 +1217,9 @@ impl<'a> Parser<'a> {
         self.sym('}')?;
         self.sym(';')?;
         if states.len() != 3 {
-            return Err(FrontendError::InvalidAdmissibilityState(format!(
-                "{} estados",
-                states.len()
-            )));
+            return Err(self.failure(LegacyFrontendError::InvalidAdmissibilityState(format!(
+                "{} estados", states.len()
+            )), FrontendCause::AdmissibilityStateCount(states.len()), states_index));
         }
         self.word("rule")?;
         self.sym(':')?;
@@ -1334,18 +1362,22 @@ impl<'a> Parser<'a> {
         let mut table = None;
         let mut constraints = None;
         while !self.at_sym('}') {
+            let field_index = self.pos;
             let field = self.take_raw_word()?;
             self.sym(':')?;
             match field.as_str() {
-                "table" if table.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("SemanticRelation {name}: campo opcional repetido: table"))),
-                "table" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("SemanticRelation {name}: campo opcional fuera de orden: table"))),
+                "table" if table.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional repetido: table")),
+                    FrontendCause::RepeatedOptionalField { ir_type: "SemanticRelation", object: name.clone(), field: "table" }, field_index)),
+                "table" if constraints.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional fuera de orden: table")),
+                    FrontendCause::OptionalFieldOrder { ir_type: "SemanticRelation", object: name.clone(), field: "table" }, field_index)),
                 "table" => table = Some(self.take_word()?),
-                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("SemanticRelation {name}: campo opcional repetido: constraints"))),
+                "constraints" if constraints.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("SemanticRelation {name}: campo opcional repetido: constraints")),
+                    FrontendCause::RepeatedOptionalField { ir_type: "SemanticRelation", object: name.clone(), field: "constraints" }, field_index)),
                 "constraints" => constraints = Some(self.word_list()?),
-                other => return Err(FrontendError::Unsupported(other.to_owned())),
+                other => return Err(self.unsupported(other, field_index)),
             }
             self.sym(';')?;
         }
@@ -1372,18 +1404,22 @@ impl<'a> Parser<'a> {
         let mut arity = None;
         let mut constraints = None;
         while !self.at_sym('}') {
+            let field_index = self.pos;
             let field = self.take_raw_word()?;
             self.sym(':')?;
             match field.as_str() {
-                "arity" if arity.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("Pattern {name}: campo opcional repetido: arity"))),
-                "arity" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("Pattern {name}: campo opcional fuera de orden: arity"))),
+                "arity" if arity.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional repetido: arity")),
+                    FrontendCause::RepeatedOptionalField { ir_type: "Pattern", object: name.clone(), field: "arity" }, field_index)),
+                "arity" if constraints.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional fuera de orden: arity")),
+                    FrontendCause::OptionalFieldOrder { ir_type: "Pattern", object: name.clone(), field: "arity" }, field_index)),
                 "arity" => arity = Some(self.take_nat()?),
-                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
-                    format!("Pattern {name}: campo opcional repetido: constraints"))),
+                "constraints" if constraints.is_some() => return Err(self.failure(LegacyFrontendError::UnexpectedToken(
+                    format!("Pattern {name}: campo opcional repetido: constraints")),
+                    FrontendCause::RepeatedOptionalField { ir_type: "Pattern", object: name.clone(), field: "constraints" }, field_index)),
                 "constraints" => constraints = Some(self.word_list()?),
-                other => return Err(FrontendError::Unsupported(other.to_owned())),
+                other => return Err(self.unsupported(other, field_index)),
             }
             self.sym(';')?;
         }
@@ -1683,6 +1719,7 @@ impl<'a> Parser<'a> {
         self.word("let")?;
         let name = self.take_word()?;
         self.sym('=')?;
+        let first_index = self.pos;
         let (first_raw, first_status) = self.take_dispatch_word()?;
         let first = canonical_word(&first_raw, first_status);
         match first {
@@ -1751,6 +1788,7 @@ impl<'a> Parser<'a> {
                 self.sym(',')?;
                 self.word("target")?;
                 self.sym(':')?;
+                let variant_index = self.pos;
                 let variant = self.take_raw_word()?;
                 self.sym('(')?;
                 let reference = self.take_word()?;
@@ -1761,7 +1799,7 @@ impl<'a> Parser<'a> {
                     "CellTarget" => IrSupervisableTarget::Cell { reference },
                     "ComposedTarget" => IrSupervisableTarget::Composed { reference },
                     "SystemTarget" => IrSupervisableTarget::System { reference },
-                    other => return Err(FrontendError::Unsupported(other.to_owned())),
+                    other => return Err(self.unsupported(other, variant_index)),
                 };
                 self.operations.push(construction::operation(
                     name,
@@ -1810,9 +1848,9 @@ impl<'a> Parser<'a> {
             }
             _ => {
                 if protected_status(first_status) {
-                    return Err(FrontendError::UnexpectedToken(format!(
+                    return Err(self.failure(LegacyFrontendError::UnexpectedToken(format!(
                         "palabra protegida donde se esperaba identificador: {first_raw}"
-                    )));
+                    )), self.surface_cause(first_index, FrontendCause::ProtectedIdentifier(first_raw.clone())), first_index));
                 }
                 self.sym('.')?;
                 let field = self.take_raw_word()?;
@@ -1830,6 +1868,7 @@ impl<'a> Parser<'a> {
     }
 
     fn query_context(&mut self) -> Result<IrQueryContext, FrontendError> {
+        let variant_index = self.pos;
         let variant = self.take_raw_word()?;
         self.sym('(')?;
         let context = match variant.as_str() {
@@ -1870,7 +1909,7 @@ impl<'a> Parser<'a> {
                     references: [a, b, c],
                 }
             }
-            other => return Err(FrontendError::Unsupported(other.to_owned())),
+            other => return Err(self.unsupported(other, variant_index)),
         };
         self.sym(')')?;
         Ok(context)
@@ -2071,27 +2110,63 @@ impl<'a> Parser<'a> {
         Ok(values)
     }
 
+    fn failure(&self, legacy: LegacyFrontendError, cause: FrontendCause, index: usize) -> FrontendError {
+        FrontendError::new(legacy, cause, self.spans.get(index).copied(),
+            self.source, self.source_file, self.profile)
+    }
+
+    fn surface_cause(&self, index: usize, cause: FrontendCause) -> FrontendCause {
+        match self.tokens.get(index) {
+            Some(Token::Word(raw, STATUS_FOREIGN_CONTEXTUAL | STATUS_FOREIGN_PROTECTED)) =>
+                FrontendCause::ForeignSurface((*raw).into()),
+            _ => cause,
+        }
+    }
+
+    fn original_word(&self, index: usize, fallback: &str) -> String {
+        match self.tokens.get(index) {
+            Some(Token::Word(raw, _)) => (*raw).into(),
+            _ => fallback.into(),
+        }
+    }
+
+    fn unsupported(&self, word: &str, index: usize) -> FrontendError {
+        self.failure(LegacyFrontendError::Unsupported(word.into()),
+            self.surface_cause(index, FrontendCause::UnsupportedForm(self.original_word(index, word))), index)
+    }
+
+    fn end_error(&self) -> FrontendError {
+        // EOF es una frontera comprobada, no la última palabra consumida.
+        FrontendError::new(LegacyFrontendError::UnexpectedEnd, FrontendCause::UnexpectedEnd,
+            Some((self.source.len(), self.source.len())), self.source, self.source_file, self.profile)
+    }
+
+    fn token_error(&self, expected: FrontendExpectation, token: &Token<'_>) -> FrontendError {
+        self.failure(LegacyFrontendError::UnexpectedToken(format!("{token:?}")),
+            FrontendCause::ExpectedToken { expected }, self.pos)
+    }
+
     fn take_tri(&mut self) -> Result<Tri, FrontendError> {
+        let index = self.pos;
         let label = self.take_raw_word()?;
         match label.as_str() {
             "Zero" => Ok(Tri::Zero),
             "One" => Ok(Tri::One),
             "U" => Ok(Tri::U),
-            _ => Err(FrontendError::InvalidTri(label)),
+            _ => Err(self.failure(LegacyFrontendError::InvalidTri(label.clone()),
+                self.surface_cause(index, FrontendCause::InvalidTri(self.original_word(index, &label))), index)),
         }
     }
 
     fn peek(&self) -> &Token {
-        self.tokens
-            .get(self.pos)
-            .expect("el token EOF garantiza una posición válida")
+        self.tokens.get(self.pos).expect("el token EOF garantiza una posición válida")
     }
 
     fn peek_word(&self) -> Result<&str, FrontendError> {
         match self.peek() {
             Token::Word(raw, status) => Ok(canonical_word(raw, *status)),
-            Token::Eof => Err(FrontendError::UnexpectedEnd),
-            other => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Token::Eof => Err(self.end_error()),
+            other => Err(self.token_error(FrontendExpectation::Word, other)),
         }
     }
 
@@ -2101,8 +2176,8 @@ impl<'a> Parser<'a> {
                 self.pos += 1;
                 Ok(canonical_word(raw, status).to_owned())
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.token_error(FrontendExpectation::Word, &other)),
         }
     }
 
@@ -2112,8 +2187,8 @@ impl<'a> Parser<'a> {
                 self.pos += 1;
                 Ok((raw.to_owned(), status))
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.token_error(FrontendExpectation::Word, &other)),
         }
     }
 
@@ -2121,16 +2196,16 @@ impl<'a> Parser<'a> {
         match self.tokens.get(self.pos).cloned() {
             Some(Token::Word(raw, status)) => {
                 if protected_status(status) {
-                    Err(FrontendError::UnexpectedToken(format!(
+                    Err(self.failure(LegacyFrontendError::UnexpectedToken(format!(
                         "palabra protegida donde se esperaba identificador: {raw}"
-                    )))
+                    )), self.surface_cause(self.pos, FrontendCause::ProtectedIdentifier(raw.into())), self.pos))
                 } else {
                     self.pos += 1;
                     Ok(raw.to_owned())
                 }
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.token_error(FrontendExpectation::Identifier, &other)),
         }
     }
 
@@ -2140,19 +2215,21 @@ impl<'a> Parser<'a> {
                 self.pos += 1;
                 Ok(value)
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.token_error(FrontendExpectation::QuotedText, &other)),
         }
     }
 
     fn take_nat(&mut self) -> Result<Nat, FrontendError> {
+        let index = self.pos;
         match self.tokens.get(self.pos).cloned() {
             Some(Token::Nat(value)) => {
                 self.pos += 1;
-                Nat::from_decimal(&value).map_err(|_| FrontendError::InvalidNatural(value))
+                Nat::from_decimal(&value).map_err(|_| self.failure(
+                    LegacyFrontendError::InvalidNatural(value.clone()), FrontendCause::InvalidNatural(value), index))
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.token_error(FrontendExpectation::Natural, &other)),
         }
     }
 
@@ -2162,9 +2239,9 @@ impl<'a> Parser<'a> {
             self.pos += 1;
             Ok(())
         } else {
-            Err(FrontendError::UnexpectedToken(format!(
+            Err(self.failure(LegacyFrontendError::UnexpectedToken(format!(
                 "esperado {expected}, recibido {got}"
-            )))
+            )), self.surface_cause(self.pos, FrontendCause::ExpectedWord { expected: expected.into() }), self.pos))
         }
     }
 
@@ -2174,10 +2251,10 @@ impl<'a> Parser<'a> {
                 self.pos += 1;
                 Ok(())
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!(
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.failure(LegacyFrontendError::UnexpectedToken(format!(
                 "esperado {expected}, recibido {other:?}"
-            ))),
+            )), FrontendCause::ExpectedSymbol(expected), self.pos)),
         }
     }
 
@@ -2187,10 +2264,10 @@ impl<'a> Parser<'a> {
                 self.pos += 1;
                 Ok(())
             }
-            Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
-            Some(other) => Err(FrontendError::UnexpectedToken(format!(
+            Some(Token::Eof) | None => Err(self.end_error()),
+            Some(other) => Err(self.failure(LegacyFrontendError::UnexpectedToken(format!(
                 "esperado ->, recibido {other:?}"
-            ))),
+            )), FrontendCause::ExpectedToken { expected: FrontendExpectation::Arrow }, self.pos)),
         }
     }
 
@@ -2199,7 +2276,7 @@ impl<'a> Parser<'a> {
     }
 }
 
-fn square_nat(value: &Nat) -> Result<Nat, FrontendError> {
+fn square_nat(value: &Nat) -> Result<Nat, String> {
     let digits = value.as_decimal().as_bytes();
     if digits == b"0" {
         return Ok(Nat::from_u64(0));
@@ -2225,7 +2302,7 @@ fn square_nat(value: &Nat) -> Result<Nat, FrontendError> {
         .rev()
         .map(|d| char::from(b'0' + (*d as u8)))
         .collect();
-    Nat::from_decimal(&text).map_err(|_| FrontendError::InvalidNatural(text))
+    Nat::from_decimal(&text).map_err(|_| text)
 }
 
 pub(crate) fn sha256_hex(data: &[u8]) -> String {

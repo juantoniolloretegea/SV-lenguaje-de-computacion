@@ -6,7 +6,7 @@ use sv_core::{
 
 fn reject(result: Result<IrProgram, CompileError>, expected: &str) {
     match result {
-        Err(CompileError::InvalidProgram(message)) => assert_eq!(message, expected),
+        Err(error) if error.legacy_program_message().is_some() => assert_eq!(error.legacy_program_message().unwrap(), expected),
         other => panic!("debía rechazarse antes de exponer una proyección: {other:?}"),
     }
 }

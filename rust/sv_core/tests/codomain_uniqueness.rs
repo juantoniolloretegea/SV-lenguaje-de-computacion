@@ -1,12 +1,13 @@
 //! Oráculos específicos de N0-01, separados del recuento de la suite interna de `sv_core`.
 
 use sv_core::{
-    compile_svp_assembly, compile_svp_profile, CompileError, SourceProfile, SourceUnit,
+    compile_svp_assembly, compile_svp_profile, SourceProfile, SourceUnit,
 };
 
 fn assert_invalid_codomain(source: &str, profile: SourceProfile, member: &str) {
     match compile_svp_profile(source, "codomain-duplicate.svp", profile) {
-        Err(CompileError::InvalidProgram(message)) => {
+        Err(error) if error.legacy_program_message().is_some() => {
+            let message = error.legacy_program_message().unwrap();
             assert!(message.contains("E004"), "diagnóstico inesperado: {message}");
             assert!(
                 message.contains("InvalidCodomain"),
@@ -56,7 +57,8 @@ fn n0_01_el_ensamblaje_no_rescata_un_codominio_duplicado() {
         SourceUnit::new(valid, "valid-en.svp", SourceProfile::En),
         SourceUnit::new(duplicate, "duplicate-es.svp", SourceProfile::Es),
     ]) {
-        Err(CompileError::InvalidProgram(message)) => {
+        Err(error) if error.legacy_program_message().is_some() => {
+            let message = error.legacy_program_message().unwrap();
             assert!(message.contains("E004"), "diagnóstico inesperado: {message}");
             assert!(message.contains("K2"), "diagnóstico inesperado: {message}");
             assert!(message.contains("X"), "diagnóstico inesperado: {message}");

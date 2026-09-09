@@ -1,0 +1,33 @@
+{
+  "version": "procedencia-frontal/1",
+  "compromiso_previo": "5d6d15b0f9f189d31eede4c28e32391f91dd795a",
+  "fuentes": [
+    {
+      "ruta": "rust/sv_core/src/diagnostic_frontend.rs",
+      "bytes": 9101,
+      "sha256": "4c94b837ad893c0e00932144f023531c83b7f0a9973eaabbc725ea7277acdcf2"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "bytes": 101732,
+      "sha256": "4e840e09d19476332bb44e66deed63b83920c22e3924fdf18a50935493408a8a"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "bytes": 17417,
+      "sha256": "c8d51265cfea76461ebce41cb45e27d1d74a6ddbbba27fb341e7bdf2ed3255d2"
+    },
+    {
+      "ruta": "rust/sv_core/tests/diagnostic_frontend.rs",
+      "bytes": 57,
+      "sha256": "ab2f521d791b9bb975d73dfaa8229001adb83fc558211c9c7b4ae07d2096fcbe"
+    },
+    {
+      "ruta": "tests/diagnostic_frontend/cases.rs",
+      "bytes": 5751,
+      "sha256": "c278b6d8bc93bb878d09ef97542006d35109268ec64bcfcf362f6730ac4ad964"
+    }
+  ],
+  "pruebas_ejecutadas": false,
+  "nota": "Manifiesto previo a la ejecución. La verificación se registrará por separado."
+}

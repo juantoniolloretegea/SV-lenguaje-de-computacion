@@ -34,6 +34,8 @@ pub mod authority;
 pub mod control;
 pub mod decision_trace;
 mod equivalence;
+mod diagnostic_frontend;
+mod diagnostic_validation;
 mod execution;
 mod frontend;
 mod grammar_conformance;
@@ -78,6 +80,8 @@ pub use decision_trace::{
     TracedPermitDecision, TracedPermitDisposition,
 };
 pub use equivalence::equivalence_json;
+pub use diagnostic_validation::{ClosedDomain, ProgramCause, ProgramDiagnostic};
+pub use diagnostic_frontend::{DiagnosticContext, FrontendCause, FrontendDiagnostic, FrontendExpectation};
 pub use execution::{
     EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
     ExerciseConfirmation, ExerciseTraceEntry,
@@ -132,10 +136,34 @@ pub const SERIALIZER_VERSION_MAJOR: u16 = 0;
 pub const SERIALIZER_VERSION_MINOR: u16 = 1;
 pub const SERIALIZER_VERSION_PATCH: u16 = 0;
 
-#[derive(Debug, Clone, PartialEq, Eq)]
+#[derive(Clone, PartialEq, Eq)]
 pub enum CompileError {
     Frontend(FrontendError),
     InvalidProgram(String),
+    Diagnostic(ProgramDiagnostic),
+}
+
+impl CompileError {
+    pub fn program_diagnostic(&self) -> Option<&ProgramDiagnostic> {
+        match self { Self::Diagnostic(diagnostic) => Some(diagnostic), _ => None }
+    }
+    /// Adaptador de compatibilidad; no es la identidad de la causa ni el texto localizado.
+    pub fn legacy_program_message(&self) -> Option<&str> {
+        match self {
+            Self::InvalidProgram(message) => Some(message),
+            Self::Diagnostic(diagnostic) => Some(diagnostic.legacy_message()),
+            _ => None,
+        }
+    }
+}
+impl std::fmt::Debug for CompileError {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        match self {
+            Self::Frontend(error) => f.debug_tuple("Frontend").field(error).finish(),
+            Self::InvalidProgram(message) => f.debug_tuple("InvalidProgram").field(message).finish(),
+            Self::Diagnostic(diagnostic) => f.debug_tuple("InvalidProgram").field(&diagnostic.legacy_message()).finish(),
+        }
+    }
 }
 
 impl From<FrontendError> for CompileError {
@@ -155,9 +183,14 @@ impl From<FrontendError> for CompileError {
 /// de la IR. En particular, Ternarizer conserva nombres opacos y no es ejecutable
 /// (K1-T / IR 0.3 §2.4). Esto también rige perfiles y ensamblaje.
 pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, CompileError> {
-    let program = frontend::compile_svp(source, source_file)?;
-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    let parsed = frontend::compile_with_provenance(source, source_file, SourceProfile::En)?;
+    let program = parsed.program;
+    let provenance = parsed.provenance;
+    let profiles = [SourceProfile::En];
+    grammar_conformance::validate_closed_domains(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
+    wellformed::validate_program(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
     context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
@@ -169,9 +202,14 @@ pub fn compile_svp_profile(
     source_file: &str,
     profile: SourceProfile,
 ) -> Result<IrProgram, CompileError> {
-    let program = frontend::compile_svp_with_profile(source, source_file, profile)?;
-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    let parsed = frontend::compile_with_provenance(source, source_file, profile)?;
+    let program = parsed.program;
+    let provenance = parsed.provenance;
+    let profiles = [profile];
+    grammar_conformance::validate_closed_domains(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
+    wellformed::validate_program(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
     context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
@@ -234,14 +272,18 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
 
     let mut objects = Vec::new();
     let mut operations = Vec::new();
-    for unit in units {
-        let parsed = frontend::compile_svp_with_profile(
+    let mut provenance = diagnostic_validation::Provenance::default();
+    let profiles: Vec<_> = units.iter().map(|u| u.profile).collect();
+    for (unit_index, unit) in units.iter().enumerate() {
+        let parsed = frontend::compile_with_provenance(
             unit.source,
             unit.source_file,
             unit.profile,
-        )?;
-        objects.extend(parsed.objects().iter().cloned());
-        operations.extend(parsed.operations().iter().cloned());
+        ).map_err(|error| error.in_assembly(unit_index,
+            &units.iter().map(|u| u.profile).collect::<Vec<_>>()))?;
+        objects.extend(parsed.program.objects().iter().cloned());
+        operations.extend(parsed.program.operations().iter().cloned());
+        provenance.append_unit(parsed.provenance, unit_index);
     }
 
     let identity = assembly_identity(units);
@@ -251,8 +293,10 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
         objects,
         operations,
     );
-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+    grammar_conformance::validate_closed_domains(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
+    wellformed::validate_program(&program)
+        .map_err(|error| error.locate(&program, &provenance, &profiles))?;
     transition_data_wellformed::validate_program(&program)
         .map_err(CompileError::InvalidProgram)?;
     context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;

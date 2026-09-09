@@ -1,3 +1,4 @@
+use crate::diagnostic_validation::{DeclarationId, ProgramCause, ProgramFailure};
 use std::cmp::Ordering;
 use std::collections::{BTreeMap, BTreeSet, VecDeque};
 
@@ -22,23 +23,24 @@ struct Symbols<'a> {
 }
 
 impl<'a> Symbols<'a> {
-    fn new(program: &'a IrProgram) -> Result<Self, String> {
+    fn new(program: &'a IrProgram) -> Result<Self, ProgramFailure> {
         let mut by_name = BTreeMap::new();
-        for object in program.objects() {
-            if by_name
-                .insert(object.name(), Symbol::Object(object.kind()))
-                .is_some()
-            {
-                return Err(format!("identificador duplicado: {}", object.name()));
+        let mut declarations = BTreeMap::new();
+        for (index, object) in program.objects().iter().enumerate() {
+            let id = DeclarationId::Object(index);
+            if let Some(first) = declarations.insert(object.name(), id) {
+                return Err(ProgramFailure::new(format!("identificador duplicado: {}", object.name()),
+                    ProgramCause::DuplicateDeclaration { name: object.name().into() }).at(first).at(id));
             }
+            by_name.insert(object.name(), Symbol::Object(object.kind()));
         }
-        for operation in program.operations() {
-            if by_name
-                .insert(operation.name(), Symbol::Operation(operation.kind()))
-                .is_some()
-            {
-                return Err(format!("identificador duplicado: {}", operation.name()));
+        for (index, operation) in program.operations().iter().enumerate() {
+            let id = DeclarationId::Operation(index);
+            if let Some(first) = declarations.insert(operation.name(), id) {
+                return Err(ProgramFailure::new(format!("identificador duplicado: {}", operation.name()),
+                    ProgramCause::DuplicateDeclaration { name: operation.name().into() }).at(first).at(id));
             }
+            by_name.insert(operation.name(), Symbol::Operation(operation.kind()));
         }
         Ok(Self { by_name })
     }
@@ -60,16 +62,17 @@ impl<'a> Symbols<'a> {
     }
 }
 
-pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
+pub(crate) fn validate_program(program: &IrProgram) -> Result<(), ProgramFailure> {
     let symbols = Symbols::new(program)?;
-    for object in program.objects() {
-        validate_object(object.name(), object.kind(), &symbols)?;
+    for (index, object) in program.objects().iter().enumerate() {
+        validate_object(object.name(), object.kind(), &symbols)
+            .map_err(|error| error.primary(DeclarationId::Object(index)))?;
     }
     for operation in program.operations() {
         validate_operation(operation.name(), operation.kind(), &symbols)?;
     }
     // N0-03: conservar la precedencia de los rechazos relacionales N0-02.
-    for object in program.objects() {
+    for (index, object) in program.objects().iter().enumerate() {
         if let IrObjectKind::OutputSemantics { mappings } = object.kind() {
             let mut seen = BTreeSet::new();
             let mut duplicates = BTreeSet::new();
@@ -79,11 +82,12 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
                 }
             }
             if !duplicates.is_empty() {
-                return Err(format!(
+                return Err(ProgramFailure::new(format!(
                     "E115 (InvalidOutputSemantics): OutputSemantics {}: repetidas=[{}]",
                     object.name(),
-                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
-                ));
+                    duplicates.iter().copied().collect::<Vec<_>>().join(", "),
+                ), ProgramCause::RepeatedOutputKeys { object: object.name().into(),
+                    keys: duplicates.into_iter().map(str::to_owned).collect() }).at(DeclarationId::Object(index)));
             }
         }
     }
@@ -101,7 +105,7 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
             let mut seen = BTreeSet::new();
             for event in events {
                 if !seen.insert(event.as_str()) {
-                    return Err(format!("Horizon {}: tipo de suceso repetido: {event}", object.name()));
+                    return Err(format!("Horizon {}: tipo de suceso repetido: {event}", object.name()).into());
                 }
             }
         }
@@ -113,7 +117,7 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
             let mut seen = BTreeSet::new();
             for parameter in parameters {
                 if !seen.insert(parameter.as_str()) {
-                    return Err(format!("Domain {}: parámetro nominal repetido: {parameter}", object.name()));
+                    return Err(format!("Domain {}: parámetro nominal repetido: {parameter}", object.name()).into());
                 }
             }
         }
@@ -121,13 +125,13 @@ pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
     Ok(())
 }
 
-fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Result<(), String> {
+fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Result<(), ProgramFailure> {
     match kind {
         IrObjectKind::Codomain { values } => {
             if values.is_empty() {
-                return Err(format!(
+                return Err(ProgramFailure::new(format!(
                     "E004 (InvalidCodomain): codomain {name} vacío"
-                ));
+                ), ProgramCause::EmptyCodomain { object: name.into() }));
             }
             let mut seen = BTreeSet::new();
             let mut duplicates = BTreeSet::new();
@@ -137,10 +141,11 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
                 }
             }
             if !duplicates.is_empty() {
-                return Err(format!(
+                return Err(ProgramFailure::new(format!(
                     "E004 (InvalidCodomain): codomain {name} repite: {}",
-                    duplicates.into_iter().collect::<Vec<_>>().join(", ")
-                ));
+                    duplicates.iter().copied().collect::<Vec<_>>().join(", ")
+                ), ProgramCause::RepeatedCodomainValues { object: name.into(),
+                    values: duplicates.into_iter().map(str::to_owned).collect() }));
             }
         }
         IrObjectKind::OutputSemantics { .. } => {}
@@ -152,12 +157,13 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             ..
         } => {
             if nat_cmp_text(b, "3") == Ordering::Less {
-                return Err(format!("CellSpec {name}: b debe ser >= 3"));
+                return Err(ProgramFailure::new(format!("CellSpec {name}: b debe ser >= 3"),
+                    ProgramCause::CellBaseTooSmall { object: name.into(), received: b.clone() }));
             }
             let codomain_kind = expect_object(symbols, codomain, "Codomain", |k| matches!(k, IrObjectKind::Codomain { .. }))?;
             let semantics_kind = expect_object(symbols, semantics, "OutputSemantics", |k| matches!(k, IrObjectKind::OutputSemantics { .. }))?;
             if !matches!(role.as_str(), "Base" | "Supervisor" | "Composite") {
-                return Err(format!("CellSpec {name}: rol no reconocido: {role}"));
+                return Err(format!("CellSpec {name}: rol no reconocido: {role}").into());
             }
             let expected: BTreeSet<&str> = match codomain_kind {
                 IrObjectKind::Codomain { values } => values.iter().map(String::as_str).collect(),
@@ -177,12 +183,16 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let missing: Vec<_> = expected.difference(&seen).copied().collect();
             let extra: Vec<_> = seen.difference(&expected).copied().collect();
             if !duplicates.is_empty() || !missing.is_empty() || !extra.is_empty() {
-                return Err(format!(
+                return Err(ProgramFailure::new(format!(
                     "E115 (InvalidOutputSemantics): CellSpec {name}, OutputSemantics {semantics}, Codomain {codomain}: repetidas=[{}]; ausentes=[{}]; ajenas=[{}]",
-                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
+                    duplicates.iter().copied().collect::<Vec<_>>().join(", "),
                     missing.join(", "),
                     extra.join(", "),
-                ));
+                ), ProgramCause::OutputSemanticsCoverage { cell: name.into(), semantics: semantics.clone(), codomain: codomain.clone(),
+                    repeated: duplicates.into_iter().map(str::to_owned).collect(),
+                    missing: missing.into_iter().map(str::to_owned).collect(),
+                    extra: extra.into_iter().map(str::to_owned).collect(),
+                }).related(semantics).related(codomain));
             }
         }
         IrObjectKind::CoupledSpec { cell, bridges } => {
@@ -190,7 +200,7 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let n = match cell { IrObjectKind::CellSpec { n, .. } => n, _ => unreachable!() };
             for position in bridges {
                 if nat_is_zero(position) || nat_cmp(position, n) == Ordering::Greater {
-                    return Err(format!("CoupledSpec {name}: posición puente fuera de rango"));
+                    return Err(format!("CoupledSpec {name}: posición puente fuera de rango").into());
                 }
             }
             // J1.2: BridgeSet is a set of Nat values. Reject repetition;
@@ -198,7 +208,7 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let mut seen = BTreeSet::new();
             for position in bridges {
                 if !seen.insert(position.as_decimal()) {
-                    return Err(format!("CoupledSpec {name}: posición puente repetida: {}", position.as_decimal()));
+                    return Err(format!("CoupledSpec {name}: posición puente repetida: {}", position.as_decimal()).into());
                 }
             }
         }
@@ -211,11 +221,11 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let mut seen = BTreeSet::new();
             for (key, _) in mapping {
                 if !seen.insert(key.as_str()) {
-                    return Err(format!("Connector {name}: clave duplicada"));
+                    return Err(format!("Connector {name}: clave duplicada").into());
                 }
             }
             if seen != expected {
-                return Err(format!("Connector {name}: mapping incompleto o inconsistente"));
+                return Err(format!("Connector {name}: mapping incompleto o inconsistente").into());
             }
         }
         IrObjectKind::AdmissibilityTable { input_codomains, output_codomain, table } => {
@@ -223,20 +233,20 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
         }
         IrObjectKind::CaptureSpec { parameter_id, observation_space, failure_symbol, .. } => {
             if nat_is_zero(parameter_id) || observation_space.is_empty() || failure_symbol != "Bottom" {
-                return Err(format!("CaptureSpec {name}: definición no canónica"));
+                return Err(format!("CaptureSpec {name}: definición no canónica").into());
             }
         }
         IrObjectKind::AdmissibilitySpec { parameter_id, states, rule } => {
             let labels: BTreeSet<&str> = states.iter().map(|state| state.label()).collect();
             if labels != BTreeSet::from(["Ok", "Degraded", "NotAdmitted"]) {
-                return Err(format!("AdmissibilitySpec {name}: estados no canónicos"));
+                return Err(format!("AdmissibilitySpec {name}: estados no canónicos").into());
             }
             AdmissibilitySpec::new(name, parameter_id.clone(), rule.clone())
                 .map_err(|error| format!("AdmissibilitySpec {name}: {error:?}"))?;
         }
         IrObjectKind::Ternarizer { observation_space, partition_zero, partition_one, partition_u, .. } => {
             if observation_space.is_empty() || partition_zero.is_empty() || partition_one.is_empty() || partition_u.is_empty() {
-                return Err(format!("Ternarizer {name}: definición incompleta"));
+                return Err(format!("Ternarizer {name}: definición incompleta").into());
             }
         }
         IrObjectKind::ResSpec { .. } => {}
@@ -244,7 +254,7 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let cell = expect_object(symbols, spec, "CellSpec", |k| matches!(k, IrObjectKind::CellSpec { .. }))?;
             let n = match cell { IrObjectKind::CellSpec { n, .. } => n, _ => unreachable!() };
             if !nat_eq_usize(n, vector.len()) {
-                return Err(format!("CellState {name}: longitud de vector incompatible"));
+                return Err(format!("CellState {name}: longitud de vector incompatible").into());
             }
         }
         IrObjectKind::CoupledState { spec, base_vector, updated_vector } => {
@@ -256,7 +266,7 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
         IrObjectKind::SemanticRelation { .. } | IrObjectKind::Pattern { .. } => {}
         IrObjectKind::Horizon { architecture, events } => {
             if architecture.is_empty() || events.is_empty() {
-                return Err(format!("Horizon {name}: definición incompleta"));
+                return Err(format!("Horizon {name}: definición incompleta").into());
             }
         }
         IrObjectKind::Frame {
@@ -285,24 +295,24 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
                 _ => unreachable!(),
             };
             if events.iter().any(|(event, _)| !declared.contains(event.as_str())) {
-                return Err(format!("TransitionData {name}: suceso fuera del Horizon"));
+                return Err(format!("TransitionData {name}: suceso fuera del Horizon").into());
             }
             if induced_parameters.is_empty() {
-                return Err(format!("TransitionData {name}: induced_parameters vacío"));
+                return Err(format!("TransitionData {name}: induced_parameters vacío").into());
             }
         }
         IrObjectKind::Trajectory { entries } => {
             if entries.is_empty() {
-                return Err(format!("Trajectory {name}: entries vacío"));
+                return Err(format!("Trajectory {name}: entries vacío").into());
             }
             let last = entries.len() - 1;
             for (index, (frame, transition)) in entries.iter().enumerate() {
                 expect_object(symbols, frame, "Frame", |k| matches!(k, IrObjectKind::Frame { .. }))?;
                 if index < last && transition.is_none() {
-                    return Err(format!("Trajectory {name}: entrada no final sin transición"));
+                    return Err(format!("Trajectory {name}: entrada no final sin transición").into());
                 }
                 if index == last && transition.is_some() {
-                    return Err(format!("Trajectory {name}: última entrada con transición"));
+                    return Err(format!("Trajectory {name}: última entrada con transición").into());
                 }
                 if let Some(transition) = transition {
                     expect_object(symbols, transition, "TransitionData", |k| matches!(k, IrObjectKind::TransitionData { .. }))?;
@@ -318,22 +328,22 @@ fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Re
             let horizon = expect_object(symbols, horizon_name, "Horizon", |k| matches!(k, IrObjectKind::Horizon { .. }))?;
             let domain_architecture = match horizon { IrObjectKind::Horizon { architecture, .. } => architecture, _ => unreachable!() };
             if architecture != domain_architecture {
-                return Err(format!("Agent {name}: architecture incompatible con Domain"));
+                return Err(format!("Agent {name}: architecture incompatible con Domain").into());
             }
         }
         IrObjectKind::QuerySpec { query_type, scope, .. } => {
             if query_type == "PendingU" {
-                return Err(format!("QuerySpec {name}: PendingU no habilitado"));
+                return Err(format!("QuerySpec {name}: PendingU no habilitado").into());
             }
             let expected_scope = match query_type.as_str() {
                 "PointEvaluation" => "Cell",
                 "TrajectoryState" => "Trajectory",
                 "FrameComparison" => "Pair",
                 "CoverageState" | "GlobalCriticality" => "Architecture",
-                _ => return Err(format!("QuerySpec {name}: query_type no reconocido")),
+                _ => return Err(format!("QuerySpec {name}: query_type no reconocido").into()),
             };
             if scope != expected_scope {
-                return Err(format!("QuerySpec {name}: scope incompatible"));
+                return Err(format!("QuerySpec {name}: scope incompatible").into());
             }
         }
     }

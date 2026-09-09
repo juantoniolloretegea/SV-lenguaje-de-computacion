@@ -1056,3 +1056,66 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Evidencia y límite:** revisión documental sobre el corte indicado; no se ejecutan pruebas funcionales nuevas ni se afirma observación de una localización ya desplegada. La identificación del entorno público se coteja con README y docs/index.html; la lectura directa de la URL no pudo completarse mediante la herramienta web en esta revisión. No se deriva de ello indisponibilidad del sitio. Las 13 caracterizaciones/26 ejecuciones de RETP-109 conservan su corte y no cierran estas obligaciones.
 
 **Estado:** PRECISION_CONTRACTUAL_EN_CANDIDATA; REALIZACION_Y_ENTREGA_VISIBLE_PENDIENTES. Se añaden contrato y registros por sucesión; DFL-001/011 permanecen vigentes. No se cambian código, README, actas históricas, dominios ni despliegue. PR #88 sin fusionar; fila 9 abierta.
+
+
+<a id="retp-111"></a>
+## RETP-2026-111 — Integración acotada de PR #88 y continuidad diagnóstica
+
+**Fecha:** 09/09/2026. **Decisión del Director:** «Si lo que viene ahora no depende de PR#88 queda aprobada y seguimos». Se comprueba independencia funcional del siguiente incremento respecto de mecanismos productivos introducidos por #88. No se confunde esa condición con ausencia de referencias documentales: el contrato previo de RETP-109/110 sí está contenido en la PR.
+
+**Corte integrado:** [PR #88](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/88), cabeza aprobada 6ac0bdc33ecbe568e11247232e45280c91ed3d4d; integración 73c738348a9493a459744c62b8ade382ff595af5, árbol 4827e8757ed2776e3f4f35f206ea3cb7bdb6e01e. Padres 66967a80a40f4e2781ef983bd725690db54c25c5 y 6ac0bdc33ecbe568e11247232e45280c91ed3d4d. GitHub devuelve firma verificada y el árbol coincide exactamente con la cabeza comprobada. La firma no acredita por sí sola facultades profesionales.
+
+**Comprobación de la condición:** árboles de sv_core/src, sv_native/src, sv_wasm/src y docs/candidata-integracion, y los cuatro manifiestos Cargo, idénticos al main anterior 66967a80…; Cargo.lock no está versionado en ninguno de ambos cortes, ausencia que se consigna. La futura localización no necesita una realización productiva añadida por #88. Se conservan en [integracion.json](evidencias/RETP-111/integracion.json) las identidades cotejadas y los seis flujos conformes de la cabeza aprobada: 34387847160, 34387847154, 34387847339, 34387847156, 34387847178 y 34387847164. No se presentan como nuevas ejecuciones en el commit de integración.
+
+**Alcance de la aprobación:** integración del material de retorno/consumo documental CYB, barrera pública y contratos diagnósticos previos, con los límites de RETP-106–110. La decisión actual del Director se aplica a ese alcance conforme a la alternativa expresa de §8 del contrato diagnóstico; no se declara satisfecha mediante prosa la realización pendiente. Las menciones históricas «sin integrar» conservan su fecha y son sucedidas por este asiento.
+
+**Continuidad:** PR #88 integrada; fila 9 y núcleo abiertos. Localización, DG01–DG14 y entrega observable en producción pendientes. El trabajo diagnóstico continúa en incremento separado y precede al enlace profesional R1. No se despliega, no se constituye autoridad ni arquitectura de dominio, no se ejecuta Q0/SP y no se modifica Inmunología ni Ciberseguridad. La continuación autorizada empieza por el inventario de emisores de RETP-112.
+
+**Estado:** PR88_INTEGRADA_EN_ALCANCE_MATERIAL_APROBADO; LOCALIZACION_Y_ENTREGA_PENDIENTES.
+
+<a id="retp-112"></a>
+## RETP-2026-112 — Inventario de emisores previo a la realización ES/EN
+
+**Fecha y mandato:** 09/09/2026, continuación autorizada tras RETP-111. Base 73c738348a9493a459744c62b8ade382ff595af5, árbol 4827e8757ed2776e3f4f35f206ea3cb7bdb6e01e; rama diagnosticos-es-en-20260909. Lectura rectora: Pilares, acta de perfiles, transición secuencial con adenda/relevos hasta §30, acta del español, RETP-105–110 y contrato diagnóstico.
+
+**Producto:** [inventario revisado y migración](INVENTARIO_DE_EMISORES_DIAGNOSTICOS_Y_MIGRACION_ES_EN_2026_09_09.md), manifiesto de 15 fuentes fijadas, 224 ubicaciones con expresión íntegra, intervalos en bytes y huellas, y localizador documental reproducible. Recuento: 176 emisiones, 19 adaptaciones, 20 salidas y nueve aserciones internas. Se separan códigos literales, códigos declarados por tipos, constantes y ausencia de correspondencia; LOC no es un código del catálogo. El recuento no equivale a causas ni a casos alcanzables.
+
+**Hallazgo y sede:** las causas tipadas de admisibilidad, marco y resolución pierden estructura al adaptarse mediante Debug; otras guardas ya producen cadenas. El frontal y la reunión de unidades no conservan intervalos de declaración aptos para la atribución exigida. CLI/ABI y presentación distinguen o agrupan causas de formas diferentes. La corrección requiere conservar causa y procedencia desde el emisor; traducir solamente la web no basta. No se demuestra necesidad de cambiar gramática o IR canónica.
+
+**Verificación material del inventario:** Node v24.19.0; reproducción idéntica, 224 intervalos y huellas recotejados, copia íntegra reproducida y sustitución de una fuente rechazada con FUENTE_DISTINTA y salida vacía. [Verificación](evidencias/RETP-112/verificacion.json); puntos.json SHA-256 32f06ad4eca8e8d97e660b4187fbd3782dc7d13526af3dff86424a9d4a2bb1db. El auxiliar es léxico, no expande macros ni prueba alcanzabilidad. La clasificación conserva guardas precedidas y aserciones internas, sin inventar casos públicos. No se compila Rust ni se ejecutan 224 diagnósticos.
+
+**Relevo:** fijar causas/esperados y alcanzabilidad por entrada, conservar procedencia, implementar plantillas y versionar la migración de CLI/ABI antes de sustituir las salidas. DG01–DG14, controles IMM/CYB × ES/EN en alcance representable y observación tras despliegue mantienen estado pendiente. DFL-001 permanece abierta; la anotación G/H ya existente se conserva. No se modifican interfaces productivas, tipos, gramática, IR, README, acta del español, dominios ni dependencias productivas. La recepción profesional R1 conserva su precedencia. Fila 9 abierta.
+
+**Estado:** INVENTARIO_ESTATICO_REVISADO_EN_CANDIDATA; ALCANZABILIDAD_POR_SITIO_Y_REALIZACION_PENDIENTES.
+
+
+<a id="retp-113"></a>
+## RETP-2026-113 — Primer incremento de procedencia y explicación frontal ES/EN
+
+**Mandato y corte:** continuación autorizada el 09/09/2026, después del punto de control LAB-030; base 39203889e2896389907e9a2ddffec0f60dc259e5, PR #89 en borrador. Lectura rectora: AGENTS, Pilares, perfiles, transición hasta §30, acta del español y contrato RETP-109–112.
+
+**Compromiso previo:** [sede, compatibilidad y alcance](REALIZACION_FRONTAL_DE_PROCEDENCIA_Y_EXPLICACION_ES_EN_2026_09_09.md); [casos fijados](../../tests/diagnostic_frontend/cases.rs). Se comprometen antes de realizar el cambio funcional. Procedencia desde tokenización/análisis y plantillas ES/EN de las causas frontales; no se reconstruyen desde Debug. Se declara la representación Rust del error y se conserva temporalmente la salida histórica CLI/ABI.
+
+**Estado inicial:** esperados comprometidos, realización y ejecución pendientes. No se cierra DG01–DG14 ni se localiza la bienformación posterior. No se modifican juicio, gramática, IR, constituciones de dominio o R1; no se añaden dependencias ni se publica en producción. Fila 9 permanece abierta.
+
+
+**Realización candidata RETP-113:** causas frontales emitidas en las guardas, parámetros separados de la cadena histórica, intervalos originales durante tokenización y referencias a índices de unidad durante ensamblaje. Plantillas ES/EN cerradas sin servicios externos. Los casos previos están en el commit 5d6d15b0f9f189d31eede4c28e32391f91dd795a; las [huellas del material a verificar](evidencias/RETP-113/fuentes.json) identifican cinco fuentes. La compilación local no ha podido ejecutarse con las instalaciones temporales: Rust 1.98.0 informa un fallo de metadatos de su biblioteca estándar y la instalación alternativa no carga su biblioteca LLVM. Esto es una limitación de verificación local, no evidencia de un fallo del SV. Se exige la ejecución de CI antes de dar el incremento por comprobado. Salidas CLI/ABI y playground todavía históricas; emisores posteriores, DG01–DG14 y entrega productiva pendientes.
+
+
+**Verificación recibida RETP-113:** realización 5627416505b119192423722e94a71a3137f1a17a; checkout de CI e5854e72ed0159c140dbd289a5645c143ebd0867. Ambos tienen árbol 488e588a16db189d3c681bd9b1b44226cd4d1518, igualdad cotejada. Los seis flujos terminaron conformes. Rust 1.98.0 de referencia y 1.98.1 adicional: 376 pruebas aprobadas, incluidas las siete pruebas nuevas de la etapa frontal. Conformidad vigente: 14/14 válidos, 106/106 inválidos; mutaciones dirigidas anteriores: 43/43 detectadas. Se conservan [evidencia y límites](evidencias/RETP-113/verificacion.json), logs de los trabajos y huellas. La paridad anterior nativo/WASI/navegador está conservada; no se presenta como prueba del nuevo transporte estructurado, todavía pendiente. La ejecución nueva es de CI y no sustituye con una afirmación de éxito los intentos locales fallidos.
+
+El primer incremento frontal queda realizado y verificado en ese alcance. DFL-001/011, cobertura completa por emisor, contextos de bienformación y relaciones globales, migración de oráculos/salidas, DG01–DG14 y entrega visible permanecen abiertos. PR #89 sigue en borrador. Este asiento es documental y no cambia las fuentes verificadas.
+
+
+<a id="retp-114"></a>
+## RETP-2026-114 — Diagnósticos de declaración y procedencia ES/EN
+
+**Fecha:** 09/09/2026. **Base:** ba4c63c6140015b14eb7afd9b1e32ce8307cc705, PR #89 en borrador. Continuación autorizada de localización tras el punto de control del laboratorio. Lectura completa de Pilares, perfiles, transición, contrato diagnóstico y norma del español.
+
+**Contrato previo:** [realización de diagnósticos de declaración](REALIZACION_DE_DIAGNOSTICOS_DE_DECLARACION_ES_EN_2026_09_09.md). Ocho pruebas fijadas antes de realizar y ejecutar: E004, E115, base celular, dominios cerrados, colisión y atribución por declaración/unidad. Se conservan causas pendientes explícitas, precedencia y salida histórica; se añade estructura diagnóstica con mapa paralelo a la IR. Realización pendiente; no se acredita localización productiva, cierre DG01–DG14 ni relevo R1.
+
+**Resultado RETP-114:** incremento de declaración verificado en `b7636296f2c75715691464df83a030d006a2f054`, árbol `99e31a0aa19a27ce93e0da47465e33b433d533bd`; la fusión CI `049563bc815a7a133e4fb83ccc2382da26851ee2` coincide en árbol. Casos previos `f15d411d40a943e3976822ad7e87061cd061a9ac`. Diez emisores conservan siete causas tipadas, E004/E115 y procedencia por declaración/unidad; las demás causas siguen explícitamente pendientes. Se preservan ambos orígenes de una colisión, los tres referentes de E115 relacional y ambas explicaciones en ensamblaje mixto, sin atribuir el defecto a unidades sanas.
+
+**Verificación:** 384 pruebas Rust correctas, ocho nuevas; Rust 1.98.0 y 1.98.1, más construcción aislada. Seis flujos conformes 34402104854 / 34402104877 / 34402104881 / 34402105006 / 34402105070 / 34402105209. Conformidad 14/14 y 106/106; 43/43 mutaciones detectadas. La paridad previa nativo/WASI/navegador se conserva; las pruebas nuevas de estructura se acreditan sólo por las entradas Rust nativas. [Custodia y huellas](evidencias/RETP-114/custodia.json). El primer corte 0f9eafad falló en dos lectores N0-03 de la envoltura anterior; se corrigió su acceso conservando fuentes y aserciones. No se confunde con un cambio del juicio E115.
+
+**Límite:** intervalos completos de declaración, sin detalle de campos todavía; resto de emisores, CLI/ABI/playground, DG01–DG14 completos y entrega visible pendientes. Variante adicional de error, sin cambios de gramática, IR, dependencias ni LIG/R1. No se acredita compilación local ni se trasladan al nuevo corte las mediciones del laboratorio. DFL-001/011 y fila 9 abiertos; #89 en borrador.
