@@ -34,6 +34,7 @@ pub mod authority;
 pub mod control;
 pub mod decision_trace;
 mod equivalence;
+mod diagnostic_frontend;
 mod execution;
 mod frontend;
 mod grammar_conformance;
@@ -78,6 +79,7 @@ pub use decision_trace::{
     TracedPermitDecision, TracedPermitDisposition,
 };
 pub use equivalence::equivalence_json;
+pub use diagnostic_frontend::{DiagnosticContext, FrontendCause, FrontendDiagnostic, FrontendExpectation};
 pub use execution::{
     EffectExecutor, ExecutionContinuity, ExecutionError, ExecutionRequest, ExerciseAttemptState,
     ExerciseConfirmation, ExerciseTraceEntry,
@@ -234,12 +236,13 @@ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Compi
 
     let mut objects = Vec::new();
     let mut operations = Vec::new();
-    for unit in units {
+    for (unit_index, unit) in units.iter().enumerate() {
         let parsed = frontend::compile_svp_with_profile(
             unit.source,
             unit.source_file,
             unit.profile,
-        )?;
+        ).map_err(|error| error.in_assembly(unit_index,
+            &units.iter().map(|u| u.profile).collect::<Vec<_>>()))?;
         objects.extend(parsed.objects().iter().cloned());
         operations.extend(parsed.operations().iter().cloned());
     }
