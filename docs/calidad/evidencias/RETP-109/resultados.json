@@ -1,0 +1,308 @@
+{
+  "corte": "26ebc9f139397b086ce630df358d6b0fb11d997b",
+  "artefacto": 10116699662,
+  "entorno": {
+    "node": "v24.19.0",
+    "plataforma": "linux",
+    "arquitectura": "x64",
+    "sistema": "6.18.35"
+  },
+  "binarios": {
+    "release/sv-native": "cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a",
+    "release/examples/assembly_probe": "5743942312962a351a152f106f49b89651e04c9ca6e14f59d49bc178638233e2",
+    "wasm32-unknown-unknown/release/sv_wasm.wasm": "8ab9af22232c4dfe50a7bfd97cfd587ff0f881ef36ddbabf462f7140bbb2d728"
+  },
+  "casos_sha256": "26a9184d7f4b43ddc2fe148ba6db46f48f8cd68f4c45c34e324bef99593b6c3b",
+  "casos": 13,
+  "ejecuciones": 26,
+  "caracterizacion_conforme": true,
+  "reparacion_diagnostica_verificada": false,
+  "navegador_real_ejecutado": false,
+  "compilacion_rust_local": false,
+  "resultados": [
+    {
+      "id": "control_es",
+      "unidades": [
+        {
+          "profile": "es",
+          "source": "codominio K = { A };",
+          "file": "control-es.svp",
+          "sha256": "e2f66878d2fcd5865efe123006b7b2ed8df37f4557036b7d4d2087af37bf14f1"
+        }
+      ],
+      "nativo": {
+        "estado": 0,
+        "salida": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"control-es.svp\",\"source_sha256\":\"e2f66878d2fcd5865efe123006b7b2ed8df37f4557036b7d4d2087af37bf14f1\"}\n",
+        "error": ""
+      },
+      "wasm": {
+        "error": false,
+        "texto": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"control-es.svp\",\"source_sha256\":\"e2f66878d2fcd5865efe123006b7b2ed8df37f4557036b7d4d2087af37bf14f1\"}"
+      }
+    },
+    {
+      "id": "control_en",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A };",
+          "file": "control-en.svp",
+          "sha256": "ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7"
+        }
+      ],
+      "nativo": {
+        "estado": 0,
+        "salida": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"control-en.svp\",\"source_sha256\":\"ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7\"}\n",
+        "error": ""
+      },
+      "wasm": {
+        "error": false,
+        "texto": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"control-en.svp\",\"source_sha256\":\"ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7\"}"
+      }
+    },
+    {
+      "id": "vacio_es",
+      "unidades": [
+        {
+          "profile": "es",
+          "source": "codominio K = {};",
+          "file": "vacio-es.svp",
+          "sha256": "6de8322f3d0f0211cbafc5a0a91bf1f37288f23856b742a4372389513c59790f"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")"
+      }
+    },
+    {
+      "id": "vacio_en",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = {};",
+          "file": "vacio-en.svp",
+          "sha256": "ad71c2dcbaced06ab8bbc6a8317f3a55c395ec5fa408fb2a598ed417ab78d6a8"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")"
+      }
+    },
+    {
+      "id": "fin_es",
+      "unidades": [
+        {
+          "profile": "es",
+          "source": "codominio K = { A }",
+          "file": "fin-es.svp",
+          "sha256": "3ec7c07fea88d6fe8f32999dd3b4a105835cbd1e5bcd893409073052a7e22d62"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(UnexpectedEnd)\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(UnexpectedEnd)"
+      }
+    },
+    {
+      "id": "fin_en",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A }",
+          "file": "fin-en.svp",
+          "sha256": "4d4d014018e82ee87657fedda1e6b60178fddd7ea3a76ff9a04e5f54ed5a1dc3"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(UnexpectedEnd)\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(UnexpectedEnd)"
+      }
+    },
+    {
+      "id": "ensamblaje_control",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A };",
+          "file": "base-en.svp",
+          "sha256": "ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7"
+        },
+        {
+          "profile": "es",
+          "source": "codominio L = { B };",
+          "file": "base-es.svp",
+          "sha256": "6710b0a8c003edd3dc64c6832cee38b748f9926ddb9c140074f256f4838f8d84"
+        }
+      ],
+      "nativo": {
+        "estado": 0,
+        "salida": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"},{\"fields\":{\"values\":[\"B\"]},\"level\":\"N0\",\"name\":\"L\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"@assembly/2b/2-units\",\"source_sha256\":\"343d7d0e0f4353d54dbb1a4165d0eb97c35f170825d59b1e9544597e7830ce15\"}\n",
+        "error": ""
+      },
+      "wasm": {
+        "error": false,
+        "texto": "{\"grammar_version\":\"0.2\",\"ir_version\":\"0.3\",\"objects\":[{\"fields\":{\"values\":[\"A\"]},\"level\":\"N0\",\"name\":\"K\",\"type\":\"Codomain\"},{\"fields\":{\"values\":[\"B\"]},\"level\":\"N0\",\"name\":\"L\",\"type\":\"Codomain\"}],\"operations\":[],\"serializer_version\":\"0.1.0\",\"source_file\":\"@assembly/2b/2-units\",\"source_sha256\":\"343d7d0e0f4353d54dbb1a4165d0eb97c35f170825d59b1e9544597e7830ce15\"}"
+      }
+    },
+    {
+      "id": "ensamblaje_duplicado",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A };",
+          "file": "origen-en.svp",
+          "sha256": "ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7"
+        },
+        {
+          "profile": "es",
+          "source": "codominio K = { B };",
+          "file": "origen-es.svp",
+          "sha256": "a4c3826f3620a54853be3917df0d549c545de42352042a6763c31833ba6ed7eb"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: InvalidProgram(\"identificador duplicado: K\")\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "InvalidProgram(\"identificador duplicado: K\")"
+      }
+    },
+    {
+      "id": "ensamblaje_sintaxis_a",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A }",
+          "file": "roto-en.svp",
+          "sha256": "4d4d014018e82ee87657fedda1e6b60178fddd7ea3a76ff9a04e5f54ed5a1dc3"
+        },
+        {
+          "profile": "es",
+          "source": "codominio L = { B };",
+          "file": "sano-es.svp",
+          "sha256": "6710b0a8c003edd3dc64c6832cee38b748f9926ddb9c140074f256f4838f8d84"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(UnexpectedEnd)\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(UnexpectedEnd)"
+      }
+    },
+    {
+      "id": "ensamblaje_sintaxis_b",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codomain K = { A };",
+          "file": "sano-en.svp",
+          "sha256": "ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7"
+        },
+        {
+          "profile": "es",
+          "source": "codominio L = { B }",
+          "file": "roto-es.svp",
+          "sha256": "128c963c4cbbcf2fa9bc54b04b6c6575b124bbac0bdb21f96be33ffb16559f35"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(UnexpectedEnd)\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(UnexpectedEnd)"
+      }
+    },
+    {
+      "id": "palabra_en_bajo_es",
+      "unidades": [
+        {
+          "profile": "es",
+          "source": "codomain K = { A };",
+          "file": "palabra_en_bajo_es.svp",
+          "sha256": "ae52a8ac86cb8032b13288b72febc4e7a5e4ce329263402afd2eeac3ddf221e7"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))"
+      }
+    },
+    {
+      "id": "palabra_es_bajo_en",
+      "unidades": [
+        {
+          "profile": "en",
+          "source": "codominio K = { A };",
+          "file": "palabra_es_bajo_en.svp",
+          "sha256": "e2f66878d2fcd5865efe123006b7b2ed8df37f4557036b7d4d2087af37bf14f1"
+        }
+      ],
+      "nativo": {
+        "estado": 1,
+        "salida": "",
+        "error": "SVP no admitido: Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))"
+      }
+    },
+    {
+      "id": "utf8_invalido",
+      "unidades": [
+        {
+          "profile": "es",
+          "hex": "ff",
+          "file": "utf8_invalido.svp",
+          "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89"
+        }
+      ],
+      "nativo": {
+        "estado": 2,
+        "salida": "",
+        "error": "no se pudo leer /workspace/scratch/afd136f0a98e/auditoria-idiomas/retp109/utf8_invalido.svp: stream did not contain valid UTF-8\n"
+      },
+      "wasm": {
+        "error": true,
+        "texto": "entrada SVP no UTF-8"
+      }
+    }
+  ]
+}

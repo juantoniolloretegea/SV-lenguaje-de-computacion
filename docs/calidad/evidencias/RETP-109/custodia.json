@@ -1,0 +1,55 @@
+{
+  "registro": "RETP-2026-109",
+  "naturaleza": "Caracterización de una carencia previa; no acredita realización del nuevo contrato diagnóstico.",
+  "corte_fuente": "26ebc9f139397b086ce630df358d6b0fb11d997b",
+  "arbol_fuente": "b40b886aa35c4410dfcd8733f39df5cadeea3bdd",
+  "base": "66967a80a40f4e2781ef983bd725690db54c25c5",
+  "flujo": 34383121897,
+  "artefacto": 10116699662,
+  "zip_bytes": 3419689,
+  "zip_sha256_recalculado": "91a535e098f59b91f03f220438b712952fd1d120a5ad02200e7f4370b256e408",
+  "metadatos_sha256_coincidentes": true,
+  "fecha_custodia_utc": "2026-09-09T18:00:13.036Z",
+  "ejecucion": {
+    "entorno": {
+      "node": "v24.19.0",
+      "plataforma": "linux",
+      "arquitectura": "x64",
+      "sistema": "6.18.35"
+    },
+    "casos": 13,
+    "ejecuciones": 26,
+    "controles_conformes": 3,
+    "rechazos_compilacion": 9,
+    "fallo_utf8": 1,
+    "orden_desde_raiz": "node docs/calidad/evidencias/RETP-109/sondar.mjs ../auditoria-idiomas/extraida/rust/target ../auditoria-idiomas/retp109 > ../auditoria-idiomas/retp109-resultados.json",
+    "entradas": "casos.json; fuentes sintéticas incluidas, bytes inválidos mediante hex.",
+    "salida": "resultados.json; stdout/stderr íntegros, con la ruta temporal real del fallo de lectura.",
+    "via_nativa": "sv-native para una unidad; ejemplo assembly_probe para dos unidades mediante biblioteca pública.",
+    "via_webassembly": "sv_wasm.wasm wasm32-unknown-unknown en Node, sin importaciones.",
+    "compilacion_rust_local": false,
+    "navegador_real": false,
+    "wasi_local": false,
+    "reparacion_diagnostica_verificada": false,
+    "seguridad_material_acreditada": false,
+    "referencias_r1_vinculadas": false
+  },
+  "binarios_sha256": {
+    "release/sv-native": "cb0db4112cea29ed01972f88a549b0add8bb43a261034f0e8f37cb04974b8e7a",
+    "release/examples/assembly_probe": "5743942312962a351a152f106f49b89651e04c9ca6e14f59d49bc178638233e2",
+    "wasm32-unknown-unknown/release/sv_wasm.wasm": "8ab9af22232c4dfe50a7bfd97cfd587ff0f881ef36ddbabf462f7140bbb2d728"
+  },
+  "archivos_sha256": {
+    "artefacto.json": "e0107348d40b29341d85a621e067d257ce8e1ce64c5f1e42d071127f7f780d9e",
+    "casos.json": "26a9184d7f4b43ddc2fe148ba6db46f48f8cd68f4c45c34e324bef99593b6c3b",
+    "sondar.mjs": "db4f38ef9fbd0dc33d5e9ef8679ede82211ee6dac1752b5c443ba9adc90d45ad",
+    "resultados.json": "a1de1804090717bb2f5074c61daa8b3e4cc26f596be40afee4ad54a03f49c743"
+  },
+  "limites": [
+    "Los esperados caracterizan salidas ya observadas; no son un oráculo independiente de la futura localización.",
+    "El script exige estas tres huellas binarias; una compilación nueva no se acepta bajo la identidad anterior.",
+    "No se custodian aquí los binarios ni el ZIP; quedan identificados por artefacto y huellas. La disponibilidad del artefacto está sujeta a su retención.",
+    "El texto técnico de lectura puede depender del sistema; se conserva íntegro, pero no se exige igualdad textual de ese mensaje entre sistemas.",
+    "DG01–DG14 son condiciones pendientes del nuevo contrato; estos trece casos no las cierran."
+  ]
+}
