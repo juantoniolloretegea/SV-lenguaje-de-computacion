@@ -1,0 +1,195 @@
+{
+  "version": "fuentes-inventario/1",
+  "corte": "73c738348a9493a459744c62b8ade382ff595af5",
+  "convencion": "Rangos de líneas inclusivos, desde uno; sirven para excluir pruebas. Los intervalos de cada punto se expresan en bytes, desde cero y con final excluido.",
+  "fuentes": [
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "lenguaje": "rust",
+      "familia": "entrada_compilacion",
+      "rangos": [
+        [
+          1,
+          260
+        ]
+      ],
+      "sha256": "efb72c9cca7910090d91e2160b1b8e919a5730ad9a904b6973f1f4c034db2371"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "lenguaje": "rust",
+      "familia": "etapa_frontal",
+      "rangos": [
+        [
+          1,
+          33
+        ],
+        [
+          361,
+          704
+        ],
+        [
+          792,
+          2305
+        ]
+      ],
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272"
+    },
+    {
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "lenguaje": "rust",
+      "familia": "dominios_gramaticales",
+      "rangos": [
+        [
+          1,
+          40
+        ]
+      ],
+      "sha256": "1c6191324d82825c6cdac4dba885541f43ec991ccdb914c581eb98ab4220eaa8"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "lenguaje": "rust",
+      "familia": "bienformacion",
+      "rangos": [
+        [
+          1,
+          814
+        ]
+      ],
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5"
+    },
+    {
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "lenguaje": "rust",
+      "familia": "datos_transicion",
+      "rangos": [
+        [
+          1,
+          166
+        ]
+      ],
+      "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973"
+    },
+    {
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "lenguaje": "rust",
+      "familia": "contexto_relacional",
+      "rangos": [
+        [
+          1,
+          165
+        ]
+      ],
+      "sha256": "bcb182abd71d3e1e1c00b0685a4032328db322440ed30916c9688a8d76f25fe9"
+    },
+    {
+      "ruta": "rust/sv_core/src/nat.rs",
+      "lenguaje": "rust",
+      "familia": "natural",
+      "rangos": [
+        [
+          1,
+          61
+        ]
+      ],
+      "sha256": "3e9d8ec413ea021610c58ebd856be8353411f69191a2a5f60e5cca927e356118"
+    },
+    {
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "lenguaje": "rust",
+      "familia": "admisibilidad",
+      "rangos": [
+        [
+          1,
+          142
+        ]
+      ],
+      "sha256": "5db392086b9989a94c125a11ebca2e4b4fa1b6deb461a1c05f0c42c1f1e39247"
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "lenguaje": "rust",
+      "familia": "cierre_marco",
+      "rangos": [
+        [
+          1,
+          419
+        ]
+      ],
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4"
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "lenguaje": "rust",
+      "familia": "resolucion_u",
+      "rangos": [
+        [
+          1,
+          311
+        ]
+      ],
+      "sha256": "217f81a61caa1efd1a2d8a9a851f7e8a1f18167249a50411b39f3b1ba8817b4b"
+    },
+    {
+      "ruta": "rust/sv_native/src/main.rs",
+      "lenguaje": "rust",
+      "familia": "cli",
+      "rangos": [
+        [
+          1,
+          74
+        ]
+      ],
+      "sha256": "c0d4896a867328036aedb5f0b91ae7d04157bb1bf8c77c177ca1d1b81f0ed70a"
+    },
+    {
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "lenguaje": "rust",
+      "familia": "abi_compilacion",
+      "rangos": [
+        [
+          149,
+          237
+        ]
+      ],
+      "sha256": "b5d4e11c3f6260eaee504a98f7d08033493b3591afecb11b766dfc4807cdb608"
+    },
+    {
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "lenguaje": "javascript",
+      "familia": "interfaz",
+      "rangos": [
+        [
+          1,
+          655
+        ]
+      ],
+      "sha256": "10d735033a45b6e5e6666fd2ab0ec90ed59740916964af01c20382a99d4c56f1"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "lenguaje": "rust",
+      "familia": "procedencia_ir",
+      "rangos": [
+        [
+          1,
+          448
+        ]
+      ],
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2"
+    },
+    {
+      "ruta": "rust/sv_core/src/equivalence.rs",
+      "lenguaje": "rust",
+      "familia": "serializacion_ir",
+      "rangos": [
+        [
+          1,
+          499
+        ]
+      ],
+      "sha256": "fd1bb360827153b153db0c5051f5659e0e8a8c201b27f5b044a40c4c216252f3"
+    }
+  ]
+}

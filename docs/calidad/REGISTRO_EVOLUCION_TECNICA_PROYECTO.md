@@ -1056,3 +1056,34 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Evidencia y límite:** revisión documental sobre el corte indicado; no se ejecutan pruebas funcionales nuevas ni se afirma observación de una localización ya desplegada. La identificación del entorno público se coteja con README y docs/index.html; la lectura directa de la URL no pudo completarse mediante la herramienta web en esta revisión. No se deriva de ello indisponibilidad del sitio. Las 13 caracterizaciones/26 ejecuciones de RETP-109 conservan su corte y no cierran estas obligaciones.
 
 **Estado:** PRECISION_CONTRACTUAL_EN_CANDIDATA; REALIZACION_Y_ENTREGA_VISIBLE_PENDIENTES. Se añaden contrato y registros por sucesión; DFL-001/011 permanecen vigentes. No se cambian código, README, actas históricas, dominios ni despliegue. PR #88 sin fusionar; fila 9 abierta.
+
+
+<a id="retp-111"></a>
+## RETP-2026-111 — Integración acotada de PR #88 y continuidad diagnóstica
+
+**Fecha:** 09/09/2026. **Decisión del Director:** «Si lo que viene ahora no depende de PR#88 queda aprobada y seguimos». Se comprueba independencia funcional del siguiente incremento respecto de mecanismos productivos introducidos por #88. No se confunde esa condición con ausencia de referencias documentales: el contrato previo de RETP-109/110 sí está contenido en la PR.
+
+**Corte integrado:** [PR #88](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/88), cabeza aprobada 6ac0bdc33ecbe568e11247232e45280c91ed3d4d; integración 73c738348a9493a459744c62b8ade382ff595af5, árbol 4827e8757ed2776e3f4f35f206ea3cb7bdb6e01e. Padres 66967a80a40f4e2781ef983bd725690db54c25c5 y 6ac0bdc33ecbe568e11247232e45280c91ed3d4d. GitHub devuelve firma verificada y el árbol coincide exactamente con la cabeza comprobada. La firma no acredita por sí sola facultades profesionales.
+
+**Comprobación de la condición:** árboles de sv_core/src, sv_native/src, sv_wasm/src y docs/candidata-integracion, y los cuatro manifiestos Cargo, idénticos al main anterior 66967a80…; Cargo.lock no está versionado en ninguno de ambos cortes, ausencia que se consigna. La futura localización no necesita una realización productiva añadida por #88. Se conservan en [integracion.json](evidencias/RETP-111/integracion.json) las identidades cotejadas y los seis flujos conformes de la cabeza aprobada: 34387847160, 34387847154, 34387847339, 34387847156, 34387847178 y 34387847164. No se presentan como nuevas ejecuciones en el commit de integración.
+
+**Alcance de la aprobación:** integración del material de retorno/consumo documental CYB, barrera pública y contratos diagnósticos previos, con los límites de RETP-106–110. La decisión actual del Director se aplica a ese alcance conforme a la alternativa expresa de §8 del contrato diagnóstico; no se declara satisfecha mediante prosa la realización pendiente. Las menciones históricas «sin integrar» conservan su fecha y son sucedidas por este asiento.
+
+**Continuidad:** PR #88 integrada; fila 9 y núcleo abiertos. Localización, DG01–DG14 y entrega observable en producción pendientes. El trabajo diagnóstico continúa en incremento separado y precede al enlace profesional R1. No se despliega, no se constituye autoridad ni arquitectura de dominio, no se ejecuta Q0/SP y no se modifica Inmunología ni Ciberseguridad. La continuación autorizada empieza por el inventario de emisores de RETP-112.
+
+**Estado:** PR88_INTEGRADA_EN_ALCANCE_MATERIAL_APROBADO; LOCALIZACION_Y_ENTREGA_PENDIENTES.
+
+<a id="retp-112"></a>
+## RETP-2026-112 — Inventario de emisores previo a la realización ES/EN
+
+**Fecha y mandato:** 09/09/2026, continuación autorizada tras RETP-111. Base 73c738348a9493a459744c62b8ade382ff595af5, árbol 4827e8757ed2776e3f4f35f206ea3cb7bdb6e01e; rama diagnosticos-es-en-20260909. Lectura rectora: Pilares, acta de perfiles, transición secuencial con adenda/relevos hasta §30, acta del español, RETP-105–110 y contrato diagnóstico.
+
+**Producto:** [inventario revisado y migración](INVENTARIO_DE_EMISORES_DIAGNOSTICOS_Y_MIGRACION_ES_EN_2026_09_09.md), manifiesto de 15 fuentes fijadas, 224 ubicaciones con expresión íntegra, intervalos en bytes y huellas, y localizador documental reproducible. Recuento: 176 emisiones, 19 adaptaciones, 20 salidas y nueve aserciones internas. Se separan códigos literales, códigos declarados por tipos, constantes y ausencia de correspondencia; LOC no es un código del catálogo. El recuento no equivale a causas ni a casos alcanzables.
+
+**Hallazgo y sede:** las causas tipadas de admisibilidad, marco y resolución pierden estructura al adaptarse mediante Debug; otras guardas ya producen cadenas. El frontal y la reunión de unidades no conservan intervalos de declaración aptos para la atribución exigida. CLI/ABI y presentación distinguen o agrupan causas de formas diferentes. La corrección requiere conservar causa y procedencia desde el emisor; traducir solamente la web no basta. No se demuestra necesidad de cambiar gramática o IR canónica.
+
+**Verificación material del inventario:** Node v24.19.0; reproducción idéntica, 224 intervalos y huellas recotejados, copia íntegra reproducida y sustitución de una fuente rechazada con FUENTE_DISTINTA y salida vacía. [Verificación](evidencias/RETP-112/verificacion.json); puntos.json SHA-256 32f06ad4eca8e8d97e660b4187fbd3782dc7d13526af3dff86424a9d4a2bb1db. El auxiliar es léxico, no expande macros ni prueba alcanzabilidad. La clasificación conserva guardas precedidas y aserciones internas, sin inventar casos públicos. No se compila Rust ni se ejecutan 224 diagnósticos.
+
+**Relevo:** fijar causas/esperados y alcanzabilidad por entrada, conservar procedencia, implementar plantillas y versionar la migración de CLI/ABI antes de sustituir las salidas. DG01–DG14, controles IMM/CYB × ES/EN en alcance representable y observación tras despliegue mantienen estado pendiente. DFL-001 permanece abierta; la anotación G/H ya existente se conserva. No se modifican interfaces productivas, tipos, gramática, IR, README, acta del español, dominios ni dependencias productivas. La recepción profesional R1 conserva su precedencia. Fila 9 abierta.
+
+**Estado:** INVENTARIO_ESTATICO_REVISADO_EN_CANDIDATA; ALCANZABILIDAD_POR_SITIO_Y_REALIZACION_PENDIENTES.

@@ -343,3 +343,13 @@ No se licencia como disponible ninguna capacidad profesional pendiente. El cotej
 El [contrato de consumo, §8](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md#8-retp-108-frontera-entre-declaración-documental-y-autoridad) precisa DFL-005 general sin cerrarla: las referencias íntegras de LIG y el catálogo CYB adoptado no constituyen facultades institucionales. R1 exige referentes protegidos y una premisa externa opaca para T-0; su recepción profesional desde CYB no está constituida por este corte. La sede del Lenguaje debe definir y probar ese contrato de recepción; la organización competente aporta la raíz, titulares, facultades y alcance aplicables. No se abre un constructor público para suplir la ausencia.
 
 El material `6899f58be5d37f5cb130b71ab65d33b5c06f5229` comprueba dos controles y siete rechazos desde clientes externos, también mediante macros; 369 pruebas Rust aisladas. Estas pruebas no crean autoridad, no activan R1 desde un expediente CYB y no acreditan seguridad material del host. El contraste documental sigue disponible en su alcance y la pregunta de §8.3 no bloquea por extensión toda la fila 9. DFL-009, los productores y restantes deudas mantienen su tratamiento. La anotación G/H de DFL-001 ya incorporada en e18a7949 permanece; no se crea otra deuda ni se modifica el observador. Candidata sin integrar, fila 9 abierta y dominios en pausa.
+
+
+<a id="relevo-retp-111-112"></a>
+## Sucesión RETP-111/112 · Integración acotada e inventario diagnóstico
+
+[RETP-111](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-111) registra #88 integrada en 73c738348a9493a459744c62b8ade382ff595af5 tras comprobar la condición del Director. El estado integrado sucede a las menciones históricas de candidata; no cierra las obligaciones excluidas por RETP-106–110.
+
+**DFL-001:** [RETP-112](INVENTARIO_DE_EMISORES_DIAGNOSTICOS_Y_MIGRACION_ES_EN_2026_09_09.md) conserva 224 ubicaciones en 15 fuentes con causas, parámetros escritos y pérdidas de procedencia revisadas. Su reproducción y rechazo de fuente sustituida están comprobados. Alcanzabilidad por sitio, diagnósticos estructurados, plantillas, migración de oráculos, DG01–DG14 y entrega visible siguen pendientes. No se identifican 224 ubicaciones con 224 causas ni con cobertura acreditada. La anotación de campos no declarados del observador G/H frente al observador CYB permanece como está; no se modifica código ni se reabre su entrega.
+
+DFL-005 general conserva la recepción profesional R1 después del trabajo diagnóstico. DFL-009 y restantes obligaciones tecnológicas no quedan acreditadas por el inventario. DFL-011, acta del español y constituciones IMM/CYB intactas; no se añaden dependencias productivas, no se despliega y no se declaran permisos. Fila 9 y núcleo abiertos; dominios en pausa.

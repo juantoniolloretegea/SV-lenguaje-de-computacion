@@ -195,3 +195,10 @@ La prueba externa usa la biblioteca de Cargo sin `cfg(test)` y clientes con `for
 El Director ha situado la revisión diagnóstica antes de vincular la recepción profesional con las referencias protegidas de R1 y antes de aprobar la candidata. El [contrato de diagnóstico estructurado, procedencia y presentación ES/EN](CONTRATO_DIAGNOSTICO_ESTRUCTURADO_Y_LOCALIZACION_ES_EN_2026_09_09.md) fija ese alcance: identidad y causa invariantes, explicaciones según perfil y ambas en ensamblaje mixto, contexto ligado a los bytes originales y ninguna autoridad derivada de la prosa.
 
 La caracterización de trece casos y 26 ejecuciones sobre los binarios identificados de 26ebc9f139397b086ce630df358d6b0fb11d997b demuestra la carencia actual; no realiza su corrección ni repite las sondas de §8. DG01–DG14 y la migración versionada de los oráculos permanecen pendientes. La pregunta de recepción profesional de §8.3 conserva su sede y contenido. El siguiente incremento concreta los emisores y realiza la estructura, procedencia y presentación antes de retomar ese enlace. Fila 9 y PR #88 siguen abiertas; este asiento no modifica R1 ni autoriza actuaciones.
+
+
+## 10. RETP-111/112 — Alcance integrado y continuación diagnóstica
+
+La decisión actual del Director, condicionada a la independencia funcional del siguiente incremento, permite integrar #88 en 73c738348a9493a459744c62b8ade382ff595af5 con el alcance material de RETP-106–110. [RETP-111](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-111) conserva la condición comprobada, cabeza, árbol y flujos. Sucede las menciones históricas a la candidata sin declarar implementada la localización.
+
+La precedencia diagnóstica de §9 antes de la recepción profesional R1 permanece. [RETP-112](INVENTARIO_DE_EMISORES_DIAGNOSTICOS_Y_MIGRACION_ES_EN_2026_09_09.md) concreta emisores, adaptaciones y procedencia; todavía no cambia la realización. La pregunta constitutiva de §8.3, las facultades y los límites del consumo documental se mantienen. No se ofrece una nueva API ni se habilita actuación por haber integrado la PR.

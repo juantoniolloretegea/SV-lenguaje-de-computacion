@@ -1,0 +1,101 @@
+{
+  "base": "66967a80a40f4e2781ef983bd725690db54c25c5",
+  "cabeza_aprobada": "6ac0bdc33ecbe568e11247232e45280c91ed3d4d",
+  "integracion": "73c738348a9493a459744c62b8ade382ff595af5",
+  "arbol": "4827e8757ed2776e3f4f35f206ea3cb7bdb6e01e",
+  "padres": [
+    "66967a80a40f4e2781ef983bd725690db54c25c5",
+    "6ac0bdc33ecbe568e11247232e45280c91ed3d4d"
+  ],
+  "firma_verificada": true,
+  "motivo_verificacion": "valid",
+  "independencia": [
+    {
+      "entrada": "040000 tree 3a5559d0ef2ee7624f7c0d39bfc0a4141d0427fd\trust/sv_core/src",
+      "identico_a_main": true,
+      "ruta": "rust/sv_core/src"
+    },
+    {
+      "entrada": "040000 tree 313793fa1e37695b6108419ac344edb68e9b8f7b\trust/sv_native/src",
+      "identico_a_main": true,
+      "ruta": "rust/sv_native/src"
+    },
+    {
+      "entrada": "040000 tree 1402db6ac3843b6af2ce7cab67960fb8f33b5dc7\trust/sv_wasm/src",
+      "identico_a_main": true,
+      "ruta": "rust/sv_wasm/src"
+    },
+    {
+      "entrada": "040000 tree 9e2a7b792ba703823194de840989f4f602376873\tdocs/candidata-integracion",
+      "identico_a_main": true,
+      "ruta": "docs/candidata-integracion"
+    },
+    {
+      "entrada": "100644 blob ebee1ea1135f28fa28f2d335f279170932f2e029\trust/Cargo.toml",
+      "identico_a_main": true,
+      "ruta": "rust/Cargo.toml"
+    },
+    {
+      "entrada": null,
+      "identico_a_main": true,
+      "ruta": "rust/Cargo.lock"
+    },
+    {
+      "entrada": "100644 blob d284864c44d0e36d022768131abf88c450b95eb6\trust/sv_core/Cargo.toml",
+      "identico_a_main": true,
+      "ruta": "rust/sv_core/Cargo.toml"
+    },
+    {
+      "entrada": "100644 blob fb6cda1e86e6c11dab735b1f8e28f103c170f52a\trust/sv_native/Cargo.toml",
+      "identico_a_main": true,
+      "ruta": "rust/sv_native/Cargo.toml"
+    },
+    {
+      "entrada": "100644 blob 8d16094b3eb3754eb1b7ffba7943761b0e34f161\trust/sv_wasm/Cargo.toml",
+      "identico_a_main": true,
+      "ruta": "rust/sv_wasm/Cargo.toml"
+    }
+  ],
+  "flujos": [
+    {
+      "id": 34387847164,
+      "nombre": "R0 WASM paridad nativa y navegador",
+      "estado": "completed",
+      "resultado": "success"
+    },
+    {
+      "id": 34387847178,
+      "nombre": "R0 Rust",
+      "estado": "completed",
+      "resultado": "success"
+    },
+    {
+      "id": 34387847339,
+      "nombre": "R0-8 Baseline nativa",
+      "estado": "completed",
+      "resultado": "success"
+    },
+    {
+      "id": 34387847154,
+      "nombre": "Retorno CYB documental",
+      "estado": "completed",
+      "resultado": "success"
+    },
+    {
+      "id": 34387847156,
+      "nombre": "Fila 7 fuentes y ejecución sin intérpretes",
+      "estado": "completed",
+      "resultado": "success"
+    },
+    {
+      "id": 34387847160,
+      "nombre": "Conformidad SVP",
+      "estado": "completed",
+      "resultado": "success"
+    }
+  ],
+  "criterio": "Independencia funcional del siguiente incremento, no ausencia de referencias documentales. La nueva realización no requiere mecanismos productivos introducidos por PR #88.",
+  "localizacion_implementada": false,
+  "despliegue_realizado": false,
+  "estado_fila9": "ABIERTA"
+}

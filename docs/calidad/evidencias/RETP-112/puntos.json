@@ -1,0 +1,4342 @@
+{
+  "version": "inventario-documental/1",
+  "corte": "73c738348a9493a459744c62b8ade382ff595af5",
+  "total_puntos": 224,
+  "por_clase": {
+    "emision": 176,
+    "adaptacion": 19,
+    "salida": 20,
+    "asercion_interna": 9
+  },
+  "por_archivo": [
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "puntos": 13
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "puntos": 43
+    },
+    {
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "puntos": 3
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "puntos": 77
+    },
+    {
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "puntos": 13
+    },
+    {
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "puntos": 20
+    },
+    {
+      "ruta": "rust/sv_core/src/nat.rs",
+      "puntos": 1
+    },
+    {
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "puntos": 3
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "puntos": 11
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "puntos": 5
+    },
+    {
+      "ruta": "rust/sv_native/src/main.rs",
+      "puntos": 6
+    },
+    {
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "puntos": 14
+    },
+    {
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "puntos": 14
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "puntos": 0
+    },
+    {
+      "ruta": "rust/sv_core/src/equivalence.rs",
+      "puntos": 1
+    }
+  ],
+  "cobertura_dinamica_acreditada": false,
+  "localizacion_implementada": false,
+  "advertencia": "LOC identifica una ubicación de esta versión del inventario, no un código diagnóstico ni una causa constituida. Las adaptaciones y salidas pueden corresponder al mismo error. El lector es léxico: no prueba exhaustividad semántica, ni expansión, ni accesibilidad individual.",
+  "puntos": [
+    {
+      "id": "LOC-001",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 159,
+      "linea_final": 159,
+      "bytes": [
+        6185,
+        6223
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-002",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 160,
+      "linea_final": 160,
+      "bytes": [
+        6268,
+        6306
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-003",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 162,
+      "linea_final": 162,
+      "bytes": [
+        6376,
+        6414
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-004",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 163,
+      "linea_final": 163,
+      "bytes": [
+        6467,
+        6505
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-005",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 173,
+      "linea_final": 173,
+      "bytes": [
+        6806,
+        6844
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-006",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 174,
+      "linea_final": 174,
+      "bytes": [
+        6889,
+        6927
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-007",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 176,
+      "linea_final": 176,
+      "bytes": [
+        6997,
+        7035
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-008",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 177,
+      "linea_final": 177,
+      "bytes": [
+        7088,
+        7126
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-009",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 230,
+      "linea_final": 232,
+      "bytes": [
+        9307,
+        9431
+      ],
+      "clase": "emision",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(CompileError::InvalidProgram(\n            \"el ensamblaje multifuente exige al menos dos unidades\".to_owned(),\n        ))",
+      "sha256_expresion": "efec4aafc13fbf41af3253f1f8ffe16ebb577902ee19ccbd1be2fc6a7e96ebba"
+    },
+    {
+      "id": "LOC-010",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 254,
+      "linea_final": 254,
+      "bytes": [
+        10079,
+        10117
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-011",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 255,
+      "linea_final": 255,
+      "bytes": [
+        10162,
+        10200
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-012",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 257,
+      "linea_final": 257,
+      "bytes": [
+        10270,
+        10308
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-013",
+      "ruta": "rust/sv_core/src/lib.rs",
+      "linea": 258,
+      "linea_final": 258,
+      "bytes": [
+        10361,
+        10399
+      ],
+      "clase": "adaptacion",
+      "familia": "entrada_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(CompileError::InvalidProgram)",
+      "sha256_expresion": "9d6a9df75497d384b05a1809a34af2d78f43edaa9545091ff9acbcae43063d2e"
+    },
+    {
+      "id": "LOC-014",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 855,
+      "linea_final": 855,
+      "bytes": [
+        47225,
+        47258
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-015",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 858,
+      "linea_final": 858,
+      "bytes": [
+        47351,
+        47421
+      ],
+      "clase": "adaptacion",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|_| FrontendError::UnexpectedToken(\"cadena no UTF-8\".into()))",
+      "sha256_expresion": "171b9b16f08eefe4c709d46d113602a2658e82ab42bdf6a5e08e704d00c8ef00"
+    },
+    {
+      "id": "LOC-016",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 870,
+      "linea_final": 870,
+      "bytes": [
+        47796,
+        47805
+      ],
+      "clase": "asercion_interna",
+      "familia": "etapa_frontal",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    },
+    {
+      "id": "LOC-017",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 878,
+      "linea_final": 878,
+      "bytes": [
+        47949,
+        47997
+      ],
+      "clase": "asercion_interna",
+      "familia": "etapa_frontal",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".expect(\"i apunta a una frontera UTF-8 válida\")",
+      "sha256_expresion": "bf5bc74d77ec144d1c497990350c0cd4fb9418645c1a5e4222b9c6c658762bd3"
+    },
+    {
+      "id": "LOC-018",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 886,
+      "linea_final": 886,
+      "bytes": [
+        48247,
+        48295
+      ],
+      "clase": "asercion_interna",
+      "familia": "etapa_frontal",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".expect(\"i apunta a una frontera UTF-8 válida\")",
+      "sha256_expresion": "bf5bc74d77ec144d1c497990350c0cd4fb9418645c1a5e4222b9c6c658762bd3"
+    },
+    {
+      "id": "LOC-019",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 902,
+      "linea_final": 905,
+      "bytes": [
+        48773,
+        48904
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n            \"carácter léxico no admitido U+{:04X}\",\n            ch as u32\n        )))",
+      "sha256_expresion": "44d48cde671ac725ddaccb0db07b54322f7dd49d05777460179281fb47f15a4d"
+    },
+    {
+      "id": "LOC-020",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 958,
+      "linea_final": 958,
+      "bytes": [
+        50951,
+        51000
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::Unsupported",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::Unsupported(other.to_owned()))",
+      "sha256_expresion": "79e792e514314c743bb0957f349056de4f9dd546fa084ec15d58dba3c9102b6d"
+    },
+    {
+      "id": "LOC-021",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1180,
+      "linea_final": 1180,
+      "bytes": [
+        57600,
+        57661
+      ],
+      "clase": "adaptacion",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::InvalidAdmissibilityState",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|_| FrontendError::InvalidAdmissibilityState(label))",
+      "sha256_expresion": "381228aabb4f8a638e3977defe4e326a5507112123456827b584dc23cdd465a6"
+    },
+    {
+      "id": "LOC-022",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1191,
+      "linea_final": 1194,
+      "bytes": [
+        57928,
+        58056
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::InvalidAdmissibilityState",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::InvalidAdmissibilityState(format!(\n                \"{} estados\",\n                states.len()\n            )))",
+      "sha256_expresion": "846b67536709104cc103c28bf4d76913b9fb4c37fffdcb8b1f35840b7363f01d"
+    },
+    {
+      "id": "LOC-023",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1340,
+      "linea_final": 1341,
+      "bytes": [
+        62327,
+        62451
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"SemanticRelation {name}: campo opcional repetido: table\")))",
+      "sha256_expresion": "314ecd8166ec8c28a6510ca06280efa2a4228c070497937204cbf5b13307d7e5"
+    },
+    {
+      "id": "LOC-024",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1342,
+      "linea_final": 1343,
+      "bytes": [
+        62512,
+        62642
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"SemanticRelation {name}: campo opcional fuera de orden: table\")))",
+      "sha256_expresion": "0d44153468b3c3dc2bfb0d340f0253b3f202a7ad2c61e71cbfc004a282d04ce5"
+    },
+    {
+      "id": "LOC-025",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1345,
+      "linea_final": 1346,
+      "bytes": [
+        62769,
+        62899
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"SemanticRelation {name}: campo opcional repetido: constraints\")))",
+      "sha256_expresion": "fb68f8f116ecd866d71daa472eae36aebde61198e1790fe8b3124a89c7ec4176"
+    },
+    {
+      "id": "LOC-026",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1348,
+      "linea_final": 1348,
+      "bytes": [
+        63005,
+        63054
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::Unsupported",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::Unsupported(other.to_owned()))",
+      "sha256_expresion": "79e792e514314c743bb0957f349056de4f9dd546fa084ec15d58dba3c9102b6d"
+    },
+    {
+      "id": "LOC-027",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1378,
+      "linea_final": 1379,
+      "bytes": [
+        63903,
+        64018
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"Pattern {name}: campo opcional repetido: arity\")))",
+      "sha256_expresion": "82c8ccf3f0cbb53f2b2e07dc90c3b1896d6b34685ddde62d453ec1e2b8f2c6f1"
+    },
+    {
+      "id": "LOC-028",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1380,
+      "linea_final": 1381,
+      "bytes": [
+        64079,
+        64200
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"Pattern {name}: campo opcional fuera de orden: arity\")))",
+      "sha256_expresion": "00f6251396921bca9b558f81e902f842a345070ef06c0d74ccf95d667f03e767"
+    },
+    {
+      "id": "LOC-029",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1383,
+      "linea_final": 1384,
+      "bytes": [
+        64326,
+        64447
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(\n                    format!(\"Pattern {name}: campo opcional repetido: constraints\")))",
+      "sha256_expresion": "f031629fec948b9e50311139e55fa0a0943130f57c3ff3b5313b3c1d31a26519"
+    },
+    {
+      "id": "LOC-030",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1386,
+      "linea_final": 1386,
+      "bytes": [
+        64553,
+        64602
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::Unsupported",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::Unsupported(other.to_owned()))",
+      "sha256_expresion": "79e792e514314c743bb0957f349056de4f9dd546fa084ec15d58dba3c9102b6d"
+    },
+    {
+      "id": "LOC-031",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1764,
+      "linea_final": 1764,
+      "bytes": [
+        76313,
+        76362
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::Unsupported",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::Unsupported(other.to_owned()))",
+      "sha256_expresion": "79e792e514314c743bb0957f349056de4f9dd546fa084ec15d58dba3c9102b6d"
+    },
+    {
+      "id": "LOC-032",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1813,
+      "linea_final": 1815,
+      "bytes": [
+        78093,
+        78249
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n                        \"palabra protegida donde se esperaba identificador: {first_raw}\"\n                    )))",
+      "sha256_expresion": "98c34dbc9c8c46ce158c489ac8a68fa8fb905781c4ffd3b24f73749db1ff4e56"
+    },
+    {
+      "id": "LOC-033",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 1873,
+      "linea_final": 1873,
+      "bytes": [
+        80260,
+        80309
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::Unsupported",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::Unsupported(other.to_owned()))",
+      "sha256_expresion": "79e792e514314c743bb0957f349056de4f9dd546fa084ec15d58dba3c9102b6d"
+    },
+    {
+      "id": "LOC-034",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2080,
+      "linea_final": 2080,
+      "bytes": [
+        86257,
+        86294
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::InvalidTri",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::InvalidTri(label))",
+      "sha256_expresion": "8058b502b8540e8304c78395e4f372c5e072c1fdcaeae5958a7dbd7eb6a38114"
+    },
+    {
+      "id": "LOC-035",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2087,
+      "linea_final": 2087,
+      "bytes": [
+        86403,
+        86458
+      ],
+      "clase": "asercion_interna",
+      "familia": "etapa_frontal",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".expect(\"el token EOF garantiza una posición válida\")",
+      "sha256_expresion": "2a681635a836d3e18f1d4b957604592f8ce10d83efeb55021dc773fe25ba6aa5"
+    },
+    {
+      "id": "LOC-036",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2093,
+      "linea_final": 2093,
+      "bytes": [
+        86651,
+        86684
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-037",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2094,
+      "linea_final": 2094,
+      "bytes": [
+        86707,
+        86764
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-038",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2104,
+      "linea_final": 2104,
+      "bytes": [
+        87092,
+        87125
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-039",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2105,
+      "linea_final": 2105,
+      "bytes": [
+        87154,
+        87211
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-040",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2115,
+      "linea_final": 2115,
+      "bytes": [
+        87536,
+        87569
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-041",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2116,
+      "linea_final": 2116,
+      "bytes": [
+        87598,
+        87655
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-042",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2124,
+      "linea_final": 2126,
+      "bytes": [
+        87902,
+        88052
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n                        \"palabra protegida donde se esperaba identificador: {raw}\"\n                    )))",
+      "sha256_expresion": "2326714da25ecfc6351c9bd1d1f2cbead6a417eec5f5f442ba5c2a622f8b0614"
+    },
+    {
+      "id": "LOC-043",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2132,
+      "linea_final": 2132,
+      "bytes": [
+        88223,
+        88256
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-044",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2133,
+      "linea_final": 2133,
+      "bytes": [
+        88285,
+        88342
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-045",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2143,
+      "linea_final": 2143,
+      "bytes": [
+        88627,
+        88660
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-046",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2144,
+      "linea_final": 2144,
+      "bytes": [
+        88689,
+        88746
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-047",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2152,
+      "linea_final": 2152,
+      "bytes": [
+        88988,
+        89038
+      ],
+      "clase": "adaptacion",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::InvalidNatural",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|_| FrontendError::InvalidNatural(value))",
+      "sha256_expresion": "d2a63ad7010479b75f3237789a11af20920a7f60b05120d687b21fc834991c3c"
+    },
+    {
+      "id": "LOC-048",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2154,
+      "linea_final": 2154,
+      "bytes": [
+        89092,
+        89125
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-049",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2155,
+      "linea_final": 2155,
+      "bytes": [
+        89154,
+        89211
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\"{other:?}\")))",
+      "sha256_expresion": "72e6de69059e2962b1e831bab8ac1d6d19b0376d1a87de614c13a6283e6f2e74"
+    },
+    {
+      "id": "LOC-050",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2165,
+      "linea_final": 2167,
+      "bytes": [
+        89441,
+        89554
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n                \"esperado {expected}, recibido {got}\"\n            )))",
+      "sha256_expresion": "589fc06c47ac8746f94a8109b80bf430177461041226b3681d498f5217ae6111"
+    },
+    {
+      "id": "LOC-051",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2177,
+      "linea_final": 2177,
+      "bytes": [
+        89857,
+        89890
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-052",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2178,
+      "linea_final": 2180,
+      "bytes": [
+        89919,
+        90036
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n                \"esperado {expected}, recibido {other:?}\"\n            )))",
+      "sha256_expresion": "a0d9e4a317f859a34d962acb96e0bfa21fd17c652b2c0e9c9b9371bffa7de7de"
+    },
+    {
+      "id": "LOC-053",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2190,
+      "linea_final": 2190,
+      "bytes": [
+        90295,
+        90328
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedEnd",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedEnd)",
+      "sha256_expresion": "c697db71d7c6ed2387e1d51d3c9c52bdfb410e7fdac8d77f835d6b59b0e747f7"
+    },
+    {
+      "id": "LOC-054",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2191,
+      "linea_final": 2193,
+      "bytes": [
+        90357,
+        90466
+      ],
+      "clase": "emision",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::UnexpectedToken",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrontendError::UnexpectedToken(format!(\n                \"esperado ->, recibido {other:?}\"\n            )))",
+      "sha256_expresion": "1e9f11fb866e7f88c2ec9615325821661e7e9cf3abbdf4ea27a9dc132cc9a4c4"
+    },
+    {
+      "id": "LOC-055",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2228,
+      "linea_final": 2228,
+      "bytes": [
+        91391,
+        91440
+      ],
+      "clase": "adaptacion",
+      "familia": "etapa_frontal",
+      "variante_escrita": "FrontendError::InvalidNatural",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|_| FrontendError::InvalidNatural(text))",
+      "sha256_expresion": "e6be98db551e22cd552156a04bc0d9ec3ff3a01f159b535a0f6ab691ae1a5755"
+    },
+    {
+      "id": "LOC-056",
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "linea": 2301,
+      "linea_final": 2301,
+      "bytes": [
+        94425,
+        94434
+      ],
+      "clase": "asercion_interna",
+      "familia": "etapa_frontal",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    },
+    {
+      "id": "LOC-057",
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "linea": 14,
+      "linea_final": 17,
+      "bytes": [
+        689,
+        867
+      ],
+      "clase": "emision",
+      "familia": "dominios_gramaticales",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"SemanticRelation {}: kind fuera del dominio cerrado de Gramática 0.2: {kind}\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "6c715b89f395cd3dbbff0f07bd46c9d6027e343c879ad2df49d0aaca8c657b85"
+    },
+    {
+      "id": "LOC-058",
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "linea": 22,
+      "linea_final": 25,
+      "bytes": [
+        1027,
+        1196
+      ],
+      "clase": "emision",
+      "familia": "dominios_gramaticales",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"Pattern {}: kind fuera del dominio cerrado de Gramática 0.2: {kind}\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "da96f959993219b142b9d89b386debf51216c083596f05e6f235045c1966b2fd"
+    },
+    {
+      "id": "LOC-059",
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "linea": 30,
+      "linea_final": 33,
+      "bytes": [
+        1390,
+        1572
+      ],
+      "clase": "emision",
+      "familia": "dominios_gramaticales",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"CompositionGraph {}: regime fuera del dominio cerrado de Gramática 0.2: {regime}\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "277590a840d07d15d3b0cc354e76edb949fb399d5f376b7940e722123b158e23"
+    },
+    {
+      "id": "LOC-060",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 32,
+      "linea_final": 32,
+      "bytes": [
+        982,
+        1040
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"identificador duplicado: {}\", object.name()))",
+      "sha256_expresion": "fe3748fd0b1a4533ad2c3803107cb011dc811e11be23b77ac0bdb7999b0f94e2"
+    },
+    {
+      "id": "LOC-061",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 40,
+      "linea_final": 40,
+      "bytes": [
+        1280,
+        1341
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"identificador duplicado: {}\", operation.name()))",
+      "sha256_expresion": "0d3ea9cc8f44fd9cc27183669adce4a0d215435e8e22ade92d6f5134f85f7199"
+    },
+    {
+      "id": "LOC-062",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 49,
+      "linea_final": 49,
+      "bytes": [
+        1616,
+        1664
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"{name} no es un objeto declarado\"))",
+      "sha256_expresion": "2677ff7c4e400688bcc675b1b147a8fd266e573396a63a6d83a7ac1bc1c29494"
+    },
+    {
+      "id": "LOC-063",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 50,
+      "linea_final": 50,
+      "bytes": [
+        1686,
+        1733
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"referencia no declarada: {name}\"))",
+      "sha256_expresion": "6af3c9fc1922005fbaa965a05a08d5a2997efa12b3d8f0387547fc4126268683"
+    },
+    {
+      "id": "LOC-064",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 57,
+      "linea_final": 57,
+      "bytes": [
+        1971,
+        2026
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"{name} no es un resultado de operación\"))",
+      "sha256_expresion": "04fff35ae9de1c080ff71918a6b1e48f0ee665ed96f54e2bdc71e9c2221a00a9"
+    },
+    {
+      "id": "LOC-065",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 58,
+      "linea_final": 58,
+      "bytes": [
+        2048,
+        2095
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"referencia no declarada: {name}\"))",
+      "sha256_expresion": "6af3c9fc1922005fbaa965a05a08d5a2997efa12b3d8f0387547fc4126268683"
+    },
+    {
+      "id": "LOC-066",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 82,
+      "linea_final": 86,
+      "bytes": [
+        2987,
+        3217
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [
+        "E115"
+      ],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"E115 (InvalidOutputSemantics): OutputSemantics {}: repetidas=[{}]\",\n                    object.name(),\n                    duplicates.into_iter().collect::<Vec<_>>().join(\", \"),\n                ))",
+      "sha256_expresion": "3a97606f93f8bf205e4619b26d8e386582bb6b951f1773f12af4f7c2a3b2b64b"
+    },
+    {
+      "id": "LOC-067",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 104,
+      "linea_final": 104,
+      "bytes": [
+        4031,
+        4106
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Horizon {}: tipo de suceso repetido: {event}\", object.name()))",
+      "sha256_expresion": "32dd553e9cce40d2f46126bce9dba25ded7df9cfbe0a58c721c77b9c6e7a5d17"
+    },
+    {
+      "id": "LOC-068",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 116,
+      "linea_final": 116,
+      "bytes": [
+        4595,
+        4677
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Domain {}: parámetro nominal repetido: {parameter}\", object.name()))",
+      "sha256_expresion": "371b1baeb568081248e681890fe3a9f45dc71a8ac5d0f63eff512a542882cfd0"
+    },
+    {
+      "id": "LOC-069",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 128,
+      "linea_final": 130,
+      "bytes": [
+        4962,
+        5062
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [
+        "E004"
+      ],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"E004 (InvalidCodomain): codomain {name} vacío\"\n                ))",
+      "sha256_expresion": "cc7c776c57ea89c1056e6ec2d48fa9680c3df399bc71a19830f6b83a5ac2d57e"
+    },
+    {
+      "id": "LOC-070",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 140,
+      "linea_final": 143,
+      "bytes": [
+        5406,
+        5585
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [
+        "E004"
+      ],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"E004 (InvalidCodomain): codomain {name} repite: {}\",\n                    duplicates.into_iter().collect::<Vec<_>>().join(\", \")\n                ))",
+      "sha256_expresion": "0d0bf6b2559c2d233d955c071bafe3012da807dcb02ba3283e54794bd5136478"
+    },
+    {
+      "id": "LOC-071",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 155,
+      "linea_final": 155,
+      "bytes": [
+        5882,
+        5930
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CellSpec {name}: b debe ser >= 3\"))",
+      "sha256_expresion": "acaa758740c6dc5e38684806e92306fb28e1513a454f46548be4bbcd13ddbf14"
+    },
+    {
+      "id": "LOC-072",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 160,
+      "linea_final": 160,
+      "bytes": [
+        6318,
+        6376
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CellSpec {name}: rol no reconocido: {role}\"))",
+      "sha256_expresion": "c1643029b1d69ad1d3ecdb5076f8a0dff6bf44c838f1ab1aa663862d7dde9436"
+    },
+    {
+      "id": "LOC-073",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 180,
+      "linea_final": 185,
+      "bytes": [
+        7314,
+        7662
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [
+        "E115"
+      ],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"E115 (InvalidOutputSemantics): CellSpec {name}, OutputSemantics {semantics}, Codomain {codomain}: repetidas=[{}]; ausentes=[{}]; ajenas=[{}]\",\n                    duplicates.into_iter().collect::<Vec<_>>().join(\", \"),\n                    missing.join(\", \"),\n                    extra.join(\", \"),\n                ))",
+      "sha256_expresion": "9d0ee654e15bd25c4726b3698f565c9fcae11fcda04118db9505e83f5b973094"
+    },
+    {
+      "id": "LOC-074",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 193,
+      "linea_final": 193,
+      "bytes": [
+        8107,
+        8174
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CoupledSpec {name}: posición puente fuera de rango\"))",
+      "sha256_expresion": "6eb46269eeb17de417ffeaac18f986c9c26aa0ed67fe1037e8eb3ad225d1b10b"
+    },
+    {
+      "id": "LOC-075",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 201,
+      "linea_final": 201,
+      "bytes": [
+        8517,
+        8605
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CoupledSpec {name}: posición puente repetida: {}\", position.as_decimal()))",
+      "sha256_expresion": "8207b292201beebf3e8c792cf365e20c4186e5534a1272f36a1f564f5e11af43"
+    },
+    {
+      "id": "LOC-076",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 214,
+      "linea_final": 214,
+      "bytes": [
+        9215,
+        9264
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Connector {name}: clave duplicada\"))",
+      "sha256_expresion": "8c26e2ddb857c5b31385206b9c8ac84170c31e8ebb9a3e0550b76bc7d171221c"
+    },
+    {
+      "id": "LOC-077",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 218,
+      "linea_final": 218,
+      "bytes": [
+        9355,
+        9423
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Connector {name}: mapping incompleto o inconsistente\"))",
+      "sha256_expresion": "cdbf0ce36b0d3e9968b78e742b60ce3ff9af8fde1e7d5e59a3cddda2badd90ea"
+    },
+    {
+      "id": "LOC-078",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 226,
+      "linea_final": 226,
+      "bytes": [
+        9871,
+        9931
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CaptureSpec {name}: definición no canónica\"))",
+      "sha256_expresion": "f6aa38b624e7ab3b37ba140ddcfafa8439bb1755ed4b9e14a65e04c688c43071"
+    },
+    {
+      "id": "LOC-079",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 232,
+      "linea_final": 232,
+      "bytes": [
+        10226,
+        10289
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilitySpec {name}: estados no canónicos\"))",
+      "sha256_expresion": "6f33c88747469dcc8e38c4dcef85353f907f8a0f3de6128759234faa704e5a39"
+    },
+    {
+      "id": "LOC-080",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 235,
+      "linea_final": 235,
+      "bytes": [
+        10398,
+        10462
+      ],
+      "clase": "adaptacion",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|error| format!(\"AdmissibilitySpec {name}: {error:?}\"))",
+      "sha256_expresion": "59f7ad73cf32e986b78ef0942d0b7cd144c27cb994d0c33c6a6cd498a0aee51c"
+    },
+    {
+      "id": "LOC-081",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 239,
+      "linea_final": 239,
+      "bytes": [
+        10735,
+        10792
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Ternarizer {name}: definición incompleta\"))",
+      "sha256_expresion": "e9dbd71cec838eb657a55da133762dc7bd7e605702e41a4ff47bf97d5f482b9d"
+    },
+    {
+      "id": "LOC-082",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 247,
+      "linea_final": 247,
+      "bytes": [
+        11195,
+        11260
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CellState {name}: longitud de vector incompatible\"))",
+      "sha256_expresion": "2998ec0bdb2c666ffbff3e8f5acc6fafb7eacdb9bfa7c2eef3565726836bb5c6"
+    },
+    {
+      "id": "LOC-083",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 259,
+      "linea_final": 259,
+      "bytes": [
+        11854,
+        11908
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Horizon {name}: definición incompleta\"))",
+      "sha256_expresion": "57df21369235e7ade6a7d14f6d02430e3c509e0eb13ebdf84e5a7c551ac35c5b"
+    },
+    {
+      "id": "LOC-084",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 288,
+      "linea_final": 288,
+      "bytes": [
+        12931,
+        12994
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"TransitionData {name}: suceso fuera del Horizon\"))",
+      "sha256_expresion": "158e3f38bd3f7fb558aff9845ec21677bb1b0dcf8a59fbe7fb91c2ca47bcba03"
+    },
+    {
+      "id": "LOC-085",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 291,
+      "linea_final": 291,
+      "bytes": [
+        13080,
+        13144
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"TransitionData {name}: induced_parameters vacío\"))",
+      "sha256_expresion": "8b98bf825df96946741e91a45f6fb5334ea74431198d90154184b164be10fa35"
+    },
+    {
+      "id": "LOC-086",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 296,
+      "linea_final": 296,
+      "bytes": [
+        13279,
+        13328
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Trajectory {name}: entries vacío\"))",
+      "sha256_expresion": "4aa675f52c5b2f2c6258341123cef22cfe907dd0ce9f98455fa9fc388ab64ae4"
+    },
+    {
+      "id": "LOC-087",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 302,
+      "linea_final": 302,
+      "bytes": [
+        13650,
+        13717
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Trajectory {name}: entrada no final sin transición\"))",
+      "sha256_expresion": "cfc4d6e511ef1bd684356a7ac3e9b6653d66d996937b3e1395ee4a333ba33d4e"
+    },
+    {
+      "id": "LOC-088",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 305,
+      "linea_final": 305,
+      "bytes": [
+        13823,
+        13889
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Trajectory {name}: última entrada con transición\"))",
+      "sha256_expresion": "ce74119fe81543de0b9e83251cad9937066ee3704cb89a58da4b8cd17dcf9f41"
+    },
+    {
+      "id": "LOC-089",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 321,
+      "linea_final": 321,
+      "bytes": [
+        14977,
+        15043
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Agent {name}: architecture incompatible con Domain\"))",
+      "sha256_expresion": "b1de7fae73e26979b0bab3185d128d55e3564586bb49d460307d25f90b5715a6"
+    },
+    {
+      "id": "LOC-090",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 326,
+      "linea_final": 326,
+      "bytes": [
+        15197,
+        15253
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"QuerySpec {name}: PendingU no habilitado\"))",
+      "sha256_expresion": "426bfd42974f440c4b7bb8b9a25838b6e30fc2bde6aa35c5e7b09602cafb9191"
+    },
+    {
+      "id": "LOC-091",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 333,
+      "linea_final": 333,
+      "bytes": [
+        15572,
+        15630
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"QuerySpec {name}: query_type no reconocido\"))",
+      "sha256_expresion": "f609578a2995cbc5ea6908ff67037d1caa9afe83df2f777b7eff7895d7df5485"
+    },
+    {
+      "id": "LOC-092",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 336,
+      "linea_final": 336,
+      "bytes": [
+        15711,
+        15763
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"QuerySpec {name}: scope incompatible\"))",
+      "sha256_expresion": "cae28d0270234de992bfdc36689b5c51bf61b5b93f13b2f056788cea9f4a8483"
+    },
+    {
+      "id": "LOC-093",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 362,
+      "linea_final": 362,
+      "bytes": [
+        16783,
+        16855
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: cardinalidad no representable\"))",
+      "sha256_expresion": "e995cedf5b07a440ca168b7da267eba5367d81355b6116fd09407e0ddd535722"
+    },
+    {
+      "id": "LOC-094",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 368,
+      "linea_final": 368,
+      "bytes": [
+        17119,
+        17181
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: aridad incompatible\"))",
+      "sha256_expresion": "cf0d5f8fbe31d49d418f2ba66286d338e1d1af9a99764b5917e84e3e54371c44"
+    },
+    {
+      "id": "LOC-095",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 371,
+      "linea_final": 371,
+      "bytes": [
+        17310,
+        17379
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: entrada fuera de codominio\"))",
+      "sha256_expresion": "d20798ee177e9a30eb5e40e6c9c4c2a21ead92635af7618ae5510227f175bdbe"
+    },
+    {
+      "id": "LOC-096",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 374,
+      "linea_final": 374,
+      "bytes": [
+        17461,
+        17529
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: salida fuera de codominio\"))",
+      "sha256_expresion": "bd5db0705519caf9def5bca5c46505526b44f60bae6528cb936cd73525b0155f"
+    },
+    {
+      "id": "LOC-097",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 377,
+      "linea_final": 377,
+      "bytes": [
+        17602,
+        17659
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: fila duplicada\"))",
+      "sha256_expresion": "741c22b2e2faf64ec09cbc10163a3550e91a98af4619a3fccfc37fdc6b548b54"
+    },
+    {
+      "id": "LOC-098",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 381,
+      "linea_final": 381,
+      "bytes": [
+        17730,
+        17789
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"AdmissibilityTable {name}: tabla incompleta\"))",
+      "sha256_expresion": "11f1955dc837e142585a382fd39cee6e89634bde3c9420707d0d388418d51937"
+    },
+    {
+      "id": "LOC-099",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 398,
+      "linea_final": 398,
+      "bytes": [
+        18525,
+        18583
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CoupledState {name}: longitud incompatible\"))",
+      "sha256_expresion": "bd2776a9bcb123e6523f6a4ad5a4a29a50340c60cfdc884f1b2a49ea47a09151"
+    },
+    {
+      "id": "LOC-100",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 403,
+      "linea_final": 403,
+      "bytes": [
+        18870,
+        18940
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"CoupledState {name}: actualización fuera de BridgeSet\"))",
+      "sha256_expresion": "b8ef87376f86b03871a79049027e19f6cc9d89a05bd394c14c709ef672d4e93c"
+    },
+    {
+      "id": "LOC-101",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 428,
+      "linea_final": 428,
+      "bytes": [
+        19904,
+        19968
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: arista fuera del conjunto de nodos\"))",
+      "sha256_expresion": "81540b89ff4fd6435076b7f19227ea690825547b0cd8771a6ccfcb160b282472"
+    },
+    {
+      "id": "LOC-102",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 435,
+      "linea_final": 435,
+      "bytes": [
+        20433,
+        20482
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: nodo no CoupledSpec\"))",
+      "sha256_expresion": "b805a08fd1099046f4fb968ee8605a3a64fba71a789dd9f3ac8d2ed6d26f3576"
+    },
+    {
+      "id": "LOC-103",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 438,
+      "linea_final": 438,
+      "bytes": [
+        20583,
+        20641
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: posición fuera de BridgeSet\"))",
+      "sha256_expresion": "56a38fd9bdbaea65ec0524b504b28ee310c9d216a6bd50f0016901adca26a68e"
+    },
+    {
+      "id": "LOC-104",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 445,
+      "linea_final": 445,
+      "bytes": [
+        20949,
+        21007
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: target_position incompatible\"))",
+      "sha256_expresion": "1bb8c91e0417ff7eb521681a185291a2223b7bdae9847408990802673d853b11"
+    },
+    {
+      "id": "LOC-105",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 450,
+      "linea_final": 450,
+      "bytes": [
+        21344,
+        21402
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: source_codomain incompatible\"))",
+      "sha256_expresion": "1c9b81f644da70ea7a3e6d613550e29f852dd79bfc7a4cc6d5cf28c8ad727a29"
+    },
+    {
+      "id": "LOC-106",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 452,
+      "linea_final": 452,
+      "bytes": [
+        21456,
+        21465
+      ],
+      "clase": "asercion_interna",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    },
+    {
+      "id": "LOC-107",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 453,
+      "linea_final": 453,
+      "bytes": [
+        21531,
+        21540
+      ],
+      "clase": "asercion_interna",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    },
+    {
+      "id": "LOC-108",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 455,
+      "linea_final": 455,
+      "bytes": [
+        21677,
+        21738
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: concurrencia en régimen Simple\"))",
+      "sha256_expresion": "87eb9b3c8f3b0b550e117e78b894f725ba7f39af80032f579c87d4345f327361"
+    },
+    {
+      "id": "LOC-109",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 465,
+      "linea_final": 465,
+      "bytes": [
+        22122,
+        22131
+      ],
+      "clase": "asercion_interna",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    },
+    {
+      "id": "LOC-110",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 472,
+      "linea_final": 472,
+      "bytes": [
+        22304,
+        22349
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Graph {name}: ciclo detectado\"))",
+      "sha256_expresion": "a4af155298bc8e34400051f3b7514d74426e564afbdac4a9b6f9eb714b0bc466"
+    },
+    {
+      "id": "LOC-111",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 505,
+      "linea_final": 505,
+      "bytes": [
+        23692,
+        23755
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Frame {name}: eval_results contiene no-Evaluate\"))",
+      "sha256_expresion": "93e1767f5a8f647cecdbce473b226164487418c691535b8b02c447910189fb5a"
+    },
+    {
+      "id": "LOC-112",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 515,
+      "linea_final": 515,
+      "bytes": [
+        24133,
+        24192
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Frame {name}: gate_results contiene no-Gate\"))",
+      "sha256_expresion": "9dd08a50bc66e74575d8f650fe04df0bee4a541927067d4648b114372a76cdb6"
+    },
+    {
+      "id": "LOC-113",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 525,
+      "linea_final": 525,
+      "bytes": [
+        24601,
+        24664
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Frame {name}: supervision contiene no-Supervise\"))",
+      "sha256_expresion": "dc385677dc528e45432cc338d2813684f2c6fa92d494ce45079f65bb0b964951"
+    },
+    {
+      "id": "LOC-114",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 544,
+      "linea_final": 544,
+      "bytes": [
+        25469,
+        25521
+      ],
+      "clase": "adaptacion",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|error| format!(\"Frame {name}: {error:?}\"))",
+      "sha256_expresion": "9dfe58c4c8b1be097f310c26fe1073f7e7951d174a56e93d3a4324f2c2ac00a0"
+    },
+    {
+      "id": "LOC-115",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 557,
+      "linea_final": 557,
+      "bytes": [
+        25932,
+        25995
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Domain {name}: cadenas de constitución vacías\"))",
+      "sha256_expresion": "91ae6a639b5a41a58c6e0e3dac8b73e2d8171b71d383b491c4116d22696365aa"
+    },
+    {
+      "id": "LOC-116",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 576,
+      "linea_final": 576,
+      "bytes": [
+        26918,
+        26975
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Domain {name}: parameter_id incompatibles\"))",
+      "sha256_expresion": "299ba22d2e5d709ae82fa97d29b74c3df30eb13b41185a43d38998937e9f55cf"
+    },
+    {
+      "id": "LOC-117",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 586,
+      "linea_final": 586,
+      "bytes": [
+        27413,
+        27476
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Domain {name}: observation_space sin Ternarizer\"))",
+      "sha256_expresion": "2b0915f97ea9e35012e42b766761e414628d92e32a97d8f243379341fa7f526e"
+    },
+    {
+      "id": "LOC-118",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 595,
+      "linea_final": 595,
+      "bytes": [
+        27811,
+        27863
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Evaluate {name}: fuente no evaluable\"))",
+      "sha256_expresion": "121d13ddb37781e24b42b6d4330c83599cfbc31c03d3cf9e06c4763fb89082d7"
+    },
+    {
+      "id": "LOC-119",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 607,
+      "linea_final": 607,
+      "bytes": [
+        28758,
+        28830
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Compose {name}: relations/patterns no puede estar vacío\"))",
+      "sha256_expresion": "761a59f3ed1cf0559b040e0398fc9f3a49705b819284b8429816d085a61712e4"
+    },
+    {
+      "id": "LOC-120",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 624,
+      "linea_final": 624,
+      "bytes": [
+        30002,
+        30058
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Projection {name}: fuente no proyectable\"))",
+      "sha256_expresion": "ea8e041b9872f61b1fd33ecffe5dbf2abcd12e7521d57dc9dc2f562d61995363"
+    },
+    {
+      "id": "LOC-121",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 627,
+      "linea_final": 627,
+      "bytes": [
+        30150,
+        30202
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Projection {name}: campo inexistente\"))",
+      "sha256_expresion": "193ddc165f6d8b1486c63c0bd3c52468115aa91cb9976420d81fc55d59270454"
+    },
+    {
+      "id": "LOC-122",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 638,
+      "linea_final": 638,
+      "bytes": [
+        30684,
+        30745
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Gate {name}: número de entradas incompatible\"))",
+      "sha256_expresion": "4b3a9ce1b2af2216851c5d40c3b477aaea3904b7c1de9085cae54c9ef3da5e5a"
+    },
+    {
+      "id": "LOC-123",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 644,
+      "linea_final": 644,
+      "bytes": [
+        30984,
+        31034
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Gate {name}: entrada no EvalResult\"))",
+      "sha256_expresion": "90a07332408e4656a6fb2b5302f280001c1c3d772791a082ced4ab588713f1d7"
+    },
+    {
+      "id": "LOC-124",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 646,
+      "linea_final": 646,
+      "bytes": [
+        31102,
+        31165
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".ok_or_else(|| format!(\"Gate {name}: codominio indeterminado\"))",
+      "sha256_expresion": "5592daa86770559bb6dfb642f06ac5f0c106596c3a7bd7bda20da150d927a330"
+    },
+    {
+      "id": "LOC-125",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 649,
+      "linea_final": 649,
+      "bytes": [
+        31273,
+        31339
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Gate {name}: codominios posicionales incompatibles\"))",
+      "sha256_expresion": "4cbf34da631f97f8243a647a57400c1ab2087ae514d3333e59b1c31bebae2c00"
+    },
+    {
+      "id": "LOC-126",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 701,
+      "linea_final": 701,
+      "bytes": [
+        33354,
+        33408
+      ],
+      "clase": "adaptacion",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".map_err(|error| format!(\"Resolve {name}: {error:?}\"))",
+      "sha256_expresion": "c74f65faf80665bb82ebf9dc6684d953ab23c5011b200d5d707c70e086a190ae"
+    },
+    {
+      "id": "LOC-127",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 748,
+      "linea_final": 748,
+      "bytes": [
+        36169,
+        36231
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: ArchitectureView fuera del Agent\"))",
+      "sha256_expresion": "fae1927372f612a621bc0ac701bc35c0d5dd891931498c689e5b9e17e9eb02b3"
+    },
+    {
+      "id": "LOC-128",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 750,
+      "linea_final": 750,
+      "bytes": [
+        36494,
+        36542
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: eval no EvalResult\"))",
+      "sha256_expresion": "93a4899d03dcc1876347c35c50b4257e6c33973c8b0be253e5b1d0fc95d318c3"
+    },
+    {
+      "id": "LOC-129",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 751,
+      "linea_final": 751,
+      "bytes": [
+        36668,
+        36716
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: gate no GateResult\"))",
+      "sha256_expresion": "6ddd5637daf9e68a44d1d02206d58641781792194e0b6b32fb5ff5cca098c984"
+    },
+    {
+      "id": "LOC-130",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 756,
+      "linea_final": 756,
+      "bytes": [
+        36987,
+        37047
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: CoverageReport fuera del Agent\"))",
+      "sha256_expresion": "b62c073284f613dce594e19267c7cfa365f7b2923e8278b58e4e0c212146a6bb"
+    },
+    {
+      "id": "LOC-131",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 760,
+      "linea_final": 760,
+      "bytes": [
+        37138,
+        37207
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: QueryContext incompatible con QuerySpec\"))",
+      "sha256_expresion": "de91587c326ad454dc352e679702bf30f77f58d3f58c72b6d54ffafdf2c88599"
+    },
+    {
+      "id": "LOC-132",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 766,
+      "linea_final": 766,
+      "bytes": [
+        37487,
+        37544
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Supervise {name}: meta_eval no EvalResult\"))",
+      "sha256_expresion": "481370eddc4cc7c8399460e2b9b01aa79e8a79984186fad341e9f1676323d17a"
+    },
+    {
+      "id": "LOC-133",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 768,
+      "linea_final": 768,
+      "bytes": [
+        37706,
+        37769
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Supervise {name}: CellTarget de tipo incorrecto\"))",
+      "sha256_expresion": "1a033208953b2d647ca948723ef7596c53a8352f9fb62623921a070ae4da8b21"
+    },
+    {
+      "id": "LOC-134",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 769,
+      "linea_final": 769,
+      "bytes": [
+        37913,
+        37980
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Supervise {name}: ComposedTarget de tipo incorrecto\"))",
+      "sha256_expresion": "55c6cfe2333302722a73ac53913adfa677fe41bd18549c1d82c8fa655e8fe9c8"
+    },
+    {
+      "id": "LOC-135",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 773,
+      "linea_final": 773,
+      "bytes": [
+        38237,
+        38305
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Supervise {name}: meta_eval no procede de Supervisor\"))",
+      "sha256_expresion": "bcd47b1b3d16cee626f88b5faee64827d4b54c7fac887c5517a19188594a3375"
+    },
+    {
+      "id": "LOC-136",
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "linea": 794,
+      "linea_final": 794,
+      "bytes": [
+        39151,
+        39197
+      ],
+      "clase": "emision",
+      "familia": "bienformacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"{name}: se esperaba {expected}\"))",
+      "sha256_expresion": "4195ec849cca2188b11b44420227b3574148827eada9e51637e8d335091a1ad7"
+    },
+    {
+      "id": "LOC-137",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 41,
+      "linea_final": 44,
+      "bytes": [
+        1385,
+        1541
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: {horizon_ref}: se esperaba Horizon\",\n                    object.name()\n                ))",
+      "sha256_expresion": "e8833d69735dcf040a232435862270c750d0017b998f4bb9cf9ba8c52aa9ede8"
+    },
+    {
+      "id": "LOC-138",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 47,
+      "linea_final": 50,
+      "bytes": [
+        1602,
+        1775
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: referencia de horizonte no declarada: {horizon_ref}\",\n                    object.name()\n                ))",
+      "sha256_expresion": "9025be9b70ad2bca90ece2fe644e41e621df9622ac31424836109e63943dbf1e"
+    },
+    {
+      "id": "LOC-139",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 57,
+      "linea_final": 60,
+      "bytes": [
+        2002,
+        2168
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: {architecture}: se esperaba CompositionGraph\",\n                    object.name()\n                ))",
+      "sha256_expresion": "7b77a39740ceab8ce4ba620f5383a922a51f488c31fd2eee0efe1a024356a3b1"
+    },
+    {
+      "id": "LOC-140",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 63,
+      "linea_final": 66,
+      "bytes": [
+        2229,
+        2392
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: arquitectura no declarada: {architecture}\",\n                    object.name()\n                ))",
+      "sha256_expresion": "ccf543de90bd5ca436372ed5ce04db146c6ea8081ca7a6717865f848137e6e57"
+    },
+    {
+      "id": "LOC-141",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 73,
+      "linea_final": 76,
+      "bytes": [
+        2588,
+        2747
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: tipo de suceso repetido: {event_type}\",\n                    object.name()\n                ))",
+      "sha256_expresion": "df881843833097eb7ef726fbf5078d7d0a881dae88861d363b5ee7d10b0d1c93"
+    },
+    {
+      "id": "LOC-142",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 85,
+      "linea_final": 88,
+      "bytes": [
+        3086,
+        3255
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"{DIAGNOSTIC}: TransitionData {}: {node_ref}: se esperaba CoupledSpec\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "af74dbf26e4c65793684839f1bebca4f108087071aa7efdccf925756a2f14cd8"
+    },
+    {
+      "id": "LOC-143",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 91,
+      "linea_final": 94,
+      "bytes": [
+        3375,
+        3544
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"{DIAGNOSTIC}: TransitionData {}: {node_ref}: se esperaba CoupledSpec\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "af74dbf26e4c65793684839f1bebca4f108087071aa7efdccf925756a2f14cd8"
+    },
+    {
+      "id": "LOC-144",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 97,
+      "linea_final": 100,
+      "bytes": [
+        3617,
+        3794
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"{DIAGNOSTIC}: TransitionData {}: referencia de nodo no declarada: {node_ref}\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "dc2ae7cc6dacba8204645b899b3f36f9878fffb4e4d75a1338ffa9f99e0b9cff"
+    },
+    {
+      "id": "LOC-145",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 105,
+      "linea_final": 108,
+      "bytes": [
+        3927,
+        4103
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: nodo {node_ref} ajeno a la arquitectura {architecture}\",\n                    object.name()\n                ))",
+      "sha256_expresion": "e7b06229172099ad4a3720d328a88da79175a617254ef46da9aa6ca28653f411"
+    },
+    {
+      "id": "LOC-146",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 114,
+      "linea_final": 117,
+      "bytes": [
+        4305,
+        4471
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"{DIAGNOSTIC}: TransitionData {}: {cell_ref}: se esperaba CellSpec\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "ace97102c3d07d690066051690b3895d3a8d8037c98fd3cfd2d4cca766e34abc"
+    },
+    {
+      "id": "LOC-147",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 120,
+      "linea_final": 123,
+      "bytes": [
+        4544,
+        4735
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                        \"{DIAGNOSTIC}: TransitionData {}: CellSpec no declarada para el nodo {node_ref}: {cell_ref}\",\n                        object.name()\n                    ))",
+      "sha256_expresion": "69e9b86d523362ab464134458f5bf40c214202051430651cba82e7f4c3b13032"
+    },
+    {
+      "id": "LOC-148",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 130,
+      "linea_final": 135,
+      "bytes": [
+        4943,
+        5197
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: posición {} fuera de [1, {}] para el nodo {node_ref}\",\n                    object.name(),\n                    position.as_decimal(),\n                    n.as_decimal()\n                ))",
+      "sha256_expresion": "98298b2d8fbd193353ae3d70c72f666637aa75a71ffd4d84ffc84fa574ba4691"
+    },
+    {
+      "id": "LOC-149",
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "linea": 139,
+      "linea_final": 143,
+      "bytes": [
+        5322,
+        5530
+      ],
+      "clase": "emision",
+      "familia": "datos_transicion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": "E406",
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\n                    \"{DIAGNOSTIC}: TransitionData {}: destino inducido repetido: ({node_ref}, {})\",\n                    object.name(),\n                    position.as_decimal()\n                ))",
+      "sha256_expresion": "249fff83c955c637acf664fba5a5e4131b789719cd0d76fdd944af8c898a7bc0"
+    },
+    {
+      "id": "LOC-150",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 14,
+      "linea_final": 14,
+      "bytes": [
+        530,
+        594
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".ok_or_else(|| format!(\"Contexto: objeto no declarado: {name}\"))",
+      "sha256_expresion": "9133d86c2624a4315482251ec9191b46c1233af16563296f43a66270873af9bf"
+    },
+    {
+      "id": "LOC-151",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 18,
+      "linea_final": 18,
+      "bytes": [
+        721,
+        789
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".ok_or_else(|| format!(\"Contexto: operación no declarada: {name}\"))",
+      "sha256_expresion": "bca7b8dd53ca6ee0a03a1b9faa08f7310dc708f651693bebf796b571172d6bbe"
+    },
+    {
+      "id": "LOC-152",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 24,
+      "linea_final": 24,
+      "bytes": [
+        997,
+        1048
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: {name}: se esperaba Frame\"))",
+      "sha256_expresion": "5ee1ea4ef99219df82525b4687fb846908e3030680690be427ef0f2f04de5aa4"
+    },
+    {
+      "id": "LOC-153",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 32,
+      "linea_final": 32,
+      "bytes": [
+        1349,
+        1400
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: Trajectory {name}: vacía\"))",
+      "sha256_expresion": "ad193772ddaadfa0be1e4bd358a1a63546ffd31304c83d1bd0a6684ae8b6f487"
+    },
+    {
+      "id": "LOC-154",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 34,
+      "linea_final": 34,
+      "bytes": [
+        1434,
+        1490
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: {name}: se esperaba Trajectory\"))",
+      "sha256_expresion": "0eb91cadd5c77d918b460b6d6cfe75ba0f58fe3f679ab58010843fe7f44a7310"
+    },
+    {
+      "id": "LOC-155",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 41,
+      "linea_final": 41,
+      "bytes": [
+        1704,
+        1766
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: {name}: se esperaba CompositionGraph\"))",
+      "sha256_expresion": "d4f9bb673cefd4d0542ba8f5314d935e7289bcf539d03a3124b39d4f4088ea46"
+    },
+    {
+      "id": "LOC-156",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 57,
+      "linea_final": 57,
+      "bytes": [
+        2328,
+        2390
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: {evaluation}: se esperaba EvalResult\"))",
+      "sha256_expresion": "fbb238054efe1845fb30b3a90446bd2c830acf21a18fae5d7d5b08f6d48f2517"
+    },
+    {
+      "id": "LOC-157",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 62,
+      "linea_final": 62,
+      "bytes": [
+        2639,
+        2693
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Contexto: {state}: fuente no evaluable\"))",
+      "sha256_expresion": "56cc7772f9938b9763389d4b6973d399a499b9fff02a1217d557af13c3d9be18"
+    },
+    {
+      "id": "LOC-158",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 69,
+      "linea_final": 69,
+      "bytes": [
+        2930,
+        3037
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {query}: Frame {frame}: arquitectura {actual} ajena al Agent {agent} ({architecture})\"))",
+      "sha256_expresion": "aa48a32cf51ced4dad1ddb2dfe7a0d9a71a688ed62ca8664e443c03a3934187b"
+    },
+    {
+      "id": "LOC-159",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 90,
+      "linea_final": 90,
+      "bytes": [
+        3922,
+        4020
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Trajectory {name}: Frame {frame}: arquitectura {actual} distinta de {architecture}\"))",
+      "sha256_expresion": "e68516dd824b55abd8bdfc6b571e4f87680b45ec4f855b78de0c05aa1aaf9abe"
+    },
+    {
+      "id": "LOC-160",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 96,
+      "linea_final": 96,
+      "bytes": [
+        4413,
+        4539
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Trajectory {name}: TransitionData {transition}: horizonte {horizon_ref} de {actual} distinto de {architecture}\"))",
+      "sha256_expresion": "27033962e6bf543af09254ea3c3d3d1aa43c7746a99c85843154b9ad39cfbc17"
+    },
+    {
+      "id": "LOC-161",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 113,
+      "linea_final": 113,
+      "bytes": [
+        5096,
+        5149
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: {by}: se esperaba Agent\"))",
+      "sha256_expresion": "416f1150e70a51f33a4bcdb4da3bf9c1d31cded447a90077b26698a71f1d3471"
+    },
+    {
+      "id": "LOC-162",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 124,
+      "linea_final": 124,
+      "bytes": [
+        5742,
+        5854
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: Trajectory {reference}: arquitectura {actual} ajena al Agent {by} ({architecture})\"))",
+      "sha256_expresion": "3785cca7a9f90534332ebde052029fe2b17a8a778da631aae0f1603c3f6330f7"
+    },
+    {
+      "id": "LOC-163",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 130,
+      "linea_final": 130,
+      "bytes": [
+        6095,
+        6179
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: CellSpec {cell} ajena a la arquitectura {architecture}\"))",
+      "sha256_expresion": "a30e4577fb3a50536f617e54eae8e90a88aa6134c46e7db8dce8040bb422c422"
+    },
+    {
+      "id": "LOC-164",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 135,
+      "linea_final": 135,
+      "bytes": [
+        6368,
+        6460
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: EvalResult {evaluation} ajeno a la arquitectura {architecture}\"))",
+      "sha256_expresion": "22e5b13bd6a5f8beb3dcd70d6fac778cc61eb96c002d288e5dbf91e4b36d803e"
+    },
+    {
+      "id": "LOC-165",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 141,
+      "linea_final": 141,
+      "bytes": [
+        6724,
+        6784
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: {gate}: se esperaba GateResult\"))",
+      "sha256_expresion": "783cb17198716b1d5ee4ecc8645d5085cdc7f254fae2550bbfce216a4f85ab43"
+    },
+    {
+      "id": "LOC-166",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 145,
+      "linea_final": 145,
+      "bytes": [
+        6969,
+        7080
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: GateResult {gate}: EvalResult {evaluation} ajeno a la arquitectura {architecture}\"))",
+      "sha256_expresion": "3a47bbb63b32e9d33a5aa664a81c259fe34c6caaa84eb3ddec0291ac5f89ed1e"
+    },
+    {
+      "id": "LOC-167",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 153,
+      "linea_final": 153,
+      "bytes": [
+        7428,
+        7486
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: {domain}: se esperaba Domain\"))",
+      "sha256_expresion": "0fafadfad12e1b4e451d02401af28af718c6d506c241aa9d2d0eb93cd706e701"
+    },
+    {
+      "id": "LOC-168",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 156,
+      "linea_final": 156,
+      "bytes": [
+        7583,
+        7698
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: CoverageReport: interface {} distinta de Domain {domain} ({interface})\", references[1]))",
+      "sha256_expresion": "fe665dfc874b83cb1ab833a348f298b1a1e85a0e72a8c0c5b34ad7818429678f"
+    },
+    {
+      "id": "LOC-169",
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "linea": 159,
+      "linea_final": 159,
+      "bytes": [
+        7793,
+        7906
+      ],
+      "clase": "emision",
+      "familia": "contexto_relacional",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(format!(\"Query {name}: CoverageReport: silent_u {} distinta de Domain {domain} ({silent_u})\", references[2]))",
+      "sha256_expresion": "6f6019876ad3dc28eb4f70db81407b48d6c88baa68921967cd6ffd87fd365dbc"
+    },
+    {
+      "id": "LOC-170",
+      "ruta": "rust/sv_core/src/nat.rs",
+      "linea": 23,
+      "linea_final": 23,
+      "bytes": [
+        1001,
+        1016
+      ],
+      "clase": "emision",
+      "familia": "natural",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(InvalidNat)",
+      "sha256_expresion": "babcbfd80c70336dd8cf28e11a1a00ce71b6bd3d0e9344a5635df235214d5e4d"
+    },
+    {
+      "id": "LOC-171",
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "linea": 50,
+      "linea_final": 52,
+      "bytes": [
+        1552,
+        1649
+      ],
+      "clase": "emision",
+      "familia": "admisibilidad",
+      "variante_escrita": "InvalidAdmissibilitySpec::InvalidStateLabel",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E110",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(InvalidAdmissibilitySpec::InvalidStateLabel(\n                other.to_owned(),\n            ))",
+      "sha256_expresion": "40f2c57c51067584ec7532b066b7f0a9666b0fb0d75fa9660218ee419077a75f"
+    },
+    {
+      "id": "LOC-172",
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "linea": 102,
+      "linea_final": 102,
+      "bytes": [
+        3086,
+        3139
+      ],
+      "clase": "emision",
+      "familia": "admisibilidad",
+      "variante_escrita": "InvalidAdmissibilitySpec::NonPositiveParameterId",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E110",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(InvalidAdmissibilitySpec::NonPositiveParameterId)",
+      "sha256_expresion": "6dbd71dd904719c0ff0306bf4a73fba7aace0795e64fcc5c652ee04134f661a0"
+    },
+    {
+      "id": "LOC-173",
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "linea": 107,
+      "linea_final": 107,
+      "bytes": [
+        3232,
+        3274
+      ],
+      "clase": "emision",
+      "familia": "admisibilidad",
+      "variante_escrita": "InvalidAdmissibilitySpec::MissingRule",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E110",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(InvalidAdmissibilitySpec::MissingRule)",
+      "sha256_expresion": "295cf2d18733d23777d36f0b6eb9f2ad840ff0b806d272f7e83036d2c461244e"
+    },
+    {
+      "id": "LOC-174",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 226,
+      "linea_final": 228,
+      "bytes": [
+        7522,
+        7633
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::CriticalitiesNotProducible",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::CriticalitiesNotProducible {\n                declared: criticalities,\n            })",
+      "sha256_expresion": "7315a50ad8674998727b1e90b5b09dc718c6f12638ceb557068728bb7739fa24"
+    },
+    {
+      "id": "LOC-175",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 237,
+      "linea_final": 239,
+      "bytes": [
+        7961,
+        8079
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::DuplicateStateReference",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::DuplicateStateReference {\n                    state: state.name.clone(),\n                })",
+      "sha256_expresion": "7115f6be78b1782f6770b478b171aa70e95a22ee6f58efcc710f5ce132332bbf"
+    },
+    {
+      "id": "LOC-176",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 242,
+      "linea_final": 246,
+      "bytes": [
+        8185,
+        8419
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::StateOutsideArchitecture",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::StateOutsideArchitecture {\n                    state: state.name.clone(),\n                    node: state.coupled_spec.clone(),\n                    architecture: architecture.name.clone(),\n                })",
+      "sha256_expresion": "bf0ab3e614940094b90927c5bfdccc7e93c364199c5e8667b1e8fd248423fe1b"
+    },
+    {
+      "id": "LOC-177",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 249,
+      "linea_final": 251,
+      "bytes": [
+        8522,
+        8645
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::MultipleStatesForNode",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::MultipleStatesForNode {\n                    node: state.coupled_spec.clone(),\n                })",
+      "sha256_expresion": "c35c2819cd1fccc9b75b5348d0c9bf1bfe5d30a29461e7648a03d8ad8c1574d2"
+    },
+    {
+      "id": "LOC-178",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 260,
+      "linea_final": 263,
+      "bytes": [
+        8963,
+        9139
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::EvalSourceOutsideFrame",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::EvalSourceOutsideFrame {\n                    eval: eval.name.clone(),\n                    source_state: eval.source_state.clone(),\n                })",
+      "sha256_expresion": "0a5c25b8ec7a57cd632f4303680830f906e6520a6418c0ff3d8099ea8c0a133d"
+    },
+    {
+      "id": "LOC-179",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 266,
+      "linea_final": 268,
+      "bytes": [
+        9248,
+        9376
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::DuplicateEvalSource",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::DuplicateEvalSource {\n                    source_state: eval.source_state.clone(),\n                })",
+      "sha256_expresion": "e658424e67386d466c454dc183e21a0312fb443ac2dea48574f8a7bb3c599624"
+    },
+    {
+      "id": "LOC-180",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 277,
+      "linea_final": 280,
+      "bytes": [
+        9678,
+        9851
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::GateInputOutsideFrame",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::GateInputOutsideFrame {\n                        gate: gate.name.clone(),\n                        eval_input: input.clone(),\n                    })",
+      "sha256_expresion": "c57ec0da28ebf8bb2ce2967126425f5be435b0758f213db65fb9fe982e9ab84f"
+    },
+    {
+      "id": "LOC-181",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 289,
+      "linea_final": 292,
+      "bytes": [
+        10155,
+        10369
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::SupervisionMetaEvalOutsideFrame",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::SupervisionMetaEvalOutsideFrame {\n                    supervision: supervision_result.name.clone(),\n                    meta_eval: supervision_result.meta_eval.clone(),\n                })",
+      "sha256_expresion": "6490ddae7d2283564323056902989a0ddaf383de1a3dc4fbdb293e0540e9a0a9"
+    },
+    {
+      "id": "LOC-182",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 298,
+      "linea_final": 301,
+      "bytes": [
+        10576,
+        10789
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::SupervisionCellTargetOutsideFrame",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::SupervisionCellTargetOutsideFrame {\n                            supervision: supervision_result.name.clone(),\n                            target: eval.clone(),\n                        })",
+      "sha256_expresion": "a59885fb4e83d77fe99d363f9743325ed6ccbfaca6c7b218c158ffe7c40beecb"
+    },
+    {
+      "id": "LOC-183",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 306,
+      "linea_final": 309,
+      "bytes": [
+        10978,
+        11195
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::SupervisionComposedTargetOutsideFrame",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::SupervisionComposedTargetOutsideFrame {\n                            supervision: supervision_result.name.clone(),\n                            target: gate.clone(),\n                        })",
+      "sha256_expresion": "584d8f746ba4d2d2faa8368bc34f3021162141a7fefeb1a832aed4cf493d2d4b"
+    },
+    {
+      "id": "LOC-184",
+      "ruta": "rust/sv_core/src/frame.rs",
+      "linea": 314,
+      "linea_final": 318,
+      "bytes": [
+        11385,
+        11667
+      ],
+      "clase": "emision",
+      "familia": "cierre_marco",
+      "variante_escrita": "FrameClosureViolation::SupervisionSystemTargetMismatch",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E308",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(FrameClosureViolation::SupervisionSystemTargetMismatch {\n                            supervision: supervision_result.name.clone(),\n                            target: system.clone(),\n                            architecture: architecture.name.clone(),\n                        })",
+      "sha256_expresion": "46e90255176d77a3a63911e786aec57d73de9d98f91f687dd506119ccd0254ab"
+    },
+    {
+      "id": "LOC-185",
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "linea": 243,
+      "linea_final": 246,
+      "bytes": [
+        6351,
+        6503
+      ],
+      "clase": "emision",
+      "familia": "resolucion_u",
+      "variante_escrita": "UnsafeUResolution::TargetNotEvaluable",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E305",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".ok_or_else(|| UnsafeUResolution::TargetNotEvaluable {\n            state: state.name().to_owned(),\n            kind: state.kind().to_owned(),\n        })",
+      "sha256_expresion": "e47b93a3d2d9ab552bbb8dc1803582797ab5a4c229492177d2c8a0180fd41657"
+    },
+    {
+      "id": "LOC-186",
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "linea": 248,
+      "linea_final": 254,
+      "bytes": [
+        6563,
+        6766
+      ],
+      "clase": "emision",
+      "familia": "resolucion_u",
+      "variante_escrita": "UnsafeUResolution::PositionOutOfRange",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E305",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".ok_or_else(|| {\n        UnsafeUResolution::PositionOutOfRange {\n            state: state.name().to_owned(),\n            position: position.clone(),\n            vector_len: vector.len(),\n        }\n    })",
+      "sha256_expresion": "f61b82e44dc0e793bbff5a7aae91d3e01d8ed3e0a8ee6be8bc2eab70724317de"
+    },
+    {
+      "id": "LOC-187",
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "linea": 258,
+      "linea_final": 262,
+      "bytes": [
+        6847,
+        6990
+      ],
+      "clase": "emision",
+      "familia": "resolucion_u",
+      "variante_escrita": "UnsafeUResolution::TargetIsNotU",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E305",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(UnsafeUResolution::TargetIsNotU {\n            state: state.name().to_owned(),\n            position,\n            found: previous,\n        })",
+      "sha256_expresion": "a6e51a09dcb9c8526799f3f8f8dfe8c6b09183c6a01c029342e830ddcb5c44ae"
+    },
+    {
+      "id": "LOC-188",
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "linea": 267,
+      "linea_final": 271,
+      "bytes": [
+        7113,
+        7293
+      ],
+      "clase": "emision",
+      "familia": "resolucion_u",
+      "variante_escrita": "UnsafeUResolution::ContextMismatch",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E305",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(UnsafeUResolution::ContextMismatch {\n            spec: with_spec.name.clone(),\n            expected: with_spec.context.clone(),\n            actual: context_instance,\n        })",
+      "sha256_expresion": "fd26ab3ec146a8cb3dd8614eac21fc2a64390fa68413ff179e4b1f7fd266519b"
+    },
+    {
+      "id": "LOC-189",
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "linea": 276,
+      "linea_final": 280,
+      "bytes": [
+        7424,
+        7610
+      ],
+      "clase": "emision",
+      "familia": "resolucion_u",
+      "variante_escrita": "UnsafeUResolution::MechanismMismatch",
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": "E305",
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "Err(UnsafeUResolution::MechanismMismatch {\n            spec: with_spec.name.clone(),\n            expected: with_spec.mechanism.clone(),\n            actual: mechanism_instance,\n        })",
+      "sha256_expresion": "7d085111dc863a9222be304ee1e985c9808efe6f7ccb739a7575e186480f1036"
+    },
+    {
+      "id": "LOC-190",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 9,
+      "linea_final": 9,
+      "bytes": [
+        177,
+        236
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"uso: sv-native [--profile en|es] <archivo.svp>\")",
+      "sha256_expresion": "d88860577a13b14015345e7ed3c7be25fc8f407c7d111e30e7d07de2853ef73a"
+    },
+    {
+      "id": "LOC-191",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 26,
+      "linea_final": 26,
+      "bytes": [
+        655,
+        687
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"perfil SVP no UTF-8\")",
+      "sha256_expresion": "b79c8df613dfe58c9dc234f4848aba0d1657345a1d2f318bc1ef68a51a6270c0"
+    },
+    {
+      "id": "LOC-192",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 30,
+      "linea_final": 30,
+      "bytes": [
+        814,
+        869
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"perfil SVP no admitido: {tag}; use en o es\")",
+      "sha256_expresion": "f3bbcab8576e179df28035f62b5454e78d949f3ec497dbd37485c22668a99eae"
+    },
+    {
+      "id": "LOC-193",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 51,
+      "linea_final": 51,
+      "bytes": [
+        1345,
+        1401
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"no se pudo leer {}: {error}\", path.display())",
+      "sha256_expresion": "4af71b36b88211790327c1eaeeca0a515528319e1dcc9d65a3f13d6b808c6f6a"
+    },
+    {
+      "id": "LOC-194",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 56,
+      "linea_final": 56,
+      "bytes": [
+        1547,
+        1586
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"nombre de archivo no UTF-8\")",
+      "sha256_expresion": "218660cbe6f87d2f2c702fddf21c70e16144055bfb6af2f4aca577a7ab5c1f6a"
+    },
+    {
+      "id": "LOC-195",
+      "ruta": "rust/sv_native/src/main.rs",
+      "linea": 70,
+      "linea_final": 70,
+      "bytes": [
+        1970,
+        2009
+      ],
+      "clase": "salida",
+      "familia": "cli",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "eprintln!(\"SVP no admitido: {error:?}\")",
+      "sha256_expresion": "630b9eac2f9d11b556df0749a311f198bdfae013487fcdcdd2b15b0dc1aa9c61"
+    },
+    {
+      "id": "LOC-196",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 154,
+      "linea_final": 154,
+      "bytes": [
+        4893,
+        4946
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"entrada SVP no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "0a0659cf53d3589880c2e8455c65d0b79408040f5665fc24e5dcfdff1c0b536a"
+    },
+    {
+      "id": "LOC-197",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 160,
+      "linea_final": 160,
+      "bytes": [
+        5144,
+        5203
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"nombre de archivo no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "2ee022d02f94f6bf9b169b1567a3f82298197a2387ec7f1145752644e76a98f7"
+    },
+    {
+      "id": "LOC-198",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 165,
+      "linea_final": 165,
+      "bytes": [
+        5368,
+        5422
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(format!(\"{error:?}\").into_bytes(), true)",
+      "sha256_expresion": "3183aeda7f6616351193b840c0867e89455388ad6a5e42181751894452d2a176"
+    },
+    {
+      "id": "LOC-199",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 174,
+      "linea_final": 174,
+      "bytes": [
+        5631,
+        5686
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"perfil SVP no admitido\".to_vec(), true)",
+      "sha256_expresion": "8d4752a15cf9c612e6b2d01e98f450282a6c4a2b0ff5d0943dccbd87fb3e80c5"
+    },
+    {
+      "id": "LOC-200",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 179,
+      "linea_final": 179,
+      "bytes": [
+        5870,
+        5923
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"entrada SVP no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "0a0659cf53d3589880c2e8455c65d0b79408040f5665fc24e5dcfdff1c0b536a"
+    },
+    {
+      "id": "LOC-201",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 184,
+      "linea_final": 184,
+      "bytes": [
+        6120,
+        6179
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"nombre de archivo no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "2ee022d02f94f6bf9b169b1567a3f82298197a2387ec7f1145752644e76a98f7"
+    },
+    {
+      "id": "LOC-202",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 188,
+      "linea_final": 188,
+      "bytes": [
+        6360,
+        6414
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(format!(\"{error:?}\").into_bytes(), true)",
+      "sha256_expresion": "3183aeda7f6616351193b840c0867e89455388ad6a5e42181751894452d2a176"
+    },
+    {
+      "id": "LOC-203",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 201,
+      "linea_final": 201,
+      "bytes": [
+        6915,
+        6972
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"perfil SVP A no admitido\".to_vec(), true)",
+      "sha256_expresion": "8de7e28de85445509ed556e8954ad206d913b274a90d96068ff5330aaffe489a"
+    },
+    {
+      "id": "LOC-204",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 204,
+      "linea_final": 204,
+      "bytes": [
+        7069,
+        7126
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"perfil SVP B no admitido\".to_vec(), true)",
+      "sha256_expresion": "cb40395fa0a092bd8f646d7181542152212443b8b0f70698873ee99d53ed08d3"
+    },
+    {
+      "id": "LOC-205",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 210,
+      "linea_final": 210,
+      "bytes": [
+        7317,
+        7372
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"entrada SVP A no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "342d4d75e0f138678c8f57e5380626934aa987884fcc2e8555dd88dbcc545692"
+    },
+    {
+      "id": "LOC-206",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 215,
+      "linea_final": 215,
+      "bytes": [
+        7554,
+        7615
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"nombre de archivo A no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "357627d574cff541037df2bfc93707e48b1afb794d231b195169318e00d55b9b"
+    },
+    {
+      "id": "LOC-207",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 220,
+      "linea_final": 220,
+      "bytes": [
+        7807,
+        7862
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"entrada SVP B no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "dd5b239d99dd2fedc661bc5806eed061cf71feff317e4b4549c5426dcbc6dbcb"
+    },
+    {
+      "id": "LOC-208",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 225,
+      "linea_final": 225,
+      "bytes": [
+        8046,
+        8107
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(b\"nombre de archivo B no UTF-8\".to_vec(), true)",
+      "sha256_expresion": "2564cedb256c917bb8950549d8d5e0d17d3b477449ba8691aa190c5070a005b8"
+    },
+    {
+      "id": "LOC-209",
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "linea": 234,
+      "linea_final": 234,
+      "bytes": [
+        8403,
+        8457
+      ],
+      "clase": "salida",
+      "familia": "abi_compilacion",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "packed_result(format!(\"{error:?}\").into_bytes(), true)",
+      "sha256_expresion": "3183aeda7f6616351193b840c0867e89455388ad6a5e42181751894452d2a176"
+    },
+    {
+      "id": "LOC-210",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 213,
+      "linea_final": 213,
+      "bytes": [
+        9777,
+        9813
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(t(\"sourceTooLarge\"))",
+      "sha256_expresion": "2f6b0cf9beba9b8760c90f0ef22ac91a14966ae7bb4166ca976c9c9bf364f91b"
+    },
+    {
+      "id": "LOC-211",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 229,
+      "linea_final": 229,
+      "bytes": [
+        10269,
+        10339
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(\"DecompressionStream no disponible en este navegador\")",
+      "sha256_expresion": "6003df8f96060a964a66f8c3f06186b8fd6daaec81f86b9d470c1a99d6ef94f2"
+    },
+    {
+      "id": "LOC-212",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 240,
+      "linea_final": 240,
+      "bytes": [
+        10757,
+        10799
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`HTTP ${response.status}`)",
+      "sha256_expresion": "cdc96d23345a4d31b4858237033aace3d0819f7d664edd32ee02d37b6365badc"
+    },
+    {
+      "id": "LOC-213",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 245,
+      "linea_final": 245,
+      "bytes": [
+        10996,
+        11054
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`SHA-256 WebAssembly inesperado: ${hash}`)",
+      "sha256_expresion": "ebbbf6085ad915bc894588a2bef8ca8fe65cf0cda6b35f0106f84725077de9ef"
+    },
+    {
+      "id": "LOC-214",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 248,
+      "linea_final": 248,
+      "bytes": [
+        11121,
+        11195
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`tamaño WebAssembly inesperado: ${wasmBytes.byteLength}`)",
+      "sha256_expresion": "fca966f90bd83bdf1ff9cbea68fb16b24f0099224bffc335a30b578d1cf0dec7"
+    },
+    {
+      "id": "LOC-215",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 260,
+      "linea_final": 260,
+      "bytes": [
+        11778,
+        11832
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`export WebAssembly ausente: ${name}`)",
+      "sha256_expresion": "8e76a205abd104cc39455dd7939ffddc47d04a38bbaa4b0f521c6702110d82d6"
+    },
+    {
+      "id": "LOC-216",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 305,
+      "linea_final": 305,
+      "bytes": [
+        13932,
+        14001
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(\"la interfaz no puede modificar fuentes ni perfiles\")",
+      "sha256_expresion": "ad1fc81d29ce4365444d0ad26f27798b43e0aa4f745a76f42894d46c07953721"
+    },
+    {
+      "id": "LOC-217",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 323,
+      "linea_final": 323,
+      "bytes": [
+        14725,
+        14790
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(\"cambiar el perfil no puede modificar la fuente\")",
+      "sha256_expresion": "3a591763c3241f84cff94c8f7a8f8c71cc67957b6f44300176ed856d41eccd65"
+    },
+    {
+      "id": "LOC-218",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 366,
+      "linea_final": 366,
+      "bytes": [
+        16446,
+        16482
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(t(\"sourceTooLarge\"))",
+      "sha256_expresion": "2f6b0cf9beba9b8760c90f0ef22ac91a14966ae7bb4166ca976c9c9bf364f91b"
+    },
+    {
+      "id": "LOC-219",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 438,
+      "linea_final": 438,
+      "bytes": [
+        19329,
+        19365
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(t(\"sourceTooLarge\"))",
+      "sha256_expresion": "2f6b0cf9beba9b8760c90f0ef22ac91a14966ae7bb4166ca976c9c9bf364f91b"
+    },
+    {
+      "id": "LOC-220",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 442,
+      "linea_final": 442,
+      "bytes": [
+        19500,
+        19533
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(t(\"invalidUtf8\"))",
+      "sha256_expresion": "84fe660ead00fc0aac65267feafe877397ba9b27c2dad8ed978805ce95128707"
+    },
+    {
+      "id": "LOC-221",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 509,
+      "linea_final": 509,
+      "bytes": [
+        23161,
+        23197
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(t(\"sourceTooLarge\"))",
+      "sha256_expresion": "2f6b0cf9beba9b8760c90f0ef22ac91a14966ae7bb4166ca976c9c9bf364f91b"
+    },
+    {
+      "id": "LOC-222",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 561,
+      "linea_final": 561,
+      "bytes": [
+        25373,
+        25426
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`build-info HTTP ${response.status}`)",
+      "sha256_expresion": "bb703bbb884f440f4b06d2a2034937517dcae393e72a47c55e24de58c7b2f3d6"
+    },
+    {
+      "id": "LOC-223",
+      "ruta": "docs/candidata-integracion/app-b2.js",
+      "linea": 571,
+      "linea_final": 571,
+      "bytes": [
+        26027,
+        26078
+      ],
+      "clase": "emision",
+      "familia": "interfaz",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": "throw new Error(`examples HTTP ${response.status}`)",
+      "sha256_expresion": "cc89a6f2e72cea60aa2aa7fe48917608078e5d46dbedff5426101c7156f207e1"
+    },
+    {
+      "id": "LOC-224",
+      "ruta": "rust/sv_core/src/equivalence.rs",
+      "linea": 481,
+      "linea_final": 481,
+      "bytes": [
+        16720,
+        16729
+      ],
+      "clase": "asercion_interna",
+      "familia": "serializacion_ir",
+      "variante_escrita": null,
+      "codigos_literales": [],
+      "codigo_de_tipo_revisado": null,
+      "constante_de_modulo_revisada": null,
+      "alcance": "Localización estática; alcanzabilidad individual no acreditada por este recuento",
+      "expresion": ".unwrap()",
+      "sha256_expresion": "cd6918d80f05076c1b3e4b0f0d0913a550c80ecf7a3eb814d62d49212130cb91"
+    }
+  ]
+}
