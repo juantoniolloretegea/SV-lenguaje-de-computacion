@@ -8,7 +8,10 @@ static NEXT: AtomicUsize = AtomicUsize::new(0);
 struct Scratch(PathBuf);
 impl Scratch {
     fn new() -> Self {
-        let path = env::temp_dir().join(format!("sv-cyb-authority-{}-{}", std::process::id(), NEXT.fetch_add(1, Ordering::Relaxed)));
+        // Son productos de compilación: se conservan en la salida de Cargo.
+        // El entorno aislado mantiene /tmp sin permiso de ejecución.
+        let output = env::current_exe().unwrap().parent().unwrap().to_path_buf();
+        let path = output.join(format!("sv-cyb-authority-{}-{}", std::process::id(), NEXT.fetch_add(1, Ordering::Relaxed)));
         fs::create_dir(&path).expect("crear directorio exclusivo de la sonda");
         Self(path)
     }
