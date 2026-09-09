@@ -1,0 +1,723 @@
+[
+  {
+    "id": "PR-001",
+    "parametro": "P25",
+    "supuesto": "Acto ligado expresamente a la sesión de referencia",
+    "entrada": {
+      "session": "s1",
+      "linked": "s1"
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-002",
+    "parametro": "P25",
+    "supuesto": "Acto ligado a otra sesión, con exclusión de la referencia",
+    "entrada": {
+      "session": "s1",
+      "linked": "s2"
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-003",
+    "parametro": "P25",
+    "supuesto": "Sólo se conoce la cuenta que aparece en el registro",
+    "entrada": {
+      "session": "s1",
+      "account": "tecnico"
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-004",
+    "parametro": "P25",
+    "supuesto": "Dos fuentes incompatibles atribuyen el acto",
+    "entrada": {
+      "session": "s1",
+      "linked": "s1",
+      "conflict": true
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-005",
+    "parametro": "P26",
+    "supuesto": "Facultad exacta atribuida al emisor",
+    "entrada": {
+      "issuer": "i1",
+      "power": "reiniciar",
+      "grants": [
+        [
+          "i1",
+          "reiniciar"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-006",
+    "parametro": "P26",
+    "supuesto": "Firmante identificado, sin facultad en registro completo",
+    "entrada": {
+      "issuer": "i1",
+      "power": "reiniciar",
+      "grants": [
+        [
+          "i1",
+          "consultar"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-007",
+    "parametro": "P26",
+    "supuesto": "Registro institucional incompleto y sin atribución positiva",
+    "entrada": {
+      "issuer": "i1",
+      "power": "reiniciar",
+      "grants": [],
+      "complete": false
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-008",
+    "parametro": "P26",
+    "supuesto": "Registro completo sin la facultad requerida",
+    "entrada": {
+      "issuer": "i1",
+      "power": "reiniciar",
+      "grants": [],
+      "complete": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-009",
+    "parametro": "P27",
+    "supuesto": "Acción, recurso, destinatario y finalidad incluidos",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": [
+        [
+          "reiniciar",
+          "activo-A",
+          "agente-A",
+          "mantenimiento"
+        ]
+      ]
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-010",
+    "parametro": "P27",
+    "supuesto": "Permiso para otro recurso",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": [
+        [
+          "reiniciar",
+          "activo-B",
+          "agente-A",
+          "mantenimiento"
+        ]
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-011",
+    "parametro": "P27",
+    "supuesto": "La delegación permite otro agente",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": [
+        [
+          "reiniciar",
+          "activo-A",
+          "agente-B",
+          "mantenimiento"
+        ]
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-012",
+    "parametro": "P27",
+    "supuesto": "Finalidad diferente",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": [
+        [
+          "reiniciar",
+          "activo-A",
+          "agente-A",
+          "investigacion"
+        ]
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-013",
+    "parametro": "P27",
+    "supuesto": "Alcance vacío explícito",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": []
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-014",
+    "parametro": "P27",
+    "supuesto": "Alcance desconocido, distinto de vacío",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ]
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-015",
+    "parametro": "P28",
+    "supuesto": "Acto completamente dentro de la vigencia",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "110",
+        "110"
+      ],
+      "end": [
+        "190",
+        "190"
+      ]
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-016",
+    "parametro": "P28",
+    "supuesto": "Acto termina después de caducar el permiso",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "190",
+        "190"
+      ],
+      "end": [
+        "210",
+        "210"
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-017",
+    "parametro": "P28",
+    "supuesto": "Incertidumbre sobre el comienzo en el límite",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "99",
+        "101"
+      ],
+      "end": [
+        "190",
+        "190"
+      ]
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-018",
+    "parametro": "P28",
+    "supuesto": "Extremos cerrados iguales a la ventana",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "100",
+        "100"
+      ],
+      "end": [
+        "200",
+        "200"
+      ]
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-019",
+    "parametro": "P28",
+    "supuesto": "Incertidumbre del fin que cruza el límite",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "190",
+        "190"
+      ],
+      "end": [
+        "199",
+        "201"
+      ]
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-020",
+    "parametro": "P28",
+    "supuesto": "Enteros distintos que colapsan al convertir a doble precisión",
+    "entrada": {
+      "window": [
+        "9007199254740991",
+        "9007199254740992"
+      ],
+      "start": [
+        "9007199254740991",
+        "9007199254740991"
+      ],
+      "end": [
+        "9007199254740993",
+        "9007199254740993"
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-021",
+    "parametro": "P28",
+    "supuesto": "Marca de tiempo ausente",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "110",
+        "110"
+      ]
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-022",
+    "parametro": "P29",
+    "supuesto": "Revocación efectiva antes de comenzar",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [
+        [
+          "100",
+          "100"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-023",
+    "parametro": "P29",
+    "supuesto": "Revocación efectiva durante la actuación",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [
+        [
+          "190",
+          "190"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-024",
+    "parametro": "P29",
+    "supuesto": "Revocación posterior no retroactiva",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [
+        [
+          "210",
+          "210"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-025",
+    "parametro": "P29",
+    "supuesto": "Ausencia acreditada en historia completa",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [],
+      "complete": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-026",
+    "parametro": "P29",
+    "supuesto": "Ausencia de registros en historia incompleta",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [],
+      "complete": false
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-027",
+    "parametro": "P29",
+    "supuesto": "Efectividad incierta alrededor del final",
+    "entrada": {
+      "end": [
+        "200",
+        "200"
+      ],
+      "revocations": [
+        [
+          "199",
+          "201"
+        ]
+      ],
+      "complete": true
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-028",
+    "parametro": "P30",
+    "supuesto": "Emisión anterior al comienzo",
+    "entrada": {
+      "issued": [
+        "90",
+        "90"
+      ],
+      "start": [
+        "100",
+        "100"
+      ]
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-029",
+    "parametro": "P30",
+    "supuesto": "Aprobación posterior con fecha redactada anterior",
+    "entrada": {
+      "issued": [
+        "110",
+        "110"
+      ],
+      "start": [
+        "100",
+        "100"
+      ],
+      "written_date": "80"
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-030",
+    "parametro": "P30",
+    "supuesto": "Orden incierto por precisión del reloj",
+    "entrada": {
+      "issued": [
+        "99",
+        "101"
+      ],
+      "start": [
+        "100",
+        "100"
+      ]
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-031",
+    "parametro": "P30",
+    "supuesto": "Instantes exactamente simultáneos no son precedencia estricta",
+    "entrada": {
+      "issued": [
+        "100",
+        "100"
+      ],
+      "start": [
+        "100",
+        "100"
+      ]
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-032",
+    "parametro": "P31",
+    "supuesto": "Titulares canónicos diferentes",
+    "entrada": {
+      "applicable": true,
+      "principal_a": "persona-A",
+      "principal_b": "persona-B"
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-033",
+    "parametro": "P31",
+    "supuesto": "Mismo principal con cuentas distintas",
+    "entrada": {
+      "applicable": true,
+      "principal_a": "persona-A",
+      "principal_b": "persona-A",
+      "account_a": "a",
+      "account_b": "b"
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-034",
+    "parametro": "P31",
+    "supuesto": "Cuentas distintas sin atribución canónica",
+    "entrada": {
+      "applicable": true,
+      "account_a": "a",
+      "account_b": "b"
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-035",
+    "parametro": "P31",
+    "supuesto": "No se exige separación en este perfil",
+    "entrada": {
+      "applicable": false
+    },
+    "esperado": "NO_APLICABLE"
+  },
+  {
+    "id": "PR-036",
+    "parametro": "P32",
+    "supuesto": "Acto previsto en plan previo",
+    "entrada": {
+      "act": "acto-1",
+      "plan": [
+        "acto-1"
+      ],
+      "complete": true,
+      "prior": true
+    },
+    "esperado": "1"
+  },
+  {
+    "id": "PR-037",
+    "parametro": "P32",
+    "supuesto": "Acto urgente autorizado pero fuera del plan ordinario",
+    "entrada": {
+      "act": "acto-1",
+      "plan": [
+        "acto-2"
+      ],
+      "complete": true,
+      "prior": true,
+      "emergency_permit": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-038",
+    "parametro": "P32",
+    "supuesto": "Plan de cobertura incompleta",
+    "entrada": {
+      "act": "acto-1",
+      "plan": [
+        "acto-2"
+      ],
+      "complete": false,
+      "prior": true
+    },
+    "esperado": "U"
+  },
+  {
+    "id": "PR-039",
+    "parametro": "P32",
+    "supuesto": "Se aporta sólo una versión posterior como plan previo",
+    "entrada": {
+      "act": "acto-1",
+      "plan": [
+        "acto-1"
+      ],
+      "complete": true,
+      "prior": false
+    },
+    "esperado": "NO_ADMISION"
+  },
+  {
+    "id": "PR-040",
+    "parametro": "P32",
+    "supuesto": "Plan previo explícitamente vacío",
+    "entrada": {
+      "act": "acto-1",
+      "plan": [],
+      "complete": true,
+      "prior": true
+    },
+    "esperado": "0"
+  },
+  {
+    "id": "PR-041",
+    "parametro": "P28",
+    "supuesto": "Número temporal no canónico",
+    "entrada": {
+      "window": [
+        "100",
+        "200"
+      ],
+      "start": [
+        "1e2",
+        "1e2"
+      ],
+      "end": [
+        "190",
+        "190"
+      ]
+    },
+    "esperado": "FALLO_TECNICO"
+  },
+  {
+    "id": "PR-042",
+    "parametro": "P28",
+    "supuesto": "Intervalo temporal invertido",
+    "entrada": {
+      "window": [
+        "200",
+        "100"
+      ],
+      "start": [
+        "110",
+        "110"
+      ],
+      "end": [
+        "190",
+        "190"
+      ]
+    },
+    "esperado": "FALLO_TECNICO"
+  },
+  {
+    "id": "PR-043",
+    "parametro": "P26",
+    "supuesto": "No admisión por procedencia inválida, distinta de incompetencia del actuante",
+    "entrada": {
+      "admitted": false
+    },
+    "esperado": "NO_ADMISION"
+  },
+  {
+    "id": "PR-044",
+    "parametro": "P27",
+    "supuesto": "Tipo incorrecto en el conjunto de alcance",
+    "entrada": {
+      "act": [
+        "reiniciar",
+        "activo-A",
+        "agente-A",
+        "mantenimiento"
+      ],
+      "scope": true
+    },
+    "esperado": "FALLO_TECNICO"
+  },
+  {
+    "id": "PR-045",
+    "parametro": "P26",
+    "supuesto": "La marca de cobertura usa texto en vez de un valor lógico",
+    "entrada": {
+      "issuer": "i1",
+      "power": "reiniciar",
+      "grants": [],
+      "complete": "false"
+    },
+    "esperado": "FALLO_TECNICO"
+  },
+  {
+    "id": "PR-046",
+    "parametro": "P31",
+    "supuesto": "La activación usa un número en vez de un valor lógico",
+    "entrada": {
+      "applicable": 1,
+      "principal_a": "A",
+      "principal_b": "B"
+    },
+    "esperado": "FALLO_TECNICO"
+  }
+]

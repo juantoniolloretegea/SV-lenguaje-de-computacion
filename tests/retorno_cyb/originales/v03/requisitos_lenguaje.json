@@ -1,0 +1,82 @@
+[
+  {
+    "id": "RS01",
+    "necesidad": "Identidad y atribución separadas del resultado técnico",
+    "destinos": "P25; P07/autenticación; C02/C11",
+    "oferta": "Instancia, procedencia, regla de admisión y artefactos referenciados en LIG/0.1.",
+    "contraste_exigido": "Recuperar principal, sesión y acto con sus tipos y relaciones, conservando la identidad desconocida sin atribuir falsamente responsabilidad humana.",
+    "testigos": "SI01, SI05, SI09",
+    "dictamen": "Representación exacta posible mediante contrato externo; consumo semántico no acreditado.",
+    "responsable": "DFL-005; dominio y proveedor de identidad"
+  },
+  {
+    "id": "RS02",
+    "necesidad": "Autoridad y delegación con alcance limitado",
+    "destinos": "P26/P27; C11",
+    "oferta": "AuthorityDeclaration y referencias exactas; no autenticación ni concesión de autoridad.",
+    "contraste_exigido": "Comprobar raíz competente y cada arista; distinguir sujeto representado, actor efectivo y destinatario. Rechazar ampliación indebida, ciclo no admitido o tramo ausente; declarar límite institucional.",
+    "testigos": "SI02, SI06",
+    "dictamen": "Las huellas preservan declaraciones; no acreditan su legitimidad.",
+    "responsable": "DFL-005; contrato operacional y autoridad institucional"
+  },
+  {
+    "id": "RS03",
+    "necesidad": "Tiempo, revocación y antecedentes",
+    "destinos": "P28–P30; C07",
+    "oferta": "TransitionData e información lateral; comprobaciones estructurales de contexto.",
+    "contraste_exigido": "Mantener precisión temporal y diferencias entre emisión, efecto, registro y sellado; no hacer retroactiva por defecto una revocación. Conservar el orden y las dependencias afectadas.",
+    "testigos": "SI03, SI04; PR-015–032",
+    "dictamen": "No se acredita causalidad ejecutiva ni continuidad persistente entre versiones.",
+    "responsable": "DFL-003/004/005; contrato de observación y tiempo"
+  },
+  {
+    "id": "RS04",
+    "necesidad": "Vistas de evidencia por finalidad y destinatario",
+    "destinos": "C02/C13/C15",
+    "oferta": "Artefactos externos e información lateral permiten conservar referencias a vistas diferentes.",
+    "contraste_exigido": "Recuperar sólo la vista autorizada para ese destinatario, explicar su vínculo con el original y controlar acceso, retención y reidentificación. Un hash o texto opaco no demuestra aplicación de esa política.",
+    "testigos": "SI07, SI08",
+    "dictamen": "Preservación de bytes no equivale a control material de difusión; función ejecutiva pendiente de contrato y soporte.",
+    "responsable": "DFL-005/009; custodia y responsable del tratamiento"
+  },
+  {
+    "id": "RS05",
+    "necesidad": "Razón, plan y autorización de la actuación",
+    "destinos": "P32; C08–C12",
+    "oferta": "Definición de operación y referencias exactas a documentos externos.",
+    "contraste_exigido": "Distinguir lo previsto de lo autorizado; conservar razón, excepción urgente y consecuencias sin equiparar desviación de plan a ilicitud.",
+    "testigos": "SI10; PR-037–041",
+    "dictamen": "Distinción documental exigible ahora; productor del consejo todavía no acreditado.",
+    "responsable": "DFL-005/006; dominio y autoridad"
+  },
+  {
+    "id": "RS06",
+    "necesidad": "Admisión, U y fallo técnico con diferente estatuto",
+    "destinos": "C02/C06; todos los parámetros",
+    "oferta": "AdmissibilitySpec y CaptureSpec nominales; K1-T pendiente.",
+    "contraste_exigido": "Probar admisión de evidencia de un acto ilícito, no admisión de prueba inválida, no aplicabilidad, indeterminación y fallo técnico, sin ampliar Tri.",
+    "testigos": "PR-034–044; HP02",
+    "dictamen": "Los auxiliares documentales se han ensayado; no se ejecutó la transducción productiva SV.",
+    "responsable": "K1-T; DFL-006"
+  },
+  {
+    "id": "RS07",
+    "necesidad": "Cobertura de permisos, datos y flujos",
+    "destinos": "C05/C11/C15",
+    "oferta": "Usos ordenados, compartición explícita y referencias de ligadura.",
+    "contraste_exigido": "Cubrir instancias, permisos, cadenas de delegación y flujos con fronteras; detectar rutas salientes fuera del control, condiciones no evaluadas y conjuntos vacíos injustificados.",
+    "testigos": "HP04, HP08; XA04/XA10",
+    "dictamen": "No se ha probado un sistema SASE ni cobertura material de una infraestructura.",
+    "responsable": "Dominio; soporte y operación; DFL-009 donde corresponda"
+  },
+  {
+    "id": "RS08",
+    "necesidad": "Explicación legítima y separación de salidas",
+    "destinos": "C13; P02 frente a P25–P32",
+    "oferta": "Frame exige arquitectura constituida; la proyección documental no la crea.",
+    "contraste_exigido": "El consejo conserva resultado técnico, legitimidad, incertidumbre y consecuencias. Ejecución válida con identidad idéntica produce iguales bytes; fallo técnico no es salida alternativa del dominio.",
+    "testigos": "Diez pares SI01–SI10",
+    "dictamen": "No se constituyó una célula ni se ejecutó un Frame CYB.",
+    "responsable": "Puerta G6 y obligaciones algebraicas posteriores; DFL-006"
+  }
+]

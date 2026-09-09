@@ -1,0 +1,888 @@
+[
+  {
+    "id": "CT-01",
+    "titulo": "Inicio documentado con historia anterior expresamente desconocida",
+    "clase": "partida",
+    "datos": {
+      "instante_acto": 20,
+      "instante_observacion": 10,
+      "limite_vigencia": 25,
+      "ambito": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "observados": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "cobertura_acreditada": true,
+      "origen": "estado_observado",
+      "historia_previa": "desconocida"
+    },
+    "esperado": "PARTIDA_ACOTADA",
+    "razon": "La captura permite empezar una evaluación; no demuestra la historia anterior."
+  },
+  {
+    "id": "CT-02",
+    "titulo": "Captura posterior presentada como estado anterior",
+    "clase": "partida",
+    "datos": {
+      "instante_acto": 20,
+      "instante_observacion": 21,
+      "limite_vigencia": 25,
+      "ambito": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "observados": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "cobertura_acreditada": true,
+      "origen": "estado_observado",
+      "historia_previa": "desconocida"
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "El estado posterior no reconstruye por sí solo el estado de partida."
+  },
+  {
+    "id": "CT-03",
+    "titulo": "Réplica omitida del reconocimiento",
+    "clase": "partida",
+    "datos": {
+      "instante_acto": 20,
+      "instante_observacion": 10,
+      "limite_vigencia": 25,
+      "ambito": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "observados": [
+        "servidor",
+        "consola"
+      ],
+      "cobertura_acreditada": true,
+      "origen": "estado_observado",
+      "historia_previa": "desconocida"
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "No puede acreditarse cobertura de todos los consumidores declarados."
+  },
+  {
+    "id": "CT-04",
+    "titulo": "Captura tratada como origen histórico cierto",
+    "clase": "partida",
+    "datos": {
+      "instante_acto": 20,
+      "instante_observacion": 10,
+      "limite_vigencia": 25,
+      "ambito": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "observados": [
+        "servidor",
+        "replica",
+        "consola"
+      ],
+      "cobertura_acreditada": true,
+      "origen": "genesis_demostrada",
+      "historia_previa": "desconocida"
+    },
+    "esperado": "AFIRMACION_NO_SOSTENIDA",
+    "razon": "Historia anterior desconocida y génesis demostrada son incompatibles."
+  },
+  {
+    "id": "CT-05",
+    "titulo": "Inventario vacío sin acreditación de cobertura",
+    "clase": "partida",
+    "datos": {
+      "instante_acto": 20,
+      "instante_observacion": 10,
+      "limite_vigencia": 25,
+      "ambito": [],
+      "observados": [],
+      "cobertura_acreditada": false,
+      "origen": "estado_observado",
+      "historia_previa": "desconocida"
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "La coincidencia de dos conjuntos vacíos no demuestra ausencia de activos."
+  },
+  {
+    "id": "CT-06",
+    "titulo": "Antecedentes múltiples identificados sin atribuir causalidad a toda referencia",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "derivacion",
+          true
+        ],
+        [
+          "a",
+          "c",
+          "derivacion",
+          true
+        ],
+        [
+          "b",
+          "c",
+          "referencia",
+          false
+        ]
+      ]
+    },
+    "esperado": "RELACIONES_CONSERVADAS",
+    "razon": "Una bifurcación documentada admite más de un antecedente y relaciones distintas."
+  },
+  {
+    "id": "CT-07",
+    "titulo": "Referencia a antecedente ausente",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "d": "huella-d"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "derivacion",
+          true
+        ],
+        [
+          "a",
+          "c",
+          "derivacion",
+          true
+        ],
+        [
+          "b",
+          "c",
+          "referencia",
+          false
+        ]
+      ]
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "No se completa el antecedente ausente por semejanza de nombres."
+  },
+  {
+    "id": "CT-08",
+    "titulo": "Identificador estable con contenido sustituido",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "otra-huella",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "derivacion",
+          true
+        ],
+        [
+          "a",
+          "c",
+          "derivacion",
+          true
+        ],
+        [
+          "b",
+          "c",
+          "referencia",
+          false
+        ]
+      ]
+    },
+    "esperado": "EVIDENCIA_NO_ADMITIDA",
+    "razon": "La identidad de contenido exigida no coincide."
+  },
+  {
+    "id": "CT-09",
+    "titulo": "Ciclo de precedencia estricta entre versiones",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "precedencia_estricta",
+          true
+        ],
+        [
+          "b",
+          "a",
+          "precedencia_estricta",
+          true
+        ]
+      ]
+    },
+    "esperado": "EVIDENCIA_NO_ADMITIDA",
+    "razon": "El perfil temporal no admite que cada versión preceda estrictamente a la otra."
+  },
+  {
+    "id": "CT-10",
+    "titulo": "Orden documental elevado a causalidad sin respaldo",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "causa",
+          false
+        ]
+      ]
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "El enlace temporal no acredita causa del efecto."
+  },
+  {
+    "id": "CT-11",
+    "titulo": "Referencias recíprocas sin precedencia temporal",
+    "clase": "linaje",
+    "datos": {
+      "nodos": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "referencias": {
+        "a": "huella-a",
+        "b": "huella-b",
+        "c": "huella-c"
+      },
+      "relaciones": [
+        [
+          "a",
+          "b",
+          "referencia",
+          false
+        ],
+        [
+          "b",
+          "a",
+          "referencia",
+          false
+        ]
+      ]
+    },
+    "esperado": "RELACIONES_CONSERVADAS",
+    "razon": "Un ciclo de referencias no es automáticamente un ciclo de causalidad."
+  },
+  {
+    "id": "CT-12",
+    "titulo": "Designación y aceptación correspondientes a la misma obligación",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "designacion",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": {
+        "obligacion": "O1",
+        "titular": "unidad-B",
+        "instante": 16
+      },
+      "exonera_anterior": false
+    },
+    "esperado": "ASIGNACION_ACREDITADA_EN_PERFIL",
+    "razon": "Se comprueba una asignación institucional documental, sin resolver responsabilidad jurídica."
+  },
+  {
+    "id": "CT-13",
+    "titulo": "Permiso de ejecución presentado como asignación de deber",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "permiso",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": {
+        "obligacion": "O1",
+        "titular": "unidad-B",
+        "instante": 16
+      },
+      "exonera_anterior": false
+    },
+    "esperado": "ASIGNACION_NO_ACREDITADA",
+    "razon": "Poder ejecutar y deber hacerse cargo son relaciones distintas."
+  },
+  {
+    "id": "CT-14",
+    "titulo": "Recepción de pruebas presentada como relevo del responsable del acto",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "recibo_custodia",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": {
+        "obligacion": "O1",
+        "titular": "unidad-B",
+        "instante": 16
+      },
+      "exonera_anterior": false
+    },
+    "esperado": "ASIGNACION_NO_ACREDITADA",
+    "razon": "Recibir evidencias no equivale a asumir la actuación técnica previa."
+  },
+  {
+    "id": "CT-15",
+    "titulo": "Falta la aceptación exigida por el procedimiento",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "designacion",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": null,
+      "exonera_anterior": false
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "El acto constitutivo no está completo en este perfil."
+  },
+  {
+    "id": "CT-16",
+    "titulo": "Designación eficaz sin aceptación cuando el procedimiento no la exige",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "designacion",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": false,
+      "aceptacion": null,
+      "exonera_anterior": false
+    },
+    "esperado": "ASIGNACION_ACREDITADA_EN_PERFIL",
+    "razon": "No se inventa una condición universal de aceptación."
+  },
+  {
+    "id": "CT-17",
+    "titulo": "Aceptación de otra obligación",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "designacion",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": {
+        "obligacion": "O2",
+        "titular": "unidad-B",
+        "instante": 16
+      },
+      "exonera_anterior": false
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "Una recepción de otro encargo no satisface la condición del presente."
+  },
+  {
+    "id": "CT-18",
+    "titulo": "El relevo pretende borrar por sí solo la responsabilidad anterior",
+    "clase": "asignacion",
+    "datos": {
+      "clase_documento": "designacion",
+      "facultad_acreditada": true,
+      "obligacion": "O1",
+      "titular": "unidad-B",
+      "efecto": 15,
+      "instante": 20,
+      "aceptacion_exigida": true,
+      "aceptacion": {
+        "obligacion": "O1",
+        "titular": "unidad-B",
+        "instante": 16
+      },
+      "exonera_anterior": true
+    },
+    "esperado": "AFIRMACION_NO_SOSTENIDA",
+    "razon": "Este perfil no tiene potestad para declarar exoneración jurídica."
+  },
+  {
+    "id": "CT-19",
+    "titulo": "Conciliación de sesiones por identidad",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "baja",
+          "objeto": "s1",
+          "clase": "sesion"
+        }
+      ],
+      "fin": [
+        "s2"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "CONCILIACION_COINCIDENTE",
+    "razon": "El cierre coincide con las altas y bajas de la misma clase."
+  },
+  {
+    "id": "CT-20",
+    "titulo": "Retransmisión del mismo suceso conservada una sola vez",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "baja",
+          "objeto": "s1",
+          "clase": "sesion"
+        },
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        }
+      ],
+      "fin": [
+        "s2"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "CONCILIACION_COINCIDENTE",
+    "razon": "La repetición del registro no es una segunda alta."
+  },
+  {
+    "id": "CT-21",
+    "titulo": "Mismo identificador de suceso con contenidos incompatibles",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "baja",
+          "objeto": "s1",
+          "clase": "sesion"
+        },
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s3",
+          "clase": "sesion"
+        }
+      ],
+      "fin": [
+        "s2"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "EVIDENCIA_NO_ADMITIDA",
+    "razon": "No se elige la última versión silenciosamente."
+  },
+  {
+    "id": "CT-22",
+    "titulo": "Misma cantidad final con una sesión distinta",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "baja",
+          "objeto": "s1",
+          "clase": "sesion"
+        }
+      ],
+      "fin": [
+        "s3"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "CONCILIACION_DISCORDANTE",
+    "razon": "Contar una sesión no demuestra que sea la sesión autorizada."
+  },
+  {
+    "id": "CT-23",
+    "titulo": "Efecto externo incierto de una baja",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "efecto_incierto",
+          "objeto": "s1",
+          "clase": "sesion"
+        }
+      ],
+      "fin": [
+        "s2"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "No se reintenta ni se borra una sesión por inferencia."
+  },
+  {
+    "id": "CT-24",
+    "titulo": "Baja de una cuenta usada para cerrar una sesión",
+    "clase": "conciliacion",
+    "datos": {
+      "clase": "sesion",
+      "inicio": [
+        "s1"
+      ],
+      "movimientos": [
+        {
+          "id": "e1",
+          "accion": "alta",
+          "objeto": "s2",
+          "clase": "sesion"
+        },
+        {
+          "id": "e2",
+          "accion": "baja",
+          "objeto": "s1",
+          "clase": "cuenta"
+        }
+      ],
+      "fin": [
+        "s2"
+      ],
+      "cobertura_acreditada": true
+    },
+    "esperado": "EVIDENCIA_NO_ADMITIDA",
+    "razon": "Cuenta, credencial y sesión tienen ciclos de vida distintos."
+  },
+  {
+    "id": "CT-25",
+    "titulo": "Tres trayectos con comprobaciones pertinentes",
+    "clase": "perimetro",
+    "datos": {
+      "instante": 20,
+      "generacion": "g2",
+      "trayectos": [
+        "entrada-servicio",
+        "salida-api",
+        "consola"
+      ],
+      "pruebas": [
+        {
+          "trayecto": "entrada-servicio",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "salida-api",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "consola",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        }
+      ]
+    },
+    "esperado": "COBERTURA_ACREDITADA_EN_PERFIL",
+    "razon": "Sólo acredita los trayectos y el criterio del caso sintético."
+  },
+  {
+    "id": "CT-26",
+    "titulo": "Pasarela de entrada usada como cobertura de salida y consola",
+    "clase": "perimetro",
+    "datos": {
+      "instante": 20,
+      "generacion": "g2",
+      "trayectos": [
+        "entrada-servicio",
+        "salida-api",
+        "consola"
+      ],
+      "pruebas": [
+        {
+          "trayecto": "entrada-servicio",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        }
+      ]
+    },
+    "esperado": "COBERTURA_INSUFICIENTE",
+    "razon": "Un camino protegido no cubre los restantes."
+  },
+  {
+    "id": "CT-27",
+    "titulo": "Prueba favorable de otra generación del control",
+    "clase": "perimetro",
+    "datos": {
+      "instante": 20,
+      "generacion": "g3",
+      "trayectos": [
+        "entrada-servicio",
+        "salida-api",
+        "consola"
+      ],
+      "pruebas": [
+        {
+          "trayecto": "entrada-servicio",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "salida-api",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "consola",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        }
+      ]
+    },
+    "esperado": "COBERTURA_INSUFICIENTE",
+    "razon": "La configuración cambió después de comprobarse."
+  },
+  {
+    "id": "CT-28",
+    "titulo": "Inventario de trayectos ausente",
+    "clase": "perimetro",
+    "datos": {
+      "instante": 20,
+      "generacion": "g2",
+      "trayectos": [],
+      "pruebas": [
+        {
+          "trayecto": "entrada-servicio",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "salida-api",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        },
+        {
+          "trayecto": "consola",
+          "generacion": "g2",
+          "resultado": "favorable",
+          "valida_hasta": 25
+        }
+      ]
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "No existe una conclusión favorable por conjunto vacío."
+  },
+  {
+    "id": "CT-29",
+    "titulo": "Permiso retirado antes del acto siguiente",
+    "clase": "vigencia",
+    "datos": {
+      "instante_acto": 20,
+      "dependencias": [
+        "permiso-A",
+        "sesion-s1",
+        "perfil-v1"
+      ],
+      "cambios": [
+        {
+          "objeto": "permiso-A",
+          "efecto": 18
+        }
+      ],
+      "regla": "sin_retroactividad"
+    },
+    "esperado": "REQUIERE_REEVALUACION",
+    "razon": "Se debe reevaluar la facultad del acto nuevo."
+  },
+  {
+    "id": "CT-30",
+    "titulo": "Cambio ajeno a las dependencias declaradas",
+    "clase": "vigencia",
+    "datos": {
+      "instante_acto": 20,
+      "dependencias": [
+        "permiso-A",
+        "sesion-s1",
+        "perfil-v1"
+      ],
+      "cambios": [
+        {
+          "objeto": "otra-clave",
+          "efecto": 18
+        }
+      ],
+      "regla": "sin_retroactividad"
+    },
+    "esperado": "SIN_CAMBIO_PERTINENTE_DECLARADO",
+    "razon": "No se invalida indiscriminadamente todo el expediente."
+  },
+  {
+    "id": "CT-31",
+    "titulo": "Revocación efectiva posterior al acto valorado",
+    "clase": "vigencia",
+    "datos": {
+      "instante_acto": 20,
+      "dependencias": [
+        "permiso-A",
+        "sesion-s1",
+        "perfil-v1"
+      ],
+      "cambios": [
+        {
+          "objeto": "permiso-A",
+          "efecto": 22
+        }
+      ],
+      "regla": "sin_retroactividad"
+    },
+    "esperado": "SIN_CAMBIO_PERTINENTE_DECLARADO",
+    "razon": "El perfil fijado no atribuye efecto retroactivo."
+  },
+  {
+    "id": "CT-32",
+    "titulo": "Tiempo de efecto desconocido",
+    "clase": "vigencia",
+    "datos": {
+      "instante_acto": 20,
+      "dependencias": [
+        "permiso-A",
+        "sesion-s1",
+        "perfil-v1"
+      ],
+      "cambios": [
+        {
+          "objeto": "permiso-A",
+          "efecto": null
+        }
+      ],
+      "regla": "sin_retroactividad"
+    },
+    "esperado": "NO_CONCLUYENTE",
+    "razon": "Conocer que existe un cambio no fija cuándo afectó al acto."
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "id": "RS09",
+    "necesidad": "Estado inicial observado frente a referencia aprobada",
+    "destinos": "C01/C05/C07/C17; EP01–EP06",
+    "contraste_exigido": "Recuperar ambos estados y el límite histórico sin fabricar génesis ni valores negativos por silencio.",
+    "testigos": "CT-01–05",
+    "responsable": "Dominio: contrato y alcance; Lenguaje/LIG: representación y recuperación; capturador: observación.",
+    "deuda": "DFL-005/006; relación con DFL-003/004",
+    "dictamen": "Necesidad documental constituida; encaje representacional por contrastar; ejecución material no acreditada."
+  },
+  {
+    "id": "RS10",
+    "necesidad": "Antecedentes múltiples y relaciones tipadas",
+    "destinos": "C02/C07/C17; EP10/EP11",
+    "contraste_exigido": "Recuperar extremos exactos, tipo y evidencia de cada relación; separar referencia circular de precedencia estricta imposible.",
+    "testigos": "CT-06–11",
+    "responsable": "Lenguaje: encaje; motor/plataforma: persistencia y detección de bifurcación material; dominio: significado del vínculo.",
+    "deuda": "DFL-003/004/005; continuidad material pendiente",
+    "dictamen": "Necesidad documental constituida; encaje representacional por contrastar; ejecución material no acreditada."
+  },
+  {
+    "id": "RS11",
+    "necesidad": "Custodia, designación, aceptación y deber pendiente",
+    "destinos": "C04/C11/C13/C17; EP07/EP08/EP18",
+    "contraste_exigido": "Conservar por separado permiso, asignación, recepción, obligación, titular y régimen de efecto; no otorgar exoneración ni autoridad por transporte.",
+    "testigos": "CT-12–18",
+    "responsable": "Organización competente: atribución de funciones; dominio: relación documental; Lenguaje: conservación; custodia: entrega verificable.",
+    "deuda": "DFL-005; capacidad material institucional externa",
+    "dictamen": "Necesidad documental constituida; encaje representacional por contrastar; ejecución material no acreditada."
+  },
+  {
+    "id": "RS12",
+    "necesidad": "Conciliación, cobertura y reevaluación selectiva",
+    "destinos": "C05/C06/C07/C17; EP09/EP12–EP14",
+    "contraste_exigido": "Conservar clase e identidad, efectos inciertos y trayectos. Vincular prueba a generación y vigencia; reevaluar dependencias afectadas.",
+    "testigos": "CT-19–32",
+    "responsable": "Dominio: criterio; capturadores: fuentes; motor: relaciones y continuidad; infraestructura: controles materiales.",
+    "deuda": "DFL-003/004/005/006/009",
+    "dictamen": "Necesidad documental constituida; encaje representacional por contrastar; ejecución material no acreditada."
+  }
+]
