@@ -1,0 +1,92 @@
+{
+  "version": "verificacion-frontal/1",
+  "fecha": "2026-09-09",
+  "compromiso_previo": "5d6d15b0f9f189d31eede4c28e32391f91dd795a",
+  "source_head": "5627416505b119192423722e94a71a3137f1a17a",
+  "checkout_ci": "e5854e72ed0159c140dbd289a5645c143ebd0867",
+  "arbol_ci": "488e588a16db189d3c681bd9b1b44226cd4d1518",
+  "arbol_cabeza": "488e588a16db189d3c681bd9b1b44226cd4d1518",
+  "flujos": [
+    {
+      "conclusion": "success",
+      "id": 34397677270,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677270/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677270/logs",
+      "name": "Retorno CYB documental",
+      "run_number": 16,
+      "status": "completed",
+      "workflow_id": 353947079
+    },
+    {
+      "conclusion": "success",
+      "id": 34397677253,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677253/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677253/logs",
+      "name": "Conformidad SVP",
+      "run_number": 366,
+      "status": "completed",
+      "workflow_id": 340461758
+    },
+    {
+      "conclusion": "success",
+      "id": 34397677258,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677258/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677258/logs",
+      "name": "R0-8 Baseline nativa",
+      "run_number": 233,
+      "status": "completed",
+      "workflow_id": 341209235
+    },
+    {
+      "conclusion": "success",
+      "id": 34397677153,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677153/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677153/logs",
+      "name": "Fila 7 fuentes y ejecución sin intérpretes",
+      "run_number": 24,
+      "status": "completed",
+      "workflow_id": 353009115
+    },
+    {
+      "conclusion": "success",
+      "id": 34397677142,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677142/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677142/logs",
+      "name": "R0 WASM paridad nativa y navegador",
+      "run_number": 228,
+      "status": "completed",
+      "workflow_id": 341318815
+    },
+    {
+      "conclusion": "success",
+      "id": 34397677412,
+      "jobs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677412/jobs",
+      "logs_url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34397677412/logs",
+      "name": "R0 Rust",
+      "run_number": 282,
+      "status": "completed",
+      "workflow_id": 340683000
+    }
+  ],
+  "pruebas_rust": {
+    "referencia": "1.98.0",
+    "adicional": "1.98.1",
+    "total": 376,
+    "fallidas": 0,
+    "pruebas_frontales_nuevas": 7,
+    "destino_de_las_pruebas_nuevas": "nativo CI"
+  },
+  "conformidad": {
+    "validos": 14,
+    "invalidos": 106
+  },
+  "mutaciones_previas": {
+    "detectadas": 43,
+    "supervivientes": 0
+  },
+  "paridad": "Suite anterior nativo/WASI/navegador conservada; no verifica todavía transporte del nuevo diagnóstico estructurado.",
+  "localizacion_completa": false,
+  "playground_desplegado": false,
+  "r1_profesional_enlazado": false,
+  "compilacion_local": "No ejecutada: instalaciones temporales con fallo de carga/metadatos; no se atribuye ese fallo al SV."
+}
