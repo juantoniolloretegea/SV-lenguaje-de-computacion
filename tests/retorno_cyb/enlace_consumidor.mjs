@@ -16,7 +16,7 @@ insist(hash(ruleBytes)===consumerManifest.rules.sha256,'REGLAS_FIJAS');
 insist(hash(consumerBytes)===consumerManifest.implementation.sha256,'CONSUMIDOR_FIJO');
 // La carga procede de estos bytes ya comprobados, no de una segunda lectura.
 const consumer=await import(`data:text/javascript;base64,${consumerBytes.toString('base64')}`);
-let rules;
+export const documentaryRules=await import(`data:text/javascript;base64,${ruleBytes.toString('base64')}`);
 export function operationDefinition(key,variant) {
   const c=consumerManifest.consumers.find(c=>c.key===key);
   insist(c,'REGLA_NO_CONSTITUIDA');
@@ -53,7 +53,6 @@ export async function consumeBound(contract,expectedDefinition,publishedRecovere
   insist(bytes.toString('hex')===publishedRecovered,'RECUPERACION');
   const data=parse(bytes);
   // No hay invocación de código recibido: sólo el módulo conocido ya verificado.
-  rules??=await import(`data:text/javascript;base64,${rb.toString('base64')}`);
-  return consumer.consumeDocument(data,definition,rules);
+  return consumer.consumeDocument(data,definition,documentaryRules);
 }
 export const directConsumer=consumer.consumeDocument;
