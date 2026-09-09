@@ -353,3 +353,8 @@ El material `6899f58be5d37f5cb130b71ab65d33b5c06f5229` comprueba dos controles y
 **DFL-001:** [RETP-112](INVENTARIO_DE_EMISORES_DIAGNOSTICOS_Y_MIGRACION_ES_EN_2026_09_09.md) conserva 224 ubicaciones en 15 fuentes con causas, parámetros escritos y pérdidas de procedencia revisadas. Su reproducción y rechazo de fuente sustituida están comprobados. Alcanzabilidad por sitio, diagnósticos estructurados, plantillas, migración de oráculos, DG01–DG14 y entrega visible siguen pendientes. No se identifican 224 ubicaciones con 224 causas ni con cobertura acreditada. La anotación de campos no declarados del observador G/H frente al observador CYB permanece como está; no se modifica código ni se reabre su entrega.
 
 DFL-005 general conserva la recepción profesional R1 después del trabajo diagnóstico. DFL-009 y restantes obligaciones tecnológicas no quedan acreditadas por el inventario. DFL-011, acta del español y constituciones IMM/CYB intactas; no se añaden dependencias productivas, no se despliega y no se declaran permisos. Fila 9 y núcleo abiertos; dominios en pausa.
+
+
+## Continuación RETP-113 · Procedencia frontal
+
+Se comprometen los casos de la primera etapa de procedencia y explicación ES/EN antes de la realización. El alcance de DFL-001/011 conserva los emisores posteriores, migración de oráculos y transportes, DG01–DG14 y entrega visible. No se presume localizado el Lenguaje ni se habilita el relevo profesional R1. Véase [RETP-113](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-113).

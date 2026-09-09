@@ -1087,3 +1087,13 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Relevo:** fijar causas/esperados y alcanzabilidad por entrada, conservar procedencia, implementar plantillas y versionar la migración de CLI/ABI antes de sustituir las salidas. DG01–DG14, controles IMM/CYB × ES/EN en alcance representable y observación tras despliegue mantienen estado pendiente. DFL-001 permanece abierta; la anotación G/H ya existente se conserva. No se modifican interfaces productivas, tipos, gramática, IR, README, acta del español, dominios ni dependencias productivas. La recepción profesional R1 conserva su precedencia. Fila 9 abierta.
 
 **Estado:** INVENTARIO_ESTATICO_REVISADO_EN_CANDIDATA; ALCANZABILIDAD_POR_SITIO_Y_REALIZACION_PENDIENTES.
+
+
+<a id="retp-113"></a>
+## RETP-2026-113 — Primer incremento de procedencia y explicación frontal ES/EN
+
+**Mandato y corte:** continuación autorizada el 09/09/2026, después del punto de control LAB-030; base 39203889e2896389907e9a2ddffec0f60dc259e5, PR #89 en borrador. Lectura rectora: AGENTS, Pilares, perfiles, transición hasta §30, acta del español y contrato RETP-109–112.
+
+**Compromiso previo:** [sede, compatibilidad y alcance](REALIZACION_FRONTAL_DE_PROCEDENCIA_Y_EXPLICACION_ES_EN_2026_09_09.md); [casos fijados](../../tests/diagnostic_frontend/cases.rs). Se comprometen antes de realizar el cambio funcional. Procedencia desde tokenización/análisis y plantillas ES/EN de las causas frontales; no se reconstruyen desde Debug. Se declara la representación Rust del error y se conserva temporalmente la salida histórica CLI/ABI.
+
+**Estado inicial:** esperados comprometidos, realización y ejecución pendientes. No se cierra DG01–DG14 ni se localiza la bienformación posterior. No se modifican juicio, gramática, IR, constituciones de dominio o R1; no se añaden dependencias ni se publica en producción. Fila 9 permanece abierta.
