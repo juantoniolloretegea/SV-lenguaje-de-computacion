@@ -16,7 +16,8 @@ fn declarations(profile: SourceProfile, mappings: &str) -> String {
 
 fn reject(result: Result<IrProgram, CompileError>, reason: &str, cell: &str) {
     match result {
-        Err(CompileError::InvalidProgram(message)) => {
+        Err(error) if error.legacy_program_message().is_some() => {
+            let message = error.legacy_program_message().unwrap();
             for token in ["E115 (InvalidOutputSemantics)", reason, cell, "OutputSemantics S"] {
                 assert!(message.contains(token), "diagnóstico inesperado: {message}");
             }

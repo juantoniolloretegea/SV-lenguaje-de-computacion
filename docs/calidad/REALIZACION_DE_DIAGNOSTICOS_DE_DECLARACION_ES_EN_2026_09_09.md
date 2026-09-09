@@ -17,3 +17,9 @@ El tipo de error de compilación añadirá una variante estructurada de validaci
 [Casos fijados](../../tests/diagnostic_validation/cases.rs) (ruta desde la raíz: `tests/diagnostic_validation/cases.rs`). Ocho pruebas agrupan positivos y contraejemplos sobre E004, E115, referencias adelantadas/cruzadas, colisiones objeto/operación, nombres de archivo repetidos, UTF-8, CRLF, tabulaciones, aislamiento de la unidad sana y ausencia explícita de cobertura. Las pruebas existentes conservan sus esperados de admisión, IR y rechazo histórico; sólo se adaptará su lectura de la envoltura donde se emita la nueva variante.
 
 No se consideran cerrados DG01–DG14, la migración del resto de emisores, CLI/ABI ni playground. La producción visible y el relevo profesional R1 permanecen posteriores a la realización completa y verificada. Este incremento no autoriza refactorización, nuevas dependencias, traducciones profesionales ni cambios en dominios.
+
+## Realización candidata
+
+Casos previos registrados en `f15d411d40a943e3976822ad7e87061cd061a9ac`. La candidata añade las causas y el mapa paralelo descritos arriba. `CompileError::Diagnostic` expone `program_diagnostic()`; `legacy_program_message()` conserva acceso explícito al rechazo histórico. Las causas no migradas siguen devolviendo `InvalidProgram(String)`. Los oráculos históricos de cuatro familias leen ese acceso sin modificar sus fuentes ni sus esperados. Se conserva una señal explícita `provenance_complete` si faltase una correspondencia interna; una ausencia no concede admisión.
+
+Verificación de compilación, pruebas y conformidad: pendiente de CI en este corte. No se acredita compilación local; los toolchains disponibles en este entorno no proporcionan una biblioteca estándar utilizable. El testigo de medición del laboratorio no se convierte en medida de rendimiento de esta candidata.

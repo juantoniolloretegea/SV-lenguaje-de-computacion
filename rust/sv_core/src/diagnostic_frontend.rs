@@ -127,6 +127,11 @@ pub struct DiagnosticContext {
 }
 
 impl DiagnosticContext {
+    pub(crate) fn declaration(source_file: &str, source_sha256: &str,
+        profile: SourceProfile, byte_range: (usize, usize)) -> Self {
+        Self { unit_index: 0, source_file: source_file.into(), source_sha256: source_sha256.into(), profile, byte_range: Some(byte_range) }
+    }
+    pub(crate) fn in_unit(mut self, index: usize) -> Self { self.unit_index = index; self }
     pub fn unit_index(&self) -> usize { self.unit_index }
     pub fn source_file(&self) -> &str { &self.source_file }
     pub fn profile(&self) -> SourceProfile { self.profile }

@@ -809,6 +809,16 @@ pub fn compile_svp_with_profile(
     source_file: &str,
     profile: SourceProfile,
 ) -> Result<IrProgram, FrontendError> {
+    compile_with_provenance(source, source_file, profile).map(|parsed| parsed.program)
+}
+
+pub(crate) struct ParsedProgram {
+    pub(crate) program: IrProgram,
+    pub(crate) provenance: crate::diagnostic_validation::Provenance,
+}
+
+pub(crate) fn compile_with_provenance(source: &str, source_file: &str, profile: SourceProfile)
+    -> Result<ParsedProgram, FrontendError> {
     let (tokens, spans) = tokenize(source, source_file, profile)?;
     Parser::new(tokens, spans, source, source_file, profile).parse()
 }
@@ -938,8 +948,12 @@ impl<'a> Parser<'a> {
         }
     }
 
-    fn parse(mut self) -> Result<IrProgram, FrontendError> {
+    fn parse(mut self) -> Result<ParsedProgram, FrontendError> {
+        let mut provenance = crate::diagnostic_validation::Provenance::default();
+        let source_sha256 = sha256_hex(self.source.as_bytes());
         while !matches!(self.peek(), Token::Eof) {
+            let start = self.spans[self.pos].0;
+            let is_operation = self.peek_word()? == "let";
             match self.peek_word()? {
                 "codomain" => self.parse_codomain()?,
                 "output_semantics" => self.parse_output_semantics()?,
@@ -966,13 +980,14 @@ impl<'a> Parser<'a> {
                 "let" => self.parse_let()?,
                 other => return Err(self.unsupported(other, self.pos)),
             }
+            let context = crate::DiagnosticContext::declaration(self.source_file,
+                &source_sha256, self.profile, (start, self.spans[self.pos - 1].1));
+            if is_operation { provenance.operations.push(context); }
+            else { provenance.objects.push(context); }
         }
-        Ok(construction::program(
-            self.source_file,
-            sha256_hex(self.source.as_bytes()),
-            self.objects,
-            self.operations,
-        ))
+        Ok(ParsedProgram { program: construction::program(
+            self.source_file, source_sha256, self.objects, self.operations,
+        ), provenance })
     }
 
     fn parse_codomain(&mut self) -> Result<(), FrontendError> {

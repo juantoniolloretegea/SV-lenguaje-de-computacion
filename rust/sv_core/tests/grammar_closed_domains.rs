@@ -1,10 +1,11 @@
 use sv_core::{
-    compile_svp_assembly, compile_svp_profile, CompileError, SourceProfile, SourceUnit,
+    compile_svp_assembly, compile_svp_profile, SourceProfile, SourceUnit,
 };
 
 fn assert_closed_domain_rejection(source: &str, profile: SourceProfile, field: &str) {
     match compile_svp_profile(source, "probe.svp", profile) {
-        Err(CompileError::InvalidProgram(message)) => {
+        Err(error) if error.legacy_program_message().is_some() => {
+            let message = error.legacy_program_message().unwrap();
             assert!(message.contains(field), "diagnóstico inesperado: {message}");
             assert!(message.contains("dominio cerrado"), "diagnóstico inesperado: {message}");
         }
@@ -77,7 +78,8 @@ fn ensamblaje_no_rescata_un_literal_ajeno_de_otra_unidad() {
         SourceUnit::new(valid, "a.svp", SourceProfile::En),
         SourceUnit::new(foreign, "b.svp", SourceProfile::Es),
     ]) {
-        Err(CompileError::InvalidProgram(message)) => {
+        Err(error) if error.legacy_program_message().is_some() => {
+            let message = error.legacy_program_message().unwrap();
             assert!(message.contains("Pattern P"));
             assert!(message.contains("dominio cerrado"));
         }
