@@ -1008,3 +1008,13 @@ El final de fila 8 será el contrato CYB y el dictamen con evidencia, contraejem
 **DFL-009:** evaluación documental realizada con los registros 018/020 fijados en `e97fed715ff5e3ae19bbaccaf2852e9cd3288377`. Se conservan sus resultados como evidencia recibida, sin nueva ejecución de laboratorio. FFI y WASM no acreditan protección contra el anfitrión ensayado; proceso separado y servicio remoto requieren ensayos y contratos propios. Cloudflare/Workers u otra opción no se seleccionan ni se atribuyen a una realización no ejecutada. La deuda permanece abierta por sus obligaciones materiales; ya no está sólo diferida.
 
 **Dictamen y continuidad:** `ENLACE_DE_CONSUMO_DOCUMENTAL_VERIFICADO_EN_CANDIDATA`. Se ha resuelto la identidad de la regla consumida en este banco; no se han constituido autoridad, agente, captura/admisión ni consumidores profesionales CYB. Las correspondencias de §4 conservan RS01–12 y cotejan IMM/CYB bajo PT03/PT04/PT12/PT14, sin sumar permisos. La siguiente necesidad es el enlace operacional efectivo de identidad, competencia y alcance con los contratos recibidos por las API; cualquier decisión ausente vuelve como pregunta constitutiva precisa. K1-T, productores, Q0/SP, DFL-003/004/005 general/006 y R2/R3/R4 continúan según su capacidad. DFL-011/012/013 intactas. #87/#88 sin integrar; fila 9 y núcleo abiertos; CYB en pausa. No se modifica ningún README, acta histórica ni repositorio de dominio.
+
+
+<a id="retp-108"></a>
+## RETP-2026-108 — Frontera pública entre declaración documental y autoridad
+
+**Fecha:** 09/09/2026. **Mandato:** continuación autorizada por Juan Antonio Lloret Egea. Base e18a794926db07a6ec86d0ae38e6619f41db74eb, árbol b3327d968fe3822dc37e5b67d68ccec18120a66a; PR #88 sin integrar.
+
+**Contrato previo:** [consumo documental CYB, §8](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md#8-retp-108-frontera-entre-declaración-documental-y-autoridad). Se precisa la correspondencia de P25–P32/C11 con LIG y R1: autoridad declarada e integridad no son facultades institucionales; falta el contrato gobernado que produzca referentes protegidos y premisa externa. Dos controles externos deben compilar y ejecutarse; siete intentos de autoatribución deben rechazarse por E0624/E0451/E0308/E0277, también mediante macros. No basta un rechazo por cualquier causa.
+
+**Estado inicial:** CONTRATO_PREVIO_SONDAS_PENDIENTES. No se modifican semántica, gramática, IR, tipos, dependencias ni dominios. No se añaden facultades ni se considera resuelto el enlace profesional. Fila 9 abierta; la pregunta exacta y las competencias para resolverla figuran en §8.3. La anotación G/H ya incorporada en e18a7949 se conserva en DFL-001.

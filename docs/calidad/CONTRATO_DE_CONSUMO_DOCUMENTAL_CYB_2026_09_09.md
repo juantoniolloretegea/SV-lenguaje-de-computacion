@@ -121,3 +121,47 @@ node tests/retorno_cyb/ataques_consumo.mjs transporte.json > ataques-consumo.jso
 Los campos `ConstitucionD`, `AutorD`, `Phi` y `Regla` siguen siendo sintéticos. En particular, la definición de consumo documental aquí enlazada **no completa** la constitución de autoridad, captura/admisión profesional ni el contrato de agente. El próximo incremento debe resolver la correspondencia operacional necesaria entre los objetos aprobados CYB y los contratos recibidos por las API disponibles, empezando por identidad/competencia/alcance y su ligadura al consumidor; si requiere una decisión constitutiva ausente, deberá formular exactamente esa pregunta. No se debe copiar la regla profesional al núcleo para fingir que esa correspondencia existe.
 
 DFL-009 queda **EVALUADA_DOCUMENTALMENTE_CON_BRECHAS_MATERIALES_ABIERTAS** conforme a §5. Su realización no se considera realizada ni dispensada. La integración de #87 y #88 sigue siendo un acto distinto de estas pruebas; ambas candidatas y la fila 9 permanecen abiertas. No se declara completado el regreso técnico total al Lenguaje ni se anticipa la puerta algebraica, K2, la frontera final o el cierre nuclear.
+
+## 8. RETP-108: frontera entre declaración documental y autoridad
+
+**Contrato previo a las sondas, 09/09/2026.** Base del Lenguaje `e18a794926db07a6ec86d0ae38e6619f41db74eb`, árbol `b3327d968fe3822dc37e5b67d68ccec18120a66a`; PR #88, sin integrar. Se conservan el universo aprobado `b3aa3f01c825bf6440e3f04aadc87cc7c7ee6d89` y su relevo `169af16d05ffc954454bb5528ec106e5752b7016`. Rigen Pilares, acta de perfiles, tabla rectora y RETP-105–107.
+
+### 8.1. Correspondencia y límite identificado
+
+La ampliación atómica CYB 0.3, P25–P32 y C11, distingue acto/sesión/principal, emisor/facultad institucional, alcance, tiempo, revocación, separación de titulares y plan. El acta de relevo, §§3, 6 y 10, adopta esas definiciones y declara pendientes la autenticación y autoridad institucional reales. La aprobación del conocimiento no concede permisos materiales a un futuro agente. Tampoco corresponde rechazar evidencia admisible porque describa un acto no autorizado.
+
+| Objeto recibido o disponible | Comprobación actual | Lo que falta para el enlace profesional |
+| --- | --- | --- |
+| Definiciones CYB P25–P32/C11 y testigos aprobados | Reglas documentales exactas, consumo y recuperación de RETP-107 | Instancias del entorno, raíz institucional, atribuciones y régimen de delegación aplicables; el catálogo no los inventa. |
+| `BindingContract.authority: ExactReference` y artefacto `AuthorityDeclaration` | Identidad, tipo de artefacto e integridad bajo LIG/0.1 | Admisión profesional de su contenido y procedencia; no existe conversión acreditada de esta referencia a autoridad R1. |
+| `ValidatedBindings` | Conserva el contrato y las ligaduras comprobadas para la operación solicitada | No acredita por su tipo competencia institucional, permiso ni facultad de producir efectos. |
+| `AuthorityRef`, `AuthorityHolderRef`, `ContextRef` y demás referencias R1 | Construcción interna mediante `from_core_id`, inaccesible al consumidor ordinario | Contrato y productor gobernados que reciban los referentes constituidos; no basta cambiar la visibilidad. |
+| `ExternalGenesisPremise` y `AuthorityContinuity.apply_genesis` | Premisa opaca exigida por T-0; constructor `for_test` sólo en pruebas | Procedencia y admisión de la premisa externa. La interfaz pública examinada no ofrece su fabricación desde un documento CYB. |
+
+La constitución lógica de autoridad existe en T-0; no se confunde esta existencia con una ruta pública de incorporación profesional. `AuthorityContinuity::uninhabited()` sólo crea una continuidad lógica vacía. El constructor local `ConstitutedAuthority::constitute` de `authority.rs` está limitado a pruebas; `apply_genesis` constituye dentro del núcleo bajo su premisa. Este análisis no afirma que R1 carezca de toda operación ni que un grafo vacío constituya arquitectura CYB.
+
+### 8.2. Sondas discriminantes comprometidas
+
+Se compilarán clientes externos contra la biblioteca que Cargo haya construido, sin `cfg(test)` en esa biblioteca. Los clientes usan Rust seguro y la interfaz pública; no insertan código en SVP. Dos controles deben compilar y ejecutarse: datos nominales/documentales con continuidad vacía, y una macro que sólo construye esos datos. Siete intentos deben fallar por la causa indicada:
+
+| Sonda | Intento | Diagnóstico Rust esperado |
+| --- | --- | --- |
+| FA01 | Construir `AuthorityRef` con `from_core_id` | E0624, método privado |
+| FA02 | El mismo intento generado por macro | E0624, método privado |
+| FA03 | Fabricar `ExternalGenesisPremise` por su campo | E0451, campo privado |
+| FA04 | El mismo intento generado por macro | E0451, campo privado |
+| FA05 | Devolver la referencia documental de `ValidatedBindings` como `ConstitutedAuthority` | E0308, tipos distintos |
+| FA06 | Convertir un `CheckResult::Accredited` elegido por el cliente en `TracedPermit` | E0277, conversión no implementada |
+| FA07 | Sustituir la premisa de T-0 por un booleano | E0308, tipos distintos |
+
+Cada negativo exigirá exactamente un diagnóstico con código, además del identificador o los tipos pertinentes. Un fallo de herramientas, enlace o importación no satisface la expectativa. Los positivos impiden acreditar una frontera que simplemente rechace todos los clientes. Los errores de las sondas son diagnósticos de Rust, no diagnósticos SVP ni nuevas operaciones del núcleo.
+
+### 8.3. Alcance y siguiente decisión
+
+Este incremento comprueba barreras existentes: no crea un autenticador, adaptador de autoridad, API remota, dependencia, gramática, IR ni facultad CYB. No cambia `requires_destination`, `BindingContract` o los constructores opacos. Las macros de las sondas no requieren una excepción productiva ni justifican prohibir todas las macros. Las pruebas no acreditan confinamiento de cualquier programa Rust, integridad de un núcleo modificado ni seguridad frente a un host comprometido.
+
+La pregunta constitutiva queda delimitada para un futuro enlace productivo: **¿qué objeto aprobado fija la raíz de confianza, los titulares, las facultades y el alcance del agente consumidor, y qué procedimiento admite su evidencia para producir las referencias protegidas y la premisa externa exigidas por R1?** La organización competente constituye las facultades; la sede del Lenguaje debe especificar y probar su recepción técnica. No se solicita otra aprobación del universo ni una elección de células. No es necesario resolver un despliegue real para continuar los contrastes documentales.
+
+Hasta que exista ese contrato de recepción, los nombres sintéticos del banco conservan su estatuto y no autorizan actuaciones. La correspondencia de §8.1 precisa el pendiente de §7.2; no lo declara resuelto ni bloquea por extensión toda la fila 9. La anotación sobre campos no declarados del observador G/H ya está incorporada en `e18a7949`, dentro de DFL-001; no se reabre ni duplica.
+
+**Estado inicial:** expectativas comprometidas; sondas todavía no ejecutadas. Los resultados se añadirán por sucesión, con corte y ejecución propios.
