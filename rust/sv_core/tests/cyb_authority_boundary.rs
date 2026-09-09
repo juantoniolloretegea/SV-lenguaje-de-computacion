@@ -23,8 +23,14 @@ fn client(source: &str, rejection: Option<(&str, &[&str])>) {
     fs::write(&input, format!("#![forbid(unsafe_code)]\n{source}\n")).unwrap();
     let executable = scratch.0.join(format!("cliente{}", env::consts::EXE_SUFFIX));
     let deps = env::current_exe().unwrap().parent().unwrap().to_path_buf();
+    let libraries: Vec<_> = fs::read_dir(&deps).unwrap().map(|entry| entry.unwrap().path())
+        .filter(|path| path.file_name().and_then(|name| name.to_str())
+            .is_some_and(|name| name.starts_with("libsv_core") && name.ends_with(".rlib")))
+        .collect();
+    assert_eq!(libraries.len(), 1, "la biblioteca ordinaria debe identificarse sin ambigüedad: {libraries:?}");
     let output = Command::new(env::var_os("RUSTC").unwrap_or_else(|| "rustc".into()))
-        .args(["--edition=2021", "--error-format=short", "--crate-name", "cliente_cyb", "--extern", "sv_core", "-L"])
+        .args(["--edition=2021", "--error-format=short", "--crate-name", "cliente_cyb", "--extern"])
+        .arg(format!("sv_core={}", libraries[0].display())).arg("-L")
         .arg(format!("dependency={}", deps.display()))
         .arg(&input).arg("-o").arg(&executable)
         .output().expect("ejecutar rustc de la herramienta ya declarada");
