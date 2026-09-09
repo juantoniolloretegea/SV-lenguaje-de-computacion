@@ -43,6 +43,7 @@ jobs:
         run: |
           set -euo pipefail
           cargo test --manifest-path rust/Cargo.toml -p sv_core --test cyb_reception --offline 2>&1 | tee artifacts/retorno-cyb/pruebas-nativas.log
+          cargo test --manifest-path rust/Cargo.toml -p sv_core --test cyb_authority_boundary --offline 2>&1 | tee artifacts/retorno-cyb/frontera-autoridad.log
           cargo build --manifest-path rust/Cargo.toml -p sv_core --example cyb_reception_probe --release --offline
           cp rust/target/release/examples/cyb_reception_probe artifacts/retorno-cyb/emisor-nativo
       - name: Repetir transporte y comprobar externamente
