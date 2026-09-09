@@ -1,0 +1,15 @@
+{
+  "material_commit": "f5a43131c8743867ee039bfe52f1048a52314058",
+  "material_tree": "7f6b333b88ed2da685289cf1cc33494ba181a558",
+  "run": 34350555281,
+  "artifact": 10103518809,
+  "zip_bytes": 678732,
+  "zip_sha256": "7e8f7dff2e5a34c6cf468a8f54b373a17586087cc98f31909aacc219b05e4293",
+  "isolated_run": 34350555323,
+  "isolated_tests": 360,
+  "isolated_package_sha256_from_log": "87b27f8279bba74f8d2522c010d5ce5c269b3ede4913d6560f59e9afdb635a03",
+  "local_repeated_same_downloaded_binary": true,
+  "local_node": "24.19.0",
+  "remote_node": "22.23.2",
+  "local_transport_report_attacks_identical": true
+}

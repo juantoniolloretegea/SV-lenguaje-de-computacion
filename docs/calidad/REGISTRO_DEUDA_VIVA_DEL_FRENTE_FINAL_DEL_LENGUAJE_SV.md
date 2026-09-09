@@ -316,3 +316,20 @@ El receptor comprobará su corte y el paquete antes de constituir su perímetro 
 | R2/R3/R4 | Autenticidad, permisos, difusión, custodia, persistencia y cobertura reales siguen sin acreditación por este banco. Un resultado documental favorable no autoriza una actuación ni certifica infraestructura. |
 
 Recepción y primer contraste efectuados en candidata; fila 9 y núcleo abiertos. Ciberseguridad permanece en pausa controlada. La próxima decisión debe fijar consumidores y dependencias por operación, conservar la necesidad profesional aprobada y escoger la representación suficiente con evidencia; no repetir el catálogo, constituir otro universo ni dispensar pendientes mediante una etiqueta.
+
+
+<a id="relevo-retp-107"></a>
+
+## Sucesión candidata RETP-107 · Regla de consumo documental y evaluación DFL-009
+
+Base `60bfdf44…`; material `f5a43131c8743867ee039bfe52f1048a52314058`, árbol `7f6b333b88ed2da685289cf1cc33494ba181a558`, [PR #88](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/88), dependiente de #87. El [contrato y resultados](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md) reemplazan la definición OP sintética del banco por una definición exacta que liga selector, regla, consumidor y ámbito. Los restantes artefactos de constitución, autoridad y captura/admisión siguen siendo sintéticos. El enlace externo está probado; la ligadura productiva CYB no se declara resuelta.
+
+| Obligación | Alcance tras RETP-107 |
+|---|---|
+| DFL-005 | Se comprueban 186 definiciones y sus módulos, 150 consumos y 36 rechazos de H en el banco. No se acredita constitución de agente ni autoridad institucional, captura/admisión profesional o ligadura a posiciones CYB. La correspondencia operacional de identidad, competencia y alcance es el siguiente objeto; no se copia semántica profesional al núcleo. |
+| DFL-009 | **EVALUADA_DOCUMENTALMENTE_CON_BRECHAS_MATERIALES_ABIERTAS.** Se reciben 018/020 en su corte y se delimitan ejecutable local, FFI, WASM, proceso separado, servicio y dependencias. No se acredita servicio remoto, aislamiento contra anfitrión comprometido, recuperación ni enlace de efectos. Nuevas realizaciones se ensayarán en laboratorio antes de promoción. |
+| DFL-003/004/006 y K1-T | Conservan productores, consulta, trayectoria, causalidad, captura y transducción productivas pendientes. El consumidor documental no es `query`, Frame, consejo, permiso R1 ni realización algebraica. |
+| DFL-001/011/012/013 | Sin cierre ni renumeración. El acta del español y RETP-092 no cambian; independencia de realización SV no recuperada por módulos externos. |
+| Autonomía y auxiliares | 360 pruebas Rust aisladas sin Python/Node. Dos módulos mjs se incluyen visiblemente como bytes de prueba, no se interpretan por Rust ni se incorporan a sv-native. Node sigue siendo dependencia del consumo externo; 17 Python previos pendientes de retirada global. |
+
+No se licencia como disponible ninguna capacidad profesional pendiente. El cotejo de requisitos IMM/CYB no suma permisos, células o garantías. DFL-009 deja de ser únicamente una evaluación diferida, pero no pasa a resuelta. Candidatas sin integrar; fila 9 y núcleo abiertos; Ciberseguridad en pausa. README, actas históricas y repositorios de dominio intactos.

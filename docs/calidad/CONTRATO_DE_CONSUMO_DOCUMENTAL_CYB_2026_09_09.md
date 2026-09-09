@@ -68,3 +68,56 @@ La evaluación DFL-009 recibe el [registro 018](https://github.com/juantoniollor
 ## 6. Continuidad y estado previo
 
 Estado de esta primera confirmación: **CONTRATO_FIJADO · IMPLEMENTACION_Y_PRUEBAS_PENDIENTES**. El siguiente cambio material implementará exclusivamente el enlace de consumo definido aquí y registrará sus resultados sobre la cabeza exacta. No fusiona #87, no constituye otro universo, no modifica README, actas históricas ni el español. DFL-011/012/013 mantienen identidad; Ciberseguridad sigue en pausa. El cierre de este enlace documental no cerrará los consumidores profesionales enumerados en §4, la fila 9 ni el núcleo.
+
+## 7. Resultado material y sucesión RETP-107
+
+El contrato previo se publicó en `c1b75e41f481b7a2c448452512db95530fd1eb25`, árbol `03fe3a3cfbcf0f8fdad9e05d6a143eec5b85627c`, antes del código. El enlace se realizó en `e2140fa717018b4e5e08d93e60ba1b3f9cc9707d`; la comprobación local posterior identificó que la sensibilidad aún importaba el módulo por ruta. Se unificó también esa carga con los bytes comprobados en **`f5a43131c8743867ee039bfe52f1048a52314058`**, árbol **`7f6b333b88ed2da685289cf1cc33494ba181a558`**. Ésta es la cabeza material final ensayada, [PR #88](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/88). La cola registral sólo modifica Calidad.
+
+La comprobación preliminar local utilizó un informe sintético derivado del informe anterior; no se cuenta como ejecución nueva de Rust. La evidencia siguiente procede del emisor compilado por Actions sobre la cabeza final y descargado después para repetirlo localmente.
+
+| Resultado | Evidencia y alcance |
+|---|---|
+| Inventario fijado | 24 selectores: ocho P25…P32, seis clases CT y diez campos SI. Manifiesto SHA-256 `0ac31c03a0291f36ec8d90059d1636a4cde3766bcf93bac61421a81bd223dc64` |
+| Enlaces | 186 definiciones comprobadas, contratos reconstruidos y huellas recalculadas externamente |
+| Consumos | 150 respuestas documentales iguales a sus esperados; 36 H rechazadas con `INFORMACION_INSUFICIENTE`; 18 pares conservan igualdad H y distinción F0/HS |
+| Pruebas nativas | 12/12 en recepción CYB, incluidas las cinco del lector reutilizado; cuatro entradas conservadas, 24 rechazos LIG anteriores más tres alteraciones de artefactos con reparación |
+| Sensibilidad | 22 mutantes documentales anteriores; doce ataques anteriores al observador; ocho ataques nuevos al enlace y un ataque directo al selector: todos detectados por su causa |
+| Código alterado | Los módulos con centinela no se ejecutan; `untrusted_code_executed=false`, con guardas de identidad previas a la carga |
+| Construcción aislada | 360/360 pruebas Rust; Python y Node ausentes, red deshabilitada y Cargo offline. GNU Coreutils sigue siendo herramienta explícita del banco |
+| Reproducción local | Binario descargado ejecutado de nuevo; transporte, informe y ataques idénticos a Actions. Node local 24.19.0 frente a 22.23.2 remoto; no es otra compilación independiente |
+
+Los ocho ataques al enlace pasan la recomputación de sus huellas para alcanzar el juicio externo, pero no se presentan como ocho nuevas ejecuciones de `validate_bindings` ni como diagnósticos de `sv_core`. Los tres ataques nativos a artefactos sí ejercen `ArtifactIntegrity`. La campaña WASI/navegador mantiene sus sondas anteriores; no ejecuta estos nuevos consumidores CYB.
+
+### 7.1. Ejecuciones y custodia
+
+Los seis flujos de `f5a43131…` son conformes: [retorno CYB 34350555281](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34350555281), [construcción aislada 34350555323](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34350555323), R0 Rust `34350555291`, conformidad `34350555329`, nativo `34350555311` y paridad anterior `34350555414`. Entorno: Rust 1.98.0, Cargo 1.98.0, Ubuntu 24.04, Node 22.23.2 y GNU Coreutils 9.4. No se atribuye a este corte la identidad de un despliegue productivo.
+
+Artefacto descargado **10103518809**, ZIP de **678732 bytes**, SHA-256 **`7e8f7dff2e5a34c6cf468a8f54b373a17586087cc98f31909aacc219b05e4293`**. Se verificaron huella, CRC, rutas y corte; se conserva la retención de Actions de 90 días y la evidencia seleccionada en `evidencias/RETP-107/`.
+
+| Objeto | SHA-256 |
+|---|---|
+| Emisor nativo descargado | `7037714f77e450c4496892d9ff2bf1b48a8eb2b2ecef207497c9f0611f7e9671` |
+| Transporte | `0c3aff2bdde055505eb61b5c81a1051834f32c69320c58e5dfdcd4f5ad0b3c0f` |
+| Verificación | `f3da8ae7ce9521307596908e3b816ac14fba96695e2399e628fe4faf909c64c5` |
+| Ataques al enlace | `4d353c694ebed0f3b508724afca8a1374d7f738ba37bc14074c7eda07e214f89` |
+| Paquete de fuentes aislado, según registro del trabajo 102462507639 | `87b27f8279bba74f8d2522c010d5ce5c269b3ede4913d6560f59e9afdb635a03` |
+
+El paquete de fuentes contiene 245 archivos Git y dos objetos de inventario. Incluye de forma visible `reglas_documentales.mjs` y `consumir.mjs`, como bytes de prueba incorporados por `include_bytes!`; Rust no interpreta JavaScript. La lista de admisión añade exclusivamente esas dos rutas, no cualquier `.mjs`. La guía de construcción declara este contenido. El consumidor externo continúa requiriendo Node; `sv-native` y `sv_core/src` no reciben esos módulos. Permanecen los 17 archivos Python previos; no se añade ninguno ni se declara su retirada global.
+
+Reproducción desde la raíz del corte identificado:
+
+```sh
+node tests/retorno_cyb/verificar.mjs --fuentes
+cargo +1.98.0 test --manifest-path rust/Cargo.toml -p sv_core --test cyb_reception --offline
+cargo +1.98.0 run --manifest-path rust/Cargo.toml -p sv_core --example cyb_reception_probe --release --offline > transporte.json
+node tests/retorno_cyb/verificar.mjs transporte.json --autoprueba > verificacion.json
+node tests/retorno_cyb/ataques_consumo.mjs transporte.json > ataques-consumo.json
+```
+
+### 7.2. Dictamen y próximo objeto
+
+**ENLACE_DE_CONSUMO_DOCUMENTAL_VERIFICADO_EN_CANDIDATA.** Queda subsanada la definición nominal `OP` del banco: la carga, la regla, el selector y el consumidor están identificados y comprobados en la misma cadena de prueba. La selección no usa resultados esperados ni añade una distinción oculta a H. El emisor produce contratos; el módulo externo consume documentos. La custodia de ejecución sigue confiando en el entorno identificado, no protege frente a un anfitrión comprometido.
+
+Los campos `ConstitucionD`, `AutorD`, `Phi` y `Regla` siguen siendo sintéticos. En particular, la definición de consumo documental aquí enlazada **no completa** la constitución de autoridad, captura/admisión profesional ni el contrato de agente. El próximo incremento debe resolver la correspondencia operacional necesaria entre los objetos aprobados CYB y los contratos recibidos por las API disponibles, empezando por identidad/competencia/alcance y su ligadura al consumidor; si requiere una decisión constitutiva ausente, deberá formular exactamente esa pregunta. No se debe copiar la regla profesional al núcleo para fingir que esa correspondencia existe.
+
+DFL-009 queda **EVALUADA_DOCUMENTALMENTE_CON_BRECHAS_MATERIALES_ABIERTAS** conforme a §5. Su realización no se considera realizada ni dispensada. La integración de #87 y #88 sigue siendo un acto distinto de estas pruebas; ambas candidatas y la fila 9 permanecen abiertas. No se declara completado el regreso técnico total al Lenguaje ni se anticipa la puerta algebraica, K2, la frontera final o el cierre nuclear.
