@@ -165,3 +165,27 @@ La pregunta constitutiva queda delimitada para un futuro enlace productivo: **¿
 Hasta que exista ese contrato de recepción, los nombres sintéticos del banco conservan su estatuto y no autorizan actuaciones. La correspondencia de §8.1 precisa el pendiente de §7.2; no lo declara resuelto ni bloquea por extensión toda la fila 9. La anotación sobre campos no declarados del observador G/H ya está incorporada en `e18a7949`, dentro de DFL-001; no se reabre ni duplica.
 
 **Estado inicial:** expectativas comprometidas; sondas todavía no ejecutadas. Los resultados se añadirán por sucesión, con corte y ejecución propios.
+
+### 8.4. Resultado material y custodia
+
+El contrato previo quedó comprometido en `a0f04807c10cfa7ac56886039ba8a38f9943c88f`. La realización comprobada es `6899f58be5d37f5cb130b71ab65d33b5c06f5229`, árbol `541d0871affb964e63e3715ea0f437f884b8e6d1`. Añade únicamente `rust/sv_core/tests/cyb_authority_boundary.rs` y su ejecución explícita en el flujo CYB; no cambia `sv_core/src`, gramática, IR ni biblioteca de producción.
+
+Las **nueve sondas** superan el trabajo [102569797088](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34382276159/job/102569797088): dos clientes ordinarios compilan y se ejecutan; los siete intentos se rechazan por los códigos y sujetos comprometidos en §8.2. Son siete casos y cuatro códigos diferentes, no siete causas nominales distintas. Las macros de datos están admitidas; las dos macros que intentan construir referencias o premisas privadas no evitan la barrera.
+
+El [trabajo aislado 102569801311](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34382276114/job/102569801311) repite esas nueve sondas dentro de **369 pruebas Rust correctas y cero fallos**, con Rust/Cargo 1.98.0, Cargo offline y el contenedor sin red, Python ni Node. Los extractos conservados identifican sus límites; no son el registro completo. El SHA-256 del paquete de fuentes consignado por ese trabajo es `5d5d3a64fc4ce46eb248777f26240e1c93791d567eabee81b3531f447d905886`; esta huella procede del registro remoto y no se presenta como recálculo local del paquete.
+
+**Correcciones del banco conservadas.** El primer intento, `581145dc…` / ejecución `34381953464`, falló por E0463 al no localizar la biblioteca; no acreditó ningún rechazo. El segundo, `b9058ffe…`, superó las nueve sondas en el trabajo CYB, pero su ejecución aislada `34382100072` tuvo siete negativos correctos y dos controles positivos que compilaron sin poder ejecutarse en `/tmp`. El corte material final fija la ruta de una única biblioteca ordinaria y conserva los binarios de prueba en la salida de Cargo. No se modificaron las expectativas, la privacidad, la premisa ni las restricciones del contenedor para conseguir el resultado.
+
+**Custodia descargada.** Artefacto CYB `10116340925`, ZIP de 681213 bytes, SHA-256 recalculado `e92a54a45fa623414a3928b4252e9a1315a51ffc5d88b95723f48f0b4c935e70`, CRC de once entradas correcto y commit/árbol coincidentes con el corte material. El registro íntegro de las sondas, herramientas, extracto aislado, metadatos y huellas están en `evidencias/RETP-108/`. El binario emisor (`7037714f…`), el transporte (`0c3aff2b…`) y su informe (`f3da8ae7…`) mantienen las huellas completas de RETP-107: 186 contratos y recálculos, 150 respuestas y 36 insuficiencias H. No se han vuelto a interpretar las reglas CYB ni se ha producido un permiso.
+
+Reproducción desde la raíz, con la herramienta declarada:
+
+```sh
+cargo +1.98.0 test --manifest-path rust/Cargo.toml -p sv_core --test cyb_authority_boundary --offline
+```
+
+La prueba externa usa la biblioteca de Cargo sin `cfg(test)` y clientes con `forbid(unsafe_code)`. La búsqueda de biblioteca rechaza ausencia o ambigüedad. No se atribuye esta política de los clientes a todos los archivos del repositorio ni se presenta como confinamiento material. Esta ejecución Rust se ha realizado en Actions; la inspección local comprobó los artefactos y sus huellas, sin afirmar una compilación Rust local independiente.
+
+**Dictamen acotado:** FRONTERA_PUBLICA_DE_AUTORIDAD_VERIFICADA_EN_CANDIDATA. Se acreditan las barreras examinadas; sigue pendiente el contrato de recepción profesional de §8.3. La integración, la fila 9 y el cierre nuclear permanecen abiertos.
+
+**Comprobaciones de candidata:** seis flujos conformes para el corte material: CYB `34382276159`, aislado `34382276114`, Rust `34382276118`, conformidad `34382276131`, nativo `34382276172` y paridad `34382276135`. La paridad utilizó la fusión de prueba `cb1d947b9eaa5db8060856276eda4616ba268c17`, cuyo árbol se cotejó con el material y es idéntico. Su primer trabajo `102569797162` falló al recoger `PENDIENTE` en el navegador LIG; el segundo `102570777159` superó la campaña sin cambios de commit ni aserciones. Se conserva la incidencia y no se declara corregido en general el mecanismo de espera del navegador. La paridad conserva su corpus anterior: no se atribuye ejecución WASI/navegador a las nuevas sondas de compilación Rust ni al consumo CYB externo.

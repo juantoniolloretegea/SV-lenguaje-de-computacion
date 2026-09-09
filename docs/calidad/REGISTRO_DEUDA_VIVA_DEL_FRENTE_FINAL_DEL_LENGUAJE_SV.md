@@ -334,3 +334,11 @@ Base `60bfdf44…`; material `f5a43131c8743867ee039bfe52f1048a52314058`, árbol 
 | Autonomía y auxiliares | 360 pruebas Rust aisladas sin Python/Node. Dos módulos mjs se incluyen visiblemente como bytes de prueba, no se interpretan por Rust ni se incorporan a sv-native. Node sigue siendo dependencia del consumo externo; 17 Python previos pendientes de retirada global. |
 
 No se licencia como disponible ninguna capacidad profesional pendiente. El cotejo de requisitos IMM/CYB no suma permisos, células o garantías. DFL-009 deja de ser únicamente una evaluación diferida, pero no pasa a resuelta. Candidatas sin integrar; fila 9 y núcleo abiertos; Ciberseguridad en pausa. README, actas históricas y repositorios de dominio intactos.
+
+<a id="relevo-retp-108"></a>
+
+## Sucesión candidata RETP-108 · Declaración documental y autoridad
+
+El [contrato de consumo, §8](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md#8-retp-108-frontera-entre-declaración-documental-y-autoridad) precisa DFL-005 general sin cerrarla: las referencias íntegras de LIG y el catálogo CYB adoptado no constituyen facultades institucionales. R1 exige referentes protegidos y una premisa externa opaca para T-0; su recepción profesional desde CYB no está constituida por este corte. La sede del Lenguaje debe definir y probar ese contrato de recepción; la organización competente aporta la raíz, titulares, facultades y alcance aplicables. No se abre un constructor público para suplir la ausencia.
+
+El material `6899f58be5d37f5cb130b71ab65d33b5c06f5229` comprueba dos controles y siete rechazos desde clientes externos, también mediante macros; 369 pruebas Rust aisladas. Estas pruebas no crean autoridad, no activan R1 desde un expediente CYB y no acreditan seguridad material del host. El contraste documental sigue disponible en su alcance y la pregunta de §8.3 no bloquea por extensión toda la fila 9. DFL-009, los productores y restantes deudas mantienen su tratamiento. La anotación G/H de DFL-001 ya incorporada en e18a7949 permanece; no se crea otra deuda ni se modifica el observador. Candidata sin integrar, fila 9 abierta y dominios en pausa.

@@ -1,0 +1,414 @@
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+162 | / opaque_control_ref!(
+163 | |     InformationRef,
+164 | |     "Referencia nominal a información dentro del dominio de control."
+165 | | );
+    | |_- in this macro invocation
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+166 | / opaque_control_ref!(
+167 | |     AdmittedEvidenceRef,
+168 | |     "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
+169 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+170 | / opaque_control_ref!(
+171 | |     ConstitutedFactRef,
+172 | |     "Referencia a un hecho semántico constituido; no equivale a autoridad."
+173 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+174 | / opaque_control_ref!(
+175 | |     AuthorityRef,
+176 | |     "Referencia a autoridad constituida; su constructor no forma parte de la API pública."
+177 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+178 | / opaque_control_ref!(
+179 | |     EnablementRef,
+180 | |     "Referencia a una habilitación de autoridad ya existente; no amplía autoridad."
+181 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+186 | / opaque_control_ref!(
+187 | |     FormRef,
+188 | |     "Referencia a una forma de transición constituida."
+189 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+190 | / opaque_control_ref!(
+191 | |     EffectFamilyRef,
+192 | |     "Referencia a una familia de efectos fijada por constitución."
+193 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+194 | / opaque_control_ref!(
+195 | |     EffectRef,
+196 | |     "Referencia a un efecto concreto; identificarlo no equivale a autorizarlo."
+197 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+198 | / opaque_control_ref!(
+199 | |     ContextRef,
+200 | |     "Referencia a una ligadura de contexto relevante para autoridad o forma."
+201 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+202 | / opaque_control_ref!(
+203 | |     AuthorityHolderRef,
+204 | |     "Referencia al titular de una autoridad; no constituye autoridad por sí misma."
+205 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+206 | / opaque_control_ref!(
+207 | |     GovernedObjectRef,
+208 | |     "Referencia a un objeto candidato a pertenecer al dominio gobernado D_a."
+209 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+210 | / opaque_control_ref!(
+211 | |     AccumulationRuleRef,
+212 | |     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+213 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+214 | / opaque_control_ref!(
+215 | |     RequirementRef,
+216 | |     "Referencia a una obligación de Req; identificarla no acredita su cumplimiento."
+217 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+218 | / opaque_control_ref!(
+219 | |     VerifierRef,
+220 | |     "Referencia a un verificador concreto; su mera existencia no acredita aplicabilidad."
+221 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+222 | / opaque_control_ref!(
+223 | |     VerifierFamilyRef,
+224 | |     "Referencia a una familia de verificadores admisibles para una obligación."
+225 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+226 | / opaque_control_ref!(
+227 | |     ApplicabilityRuleRef,
+228 | |     "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
+229 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+230 | / opaque_control_ref!(
+231 | |     ConflictResolutionRuleRef,
+232 | |     "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+233 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+234 | / opaque_control_ref!(
+235 | |     CoverageRuleRef,
+236 | |     "Referencia a una regla previamente constituida de cobertura de comprobaciones exigibles."
+237 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+238 | / opaque_control_ref!(
+239 | |     ReuseRuleRef,
+240 | |     "Referencia a una regla previamente constituida de reutilización de resultados cualificados."
+241 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+242 | / opaque_control_ref!(
+243 | |     ReuseBindingKeyRef,
+244 | |     "Referencia a una dimensión constituida cuya continuidad puede ser exigible para reutilizar un resultado."
+245 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+246 | / opaque_control_ref!(
+247 | |     ReuseBindingValueRef,
+248 | |     "Referencia al valor constituido de una dimensión de reutilización; identificarlo no acredita su vigencia."
+249 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: constant `PROFILE_ID` is never used
+ --> sv_core/src/identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+
+warning: function `is_reserved_word` is never used
+  --> sv_core/src/identifier_profile.rs:22:15
+   |
+22 | pub(crate) fn is_reserved_word(word: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^
+
+warning: method `matches_descriptor` is never used
+   --> sv_core/src/requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core/src/frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: `sv_core` (lib) generated 25 warnings (run `cargo fix --lib -p sv_core` to apply 1 suggestion)
+   Compiling sv_core v0.1.0 (/home/runner/work/SV-lenguaje-de-computacion/SV-lenguaje-de-computacion/rust/sv_core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.23s
+     Running tests/cyb_authority_boundary.rs (rust/target/debug/deps/cyb_authority_boundary-ad89efce2fcd2b6c)
+
+running 9 tests
+test fa02_macro_no_elude_referencia_privada ... ok
+test fa01_referencia_de_autoridad_privada ... ok
+test fa03_premisa_externa_no_fabricable ... ok
+test fa04_macro_no_elude_premisa_privada ... ok
+test fa05_ligadura_validada_no_es_autoridad ... ok
+test fa06_resultado_elegido_no_es_permiso ... ok
+test fa07_booleano_no_sustituye_premisa ... ok
+test datos_documentales_no_constituyen_autoridad ... ok
+test macro_de_datos_nominales_admitida ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.18s
+
