@@ -1,0 +1,139 @@
+{
+  "schema": "CYB-CONSUMIDORES/0.1",
+  "profile": "CYB-DOCUMENTAL",
+  "version": "1",
+  "source_commit": "169af16d05ffc954454bb5528ec106e5752b7016",
+  "sources_sha256": "30d0cce81cff67c77fe4cf3a4a5322353fe910ae2ac2694fb972c13a63bf678c",
+  "rules": {
+    "identifier": "ReglasDocumentales",
+    "version": "1",
+    "sha256": "83967d3275169a8ad2aceabba8119e67b79b4f5d160e41566f2a4c7b8e155e96"
+  },
+  "implementation": {
+    "identifier": "ConsumidorDocumental",
+    "version": "1",
+    "sha256": "9e314433cffe2d946dd8ca3231fcad936966982e5d37e32006eb39a144b7b5d0"
+  },
+  "consumers": [
+    {
+      "key": "regulated:P25",
+      "kind": "regulated",
+      "selector": "P25"
+    },
+    {
+      "key": "regulated:P26",
+      "kind": "regulated",
+      "selector": "P26"
+    },
+    {
+      "key": "regulated:P27",
+      "kind": "regulated",
+      "selector": "P27"
+    },
+    {
+      "key": "regulated:P28",
+      "kind": "regulated",
+      "selector": "P28"
+    },
+    {
+      "key": "regulated:P29",
+      "kind": "regulated",
+      "selector": "P29"
+    },
+    {
+      "key": "regulated:P30",
+      "kind": "regulated",
+      "selector": "P30"
+    },
+    {
+      "key": "regulated:P31",
+      "kind": "regulated",
+      "selector": "P31"
+    },
+    {
+      "key": "regulated:P32",
+      "kind": "regulated",
+      "selector": "P32"
+    },
+    {
+      "key": "continuity:partida",
+      "kind": "continuity",
+      "selector": "partida"
+    },
+    {
+      "key": "continuity:linaje",
+      "kind": "continuity",
+      "selector": "linaje"
+    },
+    {
+      "key": "continuity:asignacion",
+      "kind": "continuity",
+      "selector": "asignacion"
+    },
+    {
+      "key": "continuity:conciliacion",
+      "kind": "continuity",
+      "selector": "conciliacion"
+    },
+    {
+      "key": "continuity:perimetro",
+      "kind": "continuity",
+      "selector": "perimetro"
+    },
+    {
+      "key": "continuity:vigencia",
+      "kind": "continuity",
+      "selector": "vigencia"
+    },
+    {
+      "key": "field:scope",
+      "kind": "field",
+      "selector": "scope"
+    },
+    {
+      "key": "field:issuer_power",
+      "kind": "field",
+      "selector": "issuer_power"
+    },
+    {
+      "key": "field:prior",
+      "kind": "field",
+      "selector": "prior"
+    },
+    {
+      "key": "field:revoked",
+      "kind": "field",
+      "selector": "revoked"
+    },
+    {
+      "key": "field:principal",
+      "kind": "field",
+      "selector": "principal"
+    },
+    {
+      "key": "field:delegation",
+      "kind": "field",
+      "selector": "delegation"
+    },
+    {
+      "key": "field:data_view",
+      "kind": "field",
+      "selector": "data_view"
+    },
+    {
+      "key": "field:recipient",
+      "kind": "field",
+      "selector": "recipient"
+    },
+    {
+      "key": "field:attribution",
+      "kind": "field",
+      "selector": "attribution"
+    },
+    {
+      "key": "field:planned",
+      "kind": "field",
+      "selector": "planned"
+    }
+  ]
+}

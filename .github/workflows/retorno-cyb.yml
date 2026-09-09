@@ -8,6 +8,7 @@ on:
       - 'tests/row7_gh/**'
       - 'rust/**'
       - 'docs/calidad/RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md'
+      - 'docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md'
       - '.github/workflows/retorno-cyb.yml'
 permissions:
   contents: read
@@ -51,6 +52,7 @@ jobs:
           artifacts/retorno-cyb/emisor-nativo > artifacts/retorno-cyb/repeticion.json
           cmp artifacts/retorno-cyb/transporte.json artifacts/retorno-cyb/repeticion.json
           node tests/retorno_cyb/verificar.mjs artifacts/retorno-cyb/transporte.json --autoprueba > artifacts/retorno-cyb/verificacion.json
+          node tests/retorno_cyb/ataques_consumo.mjs artifacts/retorno-cyb/transporte.json > artifacts/retorno-cyb/ataques-consumo.json
           sha256sum artifacts/retorno-cyb/emisor-nativo artifacts/retorno-cyb/transporte.json artifacts/retorno-cyb/verificacion.json > artifacts/retorno-cyb/huellas.sha256
           git diff --exit-code
       - name: Conservar evidencia completa

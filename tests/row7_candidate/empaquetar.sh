@@ -11,7 +11,7 @@ mkdir -p "$destination/fuentes"
 files=()
 while IFS= read -r -d '' path; do
   case "$path" in
-    LICENSE|rust/*.toml|rust/*.rs|tests/*.svp|tests/*.json|tests/*.rs|tests/*.sha256|tests/row7_candidate/COMPILACION.md)
+    LICENSE|rust/*.toml|rust/*.rs|tests/*.svp|tests/*.json|tests/*.rs|tests/*.sha256|tests/row7_candidate/COMPILACION.md|tests/retorno_cyb/reglas_documentales.mjs|tests/retorno_cyb/consumir.mjs)
       [[ "$path" != *$'\n'* && "$path" != *$'\t'* && "$path" != *'\'* ]] || { echo 'PAQUETE_RUTA' >&2; exit 1; }
       files+=("$path") ;;
   esac

@@ -22,7 +22,7 @@ fn sha256_hex(bytes: &[u8]) -> String {
     hash.into()
 }
 
-struct Input { id: String, variant: &'static str, payload: String, side: Option<String> }
+struct Input { id: String, consumer: String, variant: &'static str, payload: String, side: Option<String> }
 fn obj(fields: &[(&str, &Value)]) -> String {
     Value::compact_members(fields.iter().map(|(k,v)| (*k,*v)))
 }
@@ -38,7 +38,7 @@ fn inputs() -> Vec<Input> {
     let mut out=Vec::new();
     for (version,cases) in [(3,&pr),(4,&ct)] {
         for row in cases.array().unwrap() {
-            out.push(Input { id:row.get("id").unwrap().text().unwrap().into(), variant:"F0",payload:document(row,version),side:None });
+            out.push(Input { id:row.get("id").unwrap().text().unwrap().into(), consumer:format!("{}:{}",if version==3 {"regulated"} else {"continuity"},row.get(if version==3 {"parametro"} else {"clase"}).unwrap().text().unwrap()), variant:"F0",payload:document(row,version),side:None });
         }
     }
     for (version,pairs) in [(3,&si),(4,&pc)] {
@@ -50,8 +50,11 @@ fn inputs() -> Vec<Input> {
                 };
                 let reduced = if version == 3 {pair.get(state).unwrap().get("technical").unwrap().compact()}
                     else {pair.get("proyeccion_tecnica_comun").unwrap().compact()};
+                let consumer = if version==3 {format!("field:{}",pair.get("diferencia").unwrap().text().unwrap())} else {
+                    let doc=json::parse(full.as_bytes()).unwrap();format!("continuity:{}",doc.get("clase").unwrap().text().unwrap())
+                };
                 for variant in ["F0","H","HS"] {
-                    out.push(Input { id:format!("{}-{state}",pair.get("id").unwrap().text().unwrap()),variant,
+                    out.push(Input { id:format!("{}-{state}",pair.get("id").unwrap().text().unwrap()),consumer:consumer.clone(),variant,
                         payload:if variant=="F0"{full.clone()}else{reduced.clone()},
                         side:if variant=="HS"{Some(full.clone())}else{None} });
                 }
@@ -63,7 +66,7 @@ fn inputs() -> Vec<Input> {
 }
 fn contract(program: &sv_core::IrProgram, input:&Input) -> BindingContract {
     let mut c=carrier::base(program);
-    c.identifier="CYB-TRANSPORTE-0.1".into();
+    c.identifier="CYB-CONSUMO-0.1".into();
     c.instances.truncate(1); c.instances[0].ternarizer=None;
     c.operations[0].uses.truncate(1); c.operations[0].uses[0].destination=None;
     c.operations[0].requires_destination=false;
@@ -76,6 +79,20 @@ fn contract(program: &sv_core::IrProgram, input:&Input) -> BindingContract {
             kind:ArtifactKind::SideInformation,bytes:bytes.as_bytes().to_vec()};
         c.operations[0].input_scope=BindingInputScope::BindingsWithSideInformation;
         c.operations[0].side_information=vec![a.reference.clone()]; c.artifacts.push(a);
+    }
+    let manifest=json::parse(include_bytes!("consumidores.json")).unwrap();
+    let consumer=manifest.get("consumers").unwrap().array().unwrap().iter()
+        .find(|c|c.get("key").unwrap().text().unwrap()==input.consumer).unwrap();
+    let definition=format!("{{\"schema\":\"CYB-CONSUMO/0.1\",\"profile\":\"CYB-DOCUMENTAL\",\"version\":\"1\",\"consumer\":{},\"variant\":\"{}\",\"rules\":{},\"implementation\":{},\"sources_sha256\":{}}}",
+        consumer.compact(),input.variant,manifest.get("rules").unwrap().compact(),
+        manifest.get("implementation").unwrap().compact(),manifest.get("sources_sha256").unwrap().compact());
+    let operation=c.artifacts.iter_mut().find(|a|a.reference.identifier=="OP").unwrap();
+    operation.bytes=definition.into_bytes();operation.reference.sha256=sha256_hex(&operation.bytes);
+    c.operations[0].definition=operation.reference.clone();
+    for (name,bytes) in [("ReglasDocumentales",include_bytes!("reglas_documentales.mjs").as_slice()),
+                        ("ConsumidorDocumental",include_bytes!("consumir.mjs").as_slice())] {
+        c.artifacts.push(BindingArtifact {reference:ExactReference {identifier:name.into(),version:"1".into(),sha256:sha256_hex(bytes)},
+            kind:ArtifactKind::OperationDefinition,bytes:bytes.to_vec()});
     }
     c
 }
@@ -142,6 +159,27 @@ pub fn check_independent_instances() {
     assert_eq!(get(&v,&instances[1].provenance[0]),rows[1].payload.as_bytes());
     assert_ne!(instances[0].identifier,instances[1].identifier);
 }
+pub fn check_operation_artifacts() {
+    let p=carrier::program(0).unwrap();let rows=inputs();
+    for row in &rows {
+        let v=checked(&p,row);
+        let d=json::parse(get(&v,&v.operation().definition)).unwrap();
+        assert_eq!(d.get("consumer").unwrap().get("key").unwrap().text().unwrap(),row.consumer);
+        assert_eq!(d.get("variant").unwrap().text().unwrap(),row.variant);
+        for (name,bytes) in [("ReglasDocumentales",include_bytes!("reglas_documentales.mjs").as_slice()),
+                            ("ConsumidorDocumental",include_bytes!("consumir.mjs").as_slice())] {
+            let a=v.contract().artifacts.iter().find(|a|a.reference.identifier==name).unwrap();
+            assert_eq!(a.bytes,bytes);
+        }
+    }
+    for name in ["OP","ReglasDocumentales","ConsumidorDocumental"] {
+        let good=contract(&p,&rows[0]);let mut bad=good.clone();
+        bad.artifacts.iter_mut().find(|a|a.reference.identifier==name).unwrap().bytes.push(0);
+        assert_eq!(validate_bindings(&p,bad.clone(),&request(&bad)).unwrap_err(),
+            BindingError {kind:BindingErrorKind::ArtifactIntegrity,subject:name.into()});
+        validate_bindings(&p,good.clone(),&request(&good)).unwrap();
+    }
+}
 fn hex(bytes:&[u8])->String {bytes.iter().map(|b|format!("{b:02x}")).collect()}
 pub fn report()->String {
     let p=carrier::program(0).unwrap();let mut out=Vec::new();
@@ -154,5 +192,5 @@ pub fn report()->String {
         out.push(format!("{{\"id\":\"{}\",\"variant\":\"{}\",\"contract_sha256\":\"{}\",\"recovered_hex\":\"{}\",\"contract\":{}}}",
             row.id,row.variant,v.expectation().sha256,hex(recovered),contract_json::json(v.contract())));
     }
-    format!("{{\"schema\":\"CYB-LIG-TRANSPORTE/0.1\",\"rows\":[{}]}}",out.join(","))
+    format!("{{\"schema\":\"CYB-LIG-CONSUMO/0.1\",\"rows\":[{}]}}",out.join(","))
 }
