@@ -1,0 +1,763 @@
+[
+  {
+    "id": "SI01",
+    "diferencia": "scope",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "0",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "No puede respaldarse la legitimidad del acto con ese permiso, aunque el parche esté aplicado.",
+    "requisito": "RS01"
+  },
+  {
+    "id": "SI02",
+    "diferencia": "issuer_power",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "0",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "La firma del documento no basta para presentar autoridad institucional.",
+    "requisito": "RS02"
+  },
+  {
+    "id": "SI03",
+    "diferencia": "prior",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "0",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "Una aprobación posterior no se presenta como autorización previa.",
+    "requisito": "RS03"
+  },
+  {
+    "id": "SI04",
+    "diferencia": "revoked",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "1",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "El permiso retirado no ampara el acto afectado.",
+    "requisito": "RS03"
+  },
+  {
+    "id": "SI05",
+    "diferencia": "principal",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "U",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "La sesión puede estar autenticada y faltar atribución fiable a la persona.",
+    "requisito": "RS01"
+  },
+  {
+    "id": "SI06",
+    "diferencia": "delegation",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "consultar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "La facultad del humano no se transmite al agente para reiniciar.",
+    "requisito": "RS02"
+  },
+  {
+    "id": "SI07",
+    "diferencia": "data_view",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso",
+        "historia-clinica-completa"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "La explicación incorpora información excesiva para el propósito definido.",
+    "requisito": "RS04"
+  },
+  {
+    "id": "SI08",
+    "diferencia": "recipient",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "publico",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "La misma vista seudonimizada no queda automáticamente admitida para difusión pública.",
+    "requisito": "RS04"
+  },
+  {
+    "id": "SI09",
+    "diferencia": "attribution",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "U",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "El acto técnico no puede atribuirse a la sesión sólo por simultaneidad.",
+    "requisito": "RS01"
+  },
+  {
+    "id": "SI10",
+    "diferencia": "planned",
+    "a": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "1",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "b": {
+      "technical": {
+        "P02": "1",
+        "P03": "1",
+        "P06": "1",
+        "P07/correccion": "1"
+      },
+      "session": "s-A",
+      "principal": "persona-A",
+      "authentication": "1",
+      "attribution": "1",
+      "issuer_power": "1",
+      "scope": "1",
+      "time": "1",
+      "revoked": "0",
+      "prior": "1",
+      "separation": "1",
+      "planned": "0",
+      "raw_custody": "repositorio-restringido",
+      "recipient": "experto-A",
+      "data_view": [
+        "acto",
+        "instante",
+        "referencia-permiso"
+      ],
+      "delegation": [
+        [
+          "persona-A",
+          "agente-A",
+          "reiniciar",
+          "activo-A"
+        ]
+      ],
+      "purpose": "mantenimiento"
+    },
+    "consecuencia": "Se conserva la desviación del plan sin convertirla por sí sola en ausencia de autorización.",
+    "requisito": "RS05"
+  }
+]

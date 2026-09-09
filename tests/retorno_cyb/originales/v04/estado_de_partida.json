@@ -1,0 +1,164 @@
+[
+  {
+    "id": "EP01",
+    "elemento": "Servicio, finalidad y pregunta",
+    "contrato": "Servicio protegido, destinatario experto, episodio y pregunta concreta: suficiencia de la evidencia y legitimidad de una corrección por actualización.",
+    "destinos": "C01/C08/C13",
+    "consecuencia": "Consejo correcto para otro servicio o finalidad.",
+    "fuentes": "B01; T001",
+    "testigos": "CT-01"
+  },
+  {
+    "id": "EP02",
+    "elemento": "Estado de referencia y estado observado",
+    "contrato": "Configuración aprobada; captura observada con fuente, instante, generación, método, diferencias y vigencia. No se confunden la referencia deseada y el estado efectivo.",
+    "destinos": "C01/C06/C07; P06/P12/P13/P16",
+    "consecuencia": "Dar por instalado o seguro aquello que sólo figura en el diseño.",
+    "fuentes": "H01; F018",
+    "testigos": "CT-01–04"
+  },
+  {
+    "id": "EP03",
+    "elemento": "Comienzo de la historia disponible",
+    "contrato": "Primer antecedente verificable; cobertura anterior acreditada, parcial o desconocida; razón del límite. La captura inaugural del expediente no es la creación del sistema.",
+    "destinos": "C02/C07/C17",
+    "consecuencia": "Fabricar un pasado seguro y atribuirle una responsabilidad inexistente.",
+    "fuentes": "H02; H04",
+    "testigos": "CT-01/04"
+  },
+  {
+    "id": "EP04",
+    "elemento": "Inventario de activos y consumidores",
+    "contrato": "Hardware, firmware, software, bibliotecas, imágenes, réplicas, procesos, memoria, cachés y dependencias pertinentes; responsable de cada elemento y método de descubrimiento.",
+    "destinos": "C01/C05; P05/P06/P11/P20–P22",
+    "consecuencia": "Una instancia no reconocida continúa expuesta y consume un componente anterior.",
+    "fuentes": "B01; N01 op.exp.1",
+    "testigos": "CT-03/05"
+  },
+  {
+    "id": "EP05",
+    "elemento": "Censo de principales y cuentas",
+    "contrato": "Personas, servicios y agentes; vínculo entre identidad institucional, cuentas y función. Una cuenta compartida o dos alias requieren resolver la atribución, sin equiparar cantidad e identidad.",
+    "destinos": "C05/C11; P25/P31",
+    "consecuencia": "Consejo dirigido a un titular equivocado o falsa separación de funciones.",
+    "fuentes": "N01 op.acc.1; N07",
+    "testigos": "CT-22/24"
+  },
+  {
+    "id": "EP06",
+    "elemento": "Credenciales y sesiones en curso",
+    "contrato": "Identificador protegido, emisor, titular, ámbito, emisión, caducidad, revocación, renovación pendiente, sesiones y conexiones derivadas. No se registran secretos. Renovación y retirada tienen efectos distintos sobre sesiones existentes según el mecanismo.",
+    "destinos": "C05/C07/C11/C15; P25–P30",
+    "consecuencia": "La baja de una cuenta se toma por cierre de una sesión todavía operativa.",
+    "fuentes": "N06; N10; H02",
+    "testigos": "CT-19–24/29–32"
+  },
+  {
+    "id": "EP07",
+    "elemento": "Fuentes competentes de autoridad",
+    "contrato": "Política institucional, nombramientos, registro de atribuciones, concesiones y revocaciones, contrato o designación competente. Identificar custodio, corte, forma de consulta y fundamento de la fuente; no aceptar como raíz un nombre suministrado por la llamada o por el agente.",
+    "destinos": "C02/C11/C16; P26–P30",
+    "consecuencia": "El atacante aporta a la vez su identidad y la supuesta autoridad que debe comprobarla.",
+    "fuentes": "N01 arts. 11, 12, 21; H03",
+    "testigos": "CT-12–18"
+  },
+  {
+    "id": "EP08",
+    "elemento": "Obligaciones y asignaciones pendientes",
+    "contrato": "Obligación individual, origen, resultado exigido, titular asignado, acto de designación, alcance, vigencia, aceptación si se exige, plazo, estado y destinatario de la incertidumbre. Se conserva el deber conocido aunque su titular no esté acreditado.",
+    "destinos": "C04/C11/C13/C17; P01/P04/P15/P24",
+    "consecuencia": "El relevo conserva los archivos y pierde la obligación de completar, verificar o recuperar.",
+    "fuentes": "B01; H06; N01",
+    "testigos": "CT-12–18/23"
+  },
+  {
+    "id": "EP09",
+    "elemento": "Contabilidad de cambios y efectos",
+    "contrato": "Conciliar por identidad el estado inicial, altas, bajas, sustituciones, cancelaciones, intentos y efectos con el estado final. Separar activos, cuentas, credenciales, sesiones y obligaciones; una suma de cantidades no demuestra coincidencia de miembros.",
+    "destinos": "C03/C05/C07/C17",
+    "consecuencia": "Una operación repetida se contabiliza dos veces o una sesión ajena sustituye a la legítima sin cambiar el total.",
+    "fuentes": "H02; H05",
+    "testigos": "CT-19–24"
+  },
+  {
+    "id": "EP10",
+    "elemento": "Origen y custodia de los registros",
+    "contrato": "Acto, sesión ejecutora, productor del registro, firmante o sellador, recolector, custodio y analista, con roles diferenciados. Identificar archivo y entrada originales, transformaciones, copias, acceso y retención.",
+    "destinos": "C02/C07/C15/C17; P25",
+    "consecuencia": "La firma del recolector atribuye falsamente al recolector el cambio que sólo recibió.",
+    "fuentes": "H02; H05–H07",
+    "testigos": "CT-07/08/14"
+  },
+  {
+    "id": "EP11",
+    "elemento": "Orden temporal y antecedentes",
+    "contrato": "Relaciones con tipo, objetos exactos, respaldo y alcance: precedencia, derivación, causa acreditada, corrección, sustitución y recepción. Conservar incertidumbre de relojes, ramas simultáneas y antecedentes múltiples.",
+    "destinos": "C07/C17; P09/P14/P28–P30",
+    "consecuencia": "Ordenar por llegada produce una causalidad o una autorización previa ficticias.",
+    "fuentes": "H03–H05; N03B/N03C",
+    "testigos": "CT-06–11/31/32"
+  },
+  {
+    "id": "EP12",
+    "elemento": "Perímetros lógicos y físicos",
+    "contrato": "Mapear acceso ordinario, administración, consola, plano de control, gestión fuera de banda, dispositivos físicos, entradas, salidas e integraciones. Declarar fronteras externas con evidencia y responsable.",
+    "destinos": "C05/C06/C08/C16",
+    "consecuencia": "La consola o una salida directa eluden la protección comprobada para el acceso ordinario.",
+    "fuentes": "B01; N05/N06",
+    "testigos": "CT-25–28"
+  },
+  {
+    "id": "EP13",
+    "elemento": "Estado de las medidas de protección",
+    "contrato": "Función preventiva, de detección, de contención o de recuperación; mecanismo, trayecto protegido, configuración efectiva, dependencias, última prueba y comportamiento cuando falla. Activa/pasiva es descripción contextual y no un criterio de suficiencia.",
+    "destinos": "C05/C06/C09; P07/P12/P16",
+    "consecuencia": "Se da por disponible una protección instalada pero sin cobertura, o una copia que nunca se ha restaurado.",
+    "fuentes": "F018; B10; N05/N06",
+    "testigos": "CT-25–28"
+  },
+  {
+    "id": "EP14",
+    "elemento": "Supuestos de seguridad de consecuencias elevadas",
+    "contrato": "Puntos cuya pérdida afecta a múltiples funciones: autoridad raíz, tiempo, claves, consola, repositorio de prueba, identidad compartida, alimentación o recuperación. Vincular fallo supuesto, propagación, servicio y personas afectadas, evidencia y alternativa.",
+    "destinos": "C05/C08/C09/C12",
+    "consecuencia": "Una dependencia común invalida varias protecciones que parecían independientes.",
+    "fuentes": "B01; B10; N06",
+    "testigos": "CT-25–29"
+  },
+  {
+    "id": "EP15",
+    "elemento": "Dato protegido y destinatario",
+    "contrato": "Clasificación, finalidad, base aplicable, datos mínimos, acceso al original, vista por destinatario, retención y supresión. En este expediente todos los casos son sintéticos.",
+    "destinos": "C02/C15/C16",
+    "consecuencia": "La auditoría expone datos de salud o identidades y se convierte en nueva causa de daño.",
+    "fuentes": "N02B; N09",
+    "testigos": "Comprobación operacional pendiente"
+  },
+  {
+    "id": "EP16",
+    "elemento": "Regla y conocimiento admitidos",
+    "contrato": "Versiones de currículo, reglas, fuentes, perfiles y contratos fijadas antes de evaluar. Los sucesos nuevos se interpretan con esa regla; una regla nueva necesita adquisición y admisión humana separadas.",
+    "destinos": "C14/C16",
+    "consecuencia": "Una revisión automática cambia el significado de una conclusión ya emitida.",
+    "fuentes": "Instrucción aprobada y mandato del Director",
+    "testigos": "CT-29–32"
+  },
+  {
+    "id": "EP17",
+    "elemento": "Alternativas y balance de coste y valor",
+    "contrato": "Coste total, interrupción, recuperación, servicio protegido, derechos, alternativas y límite de lo conocido. No se monetiza como cero un daño no estimado ni se elude una obligación aplicable mediante ahorro.",
+    "destinos": "C08–C12",
+    "consecuencia": "Una protección barata del equipo impone un perjuicio mayor al servicio o a personas.",
+    "fuentes": "B10; R035; N01/N02B",
+    "testigos": "Juicio profesional pendiente en un caso real"
+  },
+  {
+    "id": "EP18",
+    "elemento": "Cierre del episodio y entrega",
+    "contrato": "Conclusiones por alcance, obligaciones pendientes, destinatario responsable, cambios que obligan a revisar y vínculo con el próximo episodio. Cerrar el expediente no equivale a autorizar la ejecución ni a certificar el sistema.",
+    "destinos": "C13/C17",
+    "consecuencia": "El siguiente consejo parte de una conclusión sin sus límites y tareas pendientes.",
+    "fuentes": "IMM-1/IMM-2; B01",
+    "testigos": "CT-12–18/29–32"
+  }
+]

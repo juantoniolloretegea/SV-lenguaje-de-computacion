@@ -1,0 +1,75 @@
+{
+  "artifact_id": 10116340925,
+  "artifact_zip_bytes": 681213,
+  "artifact_zip_sha256": "e92a54a45fa623414a3928b4252e9a1315a51ffc5d88b95723f48f0b4c935e70",
+  "cyb_job": 102569797088,
+  "cyb_run": 34382276159,
+  "failures_preserved": [
+    {
+      "commit": "581145dc3c214c59e607fdcb285f1ba56a54686e",
+      "reason": "E0463: biblioteca no localizada. Ningún rechazo acreditado.",
+      "run": 34381953464
+    },
+    {
+      "commit": "b9058ffe8a71e13a303092761bffa6f7cbe0338a",
+      "reason": "Siete negativos correctos; dos positivos compilados pero no ejecutados por /tmp sin ejecución. Se trasladaron los productos al directorio de Cargo, sin cambiar la restricción.",
+      "run": 34382100072
+    }
+  ],
+  "isolated_job": 102569801311,
+  "isolated_package_sha256_from_job_log": "5d5d3a64fc4ce46eb248777f26240e1c93791d567eabee81b3531f447d905886",
+  "isolated_run": 34382276114,
+  "isolated_rust_failed": 0,
+  "isolated_rust_passed": 369,
+  "material_commit": "6899f58be5d37f5cb130b71ab65d33b5c06f5229",
+  "material_tree": "541d0871affb964e63e3715ea0f437f884b8e6d1",
+  "native_boundary_positives": 2,
+  "native_boundary_rejections": 7,
+  "prior_contract_commit": "a0f04807c10cfa7ac56886039ba8a38f9943c88f",
+  "production_semantics_changed": false,
+  "professional_authority_integration_proven": false,
+  "rust_client_confinement_proven": false,
+  "workflow_runs": [
+    {
+      "id": 34382276131,
+      "name": "Conformidad SVP",
+      "conclusion": "success"
+    },
+    {
+      "id": 34382276159,
+      "name": "Retorno CYB documental",
+      "conclusion": "success"
+    },
+    {
+      "id": 34382276172,
+      "name": "R0-8 Baseline nativa",
+      "conclusion": "success"
+    },
+    {
+      "id": 34382276114,
+      "name": "Fila 7 fuentes y ejecución sin intérpretes",
+      "conclusion": "success"
+    },
+    {
+      "id": 34382276118,
+      "name": "R0 Rust",
+      "conclusion": "success"
+    },
+    {
+      "id": 34382276135,
+      "name": "R0 WASM paridad nativa y navegador",
+      "conclusion": "success"
+    }
+  ],
+  "parity": {
+    "test_merge": "cb1d947b9eaa5db8060856276eda4616ba268c17",
+    "tree": "541d0871affb964e63e3715ea0f437f884b8e6d1",
+    "run": 34382276135,
+    "first_job": 102569797162,
+    "first_result": "PENDIENTE, rechazo conservado",
+    "second_job": 102570777159,
+    "second_result": "success",
+    "wait_mechanism_repaired": false,
+    "new_rust_boundary_tests_executed_as_wasm": false
+  }
+}

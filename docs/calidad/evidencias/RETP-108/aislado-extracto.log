@@ -1,0 +1,45 @@
+Extracto literal del trabajo 102569801311 / ejecución 34382276114. El total 369 suma sus líneas test result; no es el log completo.
+2026-09-09T17:20:26.3934420Z   1.98.0-x86_64-unknown-linux-gnu installed - rustc 1.98.0 (88d9e12ae 2026-08-18)
+2026-09-09T17:20:26.4111830Z   1.98.0-x86_64-unknown-linux-gnu unchanged - rustc 1.98.0 (88d9e12ae 2026-08-18)
+2026-09-09T17:20:26.4235902Z rustc 1.98.0 (88d9e12ae 2026-08-18)
+2026-09-09T17:20:26.4337554Z cargo 1.98.0 (797e8a9bc 2026-08-05)
+2026-09-09T17:20:27.7510676Z 5d5d3a64fc4ce46eb248777f26240e1c93791d567eabee81b3531f447d905886
+2026-09-09T17:20:45.4590749Z [36;1mdocker run --rm --network none --cap-drop ALL --security-opt no-new-privileges --read-only --tmpfs /tmp:rw,nosuid,size=128m \[0m
+2026-09-09T17:20:45.7389887Z rustc 1.98.0 (88d9e12ae 2026-08-18)
+2026-09-09T17:20:45.7430762Z cargo 1.98.0 (797e8a9bc 2026-08-05)
+2026-09-09T17:20:45.7755690Z INTERPRETES_PYTHON_NODE_AUSENTES
+2026-09-09T17:21:03.7070543Z test result: ok. 211 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+2026-09-09T17:21:03.7087021Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:03.7109671Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:04.1285746Z test result: ok. 45 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+2026-09-09T17:21:04.1311161Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:04.1332792Z test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:04.1356927Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:04.1714470Z test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+2026-09-09T17:21:04.2059757Z test fa01_referencia_de_autoridad_privada ... ok
+2026-09-09T17:21:04.2064307Z test fa02_macro_no_elude_referencia_privada ... ok
+2026-09-09T17:21:04.2073788Z test fa03_premisa_externa_no_fabricable ... ok
+2026-09-09T17:21:04.2366851Z test fa04_macro_no_elude_premisa_privada ... ok
+2026-09-09T17:21:04.2375163Z test fa06_resultado_elegido_no_es_permiso ... ok
+2026-09-09T17:21:04.2418215Z test fa05_ligadura_validada_no_es_autoridad ... ok
+2026-09-09T17:21:04.2751716Z test fa07_booleano_no_sustituye_premisa ... ok
+2026-09-09T17:21:04.3462852Z test datos_documentales_no_constituyen_autoridad ... ok
+2026-09-09T17:21:04.3803124Z test macro_de_datos_nominales_admitida ... ok
+2026-09-09T17:21:04.3803924Z test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+2026-09-09T17:21:10.0456794Z test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 5.66s
+2026-09-09T17:21:10.0488474Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1149655Z test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.06s
+2026-09-09T17:21:10.1179470Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1237055Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1263146Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1288815Z test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1305784Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1342107Z test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1381296Z test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1404944Z test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1417756Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.1433161Z test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:10.4362393Z test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.17s
+2026-09-09T17:21:10.4517296Z test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+2026-09-09T17:21:12.1946560Z CONSTRUCCION_Y_PRUEBAS_RUST_SIN_INTERPRETES_CONFORMES
+2026-09-09T17:21:15.0900572Z 5d5d3a64fc4ce46eb248777f26240e1c93791d567eabee81b3531f447d905886  fila7-fuentes.tar.gz

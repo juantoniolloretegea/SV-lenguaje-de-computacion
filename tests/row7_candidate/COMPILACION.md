@@ -1,6 +1,8 @@
 # Construcción de la candidata Rust de fila 7
 
-Este paquete conserva fuentes y entradas del commit identificado en `CORTE_GIT.txt`. No contiene el editor web ni los conductores Python/JavaScript de la auditoría completa. La licencia y los manifiestos Cargo se conservan literalmente.
+Este paquete conserva fuentes y entradas del commit identificado en `CORTE_GIT.txt`. No contiene el editor web ni los conductores de la auditoría completa. La licencia y los manifiestos Cargo se conservan literalmente.
+
+Desde RETP-107 incluye expresamente `tests/retorno_cyb/reglas_documentales.mjs` y `consumir.mjs`: son los bytes de los dos módulos externos cuya identidad transporta la sonda Rust de consumo. Rust los incorpora como datos de prueba mediante `include_bytes!`; no los ejecuta ni requiere Node. Se mantienen visibles con sus extensiones originales, sin traducción ni ocultación. No se incorporan a `sv_core/src` ni a `sv-native`. Para ejecutar el consumidor documental externo se utiliza el repositorio completo y Node; ese consumidor no es una operación productiva SV.
 
 Desde el directorio `fuentes`, con Rust/Cargo 1.98.0, GCC/libc para el destino GNU/Linux y GNU Coreutils:
 

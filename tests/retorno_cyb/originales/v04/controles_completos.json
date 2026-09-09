@@ -1,0 +1,121 @@
+[
+  {
+    "id": "C01",
+    "nombre": "Identidad y aplicabilidad",
+    "contrato": "Identificar activo, componente, vulnerabilidad, actualización, episodio y horizonte. Resolver por separado las condiciones del aviso aplicable: plataforma, arquitectura, versión, precursor y configuración. Si falta una condición decisiva, la aplicabilidad queda sin resolver. Una exclusión exige evidencia de que la regla no corresponde al caso.",
+    "contraejemplo": "Nombre coincidente en otro equipo; paquete para otra arquitectura; condición desconocida.",
+    "fuentes": "T001 §3.2; B03 §§3.3–3.6"
+  },
+  {
+    "id": "C02",
+    "nombre": "Admisión de evidencia",
+    "contrato": "Distinguir procedencia, integridad, autenticidad, legalidad de adquisición y permiso para observar de la legitimidad del acto observado. Una prueba admisible de una actuación no autorizada conserva el resultado técnico y permite registrar el incumplimiento. Si la adquisición no es admisible, conservar el registro de no admisión y tramitar la custodia competente, sin fabricar una salida del dominio. Los originales quedan bajo acceso y retención justificados; el expediente compartido usa una vista mínima trazable.",
+    "contraejemplo": "Huella rehecha sobre evidencia falsificada; firma válida de autor no autorizado; lector sin permisos; tipo cambiado.",
+    "fuentes": "T001 §2.3.1; F018 §7.4; B03 §§3.13, 3.15, 3.25; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C03",
+    "nombre": "Correspondencia e interpretación de resultados",
+    "contrato": "Vincular cada resultado al intento y elemento originales. Conservar códigos y errores completos. Un éxito con errores exige analizar qué efectos se produjeron; no prueba éxito íntegro ni ausencia total de modificación. El fallo de instalación es un hecho distinto del fallo al observarla.",
+    "contraejemplo": "Índice de otra colección; éxito agregado con elemento fallido; confusión entre error de operación y de lectura.",
+    "fuentes": "T004–T006"
+  },
+  {
+    "id": "C04",
+    "nombre": "Integridad de obligaciones",
+    "contrato": "Enumerar las obligaciones específicas y sus efectos exigidos. Cada obligación se asigna a una de las ocho clases y a estados de cumplimiento individualizados. Una lista vacía exige evidencia de que no existen acciones adicionales. Ninguna obligación pertinente queda sustituida por un texto genérico de suficiencia.",
+    "contraejemplo": "Sólo se comprueba un efecto de una acción compuesta; lista vacía sin fuente; nueva clase añadida durante el consejo.",
+    "fuentes": "T001 §2.3.2; B01 §3.3.2"
+  },
+  {
+    "id": "C05",
+    "nombre": "Cobertura de sujetos y dependencias",
+    "contrato": "Conservar la cobertura finita anterior y añadir principales humanos y de servicio, permisos, delegaciones, vías de administración, destinos de datos, repositorios de pruebas y flujos de salida pertinentes. Cada frontera externa conserva responsable, evidencia, contrato y alcance. Un servicio detrás de una pasarela no acredita que todo su tráfico saliente o sus integraciones pasen por ella.",
+    "contraejemplo": "Segunda réplica omitida; recurso compartido sin titular; ciclo de dependencias; inventario vacío injustificado.",
+    "fuentes": "T001 §3.2; B01 §3.3.3; B04 §3; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C06",
+    "nombre": "Validez de la comprobación",
+    "contrato": "Mantener criterio previo y sensibilidad propia. P07 puede registrar cada comprobación criptográfica o de autenticación cualificada, sin convertir su éxito en competencia, atribución personal cierta o autorización completa. El estado real del acto y la validez de su permiso exigen relaciones adicionales. Ausencia de alerta DLP no acredita anonimización ni ausencia de exfiltración.",
+    "contraejemplo": "Escáner sin acceso; versión detectada sin corrección íntegra; dos herramientas con igual limitación; criterio elegido después del resultado.",
+    "fuentes": "F018 §§4.3, 6.5, 7.3; B08 §1; B09 §1; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C07",
+    "nombre": "Vigencia y orden de los hechos",
+    "contrato": "Conservar cambio y retorno; añadir tiempos de acto, emisión, registro, sellado, recepción y efecto jurídico/institucional. Tratar intervalos de incertidumbre y fuentes de tiempo. Una revocación es evidencia del caso bajo regla fija, no aprendizaje de conocimiento. Reevaluar sólo las dependencias y el horizonte afectados.",
+    "contraejemplo": "Extremos iguales con cambio intermedio; sincronización de otra escritura; restauración fuera del ámbito de la prueba.",
+    "fuentes": "T001 §2.3.4; B01 §§3.3.4, 3.4; B06; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C08",
+    "nombre": "Impactos sobre servicios y datos",
+    "contrato": "Conservar funciones, datos y consecuencias; añadir confidencialidad de registros y telemetría, atribución falsa a una persona, acceso no autorizado y perjuicio a derechos. Separar posibilidad de daño, daño constatado y atribución causal. La conservación de trazabilidad no justifica difusión indiscriminada de identidades o datos de salud.",
+    "contraejemplo": "Equipo barato del que depende un servicio de alto valor; impacto no monetizado convertido en cero.",
+    "fuentes": "B01 §3.3.3; B10 §3.2; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C09",
+    "nombre": "Comparación de alternativas",
+    "contrato": "Describir completar, aplazar con medidas, sustituir, aislar o recuperar cuando sean pertinentes. Comparar el efecto corrector, los perjuicios y los requisitos de cada opción. Una medida compensatoria o una aceptación de riesgo no se presenta como corrección realizada.",
+    "contraejemplo": "Aislamiento tratado como parche aplicado; restauración propuesta sin conocer su capacidad o alcance.",
+    "fuentes": "T001 §§3.3–3.5; B10 §§3.4, 4.3"
+  },
+  {
+    "id": "C10",
+    "nombre": "Viabilidad temporal",
+    "contrato": "Declarar ventana, duración de actuación, validación y recuperación, con dependencias y márgenes justificados. Las estimaciones desconocidas se mantienen abiertas. Este análisis sólo se activa si el consejo contempla una actuación pendiente.",
+    "contraejemplo": "Duración de reinicio considerada sin tiempo de recuperación; ventana disponible confundida con permiso.",
+    "fuentes": "B10 §3.2; B01 §3.3.2"
+  },
+  {
+    "id": "C11",
+    "nombre": "Autoridad concreta",
+    "contrato": "Componer identidad de principal, autenticación y atribución con competencia del emisor, alcance, vigencia, revocación, emisión previa y separación de funciones cuando proceda. La actuación prevista se distingue de la autorizada. Examinar cada arista de delegación, sus restricciones y el principal efectivo; no aceptar autoatribución de facultades por la IA. La autoridad humana del proyecto admite conocimiento; la organización competente concede permisos materiales, y ambos actos permanecen distintos.",
+    "contraejemplo": "Permiso para otro activo; autorización vencida; IA que se concede una excepción.",
+    "fuentes": "B01 §§3.3.1–3.3.2; SV-IN y mandato humano posterior; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C12",
+    "nombre": "Proporcionalidad de coste y valor",
+    "contrato": "Conservar coste total y valor protegido por servicio y horizonte, incluidos derechos y daños no monetizados. Las alternativas deben satisfacer primero las obligaciones aplicables. No se convierte el precio del equipo en límite del valor protegido ni se permite omitir un requisito obligatorio por resultar caro. La decisión de suspender, sustituir o rediseñar el servicio corresponde al responsable competente.",
+    "contraejemplo": "Coste de seguridad comparado sólo con precio del equipo; suma de pérdidas que representan el mismo perjuicio.",
+    "fuentes": "R035; T001 §3.1; B10 §3.2; principio del Director; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C13",
+    "nombre": "Dictamen explicado",
+    "contrato": "Conservar explicación reconstruible y distinguir resultado técnico, legitimidad de actuación, insuficiencias y consejo al experto. La explicación identifica referencias mínimas a pruebas y permisos, con vistas por destinatario; el acceso a la identidad personal detallada tiene control propio. El informe documental no se denomina Frame sin arquitectura SV constituida. Un fallo técnico no produce una salida alternativa del dominio.",
+    "contraejemplo": "Conclusión sin relación causal declarada; suma de estados heterogéneos; incertidumbre omitida.",
+    "fuentes": "SV-IN; SV-AT; N01; N02B; N05–N07; N09; N10, según HP01–HP12"
+  },
+  {
+    "id": "C14",
+    "nombre": "Control de versiones del conocimiento",
+    "contrato": "Fijar las fuentes y reglas antes de cada evaluación. Adquirir novedades en una actividad separada y someter su admisión a decisión humana. Los cambios de catálogos externos pueden exigir revisión, pero no sustituyen automáticamente el conocimiento ni añaden valores a Tri.",
+    "contraejemplo": "Uso de latest; cambio de CVE equiparado a técnica retirada de otro catálogo; actualización silenciosa de criterio.",
+    "fuentes": "SV-IN §§5.4–5.5; mandato del Director"
+  },
+  {
+    "id": "C15",
+    "nombre": "Protección de datos en pruebas y explicaciones",
+    "contrato": "Fijar finalidad, responsable y encargado cuando proceda, categorías de datos, base del tratamiento y condición aplicable a datos de salud, destinatarios, accesos, transferencias, retención y supresión o bloqueo que corresponda. Justificar cada dato necesario; mantener separada y protegida la tabla de reidentificación. No llamar anónima a una vista seudonimizada. El dominio documental usa testigos sintéticos y no incorpora datos reales. Un original o una huella pueden seguir permitiendo vinculación y requieren evaluación.",
+    "contraejemplo": "Registro clínico completo publicado para probar un reinicio; misma vista detallada para todos los destinatarios.",
+    "fuentes": "N02B arts. 5, 6, 9, 25, 32; N09; ADJ1 §§2.1–2.3"
+  },
+  {
+    "id": "C16",
+    "nombre": "Aplicabilidad de obligaciones y perfiles",
+    "contrato": "Determinar entidad, jurisdicción, actividad, función, categoría y dimensiones del sistema, fecha relevante y versión de la disposición. Declarar requisitos activados y exclusiones justificadas. Separar ley, guía, norma técnica, evidencia educativa y propuesta de fabricante. La IA aplica conocimiento admitido; un texto nuevo exige adquisición y admisión humana separadas.",
+    "contraejemplo": "ENS atribuido por etiqueta médica sin examinar su ámbito; exigencia futura del EHDS aplicada ya; producto certificado tomado por sistema conforme.",
+    "fuentes": "N01 arts. 2–3 y anexos I–II; N04; ADJ1 §1.4"
+  },
+  {
+    "id": "C17",
+    "nombre": "Estado de partida y continuidad del expediente",
+    "contrato": "Conservar un estado inicial acotado, antecedentes tipados, fuentes competentes, conciliación por identidad, asignaciones y obligaciones pendientes. Distinguir lo observado de lo aprobado, continuidad de la evidencia de legitimidad de la actuación y custodia de responsabilidad profesional. Los datos de EP01–EP18 son campos y relaciones del contrato; no nuevos parámetros ni permisos.",
+    "contraejemplo": "Asiento íntegro que omite una sesión anterior o convierte una recepción de archivos en exoneración del responsable del acto.",
+    "fuentes": "B01; H02–H07; N01/N02B; IMM-1/IMM-2"
+  }
+]

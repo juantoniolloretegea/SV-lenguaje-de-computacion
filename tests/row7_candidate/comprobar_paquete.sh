@@ -10,7 +10,7 @@ cd "$1"
 [[ $(cat CORTE_GIT.txt) =~ ^[0-9a-f]{40}$ ]] || fail PAQUETE_CORTE
 while IFS= read -r -d '' path; do
   case "$path" in
-    ./LICENSE|./CORTE_GIT.txt|./INVENTARIO.sha256|./rust/*.toml|./rust/*.rs|./tests/*.svp|./tests/*.json|./tests/*.rs|./tests/*.sha256|./tests/row7_candidate/COMPILACION.md) ;;
+    ./LICENSE|./CORTE_GIT.txt|./INVENTARIO.sha256|./rust/*.toml|./rust/*.rs|./tests/*.svp|./tests/*.json|./tests/*.rs|./tests/*.sha256|./tests/row7_candidate/COMPILACION.md|./tests/retorno_cyb/reglas_documentales.mjs|./tests/retorno_cyb/consumir.mjs) ;;
     *) fail PAQUETE_TIPO ;;
   esac
 done < <(find . -type f -print0)

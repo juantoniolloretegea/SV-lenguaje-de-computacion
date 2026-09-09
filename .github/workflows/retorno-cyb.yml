@@ -1,0 +1,66 @@
+name: Retorno CYB documental
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - 'tests/retorno_cyb/**'
+      - 'tests/row7_bindings/**'
+      - 'tests/row7_gh/**'
+      - 'rust/**'
+      - 'docs/calidad/RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md'
+      - 'docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md'
+      - '.github/workflows/retorno-cyb.yml'
+permissions:
+  contents: read
+defaults:
+  run:
+    shell: bash
+jobs:
+  contraste:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener cabeza exacta
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - name: Fijar herramientas e identidad
+        run: |
+          set -euo pipefail
+          rustup toolchain install 1.98.0 --profile minimal
+          rustup default 1.98.0
+          mkdir -p artifacts/retorno-cyb
+          git rev-parse HEAD HEAD^{tree} > artifacts/retorno-cyb/corte.txt
+          rustc --version > artifacts/retorno-cyb/herramientas.txt
+          cargo --version >> artifacts/retorno-cyb/herramientas.txt
+          node --version >> artifacts/retorno-cyb/herramientas.txt
+          sha256sum --version >> artifacts/retorno-cyb/herramientas.txt
+      - name: Verificar fuentes y reglas antes del emisor
+        run: |
+          set -euo pipefail
+          node tests/retorno_cyb/verificar.mjs --fuentes > artifacts/retorno-cyb/fuentes-y-reglas.json
+          node tests/row7_gh/contract_hash.mjs --referencia
+      - name: Contrastar cuatro entradas nativas y rechazos causales
+        run: |
+          set -euo pipefail
+          cargo test --manifest-path rust/Cargo.toml -p sv_core --test cyb_reception --offline 2>&1 | tee artifacts/retorno-cyb/pruebas-nativas.log
+          cargo test --manifest-path rust/Cargo.toml -p sv_core --test cyb_authority_boundary --offline 2>&1 | tee artifacts/retorno-cyb/frontera-autoridad.log
+          cargo build --manifest-path rust/Cargo.toml -p sv_core --example cyb_reception_probe --release --offline
+          cp rust/target/release/examples/cyb_reception_probe artifacts/retorno-cyb/emisor-nativo
+      - name: Repetir transporte y comprobar externamente
+        run: |
+          set -euo pipefail
+          artifacts/retorno-cyb/emisor-nativo > artifacts/retorno-cyb/transporte.json
+          artifacts/retorno-cyb/emisor-nativo > artifacts/retorno-cyb/repeticion.json
+          cmp artifacts/retorno-cyb/transporte.json artifacts/retorno-cyb/repeticion.json
+          node tests/retorno_cyb/verificar.mjs artifacts/retorno-cyb/transporte.json --autoprueba > artifacts/retorno-cyb/verificacion.json
+          node tests/retorno_cyb/ataques_consumo.mjs artifacts/retorno-cyb/transporte.json > artifacts/retorno-cyb/ataques-consumo.json
+          sha256sum artifacts/retorno-cyb/emisor-nativo artifacts/retorno-cyb/transporte.json artifacts/retorno-cyb/verificacion.json > artifacts/retorno-cyb/huellas.sha256
+          git diff --exit-code
+      - name: Conservar evidencia completa
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: retorno-cyb-documental
+          if-no-files-found: error
+          retention-days: 90
+          path: artifacts/retorno-cyb/

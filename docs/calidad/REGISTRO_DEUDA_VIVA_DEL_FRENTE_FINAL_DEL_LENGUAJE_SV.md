@@ -22,8 +22,10 @@ El cierre de un bloque no exige eliminar toda deuda. Exige que la deuda restante
 - **Precisión diagnóstica pendiente:** `E006 — UndeclaredReference` se utiliza tanto para una referencia inexistente como para una referencia existente de tipo incompatible. FFL-C caracteriza de forma persistente ambos supuestos mediante cuatro comprobaciones, pero no modifica el nombre, el mensaje ni el contrato diagnóstico.
 - **Integridad diagnóstica Rust pendiente:** los fallos de bienformación se encapsulan hoy en `CompileError::InvalidProgram(String)` y la identidad `E004` se acredita buscando el literal dentro del mensaje. Debe decidirse una representación estructurada del código diagnóstico antes de que la proliferación de literales convierta su identidad en una convención frágil. Esta deuda no invalida la equivalencia observable de N0-01 ni autoriza a cambiar códigos dentro de ese acto.
 - **Concordancia vigente RETP-087:** 51 códigos catalogados no equivalen a emisión estructurada completa. La matriz/CSV de agosto conservan su corte histórico; los inventarios activos enlazan los 86 negativos con obligación y rechazo textual. El testigo con nombre E011 conserva el rechazo sintáctico previo y no acredita esa cláusula por sí solo. RETP-088 rectifica trece atribuciones sintácticas a E001: se enlazan con las producciones gramaticales aplicables; sólo `invalid_tri_literal` conserva esa obligación en el corpus. No cambian rechazos ni se acredita emisión estructurada. Esta corrección documental no cierra DFL-001.
+- **Observadores documentales, 09/09/2026, corte `0f434dbb6f6ea8f5f4e270c58c4ad4c5490d8c84`:** el observador G/H de fila 7 (`tests/row7_gh/verificar.mjs`) admite campos no declarados en la raíz del informe y en sus filas; su conformidad no acredita esos campos. El observador CYB (`tests/retorno_cyb/verificar.mjs`) los rechaza mediante `ESQUEMA` y `ESQUEMA_FILA`, respectivamente. Diferencia reproducida por ambas interfaces de línea de órdenes, con controles conformes. Queda registrada dentro de DFL-001; no bloquea la fila 9 ni reabre la entrega, y no supone corrección del observador G/H ni cierre de la deuda.
 - **Estado:** gobernada; no bloquea por sí sola los cierres alcanzados.
 - **Prioridad:** alta para una futura revisión del contrato diagnóstico.
+- **Sucesión candidata RETP-109, 09/09/2026:** el [contrato de diagnóstico estructurado, procedencia y presentación ES/EN](CONTRATO_DIAGNOSTICO_ESTRUCTURADO_Y_LOCALIZACION_ES_EN_2026_09_09.md) recibe la localización ausente, los contextos no atribuidos del ensamblaje y la exposición de variantes internas. Trece casos del corte `26ebc9f1` se caracterizan mediante 26 ejecuciones nativas/WebAssembly; no son una reparación. Se fijan identidad y causa invariantes, explicaciones por perfil y ambas en ensamblaje mixto, procedencia exacta, separación de autoridad y migración de oráculos. La realización y DG01–DG14 permanecen pendientes antes del enlace con R1 y la aprobación de la candidata. No se reabre lo integrado ni se modifica DFL-011.
 - **Evidencia:** `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.md`, `MATRIZ_DE_CONCORDANCIA_DIAGNOSTICA_IR_IMPLEMENTACION_SV.csv`, `CROSSWALK_FUNCIONAL_DE_OBLIGACIONES_DIAGNOSTICAS_IR_V0_2_Y_FRONTEND_VIA_B_2026_08_18.md`, `tests/COBERTURA_OBSERVABLE_FFL_C_2026_08_20.md` y `docs/arquitectura/ACTA_TECNICA_N0_01_UNICIDAD_DE_CODOMAIN_2026_09_04.md`.
 
 ### DFL-002 — Sincronización entre documentación pública y evidencia
@@ -297,3 +299,47 @@ DFL-001 conserva sus restantes obligaciones: este cierre candidato es local a lo
 La fila 7 queda completada para la entrega representacional identificada; el siguiente trabajo sustantivo es fila 8, a cargo de Ciberseguridad Inteligente. La matriz documental fijada conserva su corte candidato: este cambio de gobierno se registra por sucesión, sin modificar sus banderas para fabricar una certificación automática.
 
 El receptor comprobará su corte y el paquete antes de constituir su perímetro y catálogo Excel. Si la operación CYB necesita una capacidad excluida, se registra insuficiencia o se devuelve la obligación al Lenguaje; no se rellena con una cadena opaca, un supuesto permiso ni `U`. Una ausencia de contraejemplo se informa como tal, con su cobertura finita. No se declara cerrado el núcleo ni recibida una auditoría CYB todavía no ejecutada.
+
+<a id="relevo-retp-106"></a>
+
+## Sucesión RETP-2026-106 — Retorno CYB y uso documental contrastado
+
+[RETP-106](REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-106) recibe el relevo CYB aprobado en `169af16d05ffc954454bb5528ec106e5752b7016` y contrasta LIG integrado sobre `66967a80…`. Su candidata `219d6a374c38d1a14a7e191592032f70f89ee402` preserva los originales y supera seis flujos. El [dictamen receptor](RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md#53-dictamen-por-capacidad) limita la suficiencia a conservación y uso documental externo: 78 casos, 18 pares y 186 contratos comprobados. No amplía la oferta productiva ni cierra por referencia ninguna deuda ejecutiva.
+
+| Obligación | Resultado recibido y próximo objeto concreto |
+|---|---|
+| DFL-005 | LIG preserva estas cargas completas y laterales; los 18 pares pierden información sólo en H. Queda por definir qué consumidores operacionales necesitan aplicar atribución, autoridad, tiempo, vistas, cobertura y continuidad; representar el documento no equivale a ejecutar su regla. Mantener los límites por operación hasta realizar ese consumidor. |
+| DFL-003/004 y H06/H07 | Se conservan las guardas integradas. RS03/09/10/12 precisan historia, antecedentes, relaciones y reevaluación; el observador externo no acredita CQ1–CQ6 ni causalidad de una trayectoria SV. Definir el uso necesario antes de alterar su representación. |
+| Constitución celular CYB | Las 32 definiciones no constituyen célula, agente ni posiciones. El banco D/AG es sintético. Una necesidad de Frame/destino/cobertura celular vuelve al dominio únicamente con la pregunta y operación que la requieren. |
+| K1-T y DFL-006 | La concordancia de reglas externas no habilita captura, admisión ni observación→Tri productivas; tampoco criticidad ni consejo ejecutado. Identificar los consumidores dependientes y conservar la puerta algebraica correspondiente. |
+| DFL-001 | Los doce ataques al nuevo observador y sus referencias fijadas cubren ese perímetro, sin cierre general de diagnósticos ni de independencia del criterio. |
+| DFL-009 | Tras este retorno aprobado llega su oportunidad de evaluación en fila 9: servicio nativo, identidad efectiva, recursos, aislamiento, fallos, repetición y coste. No queda resuelta ni se selecciona plataforma; se cotejará con los ensayos identificados del laboratorio. |
+| DFL-011/012/013 y distribución final | Español, nombre histórico `cell_ref` y diversidad independiente conservan sus identidades. Continúan 17 auxiliares Python e invocaciones de CI, más Node externo. Las 359 pruebas aisladas no acreditan su retirada global. |
+| R2/R3/R4 | Autenticidad, permisos, difusión, custodia, persistencia y cobertura reales siguen sin acreditación por este banco. Un resultado documental favorable no autoriza una actuación ni certifica infraestructura. |
+
+Recepción y primer contraste efectuados en candidata; fila 9 y núcleo abiertos. Ciberseguridad permanece en pausa controlada. La próxima decisión debe fijar consumidores y dependencias por operación, conservar la necesidad profesional aprobada y escoger la representación suficiente con evidencia; no repetir el catálogo, constituir otro universo ni dispensar pendientes mediante una etiqueta.
+
+
+<a id="relevo-retp-107"></a>
+
+## Sucesión candidata RETP-107 · Regla de consumo documental y evaluación DFL-009
+
+Base `60bfdf44…`; material `f5a43131c8743867ee039bfe52f1048a52314058`, árbol `7f6b333b88ed2da685289cf1cc33494ba181a558`, [PR #88](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/88), dependiente de #87. El [contrato y resultados](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md) reemplazan la definición OP sintética del banco por una definición exacta que liga selector, regla, consumidor y ámbito. Los restantes artefactos de constitución, autoridad y captura/admisión siguen siendo sintéticos. El enlace externo está probado; la ligadura productiva CYB no se declara resuelta.
+
+| Obligación | Alcance tras RETP-107 |
+|---|---|
+| DFL-005 | Se comprueban 186 definiciones y sus módulos, 150 consumos y 36 rechazos de H en el banco. No se acredita constitución de agente ni autoridad institucional, captura/admisión profesional o ligadura a posiciones CYB. La correspondencia operacional de identidad, competencia y alcance es el siguiente objeto; no se copia semántica profesional al núcleo. |
+| DFL-009 | **EVALUADA_DOCUMENTALMENTE_CON_BRECHAS_MATERIALES_ABIERTAS.** Se reciben 018/020 en su corte y se delimitan ejecutable local, FFI, WASM, proceso separado, servicio y dependencias. No se acredita servicio remoto, aislamiento contra anfitrión comprometido, recuperación ni enlace de efectos. Nuevas realizaciones se ensayarán en laboratorio antes de promoción. |
+| DFL-003/004/006 y K1-T | Conservan productores, consulta, trayectoria, causalidad, captura y transducción productivas pendientes. El consumidor documental no es `query`, Frame, consejo, permiso R1 ni realización algebraica. |
+| DFL-001/011/012/013 | Sin cierre ni renumeración. El acta del español y RETP-092 no cambian; independencia de realización SV no recuperada por módulos externos. |
+| Autonomía y auxiliares | 360 pruebas Rust aisladas sin Python/Node. Dos módulos mjs se incluyen visiblemente como bytes de prueba, no se interpretan por Rust ni se incorporan a sv-native. Node sigue siendo dependencia del consumo externo; 17 Python previos pendientes de retirada global. |
+
+No se licencia como disponible ninguna capacidad profesional pendiente. El cotejo de requisitos IMM/CYB no suma permisos, células o garantías. DFL-009 deja de ser únicamente una evaluación diferida, pero no pasa a resuelta. Candidatas sin integrar; fila 9 y núcleo abiertos; Ciberseguridad en pausa. README, actas históricas y repositorios de dominio intactos.
+
+<a id="relevo-retp-108"></a>
+
+## Sucesión candidata RETP-108 · Declaración documental y autoridad
+
+El [contrato de consumo, §8](CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md#8-retp-108-frontera-entre-declaración-documental-y-autoridad) precisa DFL-005 general sin cerrarla: las referencias íntegras de LIG y el catálogo CYB adoptado no constituyen facultades institucionales. R1 exige referentes protegidos y una premisa externa opaca para T-0; su recepción profesional desde CYB no está constituida por este corte. La sede del Lenguaje debe definir y probar ese contrato de recepción; la organización competente aporta la raíz, titulares, facultades y alcance aplicables. No se abre un constructor público para suplir la ausencia.
+
+El material `6899f58be5d37f5cb130b71ab65d33b5c06f5229` comprueba dos controles y siete rechazos desde clientes externos, también mediante macros; 369 pruebas Rust aisladas. Estas pruebas no crean autoridad, no activan R1 desde un expediente CYB y no acreditan seguridad material del host. El contraste documental sigue disponible en su alcance y la pregunta de §8.3 no bloquea por extensión toda la fila 9. DFL-009, los productores y restantes deudas mantienen su tratamiento. La anotación G/H de DFL-001 ya incorporada en e18a7949 permanece; no se crea otra deuda ni se modifica el observador. Candidata sin integrar, fila 9 abierta y dominios en pausa.

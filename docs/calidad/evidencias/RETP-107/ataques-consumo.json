@@ -1,0 +1,50 @@
+{
+  "scope": "ENLACE_DOCUMENTAL_EXTERNO",
+  "attacks": [
+    {
+      "name": "otra_definicion",
+      "cause": "OPERACION_LIGADA",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "otra_regla",
+      "cause": "REGLA_LIGADA",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "otro_consumidor",
+      "cause": "CONSUMIDOR_LIGADO",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "carga_otro_selector",
+      "cause": "SELECTOR_CARGA",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "version_ausente",
+      "cause": "DEFINICION_VERSION",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "H_ofrecida_completa",
+      "cause": "OPERACION_LIGADA",
+      "control": "INFORMACION_INSUFICIENTE"
+    },
+    {
+      "name": "HS_sin_S",
+      "cause": "CONSUMO_AMBITO",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "regla_no_constituida",
+      "cause": "OPERACION_LIGADA",
+      "control": "ADMITIDO"
+    },
+    {
+      "name": "selector_fuera_del_perfil",
+      "cause": "REGLA_NO_CONSTITUIDA"
+    }
+  ],
+  "untrusted_code_executed": false
+}

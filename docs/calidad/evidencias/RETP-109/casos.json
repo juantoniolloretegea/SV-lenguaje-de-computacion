@@ -1,0 +1,166 @@
+[
+  {
+    "id": "control_es",
+    "units": [
+      {
+        "profile": "es",
+        "source": "codominio K = { A };",
+        "file": "control-es.svp"
+      }
+    ],
+    "expected": null
+  },
+  {
+    "id": "control_en",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A };",
+        "file": "control-en.svp"
+      }
+    ],
+    "expected": null
+  },
+  {
+    "id": "vacio_es",
+    "units": [
+      {
+        "profile": "es",
+        "source": "codominio K = {};",
+        "file": "vacio-es.svp"
+      }
+    ],
+    "expected": "InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")"
+  },
+  {
+    "id": "vacio_en",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = {};",
+        "file": "vacio-en.svp"
+      }
+    ],
+    "expected": "InvalidProgram(\"E004 (InvalidCodomain): codomain K vacío\")"
+  },
+  {
+    "id": "fin_es",
+    "units": [
+      {
+        "profile": "es",
+        "source": "codominio K = { A }",
+        "file": "fin-es.svp"
+      }
+    ],
+    "expected": "Frontend(UnexpectedEnd)"
+  },
+  {
+    "id": "fin_en",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A }",
+        "file": "fin-en.svp"
+      }
+    ],
+    "expected": "Frontend(UnexpectedEnd)"
+  },
+  {
+    "id": "ensamblaje_control",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A };",
+        "file": "base-en.svp"
+      },
+      {
+        "profile": "es",
+        "source": "codominio L = { B };",
+        "file": "base-es.svp"
+      }
+    ],
+    "expected": null
+  },
+  {
+    "id": "ensamblaje_duplicado",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A };",
+        "file": "origen-en.svp"
+      },
+      {
+        "profile": "es",
+        "source": "codominio K = { B };",
+        "file": "origen-es.svp"
+      }
+    ],
+    "expected": "InvalidProgram(\"identificador duplicado: K\")"
+  },
+  {
+    "id": "ensamblaje_sintaxis_a",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A }",
+        "file": "roto-en.svp"
+      },
+      {
+        "profile": "es",
+        "source": "codominio L = { B };",
+        "file": "sano-es.svp"
+      }
+    ],
+    "expected": "Frontend(UnexpectedEnd)"
+  },
+  {
+    "id": "ensamblaje_sintaxis_b",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codomain K = { A };",
+        "file": "sano-en.svp"
+      },
+      {
+        "profile": "es",
+        "source": "codominio L = { B }",
+        "file": "roto-es.svp"
+      }
+    ],
+    "expected": "Frontend(UnexpectedEnd)"
+  },
+  {
+    "id": "palabra_en_bajo_es",
+    "units": [
+      {
+        "profile": "es",
+        "source": "codomain K = { A };",
+        "file": "palabra_en_bajo_es.svp"
+      }
+    ],
+    "expected": "Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))"
+  },
+  {
+    "id": "palabra_es_bajo_en",
+    "units": [
+      {
+        "profile": "en",
+        "source": "codominio K = { A };",
+        "file": "palabra_es_bajo_en.svp"
+      }
+    ],
+    "expected": "Frontend(Unsupported(\"__SVP_FOREIGN_SURFACE__\"))"
+  },
+  {
+    "id": "utf8_invalido",
+    "units": [
+      {
+        "profile": "es",
+        "hex": "ff",
+        "file": "utf8_invalido.svp"
+      }
+    ],
+    "expected": "entrada SVP no UTF-8",
+    "technical": true
+  }
+]

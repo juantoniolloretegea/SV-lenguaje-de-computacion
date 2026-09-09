@@ -1,0 +1,97 @@
+{
+  "schema": "RECEPCION-CYB/0.1",
+  "language_commit": "66967a80a40f4e2781ef983bd725690db54c25c5",
+  "language_tree": "6de7e582b35b7e55d6bf0e5cbe8c150124436301",
+  "cyb_handover_commit": "169af16d05ffc954454bb5528ec106e5752b7016",
+  "cyb_material_commit": "b3aa3f01c825bf6440e3f04aadc87cc7c7ee6d89",
+  "files": [
+    {
+      "path": "originales/v03/testigos.json",
+      "bytes": 13365,
+      "sha256": "f196726440c10c7cda20a903223e47dea344b3f5b75871e38f9b11de870a1e52",
+      "archive": "ANEXO_PRESION_REGULADA_OP_CYB_001_v0.3.zip",
+      "archive_sha256": "7be66eb290dddb3ab2b9b1369b62a9cf0904cd93f8bf924e40fc15ea6b340c96",
+      "member": "testigos.json"
+    },
+    {
+      "path": "originales/v03/pares_semanticos.json",
+      "bytes": 16875,
+      "sha256": "520eb7125d8626bc364573d334249c454e1136540d5ab065c3585ea02eedc193",
+      "archive": "ANEXO_PRESION_REGULADA_OP_CYB_001_v0.3.zip",
+      "archive_sha256": "7be66eb290dddb3ab2b9b1369b62a9cf0904cd93f8bf924e40fc15ea6b340c96",
+      "member": "pares_semanticos.json"
+    },
+    {
+      "path": "originales/v03/requisitos_lenguaje.json",
+      "bytes": 5128,
+      "sha256": "a559ffb5e17001955bedee409ff88eb409c2f2479aa036a8d68eabba966d1aa7",
+      "archive": "ANEXO_PRESION_REGULADA_OP_CYB_001_v0.3.zip",
+      "archive_sha256": "7be66eb290dddb3ab2b9b1369b62a9cf0904cd93f8bf924e40fc15ea6b340c96",
+      "member": "requisitos_lenguaje.json"
+    },
+    {
+      "path": "originales/v03/particiones.json",
+      "bytes": 25909,
+      "sha256": "04ec11df37c10748eaaa484ffde8201f954c9bf8f7efc8c70f655fca87e4c846",
+      "archive": "ANEXO_PRESION_REGULADA_OP_CYB_001_v0.3.zip",
+      "archive_sha256": "7be66eb290dddb3ab2b9b1369b62a9cf0904cd93f8bf924e40fc15ea6b340c96",
+      "member": "particiones.json"
+    },
+    {
+      "path": "originales/v04/testigos.json",
+      "bytes": 21039,
+      "sha256": "5cf51cb632a3591460020087eec58b586aab6c68c4e87930e82e2a7a69357e6c",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "testigos.json"
+    },
+    {
+      "path": "originales/v04/pares.json",
+      "bytes": 2219,
+      "sha256": "9f1a98c7cda9cba3a531ec284a586058fa677cca28a49e48dbbe2cedf5af818b",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "pares.json"
+    },
+    {
+      "path": "originales/v04/estado_de_partida.json",
+      "bytes": 9554,
+      "sha256": "399dd08e3c87471f67abde49639d950e5f5d51645fbaad7610e583c1fa06f493",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "estado_de_partida.json"
+    },
+    {
+      "path": "originales/v04/relaciones.json",
+      "bytes": 1772,
+      "sha256": "8fdb4d7c00b8eb061a9694f5609bf9cf4a138dcd54544924ef23ada472918958",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "relaciones.json"
+    },
+    {
+      "path": "originales/v04/parametros_completos.json",
+      "bytes": 53273,
+      "sha256": "91bc27490eeaa5036e0d69352861b5b9205c8e389c567fe557f86b3b2492a9a3",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "parametros_completos.json"
+    },
+    {
+      "path": "originales/v04/controles_completos.json",
+      "bytes": 11709,
+      "sha256": "099d9189696b00f5b729cc6608dc5141288d48af50862abe19e79293698919f9",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "controles_completos.json"
+    },
+    {
+      "path": "originales/v04/requisitos_nuevos.json",
+      "bytes": 2641,
+      "sha256": "a707b6928fcebd0565adbcaaff735fd4e7ce48d60786263d39ce1c774dfdc628",
+      "archive": "ANEXO_CONTINUIDAD_OP_CYB_001_v0.4.zip",
+      "archive_sha256": "67b14579d4dcbfae597414528ba2e3d61161ddc7a34d0e1219c0f046ceb39402",
+      "member": "requisitos_nuevos.json"
+    }
+  ]
+}

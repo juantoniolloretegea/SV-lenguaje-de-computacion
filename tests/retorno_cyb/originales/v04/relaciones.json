@@ -1,0 +1,47 @@
+[
+  {
+    "tipo": "REFIERE",
+    "extremos": "Documento a antecedente",
+    "alcance": "Sólo referencia recuperable; no acredita causa, autorización ni sucesión de titular."
+  },
+  {
+    "tipo": "DERIVA_DE",
+    "extremos": "Nueva evidencia a evidencia utilizada",
+    "alcance": "Método y actividad de transformación; conservar original y relación con la vista."
+  },
+  {
+    "tipo": "PRECEDE_A",
+    "extremos": "Suceso a suceso",
+    "alcance": "Orden acreditado y precisión; no atribuye causalidad."
+  },
+  {
+    "tipo": "CAUSA_ACREDITADA",
+    "extremos": "Suceso a efecto",
+    "alcance": "Fuente y criterio causal explícitos; la proximidad temporal no basta."
+  },
+  {
+    "tipo": "CORRIGE",
+    "extremos": "Asiento nuevo a afirmación anterior",
+    "alcance": "Identificar exactamente qué se rectifica, por qué, con qué evidencia y desde qué momento; no borrar la afirmación histórica."
+  },
+  {
+    "tipo": "RECIBE_CUSTODIA",
+    "extremos": "Custodio a evidencia recibida",
+    "alcance": "Objeto, estado, integridad, momento y deberes de custodia propios; no reasigna el acto investigado."
+  },
+  {
+    "tipo": "DESIGNA",
+    "extremos": "Acto competente a obligación y titular",
+    "alcance": "Función, alcance, efecto, régimen de aceptación y vigencia; no nace de copiar el identificador del titular anterior."
+  },
+  {
+    "tipo": "ACEPTA_ENCARGO",
+    "extremos": "Titular a obligación designada",
+    "alcance": "Sólo opera si el procedimiento lo exige; una recepción genérica de archivos no basta."
+  },
+  {
+    "tipo": "REVOCA_O_SUSTITUYE",
+    "extremos": "Acto competente a facultad o designación",
+    "alcance": "Identidad, alcance y tiempo de efecto. No implica retroactividad ni exoneración jurídica universales."
+  }
+]

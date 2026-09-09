@@ -1,0 +1,82 @@
+[
+  {
+    "id": "PC-01",
+    "a": "CT-01",
+    "b": "CT-02",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-02",
+    "a": "CT-06",
+    "b": "CT-10",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-03",
+    "a": "CT-12",
+    "b": "CT-13",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-04",
+    "a": "CT-12",
+    "b": "CT-14",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-05",
+    "a": "CT-15",
+    "b": "CT-16",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-06",
+    "a": "CT-19",
+    "b": "CT-22",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-07",
+    "a": "CT-25",
+    "b": "CT-26",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  },
+  {
+    "id": "PC-08",
+    "a": "CT-29",
+    "b": "CT-31",
+    "proyeccion_tecnica_comun": {
+      "P02": "1",
+      "P06": "1"
+    },
+    "alcance": "Contexto sintético con dos estados técnicos comunes; los otros treinta parámetros no se han instanciado en este par."
+  }
+]

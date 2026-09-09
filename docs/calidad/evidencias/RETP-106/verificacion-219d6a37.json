@@ -1,0 +1,1069 @@
+{
+  "scope": "TRANSPORTE_Y_USO_DOCUMENTAL_EXTERNO",
+  "contract_hashes_recomputed": 186,
+  "complete_cases": 78,
+  "full_pair_recoveries": 36,
+  "side_pair_recoveries": 36,
+  "reduced_controls": 36,
+  "pairs": [
+    {
+      "id": "SI01",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI02",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI03",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI04",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI05",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI06",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI07",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI08",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI09",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "SI10",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-01",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-02",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-03",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-04",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-05",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-06",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-07",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    },
+    {
+      "id": "PC-08",
+      "reduced_contract_equal": true,
+      "answers_different": true
+    }
+  ],
+  "outputs": [
+    {
+      "id": "PR-001",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-002",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-003",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-004",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-005",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-006",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-007",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-008",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-009",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-010",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-011",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-012",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-013",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-014",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-015",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-016",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-017",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-018",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-019",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-020",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-021",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-022",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-023",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-024",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-025",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-026",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-027",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-028",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-029",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-030",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-031",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-032",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-033",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-034",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-035",
+      "variant": "F0",
+      "observed": "NO_APLICABLE"
+    },
+    {
+      "id": "PR-036",
+      "variant": "F0",
+      "observed": "1"
+    },
+    {
+      "id": "PR-037",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-038",
+      "variant": "F0",
+      "observed": "U"
+    },
+    {
+      "id": "PR-039",
+      "variant": "F0",
+      "observed": "NO_ADMISION"
+    },
+    {
+      "id": "PR-040",
+      "variant": "F0",
+      "observed": "0"
+    },
+    {
+      "id": "PR-041",
+      "variant": "F0",
+      "observed": "FALLO_TECNICO"
+    },
+    {
+      "id": "PR-042",
+      "variant": "F0",
+      "observed": "FALLO_TECNICO"
+    },
+    {
+      "id": "PR-043",
+      "variant": "F0",
+      "observed": "NO_ADMISION"
+    },
+    {
+      "id": "PR-044",
+      "variant": "F0",
+      "observed": "FALLO_TECNICO"
+    },
+    {
+      "id": "PR-045",
+      "variant": "F0",
+      "observed": "FALLO_TECNICO"
+    },
+    {
+      "id": "PR-046",
+      "variant": "F0",
+      "observed": "FALLO_TECNICO"
+    },
+    {
+      "id": "CT-01",
+      "variant": "F0",
+      "observed": "PARTIDA_ACOTADA"
+    },
+    {
+      "id": "CT-02",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-03",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-04",
+      "variant": "F0",
+      "observed": "AFIRMACION_NO_SOSTENIDA"
+    },
+    {
+      "id": "CT-05",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-06",
+      "variant": "F0",
+      "observed": "RELACIONES_CONSERVADAS"
+    },
+    {
+      "id": "CT-07",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-08",
+      "variant": "F0",
+      "observed": "EVIDENCIA_NO_ADMITIDA"
+    },
+    {
+      "id": "CT-09",
+      "variant": "F0",
+      "observed": "EVIDENCIA_NO_ADMITIDA"
+    },
+    {
+      "id": "CT-10",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-11",
+      "variant": "F0",
+      "observed": "RELACIONES_CONSERVADAS"
+    },
+    {
+      "id": "CT-12",
+      "variant": "F0",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "CT-13",
+      "variant": "F0",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "CT-14",
+      "variant": "F0",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "CT-15",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-16",
+      "variant": "F0",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "CT-17",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-18",
+      "variant": "F0",
+      "observed": "AFIRMACION_NO_SOSTENIDA"
+    },
+    {
+      "id": "CT-19",
+      "variant": "F0",
+      "observed": "CONCILIACION_COINCIDENTE"
+    },
+    {
+      "id": "CT-20",
+      "variant": "F0",
+      "observed": "CONCILIACION_COINCIDENTE"
+    },
+    {
+      "id": "CT-21",
+      "variant": "F0",
+      "observed": "EVIDENCIA_NO_ADMITIDA"
+    },
+    {
+      "id": "CT-22",
+      "variant": "F0",
+      "observed": "CONCILIACION_DISCORDANTE"
+    },
+    {
+      "id": "CT-23",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-24",
+      "variant": "F0",
+      "observed": "EVIDENCIA_NO_ADMITIDA"
+    },
+    {
+      "id": "CT-25",
+      "variant": "F0",
+      "observed": "COBERTURA_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "CT-26",
+      "variant": "F0",
+      "observed": "COBERTURA_INSUFICIENTE"
+    },
+    {
+      "id": "CT-27",
+      "variant": "F0",
+      "observed": "COBERTURA_INSUFICIENTE"
+    },
+    {
+      "id": "CT-28",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "CT-29",
+      "variant": "F0",
+      "observed": "REQUIERE_REEVALUACION"
+    },
+    {
+      "id": "CT-30",
+      "variant": "F0",
+      "observed": "SIN_CAMBIO_PERTINENTE_DECLARADO"
+    },
+    {
+      "id": "CT-31",
+      "variant": "F0",
+      "observed": "SIN_CAMBIO_PERTINENTE_DECLARADO"
+    },
+    {
+      "id": "CT-32",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "SI01-a",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI01-a",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI01-b",
+      "variant": "F0",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI01-b",
+      "variant": "HS",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI02-a",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI02-a",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI02-b",
+      "variant": "F0",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI02-b",
+      "variant": "HS",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI03-a",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI03-a",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI03-b",
+      "variant": "F0",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI03-b",
+      "variant": "HS",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI04-a",
+      "variant": "F0",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI04-a",
+      "variant": "HS",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI04-b",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI04-b",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI05-a",
+      "variant": "F0",
+      "observed": "\"persona-A\""
+    },
+    {
+      "id": "SI05-a",
+      "variant": "HS",
+      "observed": "\"persona-A\""
+    },
+    {
+      "id": "SI05-b",
+      "variant": "F0",
+      "observed": "\"U\""
+    },
+    {
+      "id": "SI05-b",
+      "variant": "HS",
+      "observed": "\"U\""
+    },
+    {
+      "id": "SI06-a",
+      "variant": "F0",
+      "observed": "[[\"persona-A\",\"agente-A\",\"reiniciar\",\"activo-A\"]]"
+    },
+    {
+      "id": "SI06-a",
+      "variant": "HS",
+      "observed": "[[\"persona-A\",\"agente-A\",\"reiniciar\",\"activo-A\"]]"
+    },
+    {
+      "id": "SI06-b",
+      "variant": "F0",
+      "observed": "[[\"persona-A\",\"agente-A\",\"consultar\",\"activo-A\"]]"
+    },
+    {
+      "id": "SI06-b",
+      "variant": "HS",
+      "observed": "[[\"persona-A\",\"agente-A\",\"consultar\",\"activo-A\"]]"
+    },
+    {
+      "id": "SI07-a",
+      "variant": "F0",
+      "observed": "[\"acto\",\"instante\",\"referencia-permiso\"]"
+    },
+    {
+      "id": "SI07-a",
+      "variant": "HS",
+      "observed": "[\"acto\",\"instante\",\"referencia-permiso\"]"
+    },
+    {
+      "id": "SI07-b",
+      "variant": "F0",
+      "observed": "[\"acto\",\"instante\",\"referencia-permiso\",\"historia-clinica-completa\"]"
+    },
+    {
+      "id": "SI07-b",
+      "variant": "HS",
+      "observed": "[\"acto\",\"instante\",\"referencia-permiso\",\"historia-clinica-completa\"]"
+    },
+    {
+      "id": "SI08-a",
+      "variant": "F0",
+      "observed": "\"experto-A\""
+    },
+    {
+      "id": "SI08-a",
+      "variant": "HS",
+      "observed": "\"experto-A\""
+    },
+    {
+      "id": "SI08-b",
+      "variant": "F0",
+      "observed": "\"publico\""
+    },
+    {
+      "id": "SI08-b",
+      "variant": "HS",
+      "observed": "\"publico\""
+    },
+    {
+      "id": "SI09-a",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI09-a",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI09-b",
+      "variant": "F0",
+      "observed": "\"U\""
+    },
+    {
+      "id": "SI09-b",
+      "variant": "HS",
+      "observed": "\"U\""
+    },
+    {
+      "id": "SI10-a",
+      "variant": "F0",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI10-a",
+      "variant": "HS",
+      "observed": "\"1\""
+    },
+    {
+      "id": "SI10-b",
+      "variant": "F0",
+      "observed": "\"0\""
+    },
+    {
+      "id": "SI10-b",
+      "variant": "HS",
+      "observed": "\"0\""
+    },
+    {
+      "id": "PC-01-a",
+      "variant": "F0",
+      "observed": "PARTIDA_ACOTADA"
+    },
+    {
+      "id": "PC-01-a",
+      "variant": "HS",
+      "observed": "PARTIDA_ACOTADA"
+    },
+    {
+      "id": "PC-01-b",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-01-b",
+      "variant": "HS",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-02-a",
+      "variant": "F0",
+      "observed": "RELACIONES_CONSERVADAS"
+    },
+    {
+      "id": "PC-02-a",
+      "variant": "HS",
+      "observed": "RELACIONES_CONSERVADAS"
+    },
+    {
+      "id": "PC-02-b",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-02-b",
+      "variant": "HS",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-03-a",
+      "variant": "F0",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-03-a",
+      "variant": "HS",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-03-b",
+      "variant": "F0",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "PC-03-b",
+      "variant": "HS",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "PC-04-a",
+      "variant": "F0",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-04-a",
+      "variant": "HS",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-04-b",
+      "variant": "F0",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "PC-04-b",
+      "variant": "HS",
+      "observed": "ASIGNACION_NO_ACREDITADA"
+    },
+    {
+      "id": "PC-05-a",
+      "variant": "F0",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-05-a",
+      "variant": "HS",
+      "observed": "NO_CONCLUYENTE"
+    },
+    {
+      "id": "PC-05-b",
+      "variant": "F0",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-05-b",
+      "variant": "HS",
+      "observed": "ASIGNACION_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-06-a",
+      "variant": "F0",
+      "observed": "CONCILIACION_COINCIDENTE"
+    },
+    {
+      "id": "PC-06-a",
+      "variant": "HS",
+      "observed": "CONCILIACION_COINCIDENTE"
+    },
+    {
+      "id": "PC-06-b",
+      "variant": "F0",
+      "observed": "CONCILIACION_DISCORDANTE"
+    },
+    {
+      "id": "PC-06-b",
+      "variant": "HS",
+      "observed": "CONCILIACION_DISCORDANTE"
+    },
+    {
+      "id": "PC-07-a",
+      "variant": "F0",
+      "observed": "COBERTURA_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-07-a",
+      "variant": "HS",
+      "observed": "COBERTURA_ACREDITADA_EN_PERFIL"
+    },
+    {
+      "id": "PC-07-b",
+      "variant": "F0",
+      "observed": "COBERTURA_INSUFICIENTE"
+    },
+    {
+      "id": "PC-07-b",
+      "variant": "HS",
+      "observed": "COBERTURA_INSUFICIENTE"
+    },
+    {
+      "id": "PC-08-a",
+      "variant": "F0",
+      "observed": "REQUIERE_REEVALUACION"
+    },
+    {
+      "id": "PC-08-a",
+      "variant": "HS",
+      "observed": "REQUIERE_REEVALUACION"
+    },
+    {
+      "id": "PC-08-b",
+      "variant": "F0",
+      "observed": "SIN_CAMBIO_PERTINENTE_DECLARADO"
+    },
+    {
+      "id": "PC-08-b",
+      "variant": "HS",
+      "observed": "SIN_CAMBIO_PERTINENTE_DECLARADO"
+    }
+  ],
+  "sv_domain_operation_executed": false,
+  "cyb_architecture_constituted": false,
+  "material_security_proven": false,
+  "rules_sensitivity": [
+    {
+      "family": "v03",
+      "mutation": "CUENTA_COMO_SESION",
+      "refuters": [
+        "PR-003"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "FIRMA_COMO_COMPETENCIA",
+      "refuters": [
+        "PR-006",
+        "PR-007",
+        "PR-008"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "SOLO_NOMBRE_ACCION",
+      "refuters": [
+        "PR-010",
+        "PR-011",
+        "PR-012"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "IGNORAR_INCERTIDUMBRE",
+      "refuters": [
+        "PR-017",
+        "PR-019"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "CUALQUIER_REVOCACION",
+      "refuters": [
+        "PR-024",
+        "PR-027"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "SILENCIO_COMO_AUSENCIA",
+      "refuters": [
+        "PR-026"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "FECHA_ESCRITA_COMO_EMISION",
+      "refuters": [
+        "PR-029"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "CUENTAS_COMO_PERSONAS",
+      "refuters": [
+        "PR-033",
+        "PR-034"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "PERMISO_COMO_PLAN",
+      "refuters": [
+        "PR-037"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "APLICABILIDAD_COMO_EXITO",
+      "refuters": [
+        "PR-035"
+      ]
+    },
+    {
+      "family": "v03",
+      "mutation": "DOBLE_PRECISION_INTERMEDIA",
+      "refuters": [
+        "PR-020"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "genesis",
+      "refuters": [
+        "CT-04"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "tiempo_partida",
+      "refuters": [
+        "CT-02"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "causalidad",
+      "refuters": [
+        "CT-10"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "todo_ciclo",
+      "refuters": [
+        "CT-11"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "exoneracion",
+      "refuters": [
+        "CT-18"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "heredar_responsabilidad",
+      "refuters": [
+        "CT-13",
+        "CT-14"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "aceptacion_universal",
+      "refuters": [
+        "CT-16"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "solo_cantidad",
+      "refuters": [
+        "CT-22"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "un_trayecto",
+      "refuters": [
+        "CT-26"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "todo_cambio",
+      "refuters": [
+        "CT-30"
+      ]
+    },
+    {
+      "family": "v04",
+      "mutation": "retroactividad",
+      "refuters": [
+        "CT-31"
+      ]
+    }
+  ],
+  "observer_sensitivity": [
+    {
+      "name": "huella_F0",
+      "cause": "CONTRATO_RECALCULO"
+    },
+    {
+      "name": "huellas_H_simetricas",
+      "cause": "CONTRATO_RECALCULO"
+    },
+    {
+      "name": "fuente_con_huellas_recalculadas",
+      "cause": "CONTRATO_TESTIGO"
+    },
+    {
+      "name": "identificador_filtrado",
+      "cause": "CONTRATO_TESTIGO"
+    },
+    {
+      "name": "recuperacion_sustituida",
+      "cause": "RECUPERACION"
+    },
+    {
+      "name": "fila_duplicada",
+      "cause": "INVENTARIO"
+    },
+    {
+      "name": "fila_ausente",
+      "cause": "INVENTARIO"
+    },
+    {
+      "name": "alcance_falso",
+      "cause": "ESQUEMA"
+    },
+    {
+      "name": "duplicada",
+      "cause": "JSON_CLAVE_REPETIDA"
+    },
+    {
+      "name": "decimal",
+      "cause": "JSON_NUMERO_FORMA"
+    },
+    {
+      "name": "entero_grande",
+      "cause": "JSON_NUMERO_RANGO"
+    },
+    {
+      "name": "sustituto",
+      "cause": "JSON_UNICODE"
+    }
+  ]
+}
