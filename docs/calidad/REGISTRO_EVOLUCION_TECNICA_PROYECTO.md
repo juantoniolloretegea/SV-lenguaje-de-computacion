@@ -1105,3 +1105,11 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Verificación recibida RETP-113:** realización 5627416505b119192423722e94a71a3137f1a17a; checkout de CI e5854e72ed0159c140dbd289a5645c143ebd0867. Ambos tienen árbol 488e588a16db189d3c681bd9b1b44226cd4d1518, igualdad cotejada. Los seis flujos terminaron conformes. Rust 1.98.0 de referencia y 1.98.1 adicional: 376 pruebas aprobadas, incluidas las siete pruebas nuevas de la etapa frontal. Conformidad vigente: 14/14 válidos, 106/106 inválidos; mutaciones dirigidas anteriores: 43/43 detectadas. Se conservan [evidencia y límites](evidencias/RETP-113/verificacion.json), logs de los trabajos y huellas. La paridad anterior nativo/WASI/navegador está conservada; no se presenta como prueba del nuevo transporte estructurado, todavía pendiente. La ejecución nueva es de CI y no sustituye con una afirmación de éxito los intentos locales fallidos.
 
 El primer incremento frontal queda realizado y verificado en ese alcance. DFL-001/011, cobertura completa por emisor, contextos de bienformación y relaciones globales, migración de oráculos/salidas, DG01–DG14 y entrega visible permanecen abiertos. PR #89 sigue en borrador. Este asiento es documental y no cambia las fuentes verificadas.
+
+
+<a id="retp-114"></a>
+## RETP-2026-114 — Diagnósticos de declaración y procedencia ES/EN
+
+**Fecha:** 09/09/2026. **Base:** ba4c63c6140015b14eb7afd9b1e32ce8307cc705, PR #89 en borrador. Continuación autorizada de localización tras el punto de control del laboratorio. Lectura completa de Pilares, perfiles, transición, contrato diagnóstico y norma del español.
+
+**Contrato previo:** [realización de diagnósticos de declaración](REALIZACION_DE_DIAGNOSTICOS_DE_DECLARACION_ES_EN_2026_09_09.md). Ocho pruebas fijadas antes de realizar y ejecutar: E004, E115, base celular, dominios cerrados, colisión y atribución por declaración/unidad. Se conservan causas pendientes explícitas, precedencia y salida histórica; se añade estructura diagnóstica con mapa paralelo a la IR. Realización pendiente; no se acredita localización productiva, cierre DG01–DG14 ni relevo R1.
