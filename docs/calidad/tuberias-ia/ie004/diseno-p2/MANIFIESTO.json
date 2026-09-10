@@ -1,0 +1,108 @@
+{
+  "version": "P2-DISENO/1",
+  "registro": "RETP-2026-125",
+  "fecha": "2026-09-10",
+  "estado": "DISENO_CANDIDATO_DOCUMENTADO_SUFICIENCIA_NO_ACREDITADA",
+  "cortes": {
+    "lab": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "head": "a1614b33eb29726a7b450dd5b6c489a17e0737c1",
+      "tree": "b9c1dede276ee2bc7eddc3f4dd3df024e74e4fcb"
+    },
+    "lang": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "head": "19e1e18bb201f8f604178270970160ce7140b522",
+      "tree": "f2457f5ab500f337eea94b1a70684b0cae09bcc1"
+    }
+  },
+  "rectoras_cotejadas_sin_cambios": [
+    {
+      "mode": "100644",
+      "path": "AGENTS.md",
+      "sha": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "size": 4384,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "size": 22330,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "size": 29014,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+      "size": 67111,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md",
+      "sha": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "size": 14941,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/6c57f2e895045d4a26bacefc98c49ebac2b433f7"
+    }
+  ],
+  "lectura": "AGENTS; cotejo de identidades de rectoras respecto de lecturas íntegras previas; revisión de workflow, acta, expediente causal, corpus históricos, contrato y receptor IE-004.",
+  "antecedentes": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/FASE_004_INTERPRETACION_SUBORDINADA_ES.md",
+      "blob": "706ea6d447dc87a2d730ead9ea6a501245e4aeda"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ACTA_ENCAJE_DE_PERFILES_LINGUISTICOS_Y_SEPARACION_INVESTIGACION_APLICACION_2026_09_10.md",
+      "blob": "cf4f3466913ce73606b0e9a782b106e47f3b9a1f"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md",
+      "blob": "9631fd6950791ab3dbd87f91ededdc1d7046ff1c"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md",
+      "blob": "a2da389823c7591e46b841d769f72b9f5e5801b2"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-contexto-001/EXPEDIENTE-CAUSAL.json",
+      "blob": "a1fcf28ec34fa53d1def1376ba58bb6b671bc5ff"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/fuentes/receptor.rs",
+      "blob": "a391d4abf21b09af0e22a72dd8e60a398d977de9"
+    }
+  ],
+  "archivos": [
+    {
+      "archivo": "../../ACTA_DISENO_P2_VINCULO_PETICION_CONTEXTO_REFERENCIA_2026_09_10.md",
+      "bytes": 15572,
+      "sha256": "25c243b50589383602c9349d2e8db3410209fcdc1ad232728276b12e491af6ef",
+      "blob": "9fd5cc0dc18386ff29c2583099d03af545a3a247"
+    },
+    {
+      "archivo": "MATRIZ_DISCRIMINANTE.json",
+      "bytes": 25245,
+      "sha256": "0e4596f403a53f9a02e2dca5590aebd933b0d0db5e384c35e00c2fc9baf7d935",
+      "blob": "abc92b43edd3f739c0848cb04d9293f1998edee5"
+    }
+  ],
+  "convencion": "Identidades sobre bytes exactos. Este manifiesto no se incluye a sí mismo; su identidad la fija el blob y el commit de publicación.",
+  "alcance_revision": "Consistencia documental y correspondencia de referencias, intervalos y expectativas históricas. No ejecución del mecanismo propuesto.",
+  "ejecuciones_nuevas": 0,
+  "consultas_nuevas_modelo": 0,
+  "cambios_fuente_binarios_oraculos_historicos": false,
+  "paridad_nueva": "NO_MEDIDA",
+  "aislamiento": "NO_VERDE"
+}

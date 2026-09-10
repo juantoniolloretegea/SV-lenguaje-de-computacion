@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-124:** repetición de contexto recibida y diagnóstico P1 documentado; P2 pendiente. No hay nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-125:** diseño candidato P2 documentado; suficiencia del perfil y del verificador no acreditada. P3 no abierto; sin nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -46,3 +46,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Recepción fuera del proyecto y diagnóstico causal · RETP-124
 
 [Acta y evidencia](ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md): 23/24 identificaciones y respuestas; R01 persiste. Frente a 002 anterior, 24/24 cuerpos y rutas/diagnósticos iguales; apoyos distintos en nueve casos. Paridad nativo/WASI. P0 recibido; P1 documenta rechazo, apoyo literal y sustitución semántica. P2 pendiente de un mecanismo verificable; no otra ronda. Aislamiento NO VERDE.
+
+## Diseño del vínculo petición/contexto/referencia · RETP-125
+
+[Acta y matriz P2](ACTA_DISENO_P2_VINCULO_PETICION_CONTEXTO_REFERENCIA_2026_09_10.md): un mecanismo candidato de derivación comprobable, análisis completo y recuperación ante diagnóstico falso. Exige servir IGA e impedir su sustitución por IGG en la misma petición. Perfil completo, verificador y utilidad del modelo aún no acreditados; P2 abierto y P3 sin iniciar. Cero nuevas consultas o ejecuciones. Aislamiento NO VERDE.
