@@ -3,6 +3,9 @@
 
 **Estado global: NO VERDE.**
 
+**Estado vigente · RETP-124:** repetición de contexto recibida y diagnóstico P1 documentado; P2 pendiente. No hay nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+
+
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
 - [Fase 003: NLP español y conocimiento determinista](FASE_003_NLP_ES_CONOCIMIENTO_DETERMINISTA.md): algoritmo y pruebas especificados; ejecución pendiente.
 
@@ -39,3 +42,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Workflow acotado y repetición de contexto autorizada · RETP-123
 
 [Plan de proceso](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md): una repetición adicional fuera del proyecto, autorizada expresamente por Juan Antonio después de RETP-122. Durante la preparación se detectó depósito en los mismos nombres de002, identificado por los commits40c70301 ycd67d285; recepción pendiente. Se conserva la versión previa por commit y espejo público. No se solicita otra generación para renombrar. Oráculo ya abierto: contraste de contexto, no validación inédita. Después: causa, un mecanismo candidato, cualificación, imposición material, recursos y auditoría, con criterios de paso y parada. Aislamiento NO VERDE.
+
+## Recepción fuera del proyecto y diagnóstico causal · RETP-124
+
+[Acta y evidencia](ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md): 23/24 identificaciones y respuestas; R01 persiste. Frente a 002 anterior, 24/24 cuerpos y rutas/diagnósticos iguales; apoyos distintos en nueve casos. Paridad nativo/WASI. P0 recibido; P1 documenta rechazo, apoyo literal y sustitución semántica. P2 pendiente de un mecanismo verificable; no otra ronda. Aislamiento NO VERDE.

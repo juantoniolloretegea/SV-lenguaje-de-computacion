@@ -1,0 +1,31 @@
+{
+  "captura": "CONTEXTO-001",
+  "atestacion_humana": {
+    "autor": "Juan Antonio Lloret Egea",
+    "fecha": "2026-09-10",
+    "declaracion": "Grok, como te dije, fuera de proyecto"
+  },
+  "declaracion_participante": {
+    "fuente": "INFORME-002.md",
+    "modelo_visible": "Grok 4.6 (xAI)",
+    "sesion": "Conversación nueva, sin historial previo pegado; identificador no observable.",
+    "temperatura_semilla": "NO_OBSERVABLES",
+    "lecturas_declaradas": [
+      "ENCARGO-002.md",
+      "solicitudes-002.json",
+      "formato-002.json"
+    ],
+    "exposiciones_declaradas": [
+      "Búsqueda web residual para localizar el repositorio.",
+      "Listado del directorio que expuso nombres de entregas previas sin lectura de contenidos declarada.",
+      "Acceso al encargo mediante API de GitHub tras 404 del blob web."
+    ],
+    "no_lectura_de_resultados_previos": "DECLARADA_POR_PARTICIPANTE_NO_VERIFICADA_INDEPENDIENTEMENTE"
+  },
+  "oraculo_ya_publico_antes_de_esta_captura": true,
+  "alcance": "Contraste sobre un banco conocido; no validación inédita ni ceguera acreditada.",
+  "limite_atribucion": "Salir del proyecto no controla toda memoria, configuración o instrucciones. El resultado no identifica una causa interna del modelo.",
+  "limite_traza": "Propuestas, apoyos y decisiones observables conservados; no se afirma haber observado pensamientos internos.",
+  "rondas_nuevas_solicitadas": 0,
+  "decision": "Recepción de la única repetición de contexto autorizada. No solicitar otra para perseguir 24/24."
+}

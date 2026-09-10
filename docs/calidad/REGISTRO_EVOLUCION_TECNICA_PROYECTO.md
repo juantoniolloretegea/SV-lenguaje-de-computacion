@@ -1178,3 +1178,16 @@ Nueva conversación declarada; memoria de proyecto visible y relato del usuario 
 Se fijan objetivos, responsables, evidencia y paradas para recepción, diagnóstico causal, mecanismo candidato, cualificación, imposición material, viabilidad y auditoría/decisión. Indicadores separados de identificación, utilidad, rechazo debido, respuesta indebida, relaciones, conservación, trazabilidad y recursos. Una propuesta de mecanismo y un ciclo de cualificación; validación inédita acotada y reservada antes de corregir, sólo cuando corresponda. Medición propuesta:30 bloques pareados por destino y presupuestos previamente fijados; no se ejecuta ahora.
 
 **Estado:** WORKFLOW_DOCUMENTADO; REPETICION_CONTEXTO_AUTORIZADA_PENDIENTE; AISLAMIENTO_NO_VERDE. La salida del proyecto no prueba por sí sola toda independencia; un corpus cuyo oráculo es público no se presenta como inédito. Próximo objeto P0: recibir la repetición; después P1. No se modifican código, criterios históricos, conocimiento, permisos ni las prioridades posteriores.
+
+<a id="retp-124"></a>
+## RETP-2026-124 — Recepción fuera del proyecto y diagnóstico causal acotado
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje 48ae6c11b88afdaa54691ac1c3c146c095cca208; laboratorio 13b4177f7f4e3cd03fa955d41ecf1641e859d4a7. AGENTS y rectoras cotejadas sin cambios respecto de lecturas íntegras; Fase 004, encargo 002 y workflow RETP-123 contrastados.
+
+[Acta y evidencia](tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md). Recibida la única repetición fuera del proyecto, según confirmación de Juan Antonio: entrega 40c70301c520cc79f2a400424dfc184be31b2d78 e informe cd67d2854c756cb073d02cd1440a57815b109ed9. Se individualiza como CONTEXTO-001 sin borrar la captura 927f24d5. Mismas 24 entradas, formato, compromiso, oráculo abierto, fuente, observador y binarios. Una recepción técnica, 40 procesos y tres reproducciones por destino.
+
+Resultado: 23/24 identificaciones y respuestas; 17/18 consultas con dato; 6/6 diagnósticos y denegaciones debidos. Paráfrasis 1/2, contrastes 5/5, nota externa 1/1, exigiendo corrección de todos los miembros. Las 24 rutas/diagnósticos y cuerpos coinciden con 002 anterior; nueve apoyos cambian. Persiste R01. Nativo/WASI: 5 418 bytes y SHA256 a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d. Medianas locales de proceso 2,050076/46,153713 ms; CPU/RSS e inferencia no observables; no caracterización P5 ni conclusión de rendimiento.
+
+P1 distingue la interpretación insuficiente de R01 con contexto completo, la antigua cita no literal L11 corregida en R05 y la sustitución aceptada por el receptor ante una negación explícita. Se mantiene el esperado congelado de R01 por el objetivo humano y contexto del banco; no se afirma una regla universal del español. I01–I05 y conexión al SV siguen pendientes. La causa interna del modelo no es observable y el corpus revelado no es validación inédita.
+
+**Estado:** P0_RECIBIDO; P1_DOCUMENTADO; P2_PENDIENTE; AISLAMIENTO_NO_VERDE. Termina esta repetición autorizada. Próximo objeto: mecanismo verificable antes de corregir y cualificar. No nueva ronda del modelo, reparación retrospectiva de oráculos, refactorización ni integración. Acta y evidencias espejadas; aceptación humana del frente abierta.

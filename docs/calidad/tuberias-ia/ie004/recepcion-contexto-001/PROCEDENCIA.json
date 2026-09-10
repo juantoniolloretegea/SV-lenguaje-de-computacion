@@ -1,0 +1,133 @@
+{
+  "source_commit": "f8f0fa26da55663bbf24f944d121c05eef8070c9",
+  "instrumentacion_commit": "3c4d4d54813c8335be9d4a504a2cc529de4e043d",
+  "artefacto_origen_run": "34501044665/1",
+  "artefacto_id": 10161854780,
+  "artefacto_sha256": "1d244782819fe62ca8db0e67787fef5fc2cc5375a2e90bb67a0ad1bc575903f3",
+  "recepcion_run": "LOCAL",
+  "fuentes": {
+    "base.json": {
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4",
+      "blob": "c3282b7b9f833f6d5483e67fae9032f6a82ad704"
+    },
+    "contrato.json": {
+      "bytes": 701,
+      "sha256": "ecee6cd306922c0a597d7d84d736d3817a7dd141905a33c0d1574d70a6a47bd0",
+      "blob": "edc123ba1f58cc5b1df4921d8fa85808a560281e"
+    },
+    "ejecutar.mjs": {
+      "bytes": 11144,
+      "sha256": "f2f02230e56ce9c71042531bb8d0d98897c72581e99db9a2e25cb3d9bad8737a",
+      "blob": "0e700f1bd357b3ddc80ffdcf74bb053ca20c9e0e"
+    },
+    "json-estricto.mjs": {
+      "bytes": 3129,
+      "sha256": "1551ddc22094790aba52360fbc1368106766d6f4abb9619065d94109c70a7804",
+      "blob": "747648bd0b079753dbf28f464e973eed11d17511"
+    },
+    "receptor.rs": {
+      "bytes": 3927,
+      "sha256": "3054cff1199e8edceff92e754c51ce2a8ed1c40ed3a9f2a6c6e92f934cd29ef5",
+      "blob": "a391d4abf21b09af0e22a72dd8e60a398d977de9"
+    },
+    "wasi.mjs": {
+      "bytes": 387,
+      "sha256": "57efa45d15d9facdd1db4aaf1db7c9cd70394cb9c7a2b5fb220adabbd717ee69",
+      "blob": "5794abcc2e6f1e7350e1fee1ce694accbc7d60c3"
+    }
+  },
+  "receptor_modificado": false,
+  "binarios": {
+    "receptor": {
+      "bytes": 4525816,
+      "sha256": "0a8f1b5438129acf48ff153787f9d7cbd7664b168d1f7cb149cdf9ca9b8fe372"
+    },
+    "receptor.wasm": {
+      "bytes": 2161612,
+      "sha256": "1ba8c81971b85808d1d8c71703f0d829da3c41a6f44176cceddea12878dce4e3"
+    }
+  },
+  "recepcion": "IE-004/CONTEXTO-001",
+  "compilacion_local": false,
+  "estado": "FUENTE_EJECUTOR_Y_BINARIOS_ORIGINALES_SIN_CAMBIOS",
+  "compromiso_previo": "a4db8d622d02766689def38816e18d85c94a7bb3",
+  "deposito": {
+    "entrega": "40c70301c520cc79f2a400424dfc184be31b2d78",
+    "informe": "cd67d2854c756cb073d02cd1440a57815b109ed9"
+  },
+  "derivacion_comparativa": {
+    "archivo": "analizar-contexto.mjs",
+    "objeto": "Coteja las mismas 24 entradas y sus relaciones contra 002 anterior; no consulta al modelo ni altera el receptor.",
+    "bytes": 7805,
+    "sha256": "a22454f8090bcdcb3f89d3bbd1746dd5492bfa03fbe26d27bef7ef080d387fd7",
+    "blob": "a2be652c60540e595911ccc78b95b1753a40790f"
+  },
+  "cortes": {
+    "lang": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "head": "48ae6c11b88afdaa54691ac1c3c146c095cca208",
+      "tree": "09f0cf421e8fdad83fbe8981dd8e72246bcb47f7"
+    },
+    "lab": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "head": "13b4177f7f4e3cd03fa955d41ecf1641e859d4a7",
+      "tree": "646af246be912f1f4cf8e6e597cc41af35019a0a"
+    }
+  },
+  "rectoras_sin_cambios": [
+    {
+      "mode": "100644",
+      "path": "AGENTS.md",
+      "sha": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "size": 4384,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md",
+      "sha": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "size": 14941,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/6c57f2e895045d4a26bacefc98c49ebac2b433f7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "size": 29014,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "size": 22330,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/tuberias-ia/FASE_004_INTERPRETACION_SUBORDINADA_ES.md",
+      "sha": "706ea6d447dc87a2d730ead9ea6a501245e4aeda",
+      "size": 11612,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/706ea6d447dc87a2d730ead9ea6a501245e4aeda"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+      "size": 67111,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/44f8fda87856ab16007195cab324d40a758e506a"
+    }
+  ],
+  "fecha_recepcion": "2026-09-10",
+  "intentos_de_recepcion": 1,
+  "procesos_de_receptor": 40,
+  "reproducciones_de_captura_por_destino": 3,
+  "consultas_nuevas_al_modelo": 0
+}

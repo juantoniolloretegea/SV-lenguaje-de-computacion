@@ -1,0 +1,64 @@
+{
+  "repositorio": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+  "rama": "lab/playground-sv-permanente",
+  "base_deposito": "748bf3fff14bb765d42f4d839f31e9a7047e2bbf",
+  "version_anterior": "927f24d57701dda579ff822da7a7fdaf1eeed69e",
+  "commits": [
+    {
+      "sha": "40c70301c520cc79f2a400424dfc184be31b2d78",
+      "tree": "09b1eb1a436b799e804c44f746dd343c42fd5147",
+      "parents": [
+        "748bf3fff14bb765d42f4d839f31e9a7047e2bbf"
+      ],
+      "message": "lab(interpretacion-es): deposita entrega-002.json IE-004/1"
+    },
+    {
+      "sha": "cd67d2854c756cb073d02cd1440a57815b109ed9",
+      "tree": "e68bacfcfddce7164b9f8538f0125d59abeeac16",
+      "parents": [
+        "40c70301c520cc79f2a400424dfc184be31b2d78"
+      ],
+      "message": "lab(interpretacion-es): deposita INFORME-002.md IE-004/1"
+    }
+  ],
+  "cambios": [
+    {
+      "path": "laboratorio/tareas-grok/interpretacion-es/INFORME-002.md",
+      "status": "modified",
+      "blob": "2ebd6e31ec6bdb30035357079fc0810c97ec5cd8"
+    },
+    {
+      "path": "laboratorio/tareas-grok/interpretacion-es/entrega-002.json",
+      "status": "modified",
+      "blob": "e2495927b918127305534b03ec580855a387d3f9"
+    }
+  ],
+  "nota": "Los nombres 002 fueron reutilizados por el participante. Las capturas se individualizan por commit y se preservan por separado; no se pide regenerar para renombrar.",
+  "captura_recibida": "CONTEXTO-001",
+  "originales": {
+    "entrega-original.json": {
+      "bytes": 8537,
+      "sha256": "7a3fc3cfb7ea2084d7ac2ee5ce6a3cfefe02291c1d0f8efab10aaba5dfd20a41",
+      "blob": "e2495927b918127305534b03ec580855a387d3f9"
+    },
+    "INFORME-002.md": {
+      "bytes": 1749,
+      "sha256": "6958e0a3e6d8026b6f3ba0cbca7a3839e9efd8ab0bfc647be350944d95009cb6",
+      "blob": "2ebd6e31ec6bdb30035357079fc0810c97ec5cd8"
+    }
+  },
+  "captura_anterior_publica": {
+    "commit": "52665a0181dcf09ebfcf4ceb5d941887e123862e",
+    "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-002/",
+    "entrega-original.json": {
+      "bytes": 8596,
+      "sha256": "47e5009c31f0dcd4ab6c1ed6db5d10b86dcb39e5671c385a2eeadef48b3843ef",
+      "blob": "ec17e59232970b6e048c98bcfdea51b1682ee68d"
+    },
+    "INFORME-002.md": {
+      "bytes": 2169,
+      "sha256": "c3397e7c7c1ce0489b0e665bddd7e7af3bc1a5174008b604e987bcc23c174dbc",
+      "blob": "67263d55bd115b3028aafd4bd70ade8d80749a00"
+    }
+  }
+}

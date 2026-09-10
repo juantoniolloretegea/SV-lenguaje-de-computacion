@@ -1,0 +1,150 @@
+{
+  "version": "IE-004/CONTEXTO-001",
+  "alcance": "Archivos custodiados de esta carpeta excepto MANIFIESTO.json. Hash sobre bytes exactos.",
+  "archivos": [
+    {
+      "archivo": "COMPARACION-CONTEXTO.json",
+      "bytes": 11018,
+      "sha256": "2a8c450ab87d2315ce5f09c5f777f6a288000127e71ebdbf2dcf3e32d272fe23",
+      "blob": "b224b5e34e43855f059066a4ed5914d6311fabf9"
+    },
+    {
+      "archivo": "COMPROMISO-002.json",
+      "bytes": 444,
+      "sha256": "fcdb196892796078fb1b52cd4eac8c2674b8eac349a7ccc8e4792b6bc044557c",
+      "blob": "592fc6a9b725bfb2278657b9a6285feb8d45b6e1"
+    },
+    {
+      "archivo": "CONTEXTO-Y-LIMITES.json",
+      "bytes": 1530,
+      "sha256": "9689ccd2c5f067b9e2c3e7d00b08c61c6b6dd102f2d08d2a52a27b66e825e399",
+      "blob": "870a52222905bb37b95462c16581292aa737471f"
+    },
+    {
+      "archivo": "DEPOSITO.json",
+      "bytes": 2381,
+      "sha256": "85c3edc226b8ad634e1517c0d73c563c463abe1d6e055ae218ff088c765d697b",
+      "blob": "c19fd8c6d71476ab1eabc9e8dfddf35acc4adcf7"
+    },
+    {
+      "archivo": "ENCARGO-002.md",
+      "bytes": 4585,
+      "sha256": "58c3a3cc3fc5d05e028af6576572d5c7583c2835c4f113cbbfa49f1075231339",
+      "blob": "08df3f494de9129a82e054d1f55491a27c2cb80b"
+    },
+    {
+      "archivo": "EXPEDIENTE-CAUSAL.json",
+      "bytes": 13600,
+      "sha256": "1903a4c25cfc8c70ac40d374371d86cc41fa318b4f83cc574467370081316282",
+      "blob": "a1fcf28ec34fa53d1def1376ba58bb6b671bc5ff"
+    },
+    {
+      "archivo": "INFORME-002.md",
+      "bytes": 1749,
+      "sha256": "6958e0a3e6d8026b6f3ba0cbca7a3839e9efd8ab0bfc647be350944d95009cb6",
+      "blob": "2ebd6e31ec6bdb30035357079fc0810c97ec5cd8"
+    },
+    {
+      "archivo": "LECTURA-FUNCIONAL.json",
+      "bytes": 2404,
+      "sha256": "a33e563bc8522f930cc73f333c57f739f6bdf7ebea83fa4ba99a648383389539",
+      "blob": "dd30f79a8f22e6846a1071500155be846c96f283"
+    },
+    {
+      "archivo": "LIMITE-SEMANTICO.json",
+      "bytes": 2256,
+      "sha256": "23b91985be47320bf5ac3791d4a33e0b75a4c66213b4890da62bf9bdfea8eb24",
+      "blob": "aef24cc20e3bedd0f86bb0952a40397a4b658df2"
+    },
+    {
+      "archivo": "MEDICION.json",
+      "bytes": 1013,
+      "sha256": "b169944f0239291fe8628d9429411800ed1f507bd5d148978d1214acf8bd80a4",
+      "blob": "b74ee3f36844c68a19bf30ff36a3ec5c2881204c"
+    },
+    {
+      "archivo": "ORACULO-ABIERTO.json",
+      "bytes": 7616,
+      "sha256": "ef59ebe98ebba267bf259d442ec992d8df16de1fd157f083826aecac831f1aa4",
+      "blob": "2cdaa67ef865d66cc665db58dcb8120c4f24d71a"
+    },
+    {
+      "archivo": "PROCEDENCIA.json",
+      "bytes": 5392,
+      "sha256": "5a0f39fa415b0f813312a5c7dc8ecc91046dacc05d87d93c7f00868ef6098ef9",
+      "blob": "32e0730d73c1d28c901e22911b1c818fb63d0255"
+    },
+    {
+      "archivo": "RECEPCION.json",
+      "bytes": 17914,
+      "sha256": "51373aeb87ea1dc98fd07798e9d702f82b8eecb540a6d7bb2560a75867f5a5a2",
+      "blob": "81d54906ac0d7cadce47422818f5c36de2da4548"
+    },
+    {
+      "archivo": "REPRODUCIR.md",
+      "bytes": 3448,
+      "sha256": "d9bd9d9b13a63823deaca90b8462c8f26ff5020e6a4f573a8b9252156ef3bf5c",
+      "blob": "824a0f9b37fc94f45cdda45ef449d42b1e2db49c"
+    },
+    {
+      "archivo": "RESULTADO.json",
+      "bytes": 967,
+      "sha256": "9bbc1dc323728e7fe2f99af663cf110425c8dd29938df09bfdf3d123608472b2",
+      "blob": "4a042dbe5480796f493840fb1a419e2cdd6c99ff"
+    },
+    {
+      "archivo": "analizar-contexto.mjs",
+      "bytes": 7805,
+      "sha256": "a22454f8090bcdcb3f89d3bbd1746dd5492bfa03fbe26d27bef7ef080d387fd7",
+      "blob": "a2be652c60540e595911ccc78b95b1753a40790f"
+    },
+    {
+      "archivo": "captura-nativo.jsonl",
+      "bytes": 5418,
+      "sha256": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "blob": "23e5cc785ce1a261e096a1729fa192a32006ce51"
+    },
+    {
+      "archivo": "captura-wasi.jsonl",
+      "bytes": 5418,
+      "sha256": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "blob": "23e5cc785ce1a261e096a1729fa192a32006ce51"
+    },
+    {
+      "archivo": "entrega-original.json",
+      "bytes": 8537,
+      "sha256": "7a3fc3cfb7ea2084d7ac2ee5ce6a3cfefe02291c1d0f8efab10aaba5dfd20a41",
+      "blob": "e2495927b918127305534b03ec580855a387d3f9"
+    },
+    {
+      "archivo": "formato-002.json",
+      "bytes": 181,
+      "sha256": "90bd6d264b55b82718e8ac42e22ef62d1d56676aa08fbc4f63671b41a85acaa8",
+      "blob": "ddd7c70bd0b6ca2c45fec1bab3fe9b1a8983c2ae"
+    },
+    {
+      "archivo": "medidas.json",
+      "bytes": 17000,
+      "sha256": "f2dd331284ae73ea8ca0bdb25fcc8a63cd4e82508c3d850a6b4a51cafe4537cb",
+      "blob": "607024cfeed33a8f867d92f53d88d4786ae2c7e6"
+    },
+    {
+      "archivo": "oraculos-control.json",
+      "bytes": 16808,
+      "sha256": "7e4e6a4f6a5254a80cc64364ce94c83247b104045adf7e13828d349229b0932b",
+      "blob": "0c21ca108f658c87bc72808c80ed5e34f593e842"
+    },
+    {
+      "archivo": "solicitudes-002.json",
+      "bytes": 7243,
+      "sha256": "de3d5093a8439ea6604d5c54f24add468e65389bd5beae6ce59a6d406d1343a8",
+      "blob": "02621b6dead09218feaab0d4e4a96160a9381859"
+    },
+    {
+      "archivo": "solicitudes-originales.json",
+      "bytes": 7243,
+      "sha256": "de3d5093a8439ea6604d5c54f24add468e65389bd5beae6ce59a6d406d1343a8",
+      "blob": "02621b6dead09218feaab0d4e4a96160a9381859"
+    }
+  ]
+}

@@ -1,0 +1,254 @@
+{
+  "estado": "FALLOS_EN_LOTE",
+  "casos": 24,
+  "conformes": 23,
+  "identificacion_correcta": 23,
+  "respuesta_correcta": 23,
+  "entrega_sha256": "7a3fc3cfb7ea2084d7ac2ee5ce6a3cfefe02291c1d0f8efab10aaba5dfd20a41",
+  "solicitudes_sha256": "de3d5093a8439ea6604d5c54f24add468e65389bd5beae6ce59a6d406d1343a8",
+  "oraculo_sha256": "ef59ebe98ebba267bf259d442ec992d8df16de1fd157f083826aecac831f1aa4",
+  "modelo_declarado": "Grok 4.6",
+  "sesion_declarada": "conversacion nueva; identificador de sesion no observable",
+  "configuracion_declarada": "temperatura no observable; semilla no observable; una sola conversacion; sin historial de entregas anteriores pegado",
+  "hallazgos": [
+    {
+      "id": "R01",
+      "identificacion_correcta": false,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": false
+    },
+    {
+      "id": "R02",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R03",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"7.10\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"7.10\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R04",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R05",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R06",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R07",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R08",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"0\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"0\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R09",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R10",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R11",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.15\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.15\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R12",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"U\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"U\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R13",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"FICCION-IE004/1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"FUENTE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"FICCION-IE004/1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"FUENTE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R14",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"ALCANCE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"ALCANCE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R15",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R16",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"7.10\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"7.10\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R17",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R18",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"OPERACION_NO_ADMITIDA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"OPERACION_NO_ADMITIDA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R19",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ANTERIOR\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ANTERIOR\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R20",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R21",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R22",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R23",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"FUERA_DE_COBERTURA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"FUERA_DE_COBERTURA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    },
+    {
+      "id": "R24",
+      "identificacion_correcta": true,
+      "esperado": "{\"estado\":\"ACCESO_DENEGADO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "salida": "{\"estado\":\"ACCESO_DENEGADO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "respuesta_correcta": true
+    }
+  ],
+  "relaciones": {
+    "parafrasis": [
+      {
+        "ids": [
+          "R01",
+          "R02",
+          "R09",
+          "R10",
+          "R15",
+          "R17"
+        ],
+        "conforme": false
+      },
+      {
+        "ids": [
+          "R03",
+          "R16"
+        ],
+        "conforme": true
+      }
+    ],
+    "contrastes": [
+      {
+        "ids": [
+          "R02",
+          "R03"
+        ],
+        "conforme": true
+      },
+      {
+        "ids": [
+          "R03",
+          "R11"
+        ],
+        "conforme": true
+      },
+      {
+        "ids": [
+          "R02",
+          "R05"
+        ],
+        "conforme": true
+      },
+      {
+        "ids": [
+          "R20",
+          "R08",
+          "R12"
+        ],
+        "conforme": true
+      },
+      {
+        "ids": [
+          "R11",
+          "R19"
+        ],
+        "conforme": true
+      }
+    ],
+    "nota_externa": [
+      {
+        "ids": [
+          "R07",
+          "R02"
+        ],
+        "conforme": true
+      }
+    ]
+  },
+  "paridad_bytes": true,
+  "repeticiones_receptor_por_destino": 3
+}

@@ -1,0 +1,286 @@
+{
+  "paso": "P1",
+  "alcance": "Diagnóstico sobre recorrido y datos observables, sin atribución neuronal ni cambio de mecanismo.",
+  "oraculo": {
+    "bytes": 7616,
+    "sha256": "ef59ebe98ebba267bf259d442ec992d8df16de1fd157f083826aecac831f1aa4",
+    "blob": "2cdaa67ef865d66cc665db58dcb8120c4f24d71a"
+  },
+  "autor_expectativas": "Watson; expectativas fijadas tras entrega 001 y antes de cualquier corrección; no validación humana ni autoría independiente",
+  "hallazgos": [
+    {
+      "id": "C01",
+      "capa": "Interpretación entregada; propagación del diagnóstico en receptor.",
+      "entradas": [
+        {
+          "id": "R01",
+          "pregunta": "¿Adónde estará el valor de inmunoglobina de este...?",
+          "contexto": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "nota_externa": ""
+        },
+        {
+          "id": "R09",
+          "pregunta": "¿Y el valor de inmunoglobina de este...?",
+          "contexto": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "nota_externa": ""
+        }
+      ],
+      "propuestas": [
+        {
+          "id": "R01",
+          "ruta": null,
+          "diagnostico": "CONTEXTO_INSUFICIENTE",
+          "apoyos": {}
+        },
+        {
+          "id": "R09",
+          "ruta": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "diagnostico": null,
+          "apoyos": {
+            "operacion": "@contexto.operacion",
+            "objeto": "@contexto.objeto",
+            "parametro": "@contexto.parametro",
+            "momento": "@contexto.momento",
+            "campo": "el valor"
+          }
+        }
+      ],
+      "recepcion": [
+        {
+          "id": "R01",
+          "identificacion_correcta": false,
+          "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+          "salida": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+          "respuesta_correcta": false
+        },
+        {
+          "id": "R09",
+          "identificacion_correcta": true,
+          "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+          "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+          "respuesta_correcta": true
+        }
+      ],
+      "esperado": [
+        {
+          "id": "R01",
+          "ruta": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "diagnostico": null,
+          "permiso_vigente": true
+        },
+        {
+          "id": "R09",
+          "ruta": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "diagnostico": null,
+          "permiso_vigente": true
+        }
+      ],
+      "justificacion_esperado": "Variante incluida expresamente por Juan Antonio en el objetivo. Contexto completo ya establecido y compleción permitida por encargo. Ambos enunciados contienen el valor.",
+      "objecion_examinada": "El informe distingue R09 por pedir el valor; R01 también lo pide y tiene el mismo truncamiento y contexto.",
+      "decision_oraculo": "Se mantiene el esperado congelado en el alcance del banco. No se ha demostrado un defecto que justifique cambiarlo; no se declara regla universal de español.",
+      "causa_observable": "La entrega ya contiene ruta null y CONTEXTO_INSUFICIENTE. El receptor propaga ese diagnóstico sin validar suficiencia semántica del contexto.",
+      "causa_interna_modelo": "NO_OBSERVADA",
+      "regresion": {
+        "positivos": [
+          "R01",
+          "R09"
+        ],
+        "conservar_rechazos_debidos": [
+          "R06",
+          "R21",
+          "R22"
+        ],
+        "criterio": "Misma referencia y contenido en ambos positivos; sin adivinar cuando falta el referente."
+      }
+    },
+    {
+      "id": "C02",
+      "capa": "Apoyo literal de la propuesta; guarda de recepción conforme a su contrato.",
+      "entrada": {
+        "id": "L11",
+        "pregunta": "¿En qué unidad está expresada la IgG actual?",
+        "contexto": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "nota_externa": ""
+      },
+      "propuesta_001": {
+        "id": "L11",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "UNIDAD"
+        },
+        "diagnostico": null,
+        "apoyos": {
+          "operacion": "@contexto.operacion",
+          "objeto": "@contexto.objeto",
+          "parametro": "la IgG",
+          "momento": "actual",
+          "campo": "en qué unidad"
+        }
+      },
+      "propuesta_002": {
+        "id": "R05",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "UNIDAD"
+        },
+        "diagnostico": null,
+        "apoyos": {
+          "operacion": "@contexto.operacion",
+          "objeto": "@contexto.objeto",
+          "parametro": "la IgG",
+          "momento": "actual",
+          "campo": "qué unidad"
+        }
+      },
+      "propuesta_contexto": {
+        "id": "R05",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "UNIDAD"
+        },
+        "diagnostico": null,
+        "apoyos": {
+          "operacion": "@contexto.operacion",
+          "objeto": "@contexto.objeto",
+          "parametro": "la IgG",
+          "momento": "actual",
+          "campo": "unidad"
+        }
+      },
+      "recepcion_001": {
+        "id": "L11",
+        "identificacion_correcta": true,
+        "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "salida": "{\"estado\":\"APOYO_INVALIDO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "respuesta_correcta": false
+      },
+      "recepcion_002": {
+        "id": "R05",
+        "identificacion_correcta": true,
+        "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "respuesta_correcta": true
+      },
+      "recepcion_contexto": {
+        "id": "R05",
+        "identificacion_correcta": true,
+        "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+        "respuesta_correcta": true
+      },
+      "comprobacion_literal": {
+        "original": "en qué unidad",
+        "presente_original": false,
+        "confirmacion": "qué unidad",
+        "presente_confirmacion": true,
+        "contexto": "unidad",
+        "presente_contexto": true
+      },
+      "causa_observable": "Diferencia de mayúscula en una cita sometida a q.contains(a). La referencia de UNIDAD ya era correcta.",
+      "regresion": "Entregar la unidad con apoyo exacto; conservar el original fallido y no aplicar reparación silenciosa."
+    },
+    {
+      "id": "C03",
+      "capa": "Comprobación semántica insuficiente del receptor experimental.",
+      "testigo": {
+        "estado": "BRECHA_CONFIRMADA_EN_RECEPTOR_EXPERIMENTAL",
+        "causa": "Tipo, permiso y cita literal válidos no prueban identificación semántica correcta.",
+        "entrada": {
+          "pregunta": "No consulte IgG; consulte IgA.",
+          "contexto": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "ruta": {
+            "operacion": "LEER",
+            "objeto": "CASO-A",
+            "parametro": "IGG",
+            "momento": "ACTUAL",
+            "campo": "VALOR"
+          },
+          "apoyos": {
+            "operacion": "@contexto.operacion",
+            "objeto": "@contexto.objeto",
+            "parametro": "IgG",
+            "momento": "@contexto.momento",
+            "campo": "@contexto.campo"
+          },
+          "diagnostico": null
+        },
+        "observaciones": [
+          {
+            "destino": "nativo",
+            "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+            "esperado_por_peticion": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+          },
+          {
+            "destino": "wasi",
+            "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+            "esperado_por_peticion": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+          }
+        ],
+        "promocion_al_sv": false
+      },
+      "autor_testigo": "Banco de Watson; no se atribuye esta sustitución a Grok.",
+      "causa_observable": "La presencia de IgG en el texto pasa q.contains(a), pero no verifica la negación ni la petición positiva de IgA. Referencia y permiso válidos no bastan.",
+      "regresion": "Ante la misma petición, admitir la propuesta correcta de IGA e impedir IGG. Rechazar ambas no satisface utilidad. Controles de esa corrección pendientes de P2/P3."
+    },
+    {
+      "id": "C04",
+      "capa": "Imposición material y conexión al SV.",
+      "estado": "NO_ACREDITADO",
+      "observacion": "La vigencia es un valor del conductor; no una comprobación de autorización humana o revocación real. I01–I05 no se ensayan mediante este contraste.",
+      "regresion": "P4 requiere sondas materiales de los actores, efectos, recursos y límites de confianza declarados; no sustituirlas por un indicador sintético.",
+      "conexion_sv": "No integración con sv_core, DSL/R1/Q0, Frame o universo clínico constituido."
+    }
+  ],
+  "decision": "P0 recibido y P1 documentado. P2 pendiente de diseño. No nueva ronda del modelo, no modificación de receptor u oráculos."
+}

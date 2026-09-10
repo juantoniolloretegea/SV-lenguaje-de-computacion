@@ -1,0 +1,34 @@
+{
+  "objeto": "Lote de 24 propuestas depositadas; incluye arranque de proceso, no inferencia del modelo.",
+  "procesos": 40,
+  "destinos": {
+    "nativo": {
+      "muestras_ms": [
+        2.050076,
+        2.151453,
+        2.048787
+      ],
+      "mediana_ms": 2.050076,
+      "minimo_ms": 2.048787,
+      "maximo_ms": 2.151453,
+      "bytes_salida": 5418,
+      "sha256_salida": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "cpu_rss": "NO_OBSERVABLES"
+    },
+    "wasi": {
+      "muestras_ms": [
+        45.491172,
+        46.153713,
+        50.549189
+      ],
+      "mediana_ms": 46.153713,
+      "minimo_ms": 45.491172,
+      "maximo_ms": 50.549189,
+      "bytes_salida": 5418,
+      "sha256_salida": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "cpu_rss": "NO_OBSERVABLES"
+    }
+  },
+  "inferencia_modelo": "NO_MEDIDA",
+  "limite": "Tres muestras en anfitrion compartido; no caracterizacion P5, no prueba de regresion ni de viabilidad productiva."
+}

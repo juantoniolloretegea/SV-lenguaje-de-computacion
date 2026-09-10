@@ -1,0 +1,366 @@
+{
+  "objeto": "Contraste de 24 entradas identicas; corpus y expectativas ya conocidos, no validacion inedita.",
+  "original_002": {
+    "commit": "927f24d57701dda579ff822da7a7fdaf1eeed69e",
+    "sha256": "47e5009c31f0dcd4ab6c1ed6db5d10b86dcb39e5671c385a2eeadef48b3843ef",
+    "modelo": "Grok 4.6 (xAI)",
+    "sesion": "conversación nueva iniciada para ENCARGO-002; identificador interno de conversación no visible",
+    "configuracion": "no observable: temperatura, semilla y demás hiperparámetros no expuestos; no hay conversaciones separadas"
+  },
+  "contexto_001": {
+    "commit_entrega": "40c70301c520cc79f2a400424dfc184be31b2d78",
+    "commit_informe": "cd67d2854c756cb073d02cd1440a57815b109ed9",
+    "sha256": "7a3fc3cfb7ea2084d7ac2ee5ce6a3cfefe02291c1d0f8efab10aaba5dfd20a41",
+    "modelo": "Grok 4.6",
+    "sesion": "conversacion nueva; identificador de sesion no observable",
+    "configuracion": "temperatura no observable; semilla no observable; una sola conversacion; sin historial de entregas anteriores pegado"
+  },
+  "atribucion_contextual": "Fuera del proyecto confirmado por Juan Antonio; no controla temperatura, semilla, memoria global ni otras instrucciones. No demuestra una causa interna del modelo.",
+  "resumen": {
+    "entradas_identicas": 24,
+    "rutas_y_diagnosticos_iguales": 24,
+    "apoyos_iguales": 15,
+    "cuerpos_iguales": 24,
+    "correctos_en_ambas": 23,
+    "corregidos": [],
+    "regresiones": [],
+    "fallos_persistentes": [
+      "R01"
+    ]
+  },
+  "casos": [
+    {
+      "id": "R01",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": false,
+      "correcto_en_contexto": false,
+      "conformidad_funcional_en_ambas": false
+    },
+    {
+      "id": "R02",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "momento": {
+          "anterior": "de ahora",
+          "actual": "ahora"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R03",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R04",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R05",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "campo": {
+          "anterior": "qué unidad",
+          "actual": "unidad"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R06",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R07",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "campo": {
+          "anterior": "Qué valor",
+          "actual": "valor"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R08",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R09",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "objeto": {
+          "anterior": "este...?",
+          "actual": "@contexto.objeto"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R10",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R11",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "objeto": {
+          "anterior": "del CASO-A",
+          "actual": "CASO-A"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R12",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "parametro": {
+          "anterior": "esa inmunoglobulina",
+          "actual": "@contexto.parametro"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R13",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R14",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "campo": {
+          "anterior": "Qué límites",
+          "actual": "límites"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R15",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R16",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R17",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R18",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R19",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "campo": {
+          "anterior": "qué unidad",
+          "actual": "unidad"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R20",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R21",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R22",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R23",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": true,
+      "cambios_apoyos": {},
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    },
+    {
+      "id": "R24",
+      "pregunta_contexto_nota_identicos": true,
+      "expectativa_identica": true,
+      "ruta_y_diagnostico_iguales": true,
+      "apoyos_iguales": false,
+      "cambios_apoyos": {
+        "objeto": {
+          "anterior": "del CASO-A",
+          "actual": "CASO-A"
+        }
+      },
+      "cuerpo_igual": true,
+      "correcto_en_002": true,
+      "correcto_en_contexto": true,
+      "conformidad_funcional_en_ambas": true
+    }
+  ]
+}
