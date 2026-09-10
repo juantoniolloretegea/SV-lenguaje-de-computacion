@@ -1,0 +1,134 @@
+{
+  "registro": "RETP-2026-128",
+  "perfil": "IE004-ES-P2/2",
+  "base": "K-IE004/1",
+  "politica": "P-IE004/1",
+  "estado": "EXPECTATIVAS_DOCUMENTALES_CONTROLES_PUBLICOS_PENDIENTES_RUST",
+  "contrastes": [
+    {
+      "id": "C17",
+      "reparo": "R8",
+      "pregunta": "No consulte IgG o IgM; consulte IgA.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "PETICION_AMBIGUA",
+        "dato": null
+      },
+      "reglas": [
+        "G10",
+        "G18",
+        "5.1",
+        "5.3"
+      ],
+      "justificacion": "Dos interpretaciones con la misma consulta positiva IGA y exclusiones LEER/IGG o LEER/IGM distintas. No podar exclusiones ajenas al positivo ni filtrar permisos antes de unicidad."
+    },
+    {
+      "id": "C18",
+      "reparo": "R9",
+      "pregunta": "No cambie nada; consulte el valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G18",
+        "5.1",
+        "5.3"
+      ],
+      "justificacion": "Una interpretación que contiene dos patrones de exclusión, ESCRIBIR y ELIMINAR; mantiene LEER. No crear dos interpretaciones por esos dos patrones."
+    }
+  ],
+  "obligaciones_de_capacidad": [
+    {
+      "id": "CP-T",
+      "fronteras_tokens": [
+        127,
+        128,
+        129
+      ],
+      "precondicion": "Construir y fijar públicamente antes de ejecutar preguntas gramaticales con interpretación única conocida que requieran DATO, manteniendo los demás límites. Contar tokens según §3, no por estimación del proveedor.",
+      "esperado": "127/128: cuerpo esperado y contabilidad A dentro de sus cuotas; un agotamiento es fallo de capacidad del servicio ensayado, aunque su gestión técnica sea correcta. 129: fallo técnico de admisión, sin dato ni Tri.U."
+    },
+    {
+      "id": "CP-B",
+      "fronteras_bytes_utf8": [
+        8191,
+        8192,
+        8193
+      ],
+      "precondicion": "Conservar una consulta legítima corta y completar con separadores admitidos, con pregunta original e identidad fijadas; comprobar bytes exactos y mantener los otros límites.",
+      "esperado": "8191/8192: cuerpo legítimo sin truncamiento ni reparación; 8193: fallo técnico de admisión, sin dato ni Tri.U. Se cuenta el trabajo del original, incluidos los separadores."
+    },
+    {
+      "id": "CP-A",
+      "precondicion": "Sondas públicas de agotamiento A y aritmética de contadores/tamaños en sus fronteras; los operandos y estados internos de prueba no proceden del oráculo reservado.",
+      "esperado": "Detectar agotamiento/overflow antes del acceso, suma o reserva inválidos. Fallo técnico sin salida parcial; nunca wrap, pánico sin clasificar o Tri.U. Si afecta una consulta cuyo servicio se prometía, registrar además incumplimiento funcional."
+    },
+    {
+      "id": "CP-V",
+      "fronteras_bytes_propuesta": [
+        262143,
+        262144,
+        262145
+      ],
+      "otras_fronteras": [
+        "512 nodos",
+        "1024 enlaces",
+        "profundidad 64",
+        "4 MiB arena",
+        "1000000 unidades"
+      ],
+      "precondicion": "Fijar variantes válidas cuando sean representables, malformadas y excesivas, contando desde recepción y decodificación. Declarar cuando una combinación de topes no sea alcanzable bajo las demás cuotas.",
+      "esperado": "Las cuotas V y sus excesos sólo afectan V. Comparar cuerpo y consumo A sin abrir V y con cada variante. No exigir validar una propuesta que rebasa alguna otra cuota."
+    }
+  ],
+  "transporte": {
+    "id": "CP-AV",
+    "contrato": "CONTRATO_SEPARACION_CAPTURA_A_V.md",
+    "variantes_v": [
+      "ausente",
+      "minima_valida",
+      "valida_grande_dentro_de_todos_los_cupos",
+      "mal_formada",
+      "excesiva",
+      "agotada",
+      "mal_correlacionada",
+      "tardia"
+    ],
+    "esperado": "A conserva original, cuerpo y consumo determinista sin esperar ni decodificar V. Instrumentar apertura/lectura/decodificación y contadores; una mera igualdad del cuerpo no acredita separación material. La propuesta no consume arena, saldo, caché mutable, excepción ni plazo A.",
+    "atribucion": "Mutaciones del comprobador, conservadas separadamente de la propuesta original de Grok."
+  },
+  "realizacion": {
+    "lenguaje": "Rust",
+    "destinos": [
+      "nativo",
+      "WASI"
+    ],
+    "configuraciones": "Contrastar comportamiento de errores/overflow en debug y release sin depender de overflow-checks para la corrección; tiempos de compilación separados de ejecución. Registrar compilador, target, configuración, binarios y entorno.",
+    "puerta": "Controles públicos antes de congelación y captura Grok; P4 impone aislamiento material y P5 mide costes. No se declara actualmente ninguno de ellos cumplido.",
+    "parada": "Al incumplimiento suficiente, registrar causa y detener la candidata. No aumentar cupos ni sustituir el resultado esperado retrospectivamente."
+  },
+  "alcance": "Estos son dos contrastes y obligaciones de ensayo, no un corpus inédito ni una batería Rust ya implementada. La reserva breve no acredita el techo de entrada. La contabilidad combinatoria señalada en R10 es riesgo documental, no medición del futuro Rust.",
+  "ejecuciones": 0
+}

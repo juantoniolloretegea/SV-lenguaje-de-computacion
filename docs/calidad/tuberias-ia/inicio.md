@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-127:** recibido el dictamen de defecto sobre /1; candidata documental /2 y presupuestos A/V separados publicados. Reserva detenida hasta revisión focal; P3 sin iniciar, aislamiento NO VERDE y sin nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-128:** recibido APTO_PARA_RESERVAR documental de /2; preparación única por Claude y traspaso a custodia humana concretados. Reserva aún no acreditada, P3 sin iniciar y aislamiento NO VERDE. Captura A/V separada especificada; no nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -58,3 +58,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Recepción de Claude y corrección documental P2 · RETP-127
 
 [Acta de recepción](ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md): tres defectos aceptados, inversión de «no sólo» tratada como bloqueante y reparos delimitados. Los cuatro originales se conservan; sus resultados Python no califican Rust. [Perfil /2](ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md), [guía de recursos](ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md) y [revisión focal/reserva](ie004/perfil-es-p2-2/ENCARGO_REVISION_Y_RESERVA_P3.md). La reserva sigue detenida hasta suficiencia; sin otro corrector ejecutado, nueva ronda Grok o P5.
+
+## Aptitud documental y preparación de reserva · RETP-128
+
+[Recepción y decisiones](ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md): dos originales de Claude conservados, alcance sintáctico de su herramienta delimitado y 18 cadenas adicionales expuestas. [Encargo de preparación](ie004/reserva-p3/ENCARGO_PREPARACION_RESERVA_CLAUDE.md), [captura A/V separada](ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md) y [controles públicos R8–R11](ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json). Claude prepara; Juan Antonio conserva y confirma recuperación; Watson recibe sólo el compromiso antes del corrector. No se acredita custodia por un enlace efímero ni Rust por el dictamen.

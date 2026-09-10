@@ -1,0 +1,95 @@
+{
+  "registro": "RETP-2026-128",
+  "fecha": "2026-09-10",
+  "estado": "APTO_DOCUMENTAL_CUSTODIA_PENDIENTE_P3_NO_INICIADO",
+  "cortes_previos": {
+    "lang": "b9dea6b6469b4b79b0323385cf610438d912f0bf",
+    "lab": "d4c5366ed50c17e70342068971287cfb94f277a6"
+  },
+  "rectoras": {
+    "AGENTS": "42221257270146fa94a25e8aca20a2c364c077b7",
+    "Pilares": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+    "Perfiles": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+    "Transicion": "44f8fda87856ab16007195cab324d40a758e506a",
+    "Arquitectura": "6c57f2e895045d4a26bacefc98c49ebac2b433f7"
+  },
+  "lectura": "Lecturas de RETP-127 reutilizadas y blobs recotejados sin cambios; dos nuevos archivos de Claude leídos completos.",
+  "perfil_sin_modificacion": {
+    "id": "IE004-ES-P2/2",
+    "git_blob_sha": "cfb1a245fdaccb0c951b8bc7f025e5d3daedadf3"
+  },
+  "mediciones_declaradas_por_claude_no_reproducidas": {
+    "corpus_derivados": 48,
+    "corpus_unicos": 48,
+    "contrastes_sintacticos": 16,
+    "sondas_anteriores_rectificadas": 60,
+    "cadenas_adicionales_declaradas": 18,
+    "tiempo_herramienta_aproximado_segundos": 2,
+    "implementa_semantica": false
+  },
+  "comprobaciones_documentales": {
+    "nuevos_originales": 2,
+    "literales_adicionales_cotejados": 18,
+    "contrastes_complementarios": 2,
+    "python_ejecuciones": 0,
+    "rust_ejecuciones": 0,
+    "reserva_creada_por_watson": false,
+    "custodia_humana_acreditada": false,
+    "realizacion_A_V_implementada": false
+  },
+  "espejos": {
+    "lang": "docs/calidad/tuberias-ia",
+    "lab": "laboratorio/tareas-watson/tuberias-ia"
+  },
+  "archivos": [
+    {
+      "ruta_desde_tuberias": "ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md",
+      "bytes": 8967,
+      "sha256": "6c937c272f10ebb97415375e685029e7cec3a1613393288dcc480a4389f091a4",
+      "git_blob_sha": "2bc0412e7d2fb65ca0658a8696b9466090d6a26d"
+    },
+    {
+      "ruta_desde_tuberias": "inicio.md",
+      "bytes": 7470,
+      "sha256": "b494188298ea3f9ff00cc4880bb08bcf6ac6f369ad1517c3eea4d04962e4d39c",
+      "git_blob_sha": "ab445a1c337dfadd1908804f76846b1584480ca4"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/reserva-p3/ENCARGO_PREPARACION_RESERVA_CLAUDE.md",
+      "bytes": 6651,
+      "sha256": "8487c33957eae24d99780fd9106777e786d5ec23282ce7f1cf0442b93c50af0f",
+      "git_blob_sha": "1ad69923431a08dc83596e0a928250d401fc3a58"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md",
+      "bytes": 6336,
+      "sha256": "5df31e47f8716f6c7dc40a15dc5bb9c6d7135b0022c8912dae36959f6eef7784",
+      "git_blob_sha": "3c0a508e0a9b1e5f025dc092fad33615536df860"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/reserva-p3/EXPOSICION_ADICIONAL_CLAUDE.json",
+      "bytes": 4169,
+      "sha256": "337133fadabc27e70435cb4e68aa42b53584793166478e242f5a7db84b1d7fba",
+      "git_blob_sha": "2e6b5d12e691cc50585d9b839784baf8bc6ec3ab"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json",
+      "bytes": 5771,
+      "sha256": "34952a3155d74676096f793b4afc44491ad6d0a8cab404d8528f8ebef64f751e",
+      "git_blob_sha": "a7619199665987b3fdac548c6e4ccba92005e840"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+      "bytes": 13391,
+      "sha256": "eff8903d4f18af49b6e635b4d96e84593c1c56a106aea519a9040f2d699adc18",
+      "git_blob_sha": "1d0f44f1a2f073c4db3da77d695465240a0d114d"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-2/p2v2_parser.py",
+      "bytes": 8297,
+      "sha256": "1540c459dbb3ffdb85b11662a1621ba2308cfea9e08eb2dfdc3d9f061dbf576c",
+      "git_blob_sha": "d39d4413054f38fd71d0a106e34b7b4dae09593b"
+    }
+  ],
+  "auto_huella": "Este manifiesto se excluye de su propia lista; su identidad la fijan blob y commit de publicación."
+}

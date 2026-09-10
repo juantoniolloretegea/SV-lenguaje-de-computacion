@@ -1,0 +1,126 @@
+{
+  "registro": "RETP-2026-128",
+  "estado": "EXPOSICION_DECLARADA_NO_RESERVA",
+  "fuente": "../revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+  "rectificacion_sondas_anteriores": 60,
+  "alcance": "Dieciocho cadenas declaradas adicionales al fichero anterior, no dieciocho casos necesariamente distintos de todos los corpus. No se ha reejecutado ningún parser.",
+  "entradas": [
+    {
+      "id": "EX-C2-01",
+      "pregunta": "No cambie el valor de la IgG.",
+      "bytes": 29,
+      "sha256": "7586ef514612fe1dd8075a019a983cd91f3f6d785de302086b12760e56cefe4f"
+    },
+    {
+      "id": "EX-C2-02",
+      "pregunta": "No traiga el valor de la IgG.",
+      "bytes": 29,
+      "sha256": "bd452376082365b2e3512b8edd7e95c79b667d94d4a7da5035d5b3f2aa0ed73f"
+    },
+    {
+      "id": "EX-C2-03",
+      "pregunta": "Cambie el valor de la IgG.",
+      "bytes": 26,
+      "sha256": "1842bb18eff7ea51e1b01a7c7ce9fb9b507294999d0f6e23ab89e3908bc3b32d"
+    },
+    {
+      "id": "EX-C2-04",
+      "pregunta": "Escriba 7 en la IgG.",
+      "bytes": 20,
+      "sha256": "aaff9c689082e7f828c23362ef4b81c0f6691ff40b00e3c1efd62e1b69c88171"
+    },
+    {
+      "id": "EX-C2-05",
+      "pregunta": "No quiero el intervalo de referencia.",
+      "bytes": 37,
+      "sha256": "4169dae6381720d4a4589ef9a97bb2f360b719ea39740deebcb810bf7382b259"
+    },
+    {
+      "id": "EX-C2-06",
+      "pregunta": "Del caso-a, el valor de la IgG.",
+      "bytes": 31,
+      "sha256": "6e4e1ba5b49004cee95a6dd2b2240dcb3c3bd1425603543b7a9abaca548cc3cd"
+    },
+    {
+      "id": "EX-C2-07",
+      "pregunta": "De este caso, el valor de la IgG.",
+      "bytes": 33,
+      "sha256": "69c56996b27fd67b907707d84ce3332163bede7b2495115e2c97aa52f1301695"
+    },
+    {
+      "id": "EX-C2-08",
+      "pregunta": "El valor de la IgG de este paciente.",
+      "bytes": 36,
+      "sha256": "7c15490677e65433d2cb062499a474fac524f995b4e72df51f277b5ff7bab7a4"
+    },
+    {
+      "id": "EX-C2-09",
+      "pregunta": "El valor de la IgG del caso-b.",
+      "bytes": 30,
+      "sha256": "ec08a01d913221e7063825f4cf06159ee8b144a307e76516aa314133faa95e2e"
+    },
+    {
+      "id": "EX-C2-10",
+      "pregunta": "Consulte la unidad, no quiero el valor: la IgG.",
+      "bytes": 47,
+      "sha256": "43b4766f45cfbffef8329e99871b7a02c5313b8167bbdc0f757be2ad8fbfd161"
+    },
+    {
+      "id": "EX-C2-11",
+      "pregunta": "No consulte la hemoglobina.",
+      "bytes": 27,
+      "sha256": "4feb6e4e7341ee2f6e1a2f1389a055d55fd39b21663339e90e82c1e2c79a612f"
+    },
+    {
+      "id": "EX-C2-12",
+      "pregunta": "El estado registrado de la IgG.",
+      "bytes": 31,
+      "sha256": "6fa79f8d8ee3fcc5397c649b28f378f8db2e374c7c41189f6518d4859276abf4"
+    },
+    {
+      "id": "EX-C2-13",
+      "pregunta": "La cifra registrada de la IgG.",
+      "bytes": 30,
+      "sha256": "e4b0f8e6449b25b7284e938929f5c91a96e529e5dbd6413dd8c10a83ed6b8c4f"
+    },
+    {
+      "id": "EX-C2-14",
+      "pregunta": "Sólo lea el valor de la IgG, por favor.",
+      "bytes": 40,
+      "sha256": "46fc66ef08b2de3766523401f15e62fedfe59d924044ab4a30000b64a4368dda"
+    },
+    {
+      "id": "EX-C2-15",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "bytes": 40,
+      "sha256": "d07ba8e51c4717b8bbe14cef17ad8b34aab36a5d6d860717fbdd44c546314b58"
+    },
+    {
+      "id": "EX-C2-16",
+      "pregunta": "El valor actual de IgG o IgA del CASO-A.",
+      "bytes": 40,
+      "sha256": "d1dd3f16735c9751eaaf5efcb948637f7f36e897652bb6da431da096c061b8aa"
+    },
+    {
+      "id": "EX-C2-17",
+      "pregunta": "No consulte IgG o IgM; consulte IgA.",
+      "bytes": 36,
+      "sha256": "4c94112e0d058e665f8ca6bf40d57fd8205c82dbc24dd5a88465c7fefa1569ed"
+    },
+    {
+      "id": "EX-C2-18",
+      "pregunta": "Consulte el valor de IgG o IgM.",
+      "bytes": 31,
+      "sha256": "7f398f01ad42886952aa3ee074fca3dcf18605d1c38713ed85a7bd3a40311217"
+    }
+  ],
+  "otras_exposiciones_excluidas": [
+    "48 preguntas históricas",
+    "60 literales de p2_probes.py",
+    "generación reducida declarada",
+    "ejemplos de dictámenes /1 y /2",
+    "16 contrastes públicos /2",
+    "C17 y C18 complementarios"
+  ],
+  "ejecuciones_watson": 0
+}
