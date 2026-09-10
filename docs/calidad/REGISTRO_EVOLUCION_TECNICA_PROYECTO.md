@@ -1145,3 +1145,14 @@ Paridad por bytes y tres reproducciones por destino;40 procesos con controles. U
 **Continuación:** última confirmación de24 casos(8 repetidos,16 nuevos), fijada antes de cualquier corrección, en conversación nueva. Receptor sin cambios; reserva002 fuera del acceso del participante, compromiso público. No tercera ronda automática.
 
 **Estado:** FALLOS_EN_LOTE; BRECHA_SEMANTICA_CONFIRMADA; AISLAMIENTO_NO_VERDE. Dominio/universo/agente diferenciados; recorrido completo DSL/núcleo/aislamiento material sigue pendiente. Sin promoción al SV, reapertura de fila9 o catálogo/localización ni selección de Qwen. Clausura humana no declarada.
+
+<a id="retp-121"></a>
+## RETP-2026-121 — Perfiles lingüísticos y separación entre investigación y aplicación
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje 97a8546bd184161fc1c7c3aea55d5c1d0c19149e; laboratorio a4db8d622d02766689def38816e18d85c94a7bb3. Mandato de Juan Antonio; lectura íntegra de perfiles fuente ES/EN y acta de perfiles y ensamblaje; rectoras sin cambios respecto de sus lecturas íntegras previas.
+
+[Acta espejada en Calidad y laboratorio](tuberias-ia/ACTA_ENCAJE_DE_PERFILES_LINGUISTICOS_Y_SEPARACION_INVESTIGACION_APLICACION_2026_09_10.md). Español conserva el alcance actual. Se distingue el perfil del código, el idioma de interfaz y la futura interacción lingüística del agente. Dominio, universo, agente y soporte conservan responsabilidades e identidades propias. Investigar y modificar conocimiento queda bajo soberanía humana; aplicarlo requiere su versión autorizada, sin incorporar conocimiento o equivalencias por aprendizaje durante el uso. Registrar observaciones admitidas y contexto no equivale a modificar el saber constituido.
+
+**Excepción acotada:** anticipar una intervención imperativa para evitar una refactorización costosa exige demostrar la pérdida de representación, un caso positivo y un contraejemplo, localizar el nivel competente y acotar el cambio, versionado, checkpoint y verificaciones afectadas según §7 del acta de perfiles. Más idiomas por sí solos no justifican refactorizar el núcleo.
+
+**Estado:** DIRECTRIZ_DOCUMENTADA; REALIZACION_PENDIENTE; AISLAMIENTO_NO_VERDE. Publicación documental y registro, sin nueva prueba ni cambio del encargo IE-004/002, del receptor o de sus criterios. Catálogo/localización y fila 9 conservan su orden posterior. No se acredita comprensión universal, despliegue multilingüe ni aislamiento material.

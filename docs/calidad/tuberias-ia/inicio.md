@@ -27,3 +27,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Primera captura IE-004 y última confirmación prevista
 
 [Recepción 001 y confirmación final](ACTA_RECEPCION_IE004_001_Y_CONFIRMACION_2026_09_10.md): 23/24 identificaciones, 22/24 respuestas correctas; dos consultas legítimas no servidas. Paridad nativo/WASI sobre la captura, sesión de Grok reutilizada. Brecha semántica confirmada; aislamiento NO VERDE. El oráculo 001 queda abierto. Encargo activo: interpretacion-es/ENCARGO-002.md, 24 casos en conversación nueva; no hay tercera tanda automática.
+
+## Encaje de idiomas y separación entre investigación y aplicación
+
+[Directriz y excepción acotada](ACTA_ENCAJE_DE_PERFILES_LINGUISTICOS_Y_SEPARACION_INVESTIGACION_APLICACION_2026_09_10.md): español como alcance actual; futura interacción por perfiles explícitos; constitución humana del saber separada de su aplicación, sin aprendizaje ni incorporación automática durante el uso. Anticipar cambios requiere demostrar necesidad para evitar una refactorización costosa. Continúa IE-004/002; aislamiento NO VERDE.
