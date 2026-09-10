@@ -1,0 +1,92 @@
+{
+  "commit_captura": "c3b9a471e725e0a230dadc77bbe04ad42047669f",
+  "captura_sha256": "56840d45ede24480d5e53fc0e23ef79df891d6444e3b761386d05ba47cbba07f",
+  "captura_bytes": 2406,
+  "reserva_sha256": "c6c756b29e66ee8919cdab33cb6dd812cbf825f2418d6f2293c70d9b0e209103",
+  "version": 1,
+  "tipo": "RECEPCION_DE_BYTES_APORTADOS_ORIGEN_A_CONTRASTAR",
+  "source": "ce15fe22e1649f3392ef7af9314b4446e777d3c6",
+  "filas": [
+    {
+      "expediente": "OT-418",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "e10ec927e0a400132f36e66f87a65ac27b77e0a353a97e08b812f50c1401411c",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 3265334,
+      "wasi_ns": 62103599
+    },
+    {
+      "expediente": "OT-427",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "25eff0bafcc1dbb998ce4b4a32b42462680a63c69d75bd0e7bc787b07789db30",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 2274729,
+      "wasi_ns": 43991103
+    },
+    {
+      "expediente": "OT-439",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "76e12f249b6a97ca74617e2479ad4c6e47eb0663b902aa617bce0649637212d2",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 1978227,
+      "wasi_ns": 49861115
+    },
+    {
+      "expediente": "OT-443",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "bff290cf3db26c6b0ca470fd9b416c1a17734e0cb6cf25c390a91d1a043bda58",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 2275038,
+      "wasi_ns": 47800540
+    },
+    {
+      "expediente": "OT-451",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "fe62cfa29b6dc3814c3242774fc6f2525d214416350de5a94532955498197bb4",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 2163388,
+      "wasi_ns": 61577941
+    },
+    {
+      "expediente": "OT-467",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "6a49288a544c39dc96e55bb81b09344658a7f9365d7de1d16ac0fd7821178ef7",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 4970528,
+      "wasi_ns": 47537682
+    },
+    {
+      "expediente": "OT-479",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "1e70bb1e01dcc4bab74b3b761ced162352a3414a8dfc116176bed6f8945c525f",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 3118629,
+      "wasi_ns": 53966166
+    },
+    {
+      "expediente": "OT-487",
+      "codigo": 0,
+      "paridad": true,
+      "entrada_sha256": "942e75849e447d4f4d2ca75e979b7a98edf9d9658fa025516f73843246ed96c7",
+      "salida_hex": "7b22636f6469676f223a307d0a",
+      "nativo_ns": 2107329,
+      "wasi_ns": 57670337
+    }
+  ],
+  "admision": "PROPUESTA_ESTRUCTURADA_ADMISIBLE",
+  "prosa": "NO_VALIDADA_SEMANTICAMENTE_NO_PROMOVIBLE",
+  "efectos": 0,
+  "paridad": "NATIVO_WASI_IDENTICA",
+  "aislamiento_del_modelo": "NO_ENSAYADO",
+  "sesiones_modelo": "UNA_CAPTURA_SIN_REPETICIONES_ARTIFICIALES",
+  "determinismo_modelo": "NO_ACREDITADO",
+  "aprobacion_humana": "PENDIENTE",
+  "auditoria_externa": "PENDIENTE"
+}

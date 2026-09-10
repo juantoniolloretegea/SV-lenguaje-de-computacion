@@ -1056,3 +1056,21 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Evidencia y límite:** revisión documental sobre el corte indicado; no se ejecutan pruebas funcionales nuevas ni se afirma observación de una localización ya desplegada. La identificación del entorno público se coteja con README y docs/index.html; la lectura directa de la URL no pudo completarse mediante la herramienta web en esta revisión. No se deriva de ello indisponibilidad del sitio. Las 13 caracterizaciones/26 ejecuciones de RETP-109 conservan su corte y no cierran estas obligaciones.
 
 **Estado:** PRECISION_CONTRACTUAL_EN_CANDIDATA; REALIZACION_Y_ENTREGA_VISIBLE_PENDIENTES. Se añaden contrato y registros por sucesión; DFL-001/011 permanecen vigentes. No se cambian código, README, actas históricas, dominios ni despliegue. PR #88 sin fusionar; fila 9 abierta.
+
+
+<a id="retp-115"></a>
+## RETP-2026-115 — Recepción de tuberías de IA y preparación del ensayo determinista en español
+
+**Fecha:** 10/09/2026. **Orden:** Juan Antonio Lloret Egea requiere que los resultados permanezcan en laboratorio y sean visibles en docs/calidad/tuberias-ia. Solicita continuar con conocimiento determinista, trazable y repetible y precisa una forma y algoritmo NLP inicialmente en español.
+
+**Corte leído:** main aeb5808242697f4d6f18b49da99f1a73eb4cf49d, árbol 25f3d66daf3fa5ce965b0eccf3cc0fd54b1a703b. Leídos completos AGENTS, Pilares, perfiles, transición desde OP-IMM-001, arquitectura y procedimiento de auditoría. Consultados RETP-105–110 y el retorno IMM en 54fe0d89 en sus contratos y límites pertinentes. PR #89 conserva separadamente sus reservas 111–114; este asiento no las incorpora ni aprueba.
+
+**Recepción:** [acta de seguimiento](tuberias-ia/ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md). Entrega c3b9a471e725e0a230dadc77bbe04ad42047669f; resultado de laboratorio en 67eeceea6cb352d7d9b1b4ef248f2356c0230002. Se conserva el espejo literal de RESULTADO.json: 8 propuestas correctas, 3 de tramitación y 5 de retención; 8 pares nativo/WASI con código 0 y salida idéntica; 0 efectos. La captura mide 2406 bytes, SHA-256 56840d45ede24480d5e53fc0e23ef79df891d6444e3b761386d05ba47cbba07f. No se repite ni se atribuye otra ejecución a este espejo. Las medidas completas por destino conservan su alcance y no deciden rendimiento ni refactorización.
+
+**Continuidad candidata:** [Fase 003](tuberias-ia/FASE_003_NLP_ES_CONOCIMIENTO_DETERMINISTA.md) especifica gramática española, resolución unívoca, consulta autorizada y emisión de contenido fijo. La relación parámetro→registro se delimita por identidad y versión; el hash no acredita significado, permiso ni seguridad. D01–D13 e I01–I05 están sólo especificados, sin ejecución nueva ni ampliación de la DSL/IR. El conjunto clínico real no se sustituye por el inventario ficticio del ensayo.
+
+**Objeción adversarial y respuesta:** una salida exacta puede seguir siendo equivocada o variar si el LLM cambia la consulta efectiva. Se exige conservar pregunta original, equivalencias gramaticales explícitas y base/permiso/emisor versionados; las propuestas de la IA no deciden el cuerpo aceptado. Las frases fuera del perímetro quedan sin resolución, separadas de Tri.U. Las revocaciones cambian el contexto y no pueden eludirse mediante repetición de una respuesta antigua.
+
+**Verificación y alcance:** cotejo de identidades, cuerpos copiados, enlaces y sucesión registral; sin nueva prueba funcional atribuida. La recepción y el protocolo se conservan también en laboratorio. No cambian código, gramática, IR, dominios, catálogo/localización ni workflows. Aislamiento material, control productivo, realización del nuevo algoritmo, Qwen y revisión pública integral de Claude permanecen pendientes.
+
+**Estado:** RESULTADOS_ESPEJADOS_PROTOCOLO_ESPECIFICADO_SIN_CIERRE_MATERIAL. No se pasa a verde la tubería. El siguiente acto material deberá producir las pruebas del algoritmo y de los permisos. Se mantiene la prioridad de IA externa, seguida de catálogo/localización y fila 9.
