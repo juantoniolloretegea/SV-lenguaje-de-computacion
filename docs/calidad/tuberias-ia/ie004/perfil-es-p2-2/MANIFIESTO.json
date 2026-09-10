@@ -1,0 +1,116 @@
+{
+  "registro": "RETP-2026-127",
+  "fecha": "2026-09-10",
+  "perfil": "IE004-ES-P2/2",
+  "estado": "CANDIDATA_DOCUMENTAL_REVISION_FOCAL_RESERVA_DETENIDA",
+  "cortes_previos": {
+    "lab": "6f02e5ca38a67082bdc55b6ed5647f3bbaf4e883",
+    "lang": "584d5cc58ba12404548592ffc350d6829b12daac"
+  },
+  "rectoras": {
+    "pilares": {
+      "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/584d5cc58ba12404548592ffc350d6829b12daac/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md"
+    },
+    "perfiles": {
+      "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/584d5cc58ba12404548592ffc350d6829b12daac/docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md"
+    },
+    "transicion": {
+      "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/584d5cc58ba12404548592ffc350d6829b12daac/docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md"
+    },
+    "arquitectura": {
+      "sha": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/584d5cc58ba12404548592ffc350d6829b12daac/docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md"
+    }
+  },
+  "fuentes_originales": {
+    "declaracion": "Archivos recibidos de Juan Antonio, atribuidos a Claude; preservación byte a byte, sin ejecutar sus scripts.",
+    "independencia_del_linaje_de_diseno": false
+  },
+  "mediciones_declaradas_por_claude_no_reproducidas": {
+    "corpus_derivados": 48,
+    "corpus_unicos": 48,
+    "cadenas_reducidas": 32871,
+    "sondas": 61,
+    "max_tokens": 13,
+    "max_bytes": 80
+  },
+  "comprobaciones_documentales": {
+    "literales_en_p2_probes": 60,
+    "producciones_perfil_2": 25,
+    "python_ejecuciones": 0,
+    "rust_ejecuciones": 0,
+    "parser_nuevo_implementado": false,
+    "reserva_creada": false,
+    "medicion_rendimiento": false
+  },
+  "espejos": {
+    "lang": "docs/calidad/tuberias-ia",
+    "lab": "laboratorio/tareas-watson/tuberias-ia"
+  },
+  "archivos": [
+    {
+      "ruta_desde_tuberias": "ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md",
+      "bytes": 10703,
+      "sha256": "b3be350fda0e1ba078f96f2b025512ea92af7c2d0643b09f42b7dbac14257770",
+      "git_blob_sha": "b8b0f5ca8268417042211fb6677bef53c5b797f6"
+    },
+    {
+      "ruta_desde_tuberias": "inicio.md",
+      "bytes": 6728,
+      "sha256": "450e7e224bea710b9125021301b4958a126ab0b16d5e1b460456981c6299d611",
+      "git_blob_sha": "996483f7a07b727594c24d42a696345a0fc4ec75"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md",
+      "bytes": 31867,
+      "sha256": "10c29934f2f8f6bfbb40546f7cf0056d4b53d720c432cacfb9d6b70abefe3d5f",
+      "git_blob_sha": "cfb1a245fdaccb0c951b8bc7f025e5d3daedadf3"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md",
+      "bytes": 7875,
+      "sha256": "74e51f0954c9d433db1b1ab81e26bd38b049e8ea1dd5bca1c7205facc2126153",
+      "git_blob_sha": "01a95ae4f0ab9c2989af0e5be0e1c725837bd58b"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/perfil-es-p2-2/ENCARGO_REVISION_Y_RESERVA_P3.md",
+      "bytes": 10689,
+      "sha256": "9e4d64605642c38ca346c3ec88c8eedb9c933f1d2c2759ebbfc321d7a6c29501",
+      "git_blob_sha": "979f732b16a3162b9f45026ed7f736d2dbe814af"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/perfil-es-p2-2/CONTRASTES_PUBLICOS.json",
+      "bytes": 12178,
+      "sha256": "e8a71648ed0d943fee653885fc9730e203fb2320da57d1ac294e6dc75f2f78c6",
+      "git_blob_sha": "f8f01b60300732b4fd54fc31a926f4bfee1980db"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-1/DICTAMEN_P2_RETP_2026_126_CLAUDE.md",
+      "bytes": 14000,
+      "sha256": "e874fadab43fbd0f7623fc01834c6510f429512f1de7174953ab18bf9d33fd47",
+      "git_blob_sha": "1fa7d864cdde981caf045b1c538761efd47485bd"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-1/p2_parser.py",
+      "bytes": 8508,
+      "sha256": "6a0bba7d613ffd73e93c9e143326ce6792c77ca06425a556dac609c3f34d95d3",
+      "git_blob_sha": "c84abc65c44b43532d698cee118b86f0ae60fe73"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-1/p2_probes.py",
+      "bytes": 3072,
+      "sha256": "1dc2e310efe1d4efaea2f8adc517f40af4233766f3dddb947d9bcb28a53604b9",
+      "git_blob_sha": "abccd7b65aee1b38951511fa8364b065167e1718"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/revision-claude-p2-1/p2_ambig2.py",
+      "bytes": 2903,
+      "sha256": "1a9cbe7f59adc88e672441b913cc3ec0b0285e173452fd47d93d1ad93589cec8",
+      "git_blob_sha": "f1ed42423cf28cc1984ed84a9cec5ad506cce448"
+    }
+  ],
+  "auto_huella": "El manifiesto se excluye de su propia lista. Su identidad es el blob y commit que lo publican; no se simula una huella autorreferencial."
+}

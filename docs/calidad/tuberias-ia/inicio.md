@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-126:** perfil español candidato y custodia/préstamo del texto especificados; encargo de revisión y reserva independiente preparado. P2 en revisión, P3 sin iniciar; no nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-127:** recibido el dictamen de defecto sobre /1; candidata documental /2 y presupuestos A/V separados publicados. Reserva detenida hasta revisión focal; P3 sin iniciar, aislamiento NO VERDE y sin nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -54,3 +54,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Perfil español, propiedad del texto y preparación de reserva · RETP-126
 
 [Acta y paquete](ACTA_PERFIL_P2_CUSTODIA_TEXTO_Y_RESERVA_2026_09_10.md): perfil candidato de 23 producciones, semántica de contexto/negación y contrato de ownership/préstamos; presupuestos y desbordamientos acotados. Correspondencia documental de 48 casos conocidos, sin ejecutar gramática. [Encargo de revisión y reserva independiente](ie004/perfil-es-p2-1/ENCARGO_REVISION_Y_RESERVA_P3.md) listo para la autoría designada por Juan Antonio; reserva todavía no acreditada. P2 en revisión y P3 sin iniciar; aislamiento NO VERDE.
+
+## Recepción de Claude y corrección documental P2 · RETP-127
+
+[Acta de recepción](ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md): tres defectos aceptados, inversión de «no sólo» tratada como bloqueante y reparos delimitados. Los cuatro originales se conservan; sus resultados Python no califican Rust. [Perfil /2](ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md), [guía de recursos](ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md) y [revisión focal/reserva](ie004/perfil-es-p2-2/ENCARGO_REVISION_Y_RESERVA_P3.md). La reserva sigue detenida hasta suficiencia; sin otro corrector ejecutado, nueva ronda Grok o P5.

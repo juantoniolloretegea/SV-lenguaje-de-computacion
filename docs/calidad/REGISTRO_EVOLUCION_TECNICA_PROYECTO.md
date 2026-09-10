@@ -1215,3 +1215,16 @@ Inventario de los 48 casos de campañas originales con expectativas históricas 
 Encargo independiente preparado para revisar suficiencia y, si procede, custodiar una sola reserva inédita de hasta 24 casos antes de corregir. La reserva no ha sido creada ni su separación acreditada; Watson recibe sólo dictamen/compromiso antes del corrector. Se preserva independencia de autoría respecto de implementador/participante, sin confundirla con auditoría del mismo autor. No se envía automáticamente un mensaje a Claude ni se abre otra tarea de Grok.
 
 **Estado:** PERFIL_P2_CANDIDATO_ESPECIFICADO; REVISION_Y_RESERVA_PENDIENTES; P3_NO_INICIADO; AISLAMIENTO_NO_VERDE. Paquete espejado, índices/custodia y RETP CSV/Markdown actualizados. Núcleo, universo, oráculos y código histórico conservados; catálogo/localización y fila 9 mantienen su orden posterior.
+
+<a id="retp-127"></a>
+## RETP-2026-127 — Recepción de Claude, corrección P2 y presupuesto candidato
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje 584d5cc58ba12404548592ffc350d6829b12daac; laboratorio 6f02e5ca38a67082bdc55b6ed5647f3bbaf4e883. AGENTS y rectoras leídas/cotejadas, incluidas adendas de transición; Fase 004 y RETP-121/123–126 aplicables.
+
+[Acta de recepción](tuberias-ia/ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md). Se conservan los cuatro originales de Claude sin modificación. D1: negación de escriba omitida; D2: disyunción semántica y unicidad insuficientemente precisadas; D3: presupuesto del certificado sin reparto respecto del análisis confiable. Se aceptan documentalmente. R1 se eleva a bloqueante por invertir «no sólo»; los demás reparos se corrigen o delimitan en la sucesora IE004-ES-P2/2, de 25 producciones. La identidad de regla incorpora versión; /1 queda conservada.
+
+Los 48/48, 32 871 y máximos comunicados por Claude son resultados declarados de su traducción sintáctica, no reejecutados aquí y sin equivalencia con validación Rust. El inventario estático encuentra 60 entradas en p2_probes.py frente a 61 anunciadas. Sus scripts y cachés no proporcionan medidas de memoria, overflow, aislamiento o latencia del núcleo. Los 16 contrastes nuevos son públicos y documentales; quedan expuestos, sin reserva ni ejecución.
+
+Cuenta A para resolución completa, V para propuesta opcional, con trabajo y almacenamiento separados; el certificado no espera ni veta el servicio. Guía candidata: CI 20 minutos por trabajo/destino y envolvente interactiva media ≤2 s/p95 ≤5 s/plazo 10 s, con receptor/proveedor desglosados. No son mediciones ni una selección de plataforma; imposición material P4 y caracterización P5 pendientes. La utilidad del agente no está acreditada por ejecutar A sin él.
+
+**Estado:** /1 con defecto; /2 corregida documentalmente y pendiente de suficiencia; RESERVA_DETENIDA; P3_NO_INICIADO; AISLAMIENTO_NO_VERDE. Una revisión focal, reserva sólo si apta y con custodia separada antes de corregir. No ciclo /3 ni ronda Grok automáticos; cero ejecuciones nuevas de scripts Python, parser, receptor o corrector. Núcleo, DSL/IR, binarios, datos, oráculos y capturas anteriores conservados. Paquete espejado e índices/custodia/RETP CSV y Markdown actualizados; orden de frentes sin cambios.
