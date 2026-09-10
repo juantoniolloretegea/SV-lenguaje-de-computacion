@@ -1,0 +1,42 @@
+{
+  "estado": "BRECHA_CONFIRMADA_EN_RECEPTOR_EXPERIMENTAL",
+  "causa": "Tipo, permiso y cita literal válidos no prueban identificación semántica correcta.",
+  "entrada": {
+    "pregunta": "No consulte IgG; consulte IgA.",
+    "contexto": {
+      "operacion": "LEER",
+      "objeto": "CASO-A",
+      "parametro": "IGG",
+      "momento": "ACTUAL",
+      "campo": "VALOR"
+    },
+    "ruta": {
+      "operacion": "LEER",
+      "objeto": "CASO-A",
+      "parametro": "IGG",
+      "momento": "ACTUAL",
+      "campo": "VALOR"
+    },
+    "apoyos": {
+      "operacion": "@contexto.operacion",
+      "objeto": "@contexto.objeto",
+      "parametro": "IgG",
+      "momento": "@contexto.momento",
+      "campo": "@contexto.campo"
+    },
+    "diagnostico": null
+  },
+  "observaciones": [
+    {
+      "destino": "nativo",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "esperado_por_peticion": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+    },
+    {
+      "destino": "wasi",
+      "salida": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n",
+      "esperado_por_peticion": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+    }
+  ],
+  "promocion_al_sv": false
+}

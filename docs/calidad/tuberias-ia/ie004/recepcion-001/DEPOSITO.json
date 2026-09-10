@@ -1,0 +1,24 @@
+{
+  "commit": "2c41d40c5bb6eb5a97049884637a9aa621a86b28",
+  "padre": [
+    "c5173ed8ade2570c5fbf201adc88eb01d2e0d874"
+  ],
+  "fecha_commit": "2026-09-10T16:43:25Z",
+  "archivos": [
+    {
+      "ruta": "laboratorio/tareas-grok/interpretacion-es/INFORME-001.md",
+      "blob": "7e62317ebdd7c6c4474bdc7ff3d40c3336ee123b",
+      "estado": "added",
+      "adiciones": 19,
+      "borrados": 0
+    },
+    {
+      "ruta": "laboratorio/tareas-grok/interpretacion-es/entrega-001.json",
+      "blob": "c7fcd9eff703be7b9b3360b02e789e4a29c31189",
+      "estado": "added",
+      "adiciones": 380,
+      "borrados": 0
+    }
+  ],
+  "lectura": "Se han recuperado los bytes UTF-8 completos y verificado la identidad Git de ambos blobs."
+}

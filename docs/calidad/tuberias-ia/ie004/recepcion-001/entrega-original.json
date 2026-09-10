@@ -1,0 +1,380 @@
+{
+  "version": "IE-004/1",
+  "modelo": "Grok 4.6",
+  "sesion": "sesion_unica_no_separable",
+  "configuracion": "NO_OBSERVABLE",
+  "respuestas": [
+    {
+      "id": "L01",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "L02",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este caso",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      }
+    },
+    {
+      "id": "L03",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este caso",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L04",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "ahora",
+        "campo": "el dato"
+      }
+    },
+    {
+      "id": "L05",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este caso",
+        "parametro": "IgG",
+        "momento": "valor anterior",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L06",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "El valor previo",
+        "campo": "El valor"
+      }
+    },
+    {
+      "id": "L07",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "El anterior, no el actual",
+        "campo": "@contexto.campo"
+      }
+    },
+    {
+      "id": "L08",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este caso",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      }
+    },
+    {
+      "id": "L09",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este caso",
+        "parametro": "la IgA",
+        "momento": "actual",
+        "campo": "@contexto.campo"
+      }
+    },
+    {
+      "id": "L10",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "La IgA, no la IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L11",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "en qué unidad"
+      }
+    },
+    {
+      "id": "L12",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "estado registrado"
+      }
+    },
+    {
+      "id": "L13",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgA",
+        "momento": "actual",
+        "campo": "estado registrado"
+      }
+    },
+    {
+      "id": "L14",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Consulte",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgM",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L15",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-B",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Consulte",
+        "objeto": "CASO-B",
+        "parametro": "IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L16",
+      "ruta": {
+        "operacion": "ESCRIBIR",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Escriba",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "L17",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "apoyos": {}
+    },
+    {
+      "id": "L18",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "L19",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "L20",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "Qué valor"
+      }
+    },
+    {
+      "id": "L21",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "Qué valor"
+      }
+    },
+    {
+      "id": "L22",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "apoyos": {}
+    },
+    {
+      "id": "L23",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "ahora",
+        "campo": "el dato"
+      }
+    },
+    {
+      "id": "L24",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "anterior",
+        "campo": "estado registrado"
+      }
+    }
+  ]
+}

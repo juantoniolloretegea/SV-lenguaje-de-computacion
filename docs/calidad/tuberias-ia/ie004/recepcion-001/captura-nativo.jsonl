@@ -1,0 +1,24 @@
+{"estado":"CONTEXTO_INSUFICIENTE","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"7.10","objeto":"CASO-A","parametro":"IGG","momento":"ANTERIOR","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"7.10","objeto":"CASO-A","parametro":"IGG","momento":"ANTERIOR","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"7.10","objeto":"CASO-A","parametro":"IGG","momento":"ANTERIOR","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"1.25","objeto":"CASO-A","parametro":"IGA","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"1.25","objeto":"CASO-A","parametro":"IGA","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"APOYO_INVALIDO","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"1","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"ESTADO","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"U","objeto":"CASO-A","parametro":"IGA","momento":"ACTUAL","campo":"ESTADO","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"ACCESO_DENEGADO","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"ACCESO_DENEGADO","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"OPERACION_DENEGADA","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"FUERA_DE_COBERTURA","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"CONTEXTO_INSUFICIENTE","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"CONTEXTO_INSUFICIENTE","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"PERMISO_REVOCADO","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"FUERA_DE_COBERTURA","contenido":null,"base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"8.40","objeto":"CASO-A","parametro":"IGG","momento":"ACTUAL","campo":"VALOR","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}
+{"estado":"DATO_EXPERIMENTAL","contenido":"0","objeto":"CASO-A","parametro":"IGG","momento":"ANTERIOR","campo":"ESTADO","fuente":"FICCION-IE004/1","alcance":"Registro artificial; no acredita concentración ni condición clínica.","base":"K-IE004/1","politica":"P-IE004/1"}

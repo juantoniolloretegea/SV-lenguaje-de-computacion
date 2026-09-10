@@ -1132,3 +1132,16 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Hallazgo:** tipo, permiso y cita literal válidos permiten seleccionar IGG cuando la pregunta dice IgA. El receptor lo admite y el observador lo discrimina. Esta brecha bloquea promoción al SV incluso con acierto completo de Grok. Detección externa no se confunde con prevención interna.
 
 **Estado:** PUESTO_DISPONIBLE; CAPTURA_GROK_PENDIENTE; BRECHA_SEMANTICA_CONFIRMADA; AISLAMIENTO_NO_VERDE. No se fabrica Frame ni se ejecuta Q0/R1; I01–I05 y permisos efectivos del participante pendientes. Claude participa ya en la revisión metodológica, sin reproducción técnica atribuida. Qwen sigue candidato; catálogo/localización y fila9 conservan pausa; PR89/RETP111–114 sin alterar.
+
+<a id="retp-120"></a>
+## RETP-2026-120 — Recepción IE-004/001 y confirmación final acotada
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje d3d80d33b9b3f58d6bfc362e6c92bc5ff57f1ab2; laboratorio y depósito Grok 2c41d40c5bb6eb5a97049884637a9aa621a86b28. Rectoras cotejadas contra lectura íntegra previa; AGENTS y Fase004 revisados.
+
+[Acta y evidencia espejada](tuberias-ia/ACTA_RECEPCION_IE004_001_Y_CONFIRMACION_2026_09_10.md). Se conserva el depósito exacto y se abre el oráculo001 comprometido. Grok declara sesión reutilizada; no se acredita independencia contextual. Recepción local con fuente y binarios inmutables del puesto 34501044665/1: 23/24 identificaciones,22/24 respuestas correctas,14/16 consultas legítimas con dato. L01 rechaza contexto suficiente según contrato; L11 cambia mayúscula de cita y obtiene APOYO_INVALIDO pese a ruta correcta.
+
+Paridad por bytes y tres reproducciones por destino;40 procesos con controles. Un contraste bruto entre dato y error no cuenta como acierto:4/5 contrastes funcionales. Medianas del lote de24 con arranque: nativo2.100948ms,WASI52.347944ms;CPU/RSS e inferencia Grok no observables. No comparación con ES27.
+
+**Continuación:** última confirmación de24 casos(8 repetidos,16 nuevos), fijada antes de cualquier corrección, en conversación nueva. Receptor sin cambios; reserva002 fuera del acceso del participante, compromiso público. No tercera ronda automática.
+
+**Estado:** FALLOS_EN_LOTE; BRECHA_SEMANTICA_CONFIRMADA; AISLAMIENTO_NO_VERDE. Dominio/universo/agente diferenciados; recorrido completo DSL/núcleo/aislamiento material sigue pendiente. Sin promoción al SV, reapertura de fila9 o catálogo/localización ni selección de Qwen. Clausura humana no declarada.

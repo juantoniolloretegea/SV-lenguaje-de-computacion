@@ -1,0 +1,327 @@
+{
+  "version": "IE-004/1",
+  "autor_expectativas": "Watson; oráculo previo del diseñador, no validación humana ni auditoría externa",
+  "sal": "80a1d4911697017ab8976a2201ea91c784c454fa8416277dbb639189162d793e",
+  "packet_sha256": "be76b479c7a6dd0a3c5ed9cb98641d75ad73d10b83903cd87d81a271b9973e9b",
+  "expectativas": [
+    {
+      "id": "L01",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L02",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L03",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L04",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L05",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L06",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L07",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L08",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L09",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L10",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L11",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L12",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L13",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L14",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L15",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-B",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L16",
+      "ruta": {
+        "operacion": "ESCRIBIR",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L17",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "permiso_vigente": true
+    },
+    {
+      "id": "L18",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "permiso_vigente": true
+    },
+    {
+      "id": "L19",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "permiso_vigente": true
+    },
+    {
+      "id": "L20",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L21",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": false
+    },
+    {
+      "id": "L22",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "permiso_vigente": true
+    },
+    {
+      "id": "L23",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "L24",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    }
+  ],
+  "clases": {
+    "parafrasis": [
+      [
+        "L01",
+        "L02",
+        "L03",
+        "L04",
+        "L08",
+        "L23"
+      ],
+      [
+        "L05",
+        "L06",
+        "L07"
+      ],
+      [
+        "L09",
+        "L10"
+      ]
+    ],
+    "contrastes": [
+      [
+        "L04",
+        "L05"
+      ],
+      [
+        "L04",
+        "L09"
+      ],
+      [
+        "L04",
+        "L11"
+      ],
+      [
+        "L04",
+        "L12"
+      ],
+      [
+        "L12",
+        "L24"
+      ]
+    ],
+    "repeticion_literal": [
+      [
+        "L04",
+        "L23"
+      ]
+    ],
+    "nota_externa": [
+      [
+        "L20",
+        "L04"
+      ]
+    ]
+  }
+}

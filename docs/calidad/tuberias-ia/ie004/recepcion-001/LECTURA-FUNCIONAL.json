@@ -1,0 +1,123 @@
+{
+  "version": "IE-004/1",
+  "recepcion": "001",
+  "regla": "Conformidad relacional = relación observada Y todos sus miembros con identificación y cuerpo correctos.",
+  "no_modifica": "RECEPCION.json ni ejecutor original",
+  "casos": 24,
+  "identificacion_correcta": 23,
+  "conformes": 22,
+  "consultas_con_dato_esperado": 16,
+  "datos_correctos": 14,
+  "fallos": [
+    "L01",
+    "L11"
+  ],
+  "relaciones": {
+    "parafrasis": [
+      {
+        "ids": [
+          "L01",
+          "L02",
+          "L03",
+          "L04",
+          "L08",
+          "L23"
+        ],
+        "conforme": false,
+        "todos_los_miembros_correctos": false,
+        "conforme_funcional": false
+      },
+      {
+        "ids": [
+          "L05",
+          "L06",
+          "L07"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "L09",
+          "L10"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ],
+    "contrastes": [
+      {
+        "ids": [
+          "L04",
+          "L05"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "L04",
+          "L09"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "L04",
+          "L11"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": false,
+        "conforme_funcional": false
+      },
+      {
+        "ids": [
+          "L04",
+          "L12"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "L12",
+          "L24"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ],
+    "repeticion_literal": [
+      {
+        "ids": [
+          "L04",
+          "L23"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ],
+    "nota_externa": [
+      {
+        "ids": [
+          "L20",
+          "L04"
+        ],
+        "conforme": true,
+        "todos_los_miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ]
+  },
+  "brecha_receptor": "CONFIRMADA",
+  "aislamiento": "NO_VERDE",
+  "repetibilidad_entre_sesiones": "NO_ACREDITADA"
+}

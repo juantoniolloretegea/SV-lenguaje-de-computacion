@@ -1,0 +1,19 @@
+{
+  "naturaleza": "REPRODUCCION_LOCAL_DE_CAPTURA_NO_EJECUCION_DEL_MODELO",
+  "unidad": "milisegundos_por_lote_de_24_incluido_arranque",
+  "muestras": {
+    "nativo": [
+      2.100948,
+      1.87228,
+      2.179407
+    ],
+    "wasi": [
+      53.969419,
+      52.303269,
+      52.347944
+    ]
+  },
+  "cpu_rss": "NO_OBSERVABLES_GNU_TIME_AUSENTE",
+  "inferencia_grok": "NO_OBSERVABLE",
+  "comparacion_es27": "NO_REALIZADA_TRABAJO_Y_ENTORNO_DISTINTOS"
+}

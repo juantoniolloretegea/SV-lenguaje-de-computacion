@@ -1,0 +1,179 @@
+{
+  "version": "RECEPCION-IE004-001/1",
+  "cortes": {
+    "lab": "2c41d40c5bb6eb5a97049884637a9aa621a86b28",
+    "lang": "d3d80d33b9b3f58d6bfc362e6c92bc5ff57f1ab2",
+    "tree_lab": "b065a800a898fb948e0a0278e34b458b01d183d2",
+    "tree_lang": "2d4382b7d753a3a6f04c73755c5ee3e8ab65bc1e",
+    "archivos_rectores": [
+      {
+        "mode": "100644",
+        "path": "AGENTS.md",
+        "sha": "42221257270146fa94a25e8aca20a2c364c077b7",
+        "size": 4384,
+        "type": "blob",
+        "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/42221257270146fa94a25e8aca20a2c364c077b7"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+        "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+        "size": 29014,
+        "type": "blob",
+        "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+        "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+        "size": 22330,
+        "type": "blob",
+        "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+      },
+      {
+        "mode": "100644",
+        "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+        "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+        "size": 67111,
+        "type": "blob",
+        "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/44f8fda87856ab16007195cab324d40a758e506a"
+      }
+    ]
+  },
+  "archivos": [
+    {
+      "ruta": "ie004/recepcion-001/RECEPCION.json",
+      "bytes": 16743,
+      "sha256": "684f502a25a98fed7cfb4e9f333c68c621f9335a78eb461dc4f181ecf5f8168f",
+      "blob": "c3e6e7ad6e2b4d7686364882959ec92caae0b8a3"
+    },
+    {
+      "ruta": "ie004/recepcion-001/RESULTADO.json",
+      "bytes": 967,
+      "sha256": "9bbc1dc323728e7fe2f99af663cf110425c8dd29938df09bfdf3d123608472b2",
+      "blob": "4a042dbe5480796f493840fb1a419e2cdd6c99ff"
+    },
+    {
+      "ruta": "ie004/recepcion-001/LIMITE-SEMANTICO.json",
+      "bytes": 2256,
+      "sha256": "23b91985be47320bf5ac3791d4a33e0b75a4c66213b4890da62bf9bdfea8eb24",
+      "blob": "aef24cc20e3bedd0f86bb0952a40397a4b658df2"
+    },
+    {
+      "ruta": "ie004/recepcion-001/captura-nativo.jsonl",
+      "bytes": 4745,
+      "sha256": "0375239b700cc97767312f756163fddcc6d571aac9898867a8e82aea92b5a24f",
+      "blob": "9c37ca7d8b66a20f46deced2bd87693c4fb2af4e"
+    },
+    {
+      "ruta": "ie004/recepcion-001/captura-wasi.jsonl",
+      "bytes": 4745,
+      "sha256": "0375239b700cc97767312f756163fddcc6d571aac9898867a8e82aea92b5a24f",
+      "blob": "9c37ca7d8b66a20f46deced2bd87693c4fb2af4e"
+    },
+    {
+      "ruta": "ie004/recepcion-001/medidas.json",
+      "bytes": 16997,
+      "sha256": "542ef861a1305300aee91b67fafe2ce07c28cd18b0c2f0025a208433957c7149",
+      "blob": "55a5c8340aeaa062921a8e287c9580e0558a3895"
+    },
+    {
+      "ruta": "ie004/recepcion-001/oraculos-control.json",
+      "bytes": 16808,
+      "sha256": "7e4e6a4f6a5254a80cc64364ce94c83247b104045adf7e13828d349229b0932b",
+      "blob": "0c21ca108f658c87bc72808c80ed5e34f593e842"
+    },
+    {
+      "ruta": "ie004/recepcion-001/entrega-original.json",
+      "bytes": 8818,
+      "sha256": "f38e445b43865f1030c161b4f6c2c86ba07b5b4b73fab37d4669910b94932cec",
+      "blob": "c7fcd9eff703be7b9b3360b02e789e4a29c31189"
+    },
+    {
+      "ruta": "ie004/recepcion-001/solicitudes-originales.json",
+      "bytes": 7080,
+      "sha256": "be76b479c7a6dd0a3c5ed9cb98641d75ad73d10b83903cd87d81a271b9973e9b",
+      "blob": "fae06fae4f8980412d0616d38bfad15aa9575904"
+    },
+    {
+      "ruta": "ie004/recepcion-001/ORACULO-ABIERTO.json",
+      "bytes": 6577,
+      "sha256": "7bb825ad18d22984ded1b2d6f133fe93db286036080849d80ec44da2eb8ee581",
+      "blob": "85f6d993eddaef66a80034818f116c9629ff19e7"
+    },
+    {
+      "ruta": "ie004/recepcion-001/INFORME-001.md",
+      "bytes": 1549,
+      "sha256": "5f46083c6981f4c7e52b5c08c7b5eee9a612975fdd650e8c879dd678580b9338",
+      "blob": "7e62317ebdd7c6c4474bdc7ff3d40c3336ee123b"
+    },
+    {
+      "ruta": "ie004/recepcion-001/LECTURA-FUNCIONAL.json",
+      "bytes": 2586,
+      "sha256": "0fd8cef5d64c381eb26b7a794efa1c4b0af303d9f35d7e1990ac83c6e6a3cf36",
+      "blob": "2699afd755485bb527178f86df2f54bc118c4b7e"
+    },
+    {
+      "ruta": "ie004/recepcion-001/MEDICION.json",
+      "bytes": 449,
+      "sha256": "3fa23fcde1fdc2b8c757d82defa35f3b9245ca2db01076b63200921ea8371056",
+      "blob": "1f97b39f3caf29cac8c469bdabefb94230b95a92"
+    },
+    {
+      "ruta": "ie004/recepcion-001/DEPOSITO.json",
+      "bytes": 721,
+      "sha256": "e605ed482da976993228bd316a193177bc437e2db2739c7aa631679b428020a6",
+      "blob": "b3c9fab432efe213c50fa51435885e12d8cecb94"
+    },
+    {
+      "ruta": "ie004/recepcion-001/PROCEDENCIA.json",
+      "bytes": 1813,
+      "sha256": "c860f7d11688fe1429fbdacc01ac0d603d9e3153e86b0602762f1c728b0b9e29",
+      "blob": "076ffb31c469d8737e66ac46b7cb1c5986345e29"
+    },
+    {
+      "ruta": "ie004/recepcion-001/REPRODUCIR.md",
+      "bytes": 2093,
+      "sha256": "7e94e95f1843b934b989c610129ced0328272f610bffdf4b0dd3b765cc9c4542",
+      "blob": "bc3f48b0a49194d3f5f5a7d2a84c31d8d2c8cd18"
+    },
+    {
+      "ruta": "ACTA_RECEPCION_IE004_001_Y_CONFIRMACION_2026_09_10.md",
+      "bytes": 12196,
+      "sha256": "a5cdb27c88de784db31ec937d189e5edb04fde1278b027a5a4a9a935aa9617f5",
+      "blob": "99431940d6ad62761625d76a219de021a554fef9"
+    },
+    {
+      "ruta": "COMPROMISO-002.json",
+      "bytes": 444,
+      "sha256": "fcdb196892796078fb1b52cd4eac8c2674b8eac349a7ccc8e4792b6bc044557c",
+      "blob": "592fc6a9b725bfb2278657b9a6285feb8d45b6e1"
+    },
+    {
+      "ruta": "ie004/participante/ENCARGO-002.md",
+      "bytes": 4585,
+      "sha256": "58c3a3cc3fc5d05e028af6576572d5c7583c2835c4f113cbbfa49f1075231339",
+      "blob": "08df3f494de9129a82e054d1f55491a27c2cb80b"
+    },
+    {
+      "ruta": "ie004/participante/solicitudes-002.json",
+      "bytes": 7243,
+      "sha256": "de3d5093a8439ea6604d5c54f24add468e65389bd5beae6ce59a6d406d1343a8",
+      "blob": "02621b6dead09218feaab0d4e4a96160a9381859"
+    },
+    {
+      "ruta": "ie004/participante/formato-002.json",
+      "bytes": 181,
+      "sha256": "90bd6d264b55b82718e8ac42e22ef62d1d56676aa08fbc4f63671b41a85acaa8",
+      "blob": "ddd7c70bd0b6ca2c45fec1bab3fe9b1a8983c2ae"
+    },
+    {
+      "ruta": "inicio.md",
+      "bytes": 2412,
+      "sha256": "28fefa885465fa94d7d91fb8af34a665a3103cb1552a2feb71f0ad1f82bc093a",
+      "blob": "99e13ef54ecebd8253ce8022b39f417805c309d4"
+    }
+  ],
+  "exclusiones": "Este manifiesto no se incluye a sí mismo. El oráculo 002 y su sal permanecen reservados. Las identidades de los registros CSV/MD se verifican aparte.",
+  "custodia_oraculo_001": "Coincide con compromiso anterior y se publica sin reserializar."
+}

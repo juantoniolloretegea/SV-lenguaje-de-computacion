@@ -23,3 +23,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Encargo vigente · IE-004
 
 [Protocolo y puesto comprobado](ACTA_APERTURA_IE004_Y_PUESTO_2026_09_10.md): interpretación estructurada de 24 consultas por Grok y confirmación independiente acotada. Sustituye como encargo activo a ES27/003. El receptor nativo/WASI está comprobado; su brecha de ligadura semántica está confirmada y bloquea promoción. Captura de Grok pendiente; aislamiento NO VERDE. Claude ya aporta revisión metodológica; reproducción técnica pendiente.
+
+## Primera captura IE-004 y última confirmación prevista
+
+[Recepción 001 y confirmación final](ACTA_RECEPCION_IE004_001_Y_CONFIRMACION_2026_09_10.md): 23/24 identificaciones, 22/24 respuestas correctas; dos consultas legítimas no servidas. Paridad nativo/WASI sobre la captura, sesión de Grok reutilizada. Brecha semántica confirmada; aislamiento NO VERDE. El oráculo 001 queda abierto. Encargo activo: interpretacion-es/ENCARGO-002.md, 24 casos en conversación nueva; no hay tercera tanda automática.
