@@ -1,0 +1,534 @@
+[
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"8.40\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"7.10\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1.25\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"0\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ANTERIOR\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"U\",\"objeto\":\"CASO-A\",\"parametro\":\"IGA\",\"momento\":\"ACTUAL\",\"campo\":\"ESTADO\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"unidad-simulada\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"UNIDAD\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "FUENTE"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "FUENTE"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"FICCION-IE004/1\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"FUENTE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ALCANCE"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ALCANCE"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"DATO_EXPERIMENTAL\",\"contenido\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"ALCANCE\",\"fuente\":\"FICCION-IE004/1\",\"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"ACCESO_DENEGADO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-B",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-B",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"ACCESO_DENEGADO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "ESCRIBIR",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "ESCRIBIR",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"OPERACION_DENEGADA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": false
+    },
+    "esperado": "{\"estado\":\"PERMISO_REVOCADO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {},
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"CONTEXTO_INSUFICIENTE\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "apoyos": {},
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"FUERA_DE_COBERTURA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": null,
+      "diagnostico": "OPERACION_NO_ADMITIDA",
+      "apoyos": {},
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"OPERACION_NO_ADMITIDA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "OTRO",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "OTRO",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"REFERENCIA_INVALIDA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "no está en la pregunta",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"APOYO_INVALIDO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      },
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"APOYO_INVALIDO\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  },
+  {
+    "entrada": {
+      "pregunta": "Control de receptor",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "ruta": null,
+      "diagnostico": "U",
+      "apoyos": {},
+      "vigente": true
+    },
+    "esperado": "{\"estado\":\"PROPUESTA_INVALIDA\",\"contenido\":null,\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\"}\n"
+  }
+]

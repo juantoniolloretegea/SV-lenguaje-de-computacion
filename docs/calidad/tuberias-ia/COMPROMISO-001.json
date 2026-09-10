@@ -1,0 +1,9 @@
+{
+  "version": "IE-004/1",
+  "archivo": "ORACULO_IE004_001_RESERVADO.json",
+  "bytes": 6577,
+  "sha256": "7bb825ad18d22984ded1b2d6f133fe93db286036080849d80ec44da2eb8ee581",
+  "solicitudes_sha256": "be76b479c7a6dd0a3c5ed9cb98641d75ad73d10b83903cd87d81a271b9973e9b",
+  "casos": 24,
+  "apertura": "Tras congelar entrega-001 original; sal y oráculo se publicarán íntegros en Calidad. No forman parte del ejecutor ni de la información de Grok."
+}

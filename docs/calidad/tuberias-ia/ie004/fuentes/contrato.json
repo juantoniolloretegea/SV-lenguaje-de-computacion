@@ -1,0 +1,52 @@
+{
+  "version": "IE-004/1",
+  "claves": [
+    "operacion",
+    "objeto",
+    "parametro",
+    "momento",
+    "campo"
+  ],
+  "operaciones": [
+    "LEER",
+    "ESCRIBIR"
+  ],
+  "objetos": [
+    "CASO-A",
+    "CASO-B"
+  ],
+  "parametros": [
+    "IGG",
+    "IGA",
+    "IGM"
+  ],
+  "momentos": [
+    "ACTUAL",
+    "ANTERIOR"
+  ],
+  "campos": [
+    "VALOR",
+    "UNIDAD",
+    "ESTADO",
+    "FUENTE",
+    "ALCANCE"
+  ],
+  "diagnosticos": [
+    "CONTEXTO_INSUFICIENTE",
+    "FUERA_DE_COBERTURA",
+    "OPERACION_NO_ADMITIDA"
+  ],
+  "politica": {
+    "version": "P-IE004/1",
+    "operaciones": [
+      "LEER"
+    ],
+    "objetos": [
+      "CASO-A"
+    ],
+    "parametros": [
+      "IGG",
+      "IGA"
+    ]
+  }
+}

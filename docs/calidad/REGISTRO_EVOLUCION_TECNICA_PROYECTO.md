@@ -1119,3 +1119,16 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Rendimiento:** se conserva el lote de 26 consultas y las 42/44 medidas de ambos runs. WASI muestra mayor mediana en Actions. Comparación local adicional de ambos binarios en un mismo host: 160 medidas, veinte pares AB/BA por carga/destino; WASI +4,77 % en 26 consultas y +13,24 % en 1300 por cociente de medianas, con variabilidad amplia. Señal de penalización pendiente de caracterizar; no se declara rendimiento conservado ni se decide refactorización. Script y medidas en el expediente.
 
 **Estado:** CORRECCION_FUNCIONAL_ACOTADA_COMPROBADA; NUEVA_CAPTURA_PENDIENTE; RENDIMIENTO_WASI_PENDIENTE; AISLAMIENTO_NO_VERDE. No cierra NLP general, integridad adversarial, revocación o producción. PR #89/RETP-111–114, catálogo/localización y fila 9 conservan alcance y pausa. Claude aún no recibe auditoría; Qwen sigue candidato.
+
+<a id="retp-119"></a>
+## RETP-2026-119 — Campaña acotada IE-004 y brecha de ligadura semántica
+
+**Fecha:** 10/09/2026. **Mandato:** luz verde de Juan Antonio para probar identificación de peticiones equivalentes y subordinación con Grok, evitando rondas infinitas. Cortes de entrada: laboratorio 7410bbfc7abce96efc66af5a8ed8f60e50b3dbef; Lenguaje 60e9c1f9c8e3b5c3e0aea46b0d009251371a5682. Pilares, perfiles, transición completa, arquitectura y AGENTS conservan las identidades leídas; Fase003 y RETP115–118 revisados.
+
+**Sucesión:** [fase004 y acta](tuberias-ia/ACTA_APERTURA_IE004_Y_PUESTO_2026_09_10.md). ES27/003 deja de ser el encargo activo sin borrar evidencias ni modificar gramática. La nueva propuesta IA sólo afecta a un receptor experimental, fuera de la cadena soberana. Paquete previo de24 preguntas y oráculo salado comprometido; primera captura y una confirmación independiente acotadas.
+
+**Material:** fuente f8f0fa26da55663bbf24f944d121c05eef8070c9; ejecutor 3c4d4d54813c8335be9d4a504a2cc529de4e043d; run 34501044665/1. Veinte controles, diez ejecuciones por destino, seis tramas negativas por destino y34 procesos medidos; paridad por bytes. Dos ZIP recuperados; fuentes/workflows/binarios cotejados; resultados y muestras espejados. Portabilidad de instrumentación corregida tras ausencia local de GNU time; CPU/RSS no observables se declaran.
+
+**Hallazgo:** tipo, permiso y cita literal válidos permiten seleccionar IGG cuando la pregunta dice IgA. El receptor lo admite y el observador lo discrimina. Esta brecha bloquea promoción al SV incluso con acierto completo de Grok. Detección externa no se confunde con prevención interna.
+
+**Estado:** PUESTO_DISPONIBLE; CAPTURA_GROK_PENDIENTE; BRECHA_SEMANTICA_CONFIRMADA; AISLAMIENTO_NO_VERDE. No se fabrica Frame ni se ejecuta Q0/R1; I01–I05 y permisos efectivos del participante pendientes. Claude participa ya en la revisión metodológica, sin reproducción técnica atribuida. Qwen sigue candidato; catálogo/localización y fila9 conservan pausa; PR89/RETP111–114 sin alterar.

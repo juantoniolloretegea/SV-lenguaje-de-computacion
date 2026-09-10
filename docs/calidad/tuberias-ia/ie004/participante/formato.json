@@ -1,0 +1,26 @@
+{
+  "version": "IE-004/1",
+  "modelo": "identidad visible; no inventar versión",
+  "sesion": "identificador local de conversación",
+  "configuracion": "visible o NO_OBSERVABLE",
+  "respuestas": [
+    {
+      "id": "L01",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "@contexto.campo"
+      }
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "version": "IE-004/1",
+  "archivos": [
+    {
+      "archivo": "ACTA_APERTURA_IE004_Y_PUESTO_2026_09_10.md",
+      "bytes": 5358,
+      "sha256": "6d7fc37a2f8355ef4212dd05a014820e8f4f276dff9d039a6d614abc78df2688"
+    },
+    {
+      "archivo": "COMPROMISO-001.json",
+      "bytes": 446,
+      "sha256": "9c7e3486cc5bac0b4b236cbe925efd55f2b03df864f4253abc37814306d853c5"
+    },
+    {
+      "archivo": "FASE_004_INTERPRETACION_SUBORDINADA_ES.md",
+      "bytes": 11612,
+      "sha256": "b80c99dacdf7ac93dda73b1d86c5e5bb0990561676a6c4c9b337a55f01a577f5"
+    },
+    {
+      "archivo": "REPRODUCIR_IE004.md",
+      "bytes": 2705,
+      "sha256": "aae164b04c949ecfe784bee85f14b4351e521d6b971c51fd43e606f7dd82110e"
+    },
+    {
+      "archivo": "ie004/LIMITE-SEMANTICO.json",
+      "bytes": 2256,
+      "sha256": "23b91985be47320bf5ac3791d4a33e0b75a4c66213b4890da62bf9bdfea8eb24"
+    },
+    {
+      "archivo": "ie004/MEDICION.json",
+      "bytes": 350,
+      "sha256": "387e6dc2804becfb2326cecc46adb629c5e2017529c696b864cd87a110857a94"
+    },
+    {
+      "archivo": "ie004/RESULTADO.json",
+      "bytes": 973,
+      "sha256": "8855d93b8f01beb74bfcd63b0c601b2eab19f9d0df922febe25df7c3f2c085e0"
+    },
+    {
+      "archivo": "ie004/fuentes/base.json",
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4"
+    },
+    {
+      "archivo": "ie004/fuentes/contrato.json",
+      "bytes": 701,
+      "sha256": "ecee6cd306922c0a597d7d84d736d3817a7dd141905a33c0d1574d70a6a47bd0"
+    },
+    {
+      "archivo": "ie004/fuentes/ejecutar.mjs",
+      "bytes": 11144,
+      "sha256": "f2f02230e56ce9c71042531bb8d0d98897c72581e99db9a2e25cb3d9bad8737a"
+    },
+    {
+      "archivo": "ie004/fuentes/json-estricto.mjs",
+      "bytes": 3129,
+      "sha256": "1551ddc22094790aba52360fbc1368106766d6f4abb9619065d94109c70a7804"
+    },
+    {
+      "archivo": "ie004/fuentes/receptor.rs",
+      "bytes": 3927,
+      "sha256": "3054cff1199e8edceff92e754c51ce2a8ed1c40ed3a9f2a6c6e92f934cd29ef5"
+    },
+    {
+      "archivo": "ie004/fuentes/wasi.mjs",
+      "bytes": 387,
+      "sha256": "57efa45d15d9facdd1db4aaf1db7c9cd70394cb9c7a2b5fb220adabbd717ee69"
+    },
+    {
+      "archivo": "ie004/lanzador.yml",
+      "bytes": 2688,
+      "sha256": "8dd680196a66dcb0c7ef86636349911800b67e35785253d92680650a73662060"
+    },
+    {
+      "archivo": "ie004/medidas.json",
+      "bytes": 14474,
+      "sha256": "e769381822f75b7efc50342ed93d87e409e27c442e15d74c2e32412fb9584440"
+    },
+    {
+      "archivo": "ie004/oraculos-control.json",
+      "bytes": 16808,
+      "sha256": "7e4e6a4f6a5254a80cc64364ce94c83247b104045adf7e13828d349229b0932b"
+    },
+    {
+      "archivo": "ie004/participante/ENCARGO.md",
+      "bytes": 4367,
+      "sha256": "c27aa61cabb55b7e65dc236559de69fb6077d1065cc1c9d799429e321a4eb61e"
+    },
+    {
+      "archivo": "ie004/participante/formato.json",
+      "bytes": 653,
+      "sha256": "c47c47fa3ccb06a20c5d2a7d89bb3b45184995934247ccf84da74823e7f5e29d"
+    },
+    {
+      "archivo": "ie004/participante/solicitudes-001.json",
+      "bytes": 7080,
+      "sha256": "be76b479c7a6dd0a3c5ed9cb98641d75ad73d10b83903cd87d81a271b9973e9b"
+    },
+    {
+      "archivo": "ie004/previo/RESULTADO.json",
+      "bytes": 973,
+      "sha256": "fa2d5b7e755b78a39f01ab0701933c910430944b7d331b8a7640f7db701b6452"
+    },
+    {
+      "archivo": "ie004/previo/ejecutar.mjs",
+      "bytes": 10956,
+      "sha256": "0c94fd1df36a556ddfed1884a30cbc1145a883ac96883c898cc09662fd7100c6"
+    },
+    {
+      "archivo": "ie004/previo/lanzador.yml",
+      "bytes": 2688,
+      "sha256": "955b1d303d736b88d222d1a2228443cdfa82f6631d6f01b5cf61c09c746a31f5"
+    },
+    {
+      "archivo": "ie004/previo/medidas.json",
+      "bytes": 13419,
+      "sha256": "d84b01f823c9c1a2efb2ac279387a9aac192734071ffb7511378a1379cc6cb2b"
+    },
+    {
+      "archivo": "ie004/rust-version.txt",
+      "bytes": 196,
+      "sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d"
+    },
+    {
+      "archivo": "inicio.md",
+      "bytes": 1899,
+      "sha256": "e4b24929a9b6e1f6a73a0377b30384d53b9ced1cbf9ba2c88fb376a501985710"
+    }
+  ],
+  "excluye": "Este manifiesto; reserva no abierta; binarios temporales de Actions",
+  "fuente": "f8f0fa26da55663bbf24f944d121c05eef8070c9",
+  "ejecutor": "3c4d4d54813c8335be9d4a504a2cc529de4e043d",
+  "zip_sha256": "1d244782819fe62ca8db0e67787fef5fc2cc5375a2e90bb67a0ad1bc575903f3"
+}

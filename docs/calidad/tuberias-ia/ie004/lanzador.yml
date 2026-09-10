@@ -1,0 +1,59 @@
+name: IE004 - receptor nativo y WASM
+on:
+  push:
+    branches: [lab/playground-sv-permanente]
+    paths:
+      - '.github/workflows/interpretacion-es.yml'
+permissions:
+  contents: read
+concurrency:
+  group: ie004-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  comprobar:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Obtener fuente fijada
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: f8f0fa26da55663bbf24f944d121c05eef8070c9
+          path: fuente
+          persist-credentials: false
+          sparse-checkout: laboratorio/tareas-watson/interpretacion-es
+      - name: Obtener identidad del ejecutor
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          ref: ${{ github.sha }}
+          path: ejecutor
+          persist-credentials: false
+          sparse-checkout: .github/workflows/interpretacion-es.yml
+          sparse-checkout-cone-mode: false
+      - name: Compilar ambas realizaciones
+        shell: bash
+        run: |
+          set -euo pipefail
+          rustup toolchain install 1.98.0 --profile minimal --no-self-update
+          rustup target add wasm32-wasip1 --toolchain 1.98.0
+          mkdir -p "$RUNNER_TEMP/ie004/bin" "$RUNNER_TEMP/ie004/fuentes" "$RUNNER_TEMP/ie004/resultado"
+          cp fuente/laboratorio/tareas-watson/interpretacion-es/* "$RUNNER_TEMP/ie004/fuentes/"
+          cp ejecutor/.github/workflows/interpretacion-es.yml "$RUNNER_TEMP/ie004/lanzador.yml"
+          rustc +1.98.0 -vV > "$RUNNER_TEMP/ie004/bin/rust-version.txt"
+          rustc +1.98.0 --edition=2021 -O -C panic=abort --crate-name receptor_ie004 "$RUNNER_TEMP/ie004/fuentes/receptor.rs" -o "$RUNNER_TEMP/ie004/bin/receptor"
+          rustc +1.98.0 --edition=2021 -O -C panic=abort --target wasm32-wasip1 -C link-arg=--max-memory=67108864 --crate-name receptor_ie004 "$RUNNER_TEMP/ie004/fuentes/receptor.rs" -o "$RUNNER_TEMP/ie004/bin/receptor.wasm"
+      - name: Comprobar controles y conservar limites
+        env:
+          FUENTE_COMMIT: f8f0fa26da55663bbf24f944d121c05eef8070c9
+          EJECUTOR_COMMIT: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          node "$RUNNER_TEMP/ie004/fuentes/ejecutar.mjs" "$RUNNER_TEMP/ie004/bin" "$RUNNER_TEMP/ie004/resultado"
+      - name: Conservar resultados y ejecutables
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: interpretacion-es-${{ github.run_id }}-${{ github.run_attempt }}
+          path: ${{ runner.temp }}/ie004/
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,33 @@
+{
+  "estado": "RECEPTOR_COMPROBADO_BRECHA_SEMANTICA_CONFIRMADA",
+  "controles": 20,
+  "negativos_transporte": 6,
+  "repeticiones_por_control_y_destino": 10,
+  "paridad_bytes": true,
+  "frontera_operativa_sv": "NO_INTEGRADA",
+  "aislamiento_material": "NO_ACREDITADO",
+  "modelo_real_ejecutado_por_este_proceso": false,
+  "captura": false,
+  "fuente_commit": "df27cadf0de6baff521915a5773b866282cf38cc",
+  "ejecutor_commit": "1c2d96950fee55973e0e1cbf71b296d09c3c6ed7",
+  "run": "34500611593",
+  "entorno": {
+    "node": "v22.23.2",
+    "platform": "linux",
+    "arch": "x64",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "cpus": 2,
+    "memoria": 8323973120
+  },
+  "binarios": {
+    "receptor": {
+      "bytes": 4525816,
+      "sha256": "0a8f1b5438129acf48ff153787f9d7cbd7664b168d1f7cb149cdf9ca9b8fe372"
+    },
+    "receptor.wasm": {
+      "bytes": 2161612,
+      "sha256": "1ba8c81971b85808d1d8c71703f0d829da3c41a6f44176cceddea12878dce4e3"
+    }
+  },
+  "medidas": 34
+}

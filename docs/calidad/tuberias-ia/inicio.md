@@ -19,3 +19,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Segunda captura y corrección ES27/3
 
 [Recepción, corrección y rendimiento](ACTA_RECEPCION_GROK_ES27_002_Y_CORRECCION_2026_09_10.md): cuatro fallos nuevos corregidos; nueve consultas pertinentes con dato y tres rechazos. 110 controles conformes; señal de mayor latencia WASI pendiente. Encargo 003 preparado; aislamiento NO VERDE.
+
+## Encargo vigente · IE-004
+
+[Protocolo y puesto comprobado](ACTA_APERTURA_IE004_Y_PUESTO_2026_09_10.md): interpretación estructurada de 24 consultas por Grok y confirmación independiente acotada. Sustituye como encargo activo a ES27/003. El receptor nativo/WASI está comprobado; su brecha de ligadura semántica está confirmada y bloquea promoción. Captura de Grok pendiente; aislamiento NO VERDE. Claude ya aporta revisión metodológica; reproducción técnica pendiente.
