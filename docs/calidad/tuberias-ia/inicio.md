@@ -15,3 +15,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Recepción de Grok y corrección ES27/2
 
 [Resultado y siguiente encargo](ACTA_RECEPCION_GROK_ES27_Y_CORRECCION_2026_09_10.md): cinco fallos funcionales confirmados y corregidos; la misma entrega pasa de 4 a 9 consultas con dato. Se conservan tres rechazos y ambos resultados. Nueva comprobación de Grok pendiente; aislamiento global NO VERDE.
+
+## Segunda captura y corrección ES27/3
+
+[Recepción, corrección y rendimiento](ACTA_RECEPCION_GROK_ES27_002_Y_CORRECCION_2026_09_10.md): cuatro fallos nuevos corregidos; nueve consultas pertinentes con dato y tres rechazos. 110 controles conformes; señal de mayor latencia WASI pendiente. Encargo 003 preparado; aislamiento NO VERDE.

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "entrada_commit": "de47ea16ea80a8c46bd18ad75a1112e4788fd855",
+  "informe_commit": "921d7197818e94360ee2d6bcafa33574ae6a25db",
+  "fuente_corregida": "387e9d5a76a60b620dc3d4124a1a155adc07767e",
+  "run_original": 34489800105,
+  "run_corregido": 34491895499,
+  "alcance": "Mismos bytes en laboratorio y Calidad. Rutas relativas a tuberias-ia. Este manifiesto excluye su propio hash.",
+  "archivos": [
+    {
+      "path": "ACTA_RECEPCION_GROK_ES27_002_Y_CORRECCION_2026_09_10.md",
+      "bytes": 7381,
+      "sha256": "36f5840671e5e52d78b6e3da480fdc7c2b4fb57cb9e636366d4aa3f51795f2b1"
+    },
+    {
+      "path": "es27-grok-002/entrega-002.json",
+      "bytes": 1322,
+      "sha256": "2345442c8f4eee3fcfcdc7f49f0712722ef65d7ff6d1613e46877ca59856b37b"
+    },
+    {
+      "path": "es27-grok-002/INFORME-002.md",
+      "bytes": 3389,
+      "sha256": "2dd6ff381c24cdcdca065889faee94dc4aaa4dfc517da40710ced96b8c28e6d5"
+    },
+    {
+      "path": "es27-grok-002/checkpoint-comparado.json",
+      "bytes": 1692,
+      "sha256": "403f7b3a9e58a4d9a459e0111149bc1f05c3eeb0485103ae3c264924edcd10f8"
+    },
+    {
+      "path": "es27-grok-002/rendimiento-pareado.json",
+      "bytes": 54048,
+      "sha256": "65eb59be2ae835d7fa35b2646bf37090f1aaeb737cdc76ec9f2cab7ca7e34ca9"
+    },
+    {
+      "path": "es27-grok-002/comparar-rendimiento.mjs",
+      "bytes": 4338,
+      "sha256": "7570253361b542aeea81327b7c6640e8d50590e95ecd9a10bc0186f056601a2a"
+    },
+    {
+      "path": "es27-grok-002/original/RESULTADO.json",
+      "bytes": 19392,
+      "sha256": "7263fb915f4960d70deaf473f5ee72ef4b18fdb8102c8366f7c48174cae3dd6e"
+    },
+    {
+      "path": "es27-grok-002/original/entrega-002-resultado.json",
+      "bytes": 5423,
+      "sha256": "fb63322ca4d1b56501b70a773b5bb32e27e2f2f82b296a944489147698fa8895"
+    },
+    {
+      "path": "es27-grok-002/correccion/RESULTADO.json",
+      "bytes": 20248,
+      "sha256": "43d3ddc2ac52ea988eb204b90c2a4c9f735967dc56f1e5529d821e9b5fed1616"
+    },
+    {
+      "path": "es27-grok-002/correccion/entrega-001-resultado.json",
+      "bytes": 5758,
+      "sha256": "4593a25b7d109a6931f4bbd5e81c2e2ba5b2a0d29fef4b904ca5bec4a3a5399f"
+    },
+    {
+      "path": "es27-grok-002/correccion/entrega-002-resultado.json",
+      "bytes": 6160,
+      "sha256": "7f7e997dfcce029e901dc7e79098763862a96313087d824e32fbf09f173cc838"
+    },
+    {
+      "path": "es27-grok-002/correccion/oraculos.json",
+      "bytes": 34901,
+      "sha256": "a97e4318d9c7dc2166d8c244bf8068564967d760c9b1aba328360444f07f1a0a"
+    }
+  ]
+}

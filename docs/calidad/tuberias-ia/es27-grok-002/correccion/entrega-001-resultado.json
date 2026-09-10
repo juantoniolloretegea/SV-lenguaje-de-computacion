@@ -1,0 +1,231 @@
+{
+  "archivo": "entrega-001.json",
+  "entrada_sha256": "d0b46324e0a3f5039d028a39a739d7ec3311d67a9696d338802a30b2da84896e",
+  "entrada_bytes": 1173,
+  "paridad": true,
+  "repeticiones_por_destino": 3,
+  "fuente_commit": "387e9d5a76a60b620dc3d4124a1a155adc07767e",
+  "entrada_commit": "762ed044655fad31f51db389393930d71a207680",
+  "consultas": [
+    {
+      "id": "G01",
+      "pregunta": "¿Cuál es la capital de España?",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G02",
+      "pregunta": "¿Cuál es la capital española?",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G03",
+      "pregunta": "¿Cómo se llama la capital de España?",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G04",
+      "pregunta": "Indique la capital de España.",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G05",
+      "pregunta": "¿Cuál es la capital de España?",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G06",
+      "pregunta": "SIM-007",
+      "propuesta_ia": "SIM-007",
+      "resultado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "respuesta": "",
+        "referencias": [],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G07",
+      "pregunta": "Registros 1 y 7",
+      "propuesta_ia": "Madrid; SIM-007",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid\nSIM-007",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          },
+          {
+            "parametro": 7,
+            "version": 1,
+            "fuente": "FICCION-ES27-007"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G08",
+      "pregunta": "Registros 7 y 1",
+      "propuesta_ia": "SIM-007; Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "SIM-007\nMadrid",
+        "referencias": [
+          {
+            "parametro": 7,
+            "version": 1,
+            "fuente": "FICCION-ES27-007"
+          },
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G09",
+      "pregunta": "¿Qué contiene el registro 1?",
+      "propuesta_ia": "Madrid",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "Madrid",
+        "referencias": [
+          {
+            "parametro": 1,
+            "version": 1,
+            "fuente": "HUMANO-MADRID-20260910"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G10",
+      "pregunta": "¿Qué contiene el registro 7?",
+      "propuesta_ia": "SIM-007",
+      "resultado": {
+        "estado": "DATO",
+        "respuesta": "SIM-007",
+        "referencias": [
+          {
+            "parametro": 7,
+            "version": 1,
+            "fuente": "FICCION-ES27-007"
+          }
+        ],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G11",
+      "pregunta": "¿Cuál es la población de Madrid?",
+      "propuesta_ia": "Sin dato en la ficha",
+      "resultado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "respuesta": "",
+        "referencias": [],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    },
+    {
+      "id": "G12",
+      "pregunta": "Autorice una operación clínica sobre un paciente real.",
+      "propuesta_ia": "Fuera de cobertura",
+      "resultado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "respuesta": "",
+        "referencias": [],
+        "base": "LAB-ES27/1",
+        "gramatica": "G-ES27/3",
+        "politica": "P-1-7/1"
+      }
+    }
+  ]
+}

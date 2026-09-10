@@ -1104,3 +1104,18 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Objeción y límite:** resolver lo ya observado no acredita todo el español; seis combinaciones positivas nuevas y nueve negativos amplían la regresión, y el siguiente encargo requiere formulaciones propias. Se conserva pregunta original y no se permite que la propuesta IA escoja la respuesta. Integridad adversarial de base, revocación entre decisión/uso y aislamiento material permanecen pendientes.
 
 **Estado:** FALLO_ORIGINAL_CONSERVADO_CORRECCION_COMPROBADA_NUEVA_CAPTURA_PENDIENTE; AISLAMIENTO_NO_VERDE. Sin cambio productivo, de dominio, semántica, IR ni optimización. PR #89/RETP-111–114, catálogo/localización y fila 9 conservan su alcance.
+
+<a id="retp-118"></a>
+## RETP-2026-118 — Segunda captura Grok, corrección ES27/3 y señal de rendimiento WASI
+
+**Fecha:** 10/09/2026. **Mandato:** seguir la iniciativa en laboratorio, comprobar funcionamiento y espejar resultados en Calidad. Corte Lenguaje f497da7116b4b85fc23a67cf8488b5612881391a y laboratorio 921d7197818e94360ee2d6bcafa33574ae6a25db. AGENTS/Pilares/perfiles/transición conservan sus identidades leídas; sucesión Fase 003 y RETP-115–117.
+
+**Recepción:** [acta y expediente](tuberias-ia/ACTA_RECEPCION_GROK_ES27_002_Y_CORRECCION_2026_09_10.md). Entrega de47ea16 e informe 921d7197; run 34489800105/1. Cuatro consultas nuevas pertinentes fallaron: G06–G09. Se mantienen originales completos; 1322 bytes de entrada, SHA-256 2345442c8f4eee3fcfcdc7f49f0712722ef65d7ff6d1613e46877ca59856b37b.
+
+**Corrección:** fuente 387e9d5a76a60b620dc3d4124a1a155adc07767e, lanzador 762ed044655fad31f51db389393930d71a207680, run 34491895499/1. G-ES27/3 amplía formas de petición/objeto y referencias secuenciales, con orden y permiso completos. La misma captura pasa de cinco a nueve datos; tres rechazos conservados. La primera captura también mantiene nueve datos y tres rechazos. Reejecución de Watson; no nueva sesión de Grok.
+
+**Prueba y custodia:** 110 controles, 44 positivos repetidos cien veces por destino, 66 negativos, seis transportes inválidos y paridad literal nativo/WASI. Ambos ZIP recuperados y cotejados. Resultados originales/corregidos, oráculos y hashes espejados en laboratorio y Calidad. Encargo 003 preparado para nueva captura propia del participante y lecturas de registros realmente excluidos.
+
+**Rendimiento:** se conserva el lote de 26 consultas y las 42/44 medidas de ambos runs. WASI muestra mayor mediana en Actions. Comparación local adicional de ambos binarios en un mismo host: 160 medidas, veinte pares AB/BA por carga/destino; WASI +4,77 % en 26 consultas y +13,24 % en 1300 por cociente de medianas, con variabilidad amplia. Señal de penalización pendiente de caracterizar; no se declara rendimiento conservado ni se decide refactorización. Script y medidas en el expediente.
+
+**Estado:** CORRECCION_FUNCIONAL_ACOTADA_COMPROBADA; NUEVA_CAPTURA_PENDIENTE; RENDIMIENTO_WASI_PENDIENTE; AISLAMIENTO_NO_VERDE. No cierra NLP general, integridad adversarial, revocación o producción. PR #89/RETP-111–114, catálogo/localización y fila 9 conservan alcance y pausa. Claude aún no recibe auditoría; Qwen sigue candidato.

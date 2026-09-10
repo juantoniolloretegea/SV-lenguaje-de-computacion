@@ -1,0 +1,54 @@
+{
+  "original": {
+    "entorno": {
+      "node": "v22.23.2",
+      "plataforma": "linux",
+      "arquitectura": "x64",
+      "cpu": "AMD EPYC 7763 64-Core Processor",
+      "cpus": 2,
+      "memoria_total": 8323973120,
+      "rust": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n"
+    },
+    "muestras": 42,
+    "nativo": {
+      "entrada_sha256": [
+        "f458deb884d27ad2dd817208a20a9c9ba9778629a8a454ed616e42f1585ea19f"
+      ],
+      "mediana_ns": 3678773,
+      "max_rss_kib": 2188
+    },
+    "wasi": {
+      "entrada_sha256": [
+        "f458deb884d27ad2dd817208a20a9c9ba9778629a8a454ed616e42f1585ea19f"
+      ],
+      "mediana_ns": 49300772,
+      "max_rss_kib": 53328
+    }
+  },
+  "corregido": {
+    "entorno": {
+      "node": "v22.23.2",
+      "plataforma": "linux",
+      "arquitectura": "x64",
+      "cpu": "AMD EPYC 7763 64-Core Processor",
+      "cpus": 2,
+      "memoria_total": 8328298496,
+      "rust": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n"
+    },
+    "muestras": 44,
+    "nativo": {
+      "entrada_sha256": [
+        "f458deb884d27ad2dd817208a20a9c9ba9778629a8a454ed616e42f1585ea19f"
+      ],
+      "mediana_ns": 3668573,
+      "max_rss_kib": 2164
+    },
+    "wasi": {
+      "entrada_sha256": [
+        "f458deb884d27ad2dd817208a20a9c9ba9778629a8a454ed616e42f1585ea19f"
+      ],
+      "mediana_ns": 54403050,
+      "max_rss_kib": 53292
+    }
+  }
+}
