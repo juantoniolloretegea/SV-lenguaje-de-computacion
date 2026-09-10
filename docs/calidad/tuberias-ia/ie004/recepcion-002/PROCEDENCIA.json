@@ -1,0 +1,61 @@
+{
+  "source_commit": "f8f0fa26da55663bbf24f944d121c05eef8070c9",
+  "instrumentacion_commit": "3c4d4d54813c8335be9d4a504a2cc529de4e043d",
+  "artefacto_origen_run": "34501044665/1",
+  "artefacto_id": 10161854780,
+  "artefacto_sha256": "1d244782819fe62ca8db0e67787fef5fc2cc5375a2e90bb67a0ad1bc575903f3",
+  "recepcion_run": "LOCAL",
+  "fuentes": {
+    "base.json": {
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4",
+      "blob": "c3282b7b9f833f6d5483e67fae9032f6a82ad704"
+    },
+    "contrato.json": {
+      "bytes": 701,
+      "sha256": "ecee6cd306922c0a597d7d84d736d3817a7dd141905a33c0d1574d70a6a47bd0",
+      "blob": "edc123ba1f58cc5b1df4921d8fa85808a560281e"
+    },
+    "ejecutar.mjs": {
+      "bytes": 11144,
+      "sha256": "f2f02230e56ce9c71042531bb8d0d98897c72581e99db9a2e25cb3d9bad8737a",
+      "blob": "0e700f1bd357b3ddc80ffdcf74bb053ca20c9e0e"
+    },
+    "json-estricto.mjs": {
+      "bytes": 3129,
+      "sha256": "1551ddc22094790aba52360fbc1368106766d6f4abb9619065d94109c70a7804",
+      "blob": "747648bd0b079753dbf28f464e973eed11d17511"
+    },
+    "receptor.rs": {
+      "bytes": 3927,
+      "sha256": "3054cff1199e8edceff92e754c51ce2a8ed1c40ed3a9f2a6c6e92f934cd29ef5",
+      "blob": "a391d4abf21b09af0e22a72dd8e60a398d977de9"
+    },
+    "wasi.mjs": {
+      "bytes": 387,
+      "sha256": "57efa45d15d9facdd1db4aaf1db7c9cd70394cb9c7a2b5fb220adabbd717ee69",
+      "blob": "5794abcc2e6f1e7350e1fee1ce694accbc7d60c3"
+    }
+  },
+  "receptor_modificado": false,
+  "binarios": {
+    "receptor": {
+      "bytes": 4525816,
+      "sha256": "0a8f1b5438129acf48ff153787f9d7cbd7664b168d1f7cb149cdf9ca9b8fe372"
+    },
+    "receptor.wasm": {
+      "bytes": 2161612,
+      "sha256": "1ba8c81971b85808d1d8c71703f0d829da3c41a6f44176cceddea12878dce4e3"
+    }
+  },
+  "recepcion": "IE-004/002",
+  "compilacion_local": false,
+  "estado": "FUENTE_EJECUTOR_Y_BINARIOS_ORIGINALES_SIN_CAMBIOS",
+  "compromiso_previo": "a4db8d622d02766689def38816e18d85c94a7bb3",
+  "deposito": "927f24d57701dda579ff822da7a7fdaf1eeed69e",
+  "derivacion_comparativa": {
+    "archivo": "analizar-recepcion.mjs",
+    "objeto": "Cotejo de criterios relacionales y de ocho repetidos congelados; no modifica receptor ni hace nuevas consultas al modelo.",
+    "sha256": "45bda2357212bdd4b9a22632759ad224a3ad163e31656fab7dfac1f1dc0200cf"
+  }
+}

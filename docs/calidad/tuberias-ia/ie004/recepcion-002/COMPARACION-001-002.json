@@ -1,0 +1,259 @@
+{
+  "criterio": "Comparar ruta, diagnóstico y cuerpo para los ocho repetidos; apoyos pueden citar fragmentos distintos y deben ser válidos. Una igualdad de dos errores no acredita utilidad. Independencia contextual sólo si existe sesión nueva, según evidencia disponible.",
+  "alcance": "Ocho entradas repetidas, no equivalencia del corpus completo ni aislamiento contextual demostrado.",
+  "sesion_001": "sesion_unica_no_separable",
+  "sesion_002": "conversación nueva iniciada para ENCARGO-002; identificador interno de conversación no visible",
+  "independencia_contextual": "NO_ACREDITADA: nueva conversación declarada, memoria de proyecto visible y relato del usuario sin traza íntegra de contexto.",
+  "resumen": {
+    "repetidos": 8,
+    "rutas_y_diagnosticos_iguales": 8,
+    "cuerpos_iguales": 7,
+    "correctos_en_ambas": 6,
+    "correctos_en_001": 6,
+    "correctos_en_002": 7
+  },
+  "casos": [
+    {
+      "anterior": "L01",
+      "confirmacion": "R01",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": false,
+      "correcto_en_002": false,
+      "conformidad_funcional_en_ambas": false,
+      "salida_001": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "contenido": null,
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "contenido": null,
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L04",
+      "confirmacion": "R02",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "8.40",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "8.40",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L05",
+      "confirmacion": "R03",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "7.10",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "7.10",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L10",
+      "confirmacion": "R04",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "1.25",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "1.25",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L11",
+      "confirmacion": "R05",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": false,
+      "correcto_en_001": false,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": false,
+      "salida_001": {
+        "estado": "APOYO_INVALIDO",
+        "contenido": null,
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "unidad-simulada",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L18",
+      "confirmacion": "R06",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "contenido": null,
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "contenido": null,
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L20",
+      "confirmacion": "R07",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "8.40",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "8.40",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    },
+    {
+      "anterior": "L24",
+      "confirmacion": "R08",
+      "pregunta_contexto_nota_identicos": true,
+      "ruta_y_diagnostico_iguales": true,
+      "cuerpo_igual": true,
+      "correcto_en_001": true,
+      "correcto_en_002": true,
+      "conformidad_funcional_en_ambas": true,
+      "salida_001": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "0",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      },
+      "salida_002": {
+        "estado": "DATO_EXPERIMENTAL",
+        "contenido": "0",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO",
+        "fuente": "FICCION-IE004/1",
+        "alcance": "Registro artificial; no acredita concentración ni condición clínica.",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1"
+      }
+    }
+  ]
+}

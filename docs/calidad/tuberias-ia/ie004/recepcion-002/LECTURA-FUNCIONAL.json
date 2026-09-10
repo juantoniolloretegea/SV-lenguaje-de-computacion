@@ -1,0 +1,105 @@
+{
+  "version": "IE-004/1",
+  "entrega": "002",
+  "criterio": "Una relación exige también identificación y respuesta correctas de todos sus miembros; una diferencia entre dato y error no es un contraste satisfactorio.",
+  "identificaciones_correctas": 23,
+  "respuestas_correctas": 23,
+  "total": 24,
+  "consultas_con_dato": {
+    "total": 18,
+    "correctas": 17
+  },
+  "diagnosticos_y_denegaciones": {
+    "total": 6,
+    "correctos": 6
+  },
+  "fallos": [
+    "R01"
+  ],
+  "relaciones": {
+    "parafrasis": [
+      {
+        "ids": [
+          "R01",
+          "R02",
+          "R09",
+          "R10",
+          "R15",
+          "R17"
+        ],
+        "relacion_bruta": false,
+        "miembros_correctos": false,
+        "conforme_funcional": false
+      },
+      {
+        "ids": [
+          "R03",
+          "R16"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ],
+    "contrastes": [
+      {
+        "ids": [
+          "R02",
+          "R03"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "R03",
+          "R11"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "R02",
+          "R05"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "R20",
+          "R08",
+          "R12"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      },
+      {
+        "ids": [
+          "R11",
+          "R19"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ],
+    "nota_externa": [
+      {
+        "ids": [
+          "R07",
+          "R02"
+        ],
+        "relacion_bruta": true,
+        "miembros_correctos": true,
+        "conforme_funcional": true
+      }
+    ]
+  },
+  "estado": "CANDIDATA_INSUFICIENTE_EN_CONFIRMACION_AISLAMIENTO_NO_VERDE"
+}

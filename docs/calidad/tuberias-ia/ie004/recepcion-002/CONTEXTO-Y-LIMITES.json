@@ -1,0 +1,11 @@
+{
+  "usuario": "Comunica intento en chat anterior y traslado de historial a otro; recibió indicación de comenzar una conversación nueva sólo con el encargo. No se dispone de la traza íntegra de la sesión que produjo el depósito.",
+  "participante": "Declara conversación nueva; contexto de proyecto e inventario de otros artefactos visibles; declara no consultarlos para las rutas; listado de nombres del directorio, sin lectura del contenido anterior.",
+  "identificador_sesion": "NO_OBSERVABLE",
+  "configuracion_modelo": "NO_OBSERVABLE",
+  "independencia_contextual": "NO_ACREDITADA",
+  "ceguera_absoluta_de_acceso": "NO_ACREDITADA",
+  "uso_de_memoria_previa": "NO_DETERMINADO; la declaración de no consultarla no prueba su ausencia ni su influencia.",
+  "alcance": "Recepción del depósito y comparación de ocho entradas repetidas; no certificación de independencia entre sesiones ni repetibilidad universal del modelo.",
+  "limite_rondas": "Segunda y última entrega prevista; sin nueva tanda para reparar retrospectivamente la independencia."
+}

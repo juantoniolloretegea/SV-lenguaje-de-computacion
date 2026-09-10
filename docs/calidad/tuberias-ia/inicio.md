@@ -31,3 +31,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Encaje de idiomas y separación entre investigación y aplicación
 
 [Directriz y excepción acotada](ACTA_ENCAJE_DE_PERFILES_LINGUISTICOS_Y_SEPARACION_INVESTIGACION_APLICACION_2026_09_10.md): español como alcance actual; futura interacción por perfiles explícitos; constitución humana del saber separada de su aplicación, sin aprendizaje ni incorporación automática durante el uso. Anticipar cambios requiere demostrar necesidad para evitar una refactorización costosa. Continúa IE-004/002; aislamiento NO VERDE.
+
+## Recepción IE-004/002 · fin de las dos entregas previstas
+
+[Dictamen y evidencia](ACTA_RECEPCION_IE004_002_Y_FIN_DE_SECUENCIA_PREVISTA_2026_09_10.md): 23/24 respuestas correctas; R01 persiste y la candidata es insuficiente en la confirmación. Paridad nativo/WASI; oráculo 002 abierto. Conversación nueva declarada, independencia contextual no acreditada. **No hay otra tanda activa ni tercera ronda automática.** El frente continúa NO VERDE por la brecha semántica y el aislamiento material pendiente.

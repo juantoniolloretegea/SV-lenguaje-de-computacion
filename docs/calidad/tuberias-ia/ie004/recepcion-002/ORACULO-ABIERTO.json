@@ -1,0 +1,348 @@
+{
+  "version": "IE-004/1",
+  "autor_expectativas": "Watson; expectativas fijadas tras entrega 001 y antes de cualquier corrección; no validación humana ni autoría independiente",
+  "sal": "42068bf319762fd0d4f08a81bc2b57b78d9fa96c56fb9e2edacca55f8f4fe969",
+  "packet_sha256": "de3d5093a8439ea6604d5c54f24add468e65389bd5beae6ce59a6d406d1343a8",
+  "expectativas": [
+    {
+      "id": "R01",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R02",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R03",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R04",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R05",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R06",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "permiso_vigente": true
+    },
+    {
+      "id": "R07",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R08",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R09",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R10",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R11",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R12",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R13",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "FUENTE"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R14",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ALCANCE"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R15",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R16",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R17",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R18",
+      "ruta": null,
+      "diagnostico": "OPERACION_NO_ADMITIDA",
+      "permiso_vigente": true
+    },
+    {
+      "id": "R19",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ANTERIOR",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R20",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    },
+    {
+      "id": "R21",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "permiso_vigente": true
+    },
+    {
+      "id": "R22",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "permiso_vigente": true
+    },
+    {
+      "id": "R23",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "permiso_vigente": true
+    },
+    {
+      "id": "R24",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "permiso_vigente": true
+    }
+  ],
+  "clases": {
+    "parafrasis": [
+      [
+        "R01",
+        "R02",
+        "R09",
+        "R10",
+        "R15",
+        "R17"
+      ],
+      [
+        "R03",
+        "R16"
+      ]
+    ],
+    "contrastes": [
+      [
+        "R02",
+        "R03"
+      ],
+      [
+        "R03",
+        "R11"
+      ],
+      [
+        "R02",
+        "R05"
+      ],
+      [
+        "R20",
+        "R08",
+        "R12"
+      ],
+      [
+        "R11",
+        "R19"
+      ]
+    ],
+    "nota_externa": [
+      [
+        "R07",
+        "R02"
+      ]
+    ]
+  },
+  "repetidos_de_001": [
+    {
+      "anterior": "L01",
+      "confirmacion": "R01"
+    },
+    {
+      "anterior": "L04",
+      "confirmacion": "R02"
+    },
+    {
+      "anterior": "L05",
+      "confirmacion": "R03"
+    },
+    {
+      "anterior": "L10",
+      "confirmacion": "R04"
+    },
+    {
+      "anterior": "L11",
+      "confirmacion": "R05"
+    },
+    {
+      "anterior": "L18",
+      "confirmacion": "R06"
+    },
+    {
+      "anterior": "L20",
+      "confirmacion": "R07"
+    },
+    {
+      "anterior": "L24",
+      "confirmacion": "R08"
+    }
+  ],
+  "criterio_relacional": "Una relación exige también identificación y respuesta correctas de todos sus miembros; una diferencia entre dato y error no es un contraste satisfactorio.",
+  "criterio_entre_sesiones": "Comparar ruta, diagnóstico y cuerpo para los ocho repetidos; apoyos pueden citar fragmentos distintos y deben ser válidos. Una igualdad de dos errores no acredita utilidad. Independencia contextual sólo si existe sesión nueva, según evidencia disponible.",
+  "limite_rondas": "Segunda y última entrega de la campaña IE-004; no tercera ronda automática. La brecha semántica y el aislamiento material siguen impidiendo promoción aunque el lote sea conforme."
+}

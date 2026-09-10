@@ -1,0 +1,34 @@
+{
+  "objeto": "Lote de 24 propuestas depositadas, tres reproducciones por destino con arranque de proceso.",
+  "destinos": {
+    "nativo": {
+      "muestras_ms": [
+        3.850901,
+        10.424069,
+        2.198974
+      ],
+      "mediana_ms": 3.850901,
+      "minimo_ms": 2.198974,
+      "maximo_ms": 10.424069,
+      "bytes_salida": 5418,
+      "sha256_salida": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "cpu_rss": "NO_OBSERVABLES"
+    },
+    "wasi": {
+      "muestras_ms": [
+        130.736387,
+        268.021421,
+        202.626295
+      ],
+      "mediana_ms": 202.626295,
+      "minimo_ms": 130.736387,
+      "maximo_ms": 268.021421,
+      "bytes_salida": 5418,
+      "sha256_salida": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "cpu_rss": "NO_OBSERVABLES"
+    }
+  },
+  "procesos": 40,
+  "inferencia_modelo": "NO_MEDIDA",
+  "limite": "Tres muestras de proceso en anfitrión compartido no aíslan el coste del receptor ni prueban regresión. No comparación de rendimiento con ES27 o con el lote distinto 001."
+}

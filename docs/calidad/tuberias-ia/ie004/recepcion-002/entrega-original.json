@@ -1,0 +1,368 @@
+{
+  "version": "IE-004/1",
+  "modelo": "Grok 4.6 (xAI)",
+  "sesion": "conversación nueva iniciada para ENCARGO-002; identificador interno de conversación no visible",
+  "configuracion": "no observable: temperatura, semilla y demás hiperparámetros no expuestos; no hay conversaciones separadas",
+  "respuestas": [
+    {
+      "id": "R01",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "R02",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Dígame",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "de ahora",
+        "campo": "el dato"
+      }
+    },
+    {
+      "id": "R03",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "este caso",
+        "parametro": "IgG",
+        "momento": "anterior",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R04",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "La IgA, no la IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R05",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "qué unidad"
+      }
+    },
+    {
+      "id": "R06",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "R07",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "actual",
+        "campo": "Qué valor"
+      }
+    },
+    {
+      "id": "R08",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgG",
+        "momento": "anterior",
+        "campo": "estado registrado"
+      }
+    },
+    {
+      "id": "R09",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "este...?",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R10",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "el caso que estamos viendo",
+        "parametro": "@contexto.parametro",
+        "momento": "@contexto.momento",
+        "campo": "la cifra registrada"
+      }
+    },
+    {
+      "id": "R11",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "del CASO-A",
+        "parametro": "IgA",
+        "momento": "anterior",
+        "campo": "la cifra"
+      }
+    },
+    {
+      "id": "R12",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "@contexto.objeto",
+        "parametro": "esa inmunoglobulina",
+        "momento": "corte actual",
+        "campo": "el estado registrado"
+      }
+    },
+    {
+      "id": "R13",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "FUENTE"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "anterior",
+        "campo": "la procedencia"
+      }
+    },
+    {
+      "id": "R14",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ACTUAL",
+        "campo": "ALCANCE"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgA",
+        "momento": "actual",
+        "campo": "Qué límites"
+      }
+    },
+    {
+      "id": "R15",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "del CASO-A",
+        "parametro": "IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R16",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ANTERIOR",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "traiga",
+        "objeto": "@contexto.objeto",
+        "parametro": "el valor de IgG",
+        "momento": "anterior",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R17",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "sólo lea",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    },
+    {
+      "id": "R18",
+      "ruta": null,
+      "diagnostico": "OPERACION_NO_ADMITIDA",
+      "apoyos": {}
+    },
+    {
+      "id": "R19",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGA",
+        "momento": "ANTERIOR",
+        "campo": "UNIDAD"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "@contexto.operacion",
+        "objeto": "@contexto.objeto",
+        "parametro": "la IgA",
+        "momento": "corte anterior",
+        "campo": "qué unidad"
+      }
+    },
+    {
+      "id": "R20",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "ESTADO"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "@contexto.objeto",
+        "parametro": "IgG",
+        "momento": "corte actual",
+        "campo": "el estado registrado"
+      }
+    },
+    {
+      "id": "R21",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "R22",
+      "ruta": null,
+      "diagnostico": "CONTEXTO_INSUFICIENTE",
+      "apoyos": {}
+    },
+    {
+      "id": "R23",
+      "ruta": null,
+      "diagnostico": "FUERA_DE_COBERTURA",
+      "apoyos": {}
+    },
+    {
+      "id": "R24",
+      "ruta": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGM",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "diagnostico": null,
+      "apoyos": {
+        "operacion": "Necesito",
+        "objeto": "del CASO-A",
+        "parametro": "IgM",
+        "momento": "actual",
+        "campo": "el valor"
+      }
+    }
+  ]
+}

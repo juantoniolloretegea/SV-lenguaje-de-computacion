@@ -1156,3 +1156,14 @@ Paridad por bytes y tres reproducciones por destino;40 procesos con controles. U
 **Excepción acotada:** anticipar una intervención imperativa para evitar una refactorización costosa exige demostrar la pérdida de representación, un caso positivo y un contraejemplo, localizar el nivel competente y acotar el cambio, versionado, checkpoint y verificaciones afectadas según §7 del acta de perfiles. Más idiomas por sí solos no justifican refactorizar el núcleo.
 
 **Estado:** DIRECTRIZ_DOCUMENTADA; REALIZACION_PENDIENTE; AISLAMIENTO_NO_VERDE. Publicación documental y registro, sin nueva prueba ni cambio del encargo IE-004/002, del receptor o de sus criterios. Catálogo/localización y fila 9 conservan su orden posterior. No se acredita comprensión universal, despliegue multilingüe ni aislamiento material.
+
+<a id="retp-122"></a>
+## RETP-2026-122 — Recepción IE-004/002 y fin de la secuencia prevista
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje 3bb3c0d6da81b55e07eeffee69246eff901a7423; laboratorio 789b3030917da77654efcf652f47eb9e6153e04f. AGENTS releído y rectoras cotejadas sin cambios respecto de sus lecturas íntegras; Fase004, encargo002, custodia y compromiso revisados completos.
+
+[Acta y evidencia espejada](tuberias-ia/ACTA_RECEPCION_IE004_002_Y_FIN_DE_SECUENCIA_PREVISTA_2026_09_10.md). Depósito Grok927f24d57701dda579ff822da7a7fdaf1eeed69e íntegro; reserva002 verificada y abierta después de recibirlo. Misma fuente y ejecutor, mismos binarios:40 procesos locales. Resultado23/24 identificaciones y respuestas;17/18 consultas con dato;6/6 diagnósticos/denegación. R01 persiste frente al contexto completo del contrato; se conserva la objeción de Grok al esperado. R05, repetido de L11, produce una cita válida y sirve unidad. Paráfrasis1/2, contrastes5/5 y nota externa1/1. Paridad por bytes y tres reproducciones del receptor por destino.
+
+Nueva conversación declarada; memoria de proyecto visible y relato del usuario sin traza íntegra de la sesión: independencia contextual no acreditada. Ocho entradas repetidas idénticas:8/8 rutas/diagnósticos iguales,7/8 cuerpos,6/8 correctas en ambas. El mismo error no acredita utilidad. Las tres muestras de proceso por destino presentan dispersión; medianas nativo3.850901ms y WASI202.626295ms. CPU/RSS e inferencia no observables; no atribución de regresión ni optimización.
+
+**Estado:** CANDIDATA_INSUFICIENTE_EN_CONFIRMACION; SECUENCIA_PREVISTA_FINALIZADA; AISLAMIENTO_NO_VERDE. No tercera tanda automática ni retoque retrospectivo. Brecha semántica e imposición material pendientes; no clausura humana ni promoción al SV. Próxima decisión sobre mecanismo con estos hallazgos; se conserva RETP121 y el orden posterior de catálogo/localización y fila9.
