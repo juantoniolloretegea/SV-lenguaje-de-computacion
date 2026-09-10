@@ -1074,3 +1074,17 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Verificación y alcance:** cotejo de identidades, cuerpos copiados, enlaces y sucesión registral; sin nueva prueba funcional atribuida. La recepción y el protocolo se conservan también en laboratorio. No cambian código, gramática, IR, dominios, catálogo/localización ni workflows. Aislamiento material, control productivo, realización del nuevo algoritmo, Qwen y revisión pública integral de Claude permanecen pendientes.
 
 **Estado:** RESULTADOS_ESPEJADOS_PROTOCOLO_ESPECIFICADO_SIN_CIERRE_MATERIAL. No se pasa a verde la tubería. El siguiente acto material deberá producir las pruebas del algoritmo y de los permisos. Se mantiene la prioridad de IA externa, seguida de catálogo/localización y fila 9.
+
+
+<a id="retp-116"></a>
+## RETP-2026-116 — Puesto NLP español ejecutado y entrega a Grok
+
+**Fecha:** 10/09/2026. **Orden:** comprobar funcionamiento observable antes de optimizar; preparar el puesto para Grok. Lectura de Lenguaje 094a6ab671395578d1613c8e4137bdbfe83d4718 y laboratorio f373e8f41ae9873ee7682e0c5f0516e32e95188f; AGENTS, Pilares, perfiles y transición completos, Fase 003 y RETP-115.
+
+**Resultado:** [recepción ES27](tuberias-ia/ACTA_RESULTADO_ES27_2026_09_10.md). Misma fuente Rust 9ca6036afe7387431b7591791ddbce74498ff9c9, lanzador b6209141600e2386480d84715623142169112a81, ejecución 34475250778/1. Madrid en nativo/WASI; 56 controles funcionales (15 positivos, 41 negativos); 100 repeticiones de cada positivo por destino; 6 rechazos de transporte y sensibilidad del observador. 28 muestras conservadas; fuentes y artefacto recuperado cotejados. Los dobles sintéticos no se atribuyen a Grok.
+
+**Cambio:** G-ES27/1 y base artificial LAB-ES27/1 hacen ejecutable un subconjunto de Fase 003, con permiso fijo de registros 1/7, pregunta original y salida exacta independiente de la propuesta de IA. Se añade encargo y puesto automático en laboratorio. Calidad recibe evidencia y esta sucesión; no cambia código productivo, semántica, IR ni dominio real.
+
+**Objeción:** un corpus conforme no acredita todo el español ni aislamiento frente a un host/repositorio comprometido. Revocación entre decisión y uso, integridad adversarial de base e I01–I05 permanecen pendientes. La entrega real de Grok deberá cotejarse con el workflow y fuente fijados. El artefacto temporal de Actions no se presenta como custodia perpetua de binarios; fuentes, oráculos y resultados quedan en Git.
+
+**Estado:** PUESTO_COMPROBADO_CAPTURA_GROK_PENDIENTE; AISLAMIENTO_NO_VERDE. Se ofrece la prueba de funcionamiento al participante. Optimización posterior a valoración del resultado. Se conservan RETP-111–114 en PR #89, catálogo/localización y fila 9.
