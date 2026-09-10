@@ -1088,3 +1088,19 @@ Artefacto CYB descargado 10116340925, 681213 bytes, ZIP SHA-256 e92a54a45fa62341
 **Objeción:** un corpus conforme no acredita todo el español ni aislamiento frente a un host/repositorio comprometido. Revocación entre decisión y uso, integridad adversarial de base e I01–I05 permanecen pendientes. La entrega real de Grok deberá cotejarse con el workflow y fuente fijados. El artefacto temporal de Actions no se presenta como custodia perpetua de binarios; fuentes, oráculos y resultados quedan en Git.
 
 **Estado:** PUESTO_COMPROBADO_CAPTURA_GROK_PENDIENTE; AISLAMIENTO_NO_VERDE. Se ofrece la prueba de funcionamiento al participante. Optimización posterior a valoración del resultado. Se conservan RETP-111–114 en PR #89, catálogo/localización y fila 9.
+
+
+<a id="retp-117"></a>
+## RETP-2026-117 — Fallo funcional de ES27 y corrección comprobada sobre la entrega de Grok
+
+**Fecha:** 10/09/2026. **Mandato vigente:** comprobar funcionamiento y entregar puesto operativo antes de optimizar; conservar resultados en laboratorio y Calidad. Entrada Lenguaje 66801a7146a0a9151f0b2d7fc9f618ce76c37986, laboratorio 07c8fec711635fcfe0dadf5418b18fe8be473923. Lectura íntegra previa de AGENTS/Pilares/perfiles/transición conservada y rectores sin cambios; recepción Fase 003 y RETP-115/116.
+
+**Hallazgo recibido:** [acta y resultados](tuberias-ia/ACTA_RECEPCION_GROK_ES27_Y_CORRECCION_2026_09_10.md). Grok entregó doce entradas en 2f8d3dd5b92e88b62940ed41262282179be59e7c e informe en 07c8fec711635fcfe0dadf5418b18fe8be473923. El run 34476110251/1 confirmó cinco consultas pertinentes indebidamente rechazadas: G02/G07/G08/G09/G10. Cuatro de nueve obtuvieron dato; G06/G11/G12 conservan rechazo. Success/paridad no equivalen a éxito funcional. El fallo se atribuye al analizador de Watson y queda conservado.
+
+**Reparación:** G-ES27/2 separa petición/objeto y constituye equivalencias explícitas de capital española/de España y registro/parámetro sólo para el banco. Fuente e18ed7313bf184bf585f351d0f7e29fdf149db9d; lanzador cef4335ea92eceabb62e7abd54a166e0048e3fe4; run 34477108267/1. Reejecución de los mismos 1173 bytes, SHA-256 d0b46324e0a3f5039d028a39a739d7ec3311d67a9696d338802a30b2da84896e: nueve respuestas correctas y tres rechazos, con paridad y tres repeticiones por destino. No son nuevas sesiones de Grok ni se alteran su entrega/informe.
+
+**Regresión y custodia:** 76 controles, 26 positivos repetidos 100 veces por destino, 50 negativos, seis transportes inválidos y sensibilidad del observador. Se preservan los 56 anteriores. Ambos ZIP recuperados y cotejados; medidas originales 34 y nuevas 36, sin declaración de regresión de rendimiento. Fuentes, oráculos y resultados quedan en Git; artefactos temporales con caducidad explícita. Encargo 002 disponible para nueva falsación del participante.
+
+**Objeción y límite:** resolver lo ya observado no acredita todo el español; seis combinaciones positivas nuevas y nueve negativos amplían la regresión, y el siguiente encargo requiere formulaciones propias. Se conserva pregunta original y no se permite que la propuesta IA escoja la respuesta. Integridad adversarial de base, revocación entre decisión/uso y aislamiento material permanecen pendientes.
+
+**Estado:** FALLO_ORIGINAL_CONSERVADO_CORRECCION_COMPROBADA_NUEVA_CAPTURA_PENDIENTE; AISLAMIENTO_NO_VERDE. Sin cambio productivo, de dominio, semántica, IR ni optimización. PR #89/RETP-111–114, catálogo/localización y fila 9 conservan su alcance.

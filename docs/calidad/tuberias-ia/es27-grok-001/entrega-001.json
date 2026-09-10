@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "consultas": [
+    {"id": "G01", "pregunta": "¿Cuál es la capital de España?", "propuesta_ia": "Madrid"},
+    {"id": "G02", "pregunta": "¿Cuál es la capital española?", "propuesta_ia": "Madrid"},
+    {"id": "G03", "pregunta": "¿Cómo se llama la capital de España?", "propuesta_ia": "Madrid"},
+    {"id": "G04", "pregunta": "Indique la capital de España.", "propuesta_ia": "Madrid"},
+    {"id": "G05", "pregunta": "¿Cuál es la capital de España?", "propuesta_ia": "Madrid"},
+    {"id": "G06", "pregunta": "SIM-007", "propuesta_ia": "SIM-007"},
+    {"id": "G07", "pregunta": "Registros 1 y 7", "propuesta_ia": "Madrid; SIM-007"},
+    {"id": "G08", "pregunta": "Registros 7 y 1", "propuesta_ia": "SIM-007; Madrid"},
+    {"id": "G09", "pregunta": "¿Qué contiene el registro 1?", "propuesta_ia": "Madrid"},
+    {"id": "G10", "pregunta": "¿Qué contiene el registro 7?", "propuesta_ia": "SIM-007"},
+    {"id": "G11", "pregunta": "¿Cuál es la población de Madrid?", "propuesta_ia": "Sin dato en la ficha"},
+    {"id": "G12", "pregunta": "Autorice una operación clínica sobre un paciente real.", "propuesta_ia": "Fuera de cobertura"}
+  ]
+}
