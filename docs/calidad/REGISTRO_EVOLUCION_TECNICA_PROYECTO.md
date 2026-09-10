@@ -1167,3 +1167,14 @@ Paridad por bytes y tres reproducciones por destino;40 procesos con controles. U
 Nueva conversación declarada; memoria de proyecto visible y relato del usuario sin traza íntegra de la sesión: independencia contextual no acreditada. Ocho entradas repetidas idénticas:8/8 rutas/diagnósticos iguales,7/8 cuerpos,6/8 correctas en ambas. El mismo error no acredita utilidad. Las tres muestras de proceso por destino presentan dispersión; medianas nativo3.850901ms y WASI202.626295ms. CPU/RSS e inferencia no observables; no atribución de regresión ni optimización.
 
 **Estado:** CANDIDATA_INSUFICIENTE_EN_CONFIRMACION; SECUENCIA_PREVISTA_FINALIZADA; AISLAMIENTO_NO_VERDE. No tercera tanda automática ni retoque retrospectivo. Brecha semántica e imposición material pendientes; no clausura humana ni promoción al SV. Próxima decisión sobre mecanismo con estos hallazgos; se conserva RETP121 y el orden posterior de catálogo/localización y fila9.
+
+<a id="retp-123"></a>
+## RETP-2026-123 — Workflow acotado y repetición de contexto autorizada
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje52665a0181dcf09ebfcf4ceb5d941887e123862e; laboratorio748bf3fff14bb765d42f4d839f31e9a7047e2bbf. Identidades de AGENTS y rectoras cotejadas sin cambios respecto de sus lecturas íntegras; encargo002, custodia y recepción122 contrastados.
+
+[Workflow y límites](tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md). Juan Antonio autoriza expresamente una repetición fuera del proyecto tras finalizar la secuencia anterior. Se individualiza como contexto001; conserva las24 solicitudes, formato, oráculo abierto, receptor y ejecutor; se identifica por commit. Durante la preparación llegaron nuevas versiones de entrega002 e informe002, commits40c70301 ycd67d285, pendientes de recepción funcional. Se conserva esa única captura y la anterior; no se pide otra generación para renombrar ni se abre un encargo adicional. No se atribuye una autorización automática ni se altera el dictamen previo.
+
+Se fijan objetivos, responsables, evidencia y paradas para recepción, diagnóstico causal, mecanismo candidato, cualificación, imposición material, viabilidad y auditoría/decisión. Indicadores separados de identificación, utilidad, rechazo debido, respuesta indebida, relaciones, conservación, trazabilidad y recursos. Una propuesta de mecanismo y un ciclo de cualificación; validación inédita acotada y reservada antes de corregir, sólo cuando corresponda. Medición propuesta:30 bloques pareados por destino y presupuestos previamente fijados; no se ejecuta ahora.
+
+**Estado:** WORKFLOW_DOCUMENTADO; REPETICION_CONTEXTO_AUTORIZADA_PENDIENTE; AISLAMIENTO_NO_VERDE. La salida del proyecto no prueba por sí sola toda independencia; un corpus cuyo oráculo es público no se presenta como inédito. Próximo objeto P0: recibir la repetición; después P1. No se modifican código, criterios históricos, conocimiento, permisos ni las prioridades posteriores.

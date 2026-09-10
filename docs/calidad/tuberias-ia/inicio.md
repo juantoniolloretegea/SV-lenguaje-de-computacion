@@ -35,3 +35,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Recepción IE-004/002 · fin de las dos entregas previstas
 
 [Dictamen y evidencia](ACTA_RECEPCION_IE004_002_Y_FIN_DE_SECUENCIA_PREVISTA_2026_09_10.md): 23/24 respuestas correctas; R01 persiste y la candidata es insuficiente en la confirmación. Paridad nativo/WASI; oráculo 002 abierto. Conversación nueva declarada, independencia contextual no acreditada. **No hay otra tanda activa ni tercera ronda automática.** El frente continúa NO VERDE por la brecha semántica y el aislamiento material pendiente.
+
+## Workflow acotado y repetición de contexto autorizada · RETP-123
+
+[Plan de proceso](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md): una repetición adicional fuera del proyecto, autorizada expresamente por Juan Antonio después de RETP-122. Durante la preparación se detectó depósito en los mismos nombres de002, identificado por los commits40c70301 ycd67d285; recepción pendiente. Se conserva la versión previa por commit y espejo público. No se solicita otra generación para renombrar. Oráculo ya abierto: contraste de contexto, no validación inédita. Después: causa, un mecanismo candidato, cualificación, imposición material, recursos y auditoría, con criterios de paso y parada. Aislamiento NO VERDE.
