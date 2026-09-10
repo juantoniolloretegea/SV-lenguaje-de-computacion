@@ -1,0 +1,123 @@
+{
+  "version": "P2-PERFIL-ES/1",
+  "registro": "RETP-2026-126",
+  "fecha": "2026-09-10",
+  "estado": "PERFIL_CANDIDATO_PARA_REVISION_Y_RESERVA; NO_CUALIFICADO",
+  "cortes": {
+    "lab": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "head": "fa21b92a39565a7f5a4582a9ca51c331c73eb10a",
+      "tree": "0fe56ce7a16eaef6bd71298d25aa2f15f1d624a1"
+    },
+    "lang": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "head": "55e354227518c77753578cfcf2d6da5617a76956",
+      "tree": "a95fccc52b99175a81333cf3a50ea90f19c4daeb"
+    }
+  },
+  "rectoras_cotejadas_sin_cambios": [
+    {
+      "mode": "100644",
+      "path": "AGENTS.md",
+      "sha": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "size": 4384,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "size": 22330,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "size": 29014,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+      "size": 67111,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md",
+      "sha": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "size": 14941,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/6c57f2e895045d4a26bacefc98c49ebac2b433f7"
+    }
+  ],
+  "archivos": [
+    {
+      "archivo": "../../ACTA_PERFIL_P2_CUSTODIA_TEXTO_Y_RESERVA_2026_09_10.md",
+      "bytes": 6533,
+      "sha256": "013d46c5cb7ecf1088e250ff5d9e3d60867b97db0efc0306a952c946fb3ce627",
+      "blob": "9c087539eec5c262b50eca02d5828b47bb5fc29a"
+    },
+    {
+      "archivo": "PERFIL_INTERACCION_ES_IE004_CANDIDATO_1.md",
+      "bytes": 21505,
+      "sha256": "6ba8b9b92ce9d9297abbda9027b3f540ab4d7f89457963e8843e49471aa03678",
+      "blob": "80fcf2941cc18aaadc362dcb7e4548b13aa55593"
+    },
+    {
+      "archivo": "ENCARGO_REVISION_Y_RESERVA_P3.md",
+      "bytes": 8854,
+      "sha256": "0a37525c8ae105700c3cd7ad690ce90bd707b969334774ed69f5faf6dab09e55",
+      "blob": "6dc24c48b991c0ef6c23e47bb279b2abca4ae7f3"
+    },
+    {
+      "archivo": "COBERTURA_DOCUMENTAL.json",
+      "bytes": 66668,
+      "sha256": "e350b7ee3c2a7a697cf7630c317b5b7efd85e763256ef2251b2459c8f1c9d542",
+      "blob": "0c90dce68ef0956267637093cf0a4e0cd8996756"
+    }
+  ],
+  "convencion": "Huella de bytes exactos. El manifiesto no se incluye a sí mismo; su identidad procede del blob y commit de publicación.",
+  "bibliografia": [
+    {
+      "url": "https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html",
+      "alcance": "String, ownership, movimiento, funciones y destrucción.",
+      "consulta": "2026-09-10",
+      "naturaleza": "Documentación oficial Rust; lectura web, no ensayo del compilador.",
+      "captura_integral_con_huella": "NO_REALIZADA"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch10-03-lifetime-syntax.html",
+      "alcance": "Referencias, relaciones de lifetime y literales static.",
+      "consulta": "2026-09-10",
+      "naturaleza": "Documentación oficial Rust; lectura web, no ensayo del compilador.",
+      "captura_integral_con_huella": "NO_REALIZADA"
+    },
+    {
+      "url": "https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html",
+      "alcance": "Préstamos compartidos/mutables y último uso.",
+      "consulta": "2026-09-10",
+      "naturaleza": "Documentación oficial Rust; lectura web, no ensayo del compilador.",
+      "captura_integral_con_huella": "NO_REALIZADA"
+    },
+    {
+      "url": "https://doc.rust-lang.org/std/primitive.str.html#method.get",
+      "alcance": "Acceso comprobado por intervalo a str.",
+      "consulta": "2026-09-10",
+      "naturaleza": "Documentación oficial Rust; lectura web, no ensayo del compilador.",
+      "captura_integral_con_huella": "NO_REALIZADA"
+    }
+  ],
+  "comprobaciones": "Cotejo de fuentes y oráculos públicos, índices de reglas, inventario de longitudes, consistencia documental, links y publicación por blob.",
+  "ejecuciones_nuevas_receptor_corrector": 0,
+  "consultas_nuevas_modelo": 0,
+  "reserva_independiente": "ENCARGO_PREPARADO_NO_CUSTODIA_ACREDITADA",
+  "nuevo_grok": "NINGUNO",
+  "aislamiento": "NO_VERDE"
+}

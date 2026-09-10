@@ -1202,3 +1202,16 @@ P1 distingue la interpretación insuficiente de R01 con contexto completo, la an
 El positivo IGA y la sustitución IGG sobre la misma pregunta discriminan integridad y utilidad; se mantienen R01/R09 y los rechazos debidos R06/R21/R22, sin reparación de oráculos. La matriz contiene 18 obligaciones de diseño, no 18 casos ejecutados ni una reserva inédita. Cero nuevas consultas al modelo y cero nuevas ejecuciones de receptor. Se comprueban consistencia documental, intervalos y correspondencia con antecedentes; no se declaran pruebas del mecanismo ni nueva paridad.
 
 **Estado:** DISENO_P2_CANDIDATO_DOCUMENTADO; SUFICIENCIA_NO_ACREDITADA; P2_ABIERTO; P3_NO_ABIERTO; AISLAMIENTO_NO_VERDE. Faltan perfil completo y justificación de su verificador; beneficio del modelo, recursos e imposición material pendientes. El siguiente objeto es completar/revisar esa especificación y disponer la reserva independiente antes de corregir, conforme al workflow. No otra ronda, refactorización ni integración implícita. Acta, matriz, manifiesto e índice espejados; custodia e índices de trabajo actualizados.
+
+<a id="retp-126"></a>
+## RETP-2026-126 — Perfil español P2, propiedad del texto y preparación de reserva
+
+**Fecha:** 10/09/2026. Cortes: Lenguaje 55e354227518c77753578cfcf2d6da5617a76956; laboratorio fa21b92a39565a7f5a4582a9ca51c331c73eb10a. Luz verde de Juan Antonio y matiz de ownership/uso/lifetime. Rectoras cotejadas sin cambios respecto de sus lecturas íntegras; Fase 004 y RETP-121/123–125 aplicables.
+
+[Acta y paquete](tuberias-ia/ACTA_PERFIL_P2_CUSTODIA_TEXTO_Y_RESERVA_2026_09_10.md). Especificación candidata IE004-ES-P2/1 con 23 producciones, léxico declarado, composición tipada, contexto, negación como patrón parcial de tupla y diagnóstico causal. La propuesta externa no sustituye el original, selecciona versiones ni gobierna presupuesto/orden del análisis. Propietario, préstamos de lectura, intervalos, conservación y vida de datos definidos; ownership no acredita semántica, permisos o revocación de copias externas. Documentación oficial Rust consultada y enlazada.
+
+Inventario de los 48 casos de campañas originales con expectativas históricas conservadas y reglas propuestas; máximo de 80 bytes y 80 caracteres por pregunta. Es una revisión documental y medida de longitud; no reconocimiento ejecutado. Límites de memoria/trabajo de la candidata por cualificar, sin nueva paridad o rendimiento. Cero ejecuciones nuevas de receptor/corrector y cero nuevas consultas al modelo.
+
+Encargo independiente preparado para revisar suficiencia y, si procede, custodiar una sola reserva inédita de hasta 24 casos antes de corregir. La reserva no ha sido creada ni su separación acreditada; Watson recibe sólo dictamen/compromiso antes del corrector. Se preserva independencia de autoría respecto de implementador/participante, sin confundirla con auditoría del mismo autor. No se envía automáticamente un mensaje a Claude ni se abre otra tarea de Grok.
+
+**Estado:** PERFIL_P2_CANDIDATO_ESPECIFICADO; REVISION_Y_RESERVA_PENDIENTES; P3_NO_INICIADO; AISLAMIENTO_NO_VERDE. Paquete espejado, índices/custodia y RETP CSV/Markdown actualizados. Núcleo, universo, oráculos y código histórico conservados; catálogo/localización y fila 9 mantienen su orden posterior.

@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-125:** diseño candidato P2 documentado; suficiencia del perfil y del verificador no acreditada. P3 no abierto; sin nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-126:** perfil español candidato y custodia/préstamo del texto especificados; encargo de revisión y reserva independiente preparado. P2 en revisión, P3 sin iniciar; no nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -50,3 +50,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Diseño del vínculo petición/contexto/referencia · RETP-125
 
 [Acta y matriz P2](ACTA_DISENO_P2_VINCULO_PETICION_CONTEXTO_REFERENCIA_2026_09_10.md): un mecanismo candidato de derivación comprobable, análisis completo y recuperación ante diagnóstico falso. Exige servir IGA e impedir su sustitución por IGG en la misma petición. Perfil completo, verificador y utilidad del modelo aún no acreditados; P2 abierto y P3 sin iniciar. Cero nuevas consultas o ejecuciones. Aislamiento NO VERDE.
+
+## Perfil español, propiedad del texto y preparación de reserva · RETP-126
+
+[Acta y paquete](ACTA_PERFIL_P2_CUSTODIA_TEXTO_Y_RESERVA_2026_09_10.md): perfil candidato de 23 producciones, semántica de contexto/negación y contrato de ownership/préstamos; presupuestos y desbordamientos acotados. Correspondencia documental de 48 casos conocidos, sin ejecutar gramática. [Encargo de revisión y reserva independiente](ie004/perfil-es-p2-1/ENCARGO_REVISION_Y_RESERVA_P3.md) listo para la autoría designada por Juan Antonio; reserva todavía no acreditada. P2 en revisión y P3 sin iniciar; aislamiento NO VERDE.
