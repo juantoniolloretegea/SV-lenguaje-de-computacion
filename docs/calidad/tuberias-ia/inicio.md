@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-131:** recepción humana declarada de custodia confirmada. Sonda pública Rust: 69/72 en nativo/WASI debug/release; el recorrido instrumentado agota el millón de intentos en C02 (17 tokens), CP-T-127 y CP-T-128. No cualifica el corrector completo. Captura de Grok no habilitada; reserva cerrada y aislamiento NO VERDE.
+**Estado vigente · RETP-132:** ensayo causal del coste con IE004-R10-MEMO/1 preparado. Mismos 72 controles públicos; calendario alternativo explícito, no conformidad de /2. Custodia humana declarada confirmada; captura no habilitada, reserva cerrada y aislamiento NO VERDE.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -74,3 +74,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Resultado público Rust · RETP-131
 
 [Adenda y evidencia](ACTA_RESULTADO_CONTROL_PUBLICO_R10_RUST_2026_09_11.md). Cuatro ejecuciones y 21 aserciones de primitivas por configuración; 69/72 controles de corpus coincidentes y tres agotamientos conservados. La insuficiencia corresponde a la búsqueda instrumentada y su contabilidad, no demuestra imposibilidad del perfil o de Rust. Se necesita resolver esa causa antes de la realización completa y la captura reservada. Sin nueva tanda del modelo ni lectura de originales/oráculo. Compromiso y recibo humano intactos.
+
+## Control causal de coste · RETP-132
+
+[Preparación y sucesión](ACTA_COSTE_R10_Y_SUCESION_DEL_CALENDARIO_2026_09_11.md). Una alternativa sintáctica que conserva todas las derivaciones y se contrasta con los mismos 72 controles públicos. El cambio de calendario se declara expresamente; /2 y la reserva no se reetiquetan. No hay nuevo encargo para Grok.

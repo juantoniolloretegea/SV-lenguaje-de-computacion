@@ -1,0 +1,51 @@
+{
+  "registro": "RETP-2026-132",
+  "fecha": "2026-09-11T05:27:38.671Z",
+  "estado": "FIJADO_ANTES_DE_EJECUTAR",
+  "intentos_materiales_previos": 0,
+  "compilacion_preparatoria_sin_ejecucion": true,
+  "corpus_mismo_retp130": true,
+  "reserva_leida": false,
+  "archivos": [
+    {
+      "ruta": "memo.rs",
+      "bytes": 10672,
+      "sha256": "5836f28e33510e4842f13a7eda831cd1ef369f4c2b9934cdebf583669290c488"
+    },
+    {
+      "ruta": "comun.rs",
+      "bytes": 6148,
+      "sha256": "dca784013ecb3f993c2afe67b0ac7ff62da84396df04838831f440cd84758df7"
+    },
+    {
+      "ruta": "casos.rs",
+      "bytes": 31761,
+      "sha256": "5e27c00b1688b465cc3690942abcb81885ca5c0eb82e860f707b1b9063523fd7"
+    },
+    {
+      "ruta": "CASOS_PUBLICOS.json",
+      "bytes": 40084,
+      "sha256": "94bf8e9fe270dfb62a993dad0b566b3f8a5bcc6b4b1fee1b239f3da8bdbdfa39"
+    },
+    {
+      "ruta": "wasi.mjs",
+      "bytes": 392,
+      "sha256": "02916426a7b635f2d1eec1097e1a40304ac6b1510bea41bf35e09f769680bd2f"
+    },
+    {
+      "ruta": "ejecutar.mjs",
+      "bytes": 5714,
+      "sha256": "44fbd988953ded70b40e4893617a2990ba8f2e9afc924f49a5151988cd018e17"
+    },
+    {
+      "ruta": "recuperar.mjs",
+      "bytes": 1067,
+      "sha256": "c814e3d4eb17315b397d7a280fac38fa567893a551b3894409ee7a935014b9df"
+    },
+    {
+      "ruta": "DECISION_COSTE_Y_SUCESION.md",
+      "bytes": 9109,
+      "sha256": "eba75b30eb8d6a94f6d47a0e34825079b320fdc28303cd20d4496d7ec5123389"
+    }
+  ]
+}

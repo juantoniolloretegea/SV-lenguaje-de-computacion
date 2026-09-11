@@ -1,0 +1,448 @@
+{
+  "version": "IE004-R10-CASOS/1",
+  "registro": "RETP-2026-130",
+  "perfil": "IE004-ES-P2/2",
+  "estado": "FIJADO_ANTES_DE_EJECUTAR",
+  "casos": [
+    {
+      "id": "L01",
+      "pregunta": "¿Adónde estará el valor de inmunoglobina de este...?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L02",
+      "pregunta": "¿Cuál es la inmunoglobulina para este caso?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L03",
+      "pregunta": "Necesito el valor de inmunoglobulina porque estoy revisando este caso.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L04",
+      "pregunta": "Dígame el dato de IgG de ahora.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L05",
+      "pregunta": "Necesito el valor anterior de IgG de este caso.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L06",
+      "pregunta": "El valor previo, por favor.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L07",
+      "pregunta": "El anterior, no el actual.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L08",
+      "pregunta": "¿Cuál es linmunoglobina de este caso?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L09",
+      "pregunta": "¿Cuál es la IgA actual de este caso?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L10",
+      "pregunta": "La IgA, no la IgG: el valor actual.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L11",
+      "pregunta": "¿En qué unidad está expresada la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L12",
+      "pregunta": "¿Qué estado registrado tiene la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L13",
+      "pregunta": "¿Qué estado registrado tiene la IgA actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L14",
+      "pregunta": "Consulte el valor actual de IgM.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L15",
+      "pregunta": "Consulte el valor actual de IgG del CASO-B.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L16",
+      "pregunta": "Escriba 99 en el valor actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L17",
+      "pregunta": "Necesito el valor actual de hemoglobina.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L18",
+      "pregunta": "Necesito el valor de inmunoglobulina.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L19",
+      "pregunta": "Necesito el valor actual de IgG de este caso.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L20",
+      "pregunta": "¿Qué valor tiene la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L21",
+      "pregunta": "¿Qué valor tiene la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L22",
+      "pregunta": "¿Cuál es el intervalo de referencia de IgG?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L23",
+      "pregunta": "Dígame el dato de IgG de ahora.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "L24",
+      "pregunta": "¿Qué estado registrado tiene la IgG anterior?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R01",
+      "pregunta": "¿Adónde estará el valor de inmunoglobina de este...?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R02",
+      "pregunta": "Dígame el dato de IgG de ahora.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R03",
+      "pregunta": "Necesito el valor anterior de IgG de este caso.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R04",
+      "pregunta": "La IgA, no la IgG: el valor actual.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R05",
+      "pregunta": "¿En qué unidad está expresada la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R06",
+      "pregunta": "Necesito el valor de inmunoglobulina.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R07",
+      "pregunta": "¿Qué valor tiene la IgG actual?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R08",
+      "pregunta": "¿Qué estado registrado tiene la IgG anterior?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R09",
+      "pregunta": "¿Y el valor de inmunoglobina de este...?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R10",
+      "pregunta": "Necesito la cifra registrada de inmunoglobulina para el caso que estamos viendo.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R11",
+      "pregunta": "Necesito la cifra anterior de IgA del CASO-A.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R12",
+      "pregunta": "Necesito el estado registrado en el corte actual de esa inmunoglobulina.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R13",
+      "pregunta": "Necesito la procedencia del dato anterior de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R14",
+      "pregunta": "¿Qué límites tiene el registro actual de IgA?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R15",
+      "pregunta": "Del CASO-B no; del CASO-A, el valor actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R16",
+      "pregunta": "No quiero IgA: traiga el valor de IgG anterior.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R17",
+      "pregunta": "No cambie nada; sólo lea el valor actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R18",
+      "pregunta": "Elimine el registro actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R19",
+      "pregunta": "¿En qué unidad figura la IgA del corte anterior?",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R20",
+      "pregunta": "Necesito el estado registrado de IgG del corte actual.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R21",
+      "pregunta": "Necesito el valor actual de IgG de ese paciente.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R22",
+      "pregunta": "El valor anterior de esa inmunoglobulina.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R23",
+      "pregunta": "Necesito el valor actual de hemoglobina glicosilada.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "R24",
+      "pregunta": "Necesito el valor actual de IgM del CASO-A.",
+      "esperado": "DERIVA",
+      "grupo": "historico_publico"
+    },
+    {
+      "id": "C01",
+      "pregunta": "No escriba 7 en el valor de la IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C02",
+      "pregunta": "No escriba 7 en el valor de la IgG; consulte el valor actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C03",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C04",
+      "pregunta": "El valor actual de IgG o IgG del CASO-A.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C05",
+      "pregunta": "El valor actual de IgG de IgA del CASO-A.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C06",
+      "pregunta": "No sólo consulte la IgG.",
+      "esperado": "NO_DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C07",
+      "pregunta": "Consulte la IgA, no sólo consulte la IgG.",
+      "esperado": "NO_DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C08",
+      "pregunta": "El valor del caso que estamos viendo.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C09",
+      "pregunta": "El valor de el caso que estamos viendo.",
+      "esperado": "NO_DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C10",
+      "pregunta": "El valor de la IgG de la anterior.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C11",
+      "pregunta": "  El\tvalor\nde la IgG.\r\n",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C12",
+      "pregunta": "¿El valor de la IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C13",
+      "pregunta": "Consulte la unidad, no quiero el valor: la IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C14",
+      "pregunta": "Del CASO-A, el valor actual de IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C15",
+      "pregunta": "No elimine la IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C16",
+      "pregunta": "No consulte IgG; consulte IgA.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C17",
+      "pregunta": "No consulte IgG o IgM; consulte IgA.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "C18",
+      "pregunta": "No cambie nada; consulte el valor de la IgG.",
+      "esperado": "DERIVA",
+      "grupo": "contraste_publico"
+    },
+    {
+      "id": "CP-T-127",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "esperado": "DERIVA",
+      "grupo": "capacidad_tokens",
+      "tokens_constituidos": 127,
+      "fundamento": "G04 Orden Grupo; G06 Cabeza y repetición de G13/Temporal; G11 la IgG; cada actual exige el mismo momento ACTUAL. Contexto público completo CASO-A/IGG/ACTUAL/VALOR; LEER. Condición sintáctica necesaria de una consulta con DATO 8.40 exigible; el instrumento no calcula ese cuerpo."
+    },
+    {
+      "id": "CP-T-128",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "esperado": "DERIVA",
+      "grupo": "capacidad_tokens",
+      "tokens_constituidos": 128,
+      "fundamento": "G04 Orden Grupo; G06 Cabeza y repetición de G13/Temporal; G11 la IgG; cada actual exige el mismo momento ACTUAL. Contexto público completo CASO-A/IGG/ACTUAL/VALOR; LEER. Condición sintáctica necesaria de una consulta con DATO 8.40 exigible; el instrumento no calcula ese cuerpo."
+    },
+    {
+      "id": "CP-T-129",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "esperado": "Tokens",
+      "grupo": "capacidad_tokens",
+      "tokens_constituidos": 129,
+      "fundamento": "G04 Orden Grupo; G06 Cabeza y repetición de G13/Temporal; G11 la IgG; cada actual exige el mismo momento ACTUAL. Contexto público completo CASO-A/IGG/ACTUAL/VALOR; LEER. Condición sintáctica necesaria de una consulta con DATO 8.40 exigible; el instrumento no calcula ese cuerpo."
+    },
+    {
+      "id": "CP-B-8191",
+      "pregunta": "consulte la IgG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ",
+      "esperado": "DERIVA",
+      "grupo": "capacidad_bytes"
+    },
+    {
+      "id": "CP-B-8192",
+      "pregunta": "consulte la IgG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ",
+      "esperado": "DERIVA",
+      "grupo": "capacidad_bytes"
+    },
+    {
+      "id": "CP-B-8193",
+      "pregunta": "consulte la IgG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ",
+      "esperado": "Bytes",
+      "grupo": "capacidad_bytes"
+    }
+  ],
+  "criterio": "Sólo reconocimiento sintáctico y capacidad del recorrido instrumentado. DERIVA no es respuesta semántica correcta ni cualificación P3. Cualquier agotamiento en CP-T-127/128 impide afirmar capacidad de ese recorrido; no se aumenta el cupo.",
+  "parada": "Una ejecución por destino/configuración de la misma fuente; confirmar el hallazgo y conservar los controles. No enumeración, no reserva, no llamadas a modelos."
+}
