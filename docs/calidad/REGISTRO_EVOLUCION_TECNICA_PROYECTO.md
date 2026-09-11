@@ -1,6 +1,8 @@
 # Registro de evolución técnica del proyecto
 
-**Continuidad vigente:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
+**Continuidad del frente IA:** [RETP-141](#retp-141), workflow V2 subordinado a la secuencia rectora; siguiente objeto acotado de trazabilidad. La reserva P3 y las garantías materiales pendientes conservan su estado.
+
+**Antecedente de relevo de fila 7:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
 | RETP-2026-104 | 08/09/2026 | — | FIJACION_DE_MATRIZ_REVISADA | Fila 7 / integridad documental | MATRIZ_REVISADA_FIJADA_Y_VERIFICADA_NO_PROMOVIDA |
 
@@ -1319,3 +1321,20 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## RETP-2026-140 — Resultado de lote y compatibilidad preparada
 
 11/09/2026. [Acta](tuberias-ia/ACTA_RESULTADO_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_PREPARADA_P3_2026_09_11.md). 36 controles del adaptador × 3 por configuración nativo/WASI debug/release. Recorrido de 24 posiciones × 3: 63 conformes iniciales y nueve correcciones conformes por configuración, restituyendo revocación de A04 sin cambiar Rust, binarios o esperados. Primera matriz FALLO conservada. 2879 archivos recuperables, extracción cotejada y 765 metadatos de procesos verificados. Matriz /2–/3 y decisión humana preparadas; compatibilidad integral no acreditada, reserva cerrada, P4/P5 pendientes.
+
+<a id="retp-141"></a>
+## RETP-2026-141 — Workflow V2 subordinado a las actas y retorno acotado
+
+11/09/2026. [Workflow V2](tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). Mandato de Juan Antonio: revisar las actas privadas y ajustar el recorrido para evitar deriva de alcance, conservando la sede de núcleo, dominio, agentes, interfaces, bibliotecas y soporte.
+
+Se contrastaron continuidad y plan privados, cierres SEC y pre-R0, anexo temporal/forense y actas actualizadas de R0/R1 con las rectoras públicas leídas íntegramente: AGENTS, Pilares, perfiles, transición y adendas, arquitectura y previsión de IA trazable. Cortes: Lenguaje `d7ae473ed44f053a7db1adbf80ea27d047a955ae`, laboratorio `0265480fb90c1095ee915132e65aae8c22984bca`; R0/R1 privados en `20da3c781286bee1966c22cf1fc7a4755be35b9b`. Se preservan originales privados y workflow RETP-123.
+
+La V2 fija un solo expediente: correspondencia de resolución, evidencia recuperable e inscripción exigible por contratos. Distingue cierre del análisis y cierre de la capacidad trazable; no fabrica célula, SUCESO o Frame por cada consulta. Los hallazgos ajenos al recorrido se devuelven a su sede y fase con impacto y condición de tratamiento. Se conservan P0–P6, sus presupuestos consumidos y el retorno de RETP-121 a catálogo/localización y continuación de fila 9, ya abierta.
+
+La revisión adversarial documental exige no confundir log con inscripción, huella con recuperación, explicación del modelo con observación, ni contrato con garantía material. Un vacío que impida el recorrido bloquea su cierre; no se oculta como deuda ni abre automáticamente una nueva arquitectura.
+
+Los hallazgos de Claude comunicados por Juan Antonio se identifican como recibidos y pendientes de tratamiento, sin darlos por corregidos. Asociación /2–/3 sin aceptación por este cambio; reserva cerrada. No se modifica código, corpus, compromiso, oráculos, IR o Frame, ni se inicia examen de agentes o captura del modelo. P4/P5 y aprobación final de campaña pendientes; estado global NO VERDE.
+
+**Comprobación de esta modificación:** coherencia de secuencia y compuertas, enlaces documentales y concordancia RETP CSV/Markdown; preservación del workflow original y copia idéntica de V2/navegación en laboratorio. No se atribuyen nuevas ejecuciones funcionales a un cambio documental.
+
+**Estado:** WORKFLOW_V2_DOCUMENTADO_TRAZABILIDAD_PENDIENTE_RESERVA_CERRADA.

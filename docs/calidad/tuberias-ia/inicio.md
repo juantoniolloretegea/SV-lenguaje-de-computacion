@@ -3,7 +3,11 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-140:** adaptador público conforme: 36 controles × 3 y 24 posiciones × 3 por configuración, tras una corrección causal del montaje del conductor. Fallo inicial conservado; 2879 archivos recuperables. Compatibilidad integral /2–/3 pendiente de decisión; reserva cerrada.
+**Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). Único siguiente objeto: expediente del enlace entre resolución, evidencia e inscripción aplicable; cierre del análisis separado del cierre material. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
+
+**Último resultado experimental · RETP-140:** adaptador público conforme: 36 controles × 3 y 24 posiciones × 3 por configuración, tras una corrección causal del montaje del conductor. Fallo inicial conservado; 2879 archivos recuperables. Compatibilidad integral /2–/3 pendiente de decisión; reserva cerrada.
+
+Las entradas siguientes conservan el estado de su fecha; para el trabajo activo rige el workflow V2.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
