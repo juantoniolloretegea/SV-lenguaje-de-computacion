@@ -1,0 +1,31 @@
+{
+  "version": "IE004-P3-RECIBO/1",
+  "registro": "RETP-2026-130",
+  "fecha": "2026-09-11",
+  "custodio": "Juan Antonio Lloret Egea",
+  "declaracion_literal": "La recepción es recuperable y está separada , Watson.",
+  "alcance_de_la_confirmacion": "Recepción recuperable y separación conforme al traspaso definido en RETP-128; los originales reservados permanecen bajo custodia humana.",
+  "compromiso": {
+    "nombre": "COMPROMISO_P3.json",
+    "bytes": 3193,
+    "sha256": "d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5",
+    "comprobacion_local": "COINCIDE_CON_LA_HUELLA_Y_LONGITUD_COMUNICADAS"
+  },
+  "perfil": {
+    "id": "IE004-ES-P2/2",
+    "bytes": 31867,
+    "sha256": "10c29934f2f8f6bfbb40546f7cf0056d4b53d720c432cacfb9d6b70abefe3d5f",
+    "comprobacion": "COINCIDE_CON_EL_PERFIL_PUBLICO_SIN_CAMBIOS"
+  },
+  "estado_custodia": "ACREDITADA_POR_RECEPCION_HUMANA_DECLARADA",
+  "verificacion_directa_del_almacen_humano": false,
+  "archivos_reservados_leidos_por_watson": [],
+  "limites": [
+    "El hash prueba identidad del compromiso recibido, no permite comprobar por sí solo el almacenamiento ni sus permisos.",
+    "Watson no ha recibido ni verificado directamente los bytes de los cuatro archivos reservados; sus huellas se cotejarán en sus hitos.",
+    "Autoría de Claude con participación en el diseño declarada; no independencia absoluta.",
+    "El compromiso original conserva los estados pendientes declarados antes del recibo."
+  ],
+  "puerta": "HABILITADO_INICIO_DEL_CORRECTOR_Y_CONTROLES_PUBLICOS; CAPTURA_GROK_AUN_NO_HABILITADA",
+  "siguiente": "Comprobar R10 en Rust con material público antes del corrector completo; no abrir originales ni oráculo para esta comprobación."
+}

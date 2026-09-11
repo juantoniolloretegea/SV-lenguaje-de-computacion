@@ -1,0 +1,67 @@
+{
+  "version": "IE004-P3-COMPROMISO/1",
+  "registro": "RETP-2026-128",
+  "fecha": "2026-09-11",
+  "corte_publico_inmutable": {
+    "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+    "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+    "encargo": "docs/calidad/tuberias-ia/ie004/reserva-p3/ENCARGO_PREPARACION_RESERVA_CLAUDE.md"
+  },
+  "identidades": {
+    "perfil": "IE004-ES-P2/2",
+    "perfil_archivo": "docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md",
+    "perfil_sha256": "10c29934f2f8f6bfbb40546f7cf0056d4b53d720c432cacfb9d6b70abefe3d5f",
+    "perfil_bytes": 31867,
+    "base": "K-IE004/1",
+    "politica": "P-IE004/1",
+    "contrato": "IE-004/1",
+    "transporte": "IE004-P3-TRANSPORTE/1"
+  },
+  "archivos_reservados": [
+    {
+      "nombre": "SOLICITUDES_P3.json",
+      "version": "IE004-P3-A/1",
+      "bytes": 6871,
+      "sha256": "65ac9f7a8c08528009a473065de3bdf989d7852cb15561036c9bba61c79780d7"
+    },
+    {
+      "nombre": "ENTRADAS_AUXILIARES_P3.json",
+      "version": "IE004-P3-AUX/1",
+      "bytes": 1891,
+      "sha256": "da3e93ef6530120189fd1755075c55ef483dd7219267e0e4db0cc9d0733aa7a6"
+    },
+    {
+      "nombre": "ORACULO_P3.json",
+      "version": "IE004-P3-ORACULO/1",
+      "bytes": 49112,
+      "sha256": "164bf00b6c03164689797af54194703e24ac9e0bf18255936d2239daa50f0625"
+    },
+    {
+      "nombre": "NOTA_CUSTODIA_P3.md",
+      "version": "IE004-P3-CUSTODIA/1",
+      "bytes": 4037,
+      "sha256": "e2fd2e398932eb928a868e4d40aa7b720ff21cf855d8e5f58eb26aa939ae7f95"
+    }
+  ],
+  "total_solicitudes": 24,
+  "custodia_declarada": "PENDIENTE_DE_RECEPCION_HUMANA",
+  "autoria_y_exposicion": {
+    "autor_preguntas_y_oraculo": "Claude",
+    "modelo_configurado": "claude-opus-5; el modelo que sirve un turno puede diferir y no es acreditable desde dentro",
+    "sesion": "continuada, no nueva; la misma de RETP-126 y RETP-127",
+    "independencia": "Respecto del implementador (Watson) y del participante (Grok). NO independiente del linaje de diseño: el autor firmó la nota de giro que originó P2 y los dos dictámenes previos.",
+    "limitacion": "La revisión posterior de este oráculo por su autor no cuenta como auditoría independiente de su autoría.",
+    "corpus_excluidos": [
+      "48 preguntas de COBERTURA_DOCUMENTAL.json",
+      "60 literales de p2_probes.py",
+      "18 cadenas de EXPOSICION_ADICIONAL_CLAUDE.json",
+      "16 contrastes de CONTRASTES_PUBLICOS.json",
+      "2 controles de CONTROLES_PUBLICOS_R8_R11.json",
+      "ejemplos de ambos dictámenes",
+      "generación reducida declarada, evitada por regla conservadora de longitud mínima de 7 tokens"
+    ],
+    "herramientas_declaradas": "p2v2_parser.py para derivabilidad y colisión; construir_reserva_p3.py para novedad, huellas y empaquetado. Ningún desenlace del oráculo procede de una herramienta."
+  },
+  "declaracion": "Este compromiso no contiene preguntas, respuestas, expectativas, sal ni desglose por caso, y no se incluye a sí mismo ni al ZIP que lo transporta en su lista de huellas. Un compromiso sin recepción humana comprobada no abre el corrector.",
+  "estado": "RESERVA_CANDIDATA_NO_ACREDITADA"
+}

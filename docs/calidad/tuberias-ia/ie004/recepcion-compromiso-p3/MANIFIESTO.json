@@ -1,0 +1,73 @@
+{
+  "registro": "RETP-2026-130",
+  "version": 1,
+  "fecha": "2026-09-11",
+  "cortes": {
+    "lang": "d9e5f39e41876a4668cc114b36e1435d670e3c42",
+    "lab": "875128eb0826bd2566affda665f8bd65c50cc7d0"
+  },
+  "arboles": {
+    "lang": "2ec4ca60f834c4ac528d073d0eb5d3a3793c7c93",
+    "lab": "b363dd16c6df2ebbac744ebb0d47f8b4b927d142"
+  },
+  "estado": "PRECOMPROBACION_PREPARADA_SIN_RESULTADOS_AUN",
+  "reserva_leida": false,
+  "compromiso_original_conservado": true,
+  "archivos": [
+    {
+      "ruta": "ACTA_RECEPCION_COMPROMISO_P3_Y_CONTROL_PREVIO_RUST_2026_09_11.md",
+      "bytes": 5378,
+      "sha256": "74151fe015ff5a0ab3504a1089b27fad68bc8e836d284c15e66156b5540f125c",
+      "git_blob_sha": "5471f8331c6bbf4f97c93a805e3cab4cd71ffcd7"
+    },
+    {
+      "ruta": "inicio.md",
+      "bytes": 8677,
+      "sha256": "6820930e8fa6cf6f3cfa6736759c76d8988849be401afbe3c8d3d2305e1ae830",
+      "git_blob_sha": "6a7af02683e2912dd5e08e592d3b2d2863cbe64d"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/COMPROMISO_P3.json",
+      "bytes": 3193,
+      "sha256": "d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5",
+      "git_blob_sha": "86df1e67493a193c312e2950a5f62f2220866b7b"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/RECIBO_HUMANO_P3.json",
+      "bytes": 1728,
+      "sha256": "ef5ea8849004a06fcfcc4c20e2d4eeee689ebc3733c478c14ce894984022208c",
+      "git_blob_sha": "8be606e8a9d07b38bc2fd872eb334d6d492ae2a0"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/VERIFICACION_COMPROMISO.json",
+      "bytes": 292,
+      "sha256": "b586dcd3e49d9685df54f2db80f701987f641ad533fa7d05893ff25787d068f8",
+      "git_blob_sha": "49b48c489fe8a70f0432b33e3b54f0827b9ffe6f"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/README.md",
+      "bytes": 4044,
+      "sha256": "b3863d5b39780a78c815c88e6595e4069e3a82cd708770b408a156dabb706acb",
+      "git_blob_sha": "b7636c8b866fc9a6d9328cc10ed78a45c25417d7"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/sonda.rs",
+      "bytes": 10406,
+      "sha256": "cd5aff63e5ee979bcecbc843eab4ef5bad3b76459e1ed5845d10b294c6a39f04",
+      "git_blob_sha": "5cc9eb34322de7bfc18db3efa2af39bf15322746"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/casos.rs",
+      "bytes": 31761,
+      "sha256": "5e27c00b1688b465cc3690942abcb81885ca5c0eb82e860f707b1b9063523fd7",
+      "git_blob_sha": "66283714c8632616e5d9a5a6942b1e7e4fad4c6b"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/CASOS_PUBLICOS.json",
+      "bytes": 40084,
+      "sha256": "94bf8e9fe270dfb62a993dad0b566b3f8a5bcc6b4b1fee1b239f3da8bdbdfa39",
+      "git_blob_sha": "3add936c196e8786e2c0e0de5ab477b485f7d633"
+    }
+  ],
+  "auto_huella": "El manifiesto queda excluido de su propia lista."
+}

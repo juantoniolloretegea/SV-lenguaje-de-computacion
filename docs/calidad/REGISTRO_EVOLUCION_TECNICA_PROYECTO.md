@@ -1254,3 +1254,10 @@ CaMeL y FIDES impiden reclamar como novedad genérica la imposición externa de 
 No se modifica perfil /2, núcleo/IR, semántica, dominio, capturas ni oráculos. No se crea ni se lee la reserva, se reejecuta Python/Rust/WASI o se llama de nuevo al participante. La investigación bibliográfica no se incorpora al saber aplicado. No se inicia envío editorial ni se da por recibida revisión por pares. Acta y expediente espejados; índices y RETP actualizados sin reescribir evidencia anterior.
 
 **Estado conservado:** APTO_DOCUMENTAL_PARA_PREPARAR_RESERVA; CUSTODIA_NO_ACREDITADA; P3_NO_INICIADO; AISLAMIENTO_NO_VERDE. Próximo hito: compromiso y confirmación humana de custodia recuperable; después corrector y controles públicos antes de una captura. Esta publicación documenta el proceso y su falsación, sin abrir una nueva ronda o frente tecnológico.
+
+<a id="retp-130"></a>
+## RETP-2026-130 — Recepción humana del compromiso P3 y control Rust R10
+
+11/09/2026. [Acta](tuberias-ia/ACTA_RECEPCION_COMPROMISO_P3_Y_CONTROL_PREVIO_RUST_2026_09_11.md). Cortes: Lenguaje d9e5f39e41876a4668cc114b36e1435d670e3c42; laboratorio 875128eb0826bd2566affda665f8bd65c50cc7d0. Compromiso original intacto: 3193 bytes, SHA-256 d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5. Perfil /2 cotejado sin cambios. Recibo humano posterior separado: recuperación/separación confirmadas, sin inspección directa del almacén ni lectura de los cuatro archivos reservados. Se cumple la condición previa de custodia, no la cualificación de P3.
+
+Se prepara sonda Rust del recorrido por barridos, 72 controles públicos y primitivas de overflow/rangos/slices, con cupos y límites congelados antes de ejecutar. Sólo reconocimiento sintáctico: no resolución §5, verificación V ni prueba general de capacidad del perfil. No se ejecuta Python ni se envía nueva tarea a Grok. Resultados por destino/configuración se añadirán con su evidencia; cualquier fallo detiene el avance a la captura. Aislamiento NO VERDE.

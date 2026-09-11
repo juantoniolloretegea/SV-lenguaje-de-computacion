@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-129:** estado del arte y expediente científico preparatorio publicados. Se conserva la aptitud documental de /2; reserva aún no acreditada, P3 sin iniciar y aislamiento NO VERDE. Sigue la preparación/custodia de RETP-128, sin otra ronda de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-130:** compromiso P3 verificado y recepción recuperable/separada confirmada por Juan Antonio. Custodia acreditada por declaración humana. Se inicia la precomprobación pública R10 en Rust antes del corrector completo; captura de Grok todavía no habilitada y aislamiento NO VERDE. La reserva permanece cerrada.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -66,3 +66,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Preparación científica · RETP-129
 
 [Estado del arte y bibliografía](ie004/expediente-cientifico/ESTADO_DEL_ARTE_2026_09_11.md) y [expediente para revisión por pares](ie004/expediente-cientifico/EXPEDIENTE_PARA_REVISION_POR_PARES.md): 18 referencias primarias consultadas con alcance declarado, siete afirmaciones con evidencia histórica y condiciones de refutación; H7 pendiente de tarea/métrica. [Acta](ACTA_EXPEDIENTE_CIENTIFICO_Y_ESTADO_DEL_ARTE_2026_09_11.md). No se abre la reserva, se cambia /2 o se ejecuta una ronda experimental. La utilidad adicional de IA y las pruebas materiales Rust permanecen pendientes.
+
+## Recepción humana de la reserva · RETP-130
+
+[Acta y control previo](ACTA_RECEPCION_COMPROMISO_P3_Y_CONTROL_PREVIO_RUST_2026_09_11.md). Compromiso recibido: 3193 bytes, SHA-256 d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5. El recibo posterior conserva el compromiso inicial intacto. Las preguntas, notas, oráculo y nota privada de custodia no se han trasladado a Watson. No hay nuevo encargo para Grok; se espera la puerta de corrector y controles públicos. Ningún resultado de la sonda sintáctica se presenta como cualificación semántica.
