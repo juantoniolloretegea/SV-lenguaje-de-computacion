@@ -1,0 +1,143 @@
+{
+  "version": "IE004-A-LOTE-PUBLICO/1",
+  "casos": [
+    {
+      "id": "A01",
+      "archivo": "publicos/a/A01.json",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    },
+    {
+      "id": "A02",
+      "archivo": "publicos/a/A02.json",
+      "bytes": 214,
+      "sha256": "6e369f66e35359f8ae445e41ccfce515877eb26500e8270a48bd2722139b0273"
+    },
+    {
+      "id": "A03",
+      "archivo": "publicos/a/A03.json",
+      "bytes": 209,
+      "sha256": "8627e87b458c7144335e3ff7a2ca423f6d5ff2c492b47aa7e7c9d0c12eeb1edf"
+    },
+    {
+      "id": "A04",
+      "archivo": "publicos/a/A04.json",
+      "bytes": 209,
+      "sha256": "021c443c576ed7faa15499acbc70db5228b6494c6eac593b78a21fd2175980ac"
+    },
+    {
+      "id": "A05",
+      "archivo": "publicos/a/A05.json",
+      "bytes": 1059,
+      "sha256": "e04171bb129b4e0f0102d26a53ece100f76c8c07a6c0c7cbe651363a08a26663"
+    },
+    {
+      "id": "A06",
+      "archivo": "publicos/a/A06.json",
+      "bytes": 186,
+      "sha256": "5705ef2a9052556ece4a3c257bb3ad90e3aa4ca4f369cddfc888da3fbe24a73b"
+    },
+    {
+      "id": "A07",
+      "archivo": "publicos/a/A07.json",
+      "bytes": 185,
+      "sha256": "61cd2d63d3e305588fc51b777e6b695964c874591477bd6f5b9bd516d3494cf3"
+    },
+    {
+      "id": "A08",
+      "archivo": "publicos/a/A08.json",
+      "bytes": 204,
+      "sha256": "8786f299d2159dd9623af5d62e4ec6e8d2b679e32c5487702fbd2dc0843d0cf3"
+    },
+    {
+      "id": "A09",
+      "archivo": "publicos/a/A09.json",
+      "bytes": 8362,
+      "sha256": "e864bfa93559d16127e88fed7bbae49788c691b3fa089061f8e823facf0300f5"
+    },
+    {
+      "id": "A10",
+      "archivo": "publicos/a/A10.json",
+      "bytes": 2,
+      "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209"
+    },
+    {
+      "id": "A11",
+      "archivo": "publicos/a/A11.json",
+      "bytes": 187,
+      "sha256": "e722ad4b673650282b2233e4bcba2691eeed7b25eac3a0ed4af310ae83727882"
+    },
+    {
+      "id": "A12",
+      "archivo": "publicos/a/A12.json",
+      "bytes": 207,
+      "sha256": "c364507a8e98a007b37a99bd86eef69c3a6ddb9e0e3fe4abd092fe2a34394d18"
+    },
+    {
+      "id": "A13",
+      "archivo": "publicos/a/A13.json",
+      "bytes": 215,
+      "sha256": "3a59b90c6ba5d7ac4740883ffdda291e78e4bb23f89156c854d2d7b582f49571"
+    },
+    {
+      "id": "A14",
+      "archivo": "publicos/a/A14.json",
+      "bytes": 196,
+      "sha256": "c4c4d67ce4da6a58828ec3d3dd1099c7349cc131bbe62b44fc896c2211ba302e"
+    },
+    {
+      "id": "A15",
+      "archivo": "publicos/a/A15.json",
+      "bytes": 203,
+      "sha256": "8eed6b17a2b920a6d6a4253906de597033caea0ce25710e84286e8196a416457"
+    },
+    {
+      "id": "A16",
+      "archivo": "publicos/a/A16.json",
+      "bytes": 203,
+      "sha256": "ba85033d286c406cb26e3c3a6ca3c4013b8cfbc48e8cc8167629d0369e286edd"
+    },
+    {
+      "id": "A17",
+      "archivo": "publicos/a/A17.json",
+      "bytes": 203,
+      "sha256": "a6c12b654cec9df1d47982b48a05e2ca7a4eb50d7326d4f7efdd1e880e607b36"
+    },
+    {
+      "id": "A18",
+      "archivo": "publicos/a/A18.json",
+      "bytes": 191,
+      "sha256": "9e2429b12bf4578be8efd15cd0ad444c99201eb0b14339ecb6cd7fa2e2bafb52"
+    },
+    {
+      "id": "A19",
+      "archivo": "publicos/a/A19.json",
+      "bytes": 65536,
+      "sha256": "176c558e7a9a15bde360c24b3143405d975afa655c2d4e91f9d0b9ae90c6aa90"
+    },
+    {
+      "id": "A20",
+      "archivo": "publicos/a/A20.json",
+      "bytes": 65537,
+      "sha256": "7bef53595b72207993a6df754eafa0c84808e805cf31c020c4a98f0c2f981918"
+    },
+    {
+      "id": "A21",
+      "archivo": "publicos/a/A21.json",
+      "bytes": 190,
+      "sha256": "4f42fa6642c9e531a57b2066744ca5a8152d8ad00fa42abb8077de20822c4681"
+    },
+    {
+      "id": "A22",
+      "archivo": "publicos/a/A22.json",
+      "bytes": 1066,
+      "sha256": "586c5973a7e5548249f1ab96e2aee0a04f732fa4c6c59827e382841fc7bdb908"
+    },
+    {
+      "id": "A23",
+      "archivo": "publicos/a/A23.json",
+      "bytes": 162,
+      "sha256": "8ebafa4a9f4c38fbc80b239a7ed88eb4a4bbd8f2743c19bdd03962bfbc8b5a1a"
+    }
+  ]
+}

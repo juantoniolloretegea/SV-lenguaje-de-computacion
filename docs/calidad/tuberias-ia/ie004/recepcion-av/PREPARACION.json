@@ -1,0 +1,11 @@
+{
+  "registro": "RETP-2026-136",
+  "ejecuciones_de_consultas_o_controles": 0,
+  "extracciones_de_tabla_constante": 1,
+  "incidencias_preparatorias": [
+    "rustc no estaba en PATH; se recuperó la ruta exacta 1.98.0 usada por RETP-135.",
+    "La primera compilación de los controles señaló tres E0596: el cursor de Read intentaba tomar un préstamo mutable del campo de una referencia compartida. Se usa una variable local que copia la vista de lectura; los bytes custodiados permanecen inmutables. No se ejecutó ese binario."
+  ],
+  "reserva_leida": false,
+  "python_ejecutado": false
+}

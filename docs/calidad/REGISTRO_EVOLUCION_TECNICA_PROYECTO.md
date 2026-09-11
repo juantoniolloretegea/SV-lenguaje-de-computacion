@@ -1294,3 +1294,8 @@ En CP-T-128, tabla densa de 14.120.340 B: 87,46 % de capacidad nativa y 91,14 % 
 Máximo observado 621.146 unidades nuevas; 1.675.752 B capacidad de buffers A, 1.777.770 B pico calculado de reserva y 1.554 estados. No acredita peor caso universal, RSS, pila ni latencia de servicio. Se registran grafía combinante y espacio no separable como cobertura no admitida del normalizador vigente. La reserva /2 sigue cerrada. Próximo objeto concreto: correspondencia semántica y fijación de recepción/captura A/V antes de P3; P4/P5 pendientes.
 
 Recuperación documental del depósito interrumpido: [acta y comprobación de las capturas originales](tuberias-ia/ACTA_RECUPERACION_DOCUMENTAL_RETP135_2026_09_11.md). Se verificaron fuentes, huellas y resultados conservados; no se repitió la ejecución del banco.
+
+<a id="retp-136"></a>
+## RETP-2026-136 — Correspondencia y recepción separada A/V
+
+11/09/2026. [Acta de preparación](tuberias-ia/ACTA_PREPARACION_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Alcance autorizado: siguiente objeto de RETP-135. Se conservan los cinco archivos semánticos heredados y se fija admisión estricta, marco A completo, certificado V y anexo separado; fuentes y esperados antes de ejecutar. 23 controles A, 25 V, tres relaciones, 22 primitivas y nueve escenarios de transporte. Tres reproducciones Rust por configuración, matriz nativo/WASI debug/release. La preparación compila y conserva sus incidencias; no ejecuta consultas. La reserva permanece cerrada y la compatibilidad P3 integral no está acreditada. P4/P5 pendientes.

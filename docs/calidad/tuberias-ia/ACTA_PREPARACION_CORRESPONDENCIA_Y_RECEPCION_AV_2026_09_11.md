@@ -1,0 +1,11 @@
+# Preparación de correspondencia semántica y recepción A/V
+
+**RETP-2026-136 · 11/09/2026 · PREPARADO_PARA_CONTRASTE_PUBLICO.** Juan Antonio autoriza continuar con el siguiente paso después de custodiar RETP-135. Cortes de entrada: Calidad `72db23fbe2bf0ee746c32287c5f0d66d6ebf63dd`; laboratorio `b8c22b897cc1e5eb46db6d6dcf8b824c0c7f388b`.
+
+Se fija el [contrato del receptor](ie004/recepcion-av/CONTRATO_RECEPCION_AV_1.md), la [correspondencia con /2 y estado de P3](ie004/recepcion-av/CORRESPONDENCIA_SEMANTICA_Y_RESERVA.md), [fuentes y huellas previas](ie004/recepcion-av/FIJACION_PREVIA.json) y [controles públicos](ie004/recepcion-av/CONTROLES_PUBLICOS.json). AGENTS, Pilares, perfiles/ensamblaje, transición y arquitectura conservan los blobs de sus lecturas completas anteriores; las piezas de fase, workflow, /2, sucesora de coste, contrato de captura y compromiso público se han leído.
+
+El código semántico anterior permanece intacto. La nueva admisión posee el original, exige esquema estricto y máximos antes de acumular bytes. Construye el cuerpo A completo y su marco comprobable; V se recibe posteriormente por otro proceso/input y sólo produce un anexo. Su certificado prueba una derivación completa conforme a la tabla de expresiones; no reemplaza el análisis de todos los significados ni obtiene autoridad normativa. WASI conserva entorno vacío y cero directorios preabiertos.
+
+Quedan fijados 23 controles A, 25 V y tres relaciones, tres reproducciones Rust por configuración, 22 primitivas y nueve escenarios de procesos/pipes. Se usa una matriz nativo/WASI, debug/release. El binario receptor excluye el corpus incorporado al binario de controles. Fuentes compiladas durante preparación, con la incidencia E0596 conservada en PREPARACION.json; una extracción de tabla constante, cero ejecuciones de consultas/controles en este corte.
+
+**No se declara resultado todavía.** Los resultados irán en acta posterior, incluidos los fallos. La reserva permanece cerrada: hay correspondencia semántica declarada, pero faltan adaptación estricta del lote P3 y resolución de la asociación con su identidad /2 antes de usarla. P4/P5, memoria física, utilidad del participante, catálogo/localización y fila 9 conservan su estado. No se ha pedido otra entrega a Grok ni leído preguntas u oráculo reservado.

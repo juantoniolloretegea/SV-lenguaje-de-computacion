@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-135:** contraste semántico público satisfecho: 61/61 semánticos, 72/72 sintácticos y 26 primitivas por configuración Rust nativo/WASI debug/release. Significados antes de permisos y coste conjunto contrastados. Sin corrección ni reintento. Captura A/V por fijar; reserva cerrada y aislamiento NO VERDE.
+**Estado vigente · RETP-136:** correspondencia y recepción A/V fijadas para contraste público. Código semántico heredado intacto; 23 controles A, 25 V, tres relaciones y nueve escenarios de transporte. A entrega antes de abrir V. Cero ejecuciones de controles en la preparación. Reserva cerrada; P3 integral y P4/P5 pendientes.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -92,3 +92,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 [Acta y evidencia](ACTA_RESULTADO_SEMANTICA_A_2026_09_11.md): 61/61 más 72/72 y 26 primitivas en cuatro configuraciones. Máximo observado 621.146 unidades; capacidad agregada 1.675.752 B y pico solicitado 1.777.770 B. Sin afirmar peor caso universal, RSS ni latencia de servicio. Próximo objeto: correspondencia semántica y fijación de captura A/V; no hay nuevo encargo a Grok.
 
 Recuperación documental del depósito interrumpido: [acta y comprobación de las capturas originales](ACTA_RECUPERACION_DOCUMENTAL_RETP135_2026_09_11.md). Se verificaron fuentes, huellas y resultados conservados; no se repitió la ejecución del banco.
+
+## Correspondencia y recepción separada · RETP-136
+
+[Preparación fijada](ACTA_PREPARACION_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Ensayo público pendiente de ejecución; no hay nueva captura solicitada al participante ni apertura de la reserva.

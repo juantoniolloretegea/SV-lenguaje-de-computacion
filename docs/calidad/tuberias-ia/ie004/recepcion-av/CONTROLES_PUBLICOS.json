@@ -1,0 +1,639 @@
+{
+  "registro": "RETP-2026-136",
+  "version": "IE004-AV-CONTROLES/1",
+  "lote_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+  "fuente_captura_anterior_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+  "casos_a": [
+    {
+      "id": "A01",
+      "file": "publicos/a/A01.json",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "S34",
+      "vigente": true
+    },
+    {
+      "id": "A02",
+      "file": "publicos/a/A02.json",
+      "bytes": 214,
+      "sha256": "6e369f66e35359f8ae445e41ccfce515877eb26500e8270a48bd2722139b0273",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "S35",
+      "vigente": true
+    },
+    {
+      "id": "A03",
+      "file": "publicos/a/A03.json",
+      "bytes": 209,
+      "sha256": "8627e87b458c7144335e3ff7a2ca423f6d5ff2c492b47aa7e7c9d0c12eeb1edf",
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "C03",
+      "vigente": true
+    },
+    {
+      "id": "A04",
+      "file": "publicos/a/A04.json",
+      "bytes": 209,
+      "sha256": "021c443c576ed7faa15499acbc70db5228b6494c6eac593b78a21fd2175980ac",
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 2
+      },
+      "fuente": "S01",
+      "vigente": false
+    },
+    {
+      "id": "A05",
+      "file": "publicos/a/A05.json",
+      "bytes": 1059,
+      "sha256": "e04171bb129b4e0f0102d26a53ece100f76c8c07a6c0c7cbe651363a08a26663",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "S26",
+      "vigente": true
+    },
+    {
+      "id": "A06",
+      "file": "publicos/a/A06.json",
+      "bytes": 186,
+      "sha256": "5705ef2a9052556ece4a3c257bb3ad90e3aa4ca4f369cddfc888da3fbe24a73b",
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "S20",
+      "vigente": true
+    },
+    {
+      "id": "A07",
+      "file": "publicos/a/A07.json",
+      "bytes": 185,
+      "sha256": "61cd2d63d3e305588fc51b777e6b695964c874591477bd6f5b9bd516d3494cf3",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "Registro artificial; no acredita concentración ni condición clínica.",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          16
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "S45",
+      "vigente": true
+    },
+    {
+      "id": "A08",
+      "file": "publicos/a/A08.json",
+      "bytes": 204,
+      "sha256": "8786f299d2159dd9623af5d62e4ec6e8d2b679e32c5487702fbd2dc0843d0cf3",
+      "esperado": {
+        "estado": "SIN_SOLICITUD_POSITIVA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "C01",
+      "vigente": true
+    },
+    {
+      "id": "A09",
+      "file": "publicos/a/A09.json",
+      "bytes": 8362,
+      "sha256": "e864bfa93559d16127e88fed7bbae49788c691b3fa089061f8e823facf0300f5",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "BYTES_LIMITE"
+    },
+    {
+      "id": "A10",
+      "file": "publicos/a/A10.json",
+      "bytes": 2,
+      "sha256": "b3d510ef04275ca8e698e5b3cbb0ece3949ef9252f0cdc839e9ee347409a2209",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "UTF8_INVALIDO"
+    },
+    {
+      "id": "A11",
+      "file": "publicos/a/A11.json",
+      "bytes": 187,
+      "sha256": "e722ad4b673650282b2233e4bcba2691eeed7b25eac3a0ed4af310ae83727882",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "TRUNCADO"
+    },
+    {
+      "id": "A12",
+      "file": "publicos/a/A12.json",
+      "bytes": 207,
+      "sha256": "c364507a8e98a007b37a99bd86eef69c3a6ddb9e0e3fe4abd092fe2a34394d18",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "CLAVE_DUPLICADA"
+    },
+    {
+      "id": "A13",
+      "file": "publicos/a/A13.json",
+      "bytes": 215,
+      "sha256": "3a59b90c6ba5d7ac4740883ffdda291e78e4bb23f89156c854d2d7b582f49571",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "ESQUEMA_INVALIDO"
+    },
+    {
+      "id": "A14",
+      "file": "publicos/a/A14.json",
+      "bytes": 196,
+      "sha256": "c4c4d67ce4da6a58828ec3d3dd1099c7349cc131bbe62b44fc896c2211ba302e",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "ESQUEMA_INVALIDO"
+    },
+    {
+      "id": "A15",
+      "file": "publicos/a/A15.json",
+      "bytes": 203,
+      "sha256": "8eed6b17a2b920a6d6a4253906de597033caea0ce25710e84286e8196a416457",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "ESQUEMA_INVALIDO"
+    },
+    {
+      "id": "A16",
+      "file": "publicos/a/A16.json",
+      "bytes": 203,
+      "sha256": "ba85033d286c406cb26e3c3a6ca3c4013b8cfbc48e8cc8167629d0369e286edd",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "ENTERO_O_DIMENSION_INVALIDA"
+    },
+    {
+      "id": "A17",
+      "file": "publicos/a/A17.json",
+      "bytes": 203,
+      "sha256": "a6c12b654cec9df1d47982b48a05e2ca7a4eb50d7326d4f7efdd1e880e607b36",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "relacion": "mismos_bytes_decodificados_A01"
+    },
+    {
+      "id": "A18",
+      "file": "publicos/a/A18.json",
+      "bytes": 191,
+      "sha256": "9e2429b12bf4578be8efd15cd0ad444c99201eb0b14339ecb6cd7fa2e2bafb52",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "JSON_INVALIDO"
+    },
+    {
+      "id": "A19",
+      "file": "publicos/a/A19.json",
+      "bytes": 65536,
+      "sha256": "176c558e7a9a15bde360c24b3143405d975afa655c2d4e91f9d0b9ae90c6aa90",
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "frontera": "65536_bytes_transporte"
+    },
+    {
+      "id": "A20",
+      "file": "publicos/a/A20.json",
+      "bytes": 65537,
+      "sha256": "7bef53595b72207993a6df754eafa0c84808e805cf31c020c4a98f0c2f981918",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "BYTES_LIMITE",
+      "observados": 65537
+    },
+    {
+      "id": "A21",
+      "file": "publicos/a/A21.json",
+      "bytes": 190,
+      "sha256": "4f42fa6642c9e531a57b2066744ca5a8152d8ad00fa42abb8077de20822c4681",
+      "esperado": {
+        "estado": "A_TRANSPORTE_RECHAZADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "causa": "JSON_INVALIDO"
+    },
+    {
+      "id": "A22",
+      "file": "publicos/a/A22.json",
+      "bytes": 1066,
+      "sha256": "586c5973a7e5548249f1ab96e2aee0a04f732fa4c6c59827e382841fc7bdb908",
+      "esperado": {
+        "estado": "A_TOKENS_LIMITE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      }
+    },
+    {
+      "id": "A23",
+      "file": "publicos/a/A23.json",
+      "bytes": 162,
+      "sha256": "8ebafa4a9f4c38fbc80b239a7ed88eb4a4bbd8f2743c19bdd03962bfbc8b5a1a",
+      "esperado": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      }
+    }
+  ],
+  "casos_v": [
+    {
+      "id": "V01",
+      "file": "publicos/v/V01.json",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "estado": "V_AUSENTE",
+      "causa": null,
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V02",
+      "file": "publicos/v/V02.json",
+      "bytes": 5196,
+      "sha256": "0f2909687dc1dd9d79706ed5977c8fea55d326640d55af03dbd0be968c02ae7e",
+      "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+      "causa": null,
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V03",
+      "file": "publicos/v/V03.json",
+      "bytes": 262144,
+      "sha256": "c892eec3158c2cea4c0b23b6eada9368a92eecd7e6650f256a08aa3d65121f3b",
+      "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+      "causa": null,
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V04",
+      "file": "publicos/v/V04.json",
+      "bytes": 11,
+      "sha256": "dcf58d6c8a2d9f3fff0ffea121b5c562ce793941122f801eb031a3d7d82f7ef7",
+      "estado": "V_RECHAZADA",
+      "causa": "TRUNCADO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V05",
+      "file": "publicos/v/V05.json",
+      "bytes": 262145,
+      "sha256": "c2d2c021dea43324c526e0a6be24f06a6d2409856c566f5a03e11b906f7afc03",
+      "estado": "V_RECHAZADA",
+      "causa": "BYTES_LIMITE",
+      "original": "A01",
+      "cupo": 1000000,
+      "observados": 262145
+    },
+    {
+      "id": "V06",
+      "file": "publicos/v/V06.json",
+      "bytes": 5196,
+      "sha256": "0f2909687dc1dd9d79706ed5977c8fea55d326640d55af03dbd0be968c02ae7e",
+      "estado": "V_RECHAZADA",
+      "causa": "PRESUPUESTO_AGOTADO",
+      "original": "A01",
+      "cupo": 1
+    },
+    {
+      "id": "V07",
+      "file": "publicos/v/V07.json",
+      "bytes": 5196,
+      "sha256": "e316c1260a1ef6bf98973dda80c069abdc7e1e765140a23f759a36b3b9c2963e",
+      "estado": "V_RECHAZADA",
+      "causa": "CORRELACION_INVALIDA",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V08",
+      "file": "publicos/v/V08.json",
+      "bytes": 5196,
+      "sha256": "1ca00c23d3feecff1d3bdf09b38107f9f20a416acd85645a196b5da8bca54823",
+      "estado": "V_RECHAZADA",
+      "causa": "CORRELACION_INVALIDA",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V09",
+      "file": "publicos/v/V09.json",
+      "bytes": 5196,
+      "sha256": "057d94a023163aa8a29f9a5b79c91d7a5fe8a325429ff98062f45353ee7eaa81",
+      "estado": "V_RECHAZADA",
+      "causa": "CORRELACION_INVALIDA",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V10",
+      "file": "publicos/v/V10.json",
+      "bytes": 5188,
+      "sha256": "2f6313ae98352a910a533713292b97309eeddc632dac59a201e84875d33f40eb",
+      "estado": "V_RECHAZADA",
+      "causa": "CORRELACION_INVALIDA",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V11",
+      "file": "publicos/v/V11.json",
+      "bytes": 5196,
+      "sha256": "040cb8cb208525ce0ad1edb871876869788db175151fc87b6650b54d84ee49ff",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V12",
+      "file": "publicos/v/V12.json",
+      "bytes": 5196,
+      "sha256": "9fec3897e87298482219df2445981cfc11ccb8cdb4162f87240a1d2329a04e83",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V13",
+      "file": "publicos/v/V13.json",
+      "bytes": 5198,
+      "sha256": "61c577bdcf1ebe93908a8483889ecff8a0d551e19905c6bd0160ea505555ed16",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V14",
+      "file": "publicos/v/V14.json",
+      "bytes": 5197,
+      "sha256": "fa3859c19239de7b6ebe83168c7fa9535330b41118460309db8aab3869ddc711",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V15",
+      "file": "publicos/v/V15.json",
+      "bytes": 5196,
+      "sha256": "f091063d6115957a658cca8ce856e4088a1052877d98cdacbad87ce762573f62",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V16",
+      "file": "publicos/v/V16.json",
+      "bytes": 5196,
+      "sha256": "691db788b0944cc3475623db01c83fb5e1e5ac3a88d2970e7d5e02aea7bbc555",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V17",
+      "file": "publicos/v/V17.json",
+      "bytes": 5268,
+      "sha256": "a287ae753d7f2e72d67d3862e94a9a4707134935802224043f9ef89652fa06f7",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V18",
+      "file": "publicos/v/V18.json",
+      "bytes": 37668,
+      "sha256": "fa5b1bf4c3098df2aa7c2f1a7f2c3bfa0c8a334840fc201ed56dc3f34be24c35",
+      "estado": "V_RECHAZADA",
+      "causa": "MEMORIA_LIMITE",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V19",
+      "file": "publicos/v/V19.json",
+      "bytes": 5201,
+      "sha256": "4fb56a6c917c5be9d4e9d5ef150472b4919b52141219dbecdb4111a2af7d6ad4",
+      "estado": "V_RECHAZADA",
+      "causa": "MEMORIA_LIMITE",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V20",
+      "file": "publicos/v/V20.json",
+      "bytes": 5217,
+      "sha256": "4198a196ec7e6e27d69f6ee74041ff0b94bc24e9809760e45d4c0d63fb746758",
+      "estado": "V_RECHAZADA",
+      "causa": "ESQUEMA_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V21",
+      "file": "publicos/v/V21.json",
+      "bytes": 197,
+      "sha256": "29e5b217db1c4116891d938a413e5095628e36399b82bb630b26c2a792357c2a",
+      "estado": "V_RECHAZADA",
+      "causa": "PROFUNDIDAD_LIMITE",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V22",
+      "file": "publicos/v/V22.json",
+      "bytes": 5215,
+      "sha256": "015a5542bef45214a06578bdc1a84aebd998a2a84c0de0e21baa3a2bf0a5d1ef",
+      "estado": "V_RECHAZADA",
+      "causa": "CLAVE_DUPLICADA",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V23",
+      "file": "publicos/v/V23.json",
+      "bytes": 1,
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "estado": "V_RECHAZADA",
+      "causa": "UTF8_INVALIDO",
+      "original": "A01",
+      "cupo": 1000000
+    },
+    {
+      "id": "V24",
+      "file": "publicos/v/V24.json",
+      "bytes": 5493,
+      "sha256": "42726c739c722a4fc56bb391f507c8699e79ffb21846f37d04750a2426ad461b",
+      "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+      "causa": null,
+      "original": "A07",
+      "cupo": 1000000
+    },
+    {
+      "id": "V25",
+      "file": "publicos/v/V25.json",
+      "bytes": 5493,
+      "sha256": "157fb5ffdf89b4b79e3f101ee35235c72d61a585e1d1701e210cc9a92acccd89",
+      "estado": "V_RECHAZADA",
+      "causa": "CERTIFICADO_INVALIDO",
+      "original": "A07",
+      "cupo": 1000000
+    }
+  ],
+  "repeticiones_rust": 3,
+  "escenarios_transporte": [
+    "V01",
+    "V02",
+    "V03",
+    "V04",
+    "V05",
+    "V06",
+    "V08",
+    "V02_DEMORADA",
+    "V_SIN_EOF"
+  ],
+  "relaciones": [
+    [
+      "A01",
+      "A02"
+    ],
+    [
+      "A01",
+      "A17"
+    ],
+    [
+      "A01",
+      "A19"
+    ]
+  ],
+  "memoria_fisica": "NO_MEDIDA",
+  "reserva_leida": false
+}
