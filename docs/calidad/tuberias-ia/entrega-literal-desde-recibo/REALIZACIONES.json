@@ -1,0 +1,65 @@
+{
+  "nota": "Huellas calculadas sobre los artefactos conservados de ensayo-1; no autentican al host. Los comandos exactos constan en RESULTADO.json.",
+  "artefactos": [
+    {
+      "archivo": "conductor-debug.bin",
+      "bytes": 5073240,
+      "sha256": "e3d617ce636e6f374a388e75d431cf2e4a91519a22532b27a12031bc1e2b4bd3"
+    },
+    {
+      "archivo": "conductor-release.bin",
+      "bytes": 4647000,
+      "sha256": "16579611b805075c11ba20360b005a54f8b350da5f67a79daa25860c8531e102"
+    },
+    {
+      "archivo": "entregas-lote-debug.bin",
+      "bytes": 5305760,
+      "sha256": "877492f4c30020ec235d22967bfba9550f486dd6b7e1ae749a48599770b926cf"
+    },
+    {
+      "archivo": "entregas-lote-release.bin",
+      "bytes": 4724776,
+      "sha256": "e2a067089aa16e3900daf51b069208faea061df5884f358109b55f1b5f1a3caf"
+    },
+    {
+      "archivo": "g1-tests-debug.bin",
+      "bytes": 7946928,
+      "sha256": "bb40a9eb940715c820e82c35205e81bd0a81587393d5b9c2951d65ef32a2a4ca"
+    },
+    {
+      "archivo": "g1-tests-release.bin",
+      "bytes": 7434608,
+      "sha256": "95d82226b0e4fd7d8a30584a3b86d37df32bf8d782d060b620a66a224738e096"
+    },
+    {
+      "archivo": "libg1-debug.rlib",
+      "bytes": 2813768,
+      "sha256": "83a5ee11eb15495c042d79b02b6e6ba2e377f663222b942b89f333714f256cb7"
+    },
+    {
+      "archivo": "libg1-release.rlib",
+      "bytes": 1118950,
+      "sha256": "58b258a48fa0a181fd801ac2689ec1dd72bfa2966be14a5f8ee135f649d741eb"
+    },
+    {
+      "archivo": "liblote-debug.rlib",
+      "bytes": 1084940,
+      "sha256": "102871ea649807654bc0769431ba80e764eec1b4a22b7c006217bcddedc6eb4f"
+    },
+    {
+      "archivo": "liblote-release.rlib",
+      "bytes": 388036,
+      "sha256": "0ad4563dd7d1490e4c0fc923361eacd54ba90d66d58a1c588309ae2d1ae72026"
+    },
+    {
+      "archivo": "lote-tests-debug.bin",
+      "bytes": 8039760,
+      "sha256": "3f9928570291f8104f8832c03ead5117c158b92bde12e0292bbf1043db868d28"
+    },
+    {
+      "archivo": "lote-tests-release.bin",
+      "bytes": 7399624,
+      "sha256": "da1540a737125f380abb8bea853dbe7513c0414b8c49d5c79dfcd63f06ef5b6d"
+    }
+  ]
+}

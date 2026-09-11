@@ -1,0 +1,43 @@
+{
+  "version": "IE004-ENTREGA-LITERAL/1",
+  "registro": "RETP-2026-149",
+  "base": "2e9dc3b216035725521a850b8157dc7d736fe57c",
+  "alcance": "Candidata nativa experimental; identidad de bytes entre marco propuesto y cuerpo del recibo protegido; sin nueva interpretación ni efecto profesional",
+  "presupuestos": {
+    "intentos_entrega_por_recibo": 1,
+    "marco_propuesto_max_bytes": 4144,
+    "reserva_propuesta_max_bytes": 4144,
+    "procesos_plazo_segundos": 60,
+    "matrices": 1,
+    "modos": [
+      "debug",
+      "release"
+    ],
+    "correcciones_causales_maximas": 1
+  },
+  "esperados": {
+    "original": "COMPROBADA",
+    "dato_sin_rehash": "Integridad",
+    "dato_rehash": "ContenidoDistinto",
+    "negacion_rehash": "ContenidoDistinto",
+    "marco_otro_recibo_con_distinto_cuerpo": "ContenidoDistinto",
+    "manejador_otro_custodio": "Custodia(Pertenencia)",
+    "reintento": "YaIntentada",
+    "antes_a": "Custodia(Estado)",
+    "rebasar_marco": "Limite",
+    "falta_traza_posterior": "Custodia(Recuperacion)",
+    "fallo_cuenta": "Custodia(Limite)",
+    "lote_24": "24 entregas exactas; huellas RETP-140 conservadas",
+    "forjar_entrega": "no compila por campos privados",
+    "usar_tras_destruir_custodio": "no compila por vida insuficiente"
+  },
+  "fuera": [
+    "No confirma verdad de la fuente",
+    "No detector universal de inferencia ni de inyección",
+    "No reconstruye pensamiento interno",
+    "No prueba pantalla final ni renderizador",
+    "No modificación de R1/IR/Frame/SUCESO",
+    "No reserva ni modelo ni ampliación P3/P4/P5"
+  ],
+  "proceso": "Cotejar referencias previas; compilar debug y release; correr nueva frontera y regresiones G1/lote; conservar entradas y salidas; no ajustar esperado al resultado"
+}

@@ -1,0 +1,236 @@
+{
+  "head": "2e9dc3b216035725521a850b8157dc7d736fe57c",
+  "fuentes_cotejadas": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+      "git_blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1",
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/verificar_v.rs",
+      "git_blob": "c07782f4e261ee90163eefa48241b1850507357d",
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+      "git_blob": "f1f3967ee442df61a022ff99afb1d2c0512a433a",
+      "sha256": "bcb2b419d45d927fa40693b48881ccd25d27a98fb7a4669ae5651ebcc589fb23"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs",
+      "git_blob": "46f0e22a905db433c97ca26bd81ae06c84c60102",
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/recepcion_a.rs",
+      "git_blob": "14c7c92468975cb1774cc02d9ecfe749a6dbee82",
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    }
+  ],
+  "rectoras": "lecturas completas conservadas; mismos bytes",
+  "fuentes_existentes_verificadas": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/PLAN_FIJADO.json",
+      "git_blob": "d3bcadd27c7882f14ec7a1ffe5a2468dc9ed64bc"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/ejecutar.mjs",
+      "git_blob": "94faff9b7ea052a939065ceb6928700f8f1ff2ad"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/lib.rs",
+      "git_blob": "29943dd5525ef6aa9ed486fadb20895690579822"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/tests.rs",
+      "git_blob": "1af0b2558d7ccb21ad58ad0b0afddbe699fa7a6a"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/CONTRATO_ADAPTADOR_LOTE_1.md",
+      "git_blob": "c0a35ab4ad38be3d1d7bc7f49460a99cdf7514f9"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/CONTROLES_PUBLICOS.json",
+      "git_blob": "48101176eac9edaa3bb1b66de16d317b5bb80785"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/ENTRADAS_PUBLICAS.json.gz.b64",
+      "git_blob": "13e5667f86a4b7726da034f263969f370ad90de9"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/LOTE_SINTETICO_PUBLICO.json",
+      "git_blob": "a566ef7c660684e3a1991bc71d0dc7ea3a5b3051"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/MONTAJES_PUBLICOS.json",
+      "git_blob": "9e285c13382e62d785cc5ee86996d2eb7d7b37cb"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/PROCEDENCIA_Y_ESPERADOS.json",
+      "git_blob": "3b70a63becf7ffe575b47d380ecb1c1dda289590"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/RESULTADO_Y_CONTINUIDAD.md",
+      "git_blob": "ec5854b71400a3d06f7914261f7bfbdef09d189f"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/adaptador.rs",
+      "git_blob": "1a4148bb03e58520917559522b6d178c8d637f78"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/ejecutar.mjs",
+      "git_blob": "7dbbb64e7006498c1a69836b0ee88df5c28bac3b"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/main.rs",
+      "git_blob": "571f203b89716bd304037c2b0618a6aedcd38f9e"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-p3/reproducir-completa-corregida.mjs",
+      "git_blob": "8bc4e68b7deb1a04f3c7044654189ff7020dec76"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/ARCHIVO_CAPTURAS.json",
+      "git_blob": "19a267b363a8ae1e5ef405b2da1cbdac889ff43d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/CAPTURAS_RECUPERABLES.json.gz.b64",
+      "git_blob": "c5d5a0e854c5aa97a996a1f3cd1905ef1e07eda0"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/COMPROBACION_RESULTADOS.json",
+      "git_blob": "2d5c5de382c362abeb90bd265dae5b1bef967c95"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/CONTRATO_RECEPCION_AV_1.md",
+      "git_blob": "70786ba30922b9901bc0094bfc867694a675f52c"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/CONTROLES_PUBLICOS.json",
+      "git_blob": "8efdab4c9fa743c1b6b0614cfc942e073c27d887"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/FIJACION_PREVIA.json",
+      "git_blob": "43e8345f74c7e1e0a6396dc2ace50bca62420d4e"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/casos_fijados.rs",
+      "git_blob": "15e0231b7f1686c883c7fb3e93e9f403158e80af"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/controles.rs",
+      "git_blob": "7d9dd57ee117fda94017147ac10e8b2f9b1a79aa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/ejecutar.mjs",
+      "git_blob": "d627c3a94f0205ce7a08a69f168f5d970fc4e94d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/json_estricto.rs",
+      "git_blob": "e42c89dfa7484aae0f8fd3936968ff065ebf0cef"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+      "git_blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/a/A01.json",
+      "git_blob": "94de534bb7074bacbc171dd58814dc30ff959c15"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/v/V02.json",
+      "git_blob": "9e2d68e74566e3db8a3006f45e71ba5192b4c7e0"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/v/V04.json",
+      "git_blob": "9ffc3139d8747b7a59b606d27a315a4ec8964007"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/recepcion_a.rs",
+      "git_blob": "14c7c92468975cb1774cc02d9ecfe749a6dbee82"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs",
+      "git_blob": "46f0e22a905db433c97ca26bd81ae06c84c60102"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/verificar_v.rs",
+      "git_blob": "c07782f4e261ee90163eefa48241b1850507357d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/CAPSULA_TESTIGOS_G1.json",
+      "git_blob": "2e3e4124a199ec6d66b9b51fda5b9a959a2ee106"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/AMPLIACION_ADVERSARIAL.json",
+      "git_blob": "d4a2b8349fce5c66865f9bebad611513ffb0a765"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/PERFIL_Y_PLAN.json",
+      "git_blob": "353f03306d5bfae98266d462dd3ec6c717842942"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/av.rs",
+      "git_blob": "10aee223e5b65f02fa22e71c4abe9307a5939172"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/ejecutar.mjs",
+      "git_blob": "4a06a7744fc8533f6f11bf39a9b75e1f2a6f74c4"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/json_vista.rs",
+      "git_blob": "ff917c2d9c32222f693717915b2943645818f273"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+      "git_blob": "f1f3967ee442df61a022ff99afb1d2c0512a433a"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/tests.rs",
+      "git_blob": "aa9e13bf42a5541542fec7b6ee2fdf1197d8fd50"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/gramatica.rs",
+      "git_blob": "8817cd8b0f8b211078c4a749a0f60e2935e40bd4"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/recursos.rs",
+      "git_blob": "d86d90761d3193bfcc595500d78f5adf04e35947"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/semantica.rs",
+      "git_blob": "f7525cb680aef89699bde5fdc18637b40fe79bf1"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/servicio.rs",
+      "git_blob": "2e364d7c8b8c59771a2bdfc6e96a7e1fce97c057"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/sintaxis.rs",
+      "git_blob": "adfb23b01e0273601edb5416cc482557b0ca2f3b"
+    }
+  ],
+  "archivos_candidatos_nuevos_o_modificados": [
+    "entrega-literal/lote.rs",
+    "entrega-literal/main.rs",
+    "lote-g1/lib.rs",
+    "recibo-g1/candidata/entrega/tests.rs",
+    "recibo-g1/candidata/entrega.rs",
+    "recibo-g1/candidata/lib.rs"
+  ]
+}

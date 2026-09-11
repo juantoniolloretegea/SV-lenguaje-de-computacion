@@ -1,0 +1,182 @@
+--- a/entrega-literal/lote.rs
++++ b/entrega-literal/lote.rs
+@@ -0,0 +1,3 @@
++#![forbid(unsafe_code)]
++use std::{path::PathBuf,fs};
++fn main(){let out=PathBuf::from(std::env::args().nth(1).unwrap());fs::create_dir(&out).unwrap();let mut l=lote::EnlacePublico::preparar(include_bytes!("../lote-p3/LOTE_SINTETICO_PUBLICO.json"),include_bytes!("../lote-p3/MONTAJES_PUBLICOS.json"),g1::Realizacion{fuentes_sha256:[0;32],binario_sha256:[0;32]}).unwrap();for i in 0..24{l.ejecutar(i).unwrap();let m=l.recuperar(i,g1::Papel::Marco).unwrap().to_vec();l.comprobar_entrega(i,&m).unwrap();let e=l.entrega(i).unwrap();assert_eq!(e.identidad(),l.identidad(i).unwrap());fs::write(out.join(format!("P3-{:02}.json",i+1)),e.cuerpo()).unwrap();}l.completo().unwrap();println!("24 entregas literales conservadas");}
+--- a/entrega-literal/main.rs
++++ b/entrega-literal/main.rs
+@@ -0,0 +1,22 @@
++#![forbid(unsafe_code)]
++//! Conductor de ensayo público: la referencia y la vigencia proceden del montaje fijado.
++//! No constituye recepción profesional ni concede permiso. stdout sólo usa EntregaLiteral.
++use std::{io::{Read,Write},fs::File};
++fn causa(e:g1::FalloEntrega)->&'static str { use g1::FalloEntrega::*;match e {
++ ContenidoDistinto=>"CONTENIDO_DISTINTO",Integridad=>"INTEGRIDAD",Limite=>"LIMITE",
++ YaIntentada=>"YA_INTENTADA",Custodia(_)=>"CUSTODIA"
++}}
++fn main(){if let Err(e)=run(){eprintln!("{{\"estado\":\"RECHAZADA\",\"causa\":\"{}\"}}",e);std::process::exit(2);}}
++fn run()->Result<(),&'static str>{
++ let a:Vec<_>=std::env::args().collect();if a.len()!=3{return Err("ARGUMENTOS")}
++ let mut c=g1::Custodio::nuevo(g1::Realizacion{fuentes_sha256:[0;32],binario_sha256:[0;32]}).map_err(|_|"CUSTODIA")?;
++ // Ceros = metadatos no acreditados por este conductor. La campaña guarda las huellas reales.
++ let mut input=File::open(&a[1]).map_err(|_|"ENTRADA")?;
++ let h=c.abrir(&mut input,true).map_err(|_|"CUSTODIA")?;
++ c.ejecutar_a(&h).map_err(|_|"CUSTODIA")?;
++ let mut proposed=Vec::new();let mut file=File::open(&a[2]).map_err(|_|"ENTRADA")?.take(4145);
++ file.read_to_end(&mut proposed).map_err(|_|"ENTRADA")?;
++ c.comprobar_entrega(&h,&proposed).map_err(causa)?;
++ let e=c.entrega(&h).map_err(causa)?;
++ std::io::stdout().lock().write_all(e.cuerpo()).map_err(|_|"SALIDA")?;Ok(())
++}
+--- a/lote-g1/lib.rs
++++ b/lote-g1/lib.rs
+@@ -13,7 +13,7 @@
+ const AGREGADO:u64=96*1024*1024;
+ const MARGEN:u64=20*1024*1024;
+ #[derive(Debug,Clone,Copy,PartialEq,Eq)]
+-pub enum ErrorEnlace{IdentidadLote,IdentidadMontaje,Limite,Integridad,Correspondencia,Esquema,Orden,Incompleto,Receptor(g1::Fallo)}
++pub enum ErrorEnlace{IdentidadLote,IdentidadMontaje,Limite,Integridad,Correspondencia,Esquema,Orden,Incompleto,Receptor(g1::Fallo),Entrega(g1::FalloEntrega)}
+ type ER<T>=Result<T,ErrorEnlace>;
+ impl From<FalloT> for ErrorEnlace{fn from(_:FalloT)->Self{Self::Esquema}}
+ impl From<g1::Fallo> for ErrorEnlace{fn from(e:g1::Fallo)->Self{Self::Receptor(e)}}
+@@ -97,6 +97,14 @@
+  pub fn identidad(&self,i:usize)->ER<(u64,u64)>{let(_,c,h)=self.pareja(i)?;Ok(c.identidad(h)?)}
+  pub fn montaje(&self,i:usize)->ER<bool>{Ok(self.posiciones.get(i).and_then(Option::as_ref).ok_or(ErrorEnlace::Orden)?.vigente)}
+  pub fn rango(&self,i:usize)->ER<(usize,usize)>{let p=self.posiciones.get(i).and_then(Option::as_ref).ok_or(ErrorEnlace::Orden)?;Ok((p.inicio,p.fin))}
++ pub fn comprobar_entrega(&mut self,i:usize,marco:&[u8])->ER<()>{
++  self.pareja(i)?;
++  let h=self.posiciones[i].as_ref().unwrap().manejador.as_ref().unwrap();
++  self.custodios[i/4].comprobar_entrega(h,marco).map_err(ErrorEnlace::Entrega)
++ }
++ pub fn entrega(&self,i:usize)->ER<g1::EntregaLiteral<'_>>{
++  let(_,c,h)=self.pareja(i)?;c.entrega(h).map_err(ErrorEnlace::Entrega)
++ }
+  pub fn completo(&self)->ER<()>{if self.detenido||self.siguiente!=24{return Err(ErrorEnlace::Incompleto)}for i in 0..24{let(_,c,h)=self.pareja(i)?;c.recibo(h)?;if c.estado(h)?.1!=g1::EstadoV::NoSolicitada{return Err(ErrorEnlace::Incompleto)}}Ok(())}
+ }
+ #[cfg(test)]mod tests;
+--- a/recibo-g1/candidata/entrega/tests.rs
++++ b/recibo-g1/candidata/entrega/tests.rs
+@@ -0,0 +1,19 @@
++use super::*;
++use crate::{Papel,Realizacion};
++const INPUT:&[u8]=include_bytes!("../fixtures/solicitud-a01.bin");
++const FRAME:&[u8]=include_bytes!("../fixtures/marco-a01.bin");
++fn ready(vigente:bool)->(Custodio,Manejador){let mut c=Custodio::nuevo(Realizacion{fuentes_sha256:[1;32],binario_sha256:[2;32]}).unwrap();let h=c.abrir(&mut INPUT,vigente).unwrap();c.ejecutar_a(&h).unwrap();(c,h)}
++fn alterar(from:&str,to:&str)->Vec<u8>{let body=av::frame(FRAME).unwrap();let text=std::str::from_utf8(body).unwrap();assert_eq!(text.matches(from).count(),1);let b=text.replace(from,to).into_bytes();let mut m=b"SVAC0001".to_vec();m.extend_from_slice(&(b.len()as u64).to_le_bytes());m.extend_from_slice(&b);m.extend_from_slice(&av::hash(&b).unwrap());assert_eq!(av::frame(&m).unwrap(),b);m}
++fn unchanged(c:&Custodio,h:&Manejador){assert_eq!(c.recuperar(h,Papel::Marco).unwrap(),FRAME);assert_eq!(c.recuperar(h,Papel::Traza).unwrap(),include_bytes!("../fixtures/traza-a01.bin"));}
++fn reject(m:&[u8],cause:FalloEntrega){let(mut c,h)=ready(true);assert_eq!(c.comprobar_entrega(&h,m),Err(cause));assert_eq!(c.estado_entrega(&h).unwrap(),(EstadoEntrega::Rechazada(cause),m.len()));assert!(matches!(c.entrega(&h),Err(e) if e==cause));assert_eq!(c.recuperar_propuesta_entrega(&h).unwrap(),m);unchanged(&c,&h);}
++#[test] fn original(){let(mut c,h)=ready(true);c.comprobar_entrega(&h,FRAME).unwrap();let e=c.entrega(&h).unwrap();assert_eq!(e.cuerpo(),include_bytes!("../fixtures/cuerpo-a01.bin"));assert_eq!(e.identidad(),c.identidad(&h).unwrap());unchanged(&c,&h);}
++#[test] fn dato_sin_rehash(){let mut m=FRAME.to_vec();let n=m.windows(4).position(|b|b==b"8.40").unwrap();m[n]=b'9';reject(&m,FalloEntrega::Integridad);}
++#[test] fn dato_rehash(){reject(&alterar("8.40","9.40"),FalloEntrega::ContenidoDistinto);}
++#[test] fn negacion_rehash(){reject(&alterar("no acredita","acredita"),FalloEntrega::ContenidoDistinto);}
++#[test] fn recibo_revocado_y_cruce(){let(mut c,h)=ready(false);let m=c.recuperar(&h,Papel::Marco).unwrap().to_vec();assert_ne!(m,FRAME);c.comprobar_entrega(&h,&m).unwrap();assert_eq!(c.entrega(&h).unwrap().cuerpo(),av::frame(&m).unwrap());reject(&m,FalloEntrega::ContenidoDistinto);}
++#[test] fn ajeno_y_antes_a(){let(c,h)=ready(true);let mut otro=Custodio::nuevo(c.realizacion()).unwrap();assert_eq!(otro.comprobar_entrega(&h,FRAME),Err(FalloEntrega::Custodia(Fallo::Pertenencia)));let h2=otro.abrir(&mut INPUT,true).unwrap();assert_eq!(otro.comprobar_entrega(&h2,FRAME),Err(FalloEntrega::Custodia(Fallo::Estado)));assert_eq!(otro.estado_entrega(&h2).unwrap().0,EstadoEntrega::SinIntento);}
++#[test] fn reintento_no_repara(){let(mut c,h)=ready(true);let m=alterar("8.40","9.40");assert_eq!(c.comprobar_entrega(&h,&m),Err(FalloEntrega::ContenidoDistinto));assert_eq!(c.comprobar_entrega(&h,FRAME),Err(FalloEntrega::YaIntentada));assert_eq!(c.recuperar_propuesta_entrega(&h).unwrap(),m);assert!(c.entrega(&h).is_err());unchanged(&c,&h);}
++#[test] fn reintento_no_sustituye(){let(mut c,h)=ready(true);c.comprobar_entrega(&h,FRAME).unwrap();assert_eq!(c.comprobar_entrega(&h,&alterar("8.40","9.40")),Err(FalloEntrega::YaIntentada));assert_eq!(c.entrega(&h).unwrap().cuerpo(),av::frame(FRAME).unwrap());}
++#[test] fn fronteras(){for n in [4143,4144,4145]{let(mut c,h)=ready(true);let r=c.reservas();let b=vec![b' ';n];let err=if n>4144{FalloEntrega::Limite}else{FalloEntrega::Integridad};assert_eq!(c.comprobar_entrega(&h,&b),Err(err));assert_eq!(c.estado_entrega(&h).unwrap(),(EstadoEntrega::Rechazada(err),n));if n>4144{assert_eq!(c.reservas(),r);assert!(c.recuperar_propuesta_entrega(&h).is_err());}else{assert_eq!(c.recuperar_propuesta_entrega(&h).unwrap(),b);}}}
++#[test] fn traza_perdida(){let(mut c,h)=ready(true);c.comprobar_entrega(&h,FRAME).unwrap();c.slots[h.slot].as_mut().unwrap().traza.as_mut().unwrap().b=None;assert!(matches!(c.entrega(&h),Err(FalloEntrega::Custodia(Fallo::Recuperacion))));}
++#[test] fn reserva_agotada(){let(mut c,h)=ready(true);c.cargo(crate::MAX_MEMORY-c.reservas()).unwrap();assert_eq!(c.comprobar_entrega(&h,FRAME),Err(FalloEntrega::Custodia(Fallo::Limite)));assert!(c.entrega(&h).is_err());assert_eq!(c.reservas(),crate::MAX_MEMORY);unchanged(&c,&h);}
+--- a/recibo-g1/candidata/entrega.rs
++++ b/recibo-g1/candidata/entrega.rs
+@@ -0,0 +1,71 @@
++//! Frontera literal experimental. La referencia procede del custodio, nunca del proponente.
++use super::{av, Archivo, Custodio, Fallo, Manejador};
++const MAX_MARCO: usize = 4144;
++#[derive(Clone, Copy, Debug, PartialEq, Eq)]
++pub enum FalloEntrega { Custodia(Fallo), YaIntentada, Limite, Integridad, ContenidoDistinto }
++impl From<Fallo> for FalloEntrega { fn from(e:Fallo)->Self { Self::Custodia(e) } }
++#[derive(Clone, Copy, Debug, PartialEq, Eq)]
++pub enum EstadoEntrega { SinIntento, Comprobada, Rechazada(FalloEntrega) }
++pub(super) struct IntentoEntrega { estado:EstadoEntrega, propuesta:Option<Archivo>, bytes:usize }
++impl IntentoEntrega { pub(super) fn nuevo()->Self { Self{estado:EstadoEntrega::SinIntento,propuesta:None,bytes:0} } }
++/// Sólo el custodio construye esta vista. No es permiso de actuación ni verdad clínica.
++pub struct EntregaLiteral<'a> { cuerpo:&'a [u8], identidad:(u64,u64) }
++impl EntregaLiteral<'_> {
++    pub fn cuerpo(&self)->&[u8] { self.cuerpo }
++    pub fn identidad(&self)->(u64,u64) { self.identidad }
++}
++impl Custodio {
++    /// Un intento por recibo, sin reparación o reintento silencioso. Guarda la causa y
++    /// los bytes acotados del intento. El conductor es responsable de acotar su lectura.
++    pub fn comprobar_entrega(&mut self,h:&Manejador,propuesta:&[u8])->Result<(),FalloEntrega> {
++        let i=self.indice(h)?;
++        self.recibo(h)?;
++        if self.slots[i].as_ref().unwrap().entrega.estado!=EstadoEntrega::SinIntento {
++            return Err(FalloEntrega::YaIntentada);
++        }
++        self.slots[i].as_mut().unwrap().entrega.bytes=propuesta.len();
++        let result=(|| {
++            if propuesta.len()>MAX_MARCO { return Err(FalloEntrega::Limite); }
++            // Reserva contabilizada antes de asignar; no se amplía el cupo de G1.
++            self.cargo(propuesta.len() as u64)?;
++            let mut bytes=Vec::new();
++            bytes.try_reserve_exact(propuesta.len()).map_err(|_|Fallo::Reserva)?;
++            if bytes.capacity()>propuesta.len() { self.cargo((bytes.capacity()-propuesta.len()) as u64)?; }
++            bytes.extend_from_slice(propuesta);
++            let archivo=Archivo{hash:av::hash(&bytes)?,len:bytes.len(),b:Some(bytes),completo:true};
++            self.slots[i].as_mut().unwrap().entrega.propuesta=Some(archivo);
++            let body=av::frame(propuesta).map_err(|_|FalloEntrega::Integridad)?;
++            let recibo=self.recibo(h)?;
++            if body!=recibo.cuerpo()? { return Err(FalloEntrega::ContenidoDistinto); }
++            Ok(())
++        })();
++        self.slots[i].as_mut().unwrap().entrega.estado=match result {
++            Ok(())=>EstadoEntrega::Comprobada, Err(e)=>EstadoEntrega::Rechazada(e)
++        };
++        result
++    }
++    pub fn estado_entrega(&self,h:&Manejador)->Result<(EstadoEntrega,usize),FalloEntrega> {
++        let e=&self.slots[self.indice(h)?].as_ref().unwrap().entrega; Ok((e.estado,e.bytes))
++    }
++    pub fn recuperar_propuesta_entrega(&self,h:&Manejador)->Result<&[u8],FalloEntrega> {
++        let e=&self.slots[self.indice(h)?].as_ref().unwrap().entrega;
++        Ok(e.propuesta.as_ref().ok_or(Fallo::Recuperacion)?.recuperar()?)
++    }
++    /// Revalida la custodia y entrega una vista del cuerpo original, no del proponente.
++    pub fn entrega(&self,h:&Manejador)->Result<EntregaLiteral<'_>,FalloEntrega> {
++        let s=self.slots[self.indice(h)?].as_ref().unwrap();
++        match s.entrega.estado {
++            EstadoEntrega::SinIntento=>return Err(Fallo::Estado.into()),
++            EstadoEntrega::Rechazada(e)=>return Err(e),
++            EstadoEntrega::Comprobada=>{}
++        }
++        self.recibo(h)?;
++        let body=av::frame(s.marco.as_ref().ok_or(Fallo::Recuperacion)?.recuperar()?)?;
++        let propuesta=s.entrega.propuesta.as_ref().ok_or(Fallo::Recuperacion)?.recuperar()?;
++        if av::frame(propuesta).map_err(|_|FalloEntrega::Integridad)?!=body {
++            return Err(FalloEntrega::ContenidoDistinto);
++        }
++        Ok(EntregaLiteral{cuerpo:body,identidad:self.identidad(h)?})
++    }
++}
++#[cfg(test)] mod tests;
+--- a/recibo-g1/candidata/lib.rs
++++ b/recibo-g1/candidata/lib.rs
+@@ -2,6 +2,8 @@
+ //! Candidata G1/1: custodia intra-proceso. No emite autoridad ni Frame.
+ mod av;
+ mod json_vista;
++mod entrega;
++pub use entrega::{EntregaLiteral, EstadoEntrega, FalloEntrega};
+ use json_vista::Vista;
+ use std::io::Read;
+ use std::sync::atomic::{AtomicU64,Ordering};
+@@ -26,7 +28,7 @@
+ pub enum Papel{Entrada,Marco,Traza,Propuesta,Anexo}
+ struct Archivo{b:Option<Vec<u8>>,hash:[u8;32],len:usize,completo:bool}
+ impl Archivo{fn recuperar(&self)->R<&[u8]>{let b=self.b.as_deref().ok_or(Fallo::Recuperacion)?;if b.len()!=self.len||av::hash(b)?!=self.hash{return Err(Fallo::Recuperacion)}Ok(b)}}
+-struct Entrada{ordinal:u64,vigente:bool,original:Archivo,a:EstadoA,v:EstadoV,marco:Option<Archivo>,traza:Option<Archivo>,propuesta:Option<Archivo>,anexo:Option<Archivo>,lote:Option<[u8;64]>,trabajo_a:u64,trabajo_v:u64}
++struct Entrada{ordinal:u64,vigente:bool,original:Archivo,a:EstadoA,v:EstadoV,marco:Option<Archivo>,traza:Option<Archivo>,propuesta:Option<Archivo>,anexo:Option<Archivo>,lote:Option<[u8;64]>,trabajo_a:u64,trabajo_v:u64,entrega:entrega::IntentoEntrega}
+ /// Recibo inmutable visto a través de su custodio; no hay constructor público.
+ pub struct Recibo<'a>{entrada:&'a Entrada}
+ impl Recibo<'_>{pub fn cuerpo(&self)->R<&[u8]>{av::frame(self.entrada.marco.as_ref().ok_or(Fallo::Estado)?.recuperar()?)}pub fn estado_a(&self)->EstadoA{self.entrada.a}pub fn estado_v(&self)->EstadoV{self.entrada.v}pub fn trabajo(&self)->(u64,u64){(self.entrada.trabajo_a,self.entrada.trabajo_v)}}
+@@ -49,7 +51,7 @@
+   loop{let nmax=scratch.len().min(MAX_A-b.len()+1);match input.read(&mut scratch[..nmax]){
+    Ok(0)=>break,Ok(n)=>{let keep=n.min(MAX_A-b.len());b.extend_from_slice(&scratch[..keep]);if keep<n{complete=false;error=Some(Fallo::Limite);break}},Err(_)=>{complete=false;error=Some(Fallo::Io);break}}}
+   let original=self.archivo(b,MAX_A,complete)?;let ordinal=self.siguiente;self.siguiente=next;
+-  self.slots[slot]=Some(Entrada{ordinal,vigente,original,a:error.map_or(EstadoA::Abierta,EstadoA::Incompleta),v:EstadoV::SinDecision,marco:None,traza:None,propuesta:None,anexo:None,lote:None,trabajo_a:0,trabajo_v:0});Ok(Manejador{ambito:self.ambito,ordinal,slot})
++  self.slots[slot]=Some(Entrada{ordinal,vigente,original,a:error.map_or(EstadoA::Abierta,EstadoA::Incompleta),v:EstadoV::SinDecision,marco:None,traza:None,propuesta:None,anexo:None,lote:None,trabajo_a:0,trabajo_v:0,entrega:entrega::IntentoEntrega::nuevo()});Ok(Manejador{ambito:self.ambito,ordinal,slot})
+  }
+  pub fn ejecutar_a(&mut self,h:&Manejador)->R<()>{let i=self.indice(h)?;let s=self.slots[i].as_ref().ok_or(Fallo::Estado)?;if s.a!=EstadoA::Abierta{return Err(Fallo::Duplicado)}
+   let product=av::a(s.original.recuperar()?,s.vigente);

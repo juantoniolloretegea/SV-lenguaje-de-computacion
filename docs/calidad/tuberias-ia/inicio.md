@@ -136,3 +136,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Rectificación de autoridad y comprobación técnica — RETP-148
 
 [Mandato humano, contraste nativo y continuación](rectificacion-autoridad-y-comprobacion-ia/README.md). La comprobación de fidelidad corresponde al trabajo técnico: se retira el bloqueo general formulado tras RETP-147. Seis casos caracterizan transporte y propuesta auxiliar; dos cuerpos alterados con huellas coherentes muestran por qué integridad no equivale a fidelidad. Conserva un error del observador y su rectificación. No acredita seguridad integral ni actuaciones profesionales.
+
+
+## Entrega literal desde recibo — RETP-149
+
+[Comprobación Rust, resultados y límites](entrega-literal-desde-recibo/README.md). La candidata rechaza dato alterado y negación eliminada aun con huellas coherentes; conserva los 24 cuerpos públicos. 52 tests por configuración nativa, cuatro contrastes CLI, 24 entregas y dos negativos de compilación en cada modo. Continúa el workflow; no cierra fidelidad visual, seguridad integral ni catálogo.

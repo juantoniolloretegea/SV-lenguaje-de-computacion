@@ -1,0 +1,71 @@
+{
+  "registro": "RETP-2026-149",
+  "estado": "CANDIDATA_COMPROBADA_SIN_PROMOCION_PRODUCTIVA",
+  "archivos": [
+    {
+      "ruta": "CAMBIO_CANDIDATO.patch",
+      "bytes": 15306,
+      "sha256": "37fba84051821aa98071cc40e792b3d277b884f9416f2f52e93f8a1bd33bfe32"
+    },
+    {
+      "ruta": "CAUSAS_Y_LOCALIZACION_PENDIENTE.md",
+      "bytes": 2554,
+      "sha256": "1462f6e80e7811210d1b8e6b549ce1b6f7e5271e635e44be120939acc274fdcd"
+    },
+    {
+      "ruta": "COMPILADOR.json",
+      "bytes": 874,
+      "sha256": "1e9dc4366ae4478002c1ca729daff48213768b8912a334a6f6e113b1131f94ff"
+    },
+    {
+      "ruta": "EVIDENCIA.json",
+      "bytes": 517207,
+      "sha256": "1af18a58ae94744036804dccdc18138052523e9e648e6c7876f0797a80427525"
+    },
+    {
+      "ruta": "FUENTES.json",
+      "bytes": 9277,
+      "sha256": "a341218824bd8481eb4c7717f54639a49ed95bae10a24fccc38823c5c94d8040"
+    },
+    {
+      "ruta": "FUENTES_REPRODUCIBLES.json",
+      "bytes": 708409,
+      "sha256": "68d3fafb9c80aed4856b4e60d3eddfe2a8856ca6b6905a1e5ba78b590ecd229e"
+    },
+    {
+      "ruta": "PLAN_FIJADO.json",
+      "bytes": 1749,
+      "sha256": "74be77d6a3e67d9d1a703d5bd0ba1cdfea3079567a856b38088b76c25194406f"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 11165,
+      "sha256": "6aa0f4042eddc239fe155570f43173ac0a6212497465a1c4ca7f3bf82bea0dd8"
+    },
+    {
+      "ruta": "REALIZACIONES.json",
+      "bytes": 2105,
+      "sha256": "25ca8b4ccc106e6c37833a6ec9c02a7f35c7dc9332d561a667262a3dce1f3e89"
+    },
+    {
+      "ruta": "REPRODUCIR.md",
+      "bytes": 2123,
+      "sha256": "a36e5ebe52d29913a274252404d6c557b5a6e8223d95da8929c3b5b9b180cc48"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 27511,
+      "sha256": "0f10f227a455b9c04987969866328393a17a07f986e84f80af880abbfac333a0"
+    },
+    {
+      "ruta": "ejecutar.py",
+      "bytes": 6415,
+      "sha256": "9dc320e1484c659013060edb203ee01d103c424b53218d97133dc81e0e614d38"
+    },
+    {
+      "ruta": "entrega.rs",
+      "bytes": 4044,
+      "sha256": "424d6a84ed855c43a0c959a21c023d56e24521b42b530b48f4b19652e5da5d76"
+    }
+  ]
+}

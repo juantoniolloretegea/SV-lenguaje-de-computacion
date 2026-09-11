@@ -1,0 +1,715 @@
+{
+  "registro": "RETP-2026-149",
+  "estado": "CONFORME_EN_FRONTERA_LITERAL_CANDIDATA",
+  "procesos": [
+    {
+      "id": "version",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "-Vv"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "biblioteca-g1-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=g1",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5a55f0e7409877b2c20d96682e31a32964352c011a26470232161bdf0a7d5bae"
+    },
+    {
+      "id": "compilar-g1-tests-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/lib.rs",
+        "--test",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/g1-tests-debug.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7ad30d725c764b8226e200e0d594086d27ca7b9c9e674fa3980ddfbaff0db6d1"
+    },
+    {
+      "id": "g1-tests-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/g1-tests-debug.bin",
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "be27f26ac30088f42fd88e2dc696dd32aa6ddbb816b40ce732dc71dfbebf1ac5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-lote-tests-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/lote-g1/lib.rs",
+        "--test",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/lote-tests-debug.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "lote-tests-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/lote-tests-debug.bin",
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "03beabc78e02740a4630c6799f305510e8b9e6425e9cdbecbfe1744706fe4558",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-conductor-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/entrega-literal/main.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-debug.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "conductor-debug-original",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-debug.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/original.marco"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "conductor-debug-dato-sin-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-debug.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/dato-sin-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c37b3c86c873d59919cc90ca5ea9852b44df348ba0f2a0ebd8d7ec004bb44ae4"
+    },
+    {
+      "id": "conductor-debug-dato-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-debug.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/dato-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "fed2aa5f806570a200901512704355e836b11d020ee529d06133884a19d80628"
+    },
+    {
+      "id": "conductor-debug-negacion-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-debug.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/negacion-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "fed2aa5f806570a200901512704355e836b11d020ee529d06133884a19d80628"
+    },
+    {
+      "id": "biblioteca-lote-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=lote",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/lote-g1/lib.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/liblote-debug.rlib"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-entregas-lote-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/entrega-literal/lote.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "--extern",
+        "lote=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/liblote-debug.rlib",
+        "-L",
+        "dependency=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-lote-debug.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "entregas-lote-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-lote-debug.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-debug"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "935ee5fa2a2273e85054e3355476cfcd4238cc1d0bd526d2413da332445ea81d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "forja-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/forja.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/forja.bin"
+      ],
+      "exit_code": 1,
+      "esperado": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "974325119e993b2e88dd45de6feda2203346ccca70cd05beb00371ca63653307"
+    },
+    {
+      "id": "vida-debug",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/vida.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-debug.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/vida.bin"
+      ],
+      "exit_code": 1,
+      "esperado": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "212d1c1e493232655db01861bd9ff37231f142b49f19201a3d23e51204d7bee8"
+    },
+    {
+      "id": "biblioteca-g1-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=g1",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5a55f0e7409877b2c20d96682e31a32964352c011a26470232161bdf0a7d5bae"
+    },
+    {
+      "id": "compilar-g1-tests-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/lib.rs",
+        "--test",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/g1-tests-release.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "7ad30d725c764b8226e200e0d594086d27ca7b9c9e674fa3980ddfbaff0db6d1"
+    },
+    {
+      "id": "g1-tests-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/g1-tests-release.bin",
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "9ee456f735f2264fbc2e90d357361f4b0c2f99b86998f18ce885add6e95a3173",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-lote-tests-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/lote-g1/lib.rs",
+        "--test",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/lote-tests-release.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "lote-tests-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/lote-tests-release.bin",
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "806c79e8489388f8709a279c6e429095855423714567cb5f51a1a12887a79528",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-conductor-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/entrega-literal/main.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-release.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "conductor-release-original",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-release.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/original.marco"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "conductor-release-dato-sin-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-release.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/dato-sin-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c37b3c86c873d59919cc90ca5ea9852b44df348ba0f2a0ebd8d7ec004bb44ae4"
+    },
+    {
+      "id": "conductor-release-dato-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-release.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/dato-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "fed2aa5f806570a200901512704355e836b11d020ee529d06133884a19d80628"
+    },
+    {
+      "id": "conductor-release-negacion-rehash",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/conductor-release.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/recibo-g1/candidata/fixtures/solicitud-a01.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/negacion-rehash.marco"
+      ],
+      "exit_code": 2,
+      "esperado": 2,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "fed2aa5f806570a200901512704355e836b11d020ee529d06133884a19d80628"
+    },
+    {
+      "id": "biblioteca-lote-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=lote",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/lote-g1/lib.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/liblote-release.rlib"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-entregas-lote-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/candidata/entrega-literal/lote.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "--extern",
+        "lote=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/liblote-release.rlib",
+        "-L",
+        "dependency=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-lote-release.bin"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "entregas-lote-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-lote-release.bin",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/entregas-release"
+      ],
+      "exit_code": 0,
+      "esperado": 0,
+      "stdout_sha256": "935ee5fa2a2273e85054e3355476cfcd4238cc1d0bd526d2413da332445ea81d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "forja-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/forja.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/forja.bin"
+      ],
+      "exit_code": 1,
+      "esperado": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "974325119e993b2e88dd45de6feda2203346ccca70cd05beb00371ca63653307"
+    },
+    {
+      "id": "vida-release",
+      "argv": [
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/toolchain/installed/bin/rustc",
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/vida.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/libg1-release.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/tmp/entrega-149/ensayo-1/vida.bin"
+      ],
+      "exit_code": 1,
+      "esperado": 1,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "212d1c1e493232655db01861bd9ff37231f142b49f19201a3d23e51204d7bee8"
+    }
+  ],
+  "modos": [
+    {
+      "modo": "debug",
+      "tests_g1_previos": 29,
+      "tests_entrega_nuevos": 11,
+      "tests_lote_previos": 12,
+      "contrastes_cli": 4,
+      "entregas_lote": [
+        {
+          "posicion": 0,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        },
+        {
+          "posicion": 4,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 5,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e"
+        },
+        {
+          "posicion": 6,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436"
+        },
+        {
+          "posicion": 7,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1"
+        },
+        {
+          "posicion": 8,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 9,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e"
+        },
+        {
+          "posicion": 10,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 11,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 12,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 13,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        },
+        {
+          "posicion": 14,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 15,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e"
+        },
+        {
+          "posicion": 16,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436"
+        },
+        {
+          "posicion": 17,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1"
+        },
+        {
+          "posicion": 18,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 19,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e"
+        },
+        {
+          "posicion": 20,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 21,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 22,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 23,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        }
+      ]
+    },
+    {
+      "modo": "release",
+      "tests_g1_previos": 29,
+      "tests_entrega_nuevos": 11,
+      "tests_lote_previos": 12,
+      "contrastes_cli": 4,
+      "entregas_lote": [
+        {
+          "posicion": 0,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        },
+        {
+          "posicion": 4,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 5,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e"
+        },
+        {
+          "posicion": 6,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436"
+        },
+        {
+          "posicion": 7,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1"
+        },
+        {
+          "posicion": 8,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 9,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e"
+        },
+        {
+          "posicion": 10,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 11,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 12,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 13,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        },
+        {
+          "posicion": 14,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 15,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e"
+        },
+        {
+          "posicion": 16,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436"
+        },
+        {
+          "posicion": 17,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1"
+        },
+        {
+          "posicion": 18,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 19,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e"
+        },
+        {
+          "posicion": 20,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 21,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+        },
+        {
+          "posicion": 22,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4"
+        },
+        {
+          "posicion": 23,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225"
+        }
+      ]
+    }
+  ],
+  "modelo_invocado": false,
+  "reserva_abierta": false,
+  "paridad_entregas": true,
+  "fuentes_sin_cambios_durante_ensayo": true
+}

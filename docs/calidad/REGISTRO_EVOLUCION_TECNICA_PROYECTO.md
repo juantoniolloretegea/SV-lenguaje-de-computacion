@@ -1447,3 +1447,18 @@ Sonda acotada sobre el binario nativo conservado de RETP-142, sin compilación n
 Primer intento detenido en C2 por nombre de diagnóstico supuesto por el observador. Las fuentes previas devuelven Correlacion/CORRELACION_INVALIDA; se corrige sólo ese esperado y se conserva todo. Segundo intento completa seis casos. Ocho procesos en total; 34 piezas custodiadas; ocho fuentes cotejadas; sin modelos, reserva, P4/P5 ni nuevas garantías.
 
 Continúa la comprobación del vínculo referencia–transformación–entrega y la recepción de sus causas por diagnóstico/localización, bajo el workflow vigente y aceptación final humana. Sin cambios de código productivo, gramática, IR o dominio. **Estado: BLOQUEO_GENERAL_RECTIFICADO_CARACTERIZACION_ACOTADA_EJECUTADA.**
+
+
+<a id="retp-149"></a>
+
+## RETP-2026-149 · Candidata de entrega literal desde recibo custodiado
+
+11/09/2026. [Pieza sucesora acotada, Rust y evidencia](tuberias-ia/entrega-literal-desde-recibo/README.md). Corte Lenguaje `2e9dc3b216035725521a850b8157dc7d736fe57c`; laboratorio `4e681a9c88ebb66272cbb5c3ab9df2aed4dc3704`. Continúa la autorización humana y la rectificación de RETP-148; no se reabre la pregunta sobre quién concede autoridad.
+
+Se construye y ensaya una candidata sobre copias fijadas de G1 y su enlace público, sin modificar núcleo, gramática, IR o fuente de dominio productivos. Compara el marco propuesto con el cuerpo del recibo seleccionado por el conductor confiable. Conserva un intento acotado con causa y propuesta cuando pudo capturarse. La entrega protegida sólo se construye tras comprobación satisfactoria y toma sus bytes del custodio. No transforma consulta en SUCESO/Frame ni en permiso.
+
+Una matriz debug/release con Rust 1.98.0, 31 procesos, cero defectos inesperados o correcciones: por modo pasan 29 pruebas G1 anteriores, 11 nuevas y 12 del lote; cuatro contrastes CLI; 24 entregas iguales a cuerpos y huellas esperados previos; dos negativos de compilación previstos. Dato alterado con huella coherente y negación eliminada con huella coherente se rechazan sin salida de cuerpo. Paridad de las 24 entregas y los cuatro contrastes. Se conservan fuente exacta, comandos, entradas, salidas, huellas de binarios y procedencia del compilador.
+
+Ocho fuentes de continuidad y 45 archivos existentes cotejados con el corte. La pieza sucesora conserva el workflow V2; no promueve la candidata ni cierra el recorrido entero. Quedan fuera verdad de origen, traducción/equivalencia visual, pantalla final, imposición material, persistencia durable, R1 profesional, reserva y P4/P5. El catálogo recibe causas tipadas y propuestas ES/EN sin acreditarlas como localización implementada. La CLI resume la familia Custodia; su integración diagnóstica productiva permanece pendiente.
+
+**Estado: CONFORME_EN_FRONTERA_LITERAL_CANDIDATA.** Continúa correspondencia transformación/presentación bajo las compuertas constituidas y aceptación final humana.
