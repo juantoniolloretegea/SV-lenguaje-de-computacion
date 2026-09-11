@@ -1,0 +1,11 @@
+{
+ "registro":"RETP-2026-144",
+ "momento":"Tras primera tanda conforme, antes de modificar implementación",
+ "objeto":"Dos carencias concretas del receptor, sin cambiar esperados G1-01 a G1-20",
+ "testigos":[
+  {"id":"AV-IO","entrada":"V entrega bytes abc y luego error de lectura","esperado":"Observación V incompleta ERROR_IO, bytes abc recuperables, completo=false, A intacto"},
+  {"id":"A-TIPO","entrada":"Traza A01: unidades_a=6104 sustituido por null; resto intacto","esperado":"Recibo rechazado por esquema; contador no numérico no debe aceptarse"}
+ ],
+ "correccion_prevista":"Conservar prefijo V al salir por ERROR_IO; verificar tipos obligatorios de traza/cuerpo/anexo",
+ "rondas_modelo":0
+}

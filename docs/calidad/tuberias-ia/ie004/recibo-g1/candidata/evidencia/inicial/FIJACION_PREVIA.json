@@ -1,0 +1,165 @@
+{
+  "version": "IE004-G1-FIJACION/1",
+  "archivos": [
+    {
+      "path": "../../recepcion-av/casos_fijados.rs",
+      "bytes": 8448,
+      "sha256": "1add1153ae76fb4dbe4dd2c35db1c0860dc3cf7e42831e501ec844f8da8b841f"
+    },
+    {
+      "path": "../../recepcion-av/controles.rs",
+      "bytes": 5823,
+      "sha256": "db415940df33b290202b1a1764dd6acf239230f4e92b6db370b29cc556aff1cf"
+    },
+    {
+      "path": "../../recepcion-av/json_estricto.rs",
+      "bytes": 8552,
+      "sha256": "bbef9939a2000d637e5714cc673e2b1b5c1feeb64ebe0620026b9d40dfd20690"
+    },
+    {
+      "path": "../../recepcion-av/main.rs",
+      "bytes": 5491,
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "path": "../../recepcion-av/recepcion_a.rs",
+      "bytes": 8326,
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    },
+    {
+      "path": "../../recepcion-av/sha256.rs",
+      "bytes": 3993,
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "path": "../../recepcion-av/verificar_v.rs",
+      "bytes": 7715,
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "path": "PERFIL_Y_PLAN.json",
+      "bytes": 2547,
+      "sha256": "bd9582c47a3f2c63ab0a27525ca702fdaf97be49b42774c05020de97e8e91f97"
+    },
+    {
+      "path": "av.rs",
+      "bytes": 3506,
+      "sha256": "2c390d091d0c25c7f1af57222830fca9836bd22ceda5f1af427d803888faf356"
+    },
+    {
+      "path": "ejecutar.mjs",
+      "bytes": 5924,
+      "sha256": "6360cd5f0f5af05b32d84485ab29ab69223c548bdac9871548eae4eb122c81e3"
+    },
+    {
+      "path": "fixtures/anexo-otro-cuerpo.bin",
+      "bytes": 470,
+      "sha256": "9657c42ec9dbc1e337b94b70e8afd52a76ac63a9979e91a0892ac3686922d233"
+    },
+    {
+      "path": "fixtures/anexo-v02.bin",
+      "bytes": 470,
+      "sha256": "19ffaf114eb406e6030a6a4e93feafcab5594d6692b1fdeb232b15ae01303728"
+    },
+    {
+      "path": "fixtures/anexo-v04.bin",
+      "bytes": 414,
+      "sha256": "7cb69f34fba01e25e37c696db8c7a78604ed941c3c9cde2a653ace2deb45e936"
+    },
+    {
+      "path": "fixtures/cuerpo-a01.bin",
+      "bytes": 494,
+      "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+    },
+    {
+      "path": "fixtures/marco-a01.bin",
+      "bytes": 542,
+      "sha256": "0f7580ef9c997856ae98d183ee2048d8573fcfa8cc7119f6536603b714b45518"
+    },
+    {
+      "path": "fixtures/marco-alterado.bin",
+      "bytes": 542,
+      "sha256": "81ea0206ae911a79bcf022ff2423ec4a03d338a10a40e013d4026bfc0f6afe9f"
+    },
+    {
+      "path": "fixtures/propuesta-v02.bin",
+      "bytes": 5196,
+      "sha256": "0f2909687dc1dd9d79706ed5977c8fea55d326640d55af03dbd0be968c02ae7e"
+    },
+    {
+      "path": "fixtures/propuesta-v04.bin",
+      "bytes": 11,
+      "sha256": "dcf58d6c8a2d9f3fff0ffea121b5c562ce793941122f801eb031a3d7d82f7ef7"
+    },
+    {
+      "path": "fixtures/solicitud-a01.bin",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    },
+    {
+      "path": "fixtures/solicitud-espacio.bin",
+      "bytes": 189,
+      "sha256": "f549313929a7f8df5dc6ab0e30ee0aae0d2fdb339cdd8b78d06b6cef5c6b6e42"
+    },
+    {
+      "path": "fixtures/solicitud-prefijo.bin",
+      "bytes": 16,
+      "sha256": "345a5b5b39c7b5706dfccfaf38c102ecccd59c0f7ba82c3565fedcdeb1ced523"
+    },
+    {
+      "path": "fixtures/traza-a01.bin",
+      "bytes": 1031,
+      "sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6"
+    },
+    {
+      "path": "fixtures/traza-discordante.bin",
+      "bytes": 1031,
+      "sha256": "acc1eceb4044b868d88ce0014e6e11606f3b8d519615ed4802394d54eb02f7a4"
+    },
+    {
+      "path": "fixtures/traza-truncada.bin",
+      "bytes": 1029,
+      "sha256": "9f4dc2c8d8ed8a7936f99394c9aeffaade66a334c79943600408421fb21244cb"
+    },
+    {
+      "path": "json_vista.rs",
+      "bytes": 4148,
+      "sha256": "debbf11b5ecfd5ed7f51cdc0477b6ecdcae8b46a4744ca90993afbbbddd894b9"
+    },
+    {
+      "path": "lib.rs",
+      "bytes": 13418,
+      "sha256": "0d010b4f1143fb765ed3aa444a12c6a88b60e5390c479b68698037b01de7a1d9"
+    },
+    {
+      "path": "tests.rs",
+      "bytes": 9069,
+      "sha256": "8f44b351affd0cf30f3351d9605bc2212483fc85942f57d4dec7dc569703da6e"
+    },
+    {
+      "path": "../../semantica-a/gramatica.rs",
+      "bytes": 2700,
+      "sha256": "f5740a876e34ece371f1fa9454f5243e3586ee1957350b8550aab35e9fbcdec7"
+    },
+    {
+      "path": "../../semantica-a/recursos.rs",
+      "bytes": 5909,
+      "sha256": "5656f93c1c893cd05a4ed50696cb41eb93cd10e91f629d4cf8926a771aa9eef3"
+    },
+    {
+      "path": "../../semantica-a/semantica.rs",
+      "bytes": 11333,
+      "sha256": "f7aaf4d1d02e8cfcacab8ec83f3c28009b4c7cdacd498c65fd7ff4a47664b4b4"
+    },
+    {
+      "path": "../../semantica-a/servicio.rs",
+      "bytes": 6256,
+      "sha256": "bc119baed2d74c750ff19e42d25ba2edca6849661256321eec4876d9aae134f0"
+    },
+    {
+      "path": "../../semantica-a/sintaxis.rs",
+      "bytes": 9642,
+      "sha256": "0413f45b8b340fdffea5fa300643f70e0c9a6ac4f196c433c53d1607798d381b"
+    }
+  ]
+}

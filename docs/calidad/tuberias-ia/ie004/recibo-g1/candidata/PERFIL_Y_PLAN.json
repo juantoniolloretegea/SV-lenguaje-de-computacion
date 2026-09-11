@@ -1,0 +1,16 @@
+{
+  "version":"IE004-G1-NATIVO/1",
+  "registro":"RETP-2026-144",
+  "base":"aab69e561a06137a78cbe4c9700cb99c8ea376f7",
+  "alcance":"Receptor intra-proceso Rust; A y V existentes; custodia recuperable en memoria durante la vida del custodio; supervisor externo emite interrupción V",
+  "cupos":{"invocaciones_por_custodio":4,"entrada_a_bytes":65536,"marco_a_bytes":4144,"cuerpo_a_bytes":4096,"traza_a_bytes":16842752,"propuesta_v_bytes":262144,"anexo_v_bytes":8192,"reservas_custodio_acumuladas_bytes":67108864,"trabajo_validacion_por_cierre":1000000000,"profundidad_json":96,"claves_por_objeto":32,"clave_canonica_bytes":64,"metadatos_fijos_bytes_max":65536},
+  "contabilidad_temporal":{"por_cierre_a_o_v_bytes":2097152,"motivo":"Cargo conservador para decodificación de solicitud con CuentaT existente (máximo 1 MiB) y cadenas canónicas; productor A/V conserva su cuenta separada"},
+  "json_custodia":"Vista sobre UTF-8, enteros u64, claves canónicas ASCII sin escapes; perfil de serialización emitido por A/V, no JSON genérico; 96 niveles y 32 claves, sin límite heredado de 8192 valores",
+  "realizacion":"El conductor aporta hashes exactos de fuentes y binario; el custodio los conserva como declaración del conductor confiable, no como autenticación independiente",
+  "retencion":"Hasta destrucción explícita del custodio; sin descarte de slots ni reutilización de ordinal; rechazo de quinta apertura",
+  "esperados_g1":"G1-01 a G1-18 conservan TESTIGOS_G1.json RETP-143; pérdidas, manejadores y cancelación se inyectan en métodos privados del arnés",
+  "positivos_adicionales":{"G1-19":"Solicitud { completa; A_TRANSPORTE_RECHAZADO con traza íntegra; recibo completo","G1-20":"PUBLICO-TECNICO con 129 tokens: 128 repeticiones de a separadas por espacio y punto final; A_TOKENS_LIMITE, nunca DATO; recibo completo"},
+  "fronteras":["tamaño de captura A: 65535/65536/65537","propuesta V: 262143/262144/262145","traza: 16842751/16842752/16842753 en guarda de tamaño, no coste semántico","reserva agregada: límite exacto y exceso","trabajo: límite exacto y exceso","ordinal: máximo y rechazo sin wrap","slots: cuatro aperturas y quinta rechazada","JSON: duplicado, cola, escape inválido, profundidad 96/97 y más de 8192 valores admitidos por lector de traza"],
+  "reproducciones":["nativo debug","nativo release"],
+  "prohibiciones":["No cambiar fuentes A/V ni esperados para ajustarlos a resultados","No abrir P3 ni usar modelos","No afirmar persistencia durable, RSS impuesto, seguridad P4 o integración R1/Frame"]
+}

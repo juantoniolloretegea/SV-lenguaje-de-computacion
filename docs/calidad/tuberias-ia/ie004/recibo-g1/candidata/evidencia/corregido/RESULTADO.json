@@ -1,0 +1,204 @@
+{
+  "registro": "RETP-2026-144",
+  "estado": "CONFORME_EN_ALCANCE_INTRAPROCESO",
+  "fuentes_sha256": "25591d35c6b118201fad0408a4b04680224ab8f3c8d9cdec75daa9aaa211bb9f",
+  "procesos": [
+    {
+      "id": "rustc-version",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--version",
+        "--verbose"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-debug",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--test",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/g1-debug.bin"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5fec3632a0e08121e5367f36fd78de95bffaf4c6ac765a44122787197c5a46e2"
+    },
+    {
+      "id": "test-debug",
+      "cmd": "/workspace/scratch/a4c9906d0361/g1-144-corregido/g1-debug.bin",
+      "args": [
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "ef81f5abfcfc765dc1402f5944454f26b10519bb3df87eab3e72d210b1265119",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-release",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--test",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/g1-release.bin"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "5fec3632a0e08121e5367f36fd78de95bffaf4c6ac765a44122787197c5a46e2"
+    },
+    {
+      "id": "test-release",
+      "cmd": "/workspace/scratch/a4c9906d0361/g1-144-corregido/g1-release.bin",
+      "args": [
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "d166a7eb6ff650b70d0c97bd9e6a0462672a2eac8bb2b4a9c4c269e754d128d0",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-biblioteca",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=g1",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/libg1.rlib"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cbafae8f1c54c5e3a806681f6a7fa3a20919121712c002f194eb8f4e6f212364"
+    },
+    {
+      "id": "uso-publico",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/uso-publico.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/g1-144-corregido/libg1.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/uso-publico.bin"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "forja-manejador",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/forja-manejador.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/g1-144-corregido/libg1.rlib",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/g1-144-corregido/forja-manejador.bin"
+      ],
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "0dd52223ed05dbeae74984bac220500f36108fd1d5234b3cd7bdaef903f7ec52"
+    }
+  ],
+  "configuraciones": [
+    {
+      "modo": "debug",
+      "compila": true,
+      "binario_sha256": "6342447eda0530fbde22c46864d838c9605092a8e3f3c4ab7e5611afbf7541d7",
+      "exit_code": 0,
+      "testigos": [
+        "G1-01",
+        "G1-02",
+        "G1-03",
+        "G1-04",
+        "G1-05",
+        "G1-06",
+        "G1-07",
+        "G1-08",
+        "G1-09",
+        "G1-10",
+        "G1-11",
+        "G1-12",
+        "G1-13",
+        "G1-14",
+        "G1-15",
+        "G1-16",
+        "G1-17",
+        "G1-18",
+        "G1-19",
+        "G1-20"
+      ],
+      "tests_conformes": true
+    },
+    {
+      "modo": "release",
+      "compila": true,
+      "binario_sha256": "eaf036e34b477d4d353cdbb6708dceddd84e8c3859f635de7ace36c5fb48637a",
+      "exit_code": 0,
+      "testigos": [
+        "G1-01",
+        "G1-02",
+        "G1-03",
+        "G1-04",
+        "G1-05",
+        "G1-06",
+        "G1-07",
+        "G1-08",
+        "G1-09",
+        "G1-10",
+        "G1-11",
+        "G1-12",
+        "G1-13",
+        "G1-14",
+        "G1-15",
+        "G1-16",
+        "G1-17",
+        "G1-18",
+        "G1-19",
+        "G1-20"
+      ],
+      "tests_conformes": true
+    }
+  ],
+  "alcance": "Nativo intra-proceso y recuperación en memoria; supervisor/plazo inyectado; sin P4, G2/G3/G4 o reserve",
+  "reserva_leida": false,
+  "modelo_invocado": false,
+  "paridad_capturas": {
+    "archivos": 19,
+    "identicos": true
+  }
+}

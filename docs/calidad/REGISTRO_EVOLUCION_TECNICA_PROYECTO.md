@@ -1,6 +1,6 @@
 # Registro de evolución técnica del proyecto
 
-**Continuidad del frente IA:** [RETP-143](#retp-143), contrato G1 de recibo custodiado y testigos preparados; realización nativa Rust pendiente. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
+**Continuidad del frente IA:** [RETP-144](#retp-144), candidata G1 Rust conforme intraproceso tras corrección; conexión al adaptador público siguiente. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
 
 **Antecedente de relevo de fila 7:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
@@ -1370,3 +1370,20 @@ El constructor documental cotejó los 43 archivos de la cápsula RETP-142 y prep
 **Siguiente objeto único:** realización candidata Rust del receptor G1 y perfil de recursos, con contraste previo fijado. G2, G3, G4, reserva, asociación /2–/3 y P4/P5 conservan su estado. No se altera código A/V, cuerpo, gramática, Tri, IR, Frame ni constitución de dominio/agente. Espejo de contrato y testigos idéntico en laboratorio.
 
 **Estado:** CONTRATO_G1_FIJADO_TESTIGOS_PREPARADOS_REALIZACION_PENDIENTE.
+
+
+<a id="retp-144"></a>
+
+## RETP-2026-144 · Candidata G1 nativa y corrección causal
+
+11/09/2026. Responsable: Watson. Luz verde de Juan Antonio Lloret Egea al objeto de RETP-143. [Acta, fuentes y evidencia](tuberias-ia/ie004/recibo-g1/ACTA_RESULTADO_G1_NATIVO_2026_09_11.md). Cortes: Lenguaje `aab69e561a06137a78cbe4c9700cb99c8ea376f7`; laboratorio `4a81191fba7e32ff297efbcebaa448fbde04d85e`. Rectoras cotejadas sin cambio.
+
+Se implementa en Rust la recepción y recuperación en memoria por invocación, con manejador opaco, marco/traza A ligados al original y montaje, cierre único y anexado V posterior. El perfil de recursos y los 18 testigos más dos positivos de rechazo/fallo técnico A se fijaron antes de ejecutar. A/V originales se reutilizan sin modificar.
+
+La primera tanda pasó 27/27 por compilación. Una ampliación adversarial fijada antes de corregir reprodujo dos fallos en debug y release: pérdida del prefijo V tras error de lectura y aceptación de un contador nulo en la traza. Una corrección causal conserva el prefijo y exige tipos de campos obligatorios. Resultado final: 29/29 en cada compilación, incluidos 20 testigos G1; 19 archivos capturados idénticos entre configuraciones. Uso externo válido compila; construcción externa del manejador se rechaza. Tres cápsulas y fuentes antecedentes conservan las etapas y sus huellas.
+
+La conservación dura la vida del custodio; no acredita persistencia tras caída, RSS, aislamiento material ni WASI. La interrupción del supervisor es inyectada, no prueba un plazo real contra lectura bloqueada. Los hashes de realización son declaraciones del conductor confiable. No hay reanálisis semántico independiente ni conversión a SUCESO/Frame.
+
+**Siguiente objeto único:** enlace del adaptador público del lote con G1 y cotejo de pertenencia de petición/montaje hasta el recibo. G2–G4, P3 reservado, asociación /2–/3, P4 y P5 conservan sus condiciones. Sin modelo, reserva, cambios doctrinales o constitución de dominio/agente. Espejo idéntico de artefactos en laboratorio.
+
+**Estado:** CANDIDATA_G1_CONFORME_INTRAPROCESO_TRAS_CORRECCION.
