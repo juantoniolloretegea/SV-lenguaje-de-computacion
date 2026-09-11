@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-130:** compromiso P3 verificado y recepción recuperable/separada confirmada por Juan Antonio. Custodia acreditada por declaración humana. Se inicia la precomprobación pública R10 en Rust antes del corrector completo; captura de Grok todavía no habilitada y aislamiento NO VERDE. La reserva permanece cerrada.
+**Estado vigente · RETP-131:** recepción humana declarada de custodia confirmada. Sonda pública Rust: 69/72 en nativo/WASI debug/release; el recorrido instrumentado agota el millón de intentos en C02 (17 tokens), CP-T-127 y CP-T-128. No cualifica el corrector completo. Captura de Grok no habilitada; reserva cerrada y aislamiento NO VERDE.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -70,3 +70,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Recepción humana de la reserva · RETP-130
 
 [Acta y control previo](ACTA_RECEPCION_COMPROMISO_P3_Y_CONTROL_PREVIO_RUST_2026_09_11.md). Compromiso recibido: 3193 bytes, SHA-256 d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5. El recibo posterior conserva el compromiso inicial intacto. Las preguntas, notas, oráculo y nota privada de custodia no se han trasladado a Watson. No hay nuevo encargo para Grok; se espera la puerta de corrector y controles públicos. Ningún resultado de la sonda sintáctica se presenta como cualificación semántica.
+
+## Resultado público Rust · RETP-131
+
+[Adenda y evidencia](ACTA_RESULTADO_CONTROL_PUBLICO_R10_RUST_2026_09_11.md). Cuatro ejecuciones y 21 aserciones de primitivas por configuración; 69/72 controles de corpus coincidentes y tres agotamientos conservados. La insuficiencia corresponde a la búsqueda instrumentada y su contabilidad, no demuestra imposibilidad del perfil o de Rust. Se necesita resolver esa causa antes de la realización completa y la captura reservada. Sin nueva tanda del modelo ni lectura de originales/oráculo. Compromiso y recibo humano intactos.

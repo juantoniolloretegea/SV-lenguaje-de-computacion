@@ -1,0 +1,12 @@
+{
+  "nombre": "nativo-release-ejecutar",
+  "comando": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release.bin",
+  "args": [],
+  "inicio": "2026-09-11T05:08:37.841Z",
+  "fin": "2026-09-11T05:08:38.081Z",
+  "duracion_ms": 239.3552669999999,
+  "limite_ms": 30000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

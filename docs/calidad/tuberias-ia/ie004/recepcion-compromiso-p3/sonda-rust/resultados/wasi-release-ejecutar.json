@@ -1,0 +1,15 @@
+{
+  "nombre": "wasi-release-ejecutar",
+  "comando": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/sonda-rust/wasi.mjs",
+    "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release.wasm"
+  ],
+  "inicio": "2026-09-11T05:08:40.702Z",
+  "fin": "2026-09-11T05:08:41.215Z",
+  "duracion_ms": 512.4705650000005,
+  "limite_ms": 30000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

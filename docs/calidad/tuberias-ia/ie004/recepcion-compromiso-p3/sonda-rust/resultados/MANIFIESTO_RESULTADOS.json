@@ -1,0 +1,172 @@
+{
+  "archivos": [
+    {
+      "ruta": "ENTORNO.json",
+      "bytes": 1339,
+      "sha256": "3115b296f87e533fba4e4b7bf17ccd497ac59208860a89b84da302b722183f74"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 165239,
+      "sha256": "2488d1158b0139b503dcaffb94a12b962e3bb9273f7f2563f49e4194377d4fc7"
+    },
+    {
+      "ruta": "nativo-debug-compilar.json",
+      "bytes": 641,
+      "sha256": "6b371d5daddfdf8fc18e2807293e5bc55e24a1f37d981ac785d599e9cb701f95"
+    },
+    {
+      "ruta": "nativo-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-debug-ejecutar.json",
+      "bytes": 355,
+      "sha256": "671ddeae68c67cc3a842421761e64fed9c68083ce68a6b119c0a506f0868ffd9"
+    },
+    {
+      "ruta": "nativo-debug-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-debug-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "f3854d252fc591da6c361a6e677ca7f0375390e3e0b808a601f6c13d6d9e7322"
+    },
+    {
+      "ruta": "nativo-release-compilar.json",
+      "bytes": 652,
+      "sha256": "66438bf2247e764345eacbb551a15cc6f7f7261f2421ef4bd7e0015a490e2faa"
+    },
+    {
+      "ruta": "nativo-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-ejecutar.json",
+      "bytes": 365,
+      "sha256": "ddf0574f1ab8d5eccbb0fd29fca2fb7c16aa11b93752f56afcd20e178e9732e6"
+    },
+    {
+      "ruta": "nativo-release-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "f3854d252fc591da6c361a6e677ca7f0375390e3e0b808a601f6c13d6d9e7322"
+    },
+    {
+      "ruta": "rustc-version.json",
+      "bytes": 398,
+      "sha256": "dbb9e055b9342e508d16de6c4277cd607fb34e8ee47b36e3370219f1d2b9b4c6"
+    },
+    {
+      "ruta": "rustc-version.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "rustc-version.stdout",
+      "bytes": 196,
+      "sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d"
+    },
+    {
+      "ruta": "wasi-debug-compilar.json",
+      "bytes": 731,
+      "sha256": "ff3ee898bd7046eafbd8d6f85211ae255f7d6314c49a7bdeb79bcbfd4c278e31"
+    },
+    {
+      "ruta": "wasi-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-debug-ejecutar.json",
+      "bytes": 528,
+      "sha256": "7b9d514a1c52384185b17d749a19c39611469bc3d81988696e1138e39e8a0746"
+    },
+    {
+      "ruta": "wasi-debug-ejecutar.stderr",
+      "bytes": 164,
+      "sha256": "eb614b6110a3f268371f257983f2d10d7dd427cb0bbc4618ca58ea5e114e69dd"
+    },
+    {
+      "ruta": "wasi-debug-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "40e57add0fe38827152d086e7ca0109af3446d5f08ddf2bcb712a5131b39c491"
+    },
+    {
+      "ruta": "wasi-release-compilar.json",
+      "bytes": 734,
+      "sha256": "2a27ac5a836cb29d3b3a36ff694edaca61d77e09f53586b21d1f8e0a31f41ced"
+    },
+    {
+      "ruta": "wasi-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-release-ejecutar.json",
+      "bytes": 531,
+      "sha256": "379500a0870853a96fbb79db1692ca85c8490a1dbeec254d8b14216a30303054"
+    },
+    {
+      "ruta": "wasi-release-ejecutar.stderr",
+      "bytes": 165,
+      "sha256": "b2763eb39bb8e0a3c1e0025101c5d01fbf955f965726f4ee613fa12dce7914ca"
+    },
+    {
+      "ruta": "wasi-release-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "40e57add0fe38827152d086e7ca0109af3446d5f08ddf2bcb712a5131b39c491"
+    }
+  ],
+  "binarios": [
+    {
+      "nombre": "nativo-debug.bin",
+      "bytes": 4629336,
+      "sha256": "414798ac639c49fe34e459ba5353135c063f21edb923d9f40df025085e13f82d"
+    },
+    {
+      "nombre": "nativo-release.bin",
+      "bytes": 4560888,
+      "sha256": "398df1524f84622c15ea52666c51b54ecbabbbec2bae349f5cf3edb5bb61a7b2"
+    },
+    {
+      "nombre": "wasi-debug.wasm",
+      "bytes": 2321102,
+      "sha256": "be67d1554d8bf47a2f112c484232ae716aef30849bc64acbd9f9996d1851864a"
+    },
+    {
+      "nombre": "wasi-release.wasm",
+      "bytes": 2178414,
+      "sha256": "f1b5615b33836ec443b4715789e306c01b24787940bb1b4719ca355795291e12"
+    }
+  ],
+  "nota": "Binarios reconstruibles con fuentes, rustc y flags registrados; se conservan localmente. Este manifiesto se excluye de su propia lista."
+}

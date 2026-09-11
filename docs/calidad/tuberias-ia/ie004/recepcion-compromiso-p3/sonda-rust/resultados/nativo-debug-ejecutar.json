@@ -1,0 +1,12 @@
+{
+  "nombre": "nativo-debug-ejecutar",
+  "comando": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug.bin",
+  "args": [],
+  "inicio": "2026-09-11T05:08:35.660Z",
+  "fin": "2026-09-11T05:08:37.572Z",
+  "duracion_ms": 1911.735898,
+  "limite_ms": 30000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

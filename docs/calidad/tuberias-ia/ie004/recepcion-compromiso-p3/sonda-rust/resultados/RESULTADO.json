@@ -1,0 +1,6636 @@
+{
+  "instrumento": "IE004-R10-SINTAXIS/1",
+  "registro": "RETP-2026-131",
+  "reserva_leida": false,
+  "corrector_completo": false,
+  "compilacion_total_ms": 852.2200149999995,
+  "ejecucion_total_ms": 4845.899544000001,
+  "coincidencia_entre_cuatro_configuraciones": true,
+  "corridas": [
+    {
+      "id": "nativo-debug",
+      "estado": "EJECUTADA",
+      "compilacion_ms": 159.182813,
+      "ejecucion_ms": 1911.735898,
+      "binario": {
+        "nombre": "nativo-debug.bin",
+        "bytes": 4629336,
+        "sha256": "414798ac639c49fe34e459ba5353135c063f21edb923d9f40df025085e13f82d"
+      },
+      "cabecera": {
+        "instrumento": "IE004-R10-SINTAXIS/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 64
+      },
+      "coincidencias": 69,
+      "total": 72,
+      "comparaciones": [
+        {
+          "id": "L01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L02",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 239417,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 58,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L03",
+            "bytes": 70,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 422842,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 76,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L04",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L06",
+            "bytes": 27,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124857,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L07",
+            "bytes": 26,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124295,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L08",
+            "bytes": 39,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 176227,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 42,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L09",
+            "bytes": 38,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 317523,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 93,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L10",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L11",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L12",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L13",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L14",
+            "bytes": 32,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138844,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L15",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L16",
+            "bytes": 37,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 242315,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L17",
+            "bytes": 40,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138880,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L18",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L19",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L20",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L21",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L22",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 311929,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 61,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L23",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L24",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R02",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R03",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R04",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R06",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R07",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R08",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R09",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 325520,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R10",
+            "bytes": 80,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 673336,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 105,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R11",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 259458,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R12",
+            "bytes": 72,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 539152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R13",
+            "bytes": 49,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 255625,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R14",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 315939,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R15",
+            "bytes": 50,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 609333,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 101,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R16",
+            "bytes": 47,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 398969,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 110,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R17",
+            "bytes": 49,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 495096,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 117,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R18",
+            "bytes": 34,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 140345,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 90,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R19",
+            "bytes": 50,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 393967,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 75,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R20",
+            "bytes": 54,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 335863,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R21",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R22",
+            "bytes": 41,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 142838,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 81,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R23",
+            "bytes": 52,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 192626,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 116,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R24",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C01",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C01",
+            "bytes": 35,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 313259,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 77,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C02",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "C02",
+            "bytes": 68,
+            "tokens": 17,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 7,
+            "estados_sintacticos": 160,
+            "tabla_bytes": 8100,
+            "ultimo": [
+              11,
+              5,
+              7,
+              1
+            ]
+          }
+        },
+        {
+          "id": "C03",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C03",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C04",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C04",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C05",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C05",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 347945,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 138,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C06",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C06",
+            "bytes": 25,
+            "tokens": 6,
+            "estado": "NO_DERIVA",
+            "intentos": 91415,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 41,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C07",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C07",
+            "bytes": 42,
+            "tokens": 10,
+            "estado": "NO_DERIVA",
+            "intentos": 325045,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 70,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C08",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C08",
+            "bytes": 37,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 167784,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 39,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C09",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C09",
+            "bytes": 39,
+            "tokens": 9,
+            "estado": "NO_DERIVA",
+            "intentos": 231308,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 28,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C10",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C10",
+            "bytes": 34,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 269038,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C11",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C11",
+            "bytes": 23,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 100789,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C12",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C12",
+            "bytes": 21,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138110,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 60,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C13",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C13",
+            "bytes": 47,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 525385,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 91,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C14",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C14",
+            "bytes": 35,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 243690,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 85,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C15",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C15",
+            "bytes": 18,
+            "tokens": 5,
+            "estado": "DERIVA",
+            "intentos": 62435,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 38,
+            "tabla_bytes": 900,
+            "ultimo": [
+              5,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C16",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C16",
+            "bytes": 30,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 128997,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 46,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C17",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C17",
+            "bytes": 36,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238620,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 72,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C18",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C18",
+            "bytes": 44,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 396152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 82,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-T-127",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-127",
+            "bytes": 883,
+            "tokens": 127,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 504,
+            "tabla_bytes": 409600,
+            "ultimo": [
+              11,
+              54,
+              11,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-128",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-128",
+            "bytes": 890,
+            "tokens": 128,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 508,
+            "tabla_bytes": 416025,
+            "ultimo": [
+              11,
+              49,
+              8,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-129",
+          "grupo": "capacidad_tokens",
+          "esperado": "Tokens",
+          "observado": "Tokens",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-T-129",
+            "bytes": 897,
+            "estado": "Tokens",
+            "intentos": 0
+          }
+        },
+        {
+          "id": "CP-B-8191",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8191",
+            "bytes": 8191,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8192",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8192",
+            "bytes": 8192,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8193",
+          "grupo": "capacidad_bytes",
+          "esperado": "Bytes",
+          "observado": "Bytes",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8193",
+            "bytes": 8193,
+            "estado": "Bytes",
+            "intentos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "nativo-release",
+      "estado": "EJECUTADA",
+      "compilacion_ms": 262.67361400000027,
+      "ejecucion_ms": 239.3552669999999,
+      "binario": {
+        "nombre": "nativo-release.bin",
+        "bytes": 4560888,
+        "sha256": "398df1524f84622c15ea52666c51b54ecbabbbec2bae349f5cf3edb5bb61a7b2"
+      },
+      "cabecera": {
+        "instrumento": "IE004-R10-SINTAXIS/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 64
+      },
+      "coincidencias": 69,
+      "total": 72,
+      "comparaciones": [
+        {
+          "id": "L01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L02",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 239417,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 58,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L03",
+            "bytes": 70,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 422842,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 76,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L04",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L06",
+            "bytes": 27,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124857,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L07",
+            "bytes": 26,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124295,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L08",
+            "bytes": 39,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 176227,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 42,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L09",
+            "bytes": 38,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 317523,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 93,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L10",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L11",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L12",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L13",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L14",
+            "bytes": 32,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138844,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L15",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L16",
+            "bytes": 37,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 242315,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L17",
+            "bytes": 40,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138880,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L18",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L19",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L20",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L21",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L22",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 311929,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 61,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L23",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L24",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R02",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R03",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R04",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R06",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R07",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R08",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R09",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 325520,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R10",
+            "bytes": 80,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 673336,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 105,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R11",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 259458,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R12",
+            "bytes": 72,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 539152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R13",
+            "bytes": 49,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 255625,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R14",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 315939,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R15",
+            "bytes": 50,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 609333,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 101,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R16",
+            "bytes": 47,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 398969,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 110,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R17",
+            "bytes": 49,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 495096,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 117,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R18",
+            "bytes": 34,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 140345,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 90,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R19",
+            "bytes": 50,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 393967,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 75,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R20",
+            "bytes": 54,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 335863,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R21",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R22",
+            "bytes": 41,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 142838,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 81,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R23",
+            "bytes": 52,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 192626,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 116,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R24",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C01",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C01",
+            "bytes": 35,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 313259,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 77,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C02",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "C02",
+            "bytes": 68,
+            "tokens": 17,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 7,
+            "estados_sintacticos": 160,
+            "tabla_bytes": 8100,
+            "ultimo": [
+              11,
+              5,
+              7,
+              1
+            ]
+          }
+        },
+        {
+          "id": "C03",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C03",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C04",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C04",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C05",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C05",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 347945,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 138,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C06",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C06",
+            "bytes": 25,
+            "tokens": 6,
+            "estado": "NO_DERIVA",
+            "intentos": 91415,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 41,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C07",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C07",
+            "bytes": 42,
+            "tokens": 10,
+            "estado": "NO_DERIVA",
+            "intentos": 325045,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 70,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C08",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C08",
+            "bytes": 37,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 167784,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 39,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C09",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C09",
+            "bytes": 39,
+            "tokens": 9,
+            "estado": "NO_DERIVA",
+            "intentos": 231308,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 28,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C10",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C10",
+            "bytes": 34,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 269038,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C11",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C11",
+            "bytes": 23,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 100789,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C12",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C12",
+            "bytes": 21,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138110,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 60,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C13",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C13",
+            "bytes": 47,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 525385,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 91,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C14",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C14",
+            "bytes": 35,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 243690,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 85,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C15",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C15",
+            "bytes": 18,
+            "tokens": 5,
+            "estado": "DERIVA",
+            "intentos": 62435,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 38,
+            "tabla_bytes": 900,
+            "ultimo": [
+              5,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C16",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C16",
+            "bytes": 30,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 128997,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 46,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C17",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C17",
+            "bytes": 36,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238620,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 72,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C18",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C18",
+            "bytes": 44,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 396152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 82,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-T-127",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-127",
+            "bytes": 883,
+            "tokens": 127,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 504,
+            "tabla_bytes": 409600,
+            "ultimo": [
+              11,
+              54,
+              11,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-128",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-128",
+            "bytes": 890,
+            "tokens": 128,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 508,
+            "tabla_bytes": 416025,
+            "ultimo": [
+              11,
+              49,
+              8,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-129",
+          "grupo": "capacidad_tokens",
+          "esperado": "Tokens",
+          "observado": "Tokens",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-T-129",
+            "bytes": 897,
+            "estado": "Tokens",
+            "intentos": 0
+          }
+        },
+        {
+          "id": "CP-B-8191",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8191",
+            "bytes": 8191,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8192",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8192",
+            "bytes": 8192,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8193",
+          "grupo": "capacidad_bytes",
+          "esperado": "Bytes",
+          "observado": "Bytes",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8193",
+            "bytes": 8193,
+            "estado": "Bytes",
+            "intentos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "wasi-debug",
+      "estado": "EJECUTADA",
+      "compilacion_ms": 154.55927799999972,
+      "ejecucion_ms": 2182.3378140000004,
+      "binario": {
+        "nombre": "wasi-debug.wasm",
+        "bytes": 2321102,
+        "sha256": "be67d1554d8bf47a2f112c484232ae716aef30849bc64acbd9f9996d1851864a"
+      },
+      "cabecera": {
+        "instrumento": "IE004-R10-SINTAXIS/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 32
+      },
+      "coincidencias": 69,
+      "total": 72,
+      "comparaciones": [
+        {
+          "id": "L01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L02",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 239417,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 58,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L03",
+            "bytes": 70,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 422842,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 76,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L04",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L06",
+            "bytes": 27,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124857,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L07",
+            "bytes": 26,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124295,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L08",
+            "bytes": 39,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 176227,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 42,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L09",
+            "bytes": 38,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 317523,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 93,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L10",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L11",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L12",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L13",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L14",
+            "bytes": 32,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138844,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L15",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L16",
+            "bytes": 37,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 242315,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L17",
+            "bytes": 40,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138880,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L18",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L19",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L20",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L21",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L22",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 311929,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 61,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L23",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L24",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R02",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R03",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R04",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R06",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R07",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R08",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R09",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 325520,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R10",
+            "bytes": 80,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 673336,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 105,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R11",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 259458,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R12",
+            "bytes": 72,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 539152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R13",
+            "bytes": 49,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 255625,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R14",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 315939,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R15",
+            "bytes": 50,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 609333,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 101,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R16",
+            "bytes": 47,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 398969,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 110,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R17",
+            "bytes": 49,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 495096,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 117,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R18",
+            "bytes": 34,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 140345,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 90,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R19",
+            "bytes": 50,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 393967,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 75,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R20",
+            "bytes": 54,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 335863,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R21",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R22",
+            "bytes": 41,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 142838,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 81,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R23",
+            "bytes": 52,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 192626,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 116,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R24",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C01",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C01",
+            "bytes": 35,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 313259,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 77,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C02",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "C02",
+            "bytes": 68,
+            "tokens": 17,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 7,
+            "estados_sintacticos": 160,
+            "tabla_bytes": 8100,
+            "ultimo": [
+              11,
+              5,
+              7,
+              1
+            ]
+          }
+        },
+        {
+          "id": "C03",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C03",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C04",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C04",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C05",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C05",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 347945,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 138,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C06",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C06",
+            "bytes": 25,
+            "tokens": 6,
+            "estado": "NO_DERIVA",
+            "intentos": 91415,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 41,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C07",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C07",
+            "bytes": 42,
+            "tokens": 10,
+            "estado": "NO_DERIVA",
+            "intentos": 325045,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 70,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C08",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C08",
+            "bytes": 37,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 167784,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 39,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C09",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C09",
+            "bytes": 39,
+            "tokens": 9,
+            "estado": "NO_DERIVA",
+            "intentos": 231308,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 28,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C10",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C10",
+            "bytes": 34,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 269038,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C11",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C11",
+            "bytes": 23,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 100789,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C12",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C12",
+            "bytes": 21,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138110,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 60,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C13",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C13",
+            "bytes": 47,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 525385,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 91,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C14",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C14",
+            "bytes": 35,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 243690,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 85,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C15",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C15",
+            "bytes": 18,
+            "tokens": 5,
+            "estado": "DERIVA",
+            "intentos": 62435,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 38,
+            "tabla_bytes": 900,
+            "ultimo": [
+              5,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C16",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C16",
+            "bytes": 30,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 128997,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 46,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C17",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C17",
+            "bytes": 36,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238620,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 72,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C18",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C18",
+            "bytes": 44,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 396152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 82,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-T-127",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-127",
+            "bytes": 883,
+            "tokens": 127,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 504,
+            "tabla_bytes": 409600,
+            "ultimo": [
+              11,
+              54,
+              11,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-128",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-128",
+            "bytes": 890,
+            "tokens": 128,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 508,
+            "tabla_bytes": 416025,
+            "ultimo": [
+              11,
+              49,
+              8,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-129",
+          "grupo": "capacidad_tokens",
+          "esperado": "Tokens",
+          "observado": "Tokens",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-T-129",
+            "bytes": 897,
+            "estado": "Tokens",
+            "intentos": 0
+          }
+        },
+        {
+          "id": "CP-B-8191",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8191",
+            "bytes": 8191,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8192",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8192",
+            "bytes": 8192,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8193",
+          "grupo": "capacidad_bytes",
+          "esperado": "Bytes",
+          "observado": "Bytes",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8193",
+            "bytes": 8193,
+            "estado": "Bytes",
+            "intentos": 0
+          }
+        }
+      ]
+    },
+    {
+      "id": "wasi-release",
+      "estado": "EJECUTADA",
+      "compilacion_ms": 275.80430999999953,
+      "ejecucion_ms": 512.4705650000005,
+      "binario": {
+        "nombre": "wasi-release.wasm",
+        "bytes": 2178414,
+        "sha256": "f1b5615b33836ec443b4715789e306c01b24787940bb1b4719ca355795291e12"
+      },
+      "cabecera": {
+        "instrumento": "IE004-R10-SINTAXIS/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 32
+      },
+      "coincidencias": 69,
+      "total": 72,
+      "comparaciones": [
+        {
+          "id": "L01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L02",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 239417,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 58,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L03",
+            "bytes": 70,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 422842,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 76,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L04",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L06",
+            "bytes": 27,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124857,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L07",
+            "bytes": 26,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 124295,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L08",
+            "bytes": 39,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 176227,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 42,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L09",
+            "bytes": 38,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 317523,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 93,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L10",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L11",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L12",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L13",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L14",
+            "bytes": 32,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138844,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L15",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L16",
+            "bytes": 37,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 242315,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L17",
+            "bytes": 40,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138880,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 86,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L18",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L19",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L20",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L21",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L22",
+            "bytes": 45,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 311929,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 61,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L23",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "L24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "L24",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R01",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R01",
+            "bytes": 55,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 406887,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 88,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R02",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R02",
+            "bytes": 32,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 191093,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 89,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R03",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R03",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338235,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R04",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R04",
+            "bytes": 35,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 434669,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R05",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R05",
+            "bytes": 47,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 304955,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 73,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R06",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R06",
+            "bytes": 37,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 96332,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R07",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R07",
+            "bytes": 33,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 178481,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 71,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R08",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R08",
+            "bytes": 47,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238126,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 79,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R09",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R09",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 325520,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 87,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R10",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R10",
+            "bytes": 80,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 673336,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 105,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R11",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R11",
+            "bytes": 45,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 259458,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R12",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R12",
+            "bytes": 72,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 539152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R13",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R13",
+            "bytes": 49,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 255625,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 121,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R14",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R14",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 315939,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R15",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R15",
+            "bytes": 50,
+            "tokens": 13,
+            "estado": "DERIVA",
+            "intentos": 609333,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 101,
+            "tabla_bytes": 4900,
+            "ultimo": [
+              13,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R16",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R16",
+            "bytes": 47,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 398969,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 110,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R17",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R17",
+            "bytes": 49,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 495096,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 117,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R18",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R18",
+            "bytes": 34,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 140345,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 90,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R19",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R19",
+            "bytes": 50,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 393967,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 75,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R20",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R20",
+            "bytes": 54,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 335863,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 109,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R21",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R21",
+            "bytes": 48,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 338091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 119,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R22",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R22",
+            "bytes": 41,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 142838,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 81,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R23",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R23",
+            "bytes": 52,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 192626,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 116,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "R24",
+          "grupo": "historico_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "R24",
+            "bytes": 43,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 257946,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 118,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C01",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C01",
+            "bytes": 35,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 313259,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 77,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C02",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "C02",
+            "bytes": 68,
+            "tokens": 17,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 7,
+            "estados_sintacticos": 160,
+            "tabla_bytes": 8100,
+            "ultimo": [
+              11,
+              5,
+              7,
+              1
+            ]
+          }
+        },
+        {
+          "id": "C03",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C03",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C04",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C04",
+            "bytes": 40,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 346091,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 140,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C05",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C05",
+            "bytes": 41,
+            "tokens": 10,
+            "estado": "DERIVA",
+            "intentos": 347945,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 138,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C06",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C06",
+            "bytes": 25,
+            "tokens": 6,
+            "estado": "NO_DERIVA",
+            "intentos": 91415,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 41,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C07",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C07",
+            "bytes": 42,
+            "tokens": 10,
+            "estado": "NO_DERIVA",
+            "intentos": 325045,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 70,
+            "tabla_bytes": 3025,
+            "ultimo": [
+              10,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C08",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C08",
+            "bytes": 37,
+            "tokens": 8,
+            "estado": "DERIVA",
+            "intentos": 167784,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 39,
+            "tabla_bytes": 2025,
+            "ultimo": [
+              8,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C09",
+          "grupo": "contraste_publico",
+          "esperado": "NO_DERIVA",
+          "observado": "NO_DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C09",
+            "bytes": 39,
+            "tokens": 9,
+            "estado": "NO_DERIVA",
+            "intentos": 231308,
+            "barridos_iniciados": 8,
+            "estados_sintacticos": 28,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C10",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C10",
+            "bytes": 34,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 269038,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 102,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C11",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C11",
+            "bytes": 23,
+            "tokens": 6,
+            "estado": "DERIVA",
+            "intentos": 100789,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 56,
+            "tabla_bytes": 1225,
+            "ultimo": [
+              6,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C12",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C12",
+            "bytes": 21,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 138110,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 60,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C13",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C13",
+            "bytes": 47,
+            "tokens": 12,
+            "estado": "DERIVA",
+            "intentos": 525385,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 91,
+            "tabla_bytes": 4225,
+            "ultimo": [
+              12,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C14",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C14",
+            "bytes": 35,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 243690,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 85,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C15",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C15",
+            "bytes": 18,
+            "tokens": 5,
+            "estado": "DERIVA",
+            "intentos": 62435,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 38,
+            "tabla_bytes": 900,
+            "ultimo": [
+              5,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C16",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C16",
+            "bytes": 30,
+            "tokens": 7,
+            "estado": "DERIVA",
+            "intentos": 128997,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 46,
+            "tabla_bytes": 1600,
+            "ultimo": [
+              7,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C17",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C17",
+            "bytes": 36,
+            "tokens": 9,
+            "estado": "DERIVA",
+            "intentos": 238620,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 72,
+            "tabla_bytes": 2500,
+            "ultimo": [
+              9,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "C18",
+          "grupo": "contraste_publico",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "C18",
+            "bytes": 44,
+            "tokens": 11,
+            "estado": "DERIVA",
+            "intentos": 396152,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 82,
+            "tabla_bytes": 3600,
+            "ultimo": [
+              11,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-T-127",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-127",
+            "bytes": 883,
+            "tokens": 127,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 504,
+            "tabla_bytes": 409600,
+            "ultimo": [
+              11,
+              54,
+              11,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-128",
+          "grupo": "capacidad_tokens",
+          "esperado": "DERIVA",
+          "observado": "PRESUPUESTO_AGOTADO",
+          "coincide": false,
+          "evidencia": {
+            "id": "CP-T-128",
+            "bytes": 890,
+            "tokens": 128,
+            "estado": "PRESUPUESTO_AGOTADO",
+            "intentos": 1000000,
+            "barridos_iniciados": 1,
+            "estados_sintacticos": 508,
+            "tabla_bytes": 416025,
+            "ultimo": [
+              11,
+              49,
+              8,
+              1
+            ]
+          }
+        },
+        {
+          "id": "CP-T-129",
+          "grupo": "capacidad_tokens",
+          "esperado": "Tokens",
+          "observado": "Tokens",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-T-129",
+            "bytes": 897,
+            "estado": "Tokens",
+            "intentos": 0
+          }
+        },
+        {
+          "id": "CP-B-8191",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8191",
+            "bytes": 8191,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8192",
+          "grupo": "capacidad_bytes",
+          "esperado": "DERIVA",
+          "observado": "DERIVA",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8192",
+            "bytes": 8192,
+            "tokens": 3,
+            "estado": "DERIVA",
+            "intentos": 23350,
+            "barridos_iniciados": 9,
+            "estados_sintacticos": 29,
+            "tabla_bytes": 400,
+            "ultimo": [
+              3,
+              0,
+              25,
+              3
+            ]
+          }
+        },
+        {
+          "id": "CP-B-8193",
+          "grupo": "capacidad_bytes",
+          "esperado": "Bytes",
+          "observado": "Bytes",
+          "coincide": true,
+          "evidencia": {
+            "id": "CP-B-8193",
+            "bytes": 8193,
+            "estado": "Bytes",
+            "intentos": 0
+          }
+        }
+      ]
+    }
+  ],
+  "conclusion": "CALENDARIO_INSTRUMENTADO_INSUFICIENTE_PARA_EL_CORPUS_PUBLICO; CAPTURA_RESERVADA_NO_HABILITADA"
+}

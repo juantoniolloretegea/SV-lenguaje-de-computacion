@@ -1,0 +1,30 @@
+{
+  "fecha": "2026-09-11T05:08:35.498Z",
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "sistema": {
+    "plataforma": "linux",
+    "release": "6.18.35",
+    "arquitectura": "x64",
+    "cpu_modelo": "AMD EPYC 9V74 80-Core Processor",
+    "cpus_logicas": 9,
+    "memoria_host_bytes": 23109910528,
+    "node": "v24.19.0"
+  },
+  "huellas_fuentes": {
+    "sonda.rs": "cd5aff63e5ee979bcecbc843eab4ef5bad3b76459e1ed5845d10b294c6a39f04",
+    "casos.rs": "5e27c00b1688b465cc3690942abcb81885ca5c0eb82e860f707b1b9063523fd7",
+    "CASOS_PUBLICOS.json": "94bf8e9fe270dfb62a993dad0b566b3f8a5bcc6b4b1fee1b239f3da8bdbdfa39"
+  },
+  "cortes_preparacion": {
+    "lenguaje": "f63d97c2d10fac93d471f731e763f20f904e0904",
+    "laboratorio": "7fd99bda2d21930fc1910d63437980be4dcdb453"
+  },
+  "reserva_leida": false,
+  "limites": {
+    "compilacion_total_ms": 480000,
+    "ejecucion_total_ms": 300000,
+    "proceso_prueba_ms": 30000,
+    "reintentos": 0
+  },
+  "alcance_tiempos": "Una ejecución local por configuración. Incluye arranque y salida; WASI incluye carga/compilación del módulo. No mide latencia del modelo, percentiles, tiempo real ni rendimiento del corrector completo."
+}

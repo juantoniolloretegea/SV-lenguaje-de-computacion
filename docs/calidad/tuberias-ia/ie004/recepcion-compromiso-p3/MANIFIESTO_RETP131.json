@@ -1,0 +1,229 @@
+{
+  "registro": "RETP-2026-131",
+  "fecha": "2026-09-11",
+  "cortes": {
+    "lang": "f63d97c2d10fac93d471f731e763f20f904e0904",
+    "lab": "7fd99bda2d21930fc1910d63437980be4dcdb453"
+  },
+  "arboles": {
+    "lang": "3042e7030ba2c1480ba3e86738b5b61497c47f98",
+    "lab": "ebb28d925e3304c25328dc6c62c50605048e1cf6"
+  },
+  "estado": "RECORRIDO_INSTRUMENTADO_INSUFICIENTE; CAPTURA_NO_HABILITADA",
+  "reserva_leida": false,
+  "perfil_modificado": false,
+  "fuente_o_esperados_modificados_despues_de_ejecutar": false,
+  "archivos": [
+    {
+      "ruta": "ACTA_RESULTADO_CONTROL_PUBLICO_R10_RUST_2026_09_11.md",
+      "bytes": 7960,
+      "sha256": "389047cb6cc975db96e91a387a3de4f8e2b9e6805a41fc155323232da666594e",
+      "git_blob_sha": "d1bc5561076ea2a5ba4c77d82472d83d66f79b09"
+    },
+    {
+      "ruta": "inicio.md",
+      "bytes": 9256,
+      "sha256": "faf25ab57f8c0d6fdbd7bb9e3c17a8c3c28565589924b3022bd56e5d5d7e0a10",
+      "git_blob_sha": "7a11787f8ddc2bb102b841620e83881d87eb8082"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/ejecutar.mjs",
+      "bytes": 6774,
+      "sha256": "492285240f001aab9a92c2131d1f10e66cf86e347ce5165d6a3f364b34c43a6f",
+      "git_blob_sha": "b298b0002b659ac8f233067628451d356ba0c64a"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/wasi.mjs",
+      "bytes": 392,
+      "sha256": "02916426a7b635f2d1eec1097e1a40304ac6b1510bea41bf35e09f769680bd2f",
+      "git_blob_sha": "ff4d597388e69e88eac38cb8ef1eca53c2ca2f67"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/REPRODUCIR.md",
+      "bytes": 2466,
+      "sha256": "e437a7a3e988a958bf097dbb0334e871c9fa3640b89b4058d853fa25b4590889",
+      "git_blob_sha": "dd45c454471670f12a69b0d60b64c5c58c7e270d"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/ENTORNO.json",
+      "bytes": 1339,
+      "sha256": "3115b296f87e533fba4e4b7bf17ccd497ac59208860a89b84da302b722183f74",
+      "git_blob_sha": "0694d4194966c87f76c9ee2a943f97d7832b065e"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/MANIFIESTO_RESULTADOS.json",
+      "bytes": 5434,
+      "sha256": "45f4143e2b9d3c705c73c143066fa11888f1b44ab3282b042e8f8dd1a1ea6261",
+      "git_blob_sha": "69c68e6bea58f867a3896af6f4df77c08aa40812"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/RESULTADO.json",
+      "bytes": 165239,
+      "sha256": "2488d1158b0139b503dcaffb94a12b962e3bb9273f7f2563f49e4194377d4fc7",
+      "git_blob_sha": "dd8bd09ebb1467087c2741e369cc2fbce78a2211"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-compilar.json",
+      "bytes": 641,
+      "sha256": "6b371d5daddfdf8fc18e2807293e5bc55e24a1f37d981ac785d599e9cb701f95",
+      "git_blob_sha": "d3de2a15631529affdc9e4759ce9b41e80c8501f"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-ejecutar.json",
+      "bytes": 355,
+      "sha256": "671ddeae68c67cc3a842421761e64fed9c68083ce68a6b119c0a506f0868ffd9",
+      "git_blob_sha": "17fabb4746b3bf0f420889b0dab477d761ee72d2"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-debug-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "f3854d252fc591da6c361a6e677ca7f0375390e3e0b808a601f6c13d6d9e7322",
+      "git_blob_sha": "fd3b9d8ded9957465d589f061922fec155fc8b47"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-compilar.json",
+      "bytes": 652,
+      "sha256": "66438bf2247e764345eacbb551a15cc6f7f7261f2421ef4bd7e0015a490e2faa",
+      "git_blob_sha": "ad975589c0718f9bdab217c4bd08dcce2be7769f"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-ejecutar.json",
+      "bytes": 365,
+      "sha256": "ddf0574f1ab8d5eccbb0fd29fca2fb7c16aa11b93752f56afcd20e178e9732e6",
+      "git_blob_sha": "83c57fee958208a88a13ba3b68bd26f6070ae206"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/nativo-release-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "f3854d252fc591da6c361a6e677ca7f0375390e3e0b808a601f6c13d6d9e7322",
+      "git_blob_sha": "fd3b9d8ded9957465d589f061922fec155fc8b47"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/rustc-version.json",
+      "bytes": 398,
+      "sha256": "dbb9e055b9342e508d16de6c4277cd607fb34e8ee47b36e3370219f1d2b9b4c6",
+      "git_blob_sha": "80133dfc510cfdcec274f9ebb4d41e7461e07e17"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/rustc-version.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/rustc-version.stdout",
+      "bytes": 196,
+      "sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d",
+      "git_blob_sha": "90a48088b4ce5f10fec05d488f63ca6666d10b22"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-compilar.json",
+      "bytes": 731,
+      "sha256": "ff3ee898bd7046eafbd8d6f85211ae255f7d6314c49a7bdeb79bcbfd4c278e31",
+      "git_blob_sha": "af2a7c49cc62e36aeadedc69f6735fbed736f93b"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-ejecutar.json",
+      "bytes": 528,
+      "sha256": "7b9d514a1c52384185b17d749a19c39611469bc3d81988696e1138e39e8a0746",
+      "git_blob_sha": "294c6a68bb2a54d5b70bb5f43a7cff0187e8eb24"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-ejecutar.stderr",
+      "bytes": 164,
+      "sha256": "eb614b6110a3f268371f257983f2d10d7dd427cb0bbc4618ca58ea5e114e69dd",
+      "git_blob_sha": "98a14157e72600c463018751facb82058a938683"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-debug-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "40e57add0fe38827152d086e7ca0109af3446d5f08ddf2bcb712a5131b39c491",
+      "git_blob_sha": "839e5d9f402687f3b2fec4acfd20595e541f08b5"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-compilar.json",
+      "bytes": 734,
+      "sha256": "2a27ac5a836cb29d3b3a36ff694edaca61d77e09f53586b21d1f8e0a31f41ced",
+      "git_blob_sha": "1b1a39696af94d4d22a33ae5d93c31ccab372101"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_blob_sha": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-ejecutar.json",
+      "bytes": 531,
+      "sha256": "379500a0870853a96fbb79db1692ca85c8490a1dbeec254d8b14216a30303054",
+      "git_blob_sha": "95b9a2e92702c4cc7eff01af26504430c282cae3"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-ejecutar.stderr",
+      "bytes": 165,
+      "sha256": "b2763eb39bb8e0a3c1e0025101c5d01fbf955f965726f4ee613fa12dce7914ca",
+      "git_blob_sha": "b9516b310dd181d5b5b39bbc13e4cccad3d72108"
+    },
+    {
+      "ruta": "ie004/recepcion-compromiso-p3/sonda-rust/resultados/wasi-release-ejecutar.stdout",
+      "bytes": 11639,
+      "sha256": "40e57add0fe38827152d086e7ca0109af3446d5f08ddf2bcb712a5131b39c491",
+      "git_blob_sha": "839e5d9f402687f3b2fec4acfd20595e541f08b5"
+    }
+  ],
+  "nota": "No incluye índices específicos de repositorio, RETP global ni la huella de este mismo manifiesto. Preparación original RETP-130 conservada."
+}
