@@ -1403,3 +1403,17 @@ Cuentas observadas: preparación 3.832.774 B, enlace 1.743.690 B y reservas G1 a
 **Siguiente objeto único:** G2 ya localizado en RETP-142, correspondencia del recibo con operación gobernada existente y procedencia de los referentes requeridos por R1. No rellenar referentes ausentes ni convertir una consulta de lectura en actualización celular. G3/G4 y P3/P4/P5 conservan sus puertas; reserva y asociación /2–/3 pendientes. Continúa la segunda necesidad; no se declara trazabilidad integral cerrada.
 
 **Estado:** CONFORME_ENLACE_PUBLICO_INTRAPROCESO.
+
+<a id="retp-146"></a>
+
+## RETP-2026-146 · Memoria del frame humano, trazabilidad y fidelidad
+
+11/09/2026. Responsable editorial: Watson. Publicación solicitada por Juan Antonio Lloret Egea del diálogo desde la pregunta por el frame en su representación mental hasta el diagrama adversarial. [PDF, Markdown e imágenes](tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/README.md). Cortes de entrada: Lenguaje `86ab08ea2eea8f7483b1fa8e471a2866627cdfb3`; laboratorio `94bd7175853861f49c53f162efdc6d6df71167c9`.
+
+Se conserva la secuencia de seis imágenes originales y el diagrama, las dos necesidades, la bisagra computacional-humana, la carga de comprensión, la propuesta de Rust y la revisión adversarial. Las cinco comparaciones recuperadas por el autor se incorporan con su texto; dos intervenciones iniciales no recuperadas literalmente quedan identificadas como síntesis editorial. La aclaración posterior sobre reconstruir se recoge como nota editorial.
+
+Comprobación documental: revisión de todas las páginas del PDF, correspondencia de contenidos e imágenes, rutas relativas y manifiesto de identidades. Copias idénticas del expediente en Calidad y laboratorio. No se incorporan los archivos de las actas privadas a Calidad.
+
+No modifica código, semántica, IR, núcleo, dominio, agente ni workflow. No ejecuta nuevos ensayos ni acredita fidelidad o seguridad integral. La reconstrucción de cambios observados no establece por sí sola su causa interna. Se conserva el objeto técnico activo y las puertas pendientes; esta memoria no abre una fase.
+
+**Estado:** MEMORIA_DOCUMENTAL_PUBLICADA_SIN_CIERRE_TECNICO.

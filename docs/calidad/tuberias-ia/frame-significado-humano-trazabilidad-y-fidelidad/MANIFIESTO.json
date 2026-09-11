@@ -1,0 +1,60 @@
+{
+  "expediente": "frame-significado-humano-trazabilidad-y-fidelidad",
+  "fecha": "2026-09-11",
+  "naturaleza": "edicion_documental_sin_ensayos_nuevos",
+  "imagenes_originales": 6,
+  "diagrama_original": 1,
+  "archivos": {
+    "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md": {
+      "bytes": 41291,
+      "sha256": "ec9be90c96f5d8953fca623af8cf07c78f9f9f05c79b8dc78b6d001a2e746f5b",
+      "git_blob_sha1": "5822a83b0394b80a51290f226826b380b0ccb0ac"
+    },
+    "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf": {
+      "bytes": 10333671,
+      "sha256": "1cf979318b68cc164c07500f6f39c32f3f8608e47cca3da1c0d4222516828e15",
+      "git_blob_sha1": "b01dabb703787c794b46052b2faa289ad13ca274"
+    },
+    "README.md": {
+      "bytes": 2069,
+      "sha256": "cb1c098d1c6f6921c62255ade80102d45c33f127b1f0f7f0e711b1c075ffc3ea",
+      "git_blob_sha1": "1fb4b7764f7dad118896618d268c2b4dfab05e80"
+    },
+    "imagenes/01-escena-original.png": {
+      "bytes": 284173,
+      "sha256": "fdbd7517377172f31bf4e91bf973bab2416425b9a18da96a6ec396739e960d14",
+      "git_blob_sha1": "6512f6f5c1270037fd7b131843cfde3bbdc7ea0a"
+    },
+    "imagenes/02-sin-pajaros.png": {
+      "bytes": 2191689,
+      "sha256": "c5612d733ef0afa682248df8b2083f11d1f34aef91e1eb6e2807adabbf6500a7",
+      "git_blob_sha1": "98b6e05b9561793cc506c18987e106cb8e5660de"
+    },
+    "imagenes/03-sin-vegetacion.png": {
+      "bytes": 1983038,
+      "sha256": "61b81efdd99f117fb828dabc52bac29bc002c19c8756fe5945c60feed731ca76",
+      "git_blob_sha1": "fcde37a7ec5877425c423e449556cd235b078d49"
+    },
+    "imagenes/04-sin-sol-ni-mar.png": {
+      "bytes": 1849952,
+      "sha256": "51479339309e2ba52690bed3d5ea22204331056dc697d4920775655850b24e5f",
+      "git_blob_sha1": "dba9240fea6915646f25ec41f157e5cdf22ca1f9"
+    },
+    "imagenes/05-volcan-aislado.png": {
+      "bytes": 2438672,
+      "sha256": "fd1d7f40c92c8c096afbbc6a280c8e2919a6d23ddd5ccb2029f7bff6fc335017",
+      "git_blob_sha1": "46aa80b42e51fd872cd19d0b4e574c7ef924ba6a"
+    },
+    "imagenes/06-montana-sin-crater.png": {
+      "bytes": 2032596,
+      "sha256": "3f640ef4c2ba3f188c23c011c4b2243325c15cee2f091c8da0204ebc589b0d2e",
+      "git_blob_sha1": "2a24ac5495341c1a48f1b4b9bda5f48a7fed3539"
+    },
+    "imagenes/07-diagrama-de-ataque.png": {
+      "bytes": 257250,
+      "sha256": "f15dba9a0a228f0d3ea2f56f6c7c642460421c7649a8be0bc308966cf4acf548",
+      "git_blob_sha1": "4ab1af79db02cdaf03dc34ce7a705c88f93acb28"
+    }
+  },
+  "nota": "El manifiesto no se incluye a sí mismo. Igualdad entre copias comprobable mediante los identificadores de contenido."
+}

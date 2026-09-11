@@ -124,3 +124,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Adaptador cualificado y decisión preparada · RETP-140
 
 [Acta de resultado y continuidad](ACTA_RESULTADO_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_PREPARADA_P3_2026_09_11.md). Cuatro configuraciones; fuentes y esperados intactos. No hay nueva captura de modelo; el siguiente objeto es la decisión de compatibilidad antes de P3.
+
+## Memoria del frame humano y su traducción técnica — 11/09/2026
+
+[PDF, Markdown y seis imágenes originales: significado humano, trazabilidad y fidelidad](frame-significado-humano-trazabilidad-y-fidelidad/README.md). Diálogo de Juan Antonio con Watson, propuesta y rectificaciones adversariales, hasta el diagrama final. Edición documental con respuestas recuperadas por el autor; no altera el objeto técnico activo ni acredita ensayos nuevos.
