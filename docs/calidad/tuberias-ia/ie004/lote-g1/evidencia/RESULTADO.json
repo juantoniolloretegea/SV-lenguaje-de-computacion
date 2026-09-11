@@ -1,0 +1,1187 @@
+{
+  "registro": "RETP-2026-145",
+  "estado": "CONFORME_ENLACE_PUBLICO_INTRAPROCESO",
+  "fuentes_sha256": "4308866dd0e0f7b273f7f6eaab4e4749f73e33b3f196524b253addfc91070c48",
+  "procesos": [
+    {
+      "id": "rustc-version",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "-vV"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 196,
+      "stdout_sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-g1-debug",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=g1",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/libg1-debug.rlib"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 348,
+      "stderr_sha256": "cbafae8f1c54c5e3a806681f6a7fa3a20919121712c002f194eb8f4e6f212364"
+    },
+    {
+      "id": "compilar-enlace-debug",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--test",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/lote-g1/lib.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/libg1-debug.rlib",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "overflow-checks=yes",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/lote-g1-debug.bin"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "test-debug",
+      "cmd": "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/lote-g1-debug.bin",
+      "args": [
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 985,
+      "stdout_sha256": "05ac5262c5c2ec4955aba374d943476624f63174775dfac721ca95f39c4df9f3",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-g1-release",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--crate-type=lib",
+        "--crate-name=g1",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/libg1-release.rlib"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 348,
+      "stderr_sha256": "cbafae8f1c54c5e3a806681f6a7fa3a20919121712c002f194eb8f4e6f212364"
+    },
+    {
+      "id": "compilar-enlace-release",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "--test",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/lote-g1/lib.rs",
+        "--extern",
+        "g1=/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/libg1-release.rlib",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/lote-g1-release.bin"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "test-release",
+      "cmd": "/workspace/scratch/a4c9906d0361/lote-g1-145-inicial/lote-g1-release.bin",
+      "args": [
+        "--nocapture",
+        "--test-threads=1"
+      ],
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_bytes": 985,
+      "stdout_sha256": "806c79e8489388f8709a279c6e429095855423714567cb5f51a1a12887a79528",
+      "stderr_bytes": 0,
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "configuraciones": [
+    {
+      "modo": "debug",
+      "compila": true,
+      "binario_sha256": "e1fbd18df80655362472417a0ffac13b498b45712b0eeb0322e739fb288998d8",
+      "exit_code": 0,
+      "testigos": [
+        "LG1-01",
+        "LG1-02",
+        "LG1-03",
+        "LG1-04",
+        "LG1-05",
+        "LG1-06",
+        "LG1-07",
+        "LG1-08",
+        "LG1-09",
+        "LG1-10",
+        "LG1-11",
+        "LG1-12"
+      ],
+      "recorrido": [
+        {
+          "id": "P3-01",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-02",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-03",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-04",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 1,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-05",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-06",
+          "conforme": true,
+          "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-07",
+          "conforme": true,
+          "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-08",
+          "conforme": true,
+          "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-09",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-10",
+          "conforme": true,
+          "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-11",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-12",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-13",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-14",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 4,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-15",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-16",
+          "conforme": true,
+          "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-17",
+          "conforme": true,
+          "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-18",
+          "conforme": true,
+          "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-19",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-20",
+          "conforme": true,
+          "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-21",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-22",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-23",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-24",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 6,
+          "ordinal": 4
+        }
+      ],
+      "conforme": true,
+      "cuentas": {
+        "version": "IE004-LOTE-G1-PUBLICO/1",
+        "lote_sha256": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a",
+        "montaje_sha256": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff",
+        "preparacion_trabajo": 183791,
+        "preparacion_reserva": 3832774,
+        "enlace_trabajo": 165033,
+        "enlace_reserva": 1743690,
+        "g1_reserva_agregada": 53518379,
+        "casos": [
+          {
+            "posicion": 0,
+            "id": "P3-01",
+            "ambito": 1,
+            "ordinal": 1,
+            "inicio": 48,
+            "fin": 284,
+            "vigente": true,
+            "solicitud_sha256": "53c3ac33ed80bc14bb3ec48be0fcdaa80b46d58b04e44820c8dc2f8c58e55630",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 1,
+            "id": "P3-02",
+            "ambito": 1,
+            "ordinal": 2,
+            "inicio": 290,
+            "fin": 552,
+            "vigente": true,
+            "solicitud_sha256": "e6e1dcf7d1c1918f6fad11e3eeff90c8f0d9f6f3a831fd499d8b9e5ecf3ee1d3",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 2,
+            "id": "P3-03",
+            "ambito": 1,
+            "ordinal": 3,
+            "inicio": 558,
+            "fin": 815,
+            "vigente": true,
+            "solicitud_sha256": "13642645d515f1ae245101aca23b676a4aa48835d42b4d613152e0780e39665f",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 3,
+            "id": "P3-04",
+            "ambito": 1,
+            "ordinal": 4,
+            "inicio": 821,
+            "fin": 1078,
+            "vigente": false,
+            "solicitud_sha256": "81d398f0f8865092f4372620828dc53d1e4c159f759bf14eb0188ed6f7eb9fcb",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 4,
+            "id": "P3-05",
+            "ambito": 2,
+            "ordinal": 1,
+            "inicio": 1084,
+            "fin": 2191,
+            "vigente": true,
+            "solicitud_sha256": "11f18bbca72598fa9da2b050d224c55c077696c98c9f28008e14e49f53119be8",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 5,
+            "id": "P3-06",
+            "ambito": 2,
+            "ordinal": 2,
+            "inicio": 2197,
+            "fin": 2431,
+            "vigente": true,
+            "solicitud_sha256": "fcd8a199a545f3dc2f6f8955eab7be447f57e3e6654ba5a409dc718016bab139",
+            "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 6,
+            "id": "P3-07",
+            "ambito": 2,
+            "ordinal": 3,
+            "inicio": 2437,
+            "fin": 2670,
+            "vigente": true,
+            "solicitud_sha256": "cb089f674e5a6a145999bf6c6966beda66dd218ba2f89d6441302370a25aa7a1",
+            "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 7,
+            "id": "P3-08",
+            "ambito": 2,
+            "ordinal": 4,
+            "inicio": 2676,
+            "fin": 2928,
+            "vigente": true,
+            "solicitud_sha256": "76f82f0675c92037ff15af3cc64f8828ecccbfc4d4e9ca1b5ff6b7bbb7746234",
+            "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 8,
+            "id": "P3-09",
+            "ambito": 3,
+            "ordinal": 1,
+            "inicio": 2934,
+            "fin": 3170,
+            "vigente": true,
+            "solicitud_sha256": "e567da623db6720b3def1530309119958131c270a7599426ae40e28edeeadc1a",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 9,
+            "id": "P3-10",
+            "ambito": 3,
+            "ordinal": 2,
+            "inicio": 3176,
+            "fin": 3386,
+            "vigente": true,
+            "solicitud_sha256": "947c5aee10472debc92079225f2f89dd6ea6f19ed9a94115e901eea3b9b524bd",
+            "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 10,
+            "id": "P3-11",
+            "ambito": 3,
+            "ordinal": 3,
+            "inicio": 3392,
+            "fin": 3628,
+            "vigente": true,
+            "solicitud_sha256": "09a19d9ab2cb08a6f349b72aa0786d1f1f9c430d17cd1e2c1a637a308e820de7",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 11,
+            "id": "P3-12",
+            "ambito": 3,
+            "ordinal": 4,
+            "inicio": 3634,
+            "fin": 3896,
+            "vigente": true,
+            "solicitud_sha256": "39b6ac4faf62b3b05b5d2b482fc990c31c24564af5985b8c1158f8e1a7d227f6",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 12,
+            "id": "P3-13",
+            "ambito": 4,
+            "ordinal": 1,
+            "inicio": 3902,
+            "fin": 4159,
+            "vigente": true,
+            "solicitud_sha256": "e0317ba919a2878afad092a3fb9e5e343296b6c50fb83f7618e9dd110988bb36",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 13,
+            "id": "P3-14",
+            "ambito": 4,
+            "ordinal": 2,
+            "inicio": 4165,
+            "fin": 4422,
+            "vigente": false,
+            "solicitud_sha256": "a769453e3d348f706499707d8e377870441fc3f45b396e81e9eb712b098f4f6c",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 14,
+            "id": "P3-15",
+            "ambito": 4,
+            "ordinal": 3,
+            "inicio": 4428,
+            "fin": 5535,
+            "vigente": true,
+            "solicitud_sha256": "33dc2533771b75e0670c1512f0fee780b5a045e3772e982fd6a7bcb00470cc38",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 15,
+            "id": "P3-16",
+            "ambito": 4,
+            "ordinal": 4,
+            "inicio": 5541,
+            "fin": 5775,
+            "vigente": true,
+            "solicitud_sha256": "a2ab12575456f12818f5993623b046eee8263a70cfd649d27135daada5c9d2d0",
+            "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 16,
+            "id": "P3-17",
+            "ambito": 5,
+            "ordinal": 1,
+            "inicio": 5781,
+            "fin": 6014,
+            "vigente": true,
+            "solicitud_sha256": "5c66c223bf3ec7e2220efeaa821ba09a5fad66baafedd450056c5c493e1bb39a",
+            "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 17,
+            "id": "P3-18",
+            "ambito": 5,
+            "ordinal": 2,
+            "inicio": 6020,
+            "fin": 6272,
+            "vigente": true,
+            "solicitud_sha256": "d6e67d00b4fd12a37e5aa5c6e626efafea1f1d1967278afa9b5fab843e46537c",
+            "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 18,
+            "id": "P3-19",
+            "ambito": 5,
+            "ordinal": 3,
+            "inicio": 6278,
+            "fin": 6514,
+            "vigente": true,
+            "solicitud_sha256": "101d80d3aa514a3e6309ab4232c048f96096e94cebe169c7d2dde9dc8bcf946f",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 19,
+            "id": "P3-20",
+            "ambito": 5,
+            "ordinal": 4,
+            "inicio": 6520,
+            "fin": 6730,
+            "vigente": true,
+            "solicitud_sha256": "c424d512389d31b1ad378320a18618e34d49e2ef81d884872e213ea519382dab",
+            "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 20,
+            "id": "P3-21",
+            "ambito": 6,
+            "ordinal": 1,
+            "inicio": 6736,
+            "fin": 6972,
+            "vigente": true,
+            "solicitud_sha256": "49b945a1d3551904a0099ddc8c8cc5230b79c5638a871ddb5edeba53b942601a",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 21,
+            "id": "P3-22",
+            "ambito": 6,
+            "ordinal": 2,
+            "inicio": 6978,
+            "fin": 7240,
+            "vigente": true,
+            "solicitud_sha256": "18823afae075d4b3875747892f020ea877535c33e1273a800a421eb8a8e0901b",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 22,
+            "id": "P3-23",
+            "ambito": 6,
+            "ordinal": 3,
+            "inicio": 7246,
+            "fin": 7503,
+            "vigente": true,
+            "solicitud_sha256": "70727b0dbf2e6e016c6a6970a6929f6939430806792ec1c65b6f73f1bd7988c4",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 23,
+            "id": "P3-24",
+            "ambito": 6,
+            "ordinal": 4,
+            "inicio": 7509,
+            "fin": 7766,
+            "vigente": false,
+            "solicitud_sha256": "c4177f7d93e553ebfca3970971b734c4c55858c079657b7caffac1cf226a33e8",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          }
+        ]
+      },
+      "capturas_bytes": 94113
+    },
+    {
+      "modo": "release",
+      "compila": true,
+      "binario_sha256": "234aa9a3ca527a11a41ebee6cb582ab1179571fa3edd955dca413af334c55117",
+      "exit_code": 0,
+      "testigos": [
+        "LG1-01",
+        "LG1-02",
+        "LG1-03",
+        "LG1-04",
+        "LG1-05",
+        "LG1-06",
+        "LG1-07",
+        "LG1-08",
+        "LG1-09",
+        "LG1-10",
+        "LG1-11",
+        "LG1-12"
+      ],
+      "recorrido": [
+        {
+          "id": "P3-01",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-02",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-03",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 1,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-04",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 1,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-05",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-06",
+          "conforme": true,
+          "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-07",
+          "conforme": true,
+          "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-08",
+          "conforme": true,
+          "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "vigente": true,
+          "ambito": 2,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-09",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-10",
+          "conforme": true,
+          "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-11",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-12",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 3,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-13",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-14",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 4,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-15",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-16",
+          "conforme": true,
+          "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "vigente": true,
+          "ambito": 4,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-17",
+          "conforme": true,
+          "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-18",
+          "conforme": true,
+          "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-19",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-20",
+          "conforme": true,
+          "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "vigente": true,
+          "ambito": 5,
+          "ordinal": 4
+        },
+        {
+          "id": "P3-21",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 1
+        },
+        {
+          "id": "P3-22",
+          "conforme": true,
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 2
+        },
+        {
+          "id": "P3-23",
+          "conforme": true,
+          "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "vigente": true,
+          "ambito": 6,
+          "ordinal": 3
+        },
+        {
+          "id": "P3-24",
+          "conforme": true,
+          "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "vigente": false,
+          "ambito": 6,
+          "ordinal": 4
+        }
+      ],
+      "conforme": true,
+      "cuentas": {
+        "version": "IE004-LOTE-G1-PUBLICO/1",
+        "lote_sha256": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a",
+        "montaje_sha256": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff",
+        "preparacion_trabajo": 183791,
+        "preparacion_reserva": 3832774,
+        "enlace_trabajo": 165033,
+        "enlace_reserva": 1743690,
+        "g1_reserva_agregada": 53518379,
+        "casos": [
+          {
+            "posicion": 0,
+            "id": "P3-01",
+            "ambito": 1,
+            "ordinal": 1,
+            "inicio": 48,
+            "fin": 284,
+            "vigente": true,
+            "solicitud_sha256": "53c3ac33ed80bc14bb3ec48be0fcdaa80b46d58b04e44820c8dc2f8c58e55630",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 1,
+            "id": "P3-02",
+            "ambito": 1,
+            "ordinal": 2,
+            "inicio": 290,
+            "fin": 552,
+            "vigente": true,
+            "solicitud_sha256": "e6e1dcf7d1c1918f6fad11e3eeff90c8f0d9f6f3a831fd499d8b9e5ecf3ee1d3",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 2,
+            "id": "P3-03",
+            "ambito": 1,
+            "ordinal": 3,
+            "inicio": 558,
+            "fin": 815,
+            "vigente": true,
+            "solicitud_sha256": "13642645d515f1ae245101aca23b676a4aa48835d42b4d613152e0780e39665f",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 3,
+            "id": "P3-04",
+            "ambito": 1,
+            "ordinal": 4,
+            "inicio": 821,
+            "fin": 1078,
+            "vigente": false,
+            "solicitud_sha256": "81d398f0f8865092f4372620828dc53d1e4c159f759bf14eb0188ed6f7eb9fcb",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 4,
+            "id": "P3-05",
+            "ambito": 2,
+            "ordinal": 1,
+            "inicio": 1084,
+            "fin": 2191,
+            "vigente": true,
+            "solicitud_sha256": "11f18bbca72598fa9da2b050d224c55c077696c98c9f28008e14e49f53119be8",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 5,
+            "id": "P3-06",
+            "ambito": 2,
+            "ordinal": 2,
+            "inicio": 2197,
+            "fin": 2431,
+            "vigente": true,
+            "solicitud_sha256": "fcd8a199a545f3dc2f6f8955eab7be447f57e3e6654ba5a409dc718016bab139",
+            "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 6,
+            "id": "P3-07",
+            "ambito": 2,
+            "ordinal": 3,
+            "inicio": 2437,
+            "fin": 2670,
+            "vigente": true,
+            "solicitud_sha256": "cb089f674e5a6a145999bf6c6966beda66dd218ba2f89d6441302370a25aa7a1",
+            "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 7,
+            "id": "P3-08",
+            "ambito": 2,
+            "ordinal": 4,
+            "inicio": 2676,
+            "fin": 2928,
+            "vigente": true,
+            "solicitud_sha256": "76f82f0675c92037ff15af3cc64f8828ecccbfc4d4e9ca1b5ff6b7bbb7746234",
+            "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 8,
+            "id": "P3-09",
+            "ambito": 3,
+            "ordinal": 1,
+            "inicio": 2934,
+            "fin": 3170,
+            "vigente": true,
+            "solicitud_sha256": "e567da623db6720b3def1530309119958131c270a7599426ae40e28edeeadc1a",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 9,
+            "id": "P3-10",
+            "ambito": 3,
+            "ordinal": 2,
+            "inicio": 3176,
+            "fin": 3386,
+            "vigente": true,
+            "solicitud_sha256": "947c5aee10472debc92079225f2f89dd6ea6f19ed9a94115e901eea3b9b524bd",
+            "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 10,
+            "id": "P3-11",
+            "ambito": 3,
+            "ordinal": 3,
+            "inicio": 3392,
+            "fin": 3628,
+            "vigente": true,
+            "solicitud_sha256": "09a19d9ab2cb08a6f349b72aa0786d1f1f9c430d17cd1e2c1a637a308e820de7",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 11,
+            "id": "P3-12",
+            "ambito": 3,
+            "ordinal": 4,
+            "inicio": 3634,
+            "fin": 3896,
+            "vigente": true,
+            "solicitud_sha256": "39b6ac4faf62b3b05b5d2b482fc990c31c24564af5985b8c1158f8e1a7d227f6",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 12,
+            "id": "P3-13",
+            "ambito": 4,
+            "ordinal": 1,
+            "inicio": 3902,
+            "fin": 4159,
+            "vigente": true,
+            "solicitud_sha256": "e0317ba919a2878afad092a3fb9e5e343296b6c50fb83f7618e9dd110988bb36",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 13,
+            "id": "P3-14",
+            "ambito": 4,
+            "ordinal": 2,
+            "inicio": 4165,
+            "fin": 4422,
+            "vigente": false,
+            "solicitud_sha256": "a769453e3d348f706499707d8e377870441fc3f45b396e81e9eb712b098f4f6c",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 14,
+            "id": "P3-15",
+            "ambito": 4,
+            "ordinal": 3,
+            "inicio": 4428,
+            "fin": 5535,
+            "vigente": true,
+            "solicitud_sha256": "33dc2533771b75e0670c1512f0fee780b5a045e3772e982fd6a7bcb00470cc38",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 15,
+            "id": "P3-16",
+            "ambito": 4,
+            "ordinal": 4,
+            "inicio": 5541,
+            "fin": 5775,
+            "vigente": true,
+            "solicitud_sha256": "a2ab12575456f12818f5993623b046eee8263a70cfd649d27135daada5c9d2d0",
+            "cuerpo_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 16,
+            "id": "P3-17",
+            "ambito": 5,
+            "ordinal": 1,
+            "inicio": 5781,
+            "fin": 6014,
+            "vigente": true,
+            "solicitud_sha256": "5c66c223bf3ec7e2220efeaa821ba09a5fad66baafedd450056c5c493e1bb39a",
+            "cuerpo_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 17,
+            "id": "P3-18",
+            "ambito": 5,
+            "ordinal": 2,
+            "inicio": 6020,
+            "fin": 6272,
+            "vigente": true,
+            "solicitud_sha256": "d6e67d00b4fd12a37e5aa5c6e626efafea1f1d1967278afa9b5fab843e46537c",
+            "cuerpo_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 18,
+            "id": "P3-19",
+            "ambito": 5,
+            "ordinal": 3,
+            "inicio": 6278,
+            "fin": 6514,
+            "vigente": true,
+            "solicitud_sha256": "101d80d3aa514a3e6309ab4232c048f96096e94cebe169c7d2dde9dc8bcf946f",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 19,
+            "id": "P3-20",
+            "ambito": 5,
+            "ordinal": 4,
+            "inicio": 6520,
+            "fin": 6730,
+            "vigente": true,
+            "solicitud_sha256": "c424d512389d31b1ad378320a18618e34d49e2ef81d884872e213ea519382dab",
+            "cuerpo_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 20,
+            "id": "P3-21",
+            "ambito": 6,
+            "ordinal": 1,
+            "inicio": 6736,
+            "fin": 6972,
+            "vigente": true,
+            "solicitud_sha256": "49b945a1d3551904a0099ddc8c8cc5230b79c5638a871ddb5edeba53b942601a",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 21,
+            "id": "P3-22",
+            "ambito": 6,
+            "ordinal": 2,
+            "inicio": 6978,
+            "fin": 7240,
+            "vigente": true,
+            "solicitud_sha256": "18823afae075d4b3875747892f020ea877535c33e1273a800a421eb8a8e0901b",
+            "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 22,
+            "id": "P3-23",
+            "ambito": 6,
+            "ordinal": 3,
+            "inicio": 7246,
+            "fin": 7503,
+            "vigente": true,
+            "solicitud_sha256": "70727b0dbf2e6e016c6a6970a6929f6939430806792ec1c65b6f73f1bd7988c4",
+            "cuerpo_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+            "v": "NO_SOLICITADA"
+          },
+          {
+            "posicion": 23,
+            "id": "P3-24",
+            "ambito": 6,
+            "ordinal": 4,
+            "inicio": 7509,
+            "fin": 7766,
+            "vigente": false,
+            "solicitud_sha256": "c4177f7d93e553ebfca3970971b734c4c55858c079657b7caffac1cf226a33e8",
+            "cuerpo_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+            "v": "NO_SOLICITADA"
+          }
+        ]
+      },
+      "capturas_bytes": 94113
+    }
+  ],
+  "reserva_leida": false,
+  "modelo_invocado": false,
+  "alcance": "Enlace público nativo intraproceso; no inscripción/Frame ni persistencia durable",
+  "paridad": {
+    "archivos": 101,
+    "identicos": true
+  },
+  "fuentes_fijadas_intactas": true
+}

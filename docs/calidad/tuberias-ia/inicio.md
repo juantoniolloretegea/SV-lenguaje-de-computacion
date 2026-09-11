@@ -5,7 +5,9 @@
 
 **Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). El expediente de correspondencia está concluido en RETP-142; el cierre material permanece pendiente. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
 
-**Candidata G1 ejecutada · RETP-144:** [Rust nativo y evidencia](ie004/recibo-g1/ACTA_RESULTADO_G1_NATIVO_2026_09_11.md). 29/29 pruebas en debug y release; 19 capturas idénticas. Dos defectos reproducidos y corregidos, conservando antecedentes. Custodia intraproceso en memoria; siguiente enlace: adaptador público del lote → receptor G1. G2–G4 y trazabilidad integral pendientes.
+**Enlace público G1 ejecutado · RETP-145:** [Resultado y evidencia](ie004/lote-g1/ACTA_RESULTADO_ENLACE_LOTE_G1_2026_09_11.md). 24/24 cuerpos históricos en debug y release; 12/12 testigos por compilación y 101 capturas idénticas. Lote, montaje y 24 recibos simultáneamente recuperables en memoria. Siguiente objeto G2: correspondencia con operación gobernada existente y procedencia de sus referentes. Trazabilidad integral pendiente.
+
+**Candidata G1 ejecutada · RETP-144:** [Rust nativo y evidencia](ie004/recibo-g1/ACTA_RESULTADO_G1_NATIVO_2026_09_11.md). 29/29 pruebas en debug y release; 19 capturas idénticas. Dos defectos reproducidos y corregidos, conservando antecedentes. Custodia intraproceso en memoria; enlace al adaptador público ejercido posteriormente en RETP-145. G2–G4 y trazabilidad integral pendientes.
 
 **Contrato G1/1 · RETP-143:** [Contrato y testigos originales](ie004/recibo-g1/CONTRATO_RECIBO_CUSTODIADO_IE004_G1_1.md). Los 18 testigos preparados se ejercen en RETP-144 con dos positivos adicionales, fronteras y contraejemplos; la fijación original permanece intacta.
 
@@ -122,4 +124,3 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Adaptador cualificado y decisión preparada · RETP-140
 
 [Acta de resultado y continuidad](ACTA_RESULTADO_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_PREPARADA_P3_2026_09_11.md). Cuatro configuraciones; fuentes y esperados intactos. No hay nueva captura de modelo; el siguiente objeto es la decisión de compatibilidad antes de P3.
-

@@ -1,6 +1,6 @@
 # Registro de evolución técnica del proyecto
 
-**Continuidad del frente IA:** [RETP-144](#retp-144), candidata G1 Rust conforme intraproceso tras corrección; conexión al adaptador público siguiente. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
+**Continuidad del frente IA:** [RETP-145](#retp-145), enlace público lote–G1 conforme intraproceso. Siguiente objeto G2: correspondencia con operación gobernada existente. Workflow V2 vigente; trazabilidad integral, reserva y garantías materiales pendientes.
 
 **Antecedente de relevo de fila 7:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
@@ -1387,3 +1387,19 @@ La conservación dura la vida del custodio; no acredita persistencia tras caída
 **Siguiente objeto único:** enlace del adaptador público del lote con G1 y cotejo de pertenencia de petición/montaje hasta el recibo. G2–G4, P3 reservado, asociación /2–/3, P4 y P5 conservan sus condiciones. Sin modelo, reserva, cambios doctrinales o constitución de dominio/agente. Espejo idéntico de artefactos en laboratorio.
 
 **Estado:** CANDIDATA_G1_CONFORME_INTRAPROCESO_TRAS_CORRECCION.
+
+<a id="retp-145"></a>
+
+## RETP-2026-145 · Enlace público del adaptador con G1
+
+11/09/2026. Responsable: Watson. Continuación autorizada por Juan Antonio Lloret Egea dentro de la segunda necesidad, trazabilidad. [Acta, fuentes y evidencia](tuberias-ia/ie004/lote-g1/ACTA_RESULTADO_ENLACE_LOTE_G1_2026_09_11.md). Cortes: Lenguaje `a31ec0f008b83eb9d3589228d0ff8cd18ff3591a`; laboratorio `3a6ab3ec9472fd3a3b7feb45f318767de711d922`. Rectoras cotejadas sin cambio.
+
+Se conecta nativamente el adaptador existente con G1. La admisión del lote y montaje públicos, sus huellas, las solicitudes y los rangos de procedencia se verifican antes de abrir A. La identidad completa del enlace se liga al ámbito y ordinal del custodio; no se utiliza el id aislado para seleccionar montaje. Seis custodios de cuatro slots conservan simultáneamente 24 recibos. V queda explícitamente no solicitada en esta ruta.
+
+Con el plan y 23 archivos fijados antes de ejecutar: 24/24 cuerpos coinciden con los esperados históricos, 12/12 testigos pasan en debug y release, 101 capturas son idénticas. Se conservan las tres vigencias revocadas y los originales. Se ejercen identidad, integridad, correspondencia, orden, duplicado, intercambio de manejador, lote incompleto y guarda de recursos. No fue necesaria corrección. Las 24 posiciones contienen diez preguntas distintas.
+
+Cuentas observadas: preparación 3.832.774 B, enlace 1.743.690 B y reservas G1 agregadas 53.518.379 B. Son cuentas de reservas, no RSS. Retención intraproceso; no recuperación tras caída, bloqueo de canal, nueva paridad WASI, inscripción o Frame. Fuentes del adaptador, A/V, G1 y núcleo intactas. La cápsula conserva evidencia verificable y los originales se espejan en laboratorio.
+
+**Siguiente objeto único:** G2 ya localizado en RETP-142, correspondencia del recibo con operación gobernada existente y procedencia de los referentes requeridos por R1. No rellenar referentes ausentes ni convertir una consulta de lectura en actualización celular. G3/G4 y P3/P4/P5 conservan sus puertas; reserva y asociación /2–/3 pendientes. Continúa la segunda necesidad; no se declara trazabilidad integral cerrada.
+
+**Estado:** CONFORME_ENLACE_PUBLICO_INTRAPROCESO.

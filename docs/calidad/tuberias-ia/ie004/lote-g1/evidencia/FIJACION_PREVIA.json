@@ -1,0 +1,120 @@
+{
+  "version": "IE004-LOTE-G1-FIJACION/1",
+  "archivos": [
+    {
+      "path": "../lote-p3/LOTE_SINTETICO_PUBLICO.json",
+      "bytes": 7773,
+      "sha256": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a"
+    },
+    {
+      "path": "../lote-p3/MONTAJES_PUBLICOS.json",
+      "bytes": 2261,
+      "sha256": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff"
+    },
+    {
+      "path": "../lote-p3/PROCEDENCIA_Y_ESPERADOS.json",
+      "bytes": 27250,
+      "sha256": "459adb26a2ef9268b09a70a9cf7f2c4b55b9f94662be9fd6fc81973d0dca8ae1"
+    },
+    {
+      "path": "../lote-p3/adaptador.rs",
+      "bytes": 9351,
+      "sha256": "d896f89463d952c323f849f7597c0725407c39871952bd55cfe53a803b67e5f2"
+    },
+    {
+      "path": "../recepcion-av/casos_fijados.rs",
+      "bytes": 8448,
+      "sha256": "1add1153ae76fb4dbe4dd2c35db1c0860dc3cf7e42831e501ec844f8da8b841f"
+    },
+    {
+      "path": "../recepcion-av/controles.rs",
+      "bytes": 5823,
+      "sha256": "db415940df33b290202b1a1764dd6acf239230f4e92b6db370b29cc556aff1cf"
+    },
+    {
+      "path": "../recepcion-av/json_estricto.rs",
+      "bytes": 8552,
+      "sha256": "bbef9939a2000d637e5714cc673e2b1b5c1feeb64ebe0620026b9d40dfd20690"
+    },
+    {
+      "path": "../recepcion-av/main.rs",
+      "bytes": 5491,
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "path": "../recepcion-av/recepcion_a.rs",
+      "bytes": 8326,
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    },
+    {
+      "path": "../recepcion-av/sha256.rs",
+      "bytes": 3993,
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "path": "../recepcion-av/verificar_v.rs",
+      "bytes": 7715,
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "path": "../recibo-g1/candidata/av.rs",
+      "bytes": 3506,
+      "sha256": "2c390d091d0c25c7f1af57222830fca9836bd22ceda5f1af427d803888faf356"
+    },
+    {
+      "path": "../recibo-g1/candidata/json_vista.rs",
+      "bytes": 4148,
+      "sha256": "debbf11b5ecfd5ed7f51cdc0477b6ecdcae8b46a4744ca90993afbbbddd894b9"
+    },
+    {
+      "path": "../recibo-g1/candidata/lib.rs",
+      "bytes": 14944,
+      "sha256": "bcb2b419d45d927fa40693b48881ccd25d27a98fb7a4669ae5651ebcc589fb23"
+    },
+    {
+      "path": "../semantica-a/gramatica.rs",
+      "bytes": 2700,
+      "sha256": "f5740a876e34ece371f1fa9454f5243e3586ee1957350b8550aab35e9fbcdec7"
+    },
+    {
+      "path": "../semantica-a/recursos.rs",
+      "bytes": 5909,
+      "sha256": "5656f93c1c893cd05a4ed50696cb41eb93cd10e91f629d4cf8926a771aa9eef3"
+    },
+    {
+      "path": "../semantica-a/semantica.rs",
+      "bytes": 11333,
+      "sha256": "f7aaf4d1d02e8cfcacab8ec83f3c28009b4c7cdacd498c65fd7ff4a47664b4b4"
+    },
+    {
+      "path": "../semantica-a/servicio.rs",
+      "bytes": 6256,
+      "sha256": "bc119baed2d74c750ff19e42d25ba2edca6849661256321eec4876d9aae134f0"
+    },
+    {
+      "path": "../semantica-a/sintaxis.rs",
+      "bytes": 9642,
+      "sha256": "0413f45b8b340fdffea5fa300643f70e0c9a6ac4f196c433c53d1607798d381b"
+    },
+    {
+      "path": "PLAN_FIJADO.json",
+      "bytes": 3345,
+      "sha256": "e0e2a2443657ae46af94584e33e73465270c45c0b5ea6dec8f27660fe8d06884"
+    },
+    {
+      "path": "ejecutar.mjs",
+      "bytes": 7687,
+      "sha256": "602c4b2477609d2d0a46efbcc5a4f6d50c1eeeab5061e259c56144d9b4895227"
+    },
+    {
+      "path": "lib.rs",
+      "bytes": 8924,
+      "sha256": "d801fae357b515be7a7e5a83fbde53e9f614c7015ee96d4583a2e48b1926c530"
+    },
+    {
+      "path": "tests.rs",
+      "bytes": 5776,
+      "sha256": "776c1da26a09cb63f378778e820e3693042b2dca5f0b433d4a3febafec966868"
+    }
+  ]
+}

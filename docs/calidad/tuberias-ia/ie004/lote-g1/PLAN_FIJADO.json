@@ -1,0 +1,25 @@
+{
+  "version": "IE004-LOTE-G1-PUBLICO/1",
+  "registro": "RETP-2026-145",
+  "base": "a31ec0f008b83eb9d3589228d0ff8cd18ff3591a",
+  "objeto": "Enlace nativo del adaptador público existente con G1; 24 posiciones y diez preguntas distintas; recuperación intraproceso",
+  "entrada_fijada": {"lote_sha256":"88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a","montaje_sha256":"92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff","esperados_sha256":"459adb26a2ef9268b09a70a9cf7f2c4b55b9f94662be9fd6fc81973d0dca8ae1"},
+  "identidad": "(version del enlace, hash del lote, hash del montaje, posicion) vinculado al (ambito,ordinal) opaco de G1; nunca sólo P3-xx",
+  "recursos": {"lote_bytes":2097152,"montaje_bytes":16384,"custodios":6,"slots_por_custodio":4,"cuenta_preparacion_bytes":16777216,"cuenta_preparacion_trabajo":24000000,"cuenta_enlace_bytes":16777216,"cuenta_enlace_trabajo":24000000,"reservas_g1_agregadas_bytes":100663296,"margen_previo_por_invocacion_a_bytes":20971520,"capturas_ensayo_bytes":134217728,"plazo_ensayo_ms":60000},
+  "condiciones": ["Admitir y verificar todo el lote y montaje antes de abrir A", "Mantener 24 recibos recuperables a la vez durante la vida del enlace", "Orden de ejecución 0..23; cierre único; fallo conserva lo ya recibido y no acredita lote completo", "V no solicitada explícitamente en esta ruta pública", "A/V y adaptador originales intactos; no modificar el cuerpo para cuadrar un esperado"],
+  "testigos": [
+    {"id":"LG1-01","caso":"24 posiciones, seis custodios, recuperación simultánea","esperado":"24 cuerpos iguales a huellas RETP-140; 24 originales y montajes conservados; V no solicitada"},
+    {"id":"LG1-02","caso":"Otros bytes con los mismos ids; incluso espacio adicional","esperado":"rechazo de identidad de lote antes de A"},
+    {"id":"LG1-03","caso":"Cambiar vigencia de una posición manteniendo ids","esperado":"rechazo de identidad de montaje antes de A"},
+    {"id":"LG1-04","caso":"Marco de adaptador truncado o alterado sin actualizar hash","esperado":"rechazo de integridad antes de A"},
+    {"id":"LG1-05","caso":"Solicitud alterada en marco con hash recalculado","esperado":"rechazo de correspondencia antes de A"},
+    {"id":"LG1-06","caso":"Rango o huella del caso en traza del adaptador alterado","esperado":"rechazo de correspondencia antes de A"},
+    {"id":"LG1-07","caso":"Segunda ejecución de una posición","esperado":"rechazo de orden/duplicado sin cambiar recibo"},
+    {"id":"LG1-08","caso":"Ejecutar posición futura o fuera de 0..23","esperado":"rechazo sin iniciar A"},
+    {"id":"LG1-09","caso":"Trasladar manejador de otra posición/custodio mediante inyección privada","esperado":"rechazo de pertenencia; no presentar evidencia cruzada"},
+    {"id":"LG1-10","caso":"Intento de cerrar lote con 23 posiciones","esperado":"incompleto, primeras 23 recuperables"},
+    {"id":"LG1-11","caso":"Frontera de cuenta agregada antes de ejecutar A","esperado":"límite exacto permitido, exceso rechazado; no préstamo de saldo"},
+    {"id":"LG1-12","caso":"Segundo lote idéntico en el mismo proceso","esperado":"contenidos iguales, identidades de invocación distintas"}
+  ],
+  "ejecuciones": "una matriz nativo debug/release; una corrección causal máxima si hay defecto; preservar fallos; no WASI, P4/P5, modelo, reserva ni Frame"
+}
