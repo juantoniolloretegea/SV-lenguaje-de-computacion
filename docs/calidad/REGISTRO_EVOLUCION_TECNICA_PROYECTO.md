@@ -1314,3 +1314,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## RETP-2026-139 — Fallo de montaje y corrección causal
 
 11/09/2026. [Acta](tuberias-ia/ACTA_FALLO_DE_MONTAJE_Y_CORRECCION_ACOTADA_LOTE_P3_2026_09_11.md). Adaptador: 432/432 controles. Recorrido: 252/288; tres posiciones heredadas de A04 se invocaron con vigencia activa en lugar de revocada. Los 36 fallos se conservan. Corrección sólo del conductor, con mismos Rust, binarios, entradas y esperados; contraste acotado de esas 36 observaciones pendiente. Fallo de manifiesto EISDIR por directorio temporal identificado, sin pérdida de capturas. Reserva cerrada.
+
+<a id="retp-140"></a>
+## RETP-2026-140 — Resultado de lote y compatibilidad preparada
+
+11/09/2026. [Acta](tuberias-ia/ACTA_RESULTADO_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_PREPARADA_P3_2026_09_11.md). 36 controles del adaptador × 3 por configuración nativo/WASI debug/release. Recorrido de 24 posiciones × 3: 63 conformes iniciales y nueve correcciones conformes por configuración, restituyendo revocación de A04 sin cambiar Rust, binarios o esperados. Primera matriz FALLO conservada. 2879 archivos recuperables, extracción cotejada y 765 metadatos de procesos verificados. Matriz /2–/3 y decisión humana preparadas; compatibilidad integral no acreditada, reserva cerrada, P4/P5 pendientes.

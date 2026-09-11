@@ -1,0 +1,1926 @@
+{
+  "registro": "RETP-2026-140",
+  "estado": "CONFORME_EN_ALCANCE_PUBLICO_TRAS_CORRECCION_CONDUCTOR",
+  "configuraciones": [
+    {
+      "id": "nativo-debug",
+      "controles_adaptador": {
+        "casos": 36,
+        "repeticiones": 3,
+        "observaciones": 108,
+        "conformes": 108
+      },
+      "recorrido": {
+        "posiciones": 24,
+        "repeticiones": 3,
+        "conformes_iniciales": 63,
+        "fallos_iniciales": 9,
+        "correcciones_conformes": 9,
+        "estado_consolidado": "CONFORME_TRAS_CORRECCION_CONDUCTOR"
+      },
+      "cuerpos": [
+        {
+          "id": "P3-01",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        }
+      ],
+      "limites_observados": [
+        {
+          "id": "L01",
+          "bytes": 7773,
+          "trabajo": 191565,
+          "reserva_acumulada_bytes": 5929926
+        },
+        {
+          "id": "L04",
+          "bytes": 2097152,
+          "trabajo": 8547017,
+          "reserva_acumulada_bytes": 5929926
+        },
+        {
+          "id": "L25",
+          "bytes": 13749,
+          "trabajo": 336009,
+          "reserva_acumulada_bytes": 5970768
+        },
+        {
+          "id": "L32",
+          "bytes": 199784,
+          "trabajo": 3870862,
+          "reserva_acumulada_bytes": 6901676
+        }
+      ]
+    },
+    {
+      "id": "nativo-release",
+      "controles_adaptador": {
+        "casos": 36,
+        "repeticiones": 3,
+        "observaciones": 108,
+        "conformes": 108
+      },
+      "recorrido": {
+        "posiciones": 24,
+        "repeticiones": 3,
+        "conformes_iniciales": 63,
+        "fallos_iniciales": 9,
+        "correcciones_conformes": 9,
+        "estado_consolidado": "CONFORME_TRAS_CORRECCION_CONDUCTOR"
+      },
+      "cuerpos": [
+        {
+          "id": "P3-01",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        }
+      ],
+      "limites_observados": [
+        {
+          "id": "L01",
+          "bytes": 7773,
+          "trabajo": 191565,
+          "reserva_acumulada_bytes": 5929926
+        },
+        {
+          "id": "L04",
+          "bytes": 2097152,
+          "trabajo": 8547017,
+          "reserva_acumulada_bytes": 5929926
+        },
+        {
+          "id": "L25",
+          "bytes": 13749,
+          "trabajo": 336009,
+          "reserva_acumulada_bytes": 5970768
+        },
+        {
+          "id": "L32",
+          "bytes": 199784,
+          "trabajo": 3870862,
+          "reserva_acumulada_bytes": 6901676
+        }
+      ]
+    },
+    {
+      "id": "wasi-debug",
+      "controles_adaptador": {
+        "casos": 36,
+        "repeticiones": 3,
+        "observaciones": 108,
+        "conformes": 108
+      },
+      "recorrido": {
+        "posiciones": 24,
+        "repeticiones": 3,
+        "conformes_iniciales": 63,
+        "fallos_iniciales": 9,
+        "correcciones_conformes": 9,
+        "estado_consolidado": "CONFORME_TRAS_CORRECCION_CONDUCTOR"
+      },
+      "cuerpos": [
+        {
+          "id": "P3-01",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        }
+      ],
+      "limites_observados": [
+        {
+          "id": "L01",
+          "bytes": 7773,
+          "trabajo": 191565,
+          "reserva_acumulada_bytes": 5927622
+        },
+        {
+          "id": "L04",
+          "bytes": 2097152,
+          "trabajo": 8547017,
+          "reserva_acumulada_bytes": 5927622
+        },
+        {
+          "id": "L25",
+          "bytes": 13749,
+          "trabajo": 336009,
+          "reserva_acumulada_bytes": 5968464
+        },
+        {
+          "id": "L32",
+          "bytes": 199784,
+          "trabajo": 3870862,
+          "reserva_acumulada_bytes": 6899372
+        }
+      ]
+    },
+    {
+      "id": "wasi-release",
+      "controles_adaptador": {
+        "casos": 36,
+        "repeticiones": 3,
+        "observaciones": 108,
+        "conformes": 108
+      },
+      "recorrido": {
+        "posiciones": 24,
+        "repeticiones": 3,
+        "conformes_iniciales": 63,
+        "fallos_iniciales": 9,
+        "correcciones_conformes": 9,
+        "estado_consolidado": "CONFORME_TRAS_CORRECCION_CONDUCTOR"
+      },
+      "cuerpos": [
+        {
+          "id": "P3-01",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 1,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 1,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 1,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 1,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 1,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 1,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 1,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 2,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 2,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 2,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 2,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 2,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 2,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 2,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-01",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-02",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-03",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-04",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-05",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-06",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-07",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-08",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-09",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-10",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-11",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-12",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-13",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-14",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        },
+        {
+          "id": "P3-15",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-16",
+          "repeticion": 3,
+          "sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-17",
+          "repeticion": 3,
+          "sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-18",
+          "repeticion": 3,
+          "sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-19",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-20",
+          "repeticion": 3,
+          "sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-21",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-22",
+          "repeticion": 3,
+          "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-23",
+          "repeticion": 3,
+          "sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+          "procedencia": "resultados-1"
+        },
+        {
+          "id": "P3-24",
+          "repeticion": 3,
+          "sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+          "procedencia": "resultados-correccion-1"
+        }
+      ],
+      "limites_observados": [
+        {
+          "id": "L01",
+          "bytes": 7773,
+          "trabajo": 191565,
+          "reserva_acumulada_bytes": 5927622
+        },
+        {
+          "id": "L04",
+          "bytes": 2097152,
+          "trabajo": 8547017,
+          "reserva_acumulada_bytes": 5927622
+        },
+        {
+          "id": "L25",
+          "bytes": 13749,
+          "trabajo": 336009,
+          "reserva_acumulada_bytes": 5968464
+        },
+        {
+          "id": "L32",
+          "bytes": 199784,
+          "trabajo": 3870862,
+          "reserva_acumulada_bytes": 6899372
+        }
+      ]
+    }
+  ],
+  "metadatos_de_procesos_cotejados": 765,
+  "archivos_custodiados": 2879,
+  "fuentes_y_esperados_138_intactos": true,
+  "binarios_intactos": true,
+  "matriz_inicial": "FALLO_CONSERVADO",
+  "intervencion": "Restituir montaje revocado para A04; 36 observaciones repetidas de forma causal y fijada.",
+  "reserva_leida": false,
+  "compatibilidad_integral_p3": "NO_ACREDITADA",
+  "decision_custodio": "PREPARADA_NO_EMITIDA",
+  "p4": "NO_ACREDITADO",
+  "p5": "PENDIENTE",
+  "rss": "NO_MEDIDA"
+}

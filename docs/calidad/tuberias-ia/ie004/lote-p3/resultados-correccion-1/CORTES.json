@@ -1,0 +1,8 @@
+{
+  "registro": "RETP-2026-139",
+  "calidad": "c83663f1a040dc991bb2c129164e7fb0f8d4f012",
+  "laboratorio": "467769c972828b3e35bee3c0dce41d59904014b9",
+  "binarios_reutilizados": true,
+  "esperados_modificados": false,
+  "rust_modificado": false
+}

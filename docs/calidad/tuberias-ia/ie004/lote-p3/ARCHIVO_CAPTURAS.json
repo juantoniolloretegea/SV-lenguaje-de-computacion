@@ -1,0 +1,11 @@
+{
+  "version": "IE004-LOTE-ARCHIVO/1",
+  "archivos": 2879,
+  "base64_bytes": 1528333,
+  "base64_sha256": "da35992cf8eb1b3016ebad3aae8b9d874575cca214b624d4e458f2a65e56e77d",
+  "gzip_bytes": 1146247,
+  "gzip_sha256": "5b61da6d649228d6ec47c8bdae1053afb1d3e3ed6a5fcfa287110228132187a7",
+  "contenido_bytes": 11480925,
+  "contenido_sha256": "bed06200e04f65fa5841c590b91fb317c4aaccf881ee249cc9535bc5c375f0c8",
+  "nota": "Incluye toda la primera matriz desfavorable y la corrección; no ejecutables ni temporales de compilación. Validación reversible exacta realizada sin ejecutar receptores."
+}

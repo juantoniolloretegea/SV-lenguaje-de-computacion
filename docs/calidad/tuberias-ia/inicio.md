@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-139:** 36 controles del adaptador conformes en las cuatro configuraciones, tres reproducciones. El conductor omitió vigencia revocada en tres posiciones: fallo conservado y corrección causal fijada, pendiente de ejecutar. Reserva cerrada.
+**Estado vigente · RETP-140:** adaptador público conforme: 36 controles × 3 y 24 posiciones × 3 por configuración, tras una corrección causal del montaje del conductor. Fallo inicial conservado; 2879 archivos recuperables. Compatibilidad integral /2–/3 pendiente de decisión; reserva cerrada.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -108,3 +108,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Fallo de montaje y corrección preparada · RETP-139
 
 [Acta causal](ACTA_FALLO_DE_MONTAJE_Y_CORRECCION_ACOTADA_LOTE_P3_2026_09_11.md). No hay nueva captura de modelo ni modificación de esperados.
+
+## Adaptador cualificado y decisión preparada · RETP-140
+
+[Acta de resultado y continuidad](ACTA_RESULTADO_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_PREPARADA_P3_2026_09_11.md). Cuatro configuraciones; fuentes y esperados intactos. No hay nueva captura de modelo; el siguiente objeto es la decisión de compatibilidad antes de P3.
