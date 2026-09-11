@@ -1,0 +1,133 @@
+{
+  "registro": "RETP-2026-129",
+  "fecha": "2026-09-11",
+  "estado": "EXPEDIENTE_CIENTIFICO_PREPARATORIO_SIN_NUEVAS_EJECUCIONES",
+  "cortes": {
+    "lang": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+    "lab": "f66562bfd108e5c0e06516f0be17737b8e40517d"
+  },
+  "arboles": {
+    "lang": "3c87ebb846c5a6eea10e2adce14d7a4fa35d3cdf",
+    "lab": "0c7dba0ccb913f6a8ff95c10eec27c9a9c0d0f60"
+  },
+  "rectoras": [
+    {
+      "mode": "100644",
+      "path": "AGENTS.md",
+      "sha": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "size": 4384,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md",
+      "sha": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "size": 14941,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/6c57f2e895045d4a26bacefc98c49ebac2b433f7"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "size": 29014,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "size": 22330,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "mode": "100644",
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha": "44f8fda87856ab16007195cab324d40a758e506a",
+      "size": 67111,
+      "type": "blob",
+      "url": "https://api.github.com/repos/juantoniolloretegea/SV-lenguaje-de-computacion/git/blobs/44f8fda87856ab16007195cab324d40a758e506a"
+    }
+  ],
+  "lectura_rectoras": "Lecturas íntegras documentadas en RETP-127/128 reutilizadas; blobs recotejados en este corte. AGENTS releído en este turno.",
+  "perfil_sin_modificacion": {
+    "id": "IE004-ES-P2/2",
+    "git_blob_sha": "cfb1a245fdaccb0c951b8bc7f025e5d3daedadf3"
+  },
+  "alcance": {
+    "fuentes": 18,
+    "hipotesis": 7,
+    "piezas_evidencia": 11,
+    "revision_sistematica": false,
+    "reserva_accedida": false,
+    "reserva_creada": false,
+    "experimentos_nuevos": 0,
+    "envio_editorial": false,
+    "peer_review_del_articulo_recibida": false
+  },
+  "estado_experimental": [
+    "APTO_DOCUMENTAL_PARA_PREPARAR_RESERVA",
+    "CUSTODIA_NO_ACREDITADA",
+    "P3_NO_INICIADO",
+    "AISLAMIENTO_NO_VERDE"
+  ],
+  "huellas": "SHA-256 de documentos propios UTF-8; Git blob usa su cabecera canónica. No son huellas de artículos editoriales no descargados.",
+  "espejos": {
+    "lang": "docs/calidad/tuberias-ia",
+    "lab": "laboratorio/tareas-watson/tuberias-ia"
+  },
+  "archivos": [
+    {
+      "ruta_desde_tuberias": "ACTA_EXPEDIENTE_CIENTIFICO_Y_ESTADO_DEL_ARTE_2026_09_11.md",
+      "bytes": 3793,
+      "sha256": "b003dfecce3b224c2cbe5abfedd7337a9277a01aa5a6f8915720d91e457b0faf",
+      "git_blob_sha": "134cdc72676516074bc2a10c07664ebc80912e93"
+    },
+    {
+      "ruta_desde_tuberias": "inicio.md",
+      "bytes": 8096,
+      "sha256": "97312727c8e171c79e563ffe3d681f2e5200fc025bdc624eb09609551c0598c9",
+      "git_blob_sha": "1e6de428f51fc6c82518ab272b390d92fdf026f8"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/ESTADO_DEL_ARTE_2026_09_11.md",
+      "bytes": 20387,
+      "sha256": "6e0183b0c37da006d994b7a3d77c0114ea27c22959437ca6f6a194ad45eca973",
+      "git_blob_sha": "23efc933f38ad523f5a9e47b47b9b0d70ecb0c65"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/EXPEDIENTE_PARA_REVISION_POR_PARES.md",
+      "bytes": 19996,
+      "sha256": "8fb3e0fd491028fe4bc7622070e474de6e4524ca019a0ddcb11321bba75100d5",
+      "git_blob_sha": "2ea86325f2343a4886a2d0289f3d38689bc250f5"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/BIBLIOGRAFIA.bib",
+      "bytes": 11999,
+      "sha256": "ac016d00d9ad932926306f338736e4bc18d5565e0942b6f2d6e0c1eb8488189e",
+      "git_blob_sha": "985901b08be3237dcf41b2b2a1661520b7622a59"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/FUENTES_Y_ALCANCE.json",
+      "bytes": 32828,
+      "sha256": "039e19ca534ea16eed319769be58d2ec1b963500d73e8f3a32b5d677f68850a4",
+      "git_blob_sha": "07f45384dbec038247ba913569460c7f776dadec"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/BUSQUEDA.json",
+      "bytes": 4295,
+      "sha256": "22a7a5f1e122cd3b4ff9163d2bbc24599b8a12503f546e4aeedac825d065b296",
+      "git_blob_sha": "becfc908fe710d82ca4ee6cb15785ffbf67a2949"
+    },
+    {
+      "ruta_desde_tuberias": "ie004/expediente-cientifico/AFIRMACIONES_Y_EVIDENCIAS.json",
+      "bytes": 23204,
+      "sha256": "7bf0892106c823811b714ced6c3525a7a0e877295cb8d49434c8c0711dc4cf56",
+      "git_blob_sha": "a84d666fb0f24dee633f5d207a55a97b1c06a575"
+    }
+  ],
+  "auto_huella": "Este manifiesto se excluye de su propia lista; su identidad queda fijada por el blob y commit de publicación."
+}

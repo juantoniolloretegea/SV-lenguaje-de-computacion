@@ -1,0 +1,446 @@
+{
+  "registro": "RETP-2026-129",
+  "fecha": "2026-09-11",
+  "cortes": {
+    "lang": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+    "lab": "f66562bfd108e5c0e06516f0be17737b8e40517d"
+  },
+  "estado_experimental": [
+    "APTO_DOCUMENTAL_PARA_PREPARAR_RESERVA",
+    "CUSTODIA_NO_ACREDITADA",
+    "P3_NO_INICIADO",
+    "AISLAMIENTO_NO_VERDE"
+  ],
+  "evidencias": [
+    {
+      "id": "E01",
+      "registro": "RETP-2026-123",
+      "tipo": "PROTOCOLO_POSTERIOR_A_PRIMERAS_CAPTURAS",
+      "ruta": "WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md",
+      "hecho": "Puertas P0–P6, máximos de rondas y criterios de medición/parada documentados.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md",
+          "git_blob_sha": "9631fd6950791ab3dbd87f91ededdc1d7046ff1c",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md",
+          "git_blob_sha": "9631fd6950791ab3dbd87f91ededdc1d7046ff1c",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_2026_09_10.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E02",
+      "registro": "RETP-2026-124",
+      "tipo": "RESULTADO_HISTORICO_RUST_REPORTADO_Y_PRESERVADO",
+      "ruta": "ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md",
+      "hecho": "23/24 rutas/cuerpos, 17/18 datos y 6/6 rechazos debidos; persiste R01.",
+      "recuentos": {
+        "correctos": 23,
+        "total": 24,
+        "datos_debidos_correctos": 17,
+        "datos_debidos": 18,
+        "rechazos_debidos_correctos": 6,
+        "rechazos_debidos": 6
+      },
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md",
+          "git_blob_sha": "a2da389823c7591e46b841d769f72b9f5e5801b2",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md",
+          "git_blob_sha": "a2da389823c7591e46b841d769f72b9f5e5801b2",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_CONTEXTO_IE004_Y_DIAGNOSTICO_CAUSAL_2026_09_10.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E03",
+      "registro": "RETP-2026-124",
+      "tipo": "REPRODUCCION_HISTORICA_CAPTURA_FIJA",
+      "ruta": "ie004/recepcion-contexto-001/MEDICION.json",
+      "hecho": "Tres reproducciones por destino; 5418 bytes comunes. No nueva generación del modelo.",
+      "cuerpo_sha256": "a15e3db240bc606aae3a3efa15c86ab750a4398e30a181549ef70ee74774042d",
+      "bytes": 5418,
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/recepcion-contexto-001/MEDICION.json",
+          "git_blob_sha": "b74ee3f36844c68a19bf30ff36a3ec5c2881204c",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/recepcion-contexto-001/MEDICION.json"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/recepcion-contexto-001/MEDICION.json",
+          "git_blob_sha": "b74ee3f36844c68a19bf30ff36a3ec5c2881204c",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/recepcion-contexto-001/MEDICION.json"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E04",
+      "registro": "RETP-2026-124",
+      "tipo": "CONTRAEJEMPLO_HISTORICO_RUST",
+      "ruta": "ie004/recepcion-contexto-001/LIMITE-SEMANTICO.json",
+      "hecho": "Propuesta IGG aceptada ante petición de IGA con negación de IGG; receptor anterior refutado.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/recepcion-contexto-001/LIMITE-SEMANTICO.json",
+          "git_blob_sha": "aef24cc20e3bedd0f86bb0952a40397a4b658df2",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/recepcion-contexto-001/LIMITE-SEMANTICO.json"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/recepcion-contexto-001/LIMITE-SEMANTICO.json",
+          "git_blob_sha": "aef24cc20e3bedd0f86bb0952a40397a4b658df2",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/recepcion-contexto-001/LIMITE-SEMANTICO.json"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E05",
+      "registro": "RETP-2026-127",
+      "tipo": "DICTAMEN_EXTERNO_Y_CORRECCION_DOCUMENTAL",
+      "ruta": "ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md",
+      "hecho": "Recepción de defectos D1–D3 y reparos de /1; candidata /2 y separación de cuentas A/V.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md",
+          "git_blob_sha": "b8b0f5ca8268417042211fb6677bef53c5b797f6",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md",
+          "git_blob_sha": "b8b0f5ca8268417042211fb6677bef53c5b797f6",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_CLAUDE_Y_CORRECCION_P2_2026_09_10.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E06",
+      "registro": "RETP-2026-128",
+      "tipo": "DICTAMEN_SINTACTICO_CLAUDE_NO_PRUEBA_RUST",
+      "ruta": "ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+      "hecho": "48 derivaciones únicas y 16 contrastes sintácticos conformes declarados por Claude; no semántica completa.",
+      "recuentos": {
+        "derivaciones": 48,
+        "unicas": 48,
+        "contrastes_sintacticos": 16
+      },
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+          "git_blob_sha": "1d0f44f1a2f073c4db3da77d695465240a0d114d",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+          "git_blob_sha": "1d0f44f1a2f073c4db3da77d695465240a0d114d",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E07",
+      "registro": "RETP-2026-128",
+      "tipo": "OBLIGACIONES_PENDIENTES_EJECUCION",
+      "ruta": "ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json",
+      "hecho": "C17/C18, límites de A/V, overflow y separación material pendientes.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json",
+          "git_blob_sha": "a7619199665987b3fdac548c6e4ccba92005e840",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json",
+          "git_blob_sha": "a7619199665987b3fdac548c6e4ccba92005e840",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E08",
+      "registro": "RETP-2026-127",
+      "tipo": "PERFIL_CANDIDATO_DOCUMENTAL",
+      "ruta": "ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md",
+      "hecho": "Semántica /2 y orden A antes de V fijados; no se modifica el perfil.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md",
+          "git_blob_sha": "cfb1a245fdaccb0c951b8bc7f025e5d3daedadf3",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md",
+          "git_blob_sha": "cfb1a245fdaccb0c951b8bc7f025e5d3daedadf3",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E09",
+      "registro": "RETP-2026-128",
+      "tipo": "CUSTODIA_Y_TRANSPORTE_DOCUMENTADOS",
+      "ruta": "ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md",
+      "hecho": "Aptitud documental, preparación por Claude y traspaso humano pendiente.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md",
+          "git_blob_sha": "2bc0412e7d2fb65ca0658a8696b9466090d6a26d",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md",
+          "git_blob_sha": "2bc0412e7d2fb65ca0658a8696b9466090d6a26d",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E10",
+      "registro": "RETP-2026-127",
+      "tipo": "GUIA_CANDIDATA_NO_MEDICION",
+      "ruta": "ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md",
+      "hecho": "Cuotas de laboratorio y métricas candidatas; no servicio productivo acreditado.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md",
+          "git_blob_sha": "01a95ae4f0ab9c2989af0e5be0e1c725837bd58b",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md",
+          "git_blob_sha": "01a95ae4f0ab9c2989af0e5be0e1c725837bd58b",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/perfil-es-p2-2/GUIA_RECURSOS_Y_LATENCIA.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    },
+    {
+      "id": "E11",
+      "registro": "RETP-2026-128",
+      "tipo": "CAPTURA_SEPARADA_ESPECIFICADA",
+      "ruta": "ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md",
+      "hecho": "Original/contexto A y propuesta V por entradas diferentes; implementación todavía pendiente.",
+      "identidades": {
+        "lang": {
+          "repository": "juantoniolloretegea/SV-lenguaje-de-computacion",
+          "commit": "7da60a9d83362d2a21fd1e27801cbece8b49ccd6",
+          "path": "docs/calidad/tuberias-ia/ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md",
+          "git_blob_sha": "3c0a508e0a9b1e5f025dc092fad33615536df860",
+          "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/7da60a9d83362d2a21fd1e27801cbece8b49ccd6/docs/calidad/tuberias-ia/ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md"
+        },
+        "lab": {
+          "repository": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+          "commit": "f66562bfd108e5c0e06516f0be17737b8e40517d",
+          "path": "laboratorio/tareas-watson/tuberias-ia/ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md",
+          "git_blob_sha": "3c0a508e0a9b1e5f025dc092fad33615536df860",
+          "url": "https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/f66562bfd108e5c0e06516f0be17737b8e40517d/laboratorio/tareas-watson/tuberias-ia/ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md"
+        }
+      },
+      "reejecutada_en_esta_revision": false
+    }
+  ],
+  "hipotesis": [
+    {
+      "id": "H1",
+      "hipotesis": "Servicio y diagnóstico correctos para cada entrada del alcance fijado",
+      "refutacion": "Dato indebido, ruta incorrecta o rechazo de servicio debido",
+      "evidencias": [
+        "E02",
+        "E04",
+        "E06",
+        "E08"
+      ],
+      "estado": "REFUTADA_EN_RECEPTOR_ANTERIOR_PENDIENTE_EN_P2_2",
+      "puerta": "P3",
+      "unidad": "Caso con original, contexto, banco y oráculo fijados",
+      "criterio": "Todos los casos conformes; ningún dato indebido",
+      "pendiente": "Realización Rust, controles y reserva acreditada"
+    },
+    {
+      "id": "H2",
+      "hipotesis": "Conservar equivalencias admitidas y distinguir contrastes semánticos",
+      "refutacion": "Relación violada o cualquiera de sus miembros incorrecto",
+      "evidencias": [
+        "E02",
+        "E08"
+      ],
+      "estado": "FALLO_HISTORICO_R01_PENDIENTE_EN_P2_2",
+      "puerta": "P3",
+      "unidad": "Familia de paráfrasis/contraste con contexto y versiones iguales",
+      "criterio": "Todas las relaciones y miembros correctos",
+      "pendiente": "Cualificación semántica Rust; no inferirla de derivación única"
+    },
+    {
+      "id": "H3",
+      "hipotesis": "V no modifica cuerpo, cómputo determinista A, plazo A ni accesos excluidos",
+      "refutacion": "Dependencia prohibida de V, desde admisión hasta terminación",
+      "evidencias": [
+        "E04",
+        "E07",
+        "E08",
+        "E11"
+      ],
+      "estado": "ESPECIFICADA_NO_ACREDITADA_MATERIALMENTE",
+      "puerta": "P3/P4",
+      "unidad": "A fijo con variantes V originales y mutadas identificadas",
+      "criterio": "Igualdad de cuerpo/cuentas A y exclusión efectiva de interferencias contratadas",
+      "pendiente": "Instrumentación material; igualdad de cuerpo sola no basta"
+    },
+    {
+      "id": "H4",
+      "hipotesis": "Servicio dentro del alcance y gestión técnica correcta en los límites",
+      "refutacion": "Overflow, wrap, salida indebida, Tri.U técnico o incumplimiento de servicio prometido",
+      "evidencias": [
+        "E07",
+        "E08",
+        "E10"
+      ],
+      "estado": "CUOTAS_CANDIDATAS_NO_ACREDITADAS",
+      "puerta": "Controles previos/P4/P5",
+      "unidad": "Entrada/estado públicos cercanos a límites, dentro y fuera de las cuotas",
+      "criterio": "Resultado esperado único fijado antes de ejecutar; contadores y terminación correctos",
+      "pendiente": "Pruebas en Rust debug/release y destinos pertinentes, sin reinterpretar fallo como éxito"
+    },
+    {
+      "id": "H5",
+      "hipotesis": "Reproducciones fijadas preservan bytes canónicos y diagnósticos en nativo/WASI",
+      "refutacion": "Discrepancia en un observable protegido",
+      "evidencias": [
+        "E03",
+        "E08"
+      ],
+      "estado": "ANTECEDENTE_REPETIBLE_P2_2_NO_EJECUTADA",
+      "puerta": "P3",
+      "unidad": "Misma captura y versiones; tres reproducciones del receptor por destino según workflow",
+      "criterio": "Identidad relevante de cuerpos/diagnósticos",
+      "pendiente": "Binarios de la candidata y ejecución; no confundir con nueva generación del LLM"
+    },
+    {
+      "id": "H6",
+      "hipotesis": "Un tercero puede reconstruir y reproducir cada afirmación empírica",
+      "refutacion": "Artefacto/versión ausente, identidad inválida o decisión sin evidencia necesaria",
+      "evidencias": [
+        "E01",
+        "E02",
+        "E03",
+        "E04",
+        "E05",
+        "E06",
+        "E09"
+      ],
+      "estado": "EXPEDIENTE_PARCIAL_PENDIENTE_REPRODUCCION_EXTERNA",
+      "puerta": "P6",
+      "unidad": "Afirmación enlazada a versión y evidencia recuperable",
+      "criterio": "Paquete íntegro y reproducción declarada con alcance e incidencias",
+      "pendiente": "Reserva en su apertura, realización futura y reproducción externa; hashes no prueban independencia"
+    },
+    {
+      "id": "H7",
+      "hipotesis": "La IA añade utilidad bajo subordinación respecto de A solo",
+      "refutacion": "Sin mejora predefinida o mejora a costa de garantías; tarea/métrica ausente impide acreditación",
+      "evidencias": [
+        "E08",
+        "E09",
+        "E10"
+      ],
+      "estado": "NO_ACREDITADA_TAREA_Y_METRICA_PENDIENTES",
+      "puerta": "Evaluación de aportación antes de cierre global",
+      "unidad": "Misma tarea/carga/autoridad con y sin propuesta V",
+      "criterio": null,
+      "pendiente": "Definir producto útil y umbral antes de medir. En /2 V posterior no puede causar mejora de cuerpo ya fijado; no se abre otro ensayo aquí"
+    }
+  ],
+  "experimentos_ejecutados_en_esta_revision": 0,
+  "reserva": {
+    "contenido_accedido": false,
+    "contenido_generado": false,
+    "custodia_acreditada": false,
+    "preguntas_y_oraculo_incluidos": false
+  },
+  "interpretacion": "Matriz preparatoria que distingue evidencia retrospectiva y obligaciones prospectivas; no prerregistro retrospectivo ni sustitución del workflow o del oráculo.",
+  "campos_por_ejecucion": [
+    "id",
+    "hipotesis",
+    "version_perfil",
+    "version_banco",
+    "version_politica",
+    "commit_codigo",
+    "modelo_declarado_y_observable",
+    "exposicion",
+    "identidad_original_A",
+    "identidad_propuesta_V",
+    "mutaciones_del_banco",
+    "oraculo_y_apertura",
+    "rustc_Vv",
+    "Cargo_lock",
+    "flags",
+    "target",
+    "runtime",
+    "hardware_SO",
+    "comando",
+    "binario_sha256",
+    "salida_bytes_sha256",
+    "cuentas_A_V",
+    "memoria_y_instrumento",
+    "plazos_y_timeouts",
+    "esperado",
+    "observado",
+    "dictamen",
+    "incidencias",
+    "autor_revision_y_conflictos"
+  ],
+  "regla_ausencias": "Los campos no observados se registran como null con causa; nunca cero, ejecución conforme o independencia supuesta."
+}

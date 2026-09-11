@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-128:** recibido APTO_PARA_RESERVAR documental de /2; preparación única por Claude y traspaso a custodia humana concretados. Reserva aún no acreditada, P3 sin iniciar y aislamiento NO VERDE. Captura A/V separada especificada; no nuevo encargo de Grok. Las sucesiones anteriores se conservan como historia.
+**Estado vigente · RETP-129:** estado del arte y expediente científico preparatorio publicados. Se conserva la aptitud documental de /2; reserva aún no acreditada, P3 sin iniciar y aislamiento NO VERDE. Sigue la preparación/custodia de RETP-128, sin otra ronda de Grok. Las sucesiones anteriores se conservan como historia.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -62,3 +62,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Aptitud documental y preparación de reserva · RETP-128
 
 [Recepción y decisiones](ACTA_RECEPCION_APTO_P2_Y_PREPARACION_RESERVA_P3_2026_09_10.md): dos originales de Claude conservados, alcance sintáctico de su herramienta delimitado y 18 cadenas adicionales expuestas. [Encargo de preparación](ie004/reserva-p3/ENCARGO_PREPARACION_RESERVA_CLAUDE.md), [captura A/V separada](ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md) y [controles públicos R8–R11](ie004/reserva-p3/CONTROLES_PUBLICOS_R8_R11.json). Claude prepara; Juan Antonio conserva y confirma recuperación; Watson recibe sólo el compromiso antes del corrector. No se acredita custodia por un enlace efímero ni Rust por el dictamen.
+
+## Preparación científica · RETP-129
+
+[Estado del arte y bibliografía](ie004/expediente-cientifico/ESTADO_DEL_ARTE_2026_09_11.md) y [expediente para revisión por pares](ie004/expediente-cientifico/EXPEDIENTE_PARA_REVISION_POR_PARES.md): 18 referencias primarias consultadas con alcance declarado, siete afirmaciones con evidencia histórica y condiciones de refutación; H7 pendiente de tarea/métrica. [Acta](ACTA_EXPEDIENTE_CIENTIFICO_Y_ESTADO_DEL_ARTE_2026_09_11.md). No se abre la reserva, se cambia /2 o se ejecuta una ronda experimental. La utilidad adicional de IA y las pruebas materiales Rust permanecen pendientes.

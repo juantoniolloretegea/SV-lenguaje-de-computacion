@@ -1,0 +1,182 @@
+{
+  "fecha": "2026-09-11",
+  "tipo": "Busqueda focal exploratoria, no revisión sistemática",
+  "bloques": [
+    {
+      "id": "Q1",
+      "consultas": [
+        {
+          "q": "LLM agent security provable isolation information flow control CaMeL 2025 2026"
+        },
+        {
+          "q": "grammar constrained decoding semantic parsing PICARD Synchromesh LLM"
+        },
+        {
+          "q": "proof carrying code untrusted producer trusted checker Necula 1997"
+        },
+        {
+          "q": "LLM agent prompt injection benchmark AgentDojo 2025 2026"
+        }
+      ]
+    },
+    {
+      "id": "Q2",
+      "consultas": [
+        {
+          "domains": [
+            "arxiv.org"
+          ],
+          "q": "\"CaMeL\" \"Defeating Prompt Injections\" 2025"
+        },
+        {
+          "domains": [
+            "aclanthology.org"
+          ],
+          "q": "\"PICARD\" \"Parsing\" Scholak Schucher Bahdanau"
+        },
+        {
+          "domains": [
+            "arxiv.org",
+            "openreview.net"
+          ],
+          "q": "\"Synchromesh\" \"Reliable Code Generation\""
+        },
+        {
+          "domains": [
+            "arxiv.org",
+            "usenix.org",
+            "openreview.net"
+          ],
+          "q": "\"LLM\" \"information flow\" \"2026\" security"
+        }
+      ]
+    },
+    {
+      "id": "Q3",
+      "consultas": [
+        {
+          "domains": [
+            "arxiv.org",
+            "usenix.org",
+            "openreview.net"
+          ],
+          "q": "\"Fides\" \"LLM\" information flow security"
+        },
+        {
+          "domains": [
+            "arxiv.org",
+            "proceedings.neurips.cc"
+          ],
+          "q": "\"AgentDojo\" \"NeurIPS\" 2024"
+        },
+        {
+          "domains": [
+            "arxiv.org"
+          ],
+          "q": "\"The Design Space of LLM Agents\" \"Prompt\" security"
+        },
+        {
+          "domains": [
+            "arxiv.org",
+            "openreview.net"
+          ],
+          "q": "\"Adaptive Attacks\" \"Prompt Injection\" 2025 2026"
+        }
+      ]
+    },
+    {
+      "id": "Q4",
+      "consultas": [
+        {
+          "q": "CaMeL prompt injections information flow Fides 2026 arxiv"
+        },
+        {
+          "q": "PICARD Synchromesh JSONSchemaBench grammar constrained decoding"
+        },
+        {
+          "q": "Necula Proof Carrying Code 1997 Berkeley pdf"
+        },
+        {
+          "q": "Kuhn 2014 survey classification controlled natural languages"
+        }
+      ]
+    },
+    {
+      "id": "Q5",
+      "consultas": [
+        {
+          "q": "\"Proof-Carrying Code\" Necula 1997 pdf cmu"
+        }
+      ]
+    },
+    {
+      "id": "Q6",
+      "consultas": [
+        {
+          "q": "\"RustBelt\" \"Securing the Foundations\" paper"
+        }
+      ]
+    },
+    {
+      "id": "Q7",
+      "consultas": [
+        {
+          "q": "\"Bringing the Web up to Speed with WebAssembly\" pdf"
+        }
+      ]
+    },
+    {
+      "id": "Q8",
+      "consultas": [
+        {
+          "q": "\"JSONSchemaBench\" constrained decoding 2025"
+        }
+      ]
+    },
+    {
+      "id": "Q9",
+      "consultas": [
+        {
+          "q": "\"Fides\" \"agents\" \"security\""
+        }
+      ]
+    },
+    {
+      "id": "Q10",
+      "consultas": [
+        {
+          "q": "\"LLM agents\" \"noninterference\" 2026"
+        }
+      ]
+    },
+    {
+      "id": "Q11",
+      "consultas": [
+        {
+          "q": "\"prompt injection\" \"September 2026\" security paper"
+        }
+      ]
+    },
+    {
+      "id": "Q12",
+      "consultas": [
+        {
+          "q": "\"ACM\" \"Artifact Review and Badging\" reproducibility"
+        }
+      ]
+    },
+    {
+      "id": "Q13",
+      "consultas": [
+        {
+          "q": "\"MTOP\" \"Spanish\" \"Semantic Parsing\" ACL"
+        },
+        {
+          "q": "\"MASSIVE\" \"51\" \"Amazon\" dataset paper 2022"
+        }
+      ]
+    }
+  ],
+  "seleccion": "Texto primario identificable, relación directa con interpretación formal, control de autoridad, ensayos o reproducción; versiones consultadas en FUENTES_Y_ALCANCE.json.",
+  "exclusiones": "Páginas de búsqueda y raíces sin artículo identificable, Wikipedia, vídeos de terceros, publicidad, resultados sin pertinencia; no se usan como evidencia científica."
+}
