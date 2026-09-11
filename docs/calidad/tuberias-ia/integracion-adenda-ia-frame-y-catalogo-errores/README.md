@@ -1,0 +1,82 @@
+# Integración de la adenda IA, el frame humano y el catálogo de errores
+
+**RETP-2026-147 · 11/09/2026 · Watson · Continuación autorizada por Juan Antonio Lloret Egea.**
+
+Este expediente reúne el punto 1 (adenda sobre integridad y trazabilidad de IA) con el punto 3 (reconstrucción, recibo y frame). El punto 2 (catálogo de errores y presentación ES/EN) recibirá sus fallos antes de cerrar su realización. Es un único trabajo dividido en ocho pasos; no abre dominios, agentes ni una segunda semántica.
+
+## Respuesta a las dos frases
+
+**«Ahora debemos conocer qué evidencia».** La referencia ya está aportada: seis imágenes, cinco cambios observables, una pregunta de identificación y una finalidad de conservación. La evidencia concreta es el original y cada versión, qué desaparece o se sustituye, qué conclusión sostiene la información conservada y qué se presenta finalmente al humano. En software se añaden las entradas efectivamente recibidas, operaciones observadas, versiones y vínculos recuperables. No hay que pedir al autor que vuelva a explicar esa idea.
+
+**«Pero no demuestra que sepamos identificarla de forma suficiente».** La secuencia y las cinco comparaciones recuperadas muestran identificación de cambios en ese ejemplo. Permiten fijar testigos concretos de pérdida y conservación. La suficiencia para una operación se comprueba contra esos testigos y su referencia; no depende de multiplicar fotogramas. Esa demostración acotada no acredita todavía un reconocedor universal, la fidelidad de cualquier visualización ni seguridad clínica. Una reconstrucción de lo observado no acredita la causa interna de un modelo.
+
+La última imagen ha sustituido el cráter por una cima cerrada y eliminado la lava: si se ofrece como representación fiel de la referencia, ha perdido rasgos esenciales del ejemplo. La ausencia de lava, por sí sola, no demuestra que un objeto no sea un volcán. El referente conocido y la fidelidad de su representación son juicios distintos.
+
+[Memoria original con PDF, Markdown e imágenes](../frame-significado-humano-trazabilidad-y-fidelidad/README.md). No se altera esa memoria.
+
+## Resultado de esta intervención
+
+1. Correspondencia de las seis obligaciones de la adenda: fijada en la tabla siguiente.
+2. Doce ataques A–L: convertidos en controles positivos, negativos y criterios de aceptación en [CASOS_Y_CRITERIOS.json](CASOS_Y_CRITERIOS.json). Todavía no ejecutados como campaña integrada.
+3. Correspondencia entre recibo y actuación gobernada: delimitada en [G2_CORRESPONDENCIA_Y_LIMITE.md](G2_CORRESPONDENCIA_Y_LIMITE.md), con fuente concreta del requisito ausente.
+4. Fallos a recibir por el catálogo: inventariados con sede y causa; sin inventar códigos SV ni confundirlos con `U`.
+
+Esta intervención no ejecuta ensayos funcionales nuevos ni modifica código Rust. Se cotejan identidades de fuentes contra el árbol Git y se reutilizan resultados históricos con su alcance. El registro de fuentes distingue lectura, cotejo y resultado histórico.
+
+## Los ocho pasos y su condición de salida
+
+| Paso | Trabajo | Condición de salida | Estado de este corte |
+|---|---|---|---|
+| 1 | Unir adenda y frame | Cada obligación tiene sede, evidencia y pendiente explícitos | Correspondencia fijada |
+| 2 | Fijar evidencia antes de probar | Cada caso tiene referencia, control, ataque, salida y causa de rechazo; antes de ejecución, montaje y presupuesto identificados | A–L fijados como criterios; montajes materiales todavía no preparados |
+| 3 | Reconstruir y custodiar en Rust | Consulta: recibo completo recuperable; actuación: correspondencia y procedencia R1 admitidas | Recibo público realizado en RETP-144/145; enlace productivo sin contrato de recepción de autoridad |
+| 4 | Atacar fidelidad | Pérdidas críticas detectadas y controles válidos admitidos sobre el mismo recorrido | Evidencia parcial histórica; campaña integrada A–L pendiente |
+| 5 | Atacar seguridad y coste | Puertas funcionales, aislamiento y presupuestos aplicables satisfechos | P3 reservada, P4 y P5 pendientes; no se abre reserva |
+| 6 | Consolidar catálogo y ES/EN | Causa técnica preservada desde emisor, contexto original y presentación versionada; DG01–DG14 y regresión pertinente conformes | Contrato previo recibido; inventario de este frente añadido; realización pendiente |
+| 7 | Comprobar lo entregado | Correspondencia entre resultado, presentación efectiva y alcance humano comprobada | Pendiente; no se construye ahora una interfaz profesional |
+| 8 | Consolidar laboratorio y Calidad | Mismas piezas, evidencia y límites; aceptación humana del resultado concreto | Este punto de control se conserva en ambos destinos; cierre integral pendiente |
+
+No se suman aprobaciones de componentes como si acreditasen el conjunto. Los pasos preparatorios no se contabilizan como ejecución. El paso 6 recibe errores desde el inicio, aunque se consolide después de integrar 1 y 3.
+
+## Correspondencia de la adenda
+
+Fuente exacta: [§12, corte bbac1b44](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md#12-adenda-integridad-y-trazabilidad-del-consejo-asistido-por-ia). El corte anterior 169af16d termina antes de esa adenda. Se preservan ambos cortes; no se atribuye el texto nuevo al antiguo.
+
+| Obligación recibida | Encaje existente y evidencia reutilizable | Qué queda por acreditar | Sede |
+|---|---|---|---|
+| Origen y separación datos/instrucciones/autoridad | G1 y lote-G1 conservan entrada, montaje y pertenencia; RETP-108 distingue declaración de autoridad y permiso protegido | Ataques directos/indirectos A/B; incorporación gobernada de referentes; imposición material | Recepción, contratos y núcleo R1; autoridad por sede competente |
+| Cobertura y significado | Ejemplo visual; resolución pública A; CYB RETP-107 conserva F0/HS y detecta pérdida H | C/D/I sobre el recorrido integrado, acceso independiente a evidencia exigida y presentación final | Dominio fija suficiencia; Lenguaje conserva/comprueba; presentación conserva significado |
+| Identidad de corpus, reglas, contexto y componentes | RETP-142 recupera 409 archivos y coteja 36 recorridos; RETP-145 liga lote y montaje exactos | G/H sobre toda dependencia relevante; montaje realmente cargado, truncación y episodios | Contrato de recepción y soporte |
+| Rechazo, esquema, no admisión y fallo | G1 distingue pérdida de evidencia y respuesta funcional; V conserva causa de rechazo; contrato diagnóstico existente | F y propagación estructurada de cada causa hasta ES/EN | Emisor técnico, receptor y diagnóstico; no Tri.U |
+| Confidencialidad y finalidad | Guardas públicas de acceso y montaje ficticio; no acreditan aislamiento ni secreto | E/L, registros y canales declarados, destinatario y finalidad autorizados, límites de retención | Contrato de uso y frontera material; no sólo léxico |
+| Continuidad y revisión humana | Recibos y versiones recuperables en memoria; R1 conserva relación decisión/ejercicio intraproceso | J/K, reevaluación separada, objeto realmente mostrado y revisión exigida; persistencia si aplica | Recepción, presentación y fases materiales competentes |
+
+RETP-107/108 y RETP-142/144/145 se citan por sus resultados publicados, no como campañas repetidas en 147. Sus denominadores no son intercambiables: seis imágenes no son seis ensayos R1; 24 posiciones públicas contienen diez preguntas distintas.
+
+## Fallos que debe recibir el catálogo
+
+Esta lista es una clasificación de obligaciones, no un nuevo catálogo normativo ni una asignación de códigos.
+
+| Fallo | Dónde debe nacer su causa | Qué se debe conservar al presentarlo |
+|---|---|---|
+| Entrada truncada, esquema inválido, canal fallido | Lector o receptor que lo detecta | Operación, etapa, fuente y causa; no presentarlo como rechazo del dominio |
+| Evidencia incompleta o de otra invocación | Custodio/enlace | Identidad esperada y recibida según vista autorizada; recibo no completo |
+| Información exigida omitida | Comprobador de cobertura del contrato | Distinción ausente y operación afectada; no rellenar ni convertir en U |
+| Cambio de sujeto, negación, condición o incertidumbre | Comprobador de correspondencia | Referencia y versión comparadas; localización de la pérdida |
+| Solicitud sin autoridad constituida | Frontera de admisión gobernada | Falta del contrato/referente, distinta de permiso revocado o denegado |
+| Versión, regla o componente sustituido | Verificador de identidad aplicable | Identidad exacta; un nombre igual no basta |
+| Destinatario o finalidad no admitidos | Comprobador de uso antes de entrega | Decisión y causa con mínima exposición autorizada |
+| Recursos agotados o efecto indeterminado | Componente que observa el fallo | Etapa y estado real; no éxito, U ni reintento tácito |
+| Plantilla ES/EN ausente o inválida | Presentación diagnóstica | Causa original intacta; fallo de presentación separado |
+
+El contrato RETP-109/110 ya exige causa cerrada emitida en origen, perfiles explícitos, localización sobre bytes originales y separación de decisión y texto. No se recuperará una causa buscando palabras en `Debug`. No se traducirán identificadores ni datos del dominio. El cierre exige inventariar emisores alcanzables y comprobarlos; esta tabla no lo sustituye.
+
+## Alcance y continuidad
+
+Se conservan workflow V2 RETP-141, etapas P0–P6, cupos ya consumidos, reserva cerrada y asociación /2–/3 pendiente. Los casos A–L no reinician rondas ni conceden presupuesto. La autorización de trabajo no decide por sí sola esa asociación ni una promoción final.
+
+La lectura pública termina legítimamente en resolución y evidencia recuperable. Si se pretende una actuación gobernada o inscripción, el requisito pendiente es el contrato de recepción de autoridad y la operación constituida correspondiente, no otra explicación del volcán. G2 identifica exactamente esa dependencia; no obliga a inventar un agente ni a elegir células.
+
+Rectoras consultadas completas: AGENTS; Pilares RETP-073; perfiles RETP-075; acta de transición con §§12–30. Se reciben workflow V2, expediente RETP-142, acta RETP-145, contrato CYB con RETP-108 y contrato diagnóstico. Cortes: Lenguaje `e8558ea69aadacc3454cbd82f09a7bf7f4b06648`; laboratorio `53e1b93f2a392b2bac6e229be839e3cc2e4823ee`; adenda CYB `bbac1b44b1d3b845305e9cde492a08221206d631`.
+
+**Dictamen: correspondencia y criterios documentales fijados; trazabilidad pública recibida con sus límites; enlace productivo, seguridad integral y catálogo/localización no cerrados.**

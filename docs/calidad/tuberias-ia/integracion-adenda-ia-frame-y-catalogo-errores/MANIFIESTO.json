@@ -1,0 +1,23 @@
+{
+  "registro": "RETP-2026-147",
+  "naturaleza": "correspondencia_documental_y_criterios_no_ensayo_funcional",
+  "archivos": {
+    "CASOS_Y_CRITERIOS.json": {
+      "bytes": 7284,
+      "sha256": "7b52250aaca128a2471211f8156c6de7f4261e7d35cf55351c8efe0d40a668e4"
+    },
+    "FUENTES_COTEJADAS.json": {
+      "bytes": 4491,
+      "sha256": "52ba5f3f11bb32a0398aacff0240d6cd42320d2e314c65e46c58d72724b60a17"
+    },
+    "G2_CORRESPONDENCIA_Y_LIMITE.md": {
+      "bytes": 5413,
+      "sha256": "e9d5771dd547c0f1b288d6c006b95f2173b77cf40c19b149a5e948b10739d28e"
+    },
+    "README.md": {
+      "bytes": 10815,
+      "sha256": "cca9b80b91c649060c46708478a90ddedeaa544f99231b0e56fd06dd80acc0c3"
+    }
+  },
+  "revision": "12 casos A-L únicos; enlaces relativos existentes; 14 campos y un asiento RETP-147"
+}

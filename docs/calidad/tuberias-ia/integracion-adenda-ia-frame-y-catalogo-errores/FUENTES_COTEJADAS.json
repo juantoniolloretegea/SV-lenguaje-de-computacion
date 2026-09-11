@@ -1,0 +1,94 @@
+{
+  "corte": "e8558ea69aadacc3454cbd82f09a7bf7f4b06648",
+  "naturaleza": "identidad de fuentes; no ejecución funcional nueva",
+  "fuentes": [
+    {
+      "ruta": "rust/sv_core/src/decision_trace.rs",
+      "git_blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "sha256": "0cc7260b8286d34cf2524722f34d3d807059bec00359cb73a4e9411e424da238",
+      "bytes": 30997,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "rust/sv_core/src/execution.rs",
+      "git_blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "bytes": 16865,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "git_blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+      "bytes": 13990,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "rust/sv_core/src/bindings.rs",
+      "git_blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "bytes": 20680,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/semantica-a/servicio.rs",
+      "git_blob": "2e364d7c8b8c59771a2bdfc6e96a7e1fce97c057",
+      "sha256": "bc119baed2d74c750ff19e42d25ba2edca6849661256321eec4876d9aae134f0",
+      "bytes": 6256,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+      "git_blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1",
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3",
+      "bytes": 5491,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/lib.rs",
+      "git_blob": "29943dd5525ef6aa9ed486fadb20895690579822",
+      "sha256": "d801fae357b515be7a7e5a83fbde53e9f614c7015ee96d4583a2e48b1926c530",
+      "bytes": 8924,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/lote-g1/ACTA_RESULTADO_ENLACE_LOTE_G1_2026_09_11.md",
+      "git_blob": "6af20bfd41f891316ef97350735f2e0bc11669db",
+      "sha256": "eb6c18d6c6a53675cb1a47c3b0e97b0d66ff8cc518a50a290295fadc4937a583",
+      "bytes": 8618,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md",
+      "git_blob": "546d01ce91746a9f55681abf6224ad4627a56f82",
+      "sha256": "eab27dd380388333ed7d74349b09eb829f89c5ddf855e8f283db116cdc23c2f3",
+      "bytes": 30761,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "rust/sv_core/tests/cyb_authority_boundary.rs",
+      "git_blob": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+      "sha256": "5e8849092f25cda3feec6d1fb302c82187dd04a28e2a56898729efb81bd62817",
+      "bytes": 6755,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+      "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c",
+      "bytes": 17761,
+      "cotejo": "IGUAL_AL_ARBOL_ACTUAL",
+      "lectura": "pasajes pertinentes y/o contrato asociado; inventario no equivale a auditoría completa"
+    }
+  ]
+}

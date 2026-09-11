@@ -128,3 +128,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Memoria del frame humano y su traducción técnica — 11/09/2026
 
 [PDF, Markdown y seis imágenes originales: significado humano, trazabilidad y fidelidad](frame-significado-humano-trazabilidad-y-fidelidad/README.md). Diálogo de Juan Antonio con Watson, propuesta y rectificaciones adversariales, hasta el diagrama final. Edición documental con respuestas recuperadas por el autor; no altera el objeto técnico activo ni acredita ensayos nuevos.
+
+## Integración acotada de adenda IA, frame y catálogo — RETP-147
+
+[Correspondencia, criterios A–L y límite del enlace gobernado](integracion-adenda-ia-frame-y-catalogo-errores/README.md). Recibe la autorización de continuación en ocho pasos; une obligaciones y evidencia existente, distingue lectura de actuación y localiza el contrato de autoridad pendiente. Sin ejecución funcional nueva, apertura de reserva ni cierre integral.

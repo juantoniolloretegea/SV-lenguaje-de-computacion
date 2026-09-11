@@ -1417,3 +1417,18 @@ Comprobación documental: revisión de todas las páginas del PDF, correspondenc
 No modifica código, semántica, IR, núcleo, dominio, agente ni workflow. No ejecuta nuevos ensayos ni acredita fidelidad o seguridad integral. La reconstrucción de cambios observados no establece por sí sola su causa interna. Se conserva el objeto técnico activo y las puertas pendientes; esta memoria no abre una fase.
 
 **Estado:** MEMORIA_DOCUMENTAL_PUBLICADA_SIN_CIERRE_TECNICO.
+
+
+<a id="retp-147"></a>
+
+## RETP-2026-147 · Integración acotada de adenda IA, frame y catálogo
+
+11/09/2026. Continuación autorizada por Juan Antonio Lloret Egea. [Expediente, criterios A–L y correspondencia G2](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/README.md). Cortes: Lenguaje `e8558ea69aadacc3454cbd82f09a7bf7f4b06648`; laboratorio `53e1b93f2a392b2bac6e229be839e3cc2e4823ee`; adenda CYB §12 `bbac1b44b1d3b845305e9cde492a08221206d631`. El corte CYB anterior 169af16d no contiene esa adenda.
+
+Se fijan seis grupos de obligaciones, doce criterios con control y ataque, y ocho pasos de continuidad. El ejemplo aporta una referencia y cinco transformaciones observadas; no se reclama reconocimiento universal ni proceso mental interno. Se reciben las fuentes rectoras completas y el contrato diagnóstico previo. Once fuentes pertinentes conservan identidad en el árbol leído; resultados RETP-107/108/142/144/145 reutilizados en su alcance, sin repetición funcional.
+
+G2 queda delimitado: `EnlacePublico` conserva recibos; `permiso_y_dato` aplica política ficticia; `decide_permit_traced` exige continuidad, forma, efecto y requisitos gobernados. Falta la recepción profesional de autoridad ya localizada en RETP-108 §8.3. No se fabrica una premisa, no se añade un constructor y no se convierte consulta en actualización celular. La consulta pública puede terminar en resolución y evidencia; el enlace productivo no queda realizado.
+
+Los fallos se adscriben a su emisor y contrato diagnóstico, sin nuevos códigos ni conversión a U. A–L siguen como criterios pendientes de montaje y ejecución integrada. Se conservan presupuesto, reserva, asociación /2–/3 y P3/P4/P5. No hay cambio de código, gramática, IR, dominio, agente o interfaz. No se declara terminado el catálogo ni el cierre global.
+
+**Estado:** CORRESPONDENCIA_FIJADA_ENLACE_PRODUCTIVO_NO_ACREDITADO. Se conserva el punto de control en laboratorio y Calidad; la aceptación final sigue siendo humana.
