@@ -1,0 +1,13 @@
+{
+  "registro": "RETP-2026-143",
+  "estado": "TESTIGOS_PREPARADOS_NO_EJECUTADOS_CON_RECEPTOR_G1",
+  "fuente_commit": "282e020f8bff2b68abd9a2e9138fa6b467debaf8",
+  "capsula_origen_sha256": "eafdc98ad4174d76bca87ac14c18fc9836d4175aef8c4f5001b295916b66496b",
+  "archivos_origen_cotejados": 43,
+  "artefactos_preparados": 14,
+  "casos_especificados": 18,
+  "comprobaciones": "Procedencia, integridad, relaciones A01 y discriminación material de mutaciones. No veredicto G1.",
+  "script_sha256": "b4759ef0d9673fd36696fb02ecb2b7fe6a2a603e5f4228000b397a21cd4b4f1d",
+  "modelo_invocado": false,
+  "reserva_leida": false
+}

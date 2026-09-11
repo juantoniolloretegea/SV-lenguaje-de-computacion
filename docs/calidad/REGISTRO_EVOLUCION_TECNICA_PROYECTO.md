@@ -1,6 +1,6 @@
 # Registro de evolución técnica del proyecto
 
-**Continuidad del frente IA:** [RETP-142](#retp-142), expediente de correspondencia concluido; siguiente contrato de recibo custodiado G1. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
+**Continuidad del frente IA:** [RETP-143](#retp-143), contrato G1 de recibo custodiado y testigos preparados; realización nativa Rust pendiente. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
 
 **Antecedente de relevo de fila 7:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
@@ -1356,3 +1356,17 @@ Se recuperaron 409 archivos públicos y cotejaron 36 recorridos históricos sin 
 Se cierra el análisis acotado, no la tubería integral. P4/P5, asociación /2–/3, reserva y sucesiones pendientes conservan su estado. Workflow V2 y secuencia de RETP-121 vigentes. Espejo documental idéntico en laboratorio.
 
 **Estado:** CORRESPONDENCIA_CONCLUIDA_TRAZABILIDAD_INTEGRAL_NO_ACREDITADA.
+
+<a id="retp-143"></a>
+
+## RETP-2026-143 · Contrato G1 de recibo custodiado
+
+11/09/2026. Responsable: Watson. Mandato: luz verde de Juan Antonio Lloret Egea al siguiente objeto de RETP-142. [Contrato G1/1 y testigos](tuberias-ia/ie004/recibo-g1/CONTRATO_RECIBO_CUSTODIADO_IE004_G1_1.md). Cortes: Lenguaje `282e020f8bff2b68abd9a2e9138fa6b467debaf8`; laboratorio `c074b1b0796081501ea0c0c1ac2be206dcf49999`. Las rectoras ya leídas conservan sus blobs, cotejados de nuevo.
+
+Se fija identidad de invocación emitida por el custodio, pertenencia de canales, entrada y montaje efectivos, cuerpo/traza completos y recuperables, cierre A único y anexado V posterior sin modificación de A. Recibo completo no significa resolución exitosa; rechazo de propuesta completa no significa pérdida de captura. Huella de contenido no demuestra origen, unicidad entre invocaciones, autenticidad frente al host ni conservación perpetua.
+
+El constructor documental cotejó los 43 archivos de la cápsula RETP-142 y preparó 14 artefactos originales/mutados y 18 testigos. No implementa el receptor ni decide conformidad G1. Su hash y resultado están conservados; estados, pertenencia, pérdida y plazo requieren el futuro arnés nativo. Variantes positivas de rechazo/fallo A y fronteras del perfil de recursos deben fijarse antes de ejecutar esa campaña; aún no se cuentan como testigos materiales preparados.
+
+**Siguiente objeto único:** realización candidata Rust del receptor G1 y perfil de recursos, con contraste previo fijado. G2, G3, G4, reserva, asociación /2–/3 y P4/P5 conservan su estado. No se altera código A/V, cuerpo, gramática, Tri, IR, Frame ni constitución de dominio/agente. Espejo de contrato y testigos idéntico en laboratorio.
+
+**Estado:** CONTRATO_G1_FIJADO_TESTIGOS_PREPARADOS_REALIZACION_PENDIENTE.

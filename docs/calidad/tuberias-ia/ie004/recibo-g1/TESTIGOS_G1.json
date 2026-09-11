@@ -1,0 +1,253 @@
+{
+  "version": "IE004-G1-CASOS/1",
+  "contrato": "G1/1",
+  "casos": [
+    {
+      "id": "G1-01",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "recuperación completa",
+      "esperado": "RECIBO_A_COMPLETO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-02",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": null,
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "pérdida de traza",
+      "esperado": "INTENTO_INCOMPLETO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-03",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-truncada",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "traza incompleta",
+      "esperado": "INTENTO_INCOMPLETO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-04",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-espacio",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "usar traza antigua con otro original",
+      "esperado": "RECHAZO_CORRELACION",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-05",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-discordante",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "discordancia de resolución",
+      "esperado": "RECHAZO_DISCORDANCIA",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-06",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-alterado",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "alteración de cuerpo sin hash",
+      "esperado": "RECHAZO_INTEGRIDAD",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-07",
+      "estado_previo": "apertura A propia",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "inyectar fallo al recuperar traza tras capturarla",
+      "esperado": "INTENTO_INCOMPLETO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-08",
+      "estado_previo": "A ya finalizada",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "repetir finalización con la misma identidad",
+      "esperado": "RECHAZO_DUPLICADO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-09",
+      "estado_previo": "dos aperturas distintas",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "mismos bytes entregados con el manejador ajeno",
+      "esperado": "RECHAZO_PERTENENCIA",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-10",
+      "estado_previo": "A completo",
+      "artefactos": {
+        "propuesta": "propuesta-v02",
+        "anexo": "anexo-v02"
+      },
+      "accion": "anexado propio posterior",
+      "esperado": "ANEXO_RECUPERABLE",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-11",
+      "estado_previo": "A completo",
+      "artefactos": {
+        "propuesta": "propuesta-v04",
+        "anexo": "anexo-v04"
+      },
+      "accion": "propuesta malformada capturada entera; rechazo V íntegro",
+      "esperado": "ANEXO_RECUPERABLE_DE_RECHAZO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-12",
+      "estado_previo": "A completo y V prevista",
+      "artefactos": {},
+      "accion": "mantener canal V sin EOF e inyectar interrupción por plazo",
+      "esperado": "OBSERVACION_V_INCOMPLETA",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-13",
+      "estado_previo": "A completo",
+      "artefactos": {
+        "propuesta": "propuesta-v02",
+        "anexo": "anexo-otro-cuerpo"
+      },
+      "accion": "anexo discordante",
+      "esperado": "RECHAZO_CORRELACION",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-14",
+      "estado_previo": "V ya finalizada",
+      "artefactos": {
+        "propuesta": "propuesta-v02",
+        "anexo": "anexo-v02"
+      },
+      "accion": "repetir anexado terminal",
+      "esperado": "RECHAZO_DUPLICADO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-15",
+      "estado_previo": "A aún incompleto",
+      "artefactos": {
+        "propuesta": "propuesta-v02",
+        "anexo": "anexo-v02"
+      },
+      "accion": "anexar antes de cierre A",
+      "esperado": "RECHAZO_ESTADO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-16",
+      "estado_previo": "A completo",
+      "artefactos": {},
+      "accion": "conductor declara V no solicitada",
+      "esperado": "REGISTRO_V_NO_SOLICITADA",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": true
+    },
+    {
+      "id": "G1-17",
+      "estado_previo": "apertura con vigencia revocada",
+      "artefactos": {
+        "entrada": "solicitud-a01",
+        "marco": "marco-a01",
+        "traza": "traza-a01",
+        "cuerpo": "cuerpo-a01"
+      },
+      "accion": "entregar cuerpo con vigente true",
+      "esperado": "RECHAZO_MONTAJE",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    },
+    {
+      "id": "G1-18",
+      "estado_previo": "apertura con captura interrumpida",
+      "artefactos": {
+        "entrada": "solicitud-prefijo"
+      },
+      "accion": "declarar prefijo completo=false y causa de límite; no fingir hash del total",
+      "esperado": "INTENTO_INCOMPLETO",
+      "ejecutado_con_receptor_g1": false,
+      "requiere_arnes_nativo": true,
+      "preservar_cierre_a": false
+    }
+  ]
+}
