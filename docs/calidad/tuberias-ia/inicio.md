@@ -132,3 +132,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Integración acotada de adenda IA, frame y catálogo — RETP-147
 
 [Correspondencia, criterios A–L y límite del enlace gobernado](integracion-adenda-ia-frame-y-catalogo-errores/README.md). Recibe la autorización de continuación en ocho pasos; une obligaciones y evidencia existente, distingue lectura de actuación y localiza el contrato de autoridad pendiente. Sin ejecución funcional nueva, apertura de reserva ni cierre integral.
+
+## Rectificación de autoridad y comprobación técnica — RETP-148
+
+[Mandato humano, contraste nativo y continuación](rectificacion-autoridad-y-comprobacion-ia/README.md). La comprobación de fidelidad corresponde al trabajo técnico: se retira el bloqueo general formulado tras RETP-147. Seis casos caracterizan transporte y propuesta auxiliar; dos cuerpos alterados con huellas coherentes muestran por qué integridad no equivale a fidelidad. Conserva un error del observador y su rectificación. No acredita seguridad integral ni actuaciones profesionales.

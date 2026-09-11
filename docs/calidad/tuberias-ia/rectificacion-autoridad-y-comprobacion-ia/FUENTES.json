@@ -1,0 +1,46 @@
+{
+  "head": "132c323a6241f1917c5e8416d21eb8a66923cce6",
+  "fuentes_cotejadas": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+      "git_blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1",
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/verificar_v.rs",
+      "git_blob": "c07782f4e261ee90163eefa48241b1850507357d",
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+      "git_blob": "f1f3967ee442df61a022ff99afb1d2c0512a433a",
+      "sha256": "bcb2b419d45d927fa40693b48881ccd25d27a98fb7a4669ae5651ebcc589fb23"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs",
+      "git_blob": "46f0e22a905db433c97ca26bd81ae06c84c60102",
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/recepcion_a.rs",
+      "git_blob": "14c7c92468975cb1774cc02d9ecfe749a6dbee82",
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    }
+  ],
+  "rectoras": "lecturas completas conservadas; mismos bytes"
+}

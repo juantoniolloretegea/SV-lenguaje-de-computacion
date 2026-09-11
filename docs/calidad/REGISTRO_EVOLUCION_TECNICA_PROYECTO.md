@@ -1432,3 +1432,18 @@ G2 queda delimitado: `EnlacePublico` conserva recibos; `permiso_y_dato` aplica p
 Los fallos se adscriben a su emisor y contrato diagnóstico, sin nuevos códigos ni conversión a U. A–L siguen como criterios pendientes de montaje y ejecución integrada. Se conservan presupuesto, reserva, asociación /2–/3 y P3/P4/P5. No hay cambio de código, gramática, IR, dominio, agente o interfaz. No se declara terminado el catálogo ni el cierre global.
 
 **Estado:** CORRESPONDENCIA_FIJADA_ENLACE_PRODUCTIVO_NO_ACREDITADO. Se conserva el punto de control en laboratorio y Calidad; la aceptación final sigue siendo humana.
+
+
+<a id="retp-148"></a>
+
+## RETP-2026-148 · Autoridad humana y comprobación técnica de la IA
+
+11/09/2026. Juan Antonio precisa quién autoriza —humano experto del dominio constituido— y el alcance —actuaciones definidas en el agente consumidor—; la comprobación técnica corresponde al trabajo de Watson. [Rectificación, contraste y evidencia](tuberias-ia/rectificacion-autoridad-y-comprobacion-ia/README.md). Entradas: Lenguaje `132c323a6241f1917c5e8416d21eb8a66923cce6`; laboratorio `d95b33a208327e66a36023ffba9d1ee4469c727b`.
+
+Se retira el bloqueo general formulado al finalizar RETP-147: no corresponde pedir al autor el mecanismo que ha encargado construir. La recepción productiva de referentes R1 continúa como obligación técnica; no impide la comprobación pública. No se presume un permiso por el nombre de experto ni se abre un agente, reserva, despliegue o inscripción.
+
+Sonda acotada sobre el binario nativo conservado de RETP-142, sin compilación nueva: marco original aceptado; dato alterado sin actualizar huella rechazado; dato alterado y negación suprimida con huellas coherentes aceptados por el validador de transporte; V original admitida como derivación sintáctica; V con campo adicional de autoridad rechazada por esquema. C3/C4 refutan transporte válido ⇒ fidelidad, no el contrato limitado del receptor ni demuestran vía adversaria hasta G1/R1.
+
+Primer intento detenido en C2 por nombre de diagnóstico supuesto por el observador. Las fuentes previas devuelven Correlacion/CORRELACION_INVALIDA; se corrige sólo ese esperado y se conserva todo. Segundo intento completa seis casos. Ocho procesos en total; 34 piezas custodiadas; ocho fuentes cotejadas; sin modelos, reserva, P4/P5 ni nuevas garantías.
+
+Continúa la comprobación del vínculo referencia–transformación–entrega y la recepción de sus causas por diagnóstico/localización, bajo el workflow vigente y aceptación final humana. Sin cambios de código productivo, gramática, IR o dominio. **Estado: BLOQUEO_GENERAL_RECTIFICADO_CARACTERIZACION_ACOTADA_EJECUTADA.**

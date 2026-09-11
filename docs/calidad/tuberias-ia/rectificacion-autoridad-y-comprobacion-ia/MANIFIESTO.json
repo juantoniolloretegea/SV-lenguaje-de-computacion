@@ -1,0 +1,21 @@
+{
+  "registro": "RETP-2026-148",
+  "archivos": {
+    "EVIDENCIA.json": {
+      "bytes": 63824,
+      "sha256": "609aacb90b2c89487f94ccf9a4bd1365058d7c50da643d6e6837216ffabb76d2"
+    },
+    "ejecutar.py": {
+      "bytes": 4918,
+      "sha256": "7338182ce26ccfcd395e6d3adf19280185d12b801a07a4460d630a18117d899a"
+    },
+    "README.md": {
+      "bytes": 9230,
+      "sha256": "4a698d32759d4433bf25ec293cea1e141425ab8e85afa25e75b44178bd44926f"
+    },
+    "FUENTES.json": {
+      "bytes": 2130,
+      "sha256": "2bbeb0afa98ad43460faac6fa4671926930ccdc7bc7e2dc53e4a762e61a56f07"
+    }
+  }
+}
