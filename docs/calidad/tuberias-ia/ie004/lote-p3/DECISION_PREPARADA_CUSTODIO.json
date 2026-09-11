@@ -1,0 +1,19 @@
+{
+  "version": "IE004-P3-DECISION-PREPARADA/1",
+  "registro": "RETP-2026-138",
+  "estado": "PREPARADA_NO_EMITIDA",
+  "autoridad": "Juan Antonio Lloret Egea",
+  "compromiso_sha256": "d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5",
+  "perfil_comprometido": "IE004-ES-P2/2",
+  "perfil_realizacion": "IE004-ES-P2/3-COSTE/1",
+  "identidad_entre_perfiles": false,
+  "compatibilidad_integral": "NO_ACREDITADA",
+  "preguntas_oraculo_leidos": false,
+  "cuestion_concreta": "Determinar antes de captura si el compromiso existente puede asociarse a una cualificación funcional delimitada de /3, preservando sus bytes y sin declarar cumplido el calendario ni los intentos /2; registrar la sucesión necesaria si cambia el alcance u oráculo.",
+  "alcance_aceptado_por_custodio": null,
+  "condiciones_y_obligaciones_pendientes": null,
+  "decision_literal": null,
+  "fecha_decision": null,
+  "captura_habilitada": false,
+  "nota": "No es una solicitud de renovar la custodia ya confirmada. La luz verde de implementación no rellena la decisión sobre diferencias concretas antes de la captura. Este objeto no autoriza acceder al paquete reservado."
+}

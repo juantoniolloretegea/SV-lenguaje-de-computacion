@@ -1,0 +1,363 @@
+{
+  "version": "IE004-LOTE-CONTROLES/1",
+  "registro": "RETP-2026-138",
+  "repeticiones": 3,
+  "configuraciones": [
+    "nativo-debug",
+    "nativo-release",
+    "wasi-debug",
+    "wasi-release"
+  ],
+  "casos": [
+    {
+      "id": "L01",
+      "descripcion": "Lote público con 24 identidades, preguntas y contextos heredados",
+      "bytes": 7773,
+      "sha256": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a",
+      "huella_argumento": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a",
+      "exit_code": 0,
+      "causa": null,
+      "pipeline": true
+    },
+    {
+      "id": "L02",
+      "descripcion": "Orden distinto de claves admitidas",
+      "bytes": 5576,
+      "sha256": "64b2963683a5bd3dc397af73a1296c23f8302287888bf52abb5e93d483c12668",
+      "huella_argumento": "64b2963683a5bd3dc397af73a1296c23f8302287888bf52abb5e93d483c12668",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L03",
+      "descripcion": "Escapes Unicode de claves y texto recuperan los mismos valores",
+      "bytes": 5696,
+      "sha256": "8a2f4cd574bcd2f3938e14086e351bb48a6401e1b99b100f2dc9826d2274f6c5",
+      "huella_argumento": "8a2f4cd574bcd2f3938e14086e351bb48a6401e1b99b100f2dc9826d2274f6c5",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L04",
+      "descripcion": "Lote válido al máximo de 2 MiB",
+      "bytes": 2097152,
+      "sha256": "be83b5ab74d5c17419e663ce233dddf23f0d70a61b5653b186dd849326109ccf",
+      "huella_argumento": "be83b5ab74d5c17419e663ce233dddf23f0d70a61b5653b186dd849326109ccf",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L05",
+      "descripcion": "Un byte sobre el máximo, sin truncar",
+      "bytes": 2097153,
+      "sha256": "545fc1c88c153bd052f0aacf06f62c883ce52b87c06be38784d30c0f84aa9e6a",
+      "huella_argumento": "545fc1c88c153bd052f0aacf06f62c883ce52b87c06be38784d30c0f84aa9e6a",
+      "exit_code": 2,
+      "causa": "Bytes"
+    },
+    {
+      "id": "L06",
+      "descripcion": "JSON truncado",
+      "bytes": 5575,
+      "sha256": "97e8ab6ed2f1421d454be6a10094cbb32ed4f407b463d830b7f93f2bb43d37dd",
+      "huella_argumento": "97e8ab6ed2f1421d454be6a10094cbb32ed4f407b463d830b7f93f2bb43d37dd",
+      "exit_code": 2,
+      "causa": "Truncado"
+    },
+    {
+      "id": "L07",
+      "descripcion": "Objeto posterior",
+      "bytes": 5578,
+      "sha256": "ec616a8aeb3735b9f9ce290818935ce77e4a58290b99203ef357c7e5a7d12226",
+      "huella_argumento": "ec616a8aeb3735b9f9ce290818935ce77e4a58290b99203ef357c7e5a7d12226",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L08",
+      "descripcion": "Clave raíz extra",
+      "bytes": 5609,
+      "sha256": "3e0f57bb8be833d04c0bd4a1d3cd2c7acc06fbeda309d2899ac2e646e3a4135d",
+      "huella_argumento": "3e0f57bb8be833d04c0bd4a1d3cd2c7acc06fbeda309d2899ac2e646e3a4135d",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L09",
+      "descripcion": "Clave raíz duplicada",
+      "bytes": 5601,
+      "sha256": "6b2aecd6176b12c118abfc489d23929250ce251ce63f3526fbb3f2fdbcee1dad",
+      "huella_argumento": "6b2aecd6176b12c118abfc489d23929250ce251ce63f3526fbb3f2fdbcee1dad",
+      "exit_code": 2,
+      "causa": "Duplicada"
+    },
+    {
+      "id": "L10",
+      "descripcion": "Clave raíz duplicada mediante escape",
+      "bytes": 5606,
+      "sha256": "c823da249869da6b26d7926c9dcd903630065ec92564fa288e0fd83f3b757c3c",
+      "huella_argumento": "c823da249869da6b26d7926c9dcd903630065ec92564fa288e0fd83f3b757c3c",
+      "exit_code": 2,
+      "causa": "Duplicada"
+    },
+    {
+      "id": "L11",
+      "descripcion": "Versión no admitida",
+      "bytes": 5576,
+      "sha256": "b11b50d99633a47e81af8d7219fd5f017e11e48b1192f0a4411bad0bc8027ac3",
+      "huella_argumento": "b11b50d99633a47e81af8d7219fd5f017e11e48b1192f0a4411bad0bc8027ac3",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L12",
+      "descripcion": "Sólo 23 objetos",
+      "bytes": 5404,
+      "sha256": "d2e43c197e3b5535f67b9614c62468edf06dee8d676d4f6f84f898ecd43673cb",
+      "huella_argumento": "d2e43c197e3b5535f67b9614c62468edf06dee8d676d4f6f84f898ecd43673cb",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L13",
+      "descripcion": "Elemento 25 rechazado antes de decodificarlo",
+      "bytes": 5585,
+      "sha256": "b6306f58d69c61df2b56ce852e9467679dcbf4cde65886d1fa998a0f1da6b49b",
+      "huella_argumento": "b6306f58d69c61df2b56ce852e9467679dcbf4cde65886d1fa998a0f1da6b49b",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L14",
+      "descripcion": "Orden alterado",
+      "bytes": 5576,
+      "sha256": "e68e86422ffb9d0e065e717f4c262c48007ad9f899b1c0d6c4996e9293a89047",
+      "huella_argumento": "e68e86422ffb9d0e065e717f4c262c48007ad9f899b1c0d6c4996e9293a89047",
+      "exit_code": 2,
+      "causa": "Correlacion"
+    },
+    {
+      "id": "L15",
+      "descripcion": "Identificador repetido",
+      "bytes": 5576,
+      "sha256": "895a671a94de6d49577f95ac7168c68f0746f873ca06ea5e2c7323752d1f6971",
+      "huella_argumento": "895a671a94de6d49577f95ac7168c68f0746f873ca06ea5e2c7323752d1f6971",
+      "exit_code": 2,
+      "causa": "Correlacion"
+    },
+    {
+      "id": "L16",
+      "descripcion": "Identificador cero",
+      "bytes": 5576,
+      "sha256": "0ff07f90099e4a2cc1616a1e6affdb41a16c4834a463c877e263e489fce436e8",
+      "huella_argumento": "0ff07f90099e4a2cc1616a1e6affdb41a16c4834a463c877e263e489fce436e8",
+      "exit_code": 2,
+      "causa": "Correlacion"
+    },
+    {
+      "id": "L17",
+      "descripcion": "Identificador fuera del lote",
+      "bytes": 5576,
+      "sha256": "4dee6e52db3bcea8021d1bb914213e86c2606b67bb7ca2c0845e91ca12573965",
+      "huella_argumento": "4dee6e52db3bcea8021d1bb914213e86c2606b67bb7ca2c0845e91ca12573965",
+      "exit_code": 2,
+      "causa": "Correlacion"
+    },
+    {
+      "id": "L18",
+      "descripcion": "Nota dentro de caso A",
+      "bytes": 5606,
+      "sha256": "dd3be22cf563495b964bc97ccf8b6047d149a29fdff894667c9c83f0adff5a1b",
+      "huella_argumento": "dd3be22cf563495b964bc97ccf8b6047d149a29fdff894667c9c83f0adff5a1b",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L19",
+      "descripcion": "Pregunta duplicada mediante escape",
+      "bytes": 5599,
+      "sha256": "a9cdf93485fc131048f535cc3137b3f9b422a2a9a4d5e2e69ed687f6ca7d919a",
+      "huella_argumento": "a9cdf93485fc131048f535cc3137b3f9b422a2a9a4d5e2e69ed687f6ca7d919a",
+      "exit_code": 2,
+      "causa": "Duplicada"
+    },
+    {
+      "id": "L20",
+      "descripcion": "Contexto incompleto",
+      "bytes": 5560,
+      "sha256": "b98eebeb1e568eef2c886d073239d9884c89831924ab372bc128fc67732f7ceb",
+      "huella_argumento": "b98eebeb1e568eef2c886d073239d9884c89831924ab372bc128fc67732f7ceb",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L21",
+      "descripcion": "Valor contextual ajeno al contrato",
+      "bytes": 5576,
+      "sha256": "b255b5e1135f362de7a5ca98cb1b84d4986ab2e37bc5673144f1e716449a6334",
+      "huella_argumento": "b255b5e1135f362de7a5ca98cb1b84d4986ab2e37bc5673144f1e716449a6334",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L22",
+      "descripcion": "Clave de contexto duplicada",
+      "bytes": 5595,
+      "sha256": "3103416fc3d4ebd6ead7664ee4572aa7d580b132642ca1cafda1a1033ed05e76",
+      "huella_argumento": "3103416fc3d4ebd6ead7664ee4572aa7d580b132642ca1cafda1a1033ed05e76",
+      "exit_code": 2,
+      "causa": "Duplicada"
+    },
+    {
+      "id": "L23",
+      "descripcion": "Tipo pregunta no cadena",
+      "bytes": 5557,
+      "sha256": "718c119fe6547deb508097d0d1d3517e9ca0d1b9930f2e71b6d145661079b9e5",
+      "huella_argumento": "718c119fe6547deb508097d0d1d3517e9ca0d1b9930f2e71b6d145661079b9e5",
+      "exit_code": 2,
+      "causa": "Json"
+    },
+    {
+      "id": "L24",
+      "descripcion": "Los cinco nulos se preservan",
+      "bytes": 5562,
+      "sha256": "87ec1c356625d7746a056eddad7de3efcb04e224e6ab053602585af697c456f0",
+      "huella_argumento": "87ec1c356625d7746a056eddad7de3efcb04e224e6ab053602585af697c456f0",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L25",
+      "descripcion": "8192 bytes en pregunta sin normalizar espacios",
+      "bytes": 13749,
+      "sha256": "e0ceff01b30cbd193746bbb1a4ecbe2888313609a0c6e65a35f13577203681bd",
+      "huella_argumento": "e0ceff01b30cbd193746bbb1a4ecbe2888313609a0c6e65a35f13577203681bd",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L26",
+      "descripcion": "8193 bytes en pregunta",
+      "bytes": 13750,
+      "sha256": "6f908550ddc3186e6c4389ef3a8a0b15e5b0f243fcea2086911c48baf076c82f",
+      "huella_argumento": "6f908550ddc3186e6c4389ef3a8a0b15e5b0f243fcea2086911c48baf076c82f",
+      "exit_code": 2,
+      "causa": "Bytes"
+    },
+    {
+      "id": "L27",
+      "descripcion": "UTF-8 inválido con hash de sus bytes exactos",
+      "bytes": 5577,
+      "sha256": "934817bb5e1edd830a256f2c3d2173699fbd45f9de4973757e4aab8122347308",
+      "huella_argumento": "934817bb5e1edd830a256f2c3d2173699fbd45f9de4973757e4aab8122347308",
+      "exit_code": 2,
+      "causa": "Utf8"
+    },
+    {
+      "id": "L28",
+      "descripcion": "Sustituto Unicode aislado",
+      "bytes": 5563,
+      "sha256": "e655537d82c809fdd84b14e4743c8a9992f9d075c027b806ec56b3cc4cabfa4b",
+      "huella_argumento": "e655537d82c809fdd84b14e4743c8a9992f9d075c027b806ec56b3cc4cabfa4b",
+      "exit_code": 2,
+      "causa": "Json"
+    },
+    {
+      "id": "L29",
+      "descripcion": "Par sustituto válido preservado, sin atribuir comprensión",
+      "bytes": 5569,
+      "sha256": "982425a91e25e48a1b5c0c57907cdb219c05addbefb1e9f0e50e873bb7026d1f",
+      "huella_argumento": "982425a91e25e48a1b5c0c57907cdb219c05addbefb1e9f0e50e873bb7026d1f",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L30",
+      "descripcion": "Huella incorrecta antes de decodificar UTF-8",
+      "bytes": 1,
+      "sha256": "a8100ae6aa1940d0b663bb31cd466142ebbdbd5187131b92d93818987832eb89",
+      "huella_argumento": "0000000000000000000000000000000000000000000000000000000000000000",
+      "exit_code": 2,
+      "causa": "Correlacion",
+      "hash": "0000000000000000000000000000000000000000000000000000000000000000"
+    },
+    {
+      "id": "L31",
+      "descripcion": "Huella con formato inválido",
+      "bytes": 5576,
+      "sha256": "f74b99a01e968ce2d232bc9ab8f8798ed3315c0bb7c56da08fbcc86ac237a763",
+      "huella_argumento": "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
+      "exit_code": 2,
+      "causa": "Esquema",
+      "hash": "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG"
+    },
+    {
+      "id": "L32",
+      "descripcion": "Las 24 preguntas al límite de 8192 bytes",
+      "bytes": 199784,
+      "sha256": "a6ce20cd79d36a72d1f7e9d55f43986de6f48abef6f75774d779bc8f5babcd88",
+      "huella_argumento": "a6ce20cd79d36a72d1f7e9d55f43986de6f48abef6f75774d779bc8f5babcd88",
+      "exit_code": 0,
+      "causa": null
+    },
+    {
+      "id": "L33",
+      "descripcion": "129 tokens conservados hasta rechazo de cota",
+      "bytes": 6454,
+      "sha256": "df2f69ba35734168c60b6d1ac2b3b1a7b52f0523771b0207cafa575985f0ed92",
+      "huella_argumento": "df2f69ba35734168c60b6d1ac2b3b1a7b52f0523771b0207cafa575985f0ed92",
+      "exit_code": 2,
+      "causa": "TOKENS_LIMITE"
+    },
+    {
+      "id": "L34",
+      "descripcion": "Clave adicional dentro de contexto",
+      "bytes": 5591,
+      "sha256": "32a72eaa96e1cff73d75d0755a5bc343a388fd51bbaebab89b836f0b1636c90e",
+      "huella_argumento": "32a72eaa96e1cff73d75d0755a5bc343a388fd51bbaebab89b836f0b1636c90e",
+      "exit_code": 2,
+      "causa": "Esquema"
+    },
+    {
+      "id": "L35",
+      "descripcion": "Clave mayor de 64 bytes",
+      "bytes": 5634,
+      "sha256": "a385c05137e0aa3a14c0dbf103b40cd93eacf02df531f1f59749e38c264ad70b",
+      "huella_argumento": "a385c05137e0aa3a14c0dbf103b40cd93eacf02df531f1f59749e38c264ad70b",
+      "exit_code": 2,
+      "causa": "Bytes"
+    },
+    {
+      "id": "L36",
+      "descripcion": "Lote mínimo sin casos",
+      "bytes": 37,
+      "sha256": "08c7c54239ccb86914471a63347a6f111d82378cd964af6b8bb86e5259dabe1b",
+      "huella_argumento": "08c7c54239ccb86914471a63347a6f111d82378cd964af6b8bb86e5259dabe1b",
+      "exit_code": 2,
+      "causa": "Esquema"
+    }
+  ],
+  "paquete": {
+    "bytes": 6116325,
+    "sha256": "09cbe3c4409fc41ad498acbe314ca7e825f6cf56bb848504e77ae497bb2a40ee",
+    "gzip_bytes": 16425,
+    "gzip_sha256": "92d1e6ccebc12f4f0040e1992aba28c36bce5776193af1c1b44d5fa64f01de08"
+  },
+  "pipeline": {
+    "caso": "L01",
+    "solicitudes": 24,
+    "repeticiones": 3,
+    "referencia": "RETP-137, cuerpos públicos fijados antes del adaptador",
+    "v_y_auxiliar": "Sin lectura en el camino de A; sin nueva prueba de V"
+  },
+  "presupuestos": {
+    "timeout_proceso_ms": 30000,
+    "timeout_compilacion_ms": 120000,
+    "stdout_bytes": 2097200,
+    "stderr_bytes": 262144,
+    "trabajo_lote": 24000000,
+    "memoria_solicitada_lote": 16777216,
+    "bytes_lote": 2097152
+  },
+  "criterio": "Todos los controles, conservación exacta, marco íntegro, paridad y tres reproducciones; ningún fallo técnico es U."
+}

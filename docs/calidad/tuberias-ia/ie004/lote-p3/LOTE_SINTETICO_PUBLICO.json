@@ -1,0 +1,269 @@
+{
+  "version": "IE004-P3-A/1",
+  "casos": [
+    {
+      "id": "P3-01",
+      "pregunta": "El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-02",
+      "pregunta": "¿Cuál es el valor actual de IgG del CASO-A?",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-03",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-04",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-05",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-06",
+      "pregunta": "Límites de IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-07",
+      "pregunta": "LÍMITES DE IGG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-08",
+      "pregunta": "No escriba 7 en el valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-09",
+      "pregunta": "El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-10",
+      "pregunta": "La IgG.",
+      "contexto": {
+        "operacion": null,
+        "objeto": null,
+        "parametro": null,
+        "momento": null,
+        "campo": null
+      }
+    },
+    {
+      "id": "P3-11",
+      "pregunta": "El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-12",
+      "pregunta": "¿Cuál es el valor actual de IgG del CASO-A?",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-13",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-14",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-15",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-16",
+      "pregunta": "Límites de IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-17",
+      "pregunta": "LÍMITES DE IGG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-18",
+      "pregunta": "No escriba 7 en el valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-19",
+      "pregunta": "El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-20",
+      "pregunta": "La IgG.",
+      "contexto": {
+        "operacion": null,
+        "objeto": null,
+        "parametro": null,
+        "momento": null,
+        "campo": null
+      }
+    },
+    {
+      "id": "P3-21",
+      "pregunta": "El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-22",
+      "pregunta": "¿Cuál es el valor actual de IgG del CASO-A?",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-23",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    },
+    {
+      "id": "P3-24",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      }
+    }
+  ]
+}

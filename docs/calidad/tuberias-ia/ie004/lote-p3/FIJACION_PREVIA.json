@@ -1,0 +1,135 @@
+{
+  "registro": "RETP-2026-138",
+  "instrumento": "IE004-LOTE-ADAPTADOR/1",
+  "controles": 36,
+  "repeticiones": 3,
+  "lote_publico": 24,
+  "archivos": [
+    {
+      "ruta": "../recepcion-av/casos_fijados.rs",
+      "bytes": 8448,
+      "sha256": "1add1153ae76fb4dbe4dd2c35db1c0860dc3cf7e42831e501ec844f8da8b841f"
+    },
+    {
+      "ruta": "../recepcion-av/controles.rs",
+      "bytes": 5823,
+      "sha256": "db415940df33b290202b1a1764dd6acf239230f4e92b6db370b29cc556aff1cf"
+    },
+    {
+      "ruta": "../recepcion-av/json_estricto.rs",
+      "bytes": 8552,
+      "sha256": "bbef9939a2000d637e5714cc673e2b1b5c1feeb64ebe0620026b9d40dfd20690"
+    },
+    {
+      "ruta": "../recepcion-av/main.rs",
+      "bytes": 5491,
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "ruta": "../recepcion-av/recepcion_a.rs",
+      "bytes": 8326,
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    },
+    {
+      "ruta": "../recepcion-av/sha256.rs",
+      "bytes": 3993,
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "ruta": "../recepcion-av/verificar_v.rs",
+      "bytes": 7715,
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "ruta": "../recepcion-av/wasi.mjs",
+      "bytes": 408,
+      "sha256": "a1c8ad2401e9d7b669adec75b5e1fae4959f8bc91e5c248e84f5478ed76b2141"
+    },
+    {
+      "ruta": "../semantica-a/gramatica.rs",
+      "bytes": 2700,
+      "sha256": "f5740a876e34ece371f1fa9454f5243e3586ee1957350b8550aab35e9fbcdec7"
+    },
+    {
+      "ruta": "../semantica-a/recursos.rs",
+      "bytes": 5909,
+      "sha256": "5656f93c1c893cd05a4ed50696cb41eb93cd10e91f629d4cf8926a771aa9eef3"
+    },
+    {
+      "ruta": "../semantica-a/semantica.rs",
+      "bytes": 11333,
+      "sha256": "f7aaf4d1d02e8cfcacab8ec83f3c28009b4c7cdacd498c65fd7ff4a47664b4b4"
+    },
+    {
+      "ruta": "../semantica-a/servicio.rs",
+      "bytes": 6256,
+      "sha256": "bc119baed2d74c750ff19e42d25ba2edca6849661256321eec4876d9aae134f0"
+    },
+    {
+      "ruta": "../semantica-a/sintaxis.rs",
+      "bytes": 9642,
+      "sha256": "0413f45b8b340fdffea5fa300643f70e0c9a6ac4f196c433c53d1607798d381b"
+    },
+    {
+      "ruta": "CONTRATO_ADAPTADOR_LOTE_1.md",
+      "bytes": 7541,
+      "sha256": "9d245b9766600fbf5f5c1f849a4e7339e45bad5bbf36e3c2156269d79b7b19a4"
+    },
+    {
+      "ruta": "CONTROLES_PUBLICOS.json",
+      "bytes": 13273,
+      "sha256": "33878b68bba41862fac48d3ff084e1fa4c863a1eefb88db7bd44dd8b27b258e2"
+    },
+    {
+      "ruta": "DECISION_PREPARADA_CUSTODIO.json",
+      "bytes": 1158,
+      "sha256": "39887296732b78dce23c7e325d5a720a2bc4ead09295bad5d9f0cbd5e885f5c4"
+    },
+    {
+      "ruta": "ENTRADAS_PUBLICAS.json.gz.b64",
+      "bytes": 21901,
+      "sha256": "088a891d9fbd9b41eda451f5f9c106325a5457aaffe3c312d9f8ec315cca9bd5"
+    },
+    {
+      "ruta": "LOTE_SINTETICO_PUBLICO.json",
+      "bytes": 7773,
+      "sha256": "88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a"
+    },
+    {
+      "ruta": "MATRIZ_COMPATIBILIDAD_P3.md",
+      "bytes": 5677,
+      "sha256": "1e7cef163251662fb522179568433060cf83002819c98414bac8bd24b777dbf0"
+    },
+    {
+      "ruta": "PROCEDENCIA_Y_ESPERADOS.json",
+      "bytes": 27250,
+      "sha256": "459adb26a2ef9268b09a70a9cf7f2c4b55b9f94662be9fd6fc81973d0dca8ae1"
+    },
+    {
+      "ruta": "REPRODUCIR.md",
+      "bytes": 2015,
+      "sha256": "9819bb0d3290732a65ce1cc858ee4aa8beda1958a429008cba199d6b77807b85"
+    },
+    {
+      "ruta": "adaptador.rs",
+      "bytes": 9351,
+      "sha256": "d896f89463d952c323f849f7597c0725407c39871952bd55cfe53a803b67e5f2"
+    },
+    {
+      "ruta": "ejecutar.mjs",
+      "bytes": 9809,
+      "sha256": "56bb62507e75f938551f5788d3f7715f07f556669b103d506e826fb74610ba99"
+    },
+    {
+      "ruta": "main.rs",
+      "bytes": 447,
+      "sha256": "4d48dc470eb72c4beffc7327c1d1487cae8024253303a98bbbeb31a596d23256"
+    },
+    {
+      "ruta": "preparar.mjs",
+      "bytes": 6798,
+      "sha256": "1471b9f00a4f49f55e4451c021b2d8e8d8cbcfd75037ab754ddbf583329993f1"
+    }
+  ],
+  "reserva_leida": false
+}

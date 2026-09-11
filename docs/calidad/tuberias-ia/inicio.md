@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-137:** recepción A/V conforme en el alcance público: 23 A, 25 V y tres relaciones, tres reproducciones; 22 primitivas y nueve escenarios de transporte por configuración nativo/WASI debug/release. Cuerpo A entregado antes de abrir V y conservado. Reserva cerrada; compatibilidad integral P3 y P4/P5 pendientes.
+**Estado vigente · RETP-138:** adaptador estricto del lote de 24 casos y matriz de compatibilidad P3 preparados. 36 controles públicos fijados; campaña pendiente. Reserva cerrada; no hay nuevo encargo a Grok.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -100,3 +100,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Recepción A/V contrastada · RETP-137
 
 [Acta y evidencia recuperable](ACTA_RESULTADO_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Cuatro configuraciones conformes, fuentes y esperados intactos tras fijación. Próximo objeto: adaptador del lote y decisión de compatibilidad antes de utilizar P3. No hay nuevo encargo a Grok.
+
+## Lote y compatibilidad preparados · RETP-138
+
+[Acta de preparación](ACTA_PREPARACION_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_P3_2026_09_11.md). La recepción individual RETP-137 conserva sus resultados; este paso cualifica extracción del lote y prepara la decisión sobre /2 frente a /3.

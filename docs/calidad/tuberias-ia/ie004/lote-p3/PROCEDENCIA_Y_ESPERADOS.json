@@ -1,0 +1,941 @@
+{
+  "naturaleza": "Sintético público, preguntas heredadas y repetidas; no reserva inédita ni captura de modelo.",
+  "casos": [
+    {
+      "id": "P3-01",
+      "antecedente": "A01",
+      "ruta": "../recepcion-av/publicos/a/A01.json",
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-02",
+      "antecedente": "A02",
+      "ruta": "../recepcion-av/publicos/a/A02.json",
+      "sha256": "6e369f66e35359f8ae445e41ccfce515877eb26500e8270a48bd2722139b0273",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-03",
+      "antecedente": "A03",
+      "ruta": "../recepcion-av/publicos/a/A03.json",
+      "sha256": "8627e87b458c7144335e3ff7a2ca423f6d5ff2c492b47aa7e7c9d0c12eeb1edf",
+      "cuerpo_esperado_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-04",
+      "antecedente": "A04",
+      "ruta": "../recepcion-av/publicos/a/A04.json",
+      "sha256": "021c443c576ed7faa15499acbc70db5228b6494c6eac593b78a21fd2175980ac",
+      "cuerpo_esperado_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": false,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-05",
+      "antecedente": "A05",
+      "ruta": "../recepcion-av/publicos/a/A05.json",
+      "sha256": "e04171bb129b4e0f0102d26a53ece100f76c8c07a6c0c7cbe651363a08a26663",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-06",
+      "antecedente": "A06",
+      "ruta": "../recepcion-av/publicos/a/A06.json",
+      "sha256": "5705ef2a9052556ece4a3c257bb3ad90e3aa4ca4f369cddfc888da3fbe24a73b",
+      "cuerpo_esperado_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "SOLICITUD_NO_REPRESENTADA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 0,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-07",
+      "antecedente": "A07",
+      "ruta": "../recepcion-av/publicos/a/A07.json",
+      "sha256": "61cd2d63d3e305588fc51b777e6b695964c874591477bd6f5b9bd516d3494cf3",
+      "cuerpo_esperado_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "Registro artificial; no acredita concentración ni condición clínica.",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            16
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-08",
+      "antecedente": "A08",
+      "ruta": "../recepcion-av/publicos/a/A08.json",
+      "sha256": "8786f299d2159dd9623af5d62e4ec6e8d2b679e32c5487702fbd2dc0843d0cf3",
+      "cuerpo_esperado_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "SIN_SOLICITUD_POSITIVA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 2,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-09",
+      "antecedente": "A17",
+      "ruta": "../recepcion-av/publicos/a/A17.json",
+      "sha256": "a6c12b654cec9df1d47982b48a05e2ca7a4eb50d7326d4f7efdd1e880e607b36",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-10",
+      "antecedente": "A23",
+      "ruta": "../recepcion-av/publicos/a/A23.json",
+      "sha256": "8ebafa4a9f4c38fbc80b239a7ed88eb4a4bbd8f2743c19bdd03962bfbc8b5a1a",
+      "cuerpo_esperado_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "resolucion": {
+          "estado": "CONTEXTO_INSUFICIENTE",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 16,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-11",
+      "antecedente": "A01",
+      "ruta": "../recepcion-av/publicos/a/A01.json",
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-12",
+      "antecedente": "A02",
+      "ruta": "../recepcion-av/publicos/a/A02.json",
+      "sha256": "6e369f66e35359f8ae445e41ccfce515877eb26500e8270a48bd2722139b0273",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-13",
+      "antecedente": "A03",
+      "ruta": "../recepcion-av/publicos/a/A03.json",
+      "sha256": "8627e87b458c7144335e3ff7a2ca423f6d5ff2c492b47aa7e7c9d0c12eeb1edf",
+      "cuerpo_esperado_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-14",
+      "antecedente": "A04",
+      "ruta": "../recepcion-av/publicos/a/A04.json",
+      "sha256": "021c443c576ed7faa15499acbc70db5228b6494c6eac593b78a21fd2175980ac",
+      "cuerpo_esperado_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": false,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-15",
+      "antecedente": "A05",
+      "ruta": "../recepcion-av/publicos/a/A05.json",
+      "sha256": "e04171bb129b4e0f0102d26a53ece100f76c8c07a6c0c7cbe651363a08a26663",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-16",
+      "antecedente": "A06",
+      "ruta": "../recepcion-av/publicos/a/A06.json",
+      "sha256": "5705ef2a9052556ece4a3c257bb3ad90e3aa4ca4f369cddfc888da3fbe24a73b",
+      "cuerpo_esperado_sha256": "1d38f9ede3b98c74ce390f99d196bdc5c9601ed081c0c6d9070ba0b35e9eff3e",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "SOLICITUD_NO_REPRESENTADA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 0,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-17",
+      "antecedente": "A07",
+      "ruta": "../recepcion-av/publicos/a/A07.json",
+      "sha256": "61cd2d63d3e305588fc51b777e6b695964c874591477bd6f5b9bd516d3494cf3",
+      "cuerpo_esperado_sha256": "43f9bc00093344675c40e05a7149951ecfbf3d11453a88b7f0301cf30979f436",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "Registro artificial; no acredita concentración ni condición clínica.",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            16
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-18",
+      "antecedente": "A08",
+      "ruta": "../recepcion-av/publicos/a/A08.json",
+      "sha256": "8786f299d2159dd9623af5d62e4ec6e8d2b679e32c5487702fbd2dc0843d0cf3",
+      "cuerpo_esperado_sha256": "4856f1d0fc90e052d9daad73bee5b82d535eba6dbdac477994064ac25b8288c1",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "SIN_SOLICITUD_POSITIVA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 2,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-19",
+      "antecedente": "A17",
+      "ruta": "../recepcion-av/publicos/a/A17.json",
+      "sha256": "a6c12b654cec9df1d47982b48a05e2ca7a4eb50d7326d4f7efdd1e880e607b36",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-20",
+      "antecedente": "A23",
+      "ruta": "../recepcion-av/publicos/a/A23.json",
+      "sha256": "8ebafa4a9f4c38fbc80b239a7ed88eb4a4bbd8f2743c19bdd03962bfbc8b5a1a",
+      "cuerpo_esperado_sha256": "912dbd7fbf4fd1248ac41c8b05c3179490bf6837a402e2d89b58599c36a6146e",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "resolucion": {
+          "estado": "CONTEXTO_INSUFICIENTE",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 16,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-21",
+      "antecedente": "A01",
+      "ruta": "../recepcion-av/publicos/a/A01.json",
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-22",
+      "antecedente": "A02",
+      "ruta": "../recepcion-av/publicos/a/A02.json",
+      "sha256": "6e369f66e35359f8ae445e41ccfce515877eb26500e8270a48bd2722139b0273",
+      "cuerpo_esperado_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "DATO",
+          "contenido": "8.40",
+          "ruta": [
+            1,
+            1,
+            1,
+            1,
+            1
+          ],
+          "causas": 0,
+          "llamadas_politica": 1,
+          "fuente": "FICCION-IE004/1",
+          "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+        }
+      }
+    },
+    {
+      "id": "P3-23",
+      "antecedente": "A03",
+      "ruta": "../recepcion-av/publicos/a/A03.json",
+      "sha256": "8627e87b458c7144335e3ff7a2ca423f6d5ff2c492b47aa7e7c9d0c12eeb1edf",
+      "cuerpo_esperado_sha256": "bb6ae85c417077fc5f10557d93a1c2120e5ba6b51c8a6f4f33de72a9eb849aa4",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": true,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    },
+    {
+      "id": "P3-24",
+      "antecedente": "A04",
+      "ruta": "../recepcion-av/publicos/a/A04.json",
+      "sha256": "021c443c576ed7faa15499acbc70db5228b6494c6eac593b78a21fd2175980ac",
+      "cuerpo_esperado_sha256": "7455e08ffa865b26b80f5ce1d9125c93bb2046246558beaa45458eb70aff7225",
+      "cuerpo_esperado": {
+        "version": "IE004-A-CUERPO/1",
+        "montaje": "M-IE004-AV/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "base": "K-IE004/1",
+        "politica": "P-IE004/1",
+        "fuente_fijada_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+        "vigente": false,
+        "admision": "ADMITIDA",
+        "contexto": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "resolucion": {
+          "estado": "PETICION_AMBIGUA",
+          "contenido": null,
+          "ruta": [
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "causas": 32,
+          "llamadas_politica": 0,
+          "fuente": null,
+          "alcance": null
+        }
+      }
+    }
+  ]
+}

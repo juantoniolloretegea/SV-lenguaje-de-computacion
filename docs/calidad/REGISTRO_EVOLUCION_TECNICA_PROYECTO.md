@@ -1304,3 +1304,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## RETP-2026-137 — Resultado público de recepción A/V
 
 11/09/2026. [Acta y evidencia](tuberias-ia/ACTA_RESULTADO_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Una matriz sobre la prepublicación c6ad0c2b/141a40d0, sin corrección posterior ni reintento. En cada configuración nativo/WASI debug/release: 23 controles A, 25 V y tres relaciones repetidos tres veces; 22 primitivas y nueve escenarios de procesos/pipes. Paridad de cuerpos y desenlaces/trabajo V. A entregada antes de V; cuerpo conservado ante ausencia, invalidez, exceso, agotamiento, correlación errónea, demora y ausencia de EOF. V al máximo de 262144 bytes usó 845002 unidades. Capturas originales recuperables; RSS, aislamiento P4, aportación P5 y P3 reservado pendientes. Siguiente objeto: lote y compatibilidad P3, sin consultar reserva.
+
+<a id="retp-138"></a>
+## RETP-2026-138 — Preparación de lote y compatibilidad P3
+
+11/09/2026. [Acta](tuberias-ia/ACTA_PREPARACION_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_P3_2026_09_11.md). Adaptador de esquema cerrado, lote máximo 2 MiB, 24 objetos y extracción sin normalización; fuentes A intactas. 36 controles públicos y tres reproducciones por destino/perfil; recorrido de 24 solicitudes públicas con cuerpos esperados heredados. Preparación tipada sin consultas ejecutadas. Diferencia expresa de calendario/unidades /2 y /3; decisión humana de asociación pendiente, reserva cerrada.
