@@ -1,0 +1,41 @@
+{
+  "estado": "FALLO",
+  "original_sha256": "a84dcd6e5934bc72b4a6fe4e37f22a97fc2ca97c9a9fe02eb22f926aa76ba37a",
+  "original_bytes": 1436035,
+  "resultados": [
+    {
+      "id": "nativo-debug",
+      "estado": "FALLO",
+      "controles": 108,
+      "controles_conformes": 108,
+      "recorridos": 72,
+      "recorridos_conformes": 63
+    },
+    {
+      "id": "nativo-release",
+      "estado": "FALLO",
+      "controles": 108,
+      "controles_conformes": 108,
+      "recorridos": 72,
+      "recorridos_conformes": 63
+    },
+    {
+      "id": "wasi-debug",
+      "estado": "FALLO",
+      "controles": 108,
+      "controles_conformes": 108,
+      "recorridos": 72,
+      "recorridos_conformes": 63
+    },
+    {
+      "id": "wasi-release",
+      "estado": "FALLO",
+      "controles": 108,
+      "controles_conformes": 108,
+      "recorridos": 72,
+      "recorridos_conformes": 63
+    }
+  ],
+  "reserva_leida": false,
+  "nota": "Resumen del resultado original desfavorable. El original íntegro y capturas se conservan para el paquete recuperable; no se modifica su estado."
+}

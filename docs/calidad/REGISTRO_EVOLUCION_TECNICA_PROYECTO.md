@@ -1309,3 +1309,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## RETP-2026-138 — Preparación de lote y compatibilidad P3
 
 11/09/2026. [Acta](tuberias-ia/ACTA_PREPARACION_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_P3_2026_09_11.md). Adaptador de esquema cerrado, lote máximo 2 MiB, 24 objetos y extracción sin normalización; fuentes A intactas. 36 controles públicos y tres reproducciones por destino/perfil; recorrido de 24 solicitudes públicas con cuerpos esperados heredados. Preparación tipada sin consultas ejecutadas. Diferencia expresa de calendario/unidades /2 y /3; decisión humana de asociación pendiente, reserva cerrada.
+
+<a id="retp-139"></a>
+## RETP-2026-139 — Fallo de montaje y corrección causal
+
+11/09/2026. [Acta](tuberias-ia/ACTA_FALLO_DE_MONTAJE_Y_CORRECCION_ACOTADA_LOTE_P3_2026_09_11.md). Adaptador: 432/432 controles. Recorrido: 252/288; tres posiciones heredadas de A04 se invocaron con vigencia activa en lugar de revocada. Los 36 fallos se conservan. Corrección sólo del conductor, con mismos Rust, binarios, entradas y esperados; contraste acotado de esas 36 observaciones pendiente. Fallo de manifiesto EISDIR por directorio temporal identificado, sin pérdida de capturas. Reserva cerrada.

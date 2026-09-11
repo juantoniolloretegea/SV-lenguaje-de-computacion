@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-138:** adaptador estricto del lote de 24 casos y matriz de compatibilidad P3 preparados. 36 controles públicos fijados; campaña pendiente. Reserva cerrada; no hay nuevo encargo a Grok.
+**Estado vigente · RETP-139:** 36 controles del adaptador conformes en las cuatro configuraciones, tres reproducciones. El conductor omitió vigencia revocada en tres posiciones: fallo conservado y corrección causal fijada, pendiente de ejecutar. Reserva cerrada.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -104,3 +104,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Lote y compatibilidad preparados · RETP-138
 
 [Acta de preparación](ACTA_PREPARACION_ADAPTADOR_LOTE_Y_COMPATIBILIDAD_P3_2026_09_11.md). La recepción individual RETP-137 conserva sus resultados; este paso cualifica extracción del lote y prepara la decisión sobre /2 frente a /3.
+
+## Fallo de montaje y corrección preparada · RETP-139
+
+[Acta causal](ACTA_FALLO_DE_MONTAJE_Y_CORRECCION_ACOTADA_LOTE_P3_2026_09_11.md). No hay nueva captura de modelo ni modificación de esperados.
