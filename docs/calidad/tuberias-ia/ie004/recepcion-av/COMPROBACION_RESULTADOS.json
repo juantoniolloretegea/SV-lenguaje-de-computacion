@@ -1,0 +1,64 @@
+{
+  "registro": "RETP-2026-137",
+  "tipo": "COMPROBACION_DE_ARTEFACTOS_SIN_REEJECUCION",
+  "fecha": "2026-09-11T09:09:07.244Z",
+  "fuentes_fijadas_sin_cambios": true,
+  "archivos_resultado_verificados": 408,
+  "binarios_identificados": 8,
+  "cuatro_configuraciones": [
+    {
+      "id": "nativo-debug",
+      "controles": 51,
+      "repeticiones": 3,
+      "primitivas": 22,
+      "transporte": 9,
+      "V_max_bytes": 262144,
+      "V_max_trabajo": 845002,
+      "V_max_reserva": 449779,
+      "A_admision_reserva": 66748,
+      "V_demorada_ms": 51
+    },
+    {
+      "id": "nativo-release",
+      "controles": 51,
+      "repeticiones": 3,
+      "primitivas": 22,
+      "transporte": 9,
+      "V_max_bytes": 262144,
+      "V_max_trabajo": 845002,
+      "V_max_reserva": 449779,
+      "A_admision_reserva": 66748,
+      "V_demorada_ms": 52
+    },
+    {
+      "id": "wasi-debug",
+      "controles": 51,
+      "repeticiones": 3,
+      "primitivas": 22,
+      "transporte": 9,
+      "V_max_bytes": 262144,
+      "V_max_trabajo": 845002,
+      "V_max_reserva": 432571,
+      "A_admision_reserva": 66364,
+      "V_demorada_ms": 52
+    },
+    {
+      "id": "wasi-release",
+      "controles": 51,
+      "repeticiones": 3,
+      "primitivas": 22,
+      "transporte": 9,
+      "V_max_bytes": 262144,
+      "V_max_trabajo": 845002,
+      "V_max_reserva": 432571,
+      "A_admision_reserva": 66364,
+      "V_demorada_ms": 51
+    }
+  ],
+  "paridad_cuerpos_23_casos": true,
+  "paridad_desenlaces_y_trabajo_V": true,
+  "tres_reproducciones_por_control_identicas": true,
+  "cuerpo_comun_nueve_escenarios_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+  "limite_trazas": "Los controles internos conservan cuerpo, veredicto y huellas de trazas; los escenarios de procesos conservan además stdout y traza A completa. Las reservas JSON difieren por anchuras nativo/WASI; no se exige igualdad de esos tamaños.",
+  "reserva_leida": false
+}

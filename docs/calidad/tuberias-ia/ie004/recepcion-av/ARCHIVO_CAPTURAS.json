@@ -1,0 +1,12 @@
+{
+  "registro": "RETP-2026-137",
+  "archivo": "CAPTURAS_RECUPERABLES.json.gz.b64",
+  "numero_archivos": 409,
+  "base64_bytes": 158025,
+  "base64_sha256": "9989b323de431d6e3efa262d70bd6c587e6555c0813b9a3b1b8e8a8739f9a304",
+  "gzip_bytes": 118517,
+  "gzip_sha256": "bb22902cb4c3ef6d5fdb97dd221afec15f81c25148560acdb96dbbe4b1c83fad",
+  "contenido_bytes": 1073437,
+  "contenido_sha256": "3a400f8076477abc3c8c47fdbce60c3b1616e93ce820d52051e6d608eecd5cbc",
+  "binarios": "Ocho binarios identificados en MANIFIESTO_RESULTADOS.json; no incluidos. Se conservan fuentes y compilaciones para reconstruirlos sin prometer identidad fuera de los paths originales."
+}

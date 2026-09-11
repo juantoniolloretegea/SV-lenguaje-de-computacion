@@ -1,0 +1,1643 @@
+{
+  "registro_preparacion": "RETP-2026-136",
+  "instrumento": "IE004-RECEPCION-AV/1",
+  "resultados": [
+    {
+      "id": "nativo-debug",
+      "binaries": {
+        "receptor": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-debug-receptor.bin",
+          "bytes": 4948872,
+          "sha256": "6ba124745289b3235853b26725bc0e64bd04b7851ba721b077246a5334bdaf18"
+        },
+        "controles": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-debug-controles.bin",
+          "bytes": 5800440,
+          "sha256": "1026c2e33e8e95769f75251a0dc32dde14edab1f83a73610d67ed4cdbd1099d6"
+        }
+      },
+      "control": {
+        "id": "nativo-debug-control",
+        "cmd": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-debug-controles.bin",
+        "args": [
+          "control"
+        ],
+        "inicio": "2026-09-11T09:06:21.452Z",
+        "timeout_ms": 30000,
+        "demora_ms": 0,
+        "fin": "2026-09-11T09:06:21.727Z",
+        "duracion_ms": 275,
+        "exit_code": 0,
+        "signal": null,
+        "timeout": false,
+        "salida_excedida": false,
+        "error": null,
+        "entrada_entregada": "2026-09-11T09:06:21.455Z",
+        "stdin_bytes": 0,
+        "stdout_bytes": 89517,
+        "stdout_sha256": "efdf213763af8bc99b4b761a78474e021458b5ef7a297f59d884edbd7a6429b6",
+        "stderr_bytes": 0
+      },
+      "resumen": {
+        "resumen": true,
+        "controles_por_repeticion": 51,
+        "repeticiones": 3,
+        "controles_ejecutados": 153,
+        "primitivas_correctas": 22,
+        "primitivas_total": 22,
+        "fallos": 0
+      },
+      "parseError": null,
+      "fallos": [],
+      "transporte": [
+        {
+          "scenario": "V01",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.728Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.736Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.736Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.738Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_AUSENTE",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1778,
+            "reserva_acumulada_v_bytes": 402620,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.739Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.746Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.746Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.750Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V03",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.751Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.756Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.756Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.770Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262144,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 845002,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V04",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.770Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.775Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.775Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.782Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "TRUNCADO",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 11,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1841,
+            "reserva_acumulada_v_bytes": 402642,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V05",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.782Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.787Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.787Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.790Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "BYTES_LIMITE",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262145,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 263923,
+            "reserva_acumulada_v_bytes": 402620,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V06",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.790Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.798Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.798Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.802Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "PRESUPUESTO_AGOTADO",
+            "id": null,
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1,
+            "reserva_acumulada_v_bytes": 139264,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V08",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.802Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.808Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.808Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.811Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "CORRELACION_INVALIDA",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 39299,
+            "reserva_acumulada_v_bytes": 443712,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02_DEMORADA",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.811Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.817Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.817Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:21.870Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 51
+        },
+        {
+          "scenario": "V_SIN_EOF",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:21.870Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:21.876Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:21.876Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:22.028Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "estado": "V_PLAZO_AGOTADO_POR_CONDUCTOR",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "plazo_inyectado_ms": 150,
+            "nota": "Control funcional; no acreditación de contención P4."
+          },
+          "demora_real_ms": null
+        }
+      ],
+      "cuerpos_a_identicos": true,
+      "estado": "CONFORME_EN_ALCANCE"
+    },
+    {
+      "id": "nativo-release",
+      "binaries": {
+        "receptor": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-release-receptor.bin",
+          "bytes": 4627480,
+          "sha256": "2b8a8c67319d1b59ebb6ac1bef73985657d5bd6e5ca2e710db83a7c64e7f6540"
+        },
+        "controles": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-release-controles.bin",
+          "bytes": 5452520,
+          "sha256": "26f3f6d4ef1f8e2e6f9b685b0463382050b9809457dd7053975c75be7cec1fb5"
+        }
+      },
+      "control": {
+        "id": "nativo-release-control",
+        "cmd": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/nativo-release-controles.bin",
+        "args": [
+          "control"
+        ],
+        "inicio": "2026-09-11T09:06:25.832Z",
+        "timeout_ms": 30000,
+        "demora_ms": 0,
+        "fin": "2026-09-11T09:06:25.861Z",
+        "duracion_ms": 29,
+        "exit_code": 0,
+        "signal": null,
+        "timeout": false,
+        "salida_excedida": false,
+        "error": null,
+        "entrada_entregada": "2026-09-11T09:06:25.839Z",
+        "stdin_bytes": 0,
+        "stdout_bytes": 89517,
+        "stdout_sha256": "efdf213763af8bc99b4b761a78474e021458b5ef7a297f59d884edbd7a6429b6",
+        "stderr_bytes": 0
+      },
+      "resumen": {
+        "resumen": true,
+        "controles_por_repeticion": 51,
+        "repeticiones": 3,
+        "controles_ejecutados": 153,
+        "primitivas_correctas": 22,
+        "primitivas_total": 22,
+        "fallos": 0
+      },
+      "parseError": null,
+      "fallos": [],
+      "transporte": [
+        {
+          "scenario": "V01",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.862Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.874Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.874Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.878Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_AUSENTE",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1778,
+            "reserva_acumulada_v_bytes": 402620,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V02",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.878Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.883Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.883Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.886Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V03",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.886Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.892Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.892Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.896Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262144,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 845002,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V04",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.896Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.904Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.904Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.907Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "TRUNCADO",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 11,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1841,
+            "reserva_acumulada_v_bytes": 402642,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V05",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.907Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.914Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.914Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.918Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "BYTES_LIMITE",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262145,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 263923,
+            "reserva_acumulada_v_bytes": 402620,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V06",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.918Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.924Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.924Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.926Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "PRESUPUESTO_AGOTADO",
+            "id": null,
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1,
+            "reserva_acumulada_v_bytes": 139264,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V08",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.926Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.931Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.931Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.934Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "CORRELACION_INVALIDA",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 39299,
+            "reserva_acumulada_v_bytes": 443712,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02_DEMORADA",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.934Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.939Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.939Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:25.992Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 449779,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 52
+        },
+        {
+          "scenario": "V_SIN_EOF",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:25.992Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:25.997Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:25.997Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:26.150Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6",
+          "v": {
+            "estado": "V_PLAZO_AGOTADO_POR_CONDUCTOR",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "plazo_inyectado_ms": 150,
+            "nota": "Control funcional; no acreditación de contención P4."
+          },
+          "demora_real_ms": null
+        }
+      ],
+      "cuerpos_a_identicos": true,
+      "estado": "CONFORME_EN_ALCANCE"
+    },
+    {
+      "id": "wasi-debug",
+      "binaries": {
+        "receptor": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-debug-receptor.wasm",
+          "bytes": 2582979,
+          "sha256": "952f8e3e83e2da86e401471c9d60591e47fa1a234d3287e359344d7dbd6d11f0"
+        },
+        "controles": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-debug-controles.wasm",
+          "bytes": 3424346,
+          "sha256": "a3c69984ab7918a0d72245f76cac9a4c5afc38fc262fec3fed9fa798b2c35dc0"
+        }
+      },
+      "control": {
+        "id": "wasi-debug-control",
+        "cmd": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "args": [
+          "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/wasi.mjs",
+          "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-debug-controles.wasm",
+          "control"
+        ],
+        "inicio": "2026-09-11T09:06:27.280Z",
+        "timeout_ms": 30000,
+        "demora_ms": 0,
+        "fin": "2026-09-11T09:06:27.630Z",
+        "duracion_ms": 350,
+        "exit_code": 0,
+        "signal": null,
+        "timeout": false,
+        "salida_excedida": false,
+        "error": null,
+        "entrada_entregada": "2026-09-11T09:06:27.282Z",
+        "stdin_bytes": 0,
+        "stdout_bytes": 89517,
+        "stdout_sha256": "429287b728ffd9ea18fb59801349e4317465edfd2049aefc18fd250af603f09e",
+        "stderr_bytes": 165
+      },
+      "resumen": {
+        "resumen": true,
+        "controles_por_repeticion": 51,
+        "repeticiones": 3,
+        "controles_ejecutados": 153,
+        "primitivas_correctas": 22,
+        "primitivas_total": 22,
+        "fallos": 0
+      },
+      "parseError": null,
+      "fallos": [],
+      "transporte": [
+        {
+          "scenario": "V01",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:27.631Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:27.767Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:27.767Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:27.835Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "e74b5f26f78c1a603ea8760bf7eb05d4d05ebe6a5ce4a37a58321a62e7f0f6e8",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_AUSENTE",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1778,
+            "reserva_acumulada_v_bytes": 402236,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:27.836Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:27.988Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:27.988Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:28.062Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "7dc4992edadbb7fbdbbd904b0893e4fc9b498edea12c62a744fe1a514da56201",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V03",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:28.063Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:28.227Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:28.227Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:28.309Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "293f45ded2e1128024eccd1785154c3c93a0c96f8508c3dded2411bf49f4d34b",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262144,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 845002,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V04",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:28.309Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:28.443Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:28.443Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:28.508Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "ca0a9cfb10760168003d678552afd71a5810fe75979553a85d7e80ec4ea26c34",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "TRUNCADO",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 11,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1841,
+            "reserva_acumulada_v_bytes": 402258,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V05",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:28.508Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:28.652Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:28.652Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:28.716Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "77926b09bd6581e5778de6a36dd7ffbbd2277d888bf0c255372110e9b9a10817",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "BYTES_LIMITE",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262145,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 263923,
+            "reserva_acumulada_v_bytes": 402236,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V06",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:28.716Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:28.867Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:28.867Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:28.936Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "0fd8f5e3e2c02f85ceeb8239b885b46a0ad330cb325ccfc5aef140ec8419f7f2",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "PRESUPUESTO_AGOTADO",
+            "id": null,
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1,
+            "reserva_acumulada_v_bytes": 139264,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 6
+        },
+        {
+          "scenario": "V08",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:28.936Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:29.083Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:29.083Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:29.160Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "3b8eb0a296fb481acff17adf73c11947848d5a0f5e0fbd8a779b54fb43a9dbc1",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "CORRELACION_INVALIDA",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 39299,
+            "reserva_acumulada_v_bytes": 427744,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02_DEMORADA",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:29.160Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:29.305Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:29.305Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:29.379Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "ce5a1b2c76c7497211687d7bbe706a20e97575703a3b6b6f32a13619bbbf63e7",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 52
+        },
+        {
+          "scenario": "V_SIN_EOF",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:29.380Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:29.526Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:29.526Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:29.685Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "aba7ea49210592db40eab620e333878a80178e1115b619cd8c88871abf37e9d1",
+          "v": {
+            "estado": "V_PLAZO_AGOTADO_POR_CONDUCTOR",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "plazo_inyectado_ms": 150,
+            "nota": "Control funcional; no acreditación de contención P4."
+          },
+          "demora_real_ms": null
+        }
+      ],
+      "cuerpos_a_identicos": true,
+      "estado": "CONFORME_EN_ALCANCE"
+    },
+    {
+      "id": "wasi-release",
+      "binaries": {
+        "receptor": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-release-receptor.wasm",
+          "bytes": 2248071,
+          "sha256": "3ee0bdfd4e1cadec570efc2203ad6ca2cbd6e71147616f0e80bfd69eeffa2b1d"
+        },
+        "controles": {
+          "path": "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-release-controles.wasm",
+          "bytes": 3069843,
+          "sha256": "30f5791d93a94861039339c597654edec1178833c650db8e3e0c2aeaba6b7dc2"
+        }
+      },
+      "control": {
+        "id": "wasi-release-control",
+        "cmd": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "args": [
+          "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/wasi.mjs",
+          "/workspace/scratch/a4c9906d0361/avance-av/ie004/recepcion-av/resultados-1/wasi-release-controles.wasm",
+          "control"
+        ],
+        "inicio": "2026-09-11T09:06:33.018Z",
+        "timeout_ms": 30000,
+        "demora_ms": 0,
+        "fin": "2026-09-11T09:06:33.125Z",
+        "duracion_ms": 107,
+        "exit_code": 0,
+        "signal": null,
+        "timeout": false,
+        "salida_excedida": false,
+        "error": null,
+        "entrada_entregada": "2026-09-11T09:06:33.027Z",
+        "stdin_bytes": 0,
+        "stdout_bytes": 89517,
+        "stdout_sha256": "429287b728ffd9ea18fb59801349e4317465edfd2049aefc18fd250af603f09e",
+        "stderr_bytes": 165
+      },
+      "resumen": {
+        "resumen": true,
+        "controles_por_repeticion": 51,
+        "repeticiones": 3,
+        "controles_ejecutados": 153,
+        "primitivas_correctas": 22,
+        "primitivas_total": 22,
+        "fallos": 0
+      },
+      "parseError": null,
+      "fallos": [],
+      "transporte": [
+        {
+          "scenario": "V01",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:33.126Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:33.260Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:33.260Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:33.318Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "a841b7f5305b1b18d6b0a88cc2a484b0665cdad4e94d4f21d25aecb1bdc5a5a2",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_AUSENTE",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1778,
+            "reserva_acumulada_v_bytes": 402236,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V02",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:33.318Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:33.447Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:33.447Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:33.514Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "4b3978518c0683a122b09128fd6b767deef501b492f5ad2d96304b426ed72323",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V03",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:33.514Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:33.637Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:33.637Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:33.712Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "1b0cbf5bbce65dfdb65e564e0882564c76b4f7064f42a177a71be4d156ca8963",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262144,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 845002,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V04",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:33.713Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:33.843Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:33.843Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:33.908Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "7a892ce5405b129b1239172fe60b454fa167db58dbad688b1a8e4f02a7713602",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "TRUNCADO",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 11,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1841,
+            "reserva_acumulada_v_bytes": 402258,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 1
+        },
+        {
+          "scenario": "V05",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:33.908Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:34.028Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:34.028Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:34.092Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "00e24a2ddcd2f266f7f7c23919c8f26f4d7d742502ebbb78fd37195a298ed332",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "BYTES_LIMITE",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 262145,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 263923,
+            "reserva_acumulada_v_bytes": 402236,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V06",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:34.092Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:34.212Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:34.212Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:34.282Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "682170200b36293f18dd4c5dde3e21d5ee5ae054b03b87d8882e44da6d91b81f",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "PRESUPUESTO_AGOTADO",
+            "id": null,
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 0,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 1,
+            "reserva_acumulada_v_bytes": 139264,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 3
+        },
+        {
+          "scenario": "V08",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:34.282Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:34.400Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:34.400Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:34.465Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "8086f10cb88827504474ef4b96b513b55b7bc43a6e3b4e207cc5ce4e06cebdad",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "V_RECHAZADA",
+            "causa": "CORRELACION_INVALIDA",
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 39299,
+            "reserva_acumulada_v_bytes": 427744,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": null
+          },
+          "demora_real_ms": 2
+        },
+        {
+          "scenario": "V02_DEMORADA",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:34.465Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:34.603Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:34.603Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:34.666Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "bc67e9f253069c9344cbd1f1de5197bfd39c67c0e3ee7ad709efdc526d0cf010",
+          "v": {
+            "version": "IE004-V-ANEXO/1",
+            "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+            "causa": null,
+            "id": "PUBLICO-A01",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "solicitudes_sha256": "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+            "bytes_v_observados": 5196,
+            "bytes_instantanea_a": 188,
+            "unidades_v": 74158,
+            "reserva_acumulada_v_bytes": 432571,
+            "autoridad_sobre_cuerpo_a": false,
+            "prueba": {
+              "nodos": 62,
+              "enlaces": 61,
+              "profundidad": 27
+            }
+          },
+          "demora_real_ms": 51
+        },
+        {
+          "scenario": "V_SIN_EOF",
+          "conforme": true,
+          "events": [
+            {
+              "nombre": "A_RECIBIDA",
+              "fecha": "2026-09-11T09:06:34.666Z"
+            },
+            {
+              "nombre": "CUERPO_A_ENTREGADO",
+              "fecha": "2026-09-11T09:06:34.802Z"
+            },
+            {
+              "nombre": "V_ABIERTA",
+              "fecha": "2026-09-11T09:06:34.802Z"
+            },
+            {
+              "nombre": "V_FINALIZADA",
+              "fecha": "2026-09-11T09:06:34.955Z"
+            }
+          ],
+          "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+          "traza_a_sha256": "a4516b965cace1222fad6e3cd6968c0566473ff8f69af7e35149dba44233fb0c",
+          "v": {
+            "estado": "V_PLAZO_AGOTADO_POR_CONDUCTOR",
+            "cuerpo_a_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+            "plazo_inyectado_ms": 150,
+            "nota": "Control funcional; no acreditación de contención P4."
+          },
+          "demora_real_ms": null
+        }
+      ],
+      "cuerpos_a_identicos": true,
+      "estado": "CONFORME_EN_ALCANCE"
+    }
+  ],
+  "reserva_leida": false,
+  "python_ejecutado": false,
+  "seguridad_material": "NO_ACREDITADA",
+  "memoria_fisica": "NO_MEDIDA",
+  "nota": "Una matriz fijada; tres reproducciones internas por control, una observación por escenario de transporte y configuración. No son muestras de un proveedor."
+}

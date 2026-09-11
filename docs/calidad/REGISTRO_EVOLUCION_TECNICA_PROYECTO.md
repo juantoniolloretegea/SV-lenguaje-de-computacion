@@ -1299,3 +1299,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## RETP-2026-136 — Correspondencia y recepción separada A/V
 
 11/09/2026. [Acta de preparación](tuberias-ia/ACTA_PREPARACION_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Alcance autorizado: siguiente objeto de RETP-135. Se conservan los cinco archivos semánticos heredados y se fija admisión estricta, marco A completo, certificado V y anexo separado; fuentes y esperados antes de ejecutar. 23 controles A, 25 V, tres relaciones, 22 primitivas y nueve escenarios de transporte. Tres reproducciones Rust por configuración, matriz nativo/WASI debug/release. La preparación compila y conserva sus incidencias; no ejecuta consultas. La reserva permanece cerrada y la compatibilidad P3 integral no está acreditada. P4/P5 pendientes.
+
+<a id="retp-137"></a>
+## RETP-2026-137 — Resultado público de recepción A/V
+
+11/09/2026. [Acta y evidencia](tuberias-ia/ACTA_RESULTADO_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Una matriz sobre la prepublicación c6ad0c2b/141a40d0, sin corrección posterior ni reintento. En cada configuración nativo/WASI debug/release: 23 controles A, 25 V y tres relaciones repetidos tres veces; 22 primitivas y nueve escenarios de procesos/pipes. Paridad de cuerpos y desenlaces/trabajo V. A entregada antes de V; cuerpo conservado ante ausencia, invalidez, exceso, agotamiento, correlación errónea, demora y ausencia de EOF. V al máximo de 262144 bytes usó 845002 unidades. Capturas originales recuperables; RSS, aislamiento P4, aportación P5 y P3 reservado pendientes. Siguiente objeto: lote y compatibilidad P3, sin consultar reserva.

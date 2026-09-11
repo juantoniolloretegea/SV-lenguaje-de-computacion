@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-136:** correspondencia y recepción A/V fijadas para contraste público. Código semántico heredado intacto; 23 controles A, 25 V, tres relaciones y nueve escenarios de transporte. A entrega antes de abrir V. Cero ejecuciones de controles en la preparación. Reserva cerrada; P3 integral y P4/P5 pendientes.
+**Estado vigente · RETP-137:** recepción A/V conforme en el alcance público: 23 A, 25 V y tres relaciones, tres reproducciones; 22 primitivas y nueve escenarios de transporte por configuración nativo/WASI debug/release. Cuerpo A entregado antes de abrir V y conservado. Reserva cerrada; compatibilidad integral P3 y P4/P5 pendientes.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -96,3 +96,7 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Correspondencia y recepción separada · RETP-136
 
 [Preparación fijada](ACTA_PREPARACION_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Ensayo público pendiente de ejecución; no hay nueva captura solicitada al participante ni apertura de la reserva.
+
+## Recepción A/V contrastada · RETP-137
+
+[Acta y evidencia recuperable](ACTA_RESULTADO_CORRESPONDENCIA_Y_RECEPCION_AV_2026_09_11.md). Cuatro configuraciones conformes, fuentes y esperados intactos tras fijación. Próximo objeto: adaptador del lote y decisión de compatibilidad antes de utilizar P3. No hay nuevo encargo a Grok.
