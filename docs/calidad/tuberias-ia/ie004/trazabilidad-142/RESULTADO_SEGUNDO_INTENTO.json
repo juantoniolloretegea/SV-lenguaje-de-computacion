@@ -1,0 +1,193 @@
+{
+  "registro": "RETP-2026-142",
+  "tipo": "CONTRASTE_ACOTADO",
+  "casos": [
+    {
+      "id": "C01",
+      "conforme": true,
+      "archivos": 409,
+      "capsula_sha256": "9989b323de431d6e3efa262d70bd6c587e6555c0813b9a3b1b8e8a8739f9a304"
+    },
+    {
+      "id": "C02",
+      "conforme": true,
+      "recorridos_historicos_cotejados": 36,
+      "nuevas_ejecuciones_de_esos_recorridos": 0
+    },
+    {
+      "id": "C03",
+      "conforme": true,
+      "marco_y_traza_identicos": true
+    },
+    {
+      "id": "C04",
+      "conforme": true,
+      "cuerpo_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+    },
+    {
+      "id": "C05",
+      "conforme": true,
+      "rechazo": "TRUNCADO",
+      "sin_cuerpo": true
+    },
+    {
+      "id": "C06",
+      "conforme": true,
+      "rechazo": "CORRELACION_INVALIDA",
+      "sin_cuerpo": true
+    },
+    {
+      "id": "C07",
+      "conforme": true,
+      "estado": "DERIVACION_SINTACTICA_COMPROBADA",
+      "causa": null,
+      "anexo_identico": true
+    },
+    {
+      "id": "C08",
+      "conforme": false,
+      "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'TRUNCADO'\n- 'JSON_INVALIDO'\n"
+    }
+  ],
+  "procesos": [
+    {
+      "id": "rustc-version",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "-vV"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "compilar-receptor",
+      "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+      "args": [
+        "--edition=2021",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "overflow-checks=no",
+        "-C",
+        "panic=abort",
+        "/workspace/scratch/a4c9906d0361/traza-142/docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+        "-o",
+        "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin"
+      ],
+      "timeout_ms": 60000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "A01-a",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "a"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "stdout_sha256": "0f7580ef9c997856ae98d183ee2048d8573fcfa8cc7119f6536603b714b45518",
+      "stderr_sha256": "5221c0fae5ea5b3ce824c4e0460339a42198053ff65705c0470160540de0cdd6"
+    },
+    {
+      "id": "A01-validar",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "validar"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "0f7580ef9c997856ae98d183ee2048d8573fcfa8cc7119f6536603b714b45518",
+      "stdout_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "marco-truncado",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "validar"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "14b1c50d01323cd77030f1b09ae2dbfead6352facc6b2a30ab1bd8bc07316184",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "659e20db3e2cd85d1d8874d4b8ee1626a4b40a8865fabfe08d5acde9e758625b"
+    },
+    {
+      "id": "marco-alterado",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "validar"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 2,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "81ea0206ae911a79bcf022ff2423ec4a03d338a10a40e013d4026bfc0f6afe9f",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "8c060b64e9171e54bda127661a5e1ecdd681864950cd3260518d1ce45e1ad920"
+    },
+    {
+      "id": "V02-v",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "v",
+        "{\"version\":\"IE004-A-SOLICITUD/1\",\"id\":\"PUBLICO-A01\",\"pregunta\":\"El valor de la IgG.\",\"contexto\":{\"operacion\":\"LEER\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\"}}",
+        "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+        "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+        "1000000"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "0f2909687dc1dd9d79706ed5977c8fea55d326640d55af03dbd0be968c02ae7e",
+      "stdout_sha256": "19ffaf114eb406e6030a6a4e93feafcab5594d6692b1fdeb232b15ae01303728",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "V04-v",
+      "cmd": "/workspace/scratch/a4c9906d0361/traza-142/contraste-2/receptor.bin",
+      "args": [
+        "v",
+        "{\"version\":\"IE004-A-SOLICITUD/1\",\"id\":\"PUBLICO-A01\",\"pregunta\":\"El valor de la IgG.\",\"contexto\":{\"operacion\":\"LEER\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\"}}",
+        "130cab8f788867a5dc984741a31812c8193fdd508d8349d1e36c9099b4c3006d",
+        "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+        "1000000"
+      ],
+      "timeout_ms": 10000,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdin_sha256": "dcf58d6c8a2d9f3fff0ffea121b5c562ce793941122f801eb031a3d7d82f7ef7",
+      "stdout_sha256": "7cb69f34fba01e25e37c696db8c7a78604ed941c3c9cde2a653ace2deb45e936",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "reserva_leida": false,
+  "modelo_invocado": false,
+  "tuberia_integral_acreditada": false,
+  "plan_sha256": "f642dd85c8a48943fb697d0b2f791e975d93a833a2f5442c9d0b5649b3966fed",
+  "corte": "8880a099b0b9549aaa66c2c5d93e0b9c247834ff",
+  "fuentes_cotejadas": 50,
+  "binario_reconstruido_sha256": "f08234e0c24038e5eff3a1dd691f42062fab3c5c0a6f4e9895b4e80403db520a",
+  "identidad_binaria_con_historico_exigida": false,
+  "estado": "FALLO",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:\n+ actual - expected\n\n+ 'TRUNCADO'\n- 'JSON_INVALIDO'\n"
+}

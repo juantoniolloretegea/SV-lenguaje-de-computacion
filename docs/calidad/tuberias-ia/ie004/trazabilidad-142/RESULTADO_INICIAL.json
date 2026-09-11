@@ -1,0 +1,26 @@
+{
+  "registro": "RETP-2026-142",
+  "tipo": "CONTRASTE_ACOTADO",
+  "casos": [
+    {
+      "id": "C01",
+      "conforme": true,
+      "archivos": 409,
+      "capsula_sha256": "9989b323de431d6e3efa262d70bd6c587e6555c0813b9a3b1b8e8a8739f9a304"
+    },
+    {
+      "id": "C02",
+      "conforme": false,
+      "error": "SyntaxError: Unexpected token '(', \"(node:204)\"... is not valid JSON"
+    }
+  ],
+  "procesos": [],
+  "reserva_leida": false,
+  "modelo_invocado": false,
+  "tuberia_integral_acreditada": false,
+  "plan_sha256": "f642dd85c8a48943fb697d0b2f791e975d93a833a2f5442c9d0b5649b3966fed",
+  "corte": "8880a099b0b9549aaa66c2c5d93e0b9c247834ff",
+  "fuentes_cotejadas": 50,
+  "estado": "FALLO",
+  "error": "SyntaxError: Unexpected token '(', \"(node:204)\"... is not valid JSON"
+}

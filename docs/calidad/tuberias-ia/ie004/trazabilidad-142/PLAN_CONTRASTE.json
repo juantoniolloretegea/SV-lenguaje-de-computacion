@@ -1,0 +1,54 @@
+{
+  "registro": "RETP-2026-142",
+  "corte": "8880a099b0b9549aaa66c2c5d93e0b9c247834ff",
+  "objeto": "Enlace de recepción, evidencia e inscripción aplicable; contraste de piezas existentes",
+  "naturaleza": "Custodia documental y comprobaciones técnicas acotadas; no cualificación integral",
+  "antes_de_ejecutar": true,
+  "configuracion": "Rust 1.98.0, nativo release; Frame aislado en arnés con fuentes sin modificar",
+  "casos": [
+    {
+      "id": "C01",
+      "esperado": "Cápsula RETP-137 íntegra y 409 archivos recuperables"
+    },
+    {
+      "id": "C02",
+      "esperado": "36 recorridos históricos: hashes de cuerpo/traza y orden A-entregada antes de V; timeout V conservado"
+    },
+    {
+      "id": "C03",
+      "esperado": "A pública A01 reconstruida: cuerpo y traza idénticos a nativo-release-V02-a de RETP-137"
+    },
+    {
+      "id": "C04",
+      "esperado": "Marco completo aceptado y cuerpo igual al histórico"
+    },
+    {
+      "id": "C05",
+      "esperado": "Marco truncado rechazado, código 2 y TRUNCADO, sin cuerpo"
+    },
+    {
+      "id": "C06",
+      "esperado": "Un byte de contenido alterado sin cambiar huella rechazado, código 2 y CORRELACION_INVALIDA, sin cuerpo"
+    },
+    {
+      "id": "C07",
+      "esperado": "V02 comprobada; anexo idéntico al histórico"
+    },
+    {
+      "id": "C08",
+      "esperado": "V04 rechazada por JSON_INVALIDO; anexo idéntico al histórico"
+    },
+    {
+      "id": "C09",
+      "esperado": "16 pruebas Frame existentes conformes en arnés aislado; no ejecución de transición"
+    }
+  ],
+  "limites": [
+    "Una ejecución por comprobación; conservar todo fallo",
+    "60 s compilación; 10 s por proceso, sin valor semántico",
+    "No modelo, reserva, cambio semántico, nueva célula, modificación de Frame o nuevo permiso",
+    "Los controles de custodia Node no son un nuevo motor SV ni una prueba de seguridad P4",
+    "No comparar cifras /2 y /3; no medir RSS ni P5"
+  ],
+  "salida": "Expediente de correspondencia; bloqueos con sede y cambio mínimo, sin declarar tubería completa"
+}

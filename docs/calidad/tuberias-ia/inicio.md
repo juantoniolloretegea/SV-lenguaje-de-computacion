@@ -3,7 +3,9 @@
 
 **Estado global: NO VERDE.**
 
-**Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). Único siguiente objeto: expediente del enlace entre resolución, evidencia e inscripción aplicable; cierre del análisis separado del cierre material. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
+**Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). El expediente de correspondencia está concluido en RETP-142; el cierre material permanece pendiente. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
+
+**Correspondencia comprobada · RETP-142:** [Expediente y evidencia](EXPEDIENTE_CORRESPONDENCIA_TRAZABILIDAD_IE004_2026_09_11.md). Se localizaron recepción A/V, cadena R1 y guardas de Frame; IE-004 no las une en su ejecutable. 409 archivos recuperados, 36 recorridos históricos cotejados y 16 pruebas existentes de Frame; un caso A y dos propuestas V reproducidos. Dos fallos del observador conservados. Siguiente objeto único: contrato del recibo custodiado por invocación (G1), con testigos de pérdida; G2–G4 y trazabilidad integral pendientes.
 
 **Último resultado experimental · RETP-140:** adaptador público conforme: 36 controles × 3 y 24 posiciones × 3 por configuración, tras una corrección causal del montaje del conductor. Fallo inicial conservado; 2879 archivos recuperables. Compatibilidad integral /2–/3 pendiente de decisión; reserva cerrada.
 

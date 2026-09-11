@@ -1,6 +1,6 @@
 # Registro de evolución técnica del proyecto
 
-**Continuidad del frente IA:** [RETP-141](#retp-141), workflow V2 subordinado a la secuencia rectora; siguiente objeto acotado de trazabilidad. La reserva P3 y las garantías materiales pendientes conservan su estado.
+**Continuidad del frente IA:** [RETP-142](#retp-142), expediente de correspondencia concluido; siguiente contrato de recibo custodiado G1. Workflow V2 vigente; trazabilidad integral, reserva P3 y garantías materiales pendientes.
 
 **Antecedente de relevo de fila 7:** [RETP-105](#retp-105), integración y entrega representacional de fila 7 a Ciberseguridad; efecto registral al incorporarse este asiento a main. Los estados anteriores conservan su corte.
 | RETP-2026-103 | 08/09/2026 | — | ADVERSARIAL_Y_CORRECCION | Fila 7 / fronteras de verificación | ADVERSARIAL_CONCLUIDA_CORRECCIONES_VERIFICADAS_NO_PROMOVIDAS |
@@ -1338,3 +1338,21 @@ Los hallazgos de Claude comunicados por Juan Antonio se identifican como recibid
 **Comprobación de esta modificación:** coherencia de secuencia y compuertas, enlaces documentales y concordancia RETP CSV/Markdown; preservación del workflow original y copia idéntica de V2/navegación en laboratorio. No se atribuyen nuevas ejecuciones funcionales a un cambio documental.
 
 **Estado:** WORKFLOW_V2_DOCUMENTADO_TRAZABILIDAD_PENDIENTE_RESERVA_CERRADA.
+
+<a id="retp-142"></a>
+
+## RETP-2026-142 · Correspondencia y contraste acotado de trazabilidad
+
+**Fecha:** 11/09/2026. **Responsable:** Watson. **Mandato:** continuación autorizada por Juan Antonio Lloret Egea del objeto único de RETP-141.
+
+[Expediente de correspondencia](tuberias-ia/EXPEDIENTE_CORRESPONDENCIA_TRAZABILIDAD_IE004_2026_09_11.md) sobre el corte `8880a099b0b9549aaa66c2c5d93e0b9c247834ff`, con inventario de 50 blobs y evidencia recuperable. Se localizaron recepción y resolución A/V, la cadena protegida R1 y las guardas de Frame. El ejecutable IE-004 no une esos recorridos; la existencia separada de esas piezas no acredita transición, inscripción ni recuperación durable.
+
+Se recuperaron 409 archivos públicos y cotejaron 36 recorridos históricos sin reejecutarlos. Se reprodujeron un caso A y dos propuestas V, se comprobó aceptación del marco íntegro y rechazo de truncación/alteración, y pasaron 16 pruebas existentes de Frame mediante arnés aislado. No se reejecutó el núcleo completo. Dos errores del observador —lectura de stderr WASI y esperado C08— se conservan con sus rectificaciones; no se modificaron Rust ni esperados históricos.
+
+**Carencias:** G1 recibo custodiado por invocación; G2 correspondencia con operación gobernada; G3 inscripción y Frame cuando la operación lo exija; G4 recuperación material. Cada una mantiene su sede y fase, con referencia a deudas existentes cuando corresponde. Un bloqueo no se da por cerrado al registrarlo.
+
+**Siguiente objeto único:** contrato de G1 y testigos de evidencia ausente, truncada, duplicada o intercambiada, preservando entrega A y anexado posterior V. Realización nativa prevista en Rust; ningún cambio en Tri, gramática, IR o Frame por este expediente. No se constituye célula ni se decide por dominio o agente.
+
+Se cierra el análisis acotado, no la tubería integral. P4/P5, asociación /2–/3, reserva y sucesiones pendientes conservan su estado. Workflow V2 y secuencia de RETP-121 vigentes. Espejo documental idéntico en laboratorio.
+
+**Estado:** CORRESPONDENCIA_CONCLUIDA_TRAZABILIDAD_INTEGRAL_NO_ACREDITADA.

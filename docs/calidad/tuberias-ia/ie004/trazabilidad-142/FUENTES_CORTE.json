@@ -1,0 +1,255 @@
+{
+  "commit": "8880a099b0b9549aaa66c2c5d93e0b9c247834ff",
+  "archivos": [
+    {
+      "blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "bytes": 4384,
+      "path": "AGENTS.md"
+    },
+    {
+      "blob": "fa77f66c667e19f973932ca245ff4fadbafab80c",
+      "bytes": 4545,
+      "path": "docs/arquitectura/ACTA_TECNICA_CIERRE_R1_2026_08_25.md"
+    },
+    {
+      "blob": "4e5c12578b2a32489095b95243251c914da5519c",
+      "bytes": 9582,
+      "path": "docs/arquitectura/ACTA_TECNICA_CIERRE_R1_5_Y_APERTURA_R1_6_2026_08_25.md"
+    },
+    {
+      "blob": "0c2c58084eb5f8f50ced773727d5817279ea3329",
+      "bytes": 9235,
+      "path": "docs/arquitectura/CONTRATO_R1_5_LIGADURA_DECISION_EFECTO_Y_TRAZA_DETERMINISTA_2026_08_25.md"
+    },
+    {
+      "blob": "6c57f2e895045d4a26bacefc98c49ebac2b433f7",
+      "bytes": 14941,
+      "path": "docs/calidad/ACTA_TECNICA_DE_ARQUITECTURA_DE_SOFTWARE_NUCLEO_FRONTERA_Y_HOST_SV_2026_09_04.md"
+    },
+    {
+      "blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "bytes": 29014,
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md"
+    },
+    {
+      "blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "bytes": 22330,
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md"
+    },
+    {
+      "blob": "820a72a3f6dba1a730c460235ebae7069228f496",
+      "bytes": 55439,
+      "path": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md"
+    },
+    {
+      "blob": "09634e729369535bace3e5c7a8eac84824114503",
+      "bytes": 203101,
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv"
+    },
+    {
+      "blob": "24bbf61ce2c871ded97eefbc8baae92097a0427e",
+      "bytes": 207965,
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md"
+    },
+    {
+      "blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+      "bytes": 17761,
+      "path": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md"
+    },
+    {
+      "blob": "c0a35ab4ad38be3d1d7bc7f49460a99cdf7514f9",
+      "bytes": 7541,
+      "path": "docs/calidad/tuberias-ia/ie004/lote-p3/CONTRATO_ADAPTADOR_LOTE_1.md"
+    },
+    {
+      "blob": "1a4148bb03e58520917559522b6d178c8d637f78",
+      "bytes": 9351,
+      "path": "docs/calidad/tuberias-ia/ie004/lote-p3/adaptador.rs"
+    },
+    {
+      "blob": "7dbbb64e7006498c1a69836b0ee88df5c28bac3b",
+      "bytes": 9809,
+      "path": "docs/calidad/tuberias-ia/ie004/lote-p3/ejecutar.mjs"
+    },
+    {
+      "blob": "19a267b363a8ae1e5ef405b2da1cbdac889ff43d",
+      "bytes": 653,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/ARCHIVO_CAPTURAS.json"
+    },
+    {
+      "blob": "c5d5a0e854c5aa97a996a1f3cd1905ef1e07eda0",
+      "bytes": 158025,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/CAPTURAS_RECUPERABLES.json.gz.b64"
+    },
+    {
+      "blob": "2d5c5de382c362abeb90bd265dae5b1bef967c95",
+      "bytes": 1951,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/COMPROBACION_RESULTADOS.json"
+    },
+    {
+      "blob": "70786ba30922b9901bc0094bfc867694a675f52c",
+      "bytes": 9628,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/CONTRATO_RECEPCION_AV_1.md"
+    },
+    {
+      "blob": "8efdab4c9fa743c1b6b0614cfc942e073c27d887",
+      "bytes": 16745,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/CONTROLES_PUBLICOS.json"
+    },
+    {
+      "blob": "43e8345f74c7e1e0a6396dc2ace50bca62420d4e",
+      "bytes": 11487,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/FIJACION_PREVIA.json"
+    },
+    {
+      "blob": "15e0231b7f1686c883c7fb3e93e9f403158e80af",
+      "bytes": 8448,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/casos_fijados.rs"
+    },
+    {
+      "blob": "7d9dd57ee117fda94017147ac10e8b2f9b1a79aa",
+      "bytes": 5823,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/controles.rs"
+    },
+    {
+      "blob": "d627c3a94f0205ce7a08a69f168f5d970fc4e94d",
+      "bytes": 8693,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/ejecutar.mjs"
+    },
+    {
+      "blob": "e42c89dfa7484aae0f8fd3936968ff065ebf0cef",
+      "bytes": 8552,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/json_estricto.rs"
+    },
+    {
+      "blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1",
+      "bytes": 5491,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs"
+    },
+    {
+      "blob": "94de534bb7074bacbc171dd58814dc30ff959c15",
+      "bytes": 188,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/a/A01.json"
+    },
+    {
+      "blob": "9e2d68e74566e3db8a3006f45e71ba5192b4c7e0",
+      "bytes": 5196,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/v/V02.json"
+    },
+    {
+      "blob": "9ffc3139d8747b7a59b606d27a315a4ec8964007",
+      "bytes": 11,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/publicos/v/V04.json"
+    },
+    {
+      "blob": "14c7c92468975cb1774cc02d9ecfe749a6dbee82",
+      "bytes": 8326,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/recepcion_a.rs"
+    },
+    {
+      "blob": "46f0e22a905db433c97ca26bd81ae06c84c60102",
+      "bytes": 3993,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs"
+    },
+    {
+      "blob": "c07782f4e261ee90163eefa48241b1850507357d",
+      "bytes": 7715,
+      "path": "docs/calidad/tuberias-ia/ie004/recepcion-av/verificar_v.rs"
+    },
+    {
+      "blob": "8817cd8b0f8b211078c4a749a0f60e2935e40bd4",
+      "bytes": 2700,
+      "path": "docs/calidad/tuberias-ia/ie004/semantica-a/gramatica.rs"
+    },
+    {
+      "blob": "d86d90761d3193bfcc595500d78f5adf04e35947",
+      "bytes": 5909,
+      "path": "docs/calidad/tuberias-ia/ie004/semantica-a/recursos.rs"
+    },
+    {
+      "blob": "f7525cb680aef89699bde5fdc18637b40fe79bf1",
+      "bytes": 11333,
+      "path": "docs/calidad/tuberias-ia/ie004/semantica-a/semantica.rs"
+    },
+    {
+      "blob": "2e364d7c8b8c59771a2bdfc6e96a7e1fce97c057",
+      "bytes": 6256,
+      "path": "docs/calidad/tuberias-ia/ie004/semantica-a/servicio.rs"
+    },
+    {
+      "blob": "adfb23b01e0273601edb5416cc482557b0ca2f3b",
+      "bytes": 9642,
+      "path": "docs/calidad/tuberias-ia/ie004/semantica-a/sintaxis.rs"
+    },
+    {
+      "blob": "b5274c5b8d404b67602e174e00cba3a04e6c5c2f",
+      "bytes": 12856,
+      "path": "docs/calidad/tuberias-ia/inicio.md"
+    },
+    {
+      "blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "bytes": 67111,
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md"
+    },
+    {
+      "blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+      "bytes": 20680,
+      "path": "rust/sv_core/src/bindings.rs"
+    },
+    {
+      "blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+      "bytes": 7969,
+      "path": "rust/sv_core/src/context_wellformed.rs"
+    },
+    {
+      "blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "bytes": 30997,
+      "path": "rust/sv_core/src/decision_trace.rs"
+    },
+    {
+      "blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+      "bytes": 16865,
+      "path": "rust/sv_core/src/execution.rs"
+    },
+    {
+      "blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+      "bytes": 13990,
+      "path": "rust/sv_core/src/frame.rs"
+    },
+    {
+      "blob": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+      "bytes": 9569,
+      "path": "rust/sv_core/src/frame_tests.rs"
+    },
+    {
+      "blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+      "bytes": 12706,
+      "path": "rust/sv_core/src/ir.rs"
+    },
+    {
+      "blob": "699eee3d9d761d6262c24e3b80098c9ce307c775",
+      "bytes": 17140,
+      "path": "rust/sv_core/src/lib.rs"
+    },
+    {
+      "blob": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+      "bytes": 2627,
+      "path": "rust/sv_core/src/nat.rs"
+    },
+    {
+      "blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+      "bytes": 8272,
+      "path": "rust/sv_core/src/resolution.rs"
+    },
+    {
+      "blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+      "bytes": 6003,
+      "path": "rust/sv_core/src/transition_data_wellformed.rs"
+    },
+    {
+      "blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+      "bytes": 39971,
+      "path": "rust/sv_core/src/wellformed.rs"
+    }
+  ]
+}
