@@ -1,0 +1,457 @@
+{
+  "perfil": "IE004-ES-P2/2",
+  "registro": "RETP-2026-127",
+  "naturaleza": "Expectativas públicas de revisión: no nuevas ejecuciones ni reserva.",
+  "casos": [
+    {
+      "id": "C01",
+      "pregunta": "No escriba 7 en el valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "SIN_SOLICITUD_POSITIVA",
+        "dato": null
+      },
+      "reglas": [
+        "G18",
+        "G23",
+        "5.1"
+      ],
+      "justificacion": "La negación de escritura deriva y no solicita una lectura.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C02",
+      "pregunta": "No escriba 7 en el valor de la IgG; consulte el valor actual de IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G02",
+        "G18",
+        "5.1"
+      ],
+      "justificacion": "La exclusión de escritura no excluye LEER.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C03",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "PETICION_AMBIGUA",
+        "dato": null
+      },
+      "reglas": [
+        "G10",
+        "5.3"
+      ],
+      "justificacion": "Dos interpretaciones en una raíz; no descartar IGM por política antes de unicidad.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C04",
+      "pregunta": "El valor actual de IgG o IgG del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G10",
+        "5.3"
+      ],
+      "justificacion": "Dos alternativas semánticamente iguales confluyen.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C05",
+      "pregunta": "El valor actual de IgG de IgA del CASO-A.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "PETICION_CONTRADICTORIA",
+        "dato": null
+      },
+      "reglas": [
+        "G06",
+        "G13",
+        "5.2"
+      ],
+      "justificacion": "Dos restricciones conjuntivas incompatibles dentro de una interpretación.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C06",
+      "pregunta": "No sólo consulte la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "SOLICITUD_NO_REPRESENTADA",
+        "dato": null
+      },
+      "reglas": [
+        "G18",
+        "G24"
+      ],
+      "justificacion": "No transformar no sólo en negación de LEER.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C07",
+      "pregunta": "Consulte la IgA, no sólo consulte la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "SOLICITUD_NO_REPRESENTADA",
+        "dato": null
+      },
+      "reglas": [
+        "G02",
+        "G18"
+      ],
+      "justificacion": "Se exige cubrir toda la entrada; no rescatar únicamente consulte IgA.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C08",
+      "pregunta": "El valor del caso que estamos viendo.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G13",
+        "G25"
+      ],
+      "justificacion": "Objeto contextual por contracción literal y otros campos completos desde contexto.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C09",
+      "pregunta": "El valor de el caso que estamos viendo.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "SOLICITUD_NO_REPRESENTADA",
+        "dato": null
+      },
+      "reglas": [
+        "G13",
+        "G25"
+      ],
+      "justificacion": "No reparación silenciosa del original.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C10",
+      "pregunta": "El valor de la IgG de la anterior.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ANTERIOR",
+          "campo": "VALOR"
+        },
+        "literal": "7.10",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G13",
+        "G17"
+      ],
+      "justificacion": "Forma temporal explícita ANTERIOR frente al valor por defecto ACTUAL.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C11",
+      "pregunta": "  El\tvalor\nde la IgG.\r\n",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "3",
+        "G09",
+        "G13"
+      ],
+      "justificacion": "Separadores admitidos conservados por intervalo, sin alterar la ruta.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C12",
+      "pregunta": "¿El valor de la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G01"
+      ],
+      "justificacion": "Puntuación opcional e independiente declarada, sin inferencia sobre el dato.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C13",
+      "pregunta": "Consulte la unidad, no quiero el valor: la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "UNIDAD"
+        },
+        "literal": "unidad-simulada",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G02",
+        "G09",
+        "G18",
+        "5.1"
+      ],
+      "justificacion": "Unifica positivas con campo UNIDAD, conserva la exclusión de VALOR.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C14",
+      "pregunta": "Del CASO-A, el valor actual de IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGG",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "8.40",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G02",
+        "G19",
+        "G25"
+      ],
+      "justificacion": "Objeto antepuesto positivo y ruta completa.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C15",
+      "pregunta": "No elimine la IgG.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "SIN_SOLICITUD_POSITIVA",
+        "dato": null
+      },
+      "reglas": [
+        "G18",
+        "G24",
+        "5.1"
+      ],
+      "justificacion": "ELIMINAR sólo excluida; no operación positiva no admitida.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    },
+    {
+      "id": "C16",
+      "pregunta": "No consulte IgG; consulte IgA.",
+      "contexto": {
+        "operacion": "LEER",
+        "objeto": "CASO-A",
+        "parametro": "IGG",
+        "momento": "ACTUAL",
+        "campo": "VALOR"
+      },
+      "esperado_de_diseno": {
+        "clase": "DATO",
+        "ruta": {
+          "operacion": "LEER",
+          "objeto": "CASO-A",
+          "parametro": "IGA",
+          "momento": "ACTUAL",
+          "campo": "VALOR"
+        },
+        "literal": "1.25",
+        "fuente": "FICCION-IE004/1"
+      },
+      "reglas": [
+        "G02",
+        "G18",
+        "5.1"
+      ],
+      "justificacion": "Conserva el positivo y el intento de sustitución C03 original.",
+      "estado": "DOCUMENTAL_NO_EJECUTADO_NO_RESERVADO"
+    }
+  ],
+  "obligaciones_transversales": [
+    {
+      "id": "CV",
+      "aplicar_a": [
+        "C02",
+        "C04",
+        "C08",
+        "C13",
+        "C16"
+      ],
+      "variantes_propuesta": [
+        "ausente",
+        "valida_minima",
+        "valida_grande_hasta_el_limite",
+        "mal_formada",
+        "agotamiento_V",
+        "overflow_V",
+        "respuesta_proveedor_tardia"
+      ],
+      "esperado": "Mismo cuerpo canónico calculado por A y mismo consumo A; estado V separado. Las variantes adversas son del comprobador, no se imputan a Grok.",
+      "limite": "Imposición de CPU/memoria/plazos P4 pendiente."
+    },
+    {
+      "id": "CA",
+      "condicion": "Agotamiento u overflow propios de A",
+      "esperado": "Fallo técnico A sin dato; no usar resultados parciales ni convertir en U."
+    },
+    {
+      "id": "CP",
+      "condicion": "Destino nativo/WASI y extremos de límites",
+      "esperado": "La futura ejecución Rust debe demostrar paridad, conservación y errores de capa; este documento no la acredita."
+    }
+  ],
+  "ejecuciones": 0
+}

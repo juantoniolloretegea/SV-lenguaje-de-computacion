@@ -1,0 +1,114 @@
+{
+  "registro": "RETP-2026-134",
+  "instrumento": "IE004-SEMANTICA-A/1",
+  "perfil": "IE004-ES-P2/3-COSTE/1",
+  "fecha": "2026-09-11T06:20:30.458Z",
+  "ejecuciones_de_casos": 0,
+  "compilacion_preparatoria": "Fuentes compilables; binario no ejecutado; invocación intermedia con cwd incorrecto no encontró main.rs.",
+  "matriz": [
+    "nativo-debug",
+    "nativo-release",
+    "wasi-debug",
+    "wasi-release"
+  ],
+  "casos_semanticos": 61,
+  "regresiones_sintacticas": 72,
+  "topes": {
+    "trabajo": 1000000,
+    "capacidad_agregada_bytes": 33554432,
+    "estados": 16384,
+    "entrada_bytes": 8192,
+    "tokens": 128,
+    "compilacion_ms": 120000,
+    "ejecucion_ms": 30000
+  },
+  "reserva_leida": false,
+  "python_ejecutado": false,
+  "archivos": [
+    {
+      "ruta": "gramatica.rs",
+      "bytes": 2700,
+      "sha256": "f5740a876e34ece371f1fa9454f5243e3586ee1957350b8550aab35e9fbcdec7"
+    },
+    {
+      "ruta": "recursos.rs",
+      "bytes": 5909,
+      "sha256": "5656f93c1c893cd05a4ed50696cb41eb93cd10e91f629d4cf8926a771aa9eef3"
+    },
+    {
+      "ruta": "sintaxis.rs",
+      "bytes": 9642,
+      "sha256": "0413f45b8b340fdffea5fa300643f70e0c9a6ac4f196c433c53d1607798d381b"
+    },
+    {
+      "ruta": "semantica.rs",
+      "bytes": 11333,
+      "sha256": "f7aaf4d1d02e8cfcacab8ec83f3c28009b4c7cdacd498c65fd7ff4a47664b4b4"
+    },
+    {
+      "ruta": "servicio.rs",
+      "bytes": 6256,
+      "sha256": "bc119baed2d74c750ff19e42d25ba2edca6849661256321eec4876d9aae134f0"
+    },
+    {
+      "ruta": "comprobar.rs",
+      "bytes": 4968,
+      "sha256": "9e9a39ecb433091f24ae5094b0a1046d5da3fc51deef87c85ba9c1ca8d951bbe"
+    },
+    {
+      "ruta": "casos_semanticos.rs",
+      "bytes": 43222,
+      "sha256": "1531f5978bac15a8e2430826b08a68aadb076fa060521b5dd22385370227f0b4"
+    },
+    {
+      "ruta": "regresion.rs",
+      "bytes": 31761,
+      "sha256": "5e27c00b1688b465cc3690942abcb81885ca5c0eb82e860f707b1b9063523fd7"
+    },
+    {
+      "ruta": "main.rs",
+      "bytes": 1355,
+      "sha256": "d7d522d26dbcae306a8b947354b3ee2a2daea040354cfe7f272b1ce19d6e0f70"
+    },
+    {
+      "ruta": "CASOS_SEMANTICOS_PUBLICOS.json",
+      "bytes": 63390,
+      "sha256": "42b5d3c766187f2c1f34ddc3b539aa50e6813498ecfef46a3fd77f5f2d7696e2"
+    },
+    {
+      "ruta": "CASOS_SINTACTICOS_PUBLICOS.json",
+      "bytes": 40084,
+      "sha256": "94bf8e9fe270dfb62a993dad0b566b3f8a5bcc6b4b1fee1b239f3da8bdbdfa39"
+    },
+    {
+      "ruta": "BASE_PUBLICA.json",
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4"
+    },
+    {
+      "ruta": "CONTRASTES_HEREDADOS.json",
+      "bytes": 12178,
+      "sha256": "e8a71648ed0d943fee653885fc9730e203fb2320da57d1ac294e6dc75f2f78c6"
+    },
+    {
+      "ruta": "preparar-casos.mjs",
+      "bytes": 6997,
+      "sha256": "af6ecd82f78917c2687906c472c9b8616f84ab814090d4530a2b1c006b7ccfd6"
+    },
+    {
+      "ruta": "wasi.mjs",
+      "bytes": 392,
+      "sha256": "02916426a7b635f2d1eec1097e1a40304ac6b1510bea41bf35e09f769680bd2f"
+    },
+    {
+      "ruta": "ejecutar.mjs",
+      "bytes": 5880,
+      "sha256": "44e2bc44b77ec9f9ebd650a9861111d4a86a68db9418ab2b70ffe7011a64f654"
+    },
+    {
+      "ruta": "SUCESORA_CALENDARIO_Y_CONTABILIDAD.md",
+      "bytes": 12428,
+      "sha256": "cba8aba42cf3891786619ac3de3fb97478bf68bfe1a7aee741314f1b5891b0c8"
+    }
+  ]
+}

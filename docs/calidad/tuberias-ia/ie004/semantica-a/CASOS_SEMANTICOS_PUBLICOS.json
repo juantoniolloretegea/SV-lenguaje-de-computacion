@@ -1,0 +1,1880 @@
+{
+  "registro": "RETP-2026-134",
+  "perfil": "IE004-ES-P2/3-COSTE/1",
+  "antes_de_ejecutar": true,
+  "casos": [
+    {
+      "id": "C01",
+      "pregunta": "No escriba 7 en el valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SIN_SOLICITUD_POSITIVA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C02",
+      "pregunta": "No escriba 7 en el valor de la IgG; consulte el valor actual de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C03",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C04",
+      "pregunta": "El valor actual de IgG o IgG del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C05",
+      "pregunta": "El valor actual de IgG de IgA del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C06",
+      "pregunta": "No sólo consulte la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C07",
+      "pregunta": "Consulte la IgA, no sólo consulte la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C08",
+      "pregunta": "El valor del caso que estamos viendo.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C09",
+      "pregunta": "El valor de el caso que estamos viendo.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C10",
+      "pregunta": "El valor de la IgG de la anterior.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "7.10",
+        "ruta": [
+          1,
+          1,
+          1,
+          2,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C11",
+      "pregunta": "  El\tvalor\nde la IgG.\r\n",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C12",
+      "pregunta": "¿El valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C13",
+      "pregunta": "Consulte la unidad, no quiero el valor: la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "unidad-simulada",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          2
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C14",
+      "pregunta": "Del CASO-A, el valor actual de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C15",
+      "pregunta": "No elimine la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SIN_SOLICITUD_POSITIVA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "C16",
+      "pregunta": "No consulte IgG; consulte IgA.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "1.25",
+        "ruta": [
+          1,
+          1,
+          2,
+          1,
+          1
+        ],
+        "llamadas_politica": 1
+      },
+      "fuente": "CONTRASTES_PUBLICOS.json /2; esperado previo conservado"
+    },
+    {
+      "id": "S01",
+      "pregunta": "El valor actual de IgG o IgM del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": false,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 2
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S02",
+      "pregunta": "El valor actual de IgM del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "ACCESO_DENEGADO",
+        "literal": null,
+        "ruta": [
+          1,
+          1,
+          4,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S03",
+      "pregunta": "Del CASO-B no; del CASO-A, el valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S04",
+      "pregunta": "No quiero IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SIN_SOLICITUD_POSITIVA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S05",
+      "pregunta": "Consulte IgG, no quiero el valor.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S06",
+      "pregunta": "No cambie nada; consulte IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S07",
+      "pregunta": "Elimine la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "OPERACION_NO_ADMITIDA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S08",
+      "pregunta": "Escriba 7 en el valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "OPERACION_DENEGADA",
+        "literal": null,
+        "ruta": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S09",
+      "pregunta": "No escriba 7 en el valor de la IgG; escriba 7 en el valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S10",
+      "pregunta": "No escriba 7 en el valor de la IgG; escriba 8 en el valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "OPERACION_DENEGADA",
+        "literal": null,
+        "ruta": [
+          2,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S11",
+      "pregunta": "Necesito la inmunoglobulina.",
+      "contexto": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S12",
+      "pregunta": "El valor de IgG para la linmunoglobina.",
+      "contexto": [
+        1,
+        1,
+        2,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S13",
+      "pregunta": "El valor de IgG del CASO-A porque estoy revisando este caso.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S14",
+      "pregunta": "El valor de IgG del CASO-A porque estoy revisando CASO-B.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S15",
+      "pregunta": "DÍGAME LA PROCEDENCIA DEL DATO ANTERIOR DE IGG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "FICCION-IE004/1",
+        "ruta": [
+          1,
+          1,
+          1,
+          2,
+          8
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S16",
+      "pregunta": "El alcance de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "Registro artificial; no acredita concentración ni condición clínica.",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          16
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S17",
+      "pregunta": "El valor de hemoglobina glicosilada.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "FUERA_DE_COBERTURA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S18",
+      "pregunta": "El intervalo de referencia de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "FUERA_DE_COBERTURA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S19",
+      "pregunta": "El valor de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S20",
+      "pregunta": "Límites de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S21",
+      "pregunta": "The current value of IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S22",
+      "pregunta": "El valor de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "SVP-EN",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PERFIL_INTERACCION_NO_HABILITADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S23",
+      "pregunta": "🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀🦀",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SOLICITUD_NO_REPRESENTADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S24",
+      "pregunta": "consulte la IgG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 ",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S25",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S26",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S27",
+      "pregunta": "consulte la IgG                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "A_BYTES_LIMITE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S28",
+      "pregunta": "consulte la IgG actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual actual",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "A_TOKENS_LIMITE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S29",
+      "pregunta": null,
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "A_UTF8_INVALIDO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar",
+      "bytes_hex": "ff"
+    },
+    {
+      "id": "S30",
+      "pregunta": "El valor de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        0,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "A_PRESUPUESTO_AGOTADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S31",
+      "pregunta": "El valor de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        1,
+        16384
+      ],
+      "esperado": {
+        "estado": "A_MEMORIA_LIMITE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S32",
+      "pregunta": "El valor de IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        0
+      ],
+      "esperado": {
+        "estado": "A_ESTADOS_LIMITE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S33",
+      "pregunta": "No quiero IgG o IgA; consulte IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 2
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S34",
+      "pregunta": "El valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S35",
+      "pregunta": "¿Cuál es el valor actual de IgG del CASO-A?",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "8.40",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S36",
+      "pregunta": "El valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": false,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PERMISO_REVOCADO",
+        "literal": null,
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S37",
+      "pregunta": "La inmunoglobina.",
+      "contexto": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "CONTEXTO_INSUFICIENTE",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S38",
+      "pregunta": "No quiero la inmunoglobulina.",
+      "contexto": [
+        1,
+        1,
+        0,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "SIN_SOLICITUD_POSITIVA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S39",
+      "pregunta": "El estado de IgA.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "U",
+        "ruta": [
+          1,
+          1,
+          2,
+          1,
+          4
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S40",
+      "pregunta": "El valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        3,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "CONTEXTO_MAL_FORMADO",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S41",
+      "pregunta": "El valor de la IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/999",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "VERSION_NO_HABILITADA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": null
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S42",
+      "pregunta": "El valor actual de IgG o IgA del CASO-A.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_AMBIGUA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 2
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S43",
+      "pregunta": "No quiero IgG o IgG; consulte IgG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "PETICION_CONTRADICTORIA",
+        "literal": null,
+        "ruta": null,
+        "llamadas_politica": 0,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S44",
+      "pregunta": "¿En qué unidad figura la IgG anterior?",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "unidad-simulada",
+        "ruta": [
+          1,
+          1,
+          1,
+          2,
+          2
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    },
+    {
+      "id": "S45",
+      "pregunta": "LÍMITES DE IGG.",
+      "contexto": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "vigente": true,
+      "perfil": "IE004-ES-P2/3-COSTE/1",
+      "base": "K-IE004/1",
+      "politica": "P-IE004/1",
+      "cupos": [
+        1000000,
+        33554432,
+        16384
+      ],
+      "esperado": {
+        "estado": "DATO",
+        "literal": "Registro artificial; no acredita concentración ni condición clínica.",
+        "ruta": [
+          1,
+          1,
+          1,
+          1,
+          16
+        ],
+        "llamadas_politica": 1,
+        "raices": 1
+      },
+      "fuente": "Contraste público fijado para obligaciones S01–S08 de RETP-133 antes de ejecutar"
+    }
+  ],
+  "relaciones": [
+    {
+      "tipo": "igualdad_significado_y_cuerpo",
+      "ids": [
+        "S34",
+        "S35"
+      ]
+    },
+    {
+      "tipo": "unicidad_antes_de_permiso_y_revocacion",
+      "ids": [
+        "C03",
+        "S01"
+      ]
+    },
+    {
+      "tipo": "negacion_operandos_distintos",
+      "ids": [
+        "S09",
+        "S10"
+      ]
+    }
+  ],
+  "nota": "Casos públicos; no reserva. Las sondas de presupuesto con cupos reducidos son inyección declarada de fallo, no límites productivos nuevos."
+}

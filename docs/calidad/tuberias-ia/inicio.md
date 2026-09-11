@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-133:** contraste sintáctico de coste satisfecho: 72/72 públicos, 21 primitivas y cuatro controles estructurales por configuración Rust. IE004-R10-MEMO/1 es un calendario alternativo explícito; evaluador semántico pendiente. Custodia humana confirmada; captura no habilitada, reserva cerrada y aislamiento NO VERDE.
+**Estado vigente · RETP-134:** evaluación semántica de A preparada para contraste público en Rust. Significados completos antes de permisos; texto y memoria con cupos agregados. IE004-ES-P2/3-COSTE/1 declara sucesión de calendario y contabilidad. Resultados pendientes; captura no habilitada, reserva cerrada y aislamiento NO VERDE.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -82,3 +82,7 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Resultado del coste y siguiente objeto · RETP-133
 
 [Resultado y evidencia](ACTA_RESULTADO_COSTE_R10_2026_09_11.md): cierre de la ronda sintáctica; siguiente objeto preparado, evaluación semántica de A con sucesión expresa de calendario/contabilidad. Se incorpora el coste de Vec/arrays sin nueva tanda ni acceso reservado.
+
+## Significados y límites de texto · RETP-134
+
+[Preparación fijada](ACTA_PREPARACION_SEMANTICA_A_Y_LIMITES_TEXTO_2026_09_11.md): 61 controles semánticos y 72 regresiones sintácticas con esperados públicos. Una matriz Rust y una corrección causal como máximo. Sin nuevo encargo para Grok.
