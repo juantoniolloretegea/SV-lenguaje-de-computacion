@@ -1,0 +1,29 @@
+{
+  "mismas_cuatro_salidas": true,
+  "resultados": [
+    {
+      "id": "nativo-debug",
+      "exit_code": 0,
+      "salida": "{\"control\":\"derivaciones\",\"esperadas\":2,\"observadas\":2,\"unidades\":22}\n{\"control\":\"derivaciones\",\"esperadas\":4,\"observadas\":4,\"unidades\":58}\n{\"control\":\"repeticion_anulable\",\"rechazo_constitucion\":true,\"rechazo_ejecucion_si_se_omite_puerta\":true}\n{\"control\":\"cierre_incompleto\",\"raiz_parcial_presente\":true,\"evaluacion_completa\":false,\"error_presupuesto\":true,\"unidades\":12}\n",
+      "binario_sha256": "feb3ad4a824cb19581605e749175b84c42a283d7ab983e4365721590ca3e7381"
+    },
+    {
+      "id": "nativo-release",
+      "exit_code": 0,
+      "salida": "{\"control\":\"derivaciones\",\"esperadas\":2,\"observadas\":2,\"unidades\":22}\n{\"control\":\"derivaciones\",\"esperadas\":4,\"observadas\":4,\"unidades\":58}\n{\"control\":\"repeticion_anulable\",\"rechazo_constitucion\":true,\"rechazo_ejecucion_si_se_omite_puerta\":true}\n{\"control\":\"cierre_incompleto\",\"raiz_parcial_presente\":true,\"evaluacion_completa\":false,\"error_presupuesto\":true,\"unidades\":12}\n",
+      "binario_sha256": "45d91b05d97d9c88cdd1c3eec86d95a6910af57c71e418eef578916e6f0c9d7d"
+    },
+    {
+      "id": "wasi-debug",
+      "exit_code": 0,
+      "salida": "{\"control\":\"derivaciones\",\"esperadas\":2,\"observadas\":2,\"unidades\":22}\n{\"control\":\"derivaciones\",\"esperadas\":4,\"observadas\":4,\"unidades\":58}\n{\"control\":\"repeticion_anulable\",\"rechazo_constitucion\":true,\"rechazo_ejecucion_si_se_omite_puerta\":true}\n{\"control\":\"cierre_incompleto\",\"raiz_parcial_presente\":true,\"evaluacion_completa\":false,\"error_presupuesto\":true,\"unidades\":12}\n",
+      "binario_sha256": "76fab43d7c0fc7cdd6864d69a679ab5509db3897cd5f7602d8ee7318d63d8778"
+    },
+    {
+      "id": "wasi-release",
+      "exit_code": 0,
+      "salida": "{\"control\":\"derivaciones\",\"esperadas\":2,\"observadas\":2,\"unidades\":22}\n{\"control\":\"derivaciones\",\"esperadas\":4,\"observadas\":4,\"unidades\":58}\n{\"control\":\"repeticion_anulable\",\"rechazo_constitucion\":true,\"rechazo_ejecucion_si_se_omite_puerta\":true}\n{\"control\":\"cierre_incompleto\",\"raiz_parcial_presente\":true,\"evaluacion_completa\":false,\"error_presupuesto\":true,\"unidades\":12}\n",
+      "binario_sha256": "33a727761e69f36013034a684bc52af64a1d865fcafeda765b40696a632f15f9"
+    }
+  ]
+}

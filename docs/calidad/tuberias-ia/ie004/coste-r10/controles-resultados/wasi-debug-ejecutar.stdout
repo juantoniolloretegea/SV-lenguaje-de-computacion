@@ -1,0 +1,4 @@
+{"control":"derivaciones","esperadas":2,"observadas":2,"unidades":22}
+{"control":"derivaciones","esperadas":4,"observadas":4,"unidades":58}
+{"control":"repeticion_anulable","rechazo_constitucion":true,"rechazo_ejecucion_si_se_omite_puerta":true}
+{"control":"cierre_incompleto","raiz_parcial_presente":true,"evaluacion_completa":false,"error_presupuesto":true,"unidades":12}

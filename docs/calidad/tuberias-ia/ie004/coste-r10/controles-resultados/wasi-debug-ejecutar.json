@@ -1,0 +1,15 @@
+{
+  "id": "wasi-debug-ejecutar",
+  "cmd": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/wasi.mjs",
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/controles-resultados/wasi-debug.wasm"
+  ],
+  "inicio": "2026-09-11T05:33:18.277Z",
+  "fin": "2026-09-11T05:33:18.343Z",
+  "duracion_ms": 65.90690900000004,
+  "exit_code": 0,
+  "error": null,
+  "signal": null,
+  "timeout_ms": 30000
+}

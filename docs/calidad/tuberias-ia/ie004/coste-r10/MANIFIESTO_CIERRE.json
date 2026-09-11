@@ -1,0 +1,345 @@
+{
+  "registro": "RETP-2026-133",
+  "fuente_previa": {
+    "lang": "638eba02f55f528c94871548858ec967d0e9ef2a",
+    "lab": "1d6f1183c9604817852844544e1855c8051e2f2e"
+  },
+  "archivos": [
+    {
+      "ruta": "MEMORIA_VEC_ARRAYS.md",
+      "bytes": 5328,
+      "sha256": "caf9ae71d0131244815e61b64c4f8f5d378163c953868ff74403eccf1eb5cc6f"
+    },
+    {
+      "ruta": "SIGUIENTE_PASO_A_SEMANTICA.md",
+      "bytes": 6243,
+      "sha256": "c39af766d4c722cdad2f05e8b456723445b746526e52e09401c9d01193ee5f69"
+    },
+    {
+      "ruta": "REPRODUCIR.md",
+      "bytes": 3699,
+      "sha256": "ba3baa89dd1f2d9bbbc0e8569fbb3ee13cbbfd70fbb6fa6b672adbb43b2e9a1e"
+    },
+    {
+      "ruta": "DESGLOSE_MEMORIA.json",
+      "bytes": 1252,
+      "sha256": "f3ca772fa0f7dfa3e416f6ffe255be5c1b93aca77075585a8f929b967660b23b"
+    },
+    {
+      "ruta": "CONTROLES_ESTRUCTURALES.md",
+      "bytes": 1661,
+      "sha256": "64d4a3a9fbe37799e21c9640ec498cd5cf1a0e5fb652a8e278846ade67f97f3d"
+    },
+    {
+      "ruta": "controles.rs",
+      "bytes": 2080,
+      "sha256": "1c07a39555c895d258b9f4ac3d8bf5711a8b9bcf8b2b2ca86228a1d226780ee7"
+    },
+    {
+      "ruta": "ejecutar-controles.mjs",
+      "bytes": 3427,
+      "sha256": "76c5fd007e3e518a973e516514466731d24ac670635946d110e784ca3b70783e"
+    },
+    {
+      "ruta": "resultados/ENTORNO.json",
+      "bytes": 681,
+      "sha256": "00c4c076ceff3e6b4b7c68cf5a91c19e2f3aacc1148451c9deaaece28edb72d3"
+    },
+    {
+      "ruta": "resultados/RESULTADO.json",
+      "bytes": 5256,
+      "sha256": "4c5b78dec643abde09d8578180a2007648386436a9a408320c3e7ff6f724e605"
+    },
+    {
+      "ruta": "resultados/SALIDAS-nativo-debug.json",
+      "bytes": 46801,
+      "sha256": "904a632fbda1f46d0354beb5760ecdeabff6e7c93ade645dadd9093ca47fb762"
+    },
+    {
+      "ruta": "resultados/SALIDAS-nativo-release.json",
+      "bytes": 46818,
+      "sha256": "1635795f8c710bebfc7e57404adbd22ab4b352d471103d0d19b12cac71d69184"
+    },
+    {
+      "ruta": "resultados/SALIDAS-wasi-debug.json",
+      "bytes": 46796,
+      "sha256": "b3871ebd1d32e555ca04efcdba06501948d0210683994901549df4cd046d8ff4"
+    },
+    {
+      "ruta": "resultados/SALIDAS-wasi-release.json",
+      "bytes": 46797,
+      "sha256": "46a814753cd4d5a0a238496c1381c5bb99f81511e049b6ecd7403e6df9eab4e0"
+    },
+    {
+      "ruta": "resultados/captura-0389c26e785f7117fc3f584b0a30383b19d93e455bf200d23eaa4ad9500fa344.jsonl.gz.b64",
+      "bytes": 436641,
+      "sha256": "8a53041ba8059fdefc25ab44f76537aa2808baefdcce88339187f08fbe5b8749"
+    },
+    {
+      "ruta": "resultados/captura-cc5a428f3f66b8a1bd4c2c080a10a708003efd1b6340ff1902e6605c4a77a1e4.jsonl.gz.b64",
+      "bytes": 436689,
+      "sha256": "a8610463c0301682cadecccb334dc7d61e25ec9c0d2c1b59493f953bb106144c"
+    },
+    {
+      "ruta": "resultados/nativo-debug-compilar.json",
+      "bytes": 608,
+      "sha256": "6cbd31abb865d276f853d3d574b2ed45f7c6e9c49629c24c07b6f5fa0682cc0c"
+    },
+    {
+      "ruta": "resultados/nativo-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/nativo-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/nativo-debug-ejecutar.json",
+      "bytes": 322,
+      "sha256": "15fb90f9c5adeb3b550a08a1c3689074fa8ce403b474a9ce1aef483a086375aa"
+    },
+    {
+      "ruta": "resultados/nativo-debug-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/nativo-release-compilar.json",
+      "bytes": 618,
+      "sha256": "95c6584bc432a54bc05ab4485bbde6738e286a75cf7c7e5d25b279c97fd0d9a0"
+    },
+    {
+      "ruta": "resultados/nativo-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/nativo-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/nativo-release-ejecutar.json",
+      "bytes": 334,
+      "sha256": "782dd94b11479a561932ecff3a0577872a0974df362e447e509be8d02901dae8"
+    },
+    {
+      "ruta": "resultados/nativo-release-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/rustc-version.json",
+      "bytes": 391,
+      "sha256": "39941e4eb459f1d0960d811a3d5fec8afbda7b2728cd0f48eaa28479fa71b2a5"
+    },
+    {
+      "ruta": "resultados/rustc-version.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/rustc-version.stdout",
+      "bytes": 196,
+      "sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d"
+    },
+    {
+      "ruta": "resultados/wasi-debug-compilar.json",
+      "bytes": 689,
+      "sha256": "bc3d1eca15e946fc0c7f307da036977e0369617ba3450ec8c1801580a67b519b"
+    },
+    {
+      "ruta": "resultados/wasi-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/wasi-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/wasi-debug-ejecutar.json",
+      "bytes": 471,
+      "sha256": "c0e7ff27a9a68d4ae1728ac5e46c9474b6679e63f91e2ef07f40d3d34713ec70"
+    },
+    {
+      "ruta": "resultados/wasi-debug-ejecutar.stderr",
+      "bytes": 164,
+      "sha256": "c4b3020b35133a7da0c72754c0109c94109f5ab5137cc3227978c60569f10415"
+    },
+    {
+      "ruta": "resultados/wasi-release-compilar.json",
+      "bytes": 691,
+      "sha256": "d7f24f07b316a7d6668d40150a8228e357142835dfaa2668ec4458a637127e6c"
+    },
+    {
+      "ruta": "resultados/wasi-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/wasi-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "resultados/wasi-release-ejecutar.json",
+      "bytes": 475,
+      "sha256": "e34db4c8315a5002eb793105a0274a432d233e158483116d6576ce8daa049c51"
+    },
+    {
+      "ruta": "resultados/wasi-release-ejecutar.stderr",
+      "bytes": 165,
+      "sha256": "551e69a9f740ffc6d772f5eb64993eb7ca793f732eea29e7a6ce66ece27e1af6"
+    },
+    {
+      "ruta": "resultados/MANIFIESTO_RESULTADOS.json",
+      "bytes": 6916,
+      "sha256": "2292ba6fd98fc27e7eac48bb23a486090b3c0f8da82f4d5a43fbe4817f843732"
+    },
+    {
+      "ruta": "controles-resultados/FIJACION_CONTROLES.json",
+      "bytes": 565,
+      "sha256": "a4bd5dfb80e5a5c99f54f8f1feb2d3fe1bf1c2bc05dea6cf430fdac17db0e454"
+    },
+    {
+      "ruta": "controles-resultados/RECUPERABILIDAD_CAPTURAS.json",
+      "bytes": 98,
+      "sha256": "990f1446dede43bcc49802db30485d3f92e700409ea72bdcafd2af081c5270d4"
+    },
+    {
+      "ruta": "controles-resultados/RESULTADO_CONTROLES.json",
+      "bytes": 2426,
+      "sha256": "528d013ce82741986e7e539c5877e69cf07101e47e84f0080ea718d3e7c38e19"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-compilar.json",
+      "bytes": 634,
+      "sha256": "553d0650795da54b51306f60dd4140c73327348eb07d6290d4ac2b21114e0ea8"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-compilar.stderr",
+      "bytes": 1324,
+      "sha256": "91a64e36c6416a47bbf8d725c03cf3c33233e145f880d014c2a10c91ca92f209"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-ejecutar.json",
+      "bytes": 340,
+      "sha256": "6da74d8158b077c726d017ccf4b63b53074c5f57df6475f98f286274149e16ee"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/nativo-debug-ejecutar.stdout",
+      "bytes": 374,
+      "sha256": "c3e3af6ae9becb3276148b22a5a4472bbd1e6e2a8ff6e70ca8051e32662fa10e"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-compilar.json",
+      "bytes": 645,
+      "sha256": "dd63ca9926e954fc552e346777fd7c740bf77c7b4c8831dddfd3376fcbdcf943"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-compilar.stderr",
+      "bytes": 1324,
+      "sha256": "91a64e36c6416a47bbf8d725c03cf3c33233e145f880d014c2a10c91ca92f209"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-ejecutar.json",
+      "bytes": 344,
+      "sha256": "8be180087cf0b0be7fc6766c715e08e41238d99575df710be8af52ec1da9e814"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/nativo-release-ejecutar.stdout",
+      "bytes": 374,
+      "sha256": "c3e3af6ae9becb3276148b22a5a4472bbd1e6e2a8ff6e70ca8051e32662fa10e"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-compilar.json",
+      "bytes": 724,
+      "sha256": "359eb97d3f490fdd14e172e8ca2ed298d65c53347afc5a094116d473b006f7e3"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-compilar.stderr",
+      "bytes": 1324,
+      "sha256": "91a64e36c6416a47bbf8d725c03cf3c33233e145f880d014c2a10c91ca92f209"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-ejecutar.json",
+      "bytes": 480,
+      "sha256": "952bb4791ea0858889cadde4f512c734d334ac2754a649e4f1a4be50167762a6"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-ejecutar.stderr",
+      "bytes": 164,
+      "sha256": "eb614b6110a3f268371f257983f2d10d7dd427cb0bbc4618ca58ea5e114e69dd"
+    },
+    {
+      "ruta": "controles-resultados/wasi-debug-ejecutar.stdout",
+      "bytes": 374,
+      "sha256": "c3e3af6ae9becb3276148b22a5a4472bbd1e6e2a8ff6e70ca8051e32662fa10e"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-compilar.json",
+      "bytes": 719,
+      "sha256": "32bba3351554bc4c5f685a26cd8da6bf4362cf68fbb22442686b7681931cbdcc"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-compilar.stderr",
+      "bytes": 1324,
+      "sha256": "91a64e36c6416a47bbf8d725c03cf3c33233e145f880d014c2a10c91ca92f209"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-ejecutar.json",
+      "bytes": 484,
+      "sha256": "78fedbd44038deddb4b4a869a43bbf03c74c27d58c44bac891ab5bedb250c406"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-ejecutar.stderr",
+      "bytes": 165,
+      "sha256": "b2763eb39bb8e0a3c1e0025101c5d01fbf955f965726f4ee613fa12dce7914ca"
+    },
+    {
+      "ruta": "controles-resultados/wasi-release-ejecutar.stdout",
+      "bytes": 374,
+      "sha256": "c3e3af6ae9becb3276148b22a5a4472bbd1e6e2a8ff6e70ca8051e32662fa10e"
+    },
+    {
+      "ruta": "../../ACTA_RESULTADO_COSTE_R10_2026_09_11.md",
+      "bytes": 6057,
+      "sha256": "e80eada7fa7d84f312b03191ee29269ae780aa99eaf738fe759e0bfc8787f59d"
+    }
+  ],
+  "nota": "Cierre agregado después de ejecutar. No se incluye este manifiesto a sí mismo. Fuentes del motor fijadas en FIJACION_PREVIA.json. Los índices y RETP son navegación; no capturas. No hay reserva ni binarios en esta lista."
+}

@@ -1,0 +1,14 @@
+{
+  "inicio": "2026-09-11T05:30:05.539Z",
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "node": "v24.19.0",
+  "plataforma": "linux",
+  "release": "6.18.35",
+  "arch": "x64",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "cpus": 9,
+  "memoria_host_bytes": 23109910528,
+  "reserva_leida": false,
+  "unidades": "Propias de MEMO/1; no comparables directamente con R10-SINTAXIS/1",
+  "tiempos": "Una muestra por configuración, incluye arranque y exportación del bosque. No benchmark ni latencia del modelo."
+}

@@ -1,0 +1,12 @@
+{
+  "id": "nativo-debug-ejecutar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/coste-r10/controles-resultados/nativo-debug.bin",
+  "args": [],
+  "inicio": "2026-09-11T05:33:17.647Z",
+  "fin": "2026-09-11T05:33:17.649Z",
+  "duracion_ms": 2.4394100000000094,
+  "exit_code": 0,
+  "error": null,
+  "signal": null,
+  "timeout_ms": 30000
+}

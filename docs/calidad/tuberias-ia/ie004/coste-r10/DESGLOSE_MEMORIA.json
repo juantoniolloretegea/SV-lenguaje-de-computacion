@@ -1,0 +1,37 @@
+{
+  "registro": "RETP-2026-133",
+  "resultados": [
+    {
+      "target": "nativo",
+      "base": "Desglose calculado desde dimensiones y u32, cotejado con el resultado Rust; no es contador de realojos",
+      "tokens": 128,
+      "expresiones": 421,
+      "intervalos": 8385,
+      "entradas_tabla": 3530085,
+      "tabla_bytes": 14120340,
+      "capacidad_total_rust_bytes": 16144529,
+      "resto_capacidades_bytes": 2024189,
+      "porcentaje_tabla": 87.46207461363537,
+      "nodos_poblados": 13206,
+      "fraccion_ocupada_por_nodos": 0.3740986406842895,
+      "realojos_medidos": false,
+      "bytes_fisicamente_copiados_medidos": false
+    },
+    {
+      "target": "wasi",
+      "base": "Desglose calculado desde dimensiones y u32, cotejado con el resultado Rust; no es contador de realojos",
+      "tokens": 128,
+      "expresiones": 421,
+      "intervalos": 8385,
+      "entradas_tabla": 3530085,
+      "tabla_bytes": 14120340,
+      "capacidad_total_rust_bytes": 15492821,
+      "resto_capacidades_bytes": 1372481,
+      "porcentaje_tabla": 91.14118080884043,
+      "nodos_poblados": 13206,
+      "fraccion_ocupada_por_nodos": 0.3740986406842895,
+      "realojos_medidos": false,
+      "bytes_fisicamente_copiados_medidos": false
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "fecha": "2026-09-11T05:33:17.447Z",
+  "estado": "ANTES_DE_EJECUTAR",
+  "fuente_motor_sha256": "5836f28e33510e4842f13a7eda831cd1ef369f4c2b9934cdebf583669290c488",
+  "fuente_controles_sha256": "1c07a39555c895d258b9f4ac3d8bf5711a8b9bcf8b2b2ca86228a1d226780ee7",
+  "fuente_compilada_sha256": "44731a95325805f24afd9ea1efe9e0df575f3f11bf0172bb50d23a1619145f7d",
+  "expectativas": [
+    "2 derivaciones",
+    "4 derivaciones",
+    "repeticion anulable rechazada",
+    "raiz parcial no da cierre; Limite a 12"
+  ],
+  "configuraciones": 4,
+  "ejecuciones_previas": 0
+}

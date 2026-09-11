@@ -1273,3 +1273,10 @@ El fallo refuta la suficiencia de este recorrido instrumentado y su contabilidad
 ## RETP-2026-132 — Coste y calendario alternativo R10
 
 11/09/2026. [Acta](tuberias-ia/ACTA_COSTE_R10_Y_SUCESION_DEL_CALENDARIO_2026_09_11.md). Autorizada la continuación tras RETP-131. Se prepara IE004-R10-MEMO/1: evaluación por dependencias acíclicas, memo y bosque compacto con todas las familias. Se conserva léxico/G01–G25/corpus. El calendario y la contabilidad son experimentales distintos de /2, que permanece intacto con su reserva. Fuentes y criterios fijados antes de ejecutar. Resultados pendientes. La cota de dos barridos de la sonda anterior supera 1m visitas con 127/128 tokens; es una cota de esa instrumentación, no una imposibilidad universal del perfil. Se ejecutarán cuatro configuraciones Rust sin repetir ni alterar esperados.
+
+<a id="retp-133"></a>
+## RETP-2026-133 — Resultado de coste y evaluación semántica pendiente
+
+11/09/2026. [Acta y evidencia](tuberias-ia/ACTA_RESULTADO_COSTE_R10_2026_09_11.md). Fuentes de IE004-R10-MEMO/1 prepublicadas en RETP-132. 72/72 controles públicos en nativo/WASI y debug/release; 21/21 primitivas por configuración. Máximo 62.906 unidades propias, no comparables directamente con los intentos de la sonda anterior. Los bosques completos y los cargos coinciden entre las cuatro configuraciones. Cuatro controles estructurales posteriores, fijados antes de ejecutarse, conservan multiplicidad y rechazo del cierre incompleto; 4/4 por configuración. No hay nuevas consultas de modelo ni acceso reservado.
+
+En CP-T-128, tabla densa de 14.120.340 B: 87,46 % de capacidad nativa y 91,14 % WASI; 0,3741 % de posiciones ocupadas. Realojos/copia física no medidos. Se incorpora criterio de memoria y vida de buffers al siguiente objeto de evaluación semántica de A. La arena sintáctica no es el consumo agregado de A. Los tiempos de una sola ejecución incluyen exportación del bosque y no acreditan servicio/P5. Se cierra esta ronda de coste, se prepara sucesión expresa de calendario/contabilidad y evaluador tipado. /2 y su reserva intactos; compatibilidad futura pendiente; captura no habilitada; aislamiento NO VERDE.

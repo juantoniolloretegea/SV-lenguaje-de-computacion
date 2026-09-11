@@ -1,0 +1,15 @@
+{
+  "id": "wasi-release-ejecutar",
+  "cmd": "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+  "args": [
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/wasi.mjs",
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/controles-resultados/wasi-release.wasm"
+  ],
+  "inicio": "2026-09-11T05:33:18.738Z",
+  "fin": "2026-09-11T05:33:18.801Z",
+  "duracion_ms": 63.03008799999998,
+  "exit_code": 0,
+  "error": null,
+  "signal": null,
+  "timeout_ms": 30000
+}

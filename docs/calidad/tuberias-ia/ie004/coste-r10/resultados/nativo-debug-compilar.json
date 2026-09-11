@@ -1,0 +1,23 @@
+{
+  "id": "nativo-debug-compilar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+  "args": [
+    "--edition=2021",
+    "-C",
+    "opt-level=0",
+    "-C",
+    "overflow-checks=yes",
+    "-C",
+    "panic=abort",
+    "memo.rs",
+    "-o",
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/resultados/nativo-debug.bin"
+  ],
+  "inicio": "2026-09-11T05:30:05.539Z",
+  "fin": "2026-09-11T05:30:05.744Z",
+  "duracion_ms": 204.555457,
+  "timeout_ms": 120000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

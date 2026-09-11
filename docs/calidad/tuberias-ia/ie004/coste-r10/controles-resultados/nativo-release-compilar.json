@@ -1,0 +1,23 @@
+{
+  "id": "nativo-release-compilar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+  "args": [
+    "--edition=2021",
+    "-C",
+    "opt-level=3",
+    "-C",
+    "overflow-checks=no",
+    "-C",
+    "panic=abort",
+    "controles-compilados.rs",
+    "-o",
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/controles-resultados/nativo-release.bin"
+  ],
+  "inicio": "2026-09-11T05:33:17.654Z",
+  "fin": "2026-09-11T05:33:18.079Z",
+  "duracion_ms": 424.94810400000006,
+  "exit_code": 0,
+  "error": null,
+  "signal": null,
+  "timeout_ms": 120000
+}

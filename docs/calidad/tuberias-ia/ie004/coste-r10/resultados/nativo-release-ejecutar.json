@@ -1,0 +1,12 @@
+{
+  "id": "nativo-release-ejecutar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/coste-r10/resultados/nativo-release.bin",
+  "args": [],
+  "inicio": "2026-09-11T05:30:06.404Z",
+  "fin": "2026-09-11T05:30:06.449Z",
+  "duracion_ms": 43.984402000000046,
+  "timeout_ms": 30000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

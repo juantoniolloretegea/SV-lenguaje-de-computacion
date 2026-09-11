@@ -1,0 +1,49 @@
+warning: fields `inicio` and `fin` are never read
+  --> comun.rs:55:16
+   |
+55 | struct Token { inicio:u64,fin:u64,normal:String }
+   |        -----   ^^^^^^     ^^^
+   |        |
+   |        fields in this struct
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `primitivas` is never used
+  --> comun.rs:86:4
+   |
+86 | fn primitivas()->usize{
+   |    ^^^^^^^^^^
+
+warning: fields `expr` and `inicio` are never read
+  --> controles-compilados.rs:42:13
+   |
+42 | struct Nodo{expr:u32,inicio:u32,fin:u32,primera:u32,ultima:u32}
+   |        ---- ^^^^     ^^^^^^
+   |        |
+   |        fields in this struct
+   |
+   = note: `Nodo` has a derived impl for the trait `Clone`, but this is intentionally ignored during dead code analysis
+
+warning: method `imprimir_bosque` is never used
+   --> controles-compilados.rs:133:5
+    |
+ 63 | impl<'a> Motor<'a>{
+    | ------------------ method in this implementation
+...
+133 |  fn imprimir_bosque(&self){
+    |     ^^^^^^^^^^^^^^^
+
+warning: constant `CASOS` is never used
+ --> casos.rs:2:7
+  |
+2 | const CASOS: &[(&str,&str,&str)] = &[
+  |       ^^^^^
+
+warning: function `corpus_no_repetido` is never used
+   --> controles-compilados.rs:139:4
+    |
+139 | fn corpus_no_repetido(){
+    |    ^^^^^^^^^^^^^^^^^^
+
+warning: 6 warnings emitted
+

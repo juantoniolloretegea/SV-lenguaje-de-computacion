@@ -1,0 +1,164 @@
+{
+  "registro": "RETP-2026-132",
+  "instrumento": "IE004-R10-MEMO/1",
+  "reserva_leida": false,
+  "perfil_2_modificado": false,
+  "conformidad_calendario_2": false,
+  "corrector_semantico": false,
+  "compilacion_ms": 1313.935761,
+  "ejecucion_ms": 429.39591500000034,
+  "configuraciones": [
+    {
+      "id": "nativo-debug",
+      "completada": true,
+      "compilacion_ms": 204.555457,
+      "proceso_ms": 100.305766,
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-R10-MEMO/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 64,
+        "expresiones": 421,
+        "alternativas_raiz": 66,
+        "dependencias_dag": true,
+        "dos_barridos_127": 1089792,
+        "dos_barridos_128": 1106820
+      },
+      "bosque_y_trabajo_igual_primera": true,
+      "coincidencias": 72,
+      "total": 72,
+      "max_unidades": 62906,
+      "max_capacidad_bytes": 16144529,
+      "max_pico_solicitado_bytes": 16247873
+    },
+    {
+      "id": "nativo-release",
+      "completada": true,
+      "compilacion_ms": 454.7756539999999,
+      "proceso_ms": 43.984402000000046,
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-R10-MEMO/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 64,
+        "expresiones": 421,
+        "alternativas_raiz": 66,
+        "dependencias_dag": true,
+        "dos_barridos_127": 1089792,
+        "dos_barridos_128": 1106820
+      },
+      "bosque_y_trabajo_igual_primera": true,
+      "coincidencias": 72,
+      "total": 72,
+      "max_unidades": 62906,
+      "max_capacidad_bytes": 16144529,
+      "max_pico_solicitado_bytes": 16247873
+    },
+    {
+      "id": "wasi-debug",
+      "completada": true,
+      "compilacion_ms": 209.66535,
+      "proceso_ms": 179.42812800000002,
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-R10-MEMO/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 32,
+        "expresiones": 421,
+        "alternativas_raiz": 66,
+        "dependencias_dag": true,
+        "dos_barridos_127": 1089792,
+        "dos_barridos_128": 1106820
+      },
+      "bosque_y_trabajo_igual_primera": true,
+      "coincidencias": 72,
+      "total": 72,
+      "max_unidades": 62906,
+      "max_capacidad_bytes": 15492821,
+      "max_pico_solicitado_bytes": 15596165
+    },
+    {
+      "id": "wasi-release",
+      "completada": true,
+      "compilacion_ms": 444.9393,
+      "proceso_ms": 105.67761900000028,
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-R10-MEMO/1",
+        "primitivas_correctas": 21,
+        "usize_bits": 32,
+        "expresiones": 421,
+        "alternativas_raiz": 66,
+        "dependencias_dag": true,
+        "dos_barridos_127": 1089792,
+        "dos_barridos_128": 1106820
+      },
+      "bosque_y_trabajo_igual_primera": true,
+      "coincidencias": 72,
+      "total": 72,
+      "max_unidades": 62906,
+      "max_capacidad_bytes": 15492821,
+      "max_pico_solicitado_bytes": 15596165
+    }
+  ],
+  "binarios": [
+    {
+      "id": "nativo-debug",
+      "bytes": 4691416,
+      "sha256": "aae52760e5e3dfa7350ee26b8bf709820048b3fcf80c97c10efc5d3641546444"
+    },
+    {
+      "id": "nativo-release",
+      "bytes": 4576920,
+      "sha256": "288095ed6d959fade8c77ff10812c607faf939feff9eb4b9724a5e75a69a6975"
+    },
+    {
+      "id": "wasi-debug",
+      "bytes": 2367365,
+      "sha256": "23beba2e2dbbcc9641a49a1a8dadf4633a6ec25e603381ef20d8bb21735e6105"
+    },
+    {
+      "id": "wasi-release",
+      "bytes": 2190995,
+      "sha256": "fdb12bfcf9293a964c5aa5004fe3f937096af89328205d8e2e77058e49cbfd3b"
+    }
+  ],
+  "capturas": [
+    {
+      "id": "nativo-debug",
+      "archivo": "captura-cc5a428f3f66b8a1bd4c2c080a10a708003efd1b6340ff1902e6605c4a77a1e4.jsonl.gz.b64",
+      "stdout_bytes": 1927376,
+      "stdout_sha256": "94d1367553b568572d14960c4c640cc38467e25fa60d102648052f1b848982b5",
+      "gzip_bytes": 327514,
+      "gzip_sha256": "cc5a428f3f66b8a1bd4c2c080a10a708003efd1b6340ff1902e6605c4a77a1e4"
+    },
+    {
+      "id": "nativo-release",
+      "archivo": "captura-cc5a428f3f66b8a1bd4c2c080a10a708003efd1b6340ff1902e6605c4a77a1e4.jsonl.gz.b64",
+      "stdout_bytes": 1927376,
+      "stdout_sha256": "94d1367553b568572d14960c4c640cc38467e25fa60d102648052f1b848982b5",
+      "gzip_bytes": 327514,
+      "gzip_sha256": "cc5a428f3f66b8a1bd4c2c080a10a708003efd1b6340ff1902e6605c4a77a1e4"
+    },
+    {
+      "id": "wasi-debug",
+      "archivo": "captura-0389c26e785f7117fc3f584b0a30383b19d93e455bf200d23eaa4ad9500fa344.jsonl.gz.b64",
+      "stdout_bytes": 1927366,
+      "stdout_sha256": "3b5e106d23214d59b8c7fddd20408ecd81d8a2412290f29edd3171f449f68a30",
+      "gzip_bytes": 327479,
+      "gzip_sha256": "0389c26e785f7117fc3f584b0a30383b19d93e455bf200d23eaa4ad9500fa344"
+    },
+    {
+      "id": "wasi-release",
+      "archivo": "captura-0389c26e785f7117fc3f584b0a30383b19d93e455bf200d23eaa4ad9500fa344.jsonl.gz.b64",
+      "stdout_bytes": 1927366,
+      "stdout_sha256": "3b5e106d23214d59b8c7fddd20408ecd81d8a2412290f29edd3171f449f68a30",
+      "gzip_bytes": 327479,
+      "gzip_sha256": "0389c26e785f7117fc3f584b0a30383b19d93e455bf200d23eaa4ad9500fa344"
+    }
+  ]
+}

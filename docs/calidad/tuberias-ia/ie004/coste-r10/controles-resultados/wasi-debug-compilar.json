@@ -1,0 +1,27 @@
+{
+  "id": "wasi-debug-compilar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+  "args": [
+    "--edition=2021",
+    "-C",
+    "opt-level=0",
+    "-C",
+    "overflow-checks=yes",
+    "-C",
+    "panic=abort",
+    "--target",
+    "wasm32-wasip1",
+    "-C",
+    "link-arg=--max-memory=67108864",
+    "controles-compilados.rs",
+    "-o",
+    "/workspace/scratch/0d8b35aea769/fase004/coste-r10/controles-resultados/wasi-debug.wasm"
+  ],
+  "inicio": "2026-09-11T05:33:18.086Z",
+  "fin": "2026-09-11T05:33:18.277Z",
+  "duracion_ms": 191.20440300000007,
+  "exit_code": 0,
+  "error": null,
+  "signal": null,
+  "timeout_ms": 120000
+}

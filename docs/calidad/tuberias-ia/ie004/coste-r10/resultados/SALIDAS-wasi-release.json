@@ -1,0 +1,2010 @@
+{
+  "id": "wasi-release",
+  "completada": true,
+  "compilacion_ms": 444.9393,
+  "proceso_ms": 105.67761900000028,
+  "exit_code": 0,
+  "error_parse": null,
+  "cabecera": {
+    "instrumento": "IE004-R10-MEMO/1",
+    "primitivas_correctas": 21,
+    "usize_bits": 32,
+    "expresiones": 421,
+    "alternativas_raiz": 66,
+    "dependencias_dag": true,
+    "dos_barridos_127": 1089792,
+    "dos_barridos_128": 1106820
+  },
+  "bosque_y_trabajo_igual_primera": true,
+  "coincidencias": 72,
+  "total": 72,
+  "max_unidades": 62906,
+  "max_capacidad_bytes": 15492821,
+  "max_pico_solicitado_bytes": 15596165,
+  "comparaciones": [
+    {
+      "id": "L01",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L01",
+        "bytes": 55,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2484,
+        "categorias": [
+          833,
+          852,
+          176,
+          163,
+          0,
+          230,
+          230
+        ],
+        "nodos_total": 230,
+        "familias_total": 230,
+        "capacidad_bytes": 207924,
+        "pico_solicitado_bytes": 209148,
+        "raiz": 229,
+        "bosque_sha256": "279aed40bc5803a4e1213388e58b3418d6a29b8e5d3ce8dc80b193a8299ae5b1"
+      }
+    },
+    {
+      "id": "L02",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L02",
+        "bytes": 45,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1931,
+        "categorias": [
+          684,
+          702,
+          104,
+          117,
+          0,
+          162,
+          162
+        ],
+        "nodos_total": 162,
+        "familias_total": 162,
+        "capacidad_bytes": 157590,
+        "pico_solicitado_bytes": 159390,
+        "raiz": 161,
+        "bosque_sha256": "bbf1fc0ec4b69fe0333de21c5c76d1c67deb6212e0db04bc7024298f5801911d"
+      }
+    },
+    {
+      "id": "L03",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L03",
+        "bytes": 70,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 1822,
+        "categorias": [
+          573,
+          584,
+          155,
+          134,
+          0,
+          188,
+          188
+        ],
+        "nodos_total": 188,
+        "familias_total": 188,
+        "capacidad_bytes": 207524,
+        "pico_solicitado_bytes": 209100,
+        "raiz": 187,
+        "bosque_sha256": "b16daa2cb04ac99535662fabfdfb004b4b070edef38c0c66b58dff6c9da09af8"
+      }
+    },
+    {
+      "id": "L04",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L04",
+        "bytes": 32,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 2034,
+        "categorias": [
+          663,
+          675,
+          130,
+          148,
+          0,
+          209,
+          209
+        ],
+        "nodos_total": 209,
+        "familias_total": 209,
+        "capacidad_bytes": 135773,
+        "pico_solicitado_bytes": 137165,
+        "raiz": 208,
+        "bosque_sha256": "b550557c28c96ff7d510bc667e648708778757daac11b3da260b433688640f87"
+      }
+    },
+    {
+      "id": "L05",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L05",
+        "bytes": 47,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2377,
+        "categorias": [
+          754,
+          766,
+          147,
+          186,
+          0,
+          262,
+          262
+        ],
+        "nodos_total": 262,
+        "familias_total": 262,
+        "capacidad_bytes": 191595,
+        "pico_solicitado_bytes": 195635,
+        "raiz": 261,
+        "bosque_sha256": "71e974f19b30bdb9b06fad56f8aa4a54c9b0421751d6d8561f7cee9dad9bf251"
+      }
+    },
+    {
+      "id": "L06",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L06",
+        "bytes": 27,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1310,
+        "categorias": [
+          417,
+          425,
+          92,
+          100,
+          0,
+          138,
+          138
+        ],
+        "nodos_total": 138,
+        "familias_total": 138,
+        "capacidad_bytes": 114488,
+        "pico_solicitado_bytes": 116440,
+        "raiz": 137,
+        "bosque_sha256": "df8ac9dd3c9892bf2e29debf7e7b9799cce1e67ab0fd771d45690032d8acb8c9"
+      }
+    },
+    {
+      "id": "L07",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L07",
+        "bytes": 26,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1545,
+        "categorias": [
+          526,
+          537,
+          111,
+          99,
+          0,
+          136,
+          136
+        ],
+        "nodos_total": 136,
+        "familias_total": 136,
+        "capacidad_bytes": 114520,
+        "pico_solicitado_bytes": 116472,
+        "raiz": 135,
+        "bosque_sha256": "2b2703b64ce99c908fbcff5fa87b5849c2db428c62db9923ba88d6042575f4d3"
+      }
+    },
+    {
+      "id": "L08",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L08",
+        "bytes": 39,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 1852,
+        "categorias": [
+          646,
+          664,
+          105,
+          115,
+          0,
+          161,
+          161
+        ],
+        "nodos_total": 161,
+        "familias_total": 161,
+        "capacidad_bytes": 135309,
+        "pico_solicitado_bytes": 137117,
+        "raiz": 160,
+        "bosque_sha256": "1794b4379d71ae1069bf55490d953867dd6d89c25291e6e7ec1eee1b778fb268"
+      }
+    },
+    {
+      "id": "L09",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L09",
+        "bytes": 38,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2288,
+        "categorias": [
+          777,
+          795,
+          134,
+          154,
+          0,
+          214,
+          214
+        ],
+        "nodos_total": 214,
+        "familias_total": 214,
+        "capacidad_bytes": 182115,
+        "pico_solicitado_bytes": 183467,
+        "raiz": 213,
+        "bosque_sha256": "8d15d9bb8ae1b402db4be71722b225341fca39568895fc9b256dedcb657adeb4"
+      }
+    },
+    {
+      "id": "L10",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L10",
+        "bytes": 35,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2564,
+        "categorias": [
+          857,
+          871,
+          132,
+          190,
+          0,
+          257,
+          257
+        ],
+        "nodos_total": 257,
+        "familias_total": 257,
+        "capacidad_bytes": 217124,
+        "pico_solicitado_bytes": 221188,
+        "raiz": 256,
+        "bosque_sha256": "78a860d28a25febf3673180a6e83776a6c5d223a91df32146f50873578f14269"
+      }
+    },
+    {
+      "id": "L11",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L11",
+        "bytes": 47,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 1654,
+        "categorias": [
+          566,
+          581,
+          121,
+          102,
+          0,
+          142,
+          142
+        ],
+        "nodos_total": 142,
+        "familias_total": 142,
+        "capacidad_bytes": 181427,
+        "pico_solicitado_bytes": 183339,
+        "raiz": 141,
+        "bosque_sha256": "5abdd627379a2fc7736609ec495e47d9e4ce5c76f1e7a90efaab129a084c8245"
+      }
+    },
+    {
+      "id": "L12",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L12",
+        "bytes": 45,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1844,
+        "categorias": [
+          605,
+          620,
+          142,
+          127,
+          0,
+          175,
+          175
+        ],
+        "nodos_total": 175,
+        "familias_total": 175,
+        "capacidad_bytes": 157598,
+        "pico_solicitado_bytes": 159294,
+        "raiz": 174,
+        "bosque_sha256": "ac818eb841607bcd58ee01df7d6613aa7b1f3815ec351edd742f625d94786c86"
+      }
+    },
+    {
+      "id": "L13",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L13",
+        "bytes": 45,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1847,
+        "categorias": [
+          605,
+          620,
+          142,
+          128,
+          0,
+          176,
+          176
+        ],
+        "nodos_total": 176,
+        "familias_total": 176,
+        "capacidad_bytes": 157606,
+        "pico_solicitado_bytes": 159294,
+        "raiz": 175,
+        "bosque_sha256": "07e91c556e425b577dff523f04b714266182acf3a821393a65fc6d2ca116d142"
+      }
+    },
+    {
+      "id": "L14",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L14",
+        "bytes": 32,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1869,
+        "categorias": [
+          608,
+          619,
+          127,
+          135,
+          0,
+          190,
+          190
+        ],
+        "nodos_total": 190,
+        "familias_total": 190,
+        "capacidad_bytes": 114992,
+        "pico_solicitado_bytes": 116536,
+        "raiz": 189,
+        "bosque_sha256": "de3bb0481d5ea820693de78e1a2b1278ae001ed61842fd8e098c568aae962b7f"
+      }
+    },
+    {
+      "id": "L15",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L15",
+        "bytes": 43,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2277,
+        "categorias": [
+          714,
+          725,
+          174,
+          174,
+          0,
+          245,
+          245
+        ],
+        "nodos_total": 245,
+        "familias_total": 245,
+        "capacidad_bytes": 158246,
+        "pico_solicitado_bytes": 159446,
+        "raiz": 244,
+        "bosque_sha256": "8fab435c4ef989b08df1a62cf2a805a0620fc91d737cb9180519a5bd213f5ad1"
+      }
+    },
+    {
+      "id": "L16",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L16",
+        "bytes": 37,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1887,
+        "categorias": [
+          612,
+          623,
+          126,
+          138,
+          0,
+          194,
+          194
+        ],
+        "nodos_total": 194,
+        "familias_total": 194,
+        "capacidad_bytes": 157966,
+        "pico_solicitado_bytes": 159478,
+        "raiz": 193,
+        "bosque_sha256": "96156cac0a7e0ce312074ab8c699d4001c49ce86fa585d0ae6cf1d1ccb50a444"
+      }
+    },
+    {
+      "id": "L17",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L17",
+        "bytes": 40,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1909,
+        "categorias": [
+          613,
+          624,
+          123,
+          145,
+          0,
+          202,
+          202
+        ],
+        "nodos_total": 202,
+        "familias_total": 202,
+        "capacidad_bytes": 115088,
+        "pico_solicitado_bytes": 116536,
+        "raiz": 201,
+        "bosque_sha256": "307d2e898bad8e360c4c37eb1ba70d69631e28c35a2f0768dd49366f6e3b33ab"
+      }
+    },
+    {
+      "id": "L18",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L18",
+        "bytes": 37,
+        "tokens": 6,
+        "estado": "DERIVA",
+        "unidades": 1576,
+        "categorias": [
+          524,
+          535,
+          107,
+          108,
+          0,
+          151,
+          151
+        ],
+        "nodos_total": 151,
+        "familias_total": 151,
+        "capacidad_bytes": 95647,
+        "pico_solicitado_bytes": 97511,
+        "raiz": 150,
+        "bosque_sha256": "025f0a406701d482017a1b91d996e0d3dec2e7e061da30db8727affd07822ee8"
+      }
+    },
+    {
+      "id": "L19",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L19",
+        "bytes": 45,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2381,
+        "categorias": [
+          754,
+          766,
+          157,
+          184,
+          0,
+          260,
+          260
+        ],
+        "nodos_total": 260,
+        "familias_total": 260,
+        "capacidad_bytes": 191579,
+        "pico_solicitado_bytes": 195619,
+        "raiz": 259,
+        "bosque_sha256": "551be1bfa8c1ee2b7fa9a1a02ab696045460de3e84dfbd1dba7652fbe1260277"
+      }
+    },
+    {
+      "id": "L20",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L20",
+        "bytes": 33,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 1716,
+        "categorias": [
+          596,
+          611,
+          96,
+          109,
+          0,
+          152,
+          152
+        ],
+        "nodos_total": 152,
+        "familias_total": 152,
+        "capacidad_bytes": 135189,
+        "pico_solicitado_bytes": 137045,
+        "raiz": 151,
+        "bosque_sha256": "fe8d918579a025205836502282c109d8ca89a5f489fae79198d6b326450d8d30"
+      }
+    },
+    {
+      "id": "L21",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L21",
+        "bytes": 33,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 1716,
+        "categorias": [
+          596,
+          611,
+          96,
+          109,
+          0,
+          152,
+          152
+        ],
+        "nodos_total": 152,
+        "familias_total": 152,
+        "capacidad_bytes": 135189,
+        "pico_solicitado_bytes": 137045,
+        "raiz": 151,
+        "bosque_sha256": "fe8d918579a025205836502282c109d8ca89a5f489fae79198d6b326450d8d30"
+      }
+    },
+    {
+      "id": "L22",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L22",
+        "bytes": 45,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 1960,
+        "categorias": [
+          687,
+          705,
+          122,
+          118,
+          0,
+          164,
+          164
+        ],
+        "nodos_total": 164,
+        "familias_total": 164,
+        "capacidad_bytes": 181603,
+        "pico_solicitado_bytes": 183387,
+        "raiz": 163,
+        "bosque_sha256": "6f4108d45ead2697707e5f81c94282e49436ca204ae5dacc788334c501d8c010"
+      }
+    },
+    {
+      "id": "L23",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L23",
+        "bytes": 32,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 2034,
+        "categorias": [
+          663,
+          675,
+          130,
+          148,
+          0,
+          209,
+          209
+        ],
+        "nodos_total": 209,
+        "familias_total": 209,
+        "capacidad_bytes": 135773,
+        "pico_solicitado_bytes": 137165,
+        "raiz": 208,
+        "bosque_sha256": "b550557c28c96ff7d510bc667e648708778757daac11b3da260b433688640f87"
+      }
+    },
+    {
+      "id": "L24",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "L24",
+        "bytes": 47,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1846,
+        "categorias": [
+          605,
+          620,
+          138,
+          129,
+          0,
+          177,
+          177
+        ],
+        "nodos_total": 177,
+        "familias_total": 177,
+        "capacidad_bytes": 157614,
+        "pico_solicitado_bytes": 159302,
+        "raiz": 176,
+        "bosque_sha256": "3b52160c17e085ada9e2e25e3d37ef5eb62ce30dd7a25b4d70c1fefeda791068"
+      }
+    },
+    {
+      "id": "R01",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R01",
+        "bytes": 55,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2484,
+        "categorias": [
+          833,
+          852,
+          176,
+          163,
+          0,
+          230,
+          230
+        ],
+        "nodos_total": 230,
+        "familias_total": 230,
+        "capacidad_bytes": 207924,
+        "pico_solicitado_bytes": 209148,
+        "raiz": 229,
+        "bosque_sha256": "279aed40bc5803a4e1213388e58b3418d6a29b8e5d3ce8dc80b193a8299ae5b1"
+      }
+    },
+    {
+      "id": "R02",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R02",
+        "bytes": 32,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 2034,
+        "categorias": [
+          663,
+          675,
+          130,
+          148,
+          0,
+          209,
+          209
+        ],
+        "nodos_total": 209,
+        "familias_total": 209,
+        "capacidad_bytes": 135773,
+        "pico_solicitado_bytes": 137165,
+        "raiz": 208,
+        "bosque_sha256": "b550557c28c96ff7d510bc667e648708778757daac11b3da260b433688640f87"
+      }
+    },
+    {
+      "id": "R03",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R03",
+        "bytes": 47,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2377,
+        "categorias": [
+          754,
+          766,
+          147,
+          186,
+          0,
+          262,
+          262
+        ],
+        "nodos_total": 262,
+        "familias_total": 262,
+        "capacidad_bytes": 191595,
+        "pico_solicitado_bytes": 195635,
+        "raiz": 261,
+        "bosque_sha256": "71e974f19b30bdb9b06fad56f8aa4a54c9b0421751d6d8561f7cee9dad9bf251"
+      }
+    },
+    {
+      "id": "R04",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R04",
+        "bytes": 35,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2564,
+        "categorias": [
+          857,
+          871,
+          132,
+          190,
+          0,
+          257,
+          257
+        ],
+        "nodos_total": 257,
+        "familias_total": 257,
+        "capacidad_bytes": 217124,
+        "pico_solicitado_bytes": 221188,
+        "raiz": 256,
+        "bosque_sha256": "78a860d28a25febf3673180a6e83776a6c5d223a91df32146f50873578f14269"
+      }
+    },
+    {
+      "id": "R05",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R05",
+        "bytes": 47,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 1654,
+        "categorias": [
+          566,
+          581,
+          121,
+          102,
+          0,
+          142,
+          142
+        ],
+        "nodos_total": 142,
+        "familias_total": 142,
+        "capacidad_bytes": 181427,
+        "pico_solicitado_bytes": 183339,
+        "raiz": 141,
+        "bosque_sha256": "5abdd627379a2fc7736609ec495e47d9e4ce5c76f1e7a90efaab129a084c8245"
+      }
+    },
+    {
+      "id": "R06",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R06",
+        "bytes": 37,
+        "tokens": 6,
+        "estado": "DERIVA",
+        "unidades": 1576,
+        "categorias": [
+          524,
+          535,
+          107,
+          108,
+          0,
+          151,
+          151
+        ],
+        "nodos_total": 151,
+        "familias_total": 151,
+        "capacidad_bytes": 95647,
+        "pico_solicitado_bytes": 97511,
+        "raiz": 150,
+        "bosque_sha256": "025f0a406701d482017a1b91d996e0d3dec2e7e061da30db8727affd07822ee8"
+      }
+    },
+    {
+      "id": "R07",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R07",
+        "bytes": 33,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 1716,
+        "categorias": [
+          596,
+          611,
+          96,
+          109,
+          0,
+          152,
+          152
+        ],
+        "nodos_total": 152,
+        "familias_total": 152,
+        "capacidad_bytes": 135189,
+        "pico_solicitado_bytes": 137045,
+        "raiz": 151,
+        "bosque_sha256": "fe8d918579a025205836502282c109d8ca89a5f489fae79198d6b326450d8d30"
+      }
+    },
+    {
+      "id": "R08",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R08",
+        "bytes": 47,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1846,
+        "categorias": [
+          605,
+          620,
+          138,
+          129,
+          0,
+          177,
+          177
+        ],
+        "nodos_total": 177,
+        "familias_total": 177,
+        "capacidad_bytes": 157614,
+        "pico_solicitado_bytes": 159302,
+        "raiz": 176,
+        "bosque_sha256": "3b52160c17e085ada9e2e25e3d37ef5eb62ce30dd7a25b4d70c1fefeda791068"
+      }
+    },
+    {
+      "id": "R09",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R09",
+        "bytes": 41,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2426,
+        "categorias": [
+          833,
+          852,
+          118,
+          163,
+          0,
+          230,
+          230
+        ],
+        "nodos_total": 230,
+        "familias_total": 230,
+        "capacidad_bytes": 182243,
+        "pico_solicitado_bytes": 183467,
+        "raiz": 229,
+        "bosque_sha256": "9e2a7a2a0f99fa9de0c99421ca2924e5f21f1acd2a81bf7692a757b71c23c5f5"
+      }
+    },
+    {
+      "id": "R10",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R10",
+        "bytes": 80,
+        "tokens": 13,
+        "estado": "DERIVA",
+        "unidades": 2416,
+        "categorias": [
+          760,
+          772,
+          166,
+          190,
+          0,
+          264,
+          264
+        ],
+        "nodos_total": 264,
+        "familias_total": 264,
+        "capacidad_bytes": 273626,
+        "pico_solicitado_bytes": 277658,
+        "raiz": 263,
+        "bosque_sha256": "29baa30e9b2f4c24a1b518c220ae13e299859d433824f800ce61223b69a5293a"
+      }
+    },
+    {
+      "id": "R11",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R11",
+        "bytes": 45,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2320,
+        "categorias": [
+          719,
+          730,
+          164,
+          187,
+          0,
+          260,
+          260
+        ],
+        "nodos_total": 260,
+        "familias_total": 260,
+        "capacidad_bytes": 167582,
+        "pico_solicitado_bytes": 171622,
+        "raiz": 259,
+        "bosque_sha256": "4b6e80db86ef045a6a0ea17066073630cdb97fafda7cdae96f77c30751e363cd"
+      }
+    },
+    {
+      "id": "R12",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R12",
+        "bytes": 72,
+        "tokens": 12,
+        "estado": "DERIVA",
+        "unidades": 2388,
+        "categorias": [
+          723,
+          734,
+          208,
+          193,
+          0,
+          265,
+          265
+        ],
+        "nodos_total": 265,
+        "familias_total": 265,
+        "capacidad_bytes": 244569,
+        "pico_solicitado_bytes": 248593,
+        "raiz": 264,
+        "bosque_sha256": "726c92a0b8aace93607c3b2446c5e085748a78a0e67de8da06f3aabe51a637b8"
+      }
+    },
+    {
+      "id": "R13",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R13",
+        "bytes": 49,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2289,
+        "categorias": [
+          714,
+          725,
+          147,
+          187,
+          0,
+          258,
+          258
+        ],
+        "nodos_total": 258,
+        "familias_total": 258,
+        "capacidad_bytes": 167566,
+        "pico_solicitado_bytes": 171614,
+        "raiz": 257,
+        "bosque_sha256": "65c9def910d85ad4a5e48822b8a5175df2367746196b03c0b922b245c6a54381"
+      }
+    },
+    {
+      "id": "R14",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R14",
+        "bytes": 48,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2227,
+        "categorias": [
+          736,
+          752,
+          135,
+          160,
+          0,
+          222,
+          222
+        ],
+        "nodos_total": 222,
+        "familias_total": 222,
+        "capacidad_bytes": 182195,
+        "pico_solicitado_bytes": 183475,
+        "raiz": 221,
+        "bosque_sha256": "8a2256f4ccb28918ea37b81e1945a43ece7c6ea105cb179c8c4a1ee0238d128f"
+      }
+    },
+    {
+      "id": "R15",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R15",
+        "bytes": 50,
+        "tokens": 13,
+        "estado": "DERIVA",
+        "unidades": 2139,
+        "categorias": [
+          664,
+          675,
+          155,
+          173,
+          0,
+          236,
+          236
+        ],
+        "nodos_total": 236,
+        "familias_total": 236,
+        "capacidad_bytes": 264394,
+        "pico_solicitado_bytes": 265570,
+        "raiz": 235,
+        "bosque_sha256": "9482565c2afc801e4d2b9d43b6092bf2f6bc4efd99d2473f839ac47e74a91a39"
+      }
+    },
+    {
+      "id": "R16",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R16",
+        "bytes": 47,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2893,
+        "categorias": [
+          959,
+          979,
+          219,
+          194,
+          0,
+          271,
+          271
+        ],
+        "nodos_total": 271,
+        "familias_total": 271,
+        "capacidad_bytes": 217436,
+        "pico_solicitado_bytes": 221404,
+        "raiz": 269,
+        "bosque_sha256": "e6b2d7418a288b7684b416aafeb4d62e3ab203b16ffc3b58083643a4d7e3187c"
+      }
+    },
+    {
+      "id": "R17",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R17",
+        "bytes": 49,
+        "tokens": 12,
+        "estado": "DERIVA",
+        "unidades": 2749,
+        "categorias": [
+          917,
+          937,
+          200,
+          183,
+          0,
+          256,
+          256
+        ],
+        "nodos_total": 256,
+        "familias_total": 256,
+        "capacidad_bytes": 244673,
+        "pico_solicitado_bytes": 248737,
+        "raiz": 254,
+        "bosque_sha256": "7e038251554641e96be070cb9452bb4c9ec6d141d1a8e04dce0bbdeb60a1ab88"
+      }
+    },
+    {
+      "id": "R18",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R18",
+        "bytes": 34,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1882,
+        "categorias": [
+          608,
+          619,
+          131,
+          138,
+          0,
+          193,
+          193
+        ],
+        "nodos_total": 193,
+        "familias_total": 193,
+        "capacidad_bytes": 115016,
+        "pico_solicitado_bytes": 116536,
+        "raiz": 192,
+        "bosque_sha256": "5b82561c183998adce3136bd378fa29268077ed8890f787a7f969a4e6b2ee6d5"
+      }
+    },
+    {
+      "id": "R19",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R19",
+        "bytes": 50,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 1788,
+        "categorias": [
+          597,
+          612,
+          147,
+          114,
+          0,
+          159,
+          159
+        ],
+        "nodos_total": 159,
+        "familias_total": 159,
+        "capacidad_bytes": 207236,
+        "pico_solicitado_bytes": 209060,
+        "raiz": 158,
+        "bosque_sha256": "25acc25a9b85937cc5b8468cfc4bde1b7d8c5958b77fa8082f4355fa9ec313cc"
+      }
+    },
+    {
+      "id": "R20",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R20",
+        "bytes": 54,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2396,
+        "categorias": [
+          730,
+          741,
+          205,
+          190,
+          0,
+          265,
+          265
+        ],
+        "nodos_total": 265,
+        "familias_total": 265,
+        "capacidad_bytes": 191523,
+        "pico_solicitado_bytes": 195547,
+        "raiz": 264,
+        "bosque_sha256": "b0741dc07062141bbb85d0e3eadc077ed89751325415ee0d348cdd3528cbb96b"
+      }
+    },
+    {
+      "id": "R21",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R21",
+        "bytes": 48,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2386,
+        "categorias": [
+          752,
+          764,
+          168,
+          184,
+          0,
+          259,
+          259
+        ],
+        "nodos_total": 259,
+        "familias_total": 259,
+        "capacidad_bytes": 191571,
+        "pico_solicitado_bytes": 195619,
+        "raiz": 258,
+        "bosque_sha256": "07645664eebd8d3b65850f7c815288687128b8944e36a843944fbc1e04aede84"
+      }
+    },
+    {
+      "id": "R22",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R22",
+        "bytes": 41,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1686,
+        "categorias": [
+          539,
+          547,
+          109,
+          131,
+          0,
+          180,
+          180
+        ],
+        "nodos_total": 180,
+        "familias_total": 180,
+        "capacidad_bytes": 114904,
+        "pico_solicitado_bytes": 116528,
+        "raiz": 179,
+        "bosque_sha256": "dd09722bb2ad2ab6c1a2dd397b227d2f96ea422c1b32c992eb12f140dc23b5d7"
+      }
+    },
+    {
+      "id": "R23",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R23",
+        "bytes": 52,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 2262,
+        "categorias": [
+          701,
+          712,
+          134,
+          191,
+          0,
+          262,
+          262
+        ],
+        "nodos_total": 262,
+        "familias_total": 262,
+        "capacidad_bytes": 145133,
+        "pico_solicitado_bytes": 149173,
+        "raiz": 261,
+        "bosque_sha256": "fcb655a88d52288bf6e3603912eb21bdbfd303459385ab7144fff005159345c8"
+      }
+    },
+    {
+      "id": "R24",
+      "grupo": "historico_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "R24",
+        "bytes": 43,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2295,
+        "categorias": [
+          714,
+          725,
+          174,
+          180,
+          0,
+          251,
+          251
+        ],
+        "nodos_total": 251,
+        "familias_total": 251,
+        "capacidad_bytes": 158294,
+        "pico_solicitado_bytes": 159454,
+        "raiz": 250,
+        "bosque_sha256": "b1ae258067ed5f9804fd9466f7964d8563fd15d68ef925c473e8f03078a3d57b"
+      }
+    },
+    {
+      "id": "C01",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C01",
+        "bytes": 35,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 1758,
+        "categorias": [
+          609,
+          623,
+          127,
+          105,
+          0,
+          147,
+          147
+        ],
+        "nodos_total": 147,
+        "familias_total": 147,
+        "capacidad_bytes": 181451,
+        "pico_solicitado_bytes": 183331,
+        "raiz": 146,
+        "bosque_sha256": "ddc8252720816bc2a93b7c1f13486399b11d8c1381070bed143699c97c403e92"
+      }
+    },
+    {
+      "id": "C02",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C02",
+        "bytes": 68,
+        "tokens": 17,
+        "estado": "DERIVA",
+        "unidades": 3506,
+        "categorias": [
+          1156,
+          1177,
+          260,
+          239,
+          0,
+          337,
+          337
+        ],
+        "nodos_total": 337,
+        "familias_total": 337,
+        "capacidad_bytes": 407198,
+        "pico_solicitado_bytes": 410750,
+        "raiz": 334,
+        "bosque_sha256": "a34de29f6a650f85d89c3da8284a675dc8d74f5e8ee0c18f89a6602b75b23c89"
+      }
+    },
+    {
+      "id": "C03",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C03",
+        "bytes": 40,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2430,
+        "categorias": [
+          739,
+          747,
+          167,
+          207,
+          0,
+          285,
+          285
+        ],
+        "nodos_total": 285,
+        "familias_total": 285,
+        "capacidad_bytes": 191587,
+        "pico_solicitado_bytes": 195475,
+        "raiz": 284,
+        "bosque_sha256": "31dade36a7acbd5989671eef911bd231cb205b3e2ebe1a1e0bda8bcb3cfffcc7"
+      }
+    },
+    {
+      "id": "C04",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C04",
+        "bytes": 40,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2424,
+        "categorias": [
+          739,
+          747,
+          167,
+          205,
+          0,
+          283,
+          283
+        ],
+        "nodos_total": 283,
+        "familias_total": 283,
+        "capacidad_bytes": 191571,
+        "pico_solicitado_bytes": 195475,
+        "raiz": 282,
+        "bosque_sha256": "931958ae632e5fcdb8bc7b8966623e130e355e18588bc01feee5181cbdffe90f"
+      }
+    },
+    {
+      "id": "C05",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C05",
+        "bytes": 41,
+        "tokens": 10,
+        "estado": "DERIVA",
+        "unidades": 2520,
+        "categorias": [
+          770,
+          779,
+          179,
+          210,
+          0,
+          291,
+          291
+        ],
+        "nodos_total": 291,
+        "familias_total": 291,
+        "capacidad_bytes": 191691,
+        "pico_solicitado_bytes": 195531,
+        "raiz": 290,
+        "bosque_sha256": "f326991822548b2907481db53ef5854a43bae1b07264efd8313097c825770c18"
+      }
+    },
+    {
+      "id": "C06",
+      "grupo": "contraste_publico",
+      "esperado": "NO_DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C06",
+        "bytes": 25,
+        "tokens": 6,
+        "estado": "NO_DERIVA",
+        "unidades": 629,
+        "categorias": [
+          263,
+          273,
+          41,
+          12,
+          0,
+          20,
+          20
+        ],
+        "nodos_total": 20,
+        "familias_total": 20,
+        "capacidad_bytes": 86703,
+        "pico_solicitado_bytes": 86887,
+        "raiz": 4294967295,
+        "bosque_sha256": "72fd401fe30c629fe614f682e748c503a4d2008b5a0380334d5e5990d28ca7cc"
+      }
+    },
+    {
+      "id": "C07",
+      "grupo": "contraste_publico",
+      "esperado": "NO_DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C07",
+        "bytes": 42,
+        "tokens": 10,
+        "estado": "NO_DERIVA",
+        "unidades": 1377,
+        "categorias": [
+          497,
+          511,
+          110,
+          67,
+          0,
+          96,
+          96
+        ],
+        "nodos_total": 96,
+        "familias_total": 96,
+        "capacidad_bytes": 176603,
+        "pico_solicitado_bytes": 177339,
+        "raiz": 4294967295,
+        "bosque_sha256": "d8e04a14378b80ad4a8d2f81ed4945628eb5acc265270f22b236198edb876824"
+      }
+    },
+    {
+      "id": "C08",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C08",
+        "bytes": 37,
+        "tokens": 8,
+        "estado": "DERIVA",
+        "unidades": 1225,
+        "categorias": [
+          404,
+          411,
+          89,
+          85,
+          0,
+          118,
+          118
+        ],
+        "nodos_total": 118,
+        "familias_total": 118,
+        "capacidad_bytes": 130349,
+        "pico_solicitado_bytes": 130989,
+        "raiz": 117,
+        "bosque_sha256": "82c0a6c241a9df203231dac1dcc1915b1bc7c4fad1254a707adfa572c8fee01b"
+      }
+    },
+    {
+      "id": "C09",
+      "grupo": "contraste_publico",
+      "esperado": "NO_DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C09",
+        "bytes": 39,
+        "tokens": 9,
+        "estado": "NO_DERIVA",
+        "unidades": 1014,
+        "categorias": [
+          369,
+          377,
+          67,
+          51,
+          0,
+          75,
+          75
+        ],
+        "nodos_total": 75,
+        "familias_total": 75,
+        "capacidad_bytes": 152438,
+        "pico_solicitado_bytes": 153334,
+        "raiz": 4294967295,
+        "bosque_sha256": "34f19e59894c1a4435e1fa2c7ae7e77ae9cb5c2d4c7b7c6d357507fdd0a2128d"
+      }
+    },
+    {
+      "id": "C10",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C10",
+        "bytes": 34,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 1919,
+        "categorias": [
+          627,
+          636,
+          117,
+          141,
+          0,
+          199,
+          199
+        ],
+        "nodos_total": 199,
+        "familias_total": 199,
+        "capacidad_bytes": 157990,
+        "pico_solicitado_bytes": 159462,
+        "raiz": 198,
+        "bosque_sha256": "764da183a55d15dcac1ecc4f996d1fc990e9a33aa78b9dc6a73c519dbb7551ea"
+      }
+    },
+    {
+      "id": "C11",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C11",
+        "bytes": 23,
+        "tokens": 6,
+        "estado": "DERIVA",
+        "unidades": 1381,
+        "categorias": [
+          465,
+          473,
+          83,
+          94,
+          0,
+          133,
+          133
+        ],
+        "nodos_total": 133,
+        "familias_total": 133,
+        "capacidad_bytes": 95495,
+        "pico_solicitado_bytes": 97471,
+        "raiz": 132,
+        "bosque_sha256": "eba4da9159e203d938dd3188d8e5d02bb02853c10830befc6e94588cd5d36690"
+      }
+    },
+    {
+      "id": "C12",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C12",
+        "bytes": 21,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1773,
+        "categorias": [
+          629,
+          644,
+          111,
+          101,
+          0,
+          144,
+          144
+        ],
+        "nodos_total": 144,
+        "familias_total": 144,
+        "capacidad_bytes": 114520,
+        "pico_solicitado_bytes": 116416,
+        "raiz": 143,
+        "bosque_sha256": "fda3f2416c23f57b0f7418f26ac1caeab86c8d8abd9944444f197155c718d1a5"
+      }
+    },
+    {
+      "id": "C13",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C13",
+        "bytes": 47,
+        "tokens": 12,
+        "estado": "DERIVA",
+        "unidades": 2736,
+        "categorias": [
+          939,
+          959,
+          217,
+          165,
+          0,
+          228,
+          228
+        ],
+        "nodos_total": 228,
+        "familias_total": 228,
+        "capacidad_bytes": 235185,
+        "pico_solicitado_bytes": 236481,
+        "raiz": 227,
+        "bosque_sha256": "a6f22223ca8dcb62b1b9eaf651883c1d8303c50bbd2caf830aa6ea5b6fae0a77"
+      }
+    },
+    {
+      "id": "C14",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C14",
+        "bytes": 35,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2004,
+        "categorias": [
+          642,
+          653,
+          134,
+          153,
+          0,
+          211,
+          211
+        ],
+        "nodos_total": 211,
+        "familias_total": 211,
+        "capacidad_bytes": 158102,
+        "pico_solicitado_bytes": 159478,
+        "raiz": 210,
+        "bosque_sha256": "dbb4b3867236eb11bbd8000033716426103d04b22a8120508772eaa4cd05ac9e"
+      }
+    },
+    {
+      "id": "C15",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C15",
+        "bytes": 18,
+        "tokens": 5,
+        "estado": "DERIVA",
+        "unidades": 1269,
+        "categorias": [
+          459,
+          472,
+          85,
+          69,
+          0,
+          92,
+          92
+        ],
+        "nodos_total": 92,
+        "familias_total": 92,
+        "capacidad_bytes": 73402,
+        "pico_solicitado_bytes": 74194,
+        "raiz": 91,
+        "bosque_sha256": "291c3cd9e5af70d22321a69fcce98e639fa029a2c99b2a6daa75cbc5a0a15c1b"
+      }
+    },
+    {
+      "id": "C16",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C16",
+        "bytes": 30,
+        "tokens": 7,
+        "estado": "DERIVA",
+        "unidades": 1971,
+        "categorias": [
+          698,
+          717,
+          142,
+          110,
+          0,
+          152,
+          152
+        ],
+        "nodos_total": 152,
+        "familias_total": 152,
+        "capacidad_bytes": 114728,
+        "pico_solicitado_bytes": 116584,
+        "raiz": 150,
+        "bosque_sha256": "752eb642182a11d3fe4033ace13f6eef4aa01daab5853cac87449b22e2942cfa"
+      }
+    },
+    {
+      "id": "C17",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C17",
+        "bytes": 36,
+        "tokens": 9,
+        "estado": "DERIVA",
+        "unidades": 2304,
+        "categorias": [
+          790,
+          809,
+          158,
+          147,
+          0,
+          200,
+          200
+        ],
+        "nodos_total": 200,
+        "familias_total": 200,
+        "capacidad_bytes": 157926,
+        "pico_solicitado_bytes": 159430,
+        "raiz": 197,
+        "bosque_sha256": "677ca2c427522ed9dea58431613074892bdb3ac94cb01776e6034f041374714c"
+      }
+    },
+    {
+      "id": "C18",
+      "grupo": "contraste_publico",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "C18",
+        "bytes": 44,
+        "tokens": 11,
+        "estado": "DERIVA",
+        "unidades": 2481,
+        "categorias": [
+          847,
+          867,
+          198,
+          149,
+          0,
+          210,
+          210
+        ],
+        "nodos_total": 210,
+        "familias_total": 210,
+        "capacidad_bytes": 207668,
+        "pico_solicitado_bytes": 209124,
+        "raiz": 208,
+        "bosque_sha256": "62934eeac9fd79d44d4843536861cb60a04aef8c933ab9a2885ce0927cf02d9c"
+      }
+    },
+    {
+      "id": "CP-T-127",
+      "grupo": "capacidad_tokens",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "CP-T-127",
+        "bytes": 883,
+        "tokens": 127,
+        "estado": "DERIVA",
+        "unidades": 62225,
+        "categorias": [
+          10799,
+          10809,
+          3010,
+          11529,
+          0,
+          13039,
+          13039
+        ],
+        "nodos_total": 13039,
+        "familias_total": 13039,
+        "capacidad_bytes": 15269400,
+        "pico_solicitado_bytes": 15373360,
+        "raiz": 13038,
+        "bosque_sha256": "ed6b0d0339d430bdd77fdd8e4d71e3bca27f04989ea6ddf7290c054f2e5f40a6"
+      }
+    },
+    {
+      "id": "CP-T-128",
+      "grupo": "capacidad_tokens",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "CP-T-128",
+        "bytes": 890,
+        "tokens": 128,
+        "estado": "DERIVA",
+        "unidades": 62906,
+        "categorias": [
+          10883,
+          10893,
+          3034,
+          11684,
+          0,
+          13206,
+          13206
+        ],
+        "nodos_total": 13206,
+        "familias_total": 13206,
+        "capacidad_bytes": 15492821,
+        "pico_solicitado_bytes": 15596165,
+        "raiz": 13205,
+        "bosque_sha256": "65c058cc7aab952d57eb65e63e1ad3731285397fdb62b34ca94dbd6924aa2389"
+      }
+    },
+    {
+      "id": "CP-T-129",
+      "grupo": "capacidad_tokens",
+      "esperado": "Tokens",
+      "coincide": true,
+      "observado": {
+        "id": "CP-T-129",
+        "bytes": 897,
+        "estado": "Tokens",
+        "unidades": 0
+      }
+    },
+    {
+      "id": "CP-B-8191",
+      "grupo": "capacidad_bytes",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "CP-B-8191",
+        "bytes": 8191,
+        "tokens": 3,
+        "estado": "DERIVA",
+        "unidades": 1058,
+        "categorias": [
+          383,
+          393,
+          61,
+          59,
+          0,
+          81,
+          81
+        ],
+        "nodos_total": 81,
+        "familias_total": 81,
+        "capacidad_bytes": 43876,
+        "pico_solicitado_bytes": 44724,
+        "raiz": 80,
+        "bosque_sha256": "9a2a230189ead12dfaffeed99483e6fe8059ac2667925a4d099b95777af283b5"
+      }
+    },
+    {
+      "id": "CP-B-8192",
+      "grupo": "capacidad_bytes",
+      "esperado": "DERIVA",
+      "coincide": true,
+      "observado": {
+        "id": "CP-B-8192",
+        "bytes": 8192,
+        "tokens": 3,
+        "estado": "DERIVA",
+        "unidades": 1058,
+        "categorias": [
+          383,
+          393,
+          61,
+          59,
+          0,
+          81,
+          81
+        ],
+        "nodos_total": 81,
+        "familias_total": 81,
+        "capacidad_bytes": 43876,
+        "pico_solicitado_bytes": 44724,
+        "raiz": 80,
+        "bosque_sha256": "9a2a230189ead12dfaffeed99483e6fe8059ac2667925a4d099b95777af283b5"
+      }
+    },
+    {
+      "id": "CP-B-8193",
+      "grupo": "capacidad_bytes",
+      "esperado": "Bytes",
+      "coincide": true,
+      "observado": {
+        "id": "CP-B-8193",
+        "bytes": 8193,
+        "estado": "Bytes",
+        "unidades": 0
+      }
+    }
+  ]
+}
