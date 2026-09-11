@@ -1,0 +1,12 @@
+{
+  "id": "nativo-release-ejecutar",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/semantica-a/resultados-1/nativo-release.bin",
+  "args": [],
+  "inicio": "2026-09-11T06:21:36.002Z",
+  "fin": "2026-09-11T06:21:36.074Z",
+  "duracion_ms": 72.22740999999996,
+  "timeout_ms": 30000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}

@@ -1,0 +1,92 @@
+{
+  "registro": "RETP-2026-135",
+  "tipo": "RECUPERACION_DOCUMENTAL",
+  "fecha_verificacion": "2026-09-11T08:01:12.940Z",
+  "metodo": "Lectura, SHA-256, identidad Git, descompresión sin pérdida, cotejo de capturas con esperados prepublicados y registros. Sin compilar ni ejecutar de nuevo el banco.",
+  "fijacion_sha256": "e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290",
+  "resultado_original_sha256": "ed36290ddabff5b4a2b9638ce3d533040f0696ae76741ee541128a1f9dfe5be0",
+  "fuentes_fijadas_verificadas": 17,
+  "archivos_identicos_al_corte_git": 18,
+  "manifiesto_resultados_verificado": 31,
+  "manifiesto_cierre_verificado": 38,
+  "binarios_locales_identificados": 4,
+  "matrices": [
+    {
+      "id": "nativo-debug",
+      "controles_semanticos": 61,
+      "regresiones_sintacticas": 72,
+      "primitivas_declaradas_en_cabecera": 26,
+      "captura_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "captura_bytes": 5711368,
+      "coincidencia_con_esperados_prepublicados": true,
+      "paridad_integra_casos_contadores": true
+    },
+    {
+      "id": "nativo-release",
+      "controles_semanticos": 61,
+      "regresiones_sintacticas": 72,
+      "primitivas_declaradas_en_cabecera": 26,
+      "captura_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "captura_bytes": 5711368,
+      "coincidencia_con_esperados_prepublicados": true,
+      "paridad_integra_casos_contadores": true
+    },
+    {
+      "id": "wasi-debug",
+      "controles_semanticos": 61,
+      "regresiones_sintacticas": 72,
+      "primitivas_declaradas_en_cabecera": 26,
+      "captura_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "captura_bytes": 5711367,
+      "coincidencia_con_esperados_prepublicados": true,
+      "paridad_integra_casos_contadores": true
+    },
+    {
+      "id": "wasi-release",
+      "controles_semanticos": 61,
+      "regresiones_sintacticas": 72,
+      "primitivas_declaradas_en_cabecera": 26,
+      "captura_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "captura_bytes": 5711367,
+      "coincidencia_con_esperados_prepublicados": true,
+      "paridad_integra_casos_contadores": true
+    }
+  ],
+  "caso_S26": {
+    "tokens": 128,
+    "unidades": 621146,
+    "capacidad_buffers_bytes": 1675752,
+    "pico_solicitado_bytes": 1777770,
+    "estados_semanticos": 1554
+  },
+  "limites_linguisticos": {
+    "S20_grafia_combinante": "NO_REPRESENTADA",
+    "S45_tilde_precompuesta": "ADMITIDA"
+  },
+  "paquete_original": {
+    "archivos": 45,
+    "sha256": "4e7a9688a844e3395170f57bcce3b5d239f32f34537ba491c7fe73459f1f69ce",
+    "destinos": {
+      "lang": {
+        "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+        "rama": "main",
+        "padre": "5d0f0e5d1cacf69f03cf040b69e1b5bfbf228a75",
+        "archivos": 42
+      },
+      "lab": {
+        "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+        "rama": "lab/playground-sv-permanente",
+        "padre": "4e556e5d072b55b31a2a9b2c9da255602817c999",
+        "archivos": 43
+      }
+    }
+  },
+  "registro_csv": {
+    "filas_de_datos": 132,
+    "columnas": 14,
+    "ids_duplicados": 0,
+    "ultima": "RETP-2026-135"
+  },
+  "limites": "Corrobora las capturas y archivos conservados. No equivale a reproducción independiente, medición RSS, peor caso universal ni apertura de la reserva. El recuento de primitivas procede de la cabecera del binario; no se repitieron sus aserciones.",
+  "estado_deposito": "VERIFICADO_PARA_COMPLETAR_DEPOSITO_INTERRUMPIDO"
+}

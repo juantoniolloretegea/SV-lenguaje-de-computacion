@@ -1285,3 +1285,12 @@ En CP-T-128, tabla densa de 14.120.340 B: 87,46 % de capacidad nativa y 91,14 % 
 ## RETP-2026-134 — Significados antes de permisos y límites de texto
 
 11/09/2026. [Preparación](tuberias-ia/ACTA_PREPARACION_SEMANTICA_A_Y_LIMITES_TEXTO_2026_09_11.md). Se implementa IE004-ES-P2/3-COSTE/1 con calendario y contabilidad sucesores expresos; /2 intacto. Evaluación completa tipada antes de permisos, entrada UTF-8 y capacidad agregada de A limitada antes de inserciones. Se fijan 61 controles semánticos y 72 sintácticos antes de ejecutar. No hay evidencia funcional todavía. Una matriz nativo/WASI debug/release; conservar fallos antes de una corrección causal máxima. No se habilitan reserva ni recepción A/V; P4/P5 pendientes. La representación dispersa sustituye la tabla sintáctica densa por una causa explícita de memoria conjunta. No se mide aún RSS ni latencia de servicio.
+
+<a id="retp-135"></a>
+## RETP-2026-135 — Resultado semántico público y memoria conjunta
+
+11/09/2026. [Acta y evidencia](tuberias-ia/ACTA_RESULTADO_SEMANTICA_A_2026_09_11.md). Una matriz de cuatro ejecuciones Rust 1.98.0 nativo/WASI debug/release sobre fuentes y esperados prepublicados en 5d0f0e5d/4e556e5d: 61/61 semánticos, 72/72 sintácticos y 26 primitivas por configuración. Sin modificación posterior, corrección, reintento ni Python. Trazas y trabajo iguales; C03/S01 mantienen ambigüedad y cero llamadas a política aunque cambie vigencia. Paráfrasis públicas mantienen significado y cuerpo.
+
+Máximo observado 621.146 unidades nuevas; 1.675.752 B capacidad de buffers A, 1.777.770 B pico calculado de reserva y 1.554 estados. No acredita peor caso universal, RSS, pila ni latencia de servicio. Se registran grafía combinante y espacio no separable como cobertura no admitida del normalizador vigente. La reserva /2 sigue cerrada. Próximo objeto concreto: correspondencia semántica y fijación de recepción/captura A/V antes de P3; P4/P5 pendientes.
+
+Recuperación documental del depósito interrumpido: [acta y comprobación de las capturas originales](tuberias-ia/ACTA_RECUPERACION_DOCUMENTAL_RETP135_2026_09_11.md). Se verificaron fuentes, huellas y resultados conservados; no se repitió la ejecución del banco.

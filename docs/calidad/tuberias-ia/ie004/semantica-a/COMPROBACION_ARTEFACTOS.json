@@ -1,0 +1,12 @@
+{
+  "registro": "RETP-2026-135",
+  "fuentes_sin_cambios_tras_fijacion": true,
+  "esperados_sin_cambios": true,
+  "capturas_originales_recuperadas_iguales": 4,
+  "manifest_resultados_verificado": true,
+  "matriz_completa": true,
+  "reintentos": 0,
+  "reserva_leida": false,
+  "python_ejecutado": false,
+  "nota": "Verificación de archivos y capturas; no repetición de ejecución semántica."
+}

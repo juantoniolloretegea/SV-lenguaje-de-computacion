@@ -3,7 +3,7 @@
 
 **Estado global: NO VERDE.**
 
-**Estado vigente · RETP-134:** evaluación semántica de A preparada para contraste público en Rust. Significados completos antes de permisos; texto y memoria con cupos agregados. IE004-ES-P2/3-COSTE/1 declara sucesión de calendario y contabilidad. Resultados pendientes; captura no habilitada, reserva cerrada y aislamiento NO VERDE.
+**Estado vigente · RETP-135:** contraste semántico público satisfecho: 61/61 semánticos, 72/72 sintácticos y 26 primitivas por configuración Rust nativo/WASI debug/release. Significados antes de permisos y coste conjunto contrastados. Sin corrección ni reintento. Captura A/V por fijar; reserva cerrada y aislamiento NO VERDE.
 
 
 - [Acta única de recepción y seguimiento](ACTA_RECEPCION_Y_SEGUIMIENTO_TUBERIAS_IA_2026_09_10.md): resultado de Grok, mediciones y límites.
@@ -86,3 +86,9 @@ Los originales permanecen en laboratorio. Una recepción documental no acredita 
 ## Significados y límites de texto · RETP-134
 
 [Preparación fijada](ACTA_PREPARACION_SEMANTICA_A_Y_LIMITES_TEXTO_2026_09_11.md): 61 controles semánticos y 72 regresiones sintácticas con esperados públicos. Una matriz Rust y una corrección causal como máximo. Sin nuevo encargo para Grok.
+
+## Resultado semántico y memoria · RETP-135
+
+[Acta y evidencia](ACTA_RESULTADO_SEMANTICA_A_2026_09_11.md): 61/61 más 72/72 y 26 primitivas en cuatro configuraciones. Máximo observado 621.146 unidades; capacidad agregada 1.675.752 B y pico solicitado 1.777.770 B. Sin afirmar peor caso universal, RSS ni latencia de servicio. Próximo objeto: correspondencia semántica y fijación de captura A/V; no hay nuevo encargo a Grok.
+
+Recuperación documental del depósito interrumpido: [acta y comprobación de las capturas originales](ACTA_RECUPERACION_DOCUMENTAL_RETP135_2026_09_11.md). Se verificaron fuentes, huellas y resultados conservados; no se repitió la ejecución del banco.

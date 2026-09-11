@@ -1,0 +1,5 @@
+import fs from 'node:fs';import zlib from 'node:zlib';import crypto from 'node:crypto';import path from 'node:path';import assert from 'node:assert/strict';
+const dir=path.resolve(process.argv[2]||'resultados');const salida=path.resolve(process.argv[3]||'capturas-recuperadas');assert(!fs.existsSync(salida),'No sobrescribir evidencia');fs.mkdirSync(salida,{recursive:true});
+const hash=b=>crypto.createHash('sha256').update(b).digest('hex');const m=JSON.parse(fs.readFileSync(path.join(dir,'RESULTADO.json')));
+for(const c of m.capturas){assert.match(c.id,/^(nativo|wasi)-(debug|release)$/);assert.match(c.archivo,/^captura-[a-f0-9]{64}\.jsonl\.gz\.b64$/);const gz=Buffer.from(fs.readFileSync(path.join(dir,c.archivo),'utf8').trim(),'base64');assert.equal(gz.length,c.gzip_bytes);assert.equal(hash(gz),c.gzip_sha256);const b=zlib.gunzipSync(gz,{maxOutputLength:32*1024*1024});assert.equal(b.length,c.stdout_bytes);assert.equal(hash(b),c.stdout_sha256);fs.writeFileSync(path.join(salida,c.id+'.stdout'),b);}
+console.log('Cuatro capturas recuperadas y verificadas.');

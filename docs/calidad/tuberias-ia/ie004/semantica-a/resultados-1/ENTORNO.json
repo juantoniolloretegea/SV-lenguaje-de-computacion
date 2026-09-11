@@ -1,0 +1,13 @@
+{
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "node": "v24.19.0",
+  "so": "linux",
+  "release": "6.18.35",
+  "arch": "x64",
+  "cpu": "AMD EPYC 9V74 80-Core Processor",
+  "cpus": 9,
+  "memoria_host_bytes": 23109910528,
+  "reserva_leida": false,
+  "python_ejecutado": false,
+  "tiempos": "Una muestra por configuración; proceso con arranque y exportación de evidencia, no benchmark."
+}

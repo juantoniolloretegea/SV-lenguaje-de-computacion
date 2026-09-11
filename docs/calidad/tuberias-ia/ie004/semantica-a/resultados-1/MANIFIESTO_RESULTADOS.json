@@ -1,0 +1,194 @@
+{
+  "archivos": [
+    {
+      "ruta": "CASOS-nativo-debug.json",
+      "bytes": 171116,
+      "sha256": "7b4919c87fd6104e5a078b05b1eeac278694e9bc16dea30b5b4bdf4c0bbca22e"
+    },
+    {
+      "ruta": "CASOS-nativo-release.json",
+      "bytes": 171116,
+      "sha256": "7b4919c87fd6104e5a078b05b1eeac278694e9bc16dea30b5b4bdf4c0bbca22e"
+    },
+    {
+      "ruta": "CASOS-wasi-debug.json",
+      "bytes": 171116,
+      "sha256": "7b4919c87fd6104e5a078b05b1eeac278694e9bc16dea30b5b4bdf4c0bbca22e"
+    },
+    {
+      "ruta": "CASOS-wasi-release.json",
+      "bytes": 171116,
+      "sha256": "7b4919c87fd6104e5a078b05b1eeac278694e9bc16dea30b5b4bdf4c0bbca22e"
+    },
+    {
+      "ruta": "ENTORNO.json",
+      "bytes": 562,
+      "sha256": "b1908b5a9d6aba7e4fdc9b0dd5cdc096b9d724b06692afd1bf3648bd82cd0aae"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 7199,
+      "sha256": "ed36290ddabff5b4a2b9638ce3d533040f0696ae76741ee541128a1f9dfe5be0"
+    },
+    {
+      "ruta": "captura-06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1.jsonl.gz.b64",
+      "bytes": 915773,
+      "sha256": "a93c636b7f042008cacf29656b79225a2d64689dee9a80b27647eb1948b0c0e8"
+    },
+    {
+      "ruta": "captura-d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805.jsonl.gz.b64",
+      "bytes": 915777,
+      "sha256": "b8da4cedf6f922d79d11aaaec35d8c19b565f848948a4fd443e7a3cbba3b1e90"
+    },
+    {
+      "ruta": "nativo-debug-compilar.json",
+      "bytes": 612,
+      "sha256": "e60dd303827deefc110c2ab7c28e11276a0fcf163a0e60cf25eac5440b8f11c6"
+    },
+    {
+      "ruta": "nativo-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-debug-ejecutar.json",
+      "bytes": 334,
+      "sha256": "1b124451ecad17989afd1e26c6191bcc29e37d3827ad2591e4d4792997f0ef12"
+    },
+    {
+      "ruta": "nativo-debug-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-compilar.json",
+      "bytes": 616,
+      "sha256": "7dc4af1a717f040f0b7d685700fc4534d6f140b1c8b5ac8440801c3a1e3096bc"
+    },
+    {
+      "ruta": "nativo-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "nativo-release-ejecutar.json",
+      "bytes": 337,
+      "sha256": "d6567bd6e60e1a080faf29417847e901542ce50cf3f1b07e22985133859bfe9d"
+    },
+    {
+      "ruta": "nativo-release-ejecutar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "rustc-version.json",
+      "bytes": 391,
+      "sha256": "49f289c34ef969f95b702a76b2510aa8197aabc8a79d35e4259a0a20049a8873"
+    },
+    {
+      "ruta": "rustc-version.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "rustc-version.stdout",
+      "bytes": 196,
+      "sha256": "3975d062e234a9f3921955bf6ae5b90f5819df94fa825d057f76b34a35ed0f4d"
+    },
+    {
+      "ruta": "wasi-debug-compilar.json",
+      "bytes": 702,
+      "sha256": "2fdc29541cd6a38a90cb4397dc9bff48abdd4003816595d64cee51b48fb7337a"
+    },
+    {
+      "ruta": "wasi-debug-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-debug-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-debug-ejecutar.json",
+      "bytes": 477,
+      "sha256": "96e1eb19f4bd4058ccdf6ef5def3b4d0de0609fd4b3d029b28a55e3d7174987f"
+    },
+    {
+      "ruta": "wasi-debug-ejecutar.stderr",
+      "bytes": 164,
+      "sha256": "af9cc6e2e081f46f212d450646efdc7eb20962325aff2ae439340159d924c16d"
+    },
+    {
+      "ruta": "wasi-release-compilar.json",
+      "bytes": 697,
+      "sha256": "5ff9c1571acf6e5a12ee551f4be40c4b1b4d334c4ee6ecb90700851ec2ebef94"
+    },
+    {
+      "ruta": "wasi-release-compilar.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-release-compilar.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "ruta": "wasi-release-ejecutar.json",
+      "bytes": 481,
+      "sha256": "8a99291d81ac98320bc2c7667353412f0fdcdb7e852d89e7c95863ee39d2402c"
+    },
+    {
+      "ruta": "wasi-release-ejecutar.stderr",
+      "bytes": 165,
+      "sha256": "4bbcafa452578c96ec2b63761ce517a87009e9548c45371f0d2626502839bb7c"
+    }
+  ],
+  "capturas": [
+    {
+      "id": "nativo-debug",
+      "archivo": "captura-d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805.jsonl.gz.b64",
+      "gzip_sha256": "d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805",
+      "gzip_bytes": 686831,
+      "stdout_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "stdout_bytes": 5711368
+    },
+    {
+      "id": "nativo-release",
+      "archivo": "captura-d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805.jsonl.gz.b64",
+      "gzip_sha256": "d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805",
+      "gzip_bytes": 686831,
+      "stdout_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "stdout_bytes": 5711368
+    },
+    {
+      "id": "wasi-debug",
+      "archivo": "captura-06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1.jsonl.gz.b64",
+      "gzip_sha256": "06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1",
+      "gzip_bytes": 686829,
+      "stdout_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "stdout_bytes": 5711367
+    },
+    {
+      "id": "wasi-release",
+      "archivo": "captura-06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1.jsonl.gz.b64",
+      "gzip_sha256": "06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1",
+      "gzip_bytes": 686829,
+      "stdout_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "stdout_bytes": 5711367
+    }
+  ],
+  "nota": "Capturas originales recuperables sin pérdida de gzip/base64. Manifiesto no se incluye a sí mismo. Binarios identificados y reconstruibles, sin promesa de identidad binaria fuera del entorno y paths fijados."
+}

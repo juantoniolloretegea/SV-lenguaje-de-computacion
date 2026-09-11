@@ -1,0 +1,234 @@
+{
+  "registro_preparacion": "RETP-2026-134",
+  "instrumento": "IE004-SEMANTICA-A/1",
+  "reserva_leida": false,
+  "python_ejecutado": false,
+  "compilacion_ms": 2858.102195,
+  "ejecucion_ms": 727.4289570000001,
+  "resultados": [
+    {
+      "id": "nativo-debug",
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-SEMANTICA-A/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "primitivas": 26,
+        "usize_bits": 64,
+        "expresiones": 422,
+        "bytes_significado": 91,
+        "bytes_estado_sem": 100,
+        "bytes_nodo": 24,
+        "bytes_familia": 16,
+        "bytes_celda": 12,
+        "bytes_token": 24,
+        "bytes_gramatica_fija": 12912
+      },
+      "resumen": {
+        "resumen": true,
+        "semanticos_correctos": 61,
+        "semanticos_total": 61,
+        "sintacticos_correctos": 72,
+        "sintacticos_total": 72
+      },
+      "semanticos": 61,
+      "total_semanticos": 61,
+      "sintacticos": 72,
+      "total_sintacticos": 72,
+      "fallos": [],
+      "relaciones": {
+        "parafrasis": true,
+        "ambiguedad_antes_revocacion": true
+      },
+      "trazas_y_trabajo_iguales_primera": true,
+      "max_unidades": 621146,
+      "max_capacidad_bytes": 1675752,
+      "max_pico_solicitado_bytes": 1777770,
+      "max_estados_semanticos": 1554,
+      "compilacion_ms": 277.463935,
+      "proceso_ms": 165.85595900000004
+    },
+    {
+      "id": "nativo-release",
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-SEMANTICA-A/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "primitivas": 26,
+        "usize_bits": 64,
+        "expresiones": 422,
+        "bytes_significado": 91,
+        "bytes_estado_sem": 100,
+        "bytes_nodo": 24,
+        "bytes_familia": 16,
+        "bytes_celda": 12,
+        "bytes_token": 24,
+        "bytes_gramatica_fija": 12912
+      },
+      "resumen": {
+        "resumen": true,
+        "semanticos_correctos": 61,
+        "semanticos_total": 61,
+        "sintacticos_correctos": 72,
+        "sintacticos_total": 72
+      },
+      "semanticos": 61,
+      "total_semanticos": 61,
+      "sintacticos": 72,
+      "total_sintacticos": 72,
+      "fallos": [],
+      "relaciones": {
+        "parafrasis": true,
+        "ambiguedad_antes_revocacion": true
+      },
+      "trazas_y_trabajo_iguales_primera": true,
+      "max_unidades": 621146,
+      "max_capacidad_bytes": 1675752,
+      "max_pico_solicitado_bytes": 1777770,
+      "max_estados_semanticos": 1554,
+      "compilacion_ms": 1172.168233,
+      "proceso_ms": 72.22740999999996
+    },
+    {
+      "id": "wasi-debug",
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-SEMANTICA-A/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "primitivas": 26,
+        "usize_bits": 32,
+        "expresiones": 422,
+        "bytes_significado": 91,
+        "bytes_estado_sem": 100,
+        "bytes_nodo": 24,
+        "bytes_familia": 16,
+        "bytes_celda": 12,
+        "bytes_token": 24,
+        "bytes_gramatica_fija": 6760
+      },
+      "resumen": {
+        "resumen": true,
+        "semanticos_correctos": 61,
+        "semanticos_total": 61,
+        "sintacticos_correctos": 72,
+        "sintacticos_total": 72
+      },
+      "semanticos": 61,
+      "total_semanticos": 61,
+      "sintacticos": 72,
+      "total_sintacticos": 72,
+      "fallos": [],
+      "relaciones": {
+        "parafrasis": true,
+        "ambiguedad_antes_revocacion": true
+      },
+      "trazas_y_trabajo_iguales_primera": true,
+      "max_unidades": 621146,
+      "max_capacidad_bytes": 1675752,
+      "max_pico_solicitado_bytes": 1777770,
+      "max_estados_semanticos": 1554,
+      "compilacion_ms": 461.61556299999984,
+      "proceso_ms": 277.21692299999995
+    },
+    {
+      "id": "wasi-release",
+      "exit_code": 0,
+      "error_parse": null,
+      "cabecera": {
+        "instrumento": "IE004-SEMANTICA-A/1",
+        "perfil": "IE004-ES-P2/3-COSTE/1",
+        "primitivas": 26,
+        "usize_bits": 32,
+        "expresiones": 422,
+        "bytes_significado": 91,
+        "bytes_estado_sem": 100,
+        "bytes_nodo": 24,
+        "bytes_familia": 16,
+        "bytes_celda": 12,
+        "bytes_token": 24,
+        "bytes_gramatica_fija": 6760
+      },
+      "resumen": {
+        "resumen": true,
+        "semanticos_correctos": 61,
+        "semanticos_total": 61,
+        "sintacticos_correctos": 72,
+        "sintacticos_total": 72
+      },
+      "semanticos": 61,
+      "total_semanticos": 61,
+      "sintacticos": 72,
+      "total_sintacticos": 72,
+      "fallos": [],
+      "relaciones": {
+        "parafrasis": true,
+        "ambiguedad_antes_revocacion": true
+      },
+      "trazas_y_trabajo_iguales_primera": true,
+      "max_unidades": 621146,
+      "max_capacidad_bytes": 1675752,
+      "max_pico_solicitado_bytes": 1777770,
+      "max_estados_semanticos": 1554,
+      "compilacion_ms": 946.854464,
+      "proceso_ms": 212.12866500000018
+    }
+  ],
+  "binarios": [
+    {
+      "id": "nativo-debug",
+      "bytes": 4835480,
+      "sha256": "9465a666e8cf9c6661bcb388532fd711585c1e919a21b303eaa4e4906041d988"
+    },
+    {
+      "id": "nativo-release",
+      "bytes": 4647424,
+      "sha256": "b42253ffdca7e72cd8c1ec838c7be14f5b5b31abea67fdd0f1e1cd72fb990d76"
+    },
+    {
+      "id": "wasi-debug",
+      "bytes": 2475948,
+      "sha256": "357ed0a096f532d2b4289b3d7c8897b58ce78b27f615609e1c0d7ecf9cd80fef"
+    },
+    {
+      "id": "wasi-release",
+      "bytes": 2241115,
+      "sha256": "858f1f542a24c1dc6ee17da17834136e1e69301690248d022915bec63f28f068"
+    }
+  ],
+  "capturas": [
+    {
+      "id": "nativo-debug",
+      "archivo": "captura-d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805.jsonl.gz.b64",
+      "gzip_sha256": "d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805",
+      "gzip_bytes": 686831,
+      "stdout_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "stdout_bytes": 5711368
+    },
+    {
+      "id": "nativo-release",
+      "archivo": "captura-d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805.jsonl.gz.b64",
+      "gzip_sha256": "d3dde89ec01ac619914ad2fc2ae45071b640659abbad45c5d8dde20e6b7a9805",
+      "gzip_bytes": 686831,
+      "stdout_sha256": "c466a38a35bdf5baced31333e76bee0efd423e6ecd833d5034c655f920ca5589",
+      "stdout_bytes": 5711368
+    },
+    {
+      "id": "wasi-debug",
+      "archivo": "captura-06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1.jsonl.gz.b64",
+      "gzip_sha256": "06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1",
+      "gzip_bytes": 686829,
+      "stdout_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "stdout_bytes": 5711367
+    },
+    {
+      "id": "wasi-release",
+      "archivo": "captura-06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1.jsonl.gz.b64",
+      "gzip_sha256": "06b88c6887dc8301fdb9091aee6ca2d10d96c21265d7585199b0e2fa4715b7f1",
+      "gzip_bytes": 686829,
+      "stdout_sha256": "e366ad8cfdda921ea5c05556687ca62d563eac4312bdd93d8c5011ae3591cc0c",
+      "stdout_bytes": 5711367
+    }
+  ]
+}

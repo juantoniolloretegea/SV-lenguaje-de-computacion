@@ -1,0 +1,14 @@
+{
+  "id": "rustc-version",
+  "cmd": "/workspace/scratch/0d8b35aea769/fase004/recepcion-compromiso-p3/toolchain/rustup/toolchains/1.98.0-x86_64-unknown-linux-gnu/bin/rustc",
+  "args": [
+    "-vV"
+  ],
+  "inicio": "2026-09-11T06:21:34.101Z",
+  "fin": "2026-09-11T06:21:34.119Z",
+  "duracion_ms": 16.338586999999997,
+  "timeout_ms": 10000,
+  "exit_code": 0,
+  "signal": null,
+  "error": null
+}
