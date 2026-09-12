@@ -16,6 +16,7 @@
 | S9 | finalizado | Recepción complementaria de Mistral en la segunda prueba de trazabilidad | Watson / W-S0 | 2026-09-12T16:36:15Z |
 | S10 | finalizado | Consolidación de resultados, ranquin documental y modelos con pesos disponibles | Watson / W-S0 | 2026-09-12T16:56:53Z |
 | S11 | finalizado | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:42:13Z |
+| S12 | finalizado | Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3 | Watson / W-S0 | 2026-09-12T17:56:48Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -435,4 +436,39 @@
 **Siguiente accion:** Fijar siguiente contraste G/J de sustitución de base y reevaluación distinguida, reutilizando identidad/custodia existentes; catálogo ES/EN posterior a la integración aplicable.
 
 **Observaciones:** Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
+
+
+## S12 · Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T17:56:48Z
+
+**Fecha inicio utc:** 2026-09-12T17:56:48Z
+
+**Fecha actualizacion utc:** 2026-09-12T17:56:48Z
+
+**Fecha fin utc:** 2026-09-12T17:56:48Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Retirar la secuencia de agentes indebidamente presentada como decidida; restituir ruta principal e integración 1+3; explicitar enlace obligación-representación-realización.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje ede75c6a765479ebe26789b1e3fc4a36776def01; laboratorio 706bce072e1dab54350146c2abc3face093be72b
+
+**Dependencias:** Aclaración expresa de Dirección tras S11; rectores vigentes; RETP-179/180.
+
+**Resultado:** Secuencia fija de agentes retirada. Su posición se valorará después del cierre de inmunología. La suficiencia de semántica 0.2 e IR 0.3 vuelve a ser criterio explícito del frente.
+
+**Verificacion:** Rectores sin cambios cotejados por blob; historial y resultados S11 conservados; sin nueva ejecución funcional.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s12-rectificacion-rumbo/ACTA_RECTIFICACION_DE_RUMBO.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-181)
+
+**Siguiente accion:** Vincular obligaciones de integración 1+3 con semántica 0.2, IR 0.3 y operaciones existentes antes de ampliar G/J; recoger causas para catálogo.
+
+**Observaciones:** Rectificación documental ya realizada al registrarse; no atribuye nuevo cierre de dominio ni promoción nuclear. S11 conserva su resultado acotado.
 

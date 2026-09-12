@@ -1843,3 +1843,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-180 · S11 · Cierre acotado de recepción contextual y cobertura A/H
 
 2026-09-12T17:42:13Z. Conforme dentro del montaje S11: orden conservada como dato, omisiones y contexto ajeno/alterado rechazados antes de escritura; recibo negativo íntegro. 60 observaciones de diez casos; seis ejecuciones debug/release; 104 capturas idénticas por ejecución; 22 invocaciones; dos sensibilidades detectadas en AH03 y AH06. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos. Siguiente: Fijar siguiente contraste G/J de sustitución de base y reevaluación distinguida, reutilizando identidad/custodia existentes; catálogo ES/EN posterior a la integración aplicable.
+
+
+<a id="retp-181"></a>
+
+### RETP-2026-181 · S12 · Rectificación de rumbo tras S11
+
+2026-09-12T17:56:48Z. Dirección corrige el orden de agentes indebidamente presentado por Watson como decidido. La fórmula de RETP-179/180 queda retirada como relevo vigente; después de cerrar inmunología se valorará su posición. La integración 1+3 debe comprobar suficiencia de semántica 0.2 e IR 0.3, con enlace explícito a realización y causas para catálogo, sin forzar representaciones ni presuponer suficiencia por un ensayo Rust. [Rectificación íntegra](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s12-rectificacion-rumbo/ACTA_RECTIFICACION_DE_RUMBO.md). S11 conserva sus resultados; no se ejecuta otro contraste ni se altera núcleo o dominio.
