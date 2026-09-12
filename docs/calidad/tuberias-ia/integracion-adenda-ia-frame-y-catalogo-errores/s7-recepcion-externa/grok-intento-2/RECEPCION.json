@@ -1,0 +1,21 @@
+{
+  "suceso": "S7",
+  "registro": "RETP-2026-174",
+  "responsable": "Watson / W-S0",
+  "fecha_registro_utc": "2026-09-12T15:57:13.218643+00:00",
+  "archivo_recibido": "Pegado text(10).txt",
+  "bytes_original": 30588,
+  "sha256_original": "5820570785bd0702d28a00e36b9ed9cc42da1124e002663c3df1964cc0b66689",
+  "participante_declarado": {
+    "modelo": "Grok 4.6",
+    "version_declarada": "Grok 4.6",
+    "exposicion_previa_declarada": "Segundo intento. En esta misma conversacion se entrego antes S4-EXTERNA-DOCUMENTAL/1 (PRUEBA_COMUN.md @e1dcd9f5), mismos doce casos conocidos, modalidad lectura_documental. No se leyo CUALIFICACION.json ni respuestas de otros participantes. Se leyo el banco SV-TRAZABILIDAD-2/1 y su plantilla en el commit fccde9cf524a0d62b2dd1a2ee05170d6f4358074."
+  },
+  "intento": 2,
+  "dictamen": "CONFORME_DOCUMENTAL",
+  "citas_fuentes": 32,
+  "casos": 12,
+  "tiempo_participante": null,
+  "actividad_participante": "No se adjunta registro de ejecución. No se infieren operaciones usadas o ausentes.",
+  "alcance": "Conformidad documental de esta entrega; identidad, versión y exposición son declaraciones del participante."
+}

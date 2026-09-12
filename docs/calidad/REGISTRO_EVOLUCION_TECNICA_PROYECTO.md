@@ -1794,3 +1794,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-173 · S7 · Aclaración posterior de Qwen
 
 2026-09-12T15:43:12Z. Declaración posterior preservada y contrastada; no nuevo intento. Confirma texto posterior y autocontradicción, pero atribuye al segundo intento una introducción sólo presente en el primero y a S4 una prohibición ausente del encargo fijado. Causa interna no acreditada. Dictámenes y aceptación provisional RETP-172 intactos; S7 en ejecución. [Contraste y declaración](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/aclaracion-1/ACTA_CONTRASTE.md).
+
+
+<a id="retp-174"></a>
+
+### RETP-2026-174 · S7 · Recepción de Grok y aclaraciones posteriores
+
+2026-09-12T15:59:53Z. Original Grok intento 2 preservado: CONFORME_DOCUMENTAL, doce casos y 32 citas, sin errores del instrumento fijado. Añadidos resúmenes con procedencia de las aclaraciones posteriores de Qwen y DeepSeek; originales y dictámenes anteriores intactos. S7 en ejecución, pendiente Claude. Secuencia de la dirección: completar registro, comparar candidatos y después estudiar licencia y despliegue independiente. [Acta y evidencias](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/grok-intento-2/ACTA_RECEPCION.md).

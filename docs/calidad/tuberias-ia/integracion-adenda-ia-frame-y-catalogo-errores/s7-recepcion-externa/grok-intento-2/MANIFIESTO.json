@@ -1,0 +1,38 @@
+{
+  "evaluar.py": {
+    "bytes": 2216,
+    "sha256": "4d8ee8b50341f2a4354b41cec1ea930009486471826d0a275aa41d8edb8fb337"
+  },
+  "RECTORES.json": {
+    "bytes": 622,
+    "sha256": "088104d1289837434701cb0df49161990c446534901c5632d90a16383d27fb56"
+  },
+  "ACTA_RECEPCION.md": {
+    "bytes": 2598,
+    "sha256": "7966bb4e4832a64df40ef7fc9207bb580d992f4ef81eb39fac51cd96fe1a0dd1"
+  },
+  "RESPUESTA_ORIGINAL.txt": {
+    "bytes": 30588,
+    "sha256": "5820570785bd0702d28a00e36b9ed9cc42da1124e002663c3df1964cc0b66689"
+  },
+  "EJECUCION_OBSERVADOR.json": {
+    "bytes": 978,
+    "sha256": "c78049ce537cb99c519f668956d66971d8f6b464910d5f71ff90b17e8d4d0f55"
+  },
+  "RECEPCION.json": {
+    "bytes": 1153,
+    "sha256": "831b943731a9670bdf8f5393b0f87c43c6ab9715b16140c08c6df9ed6ebe8084"
+  },
+  "COTEJO_ORIGINAL.json": {
+    "bytes": 442,
+    "sha256": "e72f11cc0a94ded6ef2014b63bb2ffb653c4a90e1b5d1879073ca11d6821f0d3"
+  },
+  "../qwen-intento-2/aclaracion-2/REGISTRO_ACLARACION.md": {
+    "sha256": "3a73d82f99148997e4295b9d3a61b57a6026576f5317e07b482382f8e94c14e5",
+    "bytes": 1949
+  },
+  "../deepseek-intento-2/aclaracion-1/REGISTRO_ACLARACION.md": {
+    "sha256": "3c583d6d31ac1120e74e6babd8ae114b615aadd6748a982c374014fd3597f963",
+    "bytes": 2190
+  }
+}
