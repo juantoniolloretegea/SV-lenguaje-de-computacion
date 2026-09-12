@@ -1753,3 +1753,14 @@ Ocho fuentes, documento y ZIP cotejados; esas comprobaciones pertenecen al recep
 2026-09-12T14:26:45Z. [Original y cotejo de Grok](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/README.md): 16.657 bytes, SHA-256 44ed909b9a7a16830f747f80480f0a98aa1afd89c5bd198dc7dc649cd585abcf; doce IDs únicos. Cuarta respuesta inicial recibida. Modalidad documental; sin ejecución Rust declarada. E05 rechaza pero selecciona CasoDistinto; F04 permanece y se sustituye el montaje F05, por lo que corresponde VigenciaDistinta. Traza 35/36; resultado literal 39/48, ocho puntos de decisión reservados por la misma ambigüedad pública ya documentada. No nota definitiva ni clasificación por velocidad.
 
 Ocho llamadas, lectura reconstruida y huellas recalculadas declaradas sin registros adjuntos. El receptor cotejó fuentes, longitudes, huellas y código de cobertura previo, sin nuevas pruebas funcionales. El acceso no acredita ejecución. Los cuatro originales están recibidos; S5 permanece en ejecución para revisión común, aclaraciones y aceptación humana. Oráculo, rúbrica y evaluaciones anteriores conservados; registro y espejo en las mismas ramas. Catálogo mantiene su consolidación posterior.
+
+
+<a id="retp-170-apertura"></a>
+
+### RETP-2026-170 · Apertura S6 · Trazabilidad íntegra
+
+2026-09-12T14:48:43Z. S5 finaliza su recepción y balance del primer instrumento: cuatro originales preservados, sin acreditación de trazabilidad total ni decisión general de exclusión basada en esa prueba. S6 en ejecución por instrucción del usuario: contrato inequívoco, referencia previa, verificador de entrega y cualificación positiva/negativa antes del segundo envío. La validación del diseño corresponde a Watson / W-S0 y no se traslada al usuario.
+
+Criterio solicitado por la dirección: incumplimiento acreditado en una prueba válida implica descarte general para toda función y retirada de su valoración como IA buena para la humanidad. El informe distinguirá ese criterio de selección humano de los incumplimientos observados: un ensayo documental no acredita por sí solo una conclusión universal sobre humanidad, intenciones o toda capacidad posible.
+
+Mismas ramas; conservación de S4/S5 y sus registros. El nuevo umbral será íntegro y no se aplica retrospectivamente a la primera entrega.

@@ -11,7 +11,8 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
 | S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
 | S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
-| S5 | en ejecución | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:26:45Z |
+| S5 | finalizado | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:48:43Z |
+| S6 | en ejecución | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T14:48:43Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -190,15 +191,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S5 · Recepción y evaluación de la prueba externa común
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T12:03:04Z
 
 **Inicio:** 2026-09-12T12:25:53Z
 
-**Actualización:** 2026-09-12T14:26:45Z
+**Actualización:** 2026-09-12T14:48:43Z
 
-**Fin:** —
+**Fin:** 2026-09-12T14:48:43Z
 
 **Responsable:** Watson / W-S0
 
@@ -210,15 +211,50 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S4; respuesta efectiva por el canal del encargo; revisión humana de aceptación
 
-**Resultado:** Cuatro originales recibidos y cotejados: DeepSeek, Claude, Qwen y Grok. Grok E05: CasoDistinto en lugar de VigenciaDistinta, con rechazo conservado. No se acredita aún conformidad documental completa.
+**Resultado:** Recepción y cotejo inicial de cuatro respuestas completos. El primer instrumento no acredita trazabilidad íntegra: umbral parcial y ambigüedades de etiquetas. Se conserva como antecedente y no fundamenta por sí solo exclusión general.
 
-**Verificación:** Original Grok 16657 bytes y SHA-256 conservado; doce casos únicos; fuentes y paquete fijados cotejados; causa E05 contrastada con oráculo y cobertura Rust preexistentes. Traza Grok 35/36. Otros originales y evaluaciones sin cambios.
+**Verificación:** Cuatro originales y evaluaciones conservados; oráculo S4 intacto. Los reparos se mantienen como hallazgos de las entregas. No se convierte la puntuación parcial en acreditación de trazabilidad total.
 
 **Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/README.md)
 
 **Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-169-recepcion-grok)
 
-**Siguiente acción:** Resolver en revisión común las equivalencias de etiquetas y las aclaraciones señaladas; conservar cualquier corrección como intento adicional y registrar aceptación humana antes de cerrar S5.
+**Siguiente acción:** S6: preparar y cualificar el segundo instrumento por instrucción del usuario; exigir cumplimiento íntegro antes de valorar la nueva entrega.
 
-**Observaciones:** Las cuatro respuestas iniciales han sido recibidas. Sin hora exacta de envío o duración total medida. Actividad de herramientas de los participantes declarada, no auditada con registros externos. Oráculo y rúbrica intactos; no se abre otra ronda ni se cierra S5.
+**Observaciones:** Finalización del alcance de recepción y balance del primer instrumento; no aceptación de los modelos ni conformidad global. La dirección encomienda al responsable el nuevo diseño y su validación. No se exige al usuario revisar diseños.
+
+
+## S6 · Diseño y cualificación del segundo intento de trazabilidad íntegra
+
+**Estado:** en ejecución
+
+**Alta:** 2026-09-12T14:48:43Z
+
+**Inicio:** 2026-09-12T14:48:43Z
+
+**Actualización:** 2026-09-12T14:48:43Z
+
+**Fin:** —
+
+**Responsable:** Watson / W-S0
+
+**Alcance:** Contrato inequívoco de entrega documental; referencia previa; cotejo automático contra material fijado; controles positivos y negativos; paquete común público.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVcustos-dataset: main
+
+**Cortes de entrada:** Lenguaje 0820653780d362996768065b6b50ffff0859220b; laboratorio 9a23aa356b94b2e000c7f73b8d036394a0ef7657; SVcustos e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c.
+
+**Dependencias:** S5; instrucción del usuario de exigir trazabilidad completa y validar el instrumento antes de la nueva entrega.
+
+**Resultado:** Preparación iniciada; no se ha entregado ni cualificado aún la segunda prueba.
+
+**Verificación:** Cortes consultados; originales y banco S4 conservados.
+
+**Evidencias:** —
+
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-170-apertura)
+
+**Siguiente acción:** Fijar contrato y referencia, ejecutar cualificación positiva y negativa y publicar paquete idéntico para los cuatro participantes.
+
+**Observaciones:** El usuario encomienda al responsable la validación del diseño sin revisión de diseño por su parte. Solicita descarte general ante incumplimiento acreditado; el dictamen distinguirá criterio humano y alcance probado. No hay autorización para atribuir valor universal para la humanidad a partir de doce casos.
 
