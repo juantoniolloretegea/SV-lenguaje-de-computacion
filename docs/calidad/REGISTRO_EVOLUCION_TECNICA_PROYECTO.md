@@ -1822,3 +1822,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-177 · S9 · Mistral segunda prueba de trazabilidad
 
 2026-09-12T16:36:15Z. Archivo original distinto de la transcripción S4 anteriormente repetida. NO_CONFORME con 12 discrepancias: ocho citas con doble escape, R08 alterada, causa E09 y causa/fundamento E10. E01–E06 sin discrepancias; 24/32 citas exactas. Sin reparación ni atribución de la duplicación previa a Mistral. [Acta y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/ACTA_RECEPCION.md).
+
+
+<a id="retp-178"></a>
+
+### RETP-2026-178 · S10 · Acta comparativa y retorno a integración 1+3
+
+2026-09-12T16:56:53Z. Cinco participantes, diez entregas y 120 casos consolidados. Empate de conformidad documental Grok/Claude, con exposición alta de Claude; Qwen aceptado provisionalmente por Dirección con original NO_CONFORME; DeepSeek con incumplimiento de fidelidad; Mistral descartado por Dirección tras segunda entrega NO_CONFORME. Fuentes oficiales de modelos disponibles, publicación, licencia y continuidad, sin traslado automático del resultado comercial a pesos propios. [Acta, ranquin y evidencias](Inventario-sv/ranquin-ias-trazabilidad/ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md). Retirada exclusiva de inicio.md. Se retoma prioridad de integración 1+3, con catálogo ES/EN posterior y demás obligaciones intactas.

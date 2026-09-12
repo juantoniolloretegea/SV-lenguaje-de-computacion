@@ -136,3 +136,12 @@ La prioridad sigue siendo la integración 1+3, con recogida continua de causas. 
 
 > **Relevo vigente · S6/S7 · RETP-170:** [segundo intento cualificado](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md). S6 finalizado; S7 pendiente de recepción. Exigencia íntegra y aviso de exclusión definidos de antemano; 482 controles previstos satisfechos. Las entradas anteriores conservan su corte histórico.
 
+
+
+## Consolidación de recepciones y retorno a integración 1+3 · RETP-178
+
+> **Relevo vigente · S10:** 2026-09-12T16:56:53Z. [Acta y ranquin](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/ranquin-ias-trazabilidad/ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md): cinco participantes y diez entregas recibidas, con 120 casos. Grok y Claude conformes documentalmente en la segunda ronda, con exposición alta de Claude; Qwen aceptado provisionalmente por Dirección y original NO_CONFORME conservado; DeepSeek con defecto de fidelidad; Mistral descartado por Dirección tras segunda entrega NO_CONFORME. Las menciones anteriores a recepciones pendientes conservan sólo su corte histórico.
+
+Se puede retomar la integración del punto 1 (integridad/trazabilidad IA) con el 3 (reconstrucción/recibo/frame). S1, S2 y S3 se reutilizan dentro de su alcance; S4–S9 añaden contraste externo documental. Siguiente trabajo: reconciliar la matriz A–L con estas evidencias y fijar el siguiente hueco integrado, conservando objeto presentado, invocación, cobertura y referencia independiente; montaje, controles, ataques, esperados y presupuesto antes de ejecutar. No se abre otro torneo como condición previa. La consolidación del catálogo y ES/EN permanece posterior, con recogida continua de causas.
+
+No se acredita cierre A–L, pantalla o revisión humana, imposición frente al host, persistencia ni actuación profesional. Se conservan reserva P3, custodia RETP-130 y condiciones P4/P5/P6. Esta acta no modifica el núcleo ni promueve una implantación.

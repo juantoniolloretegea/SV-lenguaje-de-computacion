@@ -14,6 +14,7 @@
 | S7 | finalizado | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T16:05:57Z |
 | S8 | finalizado | Recepción complementaria de Mistral en la primera prueba S4 | Watson / W-S0 | 2026-09-12T16:21:05Z |
 | S9 | finalizado | Recepción complementaria de Mistral en la segunda prueba de trazabilidad | Watson / W-S0 | 2026-09-12T16:36:15Z |
+| S10 | finalizado | Consolidación de resultados, ranquin documental y modelos con pesos disponibles | Watson / W-S0 | 2026-09-12T16:56:53Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -363,4 +364,39 @@
 **Siguiente accion:** Conservar dictamen y esperar decisión de dirección; comparación y licencias posteriores.
 
 **Observaciones:** El nuevo adjunto responde al segundo contrato. La duplicación anterior en conversación no se imputa como fallo adicional del participante. Actividad externa y continuidad de sesión no verificadas. Sin selección ni exclusión automática.
+
+
+## S10 · Consolidación de resultados, ranquin documental y modelos con pesos disponibles
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T16:56:53Z
+
+**Fecha inicio utc:** 2026-09-12T16:56:53Z
+
+**Fecha actualizacion utc:** 2026-09-12T16:56:53Z
+
+**Fecha fin utc:** 2026-09-12T16:56:53Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Cinco participantes, diez entregas, 120 casos; fuentes oficiales de publicación, licencia y continuidad; relevo a integración 1+3.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje b3f8cc771de98f7c77273544d1b9c941abd7eace; laboratorio 6da6e88c5b61f2b36fe10853ddd4e16c58fc6703
+
+**Dependencias:** S4–S9 y rectificaciones preservadas; mandato expreso de Dirección para publicación y retirada de inicio.md.
+
+**Resultado:** Grok/Claude: empate de conformidad documental; Qwen: aceptación provisional, original NO_CONFORME; DeepSeek: fidelidad no conforme; Mistral: NO_CONFORME y descartado por Dirección de selección actual.
+
+**Verificacion:** Entradas cotejadas por blob y SHA-256; diez entregas y 120 casos; rangos S4 no usados para ordenar; modelos y licencias contrastados en fuentes oficiales.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/ranquin-ias-trazabilidad/ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-178)
+
+**Siguiente accion:** Retomar integración 1+3: reconciliar matriz A–L, fijar siguiente hueco integrado y montaje antes de ejecutar; catálogo ES/EN posterior.
+
+**Observaciones:** Sin clasificación de rapidez ni homologación de pesos descargables. Claude con exposición alta. No implica cierre A–L/P4/P5/P6 ni promoción productiva. Sólo se retira inicio.md de la carpeta solicitada.
 

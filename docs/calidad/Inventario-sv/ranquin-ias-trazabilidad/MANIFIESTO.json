@@ -1,0 +1,38 @@
+{
+  "EVIDENCIAS_DE_ENTRADA.json": {
+    "bytes": 17513,
+    "sha256": "e803c0c918fd91b39772341c096b8f9538ad9032560ddecdc9c055a700e4cd1c"
+  },
+  "RECTORES.json": {
+    "bytes": 622,
+    "sha256": "22dc1cf2a7d9508190a653c22da9d9fd8cfc13829bc13807830949269bad4dbf"
+  },
+  "RESULTADOS_DETALLADOS.json": {
+    "bytes": 277340,
+    "sha256": "bedb254fbefb4888069f8c25a1fb7167a6278c2fed1d8796d1972163ec3d5c1c"
+  },
+  "FUENTES_OFICIALES.json": {
+    "bytes": 4235,
+    "sha256": "14132f48906520ededfa6594ff592e5f01363148b1bd2c2e2ea4cb46ca249b3a"
+  },
+  "consolidar.py": {
+    "bytes": 10594,
+    "sha256": "9fc64355c757fb2537b05244a0a9da9dfb740555548494467e8cef067d7fce68"
+  },
+  "RANQUIN.csv": {
+    "bytes": 8653,
+    "sha256": "0ec513afcdac9593cad284d2f01254fa5bbf8126c9382caf949c0f53ef968dc5"
+  },
+  "ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md": {
+    "bytes": 16303,
+    "sha256": "c7561316db5ff30ba6739677fb819bc7db887a6620d68fd8e57f5c3226833c12"
+  },
+  "RESULTADOS_POR_CASO.csv": {
+    "bytes": 65356,
+    "sha256": "f4ae8cdf001b10fa34a427247cb1c3fe504f562d7008eaa7b473a8ab2ee60752"
+  },
+  "RANQUIN.json": {
+    "bytes": 11632,
+    "sha256": "f4f41886e4db92b3fcedbd07a8ee148c02cd038e59f8fa9038da625366f13631"
+  }
+}

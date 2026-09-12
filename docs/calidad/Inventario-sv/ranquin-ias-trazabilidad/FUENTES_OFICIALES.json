@@ -1,0 +1,71 @@
+{
+  "consulta": "2026-09-12",
+  "metodo": "Lectura de páginas oficiales, fichas de pesos, licencias e historiales mediante navegador de consulta web. Las URL pueden evolucionar. No se conserva una captura íntegra ni se atribuye una huella a la página remota.",
+  "alcance_inventario": "Selección de modelos y familias relevantes con enlaces al editor; no inventario exhaustivo de todas las variantes y cuantizaciones.",
+  "ausencia_anuncio": "No encontrado en las páginas revisadas; no prueba negativa universal ni compromiso de mantenimiento futuro.",
+  "proveedores": [
+    {
+      "empresa": "xAI",
+      "publicacion": "Grok-1: 2024-03-17; Grok-2: subida 2025-08-22 y ficha 2025-08-23.",
+      "actualizacion": "Grok-2: último cambio visible de licencia 2025-11-05; no acredita pesos nuevos. Grok-1 histórico, disponible.",
+      "abandono": "No se encontró anuncio de abandono en las páginas oficiales revisadas. Actividad escasa de estos pesos no demuestra abandono.",
+      "urls": [
+        "https://github.com/xai-org/grok-1",
+        "https://huggingface.co/xai-org/grok-2",
+        "https://huggingface.co/xai-org/grok-2/commits/main",
+        "https://huggingface.co/xai-org/grok-2/blob/main/LICENSE",
+        "https://x.ai/news"
+      ]
+    },
+    {
+      "empresa": "Anthropic",
+      "publicacion": "No aplicable a pesos; Opus 5, servicio: 2026-07-24.",
+      "actualizacion": "Servicio Opus 5 activo; catálogo y política de retirada vigentes. No hay rama abierta identificada.",
+      "abandono": "No aplicable a una rama abierta no identificada. Opus 5 figura activo; la retirada de versiones anteriores no es abandono de Claude.",
+      "urls": [
+        "https://platform.claude.com/docs/en/models/overview",
+        "https://www.anthropic.com/news/claude-opus-5",
+        "https://platform.claude.com/docs/en/about-claude/model-deprecations"
+      ]
+    },
+    {
+      "empresa": "Alibaba / Qwen",
+      "publicacion": "Qwen3.8-27B: 2026-08-14; 2.4T-A95B: 2026-08-12 (anuncios del repositorio).",
+      "actualizacion": "Familia activa: lanzamientos de agosto de 2026 y repositorio mantenido; no promesa de actualización de cada peso.",
+      "abandono": "No se encontró anuncio de abandono en las fuentes oficiales revisadas; hay lanzamientos recientes.",
+      "urls": [
+        "https://github.com/QwenLM/Qwen3.8",
+        "https://huggingface.co/Qwen/Qwen3.8-27B",
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+        "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B/blob/main/LICENSE"
+      ]
+    },
+    {
+      "empresa": "DeepSeek",
+      "publicacion": "V4.1-Flash: septiembre de 2026 (día exacto no fijado); V4-Pro-0813: agosto de 2026 (variante y repositorio).",
+      "actualizacion": "Familia activa: V4.1-Flash con corrección de codificación visible dos días antes de la consulta; no equivale a pesos nuevos.",
+      "abandono": "No se encontró anuncio de abandono en las fuentes oficiales revisadas; hay lanzamientos recientes.",
+      "urls": [
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4.1-Flash/commits/main",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro-0813",
+        "https://github.com/deepseek-ai/DeepSeek-R1",
+        "https://huggingface.co/deepseek-ai/DeepSeek-V3.2"
+      ]
+    },
+    {
+      "empresa": "Mistral AI",
+      "publicacion": "Medium 3.5: repositorio desde 2026-04-29, artículo 2026-05-22; Small 4: 2026-03-16; Large/Ministral 3: 2025-12-02.",
+      "actualizacion": "Medium 3.5: cambio de configuración 2026-07-15; familia con publicaciones de 2026. No equivale a nueva formación de pesos.",
+      "abandono": "No se encontró anuncio de abandono en las fuentes oficiales revisadas; hay actividad reciente.",
+      "urls": [
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B",
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/blob/main/LICENSE",
+        "https://huggingface.co/mistralai/Mistral-Medium-3.5-128B/commits/main",
+        "https://mistral.ai/news/vibe-remote-agents-mistral-medium-3-5/",
+        "https://mistral.ai/news/mistral-small-4/",
+        "https://mistral.ai/news/mistral-3/"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "corte_publico": "b3f8cc771de98f7c77273544d1b9c941abd7eace",
+  "archivos": [
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/claude/EVALUACION.json",
+      "bytes": 10936,
+      "sha256": "2f03b23506dbafc765e6f48253aaad4384a5746d1f5bf201e91fe6cb6c359b58",
+      "git_blob": "0f03d0be7d134c23094b4487a13f7e4601363fe7",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/claude/EVALUACION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/claude/RECEPCION.json",
+      "bytes": 6971,
+      "sha256": "3ef408f04b6491d8d060251dae0f9ad098cda338d0586845cc79403c829a12ba",
+      "git_blob": "637dcbf7cab12e1af3f5dfd5eb34dee261d7af3e",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/claude/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/claude/RESPUESTA_ORIGINAL.json",
+      "bytes": 21830,
+      "sha256": "29ac0a58ca78c608425861f96173387b3bc7d9dd7e66a0eb8d4128d518479eca",
+      "git_blob": "0916a917af5c2bba05b6d3797796bccb1bec186a",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/claude/RESPUESTA_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/deepseek/EVALUACION.json",
+      "bytes": 10093,
+      "sha256": "deb8a6e2ac2eeaf405dad33eda2730819bf55697836a462438db5559354d511b",
+      "git_blob": "97cc5f270bb7f1bf6acced719cc71dc1167d9d81",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/deepseek/EVALUACION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/deepseek/RECEPCION.json",
+      "bytes": 3052,
+      "sha256": "b6512785b438bdb69c77d2f6fe1ec25c7156084b9208f0a9c0ca788cece1a061",
+      "git_blob": "f9bc2dcd1de316cf9f2587db909477e9746385fc",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/deepseek/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/deepseek/RESPUESTA_ORIGINAL.txt",
+      "bytes": 12584,
+      "sha256": "bb3b4ea6b0c9ff9ba69f3565c2d0363c07902754b7d6e26a2d693a0be79c0b73",
+      "git_blob": "7ae6e893834ce746ac0fe12dada15cb811eda67c",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/deepseek/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/qwen/EVALUACION.json",
+      "bytes": 12551,
+      "sha256": "c7b86c478f6c173f5d6adb7dd7e138d2c021a5398a1543f3933c8ac31347a0ae",
+      "git_blob": "59bdf722463e6c2dc82ff75024f53b37da02214d",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/qwen/EVALUACION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/qwen/RECEPCION.json",
+      "bytes": 3533,
+      "sha256": "13d5044d89d2f771cbceb662cfde832b94fe128881c04138c1005b00af63b855",
+      "git_blob": "aaca68d854f8a8ada63988b9f0f4645016b96ae2",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/qwen/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-externa/entrega/qwen/RESPUESTA_ORIGINAL.txt",
+      "bytes": 11086,
+      "sha256": "54a120708e4c917801d4cd7c550bdcd21e35ad28c68b9d66c297ce40abb91bbd",
+      "git_blob": "a10080744a8febdd8e858a2ef00fe61728bbf647",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/qwen/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-grok/entrega/grok/EVALUACION.json",
+      "bytes": 11040,
+      "sha256": "e6571e8f5274f19a299986a42387310fdc6c34f01e6c540098698d38f42407dc",
+      "git_blob": "8fda362faaa36ef78649f0e16fe8b05d4a746b97",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/EVALUACION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-grok/entrega/grok/RECEPCION.json",
+      "bytes": 5499,
+      "sha256": "e084766bc8c78d49c187a40c42c06d459980b4a6e5afe90e5208b150a9d861d6",
+      "git_blob": "33ba74e14610189253c04ce6fad9f37c74e7daba",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s5-recepcion-grok/entrega/grok/RESPUESTA_ORIGINAL.txt",
+      "bytes": 16657,
+      "sha256": "44ed909b9a7a16830f747f80480f0a98aa1afd89c5bd198dc7dc649cd585abcf",
+      "git_blob": "9ce2a2053608a0834d2b913103f16004efa84560",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s6-trazabilidad-total/publico/cotejar_entrega.py",
+      "bytes": 6735,
+      "sha256": "2b80d47662a2b312022ee2686952e6deb8ea7f19aeeb7e6722e3a1fa60d00173",
+      "git_blob": "e428d9f58530fd8de388ac43f436894722bea6c4",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s6-trazabilidad-total/cotejar_entrega.py"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-claude/expediente/COTEJO_ORIGINAL.json",
+      "bytes": 442,
+      "sha256": "8e678a3576df583d27839c15e60b3fd9f217fe2769e7d713df87d4a39231cad3",
+      "git_blob": "3c5d5f4e8c41f48227c855546fa1730497a29269",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/claude-intento-2/COTEJO_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-claude/expediente/RECEPCION.json",
+      "bytes": 1862,
+      "sha256": "cd5adfab1f61c669e236800f50a36583c71c5e7eb9bbae332bbbc7ad05aee27a",
+      "git_blob": "1f16b7fd75eed470d5f333108452e0d349ee7c8c",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/claude-intento-2/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-claude/expediente/RESPUESTA_ORIGINAL.txt",
+      "bytes": 31242,
+      "sha256": "8fe52c9c84010171144cc678f28d13d5ef194bae637def11c0ed3c6156d7ef23",
+      "git_blob": "22190c115a1af1c0fca07d43d6bab22f3a1262d4",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/claude-intento-2/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-deepseek/expediente/COTEJO_ORIGINAL.json",
+      "bytes": 1737,
+      "sha256": "b87b619321d346914171cff2df21c3bef60ef084a08c2273bf6ee6b47a49a319",
+      "git_blob": "00b41ed1dccc9aebe8664ea7bc8160778740097d",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/COTEJO_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-deepseek/expediente/RECEPCION.json",
+      "bytes": 1207,
+      "sha256": "22a35507163dcc3b09a0ac89f6961f81801d0df6c8128513d6a1cdc733a76ec1",
+      "git_blob": "142ae13927dadbfd5ba54de0c6b0698c55f444f1",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-deepseek/expediente/RESPUESTA_ORIGINAL.txt",
+      "bytes": 29696,
+      "sha256": "062bf4d3edb29cfa8b4b7ebaa47e80b7aa58b71a44675b0beef7d4680299bfc4",
+      "git_blob": "3a2c804709af580d035abe57ae57dd880c3f3398",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-grok/expediente/COTEJO_ORIGINAL.json",
+      "bytes": 442,
+      "sha256": "e72f11cc0a94ded6ef2014b63bb2ffb653c4a90e1b5d1879073ca11d6821f0d3",
+      "git_blob": "1d5ebfd4d9fce0a725806be63ea6ea2b655a36cd",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/grok-intento-2/COTEJO_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-grok/expediente/RECEPCION.json",
+      "bytes": 1153,
+      "sha256": "831b943731a9670bdf8f5393b0f87c43c6ab9715b16140c08c6df9ed6ebe8084",
+      "git_blob": "7af3ed03e30ce7ff7464b91c18eb8a770f420b3a",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/grok-intento-2/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-grok/expediente/RESPUESTA_ORIGINAL.txt",
+      "bytes": 30588,
+      "sha256": "5820570785bd0702d28a00e36b9ed9cc42da1124e002663c3df1964cc0b66689",
+      "git_blob": "2a91b370e8cb80b09e653dc03e86a3f9c1b4687c",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/grok-intento-2/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-qwen/expediente/BLOQUE_JSON_DIAGNOSTICO.json",
+      "bytes": 30443,
+      "sha256": "f591c186baf4f9b12eeb3d2988e2d1be73e9fa4b16286a8e720dfcb3f947ee11",
+      "git_blob": "639015ad71dc04a34f38fc08c3432f4dbfd4da6e",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/BLOQUE_JSON_DIAGNOSTICO.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-qwen/expediente/COTEJO_BLOQUE_DIAGNOSTICO.json",
+      "bytes": 442,
+      "sha256": "852cd21ac3701c66ddac807af4a2721b3078b0fdc8e33d29cbeb1d5f81ea6b4d",
+      "git_blob": "1380e50b535e5895ebe6c8f00a72afc9131b3ecf",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/COTEJO_BLOQUE_DIAGNOSTICO.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-qwen/expediente/COTEJO_ORIGINAL.json",
+      "bytes": 467,
+      "sha256": "96d6a57fcb8e275d6946891239860ecd75517a1c884703274558a09b4931df90",
+      "git_blob": "f717c338f9f208ce77828a20d4872f046ed3439b",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/COTEJO_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-qwen/expediente/RECEPCION.json",
+      "bytes": 1675,
+      "sha256": "e0dfd5a9e77793cfee7e347b6dfcf70e39f8ca430c729296d9037fabce41d888",
+      "git_blob": "ec1b0749ba4633009502bdf5a5e0ddf33faf5769",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s7-recepcion-qwen/expediente/RESPUESTA_ORIGINAL.txt",
+      "bytes": 32876,
+      "sha256": "bad096f38fabc301a3aca10ab626d70ae8ca763e4d3fe1446af5c79ee83e09da",
+      "git_blob": "1cfb1e749d13fc8766e45934f9425dd96c6aceb6",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/RESPUESTA_ORIGINAL.txt"
+    },
+    {
+      "archivo_local_relativo": "s8-recepcion-mistral/expediente/EVALUACION.json",
+      "bytes": 8869,
+      "sha256": "ce8f89d6896f89552871e13401a6f0197b7e40be709b75099ca411c7aea60688",
+      "git_blob": "9b0e9dbfaa1342d08c2f82de1803ffeebe6e9016",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/EVALUACION.json"
+    },
+    {
+      "archivo_local_relativo": "s8-recepcion-mistral/expediente/RECEPCION.json",
+      "bytes": 1419,
+      "sha256": "6a311319e2f4ad640883e1e1ce05898d9149f10246dfd33de1f9590b6b32a872",
+      "git_blob": "9810c676b9e44db4efbc6dbb8bd427631c1a4e18",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s8-recepcion-mistral/expediente/RESPUESTA_TRANSCRITA.json",
+      "bytes": 8900,
+      "sha256": "84379ce5016f2afb5ade20a548f1972f070b1c57d1fe23f0a685febcc9e65680",
+      "git_blob": "deb9742097d1486102e5f09ba446333f928a2f46",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/RESPUESTA_TRANSCRITA.json"
+    },
+    {
+      "archivo_local_relativo": "s9-recepcion-mistral/expediente/COTEJO_ORIGINAL.json",
+      "bytes": 1014,
+      "sha256": "723cd45a68274e58ae2ec11d02c52c02ea4cf649c9f00d85f7c7b4f2005fd423",
+      "git_blob": "da3e4c89859d62df726f62e9aab90a351b0c6f95",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/COTEJO_ORIGINAL.json"
+    },
+    {
+      "archivo_local_relativo": "s9-recepcion-mistral/expediente/RECEPCION.json",
+      "bytes": 858,
+      "sha256": "794351a319cebb294b83dc2eedf7ee13d6f3d82de2d8fe3e32ab49757fe28dfa",
+      "git_blob": "ccbef1137435fbca2f2d9411268a58a5149fa540",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/RECEPCION.json"
+    },
+    {
+      "archivo_local_relativo": "s9-recepcion-mistral/expediente/RESPUESTA_ORIGINAL.txt",
+      "bytes": 28737,
+      "sha256": "f4bda6916babedcb8ea56a1de98121ad6ce97f937b27ce365ca06e044ecb65f1",
+      "git_blob": "6c852616aa4b2244481fdf59ed7076857d770df1",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/b3f8cc771de98f7c77273544d1b9c941abd7eace/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/RESPUESTA_ORIGINAL.txt"
+    }
+  ],
+  "verificacion": "Cada archivo local usado coincide con un blob presente en el árbol del corte público indicado; SHA-256 recalculado. Los cotejos se consolidan sin reinterpretar su verificador."
+}
