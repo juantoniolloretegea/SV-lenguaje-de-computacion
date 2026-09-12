@@ -1699,3 +1699,10 @@ El mismo archivo A01, byte por byte y con idéntico contexto, produce DATO/8.40 
 Doce controles en seis ejecuciones nativas: 72 observaciones, 42 capturas idénticas por ejecución, diez cuerpos anteriores conservados. Dos sensibilidades detectadas en CI02 y CA02. Presupuesto cerrado: 23 invocaciones, sin fallos instrumentales ni correcciones adicionales. El reproductor publicado es el ejecutado. CPU y pared registradas; RSS por proceso no disponible.
 
 Cápsula original de 71 archivos intacta; copia ejecutable con 69 archivos idénticos y dos sustituciones declaradas de montaje y fijación del enlace. Lógica de cobertura S1 reutilizada con versión/rangos nuevos; semántica, política, custodia, entrega y lectura de la candidata intactas. Capturas completas y causas locales conservadas, sin nuevos códigos SV ni conversión a U. C/I global y A–L no se dan por cerrados; prueba externa común, P3 reservada, P4/P5/P6 y consolidación posterior del catálogo conservan sus condiciones. Sin cambios productivos, nuevas ramas o repetición de S1.
+
+
+<a id="retp-166"></a>
+
+### RETP-2026-166 · S3 · Apertura de presentación en destino
+
+2026-09-12T11:38:45Z. [Contrato previo, controles y presupuesto](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/CONTRATO_S3.md). S3 en ejecución. RETP-150 ya rechaza la eliminación de negación; S3 prueba la composición con cobertura y los bytes realmente escritos/recuperados de un archivo, sin atribuir de nuevo la prueba aislada. Referencia P3-01/A01; 73 fuentes S2 sin cambios; sólo conductor de ensayo nuevo. Ocho controles, seis ejecuciones y dos sensibilidades previstos, máximo 22 invocaciones Rust. Preparación anterior a la fijación conservada aparte. Mismas ramas y espejo de registros. La representación gráfica y la recepción externa permanecen pendientes.

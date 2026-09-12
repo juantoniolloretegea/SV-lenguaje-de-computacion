@@ -1,0 +1,11 @@
+{
+  "version": "S2-DECLARACION-VIGENCIA/1",
+  "antecedente_montaje_sha256": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff",
+  "cambio": {
+    "id": "P3-11",
+    "fuente": "A01",
+    "anterior": true,
+    "vigente": false
+  },
+  "alcance": "Instantánea sintética fijada por el conductor; no acta de revocación profesional ni mutación de una ejecución en curso."
+}

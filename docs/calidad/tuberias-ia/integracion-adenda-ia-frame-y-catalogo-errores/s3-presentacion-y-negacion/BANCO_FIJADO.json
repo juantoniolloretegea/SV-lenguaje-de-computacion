@@ -1,0 +1,171 @@
+{
+  "version": "S3-PRESENTACION-DESTINO/1",
+  "cortes": {
+    "lenguaje": "1430f64869b341ad0795588db425fb69e65e06cb",
+    "laboratorio": "84a30056bc9707376b962b58fc6966ffee16b092"
+  },
+  "referencias": [
+    {
+      "ruta": "AGENTS.md",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "bytes": 4384
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650",
+      "bytes": 22330
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "bytes": 29014
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "bytes": 67111
+    },
+    {
+      "ruta": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "git_blob": "a029bd28045f9390595dcc0c15cb8febee401f75",
+      "sha256": "5f8b9b69e7242a8c39d4b3958413e7cc094d66e54d262a0e2d3d3baeadce3a86",
+      "bytes": 6368
+    },
+    {
+      "ruta": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "git_blob": "fc6fc1044bb7834ab94163c17805a36300380934",
+      "sha256": "248e0263e4b96dabcaafb40f19056e660a7708a2c787cd1865f27eda5ab12a1f",
+      "bytes": 8304
+    },
+    {
+      "ruta": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "git_blob": "6f7852cff3766dd62d9f354d2b09060eb85cde8d",
+      "sha256": "0c17a446fed51cdfbf726dc3367e75f291885797073c78c603a39128bbd187a3",
+      "bytes": 12988
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "git_blob": "0d239c2d4f4227e49b5ecc96c804d7bdf93de6bd",
+      "sha256": "ec5c8b1ed5cf4dd5725429ab2ad927e06c36cea10d2839b412a10a8b904594e7",
+      "bytes": 263227
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "git_blob": "01cea45efcd3b27e4e1236b563997b57f4d75dc4",
+      "sha256": "7485375b143f414efe09f026d12909091cd885c52093aa7675246e0493245619",
+      "bytes": 224255
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/presentacion-sin-perdida-de-contenido/README.md",
+      "git_blob": "73350ef90abfa13c0f69ce5061091f21470db171",
+      "sha256": "71bb81e17199bc359c2fe130d325223430e3c9f680f91fc6486d1842dd9eb741",
+      "bytes": 10864
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/presentacion-sin-perdida-de-contenido/PLAN_FIJADO.json",
+      "git_blob": "bed0343081fcefe996a2183b7c16eca4dd4f1fc3",
+      "sha256": "7990cc12e3dcd104ec59d94a92d2fef24fb1400671127118c9239dee11bf8895",
+      "bytes": 1826
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/presentacion-sin-perdida-de-contenido/presentacion.rs",
+      "git_blob": "fdc91931aab2cf8c4e28f8ad3b7d2f824bc27085",
+      "sha256": "78acc44d93bc6345745e0d1cc8b8e9aa596c9902e338f3fe2a22499f087262f8",
+      "bytes": 2600
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/CONTRATO_Y_PLAN.md",
+      "git_blob": "571e24913249aaff18de0161f9a8f21867778c24",
+      "sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20",
+      "bytes": 3692
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/codigo/lectura.rs",
+      "git_blob": "c0f67ec1da1dc0319076fc7dad506843ae7de062",
+      "sha256": "c0bc409d7ecc5b8cc6460f97d893c1fe0fd420b0829d3daccbc0f4a577758e00",
+      "bytes": 3639
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/BASE_RETP152.json",
+      "git_blob": "58be166657b430eb6d43ce55d863806a7419bb51",
+      "sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+      "bytes": 732857
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/codigo/cobertura.rs",
+      "git_blob": "d00052dc12caacfbae42b15bf73eed994191a341",
+      "sha256": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90",
+      "bytes": 2564
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/codigo/rangos_fijados.rs",
+      "git_blob": "d692cb07c89daf6e2bc65c7c8e80567a703e404d",
+      "sha256": "31259b43e58afb3683c214e0c896012ad3080371c732a5118a994ae25b832c91",
+      "bytes": 82
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/ESPERADOS.json",
+      "git_blob": "5d8e1c08cfc6492fb04beb5aee34de49f9962886",
+      "sha256": "d2ac2468898ac941fe22fbc3f7f49e15c68d0cbcaf2b320945bf5ed1208813f9",
+      "bytes": 8175
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/BANCO_FIJADO.json",
+      "git_blob": "a362f203126575d93a36306b58f2b433cd26b6e9",
+      "sha256": "25d9afa9771ef7c6908f6851c94327bfd2b71f5c5e2b5f0dc0ae67fb9f55c381",
+      "bytes": 6902
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/sucesores/lote-g1/lib.rs",
+      "git_blob": "95e3e917cfeecdfff70561bb20139562a79066c3",
+      "sha256": "267d9ad16ab358252cc2e4bed0661a0633967a6df2922b91734438301d788519",
+      "bytes": 9340
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/sucesores/lote-p3/MONTAJES_PUBLICOS.json",
+      "git_blob": "67663696eb700b56c4d35ef3904f6eff48c19fc6",
+      "sha256": "a478c934f4b4419913122ea2079d98bfcbac1285bfd0bd0f5c1c4709313fe719",
+      "bytes": 2253
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/DECLARACION_VIGENCIA.json",
+      "git_blob": "fa4e7e2a175fb60af208276d7493c66a201354d3",
+      "sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038",
+      "bytes": 388
+    }
+  ],
+  "capsula_s2_sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+  "especimenes_sha256": "67a7df709a5e88e4a31ef17202e0d47915ab878b39117fe7bc778cc66d6a46c6",
+  "posicion": 0,
+  "caso": "P3-01 / A01",
+  "negacion": "no acredita",
+  "regla": "IE004-PRESENTACION-ESPACIOS/1, sin cambios",
+  "controles": {
+    "D01": "LITERAL_RECUPERADO",
+    "D02": "FORMATO_RECUPERADO",
+    "D03": "PERDIDA_PREVIA_RECHAZADA_SIN_ESCRITURA",
+    "D04": "PERDIDA_POSTERIOR_DETECTADA_EN_DESTINO",
+    "D05": "OMISION_RECHAZADA_SIN_ESCRITURA",
+    "D06": "LIMITE_DE_LECTURA",
+    "D07": "DESTINO_EXISTENTE_CONSERVADO",
+    "D08": "DESTINO_AUSENTE"
+  },
+  "presupuesto": {
+    "invocaciones": 22,
+    "timeout_s": 60,
+    "modos": [
+      "debug",
+      "release"
+    ],
+    "ejecuciones_por_modo": 3,
+    "sensibilidades": [
+      "comparacion de contenido desactivada: D03",
+      "observacion sustituida por texto previsto: D04"
+    ]
+  },
+  "cierre": "Texto escrito y recuperado en archivo; sin renderizador, pantalla, comprensión humana ni autenticación de host."
+}

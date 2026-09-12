@@ -1,0 +1,18 @@
+{
+  "version": "S3-FIJACION/1",
+  "fecha_utc": "2026-09-12T11:38:45Z",
+  "archivos": {
+    "BANCO_FIJADO.json": "5cff519dbafe5960502540d25e877e7419fcafd6cc7996cc9bac530f58e03b36",
+    "CONTRATO_S3.md": "c1a2e5b0a2f775e8a3d44760891c1a6d7e5757f5d2580a0d194ccc82f0f73c78",
+    "DECLARACION_VIGENCIA.json": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038",
+    "ESPECIMENES.json": "67a7df709a5e88e4a31ef17202e0d47915ab878b39117fe7bc778cc66d6a46c6",
+    "FUENTES_S2.json": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+    "PREPARACION.json": "99489b7aa58e81237b6f1350404a4525b65174590488f389f74d41de6e72dbda",
+    "codigo/ESPERADO.tsv": "e7dfad6ac539b53a2b2d5a7d1d4b7e8eb58d96f0faa129cecb2972a2da1ac75e",
+    "codigo/contraste.rs": "befb5d825b444518a21c7e0e9a4670345221a84fdd3f56effa3e3a1c08d13cad",
+    "codigo/destino.rs": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e",
+    "reproducir.py": "02787f7217f6d434731da9ca53ea46eaa1b931bf97d60a65e87f33ee545d0dd3",
+    "sensibilidad/contraste-observador-circular.rs": "93b39bb465aa654527958b63f91631309daf0baa9876dc8bc737e0f07c6e7bae",
+    "sensibilidad/presentacion-sin-comparacion.rs": "29031dfacc41e02cecbca32b53d834f8bdee3718e0688130999d39a0730c3994"
+  }
+}

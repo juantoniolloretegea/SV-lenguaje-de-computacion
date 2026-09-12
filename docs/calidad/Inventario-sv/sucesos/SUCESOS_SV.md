@@ -9,7 +9,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
-| S3 | pendiente | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:28:10Z |
+| S3 | en ejecución | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:38:45Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -118,13 +118,13 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S3 · Correspondencia de presentación y pérdida de negación
 
-**Estado:** pendiente
+**Estado:** en ejecución
 
 **Alta:** 2026-09-12T11:28:10Z
 
-**Inicio:** —
+**Inicio:** 2026-09-12T11:38:45Z
 
-**Actualización:** 2026-09-12T11:28:10Z
+**Actualización:** 2026-09-12T11:38:45Z
 
 **Fin:** —
 
@@ -134,19 +134,19 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**Cortes de entrada:** Recepción S2 / RETP-165; el corte de ejecución se fijará antes de iniciar.
+**Cortes de entrada:** Lenguaje 1430f64869b341ad0795588db425fb69e65e06cb; laboratorio 84a30056bc9707376b962b58fc6966ffee16b092
 
 **Dependencias:** S2; criterio D de RETP-147/162; contratos de RETP-149/150/152
 
-**Resultado:** Pendiente de delimitar el testigo que falta respecto de las pruebas existentes; sin ejecución.
+**Resultado:** Alcance, ocho controles, especímenes y esperados fijados antes de la cualificación.
 
-**Verificación:** Sin nuevos resultados funcionales atribuidos a D.
+**Verificación:** Fuentes rectoras cotejadas; 73 fuentes S2 reutilizadas intactas; diferencia frente a RETP-150/152 delimitada; preparación previa conservada.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/CONTRATO_S3.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-165-cierre-s2)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-166)
 
-**Siguiente acción:** Cotejar el alcance ya demostrado en presentación y fijar sólo la pérdida pendiente, con objeto mostrado y esperado previos; preparar después el alcance común de prueba externa.
+**Siguiente acción:** Ejecutar el contraste integrado de cobertura, escritura y recuperación del archivo, con dos sensibilidades.
 
-**Observaciones:** Misma integración 1+3; causas conservadas y catálogo posterior. No apertura de reserva, nuevas rondas ni atribución de revisión profesional.
+**Observaciones:** Pérdida previa debe impedir escritura; alteración posterior debe detectarse al recuperar. Sin pantalla, revisión humana, host adverso ni reserva externa.
 
