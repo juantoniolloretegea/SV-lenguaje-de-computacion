@@ -1,0 +1,129 @@
+{
+  "version": "S5-RECEPCION/1",
+  "participante": "claude",
+  "intento_declarado": 1,
+  "fecha_registro_utc": "2026-09-12T12:25:53Z",
+  "fecha_envio_utc": null,
+  "fecha_fin_respuesta_utc": null,
+  "origen": "Archivo aportado por el usuario en el chat del encargo.",
+  "nombre_original": "f7ba4326-5c1f-4bc5-ab6a-9e80741b8052.json",
+  "archivo_conservado": "RESPUESTA_ORIGINAL.json",
+  "bytes": 21830,
+  "sha256": "29ac0a58ca78c608425861f96173387b3bc7d9dd7e66a0eb8d4128d518479eca",
+  "saltos_CRLF": 0,
+  "modalidad": "lectura_documental",
+  "participante_declarado": {
+    "modelo": "Claude — sesión configurada para claude-opus-5",
+    "version_visible": "claude-opus-5 (identificador de configuración). El modelo que sirve un turno puede diferir de esa configuración y no es acreditable desde dentro de la sesión; no declaro una versión de despliegue que no puedo observar.",
+    "plataforma": "Claude en modo Cowork, contenedor efímero Linux en la nube de Anthropic; Python 3.11.15, git; sin credenciales de GitHub",
+    "modo_acceso": "enlace: clon público superficial de SVcustos-dataset en el commit e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c, ruta pruebas-externas/s4-recorrido-documental",
+    "referencia_paquete": "S4-PAQUETE/1 · PRUEBA_COMUN.md sha256 eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8 (recalculado por mí sobre los bytes descargados; coincide con MANIFIESTO.json y con documento_comun_sha256 de COMPROMISO_PREVIO.json)",
+    "lectura_completa": true
+  },
+  "lectura_completa_declarada": true,
+  "lectura_en_interfaz_verificada_independientemente": false,
+  "actividad_declarada": {
+    "herramientas": [
+      "git (clon público superficial, sin credenciales)",
+      "Python 3.11.15 (hashlib, json, difflib) para recalcular huellas y comparar F06/F07",
+      "lectura de ficheros del paquete"
+    ],
+    "comandos": [
+      "git init && git remote add origin https://github.com/juantoniolloretegea/SVcustos-dataset && git fetch --depth 1 origin e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c && git checkout FETCH_HEAD",
+      "python3: sha256 de las ocho fuentes F01–F08 tomadas del texto de FUENTES.json, contrastadas contra las publicadas en PRUEBA_COMUN.md",
+      "python3: difflib.ndiff entre F06 y F07 y diferencia de longitud en bytes",
+      "python3: sha256 de PRUEBA_COMUN.md y de REPRODUCCION_S2_S3.zip, contrastados contra MANIFIESTO.json y COMPROMISO_PREVIO.json"
+    ],
+    "artefactos": [
+      "S4_RESPUESTA_CLAUDE.json (este archivo)"
+    ],
+    "intentos": 1,
+    "errores_y_correcciones": [
+      "Ninguno en la resolución de los casos. No he necesitado corregir ninguna decisión tras emitirla."
+    ],
+    "limitaciones": [
+      "No he compilado ni ejecutado Rust: modalidad lectura_documental declarada.",
+      "No he descomprimido ni ejecutado REPRODUCCION_S2_S3.zip; sólo he recalculado su huella.",
+      "No dispongo de reloj de pared del intercambio completo desde dentro de la sesión.",
+      "El modelo que sirve el turno no es acreditable desde dentro; declaro el identificador de configuración, no una versión de despliegue observada."
+    ]
+  },
+  "mediciones_originales": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No dispongo desde dentro de la sesión de un reloj de pared fiable del intercambio completo (envío, primer contenido visible, fin de respuesta). Debe medirlo el observador externo, conforme al apartado Tiempo del banco. No sustituyo la ausencia por cero ni por una estimación."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No instrumenté la duración de las descargas ni de las lecturas. La única medida tomada fue la comprobación de huellas, 0,002 s de tiempo de proceso Python, que no representa el coste del conjunto y por eso no la presento como duración de herramientas."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 9,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "Conteo propio de invocaciones de herramienta en esta sesión dedicadas a esta prueba: 6 de shell y 2 de lectura de fichero para resolverla, más 1 de escritura de este archivo.",
+      "motivo": null
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone el recuento de tokens a la sesión."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone el recuento de tokens a la sesión."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone coste a la sesión."
+    }
+  ],
+  "mediciones_del_receptor": [
+    {
+      "nombre": "bytes_archivo_recibido",
+      "valor": 21830,
+      "unidad": "bytes",
+      "origen": "medido",
+      "fuente": "RESPUESTA_ORIGINAL.json"
+    }
+  ],
+  "exposicion_previa": "NO soy un participante nuevo ni independiente de este expediente. En esta misma sesión continuada he emitido el dictamen sobre IE004-ES-P2/1, el dictamen focal sobre /2, y soy autora de la reserva P3 y de sus 24 casos. He leído /2, la sucesora /3 (RETP-134), el contrato de separación A/V, el workflow RETP-123 y el Documento III. Esa exposición es alta y afecta a la comparabilidad con Qwen y DeepSeek, que no la tienen. Lo declaro por si el evaluador quiere ponderarlo o descartar mi resultado del contraste entre participantes.",
+  "orden_de_recepcion_observado": 2,
+  "contexto_usuario": "El usuario entrega Claude después de DeepSeek e indica que Qwen no ha terminado.",
+  "limites": "La fecha registra recepción documental en este trabajo, no el inicio o final de generación. El orden comunicado no mide duración ni velocidad. No se atribuye ausencia de exposición a otros modelos a partir de la declaración de Claude.",
+  "valoracion_medidas_del_receptor": {
+    "llamadas_herramientas": {
+      "valor_declarado": 9,
+      "origen_en_respuesta": "medido",
+      "evidencia_aportada": "Recuento narrado de 6 shell, 2 lecturas y 1 escritura; sin registros de llamadas.",
+      "clasificacion_del_receptor": "medición propia declarada, no auditada"
+    },
+    "tiempo_proceso_python": {
+      "valor_declarado": 0.002,
+      "unidad": "s",
+      "evidencia_aportada": "Mención dentro del motivo de duración de herramientas no disponible.",
+      "clasificacion_del_receptor": "declarado, no auditado; no duración total ni de herramientas"
+    },
+    "recalculo_huellas": "Datos coincidentes con cotejo del receptor; actividad propia declarada sin salidas ni script completo adjuntos."
+  }
+}

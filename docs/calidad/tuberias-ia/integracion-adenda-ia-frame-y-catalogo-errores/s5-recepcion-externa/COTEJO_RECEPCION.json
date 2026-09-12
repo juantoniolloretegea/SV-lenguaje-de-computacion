@@ -1,0 +1,82 @@
+{
+  "version": "S5-COTEJO-RECEPCION/1",
+  "fecha_registro_utc": "2026-09-12T12:25:53Z",
+  "responsable": "Watson / W-S0",
+  "fuentes": [
+    {
+      "id": "F01",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "coincide": true
+    },
+    {
+      "id": "F02",
+      "bytes": 236,
+      "sha256": "0d6e5643ff34ec76ac9f55cace1894435b683ae8da9f626bc4947f43c4c4fcd9",
+      "coincide": true
+    },
+    {
+      "id": "F03",
+      "bytes": 73,
+      "sha256": "f05d042e8bc6e3e97d5856cc80a14d9d1c56a72d6ee96880f2f5c8a2c33c781d",
+      "coincide": true
+    },
+    {
+      "id": "F04",
+      "bytes": 236,
+      "sha256": "2e95e7fa941b90c23c6ffac9c13f54f60586c33d327cf113507198b8ef6a8e41",
+      "coincide": true
+    },
+    {
+      "id": "F05",
+      "bytes": 74,
+      "sha256": "a285c8cab2bf8c3345b53c1f40e046ae5d8eb0014a0448f07ab22dd3d1baa091",
+      "coincide": true
+    },
+    {
+      "id": "F06",
+      "bytes": 539,
+      "sha256": "cbfc037a6f19d6e1b0a3374d4f7b4b7d4a419ad4f17dcca694bf3d9ed0087dad",
+      "coincide": true
+    },
+    {
+      "id": "F07",
+      "bytes": 536,
+      "sha256": "f6a4c3068645c4f2ade6486226d6a398f1665808b76d96b8fee3dd6775466620",
+      "coincide": true
+    },
+    {
+      "id": "F08",
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8",
+      "coincide": true
+    }
+  ],
+  "diferencia_F06_F07": {
+    "operacion": "supresión única de no (ASCII) seguido de espacio dentro de alcance",
+    "bytes_suprimidos": 3
+  },
+  "paquete": {
+    "PRUEBA_COMUN.md": {
+      "bytes": 19470,
+      "sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8"
+    },
+    "REPRODUCCION_S2_S3.zip": {
+      "bytes": 789529,
+      "sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307"
+    }
+  },
+  "compromiso": {
+    "version": "S4-COMPROMISO/1",
+    "oraculo_sha256": "b123cade0b987a20791989ddb887696b8d812617ad0703030d6c7459b6fe22c7",
+    "casos_sha256": "0665ff7ca1c64ca1ba073fd5b7b02be9029971fcb35b463cd0dccad173312fa0",
+    "fuentes_sha256": "628bb86c9f663272a0b6252dca2aeff1255c662b6df01e087f1fdfcd9a36aa09",
+    "reproduccion_zip_sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307",
+    "naturaleza": "Banco público conocido; oráculo fijado antes de la recepción externa. No reserva inédita ni evaluación ciega.",
+    "numero_casos": 12,
+    "rubrica_sha256": "a26957f541dffce5ba727ace37103320769ae63fd96ff3e923c042eb518dc2dd",
+    "documento_comun_sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8",
+    "plantilla_respuesta_sha256": "fb451322abf8e10fb7670cef63d617157d16644e90c3b0dd994f5ff96e558515"
+  },
+  "limite": "Recalcular estos valores verifica los datos. No acredita las llamadas ni la ejecución declaradas por otro participante."
+}

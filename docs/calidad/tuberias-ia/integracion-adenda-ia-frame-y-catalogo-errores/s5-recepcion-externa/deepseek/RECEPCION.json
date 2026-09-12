@@ -1,0 +1,102 @@
+{
+  "version": "S5-RECEPCION/1",
+  "participante": "deepseek",
+  "intento_declarado": 1,
+  "fecha_registro_utc": "2026-09-12T12:25:53Z",
+  "fecha_envio_utc": null,
+  "fecha_fin_respuesta_utc": null,
+  "origen": "Archivo aportado por el usuario en el chat del encargo.",
+  "nombre_original": "Pegado text(5).txt",
+  "archivo_conservado": "RESPUESTA_ORIGINAL.txt",
+  "bytes": 12584,
+  "sha256": "bb3b4ea6b0c9ff9ba69f3565c2d0363c07902754b7d6e26a2d693a0be79c0b73",
+  "saltos_CRLF": 191,
+  "modalidad": "lectura_documental",
+  "participante_declarado": {
+    "modelo": "DeepSeek",
+    "version_visible": null,
+    "plataforma": "chat",
+    "modo_acceso": "lectura_documental",
+    "referencia_paquete": "S4-EXTERNA-DOCUMENTAL/1",
+    "lectura_completa": true
+  },
+  "lectura_completa_declarada": true,
+  "lectura_en_interfaz_verificada_independientemente": false,
+  "actividad_declarada": {
+    "herramientas": [
+      "open/lectura de URLs (GitHub raw)"
+    ],
+    "comandos": [],
+    "artefactos": [],
+    "intentos": 1,
+    "errores_y_correcciones": [],
+    "limitaciones": [
+      "No se ejecutó Rust; modalidad exclusivamente documental.",
+      "No se recalcularon las huellas SHA-256; se citaron las del documento.",
+      "No se dispone de medición de tokens ni coste."
+    ]
+  },
+  "mediciones_originales": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No medida por el observador."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No medida."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": null,
+      "unidad": "llamadas",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No medida."
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No expuesto por el proveedor."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No expuesto por el proveedor."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No disponible."
+    }
+  ],
+  "mediciones_del_receptor": [
+    {
+      "nombre": "bytes_archivo_recibido",
+      "valor": 12584,
+      "unidad": "bytes",
+      "origen": "medido",
+      "fuente": "RESPUESTA_ORIGINAL.txt"
+    }
+  ],
+  "exposicion_previa": null,
+  "orden_de_recepcion_observado": 1,
+  "contexto_usuario": "El usuario identifica DeepSeek como primero en terminar.",
+  "limites": "La fecha registra recepción documental en este trabajo, no el inicio o final de generación. El orden comunicado no mide duración ni velocidad. No se atribuye ausencia de exposición a otros modelos a partir de la declaración de Claude."
+}

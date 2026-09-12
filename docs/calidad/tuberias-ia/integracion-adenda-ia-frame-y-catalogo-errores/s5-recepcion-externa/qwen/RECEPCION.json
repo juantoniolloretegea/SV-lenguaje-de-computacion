@@ -1,0 +1,112 @@
+{
+  "version": "S5-RECEPCION/1",
+  "participante": "qwen",
+  "intento_declarado": 1,
+  "fecha_registro_utc": "2026-09-12T12:29:01Z",
+  "fecha_envio_utc": null,
+  "fecha_fin_respuesta_utc": null,
+  "origen": "Archivo aportado por el usuario en el chat del encargo.",
+  "nombre_original": "Pegado text(6).txt",
+  "archivo_conservado": "RESPUESTA_ORIGINAL.txt",
+  "bytes": 11086,
+  "sha256": "54a120708e4c917801d4cd7c550bdcd21e35ad28c68b9d66c297ce40abb91bbd",
+  "saltos_CRLF": 236,
+  "modalidad": "lectura_documental",
+  "participante_declarado": {
+    "modelo": "Qwen",
+    "version_visible": "Qwen3.8",
+    "plataforma": "Alibaba Cloud API / Chat Interface",
+    "modo_acceso": "enlace (GitHub raw)",
+    "referencia_paquete": "e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c",
+    "lectura_completa": true
+  },
+  "lectura_completa_declarada": true,
+  "lectura_en_interfaz_verificada_independientemente": false,
+  "actividad_declarada": {
+    "herramientas": [
+      "web_extractor"
+    ],
+    "comandos": [
+      "GET /raw/.../FUENTES.json",
+      "GET /raw/.../CASOS.json",
+      "GET /raw/.../PLANTILLA_RESPUESTA.json"
+    ],
+    "artefactos": [
+      "Respuesta JSON S4-RESPUESTA/1"
+    ],
+    "intentos": 1,
+    "errores_y_correcciones": [],
+    "limitaciones": [
+      "Sin acceso a métricas de CPU/Tokens de la interfaz."
+    ]
+  },
+  "mediciones_originales": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La interfaz de chat no expone el tiempo total de generación."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La interfaz no expone el tiempo de ejecución de las herramientas de extracción."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 6,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "Contador de herramientas de la sesión",
+      "motivo": "Extracciones de README, SUCESOS_SV, PRUEBA_COMUN, RUBRICA, JSONs del paquete."
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La API no expone el conteo de tokens de entrada al usuario final."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La API no expone el conteo de tokens de salida al usuario final."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "Coste no expuesto por la plataforma."
+    }
+  ],
+  "mediciones_del_receptor": [
+    {
+      "nombre": "bytes_archivo_recibido",
+      "valor": 11086,
+      "unidad": "bytes",
+      "origen": "medido",
+      "fuente": "RESPUESTA_ORIGINAL.txt"
+    }
+  ],
+  "valoracion_medidas_del_receptor": {
+    "llamadas_herramientas": {
+      "valor_declarado": 6,
+      "origen_en_respuesta": "medido",
+      "evidencia": "Contador descrito, sin registro adjunto; GET con rutas abreviadas.",
+      "clasificacion": "medición propia declarada, no auditada"
+    }
+  },
+  "orden_de_recepcion_observado": 3,
+  "limites": "Orden de recepción no equivale a duración. Modelo/versión/plataforma son declaraciones del participante. COMPROMISO_PREVIO.json contiene huellas de compromiso, no el contenido del oráculo."
+}

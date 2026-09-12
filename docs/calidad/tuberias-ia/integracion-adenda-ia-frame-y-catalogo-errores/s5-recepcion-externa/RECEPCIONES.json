@@ -1,0 +1,64 @@
+{
+  "version": "S5-RECEPCIONES/1",
+  "fecha_utc": "2026-09-12T12:29:01Z",
+  "estado_suceso": "en ejecución",
+  "participantes": [
+    {
+      "participante": "deepseek",
+      "intento": 1,
+      "estado": "finalizado",
+      "alcance_estado": "Recepción y cotejo inicial de este archivo; no aceptación ni cierre S5.",
+      "resultado_literal": 44,
+      "trazabilidad": 35,
+      "procedimiento": 8,
+      "entrega": 7,
+      "suma_literal": 94,
+      "puntos_etiquetas_reservados": 3,
+      "puntuacion_definitiva": null,
+      "conformidad_acreditada": false,
+      "original_sha256": "bb3b4ea6b0c9ff9ba69f3565c2d0363c07902754b7d6e26a2d693a0be79c0b73",
+      "bytes_original": 12584
+    },
+    {
+      "participante": "claude",
+      "intento": 1,
+      "estado": "finalizado",
+      "alcance_estado": "Recepción y cotejo inicial de este archivo; no aceptación ni cierre S5.",
+      "resultado_literal": 38,
+      "trazabilidad": 35,
+      "procedimiento": 8,
+      "entrega": 8,
+      "suma_literal": 89,
+      "puntos_etiquetas_reservados": 9,
+      "puntuacion_definitiva": null,
+      "conformidad_acreditada": false,
+      "original_sha256": "29ac0a58ca78c608425861f96173387b3bc7d9dd7e66a0eb8d4128d518479eca",
+      "bytes_original": 21830
+    },
+    {
+      "participante": "qwen",
+      "intento": 1,
+      "estado": "finalizado",
+      "alcance_estado": "Recepción y cotejo inicial del archivo; no aceptación ni cierre de S5.",
+      "resultado_literal": 33,
+      "trazabilidad": 23,
+      "procedimiento": 8,
+      "entrega": 8,
+      "suma_literal": 72,
+      "puntos_etiquetas_reservados": 3,
+      "puntuacion_definitiva": null,
+      "conformidad_acreditada": false,
+      "original_sha256": "54a120708e4c917801d4cd7c550bdcd21e35ad28c68b9d66c297ce40abb91bbd",
+      "bytes_original": 11086
+    },
+    {
+      "participante": "grok",
+      "intento": null,
+      "estado": "pendiente",
+      "alcance_estado": "Encargo preparado; no enviado y sin respuesta.",
+      "acceso": "Disponible según comunicación del usuario; no se ha realizado comprobación nueva desde la interfaz de Grok.",
+      "puntuacion_definitiva": null,
+      "conformidad_acreditada": null
+    }
+  ]
+}

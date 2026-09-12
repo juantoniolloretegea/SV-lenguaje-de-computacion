@@ -1,0 +1,192 @@
+He realizado la prueba externa común `S4-EXTERNA-DOCUMENTAL/1` en modalidad **lectura documental**. Resuelvo los doce casos E01–E12 con las fuentes F01–F08 y las reglas R01–R08. Devuelvo el JSON de la plantilla con todos los campos.
+
+```json
+{
+  "version": "S4-RESPUESTA/1",
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "participante": {
+    "modelo": "DeepSeek",
+    "version_visible": null,
+    "plataforma": "chat",
+    "modo_acceso": "lectura_documental",
+    "referencia_paquete": "S4-EXTERNA-DOCUMENTAL/1",
+    "lectura_completa": true
+  },
+  "modalidad": "lectura_documental",
+  "resultados": [
+    {
+      "id": "E01",
+      "decision": "DATO",
+      "causa_o_resolucion": "DATO",
+      "contenido": "8.40",
+      "llamadas_politica": 1,
+      "consecuencia": "Lectura documental entregada con el dato; no constituye actuación.",
+      "fuentes": ["F01", "F03", "R01", "R02"],
+      "evidencia_literal": "F01: {\"version\":\"IE004-A-SOLICITUD/1\",\"id\":\"PUBLICO-A01\",\"pregunta\":\"El valor de la IgG.\",\"contexto\":{\"operacion\":\"LEER\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\"}}; F03: {\"id\":\"P3-01\",\"fuente\":\"A01\",\"vigente\":true}; R02: K-IE004/1 contiene el literal artificial 8.40 para IGG/ACTUAL.",
+      "justificacion_verificable": "R01: la consulta A01 produce la ruta única [1,1,1,1,1] y alcanza una vez la puerta de política. R02: el conductor fija vigente=true y K-IE004/1 contiene 8.40.",
+      "limitacion": "Lectura documental; no ejecución de Rust ni verificación de bytes fuera de las fuentes citadas."
+    },
+    {
+      "id": "E02",
+      "decision": "PERMISO_REVOCADO",
+      "causa_o_resolucion": "PERMISO_REVOCADO",
+      "contenido": null,
+      "llamadas_politica": 1,
+      "consecuencia": "La vigencia negativa resuelve PERMISO_REVOCADO sin contenido, fuente ni alcance; no es revocación profesional ni historia de autorización viva.",
+      "fuentes": ["F01", "F05", "R02", "R03"],
+      "evidencia_literal": "F05: {\"id\":\"P3-11\",\"fuente\":\"A01\",\"vigente\":false}; R02: la vigencia negativa resuelve PERMISO_REVOCADO sin contenido, fuente ni alcance.",
+      "justificacion_verificable": "R02: la vigencia negativa resuelve PERMISO_REVOCADO. R03: leer el recibo es distinto de actuar; el recibo negativo puede leerse fielmente sin conceder permiso.",
+      "limitacion": "No se atribuye revocación profesional ni autorización viva."
+    },
+    {
+      "id": "E03",
+      "decision": "ENTREGAR_LECTURA",
+      "causa_o_resolucion": null,
+      "contenido": "PERMISO_REVOCADO; contenido null",
+      "llamadas_politica": null,
+      "consecuencia": "La lectura del recibo negativo puede entregarse fielmente; no concede permiso para actuar.",
+      "fuentes": ["F04", "F05", "F08", "R03"],
+      "evidencia_literal": "F08: {\"version\":\"IE004-A-CUERPO/1\",...,\"vigente\":false,\"admision\":\"ADMITIDA\",\"contexto\":[1,1,1,1,1],\"resolucion\":{\"estado\":\"PERMISO_REVOCADO\",\"contenido\":null,...}}",
+      "justificacion_verificable": "R03: un recibo de resolución negativa puede leerse fielmente sin conceder permiso; se comprueban versión, operación e identidad antes del contenido.",
+      "limitacion": "La lectura no acredita actuación autorizada."
+    },
+    {
+      "id": "E04",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "FaltaVigencia",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "La propuesta no constituye la evidencia requerida; se rechaza por omisión de la vigencia (F05).",
+      "fuentes": ["F04", "F08", "R04"],
+      "evidencia_literal": "R04: la cobertura exige caso original y entrada exacta de su montaje; una cita verdadera puede ser insuficiente o ajena. Se distinguen FaltaCaso, FaltaVigencia, CasoDistinto y VigenciaDistinta.",
+      "justificacion_verificable": "Falta F05, el montaje de P3-11 con vigente=false; sólo se cita F04. R04: sin la vigencia exacta no hay cobertura.",
+      "limitacion": "No se abre ni crea archivo (R06)."
+    },
+    {
+      "id": "E05",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "VigenciaDistinta",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "La cita F03 es verdadera para P3-01 pero ajena a P3-11; no cubre la invocación.",
+      "fuentes": ["F03", "F04", "F05", "F08", "R04"],
+      "evidencia_literal": "F03: {\"id\":\"P3-01\",\"fuente\":\"A01\",\"vigente\":true}; F05: {\"id\":\"P3-11\",\"fuente\":\"A01\",\"vigente\":false}.",
+      "justificacion_verificable": "R04 distingue VigenciaDistinta; la sustitución de F05 por F03 aporta una vigencia verdadera pero de otro caso.",
+      "limitacion": "No se abre ni crea archivo."
+    },
+    {
+      "id": "E06",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "Identidad",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "La identidad de la propuesta pertenece a otra invocación; el conductor selecciona P3-11 y la identidad no corresponde.",
+      "fuentes": ["F04", "F05", "F08", "R03"],
+      "evidencia_literal": "R03: se comprueban versión, operación e identidad antes del contenido; una identidad ajena causa Identidad.",
+      "justificacion_verificable": "R03: la identidad se comprueba antes del contenido; el cuerpo F08 y las citas no subsanan una identidad ajena.",
+      "limitacion": "No se abre ni crea archivo."
+    },
+    {
+      "id": "E07",
+      "decision": "ACEPTAR_ARCHIVO",
+      "causa_o_resolucion": null,
+      "contenido": "F06 (539 bytes) con separadores permitidos fuera de cadenas",
+      "llamadas_politica": null,
+      "consecuencia": "El archivo se escribe con los bytes exactos de la vista; el observador debe cotejar los bytes recuperados.",
+      "fuentes": ["F02", "F03", "F06", "R05", "R06"],
+      "evidencia_literal": "F06: presentación con espacios, 539 bytes, SHA-256 cbfc037a...; R05: admite sólo espacio, TAB, LF y CR fuera de cadenas JSON y conserva todos los bytes de cadenas, claves, orden y valores.",
+      "justificacion_verificable": "R05: F06 sólo cambia separadores permitidos fuera de cadenas; R06: el conductor escribe tras comprobar lectura y cobertura, en destino nuevo, con los bytes exactos de la vista.",
+      "limitacion": "La escritura y lectura sin error no acreditan pantalla, host resistente ni cierre universal (R08)."
+    },
+    {
+      "id": "E08",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "ContenidoDistinto",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo antes de escribir; el destino inicialmente ausente no se abre ni se crea.",
+      "fuentes": ["F02", "F03", "F06", "F07", "R05", "R06"],
+      "evidencia_literal": "F07 pierde la negación: \"acredita concentración\" en lugar de \"no acredita concentración\". R05: suprimir una negación dentro de una cadena no está permitido; un JSON válido alterado en contenido causa ContenidoDistinto.",
+      "justificacion_verificable": "R05: F07 suprime la negación dentro de la cadena 'alcance'; R06: un rechazo previo no abre ni crea el archivo.",
+      "limitacion": "No se abre el destino."
+    },
+    {
+      "id": "E09",
+      "decision": "DETECTAR_ALTERACION",
+      "causa_o_resolucion": "ContenidoDistinto",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Se detecta la alteración posterior; el cuerpo custodiado y la vista anterior siguen intactos. Detectar no equivale a impedir.",
+      "fuentes": ["F02", "F03", "F06", "F07", "R06", "R08"],
+      "evidencia_literal": "R06: tras escribir, el observador debe cotejar los bytes recuperados del archivo, no volver a comparar sólo el texto previsto. R08: detectar alteración posterior no equivale a impedirla.",
+      "justificacion_verificable": "Se escribió F06 y luego se sustituyó el archivo por F07; al leer el archivo, los bytes recuperados difieren del cuerpo custodiado.",
+      "limitacion": "No se afirma prevención; la alteración ya ocurrió."
+    },
+    {
+      "id": "E10",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "FaltaCaso",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo antes de escritura; el archivo de destino aún no existe y no se crea.",
+      "fuentes": ["F02", "F03", "F06", "R04", "R06"],
+      "evidencia_literal": "R04: la cobertura exige caso original y entrada exacta de su montaje; una cita verdadera puede ser insuficiente o ajena. Se cita F02 pero se omite F03 (montaje).",
+      "justificacion_verificable": "Falta F03, el montaje de P3-01; F06 es fiel y con identidad propia, pero la cobertura está incompleta. R04: FaltaCaso.",
+      "limitacion": "El texto fiel no subsana la cobertura incompleta."
+    },
+    {
+      "id": "E11",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Límite",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Se detecta el exceso antes del cotejo de fidelidad; el límite es una causa distinta y no se convierte en U.",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "R07: el lector admite hasta 16384 bytes y detecta exceso con un buffer de 16385. Límite, E/S, presentación y política son causas distintas, ninguna convertida en U.",
+      "justificacion_verificable": "El archivo tiene 16385 espacios ASCII; el lector detecta el exceso antes del cotejo.",
+      "limitacion": "No se convierte el fallo técnico en U."
+    },
+    {
+      "id": "E12",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Io(NotFound)",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "El destino ausente produce Io(NotFound); causa de E/S distinta, no U.",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "R07: un destino ausente produce Io(NotFound). Límite, E/S, presentación y política son causas distintas, ninguna convertida en U.",
+      "justificacion_verificable": "R07: la apertura de un destino inexistente produce Io(NotFound).",
+      "limitacion": "No se convierte el error de E/S en U."
+    }
+  ],
+  "actividad_observable": {
+    "herramientas": ["open/lectura de URLs (GitHub raw)"],
+    "comandos": [],
+    "artefactos": [],
+    "intentos": 1,
+    "errores_y_correcciones": [],
+    "limitaciones": [
+      "No se ejecutó Rust; modalidad exclusivamente documental.",
+      "No se recalcularon las huellas SHA-256; se citaron las del documento.",
+      "No se dispone de medición de tokens ni coste."
+    ]
+  },
+  "mediciones": [
+    {"nombre": "duracion_total", "valor": null, "unidad": "s", "origen": "no_disponible", "fuente": null, "motivo": "No medida por el observador."},
+    {"nombre": "duracion_herramientas", "valor": null, "unidad": "s", "origen": "no_disponible", "fuente": null, "motivo": "No medida."},
+    {"nombre": "llamadas_herramientas", "valor": null, "unidad": "llamadas", "origen": "no_disponible", "fuente": null, "motivo": "No medida."},
+    {"nombre": "tokens_entrada", "valor": null, "unidad": "tokens", "origen": "no_disponible", "fuente": null, "motivo": "No expuesto por el proveedor."},
+    {"nombre": "tokens_salida", "valor": null, "unidad": "tokens", "origen": "no_disponible", "fuente": null, "motivo": "No expuesto por el proveedor."},
+    {"nombre": "coste", "valor": null, "unidad": "moneda", "origen": "no_disponible", "fuente": null, "motivo": "No disponible."}
+  ],
+  "referencias_adicionales_consultadas": [
+    "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/tree/main/docs/calidad/Inventario-sv/sucesos",
+    "https://raw.githubusercontent.com/juantoniolloretegea/SV-lenguaje-de-computacion/main/docs/calidad/Inventario-sv/sucesos/README.md",
+    "https://raw.githubusercontent.com/juantoniolloretegea/SV-lenguaje-de-computacion/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md"
+  ]
+}
+```
+
+**Resumen de decisiones:** E01 DATO · E02 PERMISO_REVOCADO · E03 ENTREGAR_LECTURA · E04 RECHAZAR (FaltaVigencia) · E05 RECHAZAR (VigenciaDistinta) · E06 RECHAZAR (Identidad) · E07 ACEPTAR_ARCHIVO · E08 RECHAZAR (ContenidoDistinto, antes de escribir) · E09 DETECTAR_ALTERACION · E10 RECHAZAR (FaltaCaso) · E11 ERROR_LECTURA (Límite) · E12 ERROR_LECTURA (Io(NotFound)).
+
+**Modalidad declarada:** `lectura_documental`. No se ejecutó Rust; no se recalcularon huellas; no se dispone de mediciones de tokens ni coste.

@@ -1,0 +1,249 @@
+{
+  "version": "S4-RESPUESTA/1",
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "participante": {
+    "modelo": "Claude — sesión configurada para claude-opus-5",
+    "version_visible": "claude-opus-5 (identificador de configuración). El modelo que sirve un turno puede diferir de esa configuración y no es acreditable desde dentro de la sesión; no declaro una versión de despliegue que no puedo observar.",
+    "plataforma": "Claude en modo Cowork, contenedor efímero Linux en la nube de Anthropic; Python 3.11.15, git; sin credenciales de GitHub",
+    "modo_acceso": "enlace: clon público superficial de SVcustos-dataset en el commit e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c, ruta pruebas-externas/s4-recorrido-documental",
+    "referencia_paquete": "S4-PAQUETE/1 · PRUEBA_COMUN.md sha256 eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8 (recalculado por mí sobre los bytes descargados; coincide con MANIFIESTO.json y con documento_comun_sha256 de COMPROMISO_PREVIO.json)",
+    "lectura_completa": true
+  },
+  "modalidad": "lectura_documental",
+  "declaracion_de_exposicion_previa": "NO soy un participante nuevo ni independiente de este expediente. En esta misma sesión continuada he emitido el dictamen sobre IE004-ES-P2/1, el dictamen focal sobre /2, y soy autora de la reserva P3 y de sus 24 casos. He leído /2, la sucesora /3 (RETP-134), el contrato de separación A/V, el workflow RETP-123 y el Documento III. Esa exposición es alta y afecta a la comparabilidad con Qwen y DeepSeek, que no la tienen. Lo declaro por si el evaluador quiere ponderarlo o descartar mi resultado del contraste entre participantes.",
+  "resultados": [
+    {
+      "id": "E01",
+      "decision": "DATO",
+      "causa_o_resolucion": "DATO",
+      "contenido": "8.40",
+      "llamadas_politica": 1,
+      "consecuencia": "Se entrega el literal artificial acompañado de fuente FICCION-IE004/1 y de su alcance. Es lectura documental sobre banco sintético: no acredita concentración ni condición clínica, ni constituye actuación profesional.",
+      "fuentes": ["F01", "F03", "R01", "R02"],
+      "evidencia_literal": "F06 contiene \"vigente\":true, \"resolucion\":{\"estado\":\"DATO\",\"contenido\":\"8.40\",\"ruta\":[1,1,1,1,1],\"causas\":0,\"llamadas_politica\":1,\"fuente\":\"FICCION-IE004/1\"}. F03 fija {\"id\":\"P3-01\",\"fuente\":\"A01\",\"vigente\":true}.",
+      "justificacion_verificable": "R01: A01 consulta inequívocamente LEER/CASO-A/IGG/ACTUAL/VALOR, el análisis completo produce una única ruta [1,1,1,1,1] y precede a política, alcanzando una vez la puerta. R02: P-IE004/1 admite LEER/CASO-A/IGG y K-IE004/1 contiene 8.40 para IGG/ACTUAL. Recalculé sha256 de F01 (188 B, f6a8203c…) y de F03 (73 B, f05d042e…) sobre el texto de FUENTES.json: coinciden con los publicados.",
+      "limitacion": "Vía documental. No he compilado ni ejecutado Rust; no atribuyo ejecución propia a leer resultados anteriores."
+    },
+    {
+      "id": "E02",
+      "decision": "PERMISO_REVOCADO",
+      "causa_o_resolucion": "PERMISO_REVOCADO",
+      "contenido": null,
+      "llamadas_politica": 1,
+      "consecuencia": "Sin contenido, sin fuente y sin alcance. El significado no cambia respecto de E01 —la ruta sigue siendo [1,1,1,1,1] y las causas 0—: lo único que cambia es el montaje que fija el conductor, ajeno a la propuesta. No constituye revocación profesional ni historia de autorización viva.",
+      "fuentes": ["F01", "F05", "R01", "R02"],
+      "evidencia_literal": "F01 es idéntico byte a byte al de E01 (188 B, sha256 f6a8203c…, recalculado). F05 fija {\"id\":\"P3-11\",\"fuente\":\"A01\",\"vigente\":false}. F08 contiene \"vigente\":false,\"resolucion\":{\"estado\":\"PERMISO_REVOCADO\",\"contenido\":null,\"ruta\":[1,1,1,1,1],\"causas\":0,\"llamadas_politica\":1,\"fuente\":null,\"alcance\":null}.",
+      "justificacion_verificable": "Discriminante causal del par E01/E02: misma pregunta, mismos bytes, mismo significado, distinta vigencia declarada en el montaje. La puerta de política se alcanza igualmente una vez —llamadas_politica:1 en ambos cuerpos—, porque la revocación se resuelve EN la puerta, no antes de llegar a ella. Un llamadas_politica:0 aquí indicaría que la resolución no llegó a la capa de permisos y sería un resultado distinto.",
+      "limitacion": "Vigencia sintética de laboratorio fijada por el conductor. No acredita un régimen real de autorización ni su revocación en un sistema profesional."
+    },
+    {
+      "id": "E03",
+      "decision": "ENTREGAR_LECTURA",
+      "causa_o_resolucion": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Se entrega la lectura fiel del recibo y NO se concede permiso alguno para actuar. Lo leído sigue diciendo PERMISO_REVOCADO: de haberlo leído no se deriva autorización, ni contenido, ni fuente, ni alcance. Distinción pedida: leer el recibo es un acto documental sobre un texto custodiado; actuar exigiría una autorización que este recibo precisamente niega.",
+      "fuentes": ["F04", "F05", "F08", "R03", "R04"],
+      "evidencia_literal": "La cobertura está completa: F04 aporta el caso original {\"id\":\"P3-11\", …} y F05 la entrada exacta de su montaje {\"id\":\"P3-11\",\"fuente\":\"A01\",\"vigente\":false}. El cuerpo F08 comparece íntegro (423 B, sha256 92b5ee01…, recalculado) y la identidad de la propuesta es propia.",
+      "justificacion_verificable": "R03: un recibo de resolución negativa puede leerse fielmente sin conceder permiso, y la identidad es propia, de modo que no se activa la causa Identidad. R04: se exigen caso original y entrada exacta de su montaje, y ambos comparecen y corresponden al mismo identificador P3-11.",
+      "limitacion": "Alcance de archivo y proceso confiable. No acredita pantalla, revisión humana ni resistencia al anfitrión."
+    },
+    {
+      "id": "E04",
+      "decision": "RECHAZAR_LECTURA",
+      "causa_o_resolucion": "FaltaVigencia",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se entrega la lectura. Evidencia faltante: F05, la entrada de montaje de P3-11. La cita que sí comparece —F04— es verdadera y sigue siendo insuficiente. Entregar aquí sería acreditar una entrega con evidencia requerida omitida, que la propia rúbrica tipifica como incidencia crítica.",
+      "fuentes": ["F04", "F08", "R04"],
+      "evidencia_literal": "Se cita F04 {\"id\":\"P3-11\", …} y se omite F05 {\"id\":\"P3-11\",\"fuente\":\"A01\",\"vigente\":false}. El cuerpo F08 es el mismo de E03 y no suple la ausencia.",
+      "justificacion_verificable": "R04: la cobertura exige caso original Y entrada exacta de su montaje; falta la segunda, luego FaltaVigencia y no FaltaCaso. Y «la propuesta no constituye la evidencia requerida»: que el cuerpo F08 contenga \"vigente\":false no acredita la vigencia, porque ese campo pertenece a la propuesta y no al montaje del conductor.",
+      "limitacion": "El rechazo protege la cobertura; no demuestra que el cuerpo propuesto fuera falso."
+    },
+    {
+      "id": "E05",
+      "decision": "RECHAZAR_LECTURA",
+      "causa_o_resolucion": "VigenciaDistinta",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se entrega la lectura. La cita aportada es verdadera pero ajena: pertenece a otra invocación. Aceptarla convertiría un PERMISO_REVOCADO en un DATO por sustitución de evidencia, que es exactamente la brecha que este banco vigila.",
+      "fuentes": ["F03", "F04", "F05", "F08", "R04"],
+      "evidencia_literal": "F03 declara {\"id\":\"P3-01\", …, \"vigente\":true} y la invocación seleccionada es P3-11, cuyo montaje es F05 {\"id\":\"P3-11\", …, \"vigente\":false}. Los identificadores difieren —P3-01 frente a P3-11— y los valores de vigencia son opuestos. F03 y F05 tienen huellas distintas, f05d042e… (73 B) y a285c8ca… (74 B), ambas recalculadas.",
+      "justificacion_verificable": "R04 tipifica cuatro defectos y éste es VigenciaDistinta, no FaltaVigencia: la entrada de montaje comparece, pero es la de otro caso. La diferencia con E04 es material y no de matiz: allí falta la evidencia, aquí está y es ajena.",
+      "limitacion": "No se juzga la intención de la sustitución, sólo su efecto sobre la cobertura."
+    },
+    {
+      "id": "E06",
+      "decision": "RECHAZAR_LECTURA",
+      "causa_o_resolucion": "Identidad",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se entrega la lectura, y se rechaza antes de examinar el contenido. Que el cuerpo sea el correcto y que las dos citas sean las correctas no rescata la propuesta: el orden de comprobación —versión, operación e identidad antes del contenido— hace que un cuerpo impecable llegue tarde.",
+      "fuentes": ["F04", "F05", "F08", "R03"],
+      "evidencia_literal": "El conductor sigue seleccionando P3-11 y la identidad de la propuesta pertenece a otra invocación. Cuerpo F08 y citas F04/F05 son los mismos que en E03, donde sí se entregó.",
+      "justificacion_verificable": "R03: «El conductor elige la referencia antes de recibir la propuesta; se comprueban versión, operación e identidad antes del contenido. Una identidad ajena causa Identidad.» El par E03/E06 aísla la identidad como única variable.",
+      "limitacion": "Alcance de proceso confiable; no acredita autenticación criptográfica de la identidad ni resistencia a suplantación por un anfitrión comprometido."
+    },
+    {
+      "id": "E07",
+      "decision": "ACEPTAR_ARCHIVO",
+      "causa_o_resolucion": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Se escribe en un destino nuevo con los bytes exactos de la vista, y sólo después de haber comprobado lectura y cobertura. Tras escribir, el cotejo debe hacerse sobre los bytes recuperados del archivo, no sobre el texto previsto: si no, E09 sería indetectable.",
+      "fuentes": ["F02", "F03", "F06", "R05", "R06"],
+      "evidencia_literal": "F06 (539 B, sha256 cbfc037a…, recalculado) conserva claves, orden, valores y todos los bytes de cadenas; sólo varían separadores fuera de cadenas, y son de los admitidos por IE004-PRESENTACION-ESPACIOS/1. Citas completas: F02 caso P3-01 y F03 su montaje.",
+      "justificacion_verificable": "R05 admite espacio, TAB, LF y CR fuera de cadenas JSON y exige reconocer primero la sintaxis completa; F06 satisface ambas condiciones. R06 fija destino nuevo, bytes exactos y cotejo posterior sobre lo recuperado. La cobertura es completa, a diferencia de E10.",
+      "limitacion": "No acredita persistencia ante corte eléctrico ni resistencia del anfitrión."
+    },
+    {
+      "id": "E08",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "ContenidoDistinto",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "El destino, inicialmente ausente, no se abre ni se crea. Esto sí es prevención: la alteración no llega a materializarse en ningún archivo. Es la diferencia material con E09.",
+      "fuentes": ["F02", "F03", "F06", "F07", "R05", "R06"],
+      "evidencia_literal": "F07 (536 B) frente a F06 (539 B): exactamente 3 bytes menos, y la diferencia está dentro de una cadena JSON. Recalculé y comparé línea a línea: \"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\" pasa a \"alcance\":\"Registro artificial; acredita concentración ni condición clínica.\". Se suprime «no » y la afirmación queda invertida. Huellas recalculadas: cbfc037a… y f6a4c306…",
+      "justificacion_verificable": "R05: «Un JSON válido alterado en contenido causa ContenidoDistinto» y «Suprimir una negación dentro de una cadena no está permitido». F07 es JSON sintácticamente válido, y por eso el control no puede apoyarse en la validez sintáctica: la comprobación debe alcanzar los bytes de las cadenas. R06: un rechazo previo no abre ni crea el archivo.",
+      "limitacion": "Aceptar F07 como fiel sería incidencia crítica según la rúbrica; lo hago constar porque la trampa es que F07 pasa cualquier validador de JSON."
+    },
+    {
+      "id": "E09",
+      "decision": "DETECTAR_ALTERACION",
+      "causa_o_resolucion": "ContenidoDistinto",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "La alteración YA ocurrió y no fue impedida. Se detecta, no se previene. Distinción pedida: el texto custodiado y la vista anterior siguen intactos y sirven de referencia; el archivo observado es el que ha cambiado. Afirmar aquí prevención sería incidencia crítica.",
+      "fuentes": ["F02", "F03", "F06", "F07", "R05", "R06", "R08"],
+      "evidencia_literal": "Se validó y escribió F06 (539 B, cbfc037a…). Después se sustituyó únicamente el archivo por F07 (536 B, f6a4c306…). La diferencia recuperable es la misma de E08: falta «no » en el valor de \"alcance\".",
+      "justificacion_verificable": "R06: «Tras escribir, el observador debe cotejar los bytes recuperados del archivo, no volver a comparar sólo el texto previsto.» Ese requisito es lo único que hace observable esta sustitución: quien recomparara la vista prevista consigo misma no vería nada. R08: «Detectar alteración posterior no equivale a impedirla.»",
+      "limitacion": "Alcance de archivo en proceso confiable. No acredita host resistente, y la detección depende de conservar el cuerpo custodiado fuera del archivo alterado."
+    },
+    {
+      "id": "E10",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "FaltaVigencia",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se escribe y el archivo, que aún no existe, no se crea ni se abre. La fidelidad del texto no suple la cobertura: F06 es fiel y aun así se rechaza. Evidencia faltante: F03, el montaje de P3-01.",
+      "fuentes": ["F02", "F03", "F06", "R04", "R06"],
+      "evidencia_literal": "Se cita F02 {\"id\":\"P3-01\", …} y se omite F03 {\"id\":\"P3-01\",\"fuente\":\"A01\",\"vigente\":true}. El texto propuesto, F06, es idéntico al aceptado en E07.",
+      "justificacion_verificable": "El par E07/E10 aísla la cobertura como única variable: mismo texto fiel, misma identidad propia, y el resultado se invierte por omitir el montaje. Es el análogo de E04 en la vía de escritura, y confirma que fidelidad y cobertura son obligaciones independientes.",
+      "limitacion": "El rechazo no dice nada sobre la corrección del texto propuesto, que aquí era fiel."
+    },
+    {
+      "id": "E11",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Límite",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No hay cotejo de fidelidad ni entrega parcial: el exceso se detecta antes. La causa es de límite del lector, distinta de E/S, de presentación y de política, y no se convierte en U.",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "El archivo contiene exactamente 16385 espacios ASCII (0x20). R07: «El lector admite hasta 16384 bytes y detecta exceso con un buffer de 16385.» El buffer de 16385 existe precisamente para observar un byte por encima del admitido sin acumularlo como contenido válido.",
+      "justificacion_verificable": "16385 = 16384 + 1: el archivo está exactamente un byte por encima del máximo admitido, que es el caso frontera que distingue admisión de exceso. R07 cierra además la línea doctrinal: «Límite, E/S, presentación y política son causas distintas, ninguna convertida en U.»",
+      "limitacion": "No he ejecutado el lector; leo su contrato declarado. Un fallo técnico nunca es un valor del dominio."
+    },
+    {
+      "id": "E12",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Io(NotFound)",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "El intento de apertura precede a cualquier cotejo, de modo que no hay lectura, ni fidelidad que evaluar, ni contenido que entregar. Ausencia de destino no es contenido distinto, ni exceso de límite, ni denegación de política, y tampoco es U.",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "R07: «Un destino ausente produce Io(NotFound).»",
+      "justificacion_verificable": "El trío E09/E11/E12 separa tres causas que un sistema descuidado fundiría: contenido alterado sobre bytes recuperados, exceso de límite antes del cotejo, y fallo de E/S antes de la apertura. Ninguna produce un valor del alfabeto ternario.",
+      "limitacion": "Vía documental sobre el contrato del lector; no he provocado el error en una ejecución propia."
+    }
+  ],
+  "actividad_observable": {
+    "herramientas": [
+      "git (clon público superficial, sin credenciales)",
+      "Python 3.11.15 (hashlib, json, difflib) para recalcular huellas y comparar F06/F07",
+      "lectura de ficheros del paquete"
+    ],
+    "comandos": [
+      "git init && git remote add origin https://github.com/juantoniolloretegea/SVcustos-dataset && git fetch --depth 1 origin e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c && git checkout FETCH_HEAD",
+      "python3: sha256 de las ocho fuentes F01–F08 tomadas del texto de FUENTES.json, contrastadas contra las publicadas en PRUEBA_COMUN.md",
+      "python3: difflib.ndiff entre F06 y F07 y diferencia de longitud en bytes",
+      "python3: sha256 de PRUEBA_COMUN.md y de REPRODUCCION_S2_S3.zip, contrastados contra MANIFIESTO.json y COMPROMISO_PREVIO.json"
+    ],
+    "artefactos": [
+      "S4_RESPUESTA_CLAUDE.json (este archivo)"
+    ],
+    "intentos": 1,
+    "errores_y_correcciones": [
+      "Ninguno en la resolución de los casos. No he necesitado corregir ninguna decisión tras emitirla."
+    ],
+    "limitaciones": [
+      "No he compilado ni ejecutado Rust: modalidad lectura_documental declarada.",
+      "No he descomprimido ni ejecutado REPRODUCCION_S2_S3.zip; sólo he recalculado su huella.",
+      "No dispongo de reloj de pared del intercambio completo desde dentro de la sesión.",
+      "El modelo que sirve el turno no es acreditable desde dentro; declaro el identificador de configuración, no una versión de despliegue observada."
+    ]
+  },
+  "verificaciones_realizadas": {
+    "huellas_recalculadas": "8 de 8 fuentes F01–F08 recalculadas sobre los bytes de FUENTES.json: todas coinciden en longitud y sha256 con lo publicado en PRUEBA_COMUN.md. Además PRUEBA_COMUN.md (19470 B, eac67c8b…) y REPRODUCCION_S2_S3.zip (789529 B, 3cea79cb…) coinciden con MANIFIESTO.json y con documento_comun_sha256 y reproduccion_zip_sha256 de COMPROMISO_PREVIO.json.",
+    "naturaleza": "Recalculadas por mí sobre bytes descargados, no copiadas del documento. El contraste consistió en comparar mi cálculo con el valor publicado.",
+    "no_verificado": "No he recalculado oraculo_sha256 (b123cade…) porque el oráculo no forma parte del paquete público y no debo tener acceso a él."
+  },
+  "mediciones": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No dispongo desde dentro de la sesión de un reloj de pared fiable del intercambio completo (envío, primer contenido visible, fin de respuesta). Debe medirlo el observador externo, conforme al apartado Tiempo del banco. No sustituyo la ausencia por cero ni por una estimación."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No instrumenté la duración de las descargas ni de las lecturas. La única medida tomada fue la comprobación de huellas, 0,002 s de tiempo de proceso Python, que no representa el coste del conjunto y por eso no la presento como duración de herramientas."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 9,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "Conteo propio de invocaciones de herramienta en esta sesión dedicadas a esta prueba: 6 de shell y 2 de lectura de fichero para resolverla, más 1 de escritura de este archivo.",
+      "motivo": null
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone el recuento de tokens a la sesión."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone el recuento de tokens a la sesión."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expone coste a la sesión."
+    }
+  ],
+  "referencias_adicionales_consultadas": [
+    "SV-lenguaje-de-computacion, docs/calidad/Inventario-sv/sucesos/ (README.md y SUCESOS_SV.md) en main aba9f97, para localizar S4 y su alcance.",
+    "SV-lenguaje-de-computacion, docs/calidad/tuberias-ia/ie004/perfil-es-p2-2/PERFIL_INTERACCION_ES_IE004_CANDIDATO_2.md, leído en sesión anterior de este mismo hilo.",
+    "SV-lenguaje-de-computacion, docs/calidad/tuberias-ia/ie004/semantica-a/SUCESORA_CALENDARIO_Y_CONTABILIDAD.md (IE004-ES-P2/3-COSTE/1), leído en este hilo.",
+    "SV-lenguaje-de-computacion, docs/calidad/tuberias-ia/ie004/reserva-p3/CONTRATO_SEPARACION_CAPTURA_A_V.md, leído en este hilo.",
+    "SV-matematica-semantica, documentos/composicion/III_horizonte_sucesos_reevaluacion_discreta.md, leído en este hilo.",
+    "Advertencia: ninguna de estas referencias fue necesaria para resolver E01–E12. Los doce casos se resuelven íntegramente con R01–R08 y F01–F08 del propio documento común. Las declaro por transparencia de exposición, no como apoyo de las respuestas."
+  ]
+}

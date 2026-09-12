@@ -1,0 +1,268 @@
+{
+  "version": "S4-RESPUESTA/1",
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "participante": {
+    "modelo": "Qwen",
+    "version_visible": "Qwen3.8",
+    "plataforma": "Alibaba Cloud API / Chat Interface",
+    "modo_acceso": "enlace (GitHub raw)",
+    "referencia_paquete": "e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c",
+    "lectura_completa": true
+  },
+  "modalidad": "lectura_documental",
+  "resultados": [
+    {
+      "id": "E01",
+      "decision": "DATO",
+      "causa_o_resolucion": "vigente=true",
+      "contenido": "8.40",
+      "llamadas_politica": 1,
+      "consecuencia": "Entrega del dato solicitado.",
+      "fuentes": [
+        "F01",
+        "F03"
+      ],
+      "evidencia_literal": "F03 contiene \"vigente\": true para la fuente A01.",
+      "justificacion_verificable": "El montaje F03 fija vigencia positiva para la solicitud A01 (F01), por lo que la resolución es DATO con una llamada de política.",
+      "limitacion": "Lectura documental de los JSONs; no hay ejecución nativa."
+    },
+    {
+      "id": "E02",
+      "decision": "PERMISO_REVOCADO",
+      "causa_o_resolucion": "vigente=false",
+      "contenido": null,
+      "llamadas_politica": 1,
+      "consecuencia": "Bloqueo de la actuación; entrega del recibo negativo.",
+      "fuentes": [
+        "F01",
+        "F05"
+      ],
+      "evidencia_literal": "F05 contiene \"vigente\": false.",
+      "justificacion_verificable": "El montaje F05 fija vigencia negativa, lo que revoca el permiso y fuerza el estado PERMISO_REVOCADO con contenido nulo.",
+      "limitacion": null
+    },
+    {
+      "id": "E03",
+      "decision": "ENTREGAR_LECTURA",
+      "causa_o_resolucion": "vigente=false",
+      "contenido": null,
+      "llamadas_politica": 1,
+      "consecuencia": "Lectura del recibo entregada; permiso para actuar revocado.",
+      "fuentes": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "evidencia_literal": "F08 muestra \"estado\":\"PERMISO_REVOCADO\", \"contenido\":null.",
+      "justificacion_verificable": "La lectura documental del recibo F08 es íntegra y fiel a las fuentes, pero la vigencia falsa (F05) impide cualquier actuación posterior.",
+      "limitacion": null
+    },
+    {
+      "id": "E04",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "evidencia_incompleta",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo de la propuesta por falta de evidencia de vigencia.",
+      "fuentes": [
+        "F04",
+        "F08"
+      ],
+      "evidencia_literal": "F08 requiere contraste con el montaje de vigencia; F05 no se cita.",
+      "justificacion_verificable": "Sin el montaje F05 que acredita vigente=false, la propuesta no puede verificar la causalidad del permiso revocado.",
+      "limitacion": null
+    },
+    {
+      "id": "E05",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "identidad_incoherente",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo por citar un montaje ajeno a la identidad del caso.",
+      "fuentes": [
+        "F03",
+        "F04",
+        "F08"
+      ],
+      "evidencia_literal": "F03 es \"id\": \"P3-01\", F04 es \"id\": \"P3-11\".",
+      "justificacion_verificable": "La vigencia citada (F03) pertenece a P3-01, pero la identidad del caso es P3-11 (F04). La evidencia es falsa para este caso.",
+      "limitacion": null
+    },
+    {
+      "id": "E06",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "identidad_incoherente",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo por discrepancia entre la identidad de la propuesta y la invocación.",
+      "fuentes": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "evidencia_literal": "Las fuentes son de P3-11, pero la identidad de la propuesta es ajena.",
+      "justificacion_verificable": "La trazabilidad exige que la identidad de la propuesta coincida exactamente con la invocación y las fuentes citadas.",
+      "limitacion": null
+    },
+    {
+      "id": "E07",
+      "decision": "ACEPTAR_ARCHIVO",
+      "causa_o_resolucion": "fidelidad_conservada",
+      "contenido": "8.40",
+      "llamadas_politica": 1,
+      "consecuencia": "Escritura exitosa en destino nuevo.",
+      "fuentes": [
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "evidencia_literal": "F06 contiene \"alcance\":\"... no acredita concentración ...\".",
+      "justificacion_verificable": "F06 solo altera separadores permitidos fuera de cadenas, manteniendo la integridad semántica y la negación. Identidad y citas correctas.",
+      "limitacion": null
+    },
+    {
+      "id": "E08",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "pérdida_de_negacion",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Bloqueo de la escritura antes de crear el archivo.",
+      "fuentes": [
+        "F07"
+      ],
+      "evidencia_literal": "F07 dice \"acredita concentración...\" (falta el \"no\" respecto a F06).",
+      "justificacion_verificable": "La comprobación previa detecta la pérdida de negación en el alcance de F07 frente al cuerpo custodiado F06, impidiendo la escritura.",
+      "limitacion": null
+    },
+    {
+      "id": "E09",
+      "decision": "DETECTAR_ALTERACION",
+      "causa_o_resolucion": "alteracion_post_escritura",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Discrepancia de bytes frente al cuerpo custodiado.",
+      "fuentes": [
+        "F06",
+        "F07"
+      ],
+      "evidencia_literal": "F06 tiene 539 bytes y negación; F07 tiene 536 bytes y pérdida de negación.",
+      "justificacion_verificable": "La lectura del archivo recupera F07, pero el cotejo con el texto custodiado (F06) revela la alteración posterior.",
+      "limitacion": null
+    },
+    {
+      "id": "E10",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "cobertura_incompleta",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Rechazo de la escritura por falta de evidencia de vigencia.",
+      "fuentes": [
+        "F02",
+        "F06"
+      ],
+      "evidencia_literal": "F06 es fiel, pero falta el montaje F03 que acredita vigente=true.",
+      "justificacion_verificable": "La cobertura documental exige citar tanto la solicitud como su montaje de vigencia antes de escribir.",
+      "limitacion": null
+    },
+    {
+      "id": "E11",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "exceso_de_bytes",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "El lector aborta antes del cotejo de fidelidad.",
+      "fuentes": [
+        "F06"
+      ],
+      "evidencia_literal": "16385 bytes > límite de 16384 bytes.",
+      "justificacion_verificable": "El límite estricto del lector impide cargar el archivo, generando un error técnico antes de cualquier evaluación semántica.",
+      "limitacion": null
+    },
+    {
+      "id": "E12",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "archivo_no_existe",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "Error de acceso al intentar abrir un destino ausente.",
+      "fuentes": [
+        "F06"
+      ],
+      "evidencia_literal": "El archivo solicitado no está presente en disco.",
+      "justificacion_verificable": "La ausencia del archivo impide la lectura y cualquier cotejo posterior.",
+      "limitacion": null
+    }
+  ],
+  "actividad_observable": {
+    "herramientas": [
+      "web_extractor"
+    ],
+    "comandos": [
+      "GET /raw/.../FUENTES.json",
+      "GET /raw/.../CASOS.json",
+      "GET /raw/.../PLANTILLA_RESPUESTA.json"
+    ],
+    "artefactos": [
+      "Respuesta JSON S4-RESPUESTA/1"
+    ],
+    "intentos": 1,
+    "errores_y_correcciones": [],
+    "limitaciones": [
+      "Sin acceso a métricas de CPU/Tokens de la interfaz."
+    ]
+  },
+  "mediciones": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La interfaz de chat no expone el tiempo total de generación."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La interfaz no expone el tiempo de ejecución de las herramientas de extracción."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 6,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "Contador de herramientas de la sesión",
+      "motivo": "Extracciones de README, SUCESOS_SV, PRUEBA_COMUN, RUBRICA, JSONs del paquete."
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La API no expone el conteo de tokens de entrada al usuario final."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "La API no expone el conteo de tokens de salida al usuario final."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "Coste no expuesto por la plataforma."
+    }
+  ],
+  "referencias_adicionales_consultadas": [
+    "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/tree/main/docs/calidad/Inventario-sv/sucesos",
+    "https://github.com/juantoniolloretegea/SVcustos-dataset/tree/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/"
+  ]
+}

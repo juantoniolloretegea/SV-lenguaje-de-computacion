@@ -119,3 +119,8 @@ La prioridad sigue siendo la integración 1+3, con recogida continua de causas. 
 ## Recepción S4 y relevo S5 · RETP-167 · 12/09/2026
 
 [Prueba común publicada en SVcustos](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md), autosuficiente y descargable sin credenciales; mismos archivos para todos. Doce resultados previos cotejados, oráculo comprometido, rúbrica y mediciones fijadas. S4 finalizado como preparación; S5 pendiente para recibir respuestas originales, confirmar lectura y evaluar casos, trazabilidad y procedimiento. No se atribuyen aún resultados externos. Banco público conocido, sin reserva inédita; tiempo y recursos separados de la nota documental. Se mantienen integración 1+3, causas continuas y consolidación posterior del catálogo y demás compuertas.
+
+
+## Recepción S5 · RETP-168
+
+[DeepSeek, Claude y Qwen recibidos](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/README.md), originales preservados y cotejo inicial registrado. Grok pendiente de encargo efectivo. S5 en ejecución; etiquetas reservadas para revisión común, sin clasificación de rapidez ni nota definitiva. Continúan integración 1+3 y registro de causas; consolidación del catálogo posterior.
