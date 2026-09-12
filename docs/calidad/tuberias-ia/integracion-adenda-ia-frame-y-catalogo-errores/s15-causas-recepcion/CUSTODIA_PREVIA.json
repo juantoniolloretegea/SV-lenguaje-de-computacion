@@ -1,0 +1,9 @@
+{
+  "version": "S15-CUSTODIA-PREVIA/1",
+  "fecha_utc": "2026-09-12T19:12:44.248227+00:00",
+  "apertura_verificada": {
+    "laboratorio": "947067b4dc904f6de12c108c549c25d0f9836de1",
+    "lenguaje": "eb789bb7c183ccfe2a68452e7aa487b159758d57"
+  },
+  "ejecucion_funcional_iniciada": false
+}

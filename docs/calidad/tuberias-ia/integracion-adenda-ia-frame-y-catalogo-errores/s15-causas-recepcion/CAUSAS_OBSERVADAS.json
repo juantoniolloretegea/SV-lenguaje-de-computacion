@@ -1,0 +1,128 @@
+[
+  {
+    "caso": "F01",
+    "categoria": "ENTREGADA",
+    "etapa": "cobertura",
+    "causa": "Entregada",
+    "cuerpo_entregado": true,
+    "llamadas_cobertura": 1,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F02",
+    "categoria": "NEGATIVA_PROVEEDOR",
+    "etapa": "protocolo",
+    "causa": "NegativaProveedor",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F03",
+    "categoria": "ESQUEMA_INVALIDO",
+    "etapa": "protocolo",
+    "causa": "EsquemaInvalido(Cabecera)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F04",
+    "categoria": "ESQUEMA_INVALIDO",
+    "etapa": "protocolo",
+    "causa": "EsquemaInvalido(Truncado)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F05",
+    "categoria": "NO_ADMISION",
+    "etapa": "cobertura",
+    "causa": "NoAdmision(FaltaVigencia)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 1,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F06",
+    "categoria": "NO_ADMISION",
+    "etapa": "cobertura",
+    "causa": "NoAdmision(Lectura(Identidad))",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 1,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F07",
+    "categoria": "COMUNICACION",
+    "etapa": "recepcion",
+    "causa": "Comunicacion(TimedOut)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F08",
+    "categoria": "COMUNICACION",
+    "etapa": "recepcion",
+    "causa": "Comunicacion(ConnectionReset)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F09",
+    "categoria": "COMUNICACION",
+    "etapa": "recepcion",
+    "causa": "Comunicacion(ConnectionReset)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F10",
+    "categoria": "NEGATIVA_PROVEEDOR",
+    "etapa": "protocolo",
+    "causa": "NegativaProveedor",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F11",
+    "categoria": "ESQUEMA_INVALIDO",
+    "etapa": "protocolo",
+    "causa": "EsquemaInvalido(Sobrante)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F12",
+    "categoria": "NO_ADMISION",
+    "etapa": "cobertura",
+    "causa": "NoAdmision(FaltaCaso)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 1,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F13",
+    "categoria": "ESQUEMA_INVALIDO",
+    "etapa": "recepcion",
+    "causa": "EsquemaInvalido(Limite)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  },
+  {
+    "caso": "F14",
+    "categoria": "ESQUEMA_INVALIDO",
+    "etapa": "protocolo",
+    "causa": "EsquemaInvalido(Truncado)",
+    "cuerpo_entregado": false,
+    "llamadas_cobertura": 0,
+    "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+  }
+]

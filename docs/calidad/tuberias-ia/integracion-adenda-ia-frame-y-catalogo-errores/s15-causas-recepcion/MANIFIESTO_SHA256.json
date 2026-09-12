@@ -1,0 +1,146 @@
+{
+  "version": "S15-MANIFIESTO/1",
+  "fecha_utc": "2026-09-12T19:13:27.305045+00:00",
+  "archivos": {
+    "ACTA_RESULTADO_S15.md": {
+      "bytes": 5264,
+      "sha256": "3c1a932e98aa4acf4b0c8c00e697fb12e66c35a2a296355ede2e8000b74e1fe7"
+    },
+    "BINARIOS.json": {
+      "bytes": 638,
+      "sha256": "8ccf824144ce4c0d107e0f9b6ea222f5fb17e207333b805e272a58e7e63b42b6"
+    },
+    "CAUSAS_OBSERVADAS.json": {
+      "bytes": 4088,
+      "sha256": "b2395ebf7a60de1fd0f0c9221122255be149455768a2980a7c959f495d22f404"
+    },
+    "COMANDOS.json": {
+      "bytes": 24531,
+      "sha256": "5a8f185f0d452c681942fbc4d710002e3e93f6d921f31e5bf04528509dd7f77b"
+    },
+    "COMPROBACION_POSTERIOR.json": {
+      "bytes": 379,
+      "sha256": "a3e50f33b84ff991943bd818bbffc0b3ba85d6c97c2bc0f802902a40e44552c0"
+    },
+    "CONTRATO_S15.md": {
+      "bytes": 7252,
+      "sha256": "19493bbe842e8ed99feb0ca3073cb4ebb1f01b3b10358951e8a1dcfed2fddfb2"
+    },
+    "CUSTODIA_PREVIA.json": {
+      "bytes": 287,
+      "sha256": "a4fa0f809e24addf255ff63df0e9eb40ed9b7e22d128b78f08d301e00290b65e"
+    },
+    "ENTORNO.json": {
+      "bytes": 357,
+      "sha256": "94b84b134d6a77320f2d0b6d9b769466d5b6b0ed3213cdd0c0eca4971bf02cf1"
+    },
+    "EVIDENCIAS_S15.json": {
+      "bytes": 668753,
+      "sha256": "a17a0038449ae0f04aa296188342f93f549ecae1af503984c21ff29314ed1aa8"
+    },
+    "FIJACION_PREVIA.json": {
+      "bytes": 1733,
+      "sha256": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337"
+    },
+    "FUENTES_S2.json": {
+      "bytes": 737698,
+      "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e"
+    },
+    "MATRIZ_COBERTURA_A_L_RESULTADO_S15.json": {
+      "bytes": 25695,
+      "sha256": "2952b5a6ea22045ab61c19e5f78f12f505712320a08911b8c4a1adbe40d7e75b"
+    },
+    "MEDICIONES.json": {
+      "bytes": 1484,
+      "sha256": "2d8e43d511c3f5beb7c63cba1ef88da9401a05c2ca5a36c689fbcd74a13d97ea"
+    },
+    "OBSERVACIONES.json": {
+      "bytes": 23589,
+      "sha256": "435357866e76e4254570975296a351691badf84c29e61955af69c5f2a536a318"
+    },
+    "PREPARACION.json": {
+      "bytes": 271,
+      "sha256": "49be79814cb56209b148d3ef4d977b211a67b9d70d0557de72c4868c1b4363c8"
+    },
+    "PROCEDENCIA.json": {
+      "bytes": 850,
+      "sha256": "9bb48b438225662d3dd2b42ece68c785d27feea28415106a894fd6e7b9944fd0"
+    },
+    "README.md": {
+      "bytes": 822,
+      "sha256": "ef47e6d454ede623825535b754203ce0d753abac64b3e4e4872acd5cad8e407f"
+    },
+    "RECTORES.json": {
+      "bytes": 839,
+      "sha256": "a152a6c3a93cf6ef7a594024e0019884b1a846a988cfcfdef4c4dcbdcbdf6fd1"
+    },
+    "RESULTADO.json": {
+      "bytes": 476,
+      "sha256": "33d3d5ac5f524d56ba32af08136d6bd3630603870160deaa7ae015f85358fb58"
+    },
+    "RESULTADOS.md": {
+      "bytes": 282,
+      "sha256": "b0f0818ed70ec1eea4da5c7253ecedbe4a7d92c483b480fca5fd1e04e6adf5a7"
+    },
+    "administracion/cerrar.py": {
+      "bytes": 1422,
+      "sha256": "70b20f30eecaf29419701ad9367b2e5c4cef0bcdc2d7830547de662fcb54367f"
+    },
+    "administracion/configurar.py": {
+      "bytes": 4484,
+      "sha256": "5b4e04801de24e0b572d621b4f5c168b13dbd7d21ff559313b6c0faf77e7ca26"
+    },
+    "administracion/documentar.py": {
+      "bytes": 10893,
+      "sha256": "e4e41be7e37ab0f60a97257a69b21a95004cd6858428e31c80a86f7dedfe75e2"
+    },
+    "administracion/fijar.py": {
+      "bytes": 1960,
+      "sha256": "ed11b969db0d5b1baa3bf4aa46dcc21acbd6a9adfdb8b6a9f1d21c6bc496c712"
+    },
+    "administracion/preparar.py": {
+      "bytes": 1304,
+      "sha256": "58b6708fd8a8f528ba2bd8ee9545de63a5200c5644d127733a0ad33eca38b9c8"
+    },
+    "administracion/publicar.py": {
+      "bytes": 2638,
+      "sha256": "23773522b115d528072b824c9bfcf4487d3d4b62c369c702b4e671eb456d9bbf"
+    },
+    "administracion/publicar_cierre.py": {
+      "bytes": 2641,
+      "sha256": "e9538a85b488ba771855997316716b7dbfe8c84c9fa6a60ae9f3e32c0f1a5f5d"
+    },
+    "administracion/registrar.py": {
+      "bytes": 7720,
+      "sha256": "377534591699d158a83d1e1fdfa8f56885e2f74f7c65e31846fadb4ace37431d"
+    },
+    "administracion/registrar_cierre.py": {
+      "bytes": 7720,
+      "sha256": "377534591699d158a83d1e1fdfa8f56885e2f74f7c65e31846fadb4ace37431d"
+    },
+    "administracion/snapshot.py": {
+      "bytes": 858,
+      "sha256": "97f09062c4e7d3138bf7a58edc5382fffcce1395573d750cdc555633009c300d"
+    },
+    "codigo/ESPERADO.tsv": {
+      "bytes": 851,
+      "sha256": "96cd673c1b3930a9cb543656febd83d967517240e6fab7f93ec433df4176d51e"
+    },
+    "codigo/contraste.rs": {
+      "bytes": 4512,
+      "sha256": "b2a189cb8e2319ee0cf441d9e3c5e97cd08bb2cb3433aec018928e2a0b1f1d54"
+    },
+    "codigo/receptor.rs": {
+      "bytes": 3988,
+      "sha256": "a6495f9ff978983fe4e4ebc615f01c9f5d5cca21674017304fbcfdb253c57f5a"
+    },
+    "especimenes/negativo.cuerpo": {
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+    },
+    "reproducir.py": {
+      "bytes": 5505,
+      "sha256": "2c989924cd45e425e7a418cfccf4ffb6391bad70a825c3a81b4ece8224db2df5"
+    }
+  }
+}

@@ -1,0 +1,674 @@
+[
+  {
+    "caso": "F01",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F02",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F03",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F04",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F05",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F06",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F07",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F08",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F09",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F10",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F11",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F12",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F13",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F14",
+    "modo": "debug",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "F01",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F02",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F03",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F04",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F05",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F06",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F07",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F08",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F09",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F10",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F11",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F12",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F13",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F14",
+    "modo": "debug",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "F01",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F02",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F03",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F04",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F05",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F06",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F07",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F08",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F09",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F10",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F11",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F12",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F13",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F14",
+    "modo": "debug",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "F01",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F02",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F03",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F04",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F05",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F06",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F07",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F08",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F09",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F10",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F11",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F12",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F13",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F14",
+    "modo": "release",
+    "repeticion": 1,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "F01",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F02",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F03",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F04",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F05",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F06",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F07",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F08",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F09",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F10",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F11",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F12",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F13",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F14",
+    "modo": "release",
+    "repeticion": 2,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "F01",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ENTREGADA\tcobertura\tEntregada\ttrue\t1",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F02",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "2379587d2c47c2af0bce7c352c9c4782cb32581a7a5655239b3d2108f28222ff",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F03",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0",
+    "entrada_sha256": "923bf636a3a68d691ca41d37ceca03d4758c5a8b9fd0f52b8c6d5e6fc9c9a66d",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F04",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "26499357170f0f732251326a1159052761ea8f90fac8f4cc9b4e528cbc0f03a5",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F05",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1",
+    "entrada_sha256": "2cb366eefc8dfef0f00434e57f6350780e09299430106f661e4d4ade6fe8c5ad",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F06",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1",
+    "entrada_sha256": "e48995b5a8fd3fc8eb232aa2580e52d285323b841cd1c9c9f49ad76066d23278",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F07",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F08",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "d4b1bb2e208da1f018285fd58a641244ce5853a41e9963751e0b88bcc5bfc83e",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F09",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "COMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0",
+    "entrada_sha256": "70f0bb4e52dddd8e86a3de9bfa6726b0836fb64cfbd297389c885cb76e75e71b",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F10",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "NEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0",
+    "entrada_sha256": "b8135467529c3b07e429f12718b8b82e5ce1bdefd9dbc7dcb921a80be7df388c",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F11",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0",
+    "entrada_sha256": "646e6d2777f89187232d5bf80dc885618e1472bc6f115560200e51635195f3f7",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F12",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "NO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1",
+    "entrada_sha256": "b8d023d425e93153d27debc0bb62a9a08d91775960c243c0fb575fd28fa59dce",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F13",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0",
+    "entrada_sha256": "0a6f21fda2a49df0c6671aacfe31136e24b4880f334ee89182752f35c2f0cb3d",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "F14",
+    "modo": "release",
+    "repeticion": 3,
+    "diagnostico": "ESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0",
+    "entrada_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "evidencia": "release/capturas-3"
+  }
+]

@@ -1,0 +1,504 @@
+[
+  {
+    "paso": "compilador",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "-vV"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+    "stderr": "",
+    "pared_s": 0.013847617999999784,
+    "cpu_usuario_s": 0.009172,
+    "cpu_sistema_s": 0.0038839999999999986,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug g1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "pared_s": 1.1030003519990714,
+    "cpu_usuario_s": 1.186103,
+    "cpu_sistema_s": 0.160133,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug lote",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=lote",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.35282510599063244,
+    "cpu_usuario_s": 0.32502300000000006,
+    "cpu_sistema_s": 0.066528,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug cobertura",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=cobertura",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/cobertura/cobertura.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libcobertura.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.05001908401027322,
+    "cpu_usuario_s": 0.034772000000000025,
+    "cpu_sistema_s": 0.015200000000000019,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug conductor",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libcobertura.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.18056690400408115,
+    "cpu_usuario_s": 0.11838799999999994,
+    "cpu_sistema_s": 0.07953299999999996,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "3c937807bfc0774d0989933ab6b0f8a8dbb2bdb3a79f2028b5b92519f5ed7f24",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-1"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.0749409249983728,
+    "cpu_usuario_s": 0.06939099999999998,
+    "cpu_sistema_s": 0.004514999999999991,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 2",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "3c937807bfc0774d0989933ab6b0f8a8dbb2bdb3a79f2028b5b92519f5ed7f24",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-2"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.07230026699835435,
+    "cpu_usuario_s": 0.06793799999999983,
+    "cpu_sistema_s": 0.003917000000000004,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 3",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "3c937807bfc0774d0989933ab6b0f8a8dbb2bdb3a79f2028b5b92519f5ed7f24",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-3"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.06246359000215307,
+    "cpu_usuario_s": 0.062093000000000176,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "release g1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libg1.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "pared_s": 2.477321115002269,
+    "cpu_usuario_s": 3.089417,
+    "cpu_sistema_s": 0.11466100000000001,
+    "rss_individual": null
+  },
+  {
+    "paso": "release lote",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=lote",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/fuentes-base/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/liblote.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 1.277690398012055,
+    "cpu_usuario_s": 1.2105759999999997,
+    "cpu_sistema_s": 0.06674999999999998,
+    "rss_individual": null
+  },
+  {
+    "paso": "release cobertura",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=cobertura",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/cobertura/cobertura.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libcobertura.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.07467986900883261,
+    "cpu_usuario_s": 0.04379400000000011,
+    "cpu_sistema_s": 0.02686299999999997,
+    "rss_individual": null
+  },
+  {
+    "paso": "release conductor",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/libcobertura.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.4904534090019297,
+    "cpu_usuario_s": 0.6049579999999999,
+    "cpu_sistema_s": 0.079426,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "091ac61a398f2fdfd0eda9a22fb67e81deee3566bc03e1900834d47757d70240",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/capturas-1"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.009739433007780463,
+    "cpu_usuario_s": 0.009418000000000148,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 2",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "091ac61a398f2fdfd0eda9a22fb67e81deee3566bc03e1900834d47757d70240",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/capturas-2"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.009746762996655889,
+    "cpu_usuario_s": 0.0032730000000000814,
+    "cpu_sistema_s": 0.006207000000000074,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 3",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "091ac61a398f2fdfd0eda9a22fb67e81deee3566bc03e1900834d47757d70240",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/release/capturas-3"
+    },
+    "exit_code": 0,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\nF08\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF09\tCOMUNICACION\trecepcion\tComunicacion(ConnectionReset)\tfalse\t0\nF10\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF11\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Sobrante)\tfalse\t0\nF12\tNO_ADMISION\tcobertura\tNoAdmision(FaltaCaso)\tfalse\t1\nF13\tESQUEMA_INVALIDO\trecepcion\tEsquemaInvalido(Limite)\tfalse\t0\nF14\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "",
+    "pared_s": 0.009631427004933357,
+    "cpu_usuario_s": 0.009386999999999368,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "unificar_u compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "unificar_u",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libcobertura.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/unificar_u"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.22330710300593637,
+    "cpu_usuario_s": 0.1854710000000006,
+    "cpu_sistema_s": 0.06377899999999992,
+    "rss_individual": null
+  },
+  {
+    "paso": "unificar_u detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/unificar_u"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "5aac65fa5e4fed127fe207a29bb6642d13e6ca9cccf331710b0e753ce9a61661",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-unificar_u"
+    },
+    "exit_code": 1,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\n",
+    "stderr": "FALLO F05: observado=\"F05\\tU\\tcobertura\\tNoAdmision(FaltaVigencia)\\tfalse\\t1\\n\"; entrada=true, cuerpo=true, motivo=true\n",
+    "pared_s": 0.06102645699866116,
+    "cpu_usuario_s": 0.060698999999999614,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "ignorar_io_tardia compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "ignorar_io_tardia",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libcobertura.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/ignorar_io_tardia"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.19482964399503544,
+    "cpu_usuario_s": 0.15423400000000065,
+    "cpu_sistema_s": 0.047017000000000087,
+    "rss_individual": null
+  },
+  {
+    "paso": "ignorar_io_tardia detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/ignorar_io_tardia"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "d665567346e92ef451d057289b148d1bc09753d57b6851d2a613b3235afbf5a6",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-ignorar_io_tardia"
+    },
+    "exit_code": 1,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\nF02\tNEGATIVA_PROVEEDOR\tprotocolo\tNegativaProveedor\tfalse\t0\nF03\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Cabecera)\tfalse\t0\nF04\tESQUEMA_INVALIDO\tprotocolo\tEsquemaInvalido(Truncado)\tfalse\t0\nF05\tNO_ADMISION\tcobertura\tNoAdmision(FaltaVigencia)\tfalse\t1\nF06\tNO_ADMISION\tcobertura\tNoAdmision(Lectura(Identidad))\tfalse\t1\nF07\tCOMUNICACION\trecepcion\tComunicacion(TimedOut)\tfalse\t0\n",
+    "stderr": "FALLO F08: observado=\"F08\\tENTREGADA\\tcobertura\\tEntregada\\ttrue\\t1\\n\"; entrada=true, cuerpo=false, motivo=true\n",
+    "pared_s": 0.06859894499939401,
+    "cpu_usuario_s": 0.05987999999999971,
+    "cpu_sistema_s": 0.008352999999999944,
+    "rss_individual": null
+  },
+  {
+    "paso": "admitir_negativa compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "admitir_negativa",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/liblote.rlib",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/libcobertura.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/admitir_negativa"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.21159365800849628,
+    "cpu_usuario_s": 0.1653519999999995,
+    "cpu_sistema_s": 0.062324999999999964,
+    "rss_individual": null
+  },
+  {
+    "paso": "admitir_negativa detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/admitir_negativa"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "39f31f18c539b1968403f29a1e907eb3963357052325cee13a69d97ca6377337",
+      "LG1_BINARIO": "5555820bc9e6eff9817cae280bb5649c548393f304c1dddeb1c0af23c5938b37",
+      "S15_CAPTURAS": "/workspace/scratch/cdd3907241dd/s15-causas/ejecucion/debug/capturas-admitir_negativa"
+    },
+    "exit_code": 1,
+    "stdout": "F01\tENTREGADA\tcobertura\tEntregada\ttrue\t1\n",
+    "stderr": "FALLO F02: observado=\"F02\\tENTREGADA\\tcobertura\\tEntregada\\ttrue\\t0\\n\"; entrada=true, cuerpo=false, motivo=true\n",
+    "pared_s": 0.061309761003940366,
+    "cpu_usuario_s": 0.060893000000000086,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  }
+]

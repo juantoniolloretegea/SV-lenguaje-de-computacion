@@ -1,0 +1,16 @@
+{
+  "version": "S15-RESULTADO/1",
+  "conforme": true,
+  "casos": 14,
+  "ejecuciones_normales": 6,
+  "observaciones": 84,
+  "invocaciones": 21,
+  "capturas_identicas_por_ejecucion": 80,
+  "sensibilidades": {
+    "unificar_u": "F05",
+    "ignorar_io_tardia": "F08",
+    "admitir_negativa": "F02"
+  },
+  "pared_campana_s": 7.186728576998576,
+  "limite": "Receptor sintético y cobertura documental S2. Sin proveedor real, red real, pantalla profesional ni promoción nuclear."
+}

@@ -1,0 +1,22 @@
+{
+  "debug": {
+    "sha256": "3c937807bfc0774d0989933ab6b0f8a8dbb2bdb3a79f2028b5b92519f5ed7f24",
+    "bytes": 5413080
+  },
+  "release": {
+    "sha256": "091ac61a398f2fdfd0eda9a22fb67e81deee3566bc03e1900834d47757d70240",
+    "bytes": 4758088
+  },
+  "unificar_u": {
+    "sha256": "5aac65fa5e4fed127fe207a29bb6642d13e6ca9cccf331710b0e753ce9a61661",
+    "bytes": 5413176
+  },
+  "ignorar_io_tardia": {
+    "sha256": "d665567346e92ef451d057289b148d1bc09753d57b6851d2a613b3235afbf5a6",
+    "bytes": 5413296
+  },
+  "admitir_negativa": {
+    "sha256": "5555820bc9e6eff9817cae280bb5649c548393f304c1dddeb1c0af23c5938b37",
+    "bytes": 5413304
+  }
+}

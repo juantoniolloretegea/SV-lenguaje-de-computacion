@@ -1,0 +1,11 @@
+{
+  "fijacion_intacta": true,
+  "observaciones": 84,
+  "capturas": 581,
+  "capturas_identicas_por_ejecucion": 80,
+  "invocaciones": 21,
+  "entrada_registro_relectura_presentacion_cotejados": true,
+  "cuerpo_completo_contra_esperado_anterior": true,
+  "criterios_y_resultados_anteriores_intactos": true,
+  "limite": "Cotejo posterior de la misma campaña; no nueva ejecución."
+}

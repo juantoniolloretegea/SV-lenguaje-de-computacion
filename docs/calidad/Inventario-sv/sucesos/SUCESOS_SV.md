@@ -19,7 +19,7 @@
 | S12 | finalizado | Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3 | Watson / W-S0 | 2026-09-12T17:56:48Z |
 | S13 | finalizado | Cotejo de suficiencia para integración 1+3: contrato, IR y realización | Watson / W-S0 | 2026-09-12T18:17:41Z |
 | S14 | finalizado | G/J: base consumida bajo igual nombre y recuperación frente a reevaluación | Watson / W-S0 | 2026-09-12T18:50:10Z |
-| S15 | en ejecución | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:10:43Z |
+| S15 | finalizado | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:13:27Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -548,15 +548,15 @@
 
 ## S15 · F: causas de recepción, protocolo, cobertura y presentación
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Fecha alta utc:** 2026-09-12T19:10:43Z
 
 **Fecha inicio utc:** 2026-09-12T19:10:43Z
 
-**Fecha actualizacion utc:** 2026-09-12T19:10:43Z
+**Fecha actualizacion utc:** 2026-09-12T19:13:27Z
 
-**Fecha fin utc:** —
+**Fecha fin utc:** 2026-09-12T19:13:27Z
 
 **Unidad responsable:** Watson / W-S0
 
@@ -568,15 +568,15 @@
 
 **Dependencias:** S14 / RETP-184; cobertura S2 y cuerpo esperado anterior; autorización expresa de continuación.
 
-**Resultado:** Contrato, fuentes, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía.
+**Resultado:** Conforme dentro de S15: negativa de protocolo, esquema inválido, no admisión documental y comunicación fallida conservan causa y bytes; sólo la respuesta verificada entrega cuerpo.
 
-**Verificacion:** Cortes y rectores cotejados; cápsula G1/S2 intacta; esperados previos recuperados; fijación de fuentes y controles instrumentales.
+**Verificacion:** 84 observaciones en seis ejecuciones debug/release; 80 capturas idénticas por ejecución; 21 invocaciones; tres sensibilidades detectadas en F05/F08/F02.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/ACTA_RESULTADO_S15.md)
 
-**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-185)
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-186)
 
-**Siguiente accion:** Ejecutar reproductor con máximo 21 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.
+**Siguiente accion:** Recibir F acotada en matriz y causas; siguiente revisión de B/E/K/L por sede y productor conforme a S13, antes de promoción nuclear o cierre de catálogo.
 
 **Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
 

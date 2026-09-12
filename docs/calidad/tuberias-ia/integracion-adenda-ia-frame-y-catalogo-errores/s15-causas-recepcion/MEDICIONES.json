@@ -1,0 +1,50 @@
+{
+  "invocaciones": 21,
+  "pared_campana_s": 7.186728576998576,
+  "pared_suma_invocaciones_s": 7.079891828048858,
+  "cpu_usuario_s": 7.530232,
+  "cpu_sistema_s": 0.8090909999999999,
+  "ejecuciones_normales": [
+    {
+      "paso": "debug ejecución 1",
+      "pared_s": 0.0749409249983728,
+      "cpu_usuario_s": 0.06939099999999998,
+      "cpu_sistema_s": 0.004514999999999991
+    },
+    {
+      "paso": "debug ejecución 2",
+      "pared_s": 0.07230026699835435,
+      "cpu_usuario_s": 0.06793799999999983,
+      "cpu_sistema_s": 0.003917000000000004
+    },
+    {
+      "paso": "debug ejecución 3",
+      "pared_s": 0.06246359000215307,
+      "cpu_usuario_s": 0.062093000000000176,
+      "cpu_sistema_s": 0.0
+    },
+    {
+      "paso": "release ejecución 1",
+      "pared_s": 0.009739433007780463,
+      "cpu_usuario_s": 0.009418000000000148,
+      "cpu_sistema_s": 0.0
+    },
+    {
+      "paso": "release ejecución 2",
+      "pared_s": 0.009746762996655889,
+      "cpu_usuario_s": 0.0032730000000000814,
+      "cpu_sistema_s": 0.006207000000000074
+    },
+    {
+      "paso": "release ejecución 3",
+      "pared_s": 0.009631427004933357,
+      "cpu_usuario_s": 0.009386999999999368,
+      "cpu_sistema_s": 0.0
+    }
+  ],
+  "rss_individual": null,
+  "tokens": null,
+  "coste": null,
+  "origen": "time.monotonic y diferencias resource.getrusage(RUSAGE_CHILDREN).",
+  "limite": "Incluye compilación y mutantes; excluye preparación/publicación. Sin latencia de proveedor real."
+}
