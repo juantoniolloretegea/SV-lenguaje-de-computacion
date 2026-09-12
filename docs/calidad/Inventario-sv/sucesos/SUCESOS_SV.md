@@ -19,6 +19,7 @@
 | S12 | finalizado | Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3 | Watson / W-S0 | 2026-09-12T17:56:48Z |
 | S13 | finalizado | Cotejo de suficiencia para integración 1+3: contrato, IR y realización | Watson / W-S0 | 2026-09-12T18:17:41Z |
 | S14 | finalizado | G/J: base consumida bajo igual nombre y recuperación frente a reevaluación | Watson / W-S0 | 2026-09-12T18:50:10Z |
+| S15 | en ejecución | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:10:43Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -541,6 +542,41 @@
 **Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-184)
 
 **Siguiente accion:** Recibir alcance G/J en matriz; delimitar siguiente obligación pendiente A–L según sede y productor sin declarar cierre integral ni ampliar núcleo por analogía.
+
+**Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
+
+
+## S15 · F: causas de recepción, protocolo, cobertura y presentación
+
+**Estado:** en ejecución
+
+**Fecha alta utc:** 2026-09-12T19:10:43Z
+
+**Fecha inicio utc:** 2026-09-12T19:10:43Z
+
+**Fecha actualizacion utc:** 2026-09-12T19:10:43Z
+
+**Fecha fin utc:** —
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Catorce casos sintéticos; receptor acotado, fuentes G1/S2 intactas, registro y presentación textual sin pérdida de causa.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje 43ccb8b6f55dc526b67cae68df54facc994991eb; laboratorio 80d889a32966c748ce8746d350164028c65f70e9
+
+**Dependencias:** S14 / RETP-184; cobertura S2 y cuerpo esperado anterior; autorización expresa de continuación.
+
+**Resultado:** Contrato, fuentes, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía.
+
+**Verificacion:** Cortes y rectores cotejados; cápsula G1/S2 intacta; esperados previos recuperados; fijación de fuentes y controles instrumentales.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/README.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-185)
+
+**Siguiente accion:** Ejecutar reproductor con máximo 21 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.
 
 **Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
 

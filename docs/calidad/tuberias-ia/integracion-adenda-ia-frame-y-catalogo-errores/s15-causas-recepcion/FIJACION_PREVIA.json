@@ -1,0 +1,23 @@
+{
+  "version": "S15-FIJACION/1",
+  "fecha_utc": "2026-09-12T19:10:43.020159+00:00",
+  "archivos": {
+    "CONTRATO_S15.md": "19493bbe842e8ed99feb0ca3073cb4ebb1f01b3b10358951e8a1dcfed2fddfb2",
+    "FUENTES_S2.json": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+    "PREPARACION.json": "49be79814cb56209b148d3ef4d977b211a67b9d70d0557de72c4868c1b4363c8",
+    "PROCEDENCIA.json": "9bb48b438225662d3dd2b42ece68c785d27feea28415106a894fd6e7b9944fd0",
+    "README.md": "ef47e6d454ede623825535b754203ce0d753abac64b3e4e4872acd5cad8e407f",
+    "RECTORES.json": "a152a6c3a93cf6ef7a594024e0019884b1a846a988cfcfdef4c4dcbdcbdf6fd1",
+    "administracion/configurar.py": "5b4e04801de24e0b572d621b4f5c168b13dbd7d21ff559313b6c0faf77e7ca26",
+    "administracion/fijar.py": "ed11b969db0d5b1baa3bf4aa46dcc21acbd6a9adfdb8b6a9f1d21c6bc496c712",
+    "administracion/preparar.py": "58b6708fd8a8f528ba2bd8ee9545de63a5200c5644d127733a0ad33eca38b9c8",
+    "administracion/publicar.py": "23773522b115d528072b824c9bfcf4487d3d4b62c369c702b4e671eb456d9bbf",
+    "administracion/registrar.py": "377534591699d158a83d1e1fdfa8f56885e2f74f7c65e31846fadb4ace37431d",
+    "administracion/snapshot.py": "97f09062c4e7d3138bf7a58edc5382fffcce1395573d750cdc555633009c300d",
+    "codigo/ESPERADO.tsv": "96cd673c1b3930a9cb543656febd83d967517240e6fab7f93ec433df4176d51e",
+    "codigo/contraste.rs": "b2a189cb8e2319ee0cf441d9e3c5e97cd08bb2cb3433aec018928e2a0b1f1d54",
+    "codigo/receptor.rs": "a6495f9ff978983fe4e4ebc615f01c9f5d5cca21674017304fbcfdb253c57f5a",
+    "especimenes/negativo.cuerpo": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8",
+    "reproducir.py": "2c989924cd45e425e7a418cfccf4ffb6391bad70a825c3a81b4ece8224db2df5"
+  }
+}

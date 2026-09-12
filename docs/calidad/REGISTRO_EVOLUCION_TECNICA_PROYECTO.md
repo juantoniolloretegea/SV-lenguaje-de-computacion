@@ -1871,3 +1871,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-184 · S14 · Resultado acotado de bases y recuperación/reevaluación
 
 2026-09-12T18:50:10Z. Conforme dentro de S14: cambio de vigencia realmente consumido produce recibo distinto; sustitución bajo igual nombre y atribuciones falsas rechazadas; original conservado. 72 observaciones en seis ejecuciones debug/release; 69 capturas idénticas por ejecución; 17 invocaciones; tres sensibilidades detectadas en GJ02/GJ04/GJ06. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/README.md). Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. Siguiente: Recibir alcance G/J en matriz; delimitar siguiente obligación pendiente A–L según sede y productor sin declarar cierre integral ni ampliar núcleo por analogía.
+
+
+<a id="retp-185"></a>
+
+### RETP-2026-185 · S15 · Fijación previa de causas de recepción y no admisión
+
+2026-09-12T19:10:43Z. Contrato, fuentes, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía. Cortes y rectores cotejados; cápsula G1/S2 intacta; esperados previos recuperados; fijación de fuentes y controles instrumentales. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/README.md). Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. Siguiente: Ejecutar reproductor con máximo 21 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.

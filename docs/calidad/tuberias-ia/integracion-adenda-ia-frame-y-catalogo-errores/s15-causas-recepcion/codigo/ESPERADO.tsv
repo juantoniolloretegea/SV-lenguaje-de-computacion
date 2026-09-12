@@ -1,0 +1,14 @@
+F01	ENTREGADA	cobertura	Entregada	true	1
+F02	NEGATIVA_PROVEEDOR	protocolo	NegativaProveedor	false	0
+F03	ESQUEMA_INVALIDO	protocolo	EsquemaInvalido(Cabecera)	false	0
+F04	ESQUEMA_INVALIDO	protocolo	EsquemaInvalido(Truncado)	false	0
+F05	NO_ADMISION	cobertura	NoAdmision(FaltaVigencia)	false	1
+F06	NO_ADMISION	cobertura	NoAdmision(Lectura(Identidad))	false	1
+F07	COMUNICACION	recepcion	Comunicacion(TimedOut)	false	0
+F08	COMUNICACION	recepcion	Comunicacion(ConnectionReset)	false	0
+F09	COMUNICACION	recepcion	Comunicacion(ConnectionReset)	false	0
+F10	NEGATIVA_PROVEEDOR	protocolo	NegativaProveedor	false	0
+F11	ESQUEMA_INVALIDO	protocolo	EsquemaInvalido(Sobrante)	false	0
+F12	NO_ADMISION	cobertura	NoAdmision(FaltaCaso)	false	1
+F13	ESQUEMA_INVALIDO	recepcion	EsquemaInvalido(Limite)	false	0
+F14	ESQUEMA_INVALIDO	protocolo	EsquemaInvalido(Truncado)	false	0

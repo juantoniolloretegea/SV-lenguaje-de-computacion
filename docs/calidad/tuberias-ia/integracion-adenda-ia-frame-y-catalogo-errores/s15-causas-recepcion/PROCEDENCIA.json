@@ -1,0 +1,20 @@
+{
+  "version": "S15-PROCEDENCIA/1",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "43ccb8b6f55dc526b67cae68df54facc994991eb",
+      "tree": "446fc2790d42da56c38fc03b633e62c534e45e6f"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "80d889a32966c748ce8746d350164028c65f70e9",
+      "tree": "a6e7007a6650445204074e13e204a1ef070ac91a"
+    }
+  },
+  "fuentes_s2_sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+  "esperado_cuerpo": "Cuerpo negativo S11/S14 previo, completo y sin regeneración.",
+  "novedad": "Receptor de protocolo binario de laboratorio y diagnóstico; ninguna modificación de bibliotecas anteriores."
+}

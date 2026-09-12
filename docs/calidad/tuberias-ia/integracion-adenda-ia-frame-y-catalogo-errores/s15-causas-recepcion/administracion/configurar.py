@@ -1,0 +1,22 @@
+from pathlib import Path
+R=Path(__file__).resolve().parent;D=R/'entrega'
+s=(R.parent/'s14-bases/entrega/reproducir.py').read_text().replace('S14','S15').replace('S14 G/J','S15 F').replace('<17','<21').replace('==17','==21').replace('casos=12','casos=14').replace('observaciones=72','observaciones=84')
+a=s.index('  run(mode+\' biblioteca\'');b=s.index('  for n in range',a)
+s=s[:a]+'''  l=d/'liblote.rlib';c=d/'libcobertura.rlib'
+  run(mode+' g1',[a.rustc,*flags,'--crate-type=lib','--crate-name=g1',W/'fuentes-base/recibo-g1/candidata/lib.rs','-o',g])
+  run(mode+' lote',[a.rustc,*flags,'--crate-type=lib','--crate-name=lote',W/'fuentes-base/lote-g1/lib.rs','--extern',f'g1={g}','-o',l])
+  deps=['--extern',f'g1={g}','--extern',f'lote={l}','-L',f'dependency={d}']
+  run(mode+' cobertura',[a.rustc,*flags,'--crate-type=lib','--crate-name=cobertura',W/'cobertura/cobertura.rs',*deps,'-o',c]);deps+=['--extern',f'cobertura={c}']
+  run(mode+' conductor',[a.rustc,*flags,W/'codigo/contraste.rs',*deps,'-o',exe]);bins[mode]=dict(sha256=sha(exe.read_bytes()),bytes=exe.stat().st_size)
+'''+s[b:]
+s=s.replace("[('sin_identidad_carga','GJ02'),('consumo_falso','GJ04'),('sin_base_original','GJ06')]","[('unificar_u','F05'),('ignorar_io_tardia','F08'),('admitir_negativa','F02')]")
+s=s.replace("'--extern',f'g1={W}/debug/libg1.rlib','-o',exe]","'--extern',f'g1={W}/debug/libg1.rlib','--extern',f'lote={W}/debug/liblote.rlib','--extern',f'cobertura={W}/debug/libcobertura.rlib','-L',f'dependency={W}/debug','-o',exe]")
+s=s.replace("{'sin_identidad_carga':'GJ02','consumo_falso':'GJ04','sin_base_original':'GJ06'}","{'unificar_u':'F05','ignorar_io_tardia':'F08','admitir_negativa':'F02'}")
+s=s.replace('Host confiable y custodia intraproceso. Sin promoción nuclear, historia durable, QueryResult nativo ni comportamiento de LLM.','Receptor sintético y cobertura documental S2. Sin proveedor real, red real, pantalla profesional ni promoción nuclear.')
+(D/'reproducir.py').write_text(s)
+s=(R.parent/'s14-bases/registrar.py').read_text().replace("R.parent/'s13-suficiencia/actualizacion'","R.parent/'s14-bases/actualizacion-cierre'").replace("'184' if closing else '183'","'186' if closing else '185'").replace('s14-bases-y-reevaluacion','s15-causas-recepcion').replace('S14','S15').replace('range(14)','range(15)').replace('rows[:14]','rows[:15]').replace("s13-suficiencia/actualizacion/SUCESOS_SV.csv","s14-bases/actualizacion-cierre/SUCESOS_SV.csv")
+s=s.replace('G/J: base consumida bajo igual nombre y recuperación frente a reevaluación','F: causas de recepción, protocolo, cobertura y presentación').replace('Doce casos sintéticos nativos; G1 intacto, base de vigencia desde archivo, dos actos intraproceso y atribución de original.','Catorce casos sintéticos; receptor acotado, fuentes G1/S2 intactas, registro y presentación textual sin pérdida de causa.').replace('S13 / RETP-182; custodio G1 y esperados anteriores','S14 / RETP-184; cobertura S2 y cuerpo esperado anterior')
+s=s.replace('Conforme dentro de S15: cambio de vigencia realmente consumido produce recibo distinto; sustitución bajo igual nombre y atribuciones falsas rechazadas; original conservado.','Conforme dentro de S15: negativa de protocolo, esquema inválido, no admisión documental y comunicación fallida conservan causa y bytes; sólo la respuesta verificada entrega cuerpo.').replace('72 observaciones','84 observaciones').replace('17 invocaciones','21 invocaciones').replace('GJ02/GJ04/GJ06','F05/F08/F02').replace('Recibir alcance G/J en matriz; delimitar siguiente obligación pendiente A–L según sede y productor sin declarar cierre integral ni ampliar núcleo por analogía.','Recibir F acotada en matriz y causas; siguiente revisión de B/E/K/L por sede y productor conforme a S13, antes de promoción nuclear o cierre de catálogo.')
+s=s.replace('cápsula G1 intacta','cápsula G1/S2 intacta').replace('de bases y recuperación/reevaluación','de causas de recepción y no admisión').replace('S15 / G-J integración 1+3','S15 / F integración 1+3').replace('Luz verde tras S13 y objeto G/J delimitado','Luz verde tras S14 y objeto F delimitado').replace('S13; rectores; G1; esperados anteriores','S14; S13; rectores; G1/S2; cuerpo anterior')
+(R/'registrar.py').write_text(s)
+s=(R.parent/'s14-bases/publicar.py').read_text().replace('documentar resultado G-J de bases y recuperación; S14 / RETP-184','fijar causas de recepción y presupuesto; S15 / RETP-185');(R/'publicar.py').write_text(s)
