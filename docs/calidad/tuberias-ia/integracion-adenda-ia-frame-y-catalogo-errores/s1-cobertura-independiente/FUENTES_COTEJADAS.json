@@ -1,0 +1,107 @@
+[
+  {
+    "ruta": "AGENTS.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+    "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+    "bytes": 4384
+  },
+  {
+    "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+    "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650",
+    "bytes": 22330
+  },
+  {
+    "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+    "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+    "bytes": 29014
+  },
+  {
+    "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+    "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+    "bytes": 67111
+  },
+  {
+    "ruta": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "69fd3f7055479adb603435642a375caadb4f351f",
+    "sha256": "0e4aa5a345c1df39f8a1489ccf5278bff871b281f92ec6ee50965ecd8fd90ece",
+    "bytes": 3119
+  },
+  {
+    "ruta": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "6e8b6bb24b88e7aa294767dc80063aeb4bb634c7",
+    "sha256": "4174915fdf1b2a2e4dfb63cf733c1da005269c44b0b245fdff9587edbfdf8993",
+    "bytes": 4427
+  },
+  {
+    "ruta": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "bb44739c22f81370597915586fb82ae0a6dd4e6f",
+    "sha256": "21f40c277de2785a7b6a04e78d55caf4dbc2d8894b1fa42ba2add2cae8490cbd",
+    "bytes": 4162
+  },
+  {
+    "ruta": "docs/calidad/Inventario-sv/sucesos/README.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "34ca4dc96d1a682f5f635b50253d8b6d3a43522b",
+    "sha256": "0a885d5db58d8c920999a75ae7cf1f8a34e3c1a2e8cc9c0e2ee1d2aacf4de226",
+    "bytes": 5580
+  },
+  {
+    "ruta": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "de3e069cd112551aee14054886bf57e1bbd2a0e8",
+    "sha256": "82ef8757a8f9d142db820f62145e74e5d3d87a0870b1a159e09c701b0f6f876a",
+    "bytes": 256901
+  },
+  {
+    "ruta": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "c0dc11560bad395f2e13034ec289faf0160684dd",
+    "sha256": "a740454d7dc0e1bae7084004ac0ef978b8d01b07b73623f4b7fa5b75898064ab",
+    "bytes": 221929
+  },
+  {
+    "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/CASOS_Y_CRITERIOS.json",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "4d624af11c8ca444d13771f3b90fa25787148214",
+    "sha256": "7b52250aaca128a2471211f8156c6de7f4261e7d35cf55351c8efe0d40a668e4",
+    "bytes": 7284
+  },
+  {
+    "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+    "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c",
+    "bytes": 17761
+  },
+  {
+    "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/CONTRATO_Y_PLAN.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "571e24913249aaff18de0161f9a8f21867778c24",
+    "sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20",
+    "bytes": 3692
+  },
+  {
+    "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/FUENTES_REPRODUCIBLES.json",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "58be166657b430eb6d43ce55d863806a7419bb51",
+    "sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+    "bytes": 732857
+  },
+  {
+    "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/README.md",
+    "commit": "428d294c42602bc116fa0550262c25730017492e",
+    "git_blob": "f0112539ca66da5d48371cc73a680677812a18e8",
+    "sha256": "2585e3d7f9efe95cc43d2ec0653bbf517a1c47e73d2d9d2b67da91946fea3c82",
+    "bytes": 8558
+  }
+]

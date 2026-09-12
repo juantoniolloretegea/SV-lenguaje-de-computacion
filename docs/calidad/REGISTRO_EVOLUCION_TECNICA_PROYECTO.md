@@ -1657,3 +1657,10 @@ La incorporación es obligatoria y complementaria a los registros de calidad y a
 Resultado: Registro puesto en servicio desde S0, con S1 pendiente, historial de cambios y entrada obligatoria en Léame primero. Retirado el archivo de soporte de la carpeta de sucesos. Verificación: Publicaciones de apertura cotejadas: cuatro archivos del registro idénticos entre repositorios; Léame primero idéntico; historial RETP previo conservado; inicio.md de sucesos ausente; sin cambios ajenos al alcance. Estado de S0: finalizado. Sin nuevos ensayos funcionales ni apertura de ramas.
 
 Evidencias de apertura cotejadas: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/06da92137bcac75f3ae4b23ca059550fdf0a6a6c ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/commit/c237e9d6dc06f481f75a3a874b3bfcf411a4ba32.
+
+
+<a id="retp-164"></a>
+
+## RETP-2026-164 · S1 · Apertura del contraste C/I
+
+2026-09-12T10:37:36Z. [Contrato previo y expediente](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s1-cobertura-independiente/README.md). S1 pasa a en ejecución. Se reciben los cortes Lenguaje 428d294c42602bc116fa0550262c25730017492e y laboratorio 0d6b386121a24e915ce550dc2b52186867f6fdd4, en las mismas ramas. AGENTS, Pilares, perfiles y transición leídos y cotejados; RETP-123/141/147/152/162 y Sucesos SV delimitan el alcance. Se reutiliza la cápsula pública RETP-152 sin cambios; P3-01 y P3-04 fijan el contraste de cobertura documental del caso y su vigencia. El montaje negativo es sintético y no constituye una revocación profesional. Se fijan controles, referencia independiente, presupuesto y parada antes de ejecutar. Sin nuevas rondas de modelos ni apertura de reserva. La integración 1+3 mantiene prioridad; catálogo posterior y restantes obligaciones conservadas. Estado del suceso: en ejecución.

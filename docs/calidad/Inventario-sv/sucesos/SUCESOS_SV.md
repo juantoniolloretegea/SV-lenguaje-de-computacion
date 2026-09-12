@@ -7,7 +7,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | Suceso | Estado | Actividad | Responsable | Última actualización |
 | --- | --- | --- | --- | --- |
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
-| S1 | pendiente | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:21:21Z |
+| S1 | en ejecución | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:37:36Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -46,13 +46,13 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S1 · Contraste C/I de cobertura y comprobación independiente
 
-**Estado:** pendiente
+**Estado:** en ejecución
 
 **Alta:** 2026-09-12T10:21:21Z
 
-**Inicio:** —
+**Inicio:** 2026-09-12T10:37:36Z
 
-**Actualización:** 2026-09-12T10:21:21Z
+**Actualización:** 2026-09-12T10:37:36Z
 
 **Fin:** —
 
@@ -62,19 +62,19 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**Cortes de entrada:** Relevo RETP-162; el corte de ejecución se fijará antes de iniciar.
+**Cortes de entrada:** Lenguaje 428d294c42602bc116fa0550262c25730017492e; laboratorio 0d6b386121a24e915ce550dc2b52186867f6fdd4; cápsula RETP-152 cotejada
 
 **Dependencias:** S0; contrato y criterios C/I de RETP-162
 
-**Resultado:** Actividad prevista en el relevo; sin ejecución.
+**Resultado:** Secuencia reevaluada; contrato de contraste y controles fijados antes de ejecutar.
 
-**Verificación:** Sin resultados de ejecución.
+**Verificación:** Fuentes, registro y espejo cotejados; contraste funcional aún sin ejecutar.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/be9e5e4d4041223223bd7d0dc38e1851414fd46a/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/REVISION_SECUENCIA_COBERTURA_Y_RELEVO_RETP_162.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s1-cobertura-independiente/CONTRATO_S1.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/be9e5e4d4041223223bd7d0dc38e1851414fd46a/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-162)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-164)
 
-**Siguiente acción:** Fijar caso, evidencia requerida, control completo, omisión, referencia independiente, montaje y presupuesto antes del contraste.
+**Siguiente acción:** Observar la ruta existente y, si falta cobertura, materializar únicamente la comprobación documental definida.
 
 **Observaciones:** El catálogo conserva los errores durante el recorrido y se consolida al final del alcance correspondiente. Esta alta no acredita el contraste ni la prueba externa.
 
