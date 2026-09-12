@@ -1,0 +1,25 @@
+{
+  "motivo": "Dos intervalos ausentes del relevo RETP-160 reciben el conjunto escrito completo. Se conservan fuentes, IDs, causas y documento anterior. Los otros 92 esperados permanecen intactos.",
+  "cambios": [
+    {
+      "id": "STATE_CARDINALITY_PENDING_en",
+      "anterior": null,
+      "sucesor": [
+        92,
+        106
+      ],
+      "causa_conservada": "CD.INVALID_ADMISSIBILITY_STATE",
+      "fragmento": "{Ok, Degraded}"
+    },
+    {
+      "id": "STATE_CARDINALITY_PENDING_es",
+      "anterior": null,
+      "sucesor": [
+        122,
+        143
+      ],
+      "causa_conservada": "CD.INVALID_ADMISSIBILITY_STATE",
+      "fragmento": "{Admitido, Degradado}"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "estado": "CONFORME",
+  "causas_locales": 13,
+  "plantillas_es_en": 26,
+  "controles_sensibilidad": 3,
+  "base_sin_intervalo_detectada": true,
+  "cierre_excluido_detectado": true,
+  "rechazo_anticipado_detectado": true,
+  "procesos": 10,
+  "candidata_modificada": false
+}

@@ -1,0 +1,17 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -1242,13 +1242,13 @@
+         }
+         let states_last = self.pos;
+         self.sym('}')?;
+-        self.sym(';')?;
+         if states.len() != 3 {
+             return Err(self.located_range_error(FrontendError::InvalidAdmissibilityState(format!(
+                 "{} estados",
+                 states.len()
+             )), states_first, states_last));
+         }
++        self.sym(';')?;
+         self.word("rule")?;
+         self.sym(':')?;
+         let rule = self.take_word()?;

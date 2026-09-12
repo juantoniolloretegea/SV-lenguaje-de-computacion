@@ -1,0 +1,77 @@
+{
+  "version": "COMPILER-DIAGNOSTICS/1",
+  "causas": [
+    {
+      "id": "CD.EMPTY_CODOMAIN",
+      "code": "E004",
+      "es": "El codominio está vacío.",
+      "en": "The codomain is empty."
+    },
+    {
+      "id": "CD.DUPLICATE_CODOMAIN_MEMBERS",
+      "code": "E004",
+      "es": "El codominio contiene miembros repetidos.",
+      "en": "The codomain contains duplicate members."
+    },
+    {
+      "id": "CD.OUTPUT_SEMANTICS_KEYS",
+      "code": "E115",
+      "es": "Las claves de la semántica de salida no cumplen la unicidad o la cobertura exigida.",
+      "en": "Output semantics keys do not satisfy the required uniqueness or coverage."
+    },
+    {
+      "id": "CD.DUPLICATE_IDENTIFIER",
+      "code": null,
+      "es": "Dos declaraciones comparten el mismo identificador.",
+      "en": "Two declarations share the same identifier."
+    },
+    {
+      "id": "CD.UNEXPECTED_END",
+      "code": null,
+      "es": "La unidad fuente termina antes de completar la construcción.",
+      "en": "The source unit ends before the construct is complete."
+    },
+    {
+      "id": "CD.UNEXPECTED_TOKEN",
+      "code": null,
+      "es": "Se encontró un elemento léxico o sintáctico inesperado.",
+      "en": "An unexpected lexical or syntactic element was encountered."
+    },
+    {
+      "id": "CD.UNSUPPORTED",
+      "code": null,
+      "es": "La construcción no está admitida por este perfil y analizador.",
+      "en": "The construct is not supported by this profile and parser."
+    },
+    {
+      "id": "CD.INVALID_NATURAL",
+      "code": null,
+      "es": "El valor no es un natural admitido.",
+      "en": "The value is not an accepted natural number."
+    },
+    {
+      "id": "CD.INVALID_ADMISSIBILITY_STATE",
+      "code": null,
+      "es": "El estado de admisibilidad no es válido.",
+      "en": "The admissibility state is invalid."
+    },
+    {
+      "id": "CD.INVALID_TRI",
+      "code": null,
+      "es": "El valor ternario no es válido.",
+      "en": "The ternary value is invalid."
+    },
+    {
+      "id": "CD.INSUFFICIENT_ASSEMBLY_UNITS",
+      "code": null,
+      "es": "El ensamblaje exige al menos dos unidades fuente.",
+      "en": "Assembly requires at least two source units."
+    },
+    {
+      "id": "CD.UNMIGRATED",
+      "code": null,
+      "es": "El emisor aún no dispone de causa estructurada; consulte el error heredado bajo su política de acceso.",
+      "en": "The emitter has no structured cause yet; consult the legacy error under its access policy."
+    }
+  ]
+}

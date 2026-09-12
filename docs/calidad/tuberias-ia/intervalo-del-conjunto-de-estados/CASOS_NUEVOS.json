@@ -1,0 +1,545 @@
+{
+  "version": "STATE-LIST-SITES/1",
+  "casos": [
+    {
+      "id": "SEMICOLON_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok} rule: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        90,
+        94
+      ],
+      "marker": "rule",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "COUNT_ONE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        89
+      ],
+      "marker": "{Ok}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_TWO_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, Degraded}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        99
+      ],
+      "marker": "{Ok, Degraded}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_FOUR_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, Degraded, NotAdmitted, Ok}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        116
+      ],
+      "marker": "{Ok, Degraded, NotAdmitted, Ok}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_SIX_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, Degraded, NotAdmitted, Ok, Degraded, NotAdmitted}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        139
+      ],
+      "marker": "{Ok, Degraded, NotAdmitted, Ok, Degraded, NotAdmitted}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_COMMENTS_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, -- interno é { }\r\n\tDegraded}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        119
+      ],
+      "marker": "{Ok, -- interno é { }\r\n\tDegraded}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_BEFORE_EOF_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok};",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        89
+      ],
+      "marker": "{Ok}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_BEFORE_RULE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok}; inventada: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        89
+      ],
+      "marker": "{Ok}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok} -- fuera é { }\r\n; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        85,
+        89
+      ],
+      "marker": "{Ok}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "EMPTY_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {}; rule: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        86,
+        87
+      ],
+      "marker": "}",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "TRAILING_COMMA_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok,}; rule: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        89,
+        90
+      ],
+      "marker": "}",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LABEL_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, inventado}; rule: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        90,
+        99
+      ],
+      "marker": "inventado",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "FOREIGN_LABEL_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Admitido}; rule: R; }",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        86,
+        94
+      ],
+      "marker": "Admitido",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "TOKEN_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {7}; rule: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        86,
+        87
+      ],
+      "marker": "7",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "CLOSING_BRACE_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok];",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        88,
+        89
+      ],
+      "marker": "]",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LIST_EOF_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        88,
+        88
+      ],
+      "marker": null,
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok}",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        89,
+        89
+      ],
+      "marker": null,
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LEXICAL_PRECEDENCE_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok}; rule: R; }💣",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        101,
+        105
+      ],
+      "marker": "💣",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "VALID_ORDER_1_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, Degraded, NotAdmitted}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_2_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Ok, NotAdmitted, Degraded}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_3_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Degraded, Ok, NotAdmitted}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_4_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {Degraded, NotAdmitted, Ok}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_5_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {NotAdmitted, Ok, Degraded}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_6_en",
+      "profile": "en",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tadmissibility_spec A { parameter_id: 1; states: {NotAdmitted, Degraded, Ok}; rule: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "SEMICOLON_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido} regla: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        126,
+        131
+      ],
+      "marker": "regla",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "COUNT_ONE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        125
+      ],
+      "marker": "{Admitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_TWO_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, Degradado}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        136
+      ],
+      "marker": "{Admitido, Degradado}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_FOUR_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, Degradado, NoAdmitido, Admitido}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        158
+      ],
+      "marker": "{Admitido, Degradado, NoAdmitido, Admitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_SIX_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, Degradado, NoAdmitido, Admitido, Degradado, NoAdmitido}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        181
+      ],
+      "marker": "{Admitido, Degradado, NoAdmitido, Admitido, Degradado, NoAdmitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_COMMENTS_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, -- interno é { }\r\n\tDegradado}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        156
+      ],
+      "marker": "{Admitido, -- interno é { }\r\n\tDegradado}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_BEFORE_EOF_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido};",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        125
+      ],
+      "marker": "{Admitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_BEFORE_RULE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido}; inventada: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        125
+      ],
+      "marker": "{Admitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido} -- fuera é { }\r\n; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        115,
+        125
+      ],
+      "marker": "{Admitido}",
+      "alcance_intervalo": "conjunto_escrito"
+    },
+    {
+      "id": "EMPTY_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {}; regla: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        116,
+        117
+      ],
+      "marker": "}",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "TRAILING_COMMA_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido,}; regla: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        125,
+        126
+      ],
+      "marker": "}",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LABEL_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, inventado}; regla: R; }",
+      "cause": "CD.INVALID_ADMISSIBILITY_STATE",
+      "span": [
+        126,
+        135
+      ],
+      "marker": "inventado",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "FOREIGN_LABEL_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Ok}; regla: R; }",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        116,
+        118
+      ],
+      "marker": "Ok",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "TOKEN_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {7}; regla: R; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        116,
+        117
+      ],
+      "marker": "7",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "CLOSING_BRACE_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido];",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        124,
+        125
+      ],
+      "marker": "]",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LIST_EOF_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        124,
+        124
+      ],
+      "marker": null,
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido}",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        125,
+        125
+      ],
+      "marker": null,
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "LEXICAL_PRECEDENCE_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido}; regla: R; }💣",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        138,
+        142
+      ],
+      "marker": "💣",
+      "alcance_intervalo": "elemento"
+    },
+    {
+      "id": "VALID_ORDER_1_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, Degradado, NoAdmitido}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_2_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Admitido, NoAdmitido, Degradado}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_3_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Degradado, Admitido, NoAdmitido}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_4_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {Degradado, NoAdmitido, Admitido}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_5_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {NoAdmitido, Admitido, Degradado}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    },
+    {
+      "id": "VALID_ORDER_6_es",
+      "profile": "es",
+      "source": "-- prólogo é: origen y fidelidad\r\n\tespecificación_de_admisibilidad A { identificador_de_parámetro: 1; estados: {NoAdmitido, Degradado, Admitido}; regla: R; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null,
+      "alcance_intervalo": "ninguno"
+    }
+  ]
+}

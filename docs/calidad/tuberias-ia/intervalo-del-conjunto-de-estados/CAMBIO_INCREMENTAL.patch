@@ -1,0 +1,66 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -937,7 +937,7 @@
+ struct Parser<'a> {
+     tokens: Vec<Token<'a>>,
+     pos: usize,
+-    error_site: std::cell::Cell<Option<(usize, bool)>>,
++    error_site: std::cell::Cell<Option<(usize, usize, bool)>>,
+     spans: Vec<std::ops::Range<usize>>,
+     object_origins: Vec<std::ops::Range<usize>>,
+     operation_origins: Vec<std::ops::Range<usize>>,
+@@ -969,9 +969,12 @@
+             let site = self.error_site.get();
+             let span = if matches!(error, FrontendError::UnexpectedEnd) {
+                 Some(self.source.len()..self.source.len())
+-            } else { site.and_then(|(index, _)| self.spans.get(index).cloned()) };
++            } else {
++                site.and_then(|(first, last, _)| self.spans.get(first).zip(self.spans.get(last))
++                    .map(|(a, b)| a.start..b.end))
++            };
+             return Err(FrontendFailure { error, span,
+-                foreign_surface: site.is_some_and(|(_, foreign)| foreign) });
++                foreign_surface: site.is_some_and(|(_, _, foreign)| foreign) });
+         }
+         Ok(ParsedUnit {
+             program: construction::program(self.source_file, sha256_hex(self.source.as_bytes()), self.objects, self.operations),
+@@ -1222,6 +1225,7 @@
+         self.sym(';')?;
+         self.word("states")?;
+         self.sym(':')?;
++        let states_first = self.pos;
+         self.sym('{')?;
+         let mut states = Vec::new();
+         loop {
+@@ -1236,13 +1240,14 @@
+                 break;
+             }
+         }
++        let states_last = self.pos;
+         self.sym('}')?;
+         self.sym(';')?;
+         if states.len() != 3 {
+-            return Err(FrontendError::InvalidAdmissibilityState(format!(
++            return Err(self.located_range_error(FrontendError::InvalidAdmissibilityState(format!(
+                 "{} estados",
+                 states.len()
+-            )));
++            )), states_first, states_last));
+         }
+         self.word("rule")?;
+         self.sym(':')?;
+@@ -2148,7 +2153,13 @@
+     fn located_error(&self, error: FrontendError, position: usize, profile_context: bool) -> FrontendError {
+         let foreign = profile_context && matches!(self.tokens.get(position),
+             Some(Token::Word(_, STATUS_FOREIGN_CONTEXTUAL | STATUS_FOREIGN_PROTECTED)));
+-        self.error_site.set(Some((position, foreign)));
++        self.error_site.set(Some((position, position, foreign)));
++        error
++    }
++
++    /// Intervalo inclusivo de tokens conocido por el emisor del conjunto.
++    fn located_range_error(&self, error: FrontendError, first: usize, last: usize) -> FrontendError {
++        self.error_site.set(Some((first, last, false)));
+         error
+     }
+ 

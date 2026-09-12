@@ -1,0 +1,20 @@
+{
+  "unidad": "Procesos instrumentales, incluida compilación; no por caso",
+  "procesos_principales": 41,
+  "procesos_complementarios": 10,
+  "tiempo_principal_s": 43.599359196,
+  "cpu_usuario_principal_s": 127.803139,
+  "cpu_sistema_principal_s": 7.218596,
+  "rss_max_acumulado_hijos_principal_kib": 608368,
+  "coste_monetario": null,
+  "coste_inferencia": null,
+  "comparacion_rendimiento": "No constituida; los comprobadores de base y candidata realizan distinta verificación.",
+  "intento_interrumpido": {
+    "procesos": 21,
+    "tiempo_s": 19.598710689,
+    "cpu_usuario_s": 46.968525,
+    "cpu_sistema_s": 3.550167,
+    "rss_max_acumulado_hijos_kib": 461908,
+    "error": "E0786 al leer biblioteca optimizada de la base"
+  }
+}

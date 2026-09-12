@@ -1,0 +1,50 @@
+{
+  "fecha_utc": "2026-09-12T09:37:08.454655+00:00",
+  "fuentes_e_instrumento_identicos": true,
+  "biblioteca_recompilada": {
+    "bytes": 10875808,
+    "sha256": "bbbd91d141f8b7f5d3ccdbfc517502a02f77efeae03d6ad4038efce138c2410e"
+  },
+  "resultado_principal": {
+    "estado": "CONFORME_EN_ALCANCE_NATIVO",
+    "fuentes_nuevas": 48,
+    "fuentes_heredadas_160": 94,
+    "esperados_160_sucedidos": 2,
+    "fuentes_focales": 142,
+    "validas_focales": 22,
+    "ensamblajes_focales": 240,
+    "observaciones_monofuente": 852,
+    "repeticiones": 3,
+    "modos": [
+      "debug",
+      "release"
+    ],
+    "corpus": {
+      "validos": 14,
+      "invalidos": 106,
+      "resultado_heredado_identico": true
+    },
+    "unitarios_por_modo": 239,
+    "focales_heredados": 29,
+    "esperados_158_sucedidos_desde_159": 2,
+    "clientes_negativos": 4,
+    "errores_de_acceso": 6,
+    "procesos": 41,
+    "wasi": false,
+    "navegador": false,
+    "proveedores_externos": 0,
+    "cierre_global": false
+  },
+  "complemento": {
+    "estado": "CONFORME",
+    "causas_locales": 13,
+    "plantillas_es_en": 26,
+    "controles_sensibilidad": 3,
+    "base_sin_intervalo_detectada": true,
+    "cierre_excluido_detectado": true,
+    "rechazo_anticipado_detectado": true,
+    "procesos": 10,
+    "candidata_modificada": false
+  },
+  "causa_raiz_incidente": "No establecida; no se acredita una corrección de rustc"
+}

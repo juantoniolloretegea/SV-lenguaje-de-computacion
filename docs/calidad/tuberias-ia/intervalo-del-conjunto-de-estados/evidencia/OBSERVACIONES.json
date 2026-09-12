@@ -1,0 +1,5966 @@
+[
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 546169
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 217022
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 801321
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 415780
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 505256
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 222177
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 206458
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 400097
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 197053
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 189187
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 244814
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 1245462
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 185002
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 343432
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 253459
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 139998
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 136178
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 150919
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 140128
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 82149
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 80619
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 78854
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 250751
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 445544
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 555423
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 219778
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 376760
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 1620183
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 275647
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 222677
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 344489
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 236323
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 200736
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 200173
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 261980
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 225684
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 325012
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 213969
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 742041
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 246237
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 233994
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 209344
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 129134
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 105408
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 98575
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 98466
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 98139
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 97423
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 232532
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 224064
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 221710
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 178914
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 192130
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 173932
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 345056
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 191396
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 189797
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 356862
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 238319
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 175192
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 209415
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 194003
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 200060
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 190508
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 190961
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 205756
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 227192
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 192048
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 153199
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 152157
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 184268
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 196391
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 174547
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 272659
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 113139
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 226264
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 246205
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 310020
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 176741
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 168768
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 204774
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 202853
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 181690
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 212913
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 222503
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 172738
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 189133
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 168173
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 162986
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 198469
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 188662
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 208570
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 206713
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 288693
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 240060
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 155966
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 245274
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 210052
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 385220
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 280025
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 222959
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 117715
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 136486
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 136558
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 113380
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 132811
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 230645
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 129824
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 134835
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 150706
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 142747
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 143937
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 187986
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 151584
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 241997
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 146318
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 103029
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 58790
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 69118
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 50478
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 50996
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 221901
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 125770
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 192258
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 112475
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 132652
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 159132
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 144933
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 135642
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 144662
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 142685
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 146597
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 152444
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 508217
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 189479
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 133566
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 110364
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 57342
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 68842
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 51048
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 50954
+  },
+  {
+    "modo": "debug",
+    "repeticion": 1,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 162196
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 553151
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 266327
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 201501
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 262066
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 323801
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 252242
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 280580
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 229287
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 196932
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 352242
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 191562
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 315474
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 192261
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 189723
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 178645
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 172253
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 201555
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 187559
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 303066
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 134037
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 99685
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 139030
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 179562
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 121344
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 298327
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 351689
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 281330
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 304960
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 338660
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 450518
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 222669
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 238843
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 322915
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 273495
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 263528
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 317738
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 279372
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 288601
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 532557
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 244279
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 199638
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 210426
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 126659
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 146586
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 99985
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 99425
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 99661
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 98649
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 231545
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 224198
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 464419
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 237547
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 172770
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 291838
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 270817
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 185405
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 190414
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 320496
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 215547
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 212615
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 207353
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 178531
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 238088
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 191272
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 192110
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 207167
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 336025
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 201246
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 193067
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 140288
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 187101
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 290707
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 229414
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 198203
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 122893
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 281127
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 266200
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 230453
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 421049
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 447674
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 399031
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 171874
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 212406
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 214762
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 316322
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 173589
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 166925
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 268835
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 164124
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 201190
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 515879
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 180873
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 281732
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 309213
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 1009036
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 214629
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 156386
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 216944
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 198578
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 199039
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 255562
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 124081
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 190738
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 147436
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 414318
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 126071
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 132274
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 323540
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 136818
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 145011
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 160794
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 144076
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 159096
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 152206
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 165954
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 133438
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 110724
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 86333
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 70468
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 51061
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 51228
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 139415
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 134782
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 136824
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 170238
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 133403
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 142620
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 104628
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 135935
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 284430
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 136846
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 192346
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 174791
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 157510
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 188910
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 133614
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 109581
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 57335
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 69676
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 51551
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 50762
+  },
+  {
+    "modo": "debug",
+    "repeticion": 2,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 166012
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 312238
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 199456
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 198052
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 228890
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 382275
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 221030
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 176451
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 194859
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 192269
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 210468
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 190340
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 200898
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 189874
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 274865
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 202320
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 170521
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 171555
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 181863
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 132530
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 100268
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 117760
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 98230
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 97954
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 97797
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 221265
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 214918
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 314451
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 230484
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 255834
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 218626
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 199062
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 238005
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 215085
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 211884
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 325466
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 252063
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 213112
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 211559
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 200009
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 215271
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 195551
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 208630
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 113367
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 104838
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 99009
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 310604
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 100591
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 108276
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 232035
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 222872
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 261391
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 178326
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 170465
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 171459
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 165322
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 406444
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 188544
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 216602
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 173430
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 167069
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 192309
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 307815
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 199752
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 189040
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 342908
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 207316
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 200951
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 253247
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 153821
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 169829
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 183834
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 173004
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 172631
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 262742
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 164231
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 226100
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 225638
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 224518
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 175172
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 187285
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 170121
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 165134
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 628276
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 214484
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 221710
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 231006
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 165953
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 202754
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 161595
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 199060
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 188502
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 189268
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 223613
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 166442
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 184598
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 154689
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 152900
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 209318
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 229655
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 196544
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 200132
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 111272
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 227257
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 174434
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 113182
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 132030
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 130175
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 128574
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 133236
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 142840
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 164646
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 143442
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 149214
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 150678
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 164491
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 132240
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 111116
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 73633
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 70052
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 50678
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 51345
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 138121
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 132710
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 135339
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 112868
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 131587
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 130121
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 147937
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 134121
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 143664
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 142636
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 144889
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 151393
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 203776
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 187526
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 132754
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 108559
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 53748
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 67490
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 50317
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 51236
+  },
+  {
+    "modo": "debug",
+    "repeticion": 3,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 141007
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 96470
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 28186
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 36321
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 39560
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 27738
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 31651
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 36731
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37475
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 61096
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 29914
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32880
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 36413
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35712
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37237
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37254
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 35096
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 28968
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35965
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 38310
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 13456
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 10826
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 10057
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 10322
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 9923
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 28280
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38313
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38342
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41022
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 42016
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40238
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37476
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40331
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38429
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38766
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38040
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38672
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 37815
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 40579
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 57996
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 36105
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 35181
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38455
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 20278
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 20591
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 18155
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 18198
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 17908
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 17511
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 41773
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39259
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37799
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36011
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34730
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35037
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 33856
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 40127
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37556
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37907
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34947
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 28819
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34344
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 32691
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36201
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 78688
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36236
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 23720
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 21120
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 116602
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 19030
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 17113
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 20216
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 19507
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 20292
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 21590
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 13766
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 23799
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 24071
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 30677
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35636
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 28889
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 103992
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 34125
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39172
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39086
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37884
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34883
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34117
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35582
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 33029
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35393
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34114
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35492
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36442
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35806
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 69222
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32652
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 32936
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37606
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35744
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33209
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 44935
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 19764
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 26332
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 29548
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33310
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 27466
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 30079
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32691
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32470
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34186
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33226
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34103
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 27793
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32597
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 33633
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 25537
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 29294
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 15864
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 16264
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 14180
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 8374
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33167
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 31566
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 24717
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 24291
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31423
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 58055
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 26470
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 25258
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33143
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32602
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33325
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33608
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32236
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 35194
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 24658
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 29650
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 13658
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 10849
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 12459
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 14011
+  },
+  {
+    "modo": "release",
+    "repeticion": 1,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33974
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 96352
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 45091
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40916
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 43066
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41464
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 66823
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 29615
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37501
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41309
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37076
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37925
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 36903
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35779
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 42482
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37411
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 35101
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 34018
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36322
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 29174
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 19303
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 18760
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 17613
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 17864
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 17394
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 42317
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 39543
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37928
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41473
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 42406
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40466
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37828
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40522
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38430
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 58978
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38302
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38879
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 38112
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38703
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37775
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 53239
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 142632
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38093
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 21651
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 22029
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 18501
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 18146
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 17590
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 17820
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 41328
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39589
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37932
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35881
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34883
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35252
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 74952
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 25962
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 28454
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31749
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 59999
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 20001
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36087
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 27553
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35787
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35455
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34939
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36838
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 36442
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35746
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33804
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33073
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 35141
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34977
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36077
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 186490
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 22446
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39545
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38702
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38432
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35101
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33801
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34843
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 51836
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38421
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39354
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37543
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34968
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33901
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34342
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 327788
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36659
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34283
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35511
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36689
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 36430
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35086
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33286
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 32365
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38163
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35949
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37638
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 66608
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 22238
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33044
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 24883
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31173
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32830
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 25606
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32380
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31685
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34203
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33749
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34401
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35237
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 47971
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 34029
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 25617
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 30441
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 15642
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 16816
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 13874
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 8475
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33463
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33359
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 23525
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 24794
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31777
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 24575
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32106
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 133152
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 86375
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34804
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34129
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 49342
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32692
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 35881
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 25131
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 29292
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 14671
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 15571
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 8414
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 12060
+  },
+  {
+    "modo": "release",
+    "repeticion": 2,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34238
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SEMICOLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 198974
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_ONE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 50794
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_TWO_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40768
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_FOUR_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 43673
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_SIX_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41549
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_COMMENTS_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 42074
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_EOF_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 36793
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_RULE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37659
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 39193
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "EMPTY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37178
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TRAILING_COMMA_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36890
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LABEL_PRECEDENCE_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37299
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FOREIGN_LABEL_PRECEDENCE_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35999
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TOKEN_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36909
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "CLOSING_BRACE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37597
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LIST_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 34886
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 33953
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LEXICAL_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36441
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_1_en",
+    "causa": "OK",
+    "duracion_ns": 27713
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_2_en",
+    "causa": "OK",
+    "duracion_ns": 18956
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_3_en",
+    "causa": "OK",
+    "duracion_ns": 18418
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_4_en",
+    "causa": "OK",
+    "duracion_ns": 17769
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_5_en",
+    "causa": "OK",
+    "duracion_ns": 17809
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_6_en",
+    "causa": "OK",
+    "duracion_ns": 17392
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SEMICOLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 42520
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_ONE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 70143
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_TWO_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38714
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_FOUR_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 41760
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_SIX_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 48839
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_COMMENTS_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40666
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_EOF_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 37405
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_BEFORE_RULE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 40455
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COUNT_EXCLUDES_TRAILING_COMMENT_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 39084
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "EMPTY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39302
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TRAILING_COMMA_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38947
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LABEL_PRECEDENCE_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 38785
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FOREIGN_LABEL_PRECEDENCE_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 38098
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TOKEN_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38871
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "CLOSING_BRACE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37970
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LIST_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 36097
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "AFTER_BRACE_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 35231
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LEXICAL_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38132
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_1_es",
+    "causa": "OK",
+    "duracion_ns": 20577
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_2_es",
+    "causa": "OK",
+    "duracion_ns": 20551
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_3_es",
+    "causa": "OK",
+    "duracion_ns": 17823
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_4_es",
+    "causa": "OK",
+    "duracion_ns": 18422
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_5_es",
+    "causa": "OK",
+    "duracion_ns": 17533
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_ORDER_6_es",
+    "causa": "OK",
+    "duracion_ns": 17744
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 41147
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 40162
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 240126
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 63879
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 35336
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35610
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 33975
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38854
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_ORDER_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37144
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_CONSTRAINTS_REPEAT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38292
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34874
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34320
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_COLON_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34392
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_EOF_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 32629
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35979
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34490
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35164
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36846
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 36108
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_PRECEDENCE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35726
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LET_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33748
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LET_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 32221
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_UNKNOWN_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 34862
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34692
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 36039
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_CARDINALITY_PENDING_en",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 64117
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_VALID_en",
+    "causa": "OK",
+    "duracion_ns": 21780
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39768
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39055
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38561
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34764
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33540
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35143
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "rel_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 33257
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 38547
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_ORDER_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 39241
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_CONSTRAINTS_REPEAT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37844
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 34806
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33964
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_COLON_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34528
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "pat_EOF_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 32742
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 35664
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34402
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SUPERVISE_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35584
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 36377
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 36347
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "QUERY_PRECEDENCE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 35070
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LET_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33178
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LET_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 69783
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_UNKNOWN_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 24934
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 27155
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 37338
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_CARDINALITY_PENDING_es",
+    "causa": "CD.INVALID_ADMISSIBILITY_STATE",
+    "duracion_ns": 190160
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "STATE_VALID_es",
+    "causa": "OK",
+    "duracion_ns": 20498
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 26915
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_UNKNOWN_en",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 29856
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 25476
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_PROTECTED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31519
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 32948
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_TOKEN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 26307
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SYMBOL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31895
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TEXT_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34505
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ARROW_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33072
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "NAT_TYPE_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33953
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FIELD_FOREIGN_en",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 34659
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FIELD_UNKNOWN_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33103
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TRI_en",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 33306
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "EOF_en",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 25299
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LEXICAL_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 29361
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "CONTEXT_IDENTIFIER_en",
+    "causa": "OK",
+    "duracion_ns": 16204
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TEXT_DATA_en",
+    "causa": "OK",
+    "duracion_ns": 16080
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COMMENT_en",
+    "causa": "OK",
+    "duracion_ns": 8633
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_en",
+    "causa": "OK",
+    "duracion_ns": 12125
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "UNMIGRATED_en",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 34733
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 25869
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_UNKNOWN_es",
+    "causa": "CD.UNSUPPORTED",
+    "duracion_ns": 30569
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ROOT_SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 24632
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_PROTECTED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 31705
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 31000
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "IDENT_TOKEN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 26574
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "SYMBOL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 30883
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TEXT_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 51996
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "ARROW_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32591
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "NAT_TYPE_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 33391
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FIELD_FOREIGN_es",
+    "causa": "CD.FOREIGN_SURFACE",
+    "duracion_ns": 33912
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "FIELD_UNKNOWN_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 32366
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TRI_es",
+    "causa": "CD.INVALID_TRI",
+    "duracion_ns": 35502
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "EOF_es",
+    "causa": "CD.UNEXPECTED_END",
+    "duracion_ns": 25047
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "LEXICAL_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 23112
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "CONTEXT_IDENTIFIER_es",
+    "causa": "OK",
+    "duracion_ns": 12882
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "TEXT_DATA_es",
+    "causa": "OK",
+    "duracion_ns": 9972
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "COMMENT_es",
+    "causa": "OK",
+    "duracion_ns": 6750
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "VALID_es",
+    "causa": "OK",
+    "duracion_ns": 6218
+  },
+  {
+    "modo": "release",
+    "repeticion": 3,
+    "id": "UNMIGRATED_es",
+    "causa": "CD.UNEXPECTED_TOKEN",
+    "duracion_ns": 19305
+  }
+]

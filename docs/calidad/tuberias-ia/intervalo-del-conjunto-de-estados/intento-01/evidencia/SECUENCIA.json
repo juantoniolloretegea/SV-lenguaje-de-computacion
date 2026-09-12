@@ -1,0 +1,397 @@
+[
+  {
+    "evento": "inicio",
+    "paso": "rustc",
+    "utc": "2026-09-12T09:33:13.043504+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--version",
+      "--verbose"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "rustc",
+    "utc": "2026-09-12T09:33:13.057588+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-debug-build",
+    "utc": "2026-09-12T09:33:13.070497+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--crate-name",
+      "sv_core",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/base/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_base_debug.rlib"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-debug-build",
+    "utc": "2026-09-12T09:33:15.880031+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-debug-corpus-build",
+    "utc": "2026-09-12T09:33:15.882013+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/antecedente-158/corpus.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_base_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus-base-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-debug-corpus-build",
+    "utc": "2026-09-12T09:33:16.024913+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-debug-corpus",
+    "utc": "2026-09-12T09:33:16.028608+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus-base-debug",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus.tsv"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-debug-corpus",
+    "utc": "2026-09-12T09:33:16.065151+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-debug-focal-build",
+    "utc": "2026-09-12T09:33:16.076326+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_base_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-base-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-debug-focal-build",
+    "utc": "2026-09-12T09:33:16.240019+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-debug-focal-1",
+    "utc": "2026-09-12T09:33:16.242100+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-base-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-debug-focal-1",
+    "utc": "2026-09-12T09:33:16.270555+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-build",
+    "utc": "2026-09-12T09:33:16.282878+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--crate-name",
+      "sv_core",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/candidata/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_candidata_debug.rlib"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-build",
+    "utc": "2026-09-12T09:33:19.136668+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-corpus-build",
+    "utc": "2026-09-12T09:33:19.140040+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/antecedente-158/corpus.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus-candidata-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-corpus-build",
+    "utc": "2026-09-12T09:33:19.278972+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-corpus",
+    "utc": "2026-09-12T09:33:19.281999+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus-candidata-debug",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus.tsv"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-corpus",
+    "utc": "2026-09-12T09:33:19.321246+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-focal-build",
+    "utc": "2026-09-12T09:33:19.332941+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--cfg",
+      "candidate",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-candidata-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-focal-build",
+    "utc": "2026-09-12T09:33:19.516132+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-focal-1",
+    "utc": "2026-09-12T09:33:19.519235+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-candidata-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-focal-1",
+    "utc": "2026-09-12T09:33:19.563867+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-focal-2",
+    "utc": "2026-09-12T09:33:19.579593+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-candidata-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-focal-2",
+    "utc": "2026-09-12T09:33:19.615587+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "candidata-debug-focal-3",
+    "utc": "2026-09-12T09:33:19.626289+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal-candidata-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "candidata-debug-focal-3",
+    "utc": "2026-09-12T09:33:19.666412+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-units-build",
+    "utc": "2026-09-12T09:33:19.681380+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--test",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/candidata/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/units-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-units-build",
+    "utc": "2026-09-12T09:33:23.496065+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-units",
+    "utc": "2026-09-12T09:33:23.500887+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/units-debug",
+      "--test-threads=1"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-units",
+    "utc": "2026-09-12T09:33:23.566056+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-heredado-build",
+    "utc": "2026-09-12T09:33:23.592345+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/focal_heredado_v2.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/heredado-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-heredado-build",
+    "utc": "2026-09-12T09:33:23.805356+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-heredado",
+    "utc": "2026-09-12T09:33:23.809988+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/heredado-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-heredado",
+    "utc": "2026-09-12T09:33:23.815254+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-relacional-build",
+    "utc": "2026-09-12T09:33:23.825831+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/antecedente-158/relacional.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/relacional-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-relacional-build",
+    "utc": "2026-09-12T09:33:23.967635+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "debug-relacional",
+    "utc": "2026-09-12T09:33:23.974854+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-161/relacional-debug"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "debug-relacional",
+    "utc": "2026-09-12T09:33:23.981826+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-release-build",
+    "utc": "2026-09-12T09:33:23.994284+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--crate-name",
+      "sv_core",
+      "--crate-type",
+      "rlib",
+      "-O",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/base/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_base_release.rlib"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-release-build",
+    "utc": "2026-09-12T09:33:32.786862+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "base-release-corpus-build",
+    "utc": "2026-09-12T09:33:32.794481+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-O",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/antecedente-158/corpus.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-161/libsv_core_base_release.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-161/corpus-base-release"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "base-release-corpus-build",
+    "utc": "2026-09-12T09:33:32.822559+00:00",
+    "codigo": 1,
+    "limite_excedido": null
+  }
+]

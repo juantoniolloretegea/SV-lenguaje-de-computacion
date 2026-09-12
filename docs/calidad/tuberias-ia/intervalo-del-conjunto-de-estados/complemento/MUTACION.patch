@@ -1,0 +1,11 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -2159,7 +2159,7 @@
+ 
+     /// Intervalo inclusivo de tokens conocido por el emisor del conjunto.
+     fn located_range_error(&self, error: FrontendError, first: usize, last: usize) -> FrontendError {
+-        self.error_site.set(Some((first, last, false)));
++        self.error_site.set(Some((first, last.saturating_sub(1), false)));
+         error
+     }
+ 

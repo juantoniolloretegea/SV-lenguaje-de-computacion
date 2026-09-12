@@ -390,3 +390,10 @@ La cobertura global sigue abierta: emisores compuestos y validadores restantes, 
 [Resultado y límites](tuberias-ia/ubicaciones-de-rechazos-compuestos/README.md). DFL-001 recibe ubicación original en doce emisores compuestos, conservando orden de validación y causa desde el contexto léxico. Se comprobaron 54 fuentes nuevas y 40 anteriores, 168 ensamblajes derivados, corpus 14/106 idéntico, 239 unitarios por modo, catálogo intacto, controles de sensibilidad y reproducción portátil. Cambio limitado a un archivo de la cápsula; no promovido al núcleo productivo.
 
 Permanece pendiente la ubicación del conjunto de estados al fallar cardinalidad: conserva ausencia explícita de intervalo en ES/EN. Continúan conversiones defensivas y validadores restantes, subcausas, serialización/presentación y DG global. DFL-011 y otras deudas no se cierran. Tampoco se acredita fidelidad final, WASI/navegador, recepción profesional ni encargo externo. P3 sigue cerrado; P4/P5 conservan sus compuertas.
+
+
+### Recepción RETP-161 · Intervalo del conjunto escrito de estados
+
+[Resultado y límites](tuberias-ia/intervalo-del-conjunto-de-estados/README.md). DFL-001 recibe ubicación de llaves y contenido para el rechazo por número de etiquetas escrito distinto de tres, preservando condición y precedencia. Dos intervalos ausentes se suceden expresamente; otros 92 esperados intactos. 48 fuentes nuevas, 142 totales, 240 ensamblajes derivados, corpus 14/106 idéntico, 239 unitarios por modo y tres controles de sensibilidad. Reproducción portátil conforme; una incidencia E0786 de lectura de la biblioteca base en el primer intento queda preservada con artefacto y causa raíz sin determinar.
+
+Siguen pendientes la alcanzabilidad y tratamiento de conversiones defensivas, los demás validadores y subcausas, presentación/serialización y DG global. DFL-011 y demás deudas no se cierran. Sin promoción productiva, acreditación de fidelidad final, WASI/navegador, recepción profesional ni encargo externo. P3 permanece cerrado y P4/P5 conservan sus compuertas. Se mantienen las ramas existentes y el historial.
