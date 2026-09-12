@@ -1,6 +1,6 @@
 {
   "version": "S5-RECEPCIONES/1",
-  "fecha_utc": "2026-09-12T12:29:01Z",
+  "fecha_utc": "2026-09-12T14:26:45Z",
   "estado_suceso": "en ejecución",
   "participantes": [
     {
@@ -53,12 +53,19 @@
     },
     {
       "participante": "grok",
-      "intento": null,
-      "estado": "pendiente",
-      "alcance_estado": "Encargo preparado; no enviado y sin respuesta.",
-      "acceso": "Disponible según comunicación del usuario; no se ha realizado comprobación nueva desde la interfaz de Grok.",
+      "intento": 1,
+      "estado": "finalizado",
+      "alcance_estado": "Recepción y cotejo inicial del archivo; no aceptación ni cierre S5.",
+      "resultado_literal": 39,
+      "trazabilidad": 35,
+      "procedimiento": 8,
+      "entrega": 8,
+      "suma_literal": 90,
+      "puntos_etiquetas_reservados": 8,
       "puntuacion_definitiva": null,
-      "conformidad_acreditada": null
+      "conformidad_acreditada": false,
+      "original_sha256": "44ed909b9a7a16830f747f80480f0a98aa1afd89c5bd198dc7dc649cd585abcf",
+      "bytes_original": 16657
     }
   ]
 }

@@ -1,0 +1,131 @@
+{
+  "version": "S5-RECEPCION/1",
+  "participante": "grok",
+  "intento_declarado": 1,
+  "fecha_registro_utc": "2026-09-12T14:26:45Z",
+  "fecha_envio_utc": null,
+  "fecha_fin_respuesta_utc": null,
+  "origen": "Archivo aportado por el usuario en el chat del encargo.",
+  "nombre_original": "Pegado text(7).txt",
+  "archivo_conservado": "RESPUESTA_ORIGINAL.txt",
+  "bytes": 16657,
+  "sha256": "44ed909b9a7a16830f747f80480f0a98aa1afd89c5bd198dc7dc649cd585abcf",
+  "saltos_CRLF": 248,
+  "modalidad": "lectura_documental",
+  "participante_declarado": {
+    "modelo": "Grok 4.6",
+    "version_visible": "Grok 4.6 (xAI)",
+    "plataforma": "conversacion xAI con conector GitHub y shell local",
+    "modo_acceso": "enlace",
+    "referencia_paquete": "SVcustos-dataset@e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md SHA-256 eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8 19470 bytes",
+    "lectura_completa": true
+  },
+  "lectura_completa_declarada": true,
+  "lectura_en_interfaz_verificada_independientemente": false,
+  "actividad_declarada": {
+    "herramientas": [
+      "github___get_file_contents",
+      "github___get_repository_tree",
+      "python3 hashlib/json"
+    ],
+    "comandos": [
+      "lectura ENCARGO_GROK.md @cb8140df7aaf134e37dd6283a6e95f6a1d7ebd49",
+      "lectura PRUEBA_COMUN.md @e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c",
+      "sha256 PRUEBA_COMUN.md = eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8 (19470 bytes)",
+      "lectura FUENTES.json @e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c y recálculo de F01-F08"
+    ],
+    "artefactos": [
+      "/home/workdir/artifacts/PRUEBA_COMUN.md",
+      "/home/workdir/artifacts/FUENTES.json",
+      "/home/workdir/artifacts/S4-RESPUESTA-Grok-4.6.json"
+    ],
+    "intentos": 1,
+    "errores_y_correcciones": [
+      "La herramienta GitHub trunco PRUEBA_COMUN.md en la vista; se reconstruyo el texto completo desde el resultado guardado y se comprobo SHA-256 y 19470 bytes.",
+      "Los bloques markdown de F01-F05 anaden un salto de cierre distinto del texto de FUENTES.json; las huellas se recalcularon sobre el campo texto de FUENTES.json, no sobre la cerca markdown."
+    ],
+    "limitaciones": [
+      "Sin reloj de observador humano ni de interfaz para duracion_total.",
+      "El proveedor no expone tokens ni coste en esta sesion.",
+      "Modalidad lectura_documental: no se ejecuto Rust/WASM ni se escribieron destinos del banco.",
+      "No se leyeron respuestas ni notas de otros participantes."
+    ]
+  },
+  "mediciones_originales": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No hay registro de observador de envio, primer contenido visible y fin; la hora de interfaz no se inventa."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "Las llamadas no devolvieron tiempos de CPU ni de red utilizables."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 8,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "conteo de llamadas de esta sesion hasta redactar la plantilla",
+      "motivo": null
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expuso tokens de entrada."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expuso tokens de salida."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "El proveedor no expuso coste."
+    }
+  ],
+  "mediciones_del_receptor": [
+    {
+      "nombre": "bytes_archivo_recibido",
+      "valor": 16657,
+      "unidad": "bytes",
+      "origen": "medido",
+      "fuente": "RESPUESTA_ORIGINAL.txt"
+    }
+  ],
+  "valoracion_medidas_del_receptor": {
+    "llamadas_herramientas": {
+      "valor_declarado": 8,
+      "origen_en_respuesta": "medido",
+      "evidencia": "Recuento narrado hasta redactar la plantilla; sin registro de invocaciones adjunto.",
+      "clasificacion": "medición propia declarada, no auditada"
+    },
+    "huellas_y_lectura": "La longitud y SHA-256 declarados del documento y los valores citados coinciden con el paquete. No se adjuntan el documento reconstruido, salidas ni script de recálculo que acrediten la actividad realizada en esa sesión.",
+    "incidentes": "Truncamiento de vista y reconstrucción, así como diferencia de salto final en bloques Markdown, declarados por Grok; no observados desde este puesto."
+  },
+  "orden_de_recepcion_observado": 4,
+  "envio": {
+    "encargo_recibido_segun_respuesta": true,
+    "fecha_envio_observada": null,
+    "observacion": "La entrega por el usuario y la referencia de Grok al encargo acreditan recepción de una respuesta asociada; no se inventa una hora o un registro de envío."
+  },
+  "artefactos_locales_mencionados": "Rutas /home/workdir/artifacts del entorno de Grok; no son adjuntos recibidos ni accesibles por su sola mención.",
+  "limites": "No duración total, tokens ni coste disponibles. No se atribuye velocidad al orden de llegada ni ejecución de Rust al acceso al laboratorio."
+}

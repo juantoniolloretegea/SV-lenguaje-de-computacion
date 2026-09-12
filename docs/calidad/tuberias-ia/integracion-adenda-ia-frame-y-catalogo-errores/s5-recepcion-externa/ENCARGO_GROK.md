@@ -1,3 +1,5 @@
+> **Actualización RETP-169:** [respuesta de Grok recibida y cotejada](grok/README.md). El usuario ha aportado el original; no consta hora exacta de envío. El texto siguiente conserva la preparación anterior del encargo.
+
 # S5 · Encargo preparado para Grok
 
 Estado del encargo: pendiente. Preparado por Watson / W-S0; envío y recepción todavía no registrados. El usuario comunica que Grok dispone de acceso.

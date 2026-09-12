@@ -11,7 +11,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
 | S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
 | S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
-| S5 | en ejecución | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T12:29:01Z |
+| S5 | en ejecución | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:26:45Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -196,7 +196,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Inicio:** 2026-09-12T12:25:53Z
 
-**Actualización:** 2026-09-12T12:29:01Z
+**Actualización:** 2026-09-12T14:26:45Z
 
 **Fin:** —
 
@@ -210,15 +210,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S4; respuesta efectiva por el canal del encargo; revisión humana de aceptación
 
-**Resultado:** Recibidos originales de DeepSeek, Claude y Qwen; cotejo inicial de doce casos por participante. Errores y reservas de evaluación documentados. Grok con acceso comunicado y encargo preparado, no enviado.
+**Resultado:** Cuatro originales recibidos y cotejados: DeepSeek, Claude, Qwen y Grok. Grok E05: CasoDistinto en lugar de VigenciaDistinta, con rechazo conservado. No se acredita aún conformidad documental completa.
 
-**Verificación:** Originales preservados con SHA-256; doce IDs únicos por participante; ocho fuentes y paquete cotejados; oráculo y rúbrica previos intactos. Traza: DeepSeek 35/36, Claude 35/36 y Qwen 23/36; etiquetas pendientes de revisión común.
+**Verificación:** Original Grok 16657 bytes y SHA-256 conservado; doce casos únicos; fuentes y paquete fijados cotejados; causa E05 contrastada con oráculo y cobertura Rust preexistentes. Traza Grok 35/36. Otros originales y evaluaciones sin cambios.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s5-recepcion-externa/grok/README.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-168-recepcion-s5)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-169-recepcion-grok)
 
-**Siguiente acción:** Entregar el mismo encargo fijado a Grok y registrar su recepción; resolver en revisión común las etiquetas y aclaraciones, conservando originales; aceptación humana posterior.
+**Siguiente acción:** Resolver en revisión común las equivalencias de etiquetas y las aclaraciones señaladas; conservar cualquier corrección como intento adicional y registrar aceptación humana antes de cerrar S5.
 
-**Observaciones:** Primera constancia de ejecución en este corte; cotejo preliminar ya iniciado en el turno, sin hora retrospectiva atribuida. Sin duración total medida. Claude declara exposición previa alta y se recibe como cotejo documental, fuera de clasificación. Grok no ha recibido tarea según el usuario. S5 no se cierra.
+**Observaciones:** Las cuatro respuestas iniciales han sido recibidas. Sin hora exacta de envío o duración total medida. Actividad de herramientas de los participantes declarada, no auditada con registros externos. Oráculo y rúbrica intactos; no se abre otra ronda ni se cierra S5.
 
