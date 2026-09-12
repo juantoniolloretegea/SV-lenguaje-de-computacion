@@ -1,0 +1,93 @@
+{
+  "version": "S17-PASAJES/1",
+  "pasajes": [
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "linea": 12,
+      "inicio_byte": 607,
+      "fin_byte": 844,
+      "texto": " pub fn cargar(path:&Path,requerida:&[u8])->Result<Self,Fallo>{\n  let mut f=std::fs::File::open(path)?;let mut b=[0u8;MAX+1];let mut n=0;\n  loop{if n==b.len(){return Err(Fallo::LimiteBase)}let k=f.read(&mut b[n..])?;if k==0{break}n+=k;}\n",
+      "sha256_fuente": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "linea": 26,
+      "inicio_byte": 1598,
+      "fin_byte": 1871,
+      "texto": "pub struct Vista<'a>{pub identidad:(u64,u64),pub padre:Option<(u64,u64)>,pub base:&'a[u8],pub cuerpo:&'a[u8],pub solicitud:&'a[u8],pub traza:&'a[u8],pub marco:&'a[u8]}\nimpl Historia{\n pub fn crear(base:Base,solicitud:&[u8],realizacion:g1::Realizacion)->Result<Self,Fallo>{\n",
+      "sha256_fuente": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "linea": 28,
+      "inicio_byte": 1781,
+      "fin_byte": 2136,
+      "texto": " pub fn crear(base:Base,solicitud:&[u8],realizacion:g1::Realizacion)->Result<Self,Fallo>{\n  let mut custodio=g1::Custodio::nuevo(realizacion)?;let mut entrada=solicitud;let h=custodio.abrir(&mut entrada,base.vigente()?)?;custodio.ejecutar_a(&h)?;custodio.no_solicitar_v(&h)?;\n  Ok(Self{custodio,original:Episodio{manejador:h,base,padre:None},nueva:None})\n",
+      "sha256_fuente": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "linea": 32,
+      "inicio_byte": 2139,
+      "fin_byte": 2349,
+      "texto": " pub fn reevaluar(&mut self,base:Base,solicitud:&[u8])->Result<(),Fallo>{\n  if self.nueva.is_some(){return Err(Fallo::Capacidad)}\n  if base.bytes()==self.original.base.bytes(){return Err(Fallo::BaseSinCambio)}\n",
+      "sha256_fuente": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/codigo/receptor.rs",
+      "linea": 14,
+      "inicio_byte": 674,
+      "fin_byte": 883,
+      "texto": " pub fn cuerpo(&self)->Option<&[u8]>{self.cuerpo.as_deref()}\n pub fn motivo(&self)->Option<&[u8]>{self.motivo.as_deref()}\n // Única proyección usada por registro y presentación. Nunca traduce fallos a Tri.\n",
+      "sha256_fuente": "a6495f9ff978983fe4e4ebc615f01c9f5d5cca21674017304fbcfdb253c57f5a"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/codigo/receptor.rs",
+      "linea": 39,
+      "inicio_byte": 2701,
+      "fin_byte": 2840,
+      "texto": "pub fn recibir(r:&Referencia<'_>,lector:&mut impl Read)->Informe{\n let mut entrada=Vec::with_capacity(LIMITE+1);let mut fallo=None;\n loop{\n",
+      "sha256_fuente": "a6495f9ff978983fe4e4ebc615f01c9f5d5cca21674017304fbcfdb253c57f5a"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/codigo/receptor.rs",
+      "linea": 20,
+      "inicio_byte": 1385,
+      "fin_byte": 1481,
+      "texto": "  format!(\"{cat}\\t{etapa}\\t{:?}\\t{}\\t{}\\n\",self.causa,self.cuerpo.is_some(),self.llamadas)\n }\n}\n",
+      "sha256_fuente": "a6495f9ff978983fe4e4ebc615f01c9f5d5cca21674017304fbcfdb253c57f5a"
+    },
+    {
+      "fuente": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/codigo/destino.rs",
+      "linea": 8,
+      "inicio_byte": 467,
+      "fin_byte": 676,
+      "texto": "pub fn escribir(path:&Path,entrega:&Entrega<'_,'_>)->Result<(),FalloDestino>{\n let mut f=OpenOptions::new().write(true).create_new(true).open(path)?;\n f.write_all(entrega.lectura().texto())?;f.flush()?;Ok(())\n",
+      "sha256_fuente": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e"
+    },
+    {
+      "fuente": "cobertura/cobertura.rs",
+      "linea": 17,
+      "inicio_byte": 773,
+      "fin_byte": 852,
+      "texto": "pub struct Referencia<'a> {\n consulta: ConsultaDeLectura<'a>,\n caso: &'a [u8],\n",
+      "sha256_fuente": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90"
+    },
+    {
+      "fuente": "cobertura/cobertura.rs",
+      "linea": 23,
+      "inicio_byte": 954,
+      "fin_byte": 1035,
+      "texto": "pub struct Entrega<'v,'a> {\n lectura: LecturaEntregable<'v,'a>,\n caso: &'v [u8],\n",
+      "sha256_fuente": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90"
+    },
+    {
+      "fuente": "fuentes-base/recibo-g1/candidata/entrega.rs",
+      "linea": 12,
+      "inicio_byte": 828,
+      "fin_byte": 973,
+      "texto": "pub struct EntregaLiteral<'a> { cuerpo:&'a [u8], identidad:(u64,u64) }\nimpl EntregaLiteral<'_> {\n    pub fn cuerpo(&self)->&[u8] { self.cuerpo }\n",
+      "sha256_fuente": "424d6a84ed855c43a0c959a21c023d56e24521b42b530b48f4b19652e5da5d76"
+    }
+  ]
+}

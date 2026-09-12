@@ -1,0 +1,22 @@
+{
+  "version": "S17-CORTE/1",
+  "fecha_cierre_documental_utc": "2026-09-12T19:49:05Z",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "dee034be3629967f8e49c04b73f06d61e5bc640d",
+      "tree": "344e751b104fa1ddf1271dd2e886887632ce5d56"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "bf05934c4da1a2ccdc1b9b35b7f57d3ca249947a",
+      "tree": "5af1efef90e0f6a3bb994523deb34628da38487a"
+    }
+  },
+  "resultado": "Contrato documental y banco de obligaciones fijados; adaptación nueva y recorrido conjunto no ejecutados.",
+  "fuentes": 15,
+  "interfaces_capsula": 4,
+  "siguiente_objeto": "Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta."
+}

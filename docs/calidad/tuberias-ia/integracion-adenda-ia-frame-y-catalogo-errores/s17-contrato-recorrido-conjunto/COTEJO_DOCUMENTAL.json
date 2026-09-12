@@ -1,0 +1,11 @@
+{
+  "version": "S17-COTEJO/1",
+  "fuentes_integras": 15,
+  "interfaces_identicas_capsula": 4,
+  "pasajes_exactos": 11,
+  "casos_fijados": 24,
+  "observaciones_funcionales_realizadas": 0,
+  "observaciones_normales_previstas": 144,
+  "bytes_transporte_previstos_I23": 8942,
+  "resultado": "COTEJO_DOCUMENTAL_CONFORME; no es conformidad ejecutable del recorrido."
+}

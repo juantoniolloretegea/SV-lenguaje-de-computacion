@@ -21,6 +21,7 @@
 | S14 | finalizado | G/J: base consumida bajo igual nombre y recuperación frente a reevaluación | Watson / W-S0 | 2026-09-12T18:50:10Z |
 | S15 | finalizado | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:13:27Z |
 | S16 | finalizado | Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental | Watson / W-S0 | 2026-09-12T19:22:37Z |
+| S17 | finalizado | Contrato del recorrido documental conjunto: contexto, base, recepción, cobertura y entrega | Watson / W-S0 | 2026-09-12T19:49:05Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -615,4 +616,39 @@
 **Siguiente accion:** Consolidación del contrato del recorrido documental 1+3 y de sus límites de uso/diagnóstico, con matriz de causas realmente emitidas y distinción antes/después de despacho. No catálogo canónico completo ni P4 abierto.
 
 **Observaciones:** Registro de cierre documental, no fijación experimental. Ruta inicial del workflow errónea detectada y corregida contra el mismo árbol, conservada en PREPARACION. Agentes por valorar tras inmunología; P3/P4/P5/P6 y deuda conservan puertas. Sin promoción nuclear.
+
+
+## S17 · Contrato del recorrido documental conjunto: contexto, base, recepción, cobertura y entrega
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T19:49:05Z
+
+**Fecha inicio utc:** 2026-09-12T19:37:58Z
+
+**Fecha actualizacion utc:** 2026-09-12T19:49:05Z
+
+**Fecha fin utc:** 2026-09-12T19:49:05Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Contrato candidato S17 y banco de 24 obligaciones. Adaptación explícita de interfaces; sin implementación ni ejecución conjunta.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje dee034be3629967f8e49c04b73f06d61e5bc640d; laboratorio bf05934c4da1a2ccdc1b9b35b7f57d3ca249947a
+
+**Dependencias:** S16 / RETP-187; S11/S14/S15; cápsula original G1/S2; rectores y relevo S12/S13.
+
+**Resultado:** Contrato y obligaciones fijados. Enlace directo insuficiente: lote fijo S2, Vista S14 y bytes de Informe S15 no equivalen a una entrega tipada. Adaptación y conformidad ejecutable pendientes.
+
+**Verificacion:** 15 fuentes íntegras, cuatro interfaces encapsuladas y 11 pasajes exactos; 24 casos fijados; cero ensayos funcionales nuevos. Esperados originales S14 intactos.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/ACTA_CONTRATO_S17.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-188)
+
+**Siguiente accion:** Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta.
+
+**Observaciones:** S17 cierra un contrato documental, no una campaña. 144 observaciones normales previstas, ninguna realizada. Presupuesto e implementación por fijar antes de ejecutar. B/E/K/L y puertas P3/P4/P5/P6 vigentes; sin promoción nuclear; agentes por decidir tras inmunología.
 

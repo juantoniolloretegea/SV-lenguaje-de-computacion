@@ -212,3 +212,10 @@ Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResu
 2026-09-12T19:22:37Z. [Acta y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md). Revisión documental completada; B/E/K/L integradas no acreditadas. No se justifica extensión de IR en este corte. Fallo previo a cobertura y fallo posterior a DispatchCommitted conservan efectos y causas distintos. 21 fuentes por blob/longitud/SHA-256 y 18 pasajes exactos; cuatro fronteras; criterios y resultados anteriores intactos; cero ensayos funcionales nuevos.
 
 **Siguiente objeto único:** Consolidación del contrato del recorrido documental 1+3 y de sus límites de uso/diagnóstico, con matriz de causas realmente emitidas y distinción antes/después de despacho. No catálogo canónico completo ni P4 abierto. La conformidad de piezas separadas no acredita una ejecución integrada inexistente. No se adelantan P3/P4/P5/P6 ni agentes; S12/S13 conservan su autoridad.
+
+
+## S17 · Contrato del recorrido conjunto · RETP-188
+
+2026-09-12T19:49:05Z. [Acta y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/ACTA_CONTRATO_S17.md). Contrato y obligaciones fijados. Enlace directo insuficiente: lote fijo S2, Vista S14 y bytes de Informe S15 no equivalen a una entrega tipada. Adaptación y conformidad ejecutable pendientes. 15 fuentes íntegras, cuatro interfaces encapsuladas y 11 pasajes exactos; 24 casos fijados; cero ensayos funcionales nuevos. Esperados originales S14 intactos.
+
+**Siguiente objeto único:** Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta. La conformidad de piezas separadas no acredita una ejecución integrada inexistente. No se adelantan P3/P4/P5/P6 ni agentes; S12/S13 conservan su autoridad.

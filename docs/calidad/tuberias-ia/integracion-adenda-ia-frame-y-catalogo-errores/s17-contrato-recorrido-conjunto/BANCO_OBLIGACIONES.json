@@ -1,0 +1,344 @@
+{
+  "version": "S17-BANCO/1",
+  "estado": "FIJADO_DOCUMENTAL_NO_EJECUTADO",
+  "casos": [
+    {
+      "id": "I01",
+      "nombre": "Recorrido original positivo",
+      "preparacion": "Base original, solicitud y contexto exactos; R completo; destino ausente.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "G1 produce esperados/positivo.cuerpo",
+        "Referencia procede de EntregaLiteral validada",
+        "EntregaComprobada presente",
+        "Archivo recuperado idéntico al cuerpo admitido"
+      ]
+    },
+    {
+      "id": "I02",
+      "nombre": "Instrucción hostil como dato",
+      "preparacion": "Instalar contexto-instruccion.txt; R devuelve ese mismo contexto y cuerpo positivo.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "Mismos bytes positivos que I01",
+        "Ninguna instrucción documental cambia referencias ni destino",
+        "No es ensayo de comportamiento de modelo real"
+      ]
+    },
+    {
+      "id": "I03",
+      "nombre": "Cambio de archivo bajo nombre anterior",
+      "preparacion": "Archivo contiene base-nueva.bin, pero bytes requeridos son base-original.bin.",
+      "etapa_esperada": "carga_base",
+      "causa_esperada": "BASE_DISTINTA",
+      "predicados": [
+        "No producir episodio G1 ni admisión ni archivo",
+        "Conservar bytes leídos y requeridos"
+      ]
+    },
+    {
+      "id": "I04",
+      "nombre": "Contexto reescrito",
+      "preparacion": "Referencia usa contexto.txt; R cambia un byte de contexto conservando la longitud.",
+      "etapa_esperada": "contexto",
+      "causa_esperada": "DOCUMENTO_DISTINTO",
+      "predicados": [
+        "No comprobar cuerpo ni producir entrega",
+        "Conservar ambas secuencias"
+      ]
+    },
+    {
+      "id": "I05",
+      "nombre": "Identidad de respuesta ajena",
+      "preparacion": "R usa identidad de reevaluación ante referencia original; demás campos originales.",
+      "etapa_esperada": "contexto",
+      "causa_esperada": "IDENTIDAD",
+      "predicados": [
+        "No comparar contenido ni producir entrega"
+      ]
+    },
+    {
+      "id": "I06",
+      "nombre": "Solicitud ausente",
+      "preparacion": "R correcto salvo bandera de solicitud=0.",
+      "etapa_esperada": "cobertura",
+      "causa_esperada": "FALTA_SOLICITUD",
+      "predicados": [
+        "No producir entrega ni archivo"
+      ]
+    },
+    {
+      "id": "I07",
+      "nombre": "Solicitud ajena",
+      "preparacion": "R correcto salvo un byte de la solicitud citada; solicitud instalada intacta.",
+      "etapa_esperada": "cobertura",
+      "causa_esperada": "SOLICITUD_DISTINTA",
+      "predicados": [
+        "No producir entrega ni archivo",
+        "No sustituir solicitud instalada"
+      ]
+    },
+    {
+      "id": "I08",
+      "nombre": "Base citada ausente",
+      "preparacion": "R correcto salvo bandera de base=0.",
+      "etapa_esperada": "cobertura",
+      "causa_esperada": "FALTA_BASE",
+      "predicados": [
+        "No producir entrega ni archivo"
+      ]
+    },
+    {
+      "id": "I09",
+      "nombre": "Base citada ajena",
+      "preparacion": "Episodio original positivo; R cita base-nueva.bin.",
+      "etapa_esperada": "cobertura",
+      "causa_esperada": "BASE_DISTINTA",
+      "predicados": [
+        "El productor sigue habiendo consumido base original",
+        "No producir entrega ni archivo"
+      ]
+    },
+    {
+      "id": "I10",
+      "nombre": "Cuerpo alterado",
+      "preparacion": "R original reemplaza únicamente cadena 8.40 por 8.41 en cuerpo.",
+      "etapa_esperada": "cuerpo",
+      "causa_esperada": "CONTENIDO_DISTINTO",
+      "predicados": [
+        "Conservar detalle del comprobador G1 de presentación",
+        "No producir entrega ni archivo"
+      ]
+    },
+    {
+      "id": "I11",
+      "nombre": "Mensaje completo y error tardío",
+      "preparacion": "Read entrega R completo de I01 y después ConnectionReset en vez de EOF.",
+      "etapa_esperada": "recepcion",
+      "causa_esperada": "COMUNICACION",
+      "predicados": [
+        "Detalle ConnectionReset",
+        "Bytes recibidos iguales al mensaje completo",
+        "Cero decodificaciones, cero admisiones, ningún archivo"
+      ]
+    },
+    {
+      "id": "I12",
+      "nombre": "Negativa explícita",
+      "preparacion": "N con motivo opaco fijo: no_entrego; EOF correcto.",
+      "etapa_esperada": "protocolo",
+      "causa_esperada": "NEGATIVA_PROVEEDOR",
+      "predicados": [
+        "Motivo exacto no_entrego",
+        "Cero comprobaciones de cobertura",
+        "Sin entrega ni archivo"
+      ]
+    },
+    {
+      "id": "I13",
+      "nombre": "Truncamiento de campo",
+      "preparacion": "Mensaje R de I01 sin su último byte, EOF correcto.",
+      "etapa_esperada": "protocolo",
+      "causa_esperada": "ESQUEMA_INVALIDO",
+      "predicados": [
+        "Detalle Truncado",
+        "Sin entrega ni archivo",
+        "No completar el byte ausente"
+      ]
+    },
+    {
+      "id": "I14",
+      "nombre": "Reevaluación negativa real",
+      "preparacion": "Crear original; instalar base-nueva.bin con misma solicitud/contexto; producir nueva G1 y transportar nueva R.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "G1 produce esperados/negativo.cuerpo",
+        "Identidad nueva distinta de original",
+        "Padre nueva igual identidad original",
+        "Base consumida nueva exacta",
+        "Un recibo negativo puede tener entrega documental conforme"
+      ]
+    },
+    {
+      "id": "I15",
+      "nombre": "Recuperar original tras reevaluar",
+      "preparacion": "En misma Historia de I14 recuperar original y recorrer R original.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "Cuerpo positivo y base original idénticos a antes",
+        "Identidad original y padre original=None intactos",
+        "No recomputar original usando base nueva"
+      ]
+    },
+    {
+      "id": "I16",
+      "nombre": "Atribución cruzada de cuerpo",
+      "preparacion": "Tras I14, identidad/contexto/solicitud/base originales; cuerpo negativo nuevo.",
+      "etapa_esperada": "cuerpo",
+      "causa_esperada": "CONTENIDO_DISTINTO",
+      "predicados": [
+        "No producir entrega ni archivo",
+        "Original sigue siendo positivo"
+      ]
+    },
+    {
+      "id": "I17",
+      "nombre": "Identidad ajena al recuperar original",
+      "preparacion": "API sucesora de atribución original recibe identidad nueva, base/cuerpo originales.",
+      "etapa_esperada": "atribucion",
+      "causa_esperada": "IDENTIDAD",
+      "predicados": [
+        "Rechazo antes de devolver una vista atribuida",
+        "No sustituir original"
+      ]
+    },
+    {
+      "id": "I18",
+      "nombre": "Destino previamente existente",
+      "preparacion": "Admitir R original; destino ya contiene bytes fijos preexistente.",
+      "etapa_esperada": "apertura_archivo",
+      "causa_esperada": "IO",
+      "predicados": [
+        "Detalle AlreadyExists",
+        "EntregaComprobada existe, entrega archivada no confirmada",
+        "Destino conserva exactamente preexistente"
+      ]
+    },
+    {
+      "id": "I19",
+      "nombre": "Sustitución posterior",
+      "preparacion": "Escribir positivo admitido, sustituir archivo por negativo y recuperar contra referencia original.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONTENIDO_DISTINTO",
+      "predicados": [
+        "Comparación posterior detecta cambio",
+        "Preservar archivo observado negativo",
+        "No afirmar prevención"
+      ]
+    },
+    {
+      "id": "I20",
+      "nombre": "Contexto sobre límite",
+      "preparacion": "Intentar instalar contexto de 8193 bytes ASCII x.",
+      "etapa_esperada": "instalacion_contexto",
+      "causa_esperada": "LIMITE_CONTEXTO",
+      "predicados": [
+        "Rechazo sin truncar",
+        "No consultar emisor ni generar archivo"
+      ]
+    },
+    {
+      "id": "I21",
+      "nombre": "Recepción sobre límite",
+      "preparacion": "Read contiene 16385 bytes ASCII x.",
+      "etapa_esperada": "recepcion",
+      "causa_esperada": "LIMITE_RECEPCION",
+      "predicados": [
+        "Conservar 16385 bytes",
+        "No decodificar ni admitir",
+        "No llamar al lector otra vez para corregir"
+      ]
+    },
+    {
+      "id": "I22",
+      "nombre": "Escritura parcial fallida",
+      "preparacion": "Con entrega válida, escritor controlado acepta primeros 7 bytes y devuelve WriteZero al continuar.",
+      "etapa_esperada": "escritura_archivo",
+      "causa_esperada": "IO",
+      "predicados": [
+        "Detalle WriteZero",
+        "Observar prefijo de 7 bytes conservado",
+        "Registrar escritura intentada y resultado parcial",
+        "No reintentar ni declarar ausencia de efecto"
+      ]
+    },
+    {
+      "id": "I23",
+      "nombre": "Contexto en límite",
+      "preparacion": "Instalar contexto de 8192 bytes ASCII x; transportar los mismos bytes y resto de R original.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "Mensaje total dentro de 16384 bytes",
+        "Contexto íntegro de 8192 bytes",
+        "Recuperar positivo exacto"
+      ]
+    },
+    {
+      "id": "I24",
+      "nombre": "Presentación permitida del cuerpo",
+      "preparacion": "Añadir un espacio ASCII antes del cuerpo JSON original en R; conservar cadenas y resto exactos.",
+      "etapa_esperada": "recuperacion",
+      "causa_esperada": "CONFORME",
+      "predicados": [
+        "comprobar_presentacion acepta la presentación heredada",
+        "Archivo conserva espacio más positivo, sin normalizar",
+        "Solicitud/base/contexto siguen idénticos byte a byte"
+      ]
+    }
+  ],
+  "modos": [
+    "debug",
+    "release"
+  ],
+  "repeticiones_por_modo": 3,
+  "observaciones_normales_previstas": 144,
+  "fuentes_esperados": {
+    "base-nueva.bin": {
+      "bytes": 28,
+      "sha256": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd"
+    },
+    "base-original.bin": {
+      "bytes": 28,
+      "sha256": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3"
+    },
+    "contexto-instruccion.txt": {
+      "bytes": 85,
+      "sha256": "d8f580377f7204775d17f1abd06f0415cfd6fbaf6401387aa7162eebec686bf4"
+    },
+    "contexto.txt": {
+      "bytes": 70,
+      "sha256": "f5d9989ef0f9d9336d86253ac6862216c188281f51265e3f3d8861968794864f"
+    },
+    "negativo.cuerpo": {
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+    },
+    "positivo.cuerpo": {
+      "bytes": 494,
+      "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+    },
+    "solicitud.bin": {
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    }
+  },
+  "sensibilidad": [
+    {
+      "mutante": "omitir_contexto",
+      "testigo": "I04"
+    },
+    {
+      "mutante": "forzar_consumo_positivo",
+      "testigo": "I14"
+    },
+    {
+      "mutante": "omitir_base_citada",
+      "testigo": "I09"
+    },
+    {
+      "mutante": "admitir_negativa",
+      "testigo": "I12"
+    }
+  ],
+  "frontera_tipos": [
+    "cliente_externo_valido",
+    "fabricar_referencia_desde_bytes_rechazado",
+    "fabricar_entrega_desde_bytes_rechazado"
+  ],
+  "presupuesto_ejecucion": "Pendiente de fijación antes de compilar la realización sucesora; no ejecutado."
+}
