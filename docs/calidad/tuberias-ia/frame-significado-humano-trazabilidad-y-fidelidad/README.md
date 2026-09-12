@@ -1,3 +1,15 @@
+# Léame primero: secuencia del frame y de la colaboración auditable
+
+**Empiece por [LEAME_PRIMERO.md](LEAME_PRIMERO.md).**
+
+Orden de lectura: **volcán → polígonos históricos y logo del SV → auditoría del trabajo de la IA → relevo técnico vigente**.
+
+[Adenda en PDF](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.pdf) · [Adenda en Markdown](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.md).
+
+Incorporación de 12/09/2026: comprensión confirmada por Watson y conformidad y luz verde expresas de Juan Antonio para el escenario explicado y su consolidación documental. El expediente original se conserva a continuación.
+
+---
+
 # Frame: significado humano, trazabilidad y fidelidad
 
 Expediente de referencia para cualquier unidad Watson, Claude o Grok. Autor de la explicación: Juan Antonio Lloret Egea. Edición: Watson. 11 de septiembre de 2026.

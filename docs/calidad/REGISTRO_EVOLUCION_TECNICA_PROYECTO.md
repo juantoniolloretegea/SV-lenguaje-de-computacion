@@ -1540,3 +1540,14 @@ La raíz y el plan positivos son sintéticos. No se autentica al emisor, no se i
 Consolida consulta del universo pertinente, pregunta de sistema 1/0/U como propuesta, diversidad de procedimientos válidos, corrección de resultado, conservación de scripts y cambios, reproducción y medición. La aclaración humana sobre los cimientos queda conservada sin atribuir cobertura de seguridad universal. Cinco capturas originales intactas, transcripción con corrección expresa de tipos y PDF de ocho páginas revisado visualmente.
 
 Tres ejemplos editoriales Rust compilados y ejecutados, seis procesos, tres salidas exactas [4, 8, 12]. Fuentes, invocaciones, salidas, tiempos y scripts de generación/comprobación recuperables. Se conservan las incidencias editoriales de fuente tipográfica y renderización. Se añaden navegación recíproca e índices, con identidades actualizadas. Sin cambios de núcleo, de semántica o de contratos; no reejecuta ni amplía RETP-154. Su siguiente objeto y límites permanecen vigentes. Estado: REFERENCIA_DOCUMENTAL_CONSOLIDADA.
+
+
+<a id="retp-156"></a>
+
+## RETP-2026-156 · Adenda de encaje visual y lectura troncal
+
+12/09/2026. [Léame primero y adenda](tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Cortes Lenguaje 82b311136e52a824c00c4fee3a67eaaafa94bb1e y laboratorio 03b6af3c0f726686ee177243045eba1902a9f9b2. Mandato humano expreso: completar la carpeta del volcán con polígonos históricos IMMUNO-1/2, logo del SV y secuencia de lectura.
+
+Adenda de siete páginas y Markdown, tres imágenes intactas, generador recuperable y nota de preparación. Concreta la referencia visual compartida por experto y agente y el acceso complementario a la representación computable. Mantiene n=b², orden posicional y distinción del SV respecto de un espacio vectorial. Las leyendas de las imágenes no se homogeneizan silenciosamente ni se trasladan los antiguos parámetros a los dominios actuales. La precisión sobre Rust se apoya en fuentes oficiales y separa seguridad de memoria de superioridad de rendimiento.
+
+Watson confirma aquí su comprensión; Juan Antonio declara su conformidad y luz verde al cierre del escenario explicado y ordena su custodia. No se fabrica una cita anterior ni se convierte ese cierre documental en validación clínica o productiva. El diálogo/PDF previo del frame permanece intacto. README y léame primero ordenan volcán → adenda visual → auditoría → relevo vigente; índices y registros duales actualizados, copia idéntica en laboratorio. PDF revisado visualmente, huellas y enlaces comprobados; sin ensayos nuevos del núcleo. Se mantiene el siguiente objeto de RETP-154. Estado: ENCAJE_VISUAL_COMPRENDIDO_CONFORMIDAD_HUMANA_RECIBIDA_DOCUMENTADO.

@@ -171,3 +171,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Trazabilidad, auditoría y reproducción del trabajo de la IA — RETP-155
 
 [Apuntes de referencia, PDF y Markdown](trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md). Explicación de Juan Antonio puesta en limpio para futuras unidades Watson, Claude y Grok. Carpeta hermana del frame: conocimiento pertinente, diversidad de procedimientos válidos, resultado comprobable, artefactos conservados y coste medido. Cinco capturas intactas y tres ejemplos editoriales de Rust comprobados; no modifica el núcleo ni sustituye el relevo técnico RETP-154.
+
+
+## Encaje visual y lectura troncal — RETP-156
+
+[Léame primero: volcán, polígonos, logo y auditoría](frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Adenda PDF/Markdown dentro de la carpeta del frame, con las tres imágenes originales, la comprensión confirmada por Watson y la conformidad y luz verde expresas de Juan Antonio para el escenario y su documentación. Distingue los cascarones históricos, las leyendas visuales y la base matemática; precisa seguridad de memoria de Rust y rendimiento medido. Ordena la continuidad sin modificar el núcleo ni el siguiente objeto técnico de RETP-154.

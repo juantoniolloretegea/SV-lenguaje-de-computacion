@@ -1,3 +1,5 @@
+**Lectura conjunta:** comience por [Léame primero: frame, polígonos, logo y auditoría](../frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). La adenda del 12/09/2026 completa el encaje visual y conserva las dos confirmaciones.
+
 # Trazabilidad, auditoría y reproducción del trabajo de la IA
 
 Expediente de referencia para Watson, Claude, Grok y otras unidades. Explicación de Juan Antonio Lloret Egea; preparación editorial de Watson. 12 de septiembre de 2026.

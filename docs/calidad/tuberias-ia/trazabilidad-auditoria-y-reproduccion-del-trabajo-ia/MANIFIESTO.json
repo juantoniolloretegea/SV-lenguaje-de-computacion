@@ -5,9 +5,9 @@
   "imagenes_originales": 5,
   "archivos": {
     "README.md": {
-      "bytes": 2008,
-      "sha256": "e23e4388d439d44138d639cc975c3905803fb69601dc4b0ea5f88a0d633c09a3",
-      "git_blob_sha1": "035a949449b96b91267757446593884b9363b6f0"
+      "bytes": 2257,
+      "sha256": "031f8b449eba9ac0d35fb77cc72f580ce96501badb5d27e101469ec031828269",
+      "git_blob_sha1": "f7e22a50c0f1955442086bf14c17581eeb085d88"
     },
     "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md": {
       "bytes": 15805,
@@ -64,5 +64,12 @@
       "sha256": "690277e9a461249aeca4562d49a157f4b1220d8abd5b4d8cd6fa2c2335d381e3",
       "git_blob_sha1": "1c3984a281619e2c40dd8527443a7e9070c2c316"
     }
-  }
+  },
+  "actualizaciones": [
+    {
+      "fecha": "2026-09-12",
+      "registro": "RETP-2026-156",
+      "alcance": "Enlace al léame primero compartido; texto principal, PDF, ejemplos e imágenes sin cambios."
+    }
+  ]
 }

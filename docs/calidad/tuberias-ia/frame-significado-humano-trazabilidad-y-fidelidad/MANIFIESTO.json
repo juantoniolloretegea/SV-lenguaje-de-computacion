@@ -5,6 +5,16 @@
   "imagenes_originales": 6,
   "diagrama_original": 1,
   "archivos": {
+    "ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.md": {
+      "bytes": 13714,
+      "sha256": "bdc3c688aa5546ec02b8c52b0fe65661d238c389c25c46795eed46b50f0a5490",
+      "git_blob_sha1": "81ed5b366d919d5a7604e5d984f7dc5aad7ff97d"
+    },
+    "ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.pdf": {
+      "bytes": 654960,
+      "sha256": "90da089d7848905033be9ffc7bc0ecb64bc5619f5b8967ac1fa1e8d20f822ed9",
+      "git_blob_sha1": "3ee74ca9fd0d0c3632edbd2e1e6b02d7530b4f28"
+    },
     "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md": {
       "bytes": 41291,
       "sha256": "ec9be90c96f5d8953fca623af8cf07c78f9f9f05c79b8dc78b6d001a2e746f5b",
@@ -15,10 +25,15 @@
       "sha256": "1cf979318b68cc164c07500f6f39c32f3f8608e47cca3da1c0d4222516828e15",
       "git_blob_sha1": "b01dabb703787c794b46052b2faa289ad13ca274"
     },
+    "LEAME_PRIMERO.md": {
+      "bytes": 3830,
+      "sha256": "2fab256d20df897176a764c8b82fae78cf1ef1faef21718da6de2dbdeb02952a",
+      "git_blob_sha1": "b56c468dd7d91b4d4f71a5e2e1f2bec42749329b"
+    },
     "README.md": {
-      "bytes": 2578,
-      "sha256": "076ef1b467a70d73c3cea6a4b4456f1dc69dfbc5d20915df765f798588759bc1",
-      "git_blob_sha1": "158b5034b87ad5142340bbf9bf539ea82cbfe881"
+      "bytes": 3240,
+      "sha256": "037652ebd50f822ff8f43d8aeb74340102fa64ba0fff9c0de9dd807d15296edd",
+      "git_blob_sha1": "7b2e20a119fe441191c2d81ac1f71d92229d4266"
     },
     "imagenes/01-escena-original.png": {
       "bytes": 284173,
@@ -54,6 +69,31 @@
       "bytes": 257250,
       "sha256": "f15dba9a0a228f0d3ea2f56f6c7c642460421c7649a8be0bc308966cf4acf548",
       "git_blob_sha1": "4ab1af79db02cdaf03dc34ce7a705c88f93acb28"
+    },
+    "imagenes/08-cascaron-historico-immuno-1.png": {
+      "bytes": 192173,
+      "sha256": "478b31fa056472455dd19ae857669302c5cdc550a8ef4c2df8d2482738e546cf",
+      "git_blob_sha1": "9e19d3e33f537b81007c15c71950f84467c39de0"
+    },
+    "imagenes/09-cascarones-historicos-immuno-1-y-2.png": {
+      "bytes": 217208,
+      "sha256": "37c3fb7b8cf978116bf024ce5ccb0fa1ae7c7e953c05bc737cb6fce45cbb5c0b",
+      "git_blob_sha1": "b68051f74d2a68b53aab7368f791c92f40540464"
+    },
+    "imagenes/10-logo-sv-celula-9-3.png": {
+      "bytes": 285661,
+      "sha256": "090b1478e77d4b25202bf86d77af17e72732921b3befd4c3da5f73418906174d",
+      "git_blob_sha1": "6bf7e210cc367daf64b80ae205939580415e2cf2"
+    },
+    "soporte/NOTA_ADENDA.md": {
+      "bytes": 2265,
+      "sha256": "7aed72d7ef4848756636177da705a6145a2168c31a1022b28cb0d21cd430d70e",
+      "git_blob_sha1": "43a0a6a1e0d821efa2028db55892af348db5f182"
+    },
+    "soporte/generar_adenda.py": {
+      "bytes": 4968,
+      "sha256": "996945f974379f118dbed283070a2c5404435991764f1407695881b7c2fa7a3f",
+      "git_blob_sha1": "a16e176b3a4acd9c70d495e235f70bf10a94e179"
     }
   },
   "nota": "El manifiesto no se incluye a sí mismo. Igualdad entre copias comprobable mediante los identificadores de contenido.",
@@ -61,6 +101,13 @@
     {
       "fecha": "2026-09-12",
       "alcance": "Enlace a expediente hermano en README; diálogo, PDF e imágenes sin cambios."
+    },
+    {
+      "fecha": "2026-09-12",
+      "registro": "RETP-2026-156",
+      "alcance": "Adenda visual PDF/MD, tres imágenes originales, léame primero y navegación; originales del volcán preservados.",
+      "imagenes_adenda": 3,
+      "confirmaciones": "Comprensión de Watson formulada en adenda; conformidad humana y luz verde recibidas en instrucción actual."
     }
   ]
 }
