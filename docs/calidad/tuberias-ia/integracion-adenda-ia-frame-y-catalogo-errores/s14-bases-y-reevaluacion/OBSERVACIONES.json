@@ -1,0 +1,578 @@
+[
+  {
+    "caso": "GJ01",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "debug",
+    "repeticion": 1,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "debug/capturas-1"
+  },
+  {
+    "caso": "GJ01",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "debug",
+    "repeticion": 2,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "debug/capturas-2"
+  },
+  {
+    "caso": "GJ01",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "debug",
+    "repeticion": 3,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "debug/capturas-3"
+  },
+  {
+    "caso": "GJ01",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "release",
+    "repeticion": 1,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "release/capturas-1"
+  },
+  {
+    "caso": "GJ01",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "release",
+    "repeticion": 2,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "release/capturas-2"
+  },
+  {
+    "caso": "GJ01",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "DATO_ORIGINAL",
+    "resultado_real": "ORIGINAL_PRODUCIDO",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ02",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ03",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseSinCambio",
+    "resultado_real": "BaseSinCambio",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ04",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "PERMISO_REVOCADO_NUEVO",
+    "resultado_real": "NUEVA_PRODUCIDA",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ05",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "ORIGINAL_INTACTO",
+    "resultado_real": "ORIGINAL_RECUPERADO",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ06",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "BaseDistinta",
+    "resultado_real": "BaseDistinta",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ07",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "Identidad",
+    "resultado_real": "Identidad",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ08",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "ReciboDistinto",
+    "resultado_real": "ReciboDistinto",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ09",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "REEVALUACION_DISTINGUIDA",
+    "resultado_real": "REEVALUACION_RECUPERADA",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ10",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "Capacidad",
+    "resultado_real": "Capacidad",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ11",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "FormatoBase",
+    "resultado_real": "FormatoBase",
+    "evidencia": "release/capturas-3"
+  },
+  {
+    "caso": "GJ12",
+    "modo": "release",
+    "repeticion": 3,
+    "etiqueta_esperada": "LimiteBase",
+    "resultado_real": "LimiteBase",
+    "evidencia": "release/capturas-3"
+  }
+]

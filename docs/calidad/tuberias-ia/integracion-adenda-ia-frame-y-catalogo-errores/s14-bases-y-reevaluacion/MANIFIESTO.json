@@ -1,0 +1,158 @@
+{
+  "ACTA_RESULTADO_S14.md": {
+    "bytes": 5599,
+    "sha256": "02aa4d536ad25b84fd8bff3bcd56ec76f26f134a38d34535daf8013434a23a80"
+  },
+  "BINARIOS.json": {
+    "bytes": 644,
+    "sha256": "5629a911521e94c22d991ac70502f4abb68c747bc2d495bccc9dc5918508eb97"
+  },
+  "CAUSAS_OBSERVADAS.json": {
+    "bytes": 1891,
+    "sha256": "72457a4f9ecfe958af0a877e2aef4854ce9f95dfdee70929a13c12180ed7b669"
+  },
+  "COMANDOS.json": {
+    "bytes": 14455,
+    "sha256": "d649941d766b6fb2fe3f164cd63daf605bd8b9c5cdb6944de13e9e1a49911d0d"
+  },
+  "COMPROBACION_POSTERIOR.json": {
+    "bytes": 577,
+    "sha256": "24b7b1c33ef172ab425f0ba9055583f0c3322a72ffe0d79187cbc243083d6a65"
+  },
+  "CONTRATO_S14.md": {
+    "bytes": 7058,
+    "sha256": "606b3d15b43659f28bbcbf4797f01cc083e9efaacf819f58b9b86a79fed391f0"
+  },
+  "CUSTODIA_PREVIA.json": {
+    "bytes": 426,
+    "sha256": "7ef27039c604f0f33ffaf161fa490557f6b5f67a08955297e9fea58b8f0f65ad"
+  },
+  "ENTORNO.json": {
+    "bytes": 357,
+    "sha256": "94b84b134d6a77320f2d0b6d9b769466d5b6b0ed3213cdd0c0eca4971bf02cf1"
+  },
+  "ESPECIMENES.json": {
+    "bytes": 23327,
+    "sha256": "c9a928e97f6ede528a5ed35a6d01f01d905dc08173b22432d07340e80207f6a2"
+  },
+  "EVIDENCIAS_S14.json": {
+    "bytes": 226975,
+    "sha256": "4ed8b32bfdbb0c98ff88e751dc0ce03ff98dafbcda6d9cdf13b20d449b4c4be9"
+  },
+  "FIJACION_PREVIA.json": {
+    "bytes": 2237,
+    "sha256": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04"
+  },
+  "FUENTES_S2.json": {
+    "bytes": 737698,
+    "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e"
+  },
+  "MATRIZ_COBERTURA_A_L_RESULTADO_S14.json": {
+    "bytes": 22092,
+    "sha256": "d0dd55b15678870b2a820b9c288c309943d877008077044ea5c7492661a8db8a"
+  },
+  "MEDICIONES.json": {
+    "bytes": 1469,
+    "sha256": "5bc3783dfe82450ac197038f8fce7591949aa0034c9c73c2e20a5ab1439de406"
+  },
+  "OBSERVACIONES.json": {
+    "bytes": 13791,
+    "sha256": "abe915720d6a34080826bc14f1c968ee054e6ae7fe69ee3ed7945c343b78332b"
+  },
+  "PREPARACION.json": {
+    "bytes": 412,
+    "sha256": "fc2f69e25986e6607a031d2919b0fd643d922cc1aa49bb53ca1df660b3f7eb0c"
+  },
+  "PROCEDENCIA.json": {
+    "bytes": 1926,
+    "sha256": "753738ceb7ac73ccaaaddf7afdb579c1241a38765849b30163a62a98bd90b798"
+  },
+  "README.md": {
+    "bytes": 960,
+    "sha256": "e42f514a90bae85ede523533d3a0f203d77caeac2e892e0ebe45570319ddd2b6"
+  },
+  "RECTORES.json": {
+    "bytes": 882,
+    "sha256": "71aef9461ef28f35d90a5fc8ca7e2ab114e9c9e623b7e3f62c7a34439b60a1cd"
+  },
+  "RESULTADO.json": {
+    "bytes": 491,
+    "sha256": "6a72dabbeff24981ed2b2ed93e9facd3837780388540daeff0f4eaacc7cf0895"
+  },
+  "RESULTADOS.md": {
+    "bytes": 315,
+    "sha256": "403020778c160d9e9766fa830a24c5e5e31d0538a75a135fad50a38c68c27994"
+  },
+  "administracion/documentar.py": {
+    "bytes": 11539,
+    "sha256": "3dd54a6a42d45ba18eec463952b6c186cc300f8399ff737834eb51978775c628"
+  },
+  "administracion/fijar.py": {
+    "bytes": 2168,
+    "sha256": "41a6c37d87b03a6ca04d93b576b191c44cc3d81904f4d821fc479a52120b36d6"
+  },
+  "administracion/preparar.py": {
+    "bytes": 3009,
+    "sha256": "2829c685dd659fa2f7e5f993c954ae6d2ea7c355bca8f1f2902cba05b19eaafe"
+  },
+  "administracion/publicar_cierre.py": {
+    "bytes": 2647,
+    "sha256": "a7af24e886fa1f1f5f5ff2039c0966b64a798970b69a5ad8efce5cc466e97fa2"
+  },
+  "administracion/registrar.py": {
+    "bytes": 7689,
+    "sha256": "955e398620978fd6c6fbc06fd7f581c12a6ee2f035685cb35ed04a60713b0d8a"
+  },
+  "administracion/registrar_cierre.py": {
+    "bytes": 7732,
+    "sha256": "4940115a2d66757df60ee610796adc3b4b7b4a8d9772ddcdd5b54a45f355d95f"
+  },
+  "administracion/snapshot.py": {
+    "bytes": 864,
+    "sha256": "fe1dcbbb1a1d42269e3e2c821ca4e318485eef05d7637fc55724598df2e92a58"
+  },
+  "codigo/ESPERADO.tsv": {
+    "bytes": 237,
+    "sha256": "75528db291393e11b1c80ef02ec947b36fc871d806fdbb49968ae921a432175b"
+  },
+  "codigo/bases.rs": {
+    "bytes": 3776,
+    "sha256": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de"
+  },
+  "codigo/contraste.rs": {
+    "bytes": 4314,
+    "sha256": "0a8efc001494424834f549787373ea2b14531f4bd906bacfdb82a457903276e1"
+  },
+  "especimenes/base-excesiva.bin": {
+    "bytes": 65,
+    "sha256": "4d2293f11a69207a8af99ff6d77dddc035cf57a71ec65be1e7ad97e316a60360"
+  },
+  "especimenes/base-invalida.bin": {
+    "bytes": 28,
+    "sha256": "68c30870425639d3dcbfdbec9093f53d99679545b428baadbb6cfe9f907a601e"
+  },
+  "especimenes/base-nueva.bin": {
+    "bytes": 28,
+    "sha256": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd"
+  },
+  "especimenes/base-original.bin": {
+    "bytes": 28,
+    "sha256": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3"
+  },
+  "especimenes/negativo.cuerpo": {
+    "bytes": 423,
+    "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+  },
+  "especimenes/positivo.cuerpo": {
+    "bytes": 494,
+    "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+  },
+  "especimenes/solicitud.bin": {
+    "bytes": 188,
+    "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+  },
+  "reproducir.py": {
+    "bytes": 5010,
+    "sha256": "1088d5fc987867411ffe2d844bf68ea7351a9947b870a6c4c7e6ea9a0634059d"
+  }
+}

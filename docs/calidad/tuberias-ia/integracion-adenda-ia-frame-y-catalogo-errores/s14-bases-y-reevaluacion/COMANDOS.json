@@ -1,0 +1,362 @@
+[
+  {
+    "paso": "compilador",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "-vV"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+    "stderr": "",
+    "pared_s": 0.015920395002467558,
+    "cpu_usuario_s": 0.006665000000000004,
+    "cpu_sistema_s": 0.008357,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug biblioteca",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/fuentes-base/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/libg1.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/cdd3907241dd/s14-bases/ejecucion/fuentes-base/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "pared_s": 0.7959081709996099,
+    "cpu_usuario_s": 0.905587,
+    "cpu_sistema_s": 0.14420699999999997,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug conductor",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.23471169000549708,
+    "cpu_usuario_s": 0.14175300000000002,
+    "cpu_sistema_s": 0.10513600000000001,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "32dcc01c7c2be30bec43cad944e3f0582f4ad0cffa171ac7745cec1c3778d948",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-1"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.01166164300229866,
+    "cpu_usuario_s": 0.010477999999999987,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 2",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "32dcc01c7c2be30bec43cad944e3f0582f4ad0cffa171ac7745cec1c3778d948",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-2"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.01258714399591554,
+    "cpu_usuario_s": 0.00706999999999991,
+    "cpu_sistema_s": 0.004047999999999996,
+    "rss_individual": null
+  },
+  {
+    "paso": "debug ejecución 3",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "32dcc01c7c2be30bec43cad944e3f0582f4ad0cffa171ac7745cec1c3778d948",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-3"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.011108786988188513,
+    "cpu_usuario_s": 0.003543000000000074,
+    "cpu_sistema_s": 0.0069909999999999695,
+    "rss_individual": null
+  },
+  {
+    "paso": "release biblioteca",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/fuentes-base/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/libg1.rlib"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/cdd3907241dd/s14-bases/ejecucion/fuentes-base/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "pared_s": 2.55841115298972,
+    "cpu_usuario_s": 3.0573239999999995,
+    "cpu_sistema_s": 0.137851,
+    "rss_individual": null
+  },
+  {
+    "paso": "release conductor",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.34554995999496896,
+    "cpu_usuario_s": 0.38240799999999986,
+    "cpu_sistema_s": 0.11637200000000003,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "82c6e4b6e062289b6359303a04fde02d4d7faf8d913eaace9fea8acf79fa352a",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/capturas-1"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.0051520410052035,
+    "cpu_usuario_s": 0.004422000000000814,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 2",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "82c6e4b6e062289b6359303a04fde02d4d7faf8d913eaace9fea8acf79fa352a",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/capturas-2"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.0060191219963599,
+    "cpu_usuario_s": 0.0,
+    "cpu_sistema_s": 0.00519499999999995,
+    "rss_individual": null
+  },
+  {
+    "paso": "release ejecución 3",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/contraste"
+    ],
+    "esperado_exit": 0,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "82c6e4b6e062289b6359303a04fde02d4d7faf8d913eaace9fea8acf79fa352a",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/release/capturas-3"
+    },
+    "exit_code": 0,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\nGJ06\tBaseDistinta\nGJ07\tIdentidad\nGJ08\tReciboDistinto\nGJ09\tREEVALUACION_DISTINGUIDA\nGJ10\tCapacidad\nGJ11\tFormatoBase\nGJ12\tLimiteBase\n",
+    "stderr": "",
+    "pared_s": 0.004601893000653945,
+    "cpu_usuario_s": 0.0,
+    "cpu_sistema_s": 0.003971000000000058,
+    "rss_individual": null
+  },
+  {
+    "paso": "sin_identidad_carga compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "sin_identidad_carga",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/sin_identidad_carga"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.198002307995921,
+    "cpu_usuario_s": 0.16061499999999995,
+    "cpu_sistema_s": 0.04627199999999998,
+    "rss_individual": null
+  },
+  {
+    "paso": "sin_identidad_carga detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/sin_identidad_carga"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "c5f304f36d6d933be1421461ed018ff24ab2c233246acb0cf92413af20ed6b47",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-sin_identidad_carga"
+    },
+    "exit_code": 1,
+    "stdout": "GJ01\tDATO_ORIGINAL\n",
+    "stderr": "FALLO GJ02: ACEPTADO\n",
+    "pared_s": 0.006206881007528864,
+    "cpu_usuario_s": 0.00572600000000012,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "consumo_falso compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "consumo_falso",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/consumo_falso"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.18297968100523576,
+    "cpu_usuario_s": 0.14353599999999922,
+    "cpu_sistema_s": 0.05265900000000001,
+    "rss_individual": null
+  },
+  {
+    "paso": "consumo_falso detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/consumo_falso"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "679c7a68ecdc47bc6f7465607a294cb2b3868becf7470002cb10c44f564a4bce",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-consumo_falso"
+    },
+    "exit_code": 1,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\n",
+    "stderr": "FALLO GJ04: NUEVA_PRODUCIDA\n",
+    "pared_s": 0.008677625999553129,
+    "cpu_usuario_s": 0.007951000000000263,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  },
+  {
+    "paso": "sin_base_original compilación",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s11-integracion/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--cfg",
+      "sin_base_original",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/sin_base_original"
+    ],
+    "esperado_exit": 0,
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "pared_s": 0.17309002800902817,
+    "cpu_usuario_s": 0.12431699999999957,
+    "cpu_sistema_s": 0.06163200000000002,
+    "rss_individual": null
+  },
+  {
+    "paso": "sin_base_original detección",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/sin_base_original"
+    ],
+    "esperado_exit": 1,
+    "entorno_fijado": {
+      "LG1_FUENTES": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+      "LG1_BINARIO": "b6dced62cc41b06034cbf8897a021bcb9ce6c8365079bfffd74eb8f1c02456b6",
+      "S14_CAPTURAS": "/workspace/scratch/cdd3907241dd/s14-bases/ejecucion/debug/capturas-sin_base_original"
+    },
+    "exit_code": 1,
+    "stdout": "GJ01\tDATO_ORIGINAL\nGJ02\tBaseDistinta\nGJ03\tBaseSinCambio\nGJ04\tPERMISO_REVOCADO_NUEVO\nGJ05\tORIGINAL_INTACTO\n",
+    "stderr": "FALLO GJ06: ACEPTADO\n",
+    "pared_s": 0.009119626993197016,
+    "cpu_usuario_s": 0.008225000000000371,
+    "cpu_sistema_s": 0.0,
+    "rss_individual": null
+  }
+]

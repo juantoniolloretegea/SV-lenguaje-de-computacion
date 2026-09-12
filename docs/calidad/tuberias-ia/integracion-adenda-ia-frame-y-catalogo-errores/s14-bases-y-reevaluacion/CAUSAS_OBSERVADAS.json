@@ -1,0 +1,66 @@
+[
+  {
+    "causa": "BaseDistinta",
+    "etapa": "carga",
+    "controles": [
+      "GJ02"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "BaseSinCambio",
+    "etapa": "reevaluación",
+    "controles": [
+      "GJ03"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "BaseDistinta",
+    "etapa": "atribución al original",
+    "controles": [
+      "GJ06"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "Identidad",
+    "etapa": "atribución al original",
+    "controles": [
+      "GJ07"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "ReciboDistinto",
+    "etapa": "atribución al original",
+    "controles": [
+      "GJ08"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "Capacidad",
+    "etapa": "reevaluación",
+    "controles": [
+      "GJ10"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "FormatoBase",
+    "etapa": "carga",
+    "controles": [
+      "GJ11"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  },
+  {
+    "causa": "LimiteBase",
+    "etapa": "carga",
+    "controles": [
+      "GJ12"
+    ],
+    "alcance": "Variante local del contrato SV-S14-BASES-GJ/1; no código canónico del núcleo ni traducción automática a U."
+  }
+]

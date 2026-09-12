@@ -1,0 +1,16 @@
+{
+  "version": "S14-RESULTADO/1",
+  "conforme": true,
+  "casos": 12,
+  "ejecuciones_normales": 6,
+  "observaciones": 72,
+  "invocaciones": 17,
+  "capturas_identicas_por_ejecucion": 69,
+  "sensibilidades": {
+    "sin_identidad_carga": "GJ02",
+    "consumo_falso": "GJ04",
+    "sin_base_original": "GJ06"
+  },
+  "pared_campana_s": 4.681909953986178,
+  "limite": "Host confiable y custodia intraproceso. Sin promoción nuclear, historia durable, QueryResult nativo ni comportamiento de LLM."
+}

@@ -1,0 +1,9 @@
+{
+  "fijacion_sha256": "eb16c7ed46fe272aee3e0437fa5ab3ce493cb689f29cc0235a1b8237a0076e04",
+  "commits": {
+    "laboratorio": "cf573d5149821019fe5afd5d75a402aa9b66b399",
+    "lenguaje": "84ca4113d0505a1868feb65f6b388e7c14b7d0d0"
+  },
+  "comprobado_antes_de_ejecutar_utc": "2026-09-12T18:46:59.893108+00:00",
+  "orden": "Ambos árboles publicados y verificados antes de invocar reproducir.py; sin compilación previa de S14."
+}

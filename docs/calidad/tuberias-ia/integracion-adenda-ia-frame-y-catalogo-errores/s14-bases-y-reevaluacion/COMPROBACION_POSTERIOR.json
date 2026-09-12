@@ -1,0 +1,14 @@
+{
+  "fijacion_intacta": true,
+  "invocaciones": 17,
+  "observaciones": 72,
+  "capturas": 491,
+  "capturas_identicas_por_ejecucion": 69,
+  "cuerpos_completos_contra_esperados_previos": true,
+  "original_y_base_recuperados_intactos": true,
+  "criterios_A_L_y_resultados_S11_intactos": true,
+  "limite": "Cotejo posterior de registros de la misma campaña; no nueva campaña funcional.",
+  "mutante_consumo_falso_conserva_base_nueva_pero_produce_cuerpo_positivo": true,
+  "mutantes_carga_y_atribucion_aceptan_indebidamente": true,
+  "capturas_base64_identicas_a_archivos": true
+}

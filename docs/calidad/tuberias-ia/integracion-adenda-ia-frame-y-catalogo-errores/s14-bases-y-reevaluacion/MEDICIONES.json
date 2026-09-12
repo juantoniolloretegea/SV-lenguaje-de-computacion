@@ -1,0 +1,50 @@
+{
+  "invocaciones": 17,
+  "pared_campana_s": 4.681909953986178,
+  "pared_suma_invocaciones_s": 4.5797081499913475,
+  "cpu_usuario_s": 4.96962,
+  "cpu_sistema_s": 0.692691,
+  "ejecuciones_normales": [
+    {
+      "paso": "debug ejecución 1",
+      "pared_s": 0.01166164300229866,
+      "cpu_usuario_s": 0.010477999999999987,
+      "cpu_sistema_s": 0.0
+    },
+    {
+      "paso": "debug ejecución 2",
+      "pared_s": 0.01258714399591554,
+      "cpu_usuario_s": 0.00706999999999991,
+      "cpu_sistema_s": 0.004047999999999996
+    },
+    {
+      "paso": "debug ejecución 3",
+      "pared_s": 0.011108786988188513,
+      "cpu_usuario_s": 0.003543000000000074,
+      "cpu_sistema_s": 0.0069909999999999695
+    },
+    {
+      "paso": "release ejecución 1",
+      "pared_s": 0.0051520410052035,
+      "cpu_usuario_s": 0.004422000000000814,
+      "cpu_sistema_s": 0.0
+    },
+    {
+      "paso": "release ejecución 2",
+      "pared_s": 0.0060191219963599,
+      "cpu_usuario_s": 0.0,
+      "cpu_sistema_s": 0.00519499999999995
+    },
+    {
+      "paso": "release ejecución 3",
+      "pared_s": 0.004601893000653945,
+      "cpu_usuario_s": 0.0,
+      "cpu_sistema_s": 0.003971000000000058
+    }
+  ],
+  "rss_individual": null,
+  "tokens": null,
+  "coste": null,
+  "origen": "time.monotonic y diferencias resource.getrusage(RUSAGE_CHILDREN).",
+  "limite": "Incluye compilación y mutantes; excluye preparación/publicación. No es latencia de modelo ni coste productivo."
+}
