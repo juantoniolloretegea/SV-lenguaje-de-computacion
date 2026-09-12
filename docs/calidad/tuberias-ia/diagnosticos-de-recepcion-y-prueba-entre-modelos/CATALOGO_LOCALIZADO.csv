@@ -1,0 +1,21 @@
+clave_local,emisor,lineas,casos,mensaje_es,mensaje_en
+RG.EMPTY_ACT,rust/sv_core/src/authority/transitions/reception.rs,50,"RG01,PI01",El acto recibido está vacío.,The received act is empty.
+RG.EMPTY_ISSUER,rust/sv_core/src/authority/transitions/reception.rs,50,"RG02,RG13,PI02",La declaración de emisor está vacía.,The issuer declaration is empty.
+RG.EMPTY_VERSION,rust/sv_core/src/authority/transitions/reception.rs,50,"RG03,PI03",La versión declarada está vacía.,The declared version is empty.
+RG.ACT_TOO_LARGE,rust/sv_core/src/authority/transitions/reception.rs,56,"RG04,PI04",El acto supera el límite de bytes.,The act exceeds the byte limit.
+RG.ISSUER_TOO_LARGE,rust/sv_core/src/authority/transitions/reception.rs,56,"RG05,PI05",La declaración de emisor supera el límite de bytes.,The issuer declaration exceeds the byte limit.
+RG.VERSION_TOO_LARGE,rust/sv_core/src/authority/transitions/reception.rs,56,"RG06,PI06",La versión declarada supera el límite de bytes.,The declared version exceeds the byte limit.
+RG.ISSUER_MISMATCH,rust/sv_core/src/authority/transitions/reception.rs,103,RG07,El emisor declarado no coincide con el instalado.,The declared issuer does not match the installed issuer.
+RG.VERSION_MISMATCH,rust/sv_core/src/authority/transitions/reception.rs,104,RG08,La versión declarada no coincide con la instalada.,The declared version does not match the installed version.
+RG.DECLARATIONS_MISMATCH,rust/sv_core/src/authority/transitions/reception.rs,102,RG09,El emisor y la versión declarados no coinciden con los instalados.,The declared issuer and version do not match the installed declarations.
+RG.ACT_MISMATCH,rust/sv_core/src/authority/transitions/reception.rs,107,RG10,El acto recibido difiere del acto instalado.,The received act differs from the installed act.
+RG.ALREADY_ATTEMPTED,rust/sv_core/src/authority/transitions/reception.rs,"98,108","RG11,RG14",El intento de génesis de esta preparación ya se ha consumido.,The genesis attempt for this preparation has already been consumed.
+RG.GENESIS_REJECTED,rust/sv_core/src/authority/transitions/reception.rs,111,RG12,T-0 ha rechazado el plan; se conserva su error tipado.,T-0 rejected the plan; its typed error is retained.
+OC.FOREIGN_BINDING,rust/sv_core/src/requirements/observed.rs,69,"OC01,OC02",La obligación o su aplicabilidad no pertenece al vínculo exigido.,The requirement or its applicability does not belong to the required binding.
+OC.CORE_REQUIREMENT,rust/sv_core/src/requirements/observed.rs,72,OC03,La igualdad de bytes no puede verificar esta obligación nuclear.,Byte equality cannot verify this core requirement.
+OC.EMPTY_CONTRACT,rust/sv_core/src/requirements/observed.rs,74,OC04,El contrato de comprobación está vacío.,The check contract is empty.
+OC.CONTRACT_TOO_LARGE,rust/sv_core/src/requirements/observed.rs,76,"OC05,OC10",El contrato de comprobación supera el límite de bytes.,The check contract exceeds the byte limit.
+OC.EXPECTED_TOO_LARGE,rust/sv_core/src/requirements/observed.rs,79,OC06,La referencia esperada supera el límite de bytes.,The expected reference exceeds the byte limit.
+OC.OBSERVED_TOO_LARGE,rust/sv_core/src/requirements/observed.rs,98,OC07,La observación supera el límite de bytes.,The observation exceeds the byte limit.
+OC.EXACT_MISMATCH,rust/sv_core/src/requirements/observed.rs,103,"OC08,E2E02,E2E03,E2E04,E2E05,E2E06",La observación difiere de la referencia exacta.,The observation differs from the exact reference.
+OC.MISSING_OBSERVATION,rust/sv_core/src/requirements/observed.rs,101,"OC09,E2E07",No se dispone de la observación necesaria para comprobar.,The observation required for verification is unavailable.

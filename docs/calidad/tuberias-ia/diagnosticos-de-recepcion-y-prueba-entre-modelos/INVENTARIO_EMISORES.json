@@ -1,0 +1,283 @@
+{
+  "alcance": "dos fronteras candidatas; no inventario global del compilador",
+  "version": "RECEPTION-DIAGNOSTICS/1",
+  "causas": [
+    {
+      "variante": "EmptyAct",
+      "clave": "RG.EMPTY_ACT",
+      "es": "El acto recibido está vacío.",
+      "en": "The received act is empty.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        50
+      ],
+      "casos": [
+        "RG01",
+        "PI01"
+      ]
+    },
+    {
+      "variante": "EmptyIssuer",
+      "clave": "RG.EMPTY_ISSUER",
+      "es": "La declaración de emisor está vacía.",
+      "en": "The issuer declaration is empty.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        50
+      ],
+      "casos": [
+        "RG02",
+        "RG13",
+        "PI02"
+      ]
+    },
+    {
+      "variante": "EmptyVersion",
+      "clave": "RG.EMPTY_VERSION",
+      "es": "La versión declarada está vacía.",
+      "en": "The declared version is empty.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        50
+      ],
+      "casos": [
+        "RG03",
+        "PI03"
+      ]
+    },
+    {
+      "variante": "ActTooLarge",
+      "clave": "RG.ACT_TOO_LARGE",
+      "es": "El acto supera el límite de bytes.",
+      "en": "The act exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        56
+      ],
+      "casos": [
+        "RG04",
+        "PI04"
+      ]
+    },
+    {
+      "variante": "IssuerTooLarge",
+      "clave": "RG.ISSUER_TOO_LARGE",
+      "es": "La declaración de emisor supera el límite de bytes.",
+      "en": "The issuer declaration exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        56
+      ],
+      "casos": [
+        "RG05",
+        "PI05"
+      ]
+    },
+    {
+      "variante": "VersionTooLarge",
+      "clave": "RG.VERSION_TOO_LARGE",
+      "es": "La versión declarada supera el límite de bytes.",
+      "en": "The declared version exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        56
+      ],
+      "casos": [
+        "RG06",
+        "PI06"
+      ]
+    },
+    {
+      "variante": "IssuerMismatch",
+      "clave": "RG.ISSUER_MISMATCH",
+      "es": "El emisor declarado no coincide con el instalado.",
+      "en": "The declared issuer does not match the installed issuer.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        103
+      ],
+      "casos": [
+        "RG07"
+      ]
+    },
+    {
+      "variante": "VersionMismatch",
+      "clave": "RG.VERSION_MISMATCH",
+      "es": "La versión declarada no coincide con la instalada.",
+      "en": "The declared version does not match the installed version.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        104
+      ],
+      "casos": [
+        "RG08"
+      ]
+    },
+    {
+      "variante": "DeclarationsMismatch",
+      "clave": "RG.DECLARATIONS_MISMATCH",
+      "es": "El emisor y la versión declarados no coinciden con los instalados.",
+      "en": "The declared issuer and version do not match the installed declarations.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        102
+      ],
+      "casos": [
+        "RG09"
+      ]
+    },
+    {
+      "variante": "ActMismatch",
+      "clave": "RG.ACT_MISMATCH",
+      "es": "El acto recibido difiere del acto instalado.",
+      "en": "The received act differs from the installed act.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        107
+      ],
+      "casos": [
+        "RG10"
+      ]
+    },
+    {
+      "variante": "AlreadyAttempted",
+      "clave": "RG.ALREADY_ATTEMPTED",
+      "es": "El intento de génesis de esta preparación ya se ha consumido.",
+      "en": "The genesis attempt for this preparation has already been consumed.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        98,
+        108
+      ],
+      "casos": [
+        "RG11",
+        "RG14"
+      ]
+    },
+    {
+      "variante": "GenesisRejected",
+      "clave": "RG.GENESIS_REJECTED",
+      "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+      "en": "T-0 rejected the plan; its typed error is retained.",
+      "emisor": "rust/sv_core/src/authority/transitions/reception.rs",
+      "lineas": [
+        111
+      ],
+      "casos": [
+        "RG12"
+      ]
+    },
+    {
+      "variante": "ForeignBinding",
+      "clave": "OC.FOREIGN_BINDING",
+      "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+      "en": "The requirement or its applicability does not belong to the required binding.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        69
+      ],
+      "casos": [
+        "OC01",
+        "OC02"
+      ]
+    },
+    {
+      "variante": "CoreRequirement",
+      "clave": "OC.CORE_REQUIREMENT",
+      "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+      "en": "Byte equality cannot verify this core requirement.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        72
+      ],
+      "casos": [
+        "OC03"
+      ]
+    },
+    {
+      "variante": "EmptyContract",
+      "clave": "OC.EMPTY_CONTRACT",
+      "es": "El contrato de comprobación está vacío.",
+      "en": "The check contract is empty.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        74
+      ],
+      "casos": [
+        "OC04"
+      ]
+    },
+    {
+      "variante": "ContractTooLarge",
+      "clave": "OC.CONTRACT_TOO_LARGE",
+      "es": "El contrato de comprobación supera el límite de bytes.",
+      "en": "The check contract exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        76
+      ],
+      "casos": [
+        "OC05",
+        "OC10"
+      ]
+    },
+    {
+      "variante": "ExpectedTooLarge",
+      "clave": "OC.EXPECTED_TOO_LARGE",
+      "es": "La referencia esperada supera el límite de bytes.",
+      "en": "The expected reference exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        79
+      ],
+      "casos": [
+        "OC06"
+      ]
+    },
+    {
+      "variante": "ObservedTooLarge",
+      "clave": "OC.OBSERVED_TOO_LARGE",
+      "es": "La observación supera el límite de bytes.",
+      "en": "The observation exceeds the byte limit.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        98
+      ],
+      "casos": [
+        "OC07"
+      ]
+    },
+    {
+      "variante": "ExactMismatch",
+      "clave": "OC.EXACT_MISMATCH",
+      "es": "La observación difiere de la referencia exacta.",
+      "en": "The observation differs from the exact reference.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        103
+      ],
+      "casos": [
+        "OC08",
+        "E2E02",
+        "E2E03",
+        "E2E04",
+        "E2E05",
+        "E2E06"
+      ]
+    },
+    {
+      "variante": "MissingObservation",
+      "clave": "OC.MISSING_OBSERVATION",
+      "es": "No se dispone de la observación necesaria para comprobar.",
+      "en": "The observation required for verification is unavailable.",
+      "emisor": "rust/sv_core/src/requirements/observed.rs",
+      "lineas": [
+        101
+      ],
+      "casos": [
+        "OC09",
+        "E2E07"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "1eaee20a87cdff0e2a21c5297b8787a27b5a1102",
+      "tree": "d68391f44e610177cd07a84ad6c0cc4bcb33e0eb"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "9ea6053eccd3fa50b37fdab9478e116794fa1aac",
+      "tree": "2ac6a8a73607767419cb6765e9c7d2472f9bd0a5"
+    }
+  },
+  "rectoras_y_contratos": [
+    {
+      "ruta": "AGENTS.md",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980"
+    },
+    {
+      "ruta": "docs/calidad/CONTRATO_DIAGNOSTICO_ESTRUCTURADO_Y_LOCALIZACION_ES_EN_2026_09_09.md",
+      "git_blob": "1c68b63d97a106c916873246a80133783f3c466c"
+    },
+    {
+      "ruta": "docs/referencia/ERRORES_CANONICOS_SV_v0_3.md",
+      "git_blob": "5d8788ad0eaac0786e6c02658877fe1d9e661216"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/README.md",
+      "git_blob": "be4465142b36d86d938ebb27fd0867983424e8db"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/rectificacion-autoridad-y-comprobacion-ia/README.md",
+      "git_blob": "801d3083a09f40627a7cb3eb03f2f458be7634b9"
+    }
+  ],
+  "capsula_previa": {
+    "ruta": "../recepcion-gobernada-y-comprobacion-observada/CANDIDATA_FUENTES.json",
+    "sha256": "0c0f2551b7ee146c7b02ccf0577cb8cb5f166b24ff29481712ad10c3fb362678"
+  },
+  "adenda_cyb": {
+    "repo": "juantoniolloretegea/SVperitus-dataset",
+    "commit": "bbac1b44b1d3b845305e9cde492a08221206d631",
+    "sede": "dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md#12-adenda-integridad-y-trazabilidad-del-consejo-asistido-por-ia",
+    "recepcion": "según correspondencia RETP-147 leída en el corte fijado"
+  }
+}

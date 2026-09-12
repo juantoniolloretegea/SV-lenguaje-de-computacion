@@ -1,0 +1,26 @@
+{
+  "estado": "CONFORME",
+  "timeout_ensayo_s": 0.3,
+  "sha256_instrumento": "8e71d2c0b3ea493a849ba6478e374a6b67350861cba72a02d471578d27fab478",
+  "casos": [
+    {
+      "id": "salidas_abiertas",
+      "limite": "TIEMPO",
+      "codigo": -9,
+      "duracion_ns": 311553184
+    },
+    {
+      "id": "salidas_cerradas",
+      "limite": "TIEMPO",
+      "codigo": -9,
+      "duracion_ns": 300661448
+    },
+    {
+      "id": "exceso_salida",
+      "limite": "SALIDA",
+      "codigo": -9,
+      "duracion_ns": 21317001
+    }
+  ],
+  "nota": "presupuesto abreviado del instrumento; no prueba P4 ni P5 del servicio SV"
+}

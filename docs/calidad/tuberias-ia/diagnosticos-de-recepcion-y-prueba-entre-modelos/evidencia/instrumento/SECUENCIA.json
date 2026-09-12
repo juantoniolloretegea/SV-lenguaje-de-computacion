@@ -1,0 +1,53 @@
+[
+  {
+    "evento": "inicio",
+    "paso": "salidas_abiertas",
+    "utc": "2026-09-12T04:56:48.951059+00:00",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "import time; time.sleep(10)"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "salidas_abiertas",
+    "utc": "2026-09-12T04:56:49.262606+00:00",
+    "codigo": -9,
+    "limite_excedido": "TIEMPO"
+  },
+  {
+    "evento": "inicio",
+    "paso": "salidas_cerradas",
+    "utc": "2026-09-12T04:56:49.375088+00:00",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "import os,time; os.close(1); os.close(2); time.sleep(10)"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "salidas_cerradas",
+    "utc": "2026-09-12T04:56:49.675751+00:00",
+    "codigo": -9,
+    "limite_excedido": "TIEMPO"
+  },
+  {
+    "evento": "inicio",
+    "paso": "exceso_salida",
+    "utc": "2026-09-12T04:56:49.719728+00:00",
+    "argv": [
+      "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+      "-c",
+      "import os,time; os.write(1,b\"x\"*3000000); time.sleep(10)"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "exceso_salida",
+    "utc": "2026-09-12T04:56:49.741042+00:00",
+    "codigo": -9,
+    "limite_excedido": "SALIDA"
+  }
+]

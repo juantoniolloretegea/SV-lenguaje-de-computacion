@@ -1,0 +1,206 @@
+{
+  "version": "RECEPTION-REGRESSION/1",
+  "autoria": "Watson, fijados antes de ejecutar; banco público no reservado",
+  "casos": [
+    {
+      "id": "RG01",
+      "clave": "RG.EMPTY_ACT",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG02",
+      "clave": "RG.EMPTY_ISSUER",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG03",
+      "clave": "RG.EMPTY_VERSION",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG04",
+      "clave": "RG.ACT_TOO_LARGE",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG05",
+      "clave": "RG.ISSUER_TOO_LARGE",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG06",
+      "clave": "RG.VERSION_TOO_LARGE",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG07",
+      "clave": "RG.ISSUER_MISMATCH",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG08",
+      "clave": "RG.VERSION_MISMATCH",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG09",
+      "clave": "RG.DECLARATIONS_MISMATCH",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG10",
+      "clave": "RG.ACT_MISMATCH",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG11",
+      "clave": "RG.ALREADY_ATTEMPTED",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG12",
+      "clave": "RG.GENESIS_REJECTED",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG13",
+      "clave": "RG.EMPTY_ISSUER",
+      "fase": "Receive"
+    },
+    {
+      "id": "RG14",
+      "clave": "RG.ALREADY_ATTEMPTED",
+      "fase": "Receive"
+    },
+    {
+      "id": "PI01",
+      "clave": "RG.EMPTY_ACT",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "PI02",
+      "clave": "RG.EMPTY_ISSUER",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "PI03",
+      "clave": "RG.EMPTY_VERSION",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "PI04",
+      "clave": "RG.ACT_TOO_LARGE",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "PI05",
+      "clave": "RG.ISSUER_TOO_LARGE",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "PI06",
+      "clave": "RG.VERSION_TOO_LARGE",
+      "fase": "PrepareReception"
+    },
+    {
+      "id": "OC01",
+      "clave": "OC.FOREIGN_BINDING",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC02",
+      "clave": "OC.FOREIGN_BINDING",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC03",
+      "clave": "OC.CORE_REQUIREMENT",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC04",
+      "clave": "OC.EMPTY_CONTRACT",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC05",
+      "clave": "OC.CONTRACT_TOO_LARGE",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC06",
+      "clave": "OC.EXPECTED_TOO_LARGE",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "OC07",
+      "clave": "OC.OBSERVED_TOO_LARGE",
+      "fase": "Compare"
+    },
+    {
+      "id": "OC08",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "OC09",
+      "clave": "OC.MISSING_OBSERVATION",
+      "fase": "Compare"
+    },
+    {
+      "id": "OC10",
+      "clave": "OC.CONTRACT_TOO_LARGE",
+      "fase": "PrepareCheck"
+    },
+    {
+      "id": "E2E01",
+      "clave": "ACREDITADO",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E02",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E03",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E04",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E05",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E06",
+      "clave": "OC.EXACT_MISMATCH",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E07",
+      "clave": "OC.MISSING_OBSERVATION",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E08",
+      "clave": "ACREDITADO",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E09",
+      "clave": "ACREDITADO",
+      "fase": "Compare"
+    },
+    {
+      "id": "E2E10",
+      "clave": "ACREDITADO",
+      "fase": "Compare"
+    }
+  ]
+}

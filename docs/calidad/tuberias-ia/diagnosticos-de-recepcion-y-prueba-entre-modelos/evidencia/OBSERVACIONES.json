@@ -1,0 +1,2402 @@
+[
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 2981
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 1550
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 806
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 694
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 852
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 3260
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 1424
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 1155
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 7181
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 46362
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 25355
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 23880
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 23336
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 23233
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 22728
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2734
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 1240
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 1810
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 947
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 492
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 2273
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 1317
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 869
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 940
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 822
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 911
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 1038
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 2048
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 1571
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 1026
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 1509
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2867
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 745
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 681
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 633
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 555
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 663
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 732
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 646
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 1,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 49897
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 2957
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 1456
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 769
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 734
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 796
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 3035
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 1470
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 1252
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 7023
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 43070
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 57831
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 24000
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 22810
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 22497
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 22094
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2588
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 1222
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 2212
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 1045
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 555
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 1883
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 1019
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 901
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 892
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 861
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 839
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 1007
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 960
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 1314
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 1041
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 1681
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2607
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 778
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 686
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 614
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 566
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 706
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 722
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 595
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 2,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 54622
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 2812
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 1449
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 784
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 685
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 754
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 3094
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 1425
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 1234
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 6997
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 39237
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 25103
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 23387
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 22851
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 22597
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 22488
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2746
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 1158
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 1720
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 784
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 495
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 2661
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 1428
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 863
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 951
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 882
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 998
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 1624
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 1158
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 1256
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 1014
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 1689
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 2477
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 818
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 703
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 549
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 566
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 833
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 973
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 710
+  },
+  {
+    "configuracion": "debug",
+    "repeticion": 3,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 57947
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 725
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 674
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 285
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 242
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 108
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 563
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 859
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 588
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 1985
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 18168
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 13416
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 12256
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 11642
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 11633
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 11180
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 989
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 839
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 310
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 185
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 95
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 354
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 155
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 140
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 87
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 88
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 93
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 146
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 151
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 150
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 140
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 767
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 1083
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 354
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 303
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 316
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 234
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 340
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 480
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 365
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 1,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 95435
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 706
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 646
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 266
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 225
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 88
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 537
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 643
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 442
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 1127
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 18908
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 43060
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 16567
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 16679
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 16918
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 16590
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 975
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 781
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 307
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 146
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 76
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 493
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 202
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 160
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 106
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 171
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 144
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 218
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 194
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 185
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 203
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 917
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 1357
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 537
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 454
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 434
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 344
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 407
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 625
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 405
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 2,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 67657
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC04",
+    "clave": "OC.EMPTY_CONTRACT",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación está vacío.",
+    "en": "The check contract is empty.",
+    "duracion_observacion_ns": 653
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC05",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 700
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC06",
+    "clave": "OC.EXPECTED_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "La referencia esperada supera el límite de bytes.",
+    "en": "The expected reference exceeds the byte limit.",
+    "duracion_observacion_ns": 254
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC10",
+    "clave": "OC.CONTRACT_TOO_LARGE",
+    "fase": "PrepareCheck",
+    "es": "El contrato de comprobación supera el límite de bytes.",
+    "en": "The check contract exceeds the byte limit.",
+    "duracion_observacion_ns": 206
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC07",
+    "clave": "OC.OBSERVED_TOO_LARGE",
+    "fase": "Compare",
+    "es": "La observación supera el límite de bytes.",
+    "en": "The observation exceeds the byte limit.",
+    "duracion_observacion_ns": 112
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC01",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 609
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC02",
+    "clave": "OC.FOREIGN_BINDING",
+    "fase": "PrepareCheck",
+    "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "en": "The requirement or its applicability does not belong to the required binding.",
+    "duracion_observacion_ns": 632
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC03",
+    "clave": "OC.CORE_REQUIREMENT",
+    "fase": "PrepareCheck",
+    "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "en": "Byte equality cannot verify this core requirement.",
+    "duracion_observacion_ns": 444
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG12",
+    "clave": "RG.GENESIS_REJECTED",
+    "fase": "Receive",
+    "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "en": "T-0 rejected the plan; its typed error is retained.",
+    "duracion_observacion_ns": 1860
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "PrepareReception",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 15787
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 12992
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "PrepareReception",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 10585
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 12235
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 11995
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "PI06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "PrepareReception",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 11469
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC08",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 968
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "OC09",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 809
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG13",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 301
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG11",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 221
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG14",
+    "clave": "RG.ALREADY_ATTEMPTED",
+    "fase": "Receive",
+    "es": "El intento de génesis de esta preparación ya se ha consumido.",
+    "en": "The genesis attempt for this preparation has already been consumed.",
+    "duracion_observacion_ns": 140
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG01",
+    "clave": "RG.EMPTY_ACT",
+    "fase": "Receive",
+    "es": "El acto recibido está vacío.",
+    "en": "The received act is empty.",
+    "duracion_observacion_ns": 370
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG02",
+    "clave": "RG.EMPTY_ISSUER",
+    "fase": "Receive",
+    "es": "La declaración de emisor está vacía.",
+    "en": "The issuer declaration is empty.",
+    "duracion_observacion_ns": 207
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG03",
+    "clave": "RG.EMPTY_VERSION",
+    "fase": "Receive",
+    "es": "La versión declarada está vacía.",
+    "en": "The declared version is empty.",
+    "duracion_observacion_ns": 169
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG04",
+    "clave": "RG.ACT_TOO_LARGE",
+    "fase": "Receive",
+    "es": "El acto supera el límite de bytes.",
+    "en": "The act exceeds the byte limit.",
+    "duracion_observacion_ns": 89
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG05",
+    "clave": "RG.ISSUER_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La declaración de emisor supera el límite de bytes.",
+    "en": "The issuer declaration exceeds the byte limit.",
+    "duracion_observacion_ns": 120
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG06",
+    "clave": "RG.VERSION_TOO_LARGE",
+    "fase": "Receive",
+    "es": "La versión declarada supera el límite de bytes.",
+    "en": "The declared version exceeds the byte limit.",
+    "duracion_observacion_ns": 122
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG07",
+    "clave": "RG.ISSUER_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor declarado no coincide con el instalado.",
+    "en": "The declared issuer does not match the installed issuer.",
+    "duracion_observacion_ns": 174
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG08",
+    "clave": "RG.VERSION_MISMATCH",
+    "fase": "Receive",
+    "es": "La versión declarada no coincide con la instalada.",
+    "en": "The declared version does not match the installed version.",
+    "duracion_observacion_ns": 176
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG09",
+    "clave": "RG.DECLARATIONS_MISMATCH",
+    "fase": "Receive",
+    "es": "El emisor y la versión declarados no coinciden con los instalados.",
+    "en": "The declared issuer and version do not match the installed declarations.",
+    "duracion_observacion_ns": 209
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "RG10",
+    "clave": "RG.ACT_MISMATCH",
+    "fase": "Receive",
+    "es": "El acto recibido difiere del acto instalado.",
+    "en": "The received act differs from the installed act.",
+    "duracion_observacion_ns": 129
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E01",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 774
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E02",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 1099
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E03",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 338
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E04",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 332
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E05",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 325
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E06",
+    "clave": "OC.EXACT_MISMATCH",
+    "fase": "Compare",
+    "es": "La observación difiere de la referencia exacta.",
+    "en": "The observation differs from the exact reference.",
+    "duracion_observacion_ns": 257
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E07",
+    "clave": "OC.MISSING_OBSERVATION",
+    "fase": "Compare",
+    "es": "No se dispone de la observación necesaria para comprobar.",
+    "en": "The observation required for verification is unavailable.",
+    "duracion_observacion_ns": 252
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E08",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 491
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E09",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 367
+  },
+  {
+    "configuracion": "release",
+    "repeticion": 3,
+    "id": "E2E10",
+    "clave": "ACREDITADO",
+    "fase": "Compare",
+    "es": "",
+    "en": "",
+    "duracion_observacion_ns": 57750
+  }
+]

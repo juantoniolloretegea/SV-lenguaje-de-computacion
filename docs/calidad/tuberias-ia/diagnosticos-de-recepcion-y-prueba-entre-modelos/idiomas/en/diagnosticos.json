@@ -1,0 +1,26 @@
+{
+  "version": "RECEPTION-DIAGNOSTICS/1",
+  "idioma": "en",
+  "mensajes": {
+    "RG.EMPTY_ACT": "The received act is empty.",
+    "RG.EMPTY_ISSUER": "The issuer declaration is empty.",
+    "RG.EMPTY_VERSION": "The declared version is empty.",
+    "RG.ACT_TOO_LARGE": "The act exceeds the byte limit.",
+    "RG.ISSUER_TOO_LARGE": "The issuer declaration exceeds the byte limit.",
+    "RG.VERSION_TOO_LARGE": "The declared version exceeds the byte limit.",
+    "RG.ISSUER_MISMATCH": "The declared issuer does not match the installed issuer.",
+    "RG.VERSION_MISMATCH": "The declared version does not match the installed version.",
+    "RG.DECLARATIONS_MISMATCH": "The declared issuer and version do not match the installed declarations.",
+    "RG.ACT_MISMATCH": "The received act differs from the installed act.",
+    "RG.ALREADY_ATTEMPTED": "The genesis attempt for this preparation has already been consumed.",
+    "RG.GENESIS_REJECTED": "T-0 rejected the plan; its typed error is retained.",
+    "OC.FOREIGN_BINDING": "The requirement or its applicability does not belong to the required binding.",
+    "OC.CORE_REQUIREMENT": "Byte equality cannot verify this core requirement.",
+    "OC.EMPTY_CONTRACT": "The check contract is empty.",
+    "OC.CONTRACT_TOO_LARGE": "The check contract exceeds the byte limit.",
+    "OC.EXPECTED_TOO_LARGE": "The expected reference exceeds the byte limit.",
+    "OC.OBSERVED_TOO_LARGE": "The observation exceeds the byte limit.",
+    "OC.EXACT_MISMATCH": "The observation differs from the exact reference.",
+    "OC.MISSING_OBSERVATION": "The observation required for verification is unavailable."
+  }
+}

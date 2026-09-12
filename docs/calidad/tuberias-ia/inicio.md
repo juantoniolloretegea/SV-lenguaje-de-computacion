@@ -3,6 +3,8 @@
 
 **Estado global: NO VERDE.**
 
+**Último corte · RETP-157:** [paso 6, diagnósticos y prueba entre modelos](diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). Resultado nativo y límites publicados; [relevo preciso](diagnosticos-de-recepcion-y-prueba-entre-modelos/ESTADO_DE_CIERRE.md).
+
 **Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). El expediente de correspondencia está concluido en RETP-142; el cierre material permanece pendiente. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
 
 **Enlace público G1 ejecutado · RETP-145:** [Resultado y evidencia](ie004/lote-g1/ACTA_RESULTADO_ENLACE_LOTE_G1_2026_09_11.md). 24/24 cuerpos históricos en debug y release; 12/12 testigos por compilación y 101 capturas idénticas. Lote, montaje y 24 recibos simultáneamente recuperables en memoria. Siguiente objeto G2: correspondencia con operación gobernada existente y procedencia de sus referentes. Trazabilidad integral pendiente.
@@ -176,3 +178,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Encaje visual y lectura troncal — RETP-156
 
 [Léame primero: volcán, polígonos, logo y auditoría](frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Adenda PDF/Markdown dentro de la carpeta del frame, con las tres imágenes originales, la comprensión confirmada por Watson y la conformidad y luz verde expresas de Juan Antonio para el escenario y su documentación. Distingue los cascarones históricos, las leyendas visuales y la base matemática; precisa seguridad de memoria de Rust y rendimiento medido. Ordena la continuidad sin modificar el núcleo ni el siguiente objeto técnico de RETP-154.
+
+
+## Paso 6: causas de recepción y localización ES/EN — RETP-157
+
+[Resultado, catálogo y encargo externo](diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). Candidata aditiva sobre RETP-154: 239 unitarios por configuración nativa; 40 casos focales × tres repeticiones × debug/release; 20 causas locales ES/EN; cuatro clientes negativos con seis errores esperados. La causa se conserva en el emisor y el texto no decide. Fuentes, scripts, 18 procesos y medidas recuperables. Cero ejecuciones externas recibidas; encargo público preparado. Premisa sintética, DG01–DG14 globales y destinos WASI/navegador pendientes; estado global NO VERDE. El relevo identifica tanto la migración del compilador como la recepción profesional pendiente; sin reapertura de reserva ni promoción productiva.

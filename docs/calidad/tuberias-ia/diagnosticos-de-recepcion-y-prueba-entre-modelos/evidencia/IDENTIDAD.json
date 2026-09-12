@@ -1,0 +1,13 @@
+{
+  "utc": "2026-09-12T04:48:56.382469+00:00",
+  "instrumento_sha256": "ba67974cc0f8d0a890d14de5ac8ae626b59f89c2630e938e77533e4946c57d86",
+  "rustc_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "capsula_sha256": "1af6c81b1616d1b56a4f9e49924f607e7c97d473a85bed042e225af1a651cb4f",
+  "esperados_sha256": "b76032b6f41aa02843f316f2e94a2e30343708223f9e722eec0985dc4a8e0165",
+  "catalogo_sha256": "fbd8aa10f70efb9c2019149566ab75f54212e36a5106cd1a5f7f923c4f300cf5",
+  "timeout_s": 60,
+  "limite_por_flujo_bytes": 2097152,
+  "inferencia_proveedor": null,
+  "rss_alcance": "máximo acumulado de hijos del instrumento; no RSS por caso",
+  "cpu_alcance": "diferencia RUSAGE_CHILDREN con procesos secuenciales"
+}

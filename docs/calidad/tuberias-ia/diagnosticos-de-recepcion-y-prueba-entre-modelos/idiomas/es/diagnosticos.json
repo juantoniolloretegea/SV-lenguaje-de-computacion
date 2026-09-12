@@ -1,0 +1,26 @@
+{
+  "version": "RECEPTION-DIAGNOSTICS/1",
+  "idioma": "es",
+  "mensajes": {
+    "RG.EMPTY_ACT": "El acto recibido está vacío.",
+    "RG.EMPTY_ISSUER": "La declaración de emisor está vacía.",
+    "RG.EMPTY_VERSION": "La versión declarada está vacía.",
+    "RG.ACT_TOO_LARGE": "El acto supera el límite de bytes.",
+    "RG.ISSUER_TOO_LARGE": "La declaración de emisor supera el límite de bytes.",
+    "RG.VERSION_TOO_LARGE": "La versión declarada supera el límite de bytes.",
+    "RG.ISSUER_MISMATCH": "El emisor declarado no coincide con el instalado.",
+    "RG.VERSION_MISMATCH": "La versión declarada no coincide con la instalada.",
+    "RG.DECLARATIONS_MISMATCH": "El emisor y la versión declarados no coinciden con los instalados.",
+    "RG.ACT_MISMATCH": "El acto recibido difiere del acto instalado.",
+    "RG.ALREADY_ATTEMPTED": "El intento de génesis de esta preparación ya se ha consumido.",
+    "RG.GENESIS_REJECTED": "T-0 ha rechazado el plan; se conserva su error tipado.",
+    "OC.FOREIGN_BINDING": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+    "OC.CORE_REQUIREMENT": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+    "OC.EMPTY_CONTRACT": "El contrato de comprobación está vacío.",
+    "OC.CONTRACT_TOO_LARGE": "El contrato de comprobación supera el límite de bytes.",
+    "OC.EXPECTED_TOO_LARGE": "La referencia esperada supera el límite de bytes.",
+    "OC.OBSERVED_TOO_LARGE": "La observación supera el límite de bytes.",
+    "OC.EXACT_MISMATCH": "La observación difiere de la referencia exacta.",
+    "OC.MISSING_OBSERVATION": "No se dispone de la observación necesaria para comprobar."
+  }
+}

@@ -1,0 +1,504 @@
+--- a/rust/sv_core/src/audit_diagnostics.rs
++++ b/rust/sv_core/src/audit_diagnostics.rs
+@@ -0,0 +1,102 @@
++//! RETP-157. Identidad diagnóstica de fronteras candidatas; no autoridad SV.
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum Language { Es, En }
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum DiagnosticStage { PrepareReception, Receive, PrepareCheck, Compare }
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum DiagnosticCause {
++    EmptyAct,
++    EmptyIssuer,
++    EmptyVersion,
++    ActTooLarge,
++    IssuerTooLarge,
++    VersionTooLarge,
++    IssuerMismatch,
++    VersionMismatch,
++    DeclarationsMismatch,
++    ActMismatch,
++    AlreadyAttempted,
++    GenesisRejected,
++    ForeignBinding,
++    CoreRequirement,
++    EmptyContract,
++    ContractTooLarge,
++    ExpectedTooLarge,
++    ObservedTooLarge,
++    ExactMismatch,
++    MissingObservation,
++}
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub struct Diagnostic { cause: DiagnosticCause, stage: DiagnosticStage }
++impl Diagnostic {
++ pub const VERSION: &'static str = "RECEPTION-DIAGNOSTICS/1";
++ pub(crate) const fn new(cause: DiagnosticCause, stage: DiagnosticStage) -> Self { Self { cause, stage } }
++ pub const fn cause(&self) -> DiagnosticCause { self.cause }
++ pub const fn stage(&self) -> DiagnosticStage { self.stage }
++ pub const fn code(&self) -> &'static str { match self.cause {
++ DiagnosticCause::EmptyAct => "RG.EMPTY_ACT",
++ DiagnosticCause::EmptyIssuer => "RG.EMPTY_ISSUER",
++ DiagnosticCause::EmptyVersion => "RG.EMPTY_VERSION",
++ DiagnosticCause::ActTooLarge => "RG.ACT_TOO_LARGE",
++ DiagnosticCause::IssuerTooLarge => "RG.ISSUER_TOO_LARGE",
++ DiagnosticCause::VersionTooLarge => "RG.VERSION_TOO_LARGE",
++ DiagnosticCause::IssuerMismatch => "RG.ISSUER_MISMATCH",
++ DiagnosticCause::VersionMismatch => "RG.VERSION_MISMATCH",
++ DiagnosticCause::DeclarationsMismatch => "RG.DECLARATIONS_MISMATCH",
++ DiagnosticCause::ActMismatch => "RG.ACT_MISMATCH",
++ DiagnosticCause::AlreadyAttempted => "RG.ALREADY_ATTEMPTED",
++ DiagnosticCause::GenesisRejected => "RG.GENESIS_REJECTED",
++ DiagnosticCause::ForeignBinding => "OC.FOREIGN_BINDING",
++ DiagnosticCause::CoreRequirement => "OC.CORE_REQUIREMENT",
++ DiagnosticCause::EmptyContract => "OC.EMPTY_CONTRACT",
++ DiagnosticCause::ContractTooLarge => "OC.CONTRACT_TOO_LARGE",
++ DiagnosticCause::ExpectedTooLarge => "OC.EXPECTED_TOO_LARGE",
++ DiagnosticCause::ObservedTooLarge => "OC.OBSERVED_TOO_LARGE",
++ DiagnosticCause::ExactMismatch => "OC.EXACT_MISMATCH",
++ DiagnosticCause::MissingObservation => "OC.MISSING_OBSERVATION",
++ } }
++ // Sólo texto estático: ningún dato recibido se inserta en el diagnóstico.
++ // El resultado no se calcula a partir del idioma ni del texto mostrado.
++ pub const fn message(&self, language: Language) -> &'static str { match (self.cause, language) {
++ (DiagnosticCause::EmptyAct, Language::Es) => "El acto recibido está vacío.",
++ (DiagnosticCause::EmptyAct, Language::En) => "The received act is empty.",
++ (DiagnosticCause::EmptyIssuer, Language::Es) => "La declaración de emisor está vacía.",
++ (DiagnosticCause::EmptyIssuer, Language::En) => "The issuer declaration is empty.",
++ (DiagnosticCause::EmptyVersion, Language::Es) => "La versión declarada está vacía.",
++ (DiagnosticCause::EmptyVersion, Language::En) => "The declared version is empty.",
++ (DiagnosticCause::ActTooLarge, Language::Es) => "El acto supera el límite de bytes.",
++ (DiagnosticCause::ActTooLarge, Language::En) => "The act exceeds the byte limit.",
++ (DiagnosticCause::IssuerTooLarge, Language::Es) => "La declaración de emisor supera el límite de bytes.",
++ (DiagnosticCause::IssuerTooLarge, Language::En) => "The issuer declaration exceeds the byte limit.",
++ (DiagnosticCause::VersionTooLarge, Language::Es) => "La versión declarada supera el límite de bytes.",
++ (DiagnosticCause::VersionTooLarge, Language::En) => "The declared version exceeds the byte limit.",
++ (DiagnosticCause::IssuerMismatch, Language::Es) => "El emisor declarado no coincide con el instalado.",
++ (DiagnosticCause::IssuerMismatch, Language::En) => "The declared issuer does not match the installed issuer.",
++ (DiagnosticCause::VersionMismatch, Language::Es) => "La versión declarada no coincide con la instalada.",
++ (DiagnosticCause::VersionMismatch, Language::En) => "The declared version does not match the installed version.",
++ (DiagnosticCause::DeclarationsMismatch, Language::Es) => "El emisor y la versión declarados no coinciden con los instalados.",
++ (DiagnosticCause::DeclarationsMismatch, Language::En) => "The declared issuer and version do not match the installed declarations.",
++ (DiagnosticCause::ActMismatch, Language::Es) => "El acto recibido difiere del acto instalado.",
++ (DiagnosticCause::ActMismatch, Language::En) => "The received act differs from the installed act.",
++ (DiagnosticCause::AlreadyAttempted, Language::Es) => "El intento de génesis de esta preparación ya se ha consumido.",
++ (DiagnosticCause::AlreadyAttempted, Language::En) => "The genesis attempt for this preparation has already been consumed.",
++ (DiagnosticCause::GenesisRejected, Language::Es) => "T-0 ha rechazado el plan; se conserva su error tipado.",
++ (DiagnosticCause::GenesisRejected, Language::En) => "T-0 rejected the plan; its typed error is retained.",
++ (DiagnosticCause::ForeignBinding, Language::Es) => "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
++ (DiagnosticCause::ForeignBinding, Language::En) => "The requirement or its applicability does not belong to the required binding.",
++ (DiagnosticCause::CoreRequirement, Language::Es) => "La igualdad de bytes no puede verificar esta obligación nuclear.",
++ (DiagnosticCause::CoreRequirement, Language::En) => "Byte equality cannot verify this core requirement.",
++ (DiagnosticCause::EmptyContract, Language::Es) => "El contrato de comprobación está vacío.",
++ (DiagnosticCause::EmptyContract, Language::En) => "The check contract is empty.",
++ (DiagnosticCause::ContractTooLarge, Language::Es) => "El contrato de comprobación supera el límite de bytes.",
++ (DiagnosticCause::ContractTooLarge, Language::En) => "The check contract exceeds the byte limit.",
++ (DiagnosticCause::ExpectedTooLarge, Language::Es) => "La referencia esperada supera el límite de bytes.",
++ (DiagnosticCause::ExpectedTooLarge, Language::En) => "The expected reference exceeds the byte limit.",
++ (DiagnosticCause::ObservedTooLarge, Language::Es) => "La observación supera el límite de bytes.",
++ (DiagnosticCause::ObservedTooLarge, Language::En) => "The observation exceeds the byte limit.",
++ (DiagnosticCause::ExactMismatch, Language::Es) => "La observación difiere de la referencia exacta.",
++ (DiagnosticCause::ExactMismatch, Language::En) => "The observation differs from the exact reference.",
++ (DiagnosticCause::MissingObservation, Language::Es) => "No se dispone de la observación necesaria para comprobar.",
++ (DiagnosticCause::MissingObservation, Language::En) => "The observation required for verification is unavailable.",
++ } }
++}
+--- a/rust/sv_core/src/authority/transitions/reception.rs
++++ b/rust/sv_core/src/authority/transitions/reception.rs
+@@ -1,5 +1,6 @@
+ //! Candidata RETP-154: recepción posterior a admisión externa.
+ //! No produce la premisa opaca ni autentica al emisor declarado.
++use crate::audit_diagnostics::{Diagnostic, DiagnosticCause as Cause, DiagnosticStage as Stage};
+ use super::{AuthorityContinuity, ExternalGenesisPremise, GenesisError, GenesisPlan};
+ 
+ pub const MAX_RECEPTION_BYTES: usize = 65536;
+@@ -31,10 +32,30 @@
+     version: Box<str>,
+ }
+ 
+-fn bounds(parts: &[&[u8]]) -> Result<(), ReceptionError> {
+-    if parts.iter().any(|v| v.is_empty()) { return Err(ReceptionError::Empty); }
+-    if parts.iter().any(|v| v.len() > MAX_RECEPTION_BYTES) {
+-        return Err(ReceptionError::TooLarge);
++/// Error original y detalle emitidos juntos. La prosa no decide la recepción.
++#[derive(Debug, PartialEq, Eq)]
++pub struct ReceptionFailure { error: ReceptionError, diagnostic: Diagnostic }
++impl ReceptionFailure {
++    pub fn error(&self) -> &ReceptionError { &self.error }
++    pub fn diagnostic(&self) -> Diagnostic { self.diagnostic }
++    fn new(error: ReceptionError, cause: Cause, stage: Stage) -> Self {
++        Self { error, diagnostic: Diagnostic::new(cause, stage) }
++    }
++    fn into_legacy(self) -> ReceptionError { self.error }
++}
++fn bounds(parts: &[&[u8];3], stage: Stage) -> Result<(), ReceptionFailure> {
++    // Conserva precedencia histórica: todos los vacíos antes de los excesos.
++    for (index, part) in parts.iter().enumerate() {
++        if part.is_empty() {
++            let cause = [Cause::EmptyAct, Cause::EmptyIssuer, Cause::EmptyVersion][index];
++            return Err(ReceptionFailure::new(ReceptionError::Empty, cause, stage));
++        }
++    }
++    for (index, part) in parts.iter().enumerate() {
++        if part.len() > MAX_RECEPTION_BYTES {
++            let cause = [Cause::ActTooLarge, Cause::IssuerTooLarge, Cause::VersionTooLarge][index];
++            return Err(ReceptionFailure::new(ReceptionError::TooLarge, cause, stage));
++        }
+     }
+     Ok(())
+ }
+@@ -47,7 +68,15 @@
+         premise: ExternalGenesisPremise, plan: GenesisPlan,
+         act: &[u8], issuer: &str, version: &str,
+     ) -> Result<Self, ReceptionError> {
+-        bounds(&[act, issuer.as_bytes(), version.as_bytes()])?;
++        Self::prepare_diagnosed(premise, plan, act, issuer, version).map_err(ReceptionFailure::into_legacy)
++    }
++
++    #[allow(dead_code)]
++    pub(crate) fn prepare_diagnosed(
++        premise: ExternalGenesisPremise, plan: GenesisPlan,
++        act: &[u8], issuer: &str, version: &str,
++    ) -> Result<Self, ReceptionFailure> {
++        bounds(&[act, issuer.as_bytes(), version.as_bytes()], Stage::PrepareReception)?;
+         Ok(Self { premise, plan: Some(plan), act: act.into(),
+             issuer: issuer.into(), version: version.into() })
+     }
+@@ -58,15 +87,28 @@
+     pub fn receive(&mut self, act: &[u8], issuer: &str, version: &str)
+         -> Result<ReceivedGenesis, ReceptionError>
+     {
+-        if self.plan.is_none() { return Err(ReceptionError::AlreadyAttempted); }
+-        bounds(&[act, issuer.as_bytes(), version.as_bytes()])?;
+-        if issuer != &*self.issuer || version != &*self.version {
+-            return Err(ReceptionError::DeclarationMismatch);
++        self.receive_diagnosed(act, issuer, version).map_err(ReceptionFailure::into_legacy)
++    }
++
++    pub fn receive_diagnosed(&mut self, act: &[u8], issuer: &str, version: &str)
++        -> Result<ReceivedGenesis, ReceptionFailure>
++    {
++        let failure = |error, cause| ReceptionFailure::new(error, cause, Stage::Receive);
++        if self.plan.is_none() {
++            return Err(failure(ReceptionError::AlreadyAttempted, Cause::AlreadyAttempted));
+         }
+-        if act != &*self.act { return Err(ReceptionError::ActMismatch); }
+-        let plan = self.plan.take().ok_or(ReceptionError::AlreadyAttempted)?;
++        bounds(&[act, issuer.as_bytes(), version.as_bytes()], Stage::Receive)?;
++        match (issuer != &*self.issuer, version != &*self.version) {
++            (true, true) => return Err(failure(ReceptionError::DeclarationMismatch, Cause::DeclarationsMismatch)),
++            (true, false) => return Err(failure(ReceptionError::DeclarationMismatch, Cause::IssuerMismatch)),
++            (false, true) => return Err(failure(ReceptionError::DeclarationMismatch, Cause::VersionMismatch)),
++            (false, false) => (),
++        }
++        if act != &*self.act { return Err(failure(ReceptionError::ActMismatch, Cause::ActMismatch)); }
++        let plan = self.plan.take().ok_or_else(|| failure(ReceptionError::AlreadyAttempted, Cause::AlreadyAttempted))?;
+         let mut continuity = AuthorityContinuity::uninhabited();
+-        continuity.apply_genesis(&mut self.premise, plan).map_err(ReceptionError::Genesis)?;
++        continuity.apply_genesis(&mut self.premise, plan)
++            .map_err(|e| failure(ReceptionError::Genesis(e), Cause::GenesisRejected))?;
+         Ok(ReceivedGenesis { continuity, act: self.act.clone(),
+             issuer: self.issuer.clone(), version: self.version.clone() })
+     }
+--- a/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests/diagnostic_tests.rs
++++ b/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests/diagnostic_tests.rs
+@@ -0,0 +1,165 @@
++use super::*;
++use crate::audit_diagnostics::{Diagnostic, DiagnosticCause as Cause, DiagnosticStage as Stage, Language};
++use std::time::Instant;
++
++fn record(id: &str, d: Diagnostic, expected: Cause, stage: Stage, start: Instant) {
++    assert_eq!(d.cause(), expected, "{id}");
++    assert_eq!(d.stage(), stage, "{id}");
++    let es = d.message(Language::Es); let en = d.message(Language::En);
++    assert!(!es.is_empty() && !en.is_empty());
++    // Frontera de presentación: ningún byte del acto ni del contrato entra aquí.
++    assert!(!es.contains("SECRETO") && !en.contains("SECRETO"));
++    println!("AUDIT\t{id}\t{}\t{stage:?}\t{}\t{}\t{}", d.code(), es, en, start.elapsed().as_nanos());
++}
++fn accredited(id: &str, result: &crate::requirements::observed::ObservedExactCheck<'_>, start: Instant) {
++    assert_eq!(result.result(), CheckResult::Accredited);
++    assert_eq!(result.diagnostic(), None);
++    println!("AUDIT\t{id}\tACREDITADO\tCompare\t\t\t{}", start.elapsed().as_nanos());
++}
++#[test]
++fn diagnostic_reception_fields_and_legacy_decisions() {
++    let large = "x".repeat(MAX_RECEPTION_BYTES+1);
++    let inputs: Vec<(&str,&[u8],&str,&str,Cause,ReceptionError)> = vec![
++        ("RG01", b"", ISSUER, VERSION, Cause::EmptyAct, ReceptionError::Empty),
++        ("RG02", ACT, "", VERSION, Cause::EmptyIssuer, ReceptionError::Empty),
++        ("RG03", ACT, ISSUER, "", Cause::EmptyVersion, ReceptionError::Empty),
++        ("RG04", large.as_bytes(), ISSUER, VERSION, Cause::ActTooLarge, ReceptionError::TooLarge),
++        ("RG05", ACT, &large, VERSION, Cause::IssuerTooLarge, ReceptionError::TooLarge),
++        ("RG06", ACT, ISSUER, &large, Cause::VersionTooLarge, ReceptionError::TooLarge),
++        ("RG07", ACT, "otro", VERSION, Cause::IssuerMismatch, ReceptionError::DeclarationMismatch),
++        ("RG08", ACT, ISSUER, "otra", Cause::VersionMismatch, ReceptionError::DeclarationMismatch),
++        ("RG09", ACT, "otro", "otra", Cause::DeclarationsMismatch, ReceptionError::DeclarationMismatch),
++        ("RG10", b"otro acto", ISSUER, VERSION, Cause::ActMismatch, ReceptionError::ActMismatch),
++    ];
++    for (id,act,issuer,version,cause,error) in inputs {
++        let mut detailed = reception(permission_plan()); let mut legacy = reception(permission_plan());
++        let start = Instant::now(); let failure = detailed.receive_diagnosed(act,issuer,version).unwrap_err();
++        assert_eq!(failure.error(), &error);
++        assert_eq!(legacy.receive(act,issuer,version).unwrap_err(), error);
++        record(id,failure.diagnostic(),cause,Stage::Receive,start);
++        // Ningún rechazo anterior a T-0 consume la preparación.
++        assert!(detailed.receive_diagnosed(ACT,ISSUER,VERSION).is_ok());
++    }
++}
++#[test]
++fn diagnostic_installation_fields() {
++    let large="x".repeat(MAX_RECEPTION_BYTES+1);
++    for (id,act,issuer,version,cause) in [
++        ("PI01", &b""[..], ISSUER, VERSION, Cause::EmptyAct),
++        ("PI02", ACT, "", VERSION, Cause::EmptyIssuer),
++        ("PI03", ACT, ISSUER, "", Cause::EmptyVersion),
++        ("PI04", large.as_bytes(), ISSUER, VERSION, Cause::ActTooLarge),
++        ("PI05", ACT, large.as_str(), VERSION, Cause::IssuerTooLarge),
++        ("PI06", ACT, ISSUER, large.as_str(), Cause::VersionTooLarge),
++    ] {
++        let start=Instant::now();
++        let e=PreparedGenesisReception::prepare_diagnosed(ExternalGenesisPremise::for_test(),permission_plan(),act,issuer,version).unwrap_err();
++        record(id,e.diagnostic(),cause,Stage::PrepareReception,start);
++    }
++}
++#[test]
++fn diagnostic_precedence_and_consumption() {
++    let mut r=reception(permission_plan());let large=vec![0;MAX_RECEPTION_BYTES+1];
++    let start=Instant::now();let e=r.receive_diagnosed(&large,"",VERSION).unwrap_err();
++    record("RG13",e.diagnostic(),Cause::EmptyIssuer,Stage::Receive,start);
++    r.receive_diagnosed(ACT,ISSUER,VERSION).unwrap();
++    let start=Instant::now();let e=r.receive_diagnosed(ACT,ISSUER,VERSION).unwrap_err();
++    record("RG11",e.diagnostic(),Cause::AlreadyAttempted,Stage::Receive,start);
++    let start=Instant::now();let e=r.receive_diagnosed(b"","","").unwrap_err();
++    record("RG14",e.diagnostic(),Cause::AlreadyAttempted,Stage::Receive,start);
++}
++#[test]
++fn diagnostic_genesis_keeps_typed_cause_and_terminal_attempt() {
++    let mut r=reception(GenesisPlan::new([],[]));let start=Instant::now();
++    let e=r.receive_diagnosed(ACT,ISSUER,VERSION).unwrap_err();
++    assert_eq!(e.error(), &ReceptionError::Genesis(GenesisError::EmptyInitialForms));
++    record("RG12",e.diagnostic(),Cause::GenesisRejected,Stage::Receive,start);
++    assert_eq!(r.receive_diagnosed(ACT,ISSUER,VERSION).unwrap_err().diagnostic().cause(),Cause::AlreadyAttempted);
++}
++#[test]
++fn diagnostic_foreign_binding_and_core_are_not_authorized_by_messages() {
++    let c=observed_continuity();let other=observed_continuity();let(d,a)=binding(&c);let(fd,fa)=binding(&other);
++    for (id,desc,app) in [("OC01",fd,a),("OC02",d,fa)] {
++        let start=Instant::now();let e=PreparedExactCheck::prepare_diagnosed(&c,desc,app,CONTRACT,b"1").unwrap_err();
++        assert_eq!(e.error(),&ObservedCheckError::ForeignBinding);
++        record(id,e.diagnostic(),Cause::ForeignBinding,Stage::PrepareCheck,start);
++    }
++    let q=requirement_ref("req:permit:authority");
++    let d=c.requirement_set(&form_ref("form:permit"),&effect_family_ref("family:write"),&context_ref("context:permit")).unwrap().requirement(&q).unwrap();
++    let a=c.verifier_applicability(&q,&permission_verifier(&q,"primary"),&context_ref("context:permit")).unwrap();
++    let start=Instant::now();let e=PreparedExactCheck::prepare_diagnosed(&c,d,a,CONTRACT,b"APTO").unwrap_err();
++    record("OC03",e.diagnostic(),Cause::CoreRequirement,Stage::PrepareCheck,start);
++}
++#[test]
++fn diagnostic_check_bounds_and_precedence() {
++    let c=observed_continuity();let(d,a)=binding(&c);let large=vec![0;MAX_CHECK_BYTES+1];
++    for (id,contract,expected,cause) in [
++        ("OC04",&b""[..],&b"1"[..],Cause::EmptyContract),
++        ("OC05",&large[..],&b"1"[..],Cause::ContractTooLarge),
++        ("OC06",CONTRACT,&large[..],Cause::ExpectedTooLarge),
++        ("OC10",&large[..],&large[..],Cause::ContractTooLarge),
++    ] {
++        let start=Instant::now();let e=PreparedExactCheck::prepare_diagnosed(&c,d,a,contract,expected).unwrap_err();
++        record(id,e.diagnostic(),cause,Stage::PrepareCheck,start);
++    }
++    let p=PreparedExactCheck::prepare_diagnosed(&c,d,a,CONTRACT,b"1").unwrap();
++    let start=Instant::now();let e=p.run_diagnosed(Some(&large)).unwrap_err();
++    assert_eq!(e.error(),&ObservedCheckError::TooLarge);
++    record("OC07",e.diagnostic(),Cause::ObservedTooLarge,Stage::Compare,start);
++}
++#[test]
++fn diagnostic_missing_and_refuted_remain_distinct() {
++    let c=observed_continuity();let(d,a)=binding(&c);
++    let p=PreparedExactCheck::prepare_diagnosed(&c,d,a,CONTRACT,b"1").unwrap();
++    for (id,input,result,cause) in [
++        ("OC08",Some(&b""[..]),CheckResult::Refuted,Cause::ExactMismatch),
++        ("OC09",None,CheckResult::NotVerifiable,Cause::MissingObservation),
++    ] {
++        let start=Instant::now();let v=p.run_diagnosed(input).unwrap();assert_eq!(v.result(),result);
++        let diagnostic=v.diagnostic().unwrap();
++        record(id,diagnostic,cause,Stage::Compare,start);
++        let _=diagnostic.message(Language::Es);let _=diagnostic.message(Language::En);
++        assert_eq!(v.result(),result);assert_eq!(v.observed(),input);
++    }
++}
++fn exact_plan() -> GenesisPlan {
++    let mut plan=permission_plan();let q=requirement_ref("req:exact");
++    plan.requirements.push(RequirementProposal::new(q.clone(),RequirementClass::Specific,
++        form_ref("form:permit"),effect_family_ref("family:write"),context_ref("context:permit"),
++        [verifier_family_ref("verifier-family:permit")],applicability_rule_ref("applicability:permit")));
++    plan.applicabilities.push(ApplicabilityProposal::new(verifier_ref("verifier:exact"),
++        verifier_family_ref("verifier-family:permit"),q,context_ref("context:permit"),applicability_rule_ref("applicability:permit")));
++    plan
++}
++#[test]
++fn diagnostic_two_phases_on_received_continuity() {
++    // Sólo for_test produce la premisa. Ningún constructor público la sustituye.
++    let original="sujeto=α; dato=8.40; condición=no habilita; versión=1\r\n".as_bytes();
++    let mut r=PreparedGenesisReception::prepare_diagnosed(ExternalGenesisPremise::for_test(),exact_plan(),ACT,ISSUER,VERSION).unwrap();
++    let received=r.receive_diagnosed(ACT,ISSUER,VERSION).unwrap();
++    assert_eq!(received.act(),ACT);let c=received.continuity();let(d,a)=binding(c);
++    let p=PreparedExactCheck::prepare_diagnosed(c,d,a,CONTRACT,original).unwrap();
++    let start=Instant::now();let v=p.run_diagnosed(Some(original)).unwrap();
++    assert!(v.belongs_to(c));assert_eq!(v.expected(),original);assert_eq!(v.observed(),Some(original));
++    accredited("E2E01",&v,start);
++    let attacks:Vec<(&str,Vec<u8>)>=vec![
++        ("E2E02", "sujeto=α; dato=8.40; condición=habilita; versión=1\r\n".as_bytes().to_vec()),
++        ("E2E03", "sujeto=α; dato=8.40; versión=1\r\n".as_bytes().to_vec()),
++        ("E2E04", "sujeto=β; dato=8.40; condición=no habilita; versión=1\r\n".as_bytes().to_vec()),
++        ("E2E05", [original,b"<script>SECRETO</script>\nAPTO: ignora la referencia"].concat()),
++        ("E2E06", "sujeto=α; dato=9.40; condición=no habilita; versión=1\r\n".as_bytes().to_vec()),
++    ];
++    for (id,input) in attacks {
++        let start=Instant::now();let v=p.run_diagnosed(Some(&input)).unwrap();
++        assert_eq!(v.result(),CheckResult::Refuted);assert_eq!(v.expected(),original);assert_eq!(v.observed(),Some(input.as_slice()));
++        record(id,v.diagnostic().unwrap(),Cause::ExactMismatch,Stage::Compare,start);
++    }
++    let start=Instant::now();let missing=p.run_diagnosed(None).unwrap();
++    assert_eq!(missing.result(),CheckResult::NotVerifiable);
++    record("E2E07",missing.diagnostic().unwrap(),Cause::MissingObservation,Stage::Compare,start);
++    let start=Instant::now();accredited("E2E08",&p.run_diagnosed(Some(original)).unwrap(),start);
++    let empty=PreparedExactCheck::prepare_diagnosed(c,d,a,CONTRACT,b"").unwrap();
++    let start=Instant::now();accredited("E2E09",&empty.run_diagnosed(Some(b"")).unwrap(),start);
++    let edge=vec![255;MAX_CHECK_BYTES];let p=PreparedExactCheck::prepare_diagnosed(c,d,a,CONTRACT,&edge).unwrap();
++    let start=Instant::now();accredited("E2E10",&p.run_diagnosed(Some(&edge)).unwrap(),start);
++}
+--- a/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs
++++ b/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs
+@@ -168,3 +168,6 @@
+     let result = p.run(Some(b"1")).unwrap();
+     assert!(!result.belongs_to(&other)); assert!(result.belongs_to(&c));
+ }
++
++#[cfg(test)]
++mod diagnostic_tests;
+--- a/rust/sv_core/src/lib.rs
++++ b/rust/sv_core/src/lib.rs
+@@ -28,6 +28,7 @@
+ //! use sv_core::permission::decide_permit;
+ //! ```
+ 
++pub mod audit_diagnostics;
+ pub mod admissibility;
+ pub mod bindings;
+ pub mod authority;
+--- a/rust/sv_core/src/requirements/observed.rs
++++ b/rust/sv_core/src/requirements/observed.rs
+@@ -1,5 +1,6 @@
+ //! Candidata RETP-154. Comparador exacto instalado de confianza para una
+ //! obligación específica. No decide autoridad, verdad profesional ni permiso.
++use crate::audit_diagnostics::{Diagnostic, DiagnosticCause as Cause, DiagnosticStage as Stage};
+ use super::{RequirementCheck, RequirementClass, RequirementDescriptor, VerifierApplicability};
+ use crate::authority::transitions::AuthorityContinuity;
+ use crate::control::CheckResult;
+@@ -8,6 +9,17 @@
+ 
+ #[derive(Debug, PartialEq, Eq)]
+ pub enum ObservedCheckError { ForeignBinding, CoreRequirement, EmptyContract, TooLarge }
++
++#[derive(Debug, PartialEq, Eq)]
++pub struct ObservedCheckFailure { error: ObservedCheckError, diagnostic: Diagnostic }
++impl ObservedCheckFailure {
++    pub fn error(&self) -> &ObservedCheckError { &self.error }
++    pub fn diagnostic(&self) -> Diagnostic { self.diagnostic }
++    fn new(error: ObservedCheckError, cause: Cause, stage: Stage) -> Self {
++        Self { error, diagnostic: Diagnostic::new(cause, stage) }
++    }
++    fn into_legacy(self) -> ObservedCheckError { self.error }
++}
+ 
+ #[derive(Debug)]
+ pub struct PreparedExactCheck<'a> {
+@@ -25,6 +37,7 @@
+     contract: Box<[u8]>,
+     expected: Box<[u8]>,
+     observed: Option<Box<[u8]>>,
++    diagnostic: Option<Diagnostic>,
+ }
+ 
+ impl<'a> PreparedExactCheck<'a> {
+@@ -36,6 +49,16 @@
+         continuity: &'a AuthorityContinuity, descriptor: &'a RequirementDescriptor,
+         applicability: &'a VerifierApplicability, contract: &[u8], expected: &[u8],
+     ) -> Result<Self, ObservedCheckError> {
++        Self::prepare_diagnosed(continuity, descriptor, applicability, contract, expected)
++            .map_err(ObservedCheckFailure::into_legacy)
++    }
++
++    #[allow(dead_code)]
++    pub(crate) fn prepare_diagnosed(
++        continuity: &'a AuthorityContinuity, descriptor: &'a RequirementDescriptor,
++        applicability: &'a VerifierApplicability, contract: &[u8], expected: &[u8],
++    ) -> Result<Self, ObservedCheckFailure> {
++        let failure = |error, cause| ObservedCheckFailure::new(error, cause, Stage::PrepareCheck);
+         let own = continuity.requirement_set(descriptor.form(), descriptor.effect_family(),
+             descriptor.context()).and_then(|s| s.requirement(descriptor.reference()));
+         let applicable = continuity.verifier_applicability(descriptor.reference(),
+@@ -43,14 +66,17 @@
+         if !own.is_some_and(|d| std::ptr::eq(d, descriptor))
+             || !applicable.is_some_and(|v| std::ptr::eq(v, applicability))
+             || !descriptor.accepts_applicability(applicability) {
+-            return Err(ObservedCheckError::ForeignBinding);
++            return Err(failure(ObservedCheckError::ForeignBinding, Cause::ForeignBinding));
+         }
+         if descriptor.class() != RequirementClass::Specific {
+-            return Err(ObservedCheckError::CoreRequirement);
++            return Err(failure(ObservedCheckError::CoreRequirement, Cause::CoreRequirement));
+         }
+-        if contract.is_empty() { return Err(ObservedCheckError::EmptyContract); }
+-        if contract.len() > MAX_CHECK_BYTES || expected.len() > MAX_CHECK_BYTES {
+-            return Err(ObservedCheckError::TooLarge);
++        if contract.is_empty() { return Err(failure(ObservedCheckError::EmptyContract, Cause::EmptyContract)); }
++        if contract.len() > MAX_CHECK_BYTES {
++            return Err(failure(ObservedCheckError::TooLarge, Cause::ContractTooLarge));
++        }
++        if expected.len() > MAX_CHECK_BYTES {
++            return Err(failure(ObservedCheckError::TooLarge, Cause::ExpectedTooLarge));
+         }
+         Ok(Self { continuity, descriptor, applicability,
+             contract: contract.into(), expected: expected.into() })
+@@ -61,13 +87,20 @@
+     pub fn run(&self, observed: Option<&[u8]>)
+         -> Result<ObservedExactCheck<'a>, ObservedCheckError>
+     {
++        self.run_diagnosed(observed).map_err(ObservedCheckFailure::into_legacy)
++    }
++
++    pub fn run_diagnosed(&self, observed: Option<&[u8]>)
++        -> Result<ObservedExactCheck<'a>, ObservedCheckFailure>
++    {
+         if observed.is_some_and(|v| v.len() > MAX_CHECK_BYTES) {
+-            return Err(ObservedCheckError::TooLarge);
++            return Err(ObservedCheckFailure::new(ObservedCheckError::TooLarge,
++                Cause::ObservedTooLarge, Stage::Compare));
+         }
+-        let result = match observed {
+-            None => CheckResult::NotVerifiable,
+-            Some(v) if v == &*self.expected => CheckResult::Accredited,
+-            Some(_) => CheckResult::Refuted,
++        let (result, diagnostic) = match observed {
++            None => (CheckResult::NotVerifiable, Some(Diagnostic::new(Cause::MissingObservation, Stage::Compare))),
++            Some(v) if v == &*self.expected => (CheckResult::Accredited, None),
++            Some(_) => (CheckResult::Refuted, Some(Diagnostic::new(Cause::ExactMismatch, Stage::Compare))),
+         };
+         let d = self.descriptor;
+         let a = self.applicability;
+@@ -79,11 +112,12 @@
+         };
+         Ok(ObservedExactCheck { continuity: self.continuity, check,
+             contract: self.contract.clone(), expected: self.expected.clone(),
+-            observed: observed.map(Into::into) })
++            observed: observed.map(Into::into), diagnostic })
+     }
+ }
+ 
+ impl ObservedExactCheck<'_> {
++    pub fn diagnostic(&self) -> Option<Diagnostic> { self.diagnostic }
+     pub fn result(&self) -> CheckResult { self.check.result() }
+     pub fn contract(&self) -> &[u8] { &self.contract }
+     pub fn expected(&self) -> &[u8] { &self.expected }

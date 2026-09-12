@@ -1,0 +1,126 @@
+{
+  "version": "RECEPTION-DIAGNOSTICS/1",
+  "canonicos_sv": false,
+  "filas": [
+    {
+      "variante": "EmptyAct",
+      "clave": "RG.EMPTY_ACT",
+      "es": "El acto recibido está vacío.",
+      "en": "The received act is empty."
+    },
+    {
+      "variante": "EmptyIssuer",
+      "clave": "RG.EMPTY_ISSUER",
+      "es": "La declaración de emisor está vacía.",
+      "en": "The issuer declaration is empty."
+    },
+    {
+      "variante": "EmptyVersion",
+      "clave": "RG.EMPTY_VERSION",
+      "es": "La versión declarada está vacía.",
+      "en": "The declared version is empty."
+    },
+    {
+      "variante": "ActTooLarge",
+      "clave": "RG.ACT_TOO_LARGE",
+      "es": "El acto supera el límite de bytes.",
+      "en": "The act exceeds the byte limit."
+    },
+    {
+      "variante": "IssuerTooLarge",
+      "clave": "RG.ISSUER_TOO_LARGE",
+      "es": "La declaración de emisor supera el límite de bytes.",
+      "en": "The issuer declaration exceeds the byte limit."
+    },
+    {
+      "variante": "VersionTooLarge",
+      "clave": "RG.VERSION_TOO_LARGE",
+      "es": "La versión declarada supera el límite de bytes.",
+      "en": "The declared version exceeds the byte limit."
+    },
+    {
+      "variante": "IssuerMismatch",
+      "clave": "RG.ISSUER_MISMATCH",
+      "es": "El emisor declarado no coincide con el instalado.",
+      "en": "The declared issuer does not match the installed issuer."
+    },
+    {
+      "variante": "VersionMismatch",
+      "clave": "RG.VERSION_MISMATCH",
+      "es": "La versión declarada no coincide con la instalada.",
+      "en": "The declared version does not match the installed version."
+    },
+    {
+      "variante": "DeclarationsMismatch",
+      "clave": "RG.DECLARATIONS_MISMATCH",
+      "es": "El emisor y la versión declarados no coinciden con los instalados.",
+      "en": "The declared issuer and version do not match the installed declarations."
+    },
+    {
+      "variante": "ActMismatch",
+      "clave": "RG.ACT_MISMATCH",
+      "es": "El acto recibido difiere del acto instalado.",
+      "en": "The received act differs from the installed act."
+    },
+    {
+      "variante": "AlreadyAttempted",
+      "clave": "RG.ALREADY_ATTEMPTED",
+      "es": "El intento de génesis de esta preparación ya se ha consumido.",
+      "en": "The genesis attempt for this preparation has already been consumed."
+    },
+    {
+      "variante": "GenesisRejected",
+      "clave": "RG.GENESIS_REJECTED",
+      "es": "T-0 ha rechazado el plan; se conserva su error tipado.",
+      "en": "T-0 rejected the plan; its typed error is retained."
+    },
+    {
+      "variante": "ForeignBinding",
+      "clave": "OC.FOREIGN_BINDING",
+      "es": "La obligación o su aplicabilidad no pertenece al vínculo exigido.",
+      "en": "The requirement or its applicability does not belong to the required binding."
+    },
+    {
+      "variante": "CoreRequirement",
+      "clave": "OC.CORE_REQUIREMENT",
+      "es": "La igualdad de bytes no puede verificar esta obligación nuclear.",
+      "en": "Byte equality cannot verify this core requirement."
+    },
+    {
+      "variante": "EmptyContract",
+      "clave": "OC.EMPTY_CONTRACT",
+      "es": "El contrato de comprobación está vacío.",
+      "en": "The check contract is empty."
+    },
+    {
+      "variante": "ContractTooLarge",
+      "clave": "OC.CONTRACT_TOO_LARGE",
+      "es": "El contrato de comprobación supera el límite de bytes.",
+      "en": "The check contract exceeds the byte limit."
+    },
+    {
+      "variante": "ExpectedTooLarge",
+      "clave": "OC.EXPECTED_TOO_LARGE",
+      "es": "La referencia esperada supera el límite de bytes.",
+      "en": "The expected reference exceeds the byte limit."
+    },
+    {
+      "variante": "ObservedTooLarge",
+      "clave": "OC.OBSERVED_TOO_LARGE",
+      "es": "La observación supera el límite de bytes.",
+      "en": "The observation exceeds the byte limit."
+    },
+    {
+      "variante": "ExactMismatch",
+      "clave": "OC.EXACT_MISMATCH",
+      "es": "La observación difiere de la referencia exacta.",
+      "en": "The observation differs from the exact reference."
+    },
+    {
+      "variante": "MissingObservation",
+      "clave": "OC.MISSING_OBSERVATION",
+      "es": "No se dispone de la observación necesaria para comprobar.",
+      "en": "The observation required for verification is unavailable."
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "estado": "CONFORME_EN_ALCANCE",
+  "pruebas_por_configuracion": 239,
+  "pruebas_heredadas": 231,
+  "pruebas_nuevas": 8,
+  "configuraciones": [
+    "debug",
+    "release"
+  ],
+  "casos_focales_distintos": 40,
+  "repeticiones_por_configuracion": 3,
+  "observaciones_focales": 240,
+  "causas_locales": 20,
+  "idiomas": [
+    "es",
+    "en"
+  ],
+  "procesos": 18,
+  "modelos_externos_ejecutados": [],
+  "wasi": "NO_ACREDITADO",
+  "navegador": "NO_ACREDITADO",
+  "premisa": "SINTETICA_FOR_TEST",
+  "cierre_global": false
+}

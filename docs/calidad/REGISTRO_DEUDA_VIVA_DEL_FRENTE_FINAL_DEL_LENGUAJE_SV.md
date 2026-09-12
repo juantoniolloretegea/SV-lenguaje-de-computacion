@@ -364,3 +364,10 @@ Este subconjunto no cierra DFL-005 general, la admisión de autoridad o la ident
 [Contrato, límites y evidencia](tuberias-ia/recepcion-gobernada-y-comprobacion-observada/README.md). DFL-005/006 reciben una realización candidata posterior a admisión externa y un comparador específico con evidencia ligada. Se rechaza mezcla de descriptor/aplicabilidad entre instancias de igual contenido. La candidata no produce la premisa material ni convierte igualdad en autoridad: el instalador de confianza y su admisión profesional siguen siendo dependencias explícitas, no garantías cerradas.
 
 231 pruebas unitarias por modo y frontera pública con dos rechazos de instalación privada, premisa no fabricable y comprobación no extraíble. No modifica producción ni declara cerrada deuda general de captura/admisión/transducción, verificador profesional o continuidad durable. Errores locales candidatos se recibirán en catálogo/localización si se integra el cambio; no se crean claves canónicas por este asiento. La vía documental continúa y la actuación profesional concreta permanece inhabilitada hasta su enlace material.
+
+
+### Recepción RETP-157 · Diagnóstico local desde el emisor
+
+[Catálogo, pruebas y estado](tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). DFL-001 recibe la ampliación candidata de dos fronteras RETP-154: veinte causas locales versionadas y mensajes ES/EN, preservando la decisión y los errores de la API anterior. 239 unitarios por modo nativo y 40 casos focales en tres repeticiones por modo. Las causas no se deducen de Debug ni de prosa. No se añaden códigos al catálogo canónico.
+
+DFL-001 sigue abierta: inventario/migración del compilador, E004/E115 estructurados, procedencia multifuente y DG01–DG14 completos pendientes. DFL-011 conserva su revisión integral; la revisión de estos veinte mensajes no la cierra. DFL-005/006 mantienen admisión profesional y verificadores pendientes; la premisa for_test no los produce. Se prepara el encargo externo, aún sin capturas de otros proveedores. Destinos WASI/navegador, reserva P3 y P4/P5 conservan sus límites. No se promueve el núcleo productivo.
