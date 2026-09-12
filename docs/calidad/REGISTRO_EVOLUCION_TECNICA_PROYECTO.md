@@ -1808,3 +1808,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-175 · S7 · Recepción de Claude y finalización del cotejo de segundos intentos
 
 2026-09-12T16:05:57Z. Original Claude preservado: CONFORME_DOCUMENTAL, doce casos y 32 citas, sin errores del instrumento fijado. Exposición previa alta y precisión sobre versión declarada conservadas. S7 finalizado exclusivamente en recepción y cotejo documental de los cuatro participantes. Dictámenes anteriores y aceptación provisional Qwen intactos. Siguiente actividad: comparación; después licencias e implantación independiente. [Acta y evidencias](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/claude-intento-2/ACTA_RECEPCION.md).
+
+
+<a id="retp-176"></a>
+
+### RETP-2026-176 · S8 · Recepción complementaria de Mistral en S4
+
+2026-09-12T16:21:05Z. Primera prueba, primer intento: transcripción preservada y cotejada con S4, no S6. E10 causa incorrecta y E07 consecuencia/traza insuficientes; no acredita conformidad S4. Reservas de etiquetas conservadas; herramientas y lectura declaradas no verificadas. Recepción S8 finalizada; registros y cierres anteriores intactos. [Acta y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/ACTA_RECEPCION.md).

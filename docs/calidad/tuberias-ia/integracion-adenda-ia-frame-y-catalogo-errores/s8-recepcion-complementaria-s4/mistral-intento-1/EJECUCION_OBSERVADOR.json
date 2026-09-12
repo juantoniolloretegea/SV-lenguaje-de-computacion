@@ -1,0 +1,15 @@
+{
+  "responsable": "Watson / W-S0",
+  "comando": [
+    "python",
+    "s8-recepcion-mistral/expediente/cotejar.py",
+    "/workspace/scratch/cdd3907241dd/s8-recepcion-mistral/expediente",
+    "/workspace/scratch/cdd3907241dd/s4-prueba-externa"
+  ],
+  "cwd": "/workspace/scratch/cdd3907241dd",
+  "codigo_salida": 0,
+  "stdout": "12 IDs y fuentes requeridas presentes; huellas E09 coinciden; E01 fragmento en línea 11, no 10.\n",
+  "stderr": "",
+  "origen": "Comando y salida observados en esta recepción. No registra actividad de Mistral.",
+  "duracion_participante": null
+}

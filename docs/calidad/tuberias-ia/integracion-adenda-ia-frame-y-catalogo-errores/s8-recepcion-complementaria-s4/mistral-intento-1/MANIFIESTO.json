@@ -1,0 +1,34 @@
+{
+  "cotejar.py": {
+    "bytes": 2340,
+    "sha256": "74813ba0995d7a868675dcce35f321e8cc0931dfb88c13dbd107e227ac75586c"
+  },
+  "RECTORES.json": {
+    "bytes": 622,
+    "sha256": "9fd771bd5b577413d1df003415f767062ef0954775910db69570b86c11f20af6"
+  },
+  "ACTA_RECEPCION.md": {
+    "bytes": 4250,
+    "sha256": "c3bff2ba8cf20c371aa8b128d3d5b67fbf0288e99a283777b1128c2a73badd22"
+  },
+  "EJECUCION_OBSERVADOR.json": {
+    "bytes": 574,
+    "sha256": "0e5d2543a01c720364e97104f93713d2f9dcf1cded714e01b367c7e9c8fcf6ab"
+  },
+  "RECEPCION.json": {
+    "bytes": 1419,
+    "sha256": "6a311319e2f4ad640883e1e1ce05898d9149f10246dfd33de1f9590b6b32a872"
+  },
+  "EVALUACION.json": {
+    "bytes": 8869,
+    "sha256": "ce8f89d6896f89552871e13401a6f0197b7e40be709b75099ca411c7aea60688"
+  },
+  "RESPUESTA_TRANSCRITA.json": {
+    "bytes": 8900,
+    "sha256": "84379ce5016f2afb5ade20a548f1972f070b1c57d1fe23f0a685febcc9e65680"
+  },
+  "COTEJO_MECANICO.json": {
+    "bytes": 5877,
+    "sha256": "64b3c87db26f2b195a1c190e62a0579652d7720f5f393b7d085bd611a1a2627b"
+  }
+}

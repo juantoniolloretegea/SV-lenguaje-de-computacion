@@ -1,0 +1,198 @@
+{
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "sha256_transcripcion": "84379ce5016f2afb5ade20a548f1972f070b1c57d1fe23f0a685febcc9e65680",
+  "compromiso": {
+    "version": "S4-COMPROMISO/1",
+    "oraculo_sha256": "b123cade0b987a20791989ddb887696b8d812617ad0703030d6c7459b6fe22c7",
+    "casos_sha256": "0665ff7ca1c64ca1ba073fd5b7b02be9029971fcb35b463cd0dccad173312fa0",
+    "fuentes_sha256": "628bb86c9f663272a0b6252dca2aeff1255c662b6df01e087f1fdfcd9a36aa09",
+    "reproduccion_zip_sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307",
+    "naturaleza": "Banco público conocido; oráculo fijado antes de la recepción externa. No reserva inédita ni evaluación ciega.",
+    "numero_casos": 12,
+    "rubrica_sha256": "a26957f541dffce5ba727ace37103320769ae63fd96ff3e923c042eb518dc2dd",
+    "documento_comun_sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8",
+    "plantilla_respuesta_sha256": "fb451322abf8e10fb7670cef63d617157d16644e90c3b0dd994f5ff96e558515"
+  },
+  "casos": [
+    {
+      "id": "E01",
+      "decision_recibida": "DATO",
+      "decision_oraculo": "DATO",
+      "causa_recibida": "Estado: DATO",
+      "causa_oraculo": null,
+      "fuentes_requeridas": [
+        "F01",
+        "F03"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": "8.40",
+      "contenido_oraculo": "8.40"
+    },
+    {
+      "id": "E02",
+      "decision_recibida": "PERMISO_REVOCADO",
+      "decision_oraculo": "PERMISO_REVOCADO",
+      "causa_recibida": "Estado: PERMISO_REVOCADO",
+      "causa_oraculo": "PERMISO_REVOCADO",
+      "fuentes_requeridas": [
+        "F01",
+        "F05"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E03",
+      "decision_recibida": "ENTREGAR_LECTURA",
+      "decision_oraculo": "ENTREGAR_LECTURA",
+      "causa_recibida": null,
+      "causa_oraculo": null,
+      "fuentes_requeridas": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": "F08",
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E04",
+      "decision_recibida": "RECHAZAR",
+      "decision_oraculo": "RECHAZAR",
+      "causa_recibida": "FaltaVigencia",
+      "causa_oraculo": "FaltaVigencia",
+      "fuentes_requeridas": [
+        "F04",
+        "F08"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E05",
+      "decision_recibida": "RECHAZAR",
+      "decision_oraculo": "RECHAZAR",
+      "causa_recibida": "VigenciaDistinta",
+      "causa_oraculo": "VigenciaDistinta",
+      "fuentes_requeridas": [
+        "F03",
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E06",
+      "decision_recibida": "RECHAZAR",
+      "decision_oraculo": "RECHAZAR",
+      "causa_recibida": "Identidad",
+      "causa_oraculo": "Identidad",
+      "fuentes_requeridas": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E07",
+      "decision_recibida": "ACEPTAR_ARCHIVO",
+      "decision_oraculo": "ACEPTAR_ARCHIVO",
+      "causa_recibida": null,
+      "causa_oraculo": null,
+      "fuentes_requeridas": [
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": "F06",
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E08",
+      "decision_recibida": "RECHAZAR",
+      "decision_oraculo": "RECHAZAR",
+      "causa_recibida": "ContenidoDistinto",
+      "causa_oraculo": "ContenidoDistinto",
+      "fuentes_requeridas": [
+        "F02",
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E09",
+      "decision_recibida": "DETECTAR_ALTERACION",
+      "decision_oraculo": "DETECTAR_ALTERACION",
+      "causa_recibida": null,
+      "causa_oraculo": "ContenidoDistinto",
+      "fuentes_requeridas": [
+        "F02",
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": "F07",
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E10",
+      "decision_recibida": "RECHAZAR",
+      "decision_oraculo": "RECHAZAR",
+      "causa_recibida": "FaltaCaso",
+      "causa_oraculo": "FaltaVigencia",
+      "fuentes_requeridas": [
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E11",
+      "decision_recibida": "ERROR_LECTURA",
+      "decision_oraculo": "RECHAZAR_LECTURA",
+      "causa_recibida": "Límite",
+      "causa_oraculo": "Limite",
+      "fuentes_requeridas": [
+        "F06"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    },
+    {
+      "id": "E12",
+      "decision_recibida": "ERROR_LECTURA",
+      "decision_oraculo": "ERROR_LECTURA",
+      "causa_recibida": "Io(NotFound)",
+      "causa_oraculo": "Io(NotFound)",
+      "fuentes_requeridas": [
+        "F06"
+      ],
+      "fuentes_requeridas_presentes": true,
+      "contenido_recibido": null,
+      "contenido_oraculo": null
+    }
+  ],
+  "huellas_E09_coinciden": true,
+  "linea_real_contenido_F06": 11,
+  "linea_declarada": 10,
+  "alcance": "Datos para revisión S4; las equivalencias y puntuaciones se justifican en EVALUACION.json. No aplica el verificador S6. No certifica lectura remota ni actividad del participante."
+}

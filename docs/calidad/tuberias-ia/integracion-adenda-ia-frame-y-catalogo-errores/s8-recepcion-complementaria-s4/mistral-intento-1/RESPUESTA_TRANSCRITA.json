@@ -1,0 +1,221 @@
+{
+  "version": "S4-RESPUESTA/1",
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "participante": {
+    "modelo": "Mistral Medium 3.5",
+    "version_visible": "2026-09-12",
+    "plataforma": "Vibe Work",
+    "modo_acceso": "enlace",
+    "referencia_paquete": null,
+    "lectura_completa": true
+  },
+  "modalidad": "lectura_documental",
+  "resultados": [
+    {
+      "id": "E01",
+      "decision": "DATO",
+      "causa_o_resolucion": "Estado: DATO",
+      "contenido": "8.40",
+      "llamadas_politica": 1,
+      "consecuencia": "El conductor fija vigente=true y la consulta LEER/CASO-A/IGG/ACTUAL/VALOR alcanza la puerta de política con ruta [1,1,1,1,1]. Se devuelve el valor artificial 8.40.",
+      "fuentes": ["F01", "F03", "R01", "R02"],
+      "evidencia_literal": "\"contenido\":\"8.40\" (F06, línea 10)",
+      "justificacion_verificable": "La ruta [1,1,1,1,1] y el contexto coinciden con F01 y F03. La vigencia positiva permite el acceso al dato.",
+      "limitacion": null
+    },
+    {
+      "id": "E02",
+      "decision": "PERMISO_REVOCADO",
+      "causa_o_resolucion": "Estado: PERMISO_REVOCADO",
+      "contenido": null,
+      "llamadas_politica": 1,
+      "consecuencia": "La vigencia negativa (vigente=false en F05) revoca el permiso. No se devuelve contenido ni fuente.",
+      "fuentes": ["F01", "F05", "R02", "R03"],
+      "evidencia_literal": "\"vigente\":false (F05)",
+      "justificacion_verificable": "R02: La vigencia negativa resuelve PERMISO_REVOCADO sin contenido, fuente ni alcance.",
+      "limitacion": null
+    },
+    {
+      "id": "E03",
+      "decision": "ENTREGAR_LECTURA",
+      "causa_o_resolucion": null,
+      "contenido": "F08",
+      "llamadas_politica": 1,
+      "consecuencia": "Sí puede entregarse la lectura documental del recibo (F08) porque leer el recibo es distinto de actuar (R03).",
+      "fuentes": ["F04", "F05", "F08", "R03"],
+      "evidencia_literal": "\"estado\":\"PERMISO_REVOCADO\" (F08, línea 1)",
+      "justificacion_verificable": "R03: Un recibo de resolución negativa puede leerse fielmente sin conceder permiso.",
+      "limitacion": null
+    },
+    {
+      "id": "E04",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "FaltaVigencia",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se acepta la lectura porque falta la cita de vigencia (F05).",
+      "fuentes": ["F04", "F08", "R04"],
+      "evidencia_literal": "\"vigente\":false (F05, omitida)",
+      "justificacion_verificable": "R04: La cobertura exige caso original y entrada exacta de su montaje.",
+      "limitacion": "Evidencia faltante: F05"
+    },
+    {
+      "id": "E05",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "VigenciaDistinta",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se acepta la lectura porque se cita F03 (vigente para P3-01), pero el caso es P3-11.",
+      "fuentes": ["F03", "F04", "F05", "F08", "R04"],
+      "evidencia_literal": "\"id\":\"P3-01\" (F03) vs. \"id\":\"P3-11\" (F05)",
+      "justificacion_verificable": "R04: Se distinguen CasoDistinto y VigenciaDistinta. F03 es verdadero, pero para un caso distinto.",
+      "limitacion": "Vigencia ajena al caso"
+    },
+    {
+      "id": "E06",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "Identidad",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se acepta la lectura porque la identidad de la propuesta pertenece a otra invocación.",
+      "fuentes": ["F04", "F05", "F08", "R03"],
+      "evidencia_literal": "\"id\":\"P3-11\" (F04, F05) vs. identidad ajena",
+      "justificacion_verificable": "R03: Una identidad ajena causa Identidad.",
+      "limitacion": "Identidad no coincide"
+    },
+    {
+      "id": "E07",
+      "decision": "ACEPTAR_ARCHIVO",
+      "causa_o_resolucion": null,
+      "contenido": "F06",
+      "llamadas_politica": 1,
+      "consecuencia": "Se acepta la escritura porque F06 solo cambia separadores permitidos fuera de cadenas JSON.",
+      "fuentes": ["F02", "F03", "F06", "R05", "R06"],
+      "evidencia_literal": "\"version\":\"IE004-A-CUERPO/1\" (F06, línea 1)",
+      "justificacion_verificable": "R05: IE004-PRESENTACION-ESPACIOS/1 admite solo espacio, TAB, LF y CR fuera de cadenas JSON. R06: El conductor escribe después de comprobar lectura y cobertura.",
+      "limitacion": null
+    },
+    {
+      "id": "E08",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "ContenidoDistinto",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se acepta la escritura porque F07 altera el contenido (elimina la negación en el alcance).",
+      "fuentes": ["F02", "F03", "F06", "F07", "R05"],
+      "evidencia_literal": "\"alcance\":\"Registro artificial; acredita concentración ni condición clínica.\" (F07) vs. \"no acredita\" (F06)",
+      "justificacion_verificable": "R05: Un JSON válido alterado en contenido causa ContenidoDistinto.",
+      "limitacion": "Contenido alterado"
+    },
+    {
+      "id": "E09",
+      "decision": "DETECTAR_ALTERACION",
+      "causa_o_resolucion": null,
+      "contenido": "F07",
+      "llamadas_politica": null,
+      "consecuencia": "Se detecta la alteración porque el observador lee el archivo después de la sustitución (F06 → F07).",
+      "fuentes": ["F02", "F03", "F06", "F07", "R08"],
+      "evidencia_literal": "SHA-256: f6a4c3068645c4f2ade6486226d6a398f1665808b76d96b8fee3dd6775466620 (F07) vs. cbfc037a6f19d6e1b0a3374d4f7b4b7d4a419ad4f17dcca694bf3d9ed0087dad (F06)",
+      "justificacion_verificable": "R08: Detectar alteración posterior no equivale a impedirla.",
+      "limitacion": "Alteración detectada a posteriori"
+    },
+    {
+      "id": "E10",
+      "decision": "RECHAZAR",
+      "causa_o_resolucion": "FaltaCaso",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se acepta la escritura porque falta la cita de F03 (montaje de P3-01).",
+      "fuentes": ["F02", "F03", "F06", "R04"],
+      "evidencia_literal": "\"fuente\":\"A01\" (F03, omitida)",
+      "justificacion_verificable": "R04: FaltaCaso: La propuesta no constituye la evidencia requerida.",
+      "limitacion": "Cobertura incompleta"
+    },
+    {
+      "id": "E11",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Límite",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se puede leer porque el archivo contiene 16385 bytes (exceso de 1 byte sobre el límite).",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "16385 bytes (espacios ASCII)",
+      "justificacion_verificable": "R07: El lector admite hasta 16384 bytes y detecta exceso con un buffer de 16385.",
+      "limitacion": "Límite de bytes excedido"
+    },
+    {
+      "id": "E12",
+      "decision": "ERROR_LECTURA",
+      "causa_o_resolucion": "Io(NotFound)",
+      "contenido": null,
+      "llamadas_politica": null,
+      "consecuencia": "No se puede leer porque el archivo no existe.",
+      "fuentes": ["F06", "R07"],
+      "evidencia_literal": "Destino inicialmente ausente",
+      "justificacion_verificable": "R07: Un destino ausente produce Io(NotFound).",
+      "limitacion": "Archivo no encontrado"
+    }
+  ],
+  "actividad_observable": {
+    "herramientas": ["web_search.open_url"],
+    "comandos": [],
+    "artefactos": [],
+    "intentos": 1,
+    "errores_y_correcciones": [],
+    "limitaciones": [
+      "No se dispone de herramientas para medir tokens, coste o tiempo de CPU.",
+      "No se ejecutó Rust (modalidad: lectura_documental)."
+    ]
+  },
+  "mediciones": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No hay acceso a métricas de tiempo en el entorno actual."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No hay acceso a métricas de tiempo en el entorno actual."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": 1,
+      "unidad": "llamadas",
+      "origen": "medido",
+      "fuente": "tools.web_search.open_url",
+      "motivo": null
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No expuesto por el proveedor en este entorno."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No expuesto por el proveedor en este entorno."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "fuente": null,
+      "motivo": "No expuesto por el proveedor en este entorno."
+    }
+  ],
+  "referencias_adicionales_consultadas": []
+}

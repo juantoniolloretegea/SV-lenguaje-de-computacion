@@ -1,0 +1,29 @@
+{
+  "suceso": "S8",
+  "registro": "RETP-2026-176",
+  "fecha_registro_utc": "2026-09-12T16:21:05Z",
+  "participante_declarado": {
+    "modelo": "Mistral Medium 3.5",
+    "version_visible": "2026-09-12",
+    "plataforma": "Vibe Work",
+    "modo_acceso": "enlace",
+    "referencia_paquete": null,
+    "lectura_completa": true
+  },
+  "intento": 1,
+  "banco": "S4-EXTERNA-DOCUMENTAL/1",
+  "origen": "JSON pegado por el usuario en el mensaje que invita a Mistral a la primera prueba.",
+  "representacion": "Transcripción íntegra del objeto aportado, guardada en UTF-8 con LF. No se recibió un archivo bruto del proveedor; la huella identifica esta transcripción, no el transporte original externo.",
+  "sha256_transcripcion": "84379ce5016f2afb5ade20a548f1972f070b1c57d1fe23f0a685febcc9e65680",
+  "bytes_transcripcion": 8900,
+  "corte_paquete_participante": null,
+  "lectura_completa": "Declarada; no certificada por el observador.",
+  "exposicion_previa": "No declarada; no equivale a ausencia.",
+  "llamadas_herramientas": {
+    "valor_declarado": 1,
+    "origen_en_entrega": "medido",
+    "evidencia": "Nombre de herramienta sin solicitud, URL, salida ni registro adjunto; medida no verificada por el observador."
+  },
+  "metricas_participante": "Tiempos, tokens y coste null con motivo. No se deducen del orden de recepción.",
+  "comparabilidad": "Primera prueba S4; no se incorpora a los segundos intentos S6/S7."
+}

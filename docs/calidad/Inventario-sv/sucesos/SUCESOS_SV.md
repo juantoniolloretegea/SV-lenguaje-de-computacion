@@ -12,6 +12,7 @@
 | S5 | finalizado | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:48:43Z |
 | S6 | finalizado | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
 | S7 | finalizado | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T16:05:57Z |
+| S8 | finalizado | Recepción complementaria de Mistral en la primera prueba S4 | Watson / W-S0 | 2026-09-12T16:21:05Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -291,4 +292,39 @@
 **Siguiente accion:** Comparar candidatos con los cuatro expedientes y sus límites de exposición y evidencia. Después verificar versión, licencias y viabilidad de implantación independiente de la plataforma del proveedor.
 
 **Observaciones:** Finalización de la recepción y cotejo documental, sin selección de candidato ni aceptación general de todos los participantes. No se certifican versiones de despliegue o procesos internos, ni se infieren tiempos o esfuerzos ausentes. Se conservan dictámenes, aclaraciones y decisiones previas; estudio de licencias posterior a la comparación.
+
+
+## S8 · Recepción complementaria de Mistral en la primera prueba S4
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T16:21:05Z
+
+**Fecha inicio utc:** 2026-09-12T16:21:05Z
+
+**Fecha actualizacion utc:** 2026-09-12T16:21:05Z
+
+**Fecha fin utc:** 2026-09-12T16:21:05Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Primer intento S4; transcripción aportada; cotejo con oráculo previo y rúbrica original; separado de los segundos intentos S7.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** S4 público e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c; lenguaje 45a5d697deb8cd824c1475ac47eccd3e7037e3cd; laboratorio a0ace7bf2158c5942f5d2056ac2a07042e2a5954
+
+**Dependencias:** Invitación de la dirección a Mistral para S4; rúbrica y oráculo comprometidos de S4; recepción complementaria tras S7.
+
+**Resultado:** No acredita conformidad S4: E10 FaltaCaso por FaltaVigencia y E07 consecuencia/traza insuficientes. IDs y fuentes requeridas presentes; reservas de etiquetas E11 y E09 preservadas.
+
+**Verificacion:** Huellas S4 cotejadas; dos huellas citadas en E09 coinciden; fragmento E01 en línea 11, no 10. Evaluación motivada: 42/48 resultado, 32/36 traza, 6/8 procedimiento, 8/8 entrega; 4 puntos de etiquetas reservados.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/ACTA_RECEPCION.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-176)
+
+**Siguiente accion:** Conservar esta recepción S4 separada al comparar candidatos; eventual segundo intento de Mistral no realizado. Licencias e implantación independiente después de comparación.
+
+**Observaciones:** Fecha de formalización del registro, sin hora externa retrospectiva. Texto aportado en conversación, no archivo bruto del proveedor. Lectura y llamada declaradas no certificadas. Sin selección de modelo ni cambio de cierres previos.
 
