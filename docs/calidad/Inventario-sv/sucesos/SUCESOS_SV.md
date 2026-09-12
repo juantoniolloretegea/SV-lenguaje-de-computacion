@@ -10,7 +10,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
 | S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
-| S4 | pendiente | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T11:42:55Z |
+| S4 | en ejecución | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T11:58:46Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -154,13 +154,13 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S4 · Preparación de la prueba externa común del recorrido documental
 
-**Estado:** pendiente
+**Estado:** en ejecución
 
 **Alta:** 2026-09-12T11:42:55Z
 
-**Inicio:** —
+**Inicio:** 2026-09-12T11:58:46Z
 
-**Actualización:** 2026-09-12T11:42:55Z
+**Actualización:** 2026-09-12T11:58:46Z
 
 **Fin:** —
 
@@ -168,21 +168,21 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Alcance:** Un mismo encargo sobre el recorrido delimitado de lectura, cobertura y presentación; fuentes públicas accesibles, esperados previamente custodiados y formato de recepción comparable.
 
-**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVcustos-dataset: main
 
-**Cortes de entrada:** Recepción S3 / RETP-166; el corte del paquete externo se fijará antes de entregar.
+**Cortes de entrada:** Lenguaje d2fee48ce16cc5585d6d7d681c6ee0538246a113; laboratorio 30591fbf939627688c134d774029a0e9b365f497; SVcustos 5e0ed66c62fe753b6e94af500ec00f2674fb92e7
 
 **Dependencias:** S1/S2/S3; RETP-147/162; condiciones de acceso y prueba externa del workflow
 
-**Resultado:** Pendiente de preparar el paquete y su instrucción común; sin envío ni recepción externos.
+**Resultado:** Doce casos y resultados previos cotejados; documento común, rúbrica y oráculo fijados antes de recepción externa.
 
-**Verificación:** El banco público conocido tiene evidencias locales previas; acceso común y formato de recepción por fijar.
+**Verificación:** 12/12 correspondencias con capturas S2/S3; 51 archivos históricos cotejados en ZIP; SVcustos público confirmado por metadatos; lectura efectiva de participantes todavía pendiente.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s4-prueba-externa-comun/README.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-166-cierre-s3)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-167)
 
-**Siguiente acción:** Fijar alcance, entradas y criterio de aceptación del encargo; verificar acceso público común y custodiar esperados antes de facilitar la misma instrucción.
+**Siguiente acción:** Publicar paquete autosuficiente en SVcustos y verificar acceso público; entregar enlace común y alternativa adjunta.
 
-**Observaciones:** No prueba ciega ni reserva inédita P3. Separar resultados ejecutados de pasos y recursos declarados. Conserva pendientes de A–L y consolidación posterior del catálogo.
+**Observaciones:** Banco público conocido; no prueba ciega ni reserva P3. Tiempos y recursos separados de corrección y trazabilidad. No se han enviado encargos a participantes.
 

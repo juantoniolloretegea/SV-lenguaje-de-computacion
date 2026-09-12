@@ -1719,3 +1719,10 @@ RETP-150 ya rechazaba la supresión de negación; S3 acredita su composición co
 Ocho controles en seis ejecuciones, 48 observaciones; 28 capturas idénticas por recorrido y 201 artefactos preservados incluyendo sensibilidades. Veintidós invocaciones dentro del presupuesto, sin fallos inesperados de cualificación ni cambios de esperados. Sensibilidades detectadas en D03 y D04. Un error de sintaxis de preparación, anterior a la fijación y sin inicio de Rust, queda documentado aparte. Reproductor publicado ejecutado; CPU y pared registradas, RSS individual no disponible.
 
 Las 73 fuentes S2 se conservan intactas; sólo se añade conductor acotado de archivo. Causas de contenido, cobertura, límite y E/S diferenciadas; sin conversión a U ni códigos SV nuevos. No se prueban pantalla, renderizador, revisión humana, persistencia ante corte eléctrico, escritura atómica o resistencia al host. D/C/I universales, A–L y P4/P5/P6 conservan sus condiciones. S4 preparará una misma instrucción y fuentes accesibles, con esperados custodiados; banco conocido, sin envío de encargos ni apertura de reserva. El catálogo sigue recogiendo causas y se consolida después. Mismas ramas y espejo de evidencia, sin repetir campañas históricas como nuevos resultados.
+
+
+<a id="retp-167"></a>
+
+### RETP-2026-167 · S4 · Fijación de prueba externa común
+
+2026-09-12T11:58:46Z. Doce casos derivados de capturas S2/S3 ya ejecutadas y cotejadas. Oráculo previo custodiado con huella pública; documento autosuficiente, fuentes exactas, rúbrica de 100 puntos y plantillas fijados. SVcustos main será la sede de lectura sin acceso al laboratorio privado; no se crean ramas. Se distinguen corrección, trazabilidad, actividad registrada y métricas medidas/declaradas/no disponibles. La recepción efectiva por cada participante sigue pendiente. No nueva campaña funcional ni apertura de reserva.

@@ -1,0 +1,12 @@
+{
+  "version": "S4-COMPROMISO/1",
+  "oraculo_sha256": "b123cade0b987a20791989ddb887696b8d812617ad0703030d6c7459b6fe22c7",
+  "casos_sha256": "0665ff7ca1c64ca1ba073fd5b7b02be9029971fcb35b463cd0dccad173312fa0",
+  "fuentes_sha256": "628bb86c9f663272a0b6252dca2aeff1255c662b6df01e087f1fdfcd9a36aa09",
+  "reproduccion_zip_sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307",
+  "naturaleza": "Banco público conocido; oráculo fijado antes de la recepción externa. No reserva inédita ni evaluación ciega.",
+  "numero_casos": 12,
+  "rubrica_sha256": "a26957f541dffce5ba727ace37103320769ae63fd96ff3e923c042eb518dc2dd",
+  "documento_comun_sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8",
+  "plantilla_respuesta_sha256": "fb451322abf8e10fb7670cef63d617157d16644e90c3b0dd994f5ff96e558515"
+}
