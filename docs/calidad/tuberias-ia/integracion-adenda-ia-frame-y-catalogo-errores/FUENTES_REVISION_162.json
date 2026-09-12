@@ -1,0 +1,211 @@
+{
+  "corte": {
+    "lenguaje": [
+      "SV-lenguaje-de-computacion",
+      "main",
+      "0910fc792b98286b4bce1c9ce477f4a76dab8023"
+    ],
+    "laboratorio": [
+      "SV-matematica-semantica-cuaternaria",
+      "lab/playground-sv-permanente",
+      "0544ea35d6a903be992d0b0fff6d0c6a5770b208"
+    ]
+  },
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+      "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c",
+      "bytes": 17761
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ACTA_RECEPCION_COMPROMISO_P3_Y_CONTROL_PREVIO_RUST_2026_09_11.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "5471f8331c6bbf4f97c93a805e3cab4cd71ffcd7",
+      "sha256": "74151fe015ff5a0ab3504a1089b27fad68bc8e836d284c15e66156b5540f125c",
+      "bytes": 5378
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "be4465142b36d86d938ebb27fd0867983424e8db",
+      "sha256": "cca9b80b91c649060c46708478a90ddedeaa544f99231b0e56fd06dd80acc0c3",
+      "bytes": 10815
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/G2_CORRESPONDENCIA_Y_LIMITE.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "b0ca714d7dad4ecec358f37ada685bf6678df496",
+      "sha256": "e9d5771dd547c0f1b288d6c006b95f2173b77cf40c19b149a5e948b10739d28e",
+      "bytes": 5413
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/CASOS_Y_CRITERIOS.json",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "4d624af11c8ca444d13771f3b90fa25787148214",
+      "sha256": "7b52250aaca128a2471211f8156c6de7f4261e7d35cf55351c8efe0d40a668e4",
+      "bytes": 7284
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/rectificacion-autoridad-y-comprobacion-ia/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "801d3083a09f40627a7cb3eb03f2f458be7634b9",
+      "sha256": "4a698d32759d4433bf25ec293cea1e141425ab8e85afa25e75b44178bd44926f",
+      "bytes": 9230
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/entrega-literal-desde-recibo/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "e1c0c7f08fdcd03f43ba6d2837c4070d4a156535",
+      "sha256": "6aa0f4042eddc239fe155570f43173ac0a6212497465a1c4ca7f3bf82bea0dd8",
+      "bytes": 11165
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/presentacion-sin-perdida-de-contenido/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "73350ef90abfa13c0f69ce5061091f21470db171",
+      "sha256": "71bb81e17199bc359c2fe130d325223430e3c9f680f91fc6486d1842dd9eb741",
+      "bytes": 10864
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "f0112539ca66da5d48371cc73a680677812a18e8",
+      "sha256": "2585e3d7f9efe95cc43d2ec0653bbf517a1c47e73d2d9d2b67da91946fea3c82",
+      "bytes": 8558
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/CONTRATO_Y_PLAN.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "571e24913249aaff18de0161f9a8f21867778c24",
+      "sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20",
+      "bytes": 3692
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/pertenencia-de-permisos-a-su-continuidad/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "b76539caf1ac0ff2cf27b35f12b3ad721703ca4e",
+      "sha256": "f1987f7a4628ad094f7a86fc37c33c84147522f0f3da717d3ee81eb2f1243e11",
+      "bytes": 8302
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "ca11bfb39f2220ccc016dbefea0bc279302030a4",
+      "sha256": "2b739579e7c28f7631d8cca33a0d1d7d1a1da6717e91128771fdd7b453249bca",
+      "bytes": 6757
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "0a3e9861be45d586cdcd9e4ec53ec238755d3ce8",
+      "sha256": "f8e3f1be865d2e9505e29a716d2475415249061d7a185d1ac9618df32b8742aa",
+      "bytes": 7431
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "b56c468dd7d91b4d4f71a5e2e1f2bec42749329b",
+      "sha256": "2fab256d20df897176a764c8b82fae78cf1ef1faef21718da6de2dbdeb02952a",
+      "bytes": 3830
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "d72564897aaa0764bbe97ff5b5cad1de517fba13",
+      "sha256": "089c353c1a5cf42238e0d4ae79431f3f6442fb57e5f820648c114380ae1fd355",
+      "bytes": 6298
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/ESTADO_DE_CIERRE.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "627147d199a33c8eeb1b2ac4f2207836bbb0d0c9",
+      "sha256": "0cce3d326810fc675a4ee2cd5a7acc0772fb87cea12c75a2a97d23ca3699cd93",
+      "bytes": 5401
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/ENCARGO_PARA_OTRA_IA.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "931ba533b24969df7964e5e756b63a2956d8c8b2",
+      "sha256": "b2d9110aefcdff1cf74667b022e7d634c392115d288ab5a3d4e0cb2ff280c532",
+      "bytes": 5487
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "56915003387addc6c608234166e68665c7309061",
+      "sha256": "0c92563bd019f8f9135aed6994b5e21df34d1cf3957670dd0dbfc004d6d07faa",
+      "bytes": 4074
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/ESTADO_PARA_OTRAS_IA.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "22242381b3c0bb7f343c137fb4345df66d38af9d",
+      "sha256": "87cc0d3e9c4e3bc5582a187bf207c115848761c1817f9285731c758af199974e",
+      "bytes": 1933
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "28c3ecfc4d18f7db75214ef00aa254dff360ece9",
+      "sha256": "2c5e7799922a28a54b671ec120ac509fd88450be52b62fa6bc0a088f70b37870",
+      "bytes": 6914
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ubicaciones-de-rechazos-compuestos/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "9c3fa0d3702501d2936e11f21cfc3eaf4c3e5859",
+      "sha256": "e577b10e8ee91650540cfee1c4f7fec7278bb728c177a2e52ead5cefe292761f",
+      "bytes": 7443
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/intervalo-del-conjunto-de-estados/README.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "9a527219f8cd1233c0b2a1a847e7bd4a0bae9a60",
+      "sha256": "1b431c70c562c86b1af54af56f752a3f25488532bcd33231c9a51f2a9753f0da",
+      "bytes": 8337
+    },
+    {
+      "ruta": "AGENTS.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "bytes": 4384,
+      "lectura": "Lectura íntegra anterior en esta continuidad; identidad cotejada sin cambios."
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650",
+      "bytes": 22330,
+      "lectura": "Lectura íntegra anterior en esta continuidad; identidad cotejada sin cambios."
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "bytes": 29014,
+      "lectura": "Lectura íntegra anterior en esta continuidad; identidad cotejada sin cambios."
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "commit": "0910fc792b98286b4bce1c9ce477f4a76dab8023",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "bytes": 67111,
+      "lectura": "Lectura íntegra anterior en esta continuidad; identidad cotejada sin cambios."
+    }
+  ],
+  "alcance": "Revisión de contratos, resultados publicados y secuencia; no nueva ejecución funcional ni reapertura de reservas.",
+  "cotejo_previo_publicacion": {
+    "head_publico": "4a5f84ec1be39d48d620565802a41549b9f41ed9",
+    "arbol": "02c3bdfc88190efb4c493387f2dae20114dd8569",
+    "cambio_concurrente_preservado": [
+      "docs/calidad/Inventario-sv/sucesos/inicio.md"
+    ],
+    "fuentes_de_revision_sin_cambios": true
+  }
+}

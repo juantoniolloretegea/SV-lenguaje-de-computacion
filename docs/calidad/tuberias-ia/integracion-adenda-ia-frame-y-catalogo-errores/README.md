@@ -80,3 +80,12 @@ La lectura pública termina legítimamente en resolución y evidencia recuperabl
 Rectoras consultadas completas: AGENTS; Pilares RETP-073; perfiles RETP-075; acta de transición con §§12–30. Se reciben workflow V2, expediente RETP-142, acta RETP-145, contrato CYB con RETP-108 y contrato diagnóstico. Cortes: Lenguaje `e8558ea69aadacc3454cbd82f09a7bf7f4b06648`; laboratorio `53e1b93f2a392b2bac6e229be839e3cc2e4823ee`; adenda CYB `bbac1b44b1d3b845305e9cde492a08221206d631`.
 
 **Dictamen: correspondencia y criterios documentales fijados; trazabilidad pública recibida con sus límites; enlace productivo, seguridad integral y catálogo/localización no cerrados.**
+
+
+## Revisión de secuencia y relevo · RETP-162 · 12/09/2026
+
+La [revisión de cobertura y secuencia](REVISION_SECUENCIA_COBERTURA_Y_RELEVO_RETP_162.md) sucede al relevo inmediato del catálogo, conservando todos los cortes históricos. Se restituye como prioridad la integración del punto 1 (integridad/trazabilidad IA) y el punto 3 (reconstrucción/recibo/frame), con recogida de errores durante el recorrido y consolidación posterior del punto 2 (catálogo/localización).
+
+Los avances RETP-149/150/152 y 153/154/157–161 se reutilizan según sus contratos; no se suman como cierre de A–L. La [matriz revisada](MATRIZ_COBERTURA_A_L_RETP_162.json) conserva los doce criterios originales y localiza sus carencias. Siguiente objeto único: C/I, cobertura de evidencia requerida con acceso independiente del comprobador, incluyendo una selección que omite una dependencia relevante aunque sus citas sean ciertas. Preparar montaje y esperados antes de ejecutar; reutilizar las capas disponibles y corregir sólo una pérdida demostrada.
+
+La actuación profesional sin premisa/verificadores sigue inhabilitada, sin bloquear toda lectura documental ni reabrir quién autoriza. La reserva P3 y sus compromisos permanecen intactos; custodia humana ya recibida en RETP-130. P4/P5, auditoría P6 y retorno a fila 9 conservan sus condiciones. La prueba externa común del alcance integrado sigue pendiente, distinta del encargo público de reproducción RETP-157. Las conversiones defensivas y el resto del catálogo conservan su deuda, pero dejan de ser el siguiente objeto automático. Revisión documental sin nueva ejecución funcional, nuevas ramas, renumeración ni promoción productiva.

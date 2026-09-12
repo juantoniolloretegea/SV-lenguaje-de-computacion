@@ -397,3 +397,10 @@ Permanece pendiente la ubicación del conjunto de estados al fallar cardinalidad
 [Resultado y límites](tuberias-ia/intervalo-del-conjunto-de-estados/README.md). DFL-001 recibe ubicación de llaves y contenido para el rechazo por número de etiquetas escrito distinto de tres, preservando condición y precedencia. Dos intervalos ausentes se suceden expresamente; otros 92 esperados intactos. 48 fuentes nuevas, 142 totales, 240 ensamblajes derivados, corpus 14/106 idéntico, 239 unitarios por modo y tres controles de sensibilidad. Reproducción portátil conforme; una incidencia E0786 de lectura de la biblioteca base en el primer intento queda preservada con artefacto y causa raíz sin determinar.
 
 Siguen pendientes la alcanzabilidad y tratamiento de conversiones defensivas, los demás validadores y subcausas, presentación/serialización y DG global. DFL-011 y demás deudas no se cierran. Sin promoción productiva, acreditación de fidelidad final, WASI/navegador, recepción profesional ni encargo externo. P3 permanece cerrado y P4/P5 conservan sus compuertas. Se mantienen las ramas existentes y el historial.
+
+
+### Revisión de prioridad RETP-162 · Integración de adenda IA y frame
+
+[Revisión y matriz de cobertura](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/REVISION_SECUENCIA_COBERTURA_Y_RELEVO_RETP_162.md). DFL-001/011 mantienen resultados y pendientes de diagnóstico; su ampliación general deja de ser el siguiente objeto automático. Se recogen causas necesarias durante la integración 1+3 y se consolida el catálogo al final del alcance correspondiente. No se renumeran ni duplican deudas.
+
+Siguiente objeto C/I: cobertura de evidencia requerida y acceso independiente del comprobador, reutilizando 149/150/152. DFL-005/006 conservan sus pendientes profesionales; no se los convierte en bloqueo general de lectura ni se fabrica autoridad. Se conservan los doce criterios A–L, reserva P3 con custodia recibida, P4/P5, presentación final, prueba externa común y demás obligaciones. El incidente E0786 de 161 mantiene causa raíz no determinada. Ninguna garantía se cierra por esta revisión documental.
