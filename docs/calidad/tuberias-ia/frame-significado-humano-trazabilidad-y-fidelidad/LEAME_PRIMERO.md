@@ -4,6 +4,14 @@
 
 Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne dos carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, y la de trazabilidad y auditoría del trabajo de la IA.
 
+## Entrada obligatoria: Sucesos SV · 12 de septiembre de 2026
+
+Antes de intervenir, consultar el [registro Sucesos SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/README.md) y su [estado vigente](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md). Toda actividad nueva debe quedar identificada en la sucesión única S0, S1, …, Sn y mantener actualizados responsable, fechas, alcance, estado, resultado y evidencia. Los únicos estados admitidos son `pendiente`, `en ejecución` y `finalizado`. Las altas y modificaciones conservan su historial.
+
+La dinámica de avance y prueba, los registros de calidad en CSV y Markdown, la documentación en laboratorio y su espejo en Calidad continúan vigentes. Sucesos SV es un registro complementario obligatorio que reúne la continuidad de las actividades y enlaza esos registros; no altera sus identificadores ni sus criterios de cierre. La redacción debe ser factual, técnica, precisa y respetuosa. El alta S0 documenta la puesta en servicio; S1 recoge, como pendiente, el contraste C/I del relevo RETP-162.
+
+Las referencias y estados de los apartados siguientes conservan su corte histórico. Para conocer la actividad vigente se consultan Sucesos SV y el relevo enlazado desde el índice técnico.
+
 ## Secuencia de lectura
 
 | Orden | Documento | Qué debe quedar entendido |
