@@ -1,0 +1,34 @@
+{
+  "evaluar.py": {
+    "bytes": 4962,
+    "sha256": "36b8f9c21da08f72931aa05bb7683caab2a67a6d7976d6af34dde0d885cb8b9c"
+  },
+  "DIAGNOSTICO_FIDELIDAD.json": {
+    "bytes": 16685,
+    "sha256": "904adbba1a62dae4ee52bbb13c48605668eb7fd1f8812d196f45dc19bcc1825b"
+  },
+  "RECTORES.json": {
+    "bytes": 621,
+    "sha256": "daa7d83b82420f0fa04a6abf5c99d1491f9c5fd3ad57d564cc2c9d3c423b1f9c"
+  },
+  "ACTA_RECEPCION.md": {
+    "bytes": 4955,
+    "sha256": "be591b0483602d94b3a2d28a1ed6d2c24d4158765835c47d78c171e04b565c35"
+  },
+  "RESPUESTA_ORIGINAL.txt": {
+    "bytes": 29696,
+    "sha256": "062bf4d3edb29cfa8b4b7ebaa47e80b7aa58b71a44675b0beef7d4680299bfc4"
+  },
+  "EJECUCION_OBSERVADOR.json": {
+    "bytes": 1020,
+    "sha256": "82c59dacfa52a0bdbb65a806e541957f127eb856597c96bc4238bd14d6615a30"
+  },
+  "RECEPCION.json": {
+    "bytes": 1207,
+    "sha256": "22a35507163dcc3b09a0ac89f6961f81801d0df6c8128513d6a1cdc733a76ec1"
+  },
+  "COTEJO_ORIGINAL.json": {
+    "bytes": 1737,
+    "sha256": "b87b619321d346914171cff2df21c3bef60ef084a08c2273bf6ee6b47a49a319"
+  }
+}

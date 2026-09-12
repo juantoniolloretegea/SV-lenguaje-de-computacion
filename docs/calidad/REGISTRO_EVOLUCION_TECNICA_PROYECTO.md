@@ -1780,3 +1780,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-171 · S7 · Qwen, segundo intento
 
 2026-09-12T15:23:18Z. Original íntegro de 32.876 bytes conservado. NO_CONFORME: texto adicional prohibido después del bloque JSON; el propio añadido declara que no lo hay. Diagnóstico separado del bloque, sin modificarlo: 12/12 casos con todas sus obligaciones conformes, salida 0. El diagnóstico no sustituye el original, rechazado con salida 2. Instrumento fijado íntegro. No se atribuye pérdida de trazabilidad documental ni opacidad interna a este defecto de formato. Modelo y versión declarados; sin mediciones verificables del participante. S7 en ejecución; pendientes las otras tres segundas devoluciones. [Acta y evidencias](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/ACTA_RECEPCION.md).
+
+
+<a id="retp-172"></a>
+
+### RETP-2026-172 · S7 · DeepSeek segundo intento y decisión sobre Qwen
+
+2026-09-12T15:33:12Z. Qwen pasa provisionalmente por decisión expresa de la dirección; se mantiene NO_CONFORME de su original y conformidad del bloque. DeepSeek: original de 29.696 bytes conservado; doce casos resueltos correctamente; 26 de 32 citas no exactas en seis fuentes por supresión exclusiva de sangría. Claves, orden, valores y cadenas conservados. NO_CONFORME frente al requisito literal; no se infiere ausencia total de trazabilidad ni opacidad interna. S7 en ejecución; pendientes Claude y Grok. [Recepción y diagnóstico](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/ACTA_RECEPCION.md). [Decisión de la dirección](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/DECISION_DIRECCION.md).

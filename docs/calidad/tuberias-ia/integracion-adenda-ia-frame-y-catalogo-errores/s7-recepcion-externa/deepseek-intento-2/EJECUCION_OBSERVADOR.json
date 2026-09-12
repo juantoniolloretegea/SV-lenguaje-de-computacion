@@ -1,0 +1,22 @@
+{
+  "inicio_utc": "2026-09-12T15:30:42.299092+00:00",
+  "comando": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/cotejar_entrega.py",
+    "--respuesta",
+    "/workspace/scratch/cdd3907241dd/s7-recepcion-deepseek/expediente/RESPUESTA_ORIGINAL.txt",
+    "--banco",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/BANCO.json",
+    "--referencia",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/privado/REFERENCIA_PREVIA.json",
+    "--compromiso",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/COMPROMISO_PREVIO.json",
+    "--salida",
+    "/workspace/scratch/cdd3907241dd/s7-recepcion-deepseek/expediente/COTEJO_ORIGINAL.json"
+  ],
+  "codigo_salida": 2,
+  "stdout": "NO_CONFORME\n",
+  "stderr": "",
+  "duracion_ns_observador": 90904679,
+  "alcance": "Cotejo de archivos y diagnóstico por Watson / W-S0; no mide ejecución del participante ni ejecuta semántica SV."
+}

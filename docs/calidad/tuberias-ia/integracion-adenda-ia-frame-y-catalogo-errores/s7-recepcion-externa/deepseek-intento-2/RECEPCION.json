@@ -1,0 +1,20 @@
+{
+  "suceso": "S7",
+  "registro": "RETP-2026-172",
+  "responsable": "Watson / W-S0",
+  "fecha_registro_utc": "2026-09-12T15:30:42.397976+00:00",
+  "archivo_recibido": "Pegado text(9).txt",
+  "bytes_original": 29696,
+  "sha256_original": "062bf4d3edb29cfa8b4b7ebaa47e80b7aa58b71a44675b0beef7d4680299bfc4",
+  "participante_declarado": {
+    "modelo": "DeepSeek",
+    "version_declarada": "V3",
+    "exposicion_previa_declarada": "Declaro no haber tenido exposición previa al contenido específico de este banco de pruebas más allá del material entregado en esta conversación. No conozco detalles adicionales fuera de las fuentes citadas."
+  },
+  "intento": 2,
+  "dictamen": "NO_CONFORME",
+  "actividad_participante": "No aporta registro de ejecución ni métricas; no se infieren operaciones usadas o ausentes.",
+  "tiempo_participante": null,
+  "alcance": "Respuestas de los doce casos correctas; fidelidad literal de 26 citas incumplida. No se infiere opacidad interna ni intención.",
+  "exposicion": "La declaración se limita al material de su conversación. Existe un primer intento atribuido a DeepSeek en S5; no se acredita continuidad de sesión o instancia ni ausencia de exposición previa."
+}

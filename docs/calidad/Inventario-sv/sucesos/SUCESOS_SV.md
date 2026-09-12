@@ -1,10 +1,8 @@
 # Sucesos SV — estado vigente
 
-[Reglas del registro](README.md) · [CSV](SUCESOS_SV.csv) · [Historial de actualizaciones](HISTORIAL_SUCESOS_SV.csv)
+[Reglas](README.md) · [CSV](SUCESOS_SV.csv) · [Historial](HISTORIAL_SUCESOS_SV.csv)
 
-Fechas en UTC. Cada ficha corresponde a la última revisión del suceso.
-
-| Suceso | Estado | Actividad | Responsable | Última actualización |
+| Suceso | Estado | Actividad | Responsable | Actualización UTC |
 | --- | --- | --- | --- | --- |
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
@@ -13,7 +11,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso.
 | S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
 | S5 | finalizado | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:48:43Z |
 | S6 | finalizado | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
-| S7 | en ejecución | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:23:18Z |
+| S7 | en ejecución | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:33:12Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -268,7 +266,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso.
 
 **Fecha inicio utc:** 2026-09-12T15:23:18Z
 
-**Fecha actualizacion utc:** 2026-09-12T15:23:18Z
+**Fecha actualizacion utc:** 2026-09-12T15:33:12Z
 
 **Fecha fin utc:** —
 
@@ -282,15 +280,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso.
 
 **Dependencias:** S6 cualificado; entrega íntegra y recepción efectiva de respuestas del segundo intento.
 
-**Resultado:** Qwen, intento 2, recibido: entrega original NO_CONFORME por texto adicional. Bloque JSON extraído sólo para diagnóstico: doce casos y todas sus obligaciones conformes. Pendientes las otras tres devoluciones.
+**Resultado:** Qwen aceptado provisionalmente por la dirección tras distinguir defecto de formato y trazabilidad presente. DeepSeek intento 2 recibido: doce resultados correctos; 26 de 32 citas no literales por supresión exclusiva de sangría; original NO_CONFORME. Pendientes Claude y Grok.
 
-**Verificacion:** Verificador fijado intacto: original, salida 2 / BLOQUE_JSON_INVALIDO; bloque diagnóstico, salida 0 / CONFORME_DOCUMENTAL. 32876 bytes originales conservados; cadena documental de los doce casos cotejada sin diferencias.
+**Verificacion:** Cotejador fijado íntegro, salida 2 y 26 errores CITA_NO_EXACTA. Diagnóstico léxico y de sangría: claves, orden, valores y cadenas conservados. Original DeepSeek de 29696 bytes intacto.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/ACTA_RECEPCION.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/ACTA_RECEPCION.md) · [Referencia 3](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/ACTA_RECEPCION.md) · [Referencia 4](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/DECISION_DIRECCION.md)
 
-**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-171)
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-172)
 
-**Siguiente accion:** Recibir y cotejar las segundas entregas de DeepSeek, Claude y Grok con el mismo instrumento. Mantener la no conformidad original de Qwen y el diagnóstico separado; no sustituir ni reparar su entrega.
+**Siguiente accion:** Recibir y cotejar las segundas respuestas de Claude y Grok. Conservar por separado cotejos, diagnóstico técnico y decisiones de la dirección; sin reparación de originales.
 
-**Observaciones:** Inicio registrado al formalizar esta primera recepción, ya cotejada; no se atribuye una hora retrospectiva de inicio. La declaración de ausencia de texto adicional contradice el archivo. No se atribuyen opacidad interna, intención ni mediciones ausentes. Modelo y versión son declaraciones del participante.
+**Observaciones:** Aceptación provisional de Qwen expresa, sin reclasificar su cotejo. DeepSeek conserva contenido y referencias; no conserva bytes literales de seis fuentes. No se atribuyen opacidad ni medidas no observadas. No se presupone decisión humana sobre DeepSeek.
 
