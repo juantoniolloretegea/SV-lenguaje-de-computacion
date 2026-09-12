@@ -154,3 +154,12 @@ No se acredita cierre A–L, pantalla o revisión humana, imposición frente al 
 Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico. [S11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
 
 **Siguiente acción:** Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado. Se mantiene núcleo → cierre de universos constituidos, prioritariamente inmunología → agentes, sin anticipar constituciones de dominio o capacidades de agente. Ciberseguridad se delimitará con su evidencia, sin presumir suficiente el primer universo.
+
+
+## S11 · Cierre acotado de recepción contextual y cobertura A/H · RETP-180
+
+> **Relevo vigente:** 2026-09-12T17:42:13Z. Conforme dentro del montaje S11: orden conservada como dato, omisiones y contexto ajeno/alterado rechazados antes de escritura; recibo negativo íntegro.
+
+60 observaciones de diez casos; seis ejecuciones debug/release; 104 capturas idénticas por ejecución; 22 invocaciones; dos sensibilidades detectadas en AH03 y AH06. [S11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
+
+**Siguiente acción:** Fijar siguiente contraste G/J de sustitución de base y reevaluación distinguida, reutilizando identidad/custodia existentes; catálogo ES/EN posterior a la integración aplicable. Se mantiene núcleo → cierre de universos constituidos, prioritariamente inmunología → agentes, sin anticipar constituciones de dominio o capacidades de agente. Ciberseguridad se delimitará con su evidencia, sin presumir suficiente el primer universo.

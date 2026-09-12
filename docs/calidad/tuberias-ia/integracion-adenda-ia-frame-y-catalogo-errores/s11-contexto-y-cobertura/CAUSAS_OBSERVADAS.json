@@ -1,0 +1,44 @@
+[
+  {
+    "causa": "FaltaVigencia",
+    "etapa": "cobertura",
+    "controles": [
+      "AH03",
+      "AH04"
+    ],
+    "alcance": "S11 local; denominación candidata de catálogo, no código nuclear universal"
+  },
+  {
+    "causa": "VigenciaDistinta",
+    "etapa": "cobertura",
+    "controles": [
+      "AH05"
+    ],
+    "alcance": "S11 local; denominación candidata de catálogo, no código nuclear universal"
+  },
+  {
+    "causa": "IdentidadContexto",
+    "etapa": "recepción contextual",
+    "controles": [
+      "AH06"
+    ],
+    "alcance": "S11 local; denominación candidata de catálogo, no código nuclear universal"
+  },
+  {
+    "causa": "DocumentoDistinto",
+    "etapa": "recepción contextual",
+    "controles": [
+      "AH07",
+      "AH08"
+    ],
+    "alcance": "S11 local; denominación candidata de catálogo, no código nuclear universal"
+  },
+  {
+    "causa": "LimiteDocumento",
+    "etapa": "recepción contextual",
+    "controles": [
+      "AH09"
+    ],
+    "alcance": "S11 local; denominación candidata de catálogo, no código nuclear universal"
+  }
+]

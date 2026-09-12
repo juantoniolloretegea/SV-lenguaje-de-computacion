@@ -1836,3 +1836,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-179 · S11 · Fijación previa de recepción contextual y cobertura A/H
 
 2026-09-12T17:38:35Z. Contrato, casos, esperados, código y presupuesto fijados antes de compilar. Preparación material iniciada; campaña funcional todavía no ejecutada. Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos. Siguiente: Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado.
+
+
+<a id="retp-180"></a>
+
+### RETP-2026-180 · S11 · Cierre acotado de recepción contextual y cobertura A/H
+
+2026-09-12T17:42:13Z. Conforme dentro del montaje S11: orden conservada como dato, omisiones y contexto ajeno/alterado rechazados antes de escritura; recibo negativo íntegro. 60 observaciones de diez casos; seis ejecuciones debug/release; 104 capturas idénticas por ejecución; 22 invocaciones; dos sensibilidades detectadas en AH03 y AH06. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos. Siguiente: Fijar siguiente contraste G/J de sustitución de base y reevaluación distinguida, reutilizando identidad/custodia existentes; catálogo ES/EN posterior a la integración aplicable.

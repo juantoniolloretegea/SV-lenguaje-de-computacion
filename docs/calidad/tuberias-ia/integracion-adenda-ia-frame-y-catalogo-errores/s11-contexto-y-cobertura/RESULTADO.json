@@ -1,0 +1,15 @@
+{
+  "version": "S11-RESULTADO/1",
+  "conforme": true,
+  "controles": 10,
+  "ejecuciones": 6,
+  "observaciones": 60,
+  "capturas_identicas_por_ejecucion": 104,
+  "invocaciones": 22,
+  "sensibilidades": {
+    "obligacion desactivada": "AH03",
+    "identidad contextual desactivada": "AH06"
+  },
+  "pared_campana_s": 7.657459184993058,
+  "limite": "Conductor sintetico y host confiable; no se prueba resistencia de un LLM ni persistencia hostil del contexto."
+}

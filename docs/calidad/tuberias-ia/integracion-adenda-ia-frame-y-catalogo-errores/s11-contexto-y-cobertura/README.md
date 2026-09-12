@@ -11,3 +11,7 @@ python3 reproducir.py --rustc /ruta/absoluta/a/rustc --salida /ruta/nueva/s11
 ```
 
 El reproductor exige Rust 1.98.0 y el hash de binario previo. Fuente oficial y checksum en PREPARACION.json. Los resultados sólo se acreditarán en el acta posterior a la campaña. No se alteran núcleo, IR, dominios ni paquete externo S4/S6.
+
+## Resultado posterior a la fijación · RETP-180
+
+S11 finalizado: **CONFORME en alcance acotado**. Diez controles, sesenta observaciones y dos sensibilidades; 104 capturas idénticas por ejecución normal. [Acta](ACTA_RESULTADO_S11.md) · [Resultado](RESULTADO.json) · [Matriz actualizada](MATRIZ_COBERTURA_A_L_RESULTADO_S11.json). La apertura anterior se conserva como antecedente temporal.

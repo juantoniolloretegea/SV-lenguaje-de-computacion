@@ -1,0 +1,8 @@
+{
+  "fijacion_sha256": "017d806f464bfa2ea0088f8cbc2776093b91427f28ca924d1b59d6aef9f67c17",
+  "commits": {
+    "laboratorio": "a36ba157fe21e07d73722a3d9b7b5c5ec7ef9737",
+    "lenguaje": "fbb9d624d31ea024a2cbe78d60a03cac75df8e6f"
+  },
+  "orden": "Ambas publicaciones verificadas antes de la primera invocación del reproductor."
+}

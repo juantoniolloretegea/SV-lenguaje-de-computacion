@@ -1,0 +1,12 @@
+[
+  {
+    "modo": "debug",
+    "bytes": 5401760,
+    "sha256": "f326f1b0e01ef46e3b65874cdba16d85ba1e5b0a4753b0aa689abda47ab9718d"
+  },
+  {
+    "modo": "release",
+    "bytes": 4759992,
+    "sha256": "a68a653023d3e2daa24116b736fa12d5df8fca3012c4ffb4414570f5d57d9f64"
+  }
+]

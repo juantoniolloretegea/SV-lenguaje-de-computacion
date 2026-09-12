@@ -1,0 +1,146 @@
+{
+  "ACTA_RESULTADO_S11.md": {
+    "bytes": 4451,
+    "sha256": "4cc11e88d307bd4fc270d792555e31906631ffc5c5569c29e1a28356f2628a44"
+  },
+  "BANCO_FIJADO.json": {
+    "bytes": 1252,
+    "sha256": "ece71b5af26903f758a3ca7ae85aa14831fa2ffc253f224454ed3b9f86eaf1a9"
+  },
+  "BINARIOS.json": {
+    "bytes": 271,
+    "sha256": "7fee6f5c88ffd4b618e844a7b09b8639bad780907d643143cfd27e6bb59d064f"
+  },
+  "CAUSAS_OBSERVADAS.json": {
+    "bytes": 1075,
+    "sha256": "19c324a83f7370b9d5891c694e4185af0ff584cee953c62cab6eaa6087043ce0"
+  },
+  "COMANDOS.json": {
+    "bytes": 21156,
+    "sha256": "87a9f9fa720dd9fd89778fa933ff27f11eba09269e898b73ebc57b695e912c8f"
+  },
+  "CONTRATO_S11.md": {
+    "bytes": 6812,
+    "sha256": "06fb0da57d8701015c366b9017f7c063fc18207ba8a584491721b26ea2cf8c87"
+  },
+  "CUSTODIA_PREVIA.json": {
+    "bytes": 329,
+    "sha256": "111a7fdd06802fe938f0d425595bd061134ee343ddba9217a391a577dac2f20a"
+  },
+  "DECLARACION_VIGENCIA.json": {
+    "bytes": 388,
+    "sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038"
+  },
+  "ENTORNO.json": {
+    "bytes": 359,
+    "sha256": "8100569a5aeb9a2bf17f4314fa0c3f6af8c7094fae019bc69ebb06465151a8ec"
+  },
+  "ESPECIMENES.json": {
+    "bytes": 23327,
+    "sha256": "c9a928e97f6ede528a5ed35a6d01f01d905dc08173b22432d07340e80207f6a2"
+  },
+  "EVIDENCIAS_S11.json": {
+    "bytes": 646363,
+    "sha256": "be9a93f498fd6e99338936c7dd0a0a0e08607dc5677f231a15a15c81b59e24e0"
+  },
+  "FIJACION_PREVIA.json": {
+    "bytes": 1654,
+    "sha256": "017d806f464bfa2ea0088f8cbc2776093b91427f28ca924d1b59d6aef9f67c17"
+  },
+  "FUENTES_S2.json": {
+    "bytes": 737698,
+    "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e"
+  },
+  "MATRIZ_COBERTURA_A_L_PREVIA_S11.json": {
+    "bytes": 16069,
+    "sha256": "4aaa7e1a226307912e20acc520bbee65f4e5d42775a868a46ac60e9aae0559a7"
+  },
+  "MATRIZ_COBERTURA_A_L_RESULTADO_S11.json": {
+    "bytes": 18235,
+    "sha256": "9b8e3cd1f84d312c7c54264e7ef8b8fa13e12676eff2143346e315cd1e9199b9"
+  },
+  "MEDICIONES.json": {
+    "bytes": 1489,
+    "sha256": "07d8943fbeff214ed758e947ce13d40fccc6731dd287726b5679e82a918fcfac"
+  },
+  "OBSERVACIONES.json": {
+    "bytes": 29469,
+    "sha256": "284f886a8d7b3503d451256ce54dc0f8c27cfcb72ae3b2a8994e66b5356e23d2"
+  },
+  "PREPARACION.json": {
+    "bytes": 1127,
+    "sha256": "0ccfc8a5499c59f84c9f05a63cf85dd492c36275b028ef4b81fe0007078829af"
+  },
+  "PROCEDENCIA.json": {
+    "bytes": 2469,
+    "sha256": "6c760d38633cda353d4a472dcff9bcb413a5e9b9fd9559a3cc2486fa5f3695f5"
+  },
+  "README.md": {
+    "bytes": 1334,
+    "sha256": "0aea913aa4294b07570eacd633c818e02b589de34d1f64250fc5c392ab4f6b7c"
+  },
+  "RECTORES.json": {
+    "bytes": 741,
+    "sha256": "803987b6791c1b1a5ea5c3a3f6b7ee9bee123cf0a4098c384bdd6ecb23e8c04e"
+  },
+  "RESULTADO.json": {
+    "bytes": 459,
+    "sha256": "518858d3d9b613fa3b1b939fa9a3a4dfb506789edaaf578066dad2551f8a3bee"
+  },
+  "administracion/adaptar_reproductor.py": {
+    "bytes": 2370,
+    "sha256": "c7818f4e3d1eda8f6307e061f73888036819306711b856cdefa6ed8fdb09fcc9"
+  },
+  "administracion/documentar.py": {
+    "bytes": 10093,
+    "sha256": "048c9a9c75aaeced18e987b24c8ecaa39612706612d375dea1ba76583d914940"
+  },
+  "administracion/fijar.py": {
+    "bytes": 3503,
+    "sha256": "3860b279f737580446079e42867d67f26c7bb9b50fb939145867544f9c94ccf1"
+  },
+  "administracion/preparar.py": {
+    "bytes": 2091,
+    "sha256": "a96e2062f546a97a09a940c4823a762c7f02a2c3cdfd1781dce165b3aaf728a1"
+  },
+  "administracion/publicar-cierre.py": {
+    "bytes": 2644,
+    "sha256": "1caad02030f374b56a5a69ac5368b75cdcaceda7609efc7920d2e4681179f51e"
+  },
+  "administracion/publicar.py": {
+    "bytes": 2655,
+    "sha256": "268bc22073fe678c9e6e3b9902a9cc222d2d482d13139c2541dfadef5465266a"
+  },
+  "administracion/registrar.py": {
+    "bytes": 8041,
+    "sha256": "89a271d9a3a7bce3a71d91228b092713bda9c064356c3c4e5cf5dbc493a6a706"
+  },
+  "codigo/ESPERADO.tsv": {
+    "bytes": 250,
+    "sha256": "dcdc12feead2fe4aed016035e21f448f34e2be171ac00da4a41d24641c04cd83"
+  },
+  "codigo/contexto.rs": {
+    "bytes": 1294,
+    "sha256": "589501e3ee34fe0d342d8f2811e6aee05930ba61de0d600a15a9219066d75ce3"
+  },
+  "codigo/contraste.rs": {
+    "bytes": 6180,
+    "sha256": "a7c7f0ac90cec9d10c48f7df53216a97dd225a1e41bd06e5d7269091b0c3c9b9"
+  },
+  "codigo/destino.rs": {
+    "bytes": 1305,
+    "sha256": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e"
+  },
+  "reproducir.py": {
+    "bytes": 5949,
+    "sha256": "6af4e0c53bd1a752764f1a82f88973f4345a841c6cfe183f43b1526b0320b024"
+  },
+  "sensibilidad/cobertura-sin-obligacion.rs": {
+    "bytes": 2551,
+    "sha256": "492985bb834044fdf6089406a3e01797b5885db7728b3899f4b6edd7048bb239"
+  },
+  "sensibilidad/contexto-sin-identidad.rs": {
+    "bytes": 1277,
+    "sha256": "13a5c1eb73f7ac51a05f24eb8ec897c7645b903c6dec9ff0c7fc42a2e9340ac0"
+  }
+}

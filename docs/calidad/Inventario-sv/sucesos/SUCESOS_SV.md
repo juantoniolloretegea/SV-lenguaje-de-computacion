@@ -15,7 +15,7 @@
 | S8 | finalizado | Recepción complementaria de Mistral en la primera prueba S4 | Watson / W-S0 | 2026-09-12T16:21:05Z |
 | S9 | finalizado | Recepción complementaria de Mistral en la segunda prueba de trazabilidad | Watson / W-S0 | 2026-09-12T16:36:15Z |
 | S10 | finalizado | Consolidación de resultados, ranquin documental y modelos con pesos disponibles | Watson / W-S0 | 2026-09-12T16:56:53Z |
-| S11 | en ejecución | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:38:35Z |
+| S11 | finalizado | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:42:13Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -404,15 +404,15 @@
 
 ## S11 · Integración A/H: recepción de documento externo, cobertura e identidad contextual
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Fecha alta utc:** 2026-09-12T17:38:35Z
 
 **Fecha inicio utc:** 2026-09-12T17:38:35Z
 
-**Fecha actualizacion utc:** 2026-09-12T17:38:35Z
+**Fecha actualizacion utc:** 2026-09-12T17:42:13Z
 
-**Fecha fin utc:** —
+**Fecha fin utc:** 2026-09-12T17:42:13Z
 
 **Unidad responsable:** Watson / W-S0
 
@@ -424,15 +424,15 @@
 
 **Dependencias:** S10; S1/S2/S3; matriz RETP-162 reconciliada; autorización expresa de continuación por Dirección.
 
-**Resultado:** Contrato, casos, esperados, código y presupuesto fijados antes de compilar. Preparación material iniciada; campaña funcional todavía no ejecutada.
+**Resultado:** Conforme dentro del montaje S11: orden conservada como dato, omisiones y contexto ajeno/alterado rechazados antes de escritura; recibo negativo íntegro.
 
-**Verificacion:** Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico.
+**Verificacion:** 60 observaciones de diez casos; seis ejecuciones debug/release; 104 capturas idénticas por ejecución; 22 invocaciones; dos sensibilidades detectadas en AH03 y AH06.
 
 **Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md)
 
-**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-179)
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-180)
 
-**Siguiente accion:** Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado.
+**Siguiente accion:** Fijar siguiente contraste G/J de sustitución de base y reevaluación distinguida, reutilizando identidad/custodia existentes; catálogo ES/EN posterior a la integración aplicable.
 
 **Observaciones:** Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
 
