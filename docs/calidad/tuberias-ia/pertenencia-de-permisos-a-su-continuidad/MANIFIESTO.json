@@ -1,0 +1,109 @@
+{
+  "archivos": [
+    {
+      "ruta": "ANTECEDENTE.json",
+      "bytes": 7209,
+      "sha256": "b98c15869229b267b3baa5cecb27b74955b526e05c59be4705724c8d605e8e90"
+    },
+    {
+      "ruta": "CAMBIO_CANDIDATO.patch",
+      "bytes": 9289,
+      "sha256": "6c34e36f8101d7a96d32a062cf083d1b9c24a26568b8b9bfc7532162bbb1e672"
+    },
+    {
+      "ruta": "CANDIDATA_FUENTES.json",
+      "bytes": 972519,
+      "sha256": "b85057fa13ea85cc4fb00ac04be7f328ecfeda31e298ecc82ad253f12646fac0"
+    },
+    {
+      "ruta": "CANDIDATA_RESULTADOS.json",
+      "bytes": 43882,
+      "sha256": "19b5cb28be65ac097aa59466b17a2fc22d283f5e874996a95edcd1ad5219f7a5"
+    },
+    {
+      "ruta": "COMPILADOR.json",
+      "bytes": 874,
+      "sha256": "1e9dc4366ae4478002c1ca729daff48213768b8912a334a6f6e113b1131f94ff"
+    },
+    {
+      "ruta": "CONTRASTE_PREVIO.json",
+      "bytes": 3731,
+      "sha256": "43ae8e0b0ebdd600643ffbaa30df6acd6059fb1d26c029bcbab943e3b632bb33"
+    },
+    {
+      "ruta": "CORTES_Y_FUENTES.json",
+      "bytes": 15921,
+      "sha256": "26d428bd8285dec34b94504ea185e767951280ec1f56fee441d19027bd7ad4b4"
+    },
+    {
+      "ruta": "FRONTERA_PUBLICA_Y_COSTE.json",
+      "bytes": 39660,
+      "sha256": "76072229b2a98326e2753e9b37303c294e9574d0312689c97142fd2027d4c635"
+    },
+    {
+      "ruta": "PLAN_PREVIO.md",
+      "bytes": 2828,
+      "sha256": "149833939a5503b79d97d7c602f4b42982d43284d5fd6b0d2acff1ca65c0d621"
+    },
+    {
+      "ruta": "PREVIO_FUENTES_CON_SONDA.json",
+      "bytes": 969876,
+      "sha256": "5febf2a1bd05793d35bad1777e1aec90622eb4d081bd5f14f3ad438872dda72b"
+    },
+    {
+      "ruta": "PRODUCTORES_Y_LIMITE_DEL_ENLACE.md",
+      "bytes": 4074,
+      "sha256": "f989c8b8fdbb335fe8ad53ea529c24c87cecac7e855461aa7a064d61e629320e"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 8302,
+      "sha256": "f1987f7a4628ad094f7a86fc37c33c84147522f0f3da717d3ee81eb2f1243e11"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 2023,
+      "sha256": "faca77517ca5d2e3b5c9751447be2c8fe247791cd62d18322cdb3221fc96e7ea"
+    },
+    {
+      "ruta": "SONDA_PREVIA.rs",
+      "bytes": 2556,
+      "sha256": "4025c6dc6048e639b276228cd798e209a1bc6a2b6226849c028a0c2dfa68d35e"
+    },
+    {
+      "ruta": "conductores/base-completa.py",
+      "bytes": 854,
+      "sha256": "d74c1227b9a81a6c95afb2233c87c9a810be0e2e4c5ff51a42b5dde4df62262f"
+    },
+    {
+      "ruta": "conductores/base.py",
+      "bytes": 834,
+      "sha256": "43a9611ff87601170583fd9f2bd0599bb6b003a173efe4b275b79ed854f0eaff"
+    },
+    {
+      "ruta": "conductores/coste.rs",
+      "bytes": 567,
+      "sha256": "a81e93c8c6a91705ed5acefb6735bf01f6d4fc16dfdac53e66a8f3ff07cad87d"
+    },
+    {
+      "ruta": "conductores/no_mutar.rs",
+      "bytes": 166,
+      "sha256": "bf5802889690b40510d113a7b2399e23e344c901901f8caf501740695d4f091a"
+    },
+    {
+      "ruta": "conductores/probar.py",
+      "bytes": 1324,
+      "sha256": "2ddebac444a3321b70e9645c8f384064f4eed970a8ee8330418ad2325d26d4db"
+    },
+    {
+      "ruta": "conductores/produccion.py",
+      "bytes": 1564,
+      "sha256": "ebf7a770179327178bfe302010d6eda1389fe941a59ae6af2b7b0aa3fdc1dc3b"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 2719,
+      "sha256": "6b16aeff91c096e76a2db6c176ec57cc0359dea5288606b024ce971b334ef100"
+    }
+  ]
+}

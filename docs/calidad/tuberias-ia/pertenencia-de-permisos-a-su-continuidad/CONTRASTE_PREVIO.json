@@ -1,0 +1,28 @@
+[
+  {
+    "paso": "compilar",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--test",
+      "/workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/enlace-153/base-test"
+    ],
+    "codigo": 0,
+    "stdout": "",
+    "stderr": "warning: function `permission_plan` is never used\n   --> /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/authority/transitions/reuse_tests.rs:288:4\n    |\n288 | fn permission_plan() -> GenesisPlan {\n    |    ^^^^^^^^^^^^^^^\n    |\n    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default\n\nwarning: constant `PROFILE_ID` is never used\n --> /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/identifier_profile.rs:6:18\n  |\n6 | pub(crate) const PROFILE_ID: &str = \"svp-grammar-0.2-lex-es-1\";\n  |                  ^^^^^^^^^^\n\nwarning: method `matches_descriptor` is never used\n   --> /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/requirements_reuse.rs:121:19\n    |\n 44 | impl ReuseRule {\n    | -------------- method in this implementation\n...\n121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {\n    |                   ^^^^^^^^^^^^^^^^^^\n\nwarning: hiding a lifetime that's elided elsewhere is confusing\n    --> /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/frontend.rs:2084:13\n     |\n2084 |     fn peek(&self) -> &Token {\n     |             ^^^^^     ^^^^^^\n     |             |         ||\n     |             |         |the same lifetime is hidden here\n     |             |         the same lifetime is elided here\n     |             the lifetime is elided here\n     |\n     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing\n     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default\nhelp: use `'_` for type paths\n     |\n2084 |     fn peek(&self) -> &Token<'_> {\n     |                             ++++\n\nwarning: 4 warnings emitted\n\n"
+  },
+  {
+    "paso": "contrastar",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/enlace-153/base-test",
+      "pc0",
+      "--nocapture",
+      "--test-threads=1"
+    ],
+    "codigo": 101,
+    "stdout": "\nrunning 3 tests\ntest authority::transitions::reuse_tests::pc01_cadena_propia ... PC01 propia: llamadas=1\nok\ntest authority::transitions::reuse_tests::pc02_permiso_cruzado_igual_contenido ... PC02 cruzado: aceptado=true mediado=true\nFAILED\ntest authority::transitions::reuse_tests::pc03_compromiso_cruzado_igual_contenido ... PC03 cruzado: aceptado=true llamadas=1 eventos=2\nFAILED\n\nfailures:\n\nfailures:\n    authority::transitions::reuse_tests::pc02_permiso_cruzado_igual_contenido\n    authority::transitions::reuse_tests::pc03_compromiso_cruzado_igual_contenido\n\ntest result: FAILED. 1 passed; 2 failed; 0 ignored; 0 measured; 211 filtered out; finished in 0.00s\n\n",
+    "stderr": "\nthread 'authority::transitions::reuse_tests::pc02_permiso_cruzado_igual_contenido' (41) panicked at /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/authority/transitions/reuse_tests.rs:1205:5:\npermiso ajeno aceptado con igual ordinal y contenido\nnote: run with `RUST_BACKTRACE=1` environment variable to display a backtrace\n\nthread 'authority::transitions::reuse_tests::pc03_compromiso_cruzado_igual_contenido' (42) panicked at /workspace/scratch/a4c9906d0361/tmp/enlace-153/previo/rust/sv_core/src/authority/transitions/reuse_tests.rs:1219:5:\ncompromiso ajeno ejecutado con igual ordinal y contenido\n"
+  }
+]

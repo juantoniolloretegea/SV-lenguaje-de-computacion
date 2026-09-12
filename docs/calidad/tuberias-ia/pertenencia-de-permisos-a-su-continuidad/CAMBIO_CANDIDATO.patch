@@ -1,0 +1,223 @@
+--- a/rust/sv_core/src/decision_trace.rs
++++ b/rust/sv_core/src/decision_trace.rs
+@@ -9,6 +9,15 @@
+ //! envolvente para que una decisión gobernada no pueda omitir su traza.
+ 
+ use std::collections::{BTreeMap, BTreeSet};
++use std::sync::atomic::{AtomicU64, Ordering};
++
++// Identidad de instancia del ensayo intra-proceso. No es autoridad, tiempo ni
++// identidad durable. No se expone ni se reconstruye desde el texto de la traza.
++static NEXT_CONTINUITY: AtomicU64 = AtomicU64::new(1);
++fn allocate_continuity(counter: &AtomicU64) -> Option<u64> {
++    counter.fetch_update(Ordering::Relaxed, Ordering::Relaxed,
++        |n| n.checked_add(1)).ok()
++}
+ 
+ use crate::authority::transitions::AuthorityContinuity;
+ use crate::authority::EffectDescriptor;
+@@ -418,6 +427,7 @@
+ 
+ #[derive(Debug, Clone, PartialEq, Eq)]
+ pub enum TracedDecisionError {
++    ContinuityExhausted,
+     Decision(PermitDecisionError),
+     Trace(TraceAssemblyError),
+ }
+@@ -439,6 +449,7 @@
+ /// No implementa `Clone` ni expone el `Permit` interno por valor.
+ #[derive(Debug, PartialEq, Eq)]
+ pub struct TracedPermit {
++    continuity_instance: u64,
+     permit: Permit,
+     decision_trace: DecisionTraceRef,
+ }
+@@ -516,6 +527,7 @@
+ /// autoritativa ni a los registros fuente.
+ #[derive(Debug, PartialEq, Eq)]
+ pub struct ProtectedDecisionContinuity {
++    continuity_instance: Option<u64>,
+     execution: ExecutionContinuity,
+     next_decision_ordinal: String,
+     decisions: BTreeMap<DecisionTraceRef, DecisionTrace>,
+@@ -524,8 +536,15 @@
+ }
+ 
+ impl ProtectedDecisionContinuity {
++    // Inyección de agotamiento del banco; ausente del artefacto de producción.
++    #[cfg(test)]
++    pub(crate) fn simulate_identity_exhaustion(&mut self) {
++        self.continuity_instance = None;
++    }
++
+     pub fn from_authority(authority: AuthorityContinuity) -> Self {
+         Self {
++            continuity_instance: allocate_continuity(&NEXT_CONTINUITY),
+             execution: ExecutionContinuity::from_authority(authority),
+             next_decision_ordinal: "1".to_owned(),
+             decisions: BTreeMap::new(),
+@@ -720,6 +739,8 @@
+     effect: &EffectDescriptor,
+     resolved_results: &[ResolvedRequirementResult],
+ ) -> Result<TracedPermitDecision, TracedDecisionError> {
++    let continuity_instance = continuity.continuity_instance
++        .ok_or(TracedDecisionError::ContinuityExhausted)?;
+     let decision = decide_permit(
+         continuity.authority(),
+         form_reference,
+@@ -739,6 +760,7 @@
+ 
+     Ok(match decision {
+         PermitDecision::Granted(permit) => TracedPermitDecision::Granted(TracedPermit {
++            continuity_instance,
+             permit,
+             decision_trace: reference,
+         }),
+@@ -762,6 +784,7 @@
+ 
+ #[derive(Debug, Clone, PartialEq, Eq)]
+ pub enum TracedMediationError {
++    ForeignContinuity,
+     UnknownDecisionTrace(DecisionTraceRef),
+     DecisionNotGranted(DecisionTraceRef),
+     DecisionBindingMismatch(DecisionTraceRef),
+@@ -772,6 +795,7 @@
+ /// No implementa `Clone` ni expone el compromiso interno por valor.
+ #[derive(Debug, PartialEq, Eq)]
+ pub struct TracedMediatedCommitment {
++    continuity_instance: u64,
+     commitment: MediatedEffectCommitment,
+     decision_trace: DecisionTraceRef,
+ }
+@@ -808,6 +832,9 @@
+     traced_permit: TracedPermit,
+     effect: &EffectDescriptor,
+ ) -> Result<TracedMediatedCommitment, TracedMediationError> {
++    if continuity.continuity_instance != Some(traced_permit.continuity_instance) {
++        return Err(TracedMediationError::ForeignContinuity);
++    }
+     let reference = traced_permit.decision_trace.clone();
+     let trace = continuity
+         .decision_trace(&reference)
+@@ -824,6 +851,7 @@
+     continuity.mediated.insert(reference.clone());
+ 
+     Ok(TracedMediatedCommitment {
++        continuity_instance: traced_permit.continuity_instance,
+         commitment,
+         decision_trace: reference,
+     })
+@@ -881,6 +909,7 @@
+ 
+ #[derive(Debug, PartialEq, Eq)]
+ pub enum TracedExecutionError<E> {
++    ForeignContinuity,
+     UnknownDecisionTrace(DecisionTraceRef),
+     DecisionNotMediated(DecisionTraceRef),
+     DecisionBindingMismatch(DecisionTraceRef),
+@@ -940,6 +969,9 @@
+     traced_commitment: TracedMediatedCommitment,
+     adapter: &mut A,
+ ) -> Result<TracedExerciseConfirmation, TracedExecutionError<A::Error>> {
++    if continuity.continuity_instance != Some(traced_commitment.continuity_instance) {
++        return Err(TracedExecutionError::ForeignContinuity);
++    }
+     let reference = traced_commitment.decision_trace.clone();
+     {
+         let trace = continuity
+@@ -999,3 +1031,29 @@
+         assert_eq!(continuity.candidate_decision_ref().as_str(), "decision:2");
+     }
+ }
++
++#[cfg(test)]
++mod continuity_instance_tests {
++    use super::*;
++    #[test]
++    fn pc05_exhaustion_does_not_wrap_or_reuse() {
++        let counter = AtomicU64::new(u64::MAX - 1);
++        assert_eq!(allocate_continuity(&counter), Some(u64::MAX - 1));
++        assert_eq!(allocate_continuity(&counter), None);
++        assert_eq!(allocate_continuity(&counter), None);
++        assert_eq!(counter.load(Ordering::Relaxed), u64::MAX);
++    }
++    #[test]
++    fn pc06_parallel_allocation_preserves_distinct_instances() {
++        let counter = AtomicU64::new(1);
++        let mut values = std::thread::scope(|scope| {
++            let handles: Vec<_> = (0..8).map(|_| {
++                let counter = &counter;
++                scope.spawn(move || (0..16).map(|_| allocate_continuity(counter).unwrap()).collect::<Vec<_>>())
++            }).collect();
++            handles.into_iter().flat_map(|h| h.join().unwrap()).collect::<Vec<_>>()
++        });
++        values.sort_unstable();
++        assert_eq!(values, (1..=128).collect::<Vec<_>>());
++    }
++}
+--- a/rust/sv_core/src/authority/transitions/reuse_tests.rs
++++ b/rust/sv_core/src/authority/transitions/reuse_tests.rs
+@@ -1172,3 +1172,63 @@
+         .iter()
+         .any(|check| check.result() == CheckResult::Refuted));
+ }
++
++// RETP-153: montaje sintético del banco R1; no autoridad profesional.
++fn pc_preparar() -> (crate::ProtectedDecisionContinuity, EffectDescriptor, crate::TracedPermit) {
++    let raw = permission_continuity();
++    let effect = permission_effect(&raw, &authority_ref("authority:permit"), "effect:permit:allowed").clone();
++    let results = permission_results(&raw, CheckResult::Accredited, false);
++    let mut c = crate::ProtectedDecisionContinuity::from_authority(raw);
++    let decision = crate::decide_permit_traced(&mut c, &form_ref("form:permit"), &effect, &results).unwrap();
++    let crate::TracedPermitDecision::Granted(permit) = decision else { panic!("montaje de prueba no concedido") };
++    (c, effect, permit)
++}
++#[test]
++fn pc01_cadena_propia() {
++    let (mut a, effect, permit) = pc_preparar();
++    let commitment = crate::mediate_traced_permit(&mut a, permit, &effect).unwrap();
++    let mut executor = TestExecutor::default();
++    crate::execute_traced_mediated(&mut a, commitment, &mut executor).unwrap();
++    assert_eq!(executor.calls, 1);
++    println!("PC01 propia: llamadas={}", executor.calls);
++}
++#[test]
++fn pc02_permiso_cruzado_igual_contenido() {
++    let (a, ea, pa) = pc_preparar();
++    let (mut b, eb, pb) = pc_preparar();
++    assert_eq!(ea, eb);
++    assert_eq!(pa.decision_trace(), pb.decision_trace());
++    assert_eq!(a.decision_trace(pa.decision_trace()), b.decision_trace(pb.decision_trace()));
++    let referencia = pa.decision_trace().clone();
++    let resultado = crate::mediate_traced_permit(&mut b, pa, &eb);
++    println!("PC02 cruzado: aceptado={} mediado={}", resultado.is_ok(), b.is_mediated(&referencia));
++    assert!(matches!(resultado, Err(crate::TracedMediationError::ForeignContinuity)), "permiso ajeno no rechazado por pertenencia");
++    assert!(!b.is_mediated(&referencia));
++}
++#[test]
++fn pc03_compromiso_cruzado_igual_contenido() {
++    let (mut a, ea, pa) = pc_preparar();
++    let (mut b, eb, pb) = pc_preparar();
++    assert_eq!(ea, eb);
++    assert_eq!(pa.decision_trace(), pb.decision_trace());
++    let ca = crate::mediate_traced_permit(&mut a, pa, &ea).unwrap();
++    let _cb = crate::mediate_traced_permit(&mut b, pb, &eb).unwrap();
++    let mut executor = TestExecutor::default();
++    let resultado = crate::execute_traced_mediated(&mut b, ca, &mut executor);
++    println!("PC03 cruzado: aceptado={} llamadas={} eventos={}", resultado.is_ok(), executor.calls, b.exercise_event_count());
++    assert!(matches!(resultado, Err(crate::TracedExecutionError::ForeignContinuity)), "compromiso ajeno no rechazado por pertenencia");
++    assert_eq!(executor.calls, 0);
++    assert_eq!(b.exercise_event_count(), 0);
++}
++
++#[test]
++fn pc04_exhaustion_stops_before_decision_and_mediation() {
++    let (mut c, effect, permit) = pc_preparar();
++    c.simulate_identity_exhaustion();
++    let previous = c.decision_trace_count();
++    let r = crate::decide_permit_traced(&mut c, &form_ref("form:permit"), &effect, &[]);
++    assert!(matches!(r, Err(crate::TracedDecisionError::ContinuityExhausted)));
++    assert_eq!(c.decision_trace_count(), previous);
++    assert!(matches!(crate::mediate_traced_permit(&mut c, permit, &effect), Err(crate::TracedMediationError::ForeignContinuity)));
++    assert_eq!(c.exercise_event_count(), 0);
++}

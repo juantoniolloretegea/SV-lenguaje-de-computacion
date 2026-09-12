@@ -1501,3 +1501,16 @@ Sobre la entrega y presentación RETP-149/150 se añade vista documental con ide
 Una matriz Rust 1.98.0 debug/release, 17 procesos, 12 regresiones y nueve nuevos testigos por modo; 24 cuerpos y procedencia recuperados, cotejo con oráculo previo, dos negativos de compilación por modo. Sin corrección tras ejecutar ni fallo inesperado. Cápsula de 71 fuentes, capturas íntegras, comandos y reproductor conservados. Correspondencia de bytes no prueba origen físico de copias idénticas; custodia confiable intra-proceso, sin imposición de host ni integración productiva.
 
 Se conserva workflow V2 y RETP-151. Próximo objeto: enlace con operación gobernada y productores reales de referentes protegidos; no fabricar autoridad ni reabrir al humano la definición ya dada. Catálogo/localización, fidelidad visual, cierre nuclear y aceptación productiva final pendientes. Estado: CONFORME_EN_ALCANCE_DOCUMENTAL.
+
+
+<a id="retp-153"></a>
+
+## RETP-2026-153 · Pertenencia de permisos y compromisos a su continuidad
+
+12/09/2026. [Fallo, corrección candidata y evidencia](tuberias-ia/pertenencia-de-permisos-a-su-continuidad/README.md). Cortes Lenguaje cf366a339f66ba892a1ce783bb873d8c6f704801 y laboratorio 3d556f378df9306a73f3497e7ee39351640fec36.
+
+La sonda R1 con dos constituciones sintéticas iguales reproduce aceptación de permiso ajeno y ejecución de compromiso ajeno bajo el mismo ordinal local. Se corrige en candidata mediante identidad interna de instancia propagada en permiso/compromiso y cotejada antes de mediar/ejecutar. El control propio conserva una llamada; ambos cruces se rechazan, con cero llamadas y cero eventos de ejercicio en el cruce de compromiso.
+
+217/217 pruebas unitarias en debug y release (211 previas, seis nuevas). Agotamiento comprobado sin vuelta a cero, 128 asignaciones distintas en ocho hilos, compilación sin cfg(test) y dos causas de rechazo de un cliente que intenta mutar identidad o acceder a la inyección de prueba. Coste nativo medido: +16 B continuidad y +8 B por permiso/compromiso; contador estático de 8 B, sin nueva reserva dinámica en la guarda. No fija ABI, RSS o latencia ni acredita perfiles WASM.
+
+Se conserva el fallo inicial de montaje por 12 fixtures ausentes; recuperados por blob sin cambiarlos. 14 procesos registrados, fuentes completas y parche revisable. El montaje interno no acredita autoridad profesional o admisión productiva. Se concretan productores pendientes de premisa externa y RequirementCheck; DFL-005 no cerrada. Workflow V2, catálogo/localización, reservas, pausa de dominios y aceptación final humana conservados. Núcleo productivo sin modificar. Estado: FALLO_REPRODUCIDO_CORRECCION_CANDIDATA_CONFORME.

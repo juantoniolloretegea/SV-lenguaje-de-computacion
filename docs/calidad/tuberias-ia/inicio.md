@@ -156,3 +156,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Lectura vinculada a invocación — RETP-152
 
 [Resultado Rust, evidencia y siguiente paso](lectura-vinculada-a-invocacion/README.md). La vista conserva solicitud, original y procedencia; rechaza identidades intercambiadas aunque las respuestas sean iguales. Depuración y optimización: 12 controles previos y nueve nuevos por modo, 24 cuerpos preservados y dos negativos de compilación por modo. Operación documental experimental; no concede autoridad profesional ni cierra G2. La misma carpeta conserva las restricciones del relevo y el siguiente objeto, sin reabrir definiciones al autor.
+
+
+## Pertenencia de permisos a su continuidad — RETP-153
+
+[Fallo reproducido y parche candidato](pertenencia-de-permisos-a-su-continuidad/README.md). Dos continuidades con ordinal y datos iguales aceptaban tokens cruzados. La candidata liga instancia, permiso y compromiso; 217 pruebas unitarias pasan por modo. Se conservan el contraejemplo, costes medidos y productores pendientes del enlace profesional. Núcleo productivo sin modificar, DFL-005 abierta y aceptación final humana pendiente.

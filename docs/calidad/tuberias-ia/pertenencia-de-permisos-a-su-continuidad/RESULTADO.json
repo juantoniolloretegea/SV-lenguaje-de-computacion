@@ -1,0 +1,61 @@
+{
+  "estado": "FALLO_REPRODUCIDO_CORRECCION_CANDIDATA_CONFORME",
+  "integracion_productiva": false,
+  "g2_profesional_cerrado": false,
+  "fallos_previos": [
+    "Permiso de otra continuidad aceptado",
+    "Compromiso de otra continuidad ejecutado: una llamada, dos eventos"
+  ],
+  "candidata_por_modo": {
+    "unitarios_previos": 211,
+    "testigos_nuevos": 6,
+    "total": 217,
+    "fallos": 0
+  },
+  "modos": [
+    "debug",
+    "release"
+  ],
+  "procesos_registrados": 14,
+  "fallo_montaje_inicial": "13 inclusiones fallaron por 12 fixtures ausentes; originales recuperados por blob, sin editar su contenido",
+  "realizaciones": [
+    {
+      "archivo": "base-test",
+      "bytes": 13107776,
+      "sha256": "821b50847a1e296074a744001f7efd7853b4f0f7db6823b933a1407be834e957"
+    },
+    {
+      "archivo": "debug-test",
+      "bytes": 13245760,
+      "sha256": "1abcf3589859a32adb9b86bbd0168aab174c23c37cc4a40138ec2671113bf295"
+    },
+    {
+      "archivo": "release-test",
+      "bytes": 9304144,
+      "sha256": "930b72f54a082b6fd88b8fb23c2c4f554609983e0c1c91362b2bc6d9f89f459b"
+    },
+    {
+      "archivo": "libsv_core_previo.rlib",
+      "bytes": 10225108,
+      "sha256": "a58b0116d7ca909c2b11d2d08d8fab384513d29bf75eb272f1a0cf9216a9b587"
+    },
+    {
+      "archivo": "libsv_core_candidata.rlib",
+      "bytes": 10240670,
+      "sha256": "03b9437dd3e01aecba80d16111bed148d5c3e016a70cf4f5dad2d62f94bf5a49"
+    },
+    {
+      "archivo": "coste_previo",
+      "bytes": 4805072,
+      "sha256": "254c990dd7f3bc12a9df1f4dd17d740a217b6fb6bdb161356ea037ac664e45eb"
+    },
+    {
+      "archivo": "coste_candidata",
+      "bytes": 4805440,
+      "sha256": "3c888e3e7450ac745ec6bb1245b4e101603065fedb0262f4f7ef7177dce3c8a3"
+    }
+  ],
+  "fuentes_candidata_sha256": "b85057fa13ea85cc4fb00ac04be7f328ecfeda31e298ecc82ad253f12646fac0",
+  "fuentes_previo_con_sonda_sha256": "5febf2a1bd05793d35bad1777e1aec90622eb4d081bd5f14f3ad438872dda72b",
+  "rustc_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2"
+}

@@ -1,0 +1,380 @@
+{
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "cf366a339f66ba892a1ce783bb873d8c6f704801",
+      "tree": "0d3bd6973d07ca1d5718588efcf92862d71f931c"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "3d556f378df9306a73f3497e7ee39351640fec36",
+      "tree": "b0e04be2a99f4d2238d34ea14124de8f1073c911"
+    }
+  },
+  "rust_original": [
+    {
+      "ruta": "rust/sv_core/Cargo.toml",
+      "blob": "d284864c44d0e36d022768131abf88c450b95eb6",
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3"
+    },
+    {
+      "ruta": "rust/sv_core/examples/binding_probe.rs",
+      "blob": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46",
+      "sha256": "15f95faebe3898de72207397f43a7f7b963754a7e8d3107e813e36196de27030"
+    },
+    {
+      "ruta": "rust/sv_core/examples/binding_probe_browser.rs",
+      "blob": "dbcb45298808828d94829a4322265cbfcd235fd0",
+      "sha256": "097a51cec39a8e24cee0a4b8122bcb8a9198dc6e7be7ac95dfda094195a614df"
+    },
+    {
+      "ruta": "rust/sv_core/examples/cyb_reception_probe.rs",
+      "blob": "9f51f7ef672c9830d193e6d496ca9d869ef5b560",
+      "sha256": "fb263dc9c2bb3785c612e249019b972035d3481f89acf3b966f14e96c32763f6"
+    },
+    {
+      "ruta": "rust/sv_core/examples/gh_binding_probe.rs",
+      "blob": "6b031259b380176373d722e87cc758a9d9c4c6f3",
+      "sha256": "c4777139219792fbef2c6c90b52ce82fc835c490b5d3cf078aea7355c655b2cc"
+    },
+    {
+      "ruta": "rust/sv_core/examples/gh_binding_probe_browser.rs",
+      "blob": "e400ee6a809948590bbffe9276704ed92facd11c",
+      "sha256": "a35006aa678fb9d0a8bb4b0b4aa0d6a200fd60bee41b5bea557928f7dd166f53"
+    },
+    {
+      "ruta": "rust/sv_core/examples/probe_assembly_2b.rs",
+      "blob": "02a7570c68f30fa1777760913ad32d69238ce8a6",
+      "sha256": "f21983e2f9053dc00f0384974e9ba922547bca52f5046353403ccbb07eef4f3a"
+    },
+    {
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+      "sha256": "5db392086b9989a94c125a11ebca2e4b4fa1b6deb461a1c05f0c42c1f1e39247"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority.rs",
+      "blob": "95a976d32444537ba4240cf7ad4375eca37ef064",
+      "sha256": "abfe89f37d2dbb6eaabb6eae4d4bdef7643a495f31511d1f1f1d9c6e80031e10"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions.rs",
+      "blob": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+      "sha256": "8371061ccbf7f1dd5d121ce6e8553ae95c676af1b227fd73e2fab37f54c3fa79"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "blob": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+      "sha256": "473c1f2a4a350a9bae7a0b91d360295e750227fb5b12d0ce97fcbc9a3599047a"
+    },
+    {
+      "ruta": "rust/sv_core/src/bindings.rs",
+      "blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b"
+    },
+    {
+      "ruta": "rust/sv_core/src/c03_tests.rs",
+      "blob": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+      "sha256": "faa3f34f0dccb3bc6b08ea26c3d380b074e04540647b70d29376a345f67bc485"
+    },
+    {
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+      "sha256": "bcb182abd71d3e1e1c00b0685a4032328db322440ed30916c9688a8d76f25fe9"
+    },
+    {
+      "ruta": "rust/sv_core/src/control.rs",
+      "blob": "08899b4dfb3a7e936b8649929619f57454248c42",
+      "sha256": "1596c3185a05314973d72ed57e0e9e94a7c0f68ede16ba11f5904d18f1310a6f"
+    },
+    {
+      "ruta": "rust/sv_core/src/control_tests.rs",
+      "blob": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+      "sha256": "a81d7d10c56c46149c87bb0810226acc373a957938f3a72266067ed717e274d2"
+    },
+    {
+      "ruta": "rust/sv_core/src/decision_trace.rs",
+      "blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "sha256": "0cc7260b8286d34cf2524722f34d3d807059bec00359cb73a4e9411e424da238"
+    },
+    {
+      "ruta": "rust/sv_core/src/equivalence.rs",
+      "blob": "22903a491b3abe12749921b12c92b0319b7c225e",
+      "sha256": "fd1bb360827153b153db0c5051f5659e0e8a8c201b27f5b044a40c4c216252f3"
+    },
+    {
+      "ruta": "rust/sv_core/src/execution.rs",
+      "blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319"
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4"
+    },
+    {
+      "ruta": "rust/sv_core/src/frame_tests.rs",
+      "blob": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+      "sha256": "013658424ff907b4467d94aeb213cd24c641613efd621b45927de3a3b1b920ee"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "blob": "c73933b661f08c4d0123b8a22f436962b5481208",
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272"
+    },
+    {
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "blob": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+      "sha256": "1c6191324d82825c6cdac4dba885541f43ec991ccdb914c581eb98ab4220eaa8"
+    },
+    {
+      "ruta": "rust/sv_core/src/identifier_profile.rs",
+      "blob": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+      "sha256": "755c3d8c134e08035c8231efd7d53e02b9eab8d7f9d85db8b6d1dfb4a16e1a86"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir_tests.rs",
+      "blob": "e339664be237680d6874fd544b3bf1b99e50a93d",
+      "sha256": "e22519646705141dcd03c6174798eb7c042d1a4298e64d29ea9a1ca0bba90518"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "blob": "699eee3d9d761d6262c24e3b80098c9ce307c775",
+      "sha256": "efb72c9cca7910090d91e2160b1b8e919a5730ad9a904b6973f1f4c034db2371"
+    },
+    {
+      "ruta": "rust/sv_core/src/mediation.rs",
+      "blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+      "sha256": "a8a0e690a0e4e209a53cdd988dc8a9243caf564c300c795456cf0eb2a80132d3"
+    },
+    {
+      "ruta": "rust/sv_core/src/nat.rs",
+      "blob": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+      "sha256": "3e9d8ec413ea021610c58ebd856be8353411f69191a2a5f60e5cca927e356118"
+    },
+    {
+      "ruta": "rust/sv_core/src/permission.rs",
+      "blob": "980270a996ae02df66f26788b2ab32c077d7e30c",
+      "sha256": "270f1e2a0ad2f14ac9a04144ed14f562fa5a19449ba851e568fc4e7eef6e018f"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements.rs",
+      "blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+      "sha256": "56628024d747d807ebbb42ee74cc7c6091a2d47c9657b18d942ec2bcb6818999"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements/initial.rs",
+      "blob": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+      "sha256": "ff5ae0e5afce985cdf0441ed9b54b1b26e20726ceb422a8b273ae7e5e047b139"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_bridge.rs",
+      "blob": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+      "sha256": "be6ecb74026f4bfee2ac4309d44efdc71201363d4b3bba4f31e8f54251da1a2e"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_conflict.rs",
+      "blob": "91fb4638389114a0cbc1af4152111fbddc451d82",
+      "sha256": "098a9df7706738903e266690d7892e9856b819c5dd648b8c916a20bf4324ce09"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_coverage.rs",
+      "blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+      "sha256": "f176a0eb303fced1e5125908a0a3c53c994234abc4296b448336ce89aab88e19"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_reuse.rs",
+      "blob": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+      "sha256": "7be5a3e5400438b3b57e2f4c675c8a799166c65eb9e1f5889cc8d1eacff64e55"
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+      "sha256": "217f81a61caa1efd1a2d8a9a851f7e8a1f18167249a50411b39f3b1ba8817b4b"
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution_tests.rs",
+      "blob": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+      "sha256": "809c7a6db1a9bdeed434440d27236492d79ba2e04a85d50bf9be3ddf55519546"
+    },
+    {
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+      "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5"
+    },
+    {
+      "ruta": "rust/sv_core/tests/admissibility_table_causal.rs",
+      "blob": "3d38d75129da74cb747372dd5764a481c2d33774",
+      "sha256": "2ad9025fc28c77cf7aac96250ac976bd91d0e50c0956c7c8c9d555f760577cd4"
+    },
+    {
+      "ruta": "rust/sv_core/tests/architecture_type_guards.rs",
+      "blob": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5",
+      "sha256": "87a334bc0852aa67a8093c593bd37160ce1d073c33ee8c732d87e39b31893eed"
+    },
+    {
+      "ruta": "rust/sv_core/tests/bindings.rs",
+      "blob": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377",
+      "sha256": "da64978d9323c12cb4929bd31c722d3f259113ac270a9be9f6f845d77a192bda"
+    },
+    {
+      "ruta": "rust/sv_core/tests/bridge_set.rs",
+      "blob": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368",
+      "sha256": "0f98a010e07198c6021350d92c6c2362fa1e28d471d26d3acb9936e82b44ab9c"
+    },
+    {
+      "ruta": "rust/sv_core/tests/cell_geometry_native.rs",
+      "blob": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a",
+      "sha256": "77e3c21d5a8255447782be93889a0e5d318646127fe1890e5453168049fd0cc1"
+    },
+    {
+      "ruta": "rust/sv_core/tests/codomain_uniqueness.rs",
+      "blob": "46480951c432331f08c612f47e529d25f478dfc0",
+      "sha256": "1cab3998afdc796a00324dcb9353439fc82124ab6e74d914f12d8a8d5bc1cbff"
+    },
+    {
+      "ruta": "rust/sv_core/tests/context_wellformed.rs",
+      "blob": "765d6aaa176969f8970e07a7575b431446c6a9e2",
+      "sha256": "6ec6238989ebabc6c444c1fa6f36e2011cd07e9bc42662c9dbde31ac8bfb9a75"
+    },
+    {
+      "ruta": "rust/sv_core/tests/cyb_authority_boundary.rs",
+      "blob": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+      "sha256": "5e8849092f25cda3feec6d1fb302c82187dd04a28e2a56898729efb81bd62817"
+    },
+    {
+      "ruta": "rust/sv_core/tests/cyb_reception.rs",
+      "blob": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad",
+      "sha256": "c0f5fca47690f82dabd6dfc82f3bdddaee893604358858cbff5dbfa42bea6d55"
+    },
+    {
+      "ruta": "rust/sv_core/tests/domain_parameters.rs",
+      "blob": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3",
+      "sha256": "7e9089ba2ca8641cbca9e52299ba218a7f41040f3958cbcfe175fe22f461ad35"
+    },
+    {
+      "ruta": "rust/sv_core/tests/gh_bindings.rs",
+      "blob": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f",
+      "sha256": "46797980d78d6ec7d891775524e7b1aa8013871059b3e9f36cd36102aa1b6591"
+    },
+    {
+      "ruta": "rust/sv_core/tests/grammar_closed_domains.rs",
+      "blob": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd",
+      "sha256": "89483b89e207c3c6af66b2bed310fd133b11a299a7e0b304304055c54050b6b3"
+    },
+    {
+      "ruta": "rust/sv_core/tests/horizon_architecture.rs",
+      "blob": "0dc7bb3c08225e6ccd553711c1121e6463c2e556",
+      "sha256": "adf4f36ec7c65e4385f3bdb04f2ba05af0aa730509032c20def7c39fd3f724e7"
+    },
+    {
+      "ruta": "rust/sv_core/tests/horizon_events.rs",
+      "blob": "05145e06e8ba24346dde77e062ebdd883b4ad92d",
+      "sha256": "2a5ea64ba905ab89373d819c856f0ba57a0d079045acc17ea8254e3344efb081"
+    },
+    {
+      "ruta": "rust/sv_core/tests/json_projection.rs",
+      "blob": "31a9c316b390cc7e58ccfdf9379e848acef57dd5",
+      "sha256": "1ac9c47c1deb137f72545852e5e08e4c68241fe1dc0bf866b880c90b1c754921"
+    },
+    {
+      "ruta": "rust/sv_core/tests/optional_fields.rs",
+      "blob": "dceef86c0b3e4510558aa7069874bf90e293618c",
+      "sha256": "ce0a2d5d1526b13d152ca5e4079fe5aefd852f79569c9ef1cb9826187ce8ddeb"
+    },
+    {
+      "ruta": "rust/sv_core/tests/output_semantics_totality.rs",
+      "blob": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452",
+      "sha256": "490e84be58a26bb5c2eda13ea3269a234e3c93dd12ff07f6ea9141f0e1707722"
+    },
+    {
+      "ruta": "rust/sv_core/tests/projection_metadata_native.rs",
+      "blob": "13231d08c7dd6da46843fe02cd622a0bfe84e44c",
+      "sha256": "e1b5b769c580a687049b4fdefc00e1d8141e4b2f22c09e6719cb76a3d52adc77"
+    },
+    {
+      "ruta": "rust/sv_core/tests/transition_data_wellformed.rs",
+      "blob": "caf66ddd893ce952526e9a8832dd69ed3209318e",
+      "sha256": "e2270e7293563f085e35862e06f75f7602a132777a649220e049bba30aea5446"
+    }
+  ],
+  "fixtures_originales": [
+    {
+      "ruta": "tests/conformance/valid/admissibility_spec_states_permutados.svp",
+      "blob": "6e9d545fc86ccd5cf6cbbdc3d197f570e78548a2",
+      "sha256": "ad27c5bc2ae4f19a0b8439b27c8224fb93b116c8f9231bef8792e1482d73c0ca"
+    },
+    {
+      "ruta": "tests/conformance/valid/cell_basic.svp",
+      "blob": "3cc55f5a5016a16aa47372bd46c95c0df21a1856",
+      "sha256": "6b9106283251318fa57bf3cb8e1fda32eebefe518e160ed882d7368f8c591463"
+    },
+    {
+      "ruta": "tests/conformance/valid/compose_basic.svp",
+      "blob": "367ed4934bc19347b2f99e55ec217f9367038226",
+      "sha256": "b91d5caa7ffb8457fadf3920d4f6135142c4c8ea7927da8a549a012148a6230b"
+    },
+    {
+      "ruta": "tests/conformance/valid/frame_cell_spec_compartida_valida.svp",
+      "blob": "9c99c1b5339741e2a6d66be2d2cedd53c90ad539",
+      "sha256": "8ef0a7123ccd9fdc465547f82e4df13f57b9f4a8381b3a728aaa192d1909e66d"
+    },
+    {
+      "ruta": "tests/conformance/valid/gate_table.svp",
+      "blob": "43dcb104eedcbcd3b15c50e631c5cc0fbb3e6da1",
+      "sha256": "2930f0684014d0736cc0a0a8ff050e779c114a51825488afd4144aa2fdd8304c"
+    },
+    {
+      "ruta": "tests/conformance/valid/identificadores_espanol.svp",
+      "blob": "ce4014170e9ea11c58cae9ac168aba15c660bc6d",
+      "sha256": "1dc9004944635c9ac72226e0802f9da59c39f0afb9359e2ecf1256e5edc09253"
+    },
+    {
+      "ruta": "tests/conformance/valid/query_context_all_variants.svp",
+      "blob": "90edf927ead422847a3f71c75500dd15123a48e5",
+      "sha256": "12426c56c9b44f83cfe1000bc4d2cbc5a53e28fa06bad1acb64103ac9872f3cb"
+    },
+    {
+      "ruta": "tests/conformance/valid/resolve_projection.svp",
+      "blob": "a807ad0cac3230e03fd7bc4b367c3b9f1951696b",
+      "sha256": "ea3310416cd67bddffc1a783093b2f3ab4353a548a260a0f2949c7888d4f7c13"
+    },
+    {
+      "ruta": "tests/conformance/valid/supervise_systemtarget_valido.svp",
+      "blob": "e82da8e8ad8d6dc6a614b49bfcd9136d5c4e8812",
+      "sha256": "f01d9b89b5b8b7f685803cf9cc98570bdc56988f97307597540046cd396a91df"
+    },
+    {
+      "ruta": "tests/conformance/valid/supervise_targets.svp",
+      "blob": "c4f4a2dc69fa857698ec1e5e592b46cc382b030d",
+      "sha256": "fdd5ae5f827c8544fb26e020ce8f5aab1c431854ab6a3204d4b9fc1c93a14c03"
+    },
+    {
+      "ruta": "tests/conformance/valid/trajectory_alternance_valid.svp",
+      "blob": "458679658681afb1a9d074a600b037ad30156d66",
+      "sha256": "e17b6708ca72c219e271e06fdf8c27583ad558a50840fff4411a6f3816e80df8"
+    },
+    {
+      "ruta": "tests/conformance/valid/transition_data_events.svp",
+      "blob": "effdfa613284f56f1b7352941b40f4a65e767ff6",
+      "sha256": "8d2736d4b19a20592e8e394a2f53ff1d11a00cb72ba2f192c078620c0ce90b4c"
+    }
+  ],
+  "fijacion_previa": {
+    "plan_sha256": "149833939a5503b79d97d7c602f4b42982d43284d5fd6b0d2acff1ca65c0d621",
+    "sonda_sha256": "4025c6dc6048e639b276228cd798e209a1bc6a2b6226849c028a0c2dfa68d35e"
+  },
+  "rectores": "AGENTS, Pilares, perfiles, transición y workflow V2 cotejados sin cambios respecto de su lectura completa anterior; contratos G1/G2 y superficies R1 consultados en el tramo."
+}
