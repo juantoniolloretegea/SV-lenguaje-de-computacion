@@ -1,0 +1,11 @@
+{
+  "estado": "CONFORME",
+  "causas_locales": 13,
+  "plantillas_es_en": 26,
+  "controles_no_migrados": 2,
+  "controles_sensibilidad": 2,
+  "base_sin_intervalo_detectada": true,
+  "intervalo_desplazado_detectado": true,
+  "procesos": 7,
+  "candidata_modificada": false
+}

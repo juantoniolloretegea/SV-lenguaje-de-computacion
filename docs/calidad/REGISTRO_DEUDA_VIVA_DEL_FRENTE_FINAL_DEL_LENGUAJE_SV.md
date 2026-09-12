@@ -383,3 +383,10 @@ DFL-001 sigue abierta: inventario/migración del compilador, E004/E115 estructur
 [Resultado, alcance y límites](tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/README.md). DFL-001 recibe intervalos originales en primitivas sintácticas y una causa local de grafía incompatible con ES/EN en el punto de rechazo. La sucesión experimental /2 conserva resultados heredados en el corpus 14/106 y en 40 fuentes y 64 ensamblajes focales; 239 unitarios por modo. Se conservan 13 causas locales, 26 plantillas, sensibilidad y reproducción portátil.
 
 La cobertura global sigue abierta: emisores compuestos y validadores restantes, subcausas, serialización/presentación y DG01–DG14. DFL-011 conserva su revisión integral. Las ausencias de WASI/navegador, recepción profesional y ejecuciones externas mantienen su alcance; P3 reservado y P4/P5 conservan sus compuertas. Este incremento no modifica el núcleo productivo ni cierra las restantes deudas.
+
+
+### Recepción RETP-160 · Ubicaciones de rechazos compuestos
+
+[Resultado y límites](tuberias-ia/ubicaciones-de-rechazos-compuestos/README.md). DFL-001 recibe ubicación original en doce emisores compuestos, conservando orden de validación y causa desde el contexto léxico. Se comprobaron 54 fuentes nuevas y 40 anteriores, 168 ensamblajes derivados, corpus 14/106 idéntico, 239 unitarios por modo, catálogo intacto, controles de sensibilidad y reproducción portátil. Cambio limitado a un archivo de la cápsula; no promovido al núcleo productivo.
+
+Permanece pendiente la ubicación del conjunto de estados al fallar cardinalidad: conserva ausencia explícita de intervalo en ES/EN. Continúan conversiones defensivas y validadores restantes, subcausas, serialización/presentación y DG global. DFL-011 y otras deudas no se cierran. Tampoco se acredita fidelidad final, WASI/navegador, recepción profesional ni encargo externo. P3 sigue cerrado; P4/P5 conservan sus compuertas.

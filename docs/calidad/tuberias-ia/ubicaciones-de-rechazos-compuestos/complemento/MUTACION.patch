@@ -1,0 +1,22 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -1385,8 +1385,8 @@
+         let mut table = None;
+         let mut constraints = None;
+         while !self.at_sym('}') {
++            let field = self.take_raw_word()?;
+             let field_position = self.pos;
+-            let field = self.take_raw_word()?;
+             self.sym(':')?;
+             match field.as_str() {
+                 "table" if table.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
+@@ -1424,8 +1424,8 @@
+         let mut arity = None;
+         let mut constraints = None;
+         while !self.at_sym('}') {
++            let field = self.take_raw_word()?;
+             let field_position = self.pos;
+-            let field = self.take_raw_word()?;
+             self.sym(':')?;
+             match field.as_str() {
+                 "arity" if arity.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(

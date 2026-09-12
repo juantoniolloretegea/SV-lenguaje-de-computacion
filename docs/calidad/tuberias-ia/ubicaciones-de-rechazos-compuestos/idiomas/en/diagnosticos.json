@@ -1,0 +1,18 @@
+{
+  "version": "COMPILER-DIAGNOSTICS/2",
+  "mensajes": {
+    "CD.EMPTY_CODOMAIN": "The codomain is empty.",
+    "CD.DUPLICATE_CODOMAIN_MEMBERS": "The codomain contains duplicate members.",
+    "CD.OUTPUT_SEMANTICS_KEYS": "Output semantics keys do not satisfy the required uniqueness or coverage.",
+    "CD.DUPLICATE_IDENTIFIER": "Two declarations share the same identifier.",
+    "CD.FOREIGN_SURFACE": "The spelling is not allowed at this position under the selected source profile.",
+    "CD.UNEXPECTED_END": "The source unit ends before the construct is complete.",
+    "CD.UNEXPECTED_TOKEN": "An unexpected lexical or syntactic element was encountered.",
+    "CD.UNSUPPORTED": "The construct is not supported by this profile and parser.",
+    "CD.INVALID_NATURAL": "The value is not an accepted natural number.",
+    "CD.INVALID_ADMISSIBILITY_STATE": "The admissibility state is invalid.",
+    "CD.INVALID_TRI": "The ternary value is invalid.",
+    "CD.INSUFFICIENT_ASSEMBLY_UNITS": "Assembly requires at least two source units.",
+    "CD.UNMIGRATED": "The emitter has no structured cause yet; consult the legacy error under its access policy."
+  }
+}

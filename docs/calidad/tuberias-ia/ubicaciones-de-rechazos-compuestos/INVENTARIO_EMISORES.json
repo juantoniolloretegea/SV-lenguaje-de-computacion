@@ -1,0 +1,408 @@
+{
+  "base": {
+    "sha256": "b692224b69bfc847cd41e7addf048816d6535622a4ef774cebfbfd0d38faa100",
+    "menciones": [
+      {
+        "linea": 877,
+        "funcion": "tokenize<'a>",
+        "mencion": "return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()), foreign_surface: false });"
+      },
+      {
+        "linea": 880,
+        "funcion": "tokenize<'a>",
+        "mencion": ".map_err(|_| FrontendError::UnexpectedToken(\"cadena no UTF-8\".into()))?;"
+      },
+      {
+        "linea": 928,
+        "funcion": "tokenize<'a>",
+        "mencion": "return Err(FrontendFailure { error: FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 970,
+        "funcion": "parse",
+        "mencion": "let span = if matches!(error, FrontendError::UnexpectedEnd) {"
+      },
+      {
+        "linea": 1010,
+        "funcion": "parse_declarations",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), self.pos, true)),"
+      },
+      {
+        "linea": 1230,
+        "funcion": "parse_admissibility_spec",
+        "mencion": ".map_err(|_| FrontendError::InvalidAdmissibilityState(label))?;"
+      },
+      {
+        "linea": 1241,
+        "funcion": "parse_admissibility_spec",
+        "mencion": "return Err(FrontendError::InvalidAdmissibilityState(format!("
+      },
+      {
+        "linea": 1390,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"table\" if table.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1392,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"table\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1395,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1398,
+        "funcion": "parse_semantic_relation",
+        "mencion": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1428,
+        "funcion": "parse_pattern",
+        "mencion": "\"arity\" if arity.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1430,
+        "funcion": "parse_pattern",
+        "mencion": "\"arity\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1433,
+        "funcion": "parse_pattern",
+        "mencion": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1436,
+        "funcion": "parse_pattern",
+        "mencion": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1814,
+        "funcion": "parse_let",
+        "mencion": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1863,
+        "funcion": "parse_let",
+        "mencion": "return Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 1923,
+        "funcion": "query_context",
+        "mencion": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 2131,
+        "funcion": "take_tri",
+        "mencion": "_ => Err(self.located_error(FrontendError::InvalidTri(label), position, true)),"
+      },
+      {
+        "linea": 2152,
+        "funcion": "peek_word",
+        "mencion": "Token::Eof => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2153,
+        "funcion": "peek_word",
+        "mencion": "other => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2163,
+        "funcion": "take_raw_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2164,
+        "funcion": "take_raw_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2174,
+        "funcion": "take_dispatch_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2175,
+        "funcion": "take_dispatch_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2183,
+        "funcion": "take_word",
+        "mencion": "Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2191,
+        "funcion": "take_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2192,
+        "funcion": "take_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2202,
+        "funcion": "take_text",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2203,
+        "funcion": "take_text",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2212,
+        "funcion": "take_nat",
+        "mencion": "Nat::from_decimal(&value).map_err(|_| self.located_error(FrontendError::InvalidNatural(value), position, false))"
+      },
+      {
+        "linea": 2214,
+        "funcion": "take_nat",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2215,
+        "funcion": "take_nat",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2225,
+        "funcion": "word",
+        "mencion": "Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2237,
+        "funcion": "sym",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2238,
+        "funcion": "sym",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2250,
+        "funcion": "arrow",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2251,
+        "funcion": "arrow",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2288,
+        "funcion": "square_nat",
+        "mencion": "Nat::from_decimal(&text).map_err(|_| FrontendError::InvalidNatural(text))"
+      }
+    ]
+  },
+  "candidata": {
+    "sha256": "1a458c47807e71c2d299f5903c3de0639776ef013d1630b3d82d290306419486",
+    "menciones": [
+      {
+        "linea": 877,
+        "funcion": "tokenize<'a>",
+        "mencion": "return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()), foreign_surface: false });"
+      },
+      {
+        "linea": 880,
+        "funcion": "tokenize<'a>",
+        "mencion": ".map_err(|_| FrontendError::UnexpectedToken(\"cadena no UTF-8\".into()))?;"
+      },
+      {
+        "linea": 928,
+        "funcion": "tokenize<'a>",
+        "mencion": "return Err(FrontendFailure { error: FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 970,
+        "funcion": "parse",
+        "mencion": "let span = if matches!(error, FrontendError::UnexpectedEnd) {"
+      },
+      {
+        "linea": 1010,
+        "funcion": "parse_declarations",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), self.pos, true)),"
+      },
+      {
+        "linea": 1231,
+        "funcion": "parse_admissibility_spec",
+        "mencion": ".map_err(|_| self.located_error(FrontendError::InvalidAdmissibilityState(label), label_position, true))?;"
+      },
+      {
+        "linea": 1242,
+        "funcion": "parse_admissibility_spec",
+        "mencion": "return Err(FrontendError::InvalidAdmissibilityState(format!("
+      },
+      {
+        "linea": 1392,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"table\" if table.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1394,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"table\" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1397,
+        "funcion": "parse_semantic_relation",
+        "mencion": "\"constraints\" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1400,
+        "funcion": "parse_semantic_relation",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), field_position, true)),"
+      },
+      {
+        "linea": 1431,
+        "funcion": "parse_pattern",
+        "mencion": "\"arity\" if arity.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1433,
+        "funcion": "parse_pattern",
+        "mencion": "\"arity\" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1436,
+        "funcion": "parse_pattern",
+        "mencion": "\"constraints\" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1439,
+        "funcion": "parse_pattern",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), field_position, true)),"
+      },
+      {
+        "linea": 1819,
+        "funcion": "parse_let",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), variant_position, true)),"
+      },
+      {
+        "linea": 1868,
+        "funcion": "parse_let",
+        "mencion": "return Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 1929,
+        "funcion": "query_context",
+        "mencion": "other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), variant_position, true)),"
+      },
+      {
+        "linea": 2137,
+        "funcion": "take_tri",
+        "mencion": "_ => Err(self.located_error(FrontendError::InvalidTri(label), position, true)),"
+      },
+      {
+        "linea": 2158,
+        "funcion": "peek_word",
+        "mencion": "Token::Eof => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2159,
+        "funcion": "peek_word",
+        "mencion": "other => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2169,
+        "funcion": "take_raw_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2170,
+        "funcion": "take_raw_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2180,
+        "funcion": "take_dispatch_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2181,
+        "funcion": "take_dispatch_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2189,
+        "funcion": "take_word",
+        "mencion": "Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2197,
+        "funcion": "take_word",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2198,
+        "funcion": "take_word",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2208,
+        "funcion": "take_text",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2209,
+        "funcion": "take_text",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2218,
+        "funcion": "take_nat",
+        "mencion": "Nat::from_decimal(&value).map_err(|_| self.located_error(FrontendError::InvalidNatural(value), position, false))"
+      },
+      {
+        "linea": 2220,
+        "funcion": "take_nat",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2221,
+        "funcion": "take_nat",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(\"{other:?}\")), self.pos, false)),"
+      },
+      {
+        "linea": 2231,
+        "funcion": "word",
+        "mencion": "Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2243,
+        "funcion": "sym",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2244,
+        "funcion": "sym",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2256,
+        "funcion": "arrow",
+        "mencion": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2257,
+        "funcion": "arrow",
+        "mencion": "Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2294,
+        "funcion": "square_nat",
+        "mencion": "Nat::from_decimal(&text).map_err(|_| FrontendError::InvalidNatural(text))"
+      }
+    ]
+  },
+  "nota": "Inventario estático de menciones, incluidas conversiones y pruebas; no certifica alcanzabilidad ni cobertura universal.",
+  "pendientes_sin_rango": [
+    "Cardinalidad de states en parse_admissibility_spec: dos controles focales ES/EN.",
+    "Conversión defensiva String::from_utf8 en tokenize y Nat::from_decimal en square_nat: sin campaña de alcanzabilidad en este incremento.",
+    "Conversión genérica From<FrontendError> para fallos sin procedencia."
+  ]
+}

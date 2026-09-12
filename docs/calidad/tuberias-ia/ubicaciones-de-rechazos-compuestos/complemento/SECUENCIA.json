@@ -1,0 +1,137 @@
+[
+  {
+    "evento": "inicio",
+    "paso": "catalogo-build",
+    "utc": "2026-09-12T09:01:11.859220+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/catalogo.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/catalogo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "catalogo-build",
+    "utc": "2026-09-12T09:01:12.101757+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "catalogo",
+    "utc": "2026-09-12T09:01:12.103969+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/catalogo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "catalogo",
+    "utc": "2026-09-12T09:01:12.110960+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-base-build",
+    "utc": "2026-09-12T09:01:12.120988+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--cfg",
+      "candidate",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/libsv_core_base_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/control-base"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-base-build",
+    "utc": "2026-09-12T09:01:12.823231+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-base",
+    "utc": "2026-09-12T09:01:12.825339+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/control-base"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-base",
+    "utc": "2026-09-12T09:01:12.836025+00:00",
+    "codigo": 101,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "mutante-build",
+    "utc": "2026-09-12T09:01:12.905920+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--crate-name",
+      "sv_core",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/mutante/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/libsv_core_mutante.rlib"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "mutante-build",
+    "utc": "2026-09-12T09:01:15.919305+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-intervalo-build",
+    "utc": "2026-09-12T09:01:15.921189+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--cfg",
+      "candidate",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/complemento/libsv_core_mutante.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/control-intervalo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-intervalo-build",
+    "utc": "2026-09-12T09:01:16.134087+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-intervalo",
+    "utc": "2026-09-12T09:01:16.135994+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/complemento/control-intervalo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-intervalo",
+    "utc": "2026-09-12T09:01:16.139080+00:00",
+    "codigo": 101,
+    "limite_excedido": null
+  }
+]

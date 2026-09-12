@@ -1,0 +1,137 @@
+[
+  {
+    "evento": "inicio",
+    "paso": "catalogo-build",
+    "utc": "2026-09-12T09:04:03.324630+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/catalogo.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/libsv_core_candidata_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/catalogo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "catalogo-build",
+    "utc": "2026-09-12T09:04:03.415973+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "catalogo",
+    "utc": "2026-09-12T09:04:03.417450+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/catalogo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "catalogo",
+    "utc": "2026-09-12T09:04:03.419251+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-base-build",
+    "utc": "2026-09-12T09:04:03.426440+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--cfg",
+      "candidate",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/libsv_core_base_debug.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/control-base"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-base-build",
+    "utc": "2026-09-12T09:04:03.603295+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-base",
+    "utc": "2026-09-12T09:04:03.605042+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/control-base"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-base",
+    "utc": "2026-09-12T09:04:03.607281+00:00",
+    "codigo": 101,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "mutante-build",
+    "utc": "2026-09-12T09:04:03.627832+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--crate-name",
+      "sv_core",
+      "--crate-type",
+      "rlib",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/mutante/rust/sv_core/src/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/libsv_core_mutante.rlib"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "mutante-build",
+    "utc": "2026-09-12T09:04:06.332172+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-intervalo-build",
+    "utc": "2026-09-12T09:04:06.334251+00:00",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "--cfg",
+      "candidate",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/focal.rs",
+      "--extern",
+      "sv_core=/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/libsv_core_mutante.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/control-intervalo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-intervalo-build",
+    "utc": "2026-09-12T09:04:06.507185+00:00",
+    "codigo": 0,
+    "limite_excedido": null
+  },
+  {
+    "evento": "inicio",
+    "paso": "control-intervalo",
+    "utc": "2026-09-12T09:04:06.509316+00:00",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/continuacion-160/recepcion-portatil/complemento/control-intervalo"
+    ]
+  },
+  {
+    "evento": "fin",
+    "paso": "control-intervalo",
+    "utc": "2026-09-12T09:04:06.511918+00:00",
+    "codigo": 101,
+    "limite_excedido": null
+  }
+]

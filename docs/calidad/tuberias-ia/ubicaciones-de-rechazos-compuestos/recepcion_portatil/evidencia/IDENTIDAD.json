@@ -1,0 +1,9 @@
+{
+  "utc": "2026-09-12T09:03:20.509398+00:00",
+  "rustc_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "instrumento_sha256": "ea8d2dff161941ca87048dd3552d47fc7845dc5a8b27230e9f3d3988cbe327a2",
+  "compromiso_sha256": "dfc02b3eefc0a21ae5a6e6385664659cc00a0f2855672b48f68d5c1e8cfece4f",
+  "observador_sha256": "7ba8b0bf5dbf9fc173f47ea088d6c2bef0598227325d94d6c6449e558108ef44",
+  "timeout_s": 120,
+  "limite_flujo_bytes": 2097152
+}

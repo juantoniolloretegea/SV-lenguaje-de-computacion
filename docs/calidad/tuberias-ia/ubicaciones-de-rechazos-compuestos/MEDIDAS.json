@@ -1,0 +1,12 @@
+{
+  "unidad": "Procesos instrumentales, incluida compilación; no por caso",
+  "procesos_principales": 41,
+  "procesos_complementarios": 7,
+  "tiempo_principal_s": 45.383103597,
+  "cpu_usuario_principal_s": 130.87812,
+  "cpu_sistema_principal_s": 10.813087,
+  "rss_max_acumulado_hijos_principal_kib": 615236,
+  "coste_monetario": null,
+  "coste_inferencia": null,
+  "comparacion_rendimiento": "No constituida; los comprobadores de base y candidata realizan distinta verificación."
+}

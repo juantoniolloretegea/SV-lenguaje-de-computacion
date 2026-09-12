@@ -1,0 +1,122 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -1225,9 +1225,10 @@
+         self.sym('{')?;
+         let mut states = Vec::new();
+         loop {
++            let label_position = self.pos;
+             let label = self.take_raw_word()?;
+             let state = AdmissibilityState::try_from(label.as_str())
+-                .map_err(|_| FrontendError::InvalidAdmissibilityState(label))?;
++                .map_err(|_| self.located_error(FrontendError::InvalidAdmissibilityState(label), label_position, true))?;
+             states.push(state);
+             if self.at_sym(',') {
+                 self.sym(',')?;
+@@ -1384,18 +1385,19 @@
+         let mut table = None;
+         let mut constraints = None;
+         while !self.at_sym('}') {
++            let field_position = self.pos;
+             let field = self.take_raw_word()?;
+             self.sym(':')?;
+             match field.as_str() {
+-                "table" if table.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("SemanticRelation {name}: campo opcional repetido: table"))),
+-                "table" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("SemanticRelation {name}: campo opcional fuera de orden: table"))),
++                "table" if table.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("SemanticRelation {name}: campo opcional repetido: table")), field_position, true)),
++                "table" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("SemanticRelation {name}: campo opcional fuera de orden: table")), field_position, true)),
+                 "table" => table = Some(self.take_word()?),
+-                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("SemanticRelation {name}: campo opcional repetido: constraints"))),
++                "constraints" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("SemanticRelation {name}: campo opcional repetido: constraints")), field_position, true)),
+                 "constraints" => constraints = Some(self.word_list()?),
+-                other => return Err(FrontendError::Unsupported(other.to_owned())),
++                other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), field_position, true)),
+             }
+             self.sym(';')?;
+         }
+@@ -1422,18 +1424,19 @@
+         let mut arity = None;
+         let mut constraints = None;
+         while !self.at_sym('}') {
++            let field_position = self.pos;
+             let field = self.take_raw_word()?;
+             self.sym(':')?;
+             match field.as_str() {
+-                "arity" if arity.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("Pattern {name}: campo opcional repetido: arity"))),
+-                "arity" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("Pattern {name}: campo opcional fuera de orden: arity"))),
++                "arity" if arity.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("Pattern {name}: campo opcional repetido: arity")), field_position, true)),
++                "arity" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("Pattern {name}: campo opcional fuera de orden: arity")), field_position, true)),
+                 "arity" => arity = Some(self.take_nat()?),
+-                "constraints" if constraints.is_some() => return Err(FrontendError::UnexpectedToken(
+-                    format!("Pattern {name}: campo opcional repetido: constraints"))),
++                "constraints" if constraints.is_some() => return Err(self.located_error(FrontendError::UnexpectedToken(
++                    format!("Pattern {name}: campo opcional repetido: constraints")), field_position, true)),
+                 "constraints" => constraints = Some(self.word_list()?),
+-                other => return Err(FrontendError::Unsupported(other.to_owned())),
++                other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), field_position, true)),
+             }
+             self.sym(';')?;
+         }
+@@ -1733,6 +1736,7 @@
+         self.word("let")?;
+         let name = self.take_word()?;
+         self.sym('=')?;
++        let first_position = self.pos;
+         let (first_raw, first_status) = self.take_dispatch_word()?;
+         let first = canonical_word(&first_raw, first_status);
+         match first {
+@@ -1801,6 +1805,7 @@
+                 self.sym(',')?;
+                 self.word("target")?;
+                 self.sym(':')?;
++                let variant_position = self.pos;
+                 let variant = self.take_raw_word()?;
+                 self.sym('(')?;
+                 let reference = self.take_word()?;
+@@ -1811,7 +1816,7 @@
+                     "CellTarget" => IrSupervisableTarget::Cell { reference },
+                     "ComposedTarget" => IrSupervisableTarget::Composed { reference },
+                     "SystemTarget" => IrSupervisableTarget::System { reference },
+-                    other => return Err(FrontendError::Unsupported(other.to_owned())),
++                    other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), variant_position, true)),
+                 };
+                 self.operations.push(construction::operation(
+                     name,
+@@ -1860,9 +1865,9 @@
+             }
+             _ => {
+                 if protected_status(first_status) {
+-                    return Err(FrontendError::UnexpectedToken(format!(
++                    return Err(self.located_error(FrontendError::UnexpectedToken(format!(
+                         "palabra protegida donde se esperaba identificador: {first_raw}"
+-                    )));
++                    )), first_position, true));
+                 }
+                 self.sym('.')?;
+                 let field = self.take_raw_word()?;
+@@ -1880,6 +1885,7 @@
+     }
+ 
+     fn query_context(&mut self) -> Result<IrQueryContext, FrontendError> {
++        let variant_position = self.pos;
+         let variant = self.take_raw_word()?;
+         self.sym('(')?;
+         let context = match variant.as_str() {
+@@ -1920,7 +1926,7 @@
+                     references: [a, b, c],
+                 }
+             }
+-            other => return Err(FrontendError::Unsupported(other.to_owned())),
++            other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), variant_position, true)),
+         };
+         self.sym(')')?;
+         Ok(context)
