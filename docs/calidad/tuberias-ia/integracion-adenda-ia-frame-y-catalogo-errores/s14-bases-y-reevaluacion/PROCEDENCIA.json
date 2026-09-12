@@ -1,0 +1,38 @@
+{
+  "corte": "dc1d10877abd7ee85d3bcb1f625ceb13f6541d4e",
+  "capsula_s2_sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+  "reuso": "G1 y dependencias intactas de FUENTES_S2. No se recompila lote-g1 ni se cambia su guarda de lote/montaje fijados. S2/S3/S11 son antecedentes; el nuevo recorrido no vuelve a acreditar su cobertura ni su archivo protegido.",
+  "esperado_positivo": "Cuerpo A01 anterior dentro de cápsula S2. Solicitud A01 exacta de esa misma cápsula.",
+  "esperado_negativo": "Cuerpo negativo P3-11 recibido en S11. Misma consulta/contexto admitidos; id de transporte no forma parte del cuerpo esperado. Se coteja el cuerpo entero; no se genera esperado con el ejecutable S14.",
+  "variable": "Único byte 1→0 en un campo de vigencia de base documental. Misma ruta de carga, solicitud, productor G1, política y fuente artificial. Esta base exterior de vigencia no reemplaza el campo base K-IE004/1 del cuerpo.",
+  "especimenes": {
+    "base-original.bin": {
+      "bytes": 28,
+      "sha256": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3"
+    },
+    "positivo.cuerpo": {
+      "bytes": 494,
+      "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+    },
+    "solicitud.bin": {
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    },
+    "base-excesiva.bin": {
+      "bytes": 65,
+      "sha256": "4d2293f11a69207a8af99ff6d77dddc035cf57a71ec65be1e7ad97e316a60360"
+    },
+    "base-invalida.bin": {
+      "bytes": 28,
+      "sha256": "68c30870425639d3dcbfdbec9093f53d99679545b428baadbb6cfe9f907a601e"
+    },
+    "negativo.cuerpo": {
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+    },
+    "base-nueva.bin": {
+      "bytes": 28,
+      "sha256": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "version": "S14-PREPARACION/1",
+  "compilacion_previa": false,
+  "ejecucion_funcional_previa": false,
+  "incidencias": [],
+  "ajuste_de_diseno": "S2 fija un único montaje: se preserva esa guarda y se reutiliza G1 directamente para la variación documental. No se reescriben sus fuentes.",
+  "limite": "Lectura de código y elaboración previas a la fijación; aún no se cualifica implementación nueva."
+}

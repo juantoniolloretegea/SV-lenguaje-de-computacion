@@ -1857,3 +1857,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-182 · S13 · Suficiencia de representación y realización
 
 2026-09-12T18:17:41Z. [Acta y matriz](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md). Doce obligaciones enlazan criterios A–L con sede, contrato, IR, función Rust, evidencia y pérdida. Se distingue K1-T nominal, productor QueryResult/CQ1–CQ6 pendiente, cobertura de Frame frente a exhaustividad, cobertura documental frente a verificadores R1, main frente a candidatas y frontera material. 23 fuentes verificadas, 31 pasajes exactos; sin nueva prueba funcional ni promoción nuclear. Mapa completado no equivale a suficiencia integral. Se conserva S12: agentes por valorar tras inmunología. El siguiente objeto G/J se delimita a base documental efectivamente consumida y recuperación/reevaluación diferenciadas; las operaciones dependientes de capacidades nucleares pendientes no quedan habilitadas. No se alteran deudas ni criterios; causas se recogen para el catálogo.
+
+
+<a id="retp-183"></a>
+
+### RETP-2026-183 · S14 · Fijación previa de bases y recuperación/reevaluación
+
+2026-09-12T18:45:17Z. Contrato, fuentes, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía. Cortes y rectores cotejados; cápsula G1 intacta; esperados previos recuperados; fijación de fuentes y controles instrumentales. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/README.md). Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. Siguiente: Ejecutar reproductor con máximo 17 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.

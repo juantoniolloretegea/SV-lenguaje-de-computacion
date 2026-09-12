@@ -1,0 +1,28 @@
+{
+  "version": "S14-FIJACION/1",
+  "fecha_utc": "2026-09-12T18:45:17.543004+00:00",
+  "archivos": {
+    "CONTRATO_S14.md": "606b3d15b43659f28bbcbf4797f01cc083e9efaacf819f58b9b86a79fed391f0",
+    "ESPECIMENES.json": "c9a928e97f6ede528a5ed35a6d01f01d905dc08173b22432d07340e80207f6a2",
+    "FUENTES_S2.json": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+    "PREPARACION.json": "fc2f69e25986e6607a031d2919b0fd643d922cc1aa49bb53ca1df660b3f7eb0c",
+    "PROCEDENCIA.json": "753738ceb7ac73ccaaaddf7afdb579c1241a38765849b30163a62a98bd90b798",
+    "README.md": "e42f514a90bae85ede523533d3a0f203d77caeac2e892e0ebe45570319ddd2b6",
+    "RECTORES.json": "71aef9461ef28f35d90a5fc8ca7e2ab114e9c9e623b7e3f62c7a34439b60a1cd",
+    "administracion/fijar.py": "41a6c37d87b03a6ca04d93b576b191c44cc3d81904f4d821fc479a52120b36d6",
+    "administracion/preparar.py": "2829c685dd659fa2f7e5f993c954ae6d2ea7c355bca8f1f2902cba05b19eaafe",
+    "administracion/registrar.py": "955e398620978fd6c6fbc06fd7f581c12a6ee2f035685cb35ed04a60713b0d8a",
+    "administracion/snapshot.py": "fe1dcbbb1a1d42269e3e2c821ca4e318485eef05d7637fc55724598df2e92a58",
+    "codigo/ESPERADO.tsv": "75528db291393e11b1c80ef02ec947b36fc871d806fdbb49968ae921a432175b",
+    "codigo/bases.rs": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de",
+    "codigo/contraste.rs": "0a8efc001494424834f549787373ea2b14531f4bd906bacfdb82a457903276e1",
+    "especimenes/base-excesiva.bin": "4d2293f11a69207a8af99ff6d77dddc035cf57a71ec65be1e7ad97e316a60360",
+    "especimenes/base-invalida.bin": "68c30870425639d3dcbfdbec9093f53d99679545b428baadbb6cfe9f907a601e",
+    "especimenes/base-nueva.bin": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd",
+    "especimenes/base-original.bin": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3",
+    "especimenes/negativo.cuerpo": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8",
+    "especimenes/positivo.cuerpo": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+    "especimenes/solicitud.bin": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+    "reproducir.py": "1088d5fc987867411ffe2d844bf68ea7351a9947b870a6c4c7e6ea9a0634059d"
+  }
+}

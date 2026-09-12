@@ -18,6 +18,7 @@
 | S11 | finalizado | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:42:13Z |
 | S12 | finalizado | Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3 | Watson / W-S0 | 2026-09-12T17:56:48Z |
 | S13 | finalizado | Cotejo de suficiencia para integración 1+3: contrato, IR y realización | Watson / W-S0 | 2026-09-12T18:17:41Z |
+| S14 | en ejecución | G/J: base consumida bajo igual nombre y recuperación frente a reevaluación | Watson / W-S0 | 2026-09-12T18:45:17Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -507,4 +508,39 @@
 **Siguiente accion:** Fijar G/J documental: base realmente consumida, recuperación original y reevaluación distinguida; no llamarlo QueryResult/transición nativa ni continuidad durable.
 
 **Observaciones:** Registro al cerrar trabajo documental ya iniciado; fecha de inicio derivada del archivo local de recepción del corte, no de una fijación experimental. Dos interrupciones por intervalos de extracción fuera de rango conservadas. Agentes por valorar tras inmunología.
+
+
+## S14 · G/J: base consumida bajo igual nombre y recuperación frente a reevaluación
+
+**Estado:** en ejecución
+
+**Fecha alta utc:** 2026-09-12T18:45:17Z
+
+**Fecha inicio utc:** 2026-09-12T18:45:17Z
+
+**Fecha actualizacion utc:** 2026-09-12T18:45:17Z
+
+**Fecha fin utc:** —
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Doce casos sintéticos nativos; G1 intacto, base de vigencia desde archivo, dos actos intraproceso y atribución de original.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje dc1d10877abd7ee85d3bcb1f625ceb13f6541d4e; laboratorio bbaf48f0fd07a92352c6e47c0b8810e568f34a1d
+
+**Dependencias:** S13 / RETP-182; custodio G1 y esperados anteriores; autorización expresa de continuación.
+
+**Resultado:** Contrato, fuentes, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía.
+
+**Verificacion:** Cortes y rectores cotejados; cápsula G1 intacta; esperados previos recuperados; fijación de fuentes y controles instrumentales.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/README.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-183)
+
+**Siguiente accion:** Ejecutar reproductor con máximo 17 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.
+
+**Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
 
