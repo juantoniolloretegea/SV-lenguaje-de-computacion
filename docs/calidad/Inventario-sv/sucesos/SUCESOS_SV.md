@@ -6,20 +6,20 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 | Suceso | Estado | Actividad | Responsable | Última actualización |
 | --- | --- | --- | --- | --- |
-| S0 | en ejecución | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:21:21Z |
+| S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | pendiente | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:21:21Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T10:21:21Z
 
 **Inicio:** 2026-09-12T10:21:21Z
 
-**Actualización:** 2026-09-12T10:21:21Z
+**Actualización:** 2026-09-12T10:23:08Z
 
-**Fin:** —
+**Fin:** 2026-09-12T10:23:08Z
 
 **Responsable:** Watson / W-S0
 
@@ -31,15 +31,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** —
 
-**Resultado:** Estructura documental preparada; publicación y verificación de las copias pendientes.
+**Resultado:** Registro puesto en servicio desde S0, con S1 pendiente, historial de cambios y entrada obligatoria en Léame primero. Retirado el archivo de soporte de la carpeta de sucesos.
 
-**Verificación:** Pendiente de cotejo de las publicaciones.
+**Verificación:** Publicaciones de apertura cotejadas: cuatro archivos del registro idénticos entre repositorios; Léame primero idéntico; historial RETP previo conservado; inicio.md de sucesos ausente; sin cambios ajenos al alcance.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/be9e5e4d4041223223bd7d0dc38e1851414fd46a/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/REVISION_SECUENCIA_COBERTURA_Y_RELEVO_RETP_162.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/06da92137bcac75f3ae4b23ca059550fdf0a6a6c) · [Referencia 2](https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/commit/c237e9d6dc06f481f75a3a874b3bfcf411a4ba32)
 
 **Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-163)
 
-**Siguiente acción:** Publicar las dos copias y verificar su identidad y la retirada del archivo de soporte.
+**Siguiente acción:** Continuar S1 conforme a RETP-162 y actualizar su estado antes de iniciar.
 
 **Observaciones:** Actividad documental. No se han ejecutado nuevos contrastes funcionales. W-S0 identifica de forma estable a la unidad responsable de esta apertura.
 

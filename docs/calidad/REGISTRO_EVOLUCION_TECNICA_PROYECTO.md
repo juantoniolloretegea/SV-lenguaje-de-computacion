@@ -1644,3 +1644,16 @@ Siguiente objeto único: C/I, cobertura de referencia independiente, para distin
 La incorporación es obligatoria y complementaria a los registros de calidad y al recorrido documental de laboratorio y su espejo. Se añade la entrada en Léame primero de ambas sedes y se retira exclusivamente docs/calidad/Inventario-sv/sucesos/inicio.md, cuyo contenido previo era una línea vacía. La serie comienza ahora; no se renumeran los antecedentes. Cortes de entrada: Lenguaje be9e5e4d4041223223bd7d0dc38e1851414fd46a, main; laboratorio dd6d563ea7b75dd1d420f1fe542334b224a55886, lab/playground-sv-permanente. AGENTS.md consultado; alcance exclusivamente documental. No se modifica gramática, perfiles, compilador, IR, núcleo, contratos de dominio o agente, frontera u host.
 
 Resultado: Estructura documental preparada; publicación y verificación de las copias pendientes. Verificación: Pendiente de cotejo de las publicaciones. Estado de S0: en ejecución. Sin nuevos ensayos funcionales ni apertura de ramas.
+
+
+<a id="retp-163-cierre-s0"></a>
+
+### RETP-2026-163 · S0 · Finalización verificada del registro Sucesos SV
+
+2026-09-12T10:23:08Z. Se establece el [registro incremental Sucesos SV](Inventario-sv/sucesos/README.md), con [estado vigente](Inventario-sv/sucesos/SUCESOS_SV.md), CSV e historial de actualizaciones. S0 documenta su puesta en servicio; S1 queda pendiente para el contraste C/I de RETP-162. Los únicos estados admitidos son pendiente, en ejecución y finalizado. Se conservan los identificadores publicados, las instantáneas históricas y la correspondencia entre copias. Responsable: Watson / W-S0.
+
+La incorporación es obligatoria y complementaria a los registros de calidad y al recorrido documental de laboratorio y su espejo. Se añade la entrada en Léame primero de ambas sedes y se retira exclusivamente docs/calidad/Inventario-sv/sucesos/inicio.md, cuyo contenido previo era una línea vacía. La serie comienza ahora; no se renumeran los antecedentes. Cortes de entrada: Lenguaje be9e5e4d4041223223bd7d0dc38e1851414fd46a, main; laboratorio dd6d563ea7b75dd1d420f1fe542334b224a55886, lab/playground-sv-permanente. AGENTS.md consultado; alcance exclusivamente documental. No se modifica gramática, perfiles, compilador, IR, núcleo, contratos de dominio o agente, frontera u host.
+
+Resultado: Registro puesto en servicio desde S0, con S1 pendiente, historial de cambios y entrada obligatoria en Léame primero. Retirado el archivo de soporte de la carpeta de sucesos. Verificación: Publicaciones de apertura cotejadas: cuatro archivos del registro idénticos entre repositorios; Léame primero idéntico; historial RETP previo conservado; inicio.md de sucesos ausente; sin cambios ajenos al alcance. Estado de S0: finalizado. Sin nuevos ensayos funcionales ni apertura de ramas.
+
+Evidencias de apertura cotejadas: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/commit/06da92137bcac75f3ae4b23ca059550fdf0a6a6c ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/commit/c237e9d6dc06f481f75a3a874b3bfcf411a4ba32.
