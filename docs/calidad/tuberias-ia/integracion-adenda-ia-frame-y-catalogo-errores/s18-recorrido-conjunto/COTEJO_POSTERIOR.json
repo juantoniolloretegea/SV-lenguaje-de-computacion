@@ -1,0 +1,20 @@
+{
+  "version": "S18-COTEJO-POSTERIOR/1",
+  "archivos_fijados_intactos": 29,
+  "capturas_integras": 3382,
+  "capturas_por_ejecucion": {
+    "admitir_negativa/capturas": 209,
+    "debug/capturas-1": 449,
+    "debug/capturas-2": 449,
+    "debug/capturas-3": 449,
+    "forzar_consumo_positivo/capturas": 250,
+    "omitir_base_citada/capturas": 159,
+    "omitir_contexto/capturas": 70,
+    "release/capturas-1": 449,
+    "release/capturas-2": 449,
+    "release/capturas-3": 449
+  },
+  "diagnosticos_es_en": "Coinciden con identificadores y rótulos S17",
+  "comandos_integridad_verificada": 29,
+  "resultado": "COTEJO_CONFORME"
+}

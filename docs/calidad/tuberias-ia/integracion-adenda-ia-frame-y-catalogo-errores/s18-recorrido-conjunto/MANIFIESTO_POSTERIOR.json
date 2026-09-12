@@ -1,0 +1,177 @@
+{
+  "version": "S18-MANIFIESTO/1",
+  "archivos": {
+    "ACTA_RESULTADO_S18.md": {
+      "bytes": 3682,
+      "sha256": "a64e2841d5ad2319134d1ea0dcf045302c9a409760756072f9bd2b18bac74bdd"
+    },
+    "BINARIOS.json": {
+      "bytes": 783,
+      "sha256": "b0386a2e2be4329436cb949c565dbb7baf7fe865e938bdf120da205ef43087da"
+    },
+    "CAMPANA_S18.md": {
+      "bytes": 5155,
+      "sha256": "fab5123c7cc3833294a8a9927324bab63cb09fdfc5038fe661786d33eecc61dc"
+    },
+    "COMANDOS.json": {
+      "bytes": 57373,
+      "sha256": "4686177e71b697a162beaa58b71208c6fcb73152f1d4ddfc587b68d04dfcebad"
+    },
+    "COTEJO_POSTERIOR.json": {
+      "bytes": 625,
+      "sha256": "06fa169804a8389e294e353f1121bfddd231badd06bd954f4d871f4c7a87976f"
+    },
+    "CUSTODIA_POSTERIOR.json": {
+      "bytes": 1276,
+      "sha256": "1e7d2b94e49086b099b2d2caf8640214bf80843b9683ef173c48bb940da2d1d6"
+    },
+    "CUSTODIA_PREVIA.json": {
+      "bytes": 313,
+      "sha256": "49ec187ddb843811139e03495bb9e7c374050c4f56fdc2c1467700ea8ac2bddb"
+    },
+    "ENTORNO.json": {
+      "bytes": 596,
+      "sha256": "63c54d2a8755a28e5df88204c9cb70693e4ca792c192ffdee765a83c45baa709"
+    },
+    "EVIDENCIAS_S18.json": {
+      "bytes": 2322998,
+      "sha256": "392c015629a5ffe027163b2c481fc57988654a4eaf5bf91bf680019def69dbd8"
+    },
+    "FIJACION_PREVIA.json": {
+      "bytes": 2986,
+      "sha256": "2c3a1488a0b3b5b83905d706607377bcbd64cde0282bd23442d9088eac495644"
+    },
+    "FUENTES_S2.json": {
+      "bytes": 737698,
+      "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e"
+    },
+    "MEDICIONES.json": {
+      "bytes": 386,
+      "sha256": "f9514fb2eee1f42164d097b764702440f9425789497da6a7245ebb2476afd8c1"
+    },
+    "PREPARACION.json": {
+      "bytes": 243,
+      "sha256": "7aff862f42f044ee1bc17cd2b112cc61ab524859d819495d98bc081edb334f00"
+    },
+    "PROCEDENCIA.json": {
+      "bytes": 8166,
+      "sha256": "bf2d6a366bfb75dac9feb89448ac58205e717a24cbe445491cc079ab6c1136fb"
+    },
+    "README.md": {
+      "bytes": 949,
+      "sha256": "1a4b2cd3bb5eac4dffbcf78f2e5896bb9ce2c1df31ac61048b99d2bc0eb8716b"
+    },
+    "RECTORES.json": {
+      "bytes": 829,
+      "sha256": "2cb641ee7a6a8634795ac70d15f4db1df8e38d08e8dafb7e268dbd22c395537b"
+    },
+    "RESULTADO.json": {
+      "bytes": 618,
+      "sha256": "215c0131a7db06a8287a1e4b234480c92f981e579e0c886cc631ddfe4264e4f6"
+    },
+    "administracion/fijar.py": {
+      "bytes": 2488,
+      "sha256": "a0f55d6629fbe867c9fb5378739af33f6b062af5eae93fc23893c12473314083"
+    },
+    "administracion/preparar.py": {
+      "bytes": 2078,
+      "sha256": "fc35e954b2446b789075df22fc7351eee32e8f7817177c167956eb6452463b49"
+    },
+    "administracion/preparar_registro.py": {
+      "bytes": 4001,
+      "sha256": "d9c9e6add9fbc19c2dadcd978cf8eacfeea393a5b49e767c5c136126a4d75a6f"
+    },
+    "administracion/publicar.py": {
+      "bytes": 2737,
+      "sha256": "bf7a9fdfa70e60b8cf23da6df60b81d91750c9bcd16f76c01adb3d69da6b79c1"
+    },
+    "administracion/registrar.py": {
+      "bytes": 8311,
+      "sha256": "c83cc0e556a69c986a6447f25f9689ef99f58713af20e1f2dcb97f93fe987d12"
+    },
+    "administracion/snapshot.py": {
+      "bytes": 861,
+      "sha256": "fdbe1f4a04d4c6b2c967c94431027cfdade7a87f1a5a4f20f5fcb97a3c53c413"
+    },
+    "administracion-posterior/documentar.py": {
+      "bytes": 6892,
+      "sha256": "577ed2c337b8e540dd454437c24aa64dcd64f61ec1f730fdbc6249e3469b4ab0"
+    },
+    "administracion-posterior/preparar_cierre.py": {
+      "bytes": 877,
+      "sha256": "f7d7de12b2712ff6970c377c1e33bf1f4fc856c6eb6b03430c3e530a31f08ba7"
+    },
+    "codigo/ESPERADO.tsv": {
+      "bytes": 689,
+      "sha256": "60d9168cc88faa420e76e562c39b3f8bbdaa4022bfd288a713111185de6c0b3c"
+    },
+    "codigo/cliente_valido.rs": {
+      "bytes": 246,
+      "sha256": "cc3a5267d3911224b88a7953911fee5406b13cea76468ed5303ccc9cf5081be0"
+    },
+    "codigo/contraste.rs": {
+      "bytes": 9482,
+      "sha256": "4fc75b87bde1363e5ff32fdc22ef037987187f064156b4be4d64584412c44ac6"
+    },
+    "codigo/fabricar_entrega.rs": {
+      "bytes": 227,
+      "sha256": "f97ac66d51e953d1cafae73bd18d16f214b616e13baf87598edd94c0571eb06c"
+    },
+    "codigo/fabricar_referencia.rs": {
+      "bytes": 193,
+      "sha256": "ae3ad2d1331ef3f973b4d249ee8953671ee3c3c7e0b7e63ecbf3fdac5889f31f"
+    },
+    "codigo/recorrido.rs": {
+      "bytes": 14082,
+      "sha256": "fcfc6e53892392e1b876310b8624f0c2bb407e578562a0ad3ec07a4d1882e1f3"
+    },
+    "contrato-s17/BANCO_OBLIGACIONES.json": {
+      "bytes": 11503,
+      "sha256": "63720383324dafc1c654386746ddd6df4c276938c7001f8a1cbd76678cf8777b"
+    },
+    "contrato-s17/CONTRATO_RECORRIDO_CONJUNTO.md": {
+      "bytes": 12439,
+      "sha256": "51d8530ca4ada77e0e4f38d12657159070af3afdb1c39cbb2ea207e076500367"
+    },
+    "contrato-s17/DIAGNOSTICOS.json": {
+      "bytes": 2191,
+      "sha256": "e18935d5ce771299542e33067f1ec6096437658c404ebe7145db1fdbe71d6615"
+    },
+    "esperados/base-nueva.bin": {
+      "bytes": 28,
+      "sha256": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd"
+    },
+    "esperados/base-original.bin": {
+      "bytes": 28,
+      "sha256": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3"
+    },
+    "esperados/contexto-instruccion.txt": {
+      "bytes": 85,
+      "sha256": "d8f580377f7204775d17f1abd06f0415cfd6fbaf6401387aa7162eebec686bf4"
+    },
+    "esperados/contexto.txt": {
+      "bytes": 70,
+      "sha256": "f5d9989ef0f9d9336d86253ac6862216c188281f51265e3f3d8861968794864f"
+    },
+    "esperados/negativo.cuerpo": {
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+    },
+    "esperados/positivo.cuerpo": {
+      "bytes": 494,
+      "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237"
+    },
+    "esperados/solicitud.bin": {
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    },
+    "reproducir.py": {
+      "bytes": 6811,
+      "sha256": "f72adc3e26a64d1881bd1c20ced0f3bf77364509265faf06d1f3e398ae1984fd"
+    },
+    "verificar_custodia.py": {
+      "bytes": 2593,
+      "sha256": "1443cd08586bd28af55649d19a14243760320bf3e1554db18f9b6ade81f0c7e5"
+    }
+  }
+}

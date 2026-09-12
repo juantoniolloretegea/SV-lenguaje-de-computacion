@@ -1,0 +1,13 @@
+{
+  "compilador": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "rustc_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "sistema": "Linux",
+  "maquina": "x86_64",
+  "limites_por_invocacion": {
+    "pared_s": 60,
+    "cpu_s": 60,
+    "espacio_virtual_bytes": 2147483648,
+    "archivo_bytes": 33554432
+  },
+  "rss": "ru_maxrss de hijos acumulado hasta cada paso; no RSS individual de cada invocación."
+}

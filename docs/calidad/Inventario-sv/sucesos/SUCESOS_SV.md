@@ -22,7 +22,7 @@
 | S15 | finalizado | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:13:27Z |
 | S16 | finalizado | Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental | Watson / W-S0 | 2026-09-12T19:22:37Z |
 | S17 | finalizado | Contrato del recorrido documental conjunto: contexto, base, recepción, cobertura y entrega | Watson / W-S0 | 2026-09-12T19:49:05Z |
-| S18 | en ejecución | Recorrido conjunto de contexto, base consumida, recepción y entrega tipada | Watson / W-S0 | 2026-09-12T20:04:01Z |
+| S18 | finalizado | Recorrido conjunto de contexto, base consumida, recepción y entrega tipada | Watson / W-S0 | 2026-09-12T20:08:10Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -656,15 +656,15 @@
 
 ## S18 · Recorrido conjunto de contexto, base consumida, recepción y entrega tipada
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Fecha alta utc:** 2026-09-12T20:04:01Z
 
 **Fecha inicio utc:** 2026-09-12T19:53:47Z
 
-**Fecha actualizacion utc:** 2026-09-12T20:04:01Z
+**Fecha actualizacion utc:** 2026-09-12T20:08:10Z
 
-**Fecha fin utc:** —
+**Fecha fin utc:** 2026-09-12T20:08:10Z
 
 **Unidad responsable:** Watson / W-S0
 
@@ -676,15 +676,15 @@
 
 **Dependencias:** S17 / RETP-188; fuentes originales G1; S14/S15; autorización expresa de continuación.
 
-**Resultado:** Realización, contrato S17, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía.
+**Resultado:** Conforme en el banco S18: recorrido conjunto con producción G1, base consumida, contexto, recepción y entrega tipada; original y reevaluación conservados.
 
-**Verificacion:** Cortes y rectores cotejados; once archivos fuente recibidos por blob y SHA-256; 24 obligaciones S17 conservadas.
+**Verificacion:** 144 observaciones en seis ejecuciones debug/release; 449 capturas idénticas por ejecución; 29 invocaciones; cuatro mutantes detectados y dos fabricaciones externas rechazadas por privacidad.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/ACTA_RESULTADO_S18.md)
 
-**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-189)
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-190)
 
-**Siguiente accion:** Ejecutar reproductor con máximo 29 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.
+**Siguiente accion:** Recibir el resultado conjunto en la matriz de integración 1+3 y el inventario de causas; decidir el relevo documental al catálogo conservando B/E/K/L y las puertas pendientes.
 
 **Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
 

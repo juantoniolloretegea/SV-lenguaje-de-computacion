@@ -1,0 +1,9 @@
+{
+  "fecha_utc": "2026-09-12T20:06:36.034220+00:00",
+  "apertura": {
+    "laboratorio": "c8798c67c0cd6f13b809308f7e1a3a77a4d99547",
+    "lenguaje": "3e4f9e660628ab4b8e94098a7f452b9b579cc759"
+  },
+  "fijacion_sha256": "2c3a1488a0b3b5b83905d706607377bcbd64cde0282bd23442d9088eac495644",
+  "archivos_intactos": 29
+}

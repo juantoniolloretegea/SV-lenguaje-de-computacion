@@ -1,0 +1,26 @@
+{
+  "debug": {
+    "sha256": "a7e69090b58793875b1434530db4b02716dfb11979e789fe9189dc849a660886",
+    "bytes": 5250760
+  },
+  "release": {
+    "sha256": "a13601d20afd7800aed6a948c7268cc30967773f26f1b3d7b9234136edb53d6c",
+    "bytes": 4726056
+  },
+  "omitir_contexto": {
+    "sha256": "93e0649ca68409fa441957e6c9dc7f87dddc28db374ab7eb9f3fdcb95b98b067",
+    "bytes": 5250648
+  },
+  "forzar_consumo_positivo": {
+    "sha256": "2139062bf23e08743289586e382e401f47e1f8d445733ee9cd1e11f57b020aee",
+    "bytes": 5250760
+  },
+  "omitir_base_citada": {
+    "sha256": "3f54200945863cd2b189b72c2d201e9d67667e077b6d98029225550de290709b",
+    "bytes": 5250664
+  },
+  "admitir_negativa": {
+    "sha256": "04d3ff321f035f114352745cbf063da037bd258232479e45a1665272cc27567a",
+    "bytes": 5251376
+  }
+}

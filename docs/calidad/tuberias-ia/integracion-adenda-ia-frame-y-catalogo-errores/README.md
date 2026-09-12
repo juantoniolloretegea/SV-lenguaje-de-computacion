@@ -226,3 +226,10 @@ Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResu
 2026-09-12T20:04:01Z. [Contrato y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/README.md). Realización, contrato S17, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía. Cortes y rectores cotejados; once archivos fuente recibidos por blob y SHA-256; 24 obligaciones S17 conservadas.
 
 Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. **Siguiente:** Ejecutar reproductor con máximo 29 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado. El catálogo recibe causas por etapa; las puertas y reservas P3/P4/P5/P6 conservan su estado.
+
+
+## S18 · Resultado acotado del recorrido documental conjunto · RETP-190
+
+2026-09-12T20:08:10Z. [Contrato y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/ACTA_RESULTADO_S18.md). Conforme en el banco S18: recorrido conjunto con producción G1, base consumida, contexto, recepción y entrega tipada; original y reevaluación conservados. 144 observaciones en seis ejecuciones debug/release; 449 capturas idénticas por ejecución; 29 invocaciones; cuatro mutantes detectados y dos fabricaciones externas rechazadas por privacidad.
+
+Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. **Siguiente:** Recibir el resultado conjunto en la matriz de integración 1+3 y el inventario de causas; decidir el relevo documental al catálogo conservando B/E/K/L y las puertas pendientes. El catálogo recibe causas por etapa; las puertas y reservas P3/P4/P5/P6 conservan su estado.

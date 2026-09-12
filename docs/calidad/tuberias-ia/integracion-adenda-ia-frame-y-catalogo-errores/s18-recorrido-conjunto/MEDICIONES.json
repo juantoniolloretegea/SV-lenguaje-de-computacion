@@ -1,0 +1,10 @@
+{
+  "version": "S18-MEDICIONES/1",
+  "invocaciones": 29,
+  "pared_s": 6.895558514006552,
+  "cpu_usuario_s": 6.992176,
+  "cpu_sistema_s": 1.114063,
+  "rss_max_hijos_kib": 226692,
+  "rss_individual": null,
+  "interpretacion": "CPU y pared de invocaciones de esta campaña; RSS es máximo acumulado de hijos, no medición individual; no equivalen a coste de producción o de proveedor."
+}
