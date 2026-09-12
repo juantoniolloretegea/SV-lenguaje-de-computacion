@@ -1,0 +1,46 @@
+{
+  "fuentes_sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+  "archivos_previos_modificados": [
+    "lote-g1/lib.rs"
+  ],
+  "archivos_nuevos": [
+    "lectura/forjar.rs",
+    "lectura/tests.rs",
+    "lectura/vida.rs",
+    "lote-g1/lectura.rs"
+  ],
+  "realizaciones": [
+    {
+      "modo": "debug",
+      "binario": "regresion",
+      "bytes": 8040080,
+      "sha256": "9014965a969dfd4dd13c51569d3c8b86257111b841e176a012bb264fcdf2acf5",
+      "LG1_FUENTES": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+      "LG1_BINARIO": "9014965a969dfd4dd13c51569d3c8b86257111b841e176a012bb264fcdf2acf5"
+    },
+    {
+      "modo": "debug",
+      "binario": "lectura",
+      "bytes": 8001104,
+      "sha256": "b77ad26182e4b69d4300b4fa39666bc07bbd00db50cf9d8780b57710f928bb86",
+      "LG1_FUENTES": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+      "LG1_BINARIO": "b77ad26182e4b69d4300b4fa39666bc07bbd00db50cf9d8780b57710f928bb86"
+    },
+    {
+      "modo": "release",
+      "binario": "regresion",
+      "bytes": 7399688,
+      "sha256": "bfd5796d5d483d419459ac0653e108c74c74fbeae483af7233311ba0bee1e766",
+      "LG1_FUENTES": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+      "LG1_BINARIO": "bfd5796d5d483d419459ac0653e108c74c74fbeae483af7233311ba0bee1e766"
+    },
+    {
+      "modo": "release",
+      "binario": "lectura",
+      "bytes": 7378840,
+      "sha256": "f8b0e45e373c6ed5a0e271cffeacdd1099e1a80ba457d0b34dee056590d62667",
+      "LG1_FUENTES": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+      "LG1_BINARIO": "f8b0e45e373c6ed5a0e271cffeacdd1099e1a80ba457d0b34dee056590d62667"
+    }
+  ]
+}

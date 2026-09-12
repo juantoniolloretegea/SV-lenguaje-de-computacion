@@ -1,0 +1,84 @@
+{
+  "archivos": [
+    {
+      "ruta": "CAPTURAS.json.gz.b64",
+      "bytes": 108405,
+      "sha256": "e5f4b2ace8debc328e162ebd8933a9cca518d4d6d193b92cd7fdf121eff96850"
+    },
+    {
+      "ruta": "CAPTURAS_INDICE.json",
+      "bytes": 76887,
+      "sha256": "c786cb816843c4fd8365dbf01f94913dd4de5ff220098bcbe7b7c507b765ac7f"
+    },
+    {
+      "ruta": "COMANDOS.json",
+      "bytes": 18596,
+      "sha256": "d0195e891334a06490734bd00749696a48087de3cb3540dde0f9e6a6663c01e2"
+    },
+    {
+      "ruta": "COMPILADOR.json",
+      "bytes": 874,
+      "sha256": "1e9dc4366ae4478002c1ca729daff48213768b8912a334a6f6e113b1131f94ff"
+    },
+    {
+      "ruta": "CONDUCTOR_EJECUTADO.py",
+      "bytes": 3277,
+      "sha256": "2aae768afe790ab3428470dfc4c9388e4776710e4ef97321e8ad491cc3445c78"
+    },
+    {
+      "ruta": "CONTRATO_Y_PLAN.md",
+      "bytes": 3692,
+      "sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20"
+    },
+    {
+      "ruta": "CORTES_Y_REFERENCIAS.json",
+      "bytes": 3320,
+      "sha256": "5f58da0497127f11f6ec91f7efb6869c05306c91111dd919d07bc129120d5b33"
+    },
+    {
+      "ruta": "FUENTES_REPRODUCIBLES.json",
+      "bytes": 732857,
+      "sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 8558,
+      "sha256": "2585e3d7f9efe95cc43d2ec0653bbf517a1c47e73d2d9d2b67da91946fea3c82"
+    },
+    {
+      "ruta": "REALIZACIONES.json",
+      "bytes": 1707,
+      "sha256": "e1b50b7fb856e49afa3bc938661c9d72c10a2ded1d4839defc512ddddaca1baf"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 572,
+      "sha256": "1a900071df101814bd846a79849c99e7807d6d3c0316cd4d6fc0758adf7ddf2c"
+    },
+    {
+      "ruta": "codigo/forjar.rs",
+      "bytes": 97,
+      "sha256": "8a8008becc5dfa4343315c4d7afb48aefa8aac0aecff16eb379dc9f3f3757966"
+    },
+    {
+      "ruta": "codigo/lectura.rs",
+      "bytes": 3639,
+      "sha256": "c0bc409d7ecc5b8cc6460f97d893c1fe0fd420b0829d3daccbc0f4a577758e00"
+    },
+    {
+      "ruta": "codigo/tests.rs",
+      "bytes": 5352,
+      "sha256": "17717bb84fcdea83f4da0e3708a3dd366e71c35673e3a759207cd5c439452dd4"
+    },
+    {
+      "ruta": "codigo/vida.rs",
+      "bytes": 263,
+      "sha256": "91cdb76e816b14787d0ac4f57c3b5e59939120ac83cf9fc64c86176e840f56f8"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 3683,
+      "sha256": "cfea21f2abe48b795ac2156fd23e56bcc849308a70b415f987b22e6106d587e4"
+    }
+  ]
+}

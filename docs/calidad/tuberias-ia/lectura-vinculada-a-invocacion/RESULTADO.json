@@ -1,0 +1,16 @@
+{
+  "version": "IE004-LECTURA-VINCULADA-RESULTADO/1",
+  "fuentes_sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+  "plan_sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20",
+  "compilador_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "modos": [
+    "debug",
+    "release"
+  ],
+  "regresion_por_modo": 12,
+  "testigos_runtime_por_modo": 9,
+  "clientes_rechazados_por_modo": 2,
+  "cuerpos_anteriores_iguales_por_modo": 24,
+  "procesos": 17,
+  "estado": "CONFORME_EN_ALCANCE_DOCUMENTAL"
+}

@@ -1,0 +1,67 @@
+{
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "ad4d390d6fb1e7134040001b79ba2d433895b786",
+      "tree": "9124e8612ca80f701cacce01d5d1d3b5a9ce1304"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "a4186826314bf466d50201182b37506d911080e5",
+      "tree": "18a4d22b088d3e5291ca165d33fe6bd69c0372a9"
+    }
+  },
+  "referencias": [
+    {
+      "ruta": "AGENTS.md",
+      "blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "estado": "Mismos bytes de la lectura completa anterior; cotejados en corte actual"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650",
+      "estado": "Mismos bytes de la lectura completa anterior; cotejados en corte actual"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "estado": "Mismos bytes de la lectura completa anterior; cotejados en corte actual"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "estado": "Mismos bytes de la lectura completa anterior; cotejados en corte actual"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+      "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c",
+      "estado": "Mismos bytes de la lectura completa anterior; cotejados en corte actual"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/EXPEDIENTE_CORRESPONDENCIA_TRAZABILIDAD_IE004_2026_09_11.md",
+      "blob": "f8821e702c2c65679e7a99dc4b4c4b1513f8fe02",
+      "sha256": "a02dcab47e9448c7258703994f42fd250c1e9e9f5cd137ecd7e80ecd11c4be68",
+      "estado": "Recuperado y consultado para delimitar esta pieza"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/G2_CORRESPONDENCIA_Y_LIMITE.md",
+      "blob": "b0ca714d7dad4ecec358f37ada685bf6678df496",
+      "sha256": "e9d5771dd547c0f1b288d6c006b95f2173b77cf40c19b149a5e948b10739d28e",
+      "estado": "Recuperado y consultado para delimitar esta pieza"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/CONTRATO_RECIBO_CUSTODIADO_IE004_G1_1.md",
+      "blob": "7dd1f4b4e20e43b1aee60ea98335dbc5b278bec3",
+      "sha256": "baaba07d07f0010f455abe71174914513b948ebdea5633caa33cacbb5189c4aa",
+      "estado": "Recuperado y consultado para delimitar esta pieza"
+    }
+  ],
+  "capsula_previa_sha256": "77bbd597be86a38a21628d5c249ab53c644af749e13c73270502e5a03217a113"
+}

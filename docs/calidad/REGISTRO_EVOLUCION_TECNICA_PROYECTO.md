@@ -1488,3 +1488,16 @@ Continúa el workflow V2. No se cambia núcleo productivo, gramática, IR ni dom
 Se inventarían representación, validación y ejecución en doce familias, distinguiendo las reservas de Comp, supervisión y transducción. Rust actual admite operaciones evaluate/gate sin calcular sus resultados; doce testigos finales caracterizan siete admisiones y cinco rechazos semánticos exactos. Las admisiones General sin operador y actualización de puente sin productor corroboran deudas conocidas. Se conservan el montaje sintáctico inicial fallido, su corrección en los testigos, el plan final, fuentes, comandos, capturas y huellas; dos montajes nativos de quince procesos. No se modifican fuentes Rust productivas.
 
 La deuda viva recibe el inventario sin duplicar identificadores ni declarar cierres de DFL-001/003/004/005/006/013. Workflow V2, catálogo/localización y secuencia rectora conservados; esta auditoría es entrada de la puerta algebraica de fila 10, no ejecución íntegra de esa fase. No se decide la composición particular dominio/agente, no se abre interfaz profesional ni reserva, y no se acredita seguridad universal ni aceptación productiva final. Estado: AUDITORIA_ACOTADA_Y_CARACTERIZACION_COMPLETADAS; CAPACIDADES_ALGEBRAICAS_PENDIENTES.
+
+
+<a id="retp-152"></a>
+
+## RETP-2026-152 · Lectura vinculada a invocación y procedencia
+
+12/09/2026. [Candidata, contrato y evidencia](tuberias-ia/lectura-vinculada-a-invocacion/README.md). Cortes previos Lenguaje ad4d390d6fb1e7134040001b79ba2d433895b786 y laboratorio a4186826314bf466d50201182b37506d911080e5. Continúa la autorización humana con resultado recuperable y siguiente objeto único.
+
+Sobre la entrega y presentación RETP-149/150 se añade vista documental con identidad seleccionada por el conductor, operación de lectura fija y procedencia prestada. Rechaza cruces incluso con cuerpos iguales, operación/versión ajenas, excesos y contenido distinto. No confiere autoridad profesional ni produce referencias protegidas de R1.
+
+Una matriz Rust 1.98.0 debug/release, 17 procesos, 12 regresiones y nueve nuevos testigos por modo; 24 cuerpos y procedencia recuperados, cotejo con oráculo previo, dos negativos de compilación por modo. Sin corrección tras ejecutar ni fallo inesperado. Cápsula de 71 fuentes, capturas íntegras, comandos y reproductor conservados. Correspondencia de bytes no prueba origen físico de copias idénticas; custodia confiable intra-proceso, sin imposición de host ni integración productiva.
+
+Se conserva workflow V2 y RETP-151. Próximo objeto: enlace con operación gobernada y productores reales de referentes protegidos; no fabricar autoridad ni reabrir al humano la definición ya dada. Catálogo/localización, fidelidad visual, cierre nuclear y aceptación productiva final pendientes. Estado: CONFORME_EN_ALCANCE_DOCUMENTAL.

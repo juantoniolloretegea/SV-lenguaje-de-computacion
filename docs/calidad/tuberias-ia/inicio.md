@@ -151,3 +151,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Auditoría del soporte algebraico — RETP-151
 
 [Álgebra constituida y soporte real del núcleo](../algebra-constituida-y-soporte-del-nucleo/README.md). Contraste de Fundamentos y serie I–VI con Rust en corte e611218a. Doce testigos de caracterización: siete admisiones y cinco rechazos semánticos; las admisiones de concurrencia general sin operador y de actualización de puente sin productor documentan carencias, no conformidad algebraica. La ejecución de leyes comunes pertenece al núcleo; la composición particular de cada dominio no se decide aquí. Se conserva el workflow V2 y la secuencia rectora. Núcleo productivo sin modificaciones; no cierra el catálogo ni promueve las candidatas.
+
+
+## Lectura vinculada a invocación — RETP-152
+
+[Resultado Rust, evidencia y siguiente paso](lectura-vinculada-a-invocacion/README.md). La vista conserva solicitud, original y procedencia; rechaza identidades intercambiadas aunque las respuestas sean iguales. Depuración y optimización: 12 controles previos y nueve nuevos por modo, 24 cuerpos preservados y dos negativos de compilación por modo. Operación documental experimental; no concede autoridad profesional ni cierra G2. La misma carpeta conserva las restricciones del relevo y el siguiente objeto, sin reabrir definiciones al autor.

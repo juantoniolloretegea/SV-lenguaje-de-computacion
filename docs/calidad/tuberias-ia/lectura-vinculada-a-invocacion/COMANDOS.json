@@ -1,0 +1,358 @@
+[
+  {
+    "paso": "compilador",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "-vV"
+    ],
+    "exit_code": 0,
+    "stdout": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+    "stderr": "",
+    "segundos": 0.013,
+    "esperado": 0
+  },
+  {
+    "paso": "debug g1",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "segundos": 0.668,
+    "esperado": 0
+  },
+  {
+    "paso": "debug lote",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=lote",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/liblote.rlib"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 0.372,
+    "esperado": 0
+  },
+  {
+    "paso": "debug compilar regresion",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--test",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/regresion"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 0.443,
+    "esperado": 0
+  },
+  {
+    "paso": "debug ejecutar regresion",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/regresion",
+      "--test-threads=1",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "stdout": "\nrunning 12 tests\ntest tests::a_lg01_lote_completo ... TESTIGO_LOTE_G1:LG1-01:CONFORME\nok\ntest tests::b_lg02_identidad_lote ... TESTIGO_LOTE_G1:LG1-02:CONFORME\nok\ntest tests::c_lg03_identidad_montaje ... TESTIGO_LOTE_G1:LG1-03:CONFORME\nok\ntest tests::d_lg04_integridad ... TESTIGO_LOTE_G1:LG1-04:CONFORME\nok\ntest tests::e_lg05_peticion_intercambiada ... TESTIGO_LOTE_G1:LG1-05:CONFORME\nok\ntest tests::f_lg06_traza_intercambiada ... TESTIGO_LOTE_G1:LG1-06:CONFORME\nok\ntest tests::g_lg07_duplicado ... TESTIGO_LOTE_G1:LG1-07:CONFORME\nok\ntest tests::h_lg08_orden ... TESTIGO_LOTE_G1:LG1-08:CONFORME\nok\ntest tests::i_lg09_manejador_cruzado ... TESTIGO_LOTE_G1:LG1-09:CONFORME\nok\ntest tests::j_lg10_incompleto ... TESTIGO_LOTE_G1:LG1-10:CONFORME\nok\ntest tests::k_lg11_cupo ... TESTIGO_LOTE_G1:LG1-11:CONFORME\nok\ntest tests::l_lg12_invocaciones_distintas ... TESTIGO_LOTE_G1:LG1-12:CONFORME\nok\n\ntest result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s\n\n",
+    "stderr": "",
+    "segundos": 0.331,
+    "esperado": 0
+  },
+  {
+    "paso": "debug compilar lectura",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--test",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/tests.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/lectura"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 0.164,
+    "esperado": 0
+  },
+  {
+    "paso": "debug ejecutar lectura",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/lectura",
+      "--test-threads=1",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "stdout": "\nrunning 9 tests\ntest lv01_24_entregas_y_procedencia ... LV01: 24 entregas y sus fuentes recuperadas\nok\ntest lv02_cuerpos_identicos_invocaciones_distintas ... LV02: igualdad de bytes confirmada; cruces rechazados; propios aceptados\nok\ntest lv03_ordinal_ajeno ... ok\ntest lv04_operacion_ajena ... ok\ntest lv05_version_ajena ... ok\ntest lv06_cabeceras_acotadas ... ok\ntest lv07_contenido_ajeno ... ok\ntest lv08_limite_presentacion ... ok\ntest lv09_sin_entrega_previa ... ok\n\ntest result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s\n\n",
+    "stderr": "",
+    "segundos": 0.267,
+    "esperado": 0
+  },
+  {
+    "paso": "debug impedir forjar",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/forjar"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "warning: unreachable expression\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs:2:65\n  |\n2 | fn main(){let _=LecturaEntregable{consulta:todo!(),presentacion:todo!()};}\n  |                                            -------              ^^^^^^^ unreachable expression\n  |                                            |\n  |                                            any code following this expression is unreachable\n  |\n  = note: `#[warn(unreachable_code)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0451]: fields `consulta` and `presentacion` of struct `lote::lectura::LecturaEntregable` are private\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs:2:35\n  |\n2 | fn main(){let _=LecturaEntregable{consulta:todo!(),presentacion:todo!()};}\n  |                                   ^^^^^^^^         ^^^^^^^^^^^^ private field\n  |                                   |\n  |                                   private field\n\nerror: aborting due to 1 previous error; 1 warning emitted\n\nFor more information about this error, try `rustc --explain E0451`.\n",
+    "segundos": 0.025,
+    "esperado": 1
+  },
+  {
+    "paso": "debug impedir vida",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/vida.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/debug/vida"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "error[E0515]: cannot return value referencing local variable `texto`\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/vida.rs:4:2\n  |\n4 |  q.comprobar(PropuestaDeLectura{version:VERSION,operacion:OPERACION,identidad:q.identidad(),texto:&texto}).unwrap()\n  |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^------^^^^^^^^^^^\n  |  |                                                                                                |\n  |  |                                                                                                `texto` is borrowed here\n  |  returns a value referencing data owned by the current function\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0515`.\n",
+    "segundos": 0.02,
+    "esperado": 1
+  },
+  {
+    "paso": "release g1",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "segundos": 2.458,
+    "esperado": 0
+  },
+  {
+    "paso": "release lote",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--crate-type=lib",
+      "--crate-name=lote",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/liblote.rlib"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 1.219,
+    "esperado": 0
+  },
+  {
+    "paso": "release compilar regresion",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--test",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/regresion"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 1.269,
+    "esperado": 0
+  },
+  {
+    "paso": "release ejecutar regresion",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/regresion",
+      "--test-threads=1",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "stdout": "\nrunning 12 tests\ntest tests::a_lg01_lote_completo ... TESTIGO_LOTE_G1:LG1-01:CONFORME\nok\ntest tests::b_lg02_identidad_lote ... TESTIGO_LOTE_G1:LG1-02:CONFORME\nok\ntest tests::c_lg03_identidad_montaje ... TESTIGO_LOTE_G1:LG1-03:CONFORME\nok\ntest tests::d_lg04_integridad ... TESTIGO_LOTE_G1:LG1-04:CONFORME\nok\ntest tests::e_lg05_peticion_intercambiada ... TESTIGO_LOTE_G1:LG1-05:CONFORME\nok\ntest tests::f_lg06_traza_intercambiada ... TESTIGO_LOTE_G1:LG1-06:CONFORME\nok\ntest tests::g_lg07_duplicado ... TESTIGO_LOTE_G1:LG1-07:CONFORME\nok\ntest tests::h_lg08_orden ... TESTIGO_LOTE_G1:LG1-08:CONFORME\nok\ntest tests::i_lg09_manejador_cruzado ... TESTIGO_LOTE_G1:LG1-09:CONFORME\nok\ntest tests::j_lg10_incompleto ... TESTIGO_LOTE_G1:LG1-10:CONFORME\nok\ntest tests::k_lg11_cupo ... TESTIGO_LOTE_G1:LG1-11:CONFORME\nok\ntest tests::l_lg12_invocaciones_distintas ... TESTIGO_LOTE_G1:LG1-12:CONFORME\nok\n\ntest result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s\n\n",
+    "stderr": "",
+    "segundos": 0.041,
+    "esperado": 0
+  },
+  {
+    "paso": "release compilar lectura",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "--test",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/tests.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/lectura"
+    ],
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "",
+    "segundos": 0.427,
+    "esperado": 0
+  },
+  {
+    "paso": "release ejecutar lectura",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/lectura",
+      "--test-threads=1",
+      "--nocapture"
+    ],
+    "exit_code": 0,
+    "stdout": "\nrunning 9 tests\ntest lv01_24_entregas_y_procedencia ... LV01: 24 entregas y sus fuentes recuperadas\nok\ntest lv02_cuerpos_identicos_invocaciones_distintas ... LV02: igualdad de bytes confirmada; cruces rechazados; propios aceptados\nok\ntest lv03_ordinal_ajeno ... ok\ntest lv04_operacion_ajena ... ok\ntest lv05_version_ajena ... ok\ntest lv06_cabeceras_acotadas ... ok\ntest lv07_contenido_ajeno ... ok\ntest lv08_limite_presentacion ... ok\ntest lv09_sin_entrega_previa ... ok\n\ntest result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s\n\n",
+    "stderr": "",
+    "segundos": 0.032,
+    "esperado": 0
+  },
+  {
+    "paso": "release impedir forjar",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/forjar"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "warning: unreachable expression\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs:2:65\n  |\n2 | fn main(){let _=LecturaEntregable{consulta:todo!(),presentacion:todo!()};}\n  |                                            -------              ^^^^^^^ unreachable expression\n  |                                            |\n  |                                            any code following this expression is unreachable\n  |\n  = note: `#[warn(unreachable_code)]` (part of `#[warn(unused)]`) on by default\n\nerror[E0451]: fields `consulta` and `presentacion` of struct `lote::lectura::LecturaEntregable` are private\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/forjar.rs:2:35\n  |\n2 | fn main(){let _=LecturaEntregable{consulta:todo!(),presentacion:todo!()};}\n  |                                   ^^^^^^^^         ^^^^^^^^^^^^ private field\n  |                                   |\n  |                                   private field\n\nerror: aborting due to 1 previous error; 1 warning emitted\n\nFor more information about this error, try `rustc --explain E0451`.\n",
+    "segundos": 0.025,
+    "esperado": 1
+  },
+  {
+    "paso": "release impedir vida",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=3",
+      "-C",
+      "overflow-checks=no",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/vida.rs",
+      "--extern",
+      "g1=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release",
+      "-o",
+      "/workspace/scratch/a4c9906d0361/tmp/continuidad-152/release/vida"
+    ],
+    "exit_code": 1,
+    "stdout": "",
+    "stderr": "error[E0515]: cannot return value referencing local variable `texto`\n --> /workspace/scratch/a4c9906d0361/tmp/continuidad-152/candidata/lectura/vida.rs:4:2\n  |\n4 |  q.comprobar(PropuestaDeLectura{version:VERSION,operacion:OPERACION,identidad:q.identidad(),texto:&texto}).unwrap()\n  |  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^------^^^^^^^^^^^\n  |  |                                                                                                |\n  |  |                                                                                                `texto` is borrowed here\n  |  returns a value referencing data owned by the current function\n\nerror: aborting due to 1 previous error\n\nFor more information about this error, try `rustc --explain E0515`.\n",
+    "segundos": 0.022,
+    "esperado": 1
+  }
+]
