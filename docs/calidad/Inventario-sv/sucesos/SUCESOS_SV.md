@@ -15,6 +15,7 @@
 | S8 | finalizado | Recepción complementaria de Mistral en la primera prueba S4 | Watson / W-S0 | 2026-09-12T16:21:05Z |
 | S9 | finalizado | Recepción complementaria de Mistral en la segunda prueba de trazabilidad | Watson / W-S0 | 2026-09-12T16:36:15Z |
 | S10 | finalizado | Consolidación de resultados, ranquin documental y modelos con pesos disponibles | Watson / W-S0 | 2026-09-12T16:56:53Z |
+| S11 | en ejecución | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:38:35Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -399,4 +400,39 @@
 **Siguiente accion:** Retomar integración 1+3: reconciliar matriz A–L, fijar siguiente hueco integrado y montaje antes de ejecutar; catálogo ES/EN posterior.
 
 **Observaciones:** Sin clasificación de rapidez ni homologación de pesos descargables. Claude con exposición alta. No implica cierre A–L/P4/P5/P6 ni promoción productiva. Sólo se retira inicio.md de la carpeta solicitada.
+
+
+## S11 · Integración A/H: recepción de documento externo, cobertura e identidad contextual
+
+**Estado:** en ejecución
+
+**Fecha alta utc:** 2026-09-12T17:38:35Z
+
+**Fecha inicio utc:** 2026-09-12T17:38:35Z
+
+**Fecha actualizacion utc:** 2026-09-12T17:38:35Z
+
+**Fecha fin utc:** —
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Diez casos sintéticos nativos; referencia S2 independiente, orden externa como dato, cobertura y archivo S3; identidad, integridad y límite de contexto.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje 81cef96616fa2a005e1ce1730ccac2309de7baa4; laboratorio 310461affc7a047912ecb66226d095f97acca3d8
+
+**Dependencias:** S10; S1/S2/S3; matriz RETP-162 reconciliada; autorización expresa de continuación por Dirección.
+
+**Resultado:** Contrato, casos, esperados, código y presupuesto fijados antes de compilar. Preparación material iniciada; campaña funcional todavía no ejecutada.
+
+**Verificacion:** Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-179)
+
+**Siguiente accion:** Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado.
+
+**Observaciones:** Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
 

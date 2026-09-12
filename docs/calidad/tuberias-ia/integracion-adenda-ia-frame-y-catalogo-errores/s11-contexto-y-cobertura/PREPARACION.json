@@ -1,0 +1,24 @@
+{
+  "compilacion_previa": false,
+  "ejecucion_funcional_previa": false,
+  "incidencias": [
+    {
+      "tipo": "cotejo previo",
+      "hecho": "El esperado P3-11.cuerpo no existe como blob separado en Git; el primer cotejo de procedencia se detuvo.",
+      "resolucion": "Cotejado el contenedor ESPERADOS.json publicado y sus bytes base64; esperado local idéntico. Sin cambiar bytes ni criterios."
+    },
+    {
+      "tipo": "entorno",
+      "hecho": "La ruta histórica de rustc ya no estaba disponible; no había rustc en PATH.",
+      "resolucion": "Recuperado archivo oficial Rust 1.98.0; checksum oficial y hash del binario idéntico a S2/S3 comprobados.",
+      "afecta_esperados": false
+    }
+  ],
+  "recuperacion_compilador": {
+    "url": "https://static.rust-lang.org/dist/rust-1.98.0-x86_64-unknown-linux-gnu.tar.xz",
+    "sha256": "ed8ee2df70909c88cbaf87a6cfa3920dac00b537de12a6abe6906641e0f5952f",
+    "bytes": 202502800,
+    "checksum_oficial": "ed8ee2df70909c88cbaf87a6cfa3920dac00b537de12a6abe6906641e0f5952f"
+  },
+  "limites": "Inspección y materialización previas. No se ha cualificado el código nuevo."
+}

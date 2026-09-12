@@ -1,0 +1,56 @@
+{
+  "corte": "81cef96616fa2a005e1ce1730ccac2309de7baa4",
+  "archivos": [
+    {
+      "local_origen": "s3-presentacion/entrega/FUENTES_S2.json",
+      "uso": "FUENTES_S2.json",
+      "bytes": 737698,
+      "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+      "blob": "af448553f130665985b9be210990aea9d9da7cec",
+      "rutas_en_corte": [
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/FUENTES_S2.json"
+      ]
+    },
+    {
+      "local_origen": "s3-presentacion/entrega/DECLARACION_VIGENCIA.json",
+      "uso": "DECLARACION_VIGENCIA.json",
+      "bytes": 388,
+      "sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038",
+      "blob": "fa4e7e2a175fb60af208276d7493c66a201354d3",
+      "rutas_en_corte": [
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/DECLARACION_VIGENCIA.json",
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/DECLARACION_VIGENCIA.json"
+      ]
+    },
+    {
+      "local_origen": "s3-presentacion/entrega/codigo/destino.rs",
+      "uso": "codigo/destino.rs",
+      "bytes": 1305,
+      "sha256": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e",
+      "blob": "bb9811c9f8bb7964419ea25bd508b62144203532",
+      "rutas_en_corte": [
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/codigo/destino.rs"
+      ]
+    },
+    {
+      "local_origen": "s2-vigencia/entrega/sensibilidad/sin-obligacion/cobertura.rs",
+      "uso": "sensibilidad/cobertura-sin-obligacion.rs",
+      "bytes": 2551,
+      "sha256": "492985bb834044fdf6089406a3e01797b5885db7728b3899f4b6edd7048bb239",
+      "blob": "34aaf782159cc3759532006621ea28cc730dc373",
+      "rutas_en_corte": [
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/sensibilidad/sin-obligacion/cobertura.rs"
+      ]
+    },
+    {
+      "local_origen": "s2-vigencia/entrega/ESPERADOS.json",
+      "uso": "ESPECIMENES.json:negativo.cuerpo",
+      "bytes": 8175,
+      "sha256": "d2ac2468898ac941fe22fbc3f7f49e15c68d0cbcaf2b320945bf5ed1208813f9",
+      "blob": "5d8e1c08cfc6492fb04beb5aee34de49f9962886",
+      "rutas_en_corte": [
+        "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/ESPERADOS.json"
+      ]
+    }
+  ]
+}

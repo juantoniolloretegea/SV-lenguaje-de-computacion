@@ -1,0 +1,57 @@
+{
+  "version": "S11-BANCO/1",
+  "capsula_s2_sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+  "especimenes_sha256": "c9a928e97f6ede528a5ed35a6d01f01d905dc08173b22432d07340e80207f6a2",
+  "casos": [
+    {
+      "id": "AH01",
+      "esperado": "DOCUMENTO_NEUTRO_ENTREGADO"
+    },
+    {
+      "id": "AH02",
+      "esperado": "ORDEN_CONSERVADA_SIN_AUTORIDAD"
+    },
+    {
+      "id": "AH03",
+      "esperado": "FaltaVigencia"
+    },
+    {
+      "id": "AH04",
+      "esperado": "FaltaVigencia"
+    },
+    {
+      "id": "AH05",
+      "esperado": "VigenciaDistinta"
+    },
+    {
+      "id": "AH06",
+      "esperado": "IdentidadContexto"
+    },
+    {
+      "id": "AH07",
+      "esperado": "DocumentoDistinto"
+    },
+    {
+      "id": "AH08",
+      "esperado": "DocumentoDistinto"
+    },
+    {
+      "id": "AH09",
+      "esperado": "LimiteDocumento"
+    },
+    {
+      "id": "AH10",
+      "esperado": "DOCUMENTO_LIMITE_ENTREGADO"
+    }
+  ],
+  "presupuesto": {
+    "controles": 10,
+    "ejecuciones_normales": 6,
+    "observaciones": 60,
+    "sensibilidades": 2,
+    "invocaciones_maximas": 22,
+    "timeout_por_invocacion_s": 60,
+    "reintentos_funcionales": 0
+  },
+  "modalidad": "conductor Rust sintético; no participante LLM"
+}

@@ -1829,3 +1829,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-178 · S10 · Acta comparativa y retorno a integración 1+3
 
 2026-09-12T16:56:53Z. Cinco participantes, diez entregas y 120 casos consolidados. Empate de conformidad documental Grok/Claude, con exposición alta de Claude; Qwen aceptado provisionalmente por Dirección con original NO_CONFORME; DeepSeek con incumplimiento de fidelidad; Mistral descartado por Dirección tras segunda entrega NO_CONFORME. Fuentes oficiales de modelos disponibles, publicación, licencia y continuidad, sin traslado automático del resultado comercial a pesos propios. [Acta, ranquin y evidencias](Inventario-sv/ranquin-ias-trazabilidad/ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md). Retirada exclusiva de inicio.md. Se retoma prioridad de integración 1+3, con catálogo ES/EN posterior y demás obligaciones intactas.
+
+
+<a id="retp-179"></a>
+
+### RETP-2026-179 · S11 · Fijación previa de recepción contextual y cobertura A/H
+
+2026-09-12T17:38:35Z. Contrato, casos, esperados, código y presupuesto fijados antes de compilar. Preparación material iniciada; campaña funcional todavía no ejecutada. Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos. Siguiente: Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado.

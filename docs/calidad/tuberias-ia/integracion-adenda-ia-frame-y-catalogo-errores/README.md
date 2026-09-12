@@ -145,3 +145,12 @@ La prioridad sigue siendo la integración 1+3, con recogida continua de causas. 
 Se puede retomar la integración del punto 1 (integridad/trazabilidad IA) con el 3 (reconstrucción/recibo/frame). S1, S2 y S3 se reutilizan dentro de su alcance; S4–S9 añaden contraste externo documental. Siguiente trabajo: reconciliar la matriz A–L con estas evidencias y fijar el siguiente hueco integrado, conservando objeto presentado, invocación, cobertura y referencia independiente; montaje, controles, ataques, esperados y presupuesto antes de ejecutar. No se abre otro torneo como condición previa. La consolidación del catálogo y ES/EN permanece posterior, con recogida continua de causas.
 
 No se acredita cierre A–L, pantalla o revisión humana, imposición frente al host, persistencia ni actuación profesional. Se conservan reserva P3, custodia RETP-130 y condiciones P4/P5/P6. Esta acta no modifica el núcleo ni promueve una implantación.
+
+
+## S11 · Fijación previa de recepción contextual y cobertura A/H · RETP-179
+
+> **Relevo vigente:** 2026-09-12T17:38:35Z. Contrato, casos, esperados, código y presupuesto fijados antes de compilar. Preparación material iniciada; campaña funcional todavía no ejecutada.
+
+Lectura íntegra de rectores; cortes cotejados; fuentes reutilizadas idénticas; esperado anterior S2 comprobado por contenedor publicado; Rust recuperado con binario idéntico. [S11](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/README.md). Montaje de laboratorio y host confiable; documento externo no semántico ni autoridad. No modelo LLM ejecutado, promoción nuclear, pantalla, persistencia hostil ni cierre universal A–L. Reserva P3 y P4/P5/P6 intactos.
+
+**Siguiente acción:** Ejecutar reproducir.py con presupuesto de 22 invocaciones; detener y conservar cualquier fallo inesperado. Se mantiene núcleo → cierre de universos constituidos, prioritariamente inmunología → agentes, sin anticipar constituciones de dominio o capacidades de agente. Ciberseguridad se delimitará con su evidencia, sin presumir suficiente el primer universo.
