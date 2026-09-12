@@ -10,7 +10,8 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
 | S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
-| S4 | en ejecución | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T11:58:46Z |
+| S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
+| S5 | pendiente | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T12:03:04Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -154,15 +155,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S4 · Preparación de la prueba externa común del recorrido documental
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T11:42:55Z
 
 **Inicio:** 2026-09-12T11:58:46Z
 
-**Actualización:** 2026-09-12T11:58:46Z
+**Actualización:** 2026-09-12T12:03:04Z
 
-**Fin:** —
+**Fin:** 2026-09-12T12:03:04Z
 
 **Responsable:** Watson / W-S0
 
@@ -174,15 +175,50 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S1/S2/S3; RETP-147/162; condiciones de acceso y prueba externa del workflow
 
-**Resultado:** Doce casos y resultados previos cotejados; documento común, rúbrica y oráculo fijados antes de recepción externa.
+**Resultado:** Paquete autosuficiente publicado en SVcustos main; doce casos con oráculo previo custodiado, rúbrica de 100 puntos y plantillas de respuesta/medición.
 
-**Verificación:** 12/12 correspondencias con capturas S2/S3; 51 archivos históricos cotejados en ZIP; SVcustos público confirmado por metadatos; lectura efectiva de participantes todavía pendiente.
+**Verificación:** 12/12 resultados previos cotejados; 51 archivos de reproducción preservados; descarga sin credenciales HTTP 200 del documento y ZIP, con huellas y bytes coincidentes.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s4-prueba-externa-comun/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/RUBRICA.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-167)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-167-cierre-s4)
 
-**Siguiente acción:** Publicar paquete autosuficiente en SVcustos y verificar acceso público; entregar enlace común y alternativa adjunta.
+**Siguiente acción:** S5 pendiente: recibir y evaluar respuestas originales, trazabilidad y mediciones por participante.
 
-**Observaciones:** Banco público conocido; no prueba ciega ni reserva P3. Tiempos y recursos separados de corrección y trazabilidad. No se han enviado encargos a participantes.
+**Observaciones:** Oráculo publicado primero en custodia privada; compromiso público y acceso sin credenciales verificados. Lectura efectiva de cada participante pendiente; no se han enviado mensajes ni recibido respuestas externas.
+
+
+## S5 · Recepción y evaluación de la prueba externa común
+
+**Estado:** pendiente
+
+**Alta:** 2026-09-12T12:03:04Z
+
+**Inicio:** —
+
+**Actualización:** 2026-09-12T12:03:04Z
+
+**Fin:** —
+
+**Responsable:** Watson / W-S0
+
+**Alcance:** Confirmación de acceso y conservación de respuestas originales; cotejo de E01–E12 contra oráculo previo; puntuación de resultado y trazabilidad; mediciones separadas por participante e intento.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVcustos-dataset: main
+
+**Cortes de entrada:** SVcustos e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c; S4 / RETP-167; oráculo y rúbrica comprometidos antes de recepción.
+
+**Dependencias:** S4; respuesta efectiva por el canal del encargo; revisión humana de aceptación
+
+**Resultado:** Sin respuestas externas recibidas; sin puntuaciones ni tiempos de participantes.
+
+**Verificación:** Documento y ZIP descargados sin credenciales con bytes idénticos; lectura efectiva de participantes no confirmada.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md)
+
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-167-cierre-s4)
+
+**Siguiente acción:** Recibir las respuestas originales con confirmación de lectura, versión visible, intento y medidas disponibles; conservarlas antes de evaluar con rúbrica fija.
+
+**Observaciones:** Claude, Qwen y DeepSeek reciben el mismo documento; vía adjunta disponible. No se presupone acceso ni ejecución por participante. Banco conocido; sin reserva P3 ni rondas nuevas implícitas.
 

@@ -1,0 +1,50 @@
+{
+  "version": "S4-PAQUETE/1",
+  "archivos": [
+    {
+      "ruta": "CASOS.json",
+      "bytes": 3871,
+      "sha256": "0665ff7ca1c64ca1ba073fd5b7b02be9029971fcb35b463cd0dccad173312fa0"
+    },
+    {
+      "ruta": "COMPROMISO_PREVIO.json",
+      "bytes": 834,
+      "sha256": "ddbc8e849ad2c222a814fea4888431f9719b97a6fa50ef73cacb6d33dc84795a"
+    },
+    {
+      "ruta": "FUENTES.json",
+      "bytes": 4233,
+      "sha256": "628bb86c9f663272a0b6252dca2aeff1255c662b6df01e087f1fdfcd9a36aa09"
+    },
+    {
+      "ruta": "PLANTILLA_OBSERVADOR.json",
+      "bytes": 475,
+      "sha256": "7ec9137ef08bdd9e4f7dc39370e3bc9c9cce74d62136ce78d105c75d9c080c18"
+    },
+    {
+      "ruta": "PLANTILLA_RESPUESTA.json",
+      "bytes": 5110,
+      "sha256": "fb451322abf8e10fb7670cef63d617157d16644e90c3b0dd994f5ff96e558515"
+    },
+    {
+      "ruta": "PRUEBA_COMUN.md",
+      "bytes": 19470,
+      "sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 2101,
+      "sha256": "d2f5c7bb08db04fea41cf3253838560693929605438ecd35a2cf4a7af333e5e0"
+    },
+    {
+      "ruta": "REPRODUCCION_S2_S3.zip",
+      "bytes": 789529,
+      "sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307"
+    },
+    {
+      "ruta": "RUBRICA.md",
+      "bytes": 4050,
+      "sha256": "a26957f541dffce5ba727ace37103320769ae63fd96ff3e923c042eb518dc2dd"
+    }
+  ]
+}

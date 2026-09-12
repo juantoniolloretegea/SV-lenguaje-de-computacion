@@ -1726,3 +1726,12 @@ Las 73 fuentes S2 se conservan intactas; sólo se añade conductor acotado de ar
 ### RETP-2026-167 · S4 · Fijación de prueba externa común
 
 2026-09-12T11:58:46Z. Doce casos derivados de capturas S2/S3 ya ejecutadas y cotejadas. Oráculo previo custodiado con huella pública; documento autosuficiente, fuentes exactas, rúbrica de 100 puntos y plantillas fijados. SVcustos main será la sede de lectura sin acceso al laboratorio privado; no se crean ramas. Se distinguen corrección, trazabilidad, actividad registrada y métricas medidas/declaradas/no disponibles. La recepción efectiva por cada participante sigue pendiente. No nueva campaña funcional ni apertura de reserva.
+
+
+<a id="retp-167-cierre-s4"></a>
+
+### RETP-2026-167 · S4 · Publicación y acceso de prueba externa común
+
+2026-09-12T12:03:04Z. [Paquete público inmutable](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md). S4 finalizado; S5 pendiente para recepción efectiva. Doce casos con resultados previos cotejados; oráculo en custodia antes de publicar y compromiso público; rúbrica 48/36/8/8, medidas temporales y recursos separados. Documento autosuficiente de 19.470 bytes y ZIP de 789.529 bytes descargados sin credenciales, HTTP 200 y huellas idénticas. El lector web previo no obtuvo lectura (DisabledError), sin atribuirle la verificación posterior.
+
+SVcustos main aloja el encargo y 51 archivos históricos de reproducción, sin acceso privado obligatorio ni escritura por participantes. Confirmación de lectura efectiva, respuestas, puntuaciones y tiempos aún pendientes. La vía adjunta conserva el mismo documento. No mensajes enviados, nuevas pruebas funcionales ni reserva P3. S5 conservará originales e intentos y evaluará resultado, trazabilidad y evidencia de procedimiento contra el oráculo fijo. Catálogo y restantes compuertas mantienen su secuencia. [Recibo de preparación y acceso](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s4-prueba-externa-comun/README.md).

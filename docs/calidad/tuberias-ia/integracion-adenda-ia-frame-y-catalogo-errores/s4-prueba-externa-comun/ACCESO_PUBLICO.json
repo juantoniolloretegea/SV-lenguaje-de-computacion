@@ -1,0 +1,37 @@
+{
+  "url": "https://raw.githubusercontent.com/juantoniolloretegea/SVcustos-dataset/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md",
+  "metodo": "GET sin cabecera Authorization ni cookies",
+  "web_previo": "DisabledError; no lectura obtenida",
+  "http_status": 200,
+  "bytes": 19470,
+  "sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8",
+  "coincide": true,
+  "reproduccion": {
+    "url": "https://raw.githubusercontent.com/juantoniolloretegea/SVcustos-dataset/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/REPRODUCCION_S2_S3.zip",
+    "http_status": 200,
+    "bytes": 789529,
+    "sha256": "3cea79cbf138a24eca7bd621c60dd28fb61dc94f1b4050a392bcb54246503307",
+    "coincide": true
+  },
+  "metadatos_repositorio": {
+    "private": false,
+    "commit": "e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c"
+  },
+  "recepciones": [
+    {
+      "participante": "Claude",
+      "lectura_confirmada": null,
+      "respuesta_recibida": false
+    },
+    {
+      "participante": "Qwen",
+      "lectura_confirmada": null,
+      "respuesta_recibida": false
+    },
+    {
+      "participante": "DeepSeek",
+      "lectura_confirmada": null,
+      "respuesta_recibida": false
+    }
+  ]
+}

@@ -114,3 +114,8 @@ El [contraste S3 de presentación y negación](s3-presentacion-y-negacion/README
 S4 queda pendiente: preparar la prueba externa común del recorrido documental acotado, con una misma instrucción, fuentes públicas accesibles, esperados previamente custodiados y formato de recepción comparable. Banco público conocido; sin presentarlo como prueba ciega o reserva inédita. No se han enviado encargos ni recibido resultados externos en S3.
 
 La prioridad sigue siendo la integración 1+3, con recogida continua de causas. El paso 6, catálogo y ES/EN, mantiene su consolidación posterior. Los demás criterios y las compuertas de P3/P4/P5/P6 y aceptación humana conservan sus condiciones. Sucesos SV y las mismas ramas mantienen la continuidad.
+
+
+## Recepción S4 y relevo S5 · RETP-167 · 12/09/2026
+
+[Prueba común publicada en SVcustos](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/e1dcd9f5df30a1bbbfd446c7c4e5578d0a08a75c/pruebas-externas/s4-recorrido-documental/PRUEBA_COMUN.md), autosuficiente y descargable sin credenciales; mismos archivos para todos. Doce resultados previos cotejados, oráculo comprometido, rúbrica y mediciones fijadas. S4 finalizado como preparación; S5 pendiente para recibir respuestas originales, confirmar lectura y evaluar casos, trazabilidad y procedimiento. No se atribuyen aún resultados externos. Banco público conocido, sin reserva inédita; tiempo y recursos separados de la nota documental. Se mantienen integración 1+3, causas continuas y consolidación posterior del catálogo y demás compuertas.
