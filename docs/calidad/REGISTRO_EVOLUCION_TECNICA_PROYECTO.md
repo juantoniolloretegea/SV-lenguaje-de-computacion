@@ -1514,3 +1514,18 @@ La sonda R1 con dos constituciones sintéticas iguales reproduce aceptación de 
 217/217 pruebas unitarias en debug y release (211 previas, seis nuevas). Agotamiento comprobado sin vuelta a cero, 128 asignaciones distintas en ocho hilos, compilación sin cfg(test) y dos causas de rechazo de un cliente que intenta mutar identidad o acceder a la inyección de prueba. Coste nativo medido: +16 B continuidad y +8 B por permiso/compromiso; contador estático de 8 B, sin nueva reserva dinámica en la guarda. No fija ABI, RSS o latencia ni acredita perfiles WASM.
 
 Se conserva el fallo inicial de montaje por 12 fixtures ausentes; recuperados por blob sin cambiarlos. 14 procesos registrados, fuentes completas y parche revisable. El montaje interno no acredita autoridad profesional o admisión productiva. Se concretan productores pendientes de premisa externa y RequirementCheck; DFL-005 no cerrada. Workflow V2, catálogo/localización, reservas, pausa de dominios y aceptación final humana conservados. Núcleo productivo sin modificar. Estado: FALLO_REPRODUCIDO_CORRECCION_CANDIDATA_CONFORME.
+
+
+<a id="retp-154"></a>
+
+## RETP-2026-154 · Recepción gobernada y comprobación observada
+
+12/09/2026. [Contrato, candidata y evidencia reproducible](tuberias-ia/recepcion-gobernada-y-comprobacion-observada/README.md). Cortes Lenguaje dba4d655280ae36172dd601377367a0f89b69010 y laboratorio 7cc917eef089e865af5325318bae911633daa029. Continúa en montaje aislado sobre la candidata RETP-153; no modifica el núcleo productivo.
+
+Se realiza recepción posterior a admisión externa: el instalador interno fija premisa opaca ya existente, plan T-0, acto, emisor declarado y versión. La petición no los sustituye. Discordancias se rechazan antes de T-0; se conserva el original admisible, se impide segunda continuidad desde el mismo preparado y se conserva el error de génesis sin reparación.
+
+Se realiza un productor interno de RequirementCheck desde igualdad exacta ejecutada para una obligación específica recibida por instalación de confianza. Conserva contrato, referencia, observación y préstamo de continuidad. Rechaza descriptores/aplicabilidades de otra instancia aunque sean iguales, obligaciones Core y excesos de tamaño. Evidencia ausente produce NotVerifiable, distinta de evidencia vacía y de Tri.U. No expone una comprobación desligada ni conversión a permiso.
+
+231/231 unitarios nativos por modo (217 precedentes y 14 nuevos), biblioteca ordinaria sin cfg(test), cliente público conforme y tres clientes adversariales con cuatro errores exactos esperados (E0624 x2, E0451, E0616). Diez procesos registrados. Se conserva cápsula de 74 archivos, parche incremental y compilador. Límites por campo de 65536 bytes; no son cota de servicio ni doctrina celular.
+
+La raíz y el plan positivos son sintéticos. No se autentica al emisor, no se interpreta el acto ni se producen todos los verificadores obligatorios. Premisa externa profesional aún sin productor material; la candidata no habilita esa actuación. Siguiente objeto: recepción material de premisa y verificadores para el enlace acotado; no volver a preguntar quién autoriza ni fabricar la evidencia que falta. Vía documental RETP-152 conservada, DFL-005/006 abiertas, aceptación humana final y compuertas reservadas intactas. Estado: RECEPCION_Y_COMPARACION_CANDIDATAS_CONFORMES_ADMISION_PROFESIONAL_NO_ACREDITADA.

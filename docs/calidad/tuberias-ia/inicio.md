@@ -161,3 +161,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Pertenencia de permisos a su continuidad — RETP-153
 
 [Fallo reproducido y parche candidato](pertenencia-de-permisos-a-su-continuidad/README.md). Dos continuidades con ordinal y datos iguales aceptaban tokens cruzados. La candidata liga instancia, permiso y compromiso; 217 pruebas unitarias pasan por modo. Se conservan el contraejemplo, costes medidos y productores pendientes del enlace profesional. Núcleo productivo sin modificar, DFL-005 abierta y aceptación final humana pendiente.
+
+
+## Recepción gobernada y comprobación observada — RETP-154
+
+[Candidata, contrato y resultados](recepcion-gobernada-y-comprobacion-observada/README.md). La recepción conserva el acto y plan previamente fijados bajo premisa opaca; la comparación produce su resultado desde los bytes y conserva evidencia y pertenencia. 231 pruebas unitarias por modo, más frontera pública. Raíz sintética identificada: admisión profesional y verificadores obligatorios siguen sin materialización. Sin integración productiva ni apertura de reservas.

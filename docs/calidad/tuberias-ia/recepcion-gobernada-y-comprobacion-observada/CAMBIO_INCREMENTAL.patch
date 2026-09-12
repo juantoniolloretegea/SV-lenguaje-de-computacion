@@ -1,0 +1,384 @@
+--- /dev/null
++++ b/rust/sv_core/src/authority/transitions/reception.rs
+@@ -0,0 +1,80 @@
++//! Candidata RETP-154: recepción posterior a admisión externa.
++//! No produce la premisa opaca ni autentica al emisor declarado.
++use super::{AuthorityContinuity, ExternalGenesisPremise, GenesisError, GenesisPlan};
++
++pub const MAX_RECEPTION_BYTES: usize = 65536;
++
++#[derive(Debug, PartialEq, Eq)]
++pub enum ReceptionError {
++    Empty,
++    TooLarge,
++    DeclarationMismatch,
++    ActMismatch,
++    AlreadyAttempted,
++    Genesis(GenesisError),
++}
++
++#[derive(Debug)]
++pub struct PreparedGenesisReception {
++    premise: ExternalGenesisPremise,
++    plan: Option<GenesisPlan>,
++    act: Box<[u8]>,
++    issuer: Box<str>,
++    version: Box<str>,
++}
++
++#[derive(Debug)]
++pub struct ReceivedGenesis {
++    continuity: AuthorityContinuity,
++    act: Box<[u8]>,
++    issuer: Box<str>,
++    version: Box<str>,
++}
++
++fn bounds(parts: &[&[u8]]) -> Result<(), ReceptionError> {
++    if parts.iter().any(|v| v.is_empty()) { return Err(ReceptionError::Empty); }
++    if parts.iter().any(|v| v.len() > MAX_RECEPTION_BYTES) {
++        return Err(ReceptionError::TooLarge);
++    }
++    Ok(())
++}
++
++impl PreparedGenesisReception {
++    /// Instalación interna de confianza; jamás llamada con un plan decidido
++    /// por la propuesta recibida. La premisa sigue requiriendo su productor.
++    #[allow(dead_code)]
++    pub(crate) fn prepare(
++        premise: ExternalGenesisPremise, plan: GenesisPlan,
++        act: &[u8], issuer: &str, version: &str,
++    ) -> Result<Self, ReceptionError> {
++        bounds(&[act, issuer.as_bytes(), version.as_bytes()])?;
++        Ok(Self { premise, plan: Some(plan), act: act.into(),
++            issuer: issuer.into(), version: version.into() })
++    }
++
++    /// Sólo recibe datos; no acepta un plan, premisa o resultado alternativos.
++    /// Discordancia permite reintento. Llegar a T-0 consume este preparado
++    /// incluso si T-0 rechaza el plan; ese error se conserva y no se repara.
++    pub fn receive(&mut self, act: &[u8], issuer: &str, version: &str)
++        -> Result<ReceivedGenesis, ReceptionError>
++    {
++        if self.plan.is_none() { return Err(ReceptionError::AlreadyAttempted); }
++        bounds(&[act, issuer.as_bytes(), version.as_bytes()])?;
++        if issuer != &*self.issuer || version != &*self.version {
++            return Err(ReceptionError::DeclarationMismatch);
++        }
++        if act != &*self.act { return Err(ReceptionError::ActMismatch); }
++        let plan = self.plan.take().ok_or(ReceptionError::AlreadyAttempted)?;
++        let mut continuity = AuthorityContinuity::uninhabited();
++        continuity.apply_genesis(&mut self.premise, plan).map_err(ReceptionError::Genesis)?;
++        Ok(ReceivedGenesis { continuity, act: self.act.clone(),
++            issuer: self.issuer.clone(), version: self.version.clone() })
++    }
++}
++
++impl ReceivedGenesis {
++    pub fn continuity(&self) -> &AuthorityContinuity { &self.continuity }
++    pub fn act(&self) -> &[u8] { &self.act }
++    pub fn declared_issuer(&self) -> &str { &self.issuer }
++    pub fn version(&self) -> &str { &self.version }
++}
+--- /dev/null
++++ b/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs
+@@ -0,0 +1,170 @@
++use super::*;
++use crate::authority::transitions::reception::{PreparedGenesisReception, ReceptionError, MAX_RECEPTION_BYTES};
++use crate::requirements::observed::{PreparedExactCheck, ObservedCheckError, MAX_CHECK_BYTES};
++
++const ACT: &[u8] = b"ACTO SINTETICO: holder:permit; ensayo; ninguna facultad profesional";
++const ISSUER: &str = "emisor:ensayo";
++const VERSION: &str = "ensayo:1";
++const CONTRACT: &[u8] = b"ensayo: igualdad exacta de bytes; sin significado profesional";
++
++fn reception(plan: GenesisPlan) -> PreparedGenesisReception {
++    PreparedGenesisReception::prepare(ExternalGenesisPremise::for_test(), plan, ACT, ISSUER, VERSION).unwrap()
++}
++
++fn observed_continuity() -> AuthorityContinuity {
++    let mut plan = permission_plan();
++    let q = requirement_ref("req:exact");
++    plan.requirements.push(RequirementProposal::new(q.clone(), RequirementClass::Specific,
++        form_ref("form:permit"), effect_family_ref("family:write"), context_ref("context:permit"),
++        [verifier_family_ref("verifier-family:permit")], applicability_rule_ref("applicability:permit")));
++    plan.applicabilities.push(ApplicabilityProposal::new(verifier_ref("verifier:exact"),
++        verifier_family_ref("verifier-family:permit"), q, context_ref("context:permit"),
++        applicability_rule_ref("applicability:permit")));
++    let mut c = AuthorityContinuity::uninhabited();
++    c.apply_genesis(&mut ExternalGenesisPremise::for_test(), plan).unwrap();
++    c
++}
++
++fn binding(c: &AuthorityContinuity) -> (&crate::requirements::RequirementDescriptor, &crate::requirements::VerifierApplicability) {
++    let q = requirement_ref("req:exact");
++    let d = c.requirement_set(&form_ref("form:permit"), &effect_family_ref("family:write"),
++        &context_ref("context:permit")).unwrap().requirement(&q).unwrap();
++    let a = c.verifier_applicability(&q, &verifier_ref("verifier:exact"), &context_ref("context:permit")).unwrap();
++    (d, a)
++}
++
++#[test]
++fn rg01_receives_fixed_act_and_actual_t0_plan() {
++    let mut r = reception(permission_plan());
++    let received = r.receive(ACT, ISSUER, VERSION).unwrap();
++    assert_eq!(received.act(), ACT);
++    assert_eq!(received.declared_issuer(), ISSUER);
++    assert_eq!(received.version(), VERSION);
++    assert!(!received.continuity().t0_available());
++    assert_eq!(received.continuity().form_count(), 2);
++    assert_eq!(received.continuity().authority_count(), 2);
++    assert_eq!(received.continuity().requirement_set_count(), 1);
++}
++
++#[test]
++fn rg02_rejects_changed_act_before_consuming_preparation() {
++    let mut r = reception(permission_plan());
++    assert!(matches!(r.receive(b"ACTO cambiado", ISSUER, VERSION), Err(ReceptionError::ActMismatch)));
++    assert!(r.receive(ACT, ISSUER, VERSION).is_ok());
++}
++
++#[test]
++fn rg03_rejects_changed_declarations_and_preserves_original() {
++    let mut r = reception(permission_plan());
++    assert!(matches!(r.receive(ACT, "emisor:otro", VERSION), Err(ReceptionError::DeclarationMismatch)));
++    assert!(matches!(r.receive(ACT, ISSUER, "ensayo:2"), Err(ReceptionError::DeclarationMismatch)));
++    assert!(r.receive(ACT, ISSUER, VERSION).is_ok());
++}
++
++#[test]
++fn rg04_does_not_produce_second_continuity() {
++    let mut r = reception(permission_plan());
++    assert!(r.receive(ACT, ISSUER, VERSION).is_ok());
++    assert!(matches!(r.receive(ACT, ISSUER, VERSION), Err(ReceptionError::AlreadyAttempted)));
++}
++
++#[test]
++fn rg05_preserves_genesis_error_without_repair() {
++    let mut r = reception(GenesisPlan::new([], []));
++    assert!(matches!(r.receive(ACT, ISSUER, VERSION), Err(ReceptionError::Genesis(GenesisError::EmptyInitialForms))));
++    assert!(matches!(r.receive(ACT, ISSUER, VERSION), Err(ReceptionError::AlreadyAttempted)));
++}
++
++#[test]
++fn rg06_bounds_before_copy_and_admits_boundary() {
++    let mut r = reception(permission_plan());
++    assert!(matches!(r.receive(&[], ISSUER, VERSION), Err(ReceptionError::Empty)));
++    assert!(matches!(r.receive(&vec![b'x'; MAX_RECEPTION_BYTES+1], ISSUER, VERSION), Err(ReceptionError::TooLarge)));
++    assert!(r.receive(ACT, ISSUER, VERSION).is_ok());
++    assert!(matches!(PreparedGenesisReception::prepare(ExternalGenesisPremise::for_test(), permission_plan(), ACT, "", VERSION), Err(ReceptionError::Empty)));
++    let boundary = vec![b'x'; MAX_RECEPTION_BYTES];
++    let mut r = PreparedGenesisReception::prepare(ExternalGenesisPremise::for_test(), permission_plan(), &boundary, ISSUER, VERSION).unwrap();
++    assert_eq!(r.receive(&boundary, ISSUER, VERSION).unwrap().act(), boundary);
++}
++
++#[test]
++fn oc01_computes_result_and_keeps_exact_evidence() {
++    let c = observed_continuity(); let (d,a) = binding(&c);
++    let p = PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"original\0 1").unwrap();
++    let result = p.run(Some(b"original\0 1")).unwrap();
++    assert_eq!(result.result(), CheckResult::Accredited);
++    assert_eq!(result.contract(), CONTRACT);
++    assert_eq!(result.expected(), b"original\0 1");
++    assert_eq!(result.observed(), Some(&b"original\0 1"[..]));
++    assert!(result.belongs_to(&c));
++}
++
++#[test]
++fn oc02_refutes_changed_bytes_without_normalization() {
++    let c = observed_continuity(); let (d,a) = binding(&c);
++    let p = PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"no: 1").unwrap();
++    for v in [&b"no:1"[..], &b"si: 1"[..], &b"NO: 1"[..]] {
++        let result = p.run(Some(v)).unwrap();
++        assert_eq!(result.result(), CheckResult::Refuted);
++        assert_eq!(result.observed(), Some(v));
++    }
++}
++
++#[test]
++fn oc03_missing_is_not_empty_or_tri_u() {
++    let c = observed_continuity(); let (d,a) = binding(&c);
++    let p = PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"").unwrap();
++    assert_eq!(p.run(None).unwrap().result(), CheckResult::NotVerifiable);
++    assert_eq!(p.run(None).unwrap().observed(), None);
++    assert_eq!(p.run(Some(b"")).unwrap().result(), CheckResult::Accredited);
++    assert_eq!(p.run(Some(b"")).unwrap().observed(), Some(&b""[..]));
++}
++
++#[test]
++fn oc04_rejects_foreign_descriptor_with_equal_content() {
++    let c = observed_continuity(); let other = observed_continuity();
++    let (d,a) = binding(&c); let (foreign,_) = binding(&other);
++    assert_eq!(d, foreign);
++    assert!(matches!(PreparedExactCheck::prepare(&c,foreign,a,CONTRACT,b"1"), Err(ObservedCheckError::ForeignBinding)));
++    assert!(PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"1").is_ok());
++}
++
++#[test]
++fn oc05_rejects_foreign_applicability_with_equal_content() {
++    let c = observed_continuity(); let other = observed_continuity();
++    let (d,a) = binding(&c); let (_,foreign) = binding(&other);
++    assert_eq!(a, foreign);
++    assert!(matches!(PreparedExactCheck::prepare(&c,d,foreign,CONTRACT,b"1"), Err(ObservedCheckError::ForeignBinding)));
++}
++
++#[test]
++fn oc06_equality_cannot_accredit_core_authority() {
++    let c = observed_continuity();
++    let q = requirement_ref("req:permit:authority");
++    let d = c.requirement_set(&form_ref("form:permit"), &effect_family_ref("family:write"), &context_ref("context:permit")).unwrap().requirement(&q).unwrap();
++    let v = permission_verifier(&q, "primary");
++    let a = c.verifier_applicability(&q,&v,&context_ref("context:permit")).unwrap();
++    assert!(matches!(PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"acreditado"), Err(ObservedCheckError::CoreRequirement)));
++}
++
++#[test]
++fn oc07_bounds_contract_reference_and_observation() {
++    let c = observed_continuity(); let (d,a) = binding(&c);
++    let large = vec![0;MAX_CHECK_BYTES+1];
++    assert!(matches!(PreparedExactCheck::prepare(&c,d,a,b"",b"1"), Err(ObservedCheckError::EmptyContract)));
++    assert!(matches!(PreparedExactCheck::prepare(&c,d,a,&large,b"1"), Err(ObservedCheckError::TooLarge)));
++    assert!(matches!(PreparedExactCheck::prepare(&c,d,a,CONTRACT,&large), Err(ObservedCheckError::TooLarge)));
++    let edge = vec![0;MAX_CHECK_BYTES];
++    let p = PreparedExactCheck::prepare(&c,d,a,CONTRACT,&edge).unwrap();
++    assert!(matches!(p.run(Some(&large)), Err(ObservedCheckError::TooLarge)));
++    assert_eq!(p.run(Some(&edge)).unwrap().result(), CheckResult::Accredited);
++}
++
++#[test]
++fn oc08_result_does_not_claim_other_continuity() {
++    let c = observed_continuity(); let other = observed_continuity();
++    let (d,a) = binding(&c);
++    let p = PreparedExactCheck::prepare(&c,d,a,CONTRACT,b"1").unwrap();
++    let result = p.run(Some(b"1")).unwrap();
++    assert!(!result.belongs_to(&other)); assert!(result.belongs_to(&c));
++}
+--- a/rust/sv_core/src/authority/transitions/reuse_tests.rs
++++ b/rust/sv_core/src/authority/transitions/reuse_tests.rs
+@@ -1,4 +1,5 @@
+ use super::*;
++mod reception_tests;
+ use crate::control::{
+     AccumulationRuleRef, ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef,
+     ExerciseRef, ReuseBindingKeyRef, ReuseBindingValueRef, ReuseRuleRef, VerifierFamilyRef,
+--- a/rust/sv_core/src/authority/transitions.rs
++++ b/rust/sv_core/src/authority/transitions.rs
+@@ -10,6 +10,8 @@
+ //! persistentes.
+ 
+ use std::collections::{BTreeMap, BTreeSet};
++
++pub mod reception;
+ 
+ use super::{
+     AccumulationContract, ConstitutedAuthority, EffectDescriptor, EffectEnvelope, FormDescriptor,
+--- /dev/null
++++ b/rust/sv_core/src/requirements/observed.rs
+@@ -0,0 +1,96 @@
++//! Candidata RETP-154. Comparador exacto instalado de confianza para una
++//! obligación específica. No decide autoridad, verdad profesional ni permiso.
++use super::{RequirementCheck, RequirementClass, RequirementDescriptor, VerifierApplicability};
++use crate::authority::transitions::AuthorityContinuity;
++use crate::control::CheckResult;
++
++pub const MAX_CHECK_BYTES: usize = 65536;
++
++#[derive(Debug, PartialEq, Eq)]
++pub enum ObservedCheckError { ForeignBinding, CoreRequirement, EmptyContract, TooLarge }
++
++#[derive(Debug)]
++pub struct PreparedExactCheck<'a> {
++    continuity: &'a AuthorityContinuity,
++    descriptor: &'a RequirementDescriptor,
++    applicability: &'a VerifierApplicability,
++    contract: Box<[u8]>,
++    expected: Box<[u8]>,
++}
++
++#[derive(Debug)]
++pub struct ObservedExactCheck<'a> {
++    continuity: &'a AuthorityContinuity,
++    check: RequirementCheck,
++    contract: Box<[u8]>,
++    expected: Box<[u8]>,
++    observed: Option<Box<[u8]>>,
++}
++
++impl<'a> PreparedExactCheck<'a> {
++    /// No basta que una obligación sea Specific: el instalador competente
++    /// debe haber fijado que su significado es esta igualdad exacta. Los
++    /// bytes del contrato conservan esa declaración; no la interpretan.
++    #[allow(dead_code)]
++    pub(crate) fn prepare(
++        continuity: &'a AuthorityContinuity, descriptor: &'a RequirementDescriptor,
++        applicability: &'a VerifierApplicability, contract: &[u8], expected: &[u8],
++    ) -> Result<Self, ObservedCheckError> {
++        let own = continuity.requirement_set(descriptor.form(), descriptor.effect_family(),
++            descriptor.context()).and_then(|s| s.requirement(descriptor.reference()));
++        let applicable = continuity.verifier_applicability(descriptor.reference(),
++            applicability.verifier(), descriptor.context());
++        if !own.is_some_and(|d| std::ptr::eq(d, descriptor))
++            || !applicable.is_some_and(|v| std::ptr::eq(v, applicability))
++            || !descriptor.accepts_applicability(applicability) {
++            return Err(ObservedCheckError::ForeignBinding);
++        }
++        if descriptor.class() != RequirementClass::Specific {
++            return Err(ObservedCheckError::CoreRequirement);
++        }
++        if contract.is_empty() { return Err(ObservedCheckError::EmptyContract); }
++        if contract.len() > MAX_CHECK_BYTES || expected.len() > MAX_CHECK_BYTES {
++            return Err(ObservedCheckError::TooLarge);
++        }
++        Ok(Self { continuity, descriptor, applicability,
++            contract: contract.into(), expected: expected.into() })
++    }
++
++    /// La evidencia presente y vacía es distinta de evidencia no disponible.
++    /// El resultado lo calcula este código; no es argumento del llamador.
++    pub fn run(&self, observed: Option<&[u8]>)
++        -> Result<ObservedExactCheck<'a>, ObservedCheckError>
++    {
++        if observed.is_some_and(|v| v.len() > MAX_CHECK_BYTES) {
++            return Err(ObservedCheckError::TooLarge);
++        }
++        let result = match observed {
++            None => CheckResult::NotVerifiable,
++            Some(v) if v == &*self.expected => CheckResult::Accredited,
++            Some(_) => CheckResult::Refuted,
++        };
++        let d = self.descriptor;
++        let a = self.applicability;
++        let check = RequirementCheck {
++            requirement: d.reference.clone(), form: d.form.clone(),
++            effect_family: d.effect_family.clone(), context: d.context.clone(),
++            verifier: a.verifier.clone(), verifier_family: a.verifier_family.clone(),
++            applicability_rule: a.applicability_rule.clone(), result,
++        };
++        Ok(ObservedExactCheck { continuity: self.continuity, check,
++            contract: self.contract.clone(), expected: self.expected.clone(),
++            observed: observed.map(Into::into) })
++    }
++}
++
++impl ObservedExactCheck<'_> {
++    pub fn result(&self) -> CheckResult { self.check.result() }
++    pub fn contract(&self) -> &[u8] { &self.contract }
++    pub fn expected(&self) -> &[u8] { &self.expected }
++    pub fn observed(&self) -> Option<&[u8]> { self.observed.as_deref() }
++    pub fn belongs_to(&self, continuity: &AuthorityContinuity) -> bool {
++        std::ptr::eq(self.continuity, continuity)
++    }
++    // No salida de RequirementCheck/ResolvedRequirementResult sin su vínculo:
++    // aún falta cerrar la recepción profesional y todos sus verificadores.
++}
+--- a/rust/sv_core/src/requirements.rs
++++ b/rust/sv_core/src/requirements.rs
+@@ -20,6 +20,7 @@
+ use crate::requirements_reuse::ReuseRule;
+ 
+ pub mod initial;
++pub mod observed;
+ 
+ /// Obligación nuclear de SEC.0-D.
+ #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]

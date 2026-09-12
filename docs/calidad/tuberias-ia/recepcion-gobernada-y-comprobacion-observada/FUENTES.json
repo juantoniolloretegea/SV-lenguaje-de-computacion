@@ -1,0 +1,51 @@
+{
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "dba4d655280ae36172dd601377367a0f89b69010",
+      "tree": "84690161c2e2855aa17fd5b16a31862c813a3864"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "7cc917eef089e865af5325318bae911633daa029",
+      "tree": "976cd1648090753b59047041de76ca5e6b234c39"
+    }
+  },
+  "rectoras_y_contrato": [
+    {
+      "ruta": "AGENTS.md",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980"
+    },
+    {
+      "ruta": "docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md",
+      "git_blob": "546d01ce91746a9f55681abf6224ad4627a56f82"
+    }
+  ],
+  "antecedente_publicado": "dba4d655280ae36172dd601377367a0f89b69010",
+  "plan_sha256": "157cd0671c6686294da8e9e7d9451629fd111ab8b4e79c3a3e77657bd1aef7f6",
+  "archivos_capsula": 74,
+  "binarios": {
+    "debug-test": "6eca565f7957a187fdd4e1cb078fc934a4d2ae3c5a3f89a63067217103b4311a",
+    "release-test": "d20e7be734d2c0c27277473a277b200a3b83cb9ac644c6f988725ab124da9bc4",
+    "libsv_core.rlib": "4e074d05e03c7798403649edd77dc1b7a53a0c9834d2399603640e4cb7e66b25",
+    "publico": "bbe79355124716dc97dd242746781f3b41e6ec3d1df14323521b9bff48fa603c"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "archivos": [
+    {
+      "ruta": "CAMBIO_INCREMENTAL.patch",
+      "sha256": "95b060f8128c499fe526ec17a2b36c56d654cd19b91cdaf06f3efc01606bc66c",
+      "bytes": 17317
+    },
+    {
+      "ruta": "CANDIDATA_FUENTES.json",
+      "sha256": "0c0f2551b7ee146c7b02ccf0577cb8cb5f166b24ff29481712ad10c3fb362678",
+      "bytes": 994177
+    },
+    {
+      "ruta": "COMPILADOR.json",
+      "sha256": "1e9dc4366ae4478002c1ca729daff48213768b8912a334a6f6e113b1131f94ff",
+      "bytes": 874
+    },
+    {
+      "ruta": "CONTRATO_Y_FRONTERA.md",
+      "sha256": "f8e3f1be865d2e9505e29a716d2475415249061d7a185d1ac9618df32b8742aa",
+      "bytes": 7431
+    },
+    {
+      "ruta": "FRONTERA.json",
+      "sha256": "ca045fc84b2bef377008266e6b12c09ba2428e918eb1a760cb40641c5a4aad7d",
+      "bytes": 32630
+    },
+    {
+      "ruta": "FUENTES.json",
+      "sha256": "7c3cd81c2cfb033ee2d198289190a95647f3eb1679b5900fb51f6add9f2c206b",
+      "bytes": 2091
+    },
+    {
+      "ruta": "PLAN_PREVIO.md",
+      "sha256": "157cd0671c6686294da8e9e7d9451629fd111ab8b4e79c3a3e77657bd1aef7f6",
+      "bytes": 3289
+    },
+    {
+      "ruta": "README.md",
+      "sha256": "2b739579e7c28f7631d8cca33a0d1d7d1a1da6717e91128771fdd7b453249bca",
+      "bytes": 6757
+    },
+    {
+      "ruta": "RESULTADOS.json",
+      "sha256": "d9ca972f187ba4a6873932a174c3d162edb35b02b2df969950f62e99cbdca746",
+      "bytes": 45963
+    },
+    {
+      "ruta": "clientes/no_desligar.rs",
+      "sha256": "5f6a4d24e4bee220f9bfc05eed11a66a735dfdc54ba6133716ab7c31e8485327",
+      "bytes": 152
+    },
+    {
+      "ruta": "clientes/no_instalar.rs",
+      "sha256": "a1b44b3a47adfeb12fb3d11ec8d1a818a920dcf9ce7e96724dbef6bb90c09f44",
+      "bytes": 654
+    },
+    {
+      "ruta": "clientes/no_premisa.rs",
+      "sha256": "a700784b948f497d391a28f692bee185a09119d03bb3db9b0d87f9306afa9ff2",
+      "bytes": 151
+    },
+    {
+      "ruta": "clientes/publico.rs",
+      "sha256": "4b81411d26869c830ffc5533cb7f01f6ff9cda8ec9a094cc6eb92221714203c0",
+      "bytes": 818
+    },
+    {
+      "ruta": "reproducir.py",
+      "sha256": "6d181cf7b8e8668618e11a3cb54cb51e92e62438b73dcb58f356879a548240b6",
+      "bytes": 2613
+    }
+  ]
+}
