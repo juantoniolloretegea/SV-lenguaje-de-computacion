@@ -1,0 +1,27 @@
+{
+  "estado": "CONFORME_EN_ALCANCE_NATIVO",
+  "fuentes_focales": 40,
+  "validas_focales": 8,
+  "ensamblajes_focales": 64,
+  "observaciones_monofuente": 240,
+  "repeticiones": 3,
+  "modos": [
+    "debug",
+    "release"
+  ],
+  "corpus": {
+    "validos": 14,
+    "invalidos": 106,
+    "resultado_heredado_identico": true
+  },
+  "unitarios_por_modo": 239,
+  "focales_heredados": 29,
+  "esperados_heredados_modificados_expresamente": 2,
+  "clientes_negativos": 4,
+  "errores_de_acceso": 6,
+  "procesos": 41,
+  "wasi": false,
+  "navegador": false,
+  "proveedores_externos": 0,
+  "cierre_global": false
+}

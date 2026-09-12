@@ -1,0 +1,11 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -2142,7 +2142,7 @@
+     fn located_error(&self, error: FrontendError, position: usize, profile_context: bool) -> FrontendError {
+         let foreign = profile_context && matches!(self.tokens.get(position),
+             Some(Token::Word(_, STATUS_FOREIGN_CONTEXTUAL | STATUS_FOREIGN_PROTECTED)));
+-        self.error_site.set(Some((position, foreign)));
++        self.error_site.set(Some((position.saturating_add(1), foreign)));
+         error
+     }
+ 

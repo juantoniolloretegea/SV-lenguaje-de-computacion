@@ -1,0 +1,421 @@
+{
+  "version": "SYNTAX-SITES/1",
+  "casos": [
+    {
+      "id": "ROOT_FOREIGN_en",
+      "profile": "en",
+      "source": "-- prólogo é\r\n\tcodominio K = {A};",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        17,
+        26
+      ],
+      "marker": "codominio"
+    },
+    {
+      "id": "ROOT_UNKNOWN_en",
+      "profile": "en",
+      "source": "-- prólogo é\r\n\tdesconocida K = {A};",
+      "cause": "CD.UNSUPPORTED",
+      "span": [
+        17,
+        28
+      ],
+      "marker": "desconocida"
+    },
+    {
+      "id": "ROOT_SYMBOL_en",
+      "profile": "en",
+      "source": "-- prólogo é\r\n\t;",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        17,
+        18
+      ],
+      "marker": ";"
+    },
+    {
+      "id": "IDENT_PROTECTED_en",
+      "profile": "en",
+      "source": "codomain codomain = {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        9,
+        17
+      ],
+      "marker": "codomain"
+    },
+    {
+      "id": "IDENT_FOREIGN_en",
+      "profile": "en",
+      "source": "codomain codominio = {A};",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        9,
+        18
+      ],
+      "marker": "codominio"
+    },
+    {
+      "id": "IDENT_TOKEN_en",
+      "profile": "en",
+      "source": "codomain 7 = {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        9,
+        10
+      ],
+      "marker": "7"
+    },
+    {
+      "id": "SYMBOL_en",
+      "profile": "en",
+      "source": "codomain K : {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        11,
+        12
+      ],
+      "marker": ":"
+    },
+    {
+      "id": "TEXT_en",
+      "profile": "en",
+      "source": "output_semantics S { A -> 7; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        26,
+        27
+      ],
+      "marker": "7"
+    },
+    {
+      "id": "ARROW_en",
+      "profile": "en",
+      "source": "output_semantics S { A : \"dato\"; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        23,
+        24
+      ],
+      "marker": ":"
+    },
+    {
+      "id": "NAT_TYPE_en",
+      "profile": "en",
+      "source": "cellspec C { b: palabra; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        16,
+        23
+      ],
+      "marker": "palabra"
+    },
+    {
+      "id": "FIELD_FOREIGN_en",
+      "profile": "en",
+      "source": "cellspec C { b: 3; codominio: K; }",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        19,
+        28
+      ],
+      "marker": "codominio"
+    },
+    {
+      "id": "FIELD_UNKNOWN_en",
+      "profile": "en",
+      "source": "cellspec C { b: 3; desconocido: K; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        19,
+        30
+      ],
+      "marker": "desconocido"
+    },
+    {
+      "id": "TRI_en",
+      "profile": "en",
+      "source": "cellstate Q { spec: C; vector: [Tal]; }",
+      "cause": "CD.INVALID_TRI",
+      "span": [
+        32,
+        35
+      ],
+      "marker": "Tal"
+    },
+    {
+      "id": "EOF_en",
+      "profile": "en",
+      "source": "-- prólogo é\r\n\tcodomain K = {A",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        32,
+        32
+      ],
+      "marker": null
+    },
+    {
+      "id": "LEXICAL_en",
+      "profile": "en",
+      "source": "-- prólogo é\r\n\t💣",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        17,
+        21
+      ],
+      "marker": "💣"
+    },
+    {
+      "id": "CONTEXT_IDENTIFIER_en",
+      "profile": "en",
+      "source": "codomain aridad = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "TEXT_DATA_en",
+      "profile": "en",
+      "source": "output_semantics S { A -> \"codominio <script>SECRETO</script>\"; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "COMMENT_en",
+      "profile": "en",
+      "source": "-- codominio\r\ncodomain K = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "VALID_en",
+      "profile": "en",
+      "source": "codomain K = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "UNMIGRATED_en",
+      "profile": "en",
+      "source": "cellspec C { b: 2; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        19,
+        20
+      ],
+      "marker": "}"
+    },
+    {
+      "id": "ROOT_FOREIGN_es",
+      "profile": "es",
+      "source": "-- prólogo é\r\n\tcodomain K = {A};",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        17,
+        25
+      ],
+      "marker": "codomain"
+    },
+    {
+      "id": "ROOT_UNKNOWN_es",
+      "profile": "es",
+      "source": "-- prólogo é\r\n\tdesconocida K = {A};",
+      "cause": "CD.UNSUPPORTED",
+      "span": [
+        17,
+        28
+      ],
+      "marker": "desconocida"
+    },
+    {
+      "id": "ROOT_SYMBOL_es",
+      "profile": "es",
+      "source": "-- prólogo é\r\n\t;",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        17,
+        18
+      ],
+      "marker": ";"
+    },
+    {
+      "id": "IDENT_PROTECTED_es",
+      "profile": "es",
+      "source": "codominio codominio = {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        10,
+        19
+      ],
+      "marker": "codominio"
+    },
+    {
+      "id": "IDENT_FOREIGN_es",
+      "profile": "es",
+      "source": "codominio codomain = {A};",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        10,
+        18
+      ],
+      "marker": "codomain"
+    },
+    {
+      "id": "IDENT_TOKEN_es",
+      "profile": "es",
+      "source": "codominio 7 = {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        10,
+        11
+      ],
+      "marker": "7"
+    },
+    {
+      "id": "SYMBOL_es",
+      "profile": "es",
+      "source": "codominio K : {A};",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        12,
+        13
+      ],
+      "marker": ":"
+    },
+    {
+      "id": "TEXT_es",
+      "profile": "es",
+      "source": "semántica_de_salida S { A -> 7; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        30,
+        31
+      ],
+      "marker": "7"
+    },
+    {
+      "id": "ARROW_es",
+      "profile": "es",
+      "source": "semántica_de_salida S { A : \"dato\"; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        27,
+        28
+      ],
+      "marker": ":"
+    },
+    {
+      "id": "NAT_TYPE_es",
+      "profile": "es",
+      "source": "especificación_de_celda C { b: palabra; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        32,
+        39
+      ],
+      "marker": "palabra"
+    },
+    {
+      "id": "FIELD_FOREIGN_es",
+      "profile": "es",
+      "source": "especificación_de_celda C { b: 3; codomain: K; }",
+      "cause": "CD.FOREIGN_SURFACE",
+      "span": [
+        35,
+        43
+      ],
+      "marker": "codomain"
+    },
+    {
+      "id": "FIELD_UNKNOWN_es",
+      "profile": "es",
+      "source": "especificación_de_celda C { b: 3; desconocido: K; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        35,
+        46
+      ],
+      "marker": "desconocido"
+    },
+    {
+      "id": "TRI_es",
+      "profile": "es",
+      "source": "estado_de_celda Q { especificación: C; vector: [Tal]; }",
+      "cause": "CD.INVALID_TRI",
+      "span": [
+        49,
+        52
+      ],
+      "marker": "Tal"
+    },
+    {
+      "id": "EOF_es",
+      "profile": "es",
+      "source": "-- prólogo é\r\n\tcodominio K = {A",
+      "cause": "CD.UNEXPECTED_END",
+      "span": [
+        33,
+        33
+      ],
+      "marker": null
+    },
+    {
+      "id": "LEXICAL_es",
+      "profile": "es",
+      "source": "-- prólogo é\r\n\t💣",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        17,
+        21
+      ],
+      "marker": "💣"
+    },
+    {
+      "id": "CONTEXT_IDENTIFIER_es",
+      "profile": "es",
+      "source": "codominio arity = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "TEXT_DATA_es",
+      "profile": "es",
+      "source": "semántica_de_salida S { A -> \"codomain <script>SECRETO</script>\"; }",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "COMMENT_es",
+      "profile": "es",
+      "source": "-- codomain\r\ncodominio K = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "VALID_es",
+      "profile": "es",
+      "source": "codominio K = {A};",
+      "cause": "OK",
+      "span": null,
+      "marker": null
+    },
+    {
+      "id": "UNMIGRATED_es",
+      "profile": "es",
+      "source": "especificación_de_celda C { b: 2; }",
+      "cause": "CD.UNEXPECTED_TOKEN",
+      "span": [
+        35,
+        36
+      ],
+      "marker": "}"
+    }
+  ]
+}

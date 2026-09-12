@@ -1,3 +1,5 @@
+> **Corte vigente · RETP-159:** [ubicaciones sintácticas y perfil fuente ES/EN](ubicaciones-sintacticas-y-perfil-fuente/README.md). Candidata nativa comprobada: 40 fuentes, 64 ensamblajes derivados, corpus 14/106 conservado y reproducción portátil. Emisores restantes, DG global y encargo externo pendientes. Las entradas siguientes conservan su corte histórico.
+
 
 # Tuberías de IA
 

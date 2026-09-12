@@ -1,0 +1,22 @@
+{
+  "hashes": {
+    "0": "bdbec5a7d97f6f66c2ef1a9cba2cfe766aa0957ea2e309e8f70853315764b2c8",
+    "1": "2219ab02a0a12d186158a5a5f050ee097bea1d4c3218b70534e19a657c74f62e",
+    "2": "2cb850ec362d158a9dc90fbc3250855d2b2db9baa0f8d97c2dd8fe2660c180e1",
+    "3": "bb340d87e6d7f2cc622926715349999fec41fcc52a4c06318fac55af3e5cfaa2"
+  },
+  "sites": [
+    2,
+    1,
+    0
+  ],
+  "missing": [
+    "B"
+  ],
+  "extra": [
+    "X"
+  ],
+  "cause": "CD.OUTPUT_SEMANTICS_KEYS",
+  "code": "E115",
+  "test_sha256": "adf30782b4b89a77d9e21fb036fa3d53e6eb184c75ca5ba1d0ab8deb85eb8018"
+}

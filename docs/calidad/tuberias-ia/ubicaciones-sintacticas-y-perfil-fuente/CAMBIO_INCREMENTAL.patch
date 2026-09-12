@@ -1,0 +1,263 @@
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -830,9 +830,10 @@
+ pub(crate) struct FrontendFailure {
+     pub error: FrontendError,
+     pub span: Option<std::ops::Range<usize>>,
++    pub foreign_surface: bool,
+ }
+ impl From<FrontendError> for FrontendFailure {
+-    fn from(error: FrontendError) -> Self { Self { error, span: None } }
++    fn from(error: FrontendError) -> Self { Self { error, span: None, foreign_surface: false } }
+ }
+ pub(crate) fn compile_with_origins(source: &str, source_file: &str, profile: SourceProfile)
+     -> Result<ParsedUnit, FrontendFailure>
+@@ -873,7 +874,7 @@
+                 i += 1;
+             }
+             if i >= bytes.len() {
+-                return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()) });
++                return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()), foreign_surface: false });
+             }
+             let text = std::str::from_utf8(&bytes[start..i])
+                 .map_err(|_| FrontendError::UnexpectedToken("cadena no UTF-8".into()))?;
+@@ -926,7 +927,7 @@
+         }
+         return Err(FrontendFailure { error: FrontendError::UnexpectedToken(format!(
+             "carácter léxico no admitido U+{:04X}", ch as u32
+-        )), span: Some(i..i+ch.len_utf8()) });
++        )), span: Some(i..i+ch.len_utf8()), foreign_surface: false });
+     }
+     out.push(Token::Eof);
+     spans.push(source.len()..source.len());
+@@ -936,6 +937,7 @@
+ struct Parser<'a> {
+     tokens: Vec<Token<'a>>,
+     pos: usize,
++    error_site: std::cell::Cell<Option<(usize, bool)>>,
+     spans: Vec<std::ops::Range<usize>>,
+     object_origins: Vec<std::ops::Range<usize>>,
+     operation_origins: Vec<std::ops::Range<usize>>,
+@@ -953,6 +955,7 @@
+             object_origins: Vec::new(),
+             operation_origins: Vec::new(),
+             pos: 0,
++            error_site: std::cell::Cell::new(None),
+             source,
+             source_file,
+             objects: Vec::new(),
+@@ -962,12 +965,13 @@
+ 
+     fn parse(mut self) -> Result<ParsedUnit, FrontendFailure> {
+         if let Err(error) = self.parse_declarations() {
+-            // EOF tiene posición inequívoca. Los demás fallos sintácticos
+-            // permanecen sin rango hasta migrar su emisor; no se adivina.
++            // Sólo el emisor que conoce la posición puede fijarla.
++            let site = self.error_site.get();
+             let span = if matches!(error, FrontendError::UnexpectedEnd) {
+                 Some(self.source.len()..self.source.len())
+-            } else { None };
+-            return Err(FrontendFailure { error, span });
++            } else { site.and_then(|(index, _)| self.spans.get(index).cloned()) };
++            return Err(FrontendFailure { error, span,
++                foreign_surface: site.is_some_and(|(_, foreign)| foreign) });
+         }
+         Ok(ParsedUnit {
+             program: construction::program(self.source_file, sha256_hex(self.source.as_bytes()), self.objects, self.operations),
+@@ -1003,7 +1007,7 @@
+                 "agent" => self.parse_agent()?,
+                 "query_spec" => self.parse_query_spec()?,
+                 "let" => self.parse_let()?,
+-                other => return Err(FrontendError::Unsupported(other.to_owned())),
++                other => return Err(self.located_error(FrontendError::Unsupported(other.to_owned()), self.pos, true)),
+             }
+             let span = start..self.spans[self.pos - 1].end;
+             self.object_origins.extend((no..self.objects.len()).map(|_| span.clone()));
+@@ -2118,12 +2122,13 @@
+     }
+ 
+     fn take_tri(&mut self) -> Result<Tri, FrontendError> {
++        let position = self.pos;
+         let label = self.take_raw_word()?;
+         match label.as_str() {
+             "Zero" => Ok(Tri::Zero),
+             "One" => Ok(Tri::One),
+             "U" => Ok(Tri::U),
+-            _ => Err(FrontendError::InvalidTri(label)),
++            _ => Err(self.located_error(FrontendError::InvalidTri(label), position, true)),
+         }
+     }
+ 
+@@ -2133,11 +2138,19 @@
+             .expect("el token EOF garantiza una posición válida")
+     }
+ 
++    /// Conserva causa y posición en el punto que rechaza, sin interpretar prosa.
++    fn located_error(&self, error: FrontendError, position: usize, profile_context: bool) -> FrontendError {
++        let foreign = profile_context && matches!(self.tokens.get(position),
++            Some(Token::Word(_, STATUS_FOREIGN_CONTEXTUAL | STATUS_FOREIGN_PROTECTED)));
++        self.error_site.set(Some((position, foreign)));
++        error
++    }
++
+     fn peek_word(&self) -> Result<&str, FrontendError> {
+         match self.peek() {
+             Token::Word(raw, status) => Ok(canonical_word(raw, *status)),
+             Token::Eof => Err(FrontendError::UnexpectedEnd),
+-            other => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            other => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+@@ -2148,7 +2161,7 @@
+                 Ok(canonical_word(raw, status).to_owned())
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+@@ -2159,7 +2172,7 @@
+                 Ok((raw.to_owned(), status))
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+@@ -2167,16 +2180,16 @@
+         match self.tokens.get(self.pos).cloned() {
+             Some(Token::Word(raw, status)) => {
+                 if protected_status(status) {
+-                    Err(FrontendError::UnexpectedToken(format!(
++                    Err(self.located_error(FrontendError::UnexpectedToken(format!(
+                         "palabra protegida donde se esperaba identificador: {raw}"
+-                    )))
++                    )), self.pos, true))
+                 } else {
+                     self.pos += 1;
+                     Ok(raw.to_owned())
+                 }
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+@@ -2187,18 +2200,19 @@
+                 Ok(value)
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+     fn take_nat(&mut self) -> Result<Nat, FrontendError> {
+         match self.tokens.get(self.pos).cloned() {
+             Some(Token::Nat(value)) => {
++                let position = self.pos;
+                 self.pos += 1;
+-                Nat::from_decimal(&value).map_err(|_| FrontendError::InvalidNatural(value))
++                Nat::from_decimal(&value).map_err(|_| self.located_error(FrontendError::InvalidNatural(value), position, false))
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!("{other:?}"))),
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!("{other:?}")), self.pos, false)),
+         }
+     }
+ 
+@@ -2208,9 +2222,9 @@
+             self.pos += 1;
+             Ok(())
+         } else {
+-            Err(FrontendError::UnexpectedToken(format!(
++            Err(self.located_error(FrontendError::UnexpectedToken(format!(
+                 "esperado {expected}, recibido {got}"
+-            )))
++            )), self.pos, true))
+         }
+     }
+ 
+@@ -2221,9 +2235,9 @@
+                 Ok(())
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!(
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(
+                 "esperado {expected}, recibido {other:?}"
+-            ))),
++            )), self.pos, false)),
+         }
+     }
+ 
+@@ -2234,9 +2248,9 @@
+                 Ok(())
+             }
+             Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),
+-            Some(other) => Err(FrontendError::UnexpectedToken(format!(
++            Some(other) => Err(self.located_error(FrontendError::UnexpectedToken(format!(
+                 "esperado ->, recibido {other:?}"
+-            ))),
++            )), self.pos, false)),
+         }
+     }
+ 
+--- a/rust/sv_core/src/compiler_diagnostics.rs
++++ b/rust/sv_core/src/compiler_diagnostics.rs
+@@ -1,16 +1,16 @@
+-//! Diagnósticos experimentales COMPILER-DIAGNOSTICS/1, externos a IR 0.3.
++//! Diagnósticos experimentales COMPILER-DIAGNOSTICS/2, externos a IR 0.3.
+ //! La causa procede del emisor. Los emisores pendientes no se clasifican por texto.
+ use std::ops::Range;
+ use crate::{CompileError, FrontendError, IrProgram, SourceProfile, SourceUnit};
+ use crate::audit_diagnostics::Language;
+ 
+-pub const VERSION: &str = "COMPILER-DIAGNOSTICS/1";
++pub const VERSION: &str = "COMPILER-DIAGNOSTICS/2";
+ #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+ pub enum DeclarationId { Object(usize), Operation(usize) }
+ #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+ pub enum Stage { Frontend, ClosedDomains, Wellformed, TransitionData, Context, Assembly }
+ #[derive(Debug, Clone, Copy, PartialEq, Eq)]
+-pub enum FrontendCause { UnexpectedEnd, UnexpectedToken, Unsupported, InvalidNatural, InvalidAdmissibilityState, InvalidTri }
++pub enum FrontendCause { ForeignSurface, UnexpectedEnd, UnexpectedToken, Unsupported, InvalidNatural, InvalidAdmissibilityState, InvalidTri }
+ #[derive(Debug, Clone, PartialEq, Eq)]
+ pub enum Cause {
+     EmptyCodomain { name: String },
+@@ -28,6 +28,7 @@
+             Self::DuplicateCodomainMembers { .. } => "CD.DUPLICATE_CODOMAIN_MEMBERS",
+             Self::OutputSemanticsKeys { .. } => "CD.OUTPUT_SEMANTICS_KEYS",
+             Self::DuplicateIdentifier { .. } => "CD.DUPLICATE_IDENTIFIER",
++            Self::Frontend(FrontendCause::ForeignSurface) => "CD.FOREIGN_SURFACE",
+             Self::Frontend(FrontendCause::UnexpectedEnd) => "CD.UNEXPECTED_END",
+             Self::Frontend(FrontendCause::UnexpectedToken) => "CD.UNEXPECTED_TOKEN",
+             Self::Frontend(FrontendCause::Unsupported) => "CD.UNSUPPORTED",
+@@ -52,6 +53,7 @@
+             Self::DuplicateCodomainMembers { .. } => ("El codominio contiene miembros repetidos.", "The codomain contains duplicate members."),
+             Self::OutputSemanticsKeys { .. } => ("Las claves de la semántica de salida no cumplen la unicidad o la cobertura exigida.", "Output semantics keys do not satisfy the required uniqueness or coverage."),
+             Self::DuplicateIdentifier { .. } => ("Dos declaraciones comparten el mismo identificador.", "Two declarations share the same identifier."),
++            Self::Frontend(FrontendCause::ForeignSurface) => ("La grafía no está admitida en esta posición bajo el perfil fuente seleccionado.", "The spelling is not allowed at this position under the selected source profile."),
+             Self::Frontend(FrontendCause::UnexpectedEnd) => ("La unidad fuente termina antes de completar la construcción.", "The source unit ends before the construct is complete."),
+             Self::Frontend(FrontendCause::UnexpectedToken) => ("Se encontró un elemento léxico o sintáctico inesperado.", "An unexpected lexical or syntactic element was encountered."),
+             Self::Frontend(FrontendCause::Unsupported) => ("La construcción no está admitida por este perfil y analizador.", "The construct is not supported by this profile and parser."),
+@@ -166,14 +168,14 @@
+ }
+ fn parse(unit: SourceUnit<'_>, index: usize, sources: &[SourceInfo]) -> Result<crate::frontend::ParsedUnit, Report> {
+     crate::frontend::compile_with_origins(unit.source(),unit.source_file(),unit.profile()).map_err(|e| {
+-        let cause = match &e.error {
++        let cause = if e.foreign_surface { FrontendCause::ForeignSurface } else { match &e.error {
+             FrontendError::UnexpectedEnd => FrontendCause::UnexpectedEnd,
+             FrontendError::UnexpectedToken(_) => FrontendCause::UnexpectedToken,
+             FrontendError::Unsupported(_) => FrontendCause::Unsupported,
+             FrontendError::InvalidNatural(_) => FrontendCause::InvalidNatural,
+             FrontendError::InvalidAdmissibilityState(_) => FrontendCause::InvalidAdmissibilityState,
+             FrontendError::InvalidTri(_) => FrontendCause::InvalidTri,
+-        };
++        } };
+         Report { cause: Cause::Frontend(cause), stage: Stage::Frontend, legacy: CompileError::Frontend(e.error),
+             sources: sources.to_vec(), sites: vec![Site { unit: index, span: e.span, role: SiteRole::Failure }] }
+     })

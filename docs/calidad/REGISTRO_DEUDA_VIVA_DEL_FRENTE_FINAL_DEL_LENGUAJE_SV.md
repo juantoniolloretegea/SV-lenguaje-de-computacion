@@ -376,3 +376,10 @@ DFL-001 sigue abierta: inventario/migración del compilador, E004/E115 estructur
 ### Recepción RETP-158 · Compilador y procedencia por unidad
 
 [Resultado y límites](tuberias-ia/diagnosticos-del-compilador-y-procedencia/README.md). DFL-001 recibe causas tipadas E004/E115, colisiones y sidecar de fuentes originales fuera de IR; mensajes locales ES/EN. Corpus 14/106 idéntico, 239 unitarios por modo, 29 casos focales en tres repeticiones por modo. El conjunto no cierra DFL-001: faltan emisores restantes, subcausas de perfiles, rangos sintácticos no EOF, serialización/presentación y DG global. DFL-011 sigue abierta para revisión integral. DFL-005/006 conserva recepción profesional/verificadores pendientes. WASI/navegador, P3 reservado, P4/P5 y ausencia de ejecuciones externas mantienen su estado. No se promueve código productivo ni se hace público el laboratorio.
+
+
+### Recepción RETP-159 · Ubicaciones sintácticas y perfil fuente
+
+[Resultado, alcance y límites](tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/README.md). DFL-001 recibe intervalos originales en primitivas sintácticas y una causa local de grafía incompatible con ES/EN en el punto de rechazo. La sucesión experimental /2 conserva resultados heredados en el corpus 14/106 y en 40 fuentes y 64 ensamblajes focales; 239 unitarios por modo. Se conservan 13 causas locales, 26 plantillas, sensibilidad y reproducción portátil.
+
+La cobertura global sigue abierta: emisores compuestos y validadores restantes, subcausas, serialización/presentación y DG01–DG14. DFL-011 conserva su revisión integral. Las ausencias de WASI/navegador, recepción profesional y ejecuciones externas mantienen su alcance; P3 reservado y P4/P5 conservan sus compuertas. Este incremento no modifica el núcleo productivo ni cierra las restantes deudas.

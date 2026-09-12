@@ -1,0 +1,202 @@
+{
+  "archivo": "rust/sv_core/src/frontend.rs",
+  "sha256": "a5b76fe9fafb42f9a62bae3fd810393744bf9403437a0fffc5f3342f9d4be4ec",
+  "menciones_frontend_error": [
+    {
+      "linea_base": 876,
+      "funcion": "tokenize<'a>",
+      "emisor": "return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()) });"
+    },
+    {
+      "linea_base": 879,
+      "funcion": "tokenize<'a>",
+      "emisor": ".map_err(|_| FrontendError::UnexpectedToken(\"cadena no UTF-8\".into()))?;"
+    },
+    {
+      "linea_base": 927,
+      "funcion": "tokenize<'a>",
+      "emisor": "return Err(FrontendFailure { error: FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 967,
+      "funcion": "parse",
+      "emisor": "let span = if matches!(error, FrontendError::UnexpectedEnd) {"
+    },
+    {
+      "linea_base": 1006,
+      "funcion": "parse_declarations",
+      "emisor": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+    },
+    {
+      "linea_base": 1226,
+      "funcion": "parse_admissibility_spec",
+      "emisor": ".map_err(|_| FrontendError::InvalidAdmissibilityState(label))?;"
+    },
+    {
+      "linea_base": 1237,
+      "funcion": "parse_admissibility_spec",
+      "emisor": "return Err(FrontendError::InvalidAdmissibilityState(format!("
+    },
+    {
+      "linea_base": 1386,
+      "funcion": "parse_semantic_relation",
+      "emisor": "\"table\" if table.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1388,
+      "funcion": "parse_semantic_relation",
+      "emisor": "\"table\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1391,
+      "funcion": "parse_semantic_relation",
+      "emisor": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1394,
+      "funcion": "parse_semantic_relation",
+      "emisor": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+    },
+    {
+      "linea_base": 1424,
+      "funcion": "parse_pattern",
+      "emisor": "\"arity\" if arity.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1426,
+      "funcion": "parse_pattern",
+      "emisor": "\"arity\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1429,
+      "funcion": "parse_pattern",
+      "emisor": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+    },
+    {
+      "linea_base": 1432,
+      "funcion": "parse_pattern",
+      "emisor": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+    },
+    {
+      "linea_base": 1810,
+      "funcion": "parse_let",
+      "emisor": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+    },
+    {
+      "linea_base": 1859,
+      "funcion": "parse_let",
+      "emisor": "return Err(FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 1919,
+      "funcion": "query_context",
+      "emisor": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+    },
+    {
+      "linea_base": 2126,
+      "funcion": "take_tri",
+      "emisor": "_ => Err(FrontendError::InvalidTri(label)),"
+    },
+    {
+      "linea_base": 2139,
+      "funcion": "peek_word",
+      "emisor": "Token::Eof => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2140,
+      "funcion": "peek_word",
+      "emisor": "other => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2150,
+      "funcion": "take_raw_word",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2151,
+      "funcion": "take_raw_word",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2161,
+      "funcion": "take_dispatch_word",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2162,
+      "funcion": "take_dispatch_word",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2170,
+      "funcion": "take_word",
+      "emisor": "Err(FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 2178,
+      "funcion": "take_word",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2179,
+      "funcion": "take_word",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2189,
+      "funcion": "take_text",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2190,
+      "funcion": "take_text",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2198,
+      "funcion": "take_nat",
+      "emisor": "Nat::from_decimal(&value).map_err(|_| FrontendError::InvalidNatural(value))"
+    },
+    {
+      "linea_base": 2200,
+      "funcion": "take_nat",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2201,
+      "funcion": "take_nat",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+    },
+    {
+      "linea_base": 2211,
+      "funcion": "word",
+      "emisor": "Err(FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 2223,
+      "funcion": "sym",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2224,
+      "funcion": "sym",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 2236,
+      "funcion": "arrow",
+      "emisor": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+    },
+    {
+      "linea_base": 2237,
+      "funcion": "arrow",
+      "emisor": "Some(other) => Err(FrontendError::UnexpectedToken(format!("
+    },
+    {
+      "linea_base": 2274,
+      "funcion": "square_nat",
+      "emisor": "Nat::from_decimal(&text).map_err(|_| FrontendError::InvalidNatural(text))"
+    }
+  ],
+  "nota": "Inventario de menciones; incluye conversiones y pruebas. No equivale a cobertura de todos los emisores alcanzables."
+}

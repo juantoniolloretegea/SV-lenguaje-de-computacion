@@ -1,0 +1,12 @@
+{
+  "unidad": "proceso instrumental; incluye compilación y comprobadores",
+  "procesos_principales": 41,
+  "procesos_complementarios": 7,
+  "tiempo_principal_s": 47.342376479,
+  "cpu_usuario_principal_s": 143.147163,
+  "cpu_sistema_principal_s": 9.710143,
+  "rss_max_acumulado_hijos_principal_kib": 605456,
+  "coste_monetario": null,
+  "coste_inferencia": null,
+  "comparacion_rendimiento": "No constituida: los comprobadores de base y candidata tienen trabajo de verificación distinto."
+}
