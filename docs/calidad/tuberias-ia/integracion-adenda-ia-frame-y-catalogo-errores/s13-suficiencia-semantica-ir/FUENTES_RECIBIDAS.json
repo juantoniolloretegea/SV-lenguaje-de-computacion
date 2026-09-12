@@ -1,0 +1,163 @@
+{
+  "README.md": {
+    "blob": "6350bf2ec85e818ca84fc07d112430e10d75dbd1",
+    "bytes": 12068,
+    "sha256": "4c286d0ee6fbcffa6f901df61a1f0bb37acd82dc3cfe898f18baa1147402df08",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/README.md"
+  },
+  "IR_CANONICA_BIENFORMACION_SV_v0_3.md": {
+    "blob": "c1b4b0e1c06c1b22dff1f988fec1a1f079fcc5d2",
+    "bytes": 30558,
+    "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/IR_CANONICA_BIENFORMACION_SV_v0_3.md"
+  },
+  "FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md": {
+    "blob": "f2fdf0f578fc953ba67a73022851b486e8a0ad88",
+    "bytes": 21310,
+    "sha256": "ee5a60c230ca4e5350573044c444107e883221813dad7078a9a562da265de712",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md"
+  },
+  "GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md": {
+    "blob": "dbc96821c415d1ac7e0a03205f89d4bf269225ab",
+    "bytes": 12952,
+    "sha256": "688d054b43ecf86a64a82dee0caec00cc80bdd4d8d99dd06744196d300a4a021",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md"
+  },
+  "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md": {
+    "blob": "a76fed1ba3515096668da10fc1cb5ddb8f9eae30",
+    "bytes": 64816,
+    "sha256": "954066cf56d6a61d152eaf594cfd7b0da3f43b83103a2e42e8e934f0ca460d2a",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md"
+  },
+  "rust/sv_core/src/ir.rs": {
+    "blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+    "bytes": 12706,
+    "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/ir.rs"
+  },
+  "rust/sv_core/src/decision_trace.rs": {
+    "blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+    "bytes": 30997,
+    "sha256": "0cc7260b8286d34cf2524722f34d3d807059bec00359cb73a4e9411e424da238",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/decision_trace.rs"
+  },
+  "rust/sv_core/src/frame.rs": {
+    "blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+    "bytes": 13990,
+    "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/frame.rs"
+  },
+  "rust/sv_core/src/execution.rs": {
+    "blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+    "bytes": 16865,
+    "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/execution.rs"
+  },
+  "rust/sv_core/src/permission.rs": {
+    "blob": "980270a996ae02df66f26788b2ab32c077d7e30c",
+    "bytes": 16094,
+    "sha256": "270f1e2a0ad2f14ac9a04144ed14f562fa5a19449ba851e568fc4e7eef6e018f",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/permission.rs"
+  },
+  "rust/sv_core/src/requirements_coverage.rs": {
+    "blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+    "bytes": 24235,
+    "sha256": "f176a0eb303fced1e5125908a0a3c53c994234abc4296b448336ce89aab88e19",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/requirements_coverage.rs"
+  },
+  "rust/sv_core/src/lib.rs": {
+    "blob": "699eee3d9d761d6262c24e3b80098c9ce307c775",
+    "bytes": 17140,
+    "sha256": "efb72c9cca7910090d91e2160b1b8e919a5730ad9a904b6973f1f4c034db2371",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/lib.rs"
+  },
+  "IR_CANONICA_BIENFORMACION_SV_v0_2.md": {
+    "blob": "8da499dfb7cf8522abf1eab79696f68c946286c6",
+    "bytes": 31292,
+    "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/IR_CANONICA_BIENFORMACION_SV_v0_2.md"
+  },
+  "rust/sv_core/src/frontend.rs": {
+    "blob": "c73933b661f08c4d0123b8a22f436962b5481208",
+    "bytes": 97042,
+    "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/frontend.rs"
+  },
+  "rust/sv_core/src/admissibility.rs": {
+    "blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+    "bytes": 6775,
+    "sha256": "5db392086b9989a94c125a11ebca2e4b4fa1b6deb461a1c05f0c42c1f1e39247",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/admissibility.rs"
+  },
+  "rust/sv_core/src/mediation.rs": {
+    "blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+    "bytes": 8245,
+    "sha256": "a8a0e690a0e4e209a53cdd988dc8a9243caf564c300c795456cf0eb2a80132d3",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/mediation.rs"
+  },
+  "rust/sv_core/src/authority.rs": {
+    "blob": "95a976d32444537ba4240cf7ad4375eca37ef064",
+    "bytes": 18361,
+    "sha256": "abfe89f37d2dbb6eaabb6eae4d4bdef7643a495f31511d1f1f1d9c6e80031e10",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/authority.rs"
+  },
+  "rust/sv_core/src/requirements.rs": {
+    "blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+    "bytes": 26983,
+    "sha256": "56628024d747d807ebbb42ee74cc7c6091a2d47c9657b18d942ec2bcb6818999",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/requirements.rs"
+  },
+  "rust/sv_core/src/transition_data_wellformed.rs": {
+    "blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+    "bytes": 6003,
+    "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/rust/sv_core/src/transition_data_wellformed.rs"
+  },
+  "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/ACTA_RESULTADO_S11.md": {
+    "blob": "b5ee6764f741b6de283fbb73ca28d0fb759b2dcc",
+    "bytes": 4451,
+    "sha256": "4cc11e88d307bd4fc270d792555e31906631ffc5c5569c29e1a28356f2628a44",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/ACTA_RESULTADO_S11.md"
+  },
+  "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/MATRIZ_COBERTURA_A_L_RESULTADO_S11.json": {
+    "blob": "b96d9d049da37cda1a27cfb1cc0c9615307b9830",
+    "bytes": 18235,
+    "sha256": "9b8e3cd1f84d312c7c54264e7ef8b8fa13e12676eff2143346e315cd1e9199b9",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/MATRIZ_COBERTURA_A_L_RESULTADO_S11.json"
+  },
+  "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/codigo/contexto.rs": {
+    "blob": "584e4bf0011c88172f92f5f687c8cab5997db305",
+    "bytes": 1294,
+    "sha256": "589501e3ee34fe0d342d8f2811e6aee05930ba61de0d600a15a9219066d75ce3",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/codigo/contexto.rs"
+  },
+  "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s12-rectificacion-rumbo/ACTA_RECTIFICACION_DE_RUMBO.md": {
+    "blob": "21eabc28d46d7b3b7e24352d8f574f3c667c77f8",
+    "bytes": 5019,
+    "sha256": "f5270e420ee386191a06a45f8d914fe33c68b15d6329331ebcc39cd039a13d59",
+    "corte": "5264689aadb636fca35c6f92472034085332e7f1",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5264689aadb636fca35c6f92472034085332e7f1/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s12-rectificacion-rumbo/ACTA_RECTIFICACION_DE_RUMBO.md"
+  }
+}

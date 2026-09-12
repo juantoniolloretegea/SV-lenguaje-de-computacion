@@ -1850,3 +1850,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-181 · S12 · Rectificación de rumbo tras S11
 
 2026-09-12T17:56:48Z. Dirección corrige el orden de agentes indebidamente presentado por Watson como decidido. La fórmula de RETP-179/180 queda retirada como relevo vigente; después de cerrar inmunología se valorará su posición. La integración 1+3 debe comprobar suficiencia de semántica 0.2 e IR 0.3, con enlace explícito a realización y causas para catálogo, sin forzar representaciones ni presuponer suficiencia por un ensayo Rust. [Rectificación íntegra](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s12-rectificacion-rumbo/ACTA_RECTIFICACION_DE_RUMBO.md). S11 conserva sus resultados; no se ejecuta otro contraste ni se altera núcleo o dominio.
+
+
+<a id="retp-182"></a>
+
+### RETP-2026-182 · S13 · Suficiencia de representación y realización
+
+2026-09-12T18:17:41Z. [Acta y matriz](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md). Doce obligaciones enlazan criterios A–L con sede, contrato, IR, función Rust, evidencia y pérdida. Se distingue K1-T nominal, productor QueryResult/CQ1–CQ6 pendiente, cobertura de Frame frente a exhaustividad, cobertura documental frente a verificadores R1, main frente a candidatas y frontera material. 23 fuentes verificadas, 31 pasajes exactos; sin nueva prueba funcional ni promoción nuclear. Mapa completado no equivale a suficiencia integral. Se conserva S12: agentes por valorar tras inmunología. El siguiente objeto G/J se delimita a base documental efectivamente consumida y recuperación/reevaluación diferenciadas; las operaciones dependientes de capacidades nucleares pendientes no quedan habilitadas. No se alteran deudas ni criterios; causas se recogen para el catálogo.

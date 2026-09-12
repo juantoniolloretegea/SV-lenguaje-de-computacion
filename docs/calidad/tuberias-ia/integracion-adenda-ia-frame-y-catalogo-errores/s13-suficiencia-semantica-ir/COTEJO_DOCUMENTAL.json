@@ -1,0 +1,21 @@
+{
+  "comando": [
+    "python",
+    "s13-suficiencia/entrega/verificar.py",
+    "--raiz-fuentes",
+    "s13-suficiencia/lectura"
+  ],
+  "salida": {
+    "resultado": "CONFORME_INTEGRIDAD_DOCUMENTAL",
+    "fuentes": 23,
+    "pasajes": 31,
+    "obligaciones": 12,
+    "criterios": 12,
+    "ensayos_funcionales_nuevos": 0,
+    "manifiesto_comprobado": false,
+    "limite": "No demuestra por sí solo suficiencia semántica ni resultados funcionales."
+  },
+  "codigo_salida": 0,
+  "stderr": "",
+  "fase": "Cotejo de fuentes y estructura antes de fijar manifiesto; no es dictamen semántico automático."
+}

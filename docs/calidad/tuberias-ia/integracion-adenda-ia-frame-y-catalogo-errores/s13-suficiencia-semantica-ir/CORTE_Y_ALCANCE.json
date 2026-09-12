@@ -1,0 +1,22 @@
+{
+  "fecha_cierre_documental_utc": "2026-09-12T18:17:41Z",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "5264689aadb636fca35c6f92472034085332e7f1",
+      "tree": "8a69c08a225737e0cf8d0512aae85e31c5ab5494"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "6c929f4092d7b47d042d43b1dcf5fa8006447ad8",
+      "tree": "e8b710d84092d6bdd5d1658fd6236bf180cf42b1"
+    }
+  },
+  "lectura": "Fuentes recibidas verificadas por blob y SHA-256; pasajes explícitos conservados. No se declara lectura íntegra de todo archivo recibido ni auditoría de toda la base de código.",
+  "ejecuciones_funcionales_nuevas": 0,
+  "modelos_consultados": 0,
+  "errores_o_correcciones_de_resultados_anteriores": [],
+  "comparacion_A_L": "Referencias a criterios previos, sin modificarlos ni convertir cobertura de la matriz en aprobación."
+}

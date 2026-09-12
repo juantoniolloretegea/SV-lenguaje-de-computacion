@@ -1,0 +1,37 @@
+{
+  "version": "SV-S13-PREPARACION/1",
+  "naturaleza": "Registro posterior de incidencias de extracción documental; no ejecución Rust ni fallo de la arquitectura.",
+  "incidencias": [
+    {
+      "intento": 1,
+      "operacion": "elaborar.py / excerpt P27",
+      "resultado": "AssertionError",
+      "intervalo_solicitado": [
+        367,
+        408
+      ],
+      "lineas_reales": 406,
+      "correccion": "Extremo final fijado en 406; fuente intacta."
+    },
+    {
+      "intento": 2,
+      "operacion": "elaborar.py / excerpt P28",
+      "resultado": "AssertionError",
+      "intervalo_solicitado": [
+        1,
+        22
+      ],
+      "lineas_reales": 21,
+      "correccion": "Extremo final de P28 fijado en 21; se comprobaron también P29 (38 líneas) y P30 (43 líneas) antes de reintentar. Fuentes intactas."
+    },
+    {
+      "intento": 3,
+      "operacion": "elaborar.py",
+      "resultado": "Completado",
+      "fuentes": 23,
+      "pasajes": 31,
+      "obligaciones": 12
+    }
+  ],
+  "efecto": "No hubo publicación parcial ni cambio de fuente, criterio o resultado funcional anterior."
+}

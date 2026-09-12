@@ -17,6 +17,7 @@
 | S10 | finalizado | Consolidación de resultados, ranquin documental y modelos con pesos disponibles | Watson / W-S0 | 2026-09-12T16:56:53Z |
 | S11 | finalizado | Integración A/H: recepción de documento externo, cobertura e identidad contextual | Watson / W-S0 | 2026-09-12T17:42:13Z |
 | S12 | finalizado | Rectificación de rumbo y criterio de suficiencia semántica 0.2 / IR 0.3 | Watson / W-S0 | 2026-09-12T17:56:48Z |
+| S13 | finalizado | Cotejo de suficiencia para integración 1+3: contrato, IR y realización | Watson / W-S0 | 2026-09-12T18:17:41Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -471,4 +472,39 @@
 **Siguiente accion:** Vincular obligaciones de integración 1+3 con semántica 0.2, IR 0.3 y operaciones existentes antes de ampliar G/J; recoger causas para catálogo.
 
 **Observaciones:** Rectificación documental ya realizada al registrarse; no atribuye nuevo cierre de dominio ni promoción nuclear. S11 conserva su resultado acotado.
+
+
+## S13 · Cotejo de suficiencia para integración 1+3: contrato, IR y realización
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T18:17:41Z
+
+**Fecha inicio utc:** 2026-09-12T18:04:46Z
+
+**Fecha actualizacion utc:** 2026-09-12T18:17:41Z
+
+**Fecha fin utc:** 2026-09-12T18:17:41Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Doce obligaciones, criterios A–L preservados; representación nominal, realización pendiente y sede exterior distinguidas. Sin nuevo ensayo funcional ni promoción nuclear.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje 5264689aadb636fca35c6f92472034085332e7f1; laboratorio 6c929f4092d7b47d042d43b1dcf5fa8006447ad8
+
+**Dependencias:** S12 / RETP-181; rectores vigentes; IR 0.3 y herencia aplicable; deuda actualizada; evidencia S11.
+
+**Resultado:** Mapa documental completado. Suficiencia integral no acreditada: K1-T nominal no habilita transducción; Query declarada no realiza CQ1–CQ6; frontera y candidatas no suplen núcleo.
+
+**Verificacion:** 23 fuentes por blob/longitud/SHA-256; 31 pasajes exactos; 12 obligaciones y criterios A–L; comprobador de integridad documental. Cero ensayos funcionales nuevos.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-182)
+
+**Siguiente accion:** Fijar G/J documental: base realmente consumida, recuperación original y reevaluación distinguida; no llamarlo QueryResult/transición nativa ni continuidad durable.
+
+**Observaciones:** Registro al cerrar trabajo documental ya iniciado; fecha de inicio derivada del archivo local de recepción del corte, no de una fijación experimental. Dos interrupciones por intervalos de extracción fuera de rango conservadas. Agentes por valorar tras inmunología.
 

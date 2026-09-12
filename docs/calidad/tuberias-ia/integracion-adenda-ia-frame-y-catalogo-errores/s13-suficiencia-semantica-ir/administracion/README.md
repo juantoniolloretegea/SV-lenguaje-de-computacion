@@ -1,0 +1,5 @@
+# Procedimiento S13
+
+Los scripts conservan el código utilizado para recepción, selección de pasajes, elaboración, registro y publicación. `verificar.py`, en la carpeta superior, es el comprobador autónomo de integridad y referencias: necesita las fuentes del corte con sus rutas originales; no necesita credenciales ni red. Los scripts de administración se ejecutaron en el workspace de continuidad de Watson: dependen de las carpetas S6/S11/S12 anteriores y del adaptador de GitHub disponible en ese entorno. No se ofrecen como instalador autónomo del SV ni como biblioteca ejecutiva nuclear.
+
+Secuencia realizada: snapshot de cortes/árboles; recepción y cotejo de fuentes; lectura de pasajes; elaboración de matriz y acta; registro append-only; comprobación documental; fijación del manifiesto; publicación de los mismos artefactos en laboratorio y público mediante árbol y commit sobre cada base, sin force; comprobación de archivos y conservación de otros blobs. Las incidencias de preparación constan en PREPARACION.json. Ningún script de esta carpeta ejecuta una función semántica de decisión SV. Python se usa sólo para estas tareas documentales y de custodia.

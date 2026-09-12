@@ -1,0 +1,62 @@
+{
+  "ACTA_SUFICIENCIA.md": {
+    "bytes": 8770,
+    "sha256": "6264eace0c3536fab89a0903d7bbdb5693af06ff6c591c1d37289dab9bb875bf"
+  },
+  "CORTE_Y_ALCANCE.json": {
+    "bytes": 1017,
+    "sha256": "8b215025b81e082b712fbf3942261d7991f8f40cc7e172787d3bdd60d1f72ca3"
+  },
+  "COTEJO_DOCUMENTAL.json": {
+    "bytes": 599,
+    "sha256": "284488073566474684eb7e238bc5dece7f375eafa92f261e7bd115e4c7521600"
+  },
+  "FUENTES_RECIBIDAS.json": {
+    "bytes": 10379,
+    "sha256": "1a073bfb121b539c6e6a03cfd503273108b89c106b9680b33276f5257fcdf382"
+  },
+  "MATRIZ_SUFICIENCIA.json": {
+    "bytes": 31717,
+    "sha256": "cdbb98bddaef92124a2ad9d60aee9f38d63560e5a578b30cbedb26dadd5e784c"
+  },
+  "PASAJES_COTEJADOS.json": {
+    "bytes": 83368,
+    "sha256": "c512be2082141c694796c7db65f831dabaaeb2e8ab98a4bc23b495dae3adb7ef"
+  },
+  "PREPARACION.json": {
+    "bytes": 1107,
+    "sha256": "4f234e87c17f93fec02d780fc1db42c7afc0dbcd1df50e4af9970a5e2e603b6a"
+  },
+  "RECTORES.json": {
+    "bytes": 909,
+    "sha256": "551e98cb6005e85fac3f5ead9a31ae38c22d8a55a521c3a2ae96d6a64b5d7168"
+  },
+  "administracion/README.md": {
+    "bytes": 1192,
+    "sha256": "c32d90d78abe058e66338561fe4a34216df730fc2cf0e00ff5d5cf212ad574d3"
+  },
+  "administracion/elaborar.py": {
+    "bytes": 28406,
+    "sha256": "f5d3c27fd1e62ca77c0cec4964a47c7c8d754ba0201875b19f26de88082954df"
+  },
+  "administracion/publicar.py": {
+    "bytes": 2655,
+    "sha256": "86110e7c73ae93f628ab0ee08f647eba4c4967494d7ecf829307b008772d2baa"
+  },
+  "administracion/recibir.py": {
+    "bytes": 1907,
+    "sha256": "3e62ec46a6fe28f200bd09f43caf591f4554c7a92cd3a413fe00c62d1916a9c4"
+  },
+  "administracion/registrar.py": {
+    "bytes": 9188,
+    "sha256": "3f51a771dae66eeabe90bff1182335f20a5975ae977acfe16e3d21e6f16da818"
+  },
+  "administracion/snapshot.py": {
+    "bytes": 866,
+    "sha256": "0e6d3448655072b7343352884511be35833521e2f2e5f0a77f8ba6f5368274dc"
+  },
+  "verificar.py": {
+    "bytes": 2804,
+    "sha256": "342d86f45357aaff8fc6d658fe6cd02cbb13d7e06a20bd556ba2dee90e1b2d34"
+  }
+}
