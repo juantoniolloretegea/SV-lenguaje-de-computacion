@@ -1,0 +1,129 @@
+{
+  "version": "S2-MONTAJES-PUBLICOS/1",
+  "fuente": "../recepcion-av/CONTROLES_PUBLICOS.json",
+  "fuente_sha256": "ce1ff3858b111282d54e5737eb8e131d7518f0778953820ca0bf7612ddfdfd81",
+  "fuente_vigencia": "../../DECLARACION_VIGENCIA.json",
+  "fuente_vigencia_sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038",
+  "casos": [
+    {
+      "id": "P3-01",
+      "fuente": "A01",
+      "vigente": true
+    },
+    {
+      "id": "P3-02",
+      "fuente": "A02",
+      "vigente": true
+    },
+    {
+      "id": "P3-03",
+      "fuente": "A03",
+      "vigente": true
+    },
+    {
+      "id": "P3-04",
+      "fuente": "A04",
+      "vigente": false
+    },
+    {
+      "id": "P3-05",
+      "fuente": "A05",
+      "vigente": true
+    },
+    {
+      "id": "P3-06",
+      "fuente": "A06",
+      "vigente": true
+    },
+    {
+      "id": "P3-07",
+      "fuente": "A07",
+      "vigente": true
+    },
+    {
+      "id": "P3-08",
+      "fuente": "A08",
+      "vigente": true
+    },
+    {
+      "id": "P3-09",
+      "fuente": "A17",
+      "vigente": true
+    },
+    {
+      "id": "P3-10",
+      "fuente": "A23",
+      "vigente": true
+    },
+    {
+      "id": "P3-11",
+      "fuente": "A01",
+      "vigente": false
+    },
+    {
+      "id": "P3-12",
+      "fuente": "A02",
+      "vigente": true
+    },
+    {
+      "id": "P3-13",
+      "fuente": "A03",
+      "vigente": true
+    },
+    {
+      "id": "P3-14",
+      "fuente": "A04",
+      "vigente": false
+    },
+    {
+      "id": "P3-15",
+      "fuente": "A05",
+      "vigente": true
+    },
+    {
+      "id": "P3-16",
+      "fuente": "A06",
+      "vigente": true
+    },
+    {
+      "id": "P3-17",
+      "fuente": "A07",
+      "vigente": true
+    },
+    {
+      "id": "P3-18",
+      "fuente": "A08",
+      "vigente": true
+    },
+    {
+      "id": "P3-19",
+      "fuente": "A17",
+      "vigente": true
+    },
+    {
+      "id": "P3-20",
+      "fuente": "A23",
+      "vigente": true
+    },
+    {
+      "id": "P3-21",
+      "fuente": "A01",
+      "vigente": true
+    },
+    {
+      "id": "P3-22",
+      "fuente": "A02",
+      "vigente": true
+    },
+    {
+      "id": "P3-23",
+      "fuente": "A03",
+      "vigente": true
+    },
+    {
+      "id": "P3-24",
+      "fuente": "A04",
+      "vigente": false
+    }
+  ]
+}

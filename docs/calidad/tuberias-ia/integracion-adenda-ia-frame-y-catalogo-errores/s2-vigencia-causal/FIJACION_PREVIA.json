@@ -1,0 +1,26 @@
+{
+  "version": "S2-FIJACION/1",
+  "fecha_utc": "2026-09-12T11:23:19Z",
+  "archivos": {
+    "BANCO_FIJADO.json": "25d9afa9771ef7c6908f6851c94327bfd2b71f5c5e2b5f0dc0ae67fb9f55c381",
+    "BASE_RETP152.json": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+    "CONTRATO_S2.md": "e55c3497eac1ccb5317e263623bda052ce25963fe3a7039eb19f5881d5c02208",
+    "DECLARACION_VIGENCIA.json": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038",
+    "ESPERADOS.json": "d2ac2468898ac941fe22fbc3f7f49e15c68d0cbcaf2b320945bf5ed1208813f9",
+    "MONTAJE_ANTERIOR.json": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff",
+    "codigo/ESPERADO.tsv": "84ce1efff3972052cfed54be85e8d249b54045e9321322a6b41e6fbd03e4c70f",
+    "codigo/cobertura.rs": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90",
+    "codigo/contraste.rs": "28a607aeec3a7939df62025f416ffd0b6f80363abfb579b9de923aa925f8c342",
+    "codigo/rangos_fijados.rs": "31259b43e58afb3683c214e0c896012ad3080371c732a5118a994ae25b832c91",
+    "referencias/PERFIL.md": "10c29934f2f8f6bfbb40546f7cf0056d4b53d720c432cacfb9d6b70abefe3d5f",
+    "referencias/fuentes-base.json": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4",
+    "referencias/fuentes-contrato.json": "ecee6cd306922c0a597d7d84d736d3817a7dd141905a33c0d1574d70a6a47bd0",
+    "referencias/semantica-a-BASE_PUBLICA.json": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4",
+    "reproducir.py": "5e43951b012a9935a0ed5fdcc1d15af42a2c2473b00f1001cf9879e5e278fefc",
+    "sensibilidad/sin-obligacion/cobertura.rs": "492985bb834044fdf6089406a3e01797b5885db7728b3899f4b6edd7048bb239",
+    "sensibilidad/sin-obligacion/rangos_fijados.rs": "31259b43e58afb3683c214e0c896012ad3080371c732a5118a994ae25b832c91",
+    "sensibilidad/sin-revocacion/servicio.rs": "0bab4e5e4dd85b23e1e3cb563e43ef48550d0c4da209d888fef247ad055e2772",
+    "sucesores/lote-g1/lib.rs": "267d9ad16ab358252cc2e4bed0661a0633967a6df2922b91734438301d788519",
+    "sucesores/lote-p3/MONTAJES_PUBLICOS.json": "a478c934f4b4419913122ea2079d98bfcbac1285bfd0bd0f5c1c4709313fe719"
+  }
+}

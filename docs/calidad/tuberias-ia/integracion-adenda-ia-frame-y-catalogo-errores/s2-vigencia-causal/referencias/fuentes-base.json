@@ -1,0 +1,65 @@
+{
+  "version": "K-IE004/1",
+  "registros": [
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGG",
+      "momento": "ACTUAL",
+      "valor": "8.40",
+      "unidad": "unidad-simulada",
+      "estado": "1",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    },
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGG",
+      "momento": "ANTERIOR",
+      "valor": "7.10",
+      "unidad": "unidad-simulada",
+      "estado": "0",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    },
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGA",
+      "momento": "ACTUAL",
+      "valor": "1.25",
+      "unidad": "unidad-simulada",
+      "estado": "U",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    },
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGA",
+      "momento": "ANTERIOR",
+      "valor": "1.15",
+      "unidad": "unidad-simulada",
+      "estado": "1",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    },
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGM",
+      "momento": "ACTUAL",
+      "valor": "0.90",
+      "unidad": "unidad-simulada",
+      "estado": "0",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    },
+    {
+      "objeto": "CASO-A",
+      "parametro": "IGM",
+      "momento": "ANTERIOR",
+      "valor": "0.80",
+      "unidad": "unidad-simulada",
+      "estado": "U",
+      "fuente": "FICCION-IE004/1",
+      "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+    }
+  ]
+}

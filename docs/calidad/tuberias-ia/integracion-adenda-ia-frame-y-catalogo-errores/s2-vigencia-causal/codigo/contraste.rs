@@ -1,0 +1,60 @@
+#![forbid(unsafe_code)]
+use lote::{EnlacePublico,ErrorEnlace,lectura::{PropuestaDeLectura,FalloLectura,VERSION,OPERACION}};
+use cobertura::{Referencia,Seleccion,FalloCobertura};
+const L:&[u8]=include_bytes!("../fuentes-base/lote-p3/LOTE_SINTETICO_PUBLICO.json");
+const M:&[u8]=include_bytes!("../fuentes-base/lote-p3/MONTAJES_PUBLICOS.json");
+fn h(k:&str)->[u8;32]{let s=std::env::var(k).unwrap();assert_eq!(s.len(),64);std::array::from_fn(|i|u8::from_str_radix(&s[i*2..i*2+2],16).unwrap())}
+fn realizacion()->g1::Realizacion{g1::Realizacion{fuentes_sha256:h("LG1_FUENTES"),binario_sha256:h("LG1_BINARIO")}}
+fn nuevo()->EnlacePublico{EnlacePublico::preparar(L,M,realizacion()).unwrap()}
+fn ejecutar(e:&mut EnlacePublico,i:usize){e.ejecutar(i).unwrap();let m=e.recuperar(i,g1::Papel::Marco).unwrap().to_vec();e.comprobar_entrega(i,&m).unwrap();}
+fn propuesta<'a>(id:(u64,u64),texto:&'a[u8],caso:Option<&'a[u8]>,vigencia:Option<&'a[u8]>)->Seleccion<'a>{Seleccion{lectura:PropuestaDeLectura{version:VERSION,operacion:OPERACION,identidad:id,texto},caso,vigencia}}
+fn comprobar(id:&str,ok:bool,resultado:&str){if !ok{eprintln!("FALLO {id}: {resultado}");std::process::exit(1)}println!("{id}\t{resultado}");}
+fn guardar(dir:&std::path::Path,id:&str,part:&str,b:&[u8]){std::fs::write(dir.join(format!("{id}.{part}")),b).unwrap()}
+fn main(){
+ let dir=std::path::PathBuf::from(std::env::var("S2_CAPTURAS").unwrap());
+ let mut e=nuevo();for i in 0..11{ejecutar(&mut e,i);guardar(&dir,&format!("P3-{:02}",i+1),"cuerpo",e.cuerpo(i).unwrap());}
+
+ let positivo=include_bytes!("../esperados/P3-01.cuerpo");let negativo=include_bytes!("../esperados/P3-11.cuerpo");
+ comprobar("CA01",e.cuerpo(0).unwrap()==positivo,"DATO_8.40_POLITICA_1");
+ comprobar("CA02",e.cuerpo(10).unwrap()==negativo,"PERMISO_REVOCADO_SIN_DATO_POLITICA_1");
+ // Contraste de causalidad con bytes de solicitud idénticos, en un único custodio.
+ let req=include_bytes!("../fuentes-base/recepcion-av/publicos/a/A01.json");
+ let mut custodio=g1::Custodio::nuevo(realizacion()).unwrap();
+ for (vigente,esperado,nombre) in [(true,positivo.as_slice(),"directo-positivo"),(false,negativo.as_slice(),"directo-negativo")] {
+  let h=custodio.abrir(&mut req.as_slice(),vigente).unwrap();custodio.ejecutar_a(&h).unwrap();custodio.no_solicitar_v(&h).unwrap();
+  let marco=custodio.recuperar(&h,g1::Papel::Marco).unwrap().to_vec();custodio.comprobar_entrega(&h,&marco).unwrap();
+  guardar(&dir,nombre,"solicitud",custodio.recuperar(&h,g1::Papel::Entrada).unwrap());
+  guardar(&dir,nombre,"marco",&marco);guardar(&dir,nombre,"traza",custodio.recuperar(&h,g1::Papel::Traza).unwrap());
+  assert_eq!(custodio.recuperar(&h,g1::Papel::Entrada).unwrap(),req);
+  assert_eq!(&marco[16..marco.len()-32],esperado);
+ }
+ comprobar("CA03",true,"MISMA_SOLICITUD_DOS_VIGENCIAS");
+ let anteriores:[&[u8];10]=[
+include_bytes!("../esperados/P3-01.cuerpo"),include_bytes!("../esperados/P3-02.cuerpo"),include_bytes!("../esperados/P3-03.cuerpo"),include_bytes!("../esperados/P3-04.cuerpo"),include_bytes!("../esperados/P3-05.cuerpo"),include_bytes!("../esperados/P3-06.cuerpo"),include_bytes!("../esperados/P3-07.cuerpo"),include_bytes!("../esperados/P3-08.cuerpo"),include_bytes!("../esperados/P3-09.cuerpo"),include_bytes!("../esperados/P3-10.cuerpo")];
+ comprobar("CA04",anteriores.iter().enumerate().all(|(i,b)|e.cuerpo(i).unwrap()==*b),"DIEZ_CUERPOS_ANTERIORES_PRESERVADOS");
+ // El conductor fija ambas referencias antes de formar las selecciones.
+ let r=Referencia::desde(&e,10).unwrap();let r0=Referencia::desde(&e,0).unwrap();
+ let texto=e.cuerpo(10).unwrap();let caso=r.caso_requerido();let vigencia=r.vigencia_requerida();
+ let completa=r.comprobar(propuesta(r.identidad(),texto,Some(caso),Some(vigencia))).unwrap();
+ comprobar("CI01",completa.lectura().texto()==texto&&completa.caso_citado()==caso&&completa.vigencia_citada()==vigencia,"ENTREGADO_CON_COBERTURA");
+ guardar(&dir,"CI01","entregado",completa.lectura().texto());guardar(&dir,"CI01","caso-citado",completa.caso_citado());guardar(&dir,"CI01","vigencia-citada",completa.vigencia_citada());
+ guardar(&dir,"CI01","solicitud",completa.lectura().solicitud());guardar(&dir,"CI01","traza",completa.lectura().traza_a());guardar(&dir,"CI01","identidad",format!("{},{}",r.identidad().0,r.identidad().1).as_bytes());
+ let sin_vigencia=r.comprobar(propuesta(r.identidad(),texto,Some(caso),None));
+ guardar(&dir,"CI02","cuerpo-propuesto",texto);guardar(&dir,"CI02","caso-citado",caso);guardar(&dir,"CI02","vigencia-omitida",vigencia);guardar(&dir,"CI02","identidad",format!("{},{}",r.identidad().0,r.identidad().1).as_bytes());
+ comprobar("CI02",matches!(sin_vigencia,Err(FalloCobertura::FaltaVigencia)),"FaltaVigencia");guardar(&dir,"CI02","rechazo",b"FaltaVigencia");
+ let reducido=include_bytes!("../MONTAJE_ANTERIOR.json");let circular=EnlacePublico::preparar(L,reducido,realizacion());
+ comprobar("CI03",matches!(circular,Err(ErrorEnlace::IdentidadMontaje)),"IdentidadMontaje");guardar(&dir,"CI03","montaje-propuesto",reducido);guardar(&dir,"CI03","rechazo",b"IdentidadMontaje");
+ let alterada=r0.vigencia_requerida().to_vec();
+ let alteracion=r.comprobar(propuesta(r.identidad(),texto,Some(caso),Some(&alterada)));
+ comprobar("CI04",matches!(alteracion,Err(FalloCobertura::VigenciaDistinta)),"VigenciaDistinta");guardar(&dir,"CI04","vigencia-propuesta",&alterada);guardar(&dir,"CI04","rechazo",b"VigenciaDistinta");
+ comprobar("CI05",matches!(r.comprobar(propuesta(r.identidad(),texto,None,Some(vigencia))),Err(FalloCobertura::FaltaCaso)),"FaltaCaso");guardar(&dir,"CI05","rechazo",b"FaltaCaso");
+ let mut otra=nuevo();ejecutar(&mut otra,0);let ajena=otra.identidad(0).unwrap();
+ comprobar("CI06",matches!(r.comprobar(propuesta(ajena,texto,Some(caso),Some(vigencia))),Err(FalloCobertura::Lectura(FalloLectura::Identidad))),"Identidad");guardar(&dir,"CI06","rechazo",b"Identidad");guardar(&dir,"CI06","identidad-propuesta",format!("{},{}",ajena.0,ajena.1).as_bytes());
+ let mut cuerpo_alterado=texto.to_vec();let token=b"PERMISO_REVOCADO";let pos=texto.windows(token.len()).position(|w|w==token).unwrap();cuerpo_alterado[pos+token.len()-1]=b'X';
+ comprobar("CI07",matches!(r.comprobar(propuesta(r.identidad(),&cuerpo_alterado,Some(caso),Some(vigencia))),Err(FalloCobertura::Lectura(FalloLectura::Presentacion(g1::FalloPresentacion::ContenidoDistinto)))) ,"ContenidoDistinto");guardar(&dir,"CI07","cuerpo-propuesto",&cuerpo_alterado);guardar(&dir,"CI07","rechazo",b"ContenidoDistinto");
+ let body0=e.cuerpo(0).unwrap();let c0=r0.caso_requerido();let v0=r0.vigencia_requerida();
+ let control=r0.comprobar(propuesta(r0.identidad(),body0,Some(c0),Some(v0))).unwrap();
+ comprobar("CI08",control.lectura().texto()==body0&&control.caso_citado()==c0&&control.vigencia_citada()==v0,"ENTREGADO_CON_COBERTURA");
+ guardar(&dir,"CI08","entregado",control.lectura().texto());guardar(&dir,"CI08","caso-citado",control.caso_citado());guardar(&dir,"CI08","vigencia-citada",control.vigencia_citada());
+ guardar(&dir,"comun","lote",e.originales().0);guardar(&dir,"comun","montaje",e.originales().1);
+}

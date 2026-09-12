@@ -8,7 +8,7 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | --- | --- | --- | --- | --- |
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
-| S2 | pendiente | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T10:51:15Z |
+| S2 | en ejecución | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:23:19Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -82,13 +82,13 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S2 · Contraste causal de vigencia con consulta inequívoca
 
-**Estado:** pendiente
+**Estado:** en ejecución
 
 **Alta:** 2026-09-12T10:51:15Z
 
-**Inicio:** —
+**Inicio:** 2026-09-12T11:23:19Z
 
-**Actualización:** 2026-09-12T10:51:15Z
+**Actualización:** 2026-09-12T11:23:19Z
 
 **Fin:** —
 
@@ -98,19 +98,19 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**Cortes de entrada:** Resultado S1 / RETP-164; el corte de ejecución se fijará antes de iniciar.
+**Cortes de entrada:** Lenguaje 111b4e8fc24481cc76be347e724d027e1c636973; laboratorio 35ea2ba7b397d7b8813be82ec8caeff4ff377bad
 
 **Dependencias:** S1; criterios C/I de RETP-147 y relevo RETP-162
 
-**Resultado:** Pendiente de fijación del par causal y sus esperados; sin ejecución.
+**Resultado:** Contrato, par causal, montaje sucesor y esperados fijados antes de ejecutar.
 
-**Verificación:** Sin resultados de ejecución.
+**Verificación:** Fuentes y registros cotejados; 69 archivos base intactos y dos sustituciones declaradas; doce controles y dos sensibilidades previstos.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s1-cobertura-independiente/README.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/CONTRATO_S2.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-164-cierre-s1)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-165)
 
-**Siguiente acción:** Identificar fuente contractual de vigencia y fijar el par, el montaje sucesor si procede y sus esperados antes de ejecutar; conservar P3-04 y las fuentes anteriores.
+**Siguiente acción:** Ejecutar la cualificación nativa fijada y registrar resultado y evidencia.
 
-**Observaciones:** S1 no acredita una revocación aplicable porque su testigo negativo es ambiguo. No se abre otro frente ni se solicitan nuevas rondas externas.
+**Observaciones:** Consulta A01 idéntica bajo dos vigencias en G1; integración P3-01/P3-11 con IDs conservados. Instantáneas sintéticas; sin revocación profesional ni reserva externa.
 

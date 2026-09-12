@@ -1679,3 +1679,10 @@ Cualificación: ocho controles, tres ejecuciones por cada uno de dos modos nativ
 El intento inicial con /usr/bin/time no inició el productor. El primer contraste se detuvo en CI07 por un espécimen JSON inválido, rechazado como Sintaxis(Json). Una observación puntual y una adenda conservan la discrepancia y corrigen sólo el espécimen, con el mismo esperado de contenido y la candidata intacta. Ambos intentos están documentados por separado; no se cuentan como cualificación conforme. Presupuesto: 30 invocaciones registradas, 29 procesos iniciados; ningún reinicio de rondas de modelos. CPU y pared registradas, RSS por proceso no disponible; viabilidad P5 no acreditada.
 
 Límite causal: P3-04 contiene vigencia negativa, pero la petición es ambigua y no consulta la política. La prueba no demuestra una revocación aplicable ni cierra C/I íntegros o A–L. S2 conserva el único siguiente objeto para resolver esa distinción con un par previo. Prueba externa, premisa/verificadores profesionales, reserva P3, P4/P5/P6 y restantes criterios conservan sus condiciones. Reproductor con fuentes fijadas entregado sin atribuirle una ejecución adicional. Sin cambios en código productivo, gramática, IR o nuevas ramas.
+
+
+<a id="retp-165"></a>
+
+### RETP-2026-165 · S2 · Apertura de contraste causal de vigencia
+
+2026-09-12T11:23:19Z. [Contrato, presupuesto y esperados previos](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/CONTRATO_S2.md). S2 en ejecución; sin resultados atribuidos. Continúa C/I integrado de RETP-164: consulta inequívoca A01, idéntica bajo dos vigencias en G1 y enlazada a P3-01/P3-11 del lote. Esperados DATO/8.40 y PERMISO_REVOCADO/null, una llamada de política en ambos. Montaje sucesor declarado; fuentes históricas conservadas. Doce controles, seis ejecuciones nativas previstas y dos sensibilidades, máximo 23 invocaciones. Mismas ramas, registros y espejo de laboratorio. La prueba externa y la consolidación posterior del catálogo conservan su lugar en el workflow.
