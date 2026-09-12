@@ -1,0 +1,3426 @@
+{
+  "version": "S6-CUALIFICACION/1",
+  "fecha_utc": "2026-09-12T14:55:59+00:00",
+  "responsable": "Watson / W-S0",
+  "referencia_sha256": "083c5b3df0062db21c4dd5e6e04addd1b76a5d3b047e809df9124d931a066ec5",
+  "verificador_sha256": "2b80d47662a2b312022ee2686952e6deb8ea7f19aeeb7e6722e3a1fa60d00173",
+  "numero_controles": 482,
+  "resultados": {
+    "CONFORME_DOCUMENTAL": 8,
+    "NO_CONFORME": 472,
+    "ERROR_INSTRUMENTO": 2
+  },
+  "familias": {
+    "positivo": 8,
+    "omision_campo": 120,
+    "valor_incorrecto": 84,
+    "cobertura_evidencia": 54,
+    "fidelidad_cita": 54,
+    "identidad_duplicada": 54,
+    "limite_omitido": 39,
+    "caso_ausente": 12,
+    "caso_duplicado": 12,
+    "contraste_material": 12,
+    "esquema_raiz": 4,
+    "tipo": 15,
+    "procedencia": 1,
+    "campo_extra": 1,
+    "json_duplicado": 2,
+    "transporte": 8,
+    "integridad_instrumento": 2
+  },
+  "coincidencias": 482,
+  "limite": "Cualificación de este contrato documental y sus clases de defecto; no prueba exhaustiva de todo software, del host, de procesos internos de modelos ni de beneficio universal. No son ejecuciones de participantes.",
+  "controles": [
+    {
+      "id": "V0000",
+      "control": "Referencia de doce casos",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0001",
+      "control": "Sangrado y claves ordenadas",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0002",
+      "control": "Escapes Unicode equivalentes",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0003",
+      "control": "Bloque JSON único",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0004",
+      "control": "CRLF estructural",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0005",
+      "control": "Orden libre de colecciones",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0006",
+      "control": "Metadatos de participante válidos",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0007",
+      "control": "E01 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0008",
+      "control": "E01 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0009",
+      "control": "E01 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0010",
+      "control": "E01 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0011",
+      "control": "E01 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0012",
+      "control": "E01 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0013",
+      "control": "E01 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0014",
+      "control": "E01 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0015",
+      "control": "E01 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0016",
+      "control": "E01 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0017",
+      "control": "E01 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0018",
+      "control": "E01 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0019",
+      "control": "E01 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0020",
+      "control": "E01 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0021",
+      "control": "E01 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0022",
+      "control": "E01 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0023",
+      "control": "E01 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0024",
+      "control": "E01 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0025",
+      "control": "E01 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0026",
+      "control": "E01 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0027",
+      "control": "E01 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0028",
+      "control": "E01 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0029",
+      "control": "E01 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0030",
+      "control": "E01 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0031",
+      "control": "E01 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0032",
+      "control": "E01 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0033",
+      "control": "E01 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0034",
+      "control": "E01 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0035",
+      "control": "E01 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0036",
+      "control": "E01 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0037",
+      "control": "E01 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0038",
+      "control": "E01 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0039",
+      "control": "Caso E01 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0040",
+      "control": "Caso E01 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0041",
+      "control": "E02 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0042",
+      "control": "E02 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0043",
+      "control": "E02 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0044",
+      "control": "E02 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0045",
+      "control": "E02 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0046",
+      "control": "E02 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0047",
+      "control": "E02 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0048",
+      "control": "E02 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0049",
+      "control": "E02 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0050",
+      "control": "E02 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0051",
+      "control": "E02 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0052",
+      "control": "E02 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0053",
+      "control": "E02 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0054",
+      "control": "E02 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0055",
+      "control": "E02 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0056",
+      "control": "E02 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0057",
+      "control": "E02 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0058",
+      "control": "E02 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0059",
+      "control": "E02 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0060",
+      "control": "E02 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0061",
+      "control": "E02 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0062",
+      "control": "E02 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0063",
+      "control": "E02 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0064",
+      "control": "E02 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0065",
+      "control": "E02 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0066",
+      "control": "E02 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0067",
+      "control": "E02 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0068",
+      "control": "E02 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0069",
+      "control": "E02 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0070",
+      "control": "E02 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0071",
+      "control": "E02 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0072",
+      "control": "E02 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0073",
+      "control": "Caso E02 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0074",
+      "control": "Caso E02 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0075",
+      "control": "E03 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0076",
+      "control": "E03 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0077",
+      "control": "E03 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0078",
+      "control": "E03 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0079",
+      "control": "E03 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0080",
+      "control": "E03 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0081",
+      "control": "E03 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0082",
+      "control": "E03 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0083",
+      "control": "E03 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0084",
+      "control": "E03 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0085",
+      "control": "E03 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0086",
+      "control": "E03 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0087",
+      "control": "E03 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0088",
+      "control": "E03 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0089",
+      "control": "E03 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0090",
+      "control": "E03 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0091",
+      "control": "E03 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0092",
+      "control": "E03 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0093",
+      "control": "E03 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0094",
+      "control": "E03 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0095",
+      "control": "E03 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0096",
+      "control": "E03 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0097",
+      "control": "E03 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0098",
+      "control": "E03 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0099",
+      "control": "E03 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0100",
+      "control": "E03 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0101",
+      "control": "E03 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0102",
+      "control": "E03 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0103",
+      "control": "E03 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0104",
+      "control": "E03 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0105",
+      "control": "E03 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0106",
+      "control": "E03 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0107",
+      "control": "E03 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0108",
+      "control": "E03 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0109",
+      "control": "E03 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0110",
+      "control": "Caso E03 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0111",
+      "control": "Caso E03 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0112",
+      "control": "E04 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0113",
+      "control": "E04 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0114",
+      "control": "E04 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0115",
+      "control": "E04 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0116",
+      "control": "E04 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0117",
+      "control": "E04 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0118",
+      "control": "E04 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0119",
+      "control": "E04 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0120",
+      "control": "E04 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0121",
+      "control": "E04 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0122",
+      "control": "E04 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0123",
+      "control": "E04 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0124",
+      "control": "E04 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0125",
+      "control": "E04 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0126",
+      "control": "E04 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0127",
+      "control": "E04 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0128",
+      "control": "E04 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0129",
+      "control": "E04 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0130",
+      "control": "E04 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0131",
+      "control": "E04 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0132",
+      "control": "E04 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0133",
+      "control": "E04 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0134",
+      "control": "E04 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0135",
+      "control": "E04 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0136",
+      "control": "E04 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0137",
+      "control": "E04 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0138",
+      "control": "E04 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0139",
+      "control": "E04 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0140",
+      "control": "E04 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0141",
+      "control": "E04 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0142",
+      "control": "E04 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0143",
+      "control": "E04 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0144",
+      "control": "Caso E04 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0145",
+      "control": "Caso E04 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0146",
+      "control": "E05 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0147",
+      "control": "E05 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0148",
+      "control": "E05 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0149",
+      "control": "E05 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0150",
+      "control": "E05 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0151",
+      "control": "E05 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0152",
+      "control": "E05 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0153",
+      "control": "E05 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0154",
+      "control": "E05 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0155",
+      "control": "E05 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0156",
+      "control": "E05 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0157",
+      "control": "E05 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0158",
+      "control": "E05 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0159",
+      "control": "E05 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0160",
+      "control": "E05 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0161",
+      "control": "E05 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0162",
+      "control": "E05 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0163",
+      "control": "E05 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0164",
+      "control": "E05 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0165",
+      "control": "E05 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0166",
+      "control": "E05 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0167",
+      "control": "E05 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0168",
+      "control": "E05 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0169",
+      "control": "E05 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0170",
+      "control": "E05 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0171",
+      "control": "E05 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0172",
+      "control": "E05 omitir fuentes 3",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0173",
+      "control": "E05 alterar bytes fuentes 3",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0174",
+      "control": "E05 duplicar fuentes 3",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0175",
+      "control": "E05 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0176",
+      "control": "E05 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0177",
+      "control": "E05 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0178",
+      "control": "E05 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0179",
+      "control": "E05 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0180",
+      "control": "E05 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0181",
+      "control": "E05 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0182",
+      "control": "E05 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0183",
+      "control": "E05 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0184",
+      "control": "Caso E05 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0185",
+      "control": "Caso E05 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0186",
+      "control": "E06 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0187",
+      "control": "E06 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0188",
+      "control": "E06 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0189",
+      "control": "E06 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0190",
+      "control": "E06 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0191",
+      "control": "E06 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0192",
+      "control": "E06 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0193",
+      "control": "E06 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0194",
+      "control": "E06 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0195",
+      "control": "E06 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0196",
+      "control": "E06 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0197",
+      "control": "E06 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0198",
+      "control": "E06 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0199",
+      "control": "E06 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0200",
+      "control": "E06 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0201",
+      "control": "E06 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0202",
+      "control": "E06 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0203",
+      "control": "E06 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0204",
+      "control": "E06 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0205",
+      "control": "E06 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0206",
+      "control": "E06 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0207",
+      "control": "E06 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0208",
+      "control": "E06 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0209",
+      "control": "E06 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0210",
+      "control": "E06 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0211",
+      "control": "E06 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0212",
+      "control": "E06 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0213",
+      "control": "E06 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0214",
+      "control": "E06 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0215",
+      "control": "E06 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0216",
+      "control": "E06 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0217",
+      "control": "E06 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0218",
+      "control": "Caso E06 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0219",
+      "control": "Caso E06 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0220",
+      "control": "E07 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0221",
+      "control": "E07 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0222",
+      "control": "E07 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0223",
+      "control": "E07 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0224",
+      "control": "E07 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0225",
+      "control": "E07 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0226",
+      "control": "E07 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0227",
+      "control": "E07 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0228",
+      "control": "E07 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0229",
+      "control": "E07 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0230",
+      "control": "E07 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0231",
+      "control": "E07 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0232",
+      "control": "E07 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0233",
+      "control": "E07 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0234",
+      "control": "E07 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0235",
+      "control": "E07 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0236",
+      "control": "E07 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0237",
+      "control": "E07 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0238",
+      "control": "E07 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0239",
+      "control": "E07 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0240",
+      "control": "E07 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0241",
+      "control": "E07 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0242",
+      "control": "E07 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0243",
+      "control": "E07 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0244",
+      "control": "E07 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0245",
+      "control": "E07 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0246",
+      "control": "E07 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0247",
+      "control": "E07 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0248",
+      "control": "E07 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0249",
+      "control": "E07 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0250",
+      "control": "E07 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0251",
+      "control": "E07 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0252",
+      "control": "E07 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0253",
+      "control": "E07 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0254",
+      "control": "E07 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0255",
+      "control": "Caso E07 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0256",
+      "control": "Caso E07 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0257",
+      "control": "E08 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0258",
+      "control": "E08 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0259",
+      "control": "E08 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0260",
+      "control": "E08 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0261",
+      "control": "E08 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0262",
+      "control": "E08 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0263",
+      "control": "E08 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0264",
+      "control": "E08 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0265",
+      "control": "E08 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0266",
+      "control": "E08 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0267",
+      "control": "E08 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0268",
+      "control": "E08 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0269",
+      "control": "E08 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0270",
+      "control": "E08 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0271",
+      "control": "E08 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0272",
+      "control": "E08 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0273",
+      "control": "E08 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0274",
+      "control": "E08 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0275",
+      "control": "E08 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0276",
+      "control": "E08 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0277",
+      "control": "E08 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0278",
+      "control": "E08 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0279",
+      "control": "E08 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0280",
+      "control": "E08 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0281",
+      "control": "E08 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0282",
+      "control": "E08 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0283",
+      "control": "E08 omitir fuentes 3",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0284",
+      "control": "E08 alterar bytes fuentes 3",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0285",
+      "control": "E08 duplicar fuentes 3",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0286",
+      "control": "E08 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0287",
+      "control": "E08 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0288",
+      "control": "E08 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0289",
+      "control": "E08 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0290",
+      "control": "E08 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0291",
+      "control": "E08 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0292",
+      "control": "E08 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0293",
+      "control": "E08 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0294",
+      "control": "E08 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0295",
+      "control": "Caso E08 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0296",
+      "control": "Caso E08 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0297",
+      "control": "E09 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0298",
+      "control": "E09 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0299",
+      "control": "E09 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0300",
+      "control": "E09 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0301",
+      "control": "E09 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0302",
+      "control": "E09 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0303",
+      "control": "E09 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0304",
+      "control": "E09 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0305",
+      "control": "E09 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0306",
+      "control": "E09 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0307",
+      "control": "E09 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0308",
+      "control": "E09 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0309",
+      "control": "E09 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0310",
+      "control": "E09 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0311",
+      "control": "E09 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0312",
+      "control": "E09 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0313",
+      "control": "E09 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0314",
+      "control": "E09 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0315",
+      "control": "E09 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0316",
+      "control": "E09 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0317",
+      "control": "E09 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0318",
+      "control": "E09 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0319",
+      "control": "E09 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0320",
+      "control": "E09 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0321",
+      "control": "E09 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0322",
+      "control": "E09 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0323",
+      "control": "E09 omitir fuentes 3",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0324",
+      "control": "E09 alterar bytes fuentes 3",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0325",
+      "control": "E09 duplicar fuentes 3",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0326",
+      "control": "E09 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0327",
+      "control": "E09 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0328",
+      "control": "E09 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0329",
+      "control": "E09 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0330",
+      "control": "E09 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0331",
+      "control": "E09 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0332",
+      "control": "E09 omitir reglas 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0333",
+      "control": "E09 alterar bytes reglas 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0334",
+      "control": "E09 duplicar reglas 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0335",
+      "control": "E09 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0336",
+      "control": "E09 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0337",
+      "control": "E09 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0338",
+      "control": "E09 omitir limite 3",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0339",
+      "control": "Caso E09 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0340",
+      "control": "Caso E09 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0341",
+      "control": "E10 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0342",
+      "control": "E10 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0343",
+      "control": "E10 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0344",
+      "control": "E10 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0345",
+      "control": "E10 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0346",
+      "control": "E10 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0347",
+      "control": "E10 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0348",
+      "control": "E10 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0349",
+      "control": "E10 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0350",
+      "control": "E10 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0351",
+      "control": "E10 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0352",
+      "control": "E10 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0353",
+      "control": "E10 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0354",
+      "control": "E10 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0355",
+      "control": "E10 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0356",
+      "control": "E10 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0357",
+      "control": "E10 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0358",
+      "control": "E10 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0359",
+      "control": "E10 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0360",
+      "control": "E10 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0361",
+      "control": "E10 omitir fuentes 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0362",
+      "control": "E10 alterar bytes fuentes 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0363",
+      "control": "E10 duplicar fuentes 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0364",
+      "control": "E10 omitir fuentes 2",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0365",
+      "control": "E10 alterar bytes fuentes 2",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0366",
+      "control": "E10 duplicar fuentes 2",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0367",
+      "control": "E10 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0368",
+      "control": "E10 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0369",
+      "control": "E10 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0370",
+      "control": "E10 omitir reglas 1",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0371",
+      "control": "E10 alterar bytes reglas 1",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0372",
+      "control": "E10 duplicar reglas 1",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0373",
+      "control": "E10 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0374",
+      "control": "E10 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0375",
+      "control": "E10 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0376",
+      "control": "Caso E10 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0377",
+      "control": "Caso E10 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0378",
+      "control": "E11 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0379",
+      "control": "E11 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0380",
+      "control": "E11 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0381",
+      "control": "E11 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0382",
+      "control": "E11 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0383",
+      "control": "E11 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0384",
+      "control": "E11 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0385",
+      "control": "E11 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0386",
+      "control": "E11 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0387",
+      "control": "E11 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0388",
+      "control": "E11 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0389",
+      "control": "E11 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0390",
+      "control": "E11 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0391",
+      "control": "E11 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0392",
+      "control": "E11 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0393",
+      "control": "E11 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0394",
+      "control": "E11 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0395",
+      "control": "E11 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0396",
+      "control": "E11 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0397",
+      "control": "E11 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0398",
+      "control": "E11 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0399",
+      "control": "E11 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0400",
+      "control": "E11 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0401",
+      "control": "E11 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0402",
+      "control": "E11 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0403",
+      "control": "E11 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0404",
+      "control": "E11 omitir limite 3",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0405",
+      "control": "Caso E11 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0406",
+      "control": "Caso E11 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0407",
+      "control": "E12 omitir caso_texto",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0408",
+      "control": "E12 omitir causa",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0409",
+      "control": "E12 omitir consecuencia",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0410",
+      "control": "E12 omitir contenido",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0411",
+      "control": "E12 omitir decision",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0412",
+      "control": "E12 omitir fuentes",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0413",
+      "control": "E12 omitir fundamento",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0414",
+      "control": "E12 omitir limites",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0415",
+      "control": "E12 omitir llamadas_politica",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0416",
+      "control": "E12 omitir reglas",
+      "familia": "omision_campo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0417",
+      "control": "E12 alterar decision",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0418",
+      "control": "E12 alterar causa",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0419",
+      "control": "E12 alterar contenido",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0420",
+      "control": "E12 alterar llamadas_politica",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0421",
+      "control": "E12 alterar caso_texto",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0422",
+      "control": "E12 alterar fundamento",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0423",
+      "control": "E12 alterar consecuencia",
+      "familia": "valor_incorrecto",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0424",
+      "control": "E12 omitir fuentes 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0425",
+      "control": "E12 alterar bytes fuentes 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0426",
+      "control": "E12 duplicar fuentes 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0427",
+      "control": "E12 omitir reglas 0",
+      "familia": "cobertura_evidencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0428",
+      "control": "E12 alterar bytes reglas 0",
+      "familia": "fidelidad_cita",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0429",
+      "control": "E12 duplicar reglas 0",
+      "familia": "identidad_duplicada",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0430",
+      "control": "E12 omitir limite 0",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0431",
+      "control": "E12 omitir limite 1",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0432",
+      "control": "E12 omitir limite 2",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0433",
+      "control": "E12 omitir limite 3",
+      "familia": "limite_omitido",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0434",
+      "control": "Caso E12 ausente",
+      "familia": "caso_ausente",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0435",
+      "control": "Caso E12 duplicado",
+      "familia": "caso_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0436",
+      "control": "DeepSeek E10",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0437",
+      "control": "Grok E05",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0438",
+      "control": "Qwen E05",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0439",
+      "control": "etiqueta E11 ahora explícita",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0440",
+      "control": "causa E11 con tilde",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0441",
+      "control": "revocación sin puerta",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0442",
+      "control": "booleano no es entero",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0443",
+      "control": "revocación convertida en DATO",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0444",
+      "control": "aceptación de pérdida de negación",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0445",
+      "control": "detección convertida en prevención",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0446",
+      "control": "fallo técnico convertido en U",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0447",
+      "control": "lectura convertida en actuación",
+      "familia": "contraste_material",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0448",
+      "control": "Omitir raíz version",
+      "familia": "esquema_raiz",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0449",
+      "control": "Omitir raíz banco_sha256",
+      "familia": "esquema_raiz",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0450",
+      "control": "Omitir raíz participante",
+      "familia": "esquema_raiz",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0451",
+      "control": "Omitir raíz resultados",
+      "familia": "esquema_raiz",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0452",
+      "control": "Tipo inválido fuentes None",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0453",
+      "control": "Tipo inválido fuentes True",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0454",
+      "control": "Tipo inválido fuentes 3",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0455",
+      "control": "Tipo inválido fuentes 'texto'",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0456",
+      "control": "Tipo inválido fuentes {}",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0457",
+      "control": "Tipo inválido reglas None",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0458",
+      "control": "Tipo inválido reglas True",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0459",
+      "control": "Tipo inválido reglas 3",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0460",
+      "control": "Tipo inválido reglas 'texto'",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0461",
+      "control": "Tipo inválido reglas {}",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0462",
+      "control": "Tipo inválido limites None",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0463",
+      "control": "Tipo inválido limites True",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0464",
+      "control": "Tipo inválido limites 3",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0465",
+      "control": "Tipo inválido limites 'texto'",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0466",
+      "control": "Tipo inválido limites {}",
+      "familia": "tipo",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0467",
+      "control": "Banco ajeno",
+      "familia": "procedencia",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0468",
+      "control": "Afirmación no contratada",
+      "familia": "campo_extra",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0469",
+      "control": "Clave raíz duplicada",
+      "familia": "json_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0470",
+      "control": "Clave anidada duplicada",
+      "familia": "json_duplicado",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0471",
+      "control": "raíz lista",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0472",
+      "control": "JSON truncado",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0473",
+      "control": "raíz null",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0474",
+      "control": "UTF8 inválido",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0475",
+      "control": "NaN",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0476",
+      "control": "Infinity",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0477",
+      "control": "texto extra",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0478",
+      "control": "límite superior",
+      "familia": "transporte",
+      "esperado": "NO_CONFORME",
+      "observado": "NO_CONFORME"
+    },
+    {
+      "id": "V0479",
+      "control": "Límite exacto",
+      "familia": "positivo",
+      "esperado": "CONFORME_DOCUMENTAL",
+      "observado": "CONFORME_DOCUMENTAL"
+    },
+    {
+      "id": "V0480",
+      "control": "Referencia alterada",
+      "familia": "integridad_instrumento",
+      "esperado": "ERROR_INSTRUMENTO",
+      "observado": "ERROR_INSTRUMENTO"
+    },
+    {
+      "id": "V0481",
+      "control": "Banco alterado",
+      "familia": "integridad_instrumento",
+      "esperado": "ERROR_INSTRUMENTO",
+      "observado": "ERROR_INSTRUMENTO"
+    }
+  ],
+  "cli": [
+    {
+      "control": "referencia",
+      "exit_code": 0,
+      "stdout": "CONFORME_DOCUMENTAL\n",
+      "stderr": "",
+      "duracion_observada_s": 0.04501758699916536
+    },
+    {
+      "control": "fallo",
+      "exit_code": 2,
+      "stdout": "NO_CONFORME\n",
+      "stderr": "",
+      "duracion_observada_s": 0.04116744799830485
+    }
+  ]
+}

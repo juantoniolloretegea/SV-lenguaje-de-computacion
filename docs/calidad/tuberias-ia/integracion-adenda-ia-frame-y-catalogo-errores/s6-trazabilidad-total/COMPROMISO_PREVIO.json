@@ -1,0 +1,10 @@
+{
+  "version": "SV-COMPROMISO-TRAZABILIDAD-2/1",
+  "fecha_utc": "2026-09-12T14:55:58+00:00",
+  "banco_sha256": "ed72787d09530be373dfafb51a9beec763d78c3f8f6a16e05ca6596dcf0973cf",
+  "referencia_sha256": "083c5b3df0062db21c4dd5e6e04addd1b76a5d3b047e809df9124d931a066ec5",
+  "verificador_sha256": "2b80d47662a2b312022ee2686952e6deb8ea7f19aeeb7e6722e3a1fa60d00173",
+  "contrato_sha256": "f24e0047a95f1c2aef3f47bb3c8dbeaa90555b7afa687ed02f06abfc0c357683",
+  "documento_sha256": "ad5a03b70f376a037082c44aa2d98e10dcb56c621864136300f5015de30ed1f7",
+  "procedencia_referencia_sha256": "9186672b6c02b6c0fdf161b8bc77aad3aa2e0c91e37f6ad6eaa77b3a04f4ea19"
+}

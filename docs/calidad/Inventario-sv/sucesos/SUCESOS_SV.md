@@ -12,7 +12,8 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
 | S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
 | S5 | finalizado | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:48:43Z |
-| S6 | en ejecución | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T14:48:43Z |
+| S6 | finalizado | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
+| S7 | pendiente | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -226,15 +227,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S6 · Diseño y cualificación del segundo intento de trazabilidad íntegra
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T14:48:43Z
 
 **Inicio:** 2026-09-12T14:48:43Z
 
-**Actualización:** 2026-09-12T14:48:43Z
+**Actualización:** 2026-09-12T15:02:14Z
 
-**Fin:** —
+**Fin:** 2026-09-12T15:02:14Z
 
 **Responsable:** Watson / W-S0
 
@@ -246,15 +247,50 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S5; instrucción del usuario de exigir trazabilidad completa y validar el instrumento antes de la nueva entrega.
 
-**Resultado:** Preparación iniciada; no se ha entregado ni cualificado aún la segunda prueba.
+**Resultado:** Segundo contrato inequívoco publicado con exigencia íntegra, referencia previa, cotejador y advertencia de exclusión/publicación. Instrumento cualificado para su alcance documental y listo para entrega.
 
-**Verificación:** Cortes consultados; originales y banco S4 conservados.
+**Verificación:** 482/482 controles previstos: 8 variantes válidas aceptadas; 472 defectos rechazados; 2 alteraciones del instrumento detectadas. Dos ejecuciones CLI con salidas 0/2. Referencia contrastada con oráculo previo; descarga pública sin credenciales HTTP 200 y bytes idénticos.
 
-**Evidencias:** —
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/CUALIFICACION.json) · [Referencia 3](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/CUSTODIA_PREVIA.json)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-170-apertura)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-170-cierre)
 
-**Siguiente acción:** Fijar contrato y referencia, ejecutar cualificación positiva y negativa y publicar paquete idéntico para los cuatro participantes.
+**Siguiente acción:** S7 pendiente: recepción del segundo intento de los cuatro participantes y aplicación íntegra del contrato fijado.
 
-**Observaciones:** El usuario encomienda al responsable la validación del diseño sin revisión de diseño por su parte. Solicita descarte general ante incumplimiento acreditado; el dictamen distinguirá criterio humano y alcance probado. No hay autorización para atribuir valor universal para la humanidad a partir de doce casos.
+**Observaciones:** La validación del diseño fue realizada por Watson / W-S0. Cotejador Python de archivos y referencia; no autoridad semántica ni sustitución de Rust. Incidencia de preparación conservada. S4 y cuatro originales S5 intactos; contrato nuevo sin aplicación retrospectiva.
+
+
+## S7 · Recepción del segundo intento de trazabilidad íntegra
+
+**Estado:** pendiente
+
+**Alta:** 2026-09-12T15:02:14Z
+
+**Inicio:** —
+
+**Actualización:** 2026-09-12T15:02:14Z
+
+**Fin:** —
+
+**Responsable:** Watson / W-S0
+
+**Alcance:** Mismo documento fijado para DeepSeek, Claude, Qwen y Grok; preservación de respuestas originales; cotejo íntegro por obligación; comprobación de cualquier afirmación adicional de actividad; dictamen trazable.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVcustos-dataset: main
+
+**Cortes de entrada:** SVcustos fccde9cf524a0d62b2dd1a2ee05170d6f4358074; referencia privada e2ef439e22583dac0f9b1c4fe4b38ce4bc5e0576; S6 / RETP-170.
+
+**Dependencias:** S6 cualificado; entrega íntegra y recepción efectiva de respuestas del segundo intento.
+
+**Resultado:** Ninguna segunda respuesta recibida; sin dictámenes de participantes.
+
+**Verificación:** Documento público descargado sin credenciales: HTTP 200; 29890 bytes y SHA-256 coincidentes.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md)
+
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-170-cierre)
+
+**Siguiente acción:** Entregar el mismo documento íntegro a los cuatro participantes; conservar cada devolución como segundo intento y cotejar contra la referencia previamente fijada.
+
+**Observaciones:** Advertencia explícita de descarte general por la dirección del SV y posible difusión internacional del expediente. Sin revisión del diseño exigida al usuario. Ninguna medida ni actividad de participante se presume realizada.
 

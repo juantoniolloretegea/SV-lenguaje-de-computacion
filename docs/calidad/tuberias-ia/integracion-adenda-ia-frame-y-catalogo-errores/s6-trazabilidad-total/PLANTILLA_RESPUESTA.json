@@ -1,0 +1,203 @@
+{
+  "version": "SV-ENTREGA-TRAZABILIDAD-2/1",
+  "banco_sha256": "ed72787d09530be373dfafb51a9beec763d78c3f8f6a16e05ca6596dcf0973cf",
+  "participante": {
+    "modelo": null,
+    "version_declarada": null,
+    "exposicion_previa_declarada": null
+  },
+  "resultados": [
+    {
+      "id": "E01",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E02",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E03",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E04",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E05",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E06",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E07",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E08",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E09",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E10",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E11",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    },
+    {
+      "id": "E12",
+      "decision": null,
+      "causa": null,
+      "contenido": null,
+      "llamadas_politica": null,
+      "caso_texto": null,
+      "fuentes": [],
+      "reglas": [],
+      "fundamento": null,
+      "consecuencia": {
+        "archivo": null,
+        "permiso_profesional": null
+      },
+      "limites": []
+    }
+  ]
+}

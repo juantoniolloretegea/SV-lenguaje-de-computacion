@@ -1,0 +1,350 @@
+{
+  "version": "SV-TRAZABILIDAD-2/1",
+  "antecedente": "S4-EXTERNA-DOCUMENTAL/1, casos conocidos; segundo intento con contrato nuevo, no reserva ciega.",
+  "reglas": {
+    "R01": "A01 consulta inequívocamente LEER/CASO-A/IGG/ACTUAL/VALOR. El análisis completo produce una única ruta [1,1,1,1,1] y precede a política. Esta consulta alcanza una vez la puerta de política.",
+    "R02": "P-IE004/1 admite LEER/CASO-A/IGG; K-IE004/1 contiene el literal artificial 8.40 para IGG/ACTUAL. El conductor fija la vigencia, ajena a la propuesta. La vigencia negativa resuelve PERMISO_REVOCADO sin contenido, fuente ni alcance. No constituye revocación profesional ni historia de autorización viva. En el campo causa se transcribe el estado DATO o PERMISO_REVOCADO para las dos resoluciones de A01; una decisión favorable de este banco sintético no acredita permiso profesional para actuar.",
+    "R03": "Leer el recibo es distinto de actuar. Un recibo de resolución negativa puede leerse fielmente sin conceder permiso. El conductor elige la referencia antes de recibir la propuesta; se comprueban versión, operación e identidad antes del contenido. Una identidad ajena causa Identidad. El rechazo por identidad se expresa con decision=RECHAZAR y causa=Identidad. Una lectura admitida usa causa=null.",
+    "R04": "La cobertura de estas posiciones exige caso original y entrada exacta de su montaje. Una cita verdadera puede ser insuficiente o ajena. Se distinguen FaltaCaso, FaltaVigencia, CasoDistinto y VigenciaDistinta. La propuesta no constituye la evidencia requerida. CasoDistinto compara la pieza caso original; VigenciaDistinta compara la entrada completa de montaje, incluida su identidad y todos sus valores. No se limita al booleano vigente. FaltaCaso y FaltaVigencia designan la ausencia de la respectiva pieza. Todos estos rechazos usan decision=RECHAZAR.",
+    "R05": "IE004-PRESENTACION-ESPACIOS/1 admite sólo espacio, TAB, LF y CR fuera de cadenas JSON. Conserva todos los bytes de cadenas, claves, orden y valores. Primero reconoce sintaxis completa. Un JSON válido alterado en contenido causa ContenidoDistinto. Suprimir una negación dentro de una cadena no está permitido. Una escritura admisible usa decision=ACEPTAR_ARCHIVO y causa=null. ContenidoDistinto antes de escribir usa decision=RECHAZAR; después de la sustitución del archivo usa decision=DETECTAR_ALTERACION.",
+    "R06": "El conductor escribe únicamente después de comprobar lectura y cobertura, en un destino nuevo, con los bytes exactos de la vista. Un rechazo previo no abre ni crea el archivo. Tras escribir, el observador debe cotejar los bytes recuperados del archivo, no volver a comparar sólo el texto previsto.",
+    "R07": "El lector admite hasta 16384 bytes y detecta exceso con un buffer de 16385. Un destino ausente produce Io(NotFound). Límite, E/S, presentación y política son causas distintas, ninguna convertida en U. Para exceso: decision=RECHAZAR_LECTURA y causa=Limite, sin tilde. Para destino ausente: decision=ERROR_LECTURA y causa=Io(NotFound). Son las únicas etiquetas admitidas para esos dos supuestos.",
+    "R08": "Alcance documental sintético en proceso confiable. No acredita pantalla, revisión humana, host resistente, persistencia ante corte eléctrico, actuación profesional o cierre universal C/I/D y A–L. Detectar alteración posterior no equivale a impedirla."
+  },
+  "fuentes": [
+    {
+      "id": "F01",
+      "titulo": "Solicitud A01",
+      "texto": "{\"version\":\"IE004-A-SOLICITUD/1\",\"id\":\"PUBLICO-A01\",\"pregunta\":\"El valor de la IgG.\",\"contexto\":{\"operacion\":\"LEER\",\"objeto\":\"CASO-A\",\"parametro\":\"IGG\",\"momento\":\"ACTUAL\",\"campo\":\"VALOR\"}}",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1"
+    },
+    {
+      "id": "F02",
+      "titulo": "Caso P3-01",
+      "texto": "{\n      \"id\": \"P3-01\",\n      \"pregunta\": \"El valor de la IgG.\",\n      \"contexto\": {\n        \"operacion\": \"LEER\",\n        \"objeto\": \"CASO-A\",\n        \"parametro\": \"IGG\",\n        \"momento\": \"ACTUAL\",\n        \"campo\": \"VALOR\"\n      }\n    }",
+      "bytes": 236,
+      "sha256": "0d6e5643ff34ec76ac9f55cace1894435b683ae8da9f626bc4947f43c4c4fcd9"
+    },
+    {
+      "id": "F03",
+      "titulo": "Montaje P3-01",
+      "texto": "{\n      \"id\": \"P3-01\",\n      \"fuente\": \"A01\",\n      \"vigente\": true\n    }",
+      "bytes": 73,
+      "sha256": "f05d042e8bc6e3e97d5856cc80a14d9d1c56a72d6ee96880f2f5c8a2c33c781d"
+    },
+    {
+      "id": "F04",
+      "titulo": "Caso P3-11",
+      "texto": "{\n      \"id\": \"P3-11\",\n      \"pregunta\": \"El valor de la IgG.\",\n      \"contexto\": {\n        \"operacion\": \"LEER\",\n        \"objeto\": \"CASO-A\",\n        \"parametro\": \"IGG\",\n        \"momento\": \"ACTUAL\",\n        \"campo\": \"VALOR\"\n      }\n    }",
+      "bytes": 236,
+      "sha256": "2e95e7fa941b90c23c6ffac9c13f54f60586c33d327cf113507198b8ef6a8e41"
+    },
+    {
+      "id": "F05",
+      "titulo": "Montaje P3-11",
+      "texto": "{\n      \"id\": \"P3-11\",\n      \"fuente\": \"A01\",\n      \"vigente\": false\n    }",
+      "bytes": 74,
+      "sha256": "a285c8cab2bf8c3345b53c1f40e046ae5d8eb0014a0448f07ab22dd3d1baa091"
+    },
+    {
+      "id": "F06",
+      "titulo": "Presentación con espacios",
+      "texto": "{\"version\":\"IE004-A-CUERPO/1\",\n  \"montaje\":\"M-IE004-AV/1\",\n  \"perfil\":\"IE004-ES-P2/3-COSTE/1\",\n  \"base\":\"K-IE004/1\",\n  \"politica\":\"P-IE004/1\",\n  \"fuente_fijada_sha256\":\"e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290\",\n  \"vigente\":true,\n  \"admision\":\"ADMITIDA\",\n  \"contexto\":[1,1,1,1,1],\n  \"resolucion\":{\"estado\":\"DATO\",\n  \"contenido\":\"8.40\",\n  \"ruta\":[1,1,1,1,1],\n  \"causas\":0,\n  \"llamadas_politica\":1,\n  \"fuente\":\"FICCION-IE004/1\",\n  \"alcance\":\"Registro artificial; no acredita concentración ni condición clínica.\"}}\n",
+      "bytes": 539,
+      "sha256": "cbfc037a6f19d6e1b0a3374d4f7b4b7d4a419ad4f17dcca694bf3d9ed0087dad"
+    },
+    {
+      "id": "F07",
+      "titulo": "Presentación con pérdida de negación",
+      "texto": "{\"version\":\"IE004-A-CUERPO/1\",\n  \"montaje\":\"M-IE004-AV/1\",\n  \"perfil\":\"IE004-ES-P2/3-COSTE/1\",\n  \"base\":\"K-IE004/1\",\n  \"politica\":\"P-IE004/1\",\n  \"fuente_fijada_sha256\":\"e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290\",\n  \"vigente\":true,\n  \"admision\":\"ADMITIDA\",\n  \"contexto\":[1,1,1,1,1],\n  \"resolucion\":{\"estado\":\"DATO\",\n  \"contenido\":\"8.40\",\n  \"ruta\":[1,1,1,1,1],\n  \"causas\":0,\n  \"llamadas_politica\":1,\n  \"fuente\":\"FICCION-IE004/1\",\n  \"alcance\":\"Registro artificial; acredita concentración ni condición clínica.\"}}\n",
+      "bytes": 536,
+      "sha256": "f6a4c3068645c4f2ade6486226d6a398f1665808b76d96b8fee3dd6775466620"
+    },
+    {
+      "id": "F08",
+      "titulo": "Cuerpo del recibo negativo",
+      "texto": "{\"version\":\"IE004-A-CUERPO/1\",\"montaje\":\"M-IE004-AV/1\",\"perfil\":\"IE004-ES-P2/3-COSTE/1\",\"base\":\"K-IE004/1\",\"politica\":\"P-IE004/1\",\"fuente_fijada_sha256\":\"e5073224e257bf43e837274b867325a38171363a7521921a25714e3498c7c290\",\"vigente\":false,\"admision\":\"ADMITIDA\",\"contexto\":[1,1,1,1,1],\"resolucion\":{\"estado\":\"PERMISO_REVOCADO\",\"contenido\":null,\"ruta\":[1,1,1,1,1],\"causas\":0,\"llamadas_politica\":1,\"fuente\":null,\"alcance\":null}}\n",
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8"
+    }
+  ],
+  "casos": [
+    {
+      "id": "E01",
+      "titulo": "Resolver A01 con vigencia positiva",
+      "fuentes": [
+        "F01",
+        "F03"
+      ],
+      "enunciado": "La pregunta y contexto son los de F01. El conductor fija vigente=true. Indique estado, contenido y número de llamadas de política.",
+      "reglas_a_citar": [
+        "R01",
+        "R02"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E02",
+      "titulo": "Resolver la misma A01 con vigencia negativa",
+      "fuentes": [
+        "F01",
+        "F05"
+      ],
+      "enunciado": "Los bytes de F01 no cambian. El conductor fija vigente=false. Indique estado, contenido y número de llamadas de política.",
+      "reglas_a_citar": [
+        "R01",
+        "R02"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E03",
+      "titulo": "Leer el recibo negativo completo",
+      "fuentes": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "enunciado": "El conductor selecciona P3-11. La propuesta lleva identidad propia, F08 íntegro y las dos citas F04/F05. ¿Puede entregarse esta lectura documental? Distinga lectura del recibo y permiso para actuar.",
+      "reglas_a_citar": [
+        "R03",
+        "R04"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E04",
+      "titulo": "Omitir la vigencia manteniendo citas verdaderas",
+      "fuentes": [
+        "F04",
+        "F08"
+      ],
+      "enunciado": "Misma invocación y cuerpo de E03. Sólo se cita F04; se omite F05. Indique aceptación, causa y evidencia faltante.",
+      "reglas_a_citar": [
+        "R03",
+        "R04"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E05",
+      "titulo": "Citar una vigencia verdadera de otro caso",
+      "fuentes": [
+        "F03",
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "enunciado": "Misma invocación P3-11 y cuerpo F08. Se cita F04 y se sustituye F05 por F03, que es verdadero para P3-01.",
+      "reglas_a_citar": [
+        "R03",
+        "R04"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E06",
+      "titulo": "Intercambiar identidad de invocación",
+      "fuentes": [
+        "F04",
+        "F05",
+        "F08"
+      ],
+      "enunciado": "Se conservan cuerpo F08 y citas F04/F05, pero la identidad de la propuesta pertenece a otra invocación. El conductor sigue seleccionando P3-11.",
+      "reglas_a_citar": [
+        "R03"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E07",
+      "titulo": "Escribir una presentación espaciada",
+      "fuentes": [
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "enunciado": "F06 sólo cambia separadores permitidos fuera de cadenas respecto del cuerpo original. Identidad propia, citas completas F02/F03. Destino nuevo; escritura y lectura sin error.",
+      "reglas_a_citar": [
+        "R05",
+        "R06"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E08",
+      "titulo": "Eliminar negación antes de escribir",
+      "fuentes": [
+        "F02",
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "enunciado": "Se propone F07 en vez de F06, con citas e identidad correctas. El conductor sólo abre el destino después de pasar comprobación. Destino inicialmente ausente.",
+      "reglas_a_citar": [
+        "R05",
+        "R06"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E09",
+      "titulo": "Eliminar negación después de escribir",
+      "fuentes": [
+        "F02",
+        "F03",
+        "F06",
+        "F07"
+      ],
+      "enunciado": "Se valida y escribe F06. Después se sustituye sólo el archivo por F07. El cuerpo custodiado y la vista anterior siguen intactos. El observador lee ahora el archivo.",
+      "reglas_a_citar": [
+        "R05",
+        "R06",
+        "R08"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03",
+        "L04"
+      ]
+    },
+    {
+      "id": "E10",
+      "titulo": "Texto fiel con cobertura incompleta antes de escritura",
+      "fuentes": [
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "enunciado": "F06 es fiel y lleva identidad propia. Se cita F02 pero se omite F03. El archivo de destino aún no existe.",
+      "reglas_a_citar": [
+        "R04",
+        "R06"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03"
+      ]
+    },
+    {
+      "id": "E11",
+      "titulo": "Leer archivo sobre el límite",
+      "fuentes": [
+        "F06"
+      ],
+      "enunciado": "El archivo contiene exactamente 16385 espacios ASCII (byte 0x20). El lector admite hasta 16384 bytes y detecta el exceso antes del cotejo de fidelidad.",
+      "reglas_a_citar": [
+        "R07"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03",
+        "L05"
+      ]
+    },
+    {
+      "id": "E12",
+      "titulo": "Leer un destino ausente",
+      "fuentes": [
+        "F06"
+      ],
+      "enunciado": "El archivo solicitado no existe. El observador intenta abrirlo antes de cualquier cotejo.",
+      "reglas_a_citar": [
+        "R07"
+      ],
+      "limites_a_declarar": [
+        "L01",
+        "L02",
+        "L03",
+        "L05"
+      ]
+    }
+  ],
+  "fundamentos": {
+    "B01": "La consulta inequívoca alcanza una vez la política; el montaje fija vigencia positiva y se obtiene el literal artificial.",
+    "B02": "La misma consulta alcanza una vez la política; el montaje fija vigencia negativa y la resolución carece de contenido.",
+    "B03": "El recibo negativo tiene identidad propia y cobertura completa; puede leerse sin conceder actuación.",
+    "B04": "Se conserva el caso original, pero falta su entrada de montaje; la propuesta no sustituye la evidencia omitida.",
+    "B05": "Se conserva el caso original, pero se aporta la entrada de montaje de otro caso; difiere la pieza vigencia completa.",
+    "B06": "La identidad de la propuesta es ajena a la invocación; el control precede al contenido.",
+    "B07": "La presentación sólo cambia separadores permitidos fuera de cadenas; identidad y cobertura son correctas.",
+    "B08": "La propuesta pierde una negación dentro de una cadena antes de abrir el destino; falla la fidelidad.",
+    "B09": "El archivo ya escrito ha sido sustituido y pierde la negación; la referencia anterior permanece intacta.",
+    "B10": "El archivo excede el límite del lector; no se alcanza el cotejo de fidelidad.",
+    "B11": "El destino solicitado no existe; la apertura falla antes de cualquier cotejo."
+  },
+  "limites": {
+    "L01": "Banco sintético: no acredita concentración, condición clínica ni actuación profesional.",
+    "L02": "Lectura y justificación documental: no acreditan ejecución propia de Rust ni de los efectos descritos.",
+    "L03": "No acredita pantalla, host resistente, persistencia ante corte eléctrico ni conformidad universal del sistema.",
+    "L04": "La detección de una alteración ya ocurrida no acredita que se impidiera.",
+    "L05": "Un fallo técnico no se convierte en U ni en un valor del dominio."
+  },
+  "decisiones": [
+    "DATO",
+    "PERMISO_REVOCADO",
+    "ENTREGAR_LECTURA",
+    "RECHAZAR",
+    "ACEPTAR_ARCHIVO",
+    "DETECTAR_ALTERACION",
+    "RECHAZAR_LECTURA",
+    "ERROR_LECTURA"
+  ],
+  "causas": [
+    "DATO",
+    "PERMISO_REVOCADO",
+    "FaltaCaso",
+    "FaltaVigencia",
+    "CasoDistinto",
+    "VigenciaDistinta",
+    "Identidad",
+    "ContenidoDistinto",
+    "Limite",
+    "Io(NotFound)",
+    null
+  ],
+  "consecuencias_archivo": [
+    "no_interviene",
+    "escrito_y_recuperado_fiel",
+    "no_creado",
+    "alterado_detectado",
+    "lectura_rechazada_por_limite",
+    "lectura_fallida_por_ausencia"
+  ]
+}

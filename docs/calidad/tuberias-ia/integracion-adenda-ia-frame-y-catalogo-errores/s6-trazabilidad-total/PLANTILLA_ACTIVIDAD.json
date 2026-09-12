@@ -1,0 +1,56 @@
+{
+  "version": "SV-ACTIVIDAD-2/1",
+  "participante": null,
+  "naturaleza": "declaraciones con evidencias adjuntas; revisión separada del cotejo documental",
+  "operaciones": [],
+  "mediciones": [
+    {
+      "nombre": "duracion_total",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    },
+    {
+      "nombre": "duracion_herramientas",
+      "valor": null,
+      "unidad": "s",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    },
+    {
+      "nombre": "llamadas_herramientas",
+      "valor": null,
+      "unidad": "llamadas",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    },
+    {
+      "nombre": "tokens_entrada",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    },
+    {
+      "nombre": "tokens_salida",
+      "valor": null,
+      "unidad": "tokens",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    },
+    {
+      "nombre": "coste",
+      "valor": null,
+      "unidad": "moneda",
+      "origen": "no_disponible",
+      "evidencia": null,
+      "motivo": "No disponible; sustituir sólo si se aporta su fuente."
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "version": "SV-MANIFIESTO-TRAZABILIDAD-2/1",
+  "archivos": [
+    {
+      "ruta": "BANCO.json",
+      "bytes": 15683,
+      "sha256": "ed72787d09530be373dfafb51a9beec763d78c3f8f6a16e05ca6596dcf0973cf"
+    },
+    {
+      "ruta": "COMPROMISO_PREVIO.json",
+      "bytes": 645,
+      "sha256": "7f990c7d829b31f5450f7f37203d836ac84aa0fe3f1425fbc240f7b0acab6daa"
+    },
+    {
+      "ruta": "CONTRATO.md",
+      "bytes": 9594,
+      "sha256": "f24e0047a95f1c2aef3f47bb3c8dbeaa90555b7afa687ed02f06abfc0c357683"
+    },
+    {
+      "ruta": "CUALIFICACION.json",
+      "bytes": 87473,
+      "sha256": "740cbcc54a8da2291b44810f7b0b88f38de43d34d624a660082a2a394e2a17d1"
+    },
+    {
+      "ruta": "CUSTODIA_PREVIA.json",
+      "bytes": 420,
+      "sha256": "884eab8a45f0d15934964583a2d37f54d191d64cd0217492ea41b284f8e394cc"
+    },
+    {
+      "ruta": "PLANTILLA_ACTIVIDAD.json",
+      "bytes": 1548,
+      "sha256": "8c58ab70654d290150f12603549127092203403073de1113a1a00c7d59327fb8"
+    },
+    {
+      "ruta": "PLANTILLA_RESPUESTA.json",
+      "bytes": 4375,
+      "sha256": "837d22bd378d26f330c7b31733cef5d866d05a77de51f6a9714053f3f83ac492"
+    },
+    {
+      "ruta": "PRUEBA_COMUN.md",
+      "bytes": 29890,
+      "sha256": "ad5a03b70f376a037082c44aa2d98e10dcb56c621864136300f5015de30ed1f7"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 3986,
+      "sha256": "a9d3f158c3d221f3e3f8f764b306aabe00401fb249ae5ca1bfcaab7227fdf9a3"
+    },
+    {
+      "ruta": "cotejar_entrega.py",
+      "bytes": 6735,
+      "sha256": "2b80d47662a2b312022ee2686952e6deb8ea7f19aeeb7e6722e3a1fa60d00173"
+    }
+  ]
+}

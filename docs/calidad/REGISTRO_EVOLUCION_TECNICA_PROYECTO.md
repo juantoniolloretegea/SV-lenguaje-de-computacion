@@ -1764,3 +1764,12 @@ Ocho llamadas, lectura reconstruida y huellas recalculadas declaradas sin regist
 Criterio solicitado por la dirección: incumplimiento acreditado en una prueba válida implica descarte general para toda función y retirada de su valoración como IA buena para la humanidad. El informe distinguirá ese criterio de selección humano de los incumplimientos observados: un ensayo documental no acredita por sí solo una conclusión universal sobre humanidad, intenciones o toda capacidad posible.
 
 Mismas ramas; conservación de S4/S5 y sus registros. El nuevo umbral será íntegro y no se aplica retrospectivamente a la primera entrega.
+
+
+<a id="retp-170-cierre"></a>
+
+### RETP-2026-170 · Cierre S6 · Segundo intento cualificado
+
+2026-09-12T15:02:14Z. [Prueba común fijada](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md). S6 finalizado; S7 pendiente de entrega y recepción. Cumplimiento íntegro por caso; contrato exacto sin sinónimos pendientes; referencia custodiada antes de la publicación y cotejador de archivos. 482/482 controles esperados: 8 aceptaciones válidas, 472 rechazos de defectos y 2 detecciones de instrumento alterado. CLI real comprobada. Documento de 29.890 bytes descargado sin credenciales con HTTP 200 y huella idéntica.
+
+Advertencia previa de exclusión general según criterio del SV y su dirección y posible difusión internacional en Europa y Estados Unidos. Evidencia comprobada y criterio humano diferenciados. Actividad adicional sólo acreditable con registros; no se inventan tiempos. Validación de diseño realizada por Watson / W-S0, sin trasladarla al usuario. Los antecedentes S4/S5 y sus originales se conservan; ninguna segunda respuesta recibida. [Acta](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s6-trazabilidad-total/ACTA_CUALIFICACION.md).
