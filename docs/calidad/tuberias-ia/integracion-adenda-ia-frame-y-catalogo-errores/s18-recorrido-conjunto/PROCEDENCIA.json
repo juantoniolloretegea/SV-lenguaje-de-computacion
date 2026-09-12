@@ -1,0 +1,118 @@
+{
+  "version": "S18-PROCEDENCIA/1",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "01757329fdee388665410189288757b4e8713285",
+      "tree": "98b1d09ff2a655c926f596876a34a529fc536250"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "43ab38b226e2205951ab9b60a102941b8aeec2d9",
+      "tree": "f997e922486443aac6f5314c01725b1c3ac4328a"
+    }
+  },
+  "fuentes": [
+    {
+      "destino": "contrato-s17/CONTRATO_RECORRIDO_CONJUNTO.md",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/CONTRATO_RECORRIDO_CONJUNTO.md",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "1c401ec39a4c406b56f7072c27d1c7c9652cf19a",
+      "bytes": 12439,
+      "sha256": "51d8530ca4ada77e0e4f38d12657159070af3afdb1c39cbb2ea207e076500367",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/CONTRATO_RECORRIDO_CONJUNTO.md"
+    },
+    {
+      "destino": "contrato-s17/BANCO_OBLIGACIONES.json",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/BANCO_OBLIGACIONES.json",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "ddc15d603f904e21236266318fb51d0d3d2636e1",
+      "bytes": 11503,
+      "sha256": "63720383324dafc1c654386746ddd6df4c276938c7001f8a1cbd76678cf8777b",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/BANCO_OBLIGACIONES.json"
+    },
+    {
+      "destino": "contrato-s17/DIAGNOSTICOS.json",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/DIAGNOSTICOS.json",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "5d34d03a070b8842a98a0fb69df5059eddb3216a",
+      "bytes": 2191,
+      "sha256": "e18935d5ce771299542e33067f1ec6096437658c404ebe7145db1fdbe71d6615",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/DIAGNOSTICOS.json"
+    },
+    {
+      "destino": "esperados/base-nueva.bin",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/base-nueva.bin",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "cd896c97e78f2ee9de3e3fa023f3e8a9b9d00672",
+      "bytes": 28,
+      "sha256": "4ca865bdd9a2fc4ad50512dd7d474a4bedbc5446666eca5ae3ac1757681511bd",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/base-nueva.bin"
+    },
+    {
+      "destino": "esperados/base-original.bin",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/base-original.bin",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "929205dea03d3d0c186462548244e3527948f20c",
+      "bytes": 28,
+      "sha256": "845afa67b19e532a0e64273ef3cf67a8d7dc74d98f7cdbefe1ba2b560c47c1d3",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/base-original.bin"
+    },
+    {
+      "destino": "esperados/contexto-instruccion.txt",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/contexto-instruccion.txt",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "9d1074175d2c024b1b9d37974766593c220b6a7a",
+      "bytes": 85,
+      "sha256": "d8f580377f7204775d17f1abd06f0415cfd6fbaf6401387aa7162eebec686bf4",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/contexto-instruccion.txt"
+    },
+    {
+      "destino": "esperados/contexto.txt",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/contexto.txt",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "bf3fe513bccde7851e43e142025368dbeff5e830",
+      "bytes": 70,
+      "sha256": "f5d9989ef0f9d9336d86253ac6862216c188281f51265e3f3d8861968794864f",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/contexto.txt"
+    },
+    {
+      "destino": "esperados/negativo.cuerpo",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/negativo.cuerpo",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "6a59e6d2a004f1bd0ef43af0f90fc315d01ae553",
+      "bytes": 423,
+      "sha256": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/negativo.cuerpo"
+    },
+    {
+      "destino": "esperados/positivo.cuerpo",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/positivo.cuerpo",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "6ad4e7805ae7f77d19c767cfa52429cd6a59ca39",
+      "bytes": 494,
+      "sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/positivo.cuerpo"
+    },
+    {
+      "destino": "esperados/solicitud.bin",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/solicitud.bin",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "94de534bb7074bacbc171dd58814dc30ff959c15",
+      "bytes": 188,
+      "sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/esperados/solicitud.bin"
+    },
+    {
+      "destino": "FUENTES_S2.json",
+      "ruta_origen": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/FUENTES_S2.json",
+      "corte": "01757329fdee388665410189288757b4e8713285",
+      "blob": "af448553f130665985b9be210990aea9d9da7cec",
+      "bytes": 737698,
+      "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/01757329fdee388665410189288757b4e8713285/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/FUENTES_S2.json"
+    }
+  ]
+}

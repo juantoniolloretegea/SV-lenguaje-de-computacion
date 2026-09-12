@@ -22,6 +22,7 @@
 | S15 | finalizado | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:13:27Z |
 | S16 | finalizado | Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental | Watson / W-S0 | 2026-09-12T19:22:37Z |
 | S17 | finalizado | Contrato del recorrido documental conjunto: contexto, base, recepción, cobertura y entrega | Watson / W-S0 | 2026-09-12T19:49:05Z |
+| S18 | en ejecución | Recorrido conjunto de contexto, base consumida, recepción y entrega tipada | Watson / W-S0 | 2026-09-12T20:04:01Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -651,4 +652,39 @@
 **Siguiente accion:** Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta.
 
 **Observaciones:** S17 cierra un contrato documental, no una campaña. 144 observaciones normales previstas, ninguna realizada. Presupuesto e implementación por fijar antes de ejecutar. B/E/K/L y puertas P3/P4/P5/P6 vigentes; sin promoción nuclear; agentes por decidir tras inmunología.
+
+
+## S18 · Recorrido conjunto de contexto, base consumida, recepción y entrega tipada
+
+**Estado:** en ejecución
+
+**Fecha alta utc:** 2026-09-12T20:04:01Z
+
+**Fecha inicio utc:** 2026-09-12T19:53:47Z
+
+**Fecha actualizacion utc:** 2026-09-12T20:04:01Z
+
+**Fecha fin utc:** —
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** 24 casos S17; producción y entrega G1, contexto, base, recepción, cobertura y archivo; sin promoción nuclear.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje 01757329fdee388665410189288757b4e8713285; laboratorio 43ab38b226e2205951ab9b60a102941b8aeec2d9
+
+**Dependencias:** S17 / RETP-188; fuentes originales G1; S14/S15; autorización expresa de continuación.
+
+**Resultado:** Realización, contrato S17, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía.
+
+**Verificacion:** Cortes y rectores cotejados; once archivos fuente recibidos por blob y SHA-256; 24 obligaciones S17 conservadas.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/README.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-189)
+
+**Siguiente accion:** Ejecutar reproductor con máximo 29 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.
+
+**Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
 

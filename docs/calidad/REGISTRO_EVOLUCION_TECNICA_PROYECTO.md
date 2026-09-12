@@ -1899,3 +1899,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-188 · S17 · Contrato del recorrido documental conjunto
 
 2026-09-12T19:49:05Z. [Acta y contrato](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/ACTA_CONTRATO_S17.md). Contrato y obligaciones fijados. Enlace directo insuficiente: lote fijo S2, Vista S14 y bytes de Informe S15 no equivalen a una entrega tipada. Adaptación y conformidad ejecutable pendientes. 15 fuentes íntegras, cuatro interfaces encapsuladas y 11 pasajes exactos; 24 casos fijados; cero ensayos funcionales nuevos. Esperados originales S14 intactos. Se fija la relación entre producción G1, base consumida, contexto, recepción completa y entrega tipada; no se cambia el lote anterior ni se eleva una lista de bytes a credencial. **Siguiente objeto único:** Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta. S17 cierra un contrato documental, no una campaña. 144 observaciones normales previstas, ninguna realizada. Presupuesto e implementación por fijar antes de ejecutar. B/E/K/L y puertas P3/P4/P5/P6 vigentes; sin promoción nuclear; agentes por decidir tras inmunología.
+
+
+<a id="retp-189"></a>
+
+### RETP-2026-189 · S18 · Fijación previa del recorrido documental conjunto
+
+2026-09-12T20:04:01Z. Realización, contrato S17, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía. Cortes y rectores cotejados; once archivos fuente recibidos por blob y SHA-256; 24 obligaciones S17 conservadas. [Contrato y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/README.md). Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. Siguiente: Ejecutar reproductor con máximo 29 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado.

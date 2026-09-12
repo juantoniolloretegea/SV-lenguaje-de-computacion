@@ -219,3 +219,10 @@ Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResu
 2026-09-12T19:49:05Z. [Acta y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s17-contrato-recorrido-conjunto/ACTA_CONTRATO_S17.md). Contrato y obligaciones fijados. Enlace directo insuficiente: lote fijo S2, Vista S14 y bytes de Informe S15 no equivalen a una entrega tipada. Adaptación y conformidad ejecutable pendientes. 15 fuentes íntegras, cuatro interfaces encapsuladas y 11 pasajes exactos; 24 casos fijados; cero ensayos funcionales nuevos. Esperados originales S14 intactos.
 
 **Siguiente objeto único:** Realizar la adaptación mínima del contrato S17, fijar fuentes y reproducir el recorrido conjunto con presupuesto previo; detener ante pérdida no resuelta. La conformidad de piezas separadas no acredita una ejecución integrada inexistente. No se adelantan P3/P4/P5/P6 ni agentes; S12/S13 conservan su autoridad.
+
+
+## S18 · Fijación previa del recorrido documental conjunto · RETP-189
+
+2026-09-12T20:04:01Z. [Contrato y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/README.md). Realización, contrato S17, casos, esperados y presupuesto fijados antes de compilar; sin ejecución funcional nueva todavía. Cortes y rectores cotejados; once archivos fuente recibidos por blob y SHA-256; 24 obligaciones S17 conservadas.
+
+Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. **Siguiente:** Ejecutar reproductor con máximo 29 invocaciones, cero reintentos; conservar y detener ante cualquier fallo inesperado. El catálogo recibe causas por etapa; las puertas y reservas P3/P4/P5/P6 conservan su estado.

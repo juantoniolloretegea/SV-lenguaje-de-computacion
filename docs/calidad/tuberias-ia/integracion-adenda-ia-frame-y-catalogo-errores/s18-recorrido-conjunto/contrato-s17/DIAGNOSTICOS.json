@@ -1,0 +1,83 @@
+{
+  "version": "S17-DIAGNOSTICOS/1",
+  "alcance": "Identificadores locales de obligaciones; no catálogo canónico SV ni traducción a Tri.",
+  "identificadores": [
+    {
+      "id": "CONFORME",
+      "es": "Conforme",
+      "en": "Conforming"
+    },
+    {
+      "id": "BASE_DISTINTA",
+      "es": "Base distinta",
+      "en": "Different base"
+    },
+    {
+      "id": "DOCUMENTO_DISTINTO",
+      "es": "Documento distinto",
+      "en": "Different document"
+    },
+    {
+      "id": "IDENTIDAD",
+      "es": "Identidad distinta",
+      "en": "Identity mismatch"
+    },
+    {
+      "id": "FALTA_SOLICITUD",
+      "es": "Falta solicitud",
+      "en": "Missing request"
+    },
+    {
+      "id": "SOLICITUD_DISTINTA",
+      "es": "Solicitud distinta",
+      "en": "Different request"
+    },
+    {
+      "id": "FALTA_BASE",
+      "es": "Falta base",
+      "en": "Missing base"
+    },
+    {
+      "id": "CONTENIDO_DISTINTO",
+      "es": "Contenido distinto",
+      "en": "Different content"
+    },
+    {
+      "id": "COMUNICACION",
+      "es": "Fallo de comunicación",
+      "en": "Communication failure"
+    },
+    {
+      "id": "NEGATIVA_PROVEEDOR",
+      "es": "Negativa del proveedor",
+      "en": "Provider refusal"
+    },
+    {
+      "id": "ESQUEMA_INVALIDO",
+      "es": "Esquema inválido",
+      "en": "Invalid schema"
+    },
+    {
+      "id": "IO",
+      "es": "Fallo de entrada/salida",
+      "en": "Input/output failure"
+    },
+    {
+      "id": "LIMITE_CONTEXTO",
+      "es": "Límite de contexto",
+      "en": "Context limit"
+    },
+    {
+      "id": "LIMITE_RECEPCION",
+      "es": "Límite de recepción",
+      "en": "Reception limit"
+    }
+  ],
+  "detalles_obligatorios": {
+    "COMUNICACION": "ErrorKind específico",
+    "IO": "ErrorKind específico y etapa apertura/escritura/flush/recuperación",
+    "ESQUEMA_INVALIDO": "Cabecera/Tipo/Truncado/Sobrante/Bandera, sin agruparlos",
+    "CONTENIDO_DISTINTO": "Variante tipada del comprobador de presentación; detener ante una distinta a la fijada en campaña"
+  },
+  "fallos_no_ejercitados": "Conservar variante original G1 o de instalación y detener ante resultado no previsto; no inventar una equivalencia de catálogo."
+}
