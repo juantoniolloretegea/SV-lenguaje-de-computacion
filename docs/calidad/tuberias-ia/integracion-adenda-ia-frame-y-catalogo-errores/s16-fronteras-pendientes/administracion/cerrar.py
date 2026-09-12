@@ -1,0 +1,7 @@
+from pathlib import Path
+import ast,json,hashlib,shutil
+R=Path(__file__).resolve().parent;D=R/'entrega';A=D/'administracion';A.mkdir(exist_ok=True)
+for n in ['snapshot.py','recepcion-inicial.py','recibir.py','elaborar.py','registrar.py','publicar.py','cerrar.py']:
+ ast.parse((R/n).read_text());shutil.copyfile(R/n,A/n)
+(D/'README.md').write_text('# S16 — Fronteras pendientes de integración\n\n[Acta y decisión](ACTA_FRONTERAS.md) · [Cuatro fronteras](MATRIZ_FRONTERAS.json) · [Fases de fallo](FRONTERAS_DE_FALLO.json) · [Matriz A–L](MATRIZ_COBERTURA_A_L_RESULTADO_S16.json).\n\nRevisión documental completada; capacidades B/E/K/L integradas no acreditadas. 21 fuentes, 18 pasajes; cero ensayos funcionales nuevos. Sin extensión de IR propuesta en este corte.\n\n[Fuentes recuperables](FUENTES_RECIBIDAS.json), [pasajes](PASAJES_COTEJADOS.json), [cotejo](COTEJO_DOCUMENTAL.json), [preparación](PREPARACION.json), [rectores](RECTORES.json), [manifiesto](MANIFIESTO.json). Reproducir el cotejo con `python3 verificar.py` desde esta carpeta. El comprobador verifica integridad y correspondencia, no resuelve suficiencia semántica.\n')
+x=dict(version='S16-MANIFIESTO/1',archivos={str(p.relative_to(D)):dict(bytes=p.stat().st_size,sha256=hashlib.sha256(p.read_bytes()).hexdigest()) for p in sorted(D.rglob('*')) if p.is_file() and p.name!='MANIFIESTO.json'});(D/'MANIFIESTO.json').write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n')

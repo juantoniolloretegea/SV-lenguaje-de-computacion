@@ -1,0 +1,81 @@
+{
+  "version": "S16-MANIFIESTO/1",
+  "archivos": {
+    "ACTA_FRONTERAS.md": {
+      "bytes": 9010,
+      "sha256": "04a11ac7c926af0618ef30fe3c79047c26f70d213658d0062ed8e4fa1a79ea6c"
+    },
+    "CORTE_Y_ALCANCE.json": {
+      "bytes": 1050,
+      "sha256": "e712cad4fbd323255f6473383324015fcd68d674bda33192f0e7a99e6fc4bdec"
+    },
+    "COTEJO_DOCUMENTAL.json": {
+      "bytes": 306,
+      "sha256": "154994d548c934a4558551dd1b4f72b88890a89aa551c79c4da4c99a5bec94db"
+    },
+    "FRONTERAS_DE_FALLO.json": {
+      "bytes": 1581,
+      "sha256": "83e91e1508c59d0c7eaae9e34912364a7daa05afc90201871d6b6f05930f7065"
+    },
+    "FUENTES_RECIBIDAS.json": {
+      "bytes": 476087,
+      "sha256": "62bfce48c66d6bd056d8344047f8d0b8a55c71a277bba8c45f9f1b7ee1c027e6"
+    },
+    "MATRIZ_COBERTURA_A_L_RESULTADO_S16.json": {
+      "bytes": 27972,
+      "sha256": "85d7b7f1539f5eca8d5b851133d9c9ba92dc79bff7360e9dcf97624c95ab644e"
+    },
+    "MATRIZ_FRONTERAS.json": {
+      "bytes": 9436,
+      "sha256": "1b9b31cc30914cebd96244ef6f689694bd73d9e7db258a82f60bd4e885940ba6"
+    },
+    "PASAJES_COTEJADOS.json": {
+      "bytes": 18819,
+      "sha256": "9c3923273863073353adacb9ae6b05327c24242430df3e771ae0a0933b0076df"
+    },
+    "PREPARACION.json": {
+      "bytes": 549,
+      "sha256": "ea44fdf5f08a542a5f983f602d223164a5d419afccc7f1a934a59fd5d74f30c1"
+    },
+    "README.md": {
+      "bytes": 788,
+      "sha256": "c8eca9bc48649e266965ba013ae1dcbcf053b6354e6f9f16ce75077606011f8b"
+    },
+    "RECTORES.json": {
+      "bytes": 866,
+      "sha256": "64549c614558f4f04c36523cf9d256117c31fb9c2874d7b2dba406fb6a20f05f"
+    },
+    "administracion/cerrar.py": {
+      "bytes": 1449,
+      "sha256": "57ed811db3859e23d9ee831a8ce1165bf163355d2cbd7f4cdc2e43679b6e0be6"
+    },
+    "administracion/elaborar.py": {
+      "bytes": 11818,
+      "sha256": "aff926d3daee751f32aa537124f86dea77d655ce6f686a5eeedd2eb6b4b8f3d5"
+    },
+    "administracion/publicar.py": {
+      "bytes": 2645,
+      "sha256": "b40fb9ffe9cf2265471adc237ef086745945db87aeae7b8f0d9316a269ba9e31"
+    },
+    "administracion/recepcion-inicial.py": {
+      "bytes": 3364,
+      "sha256": "44c0aba66b41600d4754bc3cae4d4aaece53e0b796ee1a9df1c50e8cb542cd87"
+    },
+    "administracion/recibir.py": {
+      "bytes": 3376,
+      "sha256": "e3a1970b7d0135e56064804f0a4fb06d704c4d841ec37c1688dce728a1581e19"
+    },
+    "administracion/registrar.py": {
+      "bytes": 7005,
+      "sha256": "14c7a89a1fff4b0db343fe4d7a9d377509d355c079e3eccfc33e4e798ef012ed"
+    },
+    "administracion/snapshot.py": {
+      "bytes": 859,
+      "sha256": "4cb9cece3f3076b56fb1701d2ac53246152274ff33f30da26012b87b950c0568"
+    },
+    "verificar.py": {
+      "bytes": 1954,
+      "sha256": "8ddef8a6e8c6d81fe16a9daf86edf9af3ab4a1fe6f25e1080917b7eb5373be97"
+    }
+  }
+}

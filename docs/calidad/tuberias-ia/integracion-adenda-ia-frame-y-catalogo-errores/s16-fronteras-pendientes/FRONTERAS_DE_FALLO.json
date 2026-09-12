@@ -1,0 +1,43 @@
+{
+  "version": "S16-FASES-DE-FALLO/1",
+  "naturaleza": "Contrato de correspondencia documental; no implementación ni ensayo nuevo.",
+  "filas": [
+    {
+      "fase": "Recepción anterior a cobertura",
+      "mecanismo": "S15 recibir",
+      "observado": "Error de Read y bytes parciales/completos conservados; cero llamadas a cobertura en F07-F09.",
+      "interpretacion": "No se entregó cuerpo por este receptor; no describe un despacho profesional ni hechos exteriores.",
+      "respaldo": [
+        "F04"
+      ]
+    },
+    {
+      "fase": "Decisión de permiso",
+      "mecanismo": "decide_permit",
+      "observado": "NotGranted por RefutedRequirements/NotVerifiableRequirements, o error técnico de ligadura.",
+      "interpretacion": "No forma permiso positivo; no se transforma en Tri.U ni acredita efecto.",
+      "respaldo": [
+        "B03"
+      ]
+    },
+    {
+      "fase": "Después de DispatchCommitted",
+      "mecanismo": "execute_mediated / EffectExecutor",
+      "observado": "Err del adaptador registra Indeterminate y AdapterIndeterminate; compromiso consumido.",
+      "interpretacion": "No equivale a ausencia de efecto ni habilita reintento automático; exige recuperación aplicable.",
+      "respaldo": [
+        "F01",
+        "F02"
+      ]
+    },
+    {
+      "fase": "Confirmación local",
+      "mecanismo": "ExerciseConfirmation",
+      "observado": "Respuesta Ok del adaptador produce confirmación lógica local.",
+      "interpretacion": "No es atestación independiente del mundo externo.",
+      "respaldo": [
+        "F03"
+      ]
+    }
+  ]
+}

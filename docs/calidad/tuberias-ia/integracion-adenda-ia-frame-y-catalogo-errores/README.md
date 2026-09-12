@@ -205,3 +205,10 @@ Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResu
 2026-09-12T19:13:27Z. [Contrato y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/ACTA_RESULTADO_S15.md). Conforme dentro de S15: negativa de protocolo, esquema inválido, no admisión documental y comunicación fallida conservan causa y bytes; sólo la respuesta verificada entrega cuerpo. 84 observaciones en seis ejecuciones debug/release; 80 capturas idénticas por ejecución; 21 invocaciones; tres sensibilidades detectadas en F05/F08/F02.
 
 Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología. **Siguiente:** Recibir F acotada en matriz y causas; siguiente revisión de B/E/K/L por sede y productor conforme a S13, antes de promoción nuclear o cierre de catálogo. El catálogo recibe causas por etapa; las puertas y reservas P3/P4/P5/P6 conservan su estado.
+
+
+## S16 · Fronteras pendientes · RETP-187
+
+2026-09-12T19:22:37Z. [Acta y evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md). Revisión documental completada; B/E/K/L integradas no acreditadas. No se justifica extensión de IR en este corte. Fallo previo a cobertura y fallo posterior a DispatchCommitted conservan efectos y causas distintos. 21 fuentes por blob/longitud/SHA-256 y 18 pasajes exactos; cuatro fronteras; criterios y resultados anteriores intactos; cero ensayos funcionales nuevos.
+
+**Siguiente objeto único:** Consolidación del contrato del recorrido documental 1+3 y de sus límites de uso/diagnóstico, con matriz de causas realmente emitidas y distinción antes/después de despacho. No catálogo canónico completo ni P4 abierto. La conformidad de piezas separadas no acredita una ejecución integrada inexistente. No se adelantan P3/P4/P5/P6 ni agentes; S12/S13 conservan su autoridad.

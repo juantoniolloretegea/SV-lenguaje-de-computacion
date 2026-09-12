@@ -1,0 +1,164 @@
+[
+  {
+    "id": "B01",
+    "ruta": "rust/sv_core/src/authority.rs",
+    "linea_inicio": 40,
+    "linea_fin": 45,
+    "texto": "pub struct EffectDescriptor {\n    reference: EffectRef,\n    family: EffectFamilyRef,\n    object: GovernedObjectRef,\n    context: ContextRef,\n}\n",
+    "sha256": "4cd33fb13b86829319fa0b5bd4a0b4f62039e18b7cf0e6ae0d1766f465ea7c01",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/authority.rs"
+  },
+  {
+    "id": "B02",
+    "ruta": "rust/sv_core/src/authority.rs",
+    "linea_inicio": 337,
+    "linea_fin": 340,
+    "texto": "    pub fn contains_effect_scope(&self, effect: &EffectDescriptor) -> bool {\n        &self.context == effect.context()\n            && self.contains_effect(effect)\n            && self.governs(effect.object())\n",
+    "sha256": "3061b2596175291733ce3ed387327ee7381fa04abc17edba168cb2d115e4ba11",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/authority.rs"
+  },
+  {
+    "id": "B03",
+    "ruta": "rust/sv_core/src/permission.rs",
+    "linea_inicio": 384,
+    "linea_fin": 424,
+    "texto": "pub fn decide_permit(\n    continuity: &AuthorityContinuity,\n    form_reference: &FormRef,\n    effect: &EffectDescriptor,\n    resolved_results: &[ResolvedRequirementResult],\n) -> Result<PermitDecision, PermitDecisionError> {\n    let form = continuity\n        .form(form_reference)\n        .ok_or_else(|| PermitDecisionError::UnknownForm(form_reference.clone()))?;\n\n    let required_authority = form.requires_authority().ok_or_else(|| {\n        PermitDecisionError::FormWithoutRequiredAuthority(form.reference().clone())\n    })?;\n\n    let authority = continuity.authority(required_authority).ok_or_else(|| {\n        PermitDecisionError::UnknownRequiredAuthority(required_authority.clone())\n    })?;\n\n    if !form.describes_effect(effect) {\n        return Err(PermitDecisionError::FormEffectMismatch {\n            form: form.reference().clone(),\n            effect: effect.reference().clone(),\n        });\n    }\n\n    if !authority.contains_effect_scope(effect) {\n        return Err(PermitDecisionError::EffectOutsideAuthorityScope {\n            authority: authority.reference().clone(),\n            effect: effect.reference().clone(),\n        });\n    }\n\n    let requirements = continuity\n        .requirement_set(form.reference(), effect.family(), effect.context())\n        .ok_or_else(|| PermitDecisionError::MissingRequirementSet {\n            form: form.reference().clone(),\n            effect_family: effect.family().clone(),\n            context: effect.context().clone(),\n        })?;\n\n    let technical_result = aggregate_covered_requirement_results(requirements, resolved_results)?;\n",
+    "sha256": "096a0e1302b0847015c3968f9d3dc0adeea9f5afe900513b541440b261bd01e0",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/permission.rs"
+  },
+  {
+    "id": "B04",
+    "ruta": "docs/calidad/tuberias-ia/pertenencia-de-permisos-a-su-continuidad/README.md",
+    "linea_inicio": 5,
+    "linea_fin": 5,
+    "texto": "El núcleo examinado aceptaba un permiso y un compromiso de otra continuidad cuando coincidían el ordinal local de decisión y los datos constituidos. La sonda interna reprodujo ambos cruces: el segundo llegó al ejecutor de prueba. La candidata añade pertenencia de instancia y los rechaza antes de mediar o ejecutar.\n",
+    "sha256": "be5d4929bcbe7d6787d8a9fedd050f6252276975e124de8f38a52466e47b6f6e",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/pertenencia-de-permisos-a-su-continuidad/README.md"
+  },
+  {
+    "id": "B05",
+    "ruta": "rust/sv_core/src/decision_trace.rs",
+    "linea_inicio": 806,
+    "linea_fin": 830,
+    "texto": "pub fn mediate_traced_permit(\n    continuity: &mut ProtectedDecisionContinuity,\n    traced_permit: TracedPermit,\n    effect: &EffectDescriptor,\n) -> Result<TracedMediatedCommitment, TracedMediationError> {\n    let reference = traced_permit.decision_trace.clone();\n    let trace = continuity\n        .decision_trace(&reference)\n        .ok_or_else(|| TracedMediationError::UnknownDecisionTrace(reference.clone()))?;\n    if trace.permit_disposition() != TracedPermitDisposition::Granted {\n        return Err(TracedMediationError::DecisionNotGranted(reference));\n    }\n    if !trace_matches_permit(trace, &traced_permit.permit) {\n        return Err(TracedMediationError::DecisionBindingMismatch(reference));\n    }\n\n    let commitment = mediate_permit(continuity.authority(), traced_permit.permit, effect)\n        .map_err(TracedMediationError::Mediation)?;\n    continuity.mediated.insert(reference.clone());\n\n    Ok(TracedMediatedCommitment {\n        commitment,\n        decision_trace: reference,\n    })\n}\n",
+    "sha256": "ca5687de3e63e56aa083106e81aeefe4abc34e99974ae9d1c64e9421d4ab933a",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/decision_trace.rs"
+  },
+  {
+    "id": "B06",
+    "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+    "linea_inicio": 45,
+    "linea_fin": 45,
+    "texto": "La premisa usada en los tests nace exclusivamente de `ExternalGenesisPremise::for_test`, dentro del banco sintético existente. No hay una raíz profesional instalada. La compilación ordinaria conserva la ausencia de ese constructor. Se prueba la recepción posterior a una admisión supuesta; **no se ha realizado todavía la admisión material de la raíz**. Tampoco se producen las comprobaciones nucleares obligatorias de autoridad, forma, aplicabilidad y no autoacreditación.\n",
+    "sha256": "93cb1e45f43097872f88e8f38e5d3b61b745b9cbf6e83b2b1aae875cf91470bc",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md"
+  },
+  {
+    "id": "B07",
+    "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+    "linea_inicio": 29,
+    "linea_fin": 29,
+    "texto": "El descriptor tiene que ser `Specific`. Además, el instalador competente debe haber recibido la regla de que esa obligación significa igualdad exacta de bytes con la referencia fijada. El tipo `Specific` por sí solo no demuestra esa regla: el contrato se conserva como bytes y la instalación semántica sigue siendo una obligación explícita del ensamblaje. El comparador no interpreta o valida una regla profesional. Las obligaciones `Core` se rechazan siempre en esta vía.\n",
+    "sha256": "ca1b2e549f16fee8bddfa03b0b87b6c8cae4cfe54f65737c289bec81f373e8f3",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md"
+  },
+  {
+    "id": "B08",
+    "ruta": "docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md",
+    "linea_inicio": 159,
+    "linea_fin": 163,
+    "texto": "### 8.3. Alcance y siguiente decisión\n\nEste incremento comprueba barreras existentes: no crea un autenticador, adaptador de autoridad, API remota, dependencia, gramática, IR ni facultad CYB. No cambia `requires_destination`, `BindingContract` o los constructores opacos. Las macros de las sondas no requieren una excepción productiva ni justifican prohibir todas las macros. Las pruebas no acreditan confinamiento de cualquier programa Rust, integridad de un núcleo modificado ni seguridad frente a un host comprometido.\n\nLa pregunta constitutiva queda delimitada para un futuro enlace productivo: **¿qué objeto aprobado fija la raíz de confianza, los titulares, las facultades y el alcance del agente consumidor, y qué procedimiento admite su evidencia para producir las referencias protegidas y la premisa externa exigidas por R1?** La organización competente constituye las facultades; la sede del Lenguaje debe especificar y probar su recepción técnica. No se solicita otra aprobación del universo ni una elección de células. No es necesario resolver un despliegue real para continuar los contrastes documentales.\n",
+    "sha256": "537e4e71c49f4b20922d3d0736057a9b62487ce7bd467de7a67f8a4635876dd2",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md"
+  },
+  {
+    "id": "F01",
+    "ruta": "rust/sv_core/src/execution.rs",
+    "linea_inicio": 440,
+    "linea_fin": 447,
+    "texto": "/// Ejecuta una T-E mediada contra un puerto explícito.\n///\n/// El compromiso se consume. Antes de abrir el despacho se repite la misma\n/// revalidación completa de mediación sobre `Req`, 3E y las aplicabilidades\n/// participantes. La traza registra `DispatchCommitted` antes de invocar el\n/// adaptador. Un error posterior queda como `Indeterminate`; no se interpreta\n/// como ausencia de efecto ni devuelve el compromiso para reintento.\npub fn execute_mediated<A: EffectExecutor>(\n",
+    "sha256": "a557e67de95aa39c899de00b3bf7124b6f6c60174090ba39e8e726faa34b8da9",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/execution.rs"
+  },
+  {
+    "id": "F02",
+    "ruta": "rust/sv_core/src/execution.rs",
+    "linea_inicio": 483,
+    "linea_fin": 512,
+    "texto": "    let exercise = continuity.next_exercise_ref();\n    continuity.append_event(\n        &exercise,\n        &commitment,\n        ExerciseAttemptState::DispatchCommitted,\n    );\n\n    let request = ExecutionRequest {\n        exercise: &exercise,\n        commitment: &commitment,\n    };\n\n    match adapter.execute(&request) {\n        Ok(()) => {\n            continuity.append_event(&exercise, &commitment, ExerciseAttemptState::Confirmed);\n            Ok(ExerciseConfirmation {\n                exercise,\n                authority: commitment.authority().clone(),\n                form: commitment.form().clone(),\n                effect: commitment.effect().clone(),\n                context: commitment.context().clone(),\n            })\n        }\n        Err(error) => {\n            continuity.append_event(\n                &exercise,\n                &commitment,\n                ExerciseAttemptState::Indeterminate,\n            );\n            Err(ExecutionError::AdapterIndeterminate { exercise, error })\n",
+    "sha256": "4c447d54ec92c9527dc85f6934349ec5a363d073448c9fb2249b5b925b823735",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/execution.rs"
+  },
+  {
+    "id": "F03",
+    "ruta": "rust/sv_core/src/execution.rs",
+    "linea_inicio": 294,
+    "linea_fin": 299,
+    "texto": "/// Confirmación lógica local de un ejercicio tras respuesta positiva del\n/// adaptador.\n///\n/// No constituye atestación independiente del mundo externo ni autoridad.\n#[derive(Debug, PartialEq, Eq)]\npub struct ExerciseConfirmation {\n",
+    "sha256": "bad03f03b902bfbaab85b5e59e054eaa8db4a1392c4050f7fc56e00a7a62849c",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/rust/sv_core/src/execution.rs"
+  },
+  {
+    "id": "F04",
+    "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/codigo/receptor.rs",
+    "linea_inicio": 53,
+    "linea_fin": 54,
+    "texto": " if let Some(c)=fallo{i.causa=c;return i}\n match decodificar(&i.entrada){\n",
+    "sha256": "e973f7652d5c34dfe8783513c9a65143a4b0bf49d1dc0a1344aead1dd06beb8b",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/codigo/receptor.rs"
+  },
+  {
+    "id": "K01",
+    "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+    "linea_inicio": 41,
+    "linea_fin": 41,
+    "texto": "Los estados son resultados técnicos de esta comparación. No son valores ternarios del dominio, veredictos profesionales ni autorizaciones. La procedencia física de los bytes observados no se deduce del contenido. La invocación de prueba proporciona los bytes directamente; no acredita captura remota ni verdad del emisor.\n",
+    "sha256": "30f25bc320577c2dc51737ddc9017f598650794f53a36ca8b9ae240db5f6613f",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md"
+  },
+  {
+    "id": "G01",
+    "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/G2_CORRESPONDENCIA_Y_LIMITE.md",
+    "linea_inicio": 5,
+    "linea_fin": 7,
+    "texto": "## Decisión concreta\n\nSe conserva el recibo público de lectura. No se le añade permiso, célula, SUCESO ni Frame. El enlace productivo a R1 permanece bloqueado por la falta del contrato que admita los referentes de autoridad constituidos. Esa falta está ya documentada en RETP-108 §8.3 y no se resuelve con un nuevo adaptador que fabrique objetos.\n",
+    "sha256": "346aecc936d095f0ed2bef9cc2b9bcbc659ca3d3dfd2dcb36cf009b25df0d466",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/G2_CORRESPONDENCIA_Y_LIMITE.md"
+  },
+  {
+    "id": "G02",
+    "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+    "linea_inicio": 64,
+    "linea_fin": 66,
+    "texto": "**Cierre del análisis:** cada obligación tiene mecanismo y evidencia identificados, o una carencia concreta con testigo, sede, impacto y propuesta mínima. Se entrega una decisión sobre el enlace estudiado. Enumerar posibilidades o recomendar «investigar más» no cierra este objeto.\n\n**Cierre de la trazabilidad ensayada:** además, el recorrido exigido funciona y se reproduce en el alcance fijado, incluidos rechazo, interrupción y recuperación pertinentes. Si falta materialización, el análisis puede terminar y la capacidad permanece `NO_ACREDITADO`; no se declarará resuelta la segunda necesidad.\n",
+    "sha256": "b544c2b87bdf12b98c5b60eaabac65ef5e169aa1cd89baae296068b6617da385",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md"
+  },
+  {
+    "id": "G03",
+    "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+    "linea_inicio": 112,
+    "linea_fin": 114,
+    "texto": "Una vez cerrado el recorrido trazable exigido, se retoma P3 con sus pendientes previos a captura, y se continúa P4, P5 y P6 por sus compuertas. Si una carencia bloquea el recorrido, se identifica esa carencia y su sede sin abrir laterales para aparentar avance.\n\nAl terminar la campaña se devuelve el resultado al orden de RETP-121: catálogo de errores/localización y continuación de fila 9. Las obligaciones posteriores de dominio, agente, bibliotecas, interfaces y plataforma conservan sus puertas rectoras; esta devolución no las adelanta ni las cancela.\n",
+    "sha256": "1fc422e05e80255dedd090e6aa156a69f71b350f0c130e8fe8abb0362de2c797",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md"
+  },
+  {
+    "id": "G04",
+    "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md",
+    "linea_inicio": 19,
+    "linea_fin": 21,
+    "texto": "1. **Transducción observación→Tri.** K1-T declara que cinco nombres no representan espacio, conjuntos ni función verificables. Aquí hay un límite de representación y de producción expresamente reconocido. La ruta sigue inhabilitada para 0, 1 y U; se conserva la puerta algebraica. Un texto de IA o un `mapping` nominal no la habilita.\n2. **Consulta y evolución ejecutivas.** El contrato de QueryResult=(r,J,M) y CQ1–CQ6 existe. La ruta examinada construye una operación Query y devuelve IrProgram validada. Eso no produce la respuesta con la justificación requerida. TransitionData valida relaciones locales y declara no ejecutar la transición. DFL-003/004/006 conserva estos límites. S13 no demuestra que deba cambiarse la firma del contrato; identifica lo que falta realizar para un consumidor dependiente.\n3. **Frontera material.** Carga efectiva, custodia durable, host, canales, archivo/pantalla y acto profesional tienen obligaciones propias. Añadir sus nombres a Frame no las realiza. S11 conserva evidencia contextual sintética, pero no prueba comportamiento de un LLM frente a inyección ni autenticidad frente al host adversario.\n",
+    "sha256": "c0de992f9ade5fa66f445e0b71e8b93493ae496f6347d3ac3f96e5124dff3b75",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md"
+  },
+  {
+    "id": "G05",
+    "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+    "linea_inicio": 406,
+    "linea_fin": 406,
+    "texto": "Siguiente objeto C/I: cobertura de evidencia requerida y acceso independiente del comprobador, reutilizando 149/150/152. DFL-005/006 conservan sus pendientes profesionales; no se los convierte en bloqueo general de lectura ni se fabrica autoridad. Se conservan los doce criterios A–L, reserva P3 con custodia recibida, P4/P5, presentación final, prueba externa común y demás obligaciones. El incidente E0786 de 161 mantiene causa raíz no determinada. Ninguna garantía se cierra por esta revisión documental.\n",
+    "sha256": "450989d42c0400bb7f0a87948361b03c7aeafe2871194c374593928a22206e4c",
+    "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/358ee2c6bbc27b7921769b2166947f5e69adb4ad/docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md"
+  }
+]

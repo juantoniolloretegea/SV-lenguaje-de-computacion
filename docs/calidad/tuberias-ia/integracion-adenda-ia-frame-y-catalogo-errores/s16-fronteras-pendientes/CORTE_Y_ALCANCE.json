@@ -1,0 +1,24 @@
+{
+  "version": "S16-CORTE/1",
+  "fecha_cierre_documental_utc": "2026-09-12T19:22:37Z",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "358ee2c6bbc27b7921769b2166947f5e69adb4ad",
+      "tree": "e549a259b3ab58a8dacafa9318bde2c3976b74f8"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "b6723c832beda8248d6b662ab25447f5dd7a916c",
+      "tree": "35c24da4df60a520e91f93c3ccaa6af02534a89b"
+    }
+  },
+  "resultado": "Revisión completada; capacidades integradas B/E/K/L no acreditadas; no extensión IR propuesta.",
+  "fuentes": 21,
+  "pasajes": 18,
+  "fronteras": 4,
+  "ensayos_funcionales_nuevos": 0,
+  "siguiente_objeto": "Consolidación del contrato del recorrido documental 1+3 y de sus límites de uso/diagnóstico, con matriz de causas realmente emitidas y distinción antes/después de despacho. No catálogo canónico completo ni P4 abierto."
+}

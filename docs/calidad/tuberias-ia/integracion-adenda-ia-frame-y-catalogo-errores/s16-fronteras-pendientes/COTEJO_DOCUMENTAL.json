@@ -1,0 +1,10 @@
+{
+  "version": "S16-COTEJO/1",
+  "fuentes": 21,
+  "pasajes": 18,
+  "fronteras": 4,
+  "criterios_anteriores_intactos": true,
+  "integridad_documental": true,
+  "ensayos_funcionales_nuevos": 0,
+  "limite": "Comprueba custodia y correspondencia documental, no suficiencia semántica ni garantía material."
+}

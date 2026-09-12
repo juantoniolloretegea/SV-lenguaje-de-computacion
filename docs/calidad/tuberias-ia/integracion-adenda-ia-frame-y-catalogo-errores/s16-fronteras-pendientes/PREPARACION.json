@@ -1,0 +1,13 @@
+{
+  "version": "S16-PREPARACION/1",
+  "ejecucion_funcional_nueva": false,
+  "incidencias": [
+    {
+      "tipo": "ruta documental local mal especificada",
+      "ruta_inicial": "docs/calidad/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "resultado": "AssertionError antes de completar el inventario; sin mutación remota",
+      "correccion": "Ruta localizada en árbol del mismo commit bajo docs/calidad/tuberias-ia/; no cambia el documento ni sus bytes.",
+      "script_original": "administracion/recepcion-inicial.py"
+    }
+  ]
+}

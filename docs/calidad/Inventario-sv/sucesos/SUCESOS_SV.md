@@ -20,6 +20,7 @@
 | S13 | finalizado | Cotejo de suficiencia para integración 1+3: contrato, IR y realización | Watson / W-S0 | 2026-09-12T18:17:41Z |
 | S14 | finalizado | G/J: base consumida bajo igual nombre y recuperación frente a reevaluación | Watson / W-S0 | 2026-09-12T18:50:10Z |
 | S15 | finalizado | F: causas de recepción, protocolo, cobertura y presentación | Watson / W-S0 | 2026-09-12T19:13:27Z |
+| S16 | finalizado | Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental | Watson / W-S0 | 2026-09-12T19:22:37Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -579,4 +580,39 @@
 **Siguiente accion:** Recibir F acotada en matriz y causas; siguiente revisión de B/E/K/L por sede y productor conforme a S13, antes de promoción nuclear o cierre de catálogo.
 
 **Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
+
+
+## S16 · Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T19:22:37Z
+
+**Fecha inicio utc:** 2026-09-12T19:17:57Z
+
+**Fecha actualizacion utc:** 2026-09-12T19:22:37Z
+
+**Fecha fin utc:** 2026-09-12T19:22:37Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Cuatro fronteras: facultades, secretos/canales, revisión efectiva y destinatario/mínimo. Reutilización, carencia, testigo y condición de cierre; sin nueva ejecución funcional.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje 358ee2c6bbc27b7921769b2166947f5e69adb4ad; laboratorio b6723c832beda8248d6b662ab25447f5dd7a916c
+
+**Dependencias:** S15 / RETP-186; S13; rectores; G2; recepción R1 y corrección de pertenencia candidatas.
+
+**Resultado:** Revisión documental completada; B/E/K/L integradas no acreditadas. No se justifica extensión de IR en este corte. Fallo previo a cobertura y fallo posterior a DispatchCommitted conservan efectos y causas distintos.
+
+**Verificacion:** 21 fuentes por blob/longitud/SHA-256 y 18 pasajes exactos; cuatro fronteras; criterios y resultados anteriores intactos; cero ensayos funcionales nuevos.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-187)
+
+**Siguiente accion:** Consolidación del contrato del recorrido documental 1+3 y de sus límites de uso/diagnóstico, con matriz de causas realmente emitidas y distinción antes/después de despacho. No catálogo canónico completo ni P4 abierto.
+
+**Observaciones:** Registro de cierre documental, no fijación experimental. Ruta inicial del workflow errónea detectada y corregida contra el mismo árbol, conservada en PREPARACION. Agentes por valorar tras inmunología; P3/P4/P5/P6 y deuda conservan puertas. Sin promoción nuclear.
 
