@@ -166,3 +166,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Recepción gobernada y comprobación observada — RETP-154
 
 [Candidata, contrato y resultados](recepcion-gobernada-y-comprobacion-observada/README.md). La recepción conserva el acto y plan previamente fijados bajo premisa opaca; la comparación produce su resultado desde los bytes y conserva evidencia y pertenencia. 231 pruebas unitarias por modo, más frontera pública. Raíz sintética identificada: admisión profesional y verificadores obligatorios siguen sin materialización. Sin integración productiva ni apertura de reservas.
+
+
+## Trazabilidad, auditoría y reproducción del trabajo de la IA — RETP-155
+
+[Apuntes de referencia, PDF y Markdown](trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md). Explicación de Juan Antonio puesta en limpio para futuras unidades Watson, Claude y Grok. Carpeta hermana del frame: conocimiento pertinente, diversidad de procedimientos válidos, resultado comprobable, artefactos conservados y coste medido. Cinco capturas intactas y tres ejemplos editoriales de Rust comprobados; no modifica el núcleo ni sustituye el relevo técnico RETP-154.

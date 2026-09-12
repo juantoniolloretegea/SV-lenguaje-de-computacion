@@ -1,0 +1,95 @@
+{
+  "alcance": "Tres fragmentos editoriales; una entrada; sin benchmark ni ensayo del núcleo.",
+  "compilador": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+  "esperado": "[4, 8, 12]\n",
+  "casos": [
+    {
+      "caso": 1,
+      "fuente": "fn main() {\nlet numeros: Vec<i32> = vec![1, 2, 3, 4, 5, 6];\nlet mut resultado = Vec::new();\nfor n in &numeros {\n    if n % 2 == 0 {\n        resultado.push(n * 2);\n    }\n}\nprintln!(\"{:?}\", resultado);\n}\n",
+      "sha256_fuente": "aa16ed833d85be70618fb97d1298bcefbf3f018012a23d8618ed551337e7bcc9",
+      "procesos": [
+        {
+          "invocacion": [
+            "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+            "<directorio_temporal>/caso_1.rs",
+            "-o",
+            "<directorio_temporal>/caso_1"
+          ],
+          "codigo_salida": 0,
+          "stdout": "",
+          "stderr": "",
+          "duracion_observada_s": 0.08954432300015469
+        },
+        {
+          "invocacion": [
+            "<directorio_temporal>/caso_1"
+          ],
+          "codigo_salida": 0,
+          "stdout": "[4, 8, 12]\n",
+          "stderr": "",
+          "duracion_observada_s": 0.0016170900016732048
+        }
+      ],
+      "conforme": true
+    },
+    {
+      "caso": 2,
+      "fuente": "fn main() {\nlet numeros: Vec<i32> = vec![1, 2, 3, 4, 5, 6];\nlet resultado: Vec<i32> = numeros.iter()\n    .filter(|n| **n % 2 == 0)\n    .map(|n| n * 2)\n    .collect();\nprintln!(\"{:?}\", resultado);\n}\n",
+      "sha256_fuente": "c1a95c27b90327ae376ff2e300073e18124849f1c1a1f52d03c3290b04339212",
+      "procesos": [
+        {
+          "invocacion": [
+            "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+            "<directorio_temporal>/caso_2.rs",
+            "-o",
+            "<directorio_temporal>/caso_2"
+          ],
+          "codigo_salida": 0,
+          "stdout": "",
+          "stderr": "",
+          "duracion_observada_s": 0.08265345000108937
+        },
+        {
+          "invocacion": [
+            "<directorio_temporal>/caso_2"
+          ],
+          "codigo_salida": 0,
+          "stdout": "[4, 8, 12]\n",
+          "stderr": "",
+          "duracion_observada_s": 0.0018529310000303667
+        }
+      ],
+      "conforme": true
+    },
+    {
+      "caso": 3,
+      "fuente": "fn main() {\nfn es_par(n: &&i32) -> bool { **n % 2 == 0 }\nfn duplicar(n: &i32) -> i32 { n * 2 }\n\nlet numeros: Vec<i32> = vec![1, 2, 3, 4, 5, 6];\nlet resultado: Vec<i32> = numeros.iter()\n    .filter(es_par)\n    .map(duplicar)\n    .collect();\nprintln!(\"{:?}\", resultado);\n}\n",
+      "sha256_fuente": "dcecce96dd4d740d7014293dfd999248c7ea0b6a7c1a1c1bf75968ae3a8d62cf",
+      "procesos": [
+        {
+          "invocacion": [
+            "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+            "<directorio_temporal>/caso_3.rs",
+            "-o",
+            "<directorio_temporal>/caso_3"
+          ],
+          "codigo_salida": 0,
+          "stdout": "",
+          "stderr": "",
+          "duracion_observada_s": 0.08486464999805321
+        },
+        {
+          "invocacion": [
+            "<directorio_temporal>/caso_3"
+          ],
+          "codigo_salida": 0,
+          "stdout": "[4, 8, 12]\n",
+          "stderr": "",
+          "duracion_observada_s": 0.0016663360001984984
+        }
+      ],
+      "conforme": true
+    }
+  ],
+  "todos_conformes": true
+}

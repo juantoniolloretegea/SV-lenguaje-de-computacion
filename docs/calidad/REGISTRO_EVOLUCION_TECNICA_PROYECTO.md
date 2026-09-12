@@ -1529,3 +1529,14 @@ Se realiza un productor interno de RequirementCheck desde igualdad exacta ejecut
 231/231 unitarios nativos por modo (217 precedentes y 14 nuevos), biblioteca ordinaria sin cfg(test), cliente público conforme y tres clientes adversariales con cuatro errores exactos esperados (E0624 x2, E0451, E0616). Diez procesos registrados. Se conserva cápsula de 74 archivos, parche incremental y compilador. Límites por campo de 65536 bytes; no son cota de servicio ni doctrina celular.
 
 La raíz y el plan positivos son sintéticos. No se autentica al emisor, no se interpreta el acto ni se producen todos los verificadores obligatorios. Premisa externa profesional aún sin productor material; la candidata no habilita esa actuación. Siguiente objeto: recepción material de premisa y verificadores para el enlace acotado; no volver a preguntar quién autoriza ni fabricar la evidencia que falta. Vía documental RETP-152 conservada, DFL-005/006 abiertas, aceptación humana final y compuertas reservadas intactas. Estado: RECEPCION_Y_COMPARACION_CANDIDATAS_CONFORMES_ADMISION_PROFESIONAL_NO_ACREDITADA.
+
+
+<a id="retp-155"></a>
+
+## RETP-2026-155 · Apuntes de trazabilidad, auditoría y reproducción del trabajo de la IA
+
+12/09/2026. [PDF, Markdown y materiales conservados](tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md). Mandato expreso de Juan Antonio: poner en limpio la explicación y crear una carpeta hermana del frame en Calidad, con espejo en laboratorio. Cortes previos Lenguaje 19ade5d9be68901815bd284cc5631f20f08d3fa3 y laboratorio b9c623294c35b9f59f8ed6a3540cefeb12c84bd7; rectoras cotejadas sin cambios.
+
+Consolida consulta del universo pertinente, pregunta de sistema 1/0/U como propuesta, diversidad de procedimientos válidos, corrección de resultado, conservación de scripts y cambios, reproducción y medición. La aclaración humana sobre los cimientos queda conservada sin atribuir cobertura de seguridad universal. Cinco capturas originales intactas, transcripción con corrección expresa de tipos y PDF de ocho páginas revisado visualmente.
+
+Tres ejemplos editoriales Rust compilados y ejecutados, seis procesos, tres salidas exactas [4, 8, 12]. Fuentes, invocaciones, salidas, tiempos y scripts de generación/comprobación recuperables. Se conservan las incidencias editoriales de fuente tipográfica y renderización. Se añaden navegación recíproca e índices, con identidades actualizadas. Sin cambios de núcleo, de semántica o de contratos; no reejecuta ni amplía RETP-154. Su siguiente objeto y límites permanecen vigentes. Estado: REFERENCIA_DOCUMENTAL_CONSOLIDADA.

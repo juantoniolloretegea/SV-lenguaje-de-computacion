@@ -1,0 +1,68 @@
+{
+  "expediente": "trazabilidad-auditoria-y-reproduccion-del-trabajo-ia",
+  "fecha": "2026-09-12",
+  "naturaleza": "consolidacion_documental_con_tres_ejemplos_editoriales_comprobados",
+  "imagenes_originales": 5,
+  "archivos": {
+    "README.md": {
+      "bytes": 2008,
+      "sha256": "e23e4388d439d44138d639cc975c3905803fb69601dc4b0ea5f88a0d633c09a3",
+      "git_blob_sha1": "035a949449b96b91267757446593884b9363b6f0"
+    },
+    "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md": {
+      "bytes": 15805,
+      "sha256": "b89b6b398985a9e339d568f80a273528501213b638cb8dee393b9a0dd4f5f2c6",
+      "git_blob_sha1": "fbdee30439ef50449fc110e1560b1e4eb67531fe"
+    },
+    "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.pdf": {
+      "bytes": 603991,
+      "sha256": "f689390eb6f770cc8e85fad7ccdaf2aed9f62c846d2b21bedacf538eb9dd7cec",
+      "git_blob_sha1": "6d819acd5646db4411a2a4037d4e89ddd8fc5f20"
+    },
+    "imagenes/01-procesos-watson.png": {
+      "bytes": 224679,
+      "sha256": "7d9889ff978f69ebc56903cff71050e5cac7d8ec1f11bdd5355a21b9b36eb875",
+      "git_blob_sha1": "62aaf9b0aebb162720866cdf0fa7ab56320ffd37"
+    },
+    "imagenes/02-pregunta-de-sistema.png": {
+      "bytes": 55075,
+      "sha256": "cb617b019b07e2f8027d7611694fcdf2d59371d1c766e68381bca61f87244027",
+      "git_blob_sha1": "c31eadb4dbeb6fccbf12c5ac6d8213e3dfaf8d3c"
+    },
+    "imagenes/03-rust-imperativo.png": {
+      "bytes": 34899,
+      "sha256": "586b1a70adf8305c27e79c07d54a71bb4a8c2f999ee0fbe47941b87cccf12259",
+      "git_blob_sha1": "80ef9807ce74ff12d35af44d9d805f95516dd5e8"
+    },
+    "imagenes/04-rust-funciones-anonimas.png": {
+      "bytes": 84227,
+      "sha256": "fc6111d21754c9c3b22e0898878c8f2967995e4afe6751d2f7793609ce14cd95",
+      "git_blob_sha1": "932981f29c305e66b65421d07c386ac42af7ab9f"
+    },
+    "imagenes/05-rust-funciones-nombradas.png": {
+      "bytes": 98147,
+      "sha256": "8917bb31594f5f1ff60f4cd6c5e752f70ce404cd0134940681889efac6b6cedc",
+      "git_blob_sha1": "f8b83226cf66f2df25e820f84950c91dd942de3d"
+    },
+    "soporte/NOTA_DE_EDICION_Y_COMPROBACION.md": {
+      "bytes": 2898,
+      "sha256": "57fe9339fba81b2dd979fc75521a0ec8ff17741672f2945a238b97a197c009f6",
+      "git_blob_sha1": "9c9a2dea712cee72970b277887881c3c00efc63f"
+    },
+    "soporte/RESULTADOS_EJEMPLOS.json": {
+      "bytes": 3618,
+      "sha256": "c1f92e39e321f048e6a9f4b36c4c60de736f00786812e6a914f30558bf84c1ea",
+      "git_blob_sha1": "6da5ba30ff07ad18c9cc2a2c7c9c829501d263d9"
+    },
+    "soporte/generar_pdf.py": {
+      "bytes": 4939,
+      "sha256": "836c4478d119e8c87cd3914fbeb7096d2e5ccc320375de96c59a0de8b7bef9ed",
+      "git_blob_sha1": "2edb164ffbdc131f17396d3e33d924bf86a0f4ac"
+    },
+    "soporte/verificar_ejemplos.py": {
+      "bytes": 1875,
+      "sha256": "690277e9a461249aeca4562d49a157f4b1220d8abd5b4d8cd6fa2c2335d381e3",
+      "git_blob_sha1": "1c3984a281619e2c40dd8527443a7e9070c2c316"
+    }
+  }
+}

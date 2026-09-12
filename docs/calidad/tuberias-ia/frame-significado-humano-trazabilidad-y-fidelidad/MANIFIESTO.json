@@ -16,9 +16,9 @@
       "git_blob_sha1": "b01dabb703787c794b46052b2faa289ad13ca274"
     },
     "README.md": {
-      "bytes": 2069,
-      "sha256": "cb1c098d1c6f6921c62255ade80102d45c33f127b1f0f7f0e711b1c075ffc3ea",
-      "git_blob_sha1": "1fb4b7764f7dad118896618d268c2b4dfab05e80"
+      "bytes": 2578,
+      "sha256": "076ef1b467a70d73c3cea6a4b4456f1dc69dfbc5d20915df765f798588759bc1",
+      "git_blob_sha1": "158b5034b87ad5142340bbf9bf539ea82cbfe881"
     },
     "imagenes/01-escena-original.png": {
       "bytes": 284173,
@@ -56,5 +56,11 @@
       "git_blob_sha1": "4ab1af79db02cdaf03dc34ce7a705c88f93acb28"
     }
   },
-  "nota": "El manifiesto no se incluye a sí mismo. Igualdad entre copias comprobable mediante los identificadores de contenido."
+  "nota": "El manifiesto no se incluye a sí mismo. Igualdad entre copias comprobable mediante los identificadores de contenido.",
+  "actualizaciones": [
+    {
+      "fecha": "2026-09-12",
+      "alcance": "Enlace a expediente hermano en README; diálogo, PDF e imágenes sin cambios."
+    }
+  ]
 }

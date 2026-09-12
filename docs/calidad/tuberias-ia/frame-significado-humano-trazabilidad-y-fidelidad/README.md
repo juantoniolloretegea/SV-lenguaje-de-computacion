@@ -18,3 +18,8 @@ Reconstruir qué se conserva, qué se pierde y qué se sustituye respecto de una
 Este documento conserva una conversación y una propuesta. No modifica semántica, representación intermedia, núcleo, dominio ni agente, ni acredita ensayos nuevos. El diagrama no sustituye el workflow y las actas vigentes. La continuación debe encajar en el objeto técnico activo; la autorización final permanece en su sede humana.
 
 Copias idénticas de este expediente en Calidad del Lenguaje y en la rama privada del laboratorio. Las imágenes usan rutas relativas; al descargar el Markdown debe conservarse a su lado la carpeta `imagenes`.
+
+
+## Referencia hermana incorporada el 12 de septiembre de 2026
+
+[Trazabilidad, auditoría y reproducción del trabajo de la IA](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md) conserva la explicación posterior del autor: procedimientos diferentes pueden satisfacer el mismo encargo, y su examen requiere scripts, código, entradas, resultados y mediciones recuperables. Ambas carpetas constituyen referencias de continuidad; esta incorporación no altera el diálogo ni el PDF del frame.
