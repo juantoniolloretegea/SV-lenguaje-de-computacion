@@ -1,0 +1,239 @@
+[
+  {
+    "paso": "identidad rust: intento instrumental inicial",
+    "argv": [
+      "/usr/bin/time",
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "-vV"
+    ],
+    "exit_code": null,
+    "productor_iniciado": false,
+    "incidencia": "FileNotFoundError: /usr/bin/time no está disponible. No se obtuvo observación de Rust.",
+    "resultado": "intento instrumental conservado"
+  },
+  {
+    "paso": "identidad rust",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "-vV"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.011638637995929457,
+    "stdout": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+    "stderr": "",
+    "medidas": "medidas/01.json"
+  },
+  {
+    "paso": "debug g1",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=g1",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/fuentes-base/recibo-g1/candidata/lib.rs",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.7797827450049226,
+    "stdout": "",
+    "stderr": "warning: unused import: `Write`\n --> /workspace/scratch/cdd3907241dd/s1-cobertura/entrega/fuentes-base/recibo-g1/candidata/../../recepcion-av/json_estricto.rs:2:21\n  |\n2 | use std::io::{Read, Write};\n  |                     ^^^^^\n  |\n  = note: `#[warn(unused_imports)]` (part of `#[warn(unused)]`) on by default\n\nwarning: 1 warning emitted\n\n",
+    "medidas": "medidas/02.json"
+  },
+  {
+    "paso": "debug lote",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=lote",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/fuentes-base/lote-g1/lib.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/liblote.rlib"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.40005359999486245,
+    "stdout": "",
+    "stderr": "",
+    "medidas": "medidas/03.json"
+  },
+  {
+    "paso": "compilar observación base",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/codigo/base.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s1-cobertura/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/base"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.13184344699402573,
+    "stdout": "",
+    "stderr": "",
+    "medidas": "medidas/04.json"
+  },
+  {
+    "paso": "observación base",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/base"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.025007978998473845,
+    "stdout": "P3-01\tcuerpo_entregado=true\tcita_caso_integra=true\tmontaje_en_seleccion=false\tvigente=true\nP3-04\tcuerpo_entregado=true\tcita_caso_integra=true\tmontaje_en_seleccion=false\tvigente=false\n",
+    "stderr": "",
+    "medidas": "medidas/05.json"
+  },
+  {
+    "paso": "debug compilar cobertura",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "--crate-type=lib",
+      "--crate-name=cobertura",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/codigo/cobertura.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s1-cobertura/debug",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libcobertura.rlib"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.10487562300113495,
+    "stdout": "",
+    "stderr": "",
+    "medidas": "medidas/06.json"
+  },
+  {
+    "paso": "debug compilar contraste",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/codigo/contraste.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s1-cobertura/debug",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libcobertura.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/contraste"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.17912701099703554,
+    "stdout": "",
+    "stderr": "",
+    "medidas": "medidas/07.json"
+  },
+  {
+    "paso": "debug contraste 1",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/contraste"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 1,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.04150192799716024,
+    "stdout": "CI01\tENTREGADO_CON_COBERTURA\nCI02\tFaltaVigencia\nCI03\tIdentidadMontaje\nCI04\tVigenciaDistinta\nCI05\tFaltaCaso\nCI06\tIdentidad\n",
+    "stderr": "FALLO CI07: ContenidoDistinto\n",
+    "medidas": "medidas/08.json"
+  },
+  {
+    "paso": "CI07 recuperar causa del espécimen inicial",
+    "argv": [
+      "/workspace/scratch/a4c9906d0361/tmp/presentacion-150/toolchain/installed/bin/rustc",
+      "--edition=2021",
+      "-C",
+      "opt-level=0",
+      "-C",
+      "overflow-checks=yes",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/entrega/codigo/diagnostico_ci07.rs",
+      "--extern",
+      "g1=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libg1.rlib",
+      "--extern",
+      "lote=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/liblote.rlib",
+      "-L",
+      "dependency=/workspace/scratch/cdd3907241dd/s1-cobertura/debug",
+      "--extern",
+      "cobertura=/workspace/scratch/cdd3907241dd/s1-cobertura/debug/libcobertura.rlib",
+      "-o",
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/diagnostico-ci07"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.11795749700104352,
+    "stdout": "",
+    "stderr": "",
+    "medidas": "medidas/09.json"
+  },
+  {
+    "paso": "CI07 observar rechazo inicial",
+    "argv": [
+      "/workspace/scratch/cdd3907241dd/s1-cobertura/debug/diagnostico-ci07"
+    ],
+    "instrumento": "Python subprocess/time.monotonic/resource.getrusage; sólo instrumentación",
+    "exit_code": 0,
+    "esperado": 0,
+    "timeout": false,
+    "pared_observador_s": 0.024111833001370542,
+    "stdout": "Lectura(Presentacion(Sintaxis(Json)))\n",
+    "stderr": "",
+    "medidas": "medidas/10.json"
+  }
+]

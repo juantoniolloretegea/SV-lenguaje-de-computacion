@@ -1664,3 +1664,18 @@ Evidencias de apertura cotejadas: https://github.com/juantoniolloretegea/SV-leng
 ## RETP-2026-164 · S1 · Apertura del contraste C/I
 
 2026-09-12T10:37:36Z. [Contrato previo y expediente](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s1-cobertura-independiente/README.md). S1 pasa a en ejecución. Se reciben los cortes Lenguaje 428d294c42602bc116fa0550262c25730017492e y laboratorio 0d6b386121a24e915ce550dc2b52186867f6fdd4, en las mismas ramas. AGENTS, Pilares, perfiles y transición leídos y cotejados; RETP-123/141/147/152/162 y Sucesos SV delimitan el alcance. Se reutiliza la cápsula pública RETP-152 sin cambios; P3-01 y P3-04 fijan el contraste de cobertura documental del caso y su vigencia. El montaje negativo es sintético y no constituye una revocación profesional. Se fijan controles, referencia independiente, presupuesto y parada antes de ejecutar. Sin nuevas rondas de modelos ni apertura de reserva. La integración 1+3 mantiene prioridad; catálogo posterior y restantes obligaciones conservadas. Estado del suceso: en ejecución.
+
+
+<a id="retp-164-cierre-s1"></a>
+
+### RETP-2026-164 · S1 · Recepción del contraste de cobertura documental
+
+2026-09-12T10:51:15Z. [Resultado, evidencia e intentos conservados](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s1-cobertura-independiente/README.md). S1 finalizado en el alcance de banco declarado; S2 pendiente para el contraste causal de vigencia de una consulta inequívoca. Se conservan las mismas ramas y todos los estados anteriores de Sucesos SV.
+
+La ruta previa RETP-152 entrega el cuerpo y recupera la evidencia, pero no recibe la selección adicional ni acredita su cobertura. Se conservan sus 71 fuentes sin cambios. La candidata local Rust obtiene la referencia antes de recibir la propuesta y exige caso y entrada de montaje; su vista sólo se construye tras comprobar lectura y ambas piezas. No decide significado, vigencia, permiso ni inscripción de dominio.
+
+Cualificación: ocho controles, tres ejecuciones por cada uno de dos modos nativos; 48 observaciones sobre dos posiciones de cobertura, con cuatro posiciones recorridas por orden del enlace. Cuatro cuerpos preservan sus esperados previos; 29 capturas por ejecución son idénticas entre las seis ejecuciones. Dos mutantes se detectan por CI02 y dos clientes que intentan fabricar la referencia son rechazados por el compilador. Las causas permanecen locales y separadas de U; no se consolida ahora el catálogo.
+
+El intento inicial con /usr/bin/time no inició el productor. El primer contraste se detuvo en CI07 por un espécimen JSON inválido, rechazado como Sintaxis(Json). Una observación puntual y una adenda conservan la discrepancia y corrigen sólo el espécimen, con el mismo esperado de contenido y la candidata intacta. Ambos intentos están documentados por separado; no se cuentan como cualificación conforme. Presupuesto: 30 invocaciones registradas, 29 procesos iniciados; ningún reinicio de rondas de modelos. CPU y pared registradas, RSS por proceso no disponible; viabilidad P5 no acreditada.
+
+Límite causal: P3-04 contiene vigencia negativa, pero la petición es ambigua y no consulta la política. La prueba no demuestra una revocación aplicable ni cierra C/I íntegros o A–L. S2 conserva el único siguiente objeto para resolver esa distinción con un par previo. Prueba externa, premisa/verificadores profesionales, reserva P3, P4/P5/P6 y restantes criterios conservan sus condiciones. Reproductor con fuentes fijadas entregado sin atribuirle una ejecución adicional. Sin cambios en código productivo, gramática, IR o nuevas ramas.

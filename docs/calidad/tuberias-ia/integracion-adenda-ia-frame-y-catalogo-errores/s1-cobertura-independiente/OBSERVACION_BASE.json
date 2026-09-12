@@ -1,0 +1,8 @@
+{
+  "ruta": "RETP-152 sin modificación",
+  "cuerpos_previos_conservados": 4,
+  "selecciones_observadas": 2,
+  "hallazgo": "La API entrega el cuerpo íntegro. No recibe ni comprueba la selección adicional de evidencia; el montaje omitido sigue recuperable por la custodia. No acredita cobertura de esa selección.",
+  "contrato_previo_refutado": false,
+  "montaje_p3_04": false
+}

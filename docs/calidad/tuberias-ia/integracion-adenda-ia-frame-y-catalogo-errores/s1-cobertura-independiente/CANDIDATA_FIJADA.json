@@ -1,0 +1,42 @@
+{
+  "version": "S1-CANDIDATA/1",
+  "contrato_sha256": "786b25d355930a165a62483bcf4fcc285cae0547abb71200c08ef60d434d901e",
+  "banco_sha256": "ff91f6935253f3c3e26ccb47da01c3f6c0338742c9d8ad2b323813816171f8bf",
+  "archivos": [
+    {
+      "ruta": "codigo/ESPERADO.tsv",
+      "bytes": 174,
+      "sha256": "6ddc551e63efea73b83035d55e436cd4829775071809fd46d7d51571e6cb2ce7"
+    },
+    {
+      "ruta": "codigo/base.rs",
+      "bytes": 1796,
+      "sha256": "9ffe6a6fa9a7c8d03041b1890fa53c71d98cee8bc6b754a7825e994c8158c4e5"
+    },
+    {
+      "ruta": "codigo/cobertura.rs",
+      "bytes": 2564,
+      "sha256": "68af8b053a236ccd93d25c12a90bc981fbb7b92a7c2d17917e159dbdaf1c9551"
+    },
+    {
+      "ruta": "codigo/contraste.rs",
+      "bytes": 5206,
+      "sha256": "e0bd517814bc211ca0f4e0e1889760097b39336a59bc12af3431f340bbcfa8bd"
+    },
+    {
+      "ruta": "codigo/diagnostico_ci07.rs",
+      "bytes": 1253,
+      "sha256": "da1db65508660d851c5f4e3677c1af9baa133a14c4cc5507b2ae15378e29de81"
+    },
+    {
+      "ruta": "codigo/forjar.rs",
+      "bytes": 182,
+      "sha256": "38b08050e3e4217cf2d2b5557ea2226b0714fa499b20c98fa9f8b4faf3054621"
+    },
+    {
+      "ruta": "codigo/rangos_fijados.rs",
+      "bytes": 74,
+      "sha256": "9b62003c81ced58cc9226b2b3fa070ccfc421c42d0794f75ae5c870eb4381b38"
+    }
+  ]
+}

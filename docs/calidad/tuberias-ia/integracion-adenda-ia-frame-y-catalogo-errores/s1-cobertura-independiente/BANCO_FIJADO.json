@@ -1,0 +1,33 @@
+{
+  "version": "S1-COBERTURA-BANCO/1",
+  "capsula_base_sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6",
+  "casos": [
+    {
+      "id": "P3-01",
+      "posicion": 0,
+      "inicio_montaje": 361,
+      "fin_montaje": 434,
+      "montaje_literal": "{\n      \"id\": \"P3-01\",\n      \"fuente\": \"A01\",\n      \"vigente\": true\n    }",
+      "sha256": "f05d042e8bc6e3e97d5856cc80a14d9d1c56a72d6ee96880f2f5c8a2c33c781d"
+    },
+    {
+      "id": "P3-04",
+      "posicion": 3,
+      "inicio_montaje": 598,
+      "fin_montaje": 672,
+      "montaje_literal": "{\n      \"id\": \"P3-04\",\n      \"fuente\": \"A04\",\n      \"vigente\": false\n    }",
+      "sha256": "10ee350ca163cb269015edd5fcff06c09024a24f4bd051a901a3674ab4893e2a"
+    }
+  ],
+  "oraculo_cuerpos": "fuentes-base/lote-p3/PROCEDENCIA_Y_ESPERADOS.json",
+  "criterios": {
+    "CI01": "entrega",
+    "CI02": "FaltaVigencia",
+    "CI03": "IdentidadMontaje",
+    "CI04": "VigenciaDistinta",
+    "CI05": "FaltaCaso",
+    "CI06": "Identidad",
+    "CI07": "ContenidoDistinto",
+    "CI08": "entrega"
+  }
+}

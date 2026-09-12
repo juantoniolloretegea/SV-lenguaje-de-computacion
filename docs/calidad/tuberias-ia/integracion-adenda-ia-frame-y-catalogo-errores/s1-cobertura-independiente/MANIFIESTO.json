@@ -1,0 +1,140 @@
+{
+  "version": "S1-EXPEDIENTE/1",
+  "archivos": [
+    {
+      "ruta": "ADENDA_INSTRUMENTO_CI07.md",
+      "bytes": 1778,
+      "sha256": "5ad9552ba727ffc67eb0df46983114aeb02e9a6cb9ce3acbf50760ccafed7799"
+    },
+    {
+      "ruta": "BANCO_FIJADO.json",
+      "bytes": 1086,
+      "sha256": "ff91f6935253f3c3e26ccb47da01c3f6c0338742c9d8ad2b323813816171f8bf"
+    },
+    {
+      "ruta": "BASE_RETP152.json",
+      "bytes": 732857,
+      "sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6"
+    },
+    {
+      "ruta": "CANDIDATA_FIJADA.json",
+      "bytes": 1307,
+      "sha256": "c7f5ee793cea25c5b8c9cf12ded4f3a28e59914b295d7c596f56aee41506d417"
+    },
+    {
+      "ruta": "COMANDOS.json",
+      "bytes": 26899,
+      "sha256": "f25e5a68cb4a9d1969a7d3debe72ba13336f2187ab7dd280e6be62735c967db5"
+    },
+    {
+      "ruta": "CONTRATO_S1.md",
+      "bytes": 6296,
+      "sha256": "786b25d355930a165a62483bcf4fcc285cae0547abb71200c08ef60d434d901e"
+    },
+    {
+      "ruta": "EVIDENCIAS_S1.json",
+      "bytes": 239609,
+      "sha256": "353a6b0285078ad904d38c6208b576f1367eeca8c92dd8d8398ffe0b7351b3bb"
+    },
+    {
+      "ruta": "FUENTES_COTEJADAS.json",
+      "bytes": 4660,
+      "sha256": "4c84d9aed0bb5b240b67d02c6342733c73086397c0aa8587e6e3a8a9464f7a48"
+    },
+    {
+      "ruta": "OBSERVACION_BASE.json",
+      "bytes": 381,
+      "sha256": "2f007dc7935987546cf6665edddc8844551bd070443251994635ed13aa79db1f"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 8003,
+      "sha256": "709972eb27c3bda16464ebaa318095368bbc576aaf2cfb7077f9e9a677fa56a0"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 1131,
+      "sha256": "5595c6b695a4ddfc8bd87ff37fb7000cf36e51491d1d449828679006a761e328"
+    },
+    {
+      "ruta": "codigo/ESPERADO.tsv",
+      "bytes": 174,
+      "sha256": "6ddc551e63efea73b83035d55e436cd4829775071809fd46d7d51571e6cb2ce7"
+    },
+    {
+      "ruta": "codigo/base.rs",
+      "bytes": 1796,
+      "sha256": "9ffe6a6fa9a7c8d03041b1890fa53c71d98cee8bc6b754a7825e994c8158c4e5"
+    },
+    {
+      "ruta": "codigo/cobertura.rs",
+      "bytes": 2564,
+      "sha256": "68af8b053a236ccd93d25c12a90bc981fbb7b92a7c2d17917e159dbdaf1c9551"
+    },
+    {
+      "ruta": "codigo/contraste.rs",
+      "bytes": 5206,
+      "sha256": "e0bd517814bc211ca0f4e0e1889760097b39336a59bc12af3431f340bbcfa8bd"
+    },
+    {
+      "ruta": "codigo/diagnostico_ci07.rs",
+      "bytes": 1253,
+      "sha256": "da1db65508660d851c5f4e3677c1af9baa133a14c4cc5507b2ae15378e29de81"
+    },
+    {
+      "ruta": "codigo/forjar.rs",
+      "bytes": 182,
+      "sha256": "38b08050e3e4217cf2d2b5557ea2226b0714fa499b20c98fa9f8b4faf3054621"
+    },
+    {
+      "ruta": "codigo/rangos_fijados.rs",
+      "bytes": 74,
+      "sha256": "9b62003c81ced58cc9226b2b3fa070ccfc421c42d0794f75ae5c870eb4381b38"
+    },
+    {
+      "ruta": "intento-inicial/CANDIDATA_FIJADA.json",
+      "bytes": 1146,
+      "sha256": "d9a6f1b030f87bb870d3447d5105060f76e2b2d9ac4839e156522c9c43bb46c4"
+    },
+    {
+      "ruta": "intento-inicial/COMANDOS_HASTA_DIAGNOSTICO.json",
+      "bytes": 8837,
+      "sha256": "944502ef502bef58db2d78709cb8b6ea224b6b39ff3efc1e5eaa113203f3ab8b"
+    },
+    {
+      "ruta": "intento-inicial/ESPERADO.tsv",
+      "bytes": 174,
+      "sha256": "6ddc551e63efea73b83035d55e436cd4829775071809fd46d7d51571e6cb2ce7"
+    },
+    {
+      "ruta": "intento-inicial/contraste.rs",
+      "bytes": 5094,
+      "sha256": "d77a6bdce67de72ca463c8b666d64f4d6769a78b2d982f8daac12044b24d0930"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 4151,
+      "sha256": "f55b18e592da06360b59f0cf11250518ad413823e651a95372b03eb101f15b98"
+    },
+    {
+      "ruta": "sensibilidad/referencia-circular/cobertura.rs",
+      "bytes": 2608,
+      "sha256": "dd200ffccf0ddae1b0b57e7028f221593bf3e880fe2d382d1fe43085a3dda9d1"
+    },
+    {
+      "ruta": "sensibilidad/referencia-circular/rangos_fijados.rs",
+      "bytes": 74,
+      "sha256": "9b62003c81ced58cc9226b2b3fa070ccfc421c42d0794f75ae5c870eb4381b38"
+    },
+    {
+      "ruta": "sensibilidad/sin-obligacion/cobertura.rs",
+      "bytes": 2551,
+      "sha256": "445964bef0047c5a7f1ddb41d1fc184767561b579ca3ff48723de931e139a3d5"
+    },
+    {
+      "ruta": "sensibilidad/sin-obligacion/rangos_fijados.rs",
+      "bytes": 74,
+      "sha256": "9b62003c81ced58cc9226b2b3fa070ccfc421c42d0794f75ae5c870eb4381b38"
+    }
+  ]
+}

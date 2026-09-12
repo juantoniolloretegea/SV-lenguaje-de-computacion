@@ -1,0 +1,21 @@
+{
+  "version": "S1-RESULTADO/1",
+  "controles_por_ejecucion": 8,
+  "ejecuciones_cualificacion": 6,
+  "posiciones_ensayadas_cobertura": 2,
+  "posiciones_recorridas_por_ejecucion": 4,
+  "cuerpos_previos_preservados": 4,
+  "sensibilidades_detectadas": 2,
+  "clientes_forgados_rechazados": 2,
+  "capturas_identicas": 29,
+  "procesos_registrados_incluido_intento_instrumental": 30,
+  "resultado": "Cobertura documental de dos piezas conforme en el banco acotado; no cierre integral C/I ni A–L.",
+  "limites": [
+    "P3-04 es ambiguo y no consulta la política: no demuestra revocación aplicable.",
+    "Referencia confiable intraproceso; no autoridad profesional ni aislamiento frente al host.",
+    "RSS por proceso no disponible; sin caracterización P5.",
+    "No ejecución WASI ni navegador en este expediente."
+  ],
+  "instrumento_ci07": "Espécimen sintácticamente inválido corregido sin cambiar el criterio ni la candidata; intento y causa conservados.",
+  "incidencia": "Ausencia inicial de /usr/bin/time; productor no iniciado. Se conservó el intento y se usó instrumentación Python de procesos, sin semántica SV."
+}
