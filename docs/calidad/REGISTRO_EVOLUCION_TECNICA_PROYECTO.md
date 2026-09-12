@@ -1801,3 +1801,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-174 · S7 · Recepción de Grok y aclaraciones posteriores
 
 2026-09-12T15:59:53Z. Original Grok intento 2 preservado: CONFORME_DOCUMENTAL, doce casos y 32 citas, sin errores del instrumento fijado. Añadidos resúmenes con procedencia de las aclaraciones posteriores de Qwen y DeepSeek; originales y dictámenes anteriores intactos. S7 en ejecución, pendiente Claude. Secuencia de la dirección: completar registro, comparar candidatos y después estudiar licencia y despliegue independiente. [Acta y evidencias](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/grok-intento-2/ACTA_RECEPCION.md).
+
+
+<a id="retp-175"></a>
+
+### RETP-2026-175 · S7 · Recepción de Claude y finalización del cotejo de segundos intentos
+
+2026-09-12T16:05:57Z. Original Claude preservado: CONFORME_DOCUMENTAL, doce casos y 32 citas, sin errores del instrumento fijado. Exposición previa alta y precisión sobre versión declarada conservadas. S7 finalizado exclusivamente en recepción y cotejo documental de los cuatro participantes. Dictámenes anteriores y aceptación provisional Qwen intactos. Siguiente actividad: comparación; después licencias e implantación independiente. [Acta y evidencias](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/claude-intento-2/ACTA_RECEPCION.md).

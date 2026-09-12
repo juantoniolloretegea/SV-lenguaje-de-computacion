@@ -1,0 +1,22 @@
+{
+  "inicio_utc": "2026-09-12T16:03:58.842865+00:00",
+  "comando": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/cotejar_entrega.py",
+    "--respuesta",
+    "/workspace/scratch/cdd3907241dd/s7-recepcion-claude/expediente/RESPUESTA_ORIGINAL.txt",
+    "--banco",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/BANCO.json",
+    "--referencia",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/privado/REFERENCIA_PREVIA.json",
+    "--compromiso",
+    "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/COMPROMISO_PREVIO.json",
+    "--salida",
+    "/workspace/scratch/cdd3907241dd/s7-recepcion-claude/expediente/COTEJO_ORIGINAL.json"
+  ],
+  "codigo_salida": 0,
+  "stdout": "CONFORME_DOCUMENTAL\n",
+  "stderr": "",
+  "duracion_ns_observador": 45024250,
+  "alcance": "Cotejo documental por Watson / W-S0; no mide el tiempo del participante."
+}

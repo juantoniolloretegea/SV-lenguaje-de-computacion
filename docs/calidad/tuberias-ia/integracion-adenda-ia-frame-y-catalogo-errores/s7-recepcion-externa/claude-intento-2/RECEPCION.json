@@ -1,0 +1,21 @@
+{
+  "suceso": "S7",
+  "registro": "RETP-2026-175",
+  "responsable": "Watson / W-S0",
+  "fecha_registro_utc": "2026-09-12T16:03:58.842865+00:00",
+  "archivo_recibido": "34f008f4-f093-43be-a563-221e6af86b5e.json",
+  "bytes_original": 31242,
+  "sha256_original": "8fe52c9c84010171144cc678f28d13d5ef194bae637def11c0ed3c6156d7ef23",
+  "participante_declarado": {
+    "modelo": "Claude (Anthropic)",
+    "version_declarada": "claude-opus-5 — identificador de configuración de la sesión. No es una versión de despliegue observada: el modelo que sirve un turno puede diferir de esa configuración y no es acreditable desde dentro de la sesión.",
+    "exposicion_previa_declarada": "Exposición previa alta y declarada, no soy participante independiente de este expediente. En una sesión continuada con la dirección he emitido el dictamen sobre IE004-ES-P2/1, el dictamen focal sobre IE004-ES-P2/2, y soy autora de la reserva P3 y de sus veinticuatro casos y su oráculo. He leído además la sucesora IE004-ES-P2/3-COSTE/1, el contrato de separación de captura A/V, el workflow RETP-2026-123 y el Documento III de horizonte de sucesos. Respondí también el primer intento, el banco S4-EXTERNA-DOCUMENTAL/1, cuyos doce casos son los antecedentes de éstos. Ninguno de los doce casos de este banco requiere esas lecturas: se resuelven con R01-R08 y F01-F08 aquí incluidos. Lo declaro para que la dirección pondere o excluya mi resultado del contraste con participantes sin esa exposición."
+  },
+  "intento": 2,
+  "dictamen": "CONFORME_DOCUMENTAL",
+  "citas_fuentes": 32,
+  "casos": 12,
+  "tiempo_participante": null,
+  "actividad_participante": "No se adjunta registro de ejecución. No se infieren operaciones usadas o ausentes.",
+  "alcance": "Conformidad documental de esta entrega; identidad, versión y exposición son declaraciones del participante."
+}
