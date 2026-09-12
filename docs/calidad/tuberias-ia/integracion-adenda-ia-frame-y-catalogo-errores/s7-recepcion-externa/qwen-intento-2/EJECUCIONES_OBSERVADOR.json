@@ -1,0 +1,52 @@
+{
+  "responsable": "Watson / W-S0",
+  "alcance": "Cotejo de archivos; no ejecución semántica SV ni medida del participante.",
+  "ejecuciones": [
+    {
+      "inicio_utc": "2026-09-12T15:21:26.289682+00:00",
+      "comando": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/cotejar_entrega.py",
+        "--respuesta",
+        "/workspace/scratch/cdd3907241dd/s7-recepcion-qwen/expediente/RESPUESTA_ORIGINAL.txt",
+        "--banco",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/BANCO.json",
+        "--referencia",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/privado/REFERENCIA_PREVIA.json",
+        "--compromiso",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/COMPROMISO_PREVIO.json",
+        "--salida",
+        "/workspace/scratch/cdd3907241dd/s7-recepcion-qwen/expediente/COTEJO_ORIGINAL.json"
+      ],
+      "codigo_salida": 2,
+      "stdout": "NO_CONFORME\n",
+      "stderr": "",
+      "duracion_ns_observador": 48049166,
+      "salida": "COTEJO_ORIGINAL.json",
+      "salida_sha256": "96d6a57fcb8e275d6946891239860ecd75517a1c884703274558a09b4931df90"
+    },
+    {
+      "inicio_utc": "2026-09-12T15:21:26.337869+00:00",
+      "comando": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/cotejar_entrega.py",
+        "--respuesta",
+        "/workspace/scratch/cdd3907241dd/s7-recepcion-qwen/expediente/BLOQUE_JSON_DIAGNOSTICO.json",
+        "--banco",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/BANCO.json",
+        "--referencia",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/privado/REFERENCIA_PREVIA.json",
+        "--compromiso",
+        "/workspace/scratch/cdd3907241dd/s6-trazabilidad-total/publico/COMPROMISO_PREVIO.json",
+        "--salida",
+        "/workspace/scratch/cdd3907241dd/s7-recepcion-qwen/expediente/COTEJO_BLOQUE_DIAGNOSTICO.json"
+      ],
+      "codigo_salida": 0,
+      "stdout": "CONFORME_DOCUMENTAL\n",
+      "stderr": "",
+      "duracion_ns_observador": 42236408,
+      "salida": "COTEJO_BLOQUE_DIAGNOSTICO.json",
+      "salida_sha256": "852cd21ac3701c66ddac807af4a2721b3078b0fdc8e33d29cbeb1d5f81ea6b4d"
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "evaluar.py": {
+    "bytes": 4200,
+    "sha256": "81bd9a58f3341c646479980995aee869bfbb987fc9a42b20681b13515d3fb14f"
+  },
+  "RECTORES.json": {
+    "bytes": 621,
+    "sha256": "53eca911732dad803a3e1a37737a6e5de2c737637629ce92383d5801d14bacd8"
+  },
+  "EJECUCIONES_OBSERVADOR.json": {
+    "bytes": 2380,
+    "sha256": "872446dc8f774f5adf8e89b02b7de169155121449ef4aa992619636ad5f43cc8"
+  },
+  "ACTA_RECEPCION.md": {
+    "bytes": 4407,
+    "sha256": "1bedd0ffa801ce1b8a6c4265e1ad8f32bc7a5b29c4a3a21add3c17df231c945d"
+  },
+  "BLOQUE_JSON_DIAGNOSTICO.json": {
+    "bytes": 30443,
+    "sha256": "f591c186baf4f9b12eeb3d2988e2d1be73e9fa4b16286a8e720dfcb3f947ee11"
+  },
+  "COTEJO_BLOQUE_DIAGNOSTICO.json": {
+    "bytes": 442,
+    "sha256": "852cd21ac3701c66ddac807af4a2721b3078b0fdc8e33d29cbeb1d5f81ea6b4d"
+  },
+  "RESPUESTA_ORIGINAL.txt": {
+    "bytes": 32876,
+    "sha256": "bad096f38fabc301a3aca10ab626d70ae8ca763e4d3fe1446af5c79ee83e09da"
+  },
+  "RECEPCION.json": {
+    "bytes": 1675,
+    "sha256": "e0dfd5a9e77793cfee7e347b6dfcf70e39f8ca430c729296d9037fabce41d888"
+  },
+  "COTEJO_ORIGINAL.json": {
+    "bytes": 467,
+    "sha256": "96d6a57fcb8e275d6946891239860ecd75517a1c884703274558a09b4931df90"
+  },
+  "RESUMEN_CASOS.json": {
+    "bytes": 4373,
+    "sha256": "85b1bc3de42385de3c24bd140b9fb2c7eb514df4ed09c2930663bc893b925208"
+  },
+  "EXTRACCION_DIAGNOSTICA.json": {
+    "bytes": 400,
+    "sha256": "9162d98259bf8a0b6b4b4a3b2706358011d6a3054d40c3a733e3ed4006c391be"
+  }
+}

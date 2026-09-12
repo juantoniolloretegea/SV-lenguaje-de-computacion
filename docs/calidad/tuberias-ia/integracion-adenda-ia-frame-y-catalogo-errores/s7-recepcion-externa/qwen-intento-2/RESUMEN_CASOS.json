@@ -1,0 +1,218 @@
+[
+  {
+    "id": "E01",
+    "decision": "DATO",
+    "causa": "DATO",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E02",
+    "decision": "PERMISO_REVOCADO",
+    "causa": "PERMISO_REVOCADO",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E03",
+    "decision": "ENTREGAR_LECTURA",
+    "causa": null,
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E04",
+    "decision": "RECHAZAR",
+    "causa": "FaltaVigencia",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E05",
+    "decision": "RECHAZAR",
+    "causa": "VigenciaDistinta",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E06",
+    "decision": "RECHAZAR",
+    "causa": "Identidad",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E07",
+    "decision": "ACEPTAR_ARCHIVO",
+    "causa": null,
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E08",
+    "decision": "RECHAZAR",
+    "causa": "ContenidoDistinto",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E09",
+    "decision": "DETECTAR_ALTERACION",
+    "causa": "ContenidoDistinto",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E10",
+    "decision": "RECHAZAR",
+    "causa": "FaltaVigencia",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E11",
+    "decision": "RECHAZAR_LECTURA",
+    "causa": "Limite",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  },
+  {
+    "id": "E12",
+    "decision": "ERROR_LECTURA",
+    "causa": "Io(NotFound)",
+    "obligaciones_cotejadas": [
+      "decision",
+      "causa",
+      "contenido",
+      "llamadas_politica",
+      "caso_texto",
+      "fuentes",
+      "reglas",
+      "fundamento",
+      "consecuencia",
+      "limites"
+    ],
+    "resultado": "CONFORME_EN_BLOQUE_DIAGNOSTICO"
+  }
+]

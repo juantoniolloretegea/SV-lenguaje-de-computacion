@@ -1,0 +1,27 @@
+{
+  "suceso": "S7",
+  "registro": "RETP-2026-171",
+  "responsable": "Watson / W-S0",
+  "fecha_registro_utc": "2026-09-12T15:21:26.381409+00:00",
+  "nombre_recibido": "Pegado text(8).txt",
+  "bytes_original": 32876,
+  "sha256_original": "bad096f38fabc301a3aca10ab626d70ae8ca763e4d3fe1446af5c79ee83e09da",
+  "participante_declarado": {
+    "modelo": "Qwen",
+    "version_declarada": "Qwen3.8",
+    "exposicion_previa_declarada": "Participación previa en S4-EXTERNA-DOCUMENTAL/1 el 2026-09-12T12:03:04Z con lectura documental del paquete publicado en SVcustos commit e1dcd9f. Este es el segundo intento bajo contrato SV-TRAZABILIDAD-2/1."
+  },
+  "intento": 2,
+  "contrato": "SV-TRAZABILIDAD-2/1",
+  "dictamen_entrega": "NO_CONFORME",
+  "motivo": "Texto añadido tras el bloque JSON, prohibido por el formato fijado.",
+  "dictamen_bloque_diagnostico": "CONFORME_DOCUMENTAL",
+  "casos_conformes_en_bloque": 12,
+  "casos_exigidos": 12,
+  "observacion": "El texto adicional afirma que no hay texto fuera del bloque, contradicho por el propio archivo. No se atribuye intención.",
+  "actividad_participante": "Declara lectura documental y ausencia de ejecución propia de Rust, herramientas y medidas; no se recibió registro de ejecución.",
+  "tiempo_participante": null,
+  "motivo_tiempo_ausente": "No se ha aportado medición verificable.",
+  "atribucion": "Archivo aportado por el usuario como respuesta de Qwen; identidad y versión declaradas, sin certificación del proveedor.",
+  "alcance": "Incumplimiento de formato y declaración contradictoria; no se observa pérdida de la cadena documental requerida en los doce casos. No acredita auditoría de procesos internos."
+}

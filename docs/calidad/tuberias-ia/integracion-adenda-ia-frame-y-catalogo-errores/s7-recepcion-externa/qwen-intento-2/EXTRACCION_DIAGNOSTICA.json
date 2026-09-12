@@ -1,0 +1,8 @@
+{
+  "original_sha256": "bad096f38fabc301a3aca10ab626d70ae8ca763e4d3fe1446af5c79ee83e09da",
+  "inicio_byte": 9,
+  "fin_byte_exclusivo": 30452,
+  "bloque_sha256": "f591c186baf4f9b12eeb3d2988e2d1be73e9fa4b16286a8e720dfcb3f947ee11",
+  "bytes_bloque": 30443,
+  "proposito": "Diagnóstico acotado del contenido. No sustituye el original ni su dictamen. Se conservan bytes del bloque sin normalización."
+}

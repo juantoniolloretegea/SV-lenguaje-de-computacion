@@ -1,0 +1,10 @@
+{
+  "dictamen": "CONFORME_DOCUMENTAL",
+  "errores": [],
+  "admisible_documental": true,
+  "respuesta_sha256": "f591c186baf4f9b12eeb3d2988e2d1be73e9fa4b16286a8e720dfcb3f947ee11",
+  "bytes_respuesta": 30443,
+  "casos_exigidos": 12,
+  "criterio": "todas las obligaciones; sin compensación",
+  "actividad_externa": "no certificada por este cotejo; cualquier afirmación adicional requiere su expediente y revisión antes de admisión general"
+}
