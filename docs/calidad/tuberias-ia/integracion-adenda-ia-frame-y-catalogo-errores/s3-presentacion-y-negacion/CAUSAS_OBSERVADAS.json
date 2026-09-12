@@ -1,0 +1,42 @@
+{
+  "version": "S3-CAUSAS/1",
+  "causas": [
+    {
+      "control": "D03",
+      "causa": "Lectura(Presentacion(ContenidoDistinto))",
+      "etapa": "validación anterior a escritura",
+      "es_U": false
+    },
+    {
+      "control": "D04",
+      "causa": "Cobertura(Lectura(Presentacion(ContenidoDistinto)))",
+      "etapa": "validación de bytes recuperados",
+      "es_U": false
+    },
+    {
+      "control": "D05",
+      "causa": "FaltaVigencia",
+      "etapa": "cobertura anterior a escritura",
+      "es_U": false
+    },
+    {
+      "control": "D06",
+      "causa": "Limite",
+      "etapa": "lector de destino",
+      "es_U": false
+    },
+    {
+      "control": "D07",
+      "causa": "Io(AlreadyExists)",
+      "etapa": "apertura para escritura",
+      "es_U": false
+    },
+    {
+      "control": "D08",
+      "causa": "Io(NotFound)",
+      "etapa": "apertura para lectura",
+      "es_U": false
+    }
+  ],
+  "alcance": "Variantes locales del ensayo y de capas reutilizadas; sin nuevos códigos SV ni consolidación del catálogo ES/EN."
+}

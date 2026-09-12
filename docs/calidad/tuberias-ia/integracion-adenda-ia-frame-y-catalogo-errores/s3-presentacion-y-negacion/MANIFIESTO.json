@@ -1,0 +1,110 @@
+{
+  "version": "S3-EXPEDIENTE/1",
+  "archivos": [
+    {
+      "ruta": "BANCO_FIJADO.json",
+      "bytes": 7473,
+      "sha256": "5cff519dbafe5960502540d25e877e7419fcafd6cc7996cc9bac530f58e03b36"
+    },
+    {
+      "ruta": "CAUSAS_OBSERVADAS.json",
+      "bytes": 1045,
+      "sha256": "194d9a2e2f8be94e13b566cc5e916e95b04bf117564c662c436aac5a3792a6a6"
+    },
+    {
+      "ruta": "COMANDOS.json",
+      "bytes": 21838,
+      "sha256": "1b680516627149612dc29ef4050c83174806f3ba18b861d7769c545276f1a5f9"
+    },
+    {
+      "ruta": "CONTINUIDAD_COTEJADA.json",
+      "bytes": 469,
+      "sha256": "dd44cade8b1ec73943828e16a35b1043dad92c327aa1cd3631bb64a714730ae6"
+    },
+    {
+      "ruta": "CONTRATO_S3.md",
+      "bytes": 6954,
+      "sha256": "c1a2e5b0a2f775e8a3d44760891c1a6d7e5757f5d2580a0d194ccc82f0f73c78"
+    },
+    {
+      "ruta": "DECLARACION_VIGENCIA.json",
+      "bytes": 388,
+      "sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038"
+    },
+    {
+      "ruta": "ENTORNO.json",
+      "bytes": 359,
+      "sha256": "8100569a5aeb9a2bf17f4314fa0c3f6af8c7094fae019bc69ebb06465151a8ec"
+    },
+    {
+      "ruta": "ESPECIMENES.json",
+      "bytes": 24522,
+      "sha256": "67a7df709a5e88e4a31ef17202e0d47915ab878b39117fe7bc778cc66d6a46c6"
+    },
+    {
+      "ruta": "EVIDENCIAS_S3.json",
+      "bytes": 356135,
+      "sha256": "e4f621c9caf913384f3a654495adf5faabd0ef232c76c33c152c31f92bb97e56"
+    },
+    {
+      "ruta": "FIJACION_PREVIA.json",
+      "bytes": 1264,
+      "sha256": "b129270f34b111e363180642023abadc0118280704516fc40839978d12a65573"
+    },
+    {
+      "ruta": "FUENTES_S2.json",
+      "bytes": 737698,
+      "sha256": "514bc72abfb34674f27b6243112ed12aefc0a7ab3f67d309b384678a776e320e"
+    },
+    {
+      "ruta": "OBSERVACION_DESTINO.json",
+      "bytes": 825,
+      "sha256": "94a8cff5f98ce7cff9e178779003ed64207759d29c62a13713647e2ef64649b0"
+    },
+    {
+      "ruta": "PREPARACION.json",
+      "bytes": 8333,
+      "sha256": "99489b7aa58e81237b6f1350404a4525b65174590488f389f74d41de6e72dbda"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 5970,
+      "sha256": "a905854f9d884e8dc98f9ea623518cd3e5a63df5d909982071f5e00cbdcae20e"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 429,
+      "sha256": "e5b5e4773b0dcd7305740dc2a86fe0ce56a580a130e8b7454badeb2794ce3607"
+    },
+    {
+      "ruta": "codigo/ESPERADO.tsv",
+      "bytes": 243,
+      "sha256": "e7dfad6ac539b53a2b2d5a7d1d4b7e8eb58d96f0faa129cecb2972a2da1ac75e"
+    },
+    {
+      "ruta": "codigo/contraste.rs",
+      "bytes": 5549,
+      "sha256": "befb5d825b444518a21c7e0e9a4670345221a84fdd3f56effa3e3a1c08d13cad"
+    },
+    {
+      "ruta": "codigo/destino.rs",
+      "bytes": 1305,
+      "sha256": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 5757,
+      "sha256": "02787f7217f6d434731da9ca53ea46eaa1b931bf97d60a65e87f33ee545d0dd3"
+    },
+    {
+      "ruta": "sensibilidad/contraste-observador-circular.rs",
+      "bytes": 5545,
+      "sha256": "93b39bb465aa654527958b63f91631309daf0baa9876dc8bc737e0f07c6e7bae"
+    },
+    {
+      "ruta": "sensibilidad/presentacion-sin-comparacion.rs",
+      "bytes": 2567,
+      "sha256": "29031dfacc41e02cecbca32b53d834f8bdee3718e0688130999d39a0730c3994"
+    }
+  ]
+}

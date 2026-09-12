@@ -9,7 +9,8 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
 | S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
-| S3 | en ejecución | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:38:45Z |
+| S3 | finalizado | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:42:55Z |
+| S4 | pendiente | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T11:42:55Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -118,15 +119,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S3 · Correspondencia de presentación y pérdida de negación
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T11:28:10Z
 
 **Inicio:** 2026-09-12T11:38:45Z
 
-**Actualización:** 2026-09-12T11:38:45Z
+**Actualización:** 2026-09-12T11:42:55Z
 
-**Fin:** —
+**Fin:** 2026-09-12T11:42:55Z
 
 **Responsable:** Watson / W-S0
 
@@ -138,15 +139,50 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S2; criterio D de RETP-147/162; contratos de RETP-149/150/152
 
-**Resultado:** Alcance, ocho controles, especímenes y esperados fijados antes de la cualificación.
+**Resultado:** Presentación íntegra escrita y recuperada; pérdida previa de negación rechazada sin crear archivo; alteración posterior detectada sobre los bytes recuperados, con referencia original intacta.
 
-**Verificación:** Fuentes rectoras cotejadas; 73 fuentes S2 reutilizadas intactas; diferencia frente a RETP-150/152 delimitada; preparación previa conservada.
+**Verificación:** Ocho controles en seis ejecuciones: 48 observaciones; 28 capturas idénticas por ejecución; dos sensibilidades detectadas; 22 invocaciones sin fallo inesperado de cualificación.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/CONTRATO_S3.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/README.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-166)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-166-cierre-s3)
 
-**Siguiente acción:** Ejecutar el contraste integrado de cobertura, escritura y recuperación del archivo, con dos sensibilidades.
+**Siguiente acción:** S4 pendiente: preparar la prueba externa común del recorrido documental con instrucción, acceso y esperados fijados.
 
-**Observaciones:** Pérdida previa debe impedir escritura; alteración posterior debe detectarse al recuperar. Sin pantalla, revisión humana, host adverso ni reserva externa.
+**Observaciones:** Alcance de archivo y proceso confiable; no pantalla, revisión humana, resistencia al host ni cierre integral D/C/I o A–L. Preparación anterior a la fijación conservada; fuentes S2 intactas.
+
+
+## S4 · Preparación de la prueba externa común del recorrido documental
+
+**Estado:** pendiente
+
+**Alta:** 2026-09-12T11:42:55Z
+
+**Inicio:** —
+
+**Actualización:** 2026-09-12T11:42:55Z
+
+**Fin:** —
+
+**Responsable:** Watson / W-S0
+
+**Alcance:** Un mismo encargo sobre el recorrido delimitado de lectura, cobertura y presentación; fuentes públicas accesibles, esperados previamente custodiados y formato de recepción comparable.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Recepción S3 / RETP-166; el corte del paquete externo se fijará antes de entregar.
+
+**Dependencias:** S1/S2/S3; RETP-147/162; condiciones de acceso y prueba externa del workflow
+
+**Resultado:** Pendiente de preparar el paquete y su instrucción común; sin envío ni recepción externos.
+
+**Verificación:** El banco público conocido tiene evidencias locales previas; acceso común y formato de recepción por fijar.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/README.md)
+
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-166-cierre-s3)
+
+**Siguiente acción:** Fijar alcance, entradas y criterio de aceptación del encargo; verificar acceso público común y custodiar esperados antes de facilitar la misma instrucción.
+
+**Observaciones:** No prueba ciega ni reserva inédita P3. Separar resultados ejecutados de pasos y recursos declarados. Conserva pendientes de A–L y consolidación posterior del catálogo.
 

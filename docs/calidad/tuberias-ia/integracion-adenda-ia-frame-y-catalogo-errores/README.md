@@ -105,3 +105,12 @@ El [contraste S2 de vigencia causal](s2-vigencia-causal/README.md) acredita en e
 S2 finaliza en alcance sintético nativo. La vigencia profesional y el cierre universal C/I siguen fuera de lo acreditado. S3 queda pendiente para precisar el objeto presentado y el testigo de pérdida de negación del criterio D, reutilizando RETP-149/150/152 y evitando contar de nuevo sus pruebas. Después corresponde preparar la prueba externa común del recorrido integrado con alcance y esperados fijados; su recepción continúa pendiente.
 
 Se mantiene la secuencia: integración 1+3; recogida continua de causas; consolidación posterior del paso 6, catálogo y ES/EN. Las causas S2 se conservan en el expediente con su etapa. Resto A–L, reserva P3, P4/P5/P6 y aceptación humana integral mantienen sus condiciones. Mismas ramas y registro obligatorio Sucesos SV.
+
+
+## Recepción S3 y relevo S4 · RETP-166 · 12/09/2026
+
+El [contraste S3 de presentación y negación](s3-presentacion-y-negacion/README.md) reutiliza el rechazo previo de RETP-150 y prueba su composición con lectura, cobertura y archivo escrito/recuperado. La pérdida de negación previa impide crear el archivo; la posterior se detecta al comparar los bytes observados mientras la referencia permanece intacta. Ocho controles, seis ejecuciones, dos sensibilidades y 22 invocaciones; 73 fuentes S2 intactas. El cierre se limita a texto y proceso confiable: no acredita pantalla, revisión humana, imposición frente al host ni cierre universal D/C/I o A–L.
+
+S4 queda pendiente: preparar la prueba externa común del recorrido documental acotado, con una misma instrucción, fuentes públicas accesibles, esperados previamente custodiados y formato de recepción comparable. Banco público conocido; sin presentarlo como prueba ciega o reserva inédita. No se han enviado encargos ni recibido resultados externos en S3.
+
+La prioridad sigue siendo la integración 1+3, con recogida continua de causas. El paso 6, catálogo y ES/EN, mantiene su consolidación posterior. Los demás criterios y las compuertas de P3/P4/P5/P6 y aceptación humana conservan sus condiciones. Sucesos SV y las mismas ramas mantienen la continuidad.

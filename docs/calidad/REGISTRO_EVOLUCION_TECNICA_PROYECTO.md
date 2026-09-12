@@ -1706,3 +1706,16 @@ Cápsula original de 71 archivos intacta; copia ejecutable con 69 archivos idén
 ### RETP-2026-166 · S3 · Apertura de presentación en destino
 
 2026-09-12T11:38:45Z. [Contrato previo, controles y presupuesto](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/CONTRATO_S3.md). S3 en ejecución. RETP-150 ya rechaza la eliminación de negación; S3 prueba la composición con cobertura y los bytes realmente escritos/recuperados de un archivo, sin atribuir de nuevo la prueba aislada. Referencia P3-01/A01; 73 fuentes S2 sin cambios; sólo conductor de ensayo nuevo. Ocho controles, seis ejecuciones y dos sensibilidades previstos, máximo 22 invocaciones Rust. Preparación anterior a la fijación conservada aparte. Mismas ramas y espejo de registros. La representación gráfica y la recepción externa permanecen pendientes.
+
+
+<a id="retp-166-cierre-s3"></a>
+
+### RETP-2026-166 · S3 · Recepción de presentación y objeto recuperado
+
+2026-09-12T11:42:55Z. [Expediente S3, evidencia y reproducción](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/README.md). S3 finalizado en alcance documental nativo; S4 pendiente para preparar la prueba externa común del recorrido delimitado.
+
+RETP-150 ya rechazaba la supresión de negación; S3 acredita su composición con lectura, cobertura y escritura/recuperación real de archivo. P3-01/A01 conserva su esperado y sus fuentes. La presentación literal y la espaciada se recuperan exactamente. Eliminar no ante acredita antes de validar produce ContenidoDistinto y no crea destino; alterarlo después de escribir se detecta sobre el archivo recuperado mientras cuerpo y vista permanecen intactos. La detección posterior no se presenta como prevención frente al host.
+
+Ocho controles en seis ejecuciones, 48 observaciones; 28 capturas idénticas por recorrido y 201 artefactos preservados incluyendo sensibilidades. Veintidós invocaciones dentro del presupuesto, sin fallos inesperados de cualificación ni cambios de esperados. Sensibilidades detectadas en D03 y D04. Un error de sintaxis de preparación, anterior a la fijación y sin inicio de Rust, queda documentado aparte. Reproductor publicado ejecutado; CPU y pared registradas, RSS individual no disponible.
+
+Las 73 fuentes S2 se conservan intactas; sólo se añade conductor acotado de archivo. Causas de contenido, cobertura, límite y E/S diferenciadas; sin conversión a U ni códigos SV nuevos. No se prueban pantalla, renderizador, revisión humana, persistencia ante corte eléctrico, escritura atómica o resistencia al host. D/C/I universales, A–L y P4/P5/P6 conservan sus condiciones. S4 preparará una misma instrucción y fuentes accesibles, con esperados custodiados; banco conocido, sin envío de encargos ni apertura de reserva. El catálogo sigue recogiendo causas y se consolida después. Mismas ramas y espejo de evidencia, sin repetir campañas históricas como nuevos resultados.

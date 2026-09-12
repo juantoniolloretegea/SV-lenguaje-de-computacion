@@ -1,0 +1,16 @@
+{
+  "version": "S3-OBSERVACION/1",
+  "posicion": 0,
+  "original_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+  "original_final_sha256": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+  "espaciado_sha256": "cbfc037a6f19d6e1b0a3374d4f7b4b7d4a419ad4f17dcca694bf3d9ed0087dad",
+  "alterado_recuperado_sha256": "f6a4c3068645c4f2ade6486226d6a398f1665808b76d96b8fee3dd6775466620",
+  "cambio_literal": "Supresión exclusiva de no ante acredita",
+  "json_alterado_valido": true,
+  "archivo_previo_alterado_no_creado": true,
+  "omision_vigencia_sin_archivo": true,
+  "alteracion_posterior_materializada": true,
+  "alteracion_posterior_detectada": true,
+  "capturas_totales": 201,
+  "observador": "Mismo proceso confiable y bibliotecas; lectura del archivo, no del texto previsto."
+}

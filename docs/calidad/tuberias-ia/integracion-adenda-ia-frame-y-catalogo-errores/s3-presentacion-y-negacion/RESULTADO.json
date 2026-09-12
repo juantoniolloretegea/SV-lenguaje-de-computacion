@@ -1,0 +1,15 @@
+{
+  "version": "S3-RESULTADO/1",
+  "conforme": true,
+  "controles": 8,
+  "ejecuciones": 6,
+  "observaciones": 48,
+  "capturas_identicas_por_ejecucion": 28,
+  "invocaciones": 22,
+  "sensibilidades": {
+    "comparacion desactivada": "D03",
+    "observacion circular": "D04"
+  },
+  "pared_campana_s": 7.94299192300241,
+  "limite": "Archivo nativo y proceso confiable; no pantalla, revisión humana ni imposición frente al host."
+}
