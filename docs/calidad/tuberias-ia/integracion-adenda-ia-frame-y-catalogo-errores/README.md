@@ -96,3 +96,12 @@ La actuación profesional sin premisa/verificadores sigue inhabilitada, sin bloq
 El [contraste S1 de cobertura independiente](s1-cobertura-independiente/README.md) acredita en dos posiciones del banco la comprobación de las dos piezas documentales requeridas, con ocho controles en seis ejecuciones, dos sensibilidades y conservación de los originales. La cápsula RETP-152 se reutiliza íntegra. El intento instrumental inicial y el espécimen incorrecto de CI07 se conservan junto con su corrección explícita; no se cuentan como resultados conformes.
 
 S1 finaliza en ese alcance. C/I y A–L no cierran íntegramente: P3-04 no prueba una revocación aplicable, porque su petición ambigua evita consultar la política. S2 queda pendiente para fijar el par causal de una consulta inequívoca con vigencia positiva y negativa, con fuente y montaje declarados antes de ejecutar. Se conserva la prioridad de integrar 1+3; las causas alimentan el catálogo durante el recorrido y su consolidación permanece posterior. Prueba externa, reserva, obligaciones profesionales y compuertas del workflow conservan sus condiciones. El registro obligatorio Sucesos SV identifica la actividad vigente.
+
+
+## Recepción S2 y relevo S3 · RETP-165 · 12/09/2026
+
+El [contraste S2 de vigencia causal](s2-vigencia-causal/README.md) acredita en este banco que una consulta idéntica y de significado único entrega DATO/8.40 con vigencia positiva y PERMISO_REVOCADO/null con vigencia negativa; ambas consultan una vez la política. La omisión de la pieza de vigencia impide acreditar cobertura documental. Doce controles en seis ejecuciones, dos sensibilidades y diez cuerpos anteriores conservados; 23 invocaciones dentro del presupuesto fijado. Montaje sucesor explícito; S1 y P3-04 mantienen su evidencia histórica.
+
+S2 finaliza en alcance sintético nativo. La vigencia profesional y el cierre universal C/I siguen fuera de lo acreditado. S3 queda pendiente para precisar el objeto presentado y el testigo de pérdida de negación del criterio D, reutilizando RETP-149/150/152 y evitando contar de nuevo sus pruebas. Después corresponde preparar la prueba externa común del recorrido integrado con alcance y esperados fijados; su recepción continúa pendiente.
+
+Se mantiene la secuencia: integración 1+3; recogida continua de causas; consolidación posterior del paso 6, catálogo y ES/EN. Las causas S2 se conservan en el expediente con su etapa. Resto A–L, reserva P3, P4/P5/P6 y aceptación humana integral mantienen sus condiciones. Mismas ramas y registro obligatorio Sucesos SV.

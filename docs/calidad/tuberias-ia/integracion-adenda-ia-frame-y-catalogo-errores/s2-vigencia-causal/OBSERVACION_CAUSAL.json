@@ -1,0 +1,68 @@
+{
+  "version": "S2-OBSERVACION/1",
+  "misma_solicitud_sha256": "f6a8203cc34622dbf0c0af2cc6d3057ee2dff9b3c155ee22b3a82b1a1196a7f1",
+  "analisis_completo": true,
+  "significados": [
+    {
+      "positiva": true,
+      "restricciones": {
+        "campos": [
+          1,
+          1,
+          1,
+          1,
+          1
+        ],
+        "pendientes": 0,
+        "operandos": []
+      },
+      "exclusiones": [],
+      "fuera": false,
+      "modificador_glicosilada": false
+    }
+  ],
+  "campos_de_traza_iguales": [
+    "id",
+    "original",
+    "original_transporte_sha256",
+    "analisis_completo",
+    "normalizado",
+    "tokens",
+    "significados",
+    "unidades_a",
+    "categorias_a"
+  ],
+  "positivo": {
+    "estado": "DATO",
+    "contenido": "8.40",
+    "ruta": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "causas": 0,
+    "llamadas_politica": 1,
+    "fuente": "FICCION-IE004/1",
+    "alcance": "Registro artificial; no acredita concentración ni condición clínica."
+  },
+  "negativo": {
+    "estado": "PERMISO_REVOCADO",
+    "contenido": null,
+    "ruta": [
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "causas": 0,
+    "llamadas_politica": 1,
+    "fuente": null,
+    "alcance": null
+  },
+  "intervalos_citas_fijados_antes": true,
+  "ci07_json_valido": true,
+  "numero_artefactos_capturados": 290
+}

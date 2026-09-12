@@ -1686,3 +1686,16 @@ Límite causal: P3-04 contiene vigencia negativa, pero la petición es ambigua y
 ### RETP-2026-165 · S2 · Apertura de contraste causal de vigencia
 
 2026-09-12T11:23:19Z. [Contrato, presupuesto y esperados previos](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/CONTRATO_S2.md). S2 en ejecución; sin resultados atribuidos. Continúa C/I integrado de RETP-164: consulta inequívoca A01, idéntica bajo dos vigencias en G1 y enlazada a P3-01/P3-11 del lote. Esperados DATO/8.40 y PERMISO_REVOCADO/null, una llamada de política en ambos. Montaje sucesor declarado; fuentes históricas conservadas. Doce controles, seis ejecuciones nativas previstas y dos sensibilidades, máximo 23 invocaciones. Mismas ramas, registros y espejo de laboratorio. La prueba externa y la consolidación posterior del catálogo conservan su lugar en el workflow.
+
+
+<a id="retp-165-cierre-s2"></a>
+
+### RETP-2026-165 · S2 · Recepción del contraste causal de vigencia
+
+2026-09-12T11:28:10Z. [Expediente S2, resultado, comandos y capturas](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/README.md). S2 finalizado en el alcance sintético nativo fijado antes de ejecutar. S3 pendiente: criterio D, correspondencia de presentación y pérdida de negación, con reutilización de RETP-149/150/152.
+
+El mismo archivo A01, byte por byte y con idéntico contexto, produce DATO/8.40 bajo vigencia positiva y PERMISO_REVOCADO/null bajo vigencia negativa. Ambas trazas conservan análisis completo, un único significado y una llamada de política. La integración por P3-01/P3-11 conserva IDs distintos e iguales pregunta y contexto; sólo se cambia la vigencia de P3-11 en un montaje sucesor identificado. No es modificación de una autorización viva ni prueba de revocación profesional.
+
+Doce controles en seis ejecuciones nativas: 72 observaciones, 42 capturas idénticas por ejecución, diez cuerpos anteriores conservados. Dos sensibilidades detectadas en CI02 y CA02. Presupuesto cerrado: 23 invocaciones, sin fallos instrumentales ni correcciones adicionales. El reproductor publicado es el ejecutado. CPU y pared registradas; RSS por proceso no disponible.
+
+Cápsula original de 71 archivos intacta; copia ejecutable con 69 archivos idénticos y dos sustituciones declaradas de montaje y fijación del enlace. Lógica de cobertura S1 reutilizada con versión/rangos nuevos; semántica, política, custodia, entrega y lectura de la candidata intactas. Capturas completas y causas locales conservadas, sin nuevos códigos SV ni conversión a U. C/I global y A–L no se dan por cerrados; prueba externa común, P3 reservada, P4/P5/P6 y consolidación posterior del catálogo conservan sus condiciones. Sin cambios productivos, nuevas ramas o repetición de S1.

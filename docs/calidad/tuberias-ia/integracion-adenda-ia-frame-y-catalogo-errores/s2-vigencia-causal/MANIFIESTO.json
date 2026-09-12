@@ -1,0 +1,145 @@
+{
+  "version": "S2-EXPEDIENTE/1",
+  "archivos": [
+    {
+      "ruta": "BANCO_FIJADO.json",
+      "bytes": 6902,
+      "sha256": "25d9afa9771ef7c6908f6851c94327bfd2b71f5c5e2b5f0dc0ae67fb9f55c381"
+    },
+    {
+      "ruta": "BASE_RETP152.json",
+      "bytes": 732857,
+      "sha256": "01930b47500cfb4538f33c529df57b0a655e1a634295694847e5e8095540d3f6"
+    },
+    {
+      "ruta": "CAUSAS_OBSERVADAS.json",
+      "bytes": 1399,
+      "sha256": "4fe2045dafc0a27c897f9d2a18432fc1982d8127519dc554ee6cd8f666362902"
+    },
+    {
+      "ruta": "COMANDOS.json",
+      "bytes": 22894,
+      "sha256": "088a0bcae8653a09cc84bd9b535a36a19e60e9cbe9654e8216af2539aa726351"
+    },
+    {
+      "ruta": "CONTRATO_S2.md",
+      "bytes": 6266,
+      "sha256": "e55c3497eac1ccb5317e263623bda052ce25963fe3a7039eb19f5881d5c02208"
+    },
+    {
+      "ruta": "DECLARACION_VIGENCIA.json",
+      "bytes": 388,
+      "sha256": "88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038"
+    },
+    {
+      "ruta": "ENTORNO.json",
+      "bytes": 357,
+      "sha256": "ca0b4f0f92aac66e7b05fe11b80dc62ba7a2a60f169e5ed6dc1662fc12e00103"
+    },
+    {
+      "ruta": "ESPERADOS.json",
+      "bytes": 8175,
+      "sha256": "d2ac2468898ac941fe22fbc3f7f49e15c68d0cbcaf2b320945bf5ed1208813f9"
+    },
+    {
+      "ruta": "EVIDENCIAS_S2.json",
+      "bytes": 274798,
+      "sha256": "5add9d3e1d0e669033bb0c6f4fe0a73c3967605b3bccabd29b58f8e4bc4a60f7"
+    },
+    {
+      "ruta": "FIJACION_PREVIA.json",
+      "bytes": 2126,
+      "sha256": "31446eb914b5763a369be73c4d9a0d2c0dd7c4563482bc3d63e3e9f1f5f4a642"
+    },
+    {
+      "ruta": "MONTAJE_ANTERIOR.json",
+      "bytes": 2261,
+      "sha256": "92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff"
+    },
+    {
+      "ruta": "OBSERVACION_CAUSAL.json",
+      "bytes": 1334,
+      "sha256": "fe8c574f4d3ba05ffabdf0bdbbf35f58f83973ca8c453eb9230df7716d1c2fa7"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 6185,
+      "sha256": "a3c6ce682f7db5ab28bf6e6543e27b3109d6d9ea970a346928195b36c02e8f7c"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 636,
+      "sha256": "dddb4a44c71693fdfe6d966f315ff8a352a76c48efe084adb3888f93f6968ba9"
+    },
+    {
+      "ruta": "codigo/ESPERADO.tsv",
+      "bytes": 318,
+      "sha256": "84ce1efff3972052cfed54be85e8d249b54045e9321322a6b41e6fbd03e4c70f"
+    },
+    {
+      "ruta": "codigo/cobertura.rs",
+      "bytes": 2564,
+      "sha256": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90"
+    },
+    {
+      "ruta": "codigo/contraste.rs",
+      "bytes": 7069,
+      "sha256": "28a607aeec3a7939df62025f416ffd0b6f80363abfb579b9de923aa925f8c342"
+    },
+    {
+      "ruta": "codigo/rangos_fijados.rs",
+      "bytes": 82,
+      "sha256": "31259b43e58afb3683c214e0c896012ad3080371c732a5118a994ae25b832c91"
+    },
+    {
+      "ruta": "referencias/PERFIL.md",
+      "bytes": 31867,
+      "sha256": "10c29934f2f8f6bfbb40546f7cf0056d4b53d720c432cacfb9d6b70abefe3d5f"
+    },
+    {
+      "ruta": "referencias/fuentes-base.json",
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4"
+    },
+    {
+      "ruta": "referencias/fuentes-contrato.json",
+      "bytes": 701,
+      "sha256": "ecee6cd306922c0a597d7d84d736d3817a7dd141905a33c0d1574d70a6a47bd0"
+    },
+    {
+      "ruta": "referencias/semantica-a-BASE_PUBLICA.json",
+      "bytes": 1838,
+      "sha256": "5071f37e30e1ef6872a6319daa3fcdc0ddc88e17ae6317fcf4783553f4ea3cc4"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 6637,
+      "sha256": "5e43951b012a9935a0ed5fdcc1d15af42a2c2473b00f1001cf9879e5e278fefc"
+    },
+    {
+      "ruta": "sensibilidad/sin-obligacion/cobertura.rs",
+      "bytes": 2551,
+      "sha256": "492985bb834044fdf6089406a3e01797b5885db7728b3899f4b6edd7048bb239"
+    },
+    {
+      "ruta": "sensibilidad/sin-obligacion/rangos_fijados.rs",
+      "bytes": 82,
+      "sha256": "31259b43e58afb3683c214e0c896012ad3080371c732a5118a994ae25b832c91"
+    },
+    {
+      "ruta": "sensibilidad/sin-revocacion/servicio.rs",
+      "bytes": 6253,
+      "sha256": "0bab4e5e4dd85b23e1e3cb563e43ef48550d0c4da209d888fef247ad055e2772"
+    },
+    {
+      "ruta": "sucesores/lote-g1/lib.rs",
+      "bytes": 9340,
+      "sha256": "267d9ad16ab358252cc2e4bed0661a0633967a6df2922b91734438301d788519"
+    },
+    {
+      "ruta": "sucesores/lote-p3/MONTAJES_PUBLICOS.json",
+      "bytes": 2253,
+      "sha256": "a478c934f4b4419913122ea2079d98bfcbac1285bfd0bd0f5c1c4709313fe719"
+    }
+  ]
+}

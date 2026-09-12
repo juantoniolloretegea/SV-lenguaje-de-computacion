@@ -1,0 +1,17 @@
+{
+  "version": "S2-RESULTADO/1",
+  "conforme": true,
+  "controles_por_ejecucion": 12,
+  "ejecuciones": 6,
+  "observaciones": 72,
+  "capturas_identicas_por_ejecucion": 42,
+  "invocaciones": 23,
+  "sensibilidades": {
+    "sin-obligacion": "CI02",
+    "sin-revocacion": "CA02"
+  },
+  "pared_total_s": 8.901869535446167,
+  "sha256_cuerpo_positivo": "189b6f9501ad3a57ed274fc10d1670b7448885f190a2c1f2e8bdb55f92904237",
+  "sha256_cuerpo_negativo": "92b5ee0180f54641cfa15e35f4ad27ce6f489807a1bfe7f88dd843d73f3a70d8",
+  "limite": "Causalidad y cobertura del banco sintético nativo; no revocación profesional ni cierre integral C/I o A–L."
+}

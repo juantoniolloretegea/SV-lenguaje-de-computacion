@@ -8,7 +8,8 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 | --- | --- | --- | --- | --- |
 | S0 | finalizado | Puesta en servicio del registro Sucesos SV | Watson / W-S0 | 2026-09-12T10:23:08Z |
 | S1 | finalizado | Contraste C/I de cobertura y comprobación independiente | Watson / W-S0 | 2026-09-12T10:51:15Z |
-| S2 | en ejecución | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:23:19Z |
+| S2 | finalizado | Contraste causal de vigencia con consulta inequívoca | Watson / W-S0 | 2026-09-12T11:28:10Z |
+| S3 | pendiente | Correspondencia de presentación y pérdida de negación | Watson / W-S0 | 2026-09-12T11:28:10Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -82,15 +83,15 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 ## S2 · Contraste causal de vigencia con consulta inequívoca
 
-**Estado:** en ejecución
+**Estado:** finalizado
 
 **Alta:** 2026-09-12T10:51:15Z
 
 **Inicio:** 2026-09-12T11:23:19Z
 
-**Actualización:** 2026-09-12T11:23:19Z
+**Actualización:** 2026-09-12T11:28:10Z
 
-**Fin:** —
+**Fin:** 2026-09-12T11:28:10Z
 
 **Responsable:** Watson / W-S0
 
@@ -102,15 +103,50 @@ Fechas en UTC. Cada ficha corresponde a la última revisión del suceso; las rev
 
 **Dependencias:** S1; criterios C/I de RETP-147 y relevo RETP-162
 
-**Resultado:** Contrato, par causal, montaje sucesor y esperados fijados antes de ejecutar.
+**Resultado:** Consulta idéntica bajo dos vigencias: DATO/8.40 frente a PERMISO_REVOCADO/null, con mismo significado y una llamada de política. Cobertura documental conforme en el par integrado.
 
-**Verificación:** Fuentes y registros cotejados; 69 archivos base intactos y dos sustituciones declaradas; doce controles y dos sensibilidades previstos.
+**Verificación:** Doce controles en seis ejecuciones: 72 observaciones; 42 capturas idénticas por ejecución; diez cuerpos históricos conservados; dos sensibilidades detectadas; 23 invocaciones sin incidencias adicionales.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/CONTRATO_S2.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/README.md)
 
-**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-165)
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-165-cierre-s2)
 
-**Siguiente acción:** Ejecutar la cualificación nativa fijada y registrar resultado y evidencia.
+**Siguiente acción:** S3 pendiente: correspondencia de presentación y pérdida de negación, reutilizando RETP-149/150/152.
 
-**Observaciones:** Consulta A01 idéntica bajo dos vigencias en G1; integración P3-01/P3-11 con IDs conservados. Instantáneas sintéticas; sin revocación profesional ni reserva externa.
+**Observaciones:** Causalidad de instantáneas sintéticas acreditada en banco nativo; no revocación profesional, cierre universal C/I o A–L, prueba externa ni P4/P5/P6. S1 y sus fuentes originales se conservan.
+
+
+## S3 · Correspondencia de presentación y pérdida de negación
+
+**Estado:** pendiente
+
+**Alta:** 2026-09-12T11:28:10Z
+
+**Inicio:** —
+
+**Actualización:** 2026-09-12T11:28:10Z
+
+**Fin:** —
+
+**Responsable:** Watson / W-S0
+
+**Alcance:** Criterio D de la integración adenda IA y frame: precisar el objeto efectivamente presentado y un testigo de pérdida de negación; reutilizar entrega y lectura existentes.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Recepción S2 / RETP-165; el corte de ejecución se fijará antes de iniciar.
+
+**Dependencias:** S2; criterio D de RETP-147/162; contratos de RETP-149/150/152
+
+**Resultado:** Pendiente de delimitar el testigo que falta respecto de las pruebas existentes; sin ejecución.
+
+**Verificación:** Sin nuevos resultados funcionales atribuidos a D.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/README.md)
+
+**Referencia de calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-165-cierre-s2)
+
+**Siguiente acción:** Cotejar el alcance ya demostrado en presentación y fijar sólo la pérdida pendiente, con objeto mostrado y esperado previos; preparar después el alcance común de prueba externa.
+
+**Observaciones:** Misma integración 1+3; causas conservadas y catálogo posterior. No apertura de reserva, nuevas rondas ni atribución de revisión profesional.
 

@@ -1,0 +1,54 @@
+{
+  "version": "S2-CAUSAS/1",
+  "causas": [
+    {
+      "control": "CI02",
+      "causa": "FaltaVigencia",
+      "etapa": "cobertura",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI02.rechazo"
+    },
+    {
+      "control": "CI03",
+      "causa": "IdentidadMontaje",
+      "etapa": "identidad del enlace",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI03.rechazo"
+    },
+    {
+      "control": "CI04",
+      "causa": "VigenciaDistinta",
+      "etapa": "cobertura",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI04.rechazo"
+    },
+    {
+      "control": "CI05",
+      "causa": "FaltaCaso",
+      "etapa": "cobertura",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI05.rechazo"
+    },
+    {
+      "control": "CI06",
+      "causa": "Identidad",
+      "etapa": "lectura",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI06.rechazo"
+    },
+    {
+      "control": "CI07",
+      "causa": "ContenidoDistinto",
+      "etapa": "presentación",
+      "conversion_a_U": false,
+      "evidencia": "debug/capturas-1/CI07.rechazo"
+    }
+  ],
+  "resolucion_negativa": {
+    "estado": "PERMISO_REVOCADO",
+    "etapa": "política",
+    "contenido": null,
+    "llamadas_politica": 1
+  },
+  "alcance": "Causas locales observadas; no nuevos códigos del catálogo SV ni cierre de localización ES/EN."
+}
