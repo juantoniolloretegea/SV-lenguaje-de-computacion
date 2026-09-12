@@ -1,0 +1,62 @@
+[
+  {
+    "caso": "01_evaluacion_declarada",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Declaración y proyecciones; no resultado calculado."
+  },
+  {
+    "caso": "02_conector_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control de conector completo."
+  },
+  {
+    "caso": "03_conector_incompleto",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta un miembro del codominio."
+  },
+  {
+    "caso": "04_tabla_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Tabla completa y operación declarada; no aplicación calculada."
+  },
+  {
+    "caso": "05_tabla_incompleta",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta una fila del producto."
+  },
+  {
+    "caso": "06_grafo_simple",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control acíclico sin concurrencia."
+  },
+  {
+    "caso": "07_concurrencia_simple",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Concurrencia prohibida en Simple."
+  },
+  {
+    "caso": "08_concurrencia_general_sin_operador",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Aceptación estructural que NO acredita RG1: no existe operador de conflicto ni prioridad."
+  },
+  {
+    "caso": "09_ciclo",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Ciclo prohibido."
+  },
+  {
+    "caso": "10_actualizacion_puente_sin_procedencia",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Admite cambio en puente sin conector ni evaluación productora: NO acredita causalidad."
+  },
+  {
+    "caso": "11_actualizacion_fuera_puente",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Cambio fuera del puente."
+  },
+  {
+    "caso": "12_composicion_nominal",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Referencia a relación y patrón; no acredita una ley particular ni ejecución de Comp."
+  }
+]

@@ -146,3 +146,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Presentación sin pérdida de contenido — RETP-150
 
 [Perfil de espacios comprobado en Rust](presentacion-sin-perdida-de-contenido/README.md). Admite sangría y separadores externos; conserva textos, datos, negaciones, alcance y orden. Rechaza fragmentar tokens para recomponerlos por normalización. Una matriz, 47 procesos, 62 pruebas por modo, 11 contrastes y 24 presentaciones por modo. No constituye interfaz profesional ni seguridad integral; catálogo y compuertas pendientes.
+
+
+## Auditoría del soporte algebraico — RETP-151
+
+[Álgebra constituida y soporte real del núcleo](../algebra-constituida-y-soporte-del-nucleo/README.md). Contraste de Fundamentos y serie I–VI con Rust en corte e611218a. Doce testigos de caracterización: siete admisiones y cinco rechazos semánticos; las admisiones de concurrencia general sin operador y de actualización de puente sin productor documentan carencias, no conformidad algebraica. La ejecución de leyes comunes pertenece al núcleo; la composición particular de cada dominio no se decide aquí. Se conserva el workflow V2 y la secuencia rectora. Núcleo productivo sin modificaciones; no cierra el catálogo ni promueve las candidatas.

@@ -1,0 +1,4 @@
+codomain K = { A, B };
+output_semantics S { A -> "a"; B -> "b"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+connector L { source_codomain: K; target_position: 1; mapping: { A -> 0; B -> 1; } }

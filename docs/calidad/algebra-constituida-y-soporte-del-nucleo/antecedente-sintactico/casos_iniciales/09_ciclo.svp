@@ -1,0 +1,9 @@
+codomain K = { A, B };
+output_semantics S { A -> "a"; B -> "b"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec X { cell: C; bridges: [1]; }
+coupledspec Y { cell: C; bridges: [1]; }
+coupledspec Z { cell: C; bridges: [1]; }
+connector L { source_codomain: K; target_position: 1; mapping: { A -> 0; B -> 1; } }
+semantic_relation R { kind: DeclaredRelation; }
+graph G { nodes: [X,Y,Z]; edges: [edge(source: X, target: Z, position: 1, connector: L),edge(source: Z, target: X, position: 1, connector: L)]; relation: R; regime: Simple; }

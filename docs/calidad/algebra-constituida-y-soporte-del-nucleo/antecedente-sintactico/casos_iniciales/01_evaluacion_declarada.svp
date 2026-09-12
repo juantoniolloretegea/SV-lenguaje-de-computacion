@@ -1,0 +1,7 @@
+codomain K = { A, B };
+output_semantics S { A -> "a"; B -> "b"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+cellstate V { spec: C; vector: [0,0,0,0,0,0,0,U,1]; }
+let E = evaluate(V);
+let N = E.counts;
+let T = E.threshold;

@@ -1,0 +1,7 @@
+codomain K = { A, B };
+output_semantics S { A -> "a"; B -> "b"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+coupledspec X { cell: C; bridges: [1]; }
+coupledspec Y { cell: C; bridges: [1]; }
+coupledspec Z { cell: C; bridges: [1]; }
+coupledstate V { spec: X; base_vector: [U,U,U,U,U,U,U,U,U]; updated_vector: [One,U,U,U,U,U,U,U,U]; }

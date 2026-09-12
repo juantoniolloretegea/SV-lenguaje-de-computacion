@@ -1,0 +1,4 @@
+codomain K = { A, B };
+output_semantics S { A -> "a"; B -> "b"; }
+cellspec C { b: 3; codomain: K; semantics: S; role: Base; }
+admissibility_table T1 { input_codomains: [K]; output_codomain: K; table: { (A) -> B; } }

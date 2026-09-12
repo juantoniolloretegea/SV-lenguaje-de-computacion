@@ -1,0 +1,182 @@
+[
+  {
+    "ruta": "FUENTES.json",
+    "sha256": "6152ef163206616503c010ab6e787b1bf22d4bf13de547dc723142b42ef17520",
+    "bytes": 29100
+  },
+  {
+    "ruta": "PLAN_FIJADO.json",
+    "sha256": "961151dd7e72c4800f1760e0d63d235040f695ba8ee61b475264b10434de96ae",
+    "bytes": 2434
+  },
+  {
+    "ruta": "README.md",
+    "sha256": "6eb8c4e8568fa95f0660a3bd438f2d272d235df6f755ef7eb3c4c7b9317366e7",
+    "bytes": 17707
+  },
+  {
+    "ruta": "antecedente-sintactico/COMANDOS.json",
+    "sha256": "0bb9fda69a56e8dc19ee67337578626b9ee1bca518d7728fb2108b69e3e31d25",
+    "bytes": 22674
+  },
+  {
+    "ruta": "antecedente-sintactico/PLAN_INICIAL.json",
+    "sha256": "0ff85911063cb78fd72d6dfc039ffee4f6f7edaea3c1170d66fee5cb17e67722",
+    "bytes": 1990
+  },
+  {
+    "ruta": "antecedente-sintactico/REALIZACION.json",
+    "sha256": "c4e932031bad8d0f0f586d92b1302989081c0f575580c8a8c26b61df4c538350",
+    "bytes": 3538
+  },
+  {
+    "ruta": "antecedente-sintactico/RESULTADOS.json",
+    "sha256": "ffa5be0b6392242af37e92316df7b0be318e272a964fec067410282767168040",
+    "bytes": 3857
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/01_evaluacion_declarada.svp",
+    "sha256": "c9dd409ae8ff8ac4825648e777dba12e545968a4e76c45abcf0303d180f0fa6b",
+    "bytes": 240
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/02_conector_total.svp",
+    "sha256": "4e52e0a3c40147ff1d23a5c0b7ec374361c3b93f9df2a9844ca316e7d4f73975",
+    "bytes": 211
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/03_conector_incompleto.svp",
+    "sha256": "37c6c92191d7737c4cf360599bba9c53906a4313ffd1b1555eebf2d3c80b3461",
+    "bytes": 203
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/04_tabla_total.svp",
+    "sha256": "d33f5c2c7034888e718bcdab9a6314463e4ce9e926c6dc8aeb49f4763ad469a1",
+    "bytes": 388
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/05_tabla_incompleta.svp",
+    "sha256": "54ac80537482d39d47c81e36458730ab89b85de7153d08fb91a10a8fd095d864",
+    "bytes": 216
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/06_grafo_simple.svp",
+    "sha256": "b82b6117ceabfc85f9aed443dd488e32770186c671c0b5e8e89bba62eed601df",
+    "bytes": 503
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/07_concurrencia_simple.svp",
+    "sha256": "59e4463ad8b9a38584235b58bc588b663cd3eca3cc9cad12c5bd12ab05e6715e",
+    "bytes": 557
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/08_concurrencia_general_sin_operador.svp",
+    "sha256": "5ad03e7d3d5208aad35c2fe6d0e084b18a6ab86c4658ac9a33b01ecd1a4e60c8",
+    "bytes": 558
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/09_ciclo.svp",
+    "sha256": "0764fc31967fc27984519fd0db4056310af085d35a55d0cee869d6c6bced2225",
+    "bytes": 557
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/10_actualizacion_puente_sin_procedencia.svp",
+    "sha256": "8b57c448d4a393a62c570b4e19d5ec717a0e7db4f263e94c8ea9af3bac621339",
+    "bytes": 348
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/11_actualizacion_fuera_puente.svp",
+    "sha256": "f55f986ecc7588fc9714e325075a01c059d3deeaa89138400a33d7ab956998e9",
+    "bytes": 348
+  },
+  {
+    "ruta": "antecedente-sintactico/casos_iniciales/12_composicion_nominal.svp",
+    "sha256": "8e5467a52916bc1e1e55f9b0febc9133d2408599d7921a413120daaa3ab916cb",
+    "bytes": 592
+  },
+  {
+    "ruta": "casos/01_evaluacion_declarada.svp",
+    "sha256": "47164f7a432239c9c3b7a2bf72b7a82acb2244ecf3751f51e0846c7ad63b780f",
+    "bytes": 263
+  },
+  {
+    "ruta": "casos/02_conector_total.svp",
+    "sha256": "b448325bd7f3aff8381385da3dd9d5b82b450773df4e2d2ad0835d51f03a78f8",
+    "bytes": 216
+  },
+  {
+    "ruta": "casos/03_conector_incompleto.svp",
+    "sha256": "1299ff77f0efa26be9defd8a0225e47d3f6b18ec8c930709b1eeeb5a2a670b59",
+    "bytes": 206
+  },
+  {
+    "ruta": "casos/04_tabla_total.svp",
+    "sha256": "8a8208f52ba157c664aafd15ca6d5b36af86cb4f595d584a09ebc6e8126cf206",
+    "bytes": 411
+  },
+  {
+    "ruta": "casos/05_tabla_incompleta.svp",
+    "sha256": "54ac80537482d39d47c81e36458730ab89b85de7153d08fb91a10a8fd095d864",
+    "bytes": 216
+  },
+  {
+    "ruta": "casos/06_grafo_simple.svp",
+    "sha256": "059c633823ad7f910d7183394748d5ab82c6478a83fafaf66e59a13ce3f3e849",
+    "bytes": 508
+  },
+  {
+    "ruta": "casos/07_concurrencia_simple.svp",
+    "sha256": "c43a57b2f4e155121f4dcdfcfdb6a754485fce77894baecc258164d88c6ec361",
+    "bytes": 562
+  },
+  {
+    "ruta": "casos/08_concurrencia_general_sin_operador.svp",
+    "sha256": "5d448321b858d49add7c53f4611a0ba4a8c78c0ca17f303aa46095f727357152",
+    "bytes": 563
+  },
+  {
+    "ruta": "casos/09_ciclo.svp",
+    "sha256": "83ffa452fd2585eaf1dd6785a0dab15c90330df0731bd23d98c48eaf792e84d9",
+    "bytes": 562
+  },
+  {
+    "ruta": "casos/10_actualizacion_puente_sin_procedencia.svp",
+    "sha256": "79292b35c97a7565fc9c4cc86789c6d900df7af7d20d6de87fe4beb791eaac80",
+    "bytes": 350
+  },
+  {
+    "ruta": "casos/11_actualizacion_fuera_puente.svp",
+    "sha256": "64c25f7cb5609e9cc13280996e39eba17776044a32bc207d9bba44fcca5134e4",
+    "bytes": 350
+  },
+  {
+    "ruta": "casos/12_composicion_nominal.svp",
+    "sha256": "06bf862053ded5d06cca5cdaa455b6c7075c18e07d4eb203466d9c2bce531643",
+    "bytes": 597
+  },
+  {
+    "ruta": "ejecutar.py",
+    "sha256": "67c1f9bc22e669609bc557996322dbd19c8f310acd948f951ec4a2b2d264df83",
+    "bytes": 2411
+  },
+  {
+    "ruta": "evidencia/COMANDOS.json",
+    "sha256": "a04f80fcce07851be757cdd50d35a3f90d222b66a328432e87842bd36b515109",
+    "bytes": 32359
+  },
+  {
+    "ruta": "evidencia/REALIZACION.json",
+    "sha256": "eb59f95ca9e2f1b400058e7c36434c7b8580f438c0d60d22adc200b5b1e9bda2",
+    "bytes": 3538
+  },
+  {
+    "ruta": "evidencia/RESULTADOS.json",
+    "sha256": "d41783da9d13dc5a70cfa81acefdd2c18f4ceb3f86d58c8dcae95ddc65f589d2",
+    "bytes": 6258
+  },
+  {
+    "ruta": "sonda.rs",
+    "sha256": "7d9bcec54f1483f2e846f7760e37866c6d3a6980e465c98ab928f63495a2fa82",
+    "bytes": 391
+  }
+]

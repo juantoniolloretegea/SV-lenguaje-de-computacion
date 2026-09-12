@@ -1,0 +1,199 @@
+[
+  {
+    "caso": "01_evaluacion_declarada",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Declaración y proyecciones; no resultado calculado.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "47164f7a432239c9c3b7a2bf72b7a82acb2244ecf3751f51e0846c7ad63b780f",
+    "operaciones_emitidas": [
+      {
+        "inputs": {
+          "state": "V"
+        },
+        "name": "E",
+        "result_type": "EvalResult",
+        "type": "evaluate"
+      },
+      {
+        "inputs": {
+          "field": "counts",
+          "source": "E"
+        },
+        "name": "N",
+        "result_type": "Projected",
+        "type": "projection"
+      },
+      {
+        "inputs": {
+          "field": "threshold",
+          "source": "E"
+        },
+        "name": "T",
+        "result_type": "Projected",
+        "type": "projection"
+      }
+    ]
+  },
+  {
+    "caso": "02_conector_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control de conector completo.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "b448325bd7f3aff8381385da3dd9d5b82b450773df4e2d2ad0835d51f03a78f8",
+    "operaciones_emitidas": []
+  },
+  {
+    "caso": "03_conector_incompleto",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta un miembro del codominio.",
+    "stderr_esperado": "InvalidProgram(\"Connector L: mapping incompleto o inconsistente\")\n",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "1299ff77f0efa26be9defd8a0225e47d3f6b18ec8c930709b1eeeb5a2a670b59"
+  },
+  {
+    "caso": "04_tabla_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Tabla completa y operación declarada; no aplicación calculada.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "8a8208f52ba157c664aafd15ca6d5b36af86cb4f595d584a09ebc6e8126cf206",
+    "operaciones_emitidas": [
+      {
+        "inputs": {
+          "state": "V"
+        },
+        "name": "E",
+        "result_type": "EvalResult",
+        "type": "evaluate"
+      },
+      {
+        "inputs": {
+          "field": "counts",
+          "source": "E"
+        },
+        "name": "N",
+        "result_type": "Projected",
+        "type": "projection"
+      },
+      {
+        "inputs": {
+          "field": "threshold",
+          "source": "E"
+        },
+        "name": "T",
+        "result_type": "Projected",
+        "type": "projection"
+      },
+      {
+        "inputs": {
+          "eval_results": [
+            "E"
+          ],
+          "table": "T1"
+        },
+        "name": "G",
+        "result_type": "GateResult",
+        "type": "gate"
+      },
+      {
+        "inputs": {
+          "field": "output",
+          "source": "G"
+        },
+        "name": "O",
+        "result_type": "Projected",
+        "type": "projection"
+      }
+    ]
+  },
+  {
+    "caso": "05_tabla_incompleta",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta una fila del producto.",
+    "stderr_esperado": "InvalidProgram(\"AdmissibilityTable T1: tabla incompleta\")\n",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "54ac80537482d39d47c81e36458730ab89b85de7153d08fb91a10a8fd095d864"
+  },
+  {
+    "caso": "06_grafo_simple",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control acíclico sin concurrencia.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "059c633823ad7f910d7183394748d5ab82c6478a83fafaf66e59a13ce3f3e849",
+    "operaciones_emitidas": []
+  },
+  {
+    "caso": "07_concurrencia_simple",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Concurrencia prohibida en Simple.",
+    "stderr_esperado": "InvalidProgram(\"Graph G: concurrencia en régimen Simple\")\n",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "c43a57b2f4e155121f4dcdfcfdb6a754485fce77894baecc258164d88c6ec361"
+  },
+  {
+    "caso": "08_concurrencia_general_sin_operador",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Aceptación estructural que NO acredita RG1: no existe operador de conflicto ni prioridad.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "5d448321b858d49add7c53f4611a0ba4a8c78c0ca17f303aa46095f727357152",
+    "operaciones_emitidas": []
+  },
+  {
+    "caso": "09_ciclo",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Ciclo prohibido.",
+    "stderr_esperado": "InvalidProgram(\"Graph G: ciclo detectado\")\n",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "83ffa452fd2585eaf1dd6785a0dab15c90330df0731bd23d98c48eaf792e84d9"
+  },
+  {
+    "caso": "10_actualizacion_puente_sin_procedencia",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Admite cambio en puente sin conector ni evaluación productora: NO acredita causalidad.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "79292b35c97a7565fc9c4cc86789c6d900df7af7d20d6de87fe4beb791eaac80",
+    "operaciones_emitidas": []
+  },
+  {
+    "caso": "11_actualizacion_fuera_puente",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Cambio fuera del puente.",
+    "stderr_esperado": "InvalidProgram(\"CoupledState V: actualización fuera de BridgeSet\")\n",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "64c25f7cb5609e9cc13280996e39eba17776044a32bc207d9bba44fcca5134e4"
+  },
+  {
+    "caso": "12_composicion_nominal",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Referencia a relación y patrón; no acredita una ley particular ni ejecución de Comp.",
+    "codigo_observado": 0,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "06bf862053ded5d06cca5cdaa455b6c7075c18e07d4eb203466d9c2bce531643",
+    "operaciones_emitidas": [
+      {
+        "inputs": {
+          "graph": "G",
+          "patterns": [
+            "P"
+          ],
+          "relations": [
+            "R"
+          ]
+        },
+        "name": "A1",
+        "result_type": "Architecture",
+        "type": "compose"
+      }
+    ]
+  }
+]

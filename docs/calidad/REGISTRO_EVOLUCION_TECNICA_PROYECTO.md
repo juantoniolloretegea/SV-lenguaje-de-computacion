@@ -1477,3 +1477,14 @@ Una matriz Rust 1.98.0 debug/release, 47 procesos, cero correcciones causales. P
 La recuperación de los bytes originales usa explícitamente el custodio; no se atribuye esa información a la presentación sola. El comprobador no reserva memoria dinámica; esto no acredita RSS ni coste global del servicio. La retención de intentos de presentación se realiza en la campaña, no queda implementada como servicio durable. Diagnósticos tipados conservados; la CLI resume la familia del lector y no cierra su localización productiva.
 
 Continúa el workflow V2. No se cambia núcleo productivo, gramática, IR ni dominios; no se abren agente, interfaz, reserva o P4/P5. Esta pieza sucede a RETP-149 en su alcance de formato; fidelidad visual, imposición material, catálogo y aceptación productiva final permanecen pendientes. **Estado: CONFORME_PERFIL_CANDIDATO_DE_ESPACIOS.**
+
+
+<a id="retp-151"></a>
+
+## RETP-2026-151 · Álgebra constituida y soporte real del núcleo
+
+12/09/2026. [Auditoría acotada y evidencia](algebra-constituida-y-soporte-del-nucleo/README.md). Cortes Lenguaje e611218a8c6c04ade022b867018b84a7f3e6700e, doctrina b8fd32978292d25adf9b87cf71e409005dce642c y laboratorio 3fbf00f5f046c2d98d096ff51ec6c162ac5ca1ae. Continúa el mandato humano de contrastar las leyes generales ya constituidas con el núcleo, sin trasladarlas en bloque a la fase de agentes.
+
+Se inventarían representación, validación y ejecución en doce familias, distinguiendo las reservas de Comp, supervisión y transducción. Rust actual admite operaciones evaluate/gate sin calcular sus resultados; doce testigos finales caracterizan siete admisiones y cinco rechazos semánticos exactos. Las admisiones General sin operador y actualización de puente sin productor corroboran deudas conocidas. Se conservan el montaje sintáctico inicial fallido, su corrección en los testigos, el plan final, fuentes, comandos, capturas y huellas; dos montajes nativos de quince procesos. No se modifican fuentes Rust productivas.
+
+La deuda viva recibe el inventario sin duplicar identificadores ni declarar cierres de DFL-001/003/004/005/006/013. Workflow V2, catálogo/localización y secuencia rectora conservados; esta auditoría es entrada de la puerta algebraica de fila 10, no ejecución íntegra de esa fase. No se decide la composición particular dominio/agente, no se abre interfaz profesional ni reserva, y no se acredita seguridad universal ni aceptación productiva final. Estado: AUDITORIA_ACOTADA_Y_CARACTERIZACION_COMPLETADAS; CAPACIDADES_ALGEBRAICAS_PENDIENTES.

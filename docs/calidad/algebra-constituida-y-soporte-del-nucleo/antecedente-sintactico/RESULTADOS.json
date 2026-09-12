@@ -1,0 +1,98 @@
+[
+  {
+    "caso": "01_evaluacion_declarada",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Declaración y proyecciones; no resultado calculado.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "c9dd409ae8ff8ac4825648e777dba12e545968a4e76c45abcf0303d180f0fa6b"
+  },
+  {
+    "caso": "02_conector_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control de conector completo.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "4e52e0a3c40147ff1d23a5c0b7ec374361c3b93f9df2a9844ca316e7d4f73975"
+  },
+  {
+    "caso": "03_conector_incompleto",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta un miembro del codominio.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "37c6c92191d7737c4cf360599bba9c53906a4313ffd1b1555eebf2d3c80b3461"
+  },
+  {
+    "caso": "04_tabla_total",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Tabla completa y operación declarada; no aplicación calculada.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "d33f5c2c7034888e718bcdab9a6314463e4ce9e926c6dc8aeb49f4763ad469a1"
+  },
+  {
+    "caso": "05_tabla_incompleta",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Falta una fila del producto.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "54ac80537482d39d47c81e36458730ab89b85de7153d08fb91a10a8fd095d864"
+  },
+  {
+    "caso": "06_grafo_simple",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Control acíclico sin concurrencia.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "b82b6117ceabfc85f9aed443dd488e32770186c671c0b5e8e89bba62eed601df"
+  },
+  {
+    "caso": "07_concurrencia_simple",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Concurrencia prohibida en Simple.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "59e4463ad8b9a38584235b58bc588b663cd3eca3cc9cad12c5bd12ab05e6715e"
+  },
+  {
+    "caso": "08_concurrencia_general_sin_operador",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Aceptación estructural que NO acredita RG1: no existe operador de conflicto ni prioridad.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "5ad03e7d3d5208aad35c2fe6d0e084b18a6ab86c4658ac9a33b01ecd1a4e60c8"
+  },
+  {
+    "caso": "09_ciclo",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Ciclo prohibido.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "0764fc31967fc27984519fd0db4056310af085d35a55d0cee869d6c6bced2225"
+  },
+  {
+    "caso": "10_actualizacion_puente_sin_procedencia",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Admite cambio en puente sin conector ni evaluación productora: NO acredita causalidad.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "8b57c448d4a393a62c570b4e19d5ec717a0e7db4f263e94c8ea9af3bac621339"
+  },
+  {
+    "caso": "11_actualizacion_fuera_puente",
+    "aceptacion_estructural_esperada": false,
+    "interpretacion": "Cambio fuera del puente.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": true,
+    "entrada_sha256": "f55f986ecc7588fc9714e325075a01c059d3deeaa89138400a33d7ab956998e9"
+  },
+  {
+    "caso": "12_composicion_nominal",
+    "aceptacion_estructural_esperada": true,
+    "interpretacion": "Referencia a relación y patrón; no acredita una ley particular ni ejecución de Comp.",
+    "codigo_observado": 2,
+    "coincide_caracterizacion": false,
+    "entrada_sha256": "8e5467a52916bc1e1e55f9b0febc9133d2408599d7921a413120daaa3ab916cb"
+  }
+]

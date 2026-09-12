@@ -1,0 +1,706 @@
+[
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "README.md",
+    "git_blob": "bc43d9fd86a894df494110f14308adefd2c42588",
+    "sha256": "a291cdd3ed754a94b5dc9153e2a5410798899054ee6bc8005f888049b6a9d31a",
+    "bytes": 53069
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md",
+    "git_blob": "f7138ae7f36b26f5fdeaed4790537443ebdeb8cb",
+    "sha256": "29863dd7e7d238757b5edef88454b96d21bc82c134859804ad9927115aecdc2c",
+    "bytes": 49672
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/III_horizonte_sucesos_reevaluacion_discreta.md",
+    "git_blob": "92caea3f63ace2f494c4871f69680fd38ab3ee77",
+    "sha256": "9aeb3ce7bdea0cd7769760ed22eb7dd7b814cc39a273c5fb4a0470791964eaea",
+    "bytes": 11928
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/II_gramatica_general_composicion.md",
+    "git_blob": "141c83a4bf83725df20142afb068ddf5edd8375a",
+    "sha256": "4e7a3ea6bd7dedd8be87f651dcc0780df8f2a701c936ac7e5112e3f2198e6fc6",
+    "bytes": 36094
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/IV_transduccion_alfabeto_ternario_interfaz_parametrica.md",
+    "git_blob": "66ee444aa72c216267750b679378a22f0ad7cc8a",
+    "sha256": "a813ed7c23a5b57805f2b43247a170244073478307a843f6440ac0af86814334",
+    "bytes": 23848
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/I_transmision_serie_por_puente.md",
+    "git_blob": "7e233643b334e7437adf2e7930f52b3c4a186d8d",
+    "sha256": "997c00868503566e8922dd8a392c8df196ad4cfb72b291d0435950cc099f86b2",
+    "bytes": 45365
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/README.md",
+    "git_blob": "8fa59042b2767807f30f1792d15d653dda583549",
+    "sha256": "4feb057300c83894a2bcd7b84e5f372d6e127f32c053cc4faac5c6c3ab0ff801",
+    "bytes": 4486
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/VI_analisis_discreto_representaciones_secuencias.md",
+    "git_blob": "5a80c495d65a7165c09c19424f0cba89a839a67a",
+    "sha256": "5f6f8ffd1cf801b5c78da1c8a47c1677ee1d70d6853d85652e5a35ed618a1722",
+    "bytes": 27799
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/composicion/V_invariantes_agentes_operador_consulta.md",
+    "git_blob": "d609810b4072a4b61e29ef10f4d26751862b0c86",
+    "sha256": "fbf53f17d8cbeb17dedb12dd098121ba1591e0603c2aa196d7bb454784123c2b",
+    "bytes": 18061
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "AGENTS.md",
+    "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+    "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+    "bytes": 4384
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md",
+    "git_blob": "dbc96821c415d1ac7e0a03205f89d4bf269225ab",
+    "sha256": "688d054b43ecf86a64a82dee0caec00cc80bdd4d8d99dd06744196d300a4a021",
+    "bytes": 12952
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "IR_CANONICA_BIENFORMACION_SV_v0_2.md",
+    "git_blob": "8da499dfb7cf8522abf1eab79696f68c946286c6",
+    "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+    "bytes": 31292
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+    "git_blob": "c1b4b0e1c06c1b22dff1f988fec1a1f079fcc5d2",
+    "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+    "bytes": 30558
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/ACTA_DE_SANEAMIENTO_DE_CONCORDANCIA_DEL_BLOQUE_PLIEGO_MANUAL_RETP_2026_010_2026_03_20.md",
+    "git_blob": "9bc49a4e37f447321d6d2682a5e51cfdf82a6db4",
+    "sha256": "3c87cb47664633f92c9d156855ea33551445bb498f287b92131379bf2e8a8e83",
+    "bytes": 2063
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+    "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+    "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+    "bytes": 29014
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+    "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+    "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650",
+    "bytes": 22330
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+    "git_blob": "820a72a3f6dba1a730c460235ebae7069228f496",
+    "sha256": "e7fc22cd7ca4058564b9ab23816dbd7e20fd680f4fbc36eed93a631d7adf1bb9",
+    "bytes": 55439
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.csv",
+    "git_blob": "c216f51c5f29bba788b73eca49715c3824ba8031",
+    "sha256": "d5de7177439466c13ec07f10e1e341bc6b862e58687056549db622ea2c49576e",
+    "bytes": 807
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/RETP_2026_091_RECEPCION_GH_Y_APERTURA_FILA_7.md",
+    "git_blob": "3ddd5a0b70e0032a106b33a92815297782e341a3",
+    "sha256": "798874afcf97d741aa8f77d99de06edfe560e7acdc6aee89c5f7467d6fd0630a",
+    "bytes": 3244
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/RETP_2026_092_USO_DEL_ESPANOL_EN_REPOSITORIOS_SV.csv",
+    "git_blob": "fe737cbe3a61e670ad1365b6d3cd1796e96e2a06",
+    "sha256": "7106c8f35f8545a1bcd8aae307dbbbfbb5ffaf32ff2bd1a7a9228add0c7b6919",
+    "bytes": 640
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.csv",
+    "git_blob": "7fef4f37b8527ac5403c39df4afa055ecaca8df7",
+    "sha256": "93199905035db7429e17f5ab48e932f42835c15ad3c2d583fc1ad107cdac68a8",
+    "bytes": 1416
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/RETP_2026_093_CORRECCION_TRANSITIONDATA_Y_ORACULOS_NATIVOS.md",
+    "git_blob": "62367d8bcd676667026d9b77550d0211da71c14a",
+    "sha256": "e313e9124cc977f23659e325194710c3838c516334371a1350068ea80f444a1a",
+    "bytes": 4829
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/historico/REGISTRO_EVOLUCION_TECNICA_PROYECTO_HASTA_RETP_2026_047.md",
+    "git_blob": "b9b094e7180d54675e7723d38fa64248e386f0ea",
+    "sha256": "2d28a7cb8796f9acd529b28241cd3d8b7e51cd242fb730aec6154bb0c88e81ac",
+    "bytes": 115293
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/tuberias-ia/ACTA_RECUPERACION_DOCUMENTAL_RETP135_2026_09_11.md",
+    "git_blob": "9b4c2b4617f1c5ce404b135d0e77cc94bb7804cd",
+    "sha256": "8ffc9e0edf5da00f003b6a990c179ae48909bcc314f4f1fd544046ca9af1aa05",
+    "bytes": 4774
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+    "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+    "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c",
+    "bytes": 17761
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/tuberias-ia/ie004/revision-claude-p2-1/DICTAMEN_P2_RETP_2026_126_CLAUDE.md",
+    "git_blob": "1fa7d864cdde981caf045b1c538761efd47485bd",
+    "sha256": "e874fadab43fbd0f7623fc01834c6510f429512f1de7174953ab18bf9d33fd47",
+    "bytes": 14000
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/calidad/tuberias-ia/ie004/revision-claude-p2-2/DICTAMEN_P2_2_RETP_2026_127_CLAUDE.md",
+    "git_blob": "1d0f44f1a2f073c4db3da77d695465240a0d114d",
+    "sha256": "eff8903d4f18af49b6e635b4d96e84593c1c56a106aea519a9040f2d699adc18",
+    "bytes": 13391
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+    "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+    "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+    "bytes": 67111
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/Cargo.toml",
+    "git_blob": "d284864c44d0e36d022768131abf88c450b95eb6",
+    "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+    "bytes": 244
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/binding_probe.rs",
+    "git_blob": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46",
+    "sha256": "15f95faebe3898de72207397f43a7f7b963754a7e8d3107e813e36196de27030",
+    "bytes": 225
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/binding_probe_browser.rs",
+    "git_blob": "dbcb45298808828d94829a4322265cbfcd235fd0",
+    "sha256": "097a51cec39a8e24cee0a4b8122bcb8a9198dc6e7be7ac95dfda094195a614df",
+    "bytes": 691
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/cyb_reception_probe.rs",
+    "git_blob": "9f51f7ef672c9830d193e6d496ca9d869ef5b560",
+    "sha256": "fb263dc9c2bb3785c612e249019b972035d3481f89acf3b966f14e96c32763f6",
+    "bytes": 123
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/gh_binding_probe.rs",
+    "git_blob": "6b031259b380176373d722e87cc758a9d9c4c6f3",
+    "sha256": "c4777139219792fbef2c6c90b52ce82fc835c490b5d3cf078aea7355c655b2cc",
+    "bytes": 218
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/gh_binding_probe_browser.rs",
+    "git_blob": "e400ee6a809948590bbffe9276704ed92facd11c",
+    "sha256": "a35006aa678fb9d0a8bb4b0b4aa0d6a200fd60bee41b5bea557928f7dd166f53",
+    "bytes": 685
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/examples/probe_assembly_2b.rs",
+    "git_blob": "02a7570c68f30fa1777760913ad32d69238ce8a6",
+    "sha256": "f21983e2f9053dc00f0384974e9ba922547bca52f5046353403ccbb07eef4f3a",
+    "bytes": 1129
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/admissibility.rs",
+    "git_blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+    "sha256": "5db392086b9989a94c125a11ebca2e4b4fa1b6deb461a1c05f0c42c1f1e39247",
+    "bytes": 6775
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/authority.rs",
+    "git_blob": "95a976d32444537ba4240cf7ad4375eca37ef064",
+    "sha256": "abfe89f37d2dbb6eaabb6eae4d4bdef7643a495f31511d1f1f1d9c6e80031e10",
+    "bytes": 18361
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/authority/transitions.rs",
+    "git_blob": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+    "sha256": "8371061ccbf7f1dd5d121ce6e8553ae95c676af1b227fd73e2fab37f54c3fa79",
+    "bytes": 54089
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+    "git_blob": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+    "sha256": "473c1f2a4a350a9bae7a0b91d360295e750227fb5b12d0ce97fcbc9a3599047a",
+    "bytes": 42971
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/bindings.rs",
+    "git_blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+    "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+    "bytes": 20680
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/c03_tests.rs",
+    "git_blob": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+    "sha256": "faa3f34f0dccb3bc6b08ea26c3d380b074e04540647b70d29376a345f67bc485",
+    "bytes": 5626
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/context_wellformed.rs",
+    "git_blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+    "sha256": "bcb182abd71d3e1e1c00b0685a4032328db322440ed30916c9688a8d76f25fe9",
+    "bytes": 7969
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/control.rs",
+    "git_blob": "08899b4dfb3a7e936b8649929619f57454248c42",
+    "sha256": "1596c3185a05314973d72ed57e0e9e94a7c0f68ede16ba11f5904d18f1310a6f",
+    "bytes": 7812
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/control_tests.rs",
+    "git_blob": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+    "sha256": "a81d7d10c56c46149c87bb0810226acc373a957938f3a72266067ed717e274d2",
+    "bytes": 2790
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/decision_trace.rs",
+    "git_blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+    "sha256": "0cc7260b8286d34cf2524722f34d3d807059bec00359cb73a4e9411e424da238",
+    "bytes": 30997
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/equivalence.rs",
+    "git_blob": "22903a491b3abe12749921b12c92b0319b7c225e",
+    "sha256": "fd1bb360827153b153db0c5051f5659e0e8a8c201b27f5b044a40c4c216252f3",
+    "bytes": 16986
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/execution.rs",
+    "git_blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+    "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+    "bytes": 16865
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/frame.rs",
+    "git_blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+    "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+    "bytes": 13990
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/frame_tests.rs",
+    "git_blob": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+    "sha256": "013658424ff907b4467d94aeb213cd24c641613efd621b45927de3a3b1b920ee",
+    "bytes": 9569
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/frontend.rs",
+    "git_blob": "c73933b661f08c4d0123b8a22f436962b5481208",
+    "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+    "bytes": 97042
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/grammar_conformance.rs",
+    "git_blob": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+    "sha256": "1c6191324d82825c6cdac4dba885541f43ec991ccdb914c581eb98ab4220eaa8",
+    "bytes": 1655
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/identifier_profile.rs",
+    "git_blob": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+    "sha256": "755c3d8c134e08035c8231efd7d53e02b9eab8d7f9d85db8b6d1dfb4a16e1a86",
+    "bytes": 3575
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/ir.rs",
+    "git_blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+    "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+    "bytes": 12706
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/ir_tests.rs",
+    "git_blob": "e339664be237680d6874fd544b3bf1b99e50a93d",
+    "sha256": "e22519646705141dcd03c6174798eb7c042d1a4298e64d29ea9a1ca0bba90518",
+    "bytes": 10238
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/lib.rs",
+    "git_blob": "699eee3d9d761d6262c24e3b80098c9ce307c775",
+    "sha256": "efb72c9cca7910090d91e2160b1b8e919a5730ad9a904b6973f1f4c034db2371",
+    "bytes": 17140
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/mediation.rs",
+    "git_blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+    "sha256": "a8a0e690a0e4e209a53cdd988dc8a9243caf564c300c795456cf0eb2a80132d3",
+    "bytes": 8245
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/nat.rs",
+    "git_blob": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+    "sha256": "3e9d8ec413ea021610c58ebd856be8353411f69191a2a5f60e5cca927e356118",
+    "bytes": 2627
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/permission.rs",
+    "git_blob": "980270a996ae02df66f26788b2ab32c077d7e30c",
+    "sha256": "270f1e2a0ad2f14ac9a04144ed14f562fa5a19449ba851e568fc4e7eef6e018f",
+    "bytes": 16094
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements.rs",
+    "git_blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+    "sha256": "56628024d747d807ebbb42ee74cc7c6091a2d47c9657b18d942ec2bcb6818999",
+    "bytes": 26983
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements/initial.rs",
+    "git_blob": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+    "sha256": "ff5ae0e5afce985cdf0441ed9b54b1b26e20726ceb422a8b273ae7e5e047b139",
+    "bytes": 24450
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements_bridge.rs",
+    "git_blob": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+    "sha256": "be6ecb74026f4bfee2ac4309d44efdc71201363d4b3bba4f31e8f54251da1a2e",
+    "bytes": 22596
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements_conflict.rs",
+    "git_blob": "91fb4638389114a0cbc1af4152111fbddc451d82",
+    "sha256": "098a9df7706738903e266690d7892e9856b819c5dd648b8c916a20bf4324ce09",
+    "bytes": 19988
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements_coverage.rs",
+    "git_blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+    "sha256": "f176a0eb303fced1e5125908a0a3c53c994234abc4296b448336ce89aab88e19",
+    "bytes": 24235
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/requirements_reuse.rs",
+    "git_blob": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+    "sha256": "7be5a3e5400438b3b57e2f4c675c8a799166c65eb9e1f5889cc8d1eacff64e55",
+    "bytes": 26822
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/resolution.rs",
+    "git_blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+    "sha256": "217f81a61caa1efd1a2d8a9a851f7e8a1f18167249a50411b39f3b1ba8817b4b",
+    "bytes": 8272
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/resolution_tests.rs",
+    "git_blob": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+    "sha256": "809c7a6db1a9bdeed434440d27236492d79ba2e04a85d50bf9be3ddf55519546",
+    "bytes": 5897
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/transition_data_wellformed.rs",
+    "git_blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+    "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973",
+    "bytes": 6003
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/src/wellformed.rs",
+    "git_blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+    "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+    "bytes": 39971
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/admissibility_table_causal.rs",
+    "git_blob": "3d38d75129da74cb747372dd5764a481c2d33774",
+    "sha256": "2ad9025fc28c77cf7aac96250ac976bd91d0e50c0956c7c8c9d555f760577cd4",
+    "bytes": 1404
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/architecture_type_guards.rs",
+    "git_blob": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5",
+    "sha256": "87a334bc0852aa67a8093c593bd37160ce1d073c33ee8c732d87e39b31893eed",
+    "bytes": 2516
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/bindings.rs",
+    "git_blob": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377",
+    "sha256": "da64978d9323c12cb4929bd31c722d3f259113ac270a9be9f6f845d77a192bda",
+    "bytes": 3160
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/bridge_set.rs",
+    "git_blob": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368",
+    "sha256": "0f98a010e07198c6021350d92c6c2362fa1e28d471d26d3acb9936e82b44ab9c",
+    "bytes": 1996
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/cell_geometry_native.rs",
+    "git_blob": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a",
+    "sha256": "77e3c21d5a8255447782be93889a0e5d318646127fe1890e5453168049fd0cc1",
+    "bytes": 2661
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/codomain_uniqueness.rs",
+    "git_blob": "46480951c432331f08c612f47e529d25f478dfc0",
+    "sha256": "1cab3998afdc796a00324dcb9353439fc82124ab6e74d914f12d8a8d5bc1cbff",
+    "bytes": 2251
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/context_wellformed.rs",
+    "git_blob": "765d6aaa176969f8970e07a7575b431446c6a9e2",
+    "sha256": "6ec6238989ebabc6c444c1fa6f36e2011cd07e9bc42662c9dbde31ac8bfb9a75",
+    "bytes": 14736
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/cyb_authority_boundary.rs",
+    "git_blob": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+    "sha256": "5e8849092f25cda3feec6d1fb302c82187dd04a28e2a56898729efb81bd62817",
+    "bytes": 6755
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/cyb_reception.rs",
+    "git_blob": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad",
+    "sha256": "c0f5fca47690f82dabd6dfc82f3bdddaee893604358858cbff5dbfa42bea6d55",
+    "bytes": 572
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/domain_parameters.rs",
+    "git_blob": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3",
+    "sha256": "7e9089ba2ca8641cbca9e52299ba218a7f41040f3958cbcfe175fe22f461ad35",
+    "bytes": 1848
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/gh_bindings.rs",
+    "git_blob": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f",
+    "sha256": "46797980d78d6ec7d891775524e7b1aa8013871059b3e9f36cd36102aa1b6591",
+    "bytes": 553
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/grammar_closed_domains.rs",
+    "git_blob": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd",
+    "sha256": "89483b89e207c3c6af66b2bed310fd133b11a299a7e0b304304055c54050b6b3",
+    "bytes": 3158
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/horizon_architecture.rs",
+    "git_blob": "0dc7bb3c08225e6ccd553711c1121e6463c2e556",
+    "sha256": "adf4f36ec7c65e4385f3bdb04f2ba05af0aa730509032c20def7c39fd3f724e7",
+    "bytes": 5406
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/horizon_events.rs",
+    "git_blob": "05145e06e8ba24346dde77e062ebdd883b4ad92d",
+    "sha256": "2a5ea64ba905ab89373d819c856f0ba57a0d079045acc17ea8254e3344efb081",
+    "bytes": 2166
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/json_projection.rs",
+    "git_blob": "31a9c316b390cc7e58ccfdf9379e848acef57dd5",
+    "sha256": "1ac9c47c1deb137f72545852e5e08e4c68241fe1dc0bf866b880c90b1c754921",
+    "bytes": 4094
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/optional_fields.rs",
+    "git_blob": "dceef86c0b3e4510558aa7069874bf90e293618c",
+    "sha256": "ce0a2d5d1526b13d152ca5e4079fe5aefd852f79569c9ef1cb9826187ce8ddeb",
+    "bytes": 2144
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/output_semantics_totality.rs",
+    "git_blob": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452",
+    "sha256": "490e84be58a26bb5c2eda13ea3269a234e3c93dd12ff07f6ea9141f0e1707722",
+    "bytes": 4989
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/projection_metadata_native.rs",
+    "git_blob": "13231d08c7dd6da46843fe02cd622a0bfe84e44c",
+    "sha256": "e1b5b769c580a687049b4fdefc00e1d8141e4b2f22c09e6719cb76a3d52adc77",
+    "bytes": 2376
+  },
+  {
+    "repo": "SV-lenguaje-de-computacion",
+    "commit": "e611218a8c6c04ade022b867018b84a7f3e6700e",
+    "path": "rust/sv_core/tests/transition_data_wellformed.rs",
+    "git_blob": "caf66ddd893ce952526e9a8832dd69ed3209318e",
+    "sha256": "e2270e7293563f085e35862e06f75f7602a132777a649220e049bba30aea5446",
+    "bytes": 6168
+  },
+  {
+    "repo": "SV-matematica-semantica",
+    "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+    "path": "documentos/fundamentos/README.md",
+    "git_blob": "68aed92c971eca73e2f4f7b360a88933f6dc0dfe",
+    "sha256": "f7631690b9070a7067ed405e839aae7f3d80d11858b489ff4ce163527a03d56c",
+    "bytes": 38581
+  }
+]
