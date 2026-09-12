@@ -1,0 +1,20 @@
+{
+  "version": "S19-CORTE/1",
+  "fecha_cierre_documental_utc": "2026-09-12T20:53:31Z",
+  "cortes": {
+    "lenguaje": {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "branch": "main",
+      "head": "fbeaa2d394c2dfc6df35e647b2a2b85abcdf5b3b",
+      "tree": "00725dab2cdcfbb3e31880134f1786c040642406"
+    },
+    "laboratorio": {
+      "repo": "juantoniolloretegea/SV-matematica-semantica-cuaternaria",
+      "branch": "lab/playground-sv-permanente",
+      "head": "53ca42a113960b858e066f091f53cb5348028939",
+      "tree": "d794a9142224770f37b3239316958fcb7868a623"
+    }
+  },
+  "alcance": "Recepción documental del resultado S18, integración A–L e inventario de causas; no nueva campaña ni promoción nuclear.",
+  "siguiente_objeto": "Inventariar puntos de emisión del recorrido S18 y fijar su contrato diagnóstico estructurado y localización ES/EN, con procedencia y migración explícitas, antes de modificar comportamiento."
+}

@@ -23,6 +23,7 @@
 | S16 | finalizado | Revisión B/E/K/L y fases de fallo antes de consolidar el enlace documental | Watson / W-S0 | 2026-09-12T19:22:37Z |
 | S17 | finalizado | Contrato del recorrido documental conjunto: contexto, base, recepción, cobertura y entrega | Watson / W-S0 | 2026-09-12T19:49:05Z |
 | S18 | finalizado | Recorrido conjunto de contexto, base consumida, recepción y entrega tipada | Watson / W-S0 | 2026-09-12T20:08:10Z |
+| S19 | finalizado | Recepción de S18 en la matriz 1+3 e inventario de causas para el catálogo | Watson / W-S0 | 2026-09-12T20:53:31Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -687,4 +688,39 @@
 **Siguiente accion:** Recibir el resultado conjunto en la matriz de integración 1+3 y el inventario de causas; decidir el relevo documental al catálogo conservando B/E/K/L y las puertas pendientes.
 
 **Observaciones:** Host confiable, archivo y actos de laboratorio. No promoción nuclear, QueryResult nativo, transición SV, historia durable ni comportamiento de LLM. S12/S13 vigentes; agentes por valorar tras inmunología.
+
+
+## S19 · Recepción de S18 en la matriz 1+3 e inventario de causas para el catálogo
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T20:53:31Z
+
+**Fecha inicio utc:** 2026-09-12T20:43:33Z
+
+**Fecha actualizacion utc:** 2026-09-12T20:53:31Z
+
+**Fecha fin utc:** 2026-09-12T20:53:31Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Recepción documental del recorrido sintético; matriz A–L preservada y causas por etapa. Sin nueva campaña ni promoción nuclear.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** Lenguaje fbeaa2d394c2dfc6df35e647b2a2b85abcdf5b3b; laboratorio 53ca42a113960b858e066f091f53cb5348028939
+
+**Dependencias:** S18 / RETP-190; S16; banco S17; causas S15; rectores; ruta S12; contrato diagnóstico y catálogo efectivo v0.3.
+
+**Resultado:** Recibido S18 como enlace documental conjunto. Matriz A–L actualizada sin cambiar sus criterios. Paso al inventario y contrato acotado del catálogo habilitado; cierre profesional y nuclear pendiente.
+
+**Verificacion:** 20 fuentes y 3382 capturas íntegras; 12 filas históricas preservadas; 24 diagnósticos finales cotejados con el esperado previo; 20 tuplas de diagnóstico local; cero ensayos funcionales nuevos.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/ACTA_RECEPCION_S19.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-191)
+
+**Siguiente accion:** Inventariar puntos de emisión del recorrido S18 y fijar su contrato diagnóstico estructurado y localización ES/EN, con procedencia y migración explícitas, antes de modificar comportamiento.
+
+**Observaciones:** Causas locales sin equivalencia canónica constituida. Debug se conserva como evidencia, no se usa para reconstruir causas técnicas. B/E/K/L y P3/P4/P5/P6 pendientes; agentes por decidir tras inmunología.
 

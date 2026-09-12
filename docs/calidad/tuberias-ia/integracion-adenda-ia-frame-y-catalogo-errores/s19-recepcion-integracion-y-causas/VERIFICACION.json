@@ -1,0 +1,16 @@
+{
+  "version": "S19-VERIFICACION-DOCUMENTAL/1",
+  "resultado": "CONFORME",
+  "fuentes_integras": 20,
+  "filas_historicas_intactas": 12,
+  "capturas_integras": 3382,
+  "capturas_identicas_por_ejecucion_normal": 449,
+  "ejecuciones_normales_recibidas": 6,
+  "casos_finales_cotejados_con_esperado_previo": 24,
+  "tuplas_registro": 20,
+  "estados_conformes": 3,
+  "negativas": 1,
+  "variantes_fallo_o_rechazo_por_etapa": 16,
+  "antecedentes_s15_s16_intactos": true,
+  "ensayos_funcionales_nuevos": 0
+}

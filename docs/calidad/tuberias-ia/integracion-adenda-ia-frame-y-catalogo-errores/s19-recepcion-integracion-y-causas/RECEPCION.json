@@ -1,0 +1,32 @@
+{
+  "version": "S19-RECEPCION/1",
+  "estado": "RECEPCION_DOCUMENTAL_CONFORME",
+  "resultado_s18_intacto": {
+    "version": "S18-RESULTADO/1",
+    "conforme": true,
+    "casos": 24,
+    "ejecuciones_normales": 6,
+    "observaciones": 144,
+    "invocaciones": 29,
+    "capturas_identicas_por_ejecucion": 449,
+    "sensibilidades": {
+      "omitir_contexto": "I04",
+      "forzar_consumo_positivo": "I14",
+      "omitir_base_citada": "I09",
+      "admitir_negativa": "I12"
+    },
+    "clientes_validos": 1,
+    "fabricaciones_rechazadas": 2,
+    "pared_campana_s": 7.051653225993505,
+    "limite": "Recorrido documental sintético con host confiable; sin proveedor, red real, autoridad profesional, efecto R1, persistencia tras caída ni promoción nuclear."
+  },
+  "fuentes_integras": 20,
+  "matriz_filas": 12,
+  "tuplas_observadas": 20,
+  "ejecuciones_sv_nuevas": 0,
+  "modificacion_nucleo": false,
+  "modificacion_oraculos": false,
+  "entrada_al_catalogo": "HABILITADA_PARA_INVENTARIO_Y_CONTRATO_ACOTADO",
+  "cierre_nuclear": false,
+  "cierre_profesional": false
+}

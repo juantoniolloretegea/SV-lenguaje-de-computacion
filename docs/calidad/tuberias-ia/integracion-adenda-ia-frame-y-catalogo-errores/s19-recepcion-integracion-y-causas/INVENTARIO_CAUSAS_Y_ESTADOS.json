@@ -1,0 +1,848 @@
+{
+  "version": "S19-INVENTARIO-OBSERVABLES-S18/1",
+  "naturaleza": "Recepción de registros ya emitidos. No es un esquema operativo de causas ni una ampliación del catálogo efectivo.",
+  "fuente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/fbeaa2d394c2dfc6df35e647b2a2b85abcdf5b3b/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/EVIDENCIAS_S18.json",
+  "total_tuplas": 20,
+  "estados_conformes": 3,
+  "negativas": 1,
+  "variantes_fallo_o_rechazo_por_etapa": 16,
+  "filas": [
+    {
+      "id_inventario": "S19-OBS-01",
+      "naturaleza": "estado_conforme",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cobertura",
+      "codigo_local_emitido": "CONFORME",
+      "detalle_textual_emitido_no_parseado": "Conforme",
+      "rotulo_es_emitido": "Conforme",
+      "rotulo_en_emitido": "Conforming",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I01",
+        "I02",
+        "I14",
+        "I15",
+        "I18",
+        "I19",
+        "I22",
+        "I23",
+        "I24"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I01.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I02.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I14.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I15.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I18.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I19.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I22.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I23.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I24.admision",
+          "bytes": 48,
+          "sha256": "6c4163c199e07a9a4a9ec4c2ce294c511b6f3da099c668e6fa90b18483feb712",
+          "base64": "Y29iZXJ0dXJhCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-02",
+      "naturaleza": "estado_conforme",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "recuperacion",
+      "codigo_local_emitido": "CONFORME",
+      "detalle_textual_emitido_no_parseado": "Conforme",
+      "rotulo_es_emitido": "Conforme",
+      "rotulo_en_emitido": "Conforming",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I01",
+        "I02",
+        "I14",
+        "I15",
+        "I23",
+        "I24"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I01.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I02.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I14.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I15.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I23.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        },
+        {
+          "ruta": "debug/capturas-1/I24.diagnostico",
+          "bytes": 51,
+          "sha256": "12975599dafc6075ba9bb9c49ff2f04c7e046334e203a5b08fcca3d7645e419e",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTkZPUk1FCUNvbmZvcm1lCUNvbmZvcm1lCUNvbmZvcm1pbmcK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-03",
+      "naturaleza": "estado_conforme",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "archivo",
+      "codigo_local_emitido": "CONFORME",
+      "detalle_textual_emitido_no_parseado": "Conforme",
+      "rotulo_es_emitido": "Conforme",
+      "rotulo_en_emitido": "Conforming",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I01",
+        "I02",
+        "I14",
+        "I15",
+        "I19",
+        "I23",
+        "I24"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I01.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I02.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I14.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I15.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I19.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I23.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I24.escritura",
+          "bytes": 46,
+          "sha256": "4b09c2ed1480f7dcb7c50cc871e5e3f55513c228fe86d109ca3e0f25a2372ce6",
+          "base64": "YXJjaGl2bwlDT05GT1JNRQlDb25mb3JtZQlDb25mb3JtZQlDb25mb3JtaW5nCg=="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-04",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "carga_base",
+      "codigo_local_emitido": "BASE_DISTINTA",
+      "detalle_textual_emitido_no_parseado": "BaseDistinta",
+      "rotulo_es_emitido": "Base distinta",
+      "rotulo_en_emitido": "Different base",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I03"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I03.diagnostico",
+          "bytes": 67,
+          "sha256": "ec90742e6b91dcd3837b0f9506086dab920a29c0691139445c90f51a8472ac01",
+          "base64": "Y2FyZ2FfYmFzZQlCQVNFX0RJU1RJTlRBCUJhc2VEaXN0aW50YQlCYXNlIGRpc3RpbnRhCURpZmZlcmVudCBiYXNlCg=="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-05",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "contexto",
+      "codigo_local_emitido": "DOCUMENTO_DISTINTO",
+      "detalle_textual_emitido_no_parseado": "DocumentoDistinto",
+      "rotulo_es_emitido": "Documento distinto",
+      "rotulo_en_emitido": "Different document",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I04"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I04.admision",
+          "bytes": 84,
+          "sha256": "3b3cfccf098ab5e2b9c5ea9cb5c74774143819889398b5c935f75c0b61abcdeb",
+          "base64": "Y29udGV4dG8JRE9DVU1FTlRPX0RJU1RJTlRPCURvY3VtZW50b0Rpc3RpbnRvCURvY3VtZW50byBkaXN0aW50bwlEaWZmZXJlbnQgZG9jdW1lbnQK"
+        },
+        {
+          "ruta": "debug/capturas-1/I04.diagnostico",
+          "bytes": 84,
+          "sha256": "3b3cfccf098ab5e2b9c5ea9cb5c74774143819889398b5c935f75c0b61abcdeb",
+          "base64": "Y29udGV4dG8JRE9DVU1FTlRPX0RJU1RJTlRPCURvY3VtZW50b0Rpc3RpbnRvCURvY3VtZW50byBkaXN0aW50bwlEaWZmZXJlbnQgZG9jdW1lbnQK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-06",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "contexto",
+      "codigo_local_emitido": "IDENTIDAD",
+      "detalle_textual_emitido_no_parseado": "Identidad",
+      "rotulo_es_emitido": "Identidad distinta",
+      "rotulo_en_emitido": "Identity mismatch",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I05"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I05.admision",
+          "bytes": 66,
+          "sha256": "6e720494d52bed394c5a7ed389ab24996c2971fbbb6c567236fa861f93fcdaad",
+          "base64": "Y29udGV4dG8JSURFTlRJREFECUlkZW50aWRhZAlJZGVudGlkYWQgZGlzdGludGEJSWRlbnRpdHkgbWlzbWF0Y2gK"
+        },
+        {
+          "ruta": "debug/capturas-1/I05.diagnostico",
+          "bytes": 66,
+          "sha256": "6e720494d52bed394c5a7ed389ab24996c2971fbbb6c567236fa861f93fcdaad",
+          "base64": "Y29udGV4dG8JSURFTlRJREFECUlkZW50aWRhZAlJZGVudGlkYWQgZGlzdGludGEJSWRlbnRpdHkgbWlzbWF0Y2gK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-07",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cobertura",
+      "codigo_local_emitido": "FALTA_SOLICITUD",
+      "detalle_textual_emitido_no_parseado": "FaltaSolicitud",
+      "rotulo_es_emitido": "Falta solicitud",
+      "rotulo_en_emitido": "Missing request",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I06"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I06.admision",
+          "bytes": 73,
+          "sha256": "d5d93d1744ca5d8cce9a3c494c3f3efb6d7441330c76f3d8162a714e6646a8e8",
+          "base64": "Y29iZXJ0dXJhCUZBTFRBX1NPTElDSVRVRAlGYWx0YVNvbGljaXR1ZAlGYWx0YSBzb2xpY2l0dWQJTWlzc2luZyByZXF1ZXN0Cg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I06.diagnostico",
+          "bytes": 73,
+          "sha256": "d5d93d1744ca5d8cce9a3c494c3f3efb6d7441330c76f3d8162a714e6646a8e8",
+          "base64": "Y29iZXJ0dXJhCUZBTFRBX1NPTElDSVRVRAlGYWx0YVNvbGljaXR1ZAlGYWx0YSBzb2xpY2l0dWQJTWlzc2luZyByZXF1ZXN0Cg=="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-08",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cobertura",
+      "codigo_local_emitido": "SOLICITUD_DISTINTA",
+      "detalle_textual_emitido_no_parseado": "SolicitudDistinta",
+      "rotulo_es_emitido": "Solicitud distinta",
+      "rotulo_en_emitido": "Different request",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I07"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I07.admision",
+          "bytes": 84,
+          "sha256": "dee5caa9be1dedf92021c647fe8bf1ec819f4c821ca78c296942887d9ab3080f",
+          "base64": "Y29iZXJ0dXJhCVNPTElDSVRVRF9ESVNUSU5UQQlTb2xpY2l0dWREaXN0aW50YQlTb2xpY2l0dWQgZGlzdGludGEJRGlmZmVyZW50IHJlcXVlc3QK"
+        },
+        {
+          "ruta": "debug/capturas-1/I07.diagnostico",
+          "bytes": 84,
+          "sha256": "dee5caa9be1dedf92021c647fe8bf1ec819f4c821ca78c296942887d9ab3080f",
+          "base64": "Y29iZXJ0dXJhCVNPTElDSVRVRF9ESVNUSU5UQQlTb2xpY2l0dWREaXN0aW50YQlTb2xpY2l0dWQgZGlzdGludGEJRGlmZmVyZW50IHJlcXVlc3QK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-09",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cobertura",
+      "codigo_local_emitido": "FALTA_BASE",
+      "detalle_textual_emitido_no_parseado": "FaltaBase",
+      "rotulo_es_emitido": "Falta base",
+      "rotulo_en_emitido": "Missing base",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I08"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I08.admision",
+          "bytes": 55,
+          "sha256": "41ca0d3c8b10b9642edb24bb633d63577c7dbe51b4fac380426a2d3d157da91a",
+          "base64": "Y29iZXJ0dXJhCUZBTFRBX0JBU0UJRmFsdGFCYXNlCUZhbHRhIGJhc2UJTWlzc2luZyBiYXNlCg=="
+        },
+        {
+          "ruta": "debug/capturas-1/I08.diagnostico",
+          "bytes": 55,
+          "sha256": "41ca0d3c8b10b9642edb24bb633d63577c7dbe51b4fac380426a2d3d157da91a",
+          "base64": "Y29iZXJ0dXJhCUZBTFRBX0JBU0UJRmFsdGFCYXNlCUZhbHRhIGJhc2UJTWlzc2luZyBiYXNlCg=="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-10",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cobertura",
+      "codigo_local_emitido": "BASE_DISTINTA",
+      "detalle_textual_emitido_no_parseado": "BaseDistinta",
+      "rotulo_es_emitido": "Base distinta",
+      "rotulo_en_emitido": "Different base",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I09"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I09.admision",
+          "bytes": 66,
+          "sha256": "7f277194e45336caff012fb9fc5ac44d416324e33df5d3a97faaafbf0876e053",
+          "base64": "Y29iZXJ0dXJhCUJBU0VfRElTVElOVEEJQmFzZURpc3RpbnRhCUJhc2UgZGlzdGludGEJRGlmZmVyZW50IGJhc2UK"
+        },
+        {
+          "ruta": "debug/capturas-1/I09.diagnostico",
+          "bytes": 66,
+          "sha256": "7f277194e45336caff012fb9fc5ac44d416324e33df5d3a97faaafbf0876e053",
+          "base64": "Y29iZXJ0dXJhCUJBU0VfRElTVElOVEEJQmFzZURpc3RpbnRhCUJhc2UgZGlzdGludGEJRGlmZmVyZW50IGJhc2UK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-11",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "cuerpo",
+      "codigo_local_emitido": "CONTENIDO_DISTINTO",
+      "detalle_textual_emitido_no_parseado": "Presentacion(ContenidoDistinto)",
+      "rotulo_es_emitido": "Contenido distinto",
+      "rotulo_en_emitido": "Different content",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I10",
+        "I16"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I10.admision",
+          "bytes": 95,
+          "sha256": "4f25d9743f650f4524854203d51090422e1602a27bc16609c3e28bc575be46c3",
+          "base64": "Y3VlcnBvCUNPTlRFTklET19ESVNUSU5UTwlQcmVzZW50YWNpb24oQ29udGVuaWRvRGlzdGludG8pCUNvbnRlbmlkbyBkaXN0aW50bwlEaWZmZXJlbnQgY29udGVudAo="
+        },
+        {
+          "ruta": "debug/capturas-1/I10.diagnostico",
+          "bytes": 95,
+          "sha256": "4f25d9743f650f4524854203d51090422e1602a27bc16609c3e28bc575be46c3",
+          "base64": "Y3VlcnBvCUNPTlRFTklET19ESVNUSU5UTwlQcmVzZW50YWNpb24oQ29udGVuaWRvRGlzdGludG8pCUNvbnRlbmlkbyBkaXN0aW50bwlEaWZmZXJlbnQgY29udGVudAo="
+        },
+        {
+          "ruta": "debug/capturas-1/I16.admision",
+          "bytes": 95,
+          "sha256": "4f25d9743f650f4524854203d51090422e1602a27bc16609c3e28bc575be46c3",
+          "base64": "Y3VlcnBvCUNPTlRFTklET19ESVNUSU5UTwlQcmVzZW50YWNpb24oQ29udGVuaWRvRGlzdGludG8pCUNvbnRlbmlkbyBkaXN0aW50bwlEaWZmZXJlbnQgY29udGVudAo="
+        },
+        {
+          "ruta": "debug/capturas-1/I16.diagnostico",
+          "bytes": 95,
+          "sha256": "4f25d9743f650f4524854203d51090422e1602a27bc16609c3e28bc575be46c3",
+          "base64": "Y3VlcnBvCUNPTlRFTklET19ESVNUSU5UTwlQcmVzZW50YWNpb24oQ29udGVuaWRvRGlzdGludG8pCUNvbnRlbmlkbyBkaXN0aW50bwlEaWZmZXJlbnQgY29udGVudAo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-12",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "recepcion",
+      "codigo_local_emitido": "COMUNICACION",
+      "detalle_textual_emitido_no_parseado": "Comunicacion(ConnectionReset)",
+      "rotulo_es_emitido": "Fallo de comunicación",
+      "rotulo_en_emitido": "Communication failure",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I11"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I11.admision",
+          "bytes": 98,
+          "sha256": "c14903656e76e437bd783453ce38db0f186b94762ea11dcfd255949e1417750c",
+          "base64": "cmVjZXBjaW9uCUNPTVVOSUNBQ0lPTglDb211bmljYWNpb24oQ29ubmVjdGlvblJlc2V0KQlGYWxsbyBkZSBjb211bmljYWNpw7NuCUNvbW11bmljYXRpb24gZmFpbHVyZQo="
+        },
+        {
+          "ruta": "debug/capturas-1/I11.diagnostico",
+          "bytes": 98,
+          "sha256": "c14903656e76e437bd783453ce38db0f186b94762ea11dcfd255949e1417750c",
+          "base64": "cmVjZXBjaW9uCUNPTVVOSUNBQ0lPTglDb211bmljYWNpb24oQ29ubmVjdGlvblJlc2V0KQlGYWxsbyBkZSBjb211bmljYWNpw7NuCUNvbW11bmljYXRpb24gZmFpbHVyZQo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-13",
+      "naturaleza": "negativa",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "protocolo",
+      "codigo_local_emitido": "NEGATIVA_PROVEEDOR",
+      "detalle_textual_emitido_no_parseado": "Negativa",
+      "rotulo_es_emitido": "Negativa del proveedor",
+      "rotulo_en_emitido": "Provider refusal",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I12"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I12.admision",
+          "bytes": 78,
+          "sha256": "b10bb81c1dae0c1002d5b781c2f96631a49a1e920fcf08833fe48380504a88bf",
+          "base64": "cHJvdG9jb2xvCU5FR0FUSVZBX1BST1ZFRURPUglOZWdhdGl2YQlOZWdhdGl2YSBkZWwgcHJvdmVlZG9yCVByb3ZpZGVyIHJlZnVzYWwK"
+        },
+        {
+          "ruta": "debug/capturas-1/I12.diagnostico",
+          "bytes": 78,
+          "sha256": "b10bb81c1dae0c1002d5b781c2f96631a49a1e920fcf08833fe48380504a88bf",
+          "base64": "cHJvdG9jb2xvCU5FR0FUSVZBX1BST1ZFRURPUglOZWdhdGl2YQlOZWdhdGl2YSBkZWwgcHJvdmVlZG9yCVByb3ZpZGVyIHJlZnVzYWwK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-14",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "protocolo",
+      "codigo_local_emitido": "ESQUEMA_INVALIDO",
+      "detalle_textual_emitido_no_parseado": "Esquema(Truncado)",
+      "rotulo_es_emitido": "Esquema inválido",
+      "rotulo_en_emitido": "Invalid schema",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I13"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I13.admision",
+          "bytes": 78,
+          "sha256": "49c96f231c8e6622dbff8e7ef7a3e15d8cdd254abd9c32d7802271f98d0e662d",
+          "base64": "cHJvdG9jb2xvCUVTUVVFTUFfSU5WQUxJRE8JRXNxdWVtYShUcnVuY2FkbykJRXNxdWVtYSBpbnbDoWxpZG8JSW52YWxpZCBzY2hlbWEK"
+        },
+        {
+          "ruta": "debug/capturas-1/I13.diagnostico",
+          "bytes": 78,
+          "sha256": "49c96f231c8e6622dbff8e7ef7a3e15d8cdd254abd9c32d7802271f98d0e662d",
+          "base64": "cHJvdG9jb2xvCUVTUVVFTUFfSU5WQUxJRE8JRXNxdWVtYShUcnVuY2FkbykJRXNxdWVtYSBpbnbDoWxpZG8JSW52YWxpZCBzY2hlbWEK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-15",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "atribucion",
+      "codigo_local_emitido": "IDENTIDAD",
+      "detalle_textual_emitido_no_parseado": "Identidad",
+      "rotulo_es_emitido": "Identidad distinta",
+      "rotulo_en_emitido": "Identity mismatch",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I17"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I17.diagnostico",
+          "bytes": 68,
+          "sha256": "074e104acbbab44fb6ab7ba5d0f8c64831fc6ef2ab16d3a336f770935dde1385",
+          "base64": "YXRyaWJ1Y2lvbglJREVOVElEQUQJSWRlbnRpZGFkCUlkZW50aWRhZCBkaXN0aW50YQlJZGVudGl0eSBtaXNtYXRjaAo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-16",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "apertura_archivo",
+      "codigo_local_emitido": "IO",
+      "detalle_textual_emitido_no_parseado": "Io(AlreadyExists)",
+      "rotulo_es_emitido": "Fallo de entrada/salida",
+      "rotulo_en_emitido": "Input/output failure",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I18"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I18.diagnostico",
+          "bytes": 83,
+          "sha256": "9ba734a5c4557df99467775db138b1d57eb751cadcdadb9567cb31c4e55725fb",
+          "base64": "YXBlcnR1cmFfYXJjaGl2bwlJTwlJbyhBbHJlYWR5RXhpc3RzKQlGYWxsbyBkZSBlbnRyYWRhL3NhbGlkYQlJbnB1dC9vdXRwdXQgZmFpbHVyZQo="
+        },
+        {
+          "ruta": "debug/capturas-1/I18.escritura",
+          "bytes": 83,
+          "sha256": "9ba734a5c4557df99467775db138b1d57eb751cadcdadb9567cb31c4e55725fb",
+          "base64": "YXBlcnR1cmFfYXJjaGl2bwlJTwlJbyhBbHJlYWR5RXhpc3RzKQlGYWxsbyBkZSBlbnRyYWRhL3NhbGlkYQlJbnB1dC9vdXRwdXQgZmFpbHVyZQo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-17",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "recuperacion",
+      "codigo_local_emitido": "CONTENIDO_DISTINTO",
+      "detalle_textual_emitido_no_parseado": "Presentacion(ContenidoDistinto)",
+      "rotulo_es_emitido": "Contenido distinto",
+      "rotulo_en_emitido": "Different content",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I19"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I19.diagnostico",
+          "bytes": 101,
+          "sha256": "8e01dc6f70aaa86fed0c1367d0f04ed7bc88025169d6564f5f80950489048ff9",
+          "base64": "cmVjdXBlcmFjaW9uCUNPTlRFTklET19ESVNUSU5UTwlQcmVzZW50YWNpb24oQ29udGVuaWRvRGlzdGludG8pCUNvbnRlbmlkbyBkaXN0aW50bwlEaWZmZXJlbnQgY29udGVudAo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-18",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "instalacion_contexto",
+      "codigo_local_emitido": "LIMITE_CONTEXTO",
+      "detalle_textual_emitido_no_parseado": "LimiteContexto",
+      "rotulo_es_emitido": "Límite de contexto",
+      "rotulo_en_emitido": "Context limit",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I20"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I20.diagnostico",
+          "bytes": 86,
+          "sha256": "df04e04a1e60163907a2ed3aac1d7f1a9eb15ab990472ddfc05339fe9b1d16c2",
+          "base64": "aW5zdGFsYWNpb25fY29udGV4dG8JTElNSVRFX0NPTlRFWFRPCUxpbWl0ZUNvbnRleHRvCUzDrW1pdGUgZGUgY29udGV4dG8JQ29udGV4dCBsaW1pdAo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-19",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "recepcion",
+      "codigo_local_emitido": "LIMITE_RECEPCION",
+      "detalle_textual_emitido_no_parseado": "LimiteRecepcion",
+      "rotulo_es_emitido": "Límite de recepción",
+      "rotulo_en_emitido": "Reception limit",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I21"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I21.admision",
+          "bytes": 81,
+          "sha256": "2750046c05a4019a5b30ffe5962728fb7f8c7447fd9d77bf06b6579d4f6a915b",
+          "base64": "cmVjZXBjaW9uCUxJTUlURV9SRUNFUENJT04JTGltaXRlUmVjZXBjaW9uCUzDrW1pdGUgZGUgcmVjZXBjacOzbglSZWNlcHRpb24gbGltaXQK"
+        },
+        {
+          "ruta": "debug/capturas-1/I21.diagnostico",
+          "bytes": 81,
+          "sha256": "2750046c05a4019a5b30ffe5962728fb7f8c7447fd9d77bf06b6579d4f6a915b",
+          "base64": "cmVjZXBjaW9uCUxJTUlURV9SRUNFUENJT04JTGltaXRlUmVjZXBjaW9uCUzDrW1pdGUgZGUgcmVjZXBjacOzbglSZWNlcHRpb24gbGltaXQK"
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    },
+    {
+      "id_inventario": "S19-OBS-20",
+      "naturaleza": "fallo_o_rechazo",
+      "origen": "realizacion_sintetica_S18",
+      "etapa_emitida": "escritura_archivo",
+      "codigo_local_emitido": "IO",
+      "detalle_textual_emitido_no_parseado": "Io(WriteZero)",
+      "rotulo_es_emitido": "Fallo de entrada/salida",
+      "rotulo_en_emitido": "Input/output failure",
+      "codigo_canonico_sv": null,
+      "correspondencia_canonica": "NO_CONSTITUIDA",
+      "casos": [
+        "I22"
+      ],
+      "evidencias": [
+        {
+          "ruta": "debug/capturas-1/I22.diagnostico",
+          "bytes": 80,
+          "sha256": "3f5d6112546a7c9977ff3f7cdcd83dbcee474d072ddfadf02460c2420c99be9e",
+          "base64": "ZXNjcml0dXJhX2FyY2hpdm8JSU8JSW8oV3JpdGVaZXJvKQlGYWxsbyBkZSBlbnRyYWRhL3NhbGlkYQlJbnB1dC9vdXRwdXQgZmFpbHVyZQo="
+        }
+      ],
+      "ambito_repeticion": "Mismos bytes en las seis ejecuciones normales; se indexa debug/capturas-1 sin contar duplicados como nuevos casos."
+    }
+  ],
+  "origen_compilador_separado": {
+    "codigo": "E0451",
+    "origen": "rustc",
+    "objeto": "Dos clientes externos intentan fabricar tipos con campos privados; compilaciones rechazadas según S18.",
+    "fuente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/fbeaa2d394c2dfc6df35e647b2a2b85abcdf5b3b/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s18-recorrido-conjunto/COMANDOS.json",
+    "codigo_canonico_sv": null
+  },
+  "antecedente_s15": {
+    "fuente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/fbeaa2d394c2dfc6df35e647b2a2b85abcdf5b3b/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s15-causas-recepcion/CAUSAS_OBSERVADAS.json",
+    "contenido_original": [
+      {
+        "caso": "F01",
+        "categoria": "ENTREGADA",
+        "etapa": "cobertura",
+        "causa": "Entregada",
+        "cuerpo_entregado": true,
+        "llamadas_cobertura": 1,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F02",
+        "categoria": "NEGATIVA_PROVEEDOR",
+        "etapa": "protocolo",
+        "causa": "NegativaProveedor",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F03",
+        "categoria": "ESQUEMA_INVALIDO",
+        "etapa": "protocolo",
+        "causa": "EsquemaInvalido(Cabecera)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F04",
+        "categoria": "ESQUEMA_INVALIDO",
+        "etapa": "protocolo",
+        "causa": "EsquemaInvalido(Truncado)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F05",
+        "categoria": "NO_ADMISION",
+        "etapa": "cobertura",
+        "causa": "NoAdmision(FaltaVigencia)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 1,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F06",
+        "categoria": "NO_ADMISION",
+        "etapa": "cobertura",
+        "causa": "NoAdmision(Lectura(Identidad))",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 1,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F07",
+        "categoria": "COMUNICACION",
+        "etapa": "recepcion",
+        "causa": "Comunicacion(TimedOut)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F08",
+        "categoria": "COMUNICACION",
+        "etapa": "recepcion",
+        "causa": "Comunicacion(ConnectionReset)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F09",
+        "categoria": "COMUNICACION",
+        "etapa": "recepcion",
+        "causa": "Comunicacion(ConnectionReset)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F10",
+        "categoria": "NEGATIVA_PROVEEDOR",
+        "etapa": "protocolo",
+        "causa": "NegativaProveedor",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F11",
+        "categoria": "ESQUEMA_INVALIDO",
+        "etapa": "protocolo",
+        "causa": "EsquemaInvalido(Sobrante)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F12",
+        "categoria": "NO_ADMISION",
+        "etapa": "cobertura",
+        "causa": "NoAdmision(FaltaCaso)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 1,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F13",
+        "categoria": "ESQUEMA_INVALIDO",
+        "etapa": "recepcion",
+        "causa": "EsquemaInvalido(Limite)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      },
+      {
+        "caso": "F14",
+        "categoria": "ESQUEMA_INVALIDO",
+        "etapa": "protocolo",
+        "causa": "EsquemaInvalido(Truncado)",
+        "cuerpo_entregado": false,
+        "llamadas_cobertura": 0,
+        "alcance": "SV-S15-CAUSAS-F/1: receptor sintético; no código canónico ni equivalencia con Tri."
+      }
+    ],
+    "regla": "Conservado sin renombrar FaltaCaso/FaltaVigencia a FaltaSolicitud/FaltaBase; relación de obligaciones, no identidad de causas. S18 no reejecuta todas las variantes S15."
+  }
+}

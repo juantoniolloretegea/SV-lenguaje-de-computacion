@@ -1,0 +1,66 @@
+{
+  "version": "S19-MANIFIESTO/1",
+  "algoritmo": "SHA-256",
+  "exclusiones": [
+    "MANIFIESTO.json",
+    "VERIFICACION.json"
+  ],
+  "archivos": {
+    "ACTA_RECEPCION_S19.md": {
+      "bytes": 5320,
+      "sha256": "d673c535e6bcda1f24e40583d9a81548c0827fb4d8a2c62a048c34f12e10288a"
+    },
+    "CORTE_Y_ALCANCE.json": {
+      "bytes": 959,
+      "sha256": "7c4b0373a149f011ae9584dd1e33516d7d84ef56071ab401671df95ae95173ca"
+    },
+    "FRONTERAS_RECIBIDAS.json": {
+      "bytes": 3261,
+      "sha256": "3ebf5f1127324008a86d23df9e7c09e271b5e64153833ff59f5b6bfbb90a9e29"
+    },
+    "FUENTES_RECIBIDAS.json": {
+      "bytes": 3361923,
+      "sha256": "ac56c78ee10368e9b7f1e136193fb0d2824e198bfaf1cc16e47033c91b477605"
+    },
+    "INVENTARIO_CAUSAS_Y_ESTADOS.json": {
+      "bytes": 35674,
+      "sha256": "7cfa23a6d2ca4f83f5a75161e8b6ce2a021fc12369b95124ca447cc2f2dcf1b2"
+    },
+    "INVENTARIO_CAUSAS_Y_ESTADOS.md": {
+      "bytes": 3255,
+      "sha256": "54fbb7a269373765839d24b3fc8444cb2c273aee8c30d8d4f8ce2d6fd5b9d954"
+    },
+    "MATRIZ_COBERTURA_A_L.md": {
+      "bytes": 3969,
+      "sha256": "32118c0a17af585922d4cb94b4ca9d7efb7ed0673e8d23b5989901941685aef4"
+    },
+    "MATRIZ_COBERTURA_A_L_RECEPCION_S18.json": {
+      "bytes": 38130,
+      "sha256": "dc80add9d034d31e6ae215d8f3d66cf6630f03e6f0439d2fc42554d0038a7098"
+    },
+    "README.md": {
+      "bytes": 1327,
+      "sha256": "041cfad141557c6df705a33418e060f75245a2c14a0278a2734630b57b212a94"
+    },
+    "RECEPCION.json": {
+      "bytes": 1065,
+      "sha256": "f3d83035d2a6f982d4dbc21a785f7bc48e33358656da24fe55c3cc552bc7c023"
+    },
+    "RECTORES.json": {
+      "bytes": 853,
+      "sha256": "37725154e45d13eb5143f025d952bea15f3f043376d517a503eee41a82cb5e01"
+    },
+    "RELEVO_AL_CATALOGO.md": {
+      "bytes": 6038,
+      "sha256": "24ce1531f245c68b535e35a4933cc1e4ddb94d293f5a8172ea4501f728569cfd"
+    },
+    "construir.py": {
+      "bytes": 11344,
+      "sha256": "52d61c92ee42f74c5f0989bfdb4d8877217122062e1d4f859e5f5476c4a47880"
+    },
+    "verificar.py": {
+      "bytes": 4486,
+      "sha256": "46e8def3af8da6be2cc23546579ee85d158753a6de196abb389be087fdcfaa40"
+    }
+  }
+}
