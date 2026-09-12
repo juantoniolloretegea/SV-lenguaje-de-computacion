@@ -1,0 +1,240 @@
+{
+  "version": "RETP-158",
+  "archivos": [
+    {
+      "ruta": "BASE_FUENTES.json",
+      "bytes": 1023354,
+      "sha256": "d2d8701d4400e931c8893724bd502ee55e0f22712def2b2af96665dab1318014"
+    },
+    {
+      "ruta": "CAMBIO_INCREMENTAL.patch",
+      "bytes": 45835,
+      "sha256": "be669043eb04e5e2c0fee6246a04619cc43e5f89b7e0270c015dd20eeb6229c2"
+    },
+    {
+      "ruta": "CANDIDATA_FUENTES.json",
+      "bytes": 1042934,
+      "sha256": "229655edeb2fee58057afc8dd68ba40a8df3f03a8f821a7ce04dfb463c4d5a8b"
+    },
+    {
+      "ruta": "CATALOGO.json",
+      "bytes": 2511,
+      "sha256": "29ed674a208cbb6ff399569e35d9e2f230f5cf90b047775aa1f6f01c1efdf784"
+    },
+    {
+      "ruta": "COMPROMISO_PLAN.json",
+      "bytes": 256,
+      "sha256": "a2c550bdbd4e42f9d25bcd489a74e82d1f9dad490a5d7364dd646076ce30bdf4"
+    },
+    {
+      "ruta": "CONTRATO_Y_ALCANCE.md",
+      "bytes": 3473,
+      "sha256": "6ed38ad6d6126220240f72d49c3bc09333c99bb12d4a561a3ba3c110167ce4ea"
+    },
+    {
+      "ruta": "CORPUS.json",
+      "bytes": 29659,
+      "sha256": "13a4108aa4d741b4e0a28f8acaa004935bfb81e87c83f48c2f5db69129bcf5e5"
+    },
+    {
+      "ruta": "CORPUS_FUENTES.json",
+      "bytes": 150311,
+      "sha256": "883fac88f58e7421b36fbea2b1ce94e61cd2eb5cf0ede837b36728ca4e2af15f"
+    },
+    {
+      "ruta": "ESPERADO_RELACIONAL.json",
+      "bytes": 563,
+      "sha256": "5eb06503d2d03f2d8206a2c0a0fe42b51e96cae05a44083769f08f9945505d00"
+    },
+    {
+      "ruta": "ESTADO_PARA_OTRAS_IA.md",
+      "bytes": 1933,
+      "sha256": "87cc0d3e9c4e3bc5582a187bf207c115848761c1817f9285731c758af199974e"
+    },
+    {
+      "ruta": "HALLAZGOS.md",
+      "bytes": 2106,
+      "sha256": "352fe9b5d6b7753024b9e3daf14065a5ddfafc344811db7806268ccb421d43f3"
+    },
+    {
+      "ruta": "INDICE_ESPERADOS.json",
+      "bytes": 2408,
+      "sha256": "e23b09b4caa52acf66d2a06452a34c3d9713a4c3a7f054792f06ba31d34a0499"
+    },
+    {
+      "ruta": "INVENTARIO_PREVIO.json",
+      "bytes": 21709,
+      "sha256": "c48aa56dc29a55aef355f267a4debe5eccd0a98f009a23905189834812113ca8"
+    },
+    {
+      "ruta": "PLAN_PREVIO.md",
+      "bytes": 2578,
+      "sha256": "daf11aa9dc9a11d2da1f7a7678a413ac489a2d620fe51b960574d20dad96b93b"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 4074,
+      "sha256": "0c92563bd019f8f9135aed6994b5e21df34d1cf3957670dd0dbfc004d6d07faa"
+    },
+    {
+      "ruta": "cambios/rust/sv_core/src/compiler_diagnostics.rs",
+      "bytes": 12612,
+      "sha256": "e56a3421d7a12ce44391a3f3d8ced2eb7a9054a81923563e6fda82ad92076506"
+    },
+    {
+      "ruta": "cambios/rust/sv_core/src/frontend.rs",
+      "bytes": 99404,
+      "sha256": "a5b76fe9fafb42f9a62bae3fd810393744bf9403437a0fffc5f3342f9d4be4ec"
+    },
+    {
+      "ruta": "cambios/rust/sv_core/src/lib.rs",
+      "bytes": 15379,
+      "sha256": "f253ac64f0f8267d3dca9359dd7ec3080346e70f7a1782d1b577744134c3d620"
+    },
+    {
+      "ruta": "cambios/rust/sv_core/src/wellformed.rs",
+      "bytes": 41323,
+      "sha256": "1f8fbc292cba21e22fb8ccc0928fa1e8c26c8eea706d7287548174ad17d1a444"
+    },
+    {
+      "ruta": "catalogo.rs",
+      "bytes": 847,
+      "sha256": "00cc1c42e3403895f12814419a257a9e10f0e7b92e72e86c8146c18010d0ece9"
+    },
+    {
+      "ruta": "clientes/no_desligar.rs",
+      "bytes": 152,
+      "sha256": "5f6a4d24e4bee220f9bfc05eed11a66a735dfdc54ba6133716ab7c31e8485327"
+    },
+    {
+      "ruta": "clientes/no_instalar.rs",
+      "bytes": 654,
+      "sha256": "a1b44b3a47adfeb12fb3d11ec8d1a818a920dcf9ce7e96724dbef6bb90c09f44"
+    },
+    {
+      "ruta": "clientes/no_instalar_diagnostico.rs",
+      "bytes": 247,
+      "sha256": "b5f0b6155dbde9037db229c629957ee3ec03615d282bb457c2fb33cef2bbafbc"
+    },
+    {
+      "ruta": "clientes/no_premisa.rs",
+      "bytes": 151,
+      "sha256": "a700784b948f497d391a28f692bee185a09119d03bb3db9b0d87f9306afa9ff2"
+    },
+    {
+      "ruta": "clientes/publico.rs",
+      "bytes": 818,
+      "sha256": "4b81411d26869c830ffc5533cb7f01f6ff9cda8ec9a094cc6eb92221714203c0"
+    },
+    {
+      "ruta": "corpus.rs",
+      "bytes": 368,
+      "sha256": "c25f8c96b45576ef1168de1568ad1a85a31d912d9fbfaf67e2c1ef0dc7f30118"
+    },
+    {
+      "ruta": "evidencia/FUENTES_PROBADAS.json",
+      "bytes": 11925,
+      "sha256": "407cf0b62f28127b6a55f73e26bf0aa526d54c783baf29b684931f50c6da192b"
+    },
+    {
+      "ruta": "evidencia/IDENTIDAD.json",
+      "bytes": 1648,
+      "sha256": "6ac4ff9895fd1c26e9e104c0ababcc772659a3a1a9fe44a66b56bcf5d8f7bd35"
+    },
+    {
+      "ruta": "evidencia/OBSERVACIONES.json",
+      "bytes": 23185,
+      "sha256": "9ba33fd099af12e889c040bdee4e35dbca085f0ed594e3240fe5fe48ed0f12e3"
+    },
+    {
+      "ruta": "evidencia/REGISTROS_COMPLETOS.zip",
+      "bytes": 208766,
+      "sha256": "d5ccafc87b13caf5a2436241a4c2d73a47297cd04b0c4236273ee25ec78bcf8e"
+    },
+    {
+      "ruta": "evidencia/RESULTADO.json",
+      "bytes": 467,
+      "sha256": "53078713053b3b57fce7cc0407d6d79354ef92c7f6a3b54fbb2f7b57e1f775f4"
+    },
+    {
+      "ruta": "evidencia/SECUENCIA.json",
+      "bytes": 23082,
+      "sha256": "e0dc993d3175c3054af4e2d99d83fff309b02d5f1c37684074a32b23e83811c9"
+    },
+    {
+      "ruta": "focal.rs",
+      "bytes": 6559,
+      "sha256": "9ce4827d2b63dfa7d90a2c9b8460de2631f4026c14f0a0d4a22e4ef9ea947d9e"
+    },
+    {
+      "ruta": "idiomas/en/diagnosticos.json",
+      "bytes": 1063,
+      "sha256": "515aa7495bc0e9c0e09de47f6fb051a8e2c27ed240a2f9fb087ad110354497ee"
+    },
+    {
+      "ruta": "idiomas/es/diagnosticos.json",
+      "bytes": 1118,
+      "sha256": "c3e1441d7d6dd20a73eea2366f30b3b0bb05e932f361a2b7d2ebad950e6ee720"
+    },
+    {
+      "ruta": "relacional.rs",
+      "bytes": 1395,
+      "sha256": "adf30782b4b89a77d9e21fb036fa3d53e6eb184c75ca5ba1d0ab8deb85eb8018"
+    },
+    {
+      "ruta": "reproducir.py",
+      "bytes": 8306,
+      "sha256": "7ba8b0bf5dbf9fc173f47ea088d6c2bef0598227325d94d6c6449e558108ef44"
+    },
+    {
+      "ruta": "soporte/catalogar.py",
+      "bytes": 1124,
+      "sha256": "e629e139079265a49b14c6ab8ff7893ac7e742dd6b76a27b84c109333b77f4f0"
+    },
+    {
+      "ruta": "soporte/complemento.py",
+      "bytes": 1307,
+      "sha256": "82a5121ea6eaa87bb6ccab1f8ac1a1dfb38b6a234e6ae69b4132d487ca15509c"
+    },
+    {
+      "ruta": "soporte/corpus.py",
+      "bytes": 1188,
+      "sha256": "d92a35d25fc0bdf401bc837484357bcc8d6fdb8b8a19595c725321859e15837b"
+    },
+    {
+      "ruta": "soporte/documentar.py",
+      "bytes": 20079,
+      "sha256": "331ab76b0b92b724f2414fd5c88792f753dd36933f33fa76a57f70d9d3cf35f1"
+    },
+    {
+      "ruta": "soporte/ejecutar.py",
+      "bytes": 2783,
+      "sha256": "747540348e272c610c0f8046f5b5f8d9eec4bbc879f5795846f8a1ea6d7d54ed"
+    },
+    {
+      "ruta": "soporte/empaquetar.py",
+      "bytes": 8214,
+      "sha256": "01e473ac70d143aaf7ee29c727cdcf86adc083bf9274947101939280950c3701"
+    },
+    {
+      "ruta": "soporte/fijar.py",
+      "bytes": 1550,
+      "sha256": "58405418c09a7bacc141abb1137f1ccc18f41dbb1baa706e56381c682d47ebb7"
+    },
+    {
+      "ruta": "soporte/modificar-01.py",
+      "bytes": 11382,
+      "sha256": "3c3824cd655c94f1153c4ade3693173ff83ab5403a394755a24e7a514ef7534e"
+    },
+    {
+      "ruta": "soporte/modificar.py",
+      "bytes": 11382,
+      "sha256": "b4644db3b1f444a132edd5b06d92fa0be86b8e4a9b65f9d7371c03eadd001929"
+    },
+    {
+      "ruta": "soporte/preparar.py",
+      "bytes": 3716,
+      "sha256": "f8c84ac4afb52b6a9467b6116d0a7a48c6d121d4d65620710eb51e0a854b2477"
+    }
+  ]
+}

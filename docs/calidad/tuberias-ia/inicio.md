@@ -3,7 +3,9 @@
 
 **Estado global: NO VERDE.**
 
-**Último corte · RETP-157:** [paso 6, diagnósticos y prueba entre modelos](diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). Resultado nativo y límites publicados; [relevo preciso](diagnosticos-de-recepcion-y-prueba-entre-modelos/ESTADO_DE_CIERRE.md).
+**Último corte · RETP-158:** [diagnósticos del compilador y procedencia por unidad](diagnosticos-del-compilador-y-procedencia/README.md). 239 unitarios por modo, corpus 14/106 idéntico y 29 casos focales nativos; restantes emisores y encargo externo aún pendientes.
+
+**Corte anterior · RETP-157:** [paso 6, diagnósticos y prueba entre modelos](diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). Resultado nativo y límites publicados; [relevo preciso](diagnosticos-de-recepcion-y-prueba-entre-modelos/ESTADO_DE_CIERRE.md).
 
 **Workflow vigente · RETP-141:** [V2 subordinada a la secuencia rectora](WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md). El expediente de correspondencia está concluido en RETP-142; el cierre material permanece pendiente. Reserva cerrada; asociación /2–/3 sin aceptar por esta publicación; P4/P5 pendientes. Al terminar la campaña: catálogo/localización y continuación de fila 9.
 
@@ -183,3 +185,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Paso 6: causas de recepción y localización ES/EN — RETP-157
 
 [Resultado, catálogo y encargo externo](diagnosticos-de-recepcion-y-prueba-entre-modelos/README.md). Candidata aditiva sobre RETP-154: 239 unitarios por configuración nativa; 40 casos focales × tres repeticiones × debug/release; 20 causas locales ES/EN; cuatro clientes negativos con seis errores esperados. La causa se conserva en el emisor y el texto no decide. Fuentes, scripts, 18 procesos y medidas recuperables. Cero ejecuciones externas recibidas; encargo público preparado. Premisa sintética, DG01–DG14 globales y destinos WASI/navegador pendientes; estado global NO VERDE. El relevo identifica tanto la migración del compilador como la recepción profesional pendiente; sin reapertura de reserva ni promoción productiva.
+
+
+## RETP-158 · Paso 6: procedencia y causas del compilador
+
+[Resultado y reproducción](diagnosticos-del-compilador-y-procedencia/README.md). E004/E115 y colisiones tipados desde el emisor, sidecar por unidad fuera de IR, EOF original y catálogo ES/EN. Se conservan los fallos del instrumento y las mediciones. No hay promoción productiva ni nueva apertura de P3.

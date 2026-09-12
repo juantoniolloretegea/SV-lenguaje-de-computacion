@@ -1,0 +1,894 @@
+--- a/rust/sv_core/src/compiler_diagnostics.rs
++++ b/rust/sv_core/src/compiler_diagnostics.rs
+@@ -0,0 +1,207 @@
++//! Diagnósticos experimentales COMPILER-DIAGNOSTICS/1, externos a IR 0.3.
++//! La causa procede del emisor. Los emisores pendientes no se clasifican por texto.
++use std::ops::Range;
++use crate::{CompileError, FrontendError, IrProgram, SourceProfile, SourceUnit};
++use crate::audit_diagnostics::Language;
++
++pub const VERSION: &str = "COMPILER-DIAGNOSTICS/1";
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum DeclarationId { Object(usize), Operation(usize) }
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum Stage { Frontend, ClosedDomains, Wellformed, TransitionData, Context, Assembly }
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum FrontendCause { UnexpectedEnd, UnexpectedToken, Unsupported, InvalidNatural, InvalidAdmissibilityState, InvalidTri }
++#[derive(Debug, Clone, PartialEq, Eq)]
++pub enum Cause {
++    EmptyCodomain { name: String },
++    DuplicateCodomainMembers { name: String, duplicates: Vec<String> },
++    OutputSemanticsKeys { cell: Option<String>, semantics: String, codomain: Option<String>, duplicates: Vec<String>, missing: Vec<String>, extra: Vec<String> },
++    DuplicateIdentifier { name: String, first: DeclarationId, second: DeclarationId },
++    Frontend(FrontendCause),
++    InsufficientAssemblyUnits { actual: usize },
++    Unmigrated { stage: Stage },
++}
++impl Cause {
++    pub const fn id(&self) -> &'static str {
++        match self {
++            Self::EmptyCodomain { .. } => "CD.EMPTY_CODOMAIN",
++            Self::DuplicateCodomainMembers { .. } => "CD.DUPLICATE_CODOMAIN_MEMBERS",
++            Self::OutputSemanticsKeys { .. } => "CD.OUTPUT_SEMANTICS_KEYS",
++            Self::DuplicateIdentifier { .. } => "CD.DUPLICATE_IDENTIFIER",
++            Self::Frontend(FrontendCause::UnexpectedEnd) => "CD.UNEXPECTED_END",
++            Self::Frontend(FrontendCause::UnexpectedToken) => "CD.UNEXPECTED_TOKEN",
++            Self::Frontend(FrontendCause::Unsupported) => "CD.UNSUPPORTED",
++            Self::Frontend(FrontendCause::InvalidNatural) => "CD.INVALID_NATURAL",
++            Self::Frontend(FrontendCause::InvalidAdmissibilityState) => "CD.INVALID_ADMISSIBILITY_STATE",
++            Self::Frontend(FrontendCause::InvalidTri) => "CD.INVALID_TRI",
++            Self::InsufficientAssemblyUnits { .. } => "CD.INSUFFICIENT_ASSEMBLY_UNITS",
++            Self::Unmigrated { .. } => "CD.UNMIGRATED",
++        }
++    }
++    pub const fn code(&self) -> Option<&'static str> {
++        match self {
++            Self::EmptyCodomain { .. } | Self::DuplicateCodomainMembers { .. } => Some("E004"),
++            Self::OutputSemanticsKeys { .. } => Some("E115"),
++            _ => None,
++        }
++    }
++    /// Plantilla estática: los datos tipados se consultan aparte. No incluye fuentes ni literales.
++    pub const fn message(&self, language: Language) -> &'static str {
++        let pair = match self {
++            Self::EmptyCodomain { .. } => ("El codominio está vacío.", "The codomain is empty."),
++            Self::DuplicateCodomainMembers { .. } => ("El codominio contiene miembros repetidos.", "The codomain contains duplicate members."),
++            Self::OutputSemanticsKeys { .. } => ("Las claves de la semántica de salida no cumplen la unicidad o la cobertura exigida.", "Output semantics keys do not satisfy the required uniqueness or coverage."),
++            Self::DuplicateIdentifier { .. } => ("Dos declaraciones comparten el mismo identificador.", "Two declarations share the same identifier."),
++            Self::Frontend(FrontendCause::UnexpectedEnd) => ("La unidad fuente termina antes de completar la construcción.", "The source unit ends before the construct is complete."),
++            Self::Frontend(FrontendCause::UnexpectedToken) => ("Se encontró un elemento léxico o sintáctico inesperado.", "An unexpected lexical or syntactic element was encountered."),
++            Self::Frontend(FrontendCause::Unsupported) => ("La construcción no está admitida por este perfil y analizador.", "The construct is not supported by this profile and parser."),
++            Self::Frontend(FrontendCause::InvalidNatural) => ("El valor no es un natural admitido.", "The value is not an accepted natural number."),
++            Self::Frontend(FrontendCause::InvalidAdmissibilityState) => ("El estado de admisibilidad no es válido.", "The admissibility state is invalid."),
++            Self::Frontend(FrontendCause::InvalidTri) => ("El valor ternario no es válido.", "The ternary value is invalid."),
++            Self::InsufficientAssemblyUnits { .. } => ("El ensamblaje exige al menos dos unidades fuente.", "Assembly requires at least two source units."),
++            Self::Unmigrated { .. } => ("El emisor aún no dispone de causa estructurada; consulte el error heredado bajo su política de acceso.", "The emitter has no structured cause yet; consult the legacy error under its access policy."),
++        };
++        match language { Language::Es => pair.0, Language::En => pair.1 }
++    }
++}
++#[derive(Debug, Clone, PartialEq, Eq)]
++pub struct SourceInfo {
++    pub index: usize,
++    pub file: String,
++    pub profile: SourceProfile,
++    pub sha256: String,
++    pub byte_len: usize,
++}
++#[derive(Debug, Clone, PartialEq, Eq)]
++pub struct Site {
++    pub unit: usize,
++    pub span: Option<Range<usize>>,
++    pub role: SiteRole,
++}
++#[derive(Debug, Clone, Copy, PartialEq, Eq)]
++pub enum SiteRole { Failure, FirstDeclaration, SecondDeclaration, Cell, Semantics, Codomain }
++#[derive(Clone, PartialEq, Eq)]
++pub struct Report {
++    legacy: CompileError,
++    cause: Cause,
++    stage: Stage,
++    sources: Vec<SourceInfo>,
++    sites: Vec<Site>,
++}
++// Debug es deliberadamente seguro por defecto: no expone el payload heredado.
++impl std::fmt::Debug for Report {
++    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
++        f.debug_struct("Report").field("version", &VERSION).field("cause_id", &self.cause.id())
++            .field("stage", &self.stage).field("source_count", &self.sources.len()).field("sites", &self.sites).finish()
++    }
++}
++impl Report {
++    pub fn cause(&self) -> &Cause { &self.cause }
++    pub fn stage(&self) -> Stage { self.stage }
++    pub fn sources(&self) -> &[SourceInfo] { &self.sources }
++    pub fn sites(&self) -> &[Site] { &self.sites }
++    /// Acceso explícito compatible; puede contener texto suministrado por la fuente.
++    pub fn legacy(&self) -> &CompileError { &self.legacy }
++    pub fn into_legacy(self) -> CompileError { self.legacy }
++    pub fn messages(&self) -> Vec<(Language, &'static str)> {
++        let es = self.sources.iter().any(|s| s.profile == SourceProfile::Es);
++        let en = self.sources.iter().any(|s| s.profile == SourceProfile::En);
++        let mut out = Vec::new();
++        if es { out.push((Language::Es,self.cause.message(Language::Es))); }
++        if en { out.push((Language::En,self.cause.message(Language::En))); }
++        out
++    }
++}
++pub(crate) struct ValidationFailure { pub legacy: String, pub cause: Option<Cause> }
++impl ValidationFailure {
++    pub(crate) fn known(legacy: String, cause: Cause) -> Self { Self { legacy, cause: Some(cause) } }
++}
++impl From<String> for ValidationFailure {
++    fn from(legacy: String) -> Self { Self { legacy, cause: None } }
++}
++struct Origins { objects: Vec<Site>, operations: Vec<Site> }
++impl Origins {
++    fn declaration(&self, id: DeclarationId, role: SiteRole) -> Option<Site> {
++        let item = match id { DeclarationId::Object(i) => self.objects.get(i), DeclarationId::Operation(i) => self.operations.get(i) };
++        item.map(|s| Site { role, ..s.clone() })
++    }
++    fn object(&self, p: &IrProgram, name: &str, role: SiteRole) -> Option<Site> {
++        p.objects().iter().position(|o| o.name() == name).and_then(|i| self.declaration(DeclarationId::Object(i),role))
++    }
++    fn sites(&self, p: &IrProgram, cause: &Cause) -> Vec<Site> {
++        let mut sites = Vec::new();
++        match cause {
++            Cause::EmptyCodomain { name } | Cause::DuplicateCodomainMembers { name, .. } => sites.extend(self.object(p,name,SiteRole::Codomain)),
++            Cause::DuplicateIdentifier { first, second, .. } => {
++                sites.extend(self.declaration(*first,SiteRole::FirstDeclaration));
++                sites.extend(self.declaration(*second,SiteRole::SecondDeclaration));
++            }
++            Cause::OutputSemanticsKeys { cell, semantics, codomain, .. } => {
++                if let Some(c) = cell { sites.extend(self.object(p,c,SiteRole::Cell)); }
++                sites.extend(self.object(p,semantics,SiteRole::Semantics));
++                if let Some(c) = codomain { sites.extend(self.object(p,c,SiteRole::Codomain)); }
++            }
++            _ => {}
++        }
++        sites
++    }
++}
++fn info(units: &[SourceUnit<'_>]) -> Vec<SourceInfo> {
++    units.iter().enumerate().map(|(index,u)| SourceInfo { index, file: u.source_file().to_owned(), profile: u.profile(),
++        sha256: crate::frontend::sha256_hex(u.source().as_bytes()), byte_len: u.source().len() }).collect()
++}
++fn failure(legacy: String, stage: Stage, sources: &[SourceInfo]) -> Report {
++    Report { legacy: CompileError::InvalidProgram(legacy), cause: Cause::Unmigrated { stage }, stage, sources: sources.to_vec(), sites: Vec::new() }
++}
++fn validate(program: IrProgram, origins: Origins, sources: Vec<SourceInfo>) -> Result<IrProgram, Report> {
++    crate::grammar_conformance::validate_closed_domains(&program).map_err(|e| failure(e,Stage::ClosedDomains,&sources))?;
++    crate::wellformed::validate_program(&program).map_err(|e| {
++        let cause = e.cause.unwrap_or(Cause::Unmigrated { stage: Stage::Wellformed });
++        let sites = origins.sites(&program, &cause);
++        Report { legacy: CompileError::InvalidProgram(e.legacy), cause, stage: Stage::Wellformed, sources: sources.clone(), sites }
++    })?;
++    crate::transition_data_wellformed::validate_program(&program).map_err(|e| failure(e,Stage::TransitionData,&sources))?;
++    crate::context_wellformed::validate_program(&program).map_err(|e| failure(e,Stage::Context,&sources))?;
++    Ok(program)
++}
++fn parse(unit: SourceUnit<'_>, index: usize, sources: &[SourceInfo]) -> Result<crate::frontend::ParsedUnit, Report> {
++    crate::frontend::compile_with_origins(unit.source(),unit.source_file(),unit.profile()).map_err(|e| {
++        let cause = match &e.error {
++            FrontendError::UnexpectedEnd => FrontendCause::UnexpectedEnd,
++            FrontendError::UnexpectedToken(_) => FrontendCause::UnexpectedToken,
++            FrontendError::Unsupported(_) => FrontendCause::Unsupported,
++            FrontendError::InvalidNatural(_) => FrontendCause::InvalidNatural,
++            FrontendError::InvalidAdmissibilityState(_) => FrontendCause::InvalidAdmissibilityState,
++            FrontendError::InvalidTri(_) => FrontendCause::InvalidTri,
++        };
++        Report { cause: Cause::Frontend(cause), stage: Stage::Frontend, legacy: CompileError::Frontend(e.error),
++            sources: sources.to_vec(), sites: vec![Site { unit: index, span: e.span, role: SiteRole::Failure }] }
++    })
++}
++fn origin_list(spans: Vec<Range<usize>>, unit: usize) -> Vec<Site> {
++    spans.into_iter().map(|span| Site { unit, span: Some(span), role: SiteRole::Failure }).collect()
++}
++pub fn compile(source: &str, file: &str, profile: SourceProfile) -> Result<IrProgram, Report> {
++    let unit = SourceUnit::new(source,file,profile);
++    let sources = info(&[unit]);
++    let parsed = parse(unit,0,&sources)?;
++    validate(parsed.program, Origins { objects: origin_list(parsed.objects,0), operations: origin_list(parsed.operations,0) }, sources)
++}
++pub fn compile_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, Report> {
++    let sources = info(units);
++    if units.len() < 2 {
++        return Err(Report { legacy: CompileError::InvalidProgram("el ensamblaje multifuente exige al menos dos unidades".to_owned()),
++            cause: Cause::InsufficientAssemblyUnits { actual: units.len() }, stage: Stage::Assembly, sources, sites: Vec::new() });
++    }
++    let mut objects = Vec::new(); let mut operations = Vec::new();
++    let mut origins = Origins { objects: Vec::new(), operations: Vec::new() };
++    for (index,unit) in units.iter().enumerate() {
++        let parsed = parse(*unit,index,&sources)?;
++        objects.extend(parsed.program.objects().iter().cloned());
++        operations.extend(parsed.program.operations().iter().cloned());
++        origins.objects.extend(origin_list(parsed.objects,index));
++        origins.operations.extend(origin_list(parsed.operations,index));
++    }
++    let program = crate::ir::construction::program(format!("@assembly/2b/{}-units",units.len()),crate::assembly_identity(units),objects,operations);
++    validate(program,origins,sources)
++}
+--- a/rust/sv_core/src/frontend.rs
++++ b/rust/sv_core/src/frontend.rs
+@@ -817,13 +817,33 @@
+     source_file: &str,
+     profile: SourceProfile,
+ ) -> Result<IrProgram, FrontendError> {
+-    let tokens = tokenize(source, profile)?;
+-    Parser::new(tokens, source, source_file).parse()
++    compile_with_origins(source, source_file, profile).map(|p| p.program).map_err(|e| e.error)
+ }
+ 
+-fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<Vec<Token<'a>>, FrontendError> {
++
++/// Sidecar de procedencia; nunca se serializa dentro de la IR.
++pub(crate) struct ParsedUnit {
++    pub program: IrProgram,
++    pub objects: Vec<std::ops::Range<usize>>,
++    pub operations: Vec<std::ops::Range<usize>>,
++}
++pub(crate) struct FrontendFailure {
++    pub error: FrontendError,
++    pub span: Option<std::ops::Range<usize>>,
++}
++impl From<FrontendError> for FrontendFailure {
++    fn from(error: FrontendError) -> Self { Self { error, span: None } }
++}
++pub(crate) fn compile_with_origins(source: &str, source_file: &str, profile: SourceProfile)
++    -> Result<ParsedUnit, FrontendFailure>
++{
++    let (tokens, spans) = tokenize(source, profile)?;
++    Parser::new(tokens, spans, source, source_file).parse()
++}
++fn tokenize<'a>(source: &'a str, profile: SourceProfile) -> Result<(Vec<Token<'a>>, Vec<std::ops::Range<usize>>), FrontendFailure> {
+     let bytes = source.as_bytes();
+     let mut out = Vec::new();
++    let mut spans = Vec::new();
+     let mut i = 0usize;
+     while i < bytes.len() {
+         let b = bytes[i];
+@@ -842,6 +862,7 @@
+         }
+         if b == b'-' && i + 1 < bytes.len() && bytes[i + 1] == b'>' {
+             out.push(Token::Arrow);
++            spans.push(i..i+2);
+             i += 2;
+             continue;
+         }
+@@ -852,11 +873,12 @@
+                 i += 1;
+             }
+             if i >= bytes.len() {
+-                return Err(FrontendError::UnexpectedEnd);
++                return Err(FrontendFailure { error: FrontendError::UnexpectedEnd, span: Some(source.len()..source.len()) });
+             }
+             let text = std::str::from_utf8(&bytes[start..i])
+                 .map_err(|_| FrontendError::UnexpectedToken("cadena no UTF-8".into()))?;
+             out.push(Token::Text(text.to_owned()));
++            spans.push(start-1..i+1);
+             i += 1;
+             continue;
+         }
+@@ -869,6 +891,7 @@
+             out.push(Token::Nat(
+                 std::str::from_utf8(&bytes[start..i]).unwrap().to_owned(),
+             ));
++            spans.push(start..i);
+             continue;
+         }
+ 
+@@ -891,26 +914,31 @@
+             }
+             let status = classify_surface(profile, &source[start..i]);
+             out.push(Token::Word(&source[start..i], status));
++            spans.push(start..i);
+             continue;
+         }
+ 
+         if ch.is_ascii() && "{}[]();:,=.".contains(ch) {
+             out.push(Token::Sym(ch));
++            spans.push(i..i+1);
+             i += 1;
+             continue;
+         }
+-        return Err(FrontendError::UnexpectedToken(format!(
+-            "carácter léxico no admitido U+{:04X}",
+-            ch as u32
+-        )));
++        return Err(FrontendFailure { error: FrontendError::UnexpectedToken(format!(
++            "carácter léxico no admitido U+{:04X}", ch as u32
++        )), span: Some(i..i+ch.len_utf8()) });
+     }
+     out.push(Token::Eof);
+-    Ok(out)
++    spans.push(source.len()..source.len());
++    Ok((out, spans))
+ }
+ 
+ struct Parser<'a> {
+     tokens: Vec<Token<'a>>,
+     pos: usize,
++    spans: Vec<std::ops::Range<usize>>,
++    object_origins: Vec<std::ops::Range<usize>>,
++    operation_origins: Vec<std::ops::Range<usize>>,
+     source: &'a str,
+     source_file: &'a str,
+     objects: Vec<crate::IrObject>,
+@@ -918,9 +946,12 @@
+ }
+ 
+ impl<'a> Parser<'a> {
+-    fn new(tokens: Vec<Token<'a>>, source: &'a str, source_file: &'a str) -> Self {
++    fn new(tokens: Vec<Token<'a>>, spans: Vec<std::ops::Range<usize>>, source: &'a str, source_file: &'a str) -> Self {
+         Self {
+             tokens,
++            spans,
++            object_origins: Vec::new(),
++            operation_origins: Vec::new(),
+             pos: 0,
+             source,
+             source_file,
+@@ -929,8 +960,25 @@
+         }
+     }
+ 
+-    fn parse(mut self) -> Result<IrProgram, FrontendError> {
++    fn parse(mut self) -> Result<ParsedUnit, FrontendFailure> {
++        if let Err(error) = self.parse_declarations() {
++            // EOF tiene posición inequívoca. Los demás fallos sintácticos
++            // permanecen sin rango hasta migrar su emisor; no se adivina.
++            let span = if matches!(error, FrontendError::UnexpectedEnd) {
++                Some(self.source.len()..self.source.len())
++            } else { None };
++            return Err(FrontendFailure { error, span });
++        }
++        Ok(ParsedUnit {
++            program: construction::program(self.source_file, sha256_hex(self.source.as_bytes()), self.objects, self.operations),
++            objects: self.object_origins, operations: self.operation_origins,
++        })
++    }
++    fn parse_declarations(&mut self) -> Result<(), FrontendError> {
+         while !matches!(self.peek(), Token::Eof) {
++            let start = self.spans[self.pos].start;
++            let no = self.objects.len();
++            let np = self.operations.len();
+             match self.peek_word()? {
+                 "codomain" => self.parse_codomain()?,
+                 "output_semantics" => self.parse_output_semantics()?,
+@@ -957,13 +1005,11 @@
+                 "let" => self.parse_let()?,
+                 other => return Err(FrontendError::Unsupported(other.to_owned())),
+             }
+-        }
+-        Ok(construction::program(
+-            self.source_file,
+-            sha256_hex(self.source.as_bytes()),
+-            self.objects,
+-            self.operations,
+-        ))
++            let span = start..self.spans[self.pos - 1].end;
++            self.object_origins.extend((no..self.objects.len()).map(|_| span.clone()));
++            self.operation_origins.extend((np..self.operations.len()).map(|_| span.clone()));
++        }
++        Ok(())
+     }
+ 
+     fn parse_codomain(&mut self) -> Result<(), FrontendError> {
+--- a/rust/sv_core/src/lib.rs
++++ b/rust/sv_core/src/lib.rs
+@@ -29,6 +29,7 @@
+ //! ```
+ 
+ pub mod audit_diagnostics;
++pub mod compiler_diagnostics;
+ pub mod admissibility;
+ pub mod bindings;
+ pub mod authority;
+@@ -156,13 +157,7 @@
+ /// de la IR. En particular, Ternarizer conserva nombres opacos y no es ejecutable
+ /// (K1-T / IR 0.3 §2.4). Esto también rige perfiles y ensamblaje.
+ pub fn compile_svp(source: &str, source_file: &str) -> Result<IrProgram, CompileError> {
+-    let program = frontend::compile_svp(source, source_file)?;
+-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
+-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    transition_data_wellformed::validate_program(&program)
+-        .map_err(CompileError::InvalidProgram)?;
+-    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    Ok(program)
++    compiler_diagnostics::compile(source, source_file, SourceProfile::En).map_err(|e| e.into_legacy())
+ }
+ 
+ pub fn compile_svp_profile(
+@@ -170,13 +165,7 @@
+     source_file: &str,
+     profile: SourceProfile,
+ ) -> Result<IrProgram, CompileError> {
+-    let program = frontend::compile_svp_with_profile(source, source_file, profile)?;
+-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
+-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    transition_data_wellformed::validate_program(&program)
+-        .map_err(CompileError::InvalidProgram)?;
+-    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    Ok(program)
++    compiler_diagnostics::compile(source, source_file, profile).map_err(|e| e.into_legacy())
+ }
+ 
+ /// Unidad fuente de un ensamblaje multifuente experimental.
+@@ -227,37 +216,7 @@
+ /// referencias entre unidades sin permitir que una producción sintáctica
+ /// atraviese la frontera entre archivos.
+ pub fn compile_svp_assembly(units: &[SourceUnit<'_>]) -> Result<IrProgram, CompileError> {
+-    if units.len() < 2 {
+-        return Err(CompileError::InvalidProgram(
+-            "el ensamblaje multifuente exige al menos dos unidades".to_owned(),
+-        ));
+-    }
+-
+-    let mut objects = Vec::new();
+-    let mut operations = Vec::new();
+-    for unit in units {
+-        let parsed = frontend::compile_svp_with_profile(
+-            unit.source,
+-            unit.source_file,
+-            unit.profile,
+-        )?;
+-        objects.extend(parsed.objects().iter().cloned());
+-        operations.extend(parsed.operations().iter().cloned());
+-    }
+-
+-    let identity = assembly_identity(units);
+-    let program = ir::construction::program(
+-        format!("@assembly/2b/{}-units", units.len()),
+-        identity,
+-        objects,
+-        operations,
+-    );
+-    grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;
+-    wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    transition_data_wellformed::validate_program(&program)
+-        .map_err(CompileError::InvalidProgram)?;
+-    context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;
+-    Ok(program)
++    compiler_diagnostics::compile_assembly(units).map_err(|e| e.into_legacy())
+ }
+ 
+ #[cfg(test)]
+--- a/rust/sv_core/src/wellformed.rs
++++ b/rust/sv_core/src/wellformed.rs
+@@ -1,3 +1,4 @@
++use crate::compiler_diagnostics::{ValidationFailure, Cause, DeclarationId};
+ use std::cmp::Ordering;
+ use std::collections::{BTreeMap, BTreeSet, VecDeque};
+ 
+@@ -22,23 +23,19 @@
+ }
+ 
+ impl<'a> Symbols<'a> {
+-    fn new(program: &'a IrProgram) -> Result<Self, String> {
++    fn new(program: &'a IrProgram) -> Result<Self, ValidationFailure> {
+         let mut by_name = BTreeMap::new();
+-        for object in program.objects() {
+-            if by_name
+-                .insert(object.name(), Symbol::Object(object.kind()))
+-                .is_some()
+-            {
+-                return Err(format!("identificador duplicado: {}", object.name()));
+-            }
+-        }
+-        for operation in program.operations() {
+-            if by_name
+-                .insert(operation.name(), Symbol::Operation(operation.kind()))
+-                .is_some()
+-            {
+-                return Err(format!("identificador duplicado: {}", operation.name()));
+-            }
++        let mut locations = BTreeMap::new();
++        for (id, name, symbol) in program.objects().iter().enumerate()
++            .map(|(i,o)| (DeclarationId::Object(i), o.name(), Symbol::Object(o.kind())))
++            .chain(program.operations().iter().enumerate()
++                .map(|(i,o)| (DeclarationId::Operation(i), o.name(), Symbol::Operation(o.kind()))))
++        {
++            if let Some(first) = locations.insert(name, id) {
++                return Err(ValidationFailure::known(format!("identificador duplicado: {name}"),
++                    Cause::DuplicateIdentifier { name: name.to_owned(), first, second: id }));
++            }
++            by_name.insert(name, symbol);
+         }
+         Ok(Self { by_name })
+     }
+@@ -60,7 +57,7 @@
+     }
+ }
+ 
+-pub(crate) fn validate_program(program: &IrProgram) -> Result<(), String> {
++pub(crate) fn validate_program(program: &IrProgram) -> Result<(), ValidationFailure> {
+     let symbols = Symbols::new(program)?;
+     for object in program.objects() {
+         validate_object(object.name(), object.kind(), &symbols)?;
+@@ -79,11 +76,12 @@
+                 }
+             }
+             if !duplicates.is_empty() {
+-                return Err(format!(
++                return Err(ValidationFailure::known(format!(
+                     "E115 (InvalidOutputSemantics): OutputSemantics {}: repetidas=[{}]",
+                     object.name(),
+-                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
+-                ));
++                    duplicates.iter().copied().collect::<Vec<_>>().join(", "),
++                ), Cause::OutputSemanticsKeys { cell: None, semantics: object.name().to_owned(), codomain: None,
++                    duplicates: duplicates.iter().map(|s| s.to_string()).collect(), missing: Vec::new(), extra: Vec::new() }));
+             }
+         }
+     }
+@@ -101,7 +99,7 @@
+             let mut seen = BTreeSet::new();
+             for event in events {
+                 if !seen.insert(event.as_str()) {
+-                    return Err(format!("Horizon {}: tipo de suceso repetido: {event}", object.name()));
++                    return Err(format!("Horizon {}: tipo de suceso repetido: {event}", object.name()).into());
+                 }
+             }
+         }
+@@ -113,21 +111,21 @@
+             let mut seen = BTreeSet::new();
+             for parameter in parameters {
+                 if !seen.insert(parameter.as_str()) {
+-                    return Err(format!("Domain {}: parámetro nominal repetido: {parameter}", object.name()));
+-                }
+-            }
+-        }
+-    }
+-    Ok(())
+-}
+-
+-fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Result<(), String> {
++                    return Err(format!("Domain {}: parámetro nominal repetido: {parameter}", object.name()).into());
++                }
++            }
++        }
++    }
++    Ok(())
++}
++
++fn validate_object(name: &str, kind: &IrObjectKind, symbols: &Symbols<'_>) -> Result<(), ValidationFailure> {
+     match kind {
+         IrObjectKind::Codomain { values } => {
+             if values.is_empty() {
+-                return Err(format!(
++                return Err(ValidationFailure::known(format!(
+                     "E004 (InvalidCodomain): codomain {name} vacío"
+-                ));
++                ), Cause::EmptyCodomain { name: name.to_owned() }));
+             }
+             let mut seen = BTreeSet::new();
+             let mut duplicates = BTreeSet::new();
+@@ -137,10 +135,10 @@
+                 }
+             }
+             if !duplicates.is_empty() {
+-                return Err(format!(
++                return Err(ValidationFailure::known(format!(
+                     "E004 (InvalidCodomain): codomain {name} repite: {}",
+-                    duplicates.into_iter().collect::<Vec<_>>().join(", ")
+-                ));
++                    duplicates.iter().copied().collect::<Vec<_>>().join(", ")
++                ), Cause::DuplicateCodomainMembers { name: name.to_owned(), duplicates: duplicates.iter().map(|s| s.to_string()).collect() }));
+             }
+         }
+         IrObjectKind::OutputSemantics { .. } => {}
+@@ -152,12 +150,12 @@
+             ..
+         } => {
+             if nat_cmp_text(b, "3") == Ordering::Less {
+-                return Err(format!("CellSpec {name}: b debe ser >= 3"));
++                return Err(format!("CellSpec {name}: b debe ser >= 3").into());
+             }
+             let codomain_kind = expect_object(symbols, codomain, "Codomain", |k| matches!(k, IrObjectKind::Codomain { .. }))?;
+             let semantics_kind = expect_object(symbols, semantics, "OutputSemantics", |k| matches!(k, IrObjectKind::OutputSemantics { .. }))?;
+             if !matches!(role.as_str(), "Base" | "Supervisor" | "Composite") {
+-                return Err(format!("CellSpec {name}: rol no reconocido: {role}"));
++                return Err(format!("CellSpec {name}: rol no reconocido: {role}").into());
+             }
+             let expected: BTreeSet<&str> = match codomain_kind {
+                 IrObjectKind::Codomain { values } => values.iter().map(String::as_str).collect(),
+@@ -177,12 +175,13 @@
+             let missing: Vec<_> = expected.difference(&seen).copied().collect();
+             let extra: Vec<_> = seen.difference(&expected).copied().collect();
+             if !duplicates.is_empty() || !missing.is_empty() || !extra.is_empty() {
+-                return Err(format!(
++                return Err(ValidationFailure::known(format!(
+                     "E115 (InvalidOutputSemantics): CellSpec {name}, OutputSemantics {semantics}, Codomain {codomain}: repetidas=[{}]; ausentes=[{}]; ajenas=[{}]",
+-                    duplicates.into_iter().collect::<Vec<_>>().join(", "),
++                    duplicates.iter().copied().collect::<Vec<_>>().join(", "),
+                     missing.join(", "),
+                     extra.join(", "),
+-                ));
++                ), Cause::OutputSemanticsKeys { cell: Some(name.to_owned()), semantics: semantics.to_owned(), codomain: Some(codomain.to_owned()),
++                    duplicates: duplicates.iter().map(|s| s.to_string()).collect(), missing: missing.iter().map(|s| s.to_string()).collect(), extra: extra.iter().map(|s| s.to_string()).collect() }));
+             }
+         }
+         IrObjectKind::CoupledSpec { cell, bridges } => {
+@@ -190,7 +189,7 @@
+             let n = match cell { IrObjectKind::CellSpec { n, .. } => n, _ => unreachable!() };
+             for position in bridges {
+                 if nat_is_zero(position) || nat_cmp(position, n) == Ordering::Greater {
+-                    return Err(format!("CoupledSpec {name}: posición puente fuera de rango"));
++                    return Err(format!("CoupledSpec {name}: posición puente fuera de rango").into());
+                 }
+             }
+             // J1.2: BridgeSet is a set of Nat values. Reject repetition;
+@@ -198,7 +197,7 @@
+             let mut seen = BTreeSet::new();
+             for position in bridges {
+                 if !seen.insert(position.as_decimal()) {
+-                    return Err(format!("CoupledSpec {name}: posición puente repetida: {}", position.as_decimal()));
++                    return Err(format!("CoupledSpec {name}: posición puente repetida: {}", position.as_decimal()).into());
+                 }
+             }
+         }
+@@ -211,11 +210,11 @@
+             let mut seen = BTreeSet::new();
+             for (key, _) in mapping {
+                 if !seen.insert(key.as_str()) {
+-                    return Err(format!("Connector {name}: clave duplicada"));
++                    return Err(format!("Connector {name}: clave duplicada").into());
+                 }
+             }
+             if seen != expected {
+-                return Err(format!("Connector {name}: mapping incompleto o inconsistente"));
++                return Err(format!("Connector {name}: mapping incompleto o inconsistente").into());
+             }
+         }
+         IrObjectKind::AdmissibilityTable { input_codomains, output_codomain, table } => {
+@@ -223,20 +222,20 @@
+         }
+         IrObjectKind::CaptureSpec { parameter_id, observation_space, failure_symbol, .. } => {
+             if nat_is_zero(parameter_id) || observation_space.is_empty() || failure_symbol != "Bottom" {
+-                return Err(format!("CaptureSpec {name}: definición no canónica"));
++                return Err(format!("CaptureSpec {name}: definición no canónica").into());
+             }
+         }
+         IrObjectKind::AdmissibilitySpec { parameter_id, states, rule } => {
+             let labels: BTreeSet<&str> = states.iter().map(|state| state.label()).collect();
+             if labels != BTreeSet::from(["Ok", "Degraded", "NotAdmitted"]) {
+-                return Err(format!("AdmissibilitySpec {name}: estados no canónicos"));
++                return Err(format!("AdmissibilitySpec {name}: estados no canónicos").into());
+             }
+             AdmissibilitySpec::new(name, parameter_id.clone(), rule.clone())
+                 .map_err(|error| format!("AdmissibilitySpec {name}: {error:?}"))?;
+         }
+         IrObjectKind::Ternarizer { observation_space, partition_zero, partition_one, partition_u, .. } => {
+             if observation_space.is_empty() || partition_zero.is_empty() || partition_one.is_empty() || partition_u.is_empty() {
+-                return Err(format!("Ternarizer {name}: definición incompleta"));
++                return Err(format!("Ternarizer {name}: definición incompleta").into());
+             }
+         }
+         IrObjectKind::ResSpec { .. } => {}
+@@ -244,7 +243,7 @@
+             let cell = expect_object(symbols, spec, "CellSpec", |k| matches!(k, IrObjectKind::CellSpec { .. }))?;
+             let n = match cell { IrObjectKind::CellSpec { n, .. } => n, _ => unreachable!() };
+             if !nat_eq_usize(n, vector.len()) {
+-                return Err(format!("CellState {name}: longitud de vector incompatible"));
++                return Err(format!("CellState {name}: longitud de vector incompatible").into());
+             }
+         }
+         IrObjectKind::CoupledState { spec, base_vector, updated_vector } => {
+@@ -256,7 +255,7 @@
+         IrObjectKind::SemanticRelation { .. } | IrObjectKind::Pattern { .. } => {}
+         IrObjectKind::Horizon { architecture, events } => {
+             if architecture.is_empty() || events.is_empty() {
+-                return Err(format!("Horizon {name}: definición incompleta"));
++                return Err(format!("Horizon {name}: definición incompleta").into());
+             }
+         }
+         IrObjectKind::Frame {
+@@ -285,24 +284,24 @@
+                 _ => unreachable!(),
+             };
+             if events.iter().any(|(event, _)| !declared.contains(event.as_str())) {
+-                return Err(format!("TransitionData {name}: suceso fuera del Horizon"));
++                return Err(format!("TransitionData {name}: suceso fuera del Horizon").into());
+             }
+             if induced_parameters.is_empty() {
+-                return Err(format!("TransitionData {name}: induced_parameters vacío"));
++                return Err(format!("TransitionData {name}: induced_parameters vacío").into());
+             }
+         }
+         IrObjectKind::Trajectory { entries } => {
+             if entries.is_empty() {
+-                return Err(format!("Trajectory {name}: entries vacío"));
++                return Err(format!("Trajectory {name}: entries vacío").into());
+             }
+             let last = entries.len() - 1;
+             for (index, (frame, transition)) in entries.iter().enumerate() {
+                 expect_object(symbols, frame, "Frame", |k| matches!(k, IrObjectKind::Frame { .. }))?;
+                 if index < last && transition.is_none() {
+-                    return Err(format!("Trajectory {name}: entrada no final sin transición"));
++                    return Err(format!("Trajectory {name}: entrada no final sin transición").into());
+                 }
+                 if index == last && transition.is_some() {
+-                    return Err(format!("Trajectory {name}: última entrada con transición"));
++                    return Err(format!("Trajectory {name}: última entrada con transición").into());
+                 }
+                 if let Some(transition) = transition {
+                     expect_object(symbols, transition, "TransitionData", |k| matches!(k, IrObjectKind::TransitionData { .. }))?;
+@@ -318,22 +317,22 @@
+             let horizon = expect_object(symbols, horizon_name, "Horizon", |k| matches!(k, IrObjectKind::Horizon { .. }))?;
+             let domain_architecture = match horizon { IrObjectKind::Horizon { architecture, .. } => architecture, _ => unreachable!() };
+             if architecture != domain_architecture {
+-                return Err(format!("Agent {name}: architecture incompatible con Domain"));
++                return Err(format!("Agent {name}: architecture incompatible con Domain").into());
+             }
+         }
+         IrObjectKind::QuerySpec { query_type, scope, .. } => {
+             if query_type == "PendingU" {
+-                return Err(format!("QuerySpec {name}: PendingU no habilitado"));
++                return Err(format!("QuerySpec {name}: PendingU no habilitado").into());
+             }
+             let expected_scope = match query_type.as_str() {
+                 "PointEvaluation" => "Cell",
+                 "TrajectoryState" => "Trajectory",
+                 "FrameComparison" => "Pair",
+                 "CoverageState" | "GlobalCriticality" => "Architecture",
+-                _ => return Err(format!("QuerySpec {name}: query_type no reconocido")),
++                _ => return Err(format!("QuerySpec {name}: query_type no reconocido").into()),
+             };
+             if scope != expected_scope {
+-                return Err(format!("QuerySpec {name}: scope incompatible"));
++                return Err(format!("QuerySpec {name}: scope incompatible").into());
+             }
+         }
+     }
+@@ -359,26 +358,26 @@
+         _ => unreachable!(),
+     };
+     let Some(expected_count) = domains.iter().try_fold(1usize, |acc, values| acc.checked_mul(values.len())) else {
+-        return Err(format!("AdmissibilityTable {name}: cardinalidad no representable"));
++        return Err(format!("AdmissibilityTable {name}: cardinalidad no representable").into());
+     };
+     let domain_sets: Vec<BTreeSet<&str>> = domains.iter().map(|v| v.iter().map(String::as_str).collect()).collect();
+     let mut seen = BTreeSet::new();
+     for (inputs, output) in table {
+         if inputs.len() != domain_sets.len() {
+-            return Err(format!("AdmissibilityTable {name}: aridad incompatible"));
++            return Err(format!("AdmissibilityTable {name}: aridad incompatible").into());
+         }
+         if inputs.iter().enumerate().any(|(i, value)| !domain_sets[i].contains(value.as_str())) {
+-            return Err(format!("AdmissibilityTable {name}: entrada fuera de codominio"));
++            return Err(format!("AdmissibilityTable {name}: entrada fuera de codominio").into());
+         }
+         if !out_values.contains(output.as_str()) {
+-            return Err(format!("AdmissibilityTable {name}: salida fuera de codominio"));
++            return Err(format!("AdmissibilityTable {name}: salida fuera de codominio").into());
+         }
+         if !seen.insert(inputs.clone()) {
+-            return Err(format!("AdmissibilityTable {name}: fila duplicada"));
++            return Err(format!("AdmissibilityTable {name}: fila duplicada").into());
+         }
+     }
+     if seen.len() != expected_count {
+-        return Err(format!("AdmissibilityTable {name}: tabla incompleta"));
++        return Err(format!("AdmissibilityTable {name}: tabla incompleta").into());
+     }
+     Ok(())
+ }
+@@ -395,12 +394,12 @@
+     let cell = expect_object(symbols, cell_name, "CellSpec", |k| matches!(k, IrObjectKind::CellSpec { .. }))?;
+     let n = match cell { IrObjectKind::CellSpec { n, .. } => n, _ => unreachable!() };
+     if !nat_eq_usize(n, base_vector.len()) || !nat_eq_usize(n, updated_vector.len()) {
+-        return Err(format!("CoupledState {name}: longitud incompatible"));
++        return Err(format!("CoupledState {name}: longitud incompatible").into());
+     }
+     let bridge_set: BTreeSet<&str> = bridges.iter().map(Nat::as_decimal).collect();
+     for (index, (before, after)) in base_vector.iter().zip(updated_vector).enumerate() {
+         if before != after && !bridge_set.contains((index + 1).to_string().as_str()) {
+-            return Err(format!("CoupledState {name}: actualización fuera de BridgeSet"));
++            return Err(format!("CoupledState {name}: actualización fuera de BridgeSet").into());
+         }
+     }
+     Ok(())
+@@ -425,34 +424,34 @@
+ 
+     for (source, target, position, connector_name) in edges {
+         if !node_set.contains(source.as_str()) || !node_set.contains(target.as_str()) {
+-            return Err(format!("Graph {name}: arista fuera del conjunto de nodos"));
++            return Err(format!("Graph {name}: arista fuera del conjunto de nodos").into());
+         }
+         let connector = expect_object(symbols, connector_name, "Connector", |k| matches!(k, IrObjectKind::Connector { .. }))?;
+         let source_spec = symbols.object(source)?;
+         let target_spec = symbols.object(target)?;
+         let (source_cell_name, target_bridges) = match (source_spec, target_spec) {
+             (IrObjectKind::CoupledSpec { cell, .. }, IrObjectKind::CoupledSpec { bridges, .. }) => (cell, bridges),
+-            _ => return Err(format!("Graph {name}: nodo no CoupledSpec")),
++            _ => return Err(format!("Graph {name}: nodo no CoupledSpec").into()),
+         };
+         if !target_bridges.iter().any(|bridge| bridge == position) {
+-            return Err(format!("Graph {name}: posición fuera de BridgeSet"));
++            return Err(format!("Graph {name}: posición fuera de BridgeSet").into());
+         }
+         let (connector_codomain, connector_position) = match connector {
+             IrObjectKind::Connector { source_codomain, target_position, .. } => (source_codomain, target_position),
+             _ => unreachable!(),
+         };
+         if connector_position != position {
+-            return Err(format!("Graph {name}: target_position incompatible"));
++            return Err(format!("Graph {name}: target_position incompatible").into());
+         }
+         let source_cell = expect_object(symbols, source_cell_name, "CellSpec", |k| matches!(k, IrObjectKind::CellSpec { .. }))?;
+         let source_codomain = match source_cell { IrObjectKind::CellSpec { codomain, .. } => codomain, _ => unreachable!() };
+         if connector_codomain != source_codomain {
+-            return Err(format!("Graph {name}: source_codomain incompatible"));
++            return Err(format!("Graph {name}: source_codomain incompatible").into());
+         }
+         adjacency.get_mut(source.as_str()).unwrap().push(target.as_str());
+         *indegree.get_mut(target.as_str()).unwrap() += 1;
+         if regime == "Simple" && !simple_targets.insert((target.as_str(), position.as_decimal().to_owned())) {
+-            return Err(format!("Graph {name}: concurrencia en régimen Simple"));
++            return Err(format!("Graph {name}: concurrencia en régimen Simple").into());
+         }
+     }
+ 
+@@ -469,7 +468,7 @@
+         }
+     }
+     if visited != node_set.len() {
+-        return Err(format!("Graph {name}: ciclo detectado"));
++        return Err(format!("Graph {name}: ciclo detectado").into());
+     }
+     Ok(())
+ }
+@@ -502,7 +501,7 @@
+         let operation = symbols.operation(reference)?;
+         let source = match operation {
+             IrOperationKind::Evaluate { state } => state.clone(),
+-            _ => return Err(format!("Frame {name}: eval_results contiene no-Evaluate")),
++            _ => return Err(format!("Frame {name}: eval_results contiene no-Evaluate").into()),
+         };
+         evals.push(ResolvedEvalResult::new(reference, source));
+     }
+@@ -512,7 +511,7 @@
+         let operation = symbols.operation(reference)?;
+         let inputs = match operation {
+             IrOperationKind::Gate { eval_results, .. } => eval_results.clone(),
+-            _ => return Err(format!("Frame {name}: gate_results contiene no-Gate")),
++            _ => return Err(format!("Frame {name}: gate_results contiene no-Gate").into()),
+         };
+         gates.push(ResolvedGateResult::new(reference, inputs));
+     }
+@@ -522,7 +521,7 @@
+         let operation = symbols.operation(reference)?;
+         let (meta_eval, target) = match operation {
+             IrOperationKind::Supervise { meta_eval, target } => (meta_eval.clone(), target),
+-            _ => return Err(format!("Frame {name}: supervision contiene no-Supervise")),
++            _ => return Err(format!("Frame {name}: supervision contiene no-Supervise").into()),
+         };
+         let target = match target {
+             IrSupervisableTarget::Cell { reference } => ResolvedSupervisionTarget::cell(reference),
+@@ -554,7 +553,7 @@
+ ) -> Result<(), String> {
+     expect_object(symbols, horizon, "Horizon", |k| matches!(k, IrObjectKind::Horizon { .. }))?;
+     if capture_specs.is_empty() || admissibility_specs.is_empty() || ternarizers.is_empty() {
+-        return Err(format!("Domain {name}: cadenas de constitución vacías"));
++        return Err(format!("Domain {name}: cadenas de constitución vacías").into());
+     }
+     let mut capture_ids = BTreeSet::new();
+     let mut capture_spaces = BTreeSet::new();
+@@ -573,7 +572,7 @@
+         }
+     }
+     if capture_ids != admissibility_ids {
+-        return Err(format!("Domain {name}: parameter_id incompatibles"));
++        return Err(format!("Domain {name}: parameter_id incompatibles").into());
+     }
+     let mut ternarizer_spaces = BTreeSet::new();
+     for reference in ternarizers {
+@@ -583,7 +582,7 @@
+         }
+     }
+     if !capture_spaces.is_subset(&ternarizer_spaces) {
+-        return Err(format!("Domain {name}: observation_space sin Ternarizer"));
++        return Err(format!("Domain {name}: observation_space sin Ternarizer").into());
+     }
+     Ok(())
+ }

@@ -1,0 +1,678 @@
+[
+  {
+    "path": "rust/sv_core/src/frontend.rs",
+    "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 855,
+        "texto": "return Err(FrontendError::UnexpectedEnd);"
+      },
+      {
+        "linea": 858,
+        "texto": ".map_err(|_| FrontendError::UnexpectedToken(\"cadena no UTF-8\".into()))?;"
+      },
+      {
+        "linea": 902,
+        "texto": "return Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 958,
+        "texto": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1180,
+        "texto": ".map_err(|_| FrontendError::InvalidAdmissibilityState(label))?;"
+      },
+      {
+        "linea": 1191,
+        "texto": "return Err(FrontendError::InvalidAdmissibilityState(format!("
+      },
+      {
+        "linea": 1340,
+        "texto": "\"table\" if table.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1342,
+        "texto": "\"table\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1345,
+        "texto": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1348,
+        "texto": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1378,
+        "texto": "\"arity\" if arity.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1380,
+        "texto": "\"arity\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1383,
+        "texto": "\"constraints\" if constraints.is_some() => return Err(FrontendError::UnexpectedToken("
+      },
+      {
+        "linea": 1386,
+        "texto": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1764,
+        "texto": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 1813,
+        "texto": "return Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 1873,
+        "texto": "other => return Err(FrontendError::Unsupported(other.to_owned())),"
+      },
+      {
+        "linea": 2080,
+        "texto": "_ => Err(FrontendError::InvalidTri(label)),"
+      },
+      {
+        "linea": 2093,
+        "texto": "Token::Eof => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2094,
+        "texto": "other => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2104,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2105,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2115,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2116,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2124,
+        "texto": "Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2132,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2133,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2143,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2144,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2152,
+        "texto": "Nat::from_decimal(&value).map_err(|_| FrontendError::InvalidNatural(value))"
+      },
+      {
+        "linea": 2154,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2155,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!(\"{other:?}\"))),"
+      },
+      {
+        "linea": 2165,
+        "texto": "Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2177,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2178,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2190,
+        "texto": "Some(Token::Eof) | None => Err(FrontendError::UnexpectedEnd),"
+      },
+      {
+        "linea": 2191,
+        "texto": "Some(other) => Err(FrontendError::UnexpectedToken(format!("
+      },
+      {
+        "linea": 2228,
+        "texto": "Nat::from_decimal(&text).map_err(|_| FrontendError::InvalidNatural(text))"
+      }
+    ]
+  },
+  {
+    "path": "rust/sv_core/src/grammar_conformance.rs",
+    "sha256": "1c6191324d82825c6cdac4dba885541f43ec991ccdb914c581eb98ab4220eaa8",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 14,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 22,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 30,
+        "texto": "return Err(format!("
+      }
+    ]
+  },
+  {
+    "path": "rust/sv_core/src/wellformed.rs",
+    "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 32,
+        "texto": "return Err(format!(\"identificador duplicado: {}\", object.name()));"
+      },
+      {
+        "linea": 40,
+        "texto": "return Err(format!(\"identificador duplicado: {}\", operation.name()));"
+      },
+      {
+        "linea": 49,
+        "texto": "Some(Symbol::Operation(_)) => Err(format!(\"{name} no es un objeto declarado\")),"
+      },
+      {
+        "linea": 50,
+        "texto": "None => Err(format!(\"referencia no declarada: {name}\")),"
+      },
+      {
+        "linea": 57,
+        "texto": "Some(Symbol::Object(_)) => Err(format!(\"{name} no es un resultado de operación\")),"
+      },
+      {
+        "linea": 58,
+        "texto": "None => Err(format!(\"referencia no declarada: {name}\")),"
+      },
+      {
+        "linea": 82,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 104,
+        "texto": "return Err(format!(\"Horizon {}: tipo de suceso repetido: {event}\", object.name()));"
+      },
+      {
+        "linea": 116,
+        "texto": "return Err(format!(\"Domain {}: parámetro nominal repetido: {parameter}\", object.name()));"
+      },
+      {
+        "linea": 128,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 140,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 155,
+        "texto": "return Err(format!(\"CellSpec {name}: b debe ser >= 3\"));"
+      },
+      {
+        "linea": 160,
+        "texto": "return Err(format!(\"CellSpec {name}: rol no reconocido: {role}\"));"
+      },
+      {
+        "linea": 180,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 193,
+        "texto": "return Err(format!(\"CoupledSpec {name}: posición puente fuera de rango\"));"
+      },
+      {
+        "linea": 201,
+        "texto": "return Err(format!(\"CoupledSpec {name}: posición puente repetida: {}\", position.as_decimal()));"
+      },
+      {
+        "linea": 214,
+        "texto": "return Err(format!(\"Connector {name}: clave duplicada\"));"
+      },
+      {
+        "linea": 218,
+        "texto": "return Err(format!(\"Connector {name}: mapping incompleto o inconsistente\"));"
+      },
+      {
+        "linea": 226,
+        "texto": "return Err(format!(\"CaptureSpec {name}: definición no canónica\"));"
+      },
+      {
+        "linea": 232,
+        "texto": "return Err(format!(\"AdmissibilitySpec {name}: estados no canónicos\"));"
+      },
+      {
+        "linea": 235,
+        "texto": ".map_err(|error| format!(\"AdmissibilitySpec {name}: {error:?}\"))?;"
+      },
+      {
+        "linea": 239,
+        "texto": "return Err(format!(\"Ternarizer {name}: definición incompleta\"));"
+      },
+      {
+        "linea": 247,
+        "texto": "return Err(format!(\"CellState {name}: longitud de vector incompatible\"));"
+      },
+      {
+        "linea": 259,
+        "texto": "return Err(format!(\"Horizon {name}: definición incompleta\"));"
+      },
+      {
+        "linea": 288,
+        "texto": "return Err(format!(\"TransitionData {name}: suceso fuera del Horizon\"));"
+      },
+      {
+        "linea": 291,
+        "texto": "return Err(format!(\"TransitionData {name}: induced_parameters vacío\"));"
+      },
+      {
+        "linea": 296,
+        "texto": "return Err(format!(\"Trajectory {name}: entries vacío\"));"
+      },
+      {
+        "linea": 302,
+        "texto": "return Err(format!(\"Trajectory {name}: entrada no final sin transición\"));"
+      },
+      {
+        "linea": 305,
+        "texto": "return Err(format!(\"Trajectory {name}: última entrada con transición\"));"
+      },
+      {
+        "linea": 321,
+        "texto": "return Err(format!(\"Agent {name}: architecture incompatible con Domain\"));"
+      },
+      {
+        "linea": 326,
+        "texto": "return Err(format!(\"QuerySpec {name}: PendingU no habilitado\"));"
+      },
+      {
+        "linea": 333,
+        "texto": "_ => return Err(format!(\"QuerySpec {name}: query_type no reconocido\")),"
+      },
+      {
+        "linea": 336,
+        "texto": "return Err(format!(\"QuerySpec {name}: scope incompatible\"));"
+      },
+      {
+        "linea": 362,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: cardinalidad no representable\"));"
+      },
+      {
+        "linea": 368,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: aridad incompatible\"));"
+      },
+      {
+        "linea": 371,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: entrada fuera de codominio\"));"
+      },
+      {
+        "linea": 374,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: salida fuera de codominio\"));"
+      },
+      {
+        "linea": 377,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: fila duplicada\"));"
+      },
+      {
+        "linea": 381,
+        "texto": "return Err(format!(\"AdmissibilityTable {name}: tabla incompleta\"));"
+      },
+      {
+        "linea": 398,
+        "texto": "return Err(format!(\"CoupledState {name}: longitud incompatible\"));"
+      },
+      {
+        "linea": 403,
+        "texto": "return Err(format!(\"CoupledState {name}: actualización fuera de BridgeSet\"));"
+      },
+      {
+        "linea": 428,
+        "texto": "return Err(format!(\"Graph {name}: arista fuera del conjunto de nodos\"));"
+      },
+      {
+        "linea": 435,
+        "texto": "_ => return Err(format!(\"Graph {name}: nodo no CoupledSpec\")),"
+      },
+      {
+        "linea": 438,
+        "texto": "return Err(format!(\"Graph {name}: posición fuera de BridgeSet\"));"
+      },
+      {
+        "linea": 445,
+        "texto": "return Err(format!(\"Graph {name}: target_position incompatible\"));"
+      },
+      {
+        "linea": 450,
+        "texto": "return Err(format!(\"Graph {name}: source_codomain incompatible\"));"
+      },
+      {
+        "linea": 455,
+        "texto": "return Err(format!(\"Graph {name}: concurrencia en régimen Simple\"));"
+      },
+      {
+        "linea": 472,
+        "texto": "return Err(format!(\"Graph {name}: ciclo detectado\"));"
+      },
+      {
+        "linea": 505,
+        "texto": "_ => return Err(format!(\"Frame {name}: eval_results contiene no-Evaluate\")),"
+      },
+      {
+        "linea": 515,
+        "texto": "_ => return Err(format!(\"Frame {name}: gate_results contiene no-Gate\")),"
+      },
+      {
+        "linea": 525,
+        "texto": "_ => return Err(format!(\"Frame {name}: supervision contiene no-Supervise\")),"
+      },
+      {
+        "linea": 544,
+        "texto": ".map_err(|error| format!(\"Frame {name}: {error:?}\"))"
+      },
+      {
+        "linea": 557,
+        "texto": "return Err(format!(\"Domain {name}: cadenas de constitución vacías\"));"
+      },
+      {
+        "linea": 576,
+        "texto": "return Err(format!(\"Domain {name}: parameter_id incompatibles\"));"
+      },
+      {
+        "linea": 586,
+        "texto": "return Err(format!(\"Domain {name}: observation_space sin Ternarizer\"));"
+      },
+      {
+        "linea": 595,
+        "texto": "return Err(format!(\"Evaluate {name}: fuente no evaluable\"));"
+      },
+      {
+        "linea": 607,
+        "texto": "return Err(format!(\"Compose {name}: relations/patterns no puede estar vacío\"));"
+      },
+      {
+        "linea": 624,
+        "texto": "IrOperationKind::Compose { .. } | IrOperationKind::Projection { .. } => return Err(format!(\"Projection {name}: fuente no proyectable\")),"
+      },
+      {
+        "linea": 627,
+        "texto": "return Err(format!(\"Projection {name}: campo inexistente\"));"
+      },
+      {
+        "linea": 638,
+        "texto": "return Err(format!(\"Gate {name}: número de entradas incompatible\"));"
+      },
+      {
+        "linea": 644,
+        "texto": "return Err(format!(\"Gate {name}: entrada no EvalResult\"));"
+      },
+      {
+        "linea": 649,
+        "texto": "return Err(format!(\"Gate {name}: codominios posicionales incompatibles\"));"
+      },
+      {
+        "linea": 701,
+        "texto": ".map_err(|error| format!(\"Resolve {name}: {error:?}\"))"
+      },
+      {
+        "linea": 748,
+        "texto": "if architecture != agent_architecture { return Err(format!(\"Query {name}: ArchitectureView fuera del Agent\")); }"
+      },
+      {
+        "linea": 750,
+        "texto": "for reference in evals { if !matches!(symbols.operation(reference)?, IrOperationKind::Evaluate { .. }) { return Err(format!(\"Query {name}: eval no EvalResult\")); } }"
+      },
+      {
+        "linea": 751,
+        "texto": "for reference in gates { if !matches!(symbols.operation(reference)?, IrOperationKind::Gate { .. }) { return Err(format!(\"Query {name}: gate no GateResult\")); } }"
+      },
+      {
+        "linea": 756,
+        "texto": "if &references[0] != agent_domain { return Err(format!(\"Query {name}: CoverageReport fuera del Agent\")); }"
+      },
+      {
+        "linea": 760,
+        "texto": "if query_type != actual_type { return Err(format!(\"Query {name}: QueryContext incompatible con QuerySpec\")); }"
+      },
+      {
+        "linea": 766,
+        "texto": "let state = match meta { IrOperationKind::Evaluate { state } => state, _ => return Err(format!(\"Supervise {name}: meta_eval no EvalResult\")) };"
+      },
+      {
+        "linea": 768,
+        "texto": "IrSupervisableTarget::Cell { reference } => if !matches!(symbols.operation(reference)?, IrOperationKind::Evaluate { .. }) { return Err(format!(\"Supervise {name}: CellTarget de tipo incorrecto\")); },"
+      },
+      {
+        "linea": 769,
+        "texto": "IrSupervisableTarget::Composed { reference } => if !matches!(symbols.operation(reference)?, IrOperationKind::Gate { .. }) { return Err(format!(\"Supervise {name}: ComposedTarget de tipo incorrecto\")); },"
+      },
+      {
+        "linea": 773,
+        "texto": "return Err(format!(\"Supervise {name}: meta_eval no procede de Supervisor\"));"
+      },
+      {
+        "linea": 794,
+        "texto": "if predicate(kind) { Ok(kind) } else { Err(format!(\"{name}: se esperaba {expected}\")) }"
+      }
+    ]
+  },
+  {
+    "path": "rust/sv_core/src/transition_data_wellformed.rs",
+    "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 41,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 47,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 57,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 63,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 73,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 85,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 91,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 97,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 105,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 114,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 120,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 130,
+        "texto": "return Err(format!("
+      },
+      {
+        "linea": 139,
+        "texto": "return Err(format!("
+      }
+    ]
+  },
+  {
+    "path": "rust/sv_core/src/context_wellformed.rs",
+    "sha256": "bcb182abd71d3e1e1c00b0685a4032328db322440ed30916c9688a8d76f25fe9",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 24,
+        "texto": "_ => Err(format!(\"Contexto: {name}: se esperaba Frame\")),"
+      },
+      {
+        "linea": 32,
+        "texto": "None => Err(format!(\"Contexto: Trajectory {name}: vacía\")),"
+      },
+      {
+        "linea": 34,
+        "texto": "_ => Err(format!(\"Contexto: {name}: se esperaba Trajectory\")),"
+      },
+      {
+        "linea": 41,
+        "texto": "_ => Err(format!(\"Contexto: {name}: se esperaba CompositionGraph\")),"
+      },
+      {
+        "linea": 57,
+        "texto": "_ => return Err(format!(\"Contexto: {evaluation}: se esperaba EvalResult\")),"
+      },
+      {
+        "linea": 62,
+        "texto": "_ => Err(format!(\"Contexto: {state}: fuente no evaluable\")),"
+      },
+      {
+        "linea": 69,
+        "texto": "return Err(format!(\"Query {query}: Frame {frame}: arquitectura {actual} ajena al Agent {agent} ({architecture})\"));"
+      },
+      {
+        "linea": 90,
+        "texto": "return Err(format!(\"Trajectory {name}: Frame {frame}: arquitectura {actual} distinta de {architecture}\"));"
+      },
+      {
+        "linea": 96,
+        "texto": "return Err(format!(\"Trajectory {name}: TransitionData {transition}: horizonte {horizon_ref} de {actual} distinto de {architecture}\"));"
+      },
+      {
+        "linea": 113,
+        "texto": "_ => return Err(format!(\"Query {name}: {by}: se esperaba Agent\")),"
+      },
+      {
+        "linea": 124,
+        "texto": "return Err(format!(\"Query {name}: Trajectory {reference}: arquitectura {actual} ajena al Agent {by} ({architecture})\"));"
+      },
+      {
+        "linea": 130,
+        "texto": "return Err(format!(\"Query {name}: CellSpec {cell} ajena a la arquitectura {architecture}\"));"
+      },
+      {
+        "linea": 135,
+        "texto": "return Err(format!(\"Query {name}: EvalResult {evaluation} ajeno a la arquitectura {architecture}\"));"
+      },
+      {
+        "linea": 141,
+        "texto": "_ => return Err(format!(\"Query {name}: {gate}: se esperaba GateResult\")),"
+      },
+      {
+        "linea": 145,
+        "texto": "return Err(format!(\"Query {name}: GateResult {gate}: EvalResult {evaluation} ajeno a la arquitectura {architecture}\"));"
+      },
+      {
+        "linea": 153,
+        "texto": "_ => return Err(format!(\"Query {name}: {domain}: se esperaba Domain\")),"
+      },
+      {
+        "linea": 156,
+        "texto": "return Err(format!(\"Query {name}: CoverageReport: interface {} distinta de Domain {domain} ({interface})\", references[1]));"
+      },
+      {
+        "linea": 159,
+        "texto": "return Err(format!(\"Query {name}: CoverageReport: silent_u {} distinta de Domain {domain} ({silent_u})\", references[2]));"
+      }
+    ]
+  },
+  {
+    "path": "rust/sv_core/src/lib.rs",
+    "sha256": "9b236883c3fcca2b8f81f15f97c3bf66fd32a8701813a75b2900103788290f8f",
+    "emisores_lexicos_a_revisar": [
+      {
+        "linea": 160,
+        "texto": "grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 161,
+        "texto": "wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 163,
+        "texto": ".map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 164,
+        "texto": "context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 174,
+        "texto": "grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 175,
+        "texto": "wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 177,
+        "texto": ".map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 178,
+        "texto": "context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 231,
+        "texto": "return Err(CompileError::InvalidProgram("
+      },
+      {
+        "linea": 255,
+        "texto": "grammar_conformance::validate_closed_domains(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 256,
+        "texto": "wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 258,
+        "texto": ".map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 259,
+        "texto": "context_wellformed::validate_program(&program).map_err(CompileError::InvalidProgram)?;"
+      },
+      {
+        "linea": 430,
+        "texto": "other => Err(InvalidTriValue(other)),"
+      },
+      {
+        "linea": 479,
+        "texto": "assert_eq!(Tri::try_from(value), Err(InvalidTriValue(value)));"
+      }
+    ]
+  }
+]

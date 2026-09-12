@@ -1566,3 +1566,16 @@ Se realiza una ampliación aditiva de la cápsula RETP-154: métodos detallados 
 Premisa positiva sintética. No se acredita admisión profesional, cobertura completa A–L, P3/P4/P5, WASI, navegador ni cierre DG01–DG14 global. El compilador conserva emisiones textuales E004/E115 y CompileError::InvalidProgram(String); se localiza su migración como siguiente frente diagnóstico. Cero ejecuciones externas recibidas: Qwen/DeepSeek/Grok/Claude disponen de un encargo público con exposición declarada y sin reinicio de reservas. DFL-001/005/006/011 permanecen abiertas; filas y aprobación humana conservadas. Núcleo productivo sin modificar. Estado: DIAGNOSTICOS_CANDIDATOS_NATIVOS_CONFORMES_CIERRE_GLOBAL_PENDIENTE.
 
 **Corrección del instrumental en el mismo corte:** localizada por inspección una espera final sin timeout tras cierre de ambos flujos. Se conserva la versión exacta de los 18 procesos, se corrige la espera y se comprueba el instrumento con tres procesos adicionales (tiempo con flujos abiertos/cerrados y tamaño). Evidencia separada, sin cambio de candidata/oráculo ni repetición de su cualificación.
+
+
+<a id="retp-158"></a>
+
+## RETP-2026-158 · Causas del compilador, procedencia por unidad y ES/EN
+
+12/09/2026. [Plan, contrato, fuentes y evidencia](tuberias-ia/diagnosticos-del-compilador-y-procedencia/README.md). Cortes Lenguaje 4cacf3ec6bd5d0f31206197c7374515a56b34a89 y laboratorio 1ac32131e2c328e395d828268a5e3517ce43fcca. Se continúa, por mandato humano, el paso 6 del plan de integración; no se confunde con P6 del workflow. Pilares, perfiles y transición cotejados; contrato diagnóstico 109/110 aplicado al alcance escogido.
+
+Candidata aditiva sobre RETP-157: sidecar de rangos de bytes de declaraciones originales y metadatos de unidad fuera de IR; causas tipadas E004 vacío/repetición, E115 con listas separadas y colisiones con ambas declaraciones. FrontendError se conserva por variantes; EOF y carácter léxico inválido conservan posición. Los emisores restantes permanecen explícitamente sin migrar. Un recorrido común alimenta la API detallada y las API heredadas. Doce claves locales CD.* con ES/EN; sólo E004/E115 reciben los códigos canónicos ya existentes.
+
+239 unitarios por modo debug/release. Corpus canónico 14 válido/106 inválido: aceptación y payload heredado idénticos entre base y candidata. 29 casos focales, tres repeticiones por modo, 174 observaciones en el receptor. Cuatro clientes negativos conservan seis errores de acceso exigidos; cliente público conforme. Se conservan cualificación y reproducción portátil con salidas, hashes, tiempos y medidas de recursos. Se documenta un fallo del script de edición previo a escribir la candidata, corregido sin cambiar esperados; no hubo fallo inesperado en las ejecuciones de la candidata.
+
+La IR y el núcleo productivo no se modifican. Continúan rangos sintácticos restantes, subcausas de perfil, emisores de otros validadores, serialización diagnóstica, DG01–DG14 global y DFL-001/011; DFL-005/006, WASI/navegador y compuertas P3/P4/P5 permanecen abiertas o cerradas según su estado previo. Ningún proveedor externo ejecutado. SVcustos se mantiene como sede prevista del encargo común; el paquete abierto de reproducción no se confunde con prueba ciega. Estado: DIAGNOSTICOS_COMPILADOR_CANDIDATOS_NATIVOS_CONFORMES_CIERRE_GLOBAL_PENDIENTE.

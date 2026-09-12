@@ -1,0 +1,18 @@
+{
+  "version": "COMPILER-DIAGNOSTICS/1",
+  "idioma": "es",
+  "mensajes": {
+    "CD.EMPTY_CODOMAIN": "El codominio está vacío.",
+    "CD.DUPLICATE_CODOMAIN_MEMBERS": "El codominio contiene miembros repetidos.",
+    "CD.OUTPUT_SEMANTICS_KEYS": "Las claves de la semántica de salida no cumplen la unicidad o la cobertura exigida.",
+    "CD.DUPLICATE_IDENTIFIER": "Dos declaraciones comparten el mismo identificador.",
+    "CD.UNEXPECTED_END": "La unidad fuente termina antes de completar la construcción.",
+    "CD.UNEXPECTED_TOKEN": "Se encontró un elemento léxico o sintáctico inesperado.",
+    "CD.UNSUPPORTED": "La construcción no está admitida por este perfil y analizador.",
+    "CD.INVALID_NATURAL": "El valor no es un natural admitido.",
+    "CD.INVALID_ADMISSIBILITY_STATE": "El estado de admisibilidad no es válido.",
+    "CD.INVALID_TRI": "El valor ternario no es válido.",
+    "CD.INSUFFICIENT_ASSEMBLY_UNITS": "El ensamblaje exige al menos dos unidades fuente.",
+    "CD.UNMIGRATED": "El emisor aún no dispone de causa estructurada; consulte el error heredado bajo su política de acceso."
+  }
+}

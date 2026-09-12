@@ -1,0 +1,22 @@
+{
+  "estado": "CONFORME_EN_ALCANCE_NATIVO",
+  "unitarios_por_modo": 239,
+  "corpus_validos": 14,
+  "corpus_invalidos": 106,
+  "legacy_identico": true,
+  "focales": 29,
+  "observaciones": 174,
+  "modos": [
+    "debug",
+    "release"
+  ],
+  "repeticiones": 3,
+  "causas_locales": 12,
+  "procesos": 41,
+  "clientes_negativos": 4,
+  "errores_acceso_esperados": 6,
+  "wasi": false,
+  "navegador": false,
+  "ejecuciones_proveedores_externos": 0,
+  "cierre_global": false
+}

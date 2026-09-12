@@ -1,0 +1,117 @@
+{
+  "procedencia": "Proyecci\u00f3n de assertions fijadas en focal.rs; IDs cotejados con primera captura. No es or\u00e1culo independiente nuevo.",
+  "casos": [
+    {
+      "id": "EMPTY_EN",
+      "cause": "CD.EMPTY_CODOMAIN"
+    },
+    {
+      "id": "DUP_EN",
+      "cause": "CD.DUPLICATE_CODOMAIN_MEMBERS"
+    },
+    {
+      "id": "EOF_EN",
+      "cause": "CD.UNEXPECTED_END"
+    },
+    {
+      "id": "EMPTY_ES",
+      "cause": "CD.EMPTY_CODOMAIN"
+    },
+    {
+      "id": "DUP_ES",
+      "cause": "CD.DUPLICATE_CODOMAIN_MEMBERS"
+    },
+    {
+      "id": "EOF_ES",
+      "cause": "CD.UNEXPECTED_END"
+    },
+    {
+      "id": "STANDALONE_EN",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "STANDALONE_ES",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_REPEATED_EN",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_REPEATED_ES",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_MISSING_EN",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_MISSING_ES",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_EXTRA_EN",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_EXTRA_ES",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_ALL_EN",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "LINKED_ALL_ES",
+      "cause": "CD.OUTPUT_SEMANTICS_KEYS"
+    },
+    {
+      "id": "COLLISION_false",
+      "cause": "CD.DUPLICATE_IDENTIFIER"
+    },
+    {
+      "id": "COLLISION_true",
+      "cause": "CD.DUPLICATE_IDENTIFIER"
+    },
+    {
+      "id": "ASSEMBLY_EOF_true",
+      "cause": "CD.UNEXPECTED_END"
+    },
+    {
+      "id": "ASSEMBLY_EOF_false",
+      "cause": "CD.UNEXPECTED_END"
+    },
+    {
+      "id": "FOREIGN_ES",
+      "cause": "CD.UNSUPPORTED"
+    },
+    {
+      "id": "FOREIGN_EN",
+      "cause": "CD.UNSUPPORTED"
+    },
+    {
+      "id": "QUOTE_EOF",
+      "cause": "CD.UNEXPECTED_END"
+    },
+    {
+      "id": "LEXICAL_UTF8",
+      "cause": "CD.UNEXPECTED_TOKEN"
+    },
+    {
+      "id": "UNMIGRATED",
+      "cause": "CD.UNMIGRATED"
+    },
+    {
+      "id": "OBJECT_OPERATION_COLLISION",
+      "cause": "CD.DUPLICATE_IDENTIFIER"
+    },
+    {
+      "id": "ZERO_UNITS",
+      "cause": "CD.INSUFFICIENT_ASSEMBLY_UNITS"
+    },
+    {
+      "id": "VALID",
+      "cause": "OK"
+    }
+  ]
+}

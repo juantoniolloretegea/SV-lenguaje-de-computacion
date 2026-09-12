@@ -1,0 +1,25 @@
+{
+  "utc": "2026-09-12T05:31:50.630891+00:00",
+  "instrumento_sha256": "7ba8b0bf5dbf9fc173f47ea088d6c2bef0598227325d94d6c6449e558108ef44",
+  "rustc_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "archivos": {
+    "corpus.rs": "c25f8c96b45576ef1168de1568ad1a85a31d912d9fbfaf67e2c1ef0dc7f30118",
+    "ESPERADO_RELACIONAL.json": "5eb06503d2d03f2d8206a2c0a0fe42b51e96cae05a44083769f08f9945505d00",
+    "BASE_FUENTES.json": "d2d8701d4400e931c8893724bd502ee55e0f22712def2b2af96665dab1318014",
+    "COMPROMISO_PLAN.json": "a2c550bdbd4e42f9d25bcd489a74e82d1f9dad490a5d7364dd646076ce30bdf4",
+    "INDICE_ESPERADOS.json": "e23b09b4caa52acf66d2a06452a34c3d9713a4c3a7f054792f06ba31d34a0499",
+    "CORPUS_FUENTES.json": "883fac88f58e7421b36fbea2b1ce94e61cd2eb5cf0ede837b36728ca4e2af15f",
+    "CORPUS.json": "13a4108aa4d741b4e0a28f8acaa004935bfb81e87c83f48c2f5db69129bcf5e5",
+    "CANDIDATA_FUENTES.json": "229655edeb2fee58057afc8dd68ba40a8df3f03a8f821a7ce04dfb463c4d5a8b",
+    "CATALOGO.json": "29ed674a208cbb6ff399569e35d9e2f230f5cf90b047775aa1f6f01c1efdf784",
+    "INVENTARIO_PREVIO.json": "c48aa56dc29a55aef355f267a4debe5eccd0a98f009a23905189834812113ca8",
+    "catalogo.rs": "00cc1c42e3403895f12814419a257a9e10f0e7b92e72e86c8146c18010d0ece9",
+    "focal.rs": "9ce4827d2b63dfa7d90a2c9b8460de2631f4026c14f0a0d4a22e4ef9ea947d9e",
+    "relacional.rs": "adf30782b4b89a77d9e21fb036fa3d53e6eb184c75ca5ba1d0ab8deb85eb8018"
+  },
+  "timeout_s": 120,
+  "limite_flujo_bytes": 2097152,
+  "cpu": "RUSAGE_CHILDREN; diferencias por proceso secuencial",
+  "rss": "máximo acumulado de hijos, no consumo por caso",
+  "costo_proveedor": null
+}
