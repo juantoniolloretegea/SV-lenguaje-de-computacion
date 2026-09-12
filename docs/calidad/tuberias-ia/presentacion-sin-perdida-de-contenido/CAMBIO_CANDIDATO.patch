@@ -1,0 +1,98 @@
+--- a/presentacion/lote.rs
++++ b/presentacion/lote.rs
+@@ -0,0 +1,3 @@
++#![forbid(unsafe_code)]
++use std::{fs,path::PathBuf};
++fn main(){let a:Vec<_>=std::env::args().collect();let entrada=PathBuf::from(&a[1]);let salida=PathBuf::from(&a[2]);fs::create_dir(&salida).unwrap();let mut l=lote::EnlacePublico::preparar(include_bytes!("../lote-p3/LOTE_SINTETICO_PUBLICO.json"),include_bytes!("../lote-p3/MONTAJES_PUBLICOS.json"),g1::Realizacion{fuentes_sha256:[0;32],binario_sha256:[0;32]}).unwrap();for i in 0..24{l.ejecutar(i).unwrap();let m=l.recuperar(i,g1::Papel::Marco).unwrap().to_vec();l.comprobar_entrega(i,&m).unwrap();let e=l.entrega(i).unwrap();let nombre=format!("P3-{:02}.json",i+1);let p=fs::read(entrada.join(&nombre)).unwrap();let v=e.comprobar_presentacion(&p).unwrap();assert_eq!(v.identidad(),l.identidad(i).unwrap());fs::write(salida.join(&nombre),v.texto()).unwrap();fs::write(salida.join(format!("P3-{:02}.original",i+1)),v.original()).unwrap();println!("posicion={} trabajo={}",i,v.trabajo());}l.completo().unwrap();}
+--- a/presentacion/main.rs
++++ b/presentacion/main.rs
+@@ -0,0 +1,11 @@
++#![forbid(unsafe_code)]
++//! Conductor público de contraste: no interfaz clínica ni autoridad profesional.
++use std::{io::{Read,Write},fs::File};
++fn run()->Result<(),&'static str>{let a:Vec<_>=std::env::args().collect();if a.len()!=3{return Err("ARGUMENTOS")}
++ let mut c=g1::Custodio::nuevo(g1::Realizacion{fuentes_sha256:[0;32],binario_sha256:[0;32]}).map_err(|_|"CUSTODIA")?;
++ let h=c.abrir(&mut File::open(&a[1]).map_err(|_|"LECTURA")?,true).map_err(|_|"CUSTODIA")?;c.ejecutar_a(&h).map_err(|_|"CUSTODIA")?;
++ let m=c.recuperar(&h,g1::Papel::Marco).map_err(|_|"CUSTODIA")?.to_vec();c.comprobar_entrega(&h,&m).map_err(|_|"ENTREGA")?;let e=c.entrega(&h).map_err(|_|"ENTREGA")?;
++ let mut p=Vec::new();File::open(&a[2]).map_err(|_|"LECTURA")?.take(16385).read_to_end(&mut p).map_err(|_|"LECTURA")?;
++ let v=e.comprobar_presentacion(&p).map_err(|e|match e{g1::FalloPresentacion::Limite=>"LIMITE",g1::FalloPresentacion::Sintaxis(_)=>"SINTAXIS",g1::FalloPresentacion::ContenidoDistinto=>"CONTENIDO_DISTINTO"})?;
++ std::io::stdout().lock().write_all(v.texto()).map_err(|_|"SALIDA")?;Ok(())}
++fn main(){if let Err(e)=run(){eprintln!("{{\"estado\":\"RECHAZADA\",\"causa\":\"{}\"}}",e);std::process::exit(2);}}
+--- a/recibo-g1/candidata/lib.rs
++++ b/recibo-g1/candidata/lib.rs
+@@ -3,6 +3,8 @@
+ mod av;
+ mod json_vista;
+ mod entrega;
++mod presentacion;
++pub use presentacion::{FalloPresentacion, PresentacionComprobada};
+ pub use entrega::{EntregaLiteral, EstadoEntrega, FalloEntrega};
+ use json_vista::Vista;
+ use std::io::Read;
+--- a/recibo-g1/candidata/presentacion/tests.rs
++++ b/recibo-g1/candidata/presentacion/tests.rs
+@@ -0,0 +1,15 @@
++use super::*;
++use crate::{Custodio,Realizacion,Papel};
++const INPUT:&[u8]=include_bytes!("../fixtures/solicitud-a01.bin");
++const BODY:&[u8]=include_bytes!("../fixtures/cuerpo-a01.bin");
++fn formato(b:&[u8])->Vec<u8>{let mut out=Vec::new();let(mut quoted,mut escape)=(false,false);for &x in b{out.push(x);if quoted{if escape{escape=false}else if x==b'\\'{escape=true}else if x==b'"'{quoted=false}}else if x==b'"'{quoted=true}else if matches!(x,b','|b':'|b'['|b'{'|b'}'|b']'){out.extend_from_slice(b"\n\t ");}}out}
++#[test]fn publico_completo(){let mut c=Custodio::nuevo(Realizacion{fuentes_sha256:[0;32],binario_sha256:[0;32]}).unwrap();let h=c.abrir(&mut INPUT,true).unwrap();c.ejecutar_a(&h).unwrap();let m=c.recuperar(&h,Papel::Marco).unwrap().to_vec();c.comprobar_entrega(&h,&m).unwrap();let e=c.entrega(&h).unwrap();let p=formato(e.cuerpo());assert_ne!(p,BODY);let v=e.comprobar_presentacion(&p).unwrap();assert_eq!(v.texto(),p);assert_eq!(v.original(),BODY);assert_eq!(v.identidad(),e.identidad());assert_eq!(v.perfil(),VERSION);assert!(v.trabajo()<=MAX_TRABAJO);}
++#[test]fn dato_y_negacion(){for(a,b)in [("8.40","9.40"),("no acredita","acredita")]{let s=std::str::from_utf8(BODY).unwrap();assert_eq!(s.matches(a).count(),1);let p=formato(s.replace(a,b).as_bytes());assert_eq!(comprobar(BODY,&p),Err(FalloPresentacion::ContenidoDistinto));}}
++#[test]fn quitar_alcance(){let b=br#"{"valor":"8.40","alcance":"no acredita"}"#;assert_eq!(comprobar(b,br#"{"valor":"8.40"}"#),Err(FalloPresentacion::ContenidoDistinto));}
++#[test]fn espacios_interiores(){let b=br#"{"texto":"no acredita"}"#;for p in [br#"{"texto":"noacredita"}"#.as_slice(),br#"{"texto":"no  acredita"}"#]{assert_eq!(comprobar(b,p),Err(FalloPresentacion::ContenidoDistinto));}}
++#[test]fn escapes_y_unicode(){for b in [br#"{"x":"comilla \" y barra \\ y salto \n"}"#.as_slice(),"{\"x\":\"ámbito 医\"}".as_bytes()]{assert!(comprobar(b,&formato(b)).is_ok());}assert_eq!(comprobar(br#"{"x":"a"}"#,br#"{"x":"\u0061"}"#),Err(FalloPresentacion::ContenidoDistinto));}
++#[test]fn orden_no_normalizado(){assert_eq!(comprobar(br#"{"a":1,"b":2}"#,br#"{"b":2,"a":1}"#),Err(FalloPresentacion::ContenidoDistinto));assert_eq!(comprobar(b"[1,2]",b"[2,1]"),Err(FalloPresentacion::ContenidoDistinto));}
++#[test]fn fragmentar_tokens_no_repara(){for(a,b)in [(b"true".as_slice(),b"t r u e".as_slice()),(b"12",b"1 2"),(b"null",b"n ull")]{assert!(matches!(comprobar(a,b),Err(FalloPresentacion::Sintaxis(_))));}}
++#[test]fn json_malformado(){for p in [b"{\"a\":1,\"a\":1}".as_slice(),b"{\"a\":1}x",b"{\"a\":1,}",b"{\"a\":01}",b"{\"a\":\"\xff\"}"]{assert!(matches!(comprobar(b"{\"a\":1}",p),Err(FalloPresentacion::Sintaxis(_))));}}
++#[test]fn limites(){for n in [16383,16384,16385]{let mut p=b"null".to_vec();p.resize(n,b' ');assert_eq!(comprobar(b"null",&p).is_ok(),n<=16384);}assert_eq!(comprobar(&vec![b' ';4097],b"null"),Err(FalloPresentacion::Limite));}
++#[test]fn propuesta_no_cambia_perfil(){assert_eq!(comprobar(b"{\"x\":1}",b"{\"x\":1,\"perfil\":\"aceptar todo\"}"),Err(FalloPresentacion::ContenidoDistinto));}
+--- a/recibo-g1/candidata/presentacion.rs
++++ b/recibo-g1/candidata/presentacion.rs
+@@ -0,0 +1,46 @@
++//! Perfil candidato de formato, no interfaz profesional ni certificado de dominio.
++use super::{EntregaLiteral,Fallo,Trabajo,json_vista::Vista};
++pub const VERSION:&str="IE004-PRESENTACION-ESPACIOS/1";
++const MAX_PRESENTACION:usize=16384;
++const MAX_ORIGINAL:usize=4096;
++const MAX_TRABAJO:u64=1_000_000;
++#[derive(Clone,Copy,Debug,PartialEq,Eq)]
++pub enum FalloPresentacion { Limite, Sintaxis(Fallo), ContenidoDistinto }
++/// Vista prestada e inmutable: sin constructor público, sin autoridad de actuación.
++pub struct PresentacionComprobada<'a>{texto:&'a[u8],original:&'a[u8],identidad:(u64,u64),trabajo:u64}
++impl PresentacionComprobada<'_>{
++ pub fn texto(&self)->&[u8]{self.texto}
++ pub fn original(&self)->&[u8]{self.original}
++ pub fn identidad(&self)->(u64,u64){self.identidad}
++ pub fn perfil(&self)->&'static str{VERSION}
++ pub fn trabajo(&self)->u64{self.trabajo}
++}
++// Conserva cada byte dentro de las cadenas, incluidos espacios y escapes.
++// Sólo se usa después del reconocimiento sintáctico completo de ambos textos.
++struct Contenido<'a>{b:&'a[u8],i:usize,cadena:bool,escape:bool}
++impl<'a> Contenido<'a>{fn nuevo(b:&'a[u8])->Self{Self{b,i:0,cadena:false,escape:false}}}
++impl Iterator for Contenido<'_>{type Item=u8;fn next(&mut self)->Option<u8>{
++ while let Some(&b)=self.b.get(self.i){self.i+=1;
++  if self.cadena {if self.escape{self.escape=false}else if b==b'\\'{self.escape=true}else if b==b'"'{self.cadena=false}return Some(b)}
++  if b==b'"'{self.cadena=true;return Some(b)}
++  if !matches!(b,b' '|b'\t'|b'\r'|b'\n'){return Some(b)}
++ }None
++}}
++fn comprobar(original:&[u8],texto:&[u8])->Result<u64,FalloPresentacion>{
++ if original.len()>MAX_ORIGINAL||texto.len()>MAX_PRESENTACION{return Err(FalloPresentacion::Limite)}
++ let mut c=Trabajo::nuevo();c.max=MAX_TRABAJO;
++ Vista::nueva(original,&mut c).map_err(FalloPresentacion::Sintaxis)?;
++ Vista::nueva(texto,&mut c).map_err(FalloPresentacion::Sintaxis)?;
++ c.cobrar((original.len()+texto.len())as u64).map_err(FalloPresentacion::Sintaxis)?;
++ if !Contenido::nuevo(original).eq(Contenido::nuevo(texto)){return Err(FalloPresentacion::ContenidoDistinto)}
++ Ok(c.usado)
++}
++impl EntregaLiteral<'_>{
++ /// El receptor escoge este perfil explícito. El contenido de la propuesta no lo cambia.
++ /// La vida de la vista queda ligada a la entrega original y al texto comprobado.
++ pub fn comprobar_presentacion<'a>(&'a self,texto:&'a[u8])->Result<PresentacionComprobada<'a>,FalloPresentacion>{
++  let trabajo=comprobar(self.cuerpo(),texto)?;
++  Ok(PresentacionComprobada{texto,original:self.cuerpo(),identidad:self.identidad(),trabajo})
++ }
++}
++#[cfg(test)]mod tests;

@@ -141,3 +141,8 @@ Recuperación documental del depósito interrumpido: [acta y comprobación de la
 ## Entrega literal desde recibo — RETP-149
 
 [Comprobación Rust, resultados y límites](entrega-literal-desde-recibo/README.md). La candidata rechaza dato alterado y negación eliminada aun con huellas coherentes; conserva los 24 cuerpos públicos. 52 tests por configuración nativa, cuatro contrastes CLI, 24 entregas y dos negativos de compilación en cada modo. Continúa el workflow; no cierra fidelidad visual, seguridad integral ni catálogo.
+
+
+## Presentación sin pérdida de contenido — RETP-150
+
+[Perfil de espacios comprobado en Rust](presentacion-sin-perdida-de-contenido/README.md). Admite sangría y separadores externos; conserva textos, datos, negaciones, alcance y orden. Rechaza fragmentar tokens para recomponerlos por normalización. Una matriz, 47 procesos, 62 pruebas por modo, 11 contrastes y 24 presentaciones por modo. No constituye interfaz profesional ni seguridad integral; catálogo y compuertas pendientes.

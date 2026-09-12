@@ -1,0 +1,66 @@
+{
+  "registro": "RETP-2026-150",
+  "estado": "CANDIDATA_COMPROBADA_SIN_PROMOCION_PRODUCTIVA",
+  "archivos": [
+    {
+      "ruta": "CAMBIO_CANDIDATO.patch",
+      "bytes": 8560,
+      "sha256": "232d24817e0e342f3b095f76b5470c605dcd025a8646ab66cd19581c270787fc"
+    },
+    {
+      "ruta": "COMPILADOR.json",
+      "bytes": 874,
+      "sha256": "1e9dc4366ae4478002c1ca729daff48213768b8912a334a6f6e113b1131f94ff"
+    },
+    {
+      "ruta": "EVIDENCIA.json",
+      "bytes": 671553,
+      "sha256": "7f0b40bfd4cb8cde17fac4a393ae3fd9c39822eda1a45eb7cbbebc2f06c5993c"
+    },
+    {
+      "ruta": "FUENTES.json",
+      "bytes": 4199,
+      "sha256": "c4a53b39e2fcb12f9f94e5f660baca9160c1dbfa7f625fadc90caafc1f98140e"
+    },
+    {
+      "ruta": "FUENTES_REPRODUCIBLES.json",
+      "bytes": 719682,
+      "sha256": "77bbd597be86a38a21628d5c249ab53c644af749e13c73270502e5a03217a113"
+    },
+    {
+      "ruta": "PLAN_FIJADO.json",
+      "bytes": 1826,
+      "sha256": "7990cc12e3dcd104ec59d94a92d2fef24fb1400671127118c9239dee11bf8895"
+    },
+    {
+      "ruta": "README.md",
+      "bytes": 10864,
+      "sha256": "71bb81e17199bc359c2fe130d325223430e3c9f680f91fc6486d1842dd9eb741"
+    },
+    {
+      "ruta": "REALIZACIONES.json",
+      "bytes": 2106,
+      "sha256": "fdab8f3557e8c3121753c3d28f3f824ac3f5711719603da963e97556dd4ed531"
+    },
+    {
+      "ruta": "REPRODUCIR.md",
+      "bytes": 1744,
+      "sha256": "e43c03dfc11c35db48cb10833e3104b1c5c58b72a2b4e8cd256c1f4d7bd17d14"
+    },
+    {
+      "ruta": "RESULTADO.json",
+      "bytes": 43133,
+      "sha256": "06735e5cb7bb819e9943d89e2c1075c4b91ff370422a6a062402e2448da594a7"
+    },
+    {
+      "ruta": "ejecutar.py",
+      "bytes": 7086,
+      "sha256": "76b8176429f06776d94324090df2d27a2522c9d585f1e14c9f1101445ca0ee0e"
+    },
+    {
+      "ruta": "presentacion.rs",
+      "bytes": 2600,
+      "sha256": "78acc44d93bc6345745e0d1cc8b8e9aa596c9902e338f3fe2a22499f087262f8"
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "version": "IE004-PRESENTACION-ESPACIOS/1",
+  "registro": "RETP-2026-150",
+  "fecha": "2026-09-12",
+  "objeto": "Reconocimiento de JSON en el perfil existente seguido de igualdad de bytes significativos; sólo espacio TAB LF CR fuera de cadenas son prescindibles para esta operación",
+  "dependencia": "EntregaLiteral protegida de RETP-149; referencia elegida por el conductor",
+  "limites": {
+    "original_bytes": 4096,
+    "presentacion_bytes": 16384,
+    "trabajo_comprobacion": 1000000,
+    "reserva_dinamica_del_comprobador": 0,
+    "plazo_por_proceso_s": 60,
+    "salida_proceso_observada_bytes": 33554432,
+    "matrices": 1,
+    "modos": [
+      "debug",
+      "release"
+    ],
+    "correcciones_causales_maximas": 1
+  },
+  "positivo": [
+    "original literal",
+    "JSON con sangría y saltos",
+    "24 presentaciones del lote público con originales intactos"
+  ],
+  "negativo": [
+    "dato alterado",
+    "negación eliminada",
+    "alcance eliminado",
+    "espacio interior modificado",
+    "claves reordenadas",
+    "token true fragmentado por espacios",
+    "clave duplicada",
+    "propuesta de otro perfil",
+    "más de 16384 bytes",
+    "forja de vista",
+    "vista más allá de la vida de su texto"
+  ],
+  "cierre": "Conservación del contenido léxico y orden conforme al perfil; no identidad de todos los bytes de presentación ni suficiencia de dominio",
+  "exclusiones": [
+    "semántica nueva",
+    "pérdidas de datos admitidas",
+    "traducción",
+    "pantalla o interfaz profesional",
+    "certificado universal de recuperabilidad",
+    "P3 reservado, P4/P5, R1 profesional",
+    "seguridad global",
+    "pensamiento interno IA"
+  ],
+  "pruebas": "40 anteriores de G1/entrega y 10 nuevas; 12 anteriores de lote; conductor público y 24 posiciones; debug/release; negativos de compilación"
+}

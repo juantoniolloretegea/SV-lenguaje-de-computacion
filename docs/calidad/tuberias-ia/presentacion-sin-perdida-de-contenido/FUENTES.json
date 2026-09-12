@@ -1,0 +1,90 @@
+{
+  "corte": "b8f0982f8c2183a71f8a32c12ab55e2e6148591b",
+  "rectoras_y_continuidad_cotejadas": [
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/main.rs",
+      "git_blob": "aa75aaea348073e3fbb3f55a0cd28661cf8883d1",
+      "sha256": "99ac409c691ffa146d847332f4f7091f71c908cb96fdd80ff29b338225a500d3"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/verificar_v.rs",
+      "git_blob": "c07782f4e261ee90163eefa48241b1850507357d",
+      "sha256": "bdf19a80e33ae2f1d4c9e13db316a02398db0e98d4a1540d0c9a1563fd980d6b"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recibo-g1/candidata/lib.rs",
+      "git_blob": "f1f3967ee442df61a022ff99afb1d2c0512a433a",
+      "sha256": "bcb2b419d45d927fa40693b48881ccd25d27a98fb7a4669ae5651ebcc589fb23"
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "sha256": "73875d22f35cc299d2a4103e35e369481e99289e9ee679b841f54b5e4f872650"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs",
+      "git_blob": "46f0e22a905db433c97ca26bd81ae06c84c60102",
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ie004/recepcion-av/recepcion_a.rs",
+      "git_blob": "14c7c92468975cb1774cc02d9ecfe749a6dbee82",
+      "sha256": "16ba0e3a269a33b35d795e72b7e8f257de4a3a57138d1fd763ca1116e08f4461"
+    },
+    {
+      "ruta": "AGENTS.md",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/WORKFLOW_ACOTADO_SUBORDINACION_IA_ES_V2_2026_09_11.md",
+      "git_blob": "ee7dd15aeba987c911960bf7f431cbdccabaa980",
+      "sha256": "e170a763d6dbd26ab2823b78ae25c717734dd44bc2417b60080e67015248cf0c"
+    },
+    {
+      "ruta": "docs/arquitectura/CONTRATO_MINIMO_DE_SUFIENCIA_REPRESENTACIONAL_POR_OPERACION_PARA_EL_LENGUAJE_SV_2026_08_21.md",
+      "git_blob": "de903d2aa1d0e0eb3c83b7ae3471c52d5de856c0",
+      "sha256": "27554397a0d0ae10c8bae76d33e760800b9a34f7feb2d35e585b72450c8d4206"
+    }
+  ],
+  "antecedente": "RETP-149; cápsula de 63 fuentes recuperada y cotejada; sin reconstrucción inventada",
+  "cambios_respecto_retp149": [
+    "presentacion/lote.rs",
+    "presentacion/main.rs",
+    "recibo-g1/candidata/lib.rs",
+    "recibo-g1/candidata/presentacion/tests.rs",
+    "recibo-g1/candidata/presentacion.rs"
+  ],
+  "recuperacion_cotejada_con_git": [
+    {
+      "ruta": "docs/arquitectura/CONTRATO_MINIMO_DE_SUFIENCIA_REPRESENTACIONAL_POR_OPERACION_PARA_EL_LENGUAJE_SV_2026_08_21.md",
+      "git_blob": "de903d2aa1d0e0eb3c83b7ae3471c52d5de856c0",
+      "sha256": "27554397a0d0ae10c8bae76d33e760800b9a34f7feb2d35e585b72450c8d4206"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/entrega-literal-desde-recibo/FUENTES.json",
+      "git_blob": "968ae6cd7ab9a19dff7c20f318473be3bad191c4",
+      "sha256": "a341218824bd8481eb4c7717f54639a49ed95bae10a24fccc38823c5c94d8040"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/entrega-literal-desde-recibo/FUENTES_REPRODUCIBLES.json",
+      "git_blob": "ec8160d71698f4e9ec1551ce600fe84ffe20fa5b",
+      "sha256": "68d3fafb9c80aed4856b4e60d3eddfe2a8856ca6b6905a1e5ba78b590ecd229e"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/entrega-literal-desde-recibo/README.md",
+      "git_blob": "e1c0c7f08fdcd03f43ba6d2837c4070d4a156535",
+      "sha256": "6aa0f4042eddc239fe155570f43173ac0a6212497465a1c4ca7f3bf82bea0dd8"
+    }
+  ]
+}

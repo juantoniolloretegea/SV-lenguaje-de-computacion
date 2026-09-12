@@ -1462,3 +1462,18 @@ Una matriz debug/release con Rust 1.98.0, 31 procesos, cero defectos inesperados
 Ocho fuentes de continuidad y 45 archivos existentes cotejados con el corte. La pieza sucesora conserva el workflow V2; no promueve la candidata ni cierra el recorrido entero. Quedan fuera verdad de origen, traducción/equivalencia visual, pantalla final, imposición material, persistencia durable, R1 profesional, reserva y P4/P5. El catálogo recibe causas tipadas y propuestas ES/EN sin acreditarlas como localización implementada. La CLI resume la familia Custodia; su integración diagnóstica productiva permanece pendiente.
 
 **Estado: CONFORME_EN_FRONTERA_LITERAL_CANDIDATA.** Continúa correspondencia transformación/presentación bajo las compuertas constituidas y aceptación final humana.
+
+
+<a id="retp-150"></a>
+
+## RETP-2026-150 · Presentación de formato sin pérdida de contenido
+
+12/09/2026. [Pieza sucesora acotada y evidencia](tuberias-ia/presentacion-sin-perdida-de-contenido/README.md). Corte Lenguaje `b8f0982f8c2183a71f8a32c12ab55e2e6148591b`; laboratorio `196b574f69d456bc31e81ae416d83513b1381730`. Continúa la luz verde sin reabrir autoridad humana ni pedir al autor el mecanismo técnico.
+
+Sobre la candidata RETP-149 se introduce el perfil experimental IE004-PRESENTACION-ESPACIOS/1: sólo espacio, TAB, CR y LF fuera de cadenas pueden diferir; conserva valores, textos, escapes, claves y orden. Reconoce primero ambos documentos con el lector existente: no recompone por eliminación de espacios tokens inválidos. La vista protegida se obtiene desde EntregaLiteral y conserva referencia, identidad y perfil. No es interfaz profesional ni permiso ni certificado de dominio.
+
+Una matriz Rust 1.98.0 debug/release, 47 procesos, cero correcciones causales. Por modo: 52 pruebas previas + 10 nuevas, 11 contrastes CLI, 24 presentaciones y originales cotejados con los esperados previos; cliente externo válido y dos negativos previstos de compilación. Paridad de textos, originales y salidas CLI. Fuentes, comandos, capturas, realizaciones y procedencia del compilador conservados.
+
+La recuperación de los bytes originales usa explícitamente el custodio; no se atribuye esa información a la presentación sola. El comprobador no reserva memoria dinámica; esto no acredita RSS ni coste global del servicio. La retención de intentos de presentación se realiza en la campaña, no queda implementada como servicio durable. Diagnósticos tipados conservados; la CLI resume la familia del lector y no cierra su localización productiva.
+
+Continúa el workflow V2. No se cambia núcleo productivo, gramática, IR ni dominios; no se abren agente, interfaz, reserva o P4/P5. Esta pieza sucede a RETP-149 en su alcance de formato; fidelidad visual, imposición material, catálogo y aceptación productiva final permanecen pendientes. **Estado: CONFORME_PERFIL_CANDIDATO_DE_ESPACIOS.**

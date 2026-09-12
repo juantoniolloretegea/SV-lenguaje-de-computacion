@@ -1,0 +1,72 @@
+[
+  {
+    "archivo": "cliente-debug.bin",
+    "bytes": 4501456,
+    "sha256": "71541528bde4366deac727aa6c25ee53cbb5308b7d9a1fd3a83de9fc29c4eddf"
+  },
+  {
+    "archivo": "cliente-release.bin",
+    "bytes": 4501456,
+    "sha256": "71541528bde4366deac727aa6c25ee53cbb5308b7d9a1fd3a83de9fc29c4eddf"
+  },
+  {
+    "archivo": "g1-debug.bin",
+    "bytes": 7986952,
+    "sha256": "31043f1192d916ff960945cbc88f11f84bca1b6c2baa37f19b059671c1edbee5"
+  },
+  {
+    "archivo": "g1-release.bin",
+    "bytes": 7460336,
+    "sha256": "750fd1f16b588d0cd36a990484af78571c09ca0b9207c74821bf166aadaa28e1"
+  },
+  {
+    "archivo": "libg1-debug.rlib",
+    "bytes": 2866786,
+    "sha256": "4704202916ab00e2f5aa46ea29c4a24a3ef96bf377c216fc8feb882a80fb07e2"
+  },
+  {
+    "archivo": "libg1-release.rlib",
+    "bytes": 1146054,
+    "sha256": "dff9b94fda86740eed1ba6eff2026eb3c1bc34505f2680cb3fe983bef7655853"
+  },
+  {
+    "archivo": "liblote-debug.rlib",
+    "bytes": 1085020,
+    "sha256": "a1902c63e3180fe92f725c36886219109e02142aef7ac39bd12a8818fd954e32"
+  },
+  {
+    "archivo": "liblote-release.rlib",
+    "bytes": 388124,
+    "sha256": "7e165a422b91a3b6d631b2e60fa024b13807d1f2a5b5fa461db472b5bbace083"
+  },
+  {
+    "archivo": "lote-debug.bin",
+    "bytes": 8040096,
+    "sha256": "cf7315d1410b3cca1bc2993736de2faf6b189d2559d0613735d18a21d55ea5cd"
+  },
+  {
+    "archivo": "lote-release.bin",
+    "bytes": 7399688,
+    "sha256": "bd4fea5c424d4fd10f0cb0789f60636c7bb0fd5b5463c258a14b1c227ac7bbd0"
+  },
+  {
+    "archivo": "presentacion-debug.bin",
+    "bytes": 5088944,
+    "sha256": "41cd9ca06f92b04ccdfc2b0301344482612a949b4d6abfea28cb26d4e6320224"
+  },
+  {
+    "archivo": "presentacion-release.bin",
+    "bytes": 4649336,
+    "sha256": "32f21164a15b8a9a4f625c60c3d7b5083cf1bdcc95e935efaf565ccf6f381139"
+  },
+  {
+    "archivo": "presentaciones-lote-debug.bin",
+    "bytes": 5326592,
+    "sha256": "a94f7889865bad6be201a5cb295701296ac15caf62a7b8321019ca27ffccb12e"
+  },
+  {
+    "archivo": "presentaciones-lote-release.bin",
+    "bytes": 4732712,
+    "sha256": "fdd907271520204ed297af0844ee9ecec54b71d2a079eccbb8b69e4557424be9"
+  }
+]
