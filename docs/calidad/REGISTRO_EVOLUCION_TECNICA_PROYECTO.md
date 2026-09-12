@@ -1815,3 +1815,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-176 · S8 · Recepción complementaria de Mistral en S4
 
 2026-09-12T16:21:05Z. Primera prueba, primer intento: transcripción preservada y cotejada con S4, no S6. E10 causa incorrecta y E07 consecuencia/traza insuficientes; no acredita conformidad S4. Reservas de etiquetas conservadas; herramientas y lectura declaradas no verificadas. Recepción S8 finalizada; registros y cierres anteriores intactos. [Acta y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s8-recepcion-complementaria-s4/mistral-intento-1/ACTA_RECEPCION.md).
+
+
+<a id="retp-177"></a>
+
+### RETP-2026-177 · S9 · Mistral segunda prueba de trazabilidad
+
+2026-09-12T16:36:15Z. Archivo original distinto de la transcripción S4 anteriormente repetida. NO_CONFORME con 12 discrepancias: ocho citas con doble escape, R08 alterada, causa E09 y causa/fundamento E10. E01–E06 sin discrepancias; 24/32 citas exactas. Sin reparación ni atribución de la duplicación previa a Mistral. [Acta y evidencia](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/ACTA_RECEPCION.md).

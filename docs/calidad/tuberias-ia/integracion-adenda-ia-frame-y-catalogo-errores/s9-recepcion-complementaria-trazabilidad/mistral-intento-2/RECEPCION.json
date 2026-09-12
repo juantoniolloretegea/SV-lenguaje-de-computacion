@@ -1,0 +1,21 @@
+{
+  "suceso": "S9",
+  "registro": "RETP-2026-177",
+  "responsable": "Watson / W-S0",
+  "fecha_registro_utc": "2026-09-12T16:34:32.807402+00:00",
+  "archivo_recibido": "Pegado text(20260912-163036).txt",
+  "bytes_original": 28737,
+  "sha256_original": "f4bda6916babedcb8ea56a1de98121ad6ce97f937b27ce365ca06e044ecb65f1",
+  "participante_declarado": {
+    "modelo": "Mistral Medium 3.5",
+    "version_declarada": "2026-09-12",
+    "exposicion_previa_declarada": "Ninguna exposición previa conocida"
+  },
+  "intento": 2,
+  "dictamen": "NO_CONFORME",
+  "citas_fuentes": 32,
+  "casos": 12,
+  "tiempo_participante": null,
+  "actividad_participante": "No se adjunta registro de ejecución. No se infieren operaciones usadas o ausentes.",
+  "alcance": "Conformidad documental de esta entrega; identidad, versión y exposición son declaraciones del participante."
+}

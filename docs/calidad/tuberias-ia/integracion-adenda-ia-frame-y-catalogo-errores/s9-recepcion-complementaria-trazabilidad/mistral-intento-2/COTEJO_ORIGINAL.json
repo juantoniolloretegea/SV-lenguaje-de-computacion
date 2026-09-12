@@ -1,0 +1,23 @@
+{
+  "dictamen": "NO_CONFORME",
+  "errores": [
+    "/resultados/E07/fuentes/F06:CITA_NO_EXACTA",
+    "/resultados/E08/fuentes/F06:CITA_NO_EXACTA",
+    "/resultados/E08/fuentes/F07:CITA_NO_EXACTA",
+    "/resultados/E09/causa:NO_COINCIDE",
+    "/resultados/E09/fuentes/F06:CITA_NO_EXACTA",
+    "/resultados/E09/fuentes/F07:CITA_NO_EXACTA",
+    "/resultados/E09/reglas/R08:CITA_NO_EXACTA",
+    "/resultados/E10/causa:NO_COINCIDE",
+    "/resultados/E10/fundamento:NO_COINCIDE",
+    "/resultados/E10/fuentes/F06:CITA_NO_EXACTA",
+    "/resultados/E11/fuentes/F06:CITA_NO_EXACTA",
+    "/resultados/E12/fuentes/F06:CITA_NO_EXACTA"
+  ],
+  "admisible_documental": false,
+  "respuesta_sha256": "f4bda6916babedcb8ea56a1de98121ad6ce97f937b27ce365ca06e044ecb65f1",
+  "bytes_respuesta": 28737,
+  "casos_exigidos": 12,
+  "criterio": "todas las obligaciones; sin compensación",
+  "actividad_externa": "no certificada por este cotejo; cualquier afirmación adicional requiere su expediente y revisión antes de admisión general"
+}

@@ -13,6 +13,7 @@
 | S6 | finalizado | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
 | S7 | finalizado | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T16:05:57Z |
 | S8 | finalizado | Recepción complementaria de Mistral en la primera prueba S4 | Watson / W-S0 | 2026-09-12T16:21:05Z |
+| S9 | finalizado | Recepción complementaria de Mistral en la segunda prueba de trazabilidad | Watson / W-S0 | 2026-09-12T16:36:15Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -327,4 +328,39 @@
 **Siguiente accion:** Conservar esta recepción S4 separada al comparar candidatos; eventual segundo intento de Mistral no realizado. Licencias e implantación independiente después de comparación.
 
 **Observaciones:** Fecha de formalización del registro, sin hora externa retrospectiva. Texto aportado en conversación, no archivo bruto del proveedor. Lectura y llamada declaradas no certificadas. Sin selección de modelo ni cambio de cierres previos.
+
+
+## S9 · Recepción complementaria de Mistral en la segunda prueba de trazabilidad
+
+**Estado:** finalizado
+
+**Fecha alta utc:** 2026-09-12T16:36:15Z
+
+**Fecha inicio utc:** 2026-09-12T16:36:15Z
+
+**Fecha actualizacion utc:** 2026-09-12T16:36:15Z
+
+**Fecha fin utc:** 2026-09-12T16:36:15Z
+
+**Unidad responsable:** Watson / W-S0
+
+**Alcance:** Archivo original segundo contrato SV-TRAZABILIDAD-2/1; cotejo fijado y diagnóstico sin reparación.
+
+**Repositorios y ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**Cortes de entrada:** S6 público fccde9cf524a0d62b2dd1a2ee05170d6f4358074; lenguaje 400614da36ef6a1bdd1ff9056fa1d0b434929468; laboratorio 8936baaf0138768c6fa56eb94f37955c02ecf550
+
+**Dependencias:** Segundo intento autorizado; banco, referencia y verificador S6 fijados.
+
+**Resultado:** NO_CONFORME: ocho citas de fuente con doble escape, R08 alterada, E09 causa incorrecta, E10 causa y fundamento incorrectos.
+
+**Verificacion:** 12 discrepancias; E01–E06 sin discrepancias; 24/32 citas de fuente exactas. Original preservado y huellas del instrumento verificadas.
+
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s9-recepcion-complementaria-trazabilidad/mistral-intento-2/ACTA_RECEPCION.md)
+
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-177)
+
+**Siguiente accion:** Conservar dictamen y esperar decisión de dirección; comparación y licencias posteriores.
+
+**Observaciones:** El nuevo adjunto responde al segundo contrato. La duplicación anterior en conversación no se imputa como fallo adicional del participante. Actividad externa y continuidad de sesión no verificadas. Sin selección ni exclusión automática.
 
