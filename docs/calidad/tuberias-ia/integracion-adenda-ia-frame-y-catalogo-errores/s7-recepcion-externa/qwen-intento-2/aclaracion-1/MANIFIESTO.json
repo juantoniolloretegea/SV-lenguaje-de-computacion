@@ -1,0 +1,22 @@
+{
+  "RECTORES.json": {
+    "bytes": 621,
+    "sha256": "1f9c855e978e1524b266aa35f83457c04b54d3e28026606ea98f15ce5eb8fff9"
+  },
+  "RECEPCION.json": {
+    "bytes": 637,
+    "sha256": "dee48268f788c47df36f0bfbd24494801194fcc07ae82da999d73e34c8aca18a"
+  },
+  "ACTA_CONTRASTE.md": {
+    "bytes": 3419,
+    "sha256": "b43ef54feb68f9cf7b57d461d4d1fe8bb71d763dad1937ffe10a1dfd42970850"
+  },
+  "DECLARACION_APORTADA.md": {
+    "bytes": 3058,
+    "sha256": "961dfe0754dc07fe62417508b2ca8c810e12424b3ea8308ad9ee29668d5f2ac7"
+  },
+  "CONTRASTE.json": {
+    "bytes": 955,
+    "sha256": "4eb5c8ff0ae1e4990a5d6127bad9698b78c3c21573b5ae19d5d4c6f15150f98d"
+  }
+}

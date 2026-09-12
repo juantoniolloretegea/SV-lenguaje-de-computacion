@@ -1,0 +1,16 @@
+{
+  "fecha_utc": "2026-09-12T15:43:12Z",
+  "suceso": "S7",
+  "registro": "RETP-2026-173",
+  "tipo": "Aclaración posterior; no nuevo intento",
+  "original_intento_2_sha256": "bad096f38fabc301a3aca10ab626d70ae8ca763e4d3fe1446af5c79ee83e09da",
+  "original_intento_1_sha256": "54a120708e4c917801d4cd7c550bdcd21e35ad28c68b9d66c297ce40abb91bbd",
+  "encargo_S4_sha256": "eac67c8b4ff393501b0dea2106db77d90ba5d2fd64128e024227d8a3a42f26a8",
+  "prefijo_antes_del_bloque_intento_2": "",
+  "introduccion_citada_presente_en_intento_2": false,
+  "introduccion_citada_presente_en_intento_1": true,
+  "clausula_sin_texto_adicional_presente_en_encargo_S4": false,
+  "texto_final_y_autocontradiccion_confirmados": true,
+  "causa_interna": "Explicación retrospectiva declarada por el participante; no acreditada por registro de ejecución.",
+  "limite": "El contraste describe los archivos recibidos; no certifica la integridad de una conversación externa no aportada."
+}

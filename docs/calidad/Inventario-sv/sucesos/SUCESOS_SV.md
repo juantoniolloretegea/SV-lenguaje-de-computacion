@@ -11,7 +11,7 @@
 | S4 | finalizado | Preparación de la prueba externa común del recorrido documental | Watson / W-S0 | 2026-09-12T12:03:04Z |
 | S5 | finalizado | Recepción y evaluación de la prueba externa común | Watson / W-S0 | 2026-09-12T14:48:43Z |
 | S6 | finalizado | Diseño y cualificación del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:02:14Z |
-| S7 | en ejecución | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:33:12Z |
+| S7 | en ejecución | Recepción del segundo intento de trazabilidad íntegra | Watson / W-S0 | 2026-09-12T15:43:12Z |
 
 ## S0 · Puesta en servicio del registro Sucesos SV
 
@@ -266,7 +266,7 @@
 
 **Fecha inicio utc:** 2026-09-12T15:23:18Z
 
-**Fecha actualizacion utc:** 2026-09-12T15:33:12Z
+**Fecha actualizacion utc:** 2026-09-12T15:43:12Z
 
 **Fecha fin utc:** —
 
@@ -284,11 +284,11 @@
 
 **Verificacion:** Cotejador fijado íntegro, salida 2 y 26 errores CITA_NO_EXACTA. Diagnóstico léxico y de sangría: claves, orden, valores y cadenas conservados. Original DeepSeek de 29696 bytes intacto.
 
-**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/ACTA_RECEPCION.md) · [Referencia 3](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/ACTA_RECEPCION.md) · [Referencia 4](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/DECISION_DIRECCION.md)
+**Evidencias:** [Referencia 1](https://github.com/juantoniolloretegea/SVcustos-dataset/blob/fccde9cf524a0d62b2dd1a2ee05170d6f4358074/pruebas-externas/s6-trazabilidad-total/PRUEBA_COMUN.md) · [Referencia 2](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/ACTA_RECEPCION.md) · [Referencia 3](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/ACTA_RECEPCION.md) · [Referencia 4](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/DECISION_DIRECCION.md) · [Referencia 5](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/aclaracion-1/ACTA_CONTRASTE.md)
 
-**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-172)
+**Referencia calidad:** [Referencia 1](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-173)
 
 **Siguiente accion:** Recibir y cotejar las segundas respuestas de Claude y Grok. Conservar por separado cotejos, diagnóstico técnico y decisiones de la dirección; sin reparación de originales.
 
-**Observaciones:** Aceptación provisional de Qwen expresa, sin reclasificar su cotejo. DeepSeek conserva contenido y referencias; no conserva bytes literales de seis fuentes. No se atribuyen opacidad ni medidas no observadas. No se presupone decisión humana sobre DeepSeek.
+**Observaciones:** Aceptación provisional de Qwen expresa, sin reclasificar su cotejo. DeepSeek conserva contenido y referencias; no conserva bytes literales de seis fuentes. No se atribuyen opacidad ni medidas no observadas. No se presupone decisión humana sobre DeepSeek. Aclaración posterior de Qwen: mezcla la introducción del primer intento con el segundo y atribuye a S4 una prohibición ausente del encargo fijado. Causa interna declarada, no demostrada. Aceptación provisional vigente.
 

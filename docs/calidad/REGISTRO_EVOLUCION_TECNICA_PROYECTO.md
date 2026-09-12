@@ -1787,3 +1787,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-172 · S7 · DeepSeek segundo intento y decisión sobre Qwen
 
 2026-09-12T15:33:12Z. Qwen pasa provisionalmente por decisión expresa de la dirección; se mantiene NO_CONFORME de su original y conformidad del bloque. DeepSeek: original de 29.696 bytes conservado; doce casos resueltos correctamente; 26 de 32 citas no exactas en seis fuentes por supresión exclusiva de sangría. Claves, orden, valores y cadenas conservados. NO_CONFORME frente al requisito literal; no se infiere ausencia total de trazabilidad ni opacidad interna. S7 en ejecución; pendientes Claude y Grok. [Recepción y diagnóstico](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/deepseek-intento-2/ACTA_RECEPCION.md). [Decisión de la dirección](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/DECISION_DIRECCION.md).
+
+
+<a id="retp-173"></a>
+
+### RETP-2026-173 · S7 · Aclaración posterior de Qwen
+
+2026-09-12T15:43:12Z. Declaración posterior preservada y contrastada; no nuevo intento. Confirma texto posterior y autocontradicción, pero atribuye al segundo intento una introducción sólo presente en el primero y a S4 una prohibición ausente del encargo fijado. Causa interna no acreditada. Dictámenes y aceptación provisional RETP-172 intactos; S7 en ejecución. [Contraste y declaración](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s7-recepcion-externa/qwen-intento-2/aclaracion-1/ACTA_CONTRASTE.md).
