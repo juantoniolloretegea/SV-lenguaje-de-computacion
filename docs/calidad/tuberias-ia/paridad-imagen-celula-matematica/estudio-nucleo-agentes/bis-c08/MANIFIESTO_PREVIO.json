@@ -1,0 +1,20 @@
+{
+  "corte_lenguaje": "468dc281ff47209e0830ebc22912221d99a0c8ac",
+  "estatuto": "Contrato y escenarios previos C08; cero ejecutados",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "a1d71590d0626c2d2f67f1c0d63b8a42ef97428a372b3aecc1b2d36678642a4e",
+    "CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md": "a7e4c0e636c145d2001c0d488a19343965e060336cd3340bfeeeab0b846527da",
+    "ESTADO_TESTIGO.json": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+    "FUENTES.json": "f2fd9cbdd57e2e2409240522c0c7803057a11fe35d8cec83d32a1fc07a2eb06f",
+    "FUENTES_Y_ALCANCE.md": "def85807b38f923e22bcb136f61fb5a916f812bdf5ab0dccb981061fb8ce1889",
+    "ORACULO_DE_CONSERVACION.json": "cf7b4c88a80cf316dc5a97a15e7376f790b8710fc6423765d9b3499daacd13b2",
+    "README.md": "1fc05a57dd3cde3b9e257770b0898e1adefbb8ffe5e74318f5e9088b152feaf6",
+    "VERIFICACION_DOCUMENTAL.json": "e65167ccb7e1c61ea98e1e06eb8c8bf7155376a751022bd1ef7de707cfb3a594",
+    "fuentes-svp/estado-u.svp": "3e8ca3fca3c5c286db6ddeef8c9d405c12dc6150fc5d4d043253485428b83a29",
+    "fuentes-svp/tri-invalido-Bottom.svp": "886f6da1204d5949f67a5ab377c977d4896a578873e5976af7717f8ff1a5ae72",
+    "fuentes-svp/tri-invalido-NaN.svp": "35706c0ee34853490ec2c9a5eab5da0a3357a8f5bf1fcc654b8dfff1cc1a255b",
+    "fuentes-svp/tri-invalido-NotAdmitted.svp": "a82d9668bd7f1ca5ec960c95d193eb92257f3a21cb6cbab44a5dd7d8592be994",
+    "fuentes-svp/tri-invalido-null.svp": "3c14e3d8e228541364d245fb8d48e346bf5a58c4e0b3d7c79deb80795401f7ea",
+    "fuentes-svp/vector-incompleto.svp": "931c9dbea7d3fe636e4383fe4df7be7a97b84aa37d2a21b7926f4e4172cf1c6d"
+  }
+}

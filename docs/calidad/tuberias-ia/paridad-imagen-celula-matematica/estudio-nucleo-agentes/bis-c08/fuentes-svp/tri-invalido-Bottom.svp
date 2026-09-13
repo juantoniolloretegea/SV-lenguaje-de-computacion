@@ -1,0 +1,6 @@
+-- ES: Estado sintético C08; literal constituido para ensayo, sin captura ni ternarización.
+-- EN: Synthetic C08 state; declared test literal, without capture or ternarization.
+codomain K = { A, B, C };
+output_semantics S { A -> "a"; B -> "b"; C -> "c"; }
+cellspec CS { b: 4; codomain: K; semantics: S; role: Base; }
+cellstate V { spec: CS; vector: [Zero, One, Bottom, Zero, Zero, One, U, Zero, One, U, One, Zero, U, Zero, One, U]; }

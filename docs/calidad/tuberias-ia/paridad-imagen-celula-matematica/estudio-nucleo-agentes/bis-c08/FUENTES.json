@@ -1,0 +1,86 @@
+{
+  "corte_lenguaje": "468dc281ff47209e0830ebc22912221d99a0c8ac",
+  "corte_laboratorio": "58123ef59ec637b3442a2b37b8c04cf56cfe562e",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad verificada contra C07"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad verificada contra C07"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad verificada contra C07"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+      "lectura": "§§2.1–2.4 y 3.1–3.2"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "sha256": "fdb1cc15645f7ae53b6ab8006eba807fdad091ea5d900b38eee244be1c9ffe70",
+      "lectura": "Tri, InvalidTriValue, TryFrom<u8>"
+    },
+    {
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "sha256": "5db392086b9989a94c125a11ebca2e4b4fa1b6deb461a1c05f0c42c1f1e39247",
+      "lectura": "Lectura completa, incluidos ejemplos compile_fail y tests; no ejecutados aquí"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "lectura": "tri_list y take_tri"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "CaptureSpec, AdmissibilitySpec, Ternarizer y CellState"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "Inventario de variantes de objetos y operaciones conservado del contraste previo"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md",
+      "sha256": "ea19e5d1575f7f8601a5e553ea6a505aedcbb3dcac97dffbd258b1a655490571",
+      "lectura": "§§3–5"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Secuencia vigente y BIS-O07/O08"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "C08/C09"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md",
+      "sha256": "2ab2ea660f17baef23ad4b82e263ea50007c7b6986e5aa08ee0f768447fbc72c",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/fixtures/estado-16.json",
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "lectura": "Copia literal"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/oraculos/16-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "lectura": "Referencia geométrica previa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "sha256": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+      "lectura": "Criterio vigente de separación de evidencias"
+    }
+  ]
+}

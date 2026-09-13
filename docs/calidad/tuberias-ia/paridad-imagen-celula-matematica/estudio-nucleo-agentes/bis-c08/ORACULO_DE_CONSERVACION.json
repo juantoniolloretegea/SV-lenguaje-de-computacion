@@ -1,0 +1,59 @@
+{
+  "version": "BIS-C08-ORACULO/0.1",
+  "estatuto": "Oráculo previo del conductor; no IR ni salida de ejecución",
+  "estado_referencia": "ESTADO_TESTIGO.json",
+  "estado_sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+  "fuente_svp": "fuentes-svp/estado-u.svp",
+  "precondicion": "Recepción Rust, identidad de instancia/revisión y contrato de uso pendientes de acreditar en el montaje",
+  "vector_antes": [
+    "Zero",
+    "One",
+    "U",
+    "Zero",
+    "Zero",
+    "One",
+    "U",
+    "Zero",
+    "One",
+    "U",
+    "One",
+    "Zero",
+    "U",
+    "Zero",
+    "One",
+    "U"
+  ],
+  "vector_despues_exigido": [
+    "Zero",
+    "One",
+    "U",
+    "Zero",
+    "Zero",
+    "One",
+    "U",
+    "Zero",
+    "One",
+    "U",
+    "One",
+    "Zero",
+    "U",
+    "Zero",
+    "One",
+    "U"
+  ],
+  "posiciones_u": [
+    3,
+    7,
+    10,
+    13,
+    16
+  ],
+  "radios_por_simbolo": {
+    "Zero": 1,
+    "One": 2,
+    "U": 3
+  },
+  "oraculo_geometrico_previo": "../bis-c04/oraculos/16-identidad.json",
+  "regla": "Todo intento de representación conserva el estado referenciado; la ausencia o fallo de representación se declara por separado",
+  "limite": "La conservación de bytes no demuestra procedencia, autoridad, vigencia de consumo ni fidelidad de píxeles"
+}

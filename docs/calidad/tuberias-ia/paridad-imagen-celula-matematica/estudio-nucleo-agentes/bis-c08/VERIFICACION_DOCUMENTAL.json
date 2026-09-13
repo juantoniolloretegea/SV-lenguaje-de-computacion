@@ -1,0 +1,21 @@
+{
+  "estatuto": "Cotejo auxiliar Python de integridad documental y consistencia de datos esperados; no ensayo Rust ni prueba de representación",
+  "corte": "468dc281ff47209e0830ebc22912221d99a0c8ac",
+  "comprobaciones": [
+    "Veinte escenarios únicos: seis positivos y catorce negativos, todos con observado nulo y observador requerido",
+    "Seis fuentes SVP existentes: estado de 16 coordenadas, cuatro valores ajenos a Tri y supresión literal de la última coordenada",
+    "Testigo copiado sin cambios de C04; cinco U en posiciones 3,7,10,13,16; vector posterior exigido idéntico al anterior",
+    "Oráculo conserva radios Zero=1, One=2, U=3 y referencia geométrica previa",
+    "Fuentes cotejadas por SHA-256; enlaces documentales resueltos",
+    "RETP e historial conservan prefijos íntegros; sólo S22 cambia; S24 sigue pendiente",
+    "C01–C07 intactos; dos escenarios originales ejecutados y veintidós pendientes"
+  ],
+  "ensayos_c08_ejecutados": 0,
+  "limitaciones": [
+    "No se ha compilado ninguna fuente C08 ni ejecutado un parser SVP en esta comprobación",
+    "No se ha inyectado un fallo ni generado o consumido una imagen",
+    "La igualdad exigida por el oráculo no constituye una observación de conservación material",
+    "No se acredita detección de un adaptador que convierta explícitamente error en Tri.U",
+    "Sedes, productor gráfico y observador material pendientes del workflow"
+  ]
+}

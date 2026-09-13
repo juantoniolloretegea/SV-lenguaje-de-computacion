@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C08: preservar Tri.U válido y distinguir fallos técnicos de representación, sin habilitar K1-T. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.",
+  "siguiente_accion": "Continuar BIS-C09: contenido documental frente a autoridad y órdenes incrustadas. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c07/README.md",
-  "ampliacion": "BIS-C07: contrato de composición 16/25, 18 fixtures SVP y oráculos de serie/compuerta, cero ejecutados. Se distingue admisión estructural de concordancia con relación exacta.",
-  "ultimo_retp": "RETP-2026-210",
+  "ultimo_informe": "bis-c08/README.md",
+  "ampliacion": "BIS-C08: contrato de conservación de Tri.U y separación del fallo de representación; veinte escenarios, seis fuentes SVP parciales, cero ejecutados.",
+  "ultimo_retp": "RETP-2026-211",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -154,5 +154,14 @@
       25
     ],
     "alcance": "Fixtures y oráculos previos; sin ejecución de transmisión o compuerta"
+  },
+  "preparacion_bis_c08": {
+    "contrato": "bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md",
+    "banco": "bis-c08/BANCO_PREVIO_v0_1.json",
+    "variantes_especificadas": 20,
+    "variantes_ejecutadas": 0,
+    "fuentes_svp_parciales": 6,
+    "corte_revision": "468dc281ff47209e0830ebc22912221d99a0c8ac",
+    "alcance": "Conservación del estado y estatutos de representación; sin productor gráfico ni inyección ejecutada"
   }
 }
