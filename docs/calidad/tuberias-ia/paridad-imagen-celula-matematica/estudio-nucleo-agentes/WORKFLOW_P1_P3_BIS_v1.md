@@ -103,3 +103,9 @@ Para retornar al catálogo, cada causa propuesta debe distinguir regla algebraic
 ## 8. Continuidad operativa
 
 [ESTADO_WORKFLOW.json](ESTADO_WORKFLOW.json) conserva el estado por etapa. Sucesos SV registra la actividad y el historial de revisiones. Léame primero remite a la explicación vigente, este workflow y el último informe. Cada avance declara corte, objeto terminado, comprobaciones realizadas, límites y siguiente acción concreta. El cierre de una etapa no cierra por arrastre las siguientes ni predetermina la secuencia futura de agentes.
+
+## 9. Ampliación documental: ejemplos de composición y biblioteca base
+
+La [revisión de IMMUNO-2 y del expediente pulmonar](CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md) incorpora a BIS-01 ejemplos de serie con puente, compuerta heterogénea, supervisión y resultados enriquecidos. Son antecedentes de estudio; no modifican ni se incorporan al dominio vigente.
+
+BIS-02 debe explicitar dirección, compatibilidad semántica, identidad de participantes, dimensiones independientes y codominio del resultado. BIS-03 distinguirá primitivas justificadas, operaciones derivadas de una biblioteca base y contratos particulares. La existencia de sv_core como crate biblioteca no acredita la suficiencia de todas esas operaciones. El contraste no médico de ciberseguridad se conserva como requisito antes de concluir generalidad.

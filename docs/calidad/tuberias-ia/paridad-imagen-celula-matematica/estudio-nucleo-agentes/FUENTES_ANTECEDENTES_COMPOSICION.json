@@ -1,0 +1,133 @@
+{
+  "svperitus": {
+    "commit": "47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c",
+    "archivos_recuperados": [
+      {
+        "ruta": "aplicaciones/demo_wasm/compositor.html",
+        "git_blob": "b11bc40540fce4e081174d829dcfcc39a6fae29c",
+        "sha256": "f03eeac9364e1407ae905d25e6887f440a2ca2d06fab6efcae552e2f1548559d"
+      },
+      {
+        "ruta": "entornos/rust/wasm/src/lib.rs",
+        "git_blob": "647b9d82085b3f66f5fa9183dc26bb75c27a59e6",
+        "sha256": "9459c1ae87ce8e997df1306094b3f502779caca0307a479c7ecd83521bf1b566"
+      },
+      {
+        "ruta": "agentes/inmunologia/fase_2/config/imm2_n25.yaml",
+        "git_blob": "8f0545e6afb74f8c3459e5b59778220a9b239ac8",
+        "sha256": "ea05312bf9fbcb478efebf0e09215b3a1925a5979e2f92fde071c3fd2f7f17d5"
+      },
+      {
+        "ruta": "agentes/inmunologia/fase_2/src/normative_engine.py",
+        "git_blob": "873741875c945c86b633601b4ac4036c920cddcb",
+        "sha256": "bc027b8f70c54f7d708fbbc0bce64489b66457194cc57b402790d0a6328c9242"
+      },
+      {
+        "ruta": "agentes/inmunologia/fase_2/compositor/compose.py",
+        "git_blob": "17044d4d5323a8bac9a2619f0dd969cf1c7a88e6",
+        "sha256": "22e53a87326cb66342f190264c6d8994c133b4b9958c9db771716c2d91007195"
+      },
+      {
+        "ruta": "agentes/inmunologia/fase_2/compositor/README.md",
+        "git_blob": "fdc9eca280010f4ed270ca9da3fc49bfe4c0944b",
+        "sha256": "8c21962ad1d014fb5b2dda5c258cedbd4bbb11a6c199f25a07649db35cfbc18f"
+      }
+    ]
+  },
+  "adjunto": {
+    "sha256_zip": "97928595069c50403b1e7d60246a5262540515cb8822eb0c3962431dc755d8db",
+    "archivos": [
+      {
+        "ruta_zip": "Pulmón/Apoyoes/V1 análisis.docx",
+        "bytes": 23088,
+        "sha256": "ad9f8ab5845ba7510eb256d76e53a3ff783b3f14c9ebf4dadf2a8a9dda7f94ff"
+      },
+      {
+        "ruta_zip": "Pulmón/Apoyoes/V2 análisis.docx",
+        "bytes": 32290,
+        "sha256": "1895c6ad1659a6e8d848462562fea4f3b8625293323c6ca0c75faeaee20c50f8"
+      },
+      {
+        "ruta_zip": "Pulmón/Apoyoes/V3 análisis.docx",
+        "bytes": 43943,
+        "sha256": "dca35867747f8b60dc808091a03534c5736716c0457ea9e52692ead272956515"
+      },
+      {
+        "ruta_zip": "Pulmón/Apoyoes/Version final/V3 análisis.docx",
+        "bytes": 23475,
+        "sha256": "30b2cbdf1c5885c7817dc4cee881490fd8a7b724c52530b99937b68dbadaf1d5"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/Siguiente paso_Validacion Modelo Sintetico/SV-ADC_global_v1_documento_maestro.docx",
+        "bytes": 43694,
+        "sha256": "8be8de883a8a0bcfc2cb7ec385b30ad9e815883cf0f63d18e2504489eafc5a4c"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/Siguiente paso_Validacion Modelo Sintetico/SV-ADC_global_v1_instrucciones_inicio.md",
+        "bytes": 2101,
+        "sha256": "e3c473b1490fb52046d934eed99ea896056b5a895f23f0dcd1abff5640920f72"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/Siguiente paso_Validacion Modelo Sintetico/SV-ADC_global_v1_seed.csv",
+        "bytes": 10146,
+        "sha256": "4dd7d1d805094fd80efc772f7952576b927e4b2ab163f1b7c1f616d1bfd8a8d9"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/Siguiente paso_Validacion Modelo Sintetico/SV-ADC_global_v1_seed.json",
+        "bytes": 35537,
+        "sha256": "9a58465f2752e75bd96b571bf40a8d5cc8ae20d38c9ed0f42ba8d8f2176bbc1e"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/Siguiente paso_Validacion Modelo Sintetico/V1.docx",
+        "bytes": 23678,
+        "sha256": "8d176739f448ab703de88c8cb125b23149ec59121476aae2c6eb7b9bbf67ee48"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/SV-ADC_par_v1_documento_maestro.docx",
+        "bytes": 43622,
+        "sha256": "8d317ed78c55615ebec561f8cfa9777b0c47c1c2bfb584e701113611d0871c19"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/SV-ADC_par_v1_instrucciones_inicio.md",
+        "bytes": 9549,
+        "sha256": "635b1f5c6f55f0e783309d948a983c1f65c81a4bd338b50013cf6160b66b3d19"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/SV-ADC_par_v1_seed.csv",
+        "bytes": 447,
+        "sha256": "ebe360571c341ef89c222879a7efd30decb45407ffc6ac372f2a03a56ff03bd8"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales/SV-ADC_par_v1_seed.json",
+        "bytes": 14461,
+        "sha256": "918785ba73e333587bffc663351a6b65ed98a1e32bb5727abc78bad9a23d1261"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales III con INMUNO2/SV-ADC_global_v2_documento_maestro.docx",
+        "bytes": 43492,
+        "sha256": "d79e88c7dd2a82fb5820da230462545f357243f3e6695704a9091dad443b10b9"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales III con INMUNO2/SV-ADC_global_v2_instrucciones_inicio.md",
+        "bytes": 3454,
+        "sha256": "a4ba1a6d1e9d260c386596d4fac5ce39e61e2f77ffbe3a812b88ad9af7648532"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales III con INMUNO2/SV-ADC_global_v2_seed.csv",
+        "bytes": 869,
+        "sha256": "d55f7a29a1570e95002c491293bb1ed6ec334152390fa6cec249857300ba2e54"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales III con INMUNO2/SV-ADC_global_v2_seed.json",
+        "bytes": 18118,
+        "sha256": "7bac0e4d6845ec087f6bba1fb4a4bfb1566f19a234c29b5b00fab1e766d7f9e8"
+      },
+      {
+        "ruta_zip": "Pulmón/Archivos maestros finales III con INMUNO2/V1.docx",
+        "bytes": 27665,
+        "sha256": "eefd59bf14ae18a9b9d63e58a7b23ee2fe0374ffd059ced97b2cdb8407d32216"
+      }
+    ]
+  },
+  "alcance": "Recepción como antecedentes; el inventario no atribuye lectura íntegra a todos los archivos ni constituye un dominio vigente."
+}

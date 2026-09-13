@@ -12,6 +12,10 @@
 
 BIS-00 finalizado; BIS-01 en ejecución. Se estudian los contratos de tipos y de métodos de composición antes de decidir cambios. El contraste inicial distingue Frame de arquitectura y pareja matemática/visual, reconoce la encapsulación existente y separa comentarios Rust de perfiles SVP. No se ejecutaron nuevas pruebas Rust: el compilador y Cargo no están disponibles en el entorno de esta revisión. Completar la fuente normativa exacta de semántica V0.2 y la radiografía precede al contrato y banco BIS-02. Las secciones de recepción siguientes conservan su alcance histórico.
 
+## Ampliación de BIS-01 · S22 / RETP-2026-197
+
+[Contraste de antecedentes y biblioteca base](CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md) · [Identidades](FUENTES_ANTECEDENTES_COMPOSICION.json). IMMUNO-2 histórico y SV-ADC se reciben exclusivamente como ejemplos de células y composición. La revisión distingue puente en serie, compuerta heterogénea y meta-supervisión, así como biblioteca base, primitivas y contratos particulares. No se importa un dominio ni se ejecuta el demostrador.
+
 ## Criterio rector y alcance
 
 Los [Fundamentos algebraico-semánticos del Sistema Vectorial SV.md](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/fa3eb727799c322090e4e9126f81238cd198b9cc/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/Fundamentos%20algebraico-sem%C3%A1nticos%20del%20Sistema%20Vectorial%20SV.md) rigen el contraste: objeto exacto ternario, n = b² con b ≥ 3, significado canónico, radios, evaluación determinista y composición tipada. La representación y las implementaciones deben responder a esos fundamentos. El código sintético no redefine el álgebra.

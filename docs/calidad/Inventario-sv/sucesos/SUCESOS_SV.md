@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T05:19:31Z
+**fecha_actualizacion_utc:** 2026-09-13T05:29:06Z
 
 **fecha_fin_utc:** —
 
@@ -770,19 +770,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje e7370d1ad3e75d829b5a032e156d7691aa5a94fd; laboratorio 457f9ffffb2e669933805aad55ea1c239bdeabaf
+**cortes_de_entrada:** Lenguaje e7370d1ad3e75d829b5a032e156d7691aa5a94fd; laboratorio 457f9ffffb2e669933805aad55ea1c239bdeabaf; ampliación: Lenguaje a09cfbc4f55b7d7adedbe2903a079849c83247cc; laboratorio a6d97dc7e60d3d810b1369c7b41bcf8d9d9b92f0; SVperitus 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Workflow y política ES/EN preparados; BIS-00 finalizado y BIS-01 en ejecución. Composición como estructura y operaciones mediante métodos sujetos a contrato. Frame vigente de arquitectura distinguido de la pareja matemática/visual.
+**resultado:** Workflow y política ES/EN publicados; BIS-01 ampliado con IMMUNO-2 histórico y expediente pulmonar SV-ADC como antecedentes separados. Serie con puente, compuerta heterogénea y meta-supervisión; biblioteca base del SV como propuesta de organización pendiente de suficiencia.
 
-**verificacion:** Contraste estático de fuentes identificadas por blob. Rustc y Cargo no disponibles; sin nuevas ejecuciones Rust/WASM/IA. La lectura y preparación preceden al alta y se declaran sin retrofechar.
+**verificacion:** Revisión documental y estática del HTML, compositor Python y tramos Rust WASM pertinentes; maestros y semillas del ZIP identificados por hash. Sin ejecución del demostrador, entrenamiento ni pruebas Rust.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-196
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-197
 
-**siguiente_accion:** Fijar fuente normativa exacta de semántica V0.2 y sus adendas; completar radiografía; preparar contrato y banco previo BIS-02; ejecutar en entorno Rust identificado antes de dictamen y catálogo.
+**siguiente_accion:** Completar correspondencia normativa y preparar contrato y banco BIS-02: dimensiones independientes, dirección, interpretación y resultados. Distinguir primitivas, operaciones derivadas y contratos particulares; conservar contraste no médico de ciberseguridad.
 
-**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas.
+**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas. El ZIP pulmonar sólo se recibe como antecedente por instrucción expresa; no se incorporan células o reglas a dominios vigentes. Consulta Pages no recuperada; HTML leído del repositorio, sin verificar despliegue.
 
