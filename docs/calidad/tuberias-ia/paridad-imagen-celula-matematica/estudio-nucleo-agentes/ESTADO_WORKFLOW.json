@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C03: contrato de constitución, instancia, revisión y ligaduras. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.",
+  "siguiente_accion": "Continuar BIS-C04: contrato de paridad posicional y convenio gráfico desde los fundamentos. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c02/README.md",
-  "ampliacion": "BIS-C01 conserva 13/13 variantes conformes. BIS-C02: contrato candidato de tamaños por versión y banco previo de 14 variantes materializados, sin ejecutar. BIS-02 continúa en ejecución.",
-  "ultimo_retp": "RETP-2026-205",
+  "ultimo_informe": "bis-c03/README.md",
+  "ampliacion": "BIS-C03: contrato candidato y 16 variantes documentales preparadas, cero ejecutadas. Se precisa la capacidad existente LIG/0.1 y la obligación pendiente de identidad celular/revisión/representación. BIS-C01 conserva 13/13; C02 conserva 14 variantes sin ejecutar.",
+  "ultimo_retp": "RETP-2026-206",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -101,5 +101,14 @@
     "variantes_preparadas": 14,
     "variantes_ejecutadas": 0,
     "sede": "Propuesta para BIS-03; no decidida ni implementada"
+  },
+  "preparacion_bis_c03": {
+    "contrato": "bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+    "banco": "bis-c03/BANCO_PREVIO_v0_1.json",
+    "variantes_preparadas": 16,
+    "variantes_ejecutadas": 0,
+    "corte_revision": "d184a8589958d814c902bbfb2ed09589cafdc3bf",
+    "alcance_existente": "LIG/0.1 integrado; no sustituye el enlace pendiente de revisión y representación celular",
+    "precision_radiografia": "bis-c03/ALCANCE_LIG_Y_RECTIFICACION_DE_LECTURA.md"
   }
 }

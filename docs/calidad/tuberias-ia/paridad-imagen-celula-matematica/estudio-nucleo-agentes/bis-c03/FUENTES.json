@@ -1,0 +1,61 @@
+{
+  "corte_lenguaje": "d184a8589958d814c902bbfb2ed09589cafdc3bf",
+  "corte_laboratorio": "8040f98321c6b5b780df47c80e7f18b174e7a29f",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa conservada; identidad de revisión cotejada"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa conservada; identidad cotejada"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa con adendas conservada; identidad cotejada"
+    },
+    {
+      "ruta": "docs/arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md",
+      "sha256": "2ba498ba758169ca10de2da1069db081fa535bc42d3a0009fe0862a831ee9636",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md",
+      "sha256": "d327b5e9f3cbd22a98131d14a19a170056a1e4174f1e03c6c4b114d7ebd0d3a7",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "rust/sv_core/src/bindings.rs",
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "lectura": "Lectura completa del módulo"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "Definiciones IrProgram, objetos y campos celulares pertinentes"
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+      "sha256": "954066cf56d6a61d152eaf594cfd7b0da3f43b83103a2e42e8e934f0ca460d2a",
+      "lectura": "DFL-005, DFL-012 y sucesión RETP-105; consulta de rectificaciones posteriores"
+    },
+    {
+      "ruta": "tests/conformance/valid/frame_cell_spec_compartida_valida.svp",
+      "sha256": "8ef0a7123ccd9fdc465547f82e4df13f57b9f4a8381b3a728aaa192d1909e66d",
+      "lectura": "Lectura completa; antecedente del fixture ampliado"
+    },
+    {
+      "ruta": "tests/row7_bindings/base.svp",
+      "sha256": "accbd7b0d8af928d392a2ad379cd70b7d1d9322925d92a40e0ec69ac2882d9c5",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "tests/row7_bindings/cases.rs",
+      "sha256": "3af03e8552411f09ad32bb1a8f9faa82ae82730202bf4865b1b9df7fc81f1872",
+      "lectura": "Base y variantes de identidad, propietario, destino y alias; inspección sin ejecución"
+    }
+  ]
+}

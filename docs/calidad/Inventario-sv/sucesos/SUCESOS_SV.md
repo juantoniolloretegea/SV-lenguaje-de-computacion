@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T08:08:00Z
+**fecha_actualizacion_utc:** 2026-09-13T08:52:10Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje e7370d1ad3e75d829b5a032e156d7691aa5a94fd; laboratorio 457f9ffffb2e669933805aad55ea1c239bdeabaf; ampliación: Lenguaje a09cfbc4f55b7d7adedbe2903a079849c83247cc; laboratorio a6d97dc7e60d3d810b1369c7b41bcf8d9d9b92f0; SVperitus 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c; concordancia: Lenguaje b376aab1a070b07305e2a2d5c57a14530b4edba2; laboratorio 42574f9a404121c72dcc24528c83c8b8fdff9596; SV-matematica-semantica b8fd32978292d25adf9b87cf71e409005dce642c; cierre plan: Lenguaje b43dce153ee061e298f1c730f4f5ed075c84f3c7; laboratorio 9ad7729bd69c26d4e52a6630f815b646a277466f
+**cortes_de_entrada:** Lenguaje d184a8589958d814c902bbfb2ed09589cafdc3bf; laboratorio 8040f98321c6b5b780df47c80e7f18b174e7a29f
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C01 conserva 13/13 variantes conformes. BIS-C02: contrato candidato de tamaños por versión y banco previo de 14 variantes materializados, sin ejecutar. BIS-02 continúa en ejecución.
+**resultado:** BIS-C03 preparado: contrato candidato de constitución, instancia, revisión y representación; 16 variantes con entradas literales y oráculos previos. Se precisa el alcance ya integrado de LIG/0.1 y la obligación restante, sin duplicar su contrato. BIS-C01 conserva 13/13 variantes conformes; C02 conserva 14 variantes sin ejecutar.
 
-**verificacion:** Identidades de perfiles y fuentes, 14 entradas y oráculos documentales, conservación literal de los fixtures C01, precedencia declarada y enlaces comprobados. Esta revisión no ejecuta C02 ni acredita soporte operativo.
+**verificacion:** Inspección documental y estática; huellas, referencias, 16 entradas únicas y estado pendiente comprobados. Cero variantes C03 ejecutadas; no se ha ejecutado LIG de nuevo ni probado paridad visual. BIS-02 mantiene 2 escenarios ejecutados y 22 pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-205
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-206
 
-**siguiente_accion:** Continuar BIS-C03: contrato de constitución, instancia, revisión y ligaduras. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.
+**siguiente_accion:** Continuar BIS-C04: contrato de paridad posicional y convenio gráfico desde los fundamentos. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.
 
-**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas. El ZIP pulmonar sólo se recibe como antecedente por instrucción expresa; no se incorporan células o reglas a dominios vigentes. Consulta Pages no recuperada; HTML leído del repositorio, sin verificar despliegue. Se recibe la exigencia de vínculo frame/suceso sin declarar identidad de tipos. Inicialización, relación celular/arquitectónica y frvis pendientes; sin cambio de doctrina o explicación V2. Cierre de definición no equivale a cierre del Bis. S22 continúa en ejecución; N de soporte no constituido y sin cambio de semántica, IR, Rust o dominios. S23 instala y verifica Rust en el entorno remoto e incorpora la consulta manifiesto-sv; las 24 especificaciones BIS-02 conservan cero ejecuciones y el resultado documental de BIS-01 no se reescribe. Actualización RETP-203: dos escenarios BIS-C01 ejecutados; los anteriores recuentos de cero conservan su corte. Orden humano: Bis, catálogo y cierre de fase, después GUI; tecnología no seleccionada. Sin despliegue web ni cambios de núcleo. RETP-205: S24 registrado como pendiente. Los conjuntos {16,25} y {16,25,49} son exclusivamente sintéticos; no se admite una ampliación de soporte productivo. La propuesta de manifiesto externo sigue sujeta a decisión de sede. Sin modificación de Rust, gramática o IR.
+**observaciones:** LIG comprueba referencias, usos y destinos por operación; no interpreta íntegramente constitución/autoridad ni acredita el vínculo específico frvis. S24 permanece pendiente y sin fechas de inicio o fin; GUI diferida al cierre de Bis, catálogo y fase. No se modifica Rust, semántica, IR ni dominios.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

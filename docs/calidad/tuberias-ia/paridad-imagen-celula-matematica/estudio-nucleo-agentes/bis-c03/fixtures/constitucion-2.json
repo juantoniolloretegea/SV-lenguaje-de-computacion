@@ -1,0 +1,31 @@
+{
+  "estatuto": "Constitución sintética del banco; no constituye un dominio operativo SV",
+  "identifier": "ConstitucionPrueba",
+  "version": "2",
+  "dominio": "DominioPrueba",
+  "cellspec": "C1",
+  "b": 4,
+  "n": 16,
+  "nodos": [
+    "CC1",
+    "CC2"
+  ],
+  "orden_de_coordenadas": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16
+  ]
+}

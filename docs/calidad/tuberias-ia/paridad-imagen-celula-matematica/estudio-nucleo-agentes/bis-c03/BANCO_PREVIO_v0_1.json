@@ -1,0 +1,166 @@
+{
+  "version": "BIS-C03-BANCO/0.1",
+  "estatuto": "Oráculos documentales previos de vinculación; no ejecución de LIG ni de paridad visual",
+  "escenarios_originales": [
+    "BIS-C03-P",
+    "BIS-C03-N"
+  ],
+  "variantes": 16,
+  "ejecutadas": 0,
+  "registro": "REGISTRO_INDEPENDIENTE.json",
+  "orden": "C03-10 antes de C03-11 en la misma sesión del futuro montaje; las otras entradas son independientes",
+  "precedencia": [
+    "REFERENCIA_INCOMPLETA",
+    "REFERENCIA_NO_REGISTRADA",
+    "REGISTRO_NO_CONCORDANTE",
+    "ATRIBUCION_NO_CONCORDANTE",
+    "ARTEFACTO_NO_CONCORDANTE",
+    "VINCULO_CONCORDANTE"
+  ],
+  "casos": [
+    {
+      "id": "C03-01",
+      "entrada": "fixtures/C03-01.json",
+      "sha256": "5061dc63da8c6f85750557165275ddae7273f17dbce7accec84dac1989db3074",
+      "oraculo": "VINCULO_CONCORDANTE",
+      "razon": "A/r1 y representación exacta de A/r1",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-02",
+      "entrada": "fixtures/C03-02.json",
+      "sha256": "1fa92289823037a0e8628c0bb63f1ac694703ea2a941a050c7775ffd644c891c",
+      "oraculo": "VINCULO_CONCORDANTE",
+      "razon": "B/r1 es admisible bajo su propia identidad aunque tenga iguales coordenadas",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-03",
+      "entrada": "fixtures/C03-03.json",
+      "sha256": "6f2d92152db121748e1ff92bd848b408e383102c499458f17e99c84f263d80f2",
+      "oraculo": "ATRIBUCION_NO_CONCORDANTE",
+      "razon": "Bytes iguales no permiten presentar B como A",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-04",
+      "entrada": "fixtures/C03-04.json",
+      "sha256": "8ccb02d342e6efe40e43cf7669d359e5909f34709847fe9a5f01bb759e8ed4d6",
+      "oraculo": "VINCULO_CONCORDANTE",
+      "razon": "Una revisión explícita distinta puede conservar el contenido; no se deduplica su identidad",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-05",
+      "entrada": "fixtures/C03-05.json",
+      "sha256": "5b821d65c1b4e89ac5f0e043900d0aca01a2a07d4b8f6d9105749cb3c2d57c16",
+      "oraculo": "ATRIBUCION_NO_CONCORDANTE",
+      "razon": "r1 no satisface una expectativa exacta r2 aunque los bytes coincidan",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-06",
+      "entrada": "fixtures/C03-06.json",
+      "sha256": "b8880f122e21356c03d2b2b4a3ceeed1e8d66eb68f518587f1ec1edb89440505",
+      "oraculo": "REFERENCIA_INCOMPLETA",
+      "razon": "La revisión es obligatoria; no se selecciona la última",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-07",
+      "entrada": "fixtures/C03-07.json",
+      "sha256": "40e4f7ac9786bbb8959e1a152fe1ec869c2d82513cc62cffde18076a58d7e736",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "Se cambia nodo sin cambiar identidad del registro",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-08",
+      "entrada": "fixtures/C03-08.json",
+      "sha256": "4ba039034286bcecfd525763a3021f2bbd073eb676859ef15bd76dcb78859fcd",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "Se atribuye S2 a la ligadura de A",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-09",
+      "entrada": "fixtures/C03-09.json",
+      "sha256": "44e8a407eb2dc2489ccbafbee5ec3330149a1eb0227d98b2d79fe067c5fc8747",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "Se cambia el dominio manteniendo instancia y vector",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-10",
+      "entrada": "fixtures/C03-10.json",
+      "sha256": "1d226c49168a21ed33511c3b8960c517b6e5eab9677c059fb70e60c4377485d0",
+      "oraculo": "VINCULO_CONCORDANTE",
+      "razon": "La versión 2 se selecciona de forma expresa",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-11",
+      "entrada": "fixtures/C03-11.json",
+      "sha256": "9df2059dba67f2ac18b266b85e40ef9d36654f2fc71142ed866bb9e6b1a9c7b5",
+      "oraculo": "ATRIBUCION_NO_CONCORDANTE",
+      "razon": "Volver a v1 después de v2 no autoriza heredar v2",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-12",
+      "entrada": "fixtures/C03-12.json",
+      "sha256": "d3748d35cd451de4494253972e35f1668adddc8ccc08e60b4d5eb72834c31d48",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "El mismo nombre y versión con otra huella no identifica la misma constitución",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-13",
+      "entrada": "fixtures/C03-13.json",
+      "sha256": "7e54bb3399bb8afab36d2e00dbcfc83960cc7d8565e4f5f08c3ab2cddc036004",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "No se reutiliza la ligadura con otros bytes fuente",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-14",
+      "entrada": "fixtures/C03-14.json",
+      "sha256": "4e45e3f7cd9a83657ec0a46d1e8fd5b7c2078d79e9d02c3539175954ac6c4a2b",
+      "oraculo": "ARTEFACTO_NO_CONCORDANTE",
+      "razon": "El vínculo es exacto, pero se entregan bytes distintos",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-15",
+      "entrada": "fixtures/C03-15.json",
+      "sha256": "4d1b3cf073f0419f414769cf990f32bd5c1d086890e5ccaa0092fd177031b587",
+      "oraculo": "REFERENCIA_NO_REGISTRADA",
+      "razon": "Identidad de registro desconocida; no se resuelve por parecido",
+      "estado": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "C03-16",
+      "entrada": "fixtures/C03-16.json",
+      "sha256": "4f03808c08cb190cd359488e3e7ad37a1005d0e1313ecb2d87dc83211ecffb76",
+      "oraculo": "REGISTRO_NO_CONCORDANTE",
+      "razon": "Cambiar petición y expectativa no cambia el registro independiente",
+      "estado": "PENDIENTE",
+      "observado": null
+    }
+  ]
+}

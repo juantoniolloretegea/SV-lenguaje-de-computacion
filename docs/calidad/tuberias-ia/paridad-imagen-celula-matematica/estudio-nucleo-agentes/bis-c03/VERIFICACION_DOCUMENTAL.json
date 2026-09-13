@@ -1,0 +1,20 @@
+{
+  "estatuto": "Verificación de preparación documental; no ensayo del contrato candidato",
+  "comprobaciones": [
+    "16 entradas únicas y huellas concordantes; estado pendiente y resultado observado nulo",
+    "Registro independiente de cuatro referencias; igualdad de bytes con identidad distinta",
+    "Fuentes y constituciones sintéticas con huellas concordantes",
+    "Cuatro vectores de fuente SVP con longitud documental 16; no compilación",
+    "Enlaces locales del expediente existentes",
+    "RETP e historial conservan prefijo histórico íntegro",
+    "S24 y los restantes sucesos conservados íntegramente; sólo S22 actualizado",
+    "Dos escenarios originales ejecutados y 22 pendientes; ningún cambio Rust"
+  ],
+  "ensayos_c03_ejecutados": 0,
+  "ensayos_lig_ejecutados_en_este_incremento": 0,
+  "limitaciones": [
+    "No se ejecuta un verificador de C03; los resultados del banco son expectativas previas",
+    "La fixture SVP no ha sido compilada en este incremento",
+    "Sin imagen, renderizador ni observación de consumo visual"
+  ]
+}

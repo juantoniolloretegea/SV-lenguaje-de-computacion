@@ -1,0 +1,50 @@
+{
+  "esperado": {
+    "dominio": "DominioPrueba",
+    "constitucion": {
+      "identifier": "ConstitucionPrueba",
+      "version": "1",
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+    },
+    "programa_fuente": {
+      "source_file": "dos-nodos-16.svp",
+      "source_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+    },
+    "arquitectura": "Arch1",
+    "nodo": "CC1",
+    "cellspec": "C1",
+    "instancia_celular": "A",
+    "revision": "r1",
+    "estado_ir": "S1",
+    "componente": "updated_vector",
+    "representacion": "matematica-testigo/1"
+  },
+  "presentado": {
+    "id": "A-r1",
+    "vinculo": {
+      "dominio": "DominioPrueba",
+      "constitucion": {
+        "identifier": "ConstitucionPrueba",
+        "version": "1",
+        "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+      },
+      "programa_fuente": {
+        "source_file": "dos-nodos-16.svp",
+        "source_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+      },
+      "arquitectura": "Arch1",
+      "nodo": "CC1",
+      "cellspec": "C1",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "estado_ir": "S2",
+      "componente": "updated_vector",
+      "representacion": "matematica-testigo/1"
+    },
+    "artefacto": {
+      "archivo": "fixtures/estado-16.json",
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+    }
+  },
+  "archivo_entregado": "fixtures/estado-16.json"
+}
