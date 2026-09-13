@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T08:52:10Z
+**fecha_actualizacion_utc:** 2026-09-13T09:41:54Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje d184a8589958d814c902bbfb2ed09589cafdc3bf; laboratorio 8040f98321c6b5b780df47c80e7f18b174e7a29f
+**cortes_de_entrada:** Lenguaje fd815e9b7921cb05854ed290a609957e9d07521a; laboratorio 2dd73e10af75fec840ffb31e71feaa7a04e62338
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C03 preparado: contrato candidato de constitución, instancia, revisión y representación; 16 variantes con entradas literales y oráculos previos. Se precisa el alcance ya integrado de LIG/0.1 y la obligación restante, sin duplicar su contrato. BIS-C01 conserva 13/13 variantes conformes; C02 conserva 14 variantes sin ejecutar.
+**resultado:** BIS-C04 preparado: contrato de paridad posicional y convenio gráfico; 20 variantes previas y cinco oráculos simbólicos exactos para 16/25/49 posiciones. Se separan símbolo, radio, discriminante técnico, transformación y permutación. C01 conserva 13/13 variantes nativas; C02/C03 conservan sus bancos sin ejecutar.
 
-**verificacion:** Inspección documental y estática; huellas, referencias, 16 entradas únicas y estado pendiente comprobados. Cero variantes C03 ejecutadas; no se ha ejecutado LIG de nuevo ni probado paridad visual. BIS-02 mantiene 2 escenarios ejecutados y 22 pendientes.
+**verificacion:** Verificación documental de fuentes, huellas, 20 entradas únicas, cinco oráculos completos y conservación del historial. Cero variantes C04 ejecutadas; no se ha generado ni probado una imagen o su consumo. BIS-02 mantiene dos escenarios originales ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-206
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-207
 
-**siguiente_accion:** Continuar BIS-C04: contrato de paridad posicional y convenio gráfico desde los fundamentos. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.
+**siguiente_accion:** Continuar BIS-C05: contrato de artefacto efectivamente consumido, revisión y contexto de uso. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.
 
-**observaciones:** LIG comprueba referencias, usos y destinos por operación; no interpreta íntegramente constitución/autoridad ni acredita el vínculo específico frvis. S24 permanece pendiente y sin fechas de inicio o fin; GUI diferida al cierre de Bis, catálogo y fase. No se modifica Rust, semántica, IR ni dominios.
+**observaciones:** Descriptor experimental, no nueva IR ni renderer; precisión y legibilidad del dibujo siguen pendientes. BIS-C04 no es una nueva corrección de la adenda histórica C01-C03. S24 pendiente; GUI diferida al cierre de Bis, catálogo y fase. Sin cambios de Rust, semántica, IR ni dominios.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

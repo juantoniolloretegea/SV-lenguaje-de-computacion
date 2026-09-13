@@ -1,0 +1,91 @@
+{
+  "corte_lenguaje": "fd815e9b7921cb05854ed290a609957e9d07521a",
+  "corte_laboratorio": "2dd73e10af75fec840ffb31e71feaa7a04e62338",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad conservada contra C03"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad conservada contra C03"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa con adendas; identidad conservada contra C03"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/Fundamentos algebraico-semánticos del Sistema Vectorial SV.md",
+      "sha256": "904f7536def8194d01121ef9e90bc913466fc8869f9fec52fb43e6cb7aefbb31",
+      "lectura": "Lectura completa; aplicación §§2,3,4.1"
+    },
+    {
+      "ruta": "FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md",
+      "sha256": "ee5a60c230ca4e5350573044c444107e883221813dad7078a9a562da265de712",
+      "lectura": "Nomenclatura, A.1/A.2 y C.4"
+    },
+    {
+      "ruta": "ADENDA_TECNICA_VIGENCIA_FRONTERA_NORMATIVA_C01_C03_2026_08_24.md",
+      "sha256": "67cfe9d2345acf7cc26d0ae6467bfac21db6c5e6750cdb6a2e01ad0bf572ea80",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_2.md",
+      "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+      "lectura": "J5.2, alcance de codificación"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+      "lectura": "Vigencia de tipos y alcance heredado"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "sha256": "fdb1cc15645f7ae53b6ab8006eba807fdad091ea5d900b38eee244be1c9ffe70",
+      "lectura": "Tri, as_u8, label e ir_label"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "Variantes y campos pertinentes; Projection no equivale a VisualCode"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Lectura previa conservada; §§3,10,11,12 consultados"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/HALLAZGOS.md",
+      "sha256": "a110d31d0e6c3dacdfc560139b458f09ac00ba0255ae8f56646384f88b10b796",
+      "lectura": "H02 orientación"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md",
+      "sha256": "eda1ad4ae1c486ea8f46443dd37d59bf3b1af9e3f7a175c3b53f7c9ce6cc365f",
+      "lectura": "Fórmulas y precisiones sobre orientación, radios y representación"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+      "sha256": "36802d91f1b406d31eb73d9b475c2e3159d0abe87615a8a5c47ef9d575f7b1f5",
+      "lectura": "Contrato anterior leído y conservado"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/fixtures/b5-exacto.svp",
+      "sha256": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+      "lectura": "Fuente sintética literal"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/fixtures/b7-exacto.svp",
+      "sha256": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+      "lectura": "Fuente sintética literal"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/fixtures/estado-16.json",
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "lectura": "Artefacto matemático literal"
+    }
+  ]
+}

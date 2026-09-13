@@ -1,0 +1,417 @@
+{
+  "formato": "BIS-C04-GEOMETRIA/0.1",
+  "n": 16,
+  "convenio": {
+    "id": "BIS-C04-CONVENIO/0.1",
+    "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976"
+  },
+  "transformacion": "identidad",
+  "leyenda": [
+    {
+      "simbolo": "Zero",
+      "lectura": "0",
+      "radio": 1
+    },
+    {
+      "simbolo": "One",
+      "lectura": "1",
+      "radio": 2
+    },
+    {
+      "simbolo": "U",
+      "lectura": "U",
+      "radio": 3
+    }
+  ],
+  "codificacion": "inyectiva",
+  "pretension_equivalencia": true,
+  "vertices": [
+    {
+      "posicion": 1,
+      "parametro_sintetico": "P1",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        0,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ]
+    },
+    {
+      "posicion": 2,
+      "parametro_sintetico": "P2",
+      "simbolo": "One",
+      "radio": 2,
+      "angulo_vueltas": [
+        1,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        2,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "posicion": 3,
+      "parametro_sintetico": "P3",
+      "simbolo": "U",
+      "radio": 3,
+      "angulo_vueltas": [
+        2,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        3,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "posicion": 4,
+      "parametro_sintetico": "P4",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        3,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "posicion": 5,
+      "parametro_sintetico": "P5",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        4,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "posicion": 6,
+      "parametro_sintetico": "P6",
+      "simbolo": "One",
+      "radio": 2,
+      "angulo_vueltas": [
+        5,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        2,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "posicion": 7,
+      "parametro_sintetico": "P7",
+      "simbolo": "U",
+      "radio": 3,
+      "angulo_vueltas": [
+        6,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        3,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "posicion": 8,
+      "parametro_sintetico": "P8",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        7,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "posicion": 9,
+      "parametro_sintetico": "P9",
+      "simbolo": "One",
+      "radio": 2,
+      "angulo_vueltas": [
+        8,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        2,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "posicion": 10,
+      "parametro_sintetico": "P10",
+      "simbolo": "U",
+      "radio": 3,
+      "angulo_vueltas": [
+        9,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        3,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "posicion": 11,
+      "parametro_sintetico": "P11",
+      "simbolo": "One",
+      "radio": 2,
+      "angulo_vueltas": [
+        10,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        2,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "posicion": 12,
+      "parametro_sintetico": "P12",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        11,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "posicion": 13,
+      "parametro_sintetico": "P13",
+      "simbolo": "U",
+      "radio": 3,
+      "angulo_vueltas": [
+        12,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        3,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        3,
+        0
+      ]
+    },
+    {
+      "posicion": 14,
+      "parametro_sintetico": "P14",
+      "simbolo": "Zero",
+      "radio": 1,
+      "angulo_vueltas": [
+        13,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        1,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        1,
+        0
+      ]
+    },
+    {
+      "posicion": 15,
+      "parametro_sintetico": "P15",
+      "simbolo": "One",
+      "radio": 2,
+      "angulo_vueltas": [
+        14,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        2,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        2,
+        0
+      ]
+    },
+    {
+      "posicion": 16,
+      "parametro_sintetico": "P16",
+      "simbolo": "U",
+      "radio": 3,
+      "angulo_vueltas": [
+        15,
+        16
+      ],
+      "x_coef_cos_sin_constante": [
+        3,
+        0,
+        0
+      ],
+      "y_coef_cos_sin_constante": [
+        0,
+        3,
+        0
+      ]
+    }
+  ],
+  "cerrada": true,
+  "aristas": [
+    [
+      1,
+      2
+    ],
+    [
+      2,
+      3
+    ],
+    [
+      3,
+      4
+    ],
+    [
+      4,
+      5
+    ],
+    [
+      5,
+      6
+    ],
+    [
+      6,
+      7
+    ],
+    [
+      7,
+      8
+    ],
+    [
+      8,
+      9
+    ],
+    [
+      9,
+      10
+    ],
+    [
+      10,
+      11
+    ],
+    [
+      11,
+      12
+    ],
+    [
+      12,
+      13
+    ],
+    [
+      13,
+      14
+    ],
+    [
+      14,
+      15
+    ],
+    [
+      15,
+      16
+    ],
+    [
+      16,
+      1
+    ]
+  ]
+}

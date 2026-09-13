@@ -1,0 +1,417 @@
+{
+  "version": "BIS-C04-BANCO/0.1",
+  "estatuto": "Oráculos previos de geometría simbólica exacta; no ejecución ni imagen renderizada",
+  "escenarios_originales": [
+    "BIS-C04-P",
+    "BIS-C04-N"
+  ],
+  "variantes": 20,
+  "ejecutadas": 0,
+  "precondiciones": [
+    "Identidad de instancia/revisión conforme a C03; este banco aísla la correspondencia geométrica",
+    "Estado Tri previamente admitido; no convierte observaciones ni autoriza dimensiones de dominio",
+    "Oráculo y transformación solicitada obtenidos del banco independiente, no de la representación presentada"
+  ],
+  "casos": [
+    {
+      "id": "C04-01",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-01.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "PARIDAD_SIMBOLICA_CONFORME",
+      "razon": "16 posiciones asimétricas bajo convenio canónico",
+      "observado": null
+    },
+    {
+      "id": "C04-02",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-25.json",
+        "sha256": "2a40a6ce6f6cfced60d5ee472a2f73d23f4d9bd352a7fe7981af6736c44b23cf"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-02.json",
+        "sha256": "a153093e679d1e6c911b87fedc1e640afcea7c298927a625cbd580ff8226cdb9"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/25-identidad.json",
+        "sha256": "a153093e679d1e6c911b87fedc1e640afcea7c298927a625cbd580ff8226cdb9"
+      },
+      "resultado_esperado": "PARIDAD_SIMBOLICA_CONFORME",
+      "razon": "25 posiciones; no se reutiliza el denominador 16 o 9",
+      "observado": null
+    },
+    {
+      "id": "C04-03",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-49.json",
+        "sha256": "b2041bf399eee0e773c030ff0e51a0dfdec8282284f25b75d1247392f66cc971"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-03.json",
+        "sha256": "0f60f78a9c3a930f12513cf45bf598f47b7c688881609938f1a3309cd864b2d7"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/49-identidad.json",
+        "sha256": "0f60f78a9c3a930f12513cf45bf598f47b7c688881609938f1a3309cd864b2d7"
+      },
+      "resultado_esperado": "PARIDAD_SIMBOLICA_CONFORME",
+      "razon": "49 posiciones; misma regla sin tamaño mínimo predeterminado",
+      "observado": null
+    },
+    {
+      "id": "C04-04",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-04.json",
+        "sha256": "eae59695633a7dc0b94a1bed3cd8ac848184388336e9121c23f5e3b127fe6e59"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "ORDEN_POSICIONAL_NO_CONFORME",
+      "razon": "Intercambio de dos vértices completos; igualdad de conjunto insuficiente",
+      "observado": null
+    },
+    {
+      "id": "C04-05",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-05.json",
+        "sha256": "8a31e32d6b9ed944eb3f21f788095bd4a3e66c73e64c95e79421b02631dccd3c"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "SIMBOLO_NO_CONFORME",
+      "razon": "Intercambio de símbolos manteniendo posiciones",
+      "observado": null
+    },
+    {
+      "id": "C04-06",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-06.json",
+        "sha256": "a0775a74a60e7ccb83eed98d8b157303a33da1a25cfc384a971fd8f0c7354c74"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "RADIO_NO_CONFORME",
+      "razon": "Se usa para U el discriminante técnico 2 como radio",
+      "observado": null
+    },
+    {
+      "id": "C04-07",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-07.json",
+        "sha256": "297abf9e081355061a2743ca6d54ce309535a7ada943dbb8bf01e0cf84429fa1"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "RADIO_NO_CONFORME",
+      "razon": "Se dibuja Zero en el origen con radio 0",
+      "observado": null
+    },
+    {
+      "id": "C04-08",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-08.json",
+        "sha256": "feab6d04e3ede2d0effdef88ffe734d8e857f4109deda733c1c10a0000d8c34c"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "LEYENDA_NO_CONFORME",
+      "razon": "Se permutan en la leyenda los radios de One y U",
+      "observado": null
+    },
+    {
+      "id": "C04-09",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-09.json",
+        "sha256": "0ef873b8114d5a1644e749e53dea5334b1e631ff45f041f351a3625f92ceba95"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "ANGULO_NO_CONFORME",
+      "razon": "Se invierte el signo angular bajo el convenio canónico",
+      "observado": null
+    },
+    {
+      "id": "C04-10",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "superior-horario",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-10.json",
+        "sha256": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-superior-horario.json",
+        "sha256": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604"
+      },
+      "resultado_esperado": "PARIDAD_SIMBOLICA_CONFORME",
+      "razon": "Transformación declarada (x,y)->(y,x); índices y radios conservados",
+      "observado": null
+    },
+    {
+      "id": "C04-11",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-11.json",
+        "sha256": "890323b1f4b3d3f02183b62a928a1967d20610f6793701b9db5dbea92ecb42f7"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "COORDENADA_PRESENTADA_NO_CONFORME",
+      "razon": "Se aplican coordenadas de orientación histórica solicitando identidad",
+      "observado": null
+    },
+    {
+      "id": "C04-12",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "pantalla-40",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-12.json",
+        "sha256": "cfe87639b4c08f32dca34d98f5f5062de5a82d97db9c051bc3a0aa8af7ce37d7"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-pantalla-40.json",
+        "sha256": "cfe87639b4c08f32dca34d98f5f5062de5a82d97db9c051bc3a0aa8af7ce37d7"
+      },
+      "resultado_esperado": "PARIDAD_SIMBOLICA_CONFORME",
+      "razon": "Transformación de pantalla declarada; traslación y escala de prueba",
+      "observado": null
+    },
+    {
+      "id": "C04-13",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "pantalla-40",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-13.json",
+        "sha256": "dae8d4f0fcfbe1a13c11e47ee3eb81dfca80336490f476dce14597f6fb3e6e5f"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-pantalla-40.json",
+        "sha256": "cfe87639b4c08f32dca34d98f5f5062de5a82d97db9c051bc3a0aa8af7ce37d7"
+      },
+      "resultado_esperado": "COORDENADA_PRESENTADA_NO_CONFORME",
+      "razon": "El signo de y no concuerda con la transformación de pantalla",
+      "observado": null
+    },
+    {
+      "id": "C04-14",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-14.json",
+        "sha256": "563955db1f97e1fec714d0180fd37ba5ae2135765f176f42fc322f42670c2ce0"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "NUMERO_VERTICES_NO_CONFORME",
+      "razon": "Falta una posición; no se rellena con U",
+      "observado": null
+    },
+    {
+      "id": "C04-15",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-15.json",
+        "sha256": "c709d59a7923dcf20ae5b4ad2d122c85744887a694d1a0ec88bc38673ad87f7b"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "CIERRE_NO_CONFORME",
+      "razon": "Se entrega una cadena abierta",
+      "observado": null
+    },
+    {
+      "id": "C04-16",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-16.json",
+        "sha256": "27613ef4e299c1695129a8bac7b334998f75ca07362fbf80fbf127501bafd49c"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "ARISTAS_NO_CONFORMES",
+      "razon": "Se une el primer vértice al tercero alterando la poligonal",
+      "observado": null
+    },
+    {
+      "id": "C04-17",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-17.json",
+        "sha256": "9ba63383db21283339b373b0adbb8c189a9815e6e8fe131aee3ec64bed1d2363"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "ANGULO_NO_CONFORME",
+      "razon": "Se usa N=9 en el ángulo de una célula de 16 posiciones",
+      "observado": null
+    },
+    {
+      "id": "C04-18",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-18.json",
+        "sha256": "8ceb24f562742ad277521b8ebf8c77e89c755fa9e8314b9256b2e21f6ca2eb25"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "PARAMETRO_NO_CONFORME",
+      "razon": "Una etiqueta de posición apunta a otro parámetro",
+      "observado": null
+    },
+    {
+      "id": "C04-19",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-19.json",
+        "sha256": "591d47db510c6beb33653dbd73b668374deebd68ee989d1001daa7e59ed2fdef"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "EQUIVALENCIA_CON_PERDIDA_NO_ADMISIBLE",
+      "razon": "Se declara pérdida y se pretende equivalencia exacta",
+      "observado": null
+    },
+    {
+      "id": "C04-20",
+      "estado": "PENDIENTE",
+      "estado_fuente": {
+        "archivo": "fixtures/estado-16.json",
+        "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+      },
+      "transformacion_solicitada": "identidad",
+      "representacion_presentada": {
+        "archivo": "fixtures/C04-20.json",
+        "sha256": "6e97a1c600347b0ed1b9b2ecdf74c1e99f7a8826e1715b1145398894a2ddfa64"
+      },
+      "oraculo_independiente": {
+        "archivo": "oraculos/16-identidad.json",
+        "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+      },
+      "resultado_esperado": "SIMBOLO_NO_CONFORME",
+      "razon": "Figura internamente coherente con otro vector; mismos conteos y clasificación no bastan",
+      "observado": null
+    }
+  ]
+}

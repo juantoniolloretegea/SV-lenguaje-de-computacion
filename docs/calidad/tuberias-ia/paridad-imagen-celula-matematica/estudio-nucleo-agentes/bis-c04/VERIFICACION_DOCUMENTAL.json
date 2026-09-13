@@ -1,0 +1,21 @@
+{
+  "estatuto": "Verificación de datos esperados y preservación documental; no ensayo de una realización C04",
+  "corte": "fd815e9b7921cb05854ed290a609957e9d07521a",
+  "comprobaciones": [
+    "20 entradas únicas con huellas concordantes y estado PENDIENTE; observado nulo",
+    "Cinco entradas positivas y quince alteradas respecto del oráculo independiente",
+    "Cinco oráculos completos: 122 vértices cotejados con estado, radios, ángulos y coeficientes declarados",
+    "Tres matrices de presentación invertibles y explícitas",
+    "Caso C04-20: vector distinto con conteos iguales",
+    "Fuentes C01/C03 conservadas byte a byte; fuentes documentales identificadas",
+    "Enlaces locales existentes; historial y RETP mantienen prefijos previos íntegros",
+    "Sólo S22 cambia; S24 permanece pendiente; sin cambios Rust"
+  ],
+  "ensayos_c04_ejecutados": 0,
+  "imagenes_renderizadas": 0,
+  "limitaciones": [
+    "No se ha ejecutado el futuro verificador de paridad ni un renderer",
+    "Los coeficientes exactos describen geometría; no son una prueba de píxeles ni de consumo",
+    "No se acredita suficiencia del núcleo ni cierre de C04-P/N"
+  ]
+}
