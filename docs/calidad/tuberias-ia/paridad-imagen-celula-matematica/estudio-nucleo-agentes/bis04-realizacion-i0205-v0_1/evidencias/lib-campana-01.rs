@@ -41,12 +41,7 @@ impl ReceivedBytes {
         let mut total = 0usize;
         let mut channel = |r: &mut dyn Read, max: usize| -> Result<Vec<u8>, Rejection> {
             let mut r = r;
-            // ES: Acotar reserva y lectura por el saldo agregado antes de recibir.
-            // EN: Bound reservation and reading by aggregate balance before receiving.
-            let remaining = 16384usize
-                .checked_sub(total)
-                .ok_or_else(|| err("R01", "aggregate balance", &[]))?;
-            let b = json::receive(&mut r, max.min(remaining)).map_err(|e| err("R01", e, &[]))?;
+            let b = json::receive(&mut r, max).map_err(|e| err("R01", e, &[]))?;
             total = total
                 .checked_add(b.len())
                 .ok_or_else(|| err("R01", "sum overflow", &[]))?;
@@ -701,33 +696,5 @@ mod construction_tests {
                 .as_slice(),
             &[Tri::Zero; 49]
         );
-    }
-}
-
-#[cfg(test)]
-mod aggregate_read_test {
-    use super::*;
-    use std::io::Cursor;
-    // ES: El último canal sólo puede leer el saldo más un byte detector.
-    // EN: The last channel may read only the balance plus one detection byte.
-    #[test]
-    fn aggregate_balance_bounds_actual_read() {
-        let mut meta = Cursor::new(vec![b' '; 4096]);
-        let mut source = Cursor::new(vec![b' '; 4096]);
-        let mut state = Cursor::new(vec![b' '; 1024]);
-        let mut support = Cursor::new(vec![b' '; 1024]);
-        let mut geometry = Cursor::new(vec![b' '; 8192]);
-        let result = ReceivedBytes::read(
-            &mut meta,
-            &mut source,
-            &mut state,
-            Some(&mut support),
-            &mut geometry,
-        );
-        match result {
-            Err(e) => assert_eq!(e.guard, "R01"),
-            Ok(_) => panic!("aggregate overflow accepted"),
-        }
-        assert_eq!(geometry.position(), 6145);
     }
 }

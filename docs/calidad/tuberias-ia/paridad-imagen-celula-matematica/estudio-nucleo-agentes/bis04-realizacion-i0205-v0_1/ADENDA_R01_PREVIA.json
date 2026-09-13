@@ -1,0 +1,20 @@
+{
+  "id": "R01-LECTURA-AGREGADA-01",
+  "motivo": "Revisión estática: lectura de canal limitada por cuota individual pero no por saldo agregado antes de reservar/leer.",
+  "entradas_bytes": [
+    4096,
+    4096,
+    1024,
+    1024,
+    8192
+  ],
+  "esperado": {
+    "guarda": "R01",
+    "bytes_geometria_leidos": 6145,
+    "nota": "6144 de saldo y un byte detector; no leer el resto del canal"
+  },
+  "oraculos_integrados": "sin cambios",
+  "fuente_previa_sha256": "bb6424f8daa78aa853f121e549c353228a157ef6bbbbf78cf87e08c68548ed2c",
+  "fuente_corregida_sha256": "a0fa5a26292a50b46823952dae416d5a790d2cfee22d160b5ecf4903a0c88369",
+  "ejecucion": "PENDIENTE"
+}
