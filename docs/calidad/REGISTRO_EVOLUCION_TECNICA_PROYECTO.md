@@ -1934,3 +1934,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-193 · S20 · Recepción documental de (p1+p3)-Bis
 
 2026-09-13T04:30:28Z. Explicación pública MD/PDF y recepción documental (p1+p3)-Bis. Suficiencia integrada, elección de IA y promoción nuclear pendientes. Fuentes cotejadas contra blobs Git; revisión estática y testigo de índices; PDF renderizado y revisado; copias verificadas al publicar. [Expediente](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md). Fijar contrato y banco de paridad posicional, semántica y operacional; resolver hallazgos del antecedente antes de reutilizarlo; después derivar causas comprobadas al catálogo. Sin modificación de semántica, IR, Rust, modelos o parámetros de dominio.
+
+
+<a id="retp-194"></a>
+
+### RETP-2026-194 · S21 · Apertura de la revisión 2 de (p1+p3)-Bis
+
+2026-09-13T04:51:40Z. Revisión iniciada con conservación de la primera edición y separación de acuerdo de diseño y realización. Cortes cotejados; sin cambios respecto a S20 al iniciar esta revisión. Lectura de estado y AGENTS antes del alta. [Revisión](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md). Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.

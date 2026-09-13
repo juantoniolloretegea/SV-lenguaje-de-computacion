@@ -718,3 +718,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** La habilitación del catálogo de S19 se conserva como antecedente. Este estudio previo la complementa por instrucción humana. Agentes sin calendario impuesto; inmunología conserva su secuencia. Ningún fallo técnico se transforma en U. Primacía algebraico-semántica reafirmada por el autor durante la revisión. Discrepancias de antecedentes documentadas sin corregir originales.
 
+## S21 · Revisión 2 de (p1+p3)-Bis: frame tipado, dimensión fija y alcance por versión
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-13T04:51:40Z
+
+**fecha_inicio_utc:** 2026-09-13T04:51:40Z
+
+**fecha_actualizacion_utc:** 2026-09-13T04:51:40Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Actualización explicativa MD/PDF, entrada de lectura y sucesos; sin modificación material de semántica, IR, núcleo, dominio o agente.
+
+**repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje d17851d8da1279ace6184d3efcc14b120ac6275d; laboratorio fbb8dc8648bac12f6f733dadfb4eb960c84df544
+
+**dependencias:** S20 / RETP-193; acuerdos explícitos del autor posteriores a la primera versión; fundamentos y rectores leídos en S20.
+
+**resultado:** Revisión iniciada con conservación de la primera edición y separación de acuerdo de diseño y realización.
+
+**verificacion:** Cortes cotejados; sin cambios respecto a S20 al iniciar esta revisión. Lectura de estado y AGENTS antes del alta.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-194
+
+**siguiente_accion:** Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.
+
+**observaciones:** N fijo por instancia. Conjunto de tamaños admitidos pendiente de constitución explícita; sin N máximo universal. Nuevos tamaños requieren revisión de impacto, no modificación automática de semántica e IR. SV(9,3) es mínimo, no predeterminado; baja frecuencia de uso expresada como previsión del autor, no medición.
+
