@@ -1,0 +1,25 @@
+{
+  "resultado": "CONFORME",
+  "corte": "2067310b30e5aee76120444f0166b01390a04970",
+  "suceso_actualizado": "S22",
+  "otros_sucesos": "intactos, incluidos S24 y S25",
+  "append_only": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md"
+  ],
+  "bancos_previos": "identidad/bytes íntegros; no modificar observados históricos",
+  "fuentes_rust_productivas": "intactas",
+  "realizacion": "crate separado; copia exacta de núcleo",
+  "campanas": 2,
+  "variantes_integradas_unicas": 26,
+  "invocaciones_admision": 60,
+  "rust_version": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+  "cargo_version": "cargo 1.98.0 (797e8a9bc 2026-08-05)",
+  "incidencias_conservadas": [
+    "lockfile ausente",
+    "delimitador del conductor",
+    "/usr/bin/time ausente",
+    "lectura de saldo agregado corregida y probada"
+  ]
+}

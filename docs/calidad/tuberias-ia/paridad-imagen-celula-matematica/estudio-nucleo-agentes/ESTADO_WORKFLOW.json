@@ -25,7 +25,8 @@
     },
     {
       "id": "BIS-04",
-      "estado": "pendiente"
+      "estado": "en ejecución",
+      "alcance": "Realización experimental C02–C05 y 26 casos integrados ejecutados; no cierre global del workflow ni promoción productiva."
     },
     {
       "id": "BIS-05",
@@ -44,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Materializar en laboratorio el crate sv_bis_i0205 y su conductor/observador conforme a la decisión, fijar las sondas de construcción antes de ejecutarlas, compilar y ensayar auxiliares y recorrido C02–C05 en Rust con resultados separados de expectativas.",
+  "siguiente_accion": "Preparar la extensión del montaje a paridad ES/EN integrada y controles de recursos/captura pendientes mediante banco previo; conservar abierta la suficiencia global y la secuencia Bis → catálogo/cierre de fase → GUI.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -52,9 +53,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis03-sedes-i0205-v0_1/README.md",
+  "ultimo_informe": "bis04-realizacion-i0205-v0_1/README.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-219",
+  "ultimo_retp": "RETP-2026-220",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -226,19 +227,23 @@
   "integracion_c02_c05": {
     "contrato": "integracion-c02-c05-v0_1/CONTRATO_INTEGRADO.md",
     "banco": "integracion-c02-c05-v0_1/BANCO_PREVIO.json",
-    "estado": "compromiso documental previo; realización pendiente",
+    "estado": "realización Rust y campaña conformes en alcance local documental",
     "casos_preparados": 26,
     "positivos_previstos": 7,
     "negativos_previstos": 19,
-    "casos_ejecutados": 0,
+    "casos_ejecutados": 26,
     "sensibilidades_previstas": 4,
-    "sensibilidades_ejecutadas": 0,
+    "sensibilidades_ejecutadas": 4,
     "cierre_bis02": false,
     "apertura_formal_bis03": true,
     "perfil_integrado": "en",
     "paridad_es_en_integrada": "pendiente",
     "alcance": "Descriptor geométrico exacto y entrega documental local; sin imagen ni consumo visual de IA",
-    "registro_paso_acotado_bis03": "RETP-2026-219"
+    "registro_paso_acotado_bis03": "RETP-2026-219",
+    "resultado": "7 concordantes, 17 rechazados, 2 no acreditados",
+    "campanas": 2,
+    "invocaciones_totales": 60,
+    "realizacion": "bis04-realizacion-i0205-v0_1/README.md"
   },
   "decision_sedes_i0205": {
     "estado": "finalizada en alcance documental del montaje",
@@ -249,7 +254,19 @@
     "cierre_global_bis02": false,
     "ampliacion_semantica_ir": false,
     "casos_instrumentales_preparados": 19,
-    "casos_instrumentales_ejecutados": 0,
-    "realizacion_rust": "pendiente"
+    "casos_instrumentales_ejecutados": 19,
+    "realizacion_rust": "implementada y ensayada; RETP-2026-220"
+  },
+  "realizacion_bis04_i0205": {
+    "registro": "RETP-2026-220",
+    "campanas": 2,
+    "integrados_unicos": 26,
+    "invocaciones_por_campana": 30,
+    "instrumentales_unicos": 19,
+    "sensibilidades_unicas": 4,
+    "sondas_externas_unicas": 8,
+    "tests_internos_segunda_campana": 2,
+    "oraculos_previos_modificados": false,
+    "suficiencia_global": false
   }
 }

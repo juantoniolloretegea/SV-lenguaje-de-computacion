@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T16:27:30Z
+**fecha_actualizacion_utc:** 2026-09-13T16:59:22Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 3c4f5f87e2e052daacb25be4a4dfe7c1db0d946d; laboratorio e1779bdfc53ab815e7b3dc2c24914c3ecdafc3a2
+**cortes_de_entrada:** Lenguaje 2067310b30e5aee76120444f0166b01390a04970; laboratorio 4705ba49c917cb525eeeba4b39f16686afe1e255
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Decisión acotada de sedes C02–C05: composición experimental en Rust alrededor de compile_svp_profile, sin cambios de semántica/IR ni workspace productivo. Interfaz de recepción/estado/descriptor y observador separada; doce decisiones cartografían doce obligaciones. Se comprometen 14 casos instrumentales JSON y 5 SHA, sin ejecutar. Los 26 casos integrados de RETP-218 permanecen intactos.
+**resultado:** Montaje experimental sv_bis_i0205 implementado y ensayado en Rust/Cargo 1.98.0 con copia verificada de sv_core. 26 casos integrados conformes: 7 entregas documentales concordantes, 17 rechazos y 2 no acreditados. 19 instrumentales conformes, secuencia v1→v2→v1 y 4 sensibilidades del observador conformes. Ocho sondas externas verifican privacidad/API; almacenamiento y lectura agregada probados. Primera campaña conservada; revisión R01 acota recepción al saldo antes de reservar/leer y se comprueba en segunda campaña.
 
-**verificacion:** Lectura estática de API pública, IR, Nat, ligaduras y auxiliares previos con huellas y alcance de lectura. Compatibilidad estructural de los 26 casos frente al complemento del adaptador; límites positivos/negativos literales, hashes y observados vacíos comprobados documentalmente. Cero ejecuciones nuevas Rust. Historial y RETP append-only; otros sucesos intactos.
+**verificacion:** Fuentes/sondas fijadas en laboratorio y espejo antes de ejecutar; cargo build/test --locked --offline, rustc y binario nativo. Dos campañas, cada una con 26 casos, 3 repeticiones y 1 lectura adicional: 60 invocaciones totales, 26 variantes integradas únicas. Ocho sondas externas por campaña; segunda campaña añade prueba R01 con 6145 bytes leídos frente a saldo 6144. Diagnósticos, capturas, estados, códigos de salida, huellas y recursos conservados. Cero modificaciones de oráculos previos, fuentes productivas o estados de otros sucesos.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis03-sedes-i0205-v0_1/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-219
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-220
 
-**siguiente_accion:** Materializar en laboratorio el crate sv_bis_i0205 y su conductor/observador conforme a la decisión, fijar las sondas de construcción antes de ejecutarlas, compilar y ensayar auxiliares y recorrido C02–C05 en Rust con resultados separados de expectativas.
+**siguiente_accion:** Preparar la extensión del montaje a paridad ES/EN integrada y controles de recursos/captura pendientes mediante banco previo; conservar abierta la suficiencia global y la secuencia Bis → catálogo/cierre de fase → GUI.
 
-**observaciones:** BIS-03 en ejecución acotada: sedes del primer montaje documentadas; BIS-02 global sigue abierto y BIS-04 queda pendiente de realización. No promoción productiva, cierre de DFL-005 ni catálogo. Perfiles ES/EN integrados, imagen/consumo visual, RAM y tiempo de proceso pendientes. S24/GUI diferida; S25 instrumental conservado.
+**observaciones:** BIS-04 en ejecución acotada; BIS-02/BIS-03 globales abiertos. Los 202 casos originales C02–C12 siguen sin ejecutar; no se recuentan como integrados. Entrega documental local; sin consumo visual de IA, constitución operativa ni promoción productiva. RAM/tiempo observados sin límites constituidos; agotamiento y todas las cuotas de salida pendientes. S24/GUI diferida y S25 conservados.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
