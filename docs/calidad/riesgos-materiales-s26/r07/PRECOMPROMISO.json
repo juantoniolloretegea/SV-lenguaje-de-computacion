@@ -1,0 +1,23 @@
+{
+  "estado": "BANCO_PREVIO_NO_EJECUTADO",
+  "entrada_lenguaje": "11d441c979c549b7fa459635df014ae987ccde1f",
+  "entrada_laboratorio": "3a3a1d6a4101602edb1324012b1d8406125849eb",
+  "casos": ["P01", "P02", "P03", "P04", "P05", "P06", "P07", "P08"],
+  "sha256": {
+    "observar.rs": "8e5cd591ba0c6d198a46541299c1337273773df69e6a30f96d4a773811d47eb3",
+    "README.md": "b0e9583fdcc148418e6742caf4dcd881265c7fd50610c16479601c42ca44bb9b",
+    "../soporte/publicar_archivos.py": "020956b0656ca43621d98c6cab99c2aa4ec50777ba376feb7d65b3c70ee05bc7",
+    "../soporte/registrar_continuacion.py": "e48df647e7ee93c79678b97787112461d0a051e538a9e4795ac4b6c9145133ac"
+  },
+  "blobs_antecedentes": {
+    "../soporte/publicar_archivos.py": "543edef14ff6dceea38b832f0b096a32e1572e74",
+    "../soporte/registrar_continuacion.py": "d68957ac105e1c563195aa889d804e13cb635811"
+  },
+  "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+  "compilador_sha256": "3690cc576ede140504698405d5d8fa3826aaadbe71699c6c4ed0a565d6f493e2",
+  "binario_conductor_sha256": "05442be0803b8ebec5eb57774fa2b7e3063528efd55ad9d261e2aab6c6d63f6f",
+  "python": "Python 3.12.14",
+  "interprete_sha256": "fa67443527ed9647f760d807e2a38f26340757123e643c4639cf273ed15d5ea7",
+  "limites": "Timeout diez segundos por hijo; cuota de recepción posterior 64 KiB por canal; sin cuota preventiva RAM/disco ni aislamiento host acreditados. Conector sustituido por doble sin red. No ejecución SV.",
+  "herramientas_expediente": "Lecturas y compilación mediante lanzador; edición mediante parches; llamadas GitHub y cotejo de árboles coordinados en JavaScript de la herramienta. Python sólo como objeto de prueba; ningún auxiliar heredado para registro o publicación reales."
+}

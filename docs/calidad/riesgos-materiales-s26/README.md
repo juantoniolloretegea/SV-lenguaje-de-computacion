@@ -176,3 +176,7 @@ R06: recepción contractual de terminación sin informe y alcance de identidad d
 ## Control operativo de auxiliares tras R06
 
 Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobación de auxiliares y límites de confianza](CONTROL_DE_AUXILIARES.md). Cada uso de Python requiere justificación previa frente a Rust, alcance de acceso/escritura y comprobación de resultados. Se reciben hallazgos estáticos en las guardas, escrituras y checkpoints de los auxiliares existentes, pendientes de corrección y contraste; no se atribuyen fallos a campañas anteriores sin evidencia. Incorporación operativa documental: no modifica contratos del núcleo, no ejecuta sondas, no cierra S26 ni abre otra fase.
+
+## Banco R07 · Auxiliares heredados
+
+[Ocho sondas previas](r07/README.md) con conductor y oráculos Rust. Python se ejecutará sólo como objeto heredado bajo prueba, con justificación expresa; transporte GitHub sustituido por un doble local sin red. Se contrastarán guardas bajo optimización, checkpoint ajeno y escritura parcial ante error real de archivo. Banco aún sin ejecución al incorporarse; no modifica auxiliares productivos ni cierra los discriminadores R06.
