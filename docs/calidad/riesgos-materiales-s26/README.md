@@ -180,3 +180,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## Banco R07 · Auxiliares heredados
 
 [Ocho sondas previas](r07/README.md) con conductor y oráculos Rust. Python se ejecutará sólo como objeto heredado bajo prueba, con justificación expresa; transporte GitHub sustituido por un doble local sin red. Se contrastarán guardas bajo optimización, checkpoint ajeno y escritura parcial ante error real de archivo. Banco aún sin ejecución al incorporarse; no modifica auxiliares productivos ni cierra los discriminadores R06.
+
+## Recepción R07 · RETP-234
+
+[Resultados R07](r07/RESULTADOS.md): ocho oráculos cumplidos, con cuatro reproducciones de debilidades en auxiliares heredados. Dos controles positivos y dos rechazos normales conservados. El conductor Rust observa elusión bajo `-O`, checkpoint ajeno y escritura parcial local; GitHub permanece sustituido por un doble en las sondas. No se acreditan reparaciones ni se cierran casos globales. Preparar reparación acotada conservando estos testigos y la continuación R06.

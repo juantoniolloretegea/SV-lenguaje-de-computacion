@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T21:13:18Z
+**fecha_actualizacion_utc:** 2026-09-13T21:59:24Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje b6be761da7223d9f26e5d7a41b83092330597276; laboratorio 8a989c78b69b7a944a4fa1d5195c82d254d80b8a
+**cortes_de_entrada:** Lenguaje 11d441c979c549b7fa459635df014ae987ccde1f; laboratorio 3a3a1d6a4101602edb1324012b1d8406125849eb
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06: recepción contractual de terminación sin informe y alcance de identidad de fuente. Se separan informe, observación de terminación y efecto; mínimo de encargo/referentes autorizados y contenido consumido; continuidad de soporte sólo si su perfil la exige. Ocho discriminadores especificados, cero ejecutados.
+**resultado:** R07: ocho oráculos cumplidos; cuatro reproducciones de debilidades en auxiliares heredados. Elusión de guardas bajo -O; checkpoint ajeno aceptado; escritura parcial local ante error de archivo. Dos controles positivos y dos rechazos normales.
 
-**verificacion:** Fuentes cotejadas por blobs contra corte vigente; campañas anteriores y registros conservados. Verificación documental, sin nueva compilación ni protección ejecutable acreditada.
+**verificacion:** Banco publicado antes de ejecutar: Lenguaje a243bd096502580d91fe5166ceb1ebb478f10681; laboratorio f8c7e21817ca4842ce0ad3904e023962419c9b3c. Conductor Rust 1.98.0; Python 3.12.14 sólo como objeto bajo prueba. Fuentes y binario conservados; ocho salidas y estados retenidos.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r07/RESULTADOS.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-233
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-234
 
-**siguiente_accion:** Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24.
+**siguiente_accion:** Preparar reparación acotada de auxiliares con Rust como primera opción y conservar los testigos R07. R06 mantiene correlación e identidad admitido-consumido pendientes; S26 y Bis abiertos; S24 pendiente.
 
-**observaciones:** Recepción de obligaciones, no cierre material. Doce casos globales S26 abiertos; R2/R3/R4, DFL y Bis conservan alcance. No GUI, BD, nueva identidad universal ni selección de host. S27 y el dominio permanecen en su sede.
+**observaciones:** Cuatro debilidades reproducidas no son cuatro protecciones. Cero reparaciones acreditadas. Transporte GitHub simulado; archivos locales reales. Sin prueba de RAM física, durabilidad, host o GUI; sin invalidación retrospectiva de campañas. Python no administra ni publica este expediente.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

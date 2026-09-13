@@ -1,0 +1,9 @@
+caso	oraculo_cumplido	interpretacion
+P01	true	control_positivo
+P02	true	rechazo_normal
+P03	true	guarda_eludida
+P04	true	checkpoint_ajeno_aceptado
+P05	true	control_positivo
+P06	true	rechazo_normal
+P07	true	revision_incompatible_aceptada
+P08	true	escritura_parcial_tras_error
