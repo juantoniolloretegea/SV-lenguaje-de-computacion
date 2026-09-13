@@ -172,3 +172,7 @@ R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relect
 ## S26 R06 · RETP-233
 
 R06: recepción contractual de terminación sin informe y alcance de identidad de fuente. Se separan informe, observación de terminación y efecto; mínimo de encargo/referentes autorizados y contenido consumido; continuidad de soporte sólo si su perfil la exige. Ocho discriminadores especificados, cero ejecutados. Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24. [Recepción y discriminadores](r06/README.md).
+
+## Control operativo de auxiliares tras R06
+
+Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobación de auxiliares y límites de confianza](CONTROL_DE_AUXILIARES.md). Cada uso de Python requiere justificación previa frente a Rust, alcance de acceso/escritura y comprobación de resultados. Se reciben hallazgos estáticos en las guardas, escrituras y checkpoints de los auxiliares existentes, pendientes de corrección y contraste; no se atribuyen fallos a campañas anteriores sin evidencia. Incorporación operativa documental: no modifica contratos del núcleo, no ejecuta sondas, no cierra S26 ni abre otra fase.
