@@ -391,3 +391,9 @@ R3 / R4 = NO INICIADOS
 BudgetΣ / IA-SEC = NO ABIERTOS
 Garantía I / II = NO_PROBADO
 ```
+
+## 19. Recepción material S26 / RETP-2026-225 · 13/09/2026
+
+La [recepción R02](../calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md) concreta, de forma subordinada a §§4–12, las obligaciones de custodia de la expectativa, lectura coherente, residencia, confirmación material, cobertura de índices y observación posterior. Recibe el inventario y las cuatro sondas parciales R01; no constituye otra AStore, clave universal, BD o primitiva temporal.
+
+Las realizaciones dependientes deben declarar unidad de transacción, política durable, confirmación, concurrencia y reconciliación; la aceptación en RAM y el acuse de una API no acreditan por sí solos esas propiedades. T04–T06 permanecen pendientes del perfil material correspondiente. S26 no modifica los cierres históricos ni acredita cierre actual de R2/R3/R4 o de las garantías I/II.

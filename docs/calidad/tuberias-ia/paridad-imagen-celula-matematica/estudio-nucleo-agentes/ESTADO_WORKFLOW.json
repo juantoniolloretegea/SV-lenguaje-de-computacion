@@ -296,15 +296,18 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-224",
+    "registro": "RETP-2026-225",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Recibir el inventario y resultados en los contratos de consulta/captura y R2: concretar autoridad de custodia, corte coherente y confirmación material antes de ensayar concurrencia, reinicio o GUI. Continuar las fronteras pendientes de Bis sin cerrarlas por estas sondas.",
+    "siguiente_accion": "Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
     "sondas_parciales_ejecutadas": 4,
-    "casos_globales_cerrados": 0
+    "casos_globales_cerrados": 0,
+    "recepcion_contractual": "../../../riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md",
+    "contrastes_r02_definidos": 8,
+    "contrastes_r02_ejecutados": 0
   }
 }

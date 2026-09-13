@@ -2151,3 +2151,14 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-224 · S26 · R01 resultado
 
 2026-09-13T19:01:29Z. Cuatro sondas R01 conformes en Rust/Cargo 1.98.0: positivo documental, archivo alterado después de recepción con nueva lectura rechazada I02, captura alterada detectada D06 y ausencia/fallo posterior D01/D07. Núcleo y admisor existentes sin cambios. Una campaña nativa offline; cuatro funciones de prueba y cero fallos; stdout/stderr y órdenes conservados. Buffer anterior conserva testigo; fuente con LF sigue compilando con identidad distinta. D06 acredita detección posterior, no ausencia de entrega. Fuentes y precompromiso cotejados. Recibir el inventario y resultados en los contratos de consulta/captura y R2: concretar autoridad de custodia, corte coherente y confirmación material antes de ensayar concurrencia, reinicio o GUI. Continuar las fronteras pendientes de Bis sin cerrarlas por estas sondas. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md).
+
+
+<a id="retp-225"></a>
+
+### RETP-2026-225 · S26 · Recepción contractual R02
+
+2026-09-13T19:32:28Z. Recibidas ocho obligaciones materiales y ocho discriminadores previos en S26, con relevo a R2-0, consulta histórica y DFL-003/004/005/006. Se precisan custodia, lectura coherente, residencia, confirmación, índices, consumidor, observador y recursos. Incremento documental: cero nuevas pruebas de comportamiento; cuatro sondas R01 anteriores conservadas; cero casos globales S26 cerrados. Sin BD, GUI, nueva primitiva o garantía material acreditadas. S22 activo y S24 pendiente conservan su secuencia.
+
+Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
+
+[Recepción y discriminadores](riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md).

@@ -136,3 +136,11 @@ Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. 
 ## Continuación R01 / RETP-2026-224
 
 Cuatro sondas R01 conformes en Rust/Cargo 1.98.0: positivo documental, archivo alterado después de recepción con nueva lectura rechazada I02, captura alterada detectada D06 y ausencia/fallo posterior D01/D07. Núcleo y admisor existentes sin cambios. [Inventario material](INVENTARIO_MATERIAL_R01.md).
+
+## Recepción R02 / RETP-2026-225
+
+Recibidas ocho obligaciones materiales y ocho discriminadores previos en S26, con relevo a R2-0, consulta histórica y DFL-003/004/005/006. Se precisan custodia, lectura coherente, residencia, confirmación, índices, consumidor, observador y recursos. Incremento documental: cero nuevas pruebas de comportamiento; cuatro sondas R01 anteriores conservadas; cero casos globales S26 cerrados. Sin BD, GUI, nueva primitiva o garantía material acreditadas. S22 activo y S24 pendiente conservan su secuencia.
+
+Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
+
+[Recepción contractual](RECEPCION_CONTRACTUAL_R02.md).

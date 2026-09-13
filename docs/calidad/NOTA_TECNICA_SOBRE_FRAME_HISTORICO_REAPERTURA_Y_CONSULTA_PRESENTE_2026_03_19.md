@@ -112,3 +112,9 @@ Esta nota podrá considerarse suficientemente cerrada cuando conste evidencia tr
 ## 11. Estado
 
 **Abierta y gobernada.**
+
+## 12. Recepción S26 / RETP-2026-225 · 13/09/2026
+
+La [recepción R02](riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md) precisa la frontera material de esta nota. Una consulta histórica exacta debe conservar el contenido recuperado bajo sus dependencias fijadas, sin prometer disponibilidad de todas las llamadas. La consulta presente debe declarar cobertura y corte, y puede evolucionar sin reescribir el antecedente. Una respuesta atrasada no se atribuirá a otra selección.
+
+C02/C05/C06 reciben esas condiciones y T02/T03/T05 sus contrastes previstos. No se ofrece una API histórica completa ni se cierran CQ1–CQ6 o DFL-003/004/005. El fallo técnico no constituye U; la reapertura legítima conserva su fundamento semántico y no se fabrica por un error del transporte.
