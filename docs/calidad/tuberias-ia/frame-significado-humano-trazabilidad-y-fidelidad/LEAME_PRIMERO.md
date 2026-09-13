@@ -12,7 +12,9 @@ La referencia vigente de **(p1+p3)-Bis es la versión 2**: [Markdown](../paridad
 
 Antes de intervenir debe quedar entendido que el frame se constituye bajo contrato, que sus componentes matemático y visual corresponden al mismo estado y que la dimensión permanece fija tras la admisión. La versión de soporte declara tamaños admitidos; su inventario concreto aún debe constituirse. SV(9,3) es el mínimo, sin valor predeterminado. Incorporar tamaños exige revisión de impacto y pruebas, con modificación de semántica o IR cuando el análisis la justifique.
 
-**Siguiente objeto material:** contrastar estas obligaciones con semántica V0.2 e IR 0.3, determinar tamaños desde las constituciones y fijar contrato y banco de paridad antes de derivar causas al catálogo. El acuerdo documental no acredita implementación ni sustituye sus pruebas. El orden posterior de agentes se decidirá tras el trabajo inmunológico correspondiente.
+**Trabajo vigente: S22 / RETP-2026-196, en ejecución.** Seguir el [workflow BIS-00 a BIS-08](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md), su [estado por etapas](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json) y la [radiografía inicial](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md). La [política de documentación Rust ES/EN](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/DOCUMENTACION_RUST_ES_EN_v1.md) acompaña cada incremento; es independiente de los perfiles fuente SVP.
+
+**Siguiente objeto material:** fijar la fuente normativa exacta de semántica V0.2 y sus adendas, completar la radiografía y preparar el contrato y banco previo BIS-02. Las operaciones pueden expresarse mediante métodos Rust; su sede y resultado deben conservar el contrato algebraico. El Frame actual de arquitectura no se identifica automáticamente con la pareja matemática/visual. Esta revisión es estática y no acredita nuevas pruebas Rust. El orden posterior de agentes se decidirá tras el trabajo inmunológico correspondiente.
 
 ## Entrada obligatoria: Sucesos SV · 12 de septiembre de 2026
 

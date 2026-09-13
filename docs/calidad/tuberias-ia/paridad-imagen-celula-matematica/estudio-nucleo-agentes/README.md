@@ -6,6 +6,12 @@
 
 [Explicación para terceros — Markdown](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) · [Hallazgos](HALLAZGOS.md) · [Identidades de fuentes](FUENTES.json) · [Comprobaciones](VERIFICACION.json).
 
+## Trabajo vigente: S22 · RETP-2026-196
+
+[Workflow BIS-00 a BIS-08](WORKFLOW_P1_P3_BIS_v1.md) · [Estado por etapas](ESTADO_WORKFLOW.json) · [Radiografía inicial](RADIOGRAFIA_INICIAL_BIS_01.md) · [Documentación Rust ES/EN](DOCUMENTACION_RUST_ES_EN_v1.md) · [Fuentes del corte](FUENTES_CORTE.json).
+
+BIS-00 finalizado; BIS-01 en ejecución. Se estudian los contratos de tipos y de métodos de composición antes de decidir cambios. El contraste inicial distingue Frame de arquitectura y pareja matemática/visual, reconoce la encapsulación existente y separa comentarios Rust de perfiles SVP. No se ejecutaron nuevas pruebas Rust: el compilador y Cargo no están disponibles en el entorno de esta revisión. Completar la fuente normativa exacta de semántica V0.2 y la radiografía precede al contrato y banco BIS-02. Las secciones de recepción siguientes conservan su alcance histórico.
+
 ## Criterio rector y alcance
 
 Los [Fundamentos algebraico-semánticos del Sistema Vectorial SV.md](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/fa3eb727799c322090e4e9126f81238cd198b9cc/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/Fundamentos%20algebraico-sem%C3%A1nticos%20del%20Sistema%20Vectorial%20SV.md) rigen el contraste: objeto exacto ternario, n = b² con b ≥ 3, significado canónico, radios, evaluación determinista y composición tipada. La representación y las implementaciones deben responder a esos fundamentos. El código sintético no redefine el álgebra.

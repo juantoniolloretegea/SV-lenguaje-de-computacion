@@ -1,0 +1,51 @@
+{
+  "version": "P1P3-BIS-WORKFLOW/1",
+  "suceso": "S22",
+  "estado": "en ejecución",
+  "corte_lenguaje": "e7370d1ad3e75d829b5a032e156d7691aa5a94fd",
+  "corte_laboratorio": "457f9ffffb2e669933805aad55ea1c239bdeabaf",
+  "etapas": [
+    {
+      "id": "BIS-00",
+      "estado": "finalizado"
+    },
+    {
+      "id": "BIS-01",
+      "estado": "en ejecución"
+    },
+    {
+      "id": "BIS-02",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-03",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-04",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-05",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-06",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-07",
+      "estado": "pendiente"
+    },
+    {
+      "id": "BIS-08",
+      "estado": "pendiente"
+    }
+  ],
+  "siguiente_accion": "Completar la radiografía de obligaciones y preparar contrato y banco previo; localizar la fuente exacta de semántica V0.2 y sus adendas antes del dictamen global.",
+  "limites": [
+    "Workflow no finalizado",
+    "Conjunto de tamaños no constituido por este documento",
+    "Sin modificación del código productivo"
+  ]
+}

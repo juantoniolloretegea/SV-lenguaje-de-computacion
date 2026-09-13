@@ -752,3 +752,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** N fijo por instancia. Conjunto de tamaños admitidos pendiente de constitución explícita; sin N máximo universal. Nuevos tamaños requieren revisión de impacto, no modificación automática de semántica e IR. SV(9,3) es mínimo, no predeterminado; baja frecuencia de uso expresada como previsión del autor, no medición.
 
+## S22 · Workflow (p1+p3)-Bis y radiografía inicial de tipos, composición y documentación Rust
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-13T05:19:31Z
+
+**fecha_inicio_utc:** 2026-09-13T05:19:31Z
+
+**fecha_actualizacion_utc:** 2026-09-13T05:19:31Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Secuencia BIS-00 a BIS-08; política de documentación ES/EN y contraste estático inicial. Sin modificación del código productivo.
+
+**repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje e7370d1ad3e75d829b5a032e156d7691aa5a94fd; laboratorio 457f9ffffb2e669933805aad55ea1c239bdeabaf
+
+**dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
+
+**resultado:** Workflow y política ES/EN preparados; BIS-00 finalizado y BIS-01 en ejecución. Composición como estructura y operaciones mediante métodos sujetos a contrato. Frame vigente de arquitectura distinguido de la pareja matemática/visual.
+
+**verificacion:** Contraste estático de fuentes identificadas por blob. Rustc y Cargo no disponibles; sin nuevas ejecuciones Rust/WASM/IA. La lectura y preparación preceden al alta y se declaran sin retrofechar.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-196
+
+**siguiente_accion:** Fijar fuente normativa exacta de semántica V0.2 y sus adendas; completar radiografía; preparar contrato y banco previo BIS-02; ejecutar en entorno Rust identificado antes de dictamen y catálogo.
+
+**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas.
+

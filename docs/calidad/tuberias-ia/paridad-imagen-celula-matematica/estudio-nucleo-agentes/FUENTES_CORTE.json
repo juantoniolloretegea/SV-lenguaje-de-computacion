@@ -1,0 +1,371 @@
+{
+  "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+  "commit": "e7370d1ad3e75d829b5a032e156d7691aa5a94fd",
+  "archivos": [
+    {
+      "ruta": "AGENTS.md",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7",
+      "bytes": 4384
+    },
+    {
+      "ruta": "ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md",
+      "git_blob": "31b8826c609a3c063a7e4482298f81e7d35a3e11",
+      "bytes": 8031
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "git_blob": "c1b4b0e1c06c1b22dff1f988fec1a1f079fcc5d2",
+      "bytes": 30558
+    },
+    {
+      "ruta": "GRAMATICA_SUPERFICIAL_MINIMA_SV_v0_2.md",
+      "git_blob": "dbc96821c415d1ac7e0a03205f89d4bf269225ab",
+      "bytes": 12952
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/ACTA_ENCAJE_DE_PERFILES_LINGUISTICOS_Y_SEPARACION_INVESTIGACION_APLICACION_2026_09_10.md",
+      "git_blob": "cf4f3466913ce73606b0e9a782b106e47f3b9a1f",
+      "bytes": 11754
+    },
+    {
+      "ruta": "rust/Cargo.toml",
+      "git_blob": "ebee1ea1135f28fa28f2d335f279170932f2e029",
+      "bytes": 73
+    },
+    {
+      "ruta": "rust/sv_core/Cargo.toml",
+      "git_blob": "d284864c44d0e36d022768131abf88c450b95eb6",
+      "bytes": 244
+    },
+    {
+      "ruta": "rust/sv_core/examples/binding_probe.rs",
+      "git_blob": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46",
+      "bytes": 225
+    },
+    {
+      "ruta": "rust/sv_core/examples/binding_probe_browser.rs",
+      "git_blob": "dbcb45298808828d94829a4322265cbfcd235fd0",
+      "bytes": 691
+    },
+    {
+      "ruta": "rust/sv_core/examples/cyb_reception_probe.rs",
+      "git_blob": "9f51f7ef672c9830d193e6d496ca9d869ef5b560",
+      "bytes": 123
+    },
+    {
+      "ruta": "rust/sv_core/examples/gh_binding_probe.rs",
+      "git_blob": "6b031259b380176373d722e87cc758a9d9c4c6f3",
+      "bytes": 218
+    },
+    {
+      "ruta": "rust/sv_core/examples/gh_binding_probe_browser.rs",
+      "git_blob": "e400ee6a809948590bbffe9276704ed92facd11c",
+      "bytes": 685
+    },
+    {
+      "ruta": "rust/sv_core/examples/probe_assembly_2b.rs",
+      "git_blob": "02a7570c68f30fa1777760913ad32d69238ce8a6",
+      "bytes": 1129
+    },
+    {
+      "ruta": "rust/sv_core/src/admissibility.rs",
+      "git_blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+      "bytes": 6775
+    },
+    {
+      "ruta": "rust/sv_core/src/authority.rs",
+      "git_blob": "95a976d32444537ba4240cf7ad4375eca37ef064",
+      "bytes": 18361
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions.rs",
+      "git_blob": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+      "bytes": 54089
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "git_blob": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+      "bytes": 42971
+    },
+    {
+      "ruta": "rust/sv_core/src/bindings.rs",
+      "git_blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+      "bytes": 20680
+    },
+    {
+      "ruta": "rust/sv_core/src/c03_tests.rs",
+      "git_blob": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+      "bytes": 5626
+    },
+    {
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "git_blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+      "bytes": 7969
+    },
+    {
+      "ruta": "rust/sv_core/src/control.rs",
+      "git_blob": "08899b4dfb3a7e936b8649929619f57454248c42",
+      "bytes": 7812
+    },
+    {
+      "ruta": "rust/sv_core/src/control_tests.rs",
+      "git_blob": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+      "bytes": 2790
+    },
+    {
+      "ruta": "rust/sv_core/src/decision_trace.rs",
+      "git_blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "bytes": 30997
+    },
+    {
+      "ruta": "rust/sv_core/src/equivalence.rs",
+      "git_blob": "22903a491b3abe12749921b12c92b0319b7c225e",
+      "bytes": 16986
+    },
+    {
+      "ruta": "rust/sv_core/src/execution.rs",
+      "git_blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+      "bytes": 16865
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "git_blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+      "bytes": 13990
+    },
+    {
+      "ruta": "rust/sv_core/src/frame_tests.rs",
+      "git_blob": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+      "bytes": 9569
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "git_blob": "c73933b661f08c4d0123b8a22f436962b5481208",
+      "bytes": 97042
+    },
+    {
+      "ruta": "rust/sv_core/src/grammar_conformance.rs",
+      "git_blob": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+      "bytes": 1655
+    },
+    {
+      "ruta": "rust/sv_core/src/identifier_profile.rs",
+      "git_blob": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+      "bytes": 3575
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "git_blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+      "bytes": 12706
+    },
+    {
+      "ruta": "rust/sv_core/src/ir_tests.rs",
+      "git_blob": "e339664be237680d6874fd544b3bf1b99e50a93d",
+      "bytes": 10238
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "git_blob": "699eee3d9d761d6262c24e3b80098c9ce307c775",
+      "bytes": 17140
+    },
+    {
+      "ruta": "rust/sv_core/src/mediation.rs",
+      "git_blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+      "bytes": 8245
+    },
+    {
+      "ruta": "rust/sv_core/src/nat.rs",
+      "git_blob": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+      "bytes": 2627
+    },
+    {
+      "ruta": "rust/sv_core/src/permission.rs",
+      "git_blob": "980270a996ae02df66f26788b2ab32c077d7e30c",
+      "bytes": 16094
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements.rs",
+      "git_blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+      "bytes": 26983
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements/initial.rs",
+      "git_blob": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+      "bytes": 24450
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_bridge.rs",
+      "git_blob": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+      "bytes": 22596
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_conflict.rs",
+      "git_blob": "91fb4638389114a0cbc1af4152111fbddc451d82",
+      "bytes": 19988
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_coverage.rs",
+      "git_blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+      "bytes": 24235
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements_reuse.rs",
+      "git_blob": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+      "bytes": 26822
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution.rs",
+      "git_blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+      "bytes": 8272
+    },
+    {
+      "ruta": "rust/sv_core/src/resolution_tests.rs",
+      "git_blob": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+      "bytes": 5897
+    },
+    {
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "git_blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+      "bytes": 6003
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "git_blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+      "bytes": 39971
+    },
+    {
+      "ruta": "rust/sv_core/tests/admissibility_table_causal.rs",
+      "git_blob": "3d38d75129da74cb747372dd5764a481c2d33774",
+      "bytes": 1404
+    },
+    {
+      "ruta": "rust/sv_core/tests/architecture_type_guards.rs",
+      "git_blob": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5",
+      "bytes": 2516
+    },
+    {
+      "ruta": "rust/sv_core/tests/bindings.rs",
+      "git_blob": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377",
+      "bytes": 3160
+    },
+    {
+      "ruta": "rust/sv_core/tests/bridge_set.rs",
+      "git_blob": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368",
+      "bytes": 1996
+    },
+    {
+      "ruta": "rust/sv_core/tests/cell_geometry_native.rs",
+      "git_blob": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a",
+      "bytes": 2661
+    },
+    {
+      "ruta": "rust/sv_core/tests/codomain_uniqueness.rs",
+      "git_blob": "46480951c432331f08c612f47e529d25f478dfc0",
+      "bytes": 2251
+    },
+    {
+      "ruta": "rust/sv_core/tests/context_wellformed.rs",
+      "git_blob": "765d6aaa176969f8970e07a7575b431446c6a9e2",
+      "bytes": 14736
+    },
+    {
+      "ruta": "rust/sv_core/tests/cyb_authority_boundary.rs",
+      "git_blob": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+      "bytes": 6755
+    },
+    {
+      "ruta": "rust/sv_core/tests/cyb_reception.rs",
+      "git_blob": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad",
+      "bytes": 572
+    },
+    {
+      "ruta": "rust/sv_core/tests/domain_parameters.rs",
+      "git_blob": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3",
+      "bytes": 1848
+    },
+    {
+      "ruta": "rust/sv_core/tests/gh_bindings.rs",
+      "git_blob": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f",
+      "bytes": 553
+    },
+    {
+      "ruta": "rust/sv_core/tests/grammar_closed_domains.rs",
+      "git_blob": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd",
+      "bytes": 3158
+    },
+    {
+      "ruta": "rust/sv_core/tests/horizon_architecture.rs",
+      "git_blob": "0dc7bb3c08225e6ccd553711c1121e6463c2e556",
+      "bytes": 5406
+    },
+    {
+      "ruta": "rust/sv_core/tests/horizon_events.rs",
+      "git_blob": "05145e06e8ba24346dde77e062ebdd883b4ad92d",
+      "bytes": 2166
+    },
+    {
+      "ruta": "rust/sv_core/tests/json_projection.rs",
+      "git_blob": "31a9c316b390cc7e58ccfdf9379e848acef57dd5",
+      "bytes": 4094
+    },
+    {
+      "ruta": "rust/sv_core/tests/optional_fields.rs",
+      "git_blob": "dceef86c0b3e4510558aa7069874bf90e293618c",
+      "bytes": 2144
+    },
+    {
+      "ruta": "rust/sv_core/tests/output_semantics_totality.rs",
+      "git_blob": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452",
+      "bytes": 4989
+    },
+    {
+      "ruta": "rust/sv_core/tests/projection_metadata_native.rs",
+      "git_blob": "13231d08c7dd6da46843fe02cd622a0bfe84e44c",
+      "bytes": 2376
+    },
+    {
+      "ruta": "rust/sv_core/tests/transition_data_wellformed.rs",
+      "git_blob": "caf66ddd893ce952526e9a8832dd69ed3209318e",
+      "bytes": 6168
+    },
+    {
+      "ruta": "rust/sv_native/Cargo.toml",
+      "git_blob": "fb6cda1e86e6c11dab735b1f8e28f103c170f52a",
+      "bytes": 179
+    },
+    {
+      "ruta": "rust/sv_native/examples/assembly_probe.rs",
+      "git_blob": "9cbc60c011b812946fd5751eddad49326323e0d0",
+      "bytes": 1681
+    },
+    {
+      "ruta": "rust/sv_native/src/main.rs",
+      "git_blob": "7f96e5b7d24bfdc390e0f93b1c09128a54d50c7b",
+      "bytes": 2059
+    },
+    {
+      "ruta": "rust/sv_wasm/Cargo.toml",
+      "git_blob": "8d16094b3eb3754eb1b7ffba7943761b0e34f161",
+      "bytes": 187
+    },
+    {
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "git_blob": "6f3fdf976ff73bb2c6506111a72e579ed57d62f3",
+      "bytes": 9221
+    },
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob": "bba81c4ab115899fc4ae812bc7214aab6f39a9bd",
+      "bytes": 22330
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "bytes": 29014
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "bytes": 67111
+    }
+  ]
+}

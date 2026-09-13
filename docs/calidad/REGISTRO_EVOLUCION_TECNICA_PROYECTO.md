@@ -1948,3 +1948,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-195 · S21 · Cierre documental de la revisión 2 de (p1+p3)-Bis
 
 2026-09-13T04:59:34Z. Versión 2 MD/PDF publicada como referencia explicativa vigente; versión inicial conservada. Acuerdos sobre frame tipado, dimensión fija y tamaños admitidos por versión, SV(9,3) sin valor predeterminado; relevo actualizado. Revisión de contenido y renderizado del PDF; coherencia de referencias e historial; verificación de publicación y paridad de copias por hashes Git. Sin nuevas pruebas del núcleo o de IA. [Revisión](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md). Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.
+
+
+<a id="retp-196"></a>
+
+### RETP-2026-196 · S22 · Workflow y radiografía inicial de (p1+p3)-Bis
+
+2026-09-13T05:19:31Z. Workflow y política ES/EN preparados; BIS-00 finalizado y BIS-01 en ejecución. Composición como estructura y operaciones mediante métodos sujetos a contrato. Frame vigente de arquitectura distinguido de la pareja matemática/visual. Contraste estático de fuentes identificadas por blob. Rustc y Cargo no disponibles; sin nuevas ejecuciones Rust/WASM/IA. La lectura y preparación preceden al alta y se declaran sin retrofechar. [Workflow](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md) · [Radiografía](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md). Fijar fuente normativa exacta de semántica V0.2 y sus adendas; completar radiografía; preparar contrato y banco previo BIS-02; ejecutar en entorno Rust identificado antes de dictamen y catálogo.
