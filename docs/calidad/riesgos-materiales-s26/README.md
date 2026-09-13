@@ -132,3 +132,7 @@ y enlaces; no validan el comportamiento futuro descrito en la matriz.
 ## Continuación R01 / RETP-2026-223
 
 Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas. [Inventario material](INVENTARIO_MATERIAL_R01.md).
+
+## Continuación R01 / RETP-2026-224
+
+Cuatro sondas R01 conformes en Rust/Cargo 1.98.0: positivo documental, archivo alterado después de recepción con nueva lectura rechazada I02, captura alterada detectada D06 y ausencia/fallo posterior D01/D07. Núcleo y admisor existentes sin cambios. [Inventario material](INVENTARIO_MATERIAL_R01.md).

@@ -69,3 +69,29 @@ fallo posterior. [Código Rust](r01/probe.rs) y [reproductor](r01/reproducir.py)
 Estas cuatro sondas son parciales de F01/F05/F10/F12, no cuatro casos globales
 cerrados. Las restantes obligaciones conservan su estado pendiente. Los hashes
 y rutas de las fuentes inspeccionadas se fijan en `r01/FUENTES.json`.
+
+## Resultado de la campaña R01 / RETP-224
+
+Una campaña nueva: **cuatro sondas aprobadas, cero fallos**, Rust/Cargo 1.98.0,
+compilación `--locked --offline` desde target nuevo. Se conservan 25 advertencias
+del núcleo. [Resultados](r01/RESULTADOS.json), [stdout](r01/evidencia/02.stdout),
+[stderr](r01/evidencia/02.stderr) y [órdenes](r01/evidencia/ORDENES.json).
+
+La sonda P02 cambió efectivamente el archivo de la copia de ensayo después de
+recibirlo: el buffer anterior se admitió, la nueva lectura se rechazó en I02 y
+el descriptor anterior permaneció igual. Las dos fuentes compilaron con iguales
+objetos/operaciones y distintas huellas: se distinguió identidad exacta de
+equivalencia canónica. No se modificaron los fixtures históricos.
+
+P03 detectó la copia Capture alterada mediante D06 y conservó el descriptor;
+eso no prueba que la entrega previa fuese impedida. P04 verificó D01 y D07 ante
+ausencia de captura y un indicador de fallo posterior suministrado al certificador;
+no produjo un fallo físico de adaptador. El positivo P01 cotejó vector, descriptor
+y recibo completo con sus testigos independientes de la admisión.
+
+Los doce casos globales siguen abiertos. R01 aporta evidencia parcial para
+F01/F05/F10/F12. Persistencia, cobertura de índices, recuperación, adquisición,
+selección concurrente y representación efectiva conservan sus dependencias.
+El siguiente trabajo es recibir estas fronteras en las sedes existentes de
+consulta/captura y R2 antes de materializar sus contrastes; S22 continúa con las
+fronteras pendientes del montaje y S24 mantiene el relevo secuenciado.

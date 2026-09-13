@@ -1,0 +1,42 @@
+{
+  "fecha_registro_utc": "2026-09-13T19:01:29Z",
+  "precompromiso": {
+    "publico": "6e587267e87c67b64cac17fb7a84823ec7e5ec3b",
+    "laboratorio": "f5c865e21339ab8ce8cc5cb1a4abf5d3fc5cb9d7"
+  },
+  "campanas": 1,
+  "sondas_aprobadas": 4,
+  "sondas_fallidas": 0,
+  "casos_globales_s26_cerrados": 0,
+  "compilador": "rustc 1.98.0",
+  "cargo": "1.98.0",
+  "orden": "cargo test --locked --offline --lib -- --nocapture --test-threads=1",
+  "advertencias_sv_core": 25,
+  "resultados": [
+    {
+      "id": "S26-R01-P01",
+      "observado": "Vector, descriptor y recibo completo iguales a testigos custodiados."
+    },
+    {
+      "id": "S26-R01-P02",
+      "observado": "Archivo cambiado con LF; IR canónica igual, hash de fuente distinto; recepción anterior conservada; nueva recepción rechazada I02."
+    },
+    {
+      "id": "S26-R01-P03",
+      "observado": "Capture alterada detectada D06; descriptor original intacto; captura original admitida. No acredita prevención de entrega."
+    },
+    {
+      "id": "S26-R01-P04",
+      "observado": "D01 sin Capture y D07 con indicador post-despacho; sin recibo favorable en ambas llamadas. No se inyectó un fallo físico de adaptador."
+    }
+  ],
+  "limites": [
+    "Proceso confiable y archivos locales",
+    "No escritores concurrentes durante lectura",
+    "No commit durable ni recuperación",
+    "No GUI o efecto externo",
+    "No adquisición física ni reloj",
+    "No protección contra host comprometido"
+  ],
+  "fuentes_y_precompromiso_conservados": true
+}

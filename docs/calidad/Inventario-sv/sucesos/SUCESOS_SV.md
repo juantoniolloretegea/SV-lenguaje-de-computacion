@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T18:58:37Z
+**fecha_actualizacion_utc:** 2026-09-13T19:01:29Z
 
 **fecha_fin_utc:** —
 
@@ -910,15 +910,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas.
+**resultado:** Cuatro sondas R01 conformes en Rust/Cargo 1.98.0: positivo documental, archivo alterado después de recepción con nueva lectura rechazada I02, captura alterada detectada D06 y ausencia/fallo posterior D01/D07. Núcleo y admisor existentes sin cambios.
 
-**verificacion:** 26 archivos fuente identificados por SHA256; quince archivos fixture cotejados contra el archivo histórico. Matriz enlaza residencia, mutadores, confirmación y brechas; oráculos y código fijados antes de campaña.
+**verificacion:** Una campaña nativa offline; cuatro funciones de prueba y cero fallos; stdout/stderr y órdenes conservados. Buffer anterior conserva testigo; fuente con LF sigue compilando con identidad distinta. D06 acredita detección posterior, no ausencia de entrega. Fuentes y precompromiso cotejados.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-223
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-224
 
-**siguiente_accion:** Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes.
+**siguiente_accion:** Recibir el inventario y resultados en los contratos de consulta/captura y R2: concretar autoridad de custodia, corte coherente y confirmación material antes de ensayar concurrencia, reinicio o GUI. Continuar las fronteras pendientes de Bis sin cerrarlas por estas sondas.
 
 **observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
 

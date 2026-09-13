@@ -88,3 +88,7 @@ La precisión sobre frame tipado, dimensiones y uso no predeterminado de SV(9,3)
 ### S26 R01 · RETP-2026-223
 
 Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas. Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes. [Inventario y límites](../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md).
+
+### S26 R01 · RETP-2026-224
+
+Cuatro sondas R01 conformes en Rust/Cargo 1.98.0: positivo documental, archivo alterado después de recepción con nueva lectura rechazada I02, captura alterada detectada D06 y ausencia/fallo posterior D01/D07. Núcleo y admisor existentes sin cambios. Recibir el inventario y resultados en los contratos de consulta/captura y R2: concretar autoridad de custodia, corte coherente y confirmación material antes de ensayar concurrencia, reinicio o GUI. Continuar las fronteras pendientes de Bis sin cerrarlas por estas sondas. [Inventario y límites](../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md).

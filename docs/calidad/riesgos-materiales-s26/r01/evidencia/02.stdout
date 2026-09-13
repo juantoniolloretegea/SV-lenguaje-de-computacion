@@ -1,0 +1,13 @@
+
+running 4 tests
+test tests::s26_r01_p01_original_delivery ... S26-R01-P01: original vector, descriptor and full receipt match fixed witnesses
+ok
+test tests::s26_r01_p02_file_changed_after_reception ... S26-R01-P02: file now differs; prior buffer preserved; fresh read rejected I02; source hashes 83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d -> 622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b
+ok
+test tests::s26_r01_p03_mutated_capture ... S26-R01-P03: D06 detected altered Capture; admitted descriptor preserved; no claim of preventing prior delivery
+ok
+test tests::s26_r01_p04_missing_capture_and_post_dispatch_flag ... S26-R01-P04: D01 and D07; admitted data preserved; no successful receipt from either call; physical effect not tested
+ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
