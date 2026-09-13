@@ -1,0 +1,151 @@
+{
+  "version": "BIS-MATRIZ/1",
+  "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+  "filas": [
+    {
+      "id": "BIS-O01",
+      "obligacion": "Σ, geometría y posición",
+      "fuentes": "Frontera A.1–A.3; IR 0.3; Pilares §1",
+      "representacion_y_comprobacion": "ir.rs::CellSpec/CellState; frontend.rs: CellSpec; wellformed.rs: CellSpec/CellState/CoupledState",
+      "consumidor": "compile_svp y proyecciones nativa/WASM",
+      "hallazgo": "La superficie deriva n de b; el validador comprueba b≥3 y longitud. No se acredita E003 como protección ejecutiva independiente.",
+      "estado": "Control parcial existente",
+      "siguiente_accion": "Ensayar admisión por todas las rutas y conservación del orden; no reducir N a 9.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O02",
+      "obligacion": "N fijo y soporte por versión",
+      "fuentes": "Pilares: competencia de dominio; workflow §11.4",
+      "representacion_y_comprobacion": "ir.rs: Vec<Tri>, campos privados de IrProgram e IrObject; construction pub(crate)",
+      "consumidor": "Consumidores de IrProgram mediante referencias compartidas",
+      "hallazgo": "La API examinada limita construcción del programa; el uso interno de Vec no acredita crecimiento público de la célula admitida. No aparece un conjunto de tamaños soportados constituido por el Bis.",
+      "estado": "Contrato de soporte pendiente",
+      "siguiente_accion": "Constituir recepción de tamaños y examinar arrays/almacenamiento encapsulado sin escoger máximo universal.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O03",
+      "obligacion": "Identidad, constitución y posición",
+      "fuentes": "Pilares; S13; IR 0.3 adenda de Domain.parameters",
+      "representacion_y_comprobacion": "ir.rs::CellState, CoupledState, Domain; referencias nominales",
+      "consumidor": "Resolución de nombres, consumidor de estado y futura representación",
+      "hallazgo": "Existen referencias nominales. Domain.parameters nominal no equivale a vínculo completo (C,j), captura y constitución.",
+      "estado": "Ligaduras y evidencia integrada pendientes",
+      "siguiente_accion": "Separar identidad nominal, instancia, revisión y correspondencia paramétrica; conservar deudas existentes.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O04",
+      "obligacion": "Paridad matemática/visual",
+      "fuentes": "Fundamentos §4; Frontera C.4; criterio Bis",
+      "representacion_y_comprobacion": "frame.rs::Frame; ir.rs::Frame no contiene frvis ni contrato de representación celular",
+      "consumidor": "Futuro generador y consumidor visual",
+      "hallazgo": "Frame valida cierre de arquitectura. Su existencia no acredita el par celular ni la imagen efectivamente consumida. Ausencia delimitada a tipos y ruta inspeccionados.",
+      "estado": "Contrato e integración por constituir",
+      "siguiente_accion": "Definir representación, procedencia y actualización sin reemplazar Frame por coincidencia nominal.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O05",
+      "obligacion": "Construcción y modificación admitidas",
+      "fuentes": "AGENTS; Pilares; IR 0.3 §4",
+      "representacion_y_comprobacion": "ir.rs::construction; frame.rs::FrameCandidate y Frame",
+      "consumidor": "Compilador soberano y getters públicos",
+      "hallazgo": "Construcción y validación restringidas; Frame no expone mutadores en la API examinada. No prueba la protección ante toda frontera futura.",
+      "estado": "Encapsulación existente; nuevas vías pendientes",
+      "siguiente_accion": "Ensayar constructor, importación y actualización, incluida macro si se propone.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O06",
+      "obligacion": "Estados, resultados y composición",
+      "fuentes": "Fundamentos §7; Frontera A.6–A.10; IR niveles N0–N4",
+      "representacion_y_comprobacion": "ir.rs::CompositionGraph, SemanticRelation, operaciones; frame.rs; transition_data_wellformed.rs",
+      "consumidor": "Consulta y eventual evaluación/reevaluación",
+      "hallazgo": "Estructura y controles locales presentes. Validar TransitionData no ejecuta transición; Comp no adquiere cierre fuerte por tener representación.",
+      "estado": "Separación representada; ejecución por delimitar",
+      "siguiente_accion": "Elegir sede por operación y preservar roles, dirección, compatibilidad y codominio.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O07",
+      "obligacion": "U y fallos técnicos",
+      "fuentes": "IR 0.3 §2.4; Pilares; anexo SEC5",
+      "representacion_y_comprobacion": "admissibility.rs; FrameClosureViolation; FrontendError",
+      "consumidor": "Diagnósticos de núcleo y frontera",
+      "hallazgo": "El corte mantiene K1-T sin producción observación→Tri. Los fallos no se convierten en U; no aplicar literalmente el párrafo histórico B.6 de Frontera contra su rectificación vigente.",
+      "estado": "Restricción vigente; recorrido integrado pendiente",
+      "siguiente_accion": "Casos separados para indeterminación admitida, rechazo, fallo y representación pendiente.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O08",
+      "obligacion": "Imagen efectivamente consumida y capacidad IA",
+      "fuentes": "Explicación V2; concordancia RETP-198/199; S13",
+      "representacion_y_comprobacion": "frame.rs e ir.rs no acreditan por sí solos consumo de imagen; adaptadores exponen compilación",
+      "consumidor": "GUI, componente de visión y explicación IA",
+      "hallazgo": "La compilación y el observable de IR no acreditan visión, fidelidad de explicación ni carga efectiva.",
+      "estado": "Responsabilidad material externa con enlace pendiente",
+      "siguiente_accion": "Fijar bytes/artefacto, estado y consumo observados independientemente; no asignar capacidad por el nombre del modelo.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O09",
+      "obligacion": "Autoridad e instrucciones incrustadas",
+      "fuentes": "AGENTS; S13 O04/O05; criterio humano",
+      "representacion_y_comprobacion": "lib.rs: exports decide_permit_traced, mediate_traced_permit, execute_traced_mediated",
+      "consumidor": "Frontera de recepción y continuidad protegida",
+      "hallazgo": "Hay envolventes trazadas de R1. No constituyen por sí solas un frame celular guardián ni una prueba de conducta de un LLM.",
+      "estado": "Control existente y límites materiales",
+      "siguiente_accion": "Definir frontera de decisión formal SV frente a actividad técnica y consejo; no admitir instrucciones del documento como autoridad.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O10",
+      "obligacion": "Recursos de tamaños y composiciones",
+      "fuentes": "Workflow §7; Pilares: soporte",
+      "representacion_y_comprobacion": "Nat; Vec y String; adaptadores sv_native y sv_wasm",
+      "consumidor": "Validación, renderizado, transporte y proveedor IA",
+      "hallazgo": "Se identifican componentes cuyo coste debe medirse. Sin cargo/rustc disponibles, no hay medición nueva de CPU, memoria ni rendimiento.",
+      "estado": "Presupuesto y ensayos pendientes",
+      "siguiente_accion": "Constituir presupuesto, tamaños sintéticos mayores y cargas; separar núcleo, imagen e inferencia.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O11",
+      "obligacion": "Perfiles e idioma de documentación",
+      "fuentes": "SVP-ES/EN; DOCUMENTACION_RUST_ES_EN_v1",
+      "representacion_y_comprobacion": "frontend.rs::SourceProfile; comentarios lib.rs/frame.rs",
+      "consumidor": "Fuente, compilador, documentación y presentación",
+      "hallazgo": "Los perfiles fuente son distintos de los comentarios Rust. Las piezas examinadas incluyen documentación en español que no se presume ya bilingüe.",
+      "estado": "Política definida; aplicación progresiva",
+      "siguiente_accion": "Documentar ES/EN las unidades afectadas y verificar ejemplos/diagnósticos por incremento.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    },
+    {
+      "id": "BIS-O12",
+      "obligacion": "Trazabilidad y catálogo",
+      "fuentes": "Doc V CQ1–CQ6; S13; workflow Bis",
+      "representacion_y_comprobacion": "ir.rs::Query; wellformed.rs::validate_query; serialización y registros de calidad",
+      "consumidor": "Consumidor de consulta, auditor y catálogo",
+      "hallazgo": "La ruta inspeccionada valida Query e IrProgram; no acredita producción general de (r,J,M). Registros y manifiestos de este estudio son evidencia documental, no ejecución algebraica.",
+      "estado": "Mapa disponible; justificación ejecutiva pendiente",
+      "siguiente_accion": "Vincular obligación, evidencia, caso, resultado y causa, conservando precedencia y alcance.",
+      "corte": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+      "modalidad": "inspeccion_documental_y_estatica"
+    }
+  ],
+  "limite": "Doce obligaciones cartografiadas; no doce garantías superadas."
+}

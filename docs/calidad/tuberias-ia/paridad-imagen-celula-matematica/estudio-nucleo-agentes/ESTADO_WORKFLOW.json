@@ -1,9 +1,9 @@
 {
-  "version": "P1P3-BIS-WORKFLOW/1",
+  "version": "P1P3-BIS-WORKFLOW/2",
   "suceso": "S22",
   "estado": "en ejecución",
-  "corte_lenguaje": "e7370d1ad3e75d829b5a032e156d7691aa5a94fd",
-  "corte_laboratorio": "457f9ffffb2e669933805aad55ea1c239bdeabaf",
+  "corte_lenguaje": "b43dce153ee061e298f1c730f4f5ed075c84f3c7",
+  "corte_laboratorio": "9ad7729bd69c26d4e52a6630f815b646a277466f",
   "etapas": [
     {
       "id": "BIS-00",
@@ -11,11 +11,12 @@
     },
     {
       "id": "BIS-01",
-      "estado": "en ejecución"
+      "estado": "finalizado",
+      "alcance": "Radiografía documental y estática de doce obligaciones; no suficiencia integral."
     },
     {
       "id": "BIS-02",
-      "estado": "pendiente"
+      "estado": "en ejecución"
     },
     {
       "id": "BIS-03",
@@ -42,14 +43,26 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Completar BIS-01 y constituir en BIS-02 la inicialización, la relación frame celular/arquitectónico, el estatuto de frvis y la frontera de decisión formal; localizar semántica V0.2 y adendas antes del dictamen global.",
+  "siguiente_accion": "Materializar fixtures y oráculos del primer par BIS-C01, fijar montaje Rust identificado y completar los contratos BIS-02 antes de realizar cambios. Continúan las decisiones de frvis, inicialización, soporte y sede por operación.",
   "limites": [
-    "Workflow no finalizado",
-    "Conjunto de tamaños no constituido por este documento",
-    "Sin modificación del código productivo"
+    "Ejecución completa del workflow pendiente",
+    "Conjunto de tamaños de soporte no constituido por el estudio",
+    "Sin ejecución Rust/WASM ni cambio productivo",
+    "BIS-02: contrato y banco preliminares; fixtures definitivos pendientes"
   ],
-  "ultimo_informe": "CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md",
-  "ampliacion": "Concordancia documental: suceso, reevaluación, frame, consulta, representación y sede de operaciones de biblioteca.",
-  "ultimo_retp": "RETP-2026-199",
-  "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo."
+  "ultimo_informe": "RESULTADO_BIS_01_Y_APERTURA_BIS_02.md",
+  "ampliacion": "Definición del plan cerrada; radiografía documental completada; BIS-02 iniciado con contrato y 24 escenarios no ejecutados.",
+  "ultimo_retp": "RETP-2026-200",
+  "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
+  "definicion_workflow": "finalizado",
+  "ejecucion_workflow": "en ejecución",
+  "workflow_vigente": "WORKFLOW_P1_P3_BIS_v2.md",
+  "versiones_reconocidas": {
+    "gramatica": "0.2",
+    "ir": "0.3",
+    "serializador": "0.1.0",
+    "semantica": "Frontera v0 + IR 0.3 + partes heredadas no sustituidas de IR 0.2 y rectores/adendas aplicables"
+  },
+  "escenarios_especificados": 24,
+  "escenarios_ejecutados": 0
 }

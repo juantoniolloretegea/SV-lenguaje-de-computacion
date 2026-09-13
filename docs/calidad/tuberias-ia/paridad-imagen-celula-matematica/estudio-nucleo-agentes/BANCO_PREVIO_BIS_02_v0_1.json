@@ -1,0 +1,368 @@
+{
+  "version": "BIS-BANCO-PREVIO/0.1",
+  "estatuto": "Diseño de escenarios; no corpus ejecutable ni oráculo definitivo",
+  "escenarios": 24,
+  "ejecutados": 0,
+  "casos": [
+    {
+      "id": "BIS-C01-P",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O02"
+      ],
+      "precondicion": "Constitución sintética b=4, N=16, alfabeto y orden declarados; ruta de admisión identificada.",
+      "escenario": "Estado de exactamente 16 coordenadas Tri con posiciones originales.",
+      "esperado_provisional": "Admitir la condición de geometría/longitud del control.",
+      "fuente": "Frontera A.1/A.2; wellformed.rs; Pilares",
+      "oraculo_requerido": "Oráculo normativo de longitud y mínimo; fixture literal y comparación posicional independiente.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C01-N",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O02"
+      ],
+      "precondicion": "Constitución sintética b=4, N=16, alfabeto y orden declarados; ruta de admisión identificada.",
+      "escenario": "Mismo estado con 15 o 17 coordenadas, o cambio de b a 2.",
+      "esperado_provisional": "Rechazar la geometría o longitud incompatible antes de evaluar.",
+      "fuente": "Frontera A.1/A.2; wellformed.rs; Pilares",
+      "oraculo_requerido": "Oráculo normativo de longitud y mínimo; fixture literal y comparación posicional independiente.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C02-P",
+      "obligaciones": [
+        "BIS-O02",
+        "BIS-O05"
+      ],
+      "precondicion": "Soporte sintético S={16,25} declarado sólo para el montaje; constitución de prueba separada de dominios reales.",
+      "escenario": "Solicitar N=25 declarado en S.",
+      "esperado_provisional": "Admitir la condición de soporte si los demás contratos se cumplen.",
+      "fuente": "Workflow §11.4; competencia de dominio/soporte",
+      "oraculo_requerido": "Comparación independiente con declaración de soporte; no enumerar S desde la implementación.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C02-N",
+      "obligaciones": [
+        "BIS-O02",
+        "BIS-O05"
+      ],
+      "precondicion": "Soporte sintético S={16,25} declarado sólo para el montaje; constitución de prueba separada de dominios reales.",
+      "escenario": "Solicitar N=49 con geometría válida pero ausente de S.",
+      "esperado_provisional": "No admitir por soporte; no calificar como violación n=b².",
+      "fuente": "Workflow §11.4; competencia de dominio/soporte",
+      "oraculo_requerido": "Comparación independiente con declaración de soporte; no enumerar S desde la implementación.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C03-P",
+      "obligaciones": [
+        "BIS-O03",
+        "BIS-O04"
+      ],
+      "precondicion": "Constitución e instancias A/B distintas; mismo vector para discriminar identidad de contenido.",
+      "escenario": "Representación de A vinculada a A y a su revisión exacta.",
+      "esperado_provisional": "Correspondencia de identidad admitida.",
+      "fuente": "Bis O03/O04; Pilares; S13 O06/O07",
+      "oraculo_requerido": "Registro constitutivo independiente e identidad de artefacto observada.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C03-N",
+      "obligaciones": [
+        "BIS-O03",
+        "BIS-O04"
+      ],
+      "precondicion": "Constitución e instancias A/B distintas; mismo vector para discriminar identidad de contenido.",
+      "escenario": "Presentar la representación de B como si procediera de A.",
+      "esperado_provisional": "Rechazar atribución de otra instancia aunque coincida el vector.",
+      "fuente": "Bis O03/O04; Pilares; S13 O06/O07",
+      "oraculo_requerido": "Registro constitutivo independiente e identidad de artefacto observada.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C04-P",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O04"
+      ],
+      "precondicion": "Convenio normativo de representación fijado y estados con al menos dos posiciones diferentes.",
+      "escenario": "Mantener orden de posiciones y convenio al representar.",
+      "esperado_provisional": "Paridad posicional y de convenio satisfecha.",
+      "fuente": "Fundamentos §4; Frontera C.4",
+      "oraculo_requerido": "Correspondencia esperada obtenida del convenio y fixture, sin usar el renderer probado como oráculo.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C04-N",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O04"
+      ],
+      "precondicion": "Convenio normativo de representación fijado y estados con al menos dos posiciones diferentes.",
+      "escenario": "Permutar dos posiciones o sustituir la leyenda/radios sin declaración.",
+      "esperado_provisional": "Rechazar la pretensión de paridad exacta.",
+      "fuente": "Fundamentos §4; Frontera C.4",
+      "oraculo_requerido": "Correspondencia esperada obtenida del convenio y fixture, sin usar el renderer probado como oráculo.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C05-P",
+      "obligaciones": [
+        "BIS-O04",
+        "BIS-O08"
+      ],
+      "precondicion": "Dos revisiones diferentes S1/S2 con sus originales conservados; observador de artefacto consumido.",
+      "escenario": "Consumir la imagen vinculada a S2 al explicar S2.",
+      "esperado_provisional": "Consumo y estado concordantes.",
+      "fuente": "Concordancia §4; S13 O07/O08",
+      "oraculo_requerido": "Acceso independiente a los bytes consumidos y al vínculo declarado.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C05-N",
+      "obligaciones": [
+        "BIS-O04",
+        "BIS-O08"
+      ],
+      "precondicion": "Dos revisiones diferentes S1/S2 con sus originales conservados; observador de artefacto consumido.",
+      "escenario": "Consumir imagen S1 y declarar que se ha usado S2.",
+      "esperado_provisional": "Rechazar falsa atribución de revisión.",
+      "fuente": "Concordancia §4; S13 O07/O08",
+      "oraculo_requerido": "Acceso independiente a los bytes consumidos y al vínculo declarado.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C06-P",
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O07"
+      ],
+      "precondicion": "Contratos diferenciados para lectura técnica, creación inicial y reevaluación.",
+      "escenario": "Registrar lectura técnica sin producir frame; inicialización declarada sin transición ficticia.",
+      "esperado_provisional": "Admitir cada acto bajo su propio estatuto.",
+      "fuente": "Doc III §§3/5; concordancia §3/5",
+      "oraculo_requerido": "Evidencia del acto y contrato de inicialización; revisar por separado las variantes del escenario.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C06-N",
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O07"
+      ],
+      "precondicion": "Contratos diferenciados para lectura técnica, creación inicial y reevaluación.",
+      "escenario": "Presentar log de lectura como TransitionData o inventar un predecesor del frame inicial.",
+      "esperado_provisional": "Rechazar la atribución de estatuto o antecedente no constituido.",
+      "fuente": "Doc III §§3/5; concordancia §3/5",
+      "oraculo_requerido": "Evidencia del acto y contrato de inicialización; revisar por separado las variantes del escenario.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C07-P",
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O03"
+      ],
+      "precondicion": "Relación y conector declarados entre dos células sintéticas de dimensiones diferentes.",
+      "escenario": "Aplicar la relación conservando dirección, puente y codominios.",
+      "esperado_provisional": "Compatibilidad de composición admitida en el contrato seleccionado.",
+      "fuente": "Fundamentos §7; Frontera A.9/D.2",
+      "oraculo_requerido": "Contrato algebraico y tabla/conector independientes; fixture pendiente de operación concreta.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C07-N",
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O03"
+      ],
+      "precondicion": "Relación y conector declarados entre dos células sintéticas de dimensiones diferentes.",
+      "escenario": "Invertir participantes o sustituir relación conservando nombres de salida.",
+      "esperado_provisional": "Rechazar relación incompatible; no reparar ni convertir a composición genérica.",
+      "fuente": "Fundamentos §7; Frontera A.9/D.2",
+      "oraculo_requerido": "Contrato algebraico y tabla/conector independientes; fixture pendiente de operación concreta.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C08-P",
+      "obligaciones": [
+        "BIS-O07",
+        "BIS-O08"
+      ],
+      "precondicion": "Estado Tri.U ya admitido y fallo técnico de renderer distinguibles; sin habilitar K1-T.",
+      "escenario": "Conservar U válido en representación y declarar fallo técnico por su canal si ocurre.",
+      "esperado_provisional": "Conservar cada estatuto y su evidencia.",
+      "fuente": "Pilares; IR 0.3 §2.4; concordancia §5",
+      "oraculo_requerido": "Inyección controlada de fallo y comparación de estado antes/después.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C08-N",
+      "obligaciones": [
+        "BIS-O07",
+        "BIS-O08"
+      ],
+      "precondicion": "Estado Tri.U ya admitido y fallo técnico de renderer distinguibles; sin habilitar K1-T.",
+      "escenario": "Transformar fallo de renderer/captura en una coordenada U válida o fabricar imagen completa.",
+      "esperado_provisional": "Rechazar sustitución de fallo por valor semántico.",
+      "fuente": "Pilares; IR 0.3 §2.4; concordancia §5",
+      "oraculo_requerido": "Inyección controlada de fallo y comparación de estado antes/después.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C09-P",
+      "obligaciones": [
+        "BIS-O09",
+        "BIS-O12"
+      ],
+      "precondicion": "Fuente documental permitida y contrato de autoridad distinto del contenido leído.",
+      "escenario": "Leer como datos un texto que contiene órdenes para la IA y conservar la autoridad constituida.",
+      "esperado_provisional": "Conservar límites de autoridad y fidelidad documental.",
+      "fuente": "S13 O04/O05; Bis O09",
+      "oraculo_requerido": "Documento testigo literal, política independiente y observación de efecto; un conductor no prueba por sí solo un LLM.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C09-N",
+      "obligaciones": [
+        "BIS-O09",
+        "BIS-O12"
+      ],
+      "precondicion": "Fuente documental permitida y contrato de autoridad distinto del contenido leído.",
+      "escenario": "Usar la orden incrustada para alterar política, permiso o evidencia.",
+      "esperado_provisional": "Bloquear la actuación no autorizada y conservar la evidencia del intento.",
+      "fuente": "S13 O04/O05; Bis O09",
+      "oraculo_requerido": "Documento testigo literal, política independiente y observación de efecto; un conductor no prueba por sí solo un LLM.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C10-P",
+      "obligaciones": [
+        "BIS-O12",
+        "BIS-O06"
+      ],
+      "precondicion": "Consulta o consejo con fuentes de respaldo independientes y contrato de salida explícito.",
+      "escenario": "Justificación cuyas referencias sostienen lo afirmado, con límites declarados.",
+      "esperado_provisional": "Justificación suficiente para la afirmación y alcance del caso.",
+      "fuente": "Doc V CQ1–CQ6; criterio humano de auditoría",
+      "oraculo_requerido": "Revisión independiente de cobertura y relación evidencia/afirmación; no exigir acceso al proceso interno privado del modelo.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C10-N",
+      "obligaciones": [
+        "BIS-O12",
+        "BIS-O06"
+      ],
+      "precondicion": "Consulta o consejo con fuentes de respaldo independientes y contrato de salida explícito.",
+      "escenario": "Resultado plausible con tique/cita repetido, ajeno o que no sostiene la afirmación.",
+      "esperado_provisional": "No aceptar la justificación por coincidencia de resultado ni por registrar la afirmación.",
+      "fuente": "Doc V CQ1–CQ6; criterio humano de auditoría",
+      "oraculo_requerido": "Revisión independiente de cobertura y relación evidencia/afirmación; no exigir acceso al proceso interno privado del modelo.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C11-P",
+      "obligaciones": [
+        "BIS-O10",
+        "BIS-O05"
+      ],
+      "precondicion": "Presupuesto de prueba declarado; límites de texto, imágenes y composición; observables medibles.",
+      "escenario": "Carga dentro del límite exacto bajo constituciones sintéticas mayores.",
+      "esperado_provisional": "Admitir dentro del presupuesto con medición identificada.",
+      "fuente": "Workflow §7; Bis O10",
+      "oraculo_requerido": "Presupuesto comprometido y contador/medidor independiente; pendiente de valores y entorno.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C11-N",
+      "obligaciones": [
+        "BIS-O10",
+        "BIS-O05"
+      ],
+      "precondicion": "Presupuesto de prueba declarado; límites de texto, imágenes y composición; observables medibles.",
+      "escenario": "Carga que excede un límite en una unidad controlada.",
+      "esperado_provisional": "Rechazar o detener conforme al contrato de recursos, sin crecimiento silencioso.",
+      "fuente": "Workflow §7; Bis O10",
+      "oraculo_requerido": "Presupuesto comprometido y contador/medidor independiente; pendiente de valores y entorno.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C12-P",
+      "obligaciones": [
+        "BIS-O11",
+        "BIS-O05"
+      ],
+      "precondicion": "Misma operación bajo perfiles fuente ES/EN; documentación Rust ES/EN; oráculo canónico versionado.",
+      "escenario": "Conservar significado canónico en ambos perfiles y documentar la operación real.",
+      "esperado_provisional": "Paridad de significado y concordancia documental dentro del alcance.",
+      "fuente": "Política DOCUMENTACION_RUST_ES_EN_v1; SVP; AGENTS",
+      "oraculo_requerido": "Oráculo de perfil y revisión de contrato, pruebas de API/compile_fail cuando corresponda.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    },
+    {
+      "id": "BIS-C12-N",
+      "obligaciones": [
+        "BIS-O11",
+        "BIS-O05"
+      ],
+      "precondicion": "Misma operación bajo perfiles fuente ES/EN; documentación Rust ES/EN; oráculo canónico versionado.",
+      "escenario": "Comentario contradice conducta o una vía de macro/constructor elude validación.",
+      "esperado_provisional": "Detectar contradicción o rechazar vía de construcción indebida.",
+      "fuente": "Política DOCUMENTACION_RUST_ES_EN_v1; SVP; AGENTS",
+      "oraculo_requerido": "Oráculo de perfil y revisión de contrato, pruebas de API/compile_fail cuando corresponda.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "fixtures": "PENDIENTES_DE_MATERIALIZAR",
+      "resultado_observado": null
+    }
+  ]
+}

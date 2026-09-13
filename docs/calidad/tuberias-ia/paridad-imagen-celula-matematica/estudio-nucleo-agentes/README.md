@@ -6,11 +6,13 @@
 
 [Explicación para terceros — Markdown](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) · [Hallazgos](HALLAZGOS.md) · [Identidades de fuentes](FUENTES.json) · [Comprobaciones](VERIFICACION.json).
 
-## Trabajo vigente: S22 · RETP-2026-196
+## Trabajo vigente: S22 · RETP-2026-200
 
-[Workflow BIS-00 a BIS-08](WORKFLOW_P1_P3_BIS_v1.md) · [Estado por etapas](ESTADO_WORKFLOW.json) · [Radiografía inicial](RADIOGRAFIA_INICIAL_BIS_01.md) · [Documentación Rust ES/EN](DOCUMENTACION_RUST_ES_EN_v1.md) · [Fuentes del corte](FUENTES_CORTE.json).
+**Workflow V2: definición cerrada; ejecución en curso.** [Markdown](WORKFLOW_P1_P3_BIS_v2.md) · [PDF](WORKFLOW_P1_P3_BIS_v2.pdf) · [Estado](ESTADO_WORKFLOW.json) · [Resultado BIS-01 e inicio BIS-02](RESULTADO_BIS_01_Y_APERTURA_BIS_02.md).
 
-BIS-00 finalizado; BIS-01 en ejecución. Se estudian los contratos de tipos y de métodos de composición antes de decidir cambios. El contraste inicial distingue Frame de arquitectura y pareja matemática/visual, reconoce la encapsulación existente y separa comentarios Rust de perfiles SVP. No se ejecutaron nuevas pruebas Rust: el compilador y Cargo no están disponibles en el entorno de esta revisión. Completar la fuente normativa exacta de semántica V0.2 y la radiografía precede al contrato y banco BIS-02. Las secciones de recepción siguientes conservan su alcance histórico.
+BIS-00 y BIS-01 finalizados en sus alcances documentales. BIS-02 en ejecución: [contrato candidato](CONTRATO_CANDIDATO_BIS_02_v0_1.md), [24 escenarios especificados, cero ejecutados](BANCO_PREVIO_BIS_02_v0_1.json) y [matriz de doce obligaciones](MATRIZ_BIS_01.json). S13 ya fijaba la denominación precisa de gramática 0.2, IR 0.3 y obligaciones semánticas en Frontera/IR/adendas; se corrige el pendiente nominal de localizar «semántica V0.2» independiente.
+
+Se conservan [workflow V1](WORKFLOW_P1_P3_BIS_v1.md), [radiografía inicial](RADIOGRAFIA_INICIAL_BIS_01.md), [política Rust ES/EN](DOCUMENTACION_RUST_ES_EN_v1.md) y antecedentes. La revisión estática no acredita pruebas Rust. El primer objeto material siguiente es preparar fixtures y oráculos de BIS-C01 y el montaje identificado correspondiente.
 
 ## Concordancia de BIS-01 · S22 / RETP-2026-198–199
 
@@ -26,7 +28,7 @@ Los [Fundamentos algebraico-semánticos del Sistema Vectorial SV.md](https://git
 
 El autor ha precisado que las células de conocimiento nuclear del dominio y los parámetros singulares de decisión comparten molde de dibujo. Se recibe esta premisa expresamente. Su función, constitución y relaciones deben seguir identificadas. SVperitus es la sede natural de agentes; al Lenguaje corresponden las obligaciones que afecten a representación, conservación, validación o ejecución.
 
-El objeto entregado es la explicación y la recepción contrastada de antecedentes. El estudio material de suficiencia de semántica V0.2 e IR 0.3 permanece abierto. No se declara cerrada la paridad integrada, no se entrena IA y no se modifica núcleo, IR, Rust, parámetros de dominio ni SVperitus. El orden posterior de agentes se decidirá tras el trabajo inmunológico correspondiente.
+La recepción inicial entregó la explicación y el contraste de antecedentes. El estudio de suficiencia de las obligaciones semánticas y de IR 0.3 continúa en S22 según el estado vigente indicado arriba. No se declara cerrada la paridad integrada, no se entrena IA y no se modifica núcleo, IR, Rust, parámetros de dominio ni SVperitus. El orden posterior de agentes se decidirá tras el trabajo inmunológico correspondiente.
 
 ## Fuentes y cortes de la recepción inicial S20
 

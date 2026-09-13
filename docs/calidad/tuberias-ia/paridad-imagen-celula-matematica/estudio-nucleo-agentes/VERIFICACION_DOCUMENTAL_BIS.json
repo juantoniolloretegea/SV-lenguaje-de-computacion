@@ -1,0 +1,58 @@
+{
+  "version": "BIS-VERIFICACION-DOCUMENTAL/1",
+  "enlaces_relativos_comprobados": 61,
+  "obligaciones": 12,
+  "escenarios_especificados": 24,
+  "escenarios_ejecutados": 0,
+  "fuentes_reutilizadas_cotejadas": 73,
+  "pdf_paginas": 8,
+  "pdf_revision_visual": "Ocho páginas renderizadas e inspeccionadas; títulos, tablas, cuerpo y pies legibles.",
+  "alcance": "Integridad documental, referencias, correspondencia de IDs y presentación; no prueba de semántica ni ejecución Rust.",
+  "archivos": [
+    {
+      "nombre": "BANCO_PREVIO_BIS_02_v0_1.json",
+      "bytes": 17471,
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8"
+    },
+    {
+      "nombre": "CONTRATO_CANDIDATO_BIS_02_v0_1.md",
+      "bytes": 4128,
+      "sha256": "bc303ec34892260746da322ae09992dac46a8abb6a30e0e8ded7a8e8772f6dad"
+    },
+    {
+      "nombre": "ESTADO_WORKFLOW.json",
+      "bytes": 2215,
+      "sha256": "01161d69746d60cfaec05416f452d75f2b0072c161785079cb32e919b74f727d"
+    },
+    {
+      "nombre": "FUENTES_EJECUCION_BIS.json",
+      "bytes": 15345,
+      "sha256": "7e680161535404184661b94c73fcc9ac250543423567a5e556859ba7b18e4e6d"
+    },
+    {
+      "nombre": "MATRIZ_BIS_01.json",
+      "bytes": 9966,
+      "sha256": "9d713893d7934723175481575f2f87dbb12b70cee3b54272f55d440e8bad1068"
+    },
+    {
+      "nombre": "README.md",
+      "bytes": 8771,
+      "sha256": "f91d29d30791d36938e029fe6c832ac4fe846fa340fa551bab88c9211bf9dc9e"
+    },
+    {
+      "nombre": "RESULTADO_BIS_01_Y_APERTURA_BIS_02.md",
+      "bytes": 6504,
+      "sha256": "607392e5cea17fede030480eabdbbbcb2429b9ead44275194b11ab40407a327a"
+    },
+    {
+      "nombre": "WORKFLOW_P1_P3_BIS_v2.md",
+      "bytes": 24170,
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634"
+    },
+    {
+      "nombre": "WORKFLOW_P1_P3_BIS_v2.pdf",
+      "bytes": 73914,
+      "sha256": "f1a1f855762cad163f052d6fd949d423863912a77a1b1cbe9f76d7d12794b9c5"
+    }
+  ]
+}

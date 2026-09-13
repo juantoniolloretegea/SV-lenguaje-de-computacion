@@ -1976,3 +1976,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-199 · S22 · Hecho y representaciones discursiva, matemática y visual
 
 2026-09-13T05:53:41Z. Precisión expresa del autor: **el suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo**. Se corrige la omisión de la matemática en la formulación abreviada. [Informe](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md). Se actualizan workflow, estado, Léame primero y registros; BIS-01 sigue en ejecución. Sin modificación del núcleo, semántica o IR.
+
+
+<a id="retp-200"></a>
+
+### RETP-2026-200 · S22 · Cierre de definición del workflow e inicio de ejecución
+
+2026-09-13T06:27:40Z. Workflow V2 cerrado como definición por instrucción humana; ejecución en curso. BIS-01 completado como radiografía documental/estática de doce obligaciones. BIS-02 iniciado con contrato candidato y 24 escenarios especificados, cero ejecutados. Pendiente nominal de semántica V0.2 rectificado con S13. 73 fuentes reutilizadas cotejadas contra blobs vigentes; Frontera v0 y S13 leídos completos; inspección selectiva de IR y rutas Rust. Matriz/banco y referencias comprobados; PDF de ocho páginas renderizado y revisado. Sin cargo/rustc: ninguna ejecución Rust/WASM nueva. [Resultado](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RESULTADO_BIS_01_Y_APERTURA_BIS_02.md). Materializar fixtures y oráculos del primer par BIS-C01, fijar montaje Rust identificado y completar los contratos BIS-02 antes de realizar cambios. Continúan las decisiones de frvis, inicialización, soporte y sede por operación.
