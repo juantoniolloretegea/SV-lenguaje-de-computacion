@@ -1,0 +1,260 @@
+{
+  "version": "BIS-C12-BANCO/0.1",
+  "estatuto": "Especificación previa; no pruebas Rust ni actividad de IA ejecutadas",
+  "variantes": 20,
+  "ejecutadas": 0,
+  "oraculo": "ORACULO_CANONICO.json",
+  "casos": [
+    {
+      "id": "C12-01",
+      "clase": "positivo",
+      "descripcion": "Par ES/EN de una misma operación",
+      "archivos": [
+        "entradas/base.en.svp",
+        "entradas/base.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Compilar con perfiles explícitos; comparar objetos, operaciones, versiones y anclas. Verificar procedencias diferentes por separado.",
+      "sede_a_contrastar": "compile_svp_profile",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-02",
+      "clase": "positivo",
+      "descripcion": "Comentario cambia sin alterar la operación",
+      "archivos": [
+        "entradas/base.es.svp",
+        "entradas/comentario.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Conservar contenido canónico y verificar que cambian las huellas de fuente.",
+      "sede_a_contrastar": "Compilación y procedencia",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-03",
+      "clase": "positivo",
+      "descripcion": "Compatibilidad sin selector",
+      "archivos": [
+        "entradas/base.en.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "compile_svp coincide con SourceProfile::En para los mismos bytes y nombre; no autodetecta.",
+      "sede_a_contrastar": "API de compatibilidad",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-04",
+      "clase": "negativo",
+      "descripcion": "Perfil explícito incorrecto",
+      "archivos": [
+        "entradas/base.es.svp"
+      ],
+      "estimulo_adicional": "Usar SourceProfile::En",
+      "resultado_esperado_contractual": "Rechazar fuente ES bajo En; conservar diagnóstico real.",
+      "sede_a_contrastar": "compile_svp_profile",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-05",
+      "clase": "negativo",
+      "descripcion": "Mezcla de formas protegidas",
+      "archivos": [
+        "entradas/perfil_mezclado.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Rechazar let como producción del perfil Es; no cambiar perfil silenciosamente.",
+      "sede_a_contrastar": "Parser Es",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-06",
+      "clase": "negativo",
+      "descripcion": "Etiqueta no constituida",
+      "archivos": [],
+      "estimulo_adicional": "Etiqueta ES en vez de es",
+      "resultado_esperado_contractual": "SourceProfile::from_tag(\"ES\") devuelve None; no normalizar ni recurrir a perfil por defecto.",
+      "sede_a_contrastar": "Selección de perfil",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-07",
+      "clase": "positivo",
+      "descripcion": "Cadenas y nombres conservados",
+      "archivos": [
+        "entradas/base.en.svp",
+        "entradas/base.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Conservar exactamente tres textos y nombres nominales; palabras citadas no son instrucciones.",
+      "sede_a_contrastar": "Lexer, IR y anclas",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-08",
+      "clase": "negativo",
+      "descripcion": "Traducción indebida de una cadena",
+      "archivos": [
+        "entradas/base.es.svp",
+        "entradas/dato_distinto.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Detectar diferencia de datos aunque ambas entradas puedan ser admitidas; no llamarla error de sintaxis.",
+      "sede_a_contrastar": "Comparador",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-09",
+      "clase": "negativo",
+      "descripcion": "Permutación de posiciones",
+      "archivos": [
+        "entradas/base.es.svp",
+        "entradas/orden_distinto.es.svp"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Detectar orden diferente en vector de 16 posiciones; no comparar conjuntos ni ordenar.",
+      "sede_a_contrastar": "Comparación posicional",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-10",
+      "clase": "negativo",
+      "descripcion": "Normalización Unicode no autorizada",
+      "archivos": [],
+      "estimulo_adicional": "Materializar identificador con tilde precompuesta y descompuesta; no presumir ambos admitidos",
+      "resultado_esperado_contractual": "No equiparar automáticamente grafías distintas; clasificar cada fuente según perfil antes de comparar.",
+      "sede_a_contrastar": "Perfil de identificadores",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-11",
+      "clase": "positivo",
+      "descripcion": "Ensamblaje por perfiles de unidad",
+      "archivos": [],
+      "estimulo_adicional": "Separar declaraciones y estado/operación de las bases: unidad EN y unidad ES; entradas separadas pendientes",
+      "resultado_esperado_contractual": "Analizar unidades hasta EOF por separado, reunir IR ordenada y validar globalmente. Identidad de ensamblaje propia.",
+      "sede_a_contrastar": "compile_svp_assembly",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-12",
+      "clase": "negativo",
+      "descripcion": "Producción repartida entre archivos",
+      "archivos": [],
+      "estimulo_adicional": "Dividir una producción; entradas pendientes",
+      "resultado_esperado_contractual": "Rechazar unidades incompletas; concatenar texto primero no ejecuta el contrato del ensamblaje.",
+      "sede_a_contrastar": "EOF por unidad",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-13",
+      "clase": "negativo",
+      "descripcion": "Descriptor confundido con aceptación",
+      "archivos": [],
+      "estimulo_adicional": "Unidad con referencia inexistente y otra neutra; materialización pendiente",
+      "resultado_esperado_contractual": "SourceUnit::new sólo crea descriptor; rechazar referencia global inexistente al compilar el ensamblaje.",
+      "sede_a_contrastar": "SourceUnit y validación global",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-14",
+      "clase": "negativo",
+      "descripcion": "Reconstrucción externa de IrProgram",
+      "archivos": [
+        "entradas/ir_privada.rs"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Fallar por campos privados con sv_core enlazado correctamente; dependencia ausente no acredita barrera.",
+      "sede_a_contrastar": "Consumidor Rust compile_fail",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-15",
+      "clase": "negativo",
+      "descripcion": "Acceso al constructor interno",
+      "archivos": [
+        "entradas/constructor_interno.rs"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Fallar por privacidad de construction y contrastar control positivo de API pública en igual entorno.",
+      "sede_a_contrastar": "rustc y privacidad",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-16",
+      "clase": "positivo",
+      "descripcion": "Documentación bilingüe concordante",
+      "archivos": [
+        "entradas/documentacion_conforme.txt"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Revisión confirma mismo alcance y negación; no altera perfil SVP.",
+      "sede_a_contrastar": "Revisión contractual",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-17",
+      "clase": "negativo",
+      "descripcion": "Traducción elimina limitación",
+      "archivos": [
+        "entradas/documentacion_contradictoria.txt"
+      ],
+      "estimulo_adicional": "",
+      "resultado_esperado_contractual": "Detectar afirmación EN más fuerte que ES y contrato; compilar Rust no acredita paridad de prosa.",
+      "sede_a_contrastar": "Revisión de documentación",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-18",
+      "clase": "negativo",
+      "descripcion": "Función, método o macro elude guardas",
+      "archivos": [
+        "entradas/dimension_invalida.en.svp"
+      ],
+      "estimulo_adicional": "Inventariar vías existentes; no se declara una macro SV implementada",
+      "resultado_esperado_contractual": "Cada vía candidata debe conservar rechazo de b=2; requiere ensayo y control positivo propios.",
+      "sede_a_contrastar": "API y expansión",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-19",
+      "clase": "negativo",
+      "descripcion": "Doctest falla por causa ajena",
+      "archivos": [],
+      "estimulo_adicional": "Mutante con import incorrecto; materialización pendiente",
+      "resultado_esperado_contractual": "No acreditar barrera mediante import inexistente; conservar stderr y control positivo; ejecutar doctests afectados.",
+      "sede_a_contrastar": "cargo test --doc",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C12-20",
+      "clase": "negativo",
+      "descripcion": "IA parchea sin conservar contenido",
+      "archivos": [],
+      "estimulo_adicional": "Receptor, herramienta y observador a concretar para ensayo real",
+      "resultado_esperado_contractual": "Conservar fuentes, perfiles, servicios, conector, invocación, script, antes/parche/después y resultado real; narración no sustituye evidencia.",
+      "sede_a_contrastar": "Actividad IA y observador",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+-- Testigo sintético C12; sin constitución de dominio.
+codomain K = { ALFA, BETA, GAMMA };
+output_semantics Significado {
+ ALFA -> "codomain codominio: alfa";
+ BETA -> "evaluate evaluar: beta";
+ GAMMA -> "U: sin clasificación fuerte";
+}
+cellspec Celda { b: 2; codomain: K; semantics: Significado; role: Base; }
+cellstate Estado { spec: Celda; vector: [Zero,One,U,Zero,One,U,Zero,One,U,Zero,One,U,Zero,One,U,Zero]; }
+let Evaluacion = evaluate(Estado);

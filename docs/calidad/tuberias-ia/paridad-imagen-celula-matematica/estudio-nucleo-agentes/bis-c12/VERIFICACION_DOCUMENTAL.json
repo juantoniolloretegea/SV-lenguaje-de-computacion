@@ -1,0 +1,20 @@
+{
+  "estatuto": "Cotejo auxiliar JavaScript de documentos; no pruebas Rust ni modelos",
+  "corte": "c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50",
+  "comprobaciones": [
+    "20 casos únicos, 6 positivos y 14 negativos; todos sin observado",
+    "11 entradas y referencias presentes; cambios discriminantes literales cotejados",
+    "Cadenas ES/EN iguales; anclas de 16 posiciones declaradas",
+    "Prefijos históricos conservados; sólo S22 cambia; S24 pendiente",
+    "Ocho documentos de continuidad existentes modificados; fuentes Rust y familias previas intactas",
+    "JSON y enlaces internos cotejados"
+  ],
+  "ensayos_c12_ejecutados": 0,
+  "limites": [
+    "No compilación Rust ni interpretación funcional SVP",
+    "No revisión automática de significado de la prosa",
+    "No actividad de IA ensayada",
+    "Entorno local desconectado; sincronización pendiente"
+  ],
+  "publicacion": "Verificación posterior del árbol, blobs y ref mediante publicar.js"
+}

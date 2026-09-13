@@ -1,0 +1,62 @@
+{
+  "version": "BIS-C12-ORACULO/0.1",
+  "gramatica": "0.2",
+  "ir": "0.3",
+  "serializador": "0.1.0",
+  "perfiles": {
+    "base.en.svp": "en",
+    "base.es.svp": "es"
+  },
+  "comparacion": "Igualdad completa y ordenada de objects() y operations(), variantes, campos y cardinalidad; versiones cotejadas. Procedencia verificada por separado.",
+  "procedencia_excluida_solo_de_paridad": [
+    "source_file",
+    "source_sha256"
+  ],
+  "anclas_independientes": {
+    "objetos_en_orden": [
+      "K",
+      "Significado",
+      "Celda",
+      "Estado"
+    ],
+    "codominio": [
+      "ALFA",
+      "BETA",
+      "GAMMA"
+    ],
+    "textos": [
+      "codomain codominio: alfa",
+      "evaluate evaluar: beta",
+      "U: sin clasificación fuerte"
+    ],
+    "b": 4,
+    "n": 16,
+    "especificacion": "Celda",
+    "semantica": "Significado",
+    "rol": "Base",
+    "vector": [
+      "Zero",
+      "One",
+      "U",
+      "Zero",
+      "One",
+      "U",
+      "Zero",
+      "One",
+      "U",
+      "Zero",
+      "One",
+      "U",
+      "Zero",
+      "One",
+      "U",
+      "Zero"
+    ],
+    "operacion": {
+      "nombre": "Evaluacion",
+      "clase": "Evaluate",
+      "argumento": "Estado"
+    }
+  },
+  "limite": "Anclas fijadas sin ejecución del sujeto; no serializador alternativo ni oráculo completo de la IR. El conductor Rust pendiente cotejará todos los campos. Un nodo Evaluate no demuestra evaluación productiva ni paridad visual."
+}

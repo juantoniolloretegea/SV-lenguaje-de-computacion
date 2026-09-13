@@ -1,0 +1,2 @@
+ES: La aceptación acredita las validaciones materializadas; no acredita toda obligación abstracta de la IR.
+EN: Acceptance establishes the implemented validations; it does not establish every abstract IR obligation.

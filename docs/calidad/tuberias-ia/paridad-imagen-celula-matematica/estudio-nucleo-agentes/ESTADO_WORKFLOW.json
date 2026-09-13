@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C12: perfiles ES/EN, documentación y vías de construcción. Completar contratos BIS-02; decidir sedes BIS-03 y realizar y probar lo justificado en Rust.",
+  "siguiente_accion": "Consolidar cobertura y pendientes C01–C12 en BIS-02; preparar decisiones de sede BIS-03 y realizar y probar lo justificado en BIS-04.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c11/README.md",
-  "ampliacion": "BIS-C11: presupuestos sintéticos y veinte escenarios de recursos, cuatro entradas textuales; cero ejecutados. Trazabilidad heredada explícita; cuotas globales pendientes de medición.",
-  "ultimo_retp": "RETP-2026-214",
+  "ultimo_informe": "bis-c12/README.md",
+  "ampliacion": "BIS-C12: veinte escenarios y once entradas literales; cero ejecutados. Cotejo auxiliar por JavaScript/GitHub tras desconexión local.",
+  "ultimo_retp": "RETP-2026-215",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -190,5 +190,15 @@
     "entradas_textuales": 4,
     "corte_revision": "b22d03cf369bbe9cab902846d061d5de46f76397",
     "alcance": "Cuotas y escenarios de prueba; memoria de proceso y duración aún sin límites constituidos"
+  },
+  "preparacion_bis_c12": {
+    "contrato": "bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md",
+    "banco": "bis-c12/BANCO_PREVIO_v0_1.json",
+    "variantes_especificadas": 20,
+    "variantes_ejecutadas": 0,
+    "entradas_literales": 11,
+    "corte_revision": "c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50",
+    "alcance": "Paridad, documentación y construcción especificadas; ensayos propios pendientes",
+    "sincronizacion_local": "pendiente por desconexión del entorno"
   }
 }

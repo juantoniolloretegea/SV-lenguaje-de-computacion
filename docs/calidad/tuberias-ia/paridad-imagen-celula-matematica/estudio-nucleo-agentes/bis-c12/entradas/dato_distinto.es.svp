@@ -1,0 +1,10 @@
+-- Testigo sintético C12; sin constitución de dominio.
+codominio K = { ALFA, BETA, GAMMA };
+semántica_de_salida Significado {
+ ALFA -> "codominio: alfa";
+ BETA -> "evaluate evaluar: beta";
+ GAMMA -> "U: sin clasificación fuerte";
+}
+especificación_de_celda Celda { b: 4; codominio: K; semántica: Significado; rol: Base; }
+estado_de_celda Estado { especificación: Celda; vector: [Cero,Uno,U,Cero,Uno,U,Cero,Uno,U,Cero,Uno,U,Cero,Uno,U,Cero]; }
+sea Evaluacion = evaluar(Estado);

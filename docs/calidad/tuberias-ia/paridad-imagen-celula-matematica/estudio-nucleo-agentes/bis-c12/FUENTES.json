@@ -1,0 +1,67 @@
+{
+  "corte_lenguaje": "c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50",
+  "corte_laboratorio": "95fcbd6fdeae740e72fb9a8a2ee0ddca8da82077",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "git_blob_sha1": "27609888898d5ad2b214ed53786fa8f55781a61c",
+      "lectura": "Lectura rectora completa previa; identidad local cotejada al iniciar C12"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "git_blob_sha1": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "lectura": "Lectura rectora completa previa; identidad local cotejada al iniciar C12"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "git_blob_sha1": "44f8fda87856ab16007195cab324d40a758e506a",
+      "lectura": "Lectura rectora completa previa; identidad local cotejada al iniciar C12"
+    },
+    {
+      "ruta": "ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md",
+      "git_blob_sha1": "31b8826c609a3c063a7e4482298f81e7d35a3e11",
+      "lectura": "Lectura completa: perfiles, datos y ensamblaje"
+    },
+    {
+      "ruta": "rust/sv_core/src/lib.rs",
+      "git_blob_sha1": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90",
+      "lectura": "Exportaciones, SourceUnit, compile_svp/profile/assembly y assembly_identity"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "git_blob_sha1": "c73933b661f08c4d0123b8a22f436962b5481208",
+      "lectura": "SourceProfile, catálogo seleccionado, classify_surface/canonical_word y tokenización"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "git_blob_sha1": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+      "lectura": "IrProgram: campos y getters; construction"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/DOCUMENTACION_RUST_ES_EN_v1.md",
+      "git_blob_sha1": "6d89aee87940caf03c2111ba05639e972a52289d",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "git_blob_sha1": "bf3f85a92e9d44be2ac92db38f6c4f1191892c7f",
+      "lectura": "Continuidad del workflow"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "git_blob_sha1": "ce58b67785ed1dab5ea75decc0192432cf127577",
+      "lectura": "C12-P/N; banco histórico inalterado"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "git_blob_sha1": "0e9058814b06b59ff0e0c625a81c5e8eb20a9a40",
+      "lectura": "Criterio de ejecución y alcance"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md",
+      "git_blob_sha1": "fbdee30439ef50449fc110e1560b1e4eb67531fe",
+      "lectura": "Lectura previa; conservación §§6–7"
+    }
+  ],
+  "alcance": "Lectura local antes de desconexión; identidades Git cotejadas contra árbol del corte. Preparación directa posterior; sin compilación nueva."
+}

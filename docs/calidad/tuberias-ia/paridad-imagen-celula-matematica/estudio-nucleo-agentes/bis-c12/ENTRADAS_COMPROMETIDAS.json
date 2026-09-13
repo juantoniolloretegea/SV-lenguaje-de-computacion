@@ -1,0 +1,16 @@
+{
+  "estatuto": "Once entradas literales sin ejecución funcional; identidad Git por archivo en el árbol del commit publicado.",
+  "archivos": [
+    "entradas/base.en.svp",
+    "entradas/base.es.svp",
+    "entradas/comentario.es.svp",
+    "entradas/dato_distinto.es.svp",
+    "entradas/orden_distinto.es.svp",
+    "entradas/perfil_mezclado.es.svp",
+    "entradas/dimension_invalida.en.svp",
+    "entradas/ir_privada.rs",
+    "entradas/constructor_interno.rs",
+    "entradas/documentacion_conforme.txt",
+    "entradas/documentacion_contradictoria.txt"
+  ]
+}

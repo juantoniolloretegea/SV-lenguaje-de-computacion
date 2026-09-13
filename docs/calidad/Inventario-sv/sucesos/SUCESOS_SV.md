@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T11:42:22Z
+**fecha_actualizacion_utc:** 2026-09-13T12:02:41.414Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje b22d03cf369bbe9cab902846d061d5de46f76397; laboratorio 9da7f6aba6ff72c9a73cd12d24acda4e8e5cc659
+**cortes_de_entrada:** Lenguaje c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50; laboratorio 95fcbd6fdeae740e72fb9a8a2ee0ddca8da82077
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C11 preparado: contrato y presupuesto sintético de recursos; veinte escenarios, seis positivos y catorce negativos, cuatro entradas textuales. Se distingue control local de protección previa a asignación, recursos agregados, concurrencia, llamadas y cese efectivo. Trazabilidad heredada explícita.
+**resultado:** BIS-C12 preparado: perfiles ES/EN, documentación bilingüe y vías de construcción; veinte escenarios, seis positivos y catorce negativos, once entradas literales. Paridad canónica y procedencia separadas.
 
-**verificacion:** Cotejo auxiliar Python de bytes UTF-8, inventario, cuotas testigo, huellas e historial. Cero escenarios C11 ejecutados; sin compilación nueva o modelo interrogado. Memoria de proceso y duración máxima pendientes de fijar y medir. Dos escenarios originales ejecutados y veintidós pendientes.
+**verificacion:** Lectura estática de API y construcción. Cotejo documental JavaScript y GitHub tras desconexión del entorno local; no se ejecutó preparador Python ni nuevos ensayos Rust. Cero escenarios C12 ejecutados. Dos originales ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-214
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-215
 
-**siguiente_accion:** Continuar BIS-C12: perfiles ES/EN, documentación y vías de construcción. Completar contratos BIS-02; decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
+**siguiente_accion:** Consolidar cobertura y pendientes C01–C12 en BIS-02; preparar decisiones de sede BIS-03 y realizar y probar lo justificado en BIS-04.
 
-**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. Las cuotas de ensayo no constituyen soporte universal. No se inicia otra campaña de selección del constructor. S24 pendiente; BIS-02 sigue abierto.
+**observaciones:** C12 es la última familia numerada; BIS-02 sigue abierto. Sin cambio de Rust, semántica, IR, dominio o catálogo. S24 pendiente. Sincronización local pendiente por desconexión; publicación y cotejo por conector GitHub.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
