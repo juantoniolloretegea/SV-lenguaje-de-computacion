@@ -720,15 +720,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S21 · Revisión 2 de (p1+p3)-Bis: frame tipado, dimensión fija y alcance por versión
 
-**estado:** en ejecución
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-13T04:51:40Z
 
 **fecha_inicio_utc:** 2026-09-13T04:51:40Z
 
-**fecha_actualizacion_utc:** 2026-09-13T04:51:40Z
+**fecha_actualizacion_utc:** 2026-09-13T04:59:34Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-13T04:59:34Z
 
 **unidad_responsable:** Watson / W-S0
 
@@ -740,13 +740,13 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; acuerdos explícitos del autor posteriores a la primera versión; fundamentos y rectores leídos en S20.
 
-**resultado:** Revisión iniciada con conservación de la primera edición y separación de acuerdo de diseño y realización.
+**resultado:** Versión 2 MD/PDF publicada como referencia explicativa vigente; versión inicial conservada. Acuerdos sobre frame tipado, dimensión fija y tamaños admitidos por versión, SV(9,3) sin valor predeterminado; relevo actualizado.
 
-**verificacion:** Cortes cotejados; sin cambios respecto a S20 al iniciar esta revisión. Lectura de estado y AGENTS antes del alta.
+**verificacion:** Revisión de contenido y renderizado del PDF; coherencia de referencias e historial; verificación de publicación y paridad de copias por hashes Git. Sin nuevas pruebas del núcleo o de IA.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-194
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-195
 
 **siguiente_accion:** Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.
 

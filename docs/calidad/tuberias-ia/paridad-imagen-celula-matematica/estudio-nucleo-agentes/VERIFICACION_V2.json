@@ -1,0 +1,62 @@
+{
+  "version": "P1P3-BIS-VERIFICACION/2",
+  "fecha_utc": "2026-09-13T04:59:34Z",
+  "alcance": "Revisión documental S21; sin nueva ejecución del núcleo o de IA",
+  "pdf_paginas": 11,
+  "origen_md_pdf": "Mismos once bloques de texto; igualdad del MD con el origen comprobada",
+  "revision_visual": "Once páginas renderizadas e inspeccionadas; sin recortes ni desbordamientos observados",
+  "limites_texto": [
+    {
+      "pagina": 1,
+      "limite_inferior_texto": 740.4
+    },
+    {
+      "pagina": 2,
+      "limite_inferior_texto": 563.4
+    },
+    {
+      "pagina": 3,
+      "limite_inferior_texto": 596.4
+    },
+    {
+      "pagina": 4,
+      "limite_inferior_texto": 631.4
+    },
+    {
+      "pagina": 5,
+      "limite_inferior_texto": 645.4
+    },
+    {
+      "pagina": 6,
+      "limite_inferior_texto": 678.4
+    },
+    {
+      "pagina": 7,
+      "limite_inferior_texto": 601.4
+    },
+    {
+      "pagina": 8,
+      "limite_inferior_texto": 571.4
+    },
+    {
+      "pagina": 9,
+      "limite_inferior_texto": 579.4
+    },
+    {
+      "pagina": 10,
+      "limite_inferior_texto": 631.4
+    },
+    {
+      "pagina": 11,
+      "limite_inferior_texto": 549.4
+    }
+  ],
+  "enlaces_pdf_https": 17,
+  "pendientes": [
+    "Constitución del conjunto finito de tamaños",
+    "Contraste material de semántica V0.2 e IR 0.3",
+    "Contrato y banco de paridad",
+    "Coste y capacidades efectivas de NLP/visión"
+  ],
+  "publicacion": "La identidad de los blobs y la conservación del árbol ajeno al cambio se comprueban después de actualizar cada rama; los commits constituyen la evidencia de publicación."
+}

@@ -4,6 +4,16 @@
 
 Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne las carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, la de trazabilidad y auditoría del trabajo de la IA, y la de paridad entre célula matemática e imagen.
 
+## Entrada vigente y continuidad · revisión del 13 de septiembre de 2026
+
+Para iniciar el trabajo, consultar el [CSV de Sucesos SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv) y su [historial de revisiones](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv). Allí se localizan la actividad aplicable, su estado, los cortes, el resultado, la evidencia y la siguiente acción. Este documento proporciona la ruta de lectura y distingue la referencia explicativa vigente de los antecedentes.
+
+La referencia vigente de **(p1+p3)-Bis es la versión 2**: [Markdown](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) · [revisión y versiones conservadas](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md). S21 / RETP-2026-195 cierra su actualización documental; S20 conserva la recepción inicial.
+
+Antes de intervenir debe quedar entendido que el frame se constituye bajo contrato, que sus componentes matemático y visual corresponden al mismo estado y que la dimensión permanece fija tras la admisión. La versión de soporte declara tamaños admitidos; su inventario concreto aún debe constituirse. SV(9,3) es el mínimo, sin valor predeterminado. Incorporar tamaños exige revisión de impacto y pruebas, con modificación de semántica o IR cuando el análisis la justifique.
+
+**Siguiente objeto material:** contrastar estas obligaciones con semántica V0.2 e IR 0.3, determinar tamaños desde las constituciones y fijar contrato y banco de paridad antes de derivar causas al catálogo. El acuerdo documental no acredita implementación ni sustituye sus pruebas. El orden posterior de agentes se decidirá tras el trabajo inmunológico correspondiente.
+
 ## Entrada obligatoria: Sucesos SV · 12 de septiembre de 2026
 
 Antes de intervenir, consultar el [registro Sucesos SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/README.md) y su [estado vigente](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md). Toda actividad nueva debe quedar identificada en la sucesión única S0, S1, …, Sn y mantener actualizados responsable, fechas, alcance, estado, resultado y evidencia. Los únicos estados admitidos son `pendiente`, `en ejecución` y `finalizado`. Las altas y modificaciones conservan su historial.
@@ -18,7 +28,7 @@ Las referencias y estados de los apartados siguientes conservan su corte histór
 | --- | --- | --- |
 | 1 | [Frame: significado humano, trazabilidad y fidelidad — Markdown](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md) · [PDF](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf) | El volcán permite examinar qué se conserva, pierde o sustituye en la representación, y por qué importa al profesional. |
 | 2 | [Adenda: del volcán al encaje visual del SV — Markdown](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.md) · [PDF](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.pdf) | Los antiguos polígonos IMMUNO-1/2 y el logo enlazan la escena compartida por experto y agente con su representación computable. Incluye las dos confirmaciones. |
-| 3 | [(p1+p3)-Bis: célula matemática, imagen y agentes — Markdown](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.md) · [PDF](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.pdf) | Los fundamentos algebraico-semánticos gobiernan radios, posiciones, evaluación y composición. Las funciones nuclear de dominio y singular de decisión comparten molde. |
+| 3 | [(p1+p3)-Bis: célula matemática, imagen y agentes, versión 2 — Markdown](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) | Los fundamentos algebraico-semánticos gobiernan radios, posiciones, evaluación y composición. Frame tipado, dimensión fija y soporte declarado. Las funciones nuclear de dominio y singular de decisión comparten molde. |
 | 4 | [Trazabilidad, auditoría y reproducción del trabajo de la IA](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md) | Pueden variar los procedimientos válidos; se conservan el conocimiento pertinente, las reglas, los artefactos, los resultados y las mediciones. |
 | 5 | [Índice técnico vigente](../inicio.md) | Localizar el relevo aplicable y la evidencia de realización antes de intervenir. Esta secuencia conceptual no sustituye las actas rectoras. |
 
@@ -50,3 +60,7 @@ El diálogo y el PDF originales del volcán se conservan. Las incorporaciones po
 Leer los [Fundamentos algebraico-semánticos](../paridad-imagen-celula-matematica/Fundamentos%20algebraico-sem%C3%A1nticos%20del%20Sistema%20Vectorial%20SV.md) como referencia rectora de la representación y después la explicación del punto 3 de la tabla. La célula exacta, sus radios visibles y los índices de una clase de IA son objetos distintos. El molde compartido no autoriza inversiones semánticas ni una composición universal.
 
 El [estudio núcleo–agentes](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md) conserva los contrastes, las fuentes y las cuestiones abiertas. Se completa la recepción documental S20; la suficiencia de semántica V0.2/IR 0.3 y la capacidad NLP/visión requieren trabajo material posterior. Esta incorporación no modifica las confirmaciones históricas ni acredita una conformidad humana adicional.
+
+## Actualización de la versión 2 y conservación del historial
+
+La precisión sobre frame tipado, dimensiones y uso no predeterminado de SV(9,3) queda incorporada por instrucción expresa del autor. La versión 2 pasa a ser la referencia explicativa del punto 3 de la secuencia de lectura. La primera edición permanece accesible desde el historial de revisión; las confirmaciones y estados anteriores conservan su fecha y alcance. Sucesos SV y este documento deben consultarse conjuntamente para continuar desde la evidencia vigente.

@@ -1,0 +1,63 @@
+{
+  "version": "P1P3-BIS-ENTREGA/2",
+  "fecha_utc": "2026-09-13T04:59:34Z",
+  "archivos": [
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md",
+      "bytes": 28621,
+      "sha256": "eda1ad4ae1c486ea8f46443dd37d59bf3b1af9e3f7a175c3b53f7c9ce6cc365f",
+      "git_blob": "e148b10607ca71b3983e9b8607c4a56c541e89a8"
+    },
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf",
+      "bytes": 303059,
+      "sha256": "113c5e7c059ac4cacbe56f2f62e88add296f6ba6cafeb56e135f87d85c38d48c",
+      "git_blob": "701e566ecd55f1f181d8e65b6692d5fb2036ee8f"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/README.md",
+      "bytes": 6545,
+      "sha256": "e197ff02c876fd83a396e6f96078c547c8c676c10c45b1af4c3ba4f8a5d717a0",
+      "git_blob": "127b8dfaa26b6a9cc969ee2124dd65bbfdcff82c"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/VERIFICACION_V2.json",
+      "bytes": 1614,
+      "sha256": "c7edf9072a116f41e4389cdbf5fac295deaf8dae40b866258ebb5a2d83250a00",
+      "git_blob": "7e7ff05bb51b3150075986cc93828c7ec19f4b9f"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/REVISION_V2.md",
+      "bytes": 5195,
+      "sha256": "d675159dbe9d4949b1a012d00d6cca701de6c8d710fa6d121dbac96c31682e95",
+      "git_blob": "de3bacf15e9ab322d203999847f726295694525a"
+    },
+    {
+      "ruta": "../frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+      "bytes": 9259,
+      "sha256": "f184f0227c9bfc22f66f65d2cc8700be6acc4fe486c95db3c88c8daacb2f5af0",
+      "git_blob": "a06209e41ddce8f6bba53c9e0bd3cdf3f18a35df"
+    }
+  ],
+  "primera_edicion_conservada": [
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.md",
+      "bytes": 20053,
+      "sha256": "a6689ecbd7900e93d9473b5f1a4d38504edb838ba0c4be583c73070b04408168",
+      "git_blob": "be40753030b2e983786383f54a79cd6916593bfa"
+    },
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.pdf",
+      "bytes": 293847,
+      "sha256": "a87055cb20fbb2d212e3d462397ec2afe9050603f5448d6ebfa182ee8e425d8d",
+      "git_blob": "35dfc10d176fbe1d8910713cd2fce2c75567dbb5"
+    },
+    {
+      "ruta": "Frame-ciberseguridad.svg",
+      "bytes": 29482,
+      "sha256": "3088d7e7058e31bbda334c9055fc6f3a16ffacef27b6a47347c3e203f6ae8178",
+      "git_blob": "72bebbbab2a8e6e1c676d3fba197bfd44536d7a3"
+    }
+  ],
+  "nota": "El manifiesto V1 describe su corte histórico. Las revisiones del README y del lector permanecen recuperables mediante Git. Los registros de cierre se identifican en el commit, evitando referencias hash circulares."
+}

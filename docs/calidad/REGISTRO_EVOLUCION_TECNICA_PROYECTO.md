@@ -1941,3 +1941,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-194 · S21 · Apertura de la revisión 2 de (p1+p3)-Bis
 
 2026-09-13T04:51:40Z. Revisión iniciada con conservación de la primera edición y separación de acuerdo de diseño y realización. Cortes cotejados; sin cambios respecto a S20 al iniciar esta revisión. Lectura de estado y AGENTS antes del alta. [Revisión](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md). Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.
+
+
+<a id="retp-195"></a>
+
+### RETP-2026-195 · S21 · Cierre documental de la revisión 2 de (p1+p3)-Bis
+
+2026-09-13T04:59:34Z. Versión 2 MD/PDF publicada como referencia explicativa vigente; versión inicial conservada. Acuerdos sobre frame tipado, dimensión fija y tamaños admitidos por versión, SV(9,3) sin valor predeterminado; relevo actualizado. Revisión de contenido y renderizado del PDF; coherencia de referencias e historial; verificación de publicación y paridad de copias por hashes Git. Sin nuevas pruebas del núcleo o de IA. [Revisión](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/REVISION_V2.md). Contrastar las obligaciones acordadas con semántica V0.2 e IR 0.3; determinar tamaños desde constituciones, fijar contrato y banco de paridad; derivación posterior al catálogo.
