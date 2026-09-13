@@ -5,19 +5,19 @@
   "imagenes_originales": 5,
   "archivos": {
     "README.md": {
-      "bytes": 2257,
-      "sha256": "031f8b449eba9ac0d35fb77cc72f580ce96501badb5d27e101469ec031828269",
-      "git_blob_sha1": "f7e22a50c0f1955442086bf14c17581eeb085d88"
+      "bytes": 2689,
+      "sha256": "a645782a36e1255938b10c0f2fd703aad56e13f2a266d86ec73b6fdc7d6b5997",
+      "git_blob_sha1": "cc2f60116cc713334aef846126bcc5c4e7cb3af8"
     },
     "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md": {
-      "bytes": 15805,
-      "sha256": "b89b6b398985a9e339d568f80a273528501213b638cb8dee393b9a0dd4f5f2c6",
-      "git_blob_sha1": "fbdee30439ef50449fc110e1560b1e4eb67531fe"
+      "bytes": 17575,
+      "sha256": "908f8d10b7407cfdffa363360dfb9322bc9c9e1719772293d7eefa107eedfffd",
+      "git_blob_sha1": "de8dcbe4172a08b8bc8896df66a78a3382ddf125"
     },
     "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.pdf": {
-      "bytes": 603991,
-      "sha256": "f689390eb6f770cc8e85fad7ccdaf2aed9f62c846d2b21bedacf538eb9dd7cec",
-      "git_blob_sha1": "6d819acd5646db4411a2a4037d4e89ddd8fc5f20"
+      "bytes": 648591,
+      "sha256": "04d214b95f24a70fb805b7745a066251e047fd1778f91fa363b4056a4c020b7c",
+      "git_blob_sha1": "6dff34a7178c921799dd912a4d3aa2997d9befe7"
     },
     "imagenes/01-procesos-watson.png": {
       "bytes": 224679,
@@ -70,6 +70,11 @@
       "fecha": "2026-09-12",
       "registro": "RETP-2026-156",
       "alcance": "Enlace al léame primero compartido; texto principal, PDF, ejemplos e imágenes sin cambios."
+    },
+    {
+      "fecha": "2026-09-13",
+      "registro": "RETP-2026-230 / S27",
+      "alcance": "Incorporación de cobertura y rutas; originales conservados como prefijos y páginas; huellas actuales de navegación refrescadas. Antecedentes preservados en historial Git."
     }
   ]
 }

@@ -1,0 +1,38 @@
+[
+  {
+    "name": "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11",
+    "previous_pages": 22,
+    "pages": 24,
+    "original_sha256": {
+      ".md": "ec9be90c96f5d8953fca623af8cf07c78f9f9f05c79b8dc78b6d001a2e746f5b",
+      ".pdf": "1cf979318b68cc164c07500f6f39c32f3f8608e47cca3da1c0d4222516828e15"
+    },
+    "updated_sha256": {
+      ".md": "f99070549b1717af3bfb19bf45f68974ddb52c05615f701bc233986a5565d6b4",
+      ".pdf": "ad108951711cc335b4f2b91cf5411bd92c2d50266ee42975277bba8e4274055a"
+    },
+    "old_pages_text_preserved": true,
+    "old_markdown_prefix_preserved": true,
+    "original_pdf_local": "/tmp/sv-rutas-pdf-ktatbmex/original.pdf",
+    "previous_pages_render_identical": true,
+    "revision_visual": "Tres páginas nuevas inspeccionadas: texto legible, sin solapamientos ni cortes; 30 páginas anteriores con render idéntico a su original."
+  },
+  {
+    "name": "TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12",
+    "previous_pages": 8,
+    "pages": 9,
+    "original_sha256": {
+      ".md": "b89b6b398985a9e339d568f80a273528501213b638cb8dee393b9a0dd4f5f2c6",
+      ".pdf": "f689390eb6f770cc8e85fad7ccdaf2aed9f62c846d2b21bedacf538eb9dd7cec"
+    },
+    "updated_sha256": {
+      ".md": "908f8d10b7407cfdffa363360dfb9322bc9c9e1719772293d7eefa107eedfffd",
+      ".pdf": "04d214b95f24a70fb805b7745a066251e047fd1778f91fa363b4056a4c020b7c"
+    },
+    "old_pages_text_preserved": true,
+    "old_markdown_prefix_preserved": true,
+    "original_pdf_local": "/tmp/sv-rutas-pdf-6ntiwrkm/original.pdf",
+    "previous_pages_render_identical": true,
+    "revision_visual": "Tres páginas nuevas inspeccionadas: texto legible, sin solapamientos ni cortes; 30 páginas anteriores con render idéntico a su original."
+  }
+]

@@ -16,24 +16,24 @@
       "git_blob_sha1": "3ee74ca9fd0d0c3632edbd2e1e6b02d7530b4f28"
     },
     "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md": {
-      "bytes": 41291,
-      "sha256": "ec9be90c96f5d8953fca623af8cf07c78f9f9f05c79b8dc78b6d001a2e746f5b",
-      "git_blob_sha1": "5822a83b0394b80a51290f226826b380b0ccb0ac"
+      "bytes": 49576,
+      "sha256": "f99070549b1717af3bfb19bf45f68974ddb52c05615f701bc233986a5565d6b4",
+      "git_blob_sha1": "a4f71726ecdabe9a8ecc80fe09e694ff8a490323"
     },
     "FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf": {
-      "bytes": 10333671,
-      "sha256": "1cf979318b68cc164c07500f6f39c32f3f8608e47cca3da1c0d4222516828e15",
-      "git_blob_sha1": "b01dabb703787c794b46052b2faa289ad13ca274"
+      "bytes": 10384497,
+      "sha256": "ad108951711cc335b4f2b91cf5411bd92c2d50266ee42975277bba8e4274055a",
+      "git_blob_sha1": "1111de5419b409751623da824748720d0534fd48"
     },
     "LEAME_PRIMERO.md": {
-      "bytes": 3830,
-      "sha256": "2fab256d20df897176a764c8b82fae78cf1ef1faef21718da6de2dbdeb02952a",
-      "git_blob_sha1": "b56c468dd7d91b4d4f71a5e2e1f2bec42749329b"
+      "bytes": 19500,
+      "sha256": "fca4664fabfc8b4e7401893f0cebe20c660fdbe2d0106f0aecfcfad6757799fb",
+      "git_blob_sha1": "66b4d8f440f6ed6f595f565c26323c4cca4daa16"
     },
     "README.md": {
-      "bytes": 3240,
-      "sha256": "037652ebd50f822ff8f43d8aeb74340102fa64ba0fff9c0de9dd807d15296edd",
-      "git_blob_sha1": "7b2e20a119fe441191c2d81ac1f71d92229d4266"
+      "bytes": 3672,
+      "sha256": "3f3d97cfe58d171c484675668ad16cbf928d8c489768c7c0859e6522f5488ccd",
+      "git_blob_sha1": "e6ebada832716264204129154ae08eabaa115343"
     },
     "imagenes/01-escena-original.png": {
       "bytes": 284173,
@@ -94,6 +94,26 @@
       "bytes": 4968,
       "sha256": "996945f974379f118dbed283070a2c5404435991764f1407695881b7c2fa7a3f",
       "git_blob_sha1": "a16e176b3a4acd9c70d495e235f70bf10a94e179"
+    },
+    "soporte/ASIENTO_S27_RETP230.json": {
+      "bytes": 2881,
+      "sha256": "43a9889ff1313fe18af839e709325bd61bdd8f19c063142bd329b814ad0eb0f3",
+      "git_blob_sha1": "4e6ad60aa2cc882aa5c34cd6f75882c16aa1130e"
+    },
+    "soporte/INCORPORACION_RUTAS_2026_09_13.json": {
+      "bytes": 10890,
+      "sha256": "e0f2d8bf89351d369207d432dceebc3fddc7fbe332b9c240d93ed82a4343d703",
+      "git_blob_sha1": "03998e5d796f0453997332908facea145ab942ca"
+    },
+    "soporte/VERIFICACION_RUTAS_2026_09_13.json": {
+      "bytes": 1754,
+      "sha256": "a7b46936a5aa7823bc1380e8e2ddb5af2213f9807db56b4751d7f4026e4b7632",
+      "git_blob_sha1": "22b6e662a079145cdb4807724944be5e583d57b8"
+    },
+    "soporte/incorporar_rutas.py": {
+      "bytes": 3525,
+      "sha256": "638829f83db3dc693b9915666f7078e876ea1c5ab3daaad504b2215fcbc1ad83",
+      "git_blob_sha1": "40b7b98359d1169b3393accb3826a1b00d6e2a7e"
     }
   },
   "nota": "El manifiesto no se incluye a sí mismo. Igualdad entre copias comprobable mediante los identificadores de contenido.",
@@ -108,6 +128,11 @@
       "alcance": "Adenda visual PDF/MD, tres imágenes originales, léame primero y navegación; originales del volcán preservados.",
       "imagenes_adenda": 3,
       "confirmaciones": "Comprensión de Watson formulada en adenda; conformidad humana y luz verde recibidas en instrucción actual."
+    },
+    {
+      "fecha": "2026-09-13",
+      "registro": "RETP-2026-230 / S27",
+      "alcance": "Incorporación de cobertura y rutas; originales conservados como prefijos y páginas; huellas actuales de navegación refrescadas. Antecedentes preservados en historial Git."
     }
   ]
 }

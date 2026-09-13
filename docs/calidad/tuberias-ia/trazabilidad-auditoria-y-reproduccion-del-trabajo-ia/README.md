@@ -21,3 +21,7 @@ El expediente recoge la consulta del universo pertinente, la pregunta de sistema
 Este expediente es hermano de [Frame: significado humano, trazabilidad y fidelidad](../frame-significado-humano-trazabilidad-y-fidelidad/README.md). Se leen conjuntamente para recuperar la finalidad humana y la evidencia del recorrido sin pedir al autor que repita la explicación.
 
 Es consolidación documental, no cierre técnico ni nueva semántica del SV. Continúa el objeto pendiente de [RETP-154](../recepcion-gobernada-y-comprobacion-observada/README.md). Copias idénticas en Calidad del Lenguaje y en la rama privada del laboratorio. Para leer el Markdown fuera del repositorio, mantenga a su lado la carpeta `imagenes`.
+
+## Incorporación de rutas y cobertura · RETP-230 / S27
+
+Se amplían los PDF y Markdown con la explicación autorizada del 13/09: constitución del dominio, cobertura del agente, realización del Lenguaje y distinción frente a continuidad material. Las páginas anteriores se conservan. La exposición sustantiva está en la sección 11 del documento del volcán; el expediente de Rust recibe su enlace y alcance complementario.

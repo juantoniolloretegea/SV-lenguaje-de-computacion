@@ -220,3 +220,16 @@ La reducida resolución procede de la imagen aportada. La transcripción legible
 ![Captura original: es_par y duplicar](imagenes/05-rust-funciones-nombradas.png)
 
 La captura de las funciones nombradas conserva la firma original de `es_par`. La corrección editorial necesaria para esa cadena con `.iter()` está identificada en §5.3; no se ha retocado la imagen para ocultarla.
+
+
+## Incorporación del 13 de septiembre de 2026: procedimiento, cobertura y recorrido
+
+RETP-2026-230 / S27. Explicación de Juan Antonio Lloret Egea; redacción técnica de Watson. Las tres realizaciones Rust anteriores y sus resultados conservan su alcance original.
+
+La coincidencia del resultado de varios procedimientos permite contrastar un encargo acotado. No demuestra, por sí misma, que el conocimiento seleccionado para otra operación sea completo. La obligación de consultar un parámetro, recuperar una fuente o recorrer una rama debe proceder del contrato de la operación y de la constitución del dominio.
+
+El dominio establece esas obligaciones; el agente declara la cobertura y las capacidades que recibe; el Lenguaje debe conservar y comprobar sus vínculos en el alcance que pueda realizar. La elección de algoritmo, array, colección dinámica o índice no suple una dependencia clínica ausente. Optimizar exige mantener las condiciones de admisibilidad, los vetos y el tratamiento constituido de U.
+
+La explicación completa se incorpora al [documento del volcán, sección 11](../frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md), junto con sus fuentes y su relación con S26. Se conserva una sola exposición sustantiva para evitar divergencias entre expedientes.
+
+El estudio de rutas reutilizará los contratos inmunológicos existentes cuando corresponda al trabajo del dominio y del agente. El frente del Lenguaje continúa ahora la falsación material pendiente. Integridad del recorrido y suficiencia de su cobertura requieren comprobaciones distintas y enlazadas. Esta actualización documental no añade ejecuciones a los ejemplos Rust ni cierra las pruebas materiales.

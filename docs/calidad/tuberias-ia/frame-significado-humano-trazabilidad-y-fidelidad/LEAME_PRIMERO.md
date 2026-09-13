@@ -4,6 +4,10 @@
 
 Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne las carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, la de trazabilidad y auditoría del trabajo de la IA, y la de paridad entre célula matemática e imagen.
 
+## Lectura incorporada: conocimiento, rutas y reparto de trabajo · RETP-230 / S27
+
+Leer la [sección 11 del documento del volcán](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md) y sus páginas 23-25 en el [PDF ampliado](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf). El documento hermano de las tres realizaciones Rust recibe una página complementaria. El dominio constituye las obligaciones; el agente declara cobertura; el Lenguaje preserva y comprueba lo constituido dentro de su alcance acreditado. Se reutilizarán los contratos de rutas existentes. Continúa S26 por interrupciones, pánicos y sustitución durante lectura; sus resultados no acreditan cobertura clínica ni selección completa del conocimiento. S22/S24 conservan su secuencia.
+
 ## Entrada vigente y continuidad · revisión del 13 de septiembre de 2026
 
 **Actualización instrumental S25 / RETP-2026-217:** [Rust recuperado y entorno activado](../recuperacion-rust-s25/README.md). Rust/Cargo 1.98.0 disponibles; compilación nativa nueva y repetición C01 13/13, sensibilidad 4/4. S23 conserva su evidencia histórica; C02–C12 y la integración de BIS-02 siguen pendientes.

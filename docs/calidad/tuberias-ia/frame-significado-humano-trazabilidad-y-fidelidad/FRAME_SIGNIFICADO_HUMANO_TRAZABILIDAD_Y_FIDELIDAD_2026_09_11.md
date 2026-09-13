@@ -463,3 +463,56 @@ Todavía no muestra cómo se conectan materialmente el conocimiento, la IA, el n
 Le escucho.
 
 ![Diagrama de ataque: trazabilidad primero, seguridad y fidelidad después](imagenes/07-diagrama-de-ataque.png)
+
+
+## 11. Cobertura del conocimiento, rutas necesarias y continuidad material
+
+Incorporación del 13 de septiembre de 2026. Explicación y decisión de alcance de Juan Antonio Lloret Egea; redacción técnica de Watson. RETP-2026-230 / S27. Esta sección amplía la referencia del volcán sin modificar el diálogo anterior ni atribuirle afirmaciones retrospectivas.
+
+### 11.1. Necesidad que se conserva
+
+La fidelidad de una representación debe examinarse respecto de una finalidad declarada. El ejemplo del volcán muestra que una transformación puede conservar una figura reconocible y, sin embargo, perder una distinción imprescindible. La misma cuestión aparece al seleccionar conocimiento: una respuesta puede conservar exactamente todos los datos que recibió y resultar insuficiente porque nunca incorporó una dependencia obligatoria.
+
+La analogía de universos como libros y parámetros como páginas facilita imaginar el acceso. No constituye la arquitectura: los universos operacionales se delimitan por producto, objeto, disparador, autoridad, frontera y finalización. Un parámetro puede participar mediante usos explícitos en varias operaciones. Localizarlo no acredita que se haya establecido cuándo es obligatorio, qué evidencia necesita o qué consecuencia produce omitirlo.
+
+### 11.2. Reparto de trabajo y autoridad
+
+La unidad de dominio constituye conocimiento, parámetros, agrupaciones, relaciones, activación, fuentes, consecuencias y límites. El autor mantiene allí el estudio sustantivo y adversarial con las unidades que lo acompañan. La unidad de agente deberá recibir esa constitución y declarar cobertura, operaciones, facultades y composición. El Lenguaje representa, valida y realiza las operaciones formalmente constituidas en el alcance acreditado; preserva sus identidades, vínculos y distinciones, y declara lo que todavía no puede comprobar.
+
+Este reparto permite que las necesidades de dominio informen al Lenguaje sin convertir una decisión clínica en conveniencia del compilador. El primer dominio completo y su primer agente podrán aportar experiencia y contraejemplos reutilizables. Su conformidad no se transferirá automáticamente a otros dominios, coberturas o composiciones.
+
+### 11.3. Antecedentes que deben reutilizarse
+
+El contrato inmunológico v0.3 define usos u(p,O), activación por operación, episodio y horizonte, y una arquitectura mediante hipergrafo dirigido y tipado. Su ruta crítica es el subgrafo obligatorio para una salida admisible. G7-RUT concreta para OP-IMM-001 condiciones de activación, causas de inactividad, vetos, tratamiento de U, autoridad y cuatro rutas necesarias. Estas piezas constituyen antecedentes documentales; no acreditan una realización completa del futuro agente ni una optimización general de recorridos.
+
+La optimización deberá preservar todas las obligaciones de la operación. Reducir consultas, memoria o trabajo sólo resulta admisible dentro de las alternativas autorizadas. La ruta crítica no se identifica por defecto con un camino más corto ni con una sola cadena: puede requerir ramas conjuntas, condiciones y referencias compartidas. La selección de un modelo por relevancia aparente no sustituye la constitución de esas obligaciones.
+
+El corte consultado contiene 27 parámetros formalizados de OP-IMM-001 y un mapa de 32 universos operacionales candidatos. Las cuatro salidas no son cuatro parámetros adicionales. No se acredita un total de más de 600 parámetros constituidos ni se extrapola el inventario desde un universo. Los grupos clínicos históricamente llamados matrices no son células SV por cardinalidad.
+
+### 11.4. Estado celular, recorrido y representación
+
+La longitud y el orden de una célula constituida permanecen fijos bajo su contrato. Una colección de pasos o referencias de una operación es otro objeto. La necesidad de ampliar el recorrido no autoriza a alargar una célula, rellenarla con U, introducir parámetros ficticios ni tratar posiciones no constituidas como puertos libres. Cualquier reserva tecnológica deberá conservar su distinción respecto del contenido semántico.
+
+Array, Vec e índice por clave son elecciones de realización con propiedades y límites que deberán ensayarse. Una colección que admite crecimiento no acredita finitud del procedimiento, suficiencia del conocimiento ni conservación del historial. La vista de un estado y la traza del recorrido se enlazan mediante identidades explícitas; el polígono, por sí solo, no relata todos los pasos que produjeron el resultado.
+
+Las tres realizaciones Rust del expediente hermano ilustran que procedimientos distintos pueden producir un mismo resultado en un encargo acotado. Esa coincidencia no demuestra que cualquier procedimiento haya consultado todo lo necesario para otra operación. Deben conservarse entradas, reglas, código, pasos pertinentes, resultados y costes, con evidencia proporcionada al alcance que se afirme.
+
+### 11.5. Frontera con S26 y orden de continuación
+
+S26 examina la continuidad material: qué objeto se recibe, dónde reside, qué puede cambiarlo, qué observa cada lector y qué puede acreditarse tras una entrega o un fallo. La cobertura del recorrido examina si la operación recibió todas sus dependencias obligatorias. Un transporte fiel puede conservar una selección insuficiente; una selección correcta puede perderse o alterarse al ejecutarse. Ambos fallos deben poder distinguirse.
+
+La decisión humana mantiene primero el trabajo constitutivo del dominio en su sede. El frente del Lenguaje continúa la ronda material ya iniciada y conserva los antecedentes de rutas para el retorno que corresponda. No se abre aquí una nueva operación inmunológica, un agente, una GUI, un motor de rutas ni una elección de almacenamiento. Superar las sondas S26 no acreditará cobertura clínica ni selección completa de conocimiento.
+
+Al estudiar la realización del recorrido deberán reutilizarse los contratos existentes y comprobar, al menos, omisión de una dependencia obligatoria, inactividad injustificada, sustitución de versión, pérdida de una rama conjunta, retorno parcial presentado como completo y coste o agotamiento convertido en omisión silenciosa. Estos son objetos de falsación propuestos; esta incorporación no afirma que sus pruebas se hayan ejecutado.
+
+### 11.6. Fuentes y estado documental
+
+Lectura del Lenguaje en main 531010ab56298605f4f2469554a9f48420ffa4a9: Pilares, acta de perfiles y contratos, transición desde OP-IMM-001 y S26 R04. Lectura de Inmunología en dominio-inmunologia fe8adf76aa030ba5ff4997be5772b5de5e4452f3. Los compromisos citados conservan el corte de esta edición.
+
+- [Contrato inmunológico de parámetro, composición y ruta, §§3-5 y 9-10](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/fe8adf76aa030ba5ff4997be5772b5de5e4452f3/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/05-normalizacion-atomica-en-evaluacion/Contrato_matematico_parametro_atomico_matriz_ruta_INMUNO_v0.3_2026-09-02.md).
+- [G7-RUT: usos, composición y rutas de OP-IMM-001](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/fe8adf76aa030ba5ff4997be5772b5de5e4452f3/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/12-rutas-en-evaluacion/G7-RUT_usos_composicion_y_rutas_OP-IMM-001_v0.1_2026-09-03.md).
+- [Mapa finito de 32 universos candidatos](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/fe8adf76aa030ba5ff4997be5772b5de5e4452f3/dominios/inmunologia/cambio-rumbo/03-base-documental-candidata/16-mapa-operaciones/Mapa_finito_universos_operacionales_catalogo_INMUNO_v0.8_v0.1_2026-09-03.md).
+- [Pilares y reparto de autoridad](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/531010ab56298605f4f2469554a9f48420ffa4a9/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md).
+- [Expediente hermano: tres realizaciones Rust y auditoría del procedimiento](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md).
+
+Esta es una incorporación explicativa y de continuidad autorizada por el autor. No cambia la semántica ni promueve una capacidad no demostrada. No se ha utilizado otro agente ni inferencia clínica externa para redactarla.

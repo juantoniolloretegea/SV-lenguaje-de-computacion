@@ -35,3 +35,7 @@ Copias idénticas de este expediente en Calidad del Lenguaje y en la rama privad
 ## Referencia hermana incorporada el 12 de septiembre de 2026
 
 [Trazabilidad, auditoría y reproducción del trabajo de la IA](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md) conserva la explicación posterior del autor: procedimientos diferentes pueden satisfacer el mismo encargo, y su examen requiere scripts, código, entradas, resultados y mediciones recuperables. Ambas carpetas constituyen referencias de continuidad; esta incorporación no altera el diálogo ni el PDF del frame.
+
+## Incorporación de rutas y cobertura · RETP-230 / S27
+
+Se amplían los PDF y Markdown con la explicación autorizada del 13/09: constitución del dominio, cobertura del agente, realización del Lenguaje y distinción frente a continuidad material. Las páginas anteriores se conservan. La exposición sustantiva está en la sección 11 del documento del volcán; el expediente de Rust recibe su enlace y alcance complementario.

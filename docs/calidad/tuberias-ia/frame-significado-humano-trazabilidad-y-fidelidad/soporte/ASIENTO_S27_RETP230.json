@@ -1,0 +1,30 @@
+{
+  "suceso": {
+    "id": "S27",
+    "estado": "finalizado",
+    "fecha_alta_utc": "2026-09-13T20:52:22Z",
+    "fecha_inicio_utc": "",
+    "fecha_actualizacion_utc": "2026-09-13T20:52:22Z",
+    "fecha_fin_utc": "2026-09-13T20:52:22Z",
+    "unidad_responsable": "Watson / W-S0",
+    "actividad": "Incorporación documental: dominio, cobertura del agente y rutas necesarias",
+    "alcance": "Explicación autorizada en expedientes del volcán y tres realizaciones Rust; reparto de autoridad y orden de trabajo. Sin constitución clínica ni motor de rutas.",
+    "repositorios_y_ramas": "SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente",
+    "cortes_de_entrada": "Lenguaje 531010ab56298605f4f2469554a9f48420ffa4a9; laboratorio b2cd1ab66b66d91578c621e5ee37a6a48bb5e020; Inmunología dominio-inmunologia fe8adf76aa030ba5ff4997be5772b5de5e4452f3",
+    "dependencias": "Petición humana; rectores y relevo OP-IMM-001; contrato inmunológico v0.3 y G7-RUT; continuidad material S26.",
+    "resultado": "Sección 11 añadida al PDF/MD del volcán; complemento en PDF/MD de tres realizaciones Rust; entrada destacada en Léame primero. Primero dominio y sus unidades; Lenguaje continúa S26 y preserva antecedentes de rutas.",
+    "verificacion": "Prefijos Markdown preservados; texto y render de las 30 páginas anteriores idénticos; tres páginas nuevas inspeccionadas. Código, texto íntegro de incorporación y huellas conservados. Publicación y espejo sujetos al cotejo de árbol del publicador.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+    "referencia_calidad": "RETP-2026-230",
+    "siguiente_accion": "Continuar S26: salidas sin recibo, interrupción/pánico y sustitución de fuente durante lectura. Retomar cobertura de rutas en sede del dominio y agente cuando corresponda.",
+    "observaciones": "Alta documental posterior a la actividad; no se inventa hora de inicio. Autor del argumento: Juan Antonio Lloret Egea; edición Watson. S22/S24 y banco Bis conservan su estado. No ensayos Rust nuevos por esta incorporación ni acreditación de cobertura clínica."
+  },
+  "revision": 0,
+  "retp": 230,
+  "tipo": "Incorporación documental y continuidad",
+  "motivo": "Conservar necesidad, responsabilidades y orden de estudio solicitados por el autor.",
+  "base": "Lenguaje 531010ab56298605f4f2469554a9f48420ffa4a9; laboratorio b2cd1ab66b66d91578c621e5ee37a6a48bb5e020; Inmunología dominio-inmunologia fe8adf76aa030ba5ff4997be5772b5de5e4452f3",
+  "artefactos": "Dos PDF/MD, Léame primero, navegación, manifiestos y soporte reproducible.",
+  "impacto": "Documentación; sin cambio de semántica ni código productivo.",
+  "titulo": "Dominio, cobertura y rutas necesarias"
+}
