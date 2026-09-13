@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T11:22:18Z
+**fecha_actualizacion_utc:** 2026-09-13T11:42:22Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 26b0906572e7b9de74ee43bc9f648cc5c2945b25; laboratorio 13dfebac4feb2b6f9a0ffb5ddd46122262a9d8bc
+**cortes_de_entrada:** Lenguaje b22d03cf369bbe9cab902846d061d5de46f76397; laboratorio 9da7f6aba6ff72c9a73cd12d24acda4e8e5cc659
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C10 preparado: contrato de justificación y evidencia; veinte escenarios, cuatro positivos y dieciséis negativos, ocho archivos sintéticos y referencia independiente. Se contrastan respaldo de afirmaciones, parciales, pertenencia, revisión, cobertura, regla y entrega efectiva.
+**resultado:** BIS-C11 preparado: contrato y presupuesto sintético de recursos; veinte escenarios, seis positivos y catorce negativos, cuatro entradas textuales. Se distingue control local de protección previa a asignación, recursos agregados, concurrencia, llamadas y cese efectivo. Trazabilidad heredada explícita.
 
-**verificacion:** Cotejo auxiliar Python de inventario, cálculos sintéticos, huellas, referencias e historial. Cero escenarios C10 ejecutados; sin compilación nueva, receptor Rust ni consultas a modelos. Originales: dos ejecutados y veintidós pendientes.
+**verificacion:** Cotejo auxiliar Python de bytes UTF-8, inventario, cuotas testigo, huellas e historial. Cero escenarios C11 ejecutados; sin compilación nueva o modelo interrogado. Memoria de proceso y duración máxima pendientes de fijar y medir. Dos escenarios originales ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-213
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-214
 
-**siguiente_accion:** Continuar BIS-C11: presupuestos y límites de recursos con testigos de frontera. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
+**siguiente_accion:** Continuar BIS-C12: perfiles ES/EN, documentación y vías de construcción. Completar contratos BIS-02; decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
 
-**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. No se acredita QueryResult productivo ni cierre CQ1–CQ6. Integridad no equivale a verdad externa; falta de evidencia no se convierte en Tri.U. S24 pendiente.
+**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. Las cuotas de ensayo no constituyen soporte universal. No se inicia otra campaña de selección del constructor. S24 pendiente; BIS-02 sigue abierto.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

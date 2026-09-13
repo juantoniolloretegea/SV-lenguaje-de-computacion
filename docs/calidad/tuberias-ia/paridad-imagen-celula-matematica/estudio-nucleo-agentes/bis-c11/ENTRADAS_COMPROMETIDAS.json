@@ -1,0 +1,21 @@
+{
+  "estatuto": "Bytes de prueba y sus identidades; no ensayo de admisión ejecutado",
+  "archivos": {
+    "entradas/ascii-4096.txt": {
+      "bytes": 4096,
+      "sha256": "c93eee2d0db02f10acc7460d9576e122dcf8cd53c4bf8dfcae1b3e74ebcfff5a"
+    },
+    "entradas/ascii-4097.txt": {
+      "bytes": 4097,
+      "sha256": "4e369b5618643c3abddd027b650bfa54810be3b418028a7c9d82299a59d008e8"
+    },
+    "entradas/utf8-4096.txt": {
+      "bytes": 4096,
+      "sha256": "5ad260dd6d057b52e1d3901fe03c639793c949c3589e27f37e42358723b8865c"
+    },
+    "entradas/utf8-4097.txt": {
+      "bytes": 4097,
+      "sha256": "b00d8cf8247fc124c33ef96f28fdc840d4067ed9dba3fce2e7603b4d067db6a0"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "version": "BIS-C11-PRESUPUESTO/0.1",
+  "estatuto": "Presupuesto sintético de prueba, no máximo universal SV ni perfil de soporte aprobado",
+  "unidad_operativa": "peticion_sintetica",
+  "limites": {
+    "texto_por_pieza_bytes_utf8": 4096,
+    "texto_total_por_peticion_bytes_utf8": 8192,
+    "imagen_pixeles_decodificados": 65536,
+    "imagen_salida_rgba_bytes": 262144,
+    "nodos_composicion": 8,
+    "profundidad_composicion_nodos": 4,
+    "peticiones_simultaneas": 2,
+    "salida_por_peticion_bytes": 8192,
+    "llamadas_herramienta_por_peticion": 3
+  },
+  "reglas": [
+    "Todos los límites son inclusivos; la primera unidad superior excede el presupuesto.",
+    "Texto se cuenta por bytes UTF-8 efectivos; no por caracteres, tokens ni tamaño de archivo comprimido.",
+    "La suma total de texto incluye todas las piezas recibidas y repetidas; deduplicación semántica no devuelve consumo ya realizado.",
+    "RGBA designa exclusivamente cuatro bytes por píxel de salida de este testigo; excluye temporales, stride, decodificador y memoria del proceso.",
+    "Profundidad cuenta nodos de la ruta más larga; una raíz aislada vale uno. Un ciclo no admite profundidad finita en este testigo DAG.",
+    "Concurrencia cuenta peticiones admitidas aún no finalizadas; reserva y liberación deben ser coherentes frente a carreras.",
+    "La cuota de llamadas cuenta intentos despachados, incluidos fallidos y reintentos; no se renueva automáticamente al fallar.",
+    "Exceso no permite truncar texto, reducir dimensión de célula o presentar imagen incompleta como fiel."
+  ],
+  "memoria_proceso_max_bytes": null,
+  "tiempo_maximo_ms": null,
+  "motivo_limites_pendientes": "Requieren entorno, medición basal, régimen de interrupción y sede material; no se deducen del tamaño de carga.",
+  "tipos_enteros_a_contrastar": [
+    "u32",
+    "u64",
+    "usize_del_destino"
+  ],
+  "nota_temporal": "Medir duración no introduce tiempo como primitiva del álgebra. Vigencia de permisos y duración de ejecución tienen contratos distintos."
+}

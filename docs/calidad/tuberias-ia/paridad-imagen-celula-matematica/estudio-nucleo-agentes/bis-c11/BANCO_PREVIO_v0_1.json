@@ -1,0 +1,382 @@
+{
+  "version": "BIS-C11-BANCO/0.1",
+  "estatuto": "Especificaciones sintéticas de recursos; no pruebas Rust ni de IA ejecutadas",
+  "presupuesto": {
+    "ruta": "PRESUPUESTO_SINTETICO.json",
+    "sha256": "ba3cdd68d30278d8c7fc6fbd73aefab03b0f5d7b921c4b73e372dc4ee57856ab"
+  },
+  "variantes": 20,
+  "ejecutadas": 0,
+  "nota_conteo": "Veinte escenarios; C11-13 contiene dos subcasos aún no materializados. No se equiparan a número de ejecuciones.",
+  "casos": [
+    {
+      "id": "C11-01",
+      "clase": "positivo",
+      "descripcion": "Texto ASCII en el límite",
+      "entrada_o_estimulo": {
+        "archivos": [
+          "entradas/ascii-4096.txt"
+        ]
+      },
+      "resultado_esperado_contractual": "Admitir esta guarda de tamaño con4096 bytes; no acredita las guardas semánticas posteriores.",
+      "sede_a_contrastar": "Recepción anterior a copia/parseo",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-02",
+      "clase": "negativo",
+      "descripcion": "Texto ASCII una unidad por encima",
+      "entrada_o_estimulo": {
+        "archivos": [
+          "entradas/ascii-4097.txt"
+        ]
+      },
+      "resultado_esperado_contractual": "Rechazar exceso4097 sin truncamiento ni creación de salida completa.",
+      "sede_a_contrastar": "Recepción",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-03",
+      "clase": "positivo",
+      "descripcion": "UTF-8 en el límite",
+      "entrada_o_estimulo": {
+        "archivos": [
+          "entradas/utf8-4096.txt"
+        ],
+        "caracteres": 2048
+      },
+      "resultado_esperado_contractual": "Contabilizar4096 bytes y admitir esta guarda sin alterar tildes.",
+      "sede_a_contrastar": "Recepción y transporte UTF-8",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-04",
+      "clase": "negativo",
+      "descripcion": "UTF-8 contado como caracteres",
+      "entrada_o_estimulo": {
+        "archivos": [
+          "entradas/utf8-4097.txt"
+        ],
+        "caracteres": 2049
+      },
+      "resultado_esperado_contractual": "Detectar4097 bytes aunque haya2049 caracteres; rechazar exceso.",
+      "sede_a_contrastar": "Contador de bytes",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-05",
+      "clase": "positivo",
+      "descripcion": "Texto agregado en el límite",
+      "entrada_o_estimulo": {
+        "archivos": [
+          "entradas/ascii-4096.txt",
+          "entradas/utf8-4096.txt"
+        ]
+      },
+      "resultado_esperado_contractual": "Admitir agregado8192 con ambas piezas de4096; registrar consumo total.",
+      "sede_a_contrastar": "Presupuesto por petición",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-06",
+      "clase": "negativo",
+      "descripcion": "Fragmentación elude límite agregado",
+      "entrada_o_estimulo": {
+        "fragmentos_bytes": [
+          4096,
+          4096,
+          1
+        ]
+      },
+      "resultado_esperado_contractual": "Rechazar agregado8193 aunque cada pieza respete4096.",
+      "sede_a_contrastar": "Acumulador de recepción",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-07",
+      "clase": "positivo",
+      "descripcion": "Imagen decodificada en el límite",
+      "entrada_o_estimulo": {
+        "ancho": 256,
+        "alto": 256,
+        "canales_salida": 4
+      },
+      "resultado_esperado_contractual": "Admitir guarda de65536 píxeles y262144 bytes RGBA; no afirmar memoria total ni paridad gráfica.",
+      "sede_a_contrastar": "Prevalidación de dimensiones",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-08",
+      "clase": "negativo",
+      "descripcion": "Imagen un píxel por encima",
+      "entrada_o_estimulo": {
+        "ancho": 65537,
+        "alto": 1,
+        "canales_salida": 4
+      },
+      "resultado_esperado_contractual": "Rechazar65537 píxeles antes de reservar salida; no generar raster enorme.",
+      "sede_a_contrastar": "Prevalidación de dimensiones",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-09",
+      "clase": "negativo",
+      "descripcion": "Producto no representable",
+      "entrada_o_estimulo": {
+        "ancho": 4294967295,
+        "alto": 4294967295,
+        "canales_salida": 4
+      },
+      "resultado_esperado_contractual": "No envolver ni truncar el producto: comprobar representabilidad y límites antes de asignar. Si otro límite rechaza antes, no atribuirlo a la guarda de overflow.",
+      "sede_a_contrastar": "Aritmética de tamaños u32/u64/usize",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-10",
+      "clase": "negativo",
+      "descripcion": "Imagen comprimida pequeña con expansión excesiva",
+      "entrada_o_estimulo": {
+        "bytes_codificados_declarados": 1024,
+        "ancho_decodificado": 512,
+        "alto_decodificado": 512,
+        "canales_salida": 4,
+        "archivo_comprimido": "PENDIENTE"
+      },
+      "resultado_esperado_contractual": "No admitir por tamaño comprimido; rechazar262144 píxeles y controlar recursos internos del decodificador.",
+      "sede_a_contrastar": "Decodificación bajo presupuesto",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-11",
+      "clase": "positivo",
+      "descripcion": "Arquitectura sintética dentro de cuota",
+      "entrada_o_estimulo": {
+        "nodos": 8,
+        "profundidad_nodos": 4,
+        "celdas_n": [
+          16,
+          25,
+          16,
+          25,
+          16,
+          25,
+          16,
+          25
+        ],
+        "enlaces": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            6
+          ],
+          [
+            0,
+            7
+          ]
+        ]
+      },
+      "resultado_esperado_contractual": "Admitir sólo las cuotas de nodos/profundidad, conservar164 posiciones sin relleno. Constitución semántica y enlaces SV pendientes.",
+      "sede_a_contrastar": "Construcción y recorrido de arquitectura",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-12",
+      "clase": "negativo",
+      "descripcion": "Un nodo adicional",
+      "entrada_o_estimulo": {
+        "nodos": 9,
+        "profundidad_nodos": 4
+      },
+      "resultado_esperado_contractual": "Rechazar cuota9; no fusionar ni eliminar células para adaptar carga.",
+      "sede_a_contrastar": "Admisión de arquitectura",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-13",
+      "clase": "negativo",
+      "descripcion": "Profundidad adicional o ciclo",
+      "entrada_o_estimulo": {
+        "variantes": [
+          {
+            "nodos": 5,
+            "enlaces": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                3
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          },
+          {
+            "nodos": 2,
+            "enlaces": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ]
+            ]
+          }
+        ]
+      },
+      "resultado_esperado_contractual": "Distinguir profundidad5 de ciclo: ambos no admitidos en este testigo; no recorrer sin cota. Dos subcasos requieren capturas separadas.",
+      "sede_a_contrastar": "Recorrido acotado",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-14",
+      "clase": "positivo",
+      "descripcion": "Concurrencia en el límite",
+      "entrada_o_estimulo": {
+        "peticiones_activas": 2
+      },
+      "resultado_esperado_contractual": "Mantener dos reservas identificadas; ninguna liberación duplicada.",
+      "sede_a_contrastar": "Supervisor de peticiones",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-15",
+      "clase": "negativo",
+      "descripcion": "Carrera por tercera petición",
+      "entrada_o_estimulo": {
+        "peticiones_activas": 1,
+        "solicitudes_simultaneas_nuevas": 2
+      },
+      "resultado_esperado_contractual": "Admitir como máximo una nueva reserva; la otra se rechaza según este presupuesto, sin cola ilimitada.",
+      "sede_a_contrastar": "Reserva atómica o serializada",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-16",
+      "clase": "negativo",
+      "descripcion": "Salida una unidad excesiva",
+      "entrada_o_estimulo": {
+        "salida_bytes": 8193
+      },
+      "resultado_esperado_contractual": "Detener producción según contrato y marcar resultado incompleto; no entregar prefijo como salida íntegra.",
+      "sede_a_contrastar": "Serialización y entrega",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-17",
+      "clase": "negativo",
+      "descripcion": "Reintentos agotan cuota de herramientas",
+      "entrada_o_estimulo": {
+        "intentos_despachados": 3,
+        "solicitud_siguiente": 4,
+        "motivo": "reintento tras fallo"
+      },
+      "resultado_esperado_contractual": "No despachar cuarto intento ni reiniciar contador por el fallo; conservar efectos previos e incertidumbre técnica.",
+      "sede_a_contrastar": "Adaptador de herramienta y supervisor",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-18",
+      "clase": "negativo",
+      "descripcion": "Reserva fallida o memoria no observada",
+      "entrada_o_estimulo": {
+        "simulacion": "fallo de reserva",
+        "memoria_proceso_medida": null
+      },
+      "resultado_esperado_contractual": "Registrar fallo técnico y medida no disponible; no declarar memoria conforme ni producir Tri.U.",
+      "sede_a_contrastar": "Asignación y observación de proceso",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-19",
+      "clase": "negativo",
+      "descripcion": "Agotamiento cancela sólo la narración",
+      "entrada_o_estimulo": {
+        "simulacion": "supervisor solicita cancelación; herramienta continúa",
+        "tiempo_ms": null
+      },
+      "resultado_esperado_contractual": "Observar terminación real, tareas hijas y efectos; si no se puede confirmar cese, registrar estado no acreditado. No declarar plazo cumplido sin límite fijado.",
+      "sede_a_contrastar": "Cancelación y efecto externo",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C11-20",
+      "clase": "negativo",
+      "descripcion": "Trazabilidad eliminada para aparentar ahorro",
+      "entrada_o_estimulo": {
+        "simulacion": "omitir script o registro de llamada para reducir salida"
+      },
+      "resultado_esperado_contractual": "No declarar actividad íntegramente auditada; prever custodia recuperable acotada y referencia fiel o detener la actividad según contrato.",
+      "sede_a_contrastar": "Custodia y presupuesto de evidencia",
+      "observador_requerido": "Captura independiente de bytes recibidos, contadores antes/después, reserva, decisión, llamadas y efecto. Medidas del proceso separadas del cálculo de carga; receptor y observador materiales pendientes.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    }
+  ]
+}

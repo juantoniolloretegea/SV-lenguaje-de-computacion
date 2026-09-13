@@ -1,0 +1,20 @@
+{
+  "estatuto": "Cotejo auxiliar Python de inventario y cálculos de referencia; no recepción ni control material de recursos en Rust",
+  "corte": "b22d03cf369bbe9cab902846d061d5de46f76397",
+  "comprobaciones": [
+    "Veinte escenarios únicos: seis positivos, catorce negativos; C11-13 contiene dos subcasos; todos sin resultado observado",
+    "Cuatro textos literales4096/4097 bytes ASCII/UTF-8, huellas y tamaños concordantes",
+    "Cuotas sintéticas positivas e inclusivas; proceso y duración sin valores inventados",
+    "Imagen256×256×4=262144 bytes de salida; producto extremo no representable en u64 calculado sin asignación",
+    "Descriptor de ocho nodos, profundidad4 y164 posiciones; sin admisión semántica alegada",
+    "Fuentes y enlaces del expediente cotejados; contenido de scripts archivado exacto",
+    "Prefijos de historial/RETP conservados; sólo S22 actualizado; C01–C10 intactos; S24 pendiente"
+  ],
+  "ensayos_c11_ejecutados": 0,
+  "limites": [
+    "No compilación nueva ni medición de memoria, tiempo o contención",
+    "No imagen comprimida materializada ni asignación gigante",
+    "No actividad de un modelo ejecutada; capturas materiales pendientes",
+    "La comprobación auxiliar de suma/producto no prueba las guardas de Rust"
+  ]
+}

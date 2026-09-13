@@ -1,0 +1,29 @@
+{
+  "corte_lenguaje": "b22d03cf369bbe9cab902846d061d5de46f76397",
+  "estatuto": "Contrato y banco previo C11; cero escenarios funcionales ejecutados",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "9b9f274fc1f9ea66171d7098a4bcf3c49b8ce2119037fbf0d41e939f6064e9c4",
+    "CONTRATO_RECURSOS_CANDIDATO_v0_1.md": "32351e57cb71703b4fab206bf8d9e480b4e5f739cebb0e086af3c4d994ce4045",
+    "ENTRADAS_COMPROMETIDAS.json": "8d011e1359e39a8ca2340f8e191f62b5f161db86c138b620bcc87f5961971d31",
+    "FUENTES.json": "1266a9d1fb7a4b5ef0113c379e64618d9a698432266260f315a4f27d1e9c45e2",
+    "PRESUPUESTO_SINTETICO.json": "ba3cdd68d30278d8c7fc6fbd73aefab03b0f5d7b921c4b73e372dc4ee57856ab",
+    "README.md": "a73946fb997df473fd81b26584fbb76831868deb4dbabebefdd321214d5faccb",
+    "VERIFICACION_DOCUMENTAL.json": "c990c138642f47ce788f993328604be2047ba9f35d5433a58d9882d3702684e1",
+    "administracion/README.md": "ddcba8257474921536e131daee5334b71225463f23199810ed4bdd34ae47a3c4",
+    "administracion/REGISTRO_PREPARACION.json": "691d128466dae351e045614ae6ab0937c9f57b40cd75b7d03613a31b8d639760",
+    "administracion/cotejo.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "administracion/cotejo.stdout": "a6dfae991577341fbc99a7e1a842016a3f4c7ee698be00deb9c348124e62bc8f",
+    "administracion/gestion.py": "6a3048ca8efe87788bedf66a438fc9404acd70a2a4a96d49e131a137000fc350",
+    "administracion/github_io.py": "87e60e88b8188bbe373e9392a94bb2988918934284b1fa54545b5c1e4181023b",
+    "administracion/preparar.py": "5a1169297b8a32fa272f7755810f8b4655518d64f25603dc5e5f7a686cd2b695",
+    "administracion/publicar.py": "730e68d2bfb873227d596af45ce9b4c57ff13e39ee17c642f8dcbba3f9f48239",
+    "administracion/publicar_archivos.py": "f4a2a2076af4956e209ea42cd711f1500f686e070e4513e36238148330176c1e",
+    "administracion/registro.py": "e2027effe696fe3549e2690b1621eb5601da86eaffa505dff6820698cddc41db",
+    "administracion/verificar.py": "c92e6cf16cce2105651562e608523059583b5154723de2a0d9c8b5af749041d2",
+    "administracion/verificar_publicacion.py": "408afec20eeebe815ef0e7dc115099d616050c958942dde7a2b1ae6f937007f9",
+    "entradas/ascii-4096.txt": "c93eee2d0db02f10acc7460d9576e122dcf8cd53c4bf8dfcae1b3e74ebcfff5a",
+    "entradas/ascii-4097.txt": "4e369b5618643c3abddd027b650bfa54810be3b418028a7c9d82299a59d008e8",
+    "entradas/utf8-4096.txt": "5ad260dd6d057b52e1d3901fe03c639793c949c3589e27f37e42358723b8865c",
+    "entradas/utf8-4097.txt": "b00d8cf8247fc124c33ef96f28fdc840d4067ed9dba3fce2e7603b4d067db6a0"
+  }
+}

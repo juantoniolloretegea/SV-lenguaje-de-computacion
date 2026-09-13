@@ -1,0 +1,30 @@
+{
+  "estatuto": "Ejecución auxiliar del cotejador documental C11; no ensayo Rust",
+  "comando": [
+    "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/bin/python",
+    "bis-c11/verificar.py"
+  ],
+  "directorio_trabajo": "/workspace/scratch/cdd3907241dd",
+  "inicio_utc": "2026-09-13T11:44:13.802155+00:00",
+  "fin_utc": "2026-09-13T11:44:13.858777+00:00",
+  "exit_code": 0,
+  "stdout": "cotejo.stdout",
+  "stderr": "cotejo.stderr",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "servicios_publicacion": [
+    "GitHub mediante conector del entorno; sin credenciales en expediente"
+  ],
+  "scripts": {
+    "gestion.py": "6a3048ca8efe87788bedf66a438fc9404acd70a2a4a96d49e131a137000fc350",
+    "github_io.py": "87e60e88b8188bbe373e9392a94bb2988918934284b1fa54545b5c1e4181023b",
+    "preparar.py": "5a1169297b8a32fa272f7755810f8b4655518d64f25603dc5e5f7a686cd2b695",
+    "publicar.py": "730e68d2bfb873227d596af45ce9b4c57ff13e39ee17c642f8dcbba3f9f48239",
+    "publicar_archivos.py": "f4a2a2076af4956e209ea42cd711f1500f686e070e4513e36238148330176c1e",
+    "registro.py": "e2027effe696fe3549e2690b1621eb5601da86eaffa505dff6820698cddc41db",
+    "verificar.py": "c92e6cf16cce2105651562e608523059583b5154723de2a0d9c8b5af749041d2",
+    "verificar_publicacion.py": "408afec20eeebe815ef0e7dc115099d616050c958942dde7a2b1ae6f937007f9"
+  },
+  "consumo_cpu": null,
+  "memoria_pico": null,
+  "motivo_medidas_ausentes": "No medidos en este cotejo documental; fechas delimitan ejecución, no consumo CPU."
+}

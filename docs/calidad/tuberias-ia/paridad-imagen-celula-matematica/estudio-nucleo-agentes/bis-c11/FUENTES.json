@@ -1,0 +1,77 @@
+{
+  "corte_lenguaje": "b22d03cf369bbe9cab902846d061d5de46f76397",
+  "corte_laboratorio": "9da7f6aba6ff72c9a73cd12d24acda4e8e5cc659",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "rust/sv_native/src/main.rs",
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "lectura": "Lectura completa; entrada fs::read_to_string"
+    },
+    {
+      "ruta": "rust/sv_wasm/src/lib.rs",
+      "sha256": "6eda2293c6da0e7838933da81fe57db1083603da15640b18616f10d52cf4cdbb",
+      "lectura": "Cabecera y ABI de búferes, packed_result y sv_compile_svp_json"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "validate_admissibility_table completo"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/codigo/contexto.rs",
+      "sha256": "589501e3ee34fe0d342d8f2811e6aee05930ba61de0d600a15a9219066d75ce3",
+      "lectura": "Lectura completa; límite de slice existente"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s3-presentacion-y-negacion/codigo/destino.rs",
+      "sha256": "db619f9cddf6691d4e50c99e3dc3a36e49e66b886eedd40ccea169c410b8bf2e",
+      "lectura": "Lectura completa; lectura acotada de laboratorio"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s6-trazabilidad-total/CONTRATO.md",
+      "sha256": "f24e0047a95f1c2aef3f47bb3c8dbeaa90555b7afa687ed02f06abfc0c357683",
+      "lectura": "Lectura completa previa; actividad y medición"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md",
+      "sha256": "b89b6b398985a9e339d568f80a273528501213b638cb8dee393b9a0dd4f5f2c6",
+      "lectura": "Lectura completa previa; §§6–7 conservación y coste"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/ESTADO_PARA_OTRAS_IA.md",
+      "sha256": "87cc0d3e9c4e3bc5582a187bf207c115848761c1817f9285731c758af199974e",
+      "lectura": "Lectura completa previa; conectores y traza"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Continuidad y obligaciones C11/C12"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "Continuidad y obligaciones C11/C12"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "sha256": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+      "lectura": "Continuidad y obligaciones C11/C12"
+    }
+  ],
+  "alcance": "Revisión estática y preparación sintética; sin cambios de núcleo ni ensayos funcionales C11"
+}
