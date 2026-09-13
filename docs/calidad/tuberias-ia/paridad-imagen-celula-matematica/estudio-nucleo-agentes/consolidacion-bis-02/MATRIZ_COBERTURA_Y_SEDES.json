@@ -1,0 +1,223 @@
+{
+  "version": "BIS-02-COBERTURA/1",
+  "corte": "4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136",
+  "filas": [
+    {
+      "obligacion": "BIS-O01",
+      "denominacion": "Σ, geometría y posición",
+      "familias": [
+        "C01",
+        "C04"
+      ],
+      "contratos": [
+        "bis-c01/README.md",
+        "bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Núcleo: conservar validación de Σ, b, N y posiciones; adaptadores: exigir ruta pública.",
+      "material_y_limite": "C01 acredita su ruta nativa; falta comprobar todas las vías afectadas.",
+      "decision_o_evidencia_pendiente": "Reutilizar evidencia exacta; ensayar rutas adicionales cuando la realización las incluya.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O02",
+      "denominacion": "N fijo y soporte por versión",
+      "familias": [
+        "C01",
+        "C02"
+      ],
+      "contratos": [
+        "bis-c01/README.md",
+        "bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Dominio constituye tamaños; soporte declara versiones; frontera impone pertenencia sobre IR validada.",
+      "material_y_limite": "Contrato C02 preparado; N fijo no equivale a pertenencia o autorización.",
+      "decision_o_evidencia_pendiente": "Fijar manifiesto tipado y punto obligatorio; comparar contenedores sólo con tamaños y coste definidos.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O03",
+      "denominacion": "Identidad, constitución y posición",
+      "familias": [
+        "C03",
+        "C07"
+      ],
+      "contratos": [
+        "bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+        "bis-c07/CONTRATO_COMPOSICION_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Reutilizar LIG/0.1; contrastar enlace complementario de instancia/revisión y consumidor.",
+      "material_y_limite": "No duplicar ligaduras ni identificar por vector igual; falta imposición del vínculo específico.",
+      "decision_o_evidencia_pendiente": "Fijar expectativa independiente, estado exacto y versión; probar sustitución de identidad.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O04",
+      "denominacion": "Paridad matemática/visual",
+      "familias": [
+        "C03",
+        "C04",
+        "C05"
+      ],
+      "contratos": [
+        "bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+        "bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md",
+        "bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Representación derivada subordinada al álgebra; frontera enlaza estado/convenio/artefacto.",
+      "material_y_limite": "Frame arquitectónico no acredita pareja celular; descriptor no prueba dibujo.",
+      "decision_o_evidencia_pendiente": "Decidir descriptor frente a artefacto, relación tipada y condiciones de precisión/recorte.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O05",
+      "denominacion": "Construcción y modificación admitidas",
+      "familias": [
+        "C02",
+        "C11",
+        "C12"
+      ],
+      "contratos": [
+        "bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md",
+        "bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md",
+        "bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Núcleo y cada entrada de frontera: distinguir datos, validación y objeto admitido.",
+      "material_y_limite": "Encapsulación y guardas locales presentes; no prueban toda nueva vía.",
+      "decision_o_evidencia_pendiente": "Inventariar construcción/importación/mutación y verificar que no hay ruta alternativa sin control.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O06",
+      "denominacion": "Estados, resultados y composición",
+      "familias": [
+        "C06",
+        "C07",
+        "C10"
+      ],
+      "contratos": [
+        "bis-c06/CONTRATO_ESTATUTOS_CANDIDATO_v0_1.md",
+        "bis-c07/CONTRATO_COMPOSICION_CANDIDATO_v0_1.md",
+        "bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Núcleo para leyes constituidas; biblioteca para operaciones derivadas; custodia y adaptadores por contrato.",
+      "material_y_limite": "Bienformación no produce Evaluate/gate/reevaluación; deudas de productores permanecen.",
+      "decision_o_evidencia_pendiente": "Delimitar operación por operación: entrada, codominio, rol, dirección, productor y vínculo entre instantáneas.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O07",
+      "denominacion": "U y fallos técnicos",
+      "familias": [
+        "C06",
+        "C08"
+      ],
+      "contratos": [
+        "bis-c06/CONTRATO_ESTATUTOS_CANDIDATO_v0_1.md",
+        "bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Tipos y validación nuclear; frontera conserva resultado técnico y procedencia.",
+      "material_y_limite": "Tri.U válido permanece separado de fallo, Bottom, rechazo e imagen pendiente.",
+      "decision_o_evidencia_pendiente": "Definir retornos diferenciados e inyecciones que alcancen cada guarda sin fabricar U.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O08",
+      "denominacion": "Imagen efectivamente consumida y capacidad IA",
+      "familias": [
+        "C05",
+        "C08"
+      ],
+      "contratos": [
+        "bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md",
+        "bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Adaptador de entrega, receptor real y observador independiente.",
+      "material_y_limite": "Disponibilidad, entrega y consumo son hechos distintos; capacidad visual no acreditada por nombre.",
+      "decision_o_evidencia_pendiente": "Instrumentar artefacto exacto, canal e invocación; realizar prueba efectiva de capacidad cuando proceda.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O09",
+      "denominacion": "Autoridad e instrucciones incrustadas",
+      "familias": [
+        "C09"
+      ],
+      "contratos": [
+        "bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Reutilizar envolventes R1; frontera de documentos y efecto con autoridad previamente constituida.",
+      "material_y_limite": "Documento no concede permiso; rechazo verbal del modelo no prueba bloqueo del efecto.",
+      "decision_o_evidencia_pendiente": "Separar receptor determinista, conducta de modelo y contención; conservar despacho y efecto observado.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O10",
+      "denominacion": "Recursos de tamaños y composiciones",
+      "familias": [
+        "C11"
+      ],
+      "contratos": [
+        "bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Soporte, entrada y supervisor: cuotas previas, agregación, concurrencia y cancelación.",
+      "material_y_limite": "Cuotas locales no acotan proceso completo; magnitudes globales pendientes.",
+      "decision_o_evidencia_pendiente": "Fijar presupuesto medible por montaje y contador independiente, con respuesta real al exceso.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O11",
+      "denominacion": "Perfiles e idioma de documentación",
+      "familias": [
+        "C12"
+      ],
+      "contratos": [
+        "bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Perfil fuente en frontend; documentación ES/EN del Rust afectado; localización en presentación.",
+      "material_y_limite": "Política existente y entradas C12; equivalencia completa aún no ensayada.",
+      "decision_o_evidencia_pendiente": "Comparar contenido canónico y procedencia separadamente; revisión de prosa y doctests con evidencias distintas.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    },
+    {
+      "obligacion": "BIS-O12",
+      "denominacion": "Trazabilidad y catálogo",
+      "familias": [
+        "C09",
+        "C10"
+      ],
+      "contratos": [
+        "bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md",
+        "bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md"
+      ],
+      "cobertura_documental": "CARTOGRAFIADA",
+      "acreditacion_integral": false,
+      "sede_propuesta_a_contrastar": "Cadena de evidencia, consumidor y registros; catálogo receptor al término de BIS-08.",
+      "material_y_limite": "Trazabilidad documental disponible; no acredita por sí sola QueryResult ni CQ1–CQ6.",
+      "decision_o_evidencia_pendiente": "Vincular obligación/caso/realización/observación/causa y conservar precedencia; no acuñar códigos ahora.",
+      "estatuto_sede": "PROPUESTA_PARA_BIS_03_NO_DECISION"
+    }
+  ],
+  "criterio": "Los enlaces proceden de los pares del banco original; cobertura documental no equivale a suficiencia. O03 incorpora la precisión posterior LIG/0.1. No se reescribe la radiografía histórica."
+}

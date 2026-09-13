@@ -1,0 +1,52 @@
+{
+  "version": "BIS-02-PASO/1",
+  "criterio_rector": "CONTRATO_CANDIDATO_BIS_02_v0_1.md: contratos necesarios para realización escogida y banco comprometido correspondiente; workflow §3 y §12.",
+  "condiciones": [
+    {
+      "id": "G01",
+      "objeto": "Contratos y cobertura C01–C12",
+      "estado": "CONFORME_DOCUMENTAL",
+      "evidencia_o_pendiente": "Doce familias y doce obligaciones relacionadas con fuentes y criterios; no doce garantías."
+    },
+    {
+      "id": "G02",
+      "objeto": "Recorrido e integración de la realización escogida",
+      "estado": "PENDIENTE",
+      "evidencia_o_pendiente": "Falta comprometer un montaje común que enlace soporte, identidad, representación y entrega; los bancos aislados no prueban compatibilidad entre contratos."
+    },
+    {
+      "id": "G03",
+      "objeto": "Datos de prueba y oráculos del montaje escogido",
+      "estado": "PARCIAL",
+      "evidencia_o_pendiente": "Hay entradas y oráculos en familias; C06 y otros casos requieren materialización. Todo estímulo exacto y esperado debe quedar fijado antes de ejecutar su prueba."
+    },
+    {
+      "id": "G04",
+      "objeto": "Tamaños y presupuesto competentes",
+      "estado": "PENDIENTE",
+      "evidencia_o_pendiente": "Los perfiles y cuotas sintéticos no constituyen soporte productivo. Magnitudes no constituidas conservan su ausencia y no habilitan uso."
+    },
+    {
+      "id": "G05",
+      "objeto": "Recepción, observador y sensibilidad",
+      "estado": "PENDIENTE",
+      "evidencia_o_pendiente": "Fijar entrada real, captura independiente, precedencia y mutantes discriminantes; identidad de oráculo distinta del sujeto."
+    },
+    {
+      "id": "G06",
+      "objeto": "Entorno de compilación de la futura realización",
+      "estado": "NO_DISPONIBLE_EN_COMPROBACION",
+      "evidencia_o_pendiente": "Checkout sincronizado. rustc/cargo no se resolvieron en PATH ni en /root/.cargo/bin; búsqueda en ubicaciones examinadas sin resultado. No invalida evidencias históricas S23/C01."
+    },
+    {
+      "id": "G07",
+      "objeto": "Conservación documental y secuencia",
+      "estado": "CONFORME_DOCUMENTAL",
+      "evidencia_o_pendiente": "Historial y bancos anteriores intactos; S22 y BIS-02 abiertos, BIS-03 pendiente, S24 pendiente."
+    }
+  ],
+  "cierre_bis02": false,
+  "apertura_formal_bis03": false,
+  "trabajo_habilitado": "Preparar contrato de integración y compromiso del primer recorrido C02–C05, incorporando guardas transversales; precisar propuestas de sede sin presentarlas como implementadas.",
+  "regla": "No se exige ejecutar todas las pruebas para preparar sedes; sí fijar los contratos, entradas y oráculos requeridos antes de cada realización y ejecución. Las pruebas globales continúan en BIS-04/05/06."
+}

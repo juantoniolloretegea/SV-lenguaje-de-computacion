@@ -1,0 +1,15 @@
+{
+  "herramientas": [
+    "GitHub fetch mediante conector",
+    "exec_command: bash, git, lectura y Python"
+  ],
+  "preparacion": "python bis-consolidacion-02/preparar.py",
+  "verificacion": "python bis-consolidacion-02/verificar.py",
+  "salida_verificacion": 0,
+  "stdout": "cotejo.stdout",
+  "stderr": "cotejo.stderr",
+  "python_no_sustituye_rust": true,
+  "ejecuciones_funcionales_nuevas": 0,
+  "publicacion_prevista": "python bis-consolidacion-02/publicar.py",
+  "cotejo_posterior": "python bis-consolidacion-02/verificar_publicacion.py"
+}

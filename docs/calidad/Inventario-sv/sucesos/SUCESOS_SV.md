@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T12:02:41.414Z
+**fecha_actualizacion_utc:** 2026-09-13T12:14:25Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50; laboratorio 95fcbd6fdeae740e72fb9a8a2ee0ddca8da82077
+**cortes_de_entrada:** Lenguaje 4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136; laboratorio 5dc375e7d7af3e1110bb57a9b4e7449eb817dac6
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C12 preparado: perfiles ES/EN, documentación bilingüe y vías de construcción; veinte escenarios, seis positivos y catorce negativos, once entradas literales. Paridad canónica y procedencia separadas.
+**resultado:** Consolidación documental C01–C12: doce obligaciones cartografiadas, inventario por caso, límites y propuestas de sede. C01 conserva 13 variantes nativas históricas; C02–C12 contienen 202 filas sin ejecución.
 
-**verificacion:** Lectura estática de API y construcción. Cotejo documental JavaScript y GitHub tras desconexión del entorno local; no se ejecutó preparador Python ni nuevos ensayos Rust. Cero escenarios C12 ejecutados. Dos originales ejecutados y veintidós pendientes.
+**verificacion:** Cotejo Python de inventario, huellas, mapeo original y conservación del historial; ninguna nueva ejecución Rust o IA. Checkout recuperado y sincronizado. cargo/rustc no localizados en PATH ni ubicaciones examinadas.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/consolidacion-bis-02/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-215
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-216
 
-**siguiente_accion:** Consolidar cobertura y pendientes C01–C12 en BIS-02; preparar decisiones de sede BIS-03 y realizar y probar lo justificado en BIS-04.
+**siguiente_accion:** Comprometer contrato de integración y banco común del primer recorrido C02–C05, con guardas transversales y propuestas de sede; recuperar toolchain antes de ensayos Rust.
 
-**observaciones:** C12 es la última familia numerada; BIS-02 sigue abierto. Sin cambio de Rust, semántica, IR, dominio o catálogo. S24 pendiente. Sincronización local pendiente por desconexión; publicación y cotejo por conector GitHub.
+**observaciones:** Consolidación terminada sólo en alcance documental. BIS-02 abierto; BIS-03 pendiente; 2 escenarios originales ejecutados y 22 pendientes. S24 sin cambios. Sin modificación de Rust, IR, semántica, dominios o catálogo.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

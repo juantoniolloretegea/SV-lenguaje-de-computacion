@@ -1,0 +1,232 @@
+{
+  "corte_lenguaje": "4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136",
+  "corte_laboratorio": "5dc375e7d7af3e1110bb57a9b4e7449eb817dac6",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/BANCO_COMPROMETIDO.json",
+      "sha256": "c457f5d9a575bc1b48265587fb4fc8944701f01277dd725c5a0ae9e10d5e55c7",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/README.md",
+      "sha256": "8b6aafc118350a0f89f5701fa5a7187dfcdaff4f202545cbe3627856e5d54060",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/BANCO_PREVIO_v0_1.json",
+      "sha256": "ee3d937b5e7ec2c02873ce13ac68afb97a0d11d88387e3f132b65c97c616fa58",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md",
+      "sha256": "c844ba3e1f279ee9d152d1598b608d97321f21b2b98d1721820039122a11ff60",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/README.md",
+      "sha256": "50196c8aee9039d1d480c8eaa6a7ca2151793583cb7a85d83e017d5367245391",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/BANCO_PREVIO_v0_1.json",
+      "sha256": "5ca1a48fd6ae5438dc47e2cc816d010fae7bc21fd570cb03cf214d3154b00c21",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/README.md",
+      "sha256": "2e4d378854776b6a66c5cacfcc6638de18b0dffa108f6de950eec28b6c04a485",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+      "sha256": "36802d91f1b406d31eb73d9b475c2e3159d0abe87615a8a5c47ef9d575f7b1f5",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md",
+      "sha256": "2ab2ea660f17baef23ad4b82e263ea50007c7b6986e5aa08ee0f768447fbc72c",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/BANCO_PREVIO_v0_1.json",
+      "sha256": "89643da8cd64ebddac26c418b966def2e0cfee871f5337167f822318d882cab6",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/README.md",
+      "sha256": "cad155861dbb673b3339285ad3cd6421b1eb89dc26c0065aff56865554e564c6",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/BANCO_PREVIO_v0_1.json",
+      "sha256": "0c050cb274b4b506c7224aee0220ff6b3698877a6b422039ce4ec97add1d44e4",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md",
+      "sha256": "17b01025dd0e01a2b7cb26636114e4a53b1d48f3a356f0032e1eb6586539fbd3",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/README.md",
+      "sha256": "d9a922c22e9b1f5acca7772b80cc75f3c17e682205d0f5cdfac53be03dc08185",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c06/README.md",
+      "sha256": "4ad7af6fc4e19648d44ae345348b2cc69c887d9d01bb1db25343c46232682238",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c06/CONTRATO_ESTATUTOS_CANDIDATO_v0_1.md",
+      "sha256": "c1ce64751d2a47100d75469ea4cc30f14a03b91ca4e450b2d7d5f31eb569855b",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c06/BANCO_PREVIO_v0_1.json",
+      "sha256": "57e7c23a165668370cae73b4da2d2b5932769ac9fc4e9ac4bf1cd4f1b0e9e609",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c07/README.md",
+      "sha256": "1682213bd9b613fc2cbeb08ecd41f7977f3ec6b270f5bf863e0cee6c84369718",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c07/BANCO_PREVIO_v0_1.json",
+      "sha256": "4068af9c893b3bae2db6565e8ec7ffe7036024e6482766ad6516feef92bc3d73",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c07/CONTRATO_COMPOSICION_CANDIDATO_v0_1.md",
+      "sha256": "3229ed41426dec9c06df9846b46db49f19590f30eea8ba6ffec9e557bc188b7e",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/README.md",
+      "sha256": "1fc05a57dd3cde3b9e257770b0898e1adefbb8ffe5e74318f5e9088b152feaf6",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md",
+      "sha256": "a7e4c0e636c145d2001c0d488a19343965e060336cd3340bfeeeab0b846527da",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/BANCO_PREVIO_v0_1.json",
+      "sha256": "a1d71590d0626c2d2f67f1c0d63b8a42ef97428a372b3aecc1b2d36678642a4e",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md",
+      "sha256": "ba09f55957e4e792c5dfb3c4cea947f080c85a2bce87bd22bd167afb30fb180a",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/BANCO_PREVIO_v0_1.json",
+      "sha256": "175a66c6da6161ef260bfddd569f9a52332038847fd0dc13e27ac7d2b37f8bb9",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/README.md",
+      "sha256": "a9246dd820623d257dc0b342c1e2e029d406d11221ee0db19038db3cbaeba49a",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md",
+      "sha256": "ad5cd25055c18ba7b04b6f10f9f6586a73c2c9f5d122f2eb2ceb1980bf6d101a",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/README.md",
+      "sha256": "2fcdd0e87931ceb23a45bd5e515209f3887c40d12dd5c46b6202b5451544b780",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/BANCO_PREVIO_v0_1.json",
+      "sha256": "a973108fdcf558d1fb0e9db8499dac2f75e7836f8d3d823fdc660b102b8df5e2",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/BANCO_PREVIO_v0_1.json",
+      "sha256": "9b9f274fc1f9ea66171d7098a4bcf3c49b8ce2119037fbf0d41e939f6064e9c4",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md",
+      "sha256": "32351e57cb71703b4fab206bf8d9e480b4e5f739cebb0e086af3c4d994ce4045",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/README.md",
+      "sha256": "a73946fb997df473fd81b26584fbb76831868deb4dbabebefdd321214d5faccb",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md",
+      "sha256": "2cfc9a1afa706f3a59fd6fb2b2a443118ddf08950e0657da3b7d3d4d04a6b04f",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/README.md",
+      "sha256": "f07204c50c209ec57281fd02f82e2525bc1945ceb798e5ee7adba820277725a9",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/BANCO_PREVIO_v0_1.json",
+      "sha256": "e7e9138dbe7a680ad1fdb534c91ae5d5d319a6059edb27ec501ad352828c0bf0",
+      "lectura": "Banco e índice de familia; contrato completo C02/C03/C04/C07/C12; finalidad y criterios de salida de los restantes. C01: informe y resultados."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONTRATO_CANDIDATO_BIS_02_v0_1.md",
+      "sha256": "bc303ec34892260746da322ae09992dac46a8abb6a30e0e8ded7a8e8772f6dad",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/MATRIZ_BIS_01.json",
+      "sha256": "9d713893d7934723175481575f2f87dbb12b70cee3b54272f55d440e8bad1068",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/evidencia/ejecucion-1/RESULTADO.json",
+      "sha256": "83d94f9bb8cd651bc8357e957138200d9a872dc21977409c6e1d30b94ac43de1",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c06/MATRIZ_DE_SEDES_Y_LIMITES.json",
+      "sha256": "2e332a7c5888983fbf5c246239249965e1aaff48858eda2abb299cadb258dc91",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/ALCANCE_LIG_Y_RECTIFICACION_DE_LECTURA.md",
+      "sha256": "bbc64fa39c866aebc0c38eb5784495ccde1c1a4c771f0ced7c3361ba09bd5126",
+      "lectura": "Revisión documental de continuidad y condiciones de salida; sin reejecución funcional."
+    }
+  ],
+  "alcance": "Consolidación de contratos y evidencias ya identificadas; no nueva inspección integral de todo el Rust."
+}

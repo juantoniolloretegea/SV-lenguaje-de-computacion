@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Consolidar cobertura y pendientes C01–C12 en BIS-02; preparar decisiones de sede BIS-03 y realizar y probar lo justificado en BIS-04.",
+  "siguiente_accion": "Comprometer contrato de integración y banco común del primer recorrido C02–C05, con guardas transversales y propuestas de sede; recuperar toolchain antes de ensayos Rust.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c12/README.md",
-  "ampliacion": "BIS-C12: veinte escenarios y once entradas literales; cero ejecutados. Cotejo auxiliar por JavaScript/GitHub tras desconexión local.",
-  "ultimo_retp": "RETP-2026-215",
+  "ultimo_informe": "consolidacion-bis-02/README.md",
+  "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
+  "ultimo_retp": "RETP-2026-216",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -199,6 +199,16 @@
     "entradas_literales": 11,
     "corte_revision": "c42e0fa4b0a94dedce69f3f66b7e1965eb6c5b50",
     "alcance": "Paridad, documentación y construcción especificadas; ensayos propios pendientes",
-    "sincronizacion_local": "pendiente por desconexión del entorno"
+    "sincronizacion_local": "resuelta en RETP-2026-216; expediente histórico C12 conservado"
+  },
+  "consolidacion_bis02": {
+    "estado": "finalizado en alcance documental",
+    "informe": "consolidacion-bis-02/README.md",
+    "cierre_bis02": false,
+    "familias": 12,
+    "filas_previas_c02_c12": 202,
+    "ejecuciones_nuevas": 0,
+    "sincronizacion_checkout": "recuperada y verificada al corte 4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136",
+    "toolchain_actual": "cargo/rustc no localizados en PATH ni ubicaciones examinadas; recuperación pendiente antes de ejecución"
   }
 }

@@ -1,0 +1,23 @@
+{
+  "estatuto": "Identidades del expediente preparado antes de publicar; excluye este manifiesto de su propio hash",
+  "archivos_sha256": {
+    "CONDICIONES_DE_PASO.json": "132f03bd212a2af3f321d18ac8ace39d9ba48fbb74f0f4ada6c3824ecd5ccfec",
+    "FUENTES.json": "d34c8a72550e9a2df6444689a8872a81440b032ea35bdf5c2ffa53d8625f88eb",
+    "INVENTARIO_FAMILIAS.json": "82157bd916da5a2f0d3c9a613266a712b9beb07a11b8fc9c4f6297d27584c713",
+    "MATRIZ_COBERTURA_Y_SEDES.json": "a6d6b5e8d936f12d5773f449f4dda8d0cb531c932b51df2d807b95eacd41566b",
+    "README.md": "d2edbf88764804b470278062c1216f4735febedb8b6cf38622f4ec57b4ca983c",
+    "VERIFICACION.json": "14fc13a32b9acf5eb517497dbf5ed4ab23f9548a8ccedecf5e62bc9531771270",
+    "administracion/README.md": "371463bb11cbea702e49a508c54d7e7561e09ca0141a2fc74f1e07dfd9f67bea",
+    "administracion/REGISTRO_PREPARACION.json": "5b0b4f87410acd43d40d67c3efc14e6fa13cd25c5552c0ef178565c025cee32f",
+    "administracion/cotejo.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "administracion/cotejo.stdout": "c370c263c7eebae31d6e305d759a5c0a3332ce93b0b912b6ac0edacf1d711d4d",
+    "administracion/gestion.py": "6a3048ca8efe87788bedf66a438fc9404acd70a2a4a96d49e131a137000fc350",
+    "administracion/github_io.py": "87e60e88b8188bbe373e9392a94bb2988918934284b1fa54545b5c1e4181023b",
+    "administracion/preparar.py": "dfb8a0bc4677c86a9d9e2a026944ffb3a00928b613509542cbf3c87fa2838286",
+    "administracion/publicar.py": "6f4f3fcc1ef6ec2daad7e52a7bd54e1fdb976f016722adc2cc6ed36217512ca7",
+    "administracion/publicar_archivos.py": "f4a2a2076af4956e209ea42cd711f1500f686e070e4513e36238148330176c1e",
+    "administracion/registro.py": "e2027effe696fe3549e2690b1621eb5601da86eaffa505dff6820698cddc41db",
+    "administracion/verificar.py": "fa0a46e315484ce6e5176c2714b366687814cf4f04e28a1a50f577cc0db32bfd",
+    "administracion/verificar_publicacion.py": "ea3feb45a30a60a236228959a7091c7a2349d0ea3c955ce0e9fa6a98cd392e62"
+  }
+}

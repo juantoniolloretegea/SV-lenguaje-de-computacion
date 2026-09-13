@@ -6,7 +6,9 @@
 
 [Explicación para terceros — Markdown](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) · [Hallazgos](HALLAZGOS.md) · [Identidades de fuentes](FUENTES.json) · [Comprobaciones](VERIFICACION.json).
 
-## Trabajo vigente: S22 · RETP-2026-215
+## Trabajo vigente: S22 · RETP-2026-216
+
+[Consolidación C01–C12](consolidacion-bis-02/README.md): cobertura, pendientes y propuestas de sede. Trece variantes nativas históricas C01; 202 filas C02–C12 sin ejecución. BIS-02 continúa abierto. Siguiente: contrato de integración y banco común C02–C05.
 
 **Workflow V2: definición cerrada; ejecución en curso.** [Markdown](WORKFLOW_P1_P3_BIS_v2.md) · [PDF](WORKFLOW_P1_P3_BIS_v2.pdf) · [Estado](ESTADO_WORKFLOW.json) · [Resultado BIS-01 e inicio BIS-02](RESULTADO_BIS_01_Y_APERTURA_BIS_02.md).
 

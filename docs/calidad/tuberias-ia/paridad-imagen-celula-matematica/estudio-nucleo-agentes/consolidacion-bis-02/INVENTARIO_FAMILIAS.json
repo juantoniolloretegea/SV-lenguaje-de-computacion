@@ -1,0 +1,483 @@
+{
+  "version": "BIS-02-CONSOLIDACION/1",
+  "corte": "4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136",
+  "familias": [
+    {
+      "familia": "C01",
+      "escenarios_originales": [
+        "BIS-C01-P",
+        "BIS-C01-N"
+      ],
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O02"
+      ],
+      "contrato": "bis-c01/README.md",
+      "banco": "bis-c01/BANCO_COMPROMETIDO.json",
+      "banco_sha256": "c457f5d9a575bc1b48265587fb4fc8944701f01277dd725c5a0ae9e10d5e55c7",
+      "ids_de_fila": [
+        "b3-exacto",
+        "b4-exacto",
+        "b5-exacto",
+        "b6-exacto",
+        "b7-exacto",
+        "b4-permutado-declarado",
+        "b4-es",
+        "b4-longitud-15",
+        "b4-longitud-17",
+        "b5-longitud-24",
+        "b5-longitud-26",
+        "b2-longitud4",
+        "b2-longitud16-precedencia"
+      ],
+      "filas": 13,
+      "ejecuciones_historicas": 13,
+      "ejecuciones_nuevas": 0,
+      "estado": "EVIDENCIA_NATIVA_HISTORICA_ACOTADA",
+      "alcance_y_pendiente": "Geometría, longitud y orden por sv-native; no soporte, dominio, evaluación ni imagen."
+    },
+    {
+      "familia": "C02",
+      "escenarios_originales": [
+        "BIS-C02-P",
+        "BIS-C02-N"
+      ],
+      "obligaciones": [
+        "BIS-O02",
+        "BIS-O05"
+      ],
+      "contrato": "bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md",
+      "banco": "bis-c02/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "ee3d937b5e7ec2c02873ce13ac68afb97a0d11d88387e3f132b65c97c616fa58",
+      "ids_de_fila": [
+        "C02-01",
+        "C02-02",
+        "C02-03",
+        "C02-04",
+        "C02-05",
+        "C02-06",
+        "C02-07",
+        "C02-08",
+        "C02-09",
+        "C02-10",
+        "C02-11",
+        "C02-12",
+        "C02-13",
+        "C02-14"
+      ],
+      "filas": 14,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Selección de soporte y su imposición pendientes; perfiles {16,25} y {16,25,49} sólo sintéticos."
+    },
+    {
+      "familia": "C03",
+      "escenarios_originales": [
+        "BIS-C03-P",
+        "BIS-C03-N"
+      ],
+      "obligaciones": [
+        "BIS-O03",
+        "BIS-O04"
+      ],
+      "contrato": "bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+      "banco": "bis-c03/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "5ca1a48fd6ae5438dc47e2cc816d010fae7bc21fd570cb03cf214d3154b00c21",
+      "ids_de_fila": [
+        "C03-01",
+        "C03-02",
+        "C03-03",
+        "C03-04",
+        "C03-05",
+        "C03-06",
+        "C03-07",
+        "C03-08",
+        "C03-09",
+        "C03-10",
+        "C03-11",
+        "C03-12",
+        "C03-13",
+        "C03-14",
+        "C03-15",
+        "C03-16"
+      ],
+      "filas": 16,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "LIG/0.1 existente; enlace específico constitución/instancia/revisión/representación pendiente."
+    },
+    {
+      "familia": "C04",
+      "escenarios_originales": [
+        "BIS-C04-P",
+        "BIS-C04-N"
+      ],
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O04"
+      ],
+      "contrato": "bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md",
+      "banco": "bis-c04/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "89643da8cd64ebddac26c418b966def2e0cfee871f5337167f822318d882cab6",
+      "ids_de_fila": [
+        "C04-01",
+        "C04-02",
+        "C04-03",
+        "C04-04",
+        "C04-05",
+        "C04-06",
+        "C04-07",
+        "C04-08",
+        "C04-09",
+        "C04-10",
+        "C04-11",
+        "C04-12",
+        "C04-13",
+        "C04-14",
+        "C04-15",
+        "C04-16",
+        "C04-17",
+        "C04-18",
+        "C04-19",
+        "C04-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Geometría simbólica exacta; sin dibujo, rasterización o consumo acreditados."
+    },
+    {
+      "familia": "C05",
+      "escenarios_originales": [
+        "BIS-C05-P",
+        "BIS-C05-N"
+      ],
+      "obligaciones": [
+        "BIS-O04",
+        "BIS-O08"
+      ],
+      "contrato": "bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md",
+      "banco": "bis-c05/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "0c050cb274b4b506c7224aee0220ff6b3698877a6b422039ce4ec97add1d44e4",
+      "ids_de_fila": [
+        "C05-01",
+        "C05-02",
+        "C05-03",
+        "C05-04",
+        "C05-05",
+        "C05-06",
+        "C05-07",
+        "C05-08",
+        "C05-09",
+        "C05-10",
+        "C05-11",
+        "C05-12",
+        "C05-13",
+        "C05-14",
+        "C05-15",
+        "C05-16"
+      ],
+      "filas": 16,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Descriptores y expectativa de entrega; faltan artefacto visual, instrumentación y uso real."
+    },
+    {
+      "familia": "C06",
+      "escenarios_originales": [
+        "BIS-C06-P",
+        "BIS-C06-N"
+      ],
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O07"
+      ],
+      "contrato": "bis-c06/CONTRATO_ESTATUTOS_CANDIDATO_v0_1.md",
+      "banco": "bis-c06/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "57e7c23a165668370cae73b4da2d2b5932769ac9fc4e9ac4bf1cd4f1b0e9e609",
+      "ids_de_fila": [
+        "C06-01",
+        "C06-02",
+        "C06-03",
+        "C06-04",
+        "C06-05",
+        "C06-06",
+        "C06-07",
+        "C06-08",
+        "C06-09",
+        "C06-10",
+        "C06-11",
+        "C06-12",
+        "C06-13",
+        "C06-14",
+        "C06-15",
+        "C06-16",
+        "C06-17",
+        "C06-18"
+      ],
+      "filas": 18,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Contratos de lectura, inicialización y reevaluación; faltan productores y custodia entre instantáneas."
+    },
+    {
+      "familia": "C07",
+      "escenarios_originales": [
+        "BIS-C07-P",
+        "BIS-C07-N"
+      ],
+      "obligaciones": [
+        "BIS-O06",
+        "BIS-O03"
+      ],
+      "contrato": "bis-c07/CONTRATO_COMPOSICION_CANDIDATO_v0_1.md",
+      "banco": "bis-c07/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "4068af9c893b3bae2db6565e8ec7ffe7036024e6482766ad6516feef92bc3d73",
+      "ids_de_fila": [
+        "C07-01",
+        "C07-02",
+        "C07-03",
+        "C07-04",
+        "C07-05",
+        "C07-06",
+        "C07-07",
+        "C07-08",
+        "C07-09",
+        "C07-10",
+        "C07-11",
+        "C07-12",
+        "C07-13",
+        "C07-14",
+        "C07-15",
+        "C07-16",
+        "C07-17",
+        "C07-18"
+      ],
+      "filas": 18,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Fuentes de serie/compuerta y oráculos; no producción de salida, transmisión ni supervisión ejecutadas."
+    },
+    {
+      "familia": "C08",
+      "escenarios_originales": [
+        "BIS-C08-P",
+        "BIS-C08-N"
+      ],
+      "obligaciones": [
+        "BIS-O07",
+        "BIS-O08"
+      ],
+      "contrato": "bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md",
+      "banco": "bis-c08/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "a1d71590d0626c2d2f67f1c0d63b8a42ef97428a372b3aecc1b2d36678642a4e",
+      "ids_de_fila": [
+        "C08-01",
+        "C08-02",
+        "C08-03",
+        "C08-04",
+        "C08-05",
+        "C08-06",
+        "C08-07",
+        "C08-08",
+        "C08-09",
+        "C08-10",
+        "C08-11",
+        "C08-12",
+        "C08-13",
+        "C08-14",
+        "C08-15",
+        "C08-16",
+        "C08-17",
+        "C08-18",
+        "C08-19",
+        "C08-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Fuentes parciales; falta montaje de representación, inyección técnica y captura independiente."
+    },
+    {
+      "familia": "C09",
+      "escenarios_originales": [
+        "BIS-C09-P",
+        "BIS-C09-N"
+      ],
+      "obligaciones": [
+        "BIS-O09",
+        "BIS-O12"
+      ],
+      "contrato": "bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md",
+      "banco": "bis-c09/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "175a66c6da6161ef260bfddd569f9a52332038847fd0dc13e27ac7d2b37f8bb9",
+      "ids_de_fila": [
+        "C09-01",
+        "C09-02",
+        "C09-03",
+        "C09-04",
+        "C09-05",
+        "C09-06",
+        "C09-07",
+        "C09-08",
+        "C09-09",
+        "C09-10",
+        "C09-11",
+        "C09-12",
+        "C09-13",
+        "C09-14",
+        "C09-15",
+        "C09-16",
+        "C09-17",
+        "C09-18",
+        "C09-19",
+        "C09-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Documentos sintéticos; sin receptor nuevo, modelo interrogado o efecto ensayado."
+    },
+    {
+      "familia": "C10",
+      "escenarios_originales": [
+        "BIS-C10-P",
+        "BIS-C10-N"
+      ],
+      "obligaciones": [
+        "BIS-O12",
+        "BIS-O06"
+      ],
+      "contrato": "bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md",
+      "banco": "bis-c10/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "a973108fdcf558d1fb0e9db8499dac2f75e7836f8d3d823fdc660b102b8df5e2",
+      "ids_de_fila": [
+        "C10-01",
+        "C10-02",
+        "C10-03",
+        "C10-04",
+        "C10-05",
+        "C10-06",
+        "C10-07",
+        "C10-08",
+        "C10-09",
+        "C10-10",
+        "C10-11",
+        "C10-12",
+        "C10-13",
+        "C10-14",
+        "C10-15",
+        "C10-16",
+        "C10-17",
+        "C10-18",
+        "C10-19",
+        "C10-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Evidencia sintética; sin receptor completo, justificación formal productiva ni modelo ensayado."
+    },
+    {
+      "familia": "C11",
+      "escenarios_originales": [
+        "BIS-C11-P",
+        "BIS-C11-N"
+      ],
+      "obligaciones": [
+        "BIS-O10",
+        "BIS-O05"
+      ],
+      "contrato": "bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md",
+      "banco": "bis-c11/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "9b9f274fc1f9ea66171d7098a4bcf3c49b8ce2119037fbf0d41e939f6064e9c4",
+      "ids_de_fila": [
+        "C11-01",
+        "C11-02",
+        "C11-03",
+        "C11-04",
+        "C11-05",
+        "C11-06",
+        "C11-07",
+        "C11-08",
+        "C11-09",
+        "C11-10",
+        "C11-11",
+        "C11-12",
+        "C11-13",
+        "C11-14",
+        "C11-15",
+        "C11-16",
+        "C11-17",
+        "C11-18",
+        "C11-19",
+        "C11-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Cuotas sintéticas; sin medida de memoria/tiempo ni contención global; C11-13 tiene dos subcasos."
+    },
+    {
+      "familia": "C12",
+      "escenarios_originales": [
+        "BIS-C12-P",
+        "BIS-C12-N"
+      ],
+      "obligaciones": [
+        "BIS-O11",
+        "BIS-O05"
+      ],
+      "contrato": "bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md",
+      "banco": "bis-c12/BANCO_PREVIO_v0_1.json",
+      "banco_sha256": "e7e9138dbe7a680ad1fdb534c91ae5d5d319a6059edb27ec501ad352828c0bf0",
+      "ids_de_fila": [
+        "C12-01",
+        "C12-02",
+        "C12-03",
+        "C12-04",
+        "C12-05",
+        "C12-06",
+        "C12-07",
+        "C12-08",
+        "C12-09",
+        "C12-10",
+        "C12-11",
+        "C12-12",
+        "C12-13",
+        "C12-14",
+        "C12-15",
+        "C12-16",
+        "C12-17",
+        "C12-18",
+        "C12-19",
+        "C12-20"
+      ],
+      "filas": 20,
+      "ejecuciones_historicas": 0,
+      "ejecuciones_nuevas": 0,
+      "estado": "PREPARADO_NO_EJECUTADO",
+      "alcance_y_pendiente": "Fuentes ES/EN, privacidad y documentación; faltan ensayos propios y entradas adicionales en varios casos."
+    }
+  ],
+  "conteos": {
+    "familias": 12,
+    "escenarios_originales": 24,
+    "originales_ejecutados": 2,
+    "originales_pendientes": 22,
+    "variantes_nativas_historicas_c01": 13,
+    "filas_preparadas_c02_c12": 202,
+    "ejecuciones_nuevas": 0
+  },
+  "nota": "Filas documentales heterogéneas, con subcasos, expectativas y entradas parcialmente materializadas. No se suman como pruebas ejecutadas ni se calcula porcentaje de seguridad."
+}
