@@ -1,0 +1,18 @@
+-- ES: Montaje sintético C07; no constituye dominio ni ejecuta una transmisión.
+-- EN: Synthetic C07 fixture; it neither constitutes a domain nor executes transmission.
+codomain KA = { A0, A1, AU };
+codomain KB = { B0, B1, BU };
+output_semantics SA { A0 -> "a0"; A1 -> "a1"; AU -> "au"; }
+output_semantics SB { B0 -> "b0"; B1 -> "b1"; BU -> "bu"; }
+cellspec CA { b: 4; codomain: KA; semantics: SA; role: Base; }
+cellspec CB { b: 5; codomain: KB; semantics: SB; role: Base; }
+coupledspec QA { cell: CA; bridges: [1]; }
+coupledspec QB { cell: CB; bridges: [1, 17, 25]; }
+connector Phi17 { source_codomain: KA; target_position: 17; mapping: { A0 -> Zero; A1 -> One; AU -> U; } }
+connector Phi1 { source_codomain: KB; target_position: 1; mapping: { B0 -> Zero; B1 -> One; BU -> U; } }
+semantic_relation RSerie { kind: DeclaredRelation; constraints: [SerieSintetica]; }
+pattern PSerie { kind: DeclaredPattern; arity: 2; }
+graph G { nodes: [QA, QB]; edges: [edge(source: QA, target: QB, position: 17, connector: Phi17)]; relation: RSerie; regime: Simple; }
+let C = compose(G, relations: [RSerie], patterns: [PSerie]);
+coupledstate VA { spec: QA; base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; }
+coupledstate VB { spec: QB; base_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; updated_vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, U, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; }

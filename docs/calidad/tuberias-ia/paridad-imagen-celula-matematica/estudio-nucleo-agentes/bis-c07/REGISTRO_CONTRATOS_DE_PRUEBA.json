@@ -1,0 +1,26 @@
+{
+  "version": "BIS-C07-CONTRATOS/0.1",
+  "estatuto": "Oráculo independiente del conductor; no LIG/0.1 ni constitución de dominio",
+  "contratos": {
+    "SERIE_A_B_17": {
+      "artefacto_referencia": "fixtures/C07-01.svp",
+      "sha256": "7a4cd42cfe3d74a59aaa299217c1c08e27618b5a3041e5f5c8fb8950d794c12a",
+      "finalidad": "Referencia íntegra del montaje sintético y su dirección/tabla; no credencial de autoridad"
+    },
+    "SERIE_A_B_25": {
+      "artefacto_referencia": "fixtures/C07-02.svp",
+      "sha256": "513941d7638317bd88509c1bacc905e4c38f7afbc6e0953df40616043fc74f9c",
+      "finalidad": "Referencia íntegra del montaje sintético y su dirección/tabla; no credencial de autoridad"
+    },
+    "GATE_A_B": {
+      "artefacto_referencia": "fixtures/C07-03.svp",
+      "sha256": "db27b68e9449db409db3ced13440b4fcfed21a2610a83fb11e79f9f6258a5515",
+      "finalidad": "Referencia íntegra del montaje sintético y su dirección/tabla; no credencial de autoridad"
+    },
+    "SERIE_B_A_1": {
+      "artefacto_referencia": "fixtures/C07-04.svp",
+      "sha256": "1670bd1ff5ed6f442c4559e9219def4de2dad380e8f338e0c827791085ea0230",
+      "finalidad": "Referencia íntegra del montaje sintético y su dirección/tabla; no credencial de autoridad"
+    }
+  }
+}

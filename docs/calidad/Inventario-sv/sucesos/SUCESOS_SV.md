@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T10:16:55Z
+**fecha_actualizacion_utc:** 2026-09-13T10:29:43Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje de6d8809a3c01f98d90775f80d5b05982491ec18; laboratorio f2de5c22a807ce325c8f9983b95e312a4245c359
+**cortes_de_entrada:** Lenguaje f02975d9542905bd837acde07c68906178afcbeb; laboratorio 709d7ff08c0a386d5e595d18dc9c934117c043f2
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C06 preparado: contrato de lectura técnica, inicialización sin antecedente ficticio y reevaluación; 18 escenarios especificados (6 positivos contractuales y 12 negativos). Guardas Rust locales y productores pendientes diferenciados. Testigo de continuidad entre instantáneas para BIS-03.
+**resultado:** BIS-C07 preparado: contrato de composición 16/25 por serie y compuerta; 18 fixtures SVP, cuatro positivos y catorce negativos contractuales. Tres negativos mantienen admisibilidad estructural prevista pero incumplen la relación exacta solicitada. Tres vectores de sustitución y nueve filas de compuerta como oráculos previos.
 
-**verificacion:** Cotejo documental de fuentes, estatutos, banco e historial; cero escenarios C06 ejecutados. Sin nueva compilación ni productor Rust. Originales BIS-02: dos ejecutados y veintidós pendientes.
+**verificacion:** Cotejo documental y auxiliar Python de fuentes, fixtures, oráculos e historial. Cero fixtures C07 compilados/ejecutados; previsión estructural no es resultado observado. Originales BIS-02: dos ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c06/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c07/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-209
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-210
 
-**siguiente_accion:** Continuar BIS-C07: composición entre células de dimensiones diferentes, dirección, puentes y codominios bajo contrato declarado. Completar BIS-02 antes de decidir sedes e implementar y probar en Rust.
+**siguiente_accion:** Continuar BIS-C08: preservar Tri.U válido y distinguir fallos técnicos de representación, sin habilitar K1-T. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
 
-**observaciones:** No se modifica semántica, IR, Rust ni dominios. DFL-003/004/006 y K1-T conservan límites. Instantáneas no prueban custodia append-only; no se declara defecto ejecutado. S24 pendiente y GUI diferida.
+**observaciones:** Sin cambios de Rust, IR, semántica o dominios. Conector total no acredita procedencia; gate admitido no produce salida. Relación/interpretación por imponer y conflicto General conservan límites. No concatenación de vectores ni max universal. S24 pendiente.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

@@ -1,0 +1,86 @@
+{
+  "corte_lenguaje": "f02975d9542905bd837acde07c68906178afcbeb",
+  "corte_laboratorio": "709d7ff08c0a386d5e595d18dc9c934117c043f2",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad conservada contra C06"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad conservada contra C06"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad conservada contra C06"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/Fundamentos algebraico-semánticos del Sistema Vectorial SV.md",
+      "sha256": "904f7536def8194d01121ef9e90bc913466fc8869f9fec52fb43e6cb7aefbb31",
+      "lectura": "§7 completo"
+    },
+    {
+      "ruta": "FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md",
+      "sha256": "ee5a60c230ca4e5350573044c444107e883221813dad7078a9a562da265de712",
+      "lectura": "A.6–A.10 y D.1–D.5"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_2.md",
+      "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+      "lectura": "J1.3/J1.4/J2.2/J2.3/J3.2"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "Funciones y ramas indicadas en FUENTES_Y_ALCANCE"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "Campos de Connector, AdmissibilityTable y operaciones"
+    },
+    {
+      "ruta": "rust/sv_core/src/frontend.rs",
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "lectura": "Referencias al analizador y operaciones"
+    },
+    {
+      "ruta": "tests/conformance/valid/compose_basic.svp",
+      "sha256": "b91d5caa7ffb8457fadf3920d4f6135142c4c8ea7927da8a549a012148a6230b",
+      "lectura": "Lectura completa; antecedente de sintaxis"
+    },
+    {
+      "ruta": "tests/conformance/valid/gate_table.svp",
+      "sha256": "2930f0684014d0736cc0a0a8ff050e779c114a51825488afd4144aa2fdd8304c",
+      "lectura": "Lectura completa; antecedente de sintaxis"
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+      "sha256": "954066cf56d6a61d152eaf594cfd7b0da3f43b83103a2e42e8e934f0ca460d2a",
+      "lectura": "Límites de conector, conflicto y resultados ejecutivos"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md",
+      "sha256": "8f7785e6963429532e2d37909f904c1259d1c5bfd1a347650579a941cf9a8f2e",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Lectura previa conservada; secuencia"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "C07/C08"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "sha256": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+      "lectura": "Criterio vigente conservado"
+    }
+  ]
+}

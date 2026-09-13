@@ -1,0 +1,22 @@
+{
+  "estatuto": "Cotejo auxiliar Python de integridad documental y consistencia de oráculos previos; no analizador SVP ni ensayo Rust",
+  "corte": "f02975d9542905bd837acde07c68906178afcbeb",
+  "comprobaciones": [
+    "18 fixtures con SHA-256 concordante; cuatro positivos y catorce negativos contractuales; resultados observados nulos",
+    "Once negativos prevén rechazo estructural y tres prevén admisión estructural con contrato distinto",
+    "Cuatro referencias de contrato íntegras; C07-04 y C07-18 tienen los mismos bytes y expectativas distintas",
+    "Tres vectores esperados de 25 posiciones conservan las coordenadas ajenas al puente 17; dimensiones de fuentes literales 16/25",
+    "Nueve filas únicas cubren el producto de codominios; salidas pertenecen a KR; tabla literal concordante",
+    "Fuentes verificadas por SHA-256 y enlaces documentales locales resueltos",
+    "RETP e historial conservan prefijos íntegros; sólo S22 cambia; S24 permanece pendiente",
+    "C01–C06 intactos; dos escenarios originales ejecutados y veintidós pendientes"
+  ],
+  "ensayos_c07_ejecutados": 0,
+  "limitaciones": [
+    "No se ha compilado ni ejecutado ningún fixture C07",
+    "Consistencia del oráculo no demuestra la producción del valor por una célula o conector",
+    "Las previsiones de guardas se deberán contrastar mediante recepción Rust y diagnóstico efectivo",
+    "Identidad del montaje de prueba no acredita autoridad ni interpretación completa de su relación",
+    "BIS-03 decidirá sedes; no se cambia semántica, IR, núcleo o dominios"
+  ]
+}

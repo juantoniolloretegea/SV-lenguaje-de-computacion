@@ -1,0 +1,26 @@
+-- ES: Montaje sintético C07; no constituye dominio ni ejecuta una transmisión.
+-- EN: Synthetic C07 fixture; it neither constitutes a domain nor executes transmission.
+codomain KA = { A0, A1, AU };
+codomain KB = { B0, B1, BU };
+output_semantics SA { A0 -> "a0"; A1 -> "a1"; AU -> "au"; }
+output_semantics SB { B0 -> "b0"; B1 -> "b1"; BU -> "bu"; }
+cellspec CA { b: 4; codomain: KA; semantics: SA; role: Base; }
+cellspec CB { b: 5; codomain: KB; semantics: SB; role: Base; }
+codomain KR = { R0, R1, RU };
+semantic_relation RGate { kind: DeclaredRelation; constraints: [CompuertaSinteticaOrdenada]; }
+cellstate VA { spec: CA; vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; }
+cellstate VB { spec: CB; vector: [Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero, Zero]; }
+admissibility_table T { input_codomains: [KA, KB]; output_codomain: KR; table: {
+  (A0, B0) -> R0;
+  (A0, B1) -> R1;
+  (A0, BU) -> RU;
+  (A1, B0) -> R1;
+  (A1, B1) -> R1;
+  (A1, BU) -> R1;
+  (AU, B0) -> RU;
+  (AU, B1) -> R1;
+  (AU, BU) -> RU;
+} }
+let EA = evaluate(VA);
+let EB = evaluate(VB);
+let GG = gate([EB, EA], using: T);

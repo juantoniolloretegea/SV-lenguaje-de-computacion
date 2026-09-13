@@ -1,0 +1,230 @@
+{
+  "estatuto": "Datos esperados sintéticos para futuras pruebas de operador; no salidas Rust observadas",
+  "dimensiones": {
+    "QA": {
+      "b": 4,
+      "n": 16
+    },
+    "QB": {
+      "b": 5,
+      "n": 25
+    }
+  },
+  "serie_17": {
+    "origen": "QA",
+    "destino": "QB",
+    "posicion": 17,
+    "conector": "Phi17",
+    "mapping": [
+      [
+        "A0",
+        "Zero"
+      ],
+      [
+        "A1",
+        "One"
+      ],
+      [
+        "AU",
+        "U"
+      ]
+    ],
+    "vector_destino_previo": [
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero",
+      "Zero"
+    ],
+    "casos": [
+      {
+        "salida_fuente_supuesta": "A0",
+        "valor_puente": "Zero",
+        "vector_destino_esperado": [
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero"
+        ]
+      },
+      {
+        "salida_fuente_supuesta": "A1",
+        "valor_puente": "One",
+        "vector_destino_esperado": [
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "One",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero"
+        ]
+      },
+      {
+        "salida_fuente_supuesta": "AU",
+        "valor_puente": "U",
+        "vector_destino_esperado": [
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "U",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero",
+          "Zero"
+        ]
+      }
+    ],
+    "limite": "Las salidas A0/A1/AU son entradas hipotéticas ya tipadas; no se derivan de evaluate(VA) en este expediente."
+  },
+  "gate": {
+    "entradas_ordenadas": [
+      "KA",
+      "KB"
+    ],
+    "salida": "KR",
+    "tabla": [
+      {
+        "entradas": [
+          "A0",
+          "B0"
+        ],
+        "salida": "R0"
+      },
+      {
+        "entradas": [
+          "A0",
+          "B1"
+        ],
+        "salida": "R1"
+      },
+      {
+        "entradas": [
+          "A0",
+          "BU"
+        ],
+        "salida": "RU"
+      },
+      {
+        "entradas": [
+          "A1",
+          "B0"
+        ],
+        "salida": "R1"
+      },
+      {
+        "entradas": [
+          "A1",
+          "B1"
+        ],
+        "salida": "R1"
+      },
+      {
+        "entradas": [
+          "A1",
+          "BU"
+        ],
+        "salida": "R1"
+      },
+      {
+        "entradas": [
+          "AU",
+          "B0"
+        ],
+        "salida": "RU"
+      },
+      {
+        "entradas": [
+          "AU",
+          "B1"
+        ],
+        "salida": "R1"
+      },
+      {
+        "entradas": [
+          "AU",
+          "BU"
+        ],
+        "salida": "RU"
+      }
+    ],
+    "interpretacion_sintetica": "A1 bloquea; A0 deja pasar lectura de B; AU conserva apertura salvo B1. R0/R1/RU son etiquetas propias, sin semántica profesional.",
+    "limite": "Tabla experimental fijada; no interpretación de clasificaciones producidas ni regla universal de composición."
+  }
+}

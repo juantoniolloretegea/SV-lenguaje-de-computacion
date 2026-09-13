@@ -1,0 +1,32 @@
+{
+  "corte_lenguaje": "f02975d9542905bd837acde07c68906178afcbeb",
+  "estatuto": "Contrato, fixtures y oráculos previos C07; cero ejecutados",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "4068af9c893b3bae2db6565e8ec7ffe7036024e6482766ad6516feef92bc3d73",
+    "CONTRATO_COMPOSICION_CANDIDATO_v0_1.md": "3229ed41426dec9c06df9846b46db49f19590f30eea8ba6ffec9e557bc188b7e",
+    "FUENTES.json": "d1f8f87a92ab57fe6b42fbb1ec1c6c32c80c72a472812340336a2bfefd92238b",
+    "FUENTES_Y_ALCANCE.md": "0c4d8bfd2757df418f7d5cc13db6e05dea4626b50319be7bbbad8a404ce86a5a",
+    "ORACULOS_ALGEBRAICOS_PREVIOS.json": "de4513a9f28dc94f9f0d2d9cacc5672bba93df7ea29f6434e9675d608f78fe2f",
+    "README.md": "1682213bd9b613fc2cbeb08ecd41f7977f3ec6b270f5bf863e0cee6c84369718",
+    "REGISTRO_CONTRATOS_DE_PRUEBA.json": "a99ff76bdc7f6d3c2b493fcdcf49af01e78d7f5d89de278eede59b5d60f083af",
+    "VERIFICACION_DOCUMENTAL.json": "104ffb7760175fa5d4ab554a1c6d7f2e7c1d40a1d30d17495a26f264eeaf3cce",
+    "fixtures/C07-01.svp": "7a4cd42cfe3d74a59aaa299217c1c08e27618b5a3041e5f5c8fb8950d794c12a",
+    "fixtures/C07-02.svp": "513941d7638317bd88509c1bacc905e4c38f7afbc6e0953df40616043fc74f9c",
+    "fixtures/C07-03.svp": "db27b68e9449db409db3ced13440b4fcfed21a2610a83fb11e79f9f6258a5515",
+    "fixtures/C07-04.svp": "1670bd1ff5ed6f442c4559e9219def4de2dad380e8f338e0c827791085ea0230",
+    "fixtures/C07-05.svp": "1a54ac86b2a4616ef2636d3027fcb341f2be17d38bbac3f22e436738057ac484",
+    "fixtures/C07-06.svp": "a78977e69e572d637cde4f7b230726ef47d090e9b18d19189461dc567f9b6ffe",
+    "fixtures/C07-07.svp": "f3a0ef20c26bb4bae1733b1b4ba6ce8944703036cee20c32fdb66b29d2b3308e",
+    "fixtures/C07-08.svp": "28d416e79f640fc2ebf16fb8cfce31b99e97b1871f2f9876c7a6dcd95f161f5d",
+    "fixtures/C07-09.svp": "dab2a7087417ddc49532464d5afe4f4cf2a3f8c70fc1619e43ee18e169a1e58c",
+    "fixtures/C07-10.svp": "7f524d65daedfb6e7138d022ef01e87149451be5d2653434f62958d15d9b654e",
+    "fixtures/C07-11.svp": "21401807f97c38cb2293ee247f24980b5d4ca62ec16a8c8dabc93116a229907e",
+    "fixtures/C07-12.svp": "695248d9fabfb8bbed82503a74d4758b2a3c90ae0618b6b5210af790a25369fa",
+    "fixtures/C07-13.svp": "40c599d084b2691c0a50b49f375431b1bea944481595201d0d56d9692a8d1507",
+    "fixtures/C07-14.svp": "d7a4e0f820bb962d0898c7a98d31a31d7d6fcd7bb435237afdec534403fbfdc5",
+    "fixtures/C07-15.svp": "8bb237e04ffaf6d80b7dbab3ef2c2e09a60cf3096dd168c8947c14f2bbd8b2b7",
+    "fixtures/C07-16.svp": "5d65fc5c590f3c922392b0732ce98c3790f4655978d91db3217a56a314b1c15d",
+    "fixtures/C07-17.svp": "391ed43a39c7085e8cb3ccababd8df28d85b11209f9f48343317b0c5e0818e78",
+    "fixtures/C07-18.svp": "1670bd1ff5ed6f442c4559e9219def4de2dad380e8f338e0c827791085ea0230"
+  }
+}
