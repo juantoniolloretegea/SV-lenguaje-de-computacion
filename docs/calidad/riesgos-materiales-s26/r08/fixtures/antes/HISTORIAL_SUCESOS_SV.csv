@@ -1,0 +1,2 @@
+revision,id,estado,fecha_alta_utc,fecha_inicio_utc,fecha_actualizacion_utc,fecha_fin_utc,unidad_responsable,actividad,alcance,repositorios_y_ramas,cortes_de_entrada,dependencias,resultado,verificacion,evidencias,referencia_calidad,siguiente_accion,observaciones
+0,S1,en ejecución,2026-01-01,2026-01-01,2026-01-01,,fixture,actividad,alcance,fixture/repo,base,,antes,pendiente,evidencia,referencia,siguiente,observacion

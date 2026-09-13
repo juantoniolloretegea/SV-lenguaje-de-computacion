@@ -1,0 +1,34 @@
+{
+  "estado": "BANCO_PREVIO_NO_EJECUTADO",
+  "casos": 15,
+  "perfiles": [
+    "debug",
+    "opt-level=3; debug-assertions=no"
+  ],
+  "entrada_lenguaje": "337058da503b9e08cbb9805b9cc920adca75f6b5",
+  "entrada_laboratorio": "3680ba0c357506940fc4540a344daa3a4516d138",
+  "rustc": "1.98.0 (88d9e12ae 2026-08-18)",
+  "sha256": {
+    "docs/calidad/riesgos-materiales-s26/r08/README.md": "4d90a97015684c18e091a5af1ebe4bce3225e13fe42be03467d3c73cc79fe81f",
+    "docs/calidad/riesgos-materiales-s26/r08/auxiliar.rs": "f521503c78ece4337a290e9f10b1c1aa4d2ebffc69d76e29b0eb5feefabba5b6",
+    "docs/calidad/riesgos-materiales-s26/r08/banco.rs": "d614d6d0714e54776603cc844c2558f79d4538085619fab389f5e20433fcdf17",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/antes/HISTORIAL_SUCESOS_SV.csv": "a1ab9eb1516a327c213ffa9b3041c79b03e33135a270e869a34e876b0a37d52a",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/antes/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv": "83e09b154b96b95b6464009647b626e53c7cd62ba1e4c3403b0790cb52aadf84",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/antes/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md": "688fce379cfbe8d69ce0860a5e5ba4142900d7b3a0b3839d0081a8a508be91df",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/antes/SUCESOS_SV.csv": "7c338fdfd521e42622973f2b20514e9d0784a6cec5260da10451bdcb033ae878",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/antes/SUCESOS_SV.md": "7db7fd3217a80fe66f5de7b53de4e0a4b0e72763328cc528452a32b590fbf066",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/despues/HISTORIAL_SUCESOS_SV.csv": "fdb4c42a4e6352cc442e57583488f289c642c4150c022d39394fb5f1353281a8",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/despues/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv": "2b6a63a2f839f7c69f39685ae53befee30bdee96d8378f4439a0c17848bdcc79",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/despues/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md": "f5eb5d062e42cc54f26fa0fb6bea8b99210f67e6071954a5c9ed6cf0886db217",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/despues/SUCESOS_SV.csv": "848c612b4401dc72962dc4a0b363e2b2595be8aeaa231e3e75c4e453ac72e908",
+    "docs/calidad/riesgos-materiales-s26/r08/fixtures/despues/SUCESOS_SV.md": "9d4a976d89f2a50d28a5aa1aa15582efe531c45db4b86cc3d3ef143c518413d5",
+    "docs/calidad/riesgos-materiales-s26/r08/main.rs": "4ea4b9d042e72d95d8674f31aa0f3a864112e574ce1788f4fd6e619020ebf35b"
+  },
+  "binarios": {
+    "auxiliar": "a6711d7bf433f729e97375044fab2ae3219e4f61ae90442ac866d9f7afef1998",
+    "banco_debug": "bf14f708e56c9e5a42290052a33b27fbe3173bf325083975dc56904b81c4e7da",
+    "banco_opt": "29cb661edc6d01e035df3921012ee04988bd7fe6d0243c975bbc94196c2dbc73"
+  },
+  "python_ejecutado": false,
+  "limites": "Preparación local y cotejo de descriptores. Sin transacción local multifichero, autoridad por hash, aislamiento host o durabilidad acreditada. Inyección controlada, no corte eléctrico."
+}

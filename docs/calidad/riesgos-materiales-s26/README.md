@@ -184,3 +184,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## Recepción R07 · RETP-234
 
 [Resultados R07](r07/RESULTADOS.md): ocho oráculos cumplidos, con cuatro reproducciones de debilidades en auxiliares heredados. Dos controles positivos y dos rechazos normales conservados. El conductor Rust observa elusión bajo `-O`, checkpoint ajeno y escritura parcial local; GitHub permanece sustituido por un doble en las sondas. No se acreditan reparaciones ni se cierran casos globales. Preparar reparación acotada conservando estos testigos y la continuación R06.
+
+## Banco R08 · Candidata Rust de auxiliares
+
+[Candidata y quince casos previos](r08/README.md): guardas explícitas; cotejo completo de descriptores sin checkpoint; preparación de los cinco archivos fuera del origen y comprobación posterior. Se fijan controles válidos, revisiones incompatibles, errores entre escrituras y manipulación de salida. Banco todavía no ejecutado al incorporarse; previsto en dos perfiles de compilación. No se invoca Python ni se modifican los auxiliares históricos. Continúan los límites de S26 y R06.
