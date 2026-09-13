@@ -1,0 +1,92 @@
+{
+  "corte_lenguaje": "26b0906572e7b9de74ee43bc9f648cc5c2945b25",
+  "corte_laboratorio": "13dfebac4feb2b6f9a0ffb5ddd46122262a9d8bc",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; huella cotejada contra C09"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; huella cotejada contra C09"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; huella cotejada contra C09"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/CONTRATO_S2.md",
+      "sha256": "e55c3497eac1ccb5317e263623bda052ce25963fe3a7039eb19f5881d5c02208",
+      "lectura": "Lectura completa; antecedente histórico acotado"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s2-vigencia-causal/codigo/cobertura.rs",
+      "sha256": "60522434e1d0d5310057feca4de857548eddd631062f5d1336e67fe19cd67b90",
+      "lectura": "Lectura completa; comprobar y referencias"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "IrOperationKind y result_type"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "validate_query completo y proyecciones"
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+      "sha256": "954066cf56d6a61d152eaf594cfd7b0da3f43b83103a2e42e8e934f0ca460d2a",
+      "lectura": "DFL003/004/006 y alcance H06/H07"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md",
+      "sha256": "6264eace0c3536fab89a0903d7bbdb5693af06ff6c591c1d37289dab9bb875bf",
+      "lectura": "Lectura completa previa; límites de consulta y continuidad"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "BIS-O12/O06 y secuencia"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "C10/C11 originales"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "sha256": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+      "lectura": "Preparación frente a ejecución"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md",
+      "sha256": "ba09f55957e4e792c5dfb3c4cea947f080c85a2bce87bd22bd167afb30fb180a",
+      "lectura": "Relevo de autoridad y cobertura"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_2.md",
+      "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+      "lectura": "§3.5 Query y §5.1 obligaciones CQ1–CQ6"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+      "lectura": "Sucesión vigente; §2.4 K1-T conservado"
+    }
+  ],
+  "doctrina_externa": [
+    {
+      "path": "documentos/composicion/V_invariantes_agentes_operador_consulta.md",
+      "bytes": 18061,
+      "sha256": "fbf53f17d8cbeb17dedb12dd098121ba1591e0603c2aa196d7bb454784123c2b",
+      "git_blob_sha": "d609810b4072a4b61e29ef10f4d26751862b0c86",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Documento V §§6.1–6.5 completos; corte conservado de la concordancia BIS-01"
+    }
+  ]
+}

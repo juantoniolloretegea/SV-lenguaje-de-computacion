@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T11:05:09Z
+**fecha_actualizacion_utc:** 2026-09-13T11:22:18Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 94e2801d388f943d93c2b37d641916be7f28bf27; laboratorio 745bbe88289c60e64271a547ced54b07ba435c95
+**cortes_de_entrada:** Lenguaje 26b0906572e7b9de74ee43bc9f648cc5c2945b25; laboratorio 13dfebac4feb2b6f9a0ffb5ddd46122262a9d8bc
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C09 preparado: contrato de contenido frente a autoridad; veinte escenarios, cuatro positivos y dieciséis negativos, once documentos sintéticos y encargo independiente. Se conservan ligaduras de objeto/contexto/destino y la distinción entre recepción, conducta del modelo y contención del efecto.
+**resultado:** BIS-C10 preparado: contrato de justificación y evidencia; veinte escenarios, cuatro positivos y dieciséis negativos, ocho archivos sintéticos y referencia independiente. Se contrastan respaldo de afirmaciones, parciales, pertenencia, revisión, cobertura, regla y entrega efectiva.
 
-**verificacion:** Cotejo auxiliar Python de inventario, huellas, referencias e historial. Cero escenarios C09 ejecutados; sin compilación nueva, modelos ni despachos. Resultados S11 históricos no reejecutados. Originales: dos ejecutados y veintidós pendientes.
+**verificacion:** Cotejo auxiliar Python de inventario, cálculos sintéticos, huellas, referencias e historial. Cero escenarios C10 ejecutados; sin compilación nueva, receptor Rust ni consultas a modelos. Originales: dos ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-212
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-213
 
-**siguiente_accion:** Continuar BIS-C10: justificación suficiente y relación entre afirmación y evidencia independiente. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
+**siguiente_accion:** Continuar BIS-C11: presupuestos y límites de recursos con testigos de frontera. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
 
-**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. No se fabrica autoridad profesional ni se promueven candidatas. La afirmación de bloqueo no prueba ausencia de efecto; fallo o falta de captura no acreditan resistencia. S24 pendiente.
+**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. No se acredita QueryResult productivo ni cierre CQ1–CQ6. Integridad no equivale a verdad externa; falta de evidencia no se convierte en Tri.U. S24 pendiente.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

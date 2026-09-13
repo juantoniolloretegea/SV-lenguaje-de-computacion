@@ -1,0 +1,37 @@
+{
+  "estatuto": "Inventario de bytes sintéticos, sin autoridad por la huella",
+  "archivos": {
+    "evidencias/NOTA.txt": {
+      "sha256": "cf45f5b3ca09faf4a12a748d8a7efbf2fb834d313432694b668ab648bf637e54",
+      "bytes": 139
+    },
+    "evidencias/RESUMEN_CIRCULAR.txt": {
+      "sha256": "d661faab6624430b206b5daa24ce677d42460665475ff8e505ba1f5c8faf6825",
+      "bytes": 143
+    },
+    "evidencias/T01-v1.json": {
+      "sha256": "62fe53428e03eb484860a29dbb8bc25bc4d480a9b96e83b288f53c47b9b54383",
+      "bytes": 165
+    },
+    "evidencias/T02-v1.json": {
+      "sha256": "578e8d663e5384b025f47c819eb91c0e1b338e09a1b2a49623500b59f51e76d3",
+      "bytes": 165
+    },
+    "evidencias/T02-v2.json": {
+      "sha256": "5fb32aad4d1d87d166c124889e87ae5e877120a0b9dd05addec1ff8c0242699d",
+      "bytes": 165
+    },
+    "evidencias/T03-v1-alias.json": {
+      "sha256": "07b01fb53ebce02021760fedee9cbce9e6fced26d007520a57e6b24ae06efabf",
+      "bytes": 165
+    },
+    "evidencias/T03-v1.json": {
+      "sha256": "07b01fb53ebce02021760fedee9cbce9e6fced26d007520a57e6b24ae06efabf",
+      "bytes": 165
+    },
+    "evidencias/T04-v1.json": {
+      "sha256": "8fae5ce67c82537cc7f42fd20a3df6fc9d3282e1eb75453f0ee5a6c1ce840c65",
+      "bytes": 165
+    }
+  }
+}

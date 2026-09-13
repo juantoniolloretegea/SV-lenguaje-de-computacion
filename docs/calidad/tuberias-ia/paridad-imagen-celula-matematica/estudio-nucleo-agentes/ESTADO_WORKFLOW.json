@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C10: justificación suficiente y relación entre afirmación y evidencia independiente. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.",
+  "siguiente_accion": "Continuar BIS-C11: presupuestos y límites de recursos con testigos de frontera. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c09/README.md",
-  "ampliacion": "BIS-C09: contrato de contenido frente a autoridad; veinte escenarios y once documentos sintéticos; cero ejecutados. Se separan recepción, conducta del modelo y contención del efecto.",
-  "ultimo_retp": "RETP-2026-212",
+  "ultimo_informe": "bis-c10/README.md",
+  "ampliacion": "BIS-C10: justificación y respaldo de evidencia; veinte escenarios y ocho archivos sintéticos; cero ejecutados. Se conservan contexto, revisión, cobertura, regla y entrega.",
+  "ultimo_retp": "RETP-2026-213",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -172,5 +172,14 @@
     "documentos_literales": 11,
     "corte_revision": "94e2801d388f943d93c2b37d641916be7f28bf27",
     "alcance": "Contrato y estímulos previos; sin receptor nuevo, modelos ni efectos ejecutados"
+  },
+  "preparacion_bis_c10": {
+    "contrato": "bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md",
+    "banco": "bis-c10/BANCO_PREVIO_v0_1.json",
+    "variantes_especificadas": 20,
+    "variantes_ejecutadas": 0,
+    "archivos_evidencia": 8,
+    "corte_revision": "26b0906572e7b9de74ee43bc9f648cc5c2945b25",
+    "alcance": "Contrato y escenarios previos; sin receptor Rust nuevo ni consulta productiva"
   }
 }

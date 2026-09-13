@@ -1,0 +1,22 @@
+{
+  "corte_lenguaje": "26b0906572e7b9de74ee43bc9f648cc5c2945b25",
+  "estatuto": "Contrato y escenarios previos C10; cero ejecutados",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "a973108fdcf558d1fb0e9db8499dac2f75e7836f8d3d823fdc660b102b8df5e2",
+    "CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md": "ad5cd25055c18ba7b04b6f10f9f6586a73c2c9f5d122f2eb2ceb1980bf6d101a",
+    "EVIDENCIAS_COMPROMETIDAS.json": "a7072d213421c3da5e56bf685baeb2d76919ba3b9abcbd8bae8b9277e7a5fcb8",
+    "FUENTES.json": "061da4f835e12f006ed4fd83531ad59e538a750afcaffcf68f22ea6a78488615",
+    "FUENTES_Y_ALCANCE.md": "8b34cc41f9783f3f7569232dcec8d6887cee7b90479bad3b770a3e95f5c6f7fa",
+    "README.md": "2fcdd0e87931ceb23a45bd5e515209f3887c40d12dd5c46b6202b5451544b780",
+    "REFERENCIA_INDEPENDIENTE.json": "742a50b12aa7ad730c19dde66c65974d617f467288402ca391616924025c5f65",
+    "VERIFICACION_DOCUMENTAL.json": "10e3984e86b5c3c5871d39494c8a04cf3e62cf7bc0292490c276c5f0d68fd250",
+    "evidencias/NOTA.txt": "cf45f5b3ca09faf4a12a748d8a7efbf2fb834d313432694b668ab648bf637e54",
+    "evidencias/RESUMEN_CIRCULAR.txt": "d661faab6624430b206b5daa24ce677d42460665475ff8e505ba1f5c8faf6825",
+    "evidencias/T01-v1.json": "62fe53428e03eb484860a29dbb8bc25bc4d480a9b96e83b288f53c47b9b54383",
+    "evidencias/T02-v1.json": "578e8d663e5384b025f47c819eb91c0e1b338e09a1b2a49623500b59f51e76d3",
+    "evidencias/T02-v2.json": "5fb32aad4d1d87d166c124889e87ae5e877120a0b9dd05addec1ff8c0242699d",
+    "evidencias/T03-v1-alias.json": "07b01fb53ebce02021760fedee9cbce9e6fced26d007520a57e6b24ae06efabf",
+    "evidencias/T03-v1.json": "07b01fb53ebce02021760fedee9cbce9e6fced26d007520a57e6b24ae06efabf",
+    "evidencias/T04-v1.json": "8fae5ce67c82537cc7f42fd20a3df6fc9d3282e1eb75453f0ee5a6c1ce840c65"
+  }
+}

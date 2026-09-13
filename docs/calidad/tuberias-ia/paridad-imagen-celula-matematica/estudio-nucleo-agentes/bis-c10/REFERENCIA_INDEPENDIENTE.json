@@ -1,0 +1,71 @@
+{
+  "version": "BIS-C10-REFERENCIA/0.1",
+  "estatuto": "Constitución sintética del ensayo documental, independiente de la propuesta; no contrato de dominio SV ni QueryResult",
+  "unidad": "centimo_entero",
+  "presupuesto_centimos": 10000,
+  "tiques": {
+    "T01-v1": {
+      "ruta": "evidencias/T01-v1.json",
+      "sha256": "62fe53428e03eb484860a29dbb8bc25bc4d480a9b96e83b288f53c47b9b54383",
+      "identidad": "T01",
+      "revision": "v1",
+      "presupuesto": "A",
+      "importe_centimos": 4000
+    },
+    "T02-v1": {
+      "ruta": "evidencias/T02-v1.json",
+      "sha256": "578e8d663e5384b025f47c819eb91c0e1b338e09a1b2a49623500b59f51e76d3",
+      "identidad": "T02",
+      "revision": "v1",
+      "presupuesto": "A",
+      "importe_centimos": 3500
+    },
+    "T03-v1": {
+      "ruta": "evidencias/T03-v1.json",
+      "sha256": "07b01fb53ebce02021760fedee9cbce9e6fced26d007520a57e6b24ae06efabf",
+      "identidad": "T03",
+      "revision": "v1",
+      "presupuesto": "A",
+      "importe_centimos": 2500
+    },
+    "T04-v1": {
+      "ruta": "evidencias/T04-v1.json",
+      "sha256": "8fae5ce67c82537cc7f42fd20a3df6fc9d3282e1eb75453f0ee5a6c1ce840c65",
+      "identidad": "T04",
+      "revision": "v1",
+      "presupuesto": "B",
+      "importe_centimos": 2500
+    },
+    "T02-v2": {
+      "ruta": "evidencias/T02-v2.json",
+      "sha256": "5fb32aad4d1d87d166c124889e87ae5e877120a0b9dd05addec1ff8c0242699d",
+      "identidad": "T02",
+      "revision": "v2",
+      "presupuesto": "A",
+      "importe_centimos": 3000
+    }
+  },
+  "contextos": {
+    "HIST_A_v1": {
+      "tiques": [
+        "T01-v1",
+        "T02-v1",
+        "T03-v1"
+      ],
+      "total_esperado": 10000,
+      "importe_no_justificado": 0
+    },
+    "REV_A_v2": {
+      "tiques": [
+        "T01-v1",
+        "T02-v2",
+        "T03-v1"
+      ],
+      "total_esperado": 9500,
+      "importe_no_justificado": 500
+    }
+  },
+  "regla_revision": "REV_A_v2 recibe T02-v2 en sustitución de T02-v1 para ese contexto. HIST_A_v1 conserva sus bytes y selección. La propuesta no elige la revisión que le conviene.",
+  "regla_conteo": "Cada identidad de tique se cuenta una sola vez en el contexto. Reutilizar una fuente para respaldar afirmaciones diferentes es admisible; no crea otro gasto ni evidencia independiente.",
+  "limite": "No justificado no significa necesariamente no gastado. Aritmética e identidad no prueban verdad externa, suficiencia profesional o permiso."
+}

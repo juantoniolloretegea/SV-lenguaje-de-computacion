@@ -1,0 +1,20 @@
+{
+  "estatuto": "Cotejo auxiliar Python de datos, cálculos sintéticos e integridad; no ensayo funcional Rust de justificación",
+  "corte": "26b0906572e7b9de74ee43bc9f648cc5c2945b25",
+  "comprobaciones": [
+    "Veinte escenarios únicos, cuatro positivos y dieciséis negativos; observados nulos",
+    "Ocho evidencias con SHA-256 y tamaños concordantes; cinco tiques con identidades e importes cotejados",
+    "Referencia independiente: HIST_A_v1 suma10000; REV_A_v2 suma9500 y deja500 sin justificar",
+    "El alias T03 conserva los mismos bytes; no constituye otro hecho",
+    "Fuentes locales y Documento V conservan huellas; enlaces del expediente resueltos",
+    "Prefijos RETP e historial intactos; sólo S22 actualizado; C01–C09 y banco histórico sin cambios",
+    "Dos escenarios originales ejecutados y veintidós pendientes; S24 pendiente"
+  ],
+  "ensayos_c10_ejecutados": 0,
+  "limitaciones": [
+    "Las sumas de referencia son comprobaciones auxiliares, no escenarios Rust ejecutados",
+    "Los estímulos adversos siguen especificados: receptor, propuestas concretas y observador material pendientes",
+    "Sin compilación nueva, consultas a modelos o QueryResult productivo",
+    "No se acredita implicación semántica general, verdad externa ni cierre CQ1–CQ6"
+  ]
+}
