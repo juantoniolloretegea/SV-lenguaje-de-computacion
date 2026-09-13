@@ -1920,3 +1920,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-191 · S19 · Recepción de S18 y relevo al catálogo
 
 2026-09-12T20:53:31Z. [Acta de recepción](tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/ACTA_RECEPCION_S19.md). Recibido S18 como enlace documental conjunto. Matriz A–L actualizada sin cambiar sus criterios. Paso al inventario y contrato acotado del catálogo habilitado; cierre profesional y nuclear pendiente. 20 fuentes y 3382 capturas íntegras; 12 filas históricas preservadas; 24 diagnósticos finales cotejados con el esperado previo; 20 tuplas de diagnóstico local; cero ensayos funcionales nuevos. Los 24 casos, 144 observaciones y 29 invocaciones pertenecen a S18; no son ensayos nuevos S19. Se separan 3 estados conformes, 1 negativa y 16 variantes de fallo/rechazo por etapa. **Siguiente objeto único:** Inventariar puntos de emisión del recorrido S18 y fijar su contrato diagnóstico estructurado y localización ES/EN, con procedencia y migración explícitas, antes de modificar comportamiento. Causas locales sin equivalencia canónica constituida. Debug se conserva como evidencia, no se usa para reconstruir causas técnicas. B/E/K/L y P3/P4/P5/P6 pendientes; agentes por decidir tras inmunología.
+
+
+<a id="retp-192"></a>
+
+### RETP-2026-192 · S20 · Apertura de (p1+p3)-Bis
+
+2026-09-13T04:13:33Z. Recepción documental iniciada. PDF aportado contiene índice de siete páginas y enlaces; no los capítulos completos. Lectura iniciada antes del alta; se declara sin retrofechar. Sin ejecución de modelos. [Expediente](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md). Preparar explicación MD/PDF, hallazgos y obligaciones pendientes, conservar copias y registrar el cierre documental. Sin modificación de semántica, IR, Rust, modelos o parámetros de dominio.
