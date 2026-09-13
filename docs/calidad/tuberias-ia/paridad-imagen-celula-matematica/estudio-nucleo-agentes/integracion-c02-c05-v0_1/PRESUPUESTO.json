@@ -1,0 +1,21 @@
+{
+  "version": "BIS-I0205-RECURSOS/0.1",
+  "estatuto": "Cuotas sintéticas para este descriptor documental; no sustituyen C11 ni constituyen soporte productivo.",
+  "bytes_utf8_inclusivos": {
+    "solicitud_serializada": 4096,
+    "fuente_svp": 4096,
+    "estado_matematico": 1024,
+    "soporte": 1024,
+    "geometria": 8192,
+    "suma_entrada": 16384,
+    "recibo": 2048,
+    "artefacto_entregado": 8192,
+    "suma_salida": 10240
+  },
+  "concurrencia": 1,
+  "llamadas_servicios_externos": 0,
+  "reintentos": 0,
+  "ram_proceso_bytes": null,
+  "duracion_maxima_ms": null,
+  "medicion_ram_tiempo": "Pendiente antes de declarar suficiencia de recursos; no se deduce de los bytes de entrada."
+}

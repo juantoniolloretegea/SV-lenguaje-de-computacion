@@ -1,0 +1,442 @@
+{
+  "version": "BIS-I0205-VERIFICACION-DOCUMENTAL/0.1",
+  "resultado": "CONFORME_EN_ALCANCE_DOCUMENTAL",
+  "casos": 26,
+  "positivos_previstos": 7,
+  "negativos_previstos": 19,
+  "ejecutados_rust": 0,
+  "sensibilidades_ejecutadas": 0,
+  "comprobaciones": [
+    "referencias, longitudes y SHA256",
+    "26 IDs únicos concordantes en cinco piezas separadas",
+    "observados vacíos y planes marcados como estímulos futuros",
+    "fórmulas exactas independientes de tres artefactos positivos",
+    "negativo coherente distinto del estado",
+    "deltas de identidad/revisión/autoridad/perfil",
+    "misma fuente bajo v1/v2/v1",
+    "cuotas literales, límite 8192 y exceso 8193",
+    "conservación de activos copiados"
+  ],
+  "limites": [
+    "No compilación de nuevos SVP ni ejecución Rust de esta integración",
+    "No productor, receptor ni captor implementados",
+    "No acreditación de alcance real de guardas; pendiente ejecución",
+    "RAM, duración, salida y ES/EN integrados pendientes"
+  ],
+  "deltas_solicitudes_respecto_A_r1": {
+    "I0205-01": [],
+    "I0205-02": [
+      "/entrega/instancia_celular",
+      "/vinculo/estado_ir",
+      "/vinculo/instancia_celular",
+      "/vinculo/nodo"
+    ],
+    "I0205-03": [
+      "/entrega/revision",
+      "/vinculo/revision"
+    ],
+    "I0205-04": [
+      "/fuente/archivo",
+      "/fuente/bytes",
+      "/fuente/sha256",
+      "/soporte/contenido/archivo",
+      "/soporte/contenido/bytes",
+      "/soporte/contenido/sha256",
+      "/soporte/referencia/sha256",
+      "/soporte/referencia/version",
+      "/vinculo/programa_fuente/source_file",
+      "/vinculo/programa_fuente/source_sha256"
+    ],
+    "I0205-05": [
+      "/fuente/archivo",
+      "/fuente/bytes",
+      "/fuente/sha256",
+      "/vinculo/programa_fuente/source_file",
+      "/vinculo/programa_fuente/source_sha256"
+    ],
+    "I0205-06": [
+      "/soporte/contenido/archivo",
+      "/soporte/contenido/bytes",
+      "/soporte/contenido/sha256"
+    ],
+    "I0205-07": [
+      "/vinculo/estado_ir",
+      "/vinculo/instancia_celular",
+      "/vinculo/nodo"
+    ],
+    "I0205-08": [
+      "/vinculo/revision"
+    ],
+    "I0205-09": [
+      "/geometria/archivo",
+      "/geometria/sha256"
+    ],
+    "I0205-10": [
+      "/geometria/archivo",
+      "/geometria/bytes",
+      "/geometria/sha256"
+    ],
+    "I0205-11": [
+      "/entrega/transformacion",
+      "/geometria/archivo",
+      "/geometria/bytes",
+      "/geometria/sha256"
+    ],
+    "I0205-12": [],
+    "I0205-13": [],
+    "I0205-14": [],
+    "I0205-15": [],
+    "I0205-16": [],
+    "I0205-17": [
+      "/nota_documental"
+    ],
+    "I0205-18": [
+      "/entrega/operacion"
+    ],
+    "I0205-19": [
+      "/geometria/archivo",
+      "/geometria/bytes",
+      "/geometria/sha256"
+    ],
+    "I0205-20": [
+      "/geometria/archivo",
+      "/geometria/bytes",
+      "/geometria/sha256"
+    ],
+    "I0205-21": [
+      "/perfil_fuente"
+    ],
+    "I0205-22": [
+      "/fuente/archivo",
+      "/fuente/bytes",
+      "/fuente/sha256",
+      "/soporte"
+    ],
+    "I0205-23": [
+      "/vinculo/revision"
+    ],
+    "I0205-24": [
+      "/estado_matematico/archivo",
+      "/estado_matematico/bytes",
+      "/estado_matematico/sha256"
+    ],
+    "I0205-25": [],
+    "I0205-26": []
+  },
+  "mediciones_documentales": [
+    {
+      "id": "I0205-01",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-02",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-03",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-04",
+      "canales_bytes": {
+        "solicitud_serializada": 1910,
+        "fuente_svp": 1281,
+        "estado_matematico": 214,
+        "soporte": 261,
+        "geometria": 6237
+      },
+      "total_bytes": 9903,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-05",
+      "canales_bytes": {
+        "solicitud_serializada": 1910,
+        "fuente_svp": 1281,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9895,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-06",
+      "canales_bytes": {
+        "solicitud_serializada": 1915,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 261,
+        "geometria": 6237
+      },
+      "total_bytes": 9842,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-07",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-08",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-09",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-10",
+      "canales_bytes": {
+        "solicitud_serializada": 1905,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6244
+      },
+      "total_bytes": 9831,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-11",
+      "canales_bytes": {
+        "solicitud_serializada": 1912,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6244
+      },
+      "total_bytes": 9838,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-12",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-13",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-14",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-15",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-16",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-17",
+      "canales_bytes": {
+        "solicitud_serializada": 1986,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9905,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-18",
+      "canales_bytes": {
+        "solicitud_serializada": 1903,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9822,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-19",
+      "canales_bytes": {
+        "solicitud_serializada": 1901,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 8193
+      },
+      "total_bytes": 11776,
+      "excesos_previstos": [
+        "geometria"
+      ]
+    },
+    {
+      "id": "I0205-20",
+      "canales_bytes": {
+        "solicitud_serializada": 1901,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 8192
+      },
+      "total_bytes": 11775,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-21",
+      "canales_bytes": {
+        "solicitud_serializada": 1881,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9800,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-22",
+      "canales_bytes": {
+        "solicitud_serializada": 1565,
+        "fuente_svp": 11,
+        "estado_matematico": 214,
+        "soporte": 0,
+        "geometria": 6237
+      },
+      "total_bytes": 8027,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-23",
+      "canales_bytes": {
+        "solicitud_serializada": 1884,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9803,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-24",
+      "canales_bytes": {
+        "solicitud_serializada": 1912,
+        "fuente_svp": 1215,
+        "estado_matematico": 211,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9828,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-25",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    },
+    {
+      "id": "I0205-26",
+      "canales_bytes": {
+        "solicitud_serializada": 1906,
+        "fuente_svp": 1215,
+        "estado_matematico": 214,
+        "soporte": 253,
+        "geometria": 6237
+      },
+      "total_bytes": 9825,
+      "excesos_previstos": []
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "resultado": "CONFORME",
+  "base": "18963fa275d2a29633e164d9a2ea5fe1c4f11216",
+  "suceso_modificado": "S22",
+  "otros_sucesos": "idénticos al corte de entrada",
+  "registros_append_only": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md"
+  ],
+  "escenarios_originales": {
+    "ejecutados": 2,
+    "pendientes": 22
+  },
+  "variantes_c01_historicas": 13,
+  "filas_c02_c12_previas": 202,
+  "integracion_nueva": {
+    "preparados": 26,
+    "ejecutados": 0
+  },
+  "archivos_seguimiento_modificados": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json"
+  ],
+  "herramientas_comprobadas": {
+    "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)"
+  },
+  "cambios_rust": false,
+  "bancos_previos_modificados": false
+}

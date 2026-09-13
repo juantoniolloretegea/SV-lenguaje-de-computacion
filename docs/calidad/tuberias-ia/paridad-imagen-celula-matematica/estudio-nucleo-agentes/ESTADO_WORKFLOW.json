@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Comprometer contrato de integración y banco común C02–C05, con guardas transversales; Rust nativo nuevamente disponible.",
+  "siguiente_accion": "Resolver las sedes e interfaz de recepción/observación del recorrido C02–C05 para BIS-03 y documentar las condiciones de paso aplicables; después realizar y ensayar en Rust contra el banco comprometido.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "consolidacion-bis-02/README.md",
+  "ultimo_informe": "integracion-c02-c05-v0_1/README.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-216",
+  "ultimo_retp": "RETP-2026-218",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -221,5 +221,21 @@
     "bis_c01_repetido": 13,
     "nuevas_variantes": 0,
     "c02_c12_ejecutadas": 0
+  },
+  "integracion_c02_c05": {
+    "contrato": "integracion-c02-c05-v0_1/CONTRATO_INTEGRADO.md",
+    "banco": "integracion-c02-c05-v0_1/BANCO_PREVIO.json",
+    "estado": "compromiso documental previo; realización pendiente",
+    "casos_preparados": 26,
+    "positivos_previstos": 7,
+    "negativos_previstos": 19,
+    "casos_ejecutados": 0,
+    "sensibilidades_previstas": 4,
+    "sensibilidades_ejecutadas": 0,
+    "cierre_bis02": false,
+    "apertura_formal_bis03": false,
+    "perfil_integrado": "en",
+    "paridad_es_en_integrada": "pendiente",
+    "alcance": "Descriptor geométrico exacto y entrega documental local; sin imagen ni consumo visual de IA"
   }
 }

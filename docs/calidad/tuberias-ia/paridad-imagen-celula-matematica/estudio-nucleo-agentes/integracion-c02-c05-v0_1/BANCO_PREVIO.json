@@ -1,0 +1,226 @@
+{
+  "version": "BIS-I0205-BANCO/0.1",
+  "estado": "COMPROMISO_PREVIO_SIN_EJECUCION",
+  "alcance": "26 casos integrados documentales adicionales; no sustituyen ni se suman como ejecuciones a los 202 de C02–C12.",
+  "solicitudes": "SOLICITUDES.json",
+  "contextos": "CONTEXTOS_CONFIABLES.json",
+  "planes": "PLANES_DE_INYECCION.json",
+  "oraculos": "ORACULOS.json",
+  "casos": [
+    {
+      "id": "I0205-01",
+      "objeto": "A/r1: recorrido documental positivo",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-02",
+      "objeto": "B/r1: mismos bytes, otra instancia admitida",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-03",
+      "objeto": "A/r2: mismos bytes, revisión opaca distinta",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-04",
+      "objeto": "C1=16 y C7=49: soporte v2 admite toda la unidad",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-05",
+      "objeto": "C7 no seleccionado pero fuera de soporte v1",
+      "primera_guarda": "S02",
+      "justificacion": "La selección C1 no exonera comprobar CellSpec C7.",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-06",
+      "objeto": "Contenido de soporte alterado conserva referencia v1",
+      "primera_guarda": "S01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-07",
+      "objeto": "Petición B/r1 dentro de contexto esperado A/r1",
+      "primera_guarda": "I02",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-08",
+      "objeto": "Petición A/r2 dentro de contexto esperado A/r1",
+      "primera_guarda": "I02",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-09",
+      "objeto": "Geometría coherente de otro vector",
+      "primera_guarda": "M02",
+      "justificacion": "SHA propio correcto; discriminar símbolo frente al estado independiente antes de comparar SHA geométrico esperado.",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-10",
+      "objeto": "Transformación superior frente a identidad solicitada",
+      "primera_guarda": "M01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-11",
+      "objeto": "Superior-horario explícito: recorrido positivo",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-12",
+      "objeto": "Sin captura final independiente",
+      "primera_guarda": "D01",
+      "justificacion": "Ausencia de evidencia; no se deduce ausencia de entrega.",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-13",
+      "objeto": "Captor no admitido",
+      "primera_guarda": "D02",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-14",
+      "objeto": "Captura con invocación ajena",
+      "primera_guarda": "D03",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-15",
+      "objeto": "Captura A/r2 para A/r1 aunque bytes iguales",
+      "primera_guarda": "D04",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-16",
+      "objeto": "Buffer sustituido después de validar geometría",
+      "primera_guarda": "D06",
+      "justificacion": "Comparar bytes del límite final, no volver a abrir una ruta previamente validada.",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-17",
+      "objeto": "Nota imperativa tratada como documento; U preservada",
+      "primera_guarda": null,
+      "justificacion": "El texto no crea operación ni permiso; no habrá intérprete de notas.",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-18",
+      "objeto": "Cambio de operación en metadatos no concede autoridad",
+      "primera_guarda": "A01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-19",
+      "objeto": "Descriptor 8193 bytes excede cuota inclusiva",
+      "primera_guarda": "R01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-20",
+      "objeto": "Descriptor 8192 bytes en el límite inclusivo",
+      "primera_guarda": null,
+      "justificacion": "",
+      "precondicion_de_alcance": "Recorrido completo; recibo y captura concordantes, vector intacto."
+    },
+    {
+      "id": "I0205-21",
+      "objeto": "Perfil fuente omitido no se autodetecta",
+      "primera_guarda": "P01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-22",
+      "objeto": "Fuente inválida y soporte ausente: primero compilación",
+      "primera_guarda": "P02",
+      "justificacion": "",
+      "precondicion_de_alcance": "R01/P01 pasan. Rust debe rechazar la fuente; no acreditar la guarda de soporte."
+    },
+    {
+      "id": "I0205-23",
+      "objeto": "Vínculo sin revisión obligatoria",
+      "primera_guarda": "I01",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-24",
+      "objeto": "Estado matemático alterado con SHA propio correcto",
+      "primera_guarda": "I03",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-25",
+      "objeto": "Fallo posterior al despacho y sin captura",
+      "primera_guarda": "D07",
+      "justificacion": "Estado de efecto desconocido; no éxito, no cero efectos, no U ni reintento.",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    },
+    {
+      "id": "I0205-26",
+      "objeto": "Representación equivocada en captura",
+      "primera_guarda": "D05",
+      "justificacion": "",
+      "precondicion_de_alcance": "Todas las guardas anteriores deben pasar en la futura ejecución; una falla anterior no acredita esta guarda."
+    }
+  ],
+  "ejecutados": 0,
+  "secuencia_mismo_proceso": [
+    "I0205-05",
+    "I0205-04",
+    "I0205-05"
+  ],
+  "motivo_secuencia": "Rechazo v1, admisión v2, rechazo v1: discriminar caché de soporte indebidamente promovida; son 3 invocaciones, 2 variantes, no ejecución actual.",
+  "sensibilidades_observador": [
+    {
+      "id": "OBS-01",
+      "base": "I0205-01",
+      "mutacion": "Sustituir contexto de captura por B/r1 con mismos bytes",
+      "esperado": "RECHAZO_DEL_OBSERVADOR"
+    },
+    {
+      "id": "OBS-02",
+      "base": "I0205-09",
+      "mutacion": "Presentar éxito y recibo para geometría permutada",
+      "esperado": "RECHAZO_DEL_OBSERVADOR"
+    },
+    {
+      "id": "OBS-03",
+      "base": "I0205-12",
+      "mutacion": "Afirmar entrega sin captura independiente",
+      "esperado": "RECHAZO_DEL_OBSERVADOR"
+    },
+    {
+      "id": "OBS-04",
+      "base": "I0205-24",
+      "mutacion": "Convertir fallo técnico en U y afirmar preservación",
+      "esperado": "RECHAZO_DEL_OBSERVADOR"
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+-- Fixture sintético BIS-C03: dos nodos y 16 posiciones; pendiente de ensayo.
+-- BIS-C03 synthetic fixture: two nodes and 16 positions; execution pending.
+codomain K3 = { APTO, NO_APTO, INDETERMINADO };
+output_semantics Klin { APTO -> "ok"; NO_APTO -> "no"; INDETERMINADO -> "u"; }
+
+cellspec C1 { b: 4; codomain: K3; semantics: Klin; role: Base; }
+
+coupledspec CC1 { cell: C1; bridges: [3]; }
+coupledspec CC2 { cell: C1; bridges: [3]; }
+
+coupledstate S1 {
+  spec: CC1;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One, U, One, Zero, U, Zero, One, U];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One, U, One, Zero, U, Zero, One, U];
+}
+
+coupledstate S2 {
+  spec: CC2;
+  base_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One, U, One, Zero, U, Zero, One, U];
+  updated_vector: [Zero, One, U, Zero, Zero, One, U, Zero, One, U, One, Zero, U, Zero, One, U];
+}
+
+semantic_relation RArch {
+  kind: DeclaredRelation;
+  constraints: [CoherenciaLocal];
+}
+
+graph Arch1 {
+  nodes: [CC1, CC2];
+  edges: [];
+  relation: RArch;
+  regime: Simple;
+}
+
+frame F1 {
+  index: 1;
+  architecture: Arch1;
+  cell_states: [S1, S2];
+  eval_results: [];
+  gate_results: [];
+  supervision: [];
+  criticalities: [];
+}
+
+cellspec C7 { b: 7; codomain: K3; semantics: Klin; role: Base; }

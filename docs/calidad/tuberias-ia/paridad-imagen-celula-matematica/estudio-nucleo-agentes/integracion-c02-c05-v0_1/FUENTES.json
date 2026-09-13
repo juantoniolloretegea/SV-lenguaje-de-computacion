@@ -1,0 +1,74 @@
+{
+  "corte_publico": "18963fa275d2a29633e164d9a2ea5fe1c4f11216",
+  "corte_laboratorio": "3678ae6c2881d74b2d46da99c33775d6a2979108",
+  "rectores_y_contratos": {
+    "AGENTS.md": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md": "c844ba3e1f279ee9d152d1598b608d97321f21b2b98d1721820039122a11ff60",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md": "36802d91f1b406d31eb73d9b475c2e3159d0abe87615a8a5c47ef9d575f7b1f5",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md": "2ab2ea660f17baef23ad4b82e263ea50007c7b6986e5aa08ee0f768447fbc72c",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md": "17b01025dd0e01a2b7cb26636114e4a53b1d48f3a356f0032e1eb6586539fbd3",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md": "a7e4c0e636c145d2001c0d488a19343965e060336cd3340bfeeeab0b846527da",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md": "ba09f55957e4e792c5dfb3c4cea947f080c85a2bce87bd22bd167afb30fb180a",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md": "ad5cd25055c18ba7b04b6f10f9f6586a73c2c9f5d122f2eb2ceb1980bf6d101a",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md": "32351e57cb71703b4fab206bf8d9e480b4e5f739cebb0e086af3c4d994ce4045",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md": "2cfc9a1afa706f3a59fd6fb2b2a443118ddf08950e0657da3b7d3d4d04a6b04f"
+  },
+  "lectura": "Rectores completos ya leídos, identidad revalidada en este turno; contratos C02–C05/C08–C12 leídos completos.",
+  "activos_copiados": {
+    "activos/dos-nodos-16.svp": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/fixtures/dos-nodos-16.svp",
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+    },
+    "activos/estado-16.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/fixtures/estado-16.json",
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8"
+    },
+    "activos/constitucion-v1.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/fixtures/constitucion-1.json",
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+    },
+    "activos/soporte-v1.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/fixtures/perfil-v1.json",
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+    },
+    "activos/soporte-v2.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/fixtures/perfil-v2.json",
+      "sha256": "3271bd618bb0792c84863de5750235224aa35faed5a27a64f262f5278222e280"
+    },
+    "activos/soporte-v1-alterado.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/fixtures/perfil-v1-alterado.json",
+      "sha256": "968d938a3689445a0579861b3d10b176c957617dfa09b57c4292138e5985d4e7"
+    },
+    "activos/geometria-identidad.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/oraculos/16-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213"
+    },
+    "activos/geometria-superior.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/oraculos/16-superior-horario.json",
+      "sha256": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604"
+    },
+    "activos/geometria-permutada.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/fixtures/C04-20.json",
+      "sha256": "6e97a1c600347b0ed1b9b2ecdf74c1e99f7a8826e1715b1145398894a2ddfa64"
+    },
+    "activos/convenio.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONVENIO_DE_PRUEBA.json",
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976"
+    },
+    "activos/transformaciones.json": {
+      "origen": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/TRANSFORMACIONES_DE_PRUEBA.json",
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686"
+    }
+  },
+  "activos_nuevos": {
+    "geometria-8193.json": "86b530fc568ad44f225ec5dcd44a46f732bc020d5079b39075501cd2a9eff5c2",
+    "estado-alterado.json": "a6ebd514f5dde691304ec5f7ff62885b0a6fdf5e2b9c98b122de517d5d67a8e8",
+    "dos-nodos-y-c7.svp": "1102386f5a0137b9efe96f87f196148def6f9af915f56954303d40876ac361c4",
+    "fuente-invalida.svp": "81183703fd090c24bb6d26975c20ef487e36698b21122a35a906e3d9199db5f7",
+    "geometria-8192.json": "be3d49b44d064dc99eac41872a6b64aace818cb89a01d4f84f7075319bc47a31"
+  }
+}

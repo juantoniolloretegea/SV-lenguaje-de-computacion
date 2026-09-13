@@ -1,0 +1,592 @@
+[
+  {
+    "id": "I0205-01",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-01",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-02",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-02",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "B",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-03",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-03",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r2",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-04",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-04",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-05",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-05",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-06",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-06",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-07",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-07",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-08",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-08",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-09",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-09",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-10",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-10",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-11",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-11",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "superior-horario"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-superior.json",
+      "sha256": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604",
+      "bytes": 6244
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-12",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-12",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": null,
+    "producir_captura": false,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-13",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-no-admitido",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-13",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-14",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "invocacion-ajena",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-15",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-15",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r2",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-16",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-16",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-permutada.json",
+      "sha256": "6e97a1c600347b0ed1b9b2ecdf74c1e99f7a8826e1715b1145398894a2ddfa64",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-17",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-17",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-18",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-18",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-19",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-19",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-20",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-20",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-8192.json",
+      "sha256": "be3d49b44d064dc99eac41872a6b64aace818cb89a01d4f84f7075319bc47a31",
+      "bytes": 8192
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-21",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-21",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-22",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-22",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-23",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-23",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-24",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-24",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  },
+  {
+    "id": "I0205-25",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-25",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "BIS-C04-GEOMETRIA/0.1",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": null,
+    "producir_captura": false,
+    "fallo_despues_de_despacho": true
+  },
+  {
+    "id": "I0205-26",
+    "estatuto": "ESTIMULO_FUTURO_NO_OBSERVACION",
+    "captor": "captor-local-i0205/1",
+    "contexto_captura": {
+      "ambito": "laboratorio-i0205",
+      "invocacion": "I0205-26",
+      "operacion": "entrega_documental",
+      "consumidor": "receptor-local-prueba",
+      "canal": "memoria-local",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "representacion": "imagen-no-documental",
+      "transformacion": "identidad"
+    },
+    "buffer_capturado": {
+      "archivo": "activos/geometria-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "producir_captura": true,
+    "fallo_despues_de_despacho": false
+  }
+]
