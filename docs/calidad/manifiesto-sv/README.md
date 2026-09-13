@@ -57,3 +57,7 @@ Se resuelve la disponibilidad de herramientas para trabajar en este entorno sin 
 Mostrar el acta no acredita detección o bloqueo de usos prohibidos, confianza frente a un host comprometido, permanencia del entorno ni cierre de la semántica. No se interpreta ni ejecuta el fragmento Rosetta. La aplicación pública de navegador no se presume recompilada por añadir una exportación al adaptador. La gramática 0.2, IR 0.3 y serializador 0.1.0 permanecen sin modificación.
 
 S22 / (p1+p3)-Bis continúa desde BIS-02: preparar entradas y oráculos de BIS-C01. Los 24 escenarios previos siguen sin ejecutar; esta prueba documental y la regresión del Lenguaje tienen objeto e identidad propios.
+
+## Corrección de empaquetado detectada en CI
+
+La primera candidata, `074436ce0a5fa9dd3fd3c3b1b8e45cf4419bbce5`, falló en la [ejecución aislada de fila 7](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744228854): la lista de fuentes admitidas omitía el nuevo recurso Markdown requerido por `include_str!`. Se añade exclusivamente ese fichero a las listas de empaquetado y verificación; se mantienen las restricciones sobre otros archivos. El ensayo aislado comprueba ahora las dos consultas del manifiesto y la autoprueba añade tres rechazos específicos. El registro original se conserva en `evidencia/ci-empaquetado-inicial.log`. El resultado de la repetición se documentará con el commit efectivamente comprobado.
