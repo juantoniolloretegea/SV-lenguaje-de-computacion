@@ -8,6 +8,8 @@ on:
       - "tests/row7_gh/**"
       - "tests/row7_candidate/**"
       - "rust/**"
+      - "tests/manifiesto_sv/**"
+      - "docs/calidad/ACTA_TECNICA_DE_PROHIBICION_ABSOLUTA_DE_USO_BELICO_Y_PRIMACIA_DE_SUPERVIVENCIA_HUMANA_EN_EL_SV_2026_03_26.md"
       - "docs/arquitectura/*R1_6*"
       - "tests/run_conformance.py"
       - "tests/oracle_support.py"
@@ -79,6 +81,12 @@ jobs:
         run: |
           cargo build --manifest-path rust/Cargo.toml --release -p sv_wasm --target wasm32-unknown-unknown
           test -f rust/target/wasm32-unknown-unknown/release/sv_wasm.wasm
+
+      - name: Verificar manifiesto incorporado sin dependencia del repositorio
+        run: |
+          mkdir -p artifacts/manifiesto-sv
+          node tests/manifiesto_sv/verificar.mjs > artifacts/manifiesto-sv/verificacion.json
+          cat artifacts/manifiesto-sv/verificacion.json
 
       - name: Ejercer paridad complementaria por WASI
         run: |
@@ -322,6 +330,9 @@ jobs:
           if-no-files-found: error
           retention-days: 90
           path: |
+            artifacts/manifiesto-sv/
+            rust/target/release/manifiesto-sv
+            rust/target/wasm32-wasip1/release/manifiesto-sv.wasm
             artifacts/r0-wasm/
             artifacts/r0-browser/
             rust/target/release/sv-native

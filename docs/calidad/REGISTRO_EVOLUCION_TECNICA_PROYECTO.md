@@ -1983,3 +1983,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-200 · S22 · Cierre de definición del workflow e inicio de ejecución
 
 2026-09-13T06:27:40Z. Workflow V2 cerrado como definición por instrucción humana; ejecución en curso. BIS-01 completado como radiografía documental/estática de doce obligaciones. BIS-02 iniciado con contrato candidato y 24 escenarios especificados, cero ejecutados. Pendiente nominal de semántica V0.2 rectificado con S13. 73 fuentes reutilizadas cotejadas contra blobs vigentes; Frontera v0 y S13 leídos completos; inspección selectiva de IR y rutas Rust. Matriz/banco y referencias comprobados; PDF de ocho páginas renderizado y revisado. Sin cargo/rustc: ninguna ejecución Rust/WASM nueva. [Resultado](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RESULTADO_BIS_01_Y_APERTURA_BIS_02.md). Materializar fixtures y oráculos del primer par BIS-C01, fijar montaje Rust identificado y completar los contratos BIS-02 antes de realizar cambios. Continúan las decisiones de frvis, inicialización, soporte y sede por operación.
+
+
+<a id="retp-201"></a>
+
+### RETP-2026-201 · S23 · Rust nativo y manifiesto incorporado
+
+2026-09-13T07:00:25Z. Rust 1.98.0 y Cargo 1.98.0 instalados. Consulta incorporada: 19 134 bytes idénticos entre destinos. Candidata ensayada localmente; integración y controles remotos pendientes. 369 pruebas nativas del workspace; 14 válidos y 106 inválidos de conformidad y paridad nativa-WASI; identidad manifiesto en nativo/WASI/adaptador WASM; negativos de argumentos, stdout y sensibilidad. Incidencias iniciales conservadas. [Contrato, resultados y reproducción](manifiesto-sv/README.md). Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles.

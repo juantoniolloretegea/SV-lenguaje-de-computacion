@@ -1,0 +1,18 @@
+{
+  "resultado": "CONFORME",
+  "bytes": 19134,
+  "sha256": "31ae77a963718ac72bbb74a4aac4fd06d788117167162835e0652f9fb2a60056",
+  "comprobaciones": [
+    "manifiesto-sv: texto íntegro fuera del repositorio",
+    "manifiesto-sv: rechazo de tres argumentos incompatibles",
+    "manifiesto-sv: fallo de stdout separado de éxito",
+    "manifiesto-sv: WASI sin acceso a archivos, positivo y negativo",
+    "sv-native: texto íntegro fuera del repositorio",
+    "sv-native: rechazo de tres argumentos incompatibles",
+    "sv-native: fallo de stdout separado de éxito",
+    "sv-native: WASI sin acceso a archivos, positivo y negativo",
+    "adaptador WASM: dos consultas íntegras por ABI",
+    "sensibilidad: byte alterado y truncamiento detectados"
+  ],
+  "limite": "Disponibilidad e identidad documental; no prueba de bloqueo de usos prohibidos ni confianza frente a host comprometido."
+}
