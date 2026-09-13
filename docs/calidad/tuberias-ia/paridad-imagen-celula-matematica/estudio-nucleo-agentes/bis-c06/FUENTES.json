@@ -1,0 +1,103 @@
+{
+  "corte_lenguaje": "de6d8809a3c01f98d90775f80d5b05982491ec18",
+  "corte_laboratorio": "f2de5c22a807ce325c8f9983b95e312a4245c359",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad conservada frente a C05"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad conservada frente a C05"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad conservada frente a C05"
+    },
+    {
+      "ruta": "rust/sv_core/src/frame.rs",
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+      "lectura": "Lectura completa en C06"
+    },
+    {
+      "ruta": "rust/sv_core/src/transition_data_wellformed.rs",
+      "sha256": "eee0ec54463a0ca2a14b6685733d28261179a5d57593ee781d02f661d5109973",
+      "lectura": "Lectura completa en C06"
+    },
+    {
+      "ruta": "rust/sv_core/src/context_wellformed.rs",
+      "sha256": "bcb182abd71d3e1e1c00b0685a4032328db322440ed30916c9688a8d76f25fe9",
+      "lectura": "Lectura completa en C06"
+    },
+    {
+      "ruta": "rust/sv_core/src/ir.rs",
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "Campos N3 y consultas; invariantes declarados"
+    },
+    {
+      "ruta": "rust/sv_core/src/wellformed.rs",
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "Ramas Frame, TransitionData y Trajectory"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_2.md",
+      "sha256": "4ec6f7b202e972b7c4e41a3de20a348d2d21d72ee03c5357590a37cda573d8ee",
+      "lectura": "Tipos N3; J4.1–J5.1"
+    },
+    {
+      "ruta": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+      "lectura": "Cierre de Frame y adenda de Horizon"
+    },
+    {
+      "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+      "sha256": "954066cf56d6a61d152eaf594cfd7b0da3f43b83103a2e42e8e934f0ca460d2a",
+      "lectura": "DFL-003/004/006 y recepciones pertinentes"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md",
+      "sha256": "ea19e5d1575f7f8601a5e553ea6a505aedcbb3dcac97dffbd258b1a655490571",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/FUENTES_CONCORDANCIA_SUCESO_FRAME.json",
+      "sha256": "b474be53caaaaf79ff9a8c418130dc803e5fbbf91e970198afdb02f4979c6bcd",
+      "lectura": "Identidades de copias doctrinales"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Lectura previa conservada; secuencia activa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "Escenarios originales C06/C07"
+    }
+  ],
+  "doctrina_externa": [
+    {
+      "path": "documentos/composicion/III_horizonte_sucesos_reevaluacion_discreta.md",
+      "bytes": 11928,
+      "sha256": "9aeb3ce7bdea0cd7769760ed22eb7dd7b814cc39a273c5fb4a0470791964eaea",
+      "git_blob_sha": "92caea3f63ace2f494c4871f69680fd38ab3ee77",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Completa",
+      "lectura_en_C06": "Pasajes III §§3.2–3.7,5,6 o V §6; copias con identidad verificada"
+    },
+    {
+      "path": "documentos/composicion/V_invariantes_agentes_operador_consulta.md",
+      "bytes": 18061,
+      "sha256": "fbf53f17d8cbeb17dedb12dd098121ba1591e0603c2aa196d7bb454784123c2b",
+      "git_blob_sha": "d609810b4072a4b61e29ef10f4d26751862b0c86",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Completa",
+      "lectura_en_C06": "Pasajes III §§3.2–3.7,5,6 o V §6; copias con identidad verificada"
+    }
+  ]
+}

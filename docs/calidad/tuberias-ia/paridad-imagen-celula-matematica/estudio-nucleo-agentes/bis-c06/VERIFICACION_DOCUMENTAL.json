@@ -1,0 +1,20 @@
+{
+  "estatuto": "Cotejo auxiliar Python de integridad y estructura documental; no ensayo Rust ni prueba de estatutos ejecutados",
+  "corte": "de6d8809a3c01f98d90775f80d5b05982491ec18",
+  "comprobaciones": [
+    "18 escenarios únicos, seis positivos contractuales y doce negativos; fixtures ejecutables y resultados observados nulos",
+    "Cada escenario identifica precondición, estímulo, esperado y observador requeridos",
+    "Testigo de dos instantáneas: mismo F1, par contenedor diferente; alternancia abstracta conservada",
+    "Fuentes internas y copias doctrinales verificadas por SHA-256",
+    "Matriz apunta a archivos existentes; enlaces documentales locales resueltos",
+    "RETP e historial mantienen prefijos íntegros; sólo S22 cambia",
+    "S24 sigue pendiente; C01–C05 intactos; dos escenarios originales ejecutados y veintidós pendientes"
+  ],
+  "ensayos_c06_ejecutados": 0,
+  "limitaciones": [
+    "No se ha compilado código nuevo ni ejecutado escenarios C06",
+    "El testigo no constituye IR bien formada, Frame real ni transición observada",
+    "Las capacidades productivas ausentes siguen pendientes; no se fabrican positivos con for_test",
+    "Concordancia de extensión material remitida a BIS-03, sin cambio de IR"
+  ]
+}

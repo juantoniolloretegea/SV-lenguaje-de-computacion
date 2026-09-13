@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C06: lectura técnica, inicialización y reevaluación bajo contratos diferenciados. Completar BIS-02; decidir sedes en BIS-03 y realizar y probar en Rust lo justificado en BIS-04.",
+  "siguiente_accion": "Continuar BIS-C07: composición entre células de dimensiones diferentes, dirección, puentes y codominios bajo contrato declarado. Completar BIS-02 antes de decidir sedes e implementar y probar en Rust.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c05/README.md",
-  "ampliacion": "BIS-C05: contrato de entrega/consumo y 16 especificaciones documentales, cero ejecutadas. Criterio transversal: preparación Python, compilación Rust, recepción de datos y validación SV con evidencia separada.",
-  "ultimo_retp": "RETP-2026-208",
+  "ultimo_informe": "bis-c06/README.md",
+  "ampliacion": "BIS-C06: contrato de estatutos, 18 escenarios especificados y testigo de instantáneas; cero ejecutados. Guardas Rust existentes distinguidas de productores y continuidad pendientes.",
+  "ultimo_retp": "RETP-2026-209",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -133,5 +133,14 @@
     "corte_revision": "177f54f06b532f0a91c17a0c7be8dab314f3314e",
     "alcance": "Entrega documental especificada; sin imágenes ni consumo visual ejecutado"
   },
-  "criterio_aceptacion_rust": "bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md"
+  "criterio_aceptacion_rust": "bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+  "preparacion_bis_c06": {
+    "contrato": "bis-c06/CONTRATO_ESTATUTOS_CANDIDATO_v0_1.md",
+    "banco": "bis-c06/BANCO_PREVIO_v0_1.json",
+    "variantes_preparadas": 18,
+    "variantes_ejecutadas": 0,
+    "corte_revision": "de6d8809a3c01f98d90775f80d5b05982491ec18",
+    "alcance": "Contrato y escenarios; fixtures ejecutables y productores pendientes",
+    "cuestion_para_bis03": "Concordancia entre entrada terminal de instantánea y conservación append-only material"
+  }
 }

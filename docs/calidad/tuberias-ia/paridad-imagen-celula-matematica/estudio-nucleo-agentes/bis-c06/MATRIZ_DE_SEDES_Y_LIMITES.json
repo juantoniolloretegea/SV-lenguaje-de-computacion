@@ -1,0 +1,47 @@
+{
+  "estatuto": "Inspección estática y propuestas de sede; no decisión de BIS-03",
+  "filas": [
+    {
+      "objeto": "Lectura técnica",
+      "localizacion": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/codigo/lectura.rs",
+      "existente": "Correspondencia documental, sin Frame ni permiso",
+      "pendiente": "Enlace concreto al consumidor C05",
+      "sede_a_contrastar": "Frontera documental"
+    },
+    {
+      "objeto": "Recuperación y base nueva",
+      "localizacion": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "existente": "Historia experimental de dos actos y base documental de vigencia",
+      "pendiente": "No es reevaluación algebraica SV",
+      "sede_a_contrastar": "Frontera documental; conservar alcance S14"
+    },
+    {
+      "objeto": "Frame",
+      "localizacion": "rust/sv_core/src/frame.rs",
+      "existente": "Constructor interno, relaciones resueltas y cierre J-F0–J-F5; sin exhaustividad",
+      "pendiente": "Productor completo y enlace con acto inicial",
+      "sede_a_contrastar": "BIS-03: núcleo y vinculación exterior según obligación"
+    },
+    {
+      "objeto": "TransitionData",
+      "localizacion": "rust/sv_core/src/transition_data_wellformed.rs",
+      "existente": "Unicidad de eventos/destinos y pertenencia/posiciones; no ejecuta transición",
+      "pendiente": "Suficiencia del operador inducido y producción",
+      "sede_a_contrastar": "Núcleo para ley constituida; dominio para declaración"
+    },
+    {
+      "objeto": "Trayectoria",
+      "localizacion": "rust/sv_core/src/wellformed.rs; rust/sv_core/src/context_wellformed.rs",
+      "existente": "Alternancia, tipos y arquitectura coherente por programa",
+      "pendiente": "Relación material entre instantáneas y custodia append-only",
+      "sede_a_contrastar": "BIS-03: realización y frontera de custodia"
+    },
+    {
+      "objeto": "Consulta formal",
+      "localizacion": "rust/sv_core/src/context_wellformed.rs",
+      "existente": "Coherencia de contextos; no ejecuta consulta ni causalidad",
+      "pendiente": "Respuesta/J/M y CQ1–CQ6 completos",
+      "sede_a_contrastar": "DFL-003/004/006 conservadas"
+    }
+  ]
+}

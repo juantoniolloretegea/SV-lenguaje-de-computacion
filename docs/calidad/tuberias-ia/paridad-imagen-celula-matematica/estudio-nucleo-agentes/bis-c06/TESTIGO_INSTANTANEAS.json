@@ -1,0 +1,29 @@
+{
+  "estatuto": "Testigo abstracto de representación; no IR ejecutada ni datos de dominio",
+  "referencias_simbolicas": [
+    "F1",
+    "F2",
+    "nu1"
+  ],
+  "instantanea_a": {
+    "entries": [
+      [
+        "F1",
+        null
+      ]
+    ]
+  },
+  "instantanea_b": {
+    "entries": [
+      [
+        "F1",
+        "nu1"
+      ],
+      [
+        "F2",
+        null
+      ]
+    ]
+  },
+  "observacion": "F1 conserva su referencia; el primer par serializado difiere. Dos instantáneas locales no acreditan el contrato de extensión de un historial material."
+}
