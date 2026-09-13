@@ -6,9 +6,9 @@ import sys,tarfile,shutil,subprocess,json,hashlib,os,time
 D=Path(__file__).resolve().parents[1]
 if len(sys.argv)!=2:raise SystemExit('Uso / usage: python soporte/reproducir.py DIRECTORIO_NUEVO')
 W=Path(sys.argv[1]).resolve();W.mkdir(parents=True,exist_ok=False)
-for archive in ('sv_core-verificado.tar.gz','ADMISION_VERIFICADA.tar.gz','ENTRADAS_R01.tar.gz'):
+for archive in ('sv_core-verificado.tar.gz','ADMISION_VERIFICADA.tar.gz','ENTRADAS.tar.gz'):
  with tarfile.open(D/archive) as t:t.extractall(W,filter='data')
-for root,name in [('sv_core','NUCLEO_FUENTES.json'),('sv_bis_i0205','ADMISION_FUENTES.json'),('entradas','ENTRADAS_R01_MATERIALIZADAS.json')]:
+for root,name in [('sv_core','NUCLEO_FUENTES.json'),('sv_bis_i0205','ADMISION_FUENTES.json'),('entradas','ENTRADAS_MATERIALIZADAS.json')]:
  manifest=json.loads((D/name).read_text());manifest=manifest['archivos'] if root=='sv_core' else manifest
  for p,h in manifest.items():assert hashlib.sha256((W/root/p).read_bytes()).hexdigest()==h,p
 shutil.copytree(D/'proyecto',W/'proyecto');out=W/'ejecucion';out.mkdir();commands=[]

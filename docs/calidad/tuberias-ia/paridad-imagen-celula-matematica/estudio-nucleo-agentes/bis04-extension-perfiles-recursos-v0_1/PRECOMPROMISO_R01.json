@@ -1,0 +1,9 @@
+{
+  "PARIDAD_R01_PREVIA.json": "265f343fa98ff8de09ef946d2f4973e54dd94e3bbabee46f20e158fc512dd86a",
+  "ENTRADAS_R01.tar.gz": "58a4cebb91f024ac1b379e037eead91d1b8d25221607911fbc75089bec440f25",
+  "ENTRADAS_R01_MATERIALIZADAS.json": "3da9d15cecb9ab83d3d3e02a59facb6101e8c8ea9baa255be240ede9d030128a",
+  "ADENDA_R01_PREVIA.json": "59114af68def61ae42fbbc273e15b95bc84d910c60eb649f5cf6914d8c4b0acb",
+  "soporte/reproducir.py": "306f403106c3171ac7f58951061c86d514d7b78da6144050c91356364fa62376",
+  "proyecto/src/main.rs": "fdeee554e4b098b926a0dff87717f28759922b5304d6e1495e0eff2736323d47",
+  "proyecto/src/observer.rs": "0971a2b61433f961e2d2da142e473dc254e7116ef9b9dd0cb9fd4e52b2f8f4b1"
+}

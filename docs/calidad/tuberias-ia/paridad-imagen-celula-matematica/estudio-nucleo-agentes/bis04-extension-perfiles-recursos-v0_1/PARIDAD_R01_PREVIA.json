@@ -1,0 +1,47 @@
+[
+  {
+    "id": "PAR01",
+    "a": "ES01/source.bin",
+    "b": "ES02/source.bin",
+    "perfil_a": "en",
+    "perfil_b": "es",
+    "equivalentes": true,
+    "operaciones_minimas": 0
+  },
+  {
+    "id": "PAR02",
+    "a": "ES02/source.bin",
+    "b": "ES08/source.bin",
+    "perfil_a": "es",
+    "perfil_b": "es",
+    "equivalentes": true,
+    "operaciones_minimas": 0
+  },
+  {
+    "id": "PAR03-R01",
+    "a": "paridad-r01/base.en.svp",
+    "b": "paridad-r01/base.es.svp",
+    "perfil_a": "en",
+    "perfil_b": "es",
+    "equivalentes": true,
+    "operaciones_minimas": 1
+  },
+  {
+    "id": "PAR04-R01",
+    "a": "paridad-r01/base.en.svp",
+    "b": "paridad-r01/comentario.es.svp",
+    "perfil_a": "en",
+    "perfil_b": "es",
+    "equivalentes": true,
+    "operaciones_minimas": 1
+  },
+  {
+    "id": "PAR05-R01",
+    "a": "paridad-r01/base.en.svp",
+    "b": "paridad-r01/dato_distinto.es.svp",
+    "perfil_a": "en",
+    "perfil_b": "es",
+    "equivalentes": false,
+    "operaciones_minimas": 1
+  }
+]

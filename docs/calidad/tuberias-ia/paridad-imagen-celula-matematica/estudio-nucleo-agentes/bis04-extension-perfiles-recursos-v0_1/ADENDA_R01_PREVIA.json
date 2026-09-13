@@ -1,0 +1,38 @@
+{
+  "causa": "Los fixtures C12 usan Celda, palabra protegida de la unión de perfiles. Ambas compilaciones fallan antes de emitir IR. Defecto del estímulo; no evidencia de desigualdad semántica.",
+  "evidencia": "EVIDENCIA_CAMPANA_01.tar.gz",
+  "estado": "VARIANTES_NUEVAS_PENDIENTES_DE_EJECUCION",
+  "cambios": [
+    {
+      "original": "paridad/base.en.svp",
+      "sha256_original": "9cc75bff1d36d1ea7a4e14611c098b5f269ba4e5cbc512a317c5bc85c7e486f9",
+      "variante": "paridad-r01/base.en.svp",
+      "sha256_variante": "305fc4413726deda4112b048ce474596bce9adaf4bf77d1e5f81d6bd8bd29f8e",
+      "cambio": "Identificador Celda → CeldaPrueba; dos ocurrencias, sin cambiar datos, orden, dimensiones ni operación."
+    },
+    {
+      "original": "paridad/base.es.svp",
+      "sha256_original": "d1c398d8496f62fc02d99e3938796b1ada417bc77c4c57daa4ce42de311384e3",
+      "variante": "paridad-r01/base.es.svp",
+      "sha256_variante": "163378745ac3af4f6d164ae978db5111e426f07f0fe8d9025d8ca971228722d5",
+      "cambio": "Identificador Celda → CeldaPrueba; dos ocurrencias, sin cambiar datos, orden, dimensiones ni operación."
+    },
+    {
+      "original": "paridad/comentario.es.svp",
+      "sha256_original": "0827447671ab1b18a9cacc11274ee509f7b1d73db275dfa16e47c2456fae9b89",
+      "variante": "paridad-r01/comentario.es.svp",
+      "sha256_variante": "87a2ec241b4e0cd1a08a81f0afb512b41f2ed51e3c36d8e8b606033536e17aee",
+      "cambio": "Identificador Celda → CeldaPrueba; dos ocurrencias, sin cambiar datos, orden, dimensiones ni operación."
+    },
+    {
+      "original": "paridad/dato_distinto.es.svp",
+      "sha256_original": "9a90d59a2a026f83f104b83e41bd9f557363fc3a449aaa8bfef795265e093643",
+      "variante": "paridad-r01/dato_distinto.es.svp",
+      "sha256_variante": "3f9fe553f50b0085592c7a60526c31fd7169af581977e20011a77566073b7b01",
+      "cambio": "Identificador Celda → CeldaPrueba; dos ocurrencias, sin cambiar datos, orden, dimensiones ni operación."
+    }
+  ],
+  "oraculos": "Cuatro equivalencias y una desigualdad siguen exigidas. PAR01/02 y los 26 casos integrados permanecen idénticos. PAR03/04/05 históricos conservan su fracaso; nuevas identidades -R01.",
+  "nucleo_y_admision": "Sin modificaciones",
+  "documentacion_futura": "Trasladar la colisión del identificador Celda al retorno de errores/documentación; no marcar como ejecutadas las 202 filas originales."
+}
