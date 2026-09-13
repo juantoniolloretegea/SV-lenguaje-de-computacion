@@ -6,13 +6,13 @@
 
 [Explicación para terceros — Markdown](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.md) · [PDF](../CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13_V2.pdf) · [Hallazgos](HALLAZGOS.md) · [Identidades de fuentes](FUENTES.json) · [Comprobaciones](VERIFICACION.json).
 
-## Trabajo vigente: S22 · RETP-2026-203
+## Trabajo vigente: S22 · RETP-2026-205
 
 **Workflow V2: definición cerrada; ejecución en curso.** [Markdown](WORKFLOW_P1_P3_BIS_v2.md) · [PDF](WORKFLOW_P1_P3_BIS_v2.pdf) · [Estado](ESTADO_WORKFLOW.json) · [Resultado BIS-01 e inicio BIS-02](RESULTADO_BIS_01_Y_APERTURA_BIS_02.md).
 
 BIS-00 y BIS-01 finalizados en sus alcances documentales. BIS-02 en ejecución: [contrato candidato](CONTRATO_CANDIDATO_BIS_02_v0_1.md), [banco preliminar histórico de 24 escenarios](BANCO_PREVIO_BIS_02_v0_1.json) y [matriz de doce obligaciones](MATRIZ_BIS_01.json). S13 ya fijaba la denominación precisa de gramática 0.2, IR 0.3 y obligaciones semánticas en Frontera/IR/adendas; se corrige el pendiente nominal de localizar «semántica V0.2» independiente.
 
-Se conservan [workflow V1](WORKFLOW_P1_P3_BIS_v1.md), [radiografía inicial](RADIOGRAFIA_INICIAL_BIS_01.md), [política Rust ES/EN](DOCUMENTACION_RUST_ES_EN_v1.md) y antecedentes. La revisión estática no acredita pruebas Rust. El [contraste nativo BIS-C01](bis-c01/RESULTADO.md) ejecuta dos escenarios en trece variantes: 13/13 conformes y 4/4 sensibilidades. Los otros 22 escenarios siguen pendientes. El siguiente objeto es el contrato de soporte de BIS-C02. La GUI queda para después del Bis, el catálogo y el cierre de fase.
+Se conservan [workflow V1](WORKFLOW_P1_P3_BIS_v1.md), [radiografía inicial](RADIOGRAFIA_INICIAL_BIS_01.md), [política Rust ES/EN](DOCUMENTACION_RUST_ES_EN_v1.md) y antecedentes. La revisión estática no acredita pruebas Rust. El [contraste nativo BIS-C01](bis-c01/RESULTADO.md) ejecuta dos escenarios en trece variantes: 13/13 conformes y 4/4 sensibilidades. Los otros 22 escenarios siguen pendientes. [BIS-C02](bis-c02/README.md) concreta contrato candidato y 14 variantes documentales, cero ejecutadas. Continúa BIS-C03: identidad, constitución y revisión; antes de realizar código se completarán los contratos y se decidirán sus sedes conforme al workflow. La GUI queda para después del Bis, el catálogo y el cierre de fase.
 
 ## Concordancia de BIS-01 · S22 / RETP-2026-198–199
 

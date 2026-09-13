@@ -1,0 +1,382 @@
+{
+  "version": "BIS-C02-BANCO/0.1",
+  "estatuto": "Entradas y oráculos previos de un contrato candidato; sin realización ni ejecución acreditadas",
+  "escenarios_originales": [
+    "BIS-C02-P",
+    "BIS-C02-N"
+  ],
+  "variantes": 14,
+  "ejecutadas": 0,
+  "registro_perfiles": "REGISTRO_PERFILES_PRUEBA.json",
+  "casos": [
+    {
+      "id": "C02-01",
+      "escenario": "BIS-C02-P",
+      "entrada": {
+        "archivo_svp": "fixtures/b5-exacto.svp",
+        "sha256_svp": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "PERTENECE_AL_SOPORTE_DE_PRUEBA",
+        "motivo": "25 pertenece a {16,25}",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 5,
+            "n": 25
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-02",
+      "escenario": "BIS-C02-P",
+      "entrada": {
+        "archivo_svp": "fixtures/b4-exacto.svp",
+        "sha256_svp": "767abe616e79eb2ba6e6049f0e3f59b1a5f7440762694ebc05d9db73cb1f5103",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "PERTENECE_AL_SOPORTE_DE_PRUEBA",
+        "motivo": "16 pertenece a {16,25}",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 4,
+            "n": 16
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-03",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b7-exacto.svp",
+        "sha256_svp": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "DIMENSION_NO_SOPORTADA",
+        "motivo": "49 es algebraicamente válido y no pertenece a {16,25}",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 7,
+            "n": 49
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-04",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b3-exacto.svp",
+        "sha256_svp": "90517b7d7fc2c29d9c9b73eb8a5bcb1ea028f27c905e868752211ced016a4047",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "DIMENSION_NO_SOPORTADA",
+        "motivo": "9 es el mínimo algebraico, pero no está en el soporte de prueba",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 3,
+            "n": 9
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-05",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b6-exacto.svp",
+        "sha256_svp": "79e3d9d42296e7dd6c3e9c1b321e2924ece96ec26c0f6f036624d276c635264b",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "DIMENSION_NO_SOPORTADA",
+        "motivo": "36 es algebraicamente válido y no pertenece a {16,25}",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 6,
+            "n": 36
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-06",
+      "escenario": "BIS-C02-P",
+      "entrada": {
+        "archivo_svp": "fixtures/b7-exacto.svp",
+        "sha256_svp": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "2",
+          "sha256": "3271bd618bb0792c84863de5750235224aa35faed5a27a64f262f5278222e280"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "PERTENECE_AL_SOPORTE_DE_PRUEBA",
+        "motivo": "49 pertenece a la versión 2 expresamente seleccionada",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 7,
+            "n": 49
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-07",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b7-exacto.svp",
+        "sha256_svp": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {
+        "predecesor": "C02-06",
+        "condicion": "Mismo proceso del montaje; sin selección implícita de última versión"
+      },
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "DIMENSION_NO_SOPORTADA",
+        "motivo": "Después de C02-06 se selecciona expresamente v1; no hereda v2",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 7,
+            "n": 49
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-08",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b5-exacto.svp",
+        "sha256_svp": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "3",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "identidad",
+        "resultado": "VERSION_NO_REGISTRADA",
+        "motivo": "v3 no aparece en el registro independiente",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-09",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b5-exacto.svp",
+        "sha256_svp": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+        "perfil_fuente": "en",
+        "soporte": null
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "identidad",
+        "resultado": "SOPORTE_AUSENTE",
+        "motivo": "No se selecciona soporte por defecto",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-10",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b5-exacto.svp",
+        "sha256_svp": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+        }
+      },
+      "montaje": {
+        "sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "esperado": {
+        "etapa": "identidad",
+        "resultado": "IDENTIDAD_NO_CONCORDANTE",
+        "motivo": "La huella declarada no coincide con el registro",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-11",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b7-exacto.svp",
+        "sha256_svp": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {
+        "cuerpo_sustituido": "fixtures/perfil-v1-alterado.json"
+      },
+      "esperado": {
+        "etapa": "identidad",
+        "resultado": "IDENTIDAD_NO_CONCORDANTE",
+        "motivo": "Se entrega cuerpo v1 alterado que añade 49; su huella no coincide",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-12",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b4-longitud-15.svp",
+        "sha256_svp": "9d0281afd3f4df5b4f5e71508f7ad381ca7c9e9c3f094b45dec168466ecde5d8",
+        "perfil_fuente": "en",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "validacion_svp",
+        "resultado": "RECHAZO_PREVIO_DEL_LENGUAJE",
+        "motivo": "CellState State: longitud de vector incompatible",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-13",
+      "escenario": "BIS-C02-P",
+      "entrada": {
+        "archivo_svp": "fixtures/b4-es.svp",
+        "sha256_svp": "d7358bf5bb4d80f13dd1b40f021cb228c7a01568c0c770b80757a40892eaa845",
+        "perfil_fuente": "es",
+        "soporte": {
+          "id": "SOPORTE-SINTETICO-C02",
+          "version": "1",
+          "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+        }
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "pertenencia",
+        "resultado": "PERTENECE_AL_SOPORTE_DE_PRUEBA",
+        "motivo": "La selección de idioma fuente no modifica S",
+        "dimensiones_comprobadas": [
+          {
+            "cell": "C",
+            "b": 4,
+            "n": 16
+          }
+        ],
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    },
+    {
+      "id": "C02-14",
+      "escenario": "BIS-C02-N",
+      "entrada": {
+        "archivo_svp": "fixtures/b4-longitud-15.svp",
+        "sha256_svp": "9d0281afd3f4df5b4f5e71508f7ad381ca7c9e9c3f094b45dec168466ecde5d8",
+        "perfil_fuente": "en",
+        "soporte": null
+      },
+      "montaje": {},
+      "esperado": {
+        "etapa": "validacion_svp",
+        "resultado": "RECHAZO_PREVIO_DEL_LENGUAJE",
+        "motivo": "La longitud inválida precede a soporte ausente en el montaje candidato",
+        "dimensiones_comprobadas": null,
+        "ir_o_recibo_productivo": false
+      },
+      "ejecucion": "PENDIENTE"
+    }
+  ]
+}

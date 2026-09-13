@@ -1,0 +1,4 @@
+codominio K = { A };
+semántica_de_salida S { A -> "Control sintético"; }
+especificación_de_celda C { b: 4; codominio: K; semántica: S; rol: Base; }
+estado_de_celda State { especificación: C; vector: [Cero, Uno, U, Uno, Cero, Cero, U, Uno, U, Cero, Uno, Cero, Uno, Uno, Cero, U]; }

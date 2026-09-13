@@ -1,0 +1,11 @@
+{
+  "schema": "BIS-C02-SOPORTE/0.1",
+  "id": "SOPORTE-SINTETICO-C02",
+  "version": "2",
+  "alcance": "Comprobación experimental de pertenencia de dimensiones; sin autorización de dominio ni ejecución operacional",
+  "tamanos": [
+    16,
+    25,
+    49
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "estatuto": "Registro independiente y local de fixtures, comprometido con el banco. No es una autoridad productiva ni se acepta desde la petición examinada.",
+  "perfiles": [
+    {
+      "id": "SOPORTE-SINTETICO-C02",
+      "version": "1",
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "archivo": "fixtures/perfil-v1.json"
+    },
+    {
+      "id": "SOPORTE-SINTETICO-C02",
+      "version": "2",
+      "sha256": "3271bd618bb0792c84863de5750235224aa35faed5a27a64f262f5278222e280",
+      "archivo": "fixtures/perfil-v2.json"
+    }
+  ]
+}

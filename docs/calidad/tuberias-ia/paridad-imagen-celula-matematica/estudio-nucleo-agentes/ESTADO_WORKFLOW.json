@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "BIS-C02: fijar contrato de soporte por versión y su ruta de comprobación; comprometer fixtures/oráculos antes de ejecutar. Después completar los contratos pendientes de BIS-02.",
+  "siguiente_accion": "Continuar BIS-C03: contrato de constitución, instancia, revisión y ligaduras. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c01/RESULTADO.md",
-  "ampliacion": "BIS-C01 ejecutado: 13/13 variantes nativas y 4/4 sensibilidades. BIS-02 sigue en ejecución; no cierre del Bis.",
-  "ultimo_retp": "RETP-2026-203",
+  "ultimo_informe": "bis-c02/README.md",
+  "ampliacion": "BIS-C01 conserva 13/13 variantes conformes. BIS-C02: contrato candidato de tamaños por versión y banco previo de 14 variantes materializados, sin ejecutar. BIS-02 continúa en ejecución.",
+  "ultimo_retp": "RETP-2026-205",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -94,5 +94,12 @@
     "estado": "pendiente",
     "registro": "RETP-2026-204",
     "condicion": "Finalizar Bis, catálogo y fase antes del análisis e instalación de GUI"
+  },
+  "preparacion_bis_c02": {
+    "contrato": "bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md",
+    "banco": "bis-c02/BANCO_PREVIO_v0_1.json",
+    "variantes_preparadas": 14,
+    "variantes_ejecutadas": 0,
+    "sede": "Propuesta para BIS-03; no decidida ni implementada"
   }
 }

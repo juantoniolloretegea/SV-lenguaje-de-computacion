@@ -1,0 +1,15 @@
+{
+  "estatuto": "Comprobación documental; no ensayo C02",
+  "corte_lenguaje_contenido": "ba2f964e47aac7ec42a1d2eb3f5d97bf81e6af96",
+  "registro_secuencia_S24": "7b385146b1d464c06d6a288c98f798cce6b30154",
+  "verificaciones": [
+    "Huellas del manifiesto previo concordantes",
+    "14 identificadores únicos y 14 estados PENDIENTE",
+    "SHA-256 de cada entrada SVP concordante",
+    "Siete fuentes SVP idénticas a sus fixtures C01",
+    "Perfiles v1/v2 concordantes con sus identidades y huellas en el registro de prueba",
+    "C02-06 precede a C02-07 en el banco",
+    "Referencias locales del contrato y README existentes"
+  ],
+  "ensayos_c02_ejecutados": 0
+}
