@@ -26,9 +26,9 @@
       "git_blob_sha1": "1111de5419b409751623da824748720d0534fd48"
     },
     "LEAME_PRIMERO.md": {
-      "bytes": 19500,
-      "sha256": "fca4664fabfc8b4e7401893f0cebe20c660fdbe2d0106f0aecfcfad6757799fb",
-      "git_blob_sha1": "66b4d8f440f6ed6f595f565c26323c4cca4daa16"
+      "bytes": 19905,
+      "sha256": "1ef445ee8f0738a83eac5ed3e9640a31688aefd3462ee0dfbea79d042e80b049",
+      "git_blob_sha1": "364d394b637f280e025a4c5244264ac40c85f290"
     },
     "README.md": {
       "bytes": 3672,
@@ -133,6 +133,11 @@
       "fecha": "2026-09-13",
       "registro": "RETP-2026-230 / S27",
       "alcance": "Incorporación de cobertura y rutas; originales conservados como prefijos y páginas; huellas actuales de navegación refrescadas. Antecedentes preservados en historial Git."
+    },
+    {
+      "fecha": "2026-09-13",
+      "registro": "RETP-2026-231",
+      "alcance": "Navegación a S26 R05 previo; PDF/MD sustantivos conservados."
     }
   ]
 }

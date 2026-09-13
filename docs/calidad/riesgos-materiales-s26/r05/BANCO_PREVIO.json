@@ -1,0 +1,50 @@
+{
+  "version": "S26-R05-BANCO/1",
+  "estado": "PREVIO_A_COMPILACION",
+  "casos": [
+    {
+      "id": "P01",
+      "estimulo": "Control intacto",
+      "oraculo": "Concordancia observada; un intento; recibo exacto."
+    },
+    {
+      "id": "P02",
+      "estimulo": "JSON de petición incompleto",
+      "oraculo": "Rechazo de admisión, cero intentos; relectura posterior real y concordante; sin recibo."
+    },
+    {
+      "id": "P03",
+      "estimulo": "Plan sin captura",
+      "oraculo": "D01 / NO_ACREDITADO, un intento; relectura concordante; sin recibo. Igualdad de bytes no acredita entrega."
+    },
+    {
+      "id": "P04",
+      "estimulo": "Ausencia de contexto después de observación inicial",
+      "oraculo": "Pánico del loader; no retorna MaterialRun. El arnés captura unwind y lee estado por separado; no inventa número de intentos."
+    },
+    {
+      "id": "P05",
+      "estimulo": "Pánico en hook posterior a operación y mutación de archivo",
+      "oraculo": "Hook alcanzado; estado externo alterado; no retorna MaterialRun ni relectura propia. No se atribuyen cero efectos, rollback o recibo reconstruido."
+    },
+    {
+      "id": "P06",
+      "estimulo": "Sustitución de ruta tras open, antes de read, con bytes diferentes",
+      "oraculo": "Primer lector conserva bytes del objeto abierto; operación abre sustituto y no entrega; relectura posterior detecta alteración; inode de ruta cambió."
+    },
+    {
+      "id": "P07",
+      "estimulo": "Sustitución de ruta tras open con bytes iguales",
+      "oraculo": "Concordancia y recibo exacto, pese al cambio de inode. Contraejemplo a deducir identidad del archivo a partir de igualdad de bytes."
+    }
+  ],
+  "control": "P01",
+  "alcance": "Siete sondas de una copia local Linux; no cobertura exhaustiva del conductor.",
+  "limites": [
+    "catch_unwind reside únicamente en arnés: producción no queda reparada ni integrada.",
+    "Abort, terminación de proceso y pérdida de alimentación no ensayados.",
+    "Sustitución controlada tras apertura: no carrera aleatoria ni mutación a mitad de read.",
+    "Inode observado en mismo sistema de archivos Linux, no identidad durable ni universal.",
+    "Sin BD, R2 durable, GUI, adquisición clínica, resistencia al host ni cobertura del dominio acreditados."
+  ]
+}

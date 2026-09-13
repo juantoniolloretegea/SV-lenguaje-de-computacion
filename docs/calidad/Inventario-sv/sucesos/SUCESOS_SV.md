@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T20:11:03Z
+**fecha_actualizacion_utc:** 2026-09-13T20:56:56Z
 
 **fecha_fin_utc:** —
 
@@ -906,22 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 10c84db9d330f5aeac1ba8b74f069024c6260e5d; laboratorio b763f5ab9f0dab59265ab1f2e73573ce954730d5
+**cortes_de_entrada:** Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R04: ocho sondas conformes. Relectura posterior detecta cambio literal y del vector; ausencia, error de lectura y exceso se distinguen sin borrar entrega previa. Fallo o cambio inicial detienen el recorrido; el observador heredado conserva su límite ante copias falsamente posteriores.
+**resultado:** R05: siete sondas previas fijadas para retorno rechazado, ausencia de captura, pánico y sustitución de ruta tras apertura. Copia local instrumentada; sin cambio productivo.
 
-**verificacion:** Una campaña Rust/Cargo 1.98.0, offline, ocho funciones y cero fallos de aserción; informes por caso y fuentes conservados. Realización local por operación; no BD, aislamiento, captura de pantalla ni recuperación acreditados.
+**verificacion:** Banco y 25 archivos fijados antes de Cargo; fuentes R04 conservadas. Precompromiso público y espejo preceden a campaña.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r04/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r05/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-229
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-231
 
-**siguiente_accion:** Extender la cualificación por las salidas restantes del conductor y fijar tratamiento de interrupción/pánico y sustitución de fuente durante lectura antes de integrar esta recepción en el recorrido completo. Conservar S26 y el relevo Bis/S24.
+**siguiente_accion:** Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías.
 
-**observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
-
+**observaciones:** S26 sigue en ejecución; doce casos globales abiertos. S22/S24 y banco Bis intactos. Ensayo Linux local sin BD, transacción durable, adquisición, GUI, fallo de hardware ni resistencia al host acreditados. Inode local no es identidad universal. S27 conserva reparto dominio/agente/Lenguaje.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

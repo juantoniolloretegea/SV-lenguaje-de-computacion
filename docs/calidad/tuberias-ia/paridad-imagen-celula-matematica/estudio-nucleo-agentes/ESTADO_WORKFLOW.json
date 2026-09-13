@@ -296,11 +296,11 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-229",
+    "registro": "RETP-2026-231",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Extender la cualificación por las salidas restantes del conductor y fijar tratamiento de interrupción/pánico y sustitución de fuente durante lectura antes de integrar esta recepción en el recorrido completo. Conservar S26 y el relevo Bis/S24.",
+    "siguiente_accion": "Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
@@ -314,6 +314,9 @@
     "sondas_r03_ejecutadas": 3,
     "campana_r04": "../../../riesgos-materiales-s26/r04/README.md",
     "sondas_r04_previstas": 8,
-    "sondas_r04_ejecutadas": 8
+    "sondas_r04_ejecutadas": 8,
+    "campana_r05": "../../../riesgos-materiales-s26/r05/README.md",
+    "sondas_r05_previstas": 7,
+    "sondas_r05_ejecutadas": 0
   }
 }

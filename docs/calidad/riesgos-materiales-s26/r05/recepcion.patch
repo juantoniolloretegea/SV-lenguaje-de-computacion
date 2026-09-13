@@ -1,0 +1,46 @@
+--- r04/recepcion.rs
++++ r05/recepcion.rs
+@@ -7,9 +7,13 @@
+ struct Observation { phase: &'static str, result: Result<Vec<u8>,ReadFailure> }
+ impl Observation {
+     fn read(path:&Path,phase:&'static str)->Self {
++        Self::read_after_open(path,phase,||{})
++    }
++    fn read_after_open(path:&Path,phase:&'static str,hook:impl FnOnce())->Self {
+         use std::io::Read;
+         let result=(|| {
+             let f=File::open(path).map_err(|e|ReadFailure{stage:"open",cause:format!("{:?}",e.kind()),bytes_seen:0})?;
++            hook(); // S26 R05: punto controlado posterior a open y anterior a read.
+             let mut bytes=Vec::with_capacity(WITNESS_LIMIT+1);
+             f.take((WITNESS_LIMIT+1) as u64).read_to_end(&mut bytes)
+                 .map_err(|e|ReadFailure{stage:"read",cause:format!("{:?}",e.kind()),bytes_seen:bytes.len()})?;
+@@ -55,15 +59,18 @@
+             j.set("estado_antes",J::Null);j.set("estado_despues",J::Null);
+             j.set("afirmacion_preservacion",J::Bool(false));j
+         }).unwrap_or(J::Null);
+-        obj(vec![("version",s("S26-R04-OBSERVACION/1")),("ruta_custodiada",s(&self.path.to_string_lossy())),
++        obj(vec![("version",s("S26-R05-OBSERVACION/1")),("ruta_custodiada",s(&self.path.to_string_lossy())),
+             ("preservacion",s(self.status)),("antes",self.before.documentary()),
+             ("despues",self.after.as_ref().map(|o|o.documentary()).unwrap_or(J::Null)),
+             ("entrega_previa",delivery)])
+     }
+ }
+ fn observed_case(dir:&Path,registry:&TrustedRegistry,expected:&[u8],after_operation:impl FnOnce())->MaterialRun {
++    observed_case_with_source_hook(dir,registry,expected,||{},after_operation)
++}
++fn observed_case_with_source_hook(dir:&Path,registry:&TrustedRegistry,expected:&[u8],after_open:impl FnOnce(),after_operation:impl FnOnce())->MaterialRun {
+     let path=dir.join("state.bin");
+-    let before=Observation::read(&path,"antes_de_operacion");
++    let before=Observation::read_after_open(&path,"antes_de_operacion",after_open);
+     if before.result.as_ref().map_or(true,|b|b.as_slice()!=expected) {
+         let status=if before.result.is_err(){"NO_ACREDITADO"}else{"ALTERACION_DETECTADA"};
+         return MaterialRun{path,before,after:None,delivery:None,status};
+@@ -81,3 +88,8 @@
+ pub(crate) fn run_with_injection(dir:&Path,registry:&TrustedRegistry,expected:&[u8],hook:impl FnOnce())->MaterialRun {
+     observed_case(dir,registry,expected,hook)
+ }
++
++#[cfg(test)]
++pub(crate) fn run_with_source_injection(dir:&Path,registry:&TrustedRegistry,expected:&[u8],hook:impl FnOnce())->MaterialRun {
++    observed_case_with_source_hook(dir,registry,expected,hook,||{})
++}

@@ -1,0 +1,322 @@
+{
+  "corte_lenguaje": "531010ab56298605f4f2469554a9f48420ffa4a9",
+  "archivos": {
+    "AGENTS.md": {
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "bytes": 4384
+    },
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": {
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "bytes": 23673
+    },
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": {
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "bytes": 29014
+    },
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": {
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "bytes": 67111
+    },
+    "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md": {
+      "sha256": "e2df7838ebc320166a65ca136c0df32737e0d57604b7fe7530ace849b847de21",
+      "bytes": 16699
+    },
+    "rust/sv_native/src/main.rs": {
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "bytes": 2408
+    },
+    "rust/sv_core/src/ir.rs": {
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "bytes": 12706
+    },
+    "rust/sv_core/src/frontend.rs": {
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "bytes": 97042
+    },
+    "rust/sv_core/src/bindings.rs": {
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "bytes": 20680
+    },
+    "rust/sv_core/src/frame.rs": {
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+      "bytes": 13990
+    },
+    "rust/sv_core/src/execution.rs": {
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "bytes": 16865
+    },
+    "rust/sv_core/Cargo.toml": {
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+      "bytes": 244
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.toml": {
+      "sha256": "f48b9e65b8f5d862c925a5d0fb34a78d0b99ce0b0ef051a7e52589225ff3d19a",
+      "bytes": 146
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.lock": {
+      "sha256": "6c5406e8b701bcb253879d22cb385424d40233af6deef31ef0ccbc393dbbf763",
+      "bytes": 235
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/json.rs": {
+      "sha256": "09da960df90ebd88e87c9c06741cee1e6c971048e8f3f11f80ef6fd3fad3dfab",
+      "bytes": 12749
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/main.rs": {
+      "sha256": "fe6a4a8d98c5d7fad6fff3bb52e34340605eeac78e6914b151cedff7592b13e0",
+      "bytes": 14259
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs": {
+      "sha256": "a0fa5a26292a50b46823952dae416d5a790d2cfee22d160b5ecf4903a0c88369",
+      "bytes": 24379
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/sha.rs": {
+      "sha256": "1085ba53dad74273e9d3499eb8285c3d605615b913a395bf9837c47673a83fe1",
+      "bytes": 3720
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/ENTRADAS.tar.gz": {
+      "sha256": "c5e49e57bc39192db32b10f03583b936ec508ab326c32d3a96ca791089765141",
+      "bytes": 24069
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/sv_core-verificado.tar.gz": {
+      "sha256": "7ff82c2aafaf95f9636eeeddd357e0f4ab53bc578756a7582e75fea661a153a7",
+      "bytes": 129397
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/MANIFIESTO.json": {
+      "sha256": "75b7c7f6bb5b3dc33cd938658d45b741b1d1e725642fff67b2ca5b3d2d70650c",
+      "bytes": 4525
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.toml": {
+      "sha256": "8d9985dab3ad91e70ba749b8b0cdd92615dc502100e2f8a8dda7f14c1327bcd6",
+      "bytes": 172
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.lock": {
+      "sha256": "f94fbde29aaf7bc3949f4db77cbdbfaaac5fe60fed4e1ef7527234e141276917",
+      "bytes": 340
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/main.rs": {
+      "sha256": "fdeee554e4b098b926a0dff87717f28759922b5304d6e1495e0eff2736323d47",
+      "bytes": 9430
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/observer.rs": {
+      "sha256": "0971a2b61433f961e2d2da142e473dc254e7116ef9b9dd0cb9fd4e52b2f8f4b1",
+      "bytes": 4730
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/recepcion.rs": {
+      "sha256": "ea66b910d00980d7cba6beee9481c739f698fd65b31e64e6c0b43678ad352458",
+      "bytes": 4312
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/reproducir.py": {
+      "sha256": "1822901009d8b182daf43c3a476e865bf37439eea2d37a5d51d66f4fd7a69136",
+      "bytes": 2339
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/conservar.py": {
+      "sha256": "559444eda71b5a933ddefa22ff7cbd4e847dbae38886a62af4ceedf3a02cd46f",
+      "bytes": 5509
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/FUENTES.json": {
+      "sha256": "cb718e0a3553f9604349502ff96981af2db9920b849a7b09817f179e175783f0",
+      "bytes": 5825
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/BANCO_PREVIO.json": {
+      "sha256": "443a79f474b3f0e3619d5600ffff499b481c99fb2cdd0a3bfb2971def58cdc5d",
+      "bytes": 1224
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/publicar.py": {
+      "sha256": "afcde28c29cf86c23b8535a20006582901920fa195e882647a002b176398c518",
+      "bytes": 2542
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/RESULTADOS.json": {
+      "sha256": "ee54b6c4e5e8febc769048fc8451da89c8c02fe784bc981d3a2056d6b1e3b181",
+      "bytes": 1715
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/gestionar.py": {
+      "sha256": "86770b88fc513d093db061de27b09643a68707d1c03b4e19a4607cfb2b40eb6e",
+      "bytes": 6150
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/preparar.py": {
+      "sha256": "a8acfdd99e9e031d9f1e3f2835010dc65bcbaa5dc2daf1c2f9aec68e759f7c66",
+      "bytes": 1230
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/conductor.rs": {
+      "sha256": "d3ac48049bc8ba5fa9f9d3288983ee376c683981e2c3538d78b6ae85744c078d",
+      "bytes": 4751
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/PRECOMPROMISO.json": {
+      "sha256": "c4210220f17582a8c29c0bb8288977c291b9c4c40e3564b8d4b37203357e7c81",
+      "bytes": 2458
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/README.md": {
+      "sha256": "a23cc407b9bc7514cacba4a696cb29f1c949b329d5992ec9a12519c7118b14a4",
+      "bytes": 9233
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/probe.rs": {
+      "sha256": "4ea0b4910de99bc0c9996cc8011796247fece808bf3d84abb7ce394487c68566",
+      "bytes": 5507
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/Cargo.lock": {
+      "sha256": "f551c7313e3a43e1a70c513fcb5c364c56f795171bf87970925d04c371f79adb",
+      "bytes": 336
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/01.stdout": {
+      "sha256": "fb3f25aefd6d5441842d285f5a9b125b3f0f0b0bf2013d9a32677f9e99c6c854",
+      "bytes": 36
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/ORDENES.json": {
+      "sha256": "b694abd790ee5578a7a64274689071077b8172a57c33a6d2c7d603e4c083c528",
+      "bytes": 457
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/HUELLAS.json": {
+      "sha256": "0ff5b0ae1e84699328d4cd7dc3463d9c6b68ee4df794bd2f5b201249d745cab9",
+      "bytes": 1965
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/00.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/01.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/02.stderr": {
+      "sha256": "d25cd4762614eaf5307af49e8a5597ae473ba1034f210076edf819b339c9240c",
+      "bytes": 17818
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/02.stdout": {
+      "sha256": "57837439faeecbb64e4d8ab07251054bc271d00ad7947ed3d99b679b04015867",
+      "bytes": 527
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/00.stdout": {
+      "sha256": "785f1364c0d5bf077f7bfb885fd4bde99899dfd80ce0fb6226a4527d9b27724c",
+      "bytes": 36
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P06-state.bin": {
+      "sha256": "18b423094a1956209d0c777bbae92a8b7cf74f17739df7db4b72bf932df7cd51",
+      "bytes": 2048
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P04.json": {
+      "sha256": "691d5434a9e7f125cf8c2a3c14ffa3ed65b4ab0df8e0da2027470623dc638367",
+      "bytes": 23398
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P03.json": {
+      "sha256": "a247df9fac52a15a1f6eee50130fc8b53ad402d360ffcd9a1da7d9032f8edb53",
+      "bytes": 24036
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/ESTADO_RUTAS.json": {
+      "sha256": "71305102c8e7dfa9fdd89f00d50d130c174206213236dc43baf261867e163b27",
+      "bytes": 166
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P02-state.bin": {
+      "sha256": "2d6335790b3cad0b8ea343ff218741d09bee8bc1d4a193c4917c97d6bb2d5429",
+      "bytes": 215
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P02.json": {
+      "sha256": "9c07bdbcafe7bb608a7458d91001f0b52b3fc4608a1c8717b3f102fce0169b0d",
+      "bytes": 24043
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P06.json": {
+      "sha256": "d2af7132ade78edd813127ba138052164b423f3307231c75770a25fec8ce56bb",
+      "bytes": 23420
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P07-state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P03-state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P01-state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P07.json": {
+      "sha256": "8224aa5945377717691f87158fdac60309f56ee00a55312f7fb9589c4c1fcc35",
+      "bytes": 966
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P08.json": {
+      "sha256": "d6eb0e79c87fca4ac8bf9abf6b2c785dca79f1f1e5dbc7c36bc434811b598b74",
+      "bytes": 23402
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P01.json": {
+      "sha256": "bff36853732dbcac04cff7349c3411e42023da72ff4075c952c8644f005d14b2",
+      "bytes": 24042
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P05.json": {
+      "sha256": "907a0a675f7b4c0e78afb4cfd46d5282aac004010dc64a7ba99f5455fd7deadb",
+      "bytes": 328
+    }
+  },
+  "lectura": "Rectores íntegros revalidados en continuidad; lectura material de funciones citadas; manifiestos/archivos fijan realización de ensayo."
+}

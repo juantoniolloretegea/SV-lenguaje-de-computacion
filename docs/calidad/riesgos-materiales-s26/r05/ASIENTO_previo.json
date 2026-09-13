@@ -1,0 +1,21 @@
+{
+  "suceso": {
+    "id": "S26",
+    "fecha_actualizacion_utc": "2026-09-13T20:56:56Z",
+    "cortes_de_entrada": "Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9",
+    "resultado": "R05: siete sondas previas fijadas para retorno rechazado, ausencia de captura, pánico y sustitución de ruta tras apertura. Copia local instrumentada; sin cambio productivo.",
+    "verificacion": "Banco y 25 archivos fijados antes de Cargo; fuentes R04 conservadas. Precompromiso público y espejo preceden a campaña.",
+    "siguiente_accion": "Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r05/README.md",
+    "referencia_calidad": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-231",
+    "observaciones": "S26 sigue en ejecución; doce casos globales abiertos. S22/S24 y banco Bis intactos. Ensayo Linux local sin BD, transacción durable, adquisición, GUI, fallo de hardware ni resistencia al host acreditados. Inode local no es identidad universal. S27 conserva reparto dominio/agente/Lenguaje."
+  },
+  "revision": 8,
+  "retp": 231,
+  "tipo": "BANCO_PREVIO",
+  "motivo": "Continuación autorizada tras incorporación documental de rutas.",
+  "base": "Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9",
+  "artefactos": "S26 R05; código íntegro y diferencia, fuentes, banco, evidencia; Sucesos/RETP y navegación.",
+  "impacto": "Cualificación local; ninguna promoción productiva.",
+  "titulo": "R05 previo"
+}

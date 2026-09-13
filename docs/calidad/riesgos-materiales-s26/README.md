@@ -160,3 +160,7 @@ Variante experimental R04 de recepción del testigo: lectura inicial y posterior
 ## Continuación R04 / RETP-2026-229
 
 R04: ocho sondas conformes. Relectura posterior detecta cambio literal y del vector; ausencia, error de lectura y exceso se distinguen sin borrar entrega previa. Fallo o cambio inicial detienen el recorrido; el observador heredado conserva su límite ante copias falsamente posteriores. [Inventario material](r04/README.md).
+
+## S26 R05 · RETP-231
+
+R05: siete sondas previas fijadas para retorno rechazado, ausencia de captura, pánico y sustitución de ruta tras apertura. Copia local instrumentada; sin cambio productivo. Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías. [Banco y evidencia](r05/README.md).
