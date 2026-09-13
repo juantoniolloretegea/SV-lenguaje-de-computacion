@@ -2137,3 +2137,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-222 · S26 · Riesgos materiales y evidencia previa
 
 2026-09-13T18:46:43Z. Alta de seguimiento y matriz documental de doce fallos a provocar, con controles positivos y evidencia exigida. Se distinguen detección, impedimento, fallo observado y resultado no acreditado. Cero casos S26 ejecutados. Inventariar residencia, copias, mutadores, autoridad y fronteras de validación/confirmación/recuperación por recorrido; fijar montaje, estímulos y oráculos antes de ensayar. Entregar pendientes y evidencias al relevo S24. Reflexión iniciada antes del alta; fecha actual de seguimiento, sin retrofechar. S22 y S24 conservan estados y secuencia. Doce casos pendientes; no cierre de R2/R3/R4, DFL ni Bis; no se recuentan pruebas anteriores como S26. GUI no seleccionada ni instalada. [Expediente y matriz](riesgos-materiales-s26/README.md).
+
+
+<a id="retp-223"></a>
+
+### RETP-2026-223 · S26 · R01 previo
+
+2026-09-13T18:58:37Z. Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas. 26 archivos fuente identificados por SHA256; quince archivos fixture cotejados contra el archivo histórico. Matriz enlaza residencia, mutadores, confirmación y brechas; oráculos y código fijados antes de campaña. Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md).

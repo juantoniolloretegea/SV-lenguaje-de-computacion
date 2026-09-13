@@ -296,11 +296,15 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-222",
+    "registro": "RETP-2026-223",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Inventariar residencia, copias, mutadores, autoridad y fronteras de validación/confirmación/recuperación por recorrido; fijar montaje, estímulos y oráculos antes de ensayar. Entregar pendientes y evidencias al relevo S24.",
-    "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24."
+    "siguiente_accion": "Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes.",
+    "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
+    "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
+    "sondas_parciales_previas": 4,
+    "sondas_parciales_ejecutadas": 0,
+    "casos_globales_cerrados": 0
   }
 }

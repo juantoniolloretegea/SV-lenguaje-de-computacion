@@ -128,3 +128,7 @@ El commit publicado identifica cada incorporación; no se anticipan hashes futur
 No se ejecuta una nueva prueba Rust para esta alta documental. Las comprobaciones
 administrativas verifican conservación de registros, correspondencia de formatos
 y enlaces; no validan el comportamiento futuro descrito en la matriz.
+
+## Continuación R01 / RETP-2026-223
+
+Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas. [Inventario material](INVENTARIO_MATERIAL_R01.md).

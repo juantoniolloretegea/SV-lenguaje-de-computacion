@@ -84,3 +84,7 @@ La precisión sobre frame tipado, dimensiones y uso no predeterminado de SV(9,3)
 ## Seguimiento transversal S26 / RETP-2026-222
 
 [Riesgos materiales del frame y matriz previa](../../riesgos-materiales-s26/README.md): doce fallos a provocar y evidencia exigible para distinguir detección e impedimento. Estudio en ejecución; cero casos S26 ejecutados. Abarca RAM, persistencia, consultas, transacciones y consumidores. S22 continúa y S24 conserva Bis → catálogo y cierre de fase → análisis e instalación de GUI.
+
+### S26 R01 · RETP-2026-223
+
+Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas. Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes. [Inventario y límites](../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md).

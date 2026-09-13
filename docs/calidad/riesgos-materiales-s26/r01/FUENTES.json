@@ -1,0 +1,110 @@
+{
+  "corte_lenguaje": "8028193c085a7f1a9e063728569d62f380e1b1de",
+  "archivos": {
+    "AGENTS.md": {
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "bytes": 4384
+    },
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": {
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "bytes": 23673
+    },
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": {
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "bytes": 29014
+    },
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": {
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "bytes": 67111
+    },
+    "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md": {
+      "sha256": "654af57915bd1d21472a23c3aca00e21ffc3227b50af52e79d6d85b68c96b544",
+      "bytes": 15832
+    },
+    "rust/sv_native/src/main.rs": {
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "bytes": 2408
+    },
+    "rust/sv_core/src/ir.rs": {
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "bytes": 12706
+    },
+    "rust/sv_core/src/frontend.rs": {
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "bytes": 97042
+    },
+    "rust/sv_core/src/bindings.rs": {
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "bytes": 20680
+    },
+    "rust/sv_core/src/frame.rs": {
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+      "bytes": 13990
+    },
+    "rust/sv_core/src/execution.rs": {
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "bytes": 16865
+    },
+    "rust/sv_core/Cargo.toml": {
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+      "bytes": 244
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.toml": {
+      "sha256": "f48b9e65b8f5d862c925a5d0fb34a78d0b99ce0b0ef051a7e52589225ff3d19a",
+      "bytes": 146
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.lock": {
+      "sha256": "6c5406e8b701bcb253879d22cb385424d40233af6deef31ef0ccbc393dbbf763",
+      "bytes": 235
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/json.rs": {
+      "sha256": "09da960df90ebd88e87c9c06741cee1e6c971048e8f3f11f80ef6fd3fad3dfab",
+      "bytes": 12749
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/main.rs": {
+      "sha256": "fe6a4a8d98c5d7fad6fff3bb52e34340605eeac78e6914b151cedff7592b13e0",
+      "bytes": 14259
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs": {
+      "sha256": "a0fa5a26292a50b46823952dae416d5a790d2cfee22d160b5ecf4903a0c88369",
+      "bytes": 24379
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/sha.rs": {
+      "sha256": "1085ba53dad74273e9d3499eb8285c3d605615b913a395bf9837c47673a83fe1",
+      "bytes": 3720
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/ENTRADAS.tar.gz": {
+      "sha256": "c5e49e57bc39192db32b10f03583b936ec508ab326c32d3a96ca791089765141",
+      "bytes": 24069
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/sv_core-verificado.tar.gz": {
+      "sha256": "7ff82c2aafaf95f9636eeeddd357e0f4ab53bc578756a7582e75fea661a153a7",
+      "bytes": 129397
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/MANIFIESTO.json": {
+      "sha256": "75b7c7f6bb5b3dc33cd938658d45b741b1d1e725642fff67b2ca5b3d2d70650c",
+      "bytes": 4525
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.toml": {
+      "sha256": "8d9985dab3ad91e70ba749b8b0cdd92615dc502100e2f8a8dda7f14c1327bcd6",
+      "bytes": 172
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.lock": {
+      "sha256": "f94fbde29aaf7bc3949f4db77cbdbfaaac5fe60fed4e1ef7527234e141276917",
+      "bytes": 340
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/main.rs": {
+      "sha256": "fdeee554e4b098b926a0dff87717f28759922b5304d6e1495e0eff2736323d47",
+      "bytes": 9430
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/observer.rs": {
+      "sha256": "0971a2b61433f961e2d2da142e473dc254e7116ef9b9dd0cb9fd4e52b2f8f4b1",
+      "bytes": 4730
+    }
+  },
+  "lectura": "Rectores íntegros revalidados en continuidad; lectura material de funciones citadas; manifiestos/archivos fijan realización de ensayo."
+}

@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T18:46:43Z
+**fecha_actualizacion_utc:** 2026-09-13T18:58:37Z
 
 **fecha_fin_utc:** —
 
@@ -906,19 +906,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 2fc90a08575484ce7c2af9f3fc544c2249c90c03; laboratorio 500b283729a8930f8c23033df3fe369d5370759b
+**cortes_de_entrada:** Lenguaje 8028193c085a7f1a9e063728569d62f380e1b1de; laboratorio c017c1c472ed3e1e85b8b1efe8f5df6e6b126879
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Alta de seguimiento y matriz documental de doce fallos a provocar, con controles positivos y evidencia exigida. Se distinguen detección, impedimento, fallo observado y resultado no acreditado. Cero casos S26 ejecutados.
+**resultado:** Inventario R01 de nueve tramos materiales y disposición de los doce casos S26. Cuatro sondas parciales comprometidas sobre el montaje Rust existente y fixture I0205-01 literal. Cero sondas nuevas ejecutadas.
 
-**verificacion:** Conservación de registros previos, concordancia CSV/Markdown e historial y enlaces comprobados por soporte/registrar.py. Publicación y espejo se cotejan mediante soporte/publicar.py; sus commits identifican la incorporación.
+**verificacion:** 26 archivos fuente identificados por SHA256; quince archivos fixture cotejados contra el archivo histórico. Matriz enlaza residencia, mutadores, confirmación y brechas; oráculos y código fijados antes de campaña.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-222
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-223
 
-**siguiente_accion:** Inventariar residencia, copias, mutadores, autoridad y fronteras de validación/confirmación/recuperación por recorrido; fijar montaje, estímulos y oráculos antes de ensayar. Entregar pendientes y evidencias al relevo S24.
+**siguiente_accion:** Ejecutar las cuatro sondas R01 con Cargo --locked --offline tras publicar el precompromiso; conservar resultados y trasladar las brechas de persistencia, captura y autoridad a sus sedes existentes.
 
-**observaciones:** Reflexión iniciada antes del alta; fecha actual de seguimiento, sin retrofechar. S22 y S24 conservan estados y secuencia. Doce casos pendientes; no cierre de R2/R3/R4, DFL ni Bis; no se recuentan pruebas anteriores como S26. GUI no seleccionada ni instalada.
+**observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
 

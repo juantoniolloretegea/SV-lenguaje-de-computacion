@@ -1,0 +1,14 @@
+{
+  "version": "S26-R01/0.1",
+  "estatuto": "EXPECTATIVAS_PREVIAS_NO_RESULTADOS",
+  "fixture": "I0205-01 de RETP-220; copia literal",
+  "alcance": "Buffers y captura intra-proceso; sin BD, GUI, reloj ni adquisición física",
+  "sondas": [
+    {"id": "S26-R01-P01", "control": "Entrega original", "esperado": "Admisión y certificación concordantes; vector y descriptor iguales al testigo custodiado"},
+    {"id": "S26-R01-P02", "control": "Recepción anterior a cambio de archivo", "estimulo": "Añadir LF al archivo source.bin después de ReceivedBytes::read; volver a abrir la misma ruta", "esperado": "Buffer anterior admitido y conservado; fuente nueva compila pero su nueva recepción se rechaza en I02 bajo contexto anterior"},
+    {"id": "S26-R01-P03", "control": "Captura alterada después de admisión", "estimulo": "Añadir SP a la copia Capture.bytes; conservar descriptor original", "esperado": "D06; descriptor admitido intacto; captura original certifica. Detectado después de captura, no prueba de efecto impedido"},
+    {"id": "S26-R01-P04", "control": "Falta de evidencia de entrega", "estimulo": "certify sin Capture; certify con indicador de fallo posterior", "esperado": "D01 y D07, respectivamente; objeto admitido intacto y sin recibo favorable en esas llamadas"}
+  ],
+  "cierre_global_casos_s26": false,
+  "riesgos_pendientes": ["escritores concurrentes durante lectura", "custodia comprometida", "persistencia y commit", "pantalla", "efecto físico", "adquisición", "reinicio", "recursos totales"]
+}
