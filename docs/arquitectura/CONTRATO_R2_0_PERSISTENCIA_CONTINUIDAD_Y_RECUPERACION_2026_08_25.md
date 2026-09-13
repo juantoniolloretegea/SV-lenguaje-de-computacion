@@ -397,3 +397,12 @@ Garantía I / II = NO_PROBADO
 La [recepción R02](../calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md) concreta, de forma subordinada a §§4–12, las obligaciones de custodia de la expectativa, lectura coherente, residencia, confirmación material, cobertura de índices y observación posterior. Recibe el inventario y las cuatro sondas parciales R01; no constituye otra AStore, clave universal, BD o primitiva temporal.
 
 Las realizaciones dependientes deben declarar unidad de transacción, política durable, confirmación, concurrencia y reconciliación; la aceptación en RAM y el acuse de una API no acreditan por sí solos esas propiedades. T04–T06 permanecen pendientes del perfil material correspondiente. S26 no modifica los cierres históricos ni acredita cierre actual de R2/R3/R4 o de las garantías I/II.
+
+
+## 21. Recepción de terminación y referentes materiales · S26 R06 / RETP-233
+
+La [recepción R06](../calidad/riesgos-materiales-s26/r06/README.md) desarrolla las obligaciones de §§4–7 y 10–15 tras los límites observados en R05. Distingue informe recibido, observación de terminación y efecto acreditado. Pánico, canal cerrado o informe ausente no acreditan cero efectos ni rollback y no autorizan reintento automático. Una evidencia parcial conserva su propio alcance.
+
+La realización debe ligar el encargo y sus referentes autorizados con el contenido efectivamente consumido. La identidad del objeto del soporte es una exigencia adicional cuando la operación la constituya; mismo contenido no la acredita, y un inode no se adopta como identidad universal. Conservar un descriptor tampoco demuestra inmutabilidad ante escrituras sobre ese objeto. R06 no constituye otra AStore ni añade tiempo como primitiva.
+
+Recepción contractual con ocho discriminadores, cero nuevos ensayos ejecutados. No cierra R2, R3 ni la continuidad durable; el candidato y su observador deberán fijarse y probarse antes de ofrecer la capacidad.

@@ -1,0 +1,21 @@
+{
+  "suceso": {
+    "id": "S26",
+    "fecha_actualizacion_utc": "2026-09-13T21:13:18Z",
+    "cortes_de_entrada": "Lenguaje b6be761da7223d9f26e5d7a41b83092330597276; laboratorio 8a989c78b69b7a944a4fa1d5195c82d254d80b8a",
+    "resultado": "R06: recepción contractual de terminación sin informe y alcance de identidad de fuente. Se separan informe, observación de terminación y efecto; mínimo de encargo/referentes autorizados y contenido consumido; continuidad de soporte sólo si su perfil la exige. Ocho discriminadores especificados, cero ejecutados.",
+    "verificacion": "Fuentes cotejadas por blobs contra corte vigente; campañas anteriores y registros conservados. Verificación documental, sin nueva compilación ni protección ejecutable acreditada.",
+    "siguiente_accion": "Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/README.md",
+    "referencia_calidad": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-233",
+    "observaciones": "Recepción de obligaciones, no cierre material. Doce casos globales S26 abiertos; R2/R3/R4, DFL y Bis conservan alcance. No GUI, BD, nueva identidad universal ni selección de host. S27 y el dominio permanecen en su sede."
+  },
+  "revision": 10,
+  "retp": 233,
+  "tipo": "RECEPCION_CONTRACTUAL_MATERIAL",
+  "motivo": "Luz verde para concretar los límites R05 antes de integrar.",
+  "base": "R02 C01-C04/C06-C08; R2-0 §§4-7/10-15; LIG/0.1 §§2-4; R05 P04-P07.",
+  "artefactos": "R06 y discriminadores; adendas R02/R2-0; Sucesos, historial, RETP CSV/MD, navegación y seguimiento S26.",
+  "impacto": "Obligaciones recibidas para candidato local; sin alteración de semántica, IR o código productivo.",
+  "titulo": "R06 · Terminación sin informe e identidad de fuente"
+}

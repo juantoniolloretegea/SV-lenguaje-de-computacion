@@ -296,11 +296,11 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-232",
+    "registro": "RETP-2026-233",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24.",
+    "siguiente_accion": "Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
@@ -317,6 +317,9 @@
     "sondas_r04_ejecutadas": 8,
     "campana_r05": "../../../riesgos-materiales-s26/r05/README.md",
     "sondas_r05_previstas": 7,
-    "sondas_r05_ejecutadas": 7
+    "sondas_r05_ejecutadas": 7,
+    "recepcion_r06": "../../../riesgos-materiales-s26/r06/README.md",
+    "discriminadores_r06_especificados": 8,
+    "discriminadores_r06_ejecutados": 0
   }
 }

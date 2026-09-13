@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T20:59:20Z
+**fecha_actualizacion_utc:** 2026-09-13T21:13:18Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9
+**cortes_de_entrada:** Lenguaje b6be761da7223d9f26e5d7a41b83092330597276; laboratorio 8a989c78b69b7a944a4fa1d5195c82d254d80b8a
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relectura sin acreditar entrega. Pánico impide MaterialRun final. Ruta sustituida con bytes iguales conserva concordancia pese a cambio de objeto: límite confirmado.
+**resultado:** R06: recepción contractual de terminación sin informe y alcance de identidad de fuente. Se separan informe, observación de terminación y efecto; mínimo de encargo/referentes autorizados y contenido consumido; continuidad de soporte sólo si su perfil la exige. Ocho discriminadores especificados, cero ejecutados.
 
-**verificacion:** Una campaña Rust/Cargo 1.98.0 offline; siete aserciones de caso conformes, fuentes y precompromiso intactos; dos pánicos provocados y capturados sólo por el arnés. Sin protección productiva ante pánico acreditada.
+**verificacion:** Fuentes cotejadas por blobs contra corte vigente; campañas anteriores y registros conservados. Verificación documental, sin nueva compilación ni protección ejecutable acreditada.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r05/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-232
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-233
 
-**siguiente_accion:** Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24.
+**siguiente_accion:** Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24.
 
-**observaciones:** S26 sigue en ejecución; doce casos globales abiertos. S22/S24 y banco Bis intactos. Ensayo Linux local sin BD, transacción durable, adquisición, GUI, fallo de hardware ni resistencia al host acreditados. Inode local no es identidad universal. S27 conserva reparto dominio/agente/Lenguaje.
+**observaciones:** Recepción de obligaciones, no cierre material. Doce casos globales S26 abiertos; R2/R3/R4, DFL y Bis conservan alcance. No GUI, BD, nueva identidad universal ni selección de host. S27 y el dominio permanecen en su sede.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

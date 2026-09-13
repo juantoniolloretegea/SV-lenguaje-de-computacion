@@ -1,0 +1,55 @@
+{
+  "version": "S26-R06-DISCRIMINADORES/1",
+  "naturaleza": "Especificación contractual; no precompromiso de campaña ejecutable.",
+  "casos": [
+    {
+      "id": "R06-T01",
+      "estimulo": "Retorno sin informe, truncamiento o informe de otro intento.",
+      "control_y_evidencia": "Informe completo del intento correcto admitido; los tres defectos distinguidos sin éxito por código cero. Conservar bytes recibidos y frontera de terminación.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T02",
+      "estimulo": "Pánico antes del despacho y después de una observación parcial.",
+      "control_y_evidencia": "Retorno ordinario; barreras de inyección observadas; conservar hecho parcial y ausencia final. No inventar contadores ni rollback.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T03",
+      "estimulo": "Abort o terminación del proceso observado.",
+      "control_y_evidencia": "Proceso ordinario con informe íntegro; observador superviviente declara estado de salida y cobertura de canal. Cero acuses de efecto inferidos del estado del proceso.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T04",
+      "estimulo": "Informe tardío, duplicado concordante o duplicado contradictorio.",
+      "control_y_evidencia": "Correlación legítima; orden controlado; ninguna atribución a otro intento ni sobrescritura del conflicto. Tratamiento de duplicación fijado antes de ejecutar.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T05",
+      "estimulo": "Sustituir la ruta por archivo de contenido diferente tras validación.",
+      "control_y_evidencia": "Conjunto autorizado intacto; capturar qué bytes llegan al consumidor. Debe usarse el objeto admitido o rechazarse antes del uso protegido según la realización fijada.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T06",
+      "estimulo": "Sustituir soporte conservando bytes y referentes; solicitar luego una garantía de continuidad del soporte que no ofrece el montaje.",
+      "control_y_evidencia": "Contenido y referentes válidos admitidos bajo el alcance mínimo; pretensión superior explícitamente no acreditada. No cambiar el alcance tras observar el resultado.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T07",
+      "estimulo": "Modificar el mismo objeto entre lecturas, incluida restitución de bytes iniciales, o mezclar una dependencia de otro corte.",
+      "control_y_evidencia": "Copia consumida y referencias fijadas como control; observar punto de mutación y bytes usados. Dos lecturas iguales no deben acreditarse como preservación continua.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    },
+    {
+      "id": "R06-T08",
+      "estimulo": "Cerrar canal o agotar una cuota/plazo técnico sin conocer terminación ni efecto.",
+      "control_y_evidencia": "Recorrido completo dentro de límites; distinguir recepción, terminación y efecto. Ningún reintento automático ni ausencia de efecto inferida del silencio.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO"
+    }
+  ],
+  "pruebas_ejecutadas": 0
+}

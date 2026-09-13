@@ -230,3 +230,10 @@ de S26 para publicar sin force y cotejar el árbol completo y las copias.
 Se utilizan Python y operaciones de lectura/escritura local para estos archivos,
 y el conector GitHub para publicación. No se invoca otra IA, servicio de
 inferencia, nueva instalación, compilación, BD o ejecución SV en este incremento.
+
+
+## 7. Desarrollo de C01–C04 y C06–C08 · R06 / RETP-233
+
+La [recepción R06](r06/README.md) precisa terminación sin informe, conservación de evidencia parcial, correlación por intento y separación entre contenido, ocurrencia SV, objeto de soporte, procedencia y autoridad. Recibe los contraejemplos R05 P04–P07. La obligación mínima para el próximo montaje local liga encargo, referentes autorizados y contenido consumido; no convierte el inode en identidad soberana ni deduce ausencia de efectos del silencio.
+
+Los ocho discriminadores R06 requieren realización y precompromiso propios. R02 conserva sus obligaciones y la matriz T01–T08 con su corte histórico. No se añaden pruebas ejecutadas por esta adenda ni se cierran los perfiles durables pendientes.

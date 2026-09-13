@@ -1,0 +1,1562 @@
+{
+  "corte_lenguaje": "b6be761da7223d9f26e5d7a41b83092330597276",
+  "corte_laboratorio": "8a989c78b69b7a944a4fa1d5195c82d254d80b8a",
+  "lectura": "Rectores íntegros leídos en continuidad; mismos bytes cotejados al corte vigente. R2-0, R02, LIG y R05 consultados materialmente en este incremento. Listado incluye conservación de campañas; no afirma lectura narrativa de cada fixture.",
+  "archivos": {
+    "AGENTS.md": {
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "bytes": 4384,
+      "git_blob_sha1": "42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    "docs/arquitectura/CONTRATO_DE_CONTINUIDAD_Y_LIGADURAS_POR_OPERACION_FILA_7_2026_09_08.md": {
+      "sha256": "2ba498ba758169ca10de2da1069db081fa535bc42d3a0009fe0862a831ee9636",
+      "bytes": 11182,
+      "git_blob_sha1": "40ffe0554d2ff3ad2f9aae0a06df31d6f71fae6a"
+    },
+    "docs/arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md": {
+      "sha256": "d327b5e9f3cbd22a98131d14a19a170056a1e4174f1e03c6c4b114d7ebd0d3a7",
+      "bytes": 9778,
+      "git_blob_sha1": "58b8c02c721b41203e5b8f3f9b7a22203f253c7f"
+    },
+    "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md": {
+      "sha256": "e2df7838ebc320166a65ca136c0df32737e0d57604b7fe7530ace849b847de21",
+      "bytes": 16699,
+      "git_blob_sha1": "2e6cd2345b50c7333841d9a39176ebd5bf6e5ed2"
+    },
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": {
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "bytes": 29014,
+      "git_blob_sha1": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv": {
+      "sha256": "8f2a0ac856285b96cb62fea4c89692c06b8a7820cbad00a201cc2e90375b7dba",
+      "bytes": 170503,
+      "git_blob_sha1": "6ff5c77e6360e0c884a2feadbe5a10bfde5917df"
+    },
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv": {
+      "sha256": "badf47ee6b8e98f6f2f99f6865b8216f5c9e23aec84f7f95e85dacf25ba21ec5",
+      "bytes": 51860,
+      "git_blob_sha1": "4c53eff91ceec85a27c88e3b694ddbf4a6d8996b"
+    },
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md": {
+      "sha256": "10a9f11fdfec6325d1424b5dca4aa64657880b680259acbf0e42580a477af290",
+      "bytes": 61234,
+      "git_blob_sha1": "35ee26c45ef94a0bef50754f401a78f097d16a76"
+    },
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": {
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "bytes": 23673,
+      "git_blob_sha1": "27609888898d5ad2b214ed53786fa8f55781a61c"
+    },
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv": {
+      "sha256": "6b2fab7ebd8bcaf442ba3a64bc5a8a215fd030aeb5e8fa7aed88f9ab8a3fcc40",
+      "bytes": 297058,
+      "git_blob_sha1": "fea1cab32e65bc31a57d4a4fa2c8368b251f8afe"
+    },
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md": {
+      "sha256": "31b69723acdc2b8d74b72bc635658cb2994f74db198b05ca9f8a6e9baac86394",
+      "bytes": 338126,
+      "git_blob_sha1": "f71aef7cfd3b5a583617a3d00253c23811cace7b"
+    },
+    "docs/calidad/riesgos-materiales-s26/README.md": {
+      "sha256": "3e214da81a040183811e086e4fc93f8ccd22ae54f3e417be7e57e0e00dddae43",
+      "bytes": 15971,
+      "git_blob_sha1": "e3c9b12e56887aba65ad381ef3befb4dc9076e4a"
+    },
+    "docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md": {
+      "sha256": "42e92cbf09581bb2dedb952c0d5f143006762ae7269dc233d36e1ab9fe91b50a",
+      "bytes": 17673,
+      "git_blob_sha1": "63155ca9dd09a708415d1d9528255623b86c5320"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/BANCO_PREVIO.json": {
+      "sha256": "3d1a77337540c96c7c48802615c90b7655337c382346cb0260087e1c4d3f79e8",
+      "bytes": 1660,
+      "git_blob_sha1": "62f8893c88631251219742872be80106ecbf5d88"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/Cargo.lock": {
+      "sha256": "f551c7313e3a43e1a70c513fcb5c364c56f795171bf87970925d04c371f79adb",
+      "bytes": 336,
+      "git_blob_sha1": "d16432675759e37893ecb9c34227b77f49581bcc"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/FUENTES.json": {
+      "sha256": "a2708aded67e2971e9747df9c3a0a45f5d4c35dd649a37c76a3aabcd540896de",
+      "bytes": 5825,
+      "git_blob_sha1": "28e1f5cbf968071d845d01e6b82af3f958be56a1"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/PRECOMPROMISO.json": {
+      "sha256": "d8e61e01a07980df748dbaa61c1f174fcd318db6df44c02fa9481119e0f2f79f",
+      "bytes": 3571,
+      "git_blob_sha1": "8e88dcf02f72a68f81cf329b376c0a948be5f997"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/README.md": {
+      "sha256": "4058cd0f0c9ac577dea7a7f7c6d57273a1befb995c1ce8d39515ea3116b13a8d",
+      "bytes": 5173,
+      "git_blob_sha1": "69b9317d0b99e33c28e66fe42b1184cae903400b"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/RESULTADOS.json": {
+      "sha256": "6fb79974f14aca4f45d129db98d18c684f22eb557c1af94e79f8dd030c27a7a3",
+      "bytes": 1139,
+      "git_blob_sha1": "327bb60bdac0118c7d725980a9a7d036bb41f6c8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/conservar.py": {
+      "sha256": "2247559899cd6c6dcf663afaf488b89a9a4431c880abae0d3910f3272907ab68",
+      "bytes": 4968,
+      "git_blob_sha1": "0f7457ee254c71f7f5823f705055b7c21317940f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/00.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/00.stdout": {
+      "sha256": "785f1364c0d5bf077f7bfb885fd4bde99899dfd80ce0fb6226a4527d9b27724c",
+      "bytes": 36,
+      "git_blob_sha1": "47a7da6d5a052df7ddca9feef2122ec88a50dcf8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/01.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/01.stdout": {
+      "sha256": "fb3f25aefd6d5441842d285f5a9b125b3f0f0b0bf2013d9a32677f9e99c6c854",
+      "bytes": 36,
+      "git_blob_sha1": "6fbe51edfd6055d6a1f08c495a52cd7c9c16fc38"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/02.stderr": {
+      "sha256": "c1d6a3914d47a409688292b70a9117b38631a5b439b04790e17b2afbf98e83da",
+      "bytes": 17311,
+      "git_blob_sha1": "f85490987157f1533a5bfcb33717a0472a37cd05"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/02.stdout": {
+      "sha256": "679bbf40ac832bb499c6993d71bd12f09be0a9bcd3297feecc03a4e61756ebf5",
+      "bytes": 650,
+      "git_blob_sha1": "4b8674e35d70c7ff1afd12c4043ef77064b70539"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/HUELLAS.json": {
+      "sha256": "2e532c81f8af769d8100e1e5773738b2e6e6bf29e4e1c8a30dd3e3424a69f88f",
+      "bytes": 1754,
+      "git_blob_sha1": "3ca6fb5ef2b896f358a4bc0dcdc2c4de6900eddd"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/ORDENES.json": {
+      "sha256": "fa8844d547021a1d41e9e98ae74619c1d7f6aaec253fbb605efcab51b43332ac",
+      "bytes": 457,
+      "git_blob_sha1": "03bb161eef9646434fe14adc7b3c0956401fddcc"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T01-A-receipt.json": {
+      "sha256": "e1b186e746bfa82ae6a217cf52576a04e8e047e2a21e1979f25912675b85a856",
+      "bytes": 1403,
+      "git_blob_sha1": "71051d8e61c1003d8e6141a1598e3572c246e785"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T01-B-receipt.json": {
+      "sha256": "7cb4e6610ad51ac16fb1306fa59e831fe0b2c6cd3c77f2f64798a4aca905519c",
+      "bytes": 1403,
+      "git_blob_sha1": "866720cce8d69f650a34662a7a9bb501d3d6b15a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T01-rejection.json": {
+      "sha256": "26567643fd63dc3913f13ee487f70148c694a7ece3b1a78926f50fb05d99e009",
+      "bytes": 56,
+      "git_blob_sha1": "292f325591f1d6d49cdf6a16b17fe0bcb58769f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T02-A-trace.json": {
+      "sha256": "d160739713bfd0435a1251a681d4548af77c76b6c318e2634b2594466a80aebd",
+      "bytes": 123,
+      "git_blob_sha1": "f50ebee80cf791acfcf17b5a6eecf5091e1f7d54"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T02-B-trace.json": {
+      "sha256": "610c5badb78a3dfc1f4ce08cd16034f4a6d673b53e0dedacea39fa9944680ee3",
+      "bytes": 122,
+      "git_blob_sha1": "d875de9bbf4d16c034fa136038dc436d30efa84d"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T02-control-source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T02-mixed-source.bin": {
+      "sha256": "622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b",
+      "bytes": 1216,
+      "git_blob_sha1": "ab04183e03a90daf338c640acb0741d2bee8393a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T07-control.json": {
+      "sha256": "dc29fa149b5fec4362f6107be559d6eb571eaf91631b4e958509550d43b4ae9f",
+      "bytes": 23668,
+      "git_blob_sha1": "45d940a34dd384057c8479a45f1cd0ee9cbda1af"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T07-copied-after.json": {
+      "sha256": "dc29fa149b5fec4362f6107be559d6eb571eaf91631b4e958509550d43b4ae9f",
+      "bytes": 23668,
+      "git_blob_sha1": "45d940a34dd384057c8479a45f1cd0ee9cbda1af"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T07-reread-after.json": {
+      "sha256": "652fa5a67383bb0fc80d3ac7264281ab0cc2fc17d5ef158e85accd80ded34624",
+      "bytes": 23671,
+      "git_blob_sha1": "a3c2656b22ccf4c9124fb8ef6529f463e28017b5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/evidencia/observaciones/T07-state.bin": {
+      "sha256": "2d6335790b3cad0b8ea343ff218741d09bee8bc1d4a193c4917c97d6bb2d5429",
+      "bytes": 215,
+      "git_blob_sha1": "9cca84cc13f25a4b9a265cd8ec156801d6962a31"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/A/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/context.json": {
+      "sha256": "0a3470d360e4a63f0e2b0364dd00a1d4f22c75d3c2434e600aee459faa99d68d",
+      "bytes": 1700,
+      "git_blob_sha1": "09449e13a1c19961795660f564d79e60264a2b00"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/oracle.json": {
+      "sha256": "ca0725c985fba8a44c112a859bfcb9c245da9b70b3d95689d0a488df240c0470",
+      "bytes": 2785,
+      "git_blob_sha1": "6082f68c9873825898861840cdda90d3f8e51924"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/registry.json": {
+      "sha256": "a49867ca71e24115f71d8425a0a43c6e6fa9e2ea6ad724cfe7eef226d654674f",
+      "bytes": 4447,
+      "git_blob_sha1": "63993c9989323bff5d7422cb6ad8cca5753843f8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/request.json": {
+      "sha256": "3a666085dd8bf74c2e2e52cb179af3058e5f0ceccf70d09f4efbb0e384c9aeaa",
+      "bytes": 1906,
+      "git_blob_sha1": "19f0a25433732f7f99d0d1e8bf8e89fed6f30de8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/source.bin": {
+      "sha256": "622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b",
+      "bytes": 1216,
+      "git_blob_sha1": "ab04183e03a90daf338c640acb0741d2bee8393a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/fixture/B/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/gestionar.py": {
+      "sha256": "09d24c13a7aca2cadf44720100336bf8c7d7fa805c1cf3efb8b0194441c59ce5",
+      "bytes": 6006,
+      "git_blob_sha1": "f19b0227ca34662528498b5081d92117d460fd73"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/preparar.py": {
+      "sha256": "653c3feb3b68a86af9338362bc839a2b4acba71283b00b8a9cf24af7459b4667",
+      "bytes": 2498,
+      "git_blob_sha1": "aaf3d1d77cf6e2a1506e2195457b236b671cfa0c"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/probe.rs": {
+      "sha256": "c193aca9ab0a624194ab7d083cb70ea11d2af354a5c89f139c97be49297a7536",
+      "bytes": 6907,
+      "git_blob_sha1": "b4fb093579af87874bbb0a9e75551de23901eae8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/publicar.py": {
+      "sha256": "571501b6ab1783e91a551e7ae53aeae6b9a27b5d4ff6281f38a8dd7a6c8dae05",
+      "bytes": 2542,
+      "git_blob_sha1": "94421ff03762defcc0c47839c359533578b95aee"
+    },
+    "docs/calidad/riesgos-materiales-s26/r03/reproducir.py": {
+      "sha256": "b4e04cc0cbf3a966f7bbd87377aae66b7b7cc0103e72ac7cb6c219caab3a01fd",
+      "bytes": 2277,
+      "git_blob_sha1": "0084c0981f1ddd97a79bd6ccf34675458c748d3d"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/BANCO_PREVIO.json": {
+      "sha256": "443a79f474b3f0e3619d5600ffff499b481c99fb2cdd0a3bfb2971def58cdc5d",
+      "bytes": 1224,
+      "git_blob_sha1": "4d52498ce653de319a50080006f3445e15b0b359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/Cargo.lock": {
+      "sha256": "f551c7313e3a43e1a70c513fcb5c364c56f795171bf87970925d04c371f79adb",
+      "bytes": 336,
+      "git_blob_sha1": "d16432675759e37893ecb9c34227b77f49581bcc"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/FUENTES.json": {
+      "sha256": "cb718e0a3553f9604349502ff96981af2db9920b849a7b09817f179e175783f0",
+      "bytes": 5825,
+      "git_blob_sha1": "8ad3f916dd10bd59f3c5f69752b393e0a579911f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/PRECOMPROMISO.json": {
+      "sha256": "c4210220f17582a8c29c0bb8288977c291b9c4c40e3564b8d4b37203357e7c81",
+      "bytes": 2458,
+      "git_blob_sha1": "a887e3acf2eb946ded3fdf07aff3d2eea6143ac1"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/README.md": {
+      "sha256": "a23cc407b9bc7514cacba4a696cb29f1c949b329d5992ec9a12519c7118b14a4",
+      "bytes": 9233,
+      "git_blob_sha1": "2ed980c77ac8ce12e1737b1b9fa161afbb0efe55"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/RESULTADOS.json": {
+      "sha256": "ee54b6c4e5e8febc769048fc8451da89c8c02fe784bc981d3a2056d6b1e3b181",
+      "bytes": 1715,
+      "git_blob_sha1": "421529561ab23f3297a36f8ce561be4e88a11844"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/conductor.rs": {
+      "sha256": "d3ac48049bc8ba5fa9f9d3288983ee376c683981e2c3538d78b6ae85744c078d",
+      "bytes": 4751,
+      "git_blob_sha1": "96b435ba9176c4a7e12e896bba6eb3f3b7858a2a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/conservar.py": {
+      "sha256": "559444eda71b5a933ddefa22ff7cbd4e847dbae38886a62af4ceedf3a02cd46f",
+      "bytes": 5509,
+      "git_blob_sha1": "ae073db97b04c4b4434a94b74d4afc04ffe2e5d8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/00.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/00.stdout": {
+      "sha256": "785f1364c0d5bf077f7bfb885fd4bde99899dfd80ce0fb6226a4527d9b27724c",
+      "bytes": 36,
+      "git_blob_sha1": "47a7da6d5a052df7ddca9feef2122ec88a50dcf8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/01.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/01.stdout": {
+      "sha256": "fb3f25aefd6d5441842d285f5a9b125b3f0f0b0bf2013d9a32677f9e99c6c854",
+      "bytes": 36,
+      "git_blob_sha1": "6fbe51edfd6055d6a1f08c495a52cd7c9c16fc38"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/02.stderr": {
+      "sha256": "d25cd4762614eaf5307af49e8a5597ae473ba1034f210076edf819b339c9240c",
+      "bytes": 17818,
+      "git_blob_sha1": "b381530fe7d7bcf6e137078068d4f9366e704bce"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/02.stdout": {
+      "sha256": "57837439faeecbb64e4d8ab07251054bc271d00ad7947ed3d99b679b04015867",
+      "bytes": 527,
+      "git_blob_sha1": "6eda4452298675141b676b60f6bcabacf67d7576"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/HUELLAS.json": {
+      "sha256": "0ff5b0ae1e84699328d4cd7dc3463d9c6b68ee4df794bd2f5b201249d745cab9",
+      "bytes": 1965,
+      "git_blob_sha1": "cb3b139f62590d905670dda7c7a8c831074161c8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/ORDENES.json": {
+      "sha256": "b694abd790ee5578a7a64274689071077b8172a57c33a6d2c7d603e4c083c528",
+      "bytes": 457,
+      "git_blob_sha1": "2cb79851275fd0d8aae851261a7b95ea020a93c3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/ESTADO_RUTAS.json": {
+      "sha256": "71305102c8e7dfa9fdd89f00d50d130c174206213236dc43baf261867e163b27",
+      "bytes": 166,
+      "git_blob_sha1": "41d0b29f23ead80046c9357906ff55eff4ef9069"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P01-state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P01.json": {
+      "sha256": "bff36853732dbcac04cff7349c3411e42023da72ff4075c952c8644f005d14b2",
+      "bytes": 24042,
+      "git_blob_sha1": "ad9b57a4147e7ae9e1ec4b8837acad48849b1e9b"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P02-state.bin": {
+      "sha256": "2d6335790b3cad0b8ea343ff218741d09bee8bc1d4a193c4917c97d6bb2d5429",
+      "bytes": 215,
+      "git_blob_sha1": "9cca84cc13f25a4b9a265cd8ec156801d6962a31"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P02.json": {
+      "sha256": "9c07bdbcafe7bb608a7458d91001f0b52b3fc4608a1c8717b3f102fce0169b0d",
+      "bytes": 24043,
+      "git_blob_sha1": "e114040285365180143074ec6ec6c62b6987393a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P03-state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P03.json": {
+      "sha256": "a247df9fac52a15a1f6eee50130fc8b53ad402d360ffcd9a1da7d9032f8edb53",
+      "bytes": 24036,
+      "git_blob_sha1": "95c5f8fbbb9f204a3a1907c74f5b1289ad1c6ca4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P04.json": {
+      "sha256": "691d5434a9e7f125cf8c2a3c14ffa3ed65b4ab0df8e0da2027470623dc638367",
+      "bytes": 23398,
+      "git_blob_sha1": "73ba644a289b164c6b2afb832e47cd98c5c5a62e"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P05.json": {
+      "sha256": "907a0a675f7b4c0e78afb4cfd46d5282aac004010dc64a7ba99f5455fd7deadb",
+      "bytes": 328,
+      "git_blob_sha1": "aeee58d8486907c12b548e22eb288285b61521d9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P06-state.bin": {
+      "sha256": "18b423094a1956209d0c777bbae92a8b7cf74f17739df7db4b72bf932df7cd51",
+      "bytes": 2048,
+      "git_blob_sha1": "2a09adf2fe9835009055a98838bcaf523ef4eed1"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P06.json": {
+      "sha256": "d2af7132ade78edd813127ba138052164b423f3307231c75770a25fec8ce56bb",
+      "bytes": 23420,
+      "git_blob_sha1": "d841855b4f08756d8edf57b18b5de29cce926419"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P07-state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P07.json": {
+      "sha256": "8224aa5945377717691f87158fdac60309f56ee00a55312f7fb9589c4c1fcc35",
+      "bytes": 966,
+      "git_blob_sha1": "d49f4c5a4f58293607cbafcdd795ae997d2e9bc9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/evidencia/observaciones/P08.json": {
+      "sha256": "d6eb0e79c87fca4ac8bf9abf6b2c785dca79f1f1e5dbc7c36bc434811b598b74",
+      "bytes": 23402,
+      "git_blob_sha1": "f4ef185b768f7fa9feccf66b746615b1818c44ce"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/fixture/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/gestionar.py": {
+      "sha256": "86770b88fc513d093db061de27b09643a68707d1c03b4e19a4607cfb2b40eb6e",
+      "bytes": 6150,
+      "git_blob_sha1": "813b25fac66058ed4214673bd17293dfb96e9c7b"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167,
+      "git_blob_sha1": "d726ded2e5bd5fb796892adce1ab640896fc7ec7"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/preparar.py": {
+      "sha256": "a8acfdd99e9e031d9f1e3f2835010dc65bcbaa5dc2daf1c2f9aec68e759f7c66",
+      "bytes": 1230,
+      "git_blob_sha1": "6dd887d4225de50bad68a54a54506505d960a292"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/probe.rs": {
+      "sha256": "4ea0b4910de99bc0c9996cc8011796247fece808bf3d84abb7ce394487c68566",
+      "bytes": 5507,
+      "git_blob_sha1": "888c0ebb569fcd5f6417163fa76e9cf9e002bcf3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/publicar.py": {
+      "sha256": "afcde28c29cf86c23b8535a20006582901920fa195e882647a002b176398c518",
+      "bytes": 2542,
+      "git_blob_sha1": "b20d3a9dcd6145c5bad13eec6457e0951d7ae6b5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/recepcion.rs": {
+      "sha256": "ea66b910d00980d7cba6beee9481c739f698fd65b31e64e6c0b43678ad352458",
+      "bytes": 4312,
+      "git_blob_sha1": "8a77cf85d5704e7abef04f3ff03be68245b74d1f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r04/reproducir.py": {
+      "sha256": "1822901009d8b182daf43c3a476e865bf37439eea2d37a5d51d66f4fd7a69136",
+      "bytes": 2339,
+      "git_blob_sha1": "e8ca80cfeb06c955264dced729a73f43e6f1aaa4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/ASIENTO_previo.json": {
+      "sha256": "a316ce44661650d412cb11828b780e0b1dbbaa460390c6bc815f2e9e962299d0",
+      "bytes": 1826,
+      "git_blob_sha1": "641e10e7ca79911736273957bab7e53fb6fb63a4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/ASIENTO_resultado.json": {
+      "sha256": "029de7f2be9256ac4564d976a685b7e40ac71648db437108fa729a664d6a9b10",
+      "bytes": 2091,
+      "git_blob_sha1": "95b80527b85df5049f29905e537a220efe8b0c04"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/BANCO_PREVIO.json": {
+      "sha256": "99b4cfa2b098b86192ab643837b65c1b933bf749d9b3ac5a1a54d73b16b2b9eb",
+      "bytes": 2305,
+      "git_blob_sha1": "b8b77daab53ad4ef5bf74c910fd11fa0514938d4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/Cargo.lock": {
+      "sha256": "f551c7313e3a43e1a70c513fcb5c364c56f795171bf87970925d04c371f79adb",
+      "bytes": 336,
+      "git_blob_sha1": "d16432675759e37893ecb9c34227b77f49581bcc"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/FUENTES.json": {
+      "sha256": "d384977ba4ec40543466a10da860f2114713d39b4bcace3ac26bb6ddd292de8c",
+      "bytes": 15489,
+      "git_blob_sha1": "42db9ee11bafefeabc1ab8290444d5e0b6c56204"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/PRECOMPROMISO.json": {
+      "sha256": "bfdeb79001d596039e354814942438bf647ab738dfc3b41491236704b68b2636",
+      "bytes": 2291,
+      "git_blob_sha1": "b6413b90b073237f3efac9a168214f3c6836fff4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/README.md": {
+      "sha256": "aa915f796140751d0a3e4a80497105a8c9638adceaa8ee3e8e9e5298027b1a9d",
+      "bytes": 5317,
+      "git_blob_sha1": "fa5d9b7c552abfc916dbd59cc328dcc9eb6ec5e0"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/RESULTADOS.json": {
+      "sha256": "9e25ff699bfbe3b106eaa387dc70e2b72a326e1cfbf77df5740ab6c75a02faa1",
+      "bytes": 1326,
+      "git_blob_sha1": "d07ec83563eb6ae399a78e6f8774e1e94ed68faa"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/conductor.rs": {
+      "sha256": "d3ac48049bc8ba5fa9f9d3288983ee376c683981e2c3538d78b6ae85744c078d",
+      "bytes": 4751,
+      "git_blob_sha1": "96b435ba9176c4a7e12e896bba6eb3f3b7858a2a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/conservar.py": {
+      "sha256": "60018e40a1924653210c7761effe2a8ea6cb9c18b89e174a7d304b12da26e789",
+      "bytes": 5168,
+      "git_blob_sha1": "e193038904442b134f143f181303efab3af628b2"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/00.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/00.stdout": {
+      "sha256": "785f1364c0d5bf077f7bfb885fd4bde99899dfd80ce0fb6226a4527d9b27724c",
+      "bytes": 36,
+      "git_blob_sha1": "47a7da6d5a052df7ddca9feef2122ec88a50dcf8"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/01.stderr": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "git_blob_sha1": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/01.stdout": {
+      "sha256": "fb3f25aefd6d5441842d285f5a9b125b3f0f0b0bf2013d9a32677f9e99c6c854",
+      "bytes": 36,
+      "git_blob_sha1": "6fbe51edfd6055d6a1f08c495a52cd7c9c16fc38"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/02.stderr": {
+      "sha256": "7d6ab9a34e44b6eaac7d0bfd0399a30fe061ae05309f119968627758495fc086",
+      "bytes": 18762,
+      "git_blob_sha1": "73a47f869397432fdfa928f8b2a98fa67adeb268"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/02.stdout": {
+      "sha256": "2e9b2e085be0a9e9acd60f5a874103cb5ca152988f882516d92700c371852729",
+      "bytes": 530,
+      "git_blob_sha1": "f34fd717f3f046ce6d5d1224a5675bc71dca1678"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/HUELLAS.json": {
+      "sha256": "481beb787f6fc6c8f5373d862a18c74394329a3d590c090ea976ed8ad0117e94",
+      "bytes": 11915,
+      "git_blob_sha1": "22b456caba88f32df0cab5e7c2e273f6efb14ac4"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/ORDENES.json": {
+      "sha256": "e2fd2f2fd2317eafa7d324c6b3f14902c7fa6e471b7ebe087e824f300c1ba246",
+      "bytes": 457,
+      "git_blob_sha1": "a74843078747107664ea6ed5a3d25d6513d0718f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01.json": {
+      "sha256": "68145830c55f2d1c1490aec9ced884d072e784ac001a34dc9085965a3936e501",
+      "bytes": 24042,
+      "git_blob_sha1": "9c1e0753da6c2e10c793f911655f58484200199e"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P01/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02.json": {
+      "sha256": "a9ec8272314d836c847f86d520ed12c1cad4eb972cdb69fc338b0b3976b88e00",
+      "bytes": 1996,
+      "git_blob_sha1": "2884e349e4d2cceffc65800dfe6dddb97a7249e2"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/request.json": {
+      "sha256": "021fb596db81e6d02bf3d2586ee3981fe519f275c0ac9ca76bbcf2ebb4097d96",
+      "bytes": 1,
+      "git_blob_sha1": "81750b96f9d83b395f285233d54ec0c9df9ab93d"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P02/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03.json": {
+      "sha256": "de55d0c85448e6ca0d37138ff5d40f3fcb63c6ca93bfa10ea3fc5355002a8d3a",
+      "bytes": 2177,
+      "git_blob_sha1": "44917acbd3a819daaba66eca4024d389e2d2007a"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/plan.json": {
+      "sha256": "a80302d095c5f74a66dcfcdd3fd50058886d76ae23df98fdacab08d9300e74f6",
+      "bytes": 585,
+      "git_blob_sha1": "56faf4e93a3373bc70c2b009737e8273e7adf220"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P03/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04.json": {
+      "sha256": "5763b6527fd051648238dfae2a0c10b16a818219ff2250c888a91fe5619f5773",
+      "bytes": 251,
+      "git_blob_sha1": "fa81106ad950f20fac36c72298a828e76618e367"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P04/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05.json": {
+      "sha256": "cfe6acdf8ba5c69a7f97957ae1336af25c3909759d88b88a352ce8d7483b1952",
+      "bytes": 385,
+      "git_blob_sha1": "3c012e055308218d87d91a4b67c5e4d0a0fbcf76"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P05/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06.json": {
+      "sha256": "59eed7673070cbf21bae4a8be8057bc4908e6c3085f97dd193e16029a0c33cc9",
+      "bytes": 2092,
+      "git_blob_sha1": "a94802f8bf965dfae247c47fe72d251c9bb56a79"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/state.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P06/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07.json": {
+      "sha256": "98a8d8faf55b4eeb9b33fc768de3a48bfa6d07ac1ae7716971eab54f01297cd7",
+      "bytes": 24283,
+      "git_blob_sha1": "fdb1931beb67cf8a8bb78277ca10bdfb239e605d"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/evidencia/casos/P07/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/canonical.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/constitution.bin": {
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+      "bytes": 411,
+      "git_blob_sha1": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/context.json": {
+      "sha256": "baa9c734431c5c25880311e73eeb3c0503d6528b66dd2a0ec67858659cc85d94",
+      "bytes": 1700,
+      "git_blob_sha1": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/convention.bin": {
+      "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+      "bytes": 776,
+      "git_blob_sha1": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/expected.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/geometry.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/injection.bin": {
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "bytes": 6237,
+      "git_blob_sha1": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/oracle.json": {
+      "sha256": "a4bdb4b40537a35b2a58833cf23e493dcd04e8b60189b5d007c329237eb74e0a",
+      "bytes": 2785,
+      "git_blob_sha1": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/plan.json": {
+      "sha256": "bc8fb2b290aa04d9601f601ba5dca49e2bcb1841b4c552963f6f0865e0d19129",
+      "bytes": 692,
+      "git_blob_sha1": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/registry.json": {
+      "sha256": "de86481c4aadfbe4c6d98f7f3326778f9b49106c9c0bf3d7cf2e8e033341f136",
+      "bytes": 4447,
+      "git_blob_sha1": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/request.json": {
+      "sha256": "2ee39a16721bc4b23db862f7ea06408088991ffa4203873f97a322afb94be18f",
+      "bytes": 1906,
+      "git_blob_sha1": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/source.bin": {
+      "sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+      "bytes": 1215,
+      "git_blob_sha1": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/state.bin": {
+      "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+      "bytes": 214,
+      "git_blob_sha1": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/support.bin": {
+      "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+      "bytes": 253,
+      "git_blob_sha1": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/transforms.bin": {
+      "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+      "bytes": 1026,
+      "git_blob_sha1": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/fixture/vector-alterado.bin": {
+      "sha256": "a083ba340295c7667319fb50b7ef37d99b1eeb4a207a0d083225d76400f926e3",
+      "bytes": 213,
+      "git_blob_sha1": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/gestionar.py": {
+      "sha256": "823431161cf020b0a0f374d6eea1a2be46338c76b5cfff5affbce9cf3b3c79e9",
+      "bytes": 4457,
+      "git_blob_sha1": "2a94c1a12ec3883593577d0447d3aa71084b0117"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167,
+      "git_blob_sha1": "d726ded2e5bd5fb796892adce1ab640896fc7ec7"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/probe.rs": {
+      "sha256": "c6da3f6c1d83cca9bd55640fd5fd8f933338376a7a431124647639b354f86b1a",
+      "bytes": 6560,
+      "git_blob_sha1": "d2d694526873ca7851cf0bf1fb0a75ffed3f0b02"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/publicar.py": {
+      "sha256": "8c67492229ad2e0ea228aeba1ebb6244b2bf16abcba2a20be1160c0e43f046a0",
+      "bytes": 2622,
+      "git_blob_sha1": "bfc832f3d4f2ff8cc57b013dfff2387e3ca8bf20"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/recepcion.patch": {
+      "sha256": "5cee2f33d3f6e1a3fd569051238a19c682d192ffdbae6df7ab9b575ebbf0847b",
+      "bytes": 2671,
+      "git_blob_sha1": "bff1712cde6ed32f7867d53177701c248ead0156"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/recepcion.rs": {
+      "sha256": "d7fc3cf9e8261c3d499a2b53762ef3de491e3420d6143f2d6677a6edb1361ef9",
+      "bytes": 5000,
+      "git_blob_sha1": "d8e9f3d94e911885bae8d9d2a33b15e077edef7e"
+    },
+    "docs/calidad/riesgos-materiales-s26/r05/reproducir.py": {
+      "sha256": "a261b03738cc2fa8ea762fa640ed91d0444906738e57a8e8753567ed3afed9f8",
+      "bytes": 2340,
+      "git_blob_sha1": "251daae6573e83b14e001dbd3db7a7fb9fae6216"
+    },
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md": {
+      "sha256": "83d2483e6138c521b80fca2e67a1d4199cd8916f80efff7095276bee96754105",
+      "bytes": 20460,
+      "git_blob_sha1": "f968476fc10bb7cf90acfe86bcb13f0a10f9ede3"
+    },
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/MANIFIESTO.json": {
+      "sha256": "dcf11c4c32b98a11cdc93e6b07f01f71231f590bb11708abb9be401fe4042e19",
+      "bytes": 6746,
+      "git_blob_sha1": "cf0f162310f8db3ff357c464463d7cea7ce978e9"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json": {
+      "sha256": "5cbded73044aa897e73d9b5c774d4e1ea0b5e47e15259954b25b570060a2001f",
+      "bytes": 13621,
+      "git_blob_sha1": "ae741f3d8367783bcfce13a52df0846701099a3b"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.lock": {
+      "sha256": "f94fbde29aaf7bc3949f4db77cbdbfaaac5fe60fed4e1ef7527234e141276917",
+      "bytes": 340,
+      "git_blob_sha1": "58cf054b9e8bc88f6e5ee6a9ea26b23596e6b5e1"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/Cargo.toml": {
+      "sha256": "8d9985dab3ad91e70ba749b8b0cdd92615dc502100e2f8a8dda7f14c1327bcd6",
+      "bytes": 172,
+      "git_blob_sha1": "f046bfd56a59e2ea6a17c8cf5efb5fa4bdf17a4e"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/main.rs": {
+      "sha256": "fdeee554e4b098b926a0dff87717f28759922b5304d6e1495e0eff2736323d47",
+      "bytes": 9430,
+      "git_blob_sha1": "666ed0519864100142109657f44f141a29ae3e7a"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/proyecto/src/observer.rs": {
+      "sha256": "0971a2b61433f961e2d2da142e473dc254e7116ef9b9dd0cb9fd4e52b2f8f4b1",
+      "bytes": 4730,
+      "git_blob_sha1": "ea76c24b1785cb085506f94265d30ea3abf31193"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/ENTRADAS.tar.gz": {
+      "sha256": "c5e49e57bc39192db32b10f03583b936ec508ab326c32d3a96ca791089765141",
+      "bytes": 24069,
+      "git_blob_sha1": "a68a48f2e7398e7498f0850c7c3389243d09ca3f"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/MANIFIESTO.json": {
+      "sha256": "75b7c7f6bb5b3dc33cd938658d45b741b1d1e725642fff67b2ca5b3d2d70650c",
+      "bytes": 4525,
+      "git_blob_sha1": "446ba1cafaa8a5fd5fd76194f5875ced2049b783"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.lock": {
+      "sha256": "6c5406e8b701bcb253879d22cb385424d40233af6deef31ef0ccbc393dbbf763",
+      "bytes": 235,
+      "git_blob_sha1": "dd524dd42962140a904e1890630b3399667a55f6"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/Cargo.toml": {
+      "sha256": "f48b9e65b8f5d862c925a5d0fb34a78d0b99ce0b0ef051a7e52589225ff3d19a",
+      "bytes": 146,
+      "git_blob_sha1": "6f448f9d931ff8e98bfb6d288cc392fbe5e1ad22"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/json.rs": {
+      "sha256": "09da960df90ebd88e87c9c06741cee1e6c971048e8f3f11f80ef6fd3fad3dfab",
+      "bytes": 12749,
+      "git_blob_sha1": "5b4dbe05906f2e5f6e0aa774f61ec7fa603efca7"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs": {
+      "sha256": "a0fa5a26292a50b46823952dae416d5a790d2cfee22d160b5ecf4903a0c88369",
+      "bytes": 24379,
+      "git_blob_sha1": "88fd1d14bbbca1137c7c26f2fbb25d4a5e21cc42"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/main.rs": {
+      "sha256": "fe6a4a8d98c5d7fad6fff3bb52e34340605eeac78e6914b151cedff7592b13e0",
+      "bytes": 14259,
+      "git_blob_sha1": "5089f555a8e01c08fcc0f7eca5f4a9e8346c326b"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/observer.rs": {
+      "sha256": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+      "bytes": 5167,
+      "git_blob_sha1": "d726ded2e5bd5fb796892adce1ab640896fc7ec7"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/sha.rs": {
+      "sha256": "1085ba53dad74273e9d3499eb8285c3d605615b913a395bf9837c47673a83fe1",
+      "bytes": 3720,
+      "git_blob_sha1": "f26908ad6447c5179cc18fa8434f3d1ae5c2fc02"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/sv_core-verificado.tar.gz": {
+      "sha256": "7ff82c2aafaf95f9636eeeddd357e0f4ab53bc578756a7582e75fea661a153a7",
+      "bytes": 129397,
+      "git_blob_sha1": "e963c81ac6014a61a78c295a032182f825377196"
+    },
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": {
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "bytes": 67111,
+      "git_blob_sha1": "44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    "rust/sv_core/Cargo.toml": {
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+      "bytes": 244,
+      "git_blob_sha1": "d284864c44d0e36d022768131abf88c450b95eb6"
+    },
+    "rust/sv_core/src/bindings.rs": {
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "bytes": 20680,
+      "git_blob_sha1": "6fb0971638d4ee72edab02d9e39bb52c53330041"
+    },
+    "rust/sv_core/src/execution.rs": {
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "bytes": 16865,
+      "git_blob_sha1": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de"
+    },
+    "rust/sv_core/src/frame.rs": {
+      "sha256": "3efd65d9f7733a040e635e9b91087af1d792a1e9b67f1c845ffbc10e92379fb4",
+      "bytes": 13990,
+      "git_blob_sha1": "c0a94c175f563a0145d31965da71fd3b1b07c732"
+    },
+    "rust/sv_core/src/frontend.rs": {
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "bytes": 97042,
+      "git_blob_sha1": "c73933b661f08c4d0123b8a22f436962b5481208"
+    },
+    "rust/sv_core/src/ir.rs": {
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "bytes": 12706,
+      "git_blob_sha1": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7"
+    },
+    "rust/sv_native/src/main.rs": {
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "bytes": 2408,
+      "git_blob_sha1": "8e225dcd225dab3d356c8d7ff53c2fd6ee12d261"
+    }
+  }
+}

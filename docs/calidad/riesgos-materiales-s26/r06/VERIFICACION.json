@@ -1,0 +1,56 @@
+{
+  "conforme": true,
+  "corte_lenguaje": "b6be761da7223d9f26e5d7a41b83092330597276",
+  "corte_laboratorio": "8a989c78b69b7a944a4fa1d5195c82d254d80b8a",
+  "fuentes_cotejadas": 311,
+  "otros_sucesos_conservados": true,
+  "estado_bis_fuera_de_s26_conservado": true,
+  "antecedentes_sin_modificar": true,
+  "nuevos_contrastes_ejecutados": 0,
+  "archivos_editados": {
+    "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md": {
+      "antes": "e2df7838ebc320166a65ca136c0df32737e0d57604b7fe7530ace849b847de21",
+      "despues": "da8970f4d9fca06d9bb76bb628e96339f54e3adde1c75e1dec09e5049c45513e"
+    },
+    "docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md": {
+      "antes": "42e92cbf09581bb2dedb952c0d5f143006762ae7269dc233d36e1ab9fe91b50a",
+      "despues": "d93e47c82c3ebb7140dd589f3490d424c34534b54186798ab83c8ede785c9fe9"
+    },
+    "docs/calidad/riesgos-materiales-s26/README.md": {
+      "antes": "3e214da81a040183811e086e4fc93f8ccd22ae54f3e417be7e57e0e00dddae43",
+      "despues": "01604a951bcbf1e7143d61ce5ebbc80b5ecd12f53dabed436ee48acbc8311f59"
+    },
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv": {
+      "antes": "badf47ee6b8e98f6f2f99f6865b8216f5c9e23aec84f7f95e85dacf25ba21ec5",
+      "despues": "e1d1870a3ed6aaa6d21b4bc7c7a6d9e03acc28656dc91bc864d4abcecabdd1b3"
+    },
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv": {
+      "antes": "8f2a0ac856285b96cb62fea4c89692c06b8a7820cbad00a201cc2e90375b7dba",
+      "despues": "695d5aef0d01e31cf0dbdf20e238237c7b53741e67e9cd3f2e6c921a0b24f8d3"
+    },
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md": {
+      "antes": "10a9f11fdfec6325d1424b5dca4aa64657880b680259acbf0e42580a477af290",
+      "despues": "c906cddba9cc29b2390c58639b6a6d53d5af69b13ea8e65e0401b6447e9e1b52"
+    },
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv": {
+      "antes": "6b2fab7ebd8bcaf442ba3a64bc5a8a215fd030aeb5e8fa7aed88f9ab8a3fcc40",
+      "despues": "e4d0d545ffc4d087768c22c515bd74b07993ceac662fd7b8b3ff76e6c2463ab1"
+    },
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md": {
+      "antes": "31b69723acdc2b8d74b72bc635658cb2994f74db198b05ca9f8a6e9baac86394",
+      "despues": "39c126de60029371cc1a044db85cfc85c29a0288e514dc32eccfb66d18cf8a20"
+    },
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md": {
+      "antes": "83d2483e6138c521b80fca2e67a1d4199cd8916f80efff7095276bee96754105",
+      "despues": "f57e21db333ef71be3491081afadabebe67c2a755105ab927c71d85ef95fbddf"
+    },
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/MANIFIESTO.json": {
+      "antes": "dcf11c4c32b98a11cdc93e6b07f01f71231f590bb11708abb9be401fe4042e19",
+      "despues": "b636aaf247cbe273ec181f3ab146fa81798e1dddd3122399e43555d150bcd659"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json": {
+      "antes": "5cbded73044aa897e73d9b5c774d4e1ea0b5e47e15259954b25b570060a2001f",
+      "despues": "ae4223e36ff4c2a8204cf6d336d407cd83714da294da0e130414237eec91032a"
+    }
+  }
+}
