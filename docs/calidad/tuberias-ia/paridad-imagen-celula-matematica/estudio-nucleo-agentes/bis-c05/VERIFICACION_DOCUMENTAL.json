@@ -1,0 +1,28 @@
+{
+  "estatuto": "Cotejo auxiliar Python del banco previo, fuentes y preservación; no receptor Rust ni observación material",
+  "corte": "177f54f06b532f0a91c17a0c7be8dab314f3314e",
+  "comprobaciones": [
+    "16 especificaciones únicas; cuatro positivas y doce negativas; resultados observados nulos",
+    "Coherencia del esperado con el orden de guardas descrito, por cotejo auxiliar Python",
+    "Dos descriptores conservados byte a byte de C04; referencias r1/r2 con bytes iguales",
+    "Fuentes identificadas y enlaces C05 existentes",
+    "RETP e historial conservan prefijos previos íntegros; sólo S22 cambia",
+    "S24 pendiente sin fechas de inicio ni fin; 2 escenarios originales ejecutados y 22 pendientes",
+    "Sin cambios en Rust ni bancos C01–C04"
+  ],
+  "instalacion_comprobada": {
+    "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)",
+    "edicion_sv_core": "2021",
+    "alcance": "Consulta de versiones y Cargo.toml; no compilación nueva"
+  },
+  "incidencia_auxiliar": "El primer cotejo esperaba por error siete archivos existentes modificados; el diff mostró ocho, todos previstos (tres sucesos, dos RETP, Léame, estado y README). Se corrigió sólo esa cuenta auxiliar; ningún oráculo C05 cambió.",
+  "ensayos_c05_ejecutados": 0,
+  "imagenes_renderizadas": 0,
+  "limitaciones": [
+    "Los estímulos de observación son datos ficticios para un montaje futuro",
+    "No se ha compilado ni ejecutado una realización nueva C05",
+    "El cotejo Python no acredita recepción JSON ni guardas SV en Rust",
+    "C05-P/N visuales permanecen pendientes"
+  ]
+}

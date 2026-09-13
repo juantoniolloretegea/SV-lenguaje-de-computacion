@@ -1,0 +1,484 @@
+{
+  "version": "BIS-C05-BANCO/0.1",
+  "alcance": "Especificaciones previas de entrega documental; no capturas de ejecución ni imágenes",
+  "variantes": 16,
+  "ejecutadas": 0,
+  "registro": "REGISTRO_INDEPENDIENTE.json",
+  "casos": [
+    {
+      "id": "C05-01",
+      "descripcion": "Entrega exacta A/r2, contexto y bytes concordantes",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-02",
+      "descripcion": "Entrega exacta A/r1 con los mismos bytes",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r1",
+        "representacion": "A-r1"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r1",
+        "representacion": "A-r1",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-03",
+      "descripcion": "Transformación superior-horaria explícita",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2-superior"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2-superior",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-superior-horario.json"
+      },
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-04",
+      "descripcion": "Otra invocación con expectativa propia",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I3",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I3",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-05",
+      "descripcion": "Observación ausente",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": null,
+      "resultado_esperado": "OBSERVACION_NO_DISPONIBLE",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-06",
+      "descripcion": "Autodeclaración del proponente",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "declaracion_del_proponente",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "OBSERVACION_NO_ADMITIDA",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-07",
+      "descripcion": "Contexto ajeno: ambito",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-B",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "CONTEXTO_DISTINTO",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-08",
+      "descripcion": "Contexto ajeno: invocacion",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I1",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "CONTEXTO_DISTINTO",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-09",
+      "descripcion": "Contexto ajeno: operacion",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "ejecutar",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "CONTEXTO_DISTINTO",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-10",
+      "descripcion": "Contexto ajeno: consumidor",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-B",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "CONTEXTO_DISTINTO",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-11",
+      "descripcion": "Contexto ajeno: canal",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "otro-canal",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "CONTEXTO_DISTINTO",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-12",
+      "descripcion": "Otra instancia, mismos bytes",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "B",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "REVISION_O_INSTANCIA_DISTINTA",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-13",
+      "descripcion": "Otra revisión, mismos bytes",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r1",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "REVISION_O_INSTANCIA_DISTINTA",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-14",
+      "descripcion": "Otra representación con revisión concordante",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2-superior",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-identidad.json"
+      },
+      "resultado_esperado": "REPRESENTACION_DISTINTA",
+      "nota": "",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-15",
+      "descripcion": "Bytes sustituidos después de comprobar la fuente",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/16-superior-horario.json"
+      },
+      "resultado_esperado": "BYTES_DISTINTOS",
+      "nota": "La captura futura se hará en la entrada final; una huella declarada anterior no es el observado.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    },
+    {
+      "id": "C05-16",
+      "descripcion": "Observación presente vacía",
+      "expectativa_independiente": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2"
+      },
+      "estimulo_observacion_del_futuro_montaje": {
+        "ambito": "montaje-A",
+        "invocacion": "I2",
+        "operacion": "entregar_descriptor",
+        "consumidor": "receptor-local-A",
+        "canal": "bytes-locales",
+        "instancia": "A",
+        "revision": "r2",
+        "representacion": "A-r2",
+        "procedencia": "captor_local_admitido",
+        "archivo": "fixtures/vacio.bin"
+      },
+      "resultado_esperado": "BYTES_DISTINTOS",
+      "nota": "Distinguir una secuencia presente vacía de observación ausente.",
+      "estado": "ESPECIFICADO_NO_EJECUTADO",
+      "resultado_observado": null
+    }
+  ],
+  "pendientes_para_C05_original": [
+    "Imágenes materializadas con originales y vínculo C03/C04",
+    "Sede y receptor Rust concretos; presupuesto y contrato de canal",
+    "Instrumentación de uso real y controles sensibles a sustitución de dependencia",
+    "Prueba positiva S2 y negativa S1 atribuida a S2 sobre imagen realmente consumida"
+  ]
+}

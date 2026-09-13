@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Continuar BIS-C05: contrato de artefacto efectivamente consumido, revisión y contexto de uso. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.",
+  "siguiente_accion": "Continuar BIS-C06: lectura técnica, inicialización y reevaluación bajo contratos diferenciados. Completar BIS-02; decidir sedes en BIS-03 y realizar y probar en Rust lo justificado en BIS-04.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +51,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis-c04/README.md",
-  "ampliacion": "BIS-C04: contrato candidato y 20 variantes documentales con cinco oráculos simbólicos exactos para 16/25/49 posiciones; cero ejecutadas. C01 conserva 13/13 variantes nativas; C02 y C03 conservan sus bancos previos. BIS-02 sigue en ejecución.",
-  "ultimo_retp": "RETP-2026-207",
+  "ultimo_informe": "bis-c05/README.md",
+  "ampliacion": "BIS-C05: contrato de entrega/consumo y 16 especificaciones documentales, cero ejecutadas. Criterio transversal: preparación Python, compilación Rust, recepción de datos y validación SV con evidencia separada.",
+  "ultimo_retp": "RETP-2026-208",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -124,5 +124,14 @@
     ],
     "corte_revision": "fd815e9b7921cb05854ed290a609957e9d07521a",
     "alcance": "Geometría simbólica exacta previa; sin imagen renderizada ni consumo probado"
-  }
+  },
+  "preparacion_bis_c05": {
+    "contrato": "bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md",
+    "banco": "bis-c05/BANCO_PREVIO_v0_1.json",
+    "variantes_preparadas": 16,
+    "variantes_ejecutadas": 0,
+    "corte_revision": "177f54f06b532f0a91c17a0c7be8dab314f3314e",
+    "alcance": "Entrega documental especificada; sin imágenes ni consumo visual ejecutado"
+  },
+  "criterio_aceptacion_rust": "bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md"
 }

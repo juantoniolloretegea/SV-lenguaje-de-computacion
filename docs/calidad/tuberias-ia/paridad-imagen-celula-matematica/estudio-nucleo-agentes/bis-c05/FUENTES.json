@@ -1,0 +1,86 @@
+{
+  "corte_lenguaje": "177f54f06b532f0a91c17a0c7be8dab314f3314e",
+  "corte_laboratorio": "51b58a5163cefa70f5bd3e93e6a5a32495a43c91",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad de bytes conservada frente a C04"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad de bytes conservada frente a C04"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad de bytes conservada frente a C04"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/CONTRATO_Y_PLAN.md",
+      "sha256": "df883dc09e2e025dffbe5bda3aabdbbf62a87a0f5a3103c6e05067385459cc20",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/RESULTADO.json",
+      "sha256": "1a900071df101814bd846a79849c99e7807d6d3c0316cd4d6fc0758adf7ddf2c",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/lectura-vinculada-a-invocacion/codigo/lectura.rs",
+      "sha256": "c0bc409d7ecc5b8cc6460f97d893c1fe0fd420b0829d3daccbc0f4a577758e00",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+      "sha256": "f8e3f1be865d2e9505e29a716d2475415249061d7a185d1ac9618df32b8742aa",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md",
+      "sha256": "6264eace0c3536fab89a0903d7bbdb5693af06ff6c591c1d37289dab9bb875bf",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/ACTA_RESULTADO_S14.md",
+      "sha256": "02aa4d536ad25b84fd8bff3bcd56ec76f26f134a38d34535daf8013434a23a80",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s14-bases-y-reevaluacion/codigo/bases.rs",
+      "sha256": "abdc834cc54d66d2b0db00bd1f26d684fae94acd2a452d1a5f4dbeb29f54b3de",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md",
+      "sha256": "04a11ac7c926af0618ef30fe3c79047c26f70d213658d0062ed8e4fa1a79ea6c",
+      "lectura": "Lectura completa en este incremento"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md",
+      "sha256": "36802d91f1b406d31eb73d9b475c2e3159d0abe87615a8a5c47ef9d575f7b1f5",
+      "lectura": "Lectura previa conservada; aplicación al relevo C05"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md",
+      "sha256": "2ab2ea660f17baef23ad4b82e263ea50007c7b6986e5aa08ee0f768447fbc72c",
+      "lectura": "Lectura previa conservada; aplicación al relevo C05"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Lectura previa conservada; aplicación al relevo C05"
+    },
+    {
+      "ruta": "rust/sv_core/Cargo.toml",
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+      "lectura": "Edición declarada"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "Escenarios originales C05/C06"
+    }
+  ]
+}

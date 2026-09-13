@@ -1,0 +1,27 @@
+{
+  "version": "BIS-C05-REGISTRO/0.1",
+  "estatuto": "Oráculo sintético del conductor; no constitución de dominio",
+  "referencias": {
+    "A-r1": {
+      "instancia": "A",
+      "revision": "r1",
+      "artefacto": "fixtures/16-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "clase": "descriptor_geometrico_no_imagen"
+    },
+    "A-r2": {
+      "instancia": "A",
+      "revision": "r2",
+      "artefacto": "fixtures/16-identidad.json",
+      "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+      "clase": "descriptor_geometrico_no_imagen"
+    },
+    "A-r2-superior": {
+      "instancia": "A",
+      "revision": "r2",
+      "artefacto": "fixtures/16-superior-horario.json",
+      "sha256": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604",
+      "clase": "descriptor_geometrico_no_imagen"
+    }
+  }
+}

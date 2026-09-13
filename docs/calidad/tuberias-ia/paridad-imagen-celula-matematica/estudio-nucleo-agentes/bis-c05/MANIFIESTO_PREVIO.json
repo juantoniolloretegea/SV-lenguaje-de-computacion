@@ -1,0 +1,17 @@
+{
+  "corte_lenguaje": "177f54f06b532f0a91c17a0c7be8dab314f3314e",
+  "estatuto": "Contrato y especificaciones previas C05; cero ejecutadas",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "0c050cb274b4b506c7224aee0220ff6b3698877a6b422039ce4ec97add1d44e4",
+    "CONTRATO_CONSUMO_CANDIDATO_v0_1.md": "17b01025dd0e01a2b7cb26636114e4a53b1d48f3a356f0032e1eb6586539fbd3",
+    "CRITERIO_DE_ACEPTACION_RUST_v1.md": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+    "FUENTES.json": "ca5782975d74e648768aec33000fdde287ed26788d77c67c49954cb7707aefb3",
+    "FUENTES_Y_ALCANCE.md": "276780a311f7bc2a693980cfacbec1d404d55a6bff82bb9a45fea87a6f79bca2",
+    "README.md": "d9a922c22e9b1f5acca7772b80cc75f3c17e682205d0f5cdfac53be03dc08185",
+    "REGISTRO_INDEPENDIENTE.json": "337d8ec92bfa8390dd7bab86e62a494f4cac71828f1b751b12e71b98ebac3d18",
+    "VERIFICACION_DOCUMENTAL.json": "50a11757c533ac0f22df8c6dc5f5d81bf0fd7ca9071a576d44d64cb0b299fe42",
+    "fixtures/16-identidad.json": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+    "fixtures/16-superior-horario.json": "d92c6264f306d763fefc4d81e990069584a4b0b756699e13e8a78b64177a8604",
+    "fixtures/vacio.bin": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T09:41:54Z
+**fecha_actualizacion_utc:** 2026-09-13T10:05:48Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje fd815e9b7921cb05854ed290a609957e9d07521a; laboratorio 2dd73e10af75fec840ffb31e71feaa7a04e62338
+**cortes_de_entrada:** Lenguaje 177f54f06b532f0a91c17a0c7be8dab314f3314e; laboratorio 51b58a5163cefa70f5bd3e93e6a5a32495a43c91
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C04 preparado: contrato de paridad posicional y convenio gráfico; 20 variantes previas y cinco oráculos simbólicos exactos para 16/25/49 posiciones. Se separan símbolo, radio, discriminante técnico, transformación y permutación. C01 conserva 13/13 variantes nativas; C02/C03 conservan sus bancos sin ejecutar.
+**resultado:** BIS-C05 preparado: contrato de artefacto, revisión e invocación; 16 especificaciones previas de entrega documental, cuatro positivas y doce negativas. Recibida la exigencia de distinguir preparación Python, compilación Rust y recepción/validación SV ejecutadas.
 
-**verificacion:** Verificación documental de fuentes, huellas, 20 entradas únicas, cinco oráculos completos y conservación del historial. Cero variantes C04 ejecutadas; no se ha generado ni probado una imagen o su consumo. BIS-02 mantiene dos escenarios originales ejecutados y veintidós pendientes.
+**verificacion:** Verificación documental de fuentes, bytes, banco e historial. Cero variantes C05 ejecutadas; sin imagen ni consumo visual probado. Antecedentes Rust de lectura vinculada y S14 consultados, no reejecutados. Dos escenarios originales ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-207
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-208
 
-**siguiente_accion:** Continuar BIS-C05: contrato de artefacto efectivamente consumido, revisión y contexto de uso. Completar BIS-02 antes de decidir sedes en BIS-03 e implementar en BIS-04.
+**siguiente_accion:** Continuar BIS-C06: lectura técnica, inicialización y reevaluación bajo contratos diferenciados. Completar BIS-02; decidir sedes en BIS-03 y realizar y probar en Rust lo justificado en BIS-04.
 
-**observaciones:** Descriptor experimental, no nueva IR ni renderer; precisión y legibilidad del dibujo siguen pendientes. BIS-C04 no es una nueva corrección de la adenda histórica C01-C03. S24 pendiente; GUI diferida al cierre de Bis, catálogo y fase. Sin cambios de Rust, semántica, IR ni dominios.
+**observaciones:** Sin cambios Rust, IR, semántica ni dominios. JSON es dato, no realización. Fuentes y estados anteriores conservados. GUI/S24 pendiente hasta cierre de Bis, catálogo y fase. Códigos del banco experimentales, no catálogo canónico.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
