@@ -1,0 +1,10 @@
+[package]
+name = "sv_bis_i0205"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[dependencies]
+sv_core = { path = "../sv_core" }

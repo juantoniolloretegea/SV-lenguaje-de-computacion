@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ENC01",
+    "codigo": "E0603",
+    "compila": false
+  },
+  {
+    "id": "ENC02",
+    "codigo": "E0451",
+    "compila": false
+  },
+  {
+    "id": "ENC03",
+    "codigo": "E0599",
+    "compila": false
+  },
+  {
+    "id": "ENC04",
+    "codigo": "E0594",
+    "compila": false
+  },
+  {
+    "id": "ENC05",
+    "codigo": "E0594",
+    "compila": false
+  },
+  {
+    "id": "ENC06",
+    "codigo": "E0616",
+    "compila": false
+  },
+  {
+    "id": "ENC07",
+    "codigo": "E0277",
+    "compila": false
+  },
+  {
+    "id": "ENC08",
+    "codigo": null,
+    "compila": true
+  }
+]
