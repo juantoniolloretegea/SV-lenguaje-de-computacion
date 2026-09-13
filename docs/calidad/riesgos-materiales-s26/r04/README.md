@@ -104,3 +104,15 @@ copias conforme a `publicar.py`; no se invoca inferencia externa ni otro agente.
 La siguiente integración depende del resultado y deberá cubrir las salidas
 restantes, interrupción/pánico y sustitución durante lectura antes de acreditar
 el recorrido completo. Las obligaciones de R2, S22 y el relevo de S24 se conservan.
+
+## Resultado / RETP-229
+
+Ocho sondas conformes a sus oráculos, cero fallos de aserción, una campaña Rust/Cargo 1.98.0 offline. Precompromiso público `aee7ced37e2edb17e35e0f9ee270e15312e7d9c5`. Fuentes, banco y código congelados conservados.
+
+P01 admite el control intacto. P02 detecta bytes distintos; P03 detecta el cambio del primer componente del archivo a One mientras el vector admitido y la entrega anteriores conservan Zero. El informe distingue esa secuencia: no reescribe la entrega ni presenta el archivo posterior como su contenido original.
+
+P04/P08 conservan entrega previa y muestran fallos de apertura/lectura posteriores. P06 observa 1025 bytes y declara exceso sin recorrer los 2048. P05/P07 detienen la operación ante fallo o alteración inicial, con cero intentos de despacho. El control que sustituye after por before sigue haciendo pasar al observador heredado: se conserva ese límite y no se confunde la recepción ordinaria corregida con resistencia a evidencia falseada por el mismo proceso.
+
+[Resultados](RESULTADOS.json), [stdout](evidencia/02.stdout), [stderr](evidencia/02.stderr), [órdenes](evidencia/ORDENES.json) y [huellas](evidencia/HUELLAS.json). Las observaciones y archivos posteriores están en evidencia/observaciones, con inventario de rutas ausentes/directorio.
+
+Se cualifica esta variante local, no el ejecutable completo ni todos los casos Bis. El siguiente incremento debe recibir las salidas restantes y los fallos que impiden el retorno normal, y concretar sustitución durante lectura. S26 sigue abierto; R2 y el relevo de GUI conservan sus dependencias.

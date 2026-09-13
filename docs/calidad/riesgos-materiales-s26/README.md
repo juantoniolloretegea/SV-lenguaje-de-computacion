@@ -156,3 +156,7 @@ R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo
 ## Continuación R04 / RETP-2026-228
 
 Variante experimental R04 de recepción del testigo: lectura inicial y posterior reales con cuota; entrega y preservación separadas. Ocho sondas previas P01-P08 con controles y fallos de lectura. [Inventario material](r04/README.md).
+
+## Continuación R04 / RETP-2026-229
+
+R04: ocho sondas conformes. Relectura posterior detecta cambio literal y del vector; ausencia, error de lectura y exceso se distinguen sin borrar entrega previa. Fallo o cambio inicial detienen el recorrido; el observador heredado conserva su límite ante copias falsamente posteriores. [Inventario material](r04/README.md).

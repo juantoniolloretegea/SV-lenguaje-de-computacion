@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T20:07:42Z
+**fecha_actualizacion_utc:** 2026-09-13T20:11:03Z
 
 **fecha_fin_utc:** —
 
@@ -910,15 +910,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Variante experimental R04 de recepción del testigo: lectura inicial y posterior reales con cuota; entrega y preservación separadas. Ocho sondas previas P01-P08 con controles y fallos de lectura.
+**resultado:** R04: ocho sondas conformes. Relectura posterior detecta cambio literal y del vector; ausencia, error de lectura y exceso se distinguen sin borrar entrega previa. Fallo o cambio inicial detienen el recorrido; el observador heredado conserva su límite ante copias falsamente posteriores.
 
-**verificacion:** Fragmento del conductor I0205 reutilizado; observador literal; quince fixtures R01 preservados y variante de vector Zero a One fijada. Fuentes, oráculos y código comprometidos antes de compilar.
+**verificacion:** Una campaña Rust/Cargo 1.98.0, offline, ocho funciones y cero fallos de aserción; informes por caso y fuentes conservados. Realización local por operación; no BD, aislamiento, captura de pantalla ni recuperación acreditados.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r04/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-228
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-229
 
-**siguiente_accion:** Ejecutar ocho sondas R04 después del precompromiso; conservar la evidencia del lector y del despacho; cotejar sensibilidad al testigo copiado y límites del montaje.
+**siguiente_accion:** Extender la cualificación por las salidas restantes del conductor y fijar tratamiento de interrupción/pánico y sustitución de fuente durante lectura antes de integrar esta recepción en el recorrido completo. Conservar S26 y el relevo Bis/S24.
 
 **observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
 

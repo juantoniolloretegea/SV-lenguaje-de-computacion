@@ -1,0 +1,13 @@
+
+running 8 tests
+test tests::p01_real_read_positive ... ok
+test tests::p02_literal_change ... ok
+test tests::p03_vector_change_and_copied_witness_sensitivity ... ok
+test tests::p04_missing_after_does_not_erase_delivery ... ok
+test tests::p05_missing_before_stops_operation ... ok
+test tests::p06_excess_after_is_not_u ... ok
+test tests::p07_changed_before_stops_operation ... ok
+test tests::p08_read_error_after_is_explicit ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
