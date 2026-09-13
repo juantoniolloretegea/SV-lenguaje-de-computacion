@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T05:51:38Z
+**fecha_actualizacion_utc:** 2026-09-13T05:53:41Z
 
 **fecha_fin_utc:** —
 
@@ -774,13 +774,13 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-01 ampliado con concordancia de suceso técnico, tipo del horizonte, instancia, reevaluación, frame, consulta y representación. Se recibe suceso como hecho factual y prosa/imagen como representaciones; registrar una afirmación no acredita su verdad. Primitivas y operaciones derivadas se distinguen de funciones, métodos y macros Rust. Contratos de integración pendientes.
+**resultado:** BIS-01 ampliado con concordancia de suceso técnico, tipo del horizonte, instancia, reevaluación, frame, consulta y representación. Se recibe suceso como hecho factual y prosa/matemática/imagen como formas de representación; registrar una afirmación no acredita su verdad. Primitivas y operaciones derivadas se distinguen de funciones, métodos y macros Rust. Contratos de integración pendientes. Precisión expresa: el suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.
 
-**verificacion:** Lectura completa de III, V y especificación metodológica; lectura selectiva de nota local/envolvente, IR 0.3 y SEC5. Fuentes doctrinales cotejadas por blob Git y SHA-256; revisión documental, sin ejecución ni cambio de Rust.
+**verificacion:** Corrección documental de la omisión de matemática en la formulación abreviada, contrastada en informe, workflow, Léame primero y registros. Se mantiene la revisión de fuentes de RETP-198; sin cambio de semántica, IR ni Rust.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v1.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/RADIOGRAFIA_INICIAL_BIS_01.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-198
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-199
 
 **siguiente_accion:** Completar BIS-01 y constituir en BIS-02 la inicialización, la relación frame celular/arquitectónico, el estatuto de frvis y la frontera de decisión formal; localizar semántica V0.2 y adendas antes del dictamen global.
 

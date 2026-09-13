@@ -12,13 +12,15 @@ La revisión confirma una distinción ya documentada: el Documento III define el
 
 El requisito planteado por el autor —pueden existir sucesos sin frame, pero no frames sin suceso— se recibe para su formalización. La formulación propuesta es **vinculación constitutiva y trazable entre el frame y su evaluación o reevaluación**, con los sucesos pertinentes cuando corresponda. No se da por demostrada una identidad de tipos entre frame y suceso del horizonte. El régimen de constitución del frame inicial requiere una casilla explícita: no se fabricará una transición anterior únicamente para satisfacer una cadena de registro.
 
-## 1.1. Precisión del autor: el hecho y sus representaciones
+## 1.1. Precisión del autor: el hecho, la prosa, la matemática y la imagen
 
-El autor precisa durante el contraste que «suceso» designa, en su acepción general, un hecho factual. Ese hecho puede documentarse mediante prosa suficiente para la auditoría y la trazabilidad o requerir, además, una representación visual. La diferencia se sitúa en la necesidad y el contrato de representación, no en que existan hechos de menor o mayor realidad por disponer de imagen.
+El autor precisa durante el contraste: **«El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo».** Esta formulación incluye expresamente la representación matemática. Según el contrato y la finalidad, la documentación puede emplear prosa, representación matemática, imagen o una combinación de ellas. La diferencia se sitúa en la necesidad y el contrato de representación, no en que existan hechos de menor o mayor realidad por disponer de imagen.
 
-Se adopta esta acepción general como criterio de trabajo recibido del autor. Se distinguen el hecho, su registro, su eventual formalización algebraica y su representación visual. Un hecho no deja de existir por carecer de dibujo; tampoco se acredita un hecho únicamente porque exista una narración o una imagen que lo afirme. Sus consecuencias deberán identificarse con su alcance y respaldo; no se presume que todas sean conocidas o que produzcan cambios paramétricos relevantes para una arquitectura concreta.
+Se adopta esta acepción general como criterio de trabajo recibido del autor. Se distinguen el hecho y sus formas de representación: discursiva, matemática y visual, con sus respectivos contratos. El registro conserva evidencia de la actividad o del objeto representado. Un hecho no deja de existir por carecer de dibujo; tampoco se acredita un hecho únicamente porque exista una narración o una imagen que lo afirme. Sus consecuencias deberán identificarse con su alcance y respaldo; no se presume que todas sean conocidas o que produzcan cambios paramétricos relevantes para una arquitectura concreta.
 
 En particular, «la IA emitió el consejo X» puede ser un hecho registrado sin que por ello quede acreditada la verdad del contenido de X. La tubería deberá preservar esa diferencia entre la ocurrencia de una afirmación y la justificación de lo afirmado.
+
+Dentro del SV, el álgebra establece las restricciones de la representación matemática y de su correspondencia gráfica. La fidelidad al hecho representado requiere, además, respaldo en la captura, admisibilidad, transducción y trazabilidad que correspondan. La coherencia interna de una representación no acredita por sí sola la verdad de una afirmación sobre el mundo. Las distintas representaciones deben declarar su alcance; no se presume identidad de contenido ni reversibilidad entre prosa, matemática e imagen.
 
 La analogía de fotografiar un volcán o una escena explica la utilidad de complementar la prosa. En la paridad SV, el polígono es específicamente una representación del estado matemático bajo un convenio declarado. Una fotografía externa puede ser evidencia de entrada, pero no se convierte automáticamente en ese polígono ni en un frame canónico.
 
@@ -105,6 +107,6 @@ Los comentarios de implementación y documentación ES/EN siguen la política ya
 
 ## 8. Estado de cierre
 
-La precisión del autor sobre el hecho factual y sus representaciones queda incorporada como criterio de trabajo. El contraste permite avanzar con una distinción fundada entre sucesos, reevaluaciones, frames, consultas y representaciones. Permanecen por constituir los contratos de integración del Bis, especialmente la inicialización, la relación entre frame celular y frame arquitectónico y el estatuto material de `frvis`.
+La precisión del autor sobre el hecho factual y sus tres formas de representación —prosa, matemática e imagen— queda incorporada como criterio de trabajo. El contraste permite avanzar con una distinción fundada entre sucesos, reevaluaciones, frames, consultas y representaciones. Permanecen por constituir los contratos de integración del Bis, especialmente la inicialización, la relación entre frame celular y frame arquitectónico y el estatuto material de `frvis`.
 
 S22 y BIS-01 continúan en ejecución. No se declara probado un runtime, no se modifica la IR ni se añade una primitiva. La revisión documental orienta el trabajo posterior y evita que una elección de programación resuelva implícitamente una cuestión semántica.

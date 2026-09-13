@@ -1969,3 +1969,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-198 · S22 · Concordancia de suceso, frame y operaciones SV
 
 2026-09-13T05:51:38Z. BIS-01 ampliado con concordancia de suceso técnico, tipo del horizonte, instancia, reevaluación, frame, consulta y representación. Se recibe suceso como hecho factual y prosa/imagen como representaciones; registrar una afirmación no acredita su verdad. Primitivas y operaciones derivadas se distinguen de funciones, métodos y macros Rust. Contratos de integración pendientes. Lectura completa de III, V y especificación metodológica; lectura selectiva de nota local/envolvente, IR 0.3 y SEC5. Fuentes doctrinales cotejadas por blob Git y SHA-256; revisión documental, sin ejecución ni cambio de Rust. [Informe](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md). Completar BIS-01 y constituir en BIS-02 la inicialización, la relación frame celular/arquitectónico, el estatuto de frvis y la frontera de decisión formal; localizar semántica V0.2 y adendas antes del dictamen global.
+
+
+<a id="retp-199"></a>
+
+### RETP-2026-199 · S22 · Hecho y representaciones discursiva, matemática y visual
+
+2026-09-13T05:53:41Z. Precisión expresa del autor: **el suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo**. Se corrige la omisión de la matemática en la formulación abreviada. [Informe](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md). Se actualizan workflow, estado, Léame primero y registros; BIS-01 sigue en ejecución. Sin modificación del núcleo, semántica o IR.
