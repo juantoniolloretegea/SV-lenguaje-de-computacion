@@ -88,5 +88,11 @@
     "estado": "diferida hasta cierre de fase",
     "tecnologia": "no seleccionada"
   },
-  "evidencia_ultimo_contraste": "bis-c01/evidencia/ejecucion-1/RESULTADO.json"
+  "evidencia_ultimo_contraste": "bis-c01/evidencia/ejecucion-1/RESULTADO.json",
+  "suceso_secuencia_posterior": {
+    "id": "S24",
+    "estado": "pendiente",
+    "registro": "RETP-2026-204",
+    "condicion": "Finalizar Bis, catálogo y fase antes del análisis e instalación de GUI"
+  }
 }

@@ -22,6 +22,8 @@ Antes de intervenir debe quedar entendido que el frame se constituye bajo contra
 
 **Siguiente objeto material:** BIS-C02: fijar contrato de soporte por versión, entrada y observador, y comprometer los fixtures antes de ejecutar. Geometría válida no significa tamaño autorizado por el soporte. Las decisiones de frvis, inicialización y sede de operaciones siguen pendientes.
 
+**S24 · pendiente / RETP-2026-204.** La secuencia tiene [suceso propio](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md). Sus fechas de inicio y fin permanecen vacías. S22 continúa en ejecución.
+
 **Orden humano vigente:** completar (p1+p3)-Bis; retomar y cerrar el catálogo de errores y la fase aplicable; después analizar, elegir e instalar la GUI. No se ha seleccionado tecnología de GUI. Los casos reproducibles podrán acompañar la revisión local o web, sin convertir esa visualización en prueba adicional.
 
 **Precisión de versiones recuperada de S13:** gramática/superficie 0.2, IR 0.3 y serializador 0.1.0. Las obligaciones semánticas proceden de Frontera v0, IR vigente, partes heredadas no sustituidas y rectores/adendas aplicables. Queda rectificado el pendiente nominal de buscar una «semántica V0.2» independiente. La corrección documental no declara suficiencia ejecutiva.

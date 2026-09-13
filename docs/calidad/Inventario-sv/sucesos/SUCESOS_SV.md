@@ -820,3 +820,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles. CI detectó omisión del recurso Markdown en el paquete: fallo conservado y corregido mediante admisión de ruta exacta y controles específicos. El resultado no ejecuta los 24 escenarios BIS-02.
 
+## S24 · Bis → catálogo y cierre de fase → análisis e instalación de la GUI
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-13T08:03:14Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-13T08:03:14Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Seguimiento del relevo secuenciado hacia la GUI. Completar S22/(p1+p3)-Bis, después el catálogo de errores y el cierre de la fase aplicable; sólo entonces analizar, seleccionar e instalar la GUI.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje ba2f964e47aac7ec42a1d2eb3f5d97bf81e6af96; laboratorio b6186da2d0a0ee599dce620d88c349a49c6407a8
+
+**dependencias:** S22 finalizado en su alcance; catálogo de errores cerrado; cierre documentado de la fase aplicable.
+
+**resultado:** Secuencia registrada como suceso propio pendiente por instrucción expresa del autor.
+
+**verificacion:** Estado pendiente, fechas de inicio y fin vacías; dependencia de S22 y de los cierres posteriores explícita. Alta con identificador consecutivo S24 y revisión 0.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s24--bis--catálogo-y-cierre-de-fase--análisis-e-instalación-de-la-gui
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-204
+
+**siguiente_accion:** Mantener S24 pendiente mientras se ejecuta S22. Tras los cierres del Bis, catálogo y fase, abrir el análisis de GUI y registrar su inicio.
+
+**observaciones:** S24 conserva el orden y la futura activación de GUI; no duplica ni altera el estado en ejecución de S22. No selecciona C#/.NET, Ratatui ni otra tecnología. No autoriza adelantar la instalación ni declara ejecutado un hito futuro.
+

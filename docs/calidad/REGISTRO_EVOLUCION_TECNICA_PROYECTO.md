@@ -2004,3 +2004,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-203 · S22 · Primer contraste nativo BIS-C01 y secuencia de trabajo
 
 2026-09-13T07:53:52Z. BIS-C01 ejecutado: 13/13 variantes nativas y 4/4 sensibilidades. BIS-02 sigue en ejecución; no cierre del Bis. Banco comprometido en laboratorio antes de ejecutar: 8cfcf1931a842cbad5b13483684ace38f6275c1f. 13 variantes nativas conformes; cuatro sensibilidades detectadas; stdout/stderr y huellas conservados. [Contrato, evidencia y reproducción](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/RESULTADO.md). BIS-C02: fijar contrato de soporte por versión y su ruta de comprobación; comprometer fixtures/oráculos antes de ejecutar. Después completar los contratos pendientes de BIS-02. Por instrucción humana, la GUI se difiere hasta completar el Bis, el catálogo y la fase aplicable. No se elige tecnología, no se despliega web y no se modifica núcleo, semántica o IR.
+
+
+<a id="retp-204"></a>
+
+### RETP-2026-204 · S24 · Alta pendiente de la secuencia Bis, catálogo y GUI
+
+2026-09-13T08:03:14Z. Secuencia registrada como suceso propio pendiente por instrucción expresa del autor. Estado pendiente, fechas de inicio y fin vacías; dependencia de S22 y de los cierres posteriores explícita. Alta con identificador consecutivo S24 y revisión 0. [Referencia](Inventario-sv/sucesos/SUCESOS_SV.md). Mantener S24 pendiente mientras se ejecuta S22. Tras los cierres del Bis, catálogo y fase, abrir el análisis de GUI y registrar su inicio. S24 conserva el orden y la futura activación de GUI; no duplica ni altera el estado en ejecución de S22. No selecciona C#/.NET, Ratatui ni otra tecnología. No autoriza adelantar la instalación ni declara ejecutado un hito futuro.
