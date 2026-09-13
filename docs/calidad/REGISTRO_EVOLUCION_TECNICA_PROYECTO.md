@@ -1962,3 +1962,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-197 · S22 · Contraste de antecedentes y biblioteca base del SV
 
 2026-09-13T05:29:06Z. Workflow y política ES/EN publicados; BIS-01 ampliado con IMMUNO-2 histórico y expediente pulmonar SV-ADC como antecedentes separados. Serie con puente, compuerta heterogénea y meta-supervisión; biblioteca base del SV como propuesta de organización pendiente de suficiencia. Revisión documental y estática del HTML, compositor Python y tramos Rust WASM pertinentes; maestros y semillas del ZIP identificados por hash. Sin ejecución del demostrador, entrenamiento ni pruebas Rust. [Informe](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONTRASTE_ANTECEDENTES_COMPOSICION_Y_BIBLIOTECA_SV.md). Completar correspondencia normativa y preparar contrato y banco BIS-02: dimensiones independientes, dirección, interpretación y resultados. Distinguir primitivas, operaciones derivadas y contratos particulares; conservar contraste no médico de ciberseguridad.
+
+
+<a id="retp-198"></a>
+
+### RETP-2026-198 · S22 · Concordancia de suceso, frame y operaciones SV
+
+2026-09-13T05:51:38Z. BIS-01 ampliado con concordancia de suceso técnico, tipo del horizonte, instancia, reevaluación, frame, consulta y representación. Se recibe suceso como hecho factual y prosa/imagen como representaciones; registrar una afirmación no acredita su verdad. Primitivas y operaciones derivadas se distinguen de funciones, métodos y macros Rust. Contratos de integración pendientes. Lectura completa de III, V y especificación metodológica; lectura selectiva de nota local/envolvente, IR 0.3 y SEC5. Fuentes doctrinales cotejadas por blob Git y SHA-256; revisión documental, sin ejecución ni cambio de Rust. [Informe](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/CONCORDANCIA_SUCESO_FRAME_REPRESENTACION_Y_OPERACIONES_SV.md). Completar BIS-01 y constituir en BIS-02 la inicialización, la relación frame celular/arquitectónico, el estatuto de frvis y la frontera de decisión formal; localizar semántica V0.2 y adendas antes del dictamen global.

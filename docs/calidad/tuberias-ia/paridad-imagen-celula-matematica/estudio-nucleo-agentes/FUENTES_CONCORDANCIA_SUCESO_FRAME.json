@@ -1,0 +1,62 @@
+{
+  "version": "BIS-CONCORDANCIA-FUENTES/1",
+  "fecha_utc": "2026-09-13T05:51:38Z",
+  "archivos": [
+    {
+      "path": "documentos/composicion/III_horizonte_sucesos_reevaluacion_discreta.md",
+      "bytes": 11928,
+      "sha256": "9aeb3ce7bdea0cd7769760ed22eb7dd7b814cc39a273c5fb4a0470791964eaea",
+      "git_blob_sha": "92caea3f63ace2f494c4871f69680fd38ab3ee77",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Completa"
+    },
+    {
+      "path": "documentos/composicion/V_invariantes_agentes_operador_consulta.md",
+      "bytes": 18061,
+      "sha256": "fbf53f17d8cbeb17dedb12dd098121ba1591e0603c2aa196d7bb454784123c2b",
+      "git_blob_sha": "d609810b4072a4b61e29ef10f4d26751862b0c86",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Completa"
+    },
+    {
+      "path": "especificaciones/proposiciones/ESPECIFICACION_METODOLOGICA_SOBRE_SUCESOS_REEVALUACION_Y_FRAMES_EN_EL_SISTEMA_VECTORIAL_SV.md",
+      "bytes": 5789,
+      "sha256": "e39bc5f235267b354a9f5b8d1538a8c96f43dbc3e333315e0028978b8bec3227",
+      "git_blob_sha": "1fbaa8c83bc9b35d5008f1f4f7ee823dc741808c",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Completa"
+    },
+    {
+      "path": "documentos/adendas/Nota de precision algebraico semantica/Manuscrito/Suceso_local_situacional_pubpub.md",
+      "bytes": 23842,
+      "sha256": "0841f95d95b3d7e8110a4b5a00fa48d5d54d4649a5d8919877c7df3c52e908bc",
+      "git_blob_sha": "ee59c71a38b2dbd54c15c4ae273a3597d61e7cba",
+      "commit": "b8fd32978292d25adf9b87cf71e409005dce642c",
+      "repo": "juantoniolloretegea/SV-matematica-semantica",
+      "lectura": "Selectiva: alcance, definiciones, axiomas, proposiciones y efecto sobre Lenguaje (§§4–6 y 13)"
+    },
+    {
+      "repo": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "commit": "e7370d1ad3e75d829b5a032e156d7691aa5a94fd",
+      "path": "IR_CANONICA_BIENFORMACION_SV_v0_3.md",
+      "sha256": "d86f1642fdf0846668c77353b5c504b9c1b40cd110647ea464bd7ba3f23a22ea",
+      "git_blob_sha": "c1b4b0e1c06c1b22dff1f988fec1a1f079fcc5d2",
+      "lectura": "Selectiva: Frame (§4) y tipos del horizonte (adenda §6.6); fuente ya examinada en BIS-01"
+    },
+    {
+      "origen": "Adjunto de trabajo del autor",
+      "archivo": "13-ACTA_PRIVADA_ANEXA_SEC5_FRONTERA_TEMPORAL_FRAME_TRAZABILIDAD_FORENSE_Y_VIABILIDAD_RUST_2026-08-23-1-.md",
+      "sha256": "ed09b2bb03e8ac5ba79556563fca5458d7172a34e4079b741a2b392ffd9a6b68",
+      "lectura": "Selectiva: §§8–9, Frame y vinculación probatoria; antecedente de restricciones"
+    }
+  ],
+  "referencias_tecnicas": [
+    "https://doc.rust-lang.org/reference/macros.html"
+  ],
+  "corte_lenguaje": "b376aab1a070b07305e2a2d5c57a14530b4edba2",
+  "corte_laboratorio": "42574f9a404121c72dcc24528c83c8b8fdff9596",
+  "piezas_rectoras": "AGENTS, Pilares, Perfiles/Contratos/Ensamblaje y acta de transición leídas en BIS-01; se mantienen sus restricciones; este cambio no promueve un contrato nuclear"
+}
