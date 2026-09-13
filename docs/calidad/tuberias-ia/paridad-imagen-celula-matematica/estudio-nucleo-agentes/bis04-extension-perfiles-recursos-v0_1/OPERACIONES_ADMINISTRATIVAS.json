@@ -1,0 +1,17 @@
+{
+  "servicio": "GitHub API mediante puente github_io existente",
+  "repositorios": [
+    "juantoniolloretegea/SV-matematica-semantica-cuaternaria:lab/playground-sv-permanente",
+    "juantoniolloretegea/SV-lenguaje-de-computacion:main"
+  ],
+  "orden": "laboratorio primero, espejo público después; actualización de ref sin force y verificación de árbol",
+  "scripts": "Contenido completo de los scripts de este incremento en soporte/; publicar_archivos y github_io son utilidades preexistentes del laboratorio.",
+  "herramientas_locales": [
+    "Python: archivos, archivos tar, SHA, procesos, medición wait4",
+    "Cargo/rustc: compilación nativa",
+    "sv_bis_extension: admisión y comparación nativa",
+    "git: conservación y sincronización"
+  ],
+  "nucleo": "Sin red durante compilación/ejecución offline; todos los datos y planes son fixtures sintéticos",
+  "resultado_persistencia": "Se verificará por hashes y commits al concluir la publicación."
+}

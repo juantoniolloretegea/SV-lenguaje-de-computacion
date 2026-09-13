@@ -1,0 +1,18 @@
+{
+  "resultado": "CONFORME",
+  "corte": "aa1229788f0a6625be43c74e29c38023b8193a4c",
+  "suceso_actualizado": "S22",
+  "otros_sucesos": "intactos, incluidos S24 y S25",
+  "append_only": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md"
+  ],
+  "originales_c12": "intactos, incluido el identificador fallido",
+  "nuestro_banco_previo": "inmutable; tres pares nuevos identificados -R01",
+  "admision_y_nucleo": "idénticos por hash",
+  "campanas": 2,
+  "integrados_unicos": 26,
+  "invocaciones_admision": 52,
+  "estado_workflow": "BIS-02/03/04 abiertos; GUI diferida"
+}

@@ -1,0 +1,17 @@
+{
+  "actividad": "Consolidación administrativa posterior a campañas Rust",
+  "incidencias": [
+    {
+      "error": "KeyError: 01 en cerrar.py",
+      "causa": "La asignación del resumen de campaña quedó dentro del if R01 al preservar el archivo inicial.",
+      "correccion": "Asignación incondicional de ambos resúmenes; archivo inicial sin cambios.",
+      "efecto": "Consolidación interrumpida antes de escribir README y manifiesto final; resultados nativos y esperados intactos."
+    },
+    {
+      "error": "FileNotFoundError: MANIFIESTO.json en publicar_final.py",
+      "causa": "El cierre previo había fallado y no produjo manifiesto.",
+      "efecto": "Publicación detenida en comprobación local anterior a llamadas GitHub.",
+      "resolucion": "Consolidación corregida, manifiesto generado y conservación conforme; publicar después."
+    }
+  ]
+}

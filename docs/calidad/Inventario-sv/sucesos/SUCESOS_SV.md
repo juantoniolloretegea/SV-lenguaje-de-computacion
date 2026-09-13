@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T16:59:22Z
+**fecha_actualizacion_utc:** 2026-09-13T17:25:16Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 2067310b30e5aee76120444f0166b01390a04970; laboratorio 4705ba49c917cb525eeeba4b39f16686afe1e255
+**cortes_de_entrada:** Lenguaje aa1229788f0a6625be43c74e29c38023b8193a4c; laboratorio ed5a78fb667401b052e915db38bf17465fe3b2b2
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Montaje experimental sv_bis_i0205 implementado y ensayado en Rust/Cargo 1.98.0 con copia verificada de sv_core. 26 casos integrados conformes: 7 entregas documentales concordantes, 17 rechazos y 2 no acreditados. 19 instrumentales conformes, secuencia v1→v2→v1 y 4 sensibilidades del observador conformes. Ocho sondas externas verifican privacidad/API; almacenamiento y lectura agregada probados. Primera campaña conservada; revisión R01 acota recepción al saldo antes de reservar/leer y se comprueba en segunda campaña.
+**resultado:** Extensión nativa del montaje C02–C05: 26 casos nuevos conformes (9 entregas documentales, 17 rechazos), con perfiles ES/EN, cuotas de recepción/recibo y captura. Cinco comparaciones canónicas conformes en campaña R01: cuatro equivalencias y una desigualdad por cambio de dato textual. Núcleo sv_core y admisión RETP-220 sin modificaciones.
 
-**verificacion:** Fuentes/sondas fijadas en laboratorio y espejo antes de ejecutar; cargo build/test --locked --offline, rustc y binario nativo. Dos campañas, cada una con 26 casos, 3 repeticiones y 1 lectura adicional: 60 invocaciones totales, 26 variantes integradas únicas. Ocho sondas externas por campaña; segunda campaña añade prueba R01 con 6145 bytes leídos frente a saldo 6144. Diagnósticos, capturas, estados, códigos de salida, huellas y recursos conservados. Cero modificaciones de oráculos previos, fuentes productivas o estados de otros sucesos.
+**verificacion:** Precompromiso en laboratorio y espejo antes de cada ejecución. Cargo build --locked --offline y binario nativo Rust/Cargo 1.98.0 desde directorios nuevos; contadores reales por canal, recibos completos, captura, trazas y estados conservados. Dos campañas: 52 invocaciones integradas, 26 variantes únicas. Primera campaña: 26 conformes y tres comparaciones impedidas por Celda, identificador protegido en fixtures C12. Fallo conservado; variantes nuevas CeldaPrueba, previamente comprometidas, resuelven las tres comparaciones sin cambiar expectativas ni compilador.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-220
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-221
 
-**siguiente_accion:** Preparar la extensión del montaje a paridad ES/EN integrada y controles de recursos/captura pendientes mediante banco previo; conservar abierta la suficiencia global y la secuencia Bis → catálogo/cierre de fase → GUI.
+**siguiente_accion:** Completar frontera de tamaño del descriptor y salida agregada del montaje, y preparar su relevo hacia representación/consumo con pruebas previas; trasladar el hallazgo Celda al retorno de documentación/errores. Mantener Bis → catálogo y cierre de fase → análisis e instalación de GUI.
 
-**observaciones:** BIS-04 en ejecución acotada; BIS-02/BIS-03 globales abiertos. Los 202 casos originales C02–C12 siguen sin ejecutar; no se recuentan como integrados. Entrega documental local; sin consumo visual de IA, constitución operativa ni promoción productiva. RAM/tiempo observados sin límites constituidos; agotamiento y todas las cuotas de salida pendientes. S24/GUI diferida y S25 conservados.
+**observaciones:** BIS-02/BIS-03/BIS-04 globales abiertos. Paridad acreditada para estas fuentes y operaciones, sin garantía universal ni consumo visual de IA. Cuotas de memoria/tiempo y agotamiento no constituidos. Las 202 filas originales C02–C12 no se declaran ejecutadas como banco propio; originales C12 y resultados previos intactos. S24/GUI diferida; S25 conservado.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

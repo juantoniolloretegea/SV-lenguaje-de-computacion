@@ -26,7 +26,7 @@
     {
       "id": "BIS-04",
       "estado": "en ejecución",
-      "alcance": "Realización experimental C02–C05 y 26 casos integrados ejecutados; no cierre global del workflow ni promoción productiva."
+      "alcance": "Montaje experimental C02–C05 y extensión ES/EN/recursos/captura ensayados en Rust; fase global abierta."
     },
     {
       "id": "BIS-05",
@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Preparar la extensión del montaje a paridad ES/EN integrada y controles de recursos/captura pendientes mediante banco previo; conservar abierta la suficiencia global y la secuencia Bis → catálogo/cierre de fase → GUI.",
+  "siguiente_accion": "Completar frontera de tamaño del descriptor y salida agregada del montaje, y preparar su relevo hacia representación/consumo con pruebas previas; trasladar el hallazgo Celda al retorno de documentación/errores. Mantener Bis → catálogo y cierre de fase → análisis e instalación de GUI.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -53,9 +53,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis04-realizacion-i0205-v0_1/README.md",
+  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/README.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-220",
+  "ultimo_retp": "RETP-2026-221",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -237,7 +237,7 @@
     "cierre_bis02": false,
     "apertura_formal_bis03": true,
     "perfil_integrado": "en",
-    "paridad_es_en_integrada": "pendiente",
+    "paridad_es_en_integrada": "Acreditada en la extensión RETP-221 para las fuentes sintéticas ensayadas; no suficiencia universal C12.",
     "alcance": "Descriptor geométrico exacto y entrega documental local; sin imagen ni consumo visual de IA",
     "registro_paso_acotado_bis03": "RETP-2026-219",
     "resultado": "7 concordantes, 17 rechazados, 2 no acreditados",
@@ -268,5 +268,29 @@
     "tests_internos_segunda_campana": 2,
     "oraculos_previos_modificados": false,
     "suficiencia_global": false
+  },
+  "extension_bis04_perfiles_recursos": {
+    "registro": "RETP-2026-221",
+    "informe": "bis04-extension-perfiles-recursos-v0_1/README.md",
+    "integrados_unicos": 26,
+    "campanas": 2,
+    "invocaciones_admision": 52,
+    "integrados_conformes_cada_campana": 26,
+    "entregas_cada_campana": 9,
+    "rechazos_cada_campana": 17,
+    "comparaciones_paridad_campana_01": {
+      "conformes": 2,
+      "impedidas_por_fixture": 3
+    },
+    "comparaciones_paridad_r01": {
+      "conformes": 5,
+      "equivalencias": 4,
+      "desigualdades": 1
+    },
+    "variantes_paridad_nuevas_r01": 3,
+    "originales_c12_modificados": false,
+    "admision_y_nucleo_modificados": false,
+    "suficiencia_global": false,
+    "hallazgo": "Celda es palabra protegida y no puede nombrar el fixture; variantes nuevas CeldaPrueba conservan el contenido."
   }
 }

@@ -1,0 +1,1618 @@
+{
+  "01": {
+    "precompromiso_laboratorio": "71d44d12183f51a4fd2b39d3f0c2925c3f4cce0d",
+    "precompromiso_publico": "fc9cfdd220841582e7ad454aef236dd3e7cf737c",
+    "resumen": {
+      "integrados": 26,
+      "comparaciones_paridad": 5,
+      "fallos": 3
+    },
+    "recursos": {
+      "elapsed_ns": 104090136,
+      "max_rss_kib_linux": 11904,
+      "user_seconds": 0.090864,
+      "system_seconds": 0.012417,
+      "ejecutable_sha256": "40207dcf46bb3c07ea8c6f499703a8395a4a21023acb53fb39e3106f7ec90eac"
+    },
+    "versiones": {
+      "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+      "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)"
+    },
+    "casos": [
+      {
+        "id": "CAP01",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP02",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP03",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D05",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D06",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "1337c0f1339aeb93d1634d6db6c05d76ee36780513516b871fde77bb13d0da58",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP05",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D06",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "2cf423d297967ccc18e7242a63148b0b4caae8b8c258d9f300509c05c968a23b",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES01",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "f4ec09918ab28fd4170e5ab9d7c66fcd6ccd88818670962921c21a389e06d926",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES02",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1345,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "3bd2e7b05ae7812a7994c9bdfeade7cb9ad0fc0cda4363dee268e828d7552d45",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES03",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P02",
+        "guardas_superadas": [
+          "R01",
+          "P01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1345,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P02",
+        "guardas_superadas": [
+          "R01",
+          "P01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES05",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1877,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES07",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES08",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1399,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "e1b19f33a36cf643f18fe6407194cff0da6f326702062f62d333220b3cdfa29c",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC01",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          2555,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "73b8e7d6b968338ac74ba182e5e6ae10222c4b0420c9924713f77a182a4f5577",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC02",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03"
+        ],
+        "bytes_leidos": [
+          2556,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC03",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          4096,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "334f77840980ff7c5c8f5e711b14256888960e2212119aaf486c9be70c812443",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          4097,
+          0,
+          0,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC05",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          4096,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "30cc6f02094f420fd72b2cd33b254703dee1c19ce6c7a4df9dc61348641a10d8",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1902,
+          4097,
+          0,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC07",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          1024,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "08265b04185150b13392e3e5ff2393e703624f4abae3c37f50d90710a41a5cf9",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC08",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1903,
+          1215,
+          1025,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC09",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          1024,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "101aa9451c945b66f5b4576d82b9e62b6e8ef04004326e067ab7e65600181284",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC10",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          1025,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC11",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          4003,
+          4096,
+          1024,
+          1024,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "750d315aa4c22e5803a1625cddae8605f864b5fade2287ed71fcf2374407e165",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC12",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          4004,
+          4096,
+          1024,
+          1024,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      }
+    ],
+    "paridad": [
+      {
+        "id": "PAR01",
+        "equivalentes": true,
+        "objetos_a": 10,
+        "operaciones_a": 0,
+        "fuente_a_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+        "fuente_b_sha256": "b0f84aaf33065ba1f5141c49897ecce0ec75317a7dcfe24811c29b101d2b49a4",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR02",
+        "equivalentes": true,
+        "objetos_a": 10,
+        "operaciones_a": 0,
+        "fuente_a_sha256": "b0f84aaf33065ba1f5141c49897ecce0ec75317a7dcfe24811c29b101d2b49a4",
+        "fuente_b_sha256": "5eb3cefc1aeece2a247a2f399da92d19b5ad61928d05f7b5482dd67588204bb0",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR03",
+        "equivalentes": null,
+        "objetos_a": null,
+        "operaciones_a": null,
+        "fuente_a_sha256": "9cc75bff1d36d1ea7a4e14611c098b5f269ba4e5cbc512a317c5bc85c7e486f9",
+        "fuente_b_sha256": "d1c398d8496f62fc02d99e3938796b1ada417bc77c4c57daa4ce42de311384e3",
+        "discrepancias": [
+          "compilation: Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\"))) Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\")))"
+        ]
+      },
+      {
+        "id": "PAR04",
+        "equivalentes": null,
+        "objetos_a": null,
+        "operaciones_a": null,
+        "fuente_a_sha256": "9cc75bff1d36d1ea7a4e14611c098b5f269ba4e5cbc512a317c5bc85c7e486f9",
+        "fuente_b_sha256": "0827447671ab1b18a9cacc11274ee509f7b1d73db275dfa16e47c2456fae9b89",
+        "discrepancias": [
+          "compilation: Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\"))) Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\")))"
+        ]
+      },
+      {
+        "id": "PAR05",
+        "equivalentes": null,
+        "objetos_a": null,
+        "operaciones_a": null,
+        "fuente_a_sha256": "9cc75bff1d36d1ea7a4e14611c098b5f269ba4e5cbc512a317c5bc85c7e486f9",
+        "fuente_b_sha256": "9a90d59a2a026f83f104b83e41bd9f557363fc3a449aaa8bfef795265e093643",
+        "discrepancias": [
+          "compilation: Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\"))) Err(Frontend(UnexpectedToken(\"palabra protegida donde se esperaba identificador: Celda\")))"
+        ]
+      }
+    ]
+  },
+  "R01": {
+    "precompromiso_laboratorio": "5ff25e3300a1f432f00dda11fa95a73c511778b6",
+    "precompromiso_publico": "ddcbced9c51bc2a557e8be71692611b1ae96f3e3",
+    "resumen": {
+      "integrados": 26,
+      "comparaciones_paridad": 5,
+      "fallos": 0
+    },
+    "recursos": {
+      "elapsed_ns": 113452806,
+      "max_rss_kib_linux": 11904,
+      "user_seconds": 0.10035999999999999,
+      "system_seconds": 0.012412999999999999,
+      "ejecutable_sha256": "0e2813486ab97d671a57d904071d893576de2e2b5a1d774d2c2e5e1fa170e982"
+    },
+    "versiones": {
+      "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+      "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)"
+    },
+    "casos": [
+      {
+        "id": "CAP01",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP02",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP03",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D05",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D06",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "1337c0f1339aeb93d1634d6db6c05d76ee36780513516b871fde77bb13d0da58",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP05",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D06",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "2cf423d297967ccc18e7242a63148b0b4caae8b8c258d9f300509c05c968a23b",
+        "discrepancias": []
+      },
+      {
+        "id": "CAP06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "D03",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": null,
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES01",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "f4ec09918ab28fd4170e5ab9d7c66fcd6ccd88818670962921c21a389e06d926",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES02",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1345,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "3bd2e7b05ae7812a7994c9bdfeade7cb9ad0fc0cda4363dee268e828d7552d45",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "ES03",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P02",
+        "guardas_superadas": [
+          "R01",
+          "P01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1345,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P02",
+        "guardas_superadas": [
+          "R01",
+          "P01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES05",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1877,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES07",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "P01",
+        "guardas_superadas": [
+          "R01"
+        ],
+        "bytes_leidos": [
+          1902,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "ES08",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          1399,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "e1b19f33a36cf643f18fe6407194cff0da6f326702062f62d333220b3cdfa29c",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC01",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          2555,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "73b8e7d6b968338ac74ba182e5e6ae10222c4b0420c9924713f77a182a4f5577",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC02",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03"
+        ],
+        "bytes_leidos": [
+          2556,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC03",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          4096,
+          1215,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "334f77840980ff7c5c8f5e711b14256888960e2212119aaf486c9be70c812443",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC04",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          4097,
+          0,
+          0,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC05",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1902,
+          4096,
+          214,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "30cc6f02094f420fd72b2cd33b254703dee1c19ce6c7a4df9dc61348641a10d8",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC06",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1902,
+          4097,
+          0,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC07",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          1024,
+          253,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "08265b04185150b13392e3e5ff2393e703624f4abae3c37f50d90710a41a5cf9",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC08",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1903,
+          1215,
+          1025,
+          0,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC09",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          1024,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "101aa9451c945b66f5b4576d82b9e62b6e8ef04004326e067ab7e65600181284",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC10",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          1903,
+          1215,
+          214,
+          1025,
+          0
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      },
+      {
+        "id": "RC11",
+        "resultado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+        "primera_guarda": null,
+        "guardas_superadas": [
+          "R01",
+          "P01",
+          "P02",
+          "S01",
+          "S02",
+          "I01",
+          "I02",
+          "I03",
+          "A01",
+          "M01",
+          "M02",
+          "M03",
+          "D01",
+          "D02",
+          "D03",
+          "D04",
+          "D05",
+          "D06"
+        ],
+        "bytes_leidos": [
+          4003,
+          4096,
+          1024,
+          1024,
+          6237
+        ],
+        "despachos": 1,
+        "recibo_sha256": "750d315aa4c22e5803a1625cddae8605f864b5fade2287ed71fcf2374407e165",
+        "captura_sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+        "discrepancias": []
+      },
+      {
+        "id": "RC12",
+        "resultado": "RECHAZADO",
+        "primera_guarda": "R01",
+        "guardas_superadas": [],
+        "bytes_leidos": [
+          4004,
+          4096,
+          1024,
+          1024,
+          6237
+        ],
+        "despachos": 0,
+        "recibo_sha256": null,
+        "captura_sha256": null,
+        "discrepancias": []
+      }
+    ],
+    "paridad": [
+      {
+        "id": "PAR01",
+        "equivalentes": true,
+        "objetos_a": 10,
+        "operaciones_a": 0,
+        "fuente_a_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+        "fuente_b_sha256": "b0f84aaf33065ba1f5141c49897ecce0ec75317a7dcfe24811c29b101d2b49a4",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR02",
+        "equivalentes": true,
+        "objetos_a": 10,
+        "operaciones_a": 0,
+        "fuente_a_sha256": "b0f84aaf33065ba1f5141c49897ecce0ec75317a7dcfe24811c29b101d2b49a4",
+        "fuente_b_sha256": "5eb3cefc1aeece2a247a2f399da92d19b5ad61928d05f7b5482dd67588204bb0",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR03-R01",
+        "equivalentes": true,
+        "objetos_a": 4,
+        "operaciones_a": 1,
+        "fuente_a_sha256": "305fc4413726deda4112b048ce474596bce9adaf4bf77d1e5f81d6bd8bd29f8e",
+        "fuente_b_sha256": "163378745ac3af4f6d164ae978db5111e426f07f0fe8d9025d8ca971228722d5",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR04-R01",
+        "equivalentes": true,
+        "objetos_a": 4,
+        "operaciones_a": 1,
+        "fuente_a_sha256": "305fc4413726deda4112b048ce474596bce9adaf4bf77d1e5f81d6bd8bd29f8e",
+        "fuente_b_sha256": "87a2ec241b4e0cd1a08a81f0afb512b41f2ed51e3c36d8e8b606033536e17aee",
+        "discrepancias": []
+      },
+      {
+        "id": "PAR05-R01",
+        "equivalentes": false,
+        "objetos_a": 4,
+        "operaciones_a": 1,
+        "fuente_a_sha256": "305fc4413726deda4112b048ce474596bce9adaf4bf77d1e5f81d6bd8bd29f8e",
+        "fuente_b_sha256": "3f9fe553f50b0085592c7a60526c31fd7169af581977e20011a77566073b7b01",
+        "discrepancias": []
+      }
+    ]
+  }
+}
