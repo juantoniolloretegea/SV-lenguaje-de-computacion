@@ -296,11 +296,11 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-226",
+    "registro": "RETP-2026-227",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Ejecutar R03 tras publicar precompromiso, conservar evidencia y clasificar el límite del observador sin confundir test verde con prevención material.",
+    "siguiente_accion": "Preparar recepción instrumentada del testigo posterior y su cualificación en el conductor existente; conservar el contraejemplo T07 y exigir nueva campaña antes de acreditar esa recepción. R2 y GUI conservan sus dependencias.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
@@ -311,6 +311,6 @@
     "contrastes_r02_ejecutados": 0,
     "campana_r03": "../../../riesgos-materiales-s26/r03/README.md",
     "sondas_r03_previstas": 3,
-    "sondas_r03_ejecutadas": 0
+    "sondas_r03_ejecutadas": 3
   }
 }

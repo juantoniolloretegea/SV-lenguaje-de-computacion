@@ -1,0 +1,16 @@
+{
+  "version": "S26-R03-RESULTADOS/1",
+  "fecha_registro_utc": "2026-09-13T19:54:02.076787+00:00",
+  "precompromiso_lenguaje": "ac0f5e820515ed3a49367f746c6c3a0cd5b68e04",
+  "precompromiso_laboratorio": "a7f7c3faf4c2a5c9c2450924848985f6f1f34437",
+  "campanas": 1,
+  "sondas_aprobadas": 3,
+  "sondas_fallidas": 0,
+  "casos_globales_cerrados": 0,
+  "resultado": "Tres sondas conformes a sus oráculos, incluido límite reproducido en T07.",
+  "t01": "A/A y B/B certificados contra recibos íntegros; B/A rechazado I02 por full identity/custody mismatch.",
+  "t02": "Archivo B leído tras metadatos A; rechazo I02 source identity; control sin inyección admitido.",
+  "t07": "Archivo alterado con after copiado recibe conformidad del observador histórico; after releído provoca exactamente preservacion real del estado. Control intacto conforme.",
+  "limite": "No autenticación externa de custodia, transacción durable, GUI, fallo físico, aislamiento ni concurrencia general acreditados.",
+  "siguiente": "Integrar recepción instrumentada del testigo posterior mediante variante y oráculos propios; no reescribir evidencia anterior."
+}

@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T19:50:20Z
+**fecha_actualizacion_utc:** 2026-09-13T19:54:02Z
 
 **fecha_fin_utc:** —
 
@@ -910,15 +910,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído.
+**resultado:** R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo su custodia declarada; T02 rechaza fuente mezclada I02; T07 reproduce conformidad con copia inicial pese a archivo alterado y detecta alteración con relectura real.
 
-**verificacion:** Fixtures A literales de R01; B añade LF y actualiza referencias de fuente. Código y oráculos fijados antes de compilar; cero sondas R03 ejecutadas.
+**verificacion:** Una campaña nativa offline: tres funciones, cero fallos de aserción. Límite observado en T07; no prueba de protección contra host ni de transacción durable. Evidencia literal, órdenes y fuentes conservadas.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r03/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-226
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-227
 
-**siguiente_accion:** Ejecutar R03 tras publicar precompromiso, conservar evidencia y clasificar el límite del observador sin confundir test verde con prevención material.
+**siguiente_accion:** Preparar recepción instrumentada del testigo posterior y su cualificación en el conductor existente; conservar el contraejemplo T07 y exigir nueva campaña antes de acreditar esa recepción. R2 y GUI conservan sus dependencias.
 
 **observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
 

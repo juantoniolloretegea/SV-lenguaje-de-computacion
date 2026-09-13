@@ -1,0 +1,20 @@
+{
+  "01.stdout": "fb3f25aefd6d5441842d285f5a9b125b3f0f0b0bf2013d9a32677f9e99c6c854",
+  "ORDENES.json": "fa8844d547021a1d41e9e98ae74619c1d7f6aaec253fbb605efcab51b43332ac",
+  "00.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "01.stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "02.stderr": "c1d6a3914d47a409688292b70a9117b38631a5b439b04790e17b2afbf98e83da",
+  "02.stdout": "679bbf40ac832bb499c6993d71bd12f09be0a9bcd3297feecc03a4e61756ebf5",
+  "00.stdout": "785f1364c0d5bf077f7bfb885fd4bde99899dfd80ce0fb6226a4527d9b27724c",
+  "observaciones/T02-mixed-source.bin": "622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b",
+  "observaciones/T01-B-receipt.json": "7cb4e6610ad51ac16fb1306fa59e831fe0b2c6cd3c77f2f64798a4aca905519c",
+  "observaciones/T01-A-receipt.json": "e1b186e746bfa82ae6a217cf52576a04e8e047e2a21e1979f25912675b85a856",
+  "observaciones/T02-A-trace.json": "d160739713bfd0435a1251a681d4548af77c76b6c318e2634b2594466a80aebd",
+  "observaciones/T07-copied-after.json": "dc29fa149b5fec4362f6107be559d6eb571eaf91631b4e958509550d43b4ae9f",
+  "observaciones/T07-control.json": "dc29fa149b5fec4362f6107be559d6eb571eaf91631b4e958509550d43b4ae9f",
+  "observaciones/T07-reread-after.json": "652fa5a67383bb0fc80d3ac7264281ab0cc2fc17d5ef158e85accd80ded34624",
+  "observaciones/T02-control-source.bin": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d",
+  "observaciones/T07-state.bin": "2d6335790b3cad0b8ea343ff218741d09bee8bc1d4a193c4917c97d6bb2d5429",
+  "observaciones/T02-B-trace.json": "610c5badb78a3dfc1f4ce08cd16034f4a6d673b53e0dedacea39fa9944680ee3",
+  "observaciones/T01-rejection.json": "26567643fd63dc3913f13ee487f70148c694a7ece3b1a78926f50fb05d99e009"
+}

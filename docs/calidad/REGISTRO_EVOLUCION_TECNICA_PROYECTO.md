@@ -2169,3 +2169,10 @@ Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuest
 ### RETP-2026-226 · S26 · R03 previo
 
 2026-09-13T19:50:20Z. Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído. Fixtures A literales de R01; B añade LF y actualiza referencias de fuente. Código y oráculos fijados antes de compilar; cero sondas R03 ejecutadas. Ejecutar R03 tras publicar precompromiso, conservar evidencia y clasificar el límite del observador sin confundir test verde con prevención material. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/r03/README.md).
+
+
+<a id="retp-227"></a>
+
+### RETP-2026-227 · S26 · R03 resultado
+
+2026-09-13T19:54:02Z. R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo su custodia declarada; T02 rechaza fuente mezclada I02; T07 reproduce conformidad con copia inicial pese a archivo alterado y detecta alteración con relectura real. Una campaña nativa offline: tres funciones, cero fallos de aserción. Límite observado en T07; no prueba de protección contra host ni de transacción durable. Evidencia literal, órdenes y fuentes conservadas. Preparar recepción instrumentada del testigo posterior y su cualificación en el conductor existente; conservar el contraejemplo T07 y exigir nueva campaña antes de acreditar esa recepción. R2 y GUI conservan sus dependencias. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/r03/README.md).

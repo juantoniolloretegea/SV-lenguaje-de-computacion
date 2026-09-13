@@ -148,3 +148,7 @@ Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuest
 ## Continuación R03 / RETP-2026-226
 
 Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído. [Inventario material](r03/README.md).
+
+## Continuación R03 / RETP-2026-227
+
+R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo su custodia declarada; T02 rechaza fuente mezclada I02; T07 reproduce conformidad con copia inicial pese a archivo alterado y detecta alteración con relectura real. [Inventario material](r03/README.md).

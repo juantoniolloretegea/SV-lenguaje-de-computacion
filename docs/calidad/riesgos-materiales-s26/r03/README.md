@@ -46,3 +46,15 @@ Los tres ensayos son parciales; no cierran T01/T02/T07 en todos sus alcances
 ni los doce casos globales S26. Quedan pendientes persistencia, raíz de
 custodia, concurrencia general, adquisición, GUI y protección frente al host.
 S22 y S24 conservan su secuencia.
+
+## Resultado / RETP-227
+
+Una campaña Rust/Cargo 1.98.0, tres sondas conformes a sus oráculos y cero fallos de aserción. Precompromiso público `ac0f5e820515ed3a49367f746c6c3a0cd5b68e04`. Los archivos congelados permanecen idénticos.
+
+**T07 reproduce una limitación material:** el observador existente devuelve conformidad si recibe como `after` una copia inicial, aunque el archivo de ensayo haya cambiado. Al suministrarle la relectura efectiva detecta exactamente la pérdida de preservación. La comparación funciona sobre sus entradas; no acredita de dónde se obtuvieron. No se atribuye este archivo de ensayo a una BD ni a la memoria interna del núcleo.
+
+T01 distingue B bajo expectativa A de B bajo su custodia declarada; este último positivo no prueba legitimidad externa del custodio. T02 rechaza la mezcla observada en el punto de lectura instrumentado. Son alcances parciales, no cierres globales de S26.
+
+[Resultados](RESULTADOS.json), [salida Rust](evidencia/02.stdout), [diagnósticos de compilación](evidencia/02.stderr), [órdenes](evidencia/ORDENES.json) y [huellas](evidencia/HUELLAS.json). Se conservan el testigo copiado y el releído en evidencia/observaciones.
+
+El siguiente incremento deberá cualificar la recepción del testigo posterior en el conductor con una variante identificada y nuevos oráculos. El montaje histórico permanece sin modificar; estas sondas no acreditan aún esa integración.
