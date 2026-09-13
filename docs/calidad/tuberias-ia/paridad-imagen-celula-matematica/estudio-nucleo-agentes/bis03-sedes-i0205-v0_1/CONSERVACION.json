@@ -1,0 +1,34 @@
+{
+  "resultado": "CONFORME_DOCUMENTAL",
+  "corte": "3c4f5f87e2e052daacb25be4a4dfe7c1db0d946d",
+  "suceso_modificado": "S22",
+  "otros_sucesos": "intactos",
+  "append_only": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md"
+  ],
+  "seguimiento_modificado": [
+    "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+    "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+    "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json"
+  ],
+  "banco_integrado_previo": "26 casos y manifiesto íntegros",
+  "filas_previas_c02_c12": 202,
+  "ejecuciones_nuevas_rust": 0,
+  "workspace_y_fuentes_rust_productivos": "sin cambios",
+  "auxiliares_reutilizados_contenido_identico": {
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/soporte/registro.py": "e2027effe696fe3549e2690b1621eb5601da86eaffa505dff6820698cddc41db",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/soporte/gestion.py": "6a3048ca8efe87788bedf66a438fc9404acd70a2a4a96d49e131a137000fc350",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/soporte/publicar_archivos.py": "f4a2a2076af4956e209ea42cd711f1500f686e070e4513e36238148330176c1e",
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/soporte/github_io.py": "87e60e88b8188bbe373e9392a94bb2988918934284b1fa54545b5c1e4181023b"
+  },
+  "versiones_observadas": {
+    "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)"
+  }
+}

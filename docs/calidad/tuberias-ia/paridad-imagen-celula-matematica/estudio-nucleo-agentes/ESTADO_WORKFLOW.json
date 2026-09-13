@@ -20,7 +20,8 @@
     },
     {
       "id": "BIS-03",
-      "estado": "pendiente"
+      "estado": "en ejecución",
+      "alcance": "Decisión de sedes del primer montaje C02–C05 documentada; resto de obligaciones y sedes fuera del montaje pendientes. No cierre global de BIS-02."
     },
     {
       "id": "BIS-04",
@@ -43,7 +44,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Resolver las sedes e interfaz de recepción/observación del recorrido C02–C05 para BIS-03 y documentar las condiciones de paso aplicables; después realizar y ensayar en Rust contra el banco comprometido.",
+  "siguiente_accion": "Materializar en laboratorio el crate sv_bis_i0205 y su conductor/observador conforme a la decisión, fijar las sondas de construcción antes de ejecutarlas, compilar y ensayar auxiliares y recorrido C02–C05 en Rust con resultados separados de expectativas.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -51,9 +52,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "integracion-c02-c05-v0_1/README.md",
+  "ultimo_informe": "bis03-sedes-i0205-v0_1/README.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-218",
+  "ultimo_retp": "RETP-2026-219",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -233,9 +234,22 @@
     "sensibilidades_previstas": 4,
     "sensibilidades_ejecutadas": 0,
     "cierre_bis02": false,
-    "apertura_formal_bis03": false,
+    "apertura_formal_bis03": true,
     "perfil_integrado": "en",
     "paridad_es_en_integrada": "pendiente",
-    "alcance": "Descriptor geométrico exacto y entrega documental local; sin imagen ni consumo visual de IA"
+    "alcance": "Descriptor geométrico exacto y entrega documental local; sin imagen ni consumo visual de IA",
+    "registro_paso_acotado_bis03": "RETP-2026-219"
+  },
+  "decision_sedes_i0205": {
+    "estado": "finalizada en alcance documental del montaje",
+    "informe": "bis03-sedes-i0205-v0_1/DECISION.md",
+    "interfaz": "bis03-sedes-i0205-v0_1/INTERFAZ.md",
+    "banco_complementario": "bis03-sedes-i0205-v0_1/BANCO_ADAPTADOR_PREVIO.json",
+    "paso_acotado_a_bis03": true,
+    "cierre_global_bis02": false,
+    "ampliacion_semantica_ir": false,
+    "casos_instrumentales_preparados": 19,
+    "casos_instrumentales_ejecutados": 0,
+    "realizacion_rust": "pendiente"
   }
 }

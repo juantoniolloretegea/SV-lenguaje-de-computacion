@@ -1,0 +1,13 @@
+{
+  "version": "BIS-I0205-JSON/0.1",
+  "estatuto": "Complemento experimental previo del adaptador, no límite semántico SV ni cota de RAM de proceso. No reescribe PRESUPUESTO RETP-218.",
+  "max_bytes_decodificacion": 8192,
+  "max_contenedores_anidados": 32,
+  "max_nodos": 512,
+  "max_miembros_por_objeto": 32,
+  "conteo_nodos": "Una unidad por valor JSON, incluidos arrays y objetos; las claves no son nodos adicionales.",
+  "conteo_profundidad": "Sólo contenedores abiertos simultáneamente; escalar raíz=0.",
+  "numeros": "Lexema decimal entero exacto, con signo negativo salvo -0. Sin fracción ni exponente en este subconjunto. No conversión global a u64/f64.",
+  "prioridad": "Cuota de bytes antes de UTF-8/JSON; profundidad antes de entrar al contenedor; nodos antes de añadir valor; duplicados tras decodificar clave; miembros antes de almacenar el siguiente par.",
+  "conservacion": "Mantener bytes originales para hashes y entrega; decodificación de escapes no autoriza normalizar el artefacto."
+}

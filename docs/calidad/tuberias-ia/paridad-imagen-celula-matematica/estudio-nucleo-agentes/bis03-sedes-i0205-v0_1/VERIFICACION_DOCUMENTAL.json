@@ -1,0 +1,741 @@
+{
+  "resultado": "CONFORME_DOCUMENTAL",
+  "decisiones": 12,
+  "obligaciones_cartografiadas": 12,
+  "casos_integrados_conservados": 26,
+  "complemento_json": {
+    "preparados": 14,
+    "positivos_previstos": 6,
+    "negativos_previstos": 8,
+    "ejecutados_rust": 0
+  },
+  "complemento_hash": {
+    "preparados": 5,
+    "ejecutados_rust": 0
+  },
+  "compatibilidad_estructural_26_casos": "conforme; no altera el exceso deliberado de bytes de I0205-19",
+  "limites": "No compilación ni ejecución del adaptador, sujeto, captor u observador. Contar JSON no mide RAM de proceso.",
+  "estructuras": [
+    {
+      "caso": "I0205-01",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-01",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-01",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-01",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-02",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-02",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-02",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-02",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-03",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-03",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-03",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-03",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-04",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-04",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-04",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-04",
+      "canal": "soporte",
+      "nodos": 9,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-05",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-05",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-05",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-05",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-06",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-06",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-06",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-06",
+      "canal": "soporte",
+      "nodos": 9,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-07",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-07",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-07",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-07",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-08",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-08",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-08",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-08",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-09",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-09",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-09",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-09",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-10",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-10",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-10",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-10",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-11",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-11",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-11",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-11",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-12",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-12",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-12",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-12",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-13",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-13",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-13",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-13",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-14",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-14",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-14",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-14",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-15",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-15",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-15",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-15",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-16",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-16",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-16",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-16",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-17",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-17",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-17",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-17",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-18",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-18",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-18",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-18",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-19",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-19",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-19",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-19",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-20",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-20",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-20",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-20",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-21",
+      "canal": "solicitud",
+      "nodos": 51,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-21",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-21",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-21",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-22",
+      "canal": "solicitud",
+      "nodos": 44,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-22",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-22",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-23",
+      "canal": "solicitud",
+      "nodos": 51,
+      "profundidad": 3,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-23",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-23",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-23",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-24",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-24",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-24",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-24",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-25",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-25",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-25",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-25",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    },
+    {
+      "caso": "I0205-26",
+      "canal": "solicitud",
+      "nodos": 52,
+      "profundidad": 3,
+      "miembros_max": 11
+    },
+    {
+      "caso": "I0205-26",
+      "canal": "estado_matematico",
+      "nodos": 20,
+      "profundidad": 2,
+      "miembros_max": 3
+    },
+    {
+      "caso": "I0205-26",
+      "canal": "geometria",
+      "nodos": 329,
+      "profundidad": 4,
+      "miembros_max": 10
+    },
+    {
+      "caso": "I0205-26",
+      "canal": "soporte",
+      "nodos": 8,
+      "profundidad": 2,
+      "miembros_max": 5
+    }
+  ]
+}

@@ -1,0 +1,141 @@
+{
+  "version": "BIS-03-I0205-SEDES/0.1",
+  "estado": "DECISION_ACOTADA_DOCUMENTADA",
+  "alcance": "Montaje experimental del banco integrado C02–C05; sin promoción productiva ni ampliación de semántica o IR.",
+  "corte": "3c4f5f87e2e052daacb25be4a4dfe7c1db0d946d",
+  "sede_fisica": "Workspace de laboratorio aislado, crate sv_bis_i0205 dependiente por ruta de copia verificada de sv_core al corte de entrada.",
+  "dependencias_nuevas_de_registro": [],
+  "cambios_en_workspace_productivo": false,
+  "decisiones": [
+    {
+      "id": "SE01",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O05",
+        "BIS-O11"
+      ],
+      "clasificacion": "ya preservada en alcance existente",
+      "sede": "sv_core::compile_svp_profile; SourceProfile::from_tag; IrProgram",
+      "decision": "Usar entrada pública con perfil explícito y consumir exclusivamente IR aceptada.",
+      "casos": "I0205-01 / I0205-21 / I0205-22"
+    },
+    {
+      "id": "SE02",
+      "obligaciones": [
+        "BIS-O02",
+        "BIS-O05"
+      ],
+      "clasificacion": "falta comprobación integrada",
+      "sede": "crate experimental sv_bis_i0205 / soporte",
+      "decision": "Recorrer todas las CellSpec y comparar Nat decimal con perfil exacto; convertir a tamaño de máquina sólo tras admisión.",
+      "casos": "I0205-04 / I0205-05 / I0205-06"
+    },
+    {
+      "id": "SE03",
+      "obligaciones": [
+        "BIS-O03",
+        "BIS-O04"
+      ],
+      "clasificacion": "falta comprobación integrada",
+      "sede": "crate experimental sv_bis_i0205 / identidad",
+      "decision": "Resolver arquitectura → nodo CoupledSpec → CellSpec y CoupledState; agregar vínculo externo de instancia/revisión. No insertar campos nuevos en IR.",
+      "casos": "I0205-01 / I0205-02 / I0205-03 / I0205-07 / I0205-08 / I0205-23 / I0205-24"
+    },
+    {
+      "id": "SE04",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O02",
+        "BIS-O07"
+      ],
+      "clasificacion": "falta encapsulación en el montaje",
+      "sede": "crate experimental sv_bis_i0205 / estado",
+      "decision": "Enum privado de arrays 16/25/49 tras soporte; lectura por slice, sin setters ni crecimiento. No sustituir los Vec de la IR.",
+      "casos": "I0205-01 / I0205-24; puerta de construcción/encapsulación en INTERFAZ.md"
+    },
+    {
+      "id": "SE05",
+      "obligaciones": [
+        "BIS-O01",
+        "BIS-O04"
+      ],
+      "clasificacion": "responsabilidad de representación derivada",
+      "sede": "crate experimental sv_bis_i0205 / geometria",
+      "decision": "Comprobar descriptor exacto frente a estado y convenio; contrastar SHA esperado después de matemática.",
+      "casos": "I0205-01 / I0205-09 / I0205-10 / I0205-11"
+    },
+    {
+      "id": "SE06",
+      "obligaciones": [
+        "BIS-O04",
+        "BIS-O08"
+      ],
+      "clasificacion": "responsabilidad externa instrumentada",
+      "sede": "receptor local y captor del laboratorio; observador separado del sujeto",
+      "decision": "Captura final del buffer; recibo y veredicto se contrastan con contexto independiente. No lectura de oráculos por el sujeto.",
+      "casos": "I0205-01 / I0205-12 / I0205-13 / I0205-14 / I0205-15 / I0205-16 / I0205-25 / I0205-26"
+    },
+    {
+      "id": "SE07",
+      "obligaciones": [
+        "BIS-O07",
+        "BIS-O09"
+      ],
+      "clasificacion": "responsabilidad de frontera y estado técnico",
+      "sede": "sv_bis_i0205 / recepcion y conductor",
+      "decision": "Nota documental sin intérprete; operación fijada fuera de petición; rechazo/ausencia/fallo distintos de Tri.U.",
+      "casos": "I0205-17 / I0205-18 / I0205-25"
+    },
+    {
+      "id": "SE08",
+      "obligaciones": [
+        "BIS-O10"
+      ],
+      "clasificacion": "falta comprobación y medición de recursos",
+      "sede": "adaptador de recepción y observación de proceso",
+      "decision": "Cuotas de bytes del compromiso y complemento estructural; RAM y duración siguen pendientes.",
+      "casos": "I0205-19 / I0205-20; banco de adaptador"
+    },
+    {
+      "id": "SE09",
+      "obligaciones": [
+        "BIS-O11"
+      ],
+      "clasificacion": "ya preservada parcialmente; extensión pendiente",
+      "sede": "SourceProfile existente + documentación ES/EN del crate experimental",
+      "decision": "Mantener separación entre perfil fuente, idioma del comentario e interfaz. Integración en explícito; paridad integrada ES pendiente.",
+      "casos": "I0205-01 / I0205-21; C12 propio pendiente"
+    },
+    {
+      "id": "SE10",
+      "obligaciones": [
+        "BIS-O12"
+      ],
+      "clasificacion": "responsabilidad transversal de conductor y observador",
+      "sede": "expediente por ejecución / capturas / observador",
+      "decision": "Guardar bytes fuente, scripts y parches, versiones, entradas, salidas y primera guarda; no acreditar a partir del plan de inyección.",
+      "casos": "OBS-01–OBS-04 del banco integrado"
+    },
+    {
+      "id": "SE11",
+      "obligaciones": [
+        "BIS-O06"
+      ],
+      "clasificacion": "exclusión expresa de esta realización",
+      "sede": "Frame, composición, Trayectoria y consulta conservan sus sedes y contratos",
+      "decision": "No realizar una nueva operación de composición, evaluación o consulta por presentar un descriptor.",
+      "casos": "C06 / C07 y resto del workflow pendientes"
+    },
+    {
+      "id": "SE12",
+      "obligaciones": [
+        "BIS-O03",
+        "BIS-O09"
+      ],
+      "clasificacion": "existente distinto del enlace propuesto",
+      "sede": "sv_core::bindings::validate_bindings / LIG/0.1",
+      "decision": "Conservar ligaduras existentes. El fixture carece de Domain/Agent/BindingContract constituidos; no introducirlos para simular esa cobertura.",
+      "casos": "C03 original; DFL-005 no cerrada por esta ruta"
+    }
+  ]
+}

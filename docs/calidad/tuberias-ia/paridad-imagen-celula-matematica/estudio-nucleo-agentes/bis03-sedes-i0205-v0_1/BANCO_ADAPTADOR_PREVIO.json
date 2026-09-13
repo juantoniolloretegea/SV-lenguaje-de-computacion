@@ -1,0 +1,299 @@
+{
+  "version": "BIS-03-I0205-ADAPTADOR/0.1",
+  "estatuto": "Casos instrumentales independientes, previos a adaptar el código. No reemplazan los 26 integrados ni los 202 anteriores.",
+  "casos": [
+    {
+      "id": "J01",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J01.bin",
+        "bytes": 28,
+        "sha256": "8ea878d9828e18be89a430e7a0ed127aaf12f70a920fd5585d1dff4d62406fda"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "valores_texto": {
+          "s": "ñ 😀",
+          "t": "ñ"
+        }
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J02",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J02.bin",
+        "bytes": 2,
+        "sha256": "1bad6b8cf97131fceab8543e81f7757195fbb1d36b376ee994ad1cf17699c464"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "lexema_numero": "-1"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J03",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J03.bin",
+        "bytes": 20,
+        "sha256": "8b292fc2d32f1fd491784610c61b90dc4632a6e4add19261eca4c3979e4ea6d2"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "lexema_numero": "18446744073709551616",
+        "nota": "El tipado de un campo u64 deberá rechazarlo después; no truncar."
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J04",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J04.bin",
+        "bytes": 18,
+        "sha256": "961266c2e42a000802c6eb1d325e7455ece518e0228ced748990ea6d586b7277"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "CLAVE_DUPLICADA"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J05",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J05.bin",
+        "bytes": 3,
+        "sha256": "2c1ba6ac713bfc21e74f3429be952fca3e7a796734394fd18a48eb6713880d89"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "UTF8"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J06",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J06.bin",
+        "bytes": 4,
+        "sha256": "b51f08b698d88d8027a935d9db649774949f5fb41a0c559bfee6a9a13225c72d"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "JSON_SINTAXIS"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J07",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J07.bin",
+        "bytes": 65,
+        "sha256": "4e04cac422d9ecd4a5f6221653eeb4eaf29077cf3f588cd36bf6dc8ead76971f"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "contenedores_anidados": 32
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J08",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J08.bin",
+        "bytes": 67,
+        "sha256": "eac9bf029c22e177c74309fb891e3351dccfb04f055127ea82dc2dc3136cd899"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "PROFUNDIDAD"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J09",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J09.bin",
+        "bytes": 1023,
+        "sha256": "0aff36da905b6cef74d1c25eefaff12fce5e1cec8528f296e3441bc0856fd461"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "nodos": 512
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J10",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J10.bin",
+        "bytes": 1025,
+        "sha256": "983da4945a3343cc5e2c4c81cb51ab95c7dbca56e20b9278d58a727f92e1d6c6"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "NODOS"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J11",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J11.bin",
+        "bytes": 247,
+        "sha256": "9534f11655b696c123af633b8181abdc1a1024ce0ff538abe5656558078955db"
+      },
+      "esperado": {
+        "resultado": "ADMISIBLE_DECODIFICADOR",
+        "miembros": 32
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J12",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J12.bin",
+        "bytes": 255,
+        "sha256": "4c82bcf154a26497ca132bde8ce6aa1b20da9e4a8ecb3e33f6f0e1029acba536"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "MIEMBROS"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J13",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J13.bin",
+        "bytes": 3,
+        "sha256": "d0ff5974b6aa52cf562bea5921840c032a860a91a3512f7fe8f768f6bbe005f6"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "NUMERO_FORMA"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "J14",
+      "tipo": "json",
+      "entrada": {
+        "archivo": "activos/J14.bin",
+        "bytes": 2,
+        "sha256": "ed79f26d03f412bde3db206601a698e0bb451bea9e3cc25289636ac17ea74b0a"
+      },
+      "esperado": {
+        "resultado": "RECHAZADO",
+        "causa": "NUMERO_FORMA"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "H01",
+      "tipo": "sha256",
+      "entrada": {
+        "archivo": "activos/H01.bin",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "esperado": {
+        "resultado": "HUELLA_EXACTA",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "H02",
+      "tipo": "sha256",
+      "entrada": {
+        "archivo": "activos/H02.bin",
+        "bytes": 3,
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "esperado": {
+        "resultado": "HUELLA_EXACTA",
+        "sha256": "ba7816bf8f01cfea414140de5dae2223b00361a396177a9cb410ff61f20015ad"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "H03",
+      "tipo": "sha256",
+      "entrada": {
+        "archivo": "activos/H03.bin",
+        "bytes": 55,
+        "sha256": "463eb28e72f82e0a96c0a4cc53690c571281131f672aa229e0d45ae59b598b59"
+      },
+      "esperado": {
+        "resultado": "HUELLA_EXACTA",
+        "sha256": "463eb28e72f82e0a96c0a4cc53690c571281131f672aa229e0d45ae59b598b59"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "H04",
+      "tipo": "sha256",
+      "entrada": {
+        "archivo": "activos/H04.bin",
+        "bytes": 56,
+        "sha256": "da2ae4d6b36748f2a318f23e7ab1dfdf45acdc9d049bd80e59de82a60895f562"
+      },
+      "esperado": {
+        "resultado": "HUELLA_EXACTA",
+        "sha256": "da2ae4d6b36748f2a318f23e7ab1dfdf45acdc9d049bd80e59de82a60895f562"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    },
+    {
+      "id": "H05",
+      "tipo": "sha256",
+      "entrada": {
+        "archivo": "activos/H05.bin",
+        "bytes": 64,
+        "sha256": "fdeab9acf3710362bd2658cdc9a29e8f9c757fcf9811603a8c447cd1d9151108"
+      },
+      "esperado": {
+        "resultado": "HUELLA_EXACTA",
+        "sha256": "fdeab9acf3710362bd2658cdc9a29e8f9c757fcf9811603a8c447cd1d9151108"
+      },
+      "observado": null,
+      "estado": "PENDIENTE"
+    }
+  ],
+  "json_preparados": 14,
+  "sha256_preparados": 5,
+  "ejecutados_rust": 0,
+  "oraculo_hash": "hashlib.sha256 de Python como referencia instrumental independiente; no interpreta SVP."
+}
