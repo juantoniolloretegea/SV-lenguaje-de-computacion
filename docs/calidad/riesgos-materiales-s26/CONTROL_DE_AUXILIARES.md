@@ -66,3 +66,7 @@ Las llamadas y cotejos documentales se coordinan mediante la herramienta de ejec
 La lista acompaña a la [recepción R06](r06/README.md) y a sus ocho discriminadores pendientes. Antes de reutilizar un auxiliar afectado para acreditar una propiedad necesaria, se resolverá su defecto o se empleará una vía alternativa comprobada en ese alcance. Se priorizarán las herramientas capaces de modificar registros o declarar conformidad, mediante cambios acotados y regresiones pertinentes.
 
 Se mantienen la fase S26 abierta, los resultados anteriores y la secuencia Bis → catálogo/cierre de fase → S24. Esta incorporación no añade sondas ejecutadas, no selecciona BD/GUI/host y no convierte ensayos de proceso en pruebas de resistencia física de RAM o almacenamiento.
+
+## 7. Recepción de reparación R08
+
+RETP-2026-235: [candidata y resultados Rust](r08/RESULTADOS.md). Quince casos cumplidos en debug y optimizado; preparación separada y comprobación sobre cinco registros reales. Este auxiliar ofrece la vía alternativa para las correspondencias y escrituras de su perfil. Se conserva el control sobre autoridad, frescura del adaptador, concurrencia, recursos y durabilidad descrito en el contrato R08. La recepción no rehabilita automáticamente los auxiliares heredados ni convierte sus checkpoints en evidencia suficiente. R06 continúa pendiente.

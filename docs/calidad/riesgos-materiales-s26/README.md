@@ -188,3 +188,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## Banco R08 · Candidata Rust de auxiliares
 
 [Candidata y quince casos previos](r08/README.md): guardas explícitas; cotejo completo de descriptores sin checkpoint; preparación de los cinco archivos fuera del origen y comprobación posterior. Se fijan controles válidos, revisiones incompatibles, errores entre escrituras y manipulación de salida. Banco todavía no ejecutado al incorporarse; previsto en dos perfiles de compilación. No se invoca Python ni se modifican los auxiliares históricos. Continúan los límites de S26 y R06.
+
+## Recepción R08 · RETP-235
+
+[Resultados R08](r08/RESULTADOS.md): quince casos conformes en dos perfiles Rust y preparación/comprobación de los cinco registros reales. Dos alteraciones editoriales rechazadas antes de la preparación admitida. Candidata auxiliar acotada; R06 y los doce casos globales permanecen abiertos. No se ejecutó Python en R08.

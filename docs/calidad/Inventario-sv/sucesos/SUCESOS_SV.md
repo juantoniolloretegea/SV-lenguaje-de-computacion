@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T21:59:24Z
+**fecha_actualizacion_utc:** 2026-09-13T22:22:09Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 11d441c979c549b7fa459635df014ae987ccde1f; laboratorio 3a3a1d6a4101602edb1324012b1d8406125849eb
+**cortes_de_entrada:** Lenguaje 0152c858e05bb51b3555ac5e998f526e9693ee5c; laboratorio 6e6e5f3e61095519b3041f1484c28dd98b72a76d
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R07: ocho oráculos cumplidos; cuatro reproducciones de debilidades en auxiliares heredados. Elusión de guardas bajo -O; checkpoint ajeno aceptado; escritura parcial local ante error de archivo. Dos controles positivos y dos rechazos normales.
+**resultado:** R08: candidata auxiliar Rust con quince oráculos cumplidos en dos perfiles (30 concordancias). Guardas explícitas; cotejo completo de descriptores; preparación separada de cinco archivos; rechazo de salida incompleta o alterada. Antecedentes R07 conservados.
 
-**verificacion:** Banco publicado antes de ejecutar: Lenguaje a243bd096502580d91fe5166ceb1ebb478f10681; laboratorio f8c7e21817ca4842ce0ad3904e023962419c9b3c. Conductor Rust 1.98.0; Python 3.12.14 sólo como objeto bajo prueba. Fuentes y binario conservados; ocho salidas y estados retenidos.
+**verificacion:** Banco precomprometido en Lenguaje 0152c858e05bb51b3555ac5e998f526e9693ee5c y laboratorio 6e6e5f3e61095519b3041f1484c28dd98b72a76d. Rust 1.98.0: debug y optimizado con debug-assertions=no; ambos 15/15 y salida 0. P08 ensaya cinco posiciones de error tras escritura. Evidencia en r08/RESULTADOS.md.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r07/RESULTADOS.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r08/RESULTADOS.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-234
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-235
 
-**siguiente_accion:** Preparar reparación acotada de auxiliares con Rust como primera opción y conservar los testigos R07. R06 mantiene correlación e identidad admitido-consumido pendientes; S26 y Bis abiertos; S24 pendiente.
+**siguiente_accion:** Usar la candidata para preparar y comprobar esta recepción y cotejar sus árboles remotos. Retomar R06 con correlación e identidad admitido-consumido; precomprometer T01/T02/T05/T06 antes de ejecutarlos. S26 y Bis abiertos; S24 pendiente.
 
-**observaciones:** Cuatro debilidades reproducidas no son cuatro protecciones. Cero reparaciones acreditadas. Transporte GitHub simulado; archivos locales reales. Sin prueba de RAM física, durabilidad, host o GUI; sin invalidación retrospectiva de campañas. Python no administra ni publica este expediente.
+**observaciones:** Cualificación acotada del auxiliar; no cierre material SV. La preparación no sustituye cinco archivos atómicamente. La comparación no acredita autoridad ni frescura por sí sola ni hace CAS remoto. Sin prueba de corte de energía, RAM física, host o GUI. Cero ejecuciones Python en R08; no se reescriben las herramientas heredadas.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 
