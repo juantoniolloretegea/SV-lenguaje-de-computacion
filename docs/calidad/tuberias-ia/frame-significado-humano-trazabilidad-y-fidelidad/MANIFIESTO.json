@@ -27,8 +27,8 @@
     },
     "LEAME_PRIMERO.md": {
       "bytes": 20460,
-      "sha256": "525ba2373f5af273351177e5fcb6794310db6b7230fd3d2ebe4c1c0d7526d798",
-      "git_blob_sha1": "54ad4774c608a02613d0284c139e996f34e55119"
+      "sha256": "83d2483e6138c521b80fca2e67a1d4199cd8916f80efff7095276bee96754105",
+      "git_blob_sha1": "f968476fc10bb7cf90acfe86bcb13f0a10f9ede3"
     },
     "README.md": {
       "bytes": 3672,
@@ -143,6 +143,11 @@
       "fecha": "2026-09-13",
       "registro": "RETP-2026-232",
       "alcance": "Navegación a S26 R05 resultado; PDF/MD sustantivos conservados."
+    },
+    {
+      "fecha": "2026-09-13",
+      "registro": "Corrección editorial de navegación S27 / RETP-230",
+      "alcance": "La incorporación ocupa páginas 23-24; se corrige el rango 23-25 que permanecía en Léame primero. Sin cambio del PDF ni texto sustantivo."
     }
   ]
 }
