@@ -80,3 +80,7 @@ El [estudio núcleo–agentes](../paridad-imagen-celula-matematica/estudio-nucle
 ## Actualización de la versión 2 y conservación del historial
 
 La precisión sobre frame tipado, dimensiones y uso no predeterminado de SV(9,3) queda incorporada por instrucción expresa del autor. La versión 2 pasa a ser la referencia explicativa del punto 3 de la secuencia de lectura. La primera edición permanece accesible desde el historial de revisión; las confirmaciones y estados anteriores conservan su fecha y alcance. Sucesos SV y este documento deben consultarse conjuntamente para continuar desde la evidencia vigente.
+
+## Seguimiento transversal S26 / RETP-2026-222
+
+[Riesgos materiales del frame y matriz previa](../../riesgos-materiales-s26/README.md): doce fallos a provocar y evidencia exigible para distinguir detección e impedimento. Estudio en ejecución; cero casos S26 ejecutados. Abarca RAM, persistencia, consultas, transacciones y consumidores. S22 continúa y S24 conserva Bis → catálogo y cierre de fase → análisis e instalación de GUI.

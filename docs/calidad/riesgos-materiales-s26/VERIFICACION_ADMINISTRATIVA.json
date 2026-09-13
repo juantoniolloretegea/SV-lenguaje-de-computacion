@@ -1,0 +1,13 @@
+{
+  "fecha_utc": "2026-09-13T18:46:43Z",
+  "corte_entrada": "2fc90a08575484ce7c2af9f3fc544c2249c90c03",
+  "suceso": "S26",
+  "revision": 0,
+  "registro": "RETP-2026-222",
+  "casos_previos": 12,
+  "casos_ejecutados": 0,
+  "conservacion_registros_previos": true,
+  "otros_sucesos_intactos": true,
+  "estado_bis_previo_intacto": true,
+  "ensayos_funcionales_nuevos": 0
+}

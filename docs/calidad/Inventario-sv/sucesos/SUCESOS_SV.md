@@ -888,3 +888,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta posterior a actividad iniciada, por petición humana. Inicio corresponde a configuración de esta revisión. No nuevas variantes C01; C02–C12 sin ejecutar; no recuperación WASM/WASI acreditada ni persistencia garantizada tras reemplazo del contenedor.
 
+## S26 · Riesgos materiales del frame: fallos a provocar y evidencia exigible
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-13T18:46:43Z
+
+**fecha_inicio_utc:** 2026-09-13T18:46:43Z
+
+**fecha_actualizacion_utc:** 2026-09-13T18:46:43Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Estudio transversal de identidad, consultas, RAM, persistencia, transacciones, índices, recuperación y consumidores, incluida futura GUI. Matriz previa; sin selección tecnológica ni modificación productiva.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje 2fc90a08575484ce7c2af9f3fc544c2249c90c03; laboratorio 500b283729a8930f8c23033df3fe369d5370759b
+
+**dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
+
+**resultado:** Alta de seguimiento y matriz documental de doce fallos a provocar, con controles positivos y evidencia exigida. Se distinguen detección, impedimento, fallo observado y resultado no acreditado. Cero casos S26 ejecutados.
+
+**verificacion:** Conservación de registros previos, concordancia CSV/Markdown e historial y enlaces comprobados por soporte/registrar.py. Publicación y espejo se cotejan mediante soporte/publicar.py; sus commits identifican la incorporación.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/README.md
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-222
+
+**siguiente_accion:** Inventariar residencia, copias, mutadores, autoridad y fronteras de validación/confirmación/recuperación por recorrido; fijar montaje, estímulos y oráculos antes de ensayar. Entregar pendientes y evidencias al relevo S24.
+
+**observaciones:** Reflexión iniciada antes del alta; fecha actual de seguimiento, sin retrofechar. S22 y S24 conservan estados y secuencia. Doce casos pendientes; no cierre de R2/R3/R4, DFL ni Bis; no se recuentan pruebas anteriores como S26. GUI no seleccionada ni instalada.
+

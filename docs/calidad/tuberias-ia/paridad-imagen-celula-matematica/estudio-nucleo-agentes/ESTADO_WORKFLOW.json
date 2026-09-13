@@ -292,5 +292,15 @@
     "admision_y_nucleo_modificados": false,
     "suficiencia_global": false,
     "hallazgo": "Celda es palabra protegida y no puede nombrar el fixture; variantes nuevas CeldaPrueba conservan el contenido."
+  },
+  "seguimiento_transversal_s26": {
+    "id": "S26",
+    "estado": "en ejecución",
+    "registro": "RETP-2026-222",
+    "informe": "../../../riesgos-materiales-s26/README.md",
+    "casos_previos": 12,
+    "casos_ejecutados": 0,
+    "siguiente_accion": "Inventariar residencia, copias, mutadores, autoridad y fronteras de validación/confirmación/recuperación por recorrido; fijar montaje, estímulos y oráculos antes de ensayar. Entregar pendientes y evidencias al relevo S24.",
+    "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24."
   }
 }
