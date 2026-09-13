@@ -2095,3 +2095,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-216 · S22 · Consolidación de cobertura C01–C12 y preparación de sedes
 
 2026-09-13T12:14:25Z. Consolidación documental C01–C12: doce obligaciones cartografiadas, inventario por caso, límites y propuestas de sede. C01 conserva 13 variantes nativas históricas; C02–C12 contienen 202 filas sin ejecución. Cotejo Python de inventario, huellas, mapeo original y conservación del historial; ninguna nueva ejecución Rust o IA. Checkout recuperado y sincronizado. cargo/rustc no localizados en PATH ni ubicaciones examinadas. [Referencia](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/consolidacion-bis-02/README.md). Comprometer contrato de integración y banco común del primer recorrido C02–C05, con guardas transversales y propuestas de sede; recuperar toolchain antes de ensayos Rust. Consolidación terminada sólo en alcance documental. BIS-02 abierto; BIS-03 pendiente; 2 escenarios originales ejecutados y 22 pendientes. S24 sin cambios. Sin modificación de Rust, IR, semántica, dominios o catálogo.
+
+
+<a id="retp-217"></a>
+
+### RETP-2026-217 · S25 · Recuperación de Rust y continuidad nativa de Bis
+
+2026-09-13T12:59:54Z. Rust y Cargo 1.98.0 operativos; activación en sesiones nuevas; sonda positiva y E0308; sv-native construido desde target nuevo, C01 13/13 y sensibilidad 4/4. Huella oficial cotejada; stdout/stderr y scripts conservados. Compilación --locked --offline; 25 advertencias registradas. Espejo cotejado al publicar. [Referencia](tuberias-ia/recuperacion-rust-s25/README.md). Continuar S22: contrato y banco integrado C02–C05; comprobar entorno en cada relevo. Alta posterior a actividad iniciada, por petición humana. Inicio corresponde a configuración de esta revisión. No nuevas variantes C01; C02–C12 sin ejecutar; no recuperación WASM/WASI acreditada ni persistencia garantizada tras reemplazo del contenedor.

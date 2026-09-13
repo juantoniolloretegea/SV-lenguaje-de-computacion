@@ -1,0 +1,794 @@
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib"
+$ echo "3" > "/opt/sv-rust-1.98.0/lib/rustlib/rust-installer-version"
+install: creating uninstall script at /opt/sv-rust-1.98.0/lib/rustlib/uninstall.sh
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/install.sh /opt/sv-rust-1.98.0/lib/rustlib/uninstall.sh
+install: installing component 'rustc'
+$ echo "rustc" >> "/opt/sv-rust-1.98.0/lib/rustlib/components"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rust-gdb
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/bin/rust-gdb /opt/sv-rust-1.98.0/bin/rust-gdb
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rust-gdb
+$ echo "file:/opt/sv-rust-1.98.0/bin/rust-gdb" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rust-gdbgui
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/bin/rust-gdbgui /opt/sv-rust-1.98.0/bin/rust-gdbgui
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rust-gdbgui
+$ echo "file:/opt/sv-rust-1.98.0/bin/rust-gdbgui" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rust-lldb
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/bin/rust-lldb /opt/sv-rust-1.98.0/bin/rust-lldb
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rust-lldb
+$ echo "file:/opt/sv-rust-1.98.0/bin/rust-lldb" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rustc
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/bin/rustc /opt/sv-rust-1.98.0/bin/rustc
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rustc
+$ echo "file:/opt/sv-rust-1.98.0/bin/rustc" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rustdoc
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/bin/rustdoc /opt/sv-rust-1.98.0/bin/rustdoc
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rustdoc
+$ echo "file:/opt/sv-rust-1.98.0/bin/rustdoc" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/etc"
+install: copying file /opt/sv-rust-1.98.0/etc/target-spec-json-schema.json
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/etc/target-spec-json-schema.json /opt/sv-rust-1.98.0/etc/target-spec-json-schema.json
+$ chmod 644 /opt/sv-rust-1.98.0/etc/target-spec-json-schema.json
+$ echo "file:/opt/sv-rust-1.98.0/etc/target-spec-json-schema.json" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/libLLVM-22-rust-1.98.0-stable.so
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/libLLVM-22-rust-1.98.0-stable.so /opt/sv-rust-1.98.0/lib/libLLVM-22-rust-1.98.0-stable.so
+$ chmod 644 /opt/sv-rust-1.98.0/lib/libLLVM-22-rust-1.98.0-stable.so
+$ echo "file:/opt/sv-rust-1.98.0/lib/libLLVM-22-rust-1.98.0-stable.so" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/libLLVM.so.22.1-rust-1.98.0-stable
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/libLLVM.so.22.1-rust-1.98.0-stable /opt/sv-rust-1.98.0/lib/libLLVM.so.22.1-rust-1.98.0-stable
+$ chmod 644 /opt/sv-rust-1.98.0/lib/libLLVM.so.22.1-rust-1.98.0-stable
+$ echo "file:/opt/sv-rust-1.98.0/lib/libLLVM.so.22.1-rust-1.98.0-stable" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/librustc_driver-28a98848f7a7c026.so
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/librustc_driver-28a98848f7a7c026.so /opt/sv-rust-1.98.0/lib/librustc_driver-28a98848f7a7c026.so
+$ chmod 644 /opt/sv-rust-1.98.0/lib/librustc_driver-28a98848f7a7c026.so
+$ echo "file:/opt/sv-rust-1.98.0/lib/librustc_driver-28a98848f7a7c026.so" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_load_rust_pretty_printers.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/gdb_load_rust_pretty_printers.py /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_load_rust_pretty_printers.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_load_rust_pretty_printers.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_load_rust_pretty_printers.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_lookup.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/gdb_lookup.py /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_lookup.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_lookup.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_lookup.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_providers.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/gdb_providers.py /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_providers.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_providers.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/gdb_providers.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_lookup.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/lldb_lookup.py /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_lookup.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_lookup.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_lookup.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_providers.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/lldb_providers.py /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_providers.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_providers.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/lldb_providers.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/etc"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/etc/rust_types.py
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/etc/rust_types.py /opt/sv-rust-1.98.0/lib/rustlib/etc/rust_types.py
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/etc/rust_types.py
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/etc/rust_types.py" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld.lld
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld.lld /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld.lld
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld.lld
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld.lld" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld64.lld
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld64.lld /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld64.lld
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld64.lld
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/ld64.lld" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/lld-link
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/lld-link /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/lld-link
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/lld-link
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/lld-link" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/wasm-ld
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/wasm-ld /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/wasm-ld
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/wasm-ld
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld/wasm-ld" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-lld" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-objcopy
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-objcopy /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-objcopy
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-objcopy
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/rust-objcopy" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/wasm-component-ld
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/lib/rustlib/x86_64-unknown-linux-gnu/bin/wasm-component-ld /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/wasm-component-ld
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/wasm-component-ld
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/bin/wasm-component-ld" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/libexec"
+install: copying file /opt/sv-rust-1.98.0/libexec/rust-analyzer-proc-macro-srv
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/libexec/rust-analyzer-proc-macro-srv /opt/sv-rust-1.98.0/libexec/rust-analyzer-proc-macro-srv
+$ chmod 755 /opt/sv-rust-1.98.0/libexec/rust-analyzer-proc-macro-srv
+$ echo "file:/opt/sv-rust-1.98.0/libexec/rust-analyzer-proc-macro-srv" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT-library.html
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/COPYRIGHT-library.html /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT-library.html
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT-library.html
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT-library.html" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT.html
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/COPYRIGHT.html /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT.html
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT.html
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/COPYRIGHT.html" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/README.md
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/README.md /opt/sv-rust-1.98.0/share/doc/rust/README.md
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/README.md
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/README.md" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/Apache-2.0.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/Apache-2.0.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/Apache-2.0.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/Apache-2.0.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/Apache-2.0.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/BSD-2-Clause.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/BSD-2-Clause.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/BSD-2-Clause.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/BSD-2-Clause.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/BSD-2-Clause.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/CC-BY-SA-4.0.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/CC-BY-SA-4.0.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/CC-BY-SA-4.0.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/CC-BY-SA-4.0.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/CC-BY-SA-4.0.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/GCC-exception-3.1.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/GCC-exception-3.1.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/GCC-exception-3.1.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/GCC-exception-3.1.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/GCC-exception-3.1.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-2.0-only.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/GPL-2.0-only.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-2.0-only.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-2.0-only.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-2.0-only.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-3.0-or-later.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/GPL-3.0-or-later.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-3.0-or-later.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-3.0-or-later.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/GPL-3.0-or-later.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/ISC.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/ISC.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/ISC.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/ISC.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/ISC.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/LLVM-exception.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/LLVM-exception.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/LLVM-exception.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/LLVM-exception.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/LLVM-exception.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/MIT.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/MIT.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/MIT.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/MIT.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/MIT.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/NCSA.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/NCSA.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/NCSA.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/NCSA.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/NCSA.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/OFL-1.1.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/OFL-1.1.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/OFL-1.1.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/OFL-1.1.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/OFL-1.1.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rust/licenses"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rust/licenses/Unicode-3.0.txt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/doc/rust/licenses/Unicode-3.0.txt /opt/sv-rust-1.98.0/share/doc/rust/licenses/Unicode-3.0.txt
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rust/licenses/Unicode-3.0.txt
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rust/licenses/Unicode-3.0.txt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/rustc.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/man/man1/rustc.1 /opt/sv-rust-1.98.0/share/man/man1/rustc.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/rustc.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/rustc.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/rustdoc.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustc/share/man/man1/rustdoc.1 /opt/sv-rust-1.98.0/share/man/man1/rustdoc.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/rustdoc.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/rustdoc.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustc"
+install: installing component 'cargo'
+$ echo "cargo" >> "/opt/sv-rust-1.98.0/lib/rustlib/components"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/cargo
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/bin/cargo /opt/sv-rust-1.98.0/bin/cargo
+$ chmod 755 /opt/sv-rust-1.98.0/bin/cargo
+$ echo "file:/opt/sv-rust-1.98.0/bin/cargo" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/etc/bash_completion.d"
+install: copying file /opt/sv-rust-1.98.0/etc/bash_completion.d/cargo
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/etc/bash_completion.d/cargo /opt/sv-rust-1.98.0/etc/bash_completion.d/cargo
+$ chmod 644 /opt/sv-rust-1.98.0/etc/bash_completion.d/cargo
+$ echo "file:/opt/sv-rust-1.98.0/etc/bash_completion.d/cargo" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/cargo"
+install: copying file /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-APACHE
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/doc/cargo/LICENSE-APACHE /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-APACHE
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-APACHE
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-APACHE" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/cargo"
+install: copying file /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-MIT
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/doc/cargo/LICENSE-MIT /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-MIT
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-MIT
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-MIT" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/cargo"
+install: copying file /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-THIRD-PARTY
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/doc/cargo/LICENSE-THIRD-PARTY /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-THIRD-PARTY
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-THIRD-PARTY
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/cargo/LICENSE-THIRD-PARTY" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/cargo"
+install: copying file /opt/sv-rust-1.98.0/share/doc/cargo/README.md
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/doc/cargo/README.md /opt/sv-rust-1.98.0/share/doc/cargo/README.md
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/cargo/README.md
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/cargo/README.md" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-add.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-add.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-add.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-add.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-add.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-bench.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-bench.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-bench.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-bench.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-bench.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-build.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-build.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-build.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-build.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-build.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-check.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-check.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-check.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-check.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-check.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-clean.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-clean.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-clean.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-clean.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-clean.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-doc.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-doc.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-doc.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-doc.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-doc.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-fetch.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-fetch.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-fetch.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-fetch.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-fetch.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-fix.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-fix.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-fix.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-fix.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-fix.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-generate-lockfile.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-generate-lockfile.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-generate-lockfile.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-generate-lockfile.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-generate-lockfile.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-help.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-help.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-help.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-help.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-help.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-info.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-info.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-info.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-info.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-info.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-init.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-init.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-init.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-init.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-init.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-install.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-install.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-install.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-install.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-install.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-locate-project.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-locate-project.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-locate-project.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-locate-project.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-locate-project.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-login.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-login.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-login.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-login.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-login.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-logout.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-logout.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-logout.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-logout.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-logout.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-metadata.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-metadata.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-metadata.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-metadata.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-metadata.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-new.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-new.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-new.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-new.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-new.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-owner.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-owner.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-owner.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-owner.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-owner.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-package.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-package.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-package.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-package.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-package.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-pkgid.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-pkgid.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-pkgid.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-pkgid.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-pkgid.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-publish.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-publish.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-publish.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-publish.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-publish.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-remove.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-remove.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-remove.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-remove.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-remove.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-report-future-incompatibilities.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-report-future-incompatibilities.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-report-future-incompatibilities.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-report-future-incompatibilities.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-report-future-incompatibilities.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-report.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-report.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-report.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-report.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-report.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-run.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-run.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-run.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-run.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-run.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-rustc.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-rustc.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-rustc.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-rustc.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-rustc.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-rustdoc.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-rustdoc.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-rustdoc.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-rustdoc.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-rustdoc.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-search.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-search.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-search.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-search.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-search.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-test.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-test.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-test.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-test.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-test.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-tree.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-tree.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-tree.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-tree.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-tree.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-uninstall.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-uninstall.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-uninstall.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-uninstall.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-uninstall.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-update.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-update.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-update.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-update.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-update.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-vendor.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-vendor.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-vendor.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-vendor.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-vendor.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-version.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-version.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-version.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-version.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-version.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo-yank.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo-yank.1 /opt/sv-rust-1.98.0/share/man/man1/cargo-yank.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo-yank.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo-yank.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/man/man1"
+install: copying file /opt/sv-rust-1.98.0/share/man/man1/cargo.1
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/man/man1/cargo.1 /opt/sv-rust-1.98.0/share/man/man1/cargo.1
+$ chmod 644 /opt/sv-rust-1.98.0/share/man/man1/cargo.1
+$ echo "file:/opt/sv-rust-1.98.0/share/man/man1/cargo.1" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/zsh/site-functions"
+install: copying file /opt/sv-rust-1.98.0/share/zsh/site-functions/_cargo
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/cargo/share/zsh/site-functions/_cargo /opt/sv-rust-1.98.0/share/zsh/site-functions/_cargo
+$ chmod 644 /opt/sv-rust-1.98.0/share/zsh/site-functions/_cargo
+$ echo "file:/opt/sv-rust-1.98.0/share/zsh/site-functions/_cargo" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-cargo"
+install: installing component 'rust-std-x86_64-unknown-linux-gnu'
+$ echo "rust-std-x86_64-unknown-linux-gnu" >> "/opt/sv-rust-1.98.0/lib/rustlib/components"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libaddr2line-9bf1503802f1fe1f.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libadler2-1855b06535e3a6dc.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liballoc-ca14532e0afe7a5d.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcfg_if-380714c6ea67686e.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcompiler_builtins-b8411246c6de4c7a.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libcore-a6075fd9c05de416.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgetopts-02c32a91bb4b14fa.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libgimli-b05ed1427e633af3.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libhashbrown-5616f5bf81fe0066.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/liblibc-f28c4264f0143d08.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libmemchr-438369955a1aeb02.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libminiz_oxide-80dd92fda65ee391.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libobject-539315557aa33d2a.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_abort-0d311229c3300097.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libpanic_unwind-b12739ac718ad94d.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libproc_macro-f5bcf216899e1faf.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libprofiler_builtins-d21a783f1ca447d4.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.asan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.dfsan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.dfsan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.dfsan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.dfsan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.dfsan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.lsan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.msan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.msan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.msan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.msan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.msan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.rtsan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.rtsan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.rtsan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.rtsan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.rtsan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.safestack.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.safestack.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.safestack.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.safestack.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.safestack.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.tsan.a
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.tsan.a /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.tsan.a
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.tsan.a
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc-stable_rt.tsan.a" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_demangle-7e135abb3d08f85c.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_literal_escaper-12f46c3d6b9a3a65.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_alloc-4eb375f3ee2d977f.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_core-ae5f5e65a4426175.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/librustc_std_workspace_std-2f6cfb1d83a94e28.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.so
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.so /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.so
+$ chmod 755 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.so
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd-2e38004a9ef1deab.so" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libstd_detect-8ebd82e261ed1599.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libsysroot-8f4ac395d4fcfa1a.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libtest-f749e999e116a5ef.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rlib
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rlib /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rlib
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rlib
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rlib" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib"
+install: copying file /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rmeta
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rust-std-x86_64-unknown-linux-gnu/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rmeta /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rmeta
+$ chmod 644 /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rmeta
+$ echo "file:/opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib/libunwind-c548baaa1b36fffe.rmeta" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rust-std-x86_64-unknown-linux-gnu"
+install: installing component 'rustfmt-preview'
+$ echo "rustfmt-preview" >> "/opt/sv-rust-1.98.0/lib/rustlib/components"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/cargo-fmt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustfmt-preview/bin/cargo-fmt /opt/sv-rust-1.98.0/bin/cargo-fmt
+$ chmod 755 /opt/sv-rust-1.98.0/bin/cargo-fmt
+$ echo "file:/opt/sv-rust-1.98.0/bin/cargo-fmt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustfmt-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/rustfmt
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustfmt-preview/bin/rustfmt /opt/sv-rust-1.98.0/bin/rustfmt
+$ chmod 755 /opt/sv-rust-1.98.0/bin/rustfmt
+$ echo "file:/opt/sv-rust-1.98.0/bin/rustfmt" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustfmt-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rustfmt"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-APACHE
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustfmt-preview/share/doc/rustfmt/LICENSE-APACHE /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-APACHE
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-APACHE
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-APACHE" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustfmt-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rustfmt"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-MIT
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustfmt-preview/share/doc/rustfmt/LICENSE-MIT /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-MIT
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-MIT
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rustfmt/LICENSE-MIT" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustfmt-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/rustfmt"
+install: copying file /opt/sv-rust-1.98.0/share/doc/rustfmt/README.md
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/rustfmt-preview/share/doc/rustfmt/README.md /opt/sv-rust-1.98.0/share/doc/rustfmt/README.md
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/rustfmt/README.md
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/rustfmt/README.md" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-rustfmt-preview"
+install: installing component 'clippy-preview'
+$ echo "clippy-preview" >> "/opt/sv-rust-1.98.0/lib/rustlib/components"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/cargo-clippy
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/clippy-preview/bin/cargo-clippy /opt/sv-rust-1.98.0/bin/cargo-clippy
+$ chmod 755 /opt/sv-rust-1.98.0/bin/cargo-clippy
+$ echo "file:/opt/sv-rust-1.98.0/bin/cargo-clippy" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-clippy-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/bin"
+install: copying file /opt/sv-rust-1.98.0/bin/clippy-driver
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/clippy-preview/bin/clippy-driver /opt/sv-rust-1.98.0/bin/clippy-driver
+$ chmod 755 /opt/sv-rust-1.98.0/bin/clippy-driver
+$ echo "file:/opt/sv-rust-1.98.0/bin/clippy-driver" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-clippy-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/clippy"
+install: copying file /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-APACHE
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/clippy-preview/share/doc/clippy/LICENSE-APACHE /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-APACHE
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-APACHE
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-APACHE" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-clippy-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/clippy"
+install: copying file /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-MIT
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/clippy-preview/share/doc/clippy/LICENSE-MIT /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-MIT
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-MIT
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/clippy/LICENSE-MIT" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-clippy-preview"
+$ umask 022 && mkdir -p "/opt/sv-rust-1.98.0/share/doc/clippy"
+install: copying file /opt/sv-rust-1.98.0/share/doc/clippy/README.md
+$ cp /workspace/scratch/cdd3907241dd/rust-1.98.0-x86_64-unknown-linux-gnu/clippy-preview/share/doc/clippy/README.md /opt/sv-rust-1.98.0/share/doc/clippy/README.md
+$ chmod 644 /opt/sv-rust-1.98.0/share/doc/clippy/README.md
+$ echo "file:/opt/sv-rust-1.98.0/share/doc/clippy/README.md" >> "/opt/sv-rust-1.98.0/lib/rustlib/manifest-clippy-preview"

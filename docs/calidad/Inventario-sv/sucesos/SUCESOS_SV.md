@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T12:14:25Z
+**fecha_actualizacion_utc:** 2026-09-13T12:59:54Z
 
 **fecha_fin_utc:** —
 
@@ -776,13 +776,13 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **resultado:** Consolidación documental C01–C12: doce obligaciones cartografiadas, inventario por caso, límites y propuestas de sede. C01 conserva 13 variantes nativas históricas; C02–C12 contienen 202 filas sin ejecución.
 
-**verificacion:** Cotejo Python de inventario, huellas, mapeo original y conservación del historial; ninguna nueva ejecución Rust o IA. Checkout recuperado y sincronizado. cargo/rustc no localizados en PATH ni ubicaciones examinadas.
+**verificacion:** RETP-217/S25: entorno recuperado y nueva construcción nativa; repetición C01 13/13, sensibilidad 4/4. C02–C12: 202 filas sin ejecutar.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/consolidacion-bis-02/README.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-216
 
-**siguiente_accion:** Comprometer contrato de integración y banco común del primer recorrido C02–C05, con guardas transversales y propuestas de sede; recuperar toolchain antes de ensayos Rust.
+**siguiente_accion:** Comprometer contrato de integración y banco común C02–C05, con guardas transversales; Rust nativo nuevamente disponible.
 
 **observaciones:** Consolidación terminada sólo en alcance documental. BIS-02 abierto; BIS-03 pendiente; 2 escenarios originales ejecutados y 22 pendientes. S24 sin cambios. Sin modificación de Rust, IR, semántica, dominios o catálogo.
 
@@ -853,4 +853,38 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **siguiente_accion:** Mantener S24 pendiente mientras se ejecuta S22. Tras los cierres del Bis, catálogo y fase, abrir el análisis de GUI y registrar su inicio.
 
 **observaciones:** S24 conserva el orden y la futura activación de GUI; no duplica ni altera el estado en ejecución de S22. No selecciona C#/.NET, Ratatui ni otra tecnología. No autoriza adelantar la instalación ni declara ejecutado un hito futuro.
+
+## S25 · Recuperación Rust 1.98.0, entorno y comprobación nativa de continuidad
+
+**estado:** finalizado
+
+**fecha_alta_utc:** 2026-09-13T12:59:54Z
+
+**fecha_inicio_utc:** 2026-09-13T12:56:10Z
+
+**fecha_actualizacion_utc:** 2026-09-13T12:59:54Z
+
+**fecha_fin_utc:** 2026-09-13T12:59:54Z
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Instalación autónoma previa, activación idempotente en Bash y comprobación del entorno nativo; repetición C01 sobre el corte vigente.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje 52fc506a836821b7285834bdc0adf93e9ddc5680; laboratorio 389ecbaf34a2274455d81da85bc46bbab675816d
+
+**dependencias:** S23 histórico; indisponibilidad observada en RETP-216; descarga oficial aportada por el autor.
+
+**resultado:** Rust y Cargo 1.98.0 operativos; activación en sesiones nuevas; sonda positiva y E0308; sv-native construido desde target nuevo, C01 13/13 y sensibilidad 4/4.
+
+**verificacion:** Huella oficial cotejada; stdout/stderr y scripts conservados. Compilación --locked --offline; 25 advertencias registradas. Espejo cotejado al publicar.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/README.md
+
+**referencia_calidad:** RETP-2026-217
+
+**siguiente_accion:** Continuar S22: contrato y banco integrado C02–C05; comprobar entorno en cada relevo.
+
+**observaciones:** Alta posterior a actividad iniciada, por petición humana. Inicio corresponde a configuración de esta revisión. No nuevas variantes C01; C02–C12 sin ejecutar; no recuperación WASM/WASI acreditada ni persistencia garantizada tras reemplazo del contenedor.
 

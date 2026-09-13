@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Comprometer contrato de integración y banco común del primer recorrido C02–C05, con guardas transversales y propuestas de sede; recuperar toolchain antes de ensayos Rust.",
+  "siguiente_accion": "Comprometer contrato de integración y banco común C02–C05, con guardas transversales; Rust nativo nuevamente disponible.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -209,6 +209,17 @@
     "filas_previas_c02_c12": 202,
     "ejecuciones_nuevas": 0,
     "sincronizacion_checkout": "recuperada y verificada al corte 4fc7a2ceb2ece6d5d69d12e3216eda48e68f6136",
-    "toolchain_actual": "cargo/rustc no localizados en PATH ni ubicaciones examinadas; recuperación pendiente antes de ejecución"
+    "toolchain_actual": "Recuperado en S25/RETP-217: Rust/Cargo 1.98.0; compilación nativa y C01 repetidos. Sin alterar la comprobación histórica RETP-216."
+  },
+  "recuperacion_entorno": {
+    "suceso": "S25",
+    "registro": "RETP-2026-217",
+    "informe": "../../recuperacion-rust-s25/README.md",
+    "prefijo": "/opt/sv-rust-1.98.0",
+    "activador": "/opt/sv-rust-1.98.0/env.sh",
+    "version": "1.98.0",
+    "bis_c01_repetido": 13,
+    "nuevas_variantes": 0,
+    "c02_c12_ejecutadas": 0
   }
 }

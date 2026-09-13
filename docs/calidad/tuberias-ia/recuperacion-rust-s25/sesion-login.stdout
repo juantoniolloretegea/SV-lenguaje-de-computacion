@@ -1,0 +1,4 @@
+/opt/sv-rust-1.98.0/bin/cargo
+/opt/sv-rust-1.98.0/bin/rustc
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+cargo 1.98.0 (797e8a9bc 2026-08-05)

@@ -1,0 +1,22 @@
+{
+  "fecha_utc": "2026-09-13T12:56:10.728056+00:00",
+  "activador": "/opt/sv-rust-1.98.0/env.sh",
+  "variables": [
+    "SV_RUST_PREFIX",
+    "PATH"
+  ],
+  "archivos": [
+    {
+      "archivo_inicio": ".profile",
+      "antes_sha256": "2c5ab71c4d7e9041e1ff2add368da20ebe5d4262320a5cf1547b780380910cf0",
+      "despues_sha256": "408756ec1a147f6700a271354688e7a42eb1c1b8c445d532f3ad91878a8e1b01",
+      "cambio": true
+    },
+    {
+      "archivo_inicio": ".bashrc",
+      "antes_sha256": "dfc4e31c63ee0aac62893e2b1a3db984684fcd4aef5c9310fd3cabebd7bf27cb",
+      "despues_sha256": "3ef234866d7afd23eb31b8fb0c3bb5bb688a6fc849ffb8b0a4bbd75840e8ab28",
+      "cambio": true
+    }
+  ]
+}

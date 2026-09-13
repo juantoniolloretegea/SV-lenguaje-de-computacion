@@ -1,0 +1,163 @@
+{
+  "version": "BIS-C01-RESULTADO/1",
+  "fecha_utc": "2026-09-13T12:57:24.049Z",
+  "corte_lenguaje": "5ba3fbab751d9e4561dcecf2659e0ee4a54f7b4f",
+  "ejecutable": "sv-native",
+  "ejecutable_sha256": "ead4cfadfa6c468a4d96b809beaae39a887f76e6880954653f9326252908e96d",
+  "banco_sha256": "c457f5d9a575bc1b48265587fb4fc8944701f01277dd725c5a0ae9e10d5e55c7",
+  "node": "v24.19.0",
+  "plataforma": "linux",
+  "arquitectura": "x64",
+  "variantes": 13,
+  "conformes": 13,
+  "resultados": [
+    {
+      "id": "b3-exacto",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "c8f11b8fff55dff18adacd32b94caa2202b1666bcdfb461d78197e80aa37ebbe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b4-exacto",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "c7a3bb6a43206382347afae174a0cd1883666f255cfbf08164cac3c4cb5a3337",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b5-exacto",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "2a1a00f4b13733c6db2ff2413f2df0e8e93096ab4b30640a2b2216b87155766b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b6-exacto",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "bb7ce27a4d1c87aba494c624538bf4d4e6faf0bab6deb263a58c39a1aedd366b",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b7-exacto",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "24bec61a4166cf39be079e1d2124c4e1e61a26a7d69425d266b7ae9f44c0d982",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b4-permutado-declarado",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "a76e6f732d7b903c8f1b9b179698ec9427c598c76a77dbf7ea049b992f96d463",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b4-es",
+      "escenario": "BIS-C01-P",
+      "conforme": true,
+      "exit_code": 0,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "59bc053bacf02399fc6156f9749d0c241e02b5a110d89235186ca41796696c24",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "id": "b4-longitud-15",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "aa0a3e6d0a97d172ee631c567332ebe3e1da8f10c5efec5b32e78f95855f302b"
+    },
+    {
+      "id": "b4-longitud-17",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "aa0a3e6d0a97d172ee631c567332ebe3e1da8f10c5efec5b32e78f95855f302b"
+    },
+    {
+      "id": "b5-longitud-24",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "aa0a3e6d0a97d172ee631c567332ebe3e1da8f10c5efec5b32e78f95855f302b"
+    },
+    {
+      "id": "b5-longitud-26",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "aa0a3e6d0a97d172ee631c567332ebe3e1da8f10c5efec5b32e78f95855f302b"
+    },
+    {
+      "id": "b2-longitud4",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6dc72b318f917596aef9534a2b7bc9b1d65dd9fb2501af8eecae92273b784d2"
+    },
+    {
+      "id": "b2-longitud16-precedencia",
+      "escenario": "BIS-C01-N",
+      "conforme": true,
+      "exit_code": 1,
+      "signal": null,
+      "error": null,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "c6dc72b318f917596aef9534a2b7bc9b1d65dd9fb2501af8eecae92273b784d2"
+    }
+  ],
+  "sensibilidad": [
+    {
+      "mutacion": "posiciones",
+      "detectada": true
+    },
+    {
+      "mutacion": "dimension",
+      "detectada": true
+    },
+    {
+      "mutacion": "identidad",
+      "detectada": true
+    },
+    {
+      "mutacion": "rechazo_con_salida",
+      "detectada": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "corte_lenguaje": "52fc506a836821b7285834bdc0adf93e9ddc5680",
+  "corte_laboratorio": "389ecbaf34a2274455d81da85bc46bbab675816d",
+  "rectores": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad cotejada frente a C10"
+    }
+  ],
+  "alcance_lectura": "Lecturas completas rectoras previas reutilizadas con identidad cotejada, conforme al workflow §2. AGENTS, reglas de sucesos, condiciones de paso y contrato/observador C01 consultados para este incremento."
+}

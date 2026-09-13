@@ -1,0 +1,89 @@
+{
+  "fecha_utc": "2026-09-13T12:57:24.087686+00:00",
+  "corte_compilado": "52fc506a836821b7285834bdc0adf93e9ddc5680",
+  "montaje": "Compilación nativa con directorio target nuevo, Cargo --locked --offline; 25 warnings conservados en build-clean.stderr.",
+  "resultados": [
+    {
+      "id": "sesion-login",
+      "argv": [
+        "bash",
+        "-lc",
+        "command -v cargo rustc; rustc --version; cargo --version"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-env-s25",
+      "exit_code": 0
+    },
+    {
+      "id": "sesion-bashrc",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "-c",
+        ". /root/.bashrc; command -v cargo; cargo --version"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-env-s25",
+      "exit_code": 0
+    },
+    {
+      "id": "idempotencia",
+      "argv": [
+        "bash",
+        "--noprofile",
+        "-c",
+        ". /opt/sv-rust-1.98.0/env.sh; first=$PATH; . /opt/sv-rust-1.98.0/env.sh; test \"$first\" = \"$PATH\""
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-env-s25",
+      "exit_code": 0
+    },
+    {
+      "id": "sonda-test",
+      "argv": [
+        "bash",
+        "-lc",
+        "cargo test --offline"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-recovery-check",
+      "exit_code": 0
+    },
+    {
+      "id": "sonda-run",
+      "argv": [
+        "bash",
+        "-lc",
+        "cargo run --offline --quiet"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-recovery-check",
+      "exit_code": 0
+    },
+    {
+      "id": "sonda-rechazo",
+      "argv": [
+        "/opt/sv-rust-1.98.0/bin/rustc",
+        "--edition=2024",
+        "type_error.rs",
+        "-o",
+        "/workspace/scratch/cdd3907241dd/rust-env-s25/no-debe-existir"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/rust-recovery-check",
+      "exit_code": 1
+    },
+    {
+      "id": "bis-c01",
+      "argv": [
+        "node",
+        "/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c01/verificar.mjs",
+        "/workspace/scratch/cdd3907241dd/rust-env-s25/target-native/debug/sv-native",
+        "/workspace/scratch/cdd3907241dd/rust-env-s25/bis-c01-ejecucion"
+      ],
+      "cwd": "/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout",
+      "exit_code": 0
+    }
+  ],
+  "bis_c01": {
+    "variantes": 13,
+    "conformes": 13,
+    "sensibilidades_detectadas": 4,
+    "nota_corte": "RESULTADO.json conserva corte_lenguaje del banco histórico; el corte realmente compilado consta aquí."
+  },
+  "c02_c12_ejecutados": 0
+}
