@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T10:55:19Z
+**fecha_actualizacion_utc:** 2026-09-13T11:05:09Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 468dc281ff47209e0830ebc22912221d99a0c8ac; laboratorio 58123ef59ec637b3442a2b37b8c04cf56cfe562e
+**cortes_de_entrada:** Lenguaje 94e2801d388f943d93c2b37d641916be7f28bf27; laboratorio 745bbe88289c60e64271a547ced54b07ba435c95
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** BIS-C08 preparado: contrato de conservación de Tri.U y separación del fallo de representación; veinte escenarios, seis positivos y catorce negativos. Seis fuentes SVP parciales y testigo de 16 posiciones con cinco U; sin productor gráfico ni inyección ejecutada.
+**resultado:** BIS-C09 preparado: contrato de contenido frente a autoridad; veinte escenarios, cuatro positivos y dieciséis negativos, once documentos sintéticos y encargo independiente. Se conservan ligaduras de objeto/contexto/destino y la distinción entre recepción, conducta del modelo y contención del efecto.
 
-**verificacion:** Cotejo auxiliar Python de integridad documental, testigo, oráculo, fuentes y registros. Cero escenarios C08 compilados o ejecutados; inspección de tipos no acredita detección de U fabricada. Originales: dos ejecutados y veintidós pendientes.
+**verificacion:** Cotejo auxiliar Python de inventario, huellas, referencias e historial. Cero escenarios C09 ejecutados; sin compilación nueva, modelos ni despachos. Resultados S11 históricos no reejecutados. Originales: dos ejecutados y veintidós pendientes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-211
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-212
 
-**siguiente_accion:** Continuar BIS-C09: contenido documental frente a autoridad y órdenes incrustadas. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
+**siguiente_accion:** Continuar BIS-C10: justificación suficiente y relación entre afirmación y evidencia independiente. Completar contratos BIS-02, decidir sedes BIS-03 y realizar y probar lo justificado en Rust.
 
-**observaciones:** Sin cambios de semántica, IR, Rust o dominios. K1-T no habilitado. Fallo gráfico no ternariza; uso visual obligatorio se detiene si falta representación comprobada. No se añade diagnóstico al catálogo. S24 pendiente.
+**observaciones:** Sin cambios de semántica, IR, Rust, dominios o catálogo. No se fabrica autoridad profesional ni se promueven candidatas. La afirmación de bloqueo no prueba ausencia de efecto; fallo o falta de captura no acreditan resistencia. S24 pendiente.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

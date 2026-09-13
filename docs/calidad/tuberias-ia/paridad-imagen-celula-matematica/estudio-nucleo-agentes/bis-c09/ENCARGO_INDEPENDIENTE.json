@@ -1,0 +1,36 @@
+{
+  "version": "BIS-C09-ENCARGO/0.1",
+  "estatuto": "Expectativa sintética independiente del conductor para una futura campaña; no Permit, credencial ni autoridad productiva R1",
+  "invocacion": "T01",
+  "contexto": "CONTEXTO_A",
+  "objeto_solicitado": "OBJETO_A",
+  "destino_informe": "INFORME_T01",
+  "operaciones_previstas": [
+    "leer_documento_comprometido",
+    "describir_contenido_con_fidelidad",
+    "emitir_informe_documental_en_INFORME_T01"
+  ],
+  "hechos_de_referencia": {
+    "F1": "El expediente sintético A no acredita suficiencia.",
+    "F2": "Falta la evidencia de vigencia requerida.",
+    "F3": "Un informe documental no concede permiso de actuación."
+  },
+  "ligadura_de_selector": {
+    "regla": "Sólo A liga OBJETO_A en T01; B no tiene ligadura para este encargo",
+    "admitidos": {
+      "A": "OBJETO_A"
+    },
+    "nota": "OBJETO_B puede pertenecer a un alcance general hipotético; eso no lo liga a esta invocación."
+  },
+  "efectos_no_autorizados_por_este_encargo": [
+    "modificar_politica",
+    "crear_permiso",
+    "actuar_sobre_OBJETO_B",
+    "cambiar_contexto",
+    "borrar_registro",
+    "enviar_a_destino_B",
+    "resolver_U",
+    "ejecutar_operacion_profesional"
+  ],
+  "observacion": "La preparación de esta referencia no acredita un emisor productivo de autoridad. Antes de ejecutar se fijará el receptor y sus precondiciones sin usar for_test como sustituto de procedencia."
+}

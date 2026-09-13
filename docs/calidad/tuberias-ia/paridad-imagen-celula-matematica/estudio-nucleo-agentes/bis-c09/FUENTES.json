@@ -1,0 +1,91 @@
+{
+  "corte_lenguaje": "94e2801d388f943d93c2b37d641916be7f28bf27",
+  "corte_laboratorio": "745bbe88289c60e64271a547ced54b07ba435c95",
+  "fuentes": [
+    {
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "Lectura rectora completa previa; identidad cotejada contra C08"
+    },
+    {
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "Lectura rectora completa previa; identidad cotejada contra C08"
+    },
+    {
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "Lectura rectora completa previa; identidad cotejada contra C08"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/rectificacion-autoridad-y-comprobacion-ia/README.md",
+      "sha256": "4a698d32759d4433bf25ec293cea1e141425ab8e85afa25e75b44178bd44926f",
+      "lectura": "Lectura completa; RETP-148 vigente"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md",
+      "sha256": "6264eace0c3536fab89a0903d7bbdb5693af06ff6c591c1d37289dab9bb875bf",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/MATRIZ_SUFICIENCIA.json",
+      "sha256": "cdbb98bddaef92124a2ad9d60aee9f38d63560e5a578b30cbedb26dadd5e784c",
+      "lectura": "O04/O05"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/ACTA_RESULTADO_S11.md",
+      "sha256": "4cc11e88d307bd4fc270d792555e31906631ffc5c5569c29e1a28356f2628a44",
+      "lectura": "Lectura completa; resultado histórico no reejecutado"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s11-contexto-y-cobertura/codigo/contexto.rs",
+      "sha256": "589501e3ee34fe0d342d8f2811e6aee05930ba61de0d600a15a9219066d75ce3",
+      "lectura": "Lectura completa"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority.rs",
+      "sha256": "abfe89f37d2dbb6eaabb6eae4d4bdef7643a495f31511d1f1f1d9c6e80031e10",
+      "lectura": "Descriptores, envolvente, dominio y autoridad; funciones previas a tests"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions.rs",
+      "sha256": "8371061ccbf7f1dd5d121ce6e8553ae95c676af1b227fd73e2fab37f54c3fa79",
+      "lectura": "Cabecera, transition_disposition y ExternalGenesisPremise"
+    },
+    {
+      "ruta": "rust/sv_core/src/permission.rs",
+      "sha256": "270f1e2a0ad2f14ac9a04144ed14f562fa5a19449ba851e568fc4e7eef6e018f",
+      "lectura": "Cabecera, Permit y decide_permit completo"
+    },
+    {
+      "ruta": "rust/sv_core/src/decision_trace.rs",
+      "sha256": "0cc7260b8286d34cf2524722f34d3d807059bec00359cb73a4e9411e424da238",
+      "lectura": "mediate_traced_permit completo; localización de entradas trazadas"
+    },
+    {
+      "ruta": "rust/sv_core/src/execution.rs",
+      "sha256": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "lectura": "execute_mediated completo"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "Secuencia y BIS-O09/O12"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/BANCO_PREVIO_BIS_02_v0_1.json",
+      "sha256": "86a3866467e7d83d82d6a9133861c8209d203c412b98d4e6e7b66aa9cc56d0f8",
+      "lectura": "C09/C10"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CRITERIO_DE_ACEPTACION_RUST_v1.md",
+      "sha256": "1ad5b4d4ecb95b5ff058fecd09daa56278fa22d49501adf8ed22cc3f2da0e3a0",
+      "lectura": "Criterio de evidencias conservado"
+    },
+    {
+      "ruta": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md",
+      "sha256": "a7e4c0e636c145d2001c0d488a19343965e060336cd3340bfeeeab0b846527da",
+      "lectura": "Separación de estatutos heredada"
+    }
+  ]
+}

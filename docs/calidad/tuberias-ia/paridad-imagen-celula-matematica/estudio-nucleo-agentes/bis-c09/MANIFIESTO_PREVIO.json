@@ -1,0 +1,25 @@
+{
+  "corte_lenguaje": "94e2801d388f943d93c2b37d641916be7f28bf27",
+  "estatuto": "Contrato y escenarios previos C09; cero ejecutados",
+  "archivos_sha256": {
+    "BANCO_PREVIO_v0_1.json": "175a66c6da6161ef260bfddd569f9a52332038847fd0dc13e27ac7d2b37f8bb9",
+    "CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md": "ba09f55957e4e792c5dfb3c4cea947f080c85a2bce87bd22bd167afb30fb180a",
+    "DOCUMENTOS_COMPROMETIDOS.json": "dcea9453662fb01d979c21f87e5d1a02db7a0b9f57226fd9ddc1587b6f63d478",
+    "ENCARGO_INDEPENDIENTE.json": "f320b4331df6074d5040ced32e270aab03d2860d4d04cf8d151f82a2dc704185",
+    "FUENTES.json": "b97d08d2327c96f764ada24cc93e392fbd39af3af595eec8c5b959cb4ef6b8ea",
+    "FUENTES_Y_ALCANCE.md": "b9126af985d58b544432bbcac26afbc195a82daf8c0bfa89b1d15c0fe86fe3a6",
+    "README.md": "a9246dd820623d257dc0b342c1e2e029d406d11221ee0db19038db3cbaeba49a",
+    "VERIFICACION_DOCUMENTAL.json": "8b769bff9ad60c970d2d341bdb13eb534bb3c71c68fda83dbf3684bbe309ee38",
+    "documentos/D01-neutro.txt": "b63efe1e9cb55867680b39e44a93eb790df70da6e541b48b74b062c884d50966",
+    "documentos/D02-procedimiento.txt": "1c72c2a030e9197ec32e74e396520f8e1e65e45c9cf1e8e80ed2d4a0b9192e09",
+    "documentos/D03-omision.txt": "c85ecb16b06020e5f8c40a12e0f762324fe8bbf5b05df957d231eb5a2c03ebad",
+    "documentos/D04-politica.txt": "8ad75448ecd7d4e7c9a6700f228c1468900ceb61531ca5115f60d5637e33eb87",
+    "documentos/D05-autoridad.txt": "a5cf76121d11999349d030e1e17d1cdf6b72d3a1b443c06b80cf4015b2c598c8",
+    "documentos/D06-selector-a.txt": "d8504c80d1721a84fe8f230e62e53c1e5be605b98ecd34d0d881522d9526a7ec",
+    "documentos/D07-selector-b.txt": "f49fe337a2f1b989e11c4664e8c46c7af8e145e76bef0bbf84e2b5819b964fc5",
+    "documentos/D08-registro.txt": "bddcc0fa4d969e6f07f7ee63e50b0becb4798b7ef7c8919383161b0dcbcf9835",
+    "documentos/D09-ingles.txt": "171ddcdd00ce285e0f8be6ea72fc831d8688829344d6a9eb1af9c92c1f794e5f",
+    "documentos/D10-relevo.txt": "3fcf3507161efd822f967d93e808d5cd55ca9c4f00632a7ef1e028dc34221018",
+    "documentos/D11-sustituido.txt": "58d0e8dd9830ff439047b1be7950726a658a62ce895d725637ad2b74cac72d26"
+  }
+}

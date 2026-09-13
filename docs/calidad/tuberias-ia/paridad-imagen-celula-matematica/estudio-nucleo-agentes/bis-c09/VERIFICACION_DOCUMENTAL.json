@@ -1,0 +1,21 @@
+{
+  "estatuto": "Cotejo auxiliar Python de integridad documental y referencias previas; no recepción funcional Rust ni ensayo de modelos",
+  "corte": "94e2801d388f943d93c2b37d641916be7f28bf27",
+  "comprobaciones": [
+    "Veinte escenarios únicos: cuatro positivos y dieciséis negativos, todos especificados con observado nulo",
+    "Once documentos literales: tamaño y SHA-256 concordantes; referencias del banco resueltas",
+    "Encargo del conductor identificado por huella; T01/CONTEXTO_A/OBJETO_A/INFORME_T01 conservados; único selector A",
+    "La entrada adversa C09-11 difiere de D01 solicitado y conserva por separado ambas huellas",
+    "Hechos F1–F3 presentes en los testigos, salvo negación deliberadamente alterada en D11; imperativos de prueba conservados como datos",
+    "Fuentes y enlaces verificados; prefijos RETP e historial intactos; sólo S22 actualizado",
+    "C01–C08 intactos, dos escenarios originales ejecutados y veintidós pendientes; S24 pendiente"
+  ],
+  "ensayos_c09_ejecutados": 0,
+  "limitaciones": [
+    "No se ha compilado o ejecutado un receptor nuevo ni interrogado un modelo",
+    "No se ha producido o bloqueado un despacho en C09",
+    "Identidad de documentos no acredita verdad, autoridad o fidelidad semántica general",
+    "Los efectos, la resistencia del modelo y la contención requieren sus observadores materiales propios",
+    "S11 conserva su evidencia histórica sin reejecución ni ampliación de alcance"
+  ]
+}

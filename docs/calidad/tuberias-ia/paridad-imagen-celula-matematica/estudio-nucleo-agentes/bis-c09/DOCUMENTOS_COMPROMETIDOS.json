@@ -1,0 +1,60 @@
+{
+  "estatuto": "Identidades de entradas literales de ensayo; la huella no confiere verdad ni autoridad",
+  "documentos": {
+    "D01-neutro.txt": {
+      "ruta": "documentos/D01-neutro.txt",
+      "bytes": 234,
+      "sha256": "b63efe1e9cb55867680b39e44a93eb790df70da6e541b48b74b062c884d50966"
+    },
+    "D02-procedimiento.txt": {
+      "ruta": "documentos/D02-procedimiento.txt",
+      "bytes": 366,
+      "sha256": "1c72c2a030e9197ec32e74e396520f8e1e65e45c9cf1e8e80ed2d4a0b9192e09"
+    },
+    "D03-omision.txt": {
+      "ruta": "documentos/D03-omision.txt",
+      "bytes": 322,
+      "sha256": "c85ecb16b06020e5f8c40a12e0f762324fe8bbf5b05df957d231eb5a2c03ebad"
+    },
+    "D04-politica.txt": {
+      "ruta": "documentos/D04-politica.txt",
+      "bytes": 388,
+      "sha256": "8ad75448ecd7d4e7c9a6700f228c1468900ceb61531ca5115f60d5637e33eb87"
+    },
+    "D05-autoridad.txt": {
+      "ruta": "documentos/D05-autoridad.txt",
+      "bytes": 366,
+      "sha256": "a5cf76121d11999349d030e1e17d1cdf6b72d3a1b443c06b80cf4015b2c598c8"
+    },
+    "D06-selector-a.txt": {
+      "ruta": "documentos/D06-selector-a.txt",
+      "bytes": 252,
+      "sha256": "d8504c80d1721a84fe8f230e62e53c1e5be605b98ecd34d0d881522d9526a7ec"
+    },
+    "D07-selector-b.txt": {
+      "ruta": "documentos/D07-selector-b.txt",
+      "bytes": 361,
+      "sha256": "f49fe337a2f1b989e11c4664e8c46c7af8e145e76bef0bbf84e2b5819b964fc5"
+    },
+    "D08-registro.txt": {
+      "ruta": "documentos/D08-registro.txt",
+      "bytes": 377,
+      "sha256": "bddcc0fa4d969e6f07f7ee63e50b0becb4798b7ef7c8919383161b0dcbcf9835"
+    },
+    "D09-ingles.txt": {
+      "ruta": "documentos/D09-ingles.txt",
+      "bytes": 327,
+      "sha256": "171ddcdd00ce285e0f8be6ea72fc831d8688829344d6a9eb1af9c92c1f794e5f"
+    },
+    "D10-relevo.txt": {
+      "ruta": "documentos/D10-relevo.txt",
+      "bytes": 387,
+      "sha256": "3fcf3507161efd822f967d93e808d5cd55ca9c4f00632a7ef1e028dc34221018"
+    },
+    "D11-sustituido.txt": {
+      "ruta": "documentos/D11-sustituido.txt",
+      "bytes": 314,
+      "sha256": "58d0e8dd9830ff439047b1be7950726a658a62ce895d725637ad2b74cac72d26"
+    }
+  }
+}
