@@ -296,11 +296,11 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-231",
+    "registro": "RETP-2026-232",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías.",
+    "siguiente_accion": "Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
@@ -317,6 +317,6 @@
     "sondas_r04_ejecutadas": 8,
     "campana_r05": "../../../riesgos-materiales-s26/r05/README.md",
     "sondas_r05_previstas": 7,
-    "sondas_r05_ejecutadas": 0
+    "sondas_r05_ejecutadas": 7
   }
 }

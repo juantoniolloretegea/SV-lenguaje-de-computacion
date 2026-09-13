@@ -1,0 +1,42 @@
+{
+  "id": "BIS-C04-CONVENIO/0.1",
+  "estatuto": "Perfil experimental derivado de Fundamentos §§2 y 4.1; no tipo nuevo de IR",
+  "alfabeto": [
+    "Zero",
+    "One",
+    "U"
+  ],
+  "radios": {
+    "Zero": 1,
+    "One": 2,
+    "U": 3
+  },
+  "leyenda": [
+    {
+      "simbolo": "Zero",
+      "lectura": "0",
+      "radio": 1
+    },
+    {
+      "simbolo": "One",
+      "lectura": "1",
+      "radio": 2
+    },
+    {
+      "simbolo": "U",
+      "lectura": "U",
+      "radio": 3
+    }
+  ],
+  "origen": [
+    0,
+    0
+  ],
+  "angulo": "2*pi*(i-1)/N",
+  "eje_inicial": "+x",
+  "sentido": "antihorario_cartesiano",
+  "posiciones": "1..N",
+  "cierre": "N->1",
+  "uniones": "segmentos_rectos_consecutivos",
+  "declaracion": "inyectiva_para_vector_ordenado_con_N_y_ejes_identificados"
+}

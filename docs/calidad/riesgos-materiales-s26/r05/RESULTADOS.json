@@ -1,0 +1,25 @@
+{
+  "version": "S26-R05-RESULTADOS/1",
+  "fecha_registro_utc": "2026-09-13T20:59:20.225756+00:00",
+  "precompromiso_lenguaje": "28ea32ce5ec273e9f2ad89e02cc9b35b4b387fc0",
+  "precompromiso_laboratorio": "1bd6d0de09921ac991be8e83c3f6a0067712d9ae",
+  "campanas": 1,
+  "sondas_aprobadas": 7,
+  "sondas_fallidas": 0,
+  "casos_globales_cerrados": 0,
+  "oraculos_conservados": true,
+  "fuentes_anteriores_conservadas": true,
+  "hallazgos": [
+    "P02/P03: relectura concordante no convierte rechazo ni ausencia de captura en entrega.",
+    "P04/P05: pánico impide informe final; el arnés observa por separado y no rellena contador desconocido con cero.",
+    "P06: descriptor abierto observa bytes anteriores y la ruta después contiene otra versión; no hay recibo.",
+    "P07: bytes concordantes y recibo pese a objeto de fichero sustituido; igualdad de bytes no acredita identidad de fichero."
+  ],
+  "limites": [
+    "Copia local Linux, no código productivo integrado.",
+    "Pánicos capturados únicamente por arnés; abort, terminación de proceso y alimentación pendientes.",
+    "Sustitución tras apertura y antes de lectura, no mutación durante el read.",
+    "Inode no se adopta como identidad durable o universal.",
+    "Sin BD, recuperación durable, GUI, host resistente ni cobertura clínica acreditados."
+  ]
+}

@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T20:56:56Z
+**fecha_actualizacion_utc:** 2026-09-13T20:59:20Z
 
 **fecha_fin_utc:** —
 
@@ -910,15 +910,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R05: siete sondas previas fijadas para retorno rechazado, ausencia de captura, pánico y sustitución de ruta tras apertura. Copia local instrumentada; sin cambio productivo.
+**resultado:** R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relectura sin acreditar entrega. Pánico impide MaterialRun final. Ruta sustituida con bytes iguales conserva concordancia pese a cambio de objeto: límite confirmado.
 
-**verificacion:** Banco y 25 archivos fijados antes de Cargo; fuentes R04 conservadas. Precompromiso público y espejo preceden a campaña.
+**verificacion:** Una campaña Rust/Cargo 1.98.0 offline; siete aserciones de caso conformes, fuentes y precompromiso intactos; dos pánicos provocados y capturados sólo por el arnés. Sin protección productiva ante pánico acreditada.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r05/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-231
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-232
 
-**siguiente_accion:** Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías.
+**siguiente_accion:** Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24.
 
 **observaciones:** S26 sigue en ejecución; doce casos globales abiertos. S22/S24 y banco Bis intactos. Ensayo Linux local sin BD, transacción durable, adquisición, GUI, fallo de hardware ni resistencia al host acreditados. Inode local no es identidad universal. S27 conserva reparto dominio/agente/Lenguaje.
 

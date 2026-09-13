@@ -26,9 +26,9 @@
       "git_blob_sha1": "1111de5419b409751623da824748720d0534fd48"
     },
     "LEAME_PRIMERO.md": {
-      "bytes": 19905,
-      "sha256": "1ef445ee8f0738a83eac5ed3e9640a31688aefd3462ee0dfbea79d042e80b049",
-      "git_blob_sha1": "364d394b637f280e025a4c5244264ac40c85f290"
+      "bytes": 20460,
+      "sha256": "525ba2373f5af273351177e5fcb6794310db6b7230fd3d2ebe4c1c0d7526d798",
+      "git_blob_sha1": "54ad4774c608a02613d0284c139e996f34e55119"
     },
     "README.md": {
       "bytes": 3672,
@@ -138,6 +138,11 @@
       "fecha": "2026-09-13",
       "registro": "RETP-2026-231",
       "alcance": "Navegación a S26 R05 previo; PDF/MD sustantivos conservados."
+    },
+    {
+      "fecha": "2026-09-13",
+      "registro": "RETP-2026-232",
+      "alcance": "Navegación a S26 R05 resultado; PDF/MD sustantivos conservados."
     }
   ]
 }

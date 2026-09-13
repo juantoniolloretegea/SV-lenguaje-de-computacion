@@ -164,3 +164,7 @@ R04: ocho sondas conformes. Relectura posterior detecta cambio literal y del vec
 ## S26 R05 · RETP-231
 
 R05: siete sondas previas fijadas para retorno rechazado, ausencia de captura, pánico y sustitución de ruta tras apertura. Copia local instrumentada; sin cambio productivo. Ejecutar siete sondas R05; conservar lecturas reales, informes ausentes y sustitución de objeto con bytes iguales sin promover garantías. [Banco y evidencia](r05/README.md).
+
+## S26 R05 · RETP-232
+
+R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relectura sin acreditar entrega. Pánico impide MaterialRun final. Ruta sustituida con bytes iguales conserva concordancia pese a cambio de objeto: límite confirmado. Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24. [Banco y evidencia](r05/README.md).

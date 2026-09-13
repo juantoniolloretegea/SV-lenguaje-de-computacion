@@ -29,3 +29,15 @@ P04 y P05 son contraejemplos esperados: el éxito de la aserción acredita el l�
 Desde la raíz del checkout: `python docs/calidad/riesgos-materiales-s26/r05/reproducir.py /ruta/nueva/campana`. Directorio nuevo obligatorio. Verifica PRECOMPROMISO.json y FUENTES.json, prepara copias y ejecuta Cargo con --locked --offline. Se fija el banco antes de compilar. Los resultados posteriores no alteran sus oráculos.
 
 Linux local; sin aborto de proceso, pérdida de alimentación, escritura a mitad de lectura, transacción durable, base de datos, GUI o resistencia a un host que falsee observaciones. La lectura separada del arnés tras pánico no sustituye el informe que el conductor no emitió. No se promueve ninguna capacidad productiva. Los doce casos globales S26 siguen abiertos; S22 y Bis → catálogo/cierre → S24 conservan su orden. La cobertura de rutas queda situada por S27 en el dominio y su agente.
+
+## Resultado / RETP-232
+
+Una campaña Rust/Cargo 1.98.0 offline: siete sondas conformes al banco previo, cero fallos de aserción. Los dos mensajes de pánico en stderr corresponden a P04/P05 provocados deliberadamente y capturados sólo por el arnés. No se han corregido ni integrado esos caminos productivos.
+
+P02/P03 conservan lectura posterior concordante sin recibo. P04/P05 no producen MaterialRun: la observación externa posterior no se atribuye al conductor y los intentos desconocidos permanecen null. P05 deja además alteración de archivo; ausencia de retorno no equivale a ausencia de efectos.
+
+P06 demuestra la diferencia entre el objeto ya abierto y una ruta que pasa a designar otro archivo. P07 conserva los bytes y el recibo esperado pese a sustituir el objeto. Es un límite de la afirmación de identidad, no una corrupción semántica demostrada por sí sola. Un éxito de prueba puede ser un contraejemplo confirmado.
+
+[Resultados](RESULTADOS.json), [órdenes](evidencia/ORDENES.json), [stdout](evidencia/02.stdout), [stderr](evidencia/02.stderr), [huellas](evidencia/HUELLAS.json). `evidencia/casos` conserva informes por caso y archivos efectivamente usados/modificados. Precompromiso público: `28ea32ce5ec273e9f2ad89e02cc9b35b4b387fc0`; espejo: `1bd6d0de09921ac991be8e83c3f6a0067712d9ae`.
+
+Próximo incremento: recibir explícitamente la terminación sin informe y fijar qué identidad de fuente se exige antes de integrar; después cualificar abort/interrupción de proceso y el montaje completo. No prometer rollback por capturar un pánico. Doce casos globales siguen abiertos y Bis/S24 conservan sus dependencias.

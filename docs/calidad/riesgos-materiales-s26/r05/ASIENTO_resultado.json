@@ -1,0 +1,21 @@
+{
+  "suceso": {
+    "id": "S26",
+    "fecha_actualizacion_utc": "2026-09-13T20:59:20Z",
+    "cortes_de_entrada": "Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9",
+    "resultado": "R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relectura sin acreditar entrega. Pánico impide MaterialRun final. Ruta sustituida con bytes iguales conserva concordancia pese a cambio de objeto: límite confirmado.",
+    "verificacion": "Una campaña Rust/Cargo 1.98.0 offline; siete aserciones de caso conformes, fuentes y precompromiso intactos; dos pánicos provocados y capturados sólo por el arnés. Sin protección productiva ante pánico acreditada.",
+    "siguiente_accion": "Definir recepción explícita de terminación sin informe y alcance de identidad de fuente antes de integrar; después cualificar abort/interrupción de proceso y montaje completo. S26 permanece abierto; conservar Bis/S24.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r05/README.md",
+    "referencia_calidad": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-232",
+    "observaciones": "S26 sigue en ejecución; doce casos globales abiertos. S22/S24 y banco Bis intactos. Ensayo Linux local sin BD, transacción durable, adquisición, GUI, fallo de hardware ni resistencia al host acreditados. Inode local no es identidad universal. S27 conserva reparto dominio/agente/Lenguaje."
+  },
+  "revision": 9,
+  "retp": 232,
+  "tipo": "CONTRASTE_MATERIAL_ACOTADO",
+  "motivo": "Continuación autorizada tras incorporación documental de rutas.",
+  "base": "Lenguaje 32410645663ea198516803afb88cf5195b584676; laboratorio 58de66b3dfba33a934da535ab341d66b3ca274c9",
+  "artefactos": "S26 R05; código íntegro y diferencia, fuentes, banco, evidencia; Sucesos/RETP y navegación.",
+  "impacto": "Cualificación local; ninguna promoción productiva.",
+  "titulo": "R05 resultado"
+}
