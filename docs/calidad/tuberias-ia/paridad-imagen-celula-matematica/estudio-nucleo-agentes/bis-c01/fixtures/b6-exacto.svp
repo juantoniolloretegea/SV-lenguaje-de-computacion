@@ -1,0 +1,4 @@
+codomain K = { A };
+output_semantics S { A -> "Control sintético"; }
+cellspec C { b: 6; codomain: K; semantics: S; role: Base; }
+cellstate State { spec: C; vector: [Zero, One, U, One, Zero, Zero, U, One, U, Zero, One, Zero, One, One, Zero, U, Zero, Zero, One, One, U, Zero, U, One, Zero, Zero, One, U, One, Zero, One, U, Zero, Zero, One, One]; }

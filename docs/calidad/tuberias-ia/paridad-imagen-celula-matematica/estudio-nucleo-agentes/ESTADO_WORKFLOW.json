@@ -43,16 +43,17 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Retomar S22 / BIS-02 por BIS-C01: materializar entradas y oráculos; comprobar versiones y PATH al reanudar.",
+  "siguiente_accion": "BIS-C02: fijar contrato de soporte por versión y su ruta de comprobación; comprometer fixtures/oráculos antes de ejecutar. Después completar los contratos pendientes de BIS-02.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
     "Las pruebas de S23 son instrumentales y de regresión; no ejecutan los escenarios de BIS-02.",
-    "BIS-02: contrato y banco preliminares; fixtures definitivos pendientes"
+    "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
+    "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "RESULTADO_BIS_01_Y_APERTURA_BIS_02.md",
-  "ampliacion": "Definición del plan cerrada; radiografía documental completada; BIS-02 iniciado con contrato y 24 escenarios no ejecutados.",
-  "ultimo_retp": "RETP-2026-200",
+  "ultimo_informe": "bis-c01/RESULTADO.md",
+  "ampliacion": "BIS-C01 ejecutado: 13/13 variantes nativas y 4/4 sensibilidades. BIS-02 sigue en ejecución; no cierre del Bis.",
+  "ultimo_retp": "RETP-2026-203",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -64,7 +65,7 @@
     "semantica": "Frontera v0 + IR 0.3 + partes heredadas no sustituidas de IR 0.2 y rectores/adendas aplicables"
   },
   "escenarios_especificados": 24,
-  "escenarios_ejecutados": 0,
+  "escenarios_ejecutados": 2,
   "soporte_rust": {
     "suceso": "S23",
     "rustc": "1.98.0",
@@ -74,5 +75,18 @@
     "commit_probado": "1469b08272f5d5c10e406dfa77f76a4d11c3accc",
     "commit_integracion": "efdb68d6c62355a75aa1d2b3b196bb78246f2014",
     "registro": "RETP-2026-202"
-  }
+  },
+  "escenarios_pendientes": 22,
+  "variantes_nativas_ejecutadas": 13,
+  "corte_ultimo_contraste": "5ba3fbab751d9e4561dcecf2659e0ee4a54f7b4f",
+  "orden_trabajo": [
+    "Completar (p1+p3)-Bis",
+    "Retomar y cerrar el catálogo de errores y la fase aplicable",
+    "Analizar, elegir e instalar la GUI"
+  ],
+  "gui": {
+    "estado": "diferida hasta cierre de fase",
+    "tecnologia": "no seleccionada"
+  },
+  "evidencia_ultimo_contraste": "bis-c01/evidencia/ejecucion-1/RESULTADO.json"
 }

@@ -1,0 +1,687 @@
+{
+  "version": "BIS-C01/1",
+  "corte_lenguaje": "5ba3fbab751d9e4561dcecf2659e0ee4a54f7b4f",
+  "alcance": "Compilación SVP nativa: geometría, longitud y conservación literal de posiciones; no evaluación algebraica ni admisión de soporte/dominio.",
+  "casos": [
+    {
+      "id": "b3-exacto",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b3-exacto.svp",
+      "sha256": "90517b7d7fc2c29d9c9b73eb8a5bcb1ea028f27c905e868752211ced016a4047",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b3-exacto.svp",
+          "source_sha256": "90517b7d7fc2c29d9c9b73eb8a5bcb1ea028f27c905e868752211ced016a4047",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 3,
+                "n": 9,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b4-exacto",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b4-exacto.svp",
+      "sha256": "767abe616e79eb2ba6e6049f0e3f59b1a5f7440762694ebc05d9db73cb1f5103",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b4-exacto.svp",
+          "source_sha256": "767abe616e79eb2ba6e6049f0e3f59b1a5f7440762694ebc05d9db73cb1f5103",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 4,
+                "n": 16,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b5-exacto",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b5-exacto.svp",
+      "sha256": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b5-exacto.svp",
+          "source_sha256": "3aae237f3961630f8ee82361649f298c752a9b16ee80c7fe37b104340914276a",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 5,
+                "n": 25,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "One",
+                  "U",
+                  "Zero",
+                  "U",
+                  "One",
+                  "Zero"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b6-exacto",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b6-exacto.svp",
+      "sha256": "79e3d9d42296e7dd6c3e9c1b321e2924ece96ec26c0f6f036624d276c635264b",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b6-exacto.svp",
+          "source_sha256": "79e3d9d42296e7dd6c3e9c1b321e2924ece96ec26c0f6f036624d276c635264b",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 6,
+                "n": 36,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "One",
+                  "U",
+                  "Zero",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "One",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "One"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b7-exacto",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b7-exacto.svp",
+      "sha256": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b7-exacto.svp",
+          "source_sha256": "30e0a0ad8776c86cade710fd408ef3ec2aea678679ccd3d36b7f0bd67f440a7f",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 7,
+                "n": 49,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "One",
+                  "U",
+                  "Zero",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "One",
+                  "U",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U",
+                  "U",
+                  "One",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b4-permutado-declarado",
+      "escenario": "BIS-C01-P",
+      "profile": "en",
+      "fixture": "fixtures/b4-permutado-declarado.svp",
+      "sha256": "5ea284fdcb8b89a841fc5140f77a043d1fa67c7a7996fb80b834a5b8d66c08ea",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b4-permutado-declarado.svp",
+          "source_sha256": "5ea284fdcb8b89a841fc5140f77a043d1fa67c7a7996fb80b834a5b8d66c08ea",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 4,
+                "n": 16,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "One",
+                  "Zero",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b4-es",
+      "escenario": "BIS-C01-P",
+      "profile": "es",
+      "fixture": "fixtures/b4-es.svp",
+      "sha256": "d7358bf5bb4d80f13dd1b40f021cb228c7a01568c0c770b80757a40892eaa845",
+      "expected": {
+        "exit_code": 0,
+        "stderr": "",
+        "json": {
+          "grammar_version": "0.2",
+          "ir_version": "0.3",
+          "serializer_version": "0.1.0",
+          "source_file": "b4-es.svp",
+          "source_sha256": "d7358bf5bb4d80f13dd1b40f021cb228c7a01568c0c770b80757a40892eaa845",
+          "objects": [
+            {
+              "type": "Codomain",
+              "level": "N0",
+              "name": "K",
+              "fields": {
+                "values": [
+                  "A"
+                ]
+              }
+            },
+            {
+              "type": "OutputSemantics",
+              "level": "N0",
+              "name": "S",
+              "fields": {
+                "mappings": {
+                  "A": "Control sintético"
+                }
+              }
+            },
+            {
+              "type": "CellSpec",
+              "level": "N0",
+              "name": "C",
+              "fields": {
+                "b": 4,
+                "n": 16,
+                "codomain": "K",
+                "semantics": "S",
+                "role": "Base"
+              }
+            },
+            {
+              "type": "CellState",
+              "level": "N1",
+              "name": "State",
+              "fields": {
+                "spec": "C",
+                "vector": [
+                  "Zero",
+                  "One",
+                  "U",
+                  "One",
+                  "Zero",
+                  "Zero",
+                  "U",
+                  "One",
+                  "U",
+                  "Zero",
+                  "One",
+                  "Zero",
+                  "One",
+                  "One",
+                  "Zero",
+                  "U"
+                ]
+              }
+            }
+          ],
+          "operations": []
+        }
+      }
+    },
+    {
+      "id": "b4-longitud-15",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b4-longitud-15.svp",
+      "sha256": "9d0281afd3f4df5b4f5e71508f7ad381ca7c9e9c3f094b45dec168466ecde5d8",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellState State: longitud de vector incompatible\")\n",
+        "stdout": ""
+      }
+    },
+    {
+      "id": "b4-longitud-17",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b4-longitud-17.svp",
+      "sha256": "d3564e38527f780921938e23948b3cfffb911283e685e1300734074f565ed695",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellState State: longitud de vector incompatible\")\n",
+        "stdout": ""
+      }
+    },
+    {
+      "id": "b5-longitud-24",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b5-longitud-24.svp",
+      "sha256": "3f356a1af9c1d9d6d50dbf54656e6276ef0f1643b267a003f411f1137cbe5479",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellState State: longitud de vector incompatible\")\n",
+        "stdout": ""
+      }
+    },
+    {
+      "id": "b5-longitud-26",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b5-longitud-26.svp",
+      "sha256": "72752b5220ea980d18271da2f124a7162e2b754dc4cbe010f00f3a972970d198",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellState State: longitud de vector incompatible\")\n",
+        "stdout": ""
+      }
+    },
+    {
+      "id": "b2-longitud4",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b2-longitud4.svp",
+      "sha256": "c0c863d01153c848db3228d095564cef1e8848c116f254ba3ee3190e951151f8",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellSpec C: b debe ser >= 3\")\n",
+        "stdout": ""
+      }
+    },
+    {
+      "id": "b2-longitud16-precedencia",
+      "escenario": "BIS-C01-N",
+      "profile": "en",
+      "fixture": "fixtures/b2-longitud16-precedencia.svp",
+      "sha256": "81fac31d3722a59c037d1ad0ce0ea2b820d84e1d1861aa97f5b9ddedab9a902f",
+      "expected": {
+        "exit_code": 1,
+        "stderr": "SVP no admitido: InvalidProgram(\"CellSpec C: b debe ser >= 3\")\n",
+        "stdout": ""
+      }
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "fecha_utc": "2026-09-13T07:53:52Z",
+  "corte_lenguaje": "5ba3fbab751d9e4561dcecf2659e0ee4a54f7b4f",
+  "banco_previo_laboratorio": "8cfcf1931a842cbad5b13483684ace38f6275c1f",
+  "compilacion": {
+    "comando": "cargo build --manifest-path rust/Cargo.toml --locked --offline -p sv_native --bin sv-native",
+    "exit_code": 0,
+    "perfil": "dev",
+    "warnings": 25,
+    "codigo_modificado": false
+  },
+  "herramientas": {
+    "rustc": "rustc 1.98.0 (88d9e12ae 2026-08-18)",
+    "cargo": "cargo 1.98.0 (797e8a9bc 2026-08-05)",
+    "node": "v24.19.0"
+  },
+  "fuentes": {
+    "AGENTS.md": {
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "git_blob": "42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    "FRONTERA_NORMATIVA_LENGUAJE_SV_v0.md": {
+      "sha256": "ee5a60c230ca4e5350573044c444107e883221813dad7078a9a562da265de712",
+      "git_blob": "f2fdf0f578fc953ba67a73022851b486e8a0ad88"
+    },
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": {
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "git_blob": "27609888898d5ad2b214ed53786fa8f55781a61c"
+    },
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": {
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "git_blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": {
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "git_blob": "44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    "rust/Cargo.lock": {
+      "sha256": "f932662e1e778ebb61e4942a9f80d8b2f2cdd7b2be61f7dfcdd54a0170d59360",
+      "git_blob": "9eba07b981902719f97d61213f569fd675111f57"
+    },
+    "rust/sv_core/src/frontend.rs": {
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "git_blob": "c73933b661f08c4d0123b8a22f436962b5481208"
+    },
+    "rust/sv_core/src/lib.rs": {
+      "sha256": "fdb1cc15645f7ae53b6ab8006eba807fdad091ea5d900b38eee244be1c9ffe70",
+      "git_blob": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90"
+    },
+    "rust/sv_core/src/wellformed.rs": {
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "git_blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6"
+    },
+    "rust/sv_native/src/main.rs": {
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "git_blob": "8e225dcd225dab3d356c8d7ff53c2fd6ee12d261"
+    }
+  }
+}
