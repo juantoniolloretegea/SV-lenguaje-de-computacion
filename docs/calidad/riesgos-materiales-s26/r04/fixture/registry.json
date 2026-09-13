@@ -1,0 +1,144 @@
+{
+  "version": "BIS-I0205-REGISTRO/0.1",
+  "estatuto": "Custodia experimental del conductor; independiente de la solicitud. No constitución de dominio operativo ni autoridad de IA.",
+  "soportes": [
+    {
+      "referencia": {
+        "id": "SOPORTE-SINTETICO-C02",
+        "version": "1",
+        "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+      },
+      "contenido": {
+        "archivo": "activos/soporte-v1.json",
+        "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef",
+        "bytes": 253
+      },
+      "tamanos": [
+        16,
+        25
+      ]
+    },
+    {
+      "referencia": {
+        "id": "SOPORTE-SINTETICO-C02",
+        "version": "2",
+        "sha256": "3271bd618bb0792c84863de5750235224aa35faed5a27a64f262f5278222e280"
+      },
+      "contenido": {
+        "archivo": "activos/soporte-v2.json",
+        "sha256": "3271bd618bb0792c84863de5750235224aa35faed5a27a64f262f5278222e280",
+        "bytes": 261
+      },
+      "tamanos": [
+        16,
+        25,
+        49
+      ]
+    }
+  ],
+  "constitucion": {
+    "archivo": "activos/constitucion-v1.json",
+    "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35",
+    "bytes": 411
+  },
+  "vinculos": {
+    "A-r1": {
+      "dominio": "DominioPrueba",
+      "constitucion": {
+        "identifier": "ConstitucionPrueba",
+        "version": "1",
+        "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+      },
+      "programa_fuente": {
+        "source_file": "dos-nodos-16.svp",
+        "source_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+      },
+      "arquitectura": "Arch1",
+      "nodo": "CC1",
+      "cellspec": "C1",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "estado_ir": "S1",
+      "componente": "updated_vector",
+      "representacion": "matematica-testigo/1"
+    },
+    "B-r1": {
+      "dominio": "DominioPrueba",
+      "constitucion": {
+        "identifier": "ConstitucionPrueba",
+        "version": "1",
+        "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+      },
+      "programa_fuente": {
+        "source_file": "dos-nodos-16.svp",
+        "source_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+      },
+      "arquitectura": "Arch1",
+      "nodo": "CC2",
+      "cellspec": "C1",
+      "instancia_celular": "B",
+      "revision": "r1",
+      "estado_ir": "S2",
+      "componente": "updated_vector",
+      "representacion": "matematica-testigo/1"
+    },
+    "A-r2": {
+      "dominio": "DominioPrueba",
+      "constitucion": {
+        "identifier": "ConstitucionPrueba",
+        "version": "1",
+        "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+      },
+      "programa_fuente": {
+        "source_file": "dos-nodos-16.svp",
+        "source_sha256": "83632a5e846624a6933ca52687f042fb7295f318d4fbcc3010ba11a3cb8df08d"
+      },
+      "arquitectura": "Arch1",
+      "nodo": "CC1",
+      "cellspec": "C1",
+      "instancia_celular": "A",
+      "revision": "r2",
+      "estado_ir": "S1",
+      "componente": "updated_vector",
+      "representacion": "matematica-testigo/1"
+    },
+    "A-multi-r1": {
+      "dominio": "DominioPrueba",
+      "constitucion": {
+        "identifier": "ConstitucionPrueba",
+        "version": "1",
+        "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+      },
+      "programa_fuente": {
+        "source_file": "dos-nodos-y-c7.svp",
+        "source_sha256": "1102386f5a0137b9efe96f87f196148def6f9af915f56954303d40876ac361c4"
+      },
+      "arquitectura": "Arch1",
+      "nodo": "CC1",
+      "cellspec": "C1",
+      "instancia_celular": "A",
+      "revision": "r1",
+      "estado_ir": "S1",
+      "componente": "updated_vector",
+      "representacion": "matematica-testigo/1"
+    }
+  },
+  "estado_matematico": {
+    "archivo": "activos/estado-16.json",
+    "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+    "bytes": 214
+  },
+  "convenio": {
+    "archivo": "activos/convenio.json",
+    "sha256": "cc0c4407da525a100c3134e67b886613df9c95f92c2883a14c1f7147da72d976",
+    "bytes": 776
+  },
+  "transformaciones": {
+    "archivo": "activos/transformaciones.json",
+    "sha256": "7948b3c108740aa1e3319280a2797fc45fd40c9c32fa355222acb142c820e686",
+    "bytes": 1026
+  },
+  "captores_admitidos": [
+    "captor-local-i0205/1"
+  ]
+}

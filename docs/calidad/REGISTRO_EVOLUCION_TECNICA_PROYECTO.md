@@ -2176,3 +2176,10 @@ Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuest
 ### RETP-2026-227 · S26 · R03 resultado
 
 2026-09-13T19:54:02Z. R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo su custodia declarada; T02 rechaza fuente mezclada I02; T07 reproduce conformidad con copia inicial pese a archivo alterado y detecta alteración con relectura real. Una campaña nativa offline: tres funciones, cero fallos de aserción. Límite observado en T07; no prueba de protección contra host ni de transacción durable. Evidencia literal, órdenes y fuentes conservadas. Preparar recepción instrumentada del testigo posterior y su cualificación en el conductor existente; conservar el contraejemplo T07 y exigir nueva campaña antes de acreditar esa recepción. R2 y GUI conservan sus dependencias. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/r03/README.md).
+
+
+<a id="retp-228"></a>
+
+### RETP-2026-228 · S26 · R04 previo
+
+2026-09-13T20:07:42Z. Variante experimental R04 de recepción del testigo: lectura inicial y posterior reales con cuota; entrega y preservación separadas. Ocho sondas previas P01-P08 con controles y fallos de lectura. Fragmento del conductor I0205 reutilizado; observador literal; quince fixtures R01 preservados y variante de vector Zero a One fijada. Fuentes, oráculos y código comprometidos antes de compilar. Ejecutar ocho sondas R04 después del precompromiso; conservar la evidencia del lector y del despacho; cotejar sensibilidad al testigo copiado y límites del montaje. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/r04/README.md).

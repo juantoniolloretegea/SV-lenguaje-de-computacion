@@ -1,0 +1,49 @@
+{
+  "version": "S26-R04/1",
+  "corte": "10c84db9d330f5aeac1ba8b74f069024c6260e5d",
+  "estado": "PREVIO_NO_EJECUTADO",
+  "casos": [
+    {
+      "id": "P01",
+      "preservacion_esperada": "CONCORDANCIA_OBSERVADA",
+      "intentos_esperados": 1
+    },
+    {
+      "id": "P02",
+      "preservacion_esperada": "ALTERACION_DETECTADA",
+      "intentos_esperados": 1
+    },
+    {
+      "id": "P03",
+      "preservacion_esperada": "ALTERACION_DETECTADA",
+      "intentos_esperados": 1
+    },
+    {
+      "id": "P04",
+      "preservacion_esperada": "NO_ACREDITADO",
+      "intentos_esperados": 1
+    },
+    {
+      "id": "P05",
+      "preservacion_esperada": "NO_ACREDITADO",
+      "intentos_esperados": 0
+    },
+    {
+      "id": "P06",
+      "preservacion_esperada": "NO_ACREDITADO",
+      "intentos_esperados": 1
+    },
+    {
+      "id": "P07",
+      "preservacion_esperada": "ALTERACION_DETECTADA",
+      "intentos_esperados": 0
+    },
+    {
+      "id": "P08",
+      "preservacion_esperada": "NO_ACREDITADO",
+      "intentos_esperados": 1
+    }
+  ],
+  "oraculos_completos": "probe.rs y README.md; fijados antes de compilar",
+  "alcance": "Conductor acotado I0205, archivos locales Linux; sin BD, GUI o aislamiento acreditados"
+}

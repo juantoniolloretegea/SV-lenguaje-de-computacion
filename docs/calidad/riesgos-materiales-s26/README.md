@@ -152,3 +152,7 @@ Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustituci�
 ## Continuación R03 / RETP-2026-227
 
 R03: tres sondas conformes a sus oráculos. T01 rechaza B bajo A y admite B bajo su custodia declarada; T02 rechaza fuente mezclada I02; T07 reproduce conformidad con copia inicial pese a archivo alterado y detecta alteración con relectura real. [Inventario material](r03/README.md).
+
+## Continuación R04 / RETP-2026-228
+
+Variante experimental R04 de recepción del testigo: lectura inicial y posterior reales con cuota; entrega y preservación separadas. Ocho sondas previas P01-P08 con controles y fallos de lectura. [Inventario material](r04/README.md).

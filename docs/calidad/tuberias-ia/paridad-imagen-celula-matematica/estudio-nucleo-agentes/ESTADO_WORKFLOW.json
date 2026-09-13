@@ -296,11 +296,11 @@
   "seguimiento_transversal_s26": {
     "id": "S26",
     "estado": "en ejecución",
-    "registro": "RETP-2026-227",
+    "registro": "RETP-2026-228",
     "informe": "../../../riesgos-materiales-s26/README.md",
     "casos_previos": 12,
     "casos_ejecutados": 0,
-    "siguiente_accion": "Preparar recepción instrumentada del testigo posterior y su cualificación en el conductor existente; conservar el contraejemplo T07 y exigir nueva campaña antes de acreditar esa recepción. R2 y GUI conservan sus dependencias.",
+    "siguiente_accion": "Ejecutar ocho sondas R04 después del precompromiso; conservar la evidencia del lector y del despacho; cotejar sensibilidad al testigo copiado y límites del montaje.",
     "relacion": "Estudio transversal; conserva estado y siguiente acción material de S22 y secuencia S24.",
     "inventario": "../../../riesgos-materiales-s26/INVENTARIO_MATERIAL_R01.md",
     "sondas_parciales_previas": 4,
@@ -311,6 +311,9 @@
     "contrastes_r02_ejecutados": 0,
     "campana_r03": "../../../riesgos-materiales-s26/r03/README.md",
     "sondas_r03_previstas": 3,
-    "sondas_r03_ejecutadas": 3
+    "sondas_r03_ejecutadas": 3,
+    "campana_r04": "../../../riesgos-materiales-s26/r04/README.md",
+    "sondas_r04_previstas": 8,
+    "sondas_r04_ejecutadas": 0
   }
 }

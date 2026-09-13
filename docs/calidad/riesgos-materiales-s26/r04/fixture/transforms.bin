@@ -1,0 +1,60 @@
+{
+  "id": "BIS-C04-PRESENTACION/0.1",
+  "estatuto": "Transformaciones finitas del banco; no catálogo universal ni selección de GUI",
+  "transformaciones": [
+    {
+      "id": "identidad",
+      "matriz": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "traslacion": [
+        0,
+        0
+      ],
+      "lectura": "Plano cartesiano canónico"
+    },
+    {
+      "id": "superior-horario",
+      "matriz": [
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ]
+      ],
+      "traslacion": [
+        0,
+        0
+      ],
+      "lectura": "Plano cartesiano; primer eje arriba y recorrido horario"
+    },
+    {
+      "id": "pantalla-40",
+      "matriz": [
+        [
+          40,
+          0
+        ],
+        [
+          0,
+          -40
+        ]
+      ],
+      "traslacion": [
+        160,
+        160
+      ],
+      "lectura": "Coordenadas de pantalla con y creciente hacia abajo; escala uniforme de prueba 40"
+    }
+  ]
+}
