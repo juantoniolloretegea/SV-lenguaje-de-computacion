@@ -41,6 +41,8 @@ mod identifier_profile;
 pub mod frame;
 pub mod ir;
 mod mediation;
+mod manifiesto;
+pub use manifiesto::manifiesto_sv;
 pub mod nat;
 mod permission;
 pub mod requirements;

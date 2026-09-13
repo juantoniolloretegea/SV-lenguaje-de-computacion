@@ -43,11 +43,11 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Materializar fixtures y oráculos del primer par BIS-C01, fijar montaje Rust identificado y completar los contratos BIS-02 antes de realizar cambios. Continúan las decisiones de frvis, inicialización, soporte y sede por operación.",
+  "siguiente_accion": "Tras el expediente instrumental S23, materializar fixtures y oráculos del primer par BIS-C01; completar los contratos de BIS-02. Comprobar Rust 1.98.0 al reanudar.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
-    "Sin ejecución Rust/WASM ni cambio productivo",
+    "Las pruebas de S23 son instrumentales y de regresión; no ejecutan los escenarios de BIS-02.",
     "BIS-02: contrato y banco preliminares; fixtures definitivos pendientes"
   ],
   "ultimo_informe": "RESULTADO_BIS_01_Y_APERTURA_BIS_02.md",
@@ -64,5 +64,12 @@
     "semantica": "Frontera v0 + IR 0.3 + partes heredadas no sustituidas de IR 0.2 y rectores/adendas aplicables"
   },
   "escenarios_especificados": 24,
-  "escenarios_ejecutados": 0
+  "escenarios_ejecutados": 0,
+  "soporte_rust": {
+    "suceso": "S23",
+    "rustc": "1.98.0",
+    "cargo": "1.98.0",
+    "estado": "instalado y ensayado en entorno remoto; comprobar PATH en cada consola",
+    "expediente": "../../../manifiesto-sv/README.md"
+  }
 }

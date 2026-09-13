@@ -17,6 +17,8 @@ Los fundamentos matemáticos y semánticos del Sistema Vectorial SV se mantienen
 
 ### Accesos directos
 
+- **[Manifiesto SV incorporado y ejecución Rust](./docs/calidad/manifiesto-sv/README.md)** — consulta `manifiesto-sv` sin conexión; acta completa incluida en el núcleo y preparación reproducible del entorno.
+
 - **[Puerta operativa obligatoria para agentes](./AGENTS.md)** — exige identificar el corte, leer el rector y detener cualquier cambio que lo contradiga o pretenda completarlo por inferencia.
 - **[Pilares y restricciones de diseño del Lenguaje de Computación SV](./docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md)** — pieza rectora: fija lo que el núcleo debe preservar y rechazar, y lo que tiene prohibido decidir por el dominio o por el agente.
 - [Entorno público del Lenguaje SV](https://lenguaje-sv.itvia.online/) — compilación Rust/WebAssembly local en el navegador.

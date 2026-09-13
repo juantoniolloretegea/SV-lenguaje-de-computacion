@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T06:27:40Z
+**fecha_actualizacion_utc:** 2026-09-13T07:00:25Z
 
 **fecha_fin_utc:** —
 
@@ -782,7 +782,41 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-200
 
-**siguiente_accion:** Materializar fixtures y oráculos del primer par BIS-C01, fijar montaje Rust identificado y completar los contratos BIS-02 antes de realizar cambios. Continúan las decisiones de frvis, inicialización, soporte y sede por operación.
+**siguiente_accion:** Tras el expediente instrumental S23, materializar fixtures y oráculos del primer par BIS-C01; completar los contratos de BIS-02. Comprobar Rust 1.98.0 al reanudar.
 
-**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas. El ZIP pulmonar sólo se recibe como antecedente por instrucción expresa; no se incorporan células o reglas a dominios vigentes. Consulta Pages no recuperada; HTML leído del repositorio, sin verificar despliegue. Se recibe la exigencia de vínculo frame/suceso sin declarar identidad de tipos. Inicialización, relación celular/arquitectónica y frvis pendientes; sin cambio de doctrina o explicación V2. Cierre de definición no equivale a cierre del Bis. S22 continúa en ejecución; N de soporte no constituido y sin cambio de semántica, IR, Rust o dominios.
+**observaciones:** No hay cierre material de (p1+p3)-Bis. N admitidos pendientes de constitución; SV(9,3) no predeterminado. Métodos no crean leyes ni autoridad; comentarios Rust ES/EN independientes de perfiles SVP. No se modifican V1/V2 explicativas. El ZIP pulmonar sólo se recibe como antecedente por instrucción expresa; no se incorporan células o reglas a dominios vigentes. Consulta Pages no recuperada; HTML leído del repositorio, sin verificar despliegue. Se recibe la exigencia de vínculo frame/suceso sin declarar identidad de tipos. Inicialización, relación celular/arquitectónica y frvis pendientes; sin cambio de doctrina o explicación V2. Cierre de definición no equivale a cierre del Bis. S22 continúa en ejecución; N de soporte no constituido y sin cambio de semántica, IR, Rust o dominios. S23 instala y verifica Rust en el entorno remoto e incorpora la consulta manifiesto-sv; las 24 especificaciones BIS-02 conservan cero ejecuciones y el resultado documental de BIS-01 no se reescribe.
+
+## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-13T07:00:25Z
+
+**fecha_inicio_utc:** 2026-09-13T07:00:25Z
+
+**fecha_actualizacion_utc:** 2026-09-13T07:00:25Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S0
+
+**alcance:** Instalar referencia 1.98.0 en entorno remoto; incorporar acta íntegra al núcleo y comandos de consulta; preservar paridad. Sin nueva semántica de decisión.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: manifiesto-sv-20260913 -> main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Lenguaje 8893707154e5fd6e623904a71345268339eb6550; laboratorio 45b655dbca45bfc81d57497cb5960c413faed671
+
+**dependencias:** Instrucción humana expresa; S22; AGENTS; Pilares; perfiles/ensamblaje; transición; acta de prohibición de uso bélico de 26/03/2026
+
+**resultado:** Rust 1.98.0 y Cargo 1.98.0 instalados. Consulta incorporada: 19 134 bytes idénticos entre destinos. Candidata ensayada localmente; integración y controles remotos pendientes.
+
+**verificacion:** 369 pruebas nativas del workspace; 14 válidos y 106 inválidos de conformidad y paridad nativa-WASI; identidad manifiesto en nativo/WASI/adaptador WASM; negativos de argumentos, stdout y sensibilidad. Incidencias iniciales conservadas.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/manifiesto-sv-20260913/docs/calidad/manifiesto-sv/README.md
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-201
+
+**siguiente_accion:** Superar controles sobre candidata exacta, integrar y verificar copias; volver a S22/BIS-02.
+
+**observaciones:** Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles.
 

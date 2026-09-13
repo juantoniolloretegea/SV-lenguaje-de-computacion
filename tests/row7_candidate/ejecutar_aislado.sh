@@ -20,6 +20,13 @@ sha256sum --check --status INVENTARIO.sha256
 printf 'INTERPRETES_PYTHON_NODE_AUSENTES\n'
 cargo build --manifest-path rust/Cargo.toml --workspace --release --offline
 cargo test --manifest-path rust/Cargo.toml --workspace --offline
+# ES: consulta íntegra del recurso incorporado; EN: exact embedded-resource query.
+/work/target/release/manifiesto-sv > /out/manifiesto-independiente.md
+/work/target/release/sv-native manifiesto-sv > /out/manifiesto-subcomando.md
+cmp rust/sv_core/assets/manifiesto-sv.md /out/manifiesto-independiente.md
+cmp /out/manifiesto-independiente.md /out/manifiesto-subcomando.md
+cp /work/target/release/manifiesto-sv /out/manifiesto-sv
+sha256sum /out/manifiesto-sv /out/manifiesto-independiente.md /out/manifiesto-subcomando.md > /out/manifiesto.sha256
 rustc --edition=2021 tests/row7_gh/generar_entradas.rs -o /work/target/gh-generate
 /work/target/gh-generate --check
 cargo run --manifest-path rust/Cargo.toml -p sv_core --example binding_probe --release --offline > /out/lig.json

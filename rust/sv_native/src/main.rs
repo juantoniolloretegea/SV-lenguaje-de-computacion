@@ -6,7 +6,7 @@ use std::process::ExitCode;
 use sv_core::{compile_svp, compile_svp_profile, equivalence_json, SourceProfile};
 
 fn usage() {
-    eprintln!("uso: sv-native [--profile en|es] <archivo.svp>");
+    eprintln!("uso: sv-native [--profile en|es] <archivo.svp> | sv-native manifiesto-sv");
 }
 
 fn main() -> ExitCode {
@@ -16,6 +16,16 @@ fn main() -> ExitCode {
         usage();
         return ExitCode::from(2);
     };
+
+    // ES: Consulta incorporada antes de cualquier lectura de archivos SVP.
+    // EN: Embedded query before any SVP file access.
+    if first == "manifiesto-sv" {
+        if args.next().is_some() {
+            usage();
+            return ExitCode::from(2);
+        }
+        return sv_native::mostrar_manifiesto();
+    }
 
     let (profile, path) = if first == "--profile" {
         let Some(tag_os) = args.next() else {

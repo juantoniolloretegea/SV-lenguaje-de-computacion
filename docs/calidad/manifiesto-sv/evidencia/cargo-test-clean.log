@@ -1,0 +1,960 @@
+   Compiling sv_core v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_core)
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+162 | / opaque_control_ref!(
+163 | |     InformationRef,
+164 | |     "Referencia nominal a información dentro del dominio de control."
+165 | | );
+    | |_- in this macro invocation
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+166 | / opaque_control_ref!(
+167 | |     AdmittedEvidenceRef,
+168 | |     "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
+169 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+170 | / opaque_control_ref!(
+171 | |     ConstitutedFactRef,
+172 | |     "Referencia a un hecho semántico constituido; no equivale a autoridad."
+173 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+174 | / opaque_control_ref!(
+175 | |     AuthorityRef,
+176 | |     "Referencia a autoridad constituida; su constructor no forma parte de la API pública."
+177 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+178 | / opaque_control_ref!(
+179 | |     EnablementRef,
+180 | |     "Referencia a una habilitación de autoridad ya existente; no amplía autoridad."
+181 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+186 | / opaque_control_ref!(
+187 | |     FormRef,
+188 | |     "Referencia a una forma de transición constituida."
+189 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+190 | / opaque_control_ref!(
+191 | |     EffectFamilyRef,
+192 | |     "Referencia a una familia de efectos fijada por constitución."
+193 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+194 | / opaque_control_ref!(
+195 | |     EffectRef,
+196 | |     "Referencia a un efecto concreto; identificarlo no equivale a autorizarlo."
+197 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+198 | / opaque_control_ref!(
+199 | |     ContextRef,
+200 | |     "Referencia a una ligadura de contexto relevante para autoridad o forma."
+201 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+202 | / opaque_control_ref!(
+203 | |     AuthorityHolderRef,
+204 | |     "Referencia al titular de una autoridad; no constituye autoridad por sí misma."
+205 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+206 | / opaque_control_ref!(
+207 | |     GovernedObjectRef,
+208 | |     "Referencia a un objeto candidato a pertenecer al dominio gobernado D_a."
+209 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+210 | / opaque_control_ref!(
+211 | |     AccumulationRuleRef,
+212 | |     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+213 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+214 | / opaque_control_ref!(
+215 | |     RequirementRef,
+216 | |     "Referencia a una obligación de Req; identificarla no acredita su cumplimiento."
+217 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+218 | / opaque_control_ref!(
+219 | |     VerifierRef,
+220 | |     "Referencia a un verificador concreto; su mera existencia no acredita aplicabilidad."
+221 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+222 | / opaque_control_ref!(
+223 | |     VerifierFamilyRef,
+224 | |     "Referencia a una familia de verificadores admisibles para una obligación."
+225 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+226 | / opaque_control_ref!(
+227 | |     ApplicabilityRuleRef,
+228 | |     "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
+229 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+230 | / opaque_control_ref!(
+231 | |     ConflictResolutionRuleRef,
+232 | |     "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+233 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+234 | / opaque_control_ref!(
+235 | |     CoverageRuleRef,
+236 | |     "Referencia a una regla previamente constituida de cobertura de comprobaciones exigibles."
+237 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+238 | / opaque_control_ref!(
+239 | |     ReuseRuleRef,
+240 | |     "Referencia a una regla previamente constituida de reutilización de resultados cualificados."
+241 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+242 | / opaque_control_ref!(
+243 | |     ReuseBindingKeyRef,
+244 | |     "Referencia a una dimensión constituida cuya continuidad puede ser exigible para reutilizar un resultado."
+245 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+246 | / opaque_control_ref!(
+247 | |     ReuseBindingValueRef,
+248 | |     "Referencia al valor constituido de una dimensión de reutilización; identificarlo no acredita su vigencia."
+249 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: constant `PROFILE_ID` is never used
+ --> sv_core/src/identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+
+warning: function `is_reserved_word` is never used
+  --> sv_core/src/identifier_profile.rs:22:15
+   |
+22 | pub(crate) fn is_reserved_word(word: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^
+
+warning: method `matches_descriptor` is never used
+   --> sv_core/src/requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core/src/frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: function `permission_plan` is never used
+   --> sv_core/src/authority/transitions/reuse_tests.rs:288:4
+    |
+288 | fn permission_plan() -> GenesisPlan {
+    |    ^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+   Compiling sv_native v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_native)
+warning: `sv_core` (lib) generated 25 warnings (run `cargo fix --lib -p sv_core` to apply 1 suggestion)
+   Compiling sv_wasm v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_wasm)
+warning: function `check_witness` is never used
+  --> sv_core/examples/../../../tests/row7_gh/probe.rs:59:8
+   |
+59 | pub fn check_witness(witness: &str) -> Result<(), String> {
+   |        ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `report` is never used
+   --> sv_core/tests/../../../tests/row7_bindings/cases.rs:165:8
+    |
+165 | pub fn report()->Result<String,String> {
+    |        ^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `sv_core` (example "gh_binding_probe_browser") generated 1 warning
+warning: `sv_core` (test "bindings") generated 1 warning
+warning: `sv_core` (example "gh_binding_probe") generated 1 warning (1 duplicate)
+warning: `sv_core` (lib test) generated 4 warnings (3 duplicates)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.55s
+     Running unittests src/lib.rs (rust/target/debug/deps/sv_core-b51a89c4efe0bae8)
+
+running 211 tests
+test admissibility::tests::admissibility_state_is_exactly_the_closed_v0_2_set ... ok
+test admissibility::tests::admissibility_spec_rejects_missing_rule ... ok
+test admissibility::tests::admissibility_labels_are_exact ... ok
+test admissibility::tests::admitted_observation_does_not_itself_create_tri ... ok
+test admissibility::tests::admissibility_spec_rejects_zero_parameter_id ... ok
+test admissibility::tests::only_ok_and_degraded_are_positively_admitted ... ok
+test admissibility::tests::technical_capture_failure_remains_outside_tri ... ok
+test authority::tests::authority_rejects_effect_outside_its_governed_domain ... ok
+test authority::tests::authority_rejects_effect_outside_its_context ... ok
+test authority::tests::constituted_authority_binds_holder_context_envelope_and_domain ... ok
+test authority::tests::duplicate_members_do_not_expand_envelope_or_domain ... ok
+test admissibility::tests::valid_admissibility_spec_preserves_identity_parameter_and_rule ... ok
+test authority::tests::form_scope_requires_family_and_context_together ... ok
+test authority::tests::governed_domain_membership_is_decidable_before_exercise ... ok
+test authority::tests::effect_scope_requires_complete_constituted_effect_and_domain ... ok
+test authority::tests::form_descriptor_freezes_the_constituted_dimensions ... ok
+test authority::transitions::reuse_tests::duplicate_reuse_binding_key_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::accredited_but_incomplete_coverage_never_forms_permit ... ok
+test authority::transitions::reuse_tests::different_effect_cannot_cross_mediation_with_valid_permit ... ok
+test authority::transitions::reuse_tests::complete_governed_da_forms_a_sealed_permit ... ok
+test authority::transitions::reuse_tests::adapter_error_after_dispatch_is_indeterminate_not_non_execution ... ok
+test authority::tests::effect_envelope_uses_the_complete_effect_scope ... ok
+test authority::transitions::reuse_tests::duplicate_reuse_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::empty_reuse_binding_set_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::effect_outside_required_authority_scope_is_closed_before_permit ... ok
+test authority::transitions::reuse_tests::form_without_required_authority_cannot_form_permit ... ok
+test authority::transitions::reuse_tests::form_effect_mismatch_is_closed_before_permit ... ok
+test authority::transitions::reuse_tests::non_exercise_commitment_is_rejected_before_adapter_dispatch ... ok
+test authority::transitions::reuse_tests::governed_accumulation_contracts_remain_closed_before_adapter ... ok
+test authority::transitions::reuse_tests::idempotent_requires_new_governed_attempt_and_new_exercise_ref ... ok
+test authority::transitions::reuse_tests::r1_4_unit_one_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::r1_4_unit_three_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::r1_4_unit_two_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::mediated_t_e_executes_once_and_records_append_only_trace ... ok
+test authority::transitions::reuse_tests::not_verifiable_requirements_never_form_positive_permit ... ok
+test authority::transitions::reuse_tests::reuse_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+test authority::transitions::reuse_tests::r1_5_conflict_trace_preserves_each_individual_check_before_dn_resolution ... ok
+test authority::transitions::reuse_tests::r1_5_incomplete_coverage_traces_resolved_da_as_qualified_dn ... ok
+test authority::transitions::reuse_tests::r1_5_refuted_decision_is_traced_without_mediation_or_exercise ... ok
+test authority::transitions::reuse_tests::refuted_requirements_never_form_positive_permit ... ok
+test authority::transitions::reuse_tests::r1_5_traced_chain_from_t0_binds_decision_mediation_and_real_exercise ... ok
+test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_confirmed_exercise ... ok
+test authority::transitions::tests::authority_effect_outside_context_is_rejected_without_partial_state ... ok
+test authority::transitions::reuse_tests::valid_permit_is_consumed_into_exact_mediated_commitment ... ok
+test authority::transitions::tests::applicability_mismatch_rejects_whole_genesis ... ok
+test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_indeterminate_attempt ... ok
+test authority::transitions::tests::authority_effect_outside_domain_is_rejected_without_partial_state ... ok
+test authority::transitions::tests::authorizing_form_requires_prior_authority_reference ... ok
+test authority::transitions::tests::controlled_form_without_context_is_rejected_before_constitution ... ok
+test authority::transitions::tests::controlled_form_without_requirements_is_rejected_atomically ... ok
+test authority::transitions::tests::conflict_rule_without_applicable_decisive_verifier_rejects_t0_atomically ... ok
+test authority::transitions::tests::consumed_external_premise_cannot_seed_another_genesis ... ok
+test authority::transitions::tests::duplicate_authority_reference_is_rejected_atomically ... ok
+test authority::transitions::tests::coverage_required_verifier_without_applicability_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_conflict_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_coverage_required_verifier_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_form_reference_is_rejected_atomically ... ok
+test authority::transitions::tests::duplicate_coverage_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::tests::governance_constitutive_and_recovery_remain_non_productive ... ok
+test authority::transitions::tests::coverage_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+test authority::transitions::tests::empty_coverage_required_set_rejects_t0_atomically ... ok
+test authority::transitions::tests::missing_required_authority_is_rejected ... ok
+test authority::transitions::tests::information_verification_enablement_and_exercise_are_non_authorizing ... ok
+test authority::transitions::tests::only_genesis_has_productive_disposition_in_r1_3_unit_2 ... ok
+test authority::transitions::tests::rejected_empty_genesis_does_not_consume_t0_or_premise ... ok
+test authority::transitions::tests::uncontrolled_genesis_remains_valid_without_requirements ... ok
+test authority::transitions::tests::second_t0_on_the_same_continuity_is_rejected ... ok
+test authority::transitions::tests::valid_t0_constitutes_initial_state_and_consumes_genesis ... ok
+test authority::transitions::tests::missing_mandatory_core_rejects_whole_genesis ... ok
+test c03_tests::c03_accepts_a_coherent_declared_subset_without_exhaustivity ... ok
+test c03_tests::c03_rejects_external_or_duplicated_evaluation_sources ... ok
+test c03_tests::c03_rejects_states_outside_architecture_or_multiple_states_for_one_node ... ok
+test c03_tests::c03_rejects_a_gate_or_supervision_that_escapes_the_causal_closure ... ok
+test c03_tests::c03_rejects_criticalities_while_no_surface_producer_exists ... ok
+test control_tests::check_results_are_exactly_the_three_sec0d_results ... ok
+test control_tests::control_id_rejects_empty_or_blank_identifiers ... ok
+test control_tests::protected_reference_categories_are_nominally_distinct ... ok
+test control_tests::transition_classes_preserve_the_eight_contractual_labels ... ok
+test decision_trace::tests::decimal_successor_is_not_machine_word_bounded ... ok
+test control_tests::technical_check_results_are_a_type_distinct_from_tri ... ok
+test decision_trace::tests::decision_references_are_structural_ordinals ... ok
+test equivalence::tests::json_escape_is_deterministic ... ok
+test control_tests::continuity_occupancy_has_distinct_uninhabited_and_inhabited_states ... ok
+test frame_tests::distinct_architecture_nodes_accept_distinct_states ... ok
+test execution::tests::decimal_successor_is_unbounded_by_machine_word_width ... ok
+test frame_tests::duplicate_eval_source_is_rejected ... ok
+test frame_tests::duplicate_state_reference_is_rejected ... ok
+test frame_tests::multiple_states_for_same_node_are_rejected ... ok
+test frame_tests::non_empty_criticalities_are_rejected ... ok
+test frame_tests::gate_input_outside_frame_is_rejected ... ok
+test frame_tests::state_outside_architecture_is_rejected ... ok
+test frame_tests::frame_is_not_exhaustive ... ok
+test frame_tests::supervision_cell_target_inside_frame_is_valid ... ok
+test frame_tests::supervision_cell_target_outside_frame_is_rejected ... ok
+test frame_tests::eval_source_outside_frame_is_rejected ... ok
+test frame_tests::supervision_system_target_matching_architecture_is_valid ... ok
+test frame_tests::supervision_composed_target_outside_frame_is_rejected ... ok
+test frame_tests::supervision_system_target_must_match_architecture ... ok
+test frame_tests::valid_frame_preserves_declared_references_and_unbounded_nat_index ... ok
+test frontend::tests::sha256_matches_known_vector ... ok
+test frontend::union_surface_index_tests_2a::indice_conjunto_preserva_identidad_y_pertenencia_de_perfil ... ok
+test frontend::profile_catalog_tests_2a::catalogos_y_aislamiento_interperfil_son_exhaustivos ... ok
+test frontend::tests::query_context_variants_are_materialized_as_closed_ir_variants ... ok
+test frame_tests::supervision_meta_eval_outside_frame_is_rejected ... ok
+test frontend::source_profile_public_tests_2a::selector_textual_y_abi_son_cerrados_y_estables ... ok
+test identifier_profile::tests::cubre_la_ortografia_espanola_del_perfil ... ok
+test identifier_profile::tests::excluye_formas_no_canónicas_y_otros_alfabetos ... ok
+test identifier_profile::tests::las_palabras_reservadas_no_son_identificadores ... ok
+test ir_tests::admissibility_state_order_from_ir_is_preserved ... ok
+test ir_tests::frame_ir_preserves_unbounded_index_declared_order_and_immutability ... ok
+test ir_tests::object_type_and_level_are_derived_not_supplied ... ok
+test ir_tests::program_header_is_fixed_and_order_is_preserved ... ok
+test ir_tests::operation_type_and_result_are_derived_not_supplied ... ok
+test ir_tests::resolve_operation_preserves_identified_target_and_instances ... ok
+test ir_tests::tri_has_distinct_language_and_ir_labels ... ok
+test ir_tests::trajectory_append_only_is_constitutive_in_the_representation ... ok
+test ir_tests::query_and_supervision_variants_keep_canonical_labels ... ok
+test multisource_assembly_tests_2b::el_perfil_erroneo_no_se_rescata_por_la_otra_unidad ... ok
+test multisource_assembly_tests_2b::una_produccion_no_puede_cruzar_la_frontera_de_archivo ... ok
+test nat::tests::nat_accepts_values_beyond_u64_without_narrowing ... ok
+test nat::tests::nat_has_one_internal_decimal_representation_per_value ... ok
+test nat::tests::nat_rejects_non_decimal_material ... ok
+test multisource_assembly_tests_2b::las_colisiones_globales_se_rechazan ... ok
+test requirements::tests::aggregation_rejects_duplicate_check_for_same_requirement ... ok
+test requirements::tests::aggregation_rejects_same_reference_with_different_material_binding ... ok
+test multisource_assembly_tests_2b::referencia_transfronteriza_exige_el_ensamblaje_global ... ok
+test requirements::tests::applicability_must_match_requirement_context_family_and_rule ... ok
+test requirements::tests::aggregation_requires_complete_coverage ... ok
+test requirements::tests::all_accredited_aggregates_to_da ... ok
+test multisource_assembly_tests_2b::la_identidad_de_ensamblaje_es_determinista_y_sensible_al_orden ... ok
+test requirements::tests::dn_is_preserved_when_there_is_no_refutation ... ok
+test requirements::tests::refutation_precedes_not_verifiable ... ok
+test requirements::tests::requirement_set_rejects_empty_req ... ok
+test multisource_assembly_tests_2b::admite_las_cuatro_combinaciones_de_perfil ... ok
+test requirements::tests::nominal_da_cannot_form_an_aggregable_check_without_applicability ... ok
+test requirements::tests::requirement_set_requires_the_non_eludible_core ... ok
+test requirements::tests::requirement_set_rejects_reused_reference ... ok
+test requirements_bridge::tests::aggregation_rejects_duplicate_requirement_result ... ok
+test requirements_bridge::tests::aggregation_is_independent_of_result_order ... ok
+test requirements_bridge::tests::aggregation_rejects_foreign_material_binding ... ok
+test requirements_bridge::tests::aggregation_rejects_unexpected_requirement_result ... ok
+test requirements_bridge::tests::aggregation_requires_complete_requirement_coverage ... ok
+test requirements_bridge::tests::homogeneous_single_check_is_sealed_with_descriptor_and_observation ... ok
+test requirements_bridge::tests::complete_accreditation_aggregates_to_da ... ok
+test requirements_bridge::tests::refutation_precedes_dn_after_resolution ... ok
+test requirements_bridge::tests::conflict_without_rule_preserves_each_individual_result ... ok
+test requirements_bridge::tests::dn_is_preserved_without_refutation ... ok
+test requirements_conflict::tests::absent_decisive_verifier_leaves_conflict_at_dn ... ok
+test requirements_conflict::tests::accredited_and_not_verifiable_without_rule_remain_not_verifiable ... ok
+test requirements_conflict::tests::accredited_and_refuted_without_rule_become_not_verifiable ... ok
+test frontend::tests::compiles_all_current_valid_cases_from_actual_svp_text ... ok
+test requirements_conflict::tests::conflict_result_is_independent_of_input_order ... ok
+test requirements_conflict::tests::decisive_dn_verifier_cannot_promote_conflict ... ok
+test requirements_conflict::tests::decisive_refuted_verifier_resolves_conflict_to_dr ... ok
+test requirements_conflict::tests::decisive_accredited_verifier_resolves_conflict_to_da ... ok
+test requirements_conflict::tests::empty_check_set_is_rejected ... ok
+test requirements_conflict::tests::homogeneous_accredited_checks_remain_accredited ... ok
+test requirements_conflict::tests::majority_does_not_override_constituted_decisive_verifier ... ok
+test requirements_conflict::tests::homogeneous_not_verifiable_checks_remain_not_verifiable ... ok
+test requirements_conflict::tests::mixed_requirements_are_not_a_single_conflict ... ok
+test requirements_conflict::tests::public_governed_path_rejects_foreign_material_binding ... ok
+test requirements_conflict::tests::refuted_and_not_verifiable_without_rule_become_not_verifiable ... ok
+test requirements_conflict::tests::public_governed_path_without_rule_keeps_conflict_at_dn ... ok
+test requirements_coverage::tests::absence_of_rule_is_not_empty_positive_coverage ... ok
+test requirements_conflict::tests::homogeneous_refuted_checks_remain_refuted ... ok
+test requirements_conflict::tests::repeated_verifier_is_rejected_instead_of_weighted ... ok
+test requirements_conflict::tests::repeated_verifier_with_incompatible_results_is_rejected_on_public_path ... ok
+test requirements_coverage::tests::accredited_results_without_coverage_rules_aggregate_to_dn ... ok
+test requirements_coverage::tests::coverage_rule_rejects_duplicate_required_verifier ... ok
+test requirements_coverage::tests::all_required_participants_complete_coverage ... ok
+test requirements_coverage::tests::coverage_rule_identity_is_part_of_the_resolved_binding ... ok
+test requirements_coverage::tests::extra_participant_does_not_replace_a_missing_required_one ... ok
+test requirements_coverage::tests::missing_required_participant_is_explicit ... ok
+test requirements_coverage::tests::coverage_rule_rejects_empty_required_set ... ok
+test requirements_coverage::tests::rule_bound_to_other_context_is_rejected_even_if_attached_for_test ... ok
+test requirements_coverage::tests::refutation_is_not_erased_by_absent_coverage_rule ... ok
+test requirements_coverage::tests::complete_coverage_of_all_accredited_requirements_aggregates_to_da ... ok
+test requirements_coverage::tests::missing_required_verifier_prevents_da ... ok
+test requirements_reuse::tests::changed_context_closes_to_dn ... ok
+test requirements_reuse::tests::changed_single_binding_closes_to_dn ... ok
+test requirements_reuse::tests::exact_continuity_preserves_dn_without_promotion ... ok
+test requirements_reuse::tests::exact_continuity_preserves_dr ... ok
+test requirements_reuse::tests::exact_continuity_preserves_da ... ok
+test requirements_coverage::tests::result_from_other_requirement_is_rejected ... ok
+test requirements_reuse::tests::incomplete_coverage_cannot_reappear_as_historical_da ... ok
+test requirements_reuse::tests::reuse_rule_rejects_duplicate_binding_key ... ok
+test requirements_reuse::tests::missing_current_rule_closes_to_dn ... ok
+test requirements_reuse::tests::other_requirement_is_structural_error ... ok
+test requirements_reuse::tests::reuse_rule_rejects_empty_binding_set ... ok
+test resolution_tests::non_evaluable_target_is_rejected_with_e305 ... ok
+test resolution_tests::arbitrary_precision_position_cannot_overflow_into_a_valid_index ... ok
+test resolution_tests::mechanism_instance_must_match_res_spec_exactly ... ok
+test resolution_tests::cell_target_u_is_reviewable_and_closure_remains_u ... ok
+test resolution_tests::context_instance_must_match_res_spec_exactly ... ok
+test resolution_tests::coupled_target_uses_the_effective_updated_vector ... ok
+test requirements_reuse::tests::same_rule_reference_with_changed_binding_is_not_reusable ... ok
+test resolution_tests::review_does_not_mutate_the_effective_state ... ok
+test resolution_tests::position_beyond_effective_vector_is_rejected ... ok
+test resolution_tests::res_spec_preserves_opaque_contract_references ... ok
+test resolution_tests::target_value_must_be_a_constituted_u ... ok
+test resolution_tests::zero_position_is_rejected_as_not_one_based ... ok
+test tests::technical_invalidity_is_not_u ... ok
+test resolution_tests::review_material_never_becomes_positive_closure_by_execution_alone ... ok
+test tests::tri_has_a_stable_one_byte_representation ... ok
+test tests::tri_is_exactly_ternary_at_the_public_boundary ... ok
+test tests::tri_numeric_representation_is_canonical ... ok
+test tests::tri_roundtrip_is_canonical ... ok
+test tests::tri_textual_representation_is_canonical ... ok
+test tests::version_constants_match_the_integrated_frontend_contract ... ok
+test transition_data_wellformed::tests::decimal_order_does_not_narrow_unbounded_naturals ... ok
+test wellformed::tests::decimal_order_does_not_narrow_unbounded_nat ... ok
+
+test result: ok. 211 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+     Running tests/admissibility_table_causal.rs (rust/target/debug/deps/admissibility_table_causal-4a0929936a0c6a86)
+
+running 3 tests
+test el_cierre_interno_historico_falla_en_sintaxis ... ok
+test salida_ajena_al_codominio_alcanza_la_guarda_semantica ... ok
+test sustituir_solo_la_salida_por_un_miembro_declarado_admite_la_tabla ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/architecture_type_guards.rs (rust/target/debug/deps/architecture_type_guards-1290f73f87b85fc9)
+
+running 3 tests
+test frame_architecture_exige_composition_graph_en_ambos_perfiles ... ok
+test compose_graph_exige_composition_graph_en_ambos_perfiles ... ok
+test frame_y_compose_conservan_sus_controles_validos ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/bindings.rs (rust/target/debug/deps/bindings-7631bf1ddfe3eb16)
+
+running 45 tests
+test l00_esquema ... ok
+test l03_programa ... ok
+test l01_version ... ok
+test l00_operacion_duplicada ... ok
+test l02_orden_expectativa ... ok
+test l00_identidad_vacia ... ok
+test l00_uso_duplicado ... ok
+test l04_bytes ... ok
+test l05_version_duplicada ... ok
+test l06_referencia_exacta ... ok
+test l06_referencia_ausente ... ok
+test l07_clase ... ok
+test l09_propietario ... ok
+test l10_captura_ajena ... ok
+test l08_instancia_duplicada ... ok
+test l09_parametro ... ok
+test l10_admision_ajena ... ok
+test l10_admision_tipo ... ok
+test l10_captura_tipo ... ok
+test l12_regla ... ok
+test l11_numeral_admision ... ok
+test l13_espacio ... ok
+test l14_procedencia ... ok
+test l15_operacion ... ok
+test l15_version_operacion ... ok
+test controles_positivos_preservan_identidad_orden_y_multiplicidad ... ok
+test l11_numeral_captura ... ok
+test l13_ternarizador_ajeno ... ok
+test l17_destino_ausente ... ok
+test l18_destino_ausente ... ok
+test l18_nodo_ajeno ... ok
+test l18_destino_tipo ... ok
+test l19_diez ... ok
+test l16_instancia_ausente ... ok
+test l19_nat_grande ... ok
+test l23_comparticion_incompleta ... ok
+test l19_cero ... ok
+test l22_alias_posterior ... ok
+test l21_comparticion_ausente ... ok
+test l22_alias_destino ... ok
+test l20_colision ... ok
+test l23_comparticion_orden ... ok
+test l22_alias_instancia ... ok
+test l24_lateral_oculta ... ok
+test l24_lateral_ausente ... ok
+
+test result: ok. 45 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.21s
+
+     Running tests/bridge_set.rs (rust/target/debug/deps/bridge_set-e6fc78e9ab40a5a8)
+
+running 3 tests
+test duplicate_nat_positions_are_rejected_before_ir_admission ... ok
+test empty_set_and_declared_order_are_preserved ... ok
+test existing_range_rejection_keeps_precedence ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/cell_geometry_native.rs (rust/target/debug/deps/cell_geometry_native-1cec7d804817a1eb)
+
+running 4 tests
+test b_menor_que_tres_se_rechaza_nativamente_en_ambos_perfiles ... ok
+test b_tres_y_b_cuatro_derivan_nueve_y_dieciseis_posiciones ... ok
+test longitud_de_vector_distinta_de_n_se_rechaza_nativamente ... ok
+test vector_de_longitud_dieciseis_es_admisible_para_b_cuatro ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/codomain_uniqueness.rs (rust/target/debug/deps/codomain_uniqueness-be7bf9ba4d7a114c)
+
+running 3 tests
+test n0_01_conserva_codominios_distintos_en_ambos_perfiles ... ok
+test n0_01_el_ensamblaje_no_rescata_un_codominio_duplicado ... ok
+test n0_01_rechaza_miembro_duplicado_en_ambos_perfiles ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/context_wellformed.rs (rust/target/debug/deps/context_wellformed-ee745086527c34f1)
+
+running 11 tests
+test query_comparison_frame_ajeno ... ok
+test query_coverage_silent_u_ajena ... ok
+test query_architecture_cell_ajena ... ok
+test query_architecture_eval_nodo_ajeno ... ok
+test query_architecture_eval_celda_ajena ... ok
+test query_coverage_interface_ajena ... ok
+test query_point_frame_ajeno ... ok
+test query_trajectory_ajena ... ok
+test query_architecture_gate_entrada_ajena ... ok
+test trajectory_frame_arquitectura_distinta ... ok
+test trajectory_horizon_arquitectura_distinta ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.04s
+
+     Running tests/cyb_authority_boundary.rs (rust/target/debug/deps/cyb_authority_boundary-6be26da6f67ac978)
+
+running 9 tests
+test fa03_premisa_externa_no_fabricable ... ok
+test fa01_referencia_de_autoridad_privada ... ok
+test fa02_macro_no_elude_referencia_privada ... ok
+test fa07_booleano_no_sustituye_premisa ... ok
+test fa04_macro_no_elude_premisa_privada ... ok
+test fa05_ligadura_validada_no_es_autoridad ... ok
+test fa06_resultado_elegido_no_es_permiso ... ok
+test macro_de_datos_nominales_admitida ... ok
+test datos_documentales_no_constituyen_autoridad ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.33s
+
+     Running tests/cyb_reception.rs (rust/target/debug/deps/cyb_reception-570db368195b1aa0)
+
+running 12 tests
+test probe::json::tests::preserves_fixed_values_order_and_unicode ... ok
+test probe::json::tests::rejects_duplicate_and_index_keys ... ok
+test probe::json::tests::rejects_invalid_unicode_and_utf8 ... ok
+test probe::json::tests::rejects_json_syntax_instead_of_repairing_it ... ok
+test probe::json::tests::rejects_numeric_conversion_before_it_loses_information ... ok
+test cyb_instancias_documentales_independientes ... ok
+test cyb_rechazos_causales_y_reparaciones ... ok
+test cyb_definicion_y_modulos_exactos ... ok
+test cyb_ensamblaje_inverso ... ok
+test cyb_transporte_es ... ok
+test cyb_ensamblaje_directo ... ok
+test cyb_transporte_en ... ok
+
+test result: ok. 12 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 3.80s
+
+     Running tests/domain_parameters.rs (rust/target/debug/deps/domain_parameters-6cec4746cfb76ff2)
+
+running 3 tests
+test unconsumed_domain_rejects_repeated_nominal_identity ... ok
+test exact_names_and_order_are_preserved_without_numeric_binding ... ok
+test previous_chain_and_reference_rejections_remain_first ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/gh_bindings.rs (rust/target/debug/deps/gh_bindings-4355f00d42748535)
+
+running 8 tests
+test ligaduras_ordenadas ... ok
+test unidad_metodo_referencia ... ok
+test estado_propuesta ... ok
+test adjudicacion_separada ... ok
+test antecedente_enmienda ... ok
+test extremo_de_ventana ... ok
+test u_y_configuracion_ausente ... ok
+test atribucion_documental ... ok
+
+test result: ok. 8 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.02s
+
+     Running tests/grammar_closed_domains.rs (rust/target/debug/deps/grammar_closed_domains-69d5ae89c06ef04b)
+
+running 5 tests
+test dg02_rechaza_pattern_ajeno_en_y_es ... ok
+test dg01_rechaza_kind_ajeno_en_y_es ... ok
+test dg03_rechaza_regime_ajeno_en_y_es ... ok
+test ensamblaje_no_rescata_un_literal_ajeno_de_otra_unidad ... ok
+test dominios_canónicos_siguen_admitidos_en_y_es ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/horizon_architecture.rs (rust/target/debug/deps/horizon_architecture-e0a18a4f4a80f84f)
+
+running 5 tests
+test n0_04_existing_graph_must_be_wellformed ... ok
+test n0_04_forward_reference_preserves_graph_and_events ... ok
+test n0_04_missing_wrong_type_self_and_operation_in_both_profiles ... ok
+test n0_04_agent_identity_and_equal_missing_names ... ok
+test n0_04_mixed_assembly_resolves_or_rejects_in_both_orders ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/horizon_events.rs (rust/target/debug/deps/horizon_events-bba8605e8e53b710)
+
+running 3 tests
+test uniqueness_is_local_and_preserves_declared_order ... ok
+test duplicate_types_are_rejected_in_an_unconsumed_horizon ... ok
+test previous_reference_empty_and_membership_diagnostics_remain_first ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/json_projection.rs (rust/target/debug/deps/json_projection-a5719a78c9b21b6d)
+
+running 5 tests
+test n0_03_conserva_guarda_previa_del_otro_mapa_variable ... ok
+test n0_03_ensamblaje_no_rescata_duplicados_sin_celda ... ok
+test n0_03_rechaza_semantica_no_enlazada_en_es_en ... ok
+test n0_03_conserva_claves_compartidas_entre_mapas_y_mapa_vacio ... ok
+test n0_03_ensamblaje_conserva_ambitos_y_referencias_de_n0_02 ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/optional_fields.rs (rust/target/debug/deps/optional_fields-b56bbfad74730117)
+
+running 2 tests
+test malformed_declarations_are_rejected_without_a_consumer ... ok
+test optional_absence_and_list_occurrences_are_preserved ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/output_semantics_totality.rs (rust/target/debug/deps/output_semantics_totality-2536609c37e3bde5)
+
+running 6 tests
+test n0_02_otra_semantica_no_completa_la_referenciada ... ok
+test n0_02_ensambla_relacion_total_entre_unidades_en_es ... ok
+test n0_02_cada_celda_comprueba_su_codominio_aunque_comparta_semantica ... ok
+test n0_02_preserva_orden_y_textos_compartidos_en_es_en ... ok
+test n0_02_ensamblaje_no_rescata_relacion_invalida ... ok
+test n0_02_rechaza_cuatro_defectos_en_es_en_y_referencias_adelantadas ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/projection_metadata_native.rs (rust/target/debug/deps/projection_metadata_native-d893bd9b82a60544)
+
+running 3 tests
+test bytes_fuente_distintos_modifican_la_huella_y_su_emision ... ok
+test source_file_modifica_la_proyeccion_sin_alterar_la_huella_del_contenido ... ok
+test proyeccion_emite_una_vez_version_fichero_y_huella_reales ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/transition_data_wellformed.rs (rust/target/debug/deps/transition_data_wellformed-9580bbb402bfb869)
+
+running 6 tests
+test transition_data_admite_nodos_declarados_posiciones_extremas_e_instancias_compartidas ... ok
+test ensamblaje_mixto_no_rescata_transition_data_invalido ... ok
+test transition_data_rechaza_destino_inducido_repetido_con_valor_igual_o_distinto ... ok
+test transition_data_rechaza_tipo_de_suceso_repetido_con_valor_igual_o_distinto ... ok
+test transition_data_rechaza_cero_y_posicion_superior_a_n_sin_estrechar_nat ... ok
+test transition_data_rechaza_nodo_ausente_tipo_incorrecto_o_fuera_de_arquitectura ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (rust/target/debug/deps/sv_native-e79792dfdf597c67)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/manifiesto_main.rs (rust/target/debug/deps/manifiesto_sv-3edc3dfd65712535)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (rust/target/debug/deps/sv_native-467cb4138a47fed9)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/lib.rs (rust/target/debug/deps/sv_wasm-1856730cbd6de75d)
+
+running 2 tests
+test tests::exported_versions_match_core ... ok
+test tests::wasm_boundary_delegates_tri_to_core ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests sv_core
+
+running 17 tests
+test sv_core/src/control.rs - control (line 20) - compile fail ... ok
+test sv_core/src/authority/transitions.rs - authority::transitions::ExternalGenesisPremise (line 63) - compile fail ... ok
+test sv_core/src/control.rs - control (line 10) - compile fail ... ok
+test sv_core/src/admissibility.rs - admissibility::CaptureOutcome (line 70) - compile fail ... ok
+test sv_core/src/admissibility.rs - admissibility::AdmissibilityState (line 11) - compile fail ... ok
+test sv_core/src/decision_trace.rs - decision_trace::DecisionTrace (line 330) - compile fail ... ok
+test sv_core/src/lib.rs - (line 21) - compile fail ... ok
+test sv_core/src/lib.rs - (line 13) - compile fail ... ok
+test sv_core/src/execution.rs - execution::ExecutionRequest (line 216) - compile fail ... ok
+test sv_core/src/lib.rs - (line 17) - compile fail ... ok
+test sv_core/src/permission.rs - permission (line 10) - compile fail ... ok
+test sv_core/src/lib.rs - (line 27) - compile fail ... ok
+test sv_core/src/permission.rs - permission (line 17) - compile fail ... ok
+test sv_core/src/mediation.rs - mediation::MediatedEffectCommitment (line 24) - compile fail ... ok
+test sv_core/src/requirements_bridge.rs - requirements_bridge::ResolvedRequirementResult (line 121) - compile fail ... ok
+test sv_core/src/requirements_reuse.rs - requirements_reuse::HistoricalQualifiedRequirementResult (line 156) - compile fail ... ok
+test sv_core/src/requirements_reuse.rs - requirements_reuse::reuse_historical_requirement_result (line 368) - compile fail ... ok
+
+test result: ok. 17 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.09s
+
+   Doc-tests sv_native
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests sv_wasm
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

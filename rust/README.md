@@ -6,6 +6,26 @@ Esta carpeta contiene la realización compartida en Rust del núcleo semántico 
 
 La implementación mantiene una sola fuente semántica en `sv_core`. `sv_wasm` es un adaptador material del mismo núcleo y no contiene una realización alternativa de `Tri`, `Nat`, `Frame`, C01, C02, C03 ni de la representación IR 0.3.
 
+## Consulta del manifiesto y preparación del entorno · 13/09/2026
+
+El comando `manifiesto-sv` muestra el acta completa de prohibición de uso bélico y primacía de supervivencia humana, incorporada en `sv_core` al compilar. También está disponible como `sv-native manifiesto-sv`. No necesita red ni el repositorio al ejecutarse; conserva el texto español canónico, incluida su capa Rosetta declarativa. Mostrar el acta no acredita por sí solo mecanismos de cumplimiento de sus prohibiciones.
+
+```sh
+sh tools/preparar_rust_sv.sh
+cargo +1.98.0 build --manifest-path rust/Cargo.toml --release -p sv_native --offline
+./rust/target/release/manifiesto-sv
+./rust/target/release/sv-native manifiesto-sv
+```
+
+Para disponer del comando en el directorio de ejecutables de Cargo:
+
+```sh
+cargo +1.98.0 install --path rust/sv_native --offline
+manifiesto-sv
+```
+
+El directorio de ejecutables de Cargo debe estar en `PATH`; la instalación y el estado del entorno se comprueban con el procedimiento enlazado. No es necesario instalar Rust en el equipo del autor para ejecutar las pruebas del laboratorio remoto. Se conserva [contrato, reproducción y resultados](../docs/calidad/manifiesto-sv/README.md). La incorporación añade una API documental; gramática, IR y perfiles fuente permanecen con sus versiones vigentes.
+
 ## Estado material
 
 El núcleo contiene actualmente:

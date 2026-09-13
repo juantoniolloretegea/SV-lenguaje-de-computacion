@@ -259,3 +259,14 @@ mod tests {
         assert_eq!(sv_serializer_version_patch(), 0);
     }
 }
+
+/// ES: Copia el acta integrada al búfer de salida del contrato ABI existente.
+/// EN: Copies the embedded act into the existing ABI output buffer.
+///
+/// ES: El host debe copiar sus bytes antes de otra llamada que reutilice el búfer.
+/// EN: The host must copy its bytes before another call reuses the buffer.
+#[cfg(target_arch = "wasm32")]
+#[no_mangle]
+pub extern "C" fn sv_manifiesto_sv() -> u64 {
+    packed_result(sv_core::manifiesto_sv().as_bytes().to_vec(), false)
+}

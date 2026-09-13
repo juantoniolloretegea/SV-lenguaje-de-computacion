@@ -10,7 +10,7 @@ const path = require("node:path");
 const { WASI } = require("node:wasi");
 
 async function main() {
-  if (process.argv.length < 4) {
+  if (process.argv.length < 3) {
     console.error("uso: node tests/run_wasi_sv_native.js <binario.wasm> [--profile en|es] <archivo.svp> ...");
     process.exitCode = 2;
     return;
@@ -21,6 +21,12 @@ async function main() {
   const guestArgs = [];
   const preopens = {};
   for (let i = 0; i < argumentsIn.length; i++) {
+    // ES: Consulta documental: argumentos literales, sin preabrir directorios.
+    // EN: Documentary query: literal arguments, without directory preopens.
+    if (i === 0 && argumentsIn[i] === "manifiesto-sv") {
+      guestArgs.push(...argumentsIn);
+      break;
+    }
     if (argumentsIn[i] === "--profile") {
       const profile = argumentsIn[++i];
       if (!["en", "es"].includes(profile)) throw new Error("perfil de prueba inválido");

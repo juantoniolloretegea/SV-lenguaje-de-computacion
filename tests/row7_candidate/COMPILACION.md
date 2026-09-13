@@ -25,3 +25,7 @@ rust/target/gh-generate --check
 LIG/0.1 es una API Rust tipada del núcleo; no es una sintaxis de entrada añadida a la CLI. Las sondas son pruebas. La auditoría documental externa y su recálculo de huellas siguen requiriendo Node y están en el repositorio completo. Los resultados de las sondas no se certifican por sí solos.
 
 La prueba de CI registra la imagen Ubuntu 24.04, Rust 1.98.0 y paquetes del entorno, comprueba ausencia de intérpretes Python/Node y ejecuta la construcción con red deshabilitada y Cargo offline. Docker aísla ese ensayo; no es necesario para ejecutar `sv-native` ni constituye una elección de plataforma final. La prueba no acredita Q0 ni las doce SP integradas. La auditoría externa fuerte examina toda la candidata antes de entregar a CYB.
+
+## Recurso documental incorporado al núcleo
+
+El inventario admite expresamente `rust/sv_core/assets/manifiesto-sv.md`, que `sv_core` incorpora mediante `include_str!`. Esta excepción no admite otros Markdown. La prueba aislada compara byte a byte el recurso con las salidas de `manifiesto-sv` y `sv-native manifiesto-sv`, sin red ni intérpretes. Conserva ambas salidas y sus huellas. La autoprueba rechaza el recurso ausente, alterado y otro Markdown no autorizado.

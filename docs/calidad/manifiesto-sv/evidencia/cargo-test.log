@@ -1,0 +1,517 @@
+   Compiling sv_core v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_core)
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+162 | / opaque_control_ref!(
+163 | |     InformationRef,
+164 | |     "Referencia nominal a información dentro del dominio de control."
+165 | | );
+    | |_- in this macro invocation
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+166 | / opaque_control_ref!(
+167 | |     AdmittedEvidenceRef,
+168 | |     "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
+169 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+170 | / opaque_control_ref!(
+171 | |     ConstitutedFactRef,
+172 | |     "Referencia a un hecho semántico constituido; no equivale a autoridad."
+173 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+174 | / opaque_control_ref!(
+175 | |     AuthorityRef,
+176 | |     "Referencia a autoridad constituida; su constructor no forma parte de la API pública."
+177 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+178 | / opaque_control_ref!(
+179 | |     EnablementRef,
+180 | |     "Referencia a una habilitación de autoridad ya existente; no amplía autoridad."
+181 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+186 | / opaque_control_ref!(
+187 | |     FormRef,
+188 | |     "Referencia a una forma de transición constituida."
+189 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+190 | / opaque_control_ref!(
+191 | |     EffectFamilyRef,
+192 | |     "Referencia a una familia de efectos fijada por constitución."
+193 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+194 | / opaque_control_ref!(
+195 | |     EffectRef,
+196 | |     "Referencia a un efecto concreto; identificarlo no equivale a autorizarlo."
+197 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+198 | / opaque_control_ref!(
+199 | |     ContextRef,
+200 | |     "Referencia a una ligadura de contexto relevante para autoridad o forma."
+201 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+202 | / opaque_control_ref!(
+203 | |     AuthorityHolderRef,
+204 | |     "Referencia al titular de una autoridad; no constituye autoridad por sí misma."
+205 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+206 | / opaque_control_ref!(
+207 | |     GovernedObjectRef,
+208 | |     "Referencia a un objeto candidato a pertenecer al dominio gobernado D_a."
+209 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+210 | / opaque_control_ref!(
+211 | |     AccumulationRuleRef,
+212 | |     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+213 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+214 | / opaque_control_ref!(
+215 | |     RequirementRef,
+216 | |     "Referencia a una obligación de Req; identificarla no acredita su cumplimiento."
+217 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+218 | / opaque_control_ref!(
+219 | |     VerifierRef,
+220 | |     "Referencia a un verificador concreto; su mera existencia no acredita aplicabilidad."
+221 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+222 | / opaque_control_ref!(
+223 | |     VerifierFamilyRef,
+224 | |     "Referencia a una familia de verificadores admisibles para una obligación."
+225 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+226 | / opaque_control_ref!(
+227 | |     ApplicabilityRuleRef,
+228 | |     "Referencia a una regla previamente constituida de aplicabilidad de comprobación."
+229 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+230 | / opaque_control_ref!(
+231 | |     ConflictResolutionRuleRef,
+232 | |     "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+233 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+234 | / opaque_control_ref!(
+235 | |     CoverageRuleRef,
+236 | |     "Referencia a una regla previamente constituida de cobertura de comprobaciones exigibles."
+237 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+238 | / opaque_control_ref!(
+239 | |     ReuseRuleRef,
+240 | |     "Referencia a una regla previamente constituida de reutilización de resultados cualificados."
+241 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+242 | / opaque_control_ref!(
+243 | |     ReuseBindingKeyRef,
+244 | |     "Referencia a una dimensión constituida cuya continuidad puede ser exigible para reutilizar un resultado."
+245 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core/src/control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+246 | / opaque_control_ref!(
+247 | |     ReuseBindingValueRef,
+248 | |     "Referencia al valor constituido de una dimensión de reutilización; identificarlo no acredita su vigencia."
+249 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: constant `PROFILE_ID` is never used
+ --> sv_core/src/identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+
+warning: function `is_reserved_word` is never used
+  --> sv_core/src/identifier_profile.rs:22:15
+   |
+22 | pub(crate) fn is_reserved_word(word: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^
+
+warning: method `matches_descriptor` is never used
+   --> sv_core/src/requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core/src/frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+   Compiling sv_native v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_native)
+warning: function `permission_plan` is never used
+   --> sv_core/src/authority/transitions/reuse_tests.rs:288:4
+    |
+288 | fn permission_plan() -> GenesisPlan {
+    |    ^^^^^^^^^^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `sv_core` (lib) generated 25 warnings (run `cargo fix --lib -p sv_core` to apply 1 suggestion)
+   Compiling sv_wasm v0.1.0 (/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/sv_wasm)
+warning: function `report` is never used
+   --> sv_core/tests/../../../tests/row7_bindings/cases.rs:165:8
+    |
+165 | pub fn report()->Result<String,String> {
+    |        ^^^^^^
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: function `check_witness` is never used
+  --> sv_core/examples/../../../tests/row7_gh/probe.rs:59:8
+   |
+59 | pub fn check_witness(witness: &str) -> Result<(), String> {
+   |        ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: `sv_core` (test "bindings") generated 1 warning
+warning: `sv_core` (example "gh_binding_probe_browser") generated 1 warning
+warning: `sv_core` (example "gh_binding_probe") generated 1 warning (1 duplicate)
+error: linking with `cc` failed: exit status: 1
+  |
+  = note:  "cc" "-m64" "/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/rustc59zDAm/symbols.o" "<226 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/lib/{libtest-*,libgetopts-*,librustc_std_workspace_std-*,libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lgcc_s" "-lutil" "-lrt" "-lpthread" "-lm" "-ldl" "-lc" "-L" "/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/rustc59zDAm/raw-dylibs" "-B<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld" "-fuse-ld=lld" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-L" "<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-o" "/workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544" "-Wl,--gc-sections" "-pie" "-Wl,-z,relro,-z,now" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: rust-lld: error: undefined hidden symbol: <std::rt::lang_start<()>::{closure#0} as core::ops::function::FnOnce<()>>::call_once::{shim:vtable#0}
+          >>> referenced by 613f7bhn2478t7nqjy252hvym
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.613f7bhn2478t7nqjy252hvym.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.ee97fbba190688e23c9e2fcaee8f3e9a.0+0x18)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::admissibility_labels_are_exact::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.16+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::admissibility_spec_rejects_missing_rule::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.18+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::admissibility_spec_rejects_zero_parameter_id::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.20+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::admissibility_state_is_exactly_the_closed_v0_2_set::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.22+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::admitted_observation_does_not_itself_create_tri::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.24+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::only_ok_and_degraded_are_positively_admitted::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.26+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::technical_capture_failure_remains_outside_tri::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.28+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::admissibility::tests::valid_admissibility_spec_preserves_identity_parameter_and_rule::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.30+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::authority_rejects_effect_outside_its_context::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.33+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::authority_rejects_effect_outside_its_governed_domain::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.35+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::constituted_authority_binds_holder_context_envelope_and_domain::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.37+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::duplicate_members_do_not_expand_envelope_or_domain::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.39+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::effect_envelope_uses_the_complete_effect_scope::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.41+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::effect_scope_requires_complete_constituted_effect_and_domain::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.43+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::form_descriptor_freezes_the_constituted_dimensions::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.45+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::form_scope_requires_family_and_context_together::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.47+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::tests::governed_domain_membership_is_decidable_before_exercise::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.49+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::transitions::reuse_tests::accredited_but_incomplete_coverage_never_forms_permit::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.52+0x88)
+          
+          rust-lld: error: undefined hidden symbol: <sv_core::authority::transitions::reuse_tests::adapter_error_after_dispatch_is_indeterminate_not_non_execution::{closure#0} as core::ops::function::FnOnce<()>>::call_once
+          >>> referenced by 6azkw5etvh9ilacq16s1hmlja
+          >>>               /workspace/scratch/cdd3907241dd/manifiesto-sv/checkout/rust/target/debug/deps/sv_core-9f6bf0705a27b544.6azkw5etvh9ilacq16s1hmlja.1fl9oqd.rcgu.o:(.data.rel.ro..Lanon.40d947ded18472fe34e2b5e0542e70e7.54+0x88)
+          
+          rust-lld: error: too many errors emitted, stopping now (use --error-limit=0 to see all errors)
+          collect2: error: ld returned 1 exit status
+          
+
+warning: `sv_core` (lib test) generated 4 warnings (3 duplicates)
+error: could not compile `sv_core` (lib test) due to 1 previous error; 4 warnings emitted

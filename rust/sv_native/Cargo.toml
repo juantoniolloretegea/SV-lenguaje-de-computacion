@@ -3,6 +3,7 @@ name = "sv_native"
 version = "0.1.0"
 edition = "2021"
 publish = false
+default-run = "sv-native"
 
 [[bin]]
 name = "sv-native"
@@ -10,3 +11,7 @@ path = "src/main.rs"
 
 [dependencies]
 sv_core = { path = "../sv_core" }
+
+[[bin]]
+name = "manifiesto-sv"
+path = "src/manifiesto_main.rs"
