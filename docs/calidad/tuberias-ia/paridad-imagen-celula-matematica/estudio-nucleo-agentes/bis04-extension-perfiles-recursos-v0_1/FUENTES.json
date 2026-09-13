@@ -1,0 +1,139 @@
+{
+  "corte_publico": "aa1229788f0a6625be43c74e29c38023b8193a4c",
+  "corte_laboratorio": "ed5a78fb667401b052e915db38bf17465fe3b2b2",
+  "archivos": {
+    "AGENTS.md": {
+      "sha256": "d79c5a325a3a7996ab408fe97c94db6d6ff04faea8dcd3b2bf84cd38282f6104",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md": {
+      "sha256": "11b7752e0b19fe6ee285cd731cd5ee240727cb79296eb8ee694367a12016b25d",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md": {
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md": {
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md": {
+      "sha256": "1acee855c8c6394b6a16331d8b36568b73e3872621aee58b5f204bbe92659634",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md": {
+      "sha256": "c844ba3e1f279ee9d152d1598b608d97321f21b2b98d1721820039122a11ff60",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c03/CONTRATO_IDENTIDAD_CANDIDATO_v0_1.md": {
+      "sha256": "36802d91f1b406d31eb73d9b475c2e3159d0abe87615a8a5c47ef9d575f7b1f5",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c04/CONTRATO_PARIDAD_CANDIDATO_v0_1.md": {
+      "sha256": "2ab2ea660f17baef23ad4b82e263ea50007c7b6986e5aa08ee0f768447fbc72c",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c05/CONTRATO_CONSUMO_CANDIDATO_v0_1.md": {
+      "sha256": "17b01025dd0e01a2b7cb26636114e4a53b1d48f3a356f0032e1eb6586539fbd3",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c08/CONTRATO_ESTATUTOS_U_Y_FALLO_CANDIDATO_v0_1.md": {
+      "sha256": "a7e4c0e636c145d2001c0d488a19343965e060336cd3340bfeeeab0b846527da",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md": {
+      "sha256": "ba09f55957e4e792c5dfb3c4cea947f080c85a2bce87bd22bd167afb30fb180a",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c10/CONTRATO_JUSTIFICACION_Y_EVIDENCIA_CANDIDATO_v0_1.md": {
+      "sha256": "ad5cd25055c18ba7b04b6f10f9f6586a73c2c9f5d122f2eb2ceb1980bf6d101a",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c11/CONTRATO_RECURSOS_CANDIDATO_v0_1.md": {
+      "sha256": "32351e57cb71703b4fab206bf8d9e480b4e5f739cebb0e086af3c4d994ce4045",
+      "lectura": "completa previa revalidada por identidad"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c12/CONTRATO_PERFILES_DOCUMENTACION_CONSTRUCCION_v0_1.md": {
+      "sha256": "2cfc9a1afa706f3a59fd6fb2b2a443118ddf08950e0657da3b7d3d4d04a6b04f"
+    },
+    "rust/Cargo.toml": {
+      "sha256": "7d7ec0ae2f0d8fda0232c97c88a1228e013f41629d3b02e48f706c0cce1068a9",
+      "lectura": "completa"
+    },
+    "rust/Cargo.lock": {
+      "sha256": "f932662e1e778ebb61e4942a9f80d8b2f2cdd7b2be61f7dfcdd54a0170d59360",
+      "lectura": "completa"
+    },
+    "rust/sv_core/Cargo.toml": {
+      "sha256": "1a986899a692ba3256554ea3cfb77e427673a034989e96d6082825560c2bd6a3",
+      "lectura": "completa"
+    },
+    "rust/sv_core/src/lib.rs": {
+      "sha256": "fdb1cc15645f7ae53b6ab8006eba807fdad091ea5d900b38eee244be1c9ffe70",
+      "lectura": "completa"
+    },
+    "rust/sv_core/src/ir.rs": {
+      "sha256": "f42e41a5c4677dba799356d320449641ccd9be107ce7834ea85b784ec68b06f2",
+      "lectura": "tipos y accesores públicos, líneas 1–215"
+    },
+    "rust/sv_core/src/nat.rs": {
+      "sha256": "3e9d8ec413ea021610c58ebd856be8353411f69191a2a5f60e5cca927e356118",
+      "lectura": "completa"
+    },
+    "rust/sv_core/src/frontend.rs": {
+      "sha256": "7b063e97fe5762314c130c76341cb05c6cf4573c0126832f5f1bd86c9ca50272",
+      "lectura": "SourceProfile; constitución CellSpec y square_nat; no lectura completa del parser"
+    },
+    "rust/sv_core/src/wellformed.rs": {
+      "sha256": "b421f09334082d5d0f8ba61469a3993838dd043bf4d0e47cfc4c6c90de347ef5",
+      "lectura": "CellSpec, CellState, CoupledState; no lectura completa"
+    },
+    "rust/sv_core/src/bindings.rs": {
+      "sha256": "54b77d4151c12fdca63223adf720aa7d6714b27a6412800a862c7d1f3b20357b",
+      "lectura": "tipos y validación LIG, líneas 1–330; no lectura completa"
+    },
+    "rust/sv_native/src/main.rs": {
+      "sha256": "16c422d4517e65a44c2e84c3984782f9573501863cdebd7a54e9be5714301c42",
+      "lectura": "completa"
+    },
+    "docs/calidad/tuberias-ia/ie004/recepcion-av/json_estricto.rs": {
+      "sha256": "bbef9939a2000d637e5714cc673e2b1b5c1feeb64ebe0620026b9d40dfd20690",
+      "lectura": "completa"
+    },
+    "docs/calidad/tuberias-ia/ie004/recepcion-av/sha256.rs": {
+      "sha256": "ea22367ca6bca886ae254e123dc64b7d69ae4296ce0c4bf51ff12e7039f5f23d",
+      "lectura": "completa"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/CONTRATO_INTEGRADO.md": {
+      "sha256": "6f2729f3cb297fc18db530485fd407b4619be3338295c9ae4eaa7f4d7bd80b70",
+      "lectura": "compromiso RETP-218 íntegro conservado; consulta aplicable en este incremento"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/BANCO_PREVIO.json": {
+      "sha256": "ce34d04a8a12e4080a8d673e2d0e4ca261d97bf56d588e1fff1a7ea340de48f3",
+      "lectura": "compromiso RETP-218 íntegro conservado; consulta aplicable en este incremento"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/ORACULOS.json": {
+      "sha256": "1130527f758e8c7f5b82f98c7885a9c987d998cfb5faa2e1902ba554de9c7f5b",
+      "lectura": "compromiso RETP-218 íntegro conservado; consulta aplicable en este incremento"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/PRESUPUESTO.json": {
+      "sha256": "aec2763669d022ec9f5cc662edc5f521baeee99575c4bee8a62ae301ab7b774f",
+      "lectura": "compromiso RETP-218 íntegro conservado; consulta aplicable en este incremento"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/integracion-c02-c05-v0_1/MANIFIESTO.json": {
+      "sha256": "89989237ca29c65aaa90be28e90e294141cb8f7fe2f9e32964f6da8c04f63378",
+      "lectura": "compromiso RETP-218 íntegro conservado; consulta aplicable en este incremento"
+    },
+    "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/MANIFIESTO.json": {
+      "sha256": "75b7c7f6bb5b3dc33cd938658d45b741b1d1e725642fff67b2ca5b3d2d70650c"
+    },
+    "ADENDA_NORMATIVA_PERFIL_LEXICO_GRAMATICA_SVP_0_2_2026_08_27.md": {
+      "sha256": "8ca96a7475556471aa473f619dce18afdeeff530568974ee0cbb24b83db01a12"
+    },
+    "ESPECIFICACION_NORMATIVA_PERFILES_FUENTE_SVP_ES_EN_v1_2026_08_29.md": {
+      "sha256": "f5c221e8cc30d439baa79a077d14fc52bc2d351f028551031d83d9ce575ddbf7"
+    }
+  },
+  "lectura": "Pilares, acta de perfiles/ensamblaje, transición secuencial y workflow V2 consultados; hashes de lecturas anteriores revalidados; contrato C12 y normas de perfiles/lexemas leídos."
+}

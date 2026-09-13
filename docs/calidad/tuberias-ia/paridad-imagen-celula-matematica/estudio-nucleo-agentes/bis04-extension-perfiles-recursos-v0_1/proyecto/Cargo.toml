@@ -1,0 +1,9 @@
+[package]
+name="sv_bis_extension"
+version="0.1.0"
+edition="2021"
+publish=false
+[workspace]
+[dependencies]
+sv_bis_i0205={path="../sv_bis_i0205"}
+sv_core={path="../sv_core"}

@@ -1,0 +1,21 @@
+{
+  "ADMISION_FUENTES.json": "72c9e1696b017685f5337813e3b601a3b969a745f06315f7648e43cb484ab28f",
+  "ADMISION_VERIFICADA.tar.gz": "d727463d67e4df9155f70e5fe275960acaa030f44dc918df477eb4a62834c36d",
+  "BANCO_PREVIO.json": "0b8020e4b2b314c26611b70eb7168afa6599e199df6e9fa6db1339372c458cb7",
+  "ENTRADAS.tar.gz": "c287d34595798d58ed0c8b4052946cccb86fd5f920d355c163de5b2b8f25430e",
+  "ENTRADAS_MATERIALIZADAS.json": "5eeaca87549cf31e72f57ce96b33499825731f4c94c06bf3a50e27d97c1279af",
+  "FUENTES.json": "85ada20e8394594d2714fa5903998f701fee31f4f208a1ff181aee5b6703cbe4",
+  "MAPEO_EXPLICITO.json": "d3163e300d1d4a9aa9e7ca5c3e6da9a82bd399692ad1b13f7c9079d4c7f89d7a",
+  "NUCLEO_FUENTES.json": "7a3ca6aa5154839bc6959ba8f45b3307144f034bd5ae2c4be59ae7ffb1d67c68",
+  "PARIDAD_PREVIA.json": "b1ba757907e8926e78888ffc40685cc7d30910ef88b1ec1f2a9344228d84aa3c",
+  "README.md": "5de56858e797f44180554b8e54db1d33d1c7a56dd2914cf9deac5b8e1eb18e78",
+  "proyecto/Cargo.lock": "f94fbde29aaf7bc3949f4db77cbdbfaaac5fe60fed4e1ef7527234e141276917",
+  "proyecto/Cargo.toml": "8d9985dab3ad91e70ba749b8b0cdd92615dc502100e2f8a8dda7f14c1327bcd6",
+  "proyecto/src/main.rs": "fdeee554e4b098b926a0dff87717f28759922b5304d6e1495e0eff2736323d47",
+  "proyecto/src/observer.rs": "0971a2b61433f961e2d2da142e473dc254e7116ef9b9dd0cb9fd4e52b2f8f4b1",
+  "soporte/conductor.py": "94ac6f7ba4bf78f0dee3c0f47a55caaa572d17b06dc754dabbae34e9adcc015a",
+  "soporte/fijar.py": "48d87f9c050eec946a8b5e9b65a54318c5a0293390e0d20cf05bff3049c92a70",
+  "soporte/preparar.py": "ef98205a6f7d2616a324051b6917bdf50955b9b2ba5f853376e5e22000550885",
+  "soporte/reproducir.py": "a1095f32e8c352d8a2d83d659c5bf3ce871dd70d758a37d5326be235b57805a0",
+  "sv_core-verificado.tar.gz": "7ff82c2aafaf95f9636eeeddd357e0f4ab53bc578756a7582e75fea661a153a7"
+}

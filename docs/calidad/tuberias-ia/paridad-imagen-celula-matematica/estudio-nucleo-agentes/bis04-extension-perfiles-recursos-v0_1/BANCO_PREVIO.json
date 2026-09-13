@@ -1,0 +1,923 @@
+{
+  "estatuto": "Esperados fijados antes de ejecutar; ejemplos sintéticos, sin garantía general",
+  "casos": [
+    {
+      "id": "ES01",
+      "objeto": "Fuente EN y perfil EN",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9821,
+      "bytes_leidos_esperados": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES02",
+      "objeto": "Fuente ES fiel; mismos identificadores y cadenas",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1902,
+        1345,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9951,
+      "bytes_leidos_esperados": [
+        1902,
+        1345,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES03",
+      "objeto": "Fuente ES presentada como EN; sin fallback",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "P02",
+      "guardas_previas": [
+        "R01",
+        "P01"
+      ],
+      "bytes_canales": [
+        1902,
+        1345,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9951,
+      "bytes_leidos_esperados": [
+        1902,
+        1345,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES04",
+      "objeto": "Fuente EN presentada como ES; sin fallback",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "P02",
+      "guardas_previas": [
+        "R01",
+        "P01"
+      ],
+      "bytes_canales": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9821,
+      "bytes_leidos_esperados": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES05",
+      "objeto": "Perfil ausente",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "P01",
+      "guardas_previas": [
+        "R01"
+      ],
+      "bytes_canales": [
+        1877,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9796,
+      "bytes_leidos_esperados": [
+        1877,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES06",
+      "objeto": "Etiqueta ES no canónica",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "P01",
+      "guardas_previas": [
+        "R01"
+      ],
+      "bytes_canales": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9821,
+      "bytes_leidos_esperados": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES07",
+      "objeto": "Perfil solicitud EN contradice custodia ES",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "P01",
+      "guardas_previas": [
+        "R01"
+      ],
+      "bytes_canales": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9821,
+      "bytes_leidos_esperados": [
+        1902,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "ES08",
+      "objeto": "Comentario ES distinto; misma IR canónica",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1902,
+        1399,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 10005,
+      "bytes_leidos_esperados": [
+        1902,
+        1399,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC01",
+      "objeto": "Recibo compacto de 2048 bytes",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        2555,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 10474,
+      "bytes_leidos_esperados": [
+        2555,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC02",
+      "objeto": "Recibo compacto de 2049 bytes; rechazo antes de entregar",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03"
+      ],
+      "bytes_canales": [
+        2556,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 10475,
+      "bytes_leidos_esperados": [
+        2556,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC03",
+      "objeto": "Metadatos UTF-8 de 4096 bytes",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        4096,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 12015,
+      "bytes_leidos_esperados": [
+        4096,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC04",
+      "objeto": "Metadatos UTF-8 de 4098 bytes",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [],
+      "bytes_canales": [
+        4098,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 12017,
+      "bytes_leidos_esperados": [
+        4097,
+        0,
+        0,
+        0,
+        0
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC05",
+      "objeto": "Fuente de 4096 bytes",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1902,
+        4096,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 12702,
+      "bytes_leidos_esperados": [
+        1902,
+        4096,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC06",
+      "objeto": "Fuente de 4097 bytes",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [],
+      "bytes_canales": [
+        1902,
+        4097,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 12703,
+      "bytes_leidos_esperados": [
+        1902,
+        4097,
+        0,
+        0,
+        0
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC07",
+      "objeto": "Estado de 1024 bytes",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        1024,
+        253,
+        6237
+      ],
+      "bytes_totales": 10632,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        1024,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC08",
+      "objeto": "Estado de 1025 bytes",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [],
+      "bytes_canales": [
+        1903,
+        1215,
+        1025,
+        253,
+        6237
+      ],
+      "bytes_totales": 10633,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        1025,
+        0,
+        0
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC09",
+      "objeto": "Soporte de 1024 bytes",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        1024,
+        6237
+      ],
+      "bytes_totales": 10593,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        1024,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC10",
+      "objeto": "Soporte de 1025 bytes",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        1025,
+        6237
+      ],
+      "bytes_totales": 10594,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        1025,
+        0
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC11",
+      "objeto": "Suma canales 16384; todos dentro de cuota individual",
+      "resultado_esperado": "ENTREGA_DOCUMENTAL_CONCORDANTE",
+      "primera_guarda_esperada": null,
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05",
+        "D06"
+      ],
+      "bytes_canales": [
+        4003,
+        4096,
+        1024,
+        1024,
+        6237
+      ],
+      "bytes_totales": 16384,
+      "bytes_leidos_esperados": [
+        4003,
+        4096,
+        1024,
+        1024,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "RC12",
+      "objeto": "Suma canales 16385; todos dentro de cuota individual",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "R01",
+      "guardas_previas": [],
+      "bytes_canales": [
+        4004,
+        4096,
+        1024,
+        1024,
+        6237
+      ],
+      "bytes_totales": 16385,
+      "bytes_leidos_esperados": [
+        4004,
+        4096,
+        1024,
+        1024,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP01",
+      "objeto": "Captura alterada: consumidor; variante 1",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D03",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP02",
+      "objeto": "Captura alterada: canal; variante 2",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D03",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP03",
+      "objeto": "Captura alterada: transformacion; variante 3",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D05",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP04",
+      "objeto": "Captura alterada: bytes; variante 4",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D06",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP05",
+      "objeto": "Captura alterada: bytes; variante 5",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D06",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02",
+        "D03",
+        "D04",
+        "D05"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    },
+    {
+      "id": "CAP06",
+      "objeto": "Captura alterada: operacion; variante 6",
+      "resultado_esperado": "RECHAZADO",
+      "primera_guarda_esperada": "D03",
+      "guardas_previas": [
+        "R01",
+        "P01",
+        "P02",
+        "S01",
+        "S02",
+        "I01",
+        "I02",
+        "I03",
+        "A01",
+        "M01",
+        "M02",
+        "M03",
+        "D01",
+        "D02"
+      ],
+      "bytes_canales": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "bytes_totales": 9822,
+      "bytes_leidos_esperados": [
+        1903,
+        1215,
+        214,
+        253,
+        6237
+      ],
+      "ejecucion": "PENDIENTE",
+      "observado": null
+    }
+  ]
+}

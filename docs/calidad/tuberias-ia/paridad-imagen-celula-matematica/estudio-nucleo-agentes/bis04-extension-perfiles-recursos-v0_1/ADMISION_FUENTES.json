@@ -1,0 +1,9 @@
+{
+  "Cargo.lock": "6c5406e8b701bcb253879d22cb385424d40233af6deef31ef0ccbc393dbbf763",
+  "Cargo.toml": "f48b9e65b8f5d862c925a5d0fb34a78d0b99ce0b0ef051a7e52589225ff3d19a",
+  "src/json.rs": "09da960df90ebd88e87c9c06741cee1e6c971048e8f3f11f80ef6fd3fad3dfab",
+  "src/lib.rs": "a0fa5a26292a50b46823952dae416d5a790d2cfee22d160b5ecf4903a0c88369",
+  "src/main.rs": "fe6a4a8d98c5d7fad6fff3bb52e34340605eeac78e6914b151cedff7592b13e0",
+  "src/observer.rs": "50dfe150ab3cbf65536e0108b14db48002da8c5eeacf2b3759a13451dae077b8",
+  "src/sha.rs": "1085ba53dad74273e9d3499eb8285c3d605615b913a395bf9837c47673a83fe1"
+}
