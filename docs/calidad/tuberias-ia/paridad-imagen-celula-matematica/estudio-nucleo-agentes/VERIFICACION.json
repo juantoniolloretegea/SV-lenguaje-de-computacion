@@ -1,0 +1,21 @@
+{
+  "version": "P1P3-BIS-VERIFICACION/1",
+  "fecha_utc": "2026-09-13T04:30:28Z",
+  "fuentes_con_identidad_cotejada": 44,
+  "pdf": {
+    "paginas": 8,
+    "revision_visual": "Ocho páginas renderizadas y examinadas",
+    "desbordamiento": "Sin texto de cuerpo dentro del margen inferior reservado",
+    "enlaces": "URI HTTPS; referencias relativas resueltas al repositorio público"
+  },
+  "md_pdf": "Generados desde los mismos bloques de contenido; comprobada identidad de la fuente Markdown",
+  "testigo": "TESTIGO_INDICES.json: contraejemplo aislado ejecutado; no inferencia de IA",
+  "no_acreditado": [
+    "Paridad integrada",
+    "Suficiencia semántica V0.2 / IR 0.3",
+    "Entrenamiento y aptitud de modelos",
+    "Validación clínica",
+    "Resistencia de la tubería a inyección de instrucciones"
+  ],
+  "publicacion": "La integridad de publicación se verifica contra el árbol Git y las copias mediante el procedimiento de cierre; los commits se comunican con la entrega."
+}

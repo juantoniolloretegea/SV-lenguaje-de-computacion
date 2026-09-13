@@ -1,0 +1,29 @@
+{
+  "alcance": "Contraejemplo lógico aislado del remapeo; no entrenamiento ni métrica de modelo real",
+  "fuente": "SVperitus-dataset@47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c",
+  "supuesto": "Predicciones ya canónicas, como corresponde al entrenamiento con target_transform",
+  "etiquetas_disco": [
+    2,
+    1,
+    0
+  ],
+  "etiquetas_canonicas": [
+    0,
+    1,
+    2
+  ],
+  "predicciones_canonicas": [
+    0,
+    1,
+    2
+  ],
+  "predicciones_tras_segundo_remapeo": [
+    2,
+    1,
+    0
+  ],
+  "aciertos_antes": 3,
+  "aciertos_despues": 1,
+  "casos": 3,
+  "resultado": "El segundo remapeo intercambia NO_APTO y APTO; conserva INDETERMINADO"
+}

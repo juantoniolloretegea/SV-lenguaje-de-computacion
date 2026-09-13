@@ -686,15 +686,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S20 · (p1+p3)-Bis: paridad entre célula matemática, imagen y uso por agentes
 
-**estado:** en ejecución
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-13T04:13:33Z
 
 **fecha_inicio_utc:** 2026-09-13T04:13:33Z
 
-**fecha_actualizacion_utc:** 2026-09-13T04:13:33Z
+**fecha_actualizacion_utc:** 2026-09-13T04:30:28Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-13T04:30:28Z
 
 **unidad_responsable:** Watson / W-S0
 
@@ -702,19 +702,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVperitus-dataset: main (lectura)
 
-**cortes_de_entrada:** Lenguaje 19540321089dc48e4239e1f88324d1056c8caff4; SVperitus 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c; laboratorio 59ff0937c3c7d50f390116f05baacb2f91a37b38
+**cortes_de_entrada:** Lenguaje 19540321089dc48e4239e1f88324d1056c8caff4; SVperitus 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c; laboratorio 59ff0937c3c7d50f390116f05baacb2f91a37b38; ampliación de fundamentos Lenguaje fa3eb727799c322090e4e9126f81238cd198b9cc
 
 **dependencias:** S19 / RETP-191; instrucción expresa de Juan Antonio; Pilares; perfiles; transición; antecedente 2021; código SVperitus.
 
-**resultado:** Recepción documental iniciada. PDF aportado contiene índice de siete páginas y enlaces; no los capítulos completos.
+**resultado:** Explicación pública MD/PDF y recepción documental (p1+p3)-Bis. Suficiencia integrada, elección de IA y promoción nuclear pendientes.
 
-**verificacion:** Lectura iniciada antes del alta; se declara sin retrofechar. Sin ejecución de modelos.
+**verificacion:** Fuentes cotejadas contra blobs Git; revisión estática y testigo de índices; PDF renderizado y revisado; copias verificadas al publicar.
 
 **evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-192
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-193
 
-**siguiente_accion:** Preparar explicación MD/PDF, hallazgos y obligaciones pendientes, conservar copias y registrar el cierre documental.
+**siguiente_accion:** Fijar contrato y banco de paridad posicional, semántica y operacional; resolver hallazgos del antecedente antes de reutilizarlo; después derivar causas comprobadas al catálogo.
 
-**observaciones:** La habilitación del catálogo de S19 se conserva como antecedente. Este estudio previo la complementa por instrucción humana. Agentes sin calendario impuesto; inmunología conserva su secuencia. Ningún fallo técnico se transforma en U.
+**observaciones:** La habilitación del catálogo de S19 se conserva como antecedente. Este estudio previo la complementa por instrucción humana. Agentes sin calendario impuesto; inmunología conserva su secuencia. Ningún fallo técnico se transforma en U. Primacía algebraico-semántica reafirmada por el autor durante la revisión. Discrepancias de antecedentes documentadas sin corregir originales.
 

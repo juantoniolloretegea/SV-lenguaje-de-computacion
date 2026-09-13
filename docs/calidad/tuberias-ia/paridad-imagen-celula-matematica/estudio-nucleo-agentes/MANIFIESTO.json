@@ -1,0 +1,65 @@
+{
+  "version": "P1P3-BIS-ENTREGA/1",
+  "archivos": [
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.md",
+      "bytes": 20053,
+      "sha256": "a6689ecbd7900e93d9473b5f1a4d38504edb838ba0c4be583c73070b04408168",
+      "git_blob": "be40753030b2e983786383f54a79cd6916593bfa"
+    },
+    {
+      "ruta": "CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.pdf",
+      "bytes": 293847,
+      "sha256": "a87055cb20fbb2d212e3d462397ec2afe9050603f5448d6ebfa182ee8e425d8d",
+      "git_blob": "35dfc10d176fbe1d8910713cd2fce2c75567dbb5"
+    },
+    {
+      "ruta": "Frame-ciberseguridad.svg",
+      "bytes": 29482,
+      "sha256": "3088d7e7058e31bbda334c9055fc6f3a16ffacef27b6a47347c3e203f6ae8178",
+      "git_blob": "72bebbbab2a8e6e1c676d3fba197bfd44536d7a3"
+    },
+    {
+      "ruta": "antecedentes/INDICE_COLECCION_SVCUSTOS_SVPERITUS_2026_09_13.pdf",
+      "bytes": 243581,
+      "sha256": "a5983526fe95fb83e04d81035a2192b32dbe9808c3a416eb541a9df8af43a94c",
+      "git_blob": "2b4ffd0539d106f19394793f13005bf007beacc7"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/FUENTES.json",
+      "bytes": 19800,
+      "sha256": "02c3907e357f01a7b8d7caa13d01738d53799b855ba3d9496f62b1e279d53e64",
+      "git_blob": "8bdfe8c3e03ccc8b162bbff8e7c5540132e6e0ea"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/HALLAZGOS.md",
+      "bytes": 8124,
+      "sha256": "a110d31d0e6c3dacdfc560139b458f09ac00ba0255ae8f56646384f88b10b796",
+      "git_blob": "cd70a4e0dfbaef110a150efc290da82c554f3f15"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/README.md",
+      "bytes": 5270,
+      "sha256": "058e86742be52d9465a981b9f59bb4d65a498158b56fe11163e10308c51978bf",
+      "git_blob": "3b8ff2438a9c00d902b289c0cedd34922bd826b1"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/TESTIGO_INDICES.json",
+      "bytes": 651,
+      "sha256": "2531875d880fa4f14526a0d40a10d198789a0fc2372bb028c3c8edf046c62022",
+      "git_blob": "4e87ed0d98a8374fe17925621fcc1783838d2bc5"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/VERIFICACION.json",
+      "bytes": 988,
+      "sha256": "2a4282413c5cce069331a1c39b10b4c2954786e24d82f433309ad5f189b65ebe",
+      "git_blob": "058186e6b137a2df81711a0c91a7a5dbadcd78cb"
+    },
+    {
+      "ruta": "estudio-nucleo-agentes/testigo_indices.py",
+      "bytes": 1553,
+      "sha256": "6193fb9d01dbb8bed755860891f4d8baa8f376b1c5e430015e2b5481b4e88dec",
+      "git_blob": "18d7f824015b69d6315e6ec35296f7d17769f5c5"
+    }
+  ]
+}

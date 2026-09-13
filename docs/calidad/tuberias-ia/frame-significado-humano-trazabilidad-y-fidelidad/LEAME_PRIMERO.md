@@ -2,7 +2,7 @@
 
 **Juan Antonio Lloret Egea y Watson · 12 de septiembre de 2026**
 
-Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne dos carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, y la de trazabilidad y auditoría del trabajo de la IA.
+Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne las carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, la de trazabilidad y auditoría del trabajo de la IA, y la de paridad entre célula matemática e imagen.
 
 ## Entrada obligatoria: Sucesos SV · 12 de septiembre de 2026
 
@@ -18,8 +18,9 @@ Las referencias y estados de los apartados siguientes conservan su corte histór
 | --- | --- | --- |
 | 1 | [Frame: significado humano, trazabilidad y fidelidad — Markdown](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md) · [PDF](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf) | El volcán permite examinar qué se conserva, pierde o sustituye en la representación, y por qué importa al profesional. |
 | 2 | [Adenda: del volcán al encaje visual del SV — Markdown](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.md) · [PDF](ADENDA_ENCAJE_VISUAL_EXPERTO_AGENTE_Y_LOGO_SV_2026_09_12.pdf) | Los antiguos polígonos IMMUNO-1/2 y el logo enlazan la escena compartida por experto y agente con su representación computable. Incluye las dos confirmaciones. |
-| 3 | [Trazabilidad, auditoría y reproducción del trabajo de la IA](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md) | Pueden variar los procedimientos válidos; se conservan el conocimiento pertinente, las reglas, los artefactos, los resultados y las mediciones. |
-| 4 | [Índice técnico vigente](../inicio.md) | Localizar el relevo aplicable y la evidencia de realización antes de intervenir. Esta secuencia conceptual no sustituye las actas rectoras. |
+| 3 | [(p1+p3)-Bis: célula matemática, imagen y agentes — Markdown](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.md) · [PDF](../paridad-imagen-celula-matematica/CELULA_IMAGEN_Y_AGENTES_EN_EL_SV_P1_P3_BIS_2026_09_13.pdf) | Los fundamentos algebraico-semánticos gobiernan radios, posiciones, evaluación y composición. Las funciones nuclear de dominio y singular de decisión comparten molde. |
+| 4 | [Trazabilidad, auditoría y reproducción del trabajo de la IA](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md) | Pueden variar los procedimientos válidos; se conservan el conocimiento pertinente, las reglas, los artefactos, los resultados y las mediciones. |
+| 5 | [Índice técnico vigente](../inicio.md) | Localizar el relevo aplicable y la evidencia de realización antes de intervenir. Esta secuencia conceptual no sustituye las actas rectoras. |
 
 ## Dos confirmaciones recibidas
 
@@ -43,3 +44,9 @@ El cierre es de comprensión y referencia documental. Permite retomar el trabajo
 [Imágenes originales](imagenes/) · [Manifiesto de identidades](MANIFIESTO.json) · [Nota de preparación y comprobación de la adenda](soporte/NOTA_ADENDA.md).
 
 El diálogo y el PDF originales del volcán se conservan. Las incorporaciones posteriores quedan identificadas por fecha. Este expediente tiene copia idéntica en Calidad del Lenguaje y en la rama privada del laboratorio.
+
+## Incorporación del 13 de septiembre de 2026: (p1+p3)-Bis
+
+Leer los [Fundamentos algebraico-semánticos](../paridad-imagen-celula-matematica/Fundamentos%20algebraico-sem%C3%A1nticos%20del%20Sistema%20Vectorial%20SV.md) como referencia rectora de la representación y después la explicación del punto 3 de la tabla. La célula exacta, sus radios visibles y los índices de una clase de IA son objetos distintos. El molde compartido no autoriza inversiones semánticas ni una composición universal.
+
+El [estudio núcleo–agentes](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md) conserva los contrastes, las fuentes y las cuestiones abiertas. Se completa la recepción documental S20; la suficiencia de semántica V0.2/IR 0.3 y la capacidad NLP/visión requieren trabajo material posterior. Esta incorporación no modifica las confirmaciones históricas ni acredita una conformidad humana adicional.

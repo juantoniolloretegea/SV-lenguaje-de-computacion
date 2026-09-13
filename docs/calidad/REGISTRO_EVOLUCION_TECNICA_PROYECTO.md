@@ -1927,3 +1927,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-192 · S20 · Apertura de (p1+p3)-Bis
 
 2026-09-13T04:13:33Z. Recepción documental iniciada. PDF aportado contiene índice de siete páginas y enlaces; no los capítulos completos. Lectura iniciada antes del alta; se declara sin retrofechar. Sin ejecución de modelos. [Expediente](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md). Preparar explicación MD/PDF, hallazgos y obligaciones pendientes, conservar copias y registrar el cierre documental. Sin modificación de semántica, IR, Rust, modelos o parámetros de dominio.
+
+
+<a id="retp-193"></a>
+
+### RETP-2026-193 · S20 · Recepción documental de (p1+p3)-Bis
+
+2026-09-13T04:30:28Z. Explicación pública MD/PDF y recepción documental (p1+p3)-Bis. Suficiencia integrada, elección de IA y promoción nuclear pendientes. Fuentes cotejadas contra blobs Git; revisión estática y testigo de índices; PDF renderizado y revisado; copias verificadas al publicar. [Expediente](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/README.md). Fijar contrato y banco de paridad posicional, semántica y operacional; resolver hallazgos del antecedente antes de reutilizarlo; después derivar causas comprobadas al catálogo. Sin modificación de semántica, IR, Rust, modelos o parámetros de dominio.
