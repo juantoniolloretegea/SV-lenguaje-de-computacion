@@ -1,0 +1,10 @@
+{
+  "comando": "manifiesto-sv",
+  "ubicacion": "/root/.cargo/bin/manifiesto-sv",
+  "resultado": "CONFORME",
+  "bytes": 19134,
+  "sha256": "31ae77a963718ac72bbb74a4aac4fd06d788117167162835e0652f9fb2a60056",
+  "directorio_de_ejecucion": "temporal ajeno al repositorio",
+  "instalacion": "cargo +1.98.0 install --path rust/sv_native --offline",
+  "alcance": "entorno remoto de trabajo; no instalación en el PC del autor"
+}

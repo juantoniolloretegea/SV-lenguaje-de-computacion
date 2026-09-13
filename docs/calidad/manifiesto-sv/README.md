@@ -61,3 +61,23 @@ S22 / (p1+p3)-Bis continúa desde BIS-02: preparar entradas y oráculos de BIS-C
 ## Corrección de empaquetado detectada en CI
 
 La primera candidata, `074436ce0a5fa9dd3fd3c3b1b8e45cf4419bbce5`, falló en la [ejecución aislada de fila 7](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744228854): la lista de fuentes admitidas omitía el nuevo recurso Markdown requerido por `include_str!`. Se añade exclusivamente ese fichero a las listas de empaquetado y verificación; se mantienen las restricciones sobre otros archivos. El ensayo aislado comprueba ahora las dos consultas del manifiesto y la autoprueba añade tres rechazos específicos. El registro original se conserva en `evidencia/ci-empaquetado-inicial.log`. El resultado de la repetición se documentará con el commit efectivamente comprobado.
+
+
+La primera ejecución WASM de la candidata corregida terminó con `PENDIENTE` al capturar el DOM de la sonda LIG/0.1; no informó divergencia algebraica ni fallo del manifiesto. Se conserva `evidencia/ci-wasm-intento-1.log`. Se repitió el trabajo sobre el mismo commit, sin cambiar las pruebas ni sus criterios. El resultado posterior y su número de intento constan en el recibo; la causa raíz de esa captura pendiente no queda acreditada por una repetición satisfactoria.
+
+## Integración y cierre instrumental
+
+2026-09-13T07:16:29Z: S23 finalizado mediante [PR #90](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/pull/90). Candidata comprobada: `1469b08272f5d5c10e406dfa77f76a4d11c3accc`; integración: `efdb68d6c62355a75aa1d2b3b196bb78246f2014`. Los seis flujos terminaron satisfactoriamente. El [recibo de integración](evidencia/INTEGRACION.json) conserva identificadores, intentos y pasos.
+
+| Flujo | Resultado | Evidencia |
+|---|---|---|
+| Fila 7 fuentes y ejecución sin intérpretes | Conforme | [Ejecución 34744520767](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520767) |
+| Conformidad SVP | Conforme | [Ejecución 34744520774](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520774) |
+| R0 Rust | Conforme | [Ejecución 34744520781](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520781) |
+| Retorno CYB documental | Conforme | [Ejecución 34744520785](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520785) |
+| R0 WASM paridad nativa y navegador | Conforme | [Ejecución 34744520798](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520798) |
+| R0-8 Baseline nativa | Conforme | [Ejecución 34744520803](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/actions/runs/34744520803) |
+
+El comando quedó además instalado en el entorno remoto mediante Cargo offline y se comprobó por nombre desde un directorio ajeno al repositorio: `evidencia/COMANDO_INSTALADO.json` y `evidencia/cargo-install.log`. La repetición aislada construyó y probó Rust sin red ni intérpretes Python/Node; contrastó las dos salidas del manifiesto y superó los once controles negativos del paquete. El flujo de paridad incluye el corpus en navegador; esto no declara desplegada una interfaz de consulta del manifiesto en la aplicación pública. S22 continúa en BIS-02 con sus 24 escenarios aún sin ejecutar. El registro de cierre y las copias preservan el alcance instrumental de S23.
+
+Copia de laboratorio verificada por árbol Git en `d2e10fe6d75ba334956de66b7532b0ce3f890f6a` (repositorio privado del proyecto); el expediente público contiene la evidencia necesaria para su lectura independiente.

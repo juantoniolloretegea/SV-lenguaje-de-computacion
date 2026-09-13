@@ -788,15 +788,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
-**estado:** en ejecución
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-13T07:00:25Z
 
 **fecha_inicio_utc:** 2026-09-13T07:00:25Z
 
-**fecha_actualizacion_utc:** 2026-09-13T07:00:25Z
+**fecha_actualizacion_utc:** 2026-09-13T07:16:29Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-13T07:16:29Z
 
 **unidad_responsable:** Watson / W-S0
 
@@ -808,15 +808,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** Instrucción humana expresa; S22; AGENTS; Pilares; perfiles/ensamblaje; transición; acta de prohibición de uso bélico de 26/03/2026
 
-**resultado:** Rust 1.98.0 y Cargo 1.98.0 instalados. Consulta incorporada: 19 134 bytes idénticos entre destinos. Candidata ensayada localmente; integración y controles remotos pendientes.
+**resultado:** Rust y Cargo 1.98.0 disponibles en el entorno remoto. Manifiesto completo incorporado al núcleo, consulta nativa/WASI/WASM verificada; PR #90 integrada en efdb68d6c62355a75aa1d2b3b196bb78246f2014.
 
-**verificacion:** 369 pruebas nativas del workspace; 14 válidos y 106 inválidos de conformidad y paridad nativa-WASI; identidad manifiesto en nativo/WASI/adaptador WASM; negativos de argumentos, stdout y sensibilidad. Incidencias iniciales conservadas.
+**verificacion:** 369 pruebas nativas; 120 casos de conformidad y paridad nativa-WASI; seis flujos CI conformes sobre 1469b08272f5d5c10e406dfa77f76a4d11c3accc; paquete aislado sin red ni Python/Node, con identidad de las dos consultas y 11 rechazos de integridad. Copias verificadas por árbol Git.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/manifiesto-sv-20260913/docs/calidad/manifiesto-sv/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/manifiesto-sv/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-201
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-202
 
-**siguiente_accion:** Superar controles sobre candidata exacta, integrar y verificar copias; volver a S22/BIS-02.
+**siguiente_accion:** Retomar S22 / BIS-02 por BIS-C01: materializar entradas y oráculos; comprobar versiones y PATH al reanudar.
 
-**observaciones:** Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles.
+**observaciones:** Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles. CI detectó omisión del recurso Markdown en el paquete: fallo conservado y corregido mediante admisión de ruta exacta y controles específicos. El resultado no ejecuta los 24 escenarios BIS-02.
 

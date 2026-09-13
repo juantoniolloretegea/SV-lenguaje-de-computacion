@@ -43,7 +43,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Tras el expediente instrumental S23, materializar fixtures y oráculos del primer par BIS-C01; completar los contratos de BIS-02. Comprobar Rust 1.98.0 al reanudar.",
+  "siguiente_accion": "Retomar S22 / BIS-02 por BIS-C01: materializar entradas y oráculos; comprobar versiones y PATH al reanudar.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -69,7 +69,10 @@
     "suceso": "S23",
     "rustc": "1.98.0",
     "cargo": "1.98.0",
-    "estado": "instalado y ensayado en entorno remoto; comprobar PATH en cada consola",
-    "expediente": "../../../manifiesto-sv/README.md"
+    "estado": "S23 finalizado: integrado y verificado; comprobar versiones y PATH en cada relevo",
+    "expediente": "../../../manifiesto-sv/README.md",
+    "commit_probado": "1469b08272f5d5c10e406dfa77f76a4d11c3accc",
+    "commit_integracion": "efdb68d6c62355a75aa1d2b3b196bb78246f2014",
+    "registro": "RETP-2026-202"
   }
 }

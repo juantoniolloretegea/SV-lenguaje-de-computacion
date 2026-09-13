@@ -1990,3 +1990,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 ### RETP-2026-201 · S23 · Rust nativo y manifiesto incorporado
 
 2026-09-13T07:00:25Z. Rust 1.98.0 y Cargo 1.98.0 instalados. Consulta incorporada: 19 134 bytes idénticos entre destinos. Candidata ensayada localmente; integración y controles remotos pendientes. 369 pruebas nativas del workspace; 14 válidos y 106 inválidos de conformidad y paridad nativa-WASI; identidad manifiesto en nativo/WASI/adaptador WASM; negativos de argumentos, stdout y sensibilidad. Incidencias iniciales conservadas. [Contrato, resultados y reproducción](manifiesto-sv/README.md). Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles.
+
+
+<a id="retp-202"></a>
+
+### RETP-2026-202 · S23 · Consulta manifiesto-sv integrada y soporte nativo comprobado
+
+2026-09-13T07:16:29Z. Rust y Cargo 1.98.0 disponibles en el entorno remoto. Manifiesto completo incorporado al núcleo, consulta nativa/WASI/WASM verificada; PR #90 integrada en efdb68d6c62355a75aa1d2b3b196bb78246f2014. 369 pruebas nativas; 120 casos de conformidad y paridad nativa-WASI; seis flujos CI conformes sobre 1469b08272f5d5c10e406dfa77f76a4d11c3accc; paquete aislado sin red ni Python/Node, con identidad de las dos consultas y 11 rechazos de integridad. Copias verificadas por árbol Git. [Contrato, evidencia e incidencias](manifiesto-sv/README.md). Retomar S22 / BIS-02 por BIS-C01: materializar entradas y oráculos; comprobar versiones y PATH al reanudar. Alta de actividad ya iniciada, declarada sin retrofechar. Entorno efímero: verificar PATH y herramientas en cada relevo. Consulta documental no prueba bloqueo de uso prohibido; no se ejecuta Rosetta ni se altera gramática/IR/perfiles. CI detectó omisión del recurso Markdown en el paquete: fallo conservado y corregido mediante admisión de ruta exacta y controles específicos. El resultado no ejecuta los 24 escenarios BIS-02.
