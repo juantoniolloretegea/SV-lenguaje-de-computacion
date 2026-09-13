@@ -144,3 +144,7 @@ Recibidas ocho obligaciones materiales y ocho discriminadores previos en S26, co
 Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
 
 [Recepción contractual](RECEPCION_CONTRACTUAL_R02.md).
+
+## Continuación R03 / RETP-2026-226
+
+Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído. [Inventario material](r03/README.md).

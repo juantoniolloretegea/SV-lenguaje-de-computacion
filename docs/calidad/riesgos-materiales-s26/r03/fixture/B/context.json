@@ -1,0 +1,58 @@
+{
+  "id": "I0205-01",
+  "vinculo": {
+    "dominio": "DominioPrueba",
+    "constitucion": {
+      "identifier": "ConstitucionPrueba",
+      "version": "1",
+      "sha256": "1c002ba5c2c71aaf88574d677e0885686aed1dc37d0537c89d54eef834ab6d35"
+    },
+    "programa_fuente": {
+      "source_file": "dos-nodos-16.svp",
+      "source_sha256": "622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b"
+    },
+    "arquitectura": "Arch1",
+    "nodo": "CC1",
+    "cellspec": "C1",
+    "instancia_celular": "A",
+    "revision": "r1",
+    "estado_ir": "S1",
+    "componente": "updated_vector",
+    "representacion": "matematica-testigo/1"
+  },
+  "fuente": {
+    "archivo": "activos/dos-nodos-16.svp",
+    "sha256": "622aeef541744aaa8fa62c872696b0f0fbcd95970c941a23532bb5402ae7132b",
+    "bytes": 1216
+  },
+  "perfil_fuente": "en",
+  "soporte": {
+    "id": "SOPORTE-SINTETICO-C02",
+    "version": "1",
+    "sha256": "7a413f303a86602271df54185b243fa5b4f4523e7cf511b0d275869d0dee4eef"
+  },
+  "dimensiones_ir_esperadas": [
+    16
+  ],
+  "estado_matematico": {
+    "archivo": "activos/estado-16.json",
+    "sha256": "1bcf1821bcdb5dd5eefc8ebfecc2bb2f01e3a3cd7394efa958c9ee5496306de8",
+    "bytes": 214
+  },
+  "geometria": {
+    "archivo": "activos/geometria-identidad.json",
+    "sha256": "b022979a6d586dee19788944eee5f7e84ec416b947d182cac3a7a1a80d1cc213",
+    "bytes": 6237
+  },
+  "entrega": {
+    "ambito": "laboratorio-i0205",
+    "invocacion": "I0205-01",
+    "operacion": "entrega_documental",
+    "consumidor": "receptor-local-prueba",
+    "canal": "memoria-local",
+    "instancia_celular": "A",
+    "revision": "r1",
+    "representacion": "BIS-C04-GEOMETRIA/0.1",
+    "transformacion": "identidad"
+  }
+}

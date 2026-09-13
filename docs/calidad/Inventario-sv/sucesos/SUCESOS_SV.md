@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-13T19:32:28Z
+**fecha_actualizacion_utc:** 2026-09-13T19:50:20Z
 
 **fecha_fin_utc:** —
 
@@ -906,19 +906,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 829cf7611bd5a543dbacf381a1e691d9b5fc4ce4; laboratorio f0bc7f1d56a0d1c124fc031e9a1eb199e7b7295b
+**cortes_de_entrada:** Lenguaje b0f4f5f0093ad59324fcb6e00ed65cc15e3ca8f9; laboratorio e167aeee5d58c745704000e40395a635e1f25d60
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Recibidas ocho obligaciones materiales y ocho discriminadores previos en S26, con relevo a R2-0, consulta histórica y DFL-003/004/005/006. Se precisan custodia, lectura coherente, residencia, confirmación, índices, consumidor, observador y recursos.
+**resultado:** Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído.
 
-**verificacion:** Cotejo de 26 fuentes R01 y de la publicación previa; verificación administrativa de preservación, correspondencia y enlaces. Incremento documental: cero nuevas pruebas de comportamiento; cuatro sondas R01 anteriores conservadas; cero casos globales S26 cerrados. Sin BD, GUI, nueva primitiva o garantía material acreditadas. S22 activo y S24 pendiente conservan su secuencia.
+**verificacion:** Fixtures A literales de R01; B añade LF y actualiza referencias de fuente. Código y oráculos fijados antes de compilar; cero sondas R03 ejecutadas.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r03/README.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-225
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-226
 
-**siguiente_accion:** Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
+**siguiente_accion:** Ejecutar R03 tras publicar precompromiso, conservar evidencia y clasificar el límite del observador sin confundir test verde con prevención material.
 
-**observaciones:** Incremento documental: cero nuevas pruebas de comportamiento; cuatro sondas R01 anteriores conservadas; cero casos globales S26 cerrados. Sin BD, GUI, nueva primitiva o garantía material acreditadas. S22 activo y S24 pendiente conservan su secuencia.
+**observaciones:** S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva.
 

@@ -2162,3 +2162,10 @@ Advertencia previa de exclusión general según criterio del SV y su dirección 
 Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
 
 [Recepción y discriminadores](riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md).
+
+
+<a id="retp-226"></a>
+
+### RETP-2026-226 · S26 · R03 previo
+
+2026-09-13T19:50:20Z. Banco R03 previo: tres sondas parciales T01/T02/T07, con controles de sustitución bajo custodia fija, lectura mezclada en barrera explícita y testigo posterior copiado frente a releído. Fixtures A literales de R01; B añade LF y actualiza referencias de fuente. Código y oráculos fijados antes de compilar; cero sondas R03 ejecutadas. Ejecutar R03 tras publicar precompromiso, conservar evidencia y clasificar el límite del observador sin confundir test verde con prevención material. S26 sigue en ejecución; los doce casos globales permanecen abiertos. S22/S24 y banco original Bis intactos. Ensayo intra-proceso y de archivos locales; sin transacción durable, GUI, adquisición física, fallo de hardware o resistencia al host acreditados. Sin selección de BD ni promoción productiva. [Inventario](riesgos-materiales-s26/r03/README.md).
