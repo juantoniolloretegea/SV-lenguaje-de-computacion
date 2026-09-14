@@ -1,6 +1,6 @@
 # Estado observado de Rust y del entorno nativo
 
-Fecha UTC: 2026-09-14T10:23:40Z. Arquitectura: x86_64. Unidad: Watson / W-S26.
+Fecha UTC: 2026-09-14T10:43:49Z. Arquitectura: x86_64. Unidad: Watson / W-S26.
 
 **Comprobación instrumental: CONFORME PARA LAS HERRAMIENTAS NATIVAS DECLARADAS.** Este registro es una observación fechada, no un monitor en directo ni garantía de persistencia después de reemplazar el entorno.
 
@@ -10,13 +10,15 @@ Fecha UTC: 2026-09-14T10:23:40Z. Arquitectura: x86_64. Unidad: Watson / W-S26.
 | cargo | /opt/sv-rust-1.98.0/bin/cargo | cargo 1.98.0 (797e8a9bc 2026-08-05) |
 | rustfmt | /opt/sv-rust-1.98.0/bin/rustfmt | rustfmt 1.9.0-stable (88d9e12ae1 2026-08-18) |
 | clippy-driver | /opt/sv-rust-1.98.0/bin/clippy-driver | clippy 0.1.98 (88d9e12ae1 2026-08-18) |
+| Gestor rustup | /opt/sv-cargo/bin/rustup | rustup 1.29.1 (d95a37b6a 2026-08-13)info: This is the version for the rustup toolchain manager, not the rustc compiler. info: the currently active `rustc` version is `rustc 1.98.0 (88d9e12ae 2026-08-18)`  |
+| Toolchain enlazado sv-1.98.0 | /opt/sv-rust-1.98.0 | Destino real cotejado con la instalación directa |
 | Biblioteca estándar nativa | /opt/sv-rust-1.98.0/lib/rustlib/x86_64-unknown-linux-gnu/lib | Directorio observado; componentes abajo |
 | cc | /usr/bin/cc | Localizado en PATH |
 | gcc | /usr/bin/gcc | Localizado en PATH |
 | ld | /usr/bin/ld | Localizado en PATH |
 | ar | /usr/bin/ar | Localizado en PATH |
 | pkg-config | — | No localizado en PATH |
-| rustup | — | No localizado en PATH |
+| rustup | /opt/sv-cargo/bin/rustup | Localizado en PATH |
 | dotnet | — | No localizado en PATH |
 
 Distribución observada:

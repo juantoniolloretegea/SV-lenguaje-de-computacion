@@ -19,6 +19,14 @@ fn run()->Result<(),Box<dyn std::error::Error>>{
  rows+=&format!("| {n} | {} | {} |\n",p.display(),v.replace('|',"/").replace('\n'," "));
  }
  let components=fs::read_to_string(prefix.join("lib/rustlib/components"))?;
+ let manager=Path::new("/opt/sv-cargo/bin/rustup");
+ if manager.is_file(){
+ let(o,v)=query(manager,&["--version"]);valid&=o;
+ rows+=&format!("| Gestor rustup | {} | {} |\n",manager.display(),v.replace('|',"/").replace('\n'," "));
+ let target=fs::canonicalize("/opt/sv-rustup/toolchains/sv-1.98.0")?;
+ valid&=target==fs::canonicalize(prefix)?;
+ rows+=&format!("| Toolchain enlazado sv-1.98.0 | {} | Destino real cotejado con la instalación directa |\n",target.display());
+ }
  let(ok,lib)=query(&prefix.join("bin/rustc"),&["--print","target-libdir"]);valid&=ok&&Path::new(&lib).is_dir();
  rows+=&format!("| Biblioteca estándar nativa | {lib} | Directorio observado; componentes abajo |\n");
  for n in ["cc","gcc","ld","ar","pkg-config","rustup","dotnet"]{

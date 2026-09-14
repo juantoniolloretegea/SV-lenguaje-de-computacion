@@ -1,5 +1,7 @@
 # S25 · Recuperación de Rust 1.98.0 y activación del entorno
 
+**S29 revisión 1:** [rustup 1.29.1 instalado y enlazado a Rust 1.98.0](RECEPCION_RUSTUP_S29.md). Activación: `. /opt/sv-rustup/env.sh`. Los estados anteriores se conservan como antecedentes fechados.
+
 **Continuidad S29, 14/09/2026:** [obligación de Rust y provisión por etapa](OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md) · [último estado observado](ESTADO_RUST.md) · [consulta escrita en Rust](estado_rust.rs). Estas referencias son la entrada instrumental vigente; S25 conserva a continuación su evidencia histórica.
 
 Juan Antonio Lloret Egea y Watson · 13 de septiembre de 2026 · RETP-2026-217

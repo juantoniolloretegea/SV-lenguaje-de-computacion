@@ -997,9 +997,9 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** —
 
-**fecha_actualizacion_utc:** 2026-09-14T10:27:16Z
+**fecha_actualizacion_utc:** 2026-09-14T10:45:22Z
 
-**fecha_fin_utc:** 2026-09-14T10:27:16Z
+**fecha_fin_utc:** 2026-09-14T10:45:22Z
 
 **unidad_responsable:** Watson / W-S26
 
@@ -1011,14 +1011,14 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** Instrucción humana del 14/09/2026; S25 instalación directa; control de auxiliares S26; S24 conserva su secuencia.
 
-**resultado:** Obligación publicada con inventario renovable por programa Rust. Ubuntu 24.04.3 LTS x86_64; Rust/Cargo 1.98.0 en /opt/sv-rust-1.98.0, biblioteca estándar nativa, rustfmt y Clippy identificados. Enlaces oficiales Linux de rustup-init y SHA-256 localizados. S24 recibe C#/.NET para su turno.
+**resultado:** Rustup 1.29.1 instalado en /opt/sv-cargo/bin/rustup; RUSTUP_HOME=/opt/sv-rustup y CARGO_HOME=/opt/sv-cargo. Toolchain personalizado sv-1.98.0 enlazado a /opt/sv-rust-1.98.0 y predeterminado. Rust/Cargo 1.98.0 conservados. Obligación Rust vigente; GUI C#/.NET diferida a S24.
 
-**verificacion:** estado_rust.rs compilado y ejecutado con retorno 0; lee la distribución, versiones, componentes y rutas. Banco LIG previo compilado offline y conforme, sin repetirlo. Se identifican cc/gcc/ld/ar y se declara rustup, pkg-config y dotnet no localizados en PATH. CSV/Markdown/historial cotejados por Rust.
+**verificacion:** ELF Linux x86-64 y SHA-256 dda7234360b7f578ca8b0ddcb80145646fa61a67c1720a5abc7051b35c9fcb71 coincidente con archivo oficial. Instalación sin descargar toolchain, enlace y selección con salida 0. Inventario Rust renovado con salida 0, versiones y destino real del enlace cotejados. CSV/Markdown/historial concordantes.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/ESTADO_RUST.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/RECEPCION_RUSTUP_S29.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/ESTADO_RUST.md
 
-**referencia_calidad:** recuperacion-rust-s25: OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md, ESTADO_RUST.md, estado_rust.rs y registrar_s29.rs; CONTROL_DE_AUXILIARES.md e inicio de lectura actualizados. RETP canónica sin cambios.
+**referencia_calidad:** RECEPCION_RUSTUP_S29.md, env-rustup.sh, estado_rust.rs y registrar_rustup_s29.rs en recuperacion-rust-s25; espejo de laboratorio en la misma recepción.
 
-**siguiente_accion:** Aplicar la obligación desde ahora, consultar y renovar el estado antes de cada etapa y provisionar las dependencias requeridas. Si se aporta rustup-init Linux, verificar su huella oficial y plataforma antes de instalar, conservando Rust 1.98.0 y registrando PATH/componentes. C#/.NET sigue en S24.
+**siguiente_accion:** Activar mediante . /opt/sv-rustup/env.sh en cada consola que lo necesite. Continuar S26 desde revisión 25 sin repetir LIG; provisionar y verificar componentes requeridos por cada etapa. C#/.NET conserva S24.
 
-**observaciones:** Cierre de incorporación de obligación, inventario y acceso; no declara instalado rustup ni migrados todos los auxiliares históricos. Registro posterior a la preparación documental, sin inventar hora de inicio. El estado web es una observación fechada, no un monitor vivo. Conectores, coordinación JavaScript y herramientas de sistema se declaran; no se presentan como escritos en Rust. No se ejecutó Python en S29. No nuevas ramas ni directorios versionados; W-S26 estable.
+**observaciones:** Revisión 1 posterior a la instalación autorizada. Se conserva revisión 0. Primer --help rechazado por nombre UUID del adjunto; corregido a rustup-init sin cambiar bytes. Advertencia del instalador por Rust preexistente conservada. Sin Python. Herramientas de sistema y coordinación del conector declaradas, sin atribuirles implementación Rust. No acredita instalación de componentes adicionales, persistencia tras reemplazo del contenedor ni migración de auxiliares históricos. RETP sin cambios; no nuevas ramas ni directorios versionados.

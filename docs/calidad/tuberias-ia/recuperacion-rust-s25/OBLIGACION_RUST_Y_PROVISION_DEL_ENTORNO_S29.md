@@ -61,3 +61,6 @@ Por instrucción humana, **C# y .NET se provisionarán cuando corresponda la GUI
 S29 registra y finaliza esta incorporación de la obligación, la localización de herramientas, el informe renovable y los enlaces oficiales pedidos. Su cierre documental no declara instalado rustup ni completada una migración general. S24 mantiene la futura provisión de C#/.NET, y S26/Bis sus obligaciones materiales pendientes. RETP canónica permanece sin cambios y se utilizan las ramas y carpetas existentes.
 
 La edición de Sucesos de esta incorporación se efectúa mediante [registrar_s29.rs](registrar_s29.rs), con conservación del historial, concordancia de CSV/Markdown y altas o revisiones identificadas. La publicación utiliza el conector GitHub; esa operación y el cotejo de árboles quedan explícitos. No se ejecuta Python en S29.
+# Actualización instrumental S29 revisión 1
+
+Rustup 1.29.1 ya está instalado y enlazado a Rust 1.98.0. [Recepción, procedencia, incidencias y acceso](RECEPCION_RUSTUP_S29.md). Las menciones siguientes a rustup no instalado describen el corte anterior de la revisión 0.
