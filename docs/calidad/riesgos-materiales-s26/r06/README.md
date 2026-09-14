@@ -121,3 +121,7 @@ Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental 
 ## Recepción posterior · LOCAL01 · RETP-236
 
 [Trece casos por perfil en Rust](local01/RESULTADOS.md): primer incremento T01/T02/T05/T06 ejecutado después del precompromiso. Se conservan apertura y captura parcial ante pánico; el consumo usa el descriptor admitido pese a sustitución de ruta. T03/T04/T07/T08 e integración permanecen pendientes. La sección 7 anterior describe el incremento contractual histórico; LOCAL01 no ejecuta Python. R06 no es cierre de R0.
+
+## S26 R06 PROCESO01 · Banco previo
+
+[Protocolo y catorce casos](proceso01/README.md): observador de un proceso hijo, correlación previa, informes duplicados o tardíos y separación de canal, terminación y efecto. Banco sin ejecutar al incorporar este precompromiso. Seguimiento por Sucesos y expediente de Calidad con espejo de laboratorio; LOCAL01/RETP-236 conserva su alcance anterior. T07 e integración pendientes; S26/Bis y S24 mantienen su secuencia.

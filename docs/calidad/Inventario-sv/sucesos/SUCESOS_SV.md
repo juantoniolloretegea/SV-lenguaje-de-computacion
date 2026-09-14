@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T05:14:04Z
+**fecha_actualizacion_utc:** 2026-09-14T06:03:06Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje d589123304905a9162148e73946914382dba995d; laboratorio a0f4aba91af549e80cfaf3daf6379dc05d158204.
+**cortes_de_entrada:** Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab; laboratorio 37fa52af4e3091aa8aea3565f0dc144e73d4654a.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 LOCAL01: trece oráculos cumplidos en dos perfiles Rust. Informe y terminación separados; captura parcial conservada ante pánico; consumidor recibe descriptor admitido pese a sustitución de ruta. Pretensión de continuidad del soporte no acreditada explícitamente.
+**resultado:** R06 PROCESO01: protocolo y catorce casos preparados para observar terminación de hijo, informes tardíos o duplicados y fallos de canal. Compilación preparatoria disponible; ninguna ejecución de los casos.
 
-**verificacion:** Precompromiso Lenguaje 8cb31db106b5621b105a5b8e0d469bf0fc8819a1 y laboratorio 1b01d66ff1c531d84f596ccf075bc3bef275b81d, anterior a las campañas. Rust 1.98.0 offline/locked: debug y release sin debug-assertions; ambos 13/13 y salida 0. Cuatro pánicos deliberados observados entre ambas campañas; escritura local de P06 conservada. Evidencia en r06/local01/RESULTADOS.md.
+**verificacion:** Código Rust y oráculos previos; 99 fuentes y piezas cotejadas contra el corte canónico. Registro de apertura en el padre, barreras explícitas y cuotas de canal. Sucesos y evidencia vinculados en Calidad y laboratorio.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/local01/RESULTADOS.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso01
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-236
+**referencia_calidad:** S26/R06/PROCESO01: expediente de Calidad; RETP-2026-236 como antecedente LOCAL01.
 
-**siguiente_accion:** Concretar y precomprometer el observador de proceso para R06 T03/T04/T08; T07 con barreras de mutación y dependencias propias. Integración del recorrido completo pendiente. S26 y Bis abiertos; S24 pendiente. R06 no es cierre de R0.
+**siguiente_accion:** Ejecutar los catorce casos tras publicar y cotejar el precompromiso; conservar ambas campañas y recibir los resultados. T07 e integración completa pendientes. S26 y Bis abiertos; S24 pendiente.
 
-**observaciones:** Cualificación local T01/T02/T05/T06; cero casos globales S26 cerrados. Catch_unwind no sobrevive abort ni pérdida del proceso/host. Captura local no acredita pantalla, adquisición física, transacción durable ni efecto externo. No se acredita rollback ni ejecución exactamente una vez. Cero Python; núcleo y campañas previas intactos.
+**observaciones:** Protocolo experimental bajo un anfitrión confiable; no acredita supervivencia del padre, durabilidad, aislamiento hostil, GUI ni efecto externo. Sin reintento automático ni cambio de núcleo. Seguimiento por revisiones de S26, sin nuevo asiento RETP.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

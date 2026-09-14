@@ -196,3 +196,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## Recepción R06 LOCAL01 · RETP-236
 
 [Resultados y evidencia](r06/local01/RESULTADOS.md): trece oráculos cumplidos en debug y release. Informe y terminación separados, captura conservada ante pánico y ligadura admitido-consumido en sustitución de ruta. Perfil superior no ofrecido declarado no acreditado. T03/T04/T07/T08 siguen pendientes; cero casos globales cerrados. R06 es pieza de S26, no cierre de R0. Cero Python; R08 prepara/comprueba los registros y coteja árboles completos.
+
+## S26 R06 PROCESO01 · Banco previo
+
+[Protocolo y catorce casos](r06/proceso01/README.md): observador de un proceso hijo, correlación previa, informes duplicados o tardíos y separación de canal, terminación y efecto. Banco sin ejecutar al incorporar este precompromiso. Seguimiento por Sucesos y expediente de Calidad con espejo de laboratorio; LOCAL01/RETP-236 conserva su alcance anterior. T07 e integración pendientes; S26/Bis y S24 mantienen su secuencia.

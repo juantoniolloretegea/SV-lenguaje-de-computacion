@@ -1,0 +1,404 @@
+{
+  "version": "S26-R06-PROCESO01-FUENTES/1",
+  "canon": "2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab",
+  "espejo": "37fa52af4e3091aa8aea3565f0dc144e73d4654a",
+  "fuentes_cotejadas": [
+    {
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "blob": "27609888898d5ad2b214ed53786fa8f55781a61c"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/canonical.bin",
+      "blob": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/constitution.bin",
+      "blob": "976f7492cf7fa1dbc90ab558f5df1d63799148e9"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/context.json",
+      "blob": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/convention.bin",
+      "blob": "c7f670dbd34be2725ba34428f52d1f5a8dbef149"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/expected.bin",
+      "blob": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/geometry.bin",
+      "blob": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/injection.bin",
+      "blob": "bc30e4a05c1753a3338a14e4794f9fd6141218ab"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/oracle.json",
+      "blob": "ebd264ca259a125943adc97a7a385e757e44d605"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/plan.json",
+      "blob": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/registry.json",
+      "blob": "a433e4931348aeee787be87dc44c0b8de77a9441"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/request.json",
+      "blob": "8e1854ea56cdd2ae630c52f269ba003604f2cb42"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/source.bin",
+      "blob": "64204f8f7dc90c87fde3927ea848054e49947359"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/state.bin",
+      "blob": "c039ebc56a66ddb1507d46278936bbb3a37b69d3"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/support.bin",
+      "blob": "7941fa214027ada610f942ba27b315a5b78bb1cb"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/transforms.bin",
+      "blob": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/vector-alterado.bin",
+      "blob": "f015d437d5406b641132db52b8c4b9918394be08"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/audit_diagnostics.rs",
+      "blob": "4e71a09d135549f0016917d93577a14e37f40782"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reception.rs",
+      "blob": "17616a66de8d26c09ad0578a0806bb7f60f22082"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs",
+      "blob": "242a1e04e78353f154cb481a5caf4794ad807441"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests/diagnostic_tests.rs",
+      "blob": "9cf70186c518ec9a7063b9504b4c4a278a78b642"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/lib.rs",
+      "blob": "84debef4e0452c1e18d35ccd4f4ed97460674428"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/requirements/observed.rs",
+      "blob": "c19058d2d3b307980fa9ab3dbef655769a59484a"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/compiler_diagnostics.rs",
+      "blob": "5564f2b5684ddf56f72a72f5942816ef40ff7a28"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/frontend.rs",
+      "blob": "f2ec5f89e7209d003b45ca04e8272e43ca4602db"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/lib.rs",
+      "blob": "a01cebae64b86164fb1ef997b3b0b5987b8ea9c1"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/wellformed.rs",
+      "blob": "445cf132c5b4c7c1bce6b797d25d8e5be4fa9e48"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/intervalo-del-conjunto-de-estados/cambios/rust/sv_core/src/frontend.rs",
+      "blob": "b42d8e06ee76ba2395c933a1e27a0e210c970073"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/json.rs",
+      "blob": "5b4dbe05906f2e5f6e0aa774f61ec7fa603efca7"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs",
+      "blob": "88fd1d14bbbca1137c7c26f2fbb25d4a5e21cc42"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/main.rs",
+      "blob": "5089f555a8e01c08fcc0f7eca5f4a9e8346c326b"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/observer.rs",
+      "blob": "d726ded2e5bd5fb796892adce1ab640896fc7ec7"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/sha.rs",
+      "blob": "f26908ad6447c5179cc18fa8434f3d1ae5c2fc02"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/ubicaciones-de-rechazos-compuestos/cambios/rust/sv_core/src/frontend.rs",
+      "blob": "0dbcb781966f6b16dbafe4e26df9e65462177049"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/cambios/rust/sv_core/src/compiler_diagnostics.rs",
+      "blob": "1eba5a01b623485af1d628287931432e69380731"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/cambios/rust/sv_core/src/frontend.rs",
+      "blob": "8411beb55e8fa96bfb01dffcb6341db19a6a9ad4"
+    },
+    {
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "blob": "44f8fda87856ab16007195cab324d40a758e506a"
+    },
+    {
+      "path": "rust/sv_core/Cargo.toml",
+      "blob": "d284864c44d0e36d022768131abf88c450b95eb6"
+    },
+    {
+      "path": "rust/sv_core/assets/manifiesto-sv.md",
+      "blob": "a58b410d325d545f3d401c2a7f9a421b15512f95"
+    },
+    {
+      "path": "rust/sv_core/examples/binding_probe.rs",
+      "blob": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46"
+    },
+    {
+      "path": "rust/sv_core/examples/binding_probe_browser.rs",
+      "blob": "dbcb45298808828d94829a4322265cbfcd235fd0"
+    },
+    {
+      "path": "rust/sv_core/examples/cyb_reception_probe.rs",
+      "blob": "9f51f7ef672c9830d193e6d496ca9d869ef5b560"
+    },
+    {
+      "path": "rust/sv_core/examples/gh_binding_probe.rs",
+      "blob": "6b031259b380176373d722e87cc758a9d9c4c6f3"
+    },
+    {
+      "path": "rust/sv_core/examples/gh_binding_probe_browser.rs",
+      "blob": "e400ee6a809948590bbffe9276704ed92facd11c"
+    },
+    {
+      "path": "rust/sv_core/examples/probe_assembly_2b.rs",
+      "blob": "02a7570c68f30fa1777760913ad32d69238ce8a6"
+    },
+    {
+      "path": "rust/sv_core/src/admissibility.rs",
+      "blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8"
+    },
+    {
+      "path": "rust/sv_core/src/authority.rs",
+      "blob": "95a976d32444537ba4240cf7ad4375eca37ef064"
+    },
+    {
+      "path": "rust/sv_core/src/authority/transitions.rs",
+      "blob": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4"
+    },
+    {
+      "path": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "blob": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3"
+    },
+    {
+      "path": "rust/sv_core/src/bindings.rs",
+      "blob": "6fb0971638d4ee72edab02d9e39bb52c53330041"
+    },
+    {
+      "path": "rust/sv_core/src/c03_tests.rs",
+      "blob": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5"
+    },
+    {
+      "path": "rust/sv_core/src/context_wellformed.rs",
+      "blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7"
+    },
+    {
+      "path": "rust/sv_core/src/control.rs",
+      "blob": "08899b4dfb3a7e936b8649929619f57454248c42"
+    },
+    {
+      "path": "rust/sv_core/src/control_tests.rs",
+      "blob": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d"
+    },
+    {
+      "path": "rust/sv_core/src/decision_trace.rs",
+      "blob": "d3074524e0477e7c54728238119f7e54ded215c2"
+    },
+    {
+      "path": "rust/sv_core/src/equivalence.rs",
+      "blob": "22903a491b3abe12749921b12c92b0319b7c225e"
+    },
+    {
+      "path": "rust/sv_core/src/execution.rs",
+      "blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de"
+    },
+    {
+      "path": "rust/sv_core/src/frame.rs",
+      "blob": "c0a94c175f563a0145d31965da71fd3b1b07c732"
+    },
+    {
+      "path": "rust/sv_core/src/frame_tests.rs",
+      "blob": "ec3202906af340830f762cc6dc44af1f9824e6e3"
+    },
+    {
+      "path": "rust/sv_core/src/frontend.rs",
+      "blob": "c73933b661f08c4d0123b8a22f436962b5481208"
+    },
+    {
+      "path": "rust/sv_core/src/grammar_conformance.rs",
+      "blob": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d"
+    },
+    {
+      "path": "rust/sv_core/src/identifier_profile.rs",
+      "blob": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1"
+    },
+    {
+      "path": "rust/sv_core/src/ir.rs",
+      "blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7"
+    },
+    {
+      "path": "rust/sv_core/src/ir_tests.rs",
+      "blob": "e339664be237680d6874fd544b3bf1b99e50a93d"
+    },
+    {
+      "path": "rust/sv_core/src/lib.rs",
+      "blob": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90"
+    },
+    {
+      "path": "rust/sv_core/src/manifiesto.rs",
+      "blob": "6e3fb9ee0d238421fa1f81514b79e0d7f9149a42"
+    },
+    {
+      "path": "rust/sv_core/src/mediation.rs",
+      "blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c"
+    },
+    {
+      "path": "rust/sv_core/src/nat.rs",
+      "blob": "f97b63e4a59b255935a68c1dde322ee52a5df337"
+    },
+    {
+      "path": "rust/sv_core/src/permission.rs",
+      "blob": "980270a996ae02df66f26788b2ab32c077d7e30c"
+    },
+    {
+      "path": "rust/sv_core/src/requirements.rs",
+      "blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a"
+    },
+    {
+      "path": "rust/sv_core/src/requirements/initial.rs",
+      "blob": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a"
+    },
+    {
+      "path": "rust/sv_core/src/requirements_bridge.rs",
+      "blob": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29"
+    },
+    {
+      "path": "rust/sv_core/src/requirements_conflict.rs",
+      "blob": "91fb4638389114a0cbc1af4152111fbddc451d82"
+    },
+    {
+      "path": "rust/sv_core/src/requirements_coverage.rs",
+      "blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e"
+    },
+    {
+      "path": "rust/sv_core/src/requirements_reuse.rs",
+      "blob": "fffe1e4f9415f6ffef92585d20023bc84857d6af"
+    },
+    {
+      "path": "rust/sv_core/src/resolution.rs",
+      "blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329"
+    },
+    {
+      "path": "rust/sv_core/src/resolution_tests.rs",
+      "blob": "6f0466888c87f9761ccfbe7aed10fae768fbad07"
+    },
+    {
+      "path": "rust/sv_core/src/transition_data_wellformed.rs",
+      "blob": "4f38c7a5d51f9173444445c4b8e7f60187487697"
+    },
+    {
+      "path": "rust/sv_core/src/wellformed.rs",
+      "blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6"
+    },
+    {
+      "path": "rust/sv_core/tests/admissibility_table_causal.rs",
+      "blob": "3d38d75129da74cb747372dd5764a481c2d33774"
+    },
+    {
+      "path": "rust/sv_core/tests/architecture_type_guards.rs",
+      "blob": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5"
+    },
+    {
+      "path": "rust/sv_core/tests/bindings.rs",
+      "blob": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377"
+    },
+    {
+      "path": "rust/sv_core/tests/bridge_set.rs",
+      "blob": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368"
+    },
+    {
+      "path": "rust/sv_core/tests/cell_geometry_native.rs",
+      "blob": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a"
+    },
+    {
+      "path": "rust/sv_core/tests/codomain_uniqueness.rs",
+      "blob": "46480951c432331f08c612f47e529d25f478dfc0"
+    },
+    {
+      "path": "rust/sv_core/tests/context_wellformed.rs",
+      "blob": "765d6aaa176969f8970e07a7575b431446c6a9e2"
+    },
+    {
+      "path": "rust/sv_core/tests/cyb_authority_boundary.rs",
+      "blob": "7271d852148aff5c9ec4a876bb759ccccd72f727"
+    },
+    {
+      "path": "rust/sv_core/tests/cyb_reception.rs",
+      "blob": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad"
+    },
+    {
+      "path": "rust/sv_core/tests/domain_parameters.rs",
+      "blob": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3"
+    },
+    {
+      "path": "rust/sv_core/tests/gh_bindings.rs",
+      "blob": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f"
+    },
+    {
+      "path": "rust/sv_core/tests/grammar_closed_domains.rs",
+      "blob": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd"
+    },
+    {
+      "path": "rust/sv_core/tests/horizon_architecture.rs",
+      "blob": "0dc7bb3c08225e6ccd553711c1121e6463c2e556"
+    },
+    {
+      "path": "rust/sv_core/tests/horizon_events.rs",
+      "blob": "05145e06e8ba24346dde77e062ebdd883b4ad92d"
+    },
+    {
+      "path": "rust/sv_core/tests/json_projection.rs",
+      "blob": "31a9c316b390cc7e58ccfdf9379e848acef57dd5"
+    },
+    {
+      "path": "rust/sv_core/tests/optional_fields.rs",
+      "blob": "dceef86c0b3e4510558aa7069874bf90e293618c"
+    },
+    {
+      "path": "rust/sv_core/tests/output_semantics_totality.rs",
+      "blob": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452"
+    },
+    {
+      "path": "rust/sv_core/tests/projection_metadata_native.rs",
+      "blob": "13231d08c7dd6da46843fe02cd622a0bfe84e44c"
+    },
+    {
+      "path": "rust/sv_core/tests/transition_data_wellformed.rs",
+      "blob": "caf66ddd893ce952526e9a8832dd69ed3209318e"
+    }
+  ],
+  "criterio": "Bytes locales cotejados contra el árbol canónico completo. Las huellas identifican contenido, sin constituir por sí mismas autoridad."
+}

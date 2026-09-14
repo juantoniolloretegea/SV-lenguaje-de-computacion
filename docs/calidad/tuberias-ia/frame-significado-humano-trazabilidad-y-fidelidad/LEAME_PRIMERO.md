@@ -136,3 +136,7 @@ R06: recepción contractual de terminación sin informe y alcance de identidad d
 ## S26 R06 LOCAL01 · RETP-236
 
 [Recepción, pruebas y relevo](../../riesgos-materiales-s26/r06/local01/RESULTADOS.md): trece casos conformes en dos perfiles Rust. Primer incremento local T01/T02/T05/T06; no acredita abort de proceso, host, RAM física, durabilidad ni GUI. Pendientes T03/T04/T07/T08 e integración. R06 no es el cierre de R0. Se conserva el orden S22/Bis → catálogo/cierre → S24.
+
+## S26 R06 PROCESO01 · Banco previo
+
+[Protocolo y catorce casos](../../riesgos-materiales-s26/r06/proceso01/README.md): observador de un proceso hijo, correlación previa, informes duplicados o tardíos y separación de canal, terminación y efecto. Banco sin ejecutar al incorporar este precompromiso. Seguimiento por Sucesos y expediente de Calidad con espejo de laboratorio; LOCAL01/RETP-236 conserva su alcance anterior. T07 e integración pendientes; S26/Bis y S24 mantienen su secuencia.

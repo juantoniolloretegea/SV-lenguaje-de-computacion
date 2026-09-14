@@ -1,0 +1,13 @@
+{
+  "revision": 14,
+  "suceso": {
+    "fecha_actualizacion_utc": "2026-09-14T06:03:06Z",
+    "cortes_de_entrada": "Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab; laboratorio 37fa52af4e3091aa8aea3565f0dc144e73d4654a.",
+    "resultado": "R06 PROCESO01: protocolo y catorce casos preparados para observar terminación de hijo, informes tardíos o duplicados y fallos de canal. Compilación preparatoria disponible; ninguna ejecución de los casos.",
+    "verificacion": "Código Rust y oráculos previos; 99 fuentes y piezas cotejadas contra el corte canónico. Registro de apertura en el padre, barreras explícitas y cuotas de canal. Sucesos y evidencia vinculados en Calidad y laboratorio.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso01",
+    "referencia_calidad": "S26/R06/PROCESO01: expediente de Calidad; RETP-2026-236 como antecedente LOCAL01.",
+    "siguiente_accion": "Ejecutar los catorce casos tras publicar y cotejar el precompromiso; conservar ambas campañas y recibir los resultados. T07 e integración completa pendientes. S26 y Bis abiertos; S24 pendiente.",
+    "observaciones": "Protocolo experimental bajo un anfitrión confiable; no acredita supervivencia del padre, durabilidad, aislamiento hostil, GUI ni efecto externo. Sin reintento automático ni cambio de núcleo. Seguimiento por revisiones de S26, sin nuevo asiento RETP."
+  }
+}
