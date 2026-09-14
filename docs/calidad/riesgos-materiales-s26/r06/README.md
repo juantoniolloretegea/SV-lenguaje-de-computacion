@@ -117,3 +117,7 @@ El siguiente incremento podrá preparar una copia experimental de recepción con
 ## 7. Servicios, scripts y conservación
 
 Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental y registros; el conector GitHub existente para leer cortes, publicar y comparar árboles completos, sin force. No se invoca compilador ni otra IA en este incremento. `registrar.py` conserva el contenido de las adendas y las modificaciones administrativas; `publicar.py` declara el conjunto de archivos y el espejo. `VERIFICACION.json` registra conservación de antecedentes y comprobaciones documentales. Estas verificaciones no son ensayos del comportamiento propuesto. Los archivos privados adjuntos no se copian a esta publicación.
+
+## Recepción posterior · LOCAL01 · RETP-236
+
+[Trece casos por perfil en Rust](local01/RESULTADOS.md): primer incremento T01/T02/T05/T06 ejecutado después del precompromiso. Se conservan apertura y captura parcial ante pánico; el consumo usa el descriptor admitido pese a sustitución de ruta. T03/T04/T07/T08 e integración permanecen pendientes. La sección 7 anterior describe el incremento contractual histórico; LOCAL01 no ejecuta Python. R06 no es cierre de R0.

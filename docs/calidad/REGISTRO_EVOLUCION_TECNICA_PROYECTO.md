@@ -2230,3 +2230,17 @@ Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuest
 ### RETP-2026-235 · S26 · R08 · Reparación acotada de auxiliares en Rust
 
 2026-09-13T22:22:09Z. R08: candidata auxiliar Rust con quince oráculos cumplidos en dos perfiles (30 concordancias). Guardas explícitas; cotejo completo de descriptores; preparación separada de cinco archivos; rechazo de salida incompleta o alterada. Antecedentes R07 conservados. Banco precomprometido en Lenguaje 0152c858e05bb51b3555ac5e998f526e9693ee5c y laboratorio 6e6e5f3e61095519b3041f1484c28dd98b72a76d. Rust 1.98.0: debug y optimizado con debug-assertions=no; ambos 15/15 y salida 0. P08 ensaya cinco posiciones de error tras escritura. Evidencia en r08/RESULTADOS.md. Cualificación acotada del auxiliar; no cierre material SV. La preparación no sustituye cinco archivos atómicamente. La comparación no acredita autoridad ni frescura por sí sola ni hace CAS remoto. Sin prueba de corte de energía, RAM física, host o GUI. Cero ejecuciones Python en R08; no se reescriben las herramientas heredadas. Usar la candidata para preparar y comprobar esta recepción y cotejar sus árboles remotos. Retomar R06 con correlación e identidad admitido-consumido; precomprometer T01/T02/T05/T06 antes de ejecutarlos. S26 y Bis abiertos; S24 pendiente. [Evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r08/RESULTADOS.md).
+
+<a id="retp-236"></a>
+
+### RETP-2026-236 · S26 · R06 LOCAL01 · Recepción y consumo
+
+R06 LOCAL01: trece oráculos cumplidos en dos perfiles Rust. Informe y terminación separados; captura parcial conservada ante pánico; consumidor recibe descriptor admitido pese a sustitución de ruta. Pretensión de continuidad del soporte no acreditada explícitamente.
+
+Precompromiso Lenguaje 8cb31db106b5621b105a5b8e0d469bf0fc8819a1 y laboratorio 1b01d66ff1c531d84f596ccf075bc3bef275b81d, anterior a las campañas. Rust 1.98.0 offline/locked: debug y release sin debug-assertions; ambos 13/13 y salida 0. Cuatro pánicos deliberados observados entre ambas campañas; escritura local de P06 conservada. Evidencia en r06/local01/RESULTADOS.md.
+
+Cualificación local T01/T02/T05/T06; cero casos globales S26 cerrados. Catch_unwind no sobrevive abort ni pérdida del proceso/host. Captura local no acredita pantalla, adquisición física, transacción durable ni efecto externo. No se acredita rollback ni ejecución exactamente una vez. Cero Python; núcleo y campañas previas intactos.
+
+Concretar y precomprometer el observador de proceso para R06 T03/T04/T08; T07 con barreras de mutación y dependencias propias. Integración del recorrido completo pendiente. S26 y Bis abiertos; S24 pendiente. R06 no es cierre de R0.
+
+[Evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/local01/RESULTADOS.md).

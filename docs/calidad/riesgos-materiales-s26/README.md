@@ -192,3 +192,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## Recepción R08 · RETP-235
 
 [Resultados R08](r08/RESULTADOS.md): quince casos conformes en dos perfiles Rust y preparación/comprobación de los cinco registros reales. Dos alteraciones editoriales rechazadas antes de la preparación admitida. Candidata auxiliar acotada; R06 y los doce casos globales permanecen abiertos. No se ejecutó Python en R08.
+
+## Recepción R06 LOCAL01 · RETP-236
+
+[Resultados y evidencia](r06/local01/RESULTADOS.md): trece oráculos cumplidos en debug y release. Informe y terminación separados, captura conservada ante pánico y ligadura admitido-consumido en sustitución de ruta. Perfil superior no ofrecido declarado no acreditado. T03/T04/T07/T08 siguen pendientes; cero casos globales cerrados. R06 es pieza de S26, no cierre de R0. Cero Python; R08 prepara/comprueba los registros y coteja árboles completos.

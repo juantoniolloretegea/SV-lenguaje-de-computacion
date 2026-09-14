@@ -132,3 +132,7 @@ R05: siete sondas conformes al banco. Rechazo y falta de captura permiten relect
 ## S26 R06 · RETP-233
 
 R06: recepción contractual de terminación sin informe y alcance de identidad de fuente. Se separan informe, observación de terminación y efecto; mínimo de encargo/referentes autorizados y contenido consumido; continuidad de soporte sólo si su perfil la exige. Ocho discriminadores especificados, cero ejecutados. Preparar variante local con correlación explícita, informe y terminación separados y ligadura de contenido admitido-consumido; precomprometer código, fixtures, cuotas y oráculos antes de ejecutar T01/T02/T05/T06. Después concretar observador de proceso y T03/T04/T08; T07 con barreras propias. Conservar S26, Bis y S24. [Recepción y discriminadores](../../riesgos-materiales-s26/r06/README.md).
+
+## S26 R06 LOCAL01 · RETP-236
+
+[Recepción, pruebas y relevo](../../riesgos-materiales-s26/r06/local01/RESULTADOS.md): trece casos conformes en dos perfiles Rust. Primer incremento local T01/T02/T05/T06; no acredita abort de proceso, host, RAM física, durabilidad ni GUI. Pendientes T03/T04/T07/T08 e integración. R06 no es el cierre de R0. Se conserva el orden S22/Bis → catálogo/cierre → S24.
