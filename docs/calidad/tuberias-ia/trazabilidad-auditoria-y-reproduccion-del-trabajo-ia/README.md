@@ -37,3 +37,8 @@ El Markdown incorpora el acta aprobada y la precisión sobre consejo justificado
 ## Edición Word autorizada · S28 revisión 1
 
 [Acta aprobada y ampliaciones en Word](https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/export?format=docx). Alternativa humana autorizada a la actualización de los PDF; el alcance exacto y el cotejo documental constan en [Léame primero](../frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Los PDF anteriores se conservan. S26 prosigue por su banco previo F01/F02, sin nueva ejecución acreditada.
+
+
+## Depósito del archivo Word · S28 revisión 2
+
+[Descargar el Word conservado en esta carpeta](ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx). Se deposita el mismo archivo en las dos carpetas de los PDF y en sus espejos del laboratorio. Edición de 589806 bytes, SHA-256 `03d973de4a429976cb533ca626cf811e0e90491c44496a8e5178c9a90389f143`; trece páginas renderizadas e inspeccionadas. Contiene el acta aprobada y las ampliaciones; las figuras anteriores se consultan en los PDF existentes. S28 permanece finalizado por la alternativa autorizada. Las indicaciones de pendiente anteriores conservan su fecha histórica.

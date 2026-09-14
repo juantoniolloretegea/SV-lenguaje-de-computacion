@@ -200,5 +200,30 @@
       }
     ],
     "limite": "Esta edición reúne sólo el acta y las nuevas ampliaciones. No reproduce las páginas ni figuras anteriores. Los PDF conservados mantienen sus blobs; las menciones de pendiente anteriores describen la recepción original y se resuelven administrativamente mediante esta alternativa."
+  },
+  "deposito_word_revision_2": {
+    "fecha_utc": "2026-09-14T09:55:10Z",
+    "sucesos_revision": 2,
+    "estado": "finalizado",
+    "nombre": "ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx",
+    "bytes": 589806,
+    "sha256": "03d973de4a429976cb533ca626cf811e0e90491c44496a8e5178c9a90389f143",
+    "git_blob": "163d331bf825c2149b582c77361b82a1f8f5f5e0",
+    "rutas_lenguaje": [
+      "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx",
+      "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx"
+    ],
+    "rutas_laboratorio": [
+      "laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx",
+      "laboratorio/tareas-watson/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx"
+    ],
+    "revision_visual": {
+      "paginas": 13,
+      "inspeccionadas": 13,
+      "texto_legible": true,
+      "recortes_o_solapamientos_observados": false
+    },
+    "metodo": "Materialización de la edición Word ya conservada, sin cambios de contenido. Renderizado mediante la utilidad documental Python/LibreOffice e inspección de las trece páginas; Python sólo para transferencia de metadatos y revisión de formato, no para pruebas del SV. Cálculo SHA-256 y depósito del mismo blob en cuatro rutas existentes; publicación mediante el conector GitHub. Actualización de Sucesos con editor administrativo Rust.",
+    "alcance": "Acta aprobada y ampliaciones; PDF y figuras anteriores intactos. Los apartados previos de esta recepción preservan sus estados históricos."
   }
 }
