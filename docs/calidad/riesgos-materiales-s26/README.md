@@ -228,3 +228,8 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## S26 R06 INTEGRADO01 · Recepción del recorrido documental
 
 [Resultados, evidencia y disposición S26](r06/integrado01/RESULTADOS.md): diecisiete casos conformes en debug y diecisiete en release. Apertura, recepción/admisión, mutación por barreras, consumo LOCAL01 y observación del proceso contrastados en las composiciones fijadas. Capturas y escrituras previas conservadas; contradicción entre recibo y rechazo bloqueada en ambos órdenes. Sucesos revisión 22, W-S26, CSV/Markdown e historial con espejo de laboratorio. Siguiente: concretar S26-F01/F02 sobre referencias y ligaduras existentes, con consulta exacta entre ocurrencias de igual valor y negativos de sustitución/ambigüedad; cotejar contratos y precomprometer antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente; R06 no cierra R0.
+
+
+## S26-F01/F02 · Preparación de referencias y ligaduras
+
+[Diez casos Rust y protocolo previo](r06/BANCO_F01_F02_LIGADURAS.md). API pública LIG/0.1 y fixtures existentes; entradas EN/ES. Sin compilar ni ejecutar por indisponibilidad del entorno. Sucesos revisión 23 conserva el impedimento y el siguiente paso. El alcance no incluye todavía consulta histórica ni resolución completa por Frame; no se cierran F01/F02 ni se repiten INTEGRADO01 y los bancos recibidos.

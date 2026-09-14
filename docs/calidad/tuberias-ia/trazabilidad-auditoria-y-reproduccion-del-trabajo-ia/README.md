@@ -32,3 +32,8 @@ Se amplían los PDF y Markdown con la explicación autorizada del 13/09: constit
 El Markdown incorpora el acta aprobada y la precisión sobre consejo justificado, trazabilidad completa e IA de lenguaje probabilístico en función auxiliar. **El PDF conserva la edición anterior y todavía no contiene esta ampliación.** Su actualización está autorizada y pendiente de recuperar el entorno de ejecución y renderizado. No se declara paridad entre el PDF anterior y el Markdown ampliado.
 
 [Acta aprobada](../frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md) · [Recepción de esta edición](../frame-significado-humano-trazabilidad-y-fidelidad/soporte/RECEPCION_RUTAS_CONOCIMIENTO_S28_2026_09_14.json). Los manifiestos anteriores conservan su alcance histórico.
+
+
+## Edición Word autorizada · S28 revisión 1
+
+[Acta aprobada y ampliaciones en Word](https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/export?format=docx). Alternativa humana autorizada a la actualización de los PDF; el alcance exacto y el cotejo documental constan en [Léame primero](../frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Los PDF anteriores se conservan. S26 prosigue por su banco previo F01/F02, sin nueva ejecución acreditada.

@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T07:31:22Z
+**fecha_actualizacion_utc:** 2026-09-14T09:20:13Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromiso Lenguaje bc2dd7360f555c51464d3c9c185404bd4e368ac6; laboratorio 4669517b9acc3953b104a978dd8bc2b4a7cbf591.
+**cortes_de_entrada:** Lenguaje fe96bea19c14ddbb80c01033b52a7e4761754732; laboratorio 97130b9ff79f199aefcae2ae1ffccef5d98cdd3d. INTEGRADO01 conserva sus precompromisos y resultados de revisión 22.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 INTEGRADO01: 17/17 casos conformes en debug y 17/17 en release, ambas campañas con salida 0. Recorrido documental integrado con mutación por el padre y terminación del hijo; rechazo y recibo incompatibles bloquean aceptación en ambos órdenes.
+**resultado:** F01/F02: contratos y realización LIG/0.1 cotejados; banco de diez casos Rust preparado, con entradas EN/ES y perfiles debug/release previstos. Sin compilar ni ejecutar por fallo de inicialización del entorno. INTEGRADO01 conserva 17/17 por perfil; no se suman resultados nuevos.
 
-**verificacion:** Siete archivos del banco y 112 fuentes intactos durante ambas campañas. Oráculos previos conservados; capturas, escrituras, bytes recibidos/consumidos, muestras parentales y terminaciones en la evidencia. Cotejo de árboles completos con auxiliar Rust R08.
+**verificacion:** Lectura completa de AGENTS y los tres rectores; revisión de la API pública, Frame, fixtures y oráculos existentes. Fuente Rust, oráculos literales, protocolo y manifiesto fijados antes de la ejecución. Cotejo documental de árboles Git; el auxiliar Rust de integridad no pudo ejecutarse en esta sesión.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01 ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/BANCO_F01_F02_LIGADURAS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/BANCO_F01_F02_LIGADURAS.md
 
-**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso, EJECUCIONES.json y EVIDENCIA.tar.gz (391144 bytes; SHA-256 bb88a56ae15a1f3aa546d837d24f5b55197a575fa1c02020413225676a56d38e). LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.
+**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso, EJECUCIONES.json y EVIDENCIA.tar.gz (391144 bytes; SHA-256 bb88a56ae15a1f3aa546d837d24f5b55197a575fa1c02020413225676a56d38e). LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances. Preparación: r06/BANCO_F01_F02_LIGADURAS.md, s26_f01_f02_ligaduras.rs y FUENTES_F01_F02_LIGADURAS.json.
 
-**siguiente_accion:** Concretar S26-F01/F02 en las sedes existentes de referencias y ligaduras: cotejar contratos y realización, dos ocurrencias legítimas de igual valor, consulta exacta y negativos de sustitución/ambigüedad. Precomprometer fixtures y oráculos Rust antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente.
+**siguiente_accion:** Recuperar entorno Rust/Cargo 1.98.0; cotejar con Rust el árbol y los archivos precomprometidos; compilar y ejecutar diez casos, dos entradas por caso, en debug y release. Conservar fallos, salidas, retornos y huellas; precomprometer cualquier corrección. El banco sólo cubre ligaduras; consulta histórica F01 y resolución completa F02 no quedan cerradas. No repetir bancos recibidos.
 
-**observaciones:** Diecisiete composiciones documentales bajo anfitrión confiable; no todas las combinaciones ni cierre de los doce casos S26. Separar declaración adversarial I03 de rechazo real de admit. Sin garantía física de RAM, durabilidad, host independiente, efecto externo, identidad de adquisición o backend productivo. Sin Python/Java, cambio del núcleo ni rama nueva; RETP canónica no escrita. Unidad estable W-S26; regularización de identidad en revisión 18. Enlaces de seguimiento a ramas vigentes; a9b99ea es histórico inmutable.
+**observaciones:** Diecisiete composiciones documentales bajo anfitrión confiable; no todas las combinaciones ni cierre de los doce casos S26. Separar declaración adversarial I03 de rechazo real de admit. Sin garantía física de RAM, durabilidad, host independiente, efecto externo, identidad de adquisición o backend productivo. Sin Python/Java, cambio del núcleo ni rama nueva; RETP canónica no escrita. Unidad estable W-S26; regularización de identidad en revisión 18. Enlaces de seguimiento a ramas vigentes; a9b99ea es histórico inmutable. Revisión 23 preparatoria: cero casos nuevos ejecutados. Fallo de inicialización exec-server comunicado por el entorno; ejecución local no disponible. No se cambian workflows ni se reutilizan campañas Python/Node como pruebas Rust.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 
@@ -958,35 +958,35 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S28 · Rutas de conocimiento, consejo auditable y recepción de fundamentos y aprendizaje
 
-**estado:** pendiente
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-14T08:58:07Z
 
 **fecha_inicio_utc:** —
 
-**fecha_actualizacion_utc:** 2026-09-14T08:58:07Z
+**fecha_actualizacion_utc:** 2026-09-14T09:20:13Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-14T09:20:13Z
 
 **unidad_responsable:** Watson / W-S26
 
-**alcance:** Evaluación adversarial y acta aprobadas; incorporación documental con trazabilidad completa y consejo justificado. IA de lenguaje probabilístico auxiliar; decisión clínica humana. Ampliación de dos PDF autorizada y pendiente.
+**alcance:** Evaluación y acta aprobadas, ampliaciones Markdown y acceso humano en Word como alternativa expresamente autorizada a los PDF. IA de lenguaje probabilístico auxiliar; consejo trazable y decisión clínica humana.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVperitus-dataset: main
 
-**cortes_de_entrada:** Lenguaje 9a107773c572d186efc3530bb08f8f79a8ac5a30; laboratorio d8b4a114e63f4fdac96db71ecef209bf92900307; SVperitus main 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c; fuentes de Inmunología fe8adf76aa030ba5ff4997be5772b5de5e4452f3.
+**cortes_de_entrada:** Lenguaje fe96bea19c14ddbb80c01033b52a7e4761754732; laboratorio 97130b9ff79f199aefcae2ae1ffccef5d98cdd3d. Acta y copias en SVperitus recibidas previamente en ace76e62d28124022463dbe741cb4bbbd4da907d.
 
 **dependencias:** Continuación documental de S27 finalizado; aprobación humana de 14/09/2026 y precisión sobre consejo y NLP probabilístico; Pilares, Fundamentos, Aprendizaje trazable, contrato inmunológico y G7-RUT; S26 conserva su secuencia.
 
-**resultado:** Acta aprobada, sección 12 del frame, complemento de tres realizaciones Rust y accesos de lectura incorporados en Markdown; espejo de laboratorio y dos copias excepcionales del acta en agentes y dominios. PDF anteriores conservados; ampliación pendiente por fallo de inicialización del entorno y ausencia de ejecución/renderizado en la sesión.
+**resultado:** Edición Word generada y guardada: acta aprobada, sección 12 del frame y complemento de tres realizaciones Rust. Los dos PDF conservan su edición anterior; la alternativa Word satisface la instrucción humana y finaliza S28 sin afirmar paridad PDF/Markdown.
 
-**verificacion:** Revisión documental por contraejemplos, sin nuevas pruebas de comportamiento. Originales y oráculos históricos preservados; cotejo de objetos Git y diferencias de archivos de esta recepción en soporte. No se afirma paridad del PDF anterior con el Markdown ampliado.
+**verificacion:** Cotejo del texto del documento nativo: 143 párrafos y ocho tablas coincidentes con los textos fuente; exportación DOCX completa de 589806 bytes y versión 1 conservada. No inspección visual de paginación ni cotejo binario del DOCX contra los PDF. Revisión documental, cero nuevas pruebas SV.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/agentes/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/dominios/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/agentes/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/dominios/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/export?format=docx
 
 **referencia_calidad:** S28: docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md; soporte/RECEPCION_RUTAS_CONOCIMIENTO_S28_2026_09_14.json. Pilares: incorporación bibliográfica 9a107773c572d186efc3530bb08f8f79a8ac5a30. RETP canónica sin modificación.
 
-**siguiente_accion:** Recuperar entorno de ejecución y renderizado; ampliar los dos PDF en sus rutas existentes, preservar e inspeccionar las páginas anteriores y el añadido; cotejar espejo y actualizar S28 e historial. Aprobación ya recibida: no volver a solicitarla. No repetir la evaluación ni los bancos S26; su siguiente bloque continúa siendo F01/F02.
+**siguiente_accion:** Continuar S26-F01/F02 desde su banco previo. No repetir la evaluación ni pedir de nuevo aprobación. La actualización de los PDF deja de ser condición pendiente de S28 al haberse entregado la alternativa Word aceptada; las ediciones anteriores mantienen su alcance.
 
-**observaciones:** Alta posterior a actividad documental iniciada; hora exacta de inicio no registrada. Identificador S28 nuevo por continuación de S27 ya finalizado; unidad W-S26 permanece estable. La reserva formal afecta a incorporación de conocimiento, no impide recibir consejo auditable; la intervención probabilística es auxiliar y no modifica autoridad ni clausura SV. No ramas nuevas, limpieza histórica ni pruebas Python/Java.
+**observaciones:** Alta posterior a actividad documental iniciada; hora exacta de inicio no registrada. Identificador S28 nuevo por continuación de S27 ya finalizado; unidad W-S26 permanece estable. La reserva formal afecta a incorporación de conocimiento, no impide recibir consejo auditable; la intervención probabilística es auxiliar y no modifica autoridad ni clausura SV. No ramas nuevas, limpieza histórica ni pruebas Python/Java. Formato Word autorizado expresamente el 14/09/2026. El borrador previo queda en el historial, versión 0; la versión 1 contiene el acta aprobada y ampliaciones. Documento editable identificado por su exportación conservada; modificaciones humanas posteriores constituyen otra edición.
 

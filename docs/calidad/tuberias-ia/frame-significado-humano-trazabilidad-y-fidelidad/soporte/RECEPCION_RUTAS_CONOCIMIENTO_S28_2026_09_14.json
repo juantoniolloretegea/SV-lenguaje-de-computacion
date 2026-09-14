@@ -160,5 +160,45 @@
     "Sin transición formal de incorporación inventada",
     "Sin nuevas ejecuciones Rust, Python o Java",
     "Sin cierre de S26/Bis ni apertura S24"
-  ]
+  ],
+  "actualizacion_word_2026_09_14": {
+    "fecha_utc": "2026-09-14T09:20:13Z",
+    "sucesos_revision": 1,
+    "estado": "finalizado por alternativa Word autorizada",
+    "autorizacion": "Word manejable por un humano aceptado como alternativa a los PDF por instrucción expresa del 14/09/2026.",
+    "documento_nativo": "https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/edit",
+    "descarga_docx": "https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/export?format=docx",
+    "revision_nativa": "ANLCKQkEfHTfSF6t1dmSiyCbUw5klVkLDPJzxh50BFmdSqKFj2Yl8acb54RRJQLX9I3L6uIvhqdiClu2qo3e2y-6Vl4kywcfb7rABSfSfzE",
+    "exportacion": {
+      "library_file_id": "libfile_6bb089135cb8819188f3484c4b515917",
+      "version": 1,
+      "file_id": "file_000000008f6882439ed31fb1becbe273",
+      "nombre": "ACTA_APROBADA_Y_AMPLIACIONES_RUTAS_CONOCIMIENTO_SV_2026-09-14.docx",
+      "bytes": 589806,
+      "mime_type": "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    },
+    "cotejo": {
+      "parrafos": 143,
+      "tablas": 8,
+      "contenido_nativo_coincidente": true,
+      "render_visual_inspeccionado": false,
+      "sha256_docx_no_calculado": true
+    },
+    "metodo": "Google Docs: creación, inserción de texto, estilos y ocho tablas, lectura y cotejo del contenido; exportación Word completa; conservación como nueva versión. JavaScript usado para formato y cotejo documental, no para pruebas SV. Sin ejecución local.",
+    "fuentes_git": [
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md",
+        "sha": "cb44918173e38091ff08a38b49ba950ea243ef7c"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md",
+        "sha": "b18515396680812f8d9adc752acab99b139376f7"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md",
+        "sha": "c19912007d502b849d11e2e108391700ed13d88f"
+      }
+    ],
+    "limite": "Esta edición reúne sólo el acta y las nuevas ampliaciones. No reproduce las páginas ni figuras anteriores. Los PDF conservados mantienen sus blobs; las menciones de pendiente anteriores describen la recepción original y se resuelven administrativamente mediante esta alternativa."
+  }
 }

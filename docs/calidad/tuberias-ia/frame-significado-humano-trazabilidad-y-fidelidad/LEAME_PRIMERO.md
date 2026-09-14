@@ -1,5 +1,11 @@
 # Léame primero: del frame a la colaboración auditable
 
+## Continuidad documental y material · 14/09/2026
+
+S28 dispone de una [edición Word del acta y las ampliaciones](https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/export?format=docx), con [acceso al documento editable](https://docs.google.com/document/d/1hJC1IScFN3LRh1xxVYOzv-tk7a-goZFLfs9z6NTByK8/edit). Se entrega como alternativa expresamente autorizada a la actualización de los PDF. Reproduce el acta aprobada, la sección 12 del frame y el complemento de las tres realizaciones Rust; conserva 143 párrafos y ocho tablas cotejados con sus fuentes. Las figuras y las páginas anteriores se consultan en las ediciones PDF existentes. No se declara paridad de esos PDF con las ampliaciones Markdown. Las indicaciones de pendiente dentro del acta corresponden a su publicación inicial; Sucesos S28 revisión 1 recibe esta entrega alternativa.
+
+S26 continúa por el [banco previo F01/F02 de referencias y ligaduras](../../riesgos-materiales-s26/r06/BANCO_F01_F02_LIGADURAS.md): diez casos Rust, dos entradas por caso y dos perfiles previstos. Preparado sin compilar ni ejecutar por fallo de inicialización del entorno. El alcance es LIG/0.1; consulta histórica y resolución completa por Frame siguen pendientes. No repetir INTEGRADO01 ni los bancos ya recibidos. Sucesos S26 revisión 23 conserva el impedimento y el relevo.
+
 **Juan Antonio Lloret Egea y Watson · 12 de septiembre de 2026**
 
 Esta es la entrada de lectura para futuras unidades Watson, Claude, Grok y para cualquier persona que necesite comprender el escenario. Reúne las carpetas troncales: la del frame, ampliada con los polígonos históricos y el logo del SV, la de trazabilidad y auditoría del trabajo de la IA, y la de paridad entre célula matemática e imagen.

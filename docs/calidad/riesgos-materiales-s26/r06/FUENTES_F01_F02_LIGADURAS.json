@@ -1,0 +1,258 @@
+{
+  "suceso": "S26",
+  "unidad": "Watson / W-S26",
+  "fecha_preparacion_utc": "2026-09-14T09:20:13Z",
+  "estado": "PRECOMPROMISO_SIN_COMPILAR_NI_EJECUTAR",
+  "corte_lenguaje": "fe96bea19c14ddbb80c01033b52a7e4761754732",
+  "arbol_lenguaje": "ea322157d20897f0ee4578eed10d0654b7e550cb",
+  "corte_laboratorio": "97130b9ff79f199aefcae2ae1ffccef5d98cdd3d",
+  "api": "LIG/0.1: validate_bindings y ValidatedBindings",
+  "casos": 10,
+  "entradas_por_caso": [
+    "SVP-EN",
+    "SVP-ES"
+  ],
+  "perfiles_previstos": [
+    "debug",
+    "release"
+  ],
+  "casos_ejecutados": 0,
+  "fuente_banco": "docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs",
+  "fuentes_principales": [
+    {
+      "path": "rust/Cargo.lock",
+      "git_blob": "9eba07b981902719f97d61213f569fd675111f57",
+      "bytes": 311
+    },
+    {
+      "path": "rust/Cargo.toml",
+      "git_blob": "ebee1ea1135f28fa28f2d335f279170932f2e029",
+      "bytes": 73
+    },
+    {
+      "path": "rust/sv_core/Cargo.toml",
+      "git_blob": "d284864c44d0e36d022768131abf88c450b95eb6",
+      "bytes": 244
+    },
+    {
+      "path": "rust/sv_core/src/admissibility.rs",
+      "git_blob": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+      "bytes": 6775
+    },
+    {
+      "path": "rust/sv_core/src/authority.rs",
+      "git_blob": "95a976d32444537ba4240cf7ad4375eca37ef064",
+      "bytes": 18361
+    },
+    {
+      "path": "rust/sv_core/src/authority/transitions.rs",
+      "git_blob": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+      "bytes": 54089
+    },
+    {
+      "path": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "git_blob": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+      "bytes": 42971
+    },
+    {
+      "path": "rust/sv_core/src/bindings.rs",
+      "git_blob": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+      "bytes": 20680
+    },
+    {
+      "path": "rust/sv_core/src/c03_tests.rs",
+      "git_blob": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+      "bytes": 5626
+    },
+    {
+      "path": "rust/sv_core/src/context_wellformed.rs",
+      "git_blob": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+      "bytes": 7969
+    },
+    {
+      "path": "rust/sv_core/src/control.rs",
+      "git_blob": "08899b4dfb3a7e936b8649929619f57454248c42",
+      "bytes": 7812
+    },
+    {
+      "path": "rust/sv_core/src/control_tests.rs",
+      "git_blob": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+      "bytes": 2790
+    },
+    {
+      "path": "rust/sv_core/src/decision_trace.rs",
+      "git_blob": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "bytes": 30997
+    },
+    {
+      "path": "rust/sv_core/src/equivalence.rs",
+      "git_blob": "22903a491b3abe12749921b12c92b0319b7c225e",
+      "bytes": 16986
+    },
+    {
+      "path": "rust/sv_core/src/execution.rs",
+      "git_blob": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+      "bytes": 16865
+    },
+    {
+      "path": "rust/sv_core/src/frame.rs",
+      "git_blob": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+      "bytes": 13990
+    },
+    {
+      "path": "rust/sv_core/src/frame_tests.rs",
+      "git_blob": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+      "bytes": 9569
+    },
+    {
+      "path": "rust/sv_core/src/frontend.rs",
+      "git_blob": "c73933b661f08c4d0123b8a22f436962b5481208",
+      "bytes": 97042
+    },
+    {
+      "path": "rust/sv_core/src/grammar_conformance.rs",
+      "git_blob": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+      "bytes": 1655
+    },
+    {
+      "path": "rust/sv_core/src/identifier_profile.rs",
+      "git_blob": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+      "bytes": 3575
+    },
+    {
+      "path": "rust/sv_core/src/ir.rs",
+      "git_blob": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+      "bytes": 12706
+    },
+    {
+      "path": "rust/sv_core/src/ir_tests.rs",
+      "git_blob": "e339664be237680d6874fd544b3bf1b99e50a93d",
+      "bytes": 10238
+    },
+    {
+      "path": "rust/sv_core/src/lib.rs",
+      "git_blob": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90",
+      "bytes": 17191
+    },
+    {
+      "path": "rust/sv_core/src/manifiesto.rs",
+      "git_blob": "6e3fb9ee0d238421fa1f81514b79e0d7f9149a42",
+      "bytes": 593
+    },
+    {
+      "path": "rust/sv_core/src/mediation.rs",
+      "git_blob": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+      "bytes": 8245
+    },
+    {
+      "path": "rust/sv_core/src/nat.rs",
+      "git_blob": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+      "bytes": 2627
+    },
+    {
+      "path": "rust/sv_core/src/permission.rs",
+      "git_blob": "980270a996ae02df66f26788b2ab32c077d7e30c",
+      "bytes": 16094
+    },
+    {
+      "path": "rust/sv_core/src/requirements.rs",
+      "git_blob": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+      "bytes": 26983
+    },
+    {
+      "path": "rust/sv_core/src/requirements/initial.rs",
+      "git_blob": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+      "bytes": 24450
+    },
+    {
+      "path": "rust/sv_core/src/requirements_bridge.rs",
+      "git_blob": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+      "bytes": 22596
+    },
+    {
+      "path": "rust/sv_core/src/requirements_conflict.rs",
+      "git_blob": "91fb4638389114a0cbc1af4152111fbddc451d82",
+      "bytes": 19988
+    },
+    {
+      "path": "rust/sv_core/src/requirements_coverage.rs",
+      "git_blob": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+      "bytes": 24235
+    },
+    {
+      "path": "rust/sv_core/src/requirements_reuse.rs",
+      "git_blob": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+      "bytes": 26822
+    },
+    {
+      "path": "rust/sv_core/src/resolution.rs",
+      "git_blob": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+      "bytes": 8272
+    },
+    {
+      "path": "rust/sv_core/src/resolution_tests.rs",
+      "git_blob": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+      "bytes": 5897
+    },
+    {
+      "path": "rust/sv_core/src/transition_data_wellformed.rs",
+      "git_blob": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+      "bytes": 6003
+    },
+    {
+      "path": "rust/sv_core/src/wellformed.rs",
+      "git_blob": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+      "bytes": 39971
+    },
+    {
+      "path": "tests/row7_bindings/base.es.svp",
+      "git_blob": "a33011a13c92addb98e17cbf1dfaef77723360af",
+      "bytes": 4830
+    },
+    {
+      "path": "tests/row7_bindings/base.svp",
+      "git_blob": "9fc1bd5319b8ef7ddb1311e6a1c37d5d7170497b",
+      "bytes": 3939
+    },
+    {
+      "path": "tests/row7_bindings/cases.rs",
+      "git_blob": "e2a820cba1ac7974170f96966ca81c46c125b10d",
+      "bytes": 15595
+    },
+    {
+      "path": "tests/row7_bindings/synthetic_hash_contract.sha256",
+      "git_blob": "59928083adec93aba9df46ea5c8883216fcab8f5",
+      "bytes": 65
+    }
+  ],
+  "control_integridad": "Antes de compilar: cotejo Rust de todo el árbol fuente fijado y de los archivos del banco contra sus objetos Git publicados; la lista principal no sustituye el árbol completo ni sus dependencias include_str!.",
+  "impedimento": "exec-server: fallo de inicialización comunicado por el entorno; herramientas de ejecución local no disponibles en esta sesión.",
+  "exclusiones": [
+    "Sin consulta histórica ejecutable por este banco",
+    "Sin recuperación de valor por Frame e instancia",
+    "Sin cambio del núcleo, gramática, IR, contratos ni workflows",
+    "Sin pruebas Python, Java o Node",
+    "Sin cierre global F01/F02, S26/Bis o R0; S24 conserva su secuencia"
+  ],
+  "relevo": "Ver BANCO_F01_F02_LIGADURAS.md. Preservar la versión publicada aunque la compilación revele un defecto; registrar el resultado y precomprometer cualquier corrección antes de ejecutar.",
+  "banco_git_blobs": [
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r06/BANCO_F01_F02_LIGADURAS.md",
+      "git_blob": "f1249a2c4ee6e7db536eece6fecac0603868399f"
+    },
+    {
+      "path": "docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs",
+      "git_blob": "df503b937015837e05f1a7c729dcbe51b827d808"
+    }
+  ],
+  "cotejo_prepublicacion": {
+    "arbol_entrada_lenguaje": "ea322157d20897f0ee4578eed10d0654b7e550cb",
+    "arbol_entrada_laboratorio": "74e5afd1594896c5ea815301a082499edaeaf457",
+    "arbol_preparado_lenguaje": "dd35b3b4b566b9cd711fbc8c88a082bf1fbf9d29",
+    "arbol_preparado_laboratorio": "ad42a18db341fc746c51aed0681c73345fb661df",
+    "archivos_previos_iguales_entre_sedes": true,
+    "pares_identicos": 12,
+    "eliminaciones": 0,
+    "metodo": "API GitHub y comparación documental JavaScript; no es ejecución del auxiliar Rust ni prueba de comportamiento SV."
+  }
+}
