@@ -141,3 +141,7 @@ Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental 
 ## S26 R06 T0701 · Recepción de mutación y concordancia de corte
 
 [Resultados y evidencia](t0701/RESULTADOS.md): trece casos conformes en debug y trece en release. Mismo objeto, restitución A–B–A y mezcla de r1/r2 contrastados con barreras previas; la copia admitida se preserva y la igualdad de bytes no sustituye los referentes. Sucesos revisión 20, W-S26. Siguiente: precomprometer el recorrido integrado de apertura, admisión, mutación, captura, informe y terminación; la composición no queda probada por reunir los incrementos locales. S26/Bis abiertos; S24 pendiente.
+
+## S26 R06 INTEGRADO01 · Recepción del recorrido documental
+
+[Resultados, evidencia y disposición S26](integrado01/RESULTADOS.md): diecisiete casos conformes en debug y diecisiete en release. Apertura, recepción/admisión, mutación por barreras, consumo LOCAL01 y observación del proceso contrastados en las composiciones fijadas. Capturas y escrituras previas conservadas; contradicción entre recibo y rechazo bloqueada en ambos órdenes. Sucesos revisión 22, W-S26, CSV/Markdown e historial con espejo de laboratorio. Siguiente: concretar S26-F01/F02 sobre referencias y ligaduras existentes, con consulta exacta entre ocurrencias de igual valor y negativos de sustitución/ambigüedad; cotejar contratos y precomprometer antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente; R06 no cierra R0.

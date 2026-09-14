@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T07:19:44Z
+**fecha_actualizacion_utc:** 2026-09-14T07:31:22Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje fbc91824bdf57901c0e24236296f09b82fc661bd; laboratorio b5d19ec1f4abbe13ed1b520eb8363038487df7b1.
+**cortes_de_entrada:** Precompromiso Lenguaje bc2dd7360f555c51464d3c9c185404bd4e368ac6; laboratorio 4669517b9acc3953b104a978dd8bc2b4a7cbf591.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 INTEGRADO01: diecisiete casos preparados para conectar apertura, recepción/admisión, mutación desde el padre, consumo LOCAL01, captura/informe y terminación del hijo. Incluye rechazo y recibo contradictorios en ambos órdenes. Compilado; banco sin ejecutar al publicar.
+**resultado:** R06 INTEGRADO01: 17/17 casos conformes en debug y 17/17 en release, ambas campañas con salida 0. Recorrido documental integrado con mutación por el padre y terminación del hijo; rechazo y recibo incompatibles bloquean aceptación en ambos órdenes.
 
-**verificacion:** 112 fuentes cotejadas contra el corte vigente. Se reutilizan admisor, certificador y consumidor sin modificarlos; observador PROCESO03 adaptado con barreras parentales, rechazo separado y cuotas explícitas. Oráculos previos en README y Rust.
+**verificacion:** Siete archivos del banco y 112 fuentes intactos durante ambas campañas. Oráculos previos conservados; capturas, escrituras, bytes recibidos/consumidos, muestras parentales y terminaciones en la evidencia. Cotejo de árboles completos con auxiliar Rust R08.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01
 
-**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso y fuentes en Calidad y laboratorio. LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.
+**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso, EJECUCIONES.json y EVIDENCIA.tar.gz (391144 bytes; SHA-256 bb88a56ae15a1f3aa546d837d24f5b55197a575fa1c02020413225676a56d38e). LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.
 
-**siguiente_accion:** Ejecutar INTEGRADO01 en debug y release tras publicar y cotejar el precompromiso; recibir aperturas, muestras parentales, bytes consumidos, mensajes y terminaciones. Cualificar sólo las composiciones fijadas. S26/Bis abiertos; S24 pendiente.
+**siguiente_accion:** Concretar S26-F01/F02 en las sedes existentes de referencias y ligaduras: cotejar contratos y realización, dos ocurrencias legítimas de igual valor, consulta exacta y negativos de sustitución/ambigüedad. Precomprometer fixtures y oráculos Rust antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente.
 
-**observaciones:** Padre e hijo bajo anfitrión confiable; diecisiete composiciones documentales, no todas las combinaciones. Rechazo declarado e informe favorable permanecen separados y su conflicto debe impedir aceptación. Sin efecto externo, garantía física de RAM, durabilidad, aislamiento frente al host ni adquisición atómica general. Sin Python/Java, cambio de núcleo ni nueva rama; RETP canónica no se escribe. W-S26 estable durante esta intervención; regularización de identidad conservada en revisión 18.
+**observaciones:** Diecisiete composiciones documentales bajo anfitrión confiable; no todas las combinaciones ni cierre de los doce casos S26. Separar declaración adversarial I03 de rechazo real de admit. Sin garantía física de RAM, durabilidad, host independiente, efecto externo, identidad de adquisición o backend productivo. Sin Python/Java, cambio del núcleo ni rama nueva; RETP canónica no escrita. Unidad estable W-S26; regularización de identidad en revisión 18. Enlaces de seguimiento a ramas vigentes; a9b99ea es histórico inmutable.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

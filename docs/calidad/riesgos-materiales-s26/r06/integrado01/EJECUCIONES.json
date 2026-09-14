@@ -1,0 +1,3719 @@
+{
+  "version": "S26-R06-INTEGRADO01-EJECUCIONES/1",
+  "unidad": "W-S26",
+  "precompromiso": {
+    "lab": "4669517b9acc3953b104a978dd8bc2b4a7cbf591",
+    "pub": "bc2dd7360f555c51464d3c9c185404bd4e368ac6"
+  },
+  "cortes_de_entrada": {
+    "lab": "b5d19ec1f4abbe13ed1b520eb8363038487df7b1",
+    "pub": "fbc91824bdf57901c0e24236296f09b82fc661bd"
+  },
+  "rectores_consultados": [
+    "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+    "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+    "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md"
+  ],
+  "entorno": {
+    "rustc": "1.98.0 (88d9e12ae 2026-08-18)",
+    "rustc_commit": "88d9e12ae178fab0fb5cc050a94da85685d449ea",
+    "cargo": "1.98.0 (797e8a9bc 2026-08-05)",
+    "LLVM": "22.1.8",
+    "host": "x86_64-unknown-linux-gnu",
+    "sistema": "Linux 6.18.44 x86_64",
+    "relectura_utc": "2026-09-14T07:29:59Z"
+  },
+  "compilaciones": [
+    {
+      "perfil": "debug",
+      "comando": "cargo build --offline --locked --target-dir /tmp/s26-integrado01-build",
+      "salida": 0,
+      "antes_del_precompromiso": true
+    },
+    {
+      "perfil": "release",
+      "comando": "cargo build --release --offline --locked --target-dir /tmp/s26-integrado01-build",
+      "salida": 0,
+      "antes_del_precompromiso": false
+    }
+  ],
+  "campanas": [
+    {
+      "perfil": "debug",
+      "inicio_utc": "2026-09-14T07:29:21Z",
+      "salida": 0,
+      "total": 17,
+      "conformes": 17,
+      "comando": "/tmp/s26-integrado01-build/debug/sv_s26_r06_integrado01 ../../r05/fixture /tmp/s26-integrado01-debug",
+      "binario_sha256": "55cf05f263fe5d7d060d69e75fb7defda25cafb339a170a8003be25f6c4ad16d",
+      "resultado": {
+        "casos": [
+          {
+            "caso": "I01",
+            "conforme": true
+          },
+          {
+            "caso": "I02",
+            "conforme": true
+          },
+          {
+            "caso": "I03",
+            "conforme": true
+          },
+          {
+            "caso": "I04",
+            "conforme": true
+          },
+          {
+            "caso": "I05",
+            "conforme": true
+          },
+          {
+            "caso": "I06",
+            "conforme": true
+          },
+          {
+            "caso": "I07",
+            "conforme": true
+          },
+          {
+            "caso": "I08",
+            "conforme": true
+          },
+          {
+            "caso": "I09",
+            "conforme": true
+          },
+          {
+            "caso": "I10",
+            "conforme": true
+          },
+          {
+            "caso": "I11",
+            "conforme": true
+          },
+          {
+            "caso": "I12",
+            "conforme": true
+          },
+          {
+            "caso": "I13",
+            "conforme": true
+          },
+          {
+            "caso": "I14",
+            "conforme": true
+          },
+          {
+            "caso": "I15",
+            "conforme": true
+          },
+          {
+            "caso": "I16",
+            "conforme": true
+          },
+          {
+            "caso": "I17",
+            "conforme": true
+          }
+        ],
+        "conforme": true,
+        "version": "S26-R06-INTEGRADO01/1"
+      },
+      "observaciones_resumidas": [
+        {
+          "canal": "eof",
+          "caso": "I01",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I02",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I03",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I04",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_en_barrera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I05",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          }
+        },
+        {
+          "canal": "mensaje_truncado",
+          "caso": "I06",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I07",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I08",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "conflicto_y_primero_conservados"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "captura_no_concordante",
+          "caso": "I09",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "revision_ajena_con_bytes_iguales"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I10",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "A_tardio_B_propio"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "B_con_recepcion_y_consumo_propios"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I11",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I12",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "panico_local_y_proceso_separados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "plazo_agotado",
+          "caso": "I13",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "espera_del_hijo_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I14",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "ajeno_no_atribuido"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I15",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "duplicado_sin_sobrescritura"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I16",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_y_recibo_incompatibles_conservados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I17",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_y_recibo_incompatibles_conservados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        }
+      ]
+    },
+    {
+      "perfil": "release",
+      "inicio_utc": "2026-09-14T07:29:40Z",
+      "salida": 0,
+      "total": 17,
+      "conformes": 17,
+      "comando": "/tmp/s26-integrado01-build/release/sv_s26_r06_integrado01 ../../r05/fixture /tmp/s26-integrado01-release",
+      "binario_sha256": "f0d94a8752f2439a45486714623b3785bc7d1c439f7e0829142f879191b565b5",
+      "resultado": {
+        "casos": [
+          {
+            "caso": "I01",
+            "conforme": true
+          },
+          {
+            "caso": "I02",
+            "conforme": true
+          },
+          {
+            "caso": "I03",
+            "conforme": true
+          },
+          {
+            "caso": "I04",
+            "conforme": true
+          },
+          {
+            "caso": "I05",
+            "conforme": true
+          },
+          {
+            "caso": "I06",
+            "conforme": true
+          },
+          {
+            "caso": "I07",
+            "conforme": true
+          },
+          {
+            "caso": "I08",
+            "conforme": true
+          },
+          {
+            "caso": "I09",
+            "conforme": true
+          },
+          {
+            "caso": "I10",
+            "conforme": true
+          },
+          {
+            "caso": "I11",
+            "conforme": true
+          },
+          {
+            "caso": "I12",
+            "conforme": true
+          },
+          {
+            "caso": "I13",
+            "conforme": true
+          },
+          {
+            "caso": "I14",
+            "conforme": true
+          },
+          {
+            "caso": "I15",
+            "conforme": true
+          },
+          {
+            "caso": "I16",
+            "conforme": true
+          },
+          {
+            "caso": "I17",
+            "conforme": true
+          }
+        ],
+        "conforme": true,
+        "version": "S26-R06-INTEGRADO01/1"
+      },
+      "observaciones_resumidas": [
+        {
+          "canal": "eof",
+          "caso": "I01",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I02",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I03",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I04",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_en_barrera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I05",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "barrera_y_ausencia_informe"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          },
+          "frontera": {
+            "codigo": null,
+            "observada": true,
+            "senal": 6
+          }
+        },
+        {
+          "canal": "mensaje_truncado",
+          "caso": "I06",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I07",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I08",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "conflicto_y_primero_conservados"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "restitucion_no_borra_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "captura_no_concordante",
+          "caso": "I09",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "revision_ajena_con_bytes_iguales"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I10",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "A_tardio_B_propio"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "B_con_recepcion_y_consumo_propios"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I11",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "sin_consumo_tras_rechazo"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I12",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "panico_local_y_proceso_separados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "plazo_agotado",
+          "caso": "I13",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "espera_del_hijo_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "terminacion_no_observada_en_frontera"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": null,
+            "observada": true,
+            "senal": 9
+          },
+          "frontera": {
+            "causa": "terminacion_no_observada",
+            "observada": false
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I14",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "ajeno_no_atribuido"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I15",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "duplicado_sin_sobrescritura"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I16",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_y_recibo_incompatibles_conservados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        },
+        {
+          "canal": "eof",
+          "caso": "I17",
+          "comprobaciones": [
+            {
+              "conforme": true,
+              "nombre": "canal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "codigo_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "senal_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "captura_A"
+            },
+            {
+              "conforme": true,
+              "nombre": "informe_seleccionado"
+            },
+            {
+              "conforme": true,
+              "nombre": "efecto_local_releido"
+            },
+            {
+              "conforme": true,
+              "nombre": "apertura_conservada"
+            },
+            {
+              "conforme": true,
+              "nombre": "objeto_testigo_conservado"
+            },
+            {
+              "conforme": true,
+              "nombre": "sustitucion_objeto_prevista"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_finales_previstos"
+            },
+            {
+              "conforme": true,
+              "nombre": "dependencia_final_observada"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_ligado_literal"
+            },
+            {
+              "conforme": true,
+              "nombre": "identidad_objetos_muestreados"
+            },
+            {
+              "conforme": true,
+              "nombre": "muestra_material_de_mutacion"
+            },
+            {
+              "conforme": true,
+              "nombre": "bytes_recibidos_por_hijo"
+            },
+            {
+              "conforme": true,
+              "nombre": "consumo_literal_admitido"
+            },
+            {
+              "conforme": true,
+              "nombre": "rechazo_y_recibo_incompatibles_conservados"
+            }
+          ],
+          "conforme": true,
+          "final": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          },
+          "frontera": {
+            "codigo": 0,
+            "observada": true,
+            "senal": null
+          }
+        }
+      ]
+    }
+  ],
+  "comprobacion_posterior": {
+    "bank": 7,
+    "files": [
+      {
+        "after": "42221257270146fa94a25e8aca20a2c364c077b7",
+        "before": "42221257270146fa94a25e8aca20a2c364c077b7",
+        "path": "AGENTS.md"
+      },
+      {
+        "after": "58b8c02c721b41203e5b8f3f9b7a22203f253c7f",
+        "before": "58b8c02c721b41203e5b8f3f9b7a22203f253c7f",
+        "path": "docs/arquitectura/CONTRATO_MATERIAL_DE_LIGADURAS_DFL_005_2026_09_08.md"
+      },
+      {
+        "after": "8faa1028e04a1e4fdd7d10bea63c74064abaccf3",
+        "before": "8faa1028e04a1e4fdd7d10bea63c74064abaccf3",
+        "path": "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md"
+      },
+      {
+        "after": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+        "before": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+        "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md"
+      },
+      {
+        "after": "27609888898d5ad2b214ed53786fa8f55781a61c",
+        "before": "27609888898d5ad2b214ed53786fa8f55781a61c",
+        "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md"
+      },
+      {
+        "after": "78a2e1c67a8e2299da1bdd7d0979f842c7d7aad4",
+        "before": "78a2e1c67a8e2299da1bdd7d0979f842c7d7aad4",
+        "path": "docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md"
+      },
+      {
+        "after": "c039ebc56a66ddb1507d46278936bbb3a37b69d3",
+        "before": "c039ebc56a66ddb1507d46278936bbb3a37b69d3",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/canonical.bin"
+      },
+      {
+        "after": "976f7492cf7fa1dbc90ab558f5df1d63799148e9",
+        "before": "976f7492cf7fa1dbc90ab558f5df1d63799148e9",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/constitution.bin"
+      },
+      {
+        "after": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149",
+        "before": "ae90bc20e3851e248dbe5e0c5f3154ea1781a149",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/context.json"
+      },
+      {
+        "after": "c7f670dbd34be2725ba34428f52d1f5a8dbef149",
+        "before": "c7f670dbd34be2725ba34428f52d1f5a8dbef149",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/convention.bin"
+      },
+      {
+        "after": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "before": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/expected.bin"
+      },
+      {
+        "after": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "before": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/geometry.bin"
+      },
+      {
+        "after": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "before": "bc30e4a05c1753a3338a14e4794f9fd6141218ab",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/injection.bin"
+      },
+      {
+        "after": "ebd264ca259a125943adc97a7a385e757e44d605",
+        "before": "ebd264ca259a125943adc97a7a385e757e44d605",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/oracle.json"
+      },
+      {
+        "after": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5",
+        "before": "fd1b1b77efdfe81524c5f7fe88a315aac71452f5",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/plan.json"
+      },
+      {
+        "after": "a433e4931348aeee787be87dc44c0b8de77a9441",
+        "before": "a433e4931348aeee787be87dc44c0b8de77a9441",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/registry.json"
+      },
+      {
+        "after": "8e1854ea56cdd2ae630c52f269ba003604f2cb42",
+        "before": "8e1854ea56cdd2ae630c52f269ba003604f2cb42",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/request.json"
+      },
+      {
+        "after": "64204f8f7dc90c87fde3927ea848054e49947359",
+        "before": "64204f8f7dc90c87fde3927ea848054e49947359",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/source.bin"
+      },
+      {
+        "after": "c039ebc56a66ddb1507d46278936bbb3a37b69d3",
+        "before": "c039ebc56a66ddb1507d46278936bbb3a37b69d3",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/state.bin"
+      },
+      {
+        "after": "7941fa214027ada610f942ba27b315a5b78bb1cb",
+        "before": "7941fa214027ada610f942ba27b315a5b78bb1cb",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/support.bin"
+      },
+      {
+        "after": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f",
+        "before": "5eef4ad687d8ff2c59ea1b0b642a8f647054420f",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/transforms.bin"
+      },
+      {
+        "after": "f015d437d5406b641132db52b8c4b9918394be08",
+        "before": "f015d437d5406b641132db52b8c4b9918394be08",
+        "path": "docs/calidad/riesgos-materiales-s26/r05/fixture/vector-alterado.bin"
+      },
+      {
+        "after": "1f8af3696ee0c5ef830820e80b67d86236a20e1e",
+        "before": "1f8af3696ee0c5ef830820e80b67d86236a20e1e",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/README.md"
+      },
+      {
+        "after": "2388b7f1f8eae66d17e66b6bc83ec262e0d93c00",
+        "before": "2388b7f1f8eae66d17e66b6bc83ec262e0d93c00",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/local01/src/recepcion.rs"
+      },
+      {
+        "after": "dc0b7b8ff188c8af442a225d9b64912c6e1d9774",
+        "before": "dc0b7b8ff188c8af442a225d9b64912c6e1d9774",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/proceso03/README.md"
+      },
+      {
+        "after": "13659f8336079af88b19b89e0722608a296e0a00",
+        "before": "13659f8336079af88b19b89e0722608a296e0a00",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/proceso03/src/bin/sucesos.rs"
+      },
+      {
+        "after": "3d0304a48951ed62a305b4374e76e366c988b570",
+        "before": "3d0304a48951ed62a305b4374e76e366c988b570",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/proceso03/src/main.rs"
+      },
+      {
+        "after": "77cd1c876bbc792cde852d856bfb1cfa2a626144",
+        "before": "77cd1c876bbc792cde852d856bfb1cfa2a626144",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/t0701/README.md"
+      },
+      {
+        "after": "9b9cc289c06711a2f91529cb49a1ee344b012135",
+        "before": "9b9cc289c06711a2f91529cb49a1ee344b012135",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/t0701/RESULTADOS.md"
+      },
+      {
+        "after": "103a9bfff26cb662c834c18f03ac9b486ef59c71",
+        "before": "103a9bfff26cb662c834c18f03ac9b486ef59c71",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/t0701/src/main.rs"
+      },
+      {
+        "after": "e60499a0c1cb1be8e8ec851330ad039333a60a57",
+        "before": "e60499a0c1cb1be8e8ec851330ad039333a60a57",
+        "path": "docs/calidad/riesgos-materiales-s26/r08/auxiliar.rs"
+      },
+      {
+        "after": "4e71a09d135549f0016917d93577a14e37f40782",
+        "before": "4e71a09d135549f0016917d93577a14e37f40782",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/audit_diagnostics.rs"
+      },
+      {
+        "after": "17616a66de8d26c09ad0578a0806bb7f60f22082",
+        "before": "17616a66de8d26c09ad0578a0806bb7f60f22082",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reception.rs"
+      },
+      {
+        "after": "242a1e04e78353f154cb481a5caf4794ad807441",
+        "before": "242a1e04e78353f154cb481a5caf4794ad807441",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs"
+      },
+      {
+        "after": "9cf70186c518ec9a7063b9504b4c4a278a78b642",
+        "before": "9cf70186c518ec9a7063b9504b4c4a278a78b642",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/authority/transitions/reuse_tests/reception_tests/diagnostic_tests.rs"
+      },
+      {
+        "after": "84debef4e0452c1e18d35ccd4f4ed97460674428",
+        "before": "84debef4e0452c1e18d35ccd4f4ed97460674428",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/lib.rs"
+      },
+      {
+        "after": "c19058d2d3b307980fa9ab3dbef655769a59484a",
+        "before": "c19058d2d3b307980fa9ab3dbef655769a59484a",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-de-recepcion-y-prueba-entre-modelos/cambios/rust/sv_core/src/requirements/observed.rs"
+      },
+      {
+        "after": "5564f2b5684ddf56f72a72f5942816ef40ff7a28",
+        "before": "5564f2b5684ddf56f72a72f5942816ef40ff7a28",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/compiler_diagnostics.rs"
+      },
+      {
+        "after": "f2ec5f89e7209d003b45ca04e8272e43ca4602db",
+        "before": "f2ec5f89e7209d003b45ca04e8272e43ca4602db",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/frontend.rs"
+      },
+      {
+        "after": "a01cebae64b86164fb1ef997b3b0b5987b8ea9c1",
+        "before": "a01cebae64b86164fb1ef997b3b0b5987b8ea9c1",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/lib.rs"
+      },
+      {
+        "after": "445cf132c5b4c7c1bce6b797d25d8e5be4fa9e48",
+        "before": "445cf132c5b4c7c1bce6b797d25d8e5be4fa9e48",
+        "path": "docs/calidad/tuberias-ia/diagnosticos-del-compilador-y-procedencia/cambios/rust/sv_core/src/wellformed.rs"
+      },
+      {
+        "after": "b42d8e06ee76ba2395c933a1e27a0e210c970073",
+        "before": "b42d8e06ee76ba2395c933a1e27a0e210c970073",
+        "path": "docs/calidad/tuberias-ia/intervalo-del-conjunto-de-estados/cambios/rust/sv_core/src/frontend.rs"
+      },
+      {
+        "after": "5b4dbe05906f2e5f6e0aa774f61ec7fa603efca7",
+        "before": "5b4dbe05906f2e5f6e0aa774f61ec7fa603efca7",
+        "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/json.rs"
+      },
+      {
+        "after": "88fd1d14bbbca1137c7c26f2fbb25d4a5e21cc42",
+        "before": "88fd1d14bbbca1137c7c26f2fbb25d4a5e21cc42",
+        "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs"
+      },
+      {
+        "after": "5089f555a8e01c08fcc0f7eca5f4a9e8346c326b",
+        "before": "5089f555a8e01c08fcc0f7eca5f4a9e8346c326b",
+        "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/main.rs"
+      },
+      {
+        "after": "d726ded2e5bd5fb796892adce1ab640896fc7ec7",
+        "before": "d726ded2e5bd5fb796892adce1ab640896fc7ec7",
+        "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/observer.rs"
+      },
+      {
+        "after": "f26908ad6447c5179cc18fa8434f3d1ae5c2fc02",
+        "before": "f26908ad6447c5179cc18fa8434f3d1ae5c2fc02",
+        "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/sha.rs"
+      },
+      {
+        "after": "0dbcb781966f6b16dbafe4e26df9e65462177049",
+        "before": "0dbcb781966f6b16dbafe4e26df9e65462177049",
+        "path": "docs/calidad/tuberias-ia/ubicaciones-de-rechazos-compuestos/cambios/rust/sv_core/src/frontend.rs"
+      },
+      {
+        "after": "1eba5a01b623485af1d628287931432e69380731",
+        "before": "1eba5a01b623485af1d628287931432e69380731",
+        "path": "docs/calidad/tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/cambios/rust/sv_core/src/compiler_diagnostics.rs"
+      },
+      {
+        "after": "8411beb55e8fa96bfb01dffcb6341db19a6a9ad4",
+        "before": "8411beb55e8fa96bfb01dffcb6341db19a6a9ad4",
+        "path": "docs/calidad/tuberias-ia/ubicaciones-sintacticas-y-perfil-fuente/cambios/rust/sv_core/src/frontend.rs"
+      },
+      {
+        "after": "44f8fda87856ab16007195cab324d40a758e506a",
+        "before": "44f8fda87856ab16007195cab324d40a758e506a",
+        "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md"
+      },
+      {
+        "after": "d284864c44d0e36d022768131abf88c450b95eb6",
+        "before": "d284864c44d0e36d022768131abf88c450b95eb6",
+        "path": "rust/sv_core/Cargo.toml"
+      },
+      {
+        "after": "a58b410d325d545f3d401c2a7f9a421b15512f95",
+        "before": "a58b410d325d545f3d401c2a7f9a421b15512f95",
+        "path": "rust/sv_core/assets/manifiesto-sv.md"
+      },
+      {
+        "after": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46",
+        "before": "4451680bc5c0ee9ff068d4dfbacbc3a04998de46",
+        "path": "rust/sv_core/examples/binding_probe.rs"
+      },
+      {
+        "after": "dbcb45298808828d94829a4322265cbfcd235fd0",
+        "before": "dbcb45298808828d94829a4322265cbfcd235fd0",
+        "path": "rust/sv_core/examples/binding_probe_browser.rs"
+      },
+      {
+        "after": "9f51f7ef672c9830d193e6d496ca9d869ef5b560",
+        "before": "9f51f7ef672c9830d193e6d496ca9d869ef5b560",
+        "path": "rust/sv_core/examples/cyb_reception_probe.rs"
+      },
+      {
+        "after": "6b031259b380176373d722e87cc758a9d9c4c6f3",
+        "before": "6b031259b380176373d722e87cc758a9d9c4c6f3",
+        "path": "rust/sv_core/examples/gh_binding_probe.rs"
+      },
+      {
+        "after": "e400ee6a809948590bbffe9276704ed92facd11c",
+        "before": "e400ee6a809948590bbffe9276704ed92facd11c",
+        "path": "rust/sv_core/examples/gh_binding_probe_browser.rs"
+      },
+      {
+        "after": "02a7570c68f30fa1777760913ad32d69238ce8a6",
+        "before": "02a7570c68f30fa1777760913ad32d69238ce8a6",
+        "path": "rust/sv_core/examples/probe_assembly_2b.rs"
+      },
+      {
+        "after": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+        "before": "1a962e20ebe23ecf01acc2d02536e8ab204334c8",
+        "path": "rust/sv_core/src/admissibility.rs"
+      },
+      {
+        "after": "95a976d32444537ba4240cf7ad4375eca37ef064",
+        "before": "95a976d32444537ba4240cf7ad4375eca37ef064",
+        "path": "rust/sv_core/src/authority.rs"
+      },
+      {
+        "after": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+        "before": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+        "path": "rust/sv_core/src/authority/transitions.rs"
+      },
+      {
+        "after": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+        "before": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+        "path": "rust/sv_core/src/authority/transitions/reuse_tests.rs"
+      },
+      {
+        "after": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+        "before": "6fb0971638d4ee72edab02d9e39bb52c53330041",
+        "path": "rust/sv_core/src/bindings.rs"
+      },
+      {
+        "after": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+        "before": "6a5f6c8fc25ddeaff4b54d94d7ea4d7028784de5",
+        "path": "rust/sv_core/src/c03_tests.rs"
+      },
+      {
+        "after": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+        "before": "ee51d09f06694fb1a190de6f738686cb7d6397d7",
+        "path": "rust/sv_core/src/context_wellformed.rs"
+      },
+      {
+        "after": "08899b4dfb3a7e936b8649929619f57454248c42",
+        "before": "08899b4dfb3a7e936b8649929619f57454248c42",
+        "path": "rust/sv_core/src/control.rs"
+      },
+      {
+        "after": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+        "before": "f06fdd6b3a68af2af8fc722afbda79c03916ef1d",
+        "path": "rust/sv_core/src/control_tests.rs"
+      },
+      {
+        "after": "d3074524e0477e7c54728238119f7e54ded215c2",
+        "before": "d3074524e0477e7c54728238119f7e54ded215c2",
+        "path": "rust/sv_core/src/decision_trace.rs"
+      },
+      {
+        "after": "22903a491b3abe12749921b12c92b0319b7c225e",
+        "before": "22903a491b3abe12749921b12c92b0319b7c225e",
+        "path": "rust/sv_core/src/equivalence.rs"
+      },
+      {
+        "after": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+        "before": "01a4e7c5c0c4728c7a6c318a32a1d94cd464f1de",
+        "path": "rust/sv_core/src/execution.rs"
+      },
+      {
+        "after": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+        "before": "c0a94c175f563a0145d31965da71fd3b1b07c732",
+        "path": "rust/sv_core/src/frame.rs"
+      },
+      {
+        "after": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+        "before": "ec3202906af340830f762cc6dc44af1f9824e6e3",
+        "path": "rust/sv_core/src/frame_tests.rs"
+      },
+      {
+        "after": "c73933b661f08c4d0123b8a22f436962b5481208",
+        "before": "c73933b661f08c4d0123b8a22f436962b5481208",
+        "path": "rust/sv_core/src/frontend.rs"
+      },
+      {
+        "after": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+        "before": "c6a5c33154829aaaa67bfd4ad851d52acdeae22d",
+        "path": "rust/sv_core/src/grammar_conformance.rs"
+      },
+      {
+        "after": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+        "before": "bb6ecbfa564ed60477f9ba9e82345cec945e10d1",
+        "path": "rust/sv_core/src/identifier_profile.rs"
+      },
+      {
+        "after": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+        "before": "3f4ce9b8fe966bda77d72cb872d68a81297eb2b7",
+        "path": "rust/sv_core/src/ir.rs"
+      },
+      {
+        "after": "e339664be237680d6874fd544b3bf1b99e50a93d",
+        "before": "e339664be237680d6874fd544b3bf1b99e50a93d",
+        "path": "rust/sv_core/src/ir_tests.rs"
+      },
+      {
+        "after": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90",
+        "before": "fcdefa0c627499e8dfc1cb319acbdc8e5a404f90",
+        "path": "rust/sv_core/src/lib.rs"
+      },
+      {
+        "after": "6e3fb9ee0d238421fa1f81514b79e0d7f9149a42",
+        "before": "6e3fb9ee0d238421fa1f81514b79e0d7f9149a42",
+        "path": "rust/sv_core/src/manifiesto.rs"
+      },
+      {
+        "after": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+        "before": "f412fd1d3e62e5d723eac428f7df2aa0e89c4b3c",
+        "path": "rust/sv_core/src/mediation.rs"
+      },
+      {
+        "after": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+        "before": "f97b63e4a59b255935a68c1dde322ee52a5df337",
+        "path": "rust/sv_core/src/nat.rs"
+      },
+      {
+        "after": "980270a996ae02df66f26788b2ab32c077d7e30c",
+        "before": "980270a996ae02df66f26788b2ab32c077d7e30c",
+        "path": "rust/sv_core/src/permission.rs"
+      },
+      {
+        "after": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+        "before": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+        "path": "rust/sv_core/src/requirements.rs"
+      },
+      {
+        "after": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+        "before": "1f562fc4747876a123c3b24ee77a06e9bc5bfa4a",
+        "path": "rust/sv_core/src/requirements/initial.rs"
+      },
+      {
+        "after": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+        "before": "4cf19c2ce7af9954ceda45ccab8b0b549c695c29",
+        "path": "rust/sv_core/src/requirements_bridge.rs"
+      },
+      {
+        "after": "91fb4638389114a0cbc1af4152111fbddc451d82",
+        "before": "91fb4638389114a0cbc1af4152111fbddc451d82",
+        "path": "rust/sv_core/src/requirements_conflict.rs"
+      },
+      {
+        "after": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+        "before": "873b1dca748bfca597b11f8e7f32401ed7d7838e",
+        "path": "rust/sv_core/src/requirements_coverage.rs"
+      },
+      {
+        "after": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+        "before": "fffe1e4f9415f6ffef92585d20023bc84857d6af",
+        "path": "rust/sv_core/src/requirements_reuse.rs"
+      },
+      {
+        "after": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+        "before": "d7dd5954282ffbdc04b75caa2bc0031e6cf2a329",
+        "path": "rust/sv_core/src/resolution.rs"
+      },
+      {
+        "after": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+        "before": "6f0466888c87f9761ccfbe7aed10fae768fbad07",
+        "path": "rust/sv_core/src/resolution_tests.rs"
+      },
+      {
+        "after": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+        "before": "4f38c7a5d51f9173444445c4b8e7f60187487697",
+        "path": "rust/sv_core/src/transition_data_wellformed.rs"
+      },
+      {
+        "after": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+        "before": "c25236376dd087b70ce68c4c3978146f9e58e5c6",
+        "path": "rust/sv_core/src/wellformed.rs"
+      },
+      {
+        "after": "3d38d75129da74cb747372dd5764a481c2d33774",
+        "before": "3d38d75129da74cb747372dd5764a481c2d33774",
+        "path": "rust/sv_core/tests/admissibility_table_causal.rs"
+      },
+      {
+        "after": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5",
+        "before": "3c0b982d1d7ce4fd22d9966fe37eab788cc1c7a5",
+        "path": "rust/sv_core/tests/architecture_type_guards.rs"
+      },
+      {
+        "after": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377",
+        "before": "bfaecf41799cfbfc44ae6bd0fb0ae5944f4cd377",
+        "path": "rust/sv_core/tests/bindings.rs"
+      },
+      {
+        "after": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368",
+        "before": "8351ec616fec0ff9cb40dbd0947a18b1cfb08368",
+        "path": "rust/sv_core/tests/bridge_set.rs"
+      },
+      {
+        "after": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a",
+        "before": "7286ec1e1c0b03805e84fda0a98f56d1a97e5c2a",
+        "path": "rust/sv_core/tests/cell_geometry_native.rs"
+      },
+      {
+        "after": "46480951c432331f08c612f47e529d25f478dfc0",
+        "before": "46480951c432331f08c612f47e529d25f478dfc0",
+        "path": "rust/sv_core/tests/codomain_uniqueness.rs"
+      },
+      {
+        "after": "765d6aaa176969f8970e07a7575b431446c6a9e2",
+        "before": "765d6aaa176969f8970e07a7575b431446c6a9e2",
+        "path": "rust/sv_core/tests/context_wellformed.rs"
+      },
+      {
+        "after": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+        "before": "7271d852148aff5c9ec4a876bb759ccccd72f727",
+        "path": "rust/sv_core/tests/cyb_authority_boundary.rs"
+      },
+      {
+        "after": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad",
+        "before": "5d45e31d5640d9feb6f0e5d9656514fb2749d4ad",
+        "path": "rust/sv_core/tests/cyb_reception.rs"
+      },
+      {
+        "after": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3",
+        "before": "d852c5f37e92fd8aa3adcaf6de8c45c9380473b3",
+        "path": "rust/sv_core/tests/domain_parameters.rs"
+      },
+      {
+        "after": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f",
+        "before": "f9cb85d7dd09e03b1dcb6693c6b79f2f16bcd10f",
+        "path": "rust/sv_core/tests/gh_bindings.rs"
+      },
+      {
+        "after": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd",
+        "before": "2c29dbc788c51e2fbbf0b162ab8115d51ee855fd",
+        "path": "rust/sv_core/tests/grammar_closed_domains.rs"
+      },
+      {
+        "after": "0dc7bb3c08225e6ccd553711c1121e6463c2e556",
+        "before": "0dc7bb3c08225e6ccd553711c1121e6463c2e556",
+        "path": "rust/sv_core/tests/horizon_architecture.rs"
+      },
+      {
+        "after": "05145e06e8ba24346dde77e062ebdd883b4ad92d",
+        "before": "05145e06e8ba24346dde77e062ebdd883b4ad92d",
+        "path": "rust/sv_core/tests/horizon_events.rs"
+      },
+      {
+        "after": "31a9c316b390cc7e58ccfdf9379e848acef57dd5",
+        "before": "31a9c316b390cc7e58ccfdf9379e848acef57dd5",
+        "path": "rust/sv_core/tests/json_projection.rs"
+      },
+      {
+        "after": "dceef86c0b3e4510558aa7069874bf90e293618c",
+        "before": "dceef86c0b3e4510558aa7069874bf90e293618c",
+        "path": "rust/sv_core/tests/optional_fields.rs"
+      },
+      {
+        "after": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452",
+        "before": "f55a2fc5ad05d906deb8bf39c22849e37f4b5452",
+        "path": "rust/sv_core/tests/output_semantics_totality.rs"
+      },
+      {
+        "after": "13231d08c7dd6da46843fe02cd622a0bfe84e44c",
+        "before": "13231d08c7dd6da46843fe02cd622a0bfe84e44c",
+        "path": "rust/sv_core/tests/projection_metadata_native.rs"
+      },
+      {
+        "after": "caf66ddd893ce952526e9a8832dd69ed3209318e",
+        "before": "caf66ddd893ce952526e9a8832dd69ed3209318e",
+        "path": "rust/sv_core/tests/transition_data_wellformed.rs"
+      },
+      {
+        "after": "fa15d116750fe42902ae4f8c8d2630b89ee1cc8e",
+        "before": "fa15d116750fe42902ae4f8c8d2630b89ee1cc8e",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/Cargo.toml"
+      },
+      {
+        "after": "4006434031c9e0a788fb05200839296addf2843a",
+        "before": "4006434031c9e0a788fb05200839296addf2843a",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/Cargo.lock"
+      },
+      {
+        "after": "9a43ed885eed56a6a1491186093038a6b05e1e06",
+        "before": "9a43ed885eed56a6a1491186093038a6b05e1e06",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/src/main.rs"
+      },
+      {
+        "after": "d3c1e75b3b3a681cd87cda75bcc050c165b55731",
+        "before": "d3c1e75b3b3a681cd87cda75bcc050c165b55731",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/src/integrado.rs"
+      },
+      {
+        "after": "ee54916e474d9ec08d9193580b453e80d4201537",
+        "before": "ee54916e474d9ec08d9193580b453e80d4201537",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/FUENTES.json"
+      },
+      {
+        "after": "baaf4cd0c5ceaeb29c4b5793a2002bfa4d0cf6a8",
+        "before": "baaf4cd0c5ceaeb29c4b5793a2002bfa4d0cf6a8",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/README.md"
+      },
+      {
+        "after": "10937087995b777e59634305aa83806ff2105860",
+        "before": "10937087995b777e59634305aa83806ff2105860",
+        "path": "docs/calidad/riesgos-materiales-s26/r06/integrado01/REGISTRO_PREVIO.json"
+      }
+    ],
+    "sources": 112,
+    "total": 119,
+    "unchanged": true,
+    "procedimiento": "Cotejo administrativo de blobs Git después de ambas campañas y antes de actualizar el relevo. Los 112 archivos de FUENTES.json y los siete del banco coinciden con el precompromiso. No se alteraron los oráculos tras observar resultados."
+  },
+  "publicacion_previa": {
+    "arboles_completos_cotejados_por": "auxiliar Rust R08",
+    "resultado": "COMPROBACION_LOCAL_CONFORME en ambas sedes",
+    "movimiento": "ramas existentes, avance sin force y relectura del commit antes de ejecutar"
+  },
+  "evidencia": "EVIDENCIA.tar.gz conserva las dos campañas, stdout/stderr del banco y de los hijos, logs de compilación y manifiesto de archivos publicados.",
+  "alcance": "34 concordancias de oráculos en 17 composiciones del recorrido documental. Padre e hijo bajo anfitrión confiable. Cero nuevos casos globales S26 cerrados; sin garantía física de RAM, durabilidad, host independiente, efecto externo o perfil productivo."
+}

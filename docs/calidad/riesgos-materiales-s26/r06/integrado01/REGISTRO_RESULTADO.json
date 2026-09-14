@@ -1,0 +1,13 @@
+{
+  "revision": 22,
+  "suceso": {
+    "fecha_actualizacion_utc": "2026-09-14T07:31:22Z",
+    "cortes_de_entrada": "Precompromiso Lenguaje bc2dd7360f555c51464d3c9c185404bd4e368ac6; laboratorio 4669517b9acc3953b104a978dd8bc2b4a7cbf591.",
+    "resultado": "R06 INTEGRADO01: 17/17 casos conformes en debug y 17/17 en release, ambas campañas con salida 0. Recorrido documental integrado con mutación por el padre y terminación del hijo; rechazo y recibo incompatibles bloquean aceptación en ambos órdenes.",
+    "verificacion": "Siete archivos del banco y 112 fuentes intactos durante ambas campañas. Oráculos previos conservados; capturas, escrituras, bytes recibidos/consumidos, muestras parentales y terminaciones en la evidencia. Cotejo de árboles completos con auxiliar Rust R08.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01",
+    "referencia_calidad": "S26/R06/INTEGRADO01: precompromiso, EJECUCIONES.json y EVIDENCIA.tar.gz (391144 bytes; SHA-256 bb88a56ae15a1f3aa546d837d24f5b55197a575fa1c02020413225676a56d38e). LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.",
+    "siguiente_accion": "Concretar S26-F01/F02 en las sedes existentes de referencias y ligaduras: cotejar contratos y realización, dos ocurrencias legítimas de igual valor, consulta exacta y negativos de sustitución/ambigüedad. Precomprometer fixtures y oráculos Rust antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente.",
+    "observaciones": "Diecisiete composiciones documentales bajo anfitrión confiable; no todas las combinaciones ni cierre de los doce casos S26. Separar declaración adversarial I03 de rechazo real de admit. Sin garantía física de RAM, durabilidad, host independiente, efecto externo, identidad de adquisición o backend productivo. Sin Python/Java, cambio del núcleo ni rama nueva; RETP canónica no escrita. Unidad estable W-S26; regularización de identidad en revisión 18. Enlaces de seguimiento a ramas vigentes; a9b99ea es histórico inmutable."
+  }
+}
