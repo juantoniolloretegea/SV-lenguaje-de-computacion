@@ -1,5 +1,13 @@
 # Estado observado de Rust y del entorno nativo
 
+## Continuidad de entorno · 14/09/2026, 14:47 UTC
+
+Unidad W-S26-02. En el entorno de continuación se recuperó la instalación directa de Rust 1.98.0 en `/opt/sv-rust-1.98.0`. `rustc -vV` y `cargo -V` se verificaron a las 14:47:11 UTC; las dos campañas de fronteras de salida compilaron y terminaron con retorno 0. [Evidencia de esta recuperación y ejecución](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md).
+
+Este entorno usa rutas explícitas: `env RUSTC=/opt/sv-rust-1.98.0/bin/rustc /opt/sv-rust-1.98.0/bin/cargo ...`. No se recibió aquí la instalación rustup del entorno anterior. Las incidencias de instalación y sus huellas se conservan en la evidencia enlazada. Antes de la siguiente etapa se comprobará la disponibilidad efectiva; este registro fechado no garantiza persistencia entre entornos. S29 conserva su cierre documental y operativo anterior; S24/C#/.NET continúa diferido.
+
+## Observación anterior conservada
+
 Fecha UTC: 2026-09-14T10:43:49Z. Arquitectura: x86_64. Unidad: Watson / W-S26.
 
 **Comprobación instrumental: CONFORME PARA LAS HERRAMIENTAS NATIVAS DECLARADAS.** Este registro es una observación fechada, no un monitor en directo ni garantía de persistencia después de reemplazar el entorno.

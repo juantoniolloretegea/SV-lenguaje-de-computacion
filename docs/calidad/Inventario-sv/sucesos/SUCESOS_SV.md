@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-14T14:39:24Z
+**fecha_actualizacion_utc:** 2026-09-14T14:54:39Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 1d577e7dffd9bad8d73cd779105c8730301bea0a; laboratorio 2e2fc695e4e718999f471c7b4fa8520af8138c2f.
+**cortes_de_entrada:** Precompromisos: Lenguaje 0452670b1d78c581592acca7740814c1c4cdef05; laboratorio 74c013fc4d0cef1aa6e0b09486e9709700324ae5.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Preparadas doce variantes de seis fronteras conjuntas de descriptor/recibo, sobre semillas EN/ES existentes. Comprometidos 10239/10240 bytes, excesos de un byte y consumidor UTF-8. Cero casos del nuevo banco ejecutados. Límites individuales previos conservados.
+**resultado:** Fronteras conjuntas: doce variantes EN/ES conformes por perfil Rust, 24 invocaciones y cero discrepancias; seis entregas y seis rechazos por campaña. Cuatro sensibilidades detectadas por perfil. Relevo de representación/consumo concretado.
 
-**verificacion:** Preparador Rust sin llamadas de admisión; banco compilado, sin ejecución. Oráculos independientes del resultado nuevo; fuentes del núcleo y admisor intactas. Cuatro sensibilidades previstas. Huella de entradas: 774e92acfb96f90cdb3248e3712a5c47e9f5e9bbe7cd09ace4b2ba3e916f4dcb.
+**verificacion:** Dos campañas Rust 1.98.0, debug y optimizada con aserciones de depuración desactivadas; retornos 0. Oráculos y 157 huellas de entrada intactos; núcleo y admisor sin cambios. Cotejo R08 de ambos árboles antes de ejecutar; capturas, comandos y binarios conservados. Incidencias auxiliares explícitas; sin repetir el banco.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/BANCO_FRONTERAS_SALIDA.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-221
 
-**siguiente_accion:** Publicar y cotejar el banco en Calidad y laboratorio; ejecutar doce variantes en cada perfil de compilación Rust y las sensibilidades. Conservar primera guarda, lecturas efectivas y ausencia de despacho ante rechazo. Después preparar relevo de representación/consumo.
+**siguiente_accion:** Preparar incremento material de representación/consumo según el relevo: reutilizar C04/C05, fijar componente, captura final, presupuesto y oráculos antes de ejecutar. Conservar el hallazgo Celda para documentación/errores; Bis, catálogo y cierre de fase, después GUI C#/.NET.
 
-**observaciones:** El exceso agregado es inalcanzable bajo ambos límites individuales: 8192+2048=10240. No atribuir cobertura ejecutada a esa rama defensiva. Las 202 filas originales y 24 escenarios Bis mantienen sus recuentos. S24/C#/.NET permanece diferida; S26 conserva su pendiente de consulta. Rust 1.98.0 recuperado; sin Python.
+**observaciones:** RETP-2026-237. La rama de rechazo agregado permanece defensiva e inalcanzable bajo ambas cuotas individuales; no se atribuye cobertura ejecutada. Las 202 filas originales C02-C12 y los 24 escenarios globales mantienen 2 ejecutados y 22 pendientes. Bis y S26 abiertos; consulta histórica F01/F02 pendiente. Cero Python y cero imágenes nuevas.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Completar frontera de tamaño del descriptor y salida agregada del montaje, y preparar su relevo hacia representación/consumo con pruebas previas; trasladar el hallazgo Celda al retorno de documentación/errores. Mantener Bis → catálogo y cierre de fase → análisis e instalación de GUI.",
+  "siguiente_accion": "Preparar el incremento material de representación/consumo según RELEVO_REPRESENTACION_CONSUMO.md: reutilizar C04/C05 y el montaje, fijar componente, canal, presupuesto y oráculos antes de ejecutar. Fronteras conjuntas recibidas en RETP-237. Conservar el hallazgo Celda para documentación/errores y Bis → catálogo y cierre de fase → GUI C#/.NET.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -53,9 +53,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/README.md",
+  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-221",
+  "ultimo_retp": "RETP-2026-237",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -84,11 +84,11 @@
   "orden_trabajo": [
     "Completar (p1+p3)-Bis",
     "Retomar y cerrar el catálogo de errores y la fase aplicable",
-    "Analizar, elegir e instalar la GUI"
+    "Provisionar y verificar C#/.NET para la GUI según S24"
   ],
   "gui": {
     "estado": "diferida hasta cierre de fase",
-    "tecnologia": "no seleccionada"
+    "tecnologia": "C#/.NET, indicación humana recibida en S24 el 14/09/2026; provisión diferida"
   },
   "evidencia_ultimo_contraste": "bis-c01/evidencia/ejecucion-1/RESULTADO.json",
   "suceso_secuencia_posterior": {
@@ -292,6 +292,29 @@
     "admision_y_nucleo_modificados": false,
     "suficiencia_global": false,
     "hallazgo": "Celda es palabra protegida y no puede nombrar el fixture; variantes nuevas CeldaPrueba conservan el contenido."
+  },
+  "fronteras_conjuntas_salida": {
+    "registro": "RETP-2026-237",
+    "informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md",
+    "relevo": "bis04-extension-perfiles-recursos-v0_1/RELEVO_REPRESENTACION_CONSUMO.md",
+    "precompromiso_lenguaje": "0452670b1d78c581592acca7740814c1c4cdef05",
+    "precompromiso_laboratorio": "74c013fc4d0cef1aa6e0b09486e9709700324ae5",
+    "escenarios": 6,
+    "variantes_unicas": 12,
+    "campanas": 2,
+    "invocaciones": 24,
+    "conformes_por_campana": 12,
+    "entregas_por_campana": 6,
+    "rechazos_por_campana": 6,
+    "sensibilidades_detectadas_por_campana": 4,
+    "guarda_agregada_rechazo_ejecutada": false,
+    "cierre_global": false
+  },
+  "continuidad_transversal_s26": {
+    "revision_sucesos": 26,
+    "informe": "../../../riesgos-materiales-s26/r06/CONTINUIDAD_F01_F02_Y_RELEVO_BIS.md",
+    "resultado": "LIG recibido; consulta histórica F01 y resolución completa F02 pendientes de interfaz material constituida. Continúa S22 por representación/consumo; no repetir campañas recibidas.",
+    "historial": "seguimiento_transversal_s26 conserva a continuación su corte RETP-233"
   },
   "seguimiento_transversal_s26": {
     "id": "S26",

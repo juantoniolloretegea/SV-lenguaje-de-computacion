@@ -2244,3 +2244,17 @@ Cualificación local T01/T02/T05/T06; cero casos globales S26 cerrados. Catch_un
 Concretar y precomprometer el observador de proceso para R06 T03/T04/T08; T07 con barreras de mutación y dependencias propias. Integración del recorrido completo pendiente. S26 y Bis abiertos; S24 pendiente. R06 no es cierre de R0.
 
 [Evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/local01/RESULTADOS.md).
+
+<a id="retp-237"></a>
+
+### RETP-2026-237 · S22 · Fronteras conjuntas de salida
+
+Fronteras conjuntas de descriptor y recibo: doce variantes EN/ES conformes en cada perfil Rust; 24 invocaciones, cero discrepancias y cuatro sensibilidades detectadas por campaña.
+
+Precompromiso Lenguaje 0452670b1d78c581592acca7740814c1c4cdef05 y laboratorio 74c013fc4d0cef1aa6e0b09486e9709700324ae5; ambos cotejados con R08 antes de ejecutar. Rust 1.98.0 offline/locked: debug y optimizado sin debug-assertions; 12/12 por perfil, salida 0; 157 huellas de entrada intactas.
+
+La rama agregada de rechazo es inalcanzable bajo ambos límites individuales; no se declara ejecutada. Sin imagen ni consumo visual de IA, consulta histórica completa, resistencia al host ni cotas RAM/tiempo. Incidencias auxiliares preservadas. Las 202 filas originales y recuentos globales Bis no cambian; S26 y Bis siguen abiertos.
+
+Preparar incremento de representación/consumo según el relevo C04/C05: sede, componente, canal, captura final, presupuesto y oráculos antes de ejecutar. Conservar Celda para catálogo y el orden Bis, catálogo/cierre de fase, GUI C#/.NET.
+
+[Evidencia](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md).
