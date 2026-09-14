@@ -2286,3 +2286,15 @@ La captura y su hash no prueban por sí solos la dependencia utilizada: el mutan
 Preparar contrato y banco Rust de SVG a rasterización y captor, con precisión, presupuesto y oráculos de píxeles independientes. Conservar F01/F02 pendiente y la secuencia Bis, catálogo/cierre de fase, GUI C#/.NET.
 
 [Resultados y evidencia](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md).
+
+<a id="retp-240"></a>
+
+### RETP-2026-240 · S22 · Preparación raster/captor
+
+Recepción resvg 0.48.1 y banco acotado de ocho sondas raster/captor; sin ejecutar al publicar.
+
+Archivo oficial cotejado en Rust; compilación resvg --locked --offline conforme. Ocho sondas fijadas previamente; cero ejecutadas.
+
+Tinta en leyenda no valida significado: R06 debe exponer el límite. Silueta no conserva por sí sola P1 y sentido. Captor no acredita aislamiento.
+
+[Contrato y banco previo](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md).

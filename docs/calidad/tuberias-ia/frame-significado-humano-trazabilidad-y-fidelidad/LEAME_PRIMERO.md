@@ -1,5 +1,7 @@
 # Léame primero: del frame a la colaboración auditable
 
+**S22 · RETP-240 · Raster/captor:** [contrato y ocho sondas previas](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md). resvg 0.48.1 recibido y compilado offline. Ejecutar el banco Rust acotado; conservar el límite esperado de significado de leyenda. No acredita paridad visual completa ni cierra Bis.
+
 ## Continuidad documental y material · 14/09/2026
 
 **S22 · SVG y consumo · RETP-239:** [resultados y evidencia](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md). 20/20 oráculos normales concordantes y cuatro ensayos de mutantes detectados en Rust debug/optimizado; SVG material y operación sobre coordenadas efectivamente utilizadas. S22 revisión 27 recibe el resultado. Sigue la frontera SVG → rasterización → captor, con contrato y oráculos de píxeles previos. S26/F01/F02 y S24 conservan sus pendientes. No repetir campañas recibidas por cambios administrativos.

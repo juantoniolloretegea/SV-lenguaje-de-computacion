@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-14T16:22:53Z
+**fecha_actualizacion_utc:** 2026-09-14T17:21:53Z
 
 **fecha_fin_utc:** —
 
@@ -774,15 +774,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** SVG material y consumo instrumentado: 20/20 oráculos normales concordantes y cuatro ensayos de mutantes detectados en debug y optimizado. El consumo falso conserva captura y hash correctos, pero se discrimina por coordenadas utilizadas y operación discordantes.
+**resultado:** resvg 0.48.1 recibido, huella oficial conforme y compilación Rust offline terminada. Ocho sondas raster/captor preparadas, sin ejecutar al publicar.
 
-**verificacion:** Seis binarios Rust ejecutados: dos normales con retorno 0 y cuatro mutados con retorno 1 por discrepancia funcional prevista. 22 entradas al montaje y dos controles del lector aislado. 145 huellas de entrada intactas; fuentes, oráculos, núcleo y admisor conservados. Cotejo R08 anterior a las campañas; evidencia y binarios recuperables.
+**verificacion:** Inspección Rust de SVG y fuente; testigos geométricos de pérdida posicional. Ocho oráculos acotados; R06 declara el límite del observador de presencia de leyenda.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-239
+**referencia_calidad:** RETP-2026-240
 
-**siguiente_accion:** Constituir la frontera SVG a rasterización y captor: formato, presupuesto, precisión/pérdida, canal y oráculos independientes de píxeles; preparar positivos, negativos y sensibilidad antes de ejecutar en Rust. No repetir SVG ni las campañas recibidas por cambios administrativos. Mantener catálogo/cierre antes de GUI C#/.NET.
+**siguiente_accion:** Ejecutar ocho sondas y conservar PNG, comandos y brechas. Completar después la verificación de leyenda y el captor integrado. Bis y S26 abiertos; GUI diferida.
 
 **observaciones:** Cualificación local, no cierre de Bis ni S26. SVG restringido y operación de coordenadas no acreditan percepción visual de IA, pantalla o resistencia al host. RC10 sólo prueba el lector aislado. 202 filas originales y escenarios globales conservados; F01/F02 pendiente de interfaz. Todas las pruebas, conductores y observadores en Rust; cero Python.
 
