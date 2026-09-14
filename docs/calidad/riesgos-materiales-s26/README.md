@@ -220,3 +220,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## S26 R06 T0701 · Recepción de mutación y concordancia de corte
 
 [Resultados y evidencia](r06/t0701/RESULTADOS.md): trece casos conformes en debug y trece en release. Mismo objeto, restitución A–B–A y mezcla de r1/r2 contrastados con barreras previas; la copia admitida se preserva y la igualdad de bytes no sustituye los referentes. Sucesos revisión 20, W-S26. Siguiente: precomprometer el recorrido integrado de apertura, admisión, mutación, captura, informe y terminación; la composición no queda probada por reunir los incrementos locales. S26/Bis abiertos; S24 pendiente.
+
+## S26 R06 INTEGRADO01 · Precompromiso del recorrido documental
+
+[Banco de diecisiete casos](r06/integrado01/README.md): apertura conservada por el padre, recepción/admisión en el hijo, mutación por barreras, consumidor LOCAL01 y observación de captura, informe, rechazo y terminación. Preparado y compilado; sin ejecutar al publicar. Sucesos revisión 21, W-S26; CSV/Markdown e historial mantienen seguimiento en main y espejo. Las composiciones fijadas no cierran por sí solas S26/Bis ni habilitan S24.

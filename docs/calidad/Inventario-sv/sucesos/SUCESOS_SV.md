@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T06:54:39Z
+**fecha_actualizacion_utc:** 2026-09-14T07:19:44Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromiso Lenguaje 0665bc32137a76e3a922197ab648526d8c0349bf; laboratorio aae666c74ac5db4af9a56ceb2b60a2ba5b7226fa.
+**cortes_de_entrada:** Lenguaje fbc91824bdf57901c0e24236296f09b82fc661bd; laboratorio b5d19ec1f4abbe13ed1b520eb8363038487df7b1.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 T0701: trece casos conformes en debug y trece en release. Escritura real sobre el mismo objeto y restitución A-B-A observadas; copia admitida preservada; alteración recibida rechazada; concordancia r1/r2 exigida pese a bytes iguales.
+**resultado:** R06 INTEGRADO01: diecisiete casos preparados para conectar apertura, recepción/admisión, mutación desde el padre, consumo LOCAL01, captura/informe y terminación del hijo. Incluye rechazo y recibo contradictorios en ambos órdenes. Compilado; banco sin ejecutar al publicar.
 
-**verificacion:** 26 concordancias y ambas campañas con salida 0 después del precompromiso publicado y cotejado. Seis archivos del banco y 107 fuentes intactos durante las ejecuciones. Aperturas, barreras, muestras intermedias, bytes recibidos/consumidos, guardas y logs conservados.
+**verificacion:** 112 fuentes cotejadas contra el corte vigente. Se reutilizan admisor, certificador y consumidor sin modificarlos; observador PROCESO03 adaptado con barreras parentales, rechazo separado y cuotas explícitas. Oráculos previos en README y Rust.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/t0701/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/t0701
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01
 
-**referencia_calidad:** S26/R06/T0701: resultados, EJECUCIONES.json y evidencia en Calidad y laboratorio. LOCAL01/RETP-236, PROCESO01/02/03 conservan sus resultados y alcances.
+**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso y fuentes en Calidad y laboratorio. LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.
 
-**siguiente_accion:** Fijar y precomprometer el banco integrado R06: apertura/referentes, admisión, mutación de fuente o dependencia, captura, informe y terminación. Reutilizar LOCAL01/PROCESO03/T0701 y precisar fronteras; no cerrar la composición por suma de sondas. S26/Bis abiertos; S24 pendiente.
+**siguiente_accion:** Ejecutar INTEGRADO01 en debug y release tras publicar y cotejar el precompromiso; recibir aperturas, muestras parentales, bytes consumidos, mensajes y terminaciones. Cualificar sólo las composiciones fijadas. S26/Bis abiertos; S24 pendiente.
 
-**observaciones:** T07 cualificado en el modelo local de barreras síncronas. No acredita continuidad del soporte, adquisición atómica del conjunto, concurrencia hostil, RAM física, supervivencia del observador/host, durabilidad ni efecto externo. P11 rechaza certificación después de captura, sin acreditar bloqueo previo a todo consumo. Cero casos globales S26 cerrados. Sin Python/Java ni cambios de núcleo. Identificación regularizada en revisión 18: W-S26 corresponde a esta unidad desde la recepción de LOCAL01 (revisión 13); las revisiones 13-17 arrastraron W-S0 y se conservan intactas. W-S26 permanece estable durante toda su intervención.
+**observaciones:** Padre e hijo bajo anfitrión confiable; diecisiete composiciones documentales, no todas las combinaciones. Rechazo declarado e informe favorable permanecen separados y su conflicto debe impedir aceptación. Sin efecto externo, garantía física de RAM, durabilidad, aislamiento frente al host ni adquisición atómica general. Sin Python/Java, cambio de núcleo ni nueva rama; RETP canónica no se escribe. W-S26 estable durante esta intervención; regularización de identidad conservada en revisión 18.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

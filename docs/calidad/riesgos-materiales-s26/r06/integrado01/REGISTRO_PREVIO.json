@@ -1,0 +1,13 @@
+{
+  "revision": 21,
+  "suceso": {
+    "fecha_actualizacion_utc": "2026-09-14T07:19:44Z",
+    "cortes_de_entrada": "Lenguaje fbc91824bdf57901c0e24236296f09b82fc661bd; laboratorio b5d19ec1f4abbe13ed1b520eb8363038487df7b1.",
+    "resultado": "R06 INTEGRADO01: diecisiete casos preparados para conectar apertura, recepción/admisión, mutación desde el padre, consumo LOCAL01, captura/informe y terminación del hijo. Incluye rechazo y recibo contradictorios en ambos órdenes. Compilado; banco sin ejecutar al publicar.",
+    "verificacion": "112 fuentes cotejadas contra el corte vigente. Se reutilizan admisor, certificador y consumidor sin modificarlos; observador PROCESO03 adaptado con barreras parentales, rechazo separado y cuotas explícitas. Oráculos previos en README y Rust.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/integrado01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/integrado01",
+    "referencia_calidad": "S26/R06/INTEGRADO01: precompromiso y fuentes en Calidad y laboratorio. LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances.",
+    "siguiente_accion": "Ejecutar INTEGRADO01 en debug y release tras publicar y cotejar el precompromiso; recibir aperturas, muestras parentales, bytes consumidos, mensajes y terminaciones. Cualificar sólo las composiciones fijadas. S26/Bis abiertos; S24 pendiente.",
+    "observaciones": "Padre e hijo bajo anfitrión confiable; diecisiete composiciones documentales, no todas las combinaciones. Rechazo declarado e informe favorable permanecen separados y su conflicto debe impedir aceptación. Sin efecto externo, garantía física de RAM, durabilidad, aislamiento frente al host ni adquisición atómica general. Sin Python/Java, cambio de núcleo ni nueva rama; RETP canónica no se escribe. W-S26 estable durante esta intervención; regularización de identidad conservada en revisión 18."
+  }
+}
