@@ -129,3 +129,7 @@ Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental 
 ## S26 R06 PROCESO02 · Precompromiso tras impedimento instrumental
 
 [Banco con tuberías anónimas](proceso02/README.md). PROCESO01 conserva el impedimento EPERM al crear el canal Unix, anterior al proceso hijo; cero casos completados. PROCESO02 fija catorce casos y sus recursos antes de ejecutar. Sucesos mantiene la revisión y los enlaces a Calidad y laboratorio; T07 e integración permanecen pendientes.
+
+## S26 R06 PROCESO03 · Corrección precomprometida de transporte
+
+[Banco con captura fragmentada](proceso03/README.md). PROCESO02 conserva su campaña incompleta por incompatibilidad entre tamaño de mensaje y cuota del decodificador. PROCESO03 alinea las cuotas sin modificar el núcleo y conserva el canal antes de la espera final. Catorce casos previstos, sin ejecución al publicar este banco. T07 e integración pendientes; seguimiento en Sucesos con enlaces a ambas sedes.
