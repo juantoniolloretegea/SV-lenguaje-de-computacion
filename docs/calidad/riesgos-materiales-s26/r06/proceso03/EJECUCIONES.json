@@ -1,0 +1,50 @@
+{
+  "version": "S26-R06-PROCESO03-EJECUCIONES/1",
+  "precompromiso_lenguaje": "2038f55685f8d6a406b837012a0731afcadc597e",
+  "precompromiso_laboratorio": "223bc1dedd847b93664c64018c75d7ae95699a44",
+  "entorno": {
+    "rustc": "1.98.0 (88d9e12ae178fab0fb5cc050a94da85685d449ea)",
+    "cargo": "1.98.0 (797e8a9bc 2026-08-05)",
+    "llvm": "22.1.8",
+    "host": "x86_64-unknown-linux-gnu",
+    "sistema": "Linux 6.18.44 x86_64 GNU/Linux"
+  },
+  "condiciones": {
+    "cargo": [
+      "--offline",
+      "--locked"
+    ],
+    "panic": "unwind",
+    "release_debug_assertions": false,
+    "core_dumps": "ulimit -c 0",
+    "python": false,
+    "java": false
+  },
+  "ejecuciones": [
+    {
+      "perfil": "debug",
+      "comando": "/tmp/r06p3-build/debug/sv_s26_r06_proceso03 <repositorio>/docs/calidad/riesgos-materiales-s26/r05/fixture /tmp/r06p3-debug",
+      "salida": 0,
+      "casos_conformes": 14,
+      "casos_totales": 14,
+      "sha256_ejecutable": "23edc05bf0363beb3d9b45997e14d62c1e6c0f706002fd99d2de581b9b0f57da"
+    },
+    {
+      "perfil": "release",
+      "comando": "/tmp/r06p3-build/release/sv_s26_r06_proceso03 <repositorio>/docs/calidad/riesgos-materiales-s26/r05/fixture /tmp/r06p3-release",
+      "salida": 0,
+      "casos_conformes": 14,
+      "casos_totales": 14,
+      "sha256_ejecutable": "87f04ab08b93a2c29aac1e23587a7e9b96660e73e867957b1935636a86f17ea5"
+    }
+  ],
+  "administracion": {
+    "editor_sucesos_sha256": "d1cce772fad278f074c8bcbc93f2a4d934963f5fbc768e0282ed3618e1cee3e1",
+    "cotejador_R08_sha256": "a6711d7bf433f729e97375044fab2ae3219e4f61ae90442ac866d9f7afef1998",
+    "alcance": "Editor separado de tres archivos de Sucesos; no abre RETP. Cotejo completo de descriptores mediante auxiliar Rust R08. No constituyen pruebas del comportamiento soberano SV."
+  },
+  "antecedentes": {
+    "PROCESO01": "Impedido antes de crear el hijo; cero casos completados.",
+    "PROCESO02": "P01 discrepante, P02 conforme, P03 interrumpido; once sin iniciar. No se agrega al recuento de PROCESO03."
+  }
+}

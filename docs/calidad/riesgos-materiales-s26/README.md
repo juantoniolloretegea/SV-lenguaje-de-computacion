@@ -208,3 +208,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## S26 R06 PROCESO03 · Corrección precomprometida de transporte
 
 [Banco con captura fragmentada](r06/proceso03/README.md). PROCESO02 conserva su campaña incompleta por incompatibilidad entre tamaño de mensaje y cuota del decodificador. PROCESO03 alinea las cuotas sin modificar el núcleo y conserva el canal antes de la espera final. Catorce casos previstos, sin ejecución al publicar este banco. T07 e integración pendientes; seguimiento en Sucesos con enlaces a ambas sedes.
+
+## S26 R06 PROCESO03 · Recepción del observador de proceso
+
+[Resultados y evidencia](r06/proceso03/RESULTADOS.md): catorce casos conformes en debug y catorce en release, con precompromiso intacto. Se conservan captura y escritura anteriores a la terminación del hijo; informes tardíos/contradictorios y estados de canal/proceso quedan separados. PROCESO01 impedido y PROCESO02 incompleto conservan sus resultados. Sucesos recibe la revisión 17 y enlaza Calidad y laboratorio. Siguiente: T07 con barreras de modificación, restitución y dependencias; integración pendiente. Sin cierre global de S26, Bis, R2 o S24.

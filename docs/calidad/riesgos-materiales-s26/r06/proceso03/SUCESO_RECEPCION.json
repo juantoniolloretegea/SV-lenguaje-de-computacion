@@ -1,0 +1,13 @@
+{
+  "revision": 17,
+  "suceso": {
+    "cortes_de_entrada": "Precompromiso Lenguaje 2038f55685f8d6a406b837012a0731afcadc597e; laboratorio 223bc1dedd847b93664c64018c75d7ae95699a44.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso03/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso03",
+    "fecha_actualizacion_utc": "2026-09-14T06:22:03Z",
+    "observaciones": "Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados.",
+    "referencia_calidad": "S26/R06/PROCESO03: resultados y evidencia en Calidad y laboratorio; RETP-2026-236 conserva su alcance de antecedente LOCAL01.",
+    "resultado": "R06 PROCESO03: catorce casos conformes en debug y catorce en release. Observación de aborto y terminación real del hijo; captura y escritura previas conservadas; informes tardíos y contradictorios separados. EOF y plazo no equivalen a terminación.",
+    "siguiente_accion": "Preparar T07: modificación del mismo objeto, restitución A-B-A y dependencia de otro corte, con barreras y oráculos previos. Integración completa pendiente. S26/Bis abiertos; S24 pendiente.",
+    "verificacion": "28 concordancias y ambas campañas con salida 0, tras precompromiso cotejado. Siete piezas del banco y 99 fuentes intactas. Evidencia completa con canales, fronteras y salidas finales. PROCESO01 impedido y PROCESO02 incompleto conservan sus resultados propios."
+  }
+}

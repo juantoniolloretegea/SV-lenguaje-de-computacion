@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T06:16:37Z
+**fecha_actualizacion_utc:** 2026-09-14T06:22:03Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 957bd49c3c23d1e5b7ae5dba8ffadac18e2d9253; laboratorio cc882b54f5ffb20b37ad0923733e34ec783a6097.
+**cortes_de_entrada:** Precompromiso Lenguaje 2038f55685f8d6a406b837012a0731afcadc597e; laboratorio 223bc1dedd847b93664c64018c75d7ae95699a44.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** PROCESO02 incompleto: P01 discrepante por cuota JSON, P02 conforme, P03 interrumpido y P04-P14 sin iniciar. PROCESO03 precompromete captura fragmentada y catorce casos; sin ejecución al incorporarse.
+**resultado:** R06 PROCESO03: catorce casos conformes en debug y catorce en release. Observación de aborto y terminación real del hijo; captura y escritura previas conservadas; informes tardíos y contradictorios separados. EOF y plazo no equivalen a terminación.
 
-**verificacion:** La captura escapada excedía la cuota de 8192 bytes del decodificador existente. Antecedentes y evidencia incompleta conservados. Corrección de transporte y conservación del canal antes de la espera final; núcleo y oráculos históricos intactos.
+**verificacion:** 28 concordancias y ambas campañas con salida 0, tras precompromiso cotejado. Siete piezas del banco y 99 fuentes intactas. Evidencia completa con canales, fronteras y salidas finales. PROCESO01 impedido y PROCESO02 incompleto conservan sus resultados propios.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso03/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso03
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso03/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso03
 
-**referencia_calidad:** S26/R06/PROCESO03: banco de Calidad y laboratorio; PROCESO01/02 conservan sus resultados. RETP-2026-236 es antecedente LOCAL01.
+**referencia_calidad:** S26/R06/PROCESO03: resultados y evidencia en Calidad y laboratorio; RETP-2026-236 conserva su alcance de antecedente LOCAL01.
 
-**siguiente_accion:** Ejecutar PROCESO03 en debug y release después de publicar el precompromiso; no recontar los intentos anteriores. T07 e integración pendientes; S26/Bis abiertos, S24 pendiente.
+**siguiente_accion:** Preparar T07: modificación del mismo objeto, restitución A-B-A y dependencia de otro corte, con barreras y oráculos previos. Integración completa pendiente. S26/Bis abiertos; S24 pendiente.
 
-**observaciones:** Protocolo experimental bajo un anfitrión confiable; no acredita supervivencia del padre, durabilidad, aislamiento hostil, GUI ni efecto externo. Sin reintento automático ni cambio de núcleo. Seguimiento por revisiones de S26, sin nuevo asiento RETP.
+**observaciones:** Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 
