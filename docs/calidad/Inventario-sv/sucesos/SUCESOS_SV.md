@@ -828,11 +828,11 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** —
 
-**fecha_actualizacion_utc:** 2026-09-13T08:03:14Z
+**fecha_actualizacion_utc:** 2026-09-14T10:27:16Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** Watson / W-S0
+**unidad_responsable:** Watson / W-S26
 
 **alcance:** Seguimiento del relevo secuenciado hacia la GUI. Completar S22/(p1+p3)-Bis, después el catálogo de errores y el cierre de la fase aplicable; sólo entonces analizar, seleccionar e instalar la GUI.
 
@@ -842,17 +842,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S22 finalizado en su alcance; catálogo de errores cerrado; cierre documentado de la fase aplicable.
 
-**resultado:** Secuencia registrada como suceso propio pendiente por instrucción expresa del autor.
+**resultado:** Se recibe la instrucción humana de provisionar C# y .NET, con bibliotecas y herramientas necesarias, cuando llegue el turno de GUI. Permanece la secuencia Bis, catálogo y cierre de fase, después GUI.
 
-**verificacion:** Estado pendiente, fechas de inicio y fin vacías; dependencia de S22 y de los cierres posteriores explícita. Alta con identificador consecutivo S24 y revisión 0.
+**verificacion:** S24 revisión 1; estado pendiente y fechas de inicio/fin vacías conservados. No se ha instalado dotnet ni seleccionado una versión o biblioteca de interfaz. S29 documenta la obligación de provisión por etapa.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s24--bis--catálogo-y-cierre-de-fase--análisis-e-instalación-de-la-gui
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s24--bis--catálogo-y-cierre-de-fase--análisis-e-instalación-de-la-gui ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-204
 
-**siguiente_accion:** Mantener S24 pendiente mientras se ejecuta S22. Tras los cierres del Bis, catálogo y fase, abrir el análisis de GUI y registrar su inicio.
+**siguiente_accion:** Tras los cierres de Bis, catálogo y fase, activar S24 y provisionar C#/.NET y sus bibliotecas, compilación, ejecución e integración requeridas; registrar versiones y comprobación del conjunto antes de utilizar la GUI.
 
-**observaciones:** S24 conserva el orden y la futura activación de GUI; no duplica ni altera el estado en ejecución de S22. No selecciona C#/.NET, Ratatui ni otra tecnología. No autoriza adelantar la instalación ni declara ejecutado un hito futuro.
+**observaciones:** La indicación tecnológica C#/.NET se recibe el 14/09/2026 y sustituye para la continuación la ausencia de selección de la revisión 0; no adelanta la GUI. Los antecedentes mantienen su contenido. S29 exige Rust para los procesos SV y justificación previa de cada uso de Python; C#/.NET conserva su encargo específico de GUI. Unidad actual W-S26, sin reasignar las autorías históricas.
 
 ## S25 · Recuperación Rust 1.98.0, entorno y comprobación nativa de continuidad
 
@@ -989,3 +989,36 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **siguiente_accion:** Continuar S26 desde el ajuste de invocación precomprometido. No repetir evaluación ni regenerar el Word. Los PDF anteriores conservan figuras y alcance; la actualización PDF no es condición pendiente de S28.
 
 **observaciones:** S28 mantiene fecha de cierre de revisión 1; revisión 2 completa el depósito binario y la inspección visual. El Word no reproduce las páginas ni figuras históricas de los PDF. Renderizado documental Python/LibreOffice y metadatos de transferencia: uso inocuo limitado al formato, sin pruebas SV. Pruebas exclusivamente Rust. RETP canónica sin modificar; sin nuevas ramas ni directorios versionados; unidad estable W-S26.
+## S29 · Obligación de Rust, localización de herramientas y provisión verificable del entorno
+
+**estado:** finalizado
+
+**fecha_alta_utc:** 2026-09-14T10:27:16Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-14T10:27:16Z
+
+**fecha_fin_utc:** 2026-09-14T10:27:16Z
+
+**unidad_responsable:** Watson / W-S26
+
+**alcance:** Incorporación operativa de Rust obligatorio en todos los procesos SV; justificación previa de cada uso de Python; inventario fechado, acceso a la instalación y fuentes oficiales para rustup. Provisión de C#/.NET diferida a S24.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+
+**cortes_de_entrada:** Recepción LIG finalizada antes de iniciar esta incorporación: Lenguaje 2ebd2215a803bcfb31b1425cba940bd2df19c56a; laboratorio 32ab2bc5b7f279a03b078eea165c180fa7b20d60.
+
+**dependencias:** Instrucción humana del 14/09/2026; S25 instalación directa; control de auxiliares S26; S24 conserva su secuencia.
+
+**resultado:** Obligación publicada con inventario renovable por programa Rust. Ubuntu 24.04.3 LTS x86_64; Rust/Cargo 1.98.0 en /opt/sv-rust-1.98.0, biblioteca estándar nativa, rustfmt y Clippy identificados. Enlaces oficiales Linux de rustup-init y SHA-256 localizados. S24 recibe C#/.NET para su turno.
+
+**verificacion:** estado_rust.rs compilado y ejecutado con retorno 0; lee la distribución, versiones, componentes y rutas. Banco LIG previo compilado offline y conforme, sin repetirlo. Se identifican cc/gcc/ld/ar y se declara rustup, pkg-config y dotnet no localizados en PATH. CSV/Markdown/historial cotejados por Rust.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/ESTADO_RUST.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md
+
+**referencia_calidad:** recuperacion-rust-s25: OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md, ESTADO_RUST.md, estado_rust.rs y registrar_s29.rs; CONTROL_DE_AUXILIARES.md e inicio de lectura actualizados. RETP canónica sin cambios.
+
+**siguiente_accion:** Aplicar la obligación desde ahora, consultar y renovar el estado antes de cada etapa y provisionar las dependencias requeridas. Si se aporta rustup-init Linux, verificar su huella oficial y plataforma antes de instalar, conservando Rust 1.98.0 y registrando PATH/componentes. C#/.NET sigue en S24.
+
+**observaciones:** Cierre de incorporación de obligación, inventario y acceso; no declara instalado rustup ni migrados todos los auxiliares históricos. Registro posterior a la preparación documental, sin inventar hora de inicio. El estado web es una observación fechada, no un monitor vivo. Conectores, coordinación JavaScript y herramientas de sistema se declaran; no se presentan como escritos en Rust. No se ejecutó Python en S29. No nuevas ramas ni directorios versionados; W-S26 estable.

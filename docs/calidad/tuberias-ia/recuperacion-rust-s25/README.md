@@ -1,5 +1,7 @@
 # S25 · Recuperación de Rust 1.98.0 y activación del entorno
 
+**Continuidad S29, 14/09/2026:** [obligación de Rust y provisión por etapa](OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md) · [último estado observado](ESTADO_RUST.md) · [consulta escrita en Rust](estado_rust.rs). Estas referencias son la entrada instrumental vigente; S25 conserva a continuación su evidencia histórica.
+
 Juan Antonio Lloret Egea y Watson · 13 de septiembre de 2026 · RETP-2026-217
 
 ## Resultado y alcance

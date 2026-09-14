@@ -1,5 +1,7 @@
 # S26 · Lista de comprobación de auxiliares y límites de confianza
 
+**Instrucción vigente S29, 14/09/2026:** [Rust obligatorio, localización y provisión del entorno](../tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md). Sustituye la formulación histórica de «primera opción»: Rust se exige en todos los procesos del trabajo SV; cada uso de Python requiere explicación y justificación previas. Se declararán ejecutables, dependencias, conectores y participación de la infraestructura. Los apartados siguientes conservan el estado de su recepción original.
+
 **Estado:** instrucción operativa recibida; comprobaciones materiales pendientes donde se indican.  
 **Origen:** indicaciones de Juan Antonio Lloret Egea en esta conversación sobre Python, shell, RAM y representatividad de los ensayos.  
 **Alcance:** preparación, ejecución, observación, documentación, registro y publicación del trabajo del Lenguaje SV.  
