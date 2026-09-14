@@ -1,0 +1,49 @@
+{
+  "version": "S26-R06-T0701-EJECUCIONES/1",
+  "unidad": "W-S26",
+  "precompromiso": {
+    "lab": "aae666c74ac5db4af9a56ceb2b60a2ba5b7226fa",
+    "pub": "0665bc32137a76e3a922197ab648526d8c0349bf"
+  },
+  "entorno": {
+    "rustc": "1.98.0 (88d9e12ae 2026-08-18)",
+    "rustc_commit": "88d9e12ae178fab0fb5cc050a94da85685d449ea",
+    "cargo": "1.98.0 (797e8a9bc 2026-08-05)",
+    "LLVM": "22.1.8",
+    "host": "x86_64-unknown-linux-gnu",
+    "sistema": "Linux 6.18.44 x86_64 GNU/Linux"
+  },
+  "campanas": [
+    {
+      "perfil": "debug",
+      "inicio_utc": "2026-09-14T06:54:10Z",
+      "salida": 0,
+      "total": 13,
+      "conformes": 13,
+      "comando": "/tmp/s26-t0701-build/debug/sv_s26_r06_t0701 ../../r05/fixture /tmp/s26-t0701-debug",
+      "binario_sha256": "05e7e7fa0fe444c4c9a9f9753957497e2dbad30bb5ee1098d8d7c7efbe6cf09e"
+    },
+    {
+      "perfil": "release",
+      "inicio_utc": "2026-09-14T06:54:38Z",
+      "salida": 0,
+      "total": 13,
+      "conformes": 13,
+      "comando": "/tmp/s26-t0701-build/release/sv_s26_r06_t0701 ../../r05/fixture /tmp/s26-t0701-release",
+      "binario_sha256": "f4adc34ef88f0844e5e55f742995ca54796d5eb1cec1db3f5e8557ae9863f368"
+    }
+  ],
+  "comprobacion_posterior": {
+    "bankFiles": 6,
+    "sources": 107,
+    "unchanged": true,
+    "momento_utc": "2026-09-14T06:54:39Z",
+    "procedimiento": "Cotejo de blobs locales con FUENTES.json y los seis archivos precomprometidos. 107 fuentes y seis archivos sin variación durante las campañas."
+  },
+  "publicacion_previa": {
+    "arboles_completos_cotejados_por": "auxiliar Rust R08",
+    "resultado": "COMPROBACION_LOCAL_CONFORME en ambas sedes",
+    "movimiento": "ramas existentes; avance sin force y relectura del commit"
+  },
+  "alcance": "26 concordancias de oráculos; T07 local. No cierre global S26 ni composición automática con LOCAL01/PROCESO03."
+}

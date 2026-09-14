@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T06:50:55Z
+**fecha_actualizacion_utc:** 2026-09-14T06:54:39Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 9b8418441b981e50586451485604cf68e3a5477d; laboratorio 882f1813feb739a9f5c10e3001816d32185671b8.
+**cortes_de_entrada:** Precompromiso Lenguaje 0665bc32137a76e3a922197ab648526d8c0349bf; laboratorio aae666c74ac5db4af9a56ceb2b60a2ba5b7226fa.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 T0701: trece casos preparados para modificación del mismo objeto, restitución A-B-A, copia recibida y mezcla de referencias r1/r2. Banco compilado; ninguna ejecución al incorporar este precompromiso.
+**resultado:** R06 T0701: trece casos conformes en debug y trece en release. Escritura real sobre el mismo objeto y restitución A-B-A observadas; copia admitida preservada; alteración recibida rechazada; concordancia r1/r2 exigida pese a bytes iguales.
 
-**verificacion:** 107 fuentes cotejadas contra el corte vigente. Barreras de lectura de 3072 bytes, escrituras sobre el mismo objeto y oráculos literales previos. Reutiliza ReceivedBytes, admisión, certificación y consumidor LOCAL01 sin modificarlos.
+**verificacion:** 26 concordancias y ambas campañas con salida 0 después del precompromiso publicado y cotejado. Seis archivos del banco y 107 fuentes intactos durante las ejecuciones. Aperturas, barreras, muestras intermedias, bytes recibidos/consumidos, guardas y logs conservados.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/t0701/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/t0701
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/t0701/RESULTADOS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/t0701
 
-**referencia_calidad:** S26/R06/T0701: precompromiso en Calidad y laboratorio. LOCAL01/RETP-236 y PROCESO03 mantienen sus evidencias y alcances.
+**referencia_calidad:** S26/R06/T0701: resultados, EJECUCIONES.json y evidencia en Calidad y laboratorio. LOCAL01/RETP-236, PROCESO01/02/03 conservan sus resultados y alcances.
 
-**siguiente_accion:** Ejecutar T0701 en debug y release tras publicar y cotejar el precompromiso. Recibir sus resultados sin cerrar por suma de sondas la integración. S26 y Bis abiertos; S24 pendiente.
+**siguiente_accion:** Fijar y precomprometer el banco integrado R06: apertura/referentes, admisión, mutación de fuente o dependencia, captura, informe y terminación. Reutilizar LOCAL01/PROCESO03/T0701 y precisar fronteras; no cerrar la composición por suma de sondas. S26/Bis abiertos; S24 pendiente.
 
-**observaciones:** Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados. Corrección de identificación en revisión 18: W-S26 identifica de forma estable a la unidad que retomó S26 con la recepción de R06/LOCAL01 (revisión 13; publicación Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab). Las revisiones 13-17 conservaron por arrastre W-S0; esta nota corrige su identificación de seguimiento, sin atribuir a la unidad receptora la ejecución heredada de LOCAL01. Las instantáneas anteriores permanecen intactas. W-S26 se mantiene durante toda la intervención de esta unidad, incluso al pasar a otro suceso. Regularización documental sin nuevos ensayos; resultados, evidencias y siguiente acción conservados. T0701 precompromete barreras síncronas locales; no ofrece continuidad de soporte ni demuestra concurrencia hostil o adquisición atómica del conjunto.
+**observaciones:** T07 cualificado en el modelo local de barreras síncronas. No acredita continuidad del soporte, adquisición atómica del conjunto, concurrencia hostil, RAM física, supervivencia del observador/host, durabilidad ni efecto externo. P11 rechaza certificación después de captura, sin acreditar bloqueo previo a todo consumo. Cero casos globales S26 cerrados. Sin Python/Java ni cambios de núcleo. Identificación regularizada en revisión 18: W-S26 corresponde a esta unidad desde la recepción de LOCAL01 (revisión 13); las revisiones 13-17 arrastraron W-S0 y se conservan intactas. W-S26 permanece estable durante toda su intervención.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

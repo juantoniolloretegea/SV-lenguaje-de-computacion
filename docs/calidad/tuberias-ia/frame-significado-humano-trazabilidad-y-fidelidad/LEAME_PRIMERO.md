@@ -156,3 +156,7 @@ R06: recepción contractual de terminación sin informe y alcance de identidad d
 ## S26 R06 T0701 · Precompromiso de mutación y dependencias
 
 [Banco de trece casos](../../riesgos-materiales-s26/r06/t0701/README.md): escritura sobre el mismo objeto, restitución A–B–A y referencias r1/r2, con barreras y oráculos fijados. Preparado y compilado; sin ejecutar al publicar este incremento. Sucesos revisión 19, unidad W-S26. La integración del recorrido completo permanece pendiente.
+
+## S26 R06 T0701 · Recepción de mutación y concordancia de corte
+
+[Resultados y evidencia](../../riesgos-materiales-s26/r06/t0701/RESULTADOS.md): trece casos conformes en debug y trece en release. Mismo objeto, restitución A–B–A y mezcla de r1/r2 contrastados con barreras previas; la copia admitida se preserva y la igualdad de bytes no sustituye los referentes. Sucesos revisión 20, W-S26. Siguiente: precomprometer el recorrido integrado de apertura, admisión, mutación, captura, informe y terminación; la composición no queda probada por reunir los incrementos locales. S26/Bis abiertos; S24 pendiente.

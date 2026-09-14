@@ -137,3 +137,7 @@ Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental 
 ## S26 R06 PROCESO03 · Recepción del observador de proceso
 
 [Resultados y evidencia](proceso03/RESULTADOS.md): catorce casos conformes en debug y catorce en release, con precompromiso intacto. Se conservan captura y escritura anteriores a la terminación del hijo; informes tardíos/contradictorios y estados de canal/proceso quedan separados. PROCESO01 impedido y PROCESO02 incompleto conservan sus resultados. Sucesos recibe la revisión 17 y enlaza Calidad y laboratorio. Siguiente: T07 con barreras de modificación, restitución y dependencias; integración pendiente. Sin cierre global de S26, Bis, R2 o S24.
+
+## S26 R06 T0701 · Recepción de mutación y concordancia de corte
+
+[Resultados y evidencia](t0701/RESULTADOS.md): trece casos conformes en debug y trece en release. Mismo objeto, restitución A–B–A y mezcla de r1/r2 contrastados con barreras previas; la copia admitida se preserva y la igualdad de bytes no sustituye los referentes. Sucesos revisión 20, W-S26. Siguiente: precomprometer el recorrido integrado de apertura, admisión, mutación, captura, informe y terminación; la composición no queda probada por reunir los incrementos locales. S26/Bis abiertos; S24 pendiente.
