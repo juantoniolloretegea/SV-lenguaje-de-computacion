@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-14T14:54:39Z
+**fecha_actualizacion_utc:** 2026-09-14T16:10:54Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromisos: Lenguaje 0452670b1d78c581592acca7740814c1c4cdef05; laboratorio 74c013fc4d0cef1aa6e0b09486e9709700324ae5.
+**cortes_de_entrada:** Lenguaje 58f415b6c183b84df238122fa2ef5ea6d5d518e1; laboratorio b361da80e5cf6c10d89298b18170905a6a35dc48.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Fronteras conjuntas: doce variantes EN/ES conformes por perfil Rust, 24 invocaciones y cero discrepancias; seis entregas y seis rechazos por campaña. Cuatro sensibilidades detectadas por perfil. Relevo de representación/consumo concretado.
+**resultado:** Preparado y compilado el incremento SVG16 y consumo de coordenadas. Diez casos previstos: nueve integrados y un lector aislado; dos mutantes funcionales por perfil. Oráculos gráficos y matemáticos independientes fijados. Banco aún sin ejecutar.
 
-**verificacion:** Dos campañas Rust 1.98.0, debug y optimizada con aserciones de depuración desactivadas; retornos 0. Oráculos y 157 huellas de entrada intactos; núcleo y admisor sin cambios. Cotejo R08 de ambos árboles antes de ejecutar; capturas, comandos y binarios conservados. Incidencias auxiliares explícitas; sin repetir el banco.
+**verificacion:** Lecturas rectoras completas anteriores con bytes conservados; sedes C04/C05 y S14 cotejadas. Preparador Rust sin invocaciones al sujeto; cota gráfica comprobada mediante enteros i128. Candidato y banco compilan. Núcleo, admisor y campañas recibidas intactos.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/PRECOMPROMISO_SVG_CONSUMO.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-221
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-238
 
-**siguiente_accion:** Preparar incremento material de representación/consumo según el relevo: reutilizar C04/C05, fijar componente, captura final, presupuesto y oráculos antes de ejecutar. Conservar el hallazgo Celda para documentación/errores; Bis, catálogo y cierre de fase, después GUI C#/.NET.
+**siguiente_accion:** Publicar y cotejar contrato, código y oráculos en Calidad y laboratorio; ejecutar campañas Rust normal y mutantes en debug y optimizado; conservar bytes realmente producidos y consumidos, contextos, causas y discrepancias.
 
-**observaciones:** RETP-2026-237. La rama de rechazo agregado permanece defensiva e inalcanzable bajo ambas cuotas individuales; no se atribuye cobertura ejecutada. Las 202 filas originales C02-C12 y los 24 escenarios globales mantienen 2 ejecutados y 22 pendientes. Bis y S26 abiertos; consulta histórica F01/F02 pendiente. Cero Python y cero imágenes nuevas.
+**observaciones:** La proyección gráfica declara aproximación y cota; el estado ternario exacto no cambia. SVG material y lector de coordenadas no acreditan rasterización ni percepción de IA. 202 filas originales y escenarios globales Bis conservados; S26/F01/F02 pendiente; S24/C#/.NET diferido. Rust para toda prueba, conductor y observador; cero Python.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 

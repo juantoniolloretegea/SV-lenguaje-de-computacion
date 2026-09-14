@@ -1,0 +1,123 @@
+{
+  "estado": "precompromiso; sin ejecuciones del banco",
+  "registro": "RETP-2026-238",
+  "corte_lenguaje": "58f415b6c183b84df238122fa2ef5ea6d5d518e1",
+  "corte_laboratorio": "b361da80e5cf6c10d89298b18170905a6a35dc48",
+  "rust": "1.98.0",
+  "perfiles": [
+    "debug",
+    "opt-level=3;debug-assertions=no;overflow-checks=no"
+  ],
+  "entradas_sha256": "9992e725a23b933696652acff4e0728bc05af1fb64f3a2ba90c3e4ed3a053088",
+  "oraculo_svg_sha256": "e5a9f9bc6df9b4f59a2a0cb908046239fda11ebbc247577b8e8c32b268a8c578",
+  "casos": [
+    {
+      "id": "RC01",
+      "estimulo": "EN; SVG producido por la ruta real",
+      "guard": "",
+      "leidos_svg": 792,
+      "consumos": 1,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC02",
+      "estimulo": "ES; mismo SVG bajo procedencia ES",
+      "guard": "",
+      "leidos_svg": 792,
+      "consumos": 1,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC03",
+      "estimulo": "A/r2 autorizado; mismos bytes que A/r1",
+      "guard": "",
+      "leidos_svg": 792,
+      "consumos": 1,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC04",
+      "estimulo": "Un byte de coordenada sustituido",
+      "guard": "C04_BYTES",
+      "leidos_svg": 792,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC05",
+      "estimulo": "Revisión ofrecida r2 bajo expectativa r1",
+      "guard": "C02_CONTEXTO",
+      "leidos_svg": 0,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC06",
+      "estimulo": "Invocación ofrecida ajena",
+      "guard": "C02_CONTEXTO",
+      "leidos_svg": 0,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC07",
+      "estimulo": "Canal ausente",
+      "guard": "C01_AUSENCIA",
+      "leidos_svg": 0,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC08",
+      "estimulo": "Canal de 4097 bytes",
+      "guard": "C03_CUOTA",
+      "leidos_svg": 4097,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC09",
+      "estimulo": "Error de lectura tras 64 bytes",
+      "guard": "C03_IO",
+      "leidos_svg": 64,
+      "consumos": 0,
+      "alcance": "integrado"
+    },
+    {
+      "id": "RC10",
+      "estimulo": "Script añadido; lector SVG aislado",
+      "guard": "C05_PERFIL",
+      "leidos_svg": 0,
+      "consumos": 0,
+      "alcance": "instrumental"
+    }
+  ],
+  "mutantes": [
+    {
+      "cfg": "svg_permutado",
+      "caso": "RC01",
+      "compilacion_requerida": true,
+      "retorno_banco": 1,
+      "resultado": "SVG, envoltura, coordenadas y operación discrepantes; consumo completa"
+    },
+    {
+      "cfg": "consumo_falso_svg",
+      "caso": "RC01",
+      "compilacion_requerida": true,
+      "retorno_banco": 1,
+      "resultado": "Captura y hash declarado correctos; coordenadas y operación sobre dependencia equivocada"
+    }
+  ],
+  "ejecuciones_previstas": {
+    "binarios_normales": 2,
+    "binarios_mutados": 4,
+    "observaciones_normales": 20,
+    "observaciones_mutadas": 4,
+    "invocaciones_admision": 22,
+    "pruebas_lector_aislado": 2
+  },
+  "estado_original_preservado": true,
+  "oraculos_generados_por_sujeto": false,
+  "cierre_bis": false,
+  "gui": false
+}

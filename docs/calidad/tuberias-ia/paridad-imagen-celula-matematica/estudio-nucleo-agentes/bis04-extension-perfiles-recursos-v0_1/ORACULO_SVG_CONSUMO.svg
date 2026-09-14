@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="360" viewBox="-4000000 -4000000 8000000 9000000">
+<title>SV: poligonal de laboratorio de 16 posiciones</title>
+<desc>Proyeccion aproximada; escala 1000000. P1 en +X; orden P1 a P16 antihorario en el plano canonico. Radios: 0=1, 1=2, U=3.</desc>
+<polygon id="celula" data-orden="P1 P2 P3 P4 P5 P6 P7 P8 P9 P10 P11 P12 P13 P14 P15 P16" points="1000000,0 1847760,-765366 2121321,-2121321 382683,-923880 0,-1000000 -765366,-1847760 -2121321,-2121321 -923880,-382683 -2000000,0 -2771640,1148049 -1414214,1414214 -382683,923880 0,3000000 382683,923880 1414214,1414214 2771640,1148049" fill="none" stroke="#16324f" stroke-width="40000"/>
+<text x="-3500000" y="4400000" font-size="320000">0: radio 1 | 1: radio 2 | U: radio 3</text>
+</svg>

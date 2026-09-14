@@ -2258,3 +2258,17 @@ La rama agregada de rechazo es inalcanzable bajo ambos límites individuales; no
 Preparar incremento de representación/consumo según el relevo C04/C05: sede, componente, canal, captura final, presupuesto y oráculos antes de ejecutar. Conservar Celda para catálogo y el orden Bis, catálogo/cierre de fase, GUI C#/.NET.
 
 [Evidencia](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md).
+
+<a id="retp-238"></a>
+
+### RETP-2026-238 · S22 · SVG y consumo: contrato y banco previo
+
+Representación SVG16 y consumo local: contrato técnico sucesor de C04/C05, nueve casos integrados y un lector aislado; dos mutantes compilables por perfil; banco sin ejecutar.
+
+Cortes Lenguaje 58f415b6c183b84df238122fa2ef5ea6d5d518e1 y laboratorio b361da80e5cf6c10d89298b18170905a6a35dc48. Compilación previa sin ejecutar el sujeto. Preparador Rust comprueba cota entera y tabla; entradas SHA-256 9992e725a23b933696652acff4e0728bc05af1fb64f3a2ba90c3e4ed3a053088.
+
+Proyección aproximada explícita; no cambia estados ni cardinalidad. Un SVG correcto no acredita píxeles, percepción ni host. El positivo consume el fichero realmente producido; el oráculo no procede del productor. Script sólo ensaya el lector aislado; no cuenta como ataque integrado.
+
+Publicar y cotejar ambos destinos antes de ejecutar. Dos campañas normales y cuatro mutantes; conservar toda discrepancia. Mantener Bis y S26 abiertos, F01/F02 pendiente de interfaz y GUI diferida.
+
+[Contrato y banco](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/PRECOMPROMISO_SVG_CONSUMO.md).

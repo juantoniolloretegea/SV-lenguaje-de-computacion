@@ -1,0 +1,8 @@
+fecha_actualizacion_utc	2026-09-14T16:10:54Z
+cortes_de_entrada	Lenguaje 58f415b6c183b84df238122fa2ef5ea6d5d518e1; laboratorio b361da80e5cf6c10d89298b18170905a6a35dc48.
+resultado	Preparado y compilado el incremento SVG16 y consumo de coordenadas. Diez casos previstos: nueve integrados y un lector aislado; dos mutantes funcionales por perfil. Oráculos gráficos y matemáticos independientes fijados. Banco aún sin ejecutar.
+verificacion	Lecturas rectoras completas anteriores con bytes conservados; sedes C04/C05 y S14 cotejadas. Preparador Rust sin invocaciones al sujeto; cota gráfica comprobada mediante enteros i128. Candidato y banco compilan. Núcleo, admisor y campañas recibidas intactos.
+evidencias	https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/PRECOMPROMISO_SVG_CONSUMO.md
+referencia_calidad	https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-238
+siguiente_accion	Publicar y cotejar contrato, código y oráculos en Calidad y laboratorio; ejecutar campañas Rust normal y mutantes en debug y optimizado; conservar bytes realmente producidos y consumidos, contextos, causas y discrepancias.
+observaciones	La proyección gráfica declara aproximación y cota; el estado ternario exacto no cambia. SVG material y lector de coordenadas no acreditan rasterización ni percepción de IA. 202 filas originales y escenarios globales Bis conservados; S26/F01/F02 pendiente; S24/C#/.NET diferido. Rust para toda prueba, conductor y observador; cero Python.
