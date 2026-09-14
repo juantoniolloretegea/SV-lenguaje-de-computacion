@@ -956,3 +956,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta documental posterior a la actividad; no se inventa hora de inicio. Autor del argumento: Juan Antonio Lloret Egea; edición Watson. S22/S24 y banco Bis conservan su estado. No ensayos Rust nuevos por esta incorporación ni acreditación de cobertura clínica.
 
+## S28 · Rutas de conocimiento, consejo auditable y recepción de fundamentos y aprendizaje
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-14T08:58:07Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-14T08:58:07Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** Watson / W-S26
+
+**alcance:** Evaluación adversarial y acta aprobadas; incorporación documental con trazabilidad completa y consejo justificado. IA de lenguaje probabilístico auxiliar; decisión clínica humana. Ampliación de dos PDF autorizada y pendiente.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente; SVperitus-dataset: main
+
+**cortes_de_entrada:** Lenguaje 9a107773c572d186efc3530bb08f8f79a8ac5a30; laboratorio d8b4a114e63f4fdac96db71ecef209bf92900307; SVperitus main 47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c; fuentes de Inmunología fe8adf76aa030ba5ff4997be5772b5de5e4452f3.
+
+**dependencias:** Continuación documental de S27 finalizado; aprobación humana de 14/09/2026 y precisión sobre consejo y NLP probabilístico; Pilares, Fundamentos, Aprendizaje trazable, contrato inmunológico y G7-RUT; S26 conserva su secuencia.
+
+**resultado:** Acta aprobada, sección 12 del frame, complemento de tres realizaciones Rust y accesos de lectura incorporados en Markdown; espejo de laboratorio y dos copias excepcionales del acta en agentes y dominios. PDF anteriores conservados; ampliación pendiente por fallo de inicialización del entorno y ausencia de ejecución/renderizado en la sesión.
+
+**verificacion:** Revisión documental por contraejemplos, sin nuevas pruebas de comportamiento. Originales y oráculos históricos preservados; cotejo de objetos Git y diferencias de archivos de esta recepción en soporte. No se afirma paridad del PDF anterior con el Markdown ampliado.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/agentes/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/main/dominios/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md
+
+**referencia_calidad:** S28: docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md; soporte/RECEPCION_RUTAS_CONOCIMIENTO_S28_2026_09_14.json. Pilares: incorporación bibliográfica 9a107773c572d186efc3530bb08f8f79a8ac5a30. RETP canónica sin modificación.
+
+**siguiente_accion:** Recuperar entorno de ejecución y renderizado; ampliar los dos PDF en sus rutas existentes, preservar e inspeccionar las páginas anteriores y el añadido; cotejar espejo y actualizar S28 e historial. Aprobación ya recibida: no volver a solicitarla. No repetir la evaluación ni los bancos S26; su siguiente bloque continúa siendo F01/F02.
+
+**observaciones:** Alta posterior a actividad documental iniciada; hora exacta de inicio no registrada. Identificador S28 nuevo por continuación de S27 ya finalizado; unidad W-S26 permanece estable. La reserva formal afecta a incorporación de conocimiento, no impide recibir consejo auditable; la intervención probabilística es auxiliar y no modifica autoridad ni clausura SV. No ramas nuevas, limpieza histórica ni pruebas Python/Java.
+

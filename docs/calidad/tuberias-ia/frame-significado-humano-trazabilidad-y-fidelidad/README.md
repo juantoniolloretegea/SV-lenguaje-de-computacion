@@ -39,3 +39,10 @@ Copias idénticas de este expediente en Calidad del Lenguaje y en la rama privad
 ## Incorporación de rutas y cobertura · RETP-230 / S27
 
 Se amplían los PDF y Markdown con la explicación autorizada del 13/09: constitución del dominio, cobertura del agente, realización del Lenguaje y distinción frente a continuidad material. Las páginas anteriores se conservan. La exposición sustantiva está en la sección 11 del documento del volcán; el expediente de Rust recibe su enlace y alcance complementario.
+
+
+## Edición del 14/09/2026 · S28
+
+El Markdown incorpora el acta aprobada y la precisión sobre consejo justificado, trazabilidad completa e IA de lenguaje probabilístico en función auxiliar. **El PDF conserva la edición anterior y todavía no contiene esta ampliación.** Su actualización está autorizada y pendiente de recuperar el entorno de ejecución y renderizado. No se declara paridad entre el PDF anterior y el Markdown ampliado.
+
+[Acta aprobada](ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md) · [Recepción de esta edición](soporte/RECEPCION_RUTAS_CONOCIMIENTO_S28_2026_09_14.json). Los manifiestos anteriores conservan su alcance histórico.

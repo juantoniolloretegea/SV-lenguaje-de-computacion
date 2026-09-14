@@ -516,3 +516,71 @@ Lectura del Lenguaje en main 531010ab56298605f4f2469554a9f48420ffa4a9: Pilares, 
 - [Expediente hermano: tres realizaciones Rust y auditoría del procedimiento](../trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md).
 
 Esta es una incorporación explicativa y de continuidad autorizada por el autor. No cambia la semántica ni promueve una capacidad no demostrada. No se ha utilizado otro agente ni inferencia clínica externa para redactarla.
+
+## 12. Rutas de conocimiento, consejo especializado y trazabilidad
+
+### 12.1. Constitución previa del recorrido
+
+Los universos y los parámetros que deben consultarse se determinan por el contrato de la operación y por la constitución del dominio. La analogía de libros y páginas expresa su localización; la obligación de consultar cada elemento requiere además identidad, versión, condiciones de activación, fuentes autorizadas y dependencias explícitas.
+
+El contrato inmunológico y G7-RUT ya establecen usos de parámetros, activación, vetos y rutas necesarias. La ruta crítica puede contener ramas conjuntas y condiciones. No se reduce necesariamente a una cadena de consultas ni al camino de menor coste. El agente debe recorrer las dependencias aplicables y justificar las inactividades de acuerdo con las reglas constituidas.
+
+Las rutas permitidas deben estar declaradas antes del episodio en una representación verificable. Un archivo o índice facilitará su consulta, pero no podrá introducir relaciones ausentes, seleccionar versiones por conveniencia ni suplir una obligación omitida. La sintaxis y la realización concretas corresponden a su futura constitución técnica. La terminación y los límites de recursos deben ser explícitos; un agotamiento no convierte una consulta parcial en completa.
+
+### 12.2. Enfermedad de referencia y significado de la salida
+
+La propuesta de inmunología utiliza una referencia CIE-11 identificada y versionada para delimitar las enfermedades comprendidas en las operaciones que se constituyan. Las sucesoras de esa clasificación requerirán adopción expresa. Una enfermedad en investigación conserva ese estatuto y no pasa automáticamente al catálogo clínico autorizado.
+
+El experto puede indicar la enfermedad que desea examinar. Una prueba médica puede activar una regla ya declarada. Ambos casos necesitan conservar la diferencia entre la petición, el dato observado y la conclusión que el contrato autoriza. Un código de clasificación no establece por sí mismo una asociación entre parámetros y enfermedad.
+
+OP-IMM-001 conserva su objeto predecisional de riesgo infeccioso antes de la inmunosupresión en adultos. Sus 27 parámetros no se transforman por esta explicación en un clasificador general de enfermedades. Los 32 universos del mapa son candidatos operacionales; su número no acredita cobertura clínica.
+
+La expresión «se observa compatibilidad alta» necesita significado y sustento constituidos por el dominio. La primitiva T(n)=⌊7n/9⌋ conserva su función algebraica y no se interpreta como probabilidad diagnóstica. Las condiciones críticas y los vetos no quedan compensados por otros parámetros aptos.
+
+### 12.3. Célula de decisión y representación
+
+Las células conservan la forma de vector plano, ordenado y posicional, con n=b² y b≥3. El estudio puede examinar una célula final de hasta 49 posiciones, comenzando por la menor cuya adecuación esté declarada. Ese límite pertenece a la propuesta de estudio; no modifica la generalidad del SV.
+
+Se conservan las denominaciones «células de conocimiento nuclear del dominio» y «parámetros singulares de decisión». Los tamaños exactos 9, 16, 25, 36 y 49 no autorizan a rellenar una constitución incompleta. El par 36+9 contiene dos células y no constituye una célula de 45 posiciones.
+
+El polígono presentado debe corresponder al mismo estado exacto identificado en el expediente. Cada posición mantiene su vínculo con el parámetro y la evidencia. Una célula final no sustituye las fuentes ni el recorrido que la sustenta. La forma gráfica facilita la comprensión, pero su fidelidad no prueba que se hayan consultado todas las dependencias obligatorias.
+
+### 12.4. Consejo y función de la IA
+
+Puede intervenir una IA con procesamiento probabilístico del lenguaje natural en funciones auxiliares de interlocución, organización y exposición. El inmunólogo conoce esa naturaleza y valora el consejo bajo su competencia profesional.
+
+La IA debe entregar toda la trazabilidad del recorrido realizado de acuerdo con la petición del inmunólogo y justificar claramente su conclusión. La exposición debe identificar qué se ha observado, qué fuentes y datos se utilizaron, qué operaciones sustentan la conclusión y qué límites permanecen. Su elaboración verbal no puede sustituir ni corregir silenciosamente aquello que explica.
+
+La participación probabilística en esa función auxiliar no habilita al modelo para constituir rutas o parámetros, clausurar U, modificar permisos o incorporar conocimiento. La valoración humana del consejo conserva su diferencia respecto de la autorización específica para incorporar un candidato al dominio.
+
+### 12.5. Consulta clínica, investigación e incorporación
+
+| Operación | Fuentes y permiso | Efecto sobre el conocimiento |
+| --- | --- | --- |
+| Consulta clínica | Conocimiento previamente admitido; Internet prohibido durante el episodio | Ejecuta el alcance constituido; no incorpora automáticamente hallazgos |
+| Investigación solicitada | Acceso a Internet dentro del encargo expreso del experto | Presenta lo observado relevante con sus fuentes y límites; no actualiza por sí sola el dominio |
+| Incorporación de conocimiento | Fuentes autorizadas sometidas al procedimiento custodial | Requiere condiciones constituidas, evidencia y autorización humana acreditada para ese alcance |
+
+La obligación de trazabilidad se aplica a las tres operaciones. La ventana de auditoría debe mostrar fuentes, versiones, datos, rutas, condiciones de activación e inactividad, operadores, procesos, programas, scripts, conectores, entradas, salidas, fallos y autorizaciones pertinentes. Los registros deben proceder de la actividad efectiva: una explicación posterior del modelo no los reemplaza.
+
+Las conclusiones de la prueba externa documentada distinguen conformidad de la respuesta y acreditación de toda la actividad del participante. La corrección de una conclusión no compensa una referencia alterada, una causa incorrecta o una parte del recorrido no acreditada. El conocimiento de la naturaleza probabilística de la IA no exime de estos controles.
+
+### 12.6. Antecedentes de custodia y aprendizaje
+
+Fundamentos ya establece el prefiltro SV(9,3), la célula custodial SV(16,4), el Regulador de incorporación extrínseca y la autorización humana final. El regulador contempla 12, 13, 14 o 15 posiciones aptas en la célula de 16; sitúa el régimen natural de inmunología en muy alto. La cuarentena exige nueve contrastes y que al menos siete alcancen el umbral regulado. El tiempo transcurrido y la reputación de una fuente no sustituyen esos contrastes.
+
+El acta de recepción precisa una cuestión de traducción formal entre el máximo conservador del par y la promoción. Esa cuestión se refiere al mecanismo de incorporación y no impide recibir la obligación de consejo auditable aquí descrita. No se añade una transición por inferencia.
+
+Aprendizaje trazable distingue contenidos, relaciones y rutas, registro cognitivo y traza estructural. El aprendizaje exige un incremento históricamente nuevo y sustentado mediante un certificado finito, con fuentes admitidas y operadores declarados efectivamente ejecutados. Recuperar algo conocido, razonar o ampliar un registro no equivale automáticamente a aprender. Una rectificación puede reducir el conocimiento activo conservando su historia.
+
+Los mecanismos estadísticos no constituyen aprendizaje ni clausura en la cadena soberana. La adquisición de conocimiento no amplía por sí misma autoridad. Estas condiciones conservan la recepción doctrinal ya documentada en el Lenguaje.
+
+### 12.7. Referencias y alcance
+
+- [Acta de evaluación y recepción documental, aprobada el 14/09/2026](ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md), con la precisión sobre IA de lenguaje probabilístico y la delimitación del mecanismo de incorporación.
+- [Fundamentos, exigencias y arquitectura general de los agentes especializados en el Sistema Vectorial SV](https://doi.org/10.21428/39829d0b.183e10f3).
+- [Aprendizaje trazable en inteligencia artificial: evolución estructural del conocimiento con frames ternarios y trazas acumulativas](https://doi.org/10.21428/39829d0b.bebc607c).
+- Contrato inmunológico, G7-RUT y mapa de universos identificados en §11.6.
+- [Conclusiones de la prueba externa](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/aeda68b34cbe6049f8e9b48565cf31701141392a/docs/calidad/Inventario-sv/ranquin-ias-trazabilidad/ACTA_RESULTADOS_Y_RANQUIN_2026_09_12.md).
+
+Esta ampliación explica requisitos y antecedentes. La constitución clínica, la realización del agente y las garantías materiales conservan sus pruebas y condiciones propias.

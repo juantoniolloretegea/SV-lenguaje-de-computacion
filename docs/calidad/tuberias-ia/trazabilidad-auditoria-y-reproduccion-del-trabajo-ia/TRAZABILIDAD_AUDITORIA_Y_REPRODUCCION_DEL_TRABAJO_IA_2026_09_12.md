@@ -233,3 +233,15 @@ El dominio establece esas obligaciones; el agente declara la cobertura y las cap
 La explicación completa se incorpora al [documento del volcán, sección 11](../frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md), junto con sus fuentes y su relación con S26. Se conserva una sola exposición sustantiva para evitar divergencias entre expedientes.
 
 El estudio de rutas reutilizará los contratos inmunológicos existentes cuando corresponda al trabajo del dominio y del agente. El frente del Lenguaje continúa ahora la falsación material pendiente. Integridad del recorrido y suficiencia de su cobertura requieren comprobaciones distintas y enlazadas. Esta actualización documental no añade ejecuciones a los ejemplos Rust ni cierra las pruebas materiales.
+
+## Incorporación del 14 de septiembre de 2026: consejo justificado y trazabilidad del recorrido
+
+La petición del experto delimita el encargo. El agente debe conservar el recorrido efectivamente realizado y justificar de forma clara la conclusión que presenta. Las tres realizaciones Rust anteriores ilustran la posibilidad de procedimientos distintos para un encargo acotado; sus resultados no acreditan la cobertura de otra operación.
+
+Puede intervenir una IA con procesamiento probabilístico del lenguaje natural en funciones auxiliares de interlocución, organización y exposición. El experto conoce esa naturaleza y valora el consejo. La elaboración verbal debe permanecer vinculada a las fuentes, datos, operaciones, resultados y límites que explica. No recibe autoridad para constituir rutas o parámetros, clausurar U, modificar permisos o incorporar conocimiento.
+
+La trazabilidad es obligatoria y se presenta en una ventana de auditoría separada de la vista principal. Debe permitir recuperar los procesos, programas, scripts, conectores, entradas, salidas, fuentes, versiones, fallos y autorizaciones pertinentes al episodio. Una lista autodeclarada por la IA no sustituye esos registros de actividad.
+
+La consulta clínica utiliza conocimiento admitido y mantiene prohibido el acceso a Internet durante el episodio. La investigación expresamente solicitada permite consultar fuentes externas dentro del encargo. Sus hallazgos no se incorporan automáticamente al dominio: se aplican la custodia, la cuarentena y la autorización humana ya documentadas, junto con las condiciones de aprendizaje trazable.
+
+La [sección 12 del documento del frame](../frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md) desarrolla el recorrido, la representación y sus fundamentos. El [acta aprobada](../frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md) conserva la evaluación adversarial y la precisión humana. Esta incorporación no añade ejecuciones a los tres ejemplos ni modifica sus resultados históricos.

@@ -1,0 +1,164 @@
+{
+  "suceso": "S28",
+  "fecha_utc": "2026-09-14T08:58:07Z",
+  "unidad": "Watson / W-S26",
+  "naturaleza": "Recepción documental; no prueba ejecutable del SV",
+  "aprobacion": {
+    "fecha": "2026-09-14",
+    "autoridad": "Juan Antonio Lloret Egea",
+    "alcance": "Acta, ampliaciones Markdown/PDF y accesos, espejo de laboratorio, copias excepcionales en agentes y dominios",
+    "precision": "Trazabilidad completa del recorrido conforme a la petición del inmunólogo y justificación clara del consejo; IA de lenguaje probabilístico en función auxiliar, con valoración clínica humana"
+  },
+  "entrada": {
+    "lenguaje": "9a107773c572d186efc3530bb08f8f79a8ac5a30",
+    "laboratorio": "d8b4a114e63f4fdac96db71ecef209bf92900307",
+    "svperitus": "47dc27aec9e7b517c27cfcf39b7ad1b186d36a4c",
+    "bibliografia_en_pilares": "9a107773c572d186efc3530bb08f8f79a8ac5a30"
+  },
+  "metodo": {
+    "fuente_acta": "Evaluación y propuesta aprobadas conservadas el 14/09/2026, más precisión humana de esta recepción",
+    "operaciones": [
+      "Lectura de fuentes y documentos existentes",
+      "Actualización del estatuto del acta e incorporación de §§3.1 y 4.5",
+      "Adición de secciones en Markdown; prefijos anteriores conservados",
+      "Adición de S28 revisión 0 en CSV, Markdown e historial",
+      "Construcción de objetos Git sobre los árboles vigentes; cotejo completo de rutas y blobs antes de publicar",
+      "Copias idénticas de los nueve documentos entre Calidad y laboratorio y cuatro copias idénticas del acta"
+    ],
+    "conectores": [
+      "GitHub: lectura de ramas, archivos y árboles; creación de árboles y commits; avance sin fuerza de referencias existentes",
+      "Consulta del borrador documental conservado"
+    ],
+    "ejecucion_local": "No disponible; entorno con fallo de inicialización",
+    "pruebas_nuevas": 0
+  },
+  "objetos": {
+    "lenguaje": [
+      {
+        "path": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+        "sha": "b3908dca53a8635ca24427b36cc35dff7e74b752"
+      },
+      {
+        "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+        "sha": "4b7b0cee6ca091064b8b1741d1b9062b8b789cf1"
+      },
+      {
+        "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+        "sha": "58f4f166b5a6b40b8707ea33794ae42566cf7aa4"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md",
+        "sha": "cb44918173e38091ff08a38b49ba950ea243ef7c"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md",
+        "sha": "b18515396680812f8d9adc752acab99b139376f7"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+        "sha": "0a1e25d09881dc8cdf6e5f92a36959803a873a01"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/README.md",
+        "sha": "c45b7e173420a17c310b4c5d0c89dba3859112fb"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md",
+        "sha": "1521bc72ae22be413a2185c35be81fe8a59e6cdf"
+      },
+      {
+        "path": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md",
+        "sha": "c19912007d502b849d11e2e108391700ed13d88f"
+      }
+    ],
+    "laboratorio": [
+      {
+        "path": "laboratorio/tareas-watson/sucesos-sv/HISTORIAL_SUCESOS_SV.csv",
+        "sha": "b3908dca53a8635ca24427b36cc35dff7e74b752"
+      },
+      {
+        "path": "laboratorio/tareas-watson/sucesos-sv/SUCESOS_SV.csv",
+        "sha": "4b7b0cee6ca091064b8b1741d1b9062b8b789cf1"
+      },
+      {
+        "path": "laboratorio/tareas-watson/sucesos-sv/SUCESOS_SV.md",
+        "sha": "58f4f166b5a6b40b8707ea33794ae42566cf7aa4"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md",
+        "sha": "cb44918173e38091ff08a38b49ba950ea243ef7c"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md",
+        "sha": "b18515396680812f8d9adc752acab99b139376f7"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md",
+        "sha": "0a1e25d09881dc8cdf6e5f92a36959803a873a01"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/README.md",
+        "sha": "c45b7e173420a17c310b4c5d0c89dba3859112fb"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/README.md",
+        "sha": "1521bc72ae22be413a2185c35be81fe8a59e6cdf"
+      },
+      {
+        "path": "laboratorio/tareas-watson/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.md",
+        "sha": "c19912007d502b849d11e2e108391700ed13d88f"
+      }
+    ],
+    "svperitus": [
+      {
+        "path": "agentes/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md",
+        "sha": "cb44918173e38091ff08a38b49ba950ea243ef7c"
+      },
+      {
+        "path": "agentes/README.md",
+        "sha": "4f536939f642bef569076d23f1adbf003748c1c5"
+      },
+      {
+        "path": "dominios/ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md",
+        "sha": "cb44918173e38091ff08a38b49ba950ea243ef7c"
+      },
+      {
+        "path": "dominios/README.md",
+        "sha": "b7c8d4b0df5fc840037b7c39f08f51de0caf4dec"
+      }
+    ]
+  },
+  "verificacion": {
+    "arboles_completos": true,
+    "rutas_ajenas_modificadas": 0,
+    "archivos_eliminados": 0,
+    "acta_git_blob": "cb44918173e38091ff08a38b49ba950ea243ef7c",
+    "copias_identicas_acta": 4,
+    "documentos_identicos_calidad_laboratorio": 9,
+    "prefijos_documentales_conservados": true
+  },
+  "pdf_pendientes": [
+    {
+      "repositorio": "SV-lenguaje-de-computacion",
+      "ruta": "docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.pdf",
+      "git_blob_conservado": "1111de5419b409751623da824748720d0534fd48",
+      "bytes": 10384497
+    },
+    {
+      "repositorio": "SV-lenguaje-de-computacion",
+      "ruta": "docs/calidad/tuberias-ia/trazabilidad-auditoria-y-reproduccion-del-trabajo-ia/TRAZABILIDAD_AUDITORIA_Y_REPRODUCCION_DEL_TRABAJO_IA_2026_09_12.pdf",
+      "git_blob_conservado": "6dff34a7178c921799dd912a4d3aa2997d9befe7",
+      "bytes": 648591
+    }
+  ],
+  "impedimento_pdf": "Fallo de inicialización del entorno indicado por la sesión; herramientas de ejecución local y renderizado no disponibles. PDF no alterados ni declarados en paridad con las ampliaciones Markdown.",
+  "continuacion": "Ampliar y renderizar los dos PDF en sus rutas existentes, preservar páginas anteriores, cotejar texto y nuevas páginas, publicar espejo y actualizar S28. Aprobación persistente; no repetir la evaluación ni las pruebas recibidas.",
+  "exclusiones": [
+    "RETP canónica sin modificar",
+    "Sin ramas ni directorios nuevos",
+    "Sin constitución de dominio o agente",
+    "Sin transición formal de incorporación inventada",
+    "Sin nuevas ejecuciones Rust, Python o Java",
+    "Sin cierre de S26/Bis ni apertura S24"
+  ]
+}

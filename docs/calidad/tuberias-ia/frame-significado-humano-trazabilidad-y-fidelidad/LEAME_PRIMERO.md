@@ -168,3 +168,12 @@ R06: recepción contractual de terminación sin informe y alcance de identidad d
 ## S26 R06 INTEGRADO01 · Recepción del recorrido documental
 
 [Resultados, evidencia y disposición S26](../../riesgos-materiales-s26/r06/integrado01/RESULTADOS.md): diecisiete casos conformes en debug y diecisiete en release. Apertura, recepción/admisión, mutación por barreras, consumo LOCAL01 y observación del proceso contrastados en las composiciones fijadas. Capturas y escrituras previas conservadas; contradicción entre recibo y rechazo bloqueada en ambos órdenes. Sucesos revisión 22, W-S26, CSV/Markdown e historial con espejo de laboratorio. Siguiente: concretar S26-F01/F02 sobre referencias y ligaduras existentes, con consulta exacta entre ocurrencias de igual valor y negativos de sustitución/ambigüedad; cotejar contratos y precomprometer antes de ejecutar. No repetir los bancos recibidos por un mero cambio de registro. S26/Bis abiertos; S24 pendiente; R06 no cierra R0.
+
+
+## S28 · Rutas de conocimiento y consejo auditable · aprobación del 14/09/2026
+
+Leer la [sección 12 del documento del frame](FRAME_SIGNIFICADO_HUMANO_TRAZABILIDAD_Y_FIDELIDAD_2026_09_11.md) y el [acta aprobada](ACTA_EVALUACION_Y_RECEPCION_DOCUMENTAL_RUTAS_CONOCIMIENTO_SV_2026_09_14.md). La IA debe entregar toda la trazabilidad del recorrido conforme a la petición del inmunólogo y justificar claramente su consejo. El procesamiento probabilístico del lenguaje puede participar en la función auxiliar; la valoración clínica permanece en el experto y se conservan los límites de autoridad, custodia y aprendizaje del SV.
+
+La incorporación reutiliza los contratos de rutas, Fundamentos y Aprendizaje trazable, ambos enlazados desde [Pilares, sección 14](../../PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md). Se mantienen diferenciadas consulta clínica sin Internet, investigación autorizada e incorporación de conocimiento.
+
+Los Markdown y el acta se incorporan con espejo de laboratorio y copias excepcionales del acta en agentes/ y dominios/ de SVperitus-dataset. Los dos PDF siguen en su edición anterior: su ampliación y cotejo están autorizados y pendientes por indisponibilidad del entorno de ejecución y renderizado. S28 conserva ese pendiente y sus enlaces en [Sucesos SV](../../Inventario-sv/sucesos/SUCESOS_SV.md). S26-F01/F02 mantiene su secuencia y no necesita repetir los bancos ya recibidos.
