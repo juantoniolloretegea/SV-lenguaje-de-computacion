@@ -212,3 +212,7 @@ Por indicación de Juan Antonio Lloret Egea, se incorpora la [lista de comprobac
 ## S26 R06 PROCESO03 · Recepción del observador de proceso
 
 [Resultados y evidencia](r06/proceso03/RESULTADOS.md): catorce casos conformes en debug y catorce en release, con precompromiso intacto. Se conservan captura y escritura anteriores a la terminación del hijo; informes tardíos/contradictorios y estados de canal/proceso quedan separados. PROCESO01 impedido y PROCESO02 incompleto conservan sus resultados. Sucesos recibe la revisión 17 y enlaza Calidad y laboratorio. Siguiente: T07 con barreras de modificación, restitución y dependencias; integración pendiente. Sin cierre global de S26, Bis, R2 o S24.
+
+## S26 R06 T0701 · Precompromiso de mutación y dependencias
+
+[Banco de trece casos](r06/t0701/README.md): escritura sobre el mismo objeto, restitución A–B–A y referencias r1/r2, con barreras y oráculos fijados. Preparado y compilado; sin ejecutar al publicar este incremento. Sucesos revisión 19, unidad W-S26. La integración del recorrido completo permanece pendiente.

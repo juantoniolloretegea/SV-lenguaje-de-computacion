@@ -1,0 +1,13 @@
+{
+  "revision": 19,
+  "suceso": {
+    "fecha_actualizacion_utc": "2026-09-14T06:50:55Z",
+    "cortes_de_entrada": "Lenguaje 9b8418441b981e50586451485604cf68e3a5477d; laboratorio 882f1813feb739a9f5c10e3001816d32185671b8.",
+    "resultado": "R06 T0701: trece casos preparados para modificación del mismo objeto, restitución A-B-A, copia recibida y mezcla de referencias r1/r2. Banco compilado; ninguna ejecución al incorporar este precompromiso.",
+    "verificacion": "107 fuentes cotejadas contra el corte vigente. Barreras de lectura de 3072 bytes, escrituras sobre el mismo objeto y oráculos literales previos. Reutiliza ReceivedBytes, admisión, certificación y consumidor LOCAL01 sin modificarlos.",
+    "evidencias": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/t0701/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/t0701",
+    "referencia_calidad": "S26/R06/T0701: precompromiso en Calidad y laboratorio. LOCAL01/RETP-236 y PROCESO03 mantienen sus evidencias y alcances.",
+    "siguiente_accion": "Ejecutar T0701 en debug y release tras publicar y cotejar el precompromiso. Recibir sus resultados sin cerrar por suma de sondas la integración. S26 y Bis abiertos; S24 pendiente.",
+    "observaciones": "Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados. Corrección de identificación en revisión 18: W-S26 identifica de forma estable a la unidad que retomó S26 con la recepción de R06/LOCAL01 (revisión 13; publicación Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab). Las revisiones 13-17 conservaron por arrastre W-S0; esta nota corrige su identificación de seguimiento, sin atribuir a la unidad receptora la ejecución heredada de LOCAL01. Las instantáneas anteriores permanecen intactas. W-S26 se mantiene durante toda la intervención de esta unidad, incluso al pasar a otro suceso. Regularización documental sin nuevos ensayos; resultados, evidencias y siguiente acción conservados. T0701 precompromete barreras síncronas locales; no ofrece continuidad de soporte ni demuestra concurrencia hostil o adquisición atómica del conjunto."
+  }
+}

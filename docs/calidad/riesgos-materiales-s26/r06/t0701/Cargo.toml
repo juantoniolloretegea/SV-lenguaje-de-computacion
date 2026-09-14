@@ -1,0 +1,21 @@
+[package]
+name = "sv_s26_r06_t0701"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[lib]
+name = "sv_bis_i0205"
+path = "../../../tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-realizacion-i0205-v0_1/proyecto/src/lib.rs"
+
+[dependencies]
+sv_core = { path = "../../../../../rust/sv_core" }
+
+[profile.dev]
+panic = "unwind"
+
+[profile.release]
+panic = "unwind"
+debug-assertions = false
