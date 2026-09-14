@@ -1,6 +1,6 @@
 # Extensión experimental: perfiles, recursos y captura
 
-**Incremento SVG · RETP-238:** [contrato y banco previo](PRECOMPROMISO_SVG_CONSUMO.md), nueve casos integrados y un lector aislado, con mutantes de posición y consumo. Preparado y compilado; aún sin ejecución del banco. Se conservan la evidencia de fronteras y los antecedentes siguientes.
+**Incremento SVG · RETP-239:** [resultados y evidencia](RESULTADOS_SVG_CONSUMO.md), 20/20 oráculos normales concordantes y cuatro ensayos de mutantes detectados en Rust debug/optimizado. [SVG efectivamente producido](MUESTRA_SVG_PRODUCIDA.svg). El banco previo permanece congelado. Sigue la frontera de rasterización y captor; Bis y S26 continúan abiertos.
 
 **Continuidad 14/09/2026 · RETP-237:** [fronteras conjuntas de descriptor y recibo](RESULTADOS_FRONTERAS_SALIDA.md), doce variantes EN/ES conformes en cada uno de dos perfiles Rust; 24 invocaciones, cero discrepancias y cuatro sensibilidades detectadas por campaña. [Banco previo](BANCO_FRONTERAS_SALIDA.md) conservado; [relevo de representación/consumo](RELEVO_REPRESENTACION_CONSUMO.md) preparado. Las secciones siguientes conservan el informe histórico RETP-221 y sus pendientes a aquel corte; las fronteras reciben ahora el alcance acotado de RETP-237.
 

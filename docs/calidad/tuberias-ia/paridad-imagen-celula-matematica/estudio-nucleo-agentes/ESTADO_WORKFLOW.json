@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Preparar el incremento material de representación/consumo según RELEVO_REPRESENTACION_CONSUMO.md: reutilizar C04/C05 y el montaje, fijar componente, canal, presupuesto y oráculos antes de ejecutar. Fronteras conjuntas recibidas en RETP-237. Conservar el hallazgo Celda para documentación/errores y Bis → catálogo y cierre de fase → GUI C#/.NET.",
+  "siguiente_accion": "Constituir y preparar la frontera SVG a rasterización y captor: formato, presupuesto, precisión/pérdida, canal y oráculos de píxeles independientes antes de ejecutar en Rust. SVG y consumo recibidos en RETP-239; no repetir campañas por cambios administrativos. Mantener el hallazgo Celda para catálogo y Bis → catálogo/cierre de fase → GUI C#/.NET.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -53,9 +53,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_FRONTERAS_SALIDA.md",
+  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-237",
+  "ultimo_retp": "RETP-2026-239",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -292,6 +292,21 @@
     "admision_y_nucleo_modificados": false,
     "suficiencia_global": false,
     "hallazgo": "Celda es palabra protegida y no puede nombrar el fixture; variantes nuevas CeldaPrueba conservan el contenido."
+  },
+  "svg_material_y_consumo": {
+    "registro": "RETP-2026-239",
+    "informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md",
+    "precompromiso_lenguaje": "c7d06a815979cecbcd9909ac053447667692efbd",
+    "precompromiso_laboratorio": "8cc94133a59786dd18cf31aef735485c35d150dc",
+    "campanas_normales": 2,
+    "observaciones_normales_concordantes": 20,
+    "ensayos_mutantes_detectados": 4,
+    "invocaciones_integradas": 22,
+    "pruebas_lector_aislado": 2,
+    "svg_bytes": 792,
+    "svg_sha256": "e5a9f9bc6df9b4f59a2a0cb908046239fda11ebbc247577b8e8c32b268a8c578",
+    "rasterizacion_acreditada": false,
+    "cierre_global": false
   },
   "fronteras_conjuntas_salida": {
     "registro": "RETP-2026-237",

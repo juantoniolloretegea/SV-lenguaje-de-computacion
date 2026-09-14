@@ -2272,3 +2272,17 @@ Proyección aproximada explícita; no cambia estados ni cardinalidad. Un SVG cor
 Publicar y cotejar ambos destinos antes de ejecutar. Dos campañas normales y cuatro mutantes; conservar toda discrepancia. Mantener Bis y S26 abiertos, F01/F02 pendiente de interfaz y GUI diferida.
 
 [Contrato y banco](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/PRECOMPROMISO_SVG_CONSUMO.md).
+
+<a id="retp-239"></a>
+
+### RETP-2026-239 · S22 · SVG material y consumo instrumentado
+
+SVG material y consumo: veinte oráculos normales concordantes; cuatro ensayos de mutantes detectados funcionalmente en debug y optimizado.
+
+Precompromisos Lenguaje c7d06a815979cecbcd9909ac053447667692efbd y laboratorio 8cc94133a59786dd18cf31aef735485c35d150dc, cotejados con R08 antes de ejecutar. Rust 1.98.0 offline/locked. Dos binarios normales: 10/10 y retorno 0; cuatro mutados: discrepancia funcional prevista y retorno 1. 145 huellas de entrada intactas.
+
+La captura y su hash no prueban por sí solos la dependencia utilizada: el mutante de consumo falso conserva ambos y altera el resultado. SVG no acredita píxeles ni percepción. RC10 es un lector aislado; no prueba un ataque integrado. Sin promoción productiva o cierre de Bis/S26; recuentos originales conservados.
+
+Preparar contrato y banco Rust de SVG a rasterización y captor, con precisión, presupuesto y oráculos de píxeles independientes. Conservar F01/F02 pendiente y la secuencia Bis, catálogo/cierre de fase, GUI C#/.NET.
+
+[Resultados y evidencia](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md).

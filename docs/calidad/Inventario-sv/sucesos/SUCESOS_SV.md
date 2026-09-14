@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-14T16:10:54Z
+**fecha_actualizacion_utc:** 2026-09-14T16:22:53Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 58f415b6c183b84df238122fa2ef5ea6d5d518e1; laboratorio b361da80e5cf6c10d89298b18170905a6a35dc48.
+**cortes_de_entrada:** Precompromisos: Lenguaje c7d06a815979cecbcd9909ac053447667692efbd; laboratorio 8cc94133a59786dd18cf31aef735485c35d150dc.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Preparado y compilado el incremento SVG16 y consumo de coordenadas. Diez casos previstos: nueve integrados y un lector aislado; dos mutantes funcionales por perfil. Oráculos gráficos y matemáticos independientes fijados. Banco aún sin ejecutar.
+**resultado:** SVG material y consumo instrumentado: 20/20 oráculos normales concordantes y cuatro ensayos de mutantes detectados en debug y optimizado. El consumo falso conserva captura y hash correctos, pero se discrimina por coordenadas utilizadas y operación discordantes.
 
-**verificacion:** Lecturas rectoras completas anteriores con bytes conservados; sedes C04/C05 y S14 cotejadas. Preparador Rust sin invocaciones al sujeto; cota gráfica comprobada mediante enteros i128. Candidato y banco compilan. Núcleo, admisor y campañas recibidas intactos.
+**verificacion:** Seis binarios Rust ejecutados: dos normales con retorno 0 y cuatro mutados con retorno 1 por discrepancia funcional prevista. 22 entradas al montaje y dos controles del lector aislado. 145 huellas de entrada intactas; fuentes, oráculos, núcleo y admisor conservados. Cotejo R08 anterior a las campañas; evidencia y binarios recuperables.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/PRECOMPROMISO_SVG_CONSUMO.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-238
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-239
 
-**siguiente_accion:** Publicar y cotejar contrato, código y oráculos en Calidad y laboratorio; ejecutar campañas Rust normal y mutantes en debug y optimizado; conservar bytes realmente producidos y consumidos, contextos, causas y discrepancias.
+**siguiente_accion:** Constituir la frontera SVG a rasterización y captor: formato, presupuesto, precisión/pérdida, canal y oráculos independientes de píxeles; preparar positivos, negativos y sensibilidad antes de ejecutar en Rust. No repetir SVG ni las campañas recibidas por cambios administrativos. Mantener catálogo/cierre antes de GUI C#/.NET.
 
-**observaciones:** La proyección gráfica declara aproximación y cota; el estado ternario exacto no cambia. SVG material y lector de coordenadas no acreditan rasterización ni percepción de IA. 202 filas originales y escenarios globales Bis conservados; S26/F01/F02 pendiente; S24/C#/.NET diferido. Rust para toda prueba, conductor y observador; cero Python.
+**observaciones:** Cualificación local, no cierre de Bis ni S26. SVG restringido y operación de coordenadas no acreditan percepción visual de IA, pantalla o resistencia al host. RC10 sólo prueba el lector aislado. 202 filas originales y escenarios globales conservados; F01/F02 pendiente de interfaz. Todas las pruebas, conductores y observadores en Rust; cero Python.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
