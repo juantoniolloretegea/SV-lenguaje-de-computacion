@@ -896,11 +896,11 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T06:22:03Z
+**fecha_actualizacion_utc:** 2026-09-14T06:36:16Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** Watson / W-S0
+**unidad_responsable:** Watson / W-S26
 
 **alcance:** Estudio transversal de identidad, consultas, RAM, persistencia, transacciones, índices, recuperación y consumidores, incluida futura GUI. Matriz previa; sin selección tecnológica ni modificación productiva.
 
@@ -920,7 +920,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **siguiente_accion:** Preparar T07: modificación del mismo objeto, restitución A-B-A y dependencia de otro corte, con barreras y oráculos previos. Integración completa pendiente. S26/Bis abiertos; S24 pendiente.
 
-**observaciones:** Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados.
+**observaciones:** Cualificación local T03/T04/T08 bajo anfitrión confiable. No acredita integridad física de RAM, supervivencia del padre o anfitrión, durabilidad, efecto externo, GUI ni límites universales de recursos. Sin Python/Java, reintentos ni cambio de núcleo. Cero casos globales S26 cerrados. Corrección de identificación en revisión 18: W-S26 identifica de forma estable a la unidad que retomó S26 con la recepción de R06/LOCAL01 (revisión 13; publicación Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab). Las revisiones 13-17 conservaron por arrastre W-S0; esta nota corrige su identificación de seguimiento, sin atribuir a la unidad receptora la ejecución heredada de LOCAL01. Las instantáneas anteriores permanecen intactas. W-S26 se mantiene durante toda la intervención de esta unidad, incluso al pasar a otro suceso. Regularización documental sin nuevos ensayos; resultados, evidencias y siguiente acción conservados.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

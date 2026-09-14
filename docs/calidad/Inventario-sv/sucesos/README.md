@@ -41,6 +41,12 @@ El CSV conserva actividad, alcance, responsable, fechas de alta, inicio, actuali
 
 La redacción será técnica, factual, precisa y respetuosa, con alcance y límites explícitos. Las previsiones se distinguen de las actuaciones realizadas y las afirmaciones de resultado remiten a evidencia recuperable. El registro describe actividades observables y evita atribuir comprobaciones que no se hayan efectuado.
 
+### Identificación de unidades y relevos · 14 de septiembre de 2026
+
+La columna `unidad_responsable` identifica a la unidad concreta que asume el seguimiento vigente. Para una nueva unidad Watson, `W-Sn` toma como referencia el suceso en el que comienza su intervención; ese identificador se mantiene también si posteriormente trabaja en otros sucesos. Antes de asignarlo se consulta el historial. Si ya está ocupado por otra unidad, se añade un sufijo correlativo libre (`W-Sn-02`, `W-Sn-03`, …); un relevo dentro del mismo suceso también requiere identidad distinta. Los identificadores anteriores no se reutilizan.
+
+S26, revisión 18, regulariza la identificación de la unidad receptora como `Watson / W-S26`. Su intervención comenzó con la recepción de R06/LOCAL01, recogida en la revisión 13; las revisiones 13–17 arrastraron el identificador anterior `W-S0`. La corrección se incorpora en la nueva instantánea y conserva las filas históricas, los resultados y la atribución de las ejecuciones heredadas. En cada relevo se identifica a la unidad entrante en la actividad que asume, sin reasignarle automáticamente las demás actividades abiertas.
+
 ## Referencias
 
 - [Léame primero](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md).
