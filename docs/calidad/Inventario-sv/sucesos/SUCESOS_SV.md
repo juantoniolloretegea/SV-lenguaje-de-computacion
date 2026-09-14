@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T06:03:06Z
+**fecha_actualizacion_utc:** 2026-09-14T06:10:55Z
 
 **fecha_fin_utc:** —
 
@@ -906,19 +906,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje 2135c89ed3e6f9e28a77d11dc3d4dd5a8b85a7ab; laboratorio 37fa52af4e3091aa8aea3565f0dc144e73d4654a.
+**cortes_de_entrada:** Lenguaje 3f306da4e4896a0738ef1bb3a9775a42219437b2; laboratorio e04e51d2d9f17d9aebb4545e950c789d00fac67e.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** R06 PROCESO01: protocolo y catorce casos preparados para observar terminación de hijo, informes tardíos o duplicados y fallos de canal. Compilación preparatoria disponible; ninguna ejecución de los casos.
+**resultado:** PROCESO01 impedido por EPERM al abrir canal Unix, antes de crear el hijo; cero casos completados. PROCESO02 prepara catorce casos con tuberías anónimas y precompromiso propio.
 
-**verificacion:** Código Rust y oráculos previos; 99 fuentes y piezas cotejadas contra el corte canónico. Registro de apertura en el padre, barreras explícitas y cuotas de canal. Sucesos y evidencia vinculados en Calidad y laboratorio.
+**verificacion:** Impedimento y apertura inicial conservados; compilación preparatoria de PROCESO02 correcta. Mismos oráculos de terminación/correlación; P10 fija plazo desde barrera recibida. Sin pruebas de comportamiento de PROCESO02 al incorporar este registro.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso01/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso01
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/proceso02/README.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/tree/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/proceso02
 
-**referencia_calidad:** S26/R06/PROCESO01: expediente de Calidad; RETP-2026-236 como antecedente LOCAL01.
+**referencia_calidad:** S26/R06/PROCESO01: impedimento; S26/R06/PROCESO02: banco en Calidad y laboratorio. RETP-2026-236 conserva su alcance de antecedente.
 
-**siguiente_accion:** Ejecutar los catorce casos tras publicar y cotejar el precompromiso; conservar ambas campañas y recibir los resultados. T07 e integración completa pendientes. S26 y Bis abiertos; S24 pendiente.
+**siguiente_accion:** Ejecutar PROCESO02 debug y release después de publicar su precompromiso; conservar el impedimento de PROCESO01. T07, integración, S26 y Bis abiertos; S24 pendiente.
 
 **observaciones:** Protocolo experimental bajo un anfitrión confiable; no acredita supervivencia del padre, durabilidad, aislamiento hostil, GUI ni efecto externo. Sin reintento automático ni cambio de núcleo. Seguimiento por revisiones de S26, sin nuevo asiento RETP.
 

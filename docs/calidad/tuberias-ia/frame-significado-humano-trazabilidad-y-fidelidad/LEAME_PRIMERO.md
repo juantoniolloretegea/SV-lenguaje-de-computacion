@@ -140,3 +140,7 @@ R06: recepción contractual de terminación sin informe y alcance de identidad d
 ## S26 R06 PROCESO01 · Banco previo
 
 [Protocolo y catorce casos](../../riesgos-materiales-s26/r06/proceso01/README.md): observador de un proceso hijo, correlación previa, informes duplicados o tardíos y separación de canal, terminación y efecto. Banco sin ejecutar al incorporar este precompromiso. Seguimiento por Sucesos y expediente de Calidad con espejo de laboratorio; LOCAL01/RETP-236 conserva su alcance anterior. T07 e integración pendientes; S26/Bis y S24 mantienen su secuencia.
+
+## S26 R06 PROCESO02 · Precompromiso tras impedimento instrumental
+
+[Banco con tuberías anónimas](../../riesgos-materiales-s26/r06/proceso02/README.md). PROCESO01 conserva el impedimento EPERM al crear el canal Unix, anterior al proceso hijo; cero casos completados. PROCESO02 fija catorce casos y sus recursos antes de ejecutar. Sucesos mantiene la revisión y los enlaces a Calidad y laboratorio; T07 e integración permanecen pendientes.
