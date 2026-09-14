@@ -1,0 +1,8 @@
+fecha_actualizacion_utc	2026-09-14T14:39:24Z
+unidad_responsable	W-S26-02
+cortes_de_entrada	Lenguaje 1d577e7dffd9bad8d73cd779105c8730301bea0a; laboratorio 2e2fc695e4e718999f471c7b4fa8520af8138c2f.
+resultado	Preparadas doce variantes de seis fronteras conjuntas de descriptor/recibo, sobre semillas EN/ES existentes. Comprometidos 10239/10240 bytes, excesos de un byte y consumidor UTF-8. Cero casos del nuevo banco ejecutados. Límites individuales previos conservados.
+verificacion	Preparador Rust sin llamadas de admisión; banco compilado, sin ejecución. Oráculos independientes del resultado nuevo; fuentes del núcleo y admisor intactas. Cuatro sensibilidades previstas. Huella de entradas: 774e92acfb96f90cdb3248e3712a5c47e9f5e9bbe7cd09ace4b2ba3e916f4dcb.
+evidencias	https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/BANCO_FRONTERAS_SALIDA.md
+siguiente_accion	Publicar y cotejar el banco en Calidad y laboratorio; ejecutar doce variantes en cada perfil de compilación Rust y las sensibilidades. Conservar primera guarda, lecturas efectivas y ausencia de despacho ante rechazo. Después preparar relevo de representación/consumo.
+observaciones	El exceso agregado es inalcanzable bajo ambos límites individuales: 8192+2048=10240. No atribuir cobertura ejecutada a esa rama defensiva. Las 202 filas originales y 24 escenarios Bis mantienen sus recuentos. S24/C#/.NET permanece diferida; S26 conserva su pendiente de consulta. Rust 1.98.0 recuperado; sin Python.

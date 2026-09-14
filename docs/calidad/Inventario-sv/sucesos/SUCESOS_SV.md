@@ -760,31 +760,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-13T17:25:16Z
+**fecha_actualizacion_utc:** 2026-09-14T14:39:24Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** Watson / W-S0
+**unidad_responsable:** W-S26-02
 
 **alcance:** Secuencia BIS-00 a BIS-08; política de documentación ES/EN y contraste estático inicial. Sin modificación del código productivo.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Lenguaje aa1229788f0a6625be43c74e29c38023b8193a4c; laboratorio ed5a78fb667401b052e915db38bf17465fe3b2b2
+**cortes_de_entrada:** Lenguaje 1d577e7dffd9bad8d73cd779105c8730301bea0a; laboratorio 2e2fc695e4e718999f471c7b4fa8520af8138c2f.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Extensión nativa del montaje C02–C05: 26 casos nuevos conformes (9 entregas documentales, 17 rechazos), con perfiles ES/EN, cuotas de recepción/recibo y captura. Cinco comparaciones canónicas conformes en campaña R01: cuatro equivalencias y una desigualdad por cambio de dato textual. Núcleo sv_core y admisión RETP-220 sin modificaciones.
+**resultado:** Preparadas doce variantes de seis fronteras conjuntas de descriptor/recibo, sobre semillas EN/ES existentes. Comprometidos 10239/10240 bytes, excesos de un byte y consumidor UTF-8. Cero casos del nuevo banco ejecutados. Límites individuales previos conservados.
 
-**verificacion:** Precompromiso en laboratorio y espejo antes de cada ejecución. Cargo build --locked --offline y binario nativo Rust/Cargo 1.98.0 desde directorios nuevos; contadores reales por canal, recibos completos, captura, trazas y estados conservados. Dos campañas: 52 invocaciones integradas, 26 variantes únicas. Primera campaña: 26 conformes y tres comparaciones impedidas por Celda, identificador protegido en fixtures C12. Fallo conservado; variantes nuevas CeldaPrueba, previamente comprometidas, resuelven las tres comparaciones sin cambiar expectativas ni compilador.
+**verificacion:** Preparador Rust sin llamadas de admisión; banco compilado, sin ejecución. Oráculos independientes del resultado nuevo; fuentes del núcleo y admisor intactas. Cuatro sensibilidades previstas. Huella de entradas: 774e92acfb96f90cdb3248e3712a5c47e9f5e9bbe7cd09ace4b2ba3e916f4dcb.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/README.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/BANCO_FRONTERAS_SALIDA.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-221
 
-**siguiente_accion:** Completar frontera de tamaño del descriptor y salida agregada del montaje, y preparar su relevo hacia representación/consumo con pruebas previas; trasladar el hallazgo Celda al retorno de documentación/errores. Mantener Bis → catálogo y cierre de fase → análisis e instalación de GUI.
+**siguiente_accion:** Publicar y cotejar el banco en Calidad y laboratorio; ejecutar doce variantes en cada perfil de compilación Rust y las sensibilidades. Conservar primera guarda, lecturas efectivas y ausencia de despacho ante rechazo. Después preparar relevo de representación/consumo.
 
-**observaciones:** BIS-02/BIS-03/BIS-04 globales abiertos. Paridad acreditada para estas fuentes y operaciones, sin garantía universal ni consumo visual de IA. Cuotas de memoria/tiempo y agotamiento no constituidos. Las 202 filas originales C02–C12 no se declaran ejecutadas como banco propio; originales C12 y resultados previos intactos. S24/GUI diferida; S25 conservado.
+**observaciones:** El exceso agregado es inalcanzable bajo ambos límites individuales: 8192+2048=10240. No atribuir cobertura ejecutada a esa rama defensiva. Las 202 filas originales y 24 escenarios Bis mantienen sus recuentos. S24/C#/.NET permanece diferida; S26 conserva su pendiente de consulta. Rust 1.98.0 recuperado; sin Python.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
@@ -896,31 +896,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T10:02:37Z
+**fecha_actualizacion_utc:** 2026-09-14T14:39:24Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** Watson / W-S26
+**unidad_responsable:** W-S26-02
 
 **alcance:** Estudio transversal de identidad, consultas, RAM, persistencia, transacciones, índices, recuperación y consumidores, incluida futura GUI. Matriz previa; sin selección tecnológica ni modificación productiva.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Banco: Lenguaje ccbb152f69fa1a954e153fbaac24e4ac337e9ef3; laboratorio 985423ecc0f5c0127764286bf26ee503ec050c17. Ajuste de invocación previo: Lenguaje 7a08f5d9b57a102af5388a5f3ad84a759028994a; laboratorio 81582b8464e0ab6f37a74ad9ef6f2dcb75e68d4c.
+**cortes_de_entrada:** Lenguaje 1d577e7dffd9bad8d73cd779105c8730301bea0a; laboratorio 2e2fc695e4e718999f471c7b4fa8520af8138c2f.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Incremento LIG de F01/F02: 10/10 casos conformes en debug y 10/10 en release, cada caso con entradas EN y ES; ambas campañas con retorno 0. Identidad/versiones, orden de usos, posiciones, sustitución bajo expectativa fija, colisión, ambigüedad y ausencias contrastados. Fuente y oráculos intactos. No cierre global F01/F02.
+**resultado:** Recepción del banco LIG de revisión 25 y contraste de interfaz de F01/F02. LIG, Frame y validación de contextos conservan su alcance; no se identifica una interfaz material constituida de consulta histórica por ocurrencia y posición. F01/F02 completos permanecen pendientes en DFL-003/004/005 y R2-0.
 
-**verificacion:** Seis comandos de compilación/ejecución Rust 1.98.0 con retorno 0. R08 coteja 2996 archivos de fuente, 2999 del banco previo y 3002 del corte ajustado; este último intacto antes/después. Cuarenta ejecuciones caso/entrada entre dos perfiles, diez casos distintos. Canales, incidencias administrativas, huellas y comandos íntegros conservados.
+**verificacion:** Lectura de rectores, Sucesos, LIG/0.1, R02, nota de consulta histórica y exportaciones de sv_core en el corte fijado. Cero nuevas ejecuciones SV de S26; no se repiten LIG ni INTEGRADO01.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/RESULTADOS_F01_F02_LIGADURAS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/RESULTADOS_F01_F02_LIGADURAS.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/CONTINUIDAD_F01_F02_Y_RELEVO_BIS.md
 
 **referencia_calidad:** S26/R06: BANCO_F01_F02_LIGADURAS.md, AJUSTE_INVOCACION_F01_F02_LIGADURAS.md, RESULTADOS_F01_F02_LIGADURAS.md, EJECUCIONES_F01_F02_LIGADURAS.json y EVIDENCIA_F01_F02_LIGADURAS.tar.gz, con espejo en laboratorio. INTEGRADO01 y campañas anteriores conservan sus resultados y evidencias.
 
-**siguiente_accion:** Identificar en la secuencia rectora la interfaz material de consulta por ocurrencia y de resolución por célula/Frame para F01/F02; si no está constituida, conservar el pendiente en esa sede. No atribuir consulta histórica a LIG ni crear un resolutor en el arnés para declarar cierre. No repetir bancos recibidos por cambios administrativos.
+**siguiente_accion:** Retornar a F01/F02 cuando esté constituida su interfaz material. Continuar ahora el bloque previsto S22/RETP-221 de fronteras conjuntas del descriptor y recibo, con precompromiso. Conservar S26/Bis abiertos y S24 pendiente.
 
-**observaciones:** Alcance LIG/0.1 bajo anfitrión confiable. Sin garantía física de RAM, host independiente, identidad de adquisición, persistencia durable ni backend productivo. 25 advertencias de sv_core por perfil conservadas, sin cargo fix. Incidencias administrativas previas y corrección de invocación publicadas; ningún oráculo adaptado a resultados. Pruebas y registrador de ejecución en Rust; Python únicamente para revisión documental del Word, fuera de la campaña SV. RETP canónica, núcleo, IR, contratos y workflows sin modificar; sin nuevas ramas ni directorios versionados. W-S26 estable; S26/Bis abiertos, S24 pendiente.
+**observaciones:** Relevo identificado como W-S26-02; antecedentes y atribuciones históricas conservados. No nuevo resolutor en el arnés, consulta clínica, BD ni GUI. S28 permanece finalizado; evaluación y Word no se repiten.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 

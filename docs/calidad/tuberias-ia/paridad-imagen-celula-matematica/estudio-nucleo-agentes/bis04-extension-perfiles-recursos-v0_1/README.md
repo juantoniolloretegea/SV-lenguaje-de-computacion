@@ -1,5 +1,7 @@
 # Extensión experimental: perfiles, recursos y captura
 
+**Continuidad 14/09/2026:** [banco previo de fronteras conjuntas de descriptor y recibo](BANCO_FRONTERAS_SALIDA.md), doce variantes EN/ES; sin ejecución en esta incorporación. Las campañas anteriores conservan su evidencia.
+
 Estado: **extensión ensayada en Rust/Cargo 1.98.0; RETP-2026-221**. Continuación de RETP-220; no cierre global del Bis.
 
 ## Resultado y hallazgo

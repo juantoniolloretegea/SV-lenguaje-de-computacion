@@ -1,0 +1,8 @@
+fecha_actualizacion_utc	2026-09-14T14:39:24Z
+unidad_responsable	W-S26-02
+cortes_de_entrada	Lenguaje 1d577e7dffd9bad8d73cd779105c8730301bea0a; laboratorio 2e2fc695e4e718999f471c7b4fa8520af8138c2f.
+resultado	Recepción del banco LIG de revisión 25 y contraste de interfaz de F01/F02. LIG, Frame y validación de contextos conservan su alcance; no se identifica una interfaz material constituida de consulta histórica por ocurrencia y posición. F01/F02 completos permanecen pendientes en DFL-003/004/005 y R2-0.
+verificacion	Lectura de rectores, Sucesos, LIG/0.1, R02, nota de consulta histórica y exportaciones de sv_core en el corte fijado. Cero nuevas ejecuciones SV de S26; no se repiten LIG ni INTEGRADO01.
+evidencias	https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/CONTINUIDAD_F01_F02_Y_RELEVO_BIS.md
+siguiente_accion	Retornar a F01/F02 cuando esté constituida su interfaz material. Continuar ahora el bloque previsto S22/RETP-221 de fronteras conjuntas del descriptor y recibo, con precompromiso. Conservar S26/Bis abiertos y S24 pendiente.
+observaciones	Relevo identificado como W-S26-02; antecedentes y atribuciones históricas conservados. No nuevo resolutor en el arnés, consulta clínica, BD ni GUI. S28 permanece finalizado; evaluación y Word no se repiten.
