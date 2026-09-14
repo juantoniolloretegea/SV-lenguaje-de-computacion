@@ -150,3 +150,8 @@ Se utilizan shell y Python para lectura, cotejo de fuentes, edición documental 
 ## S26-F01/F02 · Preparación de referencias y ligaduras
 
 [Diez casos Rust y protocolo previo](BANCO_F01_F02_LIGADURAS.md). API pública LIG/0.1 y fixtures existentes; entradas EN/ES. Sin compilar ni ejecutar por indisponibilidad del entorno. Sucesos revisión 23 conserva el impedimento y el siguiente paso. El alcance no incluye todavía consulta histórica ni resolución completa por Frame; no se cierran F01/F02 ni se repiten INTEGRADO01 y los bancos recibidos.
+
+
+## S26-F01/F02 · Recepción del incremento LIG
+
+[Resultados y evidencia](RESULTADOS_F01_F02_LIGADURAS.md): diez casos conformes en debug y diez en release, con entradas EN/ES y retorno 0. Instancias, versiones, orden de uso, posiciones y rechazos contrastados; banco y fuentes intactos. El ajuste instrumental de invocación se publicó antes de ejecutar. Sucesos revisión 25 mantiene la concordancia de CSV, Markdown e historial con el laboratorio. F01/F02 globales continúan pendientes de su interfaz de consulta y resolución por célula/Frame; LIG no constituye esa consulta. No repetir campañas recibidas. S26/Bis abiertos; S24 conserva su secuencia.

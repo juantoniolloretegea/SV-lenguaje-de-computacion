@@ -1,0 +1,338 @@
+{
+  "suceso": "S26",
+  "revision": 25,
+  "unidad": "Watson / W-S26",
+  "fecha_recepcion_utc": "2026-09-14T10:02:37Z",
+  "estado": "INCREMENTO_LIG_CONFORME_F01_F02_GLOBALES_ABIERTOS",
+  "cortes": {
+    "fuente": "fe96bea19c14ddbb80c01033b52a7e4761754732",
+    "banco_lenguaje": "ccbb152f69fa1a954e153fbaac24e4ac337e9ef3",
+    "banco_laboratorio": "985423ecc0f5c0127764286bf26ee503ec050c17",
+    "ajuste_lenguaje": "7a08f5d9b57a102af5388a5f3ad84a759028994a",
+    "ajuste_laboratorio": "81582b8464e0ab6f37a74ad9ef6f2dcb75e68d4c"
+  },
+  "referencias_publicadas_antes_de_ejecutar": [
+    {
+      "branch": "main",
+      "commit": "7a08f5d9b57a102af5388a5f3ad84a759028994a",
+      "repo": "SV-lenguaje-de-computacion",
+      "tree": "df8a6dfe4b2b6d7e7803436546f8bb277e459663"
+    },
+    {
+      "branch": "lab/playground-sv-permanente",
+      "commit": "81582b8464e0ab6f37a74ad9ef6f2dcb75e68d4c",
+      "repo": "SV-matematica-semantica-cuaternaria",
+      "tree": "655596d151a1db3538c9ffd20e9196937d77b206"
+    }
+  ],
+  "rectores_conservados": [
+    {
+      "path": "AGENTS.md",
+      "blob": "42221257270146fa94a25e8aca20a2c364c077b7"
+    },
+    {
+      "path": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "blob": "044f89f7c826f0ba52c58ee8ff19572e7b3b2187"
+    },
+    {
+      "path": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d"
+    },
+    {
+      "path": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "blob": "44f8fda87856ab16007195cab324d40a758e506a"
+    }
+  ],
+  "lecturas": "Se mantienen las lecturas completas declaradas en el banco y se cotejan los objetos de los tres rectores, sin alterar doctrina ni contratos. API pública y fixtures LIG examinados para este incremento.",
+  "banco": {
+    "path": "docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs",
+    "git_blob": "df503b937015837e05f1a7c729dcbe51b827d808",
+    "sha256": "672157f23a3cf161114980a5b7dad847761dc59a0e4cdb5428cd0c91bb36a63b",
+    "casos_distintos": 10,
+    "entradas": [
+      "SVP-EN",
+      "SVP-ES"
+    ],
+    "perfiles": [
+      "debug",
+      "release"
+    ],
+    "ejecuciones_caso_entrada_por_perfil": 20,
+    "ejecuciones_caso_entrada_totales": 40,
+    "oraculos_modificados": false
+  },
+  "resultados": [
+    {
+      "perfil": "debug",
+      "casos_conformes": 10,
+      "fallidos": 0,
+      "ignorados": 0,
+      "filtrados": 0,
+      "retorno": 0,
+      "stdout": "debug-tests.stdout",
+      "stderr": "debug-tests.stderr"
+    },
+    {
+      "perfil": "release",
+      "casos_conformes": 10,
+      "fallidos": 0,
+      "ignorados": 0,
+      "filtrados": 0,
+      "retorno": 0,
+      "stdout": "release-tests.stdout",
+      "stderr": "release-tests.stderr"
+    }
+  ],
+  "comandos_y_cotejos": [
+    {
+      "argv": [
+        "/opt/sv-rust-1.98.0/bin/cargo",
+        "build",
+        "--manifest-path",
+        "rust/Cargo.toml",
+        "--package",
+        "sv_core",
+        "--lib",
+        "--locked",
+        "--offline",
+        "--target-dir",
+        "rust/target/s26-f01-f02"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 4621857845,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:02Z",
+      "inicio_epoch_ns": 1789379938172751400,
+      "inicio_utc": "2026-09-14T09:58:58Z",
+      "nombre": "debug-build",
+      "retorno": 0,
+      "stderr": "debug-build.stderr",
+      "stdout": "debug-build.stdout"
+    },
+    {
+      "argv": [
+        "/opt/sv-rust-1.98.0/bin/rustc",
+        "--edition=2021",
+        "--test",
+        "docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs",
+        "--extern",
+        "sv_core=rust/target/s26-f01-f02/debug/libsv_core.rlib",
+        "-L",
+        "dependency=rust/target/s26-f01-f02/debug/deps",
+        "-C",
+        "opt-level=0",
+        "-C",
+        "debuginfo=2",
+        "-o",
+        "rust/target/s26-f01-f02/s26-f01-f02-debug"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 367302388,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:09Z",
+      "inicio_epoch_ns": 1789379949452672500,
+      "inicio_utc": "2026-09-14T09:59:09Z",
+      "nombre": "debug-compile",
+      "retorno": 0,
+      "stderr": "debug-compile.stderr",
+      "stdout": "debug-compile.stdout"
+    },
+    {
+      "argv": [
+        "rust/target/s26-f01-f02/s26-f01-f02-debug",
+        "--test-threads=1",
+        "--nocapture"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 100176211,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:26Z",
+      "inicio_epoch_ns": 1789379966453214500,
+      "inicio_utc": "2026-09-14T09:59:26Z",
+      "nombre": "debug-tests",
+      "retorno": 0,
+      "stderr": "debug-tests.stderr",
+      "stdout": "debug-tests.stdout"
+    },
+    {
+      "argv": [
+        "/opt/sv-rust-1.98.0/bin/cargo",
+        "build",
+        "--manifest-path",
+        "rust/Cargo.toml",
+        "--package",
+        "sv_core",
+        "--lib",
+        "--release",
+        "--locked",
+        "--offline",
+        "--target-dir",
+        "rust/target/s26-f01-f02"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 5133897928,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:32Z",
+      "inicio_epoch_ns": 1789379967720816000,
+      "inicio_utc": "2026-09-14T09:59:27Z",
+      "nombre": "release-build",
+      "retorno": 0,
+      "stderr": "release-build.stderr",
+      "stdout": "release-build.stdout"
+    },
+    {
+      "argv": [
+        "/opt/sv-rust-1.98.0/bin/rustc",
+        "--edition=2021",
+        "--test",
+        "docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs",
+        "--extern",
+        "sv_core=rust/target/s26-f01-f02/release/libsv_core.rlib",
+        "-L",
+        "dependency=rust/target/s26-f01-f02/release/deps",
+        "-C",
+        "opt-level=3",
+        "-C",
+        "debug-assertions=no",
+        "-C",
+        "overflow-checks=no",
+        "-o",
+        "rust/target/s26-f01-f02/s26-f01-f02-release"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 636732287,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:40Z",
+      "inicio_epoch_ns": 1789379979893708800,
+      "inicio_utc": "2026-09-14T09:59:39Z",
+      "nombre": "release-compile",
+      "retorno": 0,
+      "stderr": "release-compile.stderr",
+      "stdout": "release-compile.stdout"
+    },
+    {
+      "argv": [
+        "rust/target/s26-f01-f02/s26-f01-f02-release",
+        "--test-threads=1",
+        "--nocapture"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/lenguaje",
+      "duracion_ns": 18797528,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:53Z",
+      "inicio_epoch_ns": 1789379993743483100,
+      "inicio_utc": "2026-09-14T09:59:53Z",
+      "nombre": "release-tests",
+      "retorno": 0,
+      "stderr": "release-tests.stderr",
+      "stdout": "release-tests.stdout"
+    },
+    {
+      "argv": [
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/cotejar",
+        "/workspace/scratch/570d4b947ea6/lenguaje",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/main-esperado.tsv",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/main-observado-antes.tsv"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02",
+      "duracion_ns": 350493703,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:52:41Z",
+      "inicio_epoch_ns": 1789379560996118800,
+      "inicio_utc": "2026-09-14T09:52:40Z",
+      "nombre": "cotejo-main-antes-r1",
+      "retorno": 0,
+      "stderr": "cotejo-main-antes-r1.stderr",
+      "stdout": "cotejo-main-antes-r1.stdout"
+    },
+    {
+      "argv": [
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/cotejar",
+        "/workspace/scratch/570d4b947ea6/fuente-fe96",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/base-esperado.tsv",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/base-observado-antes.tsv"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02",
+      "duracion_ns": 333097224,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:52:41Z",
+      "inicio_epoch_ns": 1789379561005728300,
+      "inicio_utc": "2026-09-14T09:52:41Z",
+      "nombre": "cotejo-base-antes-r1",
+      "retorno": 0,
+      "stderr": "cotejo-base-antes-r1.stderr",
+      "stdout": "cotejo-base-antes-r1.stdout"
+    },
+    {
+      "argv": [
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/cotejar",
+        "/workspace/scratch/570d4b947ea6/lenguaje",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/pre-main-esperado.tsv",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/pre-main-local.tsv"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02",
+      "duracion_ns": 344816077,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:58:08Z",
+      "inicio_epoch_ns": 1789379888179074000,
+      "inicio_utc": "2026-09-14T09:58:08Z",
+      "nombre": "pre-main-local",
+      "retorno": 0,
+      "stderr": "pre-main-local.stderr",
+      "stdout": "pre-main-local.stdout"
+    },
+    {
+      "argv": [
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/cotejar",
+        "/workspace/scratch/570d4b947ea6/lenguaje",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/pre-main-esperado.tsv",
+        "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02/pre-main-despues.tsv"
+      ],
+      "directorio": "/workspace/scratch/570d4b947ea6/ejecucion-f01-f02",
+      "duracion_ns": 478725152,
+      "error_lanzamiento": "",
+      "fin_utc": "2026-09-14T09:59:55Z",
+      "inicio_epoch_ns": 1789379995180290300,
+      "inicio_utc": "2026-09-14T09:59:55Z",
+      "nombre": "cotejo-post-campanas",
+      "retorno": 0,
+      "stderr": "cotejo-post-campanas.stderr",
+      "stdout": "cotejo-post-campanas.stdout"
+    }
+  ],
+  "entorno": {
+    "rustc-version": "rustc 1.98.0 (88d9e12ae 2026-08-18)\nbinary: rustc\ncommit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea\ncommit-date: 2026-08-18\nhost: x86_64-unknown-linux-gnu\nrelease: 1.98.0\nLLVM version: 22.1.8\n",
+    "cargo-version": "cargo 1.98.0 (797e8a9bc 2026-08-05)\n",
+    "plataforma": "Linux localhost 6.18.44 #1 SMP Sat Sep 12 15:35:21 UTC 2026 x86_64 x86_64 x86_64 GNU/Linux\n",
+    "recursos-cgroup": "21474836480\n800000 100000\n",
+    "huellas-ejecutables": "ad125e59edff21324f48481f40e64a356a3d1cb898bd193b956c0df6a97b58ae  rust/target/s26-f01-f02/s26-f01-f02-debug\n9b0d1ec4c7295b8a94649725fdf78f8c8edfec20951a74b2a682afc5a119b489  rust/target/s26-f01-f02/s26-f01-f02-release\nce9a2d537eeb60fc2a84bc464b9e85c27d5bbbface3ec0a1fc59b7415e734f46  rust/target/s26-f01-f02/debug/libsv_core.rlib\n915e4a356bc58c19799034dcd803aafd5075504bfcda5bba6010333e54aef66f  rust/target/s26-f01-f02/release/libsv_core.rlib\n672157f23a3cf161114980a5b7dad847761dc59a0e4cdb5428cd0c91bb36a63b  docs/calidad/riesgos-materiales-s26/r06/s26_f01_f02_ligaduras.rs\n"
+  },
+  "integridad": {
+    "metodo": "Adaptador administrativo Rust cotejar.rs: lectura de modos y bytes de archivos, git hash-object --no-filters; comparación por auxiliar R08 inalterado contra árboles completos recibidos de la API. Los cotejos de publicación comparan expectativas compuestas con árboles Git recién leídos.",
+    "archivos_corte_fuente": 2996,
+    "archivos_precompromiso": 2999,
+    "archivos_corte_ajuste": 3002,
+    "cotejo_antes": "pre-main-local.json",
+    "cotejo_despues": "cotejo-post-campanas.json",
+    "retornos": 0,
+    "conservacion_durante_campanas": true,
+    "limite": "El adaptador y el anfitrión forman parte del entorno de confianza; no acredita inmutabilidad física ni host independiente."
+  },
+  "evidencia": {
+    "archivo": "EVIDENCIA_F01_F02_LIGADURAS.tar.gz",
+    "bytes": 1574642,
+    "sha256": "83d85763a7bdc725ccd41cd1b9809418cf19cc2642586236386f1a89ada17577",
+    "contiene": "Canales íntegros, JSON de cada comando registrado, recursos, huellas, descriptores completos R08 antes/después, descriptores inicialmente rechazados, incidencias, fuentes Rust del banco y adaptadores, copias previas y cambios de Sucesos.",
+    "no_incluye": "Repositorio completo ni binarios compilados; se identifican mediante cortes Git y SHA-256.",
+    "reproduccion": "Recuperar el corte Lenguaje del ajuste y seguir AJUSTE_INVOCACION_F01_F02_LIGADURAS.md. La ejecución se realiza desde el Lenguaje; el laboratorio conserva el espejo documental."
+  },
+  "incidencias": "Ver INCIDENCIAS_ADMINISTRATIVAS.md y canales incluidos: ausencia de rustup, primer lanzamiento del auxiliar fallido, PUB_CAMPO por línea vacía en descriptores, clone privado sin credenciales de shell. Resueltas por instalación directa, regeneración de descriptores y conector GitHub. No constituyen resultados de casos SV. sv_core emite 25 advertencias por perfil; conservadas sin modificaciones.",
+  "seguimiento": {
+    "sucesos_csv_md_historial": "S26 revision 25; S28 revision 2; 29 sucesos concordantes mediante comprobador administrativo Rust",
+    "word": "Depositado en cuatro rutas existentes en el corte previo; binario idéntico, SHA-256 03d973de4a429976cb533ca626cf811e0e90491c44496a8e5178c9a90389f143",
+    "retp_canonica": "Sin cambios"
+  },
+  "alcance": "Recepción y consumo LIG/0.1 en diez casos; versiones, instancias, posiciones, orden y rechazos. No ejecución del efecto de la operación declarada.",
+  "pendiente": "F01 consulta de ocurrencias exactas y F02 resolución por instancia/posición/constitución de célula o Frame requieren la interfaz material en su sede rectora. S26/Bis abiertos; S24 conserva secuencia. No repetir campañas por cambios de registro.",
+  "lenguajes": "Pruebas y registro de ejecución en Rust. Git/sha256sum/tar y conector GitHub para identificación, conservación y publicación. JavaScript para montaje documental y transporte; Python/LibreOffice sólo para renderizado y metadatos del Word de S28, fuera de las pruebas SV."
+}

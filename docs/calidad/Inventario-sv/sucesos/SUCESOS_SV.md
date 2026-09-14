@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T09:55:10Z
+**fecha_actualizacion_utc:** 2026-09-14T10:02:37Z
 
 **fecha_fin_utc:** —
 
@@ -906,21 +906,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromiso Lenguaje ccbb152f69fa1a954e153fbaac24e4ac337e9ef3; laboratorio 985423ecc0f5c0127764286bf26ee503ec050c17. Fuente fe96bea19c14ddbb80c01033b52a7e4761754732.
+**cortes_de_entrada:** Banco: Lenguaje ccbb152f69fa1a954e153fbaac24e4ac337e9ef3; laboratorio 985423ecc0f5c0127764286bf26ee503ec050c17. Ajuste de invocación previo: Lenguaje 7a08f5d9b57a102af5388a5f3ad84a759028994a; laboratorio 81582b8464e0ab6f37a74ad9ef6f2dcb75e68d4c.
 
 **dependencias:** S22 / RETP-218 a 221 como antecedente; S24 como relevo futuro; R2-0, LIG, Frame/R1 y rectores. S26 puede estudiarse mientras S22 permanece abierto.
 
-**resultado:** Entorno recuperado con Rust/Cargo 1.98.0. Diez casos LIG/0.1 intactos, aún sin ejecutar. Se publica ajuste instrumental de +1.98.0 a rutas directas del compilador porque rustup no está instalado. No se cambian fuente ni oráculos.
+**resultado:** Incremento LIG de F01/F02: 10/10 casos conformes en debug y 10/10 en release, cada caso con entradas EN y ES; ambas campañas con retorno 0. Identidad/versiones, orden de usos, posiciones, sustitución bajo expectativa fija, colisión, ambigüedad y ausencias contrastados. Fuente y oráculos intactos. No cierre global F01/F02.
 
-**verificacion:** R08 coteja 2999 archivos del precompromiso y 2996 del corte fuente contra sus objetos Git; árboles completos recibidos por API. Se conservan rechazo inicial PUB_CAMPO de descriptores con línea vacía y regeneración administrativa antes del cotejo conforme. Los tres rectores conservan sus blobs leídos.
+**verificacion:** Seis comandos de compilación/ejecución Rust 1.98.0 con retorno 0. R08 coteja 2996 archivos de fuente, 2999 del banco previo y 3002 del corte ajustado; este último intacto antes/después. Cuarenta ejecuciones caso/entrada entre dos perfiles, diez casos distintos. Canales, incidencias administrativas, huellas y comandos íntegros conservados.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/AJUSTE_INVOCACION_F01_F02_LIGADURAS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/AJUSTE_INVOCACION_F01_F02_LIGADURAS.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/BANCO_F01_F02_LIGADURAS.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/RESULTADOS_F01_F02_LIGADURAS.md ; https://github.com/juantoniolloretegea/SV-matematica-semantica-cuaternaria/blob/lab/playground-sv-permanente/laboratorio/tareas-watson/riesgos-materiales-s26/r06/RESULTADOS_F01_F02_LIGADURAS.md
 
-**referencia_calidad:** S26/R06/INTEGRADO01: precompromiso, EJECUCIONES.json y EVIDENCIA.tar.gz (391144 bytes; SHA-256 bb88a56ae15a1f3aa546d837d24f5b55197a575fa1c02020413225676a56d38e). LOCAL01/RETP-236, PROCESO01/02/03 y T0701 conservan sus resultados y alcances. Preparación: r06/BANCO_F01_F02_LIGADURAS.md, s26_f01_f02_ligaduras.rs y FUENTES_F01_F02_LIGADURAS.json.
+**referencia_calidad:** S26/R06: BANCO_F01_F02_LIGADURAS.md, AJUSTE_INVOCACION_F01_F02_LIGADURAS.md, RESULTADOS_F01_F02_LIGADURAS.md, EJECUCIONES_F01_F02_LIGADURAS.json y EVIDENCIA_F01_F02_LIGADURAS.tar.gz, con espejo en laboratorio. INTEGRADO01 y campañas anteriores conservan sus resultados y evidencias.
 
-**siguiente_accion:** Recibir el ajuste publicado y cotejar ese corte; compilar y ejecutar los diez casos con entradas EN/ES en debug y release; conservar comandos, salidas, retornos y huellas. Consulta histórica F01 y resolución completa F02 siguen pendientes. No repetir campañas recibidas.
+**siguiente_accion:** Identificar en la secuencia rectora la interfaz material de consulta por ocurrencia y de resolución por célula/Frame para F01/F02; si no está constituida, conservar el pendiente en esa sede. No atribuir consulta histórica a LIG ni crear un resolutor en el arnés para declarar cierre. No repetir bancos recibidos por cambios administrativos.
 
-**observaciones:** Revisión 24 instrumental: cero nuevos casos SV ejecutados. Fallo de +1.98.0 observado al compilar un auxiliar administrativo, no el banco; instalación directa verificada. Primeros descriptores rechazados y conservados; R08 sin modificación. Sin cambios del núcleo, IR, contratos, oráculos, workflows o RETP canónica; sin nuevas ramas ni directorios versionados. W-S26 estable. S26/Bis abiertos; S24 conserva su secuencia.
+**observaciones:** Alcance LIG/0.1 bajo anfitrión confiable. Sin garantía física de RAM, host independiente, identidad de adquisición, persistencia durable ni backend productivo. 25 advertencias de sv_core por perfil conservadas, sin cargo fix. Incidencias administrativas previas y corrección de invocación publicadas; ningún oráculo adaptado a resultados. Pruebas y registrador de ejecución en Rust; Python únicamente para revisión documental del Word, fuera de la campaña SV. RETP canónica, núcleo, IR, contratos y workflows sin modificar; sin nuevas ramas ni directorios versionados. W-S26 estable; S26/Bis abiertos, S24 pendiente.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 
@@ -989,4 +989,3 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **siguiente_accion:** Continuar S26 desde el ajuste de invocación precomprometido. No repetir evaluación ni regenerar el Word. Los PDF anteriores conservan figuras y alcance; la actualización PDF no es condición pendiente de S28.
 
 **observaciones:** S28 mantiene fecha de cierre de revisión 1; revisión 2 completa el depósito binario y la inspección visual. El Word no reproduce las páginas ni figuras históricas de los PDF. Renderizado documental Python/LibreOffice y metadatos de transferencia: uso inocuo limitado al formato, sin pruebas SV. Pruebas exclusivamente Rust. RETP canónica sin modificar; sin nuevas ramas ni directorios versionados; unidad estable W-S26.
-
