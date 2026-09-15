@@ -1,0 +1,116 @@
+Recepción del reparo R1 de leyenda
+Corte Peritus: 6d73c376ca9e6a0d462bdb4483d92cd6e453e285
+Sede: dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/
+Corte Lenguaje de entrada: a4505ae24208ceac8f209585798a10b3dc339e57
+Fecha UTC: 2026-09-15T20:18:57Z
+Directorio temporal de ejecución: /tmp/sv_recepcion_6d73
+Fuentes recuperados por archivo del corte, sin incorporar variantes locales.
+Identidad antes y después: 14/14 blobs Git concordantes.
+Cargo.toml	7cd3f8fa52e209bca102dd8d4fe2bc13d9ae870e
+Cargo.lock	2bef7e7bceaeb1d25ef031d679b0d4beca7f2afb
+src/atribucion.rs	ea2dadffcd44bd39fc4cae8fffbd845bacc49cfe
+src/diagnostico.rs	4a5a2b1f6042910de273dce1b5ddee30d4acd619
+src/lib.rs	791f8b7fec27d232efa6f7d696ffdd89157ac187
+src/main.rs	2926a28b109640b52ebe4be864954c4f572b5d96
+src/parametros.rs	aa858d58e60f91ac887e338fc88d68e18edc6a83
+src/plantillas.rs	ba679822ffeb7a6bea3467eb1c504dd8d6243db5
+src/png_lectura.rs	d2a4ca8602884885868b8d83001bf0230ba8a01c
+src/reconocimiento.rs	5671898598f2449be6da3a391399725769f26a36
+src/regiones.rs	c3c9216bded2a5e2348b403acc6c1a763c60e2ce
+src/residuo.rs	2484f8a0a4ceeb14771f2f950a9c3732874cd261
+src/sha256.rs	793d958bd4cc72dcbd42718bc38c046c522ae50b
+src/tanda.rs	e102b67522506ec8d38c2624825ffed5322d630f
+
+VERSIONES
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+binary: rustc
+commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+commit-date: 2026-08-18
+host: x86_64-unknown-linux-gnu
+release: 1.98.0
+LLVM version: 22.1.8
+cargo 1.98.0 (797e8a9bc 2026-08-05)
+
+ORDEN: PATH=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin:$PATH cargo test --locked --offline
+RC=0
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src/lib.rs (target/debug/deps/leyenda_contenido-e8a11635b2b567f8)
+
+running 18 tests
+test atribucion::pruebas::mayor_s_se_lleva_el_pixel_compartido ... ok
+test atribucion::pruebas::sin_solape_es_exclusiva ... ok
+test atribucion::pruebas::union_conserva_ambos_pixeles ... ok
+test atribucion::pruebas::empate_por_epsilon ... ok
+test parametros::pruebas::comprobar_rechaza_struct_manual ... ok
+test atribucion::pruebas::empate_en_las_seis_permutaciones ... ok
+test atribucion::pruebas::control_sin_empate_atribuye_al_mayor_s ... ok
+test parametros::pruebas::rechaza_duplicado ... ok
+test parametros::pruebas::rechaza_nan ... ok
+test reconocimiento::pruebas::filas_con_s_lejos_no_empatan ... ok
+test reconocimiento::pruebas::filas_distintas_mismo_x_empatan ... ok
+test tanda::pruebas::a_igual_s_prefiere_theta_mayor ... ok
+test tanda::pruebas::a_igual_s_theta_rho_prefiere_r_max_menor ... ok
+test tanda::pruebas::doce_y_trece_seis_empatan_distancia_si_theta_igual ... ok
+test tanda::pruebas::a_igual_s_y_theta_prefiere_rho_menor ... ok
+test tanda::pruebas::empate_residual_en_claves_c ... ok
+test tanda::pruebas::prefiere_s_proximo_a_128 ... ok
+test tanda::pruebas::n_min_no_desempata_claves_c ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/leyenda_contenido-a1bd5779985dfd99)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests leyenda_contenido
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+
+ORDEN: PATH=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin:$PATH cargo build --locked --offline --release
+RC=0
+   Compiling libm v0.2.16
+   Compiling simd-adler32 v0.3.10
+   Compiling crc32fast v1.5.2
+   Compiling adler2 v2.0.1
+   Compiling cfg-if v1.0.4
+   Compiling allocator-api2 v0.2.21
+   Compiling foldhash v0.1.5
+   Compiling equivalent v1.0.2
+   Compiling bitflags v1.3.2
+   Compiling miniz_oxide v0.9.1
+   Compiling fdeflate v0.3.7
+   Compiling miniz_oxide v0.8.9
+   Compiling hashbrown v0.15.5
+   Compiling flate2 v1.1.10
+   Compiling png v0.17.16
+   Compiling core_maths v0.1.1
+   Compiling ttf-parser v0.25.1
+   Compiling fontdue v0.9.4
+   Compiling leyenda_contenido v0.4.0 (/tmp/sv_recepcion_6d73)
+    Finished `release` profile [optimized] target(s) in 3.46s
+
+ORDEN: /workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc --edition=2021 /tmp/RECEPCION_LEYENDA_R1_CORREGIDO.rs --extern leyenda_contenido=/tmp/sv_recepcion_6d73/target/release/libleyenda_contenido.rlib -L dependency=/tmp/sv_recepcion_6d73/target/release/deps -o /tmp/RECEPCION_LEYENDA_R1_CORREGIDO
+RC=0; sin salida
+ORDEN: /tmp/RECEPCION_LEYENDA_R1_CORREGIDO
+RC=0
+contraejemplo_historico permutacion=1 resultado=Empate
+contraejemplo_historico permutacion=2 resultado=Empate
+contraejemplo_historico permutacion=3 resultado=Empate
+contraejemplo_historico permutacion=4 resultado=Empate
+contraejemplo_historico permutacion=5 resultado=Empate
+contraejemplo_historico permutacion=6 resultado=Empate
+control_sin_empate permutacion=1 ganador=0.95 union=3
+control_sin_empate permutacion=2 ganador=0.95 union=3
+control_sin_empate permutacion=3 ganador=0.95 union=3
+control_sin_empate permutacion=4 ganador=0.95 union=3
+control_sin_empate permutacion=5 ganador=0.95 union=3
+control_sin_empate permutacion=6 ganador=0.95 union=3
+conforme=12/12; alcance=funciones_publicas_con_mascaras_sinteticas
+
+Preparación: primer cargo test --locked --offline RC=101 por falta de fontdue en caché. cargo test --locked descargó las dependencias y acabó RC=0, 18 pruebas; las salidas completas anteriores corresponden a la repetición offline acreditada.
+Alcance: pruebas unitarias y funciones públicas con máscaras sintéticas. No se ejecutaron Q1/Q2, E1–E16, reconocer ni PNG históricos.

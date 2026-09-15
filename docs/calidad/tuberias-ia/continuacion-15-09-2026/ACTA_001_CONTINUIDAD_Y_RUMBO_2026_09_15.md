@@ -61,3 +61,20 @@ El estudio tiene sede canónica en el Lenguaje; los espejos históricos conserva
 El [parte de trabajo y alcance](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md) delimita la correspondencia de los flujos del SV con las obligaciones existentes de OP-CYB-001. Su seguimiento se registra como **S32, en ejecución**, con referencia RETP-2026-243.
 
 El análisis general está realizado; quedan la correspondencia por flujo, los contratos concretos y sus pruebas materiales. S32 desarrolla este alcance dentro de BIS-03 y no sustituye ni cierra S22 o S26. Conserva el objeto del universo 1, la secuencia vigente y las condiciones de habilitación. El parte establece la evidencia y el seguimiento de pendientes necesarios para cerrar su alcance documental.
+
+
+## 9. Referencias inequívocas en la continuación
+
+Los códigos locales se conservan. En nuevas actas, estados y relevos se escribe **ámbito, tipo de objeto y código**. Al introducir la referencia se identifica el documento de origen y su corte; dentro de una tabla cuyo encabezado ya fija ese ámbito puede utilizarse el código breve. Si varias revisiones repiten el código, se identifica también la revisión. Un código aislado no determina ni el objeto ni su estado de ejecución.
+
+| Referencia explícita | Objeto |
+|---|---|
+| Fase R4 del entorno soberano | Contraste adversarial de la realización integrada exacta. |
+| Contrato R2-0 de persistencia | Contrato de apertura de persistencia, continuidad y recuperación; se conserva el guion de su nombre. |
+| Reparo R1 de leyenda, Acta 002 §§15–16 | Empate entre máscaras solapadas independiente del orden. |
+| Reparo R4 de la revisión del parte de privacidad, S32 | Colisión de identificadores de aceptación y parámetros; no designa una fase del entorno. |
+| Parámetro P03 de OP-CYB-001 / caso P03 del estudio de privacidad | Objetos distintos aunque compartan código local. |
+
+La [transición rectora §§12.2, 13 y 16](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a4505ae24208ceac8f209585798a10b3dc339e57/docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md) ya separa fases y otras nomenclaturas. Su fila 14 sitúa la consolidación del núcleo antes de la reanudación material de R2. R4 somete a contraste el sistema integrado; no es el nombre de esa consolidación previa. La [referencia R2-0](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/a4505ae24208ceac8f209585798a10b3dc339e57/docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md) conserva su alcance contractual: las recepciones documentales posteriores no acreditan ejecución ni cierre material de R2, R3 o R4.
+
+La regla se aplica desde esta recepción. Se mantienen títulos, códigos, citas y numeración históricos. No se renombra el núcleo, se reabre R2-0 ni se cierra una fase por cerrar un reparo. Ante un código ambiguo se comprueba su documento de origen; no se resuelve la ambigüedad suponiendo el ámbito.

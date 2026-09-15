@@ -2332,3 +2332,17 @@ Rust/Cargo 1.98.0: cargo test --locked --offline, 16 pruebas RC=0; cargo build -
 [Recepción, alcance y siguiente paso](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#15-recepción-r1r4-y-objeción-de-atribución-reproducida). Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes.
 
 Fecha 2026-09-15T18:15:23Z. Corte del Lenguaje 514dc0b7583f0ea7f2f30739ccce13c3c9f51199; Peritus 1840c9a950bf046b0629fc2d476ff2fc1d8955c7. S32 y su parte conservados; no se modifica OP-CYB-001, el contrato /4, la retícula o los fuentes entregados.
+
+<a id="retp-245"></a>
+
+### RETP-2026-245 · S22 · Reparo R1 de leyenda y referencias inequívocas
+
+2026-09-15T20:18:57Z. Corte del Lenguaje a4505ae24208ceac8f209585798a10b3dc339e57; Peritus 6d73c376ca9e6a0d462bdb4483d92cd6e453e285.
+
+Subsanación del reparo R1 de leyenda recibida en 6d73c376: comparación de todos los pares solapados; 18 pruebas y compilación release repetidas; contraejemplo histórico y control sin empate conformes en sus seis permutaciones. Reconocedor no cualificado.
+
+Rust/Cargo 1.98.0; 14/14 blobs publicados intactos; cargo test --locked --offline: 18/18 RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: 12/12 comprobaciones. Sin Q1/Q2 ni E1–E16.
+
+[Recepción y evidencia](tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#recepcion-leyenda-r1-corregido). Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.
+
+[Acta 001 §9](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#9-referencias-inequívocas-en-la-continuación) precisa ámbito, tipo y código, con documento y corte de origen. Se conserva la nomenclatura histórica. La fase R4 del entorno es contraste integrado posterior a la consolidación nuclear y a R2/R3; los reparos R1–R4 de leyenda y privacidad no son esas fases. S32 y OP-CYB-001 sin cambios.

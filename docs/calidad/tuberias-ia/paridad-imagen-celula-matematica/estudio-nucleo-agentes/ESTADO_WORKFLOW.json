@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes.",
+  "siguiente_accion": "Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -55,7 +55,7 @@
   ],
   "ultimo_informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-244",
+  "ultimo_retp": "RETP-2026-245",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -407,5 +407,18 @@
     "q1_q2_ejecutados": false,
     "cierre_r1_aceptado": false,
     "siguiente_accion_anterior": "Recibir la subsanación de la revisión del reconocedor en 00a8a1ae; conservar objeciones abiertas y condiciones antes de Q1/Q2. Constituir por flujo los contratos de privacidad del estudio BIS-03 antes de congelar interfaces afectadas. Bis abierto; retorno rector según Acta 001."
+  },
+  "recepcion_reparo_leyenda_r1_corregido": {
+    "fecha_utc": "2026-09-15T20:18:57Z",
+    "corte": "6d73c376ca9e6a0d462bdb4483d92cd6e453e285",
+    "registro": "RETP-2026-245",
+    "informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#recepcion-leyenda-r1-corregido",
+    "pruebas_unitarias_repetidas": 18,
+    "build_release_rc": 0,
+    "comprobaciones_receptoras": 12,
+    "cierre_reparo_r1_aceptado": true,
+    "q1_q2_ejecutados": false,
+    "alcance": "Atribución con máscaras sintéticas; no es fase R1 del entorno ni cualificación del reconocedor.",
+    "nomenclatura": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#9-referencias-inequívocas-en-la-continuación"
   }
 }

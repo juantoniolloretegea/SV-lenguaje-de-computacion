@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T18:15:23Z
+**fecha_actualizacion_utc:** 2026-09-15T20:18:57Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromisos: Lenguaje c7d06a815979cecbcd9909ac053447667692efbd; laboratorio 8cc94133a59786dd18cf31aef735485c35d150dc. Recepción: Peritus 1840c9a950bf046b0629fc2d476ff2fc1d8955c7; fuentes fdc211fec991b062bc5cd8668536e0c6f7f6a76f; Lenguaje 514dc0b7583f0ea7f2f30739ccce13c3c9f51199.
+**cortes_de_entrada:** Peritus 6d73c376ca9e6a0d462bdb4483d92cd6e453e285; fuente 04b93005e05adc0eecdd4c361342897c907fa531; Lenguaje a4505ae24208ceac8f209585798a10b3dc339e57.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Entrega R1–R4 de 1840c9a9 recibida. Fuentes y dependencias completos: catorce blobs cotejados, 16 pruebas y compilación release repetidas. R1 no se cierra: contraejemplo de dependencia del orden con tres máscaras reproducido. R2–R4 recibidos en el alcance descrito en Acta 002 §15. Contrato candidato y reconocedor no cualificado.
+**resultado:** Subsanación del reparo R1 de leyenda recibida en 6d73c376: comparación de todos los pares solapados; 18 pruebas y compilación release repetidas; contraejemplo histórico y control sin empate conformes en sus seis permutaciones. Reconocedor no cualificado.
 
-**verificacion:** Rust/Cargo 1.98.0: cargo test --locked --offline, 16 pruebas RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: mismas máscaras devuelven Exclusiva o Empate según orden. Sin Q1/Q2 ni E1–E16.
+**verificacion:** Rust/Cargo 1.98.0; 14/14 blobs publicados intactos; cargo test --locked --offline: 18/18 RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: 12/12 comprobaciones. Sin Q1/Q2 ni E1–E16.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_1840_EVIDENCIAS.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_R1_ORDEN.rs
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#recepcion-leyenda-r1-corregido ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_LEYENDA_R1_CORREGIDO_EVIDENCIAS.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_LEYENDA_R1_CORREGIDO.rs
 
-**referencia_calidad:** Acta 002 §15; RETP-2026-244; privacidad en S32 / RETP-2026-243
+**referencia_calidad:** Acta 001 §9; Acta 002 §16; RETP-2026-245; privacidad S32 / RETP-2026-243
 
-**siguiente_accion:** Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes.
+**siguiente_accion:** Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.
 
-**observaciones:** Revisión 41. No se acepta el cierre global declarado de R1–R4. Es una prueba instrumental de la función pública, no un resultado sobre PNG históricos. S32 y su parte permanecen intactos, pendientes de la revisión comunicada. Bis abierto; GUI cancelada; sin renumeración, nuevas celdas o cambios de contrato. Espejos históricos conservan su corte.
+**observaciones:** Revisión 42. Reparo R1 de leyenda cerrado en alcance instrumental; no equivale a fase R1 del entorno. Regla de referencias en Acta 001 §9: ámbito, tipo y código con documento/corte. Historia y contratos conservados; S32 sin modificación, auditoría recibida pendiente de subsanación; Bis abierto y GUI cancelada.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

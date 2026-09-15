@@ -423,3 +423,22 @@ Después de recibir esa corrección, verificar disponibilidad e identidad del TT
 Permanecen sin acreditar la independencia del códec y la correspondencia de píxeles U+007C/fontdue frente a resvg. TTF exacto privado; E1 sin testigo; Q1/Q2 y E1–E16 no ejecutados. La cualificación no constituye por sí sola aceptación del método.
 
 **Estado:** S22 en ejecución; contrato candidato; reconocedor no cualificado; (p1+p3)-Bis abierto. S32 conserva su seguimiento de privacidad y seguridad; la revisión del parte comunicada por el usuario se recibirá separadamente cuando esté disponible. Sin cambios en OP-CYB-001, GUI o numeración de actas. Espejos históricos conservan sus cortes.
+
+
+<a id="recepcion-leyenda-r1-corregido"></a>
+
+## 16. Reparo R1 de leyenda: corrección del empate recibida
+
+Fecha: 2026-09-15T20:18:57Z. Corte del Lenguaje leído: `a4505ae24208ceac8f209585798a10b3dc339e57`. Rectores consultados: Pilares, perfiles y ensamblaje, transición IMM §§12–30, contrato R2-0 y Actas 001–002. La nomenclatura de esta recepción se rige por [Acta 001 §9](ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#9-referencias-inequívocas-en-la-continuación).
+
+**Corte recibido:** Peritus, rama dominio-inmunologia, `6d73c376ca9e6a0d462bdb4483d92cd6e453e285`; fuente de la corrección `04b93005e05adc0eecdd4c361342897c907fa531`. [Nota y alcance de origen](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6d73c376ca9e6a0d462bdb4483d92cd6e453e285/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/CORRECCION_R1_EMPATE_INDEPENDIENTE_DEL_ORDEN.md). La comparación desde 1840c9a9 contiene nueve archivos de la sede asignada: el único fuente modificado es src/atribucion.rs; los restantes son documentación y evidencias. /4, parámetros y retícula de 27 celdas se conservan.
+
+Se recuperaron los doce archivos Rust y Cargo.toml/Cargo.lock del corte recibido. Los catorce blobs coinciden con los publicados, también después de ejecutar. Rust/Cargo 1.98.0: `cargo test --locked --offline`, **18 pruebas, retorno 0**; `cargo build --locked --offline --release`, **retorno 0**. La preparación inicial sin caché no pudo resolver fontdue; una descarga posterior con Cargo --locked completó las dependencias. Las órdenes acreditadas se repitieron después sobre los bytes publicados.
+
+Además se enlazó un [conductor Rust receptor](RECEPCION_LEYENDA_R1_CORREGIDO.rs) con la biblioteca compilada, sin modificarla. El contraejemplo histórico de §15 (S = 0,95; 0,80; 0,79, epsilon = 0,02) devuelve Empate en las seis permutaciones, y mapa_exclusivo rechaza las seis. En el control sin empate (0,70; 0,95; 0,80, epsilon = 0,05), las seis permutaciones atribuyen el píxel común a S = 0,95 y conservan la unión geométrica de tres píxeles. **Doce comprobaciones receptoras conformes.** [Órdenes, identidad y salidas](RECEPCION_LEYENDA_R1_CORREGIDO_EVIDENCIAS.txt).
+
+**Se acepta la subsanación del reparo R1 de leyenda en este alcance.** La rutina reúne las puntuaciones de todas las máscaras que cubren cada píxel y comprueba todos los pares; el ganador provisional ya no puede ocultar otro par empatado. Los resultados anteriores se conservan como antecedente del defecto, no como estado vigente. No se extiende esta recepción a PNG históricos, recursos globales o nuevas garantías de los demás reparos.
+
+**Siguiente acción:** verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia para preparar la cualificación conjunta sobre las 27 celdas congeladas. Permanecen sin acreditar la independencia del códec y la correspondencia geométrica U+007C/fontdue frente a resvg; E1 sin testigo. Un empate residual entre celdas según §C sigue siendo fracaso: n_min no desempata.
+
+Q1/Q2 y E1–E16 no se ejecutaron. Contrato candidato, reconocedor no cualificado, S22 y Bis en ejecución. S32 y la revisión de su parte conservan su seguimiento separado; no se resuelven aquí sus reparos. GUI cancelada; sin cambios en OP-CYB-001, fases del entorno, contratos congelados ni numeración histórica. Referencia: RETP-2026-245.
