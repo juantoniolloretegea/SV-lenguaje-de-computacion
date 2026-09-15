@@ -1,5 +1,11 @@
 # Léame primero: del frame a la colaboración auditable
 
+## S31 · Corrección acotada y trazabilidad · 15/09/2026
+
+[Parte de trabajo S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md), registrado en estado pendiente antes de iniciar la intervención. Alcance: precisión de recuentos del mapa, identidad previa al uso, intento de recuperación de dos archivos fijados y diferenciación documental de lotes públicos y reserva P3. Se conservarán los antecedentes y se añadirá un cierre por unidad con evidencias y limitaciones. Sin renumeración, cambios de presentación, apertura de reservas ni nuevas campañas. S22 y S26 conservan su estado; el relevo previsto es la subsanación del contrato candidato de leyenda R06.
+
+---
+
 ## Recepción de leyenda R06 · 15/09/2026 · S22
 
 [Acta 002: cotejo de identidad y contrato candidato](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). Se recibe la ejecución auxiliar 02 como evidencia declarada y se coteja en Rust la huella del fuente depositado. LEYENDA-CONTENIDO/2 incorpora residuo y evaluación reservada, pero conserva reparos sobre tolerancias, separadores y comprobación del fondo. No hay reconocedor implementado ni campaña nueva de lectura de leyenda. S22 y S26 siguen en ejecución. El rumbo del Acta 001 se conserva.

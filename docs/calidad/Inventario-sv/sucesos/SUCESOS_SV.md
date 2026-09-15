@@ -1056,3 +1056,38 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta documental posterior a la preparación, sin atribuir una hora de inicio retrospectiva. Cero nuevas campañas SV y ninguna implementación de GUI, rutas o Qwen. La autorización de ramas será indicada posteriormente por el autor. RETP anteriores sin renumeración. Las copias anteriores conservan su corte; esta recepción corresponde a la sede canónica del Lenguaje.
 
+
+## S31 · Corrección acotada de recuentos, identidad y condiciones de reproducibilidad
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-15T07:50:03Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-15T07:50:03Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S26-02
+
+**alcance:** C01: precisión de recuentos y acceso del mapa; C02: identidad previa al uso; C03: intento de recuperación de dos archivos fijados; C04: diferenciación documental de lotes públicos y reserva P3; C05: cierre trazable. Sin ampliación de campañas, renumeración o modificación de reservas.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main, registro canónico y parte de trabajo; SV-matematica-semantica-cuaternaria: lectura de procedencia en corte histórico.
+
+**cortes_de_entrada:** Lenguaje 465e3dfb18b8b0775a3ee2ffffda423acfef851b; laboratorio 86441ad4d375e31737dfcead0b1fd9cd52161883; mapa blob 24e25dbf1255ddf25d5f1e7eefa8d89d4b12ed3e.
+
+**dependencias:** Continuidad S30 y Acta 001; contrato candidato R06 recibido en S22 y Acta 002. La reserva P3 permanece cerrada.
+
+**resultado:** Alta del parte de trabajo antes de su ejecución. C01–C05 pendientes. Los cotejos preliminares se conservan como antecedentes.
+
+**verificacion:** Alta, unicidad del identificador, concordancia CSV/Markdown e historial y preservación de los registros anteriores comprobadas en Rust 1.98.0. No se acredita ejecución de C01–C04.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/465e3dfb18b8b0775a3ee2ffffda423acfef851b/docs/calidad/tuberias-ia/continuacion-15-09-2026/mapa/MAPA.html
+
+**referencia_calidad:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md
+
+**siguiente_accion:** Registrar el inicio efectivo en S31 y ejecutar C01–C04 dentro del parte; añadir cierre por unidad y revisión final sin repetir actuaciones concluidas.
+
+**observaciones:** La finalización del intento acotado no acredita recuperación de archivos inaccesibles ni compatibilidad integral P3. Sin renumeración, nuevas ramas, cambio de rumbo o cierre de S22/S26. El alta corresponde al registro canónico; las copias históricas conservan su corte.
+
