@@ -143,3 +143,38 @@ Se requiere únicamente una adenda documental vinculada a /4, con prioridad expr
 La siguiente entrega se limita a dos archivos nuevos en el mismo directorio autorizado: `ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md` y `MANIFIESTO_ADENDA_ENTREGA_04.tsv`. El manifiesto consignará tamaño y huella de la adenda y referencias completas a las evidencias ya depositadas; no necesita incluir su propia huella. Se conservarán los catorce archivos existentes. Toda herramienta nueva que efectivamente se utilice deberá quedar conservada en sede autorizada; no se necesita crear una herramienta para esta adenda.
 
 S22 permanece en ejecución y el contrato candidato. Esta recepción no modifica S26, S31, RETP, HTML, reservas ni la numeración de actas. No autoriza implementación, síntesis de plantillas, campañas, ajuste de parámetros ni materialización de E1. Solo una discrepancia material nueva, sustentada con evidencia, justifica ampliar este alcance.
+
+## 8. Control de continuidad documental · 15 de septiembre de 2026
+
+**Corte examinado:** Lenguaje `146cb30e3cece036947081453d7e0982ca03a1cb`. **Objeto:** conservación de la sede de continuación y su enlace con el registro vigente. Rigen AGENTS.md en su alcance aplicable, las reglas de Sucesos SV, S29, el Acta 001 y las recepciones anteriores de esta acta. No se interviene en código productivo, contratos de dominio, semántica ni IR.
+
+### 8.1. Comprobaciones efectuadas
+
+Control auxiliar escrito y ejecutado en Rust 1.98.0, sin dependencias externas:
+
+- **21 identidades concordantes:** los 17 archivos de la sede de continuación, incluido el HTML, y los cuatro documentos de registro y continuidad relacionados. Tamaño, blob Git y SHA-256 observados constan en la salida. No se detecta una ausencia o alteración respecto de ese corte.
+- **32 sucesos y 125 instantáneas:** serie S0–S31 sin identificadores duplicados ni saltos; revisiones consecutivas por suceso; cada fila vigente coincide íntegramente con su última instantánea; campos del Markdown concordantes con el CSV.
+- **92 enlaces Markdown relativos:** destinos existentes en el árbol del corte. Se decodifican los caracteres escapados de las rutas. No se comprueban las anclas de sección. Los 17 enlaces externos encontrados no se descargaron en este control.
+- **Cinco fuentes históricas de cotejo:** Rust con `forbid(unsafe_code)`, módulos de apoyo incluidos y sin invocaciones de subprocesos en el código revisado. Los tres cotejos de contenedores utilizan flate2 según lo declarado; su presencia no es una dependencia oculta. No se ejecutan programas Python del material custodiado.
+
+Estas comprobaciones no son una auditoría de todos los repositorios, de todas las herramientas pasadas ni de la disponibilidad futura de los servicios. No se presume sincronización de las copias históricas del laboratorio.
+
+### 8.2. Mejoras documentales
+
+El índice inicial enlazaba únicamente el Acta 001 y el mapa. Se incorporan accesos al Acta 002, al parte S31, a los registros y a cada fuente y salida conservadas. Se añade una remisión en el Acta 001 a la recuperación posterior de sus dos archivos pendientes y se destaca el estado vigente en el Léame, conservando las anotaciones históricas.
+
+Se precisa el alcance de los registros de ejecución: los resúmenes de resultados o comandos parametrizados no se consideran transcripciones literales completas. En particular, la recepción del ZIP S6 conserva una orden con marcadores de biblioteca y dependencias; el complemento de contenido conserva resultados y retornos, con instrucciones de reproducción en el parte. No se inventan invocaciones históricas para completar esas piezas.
+
+No se ha identificado texto nuevo que amplíe una cualificación material o autorice una campaña. Los errores y limitaciones propios de las herramientas de asistencia no se incorporan como sucesos del proyecto. Se documentan las propiedades observables de las evidencias y sus límites.
+
+### 8.3. Evidencia del control
+
+- [Fuente](CONTROL_CONTINUIDAD.rs): 12121 bytes; SHA-256 `dfbf33b4e02539854efb41cf4ddaf45f3084cd971450f6346b19df466b417c97`.
+- [Entradas](ENTRADAS_CONTROL_CONTINUIDAD.tsv): 3777 bytes; SHA-256 `1bab8d56cbbaf298358adf11c4f1ad1e72d00635c5bea45ee3eb194ec39f58bb`.
+- [Comandos y salida](CONTROL_CONTINUIDAD_SALIDA.txt): 5720 bytes; SHA-256 `d94de0b2353263a6e93dbf3066f88bf12f78068167c431c82bb046875912430a`.
+
+La primera columna del manifiesto describe rutas de ejecución, no sedes de custodia. La segunda identifica la ruta canónica dentro del corte citado; junto al tamaño y al blob permite recuperar la entrada aunque desaparezca la copia local. Las instrucciones de reproducción figuran en el [índice](inicio.md). No se publica contenido reservado.
+
+### 8.4. Continuidad
+
+Control documental concluido en su alcance. Se añade una instantánea de S22; S22 y S26 permanecen en ejecución, S31 finalizado. La adenda limitada de §7 sigue siendo el siguiente paso. No se renumeran actas, se borran antecedentes ni se modifican el HTML, las reservas o el código productivo. Las nuevas verificaciones se realizan en Rust; un uso excepcional de Python debe ser inocuo y estar justificado antes de ejecutarse.

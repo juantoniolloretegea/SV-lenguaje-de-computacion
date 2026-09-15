@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T09:29:30Z
+**fecha_actualizacion_utc:** 2026-09-15T09:57:02Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Recepción documental de LEYENDA-CONTENIDO/4 en depósito ea4982398a42eba362f7bc7e9e00f5268f3058c9. Cinco identidades concordantes y nueve antecedentes intactos. LC2-03 subsanado documentalmente; LC2-02 conservado. Definiciones y fórmulas de LC2-01 subsanadas; precisión pendiente de E2c respecto de B.6.2. Contrato candidato; Bis abierto.
+**resultado:** Recepción de LEYENDA-CONTENIDO/4 conservada; adenda acotada pendiente. Control documental de continuidad concluido: 21 identidades concordantes, 32 sucesos y 125 instantáneas consistentes, 92 rutas relativas existentes. Índice y remisiones actualizados; fuentes y salidas recuperables. Contrato candidato; Bis abierto.
 
-**verificacion:** Rust 1.98.0: cinco tamaños, blobs y SHA-256 concordantes; retorno 0. Comparación de cortes limitada a cinco incorporaciones. Revisión documental de máscaras, residuo, fondo y precedencia. Registro emisor con comando abreviado y cálculo de huellas sin comparación automática. Fuente y salida receptores conservados. Sin ensayo material del reconocedor.
+**verificacion:** Rust 1.98.0, retorno 0. Serie de sucesos e historial consecutivos, CSV y Markdown concordantes. Cinco fuentes Rust revisadas; no se ejecutó Python. Alcance de enlaces limitado a rutas relativas Markdown; anclas y 17 destinos externos no verificados. Control referido al corte 146cb30e3cece036947081453d7e0982ca03a1cb.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_4.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ENTREGA_04.tsv ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_04.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_04_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/146cb30e3cece036947081453d7e0982ca03a1cb/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_CONTINUIDAD.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_CONTINUIDAD_SALIDA.txt ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ENTRADAS_CONTROL_CONTINUIDAD.tsv
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
 **siguiente_accion:** Depositar exclusivamente ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md y MANIFIESTO_ADENDA_ENTREGA_04.tsv en la misma sede: concordar E2c con todas las causas de B.6, calificar el comando abreviado sin reconstrucción histórica y completar referencias de custodia. Conservar los catorce archivos. Sin contrato /5, implementación, cualificación ni campañas.
 
-**observaciones:** Recepción añadida en Acta 002 §7, conservando el texto anterior. Evidencia descargada del corte fijado; no se cotejan adjuntos ausentes. S22/S26 en ejecución; S31 conserva su cierre. Sin renumeración ni publicación de material reservado.
+**observaciones:** Índice de acceso y estado vigente incorporados, conservando antecedentes y numeración. Registros históricos resumidos distinguidos de transcripciones literales. S31 conserva su cierre; S26 intacto. Sin nueva campaña, cualificación, uso de Python ni publicación de contenidos reservados.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

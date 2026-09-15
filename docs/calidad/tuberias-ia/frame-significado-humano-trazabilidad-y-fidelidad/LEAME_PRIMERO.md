@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Consulta vigente — control de continuidad del 15/09/2026.** El [índice de la sede](../continuacion-15-09-2026/inicio.md) reúne actas, registros, fuentes y salidas. S31 está finalizado y ambos archivos pendientes de su apertura, PNG y ZIP S6, fueron recuperados; véanse sus recepciones posteriores. S22/S26 continúan en ejecución. La adenda acotada de LEYENDA-CONTENIDO/4 sigue pendiente conforme al Acta 002 §7; el §8 recoge el control de conservación y concordancia. Las entradas que siguen son anotaciones cronológicas: las menciones antiguas a recuperación pendiente describen aquellos cortes. Para actuar rigen el registro vigente y la última recepción aplicable.
+
+
 **Actualización de recepción, 15 de septiembre de 2026 — LEYENDA-CONTENIDO/4.** Cinco archivos del depósito `ea4982398a42eba362f7bc7e9e00f5268f3058c9` recuperados y cotejados; nueve antecedentes intactos. LC2-03 subsanado documentalmente; LC2-02 conservado; las definiciones y fórmulas de LC2-01 quedan corregidas, con precisión pendiente en E2c respecto de B.6.2. Véase [Acta 002 §7](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#7-recepción-de-leyenda-contenido4--15-de-septiembre-de-2026). Siguiente paso: una adenda y su manifiesto en la sede autorizada; precisar E2c, alcance del registro de ejecución y referencias completas de custodia. Contrato candidato; S22 continúa en ejecución. Se conservan los límites anteriores de implementación y campañas.
 
 

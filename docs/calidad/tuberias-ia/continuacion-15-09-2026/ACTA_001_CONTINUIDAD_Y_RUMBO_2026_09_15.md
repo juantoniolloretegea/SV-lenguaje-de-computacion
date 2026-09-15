@@ -38,3 +38,9 @@ Queda pendiente evaluar si la lógica y las dependencias del recorrido requieren
 Las pruebas siguen siendo Rust. Bis y S26 mantienen sus pendientes. La autorización de ramas será indicada por el autor posteriormente; esta acta no añade una política de ramas ni promueve una candidata experimental.
 
 **Resultado documental:** mapa recibido y rumbo actualizado. **Siguiente acción:** continuar desde esta sede, aplicando el criterio de dependencias del apartado 2 y conservando la revisión reforzada anterior al retorno indicado. Las decisiones sobre rutas y Qwen se resolverán en su etapa correspondiente.
+
+## 6. Actualización de remisiones · 15 de septiembre de 2026
+
+Las dos lecturas pendientes mencionadas en §2 fueron recuperadas posteriormente: PNG y ZIP S6. Sus identidades, alcance de comprobación y condición de custodia constan en el [parte S31 y sus recepciones posteriores](PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Esa recuperación no cierra F01/F02, no habilita P3 ni acredita el significado de la leyenda.
+
+La continuación vigente del contrato de leyenda se consulta en el [Acta 002, §7](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). El [índice de esta sede](inicio.md) reúne los registros, las fuentes y sus salidas. Permanecen las dependencias y el rumbo de las secciones anteriores.
