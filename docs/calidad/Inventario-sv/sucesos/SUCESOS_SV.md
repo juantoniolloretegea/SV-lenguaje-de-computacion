@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T12:08:43Z
+**fecha_actualizacion_utc:** 2026-09-15T12:24:29Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Seguimiento del corte 29a3c5517bac13511421c6a6470e9e0ceac3db24: solo main.rs incorporado y lib.rs modificado. Depósito aún incompleto. Originales, variantes, retícula, módulos y correcciones restantes declarados localmente, pendientes de depósito y revisión.
+**resultado:** Corte 0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797 recibido: veinticinco archivos, diez fuentes Rust presentes. Ausencia de fuentes de trabajo resuelta. Custodia de originales, variantes y manifiesto corregido pendiente.
 
-**verificacion:** Comparación GitHub entre 5e3c29bf y 29a3c551 y árbol recursivo no truncado. Dos cambios; los otros dieciséis archivos de la realización mantienen sus blobs. Lectura de metadatos; no nuevas huellas calculadas ni ejecución del reconocedor.
+**verificacion:** Cotejo Rust 1.98.0: veinticinco tamaños y blobs concordantes, SHA-256 calculadas. Cargo build --locked --release sobre descarga cotejada terminó RC=101 al descargar fdeflate 0.3.7 (cero bytes en quince segundos). Compilación no acreditada; no diagnóstico de fallo del código.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/compare/5e3c29bf85fd49ba44c43c894132217f7c585f2d...29a3c5517bac13511421c6a6470e9e0ceac3db24
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/tree/0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/ ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COMPILACION_RECEPTORA_0E36549F.txt
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Terminar el depósito completo ya autorizado, incluidos originales y evidencias; compilar desde una descarga limpia del corte completo y conservar la ejecución. Revisar las soluciones de §10.2 antes de Q1/Q2. Acta 002 §11.
+**siguiente_accion:** Depositar ZIP/originales, variantes y manifiesto corregido en la sede asignada; completar compilación limpia del corte exacto con las dependencias fijadas. Revisar §10.2 antes de Q1/Q2. Acta 002 §12.
 
-**observaciones:** S22 en ejecución; S26 y S31 intactos. No se recibe la corrección local como verificada ni se presume custodia remota de archivos ausentes. La revisión anterior y sus evidencias se conservan. Sin Python, Q1/Q2, GUI ni renumeración.
+**observaciones:** S22 en ejecución; S26 y S31 intactos. Diez fuentes ya presentes; no repetir el diagnóstico de módulos ausentes para este corte. ZIP solo declarado, no recibido. Sin Python, Q1/Q2, E1–E16, nuevas sedes o renumeración.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

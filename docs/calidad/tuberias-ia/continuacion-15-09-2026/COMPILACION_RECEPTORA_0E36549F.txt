@@ -1,0 +1,12 @@
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+cargo 1.98.0 (797e8a9bc 2026-08-05)
+CORTE=0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797
+CMD=cargo build --locked --release
+CARGO_HTTP_TIMEOUT=15; CARGO_NET_RETRY=0
+    Updating crates.io index
+ Downloading crates ...
+error: failed to download from `https://static.crates.io/crates/fdeflate/0.3.7/download`
+
+Caused by:
+  transfer too slow: failed to transfer more than 10 bytes in 15s (transferred 0 bytes)
+RC_BUILD=101

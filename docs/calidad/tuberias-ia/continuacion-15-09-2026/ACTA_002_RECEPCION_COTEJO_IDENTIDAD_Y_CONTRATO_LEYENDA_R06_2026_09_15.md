@@ -321,3 +321,45 @@ A continuación, recuperar el corte completo en un directorio limpio, compilar c
 La retícula de 27 celdas, su justificación, su orden y su parada deben quedar depositados antes de Q1/Q2. El criterio de éxito debe distinguir ajuste de parámetros y cualificación; detenerse al primer éxito de ajuste no acredita por sí solo la cualificación. Las convenciones de implementación se revisarán contra el contrato y los insumos exactos, sin ampliar el perfil ni sustituir la fuente reservada.
 
 **Q1/Q2 y E1–E16 permanecen sin ejecutar en esta recepción.** S22 continúa en ejecución; S26 y S31 conservan su estado. El presente apartado no ejecuta Python, compilaciones ni ensayos del reconocedor. No modifica el rumbo, la GUI ni la numeración de actas.
+
+## 12. Recepción del código depositado en 0e36549f
+
+Fecha: 2026-09-15. **Ausencia de fuentes de trabajo: resuelta en el corte examinado. Compilación reproducible y custodia histórica: pendientes.**
+
+Se recuperaron los veinticinco archivos del [directorio fijado](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/) en un directorio receptor nuevo. El cotejo Rust 1.98.0 confirma tamaño y blob Git de los veinticinco y calcula sus SHA-256. Están los diez archivos Rust de `src/`, incluidos los módulos anteriormente ausentes. La comparación desde `5e3c29bf85fd49ba44c43c894132217f7c585f2d` contiene ocho incorporaciones y cinco modificaciones, todas en esta realización. No se ha modificado el código de origen.
+
+### 12.1. Intento de compilación desde el depósito
+
+Se ejecutó `cargo build --locked --release` con Rust y Cargo 1.98.0 sobre las copias recuperadas y cotejadas. Cargo alcanzó la descarga de dependencias y terminó con retorno 101 al intentar obtener `fdeflate 0.3.7` de crates.io: transferencia de cero bytes durante el intervalo de quince segundos configurado, sin reintentos.
+
+**No se acredita compilación satisfactoria ni se atribuye un defecto de compilación a los fuentes.** El impedimento observado corresponde a la obtención de una dependencia. No se sustituyeron versiones ni se modificó Cargo.lock para sortearlo. La compilación limpia sigue pendiente; puede completarse en un entorno con acceso a las dependencias exactas, identificando el corte compilado y conservando su ejecución.
+
+### 12.2. Custodia aún pendiente
+
+El árbol recursivo no truncado no contiene el ZIP `realizacion-leyenda-01-completo-2026-09-15.zip`, los directorios de originales históricos y variantes, ni `MANIFIESTO_CORREGIDO.tsv` o `evidencias/COMPILACION_LIMPIA.txt`. El índice de origen los menciona, pero esa mención no acredita su depósito.
+
+Del ZIP solo se recibe la declaración de 40.888 bytes y SHA-256 `e7d04f9afdd3da95cae921cf860d7902c2b9e016160c15aa190d51796325fb81`; no se ha recibido su contenido ni un enlace de descarga. Por ello no se coteja su identidad ni se atribuye recepción a sus originales históricos. Debe depositarse en la sede ya asignada junto con el manifiesto corregido, o proporcionarse el paquete efectivo para completar esa transferencia.
+
+El `MANIFIESTO.tsv` anterior permanece conservado como documento histórico. Las entradas y la salida receptoras de §12.3 identifican los veinticinco archivos actuales; no sustituyen el inventario pendiente de los originales históricos.
+
+### 12.3. Evidencia reproducible
+
+- [Fuente Rust del cotejo de identidad](COTEJO_RECEPCION_0E36549F.rs).
+- [Entradas fijadas contra el árbol remoto](ENTRADAS_RECEPCION_0E36549F.tsv).
+- [Salida completa: tamaños, blobs y SHA-256](COTEJO_RECEPCION_0E36549F_SALIDA.txt).
+- [Registro del intento de compilación](COMPILACION_RECEPTORA_0E36549F.txt).
+
+Cotejo ejecutado con estas órdenes; ambos procesos finalizaron con retorno cero:
+
+```text
+continuacion-auditoria/rust/bin/rustc --edition=2021 /tmp/COTEJO_RECEPCION_0E36549F.rs -o /tmp/cotejo_0e36549f
+/tmp/cotejo_0e36549f /tmp/sv_leyenda_0e36549f /tmp/ENTRADAS_RECEPCION_0E36549F.tsv
+```
+
+Para reproducirlo, recuperar los archivos enumerados en el TSV del corte fijado conservando sus rutas relativas y bytes, compilar el fuente y pasar el directorio y el TSV como argumentos. Se reutilizan las funciones históricas de identidad; no se afirma una validación criptográfica independiente.
+
+### 12.4. Estado y siguiente paso
+
+Terminar la custodia del ZIP/originales, variantes y manifiesto; aportar compilación limpia del corte exacto con dependencias fijadas. Después corresponde revisar las soluciones de §10.2 antes de cualquier cualificación. La presencia del protocolo de 27 celdas no constituye su aprobación ni autoriza ensayarlo.
+
+S22 permanece en ejecución. S26 y S31 conservan su estado. El contrato sigue candidato. No se ejecutaron Python, Q1/Q2, E1–E16 ni el reconocedor. No se abren otras carpetas o ramas de trabajo ni se modifica el punto de retorno.

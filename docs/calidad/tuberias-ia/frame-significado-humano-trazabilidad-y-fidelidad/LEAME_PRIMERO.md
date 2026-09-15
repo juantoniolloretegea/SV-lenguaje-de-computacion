@@ -1,5 +1,7 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Recepción actualizada:** corte `0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797`, veinticinco archivos cotejados y diez fuentes presentes. Compilación bloqueada al descargar una dependencia; originales/ZIP aún pendientes de recepción. Véase [Acta 002 §12](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#12-recepción-del-código-depositado-en-0e36549f).
+
 > **Seguimiento de depósito:** el corte `29a3c5517bac13511421c6a6470e9e0ceac3db24` incorpora únicamente `main.rs` y modifica `lib.rs`. La entrega continúa incompleta. Véase [Acta 002 §11](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#11-seguimiento-de-publicación-parcial-corte-29a3c551). Las correcciones locales pendientes de depósito no están recibidas como verificadas.
 
 > **Recepción material más reciente:** realizacion-leyenda-01, corte `5e3c29bf85fd49ba44c43c894132217f7c585f2d`: entrega incompleta (tres fuentes ausentes y dos discrepancias). Véase [Acta 002, apartado 10](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#10-recepción-de-realización-leyenda-01-entrega-incompleta). Q1/Q2 permanecen sin ejecutar; S22 continúa en ejecución.
