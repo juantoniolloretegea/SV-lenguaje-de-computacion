@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Actualización de recepción, 15 de septiembre de 2026 — LEYENDA-CONTENIDO/4.** Cinco archivos del depósito `ea4982398a42eba362f7bc7e9e00f5268f3058c9` recuperados y cotejados; nueve antecedentes intactos. LC2-03 subsanado documentalmente; LC2-02 conservado; las definiciones y fórmulas de LC2-01 quedan corregidas, con precisión pendiente en E2c respecto de B.6.2. Véase [Acta 002 §7](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#7-recepción-de-leyenda-contenido4--15-de-septiembre-de-2026). Siguiente paso: una adenda y su manifiesto en la sede autorizada; precisar E2c, alcance del registro de ejecución y referencias completas de custodia. Contrato candidato; S22 continúa en ejecución. Se conservan los límites anteriores de implementación y campañas.
+
+
 > **Recepción LEYENDA-CONTENIDO/3 · S22 · 15/09/2026.** Identidad de los dos adjuntos comprobada; depósito limitado a dos incorporaciones. LC2-02 subsanado en alcance documental. LC2-01 y LC2-03 siguen pendientes, junto con la autonomía de fórmulas y tabla de independencia. Véase [Acta 002, recepción /3](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). No se habilita implementación ni campañas.
 
 

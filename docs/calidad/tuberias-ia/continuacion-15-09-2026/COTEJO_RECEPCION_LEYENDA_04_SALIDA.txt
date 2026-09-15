@@ -1,0 +1,22 @@
+Cotejo receptor de LEYENDA-CONTENIDO/4. Evidencia de identidad documental.
+Entrada: SVperitus-dataset@ea4982398a42eba362f7bc7e9e00f5268f3058c9.
+No acredita la ejecución histórica declarada por el emisor.
+CMD=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc -Vv
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+binary: rustc
+commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+commit-date: 2026-08-18
+host: x86_64-unknown-linux-gnu
+release: 1.98.0
+LLVM version: 22.1.8
+RC_VERSION=0
+CMD=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc --edition=2021 /tmp/COTEJO_RECEPCION_LEYENDA_04.rs -o /tmp/cotejo_recepcion_leyenda_04
+RC_COMPILE=0
+CMD=/tmp/cotejo_recepcion_leyenda_04 /tmp /tmp/COTEJO_RECEPCION_LEYENDA_04.rs
+CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_4.md	bytes=12404	blob=519bb717b5362b900f275d0aad151a7b67bc9b2e	sha256=a5026829c381c2e0b47c89e78310887677fd79b8089fffcd78df10bc11e9b03d	CONFORME_IDENTIDAD
+SUBSANACION_ENTREGA_04.md	bytes=3422	blob=718799889b7a1aeff6510b73a0fa03ed025f082f	sha256=a5543add6e674dcc5e1f129e38d4141769a48b64c38ac98ce8c13fdd0e45bcb1	CONFORME_IDENTIDAD
+COTEJO_ENTREGA_04.rs	bytes=4274	blob=879e044649cbad9d0b06dca87967e00c0e41ea3e	sha256=7bc2345df02b992bd16b24a522f001d70be166959f3986a1b5392dc6916e72df	CONFORME_IDENTIDAD
+COTEJO_ENTREGA_04_SALIDA.txt	bytes=1096	blob=27293f4e778ade4b0583dc1b59c52cd64b2946f5	sha256=67e379d09c31bcb99409592c9ad8e7434268e40d6687d51aa524551e853abc40	CONFORME_IDENTIDAD
+MANIFIESTO_ENTREGA_04.tsv	bytes=1537	blob=8c2302d032d0d460e091a70b09751d9e7c197f8b	sha256=dab91aaf18e8885ce86f0a8ffe12b78c389f52bb12ca0d089bfddb130ba230be	CONFORME_IDENTIDAD
+FUENTE_RECEPTOR	bytes=8744	blob=cb407ef23319fcd75508d2fdc11cfebcad7ea45f	sha256=1e23c6d8e2585f889cd6d58544a071cc936593bda55141ef98bf35ee49700735
+RC_RUN=0

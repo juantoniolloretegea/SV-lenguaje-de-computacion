@@ -93,3 +93,53 @@ LEYENDA-CONTENIDO/3 permanece candidata, sin autorización de implementación. L
 Las entregas posteriores deberán conservar en una sede expresamente autorizada el texto íntegro, el código auxiliar realmente utilizado, las versiones y comandos, las salidas completas y un manifiesto de tamaños, huellas y procedencia. Los resultados históricos irrecuperables no se reconstruyen ni se presentan como originales. Los contenidos reservados mantienen su custodia privada; una referencia a una sede temporal no constituye conservación verificable.
 
 Esta recepción actualiza S22 y su historial, así como el Léame primero. No altera S31, RETP, HTML, reservas, código productivo ni el rumbo vigente.
+
+## 7. Recepción de LEYENDA-CONTENIDO/4 · 15 de septiembre de 2026
+
+**Corte receptor:** Lenguaje `4ab5c0f3b13cecaaf7eba45298d9aa5f1a709dba`. **Depósito examinado:** `SVperitus-dataset@ea4982398a42eba362f7bc7e9e00f5268f3058c9`, antecedente `b73c2b28f6a8899b2024eb3f9dee975bc8037016`. Esta recepción conserva íntegramente las secciones anteriores.
+
+### 7.1. Recepción e identidad
+
+Se recuperaron del corte fijado las cinco piezas siguientes. Sus bytes se cotejaron en Rust 1.98.0 con tamaños y blobs del directorio remoto y con las cuatro huellas comunicadas. La huella del manifiesto es una observación de esta recepción.
+
+| Archivo | Bytes | Blob Git | SHA-256 |
+|---|---:|---|---|
+| [CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_4.md](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_4.md) | 12404 | `519bb717b5362b900f275d0aad151a7b67bc9b2e` | `a5026829c381c2e0b47c89e78310887677fd79b8089fffcd78df10bc11e9b03d` |
+| [SUBSANACION_ENTREGA_04.md](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/SUBSANACION_ENTREGA_04.md) | 3422 | `718799889b7a1aeff6510b73a0fa03ed025f082f` | `a5543add6e674dcc5e1f129e38d4141769a48b64c38ac98ce8c13fdd0e45bcb1` |
+| [COTEJO_ENTREGA_04.rs](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/COTEJO_ENTREGA_04.rs) | 4274 | `879e044649cbad9d0b06dca87967e00c0e41ea3e` | `7bc2345df02b992bd16b24a522f001d70be166959f3986a1b5392dc6916e72df` |
+| [COTEJO_ENTREGA_04_SALIDA.txt](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/COTEJO_ENTREGA_04_SALIDA.txt) | 1096 | `27293f4e778ade4b0583dc1b59c52cd64b2946f5` | `67e379d09c31bcb99409592c9ad8e7434268e40d6687d51aa524551e853abc40` |
+| [MANIFIESTO_ENTREGA_04.tsv](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ENTREGA_04.tsv) | 1537 | `8c2302d032d0d460e091a70b09751d9e7c197f8b` | `dab91aaf18e8885ce86f0a8ffe12b78c389f52bb12ca0d089bfddb130ba230be` |
+
+La [comparación completa de cortes](https://github.com/juantoniolloretegea/SVperitus-dataset/compare/b73c2b28f6a8899b2024eb3f9dee975bc8037016...ea4982398a42eba362f7bc7e9e00f5268f3058c9) identifica exclusivamente esas cinco incorporaciones. El cotejo de ambos directorios confirma que los nueve archivos anteriores conservan tamaño y blob. No se recibió una segunda serie de adjuntos en esta recepción: se acredita la identidad del depósito recuperado, sin atribuir una comparación con adjuntos ausentes.
+
+### 7.2. Dictamen documental
+
+- **LC2-02:** se conserva la subsanación documental ya recibida: dos separadores obligatorios y condiciones de orden y separación.
+- **LC2-03:** se recibe su subsanación documental. G, B y W son regiones geométricas; la blancura se comprueba en W; cualquier alfa distinta de 255 queda fuera del perfil antes del control de fondo. Las decisiones de transparencia y fondo se subordinan a la precedencia explícita de A. No se ha comprobado materialmente el alfa de los testigos históricos.
+- **LC2-01:** quedan subsanadas las tres dificultades de §6.2 sobre distinción de máscaras y tinta, componentes calculadas exclusivamente en el residuo y restitución de fórmulas. E2b ya no exige una condición geométrica imposible. Permanece una precisión de cierre en E2c: sus condiciones enumeradas no excluyen la plantilla no asignada que B.6.2 considera adición inadmisible. La tabla no debe permitir que la tolerancia residual baste para declarar conformidad. Debe expresar que concurren las condiciones generales de perfil, tinta suficiente, asignación inequívoca de las tres parejas del convenio y dos separadores, y que no se cumple ninguna causa de B.6, incluida B.6.2. Es una insuficiencia de la condición escrita, no un falso positivo observado.
+- **Autonomía:** las fórmulas y la tabla de independencia están incorporadas en /4.
+
+El alcance continúa siendo documental. No se acreditan parámetros cualificados, implementación, independencia material del códec ni un segundo testigo E1.
+
+### 7.3. Alcance de la evidencia de ejecución y procedencia
+
+El fuente `COTEJO_ENTREGA_04.rs` comprueba dos vectores y calcula huellas de los archivos recibidos como argumentos. No compara esas huellas con referencias esperadas. Por tanto, su retorno 0 por sí solo no acredita igualdad entre dos descargas ni concordancia con un manifiesto. Las concordancias de esta recepción se sostienen en el cotejo receptor explícito de §7.4.
+
+La salida depositada consigna `CMD=/tmp/cotejo_entrega_04 CONTRATO SUBSANACION RS`, mientras las líneas ARCHIVO contienen rutas absolutas distintas. El fuente imprime literalmente cada argumento. La línea CMD, tal como está escrita, no es la invocación literal que produciría esas rutas. Debe identificarse como abreviada si ese fue su uso; si no se conserva la invocación original, debe declararse esa ausencia. No se reconstruirá una ejecución histórica ni se repetirá únicamente para reemplazar su registro.
+
+La tabla de evidencia histórica de SUBSANACION_ENTREGA_04 presenta la fila R01/R06 con campos desplazados: el lugar del commit contiene «miembros citados» y el de ruta contiene huellas abreviadas. El manifiesto conserva las huellas completas, pero no identifica la ruta completa del paquete y sus miembros. La adenda deberá completar sede, commit íntegro, ruta del paquete, miembro y huella de cada testigo a partir de la custodia ya fijada, sin publicar sus contenidos. También deberá enlazar por corte y ruta completos el cotejo receptor /3, ya conservado en este repositorio; no es necesario duplicarlo.
+
+### 7.4. Evidencia receptora conservada
+
+- [Fuente receptor íntegro](COTEJO_RECEPCION_LEYENDA_04.rs): 8744 bytes; SHA-256 `1e23c6d8e2585f889cd6d58544a071cc936593bda55141ef98bf35ee49700735`.
+- [Versión, comandos y salida receptora](COTEJO_RECEPCION_LEYENDA_04_SALIDA.txt): 1784 bytes; SHA-256 `4588d724f9a81f194d93e7a6f616b4e1374efc5ce6818a4c2413c9148b3a2bf3`.
+
+Compilación y ejecución con Rust 1.98.0, retornos 0; cinco identidades concordantes. Se reutilizan funciones históricas de huella: no se presenta validación criptográfica independiente. Este cotejo no ejecuta el reconocedor ni valida retrospectivamente una ejecución distinta.
+
+### 7.5. Cierre acotado y siguiente entrega
+
+Se requiere únicamente una adenda documental vinculada a /4, con prioridad expresa para la precisión de E2c, la calificación fiel del registro de ejecución y las referencias completas de custodia. No se exige reescribir el contrato como /5 ni repetir comprobaciones ya acreditadas.
+
+La siguiente entrega se limita a dos archivos nuevos en el mismo directorio autorizado: `ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md` y `MANIFIESTO_ADENDA_ENTREGA_04.tsv`. El manifiesto consignará tamaño y huella de la adenda y referencias completas a las evidencias ya depositadas; no necesita incluir su propia huella. Se conservarán los catorce archivos existentes. Toda herramienta nueva que efectivamente se utilice deberá quedar conservada en sede autorizada; no se necesita crear una herramienta para esta adenda.
+
+S22 permanece en ejecución y el contrato candidato. Esta recepción no modifica S26, S31, RETP, HTML, reservas ni la numeración de actas. No autoriza implementación, síntesis de plantillas, campañas, ajuste de parámetros ni materialización de E1. Solo una discrepancia material nueva, sustentada con evidencia, justifica ampliar este alcance.

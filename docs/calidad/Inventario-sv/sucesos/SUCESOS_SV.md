@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T09:13:29Z
+**fecha_actualizacion_utc:** 2026-09-15T09:29:30Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Recepción documental de LEYENDA-CONTENIDO/3 y SUBSANACION_ENTREGA_03 en depósito b73c2b28f6a8899b2024eb3f9dee975bc8037016. Identidad de ambos adjuntos concordante. LC2-02 subsanado en régimen documental; LC2-01 y LC2-03 permanecen pendientes por definiciones de halo/componentes, autonomía de fórmulas y criterio de fondo/transparencia. Contrato candidato; Bis abierto.
+**resultado:** Recepción documental de LEYENDA-CONTENIDO/4 en depósito ea4982398a42eba362f7bc7e9e00f5268f3058c9. Cinco identidades concordantes y nueve antecedentes intactos. LC2-03 subsanado documentalmente; LC2-02 conservado. Definiciones y fórmulas de LC2-01 subsanadas; precisión pendiente de E2c respecto de B.6.2. Contrato candidato; Bis abierto.
 
-**verificacion:** Rust 1.98.0: adjuntos de 11201 y 2940 bytes coinciden con blobs y SHA-256 del depósito. Comparación de cortes: solo dos incorporaciones y siete archivos previos conservados. SVG histórico contiene los dos separadores. Revisión documental de reglas y esperados; sin ensayo material del reconocedor. Fuente y salida del cotejo receptor conservados.
+**verificacion:** Rust 1.98.0: cinco tamaños, blobs y SHA-256 concordantes; retorno 0. Comparación de cortes limitada a cinco incorporaciones. Revisión documental de máscaras, residuo, fondo y precedencia. Registro emisor con comando abreviado y cálculo de huellas sin comparación automática. Fuente y salida receptores conservados. Sin ensayo material del reconocedor.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/b73c2b28f6a8899b2024eb3f9dee975bc8037016/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_3.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/b73c2b28f6a8899b2024eb3f9dee975bc8037016/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/SUBSANACION_ENTREGA_03.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_03.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_03_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_4.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ENTREGA_04.tsv ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_04.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_LEYENDA_04_SALIDA.txt
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Subsanar exclusivamente LC2-01 y LC2-03 y restituir la autonomía del contrato, conservando el régimen documental de LC2-02. Depositar documentos completos y evidencias auxiliares en sede autorizada. Sin implementación, ajuste de parámetros, materialización E1 ni campañas.
+**siguiente_accion:** Depositar exclusivamente ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md y MANIFIESTO_ADENDA_ENTREGA_04.tsv en la misma sede: concordar E2c con todas las causas de B.6, calificar el comando abreviado sin reconstrucción histórica y completar referencias de custodia. Conservar los catorce archivos. Sin contrato /5, implementación, cualificación ni campañas.
 
-**observaciones:** Recepción añadida al Acta 002 sin modificar sus secciones anteriores. LC2-02 conforme solo en alcance documental; no acreditación material. S22/S26 en ejecución; S31 conserva su cierre. Sin renumeración, cambios de perfil silenciosos, publicación de reservas o activación de GUI/CYB.
+**observaciones:** Recepción añadida en Acta 002 §7, conservando el texto anterior. Evidencia descargada del corte fijado; no se cotejan adjuntos ausentes. S22/S26 en ejecución; S31 conserva su cierre. Sin renumeración ni publicación de material reservado.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
