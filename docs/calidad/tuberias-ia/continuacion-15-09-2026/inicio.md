@@ -2,12 +2,12 @@
 
 ## Estado vigente y accesos
 
-**Punto de continuación:** recepción documental de LEYENDA-CONTENIDO/4, con adenda acotada pendiente según el [Acta 002, §7](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). El contrato permanece candidato; no se ha implementado ni cualificado el reconocedor.
+**Punto de continuación:** subsanación documental de LEYENDA-CONTENIDO/4 finalizada, con adenda recibida y precisión receptora según el [Acta 002, §9](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). El contrato permanece candidato; no se ha implementado ni cualificado el reconocedor.
 
 | Materia | Estado y documento de consulta |
 |---|---|
 | Rumbo y dependencias | [Acta 001](ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md). Su actualización de remisiones identifica las recuperaciones posteriores. |
-| Leyenda R06 | [Acta 002](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). Recepciones sucesivas /2, /3 y /4; el §7 contiene el encargo vigente y el §8 el control documental. |
+| Leyenda R06 | [Acta 002](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). Recepciones sucesivas /2, /3 y /4; el §9 concluye la subsanación documental y precisa el alcance del cotejo; el §8 conserva el control documental. |
 | Corrección S31 | [Parte y recepciones posteriores](PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Finalizado; PNG y ZIP S6 recuperados e identificados. La exposición declarada de la referencia S6 condiciona una futura evaluación ciega. |
 | Sucesos | [Estado vigente](../../Inventario-sv/sucesos/SUCESOS_SV.md), [CSV](../../Inventario-sv/sucesos/SUCESOS_SV.csv) e [historial](../../Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv). S22 y S26 en ejecución; S31 finalizado. |
 | Continuidad general | [Léame primero](../frame-significado-humano-trazabilidad-y-fidelidad/LEAME_PRIMERO.md). Las entradas anteriores conservan su fecha y alcance histórico. |
@@ -24,9 +24,10 @@ El estado vigente se consulta en el registro y en la última recepción aplicabl
 | S6: contenido y campos compartidos | [Fuente](COTEJO_S31_CONTENIDO_S6.rs) | [Resultados](COTEJO_S31_CONTENIDO_S6_SALIDA.txt) · entradas fijadas en el parte S31 |
 | Recepción de leyenda /3 | [Fuente](COTEJO_RECEPCION_LEYENDA_03.rs) | [Registro conservado](COTEJO_RECEPCION_LEYENDA_03_SALIDA.txt) |
 | Recepción de leyenda /4 | [Fuente](COTEJO_RECEPCION_LEYENDA_04.rs) | [Versión, comandos y salida](COTEJO_RECEPCION_LEYENDA_04_SALIDA.txt) |
+| Recepción de la adenda /4 | [Fuente](COTEJO_RECEPCION_ADENDA_04.rs) | [Versión, comandos y salida](COTEJO_RECEPCION_ADENDA_04_SALIDA.txt) |
 | Control de continuidad | [Fuente](CONTROL_CONTINUIDAD.rs) | [Entradas](ENTRADAS_CONTROL_CONTINUIDAD.tsv) · [Salida](CONTROL_CONTINUIDAD_SALIDA.txt) |
 
-El [depósito de leyenda /4](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/ea4982398a42eba362f7bc7e9e00f5268f3058c9/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06) conserva sus catorce archivos y sus versiones anteriores. Su manifiesto y las recepciones identifican cada evidencia; los testigos reservados mantienen su sede privada.
+El [depósito de leyenda /4 y su adenda](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06) conserva sus dieciséis archivos y sus versiones anteriores. Su manifiesto y las recepciones identifican cada evidencia; los testigos reservados mantienen su sede privada.
 
 ## Rust, reproducción y alcance de los registros
 
@@ -43,3 +44,5 @@ Para repetir el control de continuidad, obtener los archivos del corte `146cb30e
 [Acta 001: continuidad y rumbo](ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md) · [Mapa HTML](mapa/MAPA.html).
 
 Las nuevas actas de Calidad se incorporan en esta carpeta. Las rutas anteriores se conservan. Para seguir la secuencia, rige el Acta 001 y su recepción en Sucesos S30; la secuencia automática de GUI anterior queda cancelada.
+
+La [adenda recibida](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md) y su [manifiesto](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ADENDA_ENTREGA_04.tsv) conservan sus bytes de origen. Para el alcance de la igualdad declarada se aplica la precisión receptora de Acta 002 §9.3. No se afirma traslado material al laboratorio.

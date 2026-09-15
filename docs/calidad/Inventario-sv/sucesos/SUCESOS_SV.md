@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T09:57:02Z
+**fecha_actualizacion_utc:** 2026-09-15T10:16:59Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Recepción de LEYENDA-CONTENIDO/4 conservada; adenda acotada pendiente. Control documental de continuidad concluido: 21 identidades concordantes, 32 sucesos y 125 instantáneas consistentes, 92 rutas relativas existentes. Índice y remisiones actualizados; fuentes y salidas recuperables. Contrato candidato; Bis abierto.
+**resultado:** Finalizada la subsanación documental acotada de LEYENDA-CONTENIDO/4 y su adenda. LC2-01, LC2-02 y LC2-03 recibidos en alcance documental. Adenda y manifiesto conservados en 23fcae974badc52360493e62346dda21a5976a78; catorce antecedentes intactos. Precisión receptora: identidad contra referencias fijadas, no igualdad entre dos descargas históricas. Contrato candidato; Bis abierto.
 
-**verificacion:** Rust 1.98.0, retorno 0. Serie de sucesos e historial consecutivos, CSV y Markdown concordantes. Cinco fuentes Rust revisadas; no se ejecutó Python. Alcance de enlaces limitado a rutas relativas Markdown; anclas y 17 destinos externos no verificados. Control referido al corte 146cb30e3cece036947081453d7e0982ca03a1cb.
+**verificacion:** Rust 1.98.0, retornos 0. Adenda 4381 bytes y manifiesto 2215 bytes: blobs y SHA-256 concordantes. Comparación limitada a dos incorporaciones; dieciséis archivos en sede. Metadatos del paquete privado cotejados; no nueva descarga ni inspección de sus miembros. Fuente y salida receptores conservados.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/146cb30e3cece036947081453d7e0982ca03a1cb/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_CONTINUIDAD.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_CONTINUIDAD_SALIDA.txt ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ENTRADAS_CONTROL_CONTINUIDAD.tsv
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ADENDA_ENTREGA_04.tsv ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_ADENDA_04.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_ADENDA_04_SALIDA.txt
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Depositar exclusivamente ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md y MANIFIESTO_ADENDA_ENTREGA_04.tsv en la misma sede: concordar E2c con todas las causas de B.6, calificar el comando abreviado sin reconstrucción histórica y completar referencias de custodia. Conservar los catorce archivos. Sin contrato /5, implementación, cualificación ni campañas.
+**siguiente_accion:** Conservar como referencia de trabajo contrato /4 más adenda y precisión receptora de Acta 002 §9.3. Ronda de subsanación documental concluida; antes del trabajo material delimitar encargo, entradas, oráculos, recursos y aceptación conforme al rumbo vigente. Implementación, parámetros y E1 material no acreditados.
 
-**observaciones:** Índice de acceso y estado vigente incorporados, conservando antecedentes y numeración. Registros históricos resumidos distinguidos de transcripciones literales. S31 conserva su cierre; S26 intacto. Sin nueva campaña, cualificación, uso de Python ni publicación de contenidos reservados.
+**observaciones:** S22 permanece en ejecución; cierre limitado a la subsanación documental. S26 y S31 conservan su estado. Origen en SVperitus-dataset y recepción en Calidad del Lenguaje enlazados; no se presume traslado al laboratorio. Sin reconstrucción de comandos, Python, campaña, publicación de testigos ni renumeración.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

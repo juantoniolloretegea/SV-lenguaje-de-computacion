@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Recepción de la adenda — 15/09/2026.** Finalizada la subsanación documental acotada de LEYENDA-CONTENIDO/4; véase el [Acta 002 §9](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). La adenda y su manifiesto están depositados y cotejados; los catorce antecedentes permanecen intactos. La recepción precisa que el cotejo acredita identidad frente a referencias fijadas, no igualdad entre dos descargas históricas. El contrato permanece candidato, sin implementación ni cualificación material. S22/S26 siguen en ejecución y S31 finalizado. Las menciones anteriores a adenda pendiente corresponden a sus cortes históricos.
+
+
 **Consulta vigente — control de continuidad del 15/09/2026.** El [índice de la sede](../continuacion-15-09-2026/inicio.md) reúne actas, registros, fuentes y salidas. S31 está finalizado y ambos archivos pendientes de su apertura, PNG y ZIP S6, fueron recuperados; véanse sus recepciones posteriores. S22/S26 continúan en ejecución. La adenda acotada de LEYENDA-CONTENIDO/4 sigue pendiente conforme al Acta 002 §7; el §8 recoge el control de conservación y concordancia. Las entradas que siguen son anotaciones cronológicas: las menciones antiguas a recuperación pendiente describen aquellos cortes. Para actuar rigen el registro vigente y la última recepción aplicable.
 
 

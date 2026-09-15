@@ -1,0 +1,19 @@
+Recepción de la adenda documental de LEYENDA-CONTENIDO/4.
+Depósito: juantoniolloretegea/SVperitus-dataset@23fcae974badc52360493e62346dda21a5976a78.
+Alcance: identidad de dos archivos recuperados frente a referencias fijadas. No comparación entre dos descargas históricas.
+CMD=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc -Vv
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+binary: rustc
+commit-hash: 88d9e12ae178fab0fb5cc050a94da85685d449ea
+commit-date: 2026-08-18
+host: x86_64-unknown-linux-gnu
+release: 1.98.0
+LLVM version: 22.1.8
+RC_VERSION=0
+CMD=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc --edition=2021 /tmp/COTEJO_RECEPCION_ADENDA_04.rs -o /tmp/cotejo_recepcion_adenda_04
+RC_COMPILE=0
+CMD=/tmp/cotejo_recepcion_adenda_04 /tmp /tmp/COTEJO_RECEPCION_ADENDA_04.rs
+ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md	bytes=4381	blob=59d01d5b6cd6957c1e4ff93ea31572f356600482	sha256=b54525863ba58c7c5c997ba469c9d3b54131cb10cd035c65067c684a11f8aba1	CONFORME_IDENTIDAD
+MANIFIESTO_ADENDA_ENTREGA_04.tsv	bytes=2215	blob=6622ccfdf7b996c1b8e4dca65b19d92353e0cb82	sha256=e7d863935229f3855ba17c2e9b432c3afade80808bf5ed7b97ec08212ca97f0b	CONFORME_IDENTIDAD
+FUENTE_RECEPTOR	bytes=8293	blob=8cf7849fd280b6333f5952486ebca361b9277fd6	sha256=f8c4b6560d85de750d9b1ac251a814a5c8b7dc0c5f5a03568403dfd50891caa9
+RC_RUN=0

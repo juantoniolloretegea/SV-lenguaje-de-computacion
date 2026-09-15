@@ -178,3 +178,46 @@ La primera columna del manifiesto describe rutas de ejecución, no sedes de cust
 ### 8.4. Continuidad
 
 Control documental concluido en su alcance. Se añade una instantánea de S22; S22 y S26 permanecen en ejecución, S31 finalizado. La adenda limitada de §7 sigue siendo el siguiente paso. No se renumeran actas, se borran antecedentes ni se modifican el HTML, las reservas o el código productivo. Las nuevas verificaciones se realizan en Rust; un uso excepcional de Python debe ser inocuo y estar justificado antes de ejecutarse.
+
+## 9. Recepción de la adenda y cierre de la subsanación documental · 15 de septiembre de 2026
+
+**Corte receptor:** Lenguaje `57cb5166bc4c6f2dc8d4e698e3e2990c29196723`. **Depósito recibido:** `SVperitus-dataset@23fcae974badc52360493e62346dda21a5976a78`, rama `dominio-inmunologia`, directorio `dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/`. Antecedente del depósito: `ea4982398a42eba362f7bc7e9e00f5268f3058c9`.
+
+### 9.1. Conservación e identidad
+
+| Archivo depositado | Bytes | Blob Git | SHA-256 |
+|---|---:|---|---|
+| [Adenda](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md) | 4381 | `59d01d5b6cd6957c1e4ff93ea31572f356600482` | `b54525863ba58c7c5c997ba469c9d3b54131cb10cd035c65067c684a11f8aba1` |
+| [Manifiesto](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ADENDA_ENTREGA_04.tsv) | 2215 | `6622ccfdf7b996c1b8e4dca65b19d92353e0cb82` | `e7d863935229f3855ba17c2e9b432c3afade80808bf5ed7b97ec08212ca97f0b` |
+
+Los archivos se recuperaron del repositorio y se cotejaron en Rust 1.98.0. La huella del manifiesto es observación de esta recepción, no declaración previa del emisor. La [comparación de cortes](https://github.com/juantoniolloretegea/SVperitus-dataset/compare/ea4982398a42eba362f7bc7e9e00f5268f3058c9...23fcae974badc52360493e62346dda21a5976a78) presenta únicamente esas dos incorporaciones. Los directorios de ambos cortes confirman que los catorce archivos anteriores conservan tamaño y blob. La sede contiene dieciséis archivos.
+
+### 9.2. Recepción de los tres puntos delimitados
+
+1. **E2c:** se recibe la exigencia conjunta de las condiciones generales del contrato y ausencia de todas las causas de B.6, incluida B.6.2. Los umbrales residuales no bastan para emitir conformidad. La adenda declara prioridad sobre los pasajes que precisa. Con esta recepción se concluye la subsanación documental acotada de LC2-01; LC2-02 y LC2-03 conservan las subsanaciones ya recibidas.
+2. **Registro:** se recibe la declaración expresa de que la línea CMD era abreviada y la invocación original completa no se conserva. No se reconstruye ni se sustituye por una ejecución presentada como histórica. La conservación del registro y sus huellas no transforma su contenido declarado en una observación independiente de aquella ejecución.
+3. **Custodia:** quedan identificados repositorio, corte, ruta del paquete y nombres y huellas declarados de R01/R06. Los metadatos del directorio del laboratorio en `86441ad4d375e31737dfcead0b1fd9cd52161883` confirman la presencia de `EVIDENCIA_RASTER_CAPTOR.tar.gz`: 4308172 bytes y blob `814619348801577afc28b8fb5be45f73e518d46c`. No se ha vuelto a descargar ni descomprimir ese paquete en esta recepción. Las huellas de miembros se conservan con su procedencia histórica; la de R06 no se atribuye al manifiesto histórico IDENTIDADES.txt. El cotejo receptor /3 dispone de ruta y corte completos en el Lenguaje, sin duplicación de su fuente.
+
+### 9.3. Precisión receptora del alcance de igualdad
+
+La última frase de §2 de la adenda atribuye al cotejo receptor de Acta 002 §7.4 la igualdad entre dos descargas. **Esa atribución no se recibe.** El §7.1 y el fuente conservado acreditan la comparación de archivos recuperados con tamaños, blobs y huellas fijados; no comparan dos descargas históricas ni adjuntos ausentes.
+
+A efectos del expediente se aplica esta redacción: **«El cotejo receptor de Acta 002 §7.4 acredita identidad de los archivos recuperados respecto de las referencias fijadas. No acredita la igualdad entre dos descargas históricas.»**
+
+Esta precisión prevalece, en la recepción canónica, sobre aquella frase. No modifica los bytes del documento recibido ni exige reconstruir la ejecución. La adenda se conserva íntegra y la discrepancia de alcance queda resuelta expresamente en esta acta.
+
+### 9.4. Sedes y evidencia de recepción
+
+- **Origen documental conservado:** los dieciséis archivos del [depósito fijado](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/). Cada versión conserva su ruta y su commit.
+- **Recepción y seguimiento:** esta acta, el índice de continuación y Sucesos SV del Lenguaje. La referencia canónica permite recuperar las piezas de origen cuando deban incorporarse a una realización de laboratorio; no se afirma que ya se hayan copiado allí.
+- **Testigos reservados:** el paquete mantiene su sede y acceso privados. La recepción pública no contiene los PNG ni el archivo comprimido.
+- [Fuente del cotejo receptor](COTEJO_RECEPCION_ADENDA_04.rs): 8293 bytes; SHA-256 `f8c4b6560d85de750d9b1ac251a814a5c8b7dc0c5f5a03568403dfd50891caa9`.
+- [Versión, comandos y salida](COTEJO_RECEPCION_ADENDA_04_SALIDA.txt): 1333 bytes; SHA-256 `7123c807cba9ee3b146462eff0897fea35aace6e77ba47d2fd8e0a6d194810ea`.
+
+Compilación y ejecución con Rust 1.98.0, retornos 0. Se reutilizan las funciones históricas de identidad; no se presenta validación criptográfica independiente. No se ejecutó Python ni contenido de los paquetes.
+
+### 9.5. Estado y relevo
+
+**Subsanación documental acotada: finalizada.** La referencia de trabajo es LEYENDA-CONTENIDO/4 más su adenda, con la precisión receptora de §9.3. No se requiere otra entrega de corrección para esta ronda.
+
+El contrato permanece candidato. Continúan sin acreditarse la implementación del reconocedor, la cualificación de parámetros, E1 material y la independencia experimental del códec. S22 y S26 permanecen en ejecución; S31 conserva su cierre. Antes de cualquier trabajo material debe delimitarse su encargo, entradas, oráculos, recursos y condiciones de aceptación conforme al rumbo vigente. Esta recepción no autoriza por sí sola implementación ni campañas.
