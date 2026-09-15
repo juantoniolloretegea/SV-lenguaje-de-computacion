@@ -1,5 +1,12 @@
 # Léame primero: del frame a la colaboración auditable
 
+## S31 · Cierre de la corrección acotada · 15/09/2026
+
+[Parte S31 y cierre por unidades](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Finalizado en el alcance delimitado: recuentos precisados, identidad de entradas cotejada, PNG recuperado y condiciones documentales de P3 diferenciadas. El ZIP S6 permanece pendiente de recuperación; la reserva sigue cerrada. La página incorpora 99 enlaces sobre los 230 de la salida del ZIP, con concordancia en los demás campos compartidos. Se conservan el mapa histórico y los registros anteriores. Relevo a la subsanación del contrato candidato de leyenda R06.
+
+---
+
+
 ## S31 · Inicio de la corrección acotada · 15/09/2026
 
 [Parte de trabajo S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md), en ejecución. Se conserva el alcance C01–C05 y se documentará cada resultado antes del cierre. El alta y los antecedentes permanecen en el historial.

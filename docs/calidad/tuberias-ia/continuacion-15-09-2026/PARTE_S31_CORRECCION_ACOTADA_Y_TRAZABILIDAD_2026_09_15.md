@@ -51,3 +51,61 @@ Una interrupción antes de completar el alcance se registrará como pendiente, c
 
 S31 pasa a en ejecución, revisión 1. Se mantiene íntegro el alcance C01–C05 del alta publicada en `22233612e8f641d885f731e9ed46f1433ead1cb2`. Las unidades se resolverán mediante resultados separados y verificables. Esta anotación registra el inicio, sin anticipar resultados ni recuperación de archivos.
 
+
+## Cierre de la intervención acotada · 2026-09-15T08:07:22Z
+
+**Resultado:** finalizado en el alcance de C01–C05. El PNG pendiente se ha recuperado y cotejado; la recuperación material del ZIP S6 permanece pendiente. No se amplía la aceptación histórica de ningún instrumento ni se declara compatibilidad integral de P3.
+
+| Unidad | Resultado final | Evidencia y límite |
+| --- | --- | --- |
+| C01 | Precisión documental concluida. | 761 referencias pendientes globales = 691 atribuidas a 32 nodos + 70 sin atribución a nodo, localizadas en 12 documentos. 101 de 329 enlaces apuntan al repositorio del laboratorio. Son recuentos de referencias y enlaces, no de experimentos ni de volumen de evidencia. |
+| C02 | Identidad previa comprobada para las entradas utilizadas. | Rust 1.98.0 coteja el blob del HTML antes de leer su contenido, el PNG contra el árbol histórico y once archivos públicos contra el corte de entrada. Los miembros del ZIP embebido proceden del HTML identificado y se comprueban mediante CRC. No se ha producido una discrepancia de identidad en esas entradas. |
+| C03 | Intento acotado concluido; un archivo recuperado y otro pendiente. | PNG: 255245 bytes, blob concordante. ZIP S6: 1811714 bytes declarados en el árbol; no se obtuvieron bytes completos utilizables mediante las vías examinadas. No se ejecutaron contenidos ni campañas. |
+| C04 | Diferenciación documental y condición previa de P3 precisadas. | El lote sintético es público y conserva su identidad propia. Los tres valores históricos de vigencia negativa corresponden a esperados públicos. El cuarto del sucesor S2 tiene declaración causal separada. Se conservan la reserva cerrada y la decisión de asociación pendiente. |
+| C05 | Parte de cierre y seguimiento consolidados. | Fuente completo, manifiesto de entradas y salida del cotejo adjuntos en esta sede; CSV, Markdown, historial y Léame primero actualizados. S31 finalizado, revisión 2. S22 y S26 conservan su estado y sus condiciones. |
+
+### Precisión del mapa y su paquete histórico
+
+HTML: 3703604 bytes; blob `24e25dbf1255ddf25d5f1e7eefa8d89d4b12ed3e`; SHA-256 `bf57da72c7d535aa4b258b2c80232bc8954f91eb28aa4917739c3db4de7404c0`. ZIP embebido: 2616129 bytes; SHA-256 `6e4eec4bdae325eeba222635ee5954e0edddc0c5c2e6fae70a47a6bc6bd11e04`. Ambos se conservan sin modificación.
+
+La frase del README histórico que reúne los 32 nodos y las 761 apariciones debe leerse con esta precisión: **el total global es 761; el subconjunto atribuido a los 32 nodos suma 691; las otras 70 referencias se conservan en el listado global sin atribución a nodo**. El listado del cotejo identifica los 12 documentos correspondientes. No se trasladan esas referencias a nodos por inferencia.
+
+Los 101 enlaces al laboratorio representan aproximadamente el 30,7 % de los 329 enlaces. Esa proporción no mide volumen, relevancia ni suficiencia de evidencia. Los 228 enlaces restantes no se declaran verificados por ser públicos. No se han vuelto a cotejar los 6085 archivos de la auditoría histórica.
+
+El JSON de la página y `salida/NODOS_VERIFICADOS.json` del ZIP **no son idénticos campo a campo**. La salida contiene 230 enlaces; la página incorpora 99 adicionales distribuidos en 68 nodos y no retira ninguno. Los demás campos compartidos cotejados concuerdan, y los 144 ámbitos `paths` de la página concuerdan con `entrada/NODOS.json`. Esta distinción precisa la composición de la página; no altera los recuentos ni los dictámenes de recuperación. No se afirma que los 99 destinos adicionales hayan sido descargados.
+
+### Recuperación material acotada
+
+El árbol histórico del laboratorio identifica los dos archivos y sus tamaños. La lectura del PNG mediante transporte base64 produjo bytes completos que fueron decodificados y cotejados en Rust antes de utilizarse.
+
+- `frame-original.png`: 255245 bytes; blob `f123822692430d79b0b5b44d2aa4ffca4c238c94`; SHA-256 observado `4ce891a55f68884b5dd7652b7cfb39cde3c745977a4cb4e8936b99269e0d66af`. Se acredita identidad de bytes, no contenido visual, semántica, cualificación de captor ni suficiencia de soporte.
+- `CONTROLES_CUALIFICACION.zip`: blob esperado `ffe5c4a9b86b26c2409abe4239e6355f7a3bef19`, tamaño declarado 1811714 bytes. La lectura textual y la lectura de blob no admitieron la codificación binaria; la solicitud de contenido base64 devolvió metadatos con contenido vacío. **No se calcula ni se atribuye una SHA-256 observada del ZIP.** La recuperación queda pendiente de una entrega completa obtenida con acceso autorizado y cotejada con ese blob antes de usarla.
+
+Las fuentes privadas conservan su ubicación y acceso; este cierre no publica sus contenidos ni crea una sede pública sustitutiva. La coincidencia del PNG no recalifica automáticamente el nodo histórico BIS-PLAN ni el mapa congelado.
+
+### Identidad de lotes y vigencia pública
+
+Corte documental: Lenguaje `46a620864e77543140e3d3290be7c33bea71766b`.
+
+El lote sintético público contiene 24 posiciones bajo `IE004-P3-A/1`, con identificadores `P3-01…P3-24`; tiene 7773 bytes y SHA-256 `88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a`. Su procedencia lo identifica como reutilización de diez entradas públicas. El compromiso de la reserva identifica otro archivo, de 6871 bytes, con SHA-256 `65ac9f7a8c08528009a473065de3bdf989d7852cb15561036c9bba61c79780d7`. No se ha leído ese archivo reservado ni comparado sus preguntas.
+
+La versión de formato y los identificadores de posición **no bastan para identificar el lote**. Toda referencia de seguimiento o admisión debe incluir su naturaleza pública o reservada, procedencia, corte, ruta y huella previamente fijada. El contrato público del adaptador ya exige cotejar todos los bytes con la huella confiable antes de decodificar; la huella suministrada por una entrada no confiable no acredita esa confianza. No se renombra ni altera retrospectivamente ningún lote. La diferenciación nominal pendiente se conserva para la preparación de P3.
+
+En el montaje público original, `P3-04`, `P3-14` y `P3-24` heredan A04 y `vigente:false`; esos valores coinciden con los cuerpos esperados públicos. No constituyen por sí mismos un defecto. El montaje sucesor S2 añade `P3-11` con vigencia negativa, declarado en `DECLARACION_VIGENCIA.json` como cambio sintético de true a false y documentado en el resultado causal de S2. No se utiliza el esperado histórico positivo de P3-11 como esperado de esa sucesión.
+
+La decisión preparada conserva `PREPARADA_NO_EMITIDA` y `captura_habilitada:false`. La asociación /2–/3, el alcance de las expectativas y la admisión de auxiliares siguen sujetos a sus condiciones previas. Este cotejo documental no abre P3 ni determina su compatibilidad integral.
+
+### Evidencia reproducible y alcance del cierre
+
+- [Fuente completo del cotejo](COTEJO_S31.rs): 41999 bytes; SHA-256 `faa9f6c36ea5b7953bf1fa4462322eef02ea5674ba1be4e882a5fa033fef3669`.
+- [Manifiesto de las once entradas públicas](ENTRADAS_S31.tsv): 1478 bytes; SHA-256 `01ddf0e6dd9ad1dc7df1cf14e4cb442071dd5253e09f2135c7689cac06ee4fe5`.
+- [Salida íntegra del cotejo](COTEJO_S31_SALIDA.txt): 4424 bytes; SHA-256 `0c6889ab294c899e285d4ee45240475c08c80961d7e555647df62e84d51c6e25`.
+
+El fuente reúne los lectores y funciones de huella del paquete histórico, y las comprobaciones acotadas de S31. Se compiló y ejecutó con Rust 1.98.0; `RC_COMPILE=0`, `RC_RUN=0`. La dependencia de descompresión es flate2 1.1.9, construida con el Cargo.lock y las dependencias locales del paquete embebido, en modo locked/offline. No se presenta como validación criptográfica independiente. No se ejecutaron los binarios de los expedientes ni las campañas históricas.
+
+Para reproducir, obtener el HTML por su corte/blob, las once entradas públicas desde el corte indicado y el PNG por acceso autorizado desde su corte histórico. El TSV relaciona nombres auxiliares con rutas canónicas y blobs. Guardar las entradas con esos nombres, el PNG codificado en base64 como `sv_s31_frame.b64` y el HTML como `MAPA.html`, junto al manifiesto. Compilar el fuente con Rust 1.98.0, enlazando la biblioteca flate2 construida con las dependencias fijadas; ejecutar `cotejo_s31 DIRECTORIO_ENTRADAS`. El programa coteja identidades antes de analizar y genera copias auxiliares de cuatro miembros del ZIP. No requiere el ZIP S6, cuya recuperación no se acredita.
+
+El registro actualizado corresponde a la sede canónica del Lenguaje; las copias de laboratorio y los paquetes históricos mantienen sus cortes anteriores, expresamente identificados. No se afirma sincronización de esos espejos. No se adoptó una nueva realización material ni se renumeraron registros técnicos.
+
+**Relevo:** retomar la subsanación del contrato candidato de leyenda R06. La recuperación del ZIP S6 y las condiciones previas de P3 quedan identificadas y no se convierten en una reapertura general de campañas.
+

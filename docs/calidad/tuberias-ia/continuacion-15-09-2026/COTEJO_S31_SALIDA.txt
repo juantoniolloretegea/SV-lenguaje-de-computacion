@@ -1,0 +1,48 @@
+Cotejo documental S31. Rust 1.98.0 (88d9e12ae 2026-08-18).
+Compilación: --edition=2021; flate2 1.1.9 del paquete fijado; RC_COMPILE=0.
+Ejecución del fuente COTEJO_S31.rs: RC_RUN=0.
+No se ejecutaron sujetos, campañas SV ni contenidos reservados.
+
+HTML 3703604 bf57da72c7d535aa4b258b2c80232bc8954f91eb28aa4917739c3db4de7404c0
+ZIP 2616129 6e4eec4bdae325eeba222635ee5954e0edddc0c5c2e6fae70a47a6bc6bd11e04
+EMBEBIDO salida/NODOS_VERIFICADOS.json	144589	de392dd10145b1bbd781f48369dfd66357ff1dd118f9ac8874b4f4a603c022e9
+EMBEBIDO salida/REFERENCIAS_SHA256.csv	14006875	3ee30a4296a3eb4f1418f17155909dc93114a7ea7b815f83dbbb2ec9134de644
+EMBEBIDO README_REPRODUCCION.md	7993	bb95a61656d94b070fc52b1f0e2b861611dd5038be4c06eafac802b73c462adf
+EMBEBIDO entrada/NODOS.json	35290	1faf890ddd2d9bee6340f2100e38ff30c672fc252cdc3078097d458fa8096fbb
+PNG 255245 f123822692430d79b0b5b44d2aa4ffca4c238c94 4ce891a55f68884b5dd7652b7cfb39cde3c745977a4cb4e8936b99269e0d66af
+ENTRADA sv_s31_p3_0 7773 a566ef7c660684e3a1991bc71d0dc7ea3a5b3051 88bda419f98d75c10be7cf91acc849e852904495a9e6deb4403a8429a1c2990a
+ENTRADA sv_s31_p3_1 2261 9e285c13382e62d785cc5ee86996d2eb7d7b37cb 92750c47b491139f3abe4c007dcad9298346449bf1be9cd1779007278bae9eff
+ENTRADA sv_s31_p3_2 5677 21b1b495e258a92ae0143d2a26c29c19e3740bad 1e7cef163251662fb522179568433060cf83002819c98414bac8bd24b777dbf0
+ENTRADA sv_s31_p3_3 1158 0c7e8f23f2d76b3249d0ba3c79e3f2483f25cc85 39887296732b78dce23c7e325d5a720a2bc4ead09295bad5d9f0cbd5e885f5c4
+ENTRADA sv_s31_p3_4 7541 c0a35ab4ad38be3d1d7bc7f49460a99cdf7514f9 9d245b9766600fbf5f5c1f849a4e7339e45bad5bbf36e3c2156269d79b7b19a4
+ENTRADA sv_s31_p3_5 27250 3b70a63becf7ffe575b47d380ecb1c1dda289590 459adb26a2ef9268b09a70a9cf7f2c4b55b9f94662be9fd6fc81973d0dca8ae1
+ENTRADA sv_s31_p3_6 6139 ec5854b71400a3d06f7914261f7bfbdef09d189f 9500ce3065de0167b911bd86aab344197cc91bc9db5a7d231081cb77a6d2f639
+ENTRADA sv_s31_p3_7 2253 67663696eb700b56c4d35ef3904f6eff48c19fc6 a478c934f4b4419913122ea2079d98bfcbac1285bfd0bd0f5c1c4709313fe719
+ENTRADA sv_s31_p3_8 3193 86df1e67493a193c312e2950a5f62f2220866b7b d37246a019332327f54dd45c641944d90e3ae440163d76d0607c5235df63f9f5
+ENTRADA sv_s31_p3_9 388 fa4e7e2a175fb60af208276d7493c66a201354d3 88ce1b4217ed3cbd5e2c6a78a8b932406518eefb81e45d76f23a56cbb1f8e038
+ENTRADA sv_s31_p3_10 6185 380d559c3c8c3ebd6fbc9d893e1b88aaf09f019c a3c6ce682f7db5ab28bf6e6543e27b3109d6d9ea970a346928195b36c02e8f7c
+HTML bytes=3703604 blob=24e25dbf1255ddf25d5f1e7eefa8d89d4b12ed3e sha256=bf57da72c7d535aa4b258b2c80232bc8954f91eb28aa4917739c3db4de7404c0
+DIFERENCIAS_CAMPOS_COMUNES {"links": 68}
+ENLACES salida=230 anadidos=99 retirados=0 paths_fieles=144
+nodos=75 afectados=32 unresolved=691 enlaces=329 privados=101
+referencias=25785 ambar=761 sin_nodo=70 multiples_nodos=0
+SIN_NODO 3 main:docs/calidad/evidencias/RETP-109/custodia.json
+SIN_NODO 19 main:docs/calidad/evidencias/RETP-109/resultados.json
+SIN_NODO 1 main:docs/calidad/riesgos-materiales-s26/r06/HUELLAS.json
+SIN_NODO 1 main:docs/calidad/tuberias-ia/MANIFIESTO-IE004.json
+SIN_NODO 1 main:docs/calidad/tuberias-ia/MANIFIESTO-RECEPCION-IE004-001.json
+SIN_NODO 2 main:docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/FUENTES_REVISION_162.json
+SIN_NODO 27 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/FUENTES.json
+SIN_NODO 6 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/FUENTES_ANTECEDENTES_COMPOSICION.json
+SIN_NODO 5 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/FUENTES_CONCORDANCIA_SUCESO_FRAME.json
+SIN_NODO 1 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/MANIFIESTO.json
+SIN_NODO 2 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/MANIFIESTO_V2.json
+SIN_NODO 2 main:docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/VERIFICACION_DOCUMENTAL_BIS.json
+PUBLICO version=IE004-P3-A/1 casos=24
+VIGENCIA archivo=1 id=P3-04 fuente=A04 esperado_historico=false
+VIGENCIA archivo=1 id=P3-14 fuente=A04 esperado_historico=false
+VIGENCIA archivo=1 id=P3-24 fuente=A04 esperado_historico=false
+VIGENCIA archivo=7 id=P3-04 fuente=A04 esperado_historico=false
+VIGENCIA archivo=7 id=P3-11 fuente=A01 esperado_historico=true
+VIGENCIA archivo=7 id=P3-14 fuente=A04 esperado_historico=false
+VIGENCIA archivo=7 id=P3-24 fuente=A04 esperado_historico=false

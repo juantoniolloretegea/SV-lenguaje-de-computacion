@@ -1059,15 +1059,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S31 · Corrección acotada de recuentos, identidad y condiciones de reproducibilidad
 
-**estado:** en ejecución
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-15T07:50:03Z
 
 **fecha_inicio_utc:** 2026-09-15T07:57:42Z
 
-**fecha_actualizacion_utc:** 2026-09-15T07:57:42Z
+**fecha_actualizacion_utc:** 2026-09-15T08:07:22Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-15T08:07:22Z
 
 **unidad_responsable:** W-S26-02
 
@@ -1079,15 +1079,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** Continuidad S30 y Acta 001; contrato candidato R06 recibido en S22 y Acta 002. La reserva P3 permanece cerrada.
 
-**resultado:** Inicio de la intervención acotada C01–C05 conforme al parte publicado. Sin resultados nuevos atribuidos en esta revisión.
+**resultado:** C01–C05 concluidos en alcance acotado: precisión 761/691/70 y 101/329 enlaces; PNG recuperado y cotejado; intento de recuperación del ZIP S6 concluido sin bytes utilizables; identidad diferenciada de lotes y vigencias públicas documentadas. Contrato R06 pendiente de subsanación.
 
-**verificacion:** Alta, unicidad del identificador, concordancia CSV/Markdown e historial y preservación de los registros anteriores comprobadas en Rust 1.98.0. No se acredita ejecución de C01–C04.
+**verificacion:** Rust 1.98.0: HTML y PNG coinciden con sus blobs; once entradas públicas cotejadas antes de analizar; 75 nodos, 691 referencias atribuidas y 70 sin nodo. Página: 99 enlaces añadidos a 230 del ZIP, ninguno retirado; demás campos compartidos concordantes. Fuente y salida conservados. No se reejecutaron campañas.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/465e3dfb18b8b0775a3ee2ffffda423acfef851b/docs/calidad/tuberias-ia/continuacion-15-09-2026/mapa/MAPA.html
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31.rs; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31_SALIDA.txt; docs/calidad/tuberias-ia/continuacion-15-09-2026/ENTRADAS_S31.tsv
 
 **referencia_calidad:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md
 
-**siguiente_accion:** Comprobar identidades de entrada, ejecutar C01–C04 y añadir cierre por unidad con evidencias y pendientes.
+**siguiente_accion:** Retomar la subsanación del contrato candidato de leyenda R06. Conservar el ZIP S6 como pendiente de recuperación y las condiciones de asociación, identificación y auxiliares antes de P3.
 
-**observaciones:** La finalización del intento acotado no acredita recuperación de archivos inaccesibles ni compatibilidad integral P3. Sin renumeración, nuevas ramas, cambio de rumbo o cierre de S22/S26. El alta corresponde al registro canónico; las copias históricas conservan su corte.
+**observaciones:** Finalización del alcance C01–C05, no cierre de la recuperación S6 ni compatibilidad integral P3. S22/S26 intactos. Sin renumeración, cambios del HTML, nuevas ramas, publicación de contenidos privados ni apertura de reservas. Sede canónica actualizada; espejos históricos conservan su corte.
 
