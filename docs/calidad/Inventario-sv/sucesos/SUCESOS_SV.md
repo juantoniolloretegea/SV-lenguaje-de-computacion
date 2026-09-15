@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-14T17:21:53Z
+**fecha_actualizacion_utc:** 2026-09-15T03:06:57Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** resvg 0.48.1 recibido, huella oficial conforme y compilación Rust offline terminada. Ocho sondas raster/captor preparadas, sin ejecutar al publicar.
+**resultado:** Mapa de continuidad recibido. El resultado raster/captor RETP241 está conservado en laboratorio 86441ad4d375e31737dfcead0b1fd9cd52161883: ocho sondas coincidentes con esperados acotados; la validación completa del significado de la leyenda no está acreditada. Bis permanece abierto.
 
-**verificacion:** Inspección Rust de SVG y fuente; testigos geométricos de pérdida posicional. Ocho oráculos acotados; R06 declara el límite del observador de presencia de leyenda.
+**verificacion:** Cotejo documental del mapa: 75 nodos, 144 ámbitos y 329 enlaces. Se referencia el resultado histórico de laboratorio; cero nuevas ejecuciones experimentales por esta recepción.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md
 
-**referencia_calidad:** RETP-2026-240
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
 
-**siguiente_accion:** Ejecutar ocho sondas y conservar PNG, comandos y brechas. Completar después la verificación de leyenda y el captor integrado. Bis y S26 abiertos; GUI diferida.
+**siguiente_accion:** Continuar desde continuacion-15-09-2026 con tareas que no dependan de capacidades pendientes. Resolver cada bloqueo antes de utilizar la capacidad afectada. Compilar y revisar de forma reforzada el bloque antes del retorno al punto previo a la adenda CYB.
 
-**observaciones:** Cualificación local, no cierre de Bis ni S26. SVG restringido y operación de coordenadas no acreditan percepción visual de IA, pantalla o resistencia al host. RC10 sólo prueba el lector aislado. 202 filas originales y escenarios globales conservados; F01/F02 pendiente de interfaz. Todas las pruebas, conductores y observadores en Rust; cero Python.
+**observaciones:** S24 cancelado como secuencia automática de GUI. Persisten Bis, S26 y sus límites. Rutas para el agente de Inmunología y posible paquete Qwen en el motor de IA se decidirán según la etapa y sus dependencias; no se inician aquí.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
@@ -822,17 +822,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S24 · Bis → catálogo y cierre de fase → análisis e instalación de la GUI
 
-**estado:** pendiente
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-13T08:03:14Z
 
 **fecha_inicio_utc:** —
 
-**fecha_actualizacion_utc:** 2026-09-14T10:27:16Z
+**fecha_actualizacion_utc:** 2026-09-15T03:06:57Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-15T03:06:57Z
 
-**unidad_responsable:** Watson / W-S26
+**unidad_responsable:** W-S26-02
 
 **alcance:** Seguimiento del relevo secuenciado hacia la GUI. Completar S22/(p1+p3)-Bis, después el catálogo de errores y el cierre de la fase aplicable; sólo entonces analizar, seleccionar e instalar la GUI.
 
@@ -840,19 +840,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **cortes_de_entrada:** Lenguaje ba2f964e47aac7ec42a1d2eb3f5d97bf81e6af96; laboratorio b6186da2d0a0ee599dce620d88c349a49c6407a8
 
-**dependencias:** S22 finalizado en su alcance; catálogo de errores cerrado; cierre documentado de la fase aplicable.
+**dependencias:** Orden anterior cancelada por instrucción del autor; continuidad recibida en S30.
 
-**resultado:** Se recibe la instrucción humana de provisionar C# y .NET, con bibliotecas y herramientas necesarias, cuando llegue el turno de GUI. Permanece la secuencia Bis, catálogo y cierre de fase, después GUI.
+**resultado:** Cancelada por el autor la secuencia automática hacia GUI después de Bis, catálogo y cierre de fase. Conclusión del encargo por cancelación; no acredita realización de GUI.
 
-**verificacion:** S24 revisión 1; estado pendiente y fechas de inicio/fin vacías conservados. No se ha instalado dotnet ni seleccionado una versión o biblioteca de interfaz. S29 documenta la obligación de provisión por etapa.
+**verificacion:** Instrucción humana del 15/09/2026 recibida en Acta 001. Se conservan las revisiones anteriores y la ausencia de inicio de GUI.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s24--bis--catálogo-y-cierre-de-fase--análisis-e-instalación-de-la-gui ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s24--bis--catálogo-y-cierre-de-fase--análisis-e-instalación-de-la-gui ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/recuperacion-rust-s25/OBLIGACION_RUST_Y_PROVISION_DEL_ENTORNO_S29.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-204
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
 
-**siguiente_accion:** Tras los cierres de Bis, catálogo y fase, activar S24 y provisionar C#/.NET y sus bibliotecas, compilación, ejecución e integración requeridas; registrar versiones y comprobación del conjunto antes de utilizar la GUI.
+**siguiente_accion:** Aplicar el rumbo de S30. La preparación de rutas para el agente se abordará cuando la secuencia conduzca al cierre de Inmunología; Qwen queda pendiente de evaluación.
 
-**observaciones:** La indicación tecnológica C#/.NET se recibe el 14/09/2026 y sustituye para la continuación la ausencia de selección de la revisión 0; no adelanta la GUI. Los antecedentes mantienen su contenido. S29 exige Rust para los procesos SV y justificación previa de cada uso de Python; C#/.NET conserva su encargo específico de GUI. Unidad actual W-S26, sin reasignar las autorías históricas.
+**observaciones:** El estado finalizado expresa cancelación del encargo secuenciado, no instalación ni aprobación de GUI. Las referencias históricas a S24 no activan esa secuencia.
 
 ## S25 · Recuperación Rust 1.98.0, entorno y comprobación nativa de continuidad
 
@@ -896,7 +896,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T18:46:43Z
 
-**fecha_actualizacion_utc:** 2026-09-14T14:39:24Z
+**fecha_actualizacion_utc:** 2026-09-15T03:06:57Z
 
 **fecha_fin_utc:** —
 
@@ -914,13 +914,13 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **verificacion:** Lectura de rectores, Sucesos, LIG/0.1, R02, nota de consulta histórica y exportaciones de sv_core en el corte fijado. Cero nuevas ejecuciones SV de S26; no se repiten LIG ni INTEGRADO01.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/CONTINUIDAD_F01_F02_Y_RELEVO_BIS.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/riesgos-materiales-s26/r06/CONTINUIDAD_F01_F02_Y_RELEVO_BIS.md
 
-**referencia_calidad:** S26/R06: BANCO_F01_F02_LIGADURAS.md, AJUSTE_INVOCACION_F01_F02_LIGADURAS.md, RESULTADOS_F01_F02_LIGADURAS.md, EJECUCIONES_F01_F02_LIGADURAS.json y EVIDENCIA_F01_F02_LIGADURAS.tar.gz, con espejo en laboratorio. INTEGRADO01 y campañas anteriores conservan sus resultados y evidencias.
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
 
-**siguiente_accion:** Retornar a F01/F02 cuando esté constituida su interfaz material. Continuar ahora el bloque previsto S22/RETP-221 de fronteras conjuntas del descriptor y recibo, con precompromiso. Conservar S26/Bis abiertos y S24 pendiente.
+**siguiente_accion:** Mantener F01/F02 pendiente de su interfaz material; continuar sólo trabajos independientes de esa capacidad desde la nueva sede. Aplicar S30 y revisar el bloque antes del retorno previo a la adenda CYB.
 
-**observaciones:** Relevo identificado como W-S26-02; antecedentes y atribuciones históricas conservados. No nuevo resolutor en el arnés, consulta clínica, BD ni GUI. S28 permanece finalizado; evaluación y Word no se repiten.
+**observaciones:** Resultados y autorías experimentales conservados; cero nuevas pruebas S26 en esta recepción documental. La secuencia automática de GUI de S24 queda cancelada. Rutas y Qwen mantienen la evaluación indicada en S30.
 
 ## S27 · Incorporación documental: dominio, cobertura del agente y rutas necesarias
 
@@ -1022,3 +1022,37 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **siguiente_accion:** Activar mediante . /opt/sv-rustup/env.sh en cada consola que lo necesite. Continuar S26 desde revisión 25 sin repetir LIG; provisionar y verificar componentes requeridos por cada etapa. C#/.NET conserva S24.
 
 **observaciones:** Revisión 1 posterior a la instalación autorizada. Se conserva revisión 0. Primer --help rechazado por nombre UUID del adjunto; corregido a rustup-init sin cambiar bytes. Advertencia del instalador por Rust preexistente conservada. Sin Python. Herramientas de sistema y coordinación del conector declaradas, sin atribuirles implementación Rust. No acredita instalación de componentes adicionales, persistencia tras reemplazo del contenedor ni migración de auxiliares históricos. RETP sin cambios; no nuevas ramas ni directorios versionados.
+## S30 · Continuación del 15/09: mapa recuperado y actualización de rumbo
+
+**estado:** finalizado
+
+**fecha_alta_utc:** 2026-09-15T03:06:57Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-15T03:06:57Z
+
+**fecha_fin_utc:** 2026-09-15T03:06:57Z
+
+**unidad_responsable:** W-S26-02
+
+**alcance:** Recepción documental del mapa HTML y primera acta en la nueva sede; conservación de rutas; cancelación de la secuencia automática de GUI; criterios de continuidad, revisión reforzada, rutas de Inmunología y evaluación de Qwen.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main, depósito documental autorizado en continuacion-15-09-2026.
+
+**cortes_de_entrada:** Lenguaje a2f02efc1114820fea107adbeef1aec7dc118e72; mapa desde 0c5f80720bc03d51105adc09cda03f51da4631d9; laboratorio 86441ad4d375e31737dfcead0b1fd9cd52161883; candidata diagnóstica 45cf0d5fb4674500fc1f089418c9f362e177e0be.
+
+**dependencias:** Instrucción humana del 15/09/2026; mapa auditado; S22 y S26 abiertos; antecedentes S27/S28; S24 cancelado en su encargo secuenciado.
+
+**resultado:** Mapa HTML y Acta 001 recibidos en la nueva sede. La continuación admite tareas independientes de las capacidades pendientes; no acredita cierre experimental. Cancelada la secuencia posterior de GUI. Rutas para uso del agente al finalizar Inmunología y posible paquete Qwen quedan sujetos a sus dependencias y evaluación.
+
+**verificacion:** Cobertura documental cotejada en Rust: 75 nodos, 144 ámbitos, 329 enlaces y 4968 referencias de archivo, incluidos espejos. Conservados los pendientes; concordancia de CSV, Markdown e historial comprobada en Rust.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
+
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
+
+**siguiente_accion:** Continuar desde la nueva carpeta sin repetir trabajos recibidos; resolver los bloqueos de cada capacidad antes de utilizarla. Antes del retorno al punto previo a la adenda, compilar y revisar el bloque en profundidad. Preparar rutas para el agente cuando corresponda finalizar Inmunología y evaluar si es necesario incorporar Qwen en el motor de IA.
+
+**observaciones:** Alta documental posterior a la preparación, sin atribuir una hora de inicio retrospectiva. Cero nuevas campañas SV y ninguna implementación de GUI, rutas o Qwen. La autorización de ramas será indicada posteriormente por el autor. RETP anteriores sin renumeración. Las copias anteriores conservan su corte; esta recepción corresponde a la sede canónica del Lenguaje.
+

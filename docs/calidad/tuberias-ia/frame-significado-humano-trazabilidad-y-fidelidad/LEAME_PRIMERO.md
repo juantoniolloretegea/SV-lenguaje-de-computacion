@@ -1,5 +1,18 @@
 # Léame primero: del frame a la colaboración auditable
 
+## Continuación vigente · 15/09/2026 · S30
+
+La nueva sede de trabajo y actas de Calidad es [continuacion-15-09-2026](../continuacion-15-09-2026/inicio.md). Allí se conservan el [mapa HTML](../continuacion-15-09-2026/mapa/MAPA.html) y el [Acta 001](../continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md).
+
+**Queda cancelada la secuencia automática de GUI posterior a (p1+p3)-Bis.** S24 concluye por cancelación de ese encargo, sin acreditar realización de GUI. Las indicaciones anteriores se conservan como historia y quedan sucedidas por esta instrucción.
+
+Se puede continuar con tareas que no dependan de capacidades pendientes. Cada bloqueo se resuelve antes de utilizar la capacidad afectada. Antes del retorno al punto previo al desvío por la adenda CYB se compilará y revisará el bloque de forma reforzada. F01/F02 y el significado completo de la leyenda conservan sus límites.
+
+Cuando la secuencia conduzca a finalizar Inmunología, se prepararán específicamente las rutas críticas para uso del agente de IA. Queda pendiente evaluar si es necesario incorporar ya un paquete Qwen en el repositorio del motor de IA para interactuar con el experto. Ninguna de esas implementaciones se inicia por esta recepción. Las pruebas siguen siendo Rust; las ramas autorizadas serán indicadas después por el autor.
+
+---
+
+
 **S22 · RETP-240 · Raster/captor:** [contrato y ocho sondas previas](../paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md). resvg 0.48.1 recibido y compilado offline. Ejecutar el banco Rust acotado; conservar el límite esperado de significado de leyenda. No acredita paridad visual completa ni cierra Bis.
 
 ## Continuidad documental y material · 14/09/2026
