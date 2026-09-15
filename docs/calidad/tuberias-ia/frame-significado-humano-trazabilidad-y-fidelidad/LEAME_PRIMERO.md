@@ -1,5 +1,7 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Recepción material más reciente:** realizacion-leyenda-01, corte `5e3c29bf85fd49ba44c43c894132217f7c585f2d`: entrega incompleta (tres fuentes ausentes y dos discrepancias). Véase [Acta 002, apartado 10](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#10-recepción-de-realización-leyenda-01-entrega-incompleta). Q1/Q2 permanecen sin ejecutar; S22 continúa en ejecución.
+
 **Recepción de la adenda — 15/09/2026.** Finalizada la subsanación documental acotada de LEYENDA-CONTENIDO/4; véase el [Acta 002 §9](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). La adenda y su manifiesto están depositados y cotejados; los catorce antecedentes permanecen intactos. La recepción precisa que el cotejo acredita identidad frente a referencias fijadas, no igualdad entre dos descargas históricas. El contrato permanece candidato, sin implementación ni cualificación material. S22/S26 siguen en ejecución y S31 finalizado. Las menciones anteriores a adenda pendiente corresponden a sus cortes históricos.
 
 

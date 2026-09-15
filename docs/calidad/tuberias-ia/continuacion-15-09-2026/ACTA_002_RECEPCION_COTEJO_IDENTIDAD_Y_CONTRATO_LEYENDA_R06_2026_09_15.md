@@ -221,3 +221,61 @@ Compilación y ejecución con Rust 1.98.0, retornos 0. Se reutilizan las funcion
 **Subsanación documental acotada: finalizada.** La referencia de trabajo es LEYENDA-CONTENIDO/4 más su adenda, con la precisión receptora de §9.3. No se requiere otra entrega de corrección para esta ronda.
 
 El contrato permanece candidato. Continúan sin acreditarse la implementación del reconocedor, la cualificación de parámetros, E1 material y la independencia experimental del códec. S22 y S26 permanecen en ejecución; S31 conserva su cierre. Antes de cualquier trabajo material debe delimitarse su encargo, entradas, oráculos, recursos y condiciones de aceptación conforme al rumbo vigente. Esta recepción no autoriza por sí sola implementación ni campañas.
+
+## 10. Recepción de realización-leyenda-01: entrega incompleta
+
+Fecha de recepción: 2026-09-15. Corte de origen: `5e3c29bf85fd49ba44c43c894132217f7c585f2d`. Este apartado continúa el seguimiento material; no modifica el cierre documental acotado de §9 ni convierte el contrato candidato en instrumento cualificado.
+
+### 10.1. Depósito y alcance del cotejo
+
+La [comparación desde el corte de referencia](https://github.com/juantoniolloretegea/SVperitus-dataset/compare/23fcae974badc52360493e62346dda21a5976a78...5e3c29bf85fd49ba44c43c894132217f7c585f2d) contiene únicamente diecisiete incorporaciones, todas en [realizacion-leyenda-01](https://github.com/juantoniolloretegea/SVperitus-dataset/tree/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/). Los dieciséis documentos anteriores se conservan.
+
+Se recuperaron los diecisiete archivos de texto del árbol fijado. El cotejo receptor en Rust 1.98.0 confirma tamaño y blob Git de los diecisiete y calcula sus SHA-256. Frente a las diecinueve filas del [manifiesto de origen](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/MANIFIESTO.tsv), catorce concuerdan, dos discrepan y tres corresponden a archivos ausentes. El manifiesto no se incluye a sí mismo.
+
+| Archivo ausente del árbol | Bytes declarados, no observados | SHA-256 declarada, no observada |
+|---|---:|---|
+| src/main.rs | 5942 | `1223094facbd03baea7fa6870d49b7c672cae3f423c38e24a3e78646707da56b` |
+| src/png_lectura.rs | 6392 | `4d9cbed4a374d698a97f5f6114b78272b47745f05a7e3085972146f68f57ce90` |
+| src/reconocimiento.rs | 7800 | `287407359882e5e1bb3f31b8e76fda03f04e3b1618538186e63654e76a26ae35` |
+
+`src/lib.rs` declara los módulos ausentes. No se acredita una compilación reproducible del árbol publicado. El [registro de compilación recibido](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/evidencias/COMPILACION.txt) conserva una compilación local declarada con retorno cero; la recepción verifica la identidad de ese registro, no reproduce ni acredita retrospectivamente aquella ejecución.
+
+| Archivo discrepante | Bytes declarados / observados | SHA-256 observada |
+|---|---:|---|
+| PROTOCOLO_CUALIFICACION.md | 4407 / 4379 | `6233cde189816fcf3323ee2827a958ae6aa774b21a34bd3b5c832c202b6aefaa` |
+| src/regiones.rs | 774 / 775 | `044d2953259e0ff7b4b32ff15251b634b44f8589541ee6aec6a3bc9d95b0b398` |
+
+Las huellas declaradas y observadas completas figuran en la salida receptora. No se dispone de las variantes locales para atribuir la diferencia a tipografía, salto de línea o equivalencia de contenido. La declaración de que rige el protocolo depositado no subsana la discordancia de su manifiesto.
+
+### 10.2. Condiciones pendientes antes de Q1/Q2
+
+Esta lectura estática acotada no constituye auditoría integral del reconocedor ni ejecución de testigos.
+
+1. **Precompromiso de parámetros.** El [protocolo](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/PROTOCOLO_CUALIFICACION.md) enumera nueve parámetros con tres valores y uno con dos: producto cartesiano de 39.366 combinaciones. El límite de 200 por tanda no determina la selección, el orden ni la condición de terminación. Debe fijarse antes de ensayar una selección finita justificada, con reglas de aceptación, desempate y parada; no se autoriza ampliar automáticamente la campaña.
+2. **Atribución por puntuación.** [DECISIONES_PENDIENTES.md](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/DECISIONES_PENDIENTES.md) declara que el prototipo trata todo solapamiento entre máscaras aceptadas como ILEGIBLE. Esto no equivale a la atribución al mayor S y al tratamiento de empates por epsilon del contrato. Debe resolverse conforme al contrato o mantenerse bloqueada la operación afectada.
+3. **Identidad de la fuente en la API.** [src/plantillas.rs](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/src/plantillas.rs) compara el argumento textual de huella con una constante, pero no calcula la huella de los bytes TTF que recibe. La API pública de [src/lib.rs](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/src/lib.rs) admite ambos argumentos por separado. No queda ligado el contenido a su identidad en esta entrada; la ausencia del CLI impide comprobar una eventual validación adicional. Debe validarse sobre los bytes o mediante una entrada cuya validación no pueda omitirse.
+4. **Admisión y recursos.** [src/parametros.rs](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/src/parametros.rs) permite sobrescribir claves repetidas y omitir claves desconocidas. La comprobación de s_px no excluye por sí sola NaN o infinito positivo; epsilon tampoco dispone de una validación completa. Se requiere admisión inequívoca de parámetros finitos y cotas previas suficientes para rasterización, almacenamiento y búsqueda, además de la cuota del PNG. La lectura del archivo de parámetros y la API pública deben respetar esas condiciones. No se ha ejecutado un ensayo de agotamiento de recursos.
+5. **Decisiones explícitas.** Separador, anclaje vertical, TTF exacto y paso espacial de B.6.2 continúan pendientes según el propio depósito. Deben resolverse con fundamento trazable antes de Q1/Q2, sin sustituir la fuente por otra de nombre o versión semejantes.
+6. **Independencia.** La diferencia entre nombres de dependencias no acredita independencia del proceso de decodificación. El contraste debe identificar los componentes efectivos de ambos recorridos y limitar la conclusión a lo comprobado.
+
+### 10.3. Subsanación acotada y conservación
+
+El siguiente trabajo es completar la entrega: depositar los tres originales faltantes y toda evidencia auxiliar necesaria; conservar el corte actual y las variantes discrepantes disponibles; emitir un manifiesto corregido con identidades completas; documentar cualquier original que ya no pueda recuperarse sin reconstruirlo como histórico. Una repetición posterior se registrará como ejecución nueva.
+
+Una vez completo el depósito, descargar ese corte en un directorio limpio y compilar con `cargo build --locked --release`, conservando versión, invocaciones literales, salida y retornos. Resolver las condiciones de §10.2 dentro del alcance contratado. Q1/Q2 y la materialización de E1–E16 permanecen sin ejecutar en esta recepción.
+
+Las evidencias de trabajo deben quedar en el repositorio autorizado, enlazadas desde su índice. Los testigos y fuentes reservados conservan su sede privada. Esta recepción no exige publicar su contenido ni duplicar indiscriminadamente el expediente.
+
+### 10.4. Evidencias receptoras y reproducción
+
+- [Fuente Rust del cotejo](COTEJO_RECEPCION_REALIZACION_01.rs).
+- [Entradas fijadas: rutas, tamaños y blobs](ENTRADAS_RECEPCION_REALIZACION_01.tsv).
+- [Compilación, invocación y salida completas](COTEJO_RECEPCION_REALIZACION_01_SALIDA.txt).
+
+Para reproducir el cotejo, recuperar los diecisiete textos del corte de §10.1 conservando sus bytes. El directorio local utilizado por este cotejador sustituye cada `/` de las rutas por `__`; esta correspondencia solo organiza las copias receptoras. Compilar el fuente con Rust 1.98.0 y pasar como argumentos ese directorio y el TSV de entradas. Las órdenes concretas ejecutadas están conservadas en la salida. Se reutilizan funciones históricas de identidad y sus vectores de control; no se afirma validación criptográfica independiente.
+
+El retorno cero significa que el cotejo terminó y confirmó el balance 17/14/2/3, **no conformidad de la entrega**. No se ejecutó Python ni el reconocedor.
+
+### 10.5. Estado
+
+**Recepción examinada; entrega material incompleta; subsanación pendiente.** S22 permanece en ejecución. S26 y S31 conservan su estado. No se declara finalizado (p1+p3)-Bis ni se modifica el punto de retorno, la GUI o la numeración de actas. El origen está conservado y enlazado en SVperitus; no se presume que las piezas ausentes estén depositadas ni que se haya efectuado un traslado al laboratorio.

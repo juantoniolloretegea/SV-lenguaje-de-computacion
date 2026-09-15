@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T10:16:59Z
+**fecha_actualizacion_utc:** 2026-09-15T11:17:20Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Finalizada la subsanación documental acotada de LEYENDA-CONTENIDO/4 y su adenda. LC2-01, LC2-02 y LC2-03 recibidos en alcance documental. Adenda y manifiesto conservados en 23fcae974badc52360493e62346dda21a5976a78; catorce antecedentes intactos. Precisión receptora: identidad contra referencias fijadas, no igualdad entre dos descargas históricas. Contrato candidato; Bis abierto.
+**resultado:** Recepción de realizacion-leyenda-01 examinada en 5e3c29bf85fd49ba44c43c894132217f7c585f2d. Diecisiete archivos depositados; tres fuentes ausentes y dos discrepancias del manifiesto. Entrega material incompleta. Se conserva el cierre documental acotado anterior; contrato candidato y Bis abierto.
 
-**verificacion:** Rust 1.98.0, retornos 0. Adenda 4381 bytes y manifiesto 2215 bytes: blobs y SHA-256 concordantes. Comparación limitada a dos incorporaciones; dieciséis archivos en sede. Metadatos del paquete privado cotejados; no nueva descarga ni inspección de sus miembros. Fuente y salida receptores conservados.
+**verificacion:** Cotejo receptor Rust 1.98.0: diecisiete identidades de árbol concordantes; manifiesto con catorce concordancias, dos discrepancias y tres ausencias. Comparación limitada a diecisiete incorporaciones. Lectura estática acotada; sin compilación del reconocedor, Q1/Q2 ni Python.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/ADENDA_CIERRE_DOCUMENTAL_ENTREGA_04.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/23fcae974badc52360493e62346dda21a5976a78/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/MANIFIESTO_ADENDA_ENTREGA_04.tsv ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_ADENDA_04.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_ADENDA_04_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/MANIFIESTO.tsv ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/5e3c29bf85fd49ba44c43c894132217f7c585f2d/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/PROTOCOLO_CUALIFICACION.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_REALIZACION_01_SALIDA.txt
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Conservar como referencia de trabajo contrato /4 más adenda y precisión receptora de Acta 002 §9.3. Ronda de subsanación documental concluida; antes del trabajo material delimitar encargo, entradas, oráculos, recursos y aceptación conforme al rumbo vigente. Implementación, parámetros y E1 material no acreditados.
+**siguiente_accion:** Completar los tres fuentes originales; reconciliar manifiesto y variantes; compilar desde un corte remoto completo y limpio; resolver admisión, atribución, recursos y precompromiso según Acta 002 §10.2 antes de Q1/Q2. Conservar todas las evidencias en su sede autorizada.
 
-**observaciones:** S22 permanece en ejecución; cierre limitado a la subsanación documental. S26 y S31 conservan su estado. Origen en SVperitus-dataset y recepción en Calidad del Lenguaje enlazados; no se presume traslado al laboratorio. Sin reconstrucción de comandos, Python, campaña, publicación de testigos ni renumeración.
+**observaciones:** S22 sigue en ejecución. S26 y S31 intactos. La compilación local declarada no acredita reproducción del árbol depositado. Retorno cero del cotejo no significa conformidad de entrega. Sin renumeración, GUI, publicación de testigos ni traslado al laboratorio presumido.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
