@@ -279,3 +279,45 @@ El retorno cero significa que el cotejo terminó y confirmó el balance 17/14/2/
 ### 10.5. Estado
 
 **Recepción examinada; entrega material incompleta; subsanación pendiente.** S22 permanece en ejecución. S26 y S31 conservan su estado. No se declara finalizado (p1+p3)-Bis ni se modifica el punto de retorno, la GUI o la numeración de actas. El origen está conservado y enlazado en SVperitus; no se presume que las piezas ausentes estén depositadas ni que se haya efectuado un traslado al laboratorio.
+
+## 11. Seguimiento de publicación parcial: corte 29a3c551
+
+Fecha: 2026-09-15. **Estado: subsanación pendiente; depósito aún incompleto.**
+
+### 11.1. Observación remota y límite de la recepción
+
+Se consultaron la [comparación fijada](https://github.com/juantoniolloretegea/SVperitus-dataset/compare/5e3c29bf85fd49ba44c43c894132217f7c585f2d...29a3c5517bac13511421c6a6470e9e0ceac3db24) y el árbol recursivo del repositorio en `29a3c5517bac13511421c6a6470e9e0ceac3db24`, cuya respuesta no estaba truncada. La comparación contiene únicamente dos cambios dentro de realizacion-leyenda-01:
+
+| Ruta relativa | Cambio | Bytes según árbol Git | Blob según árbol Git |
+|---|---|---:|---|
+| src/main.rs | incorporado | 2903 | `2926a28b109640b52ebe4be864954c4f572b5d96` |
+| src/lib.rs | modificado | 1569 | `4fac8f5dc9eb8a87a47aea53a3ff5ae1e5bd8aed` |
+
+Los otros dieciséis archivos de la realización mantienen sus blobs. Esta recepción examina metadatos de depósito y diferencia entre cortes; no presenta nuevas SHA-256 calculadas ni una auditoría de los dos fuentes cambiados.
+
+No aparecen en el árbol fijado:
+
+- `src/png_lectura.rs`, `src/reconocimiento.rs` ni `src/sha256.rs`.
+- `evidencias/originales-ausentes/` y los tres originales históricos declarados en el parte.
+- `NOTA_DISCREPANCIAS_MANIFIESTO.md`.
+- `insumos/RETICULA_TANDA_01.tsv`.
+
+Tampoco están depositadas las actualizaciones anunciadas de `src/parametros.rs` y `src/plantillas.rs`: conservan los blobs del corte anterior. El protocolo, el manifiesto, las decisiones pendientes y el registro de compilación conservan igualmente sus versiones anteriores.
+
+### 11.2. Declaraciones locales que no se reciben como verificadas
+
+El parte de entrega declara recuperación de los tres originales, conservación de variantes, correcciones de atribución, huella TTF, admisión de parámetros y recursos, así como una retícula de 27 celdas y una compilación local satisfactoria. Esas declaraciones quedan identificadas como **información del emisor pendiente de depósito y revisión**, no como resultados receptores acreditados.
+
+La coincidencia de las huellas históricas se comprobará al recuperar los originales efectivos. Una carpeta o una evidencia conservada exclusivamente en el entorno del emisor no constituye depósito accesible al receptor.
+
+La publicación pendiente comprende tanto módulos como originales, variantes, protocolo y evidencias. Después será necesaria la compilación desde una descarga limpia y la revisión de §10.2. Por ello, la expresión «único trabajo material abierto» no permite cerrar la subsanación ni dar por aceptadas sus soluciones.
+
+### 11.3. Siguiente acción y condiciones de cierre
+
+Continuar la publicación ya autorizada en la misma sede. Depositar el conjunto completo y coherente antes de solicitar otra revisión, conservando los originales y manifiestos anteriores. Publicar un índice de los archivos nuevos y un manifiesto corregido con rutas, tamaños y huellas completas; el índice debe distinguir las versiones históricas de los fuentes de trabajo.
+
+A continuación, recuperar el corte completo en un directorio limpio, compilar con Rust 1.98.0 mediante `cargo build --locked --release` y depositar las órdenes literales, salidas y retornos de esa ejecución nueva. La evidencia generada después de ese corte se incorporará en un commit posterior que identifique inequívocamente el corte compilado.
+
+La retícula de 27 celdas, su justificación, su orden y su parada deben quedar depositados antes de Q1/Q2. El criterio de éxito debe distinguir ajuste de parámetros y cualificación; detenerse al primer éxito de ajuste no acredita por sí solo la cualificación. Las convenciones de implementación se revisarán contra el contrato y los insumos exactos, sin ampliar el perfil ni sustituir la fuente reservada.
+
+**Q1/Q2 y E1–E16 permanecen sin ejecutar en esta recepción.** S22 continúa en ejecución; S26 y S31 conservan su estado. El presente apartado no ejecuta Python, compilaciones ni ensayos del reconocedor. No modifica el rumbo, la GUI ni la numeración de actas.
