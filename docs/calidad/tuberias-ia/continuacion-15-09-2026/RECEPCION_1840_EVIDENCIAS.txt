@@ -1,0 +1,75 @@
+Recepción 2026-09-15T18:15:23Z
+Corte: SVperitus-dataset@1840c9a950bf046b0629fc2d476ff2fc1d8955c7
+Rust/Cargo 1.98.0. Directorio /tmp/sv_recepcion_1840.
+Archivos recuperados por API GitHub; identidad comprobada con git hash-object:
+Cargo.toml 7cd3f8fa52e209bca102dd8d4fe2bc13d9ae870e OK
+Cargo.lock 2bef7e7bceaeb1d25ef031d679b0d4beca7f2afb OK
+src/atribucion.rs 71d92671195c00fffbd4a7cc47a31798743dcece OK
+src/diagnostico.rs 4a5a2b1f6042910de273dce1b5ddee30d4acd619 OK
+src/parametros.rs aa858d58e60f91ac887e338fc88d68e18edc6a83 OK
+src/plantillas.rs ba679822ffeb7a6bea3467eb1c504dd8d6243db5 OK
+src/png_lectura.rs d2a4ca8602884885868b8d83001bf0230ba8a01c OK
+src/reconocimiento.rs 5671898598f2449be6da3a391399725769f26a36 OK
+src/regiones.rs c3c9216bded2a5e2348b403acc6c1a763c60e2ce OK
+src/residuo.rs 2484f8a0a4ceeb14771f2f950a9c3732874cd261 OK
+src/sha256.rs 793d958bd4cc72dcbd42718bc38c046c522ae50b OK
+src/tanda.rs e102b67522506ec8d38c2624825ffed5322d630f OK
+src/main.rs 2926a28b109640b52ebe4be864954c4f572b5d96 OK
+src/lib.rs 791f8b7fec27d232efa6f7d696ffdd89157ac187 OK
+
+CMD (en /tmp/sv_recepcion_1840):
+PATH=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin:$PATH cargo test --locked --offline
+RC=0
+PATH=/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin:$PATH cargo build --locked --offline --release
+RC=0
+SALIDAS:
+   Compiling leyenda_contenido v0.4.0 (/tmp/sv_recepcion_1840)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.26s
+     Running unittests src/lib.rs (target/debug/deps/leyenda_contenido-e8a11635b2b567f8)
+
+running 16 tests
+test atribucion::pruebas::empate_por_epsilon ... ok
+test atribucion::pruebas::sin_solape_es_exclusiva ... ok
+test atribucion::pruebas::union_conserva_ambos_pixeles ... ok
+test atribucion::pruebas::mayor_s_se_lleva_el_pixel_compartido ... ok
+test parametros::pruebas::comprobar_rechaza_struct_manual ... ok
+test reconocimiento::pruebas::filas_con_s_lejos_no_empatan ... ok
+test parametros::pruebas::rechaza_duplicado ... ok
+test reconocimiento::pruebas::filas_distintas_mismo_x_empatan ... ok
+test tanda::pruebas::a_igual_s_prefiere_theta_mayor ... ok
+test tanda::pruebas::a_igual_s_y_theta_prefiere_rho_menor ... ok
+test tanda::pruebas::empate_residual_en_claves_c ... ok
+test tanda::pruebas::doce_y_trece_seis_empatan_distancia_si_theta_igual ... ok
+test tanda::pruebas::a_igual_s_theta_rho_prefiere_r_max_menor ... ok
+test tanda::pruebas::n_min_no_desempata_claves_c ... ok
+test tanda::pruebas::prefiere_s_proximo_a_128 ... ok
+test parametros::pruebas::rechaza_nan ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running unittests src/main.rs (target/debug/deps/leyenda_contenido-a1bd5779985dfd99)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests leyenda_contenido
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Compiling leyenda_contenido v0.4.0 (/tmp/sv_recepcion_1840)
+    Finished `release` profile [optimized] target(s) in 1.16s
+
+CMD:
+/workspace/scratch/caa8aeda07ed/continuacion-auditoria/rust/bin/rustc --edition=2021 /tmp/RECEPCION_R1_ORDEN.rs --extern leyenda_contenido=/tmp/sv_recepcion_1840/target/release/libleyenda_contenido.rlib -L dependency=/tmp/sv_recepcion_1840/target/release/deps -o /tmp/recepcion_r1_orden
+RC=0
+/tmp/recepcion_r1_orden
+RC=0
+Mismo pixel; S=0.95,0.80,0.79; epsilon=0.02
+orden [0.95,0.80,0.79]: Exclusiva
+orden [0.80,0.79,0.95]: Empate
+Contraejemplo de dependencia del orden reproducido; no es Q1/Q2.
+
+Al reproducir: recuperar los 14 archivos y cotejar sus blobs; compilar con Rust/Cargo 1.98.0 y dependencias exactas del lockfile. Ajustar únicamente rutas del conductor al entorno. El conductor confirma el defecto, no una conformidad. Sin Q1/Q2 ni E1-E16.

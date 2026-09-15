@@ -1,5 +1,7 @@
 # Continuación · 15 de septiembre de 2026
 
+**Recepción vigente — S22:** [Acta 002 §15](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#15-recepción-r1r4-y-objeción-de-atribución-reproducida). Corte 1840c9a9: 16 pruebas y compilación repetidas; contraejemplo de orden en R1 reproducido. Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes. Las entradas anteriores conservan su corte histórico.
+
 ## Estado vigente y accesos
 
 **Privacidad y seguridad — S32, en ejecución:** [parte de trabajo y alcance](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md). Correspondencia con OP-CYB-001; contratos y pruebas pendientes.

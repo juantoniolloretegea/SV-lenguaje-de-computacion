@@ -387,3 +387,39 @@ Se cotejaron otra vez los 25 archivos del corte tras compilar: tamaños y blobs 
 [Paquete conservado, fuente del cotejo, huellas, compilación e identidad posterior](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md). Sede y rama asignadas; commit `78d87137ee195ca81bdf4471084b7039a05f164a`. Los intentos fallidos anteriores se conservan, pero su estado pendiente queda superado por esta ejecución satisfactoria.
 
 **Punto de continuidad:** transferencia y compilación completadas. Siguiente paso: revisión acotada de §10.2 antes de cualificar el reconocedor. Q1/Q2 y E1–E16 no se ejecutaron; no se ejecutó Python. El contrato permanece candidato. S22 sigue en ejecución y no se declara cierre de (p1+p3)-Bis; S26 y S31 conservan su estado.
+
+
+## 15. Recepción R1–R4 y objeción de atribución reproducida
+
+Fecha de recepción: 2026-09-15T18:15:23Z. Corte del Lenguaje leído: `514dc0b7583f0ea7f2f30739ccce13c3c9f51199`. Rectores consultados: Pilares, perfiles/contratos/ensamblaje, transición IMM y Actas 001–002. Esta recepción sucede al §14, que conserva el resultado del corte anterior.
+
+**Entrega recibida:** Peritus, rama `dominio-inmunologia`, corte `1840c9a950bf046b0629fc2d476ff2fc1d8955c7`; fuentes completos en `fdc211fec991b062bc5cd8668536e0c6f7f6a76f`. [Subsanación declarada](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/1840c9a950bf046b0629fc2d476ff2fc1d8955c7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/SUBSANACION_R1_R4.md). La comparación desde 00a8a1ae contiene quince archivos dentro de la sede asignada; no modifica /4, la adenda ni la retícula. Entre fdc211fe y 1840c9a9 solo se añade la evidencia de descarga.
+
+### 15.1. Comprobación material receptora
+
+Se recuperaron por separado los doce archivos Rust de src y Cargo.toml/Cargo.lock del corte 1840c9a9, en un directorio temporal independiente. Los catorce blobs locales coinciden con GitHub. Se ejecutaron con Rust/Cargo 1.98.0 `cargo test --locked --offline` (16 pruebas, retorno 0) y `cargo build --locked --offline --release` (retorno 0), utilizando las dependencias disponibles en caché. No se incorporaron fuentes privados. Una primera copia instrumental añadió una línea final; se corrigió la transferencia, se cotejaron los catorce blobs y se repitieron ambas órdenes sobre los bytes exactos. Esa primera ejecución no fundamenta la identidad acreditada aquí.
+
+[Órdenes, identidad y salidas receptoras](RECEPCION_1840_EVIDENCIAS.txt). El archivo de origen COMPILACION_DESCARGA_PUBLICADA.txt coteja siete fuentes y remite a una compilación anterior; esta recepción aporta ejecución propia sobre los catorce archivos recuperados. Cargo.toml declara rust-version 1.98; la versión 4 del lockfile por sí sola no demuestra que únicamente 1.98 pueda leerlo.
+
+### 15.2. Alcance de R1–R4
+
+| Punto | Resultado receptor |
+|---|---|
+| R1 | La selección del mayor S está escrita y pasan sus pruebas de dos máscaras. El cierre completo no se acepta: el empate con tres máscaras depende del orden. |
+| R2 | Se observa la comprobación de metrics antes de rasterize y comprobar invocada por procesar_png. Recibido en ese alcance; no acredita recursos globales ni ensayo con TTF hostil. |
+| R3 | Protocolo 02 exige Q1 y Q2 y selección posterior por §C; n_min no desempata. Pruebas unitarias repetidas. La tanda real no se ha ejecutado. El comparador usa tolerancia 1e-4: no se extiende su aceptación a tuplas arbitrarias fuera de las 27 congeladas. |
+| R4 | Comprobación entre filas escrita y sus dos pruebas repetidas. No equivale a medir alineación sobre los PNG históricos. |
+
+**Contraejemplo de R1.** Tres máscaras contienen el mismo píxel, con S = 0,95; 0,80; 0,79 y epsilon = 0,02. La función publicada atribuir devuelve Exclusiva con el orden [0,95; 0,80; 0,79], pero Empate con [0,80; 0,79; 0,95]. En el primer recorrido solo compara cada candidato con el ganador provisional y omite el empate 0,80/0,79. /4 §B.4 exige rechazar ese par solapado.
+
+Se ha ejecutado un conductor Rust externo enlazado con la biblioteca publicada, sin modificarla: [fuente](RECEPCION_R1_ORDEN.rs), resultado en la evidencia anterior. Es una prueba instrumental de la función pública con máscaras sintéticas; no demuestra que R01 o R06 produzcan ese solapamiento ni ejecuta Q1/Q2.
+
+### 15.3. Siguiente acción acotada
+
+Corregir únicamente la detección de empates de R1 para comprobar los pares de máscaras aceptadas que comparten píxel con independencia de su orden; preservar la atribución al mayor S y M_expl como unión geométrica. Añadir regresión de las seis permutaciones del contraejemplo y un control sin empate. Conservar /4, adenda, retícula y parámetros. Publicar fuentes y evidencias en la sede y rama existentes; repetir pruebas y compilación del corte publicado. No ejecutar Q1/Q2 en esta corrección.
+
+Después de recibir esa corrección, verificar disponibilidad e identidad del TTF contratado y de R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas. Si varias celdas ganadoras conservan las cuatro claves de §C iguales, el empate residual es fracaso; no se usa n_min ni se amplía la retícula.
+
+Permanecen sin acreditar la independencia del códec y la correspondencia de píxeles U+007C/fontdue frente a resvg. TTF exacto privado; E1 sin testigo; Q1/Q2 y E1–E16 no ejecutados. La cualificación no constituye por sí sola aceptación del método.
+
+**Estado:** S22 en ejecución; contrato candidato; reconocedor no cualificado; (p1+p3)-Bis abierto. S32 conserva su seguimiento de privacidad y seguridad; la revisión del parte comunicada por el usuario se recibirá separadamente cuando esté disponible. Sin cambios en OP-CYB-001, GUI o numeración de actas. Espejos históricos conservan sus cortes.

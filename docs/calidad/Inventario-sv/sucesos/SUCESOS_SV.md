@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T17:07:58Z
+**fecha_actualizacion_utc:** 2026-09-15T18:15:23Z
 
 **fecha_fin_utc:** —
 
@@ -770,21 +770,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**cortes_de_entrada:** Precompromisos: Lenguaje c7d06a815979cecbcd9909ac053447667692efbd; laboratorio 8cc94133a59786dd18cf31aef735485c35d150dc.
+**cortes_de_entrada:** Precompromisos: Lenguaje c7d06a815979cecbcd9909ac053447667692efbd; laboratorio 8cc94133a59786dd18cf31aef735485c35d150dc. Recepción: Peritus 1840c9a950bf046b0629fc2d476ff2fc1d8955c7; fuentes fdc211fec991b062bc5cd8668536e0c6f7f6a76f; Lenguaje 514dc0b7583f0ea7f2f30739ccce13c3c9f51199.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Transferencia y compilación del corte publicado completadas. fdeflate 0.3.7 recibido y admitido contra Cargo.lock. Cargo build --locked --release del corte 0e36549f terminó con retorno 0. Evidencia depositada en 78d87137ee195ca81bdf4471084b7039a05f164a. Estudio acotado de privacidad BIS-03 completado documentalmente: actores, flujos, sedes, fuentes europeas y controles de aceptación. Revisión previa de Grok en 00a8a1ae recibida como antecedente con objeciones abiertas.
+**resultado:** Entrega R1–R4 de 1840c9a9 recibida. Fuentes y dependencias completos: catorce blobs cotejados, 16 pruebas y compilación release repetidas. R1 no se cierra: contraejemplo de dependencia del orden con tres máscaras reproducido. R2–R4 recibidos en el alcance descrito en Acta 002 §15. Contrato candidato y reconocedor no cualificado.
 
-**verificacion:** Rust/Cargo 1.98.0. Paquete de 27188 bytes con SHA-256 concordante. Compilación release RC=0; identidad posterior de los 25 archivos del corte concordante. Sin modificación de fuentes ni Cargo.lock. Q1/Q2 y E1–E16 no ejecutados. En esta incorporación: revisión documental y concordancia de registros; diez pares de pruebas de privacidad especificados, cero ejecutados. Sin nueva compilación.
+**verificacion:** Rust/Cargo 1.98.0: cargo test --locked --offline, 16 pruebas RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: mismas máscaras devuelven Exclusiva o Empate según orden. Sin Q1/Q2 ni E1–E16.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_1840_EVIDENCIAS.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_R1_ORDEN.rs
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; RETP-2026-242
+**referencia_calidad:** Acta 002 §15; RETP-2026-244; privacidad en S32 / RETP-2026-243
 
-**siguiente_accion:** Recibir subsanación del reconocedor antes de cualificación. Constituir contratos de privacidad por flujo antes de congelar interfaces afectadas o cerrar BIS-03; implementar y probar antes de habilitar conectores o tratar datos personales, lo primero. Retorno según Acta 001; GUI cancelada.
+**siguiente_accion:** Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes.
 
-**observaciones:** S22 y Bis continúan en ejecución. Estudio documental no equivale a cumplimiento, anonimización o controles implementados. Incorporación en Acta 001 §7; sin cambios de fuentes, contratos del reconocedor, parámetros o reservas. Sin Python ni renumeración. Espejos históricos conservan su corte; no se afirma sincronización material de laboratorio.
+**observaciones:** Revisión 41. No se acepta el cierre global declarado de R1–R4. Es una prueba instrumental de la función pública, no un resultado sobre PNG históricos. S32 y su parte permanecen intactos, pendientes de la revisión comunicada. Bis abierto; GUI cancelada; sin renumeración, nuevas celdas o cambios de contrato. Espejos históricos conservan su corte.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

@@ -2320,3 +2320,15 @@ RETP-241 aparece remitido en documentos previos pero su asiento no está en CSV/
 S32 se registra en ejecución: el análisis documental ha comenzado; faltan la correspondencia completa por flujo, los contratos concretos y las pruebas materiales aplicables. Los diez pares del estudio BIS-03 permanecen como propuestas sin ejecutar. La especificación deberá resolverse antes de congelar interfaces afectadas o cerrar BIS-03; los controles materiales precederán a la habilitación del flujo correspondiente. Los pendientes de fases posteriores requieren seguimiento concreto enlazado para un eventual cierre documental.
 
 Entrada: Lenguaje 8fa67a917d78072582c24af76f3ce1f47d6c079d; CYB bbac1b44b1d3b845305e9cde492a08221206d631. Se conservan las filas e historiales anteriores; sin modificación del universo, código o campañas.
+
+<a id="retp-244"></a>
+
+### RETP-2026-244 · S22 · Recepción R1–R4 y contraejemplo de atribución
+
+Entrega R1–R4 de 1840c9a9 recibida. Fuentes y dependencias completos: catorce blobs cotejados, 16 pruebas y compilación release repetidas. R1 no se cierra: contraejemplo de dependencia del orden con tres máscaras reproducido. R2–R4 recibidos en el alcance descrito en Acta 002 §15. Contrato candidato y reconocedor no cualificado.
+
+Rust/Cargo 1.98.0: cargo test --locked --offline, 16 pruebas RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: mismas máscaras devuelven Exclusiva o Empate según orden. Sin Q1/Q2 ni E1–E16.
+
+[Recepción, alcance y siguiente paso](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#15-recepción-r1r4-y-objeción-de-atribución-reproducida). Corregir R1: empate entre máscaras solapadas independiente del orden; seis permutaciones y control sin empate; pruebas y compilación del corte publicado. Después comprobar TTF y PNG R01/R06 antes de cualificación sobre 27 celdas. S32 mantiene contratos de privacidad pendientes.
+
+Fecha 2026-09-15T18:15:23Z. Corte del Lenguaje 514dc0b7583f0ea7f2f30739ccce13c3c9f51199; Peritus 1840c9a950bf046b0629fc2d476ff2fc1d8955c7. S32 y su parte conservados; no se modifica OP-CYB-001, el contrato /4, la retícula o los fuentes entregados.
