@@ -1,5 +1,11 @@
 # Léame primero: del frame a la colaboración auditable
 
+## Recepción de leyenda R06 · 15/09/2026 · S22
+
+[Acta 002: cotejo de identidad y contrato candidato](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). Se recibe la ejecución auxiliar 02 como evidencia declarada y se coteja en Rust la huella del fuente depositado. LEYENDA-CONTENIDO/2 incorpora residuo y evaluación reservada, pero conserva reparos sobre tolerancias, separadores y comprobación del fondo. No hay reconocedor implementado ni campaña nueva de lectura de leyenda. S22 y S26 siguen en ejecución. El rumbo del Acta 001 se conserva.
+
+---
+
 ## Continuación vigente · 15/09/2026 · S30
 
 La nueva sede de trabajo y actas de Calidad es [continuacion-15-09-2026](../continuacion-15-09-2026/inicio.md). Allí se conservan el [mapa HTML](../continuacion-15-09-2026/mapa/MAPA.html) y el [Acta 001](../continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md).

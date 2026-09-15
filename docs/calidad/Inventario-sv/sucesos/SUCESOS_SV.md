@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T03:06:57Z
+**fecha_actualizacion_utc:** 2026-09-15T06:30:50Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Mapa de continuidad recibido. El resultado raster/captor RETP241 está conservado en laboratorio 86441ad4d375e31737dfcead0b1fd9cd52161883: ocho sondas coincidentes con esperados acotados; la validación completa del significado de la leyenda no está acreditada. Bis permanece abierto.
+**resultado:** Recepción documental del cotejo auxiliar de identidad y de LEYENDA-CONTENIDO/2 en depósito 18e7178e6ec7efbb10863f4d081422f94ef163c2. Se incorporan medidas de residuo, evaluación reservada y clasificación de fallos. Contrato candidato con reparos LC2-01/02/03; significado de leyenda sin acreditar. RETP241 conserva su resultado histórico; Bis abierto.
 
-**verificacion:** Cotejo documental del mapa: 75 nodos, 144 ámbitos y 329 enlaces. Se referencia el resultado histórico de laboratorio; cero nuevas ejecuciones experimentales por esta recepción.
+**verificacion:** Diff del depósito: tres archivos añadidos y cuatro anteriores conservados. Huella del fuente de 9053 bytes cotejada en Rust 1.98.0: 6698383e5e768cf32da6b0d79f283c550810cc6c0c428f6bfc816679ec6098df. Ejecución auxiliar 02 recibida como evidencia declarada; no reproducción independiente de sus ocho identidades ni campaña del reconocedor.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/18e7178e6ec7efbb10863f4d081422f94ef163c2/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_2.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/18e7178e6ec7efbb10863f4d081422f94ef163c2/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/COTEJO_IDENTIDAD_REEJECUCION_02.txt
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Continuar desde continuacion-15-09-2026 con tareas que no dependan de capacidades pendientes. Resolver cada bloqueo antes de utilizar la capacidad afectada. Compilar y revisar de forma reforzada el bloque antes del retorno al punto previo a la adenda CYB.
+**siguiente_accion:** Subsanar el contrato: coherencia entre tolerancia de residuo y E2; régimen medible de separadores; comprobación explícita del fondo blanco y transparencia. Mantener E1 sin materializar y parámetros sin cualificar hasta el encargo posterior; no repetir campañas históricas.
 
-**observaciones:** S24 cancelado como secuencia automática de GUI. Persisten Bis, S26 y sus límites. Rutas para el agente de Inmunología y posible paquete Qwen en el motor de IA se decidirán según la etapa y sus dependencias; no se inician aquí.
+**observaciones:** Recepción de avance documental y límites técnicos. S22 y S26 en ejecución; sin reconocedor implementado, nueva campaña SV ni cierre de Bis. S24 conserva la cancelación de la secuencia automática de GUI. Se mantiene el rumbo del Acta 001.
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
