@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T12:30:51Z
+**fecha_actualizacion_utc:** 2026-09-15T15:46:17Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Transferencia de realizacion-leyenda-01 completada. Código recibido en 0e36549f; ZIP, originales, variantes y manifiesto depositados en 36bd96f81af9b19669e1f902240493000ef36399. Compilación limpia aún pendiente por descarga de dependencia.
+**resultado:** Transferencia y compilación del corte publicado completadas. fdeflate 0.3.7 recibido y admitido contra Cargo.lock. Cargo build --locked --release del corte 0e36549f terminó con retorno 0. Evidencia depositada en 78d87137ee195ca81bdf4471084b7039a05f164a.
 
-**verificacion:** Rust 1.98.0: ZIP 40888 bytes y SHA-256 concordante; tres originales concordantes; 32 archivos del ZIP, 22 iguales al corte, 3 distintos conservados y 7 adicionales. CRC sin errores mediante unzip. Catorce blobs del depósito comprobados en remoto.
+**verificacion:** Rust/Cargo 1.98.0. Paquete de 27188 bytes con SHA-256 concordante. Compilación release RC=0; identidad posterior de los 25 archivos del corte concordante. Sin modificación de fuentes ni Cargo.lock. Q1/Q2 y E1–E16 no ejecutados.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/36bd96f81af9b19669e1f902240493000ef36399/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/DEPOSITO_RECEPCION_ZIP.md
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Retomar desde Acta 002 §13: obtener dependencias exactas y completar compilación limpia del corte remoto; revisar §10.2 antes de Q1/Q2. La transferencia ya está completada; no repetir solicitudes de originales.
+**siguiente_accion:** Revisar de forma acotada las condiciones de §10.2 antes de cualificar el reconocedor. Retomar desde Acta 002 §14; no repetir transferencia ni tratar la compilación como pendiente.
 
-**observaciones:** S22 en ejecución; S26 y S31 intactos. Cierre limitado a transferencia y custodia. Mismas rama y sede; fuentes de trabajo conservados. Sin Python, Q1/Q2, E1–E16, GUI ni renumeración.
+**observaciones:** S22 permanece en ejecución; S26 y S31 intactos. La compilación satisfactoria no cualifica el reconocedor ni cierra Bis. Misma sede y rama; dependencia y registros conservados. Sin Python, GUI ni renumeración.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

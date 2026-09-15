@@ -375,3 +375,15 @@ Se conservan 32 archivos dentro del ZIP: 22 coinciden con el corte de trabajo, 3
 La compilación limpia sigue pendiente por el impedimento de descarga documentado en §12.1. El paso siguiente es completar esa compilación con las dependencias exactas de Cargo.lock y revisar después las condiciones de §10.2. No debe repetirse la solicitud de los originales ni tratarse el ZIP como ausente a partir de esta recepción.
 
 S22 permanece en ejecución: el cierre de la transferencia no cierra (p1+p3)-Bis ni cualifica el reconocedor. S26 y S31 conservan sus estados. El contrato permanece candidato; Q1/Q2 y E1–E16 no se ejecutaron. Se conserva el rumbo y el punto de retorno, sin GUI ni renumeración.
+
+## 14. Dependencia recibida y compilación completada
+
+Fecha: 2026-09-15. **Compilación limpia del corte publicado: completada, retorno cero.**
+
+El paquete fdeflate 0.3.7 aportado tiene 27.188 bytes y SHA-256 `1e6853b52649d4ac5c0bd02320cddc5ba956bdb407c4b75a2c6b75bf51500f8c`, concordante con Cargo.lock. Se cotejó en Rust antes de incorporarlo a la caché. Cargo pudo descargar las restantes dependencias y ejecutar `cargo build --locked --release` sobre los archivos recuperados de `0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797`, con rustc y cargo 1.98.0 y retorno 0.
+
+Se cotejaron otra vez los 25 archivos del corte tras compilar: tamaños y blobs intactos, incluido Cargo.lock. No se incorporaron fuentes locales distintos de los publicados. La fase de compilación comunicó 16,55 segundos, sin atribuir esa duración a la descarga y preparación completas.
+
+[Paquete conservado, fuente del cotejo, huellas, compilación e identidad posterior](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md). Sede y rama asignadas; commit `78d87137ee195ca81bdf4471084b7039a05f164a`. Los intentos fallidos anteriores se conservan, pero su estado pendiente queda superado por esta ejecución satisfactoria.
+
+**Punto de continuidad:** transferencia y compilación completadas. Siguiente paso: revisión acotada de §10.2 antes de cualificar el reconocedor. Q1/Q2 y E1–E16 no se ejecutaron; no se ejecutó Python. El contrato permanece candidato. S22 sigue en ejecución y no se declara cierre de (p1+p3)-Bis; S26 y S31 conservan su estado.

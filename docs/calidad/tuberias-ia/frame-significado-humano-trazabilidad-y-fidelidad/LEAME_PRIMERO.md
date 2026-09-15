@@ -1,5 +1,7 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Punto de continuidad actualizado:** transferencia y compilación del corte publicado completadas; Rust 1.98.0, retorno cero. [Acta 002 §14](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#14-dependencia-recibida-y-compilación-completada). Sigue la revisión de §10.2 antes de cualificar; Q1/Q2 no ejecutados. Las referencias anteriores a compilación pendiente son históricas.
+
 > **Punto de continuidad:** transferencia y custodia completadas en `36bd96f81af9b19669e1f902240493000ef36399`; ZIP y originales recuperables. La compilación limpia sigue pendiente por descarga de dependencia. [Acta 002 §13](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#13-transferencia-completada-y-punto-de-continuidad). S22 continúa en ejecución; Q1/Q2 no ejecutados.
 
 > **Recepción actualizada:** corte `0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797`, veinticinco archivos cotejados y diez fuentes presentes. Compilación bloqueada al descargar una dependencia; originales/ZIP aún pendientes de recepción. Véase [Acta 002 §12](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#12-recepción-del-código-depositado-en-0e36549f).
