@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Recepción LEYENDA-CONTENIDO/3 · S22 · 15/09/2026.** Identidad de los dos adjuntos comprobada; depósito limitado a dos incorporaciones. LC2-02 subsanado en alcance documental. LC2-01 y LC2-03 siguen pendientes, junto con la autonomía de fórmulas y tabla de independencia. Véase [Acta 002, recepción /3](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). No se habilita implementación ni campañas.
+
+
 > **Complemento S31 · revisión 4 · 15/09/2026.** Confirmadas 482 huellas de controles y 2410 campos compartidos con la cualificación pública. Declarada la huella individual del generador contenido en el ZIP fijado, sin atribuir anterioridad a la ejecución. Registrada exposición declarada de una unidad revisora a la referencia S6: limita futuras evaluaciones ciegas y no invalida automáticamente entregas anteriores. Véase el [parte S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Continúa la subsanación del contrato candidato R06.
 
 

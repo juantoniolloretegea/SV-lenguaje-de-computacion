@@ -45,3 +45,51 @@ Se recibe el cotejo auxiliar y la nueva especificación como documentación traz
 S22 y S26 mantienen su estado en ejecución y sus pendientes. Se conserva la cancelación de la secuencia automática de GUI, así como la revisión reforzada previa al retorno indicado en el Acta 001. No se activan rutas de Inmunología, Qwen ni la batería CYB.
 
 Esta acta registra aportaciones técnicas y límites de evidencia; no incorpora incidencias de coordinación. No adopta una nueva decisión de diseño material ni altera los asientos RETP históricos.
+
+## 6. Recepción de LEYENDA-CONTENIDO/3 · 15 de septiembre de 2026
+
+**Corte receptor:** Lenguaje `5e6edf78d8714bbbd57253991e48ba993e79e7a8`. **Depósito examinado:** `SVperitus-dataset@b73c2b28f6a8899b2024eb3f9dee975bc8037016`, antecedente `18e7178e6ec7efbb10863f4d081422f94ef163c2`. Se añade esta recepción a la presente acta sin modificar las secciones anteriores ni su numeración.
+
+### 6.1. Identidad y alcance del depósito
+
+Los adjuntos recibidos se cotejaron en Rust 1.98.0 con los blobs del directorio remoto fijado:
+
+| Archivo | Bytes | Blob Git | SHA-256 |
+|---|---:|---|---|
+| CONTRATO_CANDIDATO_LEYENDA_CONTENIDO_3.md | 11201 | `3da8e1d6e03a9f09ba4ffdbb0e36a5de7b920fa1` | `9e9937dd11ab74c4ccab2b02f958668daa9677344bce3de5a19ac2d95e858105` |
+| SUBSANACION_ENTREGA_03.md | 2940 | `6c6e67d42d6fae857a6fe1789772a682a602d7b3` | `88ca1bb77524fcf09842082a47db9839dd4417c7dd61a037e0aadfb276ff5e3c` |
+
+La [comparación de los cortes](https://github.com/juantoniolloretegea/SVperitus-dataset/compare/18e7178e6ec7efbb10863f4d081422f94ef163c2...b73c2b28f6a8899b2024eb3f9dee975bc8037016) muestra exclusivamente estos dos archivos añadidos. Los siete anteriores se conservan. La evidencia acredita identidad de los documentos, no ejecución de un reconocedor.
+
+### 6.2. Dictamen documental de los reparos
+
+**LC2-02:** se recibe la subsanación del régimen de separadores en alcance documental: dos separadores obligatorios, orden y distancias especificados, con esperados para ausencia, sustitución y contacto. La cadena del [SVG histórico](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/e9e4a359bd3d54e2e397c4747f11b7c69d6fbb2f/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/MUESTRA_SVG_PRODUCIDA.svg) contiene los dos separadores. No se acredita cualificación numérica ni comportamiento material.
+
+**LC2-01 permanece pendiente.** La sección B presenta tres dificultades concretas:
+
+1. `H_T` se define como vecindad-4 de `M_T` menos `M_T`. Por construcción, todo píxel de `H_T` es 4-adyacente a `M_T`. La condición posterior de una marca contenida en ese anillo pero no 4-adyacente a `M_T`, utilizada para justificar E2b, no puede satisfacerse bajo esas mismas definiciones. Debe distinguirse, si corresponde, la adyacencia a la máscara geométrica de la adyacencia a tinta observada, sin tratarlas como equivalentes.
+2. Se definen componentes de `M_B`, pero para el polvo se usan componentes del residuo `M_B` menos las máscaras. La primera prohibición se refiere a cualquier componente grande no contenida en las máscaras: una componente de tinta aceptada unida a un píxel de halo puede cumplirla. La tolerancia de halo y esa prohibición pueden asignar decisiones opuestas. Debe fijarse el conjunto exacto sobre el que se calcula cada componente y la precedencia.
+3. El contrato usa `S`, `R_abs` y `R_rel` sin recuperar sus fórmulas de la versión /2. También remite a la tabla de independencia anterior sin incorporarla. No cumple la exigencia de texto autónomo. Deben explicitarse las fórmulas, sus dominios, las máscaras y el tratamiento del halo en cada medida.
+
+**LC2-03 permanece pendiente.** La sección C.4 introduce una etapa de fondo, pero:
+
+- Declara `F=L\\B` y después solo impone clasificación alfa/RGB en todo el lienzo y un recuento en el marco. Cualquier píxel opaco no blanco se clasifica como tinta; así, el criterio no impone por sí mismo blancura en el resto de la región F. Debe especificarse qué región se exige blanca y cómo se distingue de las zonas autorizadas de dibujo, sin recurrir al color observado para justificar la propia región.
+- Acepta transparencia total como blanco mientras declara un perfil opaco heredado. Esa composición necesita una regla explícita y fundamentada en el perfil. Ocho bits de profundidad no equivalen por sí solos a opacidad. Si el perfil exige fondo opaco, no procede ampliarlo silenciosamente.
+- E15/E16 deben cubrir inequívocamente las decisiones adoptadas para transparencia y fondo, preservando la precedencia de fallos de decodificación.
+
+Son reparos de especificación obtenidos por lectura y razonamiento sobre las definiciones. No se presentan como falsos positivos ni rechazos observados en una campaña.
+
+### 6.3. Evidencia del cotejo receptor
+
+- [Fuente completo](COTEJO_RECEPCION_LEYENDA_03.rs): 7960 bytes; SHA-256 `0375a16d8e904b738e0f297ad1fa951b1e00c477d73db6a469296892fb237cd1`.
+- [Comandos y salida](COTEJO_RECEPCION_LEYENDA_03_SALIDA.txt): 586 bytes; SHA-256 `7152a1427240a200a57cc52e5798317134b010e00113faddb23ce3baddb4c887`.
+
+Compilación y ejecución con Rust 1.98.0, retornos 0. Se reutilizan funciones históricas de huella; no se presenta validación criptográfica independiente. El cotejo receptor no acredita retrospectivamente el código o los comandos de otra ejecución que no se hayan entregado.
+
+### 6.4. Continuidad y conservación de evidencia
+
+LEYENDA-CONTENIDO/3 permanece candidata, sin autorización de implementación. La siguiente subsanación debe limitarse a LC2-01, LC2-03 y la autonomía del documento, conservando la solución documental de LC2-02. E1 permanece sin testigo material; no se cualifican parámetros ni se repiten campañas. S22 y S26 conservan el estado en ejecución.
+
+Las entregas posteriores deberán conservar en una sede expresamente autorizada el texto íntegro, el código auxiliar realmente utilizado, las versiones y comandos, las salidas completas y un manifiesto de tamaños, huellas y procedencia. Los resultados históricos irrecuperables no se reconstruyen ni se presentan como originales. Los contenidos reservados mantienen su custodia privada; una referencia a una sede temporal no constituye conservación verificable.
+
+Esta recepción actualiza S22 y su historial, así como el Léame primero. No altera S31, RETP, HTML, reservas, código productivo ni el rumbo vigente.
