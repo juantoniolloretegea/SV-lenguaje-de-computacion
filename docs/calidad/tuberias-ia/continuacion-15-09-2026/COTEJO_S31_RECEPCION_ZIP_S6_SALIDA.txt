@@ -1,0 +1,9 @@
+Rust: rustc 1.98.0 (88d9e12ae 2026-08-18)
+Compilación: rustc --edition=2021 COTEJO_S31_RECEPCION_ZIP_S6.rs --extern flate2=<rlib de flate2 1.1.9> -L dependency=<dependencias del paquete S31> -o cotejo_zip_s6
+RC_COMPILE=0
+Ejecución: cotejo_zip_s6 CONTROLES_CUALIFICACION.zip
+RC_RUN=0
+IDENTIDAD bytes=1811714 blob=ffe5c4a9b86b26c2409abe4239e6355f7a3bef19 sha256=48e2c1e5acc384687dcd346613a945bf18798a105c72b94b6adb72be23115e1a
+ZIP entradas=487 controles_json=482 auxiliares=5 metodo=8 nombres_unicos=si
+INTEGRIDAD cabeceras_y_limites=ok descompresion=487/487 crc=487/487 bytes_descomprimidos=13216586
+ALCANCE recuperacion_e_identidad; sin_extraccion_a_archivos; sin_ejecucion_de_contenidos; sin_repeticion_de_controles

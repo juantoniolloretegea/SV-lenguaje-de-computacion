@@ -1065,7 +1065,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T07:57:42Z
 
-**fecha_actualizacion_utc:** 2026-09-15T08:07:22Z
+**fecha_actualizacion_utc:** 2026-09-15T08:41:50Z
 
 **fecha_fin_utc:** 2026-09-15T08:07:22Z
 
@@ -1079,15 +1079,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** Continuidad S30 y Acta 001; contrato candidato R06 recibido en S22 y Acta 002. La reserva P3 permanece cerrada.
 
-**resultado:** C01–C05 concluidos en alcance acotado: precisión 761/691/70 y 101/329 enlaces; PNG recuperado y cotejado; intento de recuperación del ZIP S6 concluido sin bytes utilizables; identidad diferenciada de lotes y vigencias públicas documentadas. Contrato R06 pendiente de subsanación.
+**resultado:** C01–C05 concluidos en alcance acotado. Recepción posterior C03: ZIP S6 recuperado y cotejado por tamaño, blob Git y SHA-256; 487 entradas descomprimidas en memoria con CRC conforme. PNG ya recuperado. Se resuelve la disponibilidad de ambos archivos sin ampliar la cualificación histórica. Contrato R06 pendiente de subsanación.
 
-**verificacion:** Rust 1.98.0: HTML y PNG coinciden con sus blobs; once entradas públicas cotejadas antes de analizar; 75 nodos, 691 referencias atribuidas y 70 sin nodo. Página: 99 enlaces añadidos a 230 del ZIP, ninguno retirado; demás campos compartidos concordantes. Fuente y salida conservados. No se reejecutaron campañas.
+**verificacion:** Rust 1.98.0: ZIP 1811714 bytes; blob ffe5c4a9b86b26c2409abe4239e6355f7a3bef19; SHA-256 48e2c1e5acc384687dcd346613a945bf18798a105c72b94b6adb72be23115e1a; cabeceras y límites conformes; 487/487 descompresiones y CRC; 482 controles JSON y cinco auxiliares. Compilación y ejecución 0. Comprobaciones previas de C01–C04 conservadas en el parte y la revisión 2.
 
-**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31.rs; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31_SALIDA.txt; docs/calidad/tuberias-ia/continuacion-15-09-2026/ENTRADAS_S31.tsv
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31.rs; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31_SALIDA.txt; docs/calidad/tuberias-ia/continuacion-15-09-2026/ENTRADAS_S31.tsv; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31_RECEPCION_ZIP_S6.rs; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S31_RECEPCION_ZIP_S6_SALIDA.txt
 
 **referencia_calidad:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md
 
-**siguiente_accion:** Retomar la subsanación del contrato candidato de leyenda R06. Conservar el ZIP S6 como pendiente de recuperación y las condiciones de asociación, identificación y auxiliares antes de P3.
+**siguiente_accion:** Retomar la subsanación del contrato candidato de leyenda R06. Mantener las condiciones de asociación, identificación y auxiliares antes de P3. No repetir controles S6 por esta recepción.
 
-**observaciones:** Finalización del alcance C01–C05, no cierre de la recuperación S6 ni compatibilidad integral P3. S22/S26 intactos. Sin renumeración, cambios del HTML, nuevas ramas, publicación de contenidos privados ni apertura de reservas. Sede canónica actualizada; espejos históricos conservan su corte.
+**observaciones:** Recepción documental posterior al cierre: S31 conserva estado finalizado y fecha de fin; revisión 3 con nueva evidencia C03. La limitación de recuperación de la revisión 2 queda conservada como antecedente y resuelta por esta recepción. Sin extracción de miembros a disco, ejecución de programas contenidos, nuevas campañas, publicación del ZIP privado, renumeración ni apertura de reservas. S22/S26 intactos. Sede canónica actualizada; espejos históricos conservan su corte.
 

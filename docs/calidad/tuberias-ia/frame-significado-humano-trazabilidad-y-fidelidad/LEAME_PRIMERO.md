@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Recepción posterior S31 · revisión 3 · 15/09/2026.** El ZIP de controles S6 se ha recuperado: 1811714 bytes, blob Git concordante y 487/487 entradas con descompresión y CRC conformes en Rust 1.98.0. Se resuelve el pendiente de recuperación de C03, conservando el cierre anterior. No se repiten controles ni se amplía la cualificación histórica. Véase la recepción añadida al [parte S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Continúa la subsanación del contrato candidato de leyenda R06.
+
+
 ## S31 · Cierre de la corrección acotada · 15/09/2026
 
 [Parte S31 y cierre por unidades](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Finalizado en el alcance delimitado: recuentos precisados, identidad de entradas cotejada, PNG recuperado y condiciones documentales de P3 diferenciadas. El ZIP S6 permanece pendiente de recuperación; la reserva sigue cerrada. La página incorpora 99 enlaces sobre los 230 de la salida del ZIP, con concordancia en los demás campos compartidos. Se conservan el mapa histórico y los registros anteriores. Relevo a la subsanación del contrato candidato de leyenda R06.

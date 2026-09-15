@@ -109,3 +109,34 @@ El registro actualizado corresponde a la sede canónica del Lenguaje; las copias
 
 **Relevo:** retomar la subsanación del contrato candidato de leyenda R06. La recuperación del ZIP S6 y las condiciones previas de P3 quedan identificadas y no se convierten en una reapertura general de campañas.
 
+
+## Recepción posterior de la evidencia S6 · 15 de septiembre de 2026
+
+**Naturaleza:** incorporación de evidencia al seguimiento C03 de S31, que conserva el estado finalizado y la fecha de cierre de la revisión 2. No constituye una reanudación de C01–C05 ni una nueva campaña. El cierre publicado en `4e8ab90885625fabac76addc8d3eba450dafbe2d` se conserva íntegro: la ausencia de bytes completos descrita allí corresponde a aquel corte.
+
+### Identidad recibida y comprobada
+
+La entrega completa recibida por canal privado se cotejó antes de descomprimirla con el tamaño y el blob Git previamente fijados:
+
+- Procedencia: `SV-matematica-semantica-cuaternaria`, corte `86441ad4d375e31737dfcead0b1fd9cd52161883`.
+- Ruta: `laboratorio/tareas-watson/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s6-trazabilidad-total/custodia/CONTROLES_CUALIFICACION.zip`.
+- Tamaño observado: **1811714 bytes**, coincidente.
+- Blob Git observado: `ffe5c4a9b86b26c2409abe4239e6355f7a3bef19`, coincidente.
+- SHA-256 observada en esta recepción: `48e2c1e5acc384687dcd346613a945bf18798a105c72b94b6adb72be23115e1a`. No se atribuye esta medición al cierre anterior.
+
+### Comprobación y resultado
+
+Rust 1.98.0 (`88d9e12ae 2026-08-18`), con flate2 1.1.9 y las dependencias fijadas del cotejo S31. Compilación y ejecución con código 0. Se comprobaron las cabeceras locales y centrales, límites, nombres únicos, correspondencia exacta de entradas, descompresión en memoria y CRC de **487/487 entradas**. Tamaño descomprimido total: **13216586 bytes**.
+
+El archivo contiene `controles/0000.json` a `controles/0481.json` y cinco auxiliares: `CUALIFICACION_COMPLETA.json`, `CLI-referencia.json`, `CLI-fallo.json`, `INCIDENCIA_PREPARACION.txt` y `cualificar.py`. No se escribieron los miembros en disco, no se ejecutaron programas contenidos y no se repitieron los 482 controles. La integridad del contenedor no acredita por sí sola la corrección funcional de esos controles.
+
+**Se resuelve el pendiente de recuperación e identidad del ZIP S6 señalado en C03.** El PNG ya recibido conserva su comprobación anterior. Esta recepción no amplía la cualificación histórica del instrumento, no altera P3 ni modifica el rumbo de S22/S26. El siguiente trabajo sigue siendo la subsanación del contrato candidato de leyenda R06.
+
+### Evidencia de la recepción
+
+- [Fuente completo](COTEJO_S31_RECEPCION_ZIP_S6.rs): 10738 bytes; SHA-256 `1464bda40b9a0038a5d950ff61d16b1e177d6b98a02bb6d407226335ad19efb8`.
+- [Salida y comandos de reproducción](COTEJO_S31_RECEPCION_ZIP_S6_SALIDA.txt): 719 bytes; SHA-256 `af1dfa7172a42a3ad725dcb8c2a09c04c85f236f069386bf9f3a2eaa5c3694a8`.
+
+Las funciones de huella proceden del cotejo S31; no se presenta una validación criptográfica independiente. El ZIP conserva su sede privada: esta incorporación pública contiene únicamente el cotejador, sus resultados de integridad y la referencia de procedencia. La reproducción requiere acceso autorizado al archivo original. El código reutiliza las dependencias fijadas en las instrucciones de reproducción anteriores.
+
+Se añade la revisión 3 al historial de S31, conservando las revisiones 0–2. Los demás sucesos, el HTML, los lotes y los registros RETP no cambian. Los espejos históricos conservan sus cortes; esta recepción se registra en la sede canónica del Lenguaje.
