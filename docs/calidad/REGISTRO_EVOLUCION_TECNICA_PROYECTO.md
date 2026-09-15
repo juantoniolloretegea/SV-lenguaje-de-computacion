@@ -2298,3 +2298,15 @@ Archivo oficial cotejado en Rust; compilación resvg --locked --offline conforme
 Tinta en leyenda no valida significado: R06 debe exponer el límite. Silueta no conserva por sí sola P1 y sentido. Captor no acredita aislamiento.
 
 [Contrato y banco previo](tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis04-extension-perfiles-recursos-v0_1/CONTRATO_RASTER_CAPTOR.md).
+
+<a id="retp-242"></a>
+
+### RETP-2026-242 · S22 · Estudio acotado de privacidad BIS-03
+
+15/09/2026, 19:07:58 Europe/Madrid. Incorporación autorizada por el autor; unidad W-S26-02. Corte de entrada del Lenguaje 64feede79ae46de4efc172561edb3ab1f27089f0.
+
+[Estudio, fuentes, sedes y aceptación](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md). Se distinguen personas, IA local, agentes, API/proveedores, información personal/confidencial y metadatos. Revisión europea con estatuto y calendario; patrones existentes de consulta, agregación segura y privacidad diferencial. Diez pares de aceptación especificados; cero ejecutados. No acredita anonimato, cumplimiento integral o controles materializados.
+
+Requisitos incorporados en BIS-03; contrato antes de congelar interfaz o cerrar BIS-03; implementación y prueba antes de habilitar el conector o tratar datos personales, lo primero. Núcleo sin semántica nueva. S22/Bis abiertos; revisión de Grok 00a8a1ae con objeciones pendientes. Actualizados Acta 001 §7, inicio, Léame primero, estado del workflow y Sucesos; texto previo de campos rectificados del workflow preservado como histórico. GUI cancelada, retorno rector conservado.
+
+RETP-241 aparece remitido en documentos previos pero su asiento no está en CSV/Markdown al corte de entrada. No se reconstruye ni reutiliza. Espejos de laboratorio conservan su corte histórico; este estudio tiene sede canónica en el Lenguaje, sin ensayo o sincronización material declarados.

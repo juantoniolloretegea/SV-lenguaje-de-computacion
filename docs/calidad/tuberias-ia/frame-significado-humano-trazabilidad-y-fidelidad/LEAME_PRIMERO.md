@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Continuación documental · 2026-09-15T17:07:58Z:** [privacidad y consultas federadas BIS-03](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md), incorporada en [Acta 001 §7](../continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md). Recibir la subsanación de la [revisión del reconocedor](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md); Q1/Q2 sin cualificación acreditada. S22 y Bis abiertos. GUI cancelada; retorno rector conservado. Las entradas anteriores mantienen sus cortes históricos.
+
+
 > **Punto de continuidad actualizado:** transferencia y compilación del corte publicado completadas; Rust 1.98.0, retorno cero. [Acta 002 §14](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#14-dependencia-recibida-y-compilación-completada). Sigue la revisión de §10.2 antes de cualificar; Q1/Q2 no ejecutados. Las referencias anteriores a compilación pendiente son históricas.
 
 > **Punto de continuidad:** transferencia y custodia completadas en `36bd96f81af9b19669e1f902240493000ef36399`; ZIP y originales recuperables. La compilación limpia sigue pendiente por descarga de dependencia. [Acta 002 §13](../continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#13-transferencia-completada-y-punto-de-continuidad). S22 continúa en ejecución; Q1/Q2 no ejecutados.

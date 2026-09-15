@@ -2,7 +2,7 @@
 
 ## Estado vigente y accesos
 
-**Punto de continuación:** subsanación documental de LEYENDA-CONTENIDO/4 finalizada, con adenda recibida y precisión receptora según el [Acta 002, §9](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). El contrato permanece candidato; no se ha implementado ni cualificado el reconocedor.
+**Punto de continuación:** recibir la subsanación posterior a la [revisión previa de Grok](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md). La transferencia y compilación fueron recibidas en Acta 002 §14; el reconocedor sigue candidato y sin cualificación. El [estudio de privacidad BIS-03](ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md) está completo en alcance documental, con contratos concretos y ensayos pendientes; véase Acta 001 §7.
 
 | Materia | Estado y documento de consulta |
 |---|---|

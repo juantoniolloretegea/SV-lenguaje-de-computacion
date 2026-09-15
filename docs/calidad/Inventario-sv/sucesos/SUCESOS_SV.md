@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T15:46:17Z
+**fecha_actualizacion_utc:** 2026-09-15T17:07:58Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Transferencia y compilación del corte publicado completadas. fdeflate 0.3.7 recibido y admitido contra Cargo.lock. Cargo build --locked --release del corte 0e36549f terminó con retorno 0. Evidencia depositada en 78d87137ee195ca81bdf4471084b7039a05f164a.
+**resultado:** Transferencia y compilación del corte publicado completadas. fdeflate 0.3.7 recibido y admitido contra Cargo.lock. Cargo build --locked --release del corte 0e36549f terminó con retorno 0. Evidencia depositada en 78d87137ee195ca81bdf4471084b7039a05f164a. Estudio acotado de privacidad BIS-03 completado documentalmente: actores, flujos, sedes, fuentes europeas y controles de aceptación. Revisión previa de Grok en 00a8a1ae recibida como antecedente con objeciones abiertas.
 
-**verificacion:** Rust/Cargo 1.98.0. Paquete de 27188 bytes con SHA-256 concordante. Compilación release RC=0; identidad posterior de los 25 archivos del corte concordante. Sin modificación de fuentes ni Cargo.lock. Q1/Q2 y E1–E16 no ejecutados.
+**verificacion:** Rust/Cargo 1.98.0. Paquete de 27188 bytes con SHA-256 concordante. Compilación release RC=0; identidad posterior de los 25 archivos del corte concordante. Sin modificación de fuentes ni Cargo.lock. Q1/Q2 y E1–E16 no ejecutados. En esta incorporación: revisión documental y concordancia de registros; diez pares de pruebas de privacidad especificados, cero ejecutados. Sin nueva compilación.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/78d87137ee195ca81bdf4471084b7039a05f164a/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/RECEPCION_FDEFLATE_Y_COMPILACION.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md
 
-**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
+**referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md ; RETP-2026-242
 
-**siguiente_accion:** Revisar de forma acotada las condiciones de §10.2 antes de cualificar el reconocedor. Retomar desde Acta 002 §14; no repetir transferencia ni tratar la compilación como pendiente.
+**siguiente_accion:** Recibir subsanación del reconocedor antes de cualificación. Constituir contratos de privacidad por flujo antes de congelar interfaces afectadas o cerrar BIS-03; implementar y probar antes de habilitar conectores o tratar datos personales, lo primero. Retorno según Acta 001; GUI cancelada.
 
-**observaciones:** S22 permanece en ejecución; S26 y S31 intactos. La compilación satisfactoria no cualifica el reconocedor ni cierra Bis. Misma sede y rama; dependencia y registros conservados. Sin Python, GUI ni renumeración.
+**observaciones:** S22 y Bis continúan en ejecución. Estudio documental no equivale a cumplimiento, anonimización o controles implementados. Incorporación en Acta 001 §7; sin cambios de fuentes, contratos del reconocedor, parámetros o reservas. Sin Python ni renumeración. Espejos históricos conservan su corte; no se afirma sincronización material de laboratorio.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv

@@ -44,3 +44,14 @@ Las pruebas siguen siendo Rust. Bis y S26 mantienen sus pendientes. La autorizac
 Las dos lecturas pendientes mencionadas en §2 fueron recuperadas posteriormente: PNG y ZIP S6. Sus identidades, alcance de comprobación y condición de custodia constan en el [parte S31 y sus recepciones posteriores](PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Esa recuperación no cierra F01/F02, no habilita P3 ni acredita el significado de la leyenda.
 
 La continuación vigente del contrato de leyenda se consulta en el [Acta 002, §7](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md). El [índice de esta sede](inicio.md) reúne los registros, las fuentes y sus salidas. Permanecen las dependencias y el rumbo de las secciones anteriores.
+
+
+## 7. BIS-03 · privacidad y consultas federadas · 15/09/2026
+
+Con luz verde expresa del autor se incorpora el [estudio acotado](ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md), RETP-2026-242. Resultado documental: sedes, clasificación de actores y datos, normativa europea con estado y calendario, patrones existentes y diez pares de aceptación propuestos; cero ensayos de privacidad ejecutados.
+
+Los requisitos entran ahora en BIS-03. El contrato de cada interfaz afectada debe constituirse antes de congelarla o cerrar BIS-03. Implementación y pruebas preceden a la habilitación del conector o al tratamiento personal correspondiente, lo primero que ocurra; un tratamiento ya existente no puede diferir su evaluación. El estudio no acredita controles actualmente impuestos por el código, cumplimiento global o anonimato de datos reales.
+
+La [revisión previa del reconocedor](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md) sustituye como siguiente paso a la mera espera de lectura de §10.2: procede recibir su subsanación, conservando las objeciones y condiciones de cualificación. No se reabre la transferencia recibida ni se convierte compilación en cualificación. Bis y S22 siguen abiertos. Sin nueva semántica del núcleo, GUI, renumeración o cambio del retorno rector.
+
+El estudio tiene sede canónica en el Lenguaje; los espejos históricos conservan su corte y no se declaran sincronizados por esta incorporación. La remisión previa a RETP-2026-241 se conserva; su asiento no aparece en los registros centrales del corte de entrada y no se reconstruye aquí.

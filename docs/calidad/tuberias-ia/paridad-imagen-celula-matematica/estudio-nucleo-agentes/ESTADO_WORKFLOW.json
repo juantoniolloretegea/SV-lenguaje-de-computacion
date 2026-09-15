@@ -21,7 +21,7 @@
     {
       "id": "BIS-03",
       "estado": "en ejecución",
-      "alcance": "Decisión de sedes del primer montaje C02–C05 documentada; resto de obligaciones y sedes fuera del montaje pendientes. No cierre global de BIS-02."
+      "alcance": "Decisión de sedes del primer montaje C02–C05 documentada; resto de obligaciones y sedes fuera del montaje pendientes. No cierre global de BIS-02. Estudio de privacidad documentado en RETP-2026-242; contratos concretos y pruebas de flujos pendientes."
     },
     {
       "id": "BIS-04",
@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Constituir y preparar la frontera SVG a rasterización y captor: formato, presupuesto, precisión/pérdida, canal y oráculos de píxeles independientes antes de ejecutar en Rust. SVG y consumo recibidos en RETP-239; no repetir campañas por cambios administrativos. Mantener el hallazgo Celda para catálogo y Bis → catálogo/cierre de fase → GUI C#/.NET.",
+  "siguiente_accion": "Recibir la subsanación de la revisión del reconocedor en 00a8a1ae; conservar objeciones abiertas y condiciones antes de Q1/Q2. Constituir por flujo los contratos de privacidad del estudio BIS-03 antes de congelar interfaces afectadas. Bis abierto; retorno rector según Acta 001.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -53,9 +53,9 @@
     "BIS-C01 acredita compilación y conservación, no soporte de dominio ni paridad visual.",
     "BIS-02: 22 escenarios pendientes; soporte, identidad, representación y operaciones conservan contratos pendientes."
   ],
-  "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md",
+  "ultimo_informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-239",
+  "ultimo_retp": "RETP-2026-242",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -82,20 +82,18 @@
   "variantes_nativas_ejecutadas": 13,
   "corte_ultimo_contraste": "5ba3fbab751d9e4561dcecf2659e0ee4a54f7b4f",
   "orden_trabajo": [
-    "Completar (p1+p3)-Bis",
-    "Retomar y cerrar el catálogo de errores y la fase aplicable",
-    "Provisionar y verificar C#/.NET para la GUI según S24"
+    "Completar (p1+p3)-Bis con sus condiciones de aceptación",
+    "Retomar el catálogo de errores y el cierre de fase aplicable según Acta 001"
   ],
   "gui": {
-    "estado": "diferida hasta cierre de fase",
-    "tecnologia": "C#/.NET, indicación humana recibida en S24 el 14/09/2026; provisión diferida"
+    "estado": "cancelada la secuencia automática",
+    "referencia": "Acta 001 §3; S24 finalizado por cancelación; sin elección de biblioteca en esta tarea"
   },
   "evidencia_ultimo_contraste": "bis-c01/evidencia/ejecucion-1/RESULTADO.json",
   "suceso_secuencia_posterior": {
     "id": "S24",
-    "estado": "pendiente",
-    "registro": "RETP-2026-204",
-    "condicion": "Finalizar Bis, catálogo y fase antes del análisis e instalación de GUI"
+    "estado": "finalizado",
+    "condicion": "Cancelación recibida en Acta 001/S30; no realización de GUI"
   },
   "preparacion_bis_c02": {
     "contrato": "bis-c02/CONTRATO_SOPORTE_CANDIDATO_v0_1.md",
@@ -359,5 +357,34 @@
     "recepcion_r06": "../../../riesgos-materiales-s26/r06/README.md",
     "discriminadores_r06_especificados": 8,
     "discriminadores_r06_ejecutados": 0
+  },
+  "actualizacion_documental_privacidad": {
+    "fecha_utc": "2026-09-15T17:07:58Z",
+    "corte_entrada": "64feede79ae46de4efc172561edb3ab1f27089f0",
+    "registro": "RETP-2026-242",
+    "informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md",
+    "estado": "estudio documental completado; contratos y ensayos pendientes",
+    "pruebas_privacidad_ejecutadas": 0,
+    "condicion": "Contrato antes de congelar interfaz o cerrar BIS-03; implementación y prueba antes de habilitar conector o tratar datos personales, lo primero.",
+    "historial_campos_rectificados": {
+      "siguiente_accion": "Constituir y preparar la frontera SVG a rasterización y captor: formato, presupuesto, precisión/pérdida, canal y oráculos de píxeles independientes antes de ejecutar en Rust. SVG y consumo recibidos en RETP-239; no repetir campañas por cambios administrativos. Mantener el hallazgo Celda para catálogo y Bis → catálogo/cierre de fase → GUI C#/.NET.",
+      "ultimo_informe": "bis04-extension-perfiles-recursos-v0_1/RESULTADOS_SVG_CONSUMO.md",
+      "ultimo_retp": "RETP-2026-239",
+      "orden_trabajo": [
+        "Completar (p1+p3)-Bis",
+        "Retomar y cerrar el catálogo de errores y la fase aplicable",
+        "Provisionar y verificar C#/.NET para la GUI según S24"
+      ],
+      "gui": {
+        "estado": "diferida hasta cierre de fase",
+        "tecnologia": "C#/.NET, indicación humana recibida en S24 el 14/09/2026; provisión diferida"
+      },
+      "suceso_secuencia_posterior": {
+        "id": "S24",
+        "estado": "pendiente",
+        "registro": "RETP-2026-204",
+        "condicion": "Finalizar Bis, catálogo y fase antes del análisis e instalación de GUI"
+      }
+    }
   }
 }
