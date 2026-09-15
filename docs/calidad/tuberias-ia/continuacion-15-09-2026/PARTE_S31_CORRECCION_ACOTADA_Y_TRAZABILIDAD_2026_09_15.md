@@ -140,3 +140,46 @@ El archivo contiene `controles/0000.json` a `controles/0481.json` y cinco auxili
 Las funciones de huella proceden del cotejo S31; no se presenta una validación criptográfica independiente. El ZIP conserva su sede privada: esta incorporación pública contiene únicamente el cotejador, sus resultados de integridad y la referencia de procedencia. La reproducción requiere acceso autorizado al archivo original. El código reutiliza las dependencias fijadas en las instrucciones de reproducción anteriores.
 
 Se añade la revisión 3 al historial de S31, conservando las revisiones 0–2. Los demás sucesos, el HTML, los lotes y los registros RETP no cambian. Los espejos históricos conservan sus cortes; esta recepción se registra en la sede canónica del Lenguaje.
+
+## Complemento de recepción: contenido, generador y custodia S6 · 15 de septiembre de 2026
+
+**Corte de entrada:** Lenguaje `2d6f05d28ac85040fe46f6406a1f9b4d253dc2c8`. Esta incorporación completa la evidencia de recepción; S31 permanece finalizado. Se conservan las revisiones anteriores y sus límites.
+
+### Concordancia documental observada
+
+El cotejo auxiliar en Rust 1.98.0 verificó, sin ejecutar el generador ni el verificador históricos:
+
+- Las 482 huellas de los archivos de controles coinciden con las declaradas en `CUALIFICACION_COMPLETA.json`.
+- Los cinco campos compartidos de cada control —`id`, `control`, `familia`, `esperado`, `observado`— coinciden con `CUALIFICACION.json` público: 2410/2410 comparaciones conformes. La afirmación se limita a estos campos.
+- `esperado` y `observado` coinciden en los 482 registros. Hay 17 familias distintas. Son resultados históricos consignados, no pruebas funcionales reejecutadas.
+- La huella de `controles/0000.json` coincide con la referencia fijada en `COMPROMISO_PREVIO.json`.
+- El verificador público coincide con su huella declarada; las dos salidas CLI coinciden con sus huellas internas.
+
+Entradas públicas fijadas en `SVcustos-dataset@fccde9cf524a0d62b2dd1a2ee05170d6f4358074`, directorio `pruebas-externas/s6-trazabilidad-total/`: `CUALIFICACION.json` (blob `63c8c0e2c8ccdef37a7b07d1bfe8286f05763de8`), `COMPROMISO_PREVIO.json` (blob `06d8ba491dc249fa0cccd9ea5270f155b2683f40`) y `cotejar_entrega.py` (blob `e428d9f58530fd8de388ac43f436894722bea6c4`). Sus blobs se cotejaron antes de emplear el contenido.
+
+### Identidad del generador y límite temporal
+
+El miembro `cualificar.py` tiene **8588 bytes** y SHA-256 observada `52684359885d5e84a2a94d9ccc46cd99fb1e915bfa9fbcff42c5472a71717a56`.
+
+No figura un campo `generador_sha256` en el compromiso ni en los informes de cualificación público y completo examinados. Sin embargo, el generador está contenido en el ZIP cuyo blob histórico se ha recuperado exactamente. Por tanto, su identidad queda vinculada al objeto custodiado; no es correcto describirlo como un archivo sin ninguna fijación de identidad. Se declara ahora su huella individual para facilitar el cotejo.
+
+La identidad del ZIP y esta medición posterior **no demuestran un compromiso del generador anterior a la ejecución de los controles**. La coincidencia entre esperado y observado tampoco acredita por sí sola la anterioridad o independencia del oráculo. No se modifica retrospectivamente el compromiso ni se amplía el dictamen histórico.
+
+### Exposición declarada de la referencia
+
+La Dirección ha trasladado una declaración de una unidad revisora, previamente participante en S6, que afirma haber accedido al archivo de referencia contenido en el ZIP. Se registra como **exposición declarada**, con fecha de recepción de la comunicación 15 de septiembre de 2026; no se atribuye una hora de acceso no observada.
+
+La correspondencia del miembro `controles/0000.json` con la huella del compromiso sí ha sido comprobada en esta recepción. La declaración de acceso no permite determinar por sí sola el conjunto completo de receptores, sus contextos de ejecución ni la propagación posterior del contenido.
+
+Una nueva entrega sobre el mismo banco por una unidad expuesta no deberá presentarse como evaluación ciega ni como evidencia independiente de desconocimiento de la referencia. Esto no impide tareas de revisión o reproducción expresamente declaradas como expuestas. La exposición posterior no invalida por sí sola una entrega histórica anterior; se conservan sus fechas, condiciones y dictamen.
+
+Antes de cualquier reutilización evaluativa de S6 deberá identificarse, bajo custodia autorizada, qué participantes tuvieron acceso a la referencia y cuándo, distinguiendo acceso al archivo de lectura declarada. No se presupone una lista completa ni se publica contenido de la referencia. La presente anotación no habilita otra ronda de S6 ni afecta a la reserva P3.
+
+### Evidencia y continuidad
+
+- [Fuente completo del cotejo documental](COTEJO_S31_CONTENIDO_S6.rs): 26355 bytes; SHA-256 `41578560b176a0e9549002bc74b1d4612a96d2dcc7c82bb288e2dd9f795d056e`.
+- [Salida del cotejo](COTEJO_S31_CONTENIDO_S6_SALIDA.txt): 881 bytes; SHA-256 `a9f4f1a7bc8fe036cc656bd2c4f8f3b138f776d67913fcd6b32c17c9167cccd6`.
+
+Reproducción: compilar el fuente con Rust 1.98.0 y flate2 1.1.9 conforme a las dependencias fijadas del cotejo anterior; ejecutar `cotejo ZIP CUALIFICACION_PUBLICA COMPROMISO VERIFICADOR` con los cuatro archivos identificados arriba. Se reutilizan funciones históricas de huella y lectura JSON; no es una validación criptográfica independiente. Los miembros del ZIP se procesan en memoria, sin ejecutar sus programas. El contenido privado no se incorpora al repositorio público.
+
+S31 incorpora la revisión 4, sin alterar su fecha de cierre. S22/S26 y los restantes sucesos conservan sus registros. No se renumeran actas ni se reescriben expedientes históricos. El siguiente trabajo permanece en la subsanación del contrato candidato de leyenda R06; la condición de exposición se atenderá antes de una eventual reutilización evaluativa de S6.

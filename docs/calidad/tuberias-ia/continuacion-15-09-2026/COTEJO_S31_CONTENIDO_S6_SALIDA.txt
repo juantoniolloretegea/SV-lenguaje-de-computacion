@@ -1,0 +1,12 @@
+Rust 1.98.0 (88d9e12ae 2026-08-18); flate2 1.1.9.
+RC_COMPILE=0
+RC_RUN=0
+IDENTIDAD bytes=1811714 blob=ffe5c4a9b86b26c2409abe4239e6355f7a3bef19 sha256=48e2c1e5acc384687dcd346613a945bf18798a105c72b94b6adb72be23115e1a
+ZIP entradas=487 controles_json=482 auxiliares=5 metodo=8 nombres_unicos=si
+INTEGRIDAD cabeceras_y_limites=ok descompresion=487/487 crc=487/487 bytes_descomprimidos=13216586
+ALCANCE recuperacion_e_identidad; sin_extraccion_a_archivos; sin_ejecucion_de_contenidos; sin_repeticion_de_controles
+GENERADOR bytes=8588 sha256=52684359885d5e84a2a94d9ccc46cd99fb1e915bfa9fbcff42c5472a71717a56
+COTEJO controles_sha256=482/482 campos_compartidos=2410/2410 esperado_observado=482/482 familias=17
+REFERENCIA_PREVIA coincide_con_compromiso=si verificador_publico_coincide=si
+MANIFIESTOS campo_generador_sha256_completo=false publico=false compromiso=false
+CLI huellas_salidas=2/2

@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+> **Complemento S31 · revisión 4 · 15/09/2026.** Confirmadas 482 huellas de controles y 2410 campos compartidos con la cualificación pública. Declarada la huella individual del generador contenido en el ZIP fijado, sin atribuir anterioridad a la ejecución. Registrada exposición declarada de una unidad revisora a la referencia S6: limita futuras evaluaciones ciegas y no invalida automáticamente entregas anteriores. Véase el [parte S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Continúa la subsanación del contrato candidato R06.
+
+
 > **Recepción posterior S31 · revisión 3 · 15/09/2026.** El ZIP de controles S6 se ha recuperado: 1811714 bytes, blob Git concordante y 487/487 entradas con descompresión y CRC conformes en Rust 1.98.0. Se resuelve el pendiente de recuperación de C03, conservando el cierre anterior. No se repiten controles ni se amplía la cualificación histórica. Véase la recepción añadida al [parte S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md). Continúa la subsanación del contrato candidato de leyenda R06.
 
 
