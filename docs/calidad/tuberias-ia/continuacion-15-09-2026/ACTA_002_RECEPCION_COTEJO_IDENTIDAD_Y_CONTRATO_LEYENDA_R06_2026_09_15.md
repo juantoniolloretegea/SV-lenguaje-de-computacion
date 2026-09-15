@@ -363,3 +363,15 @@ Para reproducirlo, recuperar los archivos enumerados en el TSV del corte fijado 
 Terminar la custodia del ZIP/originales, variantes y manifiesto; aportar compilación limpia del corte exacto con dependencias fijadas. Después corresponde revisar las soluciones de §10.2 antes de cualquier cualificación. La presencia del protocolo de 27 celdas no constituye su aprobación ni autoriza ensayarlo.
 
 S22 permanece en ejecución. S26 y S31 conservan su estado. El contrato sigue candidato. No se ejecutaron Python, Q1/Q2, E1–E16 ni el reconocedor. No se abren otras carpetas o ramas de trabajo ni se modifica el punto de retorno.
+
+## 13. Transferencia completada y punto de continuidad
+
+Fecha: 2026-09-15. El ZIP aportado después de §12 ha sido recibido, cotejado y depositado íntegramente en la misma rama `dominio-inmunologia` y sede `realizacion-leyenda-01`, commit `36bd96f81af9b19669e1f902240493000ef36399`.
+
+**Transferencia y custodia de esta entrega: completadas.** [Nota de depósito, manifiesto, ZIP, originales y pruebas](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/36bd96f81af9b19669e1f902240493000ef36399/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/DEPOSITO_RECEPCION_ZIP.md). El ZIP tiene 40.888 bytes y SHA-256 `e7d04f9afdd3da95cae921cf860d7902c2b9e016160c15aa190d51796325fb81`, concordantes con lo declarado; su blob depositado es `40c5040d3932341a32804f2829848b75e4fbda22`. Los tres originales históricos coinciden con sus huellas previas. Las comprobaciones de identidad se ejecutaron en Rust 1.98.0; unzip verificó los CRC sin errores.
+
+Se conservan 32 archivos dentro del ZIP: 22 coinciden con el corte de trabajo, 3 difieren y 7 son adicionales. Las diferencias del protocolo, README y main.rs se explican en la nota de depósito. No se sobrescribió el código de trabajo. Se añadieron los siete originales/variantes, el ZIP, el manifiesto receptor y las evidencias; el índice se amplió para enlazarlos. Los catorce blobs modificados o incorporados fueron comprobados en el árbol remoto. No se crearon ramas ni otras sedes de trabajo.
+
+La compilación limpia sigue pendiente por el impedimento de descarga documentado en §12.1. El paso siguiente es completar esa compilación con las dependencias exactas de Cargo.lock y revisar después las condiciones de §10.2. No debe repetirse la solicitud de los originales ni tratarse el ZIP como ausente a partir de esta recepción.
+
+S22 permanece en ejecución: el cierre de la transferencia no cierra (p1+p3)-Bis ni cualifica el reconocedor. S26 y S31 conservan sus estados. El contrato permanece candidato; Q1/Q2 y E1–E16 no se ejecutaron. Se conserva el rumbo y el punto de retorno, sin GUI ni renumeración.

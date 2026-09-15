@@ -760,7 +760,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-13T05:19:31Z
 
-**fecha_actualizacion_utc:** 2026-09-15T12:24:29Z
+**fecha_actualizacion_utc:** 2026-09-15T12:30:51Z
 
 **fecha_fin_utc:** —
 
@@ -774,17 +774,17 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
 
-**resultado:** Corte 0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797 recibido: veinticinco archivos, diez fuentes Rust presentes. Ausencia de fuentes de trabajo resuelta. Custodia de originales, variantes y manifiesto corregido pendiente.
+**resultado:** Transferencia de realizacion-leyenda-01 completada. Código recibido en 0e36549f; ZIP, originales, variantes y manifiesto depositados en 36bd96f81af9b19669e1f902240493000ef36399. Compilación limpia aún pendiente por descarga de dependencia.
 
-**verificacion:** Cotejo Rust 1.98.0: veinticinco tamaños y blobs concordantes, SHA-256 calculadas. Cargo build --locked --release sobre descarga cotejada terminó RC=101 al descargar fdeflate 0.3.7 (cero bytes en quince segundos). Compilación no acreditada; no diagnóstico de fallo del código.
+**verificacion:** Rust 1.98.0: ZIP 40888 bytes y SHA-256 concordante; tres originales concordantes; 32 archivos del ZIP, 22 iguales al corte, 3 distintos conservados y 7 adicionales. CRC sin errores mediante unzip. Catorce blobs del depósito comprobados en remoto.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/tree/0e36549f4f6914b4fdb7dd36a1f5b4ba5b91c797/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/ ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/COMPILACION_RECEPTORA_0E36549F.txt
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/36bd96f81af9b19669e1f902240493000ef36399/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/DEPOSITO_RECEPCION_ZIP.md
 
 **referencia_calidad:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md
 
-**siguiente_accion:** Depositar ZIP/originales, variantes y manifiesto corregido en la sede asignada; completar compilación limpia del corte exacto con las dependencias fijadas. Revisar §10.2 antes de Q1/Q2. Acta 002 §12.
+**siguiente_accion:** Retomar desde Acta 002 §13: obtener dependencias exactas y completar compilación limpia del corte remoto; revisar §10.2 antes de Q1/Q2. La transferencia ya está completada; no repetir solicitudes de originales.
 
-**observaciones:** S22 en ejecución; S26 y S31 intactos. Diez fuentes ya presentes; no repetir el diagnóstico de módulos ausentes para este corte. ZIP solo declarado, no recibido. Sin Python, Q1/Q2, E1–E16, nuevas sedes o renumeración.
+**observaciones:** S22 en ejecución; S26 y S31 intactos. Cierre limitado a transferencia y custodia. Mismas rama y sede; fuentes de trabajo conservados. Sin Python, Q1/Q2, E1–E16, GUI ni renumeración.
 
 
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
