@@ -386,5 +386,14 @@
         "condicion": "Finalizar Bis, catálogo y fase antes del análisis e instalación de GUI"
       }
     }
+  },
+  "seguimiento_privacidad_seguridad_s32": {
+    "id": "S32",
+    "estado": "en ejecución",
+    "parte": "docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md",
+    "registro": "RETP-2026-243",
+    "relacion": "Desarrollo acotado de BIS-03; no sustituye ni cierra S22/S26.",
+    "pendiente": "Completar correspondencia por flujo, contratos y criterios; controles probados antes de habilitación.",
+    "pruebas_privacidad_ejecutadas": 0
   }
 }

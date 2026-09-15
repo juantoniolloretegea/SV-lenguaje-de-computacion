@@ -1092,3 +1092,40 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Complemento documental de recepción S31, revisión 4, con fecha de cierre conservada. La fijación del ZIP incluye el generador; la huella individual ahora observada no demuestra anterioridad a la ejecución. Exposición posterior declarada sin invalidación retrospectiva automática de entregas anteriores. Sin publicación del ZIP ni de la referencia; sin campañas, renumeración o apertura de reservas. S22/S26 intactos; sede canónica actualizada, espejos históricos conservan su corte.
 
+
+<a id="s32"></a>
+
+## S32 · Privacidad y seguridad: correspondencia de flujos con OP-CYB-001
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-15T17:54:02Z
+
+**fecha_inicio_utc:** 2026-09-15T17:54:02Z
+
+**fecha_actualizacion_utc:** 2026-09-15T17:54:02Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S26-02
+
+**alcance:** Requisitos, componentes responsables, contratos y criterios de aceptación de los flujos afectados; preservar el objeto y las definiciones de OP-CYB-001.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; OP-CYB-001 consultado en SVperitus-dataset: dominio-ciberseguridad-inteligente
+
+**cortes_de_entrada:** Lenguaje 8fa67a917d78072582c24af76f3ce1f47d6c079d; CYB bbac1b44b1d3b845305e9cde492a08221206d631
+
+**dependencias:** S22 / BIS-03; RETP-2026-242; obligaciones RS01–RS12 y adenda §12 de OP-CYB-001
+
+**resultado:** Parte de trabajo y alcance publicado. Correspondencia general identificada; contratos concretos y comprobación material pendientes.
+
+**verificacion:** Lectura documental del relevo CYB y del estudio BIS-03; revisión de alcance y enlaces. Cero nuevas pruebas de privacidad ejecutadas.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md
+
+**referencia_calidad:** RETP-2026-243; Acta 001 §8
+
+**siguiente_accion:** Completar la matriz de correspondencia por flujo: obligación existente, información, componente, contrato y prueba. Resolverla antes de congelar interfaces afectadas o cerrar BIS-03.
+
+**observaciones:** Alta del seguimiento específico de un análisis ya iniciado; las fechas de alta e inicio reflejan su registro actual, sin atribuir fecha retrospectiva. S22 y S26 conservan su estado. No se modifica OP-CYB-001 ni se habilitan servicios. El seguimiento permanece abierto; la copia histórica de laboratorio conserva su corte.
+

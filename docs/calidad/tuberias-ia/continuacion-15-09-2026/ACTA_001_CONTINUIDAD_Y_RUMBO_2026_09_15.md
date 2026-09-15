@@ -55,3 +55,9 @@ Los requisitos entran ahora en BIS-03. El contrato de cada interfaz afectada deb
 La [revisión previa del reconocedor](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md) sustituye como siguiente paso a la mera espera de lectura de §10.2: procede recibir su subsanación, conservando las objeciones y condiciones de cualificación. No se reabre la transferencia recibida ni se convierte compilación en cualificación. Bis y S22 siguen abiertos. Sin nueva semántica del núcleo, GUI, renumeración o cambio del retorno rector.
 
 El estudio tiene sede canónica en el Lenguaje; los espejos históricos conservan su corte y no se declaran sincronizados por esta incorporación. La remisión previa a RETP-2026-241 se conserva; su asiento no aparece en los registros centrales del corte de entrada y no se reconstruye aquí.
+
+## 8. Seguimiento específico de privacidad y seguridad
+
+El [parte de trabajo y alcance](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md) delimita la correspondencia de los flujos del SV con las obligaciones existentes de OP-CYB-001. Su seguimiento se registra como **S32, en ejecución**, con referencia RETP-2026-243.
+
+El análisis general está realizado; quedan la correspondencia por flujo, los contratos concretos y sus pruebas materiales. S32 desarrolla este alcance dentro de BIS-03 y no sustituye ni cierra S22 o S26. Conserva el objeto del universo 1, la secuencia vigente y las condiciones de habilitación. El parte establece la evidencia y el seguimiento de pendientes necesarios para cerrar su alcance documental.

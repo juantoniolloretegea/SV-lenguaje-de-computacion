@@ -2310,3 +2310,13 @@ Tinta en leyenda no valida significado: R06 debe exponer el límite. Silueta no 
 Requisitos incorporados en BIS-03; contrato antes de congelar interfaz o cerrar BIS-03; implementación y prueba antes de habilitar el conector o tratar datos personales, lo primero. Núcleo sin semántica nueva. S22/Bis abiertos; revisión de Grok 00a8a1ae con objeciones pendientes. Actualizados Acta 001 §7, inicio, Léame primero, estado del workflow y Sucesos; texto previo de campos rectificados del workflow preservado como histórico. GUI cancelada, retorno rector conservado.
 
 RETP-241 aparece remitido en documentos previos pero su asiento no está en CSV/Markdown al corte de entrada. No se reconstruye ni reutiliza. Espejos de laboratorio conservan su corte histórico; este estudio tiene sede canónica en el Lenguaje, sin ensayo o sincronización material declarados.
+
+<a id="retp-243"></a>
+
+### RETP-2026-243 · S32 · Parte de trabajo y alcance de privacidad y seguridad
+
+[Parte de trabajo y alcance](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md). Define objeto, cobertura, límites, pendientes y condiciones de cierre del seguimiento. Se relacionan los flujos del SV con las obligaciones existentes de OP-CYB-001, conservando sus definiciones y objeto profesional.
+
+S32 se registra en ejecución: el análisis documental ha comenzado; faltan la correspondencia completa por flujo, los contratos concretos y las pruebas materiales aplicables. Los diez pares del estudio BIS-03 permanecen como propuestas sin ejecutar. La especificación deberá resolverse antes de congelar interfaces afectadas o cerrar BIS-03; los controles materiales precederán a la habilitación del flujo correspondiente. Los pendientes de fases posteriores requieren seguimiento concreto enlazado para un eventual cierre documental.
+
+Entrada: Lenguaje 8fa67a917d78072582c24af76f3ce1f47d6c079d; CYB bbac1b44b1d3b845305e9cde492a08221206d631. Se conservan las filas e historiales anteriores; sin modificación del universo, código o campañas.

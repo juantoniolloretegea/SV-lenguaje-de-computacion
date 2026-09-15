@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**S32 — en ejecución:** [parte de trabajo y alcance de privacidad y seguridad](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md). Seguimiento de requisitos, contratos y criterios de aceptación, con preservación de OP-CYB-001. Véase Acta 001 §8 y RETP-2026-243.
+
+
 **Continuación documental · 2026-09-15T17:07:58Z:** [privacidad y consultas federadas BIS-03](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md), incorporada en [Acta 001 §7](../continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md). Recibir la subsanación de la [revisión del reconocedor](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/00a8a1aebd99cb1ac2984146148d4c61d2edbfe1/dominios/inmunologia/cambio-rumbo/05-grok-aportes/2026-09-15-leyenda-r06/realizacion-leyenda-01/REVISION_PREVIA_CUALIFICACION_01.md); Q1/Q2 sin cualificación acreditada. S22 y Bis abiertos. GUI cancelada; retorno rector conservado. Las entradas anteriores mantienen sus cortes históricos.
 
 
