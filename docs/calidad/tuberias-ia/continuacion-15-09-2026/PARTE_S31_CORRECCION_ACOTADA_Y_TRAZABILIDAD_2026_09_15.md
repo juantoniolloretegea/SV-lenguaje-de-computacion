@@ -46,3 +46,8 @@ Al terminar se añadirá a este mismo parte una sección de cierre con una fila 
 
 Una interrupción antes de completar el alcance se registrará como pendiente, con motivo y siguiente acción. El cierre identificará las copias efectivamente actualizadas y las que conserven un corte anterior. Tras concluir esta intervención se retomará la subsanación del contrato candidato de leyenda R06. La numeración histórica se conserva íntegra.
 
+
+## Inicio de ejecución · 15/09/2026, 07:57:42 UTC
+
+S31 pasa a en ejecución, revisión 1. Se mantiene íntegro el alcance C01–C05 del alta publicada en `22233612e8f641d885f731e9ed46f1433ead1cb2`. Las unidades se resolverán mediante resultados separados y verificables. Esta anotación registra el inicio, sin anticipar resultados ni recuperación de archivos.
+

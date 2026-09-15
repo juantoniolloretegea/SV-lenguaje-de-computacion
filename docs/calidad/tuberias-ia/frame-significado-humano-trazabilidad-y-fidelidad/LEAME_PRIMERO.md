@@ -1,5 +1,12 @@
 # Léame primero: del frame a la colaboración auditable
 
+## S31 · Inicio de la corrección acotada · 15/09/2026
+
+[Parte de trabajo S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md), en ejecución. Se conserva el alcance C01–C05 y se documentará cada resultado antes del cierre. El alta y los antecedentes permanecen en el historial.
+
+---
+
+
 ## S31 · Corrección acotada y trazabilidad · 15/09/2026
 
 [Parte de trabajo S31](../continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md), registrado en estado pendiente antes de iniciar la intervención. Alcance: precisión de recuentos del mapa, identidad previa al uso, intento de recuperación de dos archivos fijados y diferenciación documental de lotes públicos y reserva P3. Se conservarán los antecedentes y se añadirá un cierre por unidad con evidencias y limitaciones. Sin renumeración, cambios de presentación, apertura de reservas ni nuevas campañas. S22 y S26 conservan su estado; el relevo previsto es la subsanación del contrato candidato de leyenda R06.

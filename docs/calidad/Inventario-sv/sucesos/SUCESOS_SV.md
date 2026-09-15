@@ -1059,13 +1059,13 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S31 · Corrección acotada de recuentos, identidad y condiciones de reproducibilidad
 
-**estado:** pendiente
+**estado:** en ejecución
 
 **fecha_alta_utc:** 2026-09-15T07:50:03Z
 
-**fecha_inicio_utc:** —
+**fecha_inicio_utc:** 2026-09-15T07:57:42Z
 
-**fecha_actualizacion_utc:** 2026-09-15T07:50:03Z
+**fecha_actualizacion_utc:** 2026-09-15T07:57:42Z
 
 **fecha_fin_utc:** —
 
@@ -1079,7 +1079,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **dependencias:** Continuidad S30 y Acta 001; contrato candidato R06 recibido en S22 y Acta 002. La reserva P3 permanece cerrada.
 
-**resultado:** Alta del parte de trabajo antes de su ejecución. C01–C05 pendientes. Los cotejos preliminares se conservan como antecedentes.
+**resultado:** Inicio de la intervención acotada C01–C05 conforme al parte publicado. Sin resultados nuevos atribuidos en esta revisión.
 
 **verificacion:** Alta, unicidad del identificador, concordancia CSV/Markdown e historial y preservación de los registros anteriores comprobadas en Rust 1.98.0. No se acredita ejecución de C01–C04.
 
@@ -1087,7 +1087,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **referencia_calidad:** docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_S31_CORRECCION_ACOTADA_Y_TRAZABILIDAD_2026_09_15.md
 
-**siguiente_accion:** Registrar el inicio efectivo en S31 y ejecutar C01–C04 dentro del parte; añadir cierre por unidad y revisión final sin repetir actuaciones concluidas.
+**siguiente_accion:** Comprobar identidades de entrada, ejecutar C01–C04 y añadir cierre por unidad con evidencias y pendientes.
 
 **observaciones:** La finalización del intento acotado no acredita recuperación de archivos inaccesibles ni compatibilidad integral P3. Sin renumeración, nuevas ramas, cambio de rumbo o cierre de S22/S26. El alta corresponde al registro canónico; las copias históricas conservan su corte.
 
