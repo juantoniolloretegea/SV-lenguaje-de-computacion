@@ -1,0 +1,25 @@
+S32 / RETP-2026-247
+Corte de entrada: 7b6d722760d7a8e017e516e881ce1bfb9c9a8aab
+Fecha UTC: 2026-09-16T05:36:16Z
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+ENTRADA a5b5dc667d821d09dbb1a0ee14d39375364d4e29 docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md
+ENTRADA 46669a79456c237ae1c8710060505e1563f3e0e1 docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv
+ENTRADA 6c0f3a135b53d1e1fe27e44979778fce587c806a docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md
+ENTRADA c6407864958d42309ae93d8693c55309da768a38 docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv
+ENTRADA c6583e35b3bb8d1372cb74d09a0e4115d78ba149 docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv
+ENTRADA f95081ff6076f090a1598eb0e9cd1b331548986f docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md
+Conformes: seis identidades de entrada; S32 revisión 1; unidad libre; nombre, alta e inicio conservados; fin vacío.
+Conformes: filas ajenas intactas; CSV/Markdown/instantánea concordantes; historial, parte previo y RETP previos conservados byte a byte; RETP-247 libre y añadido.
+Controles del cotejador: 2 entradas CSV válidas y 5 negativas discriminantes, todos conformes.
+Cero nuevas pruebas de privacidad, Q1/Q2, E1–E16 o campañas SV.
+Dependencias: biblioteca estándar nativa; cero crates externos; sin Cargo.lock propio.
+git version 2.51.1
+cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+GNU ld (GNU Binutils for Ubuntu) 2.42
+Dependencias dinámicas resueltas; direcciones de carga omitidas:
+linux-vdso.so.1
+libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1
+libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6
+/lib64/ld-linux-x86-64.so.2
+La provisión de dependencias de futuras etapas debe comprobarse de nuevo; este cotejo no acredita el entorno del reconocedor.
+Lectura posterior de los seis archivos generados conforme. Publicación y lectura del commit deben verificarse por separado.

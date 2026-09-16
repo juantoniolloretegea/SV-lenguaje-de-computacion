@@ -2356,3 +2356,19 @@ Se comprobó la permanencia del paquete privado raster/captor en el corte inmuta
 [Informe](tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md) · [Acta 002 §17](tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06).
 
 **Decisión:** queda resuelta la precondición de disponibilidad e identidad para preparar la cualificación conjunta sobre las 27 celdas congeladas. No se han ejecutado Q1/Q2 ni E1–E16. Persisten independencia del códec, correspondencia geométrica U+007C/fontdue frente a resvg, E1 y empate residual. El siguiente incremento debe fijar entradas, órdenes, esperados y regla de parada antes de ejecutar. S32 conserva su seguimiento separado.
+
+<a id="retp-247"></a>
+
+## RETP-2026-247 · S32 · Obligaciones desde el diseño y continuación acotada
+
+**Fecha:** 2026-09-16T05:36:16Z; 07:36:16 Europe/Madrid. **Estado:** en ejecución. **Unidad:** Watson / W-S32. **Entrada:** `7b6d722760d7a8e017e516e881ce1bfb9c9a8aab`.
+
+Continuación autorizada publicada en el mismo parte: distinción de usos, obligaciones desde el diseño, matriz inicial de flujos y revisión adversarial documental. Sin objeción bloqueante para este incremento; contratos concretos y prueba material pendientes. S32 y Bis no se cierran.
+
+[Parte ampliado](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16). Se conserva el texto anterior; la evaluación que condiciona el diseño no se aplaza a la habilitación de conectores. Matriz inicial sobre flujos y P01–P10 existentes, sedes funcionales por ligar a contratos concretos y ocho objeciones documentales con disposición. No se promueve ninguna capacidad de consumo, salida, aprendizaje o cambio de dominio.
+
+Resolver en S32 las brechas contractuales de §8, empezando por consulta, autorización, salida y persistencia; fijar sede, contrato, aplicabilidad y aceptación antes de congelar interfaces o cerrar BIS-03. Asignar seguimiento concreto a realizaciones diferidas antes de cerrar S32; no habilitar flujos ni iniciar campañas.
+
+Revisión 1: relevo W-S26-02 a Watson / W-S32 sólo para S32; identidad nueva cotejada en historial. Alta e inicio conservados, fin vacío. S22/S26 intactos. Rust recuperado desde paquete oficial para esta tarea, sin certificar persistencia ni Cargo. Transporte/provisión y conector declarados; sin Python. Sede canónica del Lenguaje; espejos históricos conservan su corte.
+
+Verificación: Lectura de fuentes rectoras y revisión documental finita. Rust 1.98.0: identidades de seis entradas, conservación de antecedentes, concordancia CSV/Markdown/historial y controles discriminantes del cotejador. Cero nuevas pruebas de privacidad, Q1/Q2 o E1–E16. Rust 1.98.0 recuperado para esta tarea desde paquete oficial con huella conforme; sin afirmar Cargo, rustup ni persistencia. [Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt). Sin cambios de código SV, estados S22/S26, universos o campañas. Espejos históricos conservan su corte.

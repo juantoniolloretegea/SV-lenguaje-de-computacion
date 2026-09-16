@@ -1091,29 +1091,29 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-15T17:54:02Z
+**fecha_actualizacion_utc:** 2026-09-16T05:36:16Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** W-S26-02
+**unidad_responsable:** Watson / W-S32
 
-**alcance:** Requisitos, componentes responsables, contratos y criterios de aceptación de los flujos afectados; preservar el objeto y las definiciones de OP-CYB-001.
+**alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad desde el diseño; matriz inicial, contratos y puertas de habilitación. Sin ampliar OP-CYB-001 ni implementar conectores.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; OP-CYB-001 consultado en SVperitus-dataset: dominio-ciberseguridad-inteligente
 
-**cortes_de_entrada:** Lenguaje 8fa67a917d78072582c24af76f3ce1f47d6c079d; CYB bbac1b44b1d3b845305e9cde492a08221206d631
+**cortes_de_entrada:** Lenguaje 7b6d722760d7a8e017e516e881ce1bfb9c9a8aab; CYB bbac1b44b1d3b845305e9cde492a08221206d631
 
-**dependencias:** S22 / BIS-03; RETP-2026-242; obligaciones RS01–RS12 y adenda §12 de OP-CYB-001
+**dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Parte de trabajo y alcance publicado. Correspondencia general identificada; contratos concretos y comprobación material pendientes.
+**resultado:** Continuación autorizada publicada en el mismo parte: distinción de usos, obligaciones desde el diseño, matriz inicial de flujos y revisión adversarial documental. Sin objeción bloqueante para este incremento; contratos concretos y prueba material pendientes. S32 y Bis no se cierran.
 
-**verificacion:** Lectura documental del relevo CYB y del estudio BIS-03; revisión de alcance y enlaces. Cero nuevas pruebas de privacidad ejecutadas.
+**verificacion:** Lectura de fuentes rectoras y revisión documental finita. Rust 1.98.0: identidades de seis entradas, conservación de antecedentes, concordancia CSV/Markdown/historial y controles discriminantes del cotejador. Cero nuevas pruebas de privacidad, Q1/Q2 o E1–E16.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md ; https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt
 
-**referencia_calidad:** RETP-2026-243; Acta 001 §8
+**referencia_calidad:** RETP-2026-247; parte de privacidad §§7–10; antecedentes RETP-2026-242/243.
 
-**siguiente_accion:** Completar la matriz de correspondencia por flujo: obligación existente, información, componente, contrato y prueba. Resolverla antes de congelar interfaces afectadas o cerrar BIS-03.
+**siguiente_accion:** Resolver en S32 las brechas contractuales de §8, empezando por consulta, autorización, salida y persistencia; fijar sede, contrato, aplicabilidad y aceptación antes de congelar interfaces o cerrar BIS-03. Asignar seguimiento concreto a realizaciones diferidas antes de cerrar S32; no habilitar flujos ni iniciar campañas.
 
-**observaciones:** Alta del seguimiento específico de un análisis ya iniciado; las fechas de alta e inicio reflejan su registro actual, sin atribuir fecha retrospectiva. S22 y S26 conservan su estado. No se modifica OP-CYB-001 ni se habilitan servicios. El seguimiento permanece abierto; la copia histórica de laboratorio conserva su corte.
+**observaciones:** Revisión 1: relevo W-S26-02 a Watson / W-S32 sólo para S32; identidad nueva cotejada en historial. Alta e inicio conservados, fin vacío. S22/S26 intactos. Rust recuperado desde paquete oficial para esta tarea, sin certificar persistencia ni Cargo. Transporte/provisión y conector declarados; sin Python. Sede canónica del Lenguaje; espejos históricos conservan su corte.
 
