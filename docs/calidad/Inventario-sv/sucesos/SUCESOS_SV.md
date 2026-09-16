@@ -754,39 +754,27 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S22 · Workflow (p1+p3)-Bis y radiografía inicial de tipos, composición y documentación Rust
 
-**estado:** en ejecución
-
-**fecha_alta_utc:** 2026-09-13T05:19:31Z
-
-**fecha_inicio_utc:** 2026-09-13T05:19:31Z
-
-**fecha_actualizacion_utc:** 2026-09-15T20:18:57Z
-
-**fecha_fin_utc:** —
-
+**estado:** en ejecución  
+**fecha_alta_utc:** 2026-09-13T05:19:31Z  
+**fecha_inicio_utc:** 2026-09-13T05:19:31Z  
+**fecha_actualizacion_utc:** 2026-09-16T04:07:01Z  
 **unidad_responsable:** W-S26-02
 
 **alcance:** Secuencia BIS-00 a BIS-08; política de documentación ES/EN y contraste estático inicial. Sin modificación del código productivo.
 
-**repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
+**cortes_de_entrada:** Lenguaje `f06571b1e65bed864fd910ed6a55cc58807c95d9`; laboratorio `86441ad4d375e31737dfcead0b1fd9cd52161883`; Peritus `6d73c376ca9e6a0d462bdb4483d92cd6e453e285`.
 
-**cortes_de_entrada:** Peritus 6d73c376ca9e6a0d462bdb4483d92cd6e453e285; fuente 04b93005e05adc0eecdd4c361342897c907fa531; Lenguaje a4505ae24208ceac8f209585798a10b3dc339e57.
+**resultado:** Custodia e identidad del TTF contratado y PNG R01/R06 comprobadas. El paquete fijado permanece en el árbol inmutable y las huellas concuerdan con el contrato y las referencias receptoras. El reconocedor continúa sin cualificar.
 
-**dependencias:** S20 / RETP-193; S21 / RETP-195; instrucciones del autor sobre workflow, comentarios bilingües y métodos Rust; fundamentos, Pilares, perfiles y transición.
+**verificación:** Cotejo de árbol y metadatos Git; comprobaciones receptoras Rust 1.98.0 ya conservadas. TTF, R01 y R06 con identidades concordantes. Sin Q1/Q2 ni E1–E16.
 
-**resultado:** Subsanación del reparo R1 de leyenda recibida en 6d73c376: comparación de todos los pares solapados; 18 pruebas y compilación release repetidas; contraejemplo histórico y control sin empate conformes en sus seis permutaciones. Reconocedor no cualificado.
+**evidencias:** [comprobación de custodia e identidad](../../tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md); [Acta 002 §17](../../tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06).
 
-**verificacion:** Rust/Cargo 1.98.0; 14/14 blobs publicados intactos; cargo test --locked --offline: 18/18 RC=0; cargo build --locked --offline --release RC=0. Conductor Rust externo: 12/12 comprobaciones. Sin Q1/Q2 ni E1–E16.
+**referencia_calidad:** RETP-2026-246.
 
-**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#recepcion-leyenda-r1-corregido ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_LEYENDA_R1_CORREGIDO_EVIDENCIAS.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_LEYENDA_R1_CORREGIDO.rs
+**siguiente_accion:** Preparar el precompromiso de la cualificación conjunta sobre las 27 celdas congeladas: entradas por huella, órdenes, esperados Q1/Q2, selección según §C y regla de parada. No ejecutar hasta fijarlo.
 
-**referencia_calidad:** Acta 001 §9; Acta 002 §16; RETP-2026-245; privacidad S32 / RETP-2026-243
-
-**siguiente_accion:** Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.
-
-**observaciones:** Revisión 42. Reparo R1 de leyenda cerrado en alcance instrumental; no equivale a fase R1 del entorno. Regla de referencias en Acta 001 §9: ámbito, tipo y código con documento/corte. Historia y contratos conservados; S32 sin modificación, auditoría recibida pendiente de subsanación; Bis abierto y GUI cancelada.
-
-
+**observaciones:** Revisión 43. Se cierra la precondición de custodia e identidad, no la cualificación. Códec, correspondencia geométrica, E1 y empate residual permanecen pendientes. S32 sin modificación; Bis abierto; GUI cancelada.
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
 **estado:** finalizado

@@ -6,7 +6,7 @@
 
 **Privacidad y seguridad — S32, en ejecución:** [parte de trabajo y alcance](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md). Correspondencia con OP-CYB-001; contratos y pruebas pendientes.
 
-**Punto de continuación:** Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada. La transferencia y compilación anteriores conservan su resultado histórico; la recepción vigente del reparo de leyenda está en Acta 002 §16.
+**Punto de continuación:** La disponibilidad e identidad del TTF contratado y de los PNG R01/R06 quedaron comprobadas en [Acta 002 §17](ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06) y en la [nota de comprobación](COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md). Preparar el precompromiso de la cualificación conjunta sobre las 27 celdas congeladas; Q1/Q2 y E1–E16 siguen sin ejecutar. Mantener pendientes códec, correspondencia geométrica, E1 y empate residual. S32 conserva la revisión de privacidad separada.
 
 | Materia | Estado y documento de consulta |
 |---|---|

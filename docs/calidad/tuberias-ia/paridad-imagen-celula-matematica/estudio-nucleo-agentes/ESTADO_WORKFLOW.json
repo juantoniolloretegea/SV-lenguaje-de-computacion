@@ -45,7 +45,7 @@
       "estado": "pendiente"
     }
   ],
-  "siguiente_accion": "Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.",
+  "siguiente_accion": "Preparar el precompromiso de la cualificación conjunta sobre las 27 celdas congeladas: entradas por huella, órdenes, esperados Q1/Q2, selección según §C y regla de parada. No ejecutar hasta fijarlo. Mantener pendientes códec, correspondencia geométrica, E1 y empate residual; S32 separado.",
   "limites": [
     "Ejecución completa del workflow pendiente",
     "Conjunto de tamaños de soporte no constituido por el estudio",
@@ -55,7 +55,7 @@
   ],
   "ultimo_informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md",
   "ampliacion": "Consolidación C01–C12: doce obligaciones cartografiadas; 13 variantes nativas históricas C01 y 202 filas C02–C12 sin ejecutar. BIS-02 abierto por condiciones de integración pendientes.",
-  "ultimo_retp": "RETP-2026-245",
+  "ultimo_retp": "RETP-2026-246",
   "criterio_representaciones": "El suceso es el hecho; la prosa, la matemática y la imagen son formas de representarlo.",
   "definicion_workflow": "finalizado",
   "ejecucion_workflow": "en ejecución",
@@ -420,5 +420,18 @@
     "q1_q2_ejecutados": false,
     "alcance": "Atribución con máscaras sintéticas; no es fase R1 del entorno ni cualificación del reconocedor.",
     "nomenclatura": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#9-referencias-inequívocas-en-la-continuación"
+  },
+  "comprobacion_custodia_ttf_r01_r06": {
+    "fecha_utc": "2026-09-16T04:07:01Z",
+    "registro": "RETP-2026-246",
+    "informe": "docs/calidad/tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md",
+    "paquete_corte": "SV-matematica-semantica-cuaternaria@86441ad4d375e31737dfcead0b1fd9cd52161883",
+    "paquete_blob_git": "814619348801577afc28b8fb5be45f73e518d46c",
+    "paquete_bytes": 4308172,
+    "ttf_sha256": "ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280",
+    "r01_sha256": "3e9fae6d4844a07d0f1281d4974c5da1c5ce01c6dbc774be27b18f1735f7509d",
+    "r06_sha256": "829286631401c3208554a9f1f81bc091fa5355201490bd92ba72f9b0bb254827",
+    "q1_q2_ejecutados": false,
+    "resultado": "Disponibilidad bajo custodia e identidades comprobadas para preparar la cualificación; no es cualificación del reconocedor."
   }
 }

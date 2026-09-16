@@ -2346,3 +2346,13 @@ Rust/Cargo 1.98.0; 14/14 blobs publicados intactos; cargo test --locked --offlin
 [Recepción y evidencia](tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#recepcion-leyenda-r1-corregido). Verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia antes de preparar la cualificación conjunta sobre las 27 celdas congeladas. Mantener pendientes códec, correspondencia de píxeles y empate residual. S32 conserva la revisión de privacidad separada.
 
 [Acta 001 §9](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#9-referencias-inequívocas-en-la-continuación) precisa ámbito, tipo y código, con documento y corte de origen. Se conserva la nomenclatura histórica. La fase R4 del entorno es contraste integrado posterior a la consolidación nuclear y a R2/R3; los reparos R1–R4 de leyenda y privacidad no son esas fases. S32 y OP-CYB-001 sin cambios.
+
+## RETP-2026-246 · Custodia e identidad previas a la cualificación de leyenda
+
+**Fecha:** 16/09/2026, 06:07:01 Europe/Madrid. **Frente:** S22. **Estado:** en ejecución.
+
+Se comprobó la permanencia del paquete privado raster/captor en el corte inmutable del laboratorio `86441ad4d375e31737dfcead0b1fd9cd52161883`: 4.308.172 bytes y blob Git `814619348801577afc28b8fb5be45f73e518d46c`. Las comprobaciones receptoras conservadas fijan las identidades del TTF contratado, R01 y R06. La huella del TTF coincide con la constante contractual que el reconocedor calcula sobre los bytes recibidos.
+
+[Informe](tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md) · [Acta 002 §17](tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06).
+
+**Decisión:** queda resuelta la precondición de disponibilidad e identidad para preparar la cualificación conjunta sobre las 27 celdas congeladas. No se han ejecutado Q1/Q2 ni E1–E16. Persisten independencia del códec, correspondencia geométrica U+007C/fontdue frente a resvg, E1 y empate residual. El siguiente incremento debe fijar entradas, órdenes, esperados y regla de parada antes de ejecutar. S32 conserva su seguimiento separado.

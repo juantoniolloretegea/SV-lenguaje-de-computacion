@@ -442,3 +442,15 @@ Además se enlazó un [conductor Rust receptor](RECEPCION_LEYENDA_R1_CORREGIDO.r
 **Siguiente acción:** verificar disponibilidad e identidad del TTF contratado y PNG R01/R06 en su custodia para preparar la cualificación conjunta sobre las 27 celdas congeladas. Permanecen sin acreditar la independencia del códec y la correspondencia geométrica U+007C/fontdue frente a resvg; E1 sin testigo. Un empate residual entre celdas según §C sigue siendo fracaso: n_min no desempata.
 
 Q1/Q2 y E1–E16 no se ejecutaron. Contrato candidato, reconocedor no cualificado, S22 y Bis en ejecución. S32 y la revisión de su parte conservan su seguimiento separado; no se resuelven aquí sus reparos. GUI cancelada; sin cambios en OP-CYB-001, fases del entorno, contratos congelados ni numeración histórica. Referencia: RETP-2026-245.
+
+<a id="custodia-ttf-r01-r06"></a>
+
+## 17. Custodia e identidad del TTF contratado y PNG R01/R06
+
+Fecha: 2026-09-16T04:07:01Z. Se completa la precondición indicada en §16 mediante la [comprobación de custodia e identidad](COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md).
+
+El paquete privado del laboratorio permanece presente en el corte inmutable `86441ad4d375e31737dfcead0b1fd9cd52161883`, con 4.308.172 bytes y blob Git `814619348801577afc28b8fb5be45f73e518d46c`. Las comprobaciones receptoras conservadas acreditan la extracción concordante de sus miembros. El TTF presenta SHA-256 `ae7b7855e115a5966d8b1b3f80f254ccc117ec86f9965e202ee2940453837280`, igual a `HUELLA_TTF_CONTRATADA`; R01 y R06 conservan respectivamente `3e9fae6d4844a07d0f1281d4974c5da1c5ce01c6dbc774be27b18f1735f7509d` y `829286631401c3208554a9f1f81bc091fa5355201490bd92ba72f9b0bb254827`.
+
+**Resultado:** disponibilidad bajo custodia e identidades suficientes para preparar la cualificación conjunta. No se repite la campaña raster/captor, no se publican recursos reservados y no se atribuye a esta recepción una nueva ejecución del reconocedor. Q1/Q2 y E1–E16 permanecen sin ejecutar.
+
+**Siguiente acción:** preparar el precompromiso de la cualificación sobre las 27 celdas congeladas: entradas por huella, órdenes, esperados Q1/Q2, selección posterior según §C y regla de parada. Sin ampliar retícula ni parámetros. Permanecen pendientes independencia del códec, correspondencia geométrica U+007C/fontdue frente a resvg, E1 y empate residual. S22 y Bis continúan en ejecución; S32 permanece separado. Referencia: RETP-2026-246.
