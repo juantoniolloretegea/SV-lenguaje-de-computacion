@@ -146,3 +146,28 @@ La comprobación de edición y registros se ha realizado con Rust y se conserva 
 **Provisión por etapa, ratificada por el autor durante esta continuación:** no basta recuperar el compilador. Se deben identificar, descargar cuando falten y verificar las dependencias efectivamente necesarias para la sesión, sin sustituir versiones silenciosamente. Este cotejo usa sólo la biblioteca estándar nativa, sin crates externos ni Cargo.lock propio. Compilación y ejecución conformes; soporte observado: cc 13.3.0, GNU ld 2.42 y Git 2.51.1; libc, libgcc_s y cargador dinámico resueltos por ldd. Esto no acredita las dependencias del reconocedor PNG o de ninguna campaña posterior, que requerirán su inventario y provisión específicos.
 
 Publicación canónica en el Lenguaje, con RETP y Sucesos concordantes. Las copias históricas del laboratorio conservan su corte; no se afirma su sincronización material.
+
+
+<a id="s32-recepcion-parche-c17-2026-09-16"></a>
+
+### Recepción documental de la propuesta de correspondencia con C17 · 16/09/2026
+
+**Seguimiento:** S32, en ejecución. **Referencia de calidad:** RETP-2026-248. Esta recepción identifica y vincula una propuesta documental; su contenido no se incorpora todavía como correspondencia aceptada.
+
+**Objeto recibido:** [PARCHE_S32_CORRESPONDENCIA_C17.diff](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff), depositado en `SVperitus-dataset`, rama `dominio-inmunologia`, carpeta `dominios/inmunologia/cambio-rumbo/05-grok-aportes/`. Commit de depósito: `19bb22c0cb614c7c05184c017e3dc3859a11b1e7`; blob Git: `e8b5e1d7cbb1fef1f84cd87c8f7f946e71cc1de6`. El commit añade únicamente ese archivo. La base declarada del parche es el corte del Lenguaje `29fbcb022a731aace46a64ca881c02b4b1bcb13a`.
+
+**Relación con el trabajo:** la propuesta desarrolla la correspondencia de los flujos de §8 con los controles, requisitos y elementos de contexto de OP-CYB-001. Cita como fuente del control C17 el [expediente predecisional v0.4, §8](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/EXPEDIENTE_PREDECISIONAL_ESTADO_DE_PARTIDA_Y_CONTINUIDAD_OP_CYB_001_v0.4.md), blob `602d1c5ad33a27da1eb76ce2e72400de0902f42f`. Se conserva esa referencia para el contraste sustantivo posterior; esta recepción no lo da por ejecutado.
+
+| Objeto propuesto | Destino identificado | Situación de recepción |
+|---|---|---|
+| Adición de una sección 11 de correspondencia | Este parte | Propuesta íntegra bajo custodia; pendiente de dictamen sustantivo e integración. |
+| Actualización del asiento S32 | Sucesos SV, Markdown y CSV | No aplicada. La presente actualización registra exclusivamente la recepción. |
+| Instantánea de revisión 2 de S32 | Historial de Sucesos SV | No aplicada. La revisión 2 efectiva corresponde a esta recepción; una incorporación posterior deberá tomar el registro entonces vigente. |
+
+**Comprobación instrumental:** lectura completa del parche; identidad de sus bytes cotejada con el blob del depósito; comprobación de aplicabilidad textual sobre su base declarada mediante `git apply --check --verbose`, sin aplicación. Las cuatro rutas propuestas pertenecen al parte y al registro de S32. La aplicabilidad textual no valida las correspondencias ni acredita pruebas de privacidad.
+
+**Condiciones para la incorporación posterior:** contrastar las correspondencias con las fuentes fijadas; resolver los enlaces relativos de la sección propuesta sobre su ruta de destino; distinguir expresamente admisibilidad de evidencia y autorización del acto, también en títulos y resúmenes; conservar las evidencias anteriores del seguimiento. Las fechas vacías y las afirmaciones de publicación del candidato deberán sustituirse por los hechos efectivos de la incorporación. El número de revisión y la referencia RETP se determinarán entonces, sin reutilizar los asignados a esta recepción.
+
+**Relación con las pruebas:** este documento recibido constituye entrada para la revisión de correspondencia y la preparación de contratos. No es un resultado experimental ni justifica por sí solo un ensayo. Antes de ejecutar una prueba derivada deberán fijarse el requisito y apartado que la motivan, el contrato y su versión, las entradas, el resultado esperado y el criterio de aceptación. Su ejecución y sus resultados conservarán esas referencias dentro del seguimiento existente.
+
+La conservación de los antecedentes y la concordancia de esta recepción entre el parte, Sucesos, historial y RETP se comprueban mediante [el cotejo Rust](COTEJO_RECEPCION_PARCHE_S32.rs) y [su salida](COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt). Son comprobaciones documentales; no se han ejecutado pruebas de privacidad, Q1/Q2 ni E1–E16. S32 permanece en ejecución; esta recepción no cierra BIS-03 ni S22. Las copias históricas conservan sus cortes.

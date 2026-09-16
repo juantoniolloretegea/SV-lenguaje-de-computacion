@@ -1091,7 +1091,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-16T05:36:16Z
+**fecha_actualizacion_utc:** 2026-09-16T15:03:21Z
 
 **fecha_fin_utc:** —
 
@@ -1099,21 +1099,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad desde el diseño; matriz inicial, contratos y puertas de habilitación. Sin ampliar OP-CYB-001 ni implementar conectores.
 
-**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; OP-CYB-001 consultado en SVperitus-dataset: dominio-ciberseguridad-inteligente
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; depósito recibido en SVperitus-dataset: dominio-inmunologia; fuente OP-CYB-001 en corte fijado.
 
-**cortes_de_entrada:** Lenguaje 7b6d722760d7a8e017e516e881ce1bfb9c9a8aab; CYB bbac1b44b1d3b845305e9cde492a08221206d631
+**cortes_de_entrada:** Lenguaje 29fbcb022a731aace46a64ca881c02b4b1bcb13a; depósito 19bb22c0cb614c7c05184c017e3dc3859a11b1e7; fuente citada CYB bbac1b44b1d3b845305e9cde492a08221206d631.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Continuación autorizada publicada en el mismo parte: distinción de usos, obligaciones desde el diseño, matriz inicial de flujos y revisión adversarial documental. Sin objeción bloqueante para este incremento; contratos concretos y prueba material pendientes. S32 y Bis no se cierran.
+**resultado:** Recibido y enlazado el parche de correspondencia con el control C17 de OP-CYB-001. Identidad y aplicabilidad textual conformes sobre su base declarada. Propuesta pendiente de dictamen sustantivo e integración; no aplicada. S32 y Bis permanecen abiertos.
 
-**verificacion:** Lectura de fuentes rectoras y revisión documental finita. Rust 1.98.0: identidades de seis entradas, conservación de antecedentes, concordancia CSV/Markdown/historial y controles discriminantes del cotejador. Cero nuevas pruebas de privacidad, Q1/Q2 o E1–E16.
+**verificacion:** Lectura completa del parche. Rust 1.98.0: identidad de entradas, conservación de antecedentes y concordancia registral; Git: identidad del blob y comprobación textual sin aplicación. Cero pruebas de privacidad, Q1/Q2 o E1–E16 en esta recepción.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-parche-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt ; antecedente: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt
 
-**referencia_calidad:** RETP-2026-247; parte de privacidad §§7–10; antecedentes RETP-2026-242/243.
+**referencia_calidad:** RETP-2026-248: recepción documental; antecedentes RETP-2026-242/243/247; parte de privacidad, recepción del parche de correspondencia con C17.
 
-**siguiente_accion:** Resolver en S32 las brechas contractuales de §8, empezando por consulta, autorización, salida y persistencia; fijar sede, contrato, aplicabilidad y aceptación antes de congelar interfaces o cerrar BIS-03. Asignar seguimiento concreto a realizaciones diferidas antes de cerrar S32; no habilitar flujos ni iniciar campañas.
+**siguiente_accion:** Contrastar la propuesta con sus fuentes fijadas, resolver sus referencias y preparar la integración sobre el registro vigente. Vincular cada prueba futura con requisito, contrato, entradas, resultado esperado y aceptación. Se conservan las brechas y condiciones de cierre de los apartados 5 y 8 del parte; no habilitar flujos ni iniciar campañas.
 
-**observaciones:** Revisión 1: relevo W-S26-02 a Watson / W-S32 sólo para S32; identidad nueva cotejada en historial. Alta e inicio conservados, fin vacío. S22/S26 intactos. Rust recuperado desde paquete oficial para esta tarea, sin certificar persistencia ni Cargo. Transporte/provisión y conector declarados; sin Python. Sede canónica del Lenguaje; espejos históricos conservan su corte.
+**observaciones:** Revisión 2: recepción documental de una propuesta depositada. Alta, inicio, unidad responsable y fin conservados. No se aplica la instantánea propuesta. S22 y S26 intactos; las copias históricas conservan sus cortes.
 

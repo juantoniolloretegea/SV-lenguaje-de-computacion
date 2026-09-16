@@ -1,0 +1,35 @@
+Recepción documental S32 / RETP-2026-248
+Corte del Lenguaje: 29fbcb022a731aace46a64ca881c02b4b1bcb13a
+Fecha UTC de recepción: 2026-09-16T15:03:21Z
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+ENTRADA 9ffb7b2dd29b5dbdaba2de64ca6671bddb386f18 docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md
+ENTRADA 113ca257663ac7c07f951966bed8c7cf11669dba docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv
+ENTRADA d95eda26c9fb9f62c9cb42db9b5d2a1b801915b4 docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md
+ENTRADA 392286fc529c60b8fa9f2416f0aecb982246a805 docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv
+ENTRADA ee7ecdbfea33c9b0437ec992613feee5364e215d docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv
+ENTRADA 53a5c89b3c5bec798dfea8b7358d4eaff68e91fc docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md
+Objeto recibido: https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff
+Blob Git del parche: e8b5e1d7cbb1fef1f84cd87c8f7f946e71cc1de6
+Orden: git apply --check --verbose PARCHE_S32_CORRESPONDENCIA_C17.diff, sobre la base indicada
+Salida 0, sin aplicación:
+Checking patch docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md...
+Checking patch docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md...
+Checking patch docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv...
+Checking patch docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv...
+Conformes: seis entradas fijadas y parche; cuatro rutas comprobadas sin aplicación.
+Conformes: S32 revisión 2; estado, alta, inicio, unidad y fin conservados; filas ajenas intactas.
+Conformes: CSV, Markdown e instantánea concordantes; historial, parte previo y RETP previos conservados byte a byte.
+RETP-2026-248 libre y añadido; lectura posterior de los seis archivos generados conforme.
+Analizador CSV: entrada válida con comas y comillas; dos entradas inválidas rechazadas.
+Dependencias del cotejo: biblioteca estándar nativa; sin crates externos ni Cargo.lock propio.
+git version 2.51.1
+cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+GNU ld (GNU Binutils for Ubuntu) 2.42
+Dependencias dinámicas resueltas:
+linux-vdso.so.1
+libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1
+libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6
+/lib64/ld-linux-x86-64.so.2
+Edición y comprobaciones registrales: Rust. Transporte de contenido: conector GitHub y utilidades del sistema.
+La compilación de este auxiliar y su ejecución no son ensayos de privacidad ni campañas SV. Cero Q1/Q2 y E1–E16.
+La publicación y la lectura posterior del commit se verifican por separado.

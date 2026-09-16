@@ -2372,3 +2372,19 @@ Resolver en S32 las brechas contractuales de §8, empezando por consulta, autori
 Revisión 1: relevo W-S26-02 a Watson / W-S32 sólo para S32; identidad nueva cotejada en historial. Alta e inicio conservados, fin vacío. S22/S26 intactos. Rust recuperado desde paquete oficial para esta tarea, sin certificar persistencia ni Cargo. Transporte/provisión y conector declarados; sin Python. Sede canónica del Lenguaje; espejos históricos conservan su corte.
 
 Verificación: Lectura de fuentes rectoras y revisión documental finita. Rust 1.98.0: identidades de seis entradas, conservación de antecedentes, concordancia CSV/Markdown/historial y controles discriminantes del cotejador. Cero nuevas pruebas de privacidad, Q1/Q2 o E1–E16. Rust 1.98.0 recuperado para esta tarea desde paquete oficial con huella conforme; sin afirmar Cargo, rustup ni persistencia. [Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt). Sin cambios de código SV, estados S22/S26, universos o campañas. Espejos históricos conservan su corte.
+
+<a id="retp-248"></a>
+
+## RETP-2026-248 · S32 · Recepción de propuesta de correspondencia con C17
+
+**Fecha de recepción:** 2026-09-16T15:03:21Z; 17:03:21 Europe/Madrid. **Estado de S32:** en ejecución. **Corte de entrada:** `29fbcb022a731aace46a64ca881c02b4b1bcb13a`.
+
+Recibido y enlazado el parche de correspondencia con el control C17 de OP-CYB-001. Identidad y aplicabilidad textual conformes sobre su base declarada. Propuesta pendiente de dictamen sustantivo e integración; no aplicada. S32 y Bis permanecen abiertos.
+
+[Objeto recibido](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff) · [Recepción y relación con las pruebas](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-parche-c17-2026-09-16).
+
+Lectura completa del parche. Rust 1.98.0: identidad de entradas, conservación de antecedentes y concordancia registral; Git: identidad del blob y comprobación textual sin aplicación. Cero pruebas de privacidad, Q1/Q2 o E1–E16 en esta recepción.
+
+Contrastar la propuesta con sus fuentes fijadas, resolver sus referencias y preparar la integración sobre el registro vigente. Vincular cada prueba futura con requisito, contrato, entradas, resultado esperado y aceptación. Se conservan las brechas y condiciones de cierre de los apartados 5 y 8 del parte; no habilitar flujos ni iniciar campañas.
+
+[Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt). Antecedentes RETP-2026-242/243/247 conservados. La recepción no incorpora la sección 11 propuesta, no ejecuta pruebas de privacidad y no cierra S32 ni BIS-03.
