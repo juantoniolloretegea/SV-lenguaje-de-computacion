@@ -2388,3 +2388,19 @@ Lectura completa del parche. Rust 1.98.0: identidad de entradas, conservación d
 Contrastar la propuesta con sus fuentes fijadas, resolver sus referencias y preparar la integración sobre el registro vigente. Vincular cada prueba futura con requisito, contrato, entradas, resultado esperado y aceptación. Se conservan las brechas y condiciones de cierre de los apartados 5 y 8 del parte; no habilitar flujos ni iniciar campañas.
 
 [Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt). Antecedentes RETP-2026-242/243/247 conservados. La recepción no incorpora la sección 11 propuesta, no ejecuta pruebas de privacidad y no cierra S32 ni BIS-03.
+
+<a id="retp-249"></a>
+
+## RETP-2026-249 · S32 · Revisión sustantiva de correspondencia con C17
+
+**Fecha de incorporación documental:** 2026-09-16T15:47:30Z; 17:47:30 Europe/Madrid. **Estado de S32:** en ejecución. **Corte de entrada:** `e2cd67c5b11c8382ab32532e5c66a63ab2e73eda`.
+
+Revisión sustantiva documental ejecutada e incorporada en el parte, apartado 11. Confirmada la constitución de C17; correspondencias de diez flujos precisadas con RS, REQ-CYB, EP y controles, conservando sus condiciones. Admisibilidad, legitimidad y aplicabilidad diferenciadas. Contratos concretos y pruebas materiales pendientes; S32 y Bis permanecen abiertos.
+
+[Objeto recibido](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff) · [Correspondencia, fuentes y dictamen](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-c17-2026-09-16).
+
+Lectura íntegra del expediente predecisional v0.4, ampliación v0.3 y acta de relevo CYB con adenda 12, en corte fijado; contraste de atribuciones y alcance documentado en el parte. Rust 1.98.0: seis entradas y parche por identidad, conservación de antecedentes, concordancia CSV/Markdown/historial y RETP. Cero ensayos de privacidad, Q1/Q2 o E1–E16.
+
+Constituir los contratos de consulta, autorización, salida y persistencia con componente e interfaz identificados, permisos, aplicabilidad, plazos, restauración y aceptación observable. Resolver las opciones condicionadas antes del cierre documental. Enlazar cada prueba futura con requisito, contrato y versión, entradas, esperado, aceptación y resultado. Se conservan las condiciones de los apartados 5 y 8; no habilitar flujos ni iniciar campañas.
+
+[Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt). Antecedentes RETP-2026-242/243/247/248 conservados. La incorporación del apartado 11 no ejecuta ensayos de privacidad ni cierra S32, BIS-03 o S22.

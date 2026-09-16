@@ -171,3 +171,101 @@ Publicación canónica en el Lenguaje, con RETP y Sucesos concordantes. Las copi
 **Relación con las pruebas:** este documento recibido constituye entrada para la revisión de correspondencia y la preparación de contratos. No es un resultado experimental ni justifica por sí solo un ensayo. Antes de ejecutar una prueba derivada deberán fijarse el requisito y apartado que la motivan, el contrato y su versión, las entradas, el resultado esperado y el criterio de aceptación. Su ejecución y sus resultados conservarán esas referencias dentro del seguimiento existente.
 
 La conservación de los antecedentes y la concordancia de esta recepción entre el parte, Sucesos, historial y RETP se comprueban mediante [el cotejo Rust](COTEJO_RECEPCION_PARCHE_S32.rs) y [su salida](COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt). Son comprobaciones documentales; no se han ejecutado pruebas de privacidad, Q1/Q2 ni E1–E16. S32 permanece en ejecución; esta recepción no cierra BIS-03 ni S22. Las copias históricas conservan sus cortes.
+
+
+<a id="s32-c17-2026-09-16"></a>
+
+## 11. Revisión sustantiva e incorporación de la correspondencia con C17 · 16/09/2026
+
+**Seguimiento:** S32, en ejecución. **Referencia:** RETP-2026-249. **Corte receptor:** `e2cd67c5b11c8382ab32532e5c66a63ab2e73eda`. Se incorpora la correspondencia revisada que sigue. Los apartados 1–10, incluida la recepción RETP-2026-248, conservan su texto y su valor histórico; las precisiones de este apartado rigen la lectura actual de los extremos afectados. No se modifica el universo OP-CYB-001 ni se acredita una realización material.
+
+### 11.1. Objeto, fuentes y método de revisión
+
+La entrada es el [parche de correspondencia depositado](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff), blob `e8b5e1d7cbb1fef1f84cd87c8f7f946e71cc1de6`, recibido en RETP-2026-248. Su base es `29fbcb022a731aace46a64ca881c02b4b1bcb13a`; la incorporación se reconcilia con el corte receptor posterior, sin aplicar su instantánea registral de revisión 2.
+
+Se han leído íntegramente los Pilares, el acta de perfiles y ensamblaje y el acta de transición desde OP-IMM-001, incluidas sus adendas hasta §30, en el corte receptor. Se han cotejado asimismo el parte, el Acta 001 —especialmente §9—, el estudio de privacidad BIS-03 y las fuentes de estado. El contraste sustantivo utiliza estos documentos de OP-CYB-001, leídos completos en `bbac1b44b1d3b845305e9cde492a08221206d631`:
+
+| Fuente fijada | Identidad del objeto Git | Uso en esta revisión |
+|---|---|---|
+| [Expediente predecisional v0.4](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/EXPEDIENTE_PREDECISIONAL_ESTADO_DE_PARTIDA_Y_CONTINUIDAD_OP_CYB_001_v0.4.md) | `602d1c5ad33a27da1eb76ce2e72400de0902f42f` | §2: EP01–EP18; §§3–5: evidencia, relaciones y conservación; §8: constitución de C17. |
+| [Ampliación atómica y cobertura v0.3](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/AMPLIACION_ATOMICA_Y_COBERTURA_OP_CYB_001_v0.3.md) | `80ff6cd7febb0610b2f42e5a5846a84af3b46cba` | §2: P25–P32; §4: significado y condiciones de C01–C16. |
+| [Acta de continuidad y relevo](https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md) | `54d72e794b13f5b785f76121f641768351046a8d` | §§5–6: correspondencias REQ-CYB y RS; §§7–9: soporte y competencia receptora; §12: integridad del consejo y contraste pendiente. |
+
+El método consiste en contrastar cada atribución con su definición y sus condiciones de aplicación, distinguir correspondencias expresas de su aplicación documental a los flujos de §8 y comprobar que no se amplían autoridad, conocimiento ni resultados experimentales. La revisión no constituye una nueva calificación jurídica del producto o de un tratamiento.
+
+### 11.2. C17 y correspondencias de continuidad
+
+El expediente v0.4, §8, constituye C17 como **control compuesto de estado inicial y continuidad**, coordinador de C01–C16 y de las nueve clases documentales de relación definidas en §4: REFIERE, DERIVA_DE, PRECEDE_A, CAUSA_ACREDITADA, CORRIGE, RECIBE_CUSTODIA, DESIGNA, ACEPTA_ENCARGO y REVOCA_O_SUSTITUYE. Se conservan 32 definiciones paramétricas y 18 elementos de contexto; estas cantidades no constituyen células, matrices ni átomos adicionales.
+
+El inventario del expediente asigna expresamente C17 como destino de EP03, EP08, EP09, EP10, EP11 y EP18. Esa lista de destinos no sustituye a los referentes diferenciados del acta de relevo, §6:
+
+| Requisito de OP-CYB-001 | Elementos de contexto citados por el acta, §6 | Distinción que debe conservarse |
+|---|---|---|
+| RS09 | EP01–EP04; C17 | Referencia aprobada, estado observado y límite del pasado conocido. |
+| RS10 | EP10/EP11; C17 | Antecedentes múltiples, extremos y tipos de relación; precedencia y causa diferenciadas. |
+| RS11 | EP07/EP08/EP10 | Fuente competente, obligación pendiente, designación y custodia. Su relación con C17 se desarrolla en el expediente, §§2 y 4; no se atribuye esa mención literal a la celda RS11 del acta. |
+| RS12 | EP05/EP06/EP09/EP12–EP14/EP18 | Identidades por clase, conciliación, cobertura y reevaluación selectiva. La coordinación de C17 procede del expediente, §§2 y 8. |
+
+### 11.3. Admisibilidad, legitimidad y aplicabilidad
+
+**RS06 distingue admisión, no aplicabilidad, insuficiencia y fallo técnico respecto de Tri.** Sus referentes son C02/C06/C14. C02 exige examinar procedencia, integridad, autenticidad, legalidad de adquisición y permiso para observar; distingue todo ello de la legitimidad del acto observado. Una evidencia admisible puede acreditar un acto no autorizado. Esto no dispensa las condiciones de adquisición ni convierte la admisión en una segunda autorización de ese acto.
+
+La recepción de archivos tampoco equivale a designación ni a aceptación de una obligación. Se aplica el régimen competente y sólo se exige aceptación cuando ese régimen la requiere, conforme al expediente, §§4 y 7. Un fallo técnico no produce Tri.U; la insuficiencia de una evidencia admisible sólo recibe U bajo el contrato correspondiente.
+
+**C16 exige determinar la aplicabilidad mediante contexto acreditado:** entidad, jurisdicción, actividad, función, categoría, dimensiones, fecha y versión de la disposición. No decide por sí mismo que un banco esté libre de datos personales, ni subordina la aplicabilidad de las obligaciones a la conveniencia de una capacidad. C15 exige examinar también originales, vistas y huellas capaces de vinculación. La denominación «artificial», «local» o «federado» no satisface ese examen.
+
+Se mantiene la evaluación desde el diseño establecida en §7.2 y la condición «cuando proceda» de la evaluación de impacto. La selección de una capacidad opcional y la determinación de las obligaciones de su eventual uso son decisiones distintas. No se habilita una interfaz mientras permanezca sin resolver una condición necesaria para ella.
+
+### 11.4. Plan, tiempo y conservación
+
+RS05 conserva plan, razón y permiso, con el parámetro P32 y los controles C08–C12 de OP-CYB-001. Puede examinar una actuación ya ejecutada: P32 compara el acto con la versión del plan fijada antes de ejecutarlo. La falta de previsión no demuestra por sí sola ilicitud. Se preserva la condición particular de C10: su análisis de viabilidad temporal se activa si el consejo contempla una actuación pendiente; no se extiende automáticamente a toda revisión histórica.
+
+RS03 significa **tiempo, revocación y antecedentes**, con P28–P30 y C07 de OP-CYB-001. La síntesis de §3 debe leerse con esta distinción expresa. Se conservan emisión, registro, recepción y efecto, los intervalos y su precisión; no se presume retroactividad.
+
+El expediente, §5, delimita la conservación por adición frente a un adversario y una infraestructura. Encadenar huellas no impide por sí solo la sustitución de la cadena presentada ni prueba un hecho nunca registrado. Tampoco determina conservación ilimitada de datos: C15/C16 mantienen sus exigencias de acceso, retención y supresión o limitación aplicables.
+
+### 11.5. Correspondencia revisada de los diez flujos
+
+**Ámbito de los códigos:** en las columnas siguientes, RS, REQ-CYB, EP y C pertenecen exclusivamente a OP-CYB-001 y a las fuentes fijadas en §11.1. Son correspondencias documentales aplicadas a los flujos del Lenguaje, no nuevos contratos de dominio. Los pares P01–P10 de aceptación conservan su identidad como **casos del estudio de privacidad BIS-03, §7**, en el [corte receptor](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/e2cd67c5b11c8382ab32532e5c66a63ab2e73eda/docs/calidad/tuberias-ia/continuacion-15-09-2026/ESTUDIO_PRIVACIDAD_BIS03_2026_09_15.md). No designan los parámetros P01–P32 de OP-CYB-001. Esta precisión desarrolla la regla del Acta 001, §9, sin renombrar códigos históricos.
+
+| Flujo de §8 | Requisitos de OP-CYB-001 pertinentes | Contexto y controles de OP-CYB-001 pertinentes | Alcance y condición conservados |
+|---|---|---|---|
+| Datos artificiales de prueba | RS04/RS06; REQ-CYB-001/005 | EP15; C02/C06/C15/C16 | Se conserva el banco como objeto de preparación. Deben examinarse procedencia, contenido y metadatos; la exclusión de datos reales debe comprobarse y no deducirse de su etiqueta. |
+| Ingesta clínica | RS01/RS02/RS04/RS06/RS07; REQ-CYB-001/003/005/006 | EP01/EP02/EP07/EP15; C01/C02/C03/C05/C06/C11/C14/C15/C16 | Aplicación de obligaciones de soporte, sin constituir conocimiento clínico. Original, transformación, permiso, cobertura y contenido sin autoridad se examinan separadamente. Las necesidades clínicas competen a su dominio. |
+| Consulta por persona | RS01–RS05/RS07/RS08; REQ-CYB-001/004/007/009 | EP01/EP05/EP06/EP07/EP15/EP17; C02/C07/C08–C13/C15/C16 | Identidad, permiso, finalidad, destinatario y tiempo. C08–C12 conservan sus condiciones particulares: una consulta no exige por sí sola un plan operativo ni una ventana de intervención. |
+| Inferencia local | RS04/RS06/RS08; REQ-CYB-001/003/009 | EP15/EP16/EP18; C02/C06/C13/C14/C15/C16 | Fuentes y reglas admitidas, aislamiento del caso, admisión y explicación. La correspondencia no acredita aptitud de un modelo ni permite promoción autónoma de conocimiento. |
+| API externa | RS02/RS04/RS05/RS06/RS07; REQ-CYB-001/002/003/006/007 | EP07/EP12/EP15/EP16; C02/C05/C11/C14/C15/C16 | Opción condicionada de §8, sin conector habilitado. La petición humana, el permiso de salida, la admisión de la respuesta y el régimen del tercero son objetos distintos. |
+| Consulta estadística federada | RS04/RS06/RS07; REQ-CYB-005/006/008 | EP12/EP15/EP17; C05/C06/C11/C15/C16 | Opción condicionada a una necesidad justificada, no constituida. Cobertura, sensibilidad, magnitudes y revelación acumulada requieren contrato; la necesidad no decide la aplicabilidad jurídica. |
+| Entrenamiento federado | RS05; REQ-CYB-007, para separar consejo y autoridad | EP16; C14/C15/C16 | Capacidad excluida de la realización actual por §§7–8 y estudio, §6. La correspondencia fija esa frontera; no inicia diseño o entrenamiento. |
+| Frame, documento o exportación | RS04/RS07/RS08; REQ-CYB-009 | EP15/EP18; C05/C11/C13/C15/C16 | Generación, presentación y difusión tienen condiciones propias. Se conserva el estatuto de informe si falta arquitectura que legitime un Frame; la transformación no elimina restricciones. |
+| Telemetría CYB | RS01–RS04/RS06/RS07/RS09–RS12; REQ-CYB-001/002/004/005/006/008 | EP03/EP04/EP05/EP06/EP07/EP08/EP09/EP10/EP11/EP12/EP13/EP14/EP15/EP18; C01/C02/C05/C06/C07/C11/C15/C16/C17 | Se conservan los grupos diferenciados de §11.2 y la cobertura del caso. La presión del universo no acredita una plataforma ni una investigación forense general. |
+| Registros, respaldos e historia | RS03/RS04/RS06/RS09–RS12; REQ-CYB-001/004/005/008 | EP03/EP07/EP08/EP09/EP10/EP11/EP15/EP18; C02/C04/C06/C07/C13/C14/C15/C16/C17 | Original, vista, obligación, custodia, tiempos y restauración. Los plazos y reglas del flujo siguen sin constituirse; no hay oráculo material de conservación acreditado. |
+
+La aplicación por flujo se apoya asimismo en las seis correspondencias expresas del acta de relevo, §12.4: procedencia y cobertura (C01/C02/C03/C05/C06; REQ-CYB-001/003/005/006; RS06/RS07/RS12); instrucción, dato y facultad (C02/C11/C14; REQ-CYB-007; RS01–RS03/RS05); explicación (C13; REQ-CYB-009; RS08); versión e historia (C07/C14/C17; REQ-CYB-001/004; RS09–RS12); destinatario y salidas (C05/C11/C13/C15/C16; RS04/RS07); y revisión y obligaciones (C08–C13/C17; REQ-CYB-007/009; RS08/RS11). Se conservan sus condiciones; no se exige activar cada control en todos los flujos.
+
+REQ-CYB-005 requiere sensibilidad propia del criterio y del observador. REQ-CYB-008 exige conservar literal, tipo, unidad, rango y exactitud cuando intervengan magnitudes, también en tiempos y cuotas. Sus referencias en la tabla no acreditan esas comprobaciones ni agotan su aplicabilidad transversal.
+
+La tabla mantiene las sedes funcionales de §8 y sus brechas, sin presentar como localizados componentes e interfaces todavía no constituidos. Los flujos comunes siguen bajo estudio en S32; la API externa y la consulta federada mantienen su selección condicionada, y el entrenamiento federado permanece excluido de la realización actual. No se transforma una opción en obligación de construirla. Para cerrar el alcance de §5 habrá que resolver expresamente la inclusión o exclusión de las opciones aún condicionadas y enlazar cada realización necesaria diferida con su seguimiento y condición de habilitación.
+
+### 11.6. Resultado del examen adversarial y disposición del parche
+
+| Extremo examinado | Decisión incorporada |
+|---|---|
+| Fuente constitutiva de C17 | Confirmada en el expediente v0.4, §8, con desarrollo en §§2–5. |
+| Correspondencia conjunta de RS09–RS12 | Precisada por requisito; no se sustituye cada grupo por una lista común de elementos EP. |
+| Admisión y autorización | Sustituida la denominación «dos autorizaciones» por la distinción de §11.3; conservadas las condiciones de adquisición de C02. |
+| C16 y datos artificiales o federación | Retirada toda conclusión automática por nombre del banco o conveniencia del flujo; se exige el contexto definido por C16. |
+| RS05 y revisión de actos ya ejecutados | Aceptada con la condición de C10 y la definición de P32 preservadas. |
+| Correspondencia de controles, contexto y requisitos | Desarrollada en §11.5 con las fuentes de §§5–6 y §12.4 del acta; aplicación documental separada de ejecución. |
+| Códigos de aceptación y parámetros | Conservados y calificados por ámbito, tipo, fuente y corte, conforme al Acta 001, §9. |
+| Revisión 2 y campos registrales vacíos del candidato | No incorporados. La revisión 2 efectiva sigue siendo RETP-2026-248; esta incorporación ocupa la revisión 3, con fecha efectiva y RETP-2026-249. |
+
+**Dictamen:** revisión sustantiva documental ejecutada; correspondencia aceptada con las precisiones incorporadas en este apartado. La aceptación comprende las atribuciones y distinciones aquí examinadas. No valida contratos inexistentes, todos los requisitos de privacidad del sistema ni la ejecución de los diez pares. El parche depositado conserva sus bytes; la versión incorporada es este apartado y su actualización registral concordante.
+
+### 11.7. Estado, evidencia y continuación
+
+Se cotejan las fuentes de estado en el corte receptor: [Sucesos SV](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/e2cd67c5b11c8382ab32532e5c66a63ab2e73eda/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md) para S32, S22 y S26, en ejecución, y S29, finalizado en su alcance histórico; y [ESTADO_WORKFLOW.json](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/e2cd67c5b11c8382ab32532e5c66a63ab2e73eda/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/ESTADO_WORKFLOW.json), blob `958c0738f60c8cac49bc613b17133fabd1c207a0`, para BIS-00/01, finalizado; BIS-02/03/04, en ejecución; BIS-05/06/07/08, pendiente. El estudio BIS-03, §7, y este parte delimitan el recuento: cero ensayos de privacidad ejecutados. Las remisiones del workflow no sustituyen a los asientos vigentes de Sucesos.
+
+La conservación de los documentos previos y la concordancia registral se comprueban con [el cotejo Rust de esta incorporación](COTEJO_REVISION_SUSTANTIVA_S32.rs) y [su resultado](COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt). La identidad de las fuentes permite reconstruir qué justificó la revisión; el cotejo mecánico acredita edición e integridad, no corrección semántica por sí solo. Rust 1.98.0 y su biblioteca estándar nativa bastan para este auxiliar; no requiere dependencias externas de Cargo. El conector GitHub transporta los documentos; Git comprueba sus identidades. No se ejecutan campañas SV, Q1/Q2 ni E1–E16.
+
+**Siguiente actuación de S32:** constituir el contrato de los trayectos comunes de consulta, autorización, salida y persistencia, con componente e interfaz identificados, permisos y condiciones de aplicabilidad, plazos y restauración, resultados esperados y observador. Cada prueba futura conservará el enlace al requisito y apartado que la motiva, contrato y versión, entradas, resultado esperado, aceptación y resultado efectivo, conforme a la recepción RETP-2026-248. Las opciones condicionadas se resolverán expresamente antes del cierre documental de §5. Esta incorporación termina su revisión de correspondencia; S32 y BIS-03 permanecen en ejecución.

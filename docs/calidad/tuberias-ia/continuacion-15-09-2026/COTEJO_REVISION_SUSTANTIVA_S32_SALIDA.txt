@@ -1,0 +1,37 @@
+Incorporación revisada S32 / RETP-2026-249
+Corte del Lenguaje: e2cd67c5b11c8382ab32532e5c66a63ab2e73eda
+Fecha UTC de preparación: 2026-09-16T15:47:30Z
+rustc 1.98.0 (88d9e12ae 2026-08-18)
+
+Auxiliar derivado de COTEJO_RECEPCION_PARCHE_S32.rs, RETP-2026-248.
+Objeto: conservación de antecedentes, identidad y concordancia de esta incorporación.
+Criterio previo: seis entradas fijadas; sólo S32 cambia; historial añade revisión 3; RETP añade 249; parte previo íntegro.
+Orden: cotejo BASE OUT PARCHE ADENDA UTC HORA_MADRID RUSTC
+La revisión sustantiva y sus fuentes se documentan en el parte, apartado 11.
+ENTRADA 846c7890ffea4f0c2dc10e6f9b318ac2a9325f76 docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md
+ENTRADA 0f33fb0183f3240516128fbe1f9e5fd28205ac7c docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv
+ENTRADA e4f9ce060224e70a9a9bc26947dc285bd14c8569 docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md
+ENTRADA 99aff294a779032a2078c3c512ac8ea81b7eafac docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv
+ENTRADA 0ff18b4f843a549b698d0768706c465f883c2d48 docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv
+ENTRADA a287b8b230622edb9ece48b7c6047cacec6b5b68 docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md
+Objeto recibido: https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff
+Blob Git del parche: e8b5e1d7cbb1fef1f84cd87c8f7f946e71cc1de6
+El parche original conserva su identidad. Se incorpora la adenda revisada, sin aplicar la instantánea antigua.
+Adenda de entrada: edbb2c205a8e7609a988ee95fee0e81d40bec531
+Conformes: seis entradas fijadas y parche original.
+Conformes: S32 revisión 3; estado, alta, inicio, unidad y fin conservados; filas ajenas intactas.
+Conformes: CSV, Markdown e instantánea concordantes; historial, parte previo y RETP previos conservados byte a byte.
+RETP-2026-249 libre y añadido; lectura posterior de los seis archivos generados conforme.
+Analizador CSV reutilizado: entrada válida con comas y comillas; dos entradas inválidas rechazadas.
+Dependencias del cotejo: biblioteca estándar nativa; sin crates externos ni Cargo.lock propio.
+git version 2.51.1
+cc (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0
+GNU ld (GNU Binutils for Ubuntu) 2.42
+Dependencias dinámicas resueltas:
+linux-vdso.so.1
+libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1
+libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6
+/lib64/ld-linux-x86-64.so.2
+Edición y comprobaciones registrales: Rust. Transporte de contenido: conector GitHub y utilidades del sistema.
+La compilación de este auxiliar y su ejecución no son ensayos de privacidad ni campañas SV. Cero Q1/Q2 y E1–E16.
+La publicación y la lectura posterior del commit se verifican por separado.

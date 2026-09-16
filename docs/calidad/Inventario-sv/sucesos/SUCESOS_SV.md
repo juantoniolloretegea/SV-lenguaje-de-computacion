@@ -1091,7 +1091,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-16T15:03:21Z
+**fecha_actualizacion_utc:** 2026-09-16T15:47:30Z
 
 **fecha_fin_utc:** —
 
@@ -1101,19 +1101,19 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main; depósito recibido en SVperitus-dataset: dominio-inmunologia; fuente OP-CYB-001 en corte fijado.
 
-**cortes_de_entrada:** Lenguaje 29fbcb022a731aace46a64ca881c02b4b1bcb13a; depósito 19bb22c0cb614c7c05184c017e3dc3859a11b1e7; fuente citada CYB bbac1b44b1d3b845305e9cde492a08221206d631.
+**cortes_de_entrada:** Lenguaje e2cd67c5b11c8382ab32532e5c66a63ab2e73eda; depósito 19bb22c0cb614c7c05184c017e3dc3859a11b1e7; fuentes CYB bbac1b44b1d3b845305e9cde492a08221206d631.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Recibido y enlazado el parche de correspondencia con el control C17 de OP-CYB-001. Identidad y aplicabilidad textual conformes sobre su base declarada. Propuesta pendiente de dictamen sustantivo e integración; no aplicada. S32 y Bis permanecen abiertos.
+**resultado:** Revisión sustantiva documental ejecutada e incorporada en el parte, apartado 11. Confirmada la constitución de C17; correspondencias de diez flujos precisadas con RS, REQ-CYB, EP y controles, conservando sus condiciones. Admisibilidad, legitimidad y aplicabilidad diferenciadas. Contratos concretos y pruebas materiales pendientes; S32 y Bis permanecen abiertos.
 
-**verificacion:** Lectura completa del parche. Rust 1.98.0: identidad de entradas, conservación de antecedentes y concordancia registral; Git: identidad del blob y comprobación textual sin aplicación. Cero pruebas de privacidad, Q1/Q2 o E1–E16 en esta recepción.
+**verificacion:** Lectura íntegra del expediente predecisional v0.4, ampliación v0.3 y acta de relevo CYB con adenda 12, en corte fijado; contraste de atribuciones y alcance documentado en el parte. Rust 1.98.0: seis entradas y parche por identidad, conservación de antecedentes, concordancia CSV/Markdown/historial y RETP. Cero ensayos de privacidad, Q1/Q2 o E1–E16.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-parche-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt ; antecedente: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-parche-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt ; antecedente: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt
 
-**referencia_calidad:** RETP-2026-248: recepción documental; antecedentes RETP-2026-242/243/247; parte de privacidad, recepción del parche de correspondencia con C17.
+**referencia_calidad:** RETP-2026-249: revisión sustantiva e incorporación de correspondencia; parte de privacidad, apartado 11; recepción RETP-2026-248 y antecedentes RETP-2026-242/243/247 conservados.
 
-**siguiente_accion:** Contrastar la propuesta con sus fuentes fijadas, resolver sus referencias y preparar la integración sobre el registro vigente. Vincular cada prueba futura con requisito, contrato, entradas, resultado esperado y aceptación. Se conservan las brechas y condiciones de cierre de los apartados 5 y 8 del parte; no habilitar flujos ni iniciar campañas.
+**siguiente_accion:** Constituir los contratos de consulta, autorización, salida y persistencia con componente e interfaz identificados, permisos, aplicabilidad, plazos, restauración y aceptación observable. Resolver las opciones condicionadas antes del cierre documental. Enlazar cada prueba futura con requisito, contrato y versión, entradas, esperado, aceptación y resultado. Se conservan las condiciones de los apartados 5 y 8; no habilitar flujos ni iniciar campañas.
 
-**observaciones:** Revisión 2: recepción documental de una propuesta depositada. Alta, inicio, unidad responsable y fin conservados. No se aplica la instantánea propuesta. S22 y S26 intactos; las copias históricas conservan sus cortes.
+**observaciones:** Revisión 3: incorporación documental tras contraste de fuentes, con precisiones en el apartado 11. Antecedentes íntegros y revisión 2 conservada como recepción. Alta, inicio, unidad responsable y fin conservados; estado en ejecución. S22 y S26 intactos; las copias históricas conservan sus cortes.
 
