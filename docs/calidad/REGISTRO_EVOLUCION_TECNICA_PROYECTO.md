@@ -2476,3 +2476,13 @@ H2 sigue siendo candidato; 19 casos sin ejecutar, durabilidad no implementada y 
 El [parte S32 §14](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cobertura-2026-09-17) recibe S32-COBERTURA-01/v1 como matriz documental conforme al encargo: diez flujos, 19 TLC previstos y límites, seis puertas y carencias A–I. Cuatro productos cotejados por tamaño, SHA-256 y blob; 34 identidades de fuentes resueltas. Árbol privado: 120 blobs previos idénticos, cuatro cambios administrativos y cinco altas; ninguna eliminación.
 
 La recepción no adopta opciones, constituye contratos ni asigna las brechas. S32 y BIS-03 continúan abiertos, H2 candidato y durabilidad no implementada. Cero nuevos ensayos de privacidad o recompilaciones. Corresponde decisión humana sobre el perímetro y las opciones API externa/federación; después contratos y seguimiento concreto de lo retenido. S22, S26 y S34 conservan sus estados. Espejos históricos sin sincronización nueva.
+
+<a id="retp-256"></a>
+
+## RETP-2026-256 · Recepción instrumental del auxiliar y alcance por dominios · 17/09/2026
+
+**Hora Europe/Madrid:** 13:54:22. **Unidad:** W-S32. **Suceso:** S32, revisión 7, en ejecución.
+
+El [parte S32 §15](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-aux-duckdb-ncbi-2026-09-17) registra la recuperación Linux, recompilación offline y siete subcasos conformes del auxiliar. [Evidencia privada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bab99267318baccd1f8bbc951ff09d2505f72b43/watson-herramientas/evidencias/receptor-aux-duckdb-ncbi-20260917/RECEPCION_LINUX.md), con acceso restringido. La recepción limita su aceptación a esa preparación instrumental.
+
+Se incorpora el alcance para inmunología y ciberseguridad mediante contrato común y permisos específicos por dominio, finalidad y expediente. Los datos sensibles de auditoría requieren condiciones propias de salida y custodia; la agregación no habilita su comunicación automáticamente. Permanecen pendientes los controles de contención y transporte. No se habilitan federación, conectores de producción ni integración con el núcleo; 19 TLC sin ejecutar, H2 candidato, S32/BIS-03 abiertos. Antecedentes y otros estados preservados.

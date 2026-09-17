@@ -1091,31 +1091,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-17T09:57:40Z
+**fecha_actualizacion_utc:** 2026-09-17T11:54:22Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** W-S32
 
-**alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad desde el diseño; matriz inicial, contratos y puertas de habilitación. Sin ampliar OP-CYB-001 ni implementar conectores.
+**alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad; matriz, contratos y puertas de habilitación. Recepción instrumental de auxiliar externo, sin integración en el núcleo ni habilitación de conectores de producción.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main (recepción documental); SV-sala-de-maquinas: main (productos y respuesta privados).
 
-**cortes_de_entrada:** Lenguaje e1ab93d0de3df170a674f5a7887a3c20e96c6816; encargo e61b99dda6c2a1a62c8abf9ce40d160ab3c4f6ca; productos c1bbc5cf7049913fafa72feea9a8cfb8d0d4bbc7; respuesta 8bb4d41fd4138c7f1a6c246ac952d5004ffd7479.
+**cortes_de_entrada:** Lenguaje 7d6ecaa7d56b786ff194379417fef2ec2f0952df; entrega AUX-DUCKDB-NCBI-01 138b73d7cea21b0c72d2daf6cec20879f18ac9fd; recepción bab99267318baccd1f8bbc951ff09d2505f72b43. Cortes anteriores en historial.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** S32-COBERTURA-01/v1 conforme en alcance documental: diez flujos, diecinueve TLC sin ejecutar, seis puertas y brechas A–I identificadas. Decisiones y contratos pendientes; S32/BIS-03 abiertos. H2 conserva su recepción y estatuto candidato.
+**resultado:** AUX-DUCKDB-NCBI-01 recibido como preparación instrumental recuperable en Linux. D01–D05: siete subcasos conformes; D06: recuperación y recompilación offline propias. Inmunología y ciberseguridad requieren perfiles específicos sobre contrato común. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
 
-**verificacion:** Lectura y contraste receptor; tamaños, SHA-256 y blobs de cuatro productos concordantes; 34 referencias con blob resueltas y dos remisiones conservadas. Árbol privado: 120 blobs previos idénticos, cuatro cambios administrativos, cinco altas y ninguna baja. Sin pruebas SV ni recompilación H2.
+**verificacion:** ZIP y 4192 entradas interiores concordantes; compilación Rust 1.98.0 --locked --offline y suite con retorno 0. Enlace dinámico inspeccionado. Windows y NCBI conservan atribución productora; no repetidos aquí. No se utilizaron ni validaron credenciales.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8bb4d41fd4138c7f1a6c246ac952d5004ffd7479/respuestas-ejecucion/S32-COBERTURA-01/entrega-01/RESPUESTA.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/c1bbc5cf7049913fafa72feea9a8cfb8d0d4bbc7/S32-COBERTURA-01/v1
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bab99267318baccd1f8bbc951ff09d2505f72b43/watson-herramientas/evidencias/receptor-aux-duckdb-ncbi-20260917/RECEPCION_LINUX.md (evidencia de acceso restringido).
 
-**referencia_calidad:** RETP-2026-255; parte de privacidad §14. Recepción anterior H2, RETP-2026-254, preservada.
+**referencia_calidad:** RETP-2026-256; parte de privacidad §15. Recepciones anteriores RETP-2026-254/255 preservadas.
 
-**siguiente_accion:** Decisión humana expresa sobre perímetro general/particular/investigación y, por separado, API externa y consulta estadística federada; después encargo acotado de contratos y seguimientos de lo retenido. No ejecución automática.
+**siguiente_accion:** Acotar contrato y encargo de contención del auxiliar y transporte externo: permisos por dominio/finalidad/expediente, supervisor, dependencias, salidas y recursos. API externa, consulta federada y entrenamiento federado mantienen distinción; sin ejecución automática.
 
-**observaciones:** Revisión 6. W-S32, alta e inicio conservados; fin vacío. Conformidad técnica del encargo documental, sin adoptar opciones ni cerrar S32. A–I no son asignaciones. Durabilidad no implementada; 19 TLC no ejecutados; S22/S26/S34 y BIS mantienen su estado. Copia local productora no inspeccionada; espejos históricos no actualizados.
+**observaciones:** Revisión 7. Alta/inicio/unidad preservados; fin vacío. Aceptación instrumental limitada; no aceptación de producción, federación, interfaz ni Qwen. Controles diferidos conservados en recepción privada. Durabilidad no implementada; S22/S26/S34 y BIS sin cambio. Sin nueva sincronización de espejos.
 
 <a id="s33"></a>
 

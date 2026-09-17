@@ -278,3 +278,7 @@ Leer la [sección 12 del documento del frame](FRAME_SIGNIFICADO_HUMANO_TRAZABILI
 La incorporación reutiliza los contratos de rutas, Fundamentos y Aprendizaje trazable, ambos enlazados desde [Pilares, sección 14](../../PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md). Se mantienen diferenciadas consulta clínica sin Internet, investigación autorizada e incorporación de conocimiento.
 
 Los Markdown y el acta se incorporan con espejo de laboratorio y copias excepcionales del acta en agentes/ y dominios/ de SVperitus-dataset. Los dos PDF siguen en su edición anterior: su ampliación y cotejo están autorizados y pendientes por indisponibilidad del entorno de ejecución y renderizado. S28 conserva ese pendiente y sus enlaces en [Sucesos SV](../../Inventario-sv/sucesos/SUCESOS_SV.md). S26-F01/F02 mantiene su secuencia y no necesita repetir los bancos ya recibidos.
+
+## S32 · Recepción instrumental y alcance por dominios · 17/09/2026
+
+[Parte §15](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-aux-duckdb-ncbi-2026-09-17): auxiliar DuckDB/NCBI recuperado y recompilado offline en Linux; siete subcasos conformes. Aceptación instrumental, con contención e integración pendientes. Contrato común y perfiles de autorización para inmunología y ciberseguridad, incluidos los límites de salida de datos sensibles de auditoría. S32 revisión 7 / RETP-2026-256; 19 TLC sin ejecutar, H2 candidato y S32/BIS-03 abiertos. Esta recepción no habilita flujos ni inicia nuevos encargos.
