@@ -2486,3 +2486,15 @@ La recepción no adopta opciones, constituye contratos ni asigna las brechas. S3
 El [parte S32 §15](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-aux-duckdb-ncbi-2026-09-17) registra la recuperación Linux, recompilación offline y siete subcasos conformes del auxiliar. [Evidencia privada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bab99267318baccd1f8bbc951ff09d2505f72b43/watson-herramientas/evidencias/receptor-aux-duckdb-ncbi-20260917/RECEPCION_LINUX.md), con acceso restringido. La recepción limita su aceptación a esa preparación instrumental.
 
 Se incorpora el alcance para inmunología y ciberseguridad mediante contrato común y permisos específicos por dominio, finalidad y expediente. Los datos sensibles de auditoría requieren condiciones propias de salida y custodia; la agregación no habilita su comunicación automáticamente. Permanecen pendientes los controles de contención y transporte. No se habilitan federación, conectores de producción ni integración con el núcleo; 19 TLC sin ejecutar, H2 candidato, S32/BIS-03 abiertos. Antecedentes y otros estados preservados.
+
+<a id="retp-257"></a>
+
+## RETP-2026-257 · Recepción del cliente Rust y revisión preventiva · 17/09/2026
+
+**Hora Europe/Madrid:** 16:18:22. **Unidad:** W-S32. **Suceso:** S32, revisión 8, en ejecución.
+
+El [parte S32 §16](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17) incorpora la [recuperación receptora Linux](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d28500830ffa65d4700cb70134f921b457b66729/watson-herramientas/evidencias/receptor-cliente-rust-02-20260917/RECUPERACION_LINUX.md), con acceso restringido: identidad de 12 485 entradas y banco publicado 19/19 concordantes. RCR-03 resuelta; RCR-01 pendiente y limitaciones históricas RCR-02 preservadas. La recepción es instrumental y mantiene pendientes aceptación íntegra, selección y controles AUX-C01–C04. No se repiten ensayos en esta conciliación.
+
+Se cotejan siete commits privados y dos públicos con sus perímetros autorizados, sin cambios fuera del alcance examinado. Se inventarían 119 ramas canónicas, una privada y ocho públicas; las muestras temporales corresponden a antecedentes de agosto. No se acredita autorización de toda la historia ni protección administrativa exhaustiva. Se concilian los desfases de Calidad, Sucesos e índices manteniendo los asientos previos. No se modifica código, permisos, ramas, Pages ni el laboratorio público.
+
+Se recomienda auditoría externa acotada sobre un corte actualizado y publicable, por transmisión humana. S32/BIS-03 abiertos; H2 candidato, durabilidad no implementada y 19 TLC sin ejecutar. Sin NCBI, datos reales, credenciales, Qwen, federación ni integración en núcleo.

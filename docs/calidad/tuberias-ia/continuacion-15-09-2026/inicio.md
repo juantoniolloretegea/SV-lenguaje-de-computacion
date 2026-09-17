@@ -1,6 +1,6 @@
 # Continuación · 15 de septiembre de 2026
 
-**Recepción vigente S32 · 17/09/2026:** [cobertura residual recibida, revisión 6 / RETP-2026-255](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cobertura-2026-09-17). Matriz documental conforme: diez flujos; 19 TLC sin ejecutar. A–I identifican brechas, no encargos asignados. S32/BIS-03 abiertos, H2 candidato. Siguiente: decisión humana sobre el perímetro y API/federación, seguida de contratos y seguimientos concretos. No se autoriza implementación. Las entradas inferiores conservan sus cortes anteriores; la preparación de esta matriz y su recepción pendiente quedan superadas por este asiento.
+**Recepción vigente S32 · 17/09/2026:** [cliente Rust y revisión preventiva, revisión 8 / RETP-2026-257](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17). Recuperación instrumental Linux conforme al banco publicado; RCR-01 pendiente, RCR-02 histórica conservada y RCR-03 resuelta. Aceptación íntegra y selección pendientes. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
 
 **Antecedente de recepción H2 · 17/09/2026:** [H2 recibido, revisión 5 / RETP-2026-254](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17). H1-01/H1-02 subsanados documentalmente; 18 comprobaciones instrumentales repetidas en Linux. H2 candidato, 19 casos sin ejecutar, S32/BIS-03 abiertos. Siguiente: cobertura residual de los diez flujos, pendiente de autorización del encargo concreto. Las entradas siguientes son antecedentes de sus respectivos cortes; las menciones anteriores a entrega H2 pendiente quedan superadas por esta recepción.
 
@@ -66,3 +66,7 @@ La [adenda recibida](https://github.com/juantoniolloretegea/SVperitus-dataset/bl
 ## S32 · Recepción instrumental y alcance por dominios · 17/09/2026
 
 [Parte §15](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-aux-duckdb-ncbi-2026-09-17): auxiliar DuckDB/NCBI recuperado y recompilado offline en Linux; siete subcasos conformes. Aceptación instrumental, con contención e integración pendientes. Contrato común y perfiles de autorización para inmunología y ciberseguridad, incluidos los límites de salida de datos sensibles de auditoría. S32 revisión 7 / RETP-2026-256; 19 TLC sin ejecutar, H2 candidato y S32/BIS-03 abiertos. Esta recepción no habilita flujos ni inicia nuevos encargos.
+
+## S32 · Cliente Rust y conciliación preventiva · 17/09/2026
+
+[Parte §16](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17): recepción Linux del cliente Rust, 12 485 entradas concordantes y banco publicado 19/19. Esta recepción sucede a las anteriores sin sustituir sus evidencias. Conserva pendientes el complemento CR08, la contención del auxiliar y las limitaciones de captura histórica. Se han cotejado los nueve commits de ejecución, recepción y sede pública delimitados en el parte; no es una auditoría de toda la historia. Revisión canónica 8 / RETP-2026-257. Auditoría externa recomendada sobre nuevo corte autorizado, sin activación automática.

@@ -454,3 +454,47 @@ La Dirección precisa que el acceso externo y la consulta federada deben contemp
 Windows y NCBI conservan evidencia productora con atribución expresa; no se han repetido en esta recepción. La clave NCBI no se utilizó ni validó. Los diecinueve TLC siguen sin ejecutar, H2 conserva estatuto candidato y la durabilidad sigue sin implementación acreditada. S32 continúa en ejecución y BIS-03 abierto; S22, S26, S34 y otros frentes conservan sus estados. API externa y consulta estadística federada mantienen decisiones y condiciones propias; la exclusión del entrenamiento federado continúa vigente. No se acredita integración Qwen, navegador o WASI.
 
 El siguiente encargo deberá acotar los contratos y realizaciones necesarias sobre estas sedes y reservar la ejecución a la autorización humana de su revisión exacta, conforme a S36. La autorización de adoptar DuckDB como auxiliar no equivale a autorizar todos los flujos o fuentes de datos. Se preservan originales, antecedentes, copia local de trabajo y paquetes privados publicados; no se exige descarga duplicada ni se afirma persistencia de la instancia receptora. Los registros e índices canónicos se actualizan conjuntamente; los espejos históricos conservan su corte.
+
+
+<a id="s32-recepcion-cliente-rust-prevencion-2026-09-17"></a>
+
+## 16. Recepción instrumental del cliente Rust y revisión preventiva · 17/09/2026
+
+**Registro:** S32, revisión 8; RETP-2026-257. **Unidad:** W-S32. **Fecha de actualización:** 2026-09-17T14:18:22Z. Esta sección sucede a §15 como estado vigente y conserva las recepciones anteriores.
+
+### 16.1. Fuentes y alcance
+
+Se han consultado íntegramente Pilares, Perfiles y Transición §§1–30, en ese orden, en el corte canónico 2d957d146464da9cc6710c12e632a2abc72b63d0. Se contrastan el encargo AUX-CLIENTE-RUST-02/v1 fijado en 19aae18f2a0d6af9a904c28d551dcdac94919465, su entrega 8a38f1db9cfeed537cb6d4d7f7c5767c990b3709 y la recepción d28500830ffa65d4700cb70134f921b457b66729. La revisión preventiva responde a la solicitud humana de comprobar registros, ramas y perímetros de escritura; no constituye una auditoría completa del historial, de permisos efectivos ni del equipo productor.
+
+### 16.2. Recepción que se incorpora
+
+La [evidencia receptora de acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d28500830ffa65d4700cb70134f921b457b66729/watson-herramientas/evidencias/receptor-cliente-rust-02-20260917/RECUPERACION_LINUX.md) acredita transferencia, identidad del paquete, 12 485 entradas interiores concordantes antes y después de la ejecución y recuperación en una instancia Linux nueva. Compilación Rust 1.98.0 con dependencias locales y opciones `--locked --offline`: retorno 0. Banco publicado: 19/19 comprobaciones concordantes, retorno 0. La compilación terminó a las 14:00:12Z y el banco a las 14:00:20Z. Se incorpora esta evidencia ya obtenida; la presente conciliación no repite ensayos.
+
+RCR-03 queda resuelta por recuperación propia. RCR-01 permanece abierta: CR08/missing elimina todos los eventos; ese resultado no demuestra rechazo por omitir exactamente un evento requerido. Se necesita un complemento separado con estímulo, causa de rechazo y oráculo precomprometidos. RCR-02 conserva las limitaciones históricas de captura inicial e independencia; una reproducción posterior no completa retroactivamente los registros ausentes. El intento fallido CR06, su reparación y los resultados anteriores se conservan.
+
+La biblioteca nativa DuckDB continúa enlazada mediante FFI dentro del proceso del cliente. Las guardas Rust no constituyen aislamiento del motor. La recuperación no requirió .NET; el uso productor documentado de PowerShell/.NET corresponde a administración y transporte, sin certificación exhaustiva de su entorno. El modo offline de Cargo no acredita aislamiento de red impuesto por el sistema operativo. Windows conserva atribución productora. No se ejecutaron NCBI ni credenciales.
+
+Se recibe únicamente la preparación instrumental reproducida, con reservas: no hay aceptación íntegra, selección del cliente, sustitución del auxiliar anterior ni habilitación de producción. AUX-C01–C04 siguen pendientes: supervisor y permisos, carga y frontera nativa, transporte NCBI, recursos y salida. Los 19 resultados del banco no son los 19 TLC, que permanecen sin ejecutar.
+
+### 16.3. Cotejo preventivo de ramas, commits y rutas
+
+| Sede y corte examinado | Comprobación | Resultado y límite |
+|---|---|---|
+| SV-sala-de-maquinas, main, 19aae18… → d285008… | Siete commits consecutivos; árbol completo en cada paso; contraste con rutas del encargo y de recepción | Cinco commits productores y dos receptores sin rutas ajenas al perímetro examinado. Diferencia neta: 1 196 archivos añadidos, cuatro modificados y ninguno eliminado. Sólo una rama remota enumerada: main. |
+| SVcustos-dataset, laboratorio-publico, dd50c3e… → 206c405… | Dos commits; mandato LP-DOC-0001/v1 + A01; índice y sede documental | Diferencia neta: 32 archivos añadidos en revision-publica y una adición de acceso en el índice autorizado; ninguna eliminación. La base procede de la rama beta fijada por A01. |
+| SVcustos-dataset, main fccde9c… y beta dd50c3e… | Referencias remotas y commits de main desde 17/09/2026 00:00Z | Sin commits de main en ese intervalo. La rama beta conserva el corte de origen. Ocho ramas remotas enumeradas; no se elimina ninguna. |
+| SV-lenguaje-de-computacion, main 2d957d1… | Inventario de 119 ramas y examen de cuatro puntas históricas | Las puntas muestreadas de ramas temporales corresponden al 19, 23, 24 y 29 de agosto. El inventario no acredita legitimidad, inactividad ni autorización de las 119 ramas. |
+
+La ascendencia examinada es lineal en ambos encargos. Los antecedentes heredados de la rama beta no se atribuyen como nuevas escrituras de la unidad documental. No se ha identificado escritura fuera de alcance en estos nueve commits; esta afirmación no se extiende a todas las operaciones locales, referencias borradas, acciones no capturadas ni a la identidad material del operador.
+
+El indicador `protected` de las ramas enumeradas es falso, incluidas las principales. Es un dato del endpoint consultado, no una inspección administrativa exhaustiva de reglas, permisos o protecciones efectivas. Queda pendiente una revisión específica de gobernanza de ramas y reglas si la Dirección la dispone. No se han creado, eliminado, fusionado, reescrito ni limpiado ramas durante esta revisión.
+
+### 16.4. Conciliación documental y continuidad
+
+Antes de esta actualización, la recepción privada había resuelto RCR-03, mientras Calidad/Sucesos conservaban S32 revisión 7 / RETP-2026-256 y el índice privado de encargos aún indicaba recuperación pendiente. Además, dos cabeceras de acceso canónico remitían a revisión 6 aunque su sección final ya recogía revisión 7. Se actualizan conjuntamente el estado vigente S32, su representación Markdown, el historial por adición de revisión 8, RETP por adición de 257, este parte y ambas cabeceras de acceso. Los demás sucesos y los asientos históricos quedan preservados. La sede privada añadirá el correspondiente asiento de conciliación y el enlace al commit canónico publicado.
+
+La sede pública y LP-AUD-0001/v1 conservan el corte S32 revisión 6 / RETP-2026-255 que figura en su entrega; no se presentan como réplica actualizada ni se sincronizan automáticamente. Una nueva auditoría exige identificar su corte, alcance y fuentes actuales publicables, conservando aquel expediente. Las evidencias privadas no se trasladan a una rama pública por esta instrucción.
+
+Es oportuno un examen externo acotado de fronteras del auxiliar, suficiencia de los estímulos negativos, límites de las afirmaciones de conformidad, autorización por dominio y trazabilidad. El revisor deberá separar lo leído, lo reproducido y lo inaccesible; no podrá acreditar código o registros privados no suministrados. Su preparación y transmisión seguirán el procedimiento humano vigente, sin envío automático ni otorgamiento de escritura.
+
+S32 y BIS-03 continúan abiertos, H2 candidato y durabilidad no implementada. S22, S26, S34 y los demás seguimientos no cambian. Inmunología y ciberseguridad conservan perfiles propios sobre el contrato común: no se comunican datos sensibles de auditoría, secretos ni datos de terceros por disponer de un conector. Núcleo, Qwen, interfaz web, API de producción y consulta federada no quedan habilitados; la exclusión del entrenamiento federado permanece vigente.
