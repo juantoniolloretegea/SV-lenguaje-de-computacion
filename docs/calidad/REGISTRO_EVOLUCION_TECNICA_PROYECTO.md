@@ -2498,3 +2498,14 @@ El [parte S32 §16](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD
 Se cotejan siete commits privados y dos públicos con sus perímetros autorizados, sin cambios fuera del alcance examinado. Se inventarían 119 ramas canónicas, una privada y ocho públicas; las muestras temporales corresponden a antecedentes de agosto. No se acredita autorización de toda la historia ni protección administrativa exhaustiva. Se concilian los desfases de Calidad, Sucesos e índices manteniendo los asientos previos. No se modifica código, permisos, ramas, Pages ni el laboratorio público.
 
 Se recomienda auditoría externa acotada sobre un corte actualizado y publicable, por transmisión humana. S32/BIS-03 abiertos; H2 candidato, durabilidad no implementada y 19 TLC sin ejecutar. Sin NCBI, datos reales, credenciales, Qwen, federación ni integración en núcleo.
+
+
+<a id="retp-258"></a>
+
+## RETP-2026-258 · Recepción parcial de traza y memoria · 17/09/2026
+
+**Hora Europe/Madrid:** 21:32:41. **Unidad:** W-S32. **Suceso:** S32, revisión 9, en ejecución.
+
+El [parte §17](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-memoria-traza-2026-09-17) incorpora la [recepción privada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f65b7b1aeceed24714e78c4e3d4ce4a1cec89f94/watson-herramientas/evidencias/receptor-memoria-traza-03-20260917/ACTA_RECEPCION.md): 726 identidades y 34 archivos de precompromiso concordantes; reconstrucción Linux con Rust 1.98.0 y nueve casos conformes. RCR-01 resuelta sólo para el desajuste de omisión exacta mediante MT02/MT03. No equivale a completitud universal, seguridad de memoria ni ejecución de los 19 TLC.
+
+Aceptación parcial: observación bajo depurador pendiente y reservas de perímetro local/excepción de ejecución por aclarar. No se atribuye escritura externa consumada ni cambio permanente de política. RCR-02 histórica, AUX-C01–C04 y permisos por dominio permanecen pendientes; RCR-03 conserva su resolución previa. Cinco commits privados cotejados en alcance, sin auditoría exhaustiva del equipo local. Se actualizan los ocho documentos de seguimiento preservando antecedentes y otros sucesos. Sin integración, nueva campaña, sanitizadores ni modificación de espejos.

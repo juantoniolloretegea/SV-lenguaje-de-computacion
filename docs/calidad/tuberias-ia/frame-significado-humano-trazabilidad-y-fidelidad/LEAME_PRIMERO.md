@@ -1,6 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
-**Recepción vigente S32 · 17/09/2026:** [cliente Rust y revisión preventiva, revisión 8 / RETP-2026-257](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17). Recuperación instrumental Linux conforme al banco publicado; RCR-01 pendiente, RCR-02 histórica conservada y RCR-03 resuelta. Aceptación íntegra y selección pendientes. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
+**Recepción vigente S32 · 17/09/2026:** [complemento de traza y memoria, revisión 9 / RETP-2026-258](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-memoria-traza-2026-09-17). Recuperación Linux: nueve casos conformes. RCR-01 resuelta en alcance exacto; aceptación parcial, depuración y reservas procedimentales pendientes. AUX-C01–C04 sin cierre; S32/BIS-03 abiertos, H2 candidato y 19 TLC sin ejecutar.
+
+**Antecedente de recepción S32 · 17/09/2026:** [cliente Rust y revisión preventiva, revisión 8 / RETP-2026-257](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17). Recuperación instrumental Linux conforme al banco publicado; RCR-01 pendiente, RCR-02 histórica conservada y RCR-03 resuelta. Aceptación íntegra y selección pendientes. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
 
 **Antecedente de recepción H2 · 17/09/2026:** [H2 recibido, revisión 5 / RETP-2026-254](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17). H1-01/H1-02 subsanados documentalmente; 18 comprobaciones instrumentales repetidas en Linux. H2 candidato, 19 casos sin ejecutar, S32/BIS-03 abiertos. Siguiente: cobertura residual de los diez flujos, pendiente de autorización del encargo concreto. Las entradas siguientes son antecedentes de sus respectivos cortes; las menciones anteriores a entrega H2 pendiente quedan superadas por esta recepción.
 
@@ -286,3 +288,8 @@ Los Markdown y el acta se incorporan con espejo de laboratorio y copias excepcio
 ## S32 · Cliente Rust y conciliación preventiva · 17/09/2026
 
 [Parte §16](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cliente-rust-prevencion-2026-09-17): recepción Linux del cliente Rust, 12 485 entradas concordantes y banco publicado 19/19. Esta recepción sucede a las anteriores sin sustituir sus evidencias. Conserva pendientes el complemento CR08, la contención del auxiliar y las limitaciones de captura histórica. Se han cotejado los nueve commits de ejecución, recepción y sede pública delimitados en el parte; no es una auditoría de toda la historia. Revisión canónica 8 / RETP-2026-257. Auditoría externa recomendada sobre nuevo corte autorizado, sin activación automática.
+
+
+## S32 · Recepción parcial de traza y memoria · 17/09/2026
+
+[Parte §17](../continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-memoria-traza-2026-09-17): S32 revisión 9 / RETP-2026-258. Nueve casos instrumentales conformes en recepción Linux, resolución acotada RCR-01 y conservación de evidencias históricas. Observación bajo depurador no realizada; perímetro del editor y autorización de excepción de ejecución por aclarar. Sin integración ni ampliación automática del encargo.

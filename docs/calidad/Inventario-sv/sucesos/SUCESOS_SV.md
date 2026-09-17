@@ -1091,31 +1091,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-17T14:18:22Z
+**fecha_actualizacion_utc:** 2026-09-17T19:32:41Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** W-S32
 
-**alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad; contratos y puertas de habilitación. Recepción instrumental del cliente Rust auxiliar y revisión preventiva de trazabilidad, sin integración en el núcleo.
+**alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad; contratos y puertas de habilitación. Recepción instrumental del complemento de traza y memoria del cliente Rust, sin integración en el núcleo.
 
-**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (registro canónico); SV-sala-de-maquinas: main (evidencias privadas); SVcustos-dataset: laboratorio-publico (cotejo de lectura).
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (registro canónico); SV-sala-de-maquinas: main (evidencias privadas). Laboratorio público sin modificación.
 
-**cortes_de_entrada:** Lenguaje 2d957d146464da9cc6710c12e632a2abc72b63d0; entrega AUX-CLIENTE-RUST-02 8a38f1db9cfeed537cb6d4d7f7c5767c990b3709; recepción d28500830ffa65d4700cb70134f921b457b66729; laboratorio 206c405184a33884cdf0d19017b8f31d0f398340. Antecedentes en historial.
+**cortes_de_entrada:** Lenguaje bdb094958da5be00d2c24864c333deaa4f0636cc; encargo 48678aee1123796876bedc19967edb54aed47665; entrega AUX-MEMORIA-TRAZA-03 8404a26ac7966f7162ba635d9b7f38b0e75874f1; producto 148b39edbeeeaa019e4f3535823dc589c67b1c8f; recepción f65b7b1aeceed24714e78c4e3d4ce4a1cec89f94. Antecedentes en historial.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Cliente Rust recuperado y recompilado en Linux; banco publicado 19/19 concordante. RCR-03 resuelta; RCR-01 pendiente y RCR-02 histórica conservada. Cotejo de siete commits privados y dos públicos sin cambios fuera del perímetro examinado. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
+**resultado:** Recuperación receptora Linux: nueve casos concordantes. RCR-01 resuelta sólo para el desajuste de omisión exacta mediante MT02/MT03; sin completitud universal. RCR-02 histórica y RCR-03 resuelta conservadas. Aceptación parcial; depuración no realizada y reservas de procedimiento local pendientes. S32/BIS-03 abiertos; H2 candidato y 19 TLC sin ejecutar.
 
-**verificacion:** Paquete y 12 485 entradas interiores concordantes antes y después de la recuperación; Rust 1.98.0 --locked --offline y banco con retorno 0. FFI nativa intraproceso; .NET no requerido en recepción. Windows conserva atribución productora. Sin NCBI ni credenciales; sin acreditar aislamiento de red del sistema operativo ni captura independiente exhaustiva.
+**verificacion:** 727 archivos recuperados; 726 entradas de manifiesto y 34 de precompromiso concordantes antes y después. Rust 1.98.0 --locked --offline con dependencias previamente recibidas. Auditor: 212 eventos/huellas, 80 fragmentos y ocho parches dentro del corte declarado. Cinco commits cotejados por árboles completos. Windows conserva atribución productora. Sin demostrar aislamiento de red del sistema operativo ni seguridad general de la FFI.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d28500830ffa65d4700cb70134f921b457b66729/watson-herramientas/evidencias/receptor-cliente-rust-02-20260917/RECUPERACION_LINUX.md (acceso restringido). Parte §16: cortes, perímetros, resultados y límites de la revisión preventiva.
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f65b7b1aeceed24714e78c4e3d4ce4a1cec89f94/watson-herramientas/evidencias/receptor-memoria-traza-03-20260917/ACTA_RECEPCION.md (acceso restringido). Parte §17: recepción, límites, perímetro y seguimiento.
 
-**referencia_calidad:** RETP-2026-257; parte de privacidad §16. Recepciones RETP-2026-254/255/256 e historial preservados.
+**referencia_calidad:** RETP-2026-258; parte de privacidad §17. RETP-2026-254/255/256/257 e historial preservados.
 
-**siguiente_accion:** Preparar complemento acotado RCR-01 con precompromiso y autorización humana. Mantener AUX-C01–C04 pendientes y permisos por dominio/finalidad/expediente. Auditoría externa documental o de arquitectura sobre corte actualizado y publicable, sólo por transmisión humana.
+**siguiente_accion:** Aclarar el perímetro efectivo de almacenamiento del editor y la autorización de la excepción de ejecución documentada antes de otra observación bajo depurador. Mantener AUX-C01–C04 y permisos por dominio/finalidad/expediente pendientes. Cualquier continuación material requiere encargo acotado transmitido por la Dirección.
 
-**observaciones:** Revisión 8. Alta/inicio/unidad preservados; fin vacío. Recuperación instrumental con reservas, sin aceptación completa ni selección. Inventario de ramas y muestras históricas no acreditan autorización de toda la historia ni del equipo local. S22/S26/S34 sin cambio; durabilidad no implementada; sin nueva sincronización de espejos.
+**observaciones:** Revisión 9. Alta/inicio/unidad preservados; fin vacío. El registro productor muestra intentos de escritura/eliminación fuera del directorio de ensayo; no demuestra que se consumaran. La autorización específica de ExecutionPolicy Bypass no está acreditada en el expediente recibido; no se atribuye cambio permanente. Sin aceptación íntegra, producción, NCBI, núcleo, interfaz ni sincronización de espejos.
 
 <a id="s33"></a>
 
