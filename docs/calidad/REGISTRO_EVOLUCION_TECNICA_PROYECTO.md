@@ -2444,3 +2444,13 @@ Se conserva el antecedente RETP-2026-250. La recuperación verifica la instancia
 La [revisión de continuidad](tuberias-ia/continuacion-15-09-2026/REVISION_CONTINUIDAD_RELEVO_2026_09_17.md) precisa estados obsoletos de las guías, remisiones pendientes ya superadas por S33, alternativas de transporte y sincronización previa a escribir. El [protocolo recibido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bf6e5202ed2c8bd4b47c3e9948f049379e37dd9d/watson-herramientas/PROTOCOLO_RELEVO.md) conserva el proceso canónico único y el alcance instrumental de S33.
 
 Los dos documentos orientan el arranque; la ejecución requiere acceso a paquetes y herramientas verificadas. No se acredita disponibilidad permanente ni auditoría exhaustiva. La continuación propuesta es H2 dentro de S32, limitada a H1-01/H1-02 y al auxiliar documental. S34 mantiene su recepción pendiente. No se aceptan contratos ni se cierran S22, S26, S32 o BIS-03 por esta revisión.
+
+<a id="retp-253"></a>
+
+## RETP-2026-253 · Encargos y respuestas bajo autorización humana · 17/09/2026
+
+**Hora Europe/Madrid:** 10:34:23. **Unidad:** W-S32. **Suceso:** S36, revisión 0, finalizado.
+
+El [procedimiento](tuberias-ia/continuacion-15-09-2026/PROCEDIMIENTO_ENCARGOS_Y_RESPUESTAS_2026_09_17.md) recibe las sedes privadas separadas de [encargos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/encargos-ejecucion/README.md) y [respuestas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/respuestas-ejecucion/README.md). Cada nuevo encargo se presenta por commit a la Dirección y permanece pendiente hasta autorización expresa de su revisión. La unidad ejecutora conserva la copia local y publica su respuesta; la recepción y aceptación mantienen su propio alcance.
+
+H2 se incorpora como encargo ya transmitido y en curso según comunicación humana; no se reinicia ni se altera su cuerpo. Siete archivos privados cotejados por lectura remota, sin eliminaciones ni cambios fuera del alcance. La respuesta H2 y su aceptación permanecen pendientes. No se observan procesos locales ni se acredita una copia remota de archivos no publicados. S32 y los demás frentes conservan su estado.

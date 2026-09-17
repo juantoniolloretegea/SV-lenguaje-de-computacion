@@ -1228,3 +1228,40 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta de actividad ya examinada. La fecha de inicio corresponde al primer sello temporal conservado de esta revisión, no a una medición de duración de sus lecturas preliminares. Revisión 0. S33 y los demás sucesos conservados; sin relevo ni duplicación de ejecuciones.
 
+
+<a id="s36"></a>
+
+## S36 · Custodia de encargos y respuestas con autorización humana
+
+**estado:** finalizado
+
+**fecha_alta_utc:** 2026-09-17T08:34:23Z
+
+**fecha_inicio_utc:** 2026-09-17T08:30:49Z
+
+**fecha_actualizacion_utc:** 2026-09-17T08:34:23Z
+
+**fecha_fin_utc:** 2026-09-17T08:34:23Z
+
+**unidad_responsable:** W-S32
+
+**alcance:** Establecer sedes separadas de encargos y respuestas en el depósito privado, con revisión fijada, autorización humana, entrega y recepción diferenciadas, conservando la copia local.
+
+**repositorios_y_ramas:** SV-sala-de-maquinas: main (encargos y respuestas); SV-lenguaje-de-computacion: main (registro documental).
+
+**cortes_de_entrada:** Lenguaje d6e5bcadb3a1c76448a117a1fe0c7bc61e31de35; depósito de entrada bf6e5202ed2c8bd4b47c3e9948f049379e37dd9d; publicación bd99f96b34dca442db7999d94bed695377c0ec82.
+
+**dependencias:** Instrucción humana de 17/09/2026 y precisiones sobre respuestas separadas y conservación local; S35; Acta 001 §10; S32/H2.
+
+**resultado:** Publicadas encargos-ejecucion/ y respuestas-ejecucion/. H2 incorporado como copia literal del encargo ya transmitido; respuesta pendiente. No se inicia ni reinicia una tarea por publicar esta sede.
+
+**verificacion:** Comparación del árbol anterior y posterior: siete archivos añadidos o modificados, sin eliminaciones ni cambios fuera del alcance. Lectura remota de los siete archivos concordante con el contenido enviado. Encargo H2 literal preservado.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/encargos-ejecucion/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/respuestas-ejecucion/README.md
+
+**referencia_calidad:** RETP-2026-253; procedimiento de encargos y respuestas.
+
+**siguiente_accion:** Recibir H2 en la sede de respuestas, revisar su alcance y evidencias y actualizar S32 según el dictamen. Los futuros encargos requieren autorización expresa de su revisión fijada.
+
+**observaciones:** Alta posterior a actividad iniciada. Inicio corresponde al primer sello UTC conservado de esta intervención; fin al cotejo remoto. No se ha inspeccionado la copia del equipo local ni observado sus procesos. No se acredita recepción de estas instrucciones por la unidad ejecutora; S32 y los demás frentes conservan su estado.
+
