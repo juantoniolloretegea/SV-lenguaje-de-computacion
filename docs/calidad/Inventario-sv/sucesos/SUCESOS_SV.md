@@ -1190,3 +1190,41 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta pendiente. Rust 1.98.0 explícito para reproducción, predeterminados conservados. Sin instalación indiscriminada de bibliotecas, selección definitiva de GUI, campañas SV o cambios en dominios. Cada resultado conserva su plataforma y alcance.
 
+
+
+<a id="s35"></a>
+
+## S35 · Revisión de continuidad y relevo tras la recuperación S33
+
+**estado:** finalizado
+
+**fecha_alta_utc:** 2026-09-17T07:54:23Z
+
+**fecha_inicio_utc:** 2026-09-17T07:51:17Z
+
+**fecha_actualizacion_utc:** 2026-09-17T07:54:23Z
+
+**fecha_fin_utc:** 2026-09-17T07:54:23Z
+
+**unidad_responsable:** W-S32
+
+**alcance:** Contrastar las dos guías de arranque, corregir remisiones obsoletas y delimitar acceso, recuperación, sincronización y siguiente encargo. Revisión documental acotada.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (Calidad); SV-sala-de-maquinas: main (protocolo y entradas).
+
+**cortes_de_entrada:** Lenguaje e04c0b172b2458c803f3d2685299125665660a70; depósito de entrada b5ddedbb5f7388cb503e571f91942de352e2b1f5; protocolo bf6e5202ed2c8bd4b47c3e9948f049379e37dd9d.
+
+**dependencias:** S33 / RETP-2026-251; Acta 001 §10; S32 §12.4; reglas de Sucesos.
+
+**resultado:** Cuatro riesgos documentales precisados: estado previo obsoleto, remisión de recuperación pendiente, transporte presentado sólo por ZIP y sincronización local-remota. Continuidad apta para subsanación documental H2 con requisitos previos explícitos.
+
+**verificacion:** Lectura y contraste de las guías y entradas publicadas; consulta de puntas y recepción S33; rustc -Vv confirma 1.98.0 en la instancia. No se repiten campañas ni se ejecutan casos de privacidad.
+
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bf6e5202ed2c8bd4b47c3e9948f049379e37dd9d/watson-herramientas/PROTOCOLO_RELEVO.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/REVISION_CONTINUIDAD_RELEVO_2026_09_17.md
+
+**referencia_calidad:** RETP-2026-252; revisión de continuidad y relevo.
+
+**siguiente_accion:** Entregar el encargo documental H2 de S32 y recibir su resultado con diferencias y evidencias fijadas. Comprobar requisitos y sincronización antes de escribir; mantener pendiente la recepción S34.
+
+**observaciones:** Alta de actividad ya examinada. La fecha de inicio corresponde al primer sello temporal conservado de esta revisión, no a una medición de duración de sus lecturas preliminares. Revisión 0. S33 y los demás sucesos conservados; sin relevo ni duplicación de ejecuciones.
+

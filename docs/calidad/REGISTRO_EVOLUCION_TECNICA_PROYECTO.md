@@ -2433,3 +2433,14 @@ S34, revisión 0, queda pendiente para la preparación instrumental multiplatafo
 La [recepción S33](tuberias-ia/continuacion-15-09-2026/RECEPCION_S33_RUST_2026_09_17.md) acredita instalación aislada de Rust 1.98.0 para Linux x86-64 y compilación y ejecución del programa mínimo y del cotejo documental LEYENDA-CONTENIDO/3, con terminación 0. Cinco archivos transferidos individualmente y once identidades del paquete reconstruido conformes. [Evidencia instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b5ddedbb5f7388cb503e571f91942de352e2b1f5/watson-herramientas/evidencias/receptor-linux-20260917/README.md).
 
 Se conserva el antecedente RETP-2026-250. La recuperación verifica la instancia receptora; no acredita ZIP exterior, firmas independientes, persistencia, resolución de dependencias Cargo ni equivalencia entre plataformas. Antes de cada sesión se comprobarán versiones y requisitos reales. S34 conserva su recepción pendiente. No se aceptan H1 ni sus casos, no se ejecutan ensayos de privacidad y no se cierran S22, S26, S32 o BIS-03.
+
+
+<a id="retp-252"></a>
+
+## RETP-2026-252 · Revisión de continuidad y relevo · 17/09/2026
+
+**Hora Europe/Madrid:** 09:54:23. **Unidad:** W-S32. **Suceso:** S35, revisión 0, finalizado en su alcance documental.
+
+La [revisión de continuidad](tuberias-ia/continuacion-15-09-2026/REVISION_CONTINUIDAD_RELEVO_2026_09_17.md) precisa estados obsoletos de las guías, remisiones pendientes ya superadas por S33, alternativas de transporte y sincronización previa a escribir. El [protocolo recibido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bf6e5202ed2c8bd4b47c3e9948f049379e37dd9d/watson-herramientas/PROTOCOLO_RELEVO.md) conserva el proceso canónico único y el alcance instrumental de S33.
+
+Los dos documentos orientan el arranque; la ejecución requiere acceso a paquetes y herramientas verificadas. No se acredita disponibilidad permanente ni auditoría exhaustiva. La continuación propuesta es H2 dentro de S32, limitada a H1-01/H1-02 y al auxiliar documental. S34 mantiene su recepción pendiente. No se aceptan contratos ni se cierran S22, S26, S32 o BIS-03 por esta revisión.
