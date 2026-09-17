@@ -1091,7 +1091,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-17T05:57:25Z
+**fecha_actualizacion_utc:** 2026-09-17T08:56:28Z
 
 **fecha_fin_utc:** —
 
@@ -1101,21 +1101,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main (recepción documental); SV-sala-de-maquinas: main (depósito privado recibido); SVperitus-dataset: dominio-inmunologia (originales).
 
-**cortes_de_entrada:** Lenguaje 03578e3c3919d38ed1ae1dbc686d36ea9147c0b6; depósito auxiliar 75f5e440b9dd8461889ec4083df9763231284d06; originales bba2d3ae24cdc20e33b90375f295916928011985.
+**cortes_de_entrada:** Lenguaje 79ee51dd659e6b2906cb662ffcab6b4d9cd6f40b; entrega H2 a47d53a703994acfee08f2b6fd4d1d63f04341d0; productos 6d616d5f6e7c167413003ce74e04c0cbf66a32ed; dataset bba2d3ae24cdc20e33b90375f295916928011985.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Recibida y revisada documentalmente la propuesta TLC-S32-02 v0.1 + H1. Siete originales con blobs coincidentes; diecinueve casos previstos: cinco positivos y catorce negativos, ninguno ejecutado. Se reconoce el tratamiento de seis objeciones; aceptación integral pendiente de H1-01/H1-02. S32 y BIS-03 permanecen abiertos.
+**resultado:** H2 recibido; H1-01/H1-02 subsanados y aceptados en alcance documental. Contrato candidato, sin aceptación integral ni habilitación. Diecinueve casos previstos sin ejecutar; S32 y BIS-03 abiertos.
 
-**verificacion:** Lectura receptora del contrato, casos, auxiliar Rust, referencias y registro final; cotejo entre árboles Git. El registro recibido acredita tres modos conformes y cinco mutaciones rechazadas en Windows con Rust 1.98.0; no se ha repetido aquí su ejecución. Cero ensayos de privacidad.
+**verificacion:** Reproducción receptora Linux con Rust 1.98.0: compilación 0 y 18 comprobaciones instrumentales concordantes. Verificados 23 objetos del manifiesto y 46 entradas congeladas antes/después; lectura semántica y contraste de fuentes y preservación. Cero ensayos de privacidad.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CONTRATO_CANDIDATO_TLC_S32_02_v0.1.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CASOS_PREVISTOS_TLC_S32_02_v0.1.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h1-2026-09-17
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1a3e197b584eeb9f5269ce5a9449c857e20d7493/watson-herramientas/evidencias/receptor-h2-20260917/README.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17
 
-**referencia_calidad:** RETP-2026-250; parte de privacidad, apartado 12. Antecedentes RETP-2026-242/243/247/248/249 conservados.
+**referencia_calidad:** RETP-2026-254; parte de privacidad §13. Antecedentes y dictamen H1 conservados.
 
-**siguiente_accion:** Precisar H1-01: evidencia durable previa al efecto en configuración y oráculo; H1-02: enlaces y sede del derivado. Conservar H1 y presentar diferencias de la siguiente revisión; fijar referencias antes de recompilar. Mantener las condiciones de los apartados 5 y 8, sin habilitar flujos ni iniciar campañas.
+**siguiente_accion:** Preparar para autorización humana una matriz de cobertura residual de los diez flujos: componente, contrato, prueba, seguimiento concreto y condición de habilitación. Resolver expresamente las opciones condicionadas; no implementar ni ejecutar casos por esta recepción.
 
-**observaciones:** Revisión 4: recepción y dictamen documental acotado. Identificador estable W-S32 conservado; denominación impersonal en la nueva presentación, sin relevo ni reasignación de ejecuciones. Alta, inicio y fin conservados; historial íntegro. S22 y S26 intactos. S33 sigue la acreditación instrumental pendiente; los espejos históricos conservan su corte.
+**observaciones:** Revisión 5. Unidad W-S32, alta e inicio conservados; fin vacío. H1 y originales preservados. Durabilidad especificada, no implementada. S22/S26 y BIS mantienen estados; S33 finalizado en su alcance instrumental; recepción S34 pendiente. Entrega separada de aceptación; nueva tarea pendiente de autorización.
 
 
 <a id="s33"></a>

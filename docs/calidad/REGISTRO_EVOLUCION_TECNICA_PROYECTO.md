@@ -2454,3 +2454,14 @@ Los dos documentos orientan el arranque; la ejecución requiere acceso a paquete
 El [procedimiento](tuberias-ia/continuacion-15-09-2026/PROCEDIMIENTO_ENCARGOS_Y_RESPUESTAS_2026_09_17.md) recibe las sedes privadas separadas de [encargos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/encargos-ejecucion/README.md) y [respuestas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bd99f96b34dca442db7999d94bed695377c0ec82/respuestas-ejecucion/README.md). Cada nuevo encargo se presenta por commit a la Dirección y permanece pendiente hasta autorización expresa de su revisión. La unidad ejecutora conserva la copia local y publica su respuesta; la recepción y aceptación mantienen su propio alcance.
 
 H2 se incorpora como encargo ya transmitido y en curso según comunicación humana; no se reinicia ni se altera su cuerpo. Siete archivos privados cotejados por lectura remota, sin eliminaciones ni cambios fuera del alcance. La respuesta H2 y su aceptación permanecen pendientes. No se observan procesos locales ni se acredita una copia remota de archivos no publicados. S32 y los demás frentes conservan su estado.
+
+
+<a id="retp-254"></a>
+
+## RETP-2026-254 · Recepción de H2 · 17/09/2026
+
+**Hora Europe/Madrid:** 10:56:28. **Unidad:** W-S32. **Suceso:** S32, revisión 5, en ejecución.
+
+El [parte S32 §13](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17) acepta la subsanación documental de H1-01/H1-02. La [recepción independiente](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1a3e197b584eeb9f5269ce5a9449c857e20d7493/watson-herramientas/evidencias/receptor-h2-20260917/README.md) conserva compilación y 18 comprobaciones instrumentales concordantes con Rust 1.98.0 en Linux; 23 objetos cotejados y 46 entradas congeladas verificadas antes y después. Originales e H1 preservados.
+
+H2 sigue siendo candidato; 19 casos sin ejecutar, durabilidad no implementada y cero ensayos de privacidad. No se cierran S32/BIS-03 ni se habilitan flujos. Se prepara la cobertura residual de los diez flujos para una nueva autorización humana, según S36. S22/S26 y S34 mantienen sus estados y alcances propios.

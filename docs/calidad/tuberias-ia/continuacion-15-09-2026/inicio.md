@@ -1,5 +1,7 @@
 # Continuación · 15 de septiembre de 2026
 
+**Recepción vigente S32 · 17/09/2026:** [H2 recibido, revisión 5 / RETP-2026-254](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17). H1-01/H1-02 subsanados documentalmente; 18 comprobaciones instrumentales repetidas en Linux. H2 candidato, 19 casos sin ejecutar, S32/BIS-03 abiertos. Siguiente: cobertura residual de los diez flujos, pendiente de autorización del encargo concreto. Las entradas siguientes son antecedentes de sus respectivos cortes; las menciones anteriores a entrega H2 pendiente quedan superadas por esta recepción.
+
 **Encargos y respuestas · 17/09/2026:** [procedimiento S36 / RETP-2026-253](PROCEDIMIENTO_ENCARGOS_Y_RESPUESTAS_2026_09_17.md). Sedes privadas separadas, autorización humana por revisión y conservación local. H2 ya transmitido continúa en S32; entrega y aceptación pendientes.
 
 **Inicio y relevo · 17/09/2026:** [revisión S35](REVISION_CONTINUIDAD_RELEVO_2026_09_17.md), RETP-2026-252. Consultar estado actual además de cortes históricos; comprobar acceso, herramientas y sincronización. S33 acredita la recuperación receptora anterior. Siguiente encargo propuesto: H2 documental de S32, con H1 y originales preservados. S34 mantiene su recepción pendiente.

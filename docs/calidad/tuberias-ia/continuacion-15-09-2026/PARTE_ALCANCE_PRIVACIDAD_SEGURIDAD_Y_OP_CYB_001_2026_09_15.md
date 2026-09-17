@@ -340,3 +340,43 @@ Se mantienen pendientes E1–E4 del trayecto, ligadura de autorización con EP07
 **Recuento material:** cero ensayos de privacidad ejecutados; ningún cierre de S32, BIS-03, S22 o S26. Q1/Q2 y E1–E16 conservan su estado. La preparación del entorno receptor se sigue separadamente en S33, conforme al [Acta 001, §10](ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#continuidad-entornos-2026-09-17).
 
 La siguiente revisión debe conservar las fuentes recibidas, presentar diferencias explícitas para H1-01/H1-02 y volver a fijar las referencias del auxiliar antes de recompilarlo. La subsanación documental no inicia por sí sola una campaña de privacidad.
+
+<a id="s32-recepcion-h2-2026-09-17"></a>
+
+## 13. Recepción de H2 y subsanación documental de H1-01/H1-02 · 17/09/2026
+
+**Seguimiento:** S32, revisión 5, en ejecución. **Referencia:** RETP-2026-254. **Unidad receptora:** W-S32. **Corte canónico de entrada:** `79ee51dd659e6b2906cb662ffcab6b4d9cd6f40b`. Se conservan íntegros los apartados anteriores y su alcance histórico.
+
+### 13.1. Objetos recibidos y preservación
+
+Se recibe la [entrega H2](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/a47d53a703994acfee08f2b6fd4d1d63f04341d0/respuestas-ejecucion/TLC-S32-02-H2/entrega-01/RESPUESTA.md), publicada en `a47d53a703994acfee08f2b6fd4d1d63f04341d0`, con productos fijados en `6d616d5f6e7c167413003ce74e04c0cbf66a32ed`. La sede privada conserva acceso restringido.
+
+| Objeto H2 | Blob Git |
+|---|---|
+| Contrato candidato | `b70e4a0c6b6b0fc241744be90da542bd7a419d4b` |
+| Diecinueve casos previstos | `3fd9ab8195221f72371c5fe513ee8c6897ae46ed` |
+| Auxiliar Rust sin modificar | `8e658bd8c4ac879d72bbf45ffb1af735bdfb05a9` |
+
+El [informe receptor y sus evidencias](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1a3e197b584eeb9f5269ce5a9449c857e20d7493/watson-herramientas/evidencias/receptor-h2-20260917/README.md) conservan las identidades completas. Se verificaron los 23 objetos enumerados en el manifiesto, además de la identidad del propio manifiesto. La comparación de árboles desde `bd99f96b34dca442db7999d94bed695377c0ec82` registra 89 de los 91 blobs anteriores idénticos, dos índices modificados, 24 altas y ninguna baja. Originales, H1, encargos e históricos mantienen sus blobs. No se afirma acceso al disco productor ni descarga de los 115 contenidos del árbol final.
+
+### 13.2. Examen de los reparos
+
+**H1-01: subsanado documentalmente.** El contrato §9.4 y las entradas y oráculos de los casos §§1.1–1.2 distinguen preparación, persistencia, confirmación durable y revalidación antes de la lectura protegida; efecto, entrega y cierre posterior E4. La confirmación en memoria no basta. La secuencia temporal no acredita por sí sola causalidad. El modelo de fallo, la independencia necesaria frente a recuperación y el observador material permanecen por constituir. Ausencia de prueba, entrega confirmada y resultado indeterminado conservan consecuencias diferentes, conforme a R2-0 §§10–12 y sus recepciones R02/R06. No se infiere reversión ni reintento automático.
+
+**H1-02: subsanado documentalmente.** Los enlaces de TLC-S32-01 v0.1 y v0.2 se fijan al dataset `bba2d3ae24cdc20e33b90375f295916928011985`; se comprobaron por lectura y blobs `d0d25ba1f953a751d3b346d29015f5f7e7e4b500` y `6f2ba710da9ffdb1b2dee84b0df0b006111eae0f`. Se distinguen original, derivado, base semántica histórica y cortes posteriores de revisión.
+
+**Dictamen:** aceptación de la subsanación de ambos reparos en el alcance documental examinado. H2 conserva estatuto de contrato candidato; esta recepción no constituye aceptación integral del trayecto, congelación de interfaz ni incorporación de código al núcleo.
+
+### 13.3. Reproducción instrumental receptora
+
+Rust 1.98.0, Linux x86-64, auxiliar productor sin modificar y referencias externas originales. Compilación con retorno 0. Se reconstruyeron en Rust las cinco mutaciones prescritas y se cotejaron las 46 entradas congeladas antes y después de ejecutar. Las 18 combinaciones de seis variantes por tres modos concuerdan con el plan previo: base 0/0/0; M1 1/0/1; M2–M5 1/1/1 para identidad/estructura/todo. Se inspeccionaron los diagnósticos y corresponden a los defectos documentales previstos.
+
+Las huellas acreditan identidad respecto de entradas fijadas; no son firma independiente ni demostración semántica. El adaptador receptor usa Rust y herramientas de identidad Git/sha256sum. No se ejecutó PowerShell ni se acredita identidad entre entornos Windows y Linux. La prueba demuestra la aptitud de esta instancia receptora para este auxiliar; no disponibilidad permanente.
+
+### 13.4. Estado y continuación
+
+Diecinueve casos previstos: cinco positivos y catorce negativos; **ninguno ejecutado**. Durabilidad especificada, no implementada ni acreditada. No se ejecutan Q1/Q2, E1–E16 ni campañas de privacidad. S32 y BIS-03 permanecen abiertos; S22 y S26 no reciben nuevos ensayos ni cambian de estado. S34 conserva su recepción instrumental propia pendiente.
+
+Siguiente actuación propuesta: matriz de cobertura residual de S32 sobre los diez flujos de §8 y la condición de cierre de §5. Cada obligación debe identificar componente, contrato, prueba exigida, situación, seguimiento concreto y condición de habilitación. Las opciones API externa y consulta federada requieren decisión expresa; entrenamiento federado sigue excluido. Ningún aplazamiento se considerará resuelto sólo por llamarlo «pendiente».
+
+El encargo se preparará en la sede de encargos y permanecerá pendiente de autorización humana de su revisión exacta. La respuesta se publicará por separado, conservando la copia local. Esta recepción no ordena su ejecución ni cierra (p1+p3)-Bis.
