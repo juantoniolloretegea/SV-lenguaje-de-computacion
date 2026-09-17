@@ -1091,29 +1091,103 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-16T15:47:30Z
+**fecha_actualizacion_utc:** 2026-09-17T05:57:25Z
 
 **fecha_fin_utc:** —
 
-**unidad_responsable:** Watson / W-S32
+**unidad_responsable:** W-S32
 
 **alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad desde el diseño; matriz inicial, contratos y puertas de habilitación. Sin ampliar OP-CYB-001 ni implementar conectores.
 
-**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; depósito recibido en SVperitus-dataset: dominio-inmunologia; fuente OP-CYB-001 en corte fijado.
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (recepción documental); SV-sala-de-maquinas: main (depósito privado recibido); SVperitus-dataset: dominio-inmunologia (originales).
 
-**cortes_de_entrada:** Lenguaje e2cd67c5b11c8382ab32532e5c66a63ab2e73eda; depósito 19bb22c0cb614c7c05184c017e3dc3859a11b1e7; fuentes CYB bbac1b44b1d3b845305e9cde492a08221206d631.
+**cortes_de_entrada:** Lenguaje 03578e3c3919d38ed1ae1dbc686d36ea9147c0b6; depósito auxiliar 75f5e440b9dd8461889ec4083df9763231284d06; originales bba2d3ae24cdc20e33b90375f295916928011985.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** Revisión sustantiva documental ejecutada e incorporada en el parte, apartado 11. Confirmada la constitución de C17; correspondencias de diez flujos precisadas con RS, REQ-CYB, EP y controles, conservando sus condiciones. Admisibilidad, legitimidad y aplicabilidad diferenciadas. Contratos concretos y pruebas materiales pendientes; S32 y Bis permanecen abiertos.
+**resultado:** Recibida y revisada documentalmente la propuesta TLC-S32-02 v0.1 + H1. Siete originales con blobs coincidentes; diecinueve casos previstos: cinco positivos y catorce negativos, ninguno ejecutado. Se reconoce el tratamiento de seis objeciones; aceptación integral pendiente de H1-01/H1-02. S32 y BIS-03 permanecen abiertos.
 
-**verificacion:** Lectura íntegra del expediente predecisional v0.4, ampliación v0.3 y acta de relevo CYB con adenda 12, en corte fijado; contraste de atribuciones y alcance documentado en el parte. Rust 1.98.0: seis entradas y parche por identidad, conservación de antecedentes, concordancia CSV/Markdown/historial y RETP. Cero ensayos de privacidad, Q1/Q2 o E1–E16.
+**verificacion:** Lectura receptora del contrato, casos, auxiliar Rust, referencias y registro final; cotejo entre árboles Git. El registro recibido acredita tres modos conformes y cinco mutaciones rechazadas en Windows con Rust 1.98.0; no se ha repetido aquí su ejecución. Cero ensayos de privacidad.
 
-**evidencias:** https://github.com/juantoniolloretegea/SVperitus-dataset/blob/19bb22c0cb614c7c05184c017e3dc3859a11b1e7/dominios/inmunologia/cambio-rumbo/05-grok-aportes/PARCHE_S32_CORRESPONDENCIA_C17.diff ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-parche-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_RECEPCION_PARCHE_S32_SALIDA.txt ; antecedente: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-diseno-2026-09-16 ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO.rs ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/29fbcb022a731aace46a64ca881c02b4b1bcb13a/docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_S32_DISENO_SALIDA.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-c17-2026-09-16 ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32.rs ; docs/calidad/tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CONTRATO_CANDIDATO_TLC_S32_02_v0.1.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CASOS_PREVISTOS_TLC_S32_02_v0.1.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h1-2026-09-17
 
-**referencia_calidad:** RETP-2026-249: revisión sustantiva e incorporación de correspondencia; parte de privacidad, apartado 11; recepción RETP-2026-248 y antecedentes RETP-2026-242/243/247 conservados.
+**referencia_calidad:** RETP-2026-250; parte de privacidad, apartado 12. Antecedentes RETP-2026-242/243/247/248/249 conservados.
 
-**siguiente_accion:** Constituir los contratos de consulta, autorización, salida y persistencia con componente e interfaz identificados, permisos, aplicabilidad, plazos, restauración y aceptación observable. Resolver las opciones condicionadas antes del cierre documental. Enlazar cada prueba futura con requisito, contrato y versión, entradas, esperado, aceptación y resultado. Se conservan las condiciones de los apartados 5 y 8; no habilitar flujos ni iniciar campañas.
+**siguiente_accion:** Precisar H1-01: evidencia durable previa al efecto en configuración y oráculo; H1-02: enlaces y sede del derivado. Conservar H1 y presentar diferencias de la siguiente revisión; fijar referencias antes de recompilar. Mantener las condiciones de los apartados 5 y 8, sin habilitar flujos ni iniciar campañas.
 
-**observaciones:** Revisión 3: incorporación documental tras contraste de fuentes, con precisiones en el apartado 11. Antecedentes íntegros y revisión 2 conservada como recepción. Alta, inicio, unidad responsable y fin conservados; estado en ejecución. S22 y S26 intactos; las copias históricas conservan sus cortes.
+**observaciones:** Revisión 4: recepción y dictamen documental acotado. Identificador estable W-S32 conservado; denominación impersonal en la nueva presentación, sin relevo ni reasignación de ejecuciones. Alta, inicio y fin conservados; historial íntegro. S22 y S26 intactos. S33 sigue la acreditación instrumental pendiente; los espejos históricos conservan su corte.
+
+
+<a id="s33"></a>
+
+## S33 · Recuperación y acreditación del entorno de contingencia
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-17T05:57:25Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-17T05:57:25Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S32
+
+**alcance:** Recuperar una cadena Rust exacta y acreditar ejecución mínima y cotejo en el entorno receptor; preservar un único proceso experimental y documental. No sustituye campañas ni constituye capacidades del SV.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (seguimiento documental); SV-sala-de-maquinas: main (custodia privada); SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente (antecedente conservado).
+
+**cortes_de_entrada:** Lenguaje 03578e3c3919d38ed1ae1dbc686d36ea9147c0b6; depósito auxiliar 75f5e440b9dd8461889ec4083df9763231284d06; laboratorio histórico 86441ad4d375e31737dfcead0b1fd9cd52161883.
+
+**dependencias:** S29 finalizado en su instancia histórica; S30 y Acta 001; disponibilidad de distribución oficial verificable y dependencias de la plataforma receptora.
+
+**resultado:** Recuperación y acreditación pendientes. Acceso de lectura al depósito privado verificado; el entorno receptor actual no dispone de rustc, cargo ni rustup en las ubicaciones consultadas. No se afirma disponibilidad permanente ni paridad entre plataformas.
+
+**verificacion:** Inventario receptor de 2026-09-17T05:49:40Z; consulta de referencias Git y lectura de los registros recibidos. Sin compilación ni ejecución Rust en esta recepción.
+
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#continuidad-entornos-2026-09-17 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt
+
+**referencia_calidad:** RETP-2026-250; Acta 001, apartado 10.
+
+**siguiente_accion:** Recuperar y verificar la distribución para Linux x86-64, registrar cadena y dependencias y ejecutar la comprobación mínima y el cotejo correspondiente en copia aislada. Antes del relevo, comprobar el último punto confirmado y la existencia de ejecuciones activas o indeterminadas. Actualizar este suceso al iniciar.
+
+**observaciones:** Alta de una actividad pendiente; no se reabre S29 ni se le atribuye persistencia entre instancias. Windows, WSL2 y WebAssembly requieren acreditación propia para cada alcance. S22, S26 y S32 conservan sus seguimientos. Sin nueva numeración paralela ni sincronización destructiva.
+
+
+<a id="s34"></a>
+
+## S34 · Preparación instrumental multiplataforma y gráfica
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-17T05:57:25Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-17T05:57:25Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S32
+
+**alcance:** Inventario y preparación acotada de Windows, Ubuntu/WSL2, WebAssembly para navegador, WASI y evaluación gráfica egui/eframe mediante pruebas mínimas aisladas. Sin modificación de reproducciones históricas ni constitución de GUI productiva.
+
+**repositorios_y_ramas:** SV-sala-de-maquinas: main (depósito privado autorizado); SV-lenguaje-de-computacion: main (seguimiento documental).
+
+**cortes_de_entrada:** Depósito auxiliar 75f5e440b9dd8461889ec4083df9763231284d06; Lenguaje 03578e3c3919d38ed1ae1dbc686d36ea9147c0b6.
+
+**dependencias:** Instrucción de preparación instrumental del 17/09/2026; Acta 001 §10.5; S33 conserva la acreditación receptora independiente.
+
+**resultado:** Preparación registrada; ninguna instalación, compilación ni prueba multiplataforma realizada por esta recepción. Adjuntos identificados como instalador Windows y biblioteca DEFLATE; no constituyen un entorno completo.
+
+**verificacion:** Inspección del formato ejecutable y del manifiesto fdeflate 0.3.7; consulta de documentación oficial Rust y egui. Sin ejecución de los adjuntos.
+
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#preparacion-multiplataforma-2026-09-17
+
+**referencia_calidad:** RETP-2026-250; Acta 001 §10.5.
+
+**siguiente_accion:** Inventariar primero; incorporar componentes faltantes y versiones compatibles en proyectos aislados. Verificar nativo, navegador, WASI y representación de un polígono; conservar resultados diferenciados y entregar referencias inmutables para recepción.
+
+**observaciones:** Alta pendiente. Rust 1.98.0 explícito para reproducción, predeterminados conservados. Sin instalación indiscriminada de bibliotecas, selección definitiva de GUI, campañas SV o cambios en dominios. Cada resultado conserva su plataforma y alcance.
 

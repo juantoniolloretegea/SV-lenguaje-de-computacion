@@ -269,3 +269,74 @@ Se cotejan las fuentes de estado en el corte receptor: [Sucesos SV](https://gith
 La conservación de los documentos previos y la concordancia registral se comprueban con [el cotejo Rust de esta incorporación](COTEJO_REVISION_SUSTANTIVA_S32.rs) y [su resultado](COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt). La identidad de las fuentes permite reconstruir qué justificó la revisión; el cotejo mecánico acredita edición e integridad, no corrección semántica por sí solo. Rust 1.98.0 y su biblioteca estándar nativa bastan para este auxiliar; no requiere dependencias externas de Cargo. El conector GitHub transporta los documentos; Git comprueba sus identidades. No se ejecutan campañas SV, Q1/Q2 ni E1–E16.
 
 **Siguiente actuación de S32:** constituir el contrato de los trayectos comunes de consulta, autorización, salida y persistencia, con componente e interfaz identificados, permisos y condiciones de aplicabilidad, plazos y restauración, resultados esperados y observador. Cada prueba futura conservará el enlace al requisito y apartado que la motiva, contrato y versión, entradas, resultado esperado, aceptación y resultado efectivo, conforme a la recepción RETP-2026-248. Las opciones condicionadas se resolverán expresamente antes del cierre documental de §5. Esta incorporación termina su revisión de correspondencia; S32 y BIS-03 permanecen en ejecución.
+
+<a id="s32-recepcion-h1-2026-09-17"></a>
+
+## 12. Recepción y revisión documental de TLC-S32-02 v0.1 + H1 · 17/09/2026
+
+**Seguimiento:** S32, revisión 4, en ejecución. **Referencia:** RETP-2026-250. **Corte receptor:** `03578e3c3919d38ed1ae1dbc686d36ea9147c0b6`. Se han consultado íntegramente los Pilares de 05/09/2026, el Acta de perfiles y ensamblaje de 06/09/2026 y el Acta de transición desde OP-IMM-001 de 03/09/2026, con su secuencia y recepciones hasta §30, conforme a AGENTS.
+
+### 12.1. Objeto y procedencia
+
+Se recibe como propuesta documental el paquete H1 del depósito privado `SV-sala-de-maquinas`, commit `75f5e440b9dd8461889ec4083df9763231284d06`. Se ha comprobado el acceso desde la conexión receptora, su visibilidad privada y el árbol publicado, que contiene 34 archivos. El cotejo con el sistema local de producción de esos 34 archivos consta en el informe de entrega; esta recepción no ha accedido directamente a aquel sistema.
+
+Los siete archivos de `TLC-S32-02/originales/` conservan los mismos identificadores de blob que la carpeta de procedencia en `SVperitus-dataset`, commit `bba2d3ae24cdc20e33b90375f295916928011985`. Se ha contrastado esa igualdad entre ambos árboles inmutables. La propuesta no sustituye esos originales.
+
+| Objeto recibido | Blob Git |
+|---|---|
+| [Contrato candidato H1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CONTRATO_CANDIDATO_TLC_S32_02_v0.1.md) | `9d9f96a84961a28d2e319ba41d47934a41f87d72` |
+| [Casos previstos H1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/CASOS_PREVISTOS_TLC_S32_02_v0.1.md) | `779708a8f9da852c4675e961c2c2c24ea475b4cc` |
+| [Auxiliar Rust](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/COTEJO_ENTREGA.rs) | `34306db98c93aa5de52c03b4aa5178c6dd83154b` |
+| [Referencias del cotejo](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/REFERENCIAS_H1.tsv) | `e963ea3646005f5b22b0388d724392958dd49f3e` |
+| [Nota de entrega](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/propuesta/NOTA_ENTREGA.md) | `6324faf5bf57331d1b4c0c547298bc3a0ec18b8e` |
+| [Diferencias respecto del original](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/PROPUESTA_H1.diff) | `536a7827862a4560699e16315c92b26868c9238f` |
+| [Registro de ejecución instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt) | `d29bba7d17b1f656c626838ff614a22f9a9d3de6` |
+
+Los enlaces del depósito requieren acceso autorizado. Su carácter privado se conserva; esta recepción pública no reproduce sus registros íntegros ni sus datos de configuración local. Las huellas delimitan los objetos examinados, sin acreditar por sí solas su corrección semántica.
+
+### 12.2. Examen de las seis correcciones propuestas
+
+| Extremo | Resultado de la lectura receptora |
+|---|---|
+| Recuento | Los encabezados identifican 19 casos: cinco positivos —TLC-01, 03, 05, 07 y 13— y catorce negativos. Los diecinueve conservan el estado «no ejecutado: implementación pendiente». |
+| Precondiciones de los positivos | La configuración común §1.1 explicita autoridad sintética separada de la petición, delegación, identidad, sesiones, vigencia, cuota, contexto y observación. Es una especificación de ensayo; no acredita instituciones ni componentes reales. Persiste la precisión temporal de §12.4. |
+| Egreso prohibido, TLC-08 | Se amplía el criterio a errores, cabeceras, URL, depuración, registros y respuesta, con contenido prohibido y transformaciones. La cobertura insuficiente se considera no concluyente. El observador material sigue sin constituirse. |
+| Restauración y supresión, TLC-11 | Se separan los brazos con y sin supresión, con permisos suficientes, control previo y cuotas propias. Una denegación ordinaria deja de bastar como evidencia de supresión. Un bloqueo por continuidad conserva exclusivamente ese alcance. |
+| Auxiliar de cotejo | Distingue identidad y estructura. Seis referencias fijadas fuera del directorio examinado se incorporan al compilar. La identidad se compara mediante Git; las comprobaciones estructurales no equivalen a interpretación completa del contrato. |
+| Fallo de evidencia posterior a la salida | El contrato §9.4 distingue entrega confirmada, efecto indeterminado y ausencia de efecto acreditada; prohíbe presumir reversión o reintento automático. Exige evidencia durable previa cuando proceda, conforme a R2-0 §§10–12 y su recepción R06. No acredita implementación de esa persistencia. |
+
+Se reconoce el tratamiento documental de las seis objeciones. Esta conclusión no constituye aceptación integral del candidato ni habilitación del trayecto.
+
+### 12.3. Evidencia instrumental y límites
+
+El registro recibido contiene una compilación final del auxiliar con Rust 1.98.0, destino Windows MSVC, terminación 0 y salida de error vacía. En la serie final, los modos `identidad`, `estructura` y `todo` aceptan el paquete previsto, con terminación 0. Las cinco mutaciones previstas se rechazan en modo `todo`, con terminación 1:
+
+- cambio de identidad de la nota manteniendo su tamaño;
+- resumen de recuento incompatible con los encabezados;
+- promoción indebida de un caso a «superado»;
+- ausencia del bloque TLC-19;
+- duplicación del campo de ejecución.
+
+Las cuatro mutaciones estructurales se rechazan también en modo `estructura`. La modificación de fecha que sólo afecta a identidad pasa ese modo, resultado coherente con la separación declarada. No se describen los cinco rechazos como ensayos de privacidad ni como prueba exhaustiva de sensibilidad del auxiliar.
+
+El registro conserva intentos anteriores, incluido un rechazo inicial de clasificación de TLC-15, y diferencia la recompilación final. Las salidas históricas `COTEJO_ENTREGA_SALIDA.txt` y `ENTORNO_MINIMO_SALIDA.txt` copiadas en la propuesta pertenecen al paquete original ejecutado en Linux. No constituyen salidas del auxiliar H1 en Windows.
+
+La verificación receptora consiste en lectura del código, las referencias y los registros, recuento de casos y contraste de metadatos Git. No se ha repetido aquí la compilación ni la ejecución del auxiliar. La confianza en su fuente, sus referencias y el Git invocado es externa al propio cotejo. No se acredita una auditoría criptográfica independiente.
+
+### 12.4. Precisiones pendientes antes de la aceptación integral
+
+**H1-01 · Dependencia durable en la configuración temporal.** El contrato §9.4 exige evidencia suficiente antes del efecto. La configuración común sólo enumera admisión en tick 3, efecto en 4, salida en 5 y persistencia en 6. Esa secuencia describe el cierre posterior, pero no fija el estado durable previo, su confirmación ni el criterio que impediría el efecto si faltase. Antes de materializar o aceptar íntegramente el banco se debe explicitar esa precondición en las entradas y el oráculo, o declarar expresamente qué capacidad se simula y el alcance limitado de tal simulación. Deben quedar distinguibles fallo previo al efecto, fallo posterior a entrega y resultado indeterminado; no se amplía retrospectivamente el recuento de diecinueve casos.
+
+**H1-02 · Referencias y sede del derivado.** Los enlaces relativos del contrato §1 a TLC-S32-01 v0.1 y v0.2 se han heredado de la carpeta de origen y no resuelven dentro del árbol H1 publicado. El §13 conserva además la descripción del depósito original. La siguiente revisión debe fijar enlaces a los commits de procedencia y distinguir de forma inequívoca la sede del original y la del derivado. Se conserva H1 sin alteraciones; no se corrigen silenciosamente los objetos recibidos.
+
+Estas precisiones se siguen dentro de S32. La falta de un observador ejecutable, los controles institucionales y las interfaces pendientes de los apartados 5 y 8 mantienen sus efectos propios, aunque se subsanen las referencias.
+
+### 12.5. Disposición y siguiente actuación
+
+**Dictamen:** recepción documental comprobada; seis correcciones examinadas; aceptación integral de H1 pendiente de H1-01/H1-02 y del contraste contractual que corresponda al alcance a constituir. No se aplica el diff al Lenguaje ni se incorpora código de la propuesta mediante esta recepción.
+
+Se mantienen pendientes E1–E4 del trayecto, ligadura de autorización con EP07, sesiones, cuotas, contexto C16 del uso, plazos reales, observadores y realizaciones R2/R3. API externa y consulta federada conservan su selección condicionada; el entrenamiento federado permanece excluido. Los nombres de etapa E1–E4 de este contrato no designan los casos E1–E16 de cualificación de leyenda.
+
+**Recuento material:** cero ensayos de privacidad ejecutados; ningún cierre de S32, BIS-03, S22 o S26. Q1/Q2 y E1–E16 conservan su estado. La preparación del entorno receptor se sigue separadamente en S33, conforme al [Acta 001, §10](ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#continuidad-entornos-2026-09-17).
+
+La siguiente revisión debe conservar las fuentes recibidas, presentar diferencias explícitas para H1-01/H1-02 y volver a fijar las referencias del auxiliar antes de recompilarlo. La subsanación documental no inicia por sí sola una campaña de privacidad.

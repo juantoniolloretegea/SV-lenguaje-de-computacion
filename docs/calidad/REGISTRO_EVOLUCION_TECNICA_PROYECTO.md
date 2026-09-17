@@ -2404,3 +2404,21 @@ Lectura íntegra del expediente predecisional v0.4, ampliación v0.3 y acta de r
 Constituir los contratos de consulta, autorización, salida y persistencia con componente e interfaz identificados, permisos, aplicabilidad, plazos, restauración y aceptación observable. Resolver las opciones condicionadas antes del cierre documental. Enlazar cada prueba futura con requisito, contrato y versión, entradas, esperado, aceptación y resultado. Se conservan las condiciones de los apartados 5 y 8; no habilitar flujos ni iniciar campañas.
 
 [Fuente del cotejo](tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32.rs) y [salida](tuberias-ia/continuacion-15-09-2026/COTEJO_REVISION_SUSTANTIVA_S32_SALIDA.txt). Antecedentes RETP-2026-242/243/247/248 conservados. La incorporación del apartado 11 no ejecuta ensayos de privacidad ni cierra S32, BIS-03 o S22.
+
+<a id="retp-250"></a>
+
+## RETP-2026-250 · Recepción de H1 y continuidad de los entornos de ejecución
+
+**Fecha:** 2026-09-17T05:57:25Z; 07:57:25 Europe/Madrid. **Seguimientos:** S32, revisión 4, en ejecución; S33, revisión 0, pendiente. **Unidad de seguimiento:** W-S32. **Corte receptor:** `03578e3c3919d38ed1ae1dbc686d36ea9147c0b6`.
+
+Se recibe y revisa documentalmente TLC-S32-02 v0.1 + H1 en el commit `75f5e440b9dd8461889ec4083df9763231284d06` del depósito auxiliar privado. Siete originales conservan los blobs de procedencia. Los diecinueve casos previstos comprenden cinco positivos y catorce negativos; ninguno se ha ejecutado. El registro final recibido acredita aceptación instrumental de la base y rechazo de cinco mutaciones documentales mediante Rust 1.98.0 en Windows. La recepción actual ha leído las fuentes y registros y cotejado metadatos Git; no ha repetido esos ejecutables.
+
+El [parte S32, §12](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h1-2026-09-17) reconoce el tratamiento de las seis objeciones y mantiene pendiente la aceptación integral. H1-01 requiere explicitar en la configuración de ensayo y su oráculo la evidencia durable previa al efecto; H1-02 requiere fijar enlaces y procedencia del derivado. Se conserva H1 sin aplicación ni corrección silenciosa.
+
+El [Acta 001, §10](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#continuidad-entornos-2026-09-17) delimita un único laboratorio lógico con varias sedes de evidencia y entornos de ejecución. Calidad, Sucesos y RETP conservan su autoridad; el mapa y los espejos históricos conservan sus cortes. Se recibe la disponibilidad instrumental de Windows en el alcance registrado; observación del editor pendiente. El entorno receptor actual carece de cadena Rust acreditada y su recuperación se registra como S33 pendiente. No se convierte la instalación histórica S29 en garantía de persistencia.
+
+**Evidencia:** [registro recibido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt) y [referencias H1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/TLC-S32-02/REFERENCIAS_H1.tsv), con acceso autorizado. Inventario receptor fechado en el Acta 001. Historial previo conservado; nueva presentación impersonal del identificador W-S32, sin relevo ni reasignación de resultados.
+
+**Disposición:** precisar H1-01/H1-02 y acreditar la contingencia antes de utilizarla. Cero ensayos de privacidad; sin Q1/Q2 ni E1–E16, sin cierre de S32 o BIS-03 y sin cambios de S22/S26. La incorporación es exclusivamente documental y no modifica código productivo, originales, mapa, repositorios de dominio ni ramas experimentales.
+
+S34, revisión 0, queda pendiente para la preparación instrumental multiplataforma y gráfica de [Acta 001 §10.5](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#preparacion-multiplataforma-2026-09-17). Los adjuntos se identifican como instalador Windows x86-64 y biblioteca DEFLATE; no se han ejecutado. Se exige inventario, versiones compatibles fijadas y comprobaciones mínimas nativa, web, WASI y gráfica. No se modifica la reproducción histórica ni se acredita una GUI de producción.
