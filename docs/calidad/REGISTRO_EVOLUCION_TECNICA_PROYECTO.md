@@ -2422,3 +2422,14 @@ El [Acta 001, §10](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_R
 **Disposición:** precisar H1-01/H1-02 y acreditar la contingencia antes de utilizarla. Cero ensayos de privacidad; sin Q1/Q2 ni E1–E16, sin cierre de S32 o BIS-03 y sin cambios de S22/S26. La incorporación es exclusivamente documental y no modifica código productivo, originales, mapa, repositorios de dominio ni ramas experimentales.
 
 S34, revisión 0, queda pendiente para la preparación instrumental multiplataforma y gráfica de [Acta 001 §10.5](tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#preparacion-multiplataforma-2026-09-17). Los adjuntos se identifican como instalador Windows x86-64 y biblioteca DEFLATE; no se han ejecutado. Se exige inventario, versiones compatibles fijadas y comprobaciones mínimas nativa, web, WASI y gráfica. No se modifica la reproducción histórica ni se acredita una GUI de producción.
+
+
+<a id="retp-251"></a>
+
+## RETP-2026-251 · Recuperación instrumental receptora · 17/09/2026
+
+**Hora Europe/Madrid:** 09:37:16. **Unidad:** W-S32. **Seguimiento:** S33, revisión 1, finalizado en el alcance de esta instancia.
+
+La [recepción S33](tuberias-ia/continuacion-15-09-2026/RECEPCION_S33_RUST_2026_09_17.md) acredita instalación aislada de Rust 1.98.0 para Linux x86-64 y compilación y ejecución del programa mínimo y del cotejo documental LEYENDA-CONTENIDO/3, con terminación 0. Cinco archivos transferidos individualmente y once identidades del paquete reconstruido conformes. [Evidencia instrumental](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b5ddedbb5f7388cb503e571f91942de352e2b1f5/watson-herramientas/evidencias/receptor-linux-20260917/README.md).
+
+Se conserva el antecedente RETP-2026-250. La recuperación verifica la instancia receptora; no acredita ZIP exterior, firmas independientes, persistencia, resolución de dependencias Cargo ni equivalencia entre plataformas. Antes de cada sesión se comprobarán versiones y requisitos reales. S34 conserva su recepción pendiente. No se aceptan H1 ni sus casos, no se ejecutan ensayos de privacidad y no se cierran S22, S26, S32 o BIS-03.

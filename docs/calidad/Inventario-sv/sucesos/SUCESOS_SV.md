@@ -1122,15 +1122,15 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S33 · Recuperación y acreditación del entorno de contingencia
 
-**estado:** pendiente
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-09-17T05:57:25Z
 
-**fecha_inicio_utc:** —
+**fecha_inicio_utc:** 2026-09-17T07:33:15Z
 
-**fecha_actualizacion_utc:** 2026-09-17T05:57:25Z
+**fecha_actualizacion_utc:** 2026-09-17T07:37:16Z
 
-**fecha_fin_utc:** —
+**fecha_fin_utc:** 2026-09-17T07:35:00Z
 
 **unidad_responsable:** W-S32
 
@@ -1138,22 +1138,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main (seguimiento documental); SV-sala-de-maquinas: main (custodia privada); SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente (antecedente conservado).
 
-**cortes_de_entrada:** Lenguaje 03578e3c3919d38ed1ae1dbc686d36ea9147c0b6; depósito auxiliar 75f5e440b9dd8461889ec4083df9763231284d06; laboratorio histórico 86441ad4d375e31737dfcead0b1fd9cd52161883.
+**cortes_de_entrada:** Lenguaje aa858348615c6823a0fb6abf936770db6737f5e8; paquete instrumental d45d8578af36b10b1e3216fd7ac2ff49cd888a47; evidencia receptora b5ddedbb5f7388cb503e571f91942de352e2b1f5.
 
 **dependencias:** S29 finalizado en su instancia histórica; S30 y Acta 001; disponibilidad de distribución oficial verificable y dependencias de la plataforma receptora.
 
-**resultado:** Recuperación y acreditación pendientes. Acceso de lectura al depósito privado verificado; el entorno receptor actual no dispone de rustc, cargo ni rustup en las ubicaciones consultadas. No se afirma disponibilidad permanente ni paridad entre plataformas.
+**resultado:** Recuperación receptora acreditada en Linux x86-64: instalación aislada de rustc, rust-std y cargo 1.98.0, programa mínimo y cotejo de identidad de dos entradas de leyenda conformes. Transferencia mediante cinco archivos individuales; once identidades del paquete reconstruido conformes. Sin acreditación del ZIP exterior ni de persistencia entre sesiones.
 
-**verificacion:** Inventario receptor de 2026-09-17T05:49:40Z; consulta de referencias Git y lectura de los registros recibidos. Sin compilación ni ejecución Rust en esta recepción.
+**verificacion:** Instalación, compilación mínima, ejecución mínima, compilación y ejecución del cotejo: terminación 0. Rust y Cargo 1.98.0 identificados; Cargo comprobado por versión, sin ensayo de proyecto con dependencias. Salida mínima exacta y dos CONFORME_IDENTIDAD. Registros conservados en corte inmutable.
 
-**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md#continuidad-entornos-2026-09-17 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/75f5e440b9dd8461889ec4083df9763231284d06/REGISTRO_CONTINUIDAD_2026-09-17.txt
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b5ddedbb5f7388cb503e571f91942de352e2b1f5/watson-herramientas/evidencias/receptor-linux-20260917/README.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_S33_RUST_2026_09_17.md
 
-**referencia_calidad:** RETP-2026-250; Acta 001, apartado 10.
+**referencia_calidad:** RETP-2026-251; recepción S33; Acta 001 §10.6. Antecedente RETP-2026-250 conservado.
 
-**siguiente_accion:** Recuperar y verificar la distribución para Linux x86-64, registrar cadena y dependencias y ejecutar la comprobación mínima y el cotejo correspondiente en copia aislada. Antes del relevo, comprobar el último punto confirmado y la existencia de ejecuciones activas o indeterminadas. Actualizar este suceso al iniciar.
+**siguiente_accion:** Verificar la cadena y los requisitos reales antes de cada sesión o ensayo; restaurar desde los componentes custodiados cuando proceda. Recibir por separado la evidencia pendiente de S34 y continuar S32 sin anticipar aceptación de H1 ni ensayos de privacidad.
 
-**observaciones:** Alta de una actividad pendiente; no se reabre S29 ni se le atribuye persistencia entre instancias. Windows, WSL2 y WebAssembly requieren acreditación propia para cada alcance. S22, S26 y S32 conservan sus seguimientos. Sin nueva numeración paralela ni sincronización destructiva.
-
+**observaciones:** Revisión 1: recepción de una actividad ya ejecutada; inicio y fin proceden de registros observados. El cierre se limita a esta recuperación instrumental y no certifica continuidad permanente. S29 conserva su resultado histórico; S22, S26, S32 y BIS-03 no se cierran. No se modifican predeterminados ni campañas históricas.
 
 <a id="s34"></a>
 

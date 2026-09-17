@@ -154,3 +154,12 @@ Se han identificado los adjuntos por inspección, sin ejecutarlos: `rustup-init.
 Las fuentes oficiales distinguen la [instalación Windows y Linux/WSL](https://rust-lang.org/tools/install/), el [destino web](https://doc.rust-lang.org/rustc/platform-support/wasm32-unknown-unknown.html) y el [destino WASI](https://doc.rust-lang.org/rustc/platform-support/wasm32-wasip1.html). El [proyecto egui](https://github.com/emilk/egui) documenta soporte web y nativo mediante eframe. Estas referencias justifican la separación instrumental; no acreditan compatibilidad de una versión concreta todavía no ensayada.
 
 La revisión independiente mantiene dos niveles expresos: examen del código y reproducción ejecutable. Una recepción documental puede apoyarse en fuentes y registros identificados; una afirmación que requiera reproducción propia permanece pendiente hasta ejecutarla. La disponibilidad del entorno productor no sustituye la acreditación de S33.
+
+
+<a id="recuperacion-receptora-s33-2026-09-17"></a>
+
+### 10.6. Recuperación receptora acreditada · 17/09/2026
+
+La [recepción S33](RECEPCION_S33_RUST_2026_09_17.md), RETP-2026-251, acredita instalación aislada de Rust 1.98.0 en Linux x86-64, compilación y ejecución del programa mínimo y cotejo documental de dos entradas de leyenda, todos con terminación 0. Los componentes se transfirieron individualmente y sus huellas coinciden con el paquete recibido. El ZIP exterior no se recuperó en esta instancia. Cargo se identificó por versión; no se ensayó resolución de dependencias.
+
+S33 queda finalizado en este alcance. Las menciones de indisponibilidad en §10.2 y de pendiente en §10.3 conservan su corte anterior; esta recepción actualiza ese estado con [evidencia inmutable](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b5ddedbb5f7388cb503e571f91942de352e2b1f5/watson-herramientas/evidencias/receptor-linux-20260917/README.md). Continúa siendo obligatoria la verificación instrumental antes de cada sesión. La prueba no acredita persistencia, paridad multiplataforma, GUI productiva, privacidad ni aceptación de H1. S34, S22, S26, S32 y BIS-03 conservan sus seguimientos.
