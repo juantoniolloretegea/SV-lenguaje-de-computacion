@@ -1091,7 +1091,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-15T17:54:02Z
 
-**fecha_actualizacion_utc:** 2026-09-17T08:56:28Z
+**fecha_actualizacion_utc:** 2026-09-17T09:57:40Z
 
 **fecha_fin_utc:** —
 
@@ -1099,24 +1099,23 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **alcance:** Correspondencia de flujos y obligaciones de privacidad/seguridad desde el diseño; matriz inicial, contratos y puertas de habilitación. Sin ampliar OP-CYB-001 ni implementar conectores.
 
-**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (recepción documental); SV-sala-de-maquinas: main (depósito privado recibido); SVperitus-dataset: dominio-inmunologia (originales).
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (recepción documental); SV-sala-de-maquinas: main (productos y respuesta privados).
 
-**cortes_de_entrada:** Lenguaje 79ee51dd659e6b2906cb662ffcab6b4d9cd6f40b; entrega H2 a47d53a703994acfee08f2b6fd4d1d63f04341d0; productos 6d616d5f6e7c167413003ce74e04c0cbf66a32ed; dataset bba2d3ae24cdc20e33b90375f295916928011985.
+**cortes_de_entrada:** Lenguaje e1ab93d0de3df170a674f5a7887a3c20e96c6816; encargo e61b99dda6c2a1a62c8abf9ce40d160ab3c4f6ca; productos c1bbc5cf7049913fafa72feea9a8cfb8d0d4bbc7; respuesta 8bb4d41fd4138c7f1a6c246ac952d5004ffd7479.
 
 **dependencias:** S22 / BIS-03; RETP-2026-242/243; RS01–RS12 y adenda §12 de OP-CYB-001; rutas S28; obligación instrumental S29.
 
-**resultado:** H2 recibido; H1-01/H1-02 subsanados y aceptados en alcance documental. Contrato candidato, sin aceptación integral ni habilitación. Diecinueve casos previstos sin ejecutar; S32 y BIS-03 abiertos.
+**resultado:** S32-COBERTURA-01/v1 conforme en alcance documental: diez flujos, diecinueve TLC sin ejecutar, seis puertas y brechas A–I identificadas. Decisiones y contratos pendientes; S32/BIS-03 abiertos. H2 conserva su recepción y estatuto candidato.
 
-**verificacion:** Reproducción receptora Linux con Rust 1.98.0: compilación 0 y 18 comprobaciones instrumentales concordantes. Verificados 23 objetos del manifiesto y 46 entradas congeladas antes/después; lectura semántica y contraste de fuentes y preservación. Cero ensayos de privacidad.
+**verificacion:** Lectura y contraste receptor; tamaños, SHA-256 y blobs de cuatro productos concordantes; 34 referencias con blob resueltas y dos remisiones conservadas. Árbol privado: 120 blobs previos idénticos, cuatro cambios administrativos, cinco altas y ninguna baja. Sin pruebas SV ni recompilación H2.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1a3e197b584eeb9f5269ce5a9449c857e20d7493/watson-herramientas/evidencias/receptor-h2-20260917/README.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8bb4d41fd4138c7f1a6c246ac952d5004ffd7479/respuestas-ejecucion/S32-COBERTURA-01/entrega-01/RESPUESTA.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/c1bbc5cf7049913fafa72feea9a8cfb8d0d4bbc7/S32-COBERTURA-01/v1
 
-**referencia_calidad:** RETP-2026-254; parte de privacidad §13. Antecedentes y dictamen H1 conservados.
+**referencia_calidad:** RETP-2026-255; parte de privacidad §14. Recepción anterior H2, RETP-2026-254, preservada.
 
-**siguiente_accion:** Preparar para autorización humana una matriz de cobertura residual de los diez flujos: componente, contrato, prueba, seguimiento concreto y condición de habilitación. Resolver expresamente las opciones condicionadas; no implementar ni ejecutar casos por esta recepción.
+**siguiente_accion:** Decisión humana expresa sobre perímetro general/particular/investigación y, por separado, API externa y consulta estadística federada; después encargo acotado de contratos y seguimientos de lo retenido. No ejecución automática.
 
-**observaciones:** Revisión 5. Unidad W-S32, alta e inicio conservados; fin vacío. H1 y originales preservados. Durabilidad especificada, no implementada. S22/S26 y BIS mantienen estados; S33 finalizado en su alcance instrumental; recepción S34 pendiente. Entrega separada de aceptación; nueva tarea pendiente de autorización.
-
+**observaciones:** Revisión 6. W-S32, alta e inicio conservados; fin vacío. Conformidad técnica del encargo documental, sin adoptar opciones ni cerrar S32. A–I no son asignaciones. Durabilidad no implementada; 19 TLC no ejecutados; S22/S26/S34 y BIS mantienen su estado. Copia local productora no inspeccionada; espejos históricos no actualizados.
 
 <a id="s33"></a>
 

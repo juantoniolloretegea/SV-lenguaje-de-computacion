@@ -380,3 +380,61 @@ Diecinueve casos previstos: cinco positivos y catorce negativos; **ninguno ejecu
 Siguiente actuación propuesta: matriz de cobertura residual de S32 sobre los diez flujos de §8 y la condición de cierre de §5. Cada obligación debe identificar componente, contrato, prueba exigida, situación, seguimiento concreto y condición de habilitación. Las opciones API externa y consulta federada requieren decisión expresa; entrenamiento federado sigue excluido. Ningún aplazamiento se considerará resuelto sólo por llamarlo «pendiente».
 
 El encargo se preparará en la sede de encargos y permanecerá pendiente de autorización humana de su revisión exacta. La respuesta se publicará por separado, conservando la copia local. Esta recepción no ordena su ejecución ni cierra (p1+p3)-Bis.
+
+<a id="s32-recepcion-cobertura-2026-09-17"></a>
+
+## 14. Recepción de S32-COBERTURA-01/v1 · 17/09/2026
+
+**Seguimiento:** S32, revisión 6, en ejecución. **Referencia:** RETP-2026-255. **Unidad receptora:** W-S32. **Entrada canónica:** `e1ab93d0de3df170a674f5a7887a3c20e96c6816`. Se conservan íntegros los apartados anteriores.
+
+### 14.1. Objeto y criterio
+
+Se examina la [respuesta entrega-01](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8bb4d41fd4138c7f1a6c246ac952d5004ffd7479/respuestas-ejecucion/S32-COBERTURA-01/entrega-01/RESPUESTA.md) y los [cuatro productos](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/c1bbc5cf7049913fafa72feea9a8cfb8d0d4bbc7/S32-COBERTURA-01/v1), frente al [encargo v1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/e61b99dda6c2a1a62c8abf9ce40d160ab3c4f6ca/encargos-ejecucion/S32-COBERTURA-01/v1/ENCARGO.md). Son referencias privadas; esta recepción no cambia su visibilidad.
+
+La ficha e historial registran autorización de la revisión exacta y entrega por UE-LOCAL-CODEX-WINDOWS. La comunicación humana recibida aporta la entrega para revisión. No se atribuye observación directa de la sesión o del disco productor.
+
+**Dictamen técnico receptor:** conforme al objeto documental del encargo. Se recibe la matriz como referencia de cobertura residual y el inventario de decisiones y carencias como base de continuación. No se identifica un reparo que exija rehacer esta entrega. La conformidad no adopta las alternativas reservadas a la Dirección, no constituye los contratos faltantes y no declara cerrado S32.
+
+### 14.2. Identidad y preservación comprobadas
+
+| Producto | Bytes UTF-8 | SHA-256 |
+|---|---:|---|
+| MATRIZ_COBERTURA.md | 32398 | `cea2f205fa1ace4177a426ef7d105c6d1e6f28c51db57c1bc5dd7f0d419c4c23` |
+| DECISIONES_Y_PENDIENTES.md | 29080 | `e9d5821941ccb5dd8a9df28f42df76f11f433721aa825739057778078ebcf3e6` |
+| FUENTES.tsv | 8443 | `75abb8eebf36d75accadeab463266c5c2ac4dc7a6f5002515b25634a0bdd6803` |
+| MANIFIESTO_SHA256.tsv | 289 | `3ddcfdfa0d762b0ade38f997d451198480adebaffeae92952e2c3d5673cc4b3b` |
+
+Se recalcularon tamaños, SHA-256 y blobs Git de los cuatro contenidos recuperados; las tres entradas del manifiesto coinciden y sus cuatro blobs son los fijados por los árboles de productos y entrega. La huella del manifiesto se registra aquí, fuera de él. Las 34 referencias con blob declarado en FUENTES.tsv resuelven al objeto indicado en su repositorio, commit y ruta; las dos remisiones sin comprobación declarada mantienen ese límite. Identidad de fuente no significa relectura semántica íntegra de sus 34 contenidos.
+
+Comparación privada `e61b99d…` → `8bb4d41…`: 124 blobs iniciales; 120 idénticos, cuatro modificaciones administrativas y cinco altas; ninguna eliminación. Las modificaciones corresponden exclusivamente a ficha, historial e índices de encargos/respuestas. Las altas son los cuatro productos y la respuesta. Se conservan, entre otros, el cuerpo autorizado, H1/H2, herramientas y registros anteriores. Los cuatro productos mantienen identidad entre `c1bbc5c…` y `8bb4d41…`. Se comprueban árboles y contenidos de esta entrega, no todos los archivos del equipo productor.
+
+Cotejo administrativo de identidad mediante las funciones SHA-256/SHA-1 de Node.js y los árboles Git recuperados; sin auxiliar experimental ni ejecución SV. No se repite la compilación H2 ni se atribuyen aquí sus 18 comprobaciones como nuevas.
+
+### 14.3. Revisión sustantiva y límites
+
+Se releen AGENTS y los tres rectores completos —Pilares, perfiles y transición §§1–30— del corte canónico de entrada. Se contrastan el encargo, los productos, las condiciones de S32 §§4–5/8/11.5/13, Acta 001 §§1–4/10, los casos H2, la continuidad F01/F02, los registros vigentes pertinentes y el procedimiento S36. La correspondencia CYB se coteja con la ya recibida en §11.5; no se afirma una nueva auditoría integral del dominio.
+
+| Extremo examinado | Resultado receptor |
+|---|---|
+| Perímetro de la matriz | Conserva diez flujos y doce columnas; las seis puertas comunes y las tablas TLC/CYB completan la misma correspondencia. |
+| Diecinueve TLC | Coinciden identificadores, cinco positivos, catorce negativos y límites del trayecto local. Ninguno ejecutado. P05 carece de TLC en H2; TLC-09 no acredita federación ni presupuesto de privacidad. |
+| Evidencia durable | Se conserva la recepción documental de H1-01/H1-02. Compromiso y confirmación previos al efecto permanecen distintos de cierre E4; no se acredita realización durable. |
+| Observación | Una denegación por falta de plataforma no prueba la causa negativa específica. TLC-11 requiere controles recuperables y comparación causal; TLC-08/14 exigen cobertura de contenido y canales, no sólo un marcador. |
+| Seguimientos A–I | Son agrupaciones internas de brechas propuestas. «Seguimiento concreto por constituir» declara una carencia: no satisface §5, no asigna una unidad ni autoriza trabajo. |
+| Sedes anteriores | F01/F02 conserva su alcance de referencia/consulta exacta y su pendiente material. S28 está finalizado documentalmente según Sucesos; su cierre no constituye agentes. S22 y S26 no reciben nuevos encargos por esta matriz. |
+| Opciones y autoridad | API externa y consulta estadística federada conservan alternativas separadas pendientes de decisión. Entrenamiento federado permanece excluido. Roles propuestos no sustituyen autoridades institucionales reales. |
+| Condiciones de cierre | Los siete pasos de Decisiones §4 ordenan la resolución; no son siete logros consumados ni nueve campañas abiertas por A–I. |
+
+No se han ejecutado pruebas de privacidad, Q1/Q2, E1–E16 ni campañas R2/R3. La recepción es documental y no incluye actualización legislativa ni certificación jurídica. No se declara ausencia exhaustiva de defectos fuera del alcance examinado.
+
+### 14.4. Disposición de continuidad
+
+La tarea S32-COBERTURA-01 queda técnicamente recibida en su objeto documental. La Dirección conserva la decisión sobre las alternativas y el encargo siguiente. S32 continúa en ejecución y BIS-03 abierto; H2 sigue candidato, sin aceptación integral ni habilitación. Se mantienen las 19 pruebas previstas sin ejecutar y la durabilidad sin implementación acreditada.
+
+El siguiente paso es fijar, con decisión expresa y motivación, el perímetro que deberán cubrir los contratos: modalidades general/particular/investigación y, por separado, API externa y consulta estadística federada. Para cada opción: retención condicionada con obligaciones y seguimiento, o exclusión motivada del alcance actual con control del límite y posibilidad de reconsideración futura. No se adopta ninguna alternativa en esta recepción. La exclusión del entrenamiento federado permanece vigente.
+
+Después corresponde un encargo acotado a contratos y asignación de las obligaciones retenidas, aprovechando las sedes existentes. Cada realización diferida necesaria debe identificar responsable competente, producto, dependencia, seguimiento y condición de habilitación; no basta renombrar A–I como tareas. No se abre por defecto H3 ni se encarga simultáneamente todo el inventario. La publicación del futuro encargo no autoriza su ejecución: rige S36 y la aprobación humana de su revisión exacta.
+
+Se conserva el orden de continuidad comunicado: concluir (p1+p3)-Bis; revisar el encaje y lo pendiente de incorporación al núcleo desde el 15/09, con revisión experimental reforzada antes del retorno; recuperar el punto documentado de la secuencia e Inmunología; abordar posteriormente agentes, interfaz experta e IA cuando correspondan sus contratos. Esta recepción no activa esos frentes. La unidad documental pública mantiene su ámbito separado y no recibe encargos mediante este dictamen.
+
+Los registros canónicos y sus índices se actualizan conjuntamente. Los espejos históricos conservan su corte; no se afirma sincronización nueva ni se duplican paquetes o informes para la revisión humana.

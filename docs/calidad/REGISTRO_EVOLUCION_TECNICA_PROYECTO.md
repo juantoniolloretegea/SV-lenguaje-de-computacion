@@ -2465,3 +2465,14 @@ H2 se incorpora como encargo ya transmitido y en curso según comunicación huma
 El [parte S32 §13](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-h2-2026-09-17) acepta la subsanación documental de H1-01/H1-02. La [recepción independiente](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1a3e197b584eeb9f5269ce5a9449c857e20d7493/watson-herramientas/evidencias/receptor-h2-20260917/README.md) conserva compilación y 18 comprobaciones instrumentales concordantes con Rust 1.98.0 en Linux; 23 objetos cotejados y 46 entradas congeladas verificadas antes y después. Originales e H1 preservados.
 
 H2 sigue siendo candidato; 19 casos sin ejecutar, durabilidad no implementada y cero ensayos de privacidad. No se cierran S32/BIS-03 ni se habilitan flujos. Se prepara la cobertura residual de los diez flujos para una nueva autorización humana, según S36. S22/S26 y S34 mantienen sus estados y alcances propios.
+
+
+<a id="retp-255"></a>
+
+## RETP-2026-255 · Recepción de cobertura residual de S32 · 17/09/2026
+
+**Hora Europe/Madrid:** 11:57:40. **Unidad:** W-S32. **Suceso:** S32, revisión 6, en ejecución.
+
+El [parte S32 §14](tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-cobertura-2026-09-17) recibe S32-COBERTURA-01/v1 como matriz documental conforme al encargo: diez flujos, 19 TLC previstos y límites, seis puertas y carencias A–I. Cuatro productos cotejados por tamaño, SHA-256 y blob; 34 identidades de fuentes resueltas. Árbol privado: 120 blobs previos idénticos, cuatro cambios administrativos y cinco altas; ninguna eliminación.
+
+La recepción no adopta opciones, constituye contratos ni asigna las brechas. S32 y BIS-03 continúan abiertos, H2 candidato y durabilidad no implementada. Cero nuevos ensayos de privacidad o recompilaciones. Corresponde decisión humana sobre el perímetro y las opciones API externa/federación; después contratos y seguimiento concreto de lo retenido. S22, S26 y S34 conservan sus estados. Espejos históricos sin sincronización nueva.
