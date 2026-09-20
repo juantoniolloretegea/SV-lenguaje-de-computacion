@@ -1,5 +1,7 @@
 # Continuación · 15 de septiembre de 2026
 
+**Interlocución del experto · 20/09/2026:** [documento S40 / RETP-2026-260](S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md). Estudio integrado pendiente: idiomas, interfaz, significado, universo autorizado del agente y fidelidad del consejo. Reutiliza ES27/IE-004 y el acta de rutas; no altera S37/S38/S39 ni habilita otra ejecución.
+
 **Conciliación EIO · 20/09/2026:** [Acta 003 / S39 / RETP-2026-259](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md). Ensayo en seguimiento; resultados parciales de ambas vías y preparación nativa pendiente de comprobación ejecutable. S37/S38 continúan pendientes. Esta remisión actualiza la lectura del ensayo sin cerrar S22, S32/BIS-03 ni otras obligaciones. Para S22 rige la recepción de custodia de Acta 002 §17; las menciones anteriores a esa comprobación pendiente conservan su fecha histórica.
 
 **Recepción vigente S32 · 17/09/2026:** [complemento de traza y memoria, revisión 9 / RETP-2026-258](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-memoria-traza-2026-09-17). Recuperación Linux: nueve casos conformes. RCR-01 resuelta en alcance exacto; aceptación parcial, depuración y reservas procedimentales pendientes. AUX-C01–C04 sin cierre; S32/BIS-03 abiertos, H2 candidato y 19 TLC sin ejecutar.

@@ -2524,3 +2524,17 @@ EIO-05/06 conservan controles directos conformes e inferencias rechazadas por ES
 Se añade S39 a CSV, Markdown e historial. Las 39 filas anteriores se preservan; S22 recupera en Markdown los campos de su fila CSV sin alterar resultado ni revisión 43. S37/S38 mantienen sus altas y estados pendientes; esta entrada les aporta remisión en Calidad, no ejecución de sus estudios.
 
 Se incorporan remisiones en Acta 001, inicio, Léame primero y acceso al mapa. El HTML histórico permanece intacto conforme a Acta 001 §10.1; los espejos históricos conservan su corte y no se declaran actualizados. La conciliación no habilita campañas, inferencia, infraestructura o gastos; no cierra S32/BIS-03 ni promueve el núcleo. Siguiente: recibir el encargo 03 y decidir, con sus requisitos comprobados, la preparación remota correspondiente.
+
+<a id="retp-260"></a>
+
+## RETP-2026-260 · Interlocución del experto y consejo verificable · 20/09/2026
+
+**Hora Europe/Madrid:** 20:51:47. **Unidad:** W-S37. **Suceso:** S40, revisión 0, pendiente.
+
+El [documento explicativo S40](tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md) reúne las fuentes rectoras, Fase 003, acta lingüística RETP-121, acta de rutas y evidencia histórica ES27/IE-004. Distingue perfil del código, interfaz e interlocución; conocimiento constituido, cobertura del agente, consulta admitida, resultado y presentación. Conserva tanto los fallos históricos como las correcciones y pruebas acotadas posteriores. No se repiten campañas ni se presenta como verificada la comprensión general.
+
+La revisión adversarial localiza los riesgos de selección semántica incorrecta, rechazo sistemático de consultas legítimas, pérdida de negación o unidades, omisión de rutas, alteración en la explicación y trazabilidad autodeclarada. La precisión sobre prosa auxiliar respeta Fase 003 y RETP-121: no se recibe autorización general para reescribir libremente el consejo profesional. Repetibilidad, fidelidad y legitimidad del conocimiento se comprueban separadamente.
+
+Se añade S40 en CSV/Markdown/historial y una remisión desde inicio de continuidad. Las filas anteriores permanecen intactas. S37 conserva el estudio de varias IA; S38, encapsulación; S39, EIO en seguimiento. La evaluación integrada queda pendiente, con inicio y fin vacíos. Una pérdida representacional demostrada para una operación incluida deberá resolverse en su sede antes de cerrar ese alcance; no se abre automáticamente un frente paralelo.
+
+La verificación de esta incorporación es documental y registral. No se altera el encargo de Holmes, el núcleo, los dominios, las guardas, la infraestructura, los presupuestos ni el mapa HTML histórico. Los espejos conservan su corte; no se declaran actualizados.
