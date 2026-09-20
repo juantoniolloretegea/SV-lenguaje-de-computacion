@@ -1361,7 +1361,7 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-18T10:00:48Z
 
-**fecha_actualizacion_utc:** 2026-09-20T18:32:14Z
+**fecha_actualizacion_utc:** 2026-09-20T20:41:16Z
 
 **fecha_fin_utc:** —
 
@@ -1371,22 +1371,21 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main (seguimiento canónico); SV-motor: main (fuentes y evidencia pública); SV-sala-de-maquinas: main (encargos y recepciones privados).
 
-**cortes_de_entrada:** Lenguaje 68772d8bad39730425d1b73d9c82cf687c39ef02; SV-motor 057dba8a4a1fd2774e35f61e6135fd096679502a; depósito privado d416dd75962314f84ff04f4cf5974f63b468fb28. Primer hito documental localizado: SV-motor 875a3df0f2e07fb3c71f98d7fd6968ccae54af24.
+**cortes_de_entrada:** Lenguaje 68772d8bad39730425d1b73d9c82cf687c39ef02; SV-motor 057dba8a4a1fd2774e35f61e6135fd096679502a; depósito privado d416dd75962314f84ff04f4cf5974f63b468fb28. Primer hito documental localizado: SV-motor 875a3df0f2e07fb3c71f98d7fd6968ccae54af24. Recepción NAT03: Lenguaje 5f0d29a5d711c107af1843c5709eea04c4afd69a; candidata 484acafebd5ec0bcedb759e2423ae935e7feb1a1; entrega 1c55fe5ffa0a6bbaa9ffdae24194bd9327b62fd3; recepción y propuesta 41341f0f5c362a0f649206b8c70bca6586e3e295.
 
 **dependencias:** Pilares; perfiles/contratos; transición secuencial; acta de rutas 14/09; Acta 001 §§2,4,10; EIO-CONTRATO-01/1; S22 y S32 conservan alcances distintos; procedimiento S36. S37/S38 diferidos, sin nuevo prerrequisito.
 
-**resultado:** EIO-05/06: construcción nativa y 24/24 controles; inferencias rechazadas por ESTRUCTURA. EIO-JSON-01: 24+35 controles, seis de sensibilidad incluidos, con reserva de custodia. NAV-01/02: NAV01–NAV04 conformes y NAV05 interrumpido por RSS agregada superior a 4 GiB, sin salida contractual. Candidata nativa 02 sin compilar/ejecutar; NAT02-A/B estáticos pendientes; encargo 03 publicado.
+**resultado:** EIO-05/06: construcción nativa y 24/24 controles; inferencias rechazadas por ESTRUCTURA. EIO-JSON-01: 24+35 controles, seis de sensibilidad incluidos, con reserva de custodia. NAV-01/02: NAV01–NAV04 conformes y NAV05 interrumpido por RSS agregada superior a 4 GiB, sin salida contractual. NAT03 recibida favorablemente en el alcance preparatorio de NAT02-A/B; 44 archivos y 242446 bytes cotejados por el receptor. Sin compilación ni pruebas de la candidata. EIO-NAT-PREP-04 propuesto para comprobar coste y entorno sin crear ni arrancar infraestructura.
 
-**verificacion:** Lectura de informes públicos y recepción privada fijados; cotejo documental de Sucesos CSV/Markdown/historial y RETP. No reproducción experimental ni recálculo íntegro de manifiestos. Medidas y comprobaciones históricas conservan sus productores y alcances.
+**verificacion:** Recepción estática de NAT03 contra encargo y NAT02-A/B; 43 entradas del manifiesto público y autohuella cotejadas, 44/44 frente al TSV; dos entradas del manifiesto privado concordantes; 26 copias con blob idéntico a la base. CSV/Markdown/historial y RETP conciliados. No reproducción ejecutable; informes históricos conservan sus propios alcances.
 
-**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md ; https://github.com/juantoniolloretegea/SV-motor/blob/057dba8a4a1fd2774e35f61e6135fd096679502a/laboratorio/ensayo-ia-y-observabilidad/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ba87934922a2de2956c1dc27155190c6b48f4caf/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-02/RECEPCION.md
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md ; https://github.com/juantoniolloretegea/SV-motor/blob/057dba8a4a1fd2774e35f61e6135fd096679502a/laboratorio/ensayo-ia-y-observabilidad/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ba87934922a2de2956c1dc27155190c6b48f4caf/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-02/RECEPCION.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-03/RECEPCION.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/encargos-ejecucion/EIO-GITHUB-01/integracion-nativa-04/ENCARGO.md
 
-**referencia_calidad:** Acta 003 de conciliación EIO, 20/09/2026; RETP-2026-259. Adscripción a (p1+P3)-Bis, sin cierre de S32/BIS-03.
+**referencia_calidad:** Acta 003, continuidad §8; RETP-2026-259 y RETP-2026-263. Recepción NAT03 preparatoria; sin cierre de S32/BIS-03 ni aceptación científica.
 
-**siguiente_accion:** Recibir la candidata del encargo EIO-NAT-PREP-03; después decidir preparación remota con gasto adicional cero y pruebas sintéticas, previa comprobación de la contención necesaria. Inferencia del servicio, URL operativa y conclusión experimental integral pendientes. No habilitar una ejecución por este asiento.
+**siguiente_accion:** Tras decisión de la Dirección, EIO-NAT-PREP-04: comprobar cuota y barrera efectiva de gasto cero con lecturas disponibles; concretar la primera habilitación material. No crear ni arrancar Codespaces por ese encargo. Resolución, compilación y bancos sin modelo requieren habilitación posterior; testigos peligrosos, contención exterior acreditada. Inferencia y URL operativa siguen pendientes.
 
-**observaciones:** Alta tardía explícita de actividad existente; fecha_inicio_utc es la marca del primer commit documental localizado, no el inicio inferido de trabajos previos ni una autorización. En ejecución califica el seguimiento abierto, no procesos remotos activos. Presupuesto inicial 3/3 y continuaciones 4–9 con sus presupuestos propios preservados, sin reintentos por esta conciliación. El mapa y espejos históricos conservan su corte; S37/S38 pendientes. La candidata de preparación 03 no tiene entrega recibida en el corte. No aceptación científica ni cambio nuclear.
-
+**observaciones:** Alta tardía explícita de actividad existente; fecha_inicio_utc es la marca del primer commit documental localizado, no el inicio inferido de trabajos previos ni una autorización. En ejecución califica el seguimiento abierto, no procesos remotos activos. Presupuesto inicial 3/3 y continuaciones 4–9 con sus presupuestos propios preservados, sin reintentos por esta conciliación. El mapa y espejos históricos conservan su corte; S37/S38 pendientes. La entrega NAT03 se recibe documentalmente en esta revisión; no acredita comportamiento ni viabilidad del entorno. S40/S41 permanecen pendientes. No aceptación científica ni cambio nuclear.
 
 <a id="s40"></a>
 

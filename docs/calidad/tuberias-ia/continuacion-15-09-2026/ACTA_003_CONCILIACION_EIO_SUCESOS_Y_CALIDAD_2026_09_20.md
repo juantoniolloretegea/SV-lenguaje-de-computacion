@@ -90,3 +90,16 @@ Comprobación previa a publicación: 40 filas vigentes concordantes entre CSV, M
 Se conservan íntegros los asientos anteriores de RETP y del historial de Sucesos. El mapa HTML mantiene su blob y su condición de instantánea histórica conforme a Acta 001 §10.1. Las copias históricas del laboratorio mantienen su corte; no se declaran espejos actualizados ni se modifican por esta conciliación, de acuerdo con esa disposición posterior.
 
 Esta recepción acredita organización y correspondencia documental en los cortes citados. No recalcula todos los archivos experimentales, no repite los ensayos y no constituye aceptación científica, promoción productiva ni auditoría exhaustiva de plataforma.
+
+
+<a id="recepcion-nat03"></a>
+
+## 8. Continuidad: recepción preparatoria de NAT03 · 20/09/2026
+
+**RETP-2026-263; S39 revisión 1.** La [recepción de NAT03](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-03/RECEPCION.md) actualiza el pendiente de §§3 y 6 para la candidata pública 484acaf y entrega privada 1c55fe5. NAT02-A/B se reciben favorablemente en fuentes: oráculos específicos y recuperación acotada; tratamiento del fallo de registro de waitpid con no admisión y diagnóstico. Compilación, pruebas y viabilidad material siguen pendientes.
+
+El receptor cotejó 44 archivos públicos, 242446 bytes, por tamaño y SHA-256, y las dos entradas del manifiesto privado. Las 26 copias declaradas literales conservan sus blobs de base. Los textos se recuperaron por el conector GitHub; no se acredita independencia de plataforma ni funcionamiento. Los resultados históricos y las reservas B01–B08 mantienen su alcance.
+
+Siguiente: [propuesta EIO-NAT-PREP-04](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/encargos-ejecucion/EIO-GITHUB-01/integracion-nativa-04/ENCARGO.md), comprobación previa de cuota, barrera de gasto cero y datos de entorno mediante lecturas disponibles. No permite crear o arrancar infraestructura. La fase material deberá concretarse y decidirse con esas evidencias; los testigos peligrosos requieren además contención exterior comprobada. Inferencia y URL operativa continúan posteriores a la recepción de las pruebas pertinentes.
+
+La continuidad queda concordante en Sucesos CSV/Markdown/historial y RETP CSV/Markdown. No cambia el rumbo rector, la arquitectura, los otros sucesos ni el mapa histórico; no es otra acta de arquitectura ni una nueva campaña.

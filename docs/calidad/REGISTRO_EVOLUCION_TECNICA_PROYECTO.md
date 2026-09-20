@@ -2562,3 +2562,18 @@ Se conserva el alcance acordado: carpeta hija `fichas/`, ficha completa por iden
 La revisión adversarial distingue antecedentes de condiciones previas y exige revisar las actuaciones afectadas también al recibir resultados o cambiar alcance. La numeración identifica el alta, no la precedencia de ejecución. Se reutilizarán las revisiones existentes, sin plan separado, prioridades numéricas ni diagramas de planificación. Los cambios rectorales, si fueran necesarios, conservarán su sede competente.
 
 Esta incorporación sólo añade el seguimiento pendiente en Sucesos CSV/Markdown/historial y Calidad CSV/Markdown. Inicio y fin vacíos; sin migración, nuevas columnas ni fichas creadas. Se conservan las filas anteriores y la continuidad del encargo vigente. Corte leído: `669063eb7247fc5297f4d26d11e6b3026586621d`; reglas de Sucesos y antecedentes registrales. No se modifican arquitectura, contratos, guardas, ensayos ni mapa histórico; las copias históricas conservan su corte.
+
+
+<a id="retp-263"></a>
+
+## RETP-2026-263 · Recepción preparatoria NAT03 y continuidad · 20/09/2026
+
+**Hora Europe/Madrid:** 22:41:16. **Unidad:** W-S37. **Suceso:** S39, revisión 1, en ejecución de seguimiento.
+
+La [recepción fijada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-03/RECEPCION.md) reconoce NAT02-A/B en las fuentes de 484acaf, sin aceptación ejecutable. El banco exige oráculos específicos, prefijos, contenido, ordinales y recuperación global acotada; el supervisor captura el fallo de registro de waitpid y conserva diagnóstico y no admisión. La sensibilidad y el caso de escritor desconectado están preparados, no ejecutados.
+
+Cotejo receptor: 44 archivos públicos, 242446 bytes, tamaños y SHA-256 concordantes con el TSV; 43 entradas del manifiesto y su autohuella por separado. Dos entradas del manifiesto privado también concordantes; 26 copias literales verificadas por SHA de blob frente a la base. El mismo conector aporta los textos; esto no acredita independencia de plataforma. Se mantienen las reservas de compilación, carreras, custodia y control exterior.
+
+El [encargo EIO-NAT-PREP-04 propuesto](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/encargos-ejecucion/EIO-GITHUB-01/integracion-nativa-04/ENCARGO.md) reúne las comprobaciones accesibles de cuota, gasto cero y entorno antes de definir un acto material autorizado. No crea ni arranca infraestructura, resuelve dependencias, compila o ejecuta pruebas. La retención y eliminación deberán fijarse antes del arranque; una alerta de gasto no acredita una barrera efectiva.
+
+Se concilian S39 en CSV/Markdown/historial y esta entrada en RETP CSV/Markdown; Acta 003 añade continuidad sin alterar sus antecedentes. S32/BIS-03, S37/S38/S40/S41, las guardas, las candidatas y el mapa histórico conservan su estado. Las copias históricas conservan su corte. No se modifica doctrina ni se abre un nuevo suceso.
