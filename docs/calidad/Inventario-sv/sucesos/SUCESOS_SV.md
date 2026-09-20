@@ -754,27 +754,39 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 ## S22 · Workflow (p1+p3)-Bis y radiografía inicial de tipos, composición y documentación Rust
 
-**estado:** en ejecución  
-**fecha_alta_utc:** 2026-09-13T05:19:31Z  
-**fecha_inicio_utc:** 2026-09-13T05:19:31Z  
-**fecha_actualizacion_utc:** 2026-09-16T04:07:01Z  
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-13T05:19:31Z
+
+**fecha_inicio_utc:** 2026-09-13T05:19:31Z
+
+**fecha_actualizacion_utc:** 2026-09-16T04:07:01Z
+
+**fecha_fin_utc:** —
+
 **unidad_responsable:** W-S26-02
 
 **alcance:** Secuencia BIS-00 a BIS-08; política de documentación ES/EN y contraste estático inicial. Sin modificación del código productivo.
 
-**cortes_de_entrada:** Lenguaje `f06571b1e65bed864fd910ed6a55cc58807c95d9`; laboratorio `86441ad4d375e31737dfcead0b1fd9cd52161883`; Peritus `6d73c376ca9e6a0d462bdb4483d92cd6e453e285`.
+**repositorios_y_ramas:** juantoniolloretegea/SV-lenguaje-de-computacion: main; juantoniolloretegea/SV-matematica-semantica-cuaternaria: lab/playground-sv-permanente
 
-**resultado:** Custodia e identidad del TTF contratado y PNG R01/R06 comprobadas. El paquete fijado permanece en el árbol inmutable y las huellas concuerdan con el contrato y las referencias receptoras. El reconocedor continúa sin cualificar.
+**cortes_de_entrada:** Lenguaje f06571b1e65bed864fd910ed6a55cc58807c95d9; laboratorio 86441ad4d375e31737dfcead0b1fd9cd52161883; Peritus 6d73c376ca9e6a0d462bdb4483d92cd6e453e285.
 
-**verificación:** Cotejo de árbol y metadatos Git; comprobaciones receptoras Rust 1.98.0 ya conservadas. TTF, R01 y R06 con identidades concordantes. Sin Q1/Q2 ni E1–E16.
+**dependencias:** S20 / RETP-193; S21 / RETP-195; Acta 002 §§16–17; LEYENDA-CONTENIDO/4; Acta 001 §9.
 
-**evidencias:** [comprobación de custodia e identidad](../../tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md); [Acta 002 §17](../../tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06).
+**resultado:** Custodia e identidad del TTF contratado y PNG R01/R06 comprobadas. El paquete fijado permanece en el árbol inmutable y las huellas concuerdan con el contrato y las referencias receptoras. Reconocedor no cualificado.
 
-**referencia_calidad:** RETP-2026-246.
+**verificacion:** Cotejo de árbol y metadatos Git; reutilización de comprobaciones receptoras Rust 1.98.0 ya conservadas. TTF, R01 y R06 con identidades concordantes. Sin Q1/Q2 ni E1–E16.
+
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/COMPROBACION_CUSTODIA_TTF_R01_R06_2026_09_16.md ; docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_002_RECEPCION_COTEJO_IDENTIDAD_Y_CONTRATO_LEYENDA_R06_2026_09_15.md#custodia-ttf-r01-r06
+
+**referencia_calidad:** Acta 002 §17; RETP-2026-246; privacidad S32 / RETP-2026-243
 
 **siguiente_accion:** Preparar el precompromiso de la cualificación conjunta sobre las 27 celdas congeladas: entradas por huella, órdenes, esperados Q1/Q2, selección según §C y regla de parada. No ejecutar hasta fijarlo.
 
 **observaciones:** Revisión 43. Se cierra la precondición de custodia e identidad, no la cualificación. Códec, correspondencia geométrica, E1 y empate residual permanecen pendientes. S32 sin modificación; Bis abierto; GUI cancelada.
+
+
 ## S23 · Entorno Rust nativo y consulta incorporada manifiesto-sv
 
 **estado:** finalizado
@@ -1338,4 +1350,40 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **siguiente_accion:** Después del ensayo de navegador, formular un estudio acotado con inventario de recursos y autoridades, adversarios y permisos explícitos, vías de acceso y efectos, fallos comunes, revocación, restauración y límites. Comparar controles ya disponibles con carencias verificables antes de incorporar componentes. Definir pruebas de acceso no autorizado, interferencia y agotamiento de recursos antes de habilitar una coexistencia que dependa de esas garantías.
 
 **observaciones:** No se promete invulnerabilidad ni protección frente a un administrador o anfitrión comprometido sin mecanismos y evidencia específicos. La IA no valida ni amplía sus propios permisos. Las decisiones de dominio permanecen humanas; no se gobiernan tareas externas ajenas al SV. DarkControlAI no se selecciona ni se integra. Sin agentes adicionales, instalaciones, ejecuciones ni cambios nucleares por esta alta. Inicio y fin vacíos; responsable de ejecución futura por asignar. No se duplican los antecedentes de supervisión de S32.
+
+<a id="s39"></a>
+
+## S39 · Seguimiento del ensayo de inteligencia artificial y observabilidad EIO-GITHUB-01
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-09-20T18:32:14Z
+
+**fecha_inicio_utc:** 2026-09-18T10:00:48Z
+
+**fecha_actualizacion_utc:** 2026-09-20T18:32:14Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S37
+
+**alcance:** Ensayo tecnológico de Candle, Qwen3-0.6B y OpenTelemetry Rust, adscrito a (p1+P3)-Bis. Referencia nativa, integridad JSON, vía navegador/WASM y candidata de servicio nativo; continuidad secuencial y recepción con alcance. No constituye células, operaciones de dominio ni integración productiva.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (seguimiento canónico); SV-motor: main (fuentes y evidencia pública); SV-sala-de-maquinas: main (encargos y recepciones privados).
+
+**cortes_de_entrada:** Lenguaje 68772d8bad39730425d1b73d9c82cf687c39ef02; SV-motor 057dba8a4a1fd2774e35f61e6135fd096679502a; depósito privado d416dd75962314f84ff04f4cf5974f63b468fb28. Primer hito documental localizado: SV-motor 875a3df0f2e07fb3c71f98d7fd6968ccae54af24.
+
+**dependencias:** Pilares; perfiles/contratos; transición secuencial; acta de rutas 14/09; Acta 001 §§2,4,10; EIO-CONTRATO-01/1; S22 y S32 conservan alcances distintos; procedimiento S36. S37/S38 diferidos, sin nuevo prerrequisito.
+
+**resultado:** EIO-05/06: construcción nativa y 24/24 controles; inferencias rechazadas por ESTRUCTURA. EIO-JSON-01: 24+35 controles, seis de sensibilidad incluidos, con reserva de custodia. NAV-01/02: NAV01–NAV04 conformes y NAV05 interrumpido por RSS agregada superior a 4 GiB, sin salida contractual. Candidata nativa 02 sin compilar/ejecutar; NAT02-A/B estáticos pendientes; encargo 03 publicado.
+
+**verificacion:** Lectura de informes públicos y recepción privada fijados; cotejo documental de Sucesos CSV/Markdown/historial y RETP. No reproducción experimental ni recálculo íntegro de manifiestos. Medidas y comprobaciones históricas conservan sus productores y alcances.
+
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md ; https://github.com/juantoniolloretegea/SV-motor/blob/057dba8a4a1fd2774e35f61e6135fd096679502a/laboratorio/ensayo-ia-y-observabilidad/README.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ba87934922a2de2956c1dc27155190c6b48f4caf/respuestas-ejecucion/EIO-GITHUB-01/revision-integracion-nativa-02/RECEPCION.md
+
+**referencia_calidad:** Acta 003 de conciliación EIO, 20/09/2026; RETP-2026-259. Adscripción a (p1+P3)-Bis, sin cierre de S32/BIS-03.
+
+**siguiente_accion:** Recibir la candidata del encargo EIO-NAT-PREP-03; después decidir preparación remota con gasto adicional cero y pruebas sintéticas, previa comprobación de la contención necesaria. Inferencia del servicio, URL operativa y conclusión experimental integral pendientes. No habilitar una ejecución por este asiento.
+
+**observaciones:** Alta tardía explícita de actividad existente; fecha_inicio_utc es la marca del primer commit documental localizado, no el inicio inferido de trabajos previos ni una autorización. En ejecución califica el seguimiento abierto, no procesos remotos activos. Presupuesto inicial 3/3 y continuaciones 4–9 con sus presupuestos propios preservados, sin reintentos por esta conciliación. El mapa y espejos históricos conservan su corte; S37/S38 pendientes. La candidata de preparación 03 no tiene entrega recibida en el corte. No aceptación científica ni cambio nuclear.
 

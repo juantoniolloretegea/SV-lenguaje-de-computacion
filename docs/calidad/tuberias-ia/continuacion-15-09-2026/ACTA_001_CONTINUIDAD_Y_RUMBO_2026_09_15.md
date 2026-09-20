@@ -163,3 +163,13 @@ La revisión independiente mantiene dos niveles expresos: examen del código y r
 La [recepción S33](RECEPCION_S33_RUST_2026_09_17.md), RETP-2026-251, acredita instalación aislada de Rust 1.98.0 en Linux x86-64, compilación y ejecución del programa mínimo y cotejo documental de dos entradas de leyenda, todos con terminación 0. Los componentes se transfirieron individualmente y sus huellas coinciden con el paquete recibido. El ZIP exterior no se recuperó en esta instancia. Cargo se identificó por versión; no se ensayó resolución de dependencias.
 
 S33 queda finalizado en este alcance. Las menciones de indisponibilidad en §10.2 y de pendiente en §10.3 conservan su corte anterior; esta recepción actualiza ese estado con [evidencia inmutable](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b5ddedbb5f7388cb503e571f91942de352e2b1f5/watson-herramientas/evidencias/receptor-linux-20260917/README.md). Continúa siendo obligatoria la verificación instrumental antes de cada sesión. La prueba no acredita persistencia, paridad multiplataforma, GUI productiva, privacidad ni aceptación de H1. S34, S22, S26, S32 y BIS-03 conservan sus seguimientos.
+
+<a id="conciliacion-eio-2026-09-20"></a>
+
+## 11. Conciliación del seguimiento EIO · 20/09/2026
+
+La [Acta 003](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md), RETP-2026-259, incorpora la continuidad ya documentada del ensayo de inferencia y observabilidad en SV-motor y su custodia privada. S39 identifica el ensayo existente dentro de (p1+P3)-Bis; su alta tardía no constituye autorización retrospectiva ni reinicio. La evaluación pendiente de §4 cuenta ahora con campañas delimitadas y resultados parciales, sin adopción definitiva del modelo o del soporte.
+
+Se conservan inferencias nativas contractualmente adversas, controles JSON con su reserva, interrupciones del navegador por memoria y la candidata de servicio nativo aún sin comprobación ejecutable. La preparación EIO-NAT-PREP-03 tiene encargo identificado, sin entrega sucesora recibida en el corte. Su recepción y cualquier habilitación material conservan sus puertas.
+
+Sucesos CSV/Markdown/historial y RETP CSV/Markdown se concilian en el mismo cambio. S37/S38 siguen pendientes; S22, S26 y S32/BIS-03 mantienen sus alcances y estados. El mapa y las copias históricas conservan su corte conforme a §10.1. Esta actualización no abre GUI, núcleo, dominio, infraestructura, campaña ni gasto.
