@@ -1424,3 +1424,40 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** S40 registra trabajo material futuro; la preparación documental actual no marca su inicio. Inicio y fin vacíos. Español inicial confirmado; extensión inglesa y equivalencias requieren contrato. No inferir comprensión desde SVP-ES/EN, JSON válido o multilingüismo del modelo. No salida profesional reescrita libremente, promoción de conocimiento ni fallo convertido en U. Sin nueva infraestructura, costes o delegación de IA. Copias históricas conservan su corte.
 
+
+<a id="s41"></a>
+
+## S41 · Organización del registro de sucesos mediante fichas individuales enlazadas
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-20T19:25:40Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-20T19:25:40Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S37
+
+**alcance:** Preparar, cuando se determine su apertura, una carpeta hija fichas/ dentro de sucesos, con una ficha completa y ruta estable por identificador. Añadir al CSV una primera columna ficha con la URL completa de la ficha correspondiente; mantener las columnas existentes. Presentar el Markdown general como índice con enlaces compatibles. Explicar objeto, sede, condiciones de inicio o continuación, resultados previos necesarios, actuaciones afectadas y siguiente acción, reutilizando los campos existentes. Evitar fuentes de estado independientes, copias manuales discordantes, renumeración, prioridades numéricas, plan separado y diagramas de planificación.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main; docs/calidad/Inventario-sv/sucesos (sede canónica). La reorganización futura no se ejecuta por esta alta.
+
+**cortes_de_entrada:** Lenguaje 669063eb7247fc5297f4d26d11e6b3026586621d; reglas del registro, S0–S40, historial y RETP hasta 261.
+
+**dependencias:** Disposición de la Dirección del proyecto de 20/09/2026. S0 como antecedente de constitución del registro; S30 como antecedente de continuidad y rumbo; reglas vigentes de Sucesos y Acta 001 §10.4. Revisar al abrir la tarea las fichas o entradas abiertas y los antecedentes pertinentes. No constituye condición previa al encargo EIO vigente ni modifica la continuidad de S22, S26, S32 o S39.
+
+**resultado:** Necesidad y alcance conservados como trabajo pendiente. No se han creado fichas, añadido columnas ni migrado el Markdown general.
+
+**verificacion:** Siguiente identificador libre comprobado; alta revisión 0 concordante en CSV, Markdown e historial, con remisión RETP-2026-262. Preservación de los registros anteriores. Comprobación documental del alta; no prueba ni ejecución de la reorganización.
+
+**evidencias:** docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md#s41 ; docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md#retp-262
+
+**referencia_calidad:** RETP-2026-262; reglas del registro de Sucesos; Acta 001 §10.4. Alta de trabajo pendiente, sin cambio de arquitectura.
+
+**siguiente_accion:** Cuando la Dirección determine su tratamiento, recibir el registro actualizado, fijar una plantilla que reutilice sus campos y preparar la migración concordante de CSV, índice y fichas. Comprobar conservación de contenido, estados, identificadores, enlaces anteriores e historial. Prever la revisión de actuaciones afectadas al incorporar un suceso, recibir resultados o cambiar alcance; expresar dependencias por resultados concretos y conservar su decisión de habilitación. Resolver la compatibilidad del historial antes de modificar el esquema, sin reescribir sus asientos.
+
+**observaciones:** Inicio y fin vacíos. El alta conserva la necesidad sin iniciar su implantación ni interrumpir la tarea vigente. El identificador conserva el orden de registro, no fija el orden de ejecución; una necesidad anterior se expresará por sus condiciones y relaciones, sin insertar identificadores bis. CSV almacena la URL como texto; su apertura depende del visor. Git conserva versiones de las fichas y las evidencias mantienen referencias inmutables. Redacción institucional sin referencias conversacionales. Actas sólo afectadas si cambian decisiones rectoras. Copias históricas conservan su corte.
+

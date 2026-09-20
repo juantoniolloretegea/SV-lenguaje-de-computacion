@@ -2549,3 +2549,16 @@ La verificación de esta incorporación es documental y registral. No se altera 
 Se aplica Acta 001 §10.4 al [documento S40, versión 0.1.1](tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md) y a su presentación vigente en Sucesos CSV y Markdown. La atribución a W-S37, la autoridad del profesional responsable y las fuentes se conservan. Las revisiones y los asientos anteriores permanecen intactos; el historial añade la revisión 1.
 
 La corrección es editorial: no cambia requisitos, resultados, fechas de inicio o fin, estados de otros sucesos ni autorizaciones. S40 continúa pendiente. El estudio solicitado sobre gobierno de la secuencia requiere una propuesta y decisión propias; este asiento no lo implanta, no habilita ejecuciones y no modifica las actas ni el mapa histórico.
+
+
+<a id="retp-262"></a>
+
+## RETP-2026-262 · Fichas individuales de sucesos: trabajo pendiente · 20/09/2026
+
+**Hora Europe/Madrid:** 21:25:40. **Unidad:** W-S37. **Suceso:** [S41](Inventario-sv/sucesos/SUCESOS_SV.md#s41), revisión 0, pendiente.
+
+Se conserva el alcance acordado: carpeta hija `fichas/`, ficha completa por identificador, primera columna `ficha` con URL en el CSV e índice Markdown concordante. El CSV conserva su función estructurada; las fichas presentarán objeto, sede, condiciones, resultados previos requeridos, actuaciones afectadas y siguiente acción. La implantación deberá evitar fuentes de estado independientes y conservar enlaces, contenido e historial.
+
+La revisión adversarial distingue antecedentes de condiciones previas y exige revisar las actuaciones afectadas también al recibir resultados o cambiar alcance. La numeración identifica el alta, no la precedencia de ejecución. Se reutilizarán las revisiones existentes, sin plan separado, prioridades numéricas ni diagramas de planificación. Los cambios rectorales, si fueran necesarios, conservarán su sede competente.
+
+Esta incorporación sólo añade el seguimiento pendiente en Sucesos CSV/Markdown/historial y Calidad CSV/Markdown. Inicio y fin vacíos; sin migración, nuevas columnas ni fichas creadas. Se conservan las filas anteriores y la continuidad del encargo vigente. Corte leído: `669063eb7247fc5297f4d26d11e6b3026586621d`; reglas de Sucesos y antecedentes registrales. No se modifican arquitectura, contratos, guardas, ensayos ni mapa histórico; las copias históricas conservan su corte.
