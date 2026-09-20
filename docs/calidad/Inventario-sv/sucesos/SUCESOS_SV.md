@@ -1398,27 +1398,27 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** —
 
-**fecha_actualizacion_utc:** 2026-09-20T18:51:47Z
+**fecha_actualizacion_utc:** 2026-09-20T19:01:09Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** W-S37
 
-**alcance:** Evaluar y delimitar la interfaz del experto y la conservación verificable de significado, cobertura, rutas, parámetros singulares de decisión, resultado y fundamento desde la consulta hasta su presentación. Reutilizar los perfiles lingüísticos, ES27/IE-004 y acta de rutas; distinguir interlocución probabilística auxiliar de resultado contractual determinista y decisión humana.
+**alcance:** Evaluar y delimitar la interfaz del experto y la conservación verificable de significado, cobertura, rutas, parámetros singulares de decisión, resultado y fundamento desde la consulta hasta su presentación. Reutilizar los perfiles lingüísticos, ES27/IE-004 y acta de rutas; distinguir interlocución probabilística auxiliar de resultado contractual determinista y decisión del profesional responsable.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion: main (documento y registro canónicos). SV-banco-de-idiomas: main (fuente consultada). SV-motor: main (EIO conservado). Sede de una futura campaña por determinar.
 
 **cortes_de_entrada:** Lenguaje 23fcf1fbe5d7bd997d2e993006d8780d374475e3; Banco de idiomas 1ed5dcc1914e42072cee665ccd29847cff83e86c. EIO según corte documental de Acta 003 y S39, sin nueva recepción ejecutable.
 
-**dependencias:** Instrucción humana del 20/09/2026; Pilares; perfiles/contratos; transición secuencial; Fase 003; RETP-115–142 y sucesores; acta lingüística RETP-121; acta de rutas S28. S37 (contraste de varias IA), S38 (encapsulación) y S39 (EIO) conservan objetos y estados distintos. No nuevo prerrequisito de ejecución para Holmes.
+**dependencias:** Disposición de la Dirección del proyecto del 20/09/2026; Pilares; perfiles/contratos; transición secuencial; Fase 003; RETP-115–142 y sucesores; acta lingüística RETP-121; acta de rutas S28. S37 (contraste de varias IA), S38 (encapsulación) y S39 (EIO) conservan objetos y estados distintos. No se añade una condición previa al encargo EIO vigente.
 
 **resultado:** Documento explicativo y revisión adversarial documental preparados. Evaluación integrada, contrato específico, implementación y campaña futura pendientes; no se atribuyen pruebas nuevas ni comprensión lingüística general.
 
-**verificacion:** Lectura de fuentes y sucesión histórica; cotejo de alta S40 revisión 0 en CSV/Markdown/historial y RETP-2026-260. Preservación de filas previas. Sin repetición de ES27, IE-004 o EIO.
+**verificacion:** Fuentes y antecedentes según revisión 0. Corrección editorial de denominaciones conforme a Acta 001 §10.4; concordancia de S40 revisión 1 en CSV/Markdown/historial y RETP-2026-261. Filas previas preservadas. Sin ejecución experimental ni nueva secuencia aprobada.
 
 **evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md
 
-**referencia_calidad:** Documento S40 de 20/09/2026, §§2–11; RETP-2026-260. Remisión desde inicio de continuidad 15/09; fuentes fijadas a sus cortes.
+**referencia_calidad:** Documento S40, versión 0.1.1, §§2–12; RETP-2026-260 y RETP-2026-261; Acta 001 §10.4. Fuentes conservadas en sus cortes.
 
 **siguiente_accion:** Al autorizar su apertura, recibir sucesores de ES27/IE-004 y EIO y fijar una operación delimitada, perfil lingüístico, contrato de presentación, evidencia reutilizable, pruebas y presupuesto. Antes de consolidar un alcance que incluya esta capacidad, devolver a la sede competente cualquier pérdida representacional demostrada. No implementar ni ejecutar por esta alta.
 

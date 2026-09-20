@@ -1,10 +1,10 @@
 # Interlocución del experto, idiomas y consejo verificable en el SV
 
 **Fecha:** 20 de septiembre de 2026.  
-**Versión documental:** 0.1.  
-**Seguimiento:** [S40, pendiente](../../Inventario-sv/sucesos/SUCESOS_SV.md#s40). **Calidad:** RETP-2026-260.  
+**Versión documental:** 0.1.1.  
+**Seguimiento:** [S40, pendiente](../../Inventario-sv/sucesos/SUCESOS_SV.md#s40). **Calidad:** RETP-2026-260 y RETP-2026-261.  
 **Naturaleza:** revisión explicativa de fuentes y delimitación de trabajo futuro. No constituye un contrato ejecutable ni acredita una interfaz profesional disponible.  
-**Responsable de la revisión:** Watson / W-S37, bajo instrucción de Juan Antonio Lloret Egea.  
+**Unidad responsable de la revisión:** W-S37, por disposición de la Dirección del proyecto.  
 **Corte canónico leído:** Lenguaje `23fcf1fbe5d7bd997d2e993006d8780d374475e3`.  
 **Decisión recibida:** conservar esta necesidad en un documento y un suceso pendiente, sin abrir su implementación ni desviar el ensayo actual.
 
@@ -61,7 +61,7 @@ Esta lectura corrige dos simplificaciones: no es cierto que todo esté sólo esp
 
 Deben conservarse separados:
 
-- **Perfil fuente SVP-ES/SVP-EN:** formas constitutivas del programa; su convergencia no prueba comprensión de preguntas humanas.
+- **Perfil fuente SVP-ES/SVP-EN:** formas constitutivas del programa; su convergencia no prueba comprensión de consultas en lenguaje natural.
 - **Idioma de interfaz:** rótulos, ayuda y presentación.
 - **Perfil de interlocución:** formas admitidas, referencias, contexto, negación, unidades, equivalencias y reglas de aclaración.
 
@@ -109,13 +109,13 @@ La equivalencia de dos solicitudes se debe constituir y comprobar. Un modelo no 
 
 El recorrido debe conservar el original y las transformaciones autorizadas. Si hay varias interpretaciones pertinentes, falta contexto o la forma no está cubierta, se comunica la causa y se solicita aclaración cuando el contrato lo permita. La autorización no debe servir para eliminar interpretaciones rivales hasta obtener artificialmente una sola [F05; RETP-125 y 135].
 
-Una propuesta de reformulación del auxiliar se presenta como propuesta; no sustituye silenciosamente la pregunta. La confirmación humana queda ligada a una versión concreta y no reemplaza las comprobaciones de estructura, cobertura o permisos. Un fallo lingüístico, técnico o de admisión no produce automáticamente Tri.U.
+Una propuesta de reformulación del auxiliar se presenta como propuesta; no sustituye silenciosamente la pregunta. La confirmación del profesional responsable queda ligada a una versión concreta y no reemplaza las comprobaciones de estructura, cobertura o permisos. Un fallo lingüístico, técnico o de admisión no produce automáticamente Tri.U.
 
-### 6.3. Papel del modelo y precisión sobre la respuesta anterior
+### 6.3. Papel del modelo y límites de la presentación auxiliar
 
 La Fase 003 excluye que la prosa libre del modelo determine o se añada al cuerpo aceptado. F05 mantiene que la salida profesional no se reescribe libremente. F06 admite interlocución, organización y exposición probabilísticas auxiliares, conservando la prohibición de sustituir o corregir silenciosamente el resultado.
 
-Estas fuentes no acreditan un permiso general para añadir texto generativo al consejo profesional. La sugerencia conversacional de una explicación libre suplementaria debe entenderse como posibilidad sometida a contrato y verificación, **no como capacidad ya autorizada**. Cualquier futura presentación auxiliar deberá fijar su estatuto, contenido admisible, relación con el resultado, oráculo de fidelidad y conducta ante contradicción. Una etiqueta de advertencia no basta si el usuario recibe un consejo alterado.
+Estas fuentes no acreditan un permiso general para añadir texto generativo al consejo profesional. Una explicación libre suplementaria constituye una posibilidad sometida a contrato y verificación, **no como capacidad ya autorizada**. Cualquier futura presentación auxiliar deberá fijar su estatuto, contenido admisible, relación con el resultado, oráculo de fidelidad y conducta ante contradicción. Una etiqueta de advertencia no basta si el usuario recibe un consejo alterado.
 
 Fijar una semilla, un prompt o una configuración de generación no constituye esa prueba de equivalencia semántica. La repetibilidad tampoco demuestra verdad: el sistema puede repetir un error.
 
@@ -141,7 +141,7 @@ La observabilidad permite examinar lo sucedido. Los mecanismos de seguridad acti
 
 Consulta profesional, investigación y actualización del conocimiento conservan episodios, permisos y registros diferenciados [F05; F06 §5]. En la consulta se usa la versión admitida; en el alcance clínico documentado no se consulta Internet. Investigar no autoriza a actualizar conocimiento, equivalencias lingüísticas, reglas, pesos o permisos durante la aplicación.
 
-La IA actúa como auxiliar bajo dirección humana. No se introduce autonomía decisoria ni delegación entre modelos por esta pieza. La valoración y autorización competen al humano facultado. La observación técnica puede acompañar la ejecución sin convertirse en investigación simultánea ni en otra decisión de dominio.
+La IA actúa como auxiliar bajo la dirección del profesional responsable. No se introduce autonomía decisoria ni delegación entre modelos por esta pieza. La valoración y autorización competen exclusivamente al profesional facultado, sin atribución decisoria al modelo. La observación técnica puede acompañar la ejecución sin convertirse en investigación simultánea ni en otra decisión de dominio.
 
 ## 9. Examen adversarial documental
 
@@ -168,18 +168,18 @@ No se han ejecutado los casos siguientes. Se identifican objeciones para orienta
 | Suceso | Objeto | Relación con S40 |
 |---|---|---|
 | S28, finalizado en su alcance documental | Rutas y consejo auditable | Fuente recibida; no se reabre |
-| S37, pendiente | Contraste humano de propuestas de distintas IAs y síntesis | Estudio distinto; S40 no exige varios modelos |
+| S37, pendiente | Contraste de propuestas de distintas IA y síntesis para evaluación por la autoridad competente | Estudio distinto; S40 no exige varios modelos |
 | S38, pendiente | Encapsulación y coexistencia con otros servicios o IA | Dependencias materiales a recibir cuando corresponda; no se absorbe |
 | S39, en ejecución como seguimiento | Ensayo EIO de inferencia y observabilidad | Aporta evidencia tecnológica; no demuestra S40 |
 | S40, pendiente | Interlocución del experto y fidelidad del consejo en el universo autorizado del agente | Alta actual y evaluación material futura |
 
-**Ahora:** documento explicativo, alta en Sucesos y remisión de Calidad. No nueva ejecución, modelo, dependencia, gasto ni modificación del encargo de Holmes.
+**Ahora:** documento explicativo, alta en Sucesos y remisión de Calidad. No nueva ejecución, modelo, dependencia, gasto ni modificación del encargo EIO vigente.
 
 **Antes de consolidar un alcance que incluya esta capacidad:** revisar si la representación conserva significado, identidad, cobertura y fundamento. Si una pérdida concreta afecta a una operación incluida, deberá tratarse en su sede antes de cerrar ese alcance; no basta diferirla por comodidad. F02 §7 y F05 §6 proporcionan el procedimiento para justificar una intervención temprana.
 
 **Cuando se autorice su apertura:** recibir los sucesores de ES27/IE-004 y de EIO, seleccionar una única operación delimitada con conocimiento y permisos constituidos, fijar perfil lingüístico, contrato de presentación, criterios y presupuesto. Empezar con casos sintéticos cuando falte una constitución de dominio apta. Rust y los destinos aplicables conservarán las reglas de prueba del proyecto.
 
-**Antes del uso profesional:** acreditar el recorrido completo y sus garantías materiales en el perímetro ofrecido, con recepción humana y límites explícitos. No basta terminar el ensayo del motor.
+**Antes del uso profesional:** acreditar el recorrido completo y sus garantías materiales en el perímetro ofrecido, con recepción por la autoridad competente y límites explícitos. No basta terminar el ensayo del motor.
 
 No se fija una fecha de calendario ni se obliga a terminar todo el SV antes de examinar requisitos que afectarían a su suficiencia. Tampoco se abre una línea paralela.
 
@@ -189,10 +189,15 @@ La futura entrega de S40 deberá relacionar, para cada obligación: fuente, oper
 
 Como mínimo deberá resolver o excluir expresamente: interpretación y aclaración; idioma y equivalencias; cobertura y rutas; ligaduras parámetro/posición/evidencia; autoridad y vigencia; fidelidad de presentación; custodia; aislamiento y recursos; utilidad del modelo. Los resultados adversos se conservarán.
 
-El expediente documental actual queda preparado. **S40 permanece pendiente porque su evaluación integrada, contrato concreto, implementación y campaña futura no se inician por este documento.** Inicio y fin del suceso quedan vacíos. La continuidad material dependerá de un encargo humano acotado.
+El expediente documental actual queda preparado. **S40 permanece pendiente porque su evaluación integrada, contrato concreto, implementación y campaña futura no se inician por este documento.** Inicio y fin del suceso quedan vacíos. La continuidad material dependerá de un encargo acotado y autorizado por la Dirección del proyecto.
 
 ## 12. Control de esta incorporación
 
 Se añaden este documento, S40 revisión 0 en CSV/Markdown/historial, RETP-2026-260 en CSV/Markdown y un enlace desde el inicio de continuidad del 15/09. Se conservan los asientos previos y los estados S37/S38/S39. No se modifican rectores, fuentes experimentales, guardas, oráculos ni el mapa HTML histórico.
 
 El commit de publicación identifica la incorporación. Los enlaces de fuentes fijan cortes anteriores; no se anticipa un hash futuro ni se declara un espejo de laboratorio actualizado. La revisión es documental, no una prueba del SV ni una nueva auditoría independiente.
+
+
+### Revisión editorial 0.1.1
+
+Se aplica la regla de denominación institucional de Acta 001 §10.4. Se conservan la unidad responsable W-S37, las fuentes, los requisitos y el alcance pendiente. La corrección queda enlazada mediante S40 revisión 1 y RETP-2026-261; la versión 0.1 permanece recuperable en el commit `a843e5a43c21308ed6de9d364316d92861f88863`. No se modifica la autoridad decisoria del profesional responsable ni se aprueba una secuencia de ejecución.

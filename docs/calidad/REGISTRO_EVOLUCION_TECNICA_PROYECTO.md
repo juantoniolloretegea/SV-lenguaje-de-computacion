@@ -2538,3 +2538,14 @@ La revisión adversarial localiza los riesgos de selección semántica incorrect
 Se añade S40 en CSV/Markdown/historial y una remisión desde inicio de continuidad. Las filas anteriores permanecen intactas. S37 conserva el estudio de varias IA; S38, encapsulación; S39, EIO en seguimiento. La evaluación integrada queda pendiente, con inicio y fin vacíos. Una pérdida representacional demostrada para una operación incluida deberá resolverse en su sede antes de cerrar ese alcance; no se abre automáticamente un frente paralelo.
 
 La verificación de esta incorporación es documental y registral. No se altera el encargo de Holmes, el núcleo, los dominios, las guardas, la infraestructura, los presupuestos ni el mapa HTML histórico. Los espejos conservan su corte; no se declaran actualizados.
+
+
+<a id="retp-261"></a>
+
+## RETP-2026-261 · Denominación institucional de S40 · 20/09/2026
+
+**Hora Europe/Madrid:** 21:01:09. **Unidad:** W-S37. **Suceso:** S40, revisión 1, pendiente.
+
+Se aplica Acta 001 §10.4 al [documento S40, versión 0.1.1](tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md) y a su presentación vigente en Sucesos CSV y Markdown. La atribución a W-S37, la autoridad del profesional responsable y las fuentes se conservan. Las revisiones y los asientos anteriores permanecen intactos; el historial añade la revisión 1.
+
+La corrección es editorial: no cambia requisitos, resultados, fechas de inicio o fin, estados de otros sucesos ni autorizaciones. S40 continúa pendiente. El estudio solicitado sobre gobierno de la secuencia requiere una propuesta y decisión propias; este asiento no lo implanta, no habilita ejecuciones y no modifica las actas ni el mapa histórico.
