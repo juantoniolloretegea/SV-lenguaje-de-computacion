@@ -1301,3 +1301,41 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Qwen y modelos de pesos abiertos gpt-oss se conservan únicamente como hipótesis de evaluación; versiones, requisitos y compatibilidad no verificados en esta alta. Los nombres y el orden del ejemplo humano no asignan funciones a productos concretos. La confianza se fundamentará en resultados verificables y alcance, nunca en prosa persuasiva ni en la mera coincidencia entre IA; la síntesis seguirá siendo consejo falible. Investigación y ejecución no se solapan dentro de un encargo; la observación instrumental conserva su función. No se añaden modelos, dependencias, instalaciones, ejecuciones de ensayo ni ampliaciones del núcleo. Inicio y fin vacíos; responsable de ejecución futura por asignar. Copias históricas conservan su corte; alta en sede canónica.
 
+
+
+<a id="s38"></a>
+
+## S38 · Estudio diferido de encapsulación del trabajo SV y coexistencia con servicios de IA
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-20T09:17:51Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-20T09:17:51Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S37
+
+**alcance:** Delimitar la protección de código, configuración, entradas, ejecución, resultados y evidencia del SV frente a interferencias de otros servicios o IA. Estudiar identidad, permisos, aislamiento y recursos compartidos, separando seguridad pasiva, seguridad activa y observabilidad. Toda IA participante queda subordinada al contrato de la tarea y a la autoridad humana; la protección material no se presume por su obediencia declarada. Las IA ajenas no reciben autoridad sobre recursos SV por coexistir.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (registro canónico). Soporte y sede de la futura campaña por determinar; SV-motor conserva el ensayo EIO sin ampliación por esta alta.
+
+**cortes_de_entrada:** Lenguaje 1b3cd0d4c31516807e87f4261cb6ffa795a7591d; SV-motor ee2946062f878282513b519e467cb6bfbb8a05d1; depósito privado 4957c17dfe4c58f6a082d9fce5201836418667d3.
+
+**dependencias:** Instrucción humana del 20/09/2026: navegador ahora y estudio posterior. S32 y sus antecedentes de supervisión y permisos; S26 (riesgos materiales); S36 (encargos y respuestas). S37 mantiene un objeto diferente: contraste humano de propuestas de varios modelos. No se establece un nuevo prerrequisito para EIO-NAV-01.
+
+**resultado:** Alta documental; estudio de arquitectura, selección de mecanismos, implementación y campaña no iniciados.
+
+**verificacion:** Consulta del registro y corte canónico; lectura de AGENTS y de los tres documentos rectores. Sin prueba de aislamiento ni garantía de exclusión de terceros.
+
+**evidencias:** La presente entrada y su revisión 0 conservan el objeto de la instrucción humana. No existen resultados experimentales de S38.
+
+**referencia_calidad:** Pilares de 05/09/2026; perfiles, contratos y ensamblaje de 06/09/2026; acta de transición secuencial desde OP-IMM-001 y adendas, especialmente PT01/PT08/PT09/PT11/PT12/PT14 y separación R3/R4. Alta de seguimiento, sin modificación de doctrina ni cierre técnico.
+
+**siguiente_accion:** Después del ensayo de navegador, formular un estudio acotado con inventario de recursos y autoridades, adversarios y permisos explícitos, vías de acceso y efectos, fallos comunes, revocación, restauración y límites. Comparar controles ya disponibles con carencias verificables antes de incorporar componentes. Definir pruebas de acceso no autorizado, interferencia y agotamiento de recursos antes de habilitar una coexistencia que dependa de esas garantías.
+
+**observaciones:** No se promete invulnerabilidad ni protección frente a un administrador o anfitrión comprometido sin mecanismos y evidencia específicos. La IA no valida ni amplía sus propios permisos. Las decisiones de dominio permanecen humanas; no se gobiernan tareas externas ajenas al SV. DarkControlAI no se selecciona ni se integra. Sin agentes adicionales, instalaciones, ejecuciones ni cambios nucleares por esta alta. Inicio y fin vacíos; responsable de ejecución futura por asignar. No se duplican los antecedentes de supervisión de S32.
+
