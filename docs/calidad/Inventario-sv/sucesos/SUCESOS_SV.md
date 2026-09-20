@@ -1264,3 +1264,40 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Alta posterior a actividad iniciada. Inicio corresponde al primer sello UTC conservado de esta intervención; fin al cotejo remoto. No se ha inspeccionado la copia del equipo local ni observado sus procesos. No se acredita recepción de estas instrucciones por la unidad ejecutora; S32 y los demás frentes conservan su estado.
 
+
+<a id="s37"></a>
+
+## S37 · Evaluación diferida del contraste de propuestas de IA y su síntesis bajo dirección humana
+
+**estado:** pendiente
+
+**fecha_alta_utc:** 2026-09-20T04:55:05Z
+
+**fecha_inicio_utc:** —
+
+**fecha_actualizacion_utc:** 2026-09-20T04:55:05Z
+
+**fecha_fin_utc:** —
+
+**unidad_responsable:** W-S37
+
+**alcance:** Estudiar y, mediante encargo posterior, ensayar un esquema de copiloto o asistencia semiautónoma bajo dirección humana, sin decisión autónoma de IA. El humano encarga una misma consulta delimitada a distintos modelos y decide sus participantes; una tercera IA presenta las respuestas originales identificadas y su propia valoración, separadas. El humano conserva selección, autorización y decisión final. Sin delegación autónoma, formación de equipos ni contratación de otras IA por una IA. Cada encargo mantiene secuencia explícita y exclusión de modos de investigación y ejecución.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main (registro canónico). SV-motor: main (ensayo actual conservado; sin modificaciones por esta alta). Sede y soporte de la futura campaña pendientes de determinar.
+
+**cortes_de_entrada:** Lenguaje 3d362a01c05644362a8bf77f456b4ecfedd8fd57; rectores y antecedentes consultados en ese corte.
+
+**dependencias:** Instrucción humana recibida el 20/09/2026; S28 (rutas y consejo auditable), S22 ((p1+p3)-Bis), S32 (privacidad y seguridad) y S36 (encargos y respuestas). Actividad diferida; no constituye prerrequisito nuevo ni altera la secuencia del ensayo EIO.
+
+**resultado:** Alta documental de actividad futura. Estudio, selección de modelos, implementación y campaña no iniciados.
+
+**verificacion:** Cotejo del registro canónico y del siguiente identificador libre. Sin evaluación de modelos ni prueba experimental atribuida a esta alta.
+
+**evidencias:** La presente entrada y su revisión 0 conservan el alcance de la instrucción humana. No existen resultados experimentales de S37.
+
+**referencia_calidad:** Pilares (05/09/2026); acta de perfiles, contratos y ensamblaje (06/09/2026); acta de transición secuencial desde OP-IMM-001 y sus adendas; acta de rutas (14/09/2026), §§4.1–4.5; contratos y evidencia existentes de ligaduras, identidad, paridad y consumo. Alta de seguimiento, sin modificación de doctrina ni nuevo cierre técnico.
+
+**siguiente_accion:** Cuando el humano determine su apertura, formular un encargo acotado con entradas comunes identificadas, respuestas originales inmutables y valoración sintética diferenciada. Fijar previamente oráculos y criterios para medir fidelidad de la síntesis, omisiones, atribuciones, desacuerdos, errores compartidos, auditabilidad, recursos y límites de confianza. Comparar con la asistencia de un único modelo. Evaluar entonces candidatos, licencias y compatibilidad real con Rust y el soporte disponible, sin seleccionar herramientas por anticipación.
+
+**observaciones:** Qwen y modelos de pesos abiertos gpt-oss se conservan únicamente como hipótesis de evaluación; versiones, requisitos y compatibilidad no verificados en esta alta. Los nombres y el orden del ejemplo humano no asignan funciones a productos concretos. La confianza se fundamentará en resultados verificables y alcance, nunca en prosa persuasiva ni en la mera coincidencia entre IA; la síntesis seguirá siendo consejo falible. Investigación y ejecución no se solapan dentro de un encargo; la observación instrumental conserva su función. No se añaden modelos, dependencias, instalaciones, ejecuciones de ensayo ni ampliaciones del núcleo. Inicio y fin vacíos; responsable de ejecución futura por asignar. Copias históricas conservan su corte; alta en sede canónica.
+
