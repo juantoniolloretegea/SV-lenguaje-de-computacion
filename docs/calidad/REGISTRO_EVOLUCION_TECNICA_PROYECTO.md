@@ -2592,3 +2592,18 @@ La última lectura publicada registra 0 USD facturados en las dos categorías ob
 La [propuesta M0-03](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/3cf1d2625033206cab66975de669e64d2285e543/encargos-ejecucion/EIO-GITHUB-01/inspeccion-nativa-m0-03/ENCARGO.md) concreta consulta gráfica sin edición JSON y comprobación del foco, conservando confianza exclusiva, captura exterior y cierre. Queda preparada para decisión, sin creación, compilación, pruebas ni inferencia. Los informes privados anteriores permanecen intactos.
 
 Se actualizan concordantemente Sucesos CSV/Markdown/historial, RETP CSV/Markdown y Acta 003. Corte del Lenguaje 6f3b38b654cb6df280e72f325fcfc5aa2b3b6c9d; AGENTS y sus tres rectores completos consultados. No cambian otros sucesos, arquitectura, código, guardas ni mapa histórico. La siguiente fase material depende de autorización de la propuesta y recepción de los requisitos observados.
+
+
+<a id="retp-265"></a>
+
+## RETP-2026-265 · Preparación material y cierre SSH · 21/09/2026
+
+**Hora Europe/Madrid:** 09:06:43. **Unidad receptora:** W-S39. **Suceso:** S39, revisión 3, en ejecución de seguimiento. Relevo desde W-S37 sin reasignar ejecuciones anteriores.
+
+La [Acta 003 §10](tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-preparacion-ssh) recibe M0-03, su ventana técnica posterior, la preparación de la guarda Rust y la integración GitHub CLI. La inspección inicial quedó incompleta; la continuación posterior identificó herramientas y una prueba aislada de contención, con parada observada a 792,718 s. La guarda integral y NAT03 permanecen sin compilación ni validación ejecutable.
+
+La [última entrega](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/4f46b7d118258136baecd9c657ad94358d7e4b77/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/inspeccion-nativa-m0-03/ventana-tecnica-20260921-035810/integracion-gh-2.101.0/LEAME.md) documenta una conexión SSH rechazada, sin transferencia ni compilación y sin reintento. La observación exterior conserva Shutdown y 105,750 s desde el inicio. La causa no está determinada. La identidad dedicada quedó preparada según la entrega; no se deduce necesidad de otra instalación o cambio de permisos. La recepción coteja informe, error y registro de cierre, sin reproducir la conexión ni recalcular todos los manifiestos.
+
+El tiempo manual anterior sigue desconocido y no se reconstruye un saldo disponible; las magnitudes exteriores no acreditan coste individual. Los antecedentes, incluidos el uso previo de Python y sus límites, se conservan. Siguiente: diagnóstico técnico acotado desde la evidencia existente; cualquier nueva conexión requiere encargo posterior.
+
+Se concilian los tres registros de Sucesos, RETP CSV/Markdown, Acta 003 y remisiones de entrada. Las otras 41 filas, las 159 instantáneas históricas y los asientos RETP anteriores se preservan. No se modifican otros sucesos, contratos, código, infraestructura, permisos, presupuesto o mapa histórico; las copias históricas mantienen su corte.
