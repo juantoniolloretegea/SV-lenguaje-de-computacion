@@ -103,3 +103,36 @@ El receptor cotejó 44 archivos públicos, 242446 bytes, por tamaño y SHA-256, 
 Siguiente: [propuesta EIO-NAT-PREP-04](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/encargos-ejecucion/EIO-GITHUB-01/integracion-nativa-04/ENCARGO.md), comprobación previa de cuota, barrera de gasto cero y datos de entorno mediante lecturas disponibles. No permite crear o arrancar infraestructura. La fase material deberá concretarse y decidirse con esas evidencias; los testigos peligrosos requieren además contención exterior comprobada. Inferencia y URL operativa continúan posteriores a la recepción de las pruebas pertinentes.
 
 La continuidad queda concordante en Sucesos CSV/Markdown/historial y RETP CSV/Markdown. No cambia el rumbo rector, la arquitectura, los otros sucesos ni el mapa histórico; no es otra acta de arquitectura ni una nueva campaña.
+
+
+<a id="recepcion-m0"></a>
+
+## 9. Recepción de NAT04 y cierre de inspecciones M0 · 21/09/2026
+
+**RETP-2026-264; S39 revisión 2.** Asiento de recepción: 2026-09-21T02:35:11Z. Cortes leídos: Lenguaje main 6f3b38b654cb6df280e72f325fcfc5aa2b3b6c9d; SV-motor main 484acafebd5ec0bcedb759e2423ae935e7feb1a1; depósito privado main 493be00dde6d84899738a5dd6cc2aa78283dcf6f. Se consultaron AGENTS, Pilares completos, acta de perfiles completa, transición secuencial completa (§§1–30), reglas de Sucesos, Acta 001 §10, esta acta y registros aplicables. No se modifica la doctrina ni la arquitectura.
+
+Esta recepción actualiza la continuidad de §§6 y 8: NAT04 ya fue entregada; dos inspecciones materiales posteriores quedaron incompletas y sus instancias fueron eliminadas. Los textos precedentes mantienen su corte histórico.
+
+| Etapa | Fuente fijada | Resultado recibido y límite |
+|---|---|---|
+| NAT04 | [Informe](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/400976d807bfa5df5a40644c25912ec158eee7df/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/integracion-nativa-04/RESPUESTA.md) | Comprobación documental y de cuenta; barrera de gasto cero observada. Sin infraestructura creada por NAT04. Imagen, herramientas y supervisión no acreditadas. La exigencia posterior de saldo numérico fue precisada por los encargos M0, sin tratar una cuota nominal como saldo leído. |
+| M0-01 | [Cierre](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/eeaef4ed035e44bb0595bb6e70a58517451137fe/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/inspeccion-nativa-m0-01/CIERRE.md) | Una solicitud consumida. Parada observada a 103,446 s; terminal bloqueado por confianza no resuelta, cero órdenes remotas. Eliminación con pérdida autorizada de cambios desconocidos. |
+| M0-02 | [Evidencia](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0fad8c0c44f8b3dd9b940860c923deb40bcfe151/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/inspeccion-nativa-m0-02/EVIDENCIAS.md) y [cierre](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/493be00dde6d84899738a5dd6cc2aa78283dcf6f/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/inspeccion-nativa-m0-02/CIERRE.md) | Una solicitud consumida. Parada observada a 174,321 s. Inserción accidental en el editor de ajustes por destino de entrada no comprobado, sin guardado acreditado. Confianza no aceptada y cero órdenes remotas. Eliminación con pérdida autorizada; All 0 documentado. No prueba incompatibilidad del entorno. |
+
+Las observaciones proceden de informes y transcripciones exteriores. El receptor no ha repetido las interacciones ni recuperado los discos eliminados. La captura de la incidencia M0-02 permanece referida al registro de herramientas de la sesión; no se publica un archivo de imagen independiente. No se declara conservación íntegra de evidencia potencial ni cotejo original/copia de aquellos cambios.
+
+El cierre M0-02 registra consumo acumulado del periodo y 0 USD facturados mostrados en cómputo y almacenamiento. Esa lectura, con redondeo y posible demora, no equivale a auditoría final ni permite atribuir todas las unidades a un solo intento. El tiempo hasta parada y la retención posterior son magnitudes distintas. El descuento operativo conservador es 104 + 175 = 279 s; quedan como máximo 2121 s (35 min 21 s) del presupuesto propuesto de 40 minutos, sin autorización de consumo por esta recepción.
+
+### 9.1. Revisión adversarial del procedimiento
+
+Se separan dos causas: M0-01 encontró una decisión de confianza no suficientemente explicitada; M0-02 incluyó esa decisión pero falló en la interacción con el editor antes de aplicarla. Ninguna inspección llegó a medir el entorno. Los cierres no se convierten en aceptación de CPU, memoria, herramientas o contención.
+
+La consulta de configuración no requería editar JSON. La [propuesta M0-03](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/3cf1d2625033206cab66975de669e64d2285e543/encargos-ejecucion/EIO-GITHUB-01/inspeccion-nativa-m0-03/ENCARGO.md) sustituye para el nuevo intento el recorrido abierto por un procedimiento completo: consulta gráfica, identificación del destino antes de introducir texto, ausencia de uso de paleta para ajustes, confianza exclusiva de carpeta y captura exterior. Conserva presupuesto, tiempo, parada y decisión específica ante originales únicos no recuperados. No exige auditar exhaustivamente componentes integrados de la plataforma durante cinco minutos ni permite eludir controles de confianza.
+
+La revisión es favorable a someter esa propuesta a decisión; no demuestra que la interacción futura vaya a completarse. No se crea otra instancia, no se cambia infraestructura ni se repite una campaña por esta preparación. No se habilitan compilación, pruebas o inferencia. La guarda exterior continúa pendiente de acreditación antes de las operaciones que la necesiten.
+
+### 9.2. Conciliación y continuación
+
+S39 conserva su identidad y estado en ejecución de seguimiento; no designa procesos remotos activos. Su fila CSV, representación Markdown y revisión 2 del historial incorporan esta recepción. RETP-264 se añade en CSV y Markdown. Las 41 filas vigentes restantes, las 158 instantáneas históricas previas y los asientos RETP anteriores se conservan. No se abre un nuevo suceso ni se implanta S41.
+
+Se reutiliza esta acta como sede receptora, sin nueva acta de arquitectura ni actualización del mapa histórico. S22, S26, S32/BIS-03, S37/S38/S40/S41 conservan sus alcances. Las fuentes experimentales y los resultados anteriores no se modifican. Siguiente: decisión sobre M0-03; después, recibir sus lecturas y determinar si procede otra habilitación material. No se promete aptitud de Codespaces ni URL operativa.

@@ -2577,3 +2577,18 @@ Cotejo receptor: 44 archivos públicos, 242446 bytes, tamaños y SHA-256 concord
 El [encargo EIO-NAT-PREP-04 propuesto](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/41341f0f5c362a0f649206b8c70bca6586e3e295/encargos-ejecucion/EIO-GITHUB-01/integracion-nativa-04/ENCARGO.md) reúne las comprobaciones accesibles de cuota, gasto cero y entorno antes de definir un acto material autorizado. No crea ni arranca infraestructura, resuelve dependencias, compila o ejecuta pruebas. La retención y eliminación deberán fijarse antes del arranque; una alerta de gasto no acredita una barrera efectiva.
 
 Se concilian S39 en CSV/Markdown/historial y esta entrada en RETP CSV/Markdown; Acta 003 añade continuidad sin alterar sus antecedentes. S32/BIS-03, S37/S38/S40/S41, las guardas, las candidatas y el mapa histórico conservan su estado. Las copias históricas conservan su corte. No se modifica doctrina ni se abre un nuevo suceso.
+
+
+<a id="retp-264"></a>
+
+## RETP-2026-264 · Cierres M0 y procedimiento de inspección · 21/09/2026
+
+**Hora Europe/Madrid:** 04:35:11. **Unidad:** W-S37. **Suceso:** S39, revisión 2, en ejecución de seguimiento.
+
+La [Acta 003 §9](tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-m0) recibe NAT04 y los dos intentos M0, con sus cierres, pérdidas y límites. Ambos detuvieron su instancia dentro de cinco minutos y posteriormente la eliminaron con autorización específica de pérdida. Ninguno aceptó confianza ni ejecutó órdenes remotas. M0-01 encontró el acceso no resuelto; M0-02 sufrió una inserción accidental en el editor de ajustes, sin persistencia comprobada. Son inspecciones incompletas, no evidencia de incompatibilidad de Codespaces.
+
+La última lectura publicada registra 0 USD facturados en las dos categorías observadas, con reserva de actualización. El descuento conservador acumulado de 279 s deja 35 min 21 s operativos teóricos; no es saldo facturable ni permiso de uso. No se afirma recuperación íntegra, cotejo de originales remotos ni auditoría final de plataforma.
+
+La [propuesta M0-03](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/3cf1d2625033206cab66975de669e64d2285e543/encargos-ejecucion/EIO-GITHUB-01/inspeccion-nativa-m0-03/ENCARGO.md) concreta consulta gráfica sin edición JSON y comprobación del foco, conservando confianza exclusiva, captura exterior y cierre. Queda preparada para decisión, sin creación, compilación, pruebas ni inferencia. Los informes privados anteriores permanecen intactos.
+
+Se actualizan concordantemente Sucesos CSV/Markdown/historial, RETP CSV/Markdown y Acta 003. Corte del Lenguaje 6f3b38b654cb6df280e72f325fcfc5aa2b3b6c9d; AGENTS y sus tres rectores completos consultados. No cambian otros sucesos, arquitectura, código, guardas ni mapa histórico. La siguiente fase material depende de autorización de la propuesta y recepción de los requisitos observados.
