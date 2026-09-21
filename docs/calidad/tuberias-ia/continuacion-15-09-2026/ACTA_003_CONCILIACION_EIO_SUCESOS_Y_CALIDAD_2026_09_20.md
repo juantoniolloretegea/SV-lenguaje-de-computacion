@@ -168,3 +168,35 @@ El siguiente trabajo es delimitar el diagnóstico técnico con las evidencias y 
 La acreditación del canal y de los controles aplicables precede a la compilación acotada de la guarda y NAT03. Los bancos sintéticos, la activación de inferencia y la descarga de modelos mantienen sus fases y condiciones propias. Las compilaciones nativas históricas EIO-05/06 no acreditan esta candidata.
 
 Se actualizan la fila S39, su representación Markdown y la revisión 3 del historial, junto con RETP-265 y las remisiones de entrada. Se conservan las otras 41 filas, las 159 instantáneas históricas anteriores y todos los asientos RETP precedentes. S39 sigue en ejecución de seguimiento. Esta recepción no modifica código, contratos, infraestructura, permisos, presupuesto, otros sucesos o mapa histórico, ni incorpora una nueva autorización material.
+
+<a id="recepcion-controles-nativos-2026-09-21"></a>
+
+## 11. Conciliación de acceso, compilación y controles nativos · 21/09/2026
+
+**RETP-2026-266; S39 revisión 4.** Asiento receptor: 2026-09-21T17:59:12Z (19:59:12, Europe/Madrid). Cortes consultados: Lenguaje `f2ee6d8dedfc4a7802e80761638b6b1c438191aa`; SV-motor `484acafebd5ec0bcedb759e2423ae935e7feb1a1`; depósito privado `1341ec935a24a3615353935a0b765096136aeea4`. Se consultaron AGENTS, Pilares, perfiles y contratos, transición secuencial §§1–30, Acta 001, reglas de Sucesos y procedimiento S36.
+
+Esta recepción actualiza el estado de §10. El diagnóstico SSH y la compilación pendientes en aquel corte cuentan con resultados posteriores; sus registros se conservan como antecedentes. Se reciben los siguientes resultados documentados, sin repetir sus campañas:
+
+| Entrega fijada | Resultado recibido y límite |
+|---|---|
+| [Conexión IPv4 · 1829fa9](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1829fa98f68e48b0a5ae940066747e01632c2937/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/ejecucion-diagnostico-ssh-01-revision-01/RESPUESTA.md) | Autenticación, marca exacta y retorno 0 de una conexión mínima; Shutdown documentado. Supera el bloqueo para esa ejecución, sin atribuir una causa exclusiva al rechazo anterior. |
+| [Compilación integrada · ee67dd4](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ee67dd48701bac590f6f5df5f2f23f8e53f8a403/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/compilacion-nativa-02/revision-02/RESPUESTA.md) | Guarda y NAT03 compiladas con Rust 1.98.0; canal, integridad y cierre conformes en esta entrega. Restitución acreditada y Shutdown a las 11:59:43 UTC. Compilar no acredita inferencia ni controles de terminación forzada. |
+| [Frontera JSON · 10d6931](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/10d69310888760e7a5283999c0199d861430a22d/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/controles-nativos-01/revision-01/RESPUESTA.md) | Derivada corregida: bancos 13/35/24 conformes en WSL2 y en remoto; contención benigna mediante `cgroup.kill` conforme. La guarda de sesiones terminó con `Invalid argument` antes del estímulo deliberado. Ese ensayo y los controles siguientes no quedaron acreditados. Restitución y Shutdown documentados. |
+| [Guarda PID · 139490d](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/139490d8c65aa89c065aceb263872544a972c31c/respuestas-ejecucion/EIO-GITHUB-01/entrega-04/controles-nativos-01/revision-02/RESPUESTA.md) | Compilación local y cinco regresiones conformes. La campaña remota se interrumpió por fallo de medición de un archivo temporal de Cargo; no conserva retorno de compilación remoto ni acredita el ensayo de la guarda. Shutdown documentado a las 16:58:22 UTC; restitución administrativa pendiente. |
+| [Continuación NAT03-MEDICION-01 · 1341ec9](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1341ec935a24a3615353935a0b765096136aeea4/encargos-ejecucion/EIO-GITHUB-01/compilacion-nativa-02/revision-01/correccion-medicion-01/README.md) | Corrección de medición y coordinación preparada, con comprobaciones locales identificadas y procedimiento de continuación. La entrega sucesora no está incorporada en este corte; no se le atribuyen resultados remotos. |
+
+### 11.1. Alcance de la recepción y pendientes
+
+La compilación recibida en ee67dd4 y los bancos de 10d6931 conservan sus identidades y condiciones. No se convierten en prueba de una derivada posterior. El fallo de medición de 139490d no demuestra un defecto de la guarda corregida, cuyo ensayo remoto no llegó a ejecutarse. El manifiesto exterior de esa publicación identifica lo recuperado, pero no sustituye el manifiesto emisor remoto ausente.
+
+El último cierre publicado de 139490d acredita Shutdown y deja pendiente la restitución del permiso. La parada de la instancia no demuestra restitución. Tampoco describe el estado actual de una continuación posterior. La terminación deliberada de la guarda, las trece sesiones HTTP, la terminación del supervisor y la interrupción del canal permanecen pendientes de recepción; la inferencia y la URL de usuario mantienen su fase propia.
+
+El examen receptor es documental: informes fijados, resultados, errores, identidades declaradas y encargo de continuación. No se repiten conexiones ni bancos y no se recalculan todos los manifiestos de las entregas. Sus comprobaciones productoras conservan esa procedencia. Esta recepción no acredita aceptación integral, aptitud productiva, comparación completa de las dos vías ni instalación general en todas las plataformas.
+
+### 11.2. Correspondencia y continuación
+
+S39 conserva identidad, alta, inicio, unidad responsable y estado en ejecución de seguimiento. Se actualiza su fila vigente y su representación Markdown; se añade la revisión 4 al historial y RETP-266 a ambos formatos. Se conservan las otras 41 filas de Sucesos, las 160 instantáneas históricas, los 267 asientos previos del CSV de evolución técnica y las secciones anteriores de esta acta.
+
+**Siguiente acción:** Recibir la entrega de NAT03-MEDICION-01 y cotejar por separado construcción, terminación deliberada de la guarda, sesiones HTTP, terminación del supervisor, interrupción del canal, restitución administrativa y cierre de plataforma. Reutilizar los bancos 13/35/24 y la contención benigna ya recibidos, sin atribuirles cobertura de una derivada no comprobada. Resolver cualquier resultado ausente o adverso antes de habilitar la fase que lo requiera; inferencia y URL de usuario conservan su etapa propia.
+
+Las remisiones de entrada apuntan a este apartado. S22, S26, S32/BIS-03, S34 y S37/S38/S40/S41 mantienen sus estados y alcances. El mapa HTML y sus archivos permanecen intactos. Esta conciliación se limita a documentación en la rama existente; no modifica fuentes experimentales, oráculos, permisos, infraestructura o presupuesto.

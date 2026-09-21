@@ -1,5 +1,7 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Recepción EIO · 21/09/2026:** [Acta 003 §11 / S39 revisión 4 / RETP-2026-266](../continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-controles-nativos-2026-09-21). Acceso IPv4, compilación y bancos 13/35/24 recibidos con su alcance. La última campaña publicada se interrumpió por medición de disco y dejó pendiente la restitución administrativa; el resultado de la continuación NAT03-MEDICION-01 aún no está recibido. Las entradas siguientes conservan sus cortes históricos.
+
 **Recepción EIO · 21/09/2026:** [Acta 003 §10 / S39 revisión 3 / RETP-2026-265](../continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-preparacion-ssh). Preparación material recibida; último intento SSH rechazado y ventana cerrada con Shutdown documentado. Causa pendiente de diagnóstico; canal, guarda integral y NAT03 sin validación ejecutable. Las entradas anteriores conservan su corte.
 
 **Conciliación EIO · 20/09/2026:** [Acta 003 / S39 / RETP-2026-259](../continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md). Ensayo en seguimiento; resultados parciales de ambas vías y preparación nativa pendiente de comprobación ejecutable. S37/S38 continúan pendientes. Esta remisión actualiza la lectura del ensayo sin cerrar S22, S32/BIS-03 ni otras obligaciones. Para S22 rige la recepción de custodia de Acta 002 §17; las menciones anteriores a esa comprobación pendiente conservan su fecha histórica.

@@ -2607,3 +2607,19 @@ La [última entrega](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/
 El tiempo manual anterior sigue desconocido y no se reconstruye un saldo disponible; las magnitudes exteriores no acreditan coste individual. Los antecedentes, incluidos el uso previo de Python y sus límites, se conservan. Siguiente: diagnóstico técnico acotado desde la evidencia existente; cualquier nueva conexión requiere encargo posterior.
 
 Se concilian los tres registros de Sucesos, RETP CSV/Markdown, Acta 003 y remisiones de entrada. Las otras 41 filas, las 159 instantáneas históricas y los asientos RETP anteriores se preservan. No se modifican otros sucesos, contratos, código, infraestructura, permisos, presupuesto o mapa histórico; las copias históricas mantienen su corte.
+
+<a id="retp-266"></a>
+
+## RETP-2026-266 · Conciliación de resultados nativos EIO · 21/09/2026
+
+**Hora Europe/Madrid:** 19:59:12. **Suceso:** S39, revisión 4, en ejecución de seguimiento.
+
+La [Acta 003 §11](tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-controles-nativos-2026-09-21) concilia resultados posteriores a RETP-265: conexión mínima IPv4 autenticada; compilación de guarda y NAT03 con Rust 1.98.0; bancos 13/35/24 conformes localmente en WSL2 y en remoto, y contención benigna comprobada. Las entregas fijadas y sus límites se identifican en el acta; se conservan los intentos adversos anteriores.
+
+La terminación prematura de la guarda en 10d6931 no acredita el estímulo deliberado. La entrega 139490d aporta compilación local de la guarda corregida y cinco regresiones conformes, pero su campaña remota se interrumpió por medición fallida del archivo temporal de Cargo. No se acredita el retorno de esa compilación remota. Shutdown consta a las 16:58:22 UTC; la restitución administrativa permanece pendiente en aquel cierre.
+
+La continuación NAT03-MEDICION-01 está fijada en 1341ec9, con resultado sucesor pendiente de recepción. El último cierre recibido no certifica el estado actual de una campaña posterior. Inferencia y URL de usuario no quedan acreditadas por esta conciliación.
+
+Recepción documental, sin nuevas conexiones, compilaciones o bancos ni recálculo completo de manifiestos productores. Se concilian Sucesos CSV/Markdown/historial, este registro en ambos formatos, Acta 003 y los dos accesos. Las otras 41 filas, las 160 instantáneas históricas y los asientos RETP anteriores se conservan; mapa, fuentes y otros seguimientos permanecen intactos.
+
+**Siguiente acción:** Recibir la entrega de NAT03-MEDICION-01 y cotejar por separado construcción, terminación deliberada de la guarda, sesiones HTTP, terminación del supervisor, interrupción del canal, restitución administrativa y cierre de plataforma. Reutilizar los bancos 13/35/24 y la contención benigna ya recibidos, sin atribuirles cobertura de una derivada no comprobada. Resolver cualquier resultado ausente o adverso antes de habilitar la fase que lo requiera; inferencia y URL de usuario conservan su etapa propia.
