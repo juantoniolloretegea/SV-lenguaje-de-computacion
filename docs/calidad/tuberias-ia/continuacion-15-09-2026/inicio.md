@@ -1,5 +1,7 @@
 # Continuación · 15 de septiembre de 2026
 
+**Recepción EIO · 21/09/2026:** [Acta 003 §12 / S39 revisión 5 / RETP-2026-267](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-medicion-plazo-concesion-2026-09-21). Primera activación recibida: construcción, terminación de la guarda, restitución y cierre conformes. Segunda activación interrumpida por el plazo del coordinador; permiso final sin determinar y controles pendientes. Corrección temporal preparada, con comprobación integrada previa a la continuación. Las entradas siguientes conservan sus cortes históricos.
+
 **Recepción EIO · 21/09/2026:** [Acta 003 §11 / S39 revisión 4 / RETP-2026-266](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-controles-nativos-2026-09-21). Acceso IPv4, compilación y bancos 13/35/24 recibidos con su alcance. La última campaña publicada se interrumpió por medición de disco y dejó pendiente la restitución administrativa; el resultado de la continuación NAT03-MEDICION-01 aún no está recibido. Las entradas siguientes conservan sus cortes históricos.
 
 **Recepción EIO · 21/09/2026:** [Acta 003 §10 / S39 revisión 3 / RETP-2026-265](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-preparacion-ssh). Preparación material recibida; último intento SSH rechazado y ventana cerrada con Shutdown documentado. Causa pendiente de diagnóstico; canal, guarda integral y NAT03 sin validación ejecutable. Las entradas anteriores conservan su corte.

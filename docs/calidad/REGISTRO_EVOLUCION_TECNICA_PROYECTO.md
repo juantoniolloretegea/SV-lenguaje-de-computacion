@@ -2623,3 +2623,19 @@ La continuación NAT03-MEDICION-01 está fijada en 1341ec9, con resultado suceso
 Recepción documental, sin nuevas conexiones, compilaciones o bancos ni recálculo completo de manifiestos productores. Se concilian Sucesos CSV/Markdown/historial, este registro en ambos formatos, Acta 003 y los dos accesos. Las otras 41 filas, las 160 instantáneas históricas y los asientos RETP anteriores se conservan; mapa, fuentes y otros seguimientos permanecen intactos.
 
 **Siguiente acción:** Recibir la entrega de NAT03-MEDICION-01 y cotejar por separado construcción, terminación deliberada de la guarda, sesiones HTTP, terminación del supervisor, interrupción del canal, restitución administrativa y cierre de plataforma. Reutilizar los bancos 13/35/24 y la contención benigna ya recibidos, sin atribuirles cobertura de una derivada no comprobada. Resolver cualquier resultado ausente o adverso antes de habilitar la fase que lo requiera; inferencia y URL de usuario conservan su etapa propia.
+
+<a id="retp-267"></a>
+
+## RETP-2026-267 · Recepción parcial NAT03 y corrección del plazo de concesión · 21/09/2026
+
+**Hora Europe/Madrid:** 20:13:23. **Suceso:** S39, revisión 5, en ejecución de seguimiento.
+
+La [Acta 003 §12](tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md#recepcion-medicion-plazo-concesion-2026-09-21) recibe ec44fd4: primera activación conforme, con construcción remota, terminación deliberada de la guarda por señal 9, detección, recogida, restitución y Shutdown. Conserva los resultados previos sin repetirlos.
+
+La segunda activación fue interrumpida por el coordinador al aplicar 96000 ms al contador común ya situado en 310671 ms. La captura administrativa quedó incompleta; no permite determinar su efecto remoto ni el permiso posterior. Shutdown consta a las 17:52:59 UTC y la restitución final sigue sin acreditar. El retorno local cero no significa conformidad.
+
+La [corrección y continuación fijadas](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c52482204ca13ce1933a71c501633fff0e1145de/encargos-ejecucion/EIO-GITHUB-01/compilacion-nativa-02/revision-01/correccion-plazo-concesion-01/README.md) separan el plazo de concesión del contador común. Se exige comprobación PowerShell integrada local antes de conectar, sin atribuirla al entorno receptor donde no está disponible. Se continúa únicamente por los controles pendientes, con lectura administrativa actual, conservación de evidencias y cierre.
+
+Recepción documental limitada a informe, código y registros identificados; no recálculo completo de 414 archivos ni reproducción remota. Se concilian Sucesos, historial, ambos formatos RETP, Acta 003 y accesos. Antecedentes, otros sucesos y mapa intactos.
+
+**Siguiente acción:** Integrar y comprobar localmente la corrección del plazo de concesión y la coordinación completa de la continuación EIO-NAT-CONTINUACION-02. Resolver mediante la intervención administrativa prevista el estado actual del permiso y ejecutar sólo los controles pendientes: trece sesiones HTTP, terminación del supervisor e interrupción final del canal. Conservar la primera activación conforme, sus binarios y los bancos previos, sin repetir transferencia ni compilación. Recibir después resultados, restitución y cierre; inferencia y URL de usuario conservan su fase propia.
