@@ -1,0 +1,48 @@
+{
+  "schema": "SV-TIQUES-EVIDENCIA-1",
+  "fecha_revision_utc": "2026-09-22T14:55:44Z",
+  "suceso": "S39",
+  "tiques": [
+    "TT-0005"
+  ],
+  "estado": "ambito_del_tique_finalizado",
+  "cortes": {
+    "lenguaje_base": "77571ccf63f03c87336344d582e60a3ddf189e54",
+    "motor_publicado": "5eaaa2c151f039c58ebd8f5746784bbe9b00a252"
+  },
+  "verificaciones": {
+    "rust_cargo": "1.98.0",
+    "pruebas_nativas": 11,
+    "pruebas_nativas_superadas": 11,
+    "inferencias_sinteticas": 1,
+    "correlacion_traza_proceso": true,
+    "operaciones_externas": null,
+    "validacion_contenido": "no_realizada"
+  },
+  "mediciones": {
+    "duracion_inferencia_segundos": 18.745995901,
+    "primera_salida_segundos": 18.098139737,
+    "maxima_lectura_arbol_segundos": 0.010058496,
+    "trazas_supervisor_bytes": 7622,
+    "trazas_observador_bytes": 10617
+  },
+  "despliegue": {
+    "pid": 14407,
+    "observador": 14428,
+    "observacion_avanza": true,
+    "expedientes_identicos": true,
+    "acceso_externo_verificado": false
+  },
+  "referencias": {
+    "informe": "https://github.com/juantoniolloretegea/SV-motor/blob/5eaaa2c151f039c58ebd8f5746784bbe9b00a252/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.3/INFORME.md",
+    "inferencia": "https://github.com/juantoniolloretegea/SV-motor/blob/5eaaa2c151f039c58ebd8f5746784bbe9b00a252/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.3/INFERENCIA.json",
+    "despliegue": "https://github.com/juantoniolloretegea/SV-motor/blob/5eaaa2c151f039c58ebd8f5746784bbe9b00a252/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.3/DESPLIEGUE.json",
+    "criterios": "https://github.com/juantoniolloretegea/SV-motor/blob/5eaaa2c151f039c58ebd8f5746784bbe9b00a252/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/OBSERVABILIDAD_0_1_3.md"
+  },
+  "limites": [
+    "Las trazas no validan el contenido del modelo.",
+    "Los sockets muestreados no acreditan ausencia de comunicaciones.",
+    "La observación no impone aislamiento ni autentica al profesional.",
+    "La revisión de la adenda y la prueba de determinismo no se ejecutaron en esta intervención."
+  ]
+}
