@@ -6,6 +6,8 @@
 **Estado:** investigación lateral en seguimiento; instalación nativa documentada; comprobación material independiente pendiente.  
 **Corte del Lenguaje examinado:** `9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7`, rama `main`.
 
+**Actualización posterior de estado:** §10, vinculada a S39 revisión 10. Los §§1–9 conservan el corte de recepción original.
+
 ## 1. Objeto y razón de la investigación
 
 El ensayo de inteligencia artificial y observabilidad estudia una cuestión concreta: si un modelo auxiliar de lenguaje puede funcionar en una realización identificada, producir una respuesta utilizable y conservar evidencia suficiente de la petición, las operaciones observables, el resultado y las condiciones de ejecución, bajo las obligaciones de autoridad del Sistema Vectorial SV.
@@ -151,6 +153,20 @@ S22, S32/BIS-03 y las obligaciones del núcleo conservan sus estados. Los estudi
 Esta acta no modifica la gramática, la IR, el núcleo, los dominios, el código experimental ni los criterios de las campañas ya realizadas. Conserva la autoridad humana sobre finalidad, permisos y aceptación. La IA auxiliar no adquiere facultad para incorporar conocimiento, cerrar `U` o producir efectos por el contenido de su respuesta.
 
 El registro vigente, su revisión histórica y el nuevo asiento RETP se publican concordantemente. El mapa HTML y los expedientes anteriores conservan sus identidades. La sede experimental continúa en SV-motor; Calidad del Lenguaje conserva la recepción y el seguimiento canónicos.
+
+## 10. Actualización de estado y continuación delimitada · 22 de septiembre de 2026
+
+**Cortes recibidos:** SV-motor `a14ea31b3903d49a98f08b912206b1c8c9eeaf74`; Lenguaje `a875a5f74505045855bfbd56449f4c2522b457e7`. Se mantienen las piezas rectoras consultadas en esta acta.
+
+La entrega EIO conversación 0.1.3 · Beta 1 y DOC-01 han finalizado en los alcances de TT-0007 y TT-0008. DOC-01 conserva cuatro terminaciones normales y cero aceptaciones contractuales. La conformidad integral de la vía B permanece pendiente; el cierre de estas tareas no la sustituye.
+
+[CAPACIDAD-CGROUP-01](https://github.com/juantoniolloretegea/SV-motor/blob/511969f4ba576734f4bf96e39eed3e90d5dd02d5/laboratorio/ensayo-ia-y-observabilidad/resultados/capacidad-cgroup-01/README.md), recibida mediante TT-0009, aporta una inspección inicial del entorno. La apertura del control `cgroup.kill` de la raíz visible devolvió permiso denegado. No se acreditaron una hoja exclusiva delegada ni el control superior requerido. El resultado no demuestra imposibilidad de otra delegación; impide habilitar pruebas de bloqueo con esta evidencia. No hubo inferencias ni escrituras en los controles. El entorno quedó detenido tras la inspección.
+
+Se mantiene la condición de continuación de §8: resolver una carencia concreta con presupuesto y condición de parada; una repetición exige una corrección o una condición distinta justificada. Antes de ensayar la guarda debe acreditarse la capacidad exterior. Si no está disponible dentro del alcance autorizado, corresponde registrar la limitación y resolver el alcance, sin ampliar recursos automáticamente.
+
+La edición documental 2.5 incorpora [fichas por modelo](https://github.com/juantoniolloretegea/SV-motor/blob/511969f4ba576734f4bf96e39eed3e90d5dd02d5/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md), conservando Qwen/Candle y la entrega publicada. gpt-oss-20b se registra como candidato sin instalación. La vía A continúa significando inferencia en navegador/WebAssembly. Una interfaz ante un proceso nativo remoto no acredita esa vía. El contraste entre Qwen/B y gpt-oss/A describiría configuraciones completas, sin aislar el efecto de WebAssembly.
+
+Esta actualización no modifica la arquitectura contractual, las obligaciones del núcleo ni los criterios de pruebas anteriores. S39 revisión 10 y TT-0009 reciben el estado y la evidencia; los demás tiques conservan sus estados. La revisión específica de la adenda y la devolución a (p1+P3)-Bis permanecen posteriores al cierre delimitado de B.
 
 [cyb]: https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md#12-adenda-integridad-y-trazabilidad-del-consejo-asistido-por-ia
 [bis]: https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7/docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md
