@@ -1,0 +1,142 @@
+{
+  "schema": "SV-TIQUES-EVIDENCIA-1",
+  "fecha_revision_utc": "2026-09-22T10:43:48Z",
+  "suceso": "S39",
+  "tiques": [
+    "TT-0001",
+    "TT-0002",
+    "TT-0003",
+    "TT-0004",
+    "TT-0005",
+    "TT-0006"
+  ],
+  "cortes": {
+    "lenguaje": "62780b71c7c7c545b1b163ab9a8c0f33eade760e",
+    "motor_fuentes": "eec0d87fd9e41a3341b799540bb4545c6dd686d9"
+  },
+  "modelo": {
+    "nombre": "Qwen3-0.6B",
+    "cuantizacion": "Q4_K_M",
+    "dispositivo": "CPU",
+    "pesos_bytes": 396705472,
+    "pesos_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tokenizador_bytes": 11422654,
+    "tokenizador_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "identidad_max": false
+  },
+  "configuracion": {
+    "temperatura": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "razonamiento": true,
+    "semilla": 299792458,
+    "reserva_salida": 2048,
+    "limite_segundos": 600,
+    "contexto_operativo": 16384,
+    "fragmento_preparacion_tokens": 64
+  },
+  "revision_anterior": {
+    "url": "https://github.com/juantoniolloretegea/SV-motor/blob/eec0d87fd9e41a3341b799540bb4545c6dd686d9/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/REVISION_SESION_2026_09_22.json",
+    "fuentes": [
+      {
+        "archivo": "f39a2a05-22bc-40e5-9215-89d9b222d5f0.json",
+        "bytes": 106011,
+        "sha256": "2b66b209eb28be281d1ebca259290e5a66bcad0d40bd165564713ec23359ac2c",
+        "sucesos": 50
+      },
+      {
+        "archivo": "37723c50-baf0-4d8a-88c4-5cb2a751773b.json",
+        "bytes": 1101478,
+        "sha256": "6e58798c068dd24e4300f034856d259c549f071fbe79e5a4453140dd8cb93d5d",
+        "sucesos": 460
+      }
+    ],
+    "alcance": "Nueve peticiones. El cotejo de exportaciones no acredita autenticidad externa ni validación integral del contenido."
+  },
+  "peticion_lexica": {
+    "procedencia": "Lectura directa y selectiva del JSONL conservado en el Codespace; no nueva inferencia.",
+    "request_id": "bf2fe6d8-7994-4c89-bd04-fe674863d2c0",
+    "admision_seq": 461,
+    "admision_utc_ms": 1790072232144,
+    "admision_utc": "2026-09-22T10:17:12.144Z",
+    "final_seq": 499,
+    "final_utc_ms": 1790072747044,
+    "final_utc": "2026-09-22T10:25:47.044Z",
+    "final_sha256_declarado": "c2215026f36b676a04faae3999a69813ec85d4136ddcac1fe49d84d58bb35a71",
+    "entrada_tokens": 1899,
+    "salida_tokens": 220,
+    "primera_salida_segundos": 435.677830103,
+    "duracion_segundos": 514.897928769,
+    "finish": "fin_normal",
+    "exit_code": 0,
+    "error": null,
+    "observacion_contenido": "Respuesta no pertinente al desviar la consulta léxica a un profesional sanitario.",
+    "limite_huella": "Huella leída del registro; no se declara recalculada independientemente en esta extracción."
+  },
+  "concurrencia": {
+    "compilacion_durante_peticion": false,
+    "alcance": "No se inició la compilación pendiente durante esta petición. Lecturas puntuales de procesos; no vigilancia exhaustiva de cargas ajenas.",
+    "ensayo_controlado_realizado": false
+  },
+  "despliegue": {
+    "version": "0.1.1",
+    "fuentes_commit": "eec0d87fd9e41a3341b799540bb4545c6dd686d9",
+    "compilacion": {
+      "toolchain": "Rust/Cargo 1.98.0",
+      "perfil": "release",
+      "dependencias_bloqueadas": true,
+      "trabajos": 1,
+      "resultado": "Finished release profile",
+      "duracion_indicada": "1m 23s",
+      "advertencias": [
+        "Asignación inicial de raw no leída antes de su sustitución.",
+        "Asignación inicial de status no leída antes de su sustitución."
+      ],
+      "cargo_offline": true
+    },
+    "ejecutable_sha256": "809e45a4470dd96d3780d44548344765e3c1f815af1627a4e5def8edc07c15a5",
+    "ejecutable_anterior_conservado_sha256": "b9ee13e43e55a2518fa62afc219a5d61a825bd9dfaa40dac1634a474bf2a7e8a",
+    "servicio": {
+      "pid_observado": 91295,
+      "ppid_observado": 1,
+      "anuncio_arranque": "EIO_CONVERSACION_LISTA",
+      "identidad_proceso_sha256": "809e45a4470dd96d3780d44548344765e3c1f815af1627a4e5def8edc07c15a5",
+      "comprobacion_http": {
+        "metodo": "HEAD",
+        "destino": "http://127.0.0.1:3000/",
+        "estado": 200,
+        "content_type": "text/html; charset=utf-8",
+        "content_length": 5566,
+        "fecha_cabecera_utc": "2026-09-22T10:44:59Z"
+      }
+    },
+    "conservacion": [
+      {
+        "archivo": "exp-1790057882056-0.jsonl",
+        "sha256_antes": "855e4a49269f7a3c3256c561fb5168048361b31b89c18fda91433e14715597bd",
+        "sha256_despues": "855e4a49269f7a3c3256c561fb5168048361b31b89c18fda91433e14715597bd"
+      },
+      {
+        "archivo": "exp-1790067796225-1.jsonl",
+        "sha256_antes": "56e391599320be68db393782f31f19fff1bb8a6a5dd99e334489ecce13706c68",
+        "sha256_despues": "56e391599320be68db393782f31f19fff1bb8a6a5dd99e334489ecce13706c68"
+      }
+    ],
+    "inferencia_nueva_de_revision": false,
+    "aceptacion_externa": "Pendiente: aviso visible y nueva exportación desde la sesión autorizada del titular.",
+    "limite": "Comprobación administrativa del proceso y de la respuesta HTTP local. La política de acceso del navegador de revisión impide validar aquí la interfaz privada; no se declara realizada esa validación."
+  },
+  "fuentes_externas": [
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3-0.6B",
+      "objeto": "Identidad y parámetros recomendados."
+    },
+    {
+      "url": "https://huggingface.co/Qwen/Qwen3.8-2.4T-A95B",
+      "objeto": "Realización distinta y relación declarada con Qwen3.8-Max."
+    }
+  ],
+  "privacidad": "Proyección técnica sin conversaciones clínicas completas ni credenciales.",
+  "fecha_actualizacion_utc": "2026-09-22T10:47:34Z"
+}
