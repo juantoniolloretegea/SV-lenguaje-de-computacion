@@ -1,0 +1,104 @@
+{
+  "schema": "SV-EIO-ENTREGA-DOC01/1",
+  "suceso": "S39",
+  "tiques": [
+    "TT-0007",
+    "TT-0008"
+  ],
+  "version": "0.1.3-beta.1",
+  "publicacion": {
+    "url": "https://github.com/juantoniolloretegea/SV-motor/releases/tag/eio-conversacion-v0.1.3-beta.1",
+    "fecha_utc": "2026-09-22T17:54:04Z",
+    "tag": "eio-conversacion-v0.1.3-beta.1",
+    "prerelease": true,
+    "commit": "a14ea31b3903d49a98f08b912206b1c8c9eeaf74",
+    "adjuntos": [
+      {
+        "nombre": "ARCHIVO.sha256",
+        "bytes": 119,
+        "sha256": "ae1b48ecabeee9b439885ad0e73263e6753161870cdd36bdc660790c53f986e6",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/ARCHIVO.sha256"
+      },
+      {
+        "nombre": "COTEJO.json",
+        "bytes": 356,
+        "sha256": "c0fe87f8dcedf3a44a73a3b249253ffe8270b357543ca07be8386f951f462299",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/COTEJO.json"
+      },
+      {
+        "nombre": "FICHA_TECNICA.md",
+        "bytes": 5176,
+        "sha256": "97a0f33d85a4321f945ca33cd9f5558d3295b216a6ee111ee357a774c360b0ae",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/FICHA_TECNICA.md"
+      },
+      {
+        "nombre": "LEAME.md",
+        "bytes": 3906,
+        "sha256": "59ced6cb80881c19b7253868806a98ef9437b15958507437ac20b990e938222b",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/LEAME.md"
+      },
+      {
+        "nombre": "MANIFIESTO.json",
+        "bytes": 70427,
+        "sha256": "d9274dce2a4307a59a28e2e7f809ad6793bc5609423e2be6e1395b559e9e0898",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/MANIFIESTO.json"
+      },
+      {
+        "nombre": "RECURSOS_MODELO.json",
+        "bytes": 1053,
+        "sha256": "dd7b4b1c64892497fc5de34f85e839e6ecee3650a6d68ee969b3a559f77f474d",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/RECURSOS_MODELO.json"
+      },
+      {
+        "nombre": "sv-eio-conversacion-0.1.3-beta.1-linux-x86_64.tar.gz",
+        "bytes": 4294199,
+        "sha256": "b6c72ddfcd4d0909dfcc489bdbf16e1da9cf38585323acea640058259d197f0f",
+        "estado": "uploaded",
+        "url": "https://github.com/juantoniolloretegea/SV-motor/releases/download/eio-conversacion-v0.1.3-beta.1/sv-eio-conversacion-0.1.3-beta.1-linux-x86_64.tar.gz"
+      }
+    ]
+  },
+  "cotejo": {
+    "herramienta": "Rust 1.98.0",
+    "archivos_en_manifiesto": 394,
+    "bytes_en_manifiesto": 14829636,
+    "archivos_totales_con_manifiesto_y_huellas": 396,
+    "paquetes_cargo_linux": 179
+  },
+  "consulta_documental": {
+    "protocolo": "DOC-01/1.0",
+    "peticiones": 4,
+    "finalizaciones_normales": 4,
+    "aceptaciones_contractuales": 0,
+    "repeticiones": 0,
+    "observador": {
+      "muestras_antes_cierre": 62,
+      "muestras_finales": 63,
+      "errores": 0,
+      "descartes": 0,
+      "activo_final": false
+    },
+    "otel_banco": {
+      "trazas": 8,
+      "errores": 0,
+      "descartes": 0
+    },
+    "informe": "https://github.com/juantoniolloretegea/SV-motor/blob/a14ea31b3903d49a98f08b912206b1c8c9eeaf74/laboratorio/ensayo-ia-y-observabilidad/resultados/consulta-documental-01/INFORME.md"
+  },
+  "limites": [
+    "Los pesos y el tokenizador se obtienen separadamente mediante referencias fijadas y SHA-256.",
+    "No se incluyen expedientes de usuario.",
+    "El banco documental no se ha incorporado como modo de la conversación interactiva.",
+    "La observación se limita a los procesos y puntos instrumentados; no acredita aislamiento.",
+    "No se acredita conformidad integral de la vía B, aptitud clínica ni determinismo.",
+    "El universo OP-IMM-001 permanece sin cierre; no se dispone del texto íntegro de su bibliografía.",
+    "La revisión integral de la adenda corresponde al paso posterior."
+  ]
+}
+
