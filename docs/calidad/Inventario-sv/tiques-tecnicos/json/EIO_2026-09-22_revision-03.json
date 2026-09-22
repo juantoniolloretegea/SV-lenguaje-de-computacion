@@ -1,0 +1,155 @@
+{
+  "schema": "SV-TIQUES-EVIDENCIA-1",
+  "fecha_revision_utc": "2026-09-22T12:55:01Z",
+  "suceso": "S39",
+  "tiques": [
+    "TT-0002",
+    "TT-0003",
+    "TT-0006"
+  ],
+  "estado": "servicio_local_verificado_acceso_externo_pendiente",
+  "cortes": {
+    "lenguaje_base": "6d5b44832514b170cbe6e2eb2d84d6011ad6f357",
+    "motor_fuente_aplicacion": "feefbe68a4131c43c46673b841a0dd72b590e4f7",
+    "motor_publicado": "22376cf7c185e979eef2eb4049d7e07fe1e9d7c8"
+  },
+  "identidad": {
+    "binary_sha256": "06de1b792deb1356cbdcc3fe34c68313387c10684b2b67e438a6cb86e166caa8",
+    "candle_revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+    "device": "CPU",
+    "experiment": "comparacion-01",
+    "model": "Qwen3-0.6B · Q4_K_M",
+    "model_sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a",
+    "tokenizer_sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+  },
+  "verificacion_rust": {
+    "autorizacion_confianza_recibida": true,
+    "confirmacion_confianza_aceptada": true,
+    "unitarias": {
+      "superadas": 6,
+      "fallidas": 0
+    },
+    "proceso_http": {
+      "primer_intento": {
+        "resultado": "no_conforme_por_plazo_de_arranque",
+        "plazo_segundos": 15,
+        "retorno": 101
+      },
+      "observacion_intermedia": {
+        "sin_puerto_observado_a_segundos": 11,
+        "disponible_observado_a_segundos": 32,
+        "espera_de_disco_observada": true,
+        "causa_exclusiva_acreditada": false,
+        "parada_sigterm_retorno": 0
+      },
+      "segundo_intento": {
+        "plazo_segundos": 60,
+        "resultado": "conforme",
+        "duracion_prueba_segundos": 2.62,
+        "retorno": 0,
+        "detalle": {
+          "ambito": "Proceso HTTP local con expediente sintético; no valida el acceso externo del navegador ni la autenticación profesional.",
+          "clave_obsoleta": 403,
+          "clave_rotada": true,
+          "dos_paradas_sigterm_confirmadas": true,
+          "expediente_sintetico_identico_tras_reinicio": true,
+          "http_inicial": 200,
+          "identidad_instancia_renovada": true,
+          "inferencias": 0,
+          "json_malformado": 400,
+          "resultado": "conforme",
+          "schema": "EIO-PRUEBA-PROCESO-1",
+          "segunda_instancia_rechazada": true
+        }
+      }
+    },
+    "campana": {
+      "casos": 12,
+      "terminaciones": {
+        "fin_normal": 9,
+        "limite_tiempo": 3
+      },
+      "inicio_utc": "2026-09-22T12:23:25.854Z",
+      "fin_utc": "2026-09-22T12:43:56.649Z",
+      "tiempo_total_peticiones_segundos": 1230.11101652,
+      "sin_otra_inferencia_o_compilacion_de_la_campana": true,
+      "monitorizacion_continua_global_cpu": false,
+      "rangos_observados": {
+        "sin_historial": {
+          "tokens": [
+            123,
+            140
+          ],
+          "prefill_seconds": [
+            15.790358695,
+            28.916138858
+          ]
+        },
+        "con_historial": {
+          "tokens": [
+            829,
+            846
+          ],
+          "prefill_seconds": [
+            132.173547348,
+            152.473267331
+          ]
+        }
+      }
+    }
+  },
+  "despliegue": {
+    "binario": "/workspaces/eio-instalacion-nativa-20260922/target/release/eio-conversacion",
+    "sha256": "06de1b792deb1356cbdcc3fe34c68313387c10684b2b67e438a6cb86e166caa8",
+    "anterior_conservado": "/workspaces/eio-verificacion-012-20260922/eio-conversacion-0.1.1",
+    "sha256_anterior": "809e45a4470dd96d3780d44548344765e3c1f815af1627a4e5def8edc07c15a5",
+    "pid_observado": 30984,
+    "comprobacion_proceso_y_puerto_utc": "2026-09-22T12:47:12Z",
+    "puerto_local": 3000,
+    "visibilidad_requerida": "Private",
+    "comprobacion_http": {
+      "schema": "EIO-INSTALACION-LOCAL-1",
+      "resultado": "conforme",
+      "pagina_http": 200,
+      "javascript_http": 200,
+      "css_http": 200,
+      "aviso_sv_presente": true,
+      "indicador_y_ultima_comprobacion_presentes": true,
+      "recuperacion_de_peticion_presente": true,
+      "inferencias": 0,
+      "acceso_externo_comprobado": false,
+      "limite": "Comprueba el servicio HTTP local y el contenido servido; no ejecuta JavaScript ni acredita autenticación o acceso desde el navegador externo."
+    },
+    "acceso_externo_comprobado": false,
+    "limite_acceso_externo": "El control del navegador de esta sesión bloqueó el acceso a la URL privada. Se verificó el servidor local por separado, sin eludir el bloqueo ni atribuirle la autenticación externa.",
+    "visibilidad_private_observada_en_editor": true
+  },
+  "conservacion_expedientes": {
+    "cotejo": "Huellas idénticas antes de las pruebas, después de la campaña y tras iniciar el servicio real.",
+    "archivos": [
+      {
+        "archivo": "exp-1790057882056-0.jsonl",
+        "sha256": "855e4a49269f7a3c3256c561fb5168048361b31b89c18fda91433e14715597bd"
+      },
+      {
+        "archivo": "exp-1790067796225-1.jsonl",
+        "sha256": "56e391599320be68db393782f31f19fff1bb8a6a5dd99e334489ecce13706c68"
+      }
+    ]
+  },
+  "referencias": {
+    "informe": "https://github.com/juantoniolloretegea/SV-motor/blob/22376cf7c185e979eef2eb4049d7e07fe1e9d7c8/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.2/INFORME.md",
+    "verificacion": "https://github.com/juantoniolloretegea/SV-motor/blob/22376cf7c185e979eef2eb4049d7e07fe1e9d7c8/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.2/VERIFICACION.json",
+    "resultados_nativos": "https://github.com/juantoniolloretegea/SV-motor/blob/22376cf7c185e979eef2eb4049d7e07fe1e9d7c8/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.2/RESUMEN.json",
+    "valoracion": "https://github.com/juantoniolloretegea/SV-motor/blob/22376cf7c185e979eef2eb4049d7e07fe1e9d7c8/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/verificacion-0.1.2/VALORACION.json",
+    "recuperacion": "https://github.com/juantoniolloretegea/SV-motor/blob/22376cf7c185e979eef2eb4049d7e07fe1e9d7c8/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/RECUPERACION.md",
+    "antecedente": "EIO_2026-09-22_revision-02.json"
+  },
+  "pendiente": [
+    "Acceso externo y comportamiento efectivo del navegador.",
+    "Rendimiento práctico de conversaciones y mejoras justificadas por prueba.",
+    "Causa de los errores de contenido y comparación de fidelidad con otro motor."
+  ],
+  "alcance": "Ensayo lateral EIO; sin modificación de núcleo, IR, dominio sanitario ni autenticación profesional.",
+  "privacidad": "Se publican pruebas sintéticas, huellas y condiciones; no se publican credenciales ni las conversaciones privadas del titular."
+}
