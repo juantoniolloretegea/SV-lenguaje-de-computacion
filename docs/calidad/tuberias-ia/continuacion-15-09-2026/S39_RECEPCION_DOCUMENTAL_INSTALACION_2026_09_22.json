@@ -1,0 +1,250 @@
+{
+  "formato": "recepcion_documental_eio",
+  "version": 1,
+  "fecha_recepcion_utc": "2026-09-22T05:12:46Z",
+  "suceso": "S39",
+  "revision_suceso": 6,
+  "referencia_calidad": "RETP-2026-268",
+  "acta": "ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+  "alcance": "Proyección pública de la evidencia recibida; no constituye inspección remota ni ejecución de inferencia.",
+  "procedencia": {
+    "documentos_recibidos": [
+      {
+        "archivo": "REGISTRO.json",
+        "bytes": 30506,
+        "sha256": "39620112319836ee5603127f7fc95bfa9fc04035fec8c83fd1e98db63bcb2144"
+      },
+      {
+        "archivo": "instalacion-nativa-20260922.zip",
+        "bytes": 25064,
+        "sha256": "ca6c4749d346ef6468fb16d5587ede2dd5ffb88fe98f8bd070cd7929ffcc1845"
+      }
+    ],
+    "acceso_originales": "Documentación aportada a la recepción, no publicada en este asiento.",
+    "salidas_identificadas": [
+      {
+        "archivo": "01-inspeccion.stderr.txt",
+        "bytes": 29,
+        "sha256": "2c2182902be615a945d96e22c7a5cbfd3e823d201d44d01db34003c6629e94ab"
+      },
+      {
+        "archivo": "01-inspeccion.stdout.txt",
+        "bytes": 805,
+        "sha256": "0c9269b605b718a8e98ce7ffbc78de27897ff8313fb9a62ec9f24b5fdd8db7ba"
+      },
+      {
+        "archivo": "02-parada.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "02-parada.stdout.txt",
+        "bytes": 8307,
+        "sha256": "386a1d9961151a9bab00ada7a716b8af8e7569c672f2481826ab1f82691ccece"
+      },
+      {
+        "archivo": "03-estado.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "03-estado.stdout.txt",
+        "bytes": 120,
+        "sha256": "f16445c77ff9cec78729b2437e6e57631dbaa9eb7ba842f16bc2bf2df1860363"
+      },
+      {
+        "archivo": "04-estado-final.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "04-estado-final.stdout.txt",
+        "bytes": 116,
+        "sha256": "a78a281be1d7306ddb07c548a620703a281b7f36684dbec7ce1bcbffcbb5337e"
+      },
+      {
+        "archivo": "05-identidad.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "05-identidad.stdout.txt",
+        "bytes": 143,
+        "sha256": "952633c8645222395931089ad882cb355697d2a47e93b4b154dff984bf8f5938"
+      },
+      {
+        "archivo": "06-inspeccion.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "06-inspeccion.stdout.txt",
+        "bytes": 5136,
+        "sha256": "4350d6d12eddafd1698a75ae1749c7e32d040e7320736034a4a088ac13e6e14d"
+      },
+      {
+        "archivo": "07-descargas.stderr.txt",
+        "bytes": 1128,
+        "sha256": "95f9784987c6386e4f316d07d10b6d583d41ab18f7ede08f3938c68bcd534367"
+      },
+      {
+        "archivo": "07-descargas.stdout.txt",
+        "bytes": 714,
+        "sha256": "48749d2f26c0107b13ee88c0ba9287cf2f64399bcf5993379a51d4282037efea"
+      },
+      {
+        "archivo": "08-compilacion.stderr.txt",
+        "bytes": 9739,
+        "sha256": "337fb56da673ab35a5e504a2dd1ea6fffe2735a22ae29e9984f2e855b5effe8b"
+      },
+      {
+        "archivo": "08-compilacion.stdout.txt",
+        "bytes": 608,
+        "sha256": "4974511d5680554c1e72e2cf896f97552990bf9cce9318c34553eb04df414dda"
+      },
+      {
+        "archivo": "09-progreso.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "09-progreso.stdout.txt",
+        "bytes": 246,
+        "sha256": "0142801017d7d451a934f381f23453f65e6d6934a14c1aa887093c7c986c6769"
+      },
+      {
+        "archivo": "10-progreso.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "10-progreso.stdout.txt",
+        "bytes": 234,
+        "sha256": "f3c9b112645dbef6f613c66f614385cb5ef43ddb09ca0e97e50b1c997d14377b"
+      },
+      {
+        "archivo": "11-progreso.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "11-progreso.stdout.txt",
+        "bytes": 193,
+        "sha256": "3793995f526de48dbb0c0ea2570305d9d57d65d9f800c990599cb5e618896fff"
+      },
+      {
+        "archivo": "12-parada.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "12-parada.stdout.txt",
+        "bytes": 8307,
+        "sha256": "6a7238bd1fa2612d91b564e2d6d1de48b7e6eb28aa3ba6006a86af9257d136d3"
+      },
+      {
+        "archivo": "13-estado.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "13-estado.stdout.txt",
+        "bytes": 147,
+        "sha256": "1a0f1db94b5297d750063c6688e81b86e4797707a84b7d3bf5f18e51e82d07f4"
+      },
+      {
+        "archivo": "14-estado-final.stderr.txt",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "archivo": "14-estado-final.stdout.txt",
+        "bytes": 143,
+        "sha256": "952633c8645222395931089ad882cb355697d2a47e93b4b154dff984bf8f5938"
+      }
+    ]
+  },
+  "cotejo_documental": {
+    "copias_registro_identicas": true,
+    "salidas_cotejadas": 28,
+    "discrepancias_tamano_o_sha256": 0,
+    "metodo": "Lectura del archivo comprimido y recálculo local de tamaños y SHA-256 de las salidas aportadas."
+  },
+  "instalacion_segun_registro": {
+    "repositorio": "juantoniolloretegea/SV-motor",
+    "maquina": {
+      "memoria_bytes": 8589934592,
+      "disco_bytes": 34359738368,
+      "cpus": 2
+    },
+    "versiones": {
+      "cargo": "1.98.0 (797e8a9bc 2026-08-05)",
+      "rustc": "1.98.0 (88d9e12ae 2026-08-18)"
+    },
+    "archivos_modelo": [
+      {
+        "archivo": "Qwen3-0.6B-Q4_K_M.gguf",
+        "url": "https://huggingface.co/unsloth/Qwen3-0.6B-GGUF/resolve/f2d6f9ca53a254cc379437c49e4b2eb447f779df/Qwen3-0.6B-Q4_K_M.gguf",
+        "revision": "f2d6f9ca53a254cc379437c49e4b2eb447f779df",
+        "bytes": 396705472,
+        "sha256": "ac2d97712095a558e31573f62f466a3f9d93990898b0ec79d7c974c1780d524a"
+      },
+      {
+        "archivo": "tokenizer.json",
+        "url": "https://huggingface.co/Qwen/Qwen3-0.6B/resolve/c1899de289a04d12100db370d81485cdf75e47ca/tokenizer.json",
+        "revision": "c1899de289a04d12100db370d81485cdf75e47ca",
+        "bytes": 11422654,
+        "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+      }
+    ],
+    "candle": {
+      "version": "0.11.0",
+      "revision": "ddf1b879dc3a1760cbcb3f3c4a7c6467850cec4a",
+      "head_cotejado": true,
+      "diff_tracked_vacio": true
+    },
+    "dependencias": {
+      "cargo_lock_sha256": "7307c0b754af314c3d68a681d710c4af81889e9c74ec3887ba9b4172f46cb511",
+      "cargo_toml_sha256": "3af141ea97977a57c427741493523677ad471a78f8a455d9cab8377267b9ba64",
+      "tokenizers": "0.23.1",
+      "opentelemetry": "0.31.0",
+      "opentelemetry_sdk": "0.31.0",
+      "identidades_antes_y_despues_conformes": true
+    },
+    "compilacion": {
+      "ejecutable": "inferidor",
+      "orden": "cargo build --locked --release --no-default-features --features inferencia --bin inferidor --jobs 1",
+      "inicio_utc": "2026-09-22T04:29:30Z",
+      "fin_utc": "2026-09-22T04:36:17Z",
+      "duracion_cargo": "6m 46s",
+      "retorno": 0,
+      "bytes": 10272192,
+      "sha256": "f96c1abbb34f524916801c7c6356e8cf35d8072c57956619593d74da051f2549",
+      "binario_ejecutado": false
+    },
+    "disco": {
+      "disponible_final_bytes": 13314121728,
+      "disponible_previo_bytes": 14384230400
+    },
+    "sesion": {
+      "inicio_utc": "2026-09-22T04:26:32.208578Z",
+      "duracion_segundos": 729.594,
+      "cierre_utc": "2026-09-22T04:38:41.8208736Z",
+      "estado_final": "Shutdown"
+    },
+    "inferencias": 0,
+    "servicios_iniciados": 0,
+    "permisos_o_cgroups_modificados": false
+  },
+  "alcance_de_las_conclusiones": {
+    "comprobacion_material_directa": "pendiente",
+    "inferencia_de_esta_instalacion": "no realizada",
+    "interfaz_web_de_esta_instalacion": "no acreditada",
+    "limites": [
+      "El cotejo acredita concordancia de documentos aportados, no persistencia de los archivos remotos.",
+      "Retorno cero de compilación no acredita funcionamiento del ejecutable.",
+      "La variación del espacio libre corresponde al sistema de archivos y no se atribuye exclusivamente al modelo.",
+      "Las inferencias anteriores EIO-05 y EIO-06 conservan su identidad y resultados separados."
+    ]
+  }
+}

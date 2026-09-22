@@ -2639,3 +2639,19 @@ La [corrección y continuación fijadas](https://github.com/juantoniolloretegea/
 Recepción documental limitada a informe, código y registros identificados; no recálculo completo de 414 archivos ni reproducción remota. Se concilian Sucesos, historial, ambos formatos RETP, Acta 003 y accesos. Antecedentes, otros sucesos y mapa intactos.
 
 **Siguiente acción:** Integrar y comprobar localmente la corrección del plazo de concesión y la coordinación completa de la continuación EIO-NAT-CONTINUACION-02. Resolver mediante la intervención administrativa prevista el estado actual del permiso y ejecutar sólo los controles pendientes: trece sesiones HTTP, terminación del supervisor e interrupción final del canal. Conservar la primera activación conforme, sus binarios y los bancos previos, sin repetir transferencia ni compilación. Recibir después resultados, restitución y cierre; inferencia y URL de usuario conservan su fase propia.
+
+<a id="retp-268"></a>
+
+## RETP-2026-268 · Finalidad y continuidad de la investigación lateral EIO · 22/09/2026
+
+**Hora Europe/Madrid:** 07:12:46. **Suceso:** S39, revisión 6, en ejecución de seguimiento.
+
+La [Acta 004](tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md) documenta la procedencia del ensayo: adenda de integridad del consejo asistido por IA de OP-CYB-001, programa (p1+P3)-Bis, rutas de conocimiento y contrato EIO. Su objeto es aportar evidencia material para determinar necesidades de representación, contratos o soporte del Lenguaje. No prescribe cambios de gramática 0.2, IR 0.3 o núcleo ni amplía su objetivo principal.
+
+La interrupción instrumental posterior a RETP-267 y el examen del medidor se reciben con sus limitaciones. La restitución posterior está documentada; los controles históricos pendientes conservan su estado. La instalación del 22/09 aporta pesos y tokenizador identificados, Candle fijado y compilación de `inferidor` con Rust/Cargo 1.98.0, retorno 0 y cierre `Shutdown`. El cotejo comprende dos registros idénticos y 28 salidas concordantes; no es una inspección remota del estado actual ni una inferencia. La [proyección JSON](tuberias-ia/continuacion-15-09-2026/S39_RECEPCION_DOCUMENTAL_INSTALACION_2026_09_22.json) conserva las identidades documentales.
+
+Se distinguen instalación, funcionamiento, conformidad contractual y cobertura de observación. Los resultados se vincularán a sucesos estructurados, con método y unidades; el rendimiento de uso se referirá a la petición y respuesta de configuraciones explícitas. Se conservan las inferencias históricas y sus resultados adversos, sin atribuirlas al ejecutable recién instalado.
+
+**Siguiente acción:** Entregar primero esta actualización documental. Después, comprobar directamente la instalación en el Codespace y contrastar sus archivos, identidades y estado con la entrega. Solo tras esa comprobación, obtener la primera respuesta de esta instalación mediante Qwen y Candle, con petición, configuración, presupuesto y condiciones de aceptación explícitos. Continuar por el recorrido web de la vía B, el contraste secuencial con la vía A y la devolución de necesidades justificadas a (p1+P3)-Bis. Los controles históricos pendientes no se consideran superados ni se reactivan automáticamente.
+
+S22, S32 y los estudios diferidos conservan sus alcances. Las fuentes, el mapa HTML y los documentos históricos permanecen intactos.
