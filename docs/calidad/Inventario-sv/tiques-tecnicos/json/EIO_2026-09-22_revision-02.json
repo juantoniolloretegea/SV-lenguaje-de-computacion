@@ -1,0 +1,81 @@
+{
+  "schema": "SV-TIQUES-EVIDENCIA-1",
+  "fecha_revision_utc": "2026-09-22T12:03:56Z",
+  "suceso": "S39",
+  "tiques": [
+    "TT-0002",
+    "TT-0003",
+    "TT-0006"
+  ],
+  "estado": "candidato_preparado_ejecucion_pendiente",
+  "cortes": {
+    "lenguaje_base": "e3b578ea93145cabba65f1100c351686ec037ae0",
+    "motor_base": "eec0d87fd9e41a3341b799540bb4545c6dd686d9",
+    "motor_candidato": "feefbe68a4131c43c46673b841a0dd72b590e4f7"
+  },
+  "candidato": {
+    "version": "0.1.2",
+    "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/feefbe68a4131c43c46673b841a0dd72b590e4f7/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/CANDIDATO.json",
+    "revision": "https://github.com/juantoniolloretegea/SV-motor/blob/feefbe68a4131c43c46673b841a0dd72b590e4f7/laboratorio/ensayo-ia-y-observabilidad/conversacion-nativa/REVISION_0_1_2.md",
+    "rama_modificada": false,
+    "desplegado": false
+  },
+  "observaciones": {
+    "codespace_detenido_observado": true,
+    "reinicio_codespace_ordenado": true,
+    "editor_accesible_despues": true,
+    "servicio_http_comprobado_despues": false,
+    "causa_parada_acreditada": false,
+    "confirmacion_confianza_carpeta": "pendiente",
+    "pruebas_rust_ejecutadas": false,
+    "nuevas_inferencias": 0
+  },
+  "comprobaciones_realizadas": [
+    {
+      "tipo": "sintaxis_javascript",
+      "comando": "node --check web/app.js",
+      "retorno": 0,
+      "limite": "No es una prueba del comportamiento del navegador ni del servicio Rust."
+    },
+    {
+      "tipo": "dependencias",
+      "resultado": "Cargo.lock conserva las dependencias; solo cambia la versión del paquete propio de 0.1.1 a 0.1.2."
+    },
+    {
+      "tipo": "conservacion_candidato",
+      "resultado": "Commit recuperado de GitHub y cotejado: quince archivos; sin actualización de la rama del código."
+    }
+  ],
+  "campana_preparada": {
+    "casos": 12,
+    "preguntas": 3,
+    "antecedentes": [
+      false,
+      true
+    ],
+    "razonamiento": [
+      false,
+      true
+    ],
+    "reserva_salida": 384,
+    "limite_segundos_por_caso": 180,
+    "semilla": 299792458,
+    "directorio_nuevo_obligatorio": true,
+    "historial_sintetico_identificado": true,
+    "repeticiones_por_condicion": 1,
+    "ejecutada": false,
+    "comparacion_clinica": false,
+    "limites": [
+      "El cambio de modo incluye parámetros de muestreo distintos.",
+      "La revisión de contenido será explícita y no se deduce del retorno del proceso.",
+      "No mide de forma continua CPU ni interferencias de otros procesos."
+    ]
+  },
+  "autorizacion_pendiente": {
+    "accion": "Trust Folder & Continue",
+    "objeto": "Carpeta SV-motor del Codespace",
+    "motivo": "Cambio de la protección del editor que permite ejecutar código del repositorio; confirmación exigida en ese punto por el control del navegador."
+  },
+  "alcance": "Ensayo lateral EIO. Sin modificación de gramática, IR, núcleo, constitución de dominio ni autenticación profesional.",
+  "privacidad": "Sin credenciales, registros clínicos completos ni datos de la sesión de seguridad."
+}
