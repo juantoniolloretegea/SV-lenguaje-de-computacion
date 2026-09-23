@@ -6,7 +6,7 @@
 **Estado:** investigación lateral en seguimiento; instalación nativa documentada; comprobación material independiente pendiente.  
 **Corte del Lenguaje examinado:** `9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7`, rama `main`.
 
-**Actualización posterior de estado:** §10, vinculada a S39 revisión 10. Los §§1–9 conservan el corte de recepción original.
+**Actualización posterior de estado:** §15, vinculada a S39 revisión 15. Los §§1–9 conservan el corte de recepción original; §§10–14 mantienen sus recepciones históricas.
 
 ## 1. Objeto y razón de la investigación
 
@@ -221,3 +221,15 @@ Ambos hijos terminaron. El paquete original coincide con SHA-256 `35f6cb8bf4e111
 Se conserva el antecedente de la transferencia bloqueada: a las 17:40 UTC se observó la instancia detenida, sin atribuir una hora retroactiva a aquella parada. El README del ensayo pasa a edición 2.9; diagramas y cierre parcial de Qwen/B conservados.
 
 S39 pasa a revisión 14; TT-0012 pasa a pendiente, con la continuación suspendida para evaluación y el objetivo de inferencia sin conseguir. Qwen/B conserva su cierre parcial y S42 su destino futuro PC/WSL2.
+
+## 15. Recepción GGUF: carga conseguida y diagnóstico de salida
+
+**Fecha de recepción:** 2026-09-23T21:27:18Z. Se recibe el [informe con fuentes y evidencias](https://github.com/juantoniolloretegea/SV-motor/blob/f3746b719a3e355d75ea566d3d3abde2b6ea9e0e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/gguf-2026-09-23/RESULTADO.md), Motor `f3746b719a3e355d75ea566d3d3abde2b6ea9e0e`.
+
+Los intentos 15–21 distinguen carga, aceptación HTTP, emisión de tokens y entrega del contenido. La asignación explícita permite cargar las 24 capas de gpt-oss-20b GGUF en CPU. Se corrige el rechazo indebido del alias del modelo por el controlador; su selector supera nueve pruebas declaradas con Rust 1.98.0 en el entorno remoto.
+
+BF16 produce respuestas HTTP 200 con generación contabilizada, pero sin contenido final visible. La muestra con probabilidades confirma emisión de texto. Ampliar a 256 tokens no resuelve la entrega. Las variantes F32, con caché automática y con caché F32 explícita, completan la carga y cierran la conexión de inferencia sin respuesta HTTP. No se adopta una causa única ni se identifica Harmony como responsable.
+
+El paquete de 228 833 bytes, SHA-256 `0c24a3ff967b95871a1885c793fa1187c3aa7872bab9d6ef144d24fd12bcf86d`, coincide entre origen y recepción. Contiene 115 archivos y 891 registros de recursos persistidos. Se conservan los huecos de muestreo y las limitaciones de ámbito. Los siete hijos terminan; a las 21:20:53 UTC no se observan los procesos propios examinados ni escucha en 8089. La instancia queda activa para la continuación.
+
+S39 pasa a revisión 15 y TT-0012 a en ejecución, con respuesta útil pendiente. El diagnóstico vigente se concentra en entrada efectiva, operaciones numéricas, tokens y extracción del canal final. No se concede conformidad integral ni se reinterpretan retrospectivamente las señales anteriores. El README pasa a 2.10. Qwen/B conserva su cierre parcial, S42 su destino PC/WSL2 y el mapa de continuidad permanece intacto.
