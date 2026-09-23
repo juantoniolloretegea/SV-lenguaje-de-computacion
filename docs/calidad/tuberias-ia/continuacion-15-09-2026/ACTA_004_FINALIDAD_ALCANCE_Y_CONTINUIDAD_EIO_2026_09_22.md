@@ -207,3 +207,17 @@ Se recibe la [rectificación técnica y su evidencia](https://github.com/juanton
 La revisión del motor fijado y las dimensiones 2880 determina que Q2K/Q3K solicitados se sustituyen por Q4_0 en los expertos. Esta precisión rectifica la interpretación de §12 como reducción efectiva; no se modifica la evidencia histórica. Las señales exteriores preceden a la parada propia, pero no se identifica su servicio emisor ni su motivo. Se conserva la no conformidad de custodia declarada en el intento 09.
 
 S39 pasa a revisión 13. [TT-0012](../../Inventario-sv/tiques-tecnicos/TT-0012.md) permanece abierto, con el objetivo de inferencia pendiente. La siguiente intervención requiere una modificación fundamentada del consumo de carga o una representación efectivamente compatible; cambiar sólo la etiqueta de cuantización no basta. Qwen/B conserva su cierre parcial, S42 su destino futuro y el mapa de continuidad permanece intacto.
+
+## 14. Recepción de la continuación MXFP4 · intentos 13 y 14
+
+Se recibe el [resultado y sus evidencias](https://github.com/juantoniolloretegea/SV-motor/blob/ae9ceaef37e18d9cc12e25ea0369e4ebf58d9fb8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/mxfp4-2026-09-23/RESULTADO.md), Motor `ae9ceaef37e18d9cc12e25ea0369e4ebf58d9fb8`.
+
+La candidata Rust 0.1.11 se ejecutó en los intentos 13 y 14, con topología que conserva expertos MXFP4 y solicita Q8_0 para el resto. No se completó la carga ni se emitió petición de inferencia. El intento 13 terminó por el plazo de carga de 700 s; el 14 tuvo varios hilos terminados por SIGKILL antes del SIGTERM de limpieza del controlador, con emisor y motivo sin identificar.
+
+La última muestra persistida del intento 14 conservaba 1 204 113 408 B disponibles. El grupo visible no registró OOM y la lectura del registro del núcleo fue denegada. No se confirma ni descarta agotamiento de memoria fuera del alcance observado. El error al consultar descriptores no se presenta como causa raíz. El fallo anterior al servicio no fundamenta atribuirlo a Harmony.
+
+Ambos hijos terminaron. El paquete original coincide con SHA-256 `35f6cb8bf4e111c4366e9382de745997ce82b2f0784d5750e3f2a6e76333fdf5`; 994 muestras de recursos persistidas y resúmenes derivados mediante Rust. La parada de Codespaces quedó confirmada a las 18:09:33 UTC, antes del límite exterior. TT-0012 pasa a pendiente: continuación suspendida para evaluación, sin otra ejecución.
+
+Se conserva el antecedente de la transferencia bloqueada: a las 17:40 UTC se observó la instancia detenida, sin atribuir una hora retroactiva a aquella parada. El README del ensayo pasa a edición 2.9; diagramas y cierre parcial de Qwen/B conservados.
+
+S39 pasa a revisión 14; TT-0012 pasa a pendiente, con la continuación suspendida para evaluación y el objetivo de inferencia sin conseguir. Qwen/B conserva su cierre parcial y S42 su destino futuro PC/WSL2.
