@@ -183,3 +183,13 @@ Esta actualización no modifica la arquitectura contractual, las obligaciones de
 [medidor]: https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/10484cf7a6bd5ae5fd4a132e0aeb6ab6ec58044e/watson-herramientas/evidencias/cualificacion-medidor-20260921/INFORME.md
 [inferidor]: https://github.com/juantoniolloretegea/SV-motor/blob/484acafebd5ec0bcedb759e2423ae935e7feb1a1/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-03/nativa/inferidor.rs
 [adaptador]: https://github.com/juantoniolloretegea/SV-motor/blob/484acafebd5ec0bcedb759e2423ae935e7feb1a1/laboratorio/ensayo-ia-y-observabilidad/resultados/preparacion-nativa-03/inferencia/adaptador.rs
+
+## 11. Recepción de correcciones y cierre delimitado de Qwen/B · 23 de septiembre de 2026
+
+Se recibe el [cierre de campaña](https://github.com/juantoniolloretegea/SV-motor/blob/8cddcc83359bf6733a360d5bba2cd72426f8b631/laboratorio/ensayo-ia-y-observabilidad/resultados/cierre-qwen-b-20260923/INFORME.md) y la verificación local de conversación 0.1.4 y controlador gpt-oss 0.1.1. Ambos candidatos compilan con Rust 1.98.0. Las pruebas propias acreditan las propiedades descritas en sus informes; no incluyen nueva inferencia ni sustitución de las instalaciones. La revisión externa y sus originales conservan su identidad; sus precisiones de recepción no se presentan como una nueva conformidad externa.
+
+Qwen/B queda concluida como realización parcial con limitaciones: resultados de rendimiento y fidelidad conservados, DOC-01 con cero aceptaciones de cuatro peticiones, guarda exterior y contención agregada no acreditadas, y comprobación externa de navegador incompleta. La intervención administrativa contemplada en un encargo histórico no constituye una tarea de la continuación actual. No se reactivan esos controles ni se exige recorrer todas las combinaciones de modelo y soporte.
+
+S39 revisión 11 mantiene abierto el seguimiento del conjunto EIO. TT-0002, TT-0003, TT-0004 y TT-0006 finalizan en el alcance parcial expuesto en sus fichas; TT-0009 conserva su inspección inicial y TT-0011 recibe las correcciones. S42 revisión 1 y TT-0010 mantienen pendiente el futuro destino PC/WSL2, con auditoría ya recibida y capacidad efectiva aún sin inspeccionar. gpt-oss sigue instalado y sin respuesta de inferencia obtenida. Su emisor de SIGTERM anterior no se identifica por estas pruebas locales.
+
+La devolución de resultados y carencias a la adenda y (p1+P3)-Bis permanece en S39. No se modifican las obligaciones rectoras, la gramática, la IR, el núcleo ni los criterios de las campañas históricas.
