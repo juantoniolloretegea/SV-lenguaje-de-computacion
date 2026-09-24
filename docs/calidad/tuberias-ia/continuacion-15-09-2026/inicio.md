@@ -105,3 +105,7 @@ La [adenda recibida](https://github.com/juantoniolloretegea/SVperitus-dataset/bl
 ## Remisión vigente · S39 revisión 20
 
 [Reanudación controlada y comparación con preguntas recuperadas](https://github.com/juantoniolloretegea/SV-motor/blob/eafaf3711df15f4fca289d156e7333576144455a/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/CONTINUIDAD.md). RETP-2026-273; PTA-2026-015; Acta004 §20. Servicio 0.2.2 activo; controles reales aprobados y acceso privado comprobado. M04 recupera los datos corregidos; L0256 recupera el identificador. Banco restante en ejecución. Recuperadas once preguntas en dos rondas y cuatro consultas documentales para comparación. Sin conclusión general todavía.
+
+## Remisión vigente · S39 revisión 21
+
+[Recepción de contexto y documental; recuperación de la comparación](https://github.com/juantoniolloretegea/SV-motor/blob/a98825f24c7865a80e9aa35d6915c4ac93abdd04/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/INCIDENCIA_EXPORTACION.md). RETP-2026-274; PTA-2026-016; Acta004 §21. M01–M04 y cuatro condiciones L correctas en contenido; D01–D04 correctas y cuatro pendientes por plazo. DOC01–DOC04 conformes frente a cero conformes estrictas de Qwen, con condiciones diferentes. R02-01 parcial conservada; R02-02 en continuación. Servicio 0.2.3 y URL privada activos.

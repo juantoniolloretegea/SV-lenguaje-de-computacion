@@ -339,3 +339,17 @@ Banco M/L iniciado a las 15:46:20 UTC; M04 correcto y L0256 correcto, resto pend
 Las condiciones de Qwen y GPT-OSS son diferentes; se preserva esa limitación. Se conservan antecedentes reales, límites de salida, rechazos y resultados adversos. La interfaz respondió y mostró los expedientes previos; la campaña sigue en curso y no constituye recepción final.
 
 S39 revisión 20; Acta004 §20; RETP-2026-273; PTA-2026-015. TT-0012 conserva su cierre material acotado. S39 permanece abierto; sin modificación doctrinal, compras ni ramas adicionales.
+
+## 21. Recepción de contexto y documental; recuperación de la comparación · 24/09/2026
+
+Registro 2026-09-24T17:58:17.005Z; 19:58:17, Europe/Madrid. Unidad de ejecución experimental. VERIFICACION_ACOTADA sobre Lenguaje a85d4d36b952360c7b53c3bc9f519f78a545d784 y [Motor a98825f24c7865a80e9aa35d6915c4ac93abdd04](https://github.com/juantoniolloretegea/SV-motor/blob/a98825f24c7865a80e9aa35d6915c4ac93abdd04/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/INCIDENCIA_EXPORTACION.md).
+
+La recepción de originales acredita M01–M04 y las cuatro condiciones L completas; la entrada mayor tuvo 3096 tokens y una latencia total de 891,512 segundos. Se distingue recuperación sintética de identificador de comprensión general. D01–D04 terminaron correctamente; D05–D08 no se admitieron por plazo. Las cuatro consultas documentales del pasaje OP-IMM-001-P10@1.0 fueron conformes. Qwen incumplió formato estricto en cuatro, aunque DOC02 expresó correctamente ausencia de respaldo. Cambian modelo y condiciones; no se atribuye causalidad exclusiva ni se valida todo el universo.
+
+El corte del asistente dejó la campaña remota conservando resultados. R02-01 produjo una respuesta truncada de 256 tokens; el cierre OpenTelemetry duplicó 35 959 bytes de datos del motor y sobrepasó la cota individual. R02-02 fue rechazada antes de inferencia. Se conservaron respuesta, expediente, registros y trazas, separando el defecto instrumental del contenido del modelo. El observador separado seguía operativo en la recepción.
+
+La versión 0.2.3 mantiene el valor completo en el expediente y exporta resumen numérico, tamaño y huella SHA-256. Se conservan las cotas y la guardia. Las 22 pruebas Rust 1.98.0 aprobaron, incluida reproducción y corrección del defecto. Las huellas desplegadas coinciden. Servicio y motor anteriores se detuvieron con MainPID=0; ejecutables conservados. Servicio nuevo iniciado a las 17:51:04 UTC.
+
+El guion inicial de continuación falló por omitir src/ en la ruta de preguntas, sin admitir inferencia. Corregido y conservado el diagnóstico, el controlador empezó a las 17:55:35, manteniendo el límite 19:52:28 UTC registrado a las 17:52:28. R02-02 utiliza la misma conversación tras igualdad estructural con el antecedente; no se repite ni sustituye R02-01. Plazo individual nuevo 900 segundos, sustentado por la latencia medida, manteniendo 256 tokens y contexto 4096. URL privada conectada a las 17:56:21; no se lanzó inferencia web competidora. Comparación y recepción final todavía pendientes.
+
+S39 revisión 21; Acta004 §21; RETP-2026-274; PTA-2026-016. TT-0012 conserva su cierre material acotado. S39 permanece abierto; sin modificación doctrinal, compras ni ramas adicionales.
