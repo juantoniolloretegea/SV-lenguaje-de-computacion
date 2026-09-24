@@ -233,3 +233,31 @@ BF16 produce respuestas HTTP 200 con generación contabilizada, pero sin conteni
 El paquete de 228 833 bytes, SHA-256 `0c24a3ff967b95871a1885c793fa1187c3aa7872bab9d6ef144d24fd12bcf86d`, coincide entre origen y recepción. Contiene 115 archivos y 891 registros de recursos persistidos. Se conservan los huecos de muestreo y las limitaciones de ámbito. Los siete hijos terminan; a las 21:20:53 UTC no se observan los procesos propios examinados ni escucha en 8089. La instancia queda activa para la continuación.
 
 S39 pasa a revisión 15 y TT-0012 a en ejecución, con respuesta útil pendiente. El diagnóstico vigente se concentra en entrada efectiva, operaciones numéricas, tokens y extracción del canal final. No se concede conformidad integral ni se reinterpretan retrospectivamente las señales anteriores. El README pasa a 2.10. Qwen/B conserva su cierre parcial, S42 su destino PC/WSL2 y el mapa de continuidad permanece intacto.
+
+<a id="recepcion-onecloud-2026-09-24"></a>
+
+## 16. Recepción del diagnóstico CPU y recuperación OneCloud · 24/09/2026
+
+**Fecha registral:** 2026-09-24T11:06:58Z. **Responsable receptor:** Agente Watson / W-S39-02, en relevo de W-S39. **Lectura:** VERIFICACION_ACOTADA; cortes Lenguaje `d19bb1b33d5dea39926c1861aab5198e9556f186` y Motor `f3746b719a3e355d75ea566d3d3abde2b6ea9e0e`. **Evidencia publicada:** [informe y registros](https://github.com/juantoniolloretegea/SV-motor/blob/a74632b0b6dde70629863113134082dc3f31d521/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/recuperacion-onecloud-2026-09-24/INFORME.md), Motor `a74632b0b6dde70629863113134082dc3f31d521`.
+
+### Hechos recibidos y comprobación nueva
+
+1. La petición 23 fue rechazada por el JSON preparado para una ruta incompatible; no llegó a generar. La 24 fue aceptada y emitió 16 tokens defectuosos por completions. La 25 conserva HTTP incompleto y causa externa no atribuida; no se califica su contenido como otra respuesta defectuosa.
+2. El cotejo de normalización y 216 bloques MXFP4 no halla discrepancias en las muestras. Las doce matrices Q8_0 examinadas favorecen el orden directo frente a las dos permutaciones ensayadas. No se certifican todos los pesos.
+3. El cálculo CPU de expertos interpreta incorrectamente la entrada compartida `[tokens,1,dimensión]`. La prueba específica falla antes y pasa después del parche; contiene tres representaciones de entrada y es **una prueba**, con 340 filtradas. El resultado no acredita inferencia completa.
+4. Los rechazos de admisión se separan del fallo semántico. En la revisión 32, umbral total 13 837 008 896 B y máximo disponible observado 13 811 625 984 B: déficit de 25 382 912 B; motor no iniciado. El margen revisado es experimental, no una cota demostrada.
+5. En la recuperación actual faltan el GGUF y el árbol de construcción en sus anteriores rutas temporales. Causa e instante exactos no determinados. Se recuperan el ejecutable y tres paquetes en OneCloud con identidad SHA-256 cotejada. La observación nueva de las 11:00:05 UTC registra Ubuntu 26.04, 12 CPU virtuales, 66 528 256 000 B disponibles y arranque `mistralrs 0.9.3`. No hubo inferencia nueva.
+
+### Dictamen y objeción adversarial
+
+**Recuperación material comprobada; validación semántica de la candidata pendiente.** Disponer de más RAM y arrancar el ejecutable no demuestra que el parche resuelva la generación. La prueba unitaria solo demuestra el caso construido. El cambio de anfitrión impide atribuir cualquier mejora exclusivamente al parche sin un contraste controlado en ese mismo anfitrión. No se atribuyen a Oryx o al editor fallos del modelo sin evidencia causal.
+
+### Decisión y continuidad
+
+Conciliar primero los registros. Restituir y cotejar pesos, controlador y configuración; comprobar guardas; fijar petición, presupuesto y criterios de aceptación; después ejecutar una inferencia acotada con trazas y cierre. No se alteran contratos, gramática, IR, núcleo o mapa HTML. Qwen/B mantiene su cierre parcial; S42/TT-0010 mantienen el destino PC. La vía A sigue siendo inferencia en navegador/WebAssembly.
+
+S39 pasa a revisión 16 y conserva `en ejecución` como seguimiento abierto, no como indicación de generación activa. TT-0012 sigue abierto. La conciliación fecha el relevo actual y conserva las instantáneas históricas; no reconstruye un barrido integral ni el periodo completo desde PTA-010. Las copias históricas de laboratorio conservan su corte y no se declaran sincronizadas con esta recepción canónica. Referencias: RETP-2026-269, PTA-2026-011 y Motor PTA-SVM-002.
+
+**Observación del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.
+
+[Control documental de esta recepción](CONTROL_RECEPCION_ONECLOUD_2026_09_24.md).

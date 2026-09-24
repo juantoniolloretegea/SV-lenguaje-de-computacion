@@ -46,6 +46,7 @@ El CSV `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv` conserva la serie tabular com
 | PTA-2026-008 | 26/03/2026 | NO_CONSTA | Agente WBeta SV-UCBC12 | VERIFICACION_ACOTADA | Asentamiento UCBC12 y piloto de seguridad estructural. |
 | PTA-2026-009 | 16/08/2026 | 06:03 | Agente Watson Publicaciones-Lenguaje | VERIFICACION_INTEGRAL | Aprendizaje trazable y preservación pre-DSL. |
 | PTA-2026-010 | 18/08/2026 | 18:49:00 | Agente Watson Lenguaje SV | VERIFICACION_INTEGRAL | Reentrada Ruta A, auditoría FFL-A/FFL-B, microcierres E112/E113/E307, reversión E406 y reparación registral. |
+| PTA-2026-011 | 24/09/2026 | 13:06:58 | Agente Watson / W-S39-02 | VERIFICACION_ACOTADA | Recepción S39, diagnóstico MXFP4 y recuperación OneCloud. |
 
 ## PTA-2026-010 — Agente Watson Lenguaje SV
 
@@ -59,3 +60,15 @@ El CSV `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv` conserva la serie tabular com
 - **Artefactos leídos:** acta de reapertura; tablero FFL; IR v0.2; `src/svp_errors.py`; `src/svp_validator.py`; `tests/run_conformance.py`; catálogo de errores; matrices/crosswalk/deuda de `docs/calidad`; registros RETP/BARR/PTA; sede doctrinal pertinente; `SVperitus-dataset` sólo para contraste prospectivo del Panel del Experto.  
 - **Resultado:** FFL-A queda trazablemente cerrado bajo Vía B; FFL-B es el único frente técnico activo; E112/E113/E307 están materializados; E406 no está aplicado y sólo podrá reabrirse mediante nueva microauditoría y diff mínimo; los registros de calidad vuelven a sostener una reentrada rápida.  
 - **Observaciones:** no se declara una ejecución nueva de la suite global. No se consideran el estado editorial externo de publicaciones en `U`, el saneamiento de espejos ITVIA/GitHub, las interfaces futuras, el Panel del Experto, el manual/wiki/diccionario ni `NL→SVP` como bloqueos del FFL-B inmediato.
+
+## PTA-2026-011 — Agente Watson / W-S39-02
+
+- **Registro:** 2026-09-24T11:06:58Z; 13:06:58, Europe/Madrid.
+- **Base:** VERIFICACION_ACOTADA, limitada a S39/TT-0012 y sus registros; corte Lenguaje `d19bb1b33d5dea39926c1861aab5198e9556f186` y [recepción Motor](https://github.com/juantoniolloretegea/SV-motor/blob/a74632b0b6dde70629863113134082dc3f31d521/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/recuperacion-onecloud-2026-09-24/INFORME.md).
+- **Actuación:** lectura material de partes, Sucesos, historial, RETP, tique, actas y accesos; conciliación de intentos y recuperación; inscripción del relevo y de la revisión 16; remisiones a evidencia fijada a commit.
+- **Desfase recibido:** S39 ya alcanzaba revisión 15, RETP terminaba en 268 y PTA en 010. Se registra la recepción hoy; no se certifica el intervalo global entre partes ni se crean asientos ficticios.
+- **Resultado:** recuperación y arranque básico comprobados; regresión CPU recibida como una prueba aprobada, 340 filtradas; inferencia completa de la candidata pendiente.
+- **Límites:** no hay inferencia nueva, modificación doctrinal, auditoría global o cierre de obligaciones ajenas. Ejecuciones heredadas conservan su atribución. Continúa S39 con W-S39-02; TT-0012 permanece abierto.
+- **Referencias:** RETP-2026-269; Acta 004 §16; PTA-SVM-002. S42/TT-0010 y cierre parcial Qwen/B conservados.
+
+**Límite del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.

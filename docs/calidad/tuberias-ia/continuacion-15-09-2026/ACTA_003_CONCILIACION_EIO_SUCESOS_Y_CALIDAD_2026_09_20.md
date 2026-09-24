@@ -230,3 +230,7 @@ Se recibe la primera activación en el alcance anterior. Permanecen pendientes l
 Se han contrastado el informe, el código del coordinador y los registros específicos citados. No se han recalculado independientemente los 414 archivos ni reproducido las conexiones o controles. Las mediciones de recursos conservan su condición de muestras. No se acredita inferencia, URL de usuario, comparación completa de las dos vías ni aceptación productiva.
 
 Se concilian S39 revisión 5, su historial, RETP-267, esta acta y los accesos. Se conservan las otras 41 filas, las 161 instantáneas previas, los asientos anteriores de calidad y las secciones precedentes. Mapa HTML, fuentes experimentales y restantes seguimientos permanecen intactos.
+
+## Remisión de continuidad · 24/09/2026
+
+La recepción vigente de S39 es la revisión 16: [Acta 004 §16](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#recepcion-onecloud-2026-09-24), RETP-2026-269 y PTA-2026-011. Incorpora diagnóstico CPU y recuperación OneCloud con inferencia de la candidata pendiente. Esta remisión conserva íntegros los dictámenes históricos de la presente acta.

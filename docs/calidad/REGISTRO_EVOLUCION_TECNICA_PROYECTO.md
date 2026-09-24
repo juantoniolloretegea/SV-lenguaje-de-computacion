@@ -2655,3 +2655,19 @@ Se distinguen instalación, funcionamiento, conformidad contractual y cobertura 
 **Siguiente acción:** Entregar primero esta actualización documental. Después, comprobar directamente la instalación en el Codespace y contrastar sus archivos, identidades y estado con la entrega. Solo tras esa comprobación, obtener la primera respuesta de esta instalación mediante Qwen y Candle, con petición, configuración, presupuesto y condiciones de aceptación explícitos. Continuar por el recorrido web de la vía B, el contraste secuencial con la vía A y la devolución de necesidades justificadas a (p1+P3)-Bis. Los controles históricos pendientes no se consideran superados ni se reactivan automáticamente.
 
 S22, S32 y los estudios diferidos conservan sus alcances. Las fuentes, el mapa HTML y los documentos históricos permanecen intactos.
+
+<a id="retp-269"></a>
+
+## RETP-2026-269 · Recepción MXFP4 y recuperación OneCloud
+
+**Registro:** 2026-09-24, 13:06:58 Europe/Madrid (2026-09-24T11:06:58Z). **Unidad:** Agente Watson / W-S39-02. **Base:** VERIFICACION_ACOTADA sobre S39/TT-0012, no barrido integral del Lenguaje.
+
+Se recibe el diagnóstico de peticiones, cotejo parcial de pesos y defecto CPU MXFP4. El intento 23 es rechazo de nuestra petición; el 24 conserva texto directo defectuoso; el 25 queda como HTTP incompleto. Una prueba falla antes del parche y pasa después (340 filtradas). Los rechazos de admisión no son inferencias fallidas del parche. La candidata y evidencias se recuperan en OneCloud con huellas cotejadas y arranque básico; inferencia completa pendiente.
+
+**Motivo e impacto:** conciliar el desfase entre S39 revisión 15, RETP268 y PTA010 antes de continuar. Se inscriben S39 revisión 16 y el relevo, PTA-2026-011, TT-0012, Acta004 §16 y remisiones; Motor conserva PTA-SVM-002. La fecha es de recepción, sin inventar asientos históricos. [Evidencia fijada a commit](https://github.com/juantoniolloretegea/SV-motor/blob/a74632b0b6dde70629863113134082dc3f31d521/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/recuperacion-onecloud-2026-09-24/INFORME.md).
+
+**Objeción adversarial:** la regresión específica no es la suite completa; el muestreo de pesos no los certifica; arranque básico y memoria disponible no prueban respuesta útil. La migración introduce otro anfitrión y no permite atribución causal exclusiva al parche sin contraste en ese mismo entorno.
+
+**Decisión:** publicación documental previa; restituir y verificar GGUF/controlador/configuración y guardas; fijar presupuesto, petición y aceptación; después, inferencia acotada con evidencia y cierre. S39 en seguimiento y TT-0012 abierto. No se ejecuta inferencia nueva en esta recepción. S42/TT-0010, Qwen/B, doctrina y mapa HTML conservan sus alcances.
+
+**Observación del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.
