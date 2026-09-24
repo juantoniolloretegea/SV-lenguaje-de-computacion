@@ -325,3 +325,17 @@ El bloqueo posterior del terminal del Codespace procede de una revisión automá
 S39 revisión 19, Acta004 §19, RETP-2026-272, PTA-2026-014 y PTA-SVM-005. TT-0012 conserva el cierre acotado anterior; S39 permanece abierto. Se conservan otros sucesos, rectores, núcleo, mapa HTML y resultados adversos. Sin compras ni ramas adicionales. La continuación requiere corregir y verificar el tokenizador y reanudar solo M/L y D, sin repetir Q; plazo común 16:38:50 UTC. Si vence, se registra la parte no ejecutada y se acuerda otra ventana.
 
 [Control documental](CONTROL_CONVERSACION_2026_09_24.md). El resultado parcial y el punto de continuidad prevalecen sobre cualquier descripción de disponibilidad anterior.
+
+## 20. Reanudación controlada y comparación con preguntas recuperadas · 24/09/2026
+
+Registro 2026-09-24T15:55:08.658Z; 17:55:08, Europe/Madrid. Unidad de ejecución experimental. VERIFICACION_ACOTADA sobre Lenguaje 28879943c8f403fe63d29f032f7c569bdfd8aafb y [Motor eafaf3711df15f4fca289d156e7333576144455a](https://github.com/juantoniolloretegea/SV-motor/blob/eafaf3711df15f4fca289d156e7333576144455a/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/CONTINUIDAD.md).
+
+La autorización expresa permitió recuperar el acceso al Codespace, que estaba detenido. Se reanudó por el control normal, sin eludir restricciones. La versión 0.2.2 completa los IDs ausentes a partir de las declaraciones del tokenizador, conserva entradas originales y mantiene las guardias. Compilación y 21 pruebas aprobadas. Servicio disponible desde las 15:40:50 UTC.
+
+El control-03 se rechazó por reutilizar un identificador de petición antiguo: comportamiento correcto del servicio. Un auxiliar con identificador nuevo aprobó control-04, incluida cancelación y parada comprobada. La telemetría mantiene OpenTelemetry Rust y añade el muestreo del cgroup del motor, separado del árbol del servicio. Una muestra observó el PID del motor, CPU, RSS, hilos, E/S y sockets sin lagunas declaradas; no se extrapola a observación exhaustiva. Las necesidades de custodia independiente, contrato general y gráfica siguen delimitadas.
+
+Banco M/L iniciado a las 15:46:20 UTC; M04 correcto y L0256 correcto, resto pendiente. El procedimiento secuencial espera su cierre antes de D, conservando el plazo anterior. Luego abre la comparación expresamente solicitada con máximo 60 minutos. Se recuperaron dos rondas de nueve y dos preguntas y cuatro consultas de OP-IMM-001-P10@1.0. Las preguntas y criterios se publicaron antes de la nueva ejecución. No se ha recuperado una tercera ronda ni se declara ejecutada la comparación.
+
+Las condiciones de Qwen y GPT-OSS son diferentes; se preserva esa limitación. Se conservan antecedentes reales, límites de salida, rechazos y resultados adversos. La interfaz respondió y mostró los expedientes previos; la campaña sigue en curso y no constituye recepción final.
+
+S39 revisión 20; Acta004 §20; RETP-2026-273; PTA-2026-015. TT-0012 conserva su cierre material acotado. S39 permanece abierto; sin modificación doctrinal, compras ni ramas adicionales.

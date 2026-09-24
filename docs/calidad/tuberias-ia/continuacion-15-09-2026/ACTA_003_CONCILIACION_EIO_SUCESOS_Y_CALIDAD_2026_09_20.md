@@ -246,3 +246,7 @@ La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_0
 ## Remisión vigente · Calidad conversacional parcial, 24/09/2026
 
 [Informe y continuidad](https://github.com/juantoniolloretegea/SV-motor/blob/dd4beaf5cf59c4114925fdece05bfe7885190395/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md). S39 revisión 19; Acta004 §19; RETP-2026-272; PTA-2026-014. Doce tareas breves, dos incumplimientos de formato; conversación larga y entrega de interfaz pendientes. Servicio detenido por discrepancia del tokenizador; acceso remoto rechazado por revisión automática. TT-0012 conserva su cierre acotado. Los apartados anteriores mantienen sus cortes históricos.
+
+## Remisión vigente · S39 revisión 20
+
+[Reanudación controlada y comparación con preguntas recuperadas](https://github.com/juantoniolloretegea/SV-motor/blob/eafaf3711df15f4fca289d156e7333576144455a/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/CONTINUIDAD.md). RETP-2026-273; PTA-2026-015; Acta004 §20. Servicio 0.2.2 activo; controles reales aprobados y acceso privado comprobado. M04 recupera los datos corregidos; L0256 recupera el identificador. Banco restante en ejecución. Recuperadas once preguntas en dos rondas y cuatro consultas documentales para comparación. Sin conclusión general todavía.
