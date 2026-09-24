@@ -242,3 +242,7 @@ La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_0
 ## Remisión vigente · Optimización y residencia · 2026-09-24T12:43:08.557Z
 
 [Informe experimental](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md) y Acta004 §18: cinco casos correctos, mediana 94,002 a 18,168 s y cierre completo dentro de primera ventana. S39 revisión 18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. TT-0012 mantiene cierre material. Llama.cpp no activado. Los cortes anteriores permanecen históricos.
+
+## Remisión vigente · Calidad conversacional parcial, 24/09/2026
+
+[Informe y continuidad](https://github.com/juantoniolloretegea/SV-motor/blob/dd4beaf5cf59c4114925fdece05bfe7885190395/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md). S39 revisión 19; Acta004 §19; RETP-2026-272; PTA-2026-014. Doce tareas breves, dos incumplimientos de formato; conversación larga y entrega de interfaz pendientes. Servicio detenido por discrepancia del tokenizador; acceso remoto rechazado por revisión automática. TT-0012 conserva su cierre acotado. Los apartados anteriores mantienen sus cortes históricos.

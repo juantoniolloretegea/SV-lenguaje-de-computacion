@@ -1,0 +1,63 @@
+# Control documental de evaluación conversacional parcial
+
+Registro 2026-09-24T15:04:15.258Z. 59 controles estructurales aprobados. Alcance documental acotado; no ensayo adicional del modelo ni auditoría general. Base Lenguaje 13e5becc550b731327ff33e291f79d884eee4b9b; [informe Motor](https://github.com/juantoniolloretegea/SV-motor/blob/dd4beaf5cf59c4114925fdece05bfe7885190395/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md). TT-0012 y su índice no se modifican.
+
+- Aprobado: Número de sucesos conservado.
+- Aprobado: Suceso conservado S0.
+- Aprobado: Suceso conservado S1.
+- Aprobado: Suceso conservado S2.
+- Aprobado: Suceso conservado S3.
+- Aprobado: Suceso conservado S4.
+- Aprobado: Suceso conservado S5.
+- Aprobado: Suceso conservado S6.
+- Aprobado: Suceso conservado S7.
+- Aprobado: Suceso conservado S8.
+- Aprobado: Suceso conservado S9.
+- Aprobado: Suceso conservado S10.
+- Aprobado: Suceso conservado S11.
+- Aprobado: Suceso conservado S12.
+- Aprobado: Suceso conservado S13.
+- Aprobado: Suceso conservado S14.
+- Aprobado: Suceso conservado S15.
+- Aprobado: Suceso conservado S16.
+- Aprobado: Suceso conservado S17.
+- Aprobado: Suceso conservado S18.
+- Aprobado: Suceso conservado S19.
+- Aprobado: Suceso conservado S20.
+- Aprobado: Suceso conservado S21.
+- Aprobado: Suceso conservado S22.
+- Aprobado: Suceso conservado S23.
+- Aprobado: Suceso conservado S24.
+- Aprobado: Suceso conservado S25.
+- Aprobado: Suceso conservado S26.
+- Aprobado: Suceso conservado S27.
+- Aprobado: Suceso conservado S28.
+- Aprobado: Suceso conservado S29.
+- Aprobado: Suceso conservado S30.
+- Aprobado: Suceso conservado S31.
+- Aprobado: Suceso conservado S32.
+- Aprobado: Suceso conservado S33.
+- Aprobado: Suceso conservado S34.
+- Aprobado: Suceso conservado S35.
+- Aprobado: Suceso conservado S36.
+- Aprobado: Suceso conservado S37.
+- Aprobado: Suceso conservado S38.
+- Aprobado: Suceso conservado S40.
+- Aprobado: Suceso conservado S41.
+- Aprobado: Suceso conservado S42.
+- Aprobado: fecha_alta_utc conservada.
+- Aprobado: fecha_inicio_utc conservada.
+- Aprobado: S39 abierto.
+- Aprobado: Historial conservado.
+- Aprobado: Revisión 19 única.
+- Aprobado: Historial concordante.
+- Aprobado: Ancho CSV sc.
+- Aprobado: Ancho CSV sh.
+- Aprobado: Ancho CSV pc.
+- Aprobado: Ancho CSV rc.
+- Aprobado: Nuevo identificador único PTA-2026-014.
+- Aprobado: Histórico pc.
+- Aprobado: Nuevo identificador único RETP-2026-272.
+- Aprobado: Histórico rc.
+- Aprobado: Otros bloques Markdown conservados.
+- Aprobado: Acta histórica conservada.

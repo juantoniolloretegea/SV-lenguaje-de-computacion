@@ -97,3 +97,7 @@ La [adenda recibida](https://github.com/juantoniolloretegea/SVperitus-dataset/bl
 ## S32 · Recepción parcial de traza y memoria · 17/09/2026
 
 [Parte §17](PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md#s32-recepcion-memoria-traza-2026-09-17): S32 revisión 9 / RETP-2026-258. Nueve casos instrumentales conformes en recepción Linux, resolución acotada RCR-01 y conservación de evidencias históricas. Observación bajo depurador no realizada; perímetro del editor y autorización de excepción de ejecución por aclarar. Sin integración ni ampliación automática del encargo.
+
+## Remisión vigente · Calidad conversacional parcial, 24/09/2026
+
+[Informe y continuidad](https://github.com/juantoniolloretegea/SV-motor/blob/dd4beaf5cf59c4114925fdece05bfe7885190395/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md). S39 revisión 19; Acta004 §19; RETP-2026-272; PTA-2026-014. Doce tareas breves, dos incumplimientos de formato; conversación larga y entrega de interfaz pendientes. Servicio detenido por discrepancia del tokenizador; acceso remoto rechazado por revisión automática. TT-0012 conserva su cierre acotado. Los apartados anteriores mantienen sus cortes históricos.

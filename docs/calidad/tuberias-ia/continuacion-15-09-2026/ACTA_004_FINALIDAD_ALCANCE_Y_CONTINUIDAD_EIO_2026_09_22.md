@@ -311,3 +311,17 @@ Tres repeticiones de una tarea temporal y cinco casos sintéticos, contexto 1024
 ### 18.4. Trazabilidad y continuidad
 
 S39 revisión 18, RETP-2026-271, PTA-2026-013 y PTA-SVM-004; [control documental](CONTROL_OPTIMIZACION_2026_09_24.md). TT-0012 conserva su cierre material; S39 permanece abierto para otra fase con protocolo y plazo nuevos. Qwen/B, S42/TT-0010, otros sucesos, rectores, núcleo y mapa HTML conservan sus alcances. No se crean ramas adicionales ni se compran recursos. Los apartados anteriores mantienen sus cortes históricos.
+
+## 19. Calidad parcial y suspensión de la integración conversacional · 24/09/2026
+
+Registro 2026-09-24T15:04:15.258Z; 17:04:15, Europe/Madrid. Unidad de ejecución experimental; VERIFICACION_ACOTADA sobre Lenguaje 13e5becc550b731327ff33e291f79d884eee4b9b y [Motor dd4beaf5cf59c4114925fdece05bfe7885190395](https://github.com/juantoniolloretegea/SV-motor/blob/dd4beaf5cf59c4114925fdece05bfe7885190395/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/RESULTADO_PARCIAL.md).
+
+Doce tareas breves terminan normalmente con contenido correcto; diez cumplen formato estricto. Q07 contiene dos espacios al final de la primera línea y Q11 añade explicación al resultado correcto de 280 cm. Latencias totales 24,017–85,650 s, mediana descriptiva 31,454 s sobre tareas heterogéneas. Una ejecución por tarea; sin estimación de calidad general.
+
+La interfaz derivada de Qwen y su exportación se comprobaron por acceso privado antes de detenerla. 0.2.0 aprobó 18 pruebas unitarias y controles del servicio; 0.2.1 aprobó 19 pruebas y compilación, pero su guardia detectó IDs especiales diferentes de los declarados y abortó. La serialización inicial utilizaba además un cierre de historial no reconocido. M01/M02 se conservan como evidencia de esa integración; M03 se interrumpió. L y D no comenzaron. Los IDs de vista previa no acreditan IDs del motor: se enviaban textos, no esos números.
+
+El bloqueo posterior del terminal del Codespace procede de una revisión automática de seguridad que alegó rechazo previo del origen. La recarga anterior rechazada correspondía a chrome-error por protocolo no autorizado. No se elude la restricción. La infraestructura del asistente y las incidencias de integración se distinguen del modelo. Servicio y motor detenidos en el último corte remoto; URL pendiente de entrega.
+
+S39 revisión 19, Acta004 §19, RETP-2026-272, PTA-2026-014 y PTA-SVM-005. TT-0012 conserva el cierre acotado anterior; S39 permanece abierto. Se conservan otros sucesos, rectores, núcleo, mapa HTML y resultados adversos. Sin compras ni ramas adicionales. La continuación requiere corregir y verificar el tokenizador y reanudar solo M/L y D, sin repetir Q; plazo común 16:38:50 UTC. Si vence, se registra la parte no ejecutada y se acuerda otra ventana.
+
+[Control documental](CONTROL_CONVERSACION_2026_09_24.md). El resultado parcial y el punto de continuidad prevalecen sobre cualquier descripción de disponibilidad anterior.
