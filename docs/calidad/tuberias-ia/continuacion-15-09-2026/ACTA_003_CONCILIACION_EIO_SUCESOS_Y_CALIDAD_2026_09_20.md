@@ -234,3 +234,7 @@ Se concilian S39 revisión 5, su historial, RETP-267, esta acta y los accesos. S
 ## Remisión de continuidad · 24/09/2026
 
 La recepción vigente de S39 es la revisión 16: [Acta 004 §16](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#recepcion-onecloud-2026-09-24), RETP-2026-269 y PTA-2026-011. Incorpora diagnóstico CPU y recuperación OneCloud con inferencia de la candidata pendiente. Esta remisión conserva íntegros los dictámenes históricos de la presente acta.
+
+## Remisión vigente · OC-01/OC-02 · 2026-09-24T11:47:42Z
+
+La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#17-recepción-experimental-oc-01oc-02-y-cierre-material-de-tt-0012--24092026) y el [informe Motor](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md) documentan la primera respuesta aritmética correcta de la candidata, el contraste adverso y los cierres. TT-0012 finalizado por su objetivo material con límites; S39 revisión 17 abierto. RETP-2026-270; PTA-2026-012; PTA-SVM-003. Esta remisión no altera los cortes históricos de la presente acta.

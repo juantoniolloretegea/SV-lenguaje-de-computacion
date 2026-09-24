@@ -72,3 +72,12 @@ El CSV `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv` conserva la serie tabular com
 - **Referencias:** RETP-2026-269; Acta 004 §16; PTA-SVM-002. S42/TT-0010 y cierre parcial Qwen/B conservados.
 
 **Límite del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.
+
+## PTA-2026-012 — Agente Watson / W-S39-02
+
+- **Registro:** 2026-09-24T11:47:42Z; 13:47:42, Europe/Madrid.
+- **Base:** VERIFICACION_ACOTADA sobre Lenguaje c68020992d19b041574992355de023961f6713d6 y [resultado Motor](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md).
+- **Actuación:** lectura de rectores y condición de cierre; recepción de guardas, identidades y dos inferencias; contraste con originales; actualización S39 revisión 17, TT-0012 e índice, historial, RETP, actas y accesos.
+- **Resultado:** OC-01 responde correctamente al caso 3 + 2; OC-02 conserva texto inconexo del anterior. Objetivo material de TT-0012 conseguido y tique finalizado con alcance explícito; S39 sigue abierto.
+- **Límites:** un caso por ejecutable, construcciones distintas, rendimiento limitado y contadores finales de cgroup no disponibles. Sin prueba de calidad general, integración ni causalidad exclusiva.
+- **Trazabilidad:** RETP-2026-270; Acta004 §17; PTA-SVM-003. No se atribuyen estos resultados a partes históricos ni se declara barrido integral.

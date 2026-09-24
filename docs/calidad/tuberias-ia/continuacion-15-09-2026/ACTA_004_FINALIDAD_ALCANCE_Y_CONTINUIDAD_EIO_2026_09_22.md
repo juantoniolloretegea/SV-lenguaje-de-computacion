@@ -261,3 +261,29 @@ S39 pasa a revisión 16 y conserva `en ejecución` como seguimiento abierto, no 
 **Observación del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.
 
 [Control documental de esta recepción](CONTROL_RECEPCION_ONECLOUD_2026_09_24.md).
+
+## 17. Recepción experimental OC-01/OC-02 y cierre material de TT-0012 · 24/09/2026
+
+**Registro:** 2026-09-24T11:47:42Z; W-S39-02. **Cortes:** Lenguaje c68020992d19b041574992355de023961f6713d6 y [Motor 70750a516001cf13314176c529508d0712b7f3c1](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). **Clasificación:** VERIFICACION_ACOTADA.
+
+### 17.1. Hechos y evidencias
+
+Protocolos publicados antes de cada intento. Pesos GGUF y auxiliares cotejados; controladores y compilador identificados. Nueve pruebas instrumentales aprobadas con Rust 1.98.0, incluida auxiliar. Dos inferencias secuenciales con la misma petición, pesos y parámetros: candidata OC-01 con respuesta correcta y stop en siete tokens; anterior OC-02 con texto inconexo y length en 16. Originales JSONL completos (192 y 95 registros), HTTP, motor, consumo, fuentes y cierres conservados.
+
+OC-01 termina a las 11:26:37,325 UTC; OC-02 a las 11:35:47,090 UTC. Los servicios se verifican inactivos y los hijos ausentes. No hay inferencia de esta campaña activa al cierre.
+
+### 17.2. Alcance de la recepción
+
+Se ha conseguido el objetivo material escrito en TT-0012: recibir una respuesta sintética atribuida a la instalación, con configuración, consumo y cierre. Se añade aceptación semántica del caso 3 + 2. **TT-0012 se finaliza con ese alcance; S39 permanece abierto.** No se extiende el cierre a tareas diversas, integración conversacional, vía A o aptitud productiva.
+
+El contraste aporta diferencia entre paquetes ejecutables en el mismo anfitrión. No prueba causalidad exclusiva del parche porque las construcciones difieren. La regresión unitaria previa conserva su resultado local. No se realizó benchmark: un caso, orden fijo, sin control de cachés. El tiempo de OC-01 (112,534 s informado por el motor; 193,723 s de controlador) limita la valoración práctica.
+
+### 17.3. Contención y reservas de medición
+
+Servicio exterior con 32 GiB, swap 0, 256 tareas, plazo 570 s más parada, red privada y restricciones de escritura. Se conservaron propiedades, preflight y observaciones del cgroup efectivo. El controlador interno no resuelve el cgroup real: sus campos aparecen null y conserva admisión por disponibilidad global. Los contadores durante ejecución no muestran OOM; los finales no son legibles tras retirarse el directorio. No se acredita una prueba de saturación de la cuota. RSS y MemoryPeak tienen ámbitos distintos.
+
+### 17.4. Decisión y continuidad
+
+Inscribir S39 revisión 17, cierre acotado TT-0012, RETP-2026-270, PTA-2026-012 y remisión a PTA-SVM-003. Formular después un banco pequeño de tareas diversas con oráculos y presupuestos antes de integrar conversación. El siguiente banco no se declara ejecutado. Qwen/B conserva cierre parcial; S42/TT-0010 siguen referidos al PC. Sin modificación de contratos, gramática, IR, núcleo, fuentes rectoras ni mapa HTML.
+
+[Control documental de esta recepción](CONTROL_OC01_OC02_2026_09_24.md). Los apartados 1–16 conservan sus cortes; §17 gobierna esta nueva recepción.

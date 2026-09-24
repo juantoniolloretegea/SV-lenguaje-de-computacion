@@ -2671,3 +2671,15 @@ Se recibe el diagnóstico de peticiones, cotejo parcial de pesos y defecto CPU M
 **Decisión:** publicación documental previa; restituir y verificar GGUF/controlador/configuración y guardas; fijar presupuesto, petición y aceptación; después, inferencia acotada con evidencia y cierre. S39 en seguimiento y TT-0012 abierto. No se ejecuta inferencia nueva en esta recepción. S42/TT-0010, Qwen/B, doctrina y mapa HTML conservan sus alcances.
 
 **Observación del control registral:** El control detecta identificadores repetidos preexistentes en RETP (163, 164, 165, 166, 167 y 170); algunos representan apertura y recepción de un mismo frente. Se preservan sus filas y no se diagnostican ni renumeran sin estudiar su historia. RETP-2026-269 aparece una sola vez. Esta entrega no acredita unicidad global del registro histórico.
+
+## RETP-2026-270 · OC-01/OC-02 y cierre material TT-0012
+
+**Registro:** 2026-09-24T11:47:42Z; 13:47:42, Europe/Madrid. **Unidad:** W-S39-02. **Base:** VERIFICACION_ACOTADA.
+
+Se recibe [Motor 70750a516001cf13314176c529508d0712b7f3c1](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md): candidata con respuesta correcta de cinco elementos; anterior con texto inconexo en el mismo anfitrión y la misma petición. Dos ejecuciones terminadas; fuentes, pesos identificados, HTTP, consumos y cierres conservados. Guardas Rust: nueve pruebas aprobadas, incluida auxiliar.
+
+**Decisión e impacto:** se cumple la condición material de TT-0012; finalizado con alcance limitado. S39 pasa a revisión 17 y permanece en seguimiento. Partes PTA-2026-012 y PTA-SVM-003; Acta004 §17; historial y accesos concordantes.
+
+**Objeción adversarial:** comparar ejecutables de construcciones distintas no aísla exclusivamente el parche. Un caso correcto no certifica calidad general, chat, rendimiento ni integración. Los contadores finales del cgroup no están disponibles; los originales conservan esa limitación. No se reinterpreta una señal de parada prevista como fallo del modelo.
+
+**Continuidad:** formular tareas diversas y criterios previos antes de integración. No se ejecuta aquí esa campaña futura. Qwen/B, S42/TT-0010, rectores, otros sucesos y mapa HTML conservan sus alcances. Las repeticiones históricas de identificadores RETP ya documentadas se preservan; el nuevo 270 es único.
