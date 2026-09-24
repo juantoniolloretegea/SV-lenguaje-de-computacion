@@ -287,3 +287,27 @@ Servicio exterior con 32 GiB, swap 0, 256 tareas, plazo 570 s más parada, red p
 Inscribir S39 revisión 17, cierre acotado TT-0012, RETP-2026-270, PTA-2026-012 y remisión a PTA-SVM-003. Formular después un banco pequeño de tareas diversas con oráculos y presupuestos antes de integrar conversación. El siguiente banco no se declara ejecutado. Qwen/B conserva cierre parcial; S42/TT-0010 siguen referidos al PC. Sin modificación de contratos, gramática, IR, núcleo, fuentes rectoras ni mapa HTML.
 
 [Control documental de esta recepción](CONTROL_OC01_OC02_2026_09_24.md). Los apartados 1–16 conservan sus cortes; §17 gobierna esta nueva recepción.
+
+## 18. Optimización CPU MXFP4 y ejecución residente · 24/09/2026
+
+**Registro:** 2026-09-24T12:43:08.557Z. Unidad de ejecución experimental. **Base:** VERIFICACION_ACOTADA sobre Lenguaje 32bf520f6e6c63dae84ef299957b6fd0b8c20402 y [Motor d4e62b29713a2044be0d1d4a7fb463155d3999c3](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md).
+
+### 18.1. Diseño y hechos recibidos
+
+Autorización de dos ventanas consecutivas de una hora desde 11:58 UTC: optimización Rust y residencia hasta 12:58; llama.cpp condicional hasta 13:58. Sin adquisición adicional. Protocolo publicado antes de inferencia en 7a3a353; corrección de ubicación documental en 388933b sin alterar criterios.
+
+Un mismo motor permite seleccionar referencia secuencial y variante paralela sin copias completas de bloques y escalas contiguos. Mismos pesos, tokenizador, parámetros y trabajadores. Tres solicitudes C01 de referencia y siete candidatas en dos sesiones residentes, una inferencia a la vez. Tres pruebas numéricas específicas, nueve guardas y Cargo check aprobados. Rust 1.98.0; sin Python.
+
+### 18.2. Dictamen acotado
+
+Cinco casos correctos, incluidas las tres repeticiones C01. Mediana HTTP 94,002 a 18,168 s: factor 5,174, reducción 80,673 %. Se satisface el umbral previo de reducción mínima del 50 %. Banco candidato finalizado a las 12:27:20,066 UTC, dentro de la primera fase. **Aceptación experimental acotada de la revisión. No se activa llama.cpp.**
+
+Los 26 controles instrumentales de originales aprueban; el juicio semántico se registra aparte. Todas las respuestas terminan con stop. Los dos hijos y servicios están detenidos, sin errores; contadores finales de la cuota exterior sin eventos max, oom ni oom_kill. La máquina continúa disponible, sin modelo residente de esta campaña.
+
+### 18.3. Objeciones y límites
+
+Tres repeticiones de una tarea temporal y cinco casos sintéticos, contexto 1024, orden fijo, sin aleatorización ni control exhaustivo de cachés o carga externa. Se comparan juntas retirada de copias y paralelización; no se atribuye una fracción causal separada a cada una. La residencia se observa, pero su ganancia frente a recargar por petición no se mide de forma independiente. RSS y memory.peak pertenecen a ámbitos distintos. No hay suite integral ni certificación general, conversacional o productiva.
+
+### 18.4. Trazabilidad y continuidad
+
+S39 revisión 18, RETP-2026-271, PTA-2026-013 y PTA-SVM-004; [control documental](CONTROL_OPTIMIZACION_2026_09_24.md). TT-0012 conserva su cierre material; S39 permanece abierto para otra fase con protocolo y plazo nuevos. Qwen/B, S42/TT-0010, otros sucesos, rectores, núcleo y mapa HTML conservan sus alcances. No se crean ramas adicionales ni se compran recursos. Los apartados anteriores mantienen sus cortes históricos.

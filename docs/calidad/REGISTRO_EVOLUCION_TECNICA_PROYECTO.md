@@ -2683,3 +2683,11 @@ Se recibe [Motor 70750a516001cf13314176c529508d0712b7f3c1](https://github.com/ju
 **Objeción adversarial:** comparar ejecutables de construcciones distintas no aísla exclusivamente el parche. Un caso correcto no certifica calidad general, chat, rendimiento ni integración. Los contadores finales del cgroup no están disponibles; los originales conservan esa limitación. No se reinterpreta una señal de parada prevista como fallo del modelo.
 
 **Continuidad:** formular tareas diversas y criterios previos antes de integración. No se ejecuta aquí esa campaña futura. Qwen/B, S42/TT-0010, rectores, otros sucesos y mapa HTML conservan sus alcances. Las repeticiones históricas de identificadores RETP ya documentadas se preservan; el nuevo 270 es único.
+
+## RETP-2026-271 · Optimización CPU y ejecución residente
+
+**Registro:** 2026-09-24T12:43:08.557Z; 14:43:08, Europe/Madrid. Unidad de ejecución experimental; VERIFICACION_ACOTADA.
+
+[Motor d4e62b29713a2044be0d1d4a7fb463155d3999c3](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md) documenta comparación dentro del mismo binario, cinco casos correctos, mediana de 94,002 a 18,168 s, contención y cierre. La primera ventana termina con criterio cumplido; no se activa la alternativa C/C++. S39 revisión 18; Acta004 §18; PTA-2026-013 y PTA-SVM-004.
+
+Se conserva el cierre material de TT-0012. La aceleración observada no acredita calidad general, rendimiento de conversaciones largas ni causalidad separada de ambas optimizaciones. Los originales y resultados históricos adversos permanecen. Próximo trabajo: protocolo nuevo para tareas representativas, sin ejecución atribuida en esta recepción.

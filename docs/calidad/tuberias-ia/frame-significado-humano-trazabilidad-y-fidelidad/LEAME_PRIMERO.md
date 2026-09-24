@@ -1,5 +1,8 @@
 # Léame primero: del frame a la colaboración auditable
 
+**Recepción vigente · 2026-09-24T12:43:08.557Z:** [Optimización CPU y ejecución residente](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos; mediana 94,002 a 18,168 s; criterio acotado cumplido en la primera ventana y servicios detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. TT-0012 mantiene su cierre material.
+
+
 **Recepción vigente · 2026-09-24T11:47:42Z:** [OC-01/OC-02 y originales](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md). Candidata con primera respuesta aritmética correcta; anterior con texto inconexo en la misma máquina. TT-0012 finalizado por su objetivo material, con límites; S39 revisión 17 en seguimiento. Acta004 §17; RETP-2026-270; PTA-2026-012; PTA-SVM-003. Las entradas anteriores mantienen sus cortes históricos.
 
 

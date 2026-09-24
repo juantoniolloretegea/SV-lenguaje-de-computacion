@@ -238,3 +238,7 @@ La recepción vigente de S39 es la revisión 16: [Acta 004 §16](ACTA_004_FINALI
 ## Remisión vigente · OC-01/OC-02 · 2026-09-24T11:47:42Z
 
 La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#17-recepción-experimental-oc-01oc-02-y-cierre-material-de-tt-0012--24092026) y el [informe Motor](https://github.com/juantoniolloretegea/SV-motor/blob/70750a516001cf13314176c529508d0712b7f3c1/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/RESULTADO.md) documentan la primera respuesta aritmética correcta de la candidata, el contraste adverso y los cierres. TT-0012 finalizado por su objetivo material con límites; S39 revisión 17 abierto. RETP-2026-270; PTA-2026-012; PTA-SVM-003. Esta remisión no altera los cortes históricos de la presente acta.
+
+## Remisión vigente · Optimización y residencia · 2026-09-24T12:43:08.557Z
+
+[Informe experimental](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md) y Acta004 §18: cinco casos correctos, mediana 94,002 a 18,168 s y cierre completo dentro de primera ventana. S39 revisión 18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. TT-0012 mantiene cierre material. Llama.cpp no activado. Los cortes anteriores permanecen históricos.

@@ -81,3 +81,11 @@ El CSV `REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.csv` conserva la serie tabular com
 - **Resultado:** OC-01 responde correctamente al caso 3 + 2; OC-02 conserva texto inconexo del anterior. Objetivo material de TT-0012 conseguido y tique finalizado con alcance explícito; S39 sigue abierto.
 - **Límites:** un caso por ejecutable, construcciones distintas, rendimiento limitado y contadores finales de cgroup no disponibles. Sin prueba de calidad general, integración ni causalidad exclusiva.
 - **Trazabilidad:** RETP-2026-270; Acta004 §17; PTA-SVM-003. No se atribuyen estos resultados a partes históricos ni se declara barrido integral.
+
+## PTA-2026-013 · Optimización CPU y ejecución residente
+
+**Registro:** 2026-09-24T12:43:08.557Z; 14:43:08, Europe/Madrid. **Unidad:** Unidad de ejecución experimental. **Base:** VERIFICACION_ACOTADA sobre Lenguaje 32bf520 y [Motor](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md).
+
+Se reciben protocolo previo, fuentes, tres pruebas numéricas, nueve guardas, Cargo check, diez peticiones en dos sesiones y 26 controles instrumentales. Cinco casos correctos y mediana 94,002 a 18,168 s; cierre del banco a las 12:27:20,066 UTC. Se cumple el criterio de primera fase; llama.cpp no se activa.
+
+Se concilian S39 revisión 18, historial, RETP-2026-271, Acta004 §18 y accesos. TT-0012 conserva el cierre material anterior. Sin compras, ramas adicionales ni inferencia activa. Banco pequeño, orden fijo y ausencia de aislamiento entre las dos optimizaciones; no se certifica calidad general ni integración.
