@@ -6,7 +6,7 @@
 **Estado:** investigación lateral en seguimiento; instalación nativa documentada; comprobación material independiente pendiente.  
 **Corte del Lenguaje examinado:** `9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7`, rama `main`.
 
-**Actualización posterior de estado:** §15, vinculada a S39 revisión 15. Los §§1–9 conservan el corte de recepción original; §§10–14 mantienen sus recepciones históricas.
+**Actualización posterior de estado:** §22, vinculada a S39 revisión 22 y TT-0013. Los §§1–21 conservan sus fechas y alcances históricos.
 
 ## 1. Objeto y razón de la investigación
 
@@ -353,3 +353,24 @@ La versión 0.2.3 mantiene el valor completo en el expediente y exporta resumen 
 El guion inicial de continuación falló por omitir src/ en la ruta de preguntas, sin admitir inferencia. Corregido y conservado el diagnóstico, el controlador empezó a las 17:55:35, manteniendo el límite 19:52:28 UTC registrado a las 17:52:28. R02-02 utiliza la misma conversación tras igualdad estructural con el antecedente; no se repite ni sustituye R02-01. Plazo individual nuevo 900 segundos, sustentado por la latencia medida, manteniendo 256 tokens y contexto 4096. URL privada conectada a las 17:56:21; no se lanzó inferencia web competidora. Comparación y recepción final todavía pendientes.
 
 S39 revisión 21; Acta004 §21; RETP-2026-274; PTA-2026-016. TT-0012 conserva su cierre material acotado. S39 permanece abierto; sin modificación doctrinal, compras ni ramas adicionales.
+
+
+<a id="cierre-gpt-oss-20260925"></a>
+
+## 22. Cierre experimental y distribución nativa de GPT-OSS · 25/09/2026
+
+**Recepción:** 2026-09-25T11:17:31.291Z. **Base:** Lenguaje f517543c592d558d235821d5b0c0293fc95cbcab; Motor 365900cbe47b085c487ffd7b72391f0b13b679bc. **Unidad:** Unidad de ejecución experimental S39. **Lectura:** VERIFICACION_ACOTADA a fuentes, evidencias y registros de este cierre; no se declara nueva lectura integral del corpus ni se modifica doctrina.
+
+Cierre de la campaña nativa y entrega experimental GPT-OSS 0.2.4-beta.1. Doce condiciones documentales conformes en cinco parámetros; doce consultas sintéticas HCL conservadas, con diez terminaciones normales y dos por límite de generación. Evaluación asistida inicial: siete no conformes y cinco en revisión. Sin aptitud clínica acreditada.
+
+VERIFICACION_ACOTADA: cotejo Rust 1.98.0 de doce conversaciones y 49 sucesos; restauración de un expediente con doce conversaciones y cero peticiones pendientes, copia idéntica al original; ejecutables, archivos y recepción cotejados mediante SHA-256. No se ha ensayado instalación completa en una sede limpia ni reconstrucción hermética.
+
+La comparación conversacional histórica termina con once preguntas previstas, diez turnos recibidos —incluido el antecedente— y una pregunta no admitida. Nueve respuestas quedaron limitadas a 256 tokens y un intento agotó su plazo sin texto entregado. Los datos personales de ese conjunto no se publican. La nueva evidencia HCL utiliza casos sintéticos y conversaciones independientes. Los bancos tienen contratos y condiciones diferentes y no se suman como tasa global de acierto.
+
+La distribución conserva binarios, fuentes, tokenizador, Harmony, servicios e instrucciones; los pesos quedan externos y fijados por tamaño y SHA-256. Se distinguen restitución documental acreditada, instalación completa en una sede nueva no ensayada y construcción hermética no acreditada. Se mantiene la discrepancia de rótulo 0.2.2 frente a versión 0.2.4 y la semilla no transmitida.
+
+Sin nuevas inferencias, sin eliminación de archivos y sin cambios de Qwen. Pesos externos fijados por revisión, tamaño y SHA-256. Semilla registrada pero no transmitida al motor; rótulo interno 0.2.2 conservado en aplicación 0.2.4. Conversaciones personales históricas excluidas de la entrega pública. Servicios de OneCloud activos en la observación de 11:09:52 UTC; no se garantiza disponibilidad indefinida.
+
+**Decisión:** TT-0013 finalizado en el alcance recibido; S39 pendiente para su objeto restante. Definir el siguiente objeto experimental de la adenda a partir del cierre conservado. No reabrir las campañas terminadas ni iniciar migración, virtualización o vía A/WebAssembly como consecuencia automática de esta recepción.
+
+**Trazabilidad:** [informe](https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md); [entrega](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1); [TT-0013](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md); S39 revisión 22; RETP-2026-275; PTA-2026-017; PTA-SVM-007. El registro canónico se refleja en la copia del laboratorio; las recepciones históricas se conservan.

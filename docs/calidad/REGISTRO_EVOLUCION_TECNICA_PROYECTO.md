@@ -2731,3 +2731,12 @@ La versión 0.2.3 mantiene el valor completo en el expediente y exporta resumen 
 El guion inicial de continuación falló por omitir src/ en la ruta de preguntas, sin admitir inferencia. Corregido y conservado el diagnóstico, el controlador empezó a las 17:55:35, manteniendo el límite 19:52:28 UTC registrado a las 17:52:28. R02-02 utiliza la misma conversación tras igualdad estructural con el antecedente; no se repite ni sustituye R02-01. Plazo individual nuevo 900 segundos, sustentado por la latencia medida, manteniendo 256 tokens y contexto 4096. URL privada conectada a las 17:56:21; no se lanzó inferencia web competidora. Comparación y recepción final todavía pendientes.
 
 S39 revisión 21; Acta004 §21; RETP-2026-274; PTA-2026-016. TT-0012 conserva su cierre material acotado. S39 permanece abierto; sin modificación doctrinal, compras ni ramas adicionales.
+
+
+## RETP-2026-275 · Cierre experimental y entrega GPT-OSS
+
+Registro 2026-09-25T11:17:31.291Z; 13:17:31, Europe/Madrid. Cierre de la campaña nativa y entrega experimental GPT-OSS 0.2.4-beta.1. Doce condiciones documentales conformes en cinco parámetros; doce consultas sintéticas HCL conservadas, con diez terminaciones normales y dos por límite de generación. Evaluación asistida inicial: siete no conformes y cinco en revisión. Sin aptitud clínica acreditada.
+
+VERIFICACION_ACOTADA: cotejo Rust 1.98.0 de doce conversaciones y 49 sucesos; restauración de un expediente con doce conversaciones y cero peticiones pendientes, copia idéntica al original; ejecutables, archivos y recepción cotejados mediante SHA-256. No se ha ensayado instalación completa en una sede limpia ni reconstrucción hermética.
+
+[Informe](https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) y [entrega](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1). TT-0013; S39 revisión 22, pendiente en su alcance restante; Acta004 §22; PTA-2026-017; PTA-SVM-007. Sin nuevas inferencias, sin eliminación de archivos y sin cambios de Qwen. Pesos externos fijados por revisión, tamaño y SHA-256. Semilla registrada pero no transmitida al motor; rótulo interno 0.2.2 conservado en aplicación 0.2.4. Conversaciones personales históricas excluidas de la entrega pública. Servicios de OneCloud activos en la observación de 11:09:52 UTC; no se garantiza disponibilidad indefinida.
