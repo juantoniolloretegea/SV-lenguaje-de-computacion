@@ -1,0 +1,39 @@
+{
+  "id": "TT-0015",
+  "suceso": "S39",
+  "estado": "pendiente",
+  "fecha_alta_utc": "2026-09-27T07:40:39Z",
+  "fecha_inicio_utc": null,
+  "fecha_fin_utc": null,
+  "unidad_coordinadora": "W-S39-03",
+  "modelo": "openai/gpt-oss-120b",
+  "via": "B_nativa_cpu",
+  "fase": "comprobacion_preliminar",
+  "encargo": {
+    "repositorio": "SV-sala-de-maquinas",
+    "ruta": "encargos-ejecucion/GPTOSS120-VIABILIDAD-20260927/v1",
+    "revision": "v1"
+  },
+  "limites": {
+    "segundos": 1800,
+    "reserva_cierre_segundos": 300,
+    "inferencias": 0,
+    "descarga_pesos": false,
+    "instalacion": false,
+    "compilacion": false,
+    "recursos_adicionales": false
+  },
+  "alcance_posterior": "Seleccion condicionada a viabilidad, recursos autorizados y protocolo previo",
+  "mcp": {
+    "version_referencia": "0.1.2",
+    "tique": "TT-0014",
+    "recepcion_independiente": true
+  },
+  "resultado": null,
+  "referencias": [
+    "Acta 004 §23",
+    "RETP-2026-276",
+    "PTA-2026-018",
+    "PTA-SVM-008"
+  ]
+}

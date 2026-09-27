@@ -6,7 +6,7 @@
 **Estado:** investigación lateral en seguimiento; instalación nativa documentada; comprobación material independiente pendiente.  
 **Corte del Lenguaje examinado:** `9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7`, rama `main`.
 
-**Actualización posterior de estado:** §22, vinculada a S39 revisión 22 y TT-0013. Los §§1–21 conservan sus fechas y alcances históricos.
+**Actualización posterior de estado:** §23, vinculada a S39 revisión 24 y TT-0015. Los §§1–22 conservan sus fechas y alcances históricos.
 
 ## 1. Objeto y razón de la investigación
 
@@ -374,3 +374,18 @@ Sin nuevas inferencias, sin eliminación de archivos y sin cambios de Qwen. Peso
 **Decisión:** TT-0013 finalizado en el alcance recibido; S39 pendiente para su objeto restante. Definir el siguiente objeto experimental de la adenda a partir del cierre conservado. No reabrir las campañas terminadas ni iniciar migración, virtualización o vía A/WebAssembly como consecuencia automática de esta recepción.
 
 **Trazabilidad:** [informe](https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md); [entrega](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1); [TT-0013](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0013.md); S39 revisión 22; RETP-2026-275; PTA-2026-017; PTA-SVM-007. El registro canónico se refleja en la copia del laboratorio; las recepciones históricas se conservan.
+
+
+## 23. Preparación del candidato GPT-OSS-120B · 27/09/2026
+
+**Registro:** 2026-09-27T07:40:39Z. **Seguimiento:** S39 revisión 24; TT-0015; RETP-2026-276. **Alcance:** actualización documental localizada, sin nueva ejecución material.
+
+Se recibe la decisión de continuar por la vía B nativa con GPT-OSS-120B como candidato. La primera fase verifica compatibilidad y recursos; la instalación y selección posterior quedan condicionadas a su resultado y a la autorización de los recursos necesarios. El modelo permanece sin evaluación propia y no se declara Apto.
+
+GPT-OSS-20B conserva su cierre. La selección mínima Qwen3.8-27B finalizó con respuesta completa en 227 segundos y resultado No pasa por incumplimientos documentales; esta referencia no generaliza a su familia ni abre una repetición. [Expediente restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/7a116cddac3f0b98bdc52fb84e1ed1e0f2b23791/respuestas-ejecucion/QWEN38-SELECCION-MINIMA-LOCAL-20260927/entrega-01/INFORME.md). TT-0014 conserva pendiente su recepción; la publicación MCP 0.1.2 no acredita un nuevo modelo.
+
+El [TT-0015](../../Inventario-sv/tiques-tecnicos/TT-0015.md) fija una comprobación de treinta minutos sin instalaciones ni inferencias. Examina la corrección CPU ya conservada, el soporte real del modelo, Harmony y el dimensionamiento. La [ficha del candidato](https://github.com/juantoniolloretegea/SV-motor/blob/3f24439cccb8c677c18e6ea2b2b4f13adf7a95ae/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-120b/README.md) separa datos publicados, observaciones históricas y hechos aún pendientes.
+
+Inmunología y ciberseguridad conservan criterios y resultados diferenciados. La vía A/WebAssembly sólo podrá plantearse tras Apto en el alcance experimental nativo y autorización específica. No se amplía el Árbitro SV ni se incorpora nada al núcleo por esta preparación.
+
+Se mantiene el circuito separado de encargos y respuestas, la recepción independiente y la conservación por commits. El mapa HTML no se modifica. Las figuras históricas se conservan; el índice del ensayo añade un esquema previsto para la continuación. Las copias históricas de laboratorio mantienen su corte, sin declarar sincronización nueva. S39 permanece pendiente de ejecución y recepción del nuevo alcance.

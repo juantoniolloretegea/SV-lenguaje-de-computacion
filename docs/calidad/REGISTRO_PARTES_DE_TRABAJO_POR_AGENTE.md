@@ -140,3 +140,10 @@ Cierre de la campaña nativa y entrega experimental GPT-OSS 0.2.4-beta.1. Doce c
 VERIFICACION_ACOTADA: cotejo Rust 1.98.0 de doce conversaciones y 49 sucesos; restauración de un expediente con doce conversaciones y cero peticiones pendientes, copia idéntica al original; ejecutables, archivos y recepción cotejados mediante SHA-256. No se ha ensayado instalación completa en una sede limpia ni reconstrucción hermética.
 
 [Informe](https://github.com/juantoniolloretegea/SV-motor/blob/365900cbe47b085c487ffd7b72391f0b13b679bc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/distribucion/0.2.4-beta.1/RESULTADOS.md) y [entrega](https://github.com/juantoniolloretegea/SV-motor/releases/tag/gpt-oss-conversacion-v0.2.4-beta.1). S39 revisión 22; TT-0013; Acta004 §22; RETP-2026-275; PTA-SVM-007. Sin nuevas inferencias, sin eliminación de archivos y sin cambios de Qwen. Pesos externos fijados por revisión, tamaño y SHA-256. Semilla registrada pero no transmitida al motor; rótulo interno 0.2.2 conservado en aplicación 0.2.4. Conversaciones personales históricas excluidas de la entrega pública. Servicios de OneCloud activos en la observación de 11:09:52 UTC; no se garantiza disponibilidad indefinida.
+
+
+## PTA-2026-018 · Preparación documental de GPT-OSS-120B
+
+Registro 2026-09-27T07:40:39Z; Agente W-S39-03; VERIFICACION_ACOTADA. Preparación documental de GPT-OSS-120B en vía B nativa; encargo preliminar de compatibilidad CPU, accesos, memoria y Harmony. Candidato sin instalación, inferencia ni aptitud acreditadas.
+
+Intervención documental localizada; no se declara barrido integral del repositorio ni nueva lectura íntegra del corpus rector. [TT-0015](Inventario-sv/tiques-tecnicos/TT-0015.md), S39 revisión 24, Acta004 §23 y RETP-2026-276. Verificación acotada; sin intervención remota, compras o instalación. TT-0014 y cierre Qwen conservan recepción y archivo separados. Mapa y figuras históricas preservados; ninguna rama creada.
