@@ -4,13 +4,13 @@
   "revision_suceso": 25,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-29T08:17:14Z",
-  "fecha_actualizacion_utc": "2026-09-29T08:17:14Z",
+  "fecha_actualizacion_utc": "2026-09-29T08:34:52Z",
   "fecha_inicio_ejecucion_utc": null,
   "fecha_fin_ejecucion_utc": null,
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
   "objeto": "Ronda documental de tricoleucemia de 25 posiciones",
   "ronda": "EVAL-PDQ-HCL-25-20260929/r1",
-  "sede": "https://github.com/juantoniolloretegea/SVperitus-dataset/tree/32320b16acf15b66b9a3818318449370e4db089d/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929",
+  "sede": "https://github.com/juantoniolloretegea/SVperitus-dataset/tree/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929",
   "clave_privada": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/be36261c953ceebfc2b0bcf53e5a0e62d0a900b5/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/anexos/ronda-01-pdq-hcl-20260929/CLAVE-CORRECCION.md",
   "preparacion_documental": "realizada; anterior a esta alta",
   "inferencia": "no ejecutada en esta ronda",
@@ -43,5 +43,14 @@
     "retorno": "S39"
   },
   "servidor": "incorporacion pendiente; sin intervencion en esta preparacion",
-  "alcance": "instrumento experimental; no aptitud clinica ni dominio completo"
+  "alcance": "instrumento experimental; no aptitud clinica ni dominio completo",
+  "precision_documental": 2,
+  "dictamen_final": [
+    "APTO",
+    "NO_APTO",
+    "U"
+  ],
+  "composicion_de_frames": "Pendiente de contrato del dominio; un frame apto no acredita aptitud de conjunto",
+  "visualizacion_prevista": "egui; no implementada en esta preparacion",
+  "tratamiento_U": "Nuevas pruebas dirigidas a su causa, con identidad propia y conservacion de intentos, sin reintentos automaticos"
 }
