@@ -1,0 +1,47 @@
+{
+  "id": "TT-0016",
+  "suceso_principal": "S39",
+  "revision_suceso": 25,
+  "estado": "pendiente",
+  "fecha_alta_utc": "2026-09-29T08:17:14Z",
+  "fecha_actualizacion_utc": "2026-09-29T08:17:14Z",
+  "fecha_inicio_ejecucion_utc": null,
+  "fecha_fin_ejecucion_utc": null,
+  "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
+  "objeto": "Ronda documental de tricoleucemia de 25 posiciones",
+  "ronda": "EVAL-PDQ-HCL-25-20260929/r1",
+  "sede": "https://github.com/juantoniolloretegea/SVperitus-dataset/tree/32320b16acf15b66b9a3818318449370e4db089d/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929",
+  "clave_privada": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/be36261c953ceebfc2b0bcf53e5a0e62d0a900b5/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/anexos/ronda-01-pdq-hcl-20260929/CLAVE-CORRECCION.md",
+  "preparacion_documental": "realizada; anterior a esta alta",
+  "inferencia": "no ejecutada en esta ronda",
+  "posiciones": 25,
+  "criticas": 20,
+  "no_criticas": [
+    "P05",
+    "P10",
+    "P15",
+    "P20",
+    "P25"
+  ],
+  "umbral": 19,
+  "formula": "floor(7*n/9)",
+  "admision_adicional": "20 criticas en 0",
+  "pruebas_auxiliares_rust": {
+    "correctas": 9,
+    "fallidas": 0
+  },
+  "dependencias": [
+    "recepcion de correccion del supervisor",
+    "carga y controles instrumentales recibidos",
+    "MCP y corpus identificados",
+    "clave inaccesible al modelo",
+    "limites acumulados vigentes"
+  ],
+  "relaciones": {
+    "MCP": "TT-0014",
+    "GPT_OSS_120B": "TT-0015",
+    "retorno": "S39"
+  },
+  "servidor": "incorporacion pendiente; sin intervencion en esta preparacion",
+  "alcance": "instrumento experimental; no aptitud clinica ni dominio completo"
+}
