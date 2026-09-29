@@ -4,7 +4,7 @@
   "revision_suceso": 25,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-29T08:17:14Z",
-  "fecha_actualizacion_utc": "2026-09-29T08:34:52Z",
+  "fecha_actualizacion_utc": "2026-09-29T22:53:10Z",
   "fecha_inicio_ejecucion_utc": null,
   "fecha_fin_ejecucion_utc": null,
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -52,5 +52,26 @@
   ],
   "composicion_de_frames": "Pendiente de contrato del dominio; un frame apto no acredita aptitud de conjunto",
   "visualizacion_prevista": "egui; no implementada en esta preparacion",
-  "tratamiento_U": "Nuevas pruebas dirigidas a su causa, con identidad propia y conservacion de intentos, sin reintentos automaticos"
+  "tratamiento_U": "Nuevas pruebas dirigidas a su causa, con identidad propia y conservacion de intentos, sin reintentos automaticos",
+  "preparacion_ejecucion_v7": {
+    "estado": "publicado_pendiente_transmision_y_autorizacion_humana",
+    "encargo": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/v7/ENCARGO.md",
+    "recepcion_instrumental": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md",
+    "entrega_prevista": "QWEN80-Q4K-ONECLOUD-20260929/entrega-09",
+    "condiciones_previas": [
+      "cierre del servicio sin agotamiento del plazo",
+      "admisión por identidad de pregunta y tokens efectivos",
+      "aislamiento de clave, corpus y MCP cotejados",
+      "conciliación de presupuesto y plazos acumulados"
+    ],
+    "limites": {
+      "ventana_modelo_horas": 12,
+      "memoria_max_gib": 59,
+      "cupon_acumulado_eur": 6,
+      "horas_desde_creacion": 48,
+      "recuperaciones_tecnicas_globales": 1
+    },
+    "inferencia_ronda": "no iniciada por esta preparación",
+    "adjudicacion": "pendiente de recepción independiente"
+  }
 }
