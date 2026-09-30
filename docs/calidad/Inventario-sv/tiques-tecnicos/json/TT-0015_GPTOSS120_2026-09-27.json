@@ -1,39 +1,29 @@
 {
+  "version_esquema": "1.1",
+  "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "id": "TT-0015",
-  "suceso": "S39",
+  "suceso_principal": "S39",
+  "revision_suceso": 26,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-27T07:40:39Z",
-  "fecha_inicio_utc": null,
+  "fecha_actualizacion_utc": "2026-09-30T08:59:14Z",
+  "fecha_corte_evidencias_utc": "2026-09-30T08:42:00Z",
   "fecha_fin_utc": null,
-  "unidad_coordinadora": "W-S39-03",
+  "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
+  "objeto": "GPT-OSS-120B: resultado preliminar de viabilidad",
+  "resultado_actual": "Estudio preliminar entregado: configuración considerada desfavorable; sin inferencia ni consumo máximo medido.",
+  "recepcion_finalizada": false,
+  "dependencia_y_retorno": "Mantener el candidato condicionado a una configuración identificada, capacidad suficiente y comprobación instrumental autorizada. El retorno principal del ensayo continúa por Qwen80; TT-0015 queda pendiente sin repetir el estudio previo.",
+  "antecedente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/86960653c6ff577cbc8c2e2beb93858433325744/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0015.md",
+  "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
+  "evidencias": [
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/59125987793e4f5277be29a7ef44399aad19346f/respuestas-ejecucion/GPTOSS120-VIABILIDAD-20260927/entrega-01/INFORME.md"
+  ],
   "modelo": "openai/gpt-oss-120b",
-  "via": "B_nativa_cpu",
-  "fase": "comprobacion_preliminar",
-  "encargo": {
-    "repositorio": "SV-sala-de-maquinas",
-    "ruta": "encargos-ejecucion/GPTOSS120-VIABILIDAD-20260927/v1",
-    "revision": "v1"
-  },
-  "limites": {
-    "segundos": 1800,
-    "reserva_cierre_segundos": 300,
-    "inferencias": 0,
-    "descarga_pesos": false,
-    "instalacion": false,
-    "compilacion": false,
-    "recursos_adicionales": false
-  },
-  "alcance_posterior": "Seleccion condicionada a viabilidad, recursos autorizados y protocolo previo",
-  "mcp": {
-    "version_referencia": "0.1.2",
-    "tique": "TT-0014",
-    "recepcion_independiente": true
-  },
-  "resultado": null,
-  "referencias": [
-    "Acta 004 §23",
-    "RETP-2026-276",
-    "PTA-2026-018",
-    "PTA-SVM-008"
-  ]
+  "memoria_total_observada_gib": 62.79,
+  "memoria_disponible_observada_gib": 61.82,
+  "limite_configuracion_gib": 54,
+  "archivos_pesos_gib": 60.77,
+  "maximo_real_inferencia_gib": null,
+  "inferencias": 0
 }
