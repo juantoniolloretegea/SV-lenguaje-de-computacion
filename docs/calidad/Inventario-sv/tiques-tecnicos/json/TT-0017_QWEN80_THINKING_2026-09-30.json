@@ -1,0 +1,64 @@
+{
+  "id": "TT-0017",
+  "suceso_principal": "S39",
+  "revision_suceso": 25,
+  "estado": "pendiente",
+  "fecha_alta_utc": "2026-09-30T05:55:31Z",
+  "fecha_actualizacion_utc": "2026-09-30T05:55:31Z",
+  "fecha_inicio_ejecucion_utc": null,
+  "fecha_fin_utc": null,
+  "objeto": "Primera prueba documental de Qwen3-Next-80B-A3B-Thinking Q4K en CPU con MCP y caché congelada",
+  "expediente": "QWEN80-THINKING-Q4K-ONECLOUD-20260930",
+  "revision_encargo": "v1",
+  "encargo": {
+    "url": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ea99efba6337a9e28f8a523554daf7a0bae4f2d6/encargos-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/v1/ENCARGO.md",
+    "commit": "ea99efba6337a9e28f8a523554daf7a0bae4f2d6",
+    "transmision_humana": "pendiente",
+    "ejecucion": "no iniciada por la coordinación"
+  },
+  "candidato": {
+    "modelo": "Qwen3-Next-80B-A3B-Thinking",
+    "formato": "UQFF",
+    "cuantizacion": "Q4K",
+    "revision_pesos": "3b8734e41d4a42855a03a8eb14eda91d53ebba86",
+    "memoria_fisica_anunciada_gb": 64,
+    "memoria_maxima_medida_gib": null,
+    "compatibilidad_efectiva": "pendiente"
+  },
+  "limites": {
+    "ventana_total_horas": 12,
+    "origen_plazo": "Primera operación remota de ejecución; vencimiento persistente",
+    "memoria_grupo_gib": 59,
+    "intercambio": false,
+    "cpu_logicas": 11,
+    "secuencias": 1,
+    "techo_contexto_tokens": 32768,
+    "techo_salida_por_generacion_tokens": 16384,
+    "llamadas_mcp": 4,
+    "generaciones": 5,
+    "reserva_cierre_minutos": 15
+  },
+  "dependencias": [
+    {
+      "tique": "TT-0014",
+      "objeto": "MCP y corpus recibidos"
+    },
+    {
+      "tique": "TT-0016",
+      "objeto": "Eventual examen posterior; ejecución Instruct independiente"
+    }
+  ],
+  "prueba": "THINK-DOC-01",
+  "resultado_actual": "Encargo preparado y conservado. Instalación, inferencia, entrega y recepción pendientes.",
+  "resultado_examen": null,
+  "dictamen_clinico": null,
+  "entrega_prevista": "respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-01/",
+  "registro_modelo": "laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking/REGISTRO-INSTALACION-20260930",
+  "retorno": "Recepción instrumental independiente y decisión sobre examen comparable",
+  "protege": [
+    "Ensayo Instruct y su supervisión",
+    "MCP sin salida a Internet",
+    "Credenciales fuera de documentación",
+    "Retirada de la instancia reservada a la dirección"
+  ]
+}
