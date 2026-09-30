@@ -4,7 +4,7 @@
   "revision_suceso": 25,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-29T08:17:14Z",
-  "fecha_actualizacion_utc": "2026-09-29T22:53:10Z",
+  "fecha_actualizacion_utc": "2026-09-30T05:13:39Z",
   "fecha_inicio_ejecucion_utc": null,
   "fecha_fin_ejecucion_utc": null,
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -13,7 +13,7 @@
   "sede": "https://github.com/juantoniolloretegea/SVperitus-dataset/tree/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929",
   "clave_privada": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/be36261c953ceebfc2b0bcf53e5a0e62d0a900b5/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/anexos/ronda-01-pdq-hcl-20260929/CLAVE-CORRECCION.md",
   "preparacion_documental": "realizada; anterior a esta alta",
-  "inferencia": "no ejecutada en esta ronda",
+  "inferencia": "en ejecución; P01 en curso en el corte receptor, sin resultado final conservado",
   "posiciones": 25,
   "criticas": 20,
   "no_criticas": [
@@ -42,7 +42,7 @@
     "GPT_OSS_120B": "TT-0015",
     "retorno": "S39"
   },
-  "servidor": "incorporacion pendiente; sin intervencion en esta preparacion",
+  "servidor": "banco incorporado; modelo y conductor activos, comprobados en lectura",
   "alcance": "instrumento experimental; no aptitud clinica ni dominio completo",
   "precision_documental": 2,
   "dictamen_final": [
@@ -54,7 +54,7 @@
   "visualizacion_prevista": "egui; no implementada en esta preparacion",
   "tratamiento_U": "Nuevas pruebas dirigidas a su causa, con identidad propia y conservacion de intentos, sin reintentos automaticos",
   "preparacion_ejecucion_v7": {
-    "estado": "publicado_pendiente_transmision_y_autorizacion_humana",
+    "estado": "transmitido_y_autorizado_por_la_direccion; campaña en curso",
     "encargo": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/v7/ENCARGO.md",
     "recepcion_instrumental": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md",
     "entrega_prevista": "QWEN80-Q4K-ONECLOUD-20260929/entrega-09",
@@ -67,11 +67,23 @@
     "limites": {
       "ventana_modelo_horas": 12,
       "memoria_max_gib": 59,
-      "cupon_acumulado_eur": 6,
-      "horas_desde_creacion": 48,
-      "recuperaciones_tecnicas_globales": 1
+      "cupon_acumulado_eur": null,
+      "horas_desde_creacion": null,
+      "recuperaciones_tecnicas_globales": 1,
+      "rectificacion_economica": "Los topes económicos anteriores dejan de ser condición de parada de esta campaña por instrucción humana posterior; permanecen doce horas y las cotas técnicas."
     },
-    "inferencia_ronda": "no iniciada por esta preparación",
+    "inferencia_ronda": "en curso",
     "adjudicacion": "pendiente de recepción independiente"
+  },
+  "fecha_inicio_modelo_utc": "2026-09-30T04:51:19.791Z",
+  "vencimiento_modelo_utc": "2026-09-30T16:51:19.791Z",
+  "estado_administrativo_detalle": "pendiente de finalización y recepción; ejecución iniciada",
+  "autorizacion_posterior": {
+    "referencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/328c7842da82086ac10e74086b21b19fba0500da/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/v7/AUTORIZACION-POSTERIOR-20260930.md",
+    "consumo_servidor": "autorizado para terminar la prueba",
+    "nuevos_recursos": false,
+    "pagos_manuales": false,
+    "supervision": "existente activa cada quince minutos, sin duplicación",
+    "constatacion_utc": "2026-09-30T05:13:39Z"
   }
 }
