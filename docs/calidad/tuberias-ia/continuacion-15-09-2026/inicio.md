@@ -1,5 +1,7 @@
 # Continuación · 15 de septiembre de 2026
 
+**Actualización de seguimiento · 30/09/2026:** [Instruct v7: cierre, corrección y límites](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#qwen80-instruct-cierre-20260930). S39 revisión 27 / TT-0016: 19 respuestas finales, seis impedimentos; propuesta 7/2/10 en la terna, pendiente de revisión humana. Los estados fechados anteriores son antecedentes; no reactivan ejecuciones ni equivalen a la recepción actual.
+
 **Recepción vigente · 2026-09-24T12:43:08.557Z:** [Optimización CPU y ejecución residente](https://github.com/juantoniolloretegea/SV-motor/blob/d4e62b29713a2044be0d1d4a7fb463155d3999c3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/resultados/onecloud-2026-09-24/optimizacion/RESULTADO.md). Cinco casos correctos; mediana 94,002 a 18,168 s; criterio acotado cumplido en la primera ventana y servicios detenidos. S39 revisión 18; Acta004 §18; RETP-2026-271; PTA-2026-013; PTA-SVM-004. TT-0012 mantiene su cierre material.
 
 

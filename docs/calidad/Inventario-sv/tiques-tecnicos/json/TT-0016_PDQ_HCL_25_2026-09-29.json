@@ -3,17 +3,17 @@
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "id": "TT-0016",
   "suceso_principal": "S39",
-  "revision_suceso": 26,
+  "revision_suceso": 27,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-29T08:17:14Z",
-  "fecha_actualizacion_utc": "2026-09-30T08:59:14Z",
-  "fecha_corte_evidencias_utc": "2026-09-30T08:42:00Z",
+  "fecha_actualizacion_utc": "2026-09-30T19:20:00Z",
+  "fecha_corte_evidencias_utc": "2026-09-30T18:46:07.897Z",
   "fecha_fin_utc": null,
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
   "objeto": "Ronda documental de tricoleucemia: evaluación de 25 posiciones",
-  "resultado_actual": "Ocho respuestas y una interrupción en P09 comunicadas; continuación correctiva preparada, entrega y adjudicación pendientes.",
+  "resultado_actual": "Examen Instruct v7 terminado: 19 respuestas finales, seis impedimentos técnicos y cero preguntas sin ejecutar. Corrección documental para revisión humana: 7 valores 0, 2 valores 1 y 10 valores U; dos penalizaciones críticas. Propuesta No apto en el alcance examinado, con frame incompleto y recepción humana pendiente.",
   "recepcion_finalizada": false,
-  "dependencia_y_retorno": "Recibir las respuestas y la incidencia P09, contrastar la continuidad efectiva y corregir con la clave independiente. Si quedan posiciones inválidas, conservar el resultado parcial sin completar con U. Volver a S39 con evidencia, vector cuando proceda y dictamen limitado al banco.",
+  "dependencia_y_retorno": "Revisar humanamente la corrección y los impedimentos. Resolver la recepción en TT-0016 y devolver a S39 el alcance aceptado; cualquier nuevo examen requiere identidad y autorización propias. No hay frame completo con seis posiciones sin adjudicación. Seguir Thinking por separado.",
   "antecedente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/86960653c6ff577cbc8c2e2beb93858433325744/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0016.md",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "evidencias": [
@@ -21,15 +21,18 @@
     "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/6f1118a323bcefac9400d01274e4f8d1db3636ff/dominios/inmunologia/tes-examenes-conocimientos/ronda-01-pdq-tricoleucemia-20260929/PROTOCOLO.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/59125987793e4f5277be29a7ef44399aad19346f/encargos-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/v7/ADENDA-RECUPERACION-P09-20260930.md",
-    "https://github.com/juantoniolloretegea/SV-motor/blob/2e51917bb5864689cb6d2735fef9f2b1db35ce42/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md"
+    "https://github.com/juantoniolloretegea/SV-motor/blob/2e51917bb5864689cb6d2735fef9f2b1db35ce42/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/INFORME.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/RESULTADOS-P01-P25.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/6c68f4288e7356a8574c59d83448720269f96382/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md"
   ],
   "ronda": "EVAL-PDQ-HCL-25-20260929/r1",
   "fecha_inicio_modelo_utc": "2026-09-30T04:51:19.791Z",
-  "respuestas_conservadas_comunicadas": 8,
+  "respuestas_conservadas_comunicadas": 19,
   "respuestas_corregidas_recibidas": 0,
-  "incidente": "P09: dos llamadas en un intercambio; sin respuesta final",
-  "posiciones_pendientes_en_comunicacion": "P10–P25",
-  "continuacion": "preparada; ejecucion no acreditada",
+  "incidente": "P09: llamadas múltiples; P12/P14/P20: contexto; P15: parámetros; P22: longitud de consulta",
+  "posiciones_pendientes_en_comunicacion": "ninguna; seis impedimentos técnicos conservados",
+  "continuacion": "terminada hasta P25; no reactivar",
   "posiciones": 25,
   "criticas": 20,
   "no_criticas": [
@@ -53,7 +56,38 @@
   ],
   "fallo_tecnico": "Fuera de la terna",
   "dictamen_final": null,
-  "frame_completo": null,
+  "frame_completo": false,
   "egui": "previsto, no implementado",
-  "composicion_dominio": "pendiente de contrato"
+  "composicion_dominio": "pendiente de contrato",
+  "respuestas_finales_cotejadas": 19,
+  "correccion_documental_propuesta": {
+    "respuestas": 19,
+    "valores": {
+      "0": 7,
+      "1": 2,
+      "U": 10
+    },
+    "criticas": {
+      "0": 6,
+      "1": 2,
+      "U": 8,
+      "impedimentos": 4
+    },
+    "penalizaciones": [
+      "P07",
+      "P19"
+    ],
+    "revision_humana": "pendiente"
+  },
+  "impedimentos_tecnicos": [
+    "P09",
+    "P12",
+    "P14",
+    "P15",
+    "P20",
+    "P22"
+  ],
+  "sin_ejecutar": 0,
+  "dictamen_propuesto": "No apto por errores críticos; revisión humana pendiente",
+  "ejecucion_cerrada": true
 }

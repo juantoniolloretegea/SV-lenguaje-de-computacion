@@ -6,7 +6,7 @@
 **Estado:** investigación lateral en seguimiento; instalación nativa documentada; comprobación material independiente pendiente.  
 **Corte del Lenguaje examinado:** `9b2e5ef0aa1ea010a7cc79a2a67df7017bd99bc7`, rama `main`.
 
-**Actualización posterior de estado:** §23, vinculada a S39 revisión 24 y TT-0015. Los §§1–22 conservan sus fechas y alcances históricos.
+**Actualización posterior de estado:** §24, vinculada a S39 revisión 27 y TT-0016, incorpora el cierre de Instruct v7 y la corrección documental para revisión humana. Los §§1–23 conservan sus fechas y alcances históricos.
 
 ## 1. Objeto y razón de la investigación
 
@@ -389,3 +389,39 @@ El [TT-0015](../../Inventario-sv/tiques-tecnicos/TT-0015.md) fija una comprobaci
 Inmunología y ciberseguridad conservan criterios y resultados diferenciados. La vía A/WebAssembly sólo podrá plantearse tras Apto en el alcance experimental nativo y autorización específica. No se amplía el Árbitro SV ni se incorpora nada al núcleo por esta preparación.
 
 Se mantiene el circuito separado de encargos y respuestas, la recepción independiente y la conservación por commits. El mapa HTML no se modifica. Las figuras históricas se conservan; el índice del ensayo añade un esquema previsto para la continuación. Las copias históricas de laboratorio mantienen su corte, sin declarar sincronización nueva. S39 permanece pendiente de ejecución y recepción del nuevo alcance.
+
+<a id="qwen80-instruct-cierre-20260930"></a>
+
+## 24. Cierre de Instruct v7 y corrección documental · 30/09/2026
+
+**Seguimiento:** S39, revisión 27 / TT-0016. **Naturaleza:** actualización basada en evidencia de ejecución y corrección documental solicitada expresamente; recepción humana pendiente. La información de este apartado prevalece para Instruct sobre los estados históricos de preparación y ejecución de los apartados anteriores.
+
+### Evidencia recibida y alcance
+
+El examen EVAL-PDQ-HCL-25-20260929/r1 tramitó sus 25 preguntas en cinco segmentos. Se conservaron 19 respuestas finales, seis impedimentos técnicos y ninguna pregunta sin ejecutar. P25 terminó a las 18:46:05.912 UTC; la guarda cerró conforme a las 18:46:07.897 UTC. El cierre posterior comprobó ausencia de procesos propios, carga deshabilitada y conservación de la instancia y los accesos administrativos. La [entrega 09](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/INFORME.md), el [cotejo de originales](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/RESULTADOS-COTEJADOS.json) y la [ficha del modelo](https://github.com/juantoniolloretegea/SV-motor/blob/6c68f4288e7356a8574c59d83448720269f96382/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/REGISTRO-INSTALACION-20260929.md) delimitan lo acreditado.
+
+La continuación autorizada limitó errores instrumentales conocidos a su pregunta sin aceptar argumentos inválidos. Los seis impedimentos son P09, P12, P14, P15, P20 y P22. Los originales se conservan en cinco segmentos, sin repetir las inferencias concluidas ni sustituir las salidas. El cierre conforme indica conservación y terminación instrumental; no significa aprobado del examen.
+
+### Corrección ternaria y criterio de aptitud
+
+| Grupo | 0: acierto | 1: error penalizado | U: indeterminación | Impedimento fuera de terna |
+|---|---:|---:|---:|---:|
+| Total (25) | 7 | 2 | 10 | 6 |
+| Críticas (20) | 6 | 2 | 8 | 4 |
+| No críticas (5) | 1 | 0 | 2 | 2 |
+
+La [corrección por pregunta](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/RESULTADOS-P01-P25.md) contrasta clave previa, fuente congelada y solicitudes y respuestas MCP efectivas. Los dos errores propuestos, P07 y P19, corresponden a posiciones críticas; P19 queda señalada expresamente para revisión humana por la generalización absoluta de una afirmación de la fuente. Las diez U conservan abstenciones o respuestas insuficientes. Los seis impedimentos no se convierten en U, error ni acierto.
+
+**Propuesta documental: No apto en el alcance examinado**, por incumplimiento de la condición crítica, pendiente de revisión humana. Se conserva el umbral del [protocolo](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/1b3e1f999acb6dc6493388b1e80424dc00dd51cb/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-09/PROTOCOLO-BANCO.md), floor(7n/9)=19, junto con la exigencia de todas las posiciones críticas en 0. No se atribuye un vector ternario completo ni se construye un polígono cerrado con las seis posiciones inválidas. La terminación de las 25 preguntas no acredita que las 25 sean evaluables. Tampoco acredita aptitud clínica o del dominio completo.
+
+Los resultados quedan además en la [carpeta de pruebas del modelo, en Markdown](https://github.com/juantoniolloretegea/SV-motor/blob/6c68f4288e7356a8574c59d83448720269f96382/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3B-instruct/tests-y-pruebas-efectuadas/RESULTADOS-PDQ-HCL-25-20260930.md), con un JSON concordante. Esta sede permite comparar campañas sin depender de una interfaz activa.
+
+### Ingeniería de contención y punto de retorno
+
+La revisión mantiene la distinción entre fallo de recuperación, falta de evidencia, afirmación falsa y limitación del instrumento. Una búsqueda sin coincidencias no prueba ausencia del contenido en el corpus. La evaluación de este ensamblaje no aísla por sí sola el conocimiento interno del modelo. Las evidencias no justifican ampliar el núcleo, alterar el contrato del dominio ni considerar recibido el MCP por extensión.
+
+S39 y TT-0016 permanecen pendientes de recepción humana. Los resultados en Markdown y JSON permiten inspeccionar cada original, referencia y fundamento. La dirección retiró la necesidad de revisión web; el servicio local quedó detenido y su presentación anterior se conserva como antecedente. La GUI egui y la composición de frames conservan su condición de necesidades posteriores: un frame Apto no garantiza un conjunto Apto.
+
+Se han revisado las Actas 001–004. La 001 recibe remisión de continuidad; la 003, conciliación con S39; la 004 incorpora este cierre. La Acta 002 conserva su alcance de identidad y contrato de leyenda R06: esta campaña no aporta evidencia que modifique esa recepción. Los diagramas y el mapa HTML histórico quedan íntegros. Thinking y sus recepciones continúan por su expediente propio, sin intervención ni calificación nueva en esta actuación.
+
+**Retorno:** revisión humana de la corrección y de los impedimentos → resolución documentada en TT-0016 y S39 → decisión sobre una nueva ronda identificada si procede. Ninguna repetición, instalación o ejecución queda autorizada por esta actualización documental.

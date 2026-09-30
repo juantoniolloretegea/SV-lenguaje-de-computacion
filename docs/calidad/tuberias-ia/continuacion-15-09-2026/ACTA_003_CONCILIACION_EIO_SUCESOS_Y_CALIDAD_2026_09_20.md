@@ -1,5 +1,7 @@
 # Acta 003 · Conciliación del ensayo EIO con Sucesos y Calidad
 
+**Actualización de seguimiento · 30/09/2026:** [Instruct v7: cierre, corrección y límites](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#qwen80-instruct-cierre-20260930). S39 revisión 27 / TT-0016: 19 respuestas finales, seis impedimentos; propuesta 7/2/10 en la terna, pendiente de revisión humana. Los estados fechados anteriores son antecedentes; no reactivan ejecuciones ni equivalen a la recepción actual.
+
 **Fecha:** 20 de septiembre de 2026.  
 **Registro:** RETP-2026-259. **Seguimiento:** S39, en ejecución; S37 y S38 permanecen pendientes.  
 **Naturaleza:** conciliación documental de actividad ya iniciada; no nueva campaña ni aceptación científica.  
