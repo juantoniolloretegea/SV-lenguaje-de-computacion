@@ -264,3 +264,9 @@ La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_0
 ## Remisión vigente · S39 revisión 21
 
 [Recepción de contexto y documental; recuperación de la comparación](https://github.com/juantoniolloretegea/SV-motor/blob/a98825f24c7865a80e9aa35d6915c4ac93abdd04/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-20b/conversacion/INCIDENCIA_EXPORTACION.md). RETP-2026-274; PTA-2026-016; Acta004 §21. M01–M04 y cuatro condiciones L correctas en contenido; D01–D04 correctas y cuatro pendientes por plazo. DOC01–DOC04 conformes frente a cero conformes estrictas de Qwen, con condiciones diferentes. R02-01 parcial conservada; R02-02 en continuación. Servicio 0.2.3 y URL privada activos.
+
+## Remisión concordante · S39, revisión 29 · 01/10/2026
+
+S39, revisión 29, conserva abierto el seguimiento general. La fase Instruct se cierra administrativamente con **28/100 — No apto**, archivo sin pesos cotejado y retirada confirmada. TT-0014 permanece pendiente; TT-0016 cierra sólo el alcance administrativo de Instruct. El diagnóstico v8 conserva la discrepancia 0/U de P07-B y no modifica v7. No se realizaron nuevas inferencias ni se acredita validación clínica.
+
+[Acta 004 §26](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#instruct-archivo-retirada-20261001) · [S39](../../Inventario-sv/sucesos/SUCESOS_SV.md#s39) · [Archivo experimental, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) · [Acta de retirada, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md).

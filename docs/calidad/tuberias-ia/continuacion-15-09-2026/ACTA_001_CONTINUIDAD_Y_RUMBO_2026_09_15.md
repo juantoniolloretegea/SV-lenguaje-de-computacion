@@ -183,3 +183,9 @@ La [Acta 003](ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md), RETP-2
 Se conservan inferencias nativas contractualmente adversas, controles JSON con su reserva, interrupciones del navegador por memoria y la candidata de servicio nativo aún sin comprobación ejecutable. La preparación EIO-NAT-PREP-03 tiene encargo identificado, sin entrega sucesora recibida en el corte. Su recepción y cualquier habilitación material conservan sus puertas.
 
 Sucesos CSV/Markdown/historial y RETP CSV/Markdown se concilian en el mismo cambio. S37/S38 siguen pendientes; S22, S26 y S32/BIS-03 mantienen sus alcances y estados. El mapa y las copias históricas conservan su corte conforme a §10.1. Esta actualización no abre GUI, núcleo, dominio, infraestructura, campaña ni gasto.
+
+## Remisión al archivo y retirada de Instruct · 01/10/2026
+
+S39, revisión 29, conserva abierto el seguimiento general. La fase Instruct se cierra administrativamente con **28/100 — No apto**, archivo sin pesos cotejado y retirada confirmada. TT-0014 permanece pendiente; TT-0016 cierra sólo el alcance administrativo de Instruct. El diagnóstico v8 conserva la discrepancia 0/U de P07-B y no modifica v7. No se realizaron nuevas inferencias ni se acredita validación clínica.
+
+[Acta 004 §26](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#instruct-archivo-retirada-20261001) · [S39](../../Inventario-sv/sucesos/SUCESOS_SV.md#s39) · [Archivo experimental, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) · [Acta de retirada, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md).

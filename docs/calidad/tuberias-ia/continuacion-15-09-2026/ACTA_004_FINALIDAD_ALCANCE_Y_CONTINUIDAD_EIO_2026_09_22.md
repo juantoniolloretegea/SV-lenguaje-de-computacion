@@ -433,3 +433,19 @@ MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, pagin
 Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.
 
 [Fuentes, pruebas y alcance](https://github.com/juantoniolloretegea/SV-motor/blob/9260fa886d7915330216d809eec16184facc8f16/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.3/LEAME.md); [adenda de integración](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b8888ee96b48b3119b61584985e0d802d4a366d/encargos-ejecucion/GPTOSS-SAFEGUARD-PREPARACION-20261001/v1/ADENDA.md). Asiento concordante en S39 revisión 28 y TT-0014. La conservación local del componente no acredita recepción completa de Safeguard. Las evidencias del modelo deben incluir análisis íntegro y decisión final, con su correspondencia documental. Se mantienen los resultados Qwen en sus expedientes; no se reabren inferencias ni se modifica el mapa histórico.
+
+<a id="instruct-archivo-retirada-20261001"></a>
+
+## 26. Archivo experimental y retirada de Instruct · 01/10/2026
+
+La fase experimental de Qwen3-Next-80B-A3B-Instruct queda cerrada administrativamente el 01/10/2026, con **28/100 — No apto**, sin nuevas inferencias. Se mantienen 7 aciertos, 0 errores no críticos, 2 errores críticos (P07/P19), 10 U y 6 impedimentos técnicos (P09/P12/P14/P15/P20/P22) fuera de la terna. El umbral **T(25)=⌊7×25/9⌋=19** se distingue de la puntuación. No se emite κ de célula completa con seis posiciones sin adjudicación.
+
+El diagnóstico v8 se conserva por separado: para P07-B, la ejecución propuso 0; la revisión documental propuso U por insuficiencia, al omitir la posible necesidad de biopsia exigida por la clave. Se mantienen ambas propuestas y su fundamento. Esta discrepancia no modifica el examen v7 ni abre otra inferencia.
+
+La [release de archivo experimental — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) conserva las evidencias sin pesos. Sus cinco adjuntos se descargaron desde GitHub a una carpeta independiente; se comprobaron SHA-256, contenidos comprimidos, segmentos reunidos y correspondencia con 26.139 rutas del inventario. Se conservan fuentes exactas, configuración y dependencias fijadas; 72 compilaciones derivadas quedan identificadas mediante sus huellas, sin prometer reproducción binaria idéntica. Véase el [cotejo de custodia — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json).
+
+La retirada quedó confirmada por el proveedor a las 2026-10-01T09:49:42Z (1/10/2026, 11:49:42 CEST). La revisión posterior no encontró recursos residuales exclusivos en las categorías disponibles. El [acta de retirada — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md) conserva la identidad y el registro técnico.
+
+**S39 permanece abierto y TT-0014 pendiente.** TT-0016 cierra exclusivamente la fase administrativa de Instruct. La recepción científica independiente no se sustituye por este cierre, que no acredita validación clínica. Thinking y OpenAI conservan sus expedientes y no fueron intervenidos.
+
+El hallazgo del recuperador se conserva en TT-0014: las variantes léxicas ensayadas produjeron búsquedas vacías; la entrega directa de página no acredita suficiencia universal de respuesta ni resolución del componente.
