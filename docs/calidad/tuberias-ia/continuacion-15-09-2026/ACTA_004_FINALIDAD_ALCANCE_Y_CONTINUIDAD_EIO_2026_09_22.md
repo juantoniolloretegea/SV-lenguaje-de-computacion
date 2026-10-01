@@ -425,3 +425,11 @@ S39 y TT-0016 permanecen pendientes de recepción humana. Los resultados en Mark
 Se han revisado las Actas 001–004. La 001 recibe remisión de continuidad; la 003, conciliación con S39; la 004 incorpora este cierre. La Acta 002 conserva su alcance de identidad y contrato de leyenda R06: esta campaña no aporta evidencia que modifique esa recepción. Los diagramas y el mapa HTML histórico quedan íntegros. Thinking y sus recepciones continúan por su expediente propio, sin intervención ni calificación nueva en esta actuación.
 
 **Retorno:** revisión humana de la corrección y de los impedimentos → resolución documentada en TT-0016 y S39 → decisión sobre una nueva ronda identificada si procede. Ninguna repetición, instalación o ejecución queda autorizada por esta actualización documental.
+
+## 25. MCP 0.1.3 y requisito de auditoría íntegra · 01/10/2026
+
+MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral.
+
+Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.
+
+[Fuentes, pruebas y alcance](https://github.com/juantoniolloretegea/SV-motor/blob/9260fa886d7915330216d809eec16184facc8f16/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.3/LEAME.md); [adenda de integración](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b8888ee96b48b3119b61584985e0d802d4a366d/encargos-ejecucion/GPTOSS-SAFEGUARD-PREPARACION-20261001/v1/ADENDA.md). Asiento concordante en S39 revisión 28 y TT-0014. La conservación local del componente no acredita recepción completa de Safeguard. Las evidencias del modelo deben incluir análisis íntegro y decisión final, con su correspondencia documental. Se mantienen los resultados Qwen en sus expedientes; no se reabren inferencias ni se modifica el mapa histórico.

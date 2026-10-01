@@ -3,31 +3,37 @@
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "id": "TT-0014",
   "suceso_principal": "S39",
-  "revision_suceso": 26,
+  "revision_suceso": 28,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
-  "fecha_actualizacion_utc": "2026-09-30T08:59:14Z",
-  "fecha_corte_evidencias_utc": "2026-09-30T08:42:00Z",
+  "fecha_actualizacion_utc": "2026-10-01T09:53:10Z",
+  "fecha_corte_evidencias_utc": "2026-10-01T09:53:10Z",
   "fecha_fin_utc": null,
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
-  "resultado_actual": "Comprobaciones dirigidas MCP entregadas y dos consultas Qwen80 recibidas; recepción propia del componente pendiente.",
+  "resultado_actual": "MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral.",
   "recepcion_finalizada": false,
-  "dependencia_y_retorno": "Completar la recepción propia del componente y conservar sus límites. Contrastar el uso efectivo del mismo corpus y contrato en las entregas de Instruct y Thinking. Retorno a S39 mediante evidencia y dictamen acotados.",
+  "dependencia_y_retorno": "Cotejar la cobertura integral conductor–MCP–motor–observador en la instalación autorizada; conservar íntegro el razonamiento emitido. Retorno a TT-0014/S39 con alcance probado. No modificar las campañas Qwen.",
   "antecedente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/86960653c6ff577cbc8c2e2beb93858433325744/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "evidencias": [
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9773175b852fa5866fbaf73eebe618d570c3678b/respuestas-ejecucion/MCP-DOCUMENTAL-PREPARACION-20260926/entrega-05/INFORME_RECEPCION.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/816a70bd6ff72c8d55f9bd599823a17e1fd57454/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/revision-entrega-08/RECEPCION.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/9260fa886d7915330216d809eec16184facc8f16/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.3/LEAME.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b8888ee96b48b3119b61584985e0d802d4a366d/encargos-ejecucion/GPTOSS-SAFEGUARD-PREPARACION-20261001/v1/ADENDA.md"
   ],
   "versiones": [
     "0.1.0",
     "0.1.1",
-    "0.1.2"
+    "0.1.2",
+    "0.1.3"
   ],
   "consulta_con_internet": false,
   "claves_fuera_del_corpus": true,
   "uso_Qwen80_recibido": true,
   "consultas_completas_recibidas": 2,
-  "cliente_minimo_012_ofrece_herramientas": false
+  "cliente_minimo_012_ofrece_herramientas": false,
+  "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
+  "pruebas_rust_013_conformes": 25,
+  "integracion_safeguard_comprobada": false
 }
