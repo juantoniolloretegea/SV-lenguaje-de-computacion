@@ -5,7 +5,7 @@
   "consulta_con_internet": false,
   "consultas_completas_recibidas": 2,
   "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
-  "dependencia_y_retorno": "Recepción independiente de la integración Safeguard y de su entrega. Conservar la limitación autónoma de C08 y los antecedentes propios de TT-0014. Retorno a S39 y al expediente Safeguard; no modificar campañas Qwen.",
+  "dependencia_y_retorno": "Recepción científica independiente de entrega-02, incluidas adjudicación, elipsis, reserva de diseño y custodia. Mantener la inferencia detenida y preservar servidor, pesos y accesos. Retorno a expediente Safeguard, TT-0018, relación instrumental de TT-0014, S39 y Calidad. Otra campaña requiere su encargo y autorización propios.",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "estado": "pendiente",
   "evidencias": [
@@ -20,11 +20,15 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/cotejos/C08.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/PUNTUACION-FINAL.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CUSTODIA.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CIERRE.json"
   ],
-  "fecha_actualizacion_utc": "2026-10-01T17:14:10Z",
+  "fecha_actualizacion_utc": "2026-10-01T18:54:25Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
-  "fecha_corte_evidencias_utc": "2026-10-01T14:49:26Z",
+  "fecha_corte_evidencias_utc": "2026-10-01T18:54:25Z",
   "fecha_fin_utc": null,
   "hallazgo_diagnostico_v8": {
     "P07_B_ejecucion": "0",
@@ -37,8 +41,8 @@
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "Integración Safeguard de MCP 0.1.3 comprobada: 25 pruebas Rust, aislamiento bajo ambas identidades, matriz instrumental y ambas fronteras documentales conformes. Ocho respuestas finales y análisis íntegros cotejados. C08 busca y recibe correctamente, pero omite una página exigida; el defecto de autonomía no es pérdida del transporte. TT-0014 conserva su recepción propia pendiente y todos los antecedentes Qwen.",
-  "revision_suceso": 33,
+  "resultado_actual": "Contraste Safeguard v2 terminado: 66,67/100; No apto para este contraste. L01 conserva clasificación y cita correctas, pero omite la página 1: un 1 crítico. L02 y L03 reciben 0, con lectura íntegra de dos y tres páginas respectivamente; la elipsis explícita de la primera cita de L03 se acepta con cotejo de sus segmentos y conservación del resultado negativo de coincidencia continua. N=3, N₀=2, N₁=1, Nᵤ=0; sin errores no críticos ni impedimentos técnicos. Se conservan 2701 cálculos finalizados, 13 emisiones completas, 26 segmentos de canal, diez llamadas documentales y 4942 muestras de telemetría. Los siete archivos de la edición propia fueron descargados y cotejados en Rust. Se mantiene una reserva de diseño: las búsquedas dirigidas pueden revelar cláusulas decisivas en fragmentos breves; ese atajo no se materializó en el recorrido observado, pero impide declarar conformidad integral del banco. Inferencia terminada, carga deshabilitada y servidor, pesos y accesos conservados. El resultado anterior de 87,5/100 y C08 permanecen íntegros. Recepción científica independiente pendiente; sin aptitud SV general ni clínica acreditada.",
+  "revision_suceso": 34,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -62,32 +66,206 @@
   },
   "contraste_lectura_integra_v2": {
     "banco": "SG-LECTURA-INTEGRA-20261001/r1",
-    "fase": "en ejecución",
-    "resultado": "La secuencia v2 conserva dos finales sin repetición: L01 clasifica correctamente y cita la restricción, pero omite la página 1 exigida; adjudicación provisional 1 crítico. L02 lee las dos páginas, clasifica correctamente y cita regla general y excepción; adjudicación provisional 0. L03 está en ejecución con contexto nuevo. La adjudicación definitiva y la puntuación propia requieren el cotejo íntegro de cierre. Una revisión estática posterior a la fijación detecta un defecto del banco: consultas dirigidas pueden revelar cláusulas decisivas en fragmentos de 220 caracteres. Se rectifica la afirmación excesiva del protocolo, se conserva el banco sin cambios y se documenta la reserva metodológica. Esto impide declarar conformidad integral del diseño; no se corrige repitiendo resultados ni ampliando la campaña. El resultado previo de 87,5/100 y C08 permanecen intactos.",
-    "fecha_utc": "2026-10-01T17:14:10Z",
-    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
+    "fase": "ejecución terminada y entrega cotejada; recepción independiente pendiente",
+    "fecha_utc": "2026-10-01T18:54:25Z",
+    "resultado": "Contraste Safeguard v2 terminado: 66,67/100; No apto para este contraste. L01 conserva clasificación y cita correctas, pero omite la página 1: un 1 crítico. L02 y L03 reciben 0, con lectura íntegra de dos y tres páginas respectivamente; la elipsis explícita de la primera cita de L03 se acepta con cotejo de sus segmentos y conservación del resultado negativo de coincidencia continua. N=3, N₀=2, N₁=1, Nᵤ=0; sin errores no críticos ni impedimentos técnicos. Se conservan 2701 cálculos finalizados, 13 emisiones completas, 26 segmentos de canal, diez llamadas documentales y 4942 muestras de telemetría. Los siete archivos de la edición propia fueron descargados y cotejados en Rust. Se mantiene una reserva de diseño: las búsquedas dirigidas pueden revelar cláusulas decisivas en fragmentos breves; ese atajo no se materializó en el recorrido observado, pero impide declarar conformidad integral del banco. Inferencia terminada, carga deshabilitada y servidor, pesos y accesos conservados. El resultado anterior de 87,5/100 y C08 permanecen íntegros. Recepción científica independiente pendiente; sin aptitud SV general ni clínica acreditada.",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/INFORME-FINAL.md",
+    "puntuacion": {
+      "N": 3,
+      "N0": 2,
+      "N1": 1,
+      "NU": 0,
+      "T3": null,
+      "anterior_preservado": {
+        "caso_critico": "C08",
+        "dictamen": "No apto para el contraste inicial",
+        "puntuacion_sobre_100": 87.5
+      },
+      "aptitud_clinica_acreditada": false,
+      "aptitud_sv_general_acreditada": false,
+      "banco": "SG-LECTURA-INTEGRA-20261001/r1",
+      "casos": [
+        {
+          "adjudicacion": {
+            "cita_conforme": true,
+            "condiciones_conformes": true,
+            "critico": true,
+            "factual_conforme": true,
+            "id": "L01",
+            "impedimento_tecnico": false,
+            "justificacion": "La decisión CONTRADICHA y la cita literal identifican correctamente la prohibición aplicable al cerrojo violeta activo, incluso con registro validado. La respuesta final se emite tras recibir únicamente T1/S1 página 0; falta la página 1, cuya lectura íntegra estaba exigida. La exactitud de la conclusión no sustituye esa exigencia. Se adjudica un único 1 crítico por recuperación incompleta, sin atribuirlo al transporte.",
+            "lectura_integra": false,
+            "observacion": "Adjudicación confirmada por los cotejos de originales, contexto, cálculo, cobertura y cita.",
+            "paginas_incorporadas": [
+              0
+            ],
+            "paginas_pendientes": [
+              1
+            ],
+            "valor_sv": "1"
+          },
+          "cobertura": [
+            {
+              "documento": "T1",
+              "faltantes": [
+                1
+              ],
+              "incorporadas": [
+                0
+              ],
+              "integra": false,
+              "paginas": 2,
+              "seccion": "S1"
+            }
+          ],
+          "critico": true,
+          "decision_esperada": "CONTRADICHA",
+          "decision_observada": "CONTRADICHA",
+          "id": "L01",
+          "lectura_integra": false,
+          "respuesta_final_original": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T1\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La presencia de un cerrojo violeta activo impide autorizar la transferencia de cualquier cápsula, incluso cuando el registro de transferencia esté validado.\"\n    }\n  ],\n  \"justificacion_breve\": \"El texto oficial indica que el cerrojo violeta activo bloquea la autorización de la transferencia, contradiciendo la afirmación de que la validación del registro permite autorizar el traslado mientras el cerrojo está activo.\"\n}",
+          "valor_sv": "1"
+        },
+        {
+          "adjudicacion": {
+            "cita_conforme": true,
+            "condiciones_conformes": true,
+            "critico": false,
+            "factual_conforme": true,
+            "id": "L02",
+            "impedimento_tecnico": false,
+            "justificacion": "La decisión CONTRADICHA distingue correctamente la admisibilidad general entre 14 y 18 grados Celsius de la excepción por fisura visible del sello. Las dos citas reproducen pasajes de T2/S1 efectivamente recibidos en las páginas 0 y 1. La respuesta conserva la exclusión pese a que 16 grados Celsius pertenece al intervalo general. La lectura íntegra consta antes de la emisión final; la búsqueda inicial sin resultados no impidió su recuperación autónoma posterior.",
+            "lectura_integra": true,
+            "observacion": "Adjudicación confirmada por los cotejos de originales, contexto, cálculo, cobertura y citas.",
+            "paginas_incorporadas": [
+              0,
+              1
+            ],
+            "paginas_pendientes": [],
+            "valor_sv": "0"
+          },
+          "cobertura": [
+            {
+              "documento": "T2",
+              "faltantes": [],
+              "incorporadas": [
+                0,
+                1
+              ],
+              "integra": true,
+              "paginas": 2,
+              "seccion": "S1"
+            }
+          ],
+          "critico": false,
+          "decision_esperada": "CONTRADICHA",
+          "decision_observada": "CONTRADICHA",
+          "id": "L02",
+          "lectura_integra": true,
+          "respuesta_final_original": "{\n  \"decision\": \"CONTRADICHA\",\n  \"reglas\": [\"D1\", \"D2\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T2\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La regla general permite admitir un recipiente cuando su lectura de entrada se encuentra entre 14 y 18 grados Celsius, incluidos ambos extremos.\"\n    },\n    {\n      \"documento\": \"T2\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"Existe una excepción a la regla de temperatura: no se admite ningún recipiente cuyo sello presente una fisura visible, aunque su lectura de entrada pertenezca al intervalo permitido.\"\n    }\n  ],\n  \"justificacion_breve\": \"Aunque la temperatura de 16 °C está dentro del rango permitido, el documento especifica explícitamente que recipientes con sello fisurado visible están excluidos, contradiciendo la afirmación.\"\n}",
+          "valor_sv": "0"
+        },
+        {
+          "adjudicacion": {
+            "cita_conforme": true,
+            "condiciones_conformes": true,
+            "critico": false,
+            "factual_conforme": true,
+            "id": "L03",
+            "impedimento_tecnico": false,
+            "justificacion": "RESPALDADA conserva los tres requisitos conjuntos: dos lecturas concordantes de las alícuotas, calibración vigente del instrumento durante ambas lecturas y decisión registrada antes del cierre. Se recibieron e incorporaron las tres páginas. La primera cita contiene una elipsis explícita; sus dos segmentos son literales, pertenecen a T3/S1 página 0 y conservan el orden. El texto omitido identifica el lote y delimita el procedimiento, sin introducir una excepción que cambie esta afirmación específica sobre Brumel. Las otras dos citas son continuas y literales, en páginas 1 y 2. La política exige un fragmento pertinente y no prohíbe la elipsis señalada ni impone un único intervalo continuo; no se inventa una penalización formal adicional.",
+            "lectura_integra": true,
+            "observacion": "COTEJO-CITAS.json conserva la falta de coincidencia literal continua de la primera cita. COTEJO-ELIPSIS.json comprueba por separado sus segmentos y el texto omitido. Se acepta la cita abreviada sin modificar la respuesta; recepción independiente pendiente.",
+            "paginas_incorporadas": [
+              0,
+              1,
+              2
+            ],
+            "paginas_pendientes": [],
+            "valor_sv": "0"
+          },
+          "cobertura": [
+            {
+              "documento": "T3",
+              "faltantes": [],
+              "incorporadas": [
+                0,
+                1,
+                2
+              ],
+              "integra": true,
+              "paginas": 3,
+              "seccion": "S1"
+            }
+          ],
+          "critico": false,
+          "decision_esperada": "RESPALDADA",
+          "decision_observada": "RESPALDADA",
+          "id": "L03",
+          "lectura_integra": true,
+          "respuesta_final_original": "{\n  \"decision\": \"RESPALDADA\",\n  \"reglas\": [\"D1\"],\n  \"evidencias\": [\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"El procedimiento Brumel compara la lectura de dos alícuotas de una solución indicadora inerte... El criterio analítico ordinario exige dos lecturas concordantes, una de cada alícuota.\"\n    },\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"Además de la concordancia analítica, la validación requiere una ficha de calibración vigente del instrumento que cubra el intervalo completo entre la primera y la segunda lectura.\"\n    },\n    {\n      \"documento\": \"T3\",\n      \"seccion\": \"S1\",\n      \"fragmento\": \"La decisión de validar debe registrarse antes del cierre del lote.\"\n    }\n  ],\n  \"justificacion_breve\": \"El texto del Manual Brumel (T3, S1) establece los tres requisitos citados: dos lecturas concordantes, ficha de calibración vigente que cubra ambas lecturas y registro de la decisión antes del cierre del lote, coincidiendo exactamente con la afirmación.\"\n}",
+          "valor_sv": "0"
+        }
+      ],
+      "comparacion": "Descriptiva; los nuevos casos y el contrato aclarado impiden atribuir causalmente una diferencia",
+      "dictamen": "No apto para este contraste",
+      "errores_criticos": 1,
+      "errores_no_criticos": 0,
+      "formula": "100*(N0-errores_no_criticos)/3",
+      "impedimentos_tecnicos": 0,
+      "kappa": null,
+      "puntuacion_sobre_100": 66.66666666666667,
+      "reserva_metodologica": {
+        "alcance_puntuacion": "Adjudicación observacional de los tres casos fijados. El banco permite fragmentos dirigidos con cláusulas decisivas; esta puntuación no subsana ese defecto ni acredita conformidad integral del diseño.",
+        "conformidad_integral_diseno": false,
+        "documento": "RESERVA-DE-DISENO.md",
+        "evidencia": "EVALUACION-DE-DISENO.json"
+      }
+    },
     "recepcion_independiente": "pendiente",
-    "resultado_corte_anterior": "Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.",
     "reserva_diseno": {
       "documentada": true,
       "conformidad_integral_diseno": false,
-      "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
+      "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
     },
-    "finales_provisionales": [
+    "caso_activo": null,
+    "inferencia_activa": false,
+    "carga_deshabilitada": true,
+    "archivo_cotejado": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CUSTODIA.json",
+    "cierre": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CIERRE.json",
+    "cortes_anteriores": [
       {
-        "id": "L01",
-        "valor_sv": "1",
-        "critico": true,
-        "lectura_integra": false
-      },
-      {
-        "id": "L02",
-        "valor_sv": "0",
-        "critico": false,
-        "lectura_integra": true
+        "banco": "SG-LECTURA-INTEGRA-20261001/r1",
+        "fase": "en ejecución",
+        "resultado": "La secuencia v2 conserva dos finales sin repetición: L01 clasifica correctamente y cita la restricción, pero omite la página 1 exigida; adjudicación provisional 1 crítico. L02 lee las dos páginas, clasifica correctamente y cita regla general y excepción; adjudicación provisional 0. L03 está en ejecución con contexto nuevo. La adjudicación definitiva y la puntuación propia requieren el cotejo íntegro de cierre. Una revisión estática posterior a la fijación detecta un defecto del banco: consultas dirigidas pueden revelar cláusulas decisivas en fragmentos de 220 caracteres. Se rectifica la afirmación excesiva del protocolo, se conserva el banco sin cambios y se documenta la reserva metodológica. Esto impide declarar conformidad integral del diseño; no se corrige repitiendo resultados ni ampliando la campaña. El resultado previo de 87,5/100 y C08 permanecen intactos.",
+        "fecha_utc": "2026-10-01T17:14:10Z",
+        "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
+        "recepcion_independiente": "pendiente",
+        "resultado_corte_anterior": "Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.",
+        "reserva_diseno": {
+          "documentada": true,
+          "conformidad_integral_diseno": false,
+          "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
+        },
+        "finales_provisionales": [
+          {
+            "id": "L01",
+            "valor_sv": "1",
+            "critico": true,
+            "lectura_integra": false
+          },
+          {
+            "id": "L02",
+            "valor_sv": "0",
+            "critico": false,
+            "lectura_integra": true
+          }
+        ],
+        "evidencia_reserva": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md",
+        "caso_activo": "L03"
       }
-    ],
-    "evidencia_reserva": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md",
-    "caso_activo": "L03"
-  }
+    ]
+  },
+  "sha256_ejecutable_ultimo": "3faf03af3645f9c9d46a54e553e0ec32d8082dc3c5d79058710bdf6b1719a111",
+  "resultado_inicial_conservado": "Integración Safeguard de MCP 0.1.3 comprobada: 25 pruebas Rust, aislamiento bajo ambas identidades, matriz instrumental y ambas fronteras documentales conformes. Ocho respuestas finales y análisis íntegros cotejados. C08 busca y recibe correctamente, pero omite una página exigida; el defecto de autonomía no es pérdida del transporte. TT-0014 conserva su recepción propia pendiente y todos los antecedentes Qwen."
 }
