@@ -2,10 +2,10 @@
   "version_esquema": "1.0",
   "id": "TT-0018",
   "suceso_principal": "S39",
-  "revision_suceso": 32,
+  "revision_suceso": 33,
   "estado": "en ejecución",
   "fecha_alta_utc": "2026-10-01T12:36:42Z",
-  "fecha_actualizacion_utc": "2026-10-01T15:55:53Z",
+  "fecha_actualizacion_utc": "2026-10-01T17:14:10Z",
   "fecha_fin_utc": null,
   "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B",
   "resultado_actual": "Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.",
@@ -26,7 +26,8 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
   ],
   "dependencia_y_retorno": "Recibir independientemente la entrega y revisar sus adjudicaciones sin alterar originales. Mantener servidor y accesos. Retorno a TT-0018, TT-0014, S39 y expediente Safeguard; no se abre otra campaña.",
   "realizaciones": [
@@ -60,9 +61,31 @@
   "contraste_lectura_integra_v2": {
     "banco": "SG-LECTURA-INTEGRA-20261001/r1",
     "fase": "en ejecución",
-    "resultado": "Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.",
-    "fecha_utc": "2026-10-01T15:55:53Z",
+    "resultado": "La secuencia v2 conserva dos finales sin repetición: L01 clasifica correctamente y cita la restricción, pero omite la página 1 exigida; adjudicación provisional 1 crítico. L02 lee las dos páginas, clasifica correctamente y cita regla general y excepción; adjudicación provisional 0. L03 está en ejecución con contexto nuevo. La adjudicación definitiva y la puntuación propia requieren el cotejo íntegro de cierre. Una revisión estática posterior a la fijación detecta un defecto del banco: consultas dirigidas pueden revelar cláusulas decisivas en fragmentos de 220 caracteres. Se rectifica la afirmación excesiva del protocolo, se conserva el banco sin cambios y se documenta la reserva metodológica. Esto impide declarar conformidad integral del diseño; no se corrige repitiendo resultados ni ampliando la campaña. El resultado previo de 87,5/100 y C08 permanecen intactos.",
+    "fecha_utc": "2026-10-01T17:14:10Z",
     "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b8db5c30c94863bc4fd95f050c9ae0b56f5d25d0/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/ADMISION-PREVIA.json",
-    "recepcion_independiente": "pendiente"
+    "recepcion_independiente": "pendiente",
+    "resultado_corte_anterior": "Contraste de recuperación documental íntegra Safeguard v2 autorizado expresamente y en ejecución, con banco nuevo SG-LECTURA-INTEGRA-20261001/r1 y exactamente tres casos autónomos. Corpus, afirmaciones, referencias reservadas, criticidad y configuración fijados antes de inferir. Contrato de páginas aclarado en la representación efectiva y observador pasivo incorporado; quince pruebas del conductor y veinticinco del MCP conformes. Tres rutas documentales completas comprobadas sin inferencia, con reserva mínima observada de 3869 tokens. Carga completa acreditada; primera secuencia en curso. El resultado anterior de 87,5/100 y C08 se conservan intactos. La nueva puntuación y el dictamen quedan pendientes del cierre y cotejo íntegros.",
+    "reserva_diseno": {
+      "documentada": true,
+      "conformidad_integral_diseno": false,
+      "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md"
+    },
+    "finales_provisionales": [
+      {
+        "id": "L01",
+        "valor_sv": "1",
+        "critico": true,
+        "lectura_integra": false
+      },
+      {
+        "id": "L02",
+        "valor_sv": "0",
+        "critico": false,
+        "lectura_integra": true
+      }
+    ],
+    "evidencia_reserva": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/bb9158c52c1c21de691745d79ad21b9969286f73/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/RESERVA-DE-DISENO.md",
+    "caso_activo": "L03"
   }
 }
