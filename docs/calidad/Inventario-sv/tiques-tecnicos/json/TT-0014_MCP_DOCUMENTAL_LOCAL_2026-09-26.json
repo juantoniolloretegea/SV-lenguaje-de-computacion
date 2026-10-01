@@ -5,7 +5,7 @@
   "consulta_con_internet": false,
   "consultas_completas_recibidas": 2,
   "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
-  "dependencia_y_retorno": "Cotejar la cobertura integral conductor–MCP–motor–observador en la instalación autorizada; conservar íntegro el razonamiento emitido. Retorno a TT-0014/S39 con alcance probado. No modificar las campañas Qwen.",
+  "dependencia_y_retorno": "Recepción independiente de la integración Safeguard y de su entrega. Conservar la limitación autónoma de C08 y los antecedentes propios de TT-0014. Retorno a S39 y al expediente Safeguard; no modificar campañas Qwen.",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "estado": "pendiente",
   "evidencias": [
@@ -16,11 +16,13 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/cotejos/C08.json"
   ],
-  "fecha_actualizacion_utc": "2026-10-01T12:36:42Z",
+  "fecha_actualizacion_utc": "2026-10-01T14:49:26Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
-  "fecha_corte_evidencias_utc": "2026-10-01T09:53:10Z",
+  "fecha_corte_evidencias_utc": "2026-10-01T14:49:26Z",
   "fecha_fin_utc": null,
   "hallazgo_diagnostico_v8": {
     "P07_B_ejecucion": "0",
@@ -29,12 +31,12 @@
     "sintesis": "## Hallazgo de recuperación conservado · 01/10/2026\n\nEl diagnóstico v8 acredita búsquedas sin resultados bajo las consultas ensayadas y entrega íntegra de la página fijada cuando ésta se suministra de forma directa. La coincidencia textual exige la presencia de todos los términos; variantes como «difícil» frente a «dificulta» y «anual» frente a «por año» limitan la recuperación observada. Ello no demuestra un fallo del transporte documental ni una corrección ya incorporada al recuperador.\n\nLa condición B permitió aprovechar contenido previamente entregado, pero no garantiza suficiencia de todas las respuestas. En P07-B se conservan el 0 de la ejecución y la propuesta documental U por omitir la posible necesidad de biopsia exigida por la clave. La discrepancia no altera el examen v7.\n\n**TT-0014 permanece pendiente**, con su recepción propia y su limitación documentada. El archivo y la retirada de Instruct no resuelven ese tique ni autorizan otra inferencia.\n\n[Diagnóstico original — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/598039cae73f8f40f820bc5e3f78551a722ab58e/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-10/INFORME.md) · [Custodia final — acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1). Remisión concordante: Acta 004 §26 y S39, revisión 29.\n\nEste hallazgo corresponde al recuperador empleado en Instruct. Se conserva la actualización concurrente MCP 0.1.3 y sus comprobaciones propias; este cierre no la instala ni sustituye su recepción integral.\n\n"
   },
   "id": "TT-0014",
-  "integracion_safeguard_comprobada": false,
+  "integracion_safeguard_comprobada": true,
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral. Integración instrumental de MCP 0.1.3 comprobada en el destino Safeguard: 25 pruebas Rust favorables, aislamiento bajo ambas identidades y cotejo exacto de las dos uniones documentales. Las respuestas completas y la autonomía del candidato permanecen pendientes tras corregir defectos del motor. TT-0014 conserva su recepción propia pendiente y los antecedentes Qwen.",
-  "revision_suceso": 30,
+  "resultado_actual": "Integración Safeguard de MCP 0.1.3 comprobada: 25 pruebas Rust, aislamiento bajo ambas identidades, matriz instrumental y ambas fronteras documentales conformes. Ocho respuestas finales y análisis íntegros cotejados. C08 busca y recibe correctamente, pero omite una página exigida; el defecto de autonomía no es pérdida del transporte. TT-0014 conserva su recepción propia pendiente y todos los antecedentes Qwen.",
+  "revision_suceso": 31,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -47,11 +49,13 @@
     "0.1.3"
   ],
   "integracion_instrumental_safeguard": {
-    "fecha_utc": "2026-10-01T12:36:42Z",
-    "resultado": "Integración instrumental de MCP 0.1.3 comprobada en el destino Safeguard: 25 pruebas Rust favorables, aislamiento bajo ambas identidades y cotejo exacto de las dos uniones documentales. Las respuestas completas y la autonomía del candidato permanecen pendientes tras corregir defectos del motor. TT-0014 conserva su recepción propia pendiente y los antecedentes Qwen.",
+    "fecha_utc": "2026-10-01T14:49:26Z",
+    "resultado": "Integración Safeguard de MCP 0.1.3 comprobada: 25 pruebas Rust, aislamiento bajo ambas identidades, matriz instrumental y ambas fronteras documentales conformes. Ocho respuestas finales y análisis íntegros cotejados. C08 busca y recibe correctamente, pero omite una página exigida; el defecto de autonomía no es pérdida del transporte. TT-0014 conserva su recepción propia pendiente y todos los antecedentes Qwen.",
     "pruebas_mcp": 25,
     "uniones_cotejadas": true,
-    "respuestas_candidato_adjudicadas": 0,
-    "recepcion_integral": false
+    "respuestas_candidato_adjudicadas": 8,
+    "recepcion_integral": false,
+    "recuperacion_autonoma_completa": false,
+    "razonamiento_emitido_integro": true
   }
 }

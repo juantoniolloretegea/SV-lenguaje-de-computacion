@@ -2,27 +2,58 @@
   "version_esquema": "1.0",
   "id": "TT-0018",
   "suceso_principal": "S39",
-  "revision_suceso": 30,
+  "revision_suceso": 31,
   "estado": "en ejecución",
   "fecha_alta_utc": "2026-10-01T12:36:42Z",
-  "fecha_actualizacion_utc": "2026-10-01T12:36:42Z",
+  "fecha_actualizacion_utc": "2026-10-01T14:49:26Z",
   "fecha_fin_utc": null,
   "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B",
-  "resultado_actual": "Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen.",
+  "resultado_actual": "Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
   "revision_motor": "4400935451da5e2dc7379a3f92fbbada66557f6c",
-  "sha256_ejecutable": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615",
+  "sha256_ejecutable": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0",
   "instalacion_acreditada": true,
   "carga_completa_acreditada": true,
-  "contraste_concluido": false,
+  "contraste_concluido": true,
   "recepcion_finalizada": false,
-  "aptitud_clinica": "no determinada",
+  "aptitud_clinica": "no acreditada",
   "tique_mcp": "TT-0014",
   "tique_ordinario_antecedente": "TT-0015",
   "evidencias": [
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/AVANCE-INSTALACION-20261001.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/PUNTUACION-FINAL.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/9b23fc5f59d602af8f31ed8666096c0d65471b2d/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/COTEJO-CUSTODIA.json"
   ],
-  "dependencia_y_retorno": "Completar la secuencia corregida, cotejar íntegramente y conservar la entrega para recepción independiente, con retorno a S39, MCP y expediente Safeguard."
+  "dependencia_y_retorno": "Recibir independientemente la entrega y revisar sus adjudicaciones sin alterar originales. Mantener servidor y accesos. Retorno a TT-0018, TT-0014, S39 y expediente Safeguard; no se abre otra campaña.",
+  "realizaciones": [
+    {
+      "casos": "C01-C07",
+      "recorrido": "contraste-05",
+      "sha256": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615"
+    },
+    {
+      "casos": "C08",
+      "recorrido": "contraste-06",
+      "sha256": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0"
+    }
+  ],
+  "fase": "ejecución terminada y entrega cotejada; recepción independiente pendiente",
+  "puntuacion": {
+    "N": 8,
+    "N0": 7,
+    "N1": 1,
+    "NU": 0,
+    "errores_criticos": 1,
+    "errores_no_criticos": 0,
+    "impedimentos_tecnicos_pendientes": 0,
+    "puntuacion_sobre_100": 87.5,
+    "dictamen": "No apto para el contraste delimitado: error crítico",
+    "cobertura": "8/8",
+    "kappa": null,
+    "motivo_no_kappa": "n=8 no satisface n=b² con b>=3; no se aplica el umbral de célula ni se sustituye por la puntuación",
+    "aptitud_clinica_acreditada": false
+  }
 }
