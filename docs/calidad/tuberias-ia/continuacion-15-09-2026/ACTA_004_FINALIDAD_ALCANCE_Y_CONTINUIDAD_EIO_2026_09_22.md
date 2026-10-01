@@ -449,3 +449,13 @@ La retirada quedó confirmada por el proveedor a las 2026-10-01T09:49:42Z (1/10/
 **S39 permanece abierto y TT-0014 pendiente.** TT-0016 cierra exclusivamente la fase administrativa de Instruct. La recepción científica independiente no se sustituye por este cierre, que no acredita validación clínica. Thinking y OpenAI conservan sus expedientes y no fueron intervenidos.
 
 El hallazgo del recuperador se conserva en TT-0014: las variantes léxicas ensayadas produjeron búsquedas vacías; la entrega directa de página no acredita suficiencia universal de respuesta ni resolución del componente.
+
+<a id="safeguard-instalacion-20261001"></a>
+
+## 27. Instalación y contraste inicial de Safeguard · 01/10/2026
+
+Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen.
+
+S39, revisión 30, y [TT-0018](../../Inventario-sv/tiques-tecnicos/TT-0018.md) registran la actuación propia. TT-0014 permanece pendiente de recepción integral. [Correcciones y pruebas, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md). La ejecución y la recepción independiente conservan funciones distintas; no se declara aptitud clínica ni se cierra S39.
+
+El banco sintético quedó fijado antes de generar respuestas: siete casos con pasajes recibidos por MCP, incluida una repetición, y un caso de recuperación autónoma. Se preservan las referencias reservadas fuera del candidato. La clasificación documental, la autonomía y la conformidad instrumental se adjudicarán separadamente. Las incidencias que impiden obtener una respuesta completa quedan fuera de la terna; no se anticipa clasificación de célula SV.

@@ -15,9 +15,10 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/5b8888ee96b48b3119b61584985e0d802d4a366d/encargos-ejecucion/GPTOSS-SAFEGUARD-PREPARACION-20261001/v1/ADENDA.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/COTEJO-RELEASE.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
   ],
-  "fecha_actualizacion_utc": "2026-10-01T10:09:34Z",
+  "fecha_actualizacion_utc": "2026-10-01T12:36:42Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
   "fecha_corte_evidencias_utc": "2026-10-01T09:53:10Z",
   "fecha_fin_utc": null,
@@ -32,8 +33,8 @@
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral.",
-  "revision_suceso": 29,
+  "resultado_actual": "MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral. Integración instrumental de MCP 0.1.3 comprobada en el destino Safeguard: 25 pruebas Rust favorables, aislamiento bajo ambas identidades y cotejo exacto de las dos uniones documentales. Las respuestas completas y la autonomía del candidato permanecen pendientes tras corregir defectos del motor. TT-0014 conserva su recepción propia pendiente y los antecedentes Qwen.",
+  "revision_suceso": 30,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -44,5 +45,13 @@
     "0.1.1",
     "0.1.2",
     "0.1.3"
-  ]
+  ],
+  "integracion_instrumental_safeguard": {
+    "fecha_utc": "2026-10-01T12:36:42Z",
+    "resultado": "Integración instrumental de MCP 0.1.3 comprobada en el destino Safeguard: 25 pruebas Rust favorables, aislamiento bajo ambas identidades y cotejo exacto de las dos uniones documentales. Las respuestas completas y la autonomía del candidato permanecen pendientes tras corregir defectos del motor. TT-0014 conserva su recepción propia pendiente y los antecedentes Qwen.",
+    "pruebas_mcp": 25,
+    "uniones_cotejadas": true,
+    "respuestas_candidato_adjudicadas": 0,
+    "recepcion_integral": false
+  }
 }

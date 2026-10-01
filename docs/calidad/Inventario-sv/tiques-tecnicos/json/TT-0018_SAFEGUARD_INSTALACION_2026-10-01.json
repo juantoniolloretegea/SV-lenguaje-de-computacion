@@ -1,0 +1,28 @@
+{
+  "version_esquema": "1.0",
+  "id": "TT-0018",
+  "suceso_principal": "S39",
+  "revision_suceso": 30,
+  "estado": "en ejecución",
+  "fecha_alta_utc": "2026-10-01T12:36:42Z",
+  "fecha_actualizacion_utc": "2026-10-01T12:36:42Z",
+  "fecha_fin_utc": null,
+  "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B",
+  "resultado_actual": "Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen.",
+  "modelo": "openai/gpt-oss-safeguard-120b",
+  "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
+  "revision_motor": "4400935451da5e2dc7379a3f92fbbada66557f6c",
+  "sha256_ejecutable": "b1a229a29b872fc6ba432f2dcbc16a378b3ae8767b5344f484006a6a684e9615",
+  "instalacion_acreditada": true,
+  "carga_completa_acreditada": true,
+  "contraste_concluido": false,
+  "recepcion_finalizada": false,
+  "aptitud_clinica": "no determinada",
+  "tique_mcp": "TT-0014",
+  "tique_ordinario_antecedente": "TT-0015",
+  "evidencias": [
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/AVANCE-INSTALACION-20261001.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md"
+  ],
+  "dependencia_y_retorno": "Completar la secuencia corregida, cotejar íntegramente y conservar la entrega para recepción independiente, con retorno a S39, MCP y expediente Safeguard."
+}

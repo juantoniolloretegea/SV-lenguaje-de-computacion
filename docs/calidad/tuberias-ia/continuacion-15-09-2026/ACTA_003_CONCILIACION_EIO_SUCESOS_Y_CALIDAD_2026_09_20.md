@@ -270,3 +270,11 @@ La [recepción Acta004 §17](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_0
 S39, revisión 29, conserva abierto el seguimiento general. La fase Instruct se cierra administrativamente con **28/100 — No apto**, archivo sin pesos cotejado y retirada confirmada. TT-0014 permanece pendiente; TT-0016 cierra sólo el alcance administrativo de Instruct. El diagnóstico v8 conserva la discrepancia 0/U de P07-B y no modifica v7. No se realizaron nuevas inferencias ni se acredita validación clínica.
 
 [Acta 004 §26](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#instruct-archivo-retirada-20261001) · [S39](../../Inventario-sv/sucesos/SUCESOS_SV.md#s39) · [Archivo experimental, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen80-instruct-archivo-cierre-20261001-v1) · [Acta de retirada, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/8e8ea3c4ed5fc05daeb8ba82a7cf45c1faf0b328/respuestas-ejecucion/QWEN80-Q4K-ONECLOUD-20260929/entrega-11/RETIRADA.md).
+
+## Remisión a la instalación Safeguard en ejecución · 01/10/2026
+
+Safeguard instalado y carga completa de 36 capas acreditada en el recurso existente de 128 GB y 32 CPU. Se mantienen 25 pruebas Rust MCP, nueve MXFP4 y una prueba específica de terminaciones Harmony favorables. Se han preservado los intentos instrumentales y corregido el cálculo CPU de cuatro expertos y la terminación prematura de los canales. El contraste sintético de ocho casos continúa con revisión identificada; todavía no hay respuestas válidas adjudicadas ni recepción independiente. Instancia y accesos conservados; sin intervención en Qwen.
+
+S39, revisión 30, y [TT-0018](../../Inventario-sv/tiques-tecnicos/TT-0018.md) registran la actuación propia. TT-0014 permanece pendiente de recepción integral. [Correcciones y pruebas, acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/926542570f74760296898f8e3fa8b432a68b8218/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-01/CORRECCIONES-INSTRUMENTALES.md). La ejecución y la recepción independiente conservan funciones distintas; no se declara aptitud clínica ni se cierra S39.
+
+[Acta 004 §27](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#safeguard-instalacion-20261001).
