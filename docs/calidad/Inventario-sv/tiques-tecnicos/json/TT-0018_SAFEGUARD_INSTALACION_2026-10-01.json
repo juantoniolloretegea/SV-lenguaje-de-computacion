@@ -2,13 +2,13 @@
   "version_esquema": "1.0",
   "id": "TT-0018",
   "suceso_principal": "S39",
-  "revision_suceso": 34,
+  "revision_suceso": 35,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-10-01T12:36:42Z",
-  "fecha_actualizacion_utc": "2026-10-01T18:54:25Z",
+  "fecha_actualizacion_utc": "2026-10-02T06:29:40Z",
   "fecha_fin_utc": null,
-  "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B; contraste posterior de recuperación documental íntegra",
-  "resultado_actual": "Contraste Safeguard v2 terminado: 66,67/100; No apto para este contraste. L01 conserva clasificación y cita correctas, pero omite la página 1: un 1 crítico. L02 y L03 reciben 0, con lectura íntegra de dos y tres páginas respectivamente; la elipsis explícita de la primera cita de L03 se acepta con cotejo de sus segmentos y conservación del resultado negativo de coincidencia continua. N=3, N₀=2, N₁=1, Nᵤ=0; sin errores no críticos ni impedimentos técnicos. Se conservan 2701 cálculos finalizados, 13 emisiones completas, 26 segmentos de canal, diez llamadas documentales y 4942 muestras de telemetría. Los siete archivos de la edición propia fueron descargados y cotejados en Rust. Se mantiene una reserva de diseño: las búsquedas dirigidas pueden revelar cláusulas decisivas en fragmentos breves; ese atajo no se materializó en el recorrido observado, pero impide declarar conformidad integral del banco. Inferencia terminada, carga deshabilitada y servidor, pesos y accesos conservados. El resultado anterior de 87,5/100 y C08 permanecen íntegros. Recepción científica independiente pendiente; sin aptitud SV general ni clínica acreditada.",
+  "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B; contraste posterior de recuperación documental íntegra; contraste documental asistido L01-ARBITRO",
+  "resultado_actual": "L01-ARBITRO terminado: 0, condición asistida conforme, 100/100 con N=1. Una carga y una generación; T1/S1 páginas 0 y 1 incorporadas íntegramente por el Árbitro. Clasificación CONTRADICHA, cita literal y justificación conformes. Cuarenta y siete pruebas Rust previas; núcleo, semántica e IR sin cambios. Custodia, plantilla, tokens y ambas fronteras MCP cotejados: 358 cálculos, una emisión, dos canales y 320 muestras. Cuatro archivos recuperados exactamente desde GitHub. Memoria conjunta máxima 114 GiB, con 24 eventos nuevos de presión, sin intercambio ni OOM. Inferencia cerrada, carga deshabilitada y servidor, pesos y accesos conservados. Se mantienen L01 autónomo, C08, los resultados de 66,67/100 y 87,5/100 y la reserva del banco. No acredita generalización, lectura autónoma ni aptitud clínica; recepción independiente pendiente.",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
   "revision_motor": "4400935451da5e2dc7379a3f92fbbada66557f6c",
@@ -31,9 +31,11 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/INFORME-FINAL.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/PUNTUACION-FINAL.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CUSTODIA.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CIERRE.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/84028c8d2611ed762c11b21dd4d8e6d72e3c9c0b/respuestas-ejecucion/GPTOSS-SAFEGUARD-INSTALACION-20261001/entrega-02/COTEJO-CIERRE.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/COTEJO-CUSTODIA.json"
   ],
-  "dependencia_y_retorno": "Recepción científica independiente de entrega-02, incluidas adjudicación, elipsis, reserva de diseño y custodia. Mantener la inferencia detenida y preservar servidor, pesos y accesos. Retorno a expediente Safeguard, TT-0018, relación instrumental de TT-0014, S39 y Calidad. Otra campaña requiere su encargo y autorización propios.",
+  "dependencia_y_retorno": "Recepción independiente de L01-ARBITRO, su integración documental, adjudicación y custodia. Mantener la inferencia cerrada; conservar servidor, pesos y accesos. Retorno a expediente Safeguard, TT-0018, relación pertinente de TT-0014, S39 y Calidad. Se conservan las recepciones pendientes anteriores; otra prueba requiere encargo y autorización propios.",
   "realizaciones": [
     {
       "casos": "C01-C07",
@@ -50,6 +52,11 @@
       "recorrido": "lectura-01",
       "sha256": "3faf03af3645f9c9d46a54e553e0ec32d8082dc3c5d79058710bdf6b1719a111",
       "banco": "SG-LECTURA-INTEGRA-20261001/r1"
+    },
+    {
+      "casos": "L01-ARBITRO",
+      "recorrido": "arbitro-L01-01",
+      "sha256": "74be63ad803d3a344468cd7b8bc555601a9876117086fc36c2b74b0cbe24d3f1"
     }
   ],
   "fase": "ejecución material terminada; recepción independiente pendiente",
@@ -270,8 +277,95 @@
       }
     ]
   },
-  "sha256_ejecutable_ultimo": "3faf03af3645f9c9d46a54e553e0ec32d8082dc3c5d79058710bdf6b1719a111",
+  "sha256_ejecutable_ultimo": "74be63ad803d3a344468cd7b8bc555601a9876117086fc36c2b74b0cbe24d3f1",
   "resultado_inicial_conservado": "Instalación y contraste sintético inicial de Safeguard terminados: 87,5/100; No apto para el contraste delimitado; un incumplimiento crítico de lectura íntegra en C08; cobertura 8/8. Las ocho clasificaciones y citas son correctas respecto de los pasajes recibidos, pero C08 omite la página 0 de una sección de dos páginas. Carga completa, aislamiento probado y auditoría íntegra de C01-C07 (r3) y C08 (r4) conformes; 3673 tokens y cálculos finalizados, diez emisiones conservadas. Máximo conjunto: 111.693.459.456 bytes, sin intercambio ni agotamiento de memoria. Inferencia cerrada; servidor, pesos y accesos conservados. Entrega original y archivos cotejados desde GitHub; recepción independiente pendiente. No acredita aptitud clínica ni modifica otros expedientes.",
   "sha256_ejecutable_inicial": "3c37798d4dce40ab7626062a7f0e86d0debfbd8eaef968461c3158d4f6f031e0",
-  "alcance_puntuacion": "puntuacion conserva el contraste inicial N=8; contraste_lectura_integra_v2.puntuacion es el contraste nuevo N=3, sin mezcla"
+  "alcance_puntuacion": "puntuacion conserva el contraste inicial N=8; contraste_lectura_integra_v2.puntuacion es el contraste nuevo N=3, sin mezcla; contraste_asistido_arbitro.puntuacion contiene el N=1 propio",
+  "resultado_v2_conservado": "Contraste Safeguard v2 terminado: 66,67/100; No apto para este contraste. L01 conserva clasificación y cita correctas, pero omite la página 1: un 1 crítico. L02 y L03 reciben 0, con lectura íntegra de dos y tres páginas respectivamente; la elipsis explícita de la primera cita de L03 se acepta con cotejo de sus segmentos y conservación del resultado negativo de coincidencia continua. N=3, N₀=2, N₁=1, Nᵤ=0; sin errores no críticos ni impedimentos técnicos. Se conservan 2701 cálculos finalizados, 13 emisiones completas, 26 segmentos de canal, diez llamadas documentales y 4942 muestras de telemetría. Los siete archivos de la edición propia fueron descargados y cotejados en Rust. Se mantiene una reserva de diseño: las búsquedas dirigidas pueden revelar cláusulas decisivas en fragmentos breves; ese atajo no se materializó en el recorrido observado, pero impide declarar conformidad integral del banco. Inferencia terminada, carga deshabilitada y servidor, pesos y accesos conservados. El resultado anterior de 87,5/100 y C08 permanecen íntegros. Recepción científica independiente pendiente; sin aptitud SV general ni clínica acreditada.",
+  "contraste_asistido_arbitro": {
+    "expediente": "ARBITRO-SV-SAFEGUARD-20261002",
+    "entrega": "01",
+    "caso": "L01-ARBITRO",
+    "fecha": "2026-10-02",
+    "N": 1,
+    "valor_sv": "0",
+    "dictamen": "Condición asistida conforme",
+    "decision_modelo": "CONTRADICHA",
+    "decision_referencia": "CONTRADICHA",
+    "aciertos": 1,
+    "errores_criticos": 0,
+    "errores_no_criticos": 0,
+    "U": 0,
+    "impedimentos": 0,
+    "puntuacion": 100,
+    "formula": "100 × (aciertos − errores no críticos)",
+    "conformidad_instrumental": true,
+    "incorporacion_documental": {
+      "documento": "T1",
+      "seccion": "S1",
+      "paginas": [
+        0,
+        1
+      ],
+      "caracteres": [
+        2000,
+        1872
+      ],
+      "actor": "Árbitro",
+      "consultas_autonomas_candidato": 0,
+      "entrada_tokens": 2216,
+      "completa": true
+    },
+    "contenido": {
+      "clasificacion_conforme": true,
+      "cita_literal": true,
+      "formato_conforme": true,
+      "justificacion_conforme": true,
+      "motivacion": "La prohibición expresa rige mientras el cerrojo permanece activo, aunque se valide el registro. La respuesta la conserva y no afirma que la validación retire el cerrojo. Las dos condiciones de retirada no son objeto de la afirmación y su enumeración no resulta necesaria para refutarla; no se adjudica por mera coincidencia de cita.",
+      "reglas_emitidas": [
+        "D1"
+      ],
+      "reglas_adjudicacion": [
+        "D1",
+        "D2",
+        "D5"
+      ]
+    },
+    "cargas": 1,
+    "generaciones": 1,
+    "calculos": 358,
+    "canales": 2,
+    "limites": {
+      "caso_conocido": true,
+      "generalizacion_acreditada": false,
+      "lectura_autonoma_acreditada": false,
+      "comprension_interna_acreditada": false,
+      "aptitud_general": false,
+      "aptitud_clinica": false,
+      "kappa": null,
+      "T_1": null,
+      "autoridad_r1_constituida": false,
+      "nucleo_modificado": false
+    },
+    "antecedentes_conservados": {
+      "inicial": 87.5,
+      "lectura_integra_v2": 66.67,
+      "L01_autonomo": "1 crítico; omisión de página 1",
+      "C08": "1 crítico; omisión de página 0",
+      "dictamenes": "No apto para sus respectivos contrastes"
+    },
+    "cierre": {
+      "identidad_conservada": true,
+      "procesos_cgroup": 0,
+      "sockets_recinto": 0,
+      "unidades_enmascaradas": 3,
+      "unidades_inactivas": 3
+    },
+    "recepcion_independiente": "pendiente",
+    "decision_propuesta": "Recibir la condición asistida y someter evidencia y adjudicación a recepción independiente; mantener la inferencia cerrada. Ningún nuevo ensayo queda autorizado.",
+    "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/INFORME-FINAL.md",
+    "custodia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fc02eee0abfb49b9e653dc21e4540c8467a62e7e/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-01/COTEJO-CUSTODIA.json"
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
 }
