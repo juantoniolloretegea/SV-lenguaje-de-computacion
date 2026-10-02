@@ -5,7 +5,7 @@
   "consulta_con_internet": false,
   "consultas_completas_recibidas": 2,
   "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
-  "dependencia_y_retorno": "Recepción independiente de la integración y custodia; diagnóstico del §7 bajo sus controles, con retorno a TT-0018, S39 y Calidad. Mantener separada la recuperación autónoma y las dependencias de otros modelos.",
+  "dependencia_y_retorno": "Recepción científica independiente de entrega-03 y antecedentes; retorno al expediente Safeguard y Calidad. No se habilita examen ni otra generación por esta actualización. Se conserva el alcance propio de TT-0014 y S39 abierto.",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "estado": "pendiente",
   "evidencias": [
@@ -32,9 +32,11 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/b85439113aa78754506c6eccdb861e6d89353d70/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-02/COTEJO-RECUPERACION-GITHUB.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d56211a0aac5240a85217dd0635c072329ebc11c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-PRIMERA-CONDICION.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d56211a0aac5240a85217dd0635c072329ebc11c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/PUNTUACION-FINAL.json",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
   ],
-  "fecha_actualizacion_utc": "2026-10-02T22:56:34.942Z",
+  "fecha_actualizacion_utc": "2026-10-02T23:40:32.523Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
   "fecha_corte_evidencias_utc": "2026-10-02T09:44:33Z",
   "fecha_fin_utc": null,
@@ -49,8 +51,8 @@
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "Continuación v3: suministro íntegro de ambas páginas pertinentes de N02–N06 y cotejo conforme en las dos fronteras MCP. 25 solicitudes, 24 respuestas y 77 registros del diario; 14.755 registros exteriores. El crítico N06 corresponde a clasificación bajo política con documentos completos, no a una pérdida de transporte. La evaluación diferida de N01 conserva el fallo histórico del verificador. La condición SG-ARBITRO-CONSISTENCIA-20261002-r1 tiene hipótesis, siete entradas y referencias prefijadas. El primer arranque falló antes de cargar por una cardinalidad residual del custodio; se conservó, reprodujo y corrigió en Rust. La recuperación arbitro-consistencia-02 fue admitida con entradas idénticas y está en ejecución, con D01 conocido previo a seis casos nuevos, máximo una carga efectiva y siete generaciones. Cierre ante cualquier 1, U, blanco o impedimento. El resultado está pendiente; no constituye acceso al examen ni aptitud.",
-  "revision_suceso": 36,
+  "resultado_actual": "El Director suministró ambas páginas de N-C en D01 y el cotejo exacto del recorrido MCP es conforme: 19 solicitudes, 18 respuestas, 59 registros y 4.479 registros exteriores. El candidato conserva un error crítico de clasificación con evidencia completa; no se atribuye al transporte. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización.",
+  "revision_suceso": 37,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -600,7 +602,7 @@
     "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d56211a0aac5240a85217dd0635c072329ebc11c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-PRIMERA-CONDICION.md"
   },
   "diagnostico_consistencia_v3": {
-    "estado": "D01_en_ejecucion",
+    "estado": "cerrado_por_error_critico_D01",
     "identidad": "SG-ARBITRO-CONSISTENCIA-20261002-r1",
     "maximo_generaciones": 7,
     "maximo_cargas": 1,
@@ -613,12 +615,99 @@
       "F05",
       "F06"
     ],
-    "generaciones": 0,
+    "generaciones": 1,
     "examen_ejecutado": false,
     "recepcion_independiente": "pendiente",
     "ejecucion": "arbitro-consistencia-02",
-    "generaciones_finalizadas": 0,
-    "resultado": null,
+    "generaciones_finalizadas": 1,
+    "resultado": {
+      "N": 6,
+      "N0": 0,
+      "N01_historico_modificado": false,
+      "N06_historico_modificado": false,
+      "N1": 0,
+      "NU": 0,
+      "U": 0,
+      "aciertos": 0,
+      "aptitud_clinica": false,
+      "aptitud_general": false,
+      "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+      "blancos": 0,
+      "casos_nuevos": [
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F01",
+          "valor_sv": null
+        },
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F02",
+          "valor_sv": null
+        },
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F03",
+          "valor_sv": null
+        },
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F04",
+          "valor_sv": null
+        },
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F05",
+          "valor_sv": null
+        },
+        {
+          "categoria": "no_ejecutado",
+          "causa": "Condición cerrada antes de esta generación; no se repite para sustituir resultado.",
+          "id": "F06",
+          "valor_sv": null
+        }
+      ],
+      "celula_sv_constituida": false,
+      "cobertura_evaluable": "0/6",
+      "condicion": "SG-ARBITRO-CONSISTENCIA-20261002-r1",
+      "condicion_para_proponer_examen": false,
+      "diagnostico_conocido": {
+        "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+        "categoria": "error_critico",
+        "clasificacion": "CONTRADICHA",
+        "clasificacion_referencia": "EVIDENCIA_INSUFICIENTE",
+        "criterio": "Criticidad y referencia prefijadas. El diagnóstico D01 exige 0 para habilitar F01; cualquier 1, U, blanco o impedimento cierra el perfil. No hay retroalimentación ni regeneración.",
+        "critico": true,
+        "efecto": "Cerrar; F01–F06 no ejecutados y excluidos de toda puntuación de rendimiento.",
+        "expediente": "SG-ARBITRO-CONSISTENCIA-20261002-r1",
+        "id": "D01",
+        "motivacion": "La respuesta reconoce dos registros administrativos incompatibles aplicables al mismo supuesto y ausencia de autoridad que resuelva la discrepancia. No aporta precedencia. Sin embargo, selecciona CONTRADICHA: confunde la imposibilidad de acreditar la autorización con una refutación concluyente y no aplica la regla específica de la política para discrepancias irresueltas. Persiste así la discordancia sustantiva observada en N06 bajo la instrucción operativa ampliada. La primera cita es literal pero abarca las páginas 0 y 1 y se localiza sólo en 0; este defecto se conserva sin contabilizar un segundo error. La segunda cita presenta elipsis explícita, segmentos literales en orden y localizador 1 correcto; la omisión intermedia no modifica la conclusión de conflicto. El formato JSON es identificable, la entrada íntegra y la custodia han sido cotejadas.",
+        "procedencia": "Nueva generación de diagnóstico sobre el caso conocido N06; no sustituye ni se agrega como caso nuevo al contraste N01–N06.",
+        "recepcion_independiente": "pendiente",
+        "salida_sha256": "fe76ff1f92fa9a3ef75ba5b7b171c11ffbc8479ea11ff0eb216fa39058e83c17",
+        "valor_sv": "1"
+      },
+      "diagnostico_incluido_en_puntuacion": false,
+      "dictamen": "No apto para este contraste previo",
+      "errores_criticos": 0,
+      "errores_no_criticos": 0,
+      "examen_ejecutado": false,
+      "expediente": "ARBITRO-SV-SAFEGUARD-20261002/v3",
+      "formula": "100 × (aciertos nuevos − errores no críticos nuevos) / 6",
+      "impedimentos": 0,
+      "kappa": null,
+      "no_ejecutados": 6,
+      "nucleo_modificado": false,
+      "primera_condicion_modificada": false,
+      "puntuacion_parcial_sobre_banco_fijo": true,
+      "puntuacion_sobre_100": 0,
+      "recepcion_independiente": "pendiente",
+      "recuperacion_autonoma_acreditada": false
+    },
     "carga_efectiva_admitida": 1,
     "impedimento_previo": {
       "intento": "arbitro-consistencia-01",
@@ -626,6 +715,99 @@
       "generaciones": 0,
       "causa": "Cardinalidad residual del custodio; corregida y comprobada en Rust"
     },
-    "admision": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json"
+    "admision": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json",
+    "metricas": {
+      "archivo": {
+        "bytes": 4411473,
+        "nombre": "arbitro-consistencia-02.tar.gz",
+        "sha256": "b6056f87a22f21949befe5338124881e3e3ab726d94d7ed915b9f677ed2f5b95"
+      },
+      "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+      "calculos": 1065,
+      "cargas": 1,
+      "cierre": {
+        "procesos_propios": 0,
+        "servidor_pesos_y_accesos_conservados": true,
+        "sockets_recinto": 0,
+        "unidades_enmascaradas": 3,
+        "unidades_inactivas": 3
+      },
+      "conforme": true,
+      "duracion_observada_s": 2070.48655,
+      "emisiones": [
+        {
+          "entrada_tokens": 2231,
+          "id": "D01",
+          "ronda": 0,
+          "salida_tokens": 1065,
+          "tokens_sha256": "2d07e133cdd44ae078bd41633b926e432359e0d15645564a00ca604f3397fbf6"
+        }
+      ],
+      "eventos_max_final": 1785,
+      "eventos_max_inicial": 1781,
+      "generaciones": 1,
+      "generaciones_diagnosticas_conocidas": 1,
+      "generaciones_nuevas_equivalentes": 0,
+      "intervalo_maximo_telemetria_us": 2041038,
+      "memoria": {
+        "conjunto": {
+          "muestra_maxima_bytes": 122405523456,
+          "muestras_sin_grupo_presente": 0,
+          "peak_cgroup_observado_bytes": 122406567936,
+          "swap_muestra_maxima_bytes": 0
+        },
+        "mcp": {
+          "muestra_maxima_bytes": 1372160,
+          "muestras_sin_grupo_presente": 1,
+          "peak_cgroup_observado_bytes": 3043328,
+          "swap_muestra_maxima_bytes": 0
+        },
+        "modelo": {
+          "muestra_maxima_bytes": 87090106368,
+          "muestras_sin_grupo_presente": 1,
+          "peak_cgroup_observado_bytes": 87183601664,
+          "swap_muestra_maxima_bytes": 0
+        }
+      },
+      "metadatos_modelo_concordantes": 27,
+      "muestras_telemetria": 1034,
+      "oom": 0,
+      "oom_kill": 0,
+      "peak_conjunto_historico_no_reiniciado": true,
+      "pesos_sha256_recalculado": false,
+      "primera_muestra_unix_us": 1790981526307434,
+      "swap": 0,
+      "ultima_muestra_unix_us": 1790983596793984,
+      "uso_motor": [
+        {
+          "id": "D01",
+          "uso": {
+            "avg_compl_tok_per_sec": 0.8133148550987244,
+            "avg_prompt_tok_per_sec": 10.02466869354248,
+            "avg_tok_per_sec": 2.151426076889038,
+            "completion_tokens": 1065,
+            "prompt_tokens": 2231,
+            "total_completion_time_sec": 1309.4560546875,
+            "total_prompt_time_sec": 222.55099487304688,
+            "total_time_sec": 1532.0069580078125,
+            "total_tokens": 3296
+          }
+        }
+      ]
+    },
+    "casos_nuevos_no_ejecutados": [
+      "F01",
+      "F02",
+      "F03",
+      "F04",
+      "F05",
+      "F06"
+    ],
+    "control_cierre": "fe76ff1f92fa9a3ef75ba5b7b171c11ffbc8479ea11ff0eb216fa39058e83c17",
+    "custodia_cotejada": true,
+    "inferencia_activa": false,
+    "carga_deshabilitada": true,
+    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/INFORME-FINAL.md",
+    "recuperacion_github": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
   }
 }
