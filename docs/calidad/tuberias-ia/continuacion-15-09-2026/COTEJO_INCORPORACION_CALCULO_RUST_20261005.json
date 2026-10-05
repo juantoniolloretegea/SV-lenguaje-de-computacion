@@ -1,0 +1,78 @@
+{
+  "archivos": [
+    {
+      "bytes": 4218,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md",
+      "sha256": "f2785076b02c062610dd557c679b12c69edfa6fbb19ae5723bd7db1202acbf26"
+    },
+    {
+      "bytes": 1847,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0020_CALCULO_RUST_AMD_2026-10-05.json",
+      "sha256": "aa191fc379d1b5fc7dac67412445c9e1692176f6ca912d0b99ae6b20a390c728"
+    },
+    {
+      "bytes": 27906,
+      "original_blob": "a625517a2250f2c47933d39f16ab98bf313e79e9",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+      "sha256": "780031dd393b9939f43194e837bc198dffa1c41a8a943a3dc819f00075fc0ec3"
+    },
+    {
+      "bytes": 110620,
+      "original_blob": "c8d58efd328b04c4007f140d57e35392dead0751",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "sha256": "c5a9225dd6d55edc06b8e7b4707a8f4bf5efac07532e17070959b20c93c0bf82"
+    },
+    {
+      "bytes": 96851,
+      "original_blob": "edbb07498bcdfc113638f0908f05f033e906ded4",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "sha256": "a7c8b3986d86969b43cbf4b29340c1a4ba0be95d2b687b92416466d206621e1f"
+    },
+    {
+      "bytes": 741948,
+      "original_blob": "1e35e1e97afe36bb5cde2e7c8a81b1b2c7b9f4fd",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "sha256": "9bb04b0eb186014c1a387136a9f4bad6c75813fbd313692e3bb96a203ee069ee"
+    },
+    {
+      "bytes": 100369,
+      "original_blob": "9970a3a9e71cecab64ddbc130ce5f1abd5ca1cad",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "sha256": "577676faed60cb220078ae36c68aac19a1ae65d011b2c8abd2d5e51b81cb1c10"
+    },
+    {
+      "bytes": 413805,
+      "original_blob": "0cb9a635683115a4276305df82d84fbb85f0eec2",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "sha256": "65324ea06d4ce0ecfad58fb8c0b557dd05220ae9fe227e8c3f727c00c650c592"
+    },
+    {
+      "bytes": 361642,
+      "original_blob": "b9c2ebf2a4fc7bbc6dc46eb6eb4ff13c6f50e1b1",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "sha256": "a18fd20bbe222f4a4f9cf6eed874557e36ea22641da8d3313eb0ef34db1969ae"
+    },
+    {
+      "bytes": 11032,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_INCORPORACION_CALCULO_RUST_20261005.rs",
+      "sha256": "860f0647ca8bfb4b8323fd6b663419d8a694b507465b8207fef896a2664859f2"
+    },
+    {
+      "bytes": 6372,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_INCORPORACION_CALCULO_RUST_20261005.json",
+      "sha256": "7e3ae42e005d66950cd7038a33a7de4a80e5e3070d437b5435c2225900231fc7"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "base": "ff4c7299064d9ccde673902a14c0aecff8cf5e53",
+  "commit": "746e062f1435051f68baf296d0374f2757a3149f",
+  "estado": "CONFORME",
+  "expediente": "AMD-CALCULO-RUST-20261005",
+  "rama": "main",
+  "recuperacion": "Contenido completo recuperado desde GitHub por revisión fija; blob vinculado al commit; igualdad de bytes y SHA-256 calculados en Rust",
+  "repositorio": "SV-lenguaje-de-computacion"
+}
