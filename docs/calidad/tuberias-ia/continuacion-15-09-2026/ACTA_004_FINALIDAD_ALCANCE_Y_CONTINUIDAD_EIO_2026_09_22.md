@@ -560,4 +560,22 @@ S39 permanece **en ejecución**, porque el candidato Qwen tiene evaluación prop
 
 Esta conciliación no modifica el Núcleo del SV, la semántica V0.2 ni la IR 0.3. Las necesidades derivadas de los ensayos quedan sujetas a revisión antes de incorporarse al Núcleo. Se mantienen mapa y diagramas históricos. Se concilian fuentes fijadas; no se repiten reconstrucciones de imágenes ni se certifica por ello corrección clínica, equivalencia numérica o restauración funcional.
 
+## 33. Componente de cálculo Rust para AMD · 05/10/2026
+
+**S39 revisión 39; TT-0020; RETP-2026-278. Registro documental: 2026-10-05T18:29:13Z.**
+
+Se incorpora CubeCL como componente de cálculo en evaluación, con rust-gpu como alternativa. [Estudio técnico](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/inferencia/cubecl-evaluacion-20261005/ESTUDIO.md) y [adenda AMD de acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/amd/estudio-uso-5-10-29-v1/calculo-rust-20261005/ADENDA.md). El mantenimiento observable respalda considerar ambos proyectos; la muestra reciente de CubeCL es más amplia, sin convertir recuentos en garantía de calidad o continuidad.
+
+**Candidatos conservados en estudio:** [Kimi K3](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md) y [GLM-5.3, con Flash como variante distinta](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md). La evaluación actual es documental y de viabilidad; no hay despliegue ni ensayo de respuestas. No se ha acordado su descarte definitivo. El cierre de la búsqueda técnica anterior y los impedimentos actuales no se convierten en un dictamen sobre su aptitud.
+
+La preferencia provisional no acredita inferencia ni recepción. El código CubeCL examinado excluye MFMA/CDNA por LLVM; MI300X/gfx942 exige una adaptación y contraste delimitados. rust-gpu requiere comprobar controlador y extensiones matriciales efectivos. La publicación de SPIR-V 1.6 revisión 8 no prueba su realización en una GPU y no modifica la IR 0.3 del SV.
+
+[TT-0020](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md) permanece pendiente para las necesidades N-C01–N-C05: realización efectiva, operación f16/f32, referencia independiente Rust, coste medido y mantenimiento acotado. La evaluación documental está concluida. No hay desarrollo, instalación, ejecución GPU, inferencia ni gasto por esta incorporación. Una futura operación correcta tampoco acredita el motor completo ni habilita el examen.
+
+Antes de una prueba material deben fijarse versiones, dependencias admisibles, casos, tolerancias y cotas. La propuesta se limita a una multiplicación matricial representativa. Si exige un compilador o arquitectura de modelo completos, se documenta el límite y vuelve a decisión de alcance. Los componentes de terceros conservan sus licencias.
+
+El §32 y las revisiones anteriores se conservan como cortes históricos. La [retirada posterior de Thinking](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md) acredita la eliminación administrativa de instancia y almacenamiento asociado; esa reserva anterior queda superada por su acta. El arranque restaurado sigue sin ensayarse. Los restantes resultados y expedientes experimentales conservan sus controles, cotas y recepciones propios, sin transferencias de aptitud o ampliación por el nuevo componente.
+
+La comprobación de esta incorporación concierne a concordancia, trazabilidad, preservación y recuperación documental en Rust. Se distingue de exactitud numérica, rendimiento y recepción científica. Núcleo del SV, semántica V0.2 e IR 0.3 intactos; mapa y diagramas históricos preservados. Retorno: prueba técnica delimitada y recibida antes de proponer cualquier integración.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -1,0 +1,136 @@
+{
+  "alcance": [
+    "Concordancia S39 CSV, historial y referencias",
+    "Antecedentes de historial y RETP preservados",
+    "Otros sucesos intactos",
+    "TT-0020 pendiente y único, JSON y CSV concordantes",
+    "EIO 2.23 y Acta 004 sección 33",
+    "Recuentos y unicidad de propuestas de mantenimiento",
+    "UTF-8, JSON, bytes y SHA-256 Rust"
+  ],
+  "archivos": [
+    {
+      "bytes": 4552,
+      "original_blob": null,
+      "ruta": "SV-sala-de-maquinas/amd/estudio-uso-5-10-29-v1/calculo-rust-20261005/ADENDA.md",
+      "sha256": "b3b29de5cea536aebe11c7282951b2b2d06632a914aee33967aead8b4b7753b1"
+    },
+    {
+      "bytes": 2954,
+      "original_blob": "3126d70038addc2f57f5af0be9dbf6e6ff48fe8c",
+      "ruta": "SV-sala-de-maquinas/amd/README.md",
+      "sha256": "ac7a284390745210e1a58cd92a7422591fa074f4b0b24dcb825a7b2481a2bece"
+    },
+    {
+      "bytes": 11373,
+      "original_blob": null,
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/inferencia/cubecl-evaluacion-20261005/ESTUDIO.md",
+      "sha256": "e2d04efdb7b9095902e816281325b41d94a43ec6ca8e95e3710d2bbae65de89f"
+    },
+    {
+      "bytes": 4716,
+      "original_blob": null,
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/inferencia/cubecl-evaluacion-20261005/FUENTES.json",
+      "sha256": "e0634016cd90dd9eabf77a95bb89c070c64b5696ed8250891beebfef16a7ffdf"
+    },
+    {
+      "bytes": 70581,
+      "original_blob": "f77712b2cbdfd14edf17828c5f4337bfe15839a6",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/README.md",
+      "sha256": "3db9e9852f444a2c61843d75165cc8001d2520ca051cd300b5e1bd9871bb5ab1"
+    },
+    {
+      "bytes": 10145,
+      "original_blob": "a8869b66d563694abb28a1c41e46c180a8b0d51d",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/README.md",
+      "sha256": "d7d0a1e722543542f2c4e7a022e77528a89e6d510775238328246c880abe2ecd"
+    },
+    {
+      "bytes": 68048,
+      "original_blob": "29d2111013858cc2dc4d36d5ae9de34bba709ed1",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/VERSIONES.json",
+      "sha256": "fe4e3c1bb874fe7321ea24c60164e496751c9675862a239d5870dd992f4e3401"
+    },
+    {
+      "bytes": 4218,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md",
+      "sha256": "f2785076b02c062610dd557c679b12c69edfa6fbb19ae5723bd7db1202acbf26"
+    },
+    {
+      "bytes": 1847,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0020_CALCULO_RUST_AMD_2026-10-05.json",
+      "sha256": "aa191fc379d1b5fc7dac67412445c9e1692176f6ca912d0b99ae6b20a390c728"
+    },
+    {
+      "bytes": 27906,
+      "original_blob": "a625517a2250f2c47933d39f16ab98bf313e79e9",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+      "sha256": "780031dd393b9939f43194e837bc198dffa1c41a8a943a3dc819f00075fc0ec3"
+    },
+    {
+      "bytes": 110620,
+      "original_blob": "c8d58efd328b04c4007f140d57e35392dead0751",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "sha256": "c5a9225dd6d55edc06b8e7b4707a8f4bf5efac07532e17070959b20c93c0bf82"
+    },
+    {
+      "bytes": 96851,
+      "original_blob": "edbb07498bcdfc113638f0908f05f033e906ded4",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "sha256": "a7c8b3986d86969b43cbf4b29340c1a4ba0be95d2b687b92416466d206621e1f"
+    },
+    {
+      "bytes": 741948,
+      "original_blob": "1e35e1e97afe36bb5cde2e7c8a81b1b2c7b9f4fd",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "sha256": "9bb04b0eb186014c1a387136a9f4bad6c75813fbd313692e3bb96a203ee069ee"
+    },
+    {
+      "bytes": 100369,
+      "original_blob": "9970a3a9e71cecab64ddbc130ce5f1abd5ca1cad",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "sha256": "577676faed60cb220078ae36c68aac19a1ae65d011b2c8abd2d5e51b81cb1c10"
+    },
+    {
+      "bytes": 413805,
+      "original_blob": "0cb9a635683115a4276305df82d84fbb85f0eec2",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "sha256": "65324ea06d4ce0ecfad58fb8c0b557dd05220ae9fe227e8c3f727c00c650c592"
+    },
+    {
+      "bytes": 361642,
+      "original_blob": "b9c2ebf2a4fc7bbc6dc46eb6eb4ff13c6f50e1b1",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "sha256": "a18fd20bbe222f4a4f9cf6eed874557e36ea22641da8d3313eb0ef34db1969ae"
+    },
+    {
+      "bytes": 3384,
+      "original_blob": null,
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/kimi/kimi-k3/ESTUDIO-VIABILIDAD-20261005.md",
+      "sha256": "05eaf90e62d663e0cc7cdd781887d70ff805d3ee8194896fa340c6d630529846"
+    },
+    {
+      "bytes": 3787,
+      "original_blob": null,
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/zai-org/glm-5.3/ESTUDIO-VIABILIDAD-20261005.md",
+      "sha256": "6b56f071dda3a17a338aad78e3c816961252f1087b9a3a1f1f8b431f853263a0"
+    },
+    {
+      "bytes": 11032,
+      "original_blob": null,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_INCORPORACION_CALCULO_RUST_20261005.rs",
+      "sha256": "860f0647ca8bfb4b8323fd6b663419d8a694b507465b8207fef896a2664859f2"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "bases_consultadas": {
+    "SV-lenguaje-de-computacion": "ff4c7299064d9ccde673902a14c0aecff8cf5e53",
+    "SV-motor": "0b5104c4658bc98a9612fd2a97d7b8a5214b63cc",
+    "SV-sala-de-maquinas": "0190c5dc2ca353a9b3531df990a6c71be058536a"
+  },
+  "estado": "CONFORME_DOCUMENTAL",
+  "expediente": "AMD-CALCULO-RUST-20261005",
+  "limites": "No prueba GPU, exactitud numérica o inferencia; publicación remota cotejada en constancias posteriores"
+}

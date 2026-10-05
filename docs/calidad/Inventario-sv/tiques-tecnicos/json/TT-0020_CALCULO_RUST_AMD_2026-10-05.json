@@ -1,0 +1,36 @@
+{
+  "version_esquema": "1.0",
+  "tipo_registro": "seguimiento documental; no especificación ejecutable",
+  "id": "TT-0020",
+  "suceso_principal": "S39",
+  "revision_suceso": 39,
+  "estado": "pendiente",
+  "fecha_alta_utc": "2026-10-05T18:29:13Z",
+  "fecha_actualizacion_utc": "2026-10-05T18:29:13Z",
+  "fecha_fin_utc": null,
+  "objeto": "CubeCL y rust-gpu: realización de cálculo Rust para AMD",
+  "resultado_actual": "Evaluación documental concluida; CubeCL prioritario provisional, rust-gpu alternativa. MFMA/CDNA por LLVM en MI300X, exactitud independiente y dependencias pendientes de prueba. Sin instalación, inferencia ni recepción GPU. Kimi K3 y GLM-5.3/Flash permanecen como candidatos en estudio de viabilidad, sin ensayo ni descarte definitivo.",
+  "expediente": "AMD-CALCULO-RUST-20261005",
+  "necesidades": [
+    "N-C01",
+    "N-C02",
+    "N-C03",
+    "N-C04",
+    "N-C05"
+  ],
+  "instalacion_acreditada": false,
+  "inferencia_acreditada": false,
+  "recepcion_finalizada": false,
+  "intervencion_sobre_nucleo": false,
+  "evidencias": [
+    "https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/inferencia/cubecl-evaluacion-20261005/ESTUDIO.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/amd/estudio-uso-5-10-29-v1/calculo-rust-20261005/ADENDA.md"
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "candidatos_en_estudio": [
+    "Kimi K3",
+    "GLM-5.3",
+    "GLM-5.3-Flash (variante distinta)"
+  ],
+  "descartes_definitivos": []
+}
