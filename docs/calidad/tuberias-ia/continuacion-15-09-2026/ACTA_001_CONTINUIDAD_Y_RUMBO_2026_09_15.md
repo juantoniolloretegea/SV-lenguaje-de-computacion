@@ -1,5 +1,7 @@
 # Acta 001 · Continuidad y rumbo desde el 15 de septiembre de 2026
 
+**Estado actualizado · 05/10/2026:** [Acta 004 §32](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#32-conciliación-de-cierres-y-nueva-preevaluación--05102026), S39 revisión 38 y RETP-2026-277. Safeguard cerrado, conservado y con instancia/disco eliminados; Thinking cerrado y conservado, pendiente de eliminar su instancia/disco; Qwen3.5-122B-A10B Q8_0 instalado en UpCloud con 256 GB nominales y A01–A04 = 0 en A0. El bloque sigue incompleto. Los cortes inferiores conservan su valor histórico y no expresan el estado vigente.
+
 ## Remisión de continuidad · MCP 0.1.3 · 01/10/2026
 
 MCP 0.1.3 implementado y comprobado localmente: 25 pruebas Rust conformes, paginación completa de coincidencias, eliminación del límite oculto de ocho palabras y reconstrucción determinista del recorrido documental. Integración completa con Safeguard todavía no ensayada; no se declara aptitud integral.
@@ -258,5 +260,8 @@ Evidencias: [informe final](https://github.com/juantoniolloretegea/SV-sala-de-ma
 
 Retorno: recepción científica independiente de entrega-03 y antecedentes. Sin seis ceros no se habilita examen. S39 y los tiques conservan su estado abierto o pendiente; no se modifica el ámbito de otros modelos.
 
+## Remisión de cierre y continuidad · S39 revisión 38
+
+La actualización se concilia con TT-0014, TT-0017, TT-0018 y el nuevo TT-0019, sus registros JSON, el CSV de tiques, Sucesos y su historial. Véase [Acta 004 §32](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#32-conciliación-de-cierres-y-nueva-preevaluación--05102026) para resultados, custodia, reservas y dependencias. S39 general continúa en ejecución. No se alteran el mapa histórico, el Núcleo, la semántica ni la IR.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

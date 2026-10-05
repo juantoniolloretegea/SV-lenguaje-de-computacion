@@ -3,22 +3,26 @@
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "id": "TT-0017",
   "suceso_principal": "S39",
-  "revision_suceso": 26,
-  "estado": "pendiente",
+  "revision_suceso": 38,
+  "estado": "finalizado",
   "fecha_alta_utc": "2026-09-30T05:55:31Z",
-  "fecha_actualizacion_utc": "2026-09-30T08:59:14Z",
-  "fecha_corte_evidencias_utc": "2026-09-30T08:42:00Z",
-  "fecha_fin_utc": null,
+  "fecha_actualizacion_utc": "2026-10-05T10:20:04Z",
+  "fecha_corte_evidencias_utc": "2026-10-05T10:20:04Z",
+  "fecha_fin_utc": "2026-10-05T10:20:04Z",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
-  "objeto": "Primera prueba documental de Qwen3-Next-80B-A3B-Thinking",
-  "resultado_actual": "Encargo transmitido y carpeta del modelo creada; instalación, inferencia y recepción no acreditadas.",
+  "objeto": "Primera prueba documental y cierre del examen posterior de Qwen3-Next-80B-A3B-Thinking",
+  "resultado_actual": "Examen Thinking cerrado: No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable. Nueve finales conservadas, cuatro impedimentos terminales, P14 incompleta y once preguntas no ejecutadas; sin puntuación global de contenido. Conservación final publicada y cotejada. La eliminación de la instancia y su disco sigue pendiente según la última evidencia.",
   "recepcion_finalizada": false,
-  "dependencia_y_retorno": "Recibir la primera prueba documental con identidad de configuración, trazas de acceso a la fuente, respuesta final, máximo de memoria y duración. Sólo después valorar un examen comparable. Retorno a S39 y, si procede, a TT-0016 mediante decisión propia.",
+  "dependencia_y_retorno": "Conservar el cierre experimental. Para dar por eliminada la infraestructura, recibir un acta posterior que acredite expresamente la eliminación de instancia y disco. La adjudicación de las nueve finales, si se encargase, tendría alcance propio; este asiento no la presume ni reabre el examen.",
   "antecedente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/86960653c6ff577cbc8c2e2beb93858433325744/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "evidencias": [
     "https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ea99efba6337a9e28f8a523554daf7a0bae4f2d6/encargos-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/v1/ENCARGO.md"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/ea99efba6337a9e28f8a523554daf7a0bae4f2d6/encargos-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/v1/ENCARGO.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking/REGISTRO-INSTALACION-20260930.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0212a5ae1ccd3d42b5a26796068c0a3981d380c5/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/CIERRE-Y-CONSERVACION.md",
+    "https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1"
   ],
   "modelo": "Qwen3-Next-80B-A3B-Thinking",
   "formato": "UQFF",
@@ -26,8 +30,45 @@
   "prueba": "THINK-DOC-01",
   "transmision_humana": "comunicada",
   "registro_modelo": "https://github.com/juantoniolloretegea/SV-motor/tree/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-next-80b-a3b-thinking",
-  "registro_modelo_estado": "carpeta creada; solo archivo inicial al consultar",
-  "memoria_maxima_medida_gib": null,
-  "compatibilidad_efectiva": null,
-  "dictamen": null
+  "registro_modelo_estado": "Instalación y primera inferencia documentadas; examen posterior cerrado y conservación final cotejada",
+  "memoria_maxima_medida_gib": 59,
+  "compatibilidad_efectiva": "Acreditada para la primera consulta; viabilidad operativa del examen desfavorable",
+  "dictamen": "No apto en las condiciones evaluadas por demoras operativas excesivas y falta de finalización fiable del examen",
+  "corte_anterior_conservado": {
+    "revision_suceso": 26,
+    "fecha_actualizacion_utc": "2026-09-30T08:59:14Z",
+    "estado": "pendiente",
+    "resultado_actual": "Encargo transmitido y carpeta del modelo creada; instalación, inferencia y recepción no acreditadas.",
+    "dependencia_y_retorno": "Recibir la primera prueba documental con identidad de configuración, trazas de acceso a la fuente, respuesta final, máximo de memoria y duración. Sólo después valorar un examen comparable. Retorno a S39 y, si procede, a TT-0016 mediante decisión propia.",
+    "referencia": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/433d56195b47ec67d702c0bb6eed769641763a0b/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0017_QWEN80_THINKING_2026-09-30.json"
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "alcance_fecha_fin": "Fecha de conciliación y cierre del registro experimental; no es la hora material de terminación ni certifica una retirada no acreditada",
+  "examen_cierre": {
+    "expediente": "EXAMEN-THINKING-PDQ25-20261001/r2",
+    "finales_conservadas": 9,
+    "impedimentos_terminales": 4,
+    "incompleta_sin_final": [
+      "P14"
+    ],
+    "no_ejecutadas": 11,
+    "denominador": 25,
+    "puntuacion_global_contenido": null,
+    "contenidos_pendientes_adjudicacion": true,
+    "impedimentos_fuera_de_terna": true,
+    "admite_nuevas_inferencias": false
+  },
+  "conservacion_final": {
+    "fecha_recepcion_utc": "2026-10-05T07:12:05Z",
+    "recuperacion_y_cotejo_rust_conformes": true,
+    "entradas": 164854,
+    "archivos_ordinarios": 141890,
+    "arranque_restaurado_ensayado": false
+  },
+  "infraestructura": {
+    "instancia_eliminada_acreditada": false,
+    "disco_eliminado_acreditado": false,
+    "estado": "Pendiente de eliminación según la última evidencia; cierre experimental y conservación acreditados por separado",
+    "cese_cargos_acreditado": false
+  }
 }

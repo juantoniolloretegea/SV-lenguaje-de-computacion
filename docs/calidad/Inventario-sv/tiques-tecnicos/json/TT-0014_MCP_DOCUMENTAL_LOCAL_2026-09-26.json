@@ -5,7 +5,7 @@
   "consulta_con_internet": false,
   "consultas_completas_recibidas": 2,
   "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
-  "dependencia_y_retorno": "Recepción científica independiente de entrega-03 y antecedentes; retorno al expediente Safeguard y Calidad. No se habilita examen ni otra generación por esta actualización. Se conserva el alcance propio de TT-0014 y S39 abierto.",
+  "dependencia_y_retorno": "Completar la recepción del recorrido documental de la fase activa y sus límites; retorno a TT-0019, S39 y Calidad. No se reactivan instalaciones históricas.",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "estado": "pendiente",
   "evidencias": [
@@ -34,11 +34,13 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d56211a0aac5240a85217dd0635c072329ebc11c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/PUNTUACION-FINAL.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-FINAL.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
   ],
-  "fecha_actualizacion_utc": "2026-10-02T23:40:32.523Z",
+  "fecha_actualizacion_utc": "2026-10-05T10:20:04Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
-  "fecha_corte_evidencias_utc": "2026-10-02T09:44:33Z",
+  "fecha_corte_evidencias_utc": "2026-10-05T10:20:04Z",
   "fecha_fin_utc": null,
   "hallazgo_diagnostico_v8": {
     "P07_B_ejecucion": "0",
@@ -51,8 +53,8 @@
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "El Director suministró ambas páginas de N-C en D01 y el cotejo exacto del recorrido MCP es conforme: 19 solicitudes, 18 respuestas, 59 registros y 4.479 registros exteriores. El candidato conserva un error crítico de clasificación con evidencia completa; no se atribuye al transporte. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización.",
-  "revision_suceso": 37,
+  "resultado_actual": "MCP 0.1.4-pdf.1 instalado en la realización Qwen3.5 de UpCloud; 36 comprobaciones de recepción conformes. Integración y adjudicación parcial A01–A04 documentadas; recepción integral del componente y comprensión del corpus PDF no acreditadas.",
+  "revision_suceso": 38,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -809,5 +811,38 @@
     "carga_deshabilitada": true,
     "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/INFORME-FINAL.md",
     "recuperacion_github": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
+  },
+  "corte_anterior_conservado": {
+    "revision_suceso": 37,
+    "fecha_actualizacion_utc": "2026-10-02T23:40:32.523Z",
+    "estado": "pendiente",
+    "resultado_actual": "El Director suministró ambas páginas de N-C en D01 y el cotejo exacto del recorrido MCP es conforme: 19 solicitudes, 18 respuestas, 59 registros y 4.479 registros exteriores. El candidato conserva un error crítico de clasificación con evidencia completa; no se atribuye al transporte. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización.",
+    "dependencia_y_retorno": "Recepción científica independiente de entrega-03 y antecedentes; retorno al expediente Safeguard y Calidad. No se habilita examen ni otra generación por esta actualización. Se conserva el alcance propio de TT-0014 y S39 abierto.",
+    "referencia": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/433d56195b47ec67d702c0bb6eed769641763a0b/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0014_MCP_DOCUMENTAL_LOCAL_2026-09-26.json"
+  },
+  "alcance_fecha_fin": "No finalizado",
+  "realizacion_014_pdf": {
+    "version": "0.1.4-pdf.1",
+    "revision": "3f12e5054523f313ce148d37f0bdaee16bcff98a",
+    "instalacion_recibida": true,
+    "fuentes_cotejadas": 69,
+    "comprobaciones_conformes": 36,
+    "paginas_pdf": 10,
+    "fragmentos_pdf": 30,
+    "comprension_pdf_acreditada": false,
+    "recepcion_integral_acreditada": false,
+    "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md"
+  },
+  "integracion_qwen35": {
+    "casos_cerrados": [
+      "A01",
+      "A02",
+      "A03",
+      "A04"
+    ],
+    "adjudicacion_por_caso": 0,
+    "bloque_completo": false,
+    "recepcion_integral_acreditada": false,
+    "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
   }
 }

@@ -2749,3 +2749,13 @@ Registro 2026-09-27T07:40:39Z; unidad W-S39-03; VERIFICACION_ACOTADA. Preparaci�
 [TT-0015](Inventario-sv/tiques-tecnicos/TT-0015.md) y [ficha](https://github.com/juantoniolloretegea/SV-motor/blob/3f24439cccb8c677c18e6ea2b2b4f13adf7a95ae/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-120b/README.md). S39 revisión 24; Acta004 §23; PTA-2026-018; PTA-SVM-008. Verificación acotada; sin intervención remota, compras o instalación. TT-0014 y cierre Qwen conservan recepción y archivo separados. Mapa y figuras históricas preservados; ninguna rama creada.
 
 El hito no cierra el TT ni S39 y no constituye decisión de diseño material. Las copias históricas de laboratorio mantienen su corte.
+
+## RETP-2026-277 · Conciliación de cierres y preevaluación Qwen en UpCloud
+
+Registro 2026-10-05T10:20:04Z. **VERIFICACION_ACOTADA: conciliación documental** de entregas publicadas; no se repiten inferencias ni reconstrucciones de imágenes.
+
+Safeguard: preevaluación cerrada, No apto para acceder al examen, sin mejora A0–A3; diagnósticos agotados, conservación cotejada e instancia y disco retirados. Thinking: examen cerrado por inviabilidad operativa, nueve finales conservadas y pendientes de adjudicación de contenido, cuatro impedimentos, P14 incompleta y once no ejecutadas; conservación final cotejada, pendiente eliminar instancia y disco. Qwen3.5-122B-A10B Q8_0: instalación propia en UpCloud con 48 CPU y 256 GB nominales de RAM, sin GPU; A01–A04 = 0 en A0, incluido el crítico A04. Cinco posiciones siguen sin adjudicación; no hay dictamen ni puntuación global.
+
+[Acta 004 §32](tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#32-conciliación-de-cierres-y-nueva-preevaluación--05102026) reúne fuentes fijadas y reservas. Concordancia con S39 revisión 38, historial, TT-0014, TT-0017, TT-0018 y nuevo TT-0019. Cierre experimental, conservación y eliminación del recurso se registran por separado. S39 continúa en ejecución; se preservan protocolos, originales, mapa histórico, Núcleo, semántica V0.2 e IR 0.3.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -1,0 +1,63 @@
+{
+  "version_esquema": "1.0",
+  "tipo_registro": "seguimiento documental; no especificación ejecutable",
+  "id": "TT-0019",
+  "suceso_principal": "S39",
+  "revision_suceso": 38,
+  "estado": "en ejecución",
+  "fecha_alta_utc": "2026-10-05T10:20:04Z",
+  "fecha_actualizacion_utc": "2026-10-05T10:20:04Z",
+  "fecha_fin_utc": null,
+  "alta_posterior_inicio_material": true,
+  "inicio_material_documentado": "2026-10-04",
+  "objeto": "Instalación y preevaluación de Qwen3.5-122B-A10B GGUF Q8_0 en UpCloud",
+  "resultado_actual": "Qwen3.5-122B-A10B GGUF Q8_0 instalado y recibido instrumentalmente en UpCloud, 48 CPU y 256 GB de RAM nominal, sin GPU. Bloque A, capa A0: A01–A04 adjudicados 0, incluido A04 crítico; cinco posiciones pendientes, sin κ, puntuación global ni admisión al examen.",
+  "dependencia_y_retorno": "Continuar únicamente la preevaluación ya autorizada bajo su protocolo y cotas; conservar, cotejar y adjudicar cada cierre antes de otra admisión. Completar el bloque y su recepción antes de determinar aptitud. No iniciar el examen por este asiento.",
+  "modelo": "Qwen3.5-122B-A10B",
+  "formato": "GGUF Q8_0",
+  "servidor": {
+    "cpu": 48,
+    "ram_nominal_gb": 256,
+    "ram_efectiva_gib_aproximada": 251.65,
+    "gpu": false
+  },
+  "instalacion_acreditada": true,
+  "inferencia_minima_acreditada": true,
+  "recepcion_finalizada": false,
+  "aptitud_examen_acreditada": false,
+  "dictamen": null,
+  "bloque": "A",
+  "capa": 0,
+  "vector_parcial": [
+    "0",
+    "0",
+    "0",
+    "0",
+    "NE",
+    "NE",
+    "NE",
+    "NE",
+    "NE"
+  ],
+  "NE_fuera_de_terna": true,
+  "caso_critico_cerrado": "A04",
+  "N0": 4,
+  "N1": 0,
+  "NU": 0,
+  "no_adjudicados": 5,
+  "kappa": null,
+  "puntuacion_global": null,
+  "terna_completa": false,
+  "cotas_segundos": {
+    "total": 86400,
+    "solicitud": 18000,
+    "sin_progreso_nativo": 1800
+  },
+  "intervencion_sobre_nucleo": false,
+  "evidencias": [
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/ALCANCE.md"
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

@@ -2,13 +2,13 @@
   "version_esquema": "1.0",
   "id": "TT-0018",
   "suceso_principal": "S39",
-  "revision_suceso": 37,
-  "estado": "pendiente",
+  "revision_suceso": 38,
+  "estado": "finalizado",
   "fecha_alta_utc": "2026-10-01T12:36:42Z",
-  "fecha_actualizacion_utc": "2026-10-02T23:40:32.523Z",
-  "fecha_fin_utc": null,
-  "objeto": "Instalación y contraste sintético inicial de GPT-OSS-Safeguard-120B; contraste posterior de recuperación documental íntegra; contraste documental asistido L01-ARBITRO; contraste previo de seis casos nuevos, cerrado tras N01; continuación v3 evaluada y diagnóstico de consistencia delimitado",
-  "resultado_actual": "Primera condición ARBITRO-SV-SAFEGUARD-20261002/v3 cerrada: seis originales evaluables, N₀=4, N₁=2 (N01 formal y N06 crítico), Nᵤ=0; 50/100 y No apto para este contraste previo. N01 conserva su original de v2 y se evalúa de forma diferida; N02–N06 se generaron una sola vez en una carga adicional. El suministro documental y la custodia son conformes. N06 reconoce fuentes incompatibles sin precedencia, pero clasifica CONTRADICHA frente a EVIDENCIA_INSUFICIENTE. Sin seis ceros ni acceso acreditado al examen. Cierre material cotejado, servidor, pesos y accesos conservados; recepción independiente pendiente. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización. Sin nueva hipótesis causal discriminante, se cierra esta vía conforme al §7. Inferencia detenida, carga deshabilitada, servidor, pesos y accesos conservados; recepción independiente pendiente.",
+  "fecha_actualizacion_utc": "2026-10-05T10:20:04Z",
+  "fecha_fin_utc": "2026-10-05T10:20:04Z",
+  "objeto": "Instalación, contrastes previos y cierre de preevaluación de GPT-OSS-Safeguard-120B",
+  "resultado_actual": "Preevaluación Safeguard cerrada: No apto para acceder al examen en esta evaluación. A0–A3 sin mejora, −88,89/100 por capa; error crítico A08 y omisiones formales. Tres diagnósticos agotados, con D02 sin final por cota temporal. Conservación cifrada recuperada y cotejada; instancia y disco de origen eliminados el 04/10/2026.",
   "modelo": "openai/gpt-oss-safeguard-120b",
   "revision_modelo": "3c7391182603991a904031244e7822488c67796d",
   "revision_motor": "4400935451da5e2dc7379a3f92fbbada66557f6c",
@@ -41,9 +41,12 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d56211a0aac5240a85217dd0635c072329ebc11c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/PUNTUACION-FINAL.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/90160167a3af4930ef135d29c25207ac22ac9a50/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/MANIFIESTO-RECUPERACION-01.json",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-FINAL.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md"
   ],
-  "dependencia_y_retorno": "Recepción científica independiente de entrega-03 y antecedentes; retorno al expediente Safeguard y Calidad. No se habilita examen ni otra generación por esta actualización. Se conserva el alcance propio de TT-0014 y S39 abierto.",
+  "dependencia_y_retorno": "Expediente cerrado para esta evaluación; conservar originales y reservas metodológicas. La eventual revisión científica de antecedentes no habilita nuevas inferencias. Retorno a S39 y al expediente independiente TT-0019.",
   "realizaciones": [
     {
       "casos": "C01-C07",
@@ -67,7 +70,7 @@
       "sha256": "74be63ad803d3a344468cd7b8bc555601a9876117086fc36c2b74b0cbe24d3f1"
     }
   ],
-  "fase": "Contraste v3 y diagnóstico cerrados; recepción independiente pendiente",
+  "fase": "Preevaluación cerrada, conservación cotejada e instancia y disco retirados",
   "puntuacion": {
     "N": 8,
     "N0": 7,
@@ -820,5 +823,63 @@
     "carga_deshabilitada": true,
     "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/INFORME-FINAL.md",
     "recuperacion_github": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json"
+  },
+  "corte_anterior_conservado": {
+    "revision_suceso": 37,
+    "fecha_actualizacion_utc": "2026-10-02T23:40:32.523Z",
+    "estado": "pendiente",
+    "resultado_actual": "Primera condición ARBITRO-SV-SAFEGUARD-20261002/v3 cerrada: seis originales evaluables, N₀=4, N₁=2 (N01 formal y N06 crítico), Nᵤ=0; 50/100 y No apto para este contraste previo. N01 conserva su original de v2 y se evalúa de forma diferida; N02–N06 se generaron una sola vez en una carga adicional. El suministro documental y la custodia son conformes. N06 reconoce fuentes incompatibles sin precedencia, pero clasifica CONTRADICHA frente a EVIDENCIA_INSUFICIENTE. Sin seis ceros ni acceso acreditado al examen. Cierre material cotejado, servidor, pesos y accesos conservados; recepción independiente pendiente. D01 reproduce el error crítico: CONTRADICHA frente a EVIDENCIA_INSUFICIENTE, pese a reconocer fuentes incompatibles sin precedencia. El control externo cerró la condición tras una carga y una generación. F01–F06 no se ejecutaron; no acreditan rendimiento ni generalización. Sin nueva hipótesis causal discriminante, se cierra esta vía conforme al §7. Inferencia detenida, carga deshabilitada, servidor, pesos y accesos conservados; recepción independiente pendiente.",
+    "dependencia_y_retorno": "Recepción científica independiente de entrega-03 y antecedentes; retorno al expediente Safeguard y Calidad. No se habilita examen ni otra generación por esta actualización. Se conserva el alcance propio de TT-0014 y S39 abierto.",
+    "referencia": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/433d56195b47ec67d702c0bb6eed769641763a0b/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0018_SAFEGUARD_INSTALACION_2026-10-01.json"
+  },
+  "fecha_corte_evidencias_utc": "2026-10-05T10:20:04Z",
+  "alcance_fecha_fin": "Fecha de conciliación y cierre del registro experimental; no es la hora material de terminación ni certifica una retirada no acreditada",
+  "cierre_preevaluacion": {
+    "fecha": "2026-10-04",
+    "dictamen": "No apto para acceder al examen en esta evaluación",
+    "capas": [
+      "A0",
+      "A1",
+      "A2",
+      "A3"
+    ],
+    "vector_por_capa": [
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ],
+    "T9": 7,
+    "score_por_capa": -88.89,
+    "clasificaciones_correctas_por_capa": 8,
+    "denominador_por_capa": 9,
+    "error_critico": "A08",
+    "mejora_score_puntos": 0,
+    "mejora_clasificaciones_puntos_porcentuales": 0,
+    "incidencia_A3": "Agotamiento de memoria del custodio después de A09; nueve finales conservadas, cierre normal no acreditado",
+    "diagnosticos_A08": {
+      "D01": "Final errónea",
+      "D02": "Sin final por cota temporal; fuera de 0/1/U",
+      "D03": "Final errónea; cierre normal 2026-10-04T09:40:16Z"
+    },
+    "admite_examen": false,
+    "admite_nuevas_inferencias": false
+  },
+  "conservacion_final": {
+    "recuperacion_y_cotejo_rust_conformes": true,
+    "entradas": 281859,
+    "entradas_adjudicaciones": 160,
+    "arranque_restaurado_ensayado": false
+  },
+  "infraestructura": {
+    "instancia_eliminada_acreditada": true,
+    "disco_eliminado_acreditado": true,
+    "fecha_acta": "2026-10-04",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md"
   }
 }

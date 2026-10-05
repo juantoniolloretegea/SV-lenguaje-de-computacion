@@ -1,0 +1,155 @@
+{
+  "alcance": "Concordancia y preservacion documental; no reproduce inferencias, cotejos originales de imagen ni retirada de recursos",
+  "archivos": [
+    {
+      "bytes": 45941,
+      "clave_documento": "acta001",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md",
+      "sha256": "ede8169e73a2096398e18e3a9cc772f02ac6715e8820f3ad58afda33f7930beb"
+    },
+    {
+      "bytes": 67058,
+      "clave_documento": "acta003",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_003_CONCILIACION_EIO_SUCESOS_Y_CALIDAD_2026_09_20.md",
+      "sha256": "e655ecda8870067749b9a134b937be81fe87e794ced5cc29347abe4eb674bd42"
+    },
+    {
+      "bytes": 96630,
+      "clave_documento": "acta004",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "sha256": "30dd1bcb7ce62f4274879f4ac8b2ff1085572cbeb24812fed1479873ebdb04b5"
+    },
+    {
+      "bytes": 737791,
+      "clave_documento": "histo",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "sha256": "f3f7ffcff9bf67d253b4fec9f6f57289bfc71ab87d0561636511054c66d3a754"
+    },
+    {
+      "bytes": 67654,
+      "clave_documento": "motor_index",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/README.md",
+      "sha256": "0bc1d0d498e0c032dda79e87a8646b2c7c5cca5e7fbe9b311e3bd89b354f3c95"
+    },
+    {
+      "bytes": 4688,
+      "clave_documento": "qreadme",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/readme.md",
+      "sha256": "1ef3c0ee0396d4fcde4fac6ffbcb024a20ca1cca4281c40d04f9204d127d0ca8"
+    },
+    {
+      "bytes": 2959,
+      "clave_documento": "qwen_estado",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/ESTADO.json",
+      "sha256": "3ee2e434eeade2c614fc0893661a9d9d27565150dbda509b2885847a6c8b27e0"
+    },
+    {
+      "bytes": 412459,
+      "clave_documento": "retp",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "sha256": "7024f1425f9ca2880beb8f4c78fd06c3a5d25972692dc19d32c435777f8dfa11"
+    },
+    {
+      "bytes": 360744,
+      "clave_documento": "retpcsv",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "sha256": "57e26635b3c11e86b48e7e94242979eb701b8e828554da25d9650d990e56a8d3"
+    },
+    {
+      "bytes": 98622,
+      "clave_documento": "sucesoscsv",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "sha256": "0871745e2989ae738fff57de4ddeb01a89a95621a50009bacfb6f000cc3205ea"
+    },
+    {
+      "bytes": 112391,
+      "clave_documento": "sucesosmd",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "sha256": "36460f42f9c897ac42c688560e9969d5aa66b8c3a5351a0d69e1f1d679463b19"
+    },
+    {
+      "bytes": 27018,
+      "clave_documento": "tiquescsv",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+      "sha256": "e68f87e3545ed077475c0da3e100f04ec62c87115f0b89b6cbffa303f217edf6"
+    },
+    {
+      "bytes": 27744,
+      "clave_documento": "tt14",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0014.md",
+      "sha256": "7dbfc75775e5e31b067632157647508f9aa121ba0f306e74856dbf05ba1c2bc8"
+    },
+    {
+      "bytes": 62859,
+      "clave_documento": "tt14j",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0014_MCP_DOCUMENTAL_LOCAL_2026-09-26.json",
+      "sha256": "4f4914ceec08c88719b7e04d7fe1b8c42716b802c5efcf1b1199e4281874f6c8"
+    },
+    {
+      "bytes": 8267,
+      "clave_documento": "tt17",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0017.md",
+      "sha256": "a1006fcf5781b06151cd90c8926d9a6b5ed6dc3f72ae88cb8ae1fa4f8d3e9b4a"
+    },
+    {
+      "bytes": 5663,
+      "clave_documento": "tt17j",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0017_QWEN80_THINKING_2026-09-30.json",
+      "sha256": "ec271044b22bcb5ca35ce545417ded21e173b17d5d94bea594b287af97d609b7"
+    },
+    {
+      "bytes": 23177,
+      "clave_documento": "tt18",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0018.md",
+      "sha256": "3f3f002c4ca13845327ee1c58475f4b8751960b328dd66b1bb6f6091ab9e54fc"
+    },
+    {
+      "bytes": 62292,
+      "clave_documento": "tt18j",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0018_SAFEGUARD_INSTALACION_2026-10-01.json",
+      "sha256": "4ea566e6d71c042a4a1d37796270a7903d04ec2abb2991ee4ea4fede62b61860"
+    },
+    {
+      "bytes": 4542,
+      "clave_documento": "tt19",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0019.md",
+      "sha256": "606cd8c0f7fcf147baa05f018f0cdc2fb22521b52583587b1a5641df5a63309f"
+    },
+    {
+      "bytes": 3013,
+      "clave_documento": "tt19j",
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0019_QWEN35_122B_2026-10-05.json",
+      "sha256": "405cbeb1c22cc19447877dd2277a5bcd5b092cdd6c570d00451b137e62a3beab"
+    },
+    {
+      "bytes": 64724,
+      "clave_documento": "versiones",
+      "ruta": "SV-motor/laboratorio/ensayo-ia-y-observabilidad/VERSIONES.json",
+      "sha256": "0220b0d9e44c145d6384817088a5c6cc3921b6b50d597347bbb0ff334a8a3674"
+    },
+    {
+      "bytes": 10465,
+      "ruta": "SV-lenguaje-de-computacion/docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_CONCILIACION_S39_REV38_20261005.rs",
+      "sha256": "7da0437cffa9eeb57baceace5ef473203e4888f8fe4455d9b5d8d7f3d9c97ac9"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "bases_consultadas": {
+    "lenguaje": "433d56195b47ec67d702c0bb6eed769641763a0b",
+    "motor": "149c4b848475802942af35ab39e7335081398480",
+    "sala": "85051ccf2c93b6fb3cafc727e3f568b51006f109"
+  },
+  "comprobaciones": [
+    "S39 revision 38 e historial concordantes",
+    "Historial previo y otros sucesos y tiques preservados",
+    "CSV y JSON de cuatro tiques concordantes",
+    "Thinking pendiente de retirada; Safeguard retirado",
+    "Qwen cuatro ceros y cinco NE sin puntuacion global",
+    "RETP-2026-277 nuevo sin alterar anteriores",
+    "Antecedentes y diagramas preservados",
+    "JSON validos y huellas de todos los documentos"
+  ],
+  "estado": "CONFORME",
+  "fecha_corte_documental_utc": "2026-10-05T10:20:04Z",
+  "revision_suceso": 38
+}

@@ -1,5 +1,7 @@
 # Acta 004 · Finalidad, alcance y continuidad del ensayo de inteligencia artificial y observabilidad
 
+**Estado actualizado · 05/10/2026:** [Acta 004 §32](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#32-conciliación-de-cierres-y-nueva-preevaluación--05102026), S39 revisión 38 y RETP-2026-277. Safeguard cerrado, conservado y con instancia/disco eliminados; Thinking cerrado y conservado, pendiente de eliminar su instancia/disco; Qwen3.5-122B-A10B Q8_0 instalado en UpCloud con 256 GB nominales y A01–A04 = 0 en A0. El bloque sigue incompleto. Los cortes inferiores conservan su valor histórico y no expresan el estado vigente.
+
 **Fecha:** 22 de septiembre de 2026.  
 **Seguimiento canónico:** S39, revisión 6; RETP-2026-268.  
 **Naturaleza:** síntesis científica y técnica, actualización del estado documental y delimitación de la continuación.  
@@ -522,5 +524,40 @@ Evidencias: [informe final](https://github.com/juantoniolloretegea/SV-sala-de-ma
 
 Retorno: recepción científica independiente de entrega-03 y antecedentes. Sin seis ceros no se habilita examen. S39 y los tiques conservan su estado abierto o pendiente; no se modifica el ámbito de otros modelos.
 
+## 32. Conciliación de cierres y nueva preevaluación · 05/10/2026
+
+**S39, revisión 38; RETP-2026-277. Corte documental: 2026-10-05T10:20:04Z.** Esta sección actualiza el seguimiento desde las entregas publicadas; no altera los resultados ni las condiciones de ejecución. Los estados precedentes son históricos y no reactivan campañas.
+
+| Expediente | Resultado experimental | Conservación | Situación del recurso |
+|---|---|---|---|
+| [Safeguard / TT-0018](../../Inventario-sv/tiques-tecnicos/TT-0018.md) | Preevaluación cerrada; No apto para acceder al examen; A0–A3 sin mejora y diagnósticos agotados | Imagen documental cifrada recuperada y cotejada | Instancia y disco de origen eliminados el 04/10 |
+| [Thinking / TT-0017](../../Inventario-sv/tiques-tecnicos/TT-0017.md) | Examen cerrado; No apto en las condiciones evaluadas por demoras operativas y falta de finalización fiable | Ediciones pública y privada publicadas; recuperación y cotejo conformes | Pendiente eliminar instancia y disco según la última evidencia |
+| [Qwen3.5 Q8_0 / TT-0019](../../Inventario-sv/tiques-tecnicos/TT-0019.md) | Instalado en UpCloud, 48 CPU y 256 GB nominales; A01–A04 = 0 en A0, A04 crítico | Hitos parciales publicados; consolidación de fase pendiente | Realización activa; sin GPU; sin intervención por esta conciliación |
+
+### 32.1. Safeguard
+
+El [informe de cierre](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md) documenta ocho clasificaciones correctas de nueve y error crítico A08, con omisiones formales. A0–A3 conservan −88,89/100 y vector (1,1,1,1,1,1,1,1,1), T(9)=7. No hay mejora; tampoco correcciones o regresiones entre A2 y A3. Esfuerzo alto y antecedentes adicionales cambiaron conjuntamente, sin causalidad aislada acreditada.
+
+D01 y D03 del diagnóstico posterior de A08 no corrigieron la clasificación; D02 quedó sin final por límite temporal y fuera de la terna. A3 conserva un agotamiento de memoria del custodio posterior a A09, sin cierre normal acreditado. Se mantienen las reservas sobre presentación del JSON, revisión contextual sin entrenamiento y equivalencia numérica no probada.
+
+La [conservación privada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/safeguard-imagen-20261004-v1) y el [acta de eliminación](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/d7bae43cab1f900afc2dcc5e8c0e35c61215e5a3/respuestas-ejecucion/SAFEGUARD-CONSERVACION-20261004/ACTA-RETIRADA.md) acreditan hechos separados. Instancia y disco fueron retirados el 04/10; no se ha ensayado arranque restaurado. No procede A4, bloque B ni examen por este expediente.
+
+### 32.2. Thinking
+
+El [cierre y conservación](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/0212a5ae1ccd3d42b5a26796068c0a3981d380c5/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/CIERRE-Y-CONSERVACION.md) y la [edición pública](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3-next-80b-a3b-thinking-archivo-cierre-20261005-v1) acreditan el resultado operativo desfavorable. Se conservan nueve finales pendientes de adjudicación de contenido, cuatro impedimentos terminales, P14 incompleta y once no ejecutadas. Denominador 25, sin puntuación global de contenido; los impedimentos no se convierten en U. No se atribuye toda la demora exclusivamente al modelo.
+
+La [edición privada](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/thinking-imagen-cierre-20261005-v1) fue recuperada, reconstruida y descifrada; el cotejo Rust comprende 164.854 entradas y 141.890 archivos ordinarios. No hay arranque restaurado ensayado. **Está cerrado el examen y está conservada la evidencia; sigue pendiente eliminar la instancia y su disco.** La última evidencia no acredita desaparición de la infraestructura ni cese de cargos. TT-0017 se finaliza en su alcance experimental y documental, con esa dependencia de infraestructura separada.
+
+### 32.3. Qwen3.5 y MCP
+
+La [recepción instrumental](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md) acredita la nueva instalación CPU de 256 GB nominales, aproximadamente 251,65 GiB efectivos, y la respuesta mínima LISTO en 48,459 s; no demuestra velocidad de campaña. Identifica la corrección CPU Q8_0 r2, el tokenizador nativo GGUF y MCP 0.1.4-pdf.1. La lectura e instalación del corpus PDF no equivalen a comprensión por el modelo. [TT-0014](../../Inventario-sv/tiques-tecnicos/TT-0014.md) conserva su recepción integral pendiente.
+
+El [vector del hito A04](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json) contiene cuatro ceros y cinco NE, con A04 crítico correcto. NE expresa falta de adjudicación y permanece fuera de 0/1/U. No hay κ ni puntuación global; no se habilita examen con un bloque incompleto. El [alcance del hito](https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/ALCANCE.md) separa publicación parcial de consolidación de fase y recepciones posteriores.
+
+### 32.4. Dependencia y retorno
+
+S39 permanece **en ejecución**, porque el candidato Qwen tiene evaluación propia en curso. Se preservan cotas originales, solicitudes y componentes activos. Retorno: cierre acotado de fase, conservación, cotejo y adjudicación, con recepción del alcance antes de decidir admisión. La eventual eliminación de Thinking requiere evidencia posterior; no es otra inferencia ni una condición añadida a Qwen.
+
+Esta conciliación no modifica el Núcleo del SV, la semántica V0.2 ni la IR 0.3. Las necesidades derivadas de los ensayos quedan sujetas a revisión antes de incorporarse al Núcleo. Se mantienen mapa y diagramas históricos. Se concilian fuentes fijadas; no se repiten reconstrucciones de imágenes ni se certifica por ello corrección clínica, equivalencia numérica o restauración funcional.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
