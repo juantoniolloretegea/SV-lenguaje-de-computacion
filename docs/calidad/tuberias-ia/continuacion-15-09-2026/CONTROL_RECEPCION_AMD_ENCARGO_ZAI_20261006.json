@@ -1,0 +1,77 @@
+{
+  "alcance": "Concordancia del seguimiento; no nueva ejecución GPU o del modelo",
+  "archivos": [
+    {
+      "bytes": 5321,
+      "original_blob": "4818d956ce0e52a8e51638f027333a66448883c3",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md",
+      "sha256": "9227054a365d2a27435982e0553b636caa764ca8011e5cf4d2bbe1b20a9a3438"
+    },
+    {
+      "bytes": 3513,
+      "original_blob": "748957bf87431b7f46a0d8347ea3982cb0384858",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0020_CALCULO_RUST_AMD_2026-10-05.json",
+      "sha256": "ef86cc4f903f62dbff969f0fba6aa68fe53e185961ddf21c928a3f704d8716f7"
+    },
+    {
+      "bytes": 28359,
+      "original_blob": "5ec11199b19b0be6544c6f99348d3e89448092e5",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+      "sha256": "868d2daad299b1caa0731adc4e18532630758013d86394a8f9b6445874317ac6"
+    },
+    {
+      "bytes": 110097,
+      "original_blob": "4d8b7af9fe57d7cb34612b36a3ad3ab8af51c197",
+      "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "sha256": "f031de69788a170a1589cf9808836cba0dafe937a4a91e114f0a1caeb90cf416"
+    },
+    {
+      "bytes": 96328,
+      "original_blob": "fdcae9a0973dd4e5f0b4ceac8a40230772109c19",
+      "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "sha256": "d7337485981975e581aa74645f2bc6df4df8d84034dc7187656aad35bc798628"
+    },
+    {
+      "bytes": 745582,
+      "original_blob": "5521157522a20452b01cb2d4bfd57b4754608cb9",
+      "path": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "sha256": "9c7ba4d0f76d433bb0acb5696296668be0bae103c45a7458289a7eed3d1045e4"
+    },
+    {
+      "bytes": 104033,
+      "original_blob": "b5fc5df8e97810b2f394a827bd20433304ef6071",
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "sha256": "04a1dc7c71f4c2805dd9a3af69171627be704a5fb687600b0fa486ba7efbd6bd"
+    },
+    {
+      "bytes": 415607,
+      "original_blob": "dd3eaf8ff5a48941c331a2147f6b5dc3122e1eb6",
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "sha256": "1c4f7ad4c964ae2540531c9c93a93ff7c723e2952ca1bb94163dfdc5a1689e65"
+    },
+    {
+      "bytes": 363244,
+      "original_blob": "2cd210dba36c9851506159ed75867ffdf07a0869",
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "sha256": "714beee77a60e22f074790e629d5e1e9e21af7cd80630ea6021e5ca66df8368c"
+    },
+    {
+      "bytes": 8197,
+      "original_blob": null,
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_RECEPCION_AMD_ENCARGO_ZAI_20261006.rs",
+      "sha256": "4e704b68449e1c2a5d493b1b4aa90ef987eebe0a2bd243363aca4fd12ae1bbff"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "base": "69a3d578a9541cbb3b79d1e3d24542dd78620df1",
+  "comprobaciones": [
+    "S39 revisión 40 CSV e historial concordantes",
+    "Antecedentes íntegros y otras filas intactas",
+    "TT-0020 en ejecución, recepción integral y modelo pendientes",
+    "Acta 004 sección 34 y RETP-2026-279",
+    "UTF-8, JSON, tamaños y SHA-256 Rust"
+  ],
+  "estado": "CONFORME_DOCUMENTAL",
+  "expediente": "ZAI-GLM53FLASH-RUST-AMD-20261006",
+  "fecha": "2026-10-06T01:23:04Z"
+}

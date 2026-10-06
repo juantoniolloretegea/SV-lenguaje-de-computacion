@@ -1361,31 +1361,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-18T10:00:48Z
 
-**fecha_actualizacion_utc:** 2026-10-05T18:29:13Z
+**fecha_actualizacion_utc:** 2026-10-06T01:23:04Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** Unidad coordinadora EIO / W-S39-03; ejecuciones diferenciadas por expediente
 
-**alcance:** Investigación lateral EIO de (p1+P3)-Bis: ejecución nativa, fidelidad documental, control y observabilidad. Conserva semántica V0.2 e IR 0.3; no constituye integración productiva. La revisión 38 concilia cierres Safeguard y Thinking y registra la nueva realización Qwen3.5 Q8_0 mediante TT-0019, sin modificar sus protocolos ni ampliar inferencias. La revisión 39 incorpora CubeCL como componente de cálculo Rust en evaluación, con rust-gpu alternativo; no modifica modelos ni abre ejecución GPU.
+**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 40: recepción acotada de la operación matricial Rust/AMD y apertura del estudio de integración de Z.ai — GLM-5.3-Flash. Núcleo, semántica V0.2 e IR 0.3 intactos; sin integración productiva.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion/main: seguimiento canónico. SV-motor/main: fuentes, realizaciones y resultados científicos. SV-sala-de-maquinas/main: originales operativos y conservación restringida.
 
-**cortes_de_entrada:** Lenguaje ff4c7299064d9ccde673902a14c0aecff8cf5e53; Motor 0b5104c4658bc98a9612fd2a97d7b8a5214b63cc; Sala 0190c5dc2ca353a9b3531df990a6c71be058536a. Corte experimental anterior preservado en revisión 38; corte nuevo limitado al componente de cálculo.
+**cortes_de_entrada:** Lenguaje 69a3d578a9541cbb3b79d1e3d24542dd78620df1; entrega AMD 714246c09a160740295f03ae5fb1381dd7a29b15; encargo Z.ai fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4, constancia c3e64e31a90485104c41c7a82a723f7fd4b4983a.
 
-**dependencias:** Acta 004 §33; RETP-2026-278; TT-0020 pendiente de realización y recepción. Versiones, dependencias admisibles, casos, tolerancias y cotas previos a prueba material. Los restantes tiques conservan sus alcances; las continuaciones experimentales se rigen por sus últimas evidencias y autorizaciones, no por cortes históricos.
+**dependencias:** Acta 004 §34; RETP-2026-279; TT-0020 en ejecución, recepción integral pendiente. Modelo, cuantización, motor y proveedor diferenciados; cobertura completa y memoria por acreditar. La operación recibida no habilita inferencia o examen.
 
-**resultado:** Nuevo componente: Evaluación documental concluida; CubeCL prioritario provisional, rust-gpu alternativa. MFMA/CDNA por LLVM en MI300X, exactitud independiente y dependencias pendientes de prueba. Sin instalación, inferencia ni recepción GPU. Kimi K3 y GLM-5.3/Flash permanecen como candidatos en estudio de viabilidad, sin ensayo ni descarte definitivo. El balance de modelos de revisión 38 conserva su corte histórico del 05/10 a las 10:20 UTC y no constituye monitor de ejecución. La retirada posterior de Thinking está acreditada por acta 2ddf814bb039b0c7876745023ea165baf38ed6f9; arranque restaurado sin ensayar. Los expedientes de modelos contienen los sucesores; esta incorporación no readjudica resultados.
+**resultado:** Prueba matricial AMD-CUBECL-MFMA-20261005/r1 recibida en alcance acotado: diez casos, sesenta salidas y custodia de 617 contenidos cotejados. Instancia temporal retirada según su acta. Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 autorizado, entregado e iniciado: Z.ai — familia GLM — GLM-5.3-Flash; cobertura Rust completa, memoria y magnitud de adaptación pendientes de dictamen. Sin inferencia del candidato ni nueva instancia por el estudio.
 
-**verificacion:** Lectura estática de revisiones fijadas, publicaciones y fuentes primarias; recuento común de actividad reciente conservado. Control documental en Rust de concordancia, identidad, preservación de antecedentes y publicación recuperada por referencia fija. No se ha compilado ni ejecutado CubeCL/rust-gpu en GPU; integridad distinta de exactitud numérica.
+**verificacion:** Entrega numérica y custodia leídas; revisión independiente acotada de 617 contenidos ya recuperados y sesenta salidas conservadas frente a referencias f64, mediante Rust. No segunda ejecución GPU ni reconstrucción nueva del paquete. Encargo recuperado íntegramente y cotejado por bytes/SHA-256 en Rust; recepción e inicio confirmados. Concordancia documental de la revisión 40 comprobada antes de publicación.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/inferencia/cubecl-evaluacion-20261005/ESTUDIO.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/amd/estudio-uso-5-10-29-v1/calculo-rust-20261005/ADENDA.md ; https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/2ddf814bb039b0c7876745023ea165baf38ed6f9/respuestas-ejecucion/QWEN80-THINKING-Q4K-ONECLOUD-20260930/entrega-03/retirada-20261005/ACTA-RETIRADA.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/714246c09a160740295f03ae5fb1381dd7a29b15/respuestas-ejecucion/AMD-CUBECL-MFMA-20261005/entrega-01 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/ENCARGO.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c3e64e31a90485104c41c7a82a723f7fd4b4983a/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/COTEJO-PUBLICACION.json
 
-**referencia_calidad:** S39 revisión 39; TT-0020; Acta 004 §33; RETP-2026-278. Control documental Rust de incorporación AMD-CALCULO-RUST-20261005. Revisiones anteriores conservadas íntegramente en historial y Git.
+**referencia_calidad:** S39 revisión 40; TT-0020; Acta 004 §34; RETP-2026-279. Revisiones anteriores preservadas en historial y Git. Registro actual de hechos recibidos; no fecha retrospectiva de apertura.
 
-**siguiente_accion:** Mantener la evaluación documental como base; delimitar una prueba de multiplicación matricial f16/f32 para gfx942 antes de cualquier realización. Volver a decisión si se requiere ampliar compilador, arquitectura o recursos. Las campañas de modelos conservan sus límites y cierres propios; sin reactivación o nueva inferencia por este asiento.
+**siguiente_accion:** Recibir el estudio delimitado: máximo tres horas de trabajo activo, treinta minutos finales para consolidación; conclusión única sobre una adaptación acotada, desarrollo sustancial o impedimento identificado. Sin activar recursos, descargar pesos ni inferir. Sólo una propuesta de prueba material para decisión posterior si hay vía concreta.
 
-**observaciones:** Preferencia CubeCL provisional por adecuación y actividad observada; rust-gpu también activo. MFMA/CDNA por LLVM no acreditado; compatibilidad efectiva rust-gpu/MI300X pendiente. SPIR-V externo distinto de IR 0.3 del SV. Núcleo, semántica V0.2 e IR 0.3 intactos. Sin gastos, instalación, habilitación de examen o cambio del mapa y diagramas.
+**observaciones:** La recepción comprende f16/f16-f32 y MFMA 16³ en gfx942, con las dimensiones y casos ensayados. Infraestructura de compilación/controlador separada de operaciones numéricas Rust. Reserva sobre ventanas temporales, memoria muestreada y ausencia de ejecución restaurada. GLM-5.3-Flash identificado por zai-org/GLM-5.3-Flash; no transferencia de aptitud desde GLM-5.3, Kimi o Qwen. Demás expedientes conservan sus últimas evidencias y alcances propios.
 
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 

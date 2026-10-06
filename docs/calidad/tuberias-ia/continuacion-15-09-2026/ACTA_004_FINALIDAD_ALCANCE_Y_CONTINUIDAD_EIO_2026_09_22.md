@@ -578,4 +578,28 @@ El §32 y las revisiones anteriores se conservan como cortes históricos. La [re
 
 La comprobación de esta incorporación concierne a concordancia, trazabilidad, preservación y recuperación documental en Rust. Se distingue de exactitud numérica, rendimiento y recepción científica. Núcleo del SV, semántica V0.2 e IR 0.3 intactos; mapa y diagramas históricos preservados. Retorno: prueba técnica delimitada y recibida antes de proponer cualquier integración.
 
+## 34. Recepción matricial AMD y estudio de Z.ai — GLM-5.3-Flash · 06/10/2026
+
+**S39 revisión 40; TT-0020; RETP-2026-279. Registro: 2026-10-06T01:23:04Z.** Se incorpora el resultado recibido después del corte del §33 y la apertura del nuevo estudio autorizado. Los apartados anteriores conservan sus fechas y alcance históricos.
+
+### 34.1. Recepción instrumental delimitada
+
+La [entrega AMD-CUBECL-MFMA-20261005/r1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/714246c09a160740295f03ae5fb1381dd7a29b15/respuestas-ejecucion/AMD-CUBECL-MFMA-20261005/entrega-01) acredita el producto f16/f16 con acumulación y salida f32, ejecutado mediante CubeCL–LLVM–MFMA en MI300X/gfx942: diez casos, sesenta salidas y referencia independiente Rust con tolerancias prefijadas. La adaptación corresponde a MFMA manual 16³; dimensiones ensayadas hasta 512³ y casos especiales. La custodia publicada acredita 617 contenidos. La retirada del recurso temporal consta en su acta.
+
+La revisión independiente posterior leyó fuentes y documentos y cotejó en Rust los 617 contenidos ya recuperados y las sesenta salidas frente a referencias f64 conservadas. No repitió la descarga de quince fragmentos, el cálculo de referencias, una ejecución GPU o un arranque restaurado. Se conservan las reservas de medición temporal, memoria muestreada y reconstrucción completa fuera de línea no acreditada. La recepción es favorable dentro de esa cobertura, sin garantía general del motor.
+
+### 34.2. Encargo autorizado e iniciado
+
+[ZAI-GLM53FLASH-RUST-AMD-20261006/r1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/ENCARGO.md), con [recuperación y cotejo del encargo](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c3e64e31a90485104c41c7a82a723f7fd4b4983a/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/COTEJO-PUBLICACION.json). Identificación: **Z.ai — familia GLM — GLM-5.3-Flash**, `zai-org/GLM-5.3-Flash`; editor Zhipu AI (Z.ai). Distinguir modelo base, representación cuantizada, motor y proveedor. El estudio se ha transmitido y su recepción e inicio han sido confirmados; el dictamen permanece pendiente.
+
+Máximo tres horas de trabajo activo, con treinta minutos finales para informe y custodia. Objeto: cobertura del recorrido completo en Rust, mantenimiento de sus componentes, memoria de pesos, estados y espacios temporales, y magnitud real de la adaptación. La capacidad gráfica y la RAM se dimensionan por separado. La ejecución matricial previa no demuestra esas condiciones.
+
+Esta fase no activa servidores, descarga pesos, ejecuta inferencias ni habilita examen. Se exige una conclusión única: vía concreta con adaptación delimitada y propuesta de una prueba material; desarrollo sustancial necesario; o impedimento/evidencia insuficiente. La propuesta material vuelve a decisión antes de ejecutarse. No se abre una sucesión de familias o pruebas por inercia.
+
+### 34.3. Tique, dependencias y retorno
+
+TT-0020 pasa a **en ejecución**, con N-C01–N-C05 reutilizadas y recepción integral pendiente; la tabla del tique distingue avances limitados de cada necesidad. S39 mantiene **en ejecución**. Retorno: recibir el informe y su custodia, revisar sus límites y decidir la siguiente actuación. No se declara aptitud de Z.ai, Kimi o Qwen.
+
+Los expedientes experimentales restantes conservan sus últimos cierres y recepciones propios. Núcleo del SV, semántica V0.2, IR 0.3, mapa y diagramas históricos intactos. No se incorporan necesidades al Núcleo por esta recepción.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
