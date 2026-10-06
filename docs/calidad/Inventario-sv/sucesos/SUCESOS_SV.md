@@ -1361,31 +1361,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-18T10:00:48Z
 
-**fecha_actualizacion_utc:** 2026-10-06T01:55:09Z
+**fecha_actualizacion_utc:** 2026-10-06T16:34:52.8103019Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** Unidad coordinadora EIO / W-S39-03; ejecuciones diferenciadas por expediente
 
-**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 41: recepción documental y aritmética del estudio Z.ai — GLM-5.3-Flash; desarrollo sustancial necesario. Núcleo, semántica V0.2 e IR 0.3 intactos.
+**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 42: cierre, conservación y situación de retirada de Qwen3.5 Q8_0. La recepción anterior del estudio GLM-5.3-Flash mantiene su alcance concluido, sin integración sustancial iniciada. Núcleo, semántica V0.2 e IR 0.3 intactos.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion/main: seguimiento canónico. SV-motor/main: fuentes, realizaciones y resultados científicos. SV-sala-de-maquinas/main: originales operativos y conservación restringida.
 
 **cortes_de_entrada:** Lenguaje d20560a926e42d337abdadbc396aa340260e3a83; entrega Z.ai f4a05ba19ef1907e8e87d13547605e3bfc2efab1; antecedente matricial 714246c09a160740295f03ae5fb1381dd7a29b15.
 
-**dependencias:** Acta 004 §35; RETP-2026-280; TT-0020 pendiente de integración integral. Estudio terminado; ninguna actuación material nueva. Nueva decisión de alcance o evidencia concreta antes de continuar.
+**dependencias:** Acta 004 §36; RETP-2026-281; TT-0019 finalizado en alcance experimental y conservación, con recepción científica independiente y situación de retirada diferenciadas. TT-0014 y TT-0020 mantienen sus reservas propias.
 
-**resultado:** Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 concluido y recibido: Desarrollo sustancial necesario para Z.ai — GLM-5.3-Flash. Dieciséis archivos (132549 bytes) recuperados; manifiesto y aritmética cotejados en Rust. La operación matricial antecedente conserva su recepción acotada; arquitectura completa, cuantización y memoria efectiva sin recepción. Sin despliegue, inferencia, dictamen de aptitud ni continuación material automática.
+**resultado:** Qwen3.5-122B-A10B Q8_0: preevaluación cerrada, admisión no acreditada por impedimento temporal. Siete respuestas A0, N0=6, N1=1 (A06 crítico), NU=0; dos casos no ejecutados. Sin κ, puntuación global, revisiones B, integración generativa PDF o examen. Imagen cifrada sin pesos y complemento recuperados, reconstruidos y descifrados; contenido e inventario cotejados con Rust. Retirada administrativa pendiente; servicio detenido y originales conservados en origen. No se declara cese de cargos. Arranque restaurado no ensayado.
 
-**verificacion:** Recuperación íntegra de 16 archivos y SHA-256 en Rust; trece contenidos concordantes con manifiesto y constancias. Cálculo reproducido literalmente y contraste repetido: seis escenarios y 141 filas de cobertura. Cuatro fuentes primarias fijadas releídas y cotejadas. Sin segunda ejecución GPU ni modelo; no reproducción del análisis íntegro de todas las bases.
+**verificacion:** Identidad contrastada mediante SSH y panel; cinco pesos cotejados por inventario Rust actual, procedencia y revisión; campaña original y copia conformes. Activos recuperados íntegramente de GitHub; bytes, SHA-256, reconstrucción, descifrado, ext4 sin reparación, inventario y contenido cotejados con Rust. Custodia distinta de recepción científica independiente y arranque restaurado.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md
+**evidencias:** https://github.com/juantoniolloretegea/SV-motor/blob/11a84870221355a8b5f9b22db67d574f8bb3f1eb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md ; https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1
 
-**referencia_calidad:** S39 revisión 41; TT-0020; Acta 004 §35; RETP-2026-280. Antecedentes, mapa y diagramas preservados.
+**referencia_calidad:** S39 revisión 42; TT-0019; Acta 004 §36; RETP-2026-281. Antecedentes, licencias y diagramas preservados.
 
-**siguiente_accion:** Conservar el estudio cerrado y el impedimento concreto. Valorar alcance sólo ante decisión expresa o nueva evidencia; no activar recursos, descargar pesos, desarrollar el motor o inferir por esta recepción.
+**siguiente_accion:** Conservar el expediente cerrado y sus reservas. A01–A03 conservan recepción independiente favorable; A04–A07 y fase permanecen pendientes al último corte competente. Sin nuevas inferencias o examen por este asiento. Los demás expedientes y estudios mantienen sus propios alcances.
 
-**observaciones:** El dictamen concierne al trabajo de realización, no a la aptitud del modelo. Encaje parcial de memoria bajo hipótesis; temporales y máximo efectivo no medidos. La operación matricial recibida no proporciona KDA–MLA/DSA, mHC o cargador cuantizado completos. Los demás expedientes conservan su alcance.
+**observaciones:** Servicio detenido antes de copiar; ninguna inferencia nueva. El error crítico A06 se conserva como error sustantivo, sin convertirlo en incidencia instrumental. Dos casos sin ejecutar no son U. No se declara incapacidad universal, aptitud clínica ni mejora por otro motor o cuantización. S39 general permanece en ejecución.
 
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 

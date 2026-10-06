@@ -345,4 +345,8 @@ Retorno: recepción científica independiente de entrega-03 y antecedentes. Sin 
 
 La actualización se concilia con TT-0014, TT-0017, TT-0018 y el nuevo TT-0019, sus registros JSON, el CSV de tiques, Sucesos y su historial. Véase [Acta 004 §32](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#32-conciliación-de-cierres-y-nueva-preevaluación--05102026) para resultados, custodia, reservas y dependencias. S39 general continúa en ejecución. No se alteran el mapa histórico, el Núcleo, la semántica ni la IR.
 
+## Remisión de cierre y conservación · S39 revisión 42 · 06/10/2026
+
+La actualización de Qwen3.5-122B-A10B Q8_0 queda conciliada con TT-0019, Sucesos e historial y RETP-2026-281. Véase Acta 004 §36 para resultados, custodia y situación de retirada. Retirada administrativa pendiente; servicio detenido y originales conservados en origen. No se declara cese de cargos. Arranque restaurado no ensayado. Recepción científica independiente pendiente separada de conservación conforme. S39 general sigue en ejecución; los otros expedientes, mapa, antecedentes y diagramas se mantienen. Sin inferencias nuevas o modificación del Núcleo, semántica V0.2 o IR 0.3.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
