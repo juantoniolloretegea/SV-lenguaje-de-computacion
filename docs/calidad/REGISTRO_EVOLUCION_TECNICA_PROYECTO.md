@@ -2796,4 +2796,12 @@ Registro 2026-10-06T18:09:28.3464564Z. **VERIFICACION_ACOTADA.** Qwen3.5-122B-A1
 
 S39 revisión 43; TT-0019; Acta 004 §37; RETP-2026-282. Antecedentes, licencias y diagramas preservados. Conservar el expediente cerrado y sus reservas. A01–A03 conservan recepción independiente favorable; A04–A07 y fase permanecen pendientes al último corte competente. Sin nuevas inferencias o examen por este asiento. Los demás expedientes y estudios mantienen sus propios alcances. Núcleo, semántica V0.2 e IR 0.3 intactos.
 
+## RETP-2026-283 · Astra: entrega estructurada y trazabilidad instrumental
+
+Registro 2026-10-06T20:38:37Z. **VERIFICACION_ACOTADA.** Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.
+
+[Informe fijado](https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md). Concordancia: S39 revisión 44, TT-0021 y Acta 004 §38. Se distinguen el cotejo de entrega y la recepción integral del instrumento; no se acredita auditoría externa, fidelidad clínica o repetibilidad. Recibir la adaptación al contrato científico, admisión de datos, referencias y control de consumo antes de A01. Mantener separados catálogo, revisiones adversariales y examen. No repetir la consulta trivial ni reabrir expedientes cerrados. Criptografía nativa y recepción integral pendientes.
+
+La publicación documental es posterior a las pruebas y no altera su evidencia. Permiso temporal de créditos desactivado, receptor cerrado, sin nueva inferencia durante el cotejo, sin compra ni recarga. Expediente operativo íntegro conservado localmente; custodia remota íntegra pendiente. Antecedentes y Núcleo intactos.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

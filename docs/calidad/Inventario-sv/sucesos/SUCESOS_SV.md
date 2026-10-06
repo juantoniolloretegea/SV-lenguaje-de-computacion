@@ -1361,31 +1361,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-18T10:00:48Z
 
-**fecha_actualizacion_utc:** 2026-10-06T18:09:28.3464564Z
+**fecha_actualizacion_utc:** 2026-10-06T20:38:37Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** Unidad coordinadora EIO / W-S39-03; ejecuciones diferenciadas por expediente
 
-**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 43: cierre, conservación y situación de retirada de Qwen3.5 Q8_0. La recepción anterior del estudio GLM-5.3-Flash mantiene su alcance concluido, sin integración sustancial iniciada. Núcleo, semántica V0.2 e IR 0.3 intactos.
+**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 43: cierre, conservación y situación de retirada de Qwen3.5 Q8_0. La recepción anterior del estudio GLM-5.3-Flash mantiene su alcance concluido, sin integración sustancial iniciada. Núcleo, semántica V0.2 e IR 0.3 intactos. Revisión 44: pruebas de entrega y trazabilidad de Astra en nodo 03, sin abrir catálogo.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion/main: seguimiento canónico. SV-motor/main: fuentes, realizaciones y resultados científicos. SV-sala-de-maquinas/main: originales operativos y conservación restringida.
 
-**cortes_de_entrada:** Lenguaje d20560a926e42d337abdadbc396aa340260e3a83; entrega Z.ai f4a05ba19ef1907e8e87d13547605e3bfc2efab1; antecedente matricial 714246c09a160740295f03ae5fb1381dd7a29b15.
+**cortes_de_entrada:** Lenguaje d20560a926e42d337abdadbc396aa340260e3a83; entrega Z.ai f4a05ba19ef1907e8e87d13547605e3bfc2efab1; antecedente matricial 714246c09a160740295f03ae5fb1381dd7a29b15. Motor f6fc0b1640ac965a5497a14f3415e85ca2d64fc0; Lenguaje b532bab2a6226ce19b56dd7f0a991324e90ceec6.
 
-**dependencias:** Acta 004 §37; RETP-2026-282; TT-0019 finalizado en alcance experimental y conservación, con recepción científica independiente y situación de retirada diferenciadas. TT-0014 y TT-0020 mantienen sus reservas propias.
+**dependencias:** Acta 004 §37; RETP-2026-282; TT-0019 finalizado en alcance experimental y conservación, con recepción científica independiente y situación de retirada diferenciadas. TT-0014 y TT-0020 mantienen sus reservas propias. TT-0021; Acta 004 §38; RETP-2026-283. Recepción integral del instrumento del catálogo pendiente.
 
-**resultado:** Qwen3.5-122B-A10B Q8_0: preevaluación cerrada, admisión no acreditada por impedimento temporal. Siete respuestas A0, N0=6, N1=1 (A06 crítico), NU=0; dos casos no ejecutados. Sin κ, puntuación global, revisiones B, integración generativa PDF o examen. Imagen cifrada sin pesos y complemento recuperados, reconstruidos y descifrados; contenido e inventario cotejados con Rust. Instancia y disco exclusivo retirados; desaparición cotejada en inventarios administrativos. Arranque restaurado no ensayado.
+**resultado:** Qwen3.5-122B-A10B Q8_0: preevaluación cerrada, admisión no acreditada por impedimento temporal. Siete respuestas A0, N0=6, N1=1 (A06 crítico), NU=0; dos casos no ejecutados. Sin κ, puntuación global, revisiones B, integración generativa PDF o examen. Imagen cifrada sin pesos y complemento recuperados, reconstruidos y descifrados; contenido e inventario cotejados con Rust. Instancia y disco exclusivo retirados; desaparición cotejada en inventarios administrativos. Arranque restaurado no ensayado. Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.
 
-**verificacion:** Identidad contrastada mediante SSH y panel; cinco pesos cotejados por inventario Rust actual, procedencia y revisión; campaña original y copia conformes. Activos recuperados íntegramente de GitHub; bytes, SHA-256, reconstrucción, descifrado, ext4 sin reparación, inventario y contenido cotejados con Rust. Custodia distinta de recepción científica independiente y arranque restaurado.
+**verificacion:** Identidad contrastada mediante SSH y panel; cinco pesos cotejados por inventario Rust actual, procedencia y revisión; campaña original y copia conformes. Activos recuperados íntegramente de GitHub; bytes, SHA-256, reconstrucción, descifrado, ext4 sin reparación, inventario y contenido cotejados con Rust. Custodia distinta de recepción científica independiente y arranque restaurado. Astra: secuencia, texto, uso, formato, integridad y cobertura instrumental cotejados; corrección de referencia documentada sin nueva inferencia. Este cotejo no constituye auditoría externa.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-motor/blob/11a84870221355a8b5f9b22db67d574f8bb3f1eb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md ; https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1
+**evidencias:** https://github.com/juantoniolloretegea/SV-motor/blob/11a84870221355a8b5f9b22db67d574f8bb3f1eb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md ; https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1 ; https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md
 
-**referencia_calidad:** S39 revisión 43; TT-0019; Acta 004 §37; RETP-2026-282. Antecedentes, licencias y diagramas preservados.
+**referencia_calidad:** S39 revisión 43; TT-0019; Acta 004 §37; RETP-2026-282. Antecedentes, licencias y diagramas preservados. S39 revisión 44; TT-0021; Acta 004 §38; RETP-2026-283.
 
-**siguiente_accion:** Conservar el expediente cerrado y sus reservas. A01–A03 conservan recepción independiente favorable; A04–A07 y fase permanecen pendientes al último corte competente. Sin nuevas inferencias o examen por este asiento. Los demás expedientes y estudios mantienen sus propios alcances.
+**siguiente_accion:** Conservar el expediente cerrado y sus reservas. A01–A03 conservan recepción independiente favorable; A04–A07 y fase permanecen pendientes al último corte competente. Sin nuevas inferencias o examen por este asiento. Los demás expedientes y estudios mantienen sus propios alcances. Recibir la adaptación al contrato científico, admisión de datos, referencias y control de consumo antes de A01. Mantener separados catálogo, revisiones adversariales y examen. No repetir la consulta trivial ni reabrir expedientes cerrados. Criptografía nativa y recepción integral pendientes.
 
-**observaciones:** Servicio detenido antes de copiar; ninguna inferencia nueva. El error crítico A06 se conserva como error sustantivo, sin convertirlo en incidencia instrumental. Dos casos sin ejecutar no son U. No se declara incapacidad universal, aptitud clínica ni mejora por otro motor o cuantización. S39 general permanece en ejecución.
+**observaciones:** Servicio detenido antes de copiar; ninguna inferencia nueva. El error crítico A06 se conserva como error sustantivo, sin convertirlo en incidencia instrumental. Dos casos sin ejecutar no son U. No se declara incapacidad universal, aptitud clínica ni mejora por otro motor o cuantización. S39 general permanece en ejecución. Astra: permiso temporal de créditos restablecido a desactivado, receptor cerrado, sin pagos ni recargas. Alta del tique posterior a las pruebas, declarada como tal. Custodia remota del expediente operativo íntegro pendiente.
 
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 

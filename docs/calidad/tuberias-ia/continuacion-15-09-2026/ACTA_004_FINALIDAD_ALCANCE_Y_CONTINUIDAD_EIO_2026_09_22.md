@@ -648,4 +648,20 @@ TT-0019 finaliza en alcance experimental y de conservación; la recepción cient
 
 Se mantiene la recepción previa de GLM-5.3-Flash y su impedimento de integración. No se transfieren resultados entre modelos. Núcleo, semántica V0.2, IR 0.3, §§1–36, antecedentes y diagramas preservados. La fecha de esta constancia es 06/10/2026; no se atribuye un cierre al 15/09/2026.
 
+## 38. Nodo 03: entrega estructurada de GPT-6 Astra y separación de fases
+
+**S39 revisión 44; TT-0021; RETP-2026-283. Registro 2026-10-06T20:38:37Z.**
+
+Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.
+
+[Informe instrumental fijado](https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md) · [Tique técnico](../../Inventario-sv/tiques-tecnicos/TT-0021.md).
+
+Se distinguen declaración del modelo, resumen opcional del proveedor y evidencia medida por el cliente Rust. El JSON sí contiene justificación breve; el resumen opcional no llegó. El código generado permanece como texto. La alerta de referencia es un falso positivo del comprobador, conservado junto con su revisión; no se adjudica como error del modelo ni se reescribe la respuesta original.
+
+Esta observación concluye sin evaluación científica del candidato. Recibir la adaptación al contrato científico, admisión de datos, referencias y control de consumo antes de A01. Mantener separados catálogo, revisiones adversariales y examen. No repetir la consulta trivial ni reabrir expedientes cerrados. Criptografía nativa y recepción integral pendientes. El polígono se presenta sólo con vector completo. La fidelidad no se deduce del formato JSON ni de consistencia superficial: depende de significado, condiciones, fuentes, negaciones e incertidumbre, con revisión competente.
+
+El permiso temporal de créditos se restablece a desactivado y el receptor se cierra. Coste liquidado no comunicado. No hubo pagos, recargas, información sanitaria ni ejecución del código propuesto. Dependencia criptográfica C/ensamblador pendiente según excepción expresa. La publicación comprende informe y respuesta artificial; no custodia remota integral de los originales operativos.
+
+La conciliación es posterior a la ejecución y conserva ese orden temporal. El tique permanece pendiente por recepción integral, no por una inferencia activa. Se mantienen los cierres y reservas de Qwen, Z.ai, MCP y demás expedientes. Núcleo, semántica V0.2, IR 0.3, §§1–37 y diagramas intactos.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
