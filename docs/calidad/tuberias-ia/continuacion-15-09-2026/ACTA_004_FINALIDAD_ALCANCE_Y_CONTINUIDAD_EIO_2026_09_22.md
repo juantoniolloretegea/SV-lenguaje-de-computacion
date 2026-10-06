@@ -632,4 +632,20 @@ TT-0019 finaliza en alcance experimental y de conservación; la recepción cient
 
 Se mantiene la recepción previa de GLM-5.3-Flash y su impedimento de integración. No se transfieren resultados entre modelos. Núcleo, semántica V0.2, IR 0.3, §§1–35, antecedentes y diagramas preservados. La fecha de esta constancia es 06/10/2026; no se atribuye un cierre al 15/09/2026.
 
+## 37. Retirada posterior de Qwen3.5-122B-A10B Q8_0 · 06/10/2026
+
+**S39 revisión 43; TT-0019; Acta 004 §37; RETP-2026-282. Antecedentes, licencias y diagramas preservados. Registro: 2026-10-06T18:09:28.3464564Z.**
+
+Qwen3.5-122B-A10B Q8_0: preevaluación cerrada, admisión no acreditada por impedimento temporal. Siete respuestas A0, N0=6, N1=1 (A06 crítico), NU=0; dos casos no ejecutados. Sin κ, puntuación global, revisiones B, integración generativa PDF o examen. Imagen cifrada sin pesos y complemento recuperados, reconstruidos y descifrados; contenido e inventario cotejados con Rust. Instancia y disco exclusivo retirados; desaparición cotejada en inventarios administrativos. Arranque restaurado no ensayado.
+
+[Informe científico fijado](https://github.com/juantoniolloretegea/SV-motor/blob/11a84870221355a8b5f9b22db67d574f8bb3f1eb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/cierre-r1/INFORME-FINAL.md) · [Edición pública de cierre](https://github.com/juantoniolloretegea/SV-motor/releases/tag/qwen3.5-122b-a10b-q8-0-archivo-cierre-20261006-v1) · [Conservación cifrada de acceso restringido](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/releases/tag/qwen35-122b-q8-imagen-cierre-20261006-v1). Los siete originales y sus adjudicaciones permanecen intactos. A06 es error sustantivo crítico; ausencia de datos no constituye negación del fenómeno. Las incidencias de transporte de conservación se documentan separadamente y no readjudican la campaña.
+
+La recepción de la nueva imagen verifica instalación, inventario y contenido, con pesos identificados sin duplicación. Se conserva la diferencia entre copia documental, recuperación estructural y arranque restaurado no ensayado. El servicio detenido no equivale a recurso dado de baja.
+
+Instancia y disco exclusivo retirados; desaparición cotejada en inventarios administrativos.
+
+TT-0019 finaliza en alcance experimental y de conservación; la recepción científica independiente pendiente no se presenta como realizada. S39 general conserva en ejecución. Conservar el expediente cerrado y sus reservas. A01–A03 conservan recepción independiente favorable; A04–A07 y fase permanecen pendientes al último corte competente. Sin nuevas inferencias o examen por este asiento. Los demás expedientes y estudios mantienen sus propios alcances.
+
+Se mantiene la recepción previa de GLM-5.3-Flash y su impedimento de integración. No se transfieren resultados entre modelos. Núcleo, semántica V0.2, IR 0.3, §§1–36, antecedentes y diagramas preservados. La fecha de esta constancia es 06/10/2026; no se atribuye un cierre al 15/09/2026.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

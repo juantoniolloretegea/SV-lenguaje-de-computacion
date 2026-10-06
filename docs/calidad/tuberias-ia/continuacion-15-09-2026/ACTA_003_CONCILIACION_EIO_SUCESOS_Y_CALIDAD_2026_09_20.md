@@ -349,4 +349,8 @@ La actualización se concilia con TT-0014, TT-0017, TT-0018 y el nuevo TT-0019, 
 
 La actualización de Qwen3.5-122B-A10B Q8_0 queda conciliada con TT-0019, Sucesos e historial y RETP-2026-281. Véase Acta 004 §36 para resultados, custodia y situación de retirada. Retirada administrativa pendiente; servicio detenido y originales conservados en origen. No se declara cese de cargos. Arranque restaurado no ensayado. Recepción científica independiente pendiente separada de conservación conforme. S39 general sigue en ejecución; los otros expedientes, mapa, antecedentes y diagramas se mantienen. Sin inferencias nuevas o modificación del Núcleo, semántica V0.2 o IR 0.3.
 
+## Remisión de cierre y conservación · S39 revisión 43 · 06/10/2026
+
+La actualización de Qwen3.5-122B-A10B Q8_0 queda conciliada con TT-0019, Sucesos e historial y RETP-2026-282. Véase Acta 004 §37 para resultados, custodia y situación de retirada. Instancia y disco exclusivo retirados; desaparición cotejada en inventarios administrativos. Arranque restaurado no ensayado. Recepción científica independiente pendiente separada de conservación conforme. S39 general sigue en ejecución; los otros expedientes, mapa, antecedentes y diagramas se mantienen. Sin inferencias nuevas o modificación del Núcleo, semántica V0.2 o IR 0.3.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
