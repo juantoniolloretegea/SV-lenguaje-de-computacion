@@ -664,4 +664,20 @@ El permiso temporal de créditos se restablece a desactivado y el receptor se ci
 
 La conciliación es posterior a la ejecución y conserva ese orden temporal. El tique permanece pendiente por recepción integral, no por una inferencia activa. Se mantienen los cierres y reservas de Qwen, Z.ai, MCP y demás expedientes. Núcleo, semántica V0.2, IR 0.3, §§1–37 y diagramas intactos.
 
+## 39. Nodo 03: contrato de Astra por API y gobierno local del Árbitro-Director
+
+**Fecha de asiento:** 2026-10-06T21:15:55Z. **Suceso:** S39, revisión 45. **Tique:** TT-0021, pendiente. **Evolución:** RETP-2026-284.
+
+Astra por API con caché, control y evaluación en el SV, también en el examen. Árbitro-Director y auxiliares Rust conservan el gobierno; candidato sin acceso a clave, adjudicación, herramientas ni telemetría. Contrato científico conservado: dos páginas completas por caso, banco A/B, revisiones y criterios; anexo MCP/PDF separado antes del examen. Preparación local comprobada: 18 casos, 36 páginas previstas, política idéntica, siete pruebas Rust conformes y ninguna nueva inferencia.
+
+La precisión humana prevalente permite el examen de Astra mediante API y mantiene la caché y el control en el SV. La carpeta del equipo propio desempeña la función de servidor de pruebas. El modelo recibe la documentación admitida, no la clave sellada ni los registros de medición; no ejecuta herramientas, no navega y no modifica la evaluación. El Árbitro y sus auxiliares Rust mantienen sus funciones; se comprueba únicamente la nueva adaptación técnica sin reabrir la validación del Árbitro.
+
+Se conservan las fases y el banco. El anexo de capacidad MCP/PDF precede al examen, mantiene su propia evidencia y no altera preguntas ni puntuaciones. Las dos páginas del catálogo son lógicas; se distinguen de páginas físicas del PDF. La emisión explicativa del candidato se adjudica externamente y no constituye prueba de sus procesos internos.
+
+[Contrato y constancia de preparación](https://github.com/juantoniolloretegea/SV-motor/blob/26c177b4f99352b2f6ab1bc1ba0dd9f03fb7dc71/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/CONTRATO-CATALOGO-20261006.md). Tres documentos publicados en Motor, recuperados por referencia inmutable y cotejados por bytes/SHA-256. La preparación local no acredita el recorrido MCP real o la inferencia científica. Un salto de línea añadido en la incorporación inicial fue rechazado por integridad; se restituyeron los originales antes de completar el cotejo. Sin cambios de preguntas o política.
+
+Recibir el acoplamiento científico: recorrido MCP local y correspondencia con las páginas previstas, transporte con telemetría y separación de autoridad, y admisión efectiva de consumo antes de A01. Conservar el Árbitro existente y sus antecedentes; no reabrir su validación científica. Después catálogo y revisiones, anexo PDF y examen condicionado por API; navegación prohibida. Criptografía nativa pendiente y polígono únicamente completo y adjudicado.
+
+Núcleo, semántica, IR, README y mapa histórico intactos. No hay campaña, anexo, examen, pagos, recargas ni otra inferencia por este asiento. Los resultados históricos permanecen conservados.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

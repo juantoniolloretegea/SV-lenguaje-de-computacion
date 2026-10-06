@@ -2804,4 +2804,16 @@ Registro 2026-10-06T20:38:37Z. **VERIFICACION_ACOTADA.** Nodo 03, GPT-6 Astra: t
 
 La publicación documental es posterior a las pruebas y no altera su evidencia. Permiso temporal de créditos desactivado, receptor cerrado, sin nueva inferencia durante el cotejo, sin compra ni recarga. Expediente operativo íntegro conservado localmente; custodia remota íntegra pendiente. Antecedentes y Núcleo intactos.
 
+## RETP-2026-284 · Preparación del catálogo de Astra bajo control local SV
+
+**Fecha:** 06/10/2026. **Hora Europe/Madrid:** 23:15:55. **Tipo:** PREPARACION_ACOTADA. **Frente:** S39 / TT-0021 / Acta 004 §39.
+
+Astra por API con caché, control y evaluación en el SV, también en el examen. Árbitro-Director y auxiliares Rust conservan el gobierno; candidato sin acceso a clave, adjudicación, herramientas ni telemetría. Contrato científico conservado: dos páginas completas por caso, banco A/B, revisiones y criterios; anexo MCP/PDF separado antes del examen. Preparación local comprobada: 18 casos, 36 páginas previstas, política idéntica, siete pruebas Rust conformes y ninguna nueva inferencia.
+
+**Fundamento:** precisión humana de examen por API con caché y control propios, conservación del Árbitro-Director y exclusión del candidato de evaluación y telemetría. **Evidencia:** [contrato y preparación](https://github.com/juantoniolloretegea/SV-motor/blob/26c177b4f99352b2f6ab1bc1ba0dd9f03fb7dc71/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/CONTRATO-CATALOGO-20261006.md).
+
+**Límite adversarial:** preparar páginas y pasar comprobaciones locales no equivale a recibir MCP/transporte ni a ejecutar el catálogo; las limitaciones internas del proveedor se declaran. **Continuación:** Recibir el acoplamiento científico: recorrido MCP local y correspondencia con las páginas previstas, transporte con telemetría y separación de autoridad, y admisión efectiva de consumo antes de A01. Conservar el Árbitro existente y sus antecedentes; no reabrir su validación científica. Después catálogo y revisiones, anexo PDF y examen condicionado por API; navegación prohibida. Criptografía nativa pendiente y polígono únicamente completo y adjudicado.
+
+Sin modificación nuclear, nueva campaña o consumo. Conservar las pruebas instrumentales precedentes y sus incidencias.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

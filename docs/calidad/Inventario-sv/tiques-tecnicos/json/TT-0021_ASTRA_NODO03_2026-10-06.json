@@ -3,13 +3,13 @@
   "tipo_registro": "seguimiento documental; no especificación ejecutable",
   "id": "TT-0021",
   "suceso_principal": "S39",
-  "revision_suceso": 44,
+  "revision_suceso": 45,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-10-06T20:38:37Z",
-  "fecha_actualizacion_utc": "2026-10-06T20:38:37Z",
+  "fecha_actualizacion_utc": "2026-10-06T21:15:55Z",
   "fecha_fin_utc": null,
   "objeto": "GPT-6 Astra, nodo 03: entrega estructurada, instrumentación y preparación del catálogo",
-  "resultado_actual": "Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.",
+  "resultado_actual": "Astra por API con caché, control y evaluación en el SV, también en el examen. Árbitro-Director y auxiliares Rust conservan el gobierno; candidato sin acceso a clave, adjudicación, herramientas ni telemetría. Contrato científico conservado: dos páginas completas por caso, banco A/B, revisiones y criterios; anexo MCP/PDF separado antes del examen. Preparación local comprobada: 18 casos, 36 páginas previstas, política idéntica, siete pruebas Rust conformes y ninguna nueva inferencia.",
   "expediente": "ASTRA-NODO03-ENTREGA-20261006",
   "necesidades": [
     "N-A01",
@@ -36,9 +36,21 @@
   "custodia_remota_expediente_integro": false,
   "uso_creditos_temporal_desactivado": true,
   "criptografia_nativa_pendiente": true,
-  "retorno": "Recibir la adaptación al contrato científico, admisión de datos, referencias y control de consumo antes de A01. Mantener separados catálogo, revisiones adversariales y examen. No repetir la consulta trivial ni reabrir expedientes cerrados. Criptografía nativa y recepción integral pendientes.",
+  "retorno": "Recibir el acoplamiento científico: recorrido MCP local y correspondencia con las páginas previstas, transporte con telemetría y separación de autoridad, y admisión efectiva de consumo antes de A01. Conservar el Árbitro existente y sus antecedentes; no reabrir su validación científica. Después catálogo y revisiones, anexo PDF y examen condicionado por API; navegación prohibida. Criptografía nativa pendiente y polígono únicamente completo y adjudicado.",
   "evidencias": [
-    "https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md"
+    "https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/26c177b4f99352b2f6ab1bc1ba0dd9f03fb7dc71/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/CONTRATO-CATALOGO-20261006.md"
   ],
-  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "resultado_anterior": "Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.",
+  "contrato_catalogo_fijado": true,
+  "preparacion_local_sin_inferencia": true,
+  "pruebas_preparacion_rust": 7,
+  "casos_locales": 18,
+  "paginas_previstas": 36,
+  "examen_modalidad": "Astra por API; caché, control y evaluación en el SV",
+  "arbitro_director": "Gobierno existente y auxiliares Rust; recepción del nuevo acoplamiento pendiente",
+  "navegacion_modelo_permitida": false,
+  "anexo_pdf": "Separado del catálogo y antes del examen",
+  "recepcion_mcp_local_pendiente": true
 }

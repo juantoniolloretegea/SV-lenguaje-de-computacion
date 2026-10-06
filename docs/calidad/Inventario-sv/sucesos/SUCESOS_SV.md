@@ -1387,6 +1387,12 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **observaciones:** Servicio detenido antes de copiar; ninguna inferencia nueva. El error crítico A06 se conserva como error sustantivo, sin convertirlo en incidencia instrumental. Dos casos sin ejecutar no son U. No se declara incapacidad universal, aptitud clínica ni mejora por otro motor o cuantización. S39 general permanece en ejecución. Astra: permiso temporal de créditos restablecido a desactivado, receptor cerrado, sin pagos ni recargas. Alta del tique posterior a las pruebas, declarada como tal. Custodia remota del expediente operativo íntegro pendiente.
 
+### Actualización 06/10/2026 · revisión 45 · catálogo de Astra bajo el Árbitro-Director
+
+Astra por API con caché, control y evaluación en el SV, también en el examen. Árbitro-Director y auxiliares Rust conservan el gobierno; candidato sin acceso a clave, adjudicación, herramientas ni telemetría. Contrato científico conservado: dos páginas completas por caso, banco A/B, revisiones y criterios; anexo MCP/PDF separado antes del examen. Preparación local comprobada: 18 casos, 36 páginas previstas, política idéntica, siete pruebas Rust conformes y ninguna nueva inferencia.
+
+[Contrato y preparación cotejados](https://github.com/juantoniolloretegea/SV-motor/blob/26c177b4f99352b2f6ab1bc1ba0dd9f03fb7dc71/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/CONTRATO-CATALOGO-20261006.md). Recibir el acoplamiento científico: recorrido MCP local y correspondencia con las páginas previstas, transporte con telemetría y separación de autoridad, y admisión efectiva de consumo antes de A01. Conservar el Árbitro existente y sus antecedentes; no reabrir su validación científica. Después catálogo y revisiones, anexo PDF y examen condicionado por API; navegación prohibida. Criptografía nativa pendiente y polígono únicamente completo y adjudicado. Concordancia: TT-0021, Acta 004 §39 y RETP-2026-284. Los originales y resultados históricos anteriores permanecen vigentes en su alcance; no se afirma recepción integral ni campaña ejecutada.
+
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 
 **estado:** pendiente
