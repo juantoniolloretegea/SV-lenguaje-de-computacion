@@ -1,0 +1,133 @@
+{
+  "archivos": [
+    {
+      "bytes": 6680,
+      "path": "CALCULAR.rs",
+      "sha256": "613c90ee596f33ff4f67b79f5c7d31fe2e5335e54b087016822f3c5364c01dd9"
+    },
+    {
+      "bytes": 29646,
+      "path": "COBERTURA-Y-MEMORIA.tsv",
+      "sha256": "27880bf79e5afbb263da663fef010ce85d68577e8511c5c995826711797beebe"
+    },
+    {
+      "bytes": 2378,
+      "path": "CONTRASTAR.rs",
+      "sha256": "55c9c3684e5ad64b962393d114ac27ce48a1bafa47ac6ca3e27bfa29e21cebab"
+    },
+    {
+      "bytes": 121,
+      "path": "CONTRASTE-RUST.txt",
+      "sha256": "4be405e83c6cfd6a01fda3e38265c41a023386923a002a81961c6f5e799326c9"
+    },
+    {
+      "bytes": 2274,
+      "path": "COTEJO-PUBLICACION.json",
+      "sha256": "93b5d3c338a30bff167b0e285a9a7d5af0195ef331393828388cd4456ddcce2e"
+    },
+    {
+      "bytes": 2404,
+      "path": "Cargo.lock",
+      "sha256": "bbabbb2fb02b833e132ca5c595905c1e6d4a182a6d3c4984d7f240a03c91c109"
+    },
+    {
+      "bytes": 181,
+      "path": "Cargo.toml",
+      "sha256": "ac6f610da00ff8cbf52a65c666b0a251222a026d3eb403a45932cf852acdf514"
+    },
+    {
+      "bytes": 38566,
+      "path": "FUENTES.json",
+      "sha256": "2d2f0eee230a9188a9c5cc3589cbce6b6ef975b6712bcd8414f741a727e41993"
+    },
+    {
+      "bytes": 1463,
+      "path": "INCIDENCIAS-INSTRUMENTALES.md",
+      "sha256": "cad589907a85099af5d3b1e3e4688624cfb5132a353cc5a05d28e6aeb706349e"
+    },
+    {
+      "bytes": 17935,
+      "path": "INFORME.md",
+      "sha256": "c69c7c6f91353349d9c2263b47bc575b0d47b4458807e0cbcfc405dc697af9ca"
+    },
+    {
+      "bytes": 1695,
+      "path": "INVENTARIO-PESOS.tsv",
+      "sha256": "c50a8a7cdeff81565abe9c04685bfe99e5b29baf065844778a9cfb6208bee106"
+    },
+    {
+      "bytes": 1138,
+      "path": "MANIFIESTO.tsv",
+      "sha256": "2632b30008848de33805c9f5c25b4ee09805833661a738afa15971a6552a0d6a"
+    },
+    {
+      "bytes": 24435,
+      "path": "MEMORIA-RUST.tsv",
+      "sha256": "19bf0439330f8b1ba3c7e9b7d042a0699aa560b041d65bddbe918ae16a291360"
+    },
+    {
+      "bytes": 282,
+      "path": "PARAMETROS.tsv",
+      "sha256": "985be50b50d4c974464f57c8c6f0fdfe95a1643c94e0dfa1a511193116738346"
+    },
+    {
+      "bytes": 2007,
+      "path": "RECIBIR.rs",
+      "sha256": "9c91f7185eac5d730971edc3e72ce05f51bceffc478053ea28742b0da5a2e60c"
+    },
+    {
+      "bytes": 1344,
+      "path": "RECUPERACION-RUST.tsv",
+      "sha256": "6c70011dbc05009fa05cfe7a01850f26ceac145f295b97401573aaeb2b1d111d"
+    }
+  ],
+  "bytes_totales": 132549,
+  "calculos": {
+    "contraste_repetido": true,
+    "escenarios": 6,
+    "filas_cobertura": 141,
+    "inferencia": false,
+    "operaciones_gpu": 0,
+    "reproduccion_literal": true,
+    "sha256_resultado": "19bf0439330f8b1ba3c7e9b7d042a0699aa560b041d65bddbe918ae16a291360"
+  },
+  "dictamen_recibido": "Desarrollo sustancial necesario",
+  "estado": "CONFORME_DOCUMENTAL_Y_ARITMETICA_ACOTADA",
+  "expediente": "ZAI-GLM53FLASH-RUST-AMD-20261006/r1",
+  "fecha_recepcion_utc": "2026-10-06T01:55:09Z",
+  "fuentes_primarias_releidas_y_cotejadas": [
+    {
+      "bytes": 643,
+      "sha256": "d3c5b254148dee4a9c51a8310f5d460b65b5db7af20b2cf1d65058d8720cf420",
+      "url": "https://github.com/EricLBuehler/mistral.rs/blob/3f2515e9b5adc2ac44949c128c50a13b15721294/mistralrs-core/src/models/mod.rs"
+    },
+    {
+      "bytes": 3267,
+      "sha256": "5cbf293b9e0f9b8b3b8bda497941c16aa67ad6ba402fa0e5015b3c10587ddf42",
+      "url": "https://github.com/huggingface/candle/blob/c68b24997319b8d76e5a4e775dab197c7f26322a/candle-transformers/src/models/mod.rs"
+    },
+    {
+      "bytes": 103927,
+      "sha256": "a56b3f59f79c4430505bbc85557e0abdc35098561b831ab79cf14661aac1f6a5",
+      "url": "https://github.com/huggingface/transformers/blob/8073e6dcaea9aa4b42acf2d92ec72148786bbaeb/src/transformers/models/glm5_next/modeling_glm5_next.py"
+    },
+    {
+      "bytes": 1100,
+      "sha256": "1041eb88a3c6d1758a0abe5f286869a4d38066cba538359b3bf43822385a567a",
+      "url": "https://github.com/tracel-ai/burn/blob/e8a6afbf9751013fc4191e074d3139dad7ff34f7/crates/burn-rocm/src/lib.rs"
+    }
+  ],
+  "limites": [
+    "Recepción independiente de documentación y aritmética; no reproducción del análisis completo de todas las bases",
+    "No descarga o cotejo de pesos, medida de memoria efectiva, motor o GPU",
+    "No recepción integral TT-0020 ni clasificación del candidato; Núcleo, semántica V0.2 e IR 0.3 intactos"
+  ],
+  "manifiesto_contenido": {
+    "archivos": 13,
+    "bytes": 127793,
+    "estado": "CONFORME"
+  },
+  "repositorio_origen": "juantoniolloretegea/SV-sala-de-maquinas",
+  "revision": "f4a05ba19ef1907e8e87d13547605e3bfc2efab1",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

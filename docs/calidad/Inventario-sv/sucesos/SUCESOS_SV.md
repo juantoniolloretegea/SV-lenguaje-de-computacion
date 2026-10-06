@@ -1361,31 +1361,31 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 
 **fecha_inicio_utc:** 2026-09-18T10:00:48Z
 
-**fecha_actualizacion_utc:** 2026-10-06T01:23:04Z
+**fecha_actualizacion_utc:** 2026-10-06T01:55:09Z
 
 **fecha_fin_utc:** —
 
 **unidad_responsable:** Unidad coordinadora EIO / W-S39-03; ejecuciones diferenciadas por expediente
 
-**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 40: recepción acotada de la operación matricial Rust/AMD y apertura del estudio de integración de Z.ai — GLM-5.3-Flash. Núcleo, semántica V0.2 e IR 0.3 intactos; sin integración productiva.
+**alcance:** Investigación lateral EIO de (p1+P3)-Bis: realización nativa, fidelidad documental, control y observabilidad. Revisión 41: recepción documental y aritmética del estudio Z.ai — GLM-5.3-Flash; desarrollo sustancial necesario. Núcleo, semántica V0.2 e IR 0.3 intactos.
 
 **repositorios_y_ramas:** SV-lenguaje-de-computacion/main: seguimiento canónico. SV-motor/main: fuentes, realizaciones y resultados científicos. SV-sala-de-maquinas/main: originales operativos y conservación restringida.
 
-**cortes_de_entrada:** Lenguaje 69a3d578a9541cbb3b79d1e3d24542dd78620df1; entrega AMD 714246c09a160740295f03ae5fb1381dd7a29b15; encargo Z.ai fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4, constancia c3e64e31a90485104c41c7a82a723f7fd4b4983a.
+**cortes_de_entrada:** Lenguaje d20560a926e42d337abdadbc396aa340260e3a83; entrega Z.ai f4a05ba19ef1907e8e87d13547605e3bfc2efab1; antecedente matricial 714246c09a160740295f03ae5fb1381dd7a29b15.
 
-**dependencias:** Acta 004 §34; RETP-2026-279; TT-0020 en ejecución, recepción integral pendiente. Modelo, cuantización, motor y proveedor diferenciados; cobertura completa y memoria por acreditar. La operación recibida no habilita inferencia o examen.
+**dependencias:** Acta 004 §35; RETP-2026-280; TT-0020 pendiente de integración integral. Estudio terminado; ninguna actuación material nueva. Nueva decisión de alcance o evidencia concreta antes de continuar.
 
-**resultado:** Prueba matricial AMD-CUBECL-MFMA-20261005/r1 recibida en alcance acotado: diez casos, sesenta salidas y custodia de 617 contenidos cotejados. Instancia temporal retirada según su acta. Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 autorizado, entregado e iniciado: Z.ai — familia GLM — GLM-5.3-Flash; cobertura Rust completa, memoria y magnitud de adaptación pendientes de dictamen. Sin inferencia del candidato ni nueva instancia por el estudio.
+**resultado:** Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 concluido y recibido: Desarrollo sustancial necesario para Z.ai — GLM-5.3-Flash. Dieciséis archivos (132549 bytes) recuperados; manifiesto y aritmética cotejados en Rust. La operación matricial antecedente conserva su recepción acotada; arquitectura completa, cuantización y memoria efectiva sin recepción. Sin despliegue, inferencia, dictamen de aptitud ni continuación material automática.
 
-**verificacion:** Entrega numérica y custodia leídas; revisión independiente acotada de 617 contenidos ya recuperados y sesenta salidas conservadas frente a referencias f64, mediante Rust. No segunda ejecución GPU ni reconstrucción nueva del paquete. Encargo recuperado íntegramente y cotejado por bytes/SHA-256 en Rust; recepción e inicio confirmados. Concordancia documental de la revisión 40 comprobada antes de publicación.
+**verificacion:** Recuperación íntegra de 16 archivos y SHA-256 en Rust; trece contenidos concordantes con manifiesto y constancias. Cálculo reproducido literalmente y contraste repetido: seis escenarios y 141 filas de cobertura. Cuatro fuentes primarias fijadas releídas y cotejadas. Sin segunda ejecución GPU ni modelo; no reproducción del análisis íntegro de todas las bases.
 
-**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/714246c09a160740295f03ae5fb1381dd7a29b15/respuestas-ejecucion/AMD-CUBECL-MFMA-20261005/entrega-01 ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/ENCARGO.md ; https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c3e64e31a90485104c41c7a82a723f7fd4b4983a/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/COTEJO-PUBLICACION.json
+**evidencias:** https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md
 
-**referencia_calidad:** S39 revisión 40; TT-0020; Acta 004 §34; RETP-2026-279. Revisiones anteriores preservadas en historial y Git. Registro actual de hechos recibidos; no fecha retrospectiva de apertura.
+**referencia_calidad:** S39 revisión 41; TT-0020; Acta 004 §35; RETP-2026-280. Antecedentes, mapa y diagramas preservados.
 
-**siguiente_accion:** Recibir el estudio delimitado: máximo tres horas de trabajo activo, treinta minutos finales para consolidación; conclusión única sobre una adaptación acotada, desarrollo sustancial o impedimento identificado. Sin activar recursos, descargar pesos ni inferir. Sólo una propuesta de prueba material para decisión posterior si hay vía concreta.
+**siguiente_accion:** Conservar el estudio cerrado y el impedimento concreto. Valorar alcance sólo ante decisión expresa o nueva evidencia; no activar recursos, descargar pesos, desarrollar el motor o inferir por esta recepción.
 
-**observaciones:** La recepción comprende f16/f16-f32 y MFMA 16³ en gfx942, con las dimensiones y casos ensayados. Infraestructura de compilación/controlador separada de operaciones numéricas Rust. Reserva sobre ventanas temporales, memoria muestreada y ausencia de ejecución restaurada. GLM-5.3-Flash identificado por zai-org/GLM-5.3-Flash; no transferencia de aptitud desde GLM-5.3, Kimi o Qwen. Demás expedientes conservan sus últimas evidencias y alcances propios.
+**observaciones:** El dictamen concierne al trabajo de realización, no a la aptitud del modelo. Encaje parcial de memoria bajo hipótesis; temporales y máximo efectivo no medidos. La operación matricial recibida no proporciona KDA–MLA/DSA, mHC o cargador cuantizado completos. Los demás expedientes conservan su alcance.
 
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 

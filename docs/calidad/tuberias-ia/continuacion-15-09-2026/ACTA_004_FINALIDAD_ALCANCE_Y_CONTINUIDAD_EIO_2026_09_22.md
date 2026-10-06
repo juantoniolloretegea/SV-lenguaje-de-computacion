@@ -602,4 +602,18 @@ TT-0020 pasa a **en ejecución**, con N-C01–N-C05 reutilizadas y recepción in
 
 Los expedientes experimentales restantes conservan sus últimos cierres y recepciones propios. Núcleo del SV, semántica V0.2, IR 0.3, mapa y diagramas históricos intactos. No se incorporan necesidades al Núcleo por esta recepción.
 
+## 35. Recepción del estudio Z.ai — GLM-5.3-Flash · 06/10/2026
+
+**S39 revisión 41; TT-0020; RETP-2026-280. Registro: 2026-10-06T01:55:09Z.** Se recibe la [entrega ZAI-GLM53FLASH-RUST-AMD-20261006/r1](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md), cerrada dentro de la cota documental. Dictamen: **Desarrollo sustancial necesario**.
+
+La multiplicación matricial antecedente conserva su resultado acotado. Para el modelo completo faltan la composición KDA–MLA/DSA, las conexiones mHC, el cargador de los tipos cuantizados exactos y la recepción numérica de estados, expertos y respuesta. No se recomienda un despliegue inmediato ni otra prueba GPU aislada bajo este encargo. El dictamen no es una clasificación «No apto», no atribuye U y no habilita examen.
+
+La revisión independiente recuperó los dieciséis archivos (132549 bytes), verificó mediante Rust sus huellas y el manifiesto de trece contenidos, y reprodujo literalmente el cálculo de memoria y su contraste. La tabla contiene 141 filas y seis escenarios aritméticos. Cuatro fuentes primarias fijadas se releyeron y cotejaron: registros de modelos de mistral.rs y Candle, realización de referencia Transformers leída como documentación y base ROCm de Burn. No se reproduce aquí toda la investigación de bibliotecas ni se ejecuta código Python, GPU o modelo.
+
+Los pesos se conocen por metadatos de procedencia, sin descarga ni equivalencia numérica recibida. El presupuesto de VRAM y RAM mantiene una reserva del 20 % por separado. Los cálculos acreditan sólo escenarios: materializar puntuaciones para todo el contexto excede el presupuesto preliminar desde 8192 tokens; una realización por bloques podría reducir los temporales, pero no está realizada ni medida. Se conservan las incidencias instrumentales documentadas del contraste y la diferencia entre integridad y capacidad efectiva.
+
+El estudio está concluido y recibido. TT-0020 pasa a **pendiente** por integración sustancial no iniciada; N-C01–N-C05 no se cierran globalmente. S39 conserva su seguimiento general **en ejecución**, sin implicar inferencia o actividad material en este estudio. Retorno: decisión de alcance o nueva evidencia concreta antes de cualquier continuación. No hay nueva instancia, descarga de pesos, motor desarrollado ni seguimiento automático.
+
+Los §§1–34 y registros históricos se preservan. Núcleo, semántica V0.2, IR 0.3, mapa y diagramas históricos intactos; los otros expedientes mantienen sus propios resultados y recepciones.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -2772,4 +2772,12 @@ Registro 2026-10-06T01:23:04Z. **VERIFICACION_ACOTADA: recepción instrumental y
 
 S39 revisión 40; TT-0020 en ejecución con recepción integral pendiente; Acta 004 §34. Estudio máximo tres horas de trabajo activo, sin nuevas instancias o inferencias. Retorno: dictamen único de viabilidad y, sólo si procede, propuesta delimitada para decisión posterior. Antecedentes intactos; sin cambios del Núcleo, semántica V0.2 o IR 0.3.
 
+## RETP-2026-280 · Recepción documental y aritmética del estudio Z.ai
+
+Registro 2026-10-06T01:55:09Z. **VERIFICACION_ACOTADA.** Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 concluido y recibido: Desarrollo sustancial necesario para Z.ai — GLM-5.3-Flash. Dieciséis archivos (132549 bytes) recuperados; manifiesto y aritmética cotejados en Rust. La operación matricial antecedente conserva su recepción acotada; arquitectura completa, cuantización y memoria efectiva sin recepción. Sin despliegue, inferencia, dictamen de aptitud ni continuación material automática.
+
+[Informe fijado](https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md). Reproducción literal del cálculo y repetición de su contraste en Rust; seis escenarios y 141 filas de cobertura. Cuatro fuentes primarias releídas y cotejadas. La conclusión distingue falta de realización completa de aptitud del modelo y conserva las hipótesis de memoria, sin medida de máximos efectivos.
+
+S39 revisión 41; TT-0020 pendiente de integración integral, estudio concluido; Acta 004 §35. Retorno a decisión de alcance o nueva evidencia antes de continuar, sin recursos, inferencias o desarrollo adicional por esta recepción. Antecedentes, Núcleo, semántica V0.2 e IR 0.3 intactos.
+
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

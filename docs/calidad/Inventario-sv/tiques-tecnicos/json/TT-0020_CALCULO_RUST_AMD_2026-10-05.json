@@ -3,13 +3,13 @@
   "tipo_registro": "seguimiento documental; no especificación ejecutable",
   "id": "TT-0020",
   "suceso_principal": "S39",
-  "revision_suceso": 40,
-  "estado": "en ejecución",
+  "revision_suceso": 41,
+  "estado": "pendiente",
   "fecha_alta_utc": "2026-10-05T18:29:13Z",
-  "fecha_actualizacion_utc": "2026-10-06T01:23:04Z",
+  "fecha_actualizacion_utc": "2026-10-06T01:55:09Z",
   "fecha_fin_utc": null,
   "objeto": "CubeCL y rust-gpu: realización de cálculo Rust para AMD",
-  "resultado_actual": "Prueba matricial AMD-CUBECL-MFMA-20261005/r1 recibida en alcance acotado: diez casos, sesenta salidas y custodia de 617 contenidos cotejados. Instancia temporal retirada según su acta. Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 autorizado, entregado e iniciado: Z.ai — familia GLM — GLM-5.3-Flash; cobertura Rust completa, memoria y magnitud de adaptación pendientes de dictamen. Sin inferencia del candidato ni nueva instancia por el estudio.",
+  "resultado_actual": "Estudio ZAI-GLM53FLASH-RUST-AMD-20261006/r1 concluido y recibido: Desarrollo sustancial necesario para Z.ai — GLM-5.3-Flash. Dieciséis archivos (132549 bytes) recuperados; manifiesto y aritmética cotejados en Rust. La operación matricial antecedente conserva su recepción acotada; arquitectura completa, cuantización y memoria efectiva sin recepción. Sin despliegue, inferencia, dictamen de aptitud ni continuación material automática.",
   "expediente": "AMD-CALCULO-RUST-20261005",
   "necesidades": [
     "N-C01",
@@ -27,7 +27,8 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/main/amd/estudio-uso-5-10-29-v1/calculo-rust-20261005/ADENDA.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/tree/714246c09a160740295f03ae5fb1381dd7a29b15/respuestas-ejecucion/AMD-CUBECL-MFMA-20261005/entrega-01",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/fd662a62e6d9f6346ae7a5f3fbba8aaffd95fcb4/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/ENCARGO.md",
-    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c3e64e31a90485104c41c7a82a723f7fd4b4983a/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/COTEJO-PUBLICACION.json"
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/c3e64e31a90485104c41c7a82a723f7fd4b4983a/encargos-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/v1/COTEJO-PUBLICACION.json",
+    "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md"
   ],
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "candidatos_en_estudio": [
@@ -46,7 +47,8 @@
     "revision_independiente": "Documentos y contenidos ya recuperados; sin segunda ejecución GPU",
     "instancia_retirada_segun_acta": true
   },
-  "estudio_en_curso": {
+  "motivo_pendiente": "Estudio documental recibido; integración sustancial no iniciada, pendiente de decisión de alcance o nueva evidencia concreta. No hay actuación material en curso.",
+  "estudio_concluido": {
     "expediente": "ZAI-GLM53FLASH-RUST-AMD-20261006/r1",
     "editor": "Z.ai (Zhipu AI)",
     "modelo": "zai-org/GLM-5.3-Flash",
@@ -54,6 +56,17 @@
     "recepcion_e_inicio_confirmados": true,
     "cota_horas_trabajo_activo": 3,
     "nuevos_recursos_autorizados": false,
-    "dictamen_pendiente": true
+    "dictamen_pendiente": false,
+    "dictamen": "Desarrollo sustancial necesario",
+    "fecha_custodia_comunicada_utc": "2026-10-06T01:51:16Z",
+    "estado": "finalizado",
+    "recepcion_documental_finalizada": true,
+    "recepcion_modelo": false,
+    "fuente": "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/f4a05ba19ef1907e8e87d13547605e3bfc2efab1/respuestas-ejecucion/ZAI-GLM53FLASH-RUST-AMD-20261006/entrega-01/INFORME.md",
+    "contenido_cotejado": {
+      "archivos": 16,
+      "bytes": 132549
+    },
+    "calculo_reproducido_literalmente": true
   }
 }

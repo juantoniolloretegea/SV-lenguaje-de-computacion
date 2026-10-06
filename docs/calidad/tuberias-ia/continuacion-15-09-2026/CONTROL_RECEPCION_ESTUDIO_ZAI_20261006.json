@@ -1,0 +1,89 @@
+{
+  "alcance": "Concordancia del seguimiento; no nueva ejecución GPU o del modelo",
+  "archivos": [
+    {
+      "bytes": 6346,
+      "original_blob": "b41b2a78a774829eafbc60563024cfb9186369e1",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TT-0020.md",
+      "sha256": "686d33f235042e28b1fc115fa76abfe796c4b99f01169f577ef18707ac405d00"
+    },
+    {
+      "bytes": 4423,
+      "original_blob": "80e397fde3a0d91af71b8e595e94708fdcc00522",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/json/TT-0020_CALCULO_RUST_AMD_2026-10-05.json",
+      "sha256": "d7b714dada056145d37165d9706a34a1363b969c88fe294c48d005993517e67f"
+    },
+    {
+      "bytes": 28533,
+      "original_blob": "8e10cab55631ec1f15c61123c4b7935ecd96d67a",
+      "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+      "sha256": "fad6bc0284dfe1633076861fc81a576a5f1770cbe2787a1d638725679594e56d"
+    },
+    {
+      "bytes": 109198,
+      "original_blob": "eda75fd383f9c38d244667d38d44f8739b695718",
+      "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+      "sha256": "39e7400c65be75a46c37f7d42ea97d737b8a3af0dc358357fc997ec573350282"
+    },
+    {
+      "bytes": 95429,
+      "original_blob": "0376f1216b17452c0a4185ae90c99500967bb103",
+      "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+      "sha256": "0cb3a31af5a8ec852135838dec06550a708bef100a76a95f88301ceddf144ce5"
+    },
+    {
+      "bytes": 748317,
+      "original_blob": "59babcf96e112dbd8602fc726e372fe3314ad4b3",
+      "path": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+      "sha256": "1228985141c8989748baa5207b59cd3b5eaf093186f1fba3c56ed7a3f06c92a9"
+    },
+    {
+      "bytes": 106695,
+      "original_blob": "1acde9ddcd3ffbe90ec7b4d095b5a5581a88bb77",
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "sha256": "c25f81240eae172ac719b8576f786e7565507fd1409074026f8adfafe5c4005f"
+    },
+    {
+      "bytes": 416994,
+      "original_blob": "0c46f1c2807fe22f7c729931c0e5a125cdb56f9c",
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+      "sha256": "6ff1e7a587d7e4bb6be9d0952c5eab12ce5265c0a0187be0de37bc6a60d00242"
+    },
+    {
+      "bytes": 364460,
+      "original_blob": "40e5a37af6159e6dcb691111a3bb2ceb1d2efa42",
+      "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+      "sha256": "6387d50529a46f47074cd4a35b4e03011ea1daf3ba560ada36c0b88f415ed6be"
+    },
+    {
+      "bytes": 4966,
+      "original_blob": null,
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_ESTUDIO_ZAI_20261006.json",
+      "sha256": "c76f9851088c20af2ff102c9e4fb146e6a1c48209854a9d7ee3021b46c4652b7"
+    },
+    {
+      "bytes": 5296,
+      "original_blob": null,
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/RECEPCION_ESTUDIO_ZAI_20261006.rs",
+      "sha256": "fd6137ca1a29dc33151dd1d7e1f5ce705237476df4f22a2ddcb3c4df3b1935b8"
+    },
+    {
+      "bytes": 8859,
+      "original_blob": null,
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/CONTROL_RECEPCION_ESTUDIO_ZAI_20261006.rs",
+      "sha256": "2afceae6e484e2668e3adee7cf4ed16afeba2403975ed1a53f6ec3edaa3c14f1"
+    }
+  ],
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "base": "d20560a926e42d337abdadbc396aa340260e3a83",
+  "comprobaciones": [
+    "S39 revisión 41 CSV e historial concordantes",
+    "Antecedentes íntegros y otras filas intactas",
+    "TT-0020 pendiente, estudio recibido e integración no iniciada",
+    "Acta 004 sección 35 y RETP-2026-280",
+    "UTF-8, JSON, tamaños y SHA-256 Rust"
+  ],
+  "estado": "CONFORME_DOCUMENTAL",
+  "expediente": "ZAI-GLM53FLASH-RECEPCION-20261006",
+  "fecha": "2026-10-06T01:55:09Z"
+}
