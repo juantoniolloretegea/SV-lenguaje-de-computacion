@@ -3,13 +3,13 @@
   "tipo_registro": "seguimiento documental; no especificación ejecutable",
   "id": "TT-0021",
   "suceso_principal": "S39",
-  "revision_suceso": 49,
+  "revision_suceso": 50,
   "estado": "pendiente",
   "fecha_alta_utc": "2026-10-06T20:38:37Z",
-  "fecha_actualizacion_utc": "2026-10-07T07:32:45Z",
+  "fecha_actualizacion_utc": "2026-10-07T08:04:35Z",
   "fecha_fin_utc": null,
   "objeto": "GPT-6 Astra, nodo 03: entrega, instrumentación y catálogo bajo control del SV",
-  "resultado_actual": "Astra A01–A09/A0 ejecutado y adjudicado: 9/9 correctos, incluidos seis críticos; κ Apto, puntuación 100/100 limitada a A0. Dos páginas completas por caso, sin herramientas del candidato ni premisas externas identificadas. Nueve solicitudes, 90,992 s con observación; 20.051 tokens; 340 muestras y 1.874 eventos SSE, sin fallos de captura. Presentación completa en egui comprobada. Corrección de la entrega gráfica Astra A0: el HTML anterior era una imagen estática de nueve botones, sin polígono ni interacción. Se sustituye por egui 0.2.0 compilado desde Rust a WebAssembly, incorporado con sus datos en un HTML autónomo. Cuatro pruebas Rust conformes y selección, pasajes y huellas comprobados en navegador por HTTP local. La apertura file:// no está verificada por la automatización. CAPA.json, adjudicación, puntuaciones y telemetría de inferencia intactos; cero nuevas llamadas al candidato. Recepción local del suministro PDF de Astra en Rust: diez páginas físicas, treinta fragmentos MCP completos y nueve solicitudes previstas, recompuestas y cotejadas sin envío. 52 pruebas distintas conformes. El auxiliar de admisión documental del Árbitro-Director exige identidad, integridad, aislamiento, diario e instrumentación antes de componer. Clave, telemetría y adjudicación fuera del contexto del candidato. Cero inferencias nuevas; A0 intacto.",
+  "resultado_actual": "Astra A01–A09/A0 ejecutado y adjudicado: 9/9 correctos, incluidos seis críticos; κ Apto, puntuación 100/100 limitada a A0. Dos páginas completas por caso, sin herramientas del candidato ni premisas externas identificadas. Nueve solicitudes, 90,992 s con observación; 20.051 tokens; 340 muestras y 1.874 eventos SSE, sin fallos de captura. Presentación completa en egui comprobada. Corrección de la entrega gráfica Astra A0: el HTML anterior era una imagen estática de nueve botones, sin polígono ni interacción. Se sustituye por egui 0.2.0 compilado desde Rust a WebAssembly, incorporado con sus datos en un HTML autónomo. Cuatro pruebas Rust conformes y selección, pasajes y huellas comprobados en navegador por HTTP local. La apertura file:// no está verificada por la automatización. CAPA.json, adjudicación, puntuaciones y telemetría de inferencia intactos; cero nuevas llamadas al candidato. Recepción local del suministro PDF de Astra en Rust: diez páginas físicas, treinta fragmentos MCP completos y nueve solicitudes previstas, recompuestas y cotejadas sin envío. 52 pruebas distintas conformes. El auxiliar de admisión documental del Árbitro-Director exige identidad, integridad, aislamiento, diario e instrumentación antes de componer. Clave, telemetría y adjudicación fuera del contexto del candidato. Cero inferencias nuevas; A0 intacto. Acoplamiento del suministro PDF al transporte de GPT-6 Astra comprobado mediante una inferencia PDF06: páginas físicas 5 y 8 completas, seis fragmentos del MCP, solicitud recompuesta antes de envío. 23,582 s hasta entrega y cotejo inmediato; 5.228 tokens de entrada, 844 de salida, total 6.072; 848 eventos SSE y 101 muestras, cero fallos y 283 ms de intervalo máximo. HTTP 200 y response.completed. Admisión documental y de transporte en Rust, ajena al candidato. Tres citas cotejadas literalmente fuera de línea. A0 intacto.",
   "expediente": "ASTRA-NODO03-ENTREGA-20261006",
   "necesidades": [
     "N-A01",
@@ -19,7 +19,7 @@
     "N-A05"
   ],
   "inferencia_acreditada": true,
-  "alcance_inferencia": "Tres pruebas instrumentales anteriores y nueve solicitudes A01–A09/A0; no adversariales, B, anexo o examen",
+  "alcance_inferencia": "Tres pruebas instrumentales anteriores, nueve solicitudes A01–A09/A0 y una solicitud PDF06 del anexo; no adjudicación completa PDF, adversariales ni examen",
   "recepcion_finalizada": false,
   "intervencion_sobre_nucleo": false,
   "catalogo_ejecutado": true,
@@ -31,17 +31,18 @@
   "herramientas_habilitadas": 0,
   "codigo_del_modelo_ejecutado": false,
   "resumen_proveedor_recibido": false,
-  "incidencia_instrumental": "A0: ninguna detención o fallo de captura. Se conserva el antecedente del falso positivo de INSTR-03, ya aclarado; no afecta a A0. Defecto de presentación corregido: Se rectifica la afirmación de presentación completa de S39 revisión 47, Acta 004 §41 y RETP-2026-286 en su alcance gráfico. Aquella inspección comprobó datos y captura, no geometría poligonal ni interacción del archivo. La revisión anterior permanece recuperable. No es una recalificación del modelo ni una auditoría científica independiente.",
+  "incidencia_instrumental": "A0: ninguna detención o fallo de captura. Se conserva el antecedente del falso positivo de INSTR-03, ya aclarado; no afecta a A0. Defecto de presentación corregido: Se rectifica la afirmación de presentación completa de S39 revisión 47, Acta 004 §41 y RETP-2026-286 en su alcance gráfico. Aquella inspección comprobó datos y captura, no geometría poligonal ni interacción del archivo. La revisión anterior permanece recuperable. No es una recalificación del modelo ni una auditoría científica independiente. El comprobador inicial exigió índices enteros de fragmento no prescritos en el banco. La entrega usó intervalos exactos; se conservaron rechazo y rectificación Rust, sin repetir inferencia. La integración general debe incorporar esa resolución antes de ampliar los casos. Esta recepción no adjudica los nueve casos, no prueba estabilidad, examen ni aptitud clínica. Herramientas del candidato deshabilitadas; no se certifica aislamiento interno del proveedor. Medidas locales por PID; límites instrumentales y criptografía nativa documentados. No se recibió resumen adicional del proveedor. Créditos e importe atribuibles desconocidos; SV-GASTO-20261007-012 con conciliación pendiente.",
   "datos_sanitarios_transmitidos": false,
   "custodia_remota_expediente_integro": false,
   "uso_creditos_temporal_desactivado": true,
   "criptografia_nativa_pendiente": true,
-  "retorno": "Recibir el bloque A0 y continuar según el protocolo sin mezclar revisiones adversariales, B, anexo MCP/PDF y examen. No se acredita todavía estabilidad entre ejecuciones, aptitud clínica o recepción independiente. Conciliación económica individual y criptografía nativa pendientes.",
+  "retorno": "TT-0021 permanece pendiente. Recibir la integración PDF06 y fijar la representación de localizadores en el comprobador general antes de ampliar el anexo. Conservar separación entre recepción instrumental, adjudicación científica, adversariales y examen. No formar polígono con casos sin evaluar.",
   "evidencias": [
     "https://github.com/juantoniolloretegea/SV-motor/blob/f6fc0b1640ac965a5497a14f3415e85ca2d64fc0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/PRUEBA-ENTREGA-ESTRUCTURADA-20261006.md",
     "https://github.com/juantoniolloretegea/SV-motor/blob/26c177b4f99352b2f6ab1bc1ba0dd9f03fb7dc71/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/CONTRATO-CATALOGO-20261006.md",
     "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/anexos/TT-0021_ADMISION_CATALOGO_2026-10-07.md",
-    "https://github.com/juantoniolloretegea/SV-motor/blob/a88ddfe7be8f5f8c8f535f0c46d61fd518e92786/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/INFORME.md"
+    "https://github.com/juantoniolloretegea/SV-motor/blob/a88ddfe7be8f5f8c8f535f0c46d61fd518e92786/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/INFORME.md",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/237e3abad048280df3a4c7ddb5f8b4e74a6ac344/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007/prueba-transporte/INFORME.md"
   ],
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "resultado_anterior": "Nodo 03, GPT-6 Astra: tercera prueba instrumental concluida, una consulta artificial, JSON válido con justificación, referencias, código propuesto y límites. 17,910 s; 1189 tokens; 599 eventos y 79 muestras; 22 archivos cotejados en Rust. Resumen opcional no recibido. Falso positivo de referencias del comprobador aclarado fuera de línea, conservando originales. No hay catálogo, adversariales ni examen ejecutados.",
@@ -115,5 +116,54 @@
     },
     "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/d321b6ea7d3cf9333df1520eee885f9e22deabdb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007/INFORME-RECEPCION.md",
     "dependencia": "Continúa TT-0021 pendiente. Dependencia específica: acoplar y recibir este suministro con el transporte de inferencia, cotejando cada solicitud efectiva antes del envío y conservando autoridad, instrumentación y límites de consumo. No se confunden anexo, adversariales y examen. Criptografía nativa y conciliación económica conservan su estado."
+  },
+  "prueba_pdf06_20261007": {
+    "estado": "transporte recibido; localizadores cotejados fuera de línea",
+    "paginas": [
+      5,
+      8
+    ],
+    "fragmentos": 6,
+    "solicitudes": 1,
+    "reintentos": 0,
+    "uso": {
+      "entrada_cache_tokens": 0,
+      "entrada_tokens": 5228,
+      "razonamiento_tokens": 0,
+      "salida_tokens": 844,
+      "total_tokens": 6072
+    },
+    "telemetria": {
+      "bytes_sse": 240775,
+      "cpu_delta_ms": 1766,
+      "duracion_ms": 23582,
+      "duracion_observada_ms": 26675,
+      "eventos_sse": 848,
+      "fallos_medicion": 0,
+      "final_sha256": "a55333db49dc71fa155c61d658e2ab89c5a9f35a0a439e5028df929c20097adb",
+      "intervalo_maximo_ms": 283,
+      "io_escritura_delta_bytes": 967384,
+      "io_lectura_delta_bytes": 13964922,
+      "muestras": 101,
+      "observaciones_udp": 0,
+      "primer_texto_ms": 3294,
+      "rss_maximo_bytes": 35483648,
+      "solicitud_sha256": "e62db6b03782ae955671adfbc5f35c3916d4884115d6391b3529a45ad83bfc86",
+      "sse_sha256": "bb54517bf07817d5dd3944a380509aa8006602403f9c4f80c2c404914b0477b7",
+      "tcp_estados": [
+        "CloseWait",
+        "Established",
+        "Listen"
+      ],
+      "tcp_maximo_simultaneo": 6,
+      "telemetria_sha256": "e99fa27712f57e7e4bed87f5ae9e7e0f919a892420f8602de08a38ca366eada2"
+    },
+    "adjudicacion": false,
+    "literatura_medica_publica": true,
+    "datos_personales_salud": false,
+    "rechazo_inicial_comprobador": true,
+    "rectificacion_sin_inferencia": true,
+    "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/237e3abad048280df3a4c7ddb5f8b4e74a6ac344/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007/prueba-transporte/INFORME.md",
+    "retorno": "TT-0021 permanece pendiente. Recibir la integración PDF06 y fijar la representación de localizadores en el comprobador general antes de ampliar el anexo. Conservar separación entre recepción instrumental, adjudicación científica, adversariales y examen. No formar polígono con casos sin evaluar."
   }
 }
