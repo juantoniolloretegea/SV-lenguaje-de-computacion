@@ -5,7 +5,7 @@
   "consulta_con_internet": false,
   "consultas_completas_recibidas": 2,
   "criterio_observabilidad": "Un tramo relevante sin observación, trazabilidad o reconstrucción determina No apto para el uso exigido por el SV. La repetición admite variación de redacción, con invariancia del contenido exigido. Safeguard expone razonamiento: conservar íntegros análisis, respuesta final y transiciones, además de entradas y evidencias.",
-  "dependencia_y_retorno": "Completar la recepción del recorrido documental de la fase activa y sus límites; retorno a TT-0019, S39 y Calidad. No se reactivan instalaciones históricas.",
+  "dependencia_y_retorno": "Recibir el adaptador y preparar su incorporación al recorrido del Árbitro y al transporte elegido antes de una prueba de candidato con autorización propia. Conservar intactos los cierres documentales de Astra y los demás pendientes generales.",
   "especificacion_anterior": "Conservada en el corte anterior; no debe ejecutarse como instrucción vigente por esta ficha",
   "estado": "pendiente",
   "evidencias": [
@@ -36,9 +36,10 @@
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/INFORME-FINAL.md",
     "https://github.com/juantoniolloretegea/SV-sala-de-maquinas/blob/19778e3692802316c86b3a6107d625e0042cf95c/respuestas-ejecucion/ARBITRO-SV-SAFEGUARD-20261002/entrega-03/condiciones/consistencia-01/COTEJO-RECUPERACION-GITHUB.json",
     "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/seguimiento/RECEPCION_INSTRUMENTAL_20261004.md",
-    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
+    "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json",
+    "https://github.com/juantoniolloretegea/SV-motor/blob/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0/LEAME.md"
   ],
-  "fecha_actualizacion_utc": "2026-10-05T10:20:04Z",
+  "fecha_actualizacion_utc": "2026-10-07T21:53:40Z",
   "fecha_alta_utc": "2026-09-26T21:33:47Z",
   "fecha_corte_evidencias_utc": "2026-10-05T10:20:04Z",
   "fecha_fin_utc": null,
@@ -53,8 +54,8 @@
   "objeto": "MCP documental local: delimitación y funcionamiento observado",
   "pruebas_rust_013_conformes": 25,
   "recepcion_finalizada": false,
-  "resultado_actual": "MCP 0.1.4-pdf.1 instalado en la realización Qwen3.5 de UpCloud; 36 comprobaciones de recepción conformes. Integración y adjudicación parcial A01–A04 documentadas; recepción integral del componente y comprensión del corpus PDF no acreditadas.",
-  "revision_suceso": 38,
+  "resultado_actual": "Prototipo Markdown 0.1.0 y servicio Rust MCP 0.1.5-mdbook.1: 36 comprobaciones conformes; cuatro documentos, 31 secciones y 31 entregas reconstruidas exactamente. Diario de 110 sucesos y 36 mediciones del proceso. Edición humana mdBook comprobada con documentación pública del manual; sin modificar sus once estados pendientes. Recepción integral pendiente.",
+  "revision_suceso": 59,
   "suceso_principal": "S39",
   "tipo_registro": "seguimiento documental; no especificacion ejecutable",
   "unidad_responsable": "Unidad coordinadora EIO / W-S39-03",
@@ -844,5 +845,18 @@
     "bloque_completo": false,
     "recepcion_integral_acreditada": false,
     "referencia": "https://github.com/juantoniolloretegea/SV-motor/blob/149c4b848475802942af35ab39e7335081398480/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/preevaluacion-20261004/resultados/hitos/A04-A0/vector-parcial/CAPA.json"
+  },
+  "realizacion_mdbook_010": {
+    "modelo_consultado": false,
+    "servicio": "0.1.5-mdbook.1",
+    "secciones": 31,
+    "pruebas_rust": 36,
+    "version": "0.1.0",
+    "documentos": 4,
+    "arbitro_integral_ejecutado": false,
+    "recepcion_integral": false,
+    "muestras": 36,
+    "fuentes": "https://github.com/juantoniolloretegea/SV-motor/blob/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0/LEAME.md",
+    "sucesos_diario": 110
   }
 }

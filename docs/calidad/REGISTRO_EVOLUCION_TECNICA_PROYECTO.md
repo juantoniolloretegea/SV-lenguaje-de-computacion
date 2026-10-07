@@ -2979,3 +2979,21 @@ Contraste documental entre informe, dictamen estructurado y resumen de métricas
 **Retorno:** Prueba documental de Astra cerrada como Apto. Conservar sus evidencias y el archivo económico privado; atender la revisión independiente cuando se disponga. Mantener separados los pendientes de criptografía, integración general, conciliación económica y calidad del servicio. Una nueva campaña requiere su encargo y autorización propios.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-298 · Libros Markdown mediante MCP · comprobación instrumental del 07/10/2026
+
+Fecha UTC: 2026-10-07T21:53:40Z. S39 revisión 59; TT-0014; Acta 004 §53; RETP-2026-298.
+
+Prototipo Markdown 0.1.0 y servicio Rust MCP 0.1.5-mdbook.1: 36 comprobaciones conformes; cuatro documentos, 31 secciones y 31 entregas reconstruidas exactamente. Diario de 110 sucesos y 36 mediciones del proceso. Edición humana mdBook comprobada con documentación pública del manual; sin modificar sus once estados pendientes.
+
+El preparador fija índice, archivos y huellas; rechaza alteraciones, rutas ajenas, enlaces simbólicos, inclusiones no resueltas, HTML incrustado e imágenes en esta primera edición. Conserva exactamente el texto, las líneas y las posiciones Unicode. El diario permite cotejar solicitudes, entregas y medidas. La búsqueda literal no decide suficiencia; la instrucción documental admite razonamiento fundado y U justificada, bajo revisión exterior al candidato.
+
+Ensayo instrumental sin candidato, Árbitro completo ni transporte Astra. No constituye recepción integral MCP ni validación científica. Las decisiones de suministro continúan reservadas al Árbitro. No cambia resultados anteriores, núcleo, gramática, IR ni sedes del manual. Sin navegación ni ejecución de ejemplos en el servicio probado; límites y magnitudes no medidas expresamente declarados.
+
+[Fuentes, contrato y límites](https://github.com/juantoniolloretegea/SV-motor/blob/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0/LEAME.md) · [Recorrido medido](https://github.com/juantoniolloretegea/SV-motor/blob/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0/evidencias/recorrido/COMPROBACION.json) · [Manifestación de identidad](https://github.com/juantoniolloretegea/SV-motor/blob/b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/mdbook/0.1.0/MANIFIESTO.json).
+
+La conservación pública fue recuperada y cotejada en Rust: 36 archivos idénticos por bytes y SHA-256, revisión b4f6fed400e8d9e6c7bccaa8023ca40a8de83d74. Registro administrativo específico en el archivo privado de usos; ninguna inferencia nueva ni coste desconocido convertido en cero. No se amplía la recepción del candidato por esta comprobación instrumental.
+
+**Dependencia y retorno:** Recibir el adaptador y preparar su incorporación al recorrido del Árbitro y al transporte elegido antes de una prueba de candidato con autorización propia. Conservar intactos los cierres documentales de Astra y los demás pendientes generales.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
