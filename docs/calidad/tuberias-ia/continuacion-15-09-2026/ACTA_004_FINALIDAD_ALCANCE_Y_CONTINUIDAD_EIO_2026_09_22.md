@@ -681,3 +681,13 @@ Recibir el acoplamiento científico: recorrido MCP local y correspondencia con l
 Núcleo, semántica, IR, README y mapa histórico intactos. No hay campaña, anexo, examen, pagos, recargas ni otra inferencia por este asiento. Los resultados históricos permanecen conservados.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## 40. Astra: recepción instrumental e inicio del catálogo A0 · 07/10/2026
+
+Continuación autorizada del catálogo de GPT-6 Astra en S39 y TT-0021. Recepción previa Rust conforme: nueve recorridos MCP, dieciocho páginas completas y aislamiento seccomp cotejado; 33 pruebas locales conformes. Política idéntica al nodo 1, con exclusión de hechos externos; herramientas del candidato desactivadas. A01-A09/A0 preparados, sin inferencia del catálogo todavía.
+
+Ejecutar secuencialmente A01-A09/A0 bajo control Rust; medir la entrega y adjudicar fuera del candidato. Detener ante incidencia instrumental, sin reintento automático. No abrir B, revisiones, anexo ni examen mediante el inicio de este bloque. Polígono sólo completo y adjudicado.
+
+Se conserva el contrato y la obligación de fundamentar exclusivamente en las dos páginas. La comparación científica mantiene banco, política y criterios; las diferencias de infraestructura y observabilidad quedan declaradas. No se habilita navegación, herramientas, pagos o recarga. [Inventario y límites](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/anexos/TT-0021_ADMISION_CATALOGO_2026-10-07.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
