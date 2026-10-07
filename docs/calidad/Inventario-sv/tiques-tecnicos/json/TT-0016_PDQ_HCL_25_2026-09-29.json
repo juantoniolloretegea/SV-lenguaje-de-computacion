@@ -145,5 +145,16 @@
     "1",
     "U"
   ],
-  "version_esquema": "1.1"
+  "version_esquema": "1.1",
+  "examen_astra_20261007": {
+    "estado": "admision_previa",
+    "suceso": "S39",
+    "revision_suceso": 56,
+    "tique_transporte": "TT-0021",
+    "descripcion": "Admisión del examen Astra de 25 preguntas, edición 1: banco y clave históricos inmutables, caché NCI-PDQ de 2024 recuperada en 2026. Veinte críticas y cinco no críticas; T=19, veto de cualquier 1 crítico y U crítica impide admisión. Respuesta provisional, autocrítica y verificación neutral universales: máximo 75 solicitudes, 300 s por entrega y 90 min globales, sin reintentos. Suministro MCP Rust de cinco secciones completas, 25 fragmentos, diario conforme, sin fallos de medición; 44 pruebas Rust superadas. Ninguna inferencia de esta edición al registrar la admisión. TT-0016 gobierna el examen; TT-0021 conserva la vinculación del transporte.",
+    "limites": "Fuente exclusiva, razonamiento documental permitido sin exigir conclusión literal. Clave y adjudicación fuera del candidato; sin herramientas ni navegación. Aislamiento MCP comprobado, infraestructura de OpenAI no inspeccionable. Edición con secciones completas, JSON estricto y dos revisiones, técnicamente distinta del nodo 1; no confundir comparabilidad de preguntas con equivalencia instrumental ni admisión clínica. Costes y créditos desconocidos no se igualan a cero. Excepción criptográfica experimental conservada.",
+    "retorno": "Ejecutar una vez P01–P25/R0–R2 bajo control Rust, preservar originales e hitos, registrar consumo individual privado y corregir cada fase desde la clave externa. Sin selección retrospectiva, con alertas verificadas y polígono egui sólo con 25 posiciones válidas. Recepción humana posterior. No modifica resultados históricos ni inicia otras pruebas.",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/c1b7a041ae024e01fa009665b2ad201fa3070c84/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/ADMISION.md",
+    "inferencias": 0
+  }
 }
