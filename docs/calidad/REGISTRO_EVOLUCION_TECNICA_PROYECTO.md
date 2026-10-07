@@ -2963,3 +2963,19 @@ Admisión limitada al contrato documental NCI-PDQ de actualización 14/11/2024. 
 [Informe y evidencias](https://github.com/juantoniolloretegea/SV-motor/blob/a8cd2319c004f76a1159cb382f7ed93b2d648bf3/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md). Recibir el resultado y su revisión competente; conservar originales y archivo económico privado. No iniciar otra campaña, revisión adicional, examen ni ampliación del MCP sin nueva instrucción. Valorar calidad del servicio más adelante con criterios definidos y referencias principales ISO/IEC 42001:2023 e ISO 9001:2026; ISO/IEC 20000-1:2018 y 25010:2023 son complementarias, sin declarar ahora conformidad ni puntuación.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-297 · Cierre documental de Astra, nodo 03
+
+Fecha UTC: 2026-10-07T19:27:27Z. S39 revisión 58; TT-0016 y TT-0021; Acta 004 §52; RETP-2026-297.
+
+Cierre documental del examen GPT-6 Astra, nodo 03, autorizado el 07/10/2026: Apto para el contrato documental P01–P25. Las 25 respuestas finales R2 son correctas, incluidas las 20 críticas; cero errores y cero U; T(25)=19. Se conservan 75 entregas completas y dos intentos interrumpidos. Portada general, catálogo, ficha e índice propio conciliados con el informe; inferencia ejecutada por OpenAI, control propio del SV en Rust. No se repite la prueba ni se modifican sus resultados.
+
+El cierre corresponde a esta prueba documental. No acredita aptitud clínica, recepción médica independiente, estabilidad estadística ni identidad instrumental con el nodo 01. Se conservan las observaciones y avisos del informe. Dependencia criptográfica nativa, evaluación del servicio del proveedor e integración general pendientes por separado. S39 general permanece en ejecución y TT-0021 pendiente; el cierre administrativo histórico de Instruct en TT-0016 conserva su resultado propio.
+
+Contraste documental entre informe, dictamen estructurado y resumen de métricas ya publicados. Portadas y expediente cotejados con esa evidencia, sin recalificación ni inferencia nueva. Revisión del Motor fijada en 365c0004164a5e7c7dd7e5ecb230ebba7f7a1582; recuperación y cotejo de identidad documental.
+
+[Expediente consolidado](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/readme.md) · [Informe de resultados](https://github.com/juantoniolloretegea/SV-motor/blob/365c0004164a5e7c7dd7e5ecb230ebba7f7a1582/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/examen25-20261007/resultado/INFORME.md).
+
+**Retorno:** Prueba documental de Astra cerrada como Apto. Conservar sus evidencias y el archivo económico privado; atender la revisión independiente cuando se disponga. Mantener separados los pendientes de criptografía, integración general, conciliación económica y calidad del servicio. Una nueva campaña requiere su encargo y autorización propios.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
