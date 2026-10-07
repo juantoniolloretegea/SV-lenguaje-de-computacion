@@ -2829,3 +2829,15 @@ Ejecutar secuencialmente A01-A09/A0 bajo control Rust; medir la entrega y adjudi
 [Evidencia](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/anexos/TT-0021_ADMISION_CATALOGO_2026-10-07.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-286 · Astra A0: nueve adjudicaciones y presentación completa
+
+Fecha UTC: 2026-10-07T05:37:32Z. S39 revisión 47; TT-0021; Acta 004 §41.
+
+Astra A01–A09/A0 ejecutado y adjudicado: 9/9 correctos, incluidos seis críticos; κ Apto, puntuación 100/100 limitada a A0. Dos páginas completas por caso, sin herramientas del candidato ni premisas externas identificadas. Nueve solicitudes, 90,992 s con observación; 20.051 tokens; 340 muestras y 1.874 eventos SSE, sin fallos de captura. Presentación completa en egui comprobada.
+
+Recibir el bloque A0 y continuar según el protocolo sin mezclar revisiones adversariales, B, anexo MCP/PDF y examen. No se acredita todavía estabilidad entre ejecuciones, aptitud clínica o recepción independiente. Conciliación económica individual y criptografía nativa pendientes.
+
+[Informe y evidencia](https://github.com/juantoniolloretegea/SV-motor/blob/a88ddfe7be8f5f8c8f535f0c46d61fd518e92786/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/INFORME.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

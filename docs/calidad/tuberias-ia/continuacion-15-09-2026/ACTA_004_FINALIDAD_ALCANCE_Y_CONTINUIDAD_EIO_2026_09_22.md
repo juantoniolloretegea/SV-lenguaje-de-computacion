@@ -691,3 +691,15 @@ Ejecutar secuencialmente A01-A09/A0 bajo control Rust; medir la entrega y adjudi
 Se conserva el contrato y la obligación de fundamentar exclusivamente en las dos páginas. La comparación científica mantiene banco, política y criterios; las diferencias de infraestructura y observabilidad quedan declaradas. No se habilita navegación, herramientas, pagos o recarga. [Inventario y límites](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/Inventario-sv/tiques-tecnicos/anexos/TT-0021_ADMISION_CATALOGO_2026-10-07.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## 41. Astra: adjudicación completa de A0, instrumentación y custodia · 07/10/2026
+
+Astra A01–A09/A0 ejecutado y adjudicado: 9/9 correctos, incluidos seis críticos; κ Apto, puntuación 100/100 limitada a A0. Dos páginas completas por caso, sin herramientas del candidato ni premisas externas identificadas. Nueve solicitudes, 90,992 s con observación; 20.051 tokens; 340 muestras y 1.874 eventos SSE, sin fallos de captura. Presentación completa en egui comprobada.
+
+Se conserva el criterio T(9)=7 y la exigencia de seis críticos correctos. El candidato recibió las dos páginas íntegras y la política original; no recibió clave o telemetría. La decisión sustantiva se contrastó fuera del candidato y la puntuación se aplicó en Rust. Conformidad limitada a la capa inicial, sin inferir aptitud clínica ni repetibilidad. La observación local no acredita control de los procesos internos de OpenAI.
+
+[Informe científico](https://github.com/juantoniolloretegea/SV-motor/blob/a88ddfe7be8f5f8c8f535f0c46d61fd518e92786/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/INFORME.md). Custodia pública cotejada en Motor; custodia restringida y nueve informes de consumo en el archivo económico, revisión 8885d855eaab243a1265f45e7ffabf3ed54111b3. Importes no comunicados; cuota ordinaria sin modificar permisos de créditos o recarga.
+
+Recibir el bloque A0 y continuar según el protocolo sin mezclar revisiones adversariales, B, anexo MCP/PDF y examen. No se acredita todavía estabilidad entre ejecuciones, aptitud clínica o recepción independiente. Conciliación económica individual y criptografía nativa pendientes.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
