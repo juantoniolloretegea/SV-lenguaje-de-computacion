@@ -1390,6 +1390,16 @@ Fechas UTC. Las revisiones previas permanecen en el historial.
 **observaciones:** Servicio detenido antes de copiar; ninguna inferencia nueva. El error crítico A06 se conserva como error sustantivo, sin convertirlo en incidencia instrumental. Dos casos sin ejecutar no son U. No se declara incapacidad universal, aptitud clínica ni mejora por otro motor o cuantización. S39 general permanece en ejecución. Astra: permiso temporal de créditos restablecido a desactivado, receptor cerrado, sin pagos ni recargas. Alta del tique posterior a las pruebas, declarada como tal. Custodia remota del expediente operativo íntegro pendiente. Precisión humana: inferencia remota aceptada para Astra; servidor de pruebas en equipo propio. No se permite al candidato modificar gobierno o mediciones. Cero llamadas nuevas. Inicio científico autorizado el 07/10/2026; fuente exclusivamente artificial, dos páginas completas. Cuota ordinaria habilitada, sin cambiar permisos de créditos adicionales ni recarga. A0 completo; 0 es respuesta correcta, también para evidencia insuficiente correctamente fundada. U no sustituye ausencias instrumentales. No se habilitan pagos, recargas o créditos adicionales.
 
 
+**S39 · Actualización de representación, revisión 48 · 07/10/2026**
+
+Corrección de la entrega gráfica Astra A0: el HTML anterior era una imagen estática de nueve botones, sin polígono ni interacción. Se sustituye por egui 0.2.0 compilado desde Rust a WebAssembly, incorporado con sus datos en un HTML autónomo. Cuatro pruebas Rust conformes y selección, pasajes y huellas comprobados en navegador por HTTP local. La apertura file:// no está verificada por la automatización. CAPA.json, adjudicación, puntuaciones y telemetría de inferencia intactos; cero nuevas llamadas al candidato.
+
+Se rectifica la afirmación de presentación completa de S39 revisión 47, Acta 004 §41 y RETP-2026-286 en su alcance gráfico. Aquella inspección comprobó datos y captura, no geometría poligonal ni interacción del archivo. La revisión anterior permanece recuperable. No es una recalificación del modelo ni una auditoría científica independiente.
+
+[Evidencias de corrección](https://github.com/juantoniolloretegea/SV-motor/blob/0aa9451017f522dd9e2e88422f15409d0d1f1597/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/CORRECCION-VISOR.md). Retorno al cierre de A0 y recepción del bloque conforme al protocolo. TT-0021 permanece pendiente en sus demás obligaciones; no se abren B, adversariales, anexo PDF ni examen.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 
 **estado:** pendiente

@@ -2841,3 +2841,15 @@ Recibir el bloque A0 y continuar según el protocolo sin mezclar revisiones adve
 [Informe y evidencia](https://github.com/juantoniolloretegea/SV-motor/blob/a88ddfe7be8f5f8c8f535f0c46d61fd518e92786/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/INFORME.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-287 · Corrección del visor poligonal Astra A0
+
+Fecha UTC: 2026-10-07T06:19:35Z. S39 revisión 48; TT-0021; Acta 004 §42.
+
+Corrección de la entrega gráfica Astra A0: el HTML anterior era una imagen estática de nueve botones, sin polígono ni interacción. Se sustituye por egui 0.2.0 compilado desde Rust a WebAssembly, incorporado con sus datos en un HTML autónomo. Cuatro pruebas Rust conformes y selección, pasajes y huellas comprobados en navegador por HTTP local. La apertura file:// no está verificada por la automatización. CAPA.json, adjudicación, puntuaciones y telemetría de inferencia intactos; cero nuevas llamadas al candidato.
+
+Se rectifica la afirmación de presentación completa de S39 revisión 47, Acta 004 §41 y RETP-2026-286 en su alcance gráfico. Aquella inspección comprobó datos y captura, no geometría poligonal ni interacción del archivo. La revisión anterior permanece recuperable. No es una recalificación del modelo ni una auditoría científica independiente.
+
+[Evidencias de corrección](https://github.com/juantoniolloretegea/SV-motor/blob/0aa9451017f522dd9e2e88422f15409d0d1f1597/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/CORRECCION-VISOR.md). Retorno al cierre de A0 y recepción del bloque conforme al protocolo. TT-0021 permanece pendiente en sus demás obligaciones; no se abren B, adversariales, anexo PDF ni examen.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
