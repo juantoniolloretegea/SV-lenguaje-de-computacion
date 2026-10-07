@@ -1,0 +1,42 @@
+{
+  "version": "V.1",
+  "mapa_historico": {
+    "bytes": 3703604,
+    "git_blob_sha1": "24e25dbf1255ddf25d5f1e7eefa8d89d4b12ed3e",
+    "ruta": "docs/calidad/tuberias-ia/continuacion-15-09-2026/mapa/MAPA.html"
+  },
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "fecha": "2026-10-07",
+  "archivos": [
+    {
+      "bytes": 230407,
+      "sha256": "e77c229acf149fac8d30508cef54ce1a09665d06621eb898e5c0da26fcc58a06",
+      "ruta": "CONSERVACION-V1.json"
+    },
+    {
+      "bytes": 157731,
+      "sha256": "6f17e1a3224742e9abbf706df11264b110898d3d0a7de3e26562e25eca6a89db",
+      "ruta": "CUSTODIA-RECUPERACION-V1.json"
+    },
+    {
+      "bytes": 647096,
+      "sha256": "9ef9855d662fc3bee1111c637b9af465fbf2ad3d80b6cf6a655297fd614c1e1f",
+      "ruta": "INVENTARIO-FUENTES-V1.csv"
+    },
+    {
+      "bytes": 15290,
+      "sha256": "6240fa1c7f5e7a5b37dd51d41613d84353da9793158878c1463d502e2292b0a7",
+      "ruta": "PAQUETES-HISTORICOS-V1.csv"
+    },
+    {
+      "bytes": 34492,
+      "sha256": "69f689a2fd31797245c643414ad53c4c235f452789adb27ba9d46c4875ef8f3d",
+      "ruta": "RAMAS-COMPARADAS-V1.csv"
+    },
+    {
+      "bytes": 17160,
+      "sha256": "b1937482595ace115c3186f046a5e4846692d8c1340222c14b4731a68b592e57",
+      "ruta": "readme.md"
+    }
+  ]
+}
