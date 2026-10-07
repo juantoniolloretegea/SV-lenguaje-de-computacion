@@ -1430,6 +1430,16 @@ La primera preparación fue detenida antes de lectura por denegación del servic
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 
+**S39 · Banco PDF y hitos, revisión 52 · 07/10/2026**
+
+Banco PDF01–PDF09 ejecutado una vez: nueve HTTP 200 y response.completed, sin reintentos. Vector completo [0,0,0,0,0,0,0,1,0]: ocho respuestas correctas frente al documento y un incumplimiento de formato y trazabilidad en PDF08. Duración del banco 264.710 ms; solicitudes 232.625 ms; 30.617 tokens de entrada, 7.508 de salida y 38.125 totales. Telemetría Rust: 986 muestras, cero fallos, máximo intervalo 345 ms. Hito instrumental contemporáneo por caso; medición y adjudicación posteriores separadas. Nueve hitos A0 reconstruidos retrospectivamente sin inferencia nueva. Polígono egui completo y comprobado.
+
+PDF08 conserva una explicación concordante, pero entrega JSON inválido y no completa las evidencias; no se imputa una contradicción médica no demostrada. Cuatro rechazos iniciales por representación fueron rectificados fuera de línea con citas y localizadores exactos: se preservan ambos estados y originales. No se cambia la clave ni se corrige la respuesta. Anexo de fuente histórica, no aptitud clínica ni estabilidad general; comparación de estructura, no equivalencia de puntuaciones A0/PDF. Proyección pública identificada; originales extensos siguen locales. Criptografía nativa y cobertura no medida declaradas. Costes individuales desconocidos; nueve expedientes privados 013–021, sin convertir saldo agregado en coste cero.
+
+[Informe técnico y límites](https://github.com/juantoniolloretegea/SV-motor/blob/deb363f165470b50fb1f5d011c0eefe5996d1a73/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007/banco-nueve-preguntas/INFORME.md). Archivo económico privado, revisión 98a2139d5dc42f50cce75bffc33dedc7f210c9fa, recuperado y cotejado. Recibir el anexo completo y determinar el tratamiento del incumplimiento PDF08 antes de continuar las fases separadas. Conservar TT-0021 pendiente. No repetir inferencia automáticamente; adversariales y examen no realizados por esta actuación.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
 ## S40 · Interlocución del experto, idiomas y fidelidad del consejo en el universo autorizado del agente
 
 **estado:** pendiente
