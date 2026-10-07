@@ -2853,3 +2853,15 @@ Se rectifica la afirmación de presentación completa de S39 revisión 47, Acta 
 [Evidencias de corrección](https://github.com/juantoniolloretegea/SV-motor/blob/0aa9451017f522dd9e2e88422f15409d0d1f1597/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/catalogo-a0-20261007/CORRECCION-VISOR.md). Retorno al cierre de A0 y recepción del bloque conforme al protocolo. TT-0021 permanece pendiente en sus demás obligaciones; no se abren B, adversariales, anexo PDF ni examen.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-288 · Recepción instrumental PDF
+
+Fecha UTC: 2026-10-07T07:32:45Z. S39 revisión 49; TT-0021; Acta 004 §43.
+
+Recepción local del suministro PDF de Astra en Rust: diez páginas físicas, treinta fragmentos MCP completos y nueve solicitudes previstas, recompuestas y cotejadas sin envío. 52 pruebas distintas conformes. El auxiliar de admisión documental del Árbitro-Director exige identidad, integridad, aislamiento, diario e instrumentación antes de componer. Clave, telemetría y adjudicación fuera del contexto del candidato. Cero inferencias nuevas; A0 intacto.
+
+La recepción acredita suministro textual, no comprensión del modelo, OCR, adjudicación ni admisión clínica. R2: 24 muestras, 68 registros, cero fallos y 275 ms de intervalo máximo. No acredita calibración integral ni mediciones de recursos internos del proveedor, hilos, asignaciones individuales de memoria Rust o recursos Linux por el PID del transporte WSL. Clave y originales operativos íntegros siguen locales; publicación técnica por proyección. Sin polígono de resultados PDF todavía.
+
+[Recepción técnica](https://github.com/juantoniolloretegea/SV-motor/blob/d321b6ea7d3cf9333df1520eee885f9e22deabdb/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/anexo-pdf-20261007/INFORME-RECEPCION.md). Continúa TT-0021 pendiente. Dependencia específica: acoplar y recibir este suministro con el transporte de inferencia, cotejando cada solicitud efectiva antes del envío y conservando autoridad, instrumentación y límites de consumo. No se confunden anexo, adversariales y examen. Criptografía nativa y conciliación económica conservan su estado.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
