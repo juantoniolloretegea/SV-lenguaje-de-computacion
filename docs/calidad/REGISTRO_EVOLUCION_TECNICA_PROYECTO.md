@@ -3033,3 +3033,19 @@ Revisión exterior al candidato asistida por IA; recepción científica independ
 **Dependencia y retorno:** Conservar este cierre y sus originales; revisión competente independiente y conciliación económica pendientes. Mejoras del contrato requieren versión propia y otra inferencia requiere autorización. Sin repetición automática.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-301 · Reserva metodológica del dictamen MD01 · 08/10/2026
+
+Fecha UTC: 2026-10-08T04:25:26Z. S39 r62; TT-0014/TT-0021; Acta 004 §56; RETP-2026-301.
+
+Revisión metodológica MD01: cotejo Rust de 27 entregas confirma corpus y respuestas históricas íntegros, etapas correctas y sustitución del encargo R1 en los nueve contextos R2, sin conservar sus instrucciones históricas completas. Contenido crítico de MD01 correcto; frase retrospectiva inexacta. No apto histórico bajo reserva metodológica, sin convertirlo en Apto ni alterar valores.
+
+La composición del contexto y la delimitación temporal son insuficientes para una atribución exclusiva al modelo. El veto Rust funciona conforme a su configuración; el alcance sustantivo de la criticidad requiere revisión. No se demuestra causalidad exclusiva ni aptitud general. Revisión exterior asistida por IA, recepción independiente pendiente.
+
+Una prueba local del comprobador Rust detecta alteración, reordenación y falta de antecedentes. Su ejecución coteja archivos fijados, solicitudes y respuestas frente a la recepción conservada. No reinterpreta SSE ni decide automáticamente la semántica. La conclusión anterior sobre incapacidad crítica era demasiado categórica. La observación de inexactitud permanece y las reglas de veto crítico no se suavizan.
+
+Sin inferencia nueva ni tokens nuevos del candidato; asistencia no imputada como cero ni a Astra. No se modifican respuestas, clave, banco, adjudicación, polígonos ni resultados de otros ensayos. La nueva nota en el informe remite a esta reserva; la versión histórica sigue recuperable. El futuro banco no debe combinar una repetición con resultados anteriores como si procedieran de un único contrato.
+
+[Adenda y cotejo Rust](https://github.com/juantoniolloretegea/SV-motor/blob/17059fb9b57f825d5b14bfa13e1a370a97b3a6ef/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/openai/gpt-6-astra/manual-mdbook-20261008/revision-metodologica-20261008/REVISION-METODOLOGICA.md). Decidir réplica diagnóstica sólo de MD01 con R0/R1/R2 y contexto corregido, prefijado y comprobado. Anexo experimental y otro banco son propuestas separadas. No ejecutar inferencias por esta adenda.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
