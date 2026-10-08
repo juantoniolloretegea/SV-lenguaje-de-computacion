@@ -3185,3 +3185,19 @@ Los gastos, intentos y mediciones se incorporan individualmente al archivo priva
 Retorno: Recibir reserva metodológica y ajustar presupuesto antes de decidir CYB25; no recalificar ni repetir automáticamente. Conservar las tres etapas y el intento inicial sin respuesta.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-310 · GLM-5.3 · Diagnóstico de MD07 · 08/10/2026
+
+S39 r71; TT-0014/TT-0024; Acta 004 §65; RETP-2026-310.
+
+GLM-5.3 MD07: diagnóstico local de R0/R1/R2. Fuente y antecedentes íntegros, texto final idéntico a SSE y 18 originales intactos. R2 introduce una cita adicional con vigente/vigentes; única causa formal del rechazo. Núcleo de preservación semántica y coordinación correcto.
+
+Resultado No apto contractual histórico conservado. Reserva fundada sobre convertir un defecto de transcripción de apoyo adicional en exclusión sustantiva. No se acredita incompetencia conceptual, no se corrigen originales ni se combinan etapas. Recepción independiente y cualquier nuevo criterio requieren decisión competente.
+
+Comprobador Rust reutilizado: las citas de R0 y R1 son conformes; R2 tiene ocho conformes y una discrepante. En variantes diagnósticas sólo en memoria, retirar la cita adicional o restituir su literal hace conforme la validación formal. No constituyen respuestas nuevas ni adjudicaciones. El plural ya aparecía en una paráfrasis R1 y se incorpora como cita R2; no se infiere causa interna o intención. La autorrevisión puede introducir un defecto nuevo.
+
+[Informe y código](https://github.com/juantoniolloretegea/SV-motor/blob/434b462bcec63a21acc7c44ce0881230b13da1d5/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/manual-20261008/revision-md07/REVISION-METODOLOGICA.md). Revisión local sin solicitudes al proveedor ni tokens API adicionales; archivo administrativo197, sin duplicación de consumos históricos.
+
+Retorno: Recibir el diagnóstico y decidir el tratamiento general de criticidad y fidelidad documental antes de otro examen; una réplica no es necesaria para atribuir esta incidencia. Sin nueva autorización de inferencia ni CYB25.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

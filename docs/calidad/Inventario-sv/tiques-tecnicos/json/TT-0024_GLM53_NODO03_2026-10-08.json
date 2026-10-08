@@ -1,14 +1,14 @@
 {
   "suceso": "S39",
-  "limites": "MD06/R1 omite revision; R2 recupera el campo. MD07/R2 añade una s en cita literal: no demuestra incapacidad conceptual. MD09 conserva imprecisión gramatical accesoria sin cambio del núcleo. Recepción independiente pendiente; no aptitud clínica ni de ciberseguridad. Excepción criptográfica vigente; retención cero no acreditada. Sin navegación habilitada al candidato; no inspección de infraestructura interna del proveedor.",
+  "limites": "MD06/R1 omite revision; R2 recupera el campo. MD07/R2 añade una s en cita literal: no demuestra incapacidad conceptual. MD09 conserva imprecisión gramatical accesoria sin cambio del núcleo. Recepción independiente pendiente; no aptitud clínica ni de ciberseguridad. Excepción criptográfica vigente; retención cero no acreditada. Sin navegación habilitada al candidato; no inspección de infraestructura interna del proveedor. Resultado No apto contractual histórico conservado. Reserva fundada sobre convertir un defecto de transcripción de apoyo adicional en exclusión sustantiva. No se acredita incompetencia conceptual, no se corrigen originales ni se combinan etapas. Recepción independiente y cualquier nuevo criterio requieren decisión competente.",
   "id": "TT-0024",
-  "resultado": "GLM-5.3, nodo 03: nueve preguntas MD del manual mediante MCP; 27 entregas R0/R1/R2 completas. R0: 9 conformes; R1 y R2: 8 conformes y un incumplimiento crítico contractual distinto. Final No apto contractual bajo reserva metodológica por vigente/vigentes en cita MD07; contenido nuclear correcto. Polígono egui completo, sin selección retrospectiva.",
+  "resultado": "GLM-5.3, nodo 03: nueve preguntas MD del manual mediante MCP; 27 entregas R0/R1/R2 completas. R0: 9 conformes; R1 y R2: 8 conformes y un incumplimiento crítico contractual distinto. Final No apto contractual bajo reserva metodológica por vigente/vigentes en cita MD07; contenido nuclear correcto. Polígono egui completo, sin selección retrospectiva. GLM-5.3 MD07: diagnóstico local de R0/R1/R2. Fuente y antecedentes íntegros, texto final idéntico a SSE y 18 originales intactos. R2 introduce una cita adicional con vigente/vigentes; única causa formal del rechazo. Núcleo de preservación semántica y coordinación correcto.",
   "objeto": "GLM-5.3 por API directa; cliente común Rust y MCP de libro",
-  "fecha_alta_utc": "2026-10-08T16:22:51.2781945+00:00",
-  "retorno": "Recibir reserva metodológica y ajustar presupuesto antes de decidir CYB25; no recalificar ni repetir automáticamente. Conservar las tres etapas y el intento inicial sin respuesta.",
-  "revision": 70,
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/adf4aff8946ebd0c5c8a7760a59ca6fb6a007088/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/manual-20261008/INFORME.md",
-  "estado": "MD01–MD09 completo; No apto contractual bajo reserva metodológica",
+  "fecha_alta_utc": "2026-10-08T18:22:51.2781945+02:00",
+  "retorno": "Recibir el diagnóstico y decidir el tratamiento general de criticidad y fidelidad documental antes de otro examen; una réplica no es necesaria para atribuir esta incidencia. Sin nueva autorización de inferencia ni CYB25.",
+  "revision": 71,
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/434b462bcec63a21acc7c44ce0881230b13da1d5/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/manual-20261008/revision-md07/REVISION-METODOLOGICA.md",
+  "estado": "Diagnóstico MD07 recibido; criterio de gravedad pendiente de dirección",
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
-  "fecha_actualizacion_utc": "2026-10-08T16:22:51.2781945+00:00"
+  "fecha_actualizacion_utc": "2026-10-08T16:38:42.0456017+00:00"
 }
