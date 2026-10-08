@@ -3103,3 +3103,19 @@ Cuatro documentos y 31 secciones completos obtenidos de nuevo por MCP Rust, cont
 [Expediente y pruebas](https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md). [Semántica del límite de xAI](https://docs.x.ai/developers/rest-api-reference/inference/responses). Archivo privado individual actualizado. Conservar los originales; recibir la revisión competente y resolver el control económico antes de proponer otra ejecución. No hay continuación automática ni ampliación de gasto.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-305 · Qwen3.8-Max-0902 · Apertura experimental · 08/10/2026
+
+S39 r66; TT-0014/TT-0023; Acta 004 §60; RETP-2026-305.
+
+Qwen3.8-Max-0902 incorporado experimentalmente al nodo 03 mediante API directa de Alibaba Cloud Singapore y cliente común Rust. Acceso técnico recibido: HTTP 200, respuesta JSON exacta, 3827 ms y telemetría sin fallos. Examen histórico de 25 preguntas iniciado, tres etapas universales; sin dictamen todavía.
+
+Sólo cuota gratuita con Stop-on-Exhaust activado; presupuesto pagado cero. Retención ordinaria admitida para corpus documental sin pacientes; store=false no acredita ZDR. Esquema exigido en instrucciones y validado en Rust, sin garantía remota presumida. Sin herramientas de navegación ni fuente externa autorizada. No se inspecciona la infraestructura del proveedor. La criptografía nativa conserva su excepción experimental.
+
+MCP con cinco secciones íntegras y aislamiento de sockets comprobado. La clave de corrección y la instrumentación no entran en el contexto del candidato. El intento inicial de preparación quedó interrumpido por restricción local de acceso a WSL antes del suministro, sin inferencia; se conservó y se completó la preparación con acceso al proceso autorizado. No es fallo del modelo ni del proveedor.
+
+[Admisión y componentes](https://github.com/juantoniolloretegea/SV-motor/blob/38b5a46cf8dac6ca0303da81417504c6984acee2/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/examen25-20261008/ADMISION.md).
+
+Retorno: Completar el banco dentro de la cuota y plazos, recibir originales y telemetría en Rust, realizar revisión sustantiva exterior y archivar cada intento. Polígono egui únicamente con conjunto completo adjudicado. Si faltan recursos, conservar resultado parcial sin atribuir fallo al candidato.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
