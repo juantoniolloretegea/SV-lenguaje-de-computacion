@@ -3089,3 +3089,17 @@ El control de salida del SV y los contadores del proveedor no son inspección de
 [Expediente, fuentes y recepción](https://github.com/juantoniolloretegea/SV-motor/blob/e238915ae755bfb5e58738c7430e060f39b08baf/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md). Conservar originales y registro por intento, recibir competentemente el resultado y conciliar los importes que permanezcan desconocidos. Ninguna ampliación económica se deduce del ensayo.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-304 · Grok MD01 diagnóstica · 08/10/2026
+
+S39 r65; TT-0014/TT-0022; Acta 004 §59; RETP-2026-304. Estado: diagnóstico parcial y reserva económica pendiente de corrección.
+
+MD01 diagnóstica con Grok 4.7: R0 y R1 recibidas y correctas para el núcleo documental preguntado; R2 no enviada por reserva insuficiente. Diagnóstico parcial, sin conformidad del conjunto. 66.789 tokens, 243.560 ms, 908 muestras del cliente, intervalo máximo 367 ms y cero fallos. Se identifica una insuficiencia del supuesto económico: max_output_tokens de xAI no limita los tokens de razonamiento.
+
+La reserva previa no constituye una garantía de coste máximo total y debe corregirse antes de cualquier nueva campaña. El coste efectivo sí quedó dentro de la autorización. No se atribuye incumplimiento al proveedor por aplicar el límite sólo a la salida visible. La revisión científica independiente permanece pendiente; no se altera ningún examen anterior ni se acredita aptitud clínica.
+
+Cuatro documentos y 31 secciones completos obtenidos de nuevo por MCP Rust, contexto temporal cotejado y clave fuera del candidato. HTTP 200 y retención cero confirmados; cero herramientas y fuentes externas comunicadas. No navegación habilitada ni inspección de servidores xAI. 25 muestras previas del MCP; pruebas Rust 7+14+1 favorables. La parada se produjo antes del envío R2 por control local, no por falta de servicio del proveedor. Las dos respuestas conservan el núcleo correcto; R1 precisa denominaciones sin alterar la distinción entre arquitectura preparatoria y manual final. No se construye un polígono con etapas ni se reevalúan otros bancos.
+
+[Expediente y pruebas](https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md). [Semántica del límite de xAI](https://docs.x.ai/developers/rest-api-reference/inference/responses). Archivo privado individual actualizado. Conservar los originales; recibir la revisión competente y resolver el control económico antes de proponer otra ejecución. No hay continuación automática ni ampliación de gasto.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

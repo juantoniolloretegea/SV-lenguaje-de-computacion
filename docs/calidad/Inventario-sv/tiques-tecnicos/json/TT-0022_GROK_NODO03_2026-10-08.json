@@ -1,15 +1,15 @@
 {
   "id": "TT-0022",
-  "resultado": "Examen completo: 75 entregas, 25 preguntas y tres etapas. R0: 24 correctas y P02 crítica incorrecta; No apto. R1 y R2: 25 correctas y ningún error crítico; Apto para el contrato documental. Duración del banco 3.814.378 ms; 1.273.687 tokens científicos. Instrumentación: 14.007 muestras, intervalo máximo 446 ms y cero fallos. Retención cero confirmada. Error inicial corregido espontáneamente y conservado; revisión exterior asistida por IA. Polígono egui completo e interactivo comprobado. Diecisiete pruebas del cliente, cuatro de adjudicación y doce del visor conformes.",
-  "revision": 64,
+  "resultado": "Examen completo: 75 entregas, 25 preguntas y tres etapas. R0: 24 correctas y P02 crítica incorrecta; No apto. R1 y R2: 25 correctas y ningún error crítico; Apto para el contrato documental. Duración del banco 3.814.378 ms; 1.273.687 tokens científicos. Instrumentación: 14.007 muestras, intervalo máximo 446 ms y cero fallos. Retención cero confirmada. Error inicial corregido espontáneamente y conservado; revisión exterior asistida por IA. Polígono egui completo e interactivo comprobado. Diecisiete pruebas del cliente, cuatro de adjudicación y doce del visor conformes. MD01 diagnóstica con Grok 4.7: R0 y R1 recibidas y correctas para el núcleo documental preguntado; R2 no enviada por reserva insuficiente. Diagnóstico parcial, sin conformidad del conjunto. 66.789 tokens, 243.560 ms, 908 muestras del cliente, intervalo máximo 367 ms y cero fallos. Se identifica una insuficiencia del supuesto económico: max_output_tokens de xAI no limita los tokens de razonamiento.",
+  "revision": 65,
   "suceso": "S39",
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/e238915ae755bfb5e58738c7430e060f39b08baf/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/examen25-20261008/INFORME.md",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/091b50a884c893fd4322bbf211b0feb0132bb258/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/xai/grok-4.7/md01-diagnostica-20261008/INFORME.md",
   "modelo": "grok-4.7",
   "nodo": "03",
-  "limites": "El control de salida del SV y los contadores del proveedor no son inspección de su infraestructura. La admisión documental no equivale a aptitud clínica ni estabilidad estadística. La generalidad del cliente exige recibir cada perfil nuevo; no se presupone compatibilidad por cambiar el nombre del modelo.",
-  "fecha_actualizacion_utc": "2026-10-08T07:14:07.5330919+00:00",
+  "limites": "El control de salida del SV y los contadores del proveedor no son inspección de su infraestructura. La admisión documental no equivale a aptitud clínica ni estabilidad estadística. La generalidad del cliente exige recibir cada perfil nuevo; no se presupone compatibilidad por cambiar el nombre del modelo. La reserva previa no constituye una garantía de coste máximo total y debe corregirse antes de cualquier nueva campaña. El coste efectivo sí quedó dentro de la autorización. No se atribuye incumplimiento al proveedor por aplicar el límite sólo a la salida visible. La revisión científica independiente permanece pendiente; no se altera ningún examen anterior ni se acredita aptitud clínica.",
+  "fecha_actualizacion_utc": "2026-10-08T08:16:19.9846192+00:00",
   "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "proveedor": "xAI",
-  "retorno": "Conservar originales y registro por intento, recibir competentemente el resultado y conciliar los importes que permanezcan desconocidos. Ninguna ampliación económica se deduce del ensayo.",
-  "estado": "Ensayo concluido; recepción independiente pendiente"
+  "retorno": "Conservar los originales; recibir la revisión competente y resolver el control económico antes de proponer otra ejecución. No hay continuación automática ni ampliación de gasto.",
+  "estado": "Examen previo conservado; MD01 parcial; reserva económica por corregir"
 }
