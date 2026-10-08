@@ -1,0 +1,12 @@
+{
+  "resultado_actual": "Kimi K3, nodo 03: catálogo MD09 recibido con 27 entregas y tres etapas. R2: 8 correctas, 1 error no crítico y 0 U; seis críticos correctos, T(9)=7. Apto para el contrato documental. Vector (0,0,0,1,0,0,0,0,0). MD04 mantiene una afirmación inexacta sobre ausencia de contenido del criterio de cierre, aunque enumera correctamente los doce campos. 220 citas conformes; 753175 tokens y 7050 muestras Rust. Primera recepción recuperada sin repetir inferencia. Polígono egui completo.",
+  "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "revision_suceso": 75,
+  "suceso": "S39",
+  "retorno": "Detener nuevas inferencias conforme a la indicación humana. Conservar los resultados del catálogo y revisar disponibilidad efectiva antes de una continuación. Ninguna compra, recarga ni ampliación autorizada por este cierre.",
+  "estado": "pendiente de recursos para continuación",
+  "fecha_actualizacion_utc": "2026-10-08T22:10:51.2658291+00:00",
+  "limites": "Alcance documental del manual, sin aptitud clínica u operativa ni recepción científica independiente. Procesos internos del proveedor no observados. Instrumentación local declarada con límites: hilos/handles, heap, desglose DNS/TLS y retransmisiones no medidos. Criptografía nativa pendiente. CYB16 no iniciado por falta de capacidad acreditada para completarlo; consulta operativa adicional preparada, sin ejecutar. Se distingue consumo facturable de reserva de cuota; no se alteran las nueve preguntas ya recibidas.",
+  "id": "TT-0025",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/285755e6426e4736c37cf3c1b05f5a5133857637/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/kimi/kimi-k3/manual-20261008/INFORME.md"
+}
