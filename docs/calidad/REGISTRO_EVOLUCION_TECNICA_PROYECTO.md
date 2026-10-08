@@ -3151,3 +3151,19 @@ Control, suministro MCP, transporte, instrumentación y recepción en Rust. 2432
 Retorno: Recepción competente de la reserva metodológica y de la réplica; conservación de originales y conciliación administrativa. Sin nueva inferencia ni recalificación automática.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## RETP-2026-308 · Qwen · Recepción documental de 16 preguntas · 08/10/2026
+
+S39 r69; TT-0014/TT-0023; Acta 004 §63; RETP-2026-308.
+
+Qwen3.8-Max-0902, nodo 03: recepción posterior como Apto documental con reservas, en el alcance de 16 preguntas limitado por disponibilidad de recursos, tras revisión metodológica y réplica separada de P13. Integración en las tablas del ensayo, catálogo de modelos y expedientes, sin nuevas inferencias.
+
+Se conserva el No apto contractual original bajo reserva, su vector y su polígono. La recepción revisada no declara cumplimiento literal completo, no combina respuestas de ejecuciones diferentes ni crea una puntuación nueva. Diferencias de marcación sin falsedad sustantiva demostrada; P13 conforme en tres etapas de la réplica. Observaciones P02/P11/P16 y recepción científica independiente pendientes; sin aptitud clínica ni equivalencia global con 25 preguntas. Todo error crítico de contenido acreditado mantiene su efecto eliminatorio.
+
+Decisión de recepción experimental por la dirección del laboratorio, sustentada en revisión exterior asistida por IA y en las evidencias conservadas. Portada del ensayo 2.28, catálogo de modelos 15 y nodo 03 versión 1.3; siete archivos recuperados por revisión y cotejados por bytes y SHA-256 en Rust. Diagramas, antecedentes y originales experimentales intactos.
+
+[Acta de recepción, fundamento y evidencias](https://github.com/juantoniolloretegea/SV-motor/blob/e7093afc20dd042764ba88287e10dea09296227e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md).
+
+Retorno: Conservar las reservas y la identidad de cada ejecución; recepción científica independiente y dependencias técnicas con su seguimiento propio. La admisión documental no inicia otra campaña ni modifica los contratos generales del SV.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

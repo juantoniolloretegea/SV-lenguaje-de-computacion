@@ -1,14 +1,14 @@
 {
-  "estado": "Réplica P13 conforme en tres etapas; examen histórico bajo reserva metodológica",
-  "fecha_actualizacion_utc": "2026-10-08T10:32:48.5173837+00:00",
+  "estado": "Apto documental con reservas en el alcance revisado de 16 preguntas; resultado contractual original conservado",
+  "fecha_actualizacion_utc": "2026-10-08T10:55:08.0343372+00:00",
   "suceso": "S39",
-  "revision": 68,
+  "revision": 69,
   "objeto": "Qwen3.8-Max-0902 por API directa y cliente común Rust",
   "id": "TT-0023",
-  "resultado": "Qwen3.8-Max-0902, nodo 03: réplica diagnóstica separada de P13, tres etapas completas y conformes, contenido 0/0/0, citas exactas y restricción de técnicas cumplida. Se precisa el alcance de la instrucción; no se sustituye P13 en el vector histórico ni se recalifica el examen de 16 preguntas.",
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/fba54670fbb45727b69566af5ea985204d96ed05/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/replica-p13-20261008/INFORME.md",
-  "retorno": "Recepción competente de la reserva metodológica y de la réplica; conservación de originales y conciliación administrativa. Sin nueva inferencia ni recalificación automática.",
+  "resultado": "Qwen3.8-Max-0902, nodo 03: recepción posterior como Apto documental con reservas, en el alcance de 16 preguntas limitado por disponibilidad de recursos, tras revisión metodológica y réplica separada de P13. Integración en las tablas del ensayo, catálogo de modelos y expedientes, sin nuevas inferencias.",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/e7093afc20dd042764ba88287e10dea09296227e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/qwen/qwen3.8-max-0902/RECEPCION-DOCUMENTAL-20261008.md",
+  "retorno": "Conservar las reservas y la identidad de cada ejecución; recepción científica independiente y dependencias técnicas con su seguimiento propio. La admisión documental no inicia otra campaña ni modifica los contratos generales del SV.",
   "fecha_alta_utc": "2026-10-08T11:07:58.9253493+02:00",
-  "limites": "El resultado demuestra cumplimiento en la versión precisada, no causalidad exclusiva del diseño ni estabilidad estadística. Se conservan No apto contractual histórico bajo reserva, observaciones P02/P11/P16, retención ordinaria y excepción criptográfica. Revisión exterior asistida por IA; recepción científica independiente pendiente.",
+  "limites": "Se conserva el No apto contractual original bajo reserva, su vector y su polígono. La recepción revisada no declara cumplimiento literal completo, no combina respuestas de ejecuciones diferentes ni crea una puntuación nueva. Diferencias de marcación sin falsedad sustantiva demostrada; P13 conforme en tres etapas de la réplica. Observaciones P02/P11/P16 y recepción científica independiente pendientes; sin aptitud clínica ni equivalencia global con 25 preguntas. Todo error crítico de contenido acreditado mantiene su efecto eliminatorio.",
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
 }
