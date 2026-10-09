@@ -1,0 +1,19 @@
+# Acta 005 · Claude Opus 5.5 en plataforma gestionada
+
+Preparación y condiciones de recepción. Los antecedentes y diagramas de las actas anteriores se conservan íntegros.
+
+## Claude Opus 5.5 · Preparación mdBook y frontera Kaggle · 09/10/2026
+
+Fecha UTC: 2026-10-09T10:42:42Z. S39 r76; TT-0026; Acta 005; RETP-2026-315.
+
+Claude Opus 5.5 en Kaggle Benchmarks, nodo 02: suministro MCP mdBook completo, manual MD01–MD09 con cuatro documentos y 31 secciones; CYB16 con cinco documentos y 28 secciones. Claves y criticidades fijadas fuera del contexto. Transporte aislado Rust: 24 comprobaciones favorables en Windows y 24 en Linux; JSON completo conforme a la modalidad documentada de Kaggle, conservación reversible de canales emitidos. Código, binario, paquete y condiciones: once archivos/4660701 bytes recuperados y cotejados en Rust. Admisión en el cuaderno y primera recepción de Claude pendientes; cero inferencias científicas al corte.
+
+El suministro lo realiza el control Rust; no se atribuyen llamadas autónomas MCP al candidato. Procesos internos del proveedor no observables; declaración operativa separada. No se mide primer token en modalidad sin flujo. Sólo cuota existente y reserva previa, sin compras ni ampliaciones. Gemini prohibido también como evaluador. Núcleo, semántica e IR intactos. Resultados históricos y acceso administrativo separados; recepción científica independiente pendiente.
+
+El acceso breve administrativo anterior no constituye examen del manual ni CYB16: terminó por longitud sin texto final. Sus originales e incidencia de plantilla permanecen en el archivo administrativo privado. La nueva campaña conserva sus propias fuentes y condiciones. La primera preparación MCP interrumpida y la incompatibilidad de versión del compilador Linux se documentan separadamente; no se atribuyen al candidato. La versión Linux recibida es Rust 1.98.1; el binario requiere glibc 2.34 y conserva dependencia nativa ring de comunicaciones bajo la excepción experimental anterior, sin afirmar Rust puro.
+
+[Expediente y condiciones](https://github.com/juantoniolloretegea/SV-motor/blob/7f47f18928e8603ec77cee1a38e9b878cb47a0e8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-md09-cyb16-20261009/admision/FRONTERA-KAGGLE.md) · [Transporte comprobado](https://github.com/juantoniolloretegea/SV-motor/blob/7f47f18928e8603ec77cee1a38e9b878cb47a0e8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/instrumentacion-rust/0.1.0/BINARIO.json) · [README del modelo](https://github.com/juantoniolloretegea/SV-motor/blob/7f47f18928e8603ec77cee1a38e9b878cb47a0e8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md).
+
+**Dependencia y retorno:** Completar la admisión Rust en Kaggle sin inferencia y recibir la primera entrega ordinaria. Ejecutar primero el manual, con R0/R1/R2 por pregunta; sólo después, si la frontera es conforme, CYB16. Preservar originales y detener ante incompatibilidad, pérdida relevante de observabilidad o margen insuficiente; documentar la corrección antes de continuar.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

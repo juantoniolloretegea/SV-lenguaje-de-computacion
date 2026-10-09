@@ -1,0 +1,37 @@
+{
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/7f47f18928e8603ec77cee1a38e9b878cb47a0e8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5",
+  "retorno": "Completar la admisión Rust en Kaggle sin inferencia y recibir la primera entrega ordinaria. Ejecutar primero el manual, con R0/R1/R2 por pregunta; sólo después, si la frontera es conforme, CYB16. Preservar originales y detener ante incompatibilidad, pérdida relevante de observabilidad o margen insuficiente; documentar la corrección antes de continuar.",
+  "fecha_utc": "2026-10-09T10:42:42Z",
+  "recepcion_independiente": "pendiente",
+  "revision_suceso": 76,
+  "estado": "pendiente",
+  "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "manual": {
+    "umbral": 7,
+    "documentos": 4,
+    "criticos": [
+      "MD01",
+      "MD02",
+      "MD05",
+      "MD06",
+      "MD07",
+      "MD09"
+    ],
+    "secciones": 31,
+    "preguntas": 9,
+    "etapas": 3
+  },
+  "suceso": "S39",
+  "cyb16": {
+    "umbral": 12,
+    "documentos": 5,
+    "criticos": 14,
+    "secciones": 28,
+    "preguntas": 16,
+    "etapas": 3
+  },
+  "limites": "El suministro lo realiza el control Rust; no se atribuyen llamadas autónomas MCP al candidato. Procesos internos del proveedor no observables; declaración operativa separada. No se mide primer token en modalidad sin flujo. Sólo cuota existente y reserva previa, sin compras ni ampliaciones. Gemini prohibido también como evaluador. Núcleo, semántica e IR intactos. Resultados históricos y acceso administrativo separados; recepción científica independiente pendiente.",
+  "id": "TT-0026",
+  "modelo": "anthropic/claude-opus-5-5@default",
+  "inferencias_cientificas": 0
+}
