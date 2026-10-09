@@ -1,9 +1,9 @@
 {
   "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/80a0dfd5dc38821fa0ea6602f0faa63f94c77051/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5",
   "retorno": "Actuación detenida tras completar y conservar el manual, por precisión humana final. No iniciar nuevas inferencias ni continuar C02-R1 o el resto de CYB16; conservar sus 44 etapas pendientes. Recepción independiente y decisión humana sobre lo siguiente. Mantener accesos, originales remotos, referencias de continuidad y sede administrativa de consumos; no ampliar el alcance.",
-  "fecha_utc": "2026-10-09T12:23:40Z",
+  "fecha_utc": "2026-10-09T15:42:02Z",
   "recepcion_independiente": "pendiente",
-  "revision_suceso": 78,
+  "revision_suceso": 79,
   "estado": "pendiente de recepción independiente",
   "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "manual": {
@@ -36,5 +36,20 @@
   "inferencias_cientificas": 31,
   "entregas_cotejadas_en_esta_adenda": 31,
   "recuento_total": "31 generaciones únicas; 27 manual y cuatro del corte adicional; HTTP 400 separado sin contadores",
-  "resultado_actual": "Nodo 02 Claude Opus 5.5: nueve preguntas del manual completas, 27 originales R0/R1/R2. Dictamen asistido 9/9 en las tres etapas, R2 final, seis críticos correctos, advertencias documentadas; recepción independiente pendiente. Cuatro entregas adicionales de ciberseguridad conservadas sin dictamen global: C01-R0/R1/R2 y C02-R0. Treinta y una respuestas únicas, 1379250 tokens y 8698073000 nanodólares comunicados. Cotejo Rust de solicitudes e historial, respuestas, canales y telemetría conforme: 6214 muestras sin fallos, máximo 266 ms. Entrega GitHub recuperada y reconstruida; 441 originales, 15721875 bytes idénticos. Sesión Kaggle apagada; sin nuevas inferencias tras la precisión humana de parada."
+  "resultado_actual": "Nodo 02 Claude Opus 5.5: nueve preguntas del manual completas, 27 originales R0/R1/R2. Dictamen asistido 9/9 en las tres etapas, R2 final, seis críticos correctos, advertencias documentadas; recepción independiente pendiente. Cuatro entregas adicionales de ciberseguridad conservadas sin dictamen global: C01-R0/R1/R2 y C02-R0. Treinta y una respuestas únicas, 1379250 tokens y 8698073000 nanodólares comunicados. Cotejo Rust de solicitudes e historial, respuestas, canales y telemetría conforme: 6214 muestras sin fallos, máximo 266 ms. Entrega GitHub recuperada y reconstruida; 441 originales, 15721875 bytes idénticos. Sesión Kaggle apagada; sin nuevas inferencias tras la precisión humana de parada.",
+  "complemento_grafico": {
+    "pruebas_rust": 10,
+    "generaciones_nuevas": 0,
+    "criticos_correctos": 6,
+    "terna": [
+      9,
+      0,
+      0
+    ],
+    "adjudicaciones_nuevas": 0,
+    "recepcion_independiente": "pendiente",
+    "revision": "05f5017b1bf94f06d0fdcc8ec5688ca5b233c9c0",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/05f5017b1bf94f06d0fdcc8ec5688ca5b233c9c0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-md09-cyb16-20261009/corte-01/poligono-egui/ENTREGA-POLIGONO.md",
+    "omision_corregida": true
+  }
 }
