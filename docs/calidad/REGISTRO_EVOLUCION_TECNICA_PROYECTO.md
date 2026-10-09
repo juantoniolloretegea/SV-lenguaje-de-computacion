@@ -3275,3 +3275,21 @@ El acceso breve administrativo anterior no constituye examen del manual ni CYB16
 **Dependencia y retorno:** Completar la admisión Rust en Kaggle sin inferencia y recibir la primera entrega ordinaria. Ejecutar primero el manual, con R0/R1/R2 por pregunta; sólo después, si la frontera es conforme, CYB16. Preservar originales y detener ante incompatibilidad, pérdida relevante de observabilidad o margen insuficiente; documentar la corrección antes de continuar.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## RETP-2026-316 · Claude Opus 5.5 · Recuperación sin repetición
+
+
+## Adenda de recepción y recuperación instrumental · 09/10/2026
+
+Fecha UTC: 2026-10-09T11:47:42Z. S39 r77; TT-0026; Acta 005; RETP-2026-316.
+
+Nodo 02 Claude Opus 5.5: admisión Rust real en Kaggle, originales recuperados y cotejados. HTTP 400 de configuración conservado; adaptación oficial para esquemas anidados, contrato documental idéntico. MD01-R0 recibido íntegro; refusal vacío había sido interpretado erróneamente como negativa. Recuperación sin repetir inferencia: formato y 19 citas cotejados; 203 muestras sin fallos, máximo 260 ms. Revisión instrumental r2: 26 comprobaciones Windows y 26 Linux, observación adicional del proceso propio en Linux, sin núcleo ni IR modificados. Treinta y tres archivos/3564374 bytes publicados, recuperados y cotejados en Rust. Continuación desde MD01-R1 en ejecución; no hay puntuación final ni recepción científica independiente.
+
+Corpus, preguntas, criticidad, claves y etapas universales sin cambio. R2 del banco final; no elegir la mejor etapa. La revisión instrumental r2 se distingue de esa etapa. Cuaderno como soporte; pesos remotos, alias default mutable. No se observaron procesos internos del proveedor ni se recibió texto de sus 1695 tokens de razonamiento en R0. Primer byte no es primer token. Se conservan carencias de R0 sin repetirla; datos no disponibles permanecen null. Cota original del manual de 90 minutos, incluida pausa propia; reserva del HTTP 400 sin contadores retenida (606024000 nanodólares), cota restante 9383976000, con R0 contabilizada una sola vez. Gemini excluido. Antecedentes, resultados históricos, diagramas y cambios concurrentes preservados.
+
+[Originales, recuperación y revisión instrumental](https://github.com/juantoniolloretegea/SV-motor/blob/8b4c21b87d3b67ce4ba51d0946650c45b31e593d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/readme.md) · [Comprobaciones del nodo 02](https://github.com/juantoniolloretegea/SV-motor/blob/8b4c21b87d3b67ce4ba51d0946650c45b31e593d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-md09-cyb16-20261009/COMPROBACIONES-NODO02.md).
+
+**Dependencia y retorno:** Continuar únicamente las etapas pendientes del banco autorizado desde el original recuperado; manual antes de CYB16. Detener ante recepción incompleta, pérdida de medición, coste desconocido, reserva insuficiente o plazo original agotado. Recuperar originales y mediciones, adjudicar exteriormente y conservar consumos individuales en la sede administrativa privada. Dictamen asistido y recepción independiente pendientes; sin ampliación de alcance, cuota o recursos.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
