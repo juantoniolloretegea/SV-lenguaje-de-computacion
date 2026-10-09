@@ -1,10 +1,10 @@
 {
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/8b4c21b87d3b67ce4ba51d0946650c45b31e593d/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5",
-  "retorno": "Continuar únicamente las etapas pendientes del banco autorizado desde el original recuperado; manual antes de CYB16. Detener ante recepción incompleta, pérdida de medición, coste desconocido, reserva insuficiente o plazo original agotado. Recuperar originales y mediciones, adjudicar exteriormente y conservar consumos individuales en la sede administrativa privada. Dictamen asistido y recepción independiente pendientes; sin ampliación de alcance, cuota o recursos.",
-  "fecha_utc": "2026-10-09T11:47:42Z",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/80a0dfd5dc38821fa0ea6602f0faa63f94c77051/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5",
+  "retorno": "Actuación detenida tras completar y conservar el manual, por precisión humana final. No iniciar nuevas inferencias ni continuar C02-R1 o el resto de CYB16; conservar sus 44 etapas pendientes. Recepción independiente y decisión humana sobre lo siguiente. Mantener accesos, originales remotos, referencias de continuidad y sede administrativa de consumos; no ampliar el alcance.",
+  "fecha_utc": "2026-10-09T12:23:40Z",
   "recepcion_independiente": "pendiente",
-  "revision_suceso": 77,
-  "estado": "en ejecución",
+  "revision_suceso": 78,
+  "estado": "pendiente de recepción independiente",
   "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "manual": {
     "umbral": 7,
@@ -30,11 +30,11 @@
     "preguntas": 16,
     "etapas": 3
   },
-  "limites": "Corpus, preguntas, criticidad, claves y etapas universales sin cambio. R2 del banco final; no elegir la mejor etapa. La revisión instrumental r2 se distingue de esa etapa. Cuaderno como soporte; pesos remotos, alias default mutable. No se observaron procesos internos del proveedor ni se recibió texto de sus 1695 tokens de razonamiento en R0. Primer byte no es primer token. Se conservan carencias de R0 sin repetirla; datos no disponibles permanecen null. Cota original del manual de 90 minutos, incluida pausa propia; reserva del HTTP 400 sin contadores retenida (606024000 nanodólares), cota restante 9383976000, con R0 contabilizada una sola vez. Gemini excluido. Antecedentes, resultados históricos, diagramas y cambios concurrentes preservados.",
+  "limites": "Corpus y claves fijados antes de inferencia; crítico y umbral preservados. El juicio asistido no es recepción independiente. Correcciones instrumentales acotadas sin modificar núcleo, semántica o IR. MD01-R0 recuperado sin repetición, con originales y carencias previas íntegros. Razonamiento interno no emitido, aunque sus tokens se comunicaron incluidos en salida; no reconstruido. Primer token, caché no comunicada y recursos internos del proveedor no disponibles. HTTP 400 inicial de coste desconocido, reserva de 606024000 nanodólares retenida y distinta de un cargo. Manual 7425529000 y corte adicional 1272544000 nanodólares comunicados, liquidación y asistencia pendientes. Resultados históricos, dictamen asistido y recepción independiente separados; no aptitud clínica ni examen global de CYB16.",
   "id": "TT-0026",
   "modelo": "anthropic/claude-opus-5-5@default",
-  "inferencias_cientificas": null,
-  "entregas_cotejadas_en_esta_adenda": 1,
-  "recuento_total": "Pendiente de cierre y recuperación; no se imputa como cero",
-  "resultado_actual": "Nodo 02 Claude Opus 5.5: admisión Rust real en Kaggle, originales recuperados y cotejados. HTTP 400 de configuración conservado; adaptación oficial para esquemas anidados, contrato documental idéntico. MD01-R0 recibido íntegro; refusal vacío había sido interpretado erróneamente como negativa. Recuperación sin repetir inferencia: formato y 19 citas cotejados; 203 muestras sin fallos, máximo 260 ms. Revisión instrumental r2: 26 comprobaciones Windows y 26 Linux, observación adicional del proceso propio en Linux, sin núcleo ni IR modificados. Treinta y tres archivos/3564374 bytes publicados, recuperados y cotejados en Rust. Continuación desde MD01-R1 en ejecución; no hay puntuación final ni recepción científica independiente."
+  "inferencias_cientificas": 31,
+  "entregas_cotejadas_en_esta_adenda": 31,
+  "recuento_total": "31 generaciones únicas; 27 manual y cuatro del corte adicional; HTTP 400 separado sin contadores",
+  "resultado_actual": "Nodo 02 Claude Opus 5.5: nueve preguntas del manual completas, 27 originales R0/R1/R2. Dictamen asistido 9/9 en las tres etapas, R2 final, seis críticos correctos, advertencias documentadas; recepción independiente pendiente. Cuatro entregas adicionales de ciberseguridad conservadas sin dictamen global: C01-R0/R1/R2 y C02-R0. Treinta y una respuestas únicas, 1379250 tokens y 8698073000 nanodólares comunicados. Cotejo Rust de solicitudes e historial, respuestas, canales y telemetría conforme: 6214 muestras sin fallos, máximo 266 ms. Entrega GitHub recuperada y reconstruida; 441 originales, 15721875 bytes idénticos. Sesión Kaggle apagada; sin nuevas inferencias tras la precisión humana de parada."
 }
