@@ -1151,3 +1151,21 @@ Revisión adversarial documental: 27 originales íntegros, identidad de banco y 
 **Dependencia y retorno:** Someter C02 y la correspondencia pregunta–clave a recepción científica independiente. Conservar los resultados históricos y las reservas de cada prueba; Kimi permanece detenido. Continuar la comprobación del recorrido documental sólo conforme a su autorización y sin confundirla con este examen. No se autoriza por este asiento nueva inferencia, modificación de permisos o ampliación económica.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+<a id="incidencia-evaluacion-glm-c02-20261010"></a>
+
+## 72. Incidencia de evaluación GLM C02 y suspensión de CYB09 · 10/10/2026
+
+2026-10-10T19:38:33.9527599+00:00 · S39 r84 · TT-0024 · RETP-2026-323 · Acta 004, apartado 72.
+
+SV-EVALUACION-GLM-C02-20261010: dictamen CYB09 suspendido por inconsistencia de evaluación exterior. Rust confirma identidad de las nueve preguntas, claves heredadas y corpus preparado frente a CYB16. En C02 se aceptó antes como conservación de originales una respuesta que prescribe registros, mientras la actual se penalizó por no exigir expresamente ambos informes. No se acredita una diferencia sustantiva que justifique el tratamiento desigual.
+
+La incidencia se refiere a la interpretación y aplicación del criterio, no a transporte ni fallo acreditado del proveedor. El juicio semántico no queda validado por una huella, un cálculo correcto o la mera repetición con otro evaluador humano o artificial. Antes de calificar debe resolverse si la obligación es suficientemente inequívoca, qué evidencia demuestra su cumplimiento y qué omisión altera el resultado. Una ambigüedad del criterio es incidencia de evaluación, no 1 del modelo ni U automática del dominio.
+
+Conservar originales, vectores iniciales y costes. No emitir clasificación comparativa fundada en el dictamen suspendido. Revisar la coherencia de las adjudicaciones afectadas sin elegir retrospectivamente el criterio que produzca el resultado deseado. La recepción independiente aporta contraste, no infalibilidad; toda rectificación requiere fundamento trazable y aplicación uniforme. Una modificación de la exigencia crea una nueva versión y no se aplica silenciosamente a los exámenes previos. No hay nuevas inferencias.
+
+El antecedente CYB16 mantiene su identidad histórica y su fundamento C02 queda bajo revisión. No se ha recalificado automáticamente ningún modelo. La inferencia CYB09 no atravesó conjuntamente GitHub y Workers y no permite atribuirles el cambio de dictamen. Las 27 entregas y la medición conservada siguen siendo evidencia utilizable; su interpretación evaluativa queda separada.
+
+[Adenda científica y cotejo](https://github.com/juantoniolloretegea/SV-motor/blob/acb81a5cfc087560e89d43695d1df910596f2dcc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/ADENDA-REVISION-C02.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
