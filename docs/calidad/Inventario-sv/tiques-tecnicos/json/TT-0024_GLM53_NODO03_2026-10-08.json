@@ -1,14 +1,58 @@
 {
   "suceso": "S39",
-  "limites": "MD06/R1 omite revision; R2 recupera el campo. MD07/R2 añade una s en cita literal: no demuestra incapacidad conceptual. MD09 conserva imprecisión gramatical accesoria sin cambio del núcleo. Recepción independiente pendiente; no aptitud clínica ni de ciberseguridad. Excepción criptográfica vigente; retención cero no acreditada. Sin navegación habilitada al candidato; no inspección de infraestructura interna del proveedor. Resultado No apto contractual histórico conservado. Reserva fundada sobre convertir un defecto de transcripción de apoyo adicional en exclusión sustantiva. No se acredita incompetencia conceptual, no se corrigen originales ni se combinan etapas. Recepción independiente y cualquier nuevo criterio requieren decisión competente. Resultado documental limitado a CYB16, sin equivalencia global con CYB25, aptitud operativa o dictamen jurídico actual. Revisión exterior asistida por IA; recepción científica independiente pendiente. Criterios prospectivos separan contenido y fidelidad sin reparar originales ni modificar MD07 histórico. Excepción criptográfica y recepción integral de plataforma pendientes. Diez marcas C04–C08, C11–C13 y C15–C16 corresponden a notas de alcance o a supuestos incompletos deliberados, no a fallos efectivos del suministro ni a errores R2. El símbolo de peligro fue excesivo: el cotejo literal no acredita necesidad de alarma. Sin modificación de vector, respuestas, criterios o visor; revisión de presentación pendiente de encargo específico. Recepción científica independiente, plataforma integral y excepción criptográfica pendientes.",
+  "limites": "MD06/R1 omite revision; R2 recupera el campo. MD07/R2 añade una s en cita literal: no demuestra incapacidad conceptual. MD09 conserva imprecisión gramatical accesoria sin cambio del núcleo. Recepción independiente pendiente; no aptitud clínica ni de ciberseguridad. Excepción criptográfica vigente; retención cero no acreditada. Sin navegación habilitada al candidato; no inspección de infraestructura interna del proveedor. Resultado No apto contractual histórico conservado. Reserva fundada sobre convertir un defecto de transcripción de apoyo adicional en exclusión sustantiva. No se acredita incompetencia conceptual, no se corrigen originales ni se combinan etapas. Recepción independiente y cualquier nuevo criterio requieren decisión competente. Resultado documental limitado a CYB16, sin equivalencia global con CYB25, aptitud operativa o dictamen jurídico actual. Revisión exterior asistida por IA; recepción científica independiente pendiente. Criterios prospectivos separan contenido y fidelidad sin reparar originales ni modificar MD07 histórico. Excepción criptográfica y recepción integral de plataforma pendientes. Diez marcas C04–C08, C11–C13 y C15–C16 corresponden a notas de alcance o a supuestos incompletos deliberados, no a fallos efectivos del suministro ni a errores R2. El símbolo de peligro fue excesivo: el cotejo literal no acredita necesidad de alarma. Sin modificación de vector, respuestas, criterios o visor; revisión de presentación pendiente de encargo específico. Recepción científica independiente, plataforma integral y excepción criptográfica pendientes. C02 distingue correctamente cobertura insuficiente y fallo técnico, sin acreditar corrección ni convertir el fallo en U. Prescribe registros de cobertura, causa y alcance, pero omite exigir la conservación de ambos informes originales prevista en la clave. No ordena destruirlos. Debe revisarse independientemente la correspondencia entre esa exigencia y la pregunta, que solicita qué registro conservar sin nombrar ambos originales. No se cambian retrospectivamente ni clave ni respuesta; no se deduce incapacidad general del modelo. La inferencia CYB09 no atravesó conjuntamente GitHub y Workers. Sus comprobaciones de infraestructura son independientes y no acreditan la recepción integral de la administración documental. El resultado de este examen no cierra la comparación científica con Kimi ni sustituye un ensayo completo del recorrido de producción.",
   "id": "TT-0024",
-  "resultado": "GLM-5.3, nodo 03: nueve preguntas MD del manual mediante MCP; 27 entregas R0/R1/R2 completas. R0: 9 conformes; R1 y R2: 8 conformes y un incumplimiento crítico contractual distinto. Final No apto contractual bajo reserva metodológica por vigente/vigentes en cita MD07; contenido nuclear correcto. Polígono egui completo, sin selección retrospectiva. GLM-5.3 MD07: diagnóstico local de R0/R1/R2. Fuente y antecedentes íntegros, texto final idéntico a SSE y 18 originales intactos. R2 introduce una cita adicional con vigente/vigentes; única causa formal del rechazo. Núcleo de preservación semántica y coordinación correcto. GLM-5.3 CYB16:48 entregas,16 preguntas y tres etapas completas. R2: 16 correctas, 0 errores, 0 indeterminadas;14 críticos y T(16)=12. Resultado: Apto para el contrato documental. Telemetría Rust, suministro MCP de5 documentos/28 fragmentos,48 hitos y polígono egui completo. Conciliación de portadas del ensayo 2.30, catálogo 17, nodo 03 1.5 y fichas de Z.ai/GLM-5.3. CYB16 conserva Apto documental: R2 con 16 correctas y 14 críticas en 0, T(16)=12. MD07 conserva su No apto contractual bajo reserva; el estudio de ejecución propia del nodo 01 sigue separado.",
+  "resultado": "GLM-5.3, nodo 03: nueve preguntas MD del manual mediante MCP; 27 entregas R0/R1/R2 completas. R0: 9 conformes; R1 y R2: 8 conformes y un incumplimiento crítico contractual distinto. Final No apto contractual bajo reserva metodológica por vigente/vigentes en cita MD07; contenido nuclear correcto. Polígono egui completo, sin selección retrospectiva. GLM-5.3 MD07: diagnóstico local de R0/R1/R2. Fuente y antecedentes íntegros, texto final idéntico a SSE y 18 originales intactos. R2 introduce una cita adicional con vigente/vigentes; única causa formal del rechazo. Núcleo de preservación semántica y coordinación correcto. GLM-5.3 CYB16:48 entregas,16 preguntas y tres etapas completas. R2: 16 correctas, 0 errores, 0 indeterminadas;14 críticos y T(16)=12. Resultado: Apto para el contrato documental. Telemetría Rust, suministro MCP de5 documentos/28 fragmentos,48 hitos y polígono egui completo. Conciliación de portadas del ensayo 2.30, catálogo 17, nodo 03 1.5 y fichas de Z.ai/GLM-5.3. CYB16 conserva Apto documental: R2 con 16 correctas y 14 críticas en 0, T(16)=12. MD07 conserva su No apto contractual bajo reserva; el estudio de ejecución propia del nodo 01 sigue separado. GLM-5.3, nodo 03: CYB09 terminado, nueve preguntas y tres etapas completas. R0, R1 y R2: ocho correctas, un error crítico C02 y ninguna indeterminación. R2 es final. Célula (9,3), ocho críticos, T(9)=7; C04 auxiliar y C08 original al final como C09. No apto según la clave previa, bajo reserva metodológica explícita. El CYB16 histórico conserva su resultado favorable.",
   "objeto": "GLM-5.3 por API directa; cliente común Rust y MCP de libro",
   "fecha_alta_utc": "2026-10-08T18:22:51.2781945+02:00",
-  "retorno": "Recepción documental por la dirección. Mantener los límites de cada prueba; no abre inferencia, recalificación, intervención operativa ni gasto. La revisión de presentación debe conservar la identidad del original.",
-  "revision": 73,
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/653327f11af0286468bd6280564d2c6a64134d5e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/ACLARACION-ALERTAS-20261008.md",
-  "estado": "Apto para el contrato documental",
+  "retorno": "Recepción documental por la dirección. Mantener los límites de cada prueba; no abre inferencia, recalificación, intervención operativa ni gasto. La revisión de presentación debe conservar la identidad del original. Someter C02 y la correspondencia pregunta–clave a recepción científica independiente. Conservar los resultados históricos y las reservas de cada prueba; Kimi permanece detenido. Continuar la comprobación del recorrido documental sólo conforme a su autorización y sin confundirla con este examen. No se autoriza por este asiento nueva inferencia, modificación de permisos o ampliación económica.",
+  "revision": 83,
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/9db05bd2c75e240714a5e8b3e03b6bfbc50d16af/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/INFORME.md",
+  "estado": "CYB09 No apto según clave, bajo reserva; CYB16 histórico Apto",
   "autoria_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
-  "fecha_actualizacion_utc": "2026-10-08T18:19:12.6535276+00:00"
+  "fecha_actualizacion_utc": "2026-10-10T19:24:32Z",
+  "estado_historico_conservado": "Apto para el contrato documental",
+  "evidencia_anterior_conservada": "https://github.com/juantoniolloretegea/SV-motor/blob/653327f11af0286468bd6280564d2c6a64134d5e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb16-20261008/ACLARACION-ALERTAS-20261008.md",
+  "cyb09_20261010": {
+    "recepcion_independiente": "pendiente",
+    "vector_final": [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    "etapas": 3,
+    "r0": {
+      "indeterminadas": 0,
+      "correctas": 8,
+      "errores": 1
+    },
+    "revision_motor": "9db05bd2c75e240714a5e8b3e03b6bfbc50d16af",
+    "inferencia_por_workers": false,
+    "importe_liquidado": null,
+    "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+    "preguntas": 9,
+    "final": "R2",
+    "dictamen": "No apto según clave, bajo reserva metodológica",
+    "reserva": "C02 distingue correctamente cobertura insuficiente y fallo técnico, sin acreditar corrección ni convertir el fallo en U. Prescribe registros de cobertura, causa y alcance, pero omite exigir la conservación de ambos informes originales prevista en la clave. No ordena destruirlos. Debe revisarse independientemente la correspondencia entre esa exigencia y la pregunta, que solicita qué registro conservar sin nombrar ambos originales. No se cambian retrospectivamente ni clave ni respuesta; no se deduce incapacidad general del modelo.",
+    "r2": {
+      "indeterminadas": 0,
+      "correctas": 8,
+      "errores": 1
+    },
+    "umbral": 7,
+    "criticos": 8,
+    "entregas": 27,
+    "tokens": 786649,
+    "r1": {
+      "indeterminadas": 0,
+      "correctas": 8,
+      "errores": 1
+    }
+  }
 }

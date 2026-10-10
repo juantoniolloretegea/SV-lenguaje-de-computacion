@@ -1127,3 +1127,27 @@ Revisión adversarial documental de la edición vigente: eliminación de localiz
 **Dependencia y retorno:** Entregar el expediente para recepción científica independiente. Mantener separada y pendiente la aceptación del recorrido conjunto GitHub–Workers–modelo; no dar por recibida la administración completa. Z.ai y Kimi permanecen detenidos durante esta actuación documental; no hay nuevas inferencias, cambios de permisos ni decisiones económicas. Núcleo, semántica e IR intactos.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+<a id="glm53-cyb09-20261010"></a>
+
+## 71. GLM-5.3 CYB09 y reserva metodológica · 10/10/2026
+
+Fecha UTC: 2026-10-10T19:24:32Z. S39 r83; TT-0024; Acta 004, apartado 71; RETP-2026-322.
+
+GLM-5.3, nodo 03: CYB09 terminado, nueve preguntas y tres etapas completas. R0, R1 y R2: ocho correctas, un error crítico C02 y ninguna indeterminación. R2 es final. Célula (9,3), ocho críticos, T(9)=7; C04 auxiliar y C08 original al final como C09. No apto según la clave previa, bajo reserva metodológica explícita. El CYB16 histórico conserva su resultado favorable.
+
+C02 distingue correctamente cobertura insuficiente y fallo técnico, sin acreditar corrección ni convertir el fallo en U. Prescribe registros de cobertura, causa y alcance, pero omite exigir la conservación de ambos informes originales prevista en la clave. No ordena destruirlos. Debe revisarse independientemente la correspondencia entre esa exigencia y la pregunta, que solicita qué registro conservar sin nombrar ambos originales. No se cambian retrospectivamente ni clave ni respuesta; no se deduce incapacidad general del modelo.
+
+Veintisiete entregas completas, sin reintentos ni fallos de captura. Límite absoluto de 300.000 ms y máximo de salida de 7.168 tokens por solicitud. Máximo observado 89.116 ms; 4.423 muestras y periodicidad máxima de 488 ms. Recepción, citas, adjudicación y edición cotejadas en Rust. Misma selección, corpus, clave y criterios que Astra CYB09; se mantienen las diferencias de protocolo y tokenización. No hay herramientas de navegación habilitadas al candidato.
+
+La inferencia CYB09 no atravesó conjuntamente GitHub y Workers. Sus comprobaciones de infraestructura son independientes y no acreditan la recepción integral de la administración documental. El resultado de este examen no cierra la comparación científica con Kimi ni sustituye un ensayo completo del recorrido de producción.
+
+703.064 tokens de entrada, 83.585 de salida y 786.649 totales; 37.888 de entrada en caché y 17.936 de razonamiento ya incluidos en salida. Registro administrativo SV-GASTO-20261010-012: estimaciones por solicitud y cargo liquidado pendiente de conciliación; no sustituir desconocido por cero. Evidencias técnicas con custodia privada y recuperación cotejada por SHA-256.
+
+Revisión adversarial documental: 27 originales íntegros, identidad de banco y criterios, capas científicas conservadas, contadores sin duplicar razonamiento ni caché, y revisión de patrones de información privada en texto y binario del visor. Defectos formales de C01/R0 y citas de C02/R2 y C04 identificados sin alterar el original. No causan el error sustantivo C02. Prueba visual del polígono y selección del fundamento conformes. La revisión limitada no equivale a garantía absoluta ni a recepción científica independiente.
+
+[Informe científico](https://github.com/juantoniolloretegea/SV-motor/blob/9db05bd2c75e240714a5e8b3e03b6bfbc50d16af/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/INFORME.md) · [Revisión documental](https://github.com/juantoniolloretegea/SV-motor/blob/9db05bd2c75e240714a5e8b3e03b6bfbc50d16af/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/REVISION-DOCUMENTAL.md) · [R2 y evidencias]( https://github.com/juantoniolloretegea/SV-motor/blob/9db05bd2c75e240714a5e8b3e03b6bfbc50d16af/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/CAPA-R2.json).
+
+**Dependencia y retorno:** Someter C02 y la correspondencia pregunta–clave a recepción científica independiente. Conservar los resultados históricos y las reservas de cada prueba; Kimi permanece detenido. Continuar la comprobación del recorrido documental sólo conforme a su autorización y sin confundirla con este examen. No se autoriza por este asiento nueva inferencia, modificación de permisos o ampliación económica.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

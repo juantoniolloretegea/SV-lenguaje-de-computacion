@@ -279,3 +279,9 @@ La actualización de Qwen3.5-122B-A10B Q8_0 queda conciliada con TT-0019, Suceso
 La continuación del acta de 15/09/2026 incorpora S39 r82, TT-0021 y RETP-2026-321 en [Acta 004, apartado 70](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#astra-cyb09-20261010): examen Astra de nueve preguntas y tres etapas recibido, relación delimitada con GitHub/Workers, métricas y revisión adversarial de la edición pública. Recepción científica independiente y aceptación integral del recorrido documental pendientes. Esta remisión no altera los acuerdos históricos.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Remisión documental GLM-5.3 CYB09 · 10/10/2026
+
+La continuación del acta de 15/09/2026 incorpora S39 r83, TT-0024 y RETP-2026-322 en [Acta 004, apartado 71](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#glm53-cyb09-20261010). Veintisiete entregas completas; R2 con ocho correctas y un error crítico C02 según la clave, bajo reserva metodológica expresa sobre su correspondencia con la pregunta. Recepción científica independiente y aceptación integral del recorrido documental pendientes. CYB16 y los acuerdos anteriores permanecen intactos.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
