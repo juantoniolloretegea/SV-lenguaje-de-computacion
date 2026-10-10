@@ -1,9 +1,9 @@
 {
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/80a0dfd5dc38821fa0ea6602f0faa63f94c77051/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5",
-  "retorno": "Actuación detenida tras completar y conservar el manual, por precisión humana final. No iniciar nuevas inferencias ni continuar C02-R1 o el resto de CYB16; conservar sus 44 etapas pendientes. Recepción independiente y decisión humana sobre lo siguiente. Mantener accesos, originales remotos, referencias de continuidad y sede administrativa de consumos; no ampliar el alcance.",
-  "fecha_utc": "2026-10-09T15:42:02Z",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega",
+  "retorno": "Examen abreviado terminado y conservado; sesión Kaggle apagada. Detener nuevos envíos. Recepción científica independiente y decisión humana sobre lo siguiente. Preservar originales, accesos y referencias; no ampliar a las siete preguntas excluidas.",
+  "fecha_utc": "2026-10-10T17:13:09Z",
   "recepcion_independiente": "pendiente",
-  "revision_suceso": 79,
+  "revision_suceso": 80,
   "estado": "pendiente de recepción independiente",
   "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "manual": {
@@ -30,7 +30,7 @@
     "preguntas": 16,
     "etapas": 3
   },
-  "limites": "Corpus y claves fijados antes de inferencia; crítico y umbral preservados. El juicio asistido no es recepción independiente. Correcciones instrumentales acotadas sin modificar núcleo, semántica o IR. MD01-R0 recuperado sin repetición, con originales y carencias previas íntegros. Razonamiento interno no emitido, aunque sus tokens se comunicaron incluidos en salida; no reconstruido. Primer token, caché no comunicada y recursos internos del proveedor no disponibles. HTTP 400 inicial de coste desconocido, reserva de 606024000 nanodólares retenida y distinta de un cargo. Manual 7425529000 y corte adicional 1272544000 nanodólares comunicados, liquidación y asistencia pendientes. Resultados históricos, dictamen asistido y recepción independiente separados; no aptitud clínica ni examen global de CYB16.",
+  "limites": "Corpus y claves fijados antes de inferencia; crítico y umbral preservados. El juicio asistido no es recepción independiente. Correcciones instrumentales acotadas sin modificar núcleo, semántica o IR. MD01-R0 recuperado sin repetición, con originales y carencias previas íntegros. Razonamiento interno no emitido, aunque sus tokens se comunicaron incluidos en salida; no reconstruido. Primer token, caché no comunicada y recursos internos del proveedor no disponibles. HTTP 400 inicial de coste desconocido, reserva de 606024000 nanodólares retenida y distinta de un cargo. Manual 7425529000 y corte adicional 1272544000 nanodólares comunicados, liquidación y asistencia pendientes. Resultados históricos, dictamen asistido y recepción independiente separados; no aptitud clínica ni examen global de CYB16. La selección abreviada es posterior a cuatro entregas; no se declara previa a la campaña histórica ni equivalente a CYB16. Siete preguntas excluidas, 21 etapas, no ejecutadas. Núcleo, semántica e IR intactos. Corpus documental histórico fijado y suministrado íntegro; sin navegación del candidato ni consultas autónomas MCP. Declaraciones operativas del modelo, contadores del proveedor y observación del proceso Rust tienen procedencias distintas. Recursos internos y primer token no observables; datos ausentes no se sustituyen por cero. Los tokens de razón están incluidos en salida. Cuatro costes históricos ya registrados, sin duplicación en la cuota nueva. La reserva HTTP 400 previa no es un cargo de esta ventana. Dictamen asistido exterior, no recepción independiente, aptitud jurídica, clínica o habilitación operativa.",
   "id": "TT-0026",
   "modelo": "anthropic/claude-opus-5-5@default",
   "inferencias_cientificas": 31,
@@ -51,5 +51,37 @@
     "revision": "05f5017b1bf94f06d0fdcc8ec5688ca5b233c9c0",
     "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/05f5017b1bf94f06d0fdcc8ec5688ca5b233c9c0/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-md09-cyb16-20261009/corte-01/poligono-egui/ENTREGA-POLIGONO.md",
     "omision_corregida": true
-  }
+  },
+  "cyb09": {
+    "recepcion_independiente": "pendiente",
+    "dictamen_asistido": true,
+    "generaciones_nuevas": 23,
+    "criticidades": 9,
+    "originales_reutilizados": 4,
+    "seleccion_posterior_a_cuatro_entregas": true,
+    "resultado": {
+      "admisible_segun_clave": false,
+      "correctas": 8,
+      "criticos_correctos": false,
+      "etapa": 2,
+      "total": 9,
+      "umbral_auxiliar": 7,
+      "vector": [
+        "0",
+        "1",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0",
+        "0"
+      ]
+    },
+    "entregas": 27,
+    "etapas": 3,
+    "preguntas": 9
+  },
+  "inferencias_cientificas_acumuladas_claude": 54,
+  "estado_historico_cyb16": "Corte original de cuatro entregas conservado; no se presenta CYB09 como realización de las dieciséis preguntas."
 }
