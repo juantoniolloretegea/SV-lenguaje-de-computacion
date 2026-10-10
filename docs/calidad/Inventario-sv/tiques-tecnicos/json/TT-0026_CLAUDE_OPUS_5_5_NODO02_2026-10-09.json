@@ -1,9 +1,9 @@
 {
-  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega",
-  "retorno": "Examen abreviado terminado y conservado; sesión Kaggle apagada. Detener nuevos envíos. Recepción científica independiente y decisión humana sobre lo siguiente. Preservar originales, accesos y referencias; no ampliar a las siete preguntas excluidas.",
-  "fecha_utc": "2026-10-10T17:13:09Z",
+  "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/cf407ba81683609d92560696dcfc0bf665f9423b/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega",
+  "retorno": "Para el lateral Claude Opus 5.5: contraste terminado, sesión Kaggle apagada y nuevos envíos detenidos. Recepción científica independiente del resultado y de C02, seguida de decisión humana sobre continuidad. S39 general conserva el estado en ejecución y las dependencias propias de sus otros trabajos.",
+  "fecha_utc": "2026-10-10T18:05:03Z",
   "recepcion_independiente": "pendiente",
-  "revision_suceso": 80,
+  "revision_suceso": 81,
   "estado": "pendiente de recepción independiente",
   "licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
   "manual": {
@@ -33,10 +33,10 @@
   "limites": "Corpus y claves fijados antes de inferencia; crítico y umbral preservados. El juicio asistido no es recepción independiente. Correcciones instrumentales acotadas sin modificar núcleo, semántica o IR. MD01-R0 recuperado sin repetición, con originales y carencias previas íntegros. Razonamiento interno no emitido, aunque sus tokens se comunicaron incluidos en salida; no reconstruido. Primer token, caché no comunicada y recursos internos del proveedor no disponibles. HTTP 400 inicial de coste desconocido, reserva de 606024000 nanodólares retenida y distinta de un cargo. Manual 7425529000 y corte adicional 1272544000 nanodólares comunicados, liquidación y asistencia pendientes. Resultados históricos, dictamen asistido y recepción independiente separados; no aptitud clínica ni examen global de CYB16. La selección abreviada es posterior a cuatro entregas; no se declara previa a la campaña histórica ni equivalente a CYB16. Siete preguntas excluidas, 21 etapas, no ejecutadas. Núcleo, semántica e IR intactos. Corpus documental histórico fijado y suministrado íntegro; sin navegación del candidato ni consultas autónomas MCP. Declaraciones operativas del modelo, contadores del proveedor y observación del proceso Rust tienen procedencias distintas. Recursos internos y primer token no observables; datos ausentes no se sustituyen por cero. Los tokens de razón están incluidos en salida. Cuatro costes históricos ya registrados, sin duplicación en la cuota nueva. La reserva HTTP 400 previa no es un cargo de esta ventana. Dictamen asistido exterior, no recepción independiente, aptitud jurídica, clínica o habilitación operativa.",
   "id": "TT-0026",
   "modelo": "anthropic/claude-opus-5-5@default",
-  "inferencias_cientificas": 31,
-  "entregas_cotejadas_en_esta_adenda": 31,
-  "recuento_total": "31 generaciones únicas; 27 manual y cuatro del corte adicional; HTTP 400 separado sin contadores",
-  "resultado_actual": "Nodo 02 Claude Opus 5.5: nueve preguntas del manual completas, 27 originales R0/R1/R2. Dictamen asistido 9/9 en las tres etapas, R2 final, seis críticos correctos, advertencias documentadas; recepción independiente pendiente. Cuatro entregas adicionales de ciberseguridad conservadas sin dictamen global: C01-R0/R1/R2 y C02-R0. Treinta y una respuestas únicas, 1379250 tokens y 8698073000 nanodólares comunicados. Cotejo Rust de solicitudes e historial, respuestas, canales y telemetría conforme: 6214 muestras sin fallos, máximo 266 ms. Entrega GitHub recuperada y reconstruida; 441 originales, 15721875 bytes idénticos. Sesión Kaggle apagada; sin nuevas inferencias tras la precisión humana de parada.",
+  "inferencias_cientificas": 54,
+  "entregas_cotejadas_en_esta_adenda": 27,
+  "recuento_total": "54 generaciones científicas únicas: 27 del manual histórico y 27 de CYB09 (cuatro originales históricos y 23 generaciones nuevas). HTTP 400 histórico separado, sin contadores; cero inferencias nuevas en esta revisión documental.",
+  "resultado_actual": "CYB09 de Claude Opus 5.5 en nodo 02 terminado: R2 final 8/9, terna 8/1/0, vector 0,1,0,0,0,0,0,0,0; 88,89/100; No apto por C02 crítico según adjudicación asistida exterior; recepción científica independiente pendiente. R1 9/9 no sustituye R2. El manual histórico conserva 9/9 y seis críticos correctos, sin repetición. Se mantienen 27 entregas CYB09, cuatro históricas reutilizadas y 23 generaciones nuevas; 54 generaciones científicas únicas acumuladas: 27 del manual y 27 de CYB09. Esta revisión documental añade cero inferencias.",
   "complemento_grafico": {
     "pruebas_rust": 10,
     "generaciones_nuevas": 0,
@@ -80,8 +80,43 @@
     },
     "entregas": 27,
     "etapas": 3,
-    "preguntas": 9
+    "preguntas": 9,
+    "dictamen_final_explicito": {
+      "autoridad": "adjudicación asistida exterior al candidato",
+      "recepcion_independiente": "pendiente",
+      "fuente": "https://github.com/juantoniolloretegea/SV-motor/blob/cf407ba81683609d92560696dcfc0bf665f9423b/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/PUNTUACION-RUST.json",
+      "reparo_critico": "C02",
+      "terna": [
+        8,
+        1,
+        0
+      ],
+      "puntuacion_sobre_100": 88.88888888888889,
+      "dictamen": "No apto",
+      "etapa": "R2"
+    }
   },
   "inferencias_cientificas_acumuladas_claude": 54,
-  "estado_historico_cyb16": "Corte original de cuatro entregas conservado; no se presenta CYB09 como realización de las dieciséis preguntas."
+  "estado_historico_cyb16": "Corte original de cuatro entregas conservado; no se presenta CYB09 como realización de las dieciséis preguntas.",
+  "antecedente_documental_2026_10_10_r80": {
+    "revision_suceso": 80,
+    "fecha_utc": "2026-10-10T17:13:09Z",
+    "inferencias_cientificas": 31,
+    "entregas_cotejadas_en_esta_adenda": 31,
+    "recuento_total": "31 generaciones únicas; 27 manual y cuatro del corte adicional; HTTP 400 separado sin contadores",
+    "resultado_actual": "Nodo 02 Claude Opus 5.5: nueve preguntas del manual completas, 27 originales R0/R1/R2. Dictamen asistido 9/9 en las tres etapas, R2 final, seis críticos correctos, advertencias documentadas; recepción independiente pendiente. Cuatro entregas adicionales de ciberseguridad conservadas sin dictamen global: C01-R0/R1/R2 y C02-R0. Treinta y una respuestas únicas, 1379250 tokens y 8698073000 nanodólares comunicados. Cotejo Rust de solicitudes e historial, respuestas, canales y telemetría conforme: 6214 muestras sin fallos, máximo 266 ms. Entrega GitHub recuperada y reconstruida; 441 originales, 15721875 bytes idénticos. Sesión Kaggle apagada; sin nuevas inferencias tras la precisión humana de parada.",
+    "evidencia": "https://github.com/juantoniolloretegea/SV-motor/blob/759ad8dd1b1916b0bc690b7c45aebd4598d9f4b7/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega"
+  },
+  "revision_documental": {
+    "inferencias_nuevas": 0,
+    "limites": "Se corrigen tres reparos documentales: campos generales de TT-0026 que todavía expresaban 31 respuestas y el resultado anterior; expresión incompleta del dictamen y la puntuación en los resúmenes; referencia vigente anterior a la incorporación explícita de la fórmula común. Los valores anteriores se conservan como antecedente fechado y por revisión. No se modifican preguntas, clave, criticidades, calificaciones, originales, núcleo, semántica ni IR. El examen de dieciséis preguntas sigue sin completarse; no se amplía la campaña. La recepción independiente deberá examinar el alcance de la obligación de conservar ambos originales en C02 frente a la clave, el corpus y la respuesta final. Custodia documental y adjudicación asistida no son recepción científica independiente.",
+    "revision_base": "a201e592a304abd982e070399038d861981aa036",
+    "hallazgos_corregidos": [
+      "H01",
+      "H02",
+      "H03"
+    ],
+    "economia_registro": "SV-GASTO-20261010-010",
+    "alcance": "Consistencia de documentación y emplazamientos, sin recepción científica independiente"
+  }
 }

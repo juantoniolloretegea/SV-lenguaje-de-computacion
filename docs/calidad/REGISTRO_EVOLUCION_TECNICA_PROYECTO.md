@@ -3343,3 +3343,23 @@ La selección abreviada es posterior a cuatro entregas; no se declara previa a l
 **Dependencia y retorno:** Examen abreviado terminado y conservado; sesión Kaggle apagada. Detener nuevos envíos. Recepción científica independiente y decisión humana sobre lo siguiente. Preservar originales, accesos y referencias; no ampliar a las siete preguntas excluidas.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## RETP-2026-320 · Revisión documental de Claude Opus 5.5
+
+
+## Revisión adversarial documental y precisión vigente · 2026-10-10
+
+Fecha UTC: 2026-10-10T18:05:03Z. S39 r81; TT-0026; Acta 005; RETP-2026-320.
+
+CYB09 de Claude Opus 5.5 en nodo 02 terminado: R2 final 8/9, terna 8/1/0, vector 0,1,0,0,0,0,0,0,0; 88,89/100; No apto por C02 crítico según adjudicación asistida exterior; recepción científica independiente pendiente. R1 9/9 no sustituye R2. El manual histórico conserva 9/9 y seis críticos correctos, sin repetición. Se mantienen 27 entregas CYB09, cuatro históricas reutilizadas y 23 generaciones nuevas; 54 generaciones científicas únicas acumuladas: 27 del manual y 27 de CYB09. Esta revisión documental añade cero inferencias.
+
+Se corrigen tres reparos documentales: campos generales de TT-0026 que todavía expresaban 31 respuestas y el resultado anterior; expresión incompleta del dictamen y la puntuación en los resúmenes; referencia vigente anterior a la incorporación explícita de la fórmula común. Los valores anteriores se conservan como antecedente fechado y por revisión. No se modifican preguntas, clave, criticidades, calificaciones, originales, núcleo, semántica ni IR. El examen de dieciséis preguntas sigue sin completarse; no se amplía la campaña. La recepción independiente deberá examinar el alcance de la obligación de conservar ambos originales en C02 frente a la clave, el corpus y la respuesta final. Custodia documental y adjudicación asistida no son recepción científica independiente.
+
+Gasto privado SV-GASTO-20261010-010 comprobado: 8,217760000 USD comunicados y 1.153.912 tokens nuevos en 23 respuestas. Los 71.819 tokens de razón están incluidos en salida; las cuatro entregas históricas y su coste no se imputan otra vez. Liquidación, impuestos y asistencia atribuible permanecen pendientes o desconocidos. No se modifican importes ni se generan cargos de candidato por esta revisión.
+
+[Informe vigente y puntuación común](https://github.com/juantoniolloretegea/SV-motor/blob/cf407ba81683609d92560696dcfc0bf665f9423b/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/INFORME.md) · [Cálculo Rust](https://github.com/juantoniolloretegea/SV-motor/blob/cf407ba81683609d92560696dcfc0bf665f9423b/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/PUNTUACION-RUST.json) · [Entrega documental y emplazamientos](https://github.com/juantoniolloretegea/SV-motor/blob/cf407ba81683609d92560696dcfc0bf665f9423b/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/02-plataforma-gestionada/antrophic/claude-opus-5-5/ensayo-cyb09-20261010/entrega/ENTREGA-Y-RECEPCION-DOCUMENTAL.md). Las referencias anteriores permanecen como antecedentes; esta adenda precisa el estado vigente y conserva la recepción científica independiente pendiente.
+
+**Dependencia y retorno:** Para el lateral Claude Opus 5.5: contraste terminado, sesión Kaggle apagada y nuevos envíos detenidos. Recepción científica independiente del resultado y de C02, seguida de decisión humana sobre continuidad. S39 general conserva el estado en ejecución y las dependencias propias de sus otros trabajos.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
