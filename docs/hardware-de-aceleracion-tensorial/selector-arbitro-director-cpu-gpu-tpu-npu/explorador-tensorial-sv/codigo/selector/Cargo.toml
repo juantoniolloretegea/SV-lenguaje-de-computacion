@@ -1,0 +1,15 @@
+[package]
+name = "selector-arbitro-director-cpu-gpu-tpu-npu"
+version = "0.1.0"
+edition = "2021"
+publish = false
+description = "Selector del Árbitro - Director CPU/GPU/TPU/NPU: selección técnica local, sin adaptadores activados"
+
+[workspace]
+
+[profile.dev]
+debug = 0
+
+[profile.test]
+debug = 0
+

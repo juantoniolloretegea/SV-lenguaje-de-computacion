@@ -1,0 +1,1168 @@
+//! PJRT Client
+//!
+//! This module provides the `Client` struct which represents a PJRT runtime instance.
+//! A client is the main interface for working with PJRT and provides functionality to:
+//!
+//! - Access available devices
+//! - Create and manage buffers
+//! - Compile programs to loaded executables
+//! - Manage device memory
+//! - Handle device assignments
+//!
+//! Each client is associated with a specific PJRT plugin and encapsulates the runtime
+//! state for that plugin.
+//!
+//! # Examples
+//!
+//! ## Creating a Client
+//!
+//! ```rust,ignore
+//! use pjrt::{plugin, Client};
+//!
+//! // Load a PJRT plugin and create a client
+//! let api = plugin("path/to/pjrt_c_api_cpu_plugin.so").load()?;
+//! let client = Client::builder(&api).build()?;
+//!
+//! // Access client information
+//! println!("Platform: {}", client.platform_name());
+//! println!("Version: {}", client.platform_version());
+//! println!("Devices: {}", client.devices().len());
+//! ```
+//!
+//! ## Working with Devices
+//!
+//! ```rust,ignore
+//! // Get all available devices
+//! let devices = client.devices();
+//! for device in &devices {
+//!     println!("Device: {:?}", device);
+//! }
+//!
+//! // Get only addressable devices (local to this process)
+//! let addressable = client.addressable_devices();
+//!
+//! // Look up a specific device by ID
+//! let device = client.lookup_device(0)?;
+//! ```
+//!
+//! ## Compiling Programs
+//!
+//! ```rust,ignore
+//! use pjrt::{Program, ProgramFormat, CompileOptions};
+//!
+//! let mlir_code = include_bytes!("my_program.mlir");
+//! let program = Program::new(ProgramFormat::Mlir, mlir_code);
+//!
+//! let executable = client.compile(&program, CompileOptions::default())?;
+//! println!("Compiled: {:?}", executable);
+//! ```
+
+use std::borrow::Cow;
+use std::ffi::c_void;
+use std::rc::Rc;
+use std::slice;
+
+use bon::bon;
+use pjrt_sys::{
+    PJRT_Client, PJRT_Client_AddressableDevices_Args, PJRT_Client_AddressableMemories_Args,
+    PJRT_Client_Compile_Args, PJRT_Client_CreateAliasBuffer_Args,
+    PJRT_Client_CreateBuffersForAsyncHostToDevice_Args, PJRT_Client_CreateErrorBuffer_Args,
+    PJRT_Client_CreateUninitializedBuffer_Args, PJRT_Client_DefaultDeviceAssignment_Args,
+    PJRT_Client_Destroy_Args, PJRT_Client_Devices_Args, PJRT_Client_DmaMap_Args,
+    PJRT_Client_DmaUnmap_Args, PJRT_Client_FulfillAliasBuffer_Args,
+    PJRT_Client_LookupAddressableDevice_Args, PJRT_Client_LookupDevice_Args,
+    PJRT_Client_PlatformName_Args, PJRT_Client_PlatformVersion_Args, PJRT_Client_ProcessIndex_Args,
+    PJRT_Client_TopologyDescription_Args, PJRT_Client_UpdateGlobalProcessInfo_Args,
+    PJRT_Error_Code, PJRT_Executable_DeserializeAndLoad_Args, PJRT_ProcessInfo, PJRT_Program,
+    PJRT_ShapeSpec,
+};
+
+use crate::{
+    utils, Api, AsyncHostToDeviceTransferManager, Buffer, BufferShape, CallbackExtension,
+    CompileOptions, CompileToLoadedExecutable, Device, DeviceAssignment, ErrorCode, Extension,
+    GlobalDeviceId, KeyValueStore, LayoutsExtension, LoadedExecutable, LocalHardwareId, Memory,
+    MemoryLayout, NamedValue, PrimitiveType, Program, Result, TopologyDescription,
+};
+
+struct ClientRaw {
+    api: Api,
+    ptr: *mut PJRT_Client,
+}
+
+impl Drop for ClientRaw {
+    fn drop(&mut self) {
+        let mut args = PJRT_Client_Destroy_Args::new();
+        args.client = self.ptr;
+        let _ = self.api.PJRT_Client_Destroy(args);
+    }
+}
+
+/// A PJRT client representing a connection to a specific hardware backend.
+///
+/// `Client` is the central type for interacting with PJRT devices. It provides
+/// methods for enumerating devices, compiling programs, transferring data, and
+/// managing the runtime.
+///
+/// # Thread Safety
+///
+/// `Client` is `!Send + !Sync` because it uses `Rc` for internal reference
+/// counting. All operations on a `Client` and any objects derived from it
+/// ([`Device`], [`Buffer`], [`LoadedExecutable`], [`Memory`], etc.) must occur
+/// on the same thread that created the client.
+///
+/// To use PJRT from multiple threads, create a separate `Client` per thread.
+/// The underlying [`Api`] is `Send + Sync` and can be shared across threads
+/// to create independent clients.
+///
+/// [`Device`]: crate::Device
+/// [`Buffer`]: crate::Buffer
+/// [`LoadedExecutable`]: crate::LoadedExecutable
+/// [`Memory`]: crate::Memory
+/// [`Api`]: crate::Api
+#[derive(Clone)]
+pub struct Client {
+    raw: Rc<ClientRaw>,
+}
+
+impl std::fmt::Debug for Client {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("Client")
+            .field("platform_name", &self.platform_name().unwrap_or_default())
+            .field(
+                "platform_version",
+                &self.platform_version().unwrap_or_default(),
+            )
+            .field("process_index", &self.process_index().unwrap_or(-1))
+            .field("num_devices", &self.devices().map(|d| d.len()).unwrap_or(0))
+            .field(
+                "num_addressable_devices",
+                &self.addressable_devices().map(|d| d.len()).unwrap_or(0),
+            )
+            .finish()
+    }
+}
+
+#[bon]
+impl Client {
+    pub(crate) fn wrap(api: &Api, ptr: *mut PJRT_Client) -> Self {
+        assert!(!ptr.is_null());
+        Self {
+            raw: Rc::new(ClientRaw {
+                api: api.clone(),
+                ptr,
+            }),
+        }
+    }
+
+    #[builder(finish_fn = build)]
+    pub fn builder(
+        #[builder(start_fn)] api: &Api,
+        #[builder(default = bon::vec![], into)] options: Vec<NamedValue>,
+        kv_store: Option<&dyn KeyValueStore>,
+    ) -> Result<Self> {
+        api.create_client(options, kv_store)
+    }
+
+    pub fn api(&self) -> &Api {
+        &self.raw.api
+    }
+
+    pub(crate) fn ptr(&self) -> *mut PJRT_Client {
+        self.raw.ptr
+    }
+
+    pub fn platform_name(&self) -> Result<Cow<'_, str>> {
+        let mut args = PJRT_Client_PlatformName_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_PlatformName(args)?;
+        Ok(utils::str_from_raw(
+            args.platform_name,
+            args.platform_name_size,
+        ))
+    }
+
+    pub fn platform_version(&self) -> Result<Cow<'_, str>> {
+        let mut args = PJRT_Client_PlatformVersion_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_PlatformVersion(args)?;
+        Ok(utils::str_from_raw(
+            args.platform_version,
+            args.platform_version_size,
+        ))
+    }
+
+    pub fn process_index(&self) -> Result<i32> {
+        let mut args = PJRT_Client_ProcessIndex_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_ProcessIndex(args)?;
+        Ok(args.process_index)
+    }
+
+    pub fn devices(&self) -> Result<Vec<Device>> {
+        let mut args = PJRT_Client_Devices_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_Devices(args)?;
+        let raw_devices = unsafe { slice::from_raw_parts(args.devices, args.num_devices) };
+        Ok(raw_devices
+            .iter()
+            .cloned()
+            .map(|d| Device::wrap(self, d))
+            .collect())
+    }
+
+    pub fn addressable_devices(&self) -> Result<Vec<Device>> {
+        let mut args = PJRT_Client_AddressableDevices_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_AddressableDevices(args)?;
+        let devices = unsafe {
+            slice::from_raw_parts(args.addressable_devices, args.num_addressable_devices)
+        };
+        Ok(devices
+            .iter()
+            .cloned()
+            .map(|d| Device::wrap(self, d))
+            .collect())
+    }
+
+    pub fn addressable_memories(&self) -> Result<Vec<Memory>> {
+        let mut args = PJRT_Client_AddressableMemories_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_AddressableMemories(args)?;
+        let memories = unsafe {
+            slice::from_raw_parts(args.addressable_memories, args.num_addressable_memories)
+        };
+        Ok(memories
+            .iter()
+            .cloned()
+            .map(|d| Memory::wrap(self, d))
+            .collect())
+    }
+
+    pub fn lookup_device(&self, global_device_id: GlobalDeviceId) -> Result<Device> {
+        let mut args = PJRT_Client_LookupDevice_Args::new();
+        args.client = self.ptr();
+        args.id = global_device_id;
+        args = self.api().PJRT_Client_LookupDevice(args)?;
+        Ok(Device::wrap(self, args.device))
+    }
+
+    pub fn lookup_addressable_device(&self, local_hardware_id: LocalHardwareId) -> Result<Device> {
+        let mut args = PJRT_Client_LookupAddressableDevice_Args::new();
+        args.client = self.ptr();
+        args.local_hardware_id = local_hardware_id;
+        args = self.api().PJRT_Client_LookupAddressableDevice(args)?;
+        Ok(Device::wrap(self, args.addressable_device))
+    }
+
+    pub fn compile<T>(&self, program: &T, options: CompileOptions) -> Result<LoadedExecutable>
+    where
+        Self: CompileToLoadedExecutable<T>,
+    {
+        CompileToLoadedExecutable::<T>::compile(self, program, &options)
+    }
+
+    pub fn load_executable(&self, bytes: &[u8]) -> Result<LoadedExecutable> {
+        let mut args = PJRT_Executable_DeserializeAndLoad_Args::new();
+        args.client = self.ptr();
+        args.serialized_executable = bytes.as_ptr() as *const i8;
+        args.serialized_executable_size = bytes.len();
+        args = self.api().PJRT_Executable_DeserializeAndLoad(args)?;
+        Ok(LoadedExecutable::wrap(self, args.loaded_executable))
+    }
+
+    pub fn default_device_assignment(
+        &self,
+        num_replicas: usize,
+        num_partitions: usize,
+    ) -> Result<DeviceAssignment> {
+        let mut default_assignment = vec![0; num_replicas * num_partitions];
+        let mut args = PJRT_Client_DefaultDeviceAssignment_Args::new();
+        args.client = self.ptr();
+        args.num_replicas = num_replicas as i32;
+        args.num_partitions = num_partitions as i32;
+        args.default_assignment = default_assignment.as_mut_ptr();
+        args.default_assignment_size = default_assignment.len();
+        _ = self.api().PJRT_Client_DefaultDeviceAssignment(args)?;
+        let assignment = DeviceAssignment::new(num_replicas, num_partitions, default_assignment)?;
+        Ok(assignment)
+    }
+
+    pub fn topology(&self) -> Result<TopologyDescription> {
+        let mut args = PJRT_Client_TopologyDescription_Args::new();
+        args.client = self.ptr();
+        args = self.api().PJRT_Client_TopologyDescription(args)?;
+        Ok(TopologyDescription::wrap(
+            self.api(),
+            args.topology,
+            Some(self),
+        ))
+    }
+
+    /// Creates buffers for asynchronous host-to-device transfers.
+    ///
+    /// Returns a transfer manager that can be used to transfer data asynchronously.
+    pub fn create_buffers_for_async_host_to_device(
+        &self,
+        shapes: &[BufferShape],
+        memory: &Memory,
+    ) -> Result<AsyncHostToDeviceTransferManager> {
+        let mut specs: Vec<PJRT_ShapeSpec> = shapes.iter().map(|s| s.to_spec()).collect();
+        let mut layouts: Vec<Option<pjrt_sys::PJRT_Buffer_MemoryLayout>> = shapes
+            .iter()
+            .map(|s| s.layout().map(|l| l.into()))
+            .collect();
+        let has_any_layout = layouts.iter().any(|l| l.is_some());
+        let mut layout_ptrs: Vec<*mut pjrt_sys::PJRT_Buffer_MemoryLayout> = layouts
+            .iter_mut()
+            .map(|l| match l {
+                Some(layout) => layout as *mut _,
+                None => std::ptr::null_mut(),
+            })
+            .collect();
+
+        let mut args = PJRT_Client_CreateBuffersForAsyncHostToDevice_Args::new();
+        args.client = self.ptr();
+        args.shape_specs = specs.as_mut_ptr();
+        args.num_shape_specs = shapes.len();
+        if has_any_layout {
+            args.device_layouts = layout_ptrs.as_mut_ptr();
+            args.num_device_layouts = layout_ptrs.len();
+        }
+        args.memory = memory.ptr;
+        let args = self
+            .api()
+            .PJRT_Client_CreateBuffersForAsyncHostToDevice(args)?;
+        Ok(AsyncHostToDeviceTransferManager::wrap(
+            self,
+            args.transfer_manager,
+        ))
+    }
+
+    /// Creates an uninitialized buffer on the device.
+    ///
+    /// The buffer's memory is allocated but not initialized.
+    pub fn create_uninitialized_buffer(
+        &self,
+        dims: &[i64],
+        element_type: PrimitiveType,
+        memory: &Memory,
+        layout: Option<&MemoryLayout>,
+    ) -> Result<Buffer> {
+        let mut args = PJRT_Client_CreateUninitializedBuffer_Args::new();
+        args.client = self.ptr();
+        args.shape_dims = dims.as_ptr();
+        args.shape_num_dims = dims.len();
+        args.shape_element_type = element_type as pjrt_sys::PJRT_Buffer_Type;
+        let mut layout_c = layout.map(pjrt_sys::PJRT_Buffer_MemoryLayout::from);
+        if let Some(ref mut lc) = layout_c {
+            args.shape_layout = lc as *mut _;
+        }
+        args.memory = memory.ptr;
+        let args = self.api().PJRT_Client_CreateUninitializedBuffer(args)?;
+        Ok(Buffer::wrap(self, args.buffer))
+    }
+
+    /// Creates a buffer that carries an error future without allocating memory.
+    ///
+    /// If this buffer is passed to an Execute call, the execution will fail
+    /// with the given error code and message.
+    pub fn create_error_buffer(
+        &self,
+        error_code: ErrorCode,
+        error_message: &str,
+        dims: &[i64],
+        element_type: PrimitiveType,
+        memory: &Memory,
+        layout: Option<&MemoryLayout>,
+    ) -> Result<Buffer> {
+        let mut args = PJRT_Client_CreateErrorBuffer_Args::new();
+        args.client = self.ptr();
+        args.error_code = error_code as PJRT_Error_Code;
+        args.error_message = error_message.as_ptr() as *const i8;
+        args.error_message_size = error_message.len();
+        args.shape_dims = dims.as_ptr();
+        args.shape_num_dims = dims.len();
+        args.shape_element_type = element_type as pjrt_sys::PJRT_Buffer_Type;
+        let mut layout_c = layout.map(pjrt_sys::PJRT_Buffer_MemoryLayout::from);
+        if let Some(ref mut lc) = layout_c {
+            args.shape_layout = lc as *mut _;
+        }
+        args.memory = memory.ptr;
+        let args = self.api().PJRT_Client_CreateErrorBuffer(args)?;
+        Ok(Buffer::wrap(self, args.buffer))
+    }
+
+    /// Creates an alias buffer that can be fulfilled later.
+    ///
+    /// This is useful for creating output buffers before the computation
+    /// that produces them has completed.
+    #[builder(finish_fn = build)]
+    pub fn create_alias_buffer(
+        &self,
+        #[builder(start_fn)] memory: &Memory,
+        dims: &[i64],
+        element_type: PrimitiveType,
+        layout: Option<&MemoryLayout>,
+    ) -> Result<(Buffer, FulfillAliasBufferCallback)> {
+        let mut args = PJRT_Client_CreateAliasBuffer_Args::new();
+        args.client = self.ptr();
+        args.memory = memory.ptr;
+        args.shape_dims = dims.as_ptr();
+        args.shape_num_dims = dims.len();
+        args.shape_element_type = element_type as pjrt_sys::PJRT_Buffer_Type;
+        let mut layout_c = layout.map(pjrt_sys::PJRT_Buffer_MemoryLayout::from);
+        if let Some(ref mut lc) = layout_c {
+            args.shape_layout = lc as *mut _;
+        }
+        let args = self.api().PJRT_Client_CreateAliasBuffer(args)?;
+        let buffer = Buffer::wrap(self, args.alias_buffer);
+        let callback = FulfillAliasBufferCallback {
+            client: self.clone(),
+            ptr: args.fulfill_alias_buffer_cb,
+        };
+        Ok((buffer, callback))
+    }
+
+    /// Updates global process information for distributed execution.
+    pub fn update_global_process_info(&self, process_infos: &[ProcessInfo]) -> Result<()> {
+        let mut raw_infos: Vec<PJRT_ProcessInfo> = process_infos
+            .iter()
+            .map(|info| {
+                let mut raw = PJRT_ProcessInfo::new();
+                raw.task_id = info.task_id;
+                raw.incarnation_id = info.incarnation_id;
+                raw.state = info.state as pjrt_sys::PJRT_ProcessState;
+                raw.error_code = info.error_code.unwrap_or(0);
+                if let Some(ref msg) = info.error_message {
+                    raw.error_message = msg.as_ptr() as *const i8;
+                    raw.error_message_size = msg.len();
+                }
+                raw
+            })
+            .collect();
+
+        let mut args = PJRT_Client_UpdateGlobalProcessInfo_Args::new();
+        args.client = self.ptr();
+        args.process_infos = raw_infos.as_mut_ptr();
+        args.num_process_infos = raw_infos.len();
+        self.api()
+            .PJRT_Client_UpdateGlobalProcessInfo(args)
+            .map(|_| ())
+    }
+
+    /// Maps a host memory region for DMA transfers to the device.
+    ///
+    /// This allows the device to directly access host memory via DMA.
+    pub fn dma_map(&self, data: *mut c_void, size: usize) -> Result<()> {
+        let mut args = PJRT_Client_DmaMap_Args::new();
+        args.client = self.ptr();
+        args.data = data;
+        args.size = size;
+        self.api().PJRT_Client_DmaMap(args).map(|_| ())
+    }
+
+    /// Unmaps a previously DMA-mapped host memory region.
+    pub fn dma_unmap(&self, data: *mut c_void) -> Result<()> {
+        let mut args = PJRT_Client_DmaUnmap_Args::new();
+        args.client = self.ptr();
+        args.data = data;
+        self.api().PJRT_Client_DmaUnmap(args).map(|_| ())
+    }
+
+    /// Creates a buffer that is a non-owned view of existing device memory.
+    ///
+    /// This creates a PJRT buffer that wraps existing device memory allocated
+    /// by another library (e.g., via dlpack). The buffer may be mutated, for
+    /// example if donated to an Execute operation.
+    ///
+    /// # Safety
+    ///
+    /// - `device_buffer_ptr` must point to valid device memory
+    /// - The memory must outlive the returned Buffer
+    /// - If `on_delete` is provided, it will be called when the buffer is destroyed
+    #[builder(finish_fn = build)]
+    pub unsafe fn create_view_of_device_buffer(
+        &self,
+        #[builder(start_fn)] device_buffer_ptr: *mut c_void,
+        #[builder(start_fn)] element_type: PrimitiveType,
+        #[builder(into)] dims: Vec<i64>,
+        layout: Option<&MemoryLayout>,
+        memory: Option<&Memory>,
+        device: Option<&Device>,
+        stream: Option<isize>,
+    ) -> Result<Buffer> {
+        use pjrt_sys::PJRT_Client_CreateViewOfDeviceBuffer_Args;
+
+        let mut args = PJRT_Client_CreateViewOfDeviceBuffer_Args::new();
+        args.client = self.ptr();
+        args.device_buffer_ptr = device_buffer_ptr;
+        args.dims = dims.as_ptr();
+        args.num_dims = dims.len();
+        args.element_type = element_type as pjrt_sys::PJRT_Buffer_Type;
+
+        let mut layout_c = layout.map(pjrt_sys::PJRT_Buffer_MemoryLayout::from);
+        if let Some(ref mut l) = layout_c {
+            args.layout = l as *mut _;
+        }
+
+        if let Some(memory) = memory {
+            args.memory = memory.ptr;
+        } else if let Some(device) = device {
+            args.device = device.ptr;
+        }
+
+        if let Some(stream) = stream {
+            args.stream = stream;
+        }
+
+        let args = self.api().PJRT_Client_CreateViewOfDeviceBuffer(args)?;
+        Ok(Buffer::wrap(self, args.buffer))
+    }
+}
+
+impl CompileToLoadedExecutable<Program> for Client {
+    fn compile(&self, program: &Program, options: &CompileOptions) -> Result<LoadedExecutable> {
+        let options_encoded = options.encode();
+        let mut args = PJRT_Client_Compile_Args::new();
+        args.client = self.ptr();
+        args.program = &program.prog as *const PJRT_Program;
+        args.compile_options = options_encoded.as_ptr() as *const i8;
+        args.compile_options_size = options_encoded.len();
+        args = self.api().PJRT_Client_Compile(args)?;
+        Ok(LoadedExecutable::wrap(self, args.executable))
+    }
+}
+
+/// Extension trait for accessing Layouts extension from Client
+pub trait LayoutsExt {
+    /// Get the Layouts extension if available
+    fn layouts_extension(&self) -> Option<LayoutsExtension>;
+}
+
+impl LayoutsExt for Client {
+    fn layouts_extension(&self) -> Option<LayoutsExtension> {
+        let ext_start = self.api().extension_start();
+        unsafe { LayoutsExtension::from_raw(ext_start, self.api()) }
+    }
+}
+
+/// Extension trait for accessing Callback extension from Client
+pub trait CallbackExt {
+    /// Get the Callback extension if available
+    fn callback_extension(&self) -> Option<CallbackExtension>;
+}
+
+impl CallbackExt for Client {
+    fn callback_extension(&self) -> Option<CallbackExtension> {
+        let ext_start = self.api().extension_start();
+        unsafe { CallbackExtension::from_raw(ext_start, self.api()) }
+    }
+}
+
+/// Represents the state of a process in distributed execution.
+#[repr(i32)]
+#[derive(Debug, Copy, Clone, Eq, PartialEq)]
+pub enum ProcessState {
+    Unspecified = 0,
+    Uninitialized = 1,
+    Disconnected = 2,
+    Connected = 3,
+    Error = 4,
+}
+
+/// Information about a process in distributed execution.
+#[derive(Debug, Clone)]
+pub struct ProcessInfo {
+    pub task_id: i32,
+    pub incarnation_id: u64,
+    pub state: ProcessState,
+    pub error_code: Option<i32>,
+    pub error_message: Option<String>,
+}
+
+impl ProcessInfo {
+    pub fn new(task_id: i32, state: ProcessState) -> Self {
+        Self {
+            task_id,
+            incarnation_id: 0,
+            state,
+            error_code: None,
+            error_message: None,
+        }
+    }
+
+    pub fn with_incarnation(mut self, incarnation_id: u64) -> Self {
+        self.incarnation_id = incarnation_id;
+        self
+    }
+
+    pub fn with_error(mut self, code: i32, message: impl Into<String>) -> Self {
+        self.error_code = Some(code);
+        self.error_message = Some(message.into());
+        self
+    }
+}
+
+/// A callback that can be used to fulfill an alias buffer.
+pub struct FulfillAliasBufferCallback {
+    client: Client,
+    ptr: *mut pjrt_sys::PJRT_FulfillAliasBufferCallback,
+}
+
+impl FulfillAliasBufferCallback {
+    /// Fulfills the alias buffer with the given data.
+    pub fn fulfill(
+        &self,
+        buffer: &Buffer,
+        status_code: Option<ErrorCode>,
+        error_message: Option<&str>,
+    ) -> Result<()> {
+        let mut args = PJRT_Client_FulfillAliasBuffer_Args::new();
+        args.client = self.client.ptr();
+        args.buffer = buffer.ptr;
+        if let Some(code) = status_code {
+            args.status_code = code as PJRT_Error_Code;
+        }
+        if let Some(msg) = error_message {
+            args.error_message = msg.as_ptr() as *const i8;
+            args.error_message_size = msg.len();
+        }
+        args.fulfill_alias_buffer_cb = self.ptr;
+        self.client
+            .api()
+            .PJRT_Client_FulfillAliasBuffer(args)
+            .map(|_| ())
+    }
+}
+
+impl std::fmt::Debug for FulfillAliasBufferCallback {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("FulfillAliasBufferCallback")
+            .field("ptr", &self.ptr)
+            .finish()
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    // =========================================================================
+    // Type trait verification tests
+    // =========================================================================
+
+    #[test]
+    fn test_client_debug_impl() {
+        fn assert_debug<T: std::fmt::Debug>() {}
+        assert_debug::<Client>();
+    }
+
+    #[test]
+    fn test_client_clone_impl() {
+        fn assert_clone<T: Clone>() {}
+        assert_clone::<Client>();
+    }
+
+    #[test]
+    fn test_process_info_debug() {
+        fn assert_debug<T: std::fmt::Debug>() {}
+        assert_debug::<ProcessInfo>();
+    }
+
+    #[test]
+    fn test_process_info_clone() {
+        fn assert_clone<T: Clone>() {}
+        assert_clone::<ProcessInfo>();
+    }
+
+    #[test]
+    fn test_process_state_debug() {
+        fn assert_debug<T: std::fmt::Debug>() {}
+        assert_debug::<ProcessState>();
+    }
+
+    #[test]
+    fn test_process_state_clone() {
+        fn assert_clone<T: Clone>() {}
+        assert_clone::<ProcessState>();
+    }
+
+    #[test]
+    fn test_process_state_copy() {
+        fn assert_copy<T: Copy>() {}
+        assert_copy::<ProcessState>();
+    }
+
+    #[test]
+    fn test_process_state_eq() {
+        fn assert_eq<T: Eq + PartialEq>() {}
+        assert_eq::<ProcessState>();
+    }
+
+    #[test]
+    fn test_fulfill_alias_buffer_callback_debug() {
+        fn assert_debug<T: std::fmt::Debug>() {}
+        assert_debug::<FulfillAliasBufferCallback>();
+    }
+
+    // =========================================================================
+    // ProcessState tests
+    // =========================================================================
+
+    #[test]
+    fn test_process_state_values() {
+        // Verify that ProcessState values match the C API PJRT_ProcessState enum
+        assert_eq!(ProcessState::Unspecified as i32, 0);
+        assert_eq!(ProcessState::Uninitialized as i32, 1);
+        assert_eq!(ProcessState::Disconnected as i32, 2);
+        assert_eq!(ProcessState::Connected as i32, 3);
+        assert_eq!(ProcessState::Error as i32, 4);
+    }
+
+    #[test]
+    fn test_process_state_matches_c_api() {
+        // Verify the Rust enum values match the C API enum values
+        use pjrt_sys::{
+            PJRT_ProcessState_PJRT_ProcessState_kConnected,
+            PJRT_ProcessState_PJRT_ProcessState_kDisconnected,
+            PJRT_ProcessState_PJRT_ProcessState_kError,
+            PJRT_ProcessState_PJRT_ProcessState_kUninitialized,
+            PJRT_ProcessState_PJRT_ProcessState_kUnspecified,
+        };
+
+        assert_eq!(
+            ProcessState::Unspecified as i32,
+            PJRT_ProcessState_PJRT_ProcessState_kUnspecified as i32
+        );
+        assert_eq!(
+            ProcessState::Uninitialized as i32,
+            PJRT_ProcessState_PJRT_ProcessState_kUninitialized as i32
+        );
+        assert_eq!(
+            ProcessState::Disconnected as i32,
+            PJRT_ProcessState_PJRT_ProcessState_kDisconnected as i32
+        );
+        assert_eq!(
+            ProcessState::Connected as i32,
+            PJRT_ProcessState_PJRT_ProcessState_kConnected as i32
+        );
+        assert_eq!(
+            ProcessState::Error as i32,
+            PJRT_ProcessState_PJRT_ProcessState_kError as i32
+        );
+    }
+
+    #[test]
+    fn test_process_state_equality() {
+        assert_eq!(ProcessState::Unspecified, ProcessState::Unspecified);
+        assert_eq!(ProcessState::Uninitialized, ProcessState::Uninitialized);
+        assert_eq!(ProcessState::Disconnected, ProcessState::Disconnected);
+        assert_eq!(ProcessState::Connected, ProcessState::Connected);
+        assert_eq!(ProcessState::Error, ProcessState::Error);
+
+        assert_ne!(ProcessState::Unspecified, ProcessState::Connected);
+        assert_ne!(ProcessState::Connected, ProcessState::Error);
+        assert_ne!(ProcessState::Uninitialized, ProcessState::Disconnected);
+    }
+
+    #[test]
+    fn test_process_state_copy_semantics() {
+        let state = ProcessState::Connected;
+        let copied = state; // Copy, not move
+        assert_eq!(state, copied);
+        assert_eq!(state, ProcessState::Connected);
+    }
+
+    #[test]
+    fn test_process_state_debug_output() {
+        assert_eq!(format!("{:?}", ProcessState::Unspecified), "Unspecified");
+        assert_eq!(
+            format!("{:?}", ProcessState::Uninitialized),
+            "Uninitialized"
+        );
+        assert_eq!(format!("{:?}", ProcessState::Disconnected), "Disconnected");
+        assert_eq!(format!("{:?}", ProcessState::Connected), "Connected");
+        assert_eq!(format!("{:?}", ProcessState::Error), "Error");
+    }
+
+    #[test]
+    fn test_process_state_all_variants_distinct() {
+        let variants = [
+            ProcessState::Unspecified,
+            ProcessState::Uninitialized,
+            ProcessState::Disconnected,
+            ProcessState::Connected,
+            ProcessState::Error,
+        ];
+
+        // Check all variants have unique i32 values
+        for (i, v1) in variants.iter().enumerate() {
+            for (j, v2) in variants.iter().enumerate() {
+                if i != j {
+                    assert_ne!(*v1 as i32, *v2 as i32);
+                }
+            }
+        }
+    }
+
+    // =========================================================================
+    // ProcessInfo tests
+    // =========================================================================
+
+    #[test]
+    fn test_process_info_new() {
+        let info = ProcessInfo::new(42, ProcessState::Connected);
+
+        assert_eq!(info.task_id, 42);
+        assert_eq!(info.state, ProcessState::Connected);
+        assert_eq!(info.incarnation_id, 0);
+        assert!(info.error_code.is_none());
+        assert!(info.error_message.is_none());
+    }
+
+    #[test]
+    fn test_process_info_new_with_all_states() {
+        for state in [
+            ProcessState::Unspecified,
+            ProcessState::Uninitialized,
+            ProcessState::Disconnected,
+            ProcessState::Connected,
+            ProcessState::Error,
+        ] {
+            let info = ProcessInfo::new(0, state);
+            assert_eq!(info.state, state);
+        }
+    }
+
+    #[test]
+    fn test_process_info_new_with_negative_task_id() {
+        let info = ProcessInfo::new(-1, ProcessState::Connected);
+        assert_eq!(info.task_id, -1);
+    }
+
+    #[test]
+    fn test_process_info_new_with_max_task_id() {
+        let info = ProcessInfo::new(i32::MAX, ProcessState::Connected);
+        assert_eq!(info.task_id, i32::MAX);
+    }
+
+    #[test]
+    fn test_process_info_new_with_min_task_id() {
+        let info = ProcessInfo::new(i32::MIN, ProcessState::Connected);
+        assert_eq!(info.task_id, i32::MIN);
+    }
+
+    #[test]
+    fn test_process_info_with_incarnation() {
+        let info = ProcessInfo::new(1, ProcessState::Uninitialized).with_incarnation(12345);
+
+        assert_eq!(info.task_id, 1);
+        assert_eq!(info.incarnation_id, 12345);
+        assert_eq!(info.state, ProcessState::Uninitialized);
+    }
+
+    #[test]
+    fn test_process_info_with_incarnation_max_value() {
+        let info = ProcessInfo::new(0, ProcessState::Connected).with_incarnation(u64::MAX);
+        assert_eq!(info.incarnation_id, u64::MAX);
+    }
+
+    #[test]
+    fn test_process_info_with_incarnation_zero() {
+        let info = ProcessInfo::new(0, ProcessState::Connected).with_incarnation(0);
+        assert_eq!(info.incarnation_id, 0);
+    }
+
+    #[test]
+    fn test_process_info_with_error() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(5, "test error message");
+
+        assert_eq!(info.task_id, 1);
+        assert_eq!(info.state, ProcessState::Error);
+        assert_eq!(info.error_code, Some(5));
+        assert_eq!(info.error_message, Some("test error message".to_string()));
+    }
+
+    #[test]
+    fn test_process_info_with_error_string_conversion() {
+        // Test that `Into<String>` works with various string types
+        let info1 = ProcessInfo::new(1, ProcessState::Error).with_error(1, "string slice");
+        assert_eq!(info1.error_message, Some("string slice".to_string()));
+
+        let info2 =
+            ProcessInfo::new(2, ProcessState::Error).with_error(2, String::from("owned string"));
+        assert_eq!(info2.error_message, Some("owned string".to_string()));
+
+        let cow: std::borrow::Cow<str> = std::borrow::Cow::Borrowed("cow string");
+        let info3 = ProcessInfo::new(3, ProcessState::Error).with_error(3, cow);
+        assert_eq!(info3.error_message, Some("cow string".to_string()));
+    }
+
+    #[test]
+    fn test_process_info_with_error_empty_message() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(1, "");
+        assert_eq!(info.error_code, Some(1));
+        assert_eq!(info.error_message, Some(String::new()));
+    }
+
+    #[test]
+    fn test_process_info_with_error_negative_code() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(-1, "negative error");
+        assert_eq!(info.error_code, Some(-1));
+    }
+
+    #[test]
+    fn test_process_info_with_error_zero_code() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(0, "zero error");
+        assert_eq!(info.error_code, Some(0));
+    }
+
+    #[test]
+    fn test_process_info_builder_chaining() {
+        let info = ProcessInfo::new(42, ProcessState::Connected)
+            .with_incarnation(100)
+            .with_error(1, "error");
+
+        assert_eq!(info.task_id, 42);
+        assert_eq!(info.incarnation_id, 100);
+        assert_eq!(info.state, ProcessState::Connected);
+        assert_eq!(info.error_code, Some(1));
+        assert_eq!(info.error_message, Some("error".to_string()));
+    }
+
+    #[test]
+    fn test_process_info_builder_chaining_reverse_order() {
+        let info = ProcessInfo::new(42, ProcessState::Error)
+            .with_error(1, "error")
+            .with_incarnation(100);
+
+        assert_eq!(info.task_id, 42);
+        assert_eq!(info.incarnation_id, 100);
+        assert_eq!(info.error_code, Some(1));
+        assert_eq!(info.error_message, Some("error".to_string()));
+    }
+
+    #[test]
+    fn test_process_info_clone_behavior() {
+        let original = ProcessInfo::new(42, ProcessState::Connected)
+            .with_incarnation(100)
+            .with_error(1, "error");
+
+        let cloned = original.clone();
+
+        assert_eq!(cloned.task_id, original.task_id);
+        assert_eq!(cloned.state, original.state);
+        assert_eq!(cloned.incarnation_id, original.incarnation_id);
+        assert_eq!(cloned.error_code, original.error_code);
+        assert_eq!(cloned.error_message, original.error_message);
+    }
+
+    #[test]
+    fn test_process_info_clone_independence() {
+        let original = ProcessInfo::new(42, ProcessState::Connected);
+        let mut modified = original.clone();
+
+        modified.task_id = 100;
+        modified.state = ProcessState::Error;
+        modified.incarnation_id = 999;
+        modified.error_code = Some(5);
+        modified.error_message = Some("modified".to_string());
+
+        // Original should be unchanged
+        assert_eq!(original.task_id, 42);
+        assert_eq!(original.state, ProcessState::Connected);
+        assert_eq!(original.incarnation_id, 0);
+        assert!(original.error_code.is_none());
+        assert!(original.error_message.is_none());
+    }
+
+    #[test]
+    fn test_process_info_debug_output() {
+        let info = ProcessInfo::new(42, ProcessState::Connected);
+        let debug = format!("{:?}", info);
+
+        assert!(debug.contains("ProcessInfo"));
+        assert!(debug.contains("task_id"));
+        assert!(debug.contains("42"));
+        assert!(debug.contains("state"));
+        assert!(debug.contains("Connected"));
+        assert!(debug.contains("incarnation_id"));
+        assert!(debug.contains("0"));
+        assert!(debug.contains("error_code"));
+        assert!(debug.contains("None"));
+        assert!(debug.contains("error_message"));
+    }
+
+    #[test]
+    fn test_process_info_debug_with_error() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(5, "test error");
+        let debug = format!("{:?}", info);
+
+        assert!(debug.contains("Error"));
+        assert!(debug.contains("5") || debug.contains("Some(5)"));
+        assert!(debug.contains("test error"));
+    }
+
+    #[test]
+    fn test_process_info_multiple_instances() {
+        let infos: Vec<ProcessInfo> = (0..5)
+            .map(|i| ProcessInfo::new(i, ProcessState::Connected).with_incarnation(i as u64 * 10))
+            .collect();
+
+        for (i, info) in infos.iter().enumerate() {
+            assert_eq!(info.task_id, i as i32);
+            assert_eq!(info.incarnation_id, i as u64 * 10);
+        }
+    }
+
+    #[test]
+    fn test_process_info_typical_distributed_scenario() {
+        // Simulate a typical distributed execution scenario
+        let process_infos = [
+            ProcessInfo::new(0, ProcessState::Connected).with_incarnation(1),
+            ProcessInfo::new(1, ProcessState::Connected).with_incarnation(1),
+            ProcessInfo::new(2, ProcessState::Disconnected)
+                .with_incarnation(1)
+                .with_error(1, "Connection lost"),
+            ProcessInfo::new(3, ProcessState::Uninitialized),
+        ];
+
+        assert_eq!(process_infos.len(), 4);
+        assert_eq!(process_infos[0].state, ProcessState::Connected);
+        assert_eq!(process_infos[1].state, ProcessState::Connected);
+        assert_eq!(process_infos[2].state, ProcessState::Disconnected);
+        assert!(process_infos[2].error_message.is_some());
+        assert_eq!(process_infos[3].state, ProcessState::Uninitialized);
+    }
+
+    // =========================================================================
+    // Extension trait tests
+    // =========================================================================
+
+    #[test]
+    fn test_client_implements_layouts_ext() {
+        fn assert_layouts_ext<T: LayoutsExt>() {}
+        assert_layouts_ext::<Client>();
+    }
+
+    #[test]
+    fn test_client_implements_callback_ext() {
+        fn assert_callback_ext<T: CallbackExt>() {}
+        assert_callback_ext::<Client>();
+    }
+
+    // =========================================================================
+    // FFI conversion tests
+    // =========================================================================
+
+    #[test]
+    fn test_process_info_to_raw_pjrt_process_info() {
+        // Test that ProcessInfo can be correctly converted to PJRT_ProcessInfo
+        let info = ProcessInfo::new(42, ProcessState::Connected)
+            .with_incarnation(100)
+            .with_error(5, "test error");
+
+        let mut raw = PJRT_ProcessInfo::new();
+        raw.task_id = info.task_id;
+        raw.incarnation_id = info.incarnation_id;
+        raw.state = info.state as pjrt_sys::PJRT_ProcessState;
+        raw.error_code = info.error_code.unwrap_or(0);
+
+        assert_eq!(raw.task_id, 42);
+        assert_eq!(raw.incarnation_id, 100);
+        assert_eq!(raw.error_code, 5);
+    }
+
+    #[test]
+    fn test_process_state_as_c_type() {
+        use pjrt_sys::PJRT_ProcessState;
+
+        // Test that casting works correctly
+        let state = ProcessState::Connected;
+        let raw: PJRT_ProcessState = state as PJRT_ProcessState;
+
+        assert_eq!(
+            raw,
+            pjrt_sys::PJRT_ProcessState_PJRT_ProcessState_kConnected
+        );
+    }
+
+    // =========================================================================
+    // Edge case and boundary tests
+    // =========================================================================
+
+    #[test]
+    fn test_process_info_unicode_error_message() {
+        let info =
+            ProcessInfo::new(1, ProcessState::Error).with_error(1, "エラー: 接続が失われました 🔌");
+
+        assert_eq!(
+            info.error_message,
+            Some("エラー: 接続が失われました 🔌".to_string())
+        );
+    }
+
+    #[test]
+    fn test_process_info_multiline_error_message() {
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(1, "Line 1\nLine 2\nLine 3");
+
+        assert_eq!(
+            info.error_message,
+            Some("Line 1\nLine 2\nLine 3".to_string())
+        );
+    }
+
+    #[test]
+    fn test_process_info_special_characters_in_error() {
+        let info = ProcessInfo::new(1, ProcessState::Error)
+            .with_error(1, "Error with <special> \"characters\" & 'quotes'");
+
+        assert!(info.error_message.is_some());
+        assert!(info.error_message.as_ref().unwrap().contains("<special>"));
+    }
+
+    #[test]
+    fn test_process_info_long_error_message() {
+        let long_message = "x".repeat(10000);
+        let info = ProcessInfo::new(1, ProcessState::Error).with_error(1, long_message.clone());
+
+        assert_eq!(info.error_message, Some(long_message));
+    }
+
+    #[test]
+    fn test_process_info_in_vec() {
+        let mut infos: Vec<ProcessInfo> = Vec::new();
+
+        for i in 0..100 {
+            infos.push(ProcessInfo::new(i, ProcessState::Connected));
+        }
+
+        assert_eq!(infos.len(), 100);
+        assert_eq!(infos[0].task_id, 0);
+        assert_eq!(infos[99].task_id, 99);
+    }
+
+    #[test]
+    fn test_process_info_default_state_for_new_process() {
+        // When a process first starts, it should typically be Uninitialized
+        let new_process = ProcessInfo::new(0, ProcessState::Uninitialized);
+        assert_eq!(new_process.state, ProcessState::Uninitialized);
+        assert_eq!(new_process.incarnation_id, 0);
+    }
+
+    #[test]
+    fn test_process_state_lifecycle() {
+        // Test typical state transitions in a process lifecycle
+        let states = [
+            ProcessState::Uninitialized,
+            ProcessState::Connected,
+            ProcessState::Disconnected,
+            ProcessState::Error,
+        ];
+
+        for (i, state) in states.iter().enumerate() {
+            let info = ProcessInfo::new(0, *state);
+            assert_eq!(info.state, states[i]);
+        }
+    }
+}

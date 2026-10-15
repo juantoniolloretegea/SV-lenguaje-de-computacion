@@ -1,0 +1,329 @@
+//! PJRT Callback Extension
+//!
+//! This module provides safe Rust bindings for the PJRT Callback extension.
+//! The Callback extension provides functionality for registering custom callbacks
+//! that can be invoked by the PJRT runtime for various events.
+//!
+//! ## Usage
+//!
+//! ```rust,ignore
+//! use pjrt::callback::{CallbackExtension, CallbackType, TpuSliceFailureType};
+//!
+//! // Get the callback extension
+//! let callback_ext = client.extension::<CallbackExtension>()?;
+//!
+//! // Register a callback
+//! callback_ext.register_callback(
+//!     CallbackType::TpuSliceBuilder,
+//!     |args, user_arg| {
+//!         // Handle the callback
+//!     },
+//!     user_data
+//! )?;
+//! ```
+
+use std::ffi::c_void;
+use std::rc::Rc;
+
+use pjrt_sys::{
+    PJRT_Callback_Extension, PJRT_Callback_InvokeCallback_Args,
+    PJRT_Callback_RegisterCallback_Args, PJRT_Callback_Tpu_SliceFailureType, PJRT_Callback_Type,
+};
+
+use crate::extension::{Extension, ExtensionType};
+use crate::{Api, Client, Error, Result};
+
+/// Safe wrapper for PJRT Callback extension
+///
+/// The Callback extension provides functionality for registering custom callbacks
+/// that can be invoked by the PJRT runtime for various events like TPU slice failures
+/// or pre-fatal errors.
+pub struct CallbackExtension {
+    raw: Rc<PJRT_Callback_Extension>,
+    api: Api,
+}
+
+impl std::fmt::Debug for CallbackExtension {
+    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+        f.debug_struct("CallbackExtension")
+            .field("api_version", &1i32)
+            .finish()
+    }
+}
+
+unsafe impl Extension for CallbackExtension {
+    fn extension_type() -> ExtensionType {
+        ExtensionType::Callback
+    }
+
+    unsafe fn from_raw(ptr: *mut pjrt_sys::PJRT_Extension_Base, api: &Api) -> Option<Self>
+    where
+        Self: Sized,
+    {
+        if ptr.is_null() {
+            return None;
+        }
+
+        let ext = ptr as *mut PJRT_Callback_Extension;
+        if (*ext).base.type_ != ExtensionType::Callback.to_raw() {
+            return None;
+        }
+
+        Some(Self {
+            raw: Rc::new(*ext),
+            api: api.clone(),
+        })
+    }
+}
+
+/// Types of callbacks that can be registered
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum CallbackType {
+    /// Unknown callback type
+    Unknown,
+    /// TPU SliceBuilder callback for handling slice failures
+    TpuSliceBuilder,
+    /// Pre-fatal callback invoked before fatal errors
+    Prefatal,
+}
+
+impl CallbackType {
+    fn to_raw(self) -> PJRT_Callback_Type {
+        match self {
+            CallbackType::Unknown => pjrt_sys::PJRT_Callback_Type_PJRT_Callback_Type_Unknown,
+            CallbackType::TpuSliceBuilder => {
+                pjrt_sys::PJRT_Callback_Type_PJRT_Callback_Type_Tpu_SliceBuilder
+            }
+            CallbackType::Prefatal => pjrt_sys::PJRT_Callback_Type_PJRT_Callback_Type_Prefatal,
+        }
+    }
+}
+
+/// Types of TPU slice failures
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+pub enum TpuSliceFailureType {
+    /// Unknown failure type
+    Unknown,
+    /// Failure during slice initialization (ICI network config) phase
+    InitError,
+    /// Worker disconnected after heartbeat check threshold
+    WorkerUnavailable,
+    /// Flapping task error from fast task restart
+    FlappingTaskError,
+    /// Software injected error for testing
+    SoftwareInjectedError,
+    /// Chip driver error (bad TPU or ICI link down)
+    ChipDriverError,
+}
+
+impl TpuSliceFailureType {
+    /// Converts a raw PJRT callback failure type to the safe enum.
+    pub fn from_raw(raw: PJRT_Callback_Tpu_SliceFailureType) -> Self {
+        match raw {
+            pjrt_sys::PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_INIT_ERROR => {
+                Self::InitError
+            }
+            pjrt_sys::PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_WORKER_UNAVAILABLE => {
+                Self::WorkerUnavailable
+            }
+            pjrt_sys::PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_FLAPPING_TASK_ERROR => {
+                Self::FlappingTaskError
+            }
+            pjrt_sys::PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_SW_INJECT_ERROR => {
+                Self::SoftwareInjectedError
+            }
+            pjrt_sys::PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_CHIP_DRIVER_ERROR => {
+                Self::ChipDriverError
+            }
+            _ => Self::Unknown,
+        }
+    }
+}
+
+impl CallbackExtension {
+    /// Register a callback for a specific callback type
+    ///
+    /// # Arguments
+    ///
+    /// * `callback_type` - The type of callback to register
+    /// * `callback` - The callback function pointer (extern "C" fn)
+    /// * `user_arg` - User-provided argument passed to the callback
+    ///
+    /// # Safety
+    ///
+    /// The callback function must remain valid for the lifetime of the client.
+    /// The user_arg must also remain valid if it's passed to the callback.
+    pub unsafe fn register_callback(
+        &self,
+        client: &Client,
+        callback_type: CallbackType,
+        callback: unsafe extern "C" fn(*mut c_void, *mut c_void),
+        user_arg: *mut c_void,
+    ) -> Result<()> {
+        let mut args = PJRT_Callback_RegisterCallback_Args {
+            struct_size: std::mem::size_of::<PJRT_Callback_RegisterCallback_Args>(),
+            client: client.ptr(),
+            type_: callback_type.to_raw(),
+            callback: Some(callback),
+            user_arg,
+        };
+
+        let ext_fn = self
+            .raw
+            .register_callback
+            .ok_or(Error::NullFunctionPointer("PJRT_Register_Callback"))?;
+
+        let err = ext_fn(&mut args);
+        self.api.err_or(err, ())
+    }
+
+    /// Invoke a callback of a specific type
+    ///
+    /// # Arguments
+    ///
+    /// * `client` - The PJRT client
+    /// * `callback_type` - The type of callback to invoke
+    /// * `callback_args` - Type-specific arguments for the callback
+    ///
+    /// # Safety
+    ///
+    /// The callback_args pointer must be valid for the duration of the call.
+    pub unsafe fn invoke_callback(
+        &self,
+        client: &Client,
+        callback_type: CallbackType,
+        callback_args: *mut c_void,
+    ) -> Result<()> {
+        let mut args = PJRT_Callback_InvokeCallback_Args {
+            struct_size: std::mem::size_of::<PJRT_Callback_InvokeCallback_Args>(),
+            client: client.ptr(),
+            type_: callback_type.to_raw(),
+            args: callback_args,
+        };
+
+        let ext_fn = self
+            .raw
+            .invoke_callback
+            .ok_or(Error::NullFunctionPointer("PJRT_Callback_InvokeCallback"))?;
+
+        let err = ext_fn(&mut args);
+        self.api.err_or(err, ())
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_extension_type() {
+        assert_eq!(CallbackExtension::extension_type(), ExtensionType::Callback);
+    }
+
+    #[test]
+    fn test_from_raw_null_returns_none() {
+        let api = unsafe { Api::empty_for_testing() };
+        let result = unsafe { CallbackExtension::from_raw(std::ptr::null_mut(), &api) };
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_from_raw_wrong_type_returns_none() {
+        let api = unsafe { Api::empty_for_testing() };
+        let mut ext = unsafe { std::mem::zeroed::<PJRT_Callback_Extension>() };
+        ext.base.type_ = ExtensionType::Example.to_raw();
+        let result = unsafe {
+            CallbackExtension::from_raw(
+                &mut ext as *mut PJRT_Callback_Extension as *mut pjrt_sys::PJRT_Extension_Base,
+                &api,
+            )
+        };
+        assert!(result.is_none());
+    }
+
+    #[test]
+    fn test_from_raw_correct_type() {
+        let api = unsafe { Api::empty_for_testing() };
+        let mut ext = unsafe { std::mem::zeroed::<PJRT_Callback_Extension>() };
+        ext.base.type_ = ExtensionType::Callback.to_raw();
+        let result = unsafe {
+            CallbackExtension::from_raw(
+                &mut ext as *mut PJRT_Callback_Extension as *mut pjrt_sys::PJRT_Extension_Base,
+                &api,
+            )
+        };
+        assert!(result.is_some());
+    }
+
+    #[test]
+    fn test_debug_format() {
+        let api = unsafe { Api::empty_for_testing() };
+        let mut ext = unsafe { std::mem::zeroed::<PJRT_Callback_Extension>() };
+        ext.base.type_ = ExtensionType::Callback.to_raw();
+        let cb = unsafe {
+            CallbackExtension::from_raw(
+                &mut ext as *mut PJRT_Callback_Extension as *mut pjrt_sys::PJRT_Extension_Base,
+                &api,
+            )
+        }
+        .unwrap();
+        let debug = format!("{:?}", cb);
+        assert!(debug.contains("CallbackExtension"));
+        assert!(debug.contains("api_version"));
+    }
+
+    #[test]
+    fn test_callback_type_to_raw() {
+        // Verify all callback types convert to raw without panic
+        let types = [
+            CallbackType::Unknown,
+            CallbackType::TpuSliceBuilder,
+            CallbackType::Prefatal,
+        ];
+        for ty in types {
+            let _ = ty.to_raw();
+        }
+    }
+
+    #[test]
+    fn test_tpu_slice_failure_type_from_raw_unknown() {
+        let ft = TpuSliceFailureType::from_raw(999);
+        assert_eq!(ft, TpuSliceFailureType::Unknown);
+    }
+
+    #[test]
+    fn test_tpu_slice_failure_type_roundtrips() {
+        use pjrt_sys::*;
+        let cases = [
+            (
+                PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_INIT_ERROR,
+                TpuSliceFailureType::InitError,
+            ),
+            (
+                PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_WORKER_UNAVAILABLE,
+                TpuSliceFailureType::WorkerUnavailable,
+            ),
+            (
+                PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_FLAPPING_TASK_ERROR,
+                TpuSliceFailureType::FlappingTaskError,
+            ),
+            (
+                PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_SW_INJECT_ERROR,
+                TpuSliceFailureType::SoftwareInjectedError,
+            ),
+            (
+                PJRT_Callback_Tpu_SliceFailureType_SLICE_FAILURE_CHIP_DRIVER_ERROR,
+                TpuSliceFailureType::ChipDriverError,
+            ),
+        ];
+        for (raw, expected) in cases {
+            assert_eq!(TpuSliceFailureType::from_raw(raw), expected);
+        }
+    }
+
+    #[test]
+    fn test_callback_type_equality() {
+        assert_eq!(CallbackType::Unknown, CallbackType::Unknown);
+        assert_ne!(CallbackType::Unknown, CallbackType::Prefatal);
+    }
+}

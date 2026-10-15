@@ -1,0 +1,29 @@
+[package]
+name = "explorador-tensorial-sv"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[workspace]
+
+[features]
+pjrt = ["dep:pjrt"]
+
+[dependencies]
+selector = { package = "selector-arbitro-director-cpu-gpu-tpu-npu", path = ".." }
+serde = { version = "=1.0.228", features = ["derive"] }
+serde_json = "=1.0.151"
+sha2 = "=0.10.9"
+sysinfo = { version = "=0.32.1", default-features = false, features = ["system"] }
+nvml-wrapper = "=0.12.1"
+pjrt = { path = "../dependencias/pjrt-rs/pjrt", optional = true }
+
+[target.'cfg(windows)'.dependencies]
+windows-sys = { version = "=0.61.2", features = ["Win32_Devices_DeviceAndDriverInstallation", "Win32_Foundation"] }
+
+[profile.dev]
+debug = 0
+
+[profile.release]
+strip = true
+

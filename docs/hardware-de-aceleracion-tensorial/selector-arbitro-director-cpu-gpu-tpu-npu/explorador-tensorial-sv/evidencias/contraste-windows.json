@@ -1,0 +1,71 @@
+{
+  "alcance": "Observación de CPU y dispositivos declarados por el sistema; sin cálculo acelerado ni inferencia",
+  "capacidades_creadas_por_deteccion": 0,
+  "consultas": [
+    {
+      "estado": "Completa",
+      "fuente": "cpu-sistema",
+      "observaciones": [
+        {
+          "acceso": "Consultable",
+          "clase": "Cpu",
+          "memoria_libre_bytes": 3276431360,
+          "memoria_total_bytes": 16859500544,
+          "nombre": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz"
+        }
+      ]
+    },
+    {
+      "estado": "Completa",
+      "fuente": "windows-pnp",
+      "observaciones": [
+        {
+          "acceso": "Identificado",
+          "clase": "Gpu",
+          "memoria_libre_bytes": null,
+          "memoria_total_bytes": null,
+          "nombre": "Intel(R) Iris(R) Xe Graphics"
+        }
+      ]
+    },
+    {
+      "estado": "NoDisponible",
+      "fuente": "nvidia-nvml",
+      "observaciones": []
+    },
+    {
+      "estado": "NoAplicable",
+      "fuente": "tpu-pjrt",
+      "observaciones": []
+    }
+  ],
+  "discordancias_referencia": 0,
+  "duraciones_us": [
+    1020618,
+    3196,
+    3685,
+    3159,
+    3189,
+    2619,
+    2871,
+    2747,
+    3694,
+    4376,
+    3017,
+    3735,
+    3842,
+    5025,
+    3333,
+    3169,
+    2988,
+    3837,
+    4737,
+    2884
+  ],
+  "maximo_us": 1020618,
+  "mediana_us": 3264.5,
+  "minimo_us": 2619,
+  "muestras": 20,
+  "referencia": "CIM Win32_Processor y Win32_VideoController",
+  "sistema": "windows"
+}

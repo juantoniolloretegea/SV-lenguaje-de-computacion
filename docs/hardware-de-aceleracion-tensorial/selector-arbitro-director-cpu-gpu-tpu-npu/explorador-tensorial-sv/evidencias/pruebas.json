@@ -1,0 +1,50 @@
+{
+  "explorador": {
+    "linux_wsl2": {
+      "rustc": "1.93.1",
+      "correctos": 23,
+      "fallos": 0,
+      "pjrt": true
+    },
+    "casos": [
+      "biblioteca_ausente_no_prueba_dispositivo_ausente",
+      "deteccion_no_es_capacidad",
+      "clase_desconocida_no_promueve",
+      "cobertura_parcial_no_promueve",
+      "carga_distinta_no_se_admite",
+      "capacidad_de_otra_sesion_se_rechaza",
+      "desaparicion_impide_efecto_sin_sustituir_cpu",
+      "capacidad_vencida_se_rechaza",
+      "identidad_duplicada_se_rechaza",
+      "fuente_parcial_no_promueve",
+      "memoria_imposible_se_rechaza",
+      "memoria_insuficiente_impide_efecto_sin_sustitucion",
+      "pjrt_conserva_varios_dispositivos",
+      "observacion_vencida_se_rechaza",
+      "fuente_duplicada_se_rechaza",
+      "inventario_de_otra_sesion_se_rechaza",
+      "seleccion_y_revalidacion_conformes",
+      "observacion_futura_se_rechaza",
+      "pjrt_rechaza_plataforma_cpu",
+      "memoria_desconocida_impide_seleccion",
+      "no_clasifica_por_nombre_comercial",
+      "politica_cpu_prevalece",
+      "sustitucion_dispositivo_impide_efecto"
+    ],
+    "contrastes_fisicos": "Dos series de 20 consultas, sin inferencia",
+    "dispositivos_de_casos": "Simulados",
+    "observacion_fisica_tpu": false,
+    "windows": {
+      "rustc": "1.98.1",
+      "correctos": 23,
+      "fallos": 0,
+      "pjrt": false
+    }
+  },
+  "selector": {
+    "correctos": 18,
+    "fallos": 0,
+    "fuente_sha256": "2b6cd91da365f15ab314ea69ef6eeec1b12826ddf0de01fcca58191ef5afff05"
+  },
+  "fecha": "2026-10-15"
+}

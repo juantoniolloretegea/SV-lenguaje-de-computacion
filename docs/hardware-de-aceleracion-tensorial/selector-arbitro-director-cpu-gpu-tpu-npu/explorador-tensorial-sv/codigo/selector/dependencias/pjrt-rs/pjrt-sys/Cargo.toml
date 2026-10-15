@@ -1,0 +1,20 @@
+[package]
+name = "pjrt-sys"
+version = "0.2.0"
+authors = ["cksac <cs.cksac@gmail.com>"]
+description = "A PJRT C API bindings for Rust"
+keywords = ["deep-learning", "machine-learning", "ai"]
+edition.workspace = true
+license.workspace = true
+categories.workspace = true
+repository = "https://github.com/rai-explorers/pjrt-rs"
+homepage = "https://github.com/rai-explorers/pjrt-rs"
+
+[dependencies]
+bytes = { workspace = true }
+prost = { workspace = true }
+prost-types = { workspace = true }
+
+[build-dependencies]
+bindgen = { workspace = true }
+prost-build = { workspace = true }

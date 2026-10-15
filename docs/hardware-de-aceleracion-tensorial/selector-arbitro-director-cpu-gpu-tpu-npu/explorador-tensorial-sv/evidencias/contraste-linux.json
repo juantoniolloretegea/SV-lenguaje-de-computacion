@@ -1,0 +1,71 @@
+{
+  "alcance": "Observación de CPU y dispositivos declarados por el sistema; sin cálculo acelerado ni inferencia",
+  "capacidades_creadas_por_deteccion": 0,
+  "consultas": [
+    {
+      "estado": "Completa",
+      "fuente": "cpu-sistema",
+      "observaciones": [
+        {
+          "acceso": "Consultable",
+          "clase": "Cpu",
+          "memoria_libre_bytes": 7110254592,
+          "memoria_total_bytes": 8168013824,
+          "nombre": "11th Gen Intel(R) Core(TM) i7-1165G7 @ 2.80GHz"
+        }
+      ]
+    },
+    {
+      "estado": "Completa",
+      "fuente": "linux-pci",
+      "observaciones": [
+        {
+          "acceso": "Identificado",
+          "clase": "Gpu",
+          "memoria_libre_bytes": null,
+          "memoria_total_bytes": null,
+          "nombre": "PCI 1414:008e"
+        }
+      ]
+    },
+    {
+      "estado": "NoDisponible",
+      "fuente": "nvidia-nvml",
+      "observaciones": []
+    },
+    {
+      "estado": "NoAplicable",
+      "fuente": "tpu-pjrt",
+      "observaciones": []
+    }
+  ],
+  "discordancias_referencia": 0,
+  "duraciones_us": [
+    12384,
+    826,
+    487,
+    445,
+    1486,
+    1064,
+    717,
+    846,
+    826,
+    636,
+    849,
+    693,
+    645,
+    602,
+    629,
+    410,
+    409,
+    379,
+    523,
+    473
+  ],
+  "maximo_us": 12384,
+  "mediana_us": 640.5,
+  "minimo_us": 379,
+  "muestras": 20,
+  "referencia": "/proc/cpuinfo; PCI no cotejado por nombre comercial",
+  "sistema": "linux"
+}
