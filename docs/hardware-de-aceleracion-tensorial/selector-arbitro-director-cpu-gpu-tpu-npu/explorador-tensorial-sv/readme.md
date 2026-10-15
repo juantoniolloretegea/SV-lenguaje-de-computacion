@@ -44,7 +44,7 @@ En [Linux sobre WSL2](evidencias/contraste-linux.json) se realizaron otras 20 ex
 
 Los [resultados de comprobación](evidencias/pruebas.json) distinguen los 23 casos del Explorador de los 18 casos conservados del Selector. La compilación de la consulta PJRT no constituye una ejecución ni una observación física de TPU.
 
-Las pruebas anteriores de Qwen y Helsinki acreditan sus adaptadores y configuraciones descritas en los expedientes originales. No se atribuyen retrospectivamente a esta nueva realización del Explorador. La integración completa del nuevo inventario con una inferencia acelerada, la atribución física por petición y el gobierno integral del Árbitro - Director requieren su propio contraste.
+La integración del nuevo inventario con una inferencia acelerada, la atribución física por petición y el gobierno integral del Árbitro - Director permanecen sin comprobar conjuntamente. Los resultados de otros adaptadores no acreditan esa integración.
 
 La reconsulta no reserva el recurso ni impide un cambio posterior. Tampoco acredita aislamiento frente a código malicioso del propio proceso, identidad física atestada, cancelación de una llamada de controlador bloqueada ni coordinación entre varios procesos. La memoria compartida de una GPU integrada no se inventa cuando la interfaz no la proporciona. Estas condiciones delimitan el uso de la versión 0.1.
 

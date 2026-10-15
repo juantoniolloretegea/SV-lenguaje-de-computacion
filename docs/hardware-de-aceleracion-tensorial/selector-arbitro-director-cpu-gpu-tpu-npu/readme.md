@@ -10,7 +10,7 @@ El Selector elige un destino de cálculo compatible y disponible para una carga 
 4. Si faltan estimaciones, aplica el orden explícito y declara esa limitación; no presenta esa decisión como prueba de superioridad temporal.
 5. Devuelve el destino, criterio, referencia de capacidad y motivos de descarte. Los adaptadores revalidan y ejecutan; la observación permite cotejar el destino con el cálculo realizado.
 
-La biblioteca de selección, por sí sola, no descubre hardware, reserva memoria, carga un modelo ni ejecuta sus operaciones. No admite reparto parcial implícito ni traslada una sesión con residencia obligatoria. GPU, TPU y NPU no tienen prioridad automática sobre CPU.
+El [Explorador Tensorial del SV](explorador-tensorial-sv/readme.md), subordinado al Selector, obtiene las observaciones de hardware. Su integración experimental se documenta por separado de los ensayos anteriores. La biblioteca de selección, por sí sola, no descubre hardware, reserva memoria, carga un modelo ni ejecuta sus operaciones. No admite reparto parcial implícito ni traslada una sesión con residencia obligatoria. GPU, TPU y NPU no tienen prioridad automática sobre CPU.
 
 ```mermaid
 flowchart TD

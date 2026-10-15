@@ -2,9 +2,9 @@
 
 **15 de octubre de 2026. Alcance experimental; no constituye una modificación aprobada del Lenguaje o del Núcleo.**
 
-El [Explorador Tensorial del SV](../hardware-de-aceleracion-tensorial/selector-arbitro-director-cpu-gpu-tpu-npu/explorador-tensorial-sv/readme.md) incorpora consultas de hardware y un enlace comprobable con el Selector. Sus observaciones técnicas no son valores ternarios ni adjudicaciones documentales. La semántica 0.2, la IR 0.3 y las fuentes del Núcleo no se modifican.
+El [Explorador Tensorial del SV](../hardware-de-aceleracion-tensorial/selector-arbitro-director-cpu-gpu-tpu-npu/explorador-tensorial-sv/readme.md) incorpora consultas de hardware y un enlace comprobable con el Selector. Sus observaciones técnicas no son valores ternarios ni adjudicaciones documentales.
 
-La revisión de los Pilares y del acta de perfiles y contratos sitúa estas funciones en el soporte tecnológico de ejecución. No se ha demostrado una insuficiencia de representación que obligue a ampliar la semántica o la IR. Las necesidades se vinculan a los identificadores existentes del [índice](readme.md):
+Estas funciones pertenecen al soporte tecnológico de ejecución definido por los Pilares y el acta de perfiles y contratos. No se ha demostrado una insuficiencia de representación que obligue a ampliar la semántica o la IR. Las necesidades se vinculan a los identificadores existentes del [índice](readme.md):
 
 | Necesidad | Aportación comprobada | Condición pendiente |
 | --- | --- | --- |
@@ -15,7 +15,7 @@ La revisión de los Pilares y del acta de perfiles y contratos sitúa estas func
 
 Las pruebas nuevas deben contrastar conjuntamente estos elementos, con resultados positivos y negativos. Una prueba histórica de cálculo acelerado no acredita la nueva conexión del Explorador, y una prueba de detección no acredita cálculo. Helsinki-NLP/opus-mt-en-es, asociado al Gestor documental y ejecutado bajo control propio, se encuadra en el nodo 1.
 
-Este documento añade la evidencia y las condiciones concretas de exploración; no declara completada la revisión histórica de las demás pruebas ni cerradas las necesidades del índice. Una propuesta nuclear sólo procederá si los contratos existentes resultan insuficientes ante un caso delimitado y comprobado.
+Una propuesta de modificación del Núcleo requiere demostrar que los contratos existentes resultan insuficientes ante un caso delimitado y comprobado.
 
 ---
 
