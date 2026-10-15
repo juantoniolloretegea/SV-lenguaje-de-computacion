@@ -1,6 +1,6 @@
 # Selector del Árbitro - Director CPU/GPU/TPU/NPU
 
-El Selector elige un destino de cálculo compatible y disponible para una carga admitida, conforme a la política del Árbitro - Director. Su función es comparar recursos identificados y capacidades comprobadas, conservar la decisión y explicar los descartes. No modifica el núcleo del SV, su semántica ni su representación intermedia.
+El Selector elige un destino de cálculo compatible y disponible para una carga admitida, conforme a la política del Árbitro - Director. Su función es comparar recursos identificados y capacidades comprobadas, conservar la decisión y explicar los descartes.
 
 ## Funcionamiento delimitado
 
@@ -44,9 +44,9 @@ Los expedientes conservan las dependencias y licencias de cada adaptador. La sel
 
 ## Alcance de aplicación
 
-El criterio es que el SV gestione la ejecución de la carga. Comprende la preparación para una futura IA del nodo 1 y motores propios de traducción, incluso cuando apoyen consultas a IAs externas. El Selector no controla los dispositivos internos del proveedor de una IA externa.
+El criterio de aplicación es que el SV gestione la ejecución de la carga. Incluye modelos ejecutados bajo su control y motores de traducción que apoyen consultas a IAs externas. La selección de los dispositivos de un servicio de IA externo corresponde a su proveedor.
 
-Las pruebas acreditan las operaciones y configuraciones descritas. No validan en general el nodo 1 ni todas las GPU, TPU o NPU. GPU AMD, NPU Intel y NPU Qualcomm permanecen pendientes; la categoría NPU declarada en la biblioteca no equivale a ejecución NPU comprobada.
+Las pruebas acreditan exclusivamente las operaciones y configuraciones descritas: CPU Intel Xeon con GPU NVIDIA Tesla T4, y CPU AMD EPYC 7B13 con TPU Google v5e. El nombre de una clase de dispositivo no constituye evidencia de compatibilidad con todos sus integrantes.
 
 [Volver al catálogo de hardware](../readme.md).
 

@@ -6,7 +6,7 @@ Documentación de dispositivos AMD examinados mediante el Selector del Árbitro 
 |---|---|---|---|
 | [EPYC 7B13](epyc-7b13/readme.md) | CPU | Google Cloud | Referencia CPU de OPUS-MT y selección CPU/TPU |
 
-La ejecución de esta CPU no acredita compatibilidad con GPU Instinct, GPU Radeon ni NPU Ryzen AI. Las comprobaciones GPU y NPU AMD permanecen pendientes y requieren identificar el dispositivo, el motor y las operaciones concretas.
+El alcance documentado corresponde al procesador EPYC 7B13 y a la configuración de la ficha. La compatibilidad y el rendimiento se determinan para cada dispositivo y operación.
 
 [Volver al catálogo de hardware](../readme.md).
 

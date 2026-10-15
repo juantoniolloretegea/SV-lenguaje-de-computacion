@@ -1,13 +1,12 @@
 # Intel
 
-Documentación de dispositivos Intel examinados o considerados para el Selector del Árbitro - Director CPU/GPU/TPU/NPU.
+Documentación de dispositivos Intel examinados para el Selector del Árbitro - Director CPU/GPU/TPU/NPU.
 
-| Estado | Dispositivo | Plataforma | Alcance |
-|---|---|---|---|
-| Ensayado | [Xeon a 2,00 GHz; identificación comercial parcial](xeon-kaggle-20261014/readme.md) | Kaggle | Referencia CPU de Qwen3-8B y tres solicitudes CPU obligatorias |
-| Pendiente | Equipo Core Ultra por determinar | Acceso por comprobar | Posible contraste CPU/GPU/NPU, condicionado a disponibilidad y compatibilidad del cálculo Rust |
+| Dispositivo | Plataforma | Alcance |
+|---|---|---|
+| [Xeon a 2,00 GHz; identificación comercial parcial](xeon-kaggle-20261014/readme.md) | Kaggle | Referencia CPU de Qwen3-8B y tres solicitudes CPU obligatorias |
 
-El registro Xeon conserva el nombre expuesto por la máquina virtual. No identifica un modelo comercial más preciso ni representa toda la familia. Core Ultra no se presenta como ensayado o asignado.
+El registro Xeon conserva el nombre expuesto por la máquina virtual. No identifica un modelo comercial más preciso ni representa toda la familia.
 
 [Volver al catálogo de hardware](../readme.md).
 

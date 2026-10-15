@@ -51,7 +51,7 @@ La auditoría relacionó doce funciones con los programas PTX y sus lanzamientos
 - [Código exacto y reproducción](https://github.com/juantoniolloretegea/SV-motor/blob/32239f974af3a6367efd75d36ba984a6c2fc747e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3-8b-cuantizacion-q4_k_m-gguf/codigo/gobierno-20261014/REPRODUCCION.md).
 - [Selector común](../../selector-arbitro-director-cpu-gpu-tpu-npu/readme.md).
 
-Es una comprobación breve de ejecución y cumplimiento de políticas. No demuestra saturación prolongada, concurrencia, migración entre GPU ni aptitud científica de Qwen. La sesión se detuvo después de conservar y cotejar los resultados.
+Es una comprobación breve de ejecución y cumplimiento de políticas. No demuestra saturación prolongada, concurrencia, migración entre GPU ni aptitud científica de Qwen.
 
 [Volver a NVIDIA](../readme.md).
 

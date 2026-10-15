@@ -17,7 +17,7 @@ Ensayo del 14 de octubre de 2026. Contraste de Helsinki-NLP/opus-mt-en-es dirigi
 | Compilación y biblioteca del fabricante | Rust 1.98.1; libtpu 0.0.50 |
 | Modelo | Helsinki-NLP/opus-mt-en-es; revisión `fdaddf76f50fcc1583ba42f95965862a7ab30f97` |
 
-Esta ficha identifica la configuración Google Cloud de un chip. No describe una TPU de Kaggle ni un conjunto de ocho chips.
+Esta ficha identifica la configuración Google Cloud de un chip.
 
 ## Resultado de la serie final
 
@@ -34,7 +34,7 @@ El cotejo recalculó **56 comparaciones vectoriales**: diferencia absoluta máxi
 
 ## Realización y observación
 
-Rust expresa el codificador y decodificador Marian en StableHLO, controla la generación y conserva las medidas. PJRT y libtpu realizan la compilación y ejecución TPU; esta dependencia nativa impide describir toda la infraestructura como íntegramente Rust. StableHLO pertenece al adaptador experimental del modelo y no modifica la representación intermedia del SV.
+Rust expresa el codificador y decodificador Marian en StableHLO, controla la generación y conserva las medidas. PJRT y libtpu realizan la compilación y ejecución TPU; esta dependencia nativa impide describir toda la infraestructura como íntegramente Rust.
 
 Las trazas XSpace atribuyen programas y operaciones a TPU 0; las ejecuciones CPU no presentan actividad TPU. La CPU mantiene tokenización, selección del siguiente token, recuperación y composición del texto durante la vía TPU. No se midieron energía ni tráfico físico del bus.
 
@@ -46,7 +46,7 @@ Las trazas XSpace atribuyen programas y operaciones a TPU 0; las ejecuciones CPU
 - [Código y reproducción del contraste](https://github.com/juantoniolloretegea/SV-motor/blob/32239f974af3a6367efd75d36ba984a6c2fc747e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/helsinki-nlp/codigo/contraste-cpu-tpu/LEAME-SV.md).
 - [Originales y ejecutables conservados](https://github.com/juantoniolloretegea/SV-motor/releases/tag/helsinki-cpu-tpu-20261014).
 
-La primera serie completa utilizó una medición parcial y permanece separada. Las cifras anteriores son las de la serie final; no se suman a los antecedentes ni acreditan calidad lingüística general. La indisponibilidad fue lógica, no desconexión física. Recurso y solicitud temporal se retiraron después de conservar y cotejar las evidencias.
+La primera serie completa utilizó una medición parcial y permanece separada. Las cifras anteriores son las de la serie final; no se suman a los antecedentes ni acreditan calidad lingüística general. La indisponibilidad fue lógica, no desconexión física.
 
 [Volver a Google](../readme.md).
 

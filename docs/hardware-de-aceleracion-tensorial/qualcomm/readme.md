@@ -1,12 +1,6 @@
 # Qualcomm
 
-Apartado destinado a las comprobaciones de dispositivos Qualcomm con el Selector del Árbitro - Director CPU/GPU/TPU/NPU.
-
-**Estado: sin dispositivo ensayado ni asignación documentada en este apartado.**
-
-La evaluación inicial considera un equipo Snapdragon X Elite, con CPU Oryon, GPU Adreno y NPU Hexagon. El dispositivo exacto y sus condiciones de acceso quedan pendientes. Antes de incorporar resultados deberán comprobarse la exposición efectiva de los recursos y la compatibilidad del cálculo en Rust; disponer del hardware no acredita por sí mismo esa compatibilidad.
-
-No se incorpora una carpeta de dispositivo probado hasta disponer de una identificación y una ejecución verificables.
+Apartado de documentación técnica de dispositivos Qualcomm en relación con el Selector del Árbitro - Director CPU/GPU/TPU/NPU. Las fichas de ensayo identifican el procesador, la configuración, las operaciones ejecutadas y la evidencia de su utilización.
 
 [Volver al catálogo de hardware](../readme.md).
 

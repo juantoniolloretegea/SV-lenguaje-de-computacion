@@ -36,7 +36,7 @@ El muestreo CPU de toda la serie, incluidos los recorridos TPU, conservó **322 
 - [Cotejo de atribución y resultados](https://github.com/juantoniolloretegea/SV-motor/blob/32239f974af3a6367efd75d36ba984a6c2fc747e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/helsinki-nlp/evidencias/contraste-cpu-tpu-20261014/COTEJO-INDEPENDIENTE.json).
 - [Código del contraste](https://github.com/juantoniolloretegea/SV-motor/blob/32239f974af3a6367efd75d36ba984a6c2fc747e/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/helsinki-nlp/codigo/contraste-cpu-tpu/LEAME-SV.md).
 
-Esta CPU se ensayó en Google Cloud, no en una máquina Instinct de AMD Developer Cloud. La ficha no acredita GPU AMD ni NPU Ryzen AI y no constituye un experimento adicional al documentado para la TPU.
+Esta ficha y la de la TPU Google v5e describen los dos dispositivos del mismo experimento CPU/TPU en Google Cloud. Sus resultados no se suman como experimentos independientes.
 
 [Volver a AMD](../readme.md).
 
