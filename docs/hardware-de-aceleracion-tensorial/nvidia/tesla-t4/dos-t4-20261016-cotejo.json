@@ -1,0 +1,550 @@
+{
+  "fecha": "2026-10-16",
+  "adversarial": {
+    "calibraciones": [
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "minimo",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 357,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 439,
+          "cpu-anfitrion": 1
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            629,
+            330,
+            344,
+            357,
+            409
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            22630,
+            330,
+            439,
+            7216,
+            434
+          ],
+          "cpu-anfitrion": [
+            1,
+            1,
+            1,
+            1,
+            21
+          ]
+        }
+      },
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "ceros",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 382,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 427,
+          "cpu-anfitrion": 6
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            382,
+            6181,
+            468,
+            375,
+            366
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            8221,
+            458,
+            418,
+            379,
+            427
+          ],
+          "cpu-anfitrion": [
+            6,
+            6,
+            6,
+            6,
+            6
+          ]
+        }
+      },
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "rectangular",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 440,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 421,
+          "cpu-anfitrion": 57
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            477,
+            368,
+            391,
+            459,
+            440
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            411,
+            384,
+            526,
+            431,
+            421
+          ],
+          "cpu-anfitrion": [
+            110,
+            43,
+            45,
+            57,
+            80
+          ]
+        }
+      },
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "signos",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 444,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 477,
+          "cpu-anfitrion": 163
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            444,
+            435,
+            469,
+            471,
+            427
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            484,
+            477,
+            541,
+            424,
+            393
+          ],
+          "cpu-anfitrion": [
+            162,
+            158,
+            164,
+            163,
+            343
+          ]
+        }
+      },
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "limites",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 464,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 593,
+          "cpu-anfitrion": 22
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            7050,
+            464,
+            441,
+            4273,
+            441
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            593,
+            601,
+            481,
+            628,
+            501
+          ],
+          "cpu-anfitrion": [
+            21,
+            30,
+            21,
+            52,
+            22
+          ]
+        }
+      },
+      {
+        "alcance": "Recorrido de cálculo en sesión inicializada; transferencias y sincronización incluidas en GPU. Observación, inicialización y cotejo separados.",
+        "caso": "carga",
+        "medianas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 627,
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 632,
+          "cpu-anfitrion": 3722
+        },
+        "medidas_us": {
+          "GPU-8218a387-45ce-abbb-2259-0de39d55e029": [
+            618,
+            627,
+            624,
+            667,
+            638
+          ],
+          "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": [
+            594,
+            632,
+            610,
+            671,
+            648
+          ],
+          "cpu-anfitrion": [
+            3633,
+            3722,
+            3469,
+            3746,
+            3786
+          ]
+        }
+      }
+    ],
+    "casos": [
+      {
+        "caso": "huella_sin_actualizar",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Manifiesto discordante",
+        "mensaje": "Manifiesto discordante",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "salida_y_manifiesto_alterados",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Resultado o destino discordante",
+        "mensaje": "Resultado o destino discordante",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "identidad_repetida",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Identidad duplicada",
+        "mensaje": "Identidad duplicada",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "decision_destino_alterado",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Decisión no reproducible",
+        "mensaje": "Decisión no reproducible",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "calibracion_alterada",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Calibración discordante",
+        "mensaje": "Calibración discordante",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "rechazo_invertido",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Rechazo no acreditado",
+        "mensaje": "Rechazo no acreditado",
+        "rechazado": true,
+        "salida": 1
+      },
+      {
+        "caso": "traza_truncada",
+        "diagnostico_conforme": true,
+        "diagnostico_previsto": "Registro truncado",
+        "mensaje": "Registro truncado",
+        "rechazado": true,
+        "salida": 1
+      }
+    ],
+    "conexiones_observadas": 0,
+    "cpu_proceso_acumulada_final_ms": 6450,
+    "cpu_proceso_acumulada_inicial_ms": 0,
+    "fin_unix_ms": 1792133168489,
+    "inicio_unix_ms": 1792133161689,
+    "inventario": {
+      "consultas": [
+        {
+          "duracion_us": 398,
+          "estado": "Completa",
+          "fuente": "cpu-sistema",
+          "incidencias": [],
+          "observaciones": [
+            {
+              "acceso": "Consultable",
+              "clase": "Cpu",
+              "id": "cpu-anfitrion",
+              "interfaz": "sysinfo/0.32.1;linux;denominacion=sysinfo;hilos=4",
+              "memoria_libre_bytes": 32099733504,
+              "memoria_total_bytes": 33658306560,
+              "nombre": "Intel(R) Xeon(R) CPU @ 2.00GHz"
+            }
+          ]
+        },
+        {
+          "duracion_us": 41553,
+          "estado": "Completa",
+          "fuente": "nvidia-nvml",
+          "incidencias": [],
+          "observaciones": [
+            {
+              "acceso": "Consultable",
+              "clase": "Gpu",
+              "id": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+              "interfaz": "NVML;controlador=580.178.04;PCI=00000000:00:04.0",
+              "memoria_libre_bytes": 15636037632,
+              "memoria_total_bytes": 16106127360,
+              "nombre": "Tesla T4"
+            },
+            {
+              "acceso": "Consultable",
+              "clase": "Gpu",
+              "id": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+              "interfaz": "NVML;controlador=580.178.04;PCI=00000000:00:05.0",
+              "memoria_libre_bytes": 15636037632,
+              "memoria_total_bytes": 16106127360,
+              "nombre": "Tesla T4"
+            }
+          ]
+        }
+      ],
+      "duracion_us": 41957,
+      "esquema": "explorador-tensorial-sv/0.1",
+      "observado_ms": 0
+    },
+    "observacion_ms": 6800,
+    "original_conforme": true,
+    "rss_max_bytes": 250331136,
+    "todos_rechazados": true
+  },
+  "cotejo_original": {
+    "alcance": "CPU y ambas GPU por separado; sin inferencia, partición ni ejecución distribuida. Energía NVML global de cada dispositivo, no exclusiva del ensayo.",
+    "conforme": true,
+    "decisiones": [
+      {
+        "caso": "minimo",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 1
+      },
+      {
+        "caso": "minimo",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 491
+      },
+      {
+        "caso": "minimo",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 447
+      },
+      {
+        "caso": "minimo",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico_gpu",
+        "total_us": 370
+      },
+      {
+        "caso": "minimo",
+        "destino": "cpu-anfitrion",
+        "modo": "automatico",
+        "total_us": 1
+      },
+      {
+        "caso": "ceros",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 6
+      },
+      {
+        "caso": "ceros",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 476
+      },
+      {
+        "caso": "ceros",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 433
+      },
+      {
+        "caso": "ceros",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico_gpu",
+        "total_us": 392
+      },
+      {
+        "caso": "ceros",
+        "destino": "cpu-anfitrion",
+        "modo": "automatico",
+        "total_us": 9
+      },
+      {
+        "caso": "rectangular",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 53
+      },
+      {
+        "caso": "rectangular",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 401
+      },
+      {
+        "caso": "rectangular",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 610
+      },
+      {
+        "caso": "rectangular",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "automatico_gpu",
+        "total_us": 605
+      },
+      {
+        "caso": "rectangular",
+        "destino": "cpu-anfitrion",
+        "modo": "automatico",
+        "total_us": 62
+      },
+      {
+        "caso": "signos",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 137
+      },
+      {
+        "caso": "signos",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 371
+      },
+      {
+        "caso": "signos",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 385
+      },
+      {
+        "caso": "signos",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico_gpu",
+        "total_us": 403
+      },
+      {
+        "caso": "signos",
+        "destino": "cpu-anfitrion",
+        "modo": "automatico",
+        "total_us": 170
+      },
+      {
+        "caso": "limites",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 22
+      },
+      {
+        "caso": "limites",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 521
+      },
+      {
+        "caso": "limites",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 12271
+      },
+      {
+        "caso": "limites",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico_gpu",
+        "total_us": 414
+      },
+      {
+        "caso": "limites",
+        "destino": "cpu-anfitrion",
+        "modo": "automatico",
+        "total_us": 22
+      },
+      {
+        "caso": "carga",
+        "destino": "cpu-anfitrion",
+        "modo": "cpu",
+        "total_us": 3654
+      },
+      {
+        "caso": "carga",
+        "destino": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7",
+        "modo": "gpu0",
+        "total_us": 621
+      },
+      {
+        "caso": "carga",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "gpu1",
+        "total_us": 670
+      },
+      {
+        "caso": "carga",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico_gpu",
+        "total_us": 656
+      },
+      {
+        "caso": "carga",
+        "destino": "GPU-8218a387-45ce-abbb-2259-0de39d55e029",
+        "modo": "automatico",
+        "total_us": 847
+      }
+    ],
+    "decisiones_reproducidas": 30,
+    "fallos_observacion": 0,
+    "gpu": [
+      {
+        "energia_global_delta_mj": 179607,
+        "intervalo_maximo_ms": 141,
+        "muestras": 55,
+        "muestras_pid": 50,
+        "potencia_max_mw": 28510,
+        "temperatura_max_c": 52,
+        "uuid": "GPU-d682bf82-f3aa-2add-3662-c848e87275a7"
+      },
+      {
+        "energia_global_delta_mj": 174844,
+        "intervalo_maximo_ms": 141,
+        "muestras": 55,
+        "muestras_pid": 48,
+        "potencia_max_mw": 28919,
+        "temperatura_max_c": 53,
+        "uuid": "GPU-8218a387-45ce-abbb-2259-0de39d55e029"
+      }
+    ],
+    "operaciones_exactas": 120,
+    "operaciones_por_destino": {
+      "GPU-8218a387-45ce-abbb-2259-0de39d55e029": 42,
+      "GPU-d682bf82-f3aa-2add-3662-c848e87275a7": 37,
+      "cpu-anfitrion": 41
+    },
+    "rechazos_revalidacion": 12,
+    "telemetria_cpu": {
+      "bytes": 343844,
+      "fallos_medicion": 0,
+      "integridad": "conforme",
+      "intervalo_maximo_ms": 260,
+      "intervalo_objetivo_ms": 250,
+      "muestras": 27,
+      "plataforma_recibida": false,
+      "precision": "cotejo de custodia local; no equivale a recepción integral del instrumento ni firma externa",
+      "registros": 423,
+      "sha256": "d3cd6a1748118c35438278ce3751031dd33e47917321e944c1d907bcd5daeef4"
+    }
+  },
+  "fuentes_recompiladas": {
+    "decisiones_reproducidas": 30,
+    "conforme": true,
+    "fallidas": 0,
+    "operaciones_exactas": 120,
+    "pruebas_locales": 4
+  }
+}
