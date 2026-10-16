@@ -1,0 +1,67 @@
+{
+  "esquema": "explorador-tensorial-sv/0.1",
+  "consultas": [
+    {
+      "fuente": "cpu-sistema",
+      "estado": "Completa",
+      "observaciones": [
+        {
+          "id": "cpu-anfitrion",
+          "clase": "Cpu",
+          "nombre": "INTEL(R) XEON(R) PLATINUM 8568Y+",
+          "acceso": "Consultable",
+          "memoria_total_bytes": 253347037184,
+          "memoria_libre_bytes": 247167610880,
+          "interfaz": "sysinfo/0.32.1;linux;denominacion=sysinfo;hilos=20"
+        }
+      ],
+      "incidencias": [],
+      "duracion_us": 414
+    },
+    {
+      "fuente": "amd-hip",
+      "estado": "Completa",
+      "observaciones": [
+        {
+          "id": "amd-37633038366332363865366631363764",
+          "clase": "Gpu",
+          "nombre": "AMD Instinct MI300X VF",
+          "acceso": "Consultable",
+          "memoria_total_bytes": 205822885888,
+          "memoria_libre_bytes": 205474758656,
+          "interfaz": "HIP;version=71626385;PCI=0000:83:00.0;arquitectura=gfx942:sramecc+:xnack-;grupo=64;integrada=false"
+        }
+      ],
+      "incidencias": [],
+      "duracion_us": 50694
+    },
+    {
+      "fuente": "linux-pci",
+      "estado": "Completa",
+      "observaciones": [
+        {
+          "id": "0000:00:01.0",
+          "clase": "Gpu",
+          "nombre": "PCI 1af4:1050",
+          "acceso": "Identificado",
+          "memoria_total_bytes": null,
+          "memoria_libre_bytes": null,
+          "interfaz": "sysfs;clase=030000;controlador=virtio-pci"
+        },
+        {
+          "id": "0000:83:00.0",
+          "clase": "AceleradorSinClasificar",
+          "nombre": "PCI 1002:74b5",
+          "acceso": "Identificado",
+          "memoria_total_bytes": null,
+          "memoria_libre_bytes": null,
+          "interfaz": "sysfs;clase=120000;controlador=amdgpu"
+        }
+      ],
+      "incidencias": [],
+      "duracion_us": 317
+    }
+  ],
+  "observado_ms": 0,
+  "duracion_us": 51429
+}

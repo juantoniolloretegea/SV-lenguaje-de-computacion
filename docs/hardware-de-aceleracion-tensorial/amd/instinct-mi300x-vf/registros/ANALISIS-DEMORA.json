@@ -1,0 +1,4574 @@
+{
+  "ejecuciones": [
+    {
+      "carga_automatica": {
+        "archivo": "carga-automatico.json",
+        "caso": "carga",
+        "cpu_proceso_delta_ms": 0,
+        "gpu": true,
+        "id": "carga-automatico",
+        "instantes_muestreo_us": [
+          0,
+          1903
+        ],
+        "muestras": 2,
+        "resultado_bytes": 264196,
+        "rss_delta_bytes": 397312,
+        "sha256": "923df736fd0a2d83baccc9fb940a0fc53540966083c2e5bbc574d500c6aa8030",
+        "tiempos": {
+          "arquitectura": "gfx942:sramecc+:xnack-",
+          "calculo_y_espera_anfitrion_us": 65,
+          "compilacion": "LLVM-AMDGPU",
+          "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+          "gpu_eventos_ns": 50513,
+          "lanzamientos_gpu": 1,
+          "metodo_gpu": "device",
+          "pci": "0000:83:00.0",
+          "preparacion_y_transferencia_us": 394,
+          "recuperacion_us": 36,
+          "revalidacion_us": 47,
+          "total_us": 543,
+          "uuid": "37633038366332363865366631363764"
+        },
+        "vram_global_delta_bytes": 0
+      },
+      "carga_cpu_total_us": 1502,
+      "carga_forzada": {
+        "archivo": "carga-gpu.json",
+        "caso": "carga",
+        "cpu_proceso_delta_ms": 10,
+        "gpu": true,
+        "id": "carga-gpu",
+        "instantes_muestreo_us": [
+          0,
+          24343
+        ],
+        "muestras": 2,
+        "resultado_bytes": 264196,
+        "rss_delta_bytes": 205295616,
+        "sha256": "2b1719ab6a2f9197ab814645c381990fecb2068af5207b52e2e8a6f4905dbac5",
+        "tiempos": {
+          "arquitectura": "gfx942:sramecc+:xnack-",
+          "calculo_y_espera_anfitrion_us": 88,
+          "compilacion": "LLVM-AMDGPU",
+          "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+          "gpu_eventos_ns": 44219,
+          "lanzamientos_gpu": 1,
+          "metodo_gpu": "device",
+          "pci": "0000:83:00.0",
+          "preparacion_y_transferencia_us": 274,
+          "recuperacion_us": 22736,
+          "revalidacion_us": 41,
+          "total_us": 23140,
+          "uuid": "37633038366332363865366631363764"
+        },
+        "vram_global_delta_bytes": 186044416
+      },
+      "carga_gpu_forzada_sobre_cpu": 15.40612516644474,
+      "cpu": 41,
+      "gpu": 43,
+      "operaciones": 84,
+      "operaciones_detalladas": [
+        {
+          "archivo": "carga-automatico.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1903
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "923df736fd0a2d83baccc9fb940a0fc53540966083c2e5bbc574d500c6aa8030",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 65,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 50513,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 394,
+            "recuperacion_us": 36,
+            "revalidacion_us": 47,
+            "total_us": 543,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-0.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            2578
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 0,
+          "sha256": "6f076fd211b6b5b32376209c33986ea2c317389e80e651dda8ccce1f60d75b2d",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1505
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-1.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 20,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            2789
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 172032,
+          "sha256": "6508178395b70dc2e7ae5beeb14d853875b03e8f8e48a088f4687deb08577809",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1695
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-2.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            2649
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 172032,
+          "sha256": "10d784282ba25ec15c26c38162919550b5585d31db669eec0bf9d6a0fb406b78",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1521
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-3.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            2726
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 172032,
+          "sha256": "fbe71b7aa6d32d65d47ed4f5afcbf248856b71e82cdf091481d55cccf1cb91c1",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1581
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-4.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            3147
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 172032,
+          "sha256": "e7e5b1bc732590e35bae7fb6a0c1d377c5a72edeb1f61e6c62e481a8f7556bf0",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1683
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-0.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1588
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "8ad3481d5023497be2b609d15736f49fd37836da4e1c49651b4c640bf170436d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 57,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 43417,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 300,
+            "recuperacion_us": 34,
+            "revalidacion_us": 69,
+            "total_us": 461,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-1.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1985
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "dd8b24dd3ed36114aa5c673401c9928f30f0d3ee4785c115f9496b69cd0f5235",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 54,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 40451,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 340,
+            "recuperacion_us": 34,
+            "revalidacion_us": 52,
+            "total_us": 481,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-2.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1814
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "d5542105621ffe5ac901cc3e42a35f9035cffc2102d80fe432eff4ad5f5a295b",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 88,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 42896,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 294,
+            "recuperacion_us": 37,
+            "revalidacion_us": 52,
+            "total_us": 472,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-3.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1496
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "4d091c3b0a7362c5a8caa74aa043c82745543b967095fbf671ce03d82f392834",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 63,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 48509,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 190,
+            "recuperacion_us": 36,
+            "revalidacion_us": 52,
+            "total_us": 342,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-4.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1711
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "491a863bcb8398a7a8a0158e65e257ac0b625bc3045b431faf74ca74d9c41011",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 58,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 43738,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 333,
+            "recuperacion_us": 34,
+            "revalidacion_us": 52,
+            "total_us": 479,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-cpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-cpu",
+          "instantes_muestreo_us": [
+            0,
+            2631
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 172032,
+          "sha256": "441caef11cea733eb079631fadac026a612291471cf9d3c40238b771ca8cc2c2",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1502
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-gpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "carga-gpu",
+          "instantes_muestreo_us": [
+            0,
+            24343
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 205295616,
+          "sha256": "2b1719ab6a2f9197ab814645c381990fecb2068af5207b52e2e8a6f4905dbac5",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 88,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 44219,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 274,
+            "recuperacion_us": 22736,
+            "revalidacion_us": 41,
+            "total_us": 23140,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 186044416
+        },
+        {
+          "archivo": "carga-primera-gpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            2588
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 2097152,
+          "sha256": "7dd5b171e52605826ee27f77212e8a0281f132ae5c8cdb5e9be388cca89534a1",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 101,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 80020,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 1226,
+            "recuperacion_us": 35,
+            "revalidacion_us": 64,
+            "total_us": 1427,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 2101248
+        },
+        {
+          "archivo": "ceros-automatico.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1007
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "0b73bc36af7c5ff69cd37630d6f348cbe3794c0ea77445ac22fa22a8dd2ed0c8",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-0.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1043
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "2b9093c20589a6675488bc0dc486d8b5cebd31841b41a50bcb32c1e1cafe97d6",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-1.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            874
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "350ef8e541fd80e26ef20d6da34702820aea06c86daaf260aa5916aa8a78ad6c",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-2.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1034
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "9b352acf9bd8d810d3125dff9049b79d91cd8c06db0361b1e7244c3e05db233f",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-3.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1137
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "28b69e7c239d74941a47ceb6db04a9d6f4f92331a422886ede47617a96ac4cea",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-4.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            969
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "427d11f441d2d2ec4eb054de637c64e3410ecf110a1e86e6f6af3e9b4b383da9",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-0.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1524
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "cc34dfdeed4def51020cfd5004163a07f90e6a996ad872a0517adb6835d4f4cb",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 41,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 26900,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 213,
+            "recuperacion_us": 20,
+            "revalidacion_us": 19,
+            "total_us": 295,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-1.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            1,
+            1340
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "ab71cdc4046fcafbebc61eeb9483bb49fed9aaa2eee44ad0f66a0b6e54417840",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 37,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 24094,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 67,
+            "recuperacion_us": 19,
+            "revalidacion_us": 15,
+            "total_us": 140,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-2.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1385
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "5ce48d28e3e37b8acb0fa08068950985677c4efd6b26f7c074bce3e7b5cb3378",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 37,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 24134,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 63,
+            "recuperacion_us": 19,
+            "revalidacion_us": 16,
+            "total_us": 137,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-3.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1329
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "fd9386f1e5201262f887fb413915ad42d7310819e5ab672bba55357f685593ae",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 39,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 25537,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 118,
+            "recuperacion_us": 19,
+            "revalidacion_us": 19,
+            "total_us": 197,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-4.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1244
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "7728886304b201a415ade748cc16b3c54273651bfe8babb9d4784dc7a3be6c81",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 48,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 34958,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 237,
+            "recuperacion_us": 20,
+            "revalidacion_us": 20,
+            "total_us": 327,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-cpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1191
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "ca714bc18ca2e279d5ab9738ef58b31b45a670c569f5c50a5448ee57da168b5b",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-gpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1627
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "3466f2f3a75d359eec20c0357a081b486a854a37212fc75ee4d490404707565a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 45,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 31751,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 208,
+            "recuperacion_us": 20,
+            "revalidacion_us": 12,
+            "total_us": 287,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-primera-gpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1309
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "d4c426e669136f1315f62f0d94dacfdb620c62f096fe6cf1845f08074c4fa8b2",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 78,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 33555,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 89,
+            "recuperacion_us": 23,
+            "revalidacion_us": 13,
+            "total_us": 204,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-automatico.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1400
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 20480,
+          "sha256": "50885f349b41db411052ff40bc150f1b605811b30abbc69365b6555670c556b3",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 10
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-0.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1010
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "7ee25acde14e617e133a2bac28bd0f3167c150a591df21591cde3480f21e1afd",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 10
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-1.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            897
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "b97f7351537df5000ac07fd79ae344c67952ce8529e3f9e23eb60eae64c139b6",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 9
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-2.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1011
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "f476bebee6c51b7e8a01ed633cd0b88fff90cb7ed5518d008a257106826b3eb1",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 10
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-3.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            930
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "fec9ab3d186878dce48448065e070e5b479b707540c7c952593922c88ff0e23d",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 9
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-4.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1137
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "38c98ca05c128023b63ffc4a40ae4395296e0e5e24392879b7958cfed46378e1",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 9
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-0.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1381
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "b2a65a52d81435b8532d60e4a71593d575c30e8d82bd8a74200024a063965eac",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 82,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 67752,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 242,
+            "recuperacion_us": 30,
+            "revalidacion_us": 21,
+            "total_us": 377,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-1.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1515
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "47fd4dfb688707e5c7a5bafbdddf2c39b8d65a0dc862716ad9e86f64e63dbfc1",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 78,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 64945,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 56,
+            "recuperacion_us": 29,
+            "revalidacion_us": 17,
+            "total_us": 182,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-2.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1242
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "b13cdc88a14f70888f019afdcf838f350c3f30b040ebeac05de3e1c5239330bb",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 82,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 68032,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 186,
+            "recuperacion_us": 29,
+            "revalidacion_us": 22,
+            "total_us": 320,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-3.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1081
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "4b0d13512b1d6b4cde51d0ba60f67f69d98f7e58a31efee1ba319e3dd103bad3",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 80,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 66349,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 75,
+            "recuperacion_us": 30,
+            "revalidacion_us": 17,
+            "total_us": 205,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-4.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1195
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "f0c9d7e95aad44cd58a518b60d69e9a4769e1dee5734c3baaee29fc524f353a2",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 83,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 69035,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 142,
+            "recuperacion_us": 29,
+            "revalidacion_us": 22,
+            "total_us": 278,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-cpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1123
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "1971b5b587f55bad333fd72ae037df486c0e6ede728811723f23bf9e1824dd1a",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 9
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-gpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1414
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "fb6d6215e35ed8b68ba4b44ac49483c4e1ae5abd214def5c9d665c68eff320c7",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 112,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 68113,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 85,
+            "recuperacion_us": 33,
+            "revalidacion_us": 14,
+            "total_us": 246,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-primera-gpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1415
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "7d26e01add63ac330fdd44f23a59555d960e4466a65c3eff81d276cfc46ba4f5",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 94,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 76211,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 162,
+            "recuperacion_us": 32,
+            "revalidacion_us": 16,
+            "total_us": 305,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-automatico.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1489
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "66661027cf28101087628a23b9dcb8e102d3730e44f79ccc61edf0903d2930a5",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-0.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1476
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "e10891dd5f7508daaa0aed9a42f9fedf9d789c732ea3661d0100c2086ec4f6cd",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-1.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1097
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "da4c9e56beee552de751d2d90085988e23cf13e1e66bc583a75333d5c956bddd",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-2.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1036
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "d0bef1ff5330f409c06fcc3a6c059dd9d4f39743cf8ec7899d94f897db1e4ec0",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-3.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            961
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "09a145d6f9095015b890fa8f51799ec7e5a10a058e640f0a096ba75288f650f4",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-4.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1299
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "04f815e4bf2663f8f1b814bee1a684fccc6c25e7e2fc207c5f3618d1ce80ce2e",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-0.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1338
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "fab6193d707406ab7a5fffeeb2a2dff3c06934606b91a30fcf9cae1b85d9aef6",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 45,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30789,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 108,
+            "recuperacion_us": 22,
+            "revalidacion_us": 26,
+            "total_us": 203,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-1.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1655
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "7bfefd01a65f3a9b4ff9d8b7fec2b0c01c76d03f2c45edadb045d0f968e0d375",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 39,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 25618,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 193,
+            "recuperacion_us": 23,
+            "revalidacion_us": 16,
+            "total_us": 273,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-2.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1405
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "442f09628e70829e3262f734e839a70eb1e0135c4b2ca77006146b2d1c6aed1d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 46,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 31230,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 143,
+            "recuperacion_us": 23,
+            "revalidacion_us": 21,
+            "total_us": 235,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-3.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1162
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 12288,
+          "sha256": "e3100589d48682886b15f6ab7222bc9a5896bd26c0269a0710c7287d085b9152",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 38,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 25296,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 83,
+            "recuperacion_us": 22,
+            "revalidacion_us": 19,
+            "total_us": 165,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-4.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1230
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "321faccd82cd0dbe3bbecdcf0ce21044344126e94938f6743498bb3ad8fd8f2b",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 39,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 24696,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 68,
+            "recuperacion_us": 22,
+            "revalidacion_us": 20,
+            "total_us": 151,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-cpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1099
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "08f6af570ffa9517e81b6b7fefd206e1ada74271c3f6e62e8118c65242ae0fab",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-gpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "minimo-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1386
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "ad16f55b9dab435169a98658ec5131a7b6a572d3759226e195a3623ee39da86e",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 39,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 25858,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 203,
+            "recuperacion_us": 24,
+            "revalidacion_us": 17,
+            "total_us": 285,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-primera-gpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 100,
+          "gpu": true,
+          "id": "minimo-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            25741,
+            53798,
+            79293,
+            104940,
+            122512
+          ],
+          "muestras": 6,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 642650112,
+          "sha256": "9f16dcec3e2d054728d2fc93fa6f6570956a414ac947afb835bc45d83721f94a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 62301,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 43678051,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 58627,
+            "recuperacion_us": 34,
+            "revalidacion_us": 30,
+            "total_us": 120993,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 722161664
+        },
+        {
+          "archivo": "rectangular-automatico.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1425
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "823ae1982a805afa4075e53beceb733cd39c8b539e466a471589c64ea4f93040",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 24
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-0.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1110
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "2a1dad63e1f5f0a6faee51dbcda40bd2f88d86a8c02350a588a2dd8384e537d5",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 25
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-1.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1124
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "52ce21f88810341217cce5166ad6e6f59b981680deff09e01311f14755f14175",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 25
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-2.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1332
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "b61fcae260785d89987793f456794b5ce0fd0a39e7e1e7a95dd17faae2b51525",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 25
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-3.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1129
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "7cc08384a3dc8847e31065ab044f4c78111361c9e282d3dbfd34463c699dd764",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 25
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-4.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1092
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "5cd3f30674dbf9e9ac1e937ad7a00d305d2d73eccf4c77fb2661cbf2ded5a310",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 24
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-0.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1536
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "c10810eb4548afb1c50783e4ccff19a71ca5d2a1f9717b187fdfd8f063f4ed18",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 51,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 37123,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 133,
+            "recuperacion_us": 30,
+            "revalidacion_us": 22,
+            "total_us": 238,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-1.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1242
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "2973f62fd1f5f9e3785dff8887bf1f5342e219cc32e142c1a42d05c2211859f1",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 50,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30949,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 151,
+            "recuperacion_us": 31,
+            "revalidacion_us": 18,
+            "total_us": 250,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-2.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1316
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "1cbcbeefe4b8b62efcda8df63073bcf8e80661fdb5ae12893ed3aa23a4bce73d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 77,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 34197,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 142,
+            "recuperacion_us": 32,
+            "revalidacion_us": 21,
+            "total_us": 275,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-3.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1447
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "262a4655b33d06eef2e9dc266f28ee6892b260fd3994e7b5666280edc9603e70",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 43,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30228,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 85,
+            "recuperacion_us": 30,
+            "revalidacion_us": 16,
+            "total_us": 177,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-4.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1327
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "544df6b11d3f50085b7ed8ad6c96ae445d88c4a1721578aabb1968a3fca7c284",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 46,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 31751,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 216,
+            "recuperacion_us": 31,
+            "revalidacion_us": 21,
+            "total_us": 317,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-cpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1048
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "496baa6f25609f58c1f15f6d5fbaf014a1c71db14554272126f8913a30b6c5d2",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 21
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-gpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1533
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "e843d12de7c094d49e2324723cb7213d7ffa7a5d3048c880ac7f5da2dd75973f",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 45,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30187,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 115,
+            "recuperacion_us": 30,
+            "revalidacion_us": 15,
+            "total_us": 206,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-primera-gpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1789
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "efc73ba8b28b90d7507222d1f38c6bd24318895a32e6e69140b60d55c08aabe8",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 53,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 39368,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 189,
+            "recuperacion_us": 30,
+            "revalidacion_us": 19,
+            "total_us": 292,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-automatico.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1189
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "bf1d7b2fa23c2082b112abbd31511302666910808dd2b793afd31aed2a2c1ded",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 81
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-0.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1257
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "f304ce8c69b2254ba97cf1a16f6b60f038954b08c039788dc8ced37d2072391d",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 94
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-1.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1049
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "46110d7aa73001727b3b26e3bec66a3e00085ce19cad4ffc41bb3bdff16adc71",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 81
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-2.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            972
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "16b37d1c62c9ff93db4f400fbbd60cc1fc377a5f3a704e6311e6f9ead3a3d981",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 79
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-3.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1071
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "dd7fe489f75ea9e5b2f6cd975315504b5c0f1a8acdf4e0435a53073e292b6c82",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 82
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-4.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1213
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "17f667ef2e0bbc360d2bebf366d39625d5ebac38945bf1597e1a7c9e745986cb",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 75
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-0.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1395
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "e711e960be370a3f309bd46c4c929539e51bc9f28e64d02ad21f332f92e90f56",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 47,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 32994,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 214,
+            "recuperacion_us": 32,
+            "revalidacion_us": 28,
+            "total_us": 322,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-1.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1376
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "1395369006773275f9b2ee9889bb3ee9ee64686c8bdcf031883a05c8ee21841b",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 85,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 40731,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 229,
+            "recuperacion_us": 24,
+            "revalidacion_us": 24,
+            "total_us": 363,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-2.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1736
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "16d640a99f07d65ab66430676d0d52606df9c16763a3c71074f37dc6b2ff389a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 46,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 31511,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 180,
+            "recuperacion_us": 21,
+            "revalidacion_us": 26,
+            "total_us": 275,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-3.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1313
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "c3fd7d92d965c6a03abbdf4399da66ef6759907855df3b28e828b18a7f5657ab",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 46,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 32633,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 197,
+            "recuperacion_us": 23,
+            "revalidacion_us": 26,
+            "total_us": 293,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-4.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1547
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "39e86893032c80c79e2b5b927ec2420d5780d7a9767a51a54418976a6529ae34",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 51,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 35399,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 210,
+            "recuperacion_us": 23,
+            "revalidacion_us": 25,
+            "total_us": 310,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-cpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1164
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "fb94f19a2fba4b361a91f77ccc663b0f8d5ff04ed47b4275646d6cd5c3952de4",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 80
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-gpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1450
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "a5e94d32930eb62a23e7ed2819c3104b6d8bb9024489e7b9d1c2b1222c6021b3",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 47,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 33235,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 158,
+            "recuperacion_us": 23,
+            "revalidacion_us": 21,
+            "total_us": 251,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-primera-gpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "signos-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            24427
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 202862592,
+          "sha256": "147100a3432280ee1677c09e981f9c004ddb2b18d42b5612b9bddc8f630419ed",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 73,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 54162,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 22946,
+            "recuperacion_us": 24,
+            "revalidacion_us": 20,
+            "total_us": 23064,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 186044416
+        }
+      ],
+      "recuperacion_fraccion_tiempo_total_carga_forzada": 0.9825410544511668,
+      "recuperacion_gpu_sin_carga_forzada_us": {
+        "maximo": 37,
+        "mediana": 29,
+        "minimo": 19,
+        "n": 42
+      },
+      "recuperacion_gpu_us": {
+        "maximo": 22736,
+        "mediana": 29,
+        "minimo": 19,
+        "n": 43
+      }
+    },
+    {
+      "carga_automatica": {
+        "archivo": "carga-automatico.json",
+        "caso": "carga",
+        "cpu_proceso_delta_ms": 0,
+        "gpu": true,
+        "id": "carga-automatico",
+        "instantes_muestreo_us": [
+          0,
+          1975
+        ],
+        "muestras": 2,
+        "resultado_bytes": 264196,
+        "rss_delta_bytes": 397312,
+        "sha256": "77f57319034c47b706cb7221feeacc904b5093694d0fb089d49770f1dc278dcb",
+        "tiempos": {
+          "arquitectura": "gfx942:sramecc+:xnack-",
+          "calculo_y_espera_anfitrion_us": 66,
+          "compilacion": "LLVM-AMDGPU",
+          "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+          "gpu_eventos_ns": 51397,
+          "lanzamientos_gpu": 1,
+          "metodo_gpu": "device",
+          "pci": "0000:83:00.0",
+          "preparacion_y_transferencia_us": 297,
+          "recuperacion_us": 36,
+          "revalidacion_us": 45,
+          "total_us": 446,
+          "uuid": "37633038366332363865366631363764"
+        },
+        "vram_global_delta_bytes": 0
+      },
+      "carga_cpu_total_us": 1756,
+      "carga_forzada": {
+        "archivo": "carga-gpu.json",
+        "caso": "carga",
+        "cpu_proceso_delta_ms": 20,
+        "gpu": true,
+        "id": "carga-gpu",
+        "instantes_muestreo_us": [
+          0,
+          25842,
+          27518
+        ],
+        "muestras": 3,
+        "resultado_bytes": 264196,
+        "rss_delta_bytes": 205295616,
+        "sha256": "9a2cf88dff34e8a35f79336c68b39e2cfe621f596505ce41b141640b10c82dbe",
+        "tiempos": {
+          "arquitectura": "gfx942:sramecc+:xnack-",
+          "calculo_y_espera_anfitrion_us": 96,
+          "compilacion": "LLVM-AMDGPU",
+          "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+          "gpu_eventos_ns": 51357,
+          "lanzamientos_gpu": 1,
+          "metodo_gpu": "device",
+          "pci": "0000:83:00.0",
+          "preparacion_y_transferencia_us": 335,
+          "recuperacion_us": 25300,
+          "revalidacion_us": 58,
+          "total_us": 25792,
+          "uuid": "37633038366332363865366631363764"
+        },
+        "vram_global_delta_bytes": 186044416
+      },
+      "carga_gpu_forzada_sobre_cpu": 14.687927107061503,
+      "cpu": 41,
+      "gpu": 43,
+      "operaciones": 84,
+      "operaciones_detalladas": [
+        {
+          "archivo": "carga-automatico.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1975
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "77f57319034c47b706cb7221feeacc904b5093694d0fb089d49770f1dc278dcb",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 66,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 51397,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 297,
+            "recuperacion_us": 36,
+            "revalidacion_us": 45,
+            "total_us": 446,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-0.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            3643
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 0,
+          "sha256": "0d2c82b5907b7dfe1f5a5ed06b4d5679250ec788123288ea878c6dbaeb5ff0a5",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2170
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-1.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            3259
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 167936,
+          "sha256": "6e92d3737d26f756b83e9bfae373418d14047ee52d24ec66ba2db0d37bdd0ede",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1945
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-2.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            3348
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 167936,
+          "sha256": "39c9b7356ede7cb1bed4d0a4bc47a6ee7fda9f45c03ab3884ce3268897f3130f",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2020
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-3.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            3394
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 167936,
+          "sha256": "7786b1b6867a17ad7e9cc0708a1161ed5f1ab6f40903b8eca0fab054626dd8c0",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1939
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-cpu-4.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            3497
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 167936,
+          "sha256": "06ca45ba20cca29e851551efe81603f9073a7a95ad7683c340e65a4435d1de16",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 2259
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-0.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1965
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "b5ee1687fa164a0aa93b448821b0169bef5f94d146fe257ce9dd6e541d14ec69",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 65,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 50034,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 359,
+            "recuperacion_us": 39,
+            "revalidacion_us": 62,
+            "total_us": 527,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-1.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1898
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "624881a30f0e530fe8cd4d090e2cc97e49f1fdde3215cfb3d7d7e87d7fb82fb2",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 95,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 49393,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 325,
+            "recuperacion_us": 39,
+            "revalidacion_us": 61,
+            "total_us": 522,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-2.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            2335
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "3f5fe75902d33f9ed9c6dfd68d0453bcd83f6c395183d9fe0ecc59ef8b991b20",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 72,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 56168,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 476,
+            "recuperacion_us": 40,
+            "revalidacion_us": 59,
+            "total_us": 650,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-3.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1848
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "f861cd7d0906a8b7034c3141c3f2d2b94dd5f90542e570c5561da1a514907c3f",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 100,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 53161,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 303,
+            "recuperacion_us": 39,
+            "revalidacion_us": 59,
+            "total_us": 503,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-calibracion-gpu-4.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "carga-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1683
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 397312,
+          "sha256": "5d87173d42a8afa1f2d5c150cde6e21d38b24000eb0758193546038c33525cab",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 64,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 48231,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 278,
+            "recuperacion_us": 44,
+            "revalidacion_us": 56,
+            "total_us": 443,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-cpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "carga-cpu",
+          "instantes_muestreo_us": [
+            0,
+            3101
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 167936,
+          "sha256": "3a6ba2f39359fec30138649a93804a6a257073f7497c33c1293aa41e6beb9869",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 1756
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "carga-gpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 20,
+          "gpu": true,
+          "id": "carga-gpu",
+          "instantes_muestreo_us": [
+            0,
+            25842,
+            27518
+          ],
+          "muestras": 3,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 205295616,
+          "sha256": "9a2cf88dff34e8a35f79336c68b39e2cfe621f596505ce41b141640b10c82dbe",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 96,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 51357,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 335,
+            "recuperacion_us": 25300,
+            "revalidacion_us": 58,
+            "total_us": 25792,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 186044416
+        },
+        {
+          "archivo": "carga-primera-gpu.json",
+          "caso": "carga",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "carga-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            3000
+          ],
+          "muestras": 2,
+          "resultado_bytes": 264196,
+          "rss_delta_bytes": 2097152,
+          "sha256": "64526441f900b74aee789f96b751d6cd9fc56f8edf130dd3a552e5f967cecd61",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 95,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 72967,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 1260,
+            "recuperacion_us": 35,
+            "revalidacion_us": 74,
+            "total_us": 1465,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 2101248
+        },
+        {
+          "archivo": "ceros-automatico.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1328
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "f020094da897ff49b2adef617395f40287d1f68f4678cfa75b2494e60088e581",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 4
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-0.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1068
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "d4adcca465c8d7048a98193c7c43da7d260c144399ca478e88e5421427baa378",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-1.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1592
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "5ba5b2db5a338413f9d637af53be19680cc411ad2d01f17ef4391475b0680803",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-2.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1234
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "2dc6a14157b30ad23516579488272114a8c13f000b87e4bfdf91ee428cef97ce",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-3.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1379
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "29ab30c5436c27985da5466e7546d409a56b4052fd59a495c2db33e78537e3c0",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-cpu-4.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1246
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "ed04e5526f519b67fff4681ede224778727bf107d8ecc0b9d19652f231650e9e",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-0.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1585
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "79b0d5f1501b2f0f94db562eacbb9b13a141d3f721b344b7606bdbc9baa97c4c",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 41,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 26982,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 176,
+            "recuperacion_us": 21,
+            "revalidacion_us": 20,
+            "total_us": 260,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-1.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1842
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "eba38d1d46d37def23a5994c52f0b8b7c3b04269944f404ac6174fe5de481eb2",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 43,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 28746,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 93,
+            "recuperacion_us": 20,
+            "revalidacion_us": 28,
+            "total_us": 186,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-2.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1404
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "21caea266bdb9d4637a4ac02c7df3607276b12c444b11cc32a93ef3538203328",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 68,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 24255,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 151,
+            "recuperacion_us": 22,
+            "revalidacion_us": 19,
+            "total_us": 263,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-3.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1872
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "216bca071eeeaec2d5dfd3a0c7ed9a1bd8afdb7c9d5a867827308e3a0c6eb0aa",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 41,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 26821,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 251,
+            "recuperacion_us": 20,
+            "revalidacion_us": 23,
+            "total_us": 336,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-calibracion-gpu-4.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1687
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "6422883686d6638a394e7feab5ec171abe9be60dcbf1d7122c8ad4b47e6a356a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 41,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 27383,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 137,
+            "recuperacion_us": 20,
+            "revalidacion_us": 20,
+            "total_us": 219,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-cpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "ceros-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1471
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "65d8631228d94892f2d3ea979e6a324f4905899fb3bd64798e50f2688964304e",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 3
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-gpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1709
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "4489e10f4a4b5fce3ccca67def40fe8cdab92dd795cb831de97b4f09d157cf42",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 42,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 22852,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 97,
+            "recuperacion_us": 20,
+            "revalidacion_us": 17,
+            "total_us": 177,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "ceros-primera-gpu.json",
+          "caso": "ceros",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "ceros-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1366
+          ],
+          "muestras": 2,
+          "resultado_bytes": 1024,
+          "rss_delta_bytes": 0,
+          "sha256": "04ab0e6b61c29344bb6d93970421356addc160121380dafa6507196547f24bcf",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 53,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 37686,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 226,
+            "recuperacion_us": 19,
+            "revalidacion_us": 14,
+            "total_us": 314,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-automatico.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": false,
+          "id": "limites-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1521
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "97e4994817f9be63c924ce5ce133f13c1576dbc580ca04b6988161aa2d2a7b8f",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 11
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-0.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1226
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "76fde5c7d42a5e8ff14d1f0a181546f3b75237c4b9d8e2feafbb3cbab1684b09",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 11
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-1.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1599
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "e14c3c22599bbbd761968c72606aaa3dae74891505b0607184a11d577a8372a2",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 12
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-2.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1493
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "40fdf95003ba238286e4faad1f792f215c322a137db353621a8258400d8c1f4e",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 11
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-3.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1265
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "8c282b47f4b4cae0416ab7677a2b4af00109d1c4a61f7bbc8e26928b935c0cc7",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 12
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-cpu-4.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1551
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "86838bb6e500bb09d67a6a3d9b030d9cf304e54b965adca35afd1b733666fcda",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 11
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-0.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1841
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "041d5c6fd268150076f2787d32e003f3d821b7f6108db7f98c828fc0b60b8552",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 88,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 72485,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 149,
+            "recuperacion_us": 31,
+            "revalidacion_us": 32,
+            "total_us": 302,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-1.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1866
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "5dbb36bf8bd14aefd106b29e90f78f302fa963911695a0b864e019237b0d1605",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 84,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 68476,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 151,
+            "recuperacion_us": 31,
+            "revalidacion_us": 22,
+            "total_us": 289,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-2.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1655
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "bc8ff683c1566785b311a556bb866b2f250706d7d0de6cd15b8357f7af9872f5",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 82,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 66792,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 166,
+            "recuperacion_us": 29,
+            "revalidacion_us": 22,
+            "total_us": 301,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-3.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1549
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "022be3fcb4d4b18de58e9cfed37f290e523077a1f4ddf6552834996ba35e0566",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 85,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 65630,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 135,
+            "recuperacion_us": 29,
+            "revalidacion_us": 18,
+            "total_us": 269,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-calibracion-gpu-4.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1498
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "071d3c19be85b27c9f088074f4a94bd5d7e9ebc2f61e8afa40aeb1c541c4d80b",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 124,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 78018,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 104,
+            "recuperacion_us": 37,
+            "revalidacion_us": 33,
+            "total_us": 299,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-cpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "limites-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1255
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "a81d89b81605a32cc75dd96949a1000b1b48b55609ec391b45c7b6394aaed3af",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 10
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-gpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1704
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "fbe9a051efd4f66d9230ac7b5fe86fc6041098d12d16868f8135e2f58a09d8a4",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 92,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 76254,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 127,
+            "recuperacion_us": 32,
+            "revalidacion_us": 21,
+            "total_us": 274,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "limites-primera-gpu.json",
+          "caso": "limites",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "limites-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1529
+          ],
+          "muestras": 2,
+          "resultado_bytes": 60,
+          "rss_delta_bytes": 0,
+          "sha256": "432b0acaa488ead8fdd0c2d3424f06120e4325040ce9720e6dd2d58b276c4bb9",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 93,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 78058,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 206,
+            "recuperacion_us": 32,
+            "revalidacion_us": 17,
+            "total_us": 348,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-automatico.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1381
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "83d7471876f872a8cadff74bc8b2b6056a450682fdf61701cfa4e673f3bc686a",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-0.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1355
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "a316d8f2a8d30bcade3f09ba52d2ffb106337c060871d081ab1e4acacbfb580e",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-1.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1143
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "9464b189d31b9b6f8c395eb1e822a66c6a65f5bac3939e33155ba4529f0946f8",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-2.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1089
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "1aa66d4dedefab8761c3b41b8f6c6a484edb8132b592280a7b9afff663f20e4f",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-3.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1069
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "1528a6e6da3dcbeff4afc45c434a22354257395ccc55b5ff244c6c3d8f122501",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-cpu-4.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1137
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "608b73aa1d4f2602b532b1451f5982c1618d11380b583231a1bb9e9c17113f4a",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-0.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1695
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "c6224f0b41d36b83ae5f5012c0594ff48bcb51c80d9c3f6b1d765ed048b769b0",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 67,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 43099,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 113,
+            "recuperacion_us": 37,
+            "revalidacion_us": 27,
+            "total_us": 245,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-1.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1494
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "c78de22da9b476ba570d79a307854375e15efa4c161e5ff4cd47ee4d5485195d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 40,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 25377,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 197,
+            "recuperacion_us": 23,
+            "revalidacion_us": 30,
+            "total_us": 292,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-2.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1406
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "ade06344e2527da11a68938eb29bd30dd83443ce5ab6fb893bbb6daebe66f5ac",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 39,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 23414,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 108,
+            "recuperacion_us": 24,
+            "revalidacion_us": 23,
+            "total_us": 196,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-3.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1270
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "bf05a2b7d031297df629f27d3eb70c4721f71a9a81ebfb4d5c42e83f4c085d34",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 36,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 22852,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 81,
+            "recuperacion_us": 25,
+            "revalidacion_us": 16,
+            "total_us": 161,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-calibracion-gpu-4.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1445
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "60b693027a1d1d9a4a9d6192ca82fb23392d21c49bd5d7add606adf6c8f13401",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 45,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 29067,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 229,
+            "recuperacion_us": 24,
+            "revalidacion_us": 22,
+            "total_us": 323,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-cpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "minimo-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1361
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "48f798b68e2022f566bbe82748a08e19ad6c02a45d7178833df31545b58be804",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 0
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-gpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "minimo-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1697
+          ],
+          "muestras": 2,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 0,
+          "sha256": "abe9930200fd7b0cb12323f28dc291ef194a68ccd41dd3d8d0008dd4b00f28b7",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 77,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 31833,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 239,
+            "recuperacion_us": 27,
+            "revalidacion_us": 22,
+            "total_us": 367,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "minimo-primera-gpu.json",
+          "caso": "minimo",
+          "cpu_proceso_delta_ms": 100,
+          "gpu": true,
+          "id": "minimo-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            25818,
+            57020,
+            82913,
+            108595,
+            117229
+          ],
+          "muestras": 6,
+          "resultado_bytes": 4,
+          "rss_delta_bytes": 642355200,
+          "sha256": "a67c9a76116f609fb69ddafcf6065b1bada4f5b41d653c85427cd4112c38062f",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 65916,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 46544998,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 49544,
+            "recuperacion_us": 41,
+            "revalidacion_us": 26,
+            "total_us": 115529,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 722165760
+        },
+        {
+          "archivo": "rectangular-automatico.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1147
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "4d1081c0f91d4e52c5437b4180afa7ce4335fea7f4ab3c984b262a21b69fca90",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 27
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-0.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1152
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "eb826a98df79bca8af152ccf499aa5a63f64646b7f36c3c16571aca78af9506a",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 27
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-1.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1100
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "220c6c1da83bd7d5ebeaabe6bbd943eb1a5bb1a0abf2fdb19f8742016adf8523",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 31
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-2.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1286
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "5088bda26bed6f14562e9c9f1b9fdaa58ec650c298946687e6905015d173adbe",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 26
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-3.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1648
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "5537806d27f741b5f026cf379eed4073d91db0feab329920ae6a85fb05b76055",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 31
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-cpu-4.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1318
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "2ef16b856b18d7dee5aaf6050d61ef3755f0df62a6a5b3ddb201e864a5a53cbf",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 27
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-0.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1485
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "41d59606d4f9e1766e31f5628761c7faaf46b94904284732e6ab589e08e3f8de",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 47,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 33196,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 119,
+            "recuperacion_us": 31,
+            "revalidacion_us": 29,
+            "total_us": 228,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-1.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1412
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "008888892f3343236a771eace1bb0a4466f0a867372711b024ef2e41d23c74fe",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 55,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 40893,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 126,
+            "recuperacion_us": 31,
+            "revalidacion_us": 21,
+            "total_us": 235,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-2.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1558
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "32ae8deb825389cbbc49533a2c7766bc47718332d36525dbf1b22539627f4396",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 45,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30710,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 78,
+            "recuperacion_us": 30,
+            "revalidacion_us": 21,
+            "total_us": 175,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-3.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1375
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "50ba575c8d917bfd94f4b0bd931a4cddab168fe9b817239e77f616bcf52a7f37",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 44,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 30430,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 158,
+            "recuperacion_us": 29,
+            "revalidacion_us": 18,
+            "total_us": 251,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-calibracion-gpu-4.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1618
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "b0fc189f4610992cbafc48922336bb5a345687a847743494dfb36163347ce62d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 92,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 45785,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 263,
+            "recuperacion_us": 35,
+            "revalidacion_us": 25,
+            "total_us": 416,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-cpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "rectangular-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1277
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "73aff0b1f26f606b4d08c6c61c5f7089ba8715d1cd44d8268a0e907528f65efd",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 30
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-gpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1481
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "dd027bfb357d0fa5e794f5ee6212bcbcdf6ea7fff457718017516812d444788e",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 47,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 32875,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 188,
+            "recuperacion_us": 30,
+            "revalidacion_us": 17,
+            "total_us": 285,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "rectangular-primera-gpu.json",
+          "caso": "rectangular",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "rectangular-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1869
+          ],
+          "muestras": 2,
+          "resultado_bytes": 8060,
+          "rss_delta_bytes": 0,
+          "sha256": "29707cb124783d050f72476c855af8155818094aa8fca2bb0a4323584b7ea015",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 53,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 39250,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 80,
+            "recuperacion_us": 30,
+            "revalidacion_us": 32,
+            "total_us": 196,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-automatico.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-automatico",
+          "instantes_muestreo_us": [
+            0,
+            1531
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "52bb7a1aac167f81b441af8c396fe455c0b76b8295f42b42915093d738624249",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 95
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-0.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1388
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "4033187169e07f8b45a29cc2adea3710862edb0209b791ba1b2ab2e63d2107c8",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 110
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-1.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1404
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "f4e9ada0c8bba7fe8ca7409879036ab7af40f67e403085694b5465b98df851e5",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 107
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-2.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1257
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "9713304fa8b1040979b2bb8c555d4de454c7ad8fa6521b62c9c7e32f8aff27ae",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 94
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-3.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1378
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "de0aa36f26d28adff015540e3245b4710406c87fbe39f8a706c0d8fd2f8463fc",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 102
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-cpu-4.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": false,
+          "id": "signos-calibracion-cpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1315
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "24df79c6b943407c5a477d0cf154e3a6ee8663bcfc873a0b551a05ea4cda2bb9",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 94
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-0.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-0",
+          "instantes_muestreo_us": [
+            0,
+            1666
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "cd83c6d410c0f3349439ac1905690e83cb503718af51baae8b6d488c9a58609d",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 53,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 38007,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 187,
+            "recuperacion_us": 33,
+            "revalidacion_us": 32,
+            "total_us": 306,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-1.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-1",
+          "instantes_muestreo_us": [
+            0,
+            1521
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "5adf3024a0b25b188ab12709371ca23ef5109b2f66bc0ac51a977d0150b0e962",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 50,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 35080,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 85,
+            "recuperacion_us": 22,
+            "revalidacion_us": 25,
+            "total_us": 184,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-2.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-2",
+          "instantes_muestreo_us": [
+            0,
+            1542
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "224e7363312ff3b7b60b9354a209540e200f17d8c69e303a8ba833a44226fb02",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 48,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 32995,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 218,
+            "recuperacion_us": 23,
+            "revalidacion_us": 28,
+            "total_us": 320,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-3.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-3",
+          "instantes_muestreo_us": [
+            0,
+            1850
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "d73627f37aa5d90b0f22a9d1fd01e9adaf9d511b1189511772c92102d417da7c",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 79,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 34077,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 113,
+            "recuperacion_us": 25,
+            "revalidacion_us": 30,
+            "total_us": 248,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-calibracion-gpu-4.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-calibracion-gpu-4",
+          "instantes_muestreo_us": [
+            0,
+            1667
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "b7a3830dbec4b2da0cb937b8f0a8307b7cd5488ed07432a11ea0e1592dd1029a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 48,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 32875,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 213,
+            "recuperacion_us": 23,
+            "revalidacion_us": 29,
+            "total_us": 315,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-cpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": false,
+          "id": "signos-cpu",
+          "instantes_muestreo_us": [
+            0,
+            1390
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "63d923c90a29488e1ae702e19e3f2275e24badb1b2af73f02ca51dcfa07475ad",
+          "tiempos": {
+            "gpu_eventos_ns": null,
+            "lanzamientos_gpu": 0,
+            "total_us": 93
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-gpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 0,
+          "gpu": true,
+          "id": "signos-gpu",
+          "instantes_muestreo_us": [
+            0,
+            1878
+          ],
+          "muestras": 2,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 0,
+          "sha256": "0a9e56600cdb016a1410d06eed7334b7fca20c9fe9c397a7ff1796b99e4684b3",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 49,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 34359,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 253,
+            "recuperacion_us": 23,
+            "revalidacion_us": 21,
+            "total_us": 348,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 0
+        },
+        {
+          "archivo": "signos-primera-gpu.json",
+          "caso": "signos",
+          "cpu_proceso_delta_ms": 10,
+          "gpu": true,
+          "id": "signos-primera-gpu",
+          "instantes_muestreo_us": [
+            0,
+            25915,
+            26486
+          ],
+          "muestras": 3,
+          "resultado_bytes": 16764,
+          "rss_delta_bytes": 202862592,
+          "sha256": "e1ac8122d20ddcceaa0048dc6cf720e70ffb363db04d591752049703b4941a5a",
+          "tiempos": {
+            "arquitectura": "gfx942:sramecc+:xnack-",
+            "calculo_y_espera_anfitrion_us": 74,
+            "compilacion": "LLVM-AMDGPU",
+            "funcion": "sv_explorador_selector_amd::calculo::producto::Producto",
+            "gpu_eventos_ns": 52881,
+            "lanzamientos_gpu": 1,
+            "metodo_gpu": "device",
+            "pci": "0000:83:00.0",
+            "preparacion_y_transferencia_us": 24343,
+            "recuperacion_us": 26,
+            "revalidacion_us": 23,
+            "total_us": 24468,
+            "uuid": "37633038366332363865366631363764"
+          },
+          "vram_global_delta_bytes": 186044416
+        }
+      ],
+      "recuperacion_fraccion_tiempo_total_carga_forzada": 0.980924317617866,
+      "recuperacion_gpu_sin_carga_forzada_us": {
+        "maximo": 44,
+        "mediana": 30,
+        "minimo": 19,
+        "n": 42
+      },
+      "recuperacion_gpu_us": {
+        "maximo": 25300,
+        "mediana": 30,
+        "minimo": 19,
+        "n": 43
+      }
+    }
+  ],
+  "limite": "Los incrementos de memoria abarcan la operación completa, no exclusivamente la recuperación; VRAM global",
+  "metodo": "Análisis retrospectivo de los dos registros originales; sin acceso a HIP ni hardware remoto",
+  "unidad_tiempo": "microsegundos, salvo campos explícitos ns o ms"
+}

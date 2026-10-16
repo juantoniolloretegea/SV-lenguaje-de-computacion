@@ -1,0 +1,110 @@
+{
+  "archivos": 109,
+  "bytes": 21602241,
+  "calculo_cotejado": true,
+  "casos": [
+    {
+      "caso": "minimo",
+      "cpu_us": 0,
+      "dimensiones": [
+        1,
+        1,
+        1
+      ],
+      "gpu_eventos_ns": 25858,
+      "gpu_total_us": 285,
+      "mediana_cpu_us": 0,
+      "mediana_gpu_us": 203,
+      "seleccion_automatica": "cpu-anfitrion"
+    },
+    {
+      "caso": "ceros",
+      "cpu_us": 3,
+      "dimensiones": [
+        16,
+        16,
+        16
+      ],
+      "gpu_eventos_ns": 31751,
+      "gpu_total_us": 287,
+      "mediana_cpu_us": 2,
+      "mediana_gpu_us": 197,
+      "seleccion_automatica": "cpu-anfitrion"
+    },
+    {
+      "caso": "rectangular",
+      "cpu_us": 21,
+      "dimensiones": [
+        31,
+        47,
+        65
+      ],
+      "gpu_eventos_ns": 30187,
+      "gpu_total_us": 206,
+      "mediana_cpu_us": 25,
+      "mediana_gpu_us": 250,
+      "seleccion_automatica": "cpu-anfitrion"
+    },
+    {
+      "caso": "signos",
+      "cpu_us": 80,
+      "dimensiones": [
+        127,
+        65,
+        33
+      ],
+      "gpu_eventos_ns": 33235,
+      "gpu_total_us": 251,
+      "mediana_cpu_us": 81,
+      "mediana_gpu_us": 310,
+      "seleccion_automatica": "cpu-anfitrion"
+    },
+    {
+      "caso": "limites",
+      "cpu_us": 9,
+      "dimensiones": [
+        3,
+        512,
+        5
+      ],
+      "gpu_eventos_ns": 68113,
+      "gpu_total_us": 246,
+      "mediana_cpu_us": 9,
+      "mediana_gpu_us": 278,
+      "seleccion_automatica": "cpu-anfitrion"
+    },
+    {
+      "caso": "carga",
+      "cpu_us": 1502,
+      "dimensiones": [
+        257,
+        129,
+        257
+      ],
+      "gpu_eventos_ns": 44219,
+      "gpu_total_us": 23140,
+      "mediana_cpu_us": 1581,
+      "mediana_gpu_us": 472,
+      "seleccion_automatica": "amd-37633038366332363865366631363764"
+    }
+  ],
+  "decisiones": 18,
+  "dispositivo": {
+    "ancho_grupo": 64,
+    "arquitectura": "gfx942:sramecc+:xnack-",
+    "indice": 0,
+    "integrada": false,
+    "memoria_libre_bytes": 205474758656,
+    "memoria_total_bytes": 205822885888,
+    "nombre": "AMD Instinct MI300X VF",
+    "pci": "0000:83:00.0",
+    "uuid": "37633038366332363865366631363764",
+    "version_runtime": 71626385
+  },
+  "integridad_conforme": true,
+  "lanzamientos_gpu": 43,
+  "operaciones": 84,
+  "rechazos": 12,
+  "seleccion_cotejada": true,
+  "telemetrias_incompletas": 0
+}

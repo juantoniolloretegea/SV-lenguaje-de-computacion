@@ -1,0 +1,56 @@
+{
+  "dependencias_examinadas": [
+    {
+      "ruta_repositorio": "crates/cubecl-runtime/src/client.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "a1c2bdd3bfe667906cd55cc8f0a956a8476124263b6838cc5d7d68d9edacfea0",
+      "archivo": "cubecl-runtime-0.11.0/src/client.rs",
+      "sha256": "a267cd36fc19108d88182afbe62cb8af5b427bcd2544abd2ec497b832719848d",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-runtime/src/client.rs"
+    },
+    {
+      "ruta_repositorio": "crates/cubecl-server/src/command/base.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "989e0863bdf7b4601700380afc6e7ac1f3bee306552c60c1bd2b0bb9be416c80",
+      "archivo": "cubecl-server-0.11.0/src/command/base.rs",
+      "sha256": "01b1e67dbcb1a9da4001019a10cdeee163790bcdc79b2283c6df8ef8d053dc21",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-server/src/command/base.rs"
+    },
+    {
+      "ruta_repositorio": "crates/cubecl-server/src/device_events/fence.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "989e0863bdf7b4601700380afc6e7ac1f3bee306552c60c1bd2b0bb9be416c80",
+      "archivo": "cubecl-server-0.11.0/src/device_events/fence.rs",
+      "sha256": "fd1bbf9fa57b3c2af1463877a44ab538b8062af3d14a092971e7c018e2988995",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-server/src/device_events/fence.rs"
+    },
+    {
+      "ruta_repositorio": "crates/cubecl-hip/src/compute/driver.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "d3cf95f0ff97999ab1bbbad2f91aacd81c73642dc0be41bc46dce41fcdd5b424",
+      "archivo": "cubecl-hip-0.11.0/src/compute/driver.rs",
+      "sha256": "afa079b1ebfbeb951c75b712ba83ce3e853cf58b5cca34ad30086188ba65b13a",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-hip/src/compute/driver.rs"
+    },
+    {
+      "ruta_repositorio": "crates/cubecl-hip/src/compute/events.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "d3cf95f0ff97999ab1bbbad2f91aacd81c73642dc0be41bc46dce41fcdd5b424",
+      "archivo": "cubecl-hip-0.11.0/src/compute/events.rs",
+      "sha256": "caa3ff363767b4626f904a6160e4245a6a698289de51902b98feed0cf54d8866",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-hip/src/compute/events.rs"
+    },
+    {
+      "ruta_repositorio": "crates/cubecl-hip/src/compute/storage/cpu.rs",
+      "revision": "52c5086d3c5e73e56b3ee4cb711bdda495a360f0",
+      "paquete_sha256": "d3cf95f0ff97999ab1bbbad2f91aacd81c73642dc0be41bc46dce41fcdd5b424",
+      "archivo": "cubecl-hip-0.11.0/src/compute/storage/cpu.rs",
+      "sha256": "6dd9e2a327f653756decb4cb8e9ea83cc200e159f89f2ee064a1519451dbef72",
+      "url": "https://github.com/tracel-ai/cubecl/blob/52c5086d3c5e73e56b3ee4cb711bdda495a360f0/crates/cubecl-hip/src/compute/storage/cpu.rs"
+    }
+  ],
+  "comprobadores": "cotejar.rs y analizar_registros.rs se ejecutan retrospectivamente, sin hardware remoto; no forman parte del ejecutable físico",
+  "ejecutable_fisico_bytes": 123096896,
+  "ejecutable_fisico_sha256": "8994e997b5678ede51189a25ed8fef05f4a3c0c3b3b0d141795063cbfcb1abcd",
+  "calculo_sha256": "d26ec6b0fd01317e45c6951999151e05ce9b46a899e181a174269bc5b9eb316c"
+}

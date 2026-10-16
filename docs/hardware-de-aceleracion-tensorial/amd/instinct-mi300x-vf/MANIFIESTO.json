@@ -1,0 +1,66 @@
+{
+  "exclusion": "El propio manifiesto no se incluye en su relación de huellas",
+  "fecha": "2026-10-16",
+  "archivos": [
+    {
+      "bytes": 12166,
+      "sha256": "38df6981a0a1592cf443641880551856b5bcd5a3311c61cc26733460d2483917",
+      "ruta": "readme.md"
+    },
+    {
+      "bytes": 3528,
+      "sha256": "950d306704442abe374f39c782fc88f3c9e9b30da674541421cea546ce7e925d",
+      "ruta": "codigo/analizar_registros.rs"
+    },
+    {
+      "bytes": 8177,
+      "sha256": "62b89949900a5aa1128c3c0fc38e035d5be2bdb113b2bafe884e4c4c0b1d2f4f",
+      "ruta": "codigo/cotejar.rs"
+    },
+    {
+      "bytes": 1297295,
+      "sha256": "b6e290590707366297773e0186692177714d0403908287918ad4a727ed647e38",
+      "ruta": "codigo/fuentes-ensayo.tar.gz"
+    },
+    {
+      "bytes": 3600,
+      "sha256": "765b801259b5585f9eb336b0c279fbb613d5acc36a5c0d1a62c785d66335c287",
+      "ruta": "codigo/FUENTES.json"
+    },
+    {
+      "bytes": 154444,
+      "sha256": "c188a9325ea227a134279f32bb6b3efaf4314578f2eb00bd24d3499452ffb031",
+      "ruta": "registros/ANALISIS-DEMORA.json"
+    },
+    {
+      "bytes": 7487,
+      "sha256": "e9d27047be4142c148cb61e32f3989c2e0fa2fa62a327c1d8e90f3988be82d82",
+      "ruta": "registros/compilacion-y-ejecucion.tar.gz"
+    },
+    {
+      "bytes": 2366,
+      "sha256": "b07721d13c9be89ad0c25c8bb66dfefd79410ccf2aca0ff68419fa0f3ff8d7de",
+      "ruta": "registros/COTEJO-01.json"
+    },
+    {
+      "bytes": 2369,
+      "sha256": "6772c38bb7de401f9e15a0e2514575f1d45113ba3efbb0ad0feadcf3feee7b55",
+      "ruta": "registros/COTEJO-02.json"
+    },
+    {
+      "bytes": 207623,
+      "sha256": "2875abd85a6fbba03799e324859e3b36e67220e8af94e9654f299590829c7615",
+      "ruta": "registros/ensayo-01.tar.gz"
+    },
+    {
+      "bytes": 206676,
+      "sha256": "8b9a26a431b2c6ba9c6a309dbe8b89fa23f4f80056b093a320b9c4dc6a50b1c4",
+      "ruta": "registros/ensayo-02.tar.gz"
+    },
+    {
+      "bytes": 1923,
+      "sha256": "642a1e2786589cd5fcddab3333756904f4bfc78d0264d6df40bc163732dec68e",
+      "ruta": "registros/INVENTARIO-AMD.json"
+    }
+  ]
+}
