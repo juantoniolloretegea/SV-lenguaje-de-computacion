@@ -1,0 +1,32 @@
+{
+  "alcance": "Verificación local de integridad y resultados; no es atestación externa ni prueba de cálculo GPU/NPU",
+  "archivos": 4,
+  "cotejo": "conforme",
+  "dispositivos_observados": [
+    {
+      "clase": "Cpu",
+      "fuente": "cpu-sistema",
+      "id": "cpu-anfitrion",
+      "interfaz": "Android;ro.soc.model;cpu_presentes=0-7;ABI=aarch64",
+      "nombre": "CPU del SoC SM8750"
+    },
+    {
+      "clase": "Gpu",
+      "fuente": "android-vulkan",
+      "id": "vulkan-435100000700000000d57000140000d5-0",
+      "interfaz": "Vulkan;vendor=5143;device=44050001;driver=2150760512;api=4206876;tipo=INTEGRATED_GPU;UUID=435100000700000000d57000140000d5;indice=0",
+      "nombre": "Adreno (TM) 830"
+    },
+    {
+      "clase": "Cpu",
+      "fuente": "android-nnapi",
+      "id": "nnapi-0-nnapi-reference",
+      "interfaz": "NNAPI;tipo=2;version=S938BXXS9CZE1;nivel=1000008;consulta_sin_ejecucion",
+      "nombre": "nnapi-reference"
+    }
+  ],
+  "identidad_estable": true,
+  "operaciones_cpu_exactas": 4,
+  "rechazos": 12
+}
+

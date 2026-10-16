@@ -1,0 +1,738 @@
+{
+  "ejecutable_sha256": "eea1d8c89bfcaff8e33146df15f58dc2a7414b29a0df31fb7d05b22298de802c",
+  "fuente_ensayo_sha256": "7bed66a9ca8b4db65d1cb3d0569091a1b1310491a31d6922e148270f14210fb0",
+  "fuente_calculo_sha256": "7d53675b80b5d4debae77b734df6cba3f74b227b8b607cacd521acc23f3d8db9",
+  "alcance": "Las dos huellas de fuentes anteriores están incorporadas en el registro del ejecutable ensayado. Las demás identifican la copia conservada para reproducción; no constituyen una atestación del compilador.",
+  "archivos": [
+    {
+      "ruta": "selector/Cargo.lock",
+      "bytes": 185,
+      "sha256": "ac26b830aa585cb8ba70b2dd96a229f95273e38af84ced64c670764b3ef1a36f"
+    },
+    {
+      "ruta": "selector/Cargo.toml",
+      "bytes": 296,
+      "sha256": "01b222717d4291df5a57046753d1c9c24f212121c853128c9fbef8b58ba67fd6"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/Cargo.lock",
+      "bytes": 17780,
+      "sha256": "948ab73101d4a502fefd801751f20ecee5f4f8f0d0f21c0db5dae20cba4a085a"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/Cargo.toml",
+      "bytes": 573,
+      "sha256": "43e22cbed5eaad3a0cc5d28290a7f616a12d12faa07fd2f0c7726b5ec5ea889d"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/LICENSE-APACHE",
+      "bytes": 11339,
+      "sha256": "071a9cd59776e26dc43d23cf08ce10a365c2db1e67d5d49edda527cad43d86b7"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/LICENSE-MIT",
+      "bytes": 1048,
+      "sha256": "991b01eab9ff9338e65ce2d08c8a521313ec43f5e593b6d136e4324c62d16c0b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/Cargo.toml",
+      "bytes": 675,
+      "sha256": "d421b19619b43dce681e0ef6d1e7bcd19ba27fdd55355347370853809492c93f"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/async_transfer.rs",
+      "bytes": 4345,
+      "sha256": "e10ac9468d48fc29083e8994cc52033e26f246beeab449df389659ad6816e120"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/basic.rs",
+      "bytes": 1482,
+      "sha256": "b040c863356e3b600bb602a5e4e6313232d4281207996b0dc219c089311e3beb"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/basic_bf16.rs",
+      "bytes": 1018,
+      "sha256": "2dae86ffff5f24bdb40fb9ecba27f2bbc55052cdde32ff7854765c7074addf3a"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/basic_c64.rs",
+      "bytes": 1030,
+      "sha256": "2dd3e496d993e2fbbef0f6c282af5acdf9c1878082f652fbb049397b871c919f"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/basic_f16.rs",
+      "bytes": 1016,
+      "sha256": "fb3738d8ee9217d3e818e128b97082ae53fbe5fe6b1263c580784d9651778943"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/buffer.rs",
+      "bytes": 1753,
+      "sha256": "9d6ab12baeb1a2cabee6a0d076488299287a4ace4689ffa7e0d4b2c3032014df"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/buffer_reference_count.rs",
+      "bytes": 3896,
+      "sha256": "2ff7bbe048baac0d7615e474c703d28f7ac8355d57598ae033afce31dafa03cd"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/callback_extension.rs",
+      "bytes": 6107,
+      "sha256": "3c20c802cbf308d8be7123741e491fc7cc1540f4fe306c2e521ab0a2d5f0eff8"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/compile_options.rs",
+      "bytes": 6647,
+      "sha256": "e4a69bbe055a1ab28f009e816f4a6817ceabf77e6f1843deab682e40bf686104"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/custom_partitioner_extension.rs",
+      "bytes": 3485,
+      "sha256": "5992f776abad0c7e32032cf90ee6772327e9d8a67e23052863608b97c0ebac3a"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/device_assignment.rs",
+      "bytes": 7846,
+      "sha256": "b45e9e8e8bdeea8b7536b7251cae58adb039a29868c4686afe0f2f3522275324"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/event.rs",
+      "bytes": 3289,
+      "sha256": "a88537b929bc958eb93b8413a03dc9105be4ee89f4ea2645df14cd597180912c"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/execution_context.rs",
+      "bytes": 7249,
+      "sha256": "55fb85b5f1f4c6e2e4355e85527c725ed07504540cd89a201665e50aaad2f64c"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/extension_discovery.rs",
+      "bytes": 2586,
+      "sha256": "989ba6989febf204398502ac15faf0678bd25620723cdb8ab79b6e0a114c7f57"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/ffi_extension.rs",
+      "bytes": 3560,
+      "sha256": "85c634bfaf84652dc98a2209933b82d86d2ffd17e965b99e2908d5303f91e772"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/gpu_extension.rs",
+      "bytes": 3895,
+      "sha256": "fa965449ed1228b42654659986be6a635df438dc1e1dcad087bf75aa37d6f838"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/kv_store.rs",
+      "bytes": 7879,
+      "sha256": "bd9a404a4a68617c251a407ca699e518ab28672abd3df11e3eb298d6528371c4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/layouts_extension.rs",
+      "bytes": 5048,
+      "sha256": "31cbdc7ce3e3a627806a0276983ca873723046085c0a64b45aada0012df7af1e"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/memory.rs",
+      "bytes": 7810,
+      "sha256": "7aad34d5ec5cd4fc60a2fd208f38cbe45b6fe95a0f80dbd87f2e16fbf9690acb"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/memory_descriptions_extension.rs",
+      "bytes": 3550,
+      "sha256": "764c6f2d78d9a840e7f9b093f1c53fa7f36fa00cc2a14324434e6cbadc21684f"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/memory_layout.rs",
+      "bytes": 8891,
+      "sha256": "f820ce341eff894312fa4dddb5c3ffe74b4c67a058daf4a77b2a15ae24edfdc9"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/multi_device.rs",
+      "bytes": 9751,
+      "sha256": "72c3a085b51c5d921d4cf017a072b28171462e402efef829030c4aa955ec8269"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/phase_compile_extension.rs",
+      "bytes": 4428,
+      "sha256": "58c6baab0e0c3de14930a20440c1001398ef036253f5603473bc71cc684a7786"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/profiler_extension.rs",
+      "bytes": 3608,
+      "sha256": "834d99dcd987df57b91d361c04143c325296376368ffcd0dbaef5e6a518efa4f"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/raw_buffer_extension.rs",
+      "bytes": 4705,
+      "sha256": "a04819a40e47e231f2453522e446ce8d313e00af1e6e9040c0745233c45c9d75"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/stream_extension.rs",
+      "bytes": 3295,
+      "sha256": "3cca50f211c79f19bee7606bb1f41704492a3a501ed36f00115432622538a31e"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/stub_extensions.rs",
+      "bytes": 14072,
+      "sha256": "b03c4cd2ff4aa42d1936e62322537269ab5eae7b90720600265a885624069018"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/examples/triton_extension.rs",
+      "bytes": 3794,
+      "sha256": "adb2f22c72dc03b59f22e867f7e9600dc60082c6c410140b907801b71945d984"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/api.rs",
+      "bytes": 27501,
+      "sha256": "f07e7f3c77bfc11f569db9cca8398474705fcd464ffe274bd4651e8b3c5b0539"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/async_transfer.rs",
+      "bytes": 42892,
+      "sha256": "c334f970d16b63c2cc50cbb0fa18b832953f8168e11d7a2a1515a3c4cdd413b6"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/buffer.rs",
+      "bytes": 39901,
+      "sha256": "1e6eb26824a5f490d69ce250aab5a5d123d0c91717ff7d3a7b28dedcef029801"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/callback_ext.rs",
+      "bytes": 10520,
+      "sha256": "6fdbf9e3ec0848e9b356f65731658a7b525d93691f67bc6ceccef071f89d3e7b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/chunk.rs",
+      "bytes": 2799,
+      "sha256": "b149b866b14db6061d4de8a7538bb6e72d3aad53f510f223c6da2253dfd059fc"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/client.rs",
+      "bytes": 41138,
+      "sha256": "11d2d6a6d909d4617b1f20a25c8d0293f77ef6ebb192bbd4db25202172635ed3"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/compile.rs",
+      "bytes": 20431,
+      "sha256": "6481798d24ad57139a32460418a7aed1afc5c2acdc54d42d4d422de04b0c3a84"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/cross_host_transfers_ext.rs",
+      "bytes": 5193,
+      "sha256": "5e69bf0c5c0c1206a56fb9ec11fec64b68254bdc76274bc04716543932205930"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/custom_partitioner_ext.rs",
+      "bytes": 9365,
+      "sha256": "378da9fd27ae368f21efda0531f85df77434f125a2a0e3e58ab47f736293eca9"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/device.rs",
+      "bytes": 10584,
+      "sha256": "aafc97575dcae04e95c1a94000ec396f205d556f46e2f0f8580aa170ff0e690b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/device_assignment.rs",
+      "bytes": 9883,
+      "sha256": "596378e810f579aff2a39d0ab9158cc62d317a7727ccf88521e2679f57eababf"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/device_description.rs",
+      "bytes": 3386,
+      "sha256": "2b3ed1c764fd6e758a52868df6fabb7e5f1d75ea368621618463150b457faa33"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/device_stream.rs",
+      "bytes": 2759,
+      "sha256": "8fc63163eef133971a892f66fdf2a21a24722be6121076e763644d65ee49be47"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/error.rs",
+      "bytes": 14610,
+      "sha256": "7d4df106db4cfa113f08a65212a0b9ed8c117cf4b56c11e2f2f49ad0bfa0ac21"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/event.rs",
+      "bytes": 7862,
+      "sha256": "4db8a9a01fa79d39236994461d4e9b7e1e58a3d8f26576b19be23237c3463d80"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/example_ext.rs",
+      "bytes": 11997,
+      "sha256": "774bd6103f61d8503f51b1a6169d87a48d3d70032e4b49bdcd7464498abf0a46"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/executable.rs",
+      "bytes": 16054,
+      "sha256": "aa81e4986eddae81bcfa7eaad6f3feef8abd97482c4bc9cdcf5131791451c39e"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/executable_metadata_ext.rs",
+      "bytes": 4975,
+      "sha256": "0334d4b3620b6c8afdfc1e6052d3c206d58e8961bca01d899fff33ab1ac68472"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/execute.rs",
+      "bytes": 25959,
+      "sha256": "c858c9fe47b569d5ac8ffcc516b0302ee511d1d44a9ddb074fae4a07debe3a4c"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/extension.rs",
+      "bytes": 12501,
+      "sha256": "69b0415164440253b804051209c6ae716c415551e074b90dbe1cabe12041a098"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/ffi_ext.rs",
+      "bytes": 13958,
+      "sha256": "9aee817cc445884e377df0b33c0d2375a23d7944d39c294f44e85ee2245e3f35"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/gpu_ext.rs",
+      "bytes": 7477,
+      "sha256": "d632c04a992a6a405c2f0cceded31673499565a3a80681d9f4394860cc460db4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/host_allocator_ext.rs",
+      "bytes": 8933,
+      "sha256": "0538b1d08b6152d1475331455cb5c1f73ad83c4ceced79a5bd32573865a84799"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/host_buffer.rs",
+      "bytes": 40013,
+      "sha256": "a05b2e0d974e674ddecbaa90e7a0c90898d749b01352e34045e01e9eb03f7994"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/kv_store.rs",
+      "bytes": 9503,
+      "sha256": "6e8fbe3a22d35d20ded7ab3a9002e74f7af5231a935c15a1808d540ac366d9a9"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/layouts_ext.rs",
+      "bytes": 14644,
+      "sha256": "73661d793e133b2dc8ed817219a6226b49bc58f52f5ed8aa384b4472da355eca"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/lib.rs",
+      "bytes": 7693,
+      "sha256": "62a3c15cf256669490c3b9d62be36010294799c47c36a712298722301d268654"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/loaded_executable.rs",
+      "bytes": 8714,
+      "sha256": "4692e086f45385a6af416e035529643d16d9e893916f0903d40ada5935cda631"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/megascale_ext.rs",
+      "bytes": 21207,
+      "sha256": "536e3848905463f6b232d19bcd6359fc41ee07330721dc3946ecf383016bc031"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/memory.rs",
+      "bytes": 4966,
+      "sha256": "c6e4c702cb35253d1f86594c2ae5565e9c78cec966d37039b84ac7a273e22e76"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/memory_descriptions_ext.rs",
+      "bytes": 9541,
+      "sha256": "59325377d0d99d2a77520aafdb5b08fefd04ae90d54b2e7e97cc55b3b175da24"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/memory_layout.rs",
+      "bytes": 14277,
+      "sha256": "1c5054a01248c7405920b7fc368eda15be2b830164d3f9d1d2773056fff917d5"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/named_value.rs",
+      "bytes": 13390,
+      "sha256": "51e62f9e1e0c0d93825c131a717b4ee233a3881228e86e254f7f9e4e62d3a9e4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/phase_compile_ext.rs",
+      "bytes": 14875,
+      "sha256": "1f81c583dcd4af3bb64fb36d79e68bf01b8383489c4218385965cc8904b54973"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/plugin.rs",
+      "bytes": 2435,
+      "sha256": "ace27b9c12851a3a6a509a02c308312e6bf03a0eecbfc2c9c2d7712ce5a3657d"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/profiler_ext.rs",
+      "bytes": 25020,
+      "sha256": "5f43e8f3aaa17f173386720906b4c95d38edc214411870928f600ba96ff21130"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/program.rs",
+      "bytes": 7988,
+      "sha256": "4bd30edd7fbffda91987b5a8b80f9456a538b69c635b4636af6949b16874b720"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/raw_buffer_ext.rs",
+      "bytes": 12229,
+      "sha256": "431092bc393bd0f3b8cd7d0df90ebf5aa6cd531d8e6042052a89c5996021ed99"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/stream_ext.rs",
+      "bytes": 7746,
+      "sha256": "078ab125d4291eac1eeefde206155b468370105a9afedb7f10c786a519913d88"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/async_transfer_tests.rs",
+      "bytes": 7094,
+      "sha256": "0d1c21d860e39726944766a6f713e96517dd849f98f7914fc4d6da335285e1c1"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/buffer_ref_count.rs",
+      "bytes": 3714,
+      "sha256": "09b0db4c9ee924c4db3a4ee52b4b09611e1b373e7de759f07f750a7c225fec9c"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/core_types_tests.rs",
+      "bytes": 41812,
+      "sha256": "0afee7099f9fe0ef65ed96ac5747dfc15b8b971ef6d6177a89d72d80c18039a4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/event_tests.rs",
+      "bytes": 4368,
+      "sha256": "c0397c8e5e636d3d25f9566ccb9d717e5905682bdaf996021243c778d3be60d7"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/executable_tests.rs",
+      "bytes": 9775,
+      "sha256": "540618ca073113da39e07db8981f1ae387358d0d64bd2030e9f3b33b16aec81b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/execute_tests.rs",
+      "bytes": 20987,
+      "sha256": "3a30f604d0987c13337441d49243b6ce0c93d331fc925611808c5766d517c2be"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/extension_tests.rs",
+      "bytes": 2780,
+      "sha256": "22088bb7315a6ea0a5091cfd0e2da60f7b41037181a9c8cbc41a0aaf23e04877"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/memory_tests.rs",
+      "bytes": 227,
+      "sha256": "519f9219b190f58842b5083b178ccc087fb1c5f7f845bc39e4379fd647787455"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tests/mod.rs",
+      "bytes": 873,
+      "sha256": "c1813ba22dcad1cc3daaf02040b4e629ea29000d6095c04a538bcd9e5e44bcee"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/topology_description.rs",
+      "bytes": 5866,
+      "sha256": "25c8f1d6eed12b2198b71bed027ff60fe8228589beb73fe63f5db5b3eede5e00"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tpu_executable_ext.rs",
+      "bytes": 14217,
+      "sha256": "d1f8a9c1515638bce68b3a6b1c6f70ea33fa448dbfd460447f2d023e3ee1b03b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/tpu_topology_ext.rs",
+      "bytes": 38437,
+      "sha256": "1a86a982e0c937c355f28a5d6f52ef3e474fabb9a579d65d1918a5334380b2d8"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/triton_ext.rs",
+      "bytes": 7487,
+      "sha256": "c64bc65d4bd7d843cd8d7957bcd597f866c4eecef879e26c6743441d15e880ae"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/ty.rs",
+      "bytes": 30311,
+      "sha256": "12a5d958f0388a56ceaea98516b3517307e11779f997ed1e1a7e81d5f906de25"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt/src/utils.rs",
+      "bytes": 3966,
+      "sha256": "a92332998019dee9abb71b384016e12095edd7d0a4a4f242d7ac341ce3270f07"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/build.rs",
+      "bytes": 1190,
+      "sha256": "ff6eb7dcc22d5460e1290fd05e3c0195e1a388a3875b51a64b564605ca771215"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/Cargo.toml",
+      "bytes": 574,
+      "sha256": "cd0ebc865bcd05272b9006af547f25c74e6aead2ad404e90578285b9fabc7471"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/backends/profiler/plugin/profiler_c_api.h",
+      "bytes": 4904,
+      "sha256": "ad15b638c6d7820b52ae1aa8ff71f64f692c118ef7e7debe6a9f4aa9e7727732"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api.h",
+      "bytes": 114311,
+      "sha256": "b5cdbd8289178466b9e695985fe065fe57c9b57f816c8e02b5f6bcf61c7aec4b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_callback_extension.h",
+      "bytes": 4938,
+      "sha256": "a7f97057f597c5bcd53de2e23bd0ce90becdc995d1a4563fb4309cb8665c48c8"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_custom_partitioner_extension.h",
+      "bytes": 5307,
+      "sha256": "64e611704f9c43f00457fb8b56f37e6c7e9f76b3544427015d4d1e401d241856"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_ffi_extension.h",
+      "bytes": 3587,
+      "sha256": "2e7d1ced9764e06dff50c8c6a2b2c3b1024614f1a44d3405007992bab8ede6cd"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_gpu_extension.h",
+      "bytes": 1661,
+      "sha256": "b9d73255cc297e0be60f350c03a5c4b96ed40e17c49fdfb404be8c055922a960"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_layouts_extension.h",
+      "bytes": 6349,
+      "sha256": "b4d83e1d7ccab32a539aff598a8b097168ecbde5639931a451644a87b9e2b27e"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_megascale_extension.h",
+      "bytes": 9006,
+      "sha256": "e14c5291efef24b0c111d22c2870250c74d7154050b947a61cf66c3d3d7378e6"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_memory_descriptions_extension.h",
+      "bytes": 3205,
+      "sha256": "104fd1fb954b116fbcbc257c1270813503c0589a93ef3b39e3860940e51ef362"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_phase_compile_extension.h",
+      "bytes": 7257,
+      "sha256": "5df42aa12668ad668f65a177edd97de80c6025d491e7b630c01ab651281944bc"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_profiler_extension.h",
+      "bytes": 1415,
+      "sha256": "9ae899234c03c1a117ef88481f8a242bdfa6adf0014c88c1485aee3ffd26c70b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_raw_buffer_extension.h",
+      "bytes": 4844,
+      "sha256": "7d555e411ec00beb345b8b77ce44fce03ad705b68823e4077a0feaa7255326b4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_stream_extension.h",
+      "bytes": 2125,
+      "sha256": "a9716b89708d76aadcbd0f8e4bf2cba3d2d01055d070a89774b969e6ad7af294"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_tpu_executable_extension.h",
+      "bytes": 3969,
+      "sha256": "c9674e06e37cfb23416d3f4d054a795b98f1d5a80f4775405fd1624787f3453b"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_tpu_topology_extension.h",
+      "bytes": 21752,
+      "sha256": "dcdac0379ebf8dcdd35047609cfcf0927376544761cb5c32c684f30e05874a0e"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/c/pjrt_c_api_triton_extension.h",
+      "bytes": 1687,
+      "sha256": "ee0402ec1739c6c809b54c8269c4c1a5768741c41dc8931b5de331b7679f251d"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/extensions/example/example_extension.h",
+      "bytes": 3254,
+      "sha256": "cd670490f316a8b4e32d2b81008e1ce92014a98913fa6d931fdba6d0bcaf6170"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/include/xla/pjrt/extensions/host_allocator/host_allocator_extension.h",
+      "bytes": 3000,
+      "sha256": "a15bc601b15a72da464d71c68b616b4b75b7b4d30278f2b81d4d1c746a855d00"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/autotune_results.proto",
+      "bytes": 1616,
+      "sha256": "1a8aa45907816ad60353b889b6e7dd43a0702f656c8a574ef80995c4c75cb071"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/autotuning.proto",
+      "bytes": 3582,
+      "sha256": "85c3639ba2a135b1c476621914792816c9aef219183806328ccd85fc2ffaafd6"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/pjrt/proto/compile_options.proto",
+      "bytes": 8166,
+      "sha256": "1bde4e04acb8dffc7cf7ee747c11564ff5370676cda67c0c53da7a125ac601a4"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/service/hlo.proto",
+      "bytes": 29396,
+      "sha256": "d70d5692ae5b7bd3f6c92bc7b478333fe137dbff6b0ee6323b775ec4464d9615"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/service/metrics.proto",
+      "bytes": 3076,
+      "sha256": "491cbca2917fba732cda2c8034a4cb8b4ab198c337c47cd29b6e5499b6d89163"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/cuda/cuda_compute_capability.proto",
+      "bytes": 1146,
+      "sha256": "684f2cf569572ed5d686aa62002c0a97f8b09edc1f11efd525035bb9002ab602"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/device_description.proto",
+      "bytes": 3046,
+      "sha256": "6d2ae61a08a877492a76b9a61174b9a5799de6b6f4dba1afb1cd2a8f271e1633"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/stream_executor/sycl/oneapi_compute_capability.proto",
+      "bytes": 875,
+      "sha256": "f62dbb51c70904b7bbbdf0b42e6e22a4a0085ebf213c5f3aa0e7412e1a9fad88"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/tsl/protobuf/dnn.proto",
+      "bytes": 6266,
+      "sha256": "12f56e78196d1c150ad16f6463f917abb7afb14afa735b9302e1e65ac4a48974"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/xla.proto",
+      "bytes": 78427,
+      "sha256": "6d7af88760ac3a5a37c33a409a01b4b1e9422d6217306136b949dab29224c394"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/protos/xla/xla_data.proto",
+      "bytes": 54527,
+      "sha256": "20c10f266099ddeeca768fafd39894a06c4f5158b65ffb5180d9e88fb0358083"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/src/lib.rs",
+      "bytes": 332,
+      "sha256": "01c9a92e978ea43411064b0fbf3eb0a68853a058191340c4c40eeff1d38450d8"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/src/protos.rs",
+      "bytes": 50,
+      "sha256": "bd41aa4048909bbe97192a643037dd08dd8c6fc0cc5a149c61f471e631289399"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/src/structs.rs",
+      "bytes": 16261,
+      "sha256": "4afe96faa7b091402f742ba443fc0f414531c5769d3bedba8077d7043be20d52"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/pjrt-sys/wrapper.h",
+      "bytes": 964,
+      "sha256": "ab660744d03d7625755e8048479f71c26acd5967bea2a77d16d770321bdf6404"
+    },
+    {
+      "ruta": "selector/dependencias/pjrt-rs/rustfmt.toml",
+      "bytes": 262,
+      "sha256": "3a4dc72289ee2437c843538abb383b474a61ec62b3fc794d826bf1062ad5ad17"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/Cargo.lock",
+      "bytes": 27501,
+      "sha256": "7265abec576bf17bea0cdeae921a689fb6e2d49edaecf92943527a4d5d4a77cf"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/Cargo.toml",
+      "bytes": 1068,
+      "sha256": "4788dfc0de4f36c10cc3118b49ede54ed55f10dd5f3dd2c7edc07fd1df6915d2"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/examples/cotejar_android.rs",
+      "bytes": 8805,
+      "sha256": "03b660c896e8f1efd382b61d235a6009cf2eddc6fb45e5084661ef30ea505a1f"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/examples/ensayo_android.rs",
+      "bytes": 10575,
+      "sha256": "7bed66a9ca8b4db65d1cb3d0569091a1b1310491a31d6922e148270f14210fb0"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/examples/soporte_android/calculo.rs",
+      "bytes": 1822,
+      "sha256": "7d53675b80b5d4debae77b734df6cba3f74b227b8b607cacd521acc23f3d8db9"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/enlace.rs",
+      "bytes": 8279,
+      "sha256": "5163af040775863251d3dc31f60e7848e5a3ef6da4962eb088ad5886e720b8fa"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/lib.rs",
+      "bytes": 5809,
+      "sha256": "ea4915189a66c15104c6aa5fcd67a984c86bda11c47b2218d3fbdad12a76ed0f"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/main.rs",
+      "bytes": 928,
+      "sha256": "fe1772abae89b3ccb314cc32579e43facca64f569528395803909f164e3e1667"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/amd_hip.rs",
+      "bytes": 9055,
+      "sha256": "3208ca428103eeff728e676748a03d554a0650c16137e5ed19185fef6f7f9929"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/android.rs",
+      "bytes": 9685,
+      "sha256": "a9f6864de3e58300e3ca17ace0f84ab4941794b63842397bad7ea9d0f95f9ced"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/android_datos.rs",
+      "bytes": 1579,
+      "sha256": "56223f522cb661ccf6106fdca5f15e77374c2d405d26cf68d6a397eaaf699d5b"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/cpu_windows.rs",
+      "bytes": 3968,
+      "sha256": "93ce3b481086ba17cb820aba8461e0817617c041f13b5235fdaaacbcb2547c4d"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/dxcore.rs",
+      "bytes": 10287,
+      "sha256": "984129e6460b58267599d3b9e550a33ab2469d4521c93fe0eea71a38fb7b278e"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/linux.rs",
+      "bytes": 2083,
+      "sha256": "164a0bb018b0d24f324366c5d05f12dc16df06e4a9e602a24fd5a55c5102986d"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/pjrt.rs",
+      "bytes": 2767,
+      "sha256": "e4bfbcedda3fbf08eadd8b72103c78c8ebdaef9878a46190ca2ff14fc94caf75"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas/windows.rs",
+      "bytes": 4915,
+      "sha256": "1a5836189765fbb3ae6dbccca700d196441da34d3b3801bb992c49f8c12249a5"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/sondas.rs",
+      "bytes": 8245,
+      "sha256": "cc5f24278a20b80e4d9e2b8d13c1ac19ebfc372ee2933eed0a8a5fafef890bf5"
+    },
+    {
+      "ruta": "selector/explorador-tensorial-sv/src/tests.rs",
+      "bytes": 10539,
+      "sha256": "81f8f86db794968c0c1eb150b6e0d5848e14d565a5f6e4aefdcac4dc99af99f9"
+    },
+    {
+      "ruta": "selector/LICENCIA-DOCUMENTAL.txt",
+      "bytes": 515,
+      "sha256": "367318227880e171fb05a88b420589be355ddbdbc69759581f857e418920f80c"
+    },
+    {
+      "ruta": "selector/src/lib.rs",
+      "bytes": 9027,
+      "sha256": "2b6cd91da365f15ab314ea69ef6eeec1b12826ddf0de01fcca58191ef5afff05"
+    },
+    {
+      "ruta": "selector/src/tests.rs",
+      "bytes": 8453,
+      "sha256": "3d334537ddd3cc33b45ee69d25f2f96ff907eec6cc3b56044c99af800feb4c12"
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # Hardware de cómputo y aceleración tensorial del SV
 
-Este apartado reúne las comprobaciones del **Selector del Árbitro - Director CPU/GPU/TPU/NPU** sobre dispositivos concretos. Su objeto es relacionar la decisión de selección con la ejecución física observada, la concordancia de resultados y las mediciones del recorrido completo.
+Este apartado reúne las comprobaciones del Explorador Tensorial del SV y del **Selector del Árbitro - Director CPU/GPU/TPU/NPU** sobre dispositivos concretos. Su objeto es relacionar la decisión de selección con la ejecución física observada, la concordancia de resultados y las mediciones del recorrido completo.
 
-La organización distingue **fabricante → dispositivo → configuración y plataforma del ensayo**. Kaggle y Google Cloud son plataformas de ejecución; no sustituyen la identidad del fabricante del procesador. Una configuración comprobada no acredita todos los dispositivos de una marca.
+La organización distingue **fabricante → dispositivo → configuración y plataforma del ensayo**. Cuando se documenta un equipo completo, se identifica también al fabricante de sus procesadores. Kaggle y Google Cloud son plataformas de ejecución; no sustituyen la identidad del fabricante del procesador. Una configuración comprobada no acredita todos los dispositivos de una marca.
 
 ## Dispositivos y plataformas documentados
 
@@ -12,14 +12,15 @@ La organización distingue **fabricante → dispositivo → configuración y pla
 | [Intel](intel/readme.md) | [Xeon a 2,00 GHz; identificación comercial parcial](intel/xeon-kaggle-20261014/readme.md) | CPU | Kaggle, cuatro procesadores lógicos visibles | Tres solicitudes CPU obligatorias ejecutadas sin lanzamientos GPU durante su cálculo |
 | [Google](google/readme.md) | [TPU v5e](google/tpu-v5e/readme.md) | TPU | Google Cloud, tipo `v5litepod-1`, un chip | Ejecución TPU comprobada; la selección automática favoreció CPU al medir el recorrido completo instrumentado |
 | [AMD](amd/readme.md) | [EPYC 7B13](amd/epyc-7b13/readme.md) | CPU | Google Cloud, anfitrión de la TPU v5e | Referencia CPU y dos selecciones automáticas CPU comprobadas |
+| [Samsung](samsung/readme.md) | [Galaxy S25 Ultra, SM-S938B](samsung/galaxy-s25-ultra-sm-s938b/readme.md) | CPU y GPU reconocidas | Samsung Remote Test Lab; Android 16 | Cuatro cálculos CPU exactos; GPU enumerada; doce solicitudes a aceleradores rechazadas sin cálculo |
 
-Las cuatro fichas corresponden a **dos ensayos con modelos**, no a cuatro experimentos independientes. En Kaggle se utilizó Qwen3-8B Q4_K_M; en Google Cloud, Helsinki-NLP/opus-mt-en-es. Los antecedentes instrumentales y las series anteriores permanecen identificados en los informes de cada ensayo.
+Las cuatro primeras fichas corresponden a **dos ensayos con modelos**, no a cuatro experimentos independientes. En Kaggle se utilizó Qwen3-8B Q4_K_M; en Google Cloud, Helsinki-NLP/opus-mt-en-es. Los antecedentes instrumentales y las series anteriores permanecen identificados en los informes de cada ensayo.
 
 ## Selector y alcance
 
 La carpeta del [Selector del Árbitro - Director CPU/GPU/TPU/NPU](selector-arbitro-director-cpu-gpu-tpu-npu/readme.md) describe su función, los criterios comprobados y las fuentes Rust utilizadas. La observación del hardware, la decisión y la ejecución tienen funciones diferenciadas; la mera presencia de un acelerador no demuestra que haya calculado una solicitud.
 
-La evidencia se circunscribe a las cargas y configuraciones de las cuatro fichas. La concordancia numérica y el cumplimiento de la selección de dispositivo no constituyen una evaluación de la calidad científica de las respuestas de los modelos.
+La evidencia se circunscribe a las cargas y configuraciones descritas en cada ficha. La concordancia numérica y el cumplimiento de la selección de dispositivo no constituyen una evaluación de la calidad científica de las respuestas de los modelos.
 
 ## Evidencias
 

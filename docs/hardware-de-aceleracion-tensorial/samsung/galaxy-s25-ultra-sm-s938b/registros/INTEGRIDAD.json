@@ -1,0 +1,24 @@
+{
+  "archivos": [
+    {
+      "archivo": "INVENTARIO-INICIAL.json",
+      "bytes": 1670,
+      "sha256": "e3d101e972e11520daeb55030605c5b13f790b5acad766a2746e5c1223840b88"
+    },
+    {
+      "archivo": "IDENTIDAD-ANDROID.json",
+      "bytes": 997,
+      "sha256": "fa9230ad20e7d0249654c6dd6aa3f6727209a482e01ef6915bcfd5e3a24c5d2f"
+    },
+    {
+      "archivo": "INVENTARIO-FINAL.json",
+      "bytes": 1668,
+      "sha256": "0cc57d16b56b5e7904830541133ca19496c9955f45b43cbf8b0ecbe3b87999d0"
+    },
+    {
+      "archivo": "RESULTADOS.json",
+      "bytes": 135315,
+      "sha256": "f960bca52145c14e30c24679e42717434a9e792e4ca661f7c8eb9cf59189a832"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "fecha": "2026-10-16",
+  "archivos": [
+    {
+      "ruta": "codigo/fuentes-rust.tar.gz",
+      "bytes": 309096,
+      "sha256": "3fa9263a41b5b9444d403da7e83469efb7a7e0feabe519370bb549caf41f7131"
+    },
+    {
+      "ruta": "codigo/FUENTES.json",
+      "bytes": 29015,
+      "sha256": "cf75bd3dada5ad993480ceb47d377cfb6da10bacde97f83f9ac5ff36ce2c2ddc"
+    },
+    {
+      "ruta": "readme.md",
+      "bytes": 6702,
+      "sha256": "8744b2eeeeed395d70e1aeda95e30c2da93c435984efbdfc9d8c97e214614e26"
+    },
+    {
+      "ruta": "registros/COTEJO-RUST.json",
+      "bytes": 1062,
+      "sha256": "a15d656dfb9ef6e37321dcc0dd4e370226c481e6ead7b38d9039e73235bbff2c"
+    },
+    {
+      "ruta": "registros/IDENTIDAD-ANDROID.json",
+      "bytes": 997,
+      "sha256": "fa9230ad20e7d0249654c6dd6aa3f6727209a482e01ef6915bcfd5e3a24c5d2f"
+    },
+    {
+      "ruta": "registros/INTEGRIDAD.json",
+      "bytes": 656,
+      "sha256": "e3c7ee12cb988da56100cacf815868dd35a5c3db5316ab42045ff78670bbd70a"
+    },
+    {
+      "ruta": "registros/INVENTARIO-FINAL.json",
+      "bytes": 1668,
+      "sha256": "0cc57d16b56b5e7904830541133ca19496c9955f45b43cbf8b0ecbe3b87999d0"
+    },
+    {
+      "ruta": "registros/INVENTARIO-INICIAL.json",
+      "bytes": 1670,
+      "sha256": "e3d101e972e11520daeb55030605c5b13f790b5acad766a2746e5c1223840b88"
+    },
+    {
+      "ruta": "registros/RESULTADOS.json",
+      "bytes": 135315,
+      "sha256": "f960bca52145c14e30c24679e42717434a9e792e4ca661f7c8eb9cf59189a832"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "alcance": "Reconocimiento por interfaces del sistema; CPU Rust; GPU y NPU sin cálculo en este ensayo",
+  "arquitectura": "aarch64",
+  "calculo_fuente": "7d53675b80b5d4debae77b734df6cba3f74b227b8b607cacd521acc23f3d8db9",
+  "ejecutable_sha256": "eea1d8c89bfcaff8e33146df15f58dc2a7414b29a0df31fb7d05b22298de802c",
+  "propiedades": {
+    "ro.board.platform": {
+      "Ok": "sun"
+    },
+    "ro.build.version.release": {
+      "Ok": "16"
+    },
+    "ro.build.version.sdk": {
+      "Ok": "36"
+    },
+    "ro.hardware": {
+      "Ok": "qcom"
+    },
+    "ro.product.cpu.abi": {
+      "Ok": "arm64-v8a"
+    },
+    "ro.product.device": {
+      "Ok": "pa3q"
+    },
+    "ro.product.manufacturer": {
+      "Ok": "samsung"
+    },
+    "ro.product.model": {
+      "Ok": "SM-S938B"
+    },
+    "ro.soc.manufacturer": {
+      "Ok": "QTI"
+    },
+    "ro.soc.model": {
+      "Ok": "SM8750"
+    }
+  },
+  "sistema": "android",
+  "version_fuente": "7bed66a9ca8b4db65d1cb3d0569091a1b1310491a31d6922e148270f14210fb0"
+}
