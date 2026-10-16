@@ -60,12 +60,11 @@ La operación GPU obligatoria tardó 15,41 y 14,69 veces lo que tardó su operac
 
 El periodo de muestreo de 25 ms no constituye una explicación suficiente. En la primera operación lenta sólo se registraron las muestras inicial y final, separadas 24.343 µs; no hubo consulta intermedia de telemetría. Además, el cierre del muestreo se ejecuta después del intervalo de recuperación. No se excluye todo coste de instrumentación o planificación, pero sí la afirmación de que el código imponga una espera fija de 25 ms antes de devolver cada resultado.
 
-## Correcciones justificadas
+## Requisitos para precisar la causa y el rendimiento
 
-1. **Descomponer la medición propia.** Registrar por separado la solicitud de lectura, la reserva de memoria, la copia HIP, la espera y la copia final a `Vec<i32>`. Medir también el recorrido desde la recepción de la petición hasta la entrega, diferenciándolo del tiempo de la operación. Los datos actuales no proporcionan ese desglose.
-2. **Contrastar la gestión de memoria antes de cambiarla.** Conservar tamaños y sucesos de reserva, reutilización y liberación; identificar si la demora aparece en `hipHostMalloc`, en la copia o en la espera. Si se confirma una reserva tardía, evaluar memoria reutilizable o preparación explícita, conservando sus costes y comprobando las garantías de sincronización. Eliminar esperas sin esa comprobación sería incorrecto.
-3. **Ampliar la estimación de rendimiento.** Mantener la mediana, pero añadir dispersión, máximos observados y actualización con las solicitudes posteriores. Cinco calibraciones no permiten garantizar latencia por petición ni estimar con solidez sucesos poco frecuentes. Una solicitud GPU obligatoria debe conservar su destino; la demora no autoriza una sustitución silenciosa por CPU.
-4. **Distinguir ejecución y diagnóstico.** Las correcciones de medición están especificadas; no se presentan como una reparación física ya verificada. Los registros actuales localizan el problema, pero no permiten decidir si la causa última pertenece a CubeCL, HIP, al sistema operativo o a la virtualización.
+La atribución causal requiere separar la solicitud de lectura, la reserva de memoria, la copia HIP, la espera y la copia final al vector de salida. Los registros actuales agrupan esas fases. Para distinguir una reserva tardía de una transferencia lenta o una espera, hacen falta medidas de asignación, reutilización y liberación de memoria. La reutilización o preparación anticipada sólo constituiría una corrección si se demuestra su efecto y se conserva la sincronización necesaria.
+
+La estimación de rendimiento requiere acompañar la mediana con medidas de dispersión, máximos observados y mediciones de las solicitudes posteriores. Cinco calibraciones no bastan para caracterizar sucesos poco frecuentes. La selección automática puede incorporar esas observaciones; una solicitud GPU obligatoria debe conservar su destino.
 
 ## Evidencias y reproducción
 
@@ -77,7 +76,7 @@ Los dos archivos de resultados conservan entradas, salidas, inventarios, decisio
 - [Fuentes utilizadas en el ensayo](codigo/fuentes-ensayo.tar.gz), [comprobador numérico y de integridad](codigo/cotejar.rs) y [analizador de la demora](codigo/analizar_registros.rs). Los dos últimos se ejecutan posteriormente sobre los registros; no forman parte del ejecutable físico.
 - [Identidad de fuentes y ejecutable](codigo/FUENTES.json) y [manifiesto de los archivos publicados](MANIFIESTO.json).
 
-El archivo de fuentes conserva la estructura de directorios, `Cargo.lock`, el Explorador, el Selector, el contrato numérico y las modificaciones acotadas de compilación. Para reconstruir el ejecutable físico se utiliza Ubuntu 24.04, Rust 1.98.1 y `SV_HIP_BINDINGS_PATCH=60850`; la variable selecciona las definiciones publicadas de interfaz, sin alterar la revisión que comunica HIP. El distribuidor de LLVM admite `SV_LLVM_CACHE_DIR` para fijar su directorio. Se conservan las licencias de terceros. La incompatibilidad inicial de GLIBC y la selección explícita de definiciones HIP son condiciones de reproducción, no pruebas de una demora durante el cálculo.
+El archivo de fuentes conserva la estructura de directorios, `Cargo.lock`, el Explorador, el Selector, el contrato numérico y las modificaciones acotadas de compilación. Para reconstruir el ejecutable físico se utiliza Ubuntu 24.04, Rust 1.98.1 y `SV_HIP_BINDINGS_PATCH=60850`; la variable selecciona las definiciones publicadas de interfaz, sin alterar la revisión que comunica HIP. El distribuidor de LLVM admite `SV_LLVM_CACHE_DIR` para fijar su directorio. Se conservan las licencias de terceros. La reconstrucción requiere una versión de GLIBC compatible y las definiciones HIP indicadas.
 
 Para el cotejo, incorporar `cotejar.rs` y `analizar_registros.rs` al directorio `ensayo-amd/src/bin/` de las fuentes extraídas. El primero recibe un directorio `resultado-01` o `resultado-02`; el segundo recibe ambos, en ese orden. No necesitan acceso al acelerador para examinar los resultados. El ejecutable físico tiene SHA-256 `8994e997b5678ede51189a25ed8fef05f4a3c0c3b3b0d141795063cbfcb1abcd` y tamaño 123.096.896 bytes.
 
